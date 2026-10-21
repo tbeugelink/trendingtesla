@@ -239,6 +239,7 @@ h1,h2,h3{color:var(--head);font-weight:800}
 .hero h1{font-size:clamp(1.8rem,4vw,2.7rem);line-height:1.08;letter-spacing:-.025em;margin-bottom:12px}
 .hero h1 span{color:var(--red)}
 .hero p{color:#c9ced3;font-size:1rem;margin-bottom:20px}
+#news .h2{margin-top:44px}
 .hero .btns{display:flex;gap:10px;flex-wrap:wrap}
 /* top stories */
 .tops{display:grid;grid-template-columns:1.6fr 1fr;gap:44px}
@@ -250,8 +251,9 @@ h1,h2,h3{color:var(--head);font-weight:800}
 .feature h3{font-size:clamp(1.4rem,2.8vw,2rem);line-height:1.15;letter-spacing:-.02em;margin:14px 0 8px}
 .feature p{color:var(--muted);margin-bottom:8px}
 .side{display:flex;flex-direction:column;gap:28px}
-.mini{display:grid;grid-template-columns:120px 1fr;gap:14px;text-decoration:none;color:var(--fg);align-items:start}
-.mini img{width:120px;aspect-ratio:1200/630;object-fit:cover;border-radius:10px;border:1px solid var(--border)}
+.mini{display:grid;grid-template-columns:180px 1fr;gap:18px;text-decoration:none;color:var(--fg);align-items:start}
+.mini img{width:180px;aspect-ratio:1200/630;object-fit:cover;border-radius:10px;border:1px solid var(--border);transition:border-color .2s,box-shadow .2s}
+.mini:hover img{border-color:var(--blue);box-shadow:0 0 0 1px var(--blue)}
 .mini h3{font-size:.98rem;line-height:1.3;margin:2px 0 4px}
 .feature:hover h3,.card:hover h3,.mini:hover h3{color:var(--blue2)}
 /* grid */
@@ -309,7 +311,7 @@ footer a:hover{color:var(--head)}
 footer .links{display:flex;gap:18px;flex-wrap:wrap}
 footer p{max-width:560px;margin-top:10px}
 @media (max-width:1000px){.grid{grid-template-columns:repeat(2,1fr)}.tops{grid-template-columns:1fr}.why{grid-template-columns:repeat(2,1fr)}.models{grid-template-columns:repeat(4,1fr)}}
-@media (max-width:600px){.wrap{padding:0 20px}.grid{grid-template-columns:1fr;gap:40px}.why{grid-template-columns:1fr 1fr;gap:10px}.why div{padding:14px}.why p{font-size:.8rem}
+@media (max-width:600px){.wrap{padding:0 20px}.mini{grid-template-columns:1fr;gap:12px}.mini img{width:100%}#news .h2{margin-top:32px}.grid{grid-template-columns:1fr;gap:40px}.why{grid-template-columns:1fr 1fr;gap:10px}.why div{padding:14px}.why p{font-size:.8rem}
  .models{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:0 -24px;padding:0 24px 4px}.models::-webkit-scrollbar{display:none}.model{flex:0 0 42%;scroll-snap-align:start}
  body{font-size:16.5px}.h2{margin-top:40px}.hero{min-height:0}.hero .in{padding:26px 20px}.hero .btn{flex:1;white-space:nowrap;padding:11px 12px}
  .phead{flex-direction:column-reverse;align-items:flex-start}.phead img{width:100%}}
@@ -547,8 +549,7 @@ def build():
         hero = (f'<div class="hero">{f"<img src={chr(34)}{hero_photo}{chr(34)} alt={chr(34)}{chr(34)} fetchpriority={chr(34)}high{chr(34)}>" if hero_photo else ""}'
                 f'<div class="in"><span class="eyebrow">{L["eyebrow"]}</span>'
                 f'<h1>{L["hero_h"]}<br><span>{L["hero_span"]}</span></h1><p>{L["hero_p"]}</p>'
-                f'<div class="btns"><a class="btn" href="#news">{L["btn_news"]}</a>'
-                f'<a class="btn ghost" href="#models">{L["btn_model"]}</a></div></div></div>')
+                f'<div class="btns"><a class="btn" href="#models">{L["btn_model"]} →</a></div></div></div>')
         body = hero
         if news:
             top = news[0]

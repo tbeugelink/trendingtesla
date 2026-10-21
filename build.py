@@ -310,8 +310,9 @@ h1,h2,h3{color:var(--head);font-weight:800}
 .why b{display:block;color:var(--head);font-size:.98rem;margin-bottom:4px}
 .why p{font-size:.86rem;color:var(--muted)}
 /* page heads */
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}.ptop{height:36px}
 .phead{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:36px 0 22px;border-bottom:1px solid var(--border);margin-bottom:28px}
-.versions{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:18px}
+.versions{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:30px}
 .versions span{font-size:.8rem;font-weight:700;color:var(--dim);margin-right:4px}
 .versions a{font-size:.84rem;font-weight:700;color:var(--muted);text-decoration:none;border:1px solid var(--border2);border-radius:999px;padding:6px 13px;transition:border-color .2s,color .2s}
 .versions a:hover{color:var(--head);border-color:var(--blue)}
@@ -698,7 +699,7 @@ def build():
             if key == "news":
                 items = news
             intro = L["eco_intro"] if key == "ecosystem" else L["cat_intro"].format(c[lang])
-            head = f'<div class="phead"><div><span class="tag">{NAME}</span><h1>{c[lang]}</h1><p>{intro}</p></div></div>'
+            head = f'<h1 class="sr">{c[lang]}</h1><div class="ptop"></div>'
             content = grid(items, lang, lead=True) if items else f'<p class="empty">{L["empty"]}</p>'
             write(url(lang, f"category/{key}/"),
                   page(lang, f"category/{key}/", c[lang], intro, head + content, active=key))
@@ -719,9 +720,7 @@ def build():
                 chips_v = '<div class="versions"><span>' + L["your_version"] + '</span>' + "".join(
                     f'<a href="{url(lang, "model/" + k + "/")}"{" class=\"on\"" if k == key else ""}>{esc(lbl)}</a>'
                     for k, lbl in btns) + '</div>'
-            head = (f'<div class="phead"><div><span class="tag">Tesla</span><h1>{m["name"]}</h1>'
-                    f'<p>{L["model_intro"].format(m["name"])}</p>{chips_v}</div>'
-                    f'{f"<img src={chr(34)}{ph}{chr(34)} alt={chr(34)}Tesla {m[chr(110)+chr(97)+chr(109)+chr(101)]}{chr(34)}>" if ph else ""}</div>')
+            head = f'<h1 class="sr">Tesla {m["name"]}</h1>' + (chips_v or '<div class="ptop"></div>')
             content = ""
             if mg:
                 content += section(L["model_guides"].format(m["name"]), grid(mg, lang))

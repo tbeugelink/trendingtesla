@@ -127,18 +127,18 @@ MODELS = {
     "model-s-classic":   {"name": "Model S 2012–2020",  "parent": "model-s", "label": "2012–2020"},
     "model-s-2021":      {"name": "Model S 2021+",      "parent": "model-s", "label": "2021+"},
     "model-s-plaid":     {"name": "Model S Plaid",      "parent": "model-s", "label": "Plaid"},
-    "model-3":           {"name": "Model 3",            "photo": "model-3-classic.jpg", "article_photo": "model-3.jpg"},
-    "model-3-classic":   {"name": "Model 3 2017–2023",  "photo": "model-3-classic.jpg", "parent": "model-3", "label": "2017–2023"},
-    "model-3-highland":  {"name": "Model 3 Highland",   "photo": "model-3.jpg", "parent": "model-3", "label": "Highland · 2023+"},
+    "model-3":           {"name": "Model 3",            "photo": "model-3-classic.jpg", "article_photo": "model-3.jpg", "gallery": ["m3h-1.jpg", "m3h-2.jpg", "m3h-3.jpg", "m3h-4.jpg", "m3h-5.jpg", "m3h-6.jpg", "m3h-7.jpg"]},
+    "model-3-classic":   {"name": "Model 3 2017–2023",  "photo": "model-3-classic.jpg", "parent": "model-3", "label": "2017–2023", "gallery": ["m3c-1.jpg", "m3c-2.jpg", "m3c-3.jpg", "m3c-4.jpg"]},
+    "model-3-highland":  {"name": "Model 3 Highland",   "photo": "model-3.jpg", "parent": "model-3", "label": "Highland · 2023+", "gallery": ["m3h-1.jpg", "m3h-2.jpg", "m3h-3.jpg", "m3h-4.jpg", "m3h-5.jpg", "m3h-6.jpg", "m3h-7.jpg"]},
     "model-3-standard":  {"name": "Model 3 Standard",   "photo": "model-3.jpg", "parent": "model-3", "label": "Standard · 2025+"},
     "model-3-performance": {"name": "Model 3 Performance", "photo": "model-3.jpg", "parent": "model-3", "label": "Performance"},
     "model-x":           {"name": "Model X",            "photo": "model-x.jpg"},
     "model-x-classic":   {"name": "Model X 2015–2020",  "parent": "model-x", "label": "2015–2020"},
     "model-x-2021":      {"name": "Model X 2021+",      "parent": "model-x", "label": "2021+"},
     "model-x-plaid":     {"name": "Model X Plaid",      "parent": "model-x", "label": "Plaid"},
-    "model-y":           {"name": "Model Y",            "photo": "model-y-classic.jpg", "article_photo": "model-y.jpg"},
+    "model-y":           {"name": "Model Y",            "photo": "model-y-classic.jpg", "article_photo": "model-y.jpg", "gallery": ["myj-1.jpg", "myj-2.jpg", "myj-3.jpg", "myj-4.jpg", "myj-5.jpg", "myj-6.jpg"]},
     "model-y-classic":   {"name": "Model Y 2020–2024",  "photo": "model-y-classic.jpg", "parent": "model-y", "label": "2020–2024"},
-    "model-y-juniper":   {"name": "Model Y Juniper",    "photo": "model-y.jpg", "parent": "model-y", "label": "Juniper · 2025+"},
+    "model-y-juniper":   {"name": "Model Y Juniper",    "photo": "model-y.jpg", "parent": "model-y", "label": "Juniper · 2025+", "gallery": ["myj-1.jpg", "myj-2.jpg", "myj-3.jpg", "myj-4.jpg", "myj-5.jpg", "myj-6.jpg"]},
     "model-y-standard":  {"name": "Model Y Standard",   "photo": "model-y.jpg", "parent": "model-y", "label": "Standard · 2025+"},
     "model-y-performance": {"name": "Model Y Performance", "photo": "model-y.jpg", "parent": "model-y", "label": "Performance"},
     "model-y-l":         {"name": "Model Y L",          "photo": "model-y.jpg", "parent": "model-y", "label": {"en": "Model Y L · 6 seats", "nl": "Model Y L · 6 zitplaatsen"}},
@@ -146,7 +146,7 @@ MODELS = {
     "cybertruck-awd":    {"name": "Cybertruck AWD",     "parent": "cybertruck", "label": "AWD"},
     "cybertruck-cyberbeast": {"name": "Cyberbeast",     "parent": "cybertruck", "label": "Cyberbeast"},
     "cybercab":          {"name": "Cybercab",           "photo": "cybercab.jpg"},
-    "roadster":          {"name": "Roadster",           "photo": "roadster.jpg"},
+    "roadster":          {"name": "Roadster",           "photo": "roadster.jpg", "gallery": ["rd-1.jpg", "rd-2.jpg", "rd-3.jpg"]},
     "semi":              {"name": "Semi",               "photo": "semi.jpg"},
 }
 # Fallback photo per category: a file in static/img/topics/, or a list of files to vary between
@@ -382,6 +382,7 @@ def social_img(a, lang):
     return f"/img/{a['slug']}-{lang}.jpg"
 
 
+GALLERY_ORDER = {}  # slug -> position among articles sharing the same first model (set in build)
 PHOTO_ORDER = {}  # slug -> position among articles of its category, oldest first (set in build)
 
 
@@ -402,6 +403,12 @@ def site_img(a):
     if a.get("image") and (STATIC / "img" / a["image"]).exists():
         return f"/img/{a['image']}"
     ms = a.get("models", [])
+    if ms:
+        k = ms[0]
+        gal = MODELS[k].get("gallery") or MODELS.get(MODELS[k].get("parent", ""), {}).get("gallery")
+        gal = [g for g in (gal or []) if (STATIC / "img" / "models" / g).exists()]
+        if gal:
+            return f"/img/models/{gal[GALLERY_ORDER.get(a['slug'], 0) % len(gal)]}"
     if ms and model_photo(ms[0], True):
         return model_photo(ms[0], True)
     if len(ms) == 1 and MODELS[ms[0]].get("photo") and (STATIC / "img" / "topics" / MODELS[ms[0]]["photo"]).exists():
@@ -558,6 +565,10 @@ def build():
     for x in sorted(arts, key=published):
         PHOTO_ORDER[x["slug"]] = seen.get(x["category"], 0)
         seen[x["category"]] = PHOTO_ORDER[x["slug"]] + 1
+        if x.get("models"):
+            gk = "g:" + (MODELS[x["models"][0]].get("parent") or x["models"][0])
+            GALLERY_ORDER[x["slug"]] = seen.get(gk, 0)
+            seen[gk] = GALLERY_ORDER[x["slug"]] + 1
     news = [a for a in arts if a["category"] != "guides"]
     guides = [a for a in arts if a["category"] == "guides"]
     if OUT.exists():

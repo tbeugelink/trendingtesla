@@ -11,8 +11,9 @@ from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
 FONTS = Path(__file__).resolve().parent / "static" / "fonts"
 W, H = 1200, 630
-BG = (6, 8, 12)
+BG = (13, 24, 40)
 RED = (226, 40, 34)
+BLUE = (0, 212, 255)
 
 
 def _font(name, size):
@@ -93,8 +94,13 @@ MOTIFS = {
 
 def make_cover(path, title, category_label, category_key, color_hex, date_label, with_text=True):
     """with_text=False gives a clean visual for use on the site, next to the HTML headline."""
-    color = RED
+    color = BLUE
     img = Image.new("RGB", (W, H), BG)
+    # vertical navy gradient background
+    gd = ImageDraw.Draw(img)
+    for y in range(H):
+        f = y / H
+        gd.line([(0, y), (W, y)], fill=(int(24 - 12 * f), int(40 - 20 * f), int(66 - 32 * f)))
 
     # Soft colour glow behind the motif
     dx = 0 if with_text else -410   # centre the visual when there is no text
@@ -118,7 +124,7 @@ def make_cover(path, title, category_label, category_key, color_hex, date_label,
     fd = ImageDraw.Draw(fade)
     for x in range(W):
         a = int(max(0, min(1, 1.25 - x / 760)) * 235)
-        fd.line([(x, 0), (x, H)], fill=BG + (a,))
+        fd.line([(x, 0), (x, H)], fill=(14, 26, 45, a))
     img.paste(fade, (0, 0), fade)
 
     d = ImageDraw.Draw(img)
@@ -127,7 +133,7 @@ def make_cover(path, title, category_label, category_key, color_hex, date_label,
     label = category_label.upper()
     tw = d.textlength(label, font=f_cat)
     d.rounded_rectangle([64, 64, 64 + tw + 36, 108], radius=22, fill=color)
-    d.text((82, 72), label, font=f_cat, fill=(255, 255, 255))
+    d.text((82, 72), label, font=f_cat, fill=(6, 20, 32))
 
     # Title: largest size that fits in 4 lines
     for size in (66, 60, 54, 48, 44):

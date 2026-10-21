@@ -1,0 +1,29 @@
+{
+  "slug": "cybercab-fleet-interest-form-73000",
+  "date": "2026-09-06",
+  "time": "10:00",
+  "category": "robotaxi",
+  "models": [
+    "cybercab"
+  ],
+  "sources": [
+    {
+      "title": "Basenor — 73,000 sign up for Cybercab fleet",
+      "url": "https://www.basenor.com/blogs/news/73-000-sign-up-for-cybercab-fleet-what-the-numbers-say"
+    },
+    {
+      "title": "Wikipedia — Tesla Cybercab",
+      "url": "https://en.wikipedia.org/wiki/Tesla_Cybercab"
+    }
+  ],
+  "en": {
+    "title": "More than 73,000 people raise their hand to buy Cybercabs for fleet use",
+    "description": "Tesla opened an interest form for businesses that want to buy and run Cybercab fleets. The number of clicks is big, but it is a signal of curiosity, not a pile of orders.",
+    "body": "<p>On the day its robotaxi service started in Austin, Tesla also opened an online form for people and companies interested in buying Cybercabs to run as a fleet. By September 5, more than 73,000 had filled it in, according to a figure shared on X by well-known Tesla commentator Sawyer Merritt.</p><h2>Who it is for</h2><p>The form is aimed at operators who want to buy vehicles at scale, not at individual buyers who want a Cybercab in their driveway. That fits Tesla's broader plan: the Cybercab was designed for ride-hailing, and reports in September said Tesla was sounding out customers about buying and operating fleets themselves.</p><h2>How to read the number</h2><ul><li><strong>It is not an order book.</strong> Filling in an interest form costs nothing and involves no deposit.</li><li><strong>It is not confirmed by Tesla.</strong> The figure comes from a social media post, not from a company statement.</li><li><strong>It does show appetite.</strong> Tens of thousands of people want to know what it would take to own a share of a robotaxi network.</li></ul><h2>The economics Tesla is pitching</h2><p>Tesla has long targeted an operating cost below $0.30 per mile for the Cybercab. The car is light, with a curb weight of about 1,412 kg, and very efficient for its size, using roughly 165 Wh per mile. Low running costs are the heart of the business case for anyone thinking of running a fleet.</p><h2>The caveats</h2><p>No price has been announced, and NHTSA has just opened an audit into how the Cybercab was certified. Until both are clear, nobody can calculate a real return on a Cybercab fleet. Interest is high; the details that turn interest into purchases are still missing.</p>"
+  },
+  "nl": {
+    "title": "Ruim 73.000 mensen tonen interesse om Cybercabs te kopen voor een eigen vloot",
+    "description": "Tesla opende een interesseformulier voor bedrijven die Cybercab-vloten willen kopen en uitbaten. Het aantal aanmeldingen is groot, maar het zegt iets over nieuwsgierigheid, niet over bestellingen.",
+    "body": "<p>Op de dag dat de robotaxidienst in Austin van start ging, opende Tesla ook een online formulier voor mensen en bedrijven die interesse hebben om Cybercabs te kopen en als vloot te laten rijden. Op 5 september hadden meer dan 73.000 mensen het ingevuld, volgens een cijfer dat de bekende Tesla-volger Sawyer Merritt op X deelde.</p><h2>Voor wie het bedoeld is</h2><p>Het formulier richt zich op exploitanten die auto's op grote schaal willen kopen, niet op particulieren die een Cybercab voor de deur willen. Dat past in Tesla's bredere plan: de Cybercab is ontworpen voor taxidiensten, en in september kwamen berichten naar buiten dat Tesla bij klanten peilde of ze zelf vloten willen kopen en beheren.</p><h2>Zo lees je het cijfer</h2><ul><li><strong>Het zijn geen bestellingen.</strong> Een interesseformulier invullen kost niets en vraagt geen aanbetaling.</li><li><strong>Tesla heeft het niet bevestigd.</strong> Het cijfer komt uit een bericht op sociale media, niet uit een verklaring van het bedrijf.</li><li><strong>Het laat wel trek zien.</strong> Tienduizenden mensen willen weten wat ervoor nodig is om een deel van een robotaxinetwerk te bezitten.</li></ul><h2>Het verdienmodel dat Tesla schetst</h2><p>Tesla mikt al lang op gebruikskosten van minder dan $0,30 per mijl (zo'n €0,17 per kilometer) voor de Cybercab. De auto is licht, met een leeggewicht van ongeveer 1.412 kg, en voor zijn formaat erg zuinig met zo'n 165 Wh per mijl, ruim 100 Wh per kilometer. Lage gebruikskosten vormen de kern van het verhaal voor iedereen die overweegt een vloot te gaan exploiteren.</p><h2>De kanttekeningen</h2><p>Er is nog geen prijs bekend, en de NHTSA is net een onderzoek gestart naar hoe de Cybercab is gecertificeerd. Zolang die twee punten niet duidelijk zijn, kan niemand een echt rendement op een Cybercab-vloot uitrekenen. De interesse is groot; de details die interesse omzetten in aankopen ontbreken nog.</p>"
+  }
+}

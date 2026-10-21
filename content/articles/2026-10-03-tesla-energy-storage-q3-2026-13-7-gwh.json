@@ -1,0 +1,26 @@
+{
+  "slug": "tesla-energy-storage-q3-2026-13-7-gwh",
+  "date": "2026-10-03",
+  "time": "08:45",
+  "category": "energy",
+  "sources": [
+    {
+      "title": "Electrek — Tesla Q3 2026 deliveries and storage",
+      "url": "https://electrek.co/2026/10/02/tesla-q3-2026-deliveries-486532/"
+    },
+    {
+      "title": "Unite.AI — Tesla reports Q3 deliveries and 13.7 GWh storage deployments",
+      "url": "https://unite.ai/tesla-reports-486-532-q3-deliveries-and-13-7-gwh-storage-deployments"
+    }
+  ],
+  "en": {
+    "title": "Tesla Energy deploys 13.7 GWh in Q3: growth continues, but slower than hoped",
+    "description": "Tesla's battery storage business grew almost 10% from a year ago, yet missed analyst expectations by more than 2 GWh. Here is what is behind the numbers.",
+    "body": "<p>While the car numbers beat expectations, Tesla's energy business fell short. Tesla deployed 13.7 GWh of energy storage in the third quarter of 2026, the company reported alongside its vehicle deliveries on October 2.</p><h2>The numbers in context</h2><ul><li><strong>Q3 2026:</strong> 13.7 GWh.</li><li><strong>Q3 2025:</strong> 12.5 GWh, so growth of 9.6% year over year.</li><li><strong>Q2 2026:</strong> 13.5 GWh, so slightly up from the previous quarter.</li><li><strong>Record:</strong> 14.2 GWh in Q4 2025.</li><li><strong>Analyst expectation:</strong> about 15.9 GWh.</li></ul><h2>Why a miss is not a disaster</h2><p>Energy storage deployments are lumpy. They depend on when large grid projects are finished and handed over, which can shift a quarter's numbers by gigawatt-hours. A 'miss' can mean projects slipped by a few weeks rather than demand disappearing.</p><p>The order side looks healthy. In September alone, Tesla announced a 3 GWh Megapack supply deal in Italy, on top of earlier multi-gigawatt-hour contracts in the UK, Italy and Australia. Megapack 3, the newest version, recently entered production in Texas.</p><h2>Why it matters for Tesla</h2><p>Energy storage has become one of Tesla's steadier businesses at a time when car sales are flat. Investors watch it closely because battery storage for power grids is growing worldwide and usually comes with better margins than selling cars.</p><h2>What to watch</h2><p>On October 21, Tesla's earnings report will show the revenue and profit of the energy business. If margins hold up, a quarter of slower deployments will matter less than the pipeline of contracts behind it.</p><p><em>This article is for information only and is not financial advice.</em></p>"
+  },
+  "nl": {
+    "title": "Tesla Energy installeert 13,7 GWh in Q3: de groei zet door, maar trager dan gehoopt",
+    "description": "Tesla's tak voor batterijopslag groeide bijna 10% ten opzichte van vorig jaar, maar bleef ruim 2 GWh onder de verwachting van analisten. Dit zit erachter.",
+    "body": "<p>Waar de autocijfers meevielen, bleef de energietak van Tesla achter. Tesla installeerde in het derde kwartaal van 2026 13,7 GWh aan energieopslag, meldde het bedrijf op 2 oktober tegelijk met de leveringen van auto's.</p><h2>De cijfers in perspectief</h2><ul><li><strong>Q3 2026:</strong> 13,7 GWh.</li><li><strong>Q3 2025:</strong> 12,5 GWh, dus een groei van 9,6%.</li><li><strong>Q2 2026:</strong> 13,5 GWh, dus licht hoger dan het vorige kwartaal.</li><li><strong>Record:</strong> 14,2 GWh in het vierde kwartaal van 2025.</li><li><strong>Verwachting van analisten:</strong> ongeveer 15,9 GWh.</li></ul><h2>Waarom dit geen ramp is</h2><p>Installaties van energieopslag komen met horten en stoten. Ze hangen af van wanneer grote netprojecten klaar zijn en worden opgeleverd, en dat kan de cijfers van een kwartaal met gigawattuur verschuiven. Een tegenvaller kan dus betekenen dat projecten een paar weken later klaar zijn, niet dat de vraag verdwijnt.</p><p>Aan de orderkant ziet het er gezond uit. Alleen al in september meldde Tesla een leveringsdeal van 3 GWh aan Megapacks in Italië, bovenop eerdere contracten van meerdere gigawattuur in het VK, Italië en Australië. De Megapack 3, de nieuwste versie, ging onlangs in Texas in productie.</p><h2>Waarom het belangrijk is voor Tesla</h2><p>Energieopslag is een van Tesla's stabielere activiteiten geworden, juist nu de autoverkoop stilstaat. Beleggers volgen het nauwlettend, omdat batterijopslag voor stroomnetten wereldwijd groeit en meestal betere marges oplevert dan auto's verkopen.</p><h2>Waar je op moet letten</h2><p>Op 21 oktober laten de kwartaalcijfers de omzet en winst van de energietak zien. Blijven de marges overeind, dan weegt een kwartaal met tragere installaties minder zwaar dan de stapel contracten erachter.</p><p><em>Dit artikel is alleen bedoeld als informatie en is geen financieel advies.</em></p>"
+  }
+}

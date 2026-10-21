@@ -14,6 +14,7 @@ Article JSON format:
   "time": "07:00",                                 # publication time (HH:MM, Europe/Amsterdam); optional
   "category": "earnings",                          # key from CATEGORIES below
   "models": ["model-y"],                           # optional: keys from MODELS below the article is about
+  "image": "topics/optimus.jpg",                   # optional: specific photo (path inside static/img/)
   "sources": [{"title": "...", "url": "https://..."}],
   "en": {"title": "...", "description": "...", "body": "<p>...</p>"},
   "nl": {"title": "...", "description": "...", "body": "<p>...</p>"}
@@ -119,6 +120,12 @@ MODELS = {
     "cybertruck": {"name": "Cybertruck", "photo": "cybertruck.jpg"},
     "cybercab":   {"name": "Cybercab",   "photo": "cybercab.jpg"},
     "roadster":   {"name": "Roadster",   "photo": "roadster.jpg"},
+    "semi":       {"name": "Semi",       "photo": "semi.jpg"},
+}
+# Fallback photo per category, a file in static/img/topics/ (optional until uploaded).
+TOPIC_PHOTOS = {
+    "robotaxi": "cybercab.jpg", "fsd": "fsd.jpg", "software": "fsd.jpg", "optimus": "optimus.jpg",
+    "energy": "energy.jpg", "charging": "supercharger.jpg", "earnings": "gigafactory.jpg", "news": "gigafactory.jpg",
 }
 MODEL_STRIP = ["model-3", "model-y", "model-s", "model-x", "cybertruck"]
 
@@ -334,12 +341,22 @@ def social_img(a, lang):
     return f"/img/{a['slug']}-{lang}.jpg"
 
 
+def topic_photo(category):
+    f = TOPIC_PHOTOS.get(category)
+    return f"/img/topics/{f}" if f and (STATIC / "img" / "topics" / f).exists() else None
+
+
 def site_img(a):
-    """Image shown on the site: the model photo for single-model articles, else the generated visual."""
+    """Image shown on the site: an explicit "image" (file in static/img/), else the model photo for
+    single-model articles, else the category photo, else the generated visual."""
+    if a.get("image") and (STATIC / "img" / a["image"]).exists():
+        return f"/img/{a['image']}"
     ms = a.get("models", [])
     if len(ms) == 1 and model_photo(ms[0]):
         return model_photo(ms[0])
-    return f"/img/v/{a['slug']}.jpg"
+    if len(ms) == 1 and (STATIC / "img" / "topics" / MODELS[ms[0]]["photo"]).exists():
+        return f"/img/topics/{MODELS[ms[0]]['photo']}"
+    return topic_photo(a["category"]) or f"/img/v/{a['slug']}.jpg"
 
 
 def read_time(a, lang):

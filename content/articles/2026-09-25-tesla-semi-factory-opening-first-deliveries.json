@@ -1,0 +1,33 @@
+{
+  "slug": "tesla-semi-factory-opening-first-deliveries",
+  "date": "2026-09-25",
+  "time": "07:30",
+  "category": "news",
+  "models": [
+    "semi"
+  ],
+  "sources": [
+    {
+      "title": "Electrive — Tesla begins series deliveries of the Semi",
+      "url": "https://www.electrive.com/2026/09/25/tesla-begins-series-deliveries-of-the-semi/"
+    },
+    {
+      "title": "Drive Tesla Canada — Tesla Semi factory opening in Nevada",
+      "url": "https://driveteslacanada.ca/news/tesla-semi-factory-opening-party-nevada/"
+    },
+    {
+      "title": "Tesla North — Tesla sets September 24 Semi rollout",
+      "url": "https://teslanorth.com/2026/08/25/tesla-semi-rollout-sparks/"
+    }
+  ],
+  "en": {
+    "title": "Tesla opens its Semi factory in Nevada and starts series deliveries",
+    "description": "Nine years after its unveiling, the Tesla Semi is in series production. The new Nevada plant is built for up to 50,000 trucks a year, with Europe due in 2027.",
+    "body": "<p>Tesla officially opened its dedicated Semi factory in Nevada on September 24 and handed over series-production electric trucks to its first customers. It is a milestone for a product that was first shown in 2017 and reached a handful of customers at the end of 2022.</p><h2>The factory</h2><ul><li><strong>Location:</strong> its own site near Gigafactory Nevada.</li><li><strong>Size:</strong> about 167,000 square meters.</li><li><strong>Capacity:</strong> designed for up to 50,000 trucks a year.</li><li><strong>Production start:</strong> the first Semi came off the line in April 2026.</li></ul><p>One production line builds the Standard and Long Range versions, as well as a version intended for Europe.</p><h2>Versions and prices</h2><ul><li><strong>Long Range:</strong> up to 500 miles (about 800 km) per charge, around $290,000.</li><li><strong>Standard Range:</strong> 325 miles (about 520 km), around $260,000.</li></ul><h2>Customers and orders</h2><p>Around a dozen customers received trucks or handover documents at the event. Einride has ordered 500 Semis and IMC Logistics 50. A US purchasing alliance also picked Tesla as a main supplier in a tender for 2,500 electric heavy trucks, alongside other manufacturers, so Tesla's share of that number is unclear. Tesla did not disclose its total order book.</p><h2>Europe</h2><p>European deliveries are planned for 2027, initially built in Nevada. Musk has mentioned possible future production at the Grünheide plant near Berlin.</p><h2>What to watch</h2><p>The capacity is there; the question is how fast Tesla can fill it. According to its latest shareholder deck, high-volume production has slipped to 2027. Charging is the other piece: trucks this size need Megachargers along the routes they drive.</p>"
+  },
+  "nl": {
+    "title": "Tesla opent Semi-fabriek in Nevada en begint met serieleveringen",
+    "description": "Negen jaar na de presentatie is de Tesla Semi in serieproductie. De nieuwe fabriek in Nevada is gebouwd voor maximaal 50.000 trucks per jaar, en Europa volgt in 2027.",
+    "body": "<p>Tesla heeft op 24 september officieel zijn eigen Semi-fabriek in Nevada geopend en de eerste elektrische trucks uit serieproductie aan klanten overgedragen. Een mijlpaal voor een product dat in 2017 werd gepresenteerd en eind 2022 bij een handvol klanten terechtkwam.</p><h2>De fabriek</h2><ul><li><strong>Locatie:</strong> een eigen terrein vlak bij Gigafactory Nevada.</li><li><strong>Omvang:</strong> zo'n 167.000 vierkante meter.</li><li><strong>Capaciteit:</strong> ontworpen voor maximaal 50.000 trucks per jaar.</li><li><strong>Start productie:</strong> de eerste Semi rolde in april 2026 van de band.</li></ul><p>Op één productielijn worden de Standard- en Long Range-versie gebouwd, plus een versie voor Europa.</p><h2>Versies en prijzen</h2><ul><li><strong>Long Range:</strong> tot zo'n 800 km per lading, rond de $290.000.</li><li><strong>Standard Range:</strong> zo'n 520 km, rond de $260.000.</li></ul><h2>Klanten en bestellingen</h2><p>Ongeveer twaalf klanten kregen tijdens het evenement trucks of overdrachtsdocumenten. Einride bestelde 500 Semi's en IMC Logistics 50. Een Amerikaans inkoopverband koos Tesla bovendien als een van de hoofdleveranciers bij een aanbesteding voor 2.500 elektrische zware trucks, naast andere fabrikanten, dus Tesla's aandeel daarin is onduidelijk. Het totale orderboek maakte Tesla niet bekend.</p><h2>Europa</h2><p>Europese leveringen staan gepland voor 2027, in eerste instantie gebouwd in Nevada. Musk heeft het gehad over mogelijke productie in de fabriek in Grünheide bij Berlijn.</p><h2>Waar je op moet letten</h2><p>De capaciteit is er; de vraag is hoe snel Tesla die kan benutten. Volgens de laatste presentatie voor aandeelhouders is productie in grote aantallen opgeschoven naar 2027. Laden is het andere puzzelstuk: trucks van dit formaat hebben Megachargers nodig langs de routes die ze rijden.</p>"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "slug": "tesla-optimus-production-ramp-fremont-1000-per-week",
+  "date": "2026-10-19",
+  "time": "08:00",
+  "category": "optimus",
+  "sources": [
+    {
+      "title": "Tech Insider — Tesla Optimus hits 1,000/week target, echoes 2018 warning",
+      "url": "https://tech-insider.org/tesla-optimus-1000-robots-weekly-2026/"
+    },
+    {
+      "title": "Wikipedia — Optimus (robot)",
+      "url": "https://en.wikipedia.org/wiki/Optimus_(robot)"
+    }
+  ],
+  "en": {
+    "title": "Tesla Optimus production: several hundred robots a week now, 1,000 targeted by year-end",
+    "description": "Reports say Fremont is building several hundred Optimus humanoid robots a week on former Model S and X lines, with an internal target of 1,000 a week by the end of 2026.",
+    "body": "<p>Tesla's Optimus humanoid robot is moving from demo to production. According to reports gathered by Tech Insider on October 19, Tesla's Fremont factory is now building several hundred Optimus robots a week, with an internal target of 1,000 a week by the end of 2026.</p><h2>Where they are built</h2><p>Optimus is built in Fremont, California, on lines that used to make the Model S and Model X. Those two cars went out of production in April 2026, and Tesla said in April that the first-generation Optimus lines being installed there are designed for up to one million robots a year. A second-generation line at Gigafactory Texas is being prepared for a long-term output of ten million a year.</p><h2>Read the numbers carefully</h2><ul><li><strong>Not confirmed by Tesla:</strong> the weekly figures come from industry reports, not from a Tesla statement.</li><li><strong>1,000 a week is a target:</strong> current output is 'several hundred' a week.</li><li><strong>Supervised robots:</strong> the units are reported to work under supervision and to struggle with tasks outside their training.</li><li><strong>Complex product:</strong> Optimus has more than 10,000 unique parts, none of which were mass-produced before.</li></ul><h2>The 2018 lesson</h2><p>In 2018, during Model 3 'production hell', Musk admitted that excessive automation had been a mistake. Optimus is a far bigger manufacturing challenge. Tesla appears to be ramping more gradually this time, with modular sub-assembly lines, but that is an outside interpretation rather than a company claim.</p><h2>When can you buy one?</h2><p>External sales are targeted for 2027. For now, Optimus robots are meant for Tesla's own factories.</p><h2>What to watch</h2><p>The October 21 earnings call is the next chance for Tesla to give official numbers on Optimus production, cost per unit and the long-awaited Version 3.</p>"
+  },
+  "nl": {
+    "title": "Productie Tesla Optimus: nu enkele honderden robots per week, 1.000 als doel tegen het eind van het jaar",
+    "description": "Volgens berichten bouwt Fremont enkele honderden Optimus-robots per week op de oude lijnen van de Model S en X, met een intern doel van 1.000 per week eind 2026.",
+    "body": "<p>Tesla's humanoïde robot Optimus gaat van demonstratie naar productie. Volgens berichten die Tech Insider op 19 oktober bundelde, bouwt Tesla's fabriek in Fremont nu enkele honderden Optimus-robots per week, met een intern doel van 1.000 per week tegen het eind van 2026.</p><h2>Waar ze worden gebouwd</h2><p>Optimus wordt gebouwd in Fremont, Californië, op lijnen waar vroeger de Model S en Model X van de band rolden. Die twee auto's gingen in april 2026 uit productie. Tesla meldde in april dat de eerste generatie Optimus-lijnen die daar worden geïnstalleerd, is ontworpen voor maximaal een miljoen robots per jaar. In Gigafactory Texas wordt een lijn van de tweede generatie voorbereid voor op termijn tien miljoen per jaar.</p><h2>Lees de cijfers zorgvuldig</h2><ul><li><strong>Niet bevestigd door Tesla:</strong> de weekcijfers komen uit berichten in de industrie, niet uit een verklaring van Tesla.</li><li><strong>1.000 per week is een doel:</strong> de huidige productie is 'enkele honderden' per week.</li><li><strong>Robots onder toezicht:</strong> de robots werken volgens de berichten onder toezicht en hebben moeite met taken buiten hun training.</li><li><strong>Ingewikkeld product:</strong> Optimus heeft meer dan 10.000 unieke onderdelen, waarvan er geen eerder in massa werd geproduceerd.</li></ul><h2>De les van 2018</h2><p>In 2018, tijdens de 'productiehel' van de Model 3, gaf Musk toe dat te veel automatisering een fout was. Optimus is een veel grotere uitdaging voor de productie. Tesla lijkt deze keer geleidelijker op te schalen, met modulaire lijnen voor deelassemblage, maar dat is een interpretatie van buitenaf, geen bewering van het bedrijf.</p><h2>Wanneer kun je er een kopen?</h2><p>Verkoop aan derden staat gepland voor 2027. Voorlopig zijn de Optimus-robots bedoeld voor Tesla's eigen fabrieken.</p><h2>Waar je op moet letten</h2><p>De toelichting op de kwartaalcijfers van 21 oktober is de volgende kans voor Tesla om officiële cijfers te geven over de productie van Optimus, de kostprijs per robot en de langverwachte Versie 3.</p>"
+  }
+}

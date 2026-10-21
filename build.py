@@ -153,7 +153,7 @@ MODELS = {
 # (each article always gets the same one, picked from its slug). Missing files are skipped.
 TOPIC_PHOTOS = {
     "robotaxi": "cybercab.jpg", "fsd": ["fsd.jpg", "fsd-2.jpg", "fsd-3.jpg", "fsd-4.jpg"], "software": ["fsd.jpg", "fsd-2.jpg", "fsd-3.jpg", "fsd-4.jpg"], "optimus": ["optimus.jpg", "optimus-full.jpg"],
-    "energy": ["energy.jpg", "energy-2.jpg"], "charging": ["supercharger.jpg", "supercharger-2.jpg", "supercharger-3.jpg"], "earnings": ["gigafactory.jpg", "gigafactory-2.jpg"], "news": ["gigafactory.jpg", "gigafactory-2.jpg"],
+    "energy": ["energy.jpg", "energy-2.jpg"], "charging": ["supercharger.jpg", "supercharger-2.jpg", "supercharger-3.jpg"], "ecosystem": ["spacex-1.jpg", "spacex-2.jpg", "spacex-3.jpg", "spacex-4.jpg", "spacex-5.jpg"], "earnings": ["gigafactory.jpg", "gigafactory-2.jpg"], "news": ["gigafactory.jpg", "gigafactory-2.jpg"],
 }
 MODEL_STRIP = ["model-s", "model-3", "model-3-highland", "model-x", "model-y", "model-y-juniper", "cybertruck"]
 

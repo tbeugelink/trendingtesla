@@ -244,7 +244,7 @@ h1,h2,h3{color:var(--head);font-weight:800}
 .btn.ghost:hover{border-color:var(--head);background:transparent}
 .tag{display:inline-block;font-size:.7rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;text-decoration:none;color:var(--blue)}
 .meta{font-size:.8rem;color:var(--dim)}
-.h2{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin:72px 0 24px}
+.h2{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin:48px 0 22px}
 .h2 h2{font-size:clamp(1.3rem,2.6vw,1.75rem);letter-spacing:-.02em;line-height:1.2}
 .h2 a{font-size:.86rem;font-weight:700;color:var(--muted);text-decoration:none;white-space:nowrap}
 .h2 a:hover{color:var(--head)}
@@ -258,7 +258,7 @@ h1,h2,h3{color:var(--head);font-weight:800}
 .hero h1{font-size:clamp(1.8rem,4vw,2.7rem);line-height:1.08;letter-spacing:-.025em;margin-bottom:12px}
 .hero h1 span{color:var(--red)}
 .hero p{color:#c9ced3;font-size:1rem;margin-bottom:20px}
-#news .h2{margin-top:44px}
+#news .h2{margin-top:36px}
 .hero .btns{display:flex;gap:10px;flex-wrap:wrap}
 /* top stories */
 .tops{display:grid;grid-template-columns:1.6fr 1fr;gap:44px}
@@ -273,7 +273,8 @@ h1,h2,h3{color:var(--head);font-weight:800}
 .mini{display:grid;grid-template-columns:180px 1fr;gap:18px;text-decoration:none;color:var(--fg);align-items:start}
 .mini img{width:180px;aspect-ratio:1200/630;object-fit:cover;border-radius:10px;border:1px solid var(--border);transition:border-color .2s,box-shadow .2s}
 .mini:hover img{border-color:var(--blue);box-shadow:0 0 0 1px var(--blue)}
-.mini h3{font-size:.98rem;line-height:1.3;margin:2px 0 4px}
+.mini h3{font-size:.98rem;line-height:1.3;margin:6px 0 4px}
+.mini .tag{display:block;line-height:1;margin-top:0}
 .feature:hover h3,.card:hover h3,.mini:hover h3{color:var(--blue2)}
 /* grid */
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:48px 36px}

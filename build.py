@@ -58,6 +58,7 @@ LANGS = {
         "cat_intro": "All TrendingTesla articles about {}.",
         "model_intro": "News, updates and advice for the Tesla {}.",
         "model_guides": "Advice for the {}", "model_news": "{} news",
+        "all_versions": "All versions", "your_version": "Your version:",
         "notfound": "Page not found", "notfound_text": "This page does not exist (anymore).",
         "back": "Back to the homepage", "min": "min read", "all": "All news",
         "why_h": "Honest news, no sales talk",
@@ -85,6 +86,7 @@ LANGS = {
         "cat_intro": "Alle artikelen van TrendingTesla over {}.",
         "model_intro": "Nieuws, updates en advies voor de Tesla {}.",
         "model_guides": "Advies voor de {}", "model_news": "Nieuws over de {}",
+        "all_versions": "Alle versies", "your_version": "Jouw versie:",
         "notfound": "Pagina niet gevonden", "notfound_text": "Deze pagina bestaat niet (meer).",
         "back": "Terug naar de homepagina", "min": "min lezen", "all": "Al het nieuws",
         "why_h": "Eerlijk nieuws, geen verkooppraatjes",
@@ -112,19 +114,36 @@ CATEGORIES = {
 }
 
 # Model pages. "photo" is a file in static/img/models/ (optional until uploaded).
+# "article_photo": photo used on articles tagged with this model (current generation).
+# "parent": this is a version/generation of the parent model. Its page also lists the parent's
+#   articles, the parent page lists its articles, and both show a row of version buttons.
+# "label": text on the version button (years are the same in both languages).
 MODELS = {
-    # "article_photo": photo used on articles tagged with this model (current generation);
-    # "parent": a variant page also lists the articles of its parent model, and vice versa.
-    "model-3":          {"name": "Model 3",          "photo": "model-3-classic.jpg", "article_photo": "model-3.jpg"},
-    "model-3-highland": {"name": "Model 3 Highland", "photo": "model-3.jpg", "parent": "model-3"},
-    "model-y":          {"name": "Model Y",          "photo": "model-y-classic.jpg", "article_photo": "model-y.jpg"},
-    "model-y-juniper":  {"name": "Model Y Juniper",  "photo": "model-y.jpg", "parent": "model-y"},
-    "model-s":    {"name": "Model S",    "photo": "model-s.jpg"},
-    "model-x":    {"name": "Model X",    "photo": "model-x.jpg"},
-    "cybertruck": {"name": "Cybertruck", "photo": "cybertruck.jpg"},
-    "cybercab":   {"name": "Cybercab",   "photo": "cybercab.jpg"},
-    "roadster":   {"name": "Roadster",   "photo": "roadster.jpg"},
-    "semi":       {"name": "Semi",       "photo": "semi.jpg"},
+    "model-s":           {"name": "Model S",            "photo": "model-s.jpg"},
+    "model-s-classic":   {"name": "Model S 2012–2020",  "parent": "model-s", "label": "2012–2020"},
+    "model-s-2021":      {"name": "Model S 2021+",      "parent": "model-s", "label": "2021+"},
+    "model-s-plaid":     {"name": "Model S Plaid",      "parent": "model-s", "label": "Plaid"},
+    "model-3":           {"name": "Model 3",            "photo": "model-3-classic.jpg", "article_photo": "model-3.jpg"},
+    "model-3-classic":   {"name": "Model 3 2017–2023",  "photo": "model-3-classic.jpg", "parent": "model-3", "label": "2017–2023"},
+    "model-3-highland":  {"name": "Model 3 Highland",   "photo": "model-3.jpg", "parent": "model-3", "label": "Highland · 2023+"},
+    "model-3-standard":  {"name": "Model 3 Standard",   "photo": "model-3.jpg", "parent": "model-3", "label": "Standard · 2025+"},
+    "model-3-performance": {"name": "Model 3 Performance", "photo": "model-3.jpg", "parent": "model-3", "label": "Performance"},
+    "model-x":           {"name": "Model X",            "photo": "model-x.jpg"},
+    "model-x-classic":   {"name": "Model X 2015–2020",  "parent": "model-x", "label": "2015–2020"},
+    "model-x-2021":      {"name": "Model X 2021+",      "parent": "model-x", "label": "2021+"},
+    "model-x-plaid":     {"name": "Model X Plaid",      "parent": "model-x", "label": "Plaid"},
+    "model-y":           {"name": "Model Y",            "photo": "model-y-classic.jpg", "article_photo": "model-y.jpg"},
+    "model-y-classic":   {"name": "Model Y 2020–2024",  "photo": "model-y-classic.jpg", "parent": "model-y", "label": "2020–2024"},
+    "model-y-juniper":   {"name": "Model Y Juniper",    "photo": "model-y.jpg", "parent": "model-y", "label": "Juniper · 2025+"},
+    "model-y-standard":  {"name": "Model Y Standard",   "photo": "model-y.jpg", "parent": "model-y", "label": "Standard · 2025+"},
+    "model-y-performance": {"name": "Model Y Performance", "photo": "model-y.jpg", "parent": "model-y", "label": "Performance"},
+    "model-y-l":         {"name": "Model Y L",          "photo": "model-y.jpg", "parent": "model-y", "label": {"en": "Model Y L · 6 seats", "nl": "Model Y L · 6 zitplaatsen"}},
+    "cybertruck":        {"name": "Cybertruck",         "photo": "cybertruck.jpg"},
+    "cybertruck-awd":    {"name": "Cybertruck AWD",     "parent": "cybertruck", "label": "AWD"},
+    "cybertruck-cyberbeast": {"name": "Cyberbeast",     "parent": "cybertruck", "label": "Cyberbeast"},
+    "cybercab":          {"name": "Cybercab",           "photo": "cybercab.jpg"},
+    "roadster":          {"name": "Roadster",           "photo": "roadster.jpg"},
+    "semi":              {"name": "Semi",               "photo": "semi.jpg"},
 }
 # Fallback photo per category: a file in static/img/topics/, or a list of files to vary between
 # (each article always gets the same one, picked from its slug). Missing files are skipped.
@@ -279,6 +298,11 @@ h1,h2,h3{color:var(--head);font-weight:800}
 .why p{font-size:.86rem;color:var(--muted)}
 /* page heads */
 .phead{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:36px 0 22px;border-bottom:1px solid var(--border);margin-bottom:28px}
+.versions{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:18px}
+.versions span{font-size:.8rem;font-weight:700;color:var(--dim);margin-right:4px}
+.versions a{font-size:.84rem;font-weight:700;color:var(--muted);text-decoration:none;border:1px solid var(--border2);border-radius:999px;padding:6px 13px;transition:border-color .2s,color .2s}
+.versions a:hover{color:var(--head);border-color:var(--blue)}
+.versions a.on{color:#03131a;background:var(--blue);border-color:var(--blue)}
 .phead h1{font-size:clamp(2rem,5vw,3rem);letter-spacing:-.03em;line-height:1.05}
 .phead p{color:var(--muted);margin-top:6px}
 .phead img{width:min(420px,45%);flex:none;border-radius:14px}
@@ -342,8 +366,11 @@ def other(lang):
 
 
 def model_photo(key, for_article=False):
-    p = MODELS[key].get("article_photo", MODELS[key]["photo"]) if for_article else MODELS[key]["photo"]
-    return f"/img/models/{p}" if (STATIC / "img" / "models" / p).exists() else None
+    m = MODELS[key]
+    p = m.get("article_photo", m.get("photo")) if for_article else m.get("photo")
+    if p and (STATIC / "img" / "models" / p).exists():
+        return f"/img/models/{p}"
+    return model_photo(m["parent"], for_article) if m.get("parent") else None
 
 
 def social_img(a, lang):
@@ -372,7 +399,7 @@ def site_img(a):
     ms = a.get("models", [])
     if len(ms) == 1 and model_photo(ms[0], True):
         return model_photo(ms[0], True)
-    if len(ms) == 1 and (STATIC / "img" / "topics" / MODELS[ms[0]]["photo"]).exists():
+    if len(ms) == 1 and MODELS[ms[0]].get("photo") and (STATIC / "img" / "topics" / MODELS[ms[0]]["photo"]).exists():
         return f"/img/topics/{MODELS[ms[0]]['photo']}"
     return topic_photo(a["category"], a["slug"]) or f"/img/v/{a['slug']}.jpg"
 
@@ -391,7 +418,7 @@ def page(lang, path, title, description, body, og_type="website", extra_head="",
         f'<a href="{url(lang, "category/" + k + "/")}"{" class=\"on\"" if k == active else ""}>{c[lang]}</a>'
         for k, c in CATEGORIES.items() if c["menu"])
     cats = " · ".join(f'<a href="{url(lang, "category/" + k + "/")}">{c[lang]}</a>' for k, c in CATEGORIES.items())
-    mods = " · ".join(f'<a href="{url(lang, "model/" + k + "/")}">{m["name"]}</a>' for k, m in MODELS.items())
+    mods = " · ".join(f'<a href="{url(lang, "model/" + k + "/")}">{m["name"]}</a>' for k, m in MODELS.items() if not m.get("parent") or k in MODEL_STRIP)
     return f"""<!doctype html>
 <html lang="{lang}">
 <head>
@@ -591,8 +618,16 @@ def build():
             mg = [a for a in items if a["category"] == "guides"]
             mn = [a for a in items if a["category"] != "guides"]
             ph = model_photo(key)
+            root = m.get("parent", key)
+            versions = [k for k, v in MODELS.items() if v.get("parent") == root]
+            chips_v = ""
+            if versions:
+                btns = [(root, L["all_versions"])] + [(k, MODELS[k]["label"][lang] if isinstance(MODELS[k]["label"], dict) else MODELS[k]["label"]) for k in versions]
+                chips_v = '<div class="versions"><span>' + L["your_version"] + '</span>' + "".join(
+                    f'<a href="{url(lang, "model/" + k + "/")}"{" class=\"on\"" if k == key else ""}>{esc(lbl)}</a>'
+                    for k, lbl in btns) + '</div>'
             head = (f'<div class="phead"><div><span class="tag">Tesla</span><h1>{m["name"]}</h1>'
-                    f'<p>{L["model_intro"].format(m["name"])}</p></div>'
+                    f'<p>{L["model_intro"].format(m["name"])}</p>{chips_v}</div>'
                     f'{f"<img src={chr(34)}{ph}{chr(34)} alt={chr(34)}Tesla {m[chr(110)+chr(97)+chr(109)+chr(101)]}{chr(34)}>" if ph else ""}</div>')
             content = ""
             if mg:

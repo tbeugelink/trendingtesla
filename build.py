@@ -154,7 +154,7 @@ MODELS = {
 # (each article always gets the same one, picked from its slug). Missing files are skipped.
 TOPIC_PHOTOS = {
     "robotaxi": ["cybercab-fleet.jpg", "cybercab-street.jpg", "models/cybercab.jpg"], "fsd": ["fsd.jpg", "models/myj-3.jpg", "fsd-2.jpg", "models/m3c-1.jpg", "fsd-3.jpg", "models/myj-1.jpg", "fsd-4.jpg"], "software": ["grok-2.jpg", "fsd.jpg", "grok-1.jpg", "fsd-2.jpg", "fsd-3.jpg", "fsd-4.jpg"], "optimus": ["optimus.jpg", "optimus-full.jpg"],
-    "energy": ["energy.jpg", "energy-2.jpg"], "charging": ["supercharger.jpg", "supercharger-2.jpg", "supercharger-3.jpg"], "ecosystem": ["spacex-1.jpg", "starlink-car-1.jpg", "spacex-2.jpg", "starlink-1.jpg", "spacex-4.jpg", "starlink-car-3.jpg", "spacex-3.jpg", "starlink-2.jpg", "spacex-5.jpg", "starlink-car-2.jpg", "tunnel-2.jpg", "tunnel-3.jpg", "tunnel-4.jpg"], "earnings": ["gigafactory.jpg", "models/myj-4.jpg", "gigafactory-2.jpg", "models/model-3.jpg", "models/myj-6.jpg"], "news": ["gigafactory.jpg", "models/myj-2.jpg", "gigafactory-2.jpg", "models/m3c-10.jpg", "models/myj-5.jpg"],
+    "energy": ["energy.jpg", "energy-3.jpg", "energy-5.jpg", "energy-2.jpg", "energy-6.jpg", "energy-4.jpg"], "charging": ["supercharger.jpg", "supercharger-2.jpg", "supercharger-3.jpg"], "ecosystem": ["spacex-1.jpg", "starlink-car-1.jpg", "spacex-2.jpg", "starlink-1.jpg", "spacex-4.jpg", "starlink-car-3.jpg", "spacex-3.jpg", "starlink-2.jpg", "spacex-5.jpg", "starlink-car-2.jpg", "tunnel-2.jpg", "tunnel-3.jpg", "tunnel-4.jpg"], "earnings": ["gigafactory.jpg", "models/myj-4.jpg", "gigafactory-3.jpg", "gigafactory-5.jpg", "gigafactory-2.jpg", "models/model-3.jpg", "gigafactory-4.jpg", "models/myj-6.jpg", "gigafactory-6.jpg"], "news": ["gigafactory.jpg", "models/myj-2.jpg", "gigafactory-4.jpg", "gigafactory-2.jpg", "models/m3c-10.jpg", "gigafactory-6.jpg", "models/myj-5.jpg", "gigafactory-3.jpg", "gigafactory-5.jpg"],
 }
 MODEL_STRIP = ["model-s", "model-3", "model-3-highland", "model-x", "model-y", "model-y-juniper", "cybertruck"]
 
@@ -397,9 +397,9 @@ SCENES = [
     (r"^models/ct-[14]\.jpg$", "city"), (r"^models/ct-2\.jpg$", "sunset"), (r"^models/ct-[35]\.jpg$", "desert"),
     (r"^models/cc-\d\.jpg$", "city"), (r"^models/rd-1\.jpg$", "sky"), (r"^models/rd-[23]\.jpg$", "sunset"),
     (r"^models/semi", "sunset"), (r"^models/", "studio"),
-    (r"^topics/(gigafactory)", "factory"), (r"^topics/(fsd|grok)", "interior"), (r"^topics/(spacex|starlink-\d)", "space"),
+    (r"^topics/gigafactory-[56]", "aerial"), (r"^topics/gigafactory-4", "sunset"), (r"^topics/(gigafactory)", "factory"), (r"^topics/(fsd|grok)", "interior"), (r"^topics/(spacex|starlink-\d)", "space"),
     (r"^topics/starlink-car", "nightsky"), (r"^topics/tunnel", "tunnel"), (r"^topics/supercharger", "charging"),
-    (r"^topics/energy", "energy"), (r"^topics/optimus", "optimus"), (r"^topics/cybercab", "robotaxi"),
+    (r"^topics/energy-[34]", "sunset"), (r"^topics/energy-6", "desert"), (r"^topics/energy", "energy"), (r"^topics/optimus", "optimus"), (r"^topics/cybercab", "robotaxi"),
     (r"^topics/roadster", "sky"),
 ]
 CHOSEN = {}  # slug -> chosen image path (set in build)
@@ -452,7 +452,9 @@ def assign_photos(arts):
         local = [h for g in groups for h in cat_hist.get(g, [])[-3:]]
         recent_files = [h[0] for h in hist[-4:]] + [h[0] for h in local]
         recent_scenes = [h[1] for h in hist[-3:]] + [h[1] for h in local]
-        pick = next((c for c in photos if c not in recent_files and scene_of(c) not in recent_scenes), None) \
+        own = f"/img/{a['image']}" if a.get("image") and (STATIC / "img" / a["image"]).exists() else None
+        pick = (own if own and own not in recent_files else None) \
+            or next((c for c in photos if c not in recent_files and scene_of(c) not in recent_scenes), None) \
             or next((c for c in photos if c not in recent_files), None) \
             or (photos[0] if photos else cands[-1])
         CHOSEN[a["slug"]] = pick

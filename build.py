@@ -113,8 +113,12 @@ CATEGORIES = {
 
 # Model pages. "photo" is a file in static/img/models/ (optional until uploaded).
 MODELS = {
-    "model-3":    {"name": "Model 3",    "photo": "model-3.jpg"},
-    "model-y":    {"name": "Model Y",    "photo": "model-y.jpg"},
+    # "article_photo": photo used on articles tagged with this model (current generation);
+    # "parent": a variant page also lists the articles of its parent model, and vice versa.
+    "model-3":          {"name": "Model 3",          "photo": "model-3-classic.jpg", "article_photo": "model-3.jpg"},
+    "model-3-highland": {"name": "Model 3 Highland", "photo": "model-3.jpg", "parent": "model-3"},
+    "model-y":          {"name": "Model Y",          "photo": "model-y-classic.jpg", "article_photo": "model-y.jpg"},
+    "model-y-juniper":  {"name": "Model Y Juniper",  "photo": "model-y.jpg", "parent": "model-y"},
     "model-s":    {"name": "Model S",    "photo": "model-s.jpg"},
     "model-x":    {"name": "Model X",    "photo": "model-x.jpg"},
     "cybertruck": {"name": "Cybertruck", "photo": "cybertruck.jpg"},
@@ -128,7 +132,7 @@ TOPIC_PHOTOS = {
     "robotaxi": "cybercab.jpg", "fsd": ["fsd.jpg", "fsd-2.jpg", "fsd-3.jpg", "fsd-4.jpg"], "software": ["fsd.jpg", "fsd-2.jpg", "fsd-3.jpg", "fsd-4.jpg"], "optimus": ["optimus.jpg", "optimus-full.jpg"],
     "energy": ["energy.jpg", "energy-2.jpg"], "charging": "supercharger.jpg", "earnings": "gigafactory.jpg", "news": "gigafactory.jpg",
 }
-MODEL_STRIP = ["model-3", "model-y", "model-s", "model-x", "cybertruck"]
+MODEL_STRIP = ["model-s", "model-3", "model-3-highland", "model-x", "model-y", "model-y-juniper", "cybertruck"]
 
 PAGES = {
     "about": {
@@ -199,7 +203,7 @@ main,footer{position:relative;z-index:1}
 a{color:var(--head)}
 img{display:block;max-width:100%;height:auto}
 h1,h2,h3{color:var(--head);font-weight:800}
-.wrap{max-width:var(--max);margin:0 auto;padding:0 16px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
 .narrow{max-width:740px;margin:0 auto}
 .sr{position:absolute;left:-9999px}
 /* header */
@@ -221,7 +225,7 @@ h1,h2,h3{color:var(--head);font-weight:800}
 .btn.ghost:hover{border-color:var(--head);background:transparent}
 .tag{display:inline-block;font-size:.7rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;text-decoration:none;color:var(--blue)}
 .meta{font-size:.8rem;color:var(--dim)}
-.h2{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin:52px 0 16px}
+.h2{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin:72px 0 24px}
 .h2 h2{font-size:clamp(1.3rem,2.6vw,1.75rem);letter-spacing:-.02em;line-height:1.2}
 .h2 a{font-size:.86rem;font-weight:700;color:var(--muted);text-decoration:none;white-space:nowrap}
 .h2 a:hover{color:var(--head)}
@@ -237,7 +241,7 @@ h1,h2,h3{color:var(--head);font-weight:800}
 .hero p{color:#c9ced3;font-size:1rem;margin-bottom:20px}
 .hero .btns{display:flex;gap:10px;flex-wrap:wrap}
 /* top stories */
-.tops{display:grid;grid-template-columns:1.6fr 1fr;gap:24px}
+.tops{display:grid;grid-template-columns:1.6fr 1fr;gap:44px}
 .feature{text-decoration:none;color:var(--fg);display:block}
 .feature .im,.card .im{overflow:hidden;border-radius:14px;border:1px solid var(--border);background:var(--surface);transition:border-color .2s}
 .feature:hover .im,.card:hover .im{border-color:var(--blue)}
@@ -245,26 +249,26 @@ h1,h2,h3{color:var(--head);font-weight:800}
 .feature:hover img,.card:hover img{transform:scale(1.03)}
 .feature h3{font-size:clamp(1.4rem,2.8vw,2rem);line-height:1.15;letter-spacing:-.02em;margin:14px 0 8px}
 .feature p{color:var(--muted);margin-bottom:8px}
-.side{display:flex;flex-direction:column;gap:18px}
+.side{display:flex;flex-direction:column;gap:28px}
 .mini{display:grid;grid-template-columns:120px 1fr;gap:14px;text-decoration:none;color:var(--fg);align-items:start}
 .mini img{width:120px;aspect-ratio:1200/630;object-fit:cover;border-radius:10px;border:1px solid var(--border)}
 .mini h3{font-size:.98rem;line-height:1.3;margin:2px 0 4px}
 .feature:hover h3,.card:hover h3,.mini:hover h3{color:var(--blue2)}
 /* grid */
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px 22px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:48px 36px}
 .card{text-decoration:none;color:var(--fg);display:flex;flex-direction:column}
-.card .body{padding-top:12px}
+.card .body{padding:18px 4px 0}
 .card h3{font-size:1.08rem;line-height:1.3;margin:6px 0 6px}
 .card p{color:var(--muted);font-size:.9rem;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
 .empty{color:var(--muted);background:var(--surface);border:1px dashed var(--border2);border-radius:14px;padding:28px;text-align:center}
 /* models */
-.models{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.models{display:grid;grid-template-columns:repeat(7,1fr);gap:14px}
 .model{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--border);border-radius:14px;overflow:hidden;text-decoration:none;color:var(--head);transition:border-color .2s,transform .2s}
 .model:hover{border-color:var(--blue);transform:translateY(-3px)}
 .model .ph{height:118px;background:radial-gradient(ellipse at 50% 120%,rgba(0,212,255,.22),transparent 70%),#0a0f18;display:flex;align-items:center;justify-content:center}
 .model img{width:100%;height:118px;object-fit:cover;transform:scale(1.15)}
 .model .ph b{font-size:1.5rem;color:#2a3544;letter-spacing:-.02em}
-.model span{padding:10px 12px;font-size:.88rem;font-weight:800;text-align:center}
+.model span{padding:10px 8px;font-size:.82rem;line-height:1.3;font-weight:800;text-align:center}
 /* why */
 .why{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
 .why div{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px}
@@ -304,9 +308,9 @@ footer a{color:var(--muted);text-decoration:none}
 footer a:hover{color:var(--head)}
 footer .links{display:flex;gap:18px;flex-wrap:wrap}
 footer p{max-width:560px;margin-top:10px}
-@media (max-width:1000px){.grid{grid-template-columns:repeat(2,1fr)}.tops{grid-template-columns:1fr}.why{grid-template-columns:repeat(2,1fr)}.models{grid-template-columns:repeat(3,1fr)}}
-@media (max-width:600px){.grid{grid-template-columns:1fr}.why{grid-template-columns:1fr 1fr;gap:10px}.why div{padding:14px}.why p{font-size:.8rem}
- .models{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:0 -16px;padding:0 16px 4px}.models::-webkit-scrollbar{display:none}.model{flex:0 0 42%;scroll-snap-align:start}
+@media (max-width:1000px){.grid{grid-template-columns:repeat(2,1fr)}.tops{grid-template-columns:1fr}.why{grid-template-columns:repeat(2,1fr)}.models{grid-template-columns:repeat(4,1fr)}}
+@media (max-width:600px){.wrap{padding:0 20px}.grid{grid-template-columns:1fr;gap:40px}.why{grid-template-columns:1fr 1fr;gap:10px}.why div{padding:14px}.why p{font-size:.8rem}
+ .models{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:0 -24px;padding:0 24px 4px}.models::-webkit-scrollbar{display:none}.model{flex:0 0 42%;scroll-snap-align:start}
  body{font-size:16.5px}.h2{margin-top:40px}.hero{min-height:0}.hero .in{padding:26px 20px}.hero .btn{flex:1;white-space:nowrap;padding:11px 12px}
  .phead{flex-direction:column-reverse;align-items:flex-start}.phead img{width:100%}}
 """
@@ -335,8 +339,8 @@ def other(lang):
     return "nl" if lang == "en" else "en"
 
 
-def model_photo(key):
-    p = MODELS[key]["photo"]
+def model_photo(key, for_article=False):
+    p = MODELS[key].get("article_photo", MODELS[key]["photo"]) if for_article else MODELS[key]["photo"]
     return f"/img/models/{p}" if (STATIC / "img" / "models" / p).exists() else None
 
 
@@ -364,8 +368,8 @@ def site_img(a):
     if a.get("image") and (STATIC / "img" / a["image"]).exists():
         return f"/img/{a['image']}"
     ms = a.get("models", [])
-    if len(ms) == 1 and model_photo(ms[0]):
-        return model_photo(ms[0])
+    if len(ms) == 1 and model_photo(ms[0], True):
+        return model_photo(ms[0], True)
     if len(ms) == 1 and (STATIC / "img" / "topics" / MODELS[ms[0]]["photo"]).exists():
         return f"/img/topics/{MODELS[ms[0]]['photo']}"
     return topic_photo(a["category"], a["slug"]) or f"/img/v/{a['slug']}.jpg"
@@ -580,7 +584,9 @@ def build():
 
         # ---------- Model pages ----------
         for key, m in MODELS.items():
-            items = [a for a in arts if key in a.get("models", [])]
+            family = {key} | ({m["parent"]} if m.get("parent") else set()) \
+                | {k for k, v in MODELS.items() if v.get("parent") == key}
+            items = [a for a in arts if family & set(a.get("models", []))]
             mg = [a for a in items if a["category"] == "guides"]
             mn = [a for a in items if a["category"] != "guides"]
             ph = model_photo(key)

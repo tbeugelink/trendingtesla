@@ -342,12 +342,17 @@ def social_img(a, lang):
     return f"/img/{a['slug']}-{lang}.jpg"
 
 
+PHOTO_ORDER = {}  # slug -> position among articles of its category, oldest first (set in build)
+
+
 def topic_photo(category, slug=""):
     f = TOPIC_PHOTOS.get(category)
     files = [x for x in ([f] if isinstance(f, str) else (f or [])) if (STATIC / "img" / "topics" / x).exists()]
     if not files:
         return None
-    pick = sum(ord(c) for c in slug) % len(files)
+    # Round-robin in publication order, so neighbouring articles get different photos and
+    # existing articles keep their photo when new ones are added.
+    pick = PHOTO_ORDER.get(slug, 0) % len(files)
     return f"/img/topics/{files[pick]}"
 
 
@@ -509,6 +514,10 @@ def related(a, arts, n=3):
 
 def build():
     arts = load_articles()
+    seen = {}
+    for x in sorted(arts, key=published):
+        PHOTO_ORDER[x["slug"]] = seen.get(x["category"], 0)
+        seen[x["category"]] = PHOTO_ORDER[x["slug"]] + 1
     news = [a for a in arts if a["category"] != "guides"]
     guides = [a for a in arts if a["category"] == "guides"]
     if OUT.exists():

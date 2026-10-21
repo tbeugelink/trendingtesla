@@ -9,10 +9,10 @@ from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
-FONTS = Path(__file__).resolve().parent / "assets" / "fonts"
+FONTS = Path(__file__).resolve().parent / "static" / "fonts"
 W, H = 1200, 630
-BG = (11, 13, 16)
-RED = (227, 25, 55)
+BG = (6, 8, 12)
+RED = (226, 40, 34)
 
 
 def _font(name, size):
@@ -91,18 +91,27 @@ MOTIFS = {
 }
 
 
-def make_cover(path, title, category_label, category_key, color_hex, date_label):
-    color = _hex(color_hex)
+def make_cover(path, title, category_label, category_key, color_hex, date_label, with_text=True):
+    """with_text=False gives a clean visual for use on the site, next to the HTML headline."""
+    color = RED
     img = Image.new("RGB", (W, H), BG)
 
     # Soft colour glow behind the motif
-    glow = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    dx = 0 if with_text else -410   # centre the visual when there is no text
+    LW = W - dx                      # layers wide enough that the shift never shows an edge
+    glow = Image.new("RGBA", (LW, H), (0, 0, 0, 0))
     ImageDraw.Draw(glow).ellipse([650, -150, 1400, 780], fill=color + (90,))
-    img.paste(glow.filter(ImageFilter.GaussianBlur(120)), (0, 0), glow.filter(ImageFilter.GaussianBlur(120)))
+    g = glow.filter(ImageFilter.GaussianBlur(120))
+    img.paste(g, (dx, 0), g)
 
-    motif = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    motif = Image.new("RGBA", (LW, H), (0, 0, 0, 0))
     _motif(motif, MOTIFS.get(category_key, "arcs"), color)
-    img.paste(motif, (0, 0), motif)
+    img.paste(motif, (dx, 0), motif)
+
+    if not with_text:
+        path.parent.mkdir(parents=True, exist_ok=True)
+        img.save(path, "JPEG", quality=84, optimize=True, progressive=True)
+        return
 
     # Dark fade on the left so the text stays readable
     fade = Image.new("RGBA", (W, H), (0, 0, 0, 0))
@@ -114,7 +123,7 @@ def make_cover(path, title, category_label, category_key, color_hex, date_label)
 
     d = ImageDraw.Draw(img)
     # Category pill
-    f_cat = _font("Inter-ExtraBold.otf", 24)
+    f_cat = _font("manrope-latin-800-normal.woff2", 24)
     label = category_label.upper()
     tw = d.textlength(label, font=f_cat)
     d.rounded_rectangle([64, 64, 64 + tw + 36, 108], radius=22, fill=color)
@@ -122,7 +131,7 @@ def make_cover(path, title, category_label, category_key, color_hex, date_label)
 
     # Title: largest size that fits in 4 lines
     for size in (66, 60, 54, 48, 44):
-        f_title = _font("Inter-ExtraBold.otf", size)
+        f_title = _font("manrope-latin-800-normal.woff2", size)
         lines = _wrap(d, title, f_title, 760)
         if len(lines) <= 4:
             break
@@ -134,10 +143,10 @@ def make_cover(path, title, category_label, category_key, color_hex, date_label)
         y += lh
 
     # Wordmark and date
-    f_logo = _font("Inter-ExtraBold.otf", 34)
+    f_logo = _font("manrope-latin-800-normal.woff2", 34)
     d.text((64, 540), "Trending", font=f_logo, fill=(240, 242, 245))
     d.text((64 + d.textlength("Trending", font=f_logo), 540), "Tesla", font=f_logo, fill=RED)
-    f_date = _font("Inter-SemiBold.otf", 24)
+    f_date = _font("manrope-latin-600-normal.woff2", 24)
     d.text((W - 64 - d.textlength(date_label, font=f_date), 548), date_label, font=f_date, fill=(170, 176, 184))
 
     path.parent.mkdir(parents=True, exist_ok=True)

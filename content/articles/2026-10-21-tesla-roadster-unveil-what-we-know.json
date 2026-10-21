@@ -3,10 +3,22 @@
   "date": "2026-10-21",
   "time": "10:00",
   "category": "models",
+  "models": [
+    "roadster"
+  ],
   "sources": [
-    {"title": "TechCrunch — Tesla reveals SpaceX-powered Roadster", "url": "https://techcrunch.com/2026/10/15/tesla-reveals-spacex-powered-roadster-that-flies-and-falls-with-style/"},
-    {"title": "CNN — Tesla unveils what it says is a flying car, called the Roadster", "url": "https://www.cnn.com/2026/10/15/business/tesla-unveils-what-it-says-is-a-flying-car"},
-    {"title": "CNBC — Tesla unveils long-delayed Roadster developed with SpaceX", "url": "https://www.cnbc.com/2026/10/15/tesla-roadster-reveal-what-to-know-about-the-delayed-ev.html"}
+    {
+      "title": "TechCrunch — Tesla reveals SpaceX-powered Roadster",
+      "url": "https://techcrunch.com/2026/10/15/tesla-reveals-spacex-powered-roadster-that-flies-and-falls-with-style/"
+    },
+    {
+      "title": "CNN — Tesla unveils what it says is a flying car, called the Roadster",
+      "url": "https://www.cnn.com/2026/10/15/business/tesla-unveils-what-it-says-is-a-flying-car"
+    },
+    {
+      "title": "CNBC — Tesla unveils long-delayed Roadster developed with SpaceX",
+      "url": "https://www.cnbc.com/2026/10/15/tesla-roadster-reveal-what-to-know-about-the-delayed-ev.html"
+    }
   ],
   "en": {
     "title": "Tesla's 'flying' Roadster: what we actually know about the thruster-powered supercar",

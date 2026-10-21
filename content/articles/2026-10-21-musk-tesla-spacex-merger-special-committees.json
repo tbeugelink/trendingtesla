@@ -2,11 +2,20 @@
   "slug": "musk-tesla-spacex-merger-special-committees",
   "date": "2026-10-21",
   "time": "14:22",
-  "category": "news",
+  "category": "ecosystem",
   "sources": [
-    {"title": "Reuters (via Lufkin Daily News) - Musk says SpaceX-Tesla merger is 'a good idea' as companies form deal committees", "url": "https://lufkindailynews.com/news_reuters/business/musk-says-spacex-tesla-merger-is-a-good-idea-as-companies-form-deal-committees/article_6e6ce10d-0ce3-598a-8de1-588e1ade0411.html"},
-    {"title": "Fox Business - Elon Musk says Tesla-SpaceX merger would be 'a good idea' as companies form special committees", "url": "https://www.foxbusiness.com/technology/elon-musk-says-tesla-spacex-merger-would-a-good-idea-companies-form-special-committees"},
-    {"title": "Teslarati - Elon Musk just confirmed the Tesla and SpaceX merger step everyone was waiting for", "url": "https://www.teslarati.com/elon-musk-tesla-spacex-merger-committee/"}
+    {
+      "title": "Reuters (via Lufkin Daily News) - Musk says SpaceX-Tesla merger is 'a good idea' as companies form deal committees",
+      "url": "https://lufkindailynews.com/news_reuters/business/musk-says-spacex-tesla-merger-is-a-good-idea-as-companies-form-deal-committees/article_6e6ce10d-0ce3-598a-8de1-588e1ade0411.html"
+    },
+    {
+      "title": "Fox Business - Elon Musk says Tesla-SpaceX merger would be 'a good idea' as companies form special committees",
+      "url": "https://www.foxbusiness.com/technology/elon-musk-says-tesla-spacex-merger-would-a-good-idea-companies-form-special-committees"
+    },
+    {
+      "title": "Teslarati - Elon Musk just confirmed the Tesla and SpaceX merger step everyone was waiting for",
+      "url": "https://www.teslarati.com/elon-musk-tesla-spacex-merger-committee/"
+    }
   ],
   "en": {
     "title": "Tesla and SpaceX form special committees to study a merger, Musk calls it 'a good idea'",

@@ -56,6 +56,7 @@ LANGS = {
         "switch": "NL", "switch_full": "Nederlands",
         "empty": "No articles here yet. New stories are published several times a day.",
         "cat_intro": "All TrendingTesla articles about {}.",
+        "eco_intro": "SpaceX, Starlink, The Boring Company and xAI/Grok: the companies around Tesla, and how they connect.",
         "model_intro": "News, updates and advice for the Tesla {}.",
         "model_guides": "Advice for the {}", "model_news": "{} news",
         "all_versions": "All versions", "your_version": "Your version:",
@@ -84,6 +85,7 @@ LANGS = {
         "switch": "EN", "switch_full": "English",
         "empty": "Hier staan nog geen artikelen. Er verschijnen meerdere keren per dag nieuwe verhalen.",
         "cat_intro": "Alle artikelen van TrendingTesla over {}.",
+        "eco_intro": "SpaceX, Starlink, The Boring Company en xAI/Grok: de bedrijven rond Tesla, en hoe ze met elkaar verbonden zijn.",
         "model_intro": "Nieuws, updates en advies voor de Tesla {}.",
         "model_guides": "Advies voor de {}", "model_news": "Nieuws over de {}",
         "all_versions": "Alle versies", "your_version": "Jouw versie:",
@@ -111,6 +113,8 @@ CATEGORIES = {
     "software": {"en": "Software", "nl": "Software", "menu": False},
     "charging": {"en": "Charging", "nl": "Laden",    "menu": False},
     "guides":   {"en": "Guides",   "nl": "Gidsen",   "menu": True},
+    # SpaceX, Starlink, The Boring Company, xAI/Grok: only stories with a clear link to Tesla.
+    "ecosystem": {"en": "Ecosystem", "nl": "Ecosysteem", "menu": True},
 }
 
 # Model pages. "photo" is a file in static/img/models/ (optional until uploaded).
@@ -157,7 +161,7 @@ PAGES = {
     "about": {
         "en": ("About TrendingTesla", "What TrendingTesla is and how we write.",
                "<p>TrendingTesla follows everything that moves at Tesla: vehicles, software, "
-               "self-driving, robotaxi, Optimus, energy and the company's results, plus honest "
+               "self-driving, robotaxi, Optimus, energy and the company's results, the wider ecosystem of SpaceX, Starlink, The Boring Company and xAI where it touches Tesla, plus honest "
                "buying advice for Tesla owners.</p>"
                "<p>Several times a day we pick the stories that matter most and explain them in "
                "plain language: what happened, why it matters and what to watch next. We write "
@@ -171,7 +175,7 @@ PAGES = {
                "sponsored by or endorsed by Tesla, Inc. Nothing on this site is financial advice.</p>"),
         "nl": ("Over TrendingTesla", "Wat TrendingTesla is en hoe we schrijven.",
                "<p>TrendingTesla volgt alles wat er bij Tesla in beweging is: auto's, software, "
-               "zelfrijden, robotaxi, Optimus, energie en de bedrijfscijfers, plus eerlijk "
+               "zelfrijden, robotaxi, Optimus, energie en de bedrijfscijfers, het bredere ecosysteem van SpaceX, Starlink, The Boring Company en xAI waar het Tesla raakt, plus eerlijk "
                "koopadvies voor Tesla-rijders.</p>"
                "<p>Meerdere keren per dag kiezen we de belangrijkste verhalen en leggen we ze "
                "helder uit: wat er gebeurde, waarom het ertoe doet en waar je op moet letten. We "
@@ -606,10 +610,11 @@ def build():
             items = arts if key == "news" else [a for a in arts if a["category"] == key]
             if key == "news":
                 items = news
-            head = f'<div class="phead"><div><span class="tag">{NAME}</span><h1>{c[lang]}</h1><p>{L["cat_intro"].format(c[lang])}</p></div></div>'
+            intro = L["eco_intro"] if key == "ecosystem" else L["cat_intro"].format(c[lang])
+            head = f'<div class="phead"><div><span class="tag">{NAME}</span><h1>{c[lang]}</h1><p>{intro}</p></div></div>'
             content = grid(items, lang) if items else f'<p class="empty">{L["empty"]}</p>'
             write(url(lang, f"category/{key}/"),
-                  page(lang, f"category/{key}/", c[lang], L["cat_intro"].format(c[lang]), head + content, active=key))
+                  page(lang, f"category/{key}/", c[lang], intro, head + content, active=key))
 
         # ---------- Model pages ----------
         for key, m in MODELS.items():

@@ -194,7 +194,7 @@ CSS = """
 *{box-sizing:border-box;margin:0;padding:0}
 html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;background:#04060a}
 body{background:radial-gradient(1400px 800px at 90% -15%,rgba(0,212,255,.065),transparent 60%),radial-gradient(1000px 700px at -15% 35%,rgba(56,96,255,.08),transparent 60%),radial-gradient(900px 600px at 70% 75%,rgba(0,150,255,.05),transparent 60%),linear-gradient(170deg,#09111f 0,#070d18 600px,#050911 1500px,#03050a 100%) #03050a;min-height:100vh;color:var(--fg);font:17px/1.65 Manrope,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
-body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.6;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.48' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  2.6 0 0 0 -1.3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.48;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.48' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  2.6 0 0 0 -1.3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
 main,footer{position:relative;z-index:1}
 a{color:var(--head)}
 img{display:block;max-width:100%;height:auto}

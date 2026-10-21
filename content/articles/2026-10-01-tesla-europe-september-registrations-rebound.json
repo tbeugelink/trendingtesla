@@ -18,5 +18,9 @@
     "title": "Tesla-verkoop veert op in Europa: Frankrijk +62%, Zweden +38% in september",
     "description": "Na twee jaar daling stijgen Tesla's Europese registraties weer. De eerste septembercijfers uit Frankrijk, Zweden en Noorwegen wijzen allemaal omhoog.",
     "body": "<p>Tesla's registraties zijn in september in meerdere Europese markten gestegen, blijkt uit de eerste nationale cijfers die op 1 oktober verschenen. Het herstel zet daarmee door, na twee jaar waarin Tesla's Europese verkoop steeds verder daalde.</p><h2>De eerste septembercijfers</h2><ul><li><strong>Frankrijk:</strong> 61,9% hoger dan een jaar eerder.</li><li><strong>Zweden:</strong> 38,4% hoger.</li><li><strong>Noorwegen:</strong> 2,2% hoger.</li></ul><p>De cijfers voor het Verenigd Koninkrijk en Duitsland volgden later in de week.</p><h2>De bredere trend</h2><p>Van januari tot en met augustus lagen Tesla's registraties in de EU, het VK en de EVA-landen 43,3% hoger dan in dezelfde periode vorig jaar, volgens brancheorganisatie ACEA. Volledig elektrische auto's als geheel groeiden in die periode met 38,8%. Tesla groeit dus iets sneller dan de elektrische markt waarin het concurreert.</p><h2>Waarom de verkoop herstelt</h2><ul><li><strong>Makkelijke vergelijking:</strong> 2025 was een zwak jaar voor Tesla in Europa, dus vanaf dat niveau groeien is makkelijker.</li><li><strong>Hogere brandstofprijzen:</strong> die maken elektrisch rijden aantrekkelijker.</li><li><strong>Subsidies:</strong> meerdere overheden steunen de aanschaf van elektrische auto's.</li><li><strong>Bredere interesse in EV's:</strong> meer kopers overwegen een elektrische auto.</li></ul><h2>Wat het betekent</h2><p>September is de laatste maand van het kwartaal en meestal een sterke maand voor Tesla in Europa, omdat dan de schepen aankomen en de leveringen pieken. De echte test is of de groei standhoudt in de maanden daarna, zonder de eindsprint van het kwartaal.</p>"
-  }
+  },
+  "models": [
+    "model-y",
+    "model-3"
+  ]
 }

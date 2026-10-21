@@ -26,6 +26,7 @@ Run: python3 build.py   (needs Pillow: pip install --break-system-packages pillo
 """
 import html
 import json
+import re
 import shutil
 from datetime import datetime, timezone
 from pathlib import Path
@@ -127,33 +128,33 @@ MODELS = {
     "model-s-classic":   {"name": "Model S 2012–2020",  "parent": "model-s", "label": "2012–2020"},
     "model-s-2021":      {"name": "Model S 2021+",      "parent": "model-s", "label": "2021+"},
     "model-s-plaid":     {"name": "Model S Plaid",      "parent": "model-s", "label": "Plaid"},
-    "model-3":           {"name": "Model 3",            "photo": "model-3-classic.jpg", "article_photo": "model-3.jpg", "gallery": ["m3h-1.jpg", "m3h-2.jpg", "m3h-3.jpg", "m3h-4.jpg", "m3h-5.jpg", "m3h-6.jpg", "m3h-7.jpg"]},
-    "model-3-classic":   {"name": "Model 3 2017–2023",  "photo": "model-3-classic.jpg", "parent": "model-3", "label": "2017–2023", "gallery": ["m3c-1.jpg", "m3c-2.jpg", "m3c-3.jpg", "m3c-4.jpg"]},
-    "model-3-highland":  {"name": "Model 3 Highland",   "photo": "model-3.jpg", "parent": "model-3", "label": "Highland · 2023+", "gallery": ["m3h-1.jpg", "m3h-2.jpg", "m3h-3.jpg", "m3h-4.jpg", "m3h-5.jpg", "m3h-6.jpg", "m3h-7.jpg"]},
+    "model-3":           {"name": "Model 3",            "photo": "model-3-classic.jpg", "article_photo": "model-3.jpg"},
+    "model-3-classic":   {"name": "Model 3 2017–2023",  "photo": "model-3-classic.jpg", "parent": "model-3", "label": "2017–2023", "gallery": ["m3c-1.jpg", "m3c-5.jpg", "m3c-9.jpg", "m3c-2.jpg", "m3c-6.jpg", "m3c-10.jpg", "m3c-3.jpg", "m3c-7.jpg", "m3c-11.jpg", "m3c-4.jpg", "m3c-8.jpg"]},
+    "model-3-highland":  {"name": "Model 3 Highland",   "photo": "model-3.jpg", "parent": "model-3", "label": "Highland · 2023+"},
     "model-3-standard":  {"name": "Model 3 Standard",   "photo": "model-3.jpg", "parent": "model-3", "label": "Standard · 2025+"},
     "model-3-performance": {"name": "Model 3 Performance", "photo": "model-3.jpg", "parent": "model-3", "label": "Performance"},
     "model-x":           {"name": "Model X",            "photo": "model-x.jpg"},
     "model-x-classic":   {"name": "Model X 2015–2020",  "parent": "model-x", "label": "2015–2020"},
     "model-x-2021":      {"name": "Model X 2021+",      "parent": "model-x", "label": "2021+"},
     "model-x-plaid":     {"name": "Model X Plaid",      "parent": "model-x", "label": "Plaid"},
-    "model-y":           {"name": "Model Y",            "photo": "model-y-classic.jpg", "article_photo": "model-y.jpg", "gallery": ["myj-1.jpg", "myj-2.jpg", "myj-3.jpg", "myj-4.jpg", "myj-5.jpg", "myj-6.jpg"]},
+    "model-y":           {"name": "Model Y",            "photo": "model-y-classic.jpg", "article_photo": "model-y.jpg", "gallery": ["myj-1.jpg", "myj-5.jpg", "myj-2.jpg", "myj-3.jpg", "myj-6.jpg", "myj-4.jpg"]},
     "model-y-classic":   {"name": "Model Y 2020–2024",  "photo": "model-y-classic.jpg", "parent": "model-y", "label": "2020–2024"},
-    "model-y-juniper":   {"name": "Model Y Juniper",    "photo": "model-y.jpg", "parent": "model-y", "label": "Juniper · 2025+", "gallery": ["myj-1.jpg", "myj-2.jpg", "myj-3.jpg", "myj-4.jpg", "myj-5.jpg", "myj-6.jpg"]},
+    "model-y-juniper":   {"name": "Model Y Juniper",    "photo": "model-y.jpg", "parent": "model-y", "label": "Juniper · 2025+", "gallery": ["myj-1.jpg", "myj-5.jpg", "myj-2.jpg", "myj-3.jpg", "myj-6.jpg", "myj-4.jpg"]},
     "model-y-standard":  {"name": "Model Y Standard",   "photo": "model-y.jpg", "parent": "model-y", "label": "Standard · 2025+"},
     "model-y-performance": {"name": "Model Y Performance", "photo": "model-y.jpg", "parent": "model-y", "label": "Performance"},
     "model-y-l":         {"name": "Model Y L",          "photo": "model-y.jpg", "parent": "model-y", "label": {"en": "Model Y L · 6 seats", "nl": "Model Y L · 6 zitplaatsen"}},
-    "cybertruck":        {"name": "Cybertruck",         "photo": "cybertruck.jpg", "gallery": ["ct-1.jpg", "ct-2.jpg", "ct-3.jpg", "ct-4.jpg", "ct-5.jpg"]},
+    "cybertruck":        {"name": "Cybertruck",         "photo": "cybertruck.jpg", "gallery": ["ct-1.jpg", "ct-3.jpg", "ct-2.jpg", "ct-4.jpg", "ct-5.jpg"]},
     "cybertruck-awd":    {"name": "Cybertruck AWD",     "parent": "cybertruck", "label": "AWD"},
     "cybertruck-cyberbeast": {"name": "Cyberbeast",     "parent": "cybertruck", "label": "Cyberbeast"},
     "cybercab":          {"name": "Cybercab",           "photo": "cybercab.jpg", "gallery": ["cybercab.jpg", "cc-1.jpg", "cc-2.jpg"]},
     "roadster":          {"name": "Roadster",           "photo": "roadster.jpg", "gallery": ["rd-1.jpg", "rd-2.jpg", "rd-3.jpg"]},
-    "semi":              {"name": "Semi",               "photo": "semi.jpg"},
+    "semi":              {"name": "Semi",               "photo": "semi.jpg", "gallery": ["semi.jpg", "semi-2.jpg", "semi-3.jpg"]},
 }
 # Fallback photo per category: a file in static/img/topics/, or a list of files to vary between
 # (each article always gets the same one, picked from its slug). Missing files are skipped.
 TOPIC_PHOTOS = {
-    "robotaxi": ["cybercab.jpg", "cybercab-fleet.jpg", "cybertruck-fleet.jpg"], "fsd": ["fsd.jpg", "fsd-2.jpg", "fsd-3.jpg", "fsd-4.jpg"], "software": ["grok-2.jpg", "fsd.jpg", "grok-1.jpg", "fsd-2.jpg", "fsd-3.jpg", "fsd-4.jpg"], "optimus": ["optimus.jpg", "optimus-full.jpg"],
-    "energy": ["energy.jpg", "energy-2.jpg"], "charging": ["supercharger.jpg", "supercharger-2.jpg", "supercharger-3.jpg"], "ecosystem": ["spacex-1.jpg", "starlink-car-1.jpg", "spacex-2.jpg", "starlink-1.jpg", "spacex-4.jpg", "starlink-car-3.jpg", "spacex-3.jpg", "starlink-2.jpg", "spacex-5.jpg", "starlink-car-2.jpg", "tunnel-2.jpg", "tunnel-3.jpg", "tunnel-4.jpg"], "earnings": ["gigafactory.jpg", "gigafactory-2.jpg"], "news": ["gigafactory.jpg", "gigafactory-2.jpg"],
+    "robotaxi": ["cybercab-fleet.jpg", "cybercab-street.jpg", "models/cybercab.jpg"], "fsd": ["fsd.jpg", "models/myj-3.jpg", "fsd-2.jpg", "models/m3c-1.jpg", "fsd-3.jpg", "models/myj-1.jpg", "fsd-4.jpg"], "software": ["grok-2.jpg", "fsd.jpg", "grok-1.jpg", "fsd-2.jpg", "fsd-3.jpg", "fsd-4.jpg"], "optimus": ["optimus.jpg", "optimus-full.jpg"],
+    "energy": ["energy.jpg", "energy-2.jpg"], "charging": ["supercharger.jpg", "supercharger-2.jpg", "supercharger-3.jpg"], "ecosystem": ["spacex-1.jpg", "starlink-car-1.jpg", "spacex-2.jpg", "starlink-1.jpg", "spacex-4.jpg", "starlink-car-3.jpg", "spacex-3.jpg", "starlink-2.jpg", "spacex-5.jpg", "starlink-car-2.jpg", "tunnel-2.jpg", "tunnel-3.jpg", "tunnel-4.jpg"], "earnings": ["gigafactory.jpg", "models/myj-4.jpg", "gigafactory-2.jpg", "models/model-3.jpg", "models/myj-6.jpg"], "news": ["gigafactory.jpg", "models/myj-2.jpg", "gigafactory-2.jpg", "models/m3c-10.jpg", "models/myj-5.jpg"],
 }
 MODEL_STRIP = ["model-s", "model-3", "model-3-highland", "model-x", "model-y", "model-y-juniper", "cybertruck"]
 
@@ -382,6 +383,72 @@ def social_img(a, lang):
     return f"/img/{a['slug']}-{lang}.jpg"
 
 
+# Coarse scene per photo, so neighbouring articles never show the same kind of background.
+SCENES = [
+    (r"^models/m3c-([1-4])\.jpg$", "highway"), (r"^models/m3c-([5-8])\.jpg$", "city"), (r"^models/m3c-(9|10|11)\.jpg$", "sunset"),
+    (r"^models/myj-[126]\.jpg$", "city"), (r"^models/myj-[345]\.jpg$", "sunset"),
+    (r"^models/ct-[14]\.jpg$", "city"), (r"^models/ct-2\.jpg$", "sunset"), (r"^models/ct-[35]\.jpg$", "desert"),
+    (r"^models/cc-\d\.jpg$", "city"), (r"^models/rd-1\.jpg$", "sky"), (r"^models/rd-[23]\.jpg$", "sunset"),
+    (r"^models/semi", "sunset"), (r"^models/", "studio"),
+    (r"^topics/(gigafactory)", "factory"), (r"^topics/(fsd|grok)", "interior"), (r"^topics/(spacex|starlink-\d)", "space"),
+    (r"^topics/starlink-car", "nightsky"), (r"^topics/tunnel", "tunnel"), (r"^topics/supercharger", "charging"),
+    (r"^topics/energy", "energy"), (r"^topics/optimus", "optimus"), (r"^topics/cybercab", "robotaxi"),
+    (r"^topics/roadster", "sky"),
+]
+CHOSEN = {}  # slug -> chosen image path (set in build)
+
+
+def scene_of(path):
+    rel = path.split("/img/", 1)[-1]
+    for pat, sc in SCENES:
+        if re.search(pat, rel):
+            return sc
+    return rel
+
+
+def candidates(a):
+    """All suitable photos for an article, preferred first, rotated per article."""
+    out = []
+    if a.get("image") and (STATIC / "img" / a["image"]).exists():
+        out.append(f"/img/{a['image']}")
+    for k in a.get("models", []):
+        m = MODELS[k]
+        gal = m.get("gallery") or MODELS.get(m.get("parent", ""), {}).get("gallery") or []
+        gal = [f"/img/models/{g}" for g in gal if (STATIC / "img" / "models" / g).exists()]
+        if gal:
+            r = GALLERY_ORDER.get(a["slug"], 0) % len(gal)
+            out += gal[r:] + gal[:r]
+        elif model_photo(k, True):
+            out.append(model_photo(k, True))
+        if out:
+            break
+    f = TOPIC_PHOTOS.get(a["category"])
+    files = [x if "/" in x else f"topics/{x}" for x in ([f] if isinstance(f, str) else (f or []))]
+    files = [x for x in files if (STATIC / "img" / x).exists()]
+    if files:
+        r = PHOTO_ORDER.get(a["slug"], 0) % len(files)
+        out += [f"/img/{x}" for x in files[r:] + files[:r]]
+    out.append(f"/img/v/{a['slug']}.jpg")
+    seen = set()
+    return [x for x in out if not (x in seen or seen.add(x))]
+
+
+def assign_photos(arts):
+    """Oldest first: each article avoids the photo and the scene of the 3 articles before it, so on
+    the site (newest first, 3 per row) no photo or background repeats next to or directly above another."""
+    hist = []
+    for a in sorted(arts, key=published):
+        cands = candidates(a)
+        photos = [c for c in cands if not c.startswith("/img/v/")]
+        recent_files = [h[0] for h in hist[-4:]]
+        recent_scenes = [h[1] for h in hist[-3:]]
+        pick = next((c for c in photos if c not in recent_files and scene_of(c) not in recent_scenes), None) \
+            or next((c for c in photos if c not in recent_files), None) \
+            or (photos[0] if photos else cands[-1])
+        CHOSEN[a["slug"]] = pick
+        hist.append((pick, scene_of(pick)))
+
+
 GALLERY_ORDER = {}  # slug -> position among articles sharing the same first model (set in build)
 PHOTO_ORDER = {}  # slug -> position among articles of its category, oldest first (set in build)
 
@@ -398,22 +465,8 @@ def topic_photo(category, slug=""):
 
 
 def site_img(a):
-    """Image shown on the site: an explicit "image" (file in static/img/), else the model photo for
-    single-model articles, else the category photo, else the generated visual."""
-    if a.get("image") and (STATIC / "img" / a["image"]).exists():
-        return f"/img/{a['image']}"
-    ms = a.get("models", [])
-    if ms:
-        k = ms[0]
-        gal = MODELS[k].get("gallery") or MODELS.get(MODELS[k].get("parent", ""), {}).get("gallery")
-        gal = [g for g in (gal or []) if (STATIC / "img" / "models" / g).exists()]
-        if gal:
-            return f"/img/models/{gal[GALLERY_ORDER.get(a['slug'], 0) % len(gal)]}"
-    if ms and model_photo(ms[0], True):
-        return model_photo(ms[0], True)
-    if len(ms) == 1 and MODELS[ms[0]].get("photo") and (STATIC / "img" / "topics" / MODELS[ms[0]]["photo"]).exists():
-        return f"/img/topics/{MODELS[ms[0]]['photo']}"
-    return topic_photo(a["category"], a["slug"]) or f"/img/v/{a['slug']}.jpg"
+    """Photo shown for an article on the site (chosen in assign_photos)."""
+    return CHOSEN.get(a["slug"]) or candidates(a)[0]
 
 
 def read_time(a, lang):
@@ -569,6 +622,7 @@ def build():
             gk = "g:" + (MODELS[x["models"][0]].get("parent") or x["models"][0])
             GALLERY_ORDER[x["slug"]] = seen.get(gk, 0)
             seen[gk] = GALLERY_ORDER[x["slug"]] + 1
+    assign_photos(arts)
     news = [a for a in arts if a["category"] != "guides"]
     guides = [a for a in arts if a["category"] == "guides"]
     if OUT.exists():

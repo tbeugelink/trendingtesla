@@ -22,5 +22,9 @@
     "title": "Tesla in China: verkoop in september 9% lager, maar export uit Shanghai 58% hoger",
     "description": "Giga Shanghai leverde in september 95.366 auto's, 5% meer, doordat de export de zwakkere binnenlandse vraag opving. Het is de vierde maand op rij met dalende verkoop in China.",
     "body": "<p>Tesla's fabriek in Shanghai verkocht in september 95.366 auto's, 5% meer dan een jaar eerder, blijkt uit cijfers van de Chinese vereniging voor personenauto's CPCA. Onder dat cijfer gaan twee heel verschillende trends schuil.</p><h2>De verdeling</h2><ul><li><strong>Verkoop in China zelf:</strong> 64.837, 9% minder dan de 71.525 van september 2025.</li><li><strong>Export vanuit Shanghai:</strong> 30.529, 58% meer dan de 19.287 van vorig jaar.</li></ul><p>De binnenlandse daling kwam ondanks kortingen van omgerekend zo'n €900 op de Model 3 en Model Y.</p><h2>Een trend van vier maanden</h2><p>De verkoop in China daalt nu vier maanden op rij. In augustus verkocht Tesla 57.152 auto's in het land, 12,4% minder, terwijl de export meer dan verdubbelde naar 36.119.</p><h2>Het jaar tot nu toe</h2><p>In de eerste drie kwartalen van 2026 verkocht Tesla 381.088 auto's in China en exporteerde het er 361.972 vanuit Shanghai. Wereldwijd leverde Tesla sinds januari zo'n 1,32 miljoen auto's.</p><h2>Een zware markt</h2><p>Tesla staat daarin niet alleen. De totale autoverkoop in China daalde in september met zo'n 20%, en de binnenlandse verkoop van BYD zakte 13%, terwijl de export van BYD met meer dan 150% steeg. Chinese autobouwers kijken steeds meer naar het buitenland nu de concurrentie in eigen land toeneemt.</p><h2>Waarom dit ertoe doet</h2><p>Shanghai is Tesla's grootste fabriek en de belangrijkste bron van auto's voor Europa en de regio Azië-Pacific. Veel Model 3's in Nederland en België komen daarvandaan. De sterke export hielp Tesla in het derde kwartaal de verwachtingen te verslaan. Maar wie op export leunt om de fabriek vol te krijgen, is kwetsbaar voor handelsbarrières en prijsconcurrentie in die markten.</p>"
-  }
+  },
+  "models": [
+    "model-y",
+    "model-3"
+  ]
 }

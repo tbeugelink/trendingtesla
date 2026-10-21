@@ -251,8 +251,8 @@ h1,h2,h3{color:var(--head);font-weight:800}
 .feature h3{font-size:clamp(1.4rem,2.8vw,2rem);line-height:1.15;letter-spacing:-.02em;margin:14px 0 8px}
 .feature p{color:var(--muted);margin-bottom:8px}
 .side{display:flex;flex-direction:column;gap:28px}
-.mini{display:grid;grid-template-columns:180px 1fr;gap:18px;text-decoration:none;color:var(--fg);align-items:start}
-.mini img{width:180px;aspect-ratio:1200/630;object-fit:cover;border-radius:10px;border:1px solid var(--border);transition:border-color .2s,box-shadow .2s}
+.mini{display:grid;grid-template-columns:1fr;gap:12px;text-decoration:none;color:var(--fg);align-items:start}
+.mini img{width:100%;aspect-ratio:1200/630;object-fit:cover;border-radius:10px;border:1px solid var(--border);transition:border-color .2s,box-shadow .2s}
 .mini:hover img{border-color:var(--blue);box-shadow:0 0 0 1px var(--blue)}
 .mini h3{font-size:.98rem;line-height:1.3;margin:2px 0 4px}
 .feature:hover h3,.card:hover h3,.mini:hover h3{color:var(--blue2)}
@@ -286,7 +286,7 @@ h1,h2,h3{color:var(--head);font-weight:800}
 article{padding:36px 0 8px}
 article h1{font-size:clamp(1.8rem,4.6vw,2.6rem);line-height:1.12;letter-spacing:-.025em;margin:10px 0 14px}
 article .lead{font-size:1.18rem;line-height:1.55;color:var(--muted);margin:0 0 18px}
-article .hero-img{border-radius:16px;margin:22px 0 28px;aspect-ratio:1200/630;width:100%;object-fit:cover;border:1px solid var(--border)}
+article .hero-img{border-radius:16px;margin:0 0 26px;aspect-ratio:1200/630;width:100%;object-fit:cover;border:1px solid var(--border)}
 .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
 .chips a{font-size:.78rem;font-weight:700;color:var(--muted);text-decoration:none;border:1px solid var(--border2);border-radius:999px;padding:3px 10px}
 .chips a:hover{color:var(--head);border-color:var(--head)}
@@ -559,7 +559,7 @@ def build():
                        f'<span class="tag" style="margin-top:14px">{L["top"]} · {CATEGORIES[top["category"]][lang]}</span>'
                        f'<h3>{esc(t["title"])}</h3><p>{esc(t["description"])}</p>'
                        f'<span class="meta">{fmt_date(top["date"], lang)} · {read_time(top, lang)} {L["min"]}</span></a>')
-            side = "".join(mini(a, lang) for a in news[1:5])
+            side = "".join(mini(a, lang) for a in news[1:3])
             tops = f'<div class="tops">{feature}<div class="side">{side}</div></div>'
             body += section(L["latest"], tops, (url(lang, "category/news/"), L["all"]), anchor="news")
         else:
@@ -568,8 +568,8 @@ def build():
         if guides:
             body += section(L["guides_h"], grid(guides[:6], lang), (url(lang, "category/guides/"), CATEGORIES["guides"][lang]),
                             sub=L["guides_sub"])
-        if len(news) > 5:
-            body += section(L["more"], grid(news[5:17], lang))
+        if len(news) > 3:
+            body += section(L["more"], grid(news[3:18], lang))
         body += section(L["why_h"], why(lang))
         write(url(lang), page(lang, "", NAME, L["tagline"], body))
 
@@ -631,10 +631,10 @@ def build():
             rel = related(a, arts)
             rel_html = section(L["related"], grid(rel, lang)) if rel else ""
             body = (f'<article class="narrow">'
+                    f'<img class="hero-img" src="{site_img(a)}" alt="{esc(t["title"])}" width="1200" height="630" fetchpriority="high">'
                     f'<a class="tag" href="{url(lang, "category/" + a["category"] + "/")}">{c[lang]}</a>'
                     f'<h1>{esc(t["title"])}</h1><p class="lead">{esc(t["description"])}</p>'
-                    f'<p class="meta">{NAME} · {fmt_date(a["date"], lang)} · {read_time(a, lang)} {L["min"]}</p>{chips}'
-                    f'<img class="hero-img" src="{site_img(a)}" alt="{esc(t["title"])}" width="1200" height="630" fetchpriority="high">'
+                    f'<p class="meta" style="margin-bottom:26px">{NAME} · {fmt_date(a["date"], lang)} · {read_time(a, lang)} {L["min"]}</p>{chips}'
                     f'<div class="prose">{t["body"]}</div>{src}</article>{rel_html}')
             write(url(lang, a["slug"] + "/"),
                   page(lang, a["slug"] + "/", t["title"], t["description"], body, "article", head,

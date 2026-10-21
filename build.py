@@ -251,8 +251,8 @@ h1,h2,h3{color:var(--head);font-weight:800}
 .feature h3{font-size:clamp(1.4rem,2.8vw,2rem);line-height:1.15;letter-spacing:-.02em;margin:14px 0 8px}
 .feature p{color:var(--muted);margin-bottom:8px}
 .side{display:flex;flex-direction:column;gap:28px}
-.mini{display:grid;grid-template-columns:1fr;gap:12px;text-decoration:none;color:var(--fg);align-items:start}
-.mini img{width:100%;aspect-ratio:1200/630;object-fit:cover;border-radius:10px;border:1px solid var(--border);transition:border-color .2s,box-shadow .2s}
+.mini{display:grid;grid-template-columns:180px 1fr;gap:18px;text-decoration:none;color:var(--fg);align-items:start}
+.mini img{width:180px;aspect-ratio:1200/630;object-fit:cover;border-radius:10px;border:1px solid var(--border);transition:border-color .2s,box-shadow .2s}
 .mini:hover img{border-color:var(--blue);box-shadow:0 0 0 1px var(--blue)}
 .mini h3{font-size:.98rem;line-height:1.3;margin:2px 0 4px}
 .feature:hover h3,.card:hover h3,.mini:hover h3{color:var(--blue2)}
@@ -559,7 +559,7 @@ def build():
                        f'<span class="tag" style="margin-top:14px">{L["top"]} · {CATEGORIES[top["category"]][lang]}</span>'
                        f'<h3>{esc(t["title"])}</h3><p>{esc(t["description"])}</p>'
                        f'<span class="meta">{fmt_date(top["date"], lang)} · {read_time(top, lang)} {L["min"]}</span></a>')
-            side = "".join(mini(a, lang) for a in news[1:3])
+            side = "".join(mini(a, lang) for a in news[1:5])
             tops = f'<div class="tops">{feature}<div class="side">{side}</div></div>'
             body += section(L["latest"], tops, (url(lang, "category/news/"), L["all"]), anchor="news")
         else:
@@ -568,8 +568,8 @@ def build():
         if guides:
             body += section(L["guides_h"], grid(guides[:6], lang), (url(lang, "category/guides/"), CATEGORIES["guides"][lang]),
                             sub=L["guides_sub"])
-        if len(news) > 3:
-            body += section(L["more"], grid(news[3:18], lang))
+        if len(news) > 5:
+            body += section(L["more"], grid(news[5:20], lang))
         body += section(L["why_h"], why(lang))
         write(url(lang), page(lang, "", NAME, L["tagline"], body))
 

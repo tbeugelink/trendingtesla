@@ -182,10 +182,10 @@ CSS = """
 @font-face{font-family:Manrope;font-weight:600;font-display:swap;src:url(/fonts/manrope-latin-600-normal.woff2) format("woff2")}
 @font-face{font-family:Manrope;font-weight:700;font-display:swap;src:url(/fonts/manrope-latin-700-normal.woff2) format("woff2")}
 @font-face{font-family:Manrope;font-weight:800;font-display:swap;src:url(/fonts/manrope-latin-800-normal.woff2) format("woff2")}
-:root{--bg:#060a12;--surface:rgba(13,20,31,.88);--surface2:#131d2e;--border:#1a2638;--border2:#26364c;--fg:#e8eef5;--head:#fff;--muted:#b9c4d2;--dim:#8f9db0;--red:#e22822;--red2:#b81e19;--blue:#00d4ff;--blue2:#5fe3ff;--max:1200px;color-scheme:dark}
+:root{--bg:#04060a;--surface:rgba(11,15,23,.92);--surface2:#111827;--border:#172130;--border2:#223044;--fg:#e8eef5;--head:#fff;--muted:#b9c4d2;--dim:#8f9db0;--red:#e22822;--red2:#b81e19;--blue:#00d4ff;--blue2:#5fe3ff;--max:1200px;color-scheme:dark}
 *{box-sizing:border-box;margin:0;padding:0}
-html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;background:#060a11}
-body{background:radial-gradient(1200px 600px at 85% -10%,rgba(0,212,255,.06),transparent 60%),radial-gradient(900px 500px at -10% 30%,rgba(56,96,255,.05),transparent 60%),linear-gradient(180deg,#0b1321 0,#080e19 700px,#070b14 1600px,#060a11 100%) #060a11;min-height:100vh;color:var(--fg);font:17px/1.65 Manrope,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;background:#04060a}
+body{background:radial-gradient(1200px 600px at 85% -10%,rgba(0,212,255,.035),transparent 60%),radial-gradient(900px 500px at -10% 30%,rgba(56,96,255,.03),transparent 60%),linear-gradient(180deg,#070c15 0,#05090f 700px,#04070c 1600px,#04060a 100%) #04060a;min-height:100vh;color:var(--fg);font:17px/1.65 Manrope,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
 a{color:var(--head)}
 img{display:block;max-width:100%;height:auto}
 h1,h2,h3{color:var(--head);font-weight:800}
@@ -193,7 +193,7 @@ h1,h2,h3{color:var(--head);font-weight:800}
 .narrow{max-width:740px;margin:0 auto}
 .sr{position:absolute;left:-9999px}
 /* header */
-.top{position:sticky;top:0;z-index:10;background:rgba(7,11,19,.9);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+.top{position:sticky;top:0;z-index:10;background:rgba(5,8,13,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
 .bar{display:flex;align-items:center;justify-content:space-between;gap:16px;height:60px}
 .logo{font-weight:800;font-size:1.4rem;letter-spacing:-.02em;color:var(--head);text-decoration:none;white-space:nowrap}
 .logo span{color:var(--red)}
@@ -217,9 +217,9 @@ h1,h2,h3{color:var(--head);font-weight:800}
 .h2 a:hover{color:var(--head)}
 .sub{color:var(--muted);font-size:.92rem;margin:-8px 0 16px}
 /* hero */
-.hero{position:relative;overflow:hidden;border-radius:18px;background:radial-gradient(ellipse at 85% 40%,rgba(0,212,255,.18),transparent 60%),linear-gradient(135deg,#0f1a2c,#060a12);border:1px solid var(--border);min-height:340px;margin-top:24px;display:flex;align-items:center}
+.hero{position:relative;overflow:hidden;border-radius:18px;background:radial-gradient(ellipse at 85% 40%,rgba(0,212,255,.14),transparent 60%),linear-gradient(135deg,#0b1320,#04060a);border:1px solid var(--border);min-height:340px;margin-top:24px;display:flex;align-items:center}
 .hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center right}
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,10,18,.96) 0%,rgba(6,10,18,.7) 45%,rgba(6,10,18,.12) 100%)}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(4,6,10,.96) 0%,rgba(4,6,10,.7) 45%,rgba(4,6,10,.12) 100%)}
 .hero .in{position:relative;z-index:2;max-width:520px;padding:36px 32px}
 .eyebrow{display:inline-block;font-size:.7rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);border:1px solid rgba(0,212,255,.35);background:rgba(0,212,255,.1);padding:4px 11px;border-radius:999px;margin-bottom:14px}
 .hero h1{font-size:clamp(1.8rem,4vw,2.7rem);line-height:1.08;letter-spacing:-.025em;margin-bottom:12px}
@@ -381,7 +381,7 @@ def page(lang, path, title, description, body, og_type="website", extra_head="",
 <meta property="og:locale" content="{L['locale']}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="{img}">
-<meta name="theme-color" content="#0b1321">
+<meta name="theme-color" content="#070c15">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <style>{CSS}</style>
 {extra_head}

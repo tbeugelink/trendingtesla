@@ -100,7 +100,7 @@ def make_cover(path, title, category_label, category_key, color_hex, date_label,
     gd = ImageDraw.Draw(img)
     for y in range(H):
         f = y / H
-        gd.line([(0, y), (W, y)], fill=(int(12 - 6 * f), int(20 - 10 * f), int(34 - 16 * f)))
+        gd.line([(0, y), (W, y)], fill=(int(8 - 4 * f), int(13 - 6 * f), int(22 - 10 * f)))
 
     # Soft colour glow behind the motif
     dx = 0 if with_text else -410   # centre the visual when there is no text
@@ -124,7 +124,7 @@ def make_cover(path, title, category_label, category_key, color_hex, date_label,
     fd = ImageDraw.Draw(fade)
     for x in range(W):
         a = int(max(0, min(1, 1.25 - x / 760)) * 235)
-        fd.line([(x, 0), (x, H)], fill=(9, 15, 26, a))
+        fd.line([(x, 0), (x, H)], fill=(6, 10, 17, a))
     img.paste(fade, (0, 0), fade)
 
     d = ImageDraw.Draw(img)

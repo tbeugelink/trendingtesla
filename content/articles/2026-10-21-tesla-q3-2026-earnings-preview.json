@@ -1,11 +1,21 @@
 {
   "slug": "tesla-q3-2026-earnings-preview",
   "date": "2026-10-21",
+  "time": "10:45",
   "category": "earnings",
   "sources": [
-    {"title": "Electrek — Tesla (TSLA) Q3 2026 earnings preview", "url": "https://electrek.co/2026/10/20/tesla-tsla-q3-2026-earnings-preview/"},
-    {"title": "Tesla Oracle — Date and time of the Q3 2026 earnings call", "url": "https://www.teslaoracle.com/2026/10/04/tesla-tsla-announces-the-date-and-time-for-the-q3-2026-earnings-call-live-webcast-with-elon-musk-and-his-team/"},
-    {"title": "CNBC — Tesla unveils long-delayed Roadster developed with SpaceX", "url": "https://www.cnbc.com/2026/10/15/tesla-roadster-reveal-what-to-know-about-the-delayed-ev.html"}
+    {
+      "title": "Electrek — Tesla (TSLA) Q3 2026 earnings preview",
+      "url": "https://electrek.co/2026/10/20/tesla-tsla-q3-2026-earnings-preview/"
+    },
+    {
+      "title": "Tesla Oracle — Date and time of the Q3 2026 earnings call",
+      "url": "https://www.teslaoracle.com/2026/10/04/tesla-tsla-announces-the-date-and-time-for-the-q3-2026-earnings-call-live-webcast-with-elon-musk-and-his-team/"
+    },
+    {
+      "title": "CNBC — Tesla unveils long-delayed Roadster developed with SpaceX",
+      "url": "https://www.cnbc.com/2026/10/15/tesla-roadster-reveal-what-to-know-about-the-delayed-ev.html"
+    }
   ],
   "en": {
     "title": "Tesla Q3 2026 earnings tonight: the numbers and questions that matter",

@@ -7,7 +7,8 @@ English lives at the site root, Dutch under /nl/.
 Article JSON format:
 {
   "slug": "tesla-q3-2026-earnings-preview",      # URL part, same for both languages
-  "date": "2026-10-21",                            # publication date (YYYY-MM-DD)
+  "date": "2026-10-21",                            # publication date (YYYY-MM-DD, Europe/Amsterdam)
+  "time": "07:00",                                 # publication time (HH:MM, Europe/Amsterdam); optional
   "category": "earnings",                          # key from CATEGORIES below
   "sources": [{"title": "...", "url": "https://..."}],
   "en": {"title": "...", "description": "...", "body": "<p>...</p>"},
@@ -21,6 +22,7 @@ import json
 import shutil
 from datetime import datetime, timezone
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 ROOT = Path(__file__).resolve().parent
 CONTENT = ROOT / "content" / "articles"
@@ -186,6 +188,14 @@ def fmt_date(d, lang):
     return f"{m} {dt.day}, {dt.year}" if lang == "en" else f"{dt.day} {m} {dt.year}"
 
 
+TZ = ZoneInfo("Europe/Amsterdam")
+
+
+def published(a):
+    """Timezone-aware publication datetime (defaults to 08:00 local)."""
+    return datetime.strptime(f"{a['date']} {a.get('time', '08:00')}", "%Y-%m-%d %H:%M").replace(tzinfo=TZ)
+
+
 def url(lang, path=""):
     """Absolute path for a page in a language. path like '' or 'slug/' or 'about/'."""
     return f"{LANGS[lang]['prefix']}/{path}"
@@ -304,8 +314,8 @@ def build():
                 "@type": "NewsArticle",
                 "headline": t["title"],
                 "description": t["description"],
-                "datePublished": a["date"],
-                "dateModified": a.get("updated", a["date"]),
+                "datePublished": published(a).isoformat(),
+                "dateModified": a.get("updated", published(a).isoformat()),
                 "inLanguage": lang,
                 "mainEntityOfPage": SITE + url(lang, a["slug"] + "/"),
                 "publisher": {"@type": "Organization", "name": NAME, "url": SITE},
@@ -331,7 +341,7 @@ def build():
             f"<item><title>{esc(a[lang]['title'])}</title>"
             f"<link>{SITE + url(lang, a['slug'] + '/')}</link>"
             f"<guid>{SITE + url(lang, a['slug'] + '/')}</guid>"
-            f"<pubDate>{datetime.strptime(a['date'], '%Y-%m-%d').strftime('%a, %d %b %Y 08:00:00 +0000')}</pubDate>"
+            f"<pubDate>{published(a).astimezone(timezone.utc).strftime('%a, %d %b %Y %H:%M:%S +0000')}</pubDate>"
             f"<description>{esc(a[lang]['description'])}</description></item>"
             for a in arts[:30]
         )
@@ -349,7 +359,7 @@ def build():
 
     # Sitemap
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-    entries = [("", today)] + [(a["slug"] + "/", a.get("updated", a["date"])) for a in arts] \
+    entries = [("", today)] + [(a["slug"] + "/", a.get("updated", a["date"])[:10]) for a in arts] \
         + [(k + "/", today) for k in PAGES]
     urls = ""
     for path, mod in entries:

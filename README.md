@@ -3,7 +3,7 @@
 Static, bilingual (EN at `/`, NL at `/nl/`) Tesla news site.
 
 - Articles: `content/articles/YYYY-MM-DD-slug.json` (format described at the top of `build.py`)
-- Build: `python3 build.py` → writes the full site to `public/`
+- Build: `python3 build.py` → writes the full site to `public/`, including a generated cover image per article and language (`covers.py`, needs Pillow: `pip install --break-system-packages pillow`)
 - Deploy: push to `main`; Cloudflare deploys `public/` automatically (see `wrangler.jsonc`)
 
 `public/` is generated — never edit it by hand, always rebuild.

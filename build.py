@@ -193,7 +193,9 @@ CSS = """
 :root{--bg:#04060a;--surface:rgba(11,15,23,.92);--surface2:#111827;--border:#172130;--border2:#223044;--fg:#e8eef5;--head:#fff;--muted:#b9c4d2;--dim:#8f9db0;--red:#e22822;--red2:#b81e19;--blue:#00d4ff;--blue2:#5fe3ff;--max:1200px;color-scheme:dark}
 *{box-sizing:border-box;margin:0;padding:0}
 html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;background:#04060a}
-body{background:radial-gradient(1200px 600px at 85% -10%,rgba(0,212,255,.035),transparent 60%),radial-gradient(900px 500px at -10% 30%,rgba(56,96,255,.03),transparent 60%),linear-gradient(180deg,#070c15 0,#05090f 700px,#04070c 1600px,#04060a 100%) #04060a;min-height:100vh;color:var(--fg);font:17px/1.65 Manrope,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+body{background:radial-gradient(1400px 800px at 90% -15%,rgba(0,212,255,.10),transparent 60%),radial-gradient(1000px 700px at -15% 35%,rgba(56,96,255,.08),transparent 60%),radial-gradient(900px 600px at 70% 75%,rgba(0,150,255,.05),transparent 60%),linear-gradient(170deg,#0d1626 0,#070d18 600px,#050911 1500px,#03050a 100%) #03050a;min-height:100vh;color:var(--fg);font:17px/1.65 Manrope,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.13;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.68' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 1 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+main,footer{position:relative;z-index:1}
 a{color:var(--head)}
 img{display:block;max-width:100%;height:auto}
 h1,h2,h3{color:var(--head);font-weight:800}
@@ -201,7 +203,7 @@ h1,h2,h3{color:var(--head);font-weight:800}
 .narrow{max-width:740px;margin:0 auto}
 .sr{position:absolute;left:-9999px}
 /* header */
-.top{position:sticky;top:0;z-index:10;background:rgba(5,8,13,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+.top{position:sticky;top:0;z-index:10;background:rgba(6,10,18,.55);backdrop-filter:blur(16px) saturate(1.3);-webkit-backdrop-filter:blur(16px) saturate(1.3);border-bottom:1px solid var(--border)}
 .bar{display:flex;align-items:center;justify-content:space-between;gap:16px;height:60px}
 .logo{font-weight:800;font-size:1.4rem;letter-spacing:-.02em;color:var(--head);text-decoration:none;white-space:nowrap}
 .logo span{color:var(--red)}

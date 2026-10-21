@@ -284,6 +284,9 @@ h1,h2,h3{color:var(--head);font-weight:800}
 /* grid */
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:56px 64px}
 .card{text-decoration:none;color:var(--fg);display:flex;flex-direction:column}
+.card.lead{grid-column:span 2}
+.card.lead h3{font-size:clamp(1.35rem,2.4vw,1.85rem);line-height:1.2;letter-spacing:-.02em}
+.card.lead p{font-size:1rem;-webkit-line-clamp:2}
 .card .body{padding:18px 4px 0}
 .card h3{font-size:1.08rem;line-height:1.3;margin:6px 0 6px}
 .card p{color:var(--muted);font-size:.9rem;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
@@ -341,7 +344,7 @@ footer a:hover{color:var(--head)}
 footer .links{display:flex;gap:18px;flex-wrap:wrap}
 footer p{max-width:560px;margin-top:10px}
 @media (max-width:1000px){.grid{grid-template-columns:repeat(2,1fr);gap:48px 40px}.tops{grid-template-columns:1fr}.why{grid-template-columns:repeat(2,1fr)}.models{grid-template-columns:repeat(4,1fr);gap:20px}}
-@media (max-width:600px){.wrap{padding:0 20px}.mini{grid-template-columns:1fr;gap:12px}.mini img{width:100%}#news .h2{margin-top:32px}.grid{grid-template-columns:1fr;gap:40px}.why{grid-template-columns:1fr 1fr;gap:10px}.why div{padding:14px}.why p{font-size:.8rem}
+@media (max-width:600px){.wrap{padding:0 20px}.card.lead{grid-column:auto}.mini{grid-template-columns:1fr;gap:12px}.mini img{width:100%}#news .h2{margin-top:32px}.grid{grid-template-columns:1fr;gap:40px}.why{grid-template-columns:1fr 1fr;gap:10px}.why div{padding:14px}.why p{font-size:.8rem}
  .models{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:0 -24px;padding:0 24px 4px}.models::-webkit-scrollbar{display:none}.models{gap:14px}.model{flex:0 0 46%;scroll-snap-align:start}
  body{font-size:16.5px}.h2{margin-top:40px}.hero{min-height:0}.hero .in{padding:26px 20px}.hero .btn{flex:1;white-space:nowrap;padding:11px 12px}
  .phead{flex-direction:column-reverse;align-items:flex-start}.phead img{width:100%}}
@@ -536,9 +539,10 @@ def label(a, lang):
     return f'<span class="tag">{CATEGORIES[a["category"]][lang]}</span>'
 
 
-def card(a, lang):
+def card(a, lang, lead=False):
     t = a[lang]
-    return (f'<a class="card" href="{url(lang, a["slug"] + "/")}">'
+    cls = "card lead" if lead else "card"
+    return (f'<a class="{cls}" href="{url(lang, a["slug"] + "/")}">'
             f'<div class="im"><img src="{site_img(a)}" alt="" width="1200" height="630" loading="lazy" decoding="async"></div>'
             f'<div class="body">{label(a, lang)} <span class="meta">· {fmt_date(a["date"], lang)}</span>'
             f'<h3>{esc(t["title"])}</h3><p>{esc(t["description"])}</p></div></a>')
@@ -551,8 +555,9 @@ def mini(a, lang):
             f'<div>{label(a, lang)}<h3>{esc(t["title"])}</h3><span class="meta">{fmt_date(a["date"], lang)}</span></div></a>')
 
 
-def grid(items, lang):
-    return f'<div class="grid">{"".join(card(a, lang) for a in items)}</div>'
+def grid(items, lang, lead=False):
+    """lead=True: the newest article spans the two left columns, top left of the page."""
+    return f'<div class="grid">{"".join(card(a, lang, lead and i == 0) for i, a in enumerate(items))}</div>'
 
 
 def section(title, body, link=None, sub=None, anchor=None):
@@ -677,7 +682,7 @@ def build():
                 items = news
             intro = L["eco_intro"] if key == "ecosystem" else L["cat_intro"].format(c[lang])
             head = f'<div class="phead"><div><span class="tag">{NAME}</span><h1>{c[lang]}</h1><p>{intro}</p></div></div>'
-            content = grid(items, lang) if items else f'<p class="empty">{L["empty"]}</p>'
+            content = grid(items, lang, lead=True) if items else f'<p class="empty">{L["empty"]}</p>'
             write(url(lang, f"category/{key}/"),
                   page(lang, f"category/{key}/", c[lang], intro, head + content, active=key))
 
@@ -703,7 +708,7 @@ def build():
             content = ""
             if mg:
                 content += section(L["model_guides"].format(m["name"]), grid(mg, lang))
-            content += section(L["model_news"].format(m["name"]), grid(mn, lang) if mn else f'<p class="empty">{L["empty"]}</p>')
+            content += section(L["model_news"].format(m["name"]), grid(mn, lang, lead=not mg) if mn else f'<p class="empty">{L["empty"]}</p>')
             write(url(lang, f"model/{key}/"),
                   page(lang, f"model/{key}/", f"Tesla {m['name']}", L["model_intro"].format(m["name"]), head + content,
                        image=ph))

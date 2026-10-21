@@ -229,6 +229,9 @@ img{display:block;max-width:100%;height:auto}
 h1,h2,h3{color:var(--head);font-weight:800}
 .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
 .narrow{max-width:740px;margin:0 auto}
+.read{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:56px;align-items:start;margin-top:36px}
+.read article{padding-top:0}
+.rside .rh{font-size:1.15rem;margin:0 0 22px;padding-bottom:12px;border-bottom:1px solid var(--border)}
 .sr{position:absolute;left:-9999px}
 /* header */
 .top{position:sticky;top:0;z-index:10;background:rgba(6,10,18,.55);backdrop-filter:blur(16px) saturate(1.3);-webkit-backdrop-filter:blur(16px) saturate(1.3);border-bottom:1px solid var(--border)}
@@ -348,7 +351,7 @@ footer a{color:var(--muted);text-decoration:none}
 footer a:hover{color:var(--head)}
 footer .links{display:flex;gap:18px;flex-wrap:wrap}
 footer p{max-width:560px;margin-top:10px}
-@media (max-width:1000px){.grid{grid-template-columns:repeat(2,1fr);gap:48px 40px}.leadside{grid-column:span 2;flex-direction:row}.leadside .card{flex:1}.tops{grid-template-columns:1fr}.why{grid-template-columns:repeat(2,1fr)}.models{grid-template-columns:repeat(4,1fr);gap:20px}}
+@media (max-width:1000px){.grid{grid-template-columns:repeat(2,1fr);gap:48px 40px}.leadside{grid-column:span 2;flex-direction:row}.leadside .card{flex:1}.tops{grid-template-columns:1fr}.read{grid-template-columns:1fr;gap:48px}.why{grid-template-columns:repeat(2,1fr)}.models{grid-template-columns:repeat(4,1fr);gap:20px}}
 @media (max-width:600px){.wrap{padding:0 20px}.card.lead{grid-column:auto}.leadside{grid-column:auto;flex-direction:column;gap:40px}.leadside .card p{display:-webkit-box}.mini{grid-template-columns:1fr;gap:12px}.mini img{width:100%}#news .h2{margin-top:32px}.grid{grid-template-columns:1fr;gap:40px}.why{grid-template-columns:1fr 1fr;gap:10px}.why div{padding:14px}.why p{font-size:.8rem}
  .models{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:0 -24px;padding:0 24px 4px}.models::-webkit-scrollbar{display:none}.models{gap:14px}.model{flex:0 0 46%;scroll-snap-align:start}
  body{font-size:16.5px}.h2{margin-top:40px}.hero{min-height:0}.hero .in{padding:26px 20px}.hero .btn{flex:1;white-space:nowrap;padding:11px 12px}
@@ -755,14 +758,18 @@ def build():
                 "author": {"@type": "Organization", "name": NAME, "url": SITE},
             }
             head = f'<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>'
-            rel = related(a, arts)
-            rel_html = section(L["related"], grid(rel, lang)) if rel else ""
-            body = (f'<article class="narrow">'
+            side_items = [x for x in news if x["slug"] != a["slug"]][:8]
+            side_ids = {x["slug"] for x in side_items}
+            rel = [x for x in related(a, arts, 12) if x["slug"] not in side_ids]
+            rel_html = section(L["related"], grid(rel[:3], lang)) if rel else ""
+            aside = (f'<aside class="rside"><h2 class="sr">{L["latest"]}</h2><div class="side">'
+                     + "".join(mini(x, lang) for x in side_items) + '</div></aside>')
+            body = (f'<div class="read"><article>'
                     f'<img class="hero-img" src="{site_img(a)}" alt="{esc(t["title"])}" width="1200" height="630" fetchpriority="high">'
                     f'<a class="tag" href="{url(lang, "category/" + a["category"] + "/")}">{c[lang]}</a>'
                     f'<h1>{esc(t["title"])}</h1><p class="lead">{esc(t["description"])}</p>'
                     f'<p class="meta" style="margin-bottom:26px">{NAME} · {fmt_date(a["date"], lang)} · {read_time(a, lang)} {L["min"]}</p>{chips}'
-                    f'<div class="prose">{t["body"]}</div>{src}</article>{rel_html}')
+                    f'<div class="prose">{t["body"]}</div>{src}</article>{aside}</div>{rel_html}')
             write(url(lang, a["slug"] + "/"),
                   page(lang, a["slug"] + "/", t["title"], t["description"], body, "article", head,
                        image=social_img(a, lang), active=a["category"]))

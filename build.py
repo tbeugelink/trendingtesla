@@ -398,7 +398,7 @@ def site_img(a):
     if a.get("image") and (STATIC / "img" / a["image"]).exists():
         return f"/img/{a['image']}"
     ms = a.get("models", [])
-    if len(ms) == 1 and model_photo(ms[0], True):
+    if ms and model_photo(ms[0], True):
         return model_photo(ms[0], True)
     if len(ms) == 1 and MODELS[ms[0]].get("photo") and (STATIC / "img" / "topics" / MODELS[ms[0]]["photo"]).exists():
         return f"/img/topics/{MODELS[ms[0]]['photo']}"

@@ -398,7 +398,7 @@ SCENES = [
     (r"^models/cc-\d\.jpg$", "city"), (r"^models/rd-1\.jpg$", "sky"), (r"^models/rd-[23]\.jpg$", "sunset"),
     (r"^models/semi", "sunset"), (r"^models/", "studio"),
     (r"^topics/gigafactory-[56]", "aerial"), (r"^topics/gigafactory-4", "sunset"), (r"^topics/(gigafactory)", "factory"), (r"^topics/(fsd|grok)", "interior"), (r"^topics/(spacex|starlink-\d)", "space"),
-    (r"^topics/starlink-car", "nightsky"), (r"^topics/tunnel", "tunnel"), (r"^topics/supercharger", "charging"),
+    (r"^topics/starlink-car", "nightsky"), (r"^topics/tunnel", "tunnel"), (r"^topics/wallbox-[23]", "homecar"), (r"^topics/wallbox", "wallbox"), (r"^topics/supercharger", "charging"),
     (r"^topics/energy-[34]", "sunset"), (r"^topics/energy-6", "desert"), (r"^topics/energy", "energy"), (r"^topics/optimus", "optimus"), (r"^topics/cybercab", "robotaxi"),
     (r"^topics/roadster", "sky"),
 ]

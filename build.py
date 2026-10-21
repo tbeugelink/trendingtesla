@@ -285,6 +285,10 @@ h1,h2,h3{color:var(--head);font-weight:800}
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:56px 64px}
 .card{text-decoration:none;color:var(--fg);display:flex;flex-direction:column}
 .card.lead{grid-column:span 2}
+.leadside{display:flex;flex-direction:column;justify-content:space-between;gap:28px}
+.leadside .card p{display:none}
+.leadside .card .body{padding-top:12px}
+.leadside .card h3{font-size:1rem;margin-bottom:0}
 .card.lead h3{font-size:clamp(1.35rem,2.4vw,1.85rem);line-height:1.2;letter-spacing:-.02em}
 .card.lead p{font-size:1rem;-webkit-line-clamp:2}
 .card .body{padding:18px 4px 0}
@@ -343,8 +347,8 @@ footer a{color:var(--muted);text-decoration:none}
 footer a:hover{color:var(--head)}
 footer .links{display:flex;gap:18px;flex-wrap:wrap}
 footer p{max-width:560px;margin-top:10px}
-@media (max-width:1000px){.grid{grid-template-columns:repeat(2,1fr);gap:48px 40px}.tops{grid-template-columns:1fr}.why{grid-template-columns:repeat(2,1fr)}.models{grid-template-columns:repeat(4,1fr);gap:20px}}
-@media (max-width:600px){.wrap{padding:0 20px}.card.lead{grid-column:auto}.mini{grid-template-columns:1fr;gap:12px}.mini img{width:100%}#news .h2{margin-top:32px}.grid{grid-template-columns:1fr;gap:40px}.why{grid-template-columns:1fr 1fr;gap:10px}.why div{padding:14px}.why p{font-size:.8rem}
+@media (max-width:1000px){.grid{grid-template-columns:repeat(2,1fr);gap:48px 40px}.leadside{grid-column:span 2;flex-direction:row}.leadside .card{flex:1}.tops{grid-template-columns:1fr}.why{grid-template-columns:repeat(2,1fr)}.models{grid-template-columns:repeat(4,1fr);gap:20px}}
+@media (max-width:600px){.wrap{padding:0 20px}.card.lead{grid-column:auto}.leadside{grid-column:auto;flex-direction:column;gap:40px}.leadside .card p{display:-webkit-box}.mini{grid-template-columns:1fr;gap:12px}.mini img{width:100%}#news .h2{margin-top:32px}.grid{grid-template-columns:1fr;gap:40px}.why{grid-template-columns:1fr 1fr;gap:10px}.why div{padding:14px}.why p{font-size:.8rem}
  .models{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:0 -24px;padding:0 24px 4px}.models::-webkit-scrollbar{display:none}.models{gap:14px}.model{flex:0 0 46%;scroll-snap-align:start}
  body{font-size:16.5px}.h2{margin-top:40px}.hero{min-height:0}.hero .in{padding:26px 20px}.hero .btn{flex:1;white-space:nowrap;padding:11px 12px}
  .phead{flex-direction:column-reverse;align-items:flex-start}.phead img{width:100%}}
@@ -439,17 +443,22 @@ def candidates(a):
 def assign_photos(arts):
     """Oldest first: each article avoids the photo and the scene of the 3 articles before it, so on
     the site (newest first, 3 per row) no photo or background repeats next to or directly above another."""
-    hist = []
+    hist, cat_hist = [], {}
     for a in sorted(arts, key=published):
         cands = candidates(a)
         photos = [c for c in cands if not c.startswith("/img/v/")]
-        recent_files = [h[0] for h in hist[-4:]]
-        recent_scenes = [h[1] for h in hist[-3:]]
+        # neighbours on the homepage (all articles) and on the category / model pages
+        groups = [a["category"]] + [MODELS[k].get("parent") or k for k in a.get("models", [])]
+        local = [h for g in groups for h in cat_hist.get(g, [])[-3:]]
+        recent_files = [h[0] for h in hist[-4:]] + [h[0] for h in local]
+        recent_scenes = [h[1] for h in hist[-3:]] + [h[1] for h in local]
         pick = next((c for c in photos if c not in recent_files and scene_of(c) not in recent_scenes), None) \
             or next((c for c in photos if c not in recent_files), None) \
             or (photos[0] if photos else cands[-1])
         CHOSEN[a["slug"]] = pick
         hist.append((pick, scene_of(pick)))
+        for g in groups:
+            cat_hist.setdefault(g, []).append((pick, scene_of(pick)))
 
 
 GALLERY_ORDER = {}  # slug -> position among articles sharing the same first model (set in build)
@@ -556,7 +565,13 @@ def mini(a, lang):
 
 
 def grid(items, lang, lead=False):
-    """lead=True: the newest article spans the two left columns, top left of the page."""
+    """lead=True: the newest article spans the two left columns, top left of the page, with the next
+    two articles stacked in the right column so it lines up with the lead."""
+    if lead and len(items) >= 3:
+        top = (f'<div class="grid leadrow">{card(items[0], lang, True)}'
+               f'<div class="leadside">{card(items[1], lang)}{card(items[2], lang)}</div></div>')
+        rest = items[3:]
+        return top + (f'<div class="grid" style="margin-top:56px">{"".join(card(a, lang) for a in rest)}</div>' if rest else "")
     return f'<div class="grid">{"".join(card(a, lang, lead and i == 0) for i, a in enumerate(items))}</div>'
 
 

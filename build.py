@@ -142,17 +142,17 @@ MODELS = {
     "model-y-standard":  {"name": "Model Y Standard",   "photo": "model-y.jpg", "parent": "model-y", "label": "Standard · 2025+"},
     "model-y-performance": {"name": "Model Y Performance", "photo": "model-y.jpg", "parent": "model-y", "label": "Performance"},
     "model-y-l":         {"name": "Model Y L",          "photo": "model-y.jpg", "parent": "model-y", "label": {"en": "Model Y L · 6 seats", "nl": "Model Y L · 6 zitplaatsen"}},
-    "cybertruck":        {"name": "Cybertruck",         "photo": "cybertruck.jpg"},
+    "cybertruck":        {"name": "Cybertruck",         "photo": "cybertruck.jpg", "gallery": ["ct-1.jpg", "ct-2.jpg", "ct-3.jpg", "ct-4.jpg", "ct-5.jpg"]},
     "cybertruck-awd":    {"name": "Cybertruck AWD",     "parent": "cybertruck", "label": "AWD"},
     "cybertruck-cyberbeast": {"name": "Cyberbeast",     "parent": "cybertruck", "label": "Cyberbeast"},
-    "cybercab":          {"name": "Cybercab",           "photo": "cybercab.jpg"},
+    "cybercab":          {"name": "Cybercab",           "photo": "cybercab.jpg", "gallery": ["cybercab.jpg", "cc-1.jpg", "cc-2.jpg"]},
     "roadster":          {"name": "Roadster",           "photo": "roadster.jpg", "gallery": ["rd-1.jpg", "rd-2.jpg", "rd-3.jpg"]},
     "semi":              {"name": "Semi",               "photo": "semi.jpg"},
 }
 # Fallback photo per category: a file in static/img/topics/, or a list of files to vary between
 # (each article always gets the same one, picked from its slug). Missing files are skipped.
 TOPIC_PHOTOS = {
-    "robotaxi": "cybercab.jpg", "fsd": ["fsd.jpg", "fsd-2.jpg", "fsd-3.jpg", "fsd-4.jpg"], "software": ["grok-2.jpg", "fsd.jpg", "grok-1.jpg", "fsd-2.jpg", "fsd-3.jpg", "fsd-4.jpg"], "optimus": ["optimus.jpg", "optimus-full.jpg"],
+    "robotaxi": ["cybercab.jpg", "cybercab-fleet.jpg", "cybertruck-fleet.jpg"], "fsd": ["fsd.jpg", "fsd-2.jpg", "fsd-3.jpg", "fsd-4.jpg"], "software": ["grok-2.jpg", "fsd.jpg", "grok-1.jpg", "fsd-2.jpg", "fsd-3.jpg", "fsd-4.jpg"], "optimus": ["optimus.jpg", "optimus-full.jpg"],
     "energy": ["energy.jpg", "energy-2.jpg"], "charging": ["supercharger.jpg", "supercharger-2.jpg", "supercharger-3.jpg"], "ecosystem": ["spacex-1.jpg", "starlink-car-1.jpg", "spacex-2.jpg", "starlink-1.jpg", "spacex-4.jpg", "starlink-car-3.jpg", "spacex-3.jpg", "starlink-2.jpg", "spacex-5.jpg", "starlink-car-2.jpg", "tunnel-2.jpg", "tunnel-3.jpg", "tunnel-4.jpg"], "earnings": ["gigafactory.jpg", "gigafactory-2.jpg"], "news": ["gigafactory.jpg", "gigafactory-2.jpg"],
 }
 MODEL_STRIP = ["model-s", "model-3", "model-3-highland", "model-x", "model-y", "model-y-juniper", "cybertruck"]

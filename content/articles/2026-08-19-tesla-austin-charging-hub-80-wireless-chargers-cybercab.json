@@ -1,0 +1,29 @@
+{
+  "slug": "tesla-austin-charging-hub-80-wireless-chargers-cybercab",
+  "date": "2026-08-19",
+  "time": "21:30",
+  "category": "charging",
+  "models": [
+    "cybercab"
+  ],
+  "sources": [
+    {
+      "title": "EVWire — Tesla plans wireless chargers at Austin robotaxi hub",
+      "url": "https://evwire.com/p/tesla-cybercab-wireless-chargers-austin-robotaxi-hub"
+    },
+    {
+      "title": "InsideEVs — Tesla's Robotaxi won't have a charge port",
+      "url": "https://insideevs.com/news/736961/tesla-robotaxi-charge-port/"
+    }
+  ],
+  "en": {
+    "title": "Tesla's Austin charging hub plans 80 wireless chargers, likely for the Cybercab",
+    "description": "A permit for a large Tesla charging lot in south Austin includes 48 V4 Superchargers and, in a second phase, 80 wireless chargers. Here is why that points to the Cybercab.",
+    "body": "<p>The Cybercab has no steering wheel, no pedals, and no person on board to plug in a cable. That makes charging one of the practical puzzles of a driverless fleet. A permit filing in Austin shows how Tesla plans to solve it.</p><h2>What the filing shows</h2><ul><li><strong>Location:</strong> a lot of about 7,600 m² (82,000 sq ft) on East St. Elmo Road in south Austin, across from a Tesla service center.</li><li><strong>Name:</strong> filed as a parking and charging site.</li><li><strong>Phase 1:</strong> 48 V4 Supercharger stalls.</li><li><strong>Phase 2:</strong> extra V4 cabinets to power 80 wireless chargers.</li></ul><p>The plans do not say the wireless chargers are for the Cybercab, and Tesla has not described the site as a robotaxi hub.</p><h2>Why it points to the Cybercab</h2><p>Tesla designed the Cybercab to charge wirelessly by parking over a pad. Tesla patents describe that pad in some detail, including support for both 400-volt and 800-volt batteries and a dense grid of sensors to detect objects, such as a dropped can or a cat, between the car and the pad. No current Tesla model for customers charges wirelessly, so 80 wireless pads at one site would be the first large-scale use of the system.</p><h2>Why wireless matters for robotaxis</h2><p>A human driver plugs in a car in seconds. A driverless fleet would need staff or robotic arms to do the same, which costs money and can fail. With wireless charging, the car parks, charges and leaves on its own. Across thousands of cars charging several times a day, that saving adds up.</p><h2>The trade-offs</h2><p>Wireless charging is typically somewhat less efficient and slower than a cable, and the pads are expensive to install. For a robotaxi that spends hours waiting between rush periods, speed matters less than automation.</p><h2>What to watch</h2><p>Construction at the Austin site, the first images of a Cybercab charging over a pad, and whether similar hubs appear in other robotaxi cities.</p>"
+  },
+  "nl": {
+    "title": "Tesla's laadhub in Austin krijgt 80 draadloze laders, waarschijnlijk voor de Cybercab",
+    "description": "Een vergunning voor een groot laadterrein van Tesla in het zuiden van Austin bevat 48 V4-Superchargers en, in een tweede fase, 80 draadloze laders. Daarom wijst dat naar de Cybercab.",
+    "body": "<p>De Cybercab heeft geen stuur, geen pedalen en niemand aan boord om een kabel in te pluggen. Laden is daardoor een van de praktische puzzels van een vloot zonder bestuurder. Een vergunningsaanvraag in Austin laat zien hoe Tesla dat wil oplossen.</p><h2>Wat de aanvraag laat zien</h2><ul><li><strong>Locatie:</strong> een terrein van ongeveer 7.600 m² aan East St. Elmo Road in het zuiden van Austin, tegenover een servicecentrum van Tesla.</li><li><strong>Naam:</strong> aangevraagd als parkeer- en laadterrein.</li><li><strong>Fase 1:</strong> 48 V4-Superchargers.</li><li><strong>Fase 2:</strong> extra V4-kasten voor 80 draadloze laders.</li></ul><p>In de plannen staat niet dat de draadloze laders voor de Cybercab zijn, en Tesla heeft het terrein niet als robotaxihub omschreven.</p><h2>Waarom het naar de Cybercab wijst</h2><p>Tesla ontwierp de Cybercab om draadloos te laden door boven een laadplaat te parkeren. Patenten van Tesla beschrijven die plaat vrij gedetailleerd, met ondersteuning voor accu's van zowel 400 als 800 volt en een fijn raster van sensoren dat voorwerpen tussen auto en plaat opmerkt, zoals een blikje of een kat. Geen enkele Tesla voor klanten laadt nu draadloos, dus 80 laadplaten op één terrein zouden de eerste grootschalige inzet van het systeem zijn.</p><h2>Waarom draadloos belangrijk is voor robotaxi's</h2><p>Een bestuurder steekt de stekker er in een paar seconden in. Een vloot zonder bestuurder heeft daarvoor personeel of robotarmen nodig, en dat kost geld en kan misgaan. Met draadloos laden parkeert de auto, laadt hij en vertrekt hij weer op eigen kracht. Bij duizenden auto's die meerdere keren per dag laden, telt die besparing flink op.</p><h2>De nadelen</h2><p>Draadloos laden is doorgaans iets minder efficiënt en trager dan met een kabel, en de laadplaten zijn duur om aan te leggen. Voor een robotaxi die tussen de spitsuren urenlang staat te wachten, is snelheid minder belangrijk dan automatisering.</p><h2>Waar je op moet letten</h2><p>De bouw op het terrein in Austin, de eerste beelden van een Cybercab die boven een laadplaat laadt, en of vergelijkbare hubs verschijnen in andere robotaxisteden.</p>"
+  }
+}

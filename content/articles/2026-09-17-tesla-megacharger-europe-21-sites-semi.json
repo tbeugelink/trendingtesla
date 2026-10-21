@@ -1,0 +1,29 @@
+{
+  "slug": "tesla-megacharger-europe-21-sites-semi",
+  "date": "2026-09-17",
+  "time": "21:15",
+  "category": "charging",
+  "models": [
+    "semi"
+  ],
+  "sources": [
+    {
+      "title": "The Next Web — Tesla's European Megacharger rollout covers 21 sites and over 100 stalls",
+      "url": "https://thenextweb.com/news/tesla-megacharger-europe-21-sites"
+    },
+    {
+      "title": "electrive — Megawatt charging network: Tesla to launch in Europe with 21 sites",
+      "url": "https://www.electrive.com/2026/09/16/megawatt-charging-network-tesla-to-launch-in-europe-with-21-sites/"
+    }
+  ],
+  "en": {
+    "title": "Tesla brings its Megacharger to Europe: 21 truck charging sites, open to other brands",
+    "description": "Ahead of the European Tesla Semi in 2027, Tesla plans more than 100 megawatt charging stalls at 21 sites, starting in Germany, France, the UK, Sweden and the Benelux.",
+    "body": "<p>The Tesla Semi is coming to Europe in 2027, and Tesla is preparing the charging network it needs. At the IAA Transportation trade fair in Hanover, Semi program head Dan Priestley announced Tesla's first European Megacharger plans.</p><h2>The plan</h2><ul><li><strong>Size:</strong> more than 100 megawatt-capable charging stalls at 21 sites.</li><li><strong>First countries:</strong> Germany, France, the United Kingdom, Sweden and the Benelux.</li><li><strong>Open network:</strong> trucks from other brands can use it too.</li><li><strong>Standard:</strong> the Semi and the Megacharger use MCS, the new European standard plug for megawatt charging.</li><li><strong>Timing:</strong> Tesla gave no dates for when the sites open.</li></ul><h2>The power</h2><p>The Megacharger hardware is rated at 1.2 MW. The European version of the Semi will draw at most 800 kW. That is still enough to add hundreds of kilometers of range during a driver's mandatory break.</p><h2>Selling chargers too</h2><p>Tesla will also sell charging equipment to fleets: a Megacharger set for €163,000 and a 120 kW 'Basecharger' for €17,000, both sold in pairs, with deliveries from mid-2027.</p><h2>The competition</h2><p>Tesla is not first. Milence, a joint venture of Daimler Truck, Traton and Volvo, opened Europe's first megawatt charger in the port of Antwerp-Bruges in February 2025 and already runs 13 hubs in six countries. With EU funding it is aiming for 284 megawatt charging points at 71 sites by the end of 2027.</p><h2>The real bottleneck</h2><p>Hardware is not the hard part. Getting a high-power grid connection can take years in much of Europe, which is likely why Tesla did not commit to opening dates.</p><h2>What to watch</h2><p>The first confirmed site locations, grid connection approvals, and the first European Semi customers.</p>"
+  },
+  "nl": {
+    "title": "Tesla brengt de Megacharger naar Europa: 21 laadlocaties voor trucks, open voor andere merken",
+    "description": "Vooruitlopend op de Europese Tesla Semi in 2027 plant Tesla ruim 100 megawattladers op 21 locaties, te beginnen in Duitsland, Frankrijk, het VK, Zweden en de Benelux.",
+    "body": "<p>De Tesla Semi komt in 2027 naar Europa, en Tesla bereidt het laadnetwerk voor dat de truck nodig heeft. Op de vakbeurs IAA Transportation in Hannover maakte Semi-programmaleider Dan Priestley Tesla's eerste Europese Megacharger-plannen bekend.</p><h2>Het plan</h2><ul><li><strong>Omvang:</strong> ruim 100 laadpunten voor megawattladen op 21 locaties.</li><li><strong>Eerste landen:</strong> Duitsland, Frankrijk, het Verenigd Koninkrijk, Zweden en de Benelux.</li><li><strong>Open netwerk:</strong> ook trucks van andere merken kunnen er laden.</li><li><strong>Standaard:</strong> de Semi en de Megacharger gebruiken MCS, de nieuwe Europese standaardstekker voor megawattladen.</li><li><strong>Planning:</strong> Tesla noemde geen data voor de opening.</li></ul><h2>Het vermogen</h2><p>De Megacharger-hardware kan 1,2 MW leveren. De Europese versie van de Semi laadt met maximaal 800 kW. Dat is nog steeds genoeg om tijdens de verplichte pauze van de chauffeur honderden kilometers bereik bij te laden.</p><h2>Ook laders te koop</h2><p>Tesla gaat ook laadapparatuur aan vervoerders verkopen: een Megacharger-set voor € 163.000 en een 'Basecharger' van 120 kW voor € 17.000. Beide worden per paar verkocht, met leveringen vanaf medio 2027.</p><h2>De concurrentie</h2><p>Tesla is niet de eerste. Milence, een samenwerking van Daimler Truck, Traton en Volvo, opende in februari 2025 in de haven van Antwerpen-Brugge de eerste megawattlader van Europa en heeft al 13 laadhubs in zes landen. Met EU-steun wil het eind 2027 op 284 megawattlaadpunten op 71 locaties zitten.</p><h2>Het echte knelpunt</h2><p>De hardware is niet het moeilijke deel. Een zware netaansluiting regelen kan in grote delen van Europa jaren duren, en daarom wilde Tesla waarschijnlijk geen openingsdata noemen.</p><h2>Waar je op moet letten</h2><p>De eerste bevestigde locaties, goedkeuring voor netaansluitingen en de eerste Europese klanten voor de Semi.</p>"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "slug": "tesla-spring-update-2026-hey-grok-auto-install",
+  "date": "2026-10-03",
+  "time": "08:30",
+  "category": "software",
+  "sources": [
+    {
+      "title": "S&P Global Mobility — Tesla launches Spring Update 2026 with 'Hey Grok' and more",
+      "url": "https://autotechinsight.spglobal.com/news/5287681/tesla-launches-spring-update-2026-software-with-hey-grok-and-more"
+    },
+    {
+      "title": "Not a Tesla App — Discussion: Spring Update 2026 release notes",
+      "url": "https://www.notateslaapp.com/community/threads/discuss-tesla-update-fsd-v14-3-3-with-spring-update-2026-14-6-6-release-notes.3822/latest"
+    }
+  ],
+  "en": {
+    "title": "Tesla's 2026 Spring Update, revisited: 'Hey Grok', automatic updates and one-tap FSD",
+    "description": "The biggest Tesla software release of the year so far added hands-free Grok, automatic installs and a quicker way to subscribe to FSD. Here is what it changed in daily use.",
+    "body": "<p>Tesla's big seasonal software releases bundle many features at once. The 2026 Spring Update, which started rolling out in April, was one of the more practical ones. Months later, these are the changes owners notice most.</p><h2>'Hey Grok'</h2><p>Grok, the AI assistant from xAI, can now be started hands-free by saying 'Hey Grok'. Before, you had to press a button on the steering wheel. Grok answers questions, holds a conversation and can handle a growing set of car functions. In September Tesla also removed the beta label from Grok.</p><h2>Automatic software updates</h2><p>Owners can let the car install updates automatically, for example overnight, instead of confirming each one on the screen or in the app. That means fewer forgotten updates and a car that stays current with less effort. You can still choose to install manually if you prefer.</p><h2>One-tap FSD subscription</h2><p>Subscribing to FSD (Supervised) now takes a single tap, with a redesigned self-driving section in the app. It lowers the barrier to trying FSD for a month, which matters as Tesla moves more owners to subscriptions rather than one-time purchases.</p><h2>Other improvements</h2><p>The update also brought improved safety alerts, a better dashcam and new entertainment options. Exact availability depends on your model, hardware and region; not every feature reached every car.</p><h2>Why seasonal updates matter</h2><p>Over-the-air updates are one of the main reasons Tesla owners keep their cars longer: a car bought years ago keeps getting new features. They also give Tesla a way to sell subscriptions and test new services directly in the car.</p><h2>What to watch</h2><p>Tesla usually follows its spring release with a larger Holiday Update in December, which is where the next big batch of features is likely to arrive.</p>"
+  },
+  "nl": {
+    "title": "Tesla's Spring Update 2026 terugblik: 'Hey Grok', automatische updates en FSD met één tik",
+    "description": "De grootste softwarerelease van Tesla dit jaar bracht handsfree Grok, automatisch installeren en een snellere manier om FSD te nemen. Dit veranderde er in het dagelijks gebruik.",
+    "body": "<p>Tesla's grote seizoensupdates bundelen veel functies tegelijk. De Spring Update van 2026, die in april begon uit te rollen, was een van de praktischere. Maanden later zijn dit de veranderingen die rijders het meest merken.</p><h2>'Hey Grok'</h2><p>Grok, de AI-assistent van xAI, start je nu handsfree door 'Hey Grok' te zeggen. Eerst moest je daarvoor een knop op het stuur indrukken. Grok beantwoordt vragen, voert een gesprek en kan steeds meer autofuncties bedienen. In september haalde Tesla ook het bètalabel van Grok af.</p><h2>Automatische software-updates</h2><p>Je kunt de auto updates nu automatisch laten installeren, bijvoorbeeld 's nachts, in plaats van elke update op het scherm of in de app te bevestigen. Dat betekent minder vergeten updates en een auto die zonder moeite up-to-date blijft. Handmatig installeren kan nog steeds.</p><h2>FSD-abonnement met één tik</h2><p>Een abonnement op FSD (Supervised) neem je nu met één tik, met een vernieuwd onderdeel voor zelfrijden in de app. Zo wordt het makkelijker om FSD een maand te proberen. Dat is belangrijk nu Tesla meer rijders naar abonnementen wil krijgen in plaats van eenmalige aankopen.</p><h2>Overige verbeteringen</h2><p>De update bracht verder betere veiligheidsmeldingen, een verbeterde dashcam en nieuwe entertainmentopties. Wat je precies krijgt, hangt af van je model, hardware en land; niet elke functie kwam in elke auto.</p><h2>Waarom seizoensupdates ertoe doen</h2><p>Updates via internet zijn een van de belangrijkste redenen dat Tesla-rijders hun auto langer houden: een auto van jaren geleden krijgt nog steeds nieuwe functies. Voor Tesla zijn ze ook een manier om abonnementen te verkopen en nieuwe diensten direct in de auto te testen.</p><h2>Waar je op moet letten</h2><p>Tesla laat op de voorjaarsrelease meestal een grotere Holiday Update in december volgen. Daar komt waarschijnlijk de volgende grote lading functies.</p>"
+  }
+}

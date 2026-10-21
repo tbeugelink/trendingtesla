@@ -1,0 +1,26 @@
+{
+  "slug": "tesla-energy-business-explained-revenue-margins",
+  "date": "2026-10-20",
+  "time": "08:20",
+  "category": "energy",
+  "sources": [
+    {
+      "title": "Electrek — Tesla Q3 2026 earnings preview",
+      "url": "https://electrek.co/2026/10/20/tesla-tsla-q3-2026-earnings-preview/"
+    },
+    {
+      "title": "Not a Tesla App — Tesla announces Q3 2026 vehicle deliveries",
+      "url": "https://www.notateslaapp.com/news/4759/tesla-announces-q3-2026-vehicle-deliveries-beating-analyst-estimates"
+    }
+  ],
+  "en": {
+    "title": "Tesla Energy explained: the quiet business that now carries Tesla's margins",
+    "description": "Megapacks and Powerwalls earn Tesla more profit per dollar than its cars right now. Here is how big Tesla Energy has become, where the money comes from and what could slow it down.",
+    "body": "<p>Most headlines about Tesla are about cars, robotaxis and robots. But one of the healthiest parts of the company is its energy business: big Megapack batteries for the grid and Powerwall batteries for homes.</p><h2>How big it is</h2><ul><li><strong>Revenue:</strong> about $12.8 billion in 2025 and $3.14 billion in the second quarter of 2026.</li><li><strong>Deployments:</strong> 13.7 GWh of storage in the third quarter of 2026, up almost 10% from a year earlier but below the record of 14.2 GWh in the fourth quarter of 2025, and below what analysts expected.</li><li><strong>Margin:</strong> a gross margin of 20.4% in the second quarter, higher than Tesla's car business, where the margin excluding regulatory credits was 16.3%.</li></ul><h2>Where the money comes from</h2><ul><li><strong>Megapack:</strong> large container batteries for utilities and data centers. This is by far the biggest part.</li><li><strong>Powerwall:</strong> home batteries, often combined with solar panels, for backup and lower bills.</li><li><strong>Software:</strong> Tesla's software operates storage systems and can trade their power on electricity markets, an extra source of income.</li></ul><h2>Why demand is strong</h2><p>Electricity grids need storage to absorb solar and wind power and release it when demand peaks. AI data centers add a new wave of demand for reliable power. Batteries can be installed far faster than new power plants.</p><h2>The risks</h2><ul><li><strong>Competition:</strong> Chinese suppliers offer storage at very low prices.</li><li><strong>Tariffs and rules:</strong> many cells still come from China, so US trade policy affects costs.</li><li><strong>Lumpy quarters:</strong> big projects make deployments jump up and down from quarter to quarter.</li></ul><h2>What to watch</h2><p>Energy margins in Tesla's quarterly results, the ramp of the new Megafactory in Texas, and the first Megablock projects.</p><p><em>This article is for information only and is not financial advice.</em></p>"
+  },
+  "nl": {
+    "title": "Tesla Energy uitgelegd: de stille tak die nu Tesla's marges draagt",
+    "description": "Megapacks en Powerwalls leveren Tesla op dit moment meer winst per dollar op dan de auto's. Zo groot is Tesla Energy geworden, hier komt het geld vandaan en dit kan de groei afremmen.",
+    "body": "<p>Het meeste nieuws over Tesla gaat over auto's, robotaxi's en robots. Maar een van de gezondste delen van het bedrijf is de energietak: grote Megapack-accu's voor het stroomnet en Powerwall-accu's voor thuis.</p><h2>Hoe groot het is</h2><ul><li><strong>Omzet:</strong> ongeveer $12,8 miljard in 2025 en $3,14 miljard in het tweede kwartaal van 2026.</li><li><strong>Leveringen:</strong> 13,7 GWh opslag in het derde kwartaal van 2026, bijna 10% meer dan een jaar eerder, maar onder het record van 14,2 GWh in het vierde kwartaal van 2025 en onder de verwachting van analisten.</li><li><strong>Marge:</strong> een brutomarge van 20,4% in het tweede kwartaal, hoger dan die van de autotak, waar de marge zonder emissierechten op 16,3% lag.</li></ul><h2>Waar het geld vandaan komt</h2><ul><li><strong>Megapack:</strong> grote containeraccu's voor energiebedrijven en datacenters. Dit is verreweg het grootste deel.</li><li><strong>Powerwall:</strong> thuisaccu's, vaak samen met zonnepanelen, voor back-up en een lagere energierekening.</li><li><strong>Software:</strong> Tesla's software stuurt de opslag aan en kan de stroom verhandelen op energiemarkten, een extra bron van inkomsten.</li></ul><h2>Waarom de vraag groot is</h2><p>Stroomnetten hebben opslag nodig om zon- en windstroom op te vangen en af te geven als de vraag piekt. AI-datacenters zorgen voor een nieuwe golf vraag naar betrouwbare stroom. En accu's staan veel sneller dan nieuwe centrales.</p><h2>De risico's</h2><ul><li><strong>Concurrentie:</strong> Chinese leveranciers bieden opslag tegen heel lage prijzen.</li><li><strong>Heffingen en regels:</strong> veel cellen komen nog uit China, dus Amerikaans handelsbeleid raakt de kosten.</li><li><strong>Schommelende kwartalen:</strong> grote projecten zorgen dat de leveringen per kwartaal flink op en neer gaan.</li></ul><h2>Waar je op moet letten</h2><p>De energiemarges in Tesla's kwartaalcijfers, de opschaling van de nieuwe Megafactory in Texas en de eerste Megablock-projecten.</p><p><em>Dit artikel is alleen bedoeld als informatie en is geen financieel advies.</em></p>"
+  }
+}

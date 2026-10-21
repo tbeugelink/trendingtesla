@@ -1,0 +1,26 @@
+{
+  "slug": "tesla-ai5-ai6-chips-less-memory-more-optimus",
+  "date": "2026-10-10",
+  "time": "14:25",
+  "category": "optimus",
+  "sources": [
+    {
+      "title": "Elektroquatsch — Tesla news summary, October 10, 2026",
+      "url": "https://www.elektroquatsch.de/zusammenfassungen/2026-10-10"
+    },
+    {
+      "title": "AI Business — SpaceX and Tesla to spend $16.8B on Terafab",
+      "url": "https://aibusiness.com/data-centers/tesla-spacex-spend-16-8b-terafab-chip-factory-texas"
+    }
+  ],
+  "en": {
+    "title": "Tesla cuts memory on its AI5 and AI6 chips to build more Optimus robots",
+    "description": "Tesla reportedly plans to give its next AI chips less memory so it can produce more of them for Optimus. Here is what changes and what it means for cars.",
+    "body": "<p>Tesla is adjusting its next generation of AI chips with Optimus in mind. According to reports on October 10, the company plans to reduce the amount of memory on its AI5 and AI6 chips so it can build more humanoid robots.</p><h2>The numbers</h2><ul><li><strong>AI5:</strong> 96 GB of memory.</li><li><strong>AI6:</strong> 144 GB of memory.</li></ul><p>Tesla has not published the original memory plans in detail, so the size of the reduction is not clear from the reports.</p><h2>Why less memory means more robots</h2><p>High-performance memory is one of the scarcest and most expensive parts of AI hardware today, with demand from data centers soaring. Every chip that needs less of it is cheaper and easier to supply. If Tesla wants to build robots by the hundreds of thousands, and eventually millions, the bill of materials and the availability of each component matter enormously.</p><h2>What it means for cars</h2><p>For Tesla owners, the change has little direct effect for now. AI5 is the successor to the current AI4 (Hardware 4) computer in Tesla's cars, and it has not yet entered customer vehicles. How Tesla balances memory between cars, Cybercabs and robots will become clearer once AI5 is in production.</p><h2>The bigger chip picture</h2><p>The decision fits Tesla's wider push to control its own chip supply. Together with SpaceX, Tesla is planning Terafab, a chip complex in Texas with an initial budget of $16.8 billion, meant partly to make processors for Optimus and the Cybercab. Until that exists, Tesla depends on outside suppliers, which makes every design choice that saves scarce parts valuable.</p><h2>What to watch</h2><p>Official confirmation from Tesla, the timing of AI5 in cars and robots, and whether Optimus Gen 3 runs on AI5 from the start.</p>"
+  },
+  "nl": {
+    "title": "Tesla geeft zijn AI5- en AI6-chips minder geheugen om meer Optimus-robots te bouwen",
+    "description": "Tesla wil zijn volgende AI-chips volgens berichten minder geheugen geven, zodat er meer van gemaakt kunnen worden voor Optimus. Wat er verandert, en wat het betekent voor auto's.",
+    "body": "<p>Tesla past zijn volgende generatie AI-chips aan met Optimus in gedachten. Volgens berichten van 10 oktober wil het bedrijf de hoeveelheid geheugen op de AI5- en AI6-chips verkleinen, zodat er meer humanoïde robots gebouwd kunnen worden.</p><h2>De cijfers</h2><ul><li><strong>AI5:</strong> 96 GB geheugen.</li><li><strong>AI6:</strong> 144 GB geheugen.</li></ul><p>Tesla heeft de oorspronkelijke geheugenplannen niet in detail gepubliceerd, dus hoe groot de verlaging is, blijkt niet uit de berichten.</p><h2>Waarom minder geheugen meer robots betekent</h2><p>Snel geheugen is een van de schaarsste en duurste onderdelen van AI-hardware, nu datacenters er massaal om vragen. Elke chip die er minder van nodig heeft, is goedkoper en makkelijker te leveren. Wil Tesla robots bouwen per honderdduizenden, en later miljoenen, dan tellen de kosten en beschikbaarheid van elk onderdeel enorm.</p><h2>Wat het betekent voor auto's</h2><p>Voor Tesla-rijders heeft de wijziging voorlopig weinig direct effect. AI5 is de opvolger van de huidige AI4-computer (Hardware 4) in Tesla's auto's en zit nog niet in klantauto's. Hoe Tesla het geheugen verdeelt tussen auto's, Cybercabs en robots, wordt duidelijker zodra AI5 in productie is.</p><h2>Het grotere chipverhaal</h2><p>Het besluit past in Tesla's bredere streven om zijn eigen chipaanvoer in handen te krijgen. Samen met SpaceX plant Tesla Terafab, een chipcomplex in Texas met een startbudget van $16,8 miljard, onder meer bedoeld voor processors voor Optimus en de Cybercab. Tot dat er is, is Tesla afhankelijk van externe leveranciers. Daardoor is elke ontwerpkeuze die schaarse onderdelen bespaart waardevol.</p><h2>Waar je op moet letten</h2><p>Officiële bevestiging door Tesla, wanneer AI5 in auto's en robots komt, en of Optimus Gen 3 meteen op AI5 draait.</p>"
+  }
+}

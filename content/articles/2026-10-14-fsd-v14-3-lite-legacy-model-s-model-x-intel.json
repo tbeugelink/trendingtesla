@@ -1,0 +1,32 @@
+{
+  "slug": "fsd-v14-3-lite-legacy-model-s-model-x-intel",
+  "date": "2026-10-14",
+  "time": "21:10",
+  "category": "software",
+  "models": [
+    "model-s",
+    "model-x",
+    "model-s-classic",
+    "model-x-classic"
+  ],
+  "sources": [
+    {
+      "title": "Not a Tesla App — Tesla rolls out FSD v14 Lite to legacy Model S/X for the first time",
+      "url": "https://www.notateslaapp.com/news/4827/tesla-rolls-out-fsd-v14-lite-to-legacy-model-sx-for-first-time"
+    },
+    {
+      "title": "Tesla Oracle — FSD v14.3 Lite (2026.38.5.1) for legacy HW3 Model S/X with Intel",
+      "url": "https://teslaoracle.com/2026/10/14/tesla-rolls-out-fsd-v14-3-lite-2026-38-5-1-to-legacy-hw3-model-s-x-vehicles-with-intel-gpu"
+    }
+  ],
+  "en": {
+    "title": "Older Model S and Model X finally get FSD v14 Lite, but without parking features",
+    "description": "Tesla has started rolling out FSD v14.3 Lite to legacy Model S and Model X with the older Intel computer. Here is what these owners get, and what is still missing.",
+    "body": "<p>The oldest Teslas that can run FSD have waited the longest. On October 14, Tesla started rolling out FSD (Supervised) v14.3 Lite to legacy Model S and Model X with Hardware 3 and the older Intel Atom infotainment processor, through software update 2026.38.5.1.</p><h2>Which cars</h2><p>This rollout targets Model S and Model X built before the 2021 refresh that have HW3 and an Intel processor. One of the first reports came from the owner of a 2017 Model X. Earlier in the summer, v14 Lite reached HW3 Model 3 and Model Y; AMD-powered HW3 Model S and X followed in September.</p><h2>What they get</h2><ul><li>The distilled v14 driving model, trained to imitate the HW4 version.</li><li>Better handling of merges, pedestrians, traffic lights and cut-ins.</li><li>Fewer false slowdowns and smoother steering.</li><li>Speed profiles to set how assertively FSD drives.</li></ul><h2>What is missing</h2><p>Several features that HW3 Model 3 and Model Y already have are not included for Intel S and X: arrival options, starting FSD from Park, reversing on FSD and Smart Summon. Tesla may add some of these in later point releases.</p><h2>The bigger picture</h2><p>v14 Lite is described as the last major FSD branch for HW3 cars. They will not get unsupervised FSD or v15. For owners of these older flagships, now that the Model S and Model X are out of production, this may be one of the last big FSD upgrades their cars receive, unless Tesla delivers the hardware retrofit it has promised to owners who bought FSD.</p><h2>What to watch</h2><p>Point releases that add the missing parking features, and any concrete plan for HW3 computer upgrades.</p>"
+  },
+  "nl": {
+    "title": "Oudere Model S en Model X krijgen eindelijk FSD v14 Lite, maar zonder parkeerfuncties",
+    "description": "Tesla rolt FSD v14.3 Lite uit naar oudere Model S en Model X met de Intel-computer. Dit krijgen deze rijders, en dit ontbreekt nog.",
+    "body": "<p>De oudste Tesla's die FSD kunnen draaien, hebben het langst gewacht. Op 14 oktober begon Tesla met het uitrollen van FSD (Supervised) v14.3 Lite naar oudere Model S en Model X met Hardware 3 en de oudere Intel Atom-processor voor het infotainment, via software-update 2026.38.5.1.</p><h2>Welke auto's</h2><p>Het gaat om Model S en Model X van vóór de vernieuwing in 2021 met HW3 en een Intel-processor. Een van de eerste meldingen kwam van de eigenaar van een Model X uit 2017. Eerder deze zomer kregen HW3-versies van de Model 3 en Model Y al v14 Lite; Model S en X met HW3 en een AMD-processor volgden in september.</p><h2>Wat ze krijgen</h2><ul><li>Het gedistilleerde rijmodel van v14, getraind om de HW4-versie na te doen.</li><li>Beter invoegen en betere omgang met voetgangers, verkeerslichten en auto's die invoegen.</li><li>Minder onnodig afremmen en soepeler sturen.</li><li>Snelheidsprofielen om in te stellen hoe vlot FSD rijdt.</li></ul><h2>Wat ontbreekt</h2><p>Een aantal functies die HW3-versies van de Model 3 en Model Y al hebben, zit er voor de Intel-S en -X niet bij: aankomstopties, FSD starten vanuit P, achteruitrijden met FSD en Smart Summon. Tesla kan een deel daarvan in latere tussenversies toevoegen.</p><h2>Het grotere plaatje</h2><p>v14 Lite geldt als de laatste grote FSD-versie voor HW3-auto's. Ze krijgen geen FSD zonder toezicht en geen v15. Nu de Model S en Model X niet meer worden gebouwd, is dit voor eigenaren van deze oudere vlaggenschepen misschien een van de laatste grote FSD-upgrades, tenzij Tesla de hardware-upgrade levert die het heeft beloofd aan wie FSD kocht.</p><h2>Waar je op moet letten</h2><p>Tussenversies die de ontbrekende parkeerfuncties toevoegen, en een concreet plan voor het vervangen van HW3-computers.</p>"
+  }
+}

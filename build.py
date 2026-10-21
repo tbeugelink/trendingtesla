@@ -125,7 +125,7 @@ MODELS = {
 # Fallback photo per category: a file in static/img/topics/, or a list of files to vary between
 # (each article always gets the same one, picked from its slug). Missing files are skipped.
 TOPIC_PHOTOS = {
-    "robotaxi": "cybercab.jpg", "fsd": ["fsd.jpg", "fsd-2.jpg", "fsd-3.jpg"], "software": ["fsd.jpg", "fsd-2.jpg", "fsd-3.jpg"], "optimus": ["optimus.jpg", "optimus-full.jpg"],
+    "robotaxi": "cybercab.jpg", "fsd": ["fsd.jpg", "fsd-2.jpg", "fsd-3.jpg", "fsd-4.jpg"], "software": ["fsd.jpg", "fsd-2.jpg", "fsd-3.jpg", "fsd-4.jpg"], "optimus": ["optimus.jpg", "optimus-full.jpg"],
     "energy": "energy.jpg", "charging": "supercharger.jpg", "earnings": "gigafactory.jpg", "news": "gigafactory.jpg",
 }
 MODEL_STRIP = ["model-3", "model-y", "model-s", "model-x", "cybertruck"]

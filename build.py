@@ -122,9 +122,10 @@ MODELS = {
     "roadster":   {"name": "Roadster",   "photo": "roadster.jpg"},
     "semi":       {"name": "Semi",       "photo": "semi.jpg"},
 }
-# Fallback photo per category, a file in static/img/topics/ (optional until uploaded).
+# Fallback photo per category: a file in static/img/topics/, or a list of files to vary between
+# (each article always gets the same one, picked from its slug). Missing files are skipped.
 TOPIC_PHOTOS = {
-    "robotaxi": "cybercab.jpg", "fsd": "fsd.jpg", "software": "fsd.jpg", "optimus": "optimus.jpg",
+    "robotaxi": "cybercab.jpg", "fsd": "fsd.jpg", "software": "fsd.jpg", "optimus": ["optimus.jpg", "optimus-full.jpg"],
     "energy": "energy.jpg", "charging": "supercharger.jpg", "earnings": "gigafactory.jpg", "news": "gigafactory.jpg",
 }
 MODEL_STRIP = ["model-3", "model-y", "model-s", "model-x", "cybertruck"]
@@ -341,9 +342,13 @@ def social_img(a, lang):
     return f"/img/{a['slug']}-{lang}.jpg"
 
 
-def topic_photo(category):
+def topic_photo(category, slug=""):
     f = TOPIC_PHOTOS.get(category)
-    return f"/img/topics/{f}" if f and (STATIC / "img" / "topics" / f).exists() else None
+    files = [x for x in ([f] if isinstance(f, str) else (f or [])) if (STATIC / "img" / "topics" / x).exists()]
+    if not files:
+        return None
+    pick = sum(ord(c) for c in slug) % len(files)
+    return f"/img/topics/{files[pick]}"
 
 
 def site_img(a):
@@ -356,7 +361,7 @@ def site_img(a):
         return model_photo(ms[0])
     if len(ms) == 1 and (STATIC / "img" / "topics" / MODELS[ms[0]]["photo"]).exists():
         return f"/img/topics/{MODELS[ms[0]]['photo']}"
-    return topic_photo(a["category"]) or f"/img/v/{a['slug']}.jpg"
+    return topic_photo(a["category"], a["slug"]) or f"/img/v/{a['slug']}.jpg"
 
 
 def read_time(a, lang):

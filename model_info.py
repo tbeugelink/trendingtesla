@@ -642,3 +642,184 @@ for _k, _rows in EXTRA.items():
             _src.append(_s)
 INFO["model-s"]["sources"].append(USED_S); INFO["model-s-classic"]["sources"].append(USED_S)
 INFO["model-x"]["sources"].append(USED_X); INFO["model-x-classic"]["sources"].append(USED_X); INFO["model-x-2021"]["sources"].append(USED_X)
+
+# ---------------------------------------------------------------- Uniform spec table for every model
+FIELDS = [("built", "Built", "Gebouwd"), ("body", "Body", "Carrosserie"), ("drive", "Drive", "Aandrijving"),
+          ("power", "Power", "Vermogen"), ("acc", "Acceleration", "Acceleratie"), ("top", "Top speed", "Topsnelheid"),
+          ("bat", "Battery", "Accu"), ("btype", "Battery type (maker)", "Accutype (fabrikant)"), ("range", "Range", "Bereik"),
+          ("cons", "Consumption", "Verbruik"), ("charge", "Charging", "Laden"), ("weight", "Weight", "Gewicht"),
+          ("tow", "Towing", "Trekgewicht"), ("steer", "Steering", "Besturing"), ("ap", "Autopilot / FSD", "Autopilot / FSD"),
+          ("glass", "Glass roof", "Glazen dak"), ("pnew", "Price new", "Nieuwprijs"), ("pused", "Price now (used)", "Prijs nu (gebruikt)")]
+_MAP = {"Built": "built", "Launched": "built", "Body": "body", "Seats": "body", "Drive": "drive", "Power": "power",
+        "0–60 mph": "acc", "0–100 km/h": "acc", "Top speed": "top", "Battery": "bat", "Battery type": "btype",
+        "Range": "range", "Long Range": "range", "Range (WLTP)": "range", "Standard Range": "range",
+        "Charging": "charge", "DC charging": "charge", "AC charging": "charge", "Weight": "weight",
+        "Towing": "tow", "Towing (EU)": "tow", "Tow hitch": "tow", "Steering": "steer", "Autopilot": "ap", "Software": "ap",
+        "Computer": "ap", "Price": "pnew", "Price (DE)": "pnew", "Price (Germany)": "pnew", "Price new": "pnew",
+        "Price at launch": "pnew", "Deposit": "pnew", "Price now (used)": "pused", "Glass roof": "glass", "Roof": "glass",
+        "Consumption": "cons"}
+_PLAIN = {"Built", "Body", "Seats", "Drive", "Power", "Top speed", "Battery", "Battery type", "Range", "Charging", "Weight",
+          "Towing", "Steering", "Autopilot", "Software", "Computer", "Price", "Price new", "Price now (used)", "Glass roof",
+          "Roof", "Consumption", "Launched", "Tow hitch"}
+
+def _t(en, nl):
+    return (en, nl)
+
+NA = _t("not officially stated", "niet officieel opgegeven")
+NANN = _t("not announced", "niet bekendgemaakt")
+ROUND = _t("round wheel, mechanical steering with electric power assist", "rond stuur, mechanische besturing met elektrische stuurbekrachtiging")
+YOKE = _t("yoke at launch, round wheel optional later; mechanical steering", "yoke bij de introductie, later ook rond stuur; mechanische besturing")
+SBW = _t("squared-off wheel, steer-by-wire (no mechanical link) plus rear-wheel steering", "afgevlakt stuur, steer-by-wire (geen mechanische verbinding) plus meesturende achterwielen")
+PANA = _t("18650 cells, NCA chemistry — Panasonic", "18650-cellen, NCA-chemie — Panasonic")
+HW4 = _t("Autopilot standard; HW4 (AI4); FSD (Supervised) optional", "Autopilot standaard; HW4 (AI4); FSD (Supervised) optioneel")
+HW34 = _t("Autopilot standard; HW3, HW4 from 2023; FSD (Supervised) optional", "Autopilot standaard; HW3, HW4 vanaf 2023; FSD (Supervised) optioneel")
+OLD_SX = _t("HW1 (from late 2014), HW2/2.5 (late 2016–2019), HW3 (2019+); FSD (Supervised) on HW3 only",
+            "HW1 (vanaf eind 2014), HW2/2.5 (eind 2016–2019), HW3 (2019+); FSD (Supervised) alleen op HW3")
+CT_AP = _t("HW4 (AI4); FSD (Supervised) optional, no longer included since 2026", "HW4 (AI4); FSD (Supervised) optioneel, sinds 2026 niet meer inbegrepen")
+CT_BAT = _t("4680 cells, NCM, 800 V — Tesla (own cells)", "4680-cellen, NCM, 800 V — Tesla (eigen cellen)")
+CT_CH = _t("AC 11.5 kW; DC up to 325 kW", "AC 11,5 kW; DC tot 325 kW")
+CT_BODY = _t("pickup, 6 ft bed, 5 seats", "pick-up, laadbak van 1,8 m, 5 zitplaatsen")
+S_BODY = _t("5-door liftback, 5 seats", "5-deurs liftback, 5 zitplaatsen")
+X_BODY = _t("5-door SUV with falcon-wing rear doors, 5, 6 or 7 seats", "5-deurs SUV met falcon-wing-achterdeuren, 5, 6 of 7 zitplaatsen")
+M3_BODY = _t("4-door sedan, 5 seats", "4-deurs sedan, 5 zitplaatsen")
+MY_BODY = _t("5-door crossover, 5 seats", "5-deurs crossover, 5 zitplaatsen")
+NEW = _t("too new for a used-car price", "te nieuw voor een occasionprijs")
+AC11_250 = _t("AC 11 kW; DC up to 250 kW", "AC 11 kW; DC tot 250 kW")
+
+OVR = {
+ "model-s": dict(drive=_t("RWD (early) or dual-motor AWD; tri-motor Plaid", "achterwiel (vroeg) of dual-motor AWD; drie motoren bij Plaid"),
+   acc=_t("0–60 mph 1.99 s (Plaid) to about 5.9 s", "0–96 km/u 1,99 s (Plaid) tot ongeveer 5,9 s"),
+   top=_t("about 200–322 km/h (200 mph Plaid with Track Package)", "ongeveer 200–322 km/u (Plaid met Track Package)"),
+   bat=_t("60 to about 100 kWh", "60 tot ongeveer 100 kWh"), btype=PANA,
+   charge=_t("AC 11–16.5 kW; DC up to 120–250 kW depending on year", "AC 11–16,5 kW; DC tot 120–250 kW, afhankelijk van bouwjaar"),
+   steer=_t("round wheel (2012–2020); yoke or round wheel (2021+); always mechanical", "rond stuur (2012–2020); yoke of rond stuur (2021+); altijd mechanisch"),
+   ap=_t("HW1 to HW4 depending on year; FSD (Supervised) on HW3/HW4", "HW1 tot HW4, afhankelijk van bouwjaar; FSD (Supervised) op HW3/HW4")),
+ "model-s-classic": dict(body=S_BODY, acc=_t("0–60 mph 2.4 s (P100D) to about 5.9 s", "0–96 km/u 2,4 s (P100D) tot ongeveer 5,9 s"),
+   top=_t("about 200–250 km/h", "ongeveer 200–250 km/u"), btype=PANA,
+   charge=_t("AC 11 kW (16.5–22 kW optional); DC up to 120 kW (2019–2020: up to 200 kW)", "AC 11 kW (16,5–22 kW optioneel); DC tot 120 kW (2019–2020: tot 200 kW)"),
+   steer=ROUND, ap=OLD_SX),
+ "model-s-2021": dict(body=S_BODY, drive=_t("dual-motor AWD", "dual-motor AWD"), power=_t("670 hp", "670 pk"),
+   acc=_t("0–60 mph 3.1 s", "0–96 km/u 3,1 s"), top=_t("250 km/h (155 mph)", "250 km/u"), bat=_t("about 100 kWh", "ongeveer 100 kWh"),
+   btype=PANA, range=_t("up to 405–410 miles EPA (650–660 km)", "tot 650–660 km (EPA)"), charge=AC11_250, steer=YOKE, ap=HW34),
+ "model-s-plaid": dict(body=S_BODY, drive=_t("tri-motor AWD", "drie motoren, AWD"), btype=PANA, charge=AC11_250, steer=YOKE, ap=HW34),
+ "model-3": dict(drive=_t("RWD or dual-motor AWD", "achterwiel of dual-motor AWD"), power=_t("about 240 to 510 hp", "ongeveer 240 tot 510 pk"),
+   top=_t("201 to 262 km/h", "201 tot 262 km/u"), bat=_t("about 50 to 82 kWh", "ongeveer 50 tot 82 kWh"),
+   btype=_t("2170 cells: LFP — CATL; NCM — LG Energy Solution; NCA — Panasonic (by version and factory)", "2170-cellen: LFP — CATL; NCM — LG Energy Solution; NCA — Panasonic (per versie en fabriek)"),
+   steer=ROUND, ap=_t("Autopilot standard; HW2.5/HW3 (2017–2023), HW4 (2024+); FSD (Supervised) optional", "Autopilot standaard; HW2.5/HW3 (2017–2023), HW4 (2024+); FSD (Supervised) optioneel")),
+ "model-3-classic": dict(body=M3_BODY, drive=_t("RWD or dual-motor AWD", "achterwiel of dual-motor AWD"),
+   power=_t("about 240 hp (SR+) to about 450 hp (Performance)", "ongeveer 240 pk (SR+) tot ongeveer 450 pk (Performance)"),
+   top=_t("225 km/h (SR+) to 261 km/h (Performance)", "225 km/u (SR+) tot 261 km/u (Performance)"),
+   btype=_t("2170 cells: NCA — Panasonic (US-built); NCM — LG Energy Solution and LFP — CATL (China-built)", "2170-cellen: NCA — Panasonic (gebouwd in de VS); NCM — LG Energy Solution en LFP — CATL (gebouwd in China)"),
+   steer=ROUND, ap=_t("Autopilot standard from 2019; HW2.5 until spring 2019, then HW3; FSD (Supervised) optional", "Autopilot standaard vanaf 2019; HW2.5 tot voorjaar 2019, daarna HW3; FSD (Supervised) optioneel")),
+ "model-3-highland": dict(body=M3_BODY, drive=_t("RWD or dual-motor AWD", "achterwiel of dual-motor AWD"),
+   power=_t("about 280 hp (RWD) to 510 hp (Performance)", "ongeveer 280 pk (RWD) tot 510 pk (Performance)"),
+   top=_t("201 km/h (RWD) to 262 km/h (Performance)", "201 km/u (RWD) tot 262 km/u (Performance)"),
+   bat=_t("about 60 kWh (RWD) to 79 kWh (Long Range/Performance)", "ongeveer 60 kWh (RWD) tot 79 kWh (Long Range/Performance)"),
+   btype=_t("LFP — CATL (RWD); NCM — LG Energy Solution or NCA — Panasonic (Premium/Performance)", "LFP — CATL (RWD); NCM — LG Energy Solution of NCA — Panasonic (Premium/Performance)"),
+   charge=_t("AC 11 kW; DC up to 170 kW (RWD) or 250 kW", "AC 11 kW; DC tot 170 kW (RWD) of 250 kW"), steer=ROUND, ap=HW4),
+ "model-3-standard": dict(body=M3_BODY, power=NA, bat=_t("LFP, capacity not officially stated", "LFP, capaciteit niet officieel opgegeven"),
+   btype=_t("LFP — CATL", "LFP — CATL"), charge=_t("AC 11 kW; DC peak not officially stated", "AC 11 kW; DC-piek niet officieel opgegeven"),
+   steer=ROUND, ap=_t("HW4 (AI4); simpler Autopilot package than other versions; FSD (Supervised) optional where offered", "HW4 (AI4); eenvoudiger Autopilot-pakket dan andere versies; FSD (Supervised) optioneel waar aangeboden"), pused=NEW),
+ "model-3-performance": dict(body=M3_BODY, drive=_t("dual-motor AWD", "dual-motor AWD"), power=_t("510 hp (Tesla US figure)", "510 pk (Amerikaans Tesla-cijfer)"),
+   btype=_t("2170 nickel cells: NCM — LG Energy Solution (China-built) or NCA — Panasonic (US-built)", "2170-nikkelcellen: NCM — LG Energy Solution (China) of NCA — Panasonic (VS)"),
+   charge=AC11_250, steer=ROUND, ap=HW4),
+ "model-x": dict(drive=_t("dual-motor AWD; tri-motor Plaid", "dual-motor AWD; drie motoren bij Plaid"), power=_t("about 260 to 1,020 hp", "ongeveer 260 tot 1.020 pk"),
+   top=_t("about 210–262 km/h", "ongeveer 210–262 km/u"), bat=_t("60 to about 100 kWh", "60 tot ongeveer 100 kWh"), btype=PANA,
+   charge=_t("AC 11–16.5 kW; DC up to 120–250 kW depending on year", "AC 11–16,5 kW; DC tot 120–250 kW, afhankelijk van bouwjaar"),
+   steer=_t("round wheel (2015–2020); yoke or round wheel (2021+); always mechanical", "rond stuur (2015–2020); yoke of rond stuur (2021+); altijd mechanisch"),
+   ap=_t("HW1 to HW4 depending on year; FSD (Supervised) on HW3/HW4", "HW1 tot HW4, afhankelijk van bouwjaar; FSD (Supervised) op HW3/HW4")),
+ "model-x-classic": dict(drive=_t("dual-motor AWD", "dual-motor AWD"), power=_t("about 260 to 770 hp", "ongeveer 260 tot 770 pk"),
+   top=_t("about 210–250 km/h", "ongeveer 210–250 km/u"), btype=PANA,
+   charge=_t("AC 11 kW (16.5–22 kW optional); DC up to 120 kW (2019–2020: up to 200 kW)", "AC 11 kW (16,5–22 kW optioneel); DC tot 120 kW (2019–2020: tot 200 kW)"),
+   steer=ROUND, ap=OLD_SX),
+ "model-x-2021": dict(drive=_t("dual-motor AWD", "dual-motor AWD"), power=_t("670 hp", "670 pk"), acc=_t("0–60 mph 3.8 s", "0–96 km/u 3,8 s"),
+   top=_t("250 km/h (155 mph)", "250 km/u"), bat=_t("about 100 kWh", "ongeveer 100 kWh"), btype=PANA,
+   range=_t("about 352 miles EPA · 600 km WLTP", "ongeveer 565 km (EPA) · 600 km WLTP"), charge=AC11_250, steer=YOKE, ap=HW34),
+ "model-x-plaid": dict(body=X_BODY, drive=_t("tri-motor AWD", "drie motoren, AWD"), top=_t("262 km/h (163 mph)", "262 km/u"),
+   bat=_t("about 100 kWh", "ongeveer 100 kWh"), btype=PANA, charge=AC11_250, steer=YOKE, ap=HW34),
+ "model-y": dict(drive=_t("RWD or dual-motor AWD", "achterwiel of dual-motor AWD"), power=_t("about 300 hp (RWD) to 460+ hp (Performance)", "ongeveer 300 pk (RWD) tot 460+ pk (Performance)"),
+   acc=_t("0–100 km/h 3.5 s (Performance) to about 7 s", "0–100 km/u 3,5 s (Performance) tot ongeveer 7 s"), top=_t("201 to 250 km/h", "201 tot 250 km/u"),
+   bat=_t("about 60 to 84 kWh", "ongeveer 60 tot 84 kWh"), range=_t("about 455 to 600+ km WLTP", "ongeveer 455 tot 600+ km WLTP"),
+   btype=_t("LFP — CATL (or BYD in some Berlin cars); NCM — LG Energy Solution; NCA — Panasonic; 4680 — Tesla (some Austin cars)", "LFP — CATL (of BYD in sommige Berlijnse auto's); NCM — LG Energy Solution; NCA — Panasonic; 4680 — Tesla (sommige auto's uit Austin)"),
+   steer=ROUND, ap=_t("Autopilot standard; HW3 (2020–2023), HW4 from mid-2023; FSD (Supervised) optional", "Autopilot standaard; HW3 (2020–2023), HW4 vanaf medio 2023; FSD (Supervised) optioneel")),
+ "model-y-classic": dict(drive=_t("RWD or dual-motor AWD", "achterwiel of dual-motor AWD"), power=_t("about 300 hp (RWD) to over 450 hp (Performance)", "ongeveer 300 pk (RWD) tot ruim 450 pk (Performance)"),
+   top=_t("217 km/h (RWD) to 250 km/h (Performance)", "217 km/u (RWD) tot 250 km/u (Performance)"),
+   btype=_t("NCA — Panasonic (US); NCM — LG Energy Solution (China); LFP — CATL or BYD Blade (RWD); 4680 — Tesla (some Austin AWD)", "NCA — Panasonic (VS); NCM — LG Energy Solution (China); LFP — CATL of BYD Blade (RWD); 4680 — Tesla (sommige AWD uit Austin)"),
+   charge=_t("AC 11 kW; DC up to 170 kW (RWD) or 250 kW", "AC 11 kW; DC tot 170 kW (RWD) of 250 kW"), steer=ROUND,
+   ap=_t("Autopilot standard; HW3, HW4 from about mid-2023; FSD (Supervised) optional", "Autopilot standaard; HW3, HW4 vanaf ongeveer medio 2023; FSD (Supervised) optioneel")),
+ "model-y-juniper": dict(body=MY_BODY, drive=_t("RWD or dual-motor AWD", "achterwiel of dual-motor AWD"), power=_t("about 300 hp (RWD); more for Long Range AWD", "ongeveer 300 pk (RWD); meer bij Long Range AWD"),
+   acc=_t("0–100 km/h 5.9 s (RWD) · 4.8 s (Long Range AWD)", "0–100 km/u 5,9 s (RWD) · 4,8 s (Long Range AWD)"),
+   bat=_t("about 60 kWh (RWD) to 82 kWh (Long Range)", "ongeveer 60 kWh (RWD) tot 82 kWh (Long Range)"),
+   btype=_t("LFP — CATL (RWD); NCM — LG Energy Solution (Long Range); NCA — Panasonic (US)", "LFP — CATL (RWD); NCM — LG Energy Solution (Long Range); NCA — Panasonic (VS)"),
+   range=_t("about 500 km (RWD) to 600 km (Long Range AWD), WLTP", "ongeveer 500 km (RWD) tot 600 km (Long Range AWD), WLTP"),
+   charge=_t("AC 11 kW; DC up to 175 kW (RWD) or 250 kW", "AC 11 kW; DC tot 175 kW (RWD) of 250 kW"), steer=ROUND, ap=HW4),
+ "model-y-standard": dict(built=_t("since autumn 2025", "sinds najaar 2025"), body=MY_BODY, power=NA, acc=NA, top=NA, bat=NA,
+   btype=_t("LFP — CATL or nickel-based — LG Energy Solution, depending on factory", "LFP — CATL of nikkelhoudend — LG Energy Solution, afhankelijk van de fabriek"),
+   steer=ROUND, ap=_t("HW4 (AI4); simpler Autopilot package than other versions; FSD (Supervised) optional where offered", "HW4 (AI4); eenvoudiger Autopilot-pakket dan andere versies; FSD (Supervised) optioneel waar aangeboden"), pused=NEW),
+ "model-y-performance": dict(built=_t("since summer 2025", "sinds zomer 2025"), body=MY_BODY, drive=_t("dual-motor AWD", "dual-motor AWD"),
+   btype=_t("NCM high-density pack ('5M' cells) — LG Energy Solution", "NCM-pakket met hoge energiedichtheid ('5M'-cellen) — LG Energy Solution"),
+   charge=AC11_250, steer=ROUND, ap=HW4, pused=_t("few used cars yet", "nog weinig occasions")),
+ "model-y-l": dict(drive=_t("dual-motor AWD", "dual-motor AWD"), power=NA, top=NA, charge=NA,
+   btype=_t("NCM, nickel-based; cell supplier not officially confirmed", "NCM, nikkelhoudend; celleverancier niet officieel bevestigd"),
+   steer=ROUND, ap=HW4, pused=NEW),
+ "cybertruck": dict(body=CT_BODY, drive=_t("dual-motor AWD or tri-motor (Cyberbeast)", "dual-motor AWD of drie motoren (Cyberbeast)"),
+   power=_t("600–845 hp", "600–845 pk"), acc=_t("0–60 mph 2.6–4.1 s", "0–96 km/u 2,6–4,1 s"), top=_t("180–209 km/h (112–130 mph)", "180–209 km/u"),
+   btype=CT_BAT, charge=CT_CH, steer=SBW, ap=CT_AP, pused=_t("about $55,000–85,000 (US), indicative", "ongeveer $ 55.000–85.000 (VS), indicatief")),
+ "cybertruck-awd": dict(built=_t("since 2024, Austin", "sinds 2024, Austin"), body=CT_BODY, drive=_t("dual-motor AWD", "dual-motor AWD"),
+   top=_t("180 km/h (112 mph)", "180 km/u"), bat=_t("123 kWh", "123 kWh"), btype=CT_BAT, charge=CT_CH, steer=SBW, ap=CT_AP),
+ "cybertruck-cyberbeast": dict(built=_t("since late 2023, Austin", "sinds eind 2023, Austin"), body=CT_BODY, drive=_t("tri-motor AWD", "drie motoren, AWD"),
+   top=_t("209 km/h (130 mph)", "209 km/u"), bat=_t("123 kWh", "123 kWh"), btype=CT_BAT, charge=CT_CH, steer=SBW, ap=CT_AP),
+ "cybertruck-foundation": dict(built=_t("late 2023 – October 2024, Austin", "eind 2023 – oktober 2024, Austin"), body=CT_BODY,
+   drive=_t("dual-motor AWD or tri-motor (Cyberbeast)", "dual-motor AWD of drie motoren (Cyberbeast)"), power=_t("600 hp (AWD) · 845 hp (Cyberbeast)", "600 pk (AWD) · 845 pk (Cyberbeast)"),
+   acc=_t("0–60 mph 4.1 s (AWD) · 2.6 s (Cyberbeast)", "0–96 km/u 4,1 s (AWD) · 2,6 s (Cyberbeast)"), top=_t("180 km/h (AWD) · 209 km/h (Cyberbeast)", "180 km/u (AWD) · 209 km/u (Cyberbeast)"),
+   bat=_t("123 kWh", "123 kWh"), btype=CT_BAT, range=_t("about 301–340 miles EPA", "ongeveer 485–550 km (EPA)"), charge=CT_CH, steer=SBW,
+   ap=_t("HW4 (AI4); FSD (Supervised) included", "HW4 (AI4); FSD (Supervised) inbegrepen")),
+ "cybercab": dict(built=_t("Giga Texas, Austin; production started 2026", "Giga Texas, Austin; productie gestart in 2026"), drive=NA, acc=NANN, top=NANN,
+   btype=_t("4680 cells — Tesla (own cells)", "4680-cellen — Tesla (eigen cellen)"),
+   steer=_t("no steering wheel and no pedals", "geen stuur en geen pedalen"),
+   ap=_t("unsupervised FSD only, on modified HW4", "alleen FSD zonder toezicht, op aangepaste HW4"),
+   pnew=_t("target under $30,000 (Musk); not sold to private buyers", "doel onder $ 30.000 (Musk); niet te koop voor particulieren"),
+   pused=_t("not applicable", "niet van toepassing")),
+ "semi": dict(built=_t("Nevada; series production since 2026", "Nevada; serieproductie sinds 2026"), body=_t("Class 8 tractor, central driver's seat", "zware trekker (Class 8), bestuurder in het midden"),
+   drive=_t("three electric motors", "drie elektromotoren"), power=_t("800 kW (about 1,070 hp)", "800 kW (ongeveer 1.090 pk)"), acc=_t("not applicable", "niet van toepassing"), top=NA,
+   btype=_t("4680 cells, NCMA — Tesla (own cells)", "4680-cellen, NCMA — Tesla (eigen cellen)"),
+   range=_t("325 miles / 520 km (Standard) · 500 miles / 800 km (Long Range)", "520 km (Standard) · 800 km (Long Range)"),
+   steer=_t("round wheel, central driving position; conventional steering", "rond stuur, centrale zitpositie; conventionele besturing"),
+   ap=_t("Enhanced Autopilot (lane keeping, adaptive cruise, emergency braking); no FSD announced for customers", "Enhanced Autopilot (rijstrookassistent, adaptieve cruise control, noodremsysteem); geen FSD aangekondigd voor klanten"),
+   pnew=_t("about $260,000 (Standard) · $290,000 (Long Range), reported", "ongeveer $ 260.000 (Standard) · $ 290.000 (Long Range), volgens berichten"),
+   pused=_t("not applicable", "niet van toepassing")),
+ "roadster": dict(built=_t("production planned for 2028", "productie gepland voor 2028"), body=_t("2-door sports car, 2+2 seats (2017 prototype)", "2-deurs sportwagen, 2+2 zitplaatsen (prototype 2017)"),
+   drive=_t("three motors, AWD (2017 announcement)", "drie motoren, AWD (aankondiging 2017)"), charge=NANN,
+   btype=_t("4680-format high-power cells — Tesla (expected), 800–1,000 V", "hoogvermogencellen in 4680-formaat — Tesla (verwacht), 800–1.000 V"),
+   steer=_t("not confirmed for the production car", "niet bevestigd voor de productieauto"), ap=NANN, pused=_t("not applicable", "niet van toepassing")),
+}
+
+def _uniform(key):
+    inf = INFO[key]; en, nl = inf["en"]["specs"], inf["nl"]["specs"]
+    got = {}; spare = {"en": [], "nl": []}
+    for (le, ve), (ln, vn) in zip(en, nl):
+        f = _MAP.get(le)
+        if not f:
+            spare["en"].append(f"{le}: {ve}"); spare["nl"].append(f"{ln}: {vn}"); continue
+        _suf = {"Towing (EU)": (" (EU)", " (EU)"), "Range (WLTP)": (" WLTP", " WLTP"), "Price (DE)": (" (Germany)", " (Duitsland)"),
+                "Price (Germany)": (" (Germany)", " (Duitsland)")}
+        if f == "acc":
+            if not ve.startswith("0–"):
+                ve = f"{le} {ve}"; vn = f"{ln} {vn}"
+        elif le in _suf:
+            ve += _suf[le][0]; vn += _suf[le][1]
+        elif le not in _PLAIN:
+            ve, vn = f"{le}: {ve}", f"{ln}: {vn}"
+        if f in got:
+            got[f] = (got[f][0] + " · " + ve, got[f][1] + " · " + vn)
+        else:
+            got[f] = (ve, vn)
+    got.update(OVR.get(key, {}))
+    inf["en"]["specs"] = [(fe, got.get(f, NA)[0]) for f, fe, fn in FIELDS]
+    inf["nl"]["specs"] = [(fn, got.get(f, NA)[1]) for f, fe, fn in FIELDS]
+    for lang in ("en", "nl"):
+        if spare[lang]:
+            inf[lang]["special"] = list(inf[lang].get("special", [])) + spare[lang]
+
+for _k in INFO:
+    _uniform(_k)

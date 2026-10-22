@@ -54,7 +54,7 @@ LANGS = {
         "models_h": "News and advice for your model", "guides_h": "Best picks for your Tesla",
         "guides_sub": "Researched per model and year, with pros and cons.",
         "related": "Read next", "sources": "Sources", "about": "About", "privacy": "Privacy",
-        "switch": "NL", "switch_full": "Nederlands", "slogan": "Daily Tesla news &amp; trends", "search": "Search Tesla news", "none": "Nothing found", "home": "Home", "d_topics": "Topics", "d_models": "Models", "d_more": "More", "menu": "Menu", "tip_h": "A 22 kW charger won't charge your Tesla any faster", "tip_p": "Most Tesla models charge at home at up to 11 kW AC.", "tip_btn": "Read why",
+        "switch": "NL", "switch_full": "Nederlands", "slogan": "Daily Tesla news &amp; trends", "search": "Search Tesla news", "none": "Nothing found", "home": "Home", "d_topics": "Topics", "d_models": "Models", "d_more": "More", "menu": "Menu", "tip_h": "A 22 kW charger won't charge your Tesla any faster", "tip_p": "Most Tesla models charge at home at up to 11 kW AC.", "tip_btn": "Read why", "tips": [("HW4", "Buying a used Model 3? Check the hardware first", "The Highland has HW4, older cars HW3. It decides what FSD can do.", "How to check", "used-model-3-highland-vs-classic-hw3-hw4-buying-guide"), ("−20%", "Losing range in winter? It doesn't have to be", "Preconditioning and the right settings save you kilometers.", "9 winter tips", "tesla-winter-range-tips-cold-weather")],
         "empty": "No articles here yet. New stories are published several times a day.",
         "cat_intro": "All TrendingTesla articles about {}.",
         "eco_intro": "SpaceX, Starlink, The Boring Company and xAI/Grok: the companies around Tesla, and how they connect.",
@@ -83,7 +83,7 @@ LANGS = {
         "models_h": "Nieuws en advies voor jouw model", "guides_h": "De beste keuzes voor je Tesla",
         "guides_sub": "Uitgezocht per model en bouwjaar, met plus- en minpunten.",
         "related": "Lees ook", "sources": "Bronnen", "about": "Over ons", "privacy": "Privacy",
-        "switch": "EN", "switch_full": "English", "slogan": "Iedere dag het laatste nieuws &amp; trends", "search": "Zoek in Tesla-nieuws", "none": "Niets gevonden", "home": "Home", "d_topics": "Onderwerpen", "d_models": "Modellen", "d_more": "Meer", "menu": "Menu", "tip_h": "Een 22 kW-laadpaal laadt je Tesla niet sneller", "tip_p": "Veel Tesla-modellen laden thuis met maximaal 11 kW AC.", "tip_btn": "Lees waarom",
+        "switch": "EN", "switch_full": "English", "slogan": "Iedere dag het laatste nieuws &amp; trends", "search": "Zoek in Tesla-nieuws", "none": "Niets gevonden", "home": "Home", "d_topics": "Onderwerpen", "d_models": "Modellen", "d_more": "Meer", "menu": "Menu", "tip_h": "Een 22 kW-laadpaal laadt je Tesla niet sneller", "tip_p": "Veel Tesla-modellen laden thuis met maximaal 11 kW AC.", "tip_btn": "Lees waarom", "tips": [("HW4", "Tweedehands Model 3 kopen? Check eerst de hardware", "De Highland heeft HW4, oudere Model 3's HW3. Dat bepaalt wat FSD kan.", "Zo check je het", "used-model-3-highland-vs-classic-hw3-hw4-buying-guide"), ("−20%", "Minder bereik in de winter? Dat hoeft niet", "Met voorverwarmen en de juiste instellingen houd je meer kilometers over.", "9 wintertips", "tesla-winter-range-tips-cold-weather")],
         "empty": "Hier staan nog geen artikelen. Er verschijnen meerdere keren per dag nieuwe verhalen.",
         "cat_intro": "Alle artikelen van TrendingTesla over {}.",
         "eco_intro": "SpaceX, Starlink, The Boring Company en xAI/Grok: de bedrijven rond Tesla, en hoe ze met elkaar verbonden zijn.",
@@ -218,23 +218,26 @@ CSS = """
 @font-face{font-family:Manrope;font-weight:600;font-display:swap;src:url(/fonts/manrope-latin-600-normal.woff2) format("woff2")}
 @font-face{font-family:Manrope;font-weight:700;font-display:swap;src:url(/fonts/manrope-latin-700-normal.woff2) format("woff2")}
 @font-face{font-family:Manrope;font-weight:800;font-display:swap;src:url(/fonts/manrope-latin-800-normal.woff2) format("woff2")}
-:root{--bg:#04060a;--surface:rgba(11,15,23,.92);--surface2:#111827;--border:#172130;--border2:#223044;--fg:#e8eef5;--head:#fff;--muted:#b9c4d2;--dim:#8f9db0;--red:#e22822;--red2:#b81e19;--blue:#00d4ff;--edge:#3a4a60;--blue2:#5fe3ff;--max:1200px;color-scheme:dark}
+:root{--bg:#04060a;--surface:#212121;--surface2:#272727;--border:#272727;--border2:#3f3f3f;--fg:#e8eef5;--head:#fff;--muted:#b9c4d2;--dim:#8f9db0;--red:#e22822;--red2:#b81e19;--blue:#00d4ff;--edge:#3a4a60;--blue2:#5fe3ff;--max:1200px;color-scheme:dark}
 *{box-sizing:border-box;margin:0;padding:0}
 html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:150px;background:#04060a}
-body{background:radial-gradient(1400px 800px at 90% -15%,rgba(0,212,255,.065),transparent 60%),radial-gradient(1000px 700px at -15% 35%,rgba(56,96,255,.08),transparent 60%),radial-gradient(900px 600px at 70% 75%,rgba(0,150,255,.05),transparent 60%) #03050a;min-height:100vh;color:var(--fg);font:17px/1.65 Manrope,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
-body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.12;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  2.6 0 0 0 -1.3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+body{background:#0f0f0f;min-height:100vh;color:var(--fg);font:17px/1.65 Manrope,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
 main,footer{position:relative;z-index:1}
 a{color:var(--head)}
 img{display:block;max-width:100%;height:auto}
 h1,h2,h3{color:var(--head);font-weight:800}
 .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
 .narrow{max-width:740px;margin:0 auto}
-.read{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:56px;align-items:start;margin-top:36px}
+.read{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);gap:26px;align-items:start;margin-top:28px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:34px 22px;margin-top:40px}
+.grid2 .card{padding:8px;margin:-8px;border-radius:14px;transition:background .15s}
+.grid2 .card:hover{background:#272727}
+.span2{grid-column:1/-1}.span2 .tip{margin:0}
 .read article{padding-top:0}
 .rside .rh{font-size:1.15rem;margin:0 0 22px;padding-bottom:12px;border-bottom:1px solid var(--border)}
 .sr{position:absolute;left:-9999px}
 /* header */
-.top{position:sticky;top:0;z-index:10;background:rgba(6,10,18,.55);backdrop-filter:blur(16px) saturate(1.3);-webkit-backdrop-filter:blur(16px) saturate(1.3);border-bottom:1px solid var(--border)}
+.top{position:sticky;top:0;z-index:10;background:rgba(15,15,15,.97)}
 .bar{display:flex;align-items:center;gap:14px;height:66px}
 .brand{display:flex;align-items:baseline;gap:14px;min-width:0}
 .logo{font-weight:800;font-size:1.4rem;letter-spacing:-.02em;color:var(--head);text-decoration:none;white-space:nowrap}
@@ -244,13 +247,13 @@ h1,h2,h3{color:var(--head);font-weight:800}
 .burger span{width:18px;height:2px;border-radius:2px;background:var(--head)}
 .burger:hover{background:var(--surface2)}
 .search{position:relative;flex:1;max-width:520px;margin-left:auto;display:flex}
-.search input{flex:1;min-width:0;background:rgba(255,255,255,.04);border:1px solid var(--border2);border-right:0;border-radius:999px 0 0 999px;color:var(--head);font:inherit;font-size:.92rem;padding:9px 18px;outline:none}
+.search input{flex:1;min-width:0;background:#121212;border:1px solid #303030;border-right:0;border-radius:999px 0 0 999px;color:var(--head);font:inherit;font-size:.92rem;padding:9px 18px;outline:none}
 .search input::placeholder{color:var(--dim)}
-.search input:focus{border-color:var(--blue)}
-.search>button,.sbtn{border:1px solid var(--border2);background:var(--surface);color:var(--head);cursor:pointer;display:grid;place-items:center}
+.search input:focus{border-color:#1c62b9}
+.search>button,.sbtn{border:1px solid #303030;background:#222;color:var(--head);cursor:pointer;display:grid;place-items:center}
 .search>button{border-radius:0 999px 999px 0;width:58px}
 .sbtn{display:none;width:40px;height:40px;border-radius:50%;margin-left:auto}
-.res{position:absolute;top:calc(100% + 8px);left:0;right:0;background:#0a0f19;border:1px solid var(--border2);border-radius:14px;padding:6px;box-shadow:0 24px 48px rgba(0,0,0,.55);max-height:70vh;overflow:auto;z-index:40}
+.res{position:absolute;top:calc(100% + 8px);left:0;right:0;background:#212121;border:1px solid var(--border2);border-radius:14px;padding:6px;box-shadow:0 24px 48px rgba(0,0,0,.55);max-height:70vh;overflow:auto;z-index:40}
 .res a{display:flex;gap:12px;align-items:center;padding:8px;border-radius:10px;text-decoration:none}
 .res a:hover{background:var(--surface2)}
 .res img{width:76px;aspect-ratio:1200/630;object-fit:cover;border-radius:6px;flex:none}
@@ -261,17 +264,17 @@ h1,h2,h3{color:var(--head);font-weight:800}
 .lang:hover{color:var(--head);border-color:var(--head)}
 .scrim{position:fixed;inset:0;z-index:25;background:rgba(0,0,0,.55);opacity:0;pointer-events:none;transition:opacity .25s}
 .dopen .scrim{opacity:1;pointer-events:auto}
-.drawer{position:fixed;top:0;bottom:0;left:0;z-index:30;width:290px;max-width:86vw;overflow-y:auto;background:#070b13;border-right:1px solid var(--border);padding:13px 12px 32px;transform:translateX(-102%);transition:transform .25s ease}
+.drawer{position:fixed;top:0;bottom:0;left:0;z-index:30;width:290px;max-width:86vw;overflow-y:auto;background:#0f0f0f;border-right:1px solid var(--border);padding:13px 12px 32px;transform:translateX(-102%);transition:transform .25s ease}
 .dopen .drawer{transform:none}
 .drawer .dh{display:flex;align-items:center;gap:12px;padding:0 4px 13px 12px;margin:0 -12px 10px;border-bottom:1px solid var(--border)}
 .drawer h4{font-size:.7rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:var(--dim);margin:20px 10px 6px}
 .drawer .di{display:flex;align-items:center;gap:12px;padding:9px 10px;border-radius:10px;color:var(--fg);text-decoration:none;font-weight:700;font-size:.92rem}
 .drawer .di:hover{background:var(--surface2);color:var(--head)}
-.drawer .di.on{background:var(--surface2);color:var(--head);box-shadow:inset 3px 0 0 var(--blue)}
+.drawer .di.on{background:var(--surface2);color:var(--head);font-weight:800}
 .drawer .di img,.drawer .di i{width:56px;aspect-ratio:1200/630;object-fit:cover;border-radius:5px;border:1px solid var(--edge);flex:none;background:var(--surface)}
 .cats9{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:28px}
-.cats9 a{text-align:center;font-size:.84rem;font-weight:700;color:var(--fg);text-decoration:none;background:var(--surface);border:1px solid var(--border2);border-radius:10px;padding:9px 6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;transition:border-color .2s,color .2s}
-.cats9 a:hover{border-color:var(--blue);color:var(--head)}
+.cats9 a{text-align:center;font-size:.84rem;font-weight:700;color:var(--fg);text-decoration:none;background:#272727;border:1px solid #272727;border-radius:10px;padding:9px 6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;transition:border-color .2s,color .2s}
+.cats9 a:hover{background:#3f3f3f;border-color:#3f3f3f;color:var(--head)}
 .cats9 a.on{background:var(--head);border-color:var(--head);color:#03050a}
 .tip{display:flex;align-items:center;gap:26px;margin-top:34px;padding:22px 26px;border-radius:16px;border:1px solid var(--border2);background:linear-gradient(120deg,rgba(0,212,255,.09),rgba(56,96,255,.05) 55%,rgba(255,255,255,.01))}
 .tip .big{font-size:2.6rem;font-weight:800;letter-spacing:-.03em;line-height:1;color:var(--blue);white-space:nowrap}
@@ -308,18 +311,18 @@ article .st{font-size:clamp(1.8rem,4.6vw,2.6rem);line-height:1.12;letter-spacing
 .tops{display:grid;grid-template-columns:1.6fr 1fr;gap:44px}
 .feature{text-decoration:none;color:var(--fg);display:block}
 .feature .im,.card .im{overflow:hidden;border-radius:14px;border:1px solid var(--edge);background:var(--surface);transition:border-color .2s}
-.feature:hover .im,.card:hover .im{border-color:var(--blue)}
+
 .feature img,.card img{width:100%;aspect-ratio:1200/630;object-fit:cover;transition:transform .4s}
-.feature:hover img,.card:hover img{transform:scale(1.03)}
+
 .feature h3{font-size:clamp(1.4rem,2.8vw,2rem);line-height:1.15;letter-spacing:-.02em;margin:14px 0 8px}
 .feature p{color:var(--muted);margin-bottom:8px}
-.side{display:flex;flex-direction:column;gap:28px}
+.side{display:flex;flex-direction:column;gap:20px}
 .mini{display:grid;grid-template-columns:180px 1fr;gap:18px;text-decoration:none;color:var(--fg);align-items:start}
 .mini img{width:180px;aspect-ratio:1200/630;object-fit:cover;border-radius:10px;border:1px solid var(--edge);transition:border-color .2s,box-shadow .2s}
-.mini:hover img{border-color:var(--blue);box-shadow:0 0 0 1px var(--blue)}
+.mini{padding:6px;margin:-6px;border-radius:12px;transition:background .15s}.mini:hover{background:#272727}
 .mini h3{font-size:.98rem;line-height:1.3;margin:6px 0 4px}
 .mini .tag{display:block;line-height:1;margin-top:0}
-.feature:hover h3,.card:hover h3,.mini:hover h3{color:var(--blue2)}
+
 /* grid */
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:56px 64px}
 .card{text-decoration:none;color:var(--fg);display:flex;flex-direction:column}
@@ -388,8 +391,8 @@ footer a:hover{color:var(--head)}
 footer .links{display:flex;gap:18px;flex-wrap:wrap}
 footer p{max-width:560px;margin-top:10px}
 @media (max-width:1000px){.grid{grid-template-columns:repeat(2,1fr);gap:48px 40px}.leadside{grid-column:span 2;flex-direction:row}.leadside .card{flex:1}.tops{grid-template-columns:1fr}.read{grid-template-columns:1fr;gap:48px}.why{grid-template-columns:repeat(2,1fr)}.models{grid-template-columns:repeat(4,1fr);gap:20px}}
-@media (max-width:860px){.slogan{font-size:.72rem}.brand{flex-direction:column;gap:0}.search{display:none}.sbtn{display:grid}.sopen .search{display:flex;position:absolute;left:16px;right:16px;top:12px;max-width:none;z-index:41}.sopen .search input{background:#0a0f19}.tip{flex-wrap:wrap;gap:14px 20px}.tip .btn{margin-left:0}}
-@media (max-width:600px){.wrap{padding:0 20px}.card.lead{grid-column:auto}.leadside{grid-column:auto;flex-direction:column;gap:40px}.leadside .card p{display:-webkit-box}.mini{grid-template-columns:1fr;gap:12px}.mini img{width:100%}#news .h2{margin-top:32px}.grid{grid-template-columns:1fr;gap:40px}.why{grid-template-columns:1fr 1fr;gap:10px}.why div{padding:14px}.why p{font-size:.8rem}
+@media (max-width:860px){.slogan{font-size:.72rem}.brand{flex-direction:column;gap:0}.search{display:none}.sbtn{display:grid}.sopen .search{display:flex;position:absolute;left:16px;right:16px;top:12px;max-width:none;z-index:41}.sopen .search input{background:#121212}.tip{flex-wrap:wrap;gap:14px 20px}.tip .btn{margin-left:0}}
+@media (max-width:600px){.wrap{padding:0 20px}.grid2{grid-template-columns:1fr;gap:30px}.card.lead{grid-column:auto}.leadside{grid-column:auto;flex-direction:column;gap:40px}.leadside .card p{display:-webkit-box}.mini{grid-template-columns:1fr;gap:12px}.mini img{width:100%}#news .h2{margin-top:32px}.grid{grid-template-columns:1fr;gap:40px}.why{grid-template-columns:1fr 1fr;gap:10px}.why div{padding:14px}.why p{font-size:.8rem}
  .models{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:0 -24px;padding:0 24px 4px}.models::-webkit-scrollbar{display:none}.models{gap:14px}.model{flex:0 0 46%;scroll-snap-align:start}
  body{font-size:16.5px}.h2{margin-top:40px}.hero{min-height:0}.hero .in{padding:26px 20px}.hero .btn{flex:1;white-space:nowrap;padding:11px 12px}
  .phead{flex-direction:column-reverse;align-items:flex-start}.phead img{width:100%}}
@@ -642,12 +645,7 @@ def listing(items, lang, active=None):
     L = LANGS[lang]
     if not items:
         return f'<p class="empty">{L["empty"]}</p>'
-    side = "".join(mini(a, lang) for a in items[1:9])
-    out = (f'<section class="read home">{story(items[0], lang, "h2")}'
-           f'<aside class="rside">{cats9(lang, active)}<div class="side">{side}</div></aside></section>')
-    if len(items) > 9:
-        out += section(L["more"], grid(items[9:], lang))
-    return out
+    return feed(items[0], story(items[0], lang, "h2"), items[1:], lang, active, L["latest"])
 
 
 def cats9(lang, active=None):
@@ -656,10 +654,49 @@ def cats9(lang, active=None):
         for k, c in CATEGORIES.items() if c["menu"]) + '</nav>'
 
 
-def tip(lang):
+def tips(lang):
     L = LANGS[lang]
-    return (f'<div class="tip"><div class="big">11 kW</div><div><h2>{L["tip_h"]}</h2><p>{L["tip_p"]}</p></div>'
-            f'<a class="btn" href="{url(lang, "tesla-home-charging-guide-11-kw-wall-connector/")}">{L["tip_btn"]} →</a></div>')
+    allt = [("11 kW", L["tip_h"], L["tip_p"], L["tip_btn"], "tesla-home-charging-guide-11-kw-wall-connector")] + L["tips"]
+    return [f'<div class="tip"><div class="big">{b}</div><div><h2>{h}</h2><p>{t}</p></div>'
+            f'<a class="btn" href="{url(lang, slug + "/")}">{btn} →</a></div>' for b, h, t, btn, slug in allt]
+
+
+def tip(lang, i=0):
+    return tips(lang)[i % len(tips(lang))]
+
+
+def words(a, lang):
+    return len(re.sub(r"<[^>]+>", " ", a[lang]["body"]).split())
+
+
+def feed(lead, lead_html, rest, lang, active=None, side_title="", left_first=()):
+    """YouTube-style page: lead story open on the left with a two-column grid of further articles
+    below it (an ad/tip bar every few rows); a long list of the newest articles on the right."""
+    # balance column heights (pixel estimates measured on the live layout)
+    left_first = list(left_first)
+    n = len(rest) + len(left_first)
+    story_px = 1100 + 2.6 * words(lead, lang) + 170
+    best, diff = 0, None
+    for left in range(0, n + 1, 2):
+        rows = left / 2
+        h_left = story_px + (40 + rows * 411 + ((left - 1) // 6 if left else 0) * 176 if left else 0)
+        h_right = 170 + (n - left) * 146
+        d = abs(h_left - h_right)
+        if diff is None or d < diff:
+            best, diff = left, d
+    best = max(best, len(left_first))
+    right_items, left_items = rest[:n - best], left_first + rest[n - best:]
+    tl = tips(lang)
+    g, ti = "", 1
+    for i, a in enumerate(left_items):
+        if i and i % 6 == 0:
+            g += f'<div class="span2">{tl[ti % len(tl)]}</div>'
+            ti += 1
+        g += card(a, lang)
+    side = "".join(mini(a, lang) for a in right_items)
+    return (f'<section class="read home"><div class="lcol">{lead_html}{tl[0]}'
+            f'{f"<div class=grid2>{g}</div>" if g else ""}</div>'
+            f'<aside class="rside">{cats9(lang, active)}<h2 class="sr">{side_title}</h2><div class="side">{side}</div></aside></section>')
 
 
 JS = r"""(function(){var d=document.documentElement,o=document.querySelector('.scrim');
@@ -802,17 +839,9 @@ def build():
         body = f'<h1 class="sr">{NAME} — {L["tagline"]}</h1>'
         if news:
             top = news[0]
-            side = "".join(mini(a, lang) for a in news[1:9])
-            body += (f'<section id="news" class="read home">{story(top, lang, "h2")}'
-                     f'<aside class="rside">{cats9(lang)}<h2 class="sr">{L["latest"]}</h2><div class="side">{side}</div></aside></section>'
-                     f'{tip(lang)}')
+            body += feed(top, story(top, lang, "h2"), [a for a in arts if a is not top], lang, None, L["latest"])
         else:
             body += section(L["latest"], f'<p class="empty">{L["empty"]}</p>', anchor="news")
-        if guides:
-            body += section(L["guides_h"], grid(guides[:6], lang), (url(lang, "category/guides/"), CATEGORIES["guides"][lang]),
-                            sub=L["guides_sub"])
-        if len(news) > 9:
-            body += section(L["more"], grid(news[9:24], lang))
         body += section(L["why_h"], why(lang))
         write(url(lang), page(lang, "", NAME, L["tagline"], body))
 
@@ -866,13 +895,9 @@ def build():
                 "author": {"@type": "Organization", "name": NAME, "url": SITE},
             }
             head = f'<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>'
-            side_items = [x for x in news if x["slug"] != a["slug"]][:8]
-            side_ids = {x["slug"] for x in side_items}
-            rel = [x for x in related(a, arts, 12) if x["slug"] not in side_ids]
-            rel_html = section(L["related"], grid(rel[:3], lang)) if rel else ""
-            aside = (f'<aside class="rside">{cats9(lang, a["category"])}<h2 class="sr">{L["latest"]}</h2><div class="side">'
-                     + "".join(mini(x, lang) for x in side_items) + '</div></aside>')
-            body = (f'<div class="read">{story(a, lang)}{aside}</div>{rel_html}')
+            rel = related(a, arts, 4)
+            others = [x for x in arts if x is not a and x not in rel]
+            body = feed(a, story(a, lang), others, lang, a["category"], L["latest"], left_first=rel)
             write(url(lang, a["slug"] + "/"),
                   page(lang, a["slug"] + "/", t["title"], t["description"], body, "article", head,
                        image=social_img(a, lang), active=a["category"]))

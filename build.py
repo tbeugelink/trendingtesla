@@ -106,7 +106,7 @@ LANGS = {
 
 CATEGORIES = {
     "news":     {"en": "News",     "nl": "Nieuws",   "menu": True},
-    "models":   {"en": "Models",   "nl": "Modellen", "menu": True, "tag": "Model"},
+    "models":   {"en": "Model",    "nl": "Model", "menu": True, "tag": "Model"},
     "fsd":      {"en": "FSD",      "nl": "FSD",      "menu": True},
     "xai":      {"en": "xAI / Grok", "nl": "xAI / Grok", "menu": True},
     "robotaxi": {"en": "Robotaxi", "nl": "Robotaxi", "menu": True},
@@ -1126,7 +1126,7 @@ def build():
             content = listing(items, lang, model=key)
             write(url(lang, f"model/{key}/"),
                   page(lang, f"model/{key}/", f"Tesla {m['name']}", L["model_intro"].format(m["name"]), head + content,
-                       image=ph))
+                       image=ph, active="models"))
 
         # ---------- Articles ----------
         for a in arts:

@@ -296,7 +296,7 @@ h1,h2,h3{color:var(--head);font-weight:800}
 .savedlink:hover{background:#272727}
 @media (min-width:601px){.savedlink{transform:translateX(16px)}.search{transform:translateX(20px)}}
 @media (max-width:600px){.savedlink{transform:translateX(8px)}.sbtn{transform:translateX(16px)}}
-.savedlink i{position:absolute;top:1px;right:0;min-width:16px;height:16px;border-radius:8px;background:var(--red);color:#fff;font:800 .62rem/16px Manrope,sans-serif;font-style:normal;text-align:center;padding:0 4px}
+.savedlink i{position:absolute;top:1px;right:0;min-width:14px;height:14px;border-radius:7px;background:var(--red);color:#fff;font:800 .58rem/14px Manrope,sans-serif;font-style:normal;text-align:center;padding:0 3px}
 .dtopics{display:grid;grid-template-columns:1fr 1fr;gap:7px;padding:0 4px}
 .dtopics a{text-align:center;font-size:.84rem;font-weight:700;color:var(--fg);text-decoration:none;background:#272727;border:1px solid #272727;border-radius:10px;padding:10px 6px 8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .dtopics a:hover{background:#3f3f3f;border-color:#3f3f3f;color:var(--head)}

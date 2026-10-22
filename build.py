@@ -145,14 +145,14 @@ MODELS = {
     "model-y-classic":   {"name": "Model Y 2020–2024",  "photo": "myc-1.jpg", "gallery": ["myc-1.jpg", "myc-2.jpg", "model-y-classic.jpg"], "parent": "model-y", "label": "2020–2024"},
     "model-y-juniper":   {"name": "Model Y Juniper",    "photo": "myj-12.jpg", "parent": "model-y", "label": "Juniper · 2025+", "gallery": ["myj-1.jpg", "myj-9.jpg", "myj-12.jpg", "myj-5.jpg", "myj-2.jpg", "myj-10.jpg", "myj-7.jpg", "myj-3.jpg", "myj-11.jpg", "myj-6.jpg", "myj-8.jpg", "myj-4.jpg"]},
     "model-y-standard":  {"name": "Model Y Standard",   "photo": "model-y.jpg", "parent": "model-y", "label": "Standard · 2025+"},
-    "model-y-performance": {"name": "Model Y Performance", "photo": "model-y.jpg", "parent": "model-y", "label": "Performance"},
+    "model-y-performance": {"name": "Model Y Performance", "photo": "myp-1.jpg", "gallery": ["myp-1.jpg"], "parent": "model-y", "label": "Performance"},
     "model-y-l":         {"name": "Model Y L",          "photo": "myl-1.jpg", "parent": "model-y", "label": {"en": "Model Y L · 6 seats", "nl": "Model Y L · 6 zitplaatsen"}},
     "cybertruck":        {"name": "Cybertruck",         "photo": "cybertruck.jpg", "gallery": ["ct-1.jpg", "ct-3.jpg", "ct-2.jpg", "ct-4.jpg", "ct-5.jpg"]},
     "cybertruck-awd":    {"name": "Cybertruck AWD",     "photo": "ct-1.jpg", "parent": "cybertruck", "label": "AWD"},
     "cybertruck-cyberbeast": {"name": "Cyberbeast",     "photo": "cb-1.jpg", "gallery": ["cb-1.jpg", "ct-5.jpg"], "parent": "cybertruck", "label": "Cyberbeast"},
     "cybercab":          {"name": "Cybercab",           "photo": "cybercab.jpg", "gallery": ["cybercab.jpg", "cc-1.jpg", "cc-3.jpg", "cc-2.jpg"]},
     "roadster":          {"name": "Roadster",           "photo": "roadster.jpg", "gallery": ["rd-1.jpg", "rd-2.jpg", "rd-3.jpg"]},
-    "semi":              {"name": "Semi",               "photo": "semi.jpg", "gallery": ["semi.jpg", "semi-4.jpg", "semi-2.jpg", "semi-5.jpg", "semi-3.jpg"]},
+    "semi":              {"name": "Semi",               "photo": "semi.jpg", "menu": "menu-semi.jpg", "gallery": ["semi.jpg", "semi-4.jpg", "semi-2.jpg", "semi-5.jpg", "semi-3.jpg"]},
 }
 # Fallback photo per category: a file in static/img/topics/, or a list of files to vary between
 # (each article always gets the same one, picked from its slug). Missing files are skipped.
@@ -735,7 +735,7 @@ def modelnav(lang, current=None):
                 lbl = v["label"][lang] if isinstance(v["label"], dict) else v["label"]
                 lbl = lbl.split(" · ")[0]
                 opts += f'<a href="{url(lang, "model/" + k + "/")}"{" class=\"on\"" if k == current else ""}>{esc(lbl)}</a>'
-        ph = model_photo(r)
+        ph = f"/img/models/{MODELS[r]['menu']}" if MODELS[r].get("menu") else model_photo(r)
         img = f'<img src="{ph}" alt="" loading="lazy">' if ph else '<i></i>'
         st = " on" if current == r else (" in" if cur_root == r else "")
         rows += (f'<div class="mcell"><a class="dm{st}" href="{url(lang, "model/" + r + "/")}"><div class="ph">{img}</div>'

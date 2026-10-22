@@ -681,6 +681,7 @@ DRAWER_MODELS = MODEL_STRIP + ["cybercab", "semi", "roadster"]
 
 
 def drawer(lang, active=None, model=None):
+    active = menu_key(active)
     L = LANGS[lang]
     out = (f'<div class="dh"><button class="burger" type="button" aria-label="{L["menu"]}"><span></span><span></span><span></span></button>'
            f'<a class="logo" href="{url(lang)}">Trending<span>Tesla</span></a></div>'
@@ -826,7 +827,13 @@ def btn_label(c, lang):
     return f'<b>{c["btn"]}</b>' if c.get("btn") else c[lang]
 
 
+def menu_key(active):
+    """Every page highlights one topic button; pages outside the menu fall back to News."""
+    return active if active in CATEGORIES and CATEGORIES[active]["menu"] else "news"
+
+
 def cats9(lang, active=None):
+    active = menu_key(active)
     return '<nav class="cats9" aria-label="Topics">' + "".join(
         f'<a href="{url(lang, "category/" + k + "/")}"{" class=\"on\"" if k == active else ""}>{btn_label(c, lang)}</a>'
         for k, c in CATEGORIES.items() if c["menu"]) + '</nav>'

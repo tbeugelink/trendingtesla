@@ -647,7 +647,7 @@ INFO["model-x"]["sources"].append(USED_X); INFO["model-x-classic"]["sources"].ap
 FIELDS = [("built", "Built", "Gebouwd"), ("body", "Body", "Carrosserie"), ("drive", "Drive", "Aandrijving"),
           ("power", "Power", "Vermogen"), ("acc", "Acceleration", "Acceleratie"), ("top", "Top speed", "Topsnelheid"),
           ("bat", "Battery", "Accu"), ("btype", "Battery type (maker)", "Accutype (fabrikant)"), ("range", "Range", "Bereik"),
-          ("cons", "Consumption", "Verbruik"), ("charge", "Charging", "Laden"), ("weight", "Weight", "Gewicht"),
+          ("cons", "Consumption", "Verbruik"), ("charge", "Charging", "Laden"), ("ctime", "Fast-charge time (10–80%)", "Snellaadtijd (10–80%)"), ("weight", "Weight", "Gewicht"),
           ("tow", "Towing", "Trekgewicht"), ("steer", "Steering", "Besturing"), ("ap", "Autopilot / FSD", "Autopilot / FSD"),
           ("glass", "Glass roof", "Glazen dak"), ("pnew", "Price new", "Nieuwprijs"), ("pused", "Price now (used)", "Prijs nu (gebruikt)")]
 _MAP = {"Built": "built", "Launched": "built", "Body": "body", "Seats": "body", "Drive": "drive", "Power": "power",
@@ -793,6 +793,32 @@ OVR = {
    btype=_t("4680-format high-power cells — Tesla (expected), 800–1,000 V", "hoogvermogencellen in 4680-formaat — Tesla (verwacht), 800–1.000 V"),
    steer=_t("not confirmed for the production car", "niet bevestigd voor de productieauto"), ap=NANN, pused=_t("not applicable", "niet van toepassing")),
 }
+
+def _m(en, nl=None):
+    return (en, nl if nl is not None else en.replace("about", "ongeveer").replace("min", "min."))
+CTIME = {
+ "model-s": _t("about 25–40 min, depending on year", "ongeveer 25–40 min., afhankelijk van bouwjaar"),
+ "model-s-classic": _t("about 30–45 min (older cars slower)", "ongeveer 30–45 min. (oudere auto's langzamer)"),
+ "model-s-2021": _t("about 27 min", "ongeveer 27 min."), "model-s-plaid": _t("about 28 min", "ongeveer 28 min."),
+ "model-3": _t("about 25–30 min", "ongeveer 25–30 min."), "model-3-classic": _t("about 25–30 min", "ongeveer 25–30 min."),
+ "model-3-highland": _t("about 25–27 min", "ongeveer 25–27 min."), "model-3-standard": _t("about 25–30 min (estimate)", "ongeveer 25–30 min. (schatting)"),
+ "model-3-performance": _t("about 27 min", "ongeveer 27 min."),
+ "model-x": _t("about 30–45 min, depending on year", "ongeveer 30–45 min., afhankelijk van bouwjaar"),
+ "model-x-classic": _t("about 35–45 min", "ongeveer 35–45 min."), "model-x-2021": _t("about 30 min", "ongeveer 30 min."),
+ "model-x-plaid": _t("about 30 min", "ongeveer 30 min."),
+ "model-y": _t("about 25–30 min", "ongeveer 25–30 min."), "model-y-classic": _t("about 25–30 min", "ongeveer 25–30 min."),
+ "model-y-juniper": _t("about 25–27 min", "ongeveer 25–27 min."), "model-y-standard": _t("about 25–30 min (estimate)", "ongeveer 25–30 min. (schatting)"),
+ "model-y-performance": _t("about 27 min", "ongeveer 27 min."), "model-y-l": NA,
+ "cybertruck": _t("about 45 min (Tesla: up to 136 miles added in 15 min)", "ongeveer 45 min. (Tesla: tot 220 km erbij in 15 min.)"),
+ "cybertruck-awd": _t("about 45 min (Tesla: up to 136 miles added in 15 min)", "ongeveer 45 min. (Tesla: tot 220 km erbij in 15 min.)"),
+ "cybertruck-cyberbeast": _t("about 45 min (Tesla: up to 128 miles added in 15 min)", "ongeveer 45 min. (Tesla: tot 205 km erbij in 15 min.)"),
+ "cybertruck-foundation": _t("about 45 min", "ongeveer 45 min."),
+ "cybercab": NANN,
+ "semi": _t("most of the range in about 30 min at a Megacharger (Tesla)", "het grootste deel van het bereik in ongeveer 30 min. aan een Megacharger (Tesla)"),
+ "roadster": NANN,
+}
+for _k, _v in CTIME.items():
+    OVR.setdefault(_k, {})["ctime"] = _v
 
 def _uniform(key):
     inf = INFO[key]; en, nl = inf["en"]["specs"], inf["nl"]["specs"]

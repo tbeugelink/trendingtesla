@@ -141,16 +141,16 @@ MODELS = {
     "model-x-classic":   {"name": "Model X 2015–2020",  "photo": "mxc-1.jpg", "gallery": ["mxc-1.jpg"], "parent": "model-x", "label": "2015–2020"},
     "model-x-2021":      {"name": "Model X 2021+",      "photo": "mx-1.jpg", "parent": "model-x", "label": "2021+"},
     "model-x-plaid":     {"name": "Model X Plaid",      "photo": "mx-5.jpg", "parent": "model-x", "label": "Plaid"},
-    "model-y":           {"name": "Model Y",            "photo": "model-y-classic.jpg", "article_photo": "model-y.jpg", "gallery": ["myj-1.jpg", "myj-9.jpg", "myj-12.jpg", "myj-5.jpg", "myj-2.jpg", "myj-10.jpg", "myj-7.jpg", "myj-3.jpg", "myj-11.jpg", "myj-6.jpg", "myj-8.jpg", "myj-4.jpg"]},
-    "model-y-classic":   {"name": "Model Y 2020–2024",  "photo": "myc-1.jpg", "gallery": ["myc-1.jpg", "myc-2.jpg", "model-y-classic.jpg"], "parent": "model-y", "label": "2020–2024"},
-    "model-y-juniper":   {"name": "Model Y Juniper",    "photo": "myj-12.jpg", "parent": "model-y", "label": "Juniper · 2025+", "gallery": ["myj-1.jpg", "myj-9.jpg", "myj-12.jpg", "myj-5.jpg", "myj-2.jpg", "myj-10.jpg", "myj-7.jpg", "myj-3.jpg", "myj-11.jpg", "myj-6.jpg", "myj-8.jpg", "myj-4.jpg"]},
-    "model-y-standard":  {"name": "Model Y Standard",   "photo": "model-y.jpg", "parent": "model-y", "label": "Standard · 2025+"},
-    "model-y-performance": {"name": "Model Y Performance", "photo": "myp-1.jpg", "gallery": ["myp-1.jpg"], "parent": "model-y", "label": "Performance"},
+    "model-y":           {"name": "Model Y", "menu": "menu-myj.jpg",            "photo": "model-y-classic.jpg", "article_photo": "model-y.jpg", "gallery": ["myj-1.jpg", "myj-9.jpg", "myj-12.jpg", "myj-5.jpg", "myj-2.jpg", "myj-10.jpg", "myj-7.jpg", "myj-3.jpg", "myj-11.jpg", "myj-6.jpg", "myj-8.jpg", "myj-4.jpg"]},
+    "model-y-classic":   {"name": "Model Y 2020–2024", "menu": "menu-myc.jpg",  "photo": "myc-1.jpg", "gallery": ["myc-1.jpg", "myc-2.jpg", "model-y-classic.jpg"], "parent": "model-y", "label": "2020–2024"},
+    "model-y-juniper":   {"name": "Model Y Juniper", "menu": "menu-myj.jpg",    "photo": "myj-12.jpg", "parent": "model-y", "label": "Juniper · 2025+", "gallery": ["myj-1.jpg", "myj-9.jpg", "myj-12.jpg", "myj-5.jpg", "myj-2.jpg", "myj-10.jpg", "myj-7.jpg", "myj-3.jpg", "myj-11.jpg", "myj-6.jpg", "myj-8.jpg", "myj-4.jpg"]},
+    "model-y-standard":  {"name": "Model Y Standard", "menu": "menu-mys.jpg",   "photo": "model-y.jpg", "parent": "model-y", "label": "Standard · 2025+"},
+    "model-y-performance": {"name": "Model Y Performance", "menu": "menu-myp.jpg", "photo": "myp-1.jpg", "gallery": ["myp-1.jpg"], "parent": "model-y", "label": "Performance"},
     "model-y-l":         {"name": "Model Y L",          "photo": "myl-1.jpg", "parent": "model-y", "label": {"en": "Model Y L · 6 seats", "nl": "Model Y L · 6 zitplaatsen"}},
-    "cybertruck":        {"name": "Cybertruck",         "photo": "cybertruck.jpg", "gallery": ["ct-1.jpg", "ct-3.jpg", "ct-2.jpg", "ct-4.jpg", "ct-5.jpg"]},
-    "cybertruck-awd":    {"name": "Cybertruck AWD",     "photo": "ct-1.jpg", "parent": "cybertruck", "label": "AWD"},
+    "cybertruck":        {"name": "Cybertruck", "menu": "menu-cybertruck.jpg",         "photo": "cybertruck.jpg", "gallery": ["ct-1.jpg", "ct-3.jpg", "ct-2.jpg", "ct-4.jpg", "ct-5.jpg"]},
+    "cybertruck-awd":    {"name": "Cybertruck AWD", "menu": "menu-cybertruck.jpg",     "photo": "ct-1.jpg", "parent": "cybertruck", "label": "AWD"},
     "cybertruck-cyberbeast": {"name": "Cyberbeast",     "photo": "cb-1.jpg", "gallery": ["cb-1.jpg", "ct-5.jpg"], "parent": "cybertruck", "label": "Cyberbeast"},
-    "cybercab":          {"name": "Cybercab",           "photo": "cybercab.jpg", "gallery": ["cybercab.jpg", "cc-1.jpg", "cc-3.jpg", "cc-2.jpg"]},
+    "cybercab":          {"name": "Cybercab", "menu": "menu-cybercab.jpg",           "photo": "cybercab.jpg", "gallery": ["cybercab.jpg", "cc-1.jpg", "cc-3.jpg", "cc-2.jpg"]},
     "roadster":          {"name": "Roadster",           "photo": "roadster.jpg", "menu": "menu-roadster.jpg", "gallery": ["rd-1.jpg", "rd-2.jpg", "rd-3.jpg"]},
     "semi":              {"name": "Semi",               "photo": "semi.jpg", "menu": "menu-semi.jpg", "gallery": ["semi.jpg", "semi-4.jpg", "semi-2.jpg", "semi-5.jpg", "semi-3.jpg"]},
 }
@@ -325,7 +325,7 @@ h1,h2,h3{color:var(--head);font-weight:800}
 .mopts{display:flex;flex-direction:column;gap:6px}
 .mopts a{font-size:.8rem;font-weight:700;color:var(--muted);text-decoration:none;border:1px solid #3f3f3f;border-radius:8px;padding:5px 6px 4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-align:center;transition:background .15s}
 .mopts a:hover{background:#3f3f3f;color:var(--head)}
-.mopts a.on{background:var(--head);border-color:var(--head);color:#03050a}
+.mopts a.on{background:var(--head);border-color:var(--head);color:#03050a}.mopts a.vt{display:flex;align-items:center;gap:7px;padding:3px 6px 3px 3px;text-align:left}.mopts a.vt b{flex:none;width:39px;height:26px;border-radius:5px;overflow:hidden;background:#000}.mopts a.vt b img{width:100%;height:100%;object-fit:cover;display:block}.mopts a span{overflow:hidden;text-overflow:ellipsis}
 .dm.on,.dm.in{border-color:var(--head)}
 .specs{width:100%;border-collapse:collapse;margin:6px 0 10px;font-size:.92rem}
 .specs th,.specs td{padding:9px 12px;border-bottom:1px solid var(--border2);text-align:left;vertical-align:top}
@@ -730,11 +730,15 @@ def modelnav(lang, current=None):
     for r in MODEL_ROOTS:
         on = ' class="on"' if current == r else (' class="in"' if cur_root == r else "")
         opts = ""
-        for k, v in MODELS.items():
-            if v.get("parent") == r:
-                lbl = v["label"][lang] if isinstance(v["label"], dict) else v["label"]
-                lbl = lbl.split(" · ")[0]
-                opts += f'<a href="{url(lang, "model/" + k + "/")}"{" class=\"on\"" if k == current else ""}>{esc(lbl)}</a>'
+        kids = [(k, v) for k, v in MODELS.items() if v.get("parent") == r]
+        thumbs = any(v.get("menu") for k, v in kids)
+        for k, v in kids:
+            lbl = v["label"][lang] if isinstance(v["label"], dict) else v["label"]
+            lbl = lbl.split(" · ")[0]
+            th = ""
+            if thumbs:
+                th = f'<b>{"<img src=\"/img/models/" + v["menu"] + "\" alt=\"\" loading=\"lazy\">" if v.get("menu") else ""}</b>'
+            opts += f'<a href="{url(lang, "model/" + k + "/")}" class="{"on" if k == current else ""}{" vt" if thumbs else ""}">{th}<span>{esc(lbl)}</span></a>'
         ph = f"/img/models/{MODELS[r]['menu']}" if MODELS[r].get("menu") else model_photo(r)
         img = f'<img src="{ph}" alt="" loading="lazy">' if ph else '<i></i>'
         st = " on" if current == r else (" in" if cur_root == r else "")

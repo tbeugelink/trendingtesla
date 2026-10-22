@@ -434,7 +434,7 @@ article .hero-img{border-radius:16px;margin:0 0 26px;aspect-ratio:1200/630;width
 .chips a{font-size:.78rem;font-weight:700;color:var(--muted);text-decoration:none;border:1px solid var(--border2);border-radius:999px;padding:3px 10px}
 .chips a:hover{color:var(--head);border-color:var(--head)}
 .prose h2{font-size:1.15rem;line-height:1.3;letter-spacing:-.015em;margin:34px 0 10px}
-.prose p,.prose ul,.prose ol{margin-bottom:18px}
+article .prose{font-size:16px}.prose p,.prose ul,.prose ol{margin-bottom:18px}
 .prose ul,.prose ol{padding-left:22px}
 .prose li{margin-bottom:8px}
 .prose li::marker{color:var(--blue)}

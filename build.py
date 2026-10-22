@@ -276,6 +276,14 @@ h1,h2,h3{color:var(--head);font-weight:800}
 .cats9 a{text-align:center;font-size:.84rem;font-weight:700;color:var(--fg);text-decoration:none;background:#272727;border:1px solid #272727;border-radius:10px;padding:9px 6px 7px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;transition:border-color .2s,color .2s}
 .cats9 a:hover{background:#3f3f3f;border-color:#3f3f3f;color:var(--head)}
 .cats9 a.on{background:var(--head);border-color:var(--head);color:#03050a}
+.mnav{display:flex;flex-direction:column;gap:8px;margin:-16px 0 28px}
+.mrow{display:grid;grid-template-columns:118px 1fr;gap:8px;align-items:start}
+.mopts{display:flex;flex-wrap:wrap;gap:8px}
+.mnav a{font-size:.8rem;font-weight:700;color:var(--fg);text-decoration:none;background:#272727;border:1px solid #272727;border-radius:10px;padding:8px 10px 6px;white-space:nowrap;text-align:center;transition:background .15s}
+.mnav .mopts a{background:transparent;border-color:#3f3f3f;color:var(--muted)}
+.mnav a:hover,.mnav .mopts a:hover{background:#3f3f3f;border-color:#3f3f3f;color:var(--head)}
+.mnav a.on,.mnav .mopts a.on{background:var(--head);border-color:var(--head);color:#03050a}
+.mnav a.in{border-color:var(--head)}
 .tip{display:flex;align-items:center;gap:26px;margin-top:34px;padding:22px 26px;border-radius:16px;border:1px solid var(--border2);background:linear-gradient(120deg,rgba(0,212,255,.09),rgba(56,96,255,.05) 55%,rgba(255,255,255,.01))}
 .tip .big{font-size:2.6rem;font-weight:800;letter-spacing:-.03em;line-height:1;color:var(--blue);white-space:nowrap}
 .tip h2{font-size:1.12rem;line-height:1.25;margin-bottom:4px}
@@ -648,14 +656,36 @@ def story(a, lang, tag="h1"):
 ALL_ARTS = []
 
 
-def listing(items, lang, active=None):
+MODEL_ROOTS = ["model-s", "model-3", "model-x", "model-y", "cybertruck", "cybercab", "semi", "roadster"]
+
+
+def modelnav(lang, current=None):
+    """Models with their versions, one row per model (shown on the Models topic and model pages)."""
+    cur_root = (MODELS[current].get("parent") or current) if current else None
+    rows = ""
+    for r in MODEL_ROOTS:
+        on = ' class="on"' if current == r else (' class="in"' if cur_root == r else "")
+        opts = ""
+        for k, v in MODELS.items():
+            if v.get("parent") == r:
+                lbl = v["label"][lang] if isinstance(v["label"], dict) else v["label"]
+                lbl = lbl.split(" · ")[0]
+                opts += f'<a href="{url(lang, "model/" + k + "/")}"{" class=\"on\"" if k == current else ""}>{esc(lbl)}</a>'
+        rows += (f'<div class="mrow"><a class="mname{" on" if current == r else (" in" if cur_root == r else "")}" '
+                 f'href="{url(lang, "model/" + r + "/")}">{MODELS[r]["name"]}</a><div class="mopts">{opts}</div></div>')
+    return f'<nav class="mnav" aria-label="Models">{rows}</nav>'
+
+
+def listing(items, lang, active=None, model=None):
     """Newest article open in full on the left, the next ones stacked on the right, the rest below."""
     L = LANGS[lang]
     if not items:
         return f'<p class="empty">{L["empty"]}</p>'
     own = set(id(x) for x in items)
     more = [x for x in ALL_ARTS if id(x) not in own][:40]
-    return feed(items[0], story(items[0], lang, "h2"), items[1:], lang, active, L["latest"], more=more)
+    extra = modelnav(lang, model) if (active == "models" or model) else ""
+    return feed(items[0], story(items[0], lang, "h2"), items[1:], lang, active or ("models" if model else None),
+                L["latest"], more=more, extra_side=extra)
 
 
 def cats9(lang, active=None):
@@ -679,7 +709,7 @@ def words(a, lang):
     return len(re.sub(r"<[^>]+>", " ", a[lang]["body"]).split())
 
 
-def feed(lead, lead_html, rest, lang, active=None, side_title="", left_first=(), more=()):
+def feed(lead, lead_html, rest, lang, active=None, side_title="", left_first=(), more=(), extra_side=""):
     """YouTube-style page: lead story open on the left with a two-column grid of further articles
     below it (an ad/tip bar every few rows); a long list of the newest articles on the right."""
     # balance column heights (pixel estimates measured on the live layout)
@@ -694,7 +724,7 @@ def feed(lead, lead_html, rest, lang, active=None, side_title="", left_first=(),
         h_left = story_px + (40 + rows * 411 + ((left - 1) // 6 if left else 0) * 176 if left else 0)
         if more and n - left < n_own:
             continue
-        h_right = 170 + (n - left) * 136 + (60 if more and n - left > n_own else 0)
+        h_right = 170 + (450 if extra_side else 0) + (n - left) * 136 + (60 if more and n - left > n_own else 0)
         d = abs(h_left - h_right)
         if diff is None or d < diff:
             best, diff = left, d
@@ -712,7 +742,7 @@ def feed(lead, lead_html, rest, lang, active=None, side_title="", left_first=(),
         side += f'<h2 class="sideh">{CATEGORIES["news"][lang]}</h2>' + "".join(mini(a, lang) for a in right_items[n_own:])
     return (f'<section class="read home"><div class="lcol">{lead_html}{tl[0]}'
             f'{f"<div class=grid2>{g}</div>" if g else ""}</div>'
-            f'<aside class="rside">{cats9(lang, active)}<h2 class="sr">{side_title}</h2><div class="side">{side}</div></aside></section>')
+            f'<aside class="rside">{cats9(lang, active)}{extra_side}<h2 class="sr">{side_title}</h2><div class="side">{side}</div></aside></section>')
 
 
 JS = r"""(function(){var d=document.documentElement,o=document.querySelector('.scrim');
@@ -893,8 +923,8 @@ def build():
                 chips_v = '<div class="versions"><span>' + L["your_version"] + '</span>' + "".join(
                     f'<a href="{url(lang, "model/" + k + "/")}"{" class=\"on\"" if k == key else ""}>{esc(lbl)}</a>'
                     for k, lbl in btns) + '</div>'
-            head = f'<h1 class="sr">Tesla {m["name"]}</h1>' + chips_v
-            content = listing(items, lang)
+            head = f'<h1 class="sr">Tesla {m["name"]}</h1>'
+            content = listing(items, lang, model=key)
             write(url(lang, f"model/{key}/"),
                   page(lang, f"model/{key}/", f"Tesla {m['name']}", L["model_intro"].format(m["name"]), head + content,
                        image=ph))

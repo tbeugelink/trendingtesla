@@ -222,6 +222,7 @@ CSS = """
 :root{--bg:#04060a;--surface:#212121;--surface2:#272727;--border:#272727;--border2:#3f3f3f;--fg:#e8eef5;--head:#fff;--muted:#b9c4d2;--dim:#8f9db0;--red:#e22822;--red2:#b81e19;--blue:#00d4ff;--edge:#3a4a60;--blue2:#5fe3ff;--max:1200px;color-scheme:dark}
 *{box-sizing:border-box;margin:0;padding:0}
 html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:150px;background:#04060a}
+html,body{overflow-x:clip;max-width:100%}
 body{background:#0f0f0f linear-gradient(135deg,#2b2b2b 0%,#1a1a1a 32%,#121212 62%,#0b0b0b 100%) fixed;min-height:100vh;color:var(--fg);font:17px/1.42 Manrope,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
 main,footer{position:relative;z-index:1}
 a{color:var(--head)}

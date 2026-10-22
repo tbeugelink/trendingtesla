@@ -224,8 +224,13 @@ footer a:hover{color:var(--head)}
 footer .links{display:flex;gap:18px;flex-wrap:wrap}
 footer p{max-width:560px;margin-top:10px}
 @media (max-width:1000px){.grid{grid-template-columns:repeat(2,1fr);gap:48px 40px}.leadside{grid-column:span 2;flex-direction:row}.leadside .card{flex:1}.tops{grid-template-columns:1fr}.read{grid-template-columns:1fr;gap:48px}.why{grid-template-columns:repeat(2,1fr)}.models{grid-template-columns:repeat(4,1fr);gap:20px}}
-@media (max-width:860px){.slogan{font-size:.72rem}.brand{flex-direction:column;gap:0}.search{display:none}.sbtn{display:grid}.sopen .search{display:flex;position:absolute;left:16px;right:16px;top:12px;max-width:none;z-index:41}.sopen .search input{background:#121212}.tip{flex-wrap:wrap;gap:14px 20px}.tip .btn{margin-left:0}}
-@media (max-width:600px){.wrap{padding:0 20px}.grid2{grid-template-columns:1fr;gap:30px}.card.lead{grid-column:auto}.leadside{grid-column:auto;flex-direction:column;gap:40px}.leadside .card p{display:-webkit-box}.mini{grid-template-columns:1fr;gap:12px}.th{width:100%}.mini img{width:100%;height:auto;aspect-ratio:1200/630}#news .h2{margin-top:32px}.grid{grid-template-columns:1fr;gap:40px}.why{grid-template-columns:1fr 1fr;gap:10px}.why div{padding:14px}.why p{font-size:.8rem}
+@media (max-width:860px){.search{display:none}.sbtn{display:grid}.sopen .search{display:flex;position:absolute;left:16px;right:16px;top:12px;max-width:none;z-index:41}.sopen .search input{background:#121212}.tip{flex-wrap:wrap;gap:14px 20px}.tip .btn{margin-left:0}}
+@media (max-width:600px){.wrap{padding:0 20px}
+.bar{gap:6px;height:56px}.burger{margin-left:-10px}.logo{font-size:1.15rem}.brand{margin-left:2px}
+.sbtn{margin-left:auto;width:36px;height:36px}.lang{margin-left:4px;font-size:.7rem;padding:3px 9px}
+.read .hi{margin:0 -20px 14px}.read .hi .hero-img{border-radius:0;border:0}.hi .dur{right:12px}
+article .st{font-size:1.3rem;line-height:1.25}article .lead{font-size:.95rem}.smeta{font-size:.82rem}
+article .prose{font-size:.95rem}article .prose h2{font-size:1.15rem}.grid2{grid-template-columns:1fr;gap:30px}.card.lead{grid-column:auto}.leadside{grid-column:auto;flex-direction:column;gap:40px}.leadside .card p{display:-webkit-box}.mini{grid-template-columns:1fr;gap:12px}.th{width:100%}.mini img{width:100%;height:auto;aspect-ratio:1200/630}#news .h2{margin-top:32px}.grid{grid-template-columns:1fr;gap:40px}.why{grid-template-columns:1fr 1fr;gap:10px}.why div{padding:14px}.why p{font-size:.8rem}
  .models{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:0 -24px;padding:0 24px 4px}.models::-webkit-scrollbar{display:none}.models{gap:14px}.model{flex:0 0 46%;scroll-snap-align:start}
  body{font-size:16.5px}.h2{margin-top:40px}.hero{min-height:0}.hero .in{padding:26px 20px}.hero .btn{flex:1;white-space:nowrap;padding:11px 12px}
  .phead{flex-direction:column-reverse;align-items:flex-start}.phead img{width:100%}}
@@ -235,7 +240,7 @@ footer p{max-width:560px;margin-top:10px}
 <body>
 <header class="top"><div class="wrap">
 <div class="bar"><button class="burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="drawer"><span></span><span></span><span></span></button>
-<div class="brand"><a class="logo" href="/nl/">Trending<span>Tesla</span></a><span class="slogan">Iedere dag het laatste nieuws &amp; trends</span></div>
+<div class="brand"><a class="logo" href="/nl/">Trending<span>Tesla</span></a></div>
 <form class="search" role="search" action="/nl/" data-idx="/search-nl.json" data-none="Niets gevonden"><input type="search" name="q" placeholder="Zoek in Tesla-nieuws" aria-label="Zoek in Tesla-nieuws" autocomplete="off"><button type="submit" aria-label="Zoek in Tesla-nieuws"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.6-3.6"/></svg></button><div class="res" hidden></div></form>
 <button class="sbtn" type="button" aria-label="Zoek in Tesla-nieuws"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.6-3.6"/></svg></button>
 <a class="lang" href="/tesla-roadster-unveil-postponed-october-15/" hreflang="en" lang="en" title="English">EN</a></div>

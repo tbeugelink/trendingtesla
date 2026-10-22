@@ -279,6 +279,8 @@ h1,h2,h3{color:var(--head);font-weight:800}
 .dtopics a{text-align:center;font-size:.84rem;font-weight:700;color:var(--fg);text-decoration:none;background:#272727;border:1px solid #272727;border-radius:10px;padding:10px 6px 8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .dtopics a:hover{background:#3f3f3f;border-color:#3f3f3f;color:var(--head)}
 .dtopics a.on{background:var(--head);border-color:var(--head);color:#03050a}
+.dsep{border:0;border-top:1px solid var(--border2);margin:16px 4px}
+.dclose{margin-bottom:10px}
 .dmodels{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:0 4px}
 .dm{display:flex;flex-direction:column;border:1px solid var(--edge);border-radius:12px;overflow:hidden;text-decoration:none;color:var(--head);background:#0b0b0b;transition:border-color .15s,background .15s}
 .dm:hover{border-color:#6b7d95;background:#1a1a1a}
@@ -295,17 +297,13 @@ h1,h2,h3{color:var(--head);font-weight:800}
 .cats9 a{text-align:center;font-size:.8rem;font-weight:700;color:var(--fg);text-decoration:none;background:#272727;border:1px solid #272727;border-radius:10px;padding:9px 6px 7px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;transition:border-color .2s,color .2s}
 .cats9 a:hover{background:#3f3f3f;border-color:#3f3f3f;color:var(--head)}
 .cats9 a.on{background:var(--head);border-color:var(--head);color:#03050a}
-.mnav{display:flex;flex-direction:column;gap:4px;margin:-14px 0 28px}
-.mrow{display:grid;grid-template-columns:96px 1fr;gap:14px;align-items:center;padding:6px;margin:0 -6px;border-radius:12px;transition:background .15s}
-.mrow:hover{background:#212121}
-.mrow.in,.mrow.on{background:#272727}
-.mimg img,.mimg i{display:block;width:96px;aspect-ratio:1200/630;object-fit:cover;border-radius:8px;border:1px solid var(--edge);background:var(--surface)}
-.mname{display:block;font-size:.98rem;font-weight:800;color:var(--head);text-decoration:none;line-height:1.2}
-.mname:hover{color:var(--blue2)}
-.mopts{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
-.mopts a{font-size:.74rem;font-weight:700;color:var(--muted);text-decoration:none;border:1px solid #3f3f3f;border-radius:8px;padding:4px 8px 3px;white-space:nowrap;transition:background .15s}
+.mnav{display:grid;grid-template-columns:1fr 1fr;gap:10px 7px;margin:-14px 0 28px}
+.mcell{display:grid;grid-template-columns:1fr 1fr;gap:7px;align-items:start}
+.mopts{display:flex;flex-direction:column;gap:5px}
+.mopts a{font-size:.72rem;font-weight:700;color:var(--muted);text-decoration:none;border:1px solid #3f3f3f;border-radius:8px;padding:5px 6px 4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-align:center;transition:background .15s}
 .mopts a:hover{background:#3f3f3f;color:var(--head)}
 .mopts a.on{background:var(--head);border-color:var(--head);color:#03050a}
+.dm.on,.dm.in{border-color:var(--head)}
 .specs{width:100%;border-collapse:collapse;margin:6px 0 10px;font-size:.92rem}
 .specs th,.specs td{padding:9px 12px;border-bottom:1px solid var(--border2);text-align:left;vertical-align:top}
 .specs th{width:38%;color:var(--muted);font-weight:700}
@@ -659,10 +657,10 @@ def drawer(lang, active=None):
     L = LANGS[lang]
     out = (f'<div class="dh"><button class="burger" type="button" aria-label="{L["menu"]}"><span></span><span></span><span></span></button>'
            f'<a class="logo" href="{url(lang)}">Trending<span>Tesla</span></a></div>'
-           f'<button class="di dclose" type="button">‹ {L["collapse"]}</button><div class="mobonly"><h4>{L["d_topics"]}</h4><div class="dtopics">')
+           f'<button class="di dclose" type="button">‹ {L["collapse"]}</button><div class="mobonly"><div class="dtopics">')
     out += "".join(f'<a class="{"on" if k == active else ""}" href="{url(lang, "category/" + k + "/")}">{c[lang]}</a>'
                    for k, c in CATEGORIES.items() if c["menu"])
-    out += f'</div></div><h4>{L["d_models"]}</h4>'
+    out += f'</div><hr class="dsep"></div>'
     out += '<div class="dmodels">'
     for k in DRAWER_MODELS:
         ph = model_photo(k)
@@ -717,9 +715,8 @@ def modelnav(lang, current=None):
         ph = model_photo(r)
         img = f'<img src="{ph}" alt="" loading="lazy">' if ph else '<i></i>'
         st = " on" if current == r else (" in" if cur_root == r else "")
-        rows += (f'<div class="mrow{st}"><a class="mimg" href="{url(lang, "model/" + r + "/")}">{img}</a>'
-                 f'<div><a class="mname" href="{url(lang, "model/" + r + "/")}">{MODELS[r]["name"]}</a>'
-                 f'{f"<div class=mopts>{opts}</div>" if opts else ""}</div></div>')
+        rows += (f'<div class="mcell"><a class="dm{st}" href="{url(lang, "model/" + r + "/")}"><div class="ph">{img}</div>'
+                 f'<span>{MODELS[r]["name"]}</span></a><div class="mopts">{opts}</div></div>')
     return f'<nav class="mnav" aria-label="Models">{rows}</nav>'
 
 

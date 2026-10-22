@@ -115,8 +115,8 @@ CATEGORIES = {
     "boring":   {"en": "Boring Co.", "nl": "Boring Co.", "menu": True},
     "optimus":  {"en": "Optimus",  "nl": "Optimus",  "menu": True},
     "energy":   {"en": "Energy",   "nl": "Energie",  "menu": True},
-    "guides":   {"en": "Guides",   "nl": "Gidsen",   "menu": True},
     "earnings": {"en": "Earnings", "nl": "Cijfers",  "menu": True},
+    "guides":   {"en": "Tips",     "nl": "Tips",     "menu": True, "btn": "Tips!"},
     "software": {"en": "Software", "nl": "Software", "menu": False},
     "charging": {"en": "Charging", "nl": "Laden",    "menu": False},
     "ecosystem": {"en": "Ecosystem", "nl": "Ecosysteem", "menu": False},
@@ -302,6 +302,7 @@ h1,h2,h3{color:var(--head);font-weight:800}
 .cats9{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-bottom:28px}
 .cats9 a{text-align:center;font-size:.8rem;font-weight:700;color:var(--fg);text-decoration:none;background:#272727;border:1px solid #272727;border-radius:10px;padding:9px 6px 7px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;transition:border-color .2s,color .2s}
 .cats9 a:hover{background:#3f3f3f;border-color:#3f3f3f;color:var(--head)}
+.cats9 a b,.dtopics a b{font-weight:900}
 .cats9 a.on{background:var(--head);border-color:var(--head);color:#03050a}
 .mnav{display:flex;flex-direction:column;gap:10px;margin:-14px 0 28px}.drawer .mnav{margin:0 4px}
 .mcell{display:grid;grid-template-columns:1fr 1fr;gap:7px;align-items:start}
@@ -664,7 +665,7 @@ def drawer(lang, active=None):
     out = (f'<div class="dh"><button class="burger" type="button" aria-label="{L["menu"]}"><span></span><span></span><span></span></button>'
            f'<a class="logo" href="{url(lang)}">Trending<span>Tesla</span></a></div>'
            f'<button class="di dclose" type="button">‹ {L["collapse"]}</button><div class="mobonly"><div class="dtopics">')
-    out += "".join(f'<a class="{"on" if k == active else ""}" href="{url(lang, "category/" + k + "/")}">{c[lang]}</a>'
+    out += "".join(f'<a class="{"on" if k == active else ""}" href="{url(lang, "category/" + k + "/")}">{btn_label(c, lang)}</a>'
                    for k, c in CATEGORIES.items() if c["menu"])
     out += f'</div><hr class="dsep"></div>'
     out += modelnav(lang)
@@ -796,9 +797,13 @@ def listing(items, lang, active=None, model=None):
                 lead_px=1500 if info else None)
 
 
+def btn_label(c, lang):
+    return f'<b>{c["btn"]}</b>' if c.get("btn") else c[lang]
+
+
 def cats9(lang, active=None):
     return '<nav class="cats9" aria-label="Topics">' + "".join(
-        f'<a href="{url(lang, "category/" + k + "/")}"{" class=\"on\"" if k == active else ""}>{c[lang]}</a>'
+        f'<a href="{url(lang, "category/" + k + "/")}"{" class=\"on\"" if k == active else ""}>{btn_label(c, lang)}</a>'
         for k, c in CATEGORIES.items() if c["menu"]) + '</nav>'
 
 

@@ -364,7 +364,7 @@ article{padding:36px 0 8px}
 article h1{font-size:clamp(1.8rem,4.6vw,2.6rem);line-height:1.12;letter-spacing:-.025em;margin:10px 0 14px}
 article .lead{font-size:1.18rem;line-height:1.55;color:var(--muted);margin:0 0 18px}
 article .hero-img{border-radius:16px;margin:0 0 26px;aspect-ratio:1200/630;width:100%;object-fit:cover;border:1px solid var(--edge)}
-.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin:-8px 0 24px}
 .chips a{font-size:.78rem;font-weight:700;color:var(--muted);text-decoration:none;border:1px solid var(--border2);border-radius:999px;padding:3px 10px}
 .chips a:hover{color:var(--head);border-color:var(--head)}
 .prose h2{font-size:1.35rem;line-height:1.3;letter-spacing:-.015em;margin:34px 0 10px}
@@ -637,6 +637,19 @@ def story(a, lang, tag="h1"):
             f'<div class="prose">{t["body"]}</div>{src}</article>')
 
 
+def listing(items, lang, active=None):
+    """Newest article open in full on the left, the next ones stacked on the right, the rest below."""
+    L = LANGS[lang]
+    if not items:
+        return f'<p class="empty">{L["empty"]}</p>'
+    side = "".join(mini(a, lang) for a in items[1:9])
+    out = (f'<section class="read home">{story(items[0], lang, "h2")}'
+           f'<aside class="rside">{cats9(lang, active)}<div class="side">{side}</div></aside></section>')
+    if len(items) > 9:
+        out += section(L["more"], grid(items[9:], lang))
+    return out
+
+
 def cats9(lang, active=None):
     return '<nav class="cats9" aria-label="Topics">' + "".join(
         f'<a href="{url(lang, "category/" + k + "/")}"{" class=\"on\"" if k == active else ""}>{c[lang]}</a>'
@@ -809,8 +822,8 @@ def build():
             if key == "news":
                 items = news
             intro = L["eco_intro"] if key == "ecosystem" else L["cat_intro"].format(c[lang])
-            head = f'<h1 class="sr">{c[lang]}</h1><div class="ptop"></div>'
-            content = grid(items, lang, lead=True) if items else f'<p class="empty">{L["empty"]}</p>'
+            head = f'<h1 class="sr">{c[lang]}</h1>'
+            content = listing(items, lang, key)
             write(url(lang, f"category/{key}/"),
                   page(lang, f"category/{key}/", c[lang], intro, head + content, active=key))
 
@@ -830,11 +843,8 @@ def build():
                 chips_v = '<div class="versions"><span>' + L["your_version"] + '</span>' + "".join(
                     f'<a href="{url(lang, "model/" + k + "/")}"{" class=\"on\"" if k == key else ""}>{esc(lbl)}</a>'
                     for k, lbl in btns) + '</div>'
-            head = f'<h1 class="sr">Tesla {m["name"]}</h1>' + (chips_v or '<div class="ptop"></div>')
-            content = ""
-            if mg:
-                content += section(L["model_guides"].format(m["name"]), grid(mg, lang))
-            content += section(L["model_news"].format(m["name"]), grid(mn, lang, lead=not mg) if mn else f'<p class="empty">{L["empty"]}</p>')
+            head = f'<h1 class="sr">Tesla {m["name"]}</h1>' + chips_v
+            content = listing(items, lang)
             write(url(lang, f"model/{key}/"),
                   page(lang, f"model/{key}/", f"Tesla {m['name']}", L["model_intro"].format(m["name"]), head + content,
                        image=ph))

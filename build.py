@@ -1044,7 +1044,7 @@ def build():
         body = f'<h1 class="sr">{NAME} — {L["tagline"]}</h1>'
         if news:
             top = news[0]
-            body += feed(top, story(top, lang, "h2"), [a for a in arts if a is not top], lang, None, L["latest"])
+            body += feed(top, story(top, lang, "h2"), [a for a in arts if a is not top], lang, "news", L["latest"])
         else:
             body += section(L["latest"], f'<p class="empty">{L["empty"]}</p>', anchor="news")
         body += section(L["why_h"], why(lang))

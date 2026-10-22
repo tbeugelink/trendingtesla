@@ -106,21 +106,19 @@ LANGS = {
 
 CATEGORIES = {
     "news":     {"en": "News",     "nl": "Nieuws",   "menu": True},
-    "robotaxi": {"en": "Robotaxi", "nl": "Robotaxi", "menu": True},
-    "fsd":      {"en": "FSD",      "nl": "FSD",      "menu": True},
     "models":   {"en": "Models",   "nl": "Modellen", "menu": True},
-    "earnings": {"en": "Earnings", "nl": "Cijfers",  "menu": True},
-    "energy":   {"en": "Energy",   "nl": "Energie",  "menu": True},
-    "optimus":  {"en": "Optimus",  "nl": "Optimus",  "menu": True},
-    "software": {"en": "Software", "nl": "Software", "menu": False},
-    "charging": {"en": "Charging", "nl": "Laden",    "menu": False},
-    "guides":   {"en": "Guides",   "nl": "Gidsen",   "menu": True},
-    # SpaceX, Starlink, xAI/Grok, The Boring Company: only stories with a clear link to Tesla.
+    "fsd":      {"en": "FSD",      "nl": "FSD",      "menu": True},
+    "xai":      {"en": "xAI / Grok", "nl": "xAI / Grok", "menu": True},
+    "robotaxi": {"en": "Robotaxi", "nl": "Robotaxi", "menu": True},
     "spacex":   {"en": "SpaceX",   "nl": "SpaceX",   "menu": True},
     "starlink": {"en": "Starlink", "nl": "Starlink", "menu": True},
-    "xai":      {"en": "xAI / Grok", "nl": "xAI / Grok", "menu": True},
     "boring":   {"en": "Boring Co.", "nl": "Boring Co.", "menu": True},
-    # umbrella page for the four above (kept for older links)
+    "optimus":  {"en": "Optimus",  "nl": "Optimus",  "menu": True},
+    "energy":   {"en": "Energy",   "nl": "Energie",  "menu": True},
+    "guides":   {"en": "Guides",   "nl": "Gidsen",   "menu": True},
+    "earnings": {"en": "Earnings", "nl": "Cijfers",  "menu": True},
+    "software": {"en": "Software", "nl": "Software", "menu": False},
+    "charging": {"en": "Charging", "nl": "Laden",    "menu": False},
     "ecosystem": {"en": "Ecosystem", "nl": "Ecosysteem", "menu": False},
 }
 

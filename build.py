@@ -277,6 +277,10 @@ h1,h2,h3{color:var(--head);font-weight:800}
 .drawer{overscroll-behavior:contain}html.dopen,html.dopen body{overflow:hidden}
 .drawer .dh{display:flex;align-items:center;gap:12px;padding:0 4px 13px 12px;margin:0 -12px 10px;border-bottom:1px solid var(--border)}
 @media (min-width:861px){.drawer .mobonly{display:none}}
+.dtopics{display:grid;grid-template-columns:1fr 1fr;gap:7px;padding:0 4px}
+.dtopics a{text-align:center;font-size:.84rem;font-weight:700;color:var(--fg);text-decoration:none;background:#272727;border:1px solid #272727;border-radius:10px;padding:10px 6px 8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.dtopics a:hover{background:#3f3f3f;border-color:#3f3f3f;color:var(--head)}
+.dtopics a.on{background:var(--head);border-color:var(--head);color:#03050a}
 .dmodels{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:0 4px}
 .dm{display:flex;flex-direction:column;border:1px solid var(--edge);border-radius:12px;overflow:hidden;text-decoration:none;color:var(--head);background:#0b0b0b;transition:border-color .15s,background .15s}
 .dm:hover{border-color:#6b7d95;background:#1a1a1a}
@@ -657,10 +661,10 @@ def drawer(lang, active=None):
     L = LANGS[lang]
     out = (f'<div class="dh"><button class="burger" type="button" aria-label="{L["menu"]}"><span></span><span></span><span></span></button>'
            f'<a class="logo" href="{url(lang)}">Trending<span>Tesla</span></a></div>'
-           f'<button class="di dclose" type="button">‹ {L["collapse"]}</button><div class="mobonly"><h4>{L["d_topics"]}</h4>')
-    out += "".join(f'<a class="di{" on" if k == active else ""}" href="{url(lang, "category/" + k + "/")}">{c[lang]}</a>'
+           f'<button class="di dclose" type="button">‹ {L["collapse"]}</button><div class="mobonly"><h4>{L["d_topics"]}</h4><div class="dtopics">')
+    out += "".join(f'<a class="{"on" if k == active else ""}" href="{url(lang, "category/" + k + "/")}">{c[lang]}</a>'
                    for k, c in CATEGORIES.items() if c["menu"])
-    out += f'</div><h4>{L["d_models"]}</h4>'
+    out += f'</div></div><h4>{L["d_models"]}</h4>'
     out += '<div class="dmodels">'
     for k in DRAWER_MODELS:
         ph = model_photo(k)

@@ -784,7 +784,8 @@ def card(a, lang, lead=False):
 
 
 def dur(a, lang):
-    return f'<span class="dur">{read_time(a, lang)} min</span>'
+    secs = max(10, round(len(html.unescape(re.sub(r"<[^>]+>", " ", a[lang]["body"])).split()) / 220 * 60))
+    return f'<span class="dur">{secs // 60}:{secs % 60:02d}</span>'
 
 
 def mini(a, lang):

@@ -135,7 +135,7 @@ MODELS = {
     "model-3":           {"name": "Model 3",            "photo": "model-3-classic.jpg", "article_photo": "m3h-1.jpg", "gallery": ["m3h-1.jpg", "m3h-4.jpg", "m3h-2.jpg", "m3h-3.jpg", "m3h-5.jpg"]},
     "model-3-classic":   {"name": "Model 3 2017–2023",  "photo": "model-3-classic.jpg", "parent": "model-3", "label": "2017–2023", "gallery": ["m3c-1.jpg", "m3c-5.jpg", "m3c-9.jpg", "m3c-2.jpg", "m3c-6.jpg", "m3c-10.jpg", "m3c-3.jpg", "m3c-7.jpg", "m3c-11.jpg", "m3c-4.jpg", "m3c-8.jpg"]},
     "model-3-highland":  {"name": "Model 3 Highland",   "photo": "m3h-4.jpg", "parent": "model-3", "label": "Highland · 2023+"},
-    "model-3-standard":  {"name": "Model 3 Standard",   "photo": "model-3.jpg", "parent": "model-3", "label": "Standard · 2025+"},
+    "model-3-standard":  {"name": "Model 3 Standard",   "photo": "m3s-1.jpg", "gallery": ["m3s-1.jpg"], "parent": "model-3", "label": "Standard · 2025+"},
     "model-3-performance": {"name": "Model 3 Performance", "photo": "m3p-1.jpg", "gallery": ["m3p-1.jpg", "m3p-2.jpg"], "parent": "model-3", "label": "Performance"},
     "model-x":           {"name": "Model X",            "photo": "model-x.jpg", "gallery": ["mx-1.jpg", "mx-4.jpg", "mx-5.jpg", "mx-2.jpg", "mx-3.jpg"]},
     "model-x-classic":   {"name": "Model X 2015–2020",  "parent": "model-x", "label": "2015–2020"},

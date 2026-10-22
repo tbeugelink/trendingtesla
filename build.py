@@ -115,8 +115,13 @@ CATEGORIES = {
     "software": {"en": "Software", "nl": "Software", "menu": False},
     "charging": {"en": "Charging", "nl": "Laden",    "menu": False},
     "guides":   {"en": "Guides",   "nl": "Gidsen",   "menu": True},
-    # SpaceX, Starlink, The Boring Company, xAI/Grok: only stories with a clear link to Tesla.
-    "ecosystem": {"en": "Ecosystem", "nl": "Ecosysteem", "menu": True},
+    # SpaceX, Starlink, xAI/Grok, The Boring Company: only stories with a clear link to Tesla.
+    "spacex":   {"en": "SpaceX",   "nl": "SpaceX",   "menu": True},
+    "starlink": {"en": "Starlink", "nl": "Starlink", "menu": True},
+    "xai":      {"en": "xAI / Grok", "nl": "xAI / Grok", "menu": True},
+    "boring":   {"en": "Boring Co.", "nl": "Boring Co.", "menu": True},
+    # umbrella page for the four above (kept for older links)
+    "ecosystem": {"en": "Ecosystem", "nl": "Ecosysteem", "menu": False},
 }
 
 # Model pages. "photo" is a file in static/img/models/ (optional until uploaded).
@@ -155,7 +160,7 @@ MODELS = {
 # (each article always gets the same one, picked from its slug). Missing files are skipped.
 TOPIC_PHOTOS = {
     "robotaxi": ["cybercab-fleet.jpg", "robotaxi-my-1.jpg", "cybercab-street.jpg", "cybercab-interior.jpg", "robotaxi-my-2.jpg", "models/cc-3.jpg", "models/cybercab.jpg"], "fsd": ["fsd.jpg", "models/myj-3.jpg", "fsd-2.jpg", "models/m3c-1.jpg", "fsd-3.jpg", "models/myj-1.jpg", "fsd-4.jpg"], "software": ["interior-2.jpg", "grok-2.jpg", "interior-1.jpg", "fsd.jpg", "grok-1.jpg", "fsd-2.jpg", "fsd-3.jpg", "fsd-4.jpg"], "optimus": ["optimus-army.jpg", "optimus-line.jpg", "optimus.jpg", "optimus-store.jpg", "optimus-factory.jpg", "optimus-full.jpg", "optimus-kitchen.jpg", "optimus-office.jpg", "optimus-garden.jpg"],
-    "energy": ["megapack-1.jpg", "energy-3.jpg", "energy.jpg", "energy-5.jpg", "megapack-2.jpg", "energy-2.jpg", "energy-6.jpg", "megapack-3.jpg", "energy-4.jpg"], "charging": ["supercharger.jpg", "supercharger-5.jpg", "supercharger-2.jpg", "supercharger-7.jpg", "charge-port.jpg", "supercharger-3.jpg", "supercharger-4.jpg", "winter-1.jpg", "supercharger-6.jpg"], "ecosystem": ["spacex-1.jpg", "starlink-car-1.jpg", "spacex-2.jpg", "starlink-1.jpg", "spacex-4.jpg", "starlink-car-3.jpg", "spacex-3.jpg", "starlink-2.jpg", "spacex-5.jpg", "starlink-car-2.jpg", "tunnel-2.jpg", "tunnel-3.jpg", "tunnel-4.jpg"], "earnings": ["earnings-1.jpg", "gigafactory.jpg", "earnings-5.jpg", "earnings-2.jpg", "earnings-6.jpg", "earnings-4.jpg", "earnings-7.jpg", "earnings-3.jpg", "earnings-8.jpg", "models/myj-4.jpg", "gigafactory-3.jpg", "gigafactory-5.jpg", "gigafactory-2.jpg", "models/model-3.jpg", "gigafactory-4.jpg", "models/myj-6.jpg", "gigafactory-6.jpg"], "news": ["gigafactory.jpg", "models/myj-2.jpg", "gigafactory-4.jpg", "gigafactory-2.jpg", "models/m3c-10.jpg", "gigafactory-6.jpg", "models/myj-5.jpg", "gigafactory-3.jpg", "gigafactory-5.jpg"],
+    "energy": ["megapack-1.jpg", "energy-3.jpg", "energy.jpg", "energy-5.jpg", "megapack-2.jpg", "energy-2.jpg", "energy-6.jpg", "megapack-3.jpg", "energy-4.jpg"], "charging": ["supercharger.jpg", "supercharger-5.jpg", "supercharger-2.jpg", "supercharger-7.jpg", "charge-port.jpg", "supercharger-3.jpg", "supercharger-4.jpg", "winter-1.jpg", "supercharger-6.jpg"], "ecosystem": ["spacex-1.jpg", "starlink-car-1.jpg", "spacex-2.jpg", "starlink-1.jpg", "spacex-4.jpg", "starlink-car-3.jpg", "spacex-3.jpg", "starlink-2.jpg", "spacex-5.jpg", "starlink-car-2.jpg", "tunnel-2.jpg", "tunnel-3.jpg", "tunnel-4.jpg"], "spacex": ["spacex-1.jpg", "spacex-2.jpg", "spacex-4.jpg", "spacex-3.jpg", "spacex-5.jpg"], "starlink": ["starlink-car-1.jpg", "starlink-1.jpg", "starlink-car-3.jpg", "starlink-2.jpg", "starlink-car-2.jpg"], "xai": ["grok-2.jpg", "grok-1.jpg", "interior-1.jpg"], "boring": ["tunnel-2.jpg", "tunnel-3.jpg", "tunnel-4.jpg", "tunnel-1.jpg"], "earnings": ["earnings-1.jpg", "gigafactory.jpg", "earnings-5.jpg", "earnings-2.jpg", "earnings-6.jpg", "earnings-4.jpg", "earnings-7.jpg", "earnings-3.jpg", "earnings-8.jpg", "models/myj-4.jpg", "gigafactory-3.jpg", "gigafactory-5.jpg", "gigafactory-2.jpg", "models/model-3.jpg", "gigafactory-4.jpg", "models/myj-6.jpg", "gigafactory-6.jpg"], "news": ["gigafactory.jpg", "models/myj-2.jpg", "gigafactory-4.jpg", "gigafactory-2.jpg", "models/m3c-10.jpg", "gigafactory-6.jpg", "models/myj-5.jpg", "gigafactory-3.jpg", "gigafactory-5.jpg"],
 }
 MODEL_STRIP = ["model-s", "model-3", "model-3-highland", "model-x", "model-y", "model-y-juniper", "cybertruck"]
 
@@ -274,8 +279,8 @@ h1,h2,h3{color:var(--head);font-weight:800}
 .drawer .di:hover{background:var(--surface2);color:var(--head)}
 .drawer .di.on{background:var(--surface2);color:var(--head);font-weight:800}
 .drawer .di img,.drawer .di i{width:56px;aspect-ratio:1200/630;object-fit:cover;border-radius:5px;border:1px solid var(--edge);flex:none;background:var(--surface)}
-.cats9{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:28px}
-.cats9 a{text-align:center;font-size:.84rem;font-weight:700;color:var(--fg);text-decoration:none;background:#272727;border:1px solid #272727;border-radius:10px;padding:9px 6px 7px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;transition:border-color .2s,color .2s}
+.cats9{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-bottom:28px}
+.cats9 a{text-align:center;font-size:.8rem;font-weight:700;color:var(--fg);text-decoration:none;background:#272727;border:1px solid #272727;border-radius:10px;padding:9px 6px 7px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;transition:border-color .2s,color .2s}
 .cats9 a:hover{background:#3f3f3f;border-color:#3f3f3f;color:var(--head)}
 .cats9 a.on{background:var(--head);border-color:var(--head);color:#03050a}
 .mnav{display:flex;flex-direction:column;gap:4px;margin:-14px 0 28px}
@@ -728,7 +733,9 @@ def modelinfo(key, lang):
 NEAR_CATS = {"robotaxi": ["fsd", "models"], "fsd": ["robotaxi", "software"], "software": ["fsd", "guides"],
              "charging": ["energy", "guides"], "energy": ["charging", "earnings"], "earnings": ["news", "energy"],
              "news": ["earnings", "models"], "models": ["guides", "news"], "guides": ["models", "charging"],
-             "optimus": ["ecosystem", "earnings"], "ecosystem": ["optimus", "robotaxi"]}
+             "optimus": ["spacex", "earnings"], "ecosystem": ["spacex", "starlink"],
+             "spacex": ["starlink", "earnings"], "starlink": ["spacex", "robotaxi"], "xai": ["software", "fsd"], "boring": ["robotaxi", "spacex"]}
+ECO = ("spacex", "starlink", "xai", "boring", "ecosystem")
 
 
 def rank_for(items, cat=None, model=None):
@@ -1010,10 +1017,10 @@ def build():
 
         # ---------- Category pages ----------
         for key, c in CATEGORIES.items():
-            items = arts if key == "news" else [a for a in arts if a["category"] == key]
+            items = arts if key == "news" else [a for a in arts if a["category"] == key or (key == "ecosystem" and a["category"] in ECO)]
             if key == "news":
                 items = news
-            intro = L["eco_intro"] if key == "ecosystem" else L["cat_intro"].format(c[lang])
+            intro = L["eco_intro"] if key in ECO else L["cat_intro"].format(c[lang])
             head = f'<h1 class="sr">{c[lang]}</h1>'
             content = listing(items, lang, key)
             write(url(lang, f"category/{key}/"),

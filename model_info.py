@@ -618,7 +618,8 @@ EXTRA = {
  "cybercab": [
    _r("Towing", "not possible", "Trekgewicht", "niet mogelijk"),
    _r("Price", "target under $30,000 (Musk); not sold to private buyers", "Prijs", "doel onder $ 30.000 (Musk); niet te koop voor particulieren"),
-   _cons(10.2, None, ("calculated from 48 kWh and 472 km, indicative", "berekend uit 48 kWh en 472 km, indicatief"))],
+   _cons(10.2, None, ("calculated from 48 kWh and 472 km, indicative", "berekend uit 48 kWh en 472 km, indicatief")),
+   _r("Glass roof", "no", "Glazen dak", "nee")],
  "semi": [
    _r("Weight", "tractor under 20,000 lb / 9 t (Standard) · about 23,000 lb / 10.4 t (Long Range)", "Gewicht", "trekker onder 9 t (Standard) · ongeveer 10,4 t (Long Range)"),
    _r("Towing", "gross combination weight 82,000 lb (37 t)", "Trekgewicht", "maximaal combinatiegewicht 37 t (82.000 lb)"),

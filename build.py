@@ -321,12 +321,12 @@ h1,h2,h3{color:var(--head);font-weight:800}
 .cats9 a:hover{background:#3f3f3f;border-color:#3f3f3f;color:var(--head)}
 .cats9 a b,.dtopics a b{font-weight:900}
 .cats9 a.on{background:var(--head);border-color:var(--head);color:#03050a}
-.mnav{display:flex;flex-direction:column;gap:14px;margin:-14px 0 28px}.mgrp{display:flex;flex-direction:column;gap:6px}.mh{font-size:1.12rem;font-weight:900;color:var(--head);text-decoration:none;padding:0 2px;letter-spacing:-.01em}.mh:hover,.mh.on{text-decoration:underline;text-underline-offset:3px}.drawer .mnav{margin:0 4px}
+.mnav{display:flex;flex-direction:column;gap:14px;margin:-14px 0 28px}.mgrp{display:flex;flex-direction:column;gap:6px}.mh{font-size:.74rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--blue);text-decoration:none;padding:0 2px;margin-top:4px}.mh:hover,.mh.on{text-decoration:underline;text-underline-offset:3px}.drawer .mnav{margin:0 4px}
 .mcell{display:grid;grid-template-columns:1fr 1fr;gap:7px;align-items:start}
 .mopts{display:flex;flex-direction:column;gap:6px}
 .mopts a{font-size:.8rem;font-weight:700;color:var(--muted);text-decoration:none;border:1px solid #3f3f3f;border-radius:8px;padding:5px 6px 4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-align:center;transition:background .15s}
 .mopts a:hover{background:#3f3f3f;color:var(--head)}
-.mopts a.on{background:var(--head);border-color:var(--head);color:#03050a}.mopts a.vt{display:flex;align-items:center;gap:13px;padding:4px 10px 4px 4px;text-align:left;font-size:1.02rem;border-radius:10px}.mopts a.vt b{flex:none;width:62px;height:42px;border-radius:5px;overflow:hidden;background:#000}.mopts a.vt b img{width:100%;height:100%;object-fit:cover;display:block}.mopts a span{overflow:hidden;text-overflow:ellipsis}
+.mopts a.on,.mopts a.vt.on{background:var(--head);border-color:var(--head);color:#03050a;font-weight:600}.mopts a.vt{display:flex;align-items:center;gap:13px;padding:4px 10px 4px 4px;text-align:left;font-size:.98rem;font-weight:400;color:var(--fg);border-radius:10px}.mopts a.vt b{flex:none;width:74px;height:50px;border-radius:5px;overflow:hidden;background:#000}.mopts a.vt b img{width:100%;height:100%;object-fit:cover;display:block}.mopts a span{overflow:hidden;text-overflow:ellipsis}
 .dm.on,.dm.in{border-color:var(--head)}
 .specs{width:100%;border-collapse:collapse;margin:6px 0 10px;font-size:.92rem}
 .specs th,.specs td{padding:9px 12px;border-bottom:1px solid var(--border2);text-align:left;vertical-align:top}

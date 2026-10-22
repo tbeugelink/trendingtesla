@@ -361,3 +361,45 @@ INFO = {
   "watch": ["Alle cijfers zijn claims van Tesla; nog geen onafhankelijke tests.", "De originele Roadster uit 2017 liep jarenlang vertraging op."],
   "special": ["Koudgas-stuwraketjes, ontwikkeld samen met SpaceX."]}},
 }
+
+
+# Battery chemistry per model/version: (en, nl). Inserted after the battery row, or as the second row.
+BATTERY_TYPE = {
+    "model-s": ("Lithium-ion, 18650 cells (NCA, Panasonic)", "Lithium-ion, 18650-cellen (NCA, Panasonic)"),
+    "model-s-classic": ("Lithium-ion, 18650 cells (NCA, Panasonic)", "Lithium-ion, 18650-cellen (NCA, Panasonic)"),
+    "model-s-2021": ("Lithium-ion, 18650 cells (NCA, Panasonic)", "Lithium-ion, 18650-cellen (NCA, Panasonic)"),
+    "model-s-plaid": ("Lithium-ion, 18650 cells (NCA, Panasonic)", "Lithium-ion, 18650-cellen (NCA, Panasonic)"),
+    "model-3": ("2170 cells: LFP in base versions, nickel-based (NCA/NCM) in Long Range and Performance",
+                "2170-cellen: LFP in basisversies, nikkelhoudend (NCA/NCM) in Long Range en Performance"),
+    "model-3-classic": ("2170 cells: nickel-based (NCA/NCM); LFP in Standard Range Plus/RWD from 2021",
+                        "2170-cellen: nikkelhoudend (NCA/NCM); LFP in Standard Range Plus/RWD vanaf 2021"),
+    "model-3-highland": ("LFP (RWD); nickel-based NCA/NCM (Premium, Performance)", "LFP (RWD); nikkelhoudend NCA/NCM (Premium, Performance)"),
+    "model-3-standard": ("LFP (lithium iron phosphate)", "LFP (lithium-ijzerfosfaat)"),
+    "model-3-performance": ("Nickel-based lithium-ion (NCA/NCM), 2170 cells", "Nikkelhoudend lithium-ion (NCA/NCM), 2170-cellen"),
+    "model-x": ("Lithium-ion, 18650 cells (NCA, Panasonic)", "Lithium-ion, 18650-cellen (NCA, Panasonic)"),
+    "model-x-classic": ("Lithium-ion, 18650 cells (NCA, Panasonic)", "Lithium-ion, 18650-cellen (NCA, Panasonic)"),
+    "model-x-2021": ("Lithium-ion, 18650 cells (NCA, Panasonic)", "Lithium-ion, 18650-cellen (NCA, Panasonic)"),
+    "model-x-plaid": ("Lithium-ion, 18650 cells (NCA, Panasonic)", "Lithium-ion, 18650-cellen (NCA, Panasonic)"),
+    "model-y": ("LFP in base versions, nickel-based (NCA/NCM) in Long Range and Performance; 4680 cells in some Texas-built cars",
+                "LFP in basisversies, nikkelhoudend (NCA/NCM) in Long Range en Performance; 4680-cellen in sommige auto's uit Texas"),
+    "model-y-classic": ("2170 nickel-based (NCA/NCM); LFP in Standard Range; 4680 cells in some Texas-built AWD",
+                        "2170 nikkelhoudend (NCA/NCM); LFP in Standard Range; 4680-cellen in sommige AWD's uit Texas"),
+    "model-y-juniper": ("LFP (RWD); nickel-based NCA/NCM (Long Range/Premium)", "LFP (RWD); nikkelhoudend NCA/NCM (Long Range/Premium)"),
+    "model-y-standard": ("Lithium-ion; chemistry differs by factory (LFP or nickel-based)", "Lithium-ion; chemie verschilt per fabriek (LFP of nikkelhoudend)"),
+    "model-y-performance": ("Nickel-based high-density pack (LG '5M' cells)", "Nikkelhoudend accupakket met hoge dichtheid (LG '5M'-cellen)"),
+    "model-y-l": ("Nickel-based lithium-ion (NCM)", "Nikkelhoudend lithium-ion (NCM)"),
+    "cybertruck": ("4680 cells, nickel-based (NCM), 800 V", "4680-cellen, nikkelhoudend (NCM), 800 V"),
+    "cybertruck-awd": ("4680 cells, nickel-based (NCM), 800 V", "4680-cellen, nikkelhoudend (NCM), 800 V"),
+    "cybertruck-cyberbeast": ("4680 cells, nickel-based (NCM), 800 V", "4680-cellen, nikkelhoudend (NCM), 800 V"),
+    "cybercab": ("4680 cells (Tesla's own)", "4680-cellen (eigen Tesla-cellen)"),
+    "semi": ("Lithium-ion (cell type not disclosed by Tesla)", "Lithium-ion (celtype niet bekendgemaakt door Tesla)"),
+    "roadster": ("Not disclosed yet", "Nog niet bekendgemaakt"),
+}
+for _k, (_en, _nl) in BATTERY_TYPE.items():
+    for _lang, _val, _lbl, _acc in (("en", _en, "Battery type", "Battery"), ("nl", _nl, "Accutype", "Accu")):
+        _specs = INFO[_k][_lang]["specs"]
+        _i = next((i + 1 for i, (lab, _) in enumerate(_specs) if lab == _acc), 1)
+        _specs.insert(_i, (_lbl, _val))
+
+INFO["cybercab"]["en"]["special"] = ["No steering wheel and no pedals: the car only drives itself.", "Butterfly doors.", "Designed for the lowest possible cost per mile."]
+INFO["cybercab"]["nl"]["special"] = ["Geen stuur en geen pedalen: de auto rijdt alleen zelf.", "Vlinderdeuren.", "Ontworpen voor de laagst mogelijke kosten per kilometer."]

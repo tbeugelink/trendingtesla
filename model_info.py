@@ -392,8 +392,8 @@ BATTERY_TYPE = {
     "cybertruck-awd": ("4680 cells, nickel-based (NCM), 800 V", "4680-cellen, nikkelhoudend (NCM), 800 V"),
     "cybertruck-cyberbeast": ("4680 cells, nickel-based (NCM), 800 V", "4680-cellen, nikkelhoudend (NCM), 800 V"),
     "cybercab": ("4680 cells (Tesla's own)", "4680-cellen (eigen Tesla-cellen)"),
-    "semi": ("Lithium-ion (cell type not disclosed by Tesla)", "Lithium-ion (celtype niet bekendgemaakt door Tesla)"),
-    "roadster": ("Not disclosed yet", "Nog niet bekendgemaakt"),
+    "semi": ("4680 cells, NCMA chemistry, made by Tesla", "4680-cellen, NCMA-chemie, door Tesla zelf gemaakt"),
+    "roadster": ("4680-format cells (high-power variant), 800–1,000 V", "Cellen in 4680-formaat (variant voor hoog vermogen), 800–1.000 V"),
 }
 for _k, (_en, _nl) in BATTERY_TYPE.items():
     for _lang, _val, _lbl, _acc in (("en", _en, "Battery type", "Battery"), ("nl", _nl, "Accutype", "Accu")):
@@ -403,3 +403,16 @@ for _k, (_en, _nl) in BATTERY_TYPE.items():
 
 INFO["cybercab"]["en"]["special"] = ["No steering wheel and no pedals: the car only drives itself.", "Butterfly doors.", "Designed for the lowest possible cost per mile."]
 INFO["cybercab"]["nl"]["special"] = ["Geen stuur en geen pedalen: de auto rijdt alleen zelf.", "Vlinderdeuren.", "Ontworpen voor de laagst mogelijke kosten per kilometer."]
+
+INFO["semi"]["sources"] += [("electrive — Tesla Semi features 822 kWh battery capacity", "https://www.electrive.com/2026/05/11/its-official-tesla-semi-features-822-kwh-battery-capacity/")]
+INFO["semi"]["en"]["specs"].insert(0, ("Battery", "548 kWh (Standard) · 822 kWh (Long Range), per CARB filing"))
+INFO["semi"]["nl"]["specs"].insert(0, ("Accu", "548 kWh (Standard) · 822 kWh (Long Range), volgens CARB-document"))
+INFO["roadster"]["sources"] += [("Not a Tesla App — New Tesla Roadster specs", "https://www.notateslaapp.com/news/4840/new-tesla-roadster-specs-battery-range-speed-trims-and-more"),
+                                ("EVWire — Tesla Roadster deep dive: battery and drive unit", "https://evwire.com/p/tesla-roadster-deep-dive-battery-drive-unit-ui-video-explained")]
+INFO["roadster"]["en"]["specs"][0:0] = [("Battery", "not officially confirmed; reports range from about 100 to 150 kWh"), ("Power", "about 1 MW (1,340 hp) drive unit")]
+INFO["roadster"]["nl"]["specs"][0:0] = [("Accu", "niet officieel bevestigd; berichten lopen uiteen van ongeveer 100 tot 150 kWh"), ("Vermogen", "aandrijving van ongeveer 1 MW (1.340 pk)")]
+for _k in ("semi", "roadster"):
+    for _lang, _lbl, _acc in (("en", "Battery type", "Battery"), ("nl", "Accutype", "Accu")):
+        _sp = INFO[_k][_lang]["specs"]
+        _row = next(r for r in _sp if r[0] == _lbl); _sp.remove(_row)
+        _sp.insert(next(i + 1 for i, r in enumerate(_sp) if r[0] == _acc), _row)

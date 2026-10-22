@@ -756,7 +756,7 @@ def words(a, lang):
     return len(re.sub(r"<[^>]+>", " ", a[lang]["body"]).split())
 
 
-def feed(lead, lead_html, rest, lang, active=None, side_title="", left_first=(), more=(), extra_side="", lead_px=None):
+def feed(lead, lead_html, rest, lang, active=None, side_title="", left_first=(), more=(), extra_side="", lead_px=None, left_pool=None):
     """YouTube-style page: lead story open on the left with a two-column grid of further articles
     below it (an ad/tip bar every few rows); a long list of the newest articles on the right."""
     # balance column heights (pixel estimates measured on the live layout)
@@ -775,8 +775,12 @@ def feed(lead, lead_html, rest, lang, active=None, side_title="", left_first=(),
         d = abs(h_left - h_right)
         if diff is None or d < diff:
             best, diff = left, d
-    best = max(best, len(left_first))
-    right_items, left_items = rest[:n - best], left_first + rest[n - best:]
+    if left_pool is not None:
+        left_items = list(left_pool[:best])
+        right_items = [x for x in rest if x not in left_items][:n - best]
+    else:
+        best = max(best, len(left_first))
+        right_items, left_items = rest[:n - best], left_first + rest[n - best:]
     tl = tips(lang)
     g, ti = "", 1
     for i, a in enumerate(left_items):
@@ -896,10 +900,23 @@ def write(path, text):
     p.write_text(text, encoding="utf-8")
 
 
+STOP = set("the a an and or of to in on for with is are be by at as from its it this that what how why new now tesla tesla's "
+           "de het een en of van in op voor met is zijn bij als uit naar dit dat wat hoe waarom nieuwe nu".split())
+
+
+def _terms(x):
+    return {w for w in re.findall(r"[a-z0-9]+", (x["en"]["title"] + " " + x["en"]["description"]).lower())
+            if len(w) > 2 and w not in STOP}
+
+
 def related(a, arts, n=3):
-    ms = set(a.get("models", []))
+    """Most relevant other articles: shared models (incl. model family), same topic, shared title words."""
+    fam = lambda x: {MODELS[k].get("parent") or k for k in x.get("models", [])}
+    ms, mf, ta = set(a.get("models", [])), fam(a), _terms(a)
     def score(x):
-        return (len(ms & set(x.get("models", []))) * 2 + (x["category"] == a["category"]), published(x))
+        sc = 4 * len(ms & set(x.get("models", []))) + 2 * len(mf & fam(x)) + 3 * (x["category"] == a["category"])
+        sc += min(len(ta & _terms(x)), 5)
+        return (sc, published(x))
     return sorted((x for x in arts if x is not a), key=score, reverse=True)[:n]
 
 
@@ -994,9 +1011,9 @@ def build():
                 "author": {"@type": "Organization", "name": NAME, "url": SITE},
             }
             head = f'<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>'
-            rel = related(a, arts, 4)
-            others = [x for x in arts if x is not a and x not in rel]
-            body = feed(a, story(a, lang), others, lang, a["category"], L["latest"], left_first=rel)
+            rel = related(a, arts, len(arts))
+            others = [x for x in arts if x is not a]
+            body = feed(a, story(a, lang), others, lang, a["category"], L["latest"], left_pool=rel)
             write(url(lang, a["slug"] + "/"),
                   page(lang, a["slug"] + "/", t["title"], t["description"], body, "article", head,
                        image=social_img(a, lang), active=a["category"]))

@@ -151,7 +151,7 @@ MODELS = {
     "cybertruck-awd":    {"name": "Cybertruck AWD",     "photo": "ct-1.jpg", "parent": "cybertruck", "label": "AWD"},
     "cybertruck-cyberbeast": {"name": "Cyberbeast",     "photo": "cb-1.jpg", "gallery": ["cb-1.jpg", "ct-5.jpg"], "parent": "cybertruck", "label": "Cyberbeast"},
     "cybercab":          {"name": "Cybercab",           "photo": "cybercab.jpg", "gallery": ["cybercab.jpg", "cc-1.jpg", "cc-3.jpg", "cc-2.jpg"]},
-    "roadster":          {"name": "Roadster",           "photo": "roadster.jpg", "gallery": ["rd-1.jpg", "rd-2.jpg", "rd-3.jpg"]},
+    "roadster":          {"name": "Roadster",           "photo": "roadster.jpg", "menu": "menu-roadster.jpg", "gallery": ["rd-1.jpg", "rd-2.jpg", "rd-3.jpg"]},
     "semi":              {"name": "Semi",               "photo": "semi.jpg", "menu": "menu-semi.jpg", "gallery": ["semi.jpg", "semi-4.jpg", "semi-2.jpg", "semi-5.jpg", "semi-3.jpg"]},
 }
 # Fallback photo per category: a file in static/img/topics/, or a list of files to vary between

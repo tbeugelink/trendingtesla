@@ -827,6 +827,7 @@ def feed(lead, lead_html, rest, lang, active=None, side_title="", left_first=(),
             best, diff = left, d
     if left_pool is not None:
         left_items = list(left_pool[:best])
+        left_items.sort(key=published, reverse=True)  # always newest first
         right_items = [x for x in rest if x not in left_items][:n - best]
     else:
         best = max(best, len(left_first))

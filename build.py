@@ -276,14 +276,17 @@ h1,h2,h3{color:var(--head);font-weight:800}
 .cats9 a{text-align:center;font-size:.84rem;font-weight:700;color:var(--fg);text-decoration:none;background:#272727;border:1px solid #272727;border-radius:10px;padding:9px 6px 7px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;transition:border-color .2s,color .2s}
 .cats9 a:hover{background:#3f3f3f;border-color:#3f3f3f;color:var(--head)}
 .cats9 a.on{background:var(--head);border-color:var(--head);color:#03050a}
-.mnav{display:flex;flex-direction:column;gap:8px;margin:-16px 0 28px}
-.mrow{display:grid;grid-template-columns:118px 1fr;gap:8px;align-items:start}
-.mopts{display:flex;flex-wrap:wrap;gap:8px}
-.mnav a{font-size:.8rem;font-weight:700;color:var(--fg);text-decoration:none;background:#272727;border:1px solid #272727;border-radius:10px;padding:8px 10px 6px;white-space:nowrap;text-align:center;transition:background .15s}
-.mnav .mopts a{background:transparent;border-color:#3f3f3f;color:var(--muted)}
-.mnav a:hover,.mnav .mopts a:hover{background:#3f3f3f;border-color:#3f3f3f;color:var(--head)}
-.mnav a.on,.mnav .mopts a.on{background:var(--head);border-color:var(--head);color:#03050a}
-.mnav a.in{border-color:var(--head)}
+.mnav{display:flex;flex-direction:column;gap:4px;margin:-14px 0 28px}
+.mrow{display:grid;grid-template-columns:96px 1fr;gap:14px;align-items:center;padding:6px;margin:0 -6px;border-radius:12px;transition:background .15s}
+.mrow:hover{background:#212121}
+.mrow.in,.mrow.on{background:#272727}
+.mimg img,.mimg i{display:block;width:96px;aspect-ratio:1200/630;object-fit:cover;border-radius:8px;border:1px solid var(--edge);background:var(--surface)}
+.mname{display:block;font-size:.98rem;font-weight:800;color:var(--head);text-decoration:none;line-height:1.2}
+.mname:hover{color:var(--blue2)}
+.mopts{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.mopts a{font-size:.74rem;font-weight:700;color:var(--muted);text-decoration:none;border:1px solid #3f3f3f;border-radius:8px;padding:4px 8px 3px;white-space:nowrap;transition:background .15s}
+.mopts a:hover{background:#3f3f3f;color:var(--head)}
+.mopts a.on{background:var(--head);border-color:var(--head);color:#03050a}
 .tip{display:flex;align-items:center;gap:26px;margin-top:34px;padding:22px 26px;border-radius:16px;border:1px solid var(--border2);background:linear-gradient(120deg,rgba(0,212,255,.09),rgba(56,96,255,.05) 55%,rgba(255,255,255,.01))}
 .tip .big{font-size:2.6rem;font-weight:800;letter-spacing:-.03em;line-height:1;color:var(--blue);white-space:nowrap}
 .tip h2{font-size:1.12rem;line-height:1.25;margin-bottom:4px}
@@ -649,7 +652,7 @@ def story(a, lang, tag="h1"):
             f'<div class="hi"><img class="hero-img" src="{site_img(a)}" alt="{esc(t["title"])}" width="1200" height="630" fetchpriority="high">{dur(a, lang)}</div>'
             f'<{tag} class="st">{title}</{tag}>'
             f'<p class="meta smeta"><a class="tag" href="{url(lang, "category/" + a["category"] + "/")}">{c[lang]}</a> · {fmt_date(a["date"], lang)}</p>'
-            f'<p class="lead">{esc(t["description"])}</p>{chips}'
+            f'<p class="lead">{esc(t["description"])}</p>'
             f'<div class="prose">{t["body"]}</div>{src}</article>')
 
 
@@ -671,8 +674,12 @@ def modelnav(lang, current=None):
                 lbl = v["label"][lang] if isinstance(v["label"], dict) else v["label"]
                 lbl = lbl.split(" · ")[0]
                 opts += f'<a href="{url(lang, "model/" + k + "/")}"{" class=\"on\"" if k == current else ""}>{esc(lbl)}</a>'
-        rows += (f'<div class="mrow"><a class="mname{" on" if current == r else (" in" if cur_root == r else "")}" '
-                 f'href="{url(lang, "model/" + r + "/")}">{MODELS[r]["name"]}</a><div class="mopts">{opts}</div></div>')
+        ph = model_photo(r)
+        img = f'<img src="{ph}" alt="" loading="lazy">' if ph else '<i></i>'
+        st = " on" if current == r else (" in" if cur_root == r else "")
+        rows += (f'<div class="mrow{st}"><a class="mimg" href="{url(lang, "model/" + r + "/")}">{img}</a>'
+                 f'<div><a class="mname" href="{url(lang, "model/" + r + "/")}">{MODELS[r]["name"]}</a>'
+                 f'{f"<div class=mopts>{opts}</div>" if opts else ""}</div></div>')
     return f'<nav class="mnav" aria-label="Models">{rows}</nav>'
 
 
@@ -724,7 +731,7 @@ def feed(lead, lead_html, rest, lang, active=None, side_title="", left_first=(),
         h_left = story_px + (40 + rows * 411 + ((left - 1) // 6 if left else 0) * 176 if left else 0)
         if more and n - left < n_own:
             continue
-        h_right = 170 + (450 if extra_side else 0) + (n - left) * 136 + (60 if more and n - left > n_own else 0)
+        h_right = 170 + (560 if extra_side else 0) + (n - left) * 136 + (60 if more and n - left > n_own else 0)
         d = abs(h_left - h_right)
         if diff is None or d < diff:
             best, diff = left, d

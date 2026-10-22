@@ -274,6 +274,7 @@ h1,h2,h3{color:var(--head);font-weight:800}
 .dopen .scrim{opacity:1;pointer-events:auto}
 .drawer{position:fixed;top:0;bottom:0;left:0;z-index:30;width:290px;max-width:86vw;overflow-y:auto;background:#0f0f0f;border-right:1px solid var(--border);padding:13px 12px 32px;transform:translateX(-102%);transition:transform .25s ease}
 .dopen .drawer{transform:none}
+.drawer{overscroll-behavior:contain}html.dopen,html.dopen body{overflow:hidden}
 .drawer .dh{display:flex;align-items:center;gap:12px;padding:0 4px 13px 12px;margin:0 -12px 10px;border-bottom:1px solid var(--border)}
 @media (min-width:861px){.drawer .mobonly{display:none}}
 .dmodels{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:0 4px}

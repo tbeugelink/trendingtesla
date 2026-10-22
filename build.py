@@ -778,6 +778,12 @@ def listing(items, lang, active=None, model=None):
     if active == "news":
         return feed(lead, story(lead, lang, "h2"), own, lang, active, L["latest"], extra_side=extra)
     rest = [x for x in ALL_ARTS if x is not lead]
+    own = sorted(own, key=published, reverse=True)
+    if model or active == "models":
+        # this model's articles first, then other model news
+        mine = set(id(x) for x in own) | {id(lead)}
+        own += sorted((x for x in ALL_ARTS if id(x) not in mine and (x.get("models") or x["category"] == "models")),
+                      key=published, reverse=True)
     return feed(lead, modelinfo(model, lang) if info else story(lead, lang, "h2"), rest, lang,
                 "models" if model else active, L["latest"], extra_side=extra, left_exact=own,
                 lead_px=1500 if info else None)
@@ -826,8 +832,11 @@ def feed(lead, lead_html, rest, lang, active=None, side_title="", left_first=(),
         if diff is None or d < diff:
             best, diff = left, d
     if left_exact is not None:
-        left_items = sorted(left_exact, key=published, reverse=True)
+        left_items = list(left_exact)
         right_items = [x for x in rest if x not in left_items]
+        need = (len(left_items) * ROW_PX + story_px) / 144
+        if len(right_items) < need:  # long topic list: let the general news continue so both columns end together
+            right_items += [x for x in rest if x in left_items][: int(need) - len(right_items) + 1]
     elif left_pool is not None:
         left_items = list(left_pool[:best])
         left_items.sort(key=published, reverse=True)  # always newest first
@@ -1075,7 +1084,7 @@ def build():
                 "author": {"@type": "Organization", "name": NAME, "url": SITE},
             }
             head = f'<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>'
-            same = [x for x in arts if x is not a and x["category"] == a["category"]]
+            same = sorted((x for x in arts if x is not a and x["category"] == a["category"]), key=published, reverse=True)
             others = [x for x in arts if x is not a]
             body = feed(a, story(a, lang), others, lang, a["category"], L["latest"], left_exact=same)
             write(url(lang, a["slug"] + "/"),

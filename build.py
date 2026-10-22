@@ -33,6 +33,7 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 
 from covers import make_cover
+from model_info import INFO
 
 ROOT = Path(__file__).resolve().parent
 CONTENT = ROOT / "content" / "articles"
@@ -54,7 +55,7 @@ LANGS = {
         "models_h": "News and advice for your model", "guides_h": "Best picks for your Tesla",
         "guides_sub": "Researched per model and year, with pros and cons.",
         "related": "Read next", "sources": "Sources", "about": "About", "privacy": "Privacy",
-        "switch": "NL", "switch_full": "Nederlands", "slogan": "Daily Tesla news &amp; trends", "search": "Search Tesla news", "none": "Nothing found", "home": "Home", "d_topics": "Topics", "d_models": "Models", "d_more": "More", "menu": "Menu", "tip_h": "A 22 kW charger won't charge your Tesla any faster", "tip_p": "Most Tesla models charge at home at up to 11 kW AC.", "tip_btn": "Read why", "tips": [("HW4", "Buying a used Model 3? Check the hardware first", "The Highland has HW4, older cars HW3. It decides what FSD can do.", "How to check", "used-model-3-highland-vs-classic-hw3-hw4-buying-guide"), ("−20%", "Losing range in winter? It doesn't have to be", "Preconditioning and the right settings save you kilometers.", "9 winter tips", "tesla-winter-range-tips-cold-weather")],
+        "switch": "NL", "switch_full": "Nederlands", "i_specs": "Specifications", "i_watch": "Points to watch", "i_special": "What makes it special", "i_acc": "Accessories", "i_acc_soon": "Coming soon: accessories that fit this version, tested and explained.", "slogan": "Daily Tesla news &amp; trends", "search": "Search Tesla news", "none": "Nothing found", "home": "Home", "d_topics": "Topics", "d_models": "Models", "d_more": "More", "menu": "Menu", "tip_h": "A 22 kW charger won't charge your Tesla any faster", "tip_p": "Most Tesla models charge at home at up to 11 kW AC.", "tip_btn": "Read why", "tips": [("HW4", "Buying a used Model 3? Check the hardware first", "The Highland has HW4, older cars HW3. It decides what FSD can do.", "How to check", "used-model-3-highland-vs-classic-hw3-hw4-buying-guide"), ("−20%", "Losing range in winter? It doesn't have to be", "Preconditioning and the right settings save you kilometers.", "9 winter tips", "tesla-winter-range-tips-cold-weather")],
         "empty": "No articles here yet. New stories are published several times a day.",
         "cat_intro": "All TrendingTesla articles about {}.",
         "eco_intro": "SpaceX, Starlink, The Boring Company and xAI/Grok: the companies around Tesla, and how they connect.",
@@ -83,7 +84,7 @@ LANGS = {
         "models_h": "Nieuws en advies voor jouw model", "guides_h": "De beste keuzes voor je Tesla",
         "guides_sub": "Uitgezocht per model en bouwjaar, met plus- en minpunten.",
         "related": "Lees ook", "sources": "Bronnen", "about": "Over ons", "privacy": "Privacy",
-        "switch": "EN", "switch_full": "English", "slogan": "Iedere dag het laatste nieuws &amp; trends", "search": "Zoek in Tesla-nieuws", "none": "Niets gevonden", "home": "Home", "d_topics": "Onderwerpen", "d_models": "Modellen", "d_more": "Meer", "menu": "Menu", "tip_h": "Een 22 kW-laadpaal laadt je Tesla niet sneller", "tip_p": "Veel Tesla-modellen laden thuis met maximaal 11 kW AC.", "tip_btn": "Lees waarom", "tips": [("HW4", "Tweedehands Model 3 kopen? Check eerst de hardware", "De Highland heeft HW4, oudere Model 3's HW3. Dat bepaalt wat FSD kan.", "Zo check je het", "used-model-3-highland-vs-classic-hw3-hw4-buying-guide"), ("−20%", "Minder bereik in de winter? Dat hoeft niet", "Met voorverwarmen en de juiste instellingen houd je meer kilometers over.", "9 wintertips", "tesla-winter-range-tips-cold-weather")],
+        "switch": "EN", "switch_full": "English", "i_specs": "Specificaties", "i_watch": "Aandachtspunten", "i_special": "Bijzonderheden", "i_acc": "Accessoires", "i_acc_soon": "Binnenkort: accessoires die op deze uitvoering passen, getest en uitgelegd.", "slogan": "Iedere dag het laatste nieuws &amp; trends", "search": "Zoek in Tesla-nieuws", "none": "Niets gevonden", "home": "Home", "d_topics": "Onderwerpen", "d_models": "Modellen", "d_more": "Meer", "menu": "Menu", "tip_h": "Een 22 kW-laadpaal laadt je Tesla niet sneller", "tip_p": "Veel Tesla-modellen laden thuis met maximaal 11 kW AC.", "tip_btn": "Lees waarom", "tips": [("HW4", "Tweedehands Model 3 kopen? Check eerst de hardware", "De Highland heeft HW4, oudere Model 3's HW3. Dat bepaalt wat FSD kan.", "Zo check je het", "used-model-3-highland-vs-classic-hw3-hw4-buying-guide"), ("−20%", "Minder bereik in de winter? Dat hoeft niet", "Met voorverwarmen en de juiste instellingen houd je meer kilometers over.", "9 wintertips", "tesla-winter-range-tips-cold-weather")],
         "empty": "Hier staan nog geen artikelen. Er verschijnen meerdere keren per dag nieuwe verhalen.",
         "cat_intro": "Alle artikelen van TrendingTesla over {}.",
         "eco_intro": "SpaceX, Starlink, The Boring Company en xAI/Grok: de bedrijven rond Tesla, en hoe ze met elkaar verbonden zijn.",
@@ -126,7 +127,7 @@ CATEGORIES = {
 MODELS = {
     "model-s":           {"name": "Model S",            "photo": "model-s.jpg", "gallery": ["ms-4.jpg", "ms-1.jpg", "ms-3.jpg", "ms-2.jpg"]},
     "model-s-classic":   {"name": "Model S 2012–2020",  "photo": "msc-2.jpg", "parent": "model-s", "gallery": ["msc-2.jpg", "msc-1.jpg", "msc-4.jpg", "msc-3.jpg"], "label": "2012–2020"},
-    "model-s-2021":      {"name": "Model S 2021+",      "parent": "model-s", "gallery": ["ms-1.jpg", "ms-3.jpg", "ms-2.jpg", "ms-4.jpg"], "label": "2021+"},
+    "model-s-2021":      {"name": "Model S 2021+",      "photo": "ms-3.jpg", "parent": "model-s", "gallery": ["ms-1.jpg", "ms-3.jpg", "ms-2.jpg", "ms-4.jpg"], "label": "2021+"},
     "model-s-plaid":     {"name": "Model S Plaid",      "photo": "ms-4.jpg", "parent": "model-s", "gallery": ["ms-4.jpg", "ms-3.jpg", "ms-2.jpg"], "label": "Plaid"},
     "model-3":           {"name": "Model 3",            "photo": "model-3-classic.jpg", "article_photo": "m3h-1.jpg", "gallery": ["m3h-1.jpg", "m3h-4.jpg", "m3h-2.jpg", "m3h-3.jpg", "m3h-5.jpg"]},
     "model-3-classic":   {"name": "Model 3 2017–2023",  "photo": "model-3-classic.jpg", "parent": "model-3", "label": "2017–2023", "gallery": ["m3c-1.jpg", "m3c-5.jpg", "m3c-9.jpg", "m3c-2.jpg", "m3c-6.jpg", "m3c-10.jpg", "m3c-3.jpg", "m3c-7.jpg", "m3c-11.jpg", "m3c-4.jpg", "m3c-8.jpg"]},
@@ -139,13 +140,13 @@ MODELS = {
     "model-x-plaid":     {"name": "Model X Plaid",      "photo": "mx-5.jpg", "parent": "model-x", "label": "Plaid"},
     "model-y":           {"name": "Model Y",            "photo": "model-y-classic.jpg", "article_photo": "model-y.jpg", "gallery": ["myj-1.jpg", "myj-9.jpg", "myj-12.jpg", "myj-5.jpg", "myj-2.jpg", "myj-10.jpg", "myj-7.jpg", "myj-3.jpg", "myj-11.jpg", "myj-6.jpg", "myj-8.jpg", "myj-4.jpg"]},
     "model-y-classic":   {"name": "Model Y 2020–2024",  "photo": "myc-1.jpg", "gallery": ["myc-1.jpg", "model-y-classic.jpg"], "parent": "model-y", "label": "2020–2024"},
-    "model-y-juniper":   {"name": "Model Y Juniper",    "photo": "model-y.jpg", "parent": "model-y", "label": "Juniper · 2025+", "gallery": ["myj-1.jpg", "myj-9.jpg", "myj-12.jpg", "myj-5.jpg", "myj-2.jpg", "myj-10.jpg", "myj-7.jpg", "myj-3.jpg", "myj-11.jpg", "myj-6.jpg", "myj-8.jpg", "myj-4.jpg"]},
+    "model-y-juniper":   {"name": "Model Y Juniper",    "photo": "myj-12.jpg", "parent": "model-y", "label": "Juniper · 2025+", "gallery": ["myj-1.jpg", "myj-9.jpg", "myj-12.jpg", "myj-5.jpg", "myj-2.jpg", "myj-10.jpg", "myj-7.jpg", "myj-3.jpg", "myj-11.jpg", "myj-6.jpg", "myj-8.jpg", "myj-4.jpg"]},
     "model-y-standard":  {"name": "Model Y Standard",   "photo": "model-y.jpg", "parent": "model-y", "label": "Standard · 2025+"},
     "model-y-performance": {"name": "Model Y Performance", "photo": "model-y.jpg", "parent": "model-y", "label": "Performance"},
     "model-y-l":         {"name": "Model Y L",          "photo": "myl-1.jpg", "parent": "model-y", "label": {"en": "Model Y L · 6 seats", "nl": "Model Y L · 6 zitplaatsen"}},
     "cybertruck":        {"name": "Cybertruck",         "photo": "cybertruck.jpg", "gallery": ["ct-1.jpg", "ct-3.jpg", "ct-2.jpg", "ct-4.jpg", "ct-5.jpg"]},
-    "cybertruck-awd":    {"name": "Cybertruck AWD",     "parent": "cybertruck", "label": "AWD"},
-    "cybertruck-cyberbeast": {"name": "Cyberbeast",     "parent": "cybertruck", "label": "Cyberbeast"},
+    "cybertruck-awd":    {"name": "Cybertruck AWD",     "photo": "ct-1.jpg", "parent": "cybertruck", "label": "AWD"},
+    "cybertruck-cyberbeast": {"name": "Cyberbeast",     "photo": "ct-5.jpg", "parent": "cybertruck", "label": "Cyberbeast"},
     "cybercab":          {"name": "Cybercab",           "photo": "cybercab.jpg", "gallery": ["cybercab.jpg", "cc-1.jpg", "cc-3.jpg", "cc-2.jpg"]},
     "roadster":          {"name": "Roadster",           "photo": "roadster.jpg", "gallery": ["rd-1.jpg", "rd-2.jpg", "rd-3.jpg"]},
     "semi":              {"name": "Semi",               "photo": "semi.jpg", "gallery": ["semi.jpg", "semi-4.jpg", "semi-2.jpg", "semi-5.jpg", "semi-3.jpg"]},
@@ -287,6 +288,12 @@ h1,h2,h3{color:var(--head);font-weight:800}
 .mopts a{font-size:.74rem;font-weight:700;color:var(--muted);text-decoration:none;border:1px solid #3f3f3f;border-radius:8px;padding:4px 8px 3px;white-space:nowrap;transition:background .15s}
 .mopts a:hover{background:#3f3f3f;color:var(--head)}
 .mopts a.on{background:var(--head);border-color:var(--head);color:#03050a}
+.specs{width:100%;border-collapse:collapse;margin:6px 0 10px;font-size:.92rem}
+.specs th,.specs td{padding:9px 12px;border-bottom:1px solid var(--border2);text-align:left;vertical-align:top}
+.specs th{width:38%;color:var(--muted);font-weight:700}
+.specs td{color:var(--head)}
+.specs tr:nth-child(odd){background:rgba(255,255,255,.025)}
+.soon{color:var(--muted);background:var(--surface);border:1px dashed var(--border2);border-radius:12px;padding:14px 16px}
 .tip{display:flex;align-items:center;gap:26px;margin-top:34px;padding:22px 26px;border-radius:16px;border:1px solid var(--border2);background:linear-gradient(120deg,rgba(0,212,255,.09),rgba(56,96,255,.05) 55%,rgba(255,255,255,.01))}
 .tip .big{font-size:2.6rem;font-weight:800;letter-spacing:-.03em;line-height:1;color:var(--blue);white-space:nowrap}
 .tip h2{font-size:1.12rem;line-height:1.25;margin-bottom:4px}
@@ -683,14 +690,37 @@ def modelnav(lang, current=None):
     return f'<nav class="mnav" aria-label="Models">{rows}</nav>'
 
 
+def modelinfo(key, lang):
+    L = LANGS[lang]
+    inf = INFO.get(key)
+    if not inf:
+        return ""
+    t = inf[lang]
+    ph = model_photo(key)
+    img = f'<div class="hi"><img class="hero-img" src="{ph}" alt="Tesla {MODELS[key]["name"]}" width="1200" height="630" fetchpriority="high"></div>' if ph else ""
+    rows = "".join(f"<tr><th>{esc(k)}</th><td>{esc(v)}</td></tr>" for k, v in t["specs"])
+    li = lambda xs: "<ul>" + "".join(f"<li>{esc(x)}</li>" for x in xs) + "</ul>"
+    src = "".join(f'<li><a href="{esc(u)}"{"" if u.startswith("/") else " rel=nofollow target=_blank"}>{esc(ti)}</a></li>'
+                  for ti, u in inf["sources"])
+    return (f'<article class="minfo">{img}<h1 class="st">Tesla {MODELS[key]["name"]}</h1><p class="lead">{esc(t["intro"])}</p>'
+            f'<div class="prose"><h2>{L["i_specs"]}</h2><table class="specs">{rows}</table>'
+            f'<h2>{L["i_watch"]}</h2>{li(t["watch"])}<h2>{L["i_special"]}</h2>{li(t["special"])}'
+            f'<h2>{L["i_acc"]}</h2><p class="soon">{L["i_acc_soon"]}</p></div>'
+            f'<div class="sources"><h2>{L["sources"]}</h2><ul>{src}</ul></div></article>')
+
+
 def listing(items, lang, active=None, model=None):
     """Newest article open in full on the left, the next ones stacked on the right, the rest below."""
     L = LANGS[lang]
-    if not items:
+    if not items and not (model and INFO.get(model)):
         return f'<p class="empty">{L["empty"]}</p>'
     own = set(id(x) for x in items)
     more = [x for x in ALL_ARTS if id(x) not in own][:40]
     extra = modelnav(lang, model) if (active == "models" or model) else ""
+    if model and INFO.get(model):
+        own = set(id(x) for x in items)
+        more = [x for x in ALL_ARTS if id(x) not in own][:40]
+        return feed(None, modelinfo(model, lang), items, lang, "models", L["latest"], more=more, extra_side=extra, lead_px=1500)
     return feed(items[0], story(items[0], lang, "h2"), items[1:], lang, active or ("models" if model else None),
                 L["latest"], more=more, extra_side=extra)
 
@@ -716,7 +746,7 @@ def words(a, lang):
     return len(re.sub(r"<[^>]+>", " ", a[lang]["body"]).split())
 
 
-def feed(lead, lead_html, rest, lang, active=None, side_title="", left_first=(), more=(), extra_side=""):
+def feed(lead, lead_html, rest, lang, active=None, side_title="", left_first=(), more=(), extra_side="", lead_px=None):
     """YouTube-style page: lead story open on the left with a two-column grid of further articles
     below it (an ad/tip bar every few rows); a long list of the newest articles on the right."""
     # balance column heights (pixel estimates measured on the live layout)
@@ -724,7 +754,7 @@ def feed(lead, lead_html, rest, lang, active=None, side_title="", left_first=(),
     n_own = len(rest)
     rest = list(rest) + more
     n = len(rest) + len(left_first)
-    story_px = 960 + 2.6 * words(lead, lang) + 170
+    story_px = lead_px if lead_px else 960 + 2.6 * words(lead, lang) + 170
     best, diff = 0, None
     for left in range(0, n + 1, 2):
         rows = left / 2

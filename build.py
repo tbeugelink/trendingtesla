@@ -106,7 +106,7 @@ LANGS = {
 
 CATEGORIES = {
     "news":     {"en": "News",     "nl": "Nieuws",   "menu": True},
-    "models":   {"en": "Models",   "nl": "Modellen", "menu": True},
+    "models":   {"en": "Models",   "nl": "Modellen", "menu": True, "tag": "Model"},
     "fsd":      {"en": "FSD",      "nl": "FSD",      "menu": True},
     "xai":      {"en": "xAI / Grok", "nl": "xAI / Grok", "menu": True},
     "robotaxi": {"en": "Robotaxi", "nl": "Robotaxi", "menu": True},
@@ -287,7 +287,7 @@ h1,h2,h3{color:var(--head);font-weight:800}
 .pager a,.morelink{color:var(--head);text-decoration:none;font-weight:700;background:#272727;border-radius:10px;padding:9px 14px 7px}
 .pager a:hover,.morelink:hover{background:#3f3f3f}
 .morelink{display:block;text-align:center;margin-top:24px;font-size:.88rem}
-.srow{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 14px}.srow .smeta{margin:0}
+.srow{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 14px}.srow .smeta{margin:0;white-space:nowrap}
 .acts{display:flex;gap:8px;flex:none}
 .act{display:inline-flex;align-items:center;gap:6px;border:0;border-radius:999px;background:#272727;color:var(--head);font:inherit;font-size:.82rem;font-weight:700;padding:7px 13px 6px;cursor:pointer;transition:background .15s}
 .act:hover{background:#3f3f3f}.act svg{flex:none}
@@ -466,7 +466,7 @@ footer .fcopy{margin-top:32px;padding-top:18px;border-top:1px solid var(--border
 .bar{gap:4px;height:56px}.burger{margin-left:-14px}.logo{font-size:1.15rem}.brand{margin-left:2px}
 .sbtn{margin-left:auto;width:36px;height:36px;border:0;background:transparent}.savedlink{margin-left:-2px;width:34px;height:34px}.lang{margin-left:0;margin-right:-10px;font-size:.7rem;padding:3px 9px}
 .read .hi{margin:0 -12px 14px}.read .hi .hero-img{border-radius:0;border:0}.hi .dur{right:12px}
-article .st{font-size:1.1rem;line-height:1.25}article .lead{font-size:.95rem}.smeta{font-size:.82rem}
+article .st{font-size:1.1rem;line-height:1.25}.srow{flex-wrap:wrap;row-gap:8px}article .lead{font-size:.95rem}.smeta{font-size:.82rem}
 article .prose{font-size:.95rem}article .prose h2{font-size:.98rem}.grid2{grid-template-columns:1fr;gap:30px}.grid2>.card{grid-template-columns:1fr;gap:0}.grid2>.card .im{height:auto;width:auto}.grid2>.card .im img{aspect-ratio:1200/630}.grid2>.card .body{padding:14px 0 0}.card.lead{grid-column:auto}.leadside{grid-column:auto;flex-direction:column;gap:40px}.leadside .card p{display:-webkit-box}.mini{grid-template-columns:1fr;gap:12px;height:auto}.mini>div{height:auto}.th{width:100%;height:auto}.mini img{width:100%;height:auto;aspect-ratio:1200/630}#news .h2{margin-top:32px}.grid{grid-template-columns:1fr;gap:40px}.why{grid-template-columns:1fr 1fr;gap:10px}.why div{padding:14px}.why p{font-size:.8rem}
  .models{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:0 -24px;padding:0 24px 4px}.models::-webkit-scrollbar{display:none}.models{gap:14px}.model{flex:0 0 46%;scroll-snap-align:start}
  body{font-size:16.5px}.h2{margin-top:40px}.hero{min-height:0}.hero .in{padding:26px 20px}.hero .btn{flex:1;white-space:nowrap;padding:11px 12px}
@@ -710,7 +710,7 @@ def story(a, lang, tag="h1"):
     return (f'<article>'
             f'<div class="hi"><img class="hero-img" src="{site_img(a)}" alt="{esc(t["title"])}" width="1200" height="630" fetchpriority="high">{dur(a, lang)}</div>'
             f'<{tag} class="st">{title}</{tag}>'
-            f'<div class="srow"><p class="meta smeta"><a class="tag" href="{url(lang, "category/" + a["category"] + "/")}">{c[lang]}</a> · {fmt_date(a["date"], lang)}</p>'
+            f'<div class="srow"><p class="meta smeta"><a class="tag" href="{url(lang, "category/" + a["category"] + "/")}">{c.get("tag", c[lang])}</a> · {fmt_date(a["date"], lang)}</p>'
             f'<div class="acts"><button class="act like" type="button" data-like="{a["slug"]}" aria-pressed="false" title="{L["like"]}">{HEART_SVG}<span>0</span></button>'
             f'<button class="act save" type="button" data-save="{a["slug"]}" aria-pressed="false" title="{L["save"]}">{BOOK_SVG}<span>{L["save"]}</span></button></div></div>'
             f'<p class="lead">{esc(t["description"])}</p>'
@@ -945,7 +945,7 @@ sl.innerHTML=keep.filter(function(k){return m[k]}).map(function(k){var a=m[k];re
 
 
 def label(a, lang):
-    return f'<span class="tag">{CATEGORIES[a["category"]][lang]}</span>'
+    return f'<span class="tag">{CATEGORIES[a["category"]].get("tag", CATEGORIES[a["category"]][lang])}</span>'
 
 
 def card(a, lang, lead=False):
@@ -1149,7 +1149,7 @@ def build():
                        image=social_img(a, lang), active=a["category"]))
 
         idx = [{"u": url(lang, x["slug"] + "/"), "t": x[lang]["title"], "d": x[lang]["description"],
-                "c": CATEGORIES[x["category"]][lang], "dt": fmt_date(x["date"], lang), "i": site_img(x)} for x in arts]
+                "c": CATEGORIES[x["category"]].get("tag", CATEGORIES[x["category"]][lang]), "dt": fmt_date(x["date"], lang), "i": site_img(x)} for x in arts]
         (OUT / f"search-{lang}.json").write_text(json.dumps(idx, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
 
         # ---------- Archive: all articles, newest first, paginated ----------

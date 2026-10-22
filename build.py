@@ -401,9 +401,13 @@ article .hero-img{border-radius:16px;margin:0 0 26px;aspect-ratio:1200/630;width
 .prose a{color:var(--blue2)}
 .prose em{color:var(--muted)}
 .prose strong{color:var(--head)}
-.sources{background:var(--surface);border:1px solid var(--border);border-radius:14px;margin-top:34px;padding:18px 22px;font-size:.88rem}
-.sources h2{font-size:.74rem;text-transform:uppercase;letter-spacing:.12em;color:var(--dim);margin:0 0 8px}
-.sources ul{padding-left:18px}
+.sources{margin-top:26px;font-size:.88rem}
+.sources summary{display:inline-flex;align-items:center;gap:6px;cursor:pointer;list-style:none;font-size:.74rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--blue);user-select:none}
+.sources summary::-webkit-details-marker{display:none}
+.sources summary::after{content:"▾";font-size:.9rem;transition:transform .2s}
+.sources[open] summary::after{transform:rotate(180deg)}
+.sources summary:hover{color:var(--blue2)}
+.sources ul{margin-top:10px;padding:12px 16px 12px 32px;background:var(--surface);border-radius:12px}
 .sources li{margin-bottom:4px}
 .sources a{color:var(--muted)}
 /* footer */
@@ -654,7 +658,7 @@ def story(a, lang, tag="h1"):
     if a.get("sources"):
         items = "".join(f'<li><a href="{esc(s["url"])}" rel="nofollow noopener" target="_blank">{esc(s["title"])}</a></li>'
                         for s in a["sources"])
-        src = f'<div class="sources"><h2>{L["sources"]}</h2><ul>{items}</ul></div>'
+        src = f'<details class="sources"><summary>{L["sources"]} ({len(a["sources"])})</summary><ul>{items}</ul></details>'
     chips = ""
     if a.get("models"):
         chips = '<div class="chips">' + "".join(
@@ -711,7 +715,7 @@ def modelinfo(key, lang):
             f'<div class="prose"><h2>{L["i_specs"]}</h2><table class="specs">{rows}</table>'
             f'<h2>{L["i_watch"]}</h2>{li(t["watch"])}<h2>{L["i_special"]}</h2>{li(t["special"])}'
             f'<h2>{L["i_acc"]}</h2><p class="soon">{L["i_acc_soon"]}</p></div>'
-            f'<div class="sources"><h2>{L["sources"]}</h2><ul>{src}</ul></div></article>')
+            f'<details class="sources"><summary>{L["sources"]} ({len(inf["sources"])})</summary><ul>{src}</ul></details></article>')
 
 
 def listing(items, lang, active=None, model=None):

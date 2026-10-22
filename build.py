@@ -236,7 +236,7 @@ body{background:linear-gradient(160deg,#2b2b2b 0%,#1d1d1d 35%,#141414 70%,#0f0f0
 main,footer{position:relative;z-index:1}
 a{color:var(--head)}
 img{display:block;max-width:100%;height:auto}
-h1,h2,h3{color:var(--head);font-weight:800}
+h1,h2,h3{color:#e6e6e6;font-weight:800}
 .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
 .narrow{max-width:740px;margin:0 auto}
 .read{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);gap:26px;align-items:start;margin-top:0}

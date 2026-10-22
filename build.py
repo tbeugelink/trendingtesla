@@ -775,11 +775,9 @@ def listing(items, lang, active=None, model=None):
     own = items if info else items[1:]
     if active == "news":
         return feed(lead, story(lead, lang, "h2"), own, lang, active, L["latest"], extra_side=extra)
-    pool = own + rank_for(items, cat=active, model=model)
     rest = [x for x in ALL_ARTS if x is not lead]
-    need = len(own)
     return feed(lead, modelinfo(model, lang) if info else story(lead, lang, "h2"), rest, lang,
-                "models" if model else active, L["latest"], extra_side=extra, left_pool=pool, min_left=need,
+                "models" if model else active, L["latest"], extra_side=extra, left_exact=own,
                 lead_px=1500 if info else None)
 
 
@@ -807,7 +805,7 @@ def words(a, lang):
 ROW_PX = 166
 
 
-def feed(lead, lead_html, rest, lang, active=None, side_title="", left_first=(), more=(), extra_side="", lead_px=None, left_pool=None, min_left=0):
+def feed(lead, lead_html, rest, lang, active=None, side_title="", left_first=(), more=(), extra_side="", lead_px=None, left_pool=None, min_left=0, left_exact=None):
     """YouTube-style page: lead story open on the left with a two-column grid of further articles
     below it (an ad/tip bar every few rows); a long list of the newest articles on the right."""
     # balance column heights (pixel estimates measured on the live layout)
@@ -825,7 +823,10 @@ def feed(lead, lead_html, rest, lang, active=None, side_title="", left_first=(),
         d = abs(h_left - h_right)
         if diff is None or d < diff:
             best, diff = left, d
-    if left_pool is not None:
+    if left_exact is not None:
+        left_items = sorted(left_exact, key=published, reverse=True)
+        right_items = [x for x in rest if x not in left_items]
+    elif left_pool is not None:
         left_items = list(left_pool[:best])
         left_items.sort(key=published, reverse=True)  # always newest first
         right_items = [x for x in rest if x not in left_items][:n - best]
@@ -1071,9 +1072,9 @@ def build():
                 "author": {"@type": "Organization", "name": NAME, "url": SITE},
             }
             head = f'<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>'
-            rel = related(a, arts, len(arts))
+            same = [x for x in arts if x is not a and x["category"] == a["category"]]
             others = [x for x in arts if x is not a]
-            body = feed(a, story(a, lang), others, lang, a["category"], L["latest"], left_pool=rel)
+            body = feed(a, story(a, lang), others, lang, a["category"], L["latest"], left_exact=same)
             write(url(lang, a["slug"] + "/"),
                   page(lang, a["slug"] + "/", t["title"], t["description"], body, "article", head,
                        image=social_img(a, lang), active=a["category"]))

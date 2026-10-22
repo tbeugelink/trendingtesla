@@ -763,21 +763,23 @@ def rank_for(items, cat=None, model=None):
 
 
 def listing(items, lang, active=None, model=None):
-    """Newest article open in full on the left, the next ones stacked on the right, the rest below."""
+    """Topic/model page: lead (newest article, or the model info) on the left, all articles of this topic or
+    model in the two columns below it, then related ones; the right column is the general newest news."""
     L = LANGS[lang]
     if not items and not (model and INFO.get(model)):
         return f'<p class="empty">{L["empty"]}</p>'
-    own = set(id(x) for x in items)
-    more = [x for x in ALL_ARTS if id(x) not in own][:40]
     extra = modelnav(lang, model) if (active == "models" or model) else ""
-    if model and INFO.get(model):
-        own = set(id(x) for x in items)
-        more = [x for x in ALL_ARTS if id(x) not in own][:40]
-        return feed(None, modelinfo(model, lang), items, lang, "models", L["latest"], more=more, extra_side=extra, lead_px=1500,
-                    left_pool=rank_for(items, model=model))
-    pool = rank_for(items, cat=active, model=model) if active != "news" else None
-    return feed(items[0], story(items[0], lang, "h2"), items[1:], lang, active or ("models" if model else None),
-                L["latest"], more=more, extra_side=extra, left_pool=pool)
+    info = model and INFO.get(model)
+    lead = None if info else items[0]
+    own = items if info else items[1:]
+    if active == "news":
+        return feed(lead, story(lead, lang, "h2"), own, lang, active, L["latest"], extra_side=extra)
+    pool = own + rank_for(items, cat=active, model=model)
+    rest = [x for x in ALL_ARTS if x is not lead]
+    need = len(own) + (len(own) % 2)
+    return feed(lead, modelinfo(model, lang) if info else story(lead, lang, "h2"), rest, lang,
+                "models" if model else active, L["latest"], extra_side=extra, left_pool=pool, min_left=need,
+                lead_px=1500 if info else None)
 
 
 def cats9(lang, active=None):
@@ -801,7 +803,7 @@ def words(a, lang):
     return len(re.sub(r"<[^>]+>", " ", a[lang]["body"]).split())
 
 
-def feed(lead, lead_html, rest, lang, active=None, side_title="", left_first=(), more=(), extra_side="", lead_px=None, left_pool=None):
+def feed(lead, lead_html, rest, lang, active=None, side_title="", left_first=(), more=(), extra_side="", lead_px=None, left_pool=None, min_left=0):
     """YouTube-style page: lead story open on the left with a two-column grid of further articles
     below it (an ad/tip bar every few rows); a long list of the newest articles on the right."""
     # balance column heights (pixel estimates measured on the live layout)
@@ -814,7 +816,7 @@ def feed(lead, lead_html, rest, lang, active=None, side_title="", left_first=(),
     for left in range(0, n + 1, 2):
         rows = left / 2
         h_left = story_px + (40 + rows * 411 + ((left - 1) // 6 if left else 0) * 176 if left else 0)
-        if more and n - left < n_own:
+        if (more and n - left < n_own) or left < min_left:
             continue
         h_right = 170 + (560 if extra_side else 0) + (n - left) * 144 + (60 if more and n - left > n_own else 0)
         d = abs(h_left - h_right)

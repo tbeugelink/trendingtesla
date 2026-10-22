@@ -276,6 +276,12 @@ h1,h2,h3{color:var(--head);font-weight:800}
 .dopen .drawer{transform:none}
 .drawer .dh{display:flex;align-items:center;gap:12px;padding:0 4px 13px 12px;margin:0 -12px 10px;border-bottom:1px solid var(--border)}
 @media (min-width:861px){.drawer .mobonly{display:none}}
+.dmodels{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:0 4px}
+.dm{display:flex;flex-direction:column;border:1px solid var(--edge);border-radius:12px;overflow:hidden;text-decoration:none;color:var(--head);background:#0b0b0b;transition:border-color .15s,background .15s}
+.dm:hover{border-color:#6b7d95;background:#1a1a1a}
+.dm .ph{aspect-ratio:3/2;background:#000;display:flex;align-items:center;justify-content:center}
+.dm .ph img{width:100%;height:100%;object-fit:contain}
+.dm span{padding:7px 6px 8px;font-size:.78rem;line-height:1.25;font-weight:800;text-align:center}
 .drawer h4{font-size:.7rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:var(--dim);margin:20px 10px 6px}
 .drawer .di{display:flex;align-items:center;gap:12px;padding:9px 10px;border-radius:10px;color:var(--fg);text-decoration:none;font-weight:700;font-size:.92rem}
 .drawer .di:hover{background:var(--surface2);color:var(--head)}
@@ -653,10 +659,12 @@ def drawer(lang, active=None):
     out += "".join(f'<a class="di{" on" if k == active else ""}" href="{url(lang, "category/" + k + "/")}">{c[lang]}</a>'
                    for k, c in CATEGORIES.items() if c["menu"])
     out += f'</div><h4>{L["d_models"]}</h4>'
+    out += '<div class="dmodels">'
     for k in DRAWER_MODELS:
         ph = model_photo(k)
         img = f'<img src="{ph}" alt="" loading="lazy">' if ph else '<i></i>'
-        out += f'<a class="di" href="{url(lang, "model/" + k + "/")}">{img}{MODELS[k]["name"]}</a>'
+        out += f'<a class="dm" href="{url(lang, "model/" + k + "/")}"><div class="ph">{img}</div><span>{MODELS[k]["name"]}</span></a>'
+    out += '</div>'
     out += (f'<div class="mobonly"><h4>{L["d_more"]}</h4><a class="di" href="{url(lang, "about/")}">{L["about"]}</a>'
             f'<a class="di" href="{url(lang, "privacy/")}">{L["privacy"]}</a><a class="di" href="{url(lang, "feed.xml")}">RSS</a>'
             f'<a class="di" href="{url(other(lang), "")}">{L["switch_full"]}</a></div>')

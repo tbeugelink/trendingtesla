@@ -55,7 +55,7 @@ LANGS = {
         "models_h": "News and advice for your model", "guides_h": "Best picks for your Tesla",
         "guides_sub": "Researched per model and year, with pros and cons.",
         "related": "Read next", "sources": "Sources", "about": "About", "privacy": "Privacy",
-        "switch": "NL", "switch_full": "Nederlands", "i_specs": "Specifications", "i_watch": "Points to watch", "i_special": "What makes it special", "i_acc": "Accessories", "i_acc_soon": "Coming soon: accessories that fit this version, tested and explained.", "slogan": "Daily Tesla news &amp; trends", "search": "Search Tesla news", "none": "Nothing found", "home": "Home", "collapse": "Close menu", "archive": "All news", "newer": "Newer", "older": "Older", "page": "Page", "d_topics": "Topics", "d_models": "Models", "d_more": "More", "menu": "Menu", "tip_h": "A 22 kW charger won't charge your Tesla any faster", "tip_p": "Most Tesla models charge at home at up to 11 kW AC.", "tip_btn": "Read why", "tips": [("HW4", "Buying a used Model 3? Check the hardware first", "The Highland has HW4, older cars HW3. It decides what FSD can do.", "How to check", "used-model-3-highland-vs-classic-hw3-hw4-buying-guide"), ("−20%", "Losing range in winter? It doesn't have to be", "Preconditioning and the right settings save you kilometers.", "9 winter tips", "tesla-winter-range-tips-cold-weather")],
+        "switch": "NL", "switch_full": "Nederlands", "i_specs": "Specifications", "i_watch": "Points to watch", "i_special": "What makes it special", "i_acc": "Accessories", "i_acc_soon": "Coming soon: accessories that fit this version, tested and explained.", "slogan": "Daily Tesla news &amp; trends", "search": "Search Tesla news", "none": "Nothing found", "home": "Home", "collapse": "Close menu", "like": "Like", "save": "Save", "saved_btn": "Saved", "saved": "Saved articles", "saved_empty": "You have not saved any articles yet. Tap Save under an article title to keep it here. Saved articles stay in this browser on this device.", "archive": "All news", "newer": "Newer", "older": "Older", "page": "Page", "d_topics": "Topics", "d_models": "Models", "d_more": "More", "menu": "Menu", "tip_h": "A 22 kW charger won't charge your Tesla any faster", "tip_p": "Most Tesla models charge at home at up to 11 kW AC.", "tip_btn": "Read why", "tips": [("HW4", "Buying a used Model 3? Check the hardware first", "The Highland has HW4, older cars HW3. It decides what FSD can do.", "How to check", "used-model-3-highland-vs-classic-hw3-hw4-buying-guide"), ("−20%", "Losing range in winter? It doesn't have to be", "Preconditioning and the right settings save you kilometers.", "9 winter tips", "tesla-winter-range-tips-cold-weather")],
         "empty": "No articles here yet. New stories are published several times a day.",
         "cat_intro": "All TrendingTesla articles about {}.",
         "eco_intro": "SpaceX, Starlink, The Boring Company and xAI/Grok: the companies around Tesla, and how they connect.",
@@ -84,7 +84,7 @@ LANGS = {
         "models_h": "Nieuws en advies voor jouw model", "guides_h": "De beste keuzes voor je Tesla",
         "guides_sub": "Uitgezocht per model en bouwjaar, met plus- en minpunten.",
         "related": "Lees ook", "sources": "Bronnen", "about": "Over ons", "privacy": "Privacy",
-        "switch": "EN", "switch_full": "English", "i_specs": "Specificaties", "i_watch": "Aandachtspunten", "i_special": "Bijzonderheden", "i_acc": "Accessoires", "i_acc_soon": "Binnenkort: accessoires die op deze uitvoering passen, getest en uitgelegd.", "slogan": "Iedere dag het laatste nieuws &amp; trends", "search": "Zoek in Tesla-nieuws", "none": "Niets gevonden", "home": "Home", "collapse": "Inklappen", "archive": "Alle nieuws", "newer": "Nieuwer", "older": "Ouder", "page": "Pagina", "d_topics": "Onderwerpen", "d_models": "Modellen", "d_more": "Meer", "menu": "Menu", "tip_h": "Een 22 kW-laadpaal laadt je Tesla niet sneller", "tip_p": "Veel Tesla-modellen laden thuis met maximaal 11 kW AC.", "tip_btn": "Lees waarom", "tips": [("HW4", "Tweedehands Model 3 kopen? Check eerst de hardware", "De Highland heeft HW4, oudere Model 3's HW3. Dat bepaalt wat FSD kan.", "Zo check je het", "used-model-3-highland-vs-classic-hw3-hw4-buying-guide"), ("−20%", "Minder bereik in de winter? Dat hoeft niet", "Met voorverwarmen en de juiste instellingen houd je meer kilometers over.", "9 wintertips", "tesla-winter-range-tips-cold-weather")],
+        "switch": "EN", "switch_full": "English", "i_specs": "Specificaties", "i_watch": "Aandachtspunten", "i_special": "Bijzonderheden", "i_acc": "Accessoires", "i_acc_soon": "Binnenkort: accessoires die op deze uitvoering passen, getest en uitgelegd.", "slogan": "Iedere dag het laatste nieuws &amp; trends", "search": "Zoek in Tesla-nieuws", "none": "Niets gevonden", "home": "Home", "collapse": "Inklappen", "like": "Vind ik leuk", "save": "Bewaren", "saved_btn": "Bewaard", "saved": "Bewaarde artikelen", "saved_empty": "Je hebt nog geen artikelen bewaard. Tik op Bewaren onder de titel van een artikel om het hier terug te vinden. Bewaarde artikelen blijven in deze browser op dit apparaat.", "archive": "Alle nieuws", "newer": "Nieuwer", "older": "Ouder", "page": "Pagina", "d_topics": "Onderwerpen", "d_models": "Modellen", "d_more": "Meer", "menu": "Menu", "tip_h": "Een 22 kW-laadpaal laadt je Tesla niet sneller", "tip_p": "Veel Tesla-modellen laden thuis met maximaal 11 kW AC.", "tip_btn": "Lees waarom", "tips": [("HW4", "Tweedehands Model 3 kopen? Check eerst de hardware", "De Highland heeft HW4, oudere Model 3's HW3. Dat bepaalt wat FSD kan.", "Zo check je het", "used-model-3-highland-vs-classic-hw3-hw4-buying-guide"), ("−20%", "Minder bereik in de winter? Dat hoeft niet", "Met voorverwarmen en de juiste instellingen houd je meer kilometers over.", "9 wintertips", "tesla-winter-range-tips-cold-weather")],
         "empty": "Hier staan nog geen artikelen. Er verschijnen meerdere keren per dag nieuwe verhalen.",
         "cat_intro": "Alle artikelen van TrendingTesla over {}.",
         "eco_intro": "SpaceX, Starlink, The Boring Company en xAI/Grok: de bedrijven rond Tesla, en hoe ze met elkaar verbonden zijn.",
@@ -204,7 +204,10 @@ PAGES = {
                "as IP addresses to deliver and protect the site. Fonts are served from our own "
                "domain, not from third parties. We do not use tracking cookies at this moment.</p>"
                "<p>If we add advertising or analytics in the future, this page will be updated "
-               "first and you will be asked for consent where the law requires it.</p>"),
+               "first and you will be asked for consent where the law requires it.</p>"
+               "<p>Saved articles and the articles you liked are stored only in your own browser (local storage), "
+               "not on our servers. The like counter itself only keeps a total number per article, without any "
+               "information about who liked it.</p>"),
         "nl": ("Privacybeleid", "Hoe TrendingTesla met je gegevens omgaat.",
                "<p>TrendingTesla vraagt je niet om een account aan te maken en verzamelt geen "
                "persoonsgegevens via formulieren.</p>"
@@ -213,7 +216,9 @@ PAGES = {
                "van ons eigen domein, niet van derden. We gebruiken op dit moment geen "
                "trackingcookies.</p>"
                "<p>Als we in de toekomst advertenties of statistieken toevoegen, passen we "
-               "deze pagina eerst aan en vragen we waar de wet dat vereist om toestemming.</p>"),
+               "deze pagina eerst aan en vragen we waar de wet dat vereist om toestemming.</p>" "<p>Bewaarde artikelen en de artikelen die je leuk vond, worden alleen in je eigen browser opgeslagen "
+               "(local storage), niet op onze servers. De teller van de vind-ik-leuks houdt alleen een totaal per artikel bij, "
+               "zonder gegevens over wie het leuk vond.</p>"),
     },
 }
 
@@ -281,6 +286,15 @@ h1,h2,h3{color:var(--head);font-weight:800}
 .pager a,.morelink{color:var(--head);text-decoration:none;font-weight:700;background:#272727;border-radius:10px;padding:9px 14px 7px}
 .pager a:hover,.morelink:hover{background:#3f3f3f}
 .morelink{display:block;text-align:center;margin-top:24px;font-size:.88rem}
+.srow{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 14px}.srow .smeta{margin:0}
+.acts{display:flex;gap:8px;flex:none}
+.act{display:inline-flex;align-items:center;gap:6px;border:0;border-radius:999px;background:#272727;color:var(--head);font:inherit;font-size:.82rem;font-weight:700;padding:7px 13px 6px;cursor:pointer;transition:background .15s}
+.act:hover{background:#3f3f3f}.act svg{flex:none}
+.act.like[aria-pressed=true] svg{fill:#e22822;stroke:#e22822}
+.act.save[aria-pressed=true]{background:var(--head);color:#0f0f0f}.act.save[aria-pressed=true] svg{fill:currentColor}
+.savedlink{position:relative;flex:none;display:grid;place-items:center;width:36px;height:36px;border-radius:50%;color:var(--head);margin-left:6px}
+.savedlink:hover{background:#272727}
+.savedlink i{position:absolute;top:1px;right:0;min-width:16px;height:16px;border-radius:8px;background:var(--red);color:#fff;font:800 .62rem/16px Manrope,sans-serif;font-style:normal;text-align:center;padding:0 4px}
 .dtopics{display:grid;grid-template-columns:1fr 1fr;gap:7px;padding:0 4px}
 .dtopics a{text-align:center;font-size:.84rem;font-weight:700;color:var(--fg);text-decoration:none;background:#272727;border:1px solid #272727;border-radius:10px;padding:10px 6px 8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .dtopics a:hover{background:#3f3f3f;border-color:#3f3f3f;color:var(--head)}
@@ -447,7 +461,7 @@ footer .fcopy{margin-top:32px;padding-top:18px;border-top:1px solid var(--border
 @media (max-width:860px){footer .fgrid{grid-template-columns:1fr 1fr;gap:28px}footer .fbrand{grid-column:1/-1}}
 @media (max-width:600px){.wrap{padding:0 12px}
 .bar{gap:4px;height:56px}.burger{margin-left:-14px}.logo{font-size:1.15rem}.brand{margin-left:2px}
-.sbtn{margin-left:auto;width:36px;height:36px;border:0;background:transparent}.lang{margin-left:-9px;margin-right:-10px;font-size:.7rem;padding:3px 9px}
+.sbtn{margin-left:auto;width:36px;height:36px;border:0;background:transparent}.savedlink{margin-left:-2px;width:34px;height:34px}.lang{margin-left:0;margin-right:-10px;font-size:.7rem;padding:3px 9px}
 .read .hi{margin:0 -12px 14px}.read .hi .hero-img{border-radius:0;border:0}.hi .dur{right:12px}
 article .st{font-size:1.3rem;line-height:1.25}article .lead{font-size:.95rem}.smeta{font-size:.82rem}
 article .prose{font-size:.95rem}article .prose h2{font-size:1.15rem}.grid2{grid-template-columns:1fr;gap:30px}.grid2>.card{grid-template-columns:1fr;gap:0}.grid2>.card .im{height:auto;width:auto}.grid2>.card .im img{aspect-ratio:1200/630}.grid2>.card .body{padding:14px 0 0}.card.lead{grid-column:auto}.leadside{grid-column:auto;flex-direction:column;gap:40px}.leadside .card p{display:-webkit-box}.mini{grid-template-columns:1fr;gap:12px;height:auto}.mini>div{height:auto}.th{width:100%;height:auto}.mini img{width:100%;height:auto;aspect-ratio:1200/630}#news .h2{margin-top:32px}.grid{grid-template-columns:1fr;gap:40px}.why{grid-template-columns:1fr 1fr;gap:10px}.why div{padding:14px}.why p{font-size:.8rem}
@@ -637,6 +651,7 @@ def page(lang, path, title, description, body, og_type="website", extra_head="",
 <div class="brand"><a class="logo" href="{url(lang)}">Trending<span>Tesla</span></a></div>
 <form class="search" role="search" action="{url(lang)}" data-idx="/search-{lang}.json" data-none="{L['none']}"><input type="search" name="q" placeholder="{L['search']}" aria-label="{L['search']}" autocomplete="off"><button type="submit" aria-label="{L['search']}">{SEARCH_SVG}</button><div class="res" hidden></div></form>
 <button class="sbtn" type="button" aria-label="{L['search']}">{SEARCH_SVG}</button>
+<a class="savedlink" href="{url(lang, 'saved/')}" title="{L['saved']}" aria-label="{L['saved']}">{BOOK_SVG}<i hidden></i></a>
 <a class="lang" href="{url(alt, path)}" hreflang="{alt}" lang="{alt}" title="{L['switch_full']}">{L['switch']}</a></div>
 </div></header>
 <div class="scrim"></div>
@@ -657,6 +672,8 @@ def page(lang, path, title, description, body, og_type="website", extra_head="",
 
 
 SEARCH_SVG = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.6-3.6"/></svg>'
+HEART_SVG = '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linejoin="round"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 8 3.4 4.5 7 4.5c2 0 3.6 1.1 5 2.9 1.4-1.8 3-2.9 5-2.9 3.6 0 5.6 3.5 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg>'
+BOOK_SVG = '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linejoin="round"><path d="M6 3.5h12v17l-6-4.2-6 4.2z"/></svg>'
 DRAWER_MODELS = MODEL_STRIP + ["cybercab", "semi", "roadster"]
 
 
@@ -690,7 +707,9 @@ def story(a, lang, tag="h1"):
     return (f'<article>'
             f'<div class="hi"><img class="hero-img" src="{site_img(a)}" alt="{esc(t["title"])}" width="1200" height="630" fetchpriority="high">{dur(a, lang)}</div>'
             f'<{tag} class="st">{title}</{tag}>'
-            f'<p class="meta smeta"><a class="tag" href="{url(lang, "category/" + a["category"] + "/")}">{c[lang]}</a> · {fmt_date(a["date"], lang)}</p>'
+            f'<div class="srow"><p class="meta smeta"><a class="tag" href="{url(lang, "category/" + a["category"] + "/")}">{c[lang]}</a> · {fmt_date(a["date"], lang)}</p>'
+            f'<div class="acts"><button class="act like" type="button" data-like="{a["slug"]}" aria-pressed="false" title="{L["like"]}">{HEART_SVG}<span>0</span></button>'
+            f'<button class="act save" type="button" data-save="{a["slug"]}" aria-pressed="false" title="{L["save"]}">{BOOK_SVG}<span>{L["save"]}</span></button></div></div>'
             f'<p class="lead">{esc(t["description"])}</p>'
             f'<div class="prose">{t["body"]}</div>{src}</article>')
 
@@ -904,7 +923,18 @@ if(rb>lb){[].slice.call(r.querySelectorAll('.side>*')).forEach(function(x){if(x.
 else{var g=[].slice.call(l.querySelectorAll('.grid2>*'));for(var k=g.length-1;k>=0;k--){if(g[k].getBoundingClientRect().top>rb)g[k].style.display='none'}
 var v=g.filter(function(x){return x.style.display!=='none'&&!x.classList.contains('span2')});var last=v[v.length-1];
 }}
-window.addEventListener('load',bal);window.addEventListener('resize',bal);bal();
+window.addEventListener('load',bal);
+var LS={get:function(k){try{return JSON.parse(localStorage.getItem(k)||'[]')}catch(e){return []}},set:function(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+var sv=document.querySelector('.savedlink i');function badge(){var n=LS.get('tt_saved').length;if(sv){sv.hidden=!n;sv.textContent=n}}badge();
+var SAVE=document.documentElement.lang==='nl'?['Bewaren','Bewaard']:['Save','Saved'];
+document.querySelectorAll('[data-save]').forEach(function(b){var s=b.dataset.save;function st(){var on=LS.get('tt_saved').indexOf(s)>-1;b.setAttribute('aria-pressed',on);b.querySelector('span').textContent=SAVE[on?1:0]}st();
+b.onclick=function(){var l=LS.get('tt_saved'),i=l.indexOf(s);if(i>-1)l.splice(i,1);else l.unshift(s);LS.set('tt_saved',l);st();badge()}});
+var lb=[].slice.call(document.querySelectorAll('[data-like]'));if(lb.length){var liked=LS.get('tt_liked');
+fetch('/api/likes?s='+lb.map(function(b){return b.dataset.like}).join(',')).then(function(r){return r.json()}).then(function(j){lb.forEach(function(b){var n=j[b.dataset.like]||0;b.querySelector('span').textContent=n})}).catch(function(){});
+lb.forEach(function(b){var s=b.dataset.like;b.setAttribute('aria-pressed',liked.indexOf(s)>-1);b.onclick=function(){var l=LS.get('tt_liked'),i=l.indexOf(s),d=i>-1?-1:1;if(d>0)l.push(s);else l.splice(i,1);LS.set('tt_liked',l);b.setAttribute('aria-pressed',d>0);
+var sp=b.querySelector('span');sp.textContent=Math.max(0,(+sp.textContent||0)+d);fetch('/api/likes',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({slug:s,d:d})}).then(function(r){return r.json()}).then(function(j){if(j.n!=null)sp.textContent=j.n}).catch(function(){})}})}
+var sl=document.querySelector('.savedlist');if(sl){var keep=LS.get('tt_saved');if(!keep.length){sl.innerHTML='<p class="empty">'+e(sl.dataset.empty)+'</p>'}else{load().then(function(){var m={};idx.forEach(function(a){var k=a.u.replace(/\/$/,'').split('/').pop();m[k]=a});
+sl.innerHTML=keep.filter(function(k){return m[k]}).map(function(k){var a=m[k];return '<a class="card" href="'+a.u+'"><div class="im"><img src="'+a.i+'" alt=""></div><div class="body"><span class="tag">'+e(a.c)+'</span> <span class="meta">· '+e(a.dt)+'</span><h3>'+e(a.t)+'</h3><p>'+e(a.d)+'</p></div></a>'}).join('')})}}window.addEventListener('resize',bal);bal();
 })();"""
 
 
@@ -1131,6 +1161,12 @@ def build():
                     + "".join(card(a, lang) for a in chunk) + f'</div>{pager}</div><aside class="rside">{cats9(lang, "news")}</aside></section>')
             write(url(lang, path), page(lang, path, title, L["tagline"], body, active="news"))
         ARCH_PAGES[0] = pages
+
+        # ---------- Saved articles (filled in the browser from localStorage) ----------
+        body = (f'<section class="arch"><div class="lcol"><h1 class="st archh">{L["saved"]}</h1>'
+                f'<div class="grid2 savedlist" data-empty="{esc(L["saved_empty"])}"></div></div>'
+                f'<aside class="rside">{cats9(lang)}</aside></section>')
+        write(url(lang, "saved/"), page(lang, "saved/", L["saved"], L["saved"], body).replace("<head>", '<head>\n<meta name="robots" content="noindex">', 1))
 
         # ---------- Static pages ----------
         for key, p in PAGES.items():

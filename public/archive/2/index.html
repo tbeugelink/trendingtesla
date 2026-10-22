@@ -88,6 +88,15 @@ h1,h2,h3{color:var(--head);font-weight:800}
 .pager a,.morelink{color:var(--head);text-decoration:none;font-weight:700;background:#272727;border-radius:10px;padding:9px 14px 7px}
 .pager a:hover,.morelink:hover{background:#3f3f3f}
 .morelink{display:block;text-align:center;margin-top:24px;font-size:.88rem}
+.srow{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 14px}.srow .smeta{margin:0}
+.acts{display:flex;gap:8px;flex:none}
+.act{display:inline-flex;align-items:center;gap:6px;border:0;border-radius:999px;background:#272727;color:var(--head);font:inherit;font-size:.82rem;font-weight:700;padding:7px 13px 6px;cursor:pointer;transition:background .15s}
+.act:hover{background:#3f3f3f}.act svg{flex:none}
+.act.like[aria-pressed=true] svg{fill:#e22822;stroke:#e22822}
+.act.save[aria-pressed=true]{background:var(--head);color:#0f0f0f}.act.save[aria-pressed=true] svg{fill:currentColor}
+.savedlink{position:relative;flex:none;display:grid;place-items:center;width:36px;height:36px;border-radius:50%;color:var(--head);margin-left:6px}
+.savedlink:hover{background:#272727}
+.savedlink i{position:absolute;top:1px;right:0;min-width:16px;height:16px;border-radius:8px;background:var(--red);color:#fff;font:800 .62rem/16px Manrope,sans-serif;font-style:normal;text-align:center;padding:0 4px}
 .dtopics{display:grid;grid-template-columns:1fr 1fr;gap:7px;padding:0 4px}
 .dtopics a{text-align:center;font-size:.84rem;font-weight:700;color:var(--fg);text-decoration:none;background:#272727;border:1px solid #272727;border-radius:10px;padding:10px 6px 8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .dtopics a:hover{background:#3f3f3f;border-color:#3f3f3f;color:var(--head)}
@@ -254,7 +263,7 @@ footer .fcopy{margin-top:32px;padding-top:18px;border-top:1px solid var(--border
 @media (max-width:860px){footer .fgrid{grid-template-columns:1fr 1fr;gap:28px}footer .fbrand{grid-column:1/-1}}
 @media (max-width:600px){.wrap{padding:0 12px}
 .bar{gap:4px;height:56px}.burger{margin-left:-14px}.logo{font-size:1.15rem}.brand{margin-left:2px}
-.sbtn{margin-left:auto;width:36px;height:36px;border:0;background:transparent}.lang{margin-left:-9px;margin-right:-10px;font-size:.7rem;padding:3px 9px}
+.sbtn{margin-left:auto;width:36px;height:36px;border:0;background:transparent}.savedlink{margin-left:-2px;width:34px;height:34px}.lang{margin-left:0;margin-right:-10px;font-size:.7rem;padding:3px 9px}
 .read .hi{margin:0 -12px 14px}.read .hi .hero-img{border-radius:0;border:0}.hi .dur{right:12px}
 article .st{font-size:1.3rem;line-height:1.25}article .lead{font-size:.95rem}.smeta{font-size:.82rem}
 article .prose{font-size:.95rem}article .prose h2{font-size:1.15rem}.grid2{grid-template-columns:1fr;gap:30px}.grid2>.card{grid-template-columns:1fr;gap:0}.grid2>.card .im{height:auto;width:auto}.grid2>.card .im img{aspect-ratio:1200/630}.grid2>.card .body{padding:14px 0 0}.card.lead{grid-column:auto}.leadside{grid-column:auto;flex-direction:column;gap:40px}.leadside .card p{display:-webkit-box}.mini{grid-template-columns:1fr;gap:12px;height:auto}.mini>div{height:auto}.th{width:100%;height:auto}.mini img{width:100%;height:auto;aspect-ratio:1200/630}#news .h2{margin-top:32px}.grid{grid-template-columns:1fr;gap:40px}.why{grid-template-columns:1fr 1fr;gap:10px}.why div{padding:14px}.why p{font-size:.8rem}
@@ -270,6 +279,7 @@ article .prose{font-size:.95rem}article .prose h2{font-size:1.15rem}.grid2{grid-
 <div class="brand"><a class="logo" href="/">Trending<span>Tesla</span></a></div>
 <form class="search" role="search" action="/" data-idx="/search-en.json" data-none="Nothing found"><input type="search" name="q" placeholder="Search Tesla news" aria-label="Search Tesla news" autocomplete="off"><button type="submit" aria-label="Search Tesla news"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.6-3.6"/></svg></button><div class="res" hidden></div></form>
 <button class="sbtn" type="button" aria-label="Search Tesla news"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.6-3.6"/></svg></button>
+<a class="savedlink" href="/saved/" title="Saved articles" aria-label="Saved articles"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linejoin="round"><path d="M6 3.5h12v17l-6-4.2-6 4.2z"/></svg><i hidden></i></a>
 <a class="lang" href="/nl/archive/2/" hreflang="nl" lang="nl" title="Nederlands">NL</a></div>
 </div></header>
 <div class="scrim"></div>
@@ -307,7 +317,18 @@ if(rb>lb){[].slice.call(r.querySelectorAll('.side>*')).forEach(function(x){if(x.
 else{var g=[].slice.call(l.querySelectorAll('.grid2>*'));for(var k=g.length-1;k>=0;k--){if(g[k].getBoundingClientRect().top>rb)g[k].style.display='none'}
 var v=g.filter(function(x){return x.style.display!=='none'&&!x.classList.contains('span2')});var last=v[v.length-1];
 }}
-window.addEventListener('load',bal);window.addEventListener('resize',bal);bal();
+window.addEventListener('load',bal);
+var LS={get:function(k){try{return JSON.parse(localStorage.getItem(k)||'[]')}catch(e){return []}},set:function(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+var sv=document.querySelector('.savedlink i');function badge(){var n=LS.get('tt_saved').length;if(sv){sv.hidden=!n;sv.textContent=n}}badge();
+var SAVE=document.documentElement.lang==='nl'?['Bewaren','Bewaard']:['Save','Saved'];
+document.querySelectorAll('[data-save]').forEach(function(b){var s=b.dataset.save;function st(){var on=LS.get('tt_saved').indexOf(s)>-1;b.setAttribute('aria-pressed',on);b.querySelector('span').textContent=SAVE[on?1:0]}st();
+b.onclick=function(){var l=LS.get('tt_saved'),i=l.indexOf(s);if(i>-1)l.splice(i,1);else l.unshift(s);LS.set('tt_saved',l);st();badge()}});
+var lb=[].slice.call(document.querySelectorAll('[data-like]'));if(lb.length){var liked=LS.get('tt_liked');
+fetch('/api/likes?s='+lb.map(function(b){return b.dataset.like}).join(',')).then(function(r){return r.json()}).then(function(j){lb.forEach(function(b){var n=j[b.dataset.like]||0;b.querySelector('span').textContent=n})}).catch(function(){});
+lb.forEach(function(b){var s=b.dataset.like;b.setAttribute('aria-pressed',liked.indexOf(s)>-1);b.onclick=function(){var l=LS.get('tt_liked'),i=l.indexOf(s),d=i>-1?-1:1;if(d>0)l.push(s);else l.splice(i,1);LS.set('tt_liked',l);b.setAttribute('aria-pressed',d>0);
+var sp=b.querySelector('span');sp.textContent=Math.max(0,(+sp.textContent||0)+d);fetch('/api/likes',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({slug:s,d:d})}).then(function(r){return r.json()}).then(function(j){if(j.n!=null)sp.textContent=j.n}).catch(function(){})}})}
+var sl=document.querySelector('.savedlist');if(sl){var keep=LS.get('tt_saved');if(!keep.length){sl.innerHTML='<p class="empty">'+e(sl.dataset.empty)+'</p>'}else{load().then(function(){var m={};idx.forEach(function(a){var k=a.u.replace(/\/$/,'').split('/').pop();m[k]=a});
+sl.innerHTML=keep.filter(function(k){return m[k]}).map(function(k){var a=m[k];return '<a class="card" href="'+a.u+'"><div class="im"><img src="'+a.i+'" alt=""></div><div class="body"><span class="tag">'+e(a.c)+'</span> <span class="meta">· '+e(a.dt)+'</span><h3>'+e(a.t)+'</h3><p>'+e(a.d)+'</p></div></a>'}).join('')})}}window.addEventListener('resize',bal);bal();
 })();</script>
 </body>
 </html>

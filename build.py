@@ -54,7 +54,7 @@ LANGS = {
         "models_h": "News and advice for your model", "guides_h": "Best picks for your Tesla",
         "guides_sub": "Researched per model and year, with pros and cons.",
         "related": "Read next", "sources": "Sources", "about": "About", "privacy": "Privacy",
-        "switch": "NL", "switch_full": "Nederlands",
+        "switch": "NL", "switch_full": "Nederlands", "slogan": "Daily Tesla news &amp; trends", "search": "Search Tesla news", "none": "Nothing found", "home": "Home", "d_topics": "Topics", "d_models": "Models", "d_more": "More", "menu": "Menu", "tip_h": "A 22 kW charger won't charge your Tesla any faster", "tip_p": "Most Tesla models charge at home at up to 11 kW AC.", "tip_btn": "Read why",
         "empty": "No articles here yet. New stories are published several times a day.",
         "cat_intro": "All TrendingTesla articles about {}.",
         "eco_intro": "SpaceX, Starlink, The Boring Company and xAI/Grok: the companies around Tesla, and how they connect.",
@@ -83,7 +83,7 @@ LANGS = {
         "models_h": "Nieuws en advies voor jouw model", "guides_h": "De beste keuzes voor je Tesla",
         "guides_sub": "Uitgezocht per model en bouwjaar, met plus- en minpunten.",
         "related": "Lees ook", "sources": "Bronnen", "about": "Over ons", "privacy": "Privacy",
-        "switch": "EN", "switch_full": "English",
+        "switch": "EN", "switch_full": "English", "slogan": "Iedere dag het laatste nieuws &amp; trends", "search": "Zoek in Tesla-nieuws", "none": "Niets gevonden", "home": "Home", "d_topics": "Onderwerpen", "d_models": "Modellen", "d_more": "Meer", "menu": "Menu", "tip_h": "Een 22 kW-laadpaal laadt je Tesla niet sneller", "tip_p": "Veel Tesla-modellen laden thuis met maximaal 11 kW AC.", "tip_btn": "Lees waarom",
         "empty": "Hier staan nog geen artikelen. Er verschijnen meerdere keren per dag nieuwe verhalen.",
         "cat_intro": "Alle artikelen van TrendingTesla over {}.",
         "eco_intro": "SpaceX, Starlink, The Boring Company en xAI/Grok: de bedrijven rond Tesla, en hoe ze met elkaar verbonden zijn.",
@@ -235,16 +235,50 @@ h1,h2,h3{color:var(--head);font-weight:800}
 .sr{position:absolute;left:-9999px}
 /* header */
 .top{position:sticky;top:0;z-index:10;background:rgba(6,10,18,.55);backdrop-filter:blur(16px) saturate(1.3);-webkit-backdrop-filter:blur(16px) saturate(1.3);border-bottom:1px solid var(--border)}
-.bar{display:flex;align-items:center;justify-content:space-between;gap:16px;height:60px}
+.bar{display:flex;align-items:center;gap:14px;height:66px}
+.brand{display:flex;align-items:baseline;gap:14px;min-width:0}
 .logo{font-weight:800;font-size:1.4rem;letter-spacing:-.02em;color:var(--head);text-decoration:none;white-space:nowrap}
 .logo span{color:var(--red)}
-.lang{font-size:.78rem;font-weight:800;letter-spacing:.05em;color:var(--muted);text-decoration:none;border:1px solid var(--border2);border-radius:999px;padding:4px 11px}
+.slogan{font-size:.86rem;font-weight:600;color:var(--muted);white-space:nowrap}
+.burger{flex:none;width:40px;height:40px;margin-left:-8px;border-radius:50%;border:0;background:transparent;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;cursor:pointer}
+.burger span{width:18px;height:2px;border-radius:2px;background:var(--head)}
+.burger:hover{background:var(--surface2)}
+.search{position:relative;flex:1;max-width:520px;margin-left:auto;display:flex}
+.search input{flex:1;min-width:0;background:rgba(255,255,255,.04);border:1px solid var(--border2);border-right:0;border-radius:999px 0 0 999px;color:var(--head);font:inherit;font-size:.92rem;padding:9px 18px;outline:none}
+.search input::placeholder{color:var(--dim)}
+.search input:focus{border-color:var(--blue)}
+.search>button,.sbtn{border:1px solid var(--border2);background:var(--surface);color:var(--head);cursor:pointer;display:grid;place-items:center}
+.search>button{border-radius:0 999px 999px 0;width:58px}
+.sbtn{display:none;width:40px;height:40px;border-radius:50%;margin-left:auto}
+.res{position:absolute;top:calc(100% + 8px);left:0;right:0;background:#0a0f19;border:1px solid var(--border2);border-radius:14px;padding:6px;box-shadow:0 24px 48px rgba(0,0,0,.55);max-height:70vh;overflow:auto;z-index:40}
+.res a{display:flex;gap:12px;align-items:center;padding:8px;border-radius:10px;text-decoration:none}
+.res a:hover{background:var(--surface2)}
+.res img{width:76px;aspect-ratio:1200/630;object-fit:cover;border-radius:6px;flex:none}
+.res b{display:block;font-size:.88rem;line-height:1.3;color:var(--head)}
+.res small{color:var(--dim);font-size:.74rem}
+.res p{padding:10px;color:var(--muted);font-size:.88rem}
+.lang{flex:none;font-size:.78rem;font-weight:800;letter-spacing:.05em;color:var(--muted);text-decoration:none;border:1px solid var(--border2);border-radius:999px;padding:4px 11px;margin-left:6px}
 .lang:hover{color:var(--head);border-color:var(--head)}
-.menu{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;padding-bottom:10px;margin-top:-4px}
-.menu::-webkit-scrollbar{display:none}
-.menu a{flex:none;font-size:.86rem;font-weight:700;color:var(--muted);text-decoration:none;padding:6px 12px;border-radius:999px}
-.menu a:hover{color:var(--head);background:var(--surface)}
-.menu a.on{color:var(--head);background:var(--surface2);box-shadow:inset 0 -2px 0 var(--blue)}
+.scrim{position:fixed;inset:0;z-index:25;background:rgba(0,0,0,.55);opacity:0;pointer-events:none;transition:opacity .25s}
+.dopen .scrim{opacity:1;pointer-events:auto}
+.drawer{position:fixed;top:0;bottom:0;left:0;z-index:30;width:290px;max-width:86vw;overflow-y:auto;background:#070b13;border-right:1px solid var(--border);padding:13px 12px 32px;transform:translateX(-102%);transition:transform .25s ease}
+.dopen .drawer{transform:none}
+.drawer .dh{display:flex;align-items:center;gap:12px;padding:0 4px 13px 12px;margin:0 -12px 10px;border-bottom:1px solid var(--border)}
+.drawer h4{font-size:.7rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:var(--dim);margin:20px 10px 6px}
+.drawer .di{display:flex;align-items:center;gap:12px;padding:9px 10px;border-radius:10px;color:var(--fg);text-decoration:none;font-weight:700;font-size:.92rem}
+.drawer .di:hover{background:var(--surface2);color:var(--head)}
+.drawer .di.on{background:var(--surface2);color:var(--head);box-shadow:inset 3px 0 0 var(--blue)}
+.drawer .di img,.drawer .di i{width:56px;aspect-ratio:1200/630;object-fit:cover;border-radius:5px;border:1px solid var(--edge);flex:none;background:var(--surface)}
+.cats9{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:28px}
+.cats9 a{text-align:center;font-size:.84rem;font-weight:700;color:var(--fg);text-decoration:none;background:var(--surface);border:1px solid var(--border2);border-radius:10px;padding:9px 6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;transition:border-color .2s,color .2s}
+.cats9 a:hover{border-color:var(--blue);color:var(--head)}
+.cats9 a.on{background:var(--head);border-color:var(--head);color:#03050a}
+.tip{display:flex;align-items:center;gap:26px;margin-top:34px;padding:22px 26px;border-radius:16px;border:1px solid var(--border2);background:linear-gradient(120deg,rgba(0,212,255,.09),rgba(56,96,255,.05) 55%,rgba(255,255,255,.01))}
+.tip .big{font-size:2.6rem;font-weight:800;letter-spacing:-.03em;line-height:1;color:var(--blue);white-space:nowrap}
+.tip h2{font-size:1.12rem;line-height:1.25;margin-bottom:4px}
+.tip p{color:var(--muted);font-size:.9rem}
+.tip .btn{margin-left:auto;flex:none}
+.home{margin-top:32px}
 /* buttons, labels */
 .btn{display:inline-flex;align-items:center;justify-content:center;background:var(--red);color:#fff;font-weight:800;font-size:.9rem;padding:11px 20px;border-radius:10px;text-decoration:none;transition:background .2s}
 .btn:hover{background:var(--red2)}
@@ -352,6 +386,7 @@ footer a:hover{color:var(--head)}
 footer .links{display:flex;gap:18px;flex-wrap:wrap}
 footer p{max-width:560px;margin-top:10px}
 @media (max-width:1000px){.grid{grid-template-columns:repeat(2,1fr);gap:48px 40px}.leadside{grid-column:span 2;flex-direction:row}.leadside .card{flex:1}.tops{grid-template-columns:1fr}.read{grid-template-columns:1fr;gap:48px}.why{grid-template-columns:repeat(2,1fr)}.models{grid-template-columns:repeat(4,1fr);gap:20px}}
+@media (max-width:860px){.slogan{font-size:.72rem}.brand{flex-direction:column;gap:0}.search{display:none}.sbtn{display:grid}.sopen .search{display:flex;position:absolute;left:16px;right:16px;top:12px;max-width:none;z-index:41}.sopen .search input{background:#0a0f19}.tip{flex-wrap:wrap;gap:14px 20px}.tip .btn{margin-left:0}}
 @media (max-width:600px){.wrap{padding:0 20px}.card.lead{grid-column:auto}.leadside{grid-column:auto;flex-direction:column;gap:40px}.leadside .card p{display:-webkit-box}.mini{grid-template-columns:1fr;gap:12px}.mini img{width:100%}#news .h2{margin-top:32px}.grid{grid-template-columns:1fr;gap:40px}.why{grid-template-columns:1fr 1fr;gap:10px}.why div{padding:14px}.why p{font-size:.8rem}
  .models{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:0 -24px;padding:0 24px 4px}.models::-webkit-scrollbar{display:none}.models{gap:14px}.model{flex:0 0 46%;scroll-snap-align:start}
  body{font-size:16.5px}.h2{margin-top:40px}.hero{min-height:0}.hero .in{padding:26px 20px}.hero .btn{flex:1;white-space:nowrap;padding:11px 12px}
@@ -533,10 +568,14 @@ def page(lang, path, title, description, body, og_type="website", extra_head="",
 </head>
 <body>
 <header class="top"><div class="wrap">
-<div class="bar"><a class="logo" href="{url(lang)}">Trending<span>Tesla</span></a>
+<div class="bar"><button class="burger" type="button" aria-label="{L['menu']}" aria-expanded="false" aria-controls="drawer"><span></span><span></span><span></span></button>
+<div class="brand"><a class="logo" href="{url(lang)}">Trending<span>Tesla</span></a><span class="slogan">{L['slogan']}</span></div>
+<form class="search" role="search" action="{url(lang)}" data-idx="/search-{lang}.json" data-none="{L['none']}"><input type="search" name="q" placeholder="{L['search']}" aria-label="{L['search']}" autocomplete="off"><button type="submit" aria-label="{L['search']}">{SEARCH_SVG}</button><div class="res" hidden></div></form>
+<button class="sbtn" type="button" aria-label="{L['search']}">{SEARCH_SVG}</button>
 <a class="lang" href="{url(alt, path)}" hreflang="{alt}" lang="{alt}" title="{L['switch_full']}">{L['switch']}</a></div>
-<nav class="menu" aria-label="Categories">{menu}</nav>
 </div></header>
+<div class="scrim"></div>
+<nav id="drawer" class="drawer" aria-label="{L['menu']}">{drawer(lang, active)}</nav>
 <main class="wrap">
 {body}
 </main>
@@ -545,9 +584,62 @@ def page(lang, path, title, description, body, og_type="website", extra_head="",
 <div><div class="links"><a href="{url(lang, 'about/')}">{L['about']}</a><a href="{url(lang, 'privacy/')}">{L['privacy']}</a><a href="{url(lang, 'feed.xml')}">RSS</a><a href="{url(alt, path)}">{L['switch_full']}</a></div>
 <p>{cats}</p><p>{mods}</p><p>&copy; {datetime.now().year} {NAME}</p></div>
 </div></div></footer>
+<script>{JS}</script>
 </body>
 </html>
 """
+
+
+SEARCH_SVG = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.6-3.6"/></svg>'
+DRAWER_MODELS = MODEL_STRIP + ["cybercab", "semi", "roadster"]
+
+
+def drawer(lang, active=None):
+    L = LANGS[lang]
+    out = (f'<div class="dh"><button class="burger" type="button" aria-label="{L["menu"]}"><span></span><span></span><span></span></button>'
+           f'<a class="logo" href="{url(lang)}">Trending<span>Tesla</span></a></div>'
+           f'<a class="di" href="{url(lang)}">{L["home"]}</a><h4>{L["d_topics"]}</h4>')
+    out += "".join(f'<a class="di{" on" if k == active else ""}" href="{url(lang, "category/" + k + "/")}">{c[lang]}</a>'
+                   for k, c in CATEGORIES.items() if c["menu"])
+    out += f'<h4>{L["d_models"]}</h4>'
+    for k in DRAWER_MODELS:
+        ph = model_photo(k)
+        img = f'<img src="{ph}" alt="" loading="lazy">' if ph else '<i></i>'
+        out += f'<a class="di" href="{url(lang, "model/" + k + "/")}">{img}{MODELS[k]["name"]}</a>'
+    out += (f'<h4>{L["d_more"]}</h4><a class="di" href="{url(lang, "about/")}">{L["about"]}</a>'
+            f'<a class="di" href="{url(lang, "privacy/")}">{L["privacy"]}</a><a class="di" href="{url(lang, "feed.xml")}">RSS</a>'
+            f'<a class="di" href="{url(other(lang), "")}">{L["switch_full"]}</a>')
+    return out
+
+
+def cats9(lang, active=None):
+    return '<nav class="cats9" aria-label="Topics">' + "".join(
+        f'<a href="{url(lang, "category/" + k + "/")}"{" class=\"on\"" if k == active else ""}>{c[lang]}</a>'
+        for k, c in CATEGORIES.items() if c["menu"]) + '</nav>'
+
+
+def tip(lang):
+    L = LANGS[lang]
+    return (f'<div class="tip"><div class="big">11 kW</div><div><h2>{L["tip_h"]}</h2><p>{L["tip_p"]}</p></div>'
+            f'<a class="btn" href="{url(lang, "tesla-home-charging-guide-11-kw-wall-connector/")}">{L["tip_btn"]} →</a></div>')
+
+
+JS = r"""(function(){var d=document.documentElement,o=document.querySelector('.scrim');
+function t(x){d.classList.toggle('dopen',x);document.querySelectorAll('.burger').forEach(function(b){b.setAttribute('aria-expanded',x)})}
+document.querySelectorAll('.burger').forEach(function(b){b.onclick=function(){t(!d.classList.contains('dopen'))}});
+o.onclick=function(){t(false)};
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){t(false);d.classList.remove('sopen')}});
+var f=document.querySelector('.search'),i=f.querySelector('input'),r=f.querySelector('.res'),idx=null;
+function e(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function load(){return idx?Promise.resolve(idx):fetch(f.dataset.idx).then(function(x){return x.json()}).then(function(j){idx=j;return j})}
+i.addEventListener('focus',load);
+i.addEventListener('input',function(){var q=i.value.trim().toLowerCase();if(q.length<2){r.hidden=true;return}
+load().then(function(){var w=q.split(/\s+/),h=idx.filter(function(a){var s=(a.t+' '+a.d+' '+a.c).toLowerCase();return w.every(function(x){return s.indexOf(x)>-1})}).slice(0,8);
+r.innerHTML=h.length?h.map(function(a){return '<a href="'+a.u+'"><img src="'+a.i+'" alt=""><span><b>'+e(a.t)+'</b><small>'+e(a.c)+' · '+e(a.dt)+'</small></span></a>'}).join(''):'<p>'+e(f.dataset.none)+'</p>';r.hidden=false})});
+f.addEventListener('submit',function(x){x.preventDefault();var a=r.querySelector('a');if(a)location.href=a.href});
+document.addEventListener('click',function(x){if(!f.contains(x.target)&&!x.target.closest('.sbtn')){r.hidden=true;d.classList.remove('sopen')}});
+document.querySelector('.sbtn').onclick=function(){d.classList.add('sopen');i.focus()};
+})();"""
 
 
 def label(a, lang):
@@ -669,25 +761,20 @@ def build():
         L = LANGS[lang]
 
         # ---------- Home ----------
-        hero = (f'<div class="hero">{f"<img src={chr(34)}{hero_photo}{chr(34)} alt={chr(34)}{chr(34)} fetchpriority={chr(34)}high{chr(34)}>" if hero_photo else ""}'
-                f'<div class="in"><span class="eyebrow">{L["eyebrow"]}</span>'
-                f'<h1>{L["hero_h"]}<br><span>{L["hero_span"]}</span></h1><p>{L["hero_p"]}</p>'
-                f'<div class="btns"><a class="btn" href="#models">{L["btn_model"]} →</a></div></div></div>')
-        body = hero
+        body = f'<h1 class="sr">{NAME} — {L["tagline"]}</h1>'
         if news:
             top = news[0]
             t = top[lang]
             feature = (f'<a class="feature" href="{url(lang, top["slug"] + "/")}">'
-                       f'<div class="im"><img src="{site_img(top)}" alt="" width="1200" height="630"></div>'
+                       f'<div class="im"><img src="{site_img(top)}" alt="" width="1200" height="630" fetchpriority="high"></div>'
                        f'<span class="tag" style="margin-top:14px">{L["top"]} · {CATEGORIES[top["category"]][lang]}</span>'
                        f'<h3>{esc(t["title"])}</h3><p>{esc(t["description"])}</p>'
                        f'<span class="meta">{fmt_date(top["date"], lang)} · {read_time(top, lang)} {L["min"]}</span></a>')
             side = "".join(mini(a, lang) for a in news[1:5])
-            tops = f'<div class="tops">{feature}<div class="side">{side}</div></div>'
-            body += section(L["latest"], tops, (url(lang, "category/news/"), L["all"]), anchor="news")
+            body += (f'<section id="news" class="home"><div class="tops"><div>{feature}{tip(lang)}</div>'
+                     f'<div>{cats9(lang)}<h2 class="sr">{L["latest"]}</h2><div class="side">{side}</div></div></div></section>')
         else:
             body += section(L["latest"], f'<p class="empty">{L["empty"]}</p>', anchor="news")
-        body += section(L["models_h"], model_tiles(lang), anchor="models")
         if guides:
             body += section(L["guides_h"], grid(guides[:6], lang), (url(lang, "category/guides/"), CATEGORIES["guides"][lang]),
                             sub=L["guides_sub"])
@@ -762,7 +849,7 @@ def build():
             side_ids = {x["slug"] for x in side_items}
             rel = [x for x in related(a, arts, 12) if x["slug"] not in side_ids]
             rel_html = section(L["related"], grid(rel[:3], lang)) if rel else ""
-            aside = (f'<aside class="rside"><h2 class="sr">{L["latest"]}</h2><div class="side">'
+            aside = (f'<aside class="rside">{cats9(lang, a["category"])}<h2 class="sr">{L["latest"]}</h2><div class="side">'
                      + "".join(mini(x, lang) for x in side_items) + '</div></aside>')
             body = (f'<div class="read"><article>'
                     f'<img class="hero-img" src="{site_img(a)}" alt="{esc(t["title"])}" width="1200" height="630" fetchpriority="high">'
@@ -773,6 +860,10 @@ def build():
             write(url(lang, a["slug"] + "/"),
                   page(lang, a["slug"] + "/", t["title"], t["description"], body, "article", head,
                        image=social_img(a, lang), active=a["category"]))
+
+        idx = [{"u": url(lang, x["slug"] + "/"), "t": x[lang]["title"], "d": x[lang]["description"],
+                "c": CATEGORIES[x["category"]][lang], "dt": fmt_date(x["date"], lang), "i": site_img(x)} for x in arts]
+        (OUT / f"search-{lang}.json").write_text(json.dumps(idx, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
 
         # ---------- Static pages ----------
         for key, p in PAGES.items():

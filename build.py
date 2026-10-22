@@ -275,6 +275,7 @@ h1,h2,h3{color:var(--head);font-weight:800}
 .drawer{position:fixed;top:0;bottom:0;left:0;z-index:30;width:290px;max-width:86vw;overflow-y:auto;background:#0f0f0f;border-right:1px solid var(--border);padding:13px 12px 32px;transform:translateX(-102%);transition:transform .25s ease}
 .dopen .drawer{transform:none}
 .drawer .dh{display:flex;align-items:center;gap:12px;padding:0 4px 13px 12px;margin:0 -12px 10px;border-bottom:1px solid var(--border)}
+@media (min-width:861px){.drawer .mobonly{display:none}}
 .drawer h4{font-size:.7rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:var(--dim);margin:20px 10px 6px}
 .drawer .di{display:flex;align-items:center;gap:12px;padding:9px 10px;border-radius:10px;color:var(--fg);text-decoration:none;font-weight:700;font-size:.92rem}
 .drawer .di:hover{background:var(--surface2);color:var(--head)}
@@ -648,17 +649,17 @@ def drawer(lang, active=None):
     L = LANGS[lang]
     out = (f'<div class="dh"><button class="burger" type="button" aria-label="{L["menu"]}"><span></span><span></span><span></span></button>'
            f'<a class="logo" href="{url(lang)}">Trending<span>Tesla</span></a></div>'
-           f'<a class="di" href="{url(lang)}">{L["home"]}</a><h4>{L["d_topics"]}</h4>')
+           f'<a class="di" href="{url(lang)}">{L["home"]}</a><div class="mobonly"><h4>{L["d_topics"]}</h4>')
     out += "".join(f'<a class="di{" on" if k == active else ""}" href="{url(lang, "category/" + k + "/")}">{c[lang]}</a>'
                    for k, c in CATEGORIES.items() if c["menu"])
-    out += f'<h4>{L["d_models"]}</h4>'
+    out += f'</div><h4>{L["d_models"]}</h4>'
     for k in DRAWER_MODELS:
         ph = model_photo(k)
         img = f'<img src="{ph}" alt="" loading="lazy">' if ph else '<i></i>'
         out += f'<a class="di" href="{url(lang, "model/" + k + "/")}">{img}{MODELS[k]["name"]}</a>'
-    out += (f'<h4>{L["d_more"]}</h4><a class="di" href="{url(lang, "about/")}">{L["about"]}</a>'
+    out += (f'<div class="mobonly"><h4>{L["d_more"]}</h4><a class="di" href="{url(lang, "about/")}">{L["about"]}</a>'
             f'<a class="di" href="{url(lang, "privacy/")}">{L["privacy"]}</a><a class="di" href="{url(lang, "feed.xml")}">RSS</a>'
-            f'<a class="di" href="{url(other(lang), "")}">{L["switch_full"]}</a>')
+            f'<a class="di" href="{url(other(lang), "")}">{L["switch_full"]}</a></div>')
     return out
 
 

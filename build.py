@@ -658,7 +658,7 @@ def page(lang, path, title, description, body, og_type="website", extra_head="",
 <a class="lang" href="{url(alt, path)}" hreflang="{alt}" lang="{alt}" title="{L['switch_full']}">{L['switch']}</a></div>
 </div></header>
 <div class="scrim"></div>
-<nav id="drawer" class="drawer" aria-label="{L['menu']}">{drawer(lang, active)}</nav>
+<nav id="drawer" class="drawer" aria-label="{L['menu']}">{drawer(lang, active, path.strip("/").split("/")[1] if path.strip("/").startswith("model/") else None)}</nav>
 <main class="wrap">
 {body}
 </main>
@@ -680,7 +680,7 @@ BOOK_SVG = '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="
 DRAWER_MODELS = MODEL_STRIP + ["cybercab", "semi", "roadster"]
 
 
-def drawer(lang, active=None):
+def drawer(lang, active=None, model=None):
     L = LANGS[lang]
     out = (f'<div class="dh"><button class="burger" type="button" aria-label="{L["menu"]}"><span></span><span></span><span></span></button>'
            f'<a class="logo" href="{url(lang)}">Trending<span>Tesla</span></a></div>'
@@ -688,7 +688,7 @@ def drawer(lang, active=None):
     out += "".join(f'<a class="{"on" if k == active else ""}" href="{url(lang, "category/" + k + "/")}">{btn_label(c, lang)}</a>'
                    for k, c in CATEGORIES.items() if c["menu"])
     out += f'</div><hr class="dsep"></div>'
-    out += modelnav(lang)
+    out += modelnav(lang, model if model in MODELS else None)
     return out
 
 

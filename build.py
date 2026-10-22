@@ -719,6 +719,36 @@ def modelinfo(key, lang):
             f'<details class="sources"><summary>{L["sources"]} ({len(inf["sources"])})</summary><ul>{src}</ul></details></article>')
 
 
+NEAR_CATS = {"robotaxi": ["fsd", "models"], "fsd": ["robotaxi", "software"], "software": ["fsd", "guides"],
+             "charging": ["energy", "guides"], "energy": ["charging", "earnings"], "earnings": ["news", "energy"],
+             "news": ["earnings", "models"], "models": ["guides", "news"], "guides": ["models", "charging"],
+             "optimus": ["ecosystem", "earnings"], "ecosystem": ["optimus", "robotaxi"]}
+
+
+def rank_for(items, cat=None, model=None):
+    """Other articles ranked by relevance to a topic page or model page (not already in `items`)."""
+    own = set(id(x) for x in items)
+    fam = lambda x: {MODELS[k].get("parent") or k for k in x.get("models", [])}
+    mods = set().union(*(fam(x) for x in items)) if items else set()
+    root = (MODELS[model].get("parent") or model) if model else None
+    terms = set().union(*(_terms(x) for x in items[:12])) if items else set()
+    near = NEAR_CATS.get(cat or "models", [])
+    def score(x):
+        sc = 0
+        if root and root in fam(x):
+            sc += 6
+        if model and model in x.get("models", []):
+            sc += 4
+        sc += 2 * len(mods & fam(x))
+        if x["category"] in near:
+            sc += (1 if root else 3 - near.index(x["category"]))
+        if root and MODELS[root]["name"].lower() in (x["en"]["title"] + " " + x["en"]["description"]).lower():
+            sc += 5
+        sc += min(len(terms & _terms(x)), 4)
+        return (sc, published(x))
+    return sorted((x for x in ALL_ARTS if id(x) not in own), key=score, reverse=True)
+
+
 def listing(items, lang, active=None, model=None):
     """Newest article open in full on the left, the next ones stacked on the right, the rest below."""
     L = LANGS[lang]
@@ -730,9 +760,11 @@ def listing(items, lang, active=None, model=None):
     if model and INFO.get(model):
         own = set(id(x) for x in items)
         more = [x for x in ALL_ARTS if id(x) not in own][:40]
-        return feed(None, modelinfo(model, lang), items, lang, "models", L["latest"], more=more, extra_side=extra, lead_px=1500)
+        return feed(None, modelinfo(model, lang), items, lang, "models", L["latest"], more=more, extra_side=extra, lead_px=1500,
+                    left_pool=rank_for(items, model=model))
+    pool = rank_for(items, cat=active, model=model) if active != "news" else None
     return feed(items[0], story(items[0], lang, "h2"), items[1:], lang, active or ("models" if model else None),
-                L["latest"], more=more, extra_side=extra)
+                L["latest"], more=more, extra_side=extra, left_pool=pool)
 
 
 def cats9(lang, active=None):
@@ -901,7 +933,7 @@ def write(path, text):
 
 
 STOP = set("the a an and or of to in on for with is are be by at as from its it this that what how why new now tesla tesla's "
-           "de het een en of van in op voor met is zijn bij als uit naar dit dat wat hoe waarom nieuwe nu".split())
+           "de het een en of van in op voor met is zijn bij als uit naar dit dat wat hoe waarom nieuwe nu model models".split())
 
 
 def _terms(x):

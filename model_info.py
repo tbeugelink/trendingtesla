@@ -820,6 +820,20 @@ CTIME = {
 for _k, _v in CTIME.items():
     OVR.setdefault(_k, {})["ctime"] = _v
 
+CT_BODY = _t("4-door pickup, 6 ft bed, 5 seats", "4-deurs pick-up, laadbak van 1,8 m, 5 zitplaatsen")
+BODY = {
+ "model-x": X_BODY, "model-x-classic": X_BODY, "model-x-2021": X_BODY,
+ "model-y": _t("5-door crossover, 5 seats (6 or 7 in some versions)", "5-deurs crossover, 5 zitplaatsen (6 of 7 bij sommige versies)"),
+ "model-y-classic": _t("5-door crossover, 5 seats (7 optional, US)", "5-deurs crossover, 5 zitplaatsen (7 optioneel, VS)"),
+ "model-y-l": _t("5-door crossover, 6 seats (2-2-2)", "5-deurs crossover, 6 zitplaatsen (2-2-2)"),
+ "cybertruck": CT_BODY, "cybertruck-awd": CT_BODY, "cybertruck-cyberbeast": CT_BODY, "cybertruck-foundation": CT_BODY,
+ "cybercab": _t("2-door with butterfly doors, 2 seats", "2-deurs met vlinderdeuren, 2 zitplaatsen"),
+ "semi": _t("2-door heavy tractor (Class 8), central driver's seat", "2-deurs zware trekker (Class 8), bestuurder in het midden"),
+ "roadster": _t("2-door sports car, 2+2 seats (2017 prototype)", "2-deurs sportwagen, 2+2 zitplaatsen (prototype 2017)"),
+}
+for _k, _v in BODY.items():
+    OVR.setdefault(_k, {})["body"] = _v
+
 def _uniform(key):
     inf = INFO[key]; en, nl = inf["en"]["specs"], inf["nl"]["specs"]
     got = {}; spare = {"en": [], "nl": []}

@@ -321,12 +321,12 @@ h1,h2,h3{color:var(--head);font-weight:800}
 .cats9 a:hover{background:#3f3f3f;border-color:#3f3f3f;color:var(--head)}
 .cats9 a b,.dtopics a b{font-weight:900}
 .cats9 a.on{background:var(--head);border-color:var(--head);color:#03050a}
-.mnav{display:flex;flex-direction:column;gap:10px;margin:-14px 0 28px}.drawer .mnav{margin:0 4px}
+.mnav{display:flex;flex-direction:column;gap:14px;margin:-14px 0 28px}.mgrp{display:flex;flex-direction:column;gap:6px}.mh{font-size:.95rem;font-weight:900;color:var(--head);text-decoration:none;padding:0 2px;letter-spacing:-.01em}.mh:hover,.mh.on{text-decoration:underline;text-underline-offset:3px}.drawer .mnav{margin:0 4px}
 .mcell{display:grid;grid-template-columns:1fr 1fr;gap:7px;align-items:start}
 .mopts{display:flex;flex-direction:column;gap:6px}
 .mopts a{font-size:.8rem;font-weight:700;color:var(--muted);text-decoration:none;border:1px solid #3f3f3f;border-radius:8px;padding:5px 6px 4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-align:center;transition:background .15s}
 .mopts a:hover{background:#3f3f3f;color:var(--head)}
-.mopts a.on{background:var(--head);border-color:var(--head);color:#03050a}.mopts a.vt{display:flex;align-items:center;gap:7px;padding:3px 6px 3px 3px;text-align:left}.mopts a.vt b{flex:none;width:39px;height:26px;border-radius:5px;overflow:hidden;background:#000}.mopts a.vt b img{width:100%;height:100%;object-fit:cover;display:block}.mopts a span{overflow:hidden;text-overflow:ellipsis}
+.mopts a.on{background:var(--head);border-color:var(--head);color:#03050a}.mopts a.vt{display:flex;align-items:center;gap:10px;padding:3px 8px 3px 3px;text-align:left}.mopts a.vt b{flex:none;width:48px;height:32px;border-radius:5px;overflow:hidden;background:#000}.mopts a.vt b img{width:100%;height:100%;object-fit:cover;display:block}.mopts a span{overflow:hidden;text-overflow:ellipsis}
 .dm.on,.dm.in{border-color:var(--head)}
 .specs{width:100%;border-collapse:collapse;margin:6px 0 10px;font-size:.92rem}
 .specs th,.specs td{padding:9px 12px;border-bottom:1px solid var(--border2);text-align:left;vertical-align:top}
@@ -725,26 +725,25 @@ MODEL_ROOTS = ["model-s", "model-3", "model-x", "model-y", "cybertruck", "cyberc
 
 
 def modelnav(lang, current=None):
-    """Models with their versions, one row per model (shown on the Models topic and model pages)."""
+    """Models with their versions: a model header with a bar (photo + type/year) per version."""
     cur_root = (MODELS[current].get("parent") or current) if current else None
+    ov = {"en": "Overview", "nl": "Overzicht"}[lang]
     rows = ""
     for r in MODEL_ROOTS:
-        on = ' class="on"' if current == r else (' class="in"' if cur_root == r else "")
-        opts = ""
         kids = [(k, v) for k, v in MODELS.items() if v.get("parent") == r]
-        thumbs = any(v.get("menu") for k, v in kids)
+        items = []
         for k, v in kids:
             lbl = v["label"][lang] if isinstance(v["label"], dict) else v["label"]
-            lbl = lbl.split(" · ")[0]
-            th = ""
-            if thumbs:
-                th = f'<b>{"<img src=\"/img/models/" + v["menu"] + "\" alt=\"\" loading=\"lazy\">" if v.get("menu") else ""}</b>'
-            opts += f'<a href="{url(lang, "model/" + k + "/")}" class="{"on" if k == current else ""}{" vt" if thumbs else ""}">{th}<span>{esc(lbl)}</span></a>'
-        ph = f"/img/models/{MODELS[r]['menu']}" if MODELS[r].get("menu") else model_photo(r)
-        img = f'<img src="{ph}" alt="" loading="lazy">' if ph else '<i></i>'
+            items.append((k, lbl.split(" · ")[0], v.get("menu")))
+        if not items:
+            items = [(r, ov, MODELS[r].get("menu"))]
+        bars = ""
+        for k, lbl, img in items:
+            th = f'<img src="/img/models/{img}" alt="" loading="lazy">' if img else ""
+            bars += f'<a href="{url(lang, "model/" + k + "/")}" class="vt{" on" if k == current else ""}"><b>{th}</b><span>{esc(lbl)}</span></a>'
         st = " on" if current == r else (" in" if cur_root == r else "")
-        rows += (f'<div class="mcell"><a class="dm{st}" href="{url(lang, "model/" + r + "/")}"><div class="ph">{img}</div>'
-                 f'<span>{MODELS[r]["name"]}</span></a><div class="mopts">{opts}</div></div>')
+        rows += (f'<div class="mgrp"><a class="mh{st}" href="{url(lang, "model/" + r + "/")}">{MODELS[r]["name"]}</a>'
+                 f'<div class="mopts">{bars}</div></div>')
     return f'<nav class="mnav" aria-label="Models">{rows}</nav>'
 
 

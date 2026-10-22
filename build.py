@@ -221,7 +221,7 @@ CSS = """
 :root{--bg:#04060a;--surface:#212121;--surface2:#272727;--border:#272727;--border2:#3f3f3f;--fg:#e8eef5;--head:#fff;--muted:#b9c4d2;--dim:#8f9db0;--red:#e22822;--red2:#b81e19;--blue:#00d4ff;--edge:#3a4a60;--blue2:#5fe3ff;--max:1200px;color-scheme:dark}
 *{box-sizing:border-box;margin:0;padding:0}
 html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:150px;background:#04060a}
-body{background:#0f0f0f;min-height:100vh;color:var(--fg);font:17px/1.65 Manrope,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+body{background:#0f0f0f linear-gradient(135deg,#2b2b2b 0%,#1a1a1a 32%,#121212 62%,#0b0b0b 100%) fixed;min-height:100vh;color:var(--fg);font:17px/1.65 Manrope,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
 main,footer{position:relative;z-index:1}
 a{color:var(--head)}
 img{display:block;max-width:100%;height:auto}
@@ -237,7 +237,7 @@ h1,h2,h3{color:var(--head);font-weight:800}
 .rside .rh{font-size:1.15rem;margin:0 0 22px;padding-bottom:12px;border-bottom:1px solid var(--border)}
 .sr{position:absolute;left:-9999px}
 /* header */
-.top{position:sticky;top:0;z-index:10;background:rgba(15,15,15,.97)}
+.top{position:sticky;top:0;z-index:10;background:rgba(30,30,30,.72);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
 .bar{display:flex;align-items:center;gap:14px;height:66px}
 .brand{display:flex;align-items:baseline;gap:14px;min-width:0}
 .logo{font-weight:800;font-size:1.4rem;letter-spacing:-.02em;color:var(--head);text-decoration:none;white-space:nowrap}
@@ -317,10 +317,10 @@ article .st{font-size:clamp(1.8rem,4.6vw,2.6rem);line-height:1.12;letter-spacing
 .feature h3{font-size:clamp(1.4rem,2.8vw,2rem);line-height:1.15;letter-spacing:-.02em;margin:14px 0 8px}
 .feature p{color:var(--muted);margin-bottom:8px}
 .side{display:flex;flex-direction:column;gap:20px}
-.mini{display:grid;grid-template-columns:180px 1fr;gap:18px;text-decoration:none;color:var(--fg);align-items:start}
-.mini img{width:180px;aspect-ratio:1200/630;object-fit:cover;border-radius:10px;border:1px solid var(--edge);transition:border-color .2s,box-shadow .2s}
-.mini{padding:6px;margin:-6px;border-radius:12px;transition:background .15s}.mini:hover{background:#272727}
-.mini h3{font-size:.98rem;line-height:1.3;margin:6px 0 4px}
+.mini{display:grid;grid-template-columns:200px 1fr;gap:16px;text-decoration:none;color:var(--fg);align-items:stretch}
+.mini img{width:200px;height:100%;min-height:105px;object-fit:cover;border-radius:10px;border:1px solid var(--edge)}
+.mini{padding:6px;margin:-6px;border-radius:14px;transition:background .15s}.mini:hover{background:#272727}.mini>div{padding:2px 4px 2px 0}
+.mini h3{font-size:.98rem;line-height:1.3;margin:6px 0 4px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
 .mini .tag{display:block;line-height:1;margin-top:0}
 
 /* grid */
@@ -392,7 +392,7 @@ footer .links{display:flex;gap:18px;flex-wrap:wrap}
 footer p{max-width:560px;margin-top:10px}
 @media (max-width:1000px){.grid{grid-template-columns:repeat(2,1fr);gap:48px 40px}.leadside{grid-column:span 2;flex-direction:row}.leadside .card{flex:1}.tops{grid-template-columns:1fr}.read{grid-template-columns:1fr;gap:48px}.why{grid-template-columns:repeat(2,1fr)}.models{grid-template-columns:repeat(4,1fr);gap:20px}}
 @media (max-width:860px){.slogan{font-size:.72rem}.brand{flex-direction:column;gap:0}.search{display:none}.sbtn{display:grid}.sopen .search{display:flex;position:absolute;left:16px;right:16px;top:12px;max-width:none;z-index:41}.sopen .search input{background:#121212}.tip{flex-wrap:wrap;gap:14px 20px}.tip .btn{margin-left:0}}
-@media (max-width:600px){.wrap{padding:0 20px}.grid2{grid-template-columns:1fr;gap:30px}.card.lead{grid-column:auto}.leadside{grid-column:auto;flex-direction:column;gap:40px}.leadside .card p{display:-webkit-box}.mini{grid-template-columns:1fr;gap:12px}.mini img{width:100%}#news .h2{margin-top:32px}.grid{grid-template-columns:1fr;gap:40px}.why{grid-template-columns:1fr 1fr;gap:10px}.why div{padding:14px}.why p{font-size:.8rem}
+@media (max-width:600px){.wrap{padding:0 20px}.grid2{grid-template-columns:1fr;gap:30px}.card.lead{grid-column:auto}.leadside{grid-column:auto;flex-direction:column;gap:40px}.leadside .card p{display:-webkit-box}.mini{grid-template-columns:1fr;gap:12px}.mini img{width:100%;height:auto;aspect-ratio:1200/630}#news .h2{margin-top:32px}.grid{grid-template-columns:1fr;gap:40px}.why{grid-template-columns:1fr 1fr;gap:10px}.why div{padding:14px}.why p{font-size:.8rem}
  .models{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:0 -24px;padding:0 24px 4px}.models::-webkit-scrollbar{display:none}.models{gap:14px}.model{flex:0 0 46%;scroll-snap-align:start}
  body{font-size:16.5px}.h2{margin-top:40px}.hero{min-height:0}.hero .in{padding:26px 20px}.hero .btn{flex:1;white-space:nowrap;padding:11px 12px}
  .phead{flex-direction:column-reverse;align-items:flex-start}.phead img{width:100%}}
@@ -680,7 +680,7 @@ def feed(lead, lead_html, rest, lang, active=None, side_title="", left_first=())
     for left in range(0, n + 1, 2):
         rows = left / 2
         h_left = story_px + (40 + rows * 411 + ((left - 1) // 6 if left else 0) * 176 if left else 0)
-        h_right = 170 + (n - left) * 146
+        h_right = 170 + (n - left) * 136
         d = abs(h_left - h_right)
         if diff is None or d < diff:
             best, diff = left, d

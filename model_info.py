@@ -432,3 +432,212 @@ for _k in ("semi", "roadster"):
         _sp = INFO[_k][_lang]["specs"]
         _row = next(r for r in _sp if r[0] == _lbl); _sp.remove(_row)
         _sp.insert(next(i + 1 for i, r in enumerate(_sp) if r[0] == _acc), _row)
+
+# ---------------------------------------------------------------- Extra specs (weight, towing, prices, consumption, glass roof)
+def _n(x, lang, d=1):
+    s = f"{x:,.{d}f}"
+    return s.replace(",", "X").replace(".", ",").replace("X", ".") if lang == "nl" else s
+
+
+def _cons(lo, hi=None, note=("", ""), fuel="petrol"):
+    """Consumption line: kWh/100 km, km/kWh and petrol (or diesel) equivalent '1 in X km per litre'."""
+    kwh_l = 8.9 if fuel == "petrol" else 9.9
+    out = []
+    for lang in ("en", "nl"):
+        def one(c):
+            return (f"{_n(c, lang)} kWh/100 km = {_n(100 / c, lang)} km/kWh",
+                    f"{round(kwh_l * 100 / c)}")
+        a, pa = one(lo)
+        if hi:
+            b, pb = one(hi)
+            main = (f"{_n(lo, lang)}–{_n(hi, lang)} kWh/100 km = {_n(100 / hi, lang)}–{_n(100 / lo, lang)} km/kWh")
+            eq = f"{pb}–{pa}"
+        else:
+            main, eq = a, pa
+        if lang == "en":
+            fu = "petrol" if fuel == "petrol" else "diesel"
+            txt = f"{main} (≈ 1 in {eq} km per litre of {fu})"
+        else:
+            fu = "benzine" if fuel == "petrol" else "diesel"
+            txt = f"{main} (≈ 1 op {eq} {fu})"
+        n = note[0] if lang == "en" else note[1]
+        out.append(txt + (f", {n}" if n else ""))
+    return ("Consumption", out[0], "Verbruik", out[1])
+
+
+def _r(en_l, en, nl_l, nl):
+    return (en_l, en, nl_l, nl)
+
+YES = ("Glass roof", "yes, fixed", "Glazen dak", "ja, vast")
+WIND = ("Glass roof", "no separate glass roof; panoramic windscreen that runs over the front seats",
+        "Glazen dak", "geen apart glazen dak; panoramische voorruit die doorloopt boven de voorstoelen")
+ADAC = ("ADAC — Autokatalog Tesla (weights, towing, WLTP consumption, list prices)", "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/tesla/")
+EVDB = ("EV Database — Tesla models (weights, towing, real-world consumption)", "https://ev-database.org/")
+USED_S = ("v2charge — Used Tesla Model S prices 2026", "https://v2charge.com/de/tesla-model-s-preis-gebraucht/")
+USED_X = ("Recharged — Tesla Model X price forecast 2026", "https://recharged.com/articles/tesla-model-x-price-forecast-2026")
+
+EXTRA = {
+ "model-s": [
+   _r("Weight", "about 2,070–2,255 kg", "Gewicht", "ongeveer 2.070–2.255 kg"),
+   _r("Towing", "2012–2020: not approved · 2021+: up to 1,600 kg (EU, optional hitch)", "Trekgewicht", "2012–2020: niet toegestaan · 2021+: tot 1.600 kg (EU, optionele trekhaak)"),
+   _r("Price new", "about €70,000–€160,000 depending on year and version; last list price €109,990 (Germany, 2026)", "Nieuwprijs", "ongeveer € 70.000–160.000, afhankelijk van jaar en versie; laatste lijstprijs € 109.990 (Duitsland, 2026)"),
+   _r("Price now (used)", "from about €20,000 (older cars) to €75,000 (recent Plaid), indicative", "Prijs nu (gebruikt)", "van ongeveer € 20.000 (oudere auto's) tot € 75.000 (recente Plaid), indicatief"),
+   _cons(15, 21, ("real-world, depending on version", "in de praktijk, afhankelijk van versie")),
+   _r("Glass roof", "yes on most cars (opening panorama roof on early cars, fixed glass roof later)", "Glazen dak", "ja bij de meeste auto's (opengaand panoramadak bij vroege auto's, later vast glazen dak)")],
+ "model-s-classic": [
+   _r("Weight", "about 2,100–2,255 kg", "Gewicht", "ongeveer 2.100–2.255 kg"),
+   _r("Towing", "not approved by Tesla (0 kg)", "Trekgewicht", "niet toegestaan door Tesla (0 kg)"),
+   _r("Price new", "about €70,000–€160,000; Maximum Range 2019: €79,990–81,990 (Germany)", "Nieuwprijs", "ongeveer € 70.000–160.000; Maximum Range 2019: € 79.990–81.990 (Duitsland)"),
+   _r("Price now (used)", "about €20,000–35,000 (median about €35,000 in Germany, 2026), indicative", "Prijs nu (gebruikt)", "ongeveer € 20.000–35.000 (mediaan ongeveer € 35.000 in Duitsland, 2026), indicatief"),
+   _cons(18, 21, ("real-world", "in de praktijk")),
+   _r("Glass roof", "optional: opening panorama roof, later a fixed glass roof", "Glazen dak", "optioneel: opengaand panoramadak, later een vast glazen dak")],
+ "model-s-2021": [
+   _r("Weight", "about 2,070–2,170 kg", "Gewicht", "ongeveer 2.070–2.170 kg"),
+   _r("Towing", "up to 1,600 kg (EU, optional hitch)", "Trekgewicht", "tot 1.600 kg (EU, optionele trekhaak)"),
+   _r("Price new", "$89,990 at launch (US, 2021); last list price €109,990 (Germany, 2026)", "Nieuwprijs", "$ 89.990 bij de introductie (VS, 2021); laatste lijstprijs € 109.990 (Duitsland, 2026)"),
+   _r("Price now (used)", "about €50,000–75,000 depending on year, indicative", "Prijs nu (gebruikt)", "ongeveer € 50.000–75.000, afhankelijk van bouwjaar, indicatief"),
+   _cons(16.1, None, ("real-world (WLTP 14.8–16.8)", "in de praktijk (WLTP 14,8–16,8)")),
+   YES],
+ "model-s-plaid": [
+   _r("Weight", "about 2,200 kg", "Gewicht", "ongeveer 2.200 kg"),
+   _r("Towing", "up to 1,600 kg (EU, optional hitch)", "Trekgewicht", "tot 1.600 kg (EU, optionele trekhaak)"),
+   _r("Range (WLTP)", "611 km", "Bereik (WLTP)", "611 km"),
+   _r("Price new", "$129,990 at launch (US, 2021); last list price €119,990 (Germany, 2026)", "Nieuwprijs", "$ 129.990 bij de introductie (VS, 2021); laatste lijstprijs € 119.990 (Duitsland, 2026)"),
+   _r("Price now (used)", "about €65,000–90,000, indicative", "Prijs nu (gebruikt)", "ongeveer € 65.000–90.000, indicatief"),
+   _cons(18.0, None, ("WLTP", "WLTP")),
+   YES],
+ "model-3": [
+   _r("Weight", "about 1,750–1,930 kg", "Gewicht", "ongeveer 1.750–1.930 kg"),
+   _r("Towing", "up to 1,000 kg (EU, optional hitch)", "Trekgewicht", "tot 1.000 kg (EU, optionele trekhaak)"),
+   _r("Price now (used)", "from about €17,000 (2017–2019 cars), indicative", "Prijs nu (gebruikt)", "vanaf ongeveer € 17.000 (auto's uit 2017–2019), indicatief"),
+   _cons(13.0, 16.7, ("WLTP, depending on version", "WLTP, afhankelijk van versie")),
+   YES],
+ "model-3-classic": [
+   _r("Weight", "about 1,750–1,900 kg", "Gewicht", "ongeveer 1.750–1.900 kg"),
+   _r("Price new", "about €40,000–€60,000; RWD 2022: €45,560 (Germany)", "Nieuwprijs", "ongeveer € 40.000–60.000; RWD 2022: € 45.560 (Duitsland)"),
+   _r("Price now (used)", "about €17,000–28,000, indicative", "Prijs nu (gebruikt)", "ongeveer € 17.000–28.000, indicatief"),
+   _cons(14.4, 16.5, ("WLTP (RWD 2022: 14.4)", "WLTP (RWD 2022: 14,4)")),
+   YES],
+ "model-3-highland": [
+   _r("Weight", "about 1,800–1,930 kg", "Gewicht", "ongeveer 1.800–1.930 kg"),
+   _r("Towing", "up to 1,000 kg (EU, optional hitch); not listed for Performance", "Trekgewicht", "tot 1.000 kg (EU, optionele trekhaak); niet vermeld voor Performance"),
+   _r("Price new", "€42,990 at launch (RWD, Germany, 2023); now about €42,000–58,500", "Nieuwprijs", "€ 42.990 bij de introductie (RWD, Duitsland, 2023); nu ongeveer € 42.000–58.500"),
+   _r("Price now (used)", "from about €28,000, indicative", "Prijs nu (gebruikt)", "vanaf ongeveer € 28.000, indicatief"),
+   _cons(13.2, 16.7, ("WLTP, RWD to Performance", "WLTP, RWD tot Performance")),
+   YES],
+ "model-3-standard": [
+   _r("Weight", "about 1,760 kg", "Gewicht", "ongeveer 1.760 kg"),
+   _cons(13.0, None, ("WLTP", "WLTP")),
+   _r("Glass roof", "yes, visible from inside (no headliner, unlike the Model Y Standard)", "Glazen dak", "ja, van binnen zichtbaar (geen hemelbekleding, anders dan bij de Model Y Standard)")],
+ "model-3-performance": [
+   _r("Towing", "up to 1,000 kg on 2019–2023 cars (EU); not listed for the 2024+ version", "Trekgewicht", "tot 1.000 kg bij auto's uit 2019–2023 (EU); niet vermeld voor de versie vanaf 2024"),
+   _r("Price new", "€56,990–58,490 (Germany, 2024+); $54,990 at US launch", "Nieuwprijs", "€ 56.990–58.490 (Duitsland, vanaf 2024); $ 54.990 bij de introductie in de VS"),
+   _r("Price now (used)", "from about €40,000 (2024+), indicative", "Prijs nu (gebruikt)", "vanaf ongeveer € 40.000 (vanaf 2024), indicatief"),
+   _cons(16.7, None, ("WLTP", "WLTP")),
+   YES],
+ "model-x": [
+   _r("Weight", "about 2,350–2,505 kg", "Gewicht", "ongeveer 2.350–2.505 kg"),
+   _r("Price new", "about €90,000–€160,000; last list prices €115,970 (AWD) and €124,990 (Plaid), Germany 2026", "Nieuwprijs", "ongeveer € 90.000–160.000; laatste lijstprijzen € 115.970 (AWD) en € 124.990 (Plaid), Duitsland 2026"),
+   _r("Price now (used)", "from about $22,000 (2016–2017) to $75,000+ (2023–2024), US, indicative", "Prijs nu (gebruikt)", "van ongeveer $ 22.000 (2016–2017) tot $ 75.000+ (2023–2024), VS, indicatief"),
+   _cons(18.3, 24, ("WLTP/real-world, depending on version", "WLTP/praktijk, afhankelijk van versie")),
+   WIND],
+ "model-x-classic": [
+   _r("Weight", "about 2,350–2,505 kg", "Gewicht", "ongeveer 2.350–2.505 kg"),
+   _r("Price new", "about €90,000–€160,000; Maximum Range 2019: €90,990 (Germany)", "Nieuwprijs", "ongeveer € 90.000–160.000; Maximum Range 2019: € 90.990 (Duitsland)"),
+   _r("Price now (used)", "about $22,000–45,000 (US, 2026), indicative", "Prijs nu (gebruikt)", "ongeveer $ 22.000–45.000 (VS, 2026), indicatief"),
+   _cons(21, 24, ("real-world", "in de praktijk")),
+   WIND],
+ "model-x-2021": [
+   _r("Price new", "$89,990 at launch (US, 2021); last list price €115,970 (Germany, 2026)", "Nieuwprijs", "$ 89.990 bij de introductie (VS, 2021); laatste lijstprijs € 115.970 (Duitsland, 2026)"),
+   _r("Price now (used)", "about $40,000–75,000 (US, 2026), indicative", "Prijs nu (gebruikt)", "ongeveer $ 40.000–75.000 (VS, 2026), indicatief"),
+   _cons(19.4, None, ("real-world (WLTP 18.3)", "in de praktijk (WLTP 18,3)")),
+   WIND],
+ "model-x-plaid": [
+   _r("Towing", "up to 2,250 kg", "Trekgewicht", "tot 2.250 kg"),
+   _r("Range (WLTP)", "609 km", "Bereik (WLTP)", "609 km"),
+   _r("Price new", "$119,990 at launch (US, 2021); last list price €124,990 (Germany, 2026)", "Nieuwprijs", "$ 119.990 bij de introductie (VS, 2021); laatste lijstprijs € 124.990 (Duitsland, 2026)"),
+   _r("Price now (used)", "about €70,000–95,000, indicative", "Prijs nu (gebruikt)", "ongeveer € 70.000–95.000, indicatief"),
+   _cons(19.3, None, ("WLTP", "WLTP")),
+   WIND],
+ "model-y": [
+   _r("Weight", "about 1,980–2,110 kg", "Gewicht", "ongeveer 1.980–2.110 kg"),
+   _r("Price new", "from €39,990 (Standard) to €62,990 (Performance), Germany", "Nieuwprijs", "van € 39.990 (Standard) tot € 62.990 (Performance), Duitsland"),
+   _r("Price now (used)", "from about €22,000 (2021–2022 cars), indicative", "Prijs nu (gebruikt)", "vanaf ongeveer € 22.000 (auto's uit 2021–2022), indicatief"),
+   _cons(13.4, 16.2, ("WLTP, depending on version", "WLTP, afhankelijk van versie")),
+   _r("Glass roof", "yes (Standard: covered on the inside)", "Glazen dak", "ja (Standard: aan de binnenkant afgedekt)")],
+ "model-y-classic": [
+   _r("Weight", "about 1,980–2,080 kg", "Gewicht", "ongeveer 1.980–2.080 kg"),
+   _r("Towing", "up to 1,600 kg (EU)", "Trekgewicht", "tot 1.600 kg (EU)"),
+   _r("Price new", "about €45,000–€65,000; RWD 2023: €44,990 (Germany)", "Nieuwprijs", "ongeveer € 45.000–65.000; RWD 2023: € 44.990 (Duitsland)"),
+   _r("Price now (used)", "about €22,000–35,000, indicative", "Prijs nu (gebruikt)", "ongeveer € 22.000–35.000, indicatief"),
+   _cons(15.7, 17.5, ("WLTP (RWD: 15.7)", "WLTP (RWD: 15,7)")),
+   YES],
+ "model-y-juniper": [
+   _r("Weight", "about 2,000–2,060 kg", "Gewicht", "ongeveer 2.000–2.060 kg"),
+   _r("Towing", "up to 1,600 kg (EU)", "Trekgewicht", "tot 1.600 kg (EU)"),
+   _r("Price new", "from €44,990 (RWD, Germany, 2025)", "Nieuwprijs", "vanaf € 44.990 (RWD, Duitsland, 2025)"),
+   _r("Price now (used)", "from about €35,000, indicative", "Prijs nu (gebruikt)", "vanaf ongeveer € 35.000, indicatief"),
+   _cons(13.9, 15.5, ("WLTP (RWD: 13.9)", "WLTP (RWD: 13,9)")),
+   YES],
+ "model-y-standard": [
+   _r("Weight", "about 1,980 kg", "Gewicht", "ongeveer 1.980 kg"),
+   _r("Towing", "up to 1,600 kg (EU)", "Trekgewicht", "tot 1.600 kg (EU)"),
+   _cons(13.4, None, ("WLTP", "WLTP"))],
+ "model-y-performance": [
+   _r("Price new", "€62,990 (Germany)", "Nieuwprijs", "€ 62.990 (Duitsland)"),
+   _cons(16.2, None, ("WLTP", "WLTP")),
+   YES],
+ "model-y-l": [
+   _r("Weight", "about 2,090 kg", "Gewicht", "ongeveer 2.090 kg"),
+   _r("Towing", "1,588 kg (Australia); no hitch listed in China", "Trekgewicht", "1.588 kg (Australië); in China geen trekhaak vermeld"),
+   _r("Price new", "CNY 339,000 (China) · A$89,900 drive-away (Australia)", "Nieuwprijs", "CNY 339.000 (China) · A$ 89.900 rijklaar (Australië)"),
+   _cons(12.8, None, ("Chinese CLTC test, real-world higher", "Chinese CLTC-test, in de praktijk hoger")),
+   YES],
+ "cybertruck": [
+   _r("Weight", "about 3,020–3,130 kg", "Gewicht", "ongeveer 3.020–3.130 kg"),
+   _r("Price new", "at launch $79,990 (AWD) and $99,990 (Cyberbeast), 2024", "Nieuwprijs", "bij de introductie $ 79.990 (AWD) en $ 99.990 (Cyberbeast), 2024"),
+   _cons(26.5, 28.5, ("EPA, AWD to Cyberbeast (estimate)", "EPA, AWD tot Cyberbeast (schatting)")),
+   _r("Glass roof", "yes, fixed", "Glazen dak", "ja, vast")],
+ "cybertruck-awd": [
+   _r("Price at launch", "$79,990 (2024)", "Prijs bij introductie", "$ 79.990 (2024)"),
+   _r("Price now (used)", "about $55,000–70,000 (US), indicative", "Prijs nu (gebruikt)", "ongeveer $ 55.000–70.000 (VS), indicatief"),
+   _cons(26.5, None, ("EPA 79 MPGe", "EPA 79 MPGe")),
+   YES],
+ "cybertruck-cyberbeast": [
+   _r("Towing", "up to 11,000 lb (4,990 kg)", "Trekgewicht", "tot 4.990 kg (11.000 lb)"),
+   _r("Price at launch", "$99,990 (2024)", "Prijs bij introductie", "$ 99.990 (2024)"),
+   _r("Price now (used)", "about $70,000–85,000 (US), indicative", "Prijs nu (gebruikt)", "ongeveer $ 70.000–85.000 (VS), indicatief"),
+   _cons(28.5, None, ("estimate based on EPA figures", "schatting op basis van EPA-cijfers")),
+   YES],
+ "cybertruck-foundation": [
+   _r("Weight", "about 3,020 kg (AWD) · 3,130 kg (Cyberbeast)", "Gewicht", "ongeveer 3.020 kg (AWD) · 3.130 kg (Cyberbeast)"),
+   _r("Towing", "up to 11,000 lb (4,990 kg)", "Trekgewicht", "tot 4.990 kg (11.000 lb)"),
+   _r("Price now (used)", "about $60,000–90,000 (US), indicative", "Prijs nu (gebruikt)", "ongeveer $ 60.000–90.000 (VS), indicatief"),
+   _cons(26.5, 28.5, ("EPA, AWD to Cyberbeast (estimate)", "EPA, AWD tot Cyberbeast (schatting)")),
+   _r("Glass roof", "yes, fixed, with sunshade included", "Glazen dak", "ja, vast, met zonnescherm inbegrepen")],
+ "cybercab": [
+   _r("Towing", "not possible", "Trekgewicht", "niet mogelijk"),
+   _r("Price", "target under $30,000 (Musk); not sold to private buyers", "Prijs", "doel onder $ 30.000 (Musk); niet te koop voor particulieren"),
+   _cons(10.2, None, ("calculated from 48 kWh and 472 km, indicative", "berekend uit 48 kWh en 472 km, indicatief"))],
+ "semi": [
+   _r("Weight", "tractor under 20,000 lb / 9 t (Standard) · about 23,000 lb / 10.4 t (Long Range)", "Gewicht", "trekker onder 9 t (Standard) · ongeveer 10,4 t (Long Range)"),
+   _r("Towing", "gross combination weight 82,000 lb (37 t)", "Trekgewicht", "maximaal combinatiegewicht 37 t (82.000 lb)"),
+   _cons(106, None, ("Tesla: 1.7 kWh per mile", "Tesla: 1,7 kWh per mijl"), fuel="diesel"),
+   _r("Glass roof", "no", "Glazen dak", "nee")],
+ "roadster": [
+   _r("Weight", "not announced", "Gewicht", "niet bekendgemaakt"),
+   _r("Towing", "not intended", "Trekgewicht", "niet bedoeld"),
+   _r("Price", "about $200,000+ expected (2017 announcement); final price not confirmed", "Prijs", "rond $ 200.000+ verwacht (aankondiging 2017); definitieve prijs niet bevestigd"),
+   _r("Consumption", "not announced", "Verbruik", "niet bekendgemaakt"),
+   _r("Glass roof", "removable roof panel (as on the 2017 prototype); not confirmed for the production car", "Glazen dak", "uitneembaar dakdeel (zoals op het prototype uit 2017); niet bevestigd voor de productieauto")],
+}
+for _k, _rows in EXTRA.items():
+    for _el, _ev, _nl, _nv in _rows:
+        INFO[_k]["en"]["specs"].append((_el, _ev))
+        INFO[_k]["nl"]["specs"].append((_nl, _nv))
+    _src = INFO[_k]["sources"]
+    for _s in ((ADAC, EVDB) if not _k.startswith(("cyber", "semi", "roadster")) else ()):
+        if _s not in _src:
+            _src.append(_s)
+INFO["model-s"]["sources"].append(USED_S); INFO["model-s-classic"]["sources"].append(USED_S)
+INFO["model-x"]["sources"].append(USED_X); INFO["model-x-classic"]["sources"].append(USED_X); INFO["model-x-2021"]["sources"].append(USED_X)

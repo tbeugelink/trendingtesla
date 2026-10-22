@@ -239,7 +239,7 @@ h1,h2,h3{color:var(--head);font-weight:800}
 .rside .rh{font-size:1.15rem;margin:0 0 22px;padding-bottom:12px;border-bottom:1px solid var(--border)}
 .sr{position:absolute;left:-9999px}
 /* header */
-.top{position:sticky;top:0;z-index:10;background:#1c1c1c}
+.top{position:sticky;top:0;z-index:10;background:#161616}
 .bar{display:flex;align-items:center;gap:14px;height:66px}
 .brand{display:flex;align-items:baseline;gap:14px;min-width:0}
 .logo{font-weight:800;font-size:1.4rem;letter-spacing:-.02em;color:var(--head);text-decoration:none;white-space:nowrap}

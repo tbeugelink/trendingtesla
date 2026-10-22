@@ -284,7 +284,8 @@ h1,h2,h3{color:var(--head);font-weight:800}
 .home{margin-top:0}
 article .st{font-size:clamp(1.35rem,2.6vw,1.7rem);line-height:1.22;letter-spacing:-.015em;margin:0 0 6px}
 .st a{color:inherit;text-decoration:none}
-.smeta{margin:0 0 14px;font-size:.88rem}.smeta a{color:var(--head);font-weight:700;text-decoration:none}.smeta a:hover{text-decoration:underline}
+.smeta{margin:0 0 14px;font-size:.88rem}.smeta a.tag{color:var(--blue)}.smeta a.tag:hover{color:var(--blue2)}
+.sideh{font-size:.7rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--blue);margin:22px 0 -4px;padding-top:18px;border-top:1px solid var(--border2)}
 .hi,.th,.im{position:relative}.hi{margin:0 0 16px}.hi .hero-img{margin:0}
 .dur{position:absolute;right:8px;bottom:8px;background:rgba(0,0,0,.8);color:#fff;font-size:.74rem;font-weight:700;line-height:1;padding:4px 6px;border-radius:5px;pointer-events:none}.th .dur{right:6px;bottom:6px;font-size:.68rem;padding:3px 5px}
 /* buttons, labels */
@@ -638,9 +639,12 @@ def story(a, lang, tag="h1"):
     return (f'<article>'
             f'<div class="hi"><img class="hero-img" src="{site_img(a)}" alt="{esc(t["title"])}" width="1200" height="630" fetchpriority="high">{dur(a, lang)}</div>'
             f'<{tag} class="st">{title}</{tag}>'
-            f'<p class="meta smeta"><a href="{url(lang, "category/" + a["category"] + "/")}">{c[lang]}</a> · {fmt_date(a["date"], lang)}</p>'
+            f'<p class="meta smeta"><a class="tag" href="{url(lang, "category/" + a["category"] + "/")}">{c[lang]}</a> · {fmt_date(a["date"], lang)}</p>'
             f'<p class="lead">{esc(t["description"])}</p>{chips}'
             f'<div class="prose">{t["body"]}</div>{src}</article>')
+
+
+ALL_ARTS = []
 
 
 def listing(items, lang, active=None):
@@ -648,7 +652,9 @@ def listing(items, lang, active=None):
     L = LANGS[lang]
     if not items:
         return f'<p class="empty">{L["empty"]}</p>'
-    return feed(items[0], story(items[0], lang, "h2"), items[1:], lang, active, L["latest"])
+    own = set(id(x) for x in items)
+    more = [x for x in ALL_ARTS if id(x) not in own][:40]
+    return feed(items[0], story(items[0], lang, "h2"), items[1:], lang, active, L["latest"], more=more)
 
 
 def cats9(lang, active=None):
@@ -672,18 +678,22 @@ def words(a, lang):
     return len(re.sub(r"<[^>]+>", " ", a[lang]["body"]).split())
 
 
-def feed(lead, lead_html, rest, lang, active=None, side_title="", left_first=()):
+def feed(lead, lead_html, rest, lang, active=None, side_title="", left_first=(), more=()):
     """YouTube-style page: lead story open on the left with a two-column grid of further articles
     below it (an ad/tip bar every few rows); a long list of the newest articles on the right."""
     # balance column heights (pixel estimates measured on the live layout)
-    left_first = list(left_first)
+    left_first, more = list(left_first), list(more)
+    n_own = len(rest)
+    rest = list(rest) + more
     n = len(rest) + len(left_first)
     story_px = 960 + 2.6 * words(lead, lang) + 170
     best, diff = 0, None
     for left in range(0, n + 1, 2):
         rows = left / 2
         h_left = story_px + (40 + rows * 411 + ((left - 1) // 6 if left else 0) * 176 if left else 0)
-        h_right = 170 + (n - left) * 136
+        if more and n - left < n_own:
+            continue
+        h_right = 170 + (n - left) * 136 + (60 if more and n - left > n_own else 0)
         d = abs(h_left - h_right)
         if diff is None or d < diff:
             best, diff = left, d
@@ -696,7 +706,9 @@ def feed(lead, lead_html, rest, lang, active=None, side_title="", left_first=())
             g += f'<div class="span2">{tl[ti % len(tl)]}</div>'
             ti += 1
         g += card(a, lang)
-    side = "".join(mini(a, lang) for a in right_items)
+    side = "".join(mini(a, lang) for a in right_items[:n_own] if more) if more else "".join(mini(a, lang) for a in right_items)
+    if more and len(right_items) > n_own:
+        side += f'<h2 class="sideh">{CATEGORIES["news"][lang]}</h2>' + "".join(mini(a, lang) for a in right_items[n_own:])
     return (f'<section class="read home"><div class="lcol">{lead_html}{tl[0]}'
             f'{f"<div class=grid2>{g}</div>" if g else ""}</div>'
             f'<aside class="rside">{cats9(lang, active)}<h2 class="sr">{side_title}</h2><div class="side">{side}</div></aside></section>')
@@ -814,6 +826,7 @@ def related(a, arts, n=3):
 
 def build():
     arts = load_articles()
+    ALL_ARTS[:] = arts
     seen = {}
     for x in sorted(arts, key=published):
         PHOTO_ORDER[x["slug"]] = seen.get(x["category"], 0)

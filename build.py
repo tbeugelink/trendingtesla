@@ -55,7 +55,7 @@ LANGS = {
         "models_h": "News and advice for your model", "guides_h": "Best picks for your Tesla",
         "guides_sub": "Researched per model and year, with pros and cons.",
         "related": "Read next", "sources": "Sources", "about": "About", "privacy": "Privacy",
-        "switch": "NL", "switch_full": "Nederlands", "i_specs": "Specifications", "i_watch": "Points to watch", "i_special": "What makes it special", "i_acc": "Accessories", "i_acc_soon": "Coming soon: accessories that fit this version, tested and explained.", "slogan": "Daily Tesla news &amp; trends", "search": "Search Tesla news", "none": "Nothing found", "home": "Home", "collapse": "Close menu", "d_topics": "Topics", "d_models": "Models", "d_more": "More", "menu": "Menu", "tip_h": "A 22 kW charger won't charge your Tesla any faster", "tip_p": "Most Tesla models charge at home at up to 11 kW AC.", "tip_btn": "Read why", "tips": [("HW4", "Buying a used Model 3? Check the hardware first", "The Highland has HW4, older cars HW3. It decides what FSD can do.", "How to check", "used-model-3-highland-vs-classic-hw3-hw4-buying-guide"), ("−20%", "Losing range in winter? It doesn't have to be", "Preconditioning and the right settings save you kilometers.", "9 winter tips", "tesla-winter-range-tips-cold-weather")],
+        "switch": "NL", "switch_full": "Nederlands", "i_specs": "Specifications", "i_watch": "Points to watch", "i_special": "What makes it special", "i_acc": "Accessories", "i_acc_soon": "Coming soon: accessories that fit this version, tested and explained.", "slogan": "Daily Tesla news &amp; trends", "search": "Search Tesla news", "none": "Nothing found", "home": "Home", "collapse": "Close menu", "archive": "All news", "newer": "Newer", "older": "Older", "page": "Page", "d_topics": "Topics", "d_models": "Models", "d_more": "More", "menu": "Menu", "tip_h": "A 22 kW charger won't charge your Tesla any faster", "tip_p": "Most Tesla models charge at home at up to 11 kW AC.", "tip_btn": "Read why", "tips": [("HW4", "Buying a used Model 3? Check the hardware first", "The Highland has HW4, older cars HW3. It decides what FSD can do.", "How to check", "used-model-3-highland-vs-classic-hw3-hw4-buying-guide"), ("−20%", "Losing range in winter? It doesn't have to be", "Preconditioning and the right settings save you kilometers.", "9 winter tips", "tesla-winter-range-tips-cold-weather")],
         "empty": "No articles here yet. New stories are published several times a day.",
         "cat_intro": "All TrendingTesla articles about {}.",
         "eco_intro": "SpaceX, Starlink, The Boring Company and xAI/Grok: the companies around Tesla, and how they connect.",
@@ -84,7 +84,7 @@ LANGS = {
         "models_h": "Nieuws en advies voor jouw model", "guides_h": "De beste keuzes voor je Tesla",
         "guides_sub": "Uitgezocht per model en bouwjaar, met plus- en minpunten.",
         "related": "Lees ook", "sources": "Bronnen", "about": "Over ons", "privacy": "Privacy",
-        "switch": "EN", "switch_full": "English", "i_specs": "Specificaties", "i_watch": "Aandachtspunten", "i_special": "Bijzonderheden", "i_acc": "Accessoires", "i_acc_soon": "Binnenkort: accessoires die op deze uitvoering passen, getest en uitgelegd.", "slogan": "Iedere dag het laatste nieuws &amp; trends", "search": "Zoek in Tesla-nieuws", "none": "Niets gevonden", "home": "Home", "collapse": "Inklappen", "d_topics": "Onderwerpen", "d_models": "Modellen", "d_more": "Meer", "menu": "Menu", "tip_h": "Een 22 kW-laadpaal laadt je Tesla niet sneller", "tip_p": "Veel Tesla-modellen laden thuis met maximaal 11 kW AC.", "tip_btn": "Lees waarom", "tips": [("HW4", "Tweedehands Model 3 kopen? Check eerst de hardware", "De Highland heeft HW4, oudere Model 3's HW3. Dat bepaalt wat FSD kan.", "Zo check je het", "used-model-3-highland-vs-classic-hw3-hw4-buying-guide"), ("−20%", "Minder bereik in de winter? Dat hoeft niet", "Met voorverwarmen en de juiste instellingen houd je meer kilometers over.", "9 wintertips", "tesla-winter-range-tips-cold-weather")],
+        "switch": "EN", "switch_full": "English", "i_specs": "Specificaties", "i_watch": "Aandachtspunten", "i_special": "Bijzonderheden", "i_acc": "Accessoires", "i_acc_soon": "Binnenkort: accessoires die op deze uitvoering passen, getest en uitgelegd.", "slogan": "Iedere dag het laatste nieuws &amp; trends", "search": "Zoek in Tesla-nieuws", "none": "Niets gevonden", "home": "Home", "collapse": "Inklappen", "archive": "Alle nieuws", "newer": "Nieuwer", "older": "Ouder", "page": "Pagina", "d_topics": "Onderwerpen", "d_models": "Modellen", "d_more": "Meer", "menu": "Menu", "tip_h": "Een 22 kW-laadpaal laadt je Tesla niet sneller", "tip_p": "Veel Tesla-modellen laden thuis met maximaal 11 kW AC.", "tip_btn": "Lees waarom", "tips": [("HW4", "Tweedehands Model 3 kopen? Check eerst de hardware", "De Highland heeft HW4, oudere Model 3's HW3. Dat bepaalt wat FSD kan.", "Zo check je het", "used-model-3-highland-vs-classic-hw3-hw4-buying-guide"), ("−20%", "Minder bereik in de winter? Dat hoeft niet", "Met voorverwarmen en de juiste instellingen houd je meer kilometers over.", "9 wintertips", "tesla-winter-range-tips-cold-weather")],
         "empty": "Hier staan nog geen artikelen. Er verschijnen meerdere keren per dag nieuwe verhalen.",
         "cat_intro": "Alle artikelen van TrendingTesla over {}.",
         "eco_intro": "SpaceX, Starlink, The Boring Company en xAI/Grok: de bedrijven rond Tesla, en hoe ze met elkaar verbonden zijn.",
@@ -275,6 +275,12 @@ h1,h2,h3{color:var(--head);font-weight:800}
 .drawer{overscroll-behavior:contain}html.dopen,html.dopen body{overflow:hidden}
 .drawer .dh{display:flex;align-items:center;gap:12px;padding:0 4px 13px 12px;margin:0 -12px 10px;border-bottom:1px solid var(--border)}
 @media (min-width:861px){.drawer,.scrim,.bar .burger{display:none}}
+.arch{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);gap:26px;align-items:start}
+.archh{margin:6px 0 0}.arch .rside{position:sticky;top:82px}
+.pager{display:flex;justify-content:space-between;align-items:center;margin:34px 0 0;font-size:.9rem;color:var(--dim)}
+.pager a,.morelink{color:var(--head);text-decoration:none;font-weight:700;background:#272727;border-radius:10px;padding:9px 14px 7px}
+.pager a:hover,.morelink:hover{background:#3f3f3f}
+.morelink{display:block;text-align:center;margin-top:24px;font-size:.88rem}
 .dtopics{display:grid;grid-template-columns:1fr 1fr;gap:7px;padding:0 4px}
 .dtopics a{text-align:center;font-size:.84rem;font-weight:700;color:var(--fg);text-decoration:none;background:#272727;border:1px solid #272727;border-radius:10px;padding:10px 6px 8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .dtopics a:hover{background:#3f3f3f;border-color:#3f3f3f;color:var(--head)}
@@ -435,7 +441,7 @@ footer h4{font-size:.7rem;font-weight:800;letter-spacing:.09em;text-transform:up
 footer .flist{display:grid;gap:7px 18px}footer .flist.two{grid-template-columns:1fr 1fr}
 footer .fbrand p{margin-top:12px;max-width:340px;line-height:1.5}
 footer .fcopy{margin-top:32px;padding-top:18px;border-top:1px solid var(--border)}
-@media (max-width:1000px){.grid{grid-template-columns:repeat(2,1fr);gap:48px 40px}.leadside{grid-column:span 2;flex-direction:row}.leadside .card{flex:1}.tops{grid-template-columns:1fr}.read{grid-template-columns:1fr;gap:48px}.why{grid-template-columns:repeat(2,1fr)}.models{grid-template-columns:repeat(4,1fr);gap:20px}}
+@media (max-width:1000px){.grid{grid-template-columns:repeat(2,1fr);gap:48px 40px}.leadside{grid-column:span 2;flex-direction:row}.leadside .card{flex:1}.tops{grid-template-columns:1fr}.read,.arch{grid-template-columns:1fr;gap:48px}.why{grid-template-columns:repeat(2,1fr)}.models{grid-template-columns:repeat(4,1fr);gap:20px}}
 @media (max-width:860px){.search{display:none}.sbtn{display:grid}.sopen .search{display:flex;position:absolute;left:16px;right:16px;top:12px;max-width:none;z-index:41}.sopen .search input{background:#121212}.tip{flex-wrap:wrap;gap:14px 20px}.tip .btn{margin-left:0}}
 @media (max-width:860px){footer .fgrid{grid-template-columns:1fr 1fr;gap:28px}footer .fbrand{grid-column:1/-1}}
 @media (max-width:600px){.wrap{padding:0 12px}
@@ -641,7 +647,7 @@ def page(lang, path, title, description, body, og_type="website", extra_head="",
 <div class="fbrand"><a class="logo" href="{url(lang)}">Trending<span>Tesla</span></a><p>{L['tagline']} {L['disclaimer']}</p></div>
 <div><h4>{L['d_topics']}</h4><div class="flist two">{fcats}</div></div>
 <div><h4>{L['d_models']}</h4><div class="flist two">{fmods}</div></div>
-<div><h4>{L['d_more']}</h4><div class="flist"><a href="{url(lang, 'about/')}">{L['about']}</a><a href="{url(lang, 'privacy/')}">{L['privacy']}</a><a href="{url(lang, 'feed.xml')}">RSS</a><a href="{url(alt, path)}">{L['switch_full']}</a></div></div>
+<div><h4>{L['d_more']}</h4><div class="flist"><a href="{url(lang, 'archive/')}">{L['archive']}</a><a href="{url(lang, 'about/')}">{L['about']}</a><a href="{url(lang, 'privacy/')}">{L['privacy']}</a><a href="{url(lang, 'feed.xml')}">RSS</a><a href="{url(alt, path)}">{L['switch_full']}</a></div></div>
 </div><p class="fcopy">&copy; {datetime.now().year} {NAME}</p></div></footer>
 <script>{JS}</script>
 </body>
@@ -689,6 +695,7 @@ def story(a, lang, tag="h1"):
 
 
 ALL_ARTS = []
+ARCH_PAGES = [1]
 
 
 MODEL_ROOTS = ["model-s", "model-3", "model-x", "model-y", "cybertruck", "cybercab", "semi", "roadster"]
@@ -811,6 +818,9 @@ def words(a, lang):
 
 
 ROW_PX = 168
+MAX_LEFT = 24   # articles in the list under the lead
+MAX_RIGHT = 50  # articles in the news column
+PER_PAGE = 30   # articles per archive page
 
 
 def feed(lead, lead_html, rest, lang, active=None, side_title="", left_first=(), more=(), extra_side="", lead_px=None, left_pool=None, min_left=0, left_exact=None):
@@ -844,6 +854,11 @@ def feed(lead, lead_html, rest, lang, active=None, side_title="", left_first=(),
     else:
         best = max(best, len(left_first))
         right_items, left_items = rest[:n - best], left_first + rest[n - best:]
+    more_link = ""
+    if len(left_items) > MAX_LEFT:
+        left_items = left_items[:MAX_LEFT]
+        more_link = f'<a class="morelink" href="{url(lang, "archive/")}">{LANGS[lang]["archive"]} →</a>'
+    right_items = right_items[:MAX_RIGHT]
     tl = tips(lang)
     g, ti = "", 1
     for i, a in enumerate(left_items):
@@ -855,8 +870,9 @@ def feed(lead, lead_html, rest, lang, active=None, side_title="", left_first=(),
     if more and len(right_items) > n_own:
         side += f'<h2 class="sideh">{CATEGORIES["news"][lang]}</h2>' + "".join(mini(a, lang) for a in right_items[n_own:])
     return (f'<section class="read home"><div class="lcol">{lead_html}{tl[0]}'
-            f'{f"<div class=grid2>{g}</div>" if g else ""}</div>'
-            f'<aside class="rside">{cats9(lang, active)}{extra_side}<h2 class="sr">{side_title}</h2><div class="side">{side}</div></aside></section>')
+            f'{f"<div class=grid2>{g}</div>" if g else ""}{more_link}</div>'
+            f'<aside class="rside">{cats9(lang, active)}{extra_side}<h2 class="sr">{side_title}</h2><div class="side">{side}</div>'
+            f'<a class="morelink" href="{url(lang, "archive/")}">{LANGS[lang]["archive"]} →</a></aside></section>')
 
 
 JS = r"""(function(){var d=document.documentElement,o=document.querySelector('.scrim');
@@ -1095,6 +1111,22 @@ def build():
                 "c": CATEGORIES[x["category"]][lang], "dt": fmt_date(x["date"], lang), "i": site_img(x)} for x in arts]
         (OUT / f"search-{lang}.json").write_text(json.dumps(idx, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
 
+        # ---------- Archive: all articles, newest first, paginated ----------
+        pages = max(1, -(-len(arts) // PER_PAGE))
+        for pi in range(pages):
+            chunk = arts[pi * PER_PAGE:(pi + 1) * PER_PAGE]
+            path = "archive/" if pi == 0 else f"archive/{pi + 1}/"
+            prev = url(lang, "archive/" if pi == 1 else f"archive/{pi}/") if pi else ""
+            nxt = url(lang, f"archive/{pi + 2}/") if pi + 1 < pages else ""
+            left = f'<a href="{prev}">← {L["newer"]}</a>' if prev else "<span></span>"
+            right = f'<a href="{nxt}">{L["older"]} →</a>' if nxt else "<span></span>"
+            pager = f'<nav class="pager">{left}<span>{L["page"]} {pi + 1} / {pages}</span>{right}</nav>'
+            title = L["archive"] + (f' · {L["page"]} {pi + 1}' if pi else "")
+            body = (f'<section class="arch"><div class="lcol"><h1 class="st archh">{title}</h1><div class=grid2>'
+                    + "".join(card(a, lang) for a in chunk) + f'</div>{pager}</div><aside class="rside">{cats9(lang, "news")}</aside></section>')
+            write(url(lang, path), page(lang, path, title, L["tagline"], body, active="news"))
+        ARCH_PAGES[0] = pages
+
         # ---------- Static pages ----------
         for key, p in PAGES.items():
             title, desc, content = p[lang]
@@ -1124,7 +1156,8 @@ def build():
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     entries = ([("", today)] + [(a["slug"] + "/", a.get("updated", a["date"])[:10]) for a in arts]
                + [(f"category/{k}/", today) for k in CATEGORIES] + [(f"model/{k}/", today) for k in MODELS]
-               + [(k + "/", today) for k in PAGES])
+               + [(k + "/", today) for k in PAGES]
+               + [("archive/" if i == 0 else f"archive/{i + 1}/", today) for i in range(ARCH_PAGES[0])])
     urls = ""
     for path, mod in entries:
         for lang in LANGS:

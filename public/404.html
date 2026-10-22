@@ -82,6 +82,12 @@ h1,h2,h3{color:var(--head);font-weight:800}
 .drawer{overscroll-behavior:contain}html.dopen,html.dopen body{overflow:hidden}
 .drawer .dh{display:flex;align-items:center;gap:12px;padding:0 4px 13px 12px;margin:0 -12px 10px;border-bottom:1px solid var(--border)}
 @media (min-width:861px){.drawer,.scrim,.bar .burger{display:none}}
+.arch{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);gap:26px;align-items:start}
+.archh{margin:6px 0 0}.arch .rside{position:sticky;top:82px}
+.pager{display:flex;justify-content:space-between;align-items:center;margin:34px 0 0;font-size:.9rem;color:var(--dim)}
+.pager a,.morelink{color:var(--head);text-decoration:none;font-weight:700;background:#272727;border-radius:10px;padding:9px 14px 7px}
+.pager a:hover,.morelink:hover{background:#3f3f3f}
+.morelink{display:block;text-align:center;margin-top:24px;font-size:.88rem}
 .dtopics{display:grid;grid-template-columns:1fr 1fr;gap:7px;padding:0 4px}
 .dtopics a{text-align:center;font-size:.84rem;font-weight:700;color:var(--fg);text-decoration:none;background:#272727;border:1px solid #272727;border-radius:10px;padding:10px 6px 8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .dtopics a:hover{background:#3f3f3f;border-color:#3f3f3f;color:var(--head)}
@@ -242,7 +248,7 @@ footer h4{font-size:.7rem;font-weight:800;letter-spacing:.09em;text-transform:up
 footer .flist{display:grid;gap:7px 18px}footer .flist.two{grid-template-columns:1fr 1fr}
 footer .fbrand p{margin-top:12px;max-width:340px;line-height:1.5}
 footer .fcopy{margin-top:32px;padding-top:18px;border-top:1px solid var(--border)}
-@media (max-width:1000px){.grid{grid-template-columns:repeat(2,1fr);gap:48px 40px}.leadside{grid-column:span 2;flex-direction:row}.leadside .card{flex:1}.tops{grid-template-columns:1fr}.read{grid-template-columns:1fr;gap:48px}.why{grid-template-columns:repeat(2,1fr)}.models{grid-template-columns:repeat(4,1fr);gap:20px}}
+@media (max-width:1000px){.grid{grid-template-columns:repeat(2,1fr);gap:48px 40px}.leadside{grid-column:span 2;flex-direction:row}.leadside .card{flex:1}.tops{grid-template-columns:1fr}.read,.arch{grid-template-columns:1fr;gap:48px}.why{grid-template-columns:repeat(2,1fr)}.models{grid-template-columns:repeat(4,1fr);gap:20px}}
 @media (max-width:860px){.search{display:none}.sbtn{display:grid}.sopen .search{display:flex;position:absolute;left:16px;right:16px;top:12px;max-width:none;z-index:41}.sopen .search input{background:#121212}.tip{flex-wrap:wrap;gap:14px 20px}.tip .btn{margin-left:0}}
 @media (max-width:860px){footer .fgrid{grid-template-columns:1fr 1fr;gap:28px}footer .fbrand{grid-column:1/-1}}
 @media (max-width:600px){.wrap{padding:0 12px}
@@ -274,7 +280,7 @@ article .prose{font-size:.95rem}article .prose h2{font-size:1.15rem}.grid2{grid-
 <div class="fbrand"><a class="logo" href="/">Trending<span>Tesla</span></a><p>Tesla news, explained. Every day. TrendingTesla is an independent site and is not affiliated with Tesla, Inc. Nothing on this site is financial advice.</p></div>
 <div><h4>Topics</h4><div class="flist two"><a href="/category/news/">News</a><a href="/category/models/">Models</a><a href="/category/fsd/">FSD</a><a href="/category/xai/">xAI / Grok</a><a href="/category/robotaxi/">Robotaxi</a><a href="/category/spacex/">SpaceX</a><a href="/category/starlink/">Starlink</a><a href="/category/boring/">Boring Co.</a><a href="/category/optimus/">Optimus</a><a href="/category/energy/">Energy</a><a href="/category/guides/">Guides</a><a href="/category/earnings/">Earnings</a><a href="/category/software/">Software</a><a href="/category/charging/">Charging</a><a href="/category/ecosystem/">Ecosystem</a></div></div>
 <div><h4>Models</h4><div class="flist two"><a href="/model/model-s/">Model S</a><a href="/model/model-3/">Model 3</a><a href="/model/model-x/">Model X</a><a href="/model/model-y/">Model Y</a><a href="/model/cybertruck/">Cybertruck</a><a href="/model/cybercab/">Cybercab</a><a href="/model/semi/">Semi</a><a href="/model/roadster/">Roadster</a></div></div>
-<div><h4>More</h4><div class="flist"><a href="/about/">About</a><a href="/privacy/">Privacy</a><a href="/feed.xml">RSS</a><a href="/nl/">Nederlands</a></div></div>
+<div><h4>More</h4><div class="flist"><a href="/archive/">All news</a><a href="/about/">About</a><a href="/privacy/">Privacy</a><a href="/feed.xml">RSS</a><a href="/nl/">Nederlands</a></div></div>
 </div><p class="fcopy">&copy; 2026 TrendingTesla</p></div></footer>
 <script>(function(){var d=document.documentElement,o=document.querySelector('.scrim');
 function t(x){d.classList.toggle('dopen',x);document.querySelectorAll('.burger').forEach(function(b){b.setAttribute('aria-expanded',x)})}

@@ -346,7 +346,7 @@ article .st{font-size:clamp(1.15rem,2.2vw,1.45rem);line-height:1.22;letter-spaci
 .smeta{margin:0 0 14px;font-size:.88rem}.smeta a.tag{color:var(--blue)}.smeta a.tag:hover{color:var(--blue2)}
 .sideh{font-size:.7rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--blue);margin:22px 0 -4px;padding-top:18px;border-top:1px solid var(--border2)}
 .hi,.th,.im{position:relative}.hi{margin:0 0 16px}.hi .hero-img{margin:0}
-.dur{position:absolute;right:8px;bottom:8px;background:rgba(0,0,0,.8);color:#fff;font-size:.74rem;font-weight:700;line-height:1;padding:4px 6px;border-radius:5px;pointer-events:none}.th .dur{right:6px;bottom:6px;font-size:.68rem;padding:3px 5px}
+.dur{display:inline-flex;align-items:center;gap:4px;position:absolute;right:8px;bottom:8px;background:rgba(0,0,0,.8);color:#fff;font-size:.74rem;font-weight:700;line-height:1;padding:4px 6px;border-radius:5px;pointer-events:none}.th .dur{right:6px;bottom:6px;font-size:.68rem;padding:3px 5px}.th .dur svg{width:12px;height:12px}
 /* buttons, labels */
 .btn{display:inline-flex;align-items:center;justify-content:center;background:var(--red);color:#fff;font-weight:800;font-size:.9rem;padding:11px 20px;border-radius:10px;text-decoration:none;transition:background .2s}
 .btn:hover{background:var(--red2)}
@@ -959,7 +959,11 @@ def card(a, lang, lead=False):
 
 def dur(a, lang):
     secs = max(10, round(len(html.unescape(re.sub(r"<[^>]+>", " ", a[lang]["body"])).split()) / 220 * 60))
-    return f'<span class="dur">{secs // 60}:{secs % 60:02d}</span>'
+    lbl = {"en": "Reading time", "nl": "Leestijd"}[lang]
+    return (f'<span class="dur" title="{lbl}" aria-label="{lbl}: {-(-secs // 60)} min">'
+            f'<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">'
+            f'<circle cx="6" cy="15" r="3.6"/><circle cx="18" cy="15" r="3.6"/><path d="M9.6 15h4.8M2.4 15 4 8.5M21.6 15 20 8.5"/></svg>'
+            f'{-(-secs // 60)} min</span>')
 
 
 def mini(a, lang):

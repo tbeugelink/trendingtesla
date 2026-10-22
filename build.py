@@ -412,14 +412,17 @@ article .hero-img{border-radius:16px;margin:0 0 26px;aspect-ratio:1200/630;width
 .sources li{margin-bottom:4px}
 .sources a{color:var(--muted)}
 /* footer */
-footer{border-top:1px solid var(--border);margin-top:72px;padding:36px 0 48px;font-size:.85rem;color:var(--dim)}
-footer .cols{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+footer{border-top:1px solid var(--border);margin-top:56px;padding:36px 0 48px;font-size:.85rem;color:var(--dim)}
+footer .fgrid{display:grid;grid-template-columns:1.4fr 1.3fr 1.3fr .8fr;gap:40px}
 footer a{color:var(--muted);text-decoration:none}
 footer a:hover{color:var(--head)}
-footer .links{display:flex;gap:18px;flex-wrap:wrap}
-footer p{max-width:560px;margin-top:10px}
+footer h4{font-size:.7rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:var(--blue);margin:6px 0 12px}
+footer .flist{display:grid;gap:7px 18px}footer .flist.two{grid-template-columns:1fr 1fr}
+footer .fbrand p{margin-top:12px;max-width:340px;line-height:1.5}
+footer .fcopy{margin-top:32px;padding-top:18px;border-top:1px solid var(--border)}
 @media (max-width:1000px){.grid{grid-template-columns:repeat(2,1fr);gap:48px 40px}.leadside{grid-column:span 2;flex-direction:row}.leadside .card{flex:1}.tops{grid-template-columns:1fr}.read{grid-template-columns:1fr;gap:48px}.why{grid-template-columns:repeat(2,1fr)}.models{grid-template-columns:repeat(4,1fr);gap:20px}}
 @media (max-width:860px){.search{display:none}.sbtn{display:grid}.sopen .search{display:flex;position:absolute;left:16px;right:16px;top:12px;max-width:none;z-index:41}.sopen .search input{background:#121212}.tip{flex-wrap:wrap;gap:14px 20px}.tip .btn{margin-left:0}}
+@media (max-width:860px){footer .fgrid{grid-template-columns:1fr 1fr;gap:28px}footer .fbrand{grid-column:1/-1}}
 @media (max-width:600px){.wrap{padding:0 12px}
 .bar{gap:4px;height:56px}.burger{margin-left:-14px}.logo{font-size:1.15rem}.brand{margin-left:2px}
 .sbtn{margin-left:auto;width:36px;height:36px;border:0;background:transparent}.lang{margin-left:-9px;margin-right:-10px;font-size:.7rem;padding:3px 9px}
@@ -573,6 +576,8 @@ def page(lang, path, title, description, body, og_type="website", extra_head="",
     menu = "".join(
         f'<a href="{url(lang, "category/" + k + "/")}"{" class=\"on\"" if k == active else ""}>{c[lang]}</a>'
         for k, c in CATEGORIES.items() if c["menu"])
+    fcats = "".join(f'<a href="{url(lang, "category/" + k + "/")}">{c[lang]}</a>' for k, c in CATEGORIES.items())
+    fmods = "".join(f'<a href="{url(lang, "model/" + k + "/")}">{MODELS[k]["name"]}</a>' for k in MODEL_ROOTS)
     cats = " · ".join(f'<a href="{url(lang, "category/" + k + "/")}">{c[lang]}</a>' for k, c in CATEGORIES.items())
     mods = " · ".join(f'<a href="{url(lang, "model/" + k + "/")}">{m["name"]}</a>' for k, m in MODELS.items() if not m.get("parent") or k in MODEL_STRIP)
     return f"""<!doctype html>
@@ -617,11 +622,12 @@ def page(lang, path, title, description, body, og_type="website", extra_head="",
 <main class="wrap">
 {body}
 </main>
-<footer><div class="wrap"><div class="cols">
-<div><a class="logo" href="{url(lang)}">Trending<span>Tesla</span></a><p>{L['tagline']} {L['disclaimer']}</p></div>
-<div><div class="links"><a href="{url(lang, 'about/')}">{L['about']}</a><a href="{url(lang, 'privacy/')}">{L['privacy']}</a><a href="{url(lang, 'feed.xml')}">RSS</a><a href="{url(alt, path)}">{L['switch_full']}</a></div>
-<p>{cats}</p><p>{mods}</p><p>&copy; {datetime.now().year} {NAME}</p></div>
-</div></div></footer>
+<footer><div class="wrap"><div class="fgrid">
+<div class="fbrand"><a class="logo" href="{url(lang)}">Trending<span>Tesla</span></a><p>{L['tagline']} {L['disclaimer']}</p></div>
+<div><h4>{L['d_topics']}</h4><div class="flist two">{fcats}</div></div>
+<div><h4>{L['d_models']}</h4><div class="flist two">{fmods}</div></div>
+<div><h4>{L['d_more']}</h4><div class="flist"><a href="{url(lang, 'about/')}">{L['about']}</a><a href="{url(lang, 'privacy/')}">{L['privacy']}</a><a href="{url(lang, 'feed.xml')}">RSS</a><a href="{url(alt, path)}">{L['switch_full']}</a></div></div>
+</div><p class="fcopy">&copy; {datetime.now().year} {NAME}</p></div></footer>
 <script>{JS}</script>
 </body>
 </html>
@@ -843,6 +849,15 @@ r.innerHTML=h.length?h.map(function(a){return '<a href="'+a.u+'"><img src="'+a.i
 f.addEventListener('submit',function(x){x.preventDefault();var a=r.querySelector('a');if(a)location.href=a.href});
 document.addEventListener('click',function(x){if(!f.contains(x.target)&&!x.target.closest('.sbtn')){r.hidden=true;d.classList.remove('sopen')}});
 document.querySelector('.sbtn').onclick=function(){d.classList.add('sopen');i.focus()};
+function bal(){var l=document.querySelector('.read .lcol'),r=document.querySelector('.read .rside');if(!l||!r)return;
+var all=[].slice.call(document.querySelectorAll('.rside .side>*,.lcol .grid2>*'));all.forEach(function(x){x.style.display=''});
+if(getComputedStyle(l.parentNode).gridTemplateColumns.split(' ').length<2)return;
+var lb=l.getBoundingClientRect().bottom,rb=r.getBoundingClientRect().bottom;
+if(rb>lb){[].slice.call(r.querySelectorAll('.side>*')).forEach(function(x){if(x.getBoundingClientRect().bottom>lb+4)x.style.display='none'})}
+else{var g=[].slice.call(l.querySelectorAll('.grid2>*'));for(var k=g.length-1;k>=0;k--){if(g[k].getBoundingClientRect().top>rb)g[k].style.display='none'}
+var v=g.filter(function(x){return x.style.display!=='none'&&!x.classList.contains('span2')});var last=v[v.length-1];
+if(v.length%2&&last)last.style.display='none';}}
+window.addEventListener('load',bal);window.addEventListener('resize',bal);bal();
 })();"""
 
 

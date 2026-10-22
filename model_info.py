@@ -323,6 +323,21 @@ INFO = {
             ("Laadvermogen", "900–1.030 kg"), ("Gewicht", "3.130 kg"), ("Prijs", "onder $ 100.000 sinds 2026")],
   "watch": ["Sinds 2026 zit FSD er niet meer standaard bij.", "Banden slijten snel door het vermogen en gewicht."],
   "special": ["Een pick-up van drie ton die veel sportwagens verslaat bij het wegrijden."]}},
+"cybertruck-foundation": {"sources": [("Drive Tesla Canada — Tesla ends Foundation Series sales", "https://driveteslacanada.ca/news/tesla-ends-foundation-series-sales-opens-cybertruck-orders-to-everyone-in-the-us/"),
+                                  ("Notebookcheck — What the Foundation Series included", "https://www.notebookcheck.net/Cheapest-Cybertruck-standard-features-list-reveals-Tesla-yanked-everything-from-the-Foundation-Series-package-down-to-the-bed-rings.898086.0.html")], "en": {
+  "intro": "The fully loaded launch edition of the Cybertruck, sold in the US from late 2023 until October 2024.",
+  "specs": [("Versions", "AWD · Cyberbeast"), ("Price", "about $20,000 above the regular truck (about $99,990 AWD / $119,990 Cyberbeast)"),
+            ("Sold", "late 2023 – October 17, 2024 (US only)"), ("Included", "FSD (Supervised), Powershare home backup, lifetime Premium Connectivity, accessory pack"),
+            ("Recognisable by", "laser-etched Foundation Series badges and cabin graphic")],
+  "watch": ["Now only available second-hand.", "Check that the accessories and Powershare equipment come with a used truck."],
+  "special": ["The first Cybertrucks delivered.", "Also included a $2,500 Tesla Shop credit."]},
+ "nl": {
+  "intro": "De volledig uitgeruste introductieversie van de Cybertruck, in de VS verkocht van eind 2023 tot oktober 2024.",
+  "specs": [("Versies", "AWD · Cyberbeast"), ("Prijs", "ongeveer $ 20.000 boven de gewone truck (circa $ 99.990 AWD / $ 119.990 Cyberbeast)"),
+            ("Verkocht", "eind 2023 – 17 oktober 2024 (alleen VS)"), ("Inbegrepen", "FSD (Supervised), Powershare-thuisback-up, levenslang Premium Connectivity, accessoirepakket"),
+            ("Herkenbaar aan", "gelaserde Foundation Series-badges en interieurgrafiek")],
+  "watch": ["Nu alleen nog tweedehands te koop.", "Controleer bij een gebruikte truck of de accessoires en Powershare-onderdelen erbij zitten."],
+  "special": ["De eerste Cybertrucks die zijn geleverd.", "Inclusief $ 2.500 tegoed voor de Tesla Shop."]}},
 # ---------------------------------------------------------------- Others
 "cybercab": {"sources": [("TrendingTesla — Cybercab specs explained", "/cybercab-specs-explained-battery-range-charging/")], "en": {
   "intro": "Tesla's two-seat robotaxi without steering wheel or pedals, carrying paying passengers in Austin since September 2026.",
@@ -391,6 +406,7 @@ BATTERY_TYPE = {
     "cybertruck": ("4680 cells, nickel-based (NCM), 800 V", "4680-cellen, nikkelhoudend (NCM), 800 V"),
     "cybertruck-awd": ("4680 cells, nickel-based (NCM), 800 V", "4680-cellen, nikkelhoudend (NCM), 800 V"),
     "cybertruck-cyberbeast": ("4680 cells, nickel-based (NCM), 800 V", "4680-cellen, nikkelhoudend (NCM), 800 V"),
+    "cybertruck-foundation": ("4680 cells, nickel-based (NCM), 800 V", "4680-cellen, nikkelhoudend (NCM), 800 V"),
     "cybercab": ("4680 cells (Tesla's own)", "4680-cellen (eigen Tesla-cellen)"),
     "semi": ("4680 cells, NCMA chemistry, made by Tesla", "4680-cellen, NCMA-chemie, door Tesla zelf gemaakt"),
     "roadster": ("4680-format cells (high-power variant), 800–1,000 V", "Cellen in 4680-formaat (variant voor hoog vermogen), 800–1.000 V"),

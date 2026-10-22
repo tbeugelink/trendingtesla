@@ -274,7 +274,7 @@ h1,h2,h3{color:var(--head);font-weight:800}
 .dopen .drawer{transform:none}
 .drawer{overscroll-behavior:contain}html.dopen,html.dopen body{overflow:hidden}
 .drawer .dh{display:flex;align-items:center;gap:12px;padding:0 4px 13px 12px;margin:0 -12px 10px;border-bottom:1px solid var(--border)}
-@media (min-width:861px){.drawer .mobonly{display:none}}
+@media (min-width:861px){.drawer,.scrim,.bar .burger{display:none}}
 .dtopics{display:grid;grid-template-columns:1fr 1fr;gap:7px;padding:0 4px}
 .dtopics a{text-align:center;font-size:.84rem;font-weight:700;color:var(--fg);text-decoration:none;background:#272727;border:1px solid #272727;border-radius:10px;padding:10px 6px 8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .dtopics a:hover{background:#3f3f3f;border-color:#3f3f3f;color:var(--head)}
@@ -297,10 +297,10 @@ h1,h2,h3{color:var(--head);font-weight:800}
 .cats9 a{text-align:center;font-size:.8rem;font-weight:700;color:var(--fg);text-decoration:none;background:#272727;border:1px solid #272727;border-radius:10px;padding:9px 6px 7px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;transition:border-color .2s,color .2s}
 .cats9 a:hover{background:#3f3f3f;border-color:#3f3f3f;color:var(--head)}
 .cats9 a.on{background:var(--head);border-color:var(--head);color:#03050a}
-.mnav{display:grid;grid-template-columns:1fr 1fr;gap:10px 7px;margin:-14px 0 28px}
+.mnav{display:flex;flex-direction:column;gap:10px;margin:-14px 0 28px}.drawer .mnav{margin:0 4px}
 .mcell{display:grid;grid-template-columns:1fr 1fr;gap:7px;align-items:start}
-.mopts{display:flex;flex-direction:column;gap:5px}
-.mopts a{font-size:.72rem;font-weight:700;color:var(--muted);text-decoration:none;border:1px solid #3f3f3f;border-radius:8px;padding:5px 6px 4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-align:center;transition:background .15s}
+.mopts{display:flex;flex-direction:column;gap:6px}
+.mopts a{font-size:.8rem;font-weight:700;color:var(--muted);text-decoration:none;border:1px solid #3f3f3f;border-radius:8px;padding:5px 6px 4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-align:center;transition:background .15s}
 .mopts a:hover{background:#3f3f3f;color:var(--head)}
 .mopts a.on{background:var(--head);border-color:var(--head);color:#03050a}
 .dm.on,.dm.in{border-color:var(--head)}
@@ -661,13 +661,7 @@ def drawer(lang, active=None):
     out += "".join(f'<a class="{"on" if k == active else ""}" href="{url(lang, "category/" + k + "/")}">{c[lang]}</a>'
                    for k, c in CATEGORIES.items() if c["menu"])
     out += f'</div><hr class="dsep"></div>'
-    out += '<div class="dmodels">'
-    for k in DRAWER_MODELS:
-        ph = model_photo(k)
-        img = f'<img src="{ph}" alt="" loading="lazy">' if ph else '<i></i>'
-        out += f'<a class="dm" href="{url(lang, "model/" + k + "/")}"><div class="ph">{img}</div><span>{MODELS[k]["name"]}</span></a>'
-    out += '</div>'
-
+    out += modelnav(lang)
     return out
 
 
@@ -827,7 +821,7 @@ def feed(lead, lead_html, rest, lang, active=None, side_title="", left_first=(),
         h_left = story_px + (40 + left * ROW_PX + ((left - 1) // 6) * 168 if left else 0)
         if (more and n - left < n_own) or left < min_left:
             continue
-        h_right = 170 + (560 if extra_side else 0) + (n - left) * 144 + (60 if more and n - left > n_own else 0)
+        h_right = 170 + (1450 if extra_side else 0) + (n - left) * 144 + (60 if more and n - left > n_own else 0)
         d = abs(h_left - h_right)
         if diff is None or d < diff:
             best, diff = left, d

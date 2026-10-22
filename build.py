@@ -279,6 +279,8 @@ h1,h2,h3{color:var(--head);font-weight:800}
 .tip p{color:var(--muted);font-size:.9rem}
 .tip .btn{margin-left:auto;flex:none}
 .home{margin-top:32px}
+article .st{font-size:clamp(1.8rem,4.6vw,2.6rem);line-height:1.12;letter-spacing:-.025em;margin:10px 0 14px}
+.st a{color:inherit;text-decoration:none}.st a:hover{color:var(--blue2)}
 /* buttons, labels */
 .btn{display:inline-flex;align-items:center;justify-content:center;background:var(--red);color:#fff;font-weight:800;font-size:.9rem;padding:11px 20px;border-radius:10px;text-decoration:none;transition:background .2s}
 .btn:hover{background:var(--red2)}
@@ -612,6 +614,29 @@ def drawer(lang, active=None):
     return out
 
 
+def story(a, lang, tag="h1"):
+    """Full article block: photo, title, intro, meta, model chips, body and sources."""
+    L = LANGS[lang]
+    t = a[lang]
+    c = CATEGORIES[a["category"]]
+    src = ""
+    if a.get("sources"):
+        items = "".join(f'<li><a href="{esc(s["url"])}" rel="nofollow noopener" target="_blank">{esc(s["title"])}</a></li>'
+                        for s in a["sources"])
+        src = f'<div class="sources"><h2>{L["sources"]}</h2><ul>{items}</ul></div>'
+    chips = ""
+    if a.get("models"):
+        chips = '<div class="chips">' + "".join(
+            f'<a href="{url(lang, "model/" + k + "/")}">Tesla {MODELS[k]["name"]}</a>' for k in a["models"]) + "</div>"
+    title = esc(t["title"]) if tag == "h1" else f'<a href="{url(lang, a["slug"] + "/")}">{esc(t["title"])}</a>'
+    return (f'<article>'
+            f'<img class="hero-img" src="{site_img(a)}" alt="{esc(t["title"])}" width="1200" height="630" fetchpriority="high">'
+            f'<a class="tag" href="{url(lang, "category/" + a["category"] + "/")}">{c[lang]}</a>'
+            f'<{tag} class="st">{title}</{tag}><p class="lead">{esc(t["description"])}</p>'
+            f'<p class="meta" style="margin-bottom:26px">{NAME} · {fmt_date(a["date"], lang)} · {read_time(a, lang)} {L["min"]}</p>{chips}'
+            f'<div class="prose">{t["body"]}</div>{src}</article>')
+
+
 def cats9(lang, active=None):
     return '<nav class="cats9" aria-label="Topics">' + "".join(
         f'<a href="{url(lang, "category/" + k + "/")}"{" class=\"on\"" if k == active else ""}>{c[lang]}</a>'
@@ -764,22 +789,17 @@ def build():
         body = f'<h1 class="sr">{NAME} — {L["tagline"]}</h1>'
         if news:
             top = news[0]
-            t = top[lang]
-            feature = (f'<a class="feature" href="{url(lang, top["slug"] + "/")}">'
-                       f'<div class="im"><img src="{site_img(top)}" alt="" width="1200" height="630" fetchpriority="high"></div>'
-                       f'<span class="tag" style="margin-top:14px">{L["top"]} · {CATEGORIES[top["category"]][lang]}</span>'
-                       f'<h3>{esc(t["title"])}</h3><p>{esc(t["description"])}</p>'
-                       f'<span class="meta">{fmt_date(top["date"], lang)} · {read_time(top, lang)} {L["min"]}</span></a>')
-            side = "".join(mini(a, lang) for a in news[1:5])
-            body += (f'<section id="news" class="home"><div class="tops"><div>{feature}{tip(lang)}</div>'
-                     f'<div>{cats9(lang)}<h2 class="sr">{L["latest"]}</h2><div class="side">{side}</div></div></div></section>')
+            side = "".join(mini(a, lang) for a in news[1:9])
+            body += (f'<section id="news" class="read home">{story(top, lang, "h2")}'
+                     f'<aside class="rside">{cats9(lang)}<h2 class="sr">{L["latest"]}</h2><div class="side">{side}</div></aside></section>'
+                     f'{tip(lang)}')
         else:
             body += section(L["latest"], f'<p class="empty">{L["empty"]}</p>', anchor="news")
         if guides:
             body += section(L["guides_h"], grid(guides[:6], lang), (url(lang, "category/guides/"), CATEGORIES["guides"][lang]),
                             sub=L["guides_sub"])
-        if len(news) > 5:
-            body += section(L["more"], grid(news[5:20], lang))
+        if len(news) > 9:
+            body += section(L["more"], grid(news[9:24], lang))
         body += section(L["why_h"], why(lang))
         write(url(lang), page(lang, "", NAME, L["tagline"], body))
 
@@ -823,15 +843,6 @@ def build():
         for a in arts:
             t = a[lang]
             c = CATEGORIES[a["category"]]
-            src = ""
-            if a.get("sources"):
-                items = "".join(f'<li><a href="{esc(s["url"])}" rel="nofollow noopener" target="_blank">{esc(s["title"])}</a></li>'
-                                for s in a["sources"])
-                src = f'<div class="sources"><h2>{L["sources"]}</h2><ul>{items}</ul></div>'
-            chips = ""
-            if a.get("models"):
-                chips = '<div class="chips">' + "".join(
-                    f'<a href="{url(lang, "model/" + k + "/")}">Tesla {MODELS[k]["name"]}</a>' for k in a["models"]) + "</div>"
             ld = {
                 "@context": "https://schema.org", "@type": "NewsArticle",
                 "headline": t["title"], "description": t["description"],
@@ -851,12 +862,7 @@ def build():
             rel_html = section(L["related"], grid(rel[:3], lang)) if rel else ""
             aside = (f'<aside class="rside">{cats9(lang, a["category"])}<h2 class="sr">{L["latest"]}</h2><div class="side">'
                      + "".join(mini(x, lang) for x in side_items) + '</div></aside>')
-            body = (f'<div class="read"><article>'
-                    f'<img class="hero-img" src="{site_img(a)}" alt="{esc(t["title"])}" width="1200" height="630" fetchpriority="high">'
-                    f'<a class="tag" href="{url(lang, "category/" + a["category"] + "/")}">{c[lang]}</a>'
-                    f'<h1>{esc(t["title"])}</h1><p class="lead">{esc(t["description"])}</p>'
-                    f'<p class="meta" style="margin-bottom:26px">{NAME} · {fmt_date(a["date"], lang)} · {read_time(a, lang)} {L["min"]}</p>{chips}'
-                    f'<div class="prose">{t["body"]}</div>{src}</article>{aside}</div>{rel_html}')
+            body = (f'<div class="read">{story(a, lang)}{aside}</div>{rel_html}')
             write(url(lang, a["slug"] + "/"),
                   page(lang, a["slug"] + "/", t["title"], t["description"], body, "article", head,
                        image=social_img(a, lang), active=a["category"]))

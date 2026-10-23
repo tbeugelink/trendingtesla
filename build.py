@@ -618,9 +618,9 @@ def page(lang, path, title, description, body, og_type="website", extra_head="",
     menu = "".join(
         f'<a href="{url(lang, "category/" + k + "/")}"{" class=\"on\"" if k == active else ""}>{c[lang]}</a>'
         for k, c in CATEGORIES.items() if c["menu"])
-    fcats = "".join(f'<a href="{url(lang, "category/" + k + "/")}">{c[lang]}</a>' for k, c in CATEGORIES.items())
+    fcats = "".join(f'<a href="{url(lang, "category/" + k + "/")}">{c[lang]}</a>' for k, c in CATEGORIES.items() if c["menu"])
     fmods = "".join(f'<a href="{url(lang, "model/" + k + "/")}">{MODELS[k]["name"]}</a>' for k in MODEL_ROOTS)
-    cats = " · ".join(f'<a href="{url(lang, "category/" + k + "/")}">{c[lang]}</a>' for k, c in CATEGORIES.items())
+    cats = " · ".join(f'<a href="{url(lang, "category/" + k + "/")}">{c[lang]}</a>' for k, c in CATEGORIES.items() if c["menu"])
     mods = " · ".join(f'<a href="{url(lang, "model/" + k + "/")}">{m["name"]}</a>' for k, m in MODELS.items() if not m.get("parent") or k in MODEL_STRIP)
     return f"""<!doctype html>
 <html lang="{lang}">

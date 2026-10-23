@@ -241,7 +241,7 @@ img{display:block;max-width:100%;height:auto}
 h1,h2,h3{color:#ebebeb;font-weight:800}
 .wrap{max-width:var(--max);margin:0 auto;padding:0 12px}
 .narrow{max-width:740px;margin:0 auto}
-.read{display:grid;grid-template-columns:minmax(0,1fr) min(431px,calc(50% - 6.5px));gap:13px;align-items:start;margin-top:0}
+.read{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);gap:13px;align-items:start;margin-top:0}
 .grid2{display:grid;grid-template-columns:1fr;gap:13px;margin-top:20px}
 .grid2>.card{display:grid;grid-template-columns:254px 1fr;gap:11px;align-items:start}.grid2>.card .body{padding:0;line-height:1}.grid2>.card .body .tag,.grid2>.card .body .meta{line-height:1;vertical-align:top}.grid2>.card h3{font-size:1.12rem;line-height:1.3;margin:8px 0 6px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}.grid2>.card p{-webkit-line-clamp:2;line-height:1.42}.grid2>.card .im{height:142px;width:254px}.grid2>.card .im img{height:100%;aspect-ratio:auto}
 .grid2 .card{padding:8px;margin:-8px;border-radius:7px;transition:background .15s}
@@ -282,8 +282,8 @@ h1,h2,h3{color:#ebebeb;font-weight:800}
 .dopen .drawer{transform:none}.dnoanim .drawer,.dnoanim .scrim{transition:none!important}
 .drawer{overscroll-behavior:contain}html.dopen,html.dopen body{overflow:hidden}
 .drawer .dh{display:flex;align-items:center;gap:12px;padding:0 4px 13px 12px;margin:0 -12px 10px;border-bottom:1px solid var(--border)}
-@media (min-width:601px){.drawer,.scrim,.bar .burger{display:none}}
-@media (max-width:789px) and (min-width:601px){.rside .cats9{grid-template-columns:repeat(12,minmax(0,1fr));gap:6px}.rside .cats9 a{grid-column:span 4}.rside .cats9 a:nth-last-child(-n+4){grid-column:span 3;padding-left:2px;padding-right:2px}}@media (max-width:660px) and (min-width:601px){.rside .cats9 a:nth-last-child(-n+4){font-size:.72rem}}@media (max-width:600px){.read{grid-template-columns:1fr;gap:36px}.read article .prose,.read article .lead{max-width:none}.read article .prose p,.read article .prose ul,.read article .prose ol{margin-right:14px}.rside .cats9,.rside .mnav{display:none}.read.topic .rside{display:none}}
+@media (min-width:905px){.drawer,.scrim,.bar .burger{display:none}}
+@media (max-width:1000px){.rside .cats9 a{padding-left:3px;padding-right:3px}}@media (max-width:904px) and (min-width:601px){.rside .cats9,.rside .mnav{display:none}.rside .mini{grid-template-columns:1fr;gap:6px}.rside .mini img{aspect-ratio:1200/630}}@media (max-width:600px){.read{grid-template-columns:1fr;gap:36px}.read article .prose,.read article .lead{max-width:none}.read article .prose p,.read article .prose ul,.read article .prose ol{margin-right:14px}.rside .cats9,.rside .mnav{display:none}.read.topic .rside{display:none}}
 .arch{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);gap:13px;align-items:start}
 .archh{margin:6px 0 0}.arch .rside{position:sticky;top:82px}
 .pager{display:flex;justify-content:space-between;align-items:center;margin:34px 0 0;font-size:.9rem;color:var(--dim)}

@@ -487,6 +487,11 @@ def fmt_date(d, lang):
     return f"{m} {dt.day}, {dt.year}" if lang == "en" else f"{dt.day} {m} {dt.year}"
 
 
+def when(a, lang):
+    """Date for list items; JS turns it into '5 uur geleden' (under 48 h) or '3 dagen geleden'."""
+    return f'<time class="ago" datetime="{published(a).isoformat()}">{fmt_date(a["date"], lang)}</time>'
+
+
 def published(a):
     """Timezone-aware publication datetime (defaults to 08:00 local)."""
     return datetime.strptime(f"{a['date']} {a.get('time', '08:00')}", "%Y-%m-%d %H:%M").replace(tzinfo=TZ)
@@ -935,7 +940,7 @@ def feed(lead, lead_html, rest, lang, active=None, side_title="", left_first=(),
             f'<section class="below">{tl[0]}{grid}{more_link}</section>')
 
 
-JS = r"""(function(){function fit(){var t=document.querySelector('.prose .toc'),b=document.querySelector('.beside');if(t&&b&&getComputedStyle(t).float!='none'){var n;while(b.offsetHeight<t.offsetHeight-8&&(n=b.nextElementSibling)&&!n.classList.contains('pblock')&&!(n.tagName=='H2'&&n.nextElementSibling&&n.nextElementSibling.classList.contains('pblock'))){b.appendChild(n);if(n.tagName=='H2'&&(n=b.nextElementSibling)&&!n.classList.contains('pblock'))b.appendChild(n)}}document.querySelectorAll('.pblock').forEach(function(k){var x=k.querySelector('.ptxt'),f=k.querySelector('.pimg'),W=k.offsetWidth,mx=W*(innerWidth<=600?.36:.45),w;for(var i=0;i<6;i++){w=Math.min(mx,x.offsetHeight*.75);f.style.width=w+'px'}f.style.height=Math.max(x.offsetHeight-5,w*4/3)+'px';f.querySelector('img').style.aspectRatio='auto'})}addEventListener('load',fit);addEventListener('resize',fit);var d=document.documentElement,o=document.querySelector('.scrim');
+JS = r"""function ttAgo(){var nl=document.documentElement.lang=='nl';document.querySelectorAll('time.ago').forEach(function(t){var h=(Date.now()-Date.parse(t.dateTime))/36e5;if(!(h>=0))return;if(!t.title)t.title=t.textContent;var n;if(h<48){n=Math.max(1,Math.floor(h));t.textContent=nl?n+' uur geleden':n+(n==1?' hour':' hours')+' ago'}else{n=Math.floor(h/24);t.textContent=nl?n+' dagen geleden':n+' days ago'}})}ttAgo();setInterval(ttAgo,60000);(function(){function fit(){var t=document.querySelector('.prose .toc'),b=document.querySelector('.beside');if(t&&b&&getComputedStyle(t).float!='none'){var n;while(b.offsetHeight<t.offsetHeight-8&&(n=b.nextElementSibling)&&!n.classList.contains('pblock')&&!(n.tagName=='H2'&&n.nextElementSibling&&n.nextElementSibling.classList.contains('pblock'))){b.appendChild(n);if(n.tagName=='H2'&&(n=b.nextElementSibling)&&!n.classList.contains('pblock'))b.appendChild(n)}}document.querySelectorAll('.pblock').forEach(function(k){var x=k.querySelector('.ptxt'),f=k.querySelector('.pimg'),W=k.offsetWidth,mx=W*(innerWidth<=600?.36:.45),w;for(var i=0;i<6;i++){w=Math.min(mx,x.offsetHeight*.75);f.style.width=w+'px'}f.style.height=Math.max(x.offsetHeight-5,w*4/3)+'px';f.querySelector('img').style.aspectRatio='auto'})}addEventListener('load',fit);addEventListener('resize',fit);var d=document.documentElement,o=document.querySelector('.scrim');
 function t(x){d.classList.toggle('dopen',x);document.querySelectorAll('.burger').forEach(function(b){b.setAttribute('aria-expanded',x)})}
 document.querySelectorAll('.burger').forEach(function(b){b.onclick=function(){t(!d.classList.contains('dopen'))}});
 o.onclick=function(){t(false)};(function(){var dr=document.querySelector('.drawer'),x0=null,y0=0;if(!dr)return;
@@ -977,7 +982,7 @@ fetch('/api/likes?s='+lb.map(function(b){return b.dataset.like}).join(',')).then
 lb.forEach(function(b){var s=b.dataset.like;b.setAttribute('aria-pressed',liked.indexOf(s)>-1);b.onclick=function(){var l=LS.get('tt_liked'),i=l.indexOf(s),d=i>-1?-1:1;if(d>0)l.push(s);else l.splice(i,1);LS.set('tt_liked',l);b.setAttribute('aria-pressed',d>0);
 var sp=b.querySelector('span');sp.textContent=Math.max(0,(+sp.textContent||0)+d);fetch('/api/likes',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({slug:s,d:d})}).then(function(r){return r.json()}).then(function(j){if(j.n!=null)sp.textContent=j.n}).catch(function(){})}})}
 var sl=document.querySelector('.savedlist');if(sl){var keep=LS.get('tt_saved');if(!keep.length){sl.innerHTML='<p class="empty">'+e(sl.dataset.empty)+'</p>'}else{load().then(function(){var m={};idx.forEach(function(a){var k=a.u.replace(/\/$/,'').split('/').pop();m[k]=a});
-sl.innerHTML=keep.filter(function(k){return m[k]}).map(function(k){var a=m[k];return '<a class="card" href="'+a.u+'"><div class="im"><img src="'+a.i+'" alt=""></div><div class="body"><h3>'+e(a.t)+'</h3><p>'+e(a.d)+'</p><span class="meta">'+e(a.dt)+'</span></div></a>'}).join('')})}}window.addEventListener('resize',bal);bal();
+sl.innerHTML=keep.filter(function(k){return m[k]}).map(function(k){var a=m[k];return '<a class="card" href="'+a.u+'"><div class="im"><img src="'+a.i+'" alt=""></div><div class="body"><h3>'+e(a.t)+'</h3><p>'+e(a.d)+'</p><span class="meta">'+'<time class="ago" datetime="'+a.ts+'">'+e(a.dt)+'</time></span></div></a>'}).join('');ttAgo()})}}window.addEventListener('resize',bal);bal();
 })();"""
 
 
@@ -990,7 +995,7 @@ def card(a, lang, lead=False):
     cls = "card lead" if lead else "card"
     return (f'<a class="{cls}" href="{url(lang, a["slug"] + "/")}">'
             f'<div class="im"><img src="{site_img(a)}" alt="" width="1200" height="630" loading="lazy" decoding="async">{dur(a, lang)}</div>'
-            f'<div class="body">{label(a, lang)} <span class="meta">· {fmt_date(a["date"], lang)}</span>'
+            f'<div class="body">{label(a, lang)} <span class="meta">· {when(a, lang)}</span>'
             f'<h3>{esc(t["title"])}</h3><p>{esc(t["description"])}</p></div></a>')
 
 
@@ -1000,7 +1005,7 @@ def gcard(a, lang):
     return (f'<a class="card" href="{url(lang, a["slug"] + "/")}">'
             f'<div class="im"><img src="{site_img(a)}" alt="" width="1200" height="630" loading="lazy" decoding="async">{dur(a, lang)}</div>'
             f'<div class="body"><h3>{esc(t["title"])}</h3><p>{esc(t["description"])}</p>'
-            f'<span class="meta">{fmt_date(a["date"], lang)}</span></div></a>')
+            f'<span class="meta">{when(a, lang)}</span></div></a>')
 
 
 def dur(a, lang):
@@ -1016,7 +1021,7 @@ def mini(a, lang):
     t = a[lang]
     return (f'<a class="mini" href="{url(lang, a["slug"] + "/")}">'
             f'<div class="th"><img src="{site_img(a)}" alt="" width="1200" height="630" loading="lazy" decoding="async">{dur(a, lang)}</div>'
-            f'<div><h3>{esc(t["title"])}</h3><p class="mdesc">{esc(t["description"])}</p><span class="meta">{fmt_date(a["date"], lang)}</span></div></a>')
+            f'<div><h3>{esc(t["title"])}</h3><p class="mdesc">{esc(t["description"])}</p><span class="meta">{when(a, lang)}</span></div></a>')
 
 
 def grid(items, lang, lead=False):
@@ -1200,7 +1205,7 @@ def build():
                        image=social_img(a, lang), active=a["category"]))
 
         idx = [{"u": url(lang, x["slug"] + "/"), "t": x[lang]["title"], "d": x[lang]["description"],
-                "c": CATEGORIES[x["category"]].get("tag", CATEGORIES[x["category"]][lang]), "dt": fmt_date(x["date"], lang), "i": site_img(x)} for x in arts]
+                "c": CATEGORIES[x["category"]].get("tag", CATEGORIES[x["category"]][lang]), "dt": fmt_date(x["date"], lang), "ts": published(x).isoformat(), "i": site_img(x)} for x in arts]
         (OUT / f"search-{lang}.json").write_text(json.dumps(idx, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
 
         # ---------- Archive: all articles, newest first, paginated ----------

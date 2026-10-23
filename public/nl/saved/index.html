@@ -119,7 +119,7 @@ h1,h2,h3{color:#ebebeb;font-weight:800}
 .drawer .di:hover{background:var(--surface2);color:var(--head)}
 .drawer .di.on{background:var(--surface2);color:var(--head);font-weight:800}
 .drawer .di img,.drawer .di i{width:56px;aspect-ratio:1200/630;object-fit:cover;border-radius:7px;border:1px solid var(--edge);flex:none;background:var(--surface)}
-.cats9{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-bottom:14px}
+.cats9{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-bottom:14px}
 .cats9 a{text-align:center;font-size:.8rem;font-weight:700;color:var(--fg);text-decoration:none;background:#272727;border:1px solid #272727;border-radius:7px;padding:9px 6px 7px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;transition:border-color .2s,color .2s}
 .cats9 a:hover{background:#3f3f3f;border-color:#3f3f3f;color:var(--head)}
 .cats9 a b,.dtopics a b{font-weight:900}
@@ -183,8 +183,8 @@ article .st{font-size:clamp(1.05rem,2vw,1.3rem);line-height:1.22;letter-spacing:
 .feature h3{font-size:clamp(1.4rem,2.8vw,2rem);line-height:1.15;letter-spacing:-.02em;margin:14px 0 8px}
 .feature p{color:var(--muted);margin-bottom:8px}
 .side{display:flex;flex-direction:column;gap:10px}
-.mini{display:grid;grid-template-columns:200px 1fr;gap:8px;text-decoration:none;color:var(--fg);align-items:start;height:124px;box-sizing:border-box}.mini>div{height:112px;overflow:hidden}
-.th{width:200px;height:112px}.mini img{width:200px;height:112px;object-fit:cover;border-radius:7px;border:1px solid var(--edge)}
+.mini{display:grid;grid-template-columns:calc((100% - 26px) * 2 / 3 + 7px) 1fr;gap:8px;text-decoration:none;color:var(--fg);align-items:start;box-sizing:border-box}.mini>div{overflow:hidden}
+.th{width:100%}.mini img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:7px;border:1px solid var(--edge)}
 .mini{padding:6px;margin:-6px;border-radius:7px;transition:background .15s}.mini:hover{background:#272727}.mini>div{padding:2px 4px 2px 0}
 .mini h3{font-size:.98rem;line-height:1.3;margin:6px 0 4px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
 .mini .tag{display:block;line-height:1;margin-top:0}

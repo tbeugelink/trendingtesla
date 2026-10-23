@@ -243,7 +243,7 @@ h1,h2,h3{color:#ebebeb;font-weight:800}
 .grid2{display:grid;grid-template-columns:1fr;gap:13px;margin-top:20px}
 .grid2>.card{display:grid;grid-template-columns:254px 1fr;gap:11px;align-items:start}.grid2>.card .body{padding:0;line-height:1}.grid2>.card .body .tag,.grid2>.card .body .meta{line-height:1;vertical-align:top}.grid2>.card h3{font-size:1.12rem;line-height:1.3;margin:8px 0 6px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}.grid2>.card p{-webkit-line-clamp:2;line-height:1.42}.grid2>.card .im{height:142px;width:254px}.grid2>.card .im img{height:100%;aspect-ratio:auto}
 .grid2 .card{padding:8px;margin:-8px;border-radius:7px;transition:background .15s}
-.grid2 .card:hover{background:#272727}
+.grid2 .card:hover{background:#272727}.grid2.gall{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px 14px}.gall>.card{grid-template-columns:1fr;gap:0}.gall>.card .im{width:auto;height:auto}.gall>.card .im img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}.gall>.card .body{padding:8px 0 0;line-height:1.3}.gall>.card h3{font-size:.92rem;margin:0 0 5px;-webkit-line-clamp:3}.gall>.card p{font-size:.8rem;line-height:1.35;-webkit-line-clamp:3;margin-bottom:5px}.gall>.card .meta{font-size:.74rem}
 .span2{grid-column:1/-1}.span2 .tip{margin:0}
 .read article{padding-top:0}
 .rside .rh{font-size:1.15rem;margin:0 0 22px;padding-bottom:12px;border-bottom:1px solid var(--border)}
@@ -469,7 +469,7 @@ footer .fcopy{margin-top:32px;padding-top:18px;border-top:1px solid var(--border
 .sbtn{margin-left:auto;width:36px;height:36px;border:0;background:transparent}.savedlink{margin-left:-2px;width:34px;height:34px}.lang{margin-left:0;margin-right:-10px;font-size:.7rem;padding:3px 9px}
 .read .hi{margin:0 -12px 6px}.read .hi .hero-img{border-radius:0;border:0}.hi .dur{right:12px}
 article .st{font-size:1rem;line-height:1.25}.srow{flex-wrap:wrap;gap:8px}.srow .acts{display:contents}.srow .smeta{flex:1 1 auto;min-width:0;overflow:hidden;text-overflow:ellipsis}article .lead{font-size:.95rem}.smeta{font-size:.82rem}
-article .prose{font-size:15px}article .prose h2{font-size:.98rem}.grid2{grid-template-columns:1fr;gap:59px}.side{gap:29px}.grid2>.card{grid-template-columns:1fr;gap:0}.grid2>.card .im{height:auto;width:auto}.grid2>.card .im img{aspect-ratio:1200/630}.grid2>.card .body{padding:7px 0 0}.card.lead{grid-column:auto}.leadside{grid-column:auto;flex-direction:column;gap:40px}.leadside .card p{display:-webkit-box}.mini{grid-template-columns:1fr;gap:6px;height:auto}.mini>div{height:auto}.th{width:100%;height:auto}.mini img{width:100%;height:auto;aspect-ratio:1200/630}#news .h2{margin-top:16px}.grid{grid-template-columns:1fr;gap:40px}.why{grid-template-columns:1fr 1fr;gap:10px}.why div{padding:14px}.why p{font-size:.8rem}
+article .prose{font-size:15px}article .prose h2{font-size:.98rem}.grid2{grid-template-columns:1fr;gap:59px}.grid2.gall{grid-template-columns:1fr;gap:40px}.gall>.card h3{font-size:1rem}.gall>.card p{font-size:.9rem}.side{gap:29px}.grid2>.card{grid-template-columns:1fr;gap:0}.grid2>.card .im{height:auto;width:auto}.grid2>.card .im img{aspect-ratio:1200/630}.grid2>.card .body{padding:7px 0 0}.card.lead{grid-column:auto}.leadside{grid-column:auto;flex-direction:column;gap:40px}.leadside .card p{display:-webkit-box}.mini{grid-template-columns:1fr;gap:6px;height:auto}.mini>div{height:auto}.th{width:100%;height:auto}.mini img{width:100%;height:auto;aspect-ratio:1200/630}#news .h2{margin-top:16px}.grid{grid-template-columns:1fr;gap:40px}.why{grid-template-columns:1fr 1fr;gap:10px}.why div{padding:14px}.why p{font-size:.8rem}
  .models{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:0 -24px;padding:0 24px 4px}.models::-webkit-scrollbar{display:none}.models{gap:14px}.model{flex:0 0 46%;scroll-snap-align:start}
  body{font-size:16.5px}.h2{margin-top:20px}.hero{min-height:0}.hero .in{padding:26px 20px}.hero .btn{flex:1;white-space:nowrap;padding:11px 12px}
  .phead{flex-direction:column-reverse;align-items:flex-start}.phead img{width:100%}}
@@ -815,11 +815,6 @@ def listing(items, lang, active=None, model=None):
         return feed(lead, story(lead, lang, "h2"), own, lang, active, L["latest"], extra_side=extra)
     rest = [x for x in ALL_ARTS if x is not lead]
     own = sorted(own, key=published, reverse=True)
-    if model or active == "models":
-        # this model's articles first, then other model news
-        mine = set(id(x) for x in own) | {id(lead)}
-        own += sorted((x for x in ALL_ARTS if id(x) not in mine and (x.get("models") or x["category"] == "models")),
-                      key=published, reverse=True)
     return feed(lead, modelinfo(model, lang) if info else story(lead, lang, "h2"), rest, lang,
                 "models" if model else active, L["latest"], extra_side=extra, left_exact=own,
                 lead_px=1500 if info else None)
@@ -897,10 +892,10 @@ def feed(lead, lead_html, rest, lang, active=None, side_title="", left_first=(),
         # topic, model and article pages: the 6 most relevant articles open the right column,
         # followed without a heading by the general news
         rel = list(left_items[:6])
-        left_items = list(left_items[6:])
         right_items = rel + [x for x in right_items if x not in rel]
     more_link = ""
-    if len(left_items) > MAX_LEFT:
+    topic = left_exact is not None and active != "news"
+    if len(left_items) > MAX_LEFT and not topic:
         left_items = left_items[:MAX_LEFT]
         more_link = f'<a class="morelink" href="{url(lang, "archive/")}">{LANGS[lang]["archive"]} →</a>'
     right_items = right_items[:MAX_RIGHT]
@@ -910,12 +905,12 @@ def feed(lead, lead_html, rest, lang, active=None, side_title="", left_first=(),
         if i and i % 6 == 0:
             g += f'<div class="span2">{tl[ti % len(tl)]}</div>'
             ti += 1
-        g += card(a, lang)
+        g += gcard(a, lang) if topic else card(a, lang)
     side = "".join(mini(a, lang) for a in right_items[:n_own] if more) if more else "".join(mini(a, lang) for a in right_items)
     if more and len(right_items) > n_own:
         side += f'<h2 class="sideh">{CATEGORIES["news"][lang]}</h2>' + "".join(mini(a, lang) for a in right_items[n_own:])
     return (f'<section class="read home"><div class="lcol">{lead_html}{tl[0]}'
-            f'{f"<div class=grid2>{g}</div>" if g else ""}{more_link}</div>'
+            f'{(f"<div class=\"grid2 gall\">{g}</div>" if topic else f"<div class=grid2>{g}</div>") if g else ""}{more_link}</div>'
             f'<aside class="rside">{cats9(lang, active)}{extra_side}<h2 class="sr">{side_title}</h2><div class="side">{side}</div>'
             f'<a class="morelink" href="{url(lang, "archive/")}">{LANGS[lang]["archive"]} →</a></aside></section>')
 
@@ -948,7 +943,7 @@ var all=[].slice.call(document.querySelectorAll('.rside .side>*,.lcol .grid2>*')
 if(getComputedStyle(l.parentNode).gridTemplateColumns.split(' ').length<2)return;
 var lb=l.getBoundingClientRect().bottom,rb=r.getBoundingClientRect().bottom;
 if(rb>lb){[].slice.call(r.querySelectorAll('.side>*')).forEach(function(x){if(x.getBoundingClientRect().bottom>lb+4)x.style.display='none'})}
-else{var g=[].slice.call(l.querySelectorAll('.grid2>*'));for(var k=g.length-1;k>=0;k--){if(g[k].getBoundingClientRect().top>rb)g[k].style.display='none'}
+else if(!l.querySelector('.gall')){var g=[].slice.call(l.querySelectorAll('.grid2>*'));for(var k=g.length-1;k>=0;k--){if(g[k].getBoundingClientRect().top>rb)g[k].style.display='none'}
 var v=g.filter(function(x){return x.style.display!=='none'&&!x.classList.contains('span2')});var last=v[v.length-1];
 }}
 window.addEventListener('load',bal);
@@ -977,6 +972,15 @@ def card(a, lang, lead=False):
             f'<div class="im"><img src="{site_img(a)}" alt="" width="1200" height="630" loading="lazy" decoding="async">{dur(a, lang)}</div>'
             f'<div class="body">{label(a, lang)} <span class="meta">· {fmt_date(a["date"], lang)}</span>'
             f'<h3>{esc(t["title"])}</h3><p>{esc(t["description"])}</p></div></a>')
+
+
+def gcard(a, lang):
+    """Topic list under the lead: photo on top, then title, summary and date."""
+    t = a[lang]
+    return (f'<a class="card" href="{url(lang, a["slug"] + "/")}">'
+            f'<div class="im"><img src="{site_img(a)}" alt="" width="1200" height="630" loading="lazy" decoding="async">{dur(a, lang)}</div>'
+            f'<div class="body"><h3>{esc(t["title"])}</h3><p>{esc(t["description"])}</p>'
+            f'<span class="meta">{fmt_date(a["date"], lang)}</span></div></a>')
 
 
 def dur(a, lang):

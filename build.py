@@ -436,8 +436,8 @@ article .hero-img{border-radius:7px;margin:0 0 26px;aspect-ratio:1200/630;width:
 .chips{display:flex;gap:8px;flex-wrap:wrap;margin:-8px 0 24px}
 .chips a{font-size:.78rem;font-weight:700;color:var(--muted);text-decoration:none;border:1px solid var(--border2);border-radius:7px;padding:3px 10px}
 .chips a:hover{color:var(--head);border-color:var(--head)}
-.prose h2{font-size:1.15rem;line-height:1.3;letter-spacing:-.015em;margin:40px 0 12px}
-article .prose{font-size:15px}article .prose,article .lead{max-width:680px}article .prose h2{clear:right}article .prose>h2,article .prose>p,article .prose>ul,article .prose>ol{display:flow-root}article .prose>p,article .prose>ul,article .prose>ol{margin-left:14px}article .prose h2{border-left:3px solid var(--blue);padding-left:11px;scroll-margin-top:84px}.toc{float:left;width:max-content;max-width:44%;margin:4px 22px 12px 0;padding:12px 16px;border:1px solid var(--border2);border-radius:7px;background:rgba(255,255,255,.03)}.toc b{display:block;font-size:.7rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin-bottom:8px}.toc ol{margin:0;padding-left:20px;font-size:.88rem;line-height:1.5}.toc li{margin:3px 0}.toc li::marker{color:var(--dim)}.toc a{color:var(--fg);text-decoration:none}.toc a:hover{color:var(--blue)}.pimg{float:right;width:33%;margin:4px 0 12px 18px}.pimg img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;object-position:center;border-radius:7px;border:1px solid var(--edge);display:block}html{scroll-behavior:smooth}article .prose{line-height:1.65}.prose p,.prose ul,.prose ol{margin-bottom:22px}
+.prose h2{font-size:1.15rem;line-height:1.3;letter-spacing:-.015em;margin:26px 0 10px}
+article .prose{font-size:15px}article .prose,article .lead{max-width:680px}article .prose h2{clear:right}.beside{display:flow-root}.beside+*{clear:left}article .prose p,article .prose ul,article .prose ol{margin-left:14px}article .prose ul{list-style:none;padding-left:0}article .prose ul>li{position:relative;padding-left:15px}article .prose ul>li::before{content:"";position:absolute;left:0;top:.68em;width:6px;height:6px;border-radius:50%;background:var(--blue)}article .prose ol{padding-left:18px}article .prose h2{border-left:3px solid var(--blue);padding-left:11px;scroll-margin-top:84px}.toc{float:left;width:max-content;max-width:44%;margin:4px 22px 12px 0;padding:12px 16px;border:1px solid var(--border2);border-radius:7px;background:rgba(255,255,255,.03)}.toc b{display:block;font-size:.7rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin-bottom:8px}.toc ol{margin:0;padding-left:20px;font-size:.88rem;line-height:1.5}.toc li{margin:3px 0}.toc li::marker{color:var(--dim)}.toc a{color:var(--fg);text-decoration:none}.toc a:hover{color:var(--blue)}.pimg{float:right;width:33%;margin:4px 0 12px 18px}.pimg img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;object-position:center;border-radius:7px;border:1px solid var(--edge);display:block}html{scroll-behavior:smooth}article .prose{line-height:1.65}.prose p,.prose ul,.prose ol{margin-bottom:22px}
 .prose ul,.prose ol{padding-left:22px}
 .prose li{margin-bottom:8px}
 .prose li::marker{color:var(--blue)}
@@ -710,6 +710,9 @@ def enrich(a, lang):
         lbl = {"en": "In this article", "nl": "In dit artikel"}[lang]
         toc = (f'<nav class="toc"><b>{lbl}</b><ol>'
                + "".join(f'<li><a href="#s{i + 1}">{esc(html.unescape(h))}</a></li>' for i, h in enumerate(heads)) + "</ol></nav>")
+    if toc and '<h2 id="s2">' in body:
+        i = body.index('<h2 id="s2">')
+        body = f'<div class="beside">{body[:i]}</div>{body[i:]}'
     if len(heads) >= 2:
         main = site_img(a)
         alt = [x for x in candidates(a) if x != main and not x.startswith("/img/v/")]

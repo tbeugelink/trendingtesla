@@ -853,7 +853,7 @@ def words(a, lang):
 ROW_PX = 168
 MAX_LEFT = 24   # articles in the list under the lead
 MAX_RIGHT = 50  # articles in the news column
-PER_PAGE = 30   # articles per archive page
+PER_PAGE = 36   # articles per archive page
 
 
 def feed(lead, lead_html, rest, lang, active=None, side_title="", left_first=(), more=(), extra_side="", lead_px=None, left_pool=None, min_left=0, left_exact=None, no_left=False):

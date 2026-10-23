@@ -540,6 +540,9 @@ def scene_of(path):
     return rel
 
 
+STUDIO = {"cybertruck.jpg", "model-3-classic.jpg", "model-3.jpg", "model-s.jpg", "model-x.jpg", "model-y-classic.jpg", "model-y.jpg"}  # black studio shots: menu only
+
+
 def candidates(a):
     """All suitable photos for an article, preferred first, rotated per article."""
     out = []
@@ -564,7 +567,7 @@ def candidates(a):
         out += [f"/img/{x}" for x in files[r:] + files[:r]]
     out.append(f"/img/v/{a['slug']}.jpg")
     seen = set()
-    return [x for x in out if not (x in seen or seen.add(x))]
+    return [x for x in out if not (x in seen or seen.add(x)) and not (x.startswith("/img/models/") and x.rsplit("/", 1)[-1] in STUDIO)]
 
 
 def assign_photos(arts):
@@ -919,8 +922,8 @@ def feed(lead, lead_html, rest, lang, active=None, side_title="", left_first=(),
     if left_exact is not None and active != "news":
         # topic, model and article pages: the 6 most relevant articles open the right column,
         # followed without a heading by the general news
-        rel = list(left_items[:6])
-        right_items = rel + [x for x in right_items if x not in rel]
+        # topic, model and article pages: the right column holds only articles of this topic
+        right_items = [x for x in left_items if x is not lead]
     if no_left:
         right_items, left_items = list(rest), []
     more_link = ""
@@ -1205,7 +1208,7 @@ def build():
                 "author": {"@type": "Organization", "name": NAME, "url": SITE},
             }
             head = f'<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>'
-            same = sorted((x for x in arts if x is not a and x["category"] == a["category"]), key=published, reverse=True)
+            same = sorted((x for x in arts if x["category"] == a["category"]), key=published, reverse=True)  # incl. this one: full rows
             others = [x for x in arts if x is not a]
             body = feed(a, story(a, lang), others, lang, a["category"], L["latest"], left_exact=same)
             write(url(lang, a["slug"] + "/"),

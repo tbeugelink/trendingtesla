@@ -437,7 +437,7 @@ article .hero-img{border-radius:7px;margin:0 0 26px;aspect-ratio:1200/630;width:
 .chips a{font-size:.78rem;font-weight:700;color:var(--muted);text-decoration:none;border:1px solid var(--border2);border-radius:7px;padding:3px 10px}
 .chips a:hover{color:var(--head);border-color:var(--head)}
 .prose h2{font-size:1.15rem;line-height:1.3;letter-spacing:-.015em;margin:40px 0 12px}
-article .prose{font-size:15px}article .prose,article .lead{max-width:680px}article .prose{line-height:1.65}.prose p,.prose ul,.prose ol{margin-bottom:22px}
+article .prose{font-size:15px}article .prose,article .lead{max-width:680px}article .prose h2{border-left:3px solid var(--blue);padding-left:11px;scroll-margin-top:84px}.toc{max-width:680px;margin:-6px 0 26px;padding:14px 18px;border:1px solid var(--border2);border-radius:7px;background:rgba(255,255,255,.03)}.toc b{display:block;font-size:.7rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin-bottom:8px}.toc ol{margin:0;padding-left:20px;font-size:.88rem;line-height:1.5}.toc li{margin:3px 0}.toc li::marker{color:var(--dim)}.toc a{color:var(--fg);text-decoration:none}.toc a:hover{color:var(--blue)}.pimg{margin:30px 0 8px}.pimg img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:7px;border:1px solid var(--edge);display:block}article .prose ul{background:rgba(255,255,255,.04);border:1px solid var(--border2);border-radius:7px;padding:14px 18px 14px 36px}article .prose ul li:last-child{margin-bottom:0}html{scroll-behavior:smooth}article .prose{line-height:1.65}.prose p,.prose ul,.prose ol{margin-bottom:22px}
 .prose ul,.prose ol{padding-left:22px}
 .prose li{margin-bottom:8px}
 .prose li::marker{color:var(--blue)}
@@ -696,6 +696,30 @@ def drawer(lang, active=None, model=None):
     return out
 
 
+def enrich(a, lang):
+    """Article body extras: anchors + table of contents from the subheadings, and a second photo halfway."""
+    body = a[lang]["body"]
+    heads = []
+
+    def anchor(m):
+        heads.append(re.sub(r"<[^>]+>", "", m.group(1)))
+        return f'<h2 id="s{len(heads)}">{m.group(1)}</h2>'
+    body = re.sub(r"<h2>(.*?)</h2>", anchor, body)
+    toc = ""
+    if len(heads) >= 3:
+        lbl = {"en": "In this article", "nl": "In dit artikel"}[lang]
+        toc = (f'<nav class="toc"><b>{lbl}</b><ol>'
+               + "".join(f'<li><a href="#s{i + 1}">{esc(html.unescape(h))}</a></li>' for i, h in enumerate(heads)) + "</ol></nav>")
+    if len(heads) >= 2:
+        main = site_img(a)
+        alt = [x for x in candidates(a) if x != main and not x.startswith("/img/v/")]
+        if alt:
+            mid = len(heads) // 2 + 1
+            fig = f'<figure class="pimg"><img src="{alt[0]}" alt="" width="1200" height="630" loading="lazy" decoding="async"></figure>'
+            body = body.replace(f'<h2 id="s{mid}">', fig + f'<h2 id="s{mid}">', 1)
+    return toc, body
+
+
 def story(a, lang, tag="h1"):
     """Full article block: photo, title, intro, meta, model chips, body and sources."""
     L = LANGS[lang]
@@ -711,14 +735,15 @@ def story(a, lang, tag="h1"):
         chips = '<div class="chips">' + "".join(
             f'<a href="{url(lang, "model/" + k + "/")}">Tesla {MODELS[k]["name"]}</a>' for k in a["models"]) + "</div>"
     title = esc(t["title"]) if tag == "h1" else f'<a href="{url(lang, a["slug"] + "/")}">{esc(t["title"])}</a>'
+    toc, body = enrich(a, lang)
     return (f'<article>'
             f'<div class="hi"><img class="hero-img" src="{site_img(a)}" alt="{esc(t["title"])}" width="1200" height="630" fetchpriority="high">{dur(a, lang)}</div>'
             f'<{tag} class="st">{title}</{tag}>'
             f'<div class="srow"><p class="meta smeta"><a class="tag" href="{url(lang, "category/" + a["category"] + "/")}">{c.get("tag", c[lang])}</a> · {fmt_date(a["date"], lang)}</p>'
             f'<div class="acts"><button class="act like" type="button" data-like="{a["slug"]}" aria-pressed="false" title="{L["like"]}">{HEART_SVG}<span>0</span></button>'
             f'<button class="act save" type="button" data-save="{a["slug"]}" aria-pressed="false" title="{L["save"]}" aria-label="{L["save"]}">{BOOK_SVG}</button></div></div>'
-            f'<p class="lead">{esc(t["description"])}</p>'
-            f'<div class="prose">{t["body"]}</div>{src}</article>')
+            f'<p class="lead">{esc(t["description"])}</p>{toc}'
+            f'<div class="prose">{body}</div>{src}</article>')
 
 
 ALL_ARTS = []

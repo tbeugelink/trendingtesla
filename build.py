@@ -705,25 +705,7 @@ def enrich(a, lang):
         heads.append(re.sub(r"<[^>]+>", "", m.group(1)))
         return f'<h2 id="s{len(heads)}">{m.group(1)}</h2>'
     body = re.sub(r"<h2>(.*?)</h2>", anchor, body)
-    toc = ""
-    if len(heads) >= 3:
-        lbl = {"en": "In this article", "nl": "In dit artikel"}[lang]
-        toc = (f'<nav class="toc"><b>{lbl}</b><ol>'
-               + "".join(f'<li><a href="#s{i + 1}">{esc(html.unescape(h))}</a></li>' for i, h in enumerate(heads)) + "</ol></nav>")
-    if len(heads) >= 2:
-        main = site_img(a)
-        alt = [x for x in candidates(a) if x != main and not x.startswith("/img/v/")]
-        if alt:
-            mid = len(heads) // 2 + 1
-            fig = f'<figure class="pimg"><img src="{alt[0]}" alt="" width="1200" height="630" loading="lazy" decoding="async"></figure>'
-            body = re.sub(rf'(<h2 id="s{mid}">.*?</h2>)(.*?)(?=<h2 |$)',
-                          lambda m: f'{m.group(1)}<div class="pblock"><div class="ptxt">{m.group(2)}</div>{fig}</div>',
-                          body, count=1, flags=re.S)
-    if toc and '<h2 id="s1">' in body:
-        i = body.index('<h2 id="s1">')
-        j = body.index('<h2 id="s2">') if '<h2 id="s2">' in body else len(body)
-        body = f'{body[:i]}{toc}<div class="beside">{body[i:j]}</div>{body[j:]}'
-        toc = ""
+    toc = ""  # TOC box and mid-article photo removed on request (2026-10-23)
     return toc, body
 
 

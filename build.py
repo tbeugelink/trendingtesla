@@ -1124,6 +1124,7 @@ def build():
             body += section(L["latest"], f'<p class="empty">{L["empty"]}</p>', anchor="news")
         body += section(L["why_h"], why(lang))
         write(url(lang), page(lang, "", NAME, L["tagline"], body))
+        home_body = body
 
         # ---------- Category pages ----------
         for key, c in CATEGORIES.items():
@@ -1132,7 +1133,7 @@ def build():
                 items = news
             intro = L["eco_intro"] if key in ECO else L["cat_intro"].format(c[lang])
             head = f'<h1 class="sr">{c[lang]}</h1>'
-            content = listing(items, lang, key)
+            content = home_body.split("</h1>", 1)[1] if key == "news" else listing(items, lang, key)
             write(url(lang, f"category/{key}/"),
                   page(lang, f"category/{key}/", c[lang], intro, head + content, active=key))
 

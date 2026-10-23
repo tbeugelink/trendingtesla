@@ -830,7 +830,7 @@ def listing(items, lang, active=None, model=None):
     extra = modelnav(lang, model) if (active == "models" or model) else ""
     info = model and INFO.get(model)
     lead = None if info else items[0]
-    own = items if info else items[1:]
+    own = list(items)  # the lead stays in the grid too, so 8 articles fill two rows of 4
     if active == "news":
         return feed(lead, story(lead, lang, "h2"), own, lang, active, L["latest"], extra_side=extra)
     rest = [x for x in ALL_ARTS if x is not lead]

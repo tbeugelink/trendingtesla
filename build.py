@@ -243,7 +243,7 @@ h1,h2,h3{color:#ebebeb;font-weight:800}
 .grid2{display:grid;grid-template-columns:1fr;gap:13px;margin-top:20px}
 .grid2>.card{display:grid;grid-template-columns:254px 1fr;gap:11px;align-items:start}.grid2>.card .body{padding:0;line-height:1}.grid2>.card .body .tag,.grid2>.card .body .meta{line-height:1;vertical-align:top}.grid2>.card h3{font-size:1.12rem;line-height:1.3;margin:8px 0 6px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}.grid2>.card p{-webkit-line-clamp:2;line-height:1.42}.grid2>.card .im{height:142px;width:254px}.grid2>.card .im img{height:100%;aspect-ratio:auto}
 .grid2 .card{padding:8px;margin:-8px;border-radius:7px;transition:background .15s}
-.grid2 .card:hover{background:#272727}.grid2.gall{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px 14px}.gall>.card{grid-template-columns:1fr;gap:0}.gall>.card .im{width:auto;height:auto}.gall>.card .im img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}.gall>.card .body{padding:8px 0 0;line-height:1.3}.gall>.card h3{font-size:.92rem;margin:0 0 5px;-webkit-line-clamp:3}.gall>.card p{font-size:.8rem;line-height:1.35;-webkit-line-clamp:3;margin-bottom:5px}.gall>.card .meta{font-size:.74rem}
+.grid2 .card:hover{background:#272727}.grid2.gall.wide{grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:22px 16px;margin-top:14px}.wide .empty{grid-column:1/-1}.grid2.gall{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px 14px}.gall>.card{grid-template-columns:1fr;gap:0}.gall>.card .im{width:auto;height:auto}.gall>.card .im img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}.gall>.card .body{padding:8px 0 0;line-height:1.3}.gall>.card h3{font-size:.92rem;margin:0 0 5px;-webkit-line-clamp:3}.gall>.card p{font-size:.8rem;line-height:1.35;-webkit-line-clamp:3;margin-bottom:5px}.gall>.card .meta{font-size:.74rem}
 .span2{grid-column:1/-1}.span2 .tip{margin:0}
 .read article{padding-top:0}
 .rside .rh{font-size:1.15rem;margin:0 0 22px;padding-bottom:12px;border-bottom:1px solid var(--border)}
@@ -281,7 +281,6 @@ h1,h2,h3{color:#ebebeb;font-weight:800}
 .drawer{overscroll-behavior:contain}html.dopen,html.dopen body{overflow:hidden}
 .drawer .dh{display:flex;align-items:center;gap:12px;padding:0 4px 13px 12px;margin:0 -12px 10px;border-bottom:1px solid var(--border)}
 @media (min-width:861px){.drawer,.scrim,.bar .burger{display:none}}
-@media (min-width:601px){.savedlist .mini{grid-template-columns:280px minmax(0,1fr)}.savedlist{margin-top:14px}}
 @media (max-width:860px){.rside .cats9,.rside .mnav{display:none}}
 .arch{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);gap:13px;align-items:start}
 .archh{margin:6px 0 0}.arch .rside{position:sticky;top:82px}
@@ -857,7 +856,7 @@ MAX_RIGHT = 50  # articles in the news column
 PER_PAGE = 30   # articles per archive page
 
 
-def feed(lead, lead_html, rest, lang, active=None, side_title="", left_first=(), more=(), extra_side="", lead_px=None, left_pool=None, min_left=0, left_exact=None):
+def feed(lead, lead_html, rest, lang, active=None, side_title="", left_first=(), more=(), extra_side="", lead_px=None, left_pool=None, min_left=0, left_exact=None, no_left=False):
     """YouTube-style page: lead story open on the left with a two-column grid of further articles
     below it (an ad/tip bar every few rows); a long list of the newest articles on the right."""
     # balance column heights (pixel estimates measured on the live layout)
@@ -893,6 +892,8 @@ def feed(lead, lead_html, rest, lang, active=None, side_title="", left_first=(),
         # followed without a heading by the general news
         rel = list(left_items[:6])
         right_items = rel + [x for x in right_items if x not in rel]
+    if no_left:
+        right_items, left_items = list(rest), []
     more_link = ""
     topic = left_exact is not None and active != "news"
     if len(left_items) > MAX_LEFT and not topic:
@@ -957,7 +958,7 @@ fetch('/api/likes?s='+lb.map(function(b){return b.dataset.like}).join(',')).then
 lb.forEach(function(b){var s=b.dataset.like;b.setAttribute('aria-pressed',liked.indexOf(s)>-1);b.onclick=function(){var l=LS.get('tt_liked'),i=l.indexOf(s),d=i>-1?-1:1;if(d>0)l.push(s);else l.splice(i,1);LS.set('tt_liked',l);b.setAttribute('aria-pressed',d>0);
 var sp=b.querySelector('span');sp.textContent=Math.max(0,(+sp.textContent||0)+d);fetch('/api/likes',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({slug:s,d:d})}).then(function(r){return r.json()}).then(function(j){if(j.n!=null)sp.textContent=j.n}).catch(function(){})}})}
 var sl=document.querySelector('.savedlist');if(sl){var keep=LS.get('tt_saved');if(!keep.length){sl.innerHTML='<p class="empty">'+e(sl.dataset.empty)+'</p>'}else{load().then(function(){var m={};idx.forEach(function(a){var k=a.u.replace(/\/$/,'').split('/').pop();m[k]=a});
-sl.innerHTML=keep.filter(function(k){return m[k]}).map(function(k){var a=m[k];return '<a class="mini" href="'+a.u+'"><div class="th"><img src="'+a.i+'" alt=""></div><div><h3>'+e(a.t)+'</h3><p class="mdesc">'+e(a.d)+'</p><span class="meta">'+e(a.dt)+'</span></div></a>'}).join('')})}}window.addEventListener('resize',bal);bal();
+sl.innerHTML=keep.filter(function(k){return m[k]}).map(function(k){var a=m[k];return '<a class="card" href="'+a.u+'"><div class="im"><img src="'+a.i+'" alt=""></div><div class="body"><h3>'+e(a.t)+'</h3><p>'+e(a.d)+'</p><span class="meta">'+e(a.dt)+'</span></div></a>'}).join('')})}}window.addEventListener('resize',bal);bal();
 })();"""
 
 
@@ -1115,7 +1116,7 @@ def build():
         body = f'<h1 class="sr">{NAME} — {L["tagline"]}</h1>'
         if news:
             top = news[0]
-            body += feed(top, story(top, lang, "h2"), [a for a in arts if a is not top], lang, "news", L["latest"])
+            body += feed(top, story(top, lang, "h2"), [a for a in arts if a is not top], lang, "news", L["latest"], no_left=True)
         else:
             body += section(L["latest"], f'<p class="empty">{L["empty"]}</p>', anchor="news")
         body += section(L["why_h"], why(lang))
@@ -1193,15 +1194,14 @@ def build():
             right = f'<a href="{nxt}">{L["older"]} →</a>' if nxt else "<span></span>"
             pager = f'<nav class="pager">{left}<span>{L["page"]} {pi + 1} / {pages}</span>{right}</nav>'
             title = L["archive"] + (f' · {L["page"]} {pi + 1}' if pi else "")
-            body = (f'<section class="arch"><div class="lcol"><h1 class="st archh">{title}</h1><div class=grid2>'
-                    + "".join(card(a, lang) for a in chunk) + f'</div>{pager}</div><aside class="rside">{cats9(lang, "news")}</aside></section>')
+            body = (f'<section class="wide"><h1 class="st archh">{title}</h1><div class="grid2 gall wide">'
+                    + "".join(gcard(a, lang) for a in chunk) + f'</div>{pager}</section>')
             write(url(lang, path), page(lang, path, title, L["tagline"], body, active="news"))
         ARCH_PAGES[0] = pages
 
         # ---------- Saved articles (filled in the browser from localStorage) ----------
-        body = (f'<section class="arch"><div class="lcol"><h1 class="st archh">{L["saved"]}</h1>'
-                f'<div class="side savedlist" data-empty="{esc(L["saved_empty"])}"></div></div>'
-                f'<aside class="rside"></aside></section>')
+        body = (f'<section class="wide"><h1 class="st archh">{L["saved"]}</h1>'
+                f'<div class="grid2 gall wide savedlist" data-empty="{esc(L["saved_empty"])}"></div></section>')
         write(url(lang, "saved/"), page(lang, "saved/", L["saved"], L["saved"], body).replace("<head>", '<head>\n<meta name="robots" content="noindex">', 1))
 
         # ---------- Static pages ----------

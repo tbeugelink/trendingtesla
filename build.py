@@ -281,6 +281,7 @@ h1,h2,h3{color:#ebebeb;font-weight:800}
 .drawer{overscroll-behavior:contain}html.dopen,html.dopen body{overflow:hidden}
 .drawer .dh{display:flex;align-items:center;gap:12px;padding:0 4px 13px 12px;margin:0 -12px 10px;border-bottom:1px solid var(--border)}
 @media (min-width:861px){.drawer,.scrim,.bar .burger{display:none}}
+@media (min-width:601px){.savedlist .mini{grid-template-columns:280px minmax(0,1fr)}.savedlist{margin-top:14px}}
 @media (max-width:860px){.rside .cats9,.rside .mnav{display:none}}
 .arch{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);gap:13px;align-items:start}
 .archh{margin:6px 0 0}.arch .rside{position:sticky;top:82px}
@@ -961,7 +962,7 @@ fetch('/api/likes?s='+lb.map(function(b){return b.dataset.like}).join(',')).then
 lb.forEach(function(b){var s=b.dataset.like;b.setAttribute('aria-pressed',liked.indexOf(s)>-1);b.onclick=function(){var l=LS.get('tt_liked'),i=l.indexOf(s),d=i>-1?-1:1;if(d>0)l.push(s);else l.splice(i,1);LS.set('tt_liked',l);b.setAttribute('aria-pressed',d>0);
 var sp=b.querySelector('span');sp.textContent=Math.max(0,(+sp.textContent||0)+d);fetch('/api/likes',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({slug:s,d:d})}).then(function(r){return r.json()}).then(function(j){if(j.n!=null)sp.textContent=j.n}).catch(function(){})}})}
 var sl=document.querySelector('.savedlist');if(sl){var keep=LS.get('tt_saved');if(!keep.length){sl.innerHTML='<p class="empty">'+e(sl.dataset.empty)+'</p>'}else{load().then(function(){var m={};idx.forEach(function(a){var k=a.u.replace(/\/$/,'').split('/').pop();m[k]=a});
-sl.innerHTML=keep.filter(function(k){return m[k]}).map(function(k){var a=m[k];return '<a class="card" href="'+a.u+'"><div class="im"><img src="'+a.i+'" alt=""></div><div class="body"><span class="tag">'+e(a.c)+'</span> <span class="meta">· '+e(a.dt)+'</span><h3>'+e(a.t)+'</h3><p>'+e(a.d)+'</p></div></a>'}).join('')})}}window.addEventListener('resize',bal);bal();
+sl.innerHTML=keep.filter(function(k){return m[k]}).map(function(k){var a=m[k];return '<a class="mini" href="'+a.u+'"><div class="th"><img src="'+a.i+'" alt=""></div><div><h3>'+e(a.t)+'</h3><p class="mdesc">'+e(a.d)+'</p><span class="meta">'+e(a.dt)+'</span></div></a>'}).join('')})}}window.addEventListener('resize',bal);bal();
 })();"""
 
 
@@ -1195,8 +1196,8 @@ def build():
 
         # ---------- Saved articles (filled in the browser from localStorage) ----------
         body = (f'<section class="arch"><div class="lcol"><h1 class="st archh">{L["saved"]}</h1>'
-                f'<div class="grid2 savedlist" data-empty="{esc(L["saved_empty"])}"></div></div>'
-                f'<aside class="rside">{cats9(lang)}</aside></section>')
+                f'<div class="side savedlist" data-empty="{esc(L["saved_empty"])}"></div></div>'
+                f'<aside class="rside"></aside></section>')
         write(url(lang, "saved/"), page(lang, "saved/", L["saved"], L["saved"], body).replace("<head>", '<head>\n<meta name="robots" content="noindex">', 1))
 
         # ---------- Static pages ----------

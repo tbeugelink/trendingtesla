@@ -283,7 +283,7 @@ h1,h2,h3{color:#ebebeb;font-weight:800}
 .drawer{overscroll-behavior:contain}html.dopen,html.dopen body{overflow:hidden}
 .drawer .dh{display:flex;align-items:center;gap:12px;padding:0 4px 13px 12px;margin:0 -12px 10px;border-bottom:1px solid var(--border)}
 @media (min-width:905px){.drawer,.scrim,.bar .burger{display:none}}
-@media (max-width:1000px){.rside .cats9 a{padding-left:3px;padding-right:3px}}@media (max-width:904px) and (min-width:700px){.read{grid-template-columns:minmax(0,2.68fr) minmax(0,1fr)}.rside .cats9,.rside .mnav{display:none}.rside .mini{grid-template-columns:1fr;gap:6px}.rside .mini img{aspect-ratio:1200/630}}@media (max-width:699px){.read{grid-template-columns:1fr;gap:36px}.rside .cats9,.rside .mnav{display:none}.read.topic .rside{display:none}}
+@media (max-width:1000px){.rside .cats9 a{padding-left:3px;padding-right:3px}}@media (max-width:904px) and (min-width:700px){.read{grid-template-columns:minmax(0,2.68fr) minmax(0,1fr)}.rside .cats9{display:none}.rside .mini{grid-template-columns:1fr;gap:6px}.rside .mini img{aspect-ratio:1200/630}}@media (max-width:699px){.read{grid-template-columns:1fr;gap:36px}.rside .cats9,.rside .mnav{display:none}.read.topic .rside{display:none}}
 .arch{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);gap:13px;align-items:start}
 .archh{margin:6px 0 0}.arch .rside{position:sticky;top:82px}
 .pager{display:flex;justify-content:space-between;align-items:center;margin:34px 0 0;font-size:.9rem;color:var(--dim)}
@@ -928,8 +928,10 @@ def feed(lead, lead_html, rest, lang, active=None, side_title="", left_first=(),
         side += f'<h2 class="sideh">{CATEGORIES["news"][lang]}</h2>' + "".join(mini(a, lang) for a in right_items[n_own:])
     grid = (f'<div class="grid2 gall wide">{g}</div>' if topic else f'<div class=grid2>{g}</div>') if g else ""
     return (f'<section class="read home{" topic" if topic else ""}"><div class="lcol">{lead_html}</div>'
-            f'<aside class="rside">{cats9(lang, active)}{extra_side}<h2 class="sr">{side_title}</h2><div class="side">{side}</div>'
-            f'<a class="morelink" href="{url(lang, "archive/")}">{LANGS[lang]["archive"]} →</a></aside></section>'
+            f'<aside class="rside">{cats9(lang, active)}{extra_side}'
+            + ("" if active == "models" else f'<h2 class="sr">{side_title}</h2><div class="side">{side}</div>'
+               f'<a class="morelink" href="{url(lang, "archive/")}">{LANGS[lang]["archive"]} →</a>')
+            + '</aside></section>'
             f'<section class="below">{tl[0]}{grid}{more_link}</section>')
 
 

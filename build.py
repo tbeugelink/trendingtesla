@@ -905,7 +905,7 @@ def feed(lead, lead_html, rest, lang, active=None, side_title="", left_first=(),
     tl = tips(lang)
     g, ti = "", 1
     for i, a in enumerate(left_items):
-        if i and i % 6 == 0:
+        if i and i % (12 if topic else 6) == 0:
             g += f'<div class="span2">{tl[ti % len(tl)]}</div>'
             ti += 1
         g += gcard(a, lang) if topic else card(a, lang)

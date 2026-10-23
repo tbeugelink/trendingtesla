@@ -161,7 +161,7 @@ MODELS = {
 # (each article always gets the same one, picked from its slug). Missing files are skipped.
 TOPIC_PHOTOS = {
     "robotaxi": ["cybercab-fleet.jpg", "robotaxi-my-1.jpg", "cybercab-street.jpg", "cybercab-interior.jpg", "robotaxi-my-2.jpg", "models/cc-3.jpg", "models/cybercab.jpg"], "fsd": ["fsd.jpg", "models/myj-3.jpg", "fsd-2.jpg", "models/m3c-1.jpg", "fsd-3.jpg", "models/myj-1.jpg", "fsd-4.jpg"], "software": ["interior-2.jpg", "grok-2.jpg", "interior-1.jpg", "fsd.jpg", "grok-1.jpg", "fsd-2.jpg", "fsd-3.jpg", "fsd-4.jpg"], "optimus": ["optimus-army.jpg", "optimus-line.jpg", "optimus.jpg", "optimus-store.jpg", "optimus-factory.jpg", "optimus-full.jpg", "optimus-kitchen.jpg", "optimus-office.jpg", "optimus-garden.jpg"],
-    "energy": ["megapack-1.jpg", "energy-3.jpg", "energy.jpg", "energy-5.jpg", "megapack-2.jpg", "energy-2.jpg", "energy-6.jpg", "megapack-3.jpg", "energy-4.jpg"], "charging": ["supercharger.jpg", "supercharger-5.jpg", "supercharger-2.jpg", "supercharger-7.jpg", "charge-port.jpg", "supercharger-3.jpg", "supercharger-4.jpg", "winter-1.jpg", "supercharger-6.jpg"], "ecosystem": ["spacex-1.jpg", "starlink-car-1.jpg", "spacex-2.jpg", "starlink-1.jpg", "spacex-4.jpg", "starlink-car-3.jpg", "spacex-3.jpg", "starlink-2.jpg", "spacex-5.jpg", "starlink-car-2.jpg", "tunnel-2.jpg", "tunnel-3.jpg", "tunnel-4.jpg"], "spacex": ["spacex-1.jpg", "spacex-2.jpg", "spacex-4.jpg", "spacex-3.jpg", "spacex-5.jpg"], "starlink": ["starlink-car-1.jpg", "starlink-1.jpg", "starlink-car-3.jpg", "starlink-2.jpg", "starlink-car-2.jpg"], "xai": ["xai-dc-1.jpg", "grok-3.jpg", "xai-dc-2.jpg", "grok-2.jpg", "grok-1.jpg", "interior-1.jpg"], "boring": ["tunnel-6.jpg", "tunnel-2.jpg", "tunnel-5.jpg", "tunnel-3.jpg", "tunnel-4.jpg", "tunnel-1.jpg"], "earnings": ["earnings-1.jpg", "gigafactory.jpg", "earnings-5.jpg", "earnings-2.jpg", "earnings-6.jpg", "earnings-4.jpg", "earnings-7.jpg", "earnings-3.jpg", "earnings-8.jpg", "models/myj-4.jpg", "gigafactory-3.jpg", "gigafactory-5.jpg", "gigafactory-2.jpg", "models/model-3.jpg", "gigafactory-4.jpg", "models/myj-6.jpg", "gigafactory-6.jpg"], "factories": ["gigafactory-berlin.jpg", "gigafactory-shanghai.jpg", "gigafactory-nevada.jpg", "gigafactory-fremont.jpg", "gigafactory-2.jpg", "gigafactory-5.jpg", "gigafactory-3.jpg", "gigafactory-6.jpg", "gigafactory-4.jpg", "gigafactory.jpg", "optimus-factory.jpg", "semi-2.jpg"], "musk": ["musk-1.jpg", "musk-2.jpg", "musk-3.jpg", "earnings-1.jpg", "spacex-2.jpg", "gigafactory-4.jpg", "models/rd-2.jpg"], "news": ["gigafactory.jpg", "models/myj-2.jpg", "gigafactory-4.jpg", "gigafactory-2.jpg", "models/m3c-10.jpg", "gigafactory-6.jpg", "models/myj-5.jpg", "gigafactory-3.jpg", "gigafactory-5.jpg"],
+    "energy": ["megapack-1.jpg", "energy-3.jpg", "energy.jpg", "energy-5.jpg", "megapack-2.jpg", "energy-2.jpg", "energy-6.jpg", "megapack-3.jpg", "energy-4.jpg"], "charging": ["supercharger.jpg", "supercharger-5.jpg", "supercharger-2.jpg", "supercharger-7.jpg", "charge-port.jpg", "supercharger-3.jpg", "supercharger-4.jpg", "winter-1.jpg", "supercharger-6.jpg"], "ecosystem": ["spacex-1.jpg", "starlink-car-1.jpg", "spacex-2.jpg", "starlink-1.jpg", "spacex-4.jpg", "starlink-car-3.jpg", "spacex-3.jpg", "starlink-2.jpg", "spacex-5.jpg", "starlink-car-2.jpg", "tunnel-2.jpg", "tunnel-3.jpg", "tunnel-4.jpg"], "spacex": ["spacex-1.jpg", "spacex-6.jpg", "spacex-2.jpg", "spacex-4.jpg", "spacex-7.jpg", "spacex-3.jpg", "spacex-5.jpg"], "starlink": ["starlink-car-1.jpg", "starlink-1.jpg", "starlink-car-3.jpg", "starlink-2.jpg", "starlink-car-2.jpg"], "xai": ["xai-dc-1.jpg", "grok-3.jpg", "xai-dc-2.jpg", "grok-2.jpg", "grok-1.jpg", "interior-1.jpg"], "boring": ["tunnel-6.jpg", "tunnel-2.jpg", "tunnel-5.jpg", "tunnel-3.jpg", "tunnel-4.jpg", "tunnel-1.jpg"], "earnings": ["earnings-1.jpg", "gigafactory.jpg", "earnings-5.jpg", "earnings-2.jpg", "earnings-6.jpg", "earnings-4.jpg", "earnings-7.jpg", "earnings-3.jpg", "earnings-8.jpg", "models/myj-4.jpg", "gigafactory-3.jpg", "gigafactory-5.jpg", "gigafactory-2.jpg", "models/model-3.jpg", "gigafactory-4.jpg", "models/myj-6.jpg", "gigafactory-6.jpg"], "factories": ["gigafactory-berlin.jpg", "gigafactory-shanghai.jpg", "gigafactory-nevada.jpg", "gigafactory-fremont.jpg", "gigafactory-2.jpg", "gigafactory-5.jpg", "gigafactory-3.jpg", "gigafactory-6.jpg", "gigafactory-4.jpg", "gigafactory.jpg", "optimus-factory.jpg", "semi-2.jpg"], "musk": ["musk-1.jpg", "musk-2.jpg", "musk-3.jpg", "earnings-1.jpg", "spacex-2.jpg", "gigafactory-4.jpg", "models/rd-2.jpg"], "news": ["gigafactory.jpg", "models/myj-2.jpg", "gigafactory-4.jpg", "gigafactory-2.jpg", "models/m3c-10.jpg", "gigafactory-6.jpg", "models/myj-5.jpg", "gigafactory-3.jpg", "gigafactory-5.jpg"],
 }
 MODEL_STRIP = ["model-s", "model-3", "model-3-highland", "model-x", "model-y", "model-y-juniper", "cybertruck"]
 
@@ -524,7 +524,7 @@ SCENES = [
     (r"^models/ct-[14]\.jpg$", "city"), (r"^models/ct-2\.jpg$", "sunset"), (r"^models/ct-[35]\.jpg$", "desert"), (r"^models/ctf-1\.jpg$", "sunset"), (r"^models/cb-2", "desert"), (r"^models/myp-2", "coast"), (r"^models/mys-2", "countryside"), (r"^models/m3s-2", "canal"), (r"^models/mxc-2", "trees"), (r"^models/mxp-1", "mountain"), (r"^models/myl-2", "rain"),
     (r"^models/cc-\d\.jpg$", "city"), (r"^models/rd-1\.jpg$", "sky"), (r"^models/rd-[23]\.jpg$", "sunset"),
     (r"^models/mx-[12]", "sunset"), (r"^models/mx-3", "trees"), (r"^models/mx-4", "countryside"), (r"^models/mx-5", "night"), (r"^models/msc-1", "village"), (r"^models/msc-2", "hills"), (r"^models/msc-3", "beach"), (r"^models/msc-4", "sunset"), (r"^models/ms-1", "village"), (r"^models/ms-2", "trees"), (r"^models/ms-3", "night"), (r"^models/ms-4", "sunset"), (r"^models/m3h-1", "night"), (r"^models/m3h-2", "street"), (r"^models/m3h-3", "autumn"), (r"^models/m3h-[45]", "coast"), (r"^models/m3p", "track"), (r"^models/myc-1", "polder"), (r"^models/myj-10", "street"), (r"^models/myj-11", "mountain"), (r"^models/myj-12", "rain"), (r"^models/myl", "street"), (r"^models/myj-7", "forest"), (r"^models/myj-8", "spring"), (r"^models/myj-9", "polder"), (r"^models/cc-3", "sunset"), (r"^models/semi", "sunset"), (r"^models/", "studio"),
-    (r"^topics/gigafactory-(berlin|shanghai|nevada|fremont)", "aerial"), (r"^topics/musk-1", "stage"), (r"^topics/musk-2", "podium"), (r"^topics/musk-3", "desk"), (r"^topics/xai-dc", "datacenter"), (r"^topics/gigafactory-[56]", "aerial"), (r"^topics/gigafactory-4", "sunset"), (r"^topics/earnings-[5-8]", "dashboard"), (r"^topics/earnings-1", "screen-dark"), (r"^topics/earnings", "stage"), (r"^topics/(gigafactory)", "factory"), (r"^topics/(fsd|grok)", "interior"), (r"^topics/(spacex|starlink-\d)", "space"),
+    (r"^topics/gigafactory-(berlin|shanghai|nevada|fremont)", "aerial"), (r"^topics/musk-1", "stage"), (r"^topics/musk-2", "podium"), (r"^topics/musk-3", "desk"), (r"^topics/xai-dc", "datacenter"), (r"^topics/gigafactory-[56]", "aerial"), (r"^topics/gigafactory-4", "sunset"), (r"^topics/earnings-[5-8]", "dashboard"), (r"^topics/earnings-1", "screen-dark"), (r"^topics/earnings", "stage"), (r"^topics/(gigafactory)", "factory"), (r"^topics/(fsd|grok)", "interior"), (r"^topics/spacex-6", "ocean"), (r"^topics/spacex-7", "launchpad"), (r"^topics/(spacex|starlink-\d)", "space"),
     (r"^topics/starlink-car", "nightsky"), (r"^topics/tunnel", "tunnel"), (r"^topics/wallbox-[23]", "homecar"), (r"^topics/wallbox", "wallbox"), (r"^topics/supercharger-[456]", "charging-night"), (r"^topics/(winter|charge-port)", "winter"), (r"^topics/interior", "cabin"), (r"^topics/robotaxi-my", "city"), (r"^topics/cybercab-interior", "cabin"), (r"^topics/supercharger", "charging"),
     (r"^topics/megapack-1", "hills"), (r"^topics/megapack-2", "desert"), (r"^topics/megapack-3", "studio"), (r"^topics/energy-[34]", "sunset"), (r"^topics/energy-6", "desert"), (r"^topics/energy", "energy"), (r"^topics/optimus-(store|kitchen|office|garden)", "optimus-place"), (r"^topics/optimus-factory", "optimus-factory"), (r"^topics/optimus", "optimus"), (r"^topics/cybercab", "robotaxi"),
     (r"^topics/roadster", "sky"),
@@ -570,21 +570,29 @@ def candidates(a):
 def assign_photos(arts):
     """Oldest first: each article avoids the photo and the scene of the 3 articles before it, so on
     the site (newest first, 3 per row) no photo or background repeats next to or directly above another."""
-    hist, cat_hist = [], {}
+    hist, cat_hist, cat_use = [], {}, {}
     for a in sorted(arts, key=published):
         cands = candidates(a)
         photos = [c for c in cands if not c.startswith("/img/v/")]
+        # least used within this category first, so a topic page repeats a photo only when it runs out
+        used = cat_use.setdefault(a["category"], {})
+        photos.sort(key=lambda c: used.get(c, 0))
         # neighbours on the homepage (all articles) and on the category / model pages
         groups = [a["category"]] + [MODELS[k].get("parent") or k for k in a.get("models", [])]
         local = [h for g in groups for h in cat_hist.get(g, [])[-3:]]
         recent_files = [h[0] for h in hist[-4:]] + [h[0] for h in local]
         recent_scenes = [h[1] for h in hist[-3:]] + [h[1] for h in local]
         own = f"/img/{a['image']}" if a.get("image") and (STATIC / "img" / a["image"]).exists() else None
-        pick = (own if own and own not in recent_files else None) \
-            or next((c for c in photos if c not in recent_files and scene_of(c) not in recent_scenes), None) \
-            or next((c for c in photos if c not in recent_files), None) \
-            or (photos[0] if photos else cands[-1])
+        pick = own if own and own not in recent_files else None
+        for n in sorted({used.get(c, 0) for c in photos}):
+            if pick:
+                break
+            tier = [c for c in photos if used.get(c, 0) == n]
+            pick = next((c for c in tier if c not in recent_files and scene_of(c) not in recent_scenes), None) \
+                or next((c for c in tier if c not in recent_files), None)
+        pick = pick or (photos[0] if photos else cands[-1])
         CHOSEN[a["slug"]] = pick
+        used[pick] = used.get(pick, 0) + 1
         hist.append((pick, scene_of(pick)))
         for g in groups:
             cat_hist.setdefault(g, []).append((pick, scene_of(pick)))

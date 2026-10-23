@@ -283,7 +283,7 @@ h1,h2,h3{color:#ebebeb;font-weight:800}
 .drawer{overscroll-behavior:contain}html.dopen,html.dopen body{overflow:hidden}
 .drawer .dh{display:flex;align-items:center;gap:12px;padding:0 4px 13px 12px;margin:0 -12px 10px;border-bottom:1px solid var(--border)}
 @media (min-width:861px){.drawer,.scrim,.bar .burger{display:none}}
-@media (max-width:860px){.rside .cats9,.rside .mnav{display:none}}
+@media (max-width:860px){.rside .cats9,.rside .mnav{display:none}.read.topic .rside{display:none}}
 .arch{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);gap:13px;align-items:start}
 .archh{margin:6px 0 0}.arch .rside{position:sticky;top:82px}
 .pager{display:flex;justify-content:space-between;align-items:center;margin:34px 0 0;font-size:.9rem;color:var(--dim)}
@@ -913,7 +913,7 @@ def feed(lead, lead_html, rest, lang, active=None, side_title="", left_first=(),
     if more and len(right_items) > n_own:
         side += f'<h2 class="sideh">{CATEGORIES["news"][lang]}</h2>' + "".join(mini(a, lang) for a in right_items[n_own:])
     grid = (f'<div class="grid2 gall wide">{g}</div>' if topic else f'<div class=grid2>{g}</div>') if g else ""
-    return (f'<section class="read home"><div class="lcol">{lead_html}</div>'
+    return (f'<section class="read home{" topic" if topic else ""}"><div class="lcol">{lead_html}</div>'
             f'<aside class="rside">{cats9(lang, active)}{extra_side}<h2 class="sr">{side_title}</h2><div class="side">{side}</div>'
             f'<a class="morelink" href="{url(lang, "archive/")}">{LANGS[lang]["archive"]} →</a></aside></section>'
             f'<section class="below">{tl[0]}{grid}{more_link}</section>')

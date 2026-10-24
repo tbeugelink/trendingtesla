@@ -842,14 +842,35 @@ def listing(items, lang, active=None, model=None):
     extra = modelnav(lang, model) if (active == "models" or model) else ""
     info = model and INFO.get(model)
     lead = None if info else items[0]
-    own = list(items)  # the lead stays in the grid too, so 8 articles fill two rows of 4
+    own = [x for x in items if x is not lead]  # never repeat the lead in the grid below it
     if active == "news":
         return feed(lead, story(lead, lang, "h2"), own, lang, active, L["latest"], extra_side=extra)
     rest = [x for x in ALL_ARTS if x is not lead]
     own = sorted(own, key=published, reverse=True)
     return feed(lead, modelinfo(model, lang) if info else story(lead, lang, "h2"), rest, lang,
                 "models" if model else active, L["latest"], extra_side=extra, left_exact=own,
-                lead_px=1500 if info else None)
+                lead_px=1500 if info else None, left_pad=pad_grid(lead, own))
+
+
+def pad_grid(lead, own):
+    """Related articles from neighbouring topics that complete the last grid row (4, 3 and 2 columns)."""
+    if not own:
+        return []
+    need = (-len(own)) % 12
+    if not need:
+        return []
+    base = (lead or own[0])["category"]
+    cats = ([base] if not lead else []) + NEAR_CATS.get(base, []) + ["news"]
+    taken = {id(x) for x in own} | ({id(lead)} if lead else set())
+    pool = [x for c in cats for x in sorted((y for y in ALL_ARTS if y["category"] == c), key=published, reverse=True)]
+    pool += sorted(ALL_ARTS, key=published, reverse=True)
+    out = []
+    for x in pool:
+        if id(x) not in taken:
+            out.append(x); taken.add(id(x))
+        if len(out) == need:
+            break
+    return out
 
 
 def btn_label(c, lang):
@@ -900,7 +921,7 @@ MAX_RIGHT = 50  # articles in the news column
 PER_PAGE = 36   # articles per archive page
 
 
-def feed(lead, lead_html, rest, lang, active=None, side_title="", left_first=(), more=(), extra_side="", lead_px=None, left_pool=None, min_left=0, left_exact=None, no_left=False):
+def feed(lead, lead_html, rest, lang, active=None, side_title="", left_first=(), more=(), extra_side="", lead_px=None, left_pool=None, min_left=0, left_exact=None, no_left=False, left_pad=()):
     """YouTube-style page: lead story open on the left with a two-column grid of further articles
     below it (an ad/tip bar every few rows); a long list of the newest articles on the right."""
     # balance column heights (pixel estimates measured on the live layout)
@@ -946,7 +967,7 @@ def feed(lead, lead_html, rest, lang, active=None, side_title="", left_first=(),
     right_items = right_items[:MAX_RIGHT]
     tl = tips(lang)
     g, ti = "", 1
-    for i, a in enumerate(left_items):
+    for i, a in enumerate(list(left_items) + (list(left_pad) if topic else [])):
         if i and i % (12 if topic else 6) == 0:
             g += f'<div class="span2">{tl[ti % len(tl)]}</div>'
             ti += 1
@@ -1220,9 +1241,9 @@ def build():
                 "author": {"@type": "Organization", "name": NAME, "url": SITE},
             }
             head = f'<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>'
-            same = sorted((x for x in arts if x["category"] == a["category"]), key=published, reverse=True)  # incl. this one: full rows
+            same = sorted((x for x in arts if x["category"] == a["category"] and x is not a), key=published, reverse=True)
             others = [x for x in arts if x is not a]
-            body = feed(a, story(a, lang), others, lang, a["category"], L["latest"], left_exact=same)
+            body = feed(a, story(a, lang), others, lang, a["category"], L["latest"], left_exact=same, left_pad=pad_grid(a, same))
             write(url(lang, a["slug"] + "/"),
                   page(lang, a["slug"] + "/", t["title"], t["description"], body, "article", head,
                        image=social_img(a, lang), active=a["category"]))

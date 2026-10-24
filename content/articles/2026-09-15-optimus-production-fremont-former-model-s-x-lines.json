@@ -38,12 +38,14 @@
     "gigafactory-fremont.jpg"
   ],
   "label": {
-    "style": "w",
+    "style": "c",
     "en": {
-      "text": "FROM MODEL S TO OPTIMUS"
+      "sub": "FROM MODEL S",
+      "text": "TO OPTIMUS"
     },
     "nl": {
-      "text": "VAN MODEL S NAAR OPTIMUS"
+      "sub": "VAN MODEL S",
+      "text": "NAAR OPTIMUS"
     }
   }
 }

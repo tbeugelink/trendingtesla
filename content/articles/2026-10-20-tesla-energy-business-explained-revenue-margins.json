@@ -30,12 +30,14 @@
     "energy-2.jpg"
   ],
   "label": {
-    "style": "y",
+    "style": "a",
     "en": {
-      "text": "TESLA'S QUIET CASH COW"
+      "sub": "TESLA'S QUIET",
+      "text": "CASH COW"
     },
     "nl": {
-      "text": "TESLA'S STILLE MELKKOE"
+      "sub": "TESLA'S STILLE",
+      "text": "MELKKOE"
     }
   }
 }

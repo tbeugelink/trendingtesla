@@ -28,12 +28,14 @@
     "fsd-4.jpg"
   ],
   "label": {
-    "style": "y",
+    "style": "c",
     "en": {
-      "text": "FSD IN SLOVENIA TOO"
+      "sub": "SLOVENIA",
+      "text": "FSD IN 6TH EU COUNTRY"
     },
     "nl": {
-      "text": "FSD OOK IN SLOVENIË"
+      "sub": "SLOVENIË",
+      "text": "6E EU-LAND MET FSD"
     }
   }
 }

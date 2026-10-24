@@ -25,12 +25,14 @@
     "interior-1.jpg"
   ],
   "label": {
-    "style": "y",
+    "style": "c",
     "en": {
-      "text": "GROK NOW MAKES CALLS"
+      "sub": "SUMMER UPDATE",
+      "text": "GROK MAKES CALLS"
     },
     "nl": {
-      "text": "GROK BELT NU VOOR JE"
+      "sub": "SUMMER UPDATE",
+      "text": "GROK BELT VOOR JE"
     }
   }
 }

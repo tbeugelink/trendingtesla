@@ -32,14 +32,14 @@
     "fsd-2.jpg"
   ],
   "label": {
-    "style": "k",
+    "style": "n",
     "en": {
-      "sub": "ESCALATED",
-      "text": "3.2M TESLAS: RECALL?"
+      "sub": "TESLAS IN FSD PROBE",
+      "text": "3.2M"
     },
     "nl": {
-      "sub": "OPGESCHAALD",
-      "text": "3,2 MLN TESLA'S: RECALL?"
+      "sub": "TESLA'S ONDERZOCHT",
+      "text": "3,2 MLN"
     }
   }
 }

@@ -33,12 +33,14 @@
     "wallbox-2.jpg"
   ],
   "label": {
-    "style": "s",
+    "style": "a",
     "en": {
-      "text": "CHARGE ON SUN OR CHEAP!"
+      "sub": "SMART CHARGING",
+      "text": "SOLAR OR CHEAP POWER"
     },
     "nl": {
-      "text": "LADEN OP ZON OF DAL!"
+      "sub": "SLIM LADEN",
+      "text": "ZON OF GOEDKOPE STROOM"
     }
   }
 }

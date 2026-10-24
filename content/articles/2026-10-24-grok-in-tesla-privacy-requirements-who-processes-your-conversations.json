@@ -32,12 +32,14 @@
     "grok-1.jpg"
   ],
   "label": {
-    "style": "w",
+    "style": "a",
     "en": {
-      "text": "WHO HEARS YOUR GROK CHAT?"
+      "sub": "WHO HEARS",
+      "text": "YOUR GROK CHATS?"
     },
     "nl": {
-      "text": "WIE HOORT JE GROK-GESPREK?"
+      "sub": "WIE HOORT",
+      "text": "JE GROK-GESPREKKEN?"
     }
   }
 }

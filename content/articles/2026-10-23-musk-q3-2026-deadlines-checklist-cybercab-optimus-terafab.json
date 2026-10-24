@@ -25,14 +25,14 @@
     "earnings-2.jpg"
   ],
   "label": {
-    "style": "k",
+    "style": "a",
     "en": {
-      "sub": "CHECKLIST",
-      "text": "WILL MUSK DELIVER?"
+      "sub": "WILL MUSK HIT",
+      "text": "HIS NEW DEADLINES?"
     },
     "nl": {
-      "sub": "CHECKLIST",
-      "text": "HAALT MUSK DEZE DATA?"
+      "sub": "HAALT MUSK",
+      "text": "ZIJN NIEUWE DEADLINES?"
     }
   }
 }

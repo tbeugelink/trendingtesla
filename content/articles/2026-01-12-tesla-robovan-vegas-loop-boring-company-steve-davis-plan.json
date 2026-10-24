@@ -31,11 +31,13 @@
     "tunnel-6.jpg"
   ],
   "label": {
-    "style": "y",
+    "style": "a",
     "en": {
+      "sub": "WHEN",
       "text": "ROBOVAN IN THE LOOP?"
     },
     "nl": {
+      "sub": "WANNEER",
       "text": "ROBOVAN IN DE LOOP?"
     }
   }

@@ -33,14 +33,14 @@
     "spacex-4.jpg"
   ],
   "label": {
-    "style": "k",
+    "style": "c",
     "en": {
-      "sub": "FLIGHT 14",
-      "text": "STARSHIP IN ORBIT!"
+      "sub": "STARSHIP",
+      "text": "FIRST TIME IN ORBIT!"
     },
     "nl": {
-      "sub": "VLUCHT 14",
-      "text": "STARSHIP BEREIKT BAAN!"
+      "sub": "STARSHIP",
+      "text": "IN BAAN OM DE AARDE!"
     }
   }
 }

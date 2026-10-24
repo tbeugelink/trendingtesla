@@ -32,12 +32,14 @@
     "starlink-car-1.jpg"
   ],
   "label": {
-    "style": "y",
+    "style": "c",
     "en": {
-      "text": "STARLINK + TESLA: WHAT'S REAL?"
+      "sub": "STARLINK + TESLA",
+      "text": "WHAT EXISTS TODAY?"
     },
     "nl": {
-      "text": "STARLINK + TESLA: WAT IS ECHT?"
+      "sub": "STARLINK + TESLA",
+      "text": "WAT BESTAAT AL?"
     }
   }
 }

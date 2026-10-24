@@ -25,12 +25,14 @@
     "fsd-3.jpg"
   ],
   "label": {
-    "style": "tag",
+    "style": "c",
     "en": {
-      "text": "NEW: V14.3.11"
+      "sub": "FSD V14.3.11",
+      "text": "WHAT'S NEW?"
     },
     "nl": {
-      "text": "NIEUW: V14.3.11"
+      "sub": "FSD V14.3.11",
+      "text": "WAT IS NIEUW?"
     }
   }
 }

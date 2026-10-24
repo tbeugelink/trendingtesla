@@ -36,12 +36,14 @@
     "earnings-5.jpg"
   ],
   "label": {
-    "style": "y",
+    "style": "n",
     "en": {
-      "text": "+4.9% IN EARNINGS WEEK"
+      "sub": "IN EARNINGS WEEK",
+      "text": "+4.9%"
     },
     "nl": {
-      "text": "+4,9% IN CIJFERWEEK"
+      "sub": "IN CIJFERWEEK",
+      "text": "+4,9%"
     }
   }
 }

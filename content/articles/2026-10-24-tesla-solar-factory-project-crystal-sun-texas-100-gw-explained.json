@@ -36,12 +36,14 @@
     "energy-5.jpg"
   ],
   "label": {
-    "style": "y",
+    "style": "n",
     "en": {
-      "text": "A $10.1B SOLAR FACTORY?"
+      "sub": "SOLAR FACTORY?",
+      "text": "$10.1B"
     },
     "nl": {
-      "text": "$10,1 MLD-ZONNEFABRIEK?"
+      "sub": "ZONNEFABRIEK?",
+      "text": "$10,1 MLD"
     }
   }
 }

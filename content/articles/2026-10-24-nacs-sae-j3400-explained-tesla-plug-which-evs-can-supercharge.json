@@ -36,12 +36,14 @@
     "supercharger-6.jpg"
   ],
   "label": {
-    "style": "w",
+    "style": "a",
     "en": {
-      "text": "WHICH EVS CAN SUPERCHARGE?"
+      "sub": "NACS: WHICH EVS",
+      "text": "CAN SUPERCHARGE?"
     },
     "nl": {
-      "text": "WIE MAG SUPERCHARGEN?"
+      "sub": "NACS: WELKE EV'S",
+      "text": "MOGEN SUPERCHARGEN?"
     }
   }
 }

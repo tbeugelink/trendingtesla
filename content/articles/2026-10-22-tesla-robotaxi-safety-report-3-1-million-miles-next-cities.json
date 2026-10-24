@@ -36,12 +36,14 @@
     "robotaxi-my-2.jpg"
   ],
   "label": {
-    "style": "y",
+    "style": "c",
     "en": {
+      "sub": "ROBOTAXI REPORT",
       "text": "3.1M MILES, 0 INJURIES"
     },
     "nl": {
-      "text": "3,1 MLN MIJL, 0 GEWONDEN"
+      "sub": "ROBOTAXI-RAPPORT",
+      "text": "3,1 MLN MIJL, 0 GEWOND"
     }
   }
 }

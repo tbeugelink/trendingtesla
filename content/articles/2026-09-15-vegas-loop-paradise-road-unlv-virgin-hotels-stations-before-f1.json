@@ -32,12 +32,14 @@
     "tunnel-1.jpg"
   ],
   "label": {
-    "style": "w",
+    "style": "c",
     "en": {
+      "sub": "VEGAS LOOP",
       "text": "TO UNLV BEFORE F1?"
     },
     "nl": {
-      "text": "VÓÓR DE F1 NAAR UNLV?"
+      "sub": "VEGAS LOOP",
+      "text": "VÓÓR F1 NAAR UNLV?"
     }
   }
 }

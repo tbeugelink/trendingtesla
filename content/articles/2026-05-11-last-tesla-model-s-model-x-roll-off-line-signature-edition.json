@@ -29,12 +29,12 @@
   },
   "image": "models/ms-4.jpg",
   "label": {
-    "style": "w",
+    "style": "r",
     "en": {
-      "text": "LAST MODEL S AND X BUILT"
+      "text": "END OF MODEL S AND X"
     },
     "nl": {
-      "text": "LAATSTE MODEL S EN X GEBOUWD"
+      "text": "EINDE MODEL S EN X!"
     }
   }
 }

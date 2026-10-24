@@ -30,11 +30,13 @@
     "energy.jpg"
   ],
   "label": {
-    "style": "y",
+    "style": "c",
     "en": {
+      "sub": "MEGAPACK +",
       "text": "3 GWh FOR ITALY"
     },
     "nl": {
+      "sub": "MEGAPACK +",
       "text": "3 GWh VOOR ITALIË"
     }
   }

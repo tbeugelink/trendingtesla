@@ -36,14 +36,14 @@
     "robotaxi-my-2.jpg"
   ],
   "label": {
-    "style": "k",
+    "style": "c",
     "en": {
       "sub": "F1 WEEKEND",
-      "text": "TO COTA, UNTIL 1 A.M.!"
+      "text": "TO COTA, UNTIL 1 A.M."
     },
     "nl": {
       "sub": "F1-WEEKEND",
-      "text": "NAAR COTA, TOT 1 UUR!"
+      "text": "NAAR COTA, TOT 1 UUR"
     }
   }
 }

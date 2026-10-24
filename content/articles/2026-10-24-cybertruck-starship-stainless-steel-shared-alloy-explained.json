@@ -40,12 +40,14 @@
     "models/ct-2.jpg"
   ],
   "label": {
-    "style": "y",
+    "style": "c",
     "en": {
-      "text": "SAME STEEL AS STARSHIP"
+      "sub": "CYBERTRUCK +",
+      "text": "STARSHIP: SAME STEEL?"
     },
     "nl": {
-      "text": "ZELFDE STAAL ALS STARSHIP"
+      "sub": "CYBERTRUCK +",
+      "text": "STARSHIP: ZELFDE STAAL?"
     }
   }
 }

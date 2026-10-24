@@ -32,12 +32,14 @@
     "xai-dc-1.jpg"
   ],
   "label": {
-    "style": "w",
+    "style": "c",
     "en": {
-      "text": "NOISE FIGHT AT COLOSSUS"
+      "sub": "COLOSSUS NOISE",
+      "text": "OFFERS TO BUY HOMES"
     },
     "nl": {
-      "text": "LAWAAIRUZIE BIJ COLOSSUS"
+      "sub": "LAWAAI COLOSSUS",
+      "text": "BOD OP BUURHUIZEN"
     }
   }
 }

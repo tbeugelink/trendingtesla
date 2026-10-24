@@ -32,12 +32,14 @@
     "musk-1.jpg"
   ],
   "label": {
-    "style": "y",
+    "style": "a",
     "en": {
-      "text": "VOTE FAILED, $2B ANYWAY!?"
+      "sub": "VOTE FAILED,",
+      "text": "$2B TO XAI ANYWAY!?"
     },
     "nl": {
-      "text": "NEE GESTEMD, TOCH $2 MLD!?"
+      "sub": "NEE GESTEMD,",
+      "text": "$2 MLD TOCH NAAR XAI!?"
     }
   }
 }

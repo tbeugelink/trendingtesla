@@ -29,12 +29,14 @@
     "earnings-3.jpg"
   ],
   "label": {
-    "style": "y",
+    "style": "a",
     "en": {
-      "text": "ALL DEALS WITH MUSK FIRMS"
+      "sub": "ALL TESLA DEALS",
+      "text": "WITH MUSK'S COMPANIES"
     },
     "nl": {
-      "text": "ALLE DEALS MET MUSK-FIRMA'S"
+      "sub": "ALLE TESLA-DEALS",
+      "text": "MET MUSKS BEDRIJVEN"
     }
   }
 }

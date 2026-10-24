@@ -33,12 +33,14 @@
     "supercharger-7.jpg"
   ],
   "label": {
-    "style": "s",
+    "style": "c",
     "en": {
-      "text": "TRY FSD AT THE CHARGER!"
+      "sub": "CANADA",
+      "text": "TRY FSD AT THE CHARGER"
     },
     "nl": {
-      "text": "FSD PROBEREN BIJ DE LADER!"
+      "sub": "CANADA",
+      "text": "FSD PROBEREN BIJ LADER"
     }
   }
 }

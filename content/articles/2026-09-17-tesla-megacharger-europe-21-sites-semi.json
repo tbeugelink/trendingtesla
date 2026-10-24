@@ -33,12 +33,14 @@
     "supercharger.jpg"
   ],
   "label": {
-    "style": "w",
+    "style": "n",
     "en": {
-      "text": "21 TRUCK SITES IN EUROPE"
+      "sub": "SEMI SITES IN EUROPE",
+      "text": "21"
     },
     "nl": {
-      "text": "21 TRUCKLAADPLEKKEN IN EU"
+      "sub": "TRUCKLAADPLEKKEN EU",
+      "text": "21"
     }
   }
 }

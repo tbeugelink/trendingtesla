@@ -29,12 +29,14 @@
     "optimus-factory.jpg"
   ],
   "label": {
-    "style": "y",
+    "style": "a",
     "en": {
-      "text": "WHO LEADS THE ROBOT RACE?"
+      "sub": "OPTIMUS VS ATLAS",
+      "text": "WHO LEADS THE RACE?"
     },
     "nl": {
-      "text": "WIE LEIDT DE ROBOTRACE?"
+      "sub": "OPTIMUS VS ATLAS",
+      "text": "WIE LEIDT DE RACE?"
     }
   }
 }

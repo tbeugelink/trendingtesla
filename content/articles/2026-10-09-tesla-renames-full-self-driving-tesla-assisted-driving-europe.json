@@ -28,14 +28,14 @@
     "fsd-czechia.jpg"
   ],
   "label": {
-    "style": "k",
+    "style": "a",
     "en": {
-      "sub": "NEW NAME",
-      "text": "FSD IS NOW 'ASSISTED'"
+      "sub": "FSD'S NEW NAME",
+      "text": "TESLA ASSISTED DRIVING"
     },
     "nl": {
-      "sub": "NIEUWE NAAM",
-      "text": "FSD HEET NU 'ASSISTED'"
+      "sub": "NIEUWE NAAM FSD",
+      "text": "TESLA ASSISTED DRIVING"
     }
   }
 }

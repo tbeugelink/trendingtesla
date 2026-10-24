@@ -31,14 +31,14 @@
     "energy-home-dusk.jpg"
   ],
   "label": {
-    "style": "k",
+    "style": "a",
     "en": {
-      "sub": "OFGEM",
-      "text": "TESLA MAY SELL UK POWER!"
+      "sub": "LICENCE GRANTED",
+      "text": "UK POWER FROM TESLA"
     },
     "nl": {
-      "sub": "OFGEM (VK)",
-      "text": "TESLA MAG STROOM LEVEREN!"
+      "sub": "VERGUNNING IN VK",
+      "text": "STROOM VAN TESLA"
     }
   }
 }

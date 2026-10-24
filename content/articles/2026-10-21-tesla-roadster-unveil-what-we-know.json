@@ -35,12 +35,14 @@
     "roadster-flying.jpg"
   ],
   "label": {
-    "style": "y",
+    "style": "c",
     "en": {
-      "text": "A ROADSTER THAT HOPS!?"
+      "sub": "NEW ROADSTER",
+      "text": "HOPS OVER CARS!?"
     },
     "nl": {
-      "text": "EEN ROADSTER DIE SPRINGT!?"
+      "sub": "NIEUWE ROADSTER",
+      "text": "SPRINGT OVER AUTO'S!?"
     }
   }
 }

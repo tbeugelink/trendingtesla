@@ -37,12 +37,14 @@
     "xai-dc-2.jpg"
   ],
   "label": {
-    "style": "y",
+    "style": "n",
     "en": {
-      "text": "3 GROKS IN 10 WEEKS"
+      "sub": "IN 10 WEEKS",
+      "text": "3 GROKS"
     },
     "nl": {
-      "text": "3 GROKS IN 10 WEKEN"
+      "sub": "IN 10 WEKEN",
+      "text": "3 GROKS"
     }
   }
 }

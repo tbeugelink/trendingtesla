@@ -33,12 +33,14 @@
     "tunnel-5.jpg"
   ],
   "label": {
-    "style": "y",
+    "style": "c",
     "en": {
-      "text": "CHEAP, BUT TOO SLOW?"
+      "sub": "CHEAP TUNNELS",
+      "text": "BUT TOO SLOW?"
     },
     "nl": {
-      "text": "GOEDKOOP, MAAR TE TRAAG?"
+      "sub": "GOEDKOPE TUNNELS",
+      "text": "MAAR TE TRAAG?"
     }
   }
 }

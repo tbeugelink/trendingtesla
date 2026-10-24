@@ -32,12 +32,14 @@
     "tunnel-1.jpg"
   ],
   "label": {
-    "style": "y",
+    "style": "n",
     "en": {
-      "text": "200 MPH TO SAN ANTONIO?"
+      "sub": "AUSTIN-SAN ANTONIO?",
+      "text": "200 MPH"
     },
     "nl": {
-      "text": "320 KM/U NAAR SAN ANTONIO?"
+      "sub": "AUSTIN-SAN ANTONIO?",
+      "text": "320 KM/U"
     }
   }
 }

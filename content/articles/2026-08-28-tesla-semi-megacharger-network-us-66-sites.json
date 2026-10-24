@@ -33,14 +33,14 @@
     "supercharger-3.jpg"
   ],
   "label": {
-    "style": "n",
+    "style": "a",
     "en": {
-      "sub": "SEMI CHARGING SITES",
-      "text": "66"
+      "sub": "WHERE DOES THE",
+      "text": "TESLA SEMI CHARGE?"
     },
     "nl": {
-      "sub": "LAADLOCATIES VOOR SEMI",
-      "text": "66"
+      "sub": "WAAR LAADT DE",
+      "text": "TESLA SEMI?"
     }
   }
 }

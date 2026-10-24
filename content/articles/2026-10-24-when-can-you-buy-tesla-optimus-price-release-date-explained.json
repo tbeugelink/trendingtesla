@@ -33,12 +33,14 @@
     "optimus-store.jpg"
   ],
   "label": {
-    "style": "w",
+    "style": "a",
     "en": {
-      "text": "CAN YOU BUY ONE? NOT YET"
+      "sub": "WHEN CAN YOU",
+      "text": "BUY AN OPTIMUS?"
     },
     "nl": {
-      "text": "TE KOOP? NOG NIET"
+      "sub": "WANNEER KUN JE",
+      "text": "OPTIMUS KOPEN?"
     }
   }
 }

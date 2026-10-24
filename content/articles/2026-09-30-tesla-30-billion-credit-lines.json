@@ -30,12 +30,12 @@
   "label": {
     "style": "n",
     "en": {
-      "sub": "CREDIT, NONE USED YET",
+      "sub": "NEW CREDIT, UNUSED",
       "text": "$30B"
     },
     "nl": {
-      "sub": "KREDIET, NOG ONGEBRUIKT",
-      "text": "$30 mld"
+      "sub": "KREDIET, ONGEBRUIKT",
+      "text": "$30 MLD"
     }
   }
 }

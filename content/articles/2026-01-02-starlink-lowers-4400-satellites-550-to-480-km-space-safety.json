@@ -36,14 +36,14 @@
     "starlink-2.jpg"
   ],
   "label": {
-    "style": "k",
+    "style": "n",
     "en": {
-      "sub": "SPACE SAFETY",
-      "text": "4,400 SATS MOVE DOWN"
+      "sub": "SATELLITES GO LOWER",
+      "text": "4,400"
     },
     "nl": {
-      "sub": "RUIMTEVEILIGHEID",
-      "text": "4.400 SATELLIETEN OMLAAG"
+      "sub": "SATELLIETEN OMLAAG",
+      "text": "4.400"
     }
   }
 }

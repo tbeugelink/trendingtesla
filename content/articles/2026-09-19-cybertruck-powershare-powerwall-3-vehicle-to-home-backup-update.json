@@ -36,12 +36,14 @@
     "models/cybertruck.jpg"
   ],
   "label": {
-    "style": "s",
+    "style": "c",
     "en": {
-      "text": "CYBERTRUCK + POWERWALL!"
+      "sub": "CYBERTRUCK +",
+      "text": "POWERWALL 3"
     },
     "nl": {
-      "text": "CYBERTRUCK + POWERWALL!"
+      "sub": "CYBERTRUCK +",
+      "text": "POWERWALL 3"
     }
   }
 }

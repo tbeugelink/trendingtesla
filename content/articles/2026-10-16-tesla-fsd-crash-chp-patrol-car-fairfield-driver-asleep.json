@@ -31,14 +31,14 @@
     "fsd-3.jpg"
   ],
   "label": {
-    "style": "k",
+    "style": "a",
     "en": {
       "sub": "FSD CRASH",
-      "text": "DRIVER SAYS HE SLEPT"
+      "text": "DRIVER WAS ASLEEP?"
     },
     "nl": {
       "sub": "FSD-CRASH",
-      "text": "BESTUURDER ZEGT DAT HIJ SLIEP"
+      "text": "BESTUURDER SLIEP?"
     }
   }
 }

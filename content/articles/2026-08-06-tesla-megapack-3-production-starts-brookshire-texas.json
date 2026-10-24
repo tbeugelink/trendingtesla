@@ -29,12 +29,14 @@
     "gigafactory-4.jpg"
   ],
   "label": {
-    "style": "s",
+    "style": "c",
     "en": {
-      "text": "MEGAPACK 3 IS HERE!"
+      "sub": "MEGAPACK 3",
+      "text": "PRODUCTION STARTS!"
     },
     "nl": {
-      "text": "MEGAPACK 3 IS ER!"
+      "sub": "MEGAPACK 3",
+      "text": "PRODUCTIE GESTART!"
     }
   }
 }

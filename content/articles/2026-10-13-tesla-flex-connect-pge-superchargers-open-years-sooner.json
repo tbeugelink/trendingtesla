@@ -32,12 +32,14 @@
     "supercharger-4.jpg"
   ],
   "label": {
-    "style": "y",
+    "style": "a",
     "en": {
-      "text": "OPEN 2 YEARS SOONER"
+      "sub": "SUPERCHARGERS",
+      "text": "2+ YEARS SOONER OPEN"
     },
     "nl": {
-      "text": "2 JAAR EERDER OPEN"
+      "sub": "SUPERCHARGERS",
+      "text": "2+ JAAR EERDER OPEN"
     }
   }
 }

@@ -32,12 +32,14 @@
     "earnings-4.jpg"
   ],
   "label": {
-    "style": "y",
+    "style": "a",
     "en": {
-      "text": "$1T PAY: HOW FAR?"
+      "sub": "MUSK'S $1T PAY",
+      "text": "HOW FAR ALONG?"
     },
     "nl": {
-      "text": "BILJOENBELONING: HOE VER?"
+      "sub": "BILJOENBELONING",
+      "text": "HOE VER IS MUSK?"
     }
   }
 }

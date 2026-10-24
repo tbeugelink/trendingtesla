@@ -32,12 +32,12 @@
     "starlink-car-1.jpg"
   ],
   "label": {
-    "style": "s",
+    "style": "r",
     "en": {
-      "text": "+$5-10 A MONTH!"
+      "text": "STARLINK PRICES RISE!"
     },
     "nl": {
-      "text": "+$5-10 PER MAAND!"
+      "text": "STARLINK DUURDER!"
     }
   }
 }

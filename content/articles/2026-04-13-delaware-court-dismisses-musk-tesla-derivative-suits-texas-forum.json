@@ -32,14 +32,14 @@
     "musk-1.jpg"
   ],
   "label": {
-    "style": "k",
+    "style": "a",
     "en": {
-      "sub": "RULING",
-      "text": "SUITS SENT TO TEXAS"
+      "sub": "DELAWARE JUDGE",
+      "text": "3 SUITS GO TO TEXAS"
     },
     "nl": {
-      "sub": "UITSPRAAK",
-      "text": "ZAKEN NAAR TEXAS"
+      "sub": "RECHTER DELAWARE",
+      "text": "3 ZAKEN NAAR TEXAS"
     }
   }
 }

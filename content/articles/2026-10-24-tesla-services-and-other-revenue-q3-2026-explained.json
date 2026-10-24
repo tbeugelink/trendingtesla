@@ -33,12 +33,14 @@
     "supercharger-2.jpg"
   ],
   "label": {
-    "style": "s",
+    "style": "a",
     "en": {
-      "text": "SERVICES +33%!"
+      "sub": "TESLA'S QUIET",
+      "text": "GROWTH ENGINE"
     },
     "nl": {
-      "text": "DIENSTEN +33%!"
+      "sub": "TESLA'S STILLE",
+      "text": "GROEIMOTOR"
     }
   }
 }

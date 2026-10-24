@@ -28,14 +28,14 @@
     "software-update.jpg"
   ],
   "label": {
-    "style": "k",
+    "style": "a",
     "en": {
-      "sub": "EXPLAINED",
-      "text": "WHY IS YOUR UPDATE LATE?"
+      "sub": "WHY IS YOUR",
+      "text": "UPDATE LATE?"
     },
     "nl": {
-      "sub": "UITGELEGD",
-      "text": "WAAROM KOMT JE UPDATE LATER?"
+      "sub": "WAAROM KOMT",
+      "text": "JOUW UPDATE LATER?"
     }
   }
 }

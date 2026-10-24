@@ -35,12 +35,14 @@
     "guide-battery.jpg"
   ],
   "label": {
-    "style": "s",
+    "style": "a",
     "en": {
-      "text": "TEST YOUR BATTERY"
+      "sub": "HOW HEALTHY IS",
+      "text": "YOUR BATTERY?"
     },
     "nl": {
-      "text": "TEST JE ACCU"
+      "sub": "HOE GEZOND IS",
+      "text": "JE ACCU?"
     }
   }
 }

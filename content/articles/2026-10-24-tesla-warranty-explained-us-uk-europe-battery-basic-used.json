@@ -35,12 +35,14 @@
     "guide-papers.jpg"
   ],
   "label": {
-    "style": "w",
+    "style": "a",
     "en": {
-      "text": "WARRANTY: WHAT'S COVERED?"
+      "sub": "TESLA WARRANTY",
+      "text": "WHAT IS COVERED?"
     },
     "nl": {
-      "text": "GARANTIE: WAT DEKT HET?"
+      "sub": "TESLA-GARANTIE",
+      "text": "WAT IS GEDEKT?"
     }
   }
 }

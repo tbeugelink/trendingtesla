@@ -27,12 +27,14 @@
     "body": "<p>In het thuisland van Volkswagen was in september een Tesla de bestverkochte nieuwe auto. De Model Y kwam op 8.038 registraties, vóór de VW Golf met 6.580, volgens de Duitse dienst voor het wegverkeer KBA.</p><h2>De belangrijkste cijfers</h2><ul><li><strong>Model Y:</strong> 8.038, de bestverkochte auto van alle soorten, de populairste SUV en de populairste elektrische auto. Zijn beste maand van 2026, boven de 6.841 van maart.</li><li><strong>Model 3:</strong> 4.512, koploper in de middenklasse en zesde overall.</li><li><strong>Tesla totaal:</strong> 12.552 registraties, 268,7% meer dan een jaar eerder, goed voor een marktaandeel van 4,9%.</li><li><strong>Populairste EV-merk:</strong> Tesla had van alle merken de meeste elektrische registraties, vóór VW (9.440) en Skoda (7.673).</li></ul><h2>Een booming EV-markt</h2><p>Duitsland registreerde in september een recordaantal van 88.599 volledig elektrische auto's, 34,5% van alle nieuwe auto's en bijna het dubbele van een jaar eerder. Een nieuwe overheidssubsidie voor elektrische auto's, ingevoerd in mei, speelt daarin een grote rol. De Model Y is de populairste auto binnen die regeling, met 8.297 goedgekeurde aanvragen op 1 oktober.</p><h2>Het jaar tot nu toe</h2><p>Ondanks de sterke septembermaand staat de Model Y dit jaar tweede onder de elektrische auto's in Duitsland, met 29.464 registraties, net achter de Skoda Elroq met 30.845.</p><h2>Waarom dit ertoe doet</h2><p>Duitsland is de grootste automarkt van Europa en was in 2025 een van Tesla's zwakste plekken. Een maand waarin de Model Y meer verkoopt dan de Golf is symbolisch, en laat zien hoe snel de vraag kan terugkeren als prijs en subsidie op één lijn liggen. De vraag is nu of Tesla dat tempo ook vasthoudt buiten de laatste maand van een kwartaal.</p>"
   },
   "label": {
-    "style": "y",
+    "style": "c",
     "en": {
-      "text": "MODEL Y BEATS THE GOLF!"
+      "sub": "MODEL Y BEATS",
+      "text": "THE VW GOLF!"
     },
     "nl": {
-      "text": "MODEL Y VERSLAAT DE GOLF!"
+      "sub": "MODEL Y VERSLAAT",
+      "text": "DE VW GOLF!"
     }
   }
 }

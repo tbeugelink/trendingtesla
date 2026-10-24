@@ -36,12 +36,12 @@
   "label": {
     "style": "n",
     "en": {
-      "text": "~$1B",
-      "sub": "TESLA MEGAPACKS FOR XAI"
+      "sub": "MEGAPACKS FOR XAI",
+      "text": "~$1B"
     },
     "nl": {
-      "text": "~$1 mld",
-      "sub": "TESLA-MEGAPACKS VOOR XAI"
+      "sub": "MEGAPACKS VOOR XAI",
+      "text": "~$1 MLD"
     }
   }
 }

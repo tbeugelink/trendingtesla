@@ -28,12 +28,14 @@
     "robotaxi-my-1.jpg"
   ],
   "label": {
-    "style": "s",
+    "style": "c",
     "en": {
-      "text": "YOUR TESLA AS ROBOTAXI?"
+      "sub": "YOUR TESLA",
+      "text": "AS A ROBOTAXI?"
     },
     "nl": {
-      "text": "JOUW TESLA ALS ROBOTAXI?"
+      "sub": "JOUW TESLA",
+      "text": "ALS ROBOTAXI?"
     }
   }
 }

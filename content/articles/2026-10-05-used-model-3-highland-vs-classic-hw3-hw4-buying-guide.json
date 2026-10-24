@@ -29,12 +29,14 @@
   },
   "image": "models/m3h-3.jpg",
   "label": {
-    "style": "w",
+    "style": "a",
     "en": {
-      "text": "HW3 OR HW4? IT MATTERS"
+      "sub": "USED MODEL 3",
+      "text": "HW3 OR HW4?"
     },
     "nl": {
-      "text": "HW3 OF HW4? DAT TELT"
+      "sub": "MODEL 3 OCCASION",
+      "text": "HW3 OF HW4?"
     }
   }
 }

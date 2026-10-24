@@ -28,12 +28,14 @@
     "grok-1.jpg"
   ],
   "label": {
-    "style": "y",
+    "style": "c",
     "en": {
-      "text": "HEY GROK & AUTO-UPDATES"
+      "sub": "HEY GROK +",
+      "text": "AUTO-UPDATES"
     },
     "nl": {
-      "text": "HEY GROK & AUTO-UPDATES"
+      "sub": "HEY GROK +",
+      "text": "AUTOMATISCH UPDATEN"
     }
   }
 }

@@ -32,12 +32,14 @@
     "earnings-3.jpg"
   ],
   "label": {
-    "style": "s",
+    "style": "a",
     "en": {
-      "text": "BIGGEST IPO EVER!"
+      "sub": "BIGGEST IPO EVER",
+      "text": "WHAT ABOUT TESLA?"
     },
     "nl": {
-      "text": "GROOTSTE IPO OOIT!"
+      "sub": "RECORDBEURSGANG",
+      "text": "EN TESLA DAN?"
     }
   }
 }

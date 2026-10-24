@@ -30,12 +30,12 @@
   "label": {
     "style": "n",
     "en": {
-      "text": "20 MIN",
-      "sub": "THEN SEAT HEATER OFF"
+      "sub": "THEN SEAT HEATER OFF",
+      "text": "20 MIN"
     },
     "nl": {
-      "text": "20 MIN",
-      "sub": "DAN STOELVERWARMING UIT"
+      "sub": "STOELVERWARMING UIT",
+      "text": "20 MIN"
     }
   }
 }

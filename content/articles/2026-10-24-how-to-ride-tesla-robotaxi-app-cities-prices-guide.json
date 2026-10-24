@@ -37,12 +37,14 @@
     "cybercab-interior.jpg"
   ],
   "label": {
-    "style": "y",
+    "style": "a",
     "en": {
-      "text": "HOW DO YOU RIDE ONE?"
+      "sub": "HOW DO YOU RIDE",
+      "text": "A TESLA ROBOTAXI?"
     },
     "nl": {
-      "text": "HOE RIJD JE MEE?"
+      "sub": "HOE RIJD JE",
+      "text": "MEE IN EEN ROBOTAXI?"
     }
   }
 }

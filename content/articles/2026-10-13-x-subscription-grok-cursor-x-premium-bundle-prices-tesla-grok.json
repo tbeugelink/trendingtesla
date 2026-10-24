@@ -34,12 +34,12 @@
   "label": {
     "style": "n",
     "en": {
-      "text": "FROM $8",
-      "sub": "GROK, X & CURSOR BUNDLE"
+      "sub": "GROK + X + CURSOR",
+      "text": "$8 A MONTH"
     },
     "nl": {
-      "text": "VANAF $8",
-      "sub": "BUNDEL GROK, X & CURSOR"
+      "sub": "GROK + X + CURSOR",
+      "text": "$8/MAAND"
     }
   }
 }

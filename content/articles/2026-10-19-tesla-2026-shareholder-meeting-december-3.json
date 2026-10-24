@@ -27,12 +27,14 @@
     "musk-1.jpg"
   ],
   "label": {
-    "style": "w",
+    "style": "c",
     "en": {
-      "text": "DEC 3: NO MERGER VOTE"
+      "sub": "DECEMBER 3",
+      "text": "NO MERGER VOTE"
     },
     "nl": {
-      "text": "3 DEC: GEEN FUSIEVOORSTEL"
+      "sub": "3 DECEMBER",
+      "text": "GEEN FUSIESTEMMING"
     }
   }
 }

@@ -31,12 +31,14 @@
     "models/myj-2.jpg"
   ],
   "label": {
-    "style": "y",
+    "style": "n",
     "en": {
-      "text": "7,000 IN ONE WEEK!"
+      "sub": "MODEL YS IN 1 WEEK",
+      "text": "7,000"
     },
     "nl": {
-      "text": "7.000 IN ÉÉN WEEK!"
+      "sub": "MODEL Y'S IN 1 WEEK",
+      "text": "7.000"
     }
   }
 }

@@ -31,12 +31,12 @@
   "label": {
     "style": "n",
     "en": {
-      "text": "$4.4B",
-      "sub": "PROFIT, MORE THAN TESLA"
+      "sub": "PROFIT, TOPS TESLA",
+      "text": "$4.4B"
     },
     "nl": {
-      "text": "$4,4 mld",
-      "sub": "WINST, MEER DAN TESLA"
+      "sub": "WINST, MEER DAN TESLA",
+      "text": "$4,4 MLD"
     }
   }
 }

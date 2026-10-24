@@ -37,10 +37,10 @@
     "charge-port.jpg"
   ],
   "label": {
-    "style": "k",
+    "style": "a",
     "en": {
       "sub": "EMERGENCY ONLY",
-      "text": "DRIVE OFF PLUGGED IN!"
+      "text": "DRIVE OFF PLUGGED IN"
     },
     "nl": {
       "sub": "ALLEEN IN NOOD",

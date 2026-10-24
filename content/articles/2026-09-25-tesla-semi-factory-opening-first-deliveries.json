@@ -36,12 +36,14 @@
     "semi-2.jpg"
   ],
   "label": {
-    "style": "w",
+    "style": "c",
     "en": {
-      "text": "SEMI DELIVERIES BEGIN"
+      "sub": "TESLA SEMI",
+      "text": "DELIVERIES BEGIN!"
     },
     "nl": {
-      "text": "SEMI WORDT GELEVERD"
+      "sub": "TESLA SEMI",
+      "text": "LEVERINGEN GESTART!"
     }
   }
 }

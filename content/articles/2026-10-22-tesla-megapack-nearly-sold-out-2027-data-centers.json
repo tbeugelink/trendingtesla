@@ -38,12 +38,14 @@
     "energy.jpg"
   ],
   "label": {
-    "style": "s",
+    "style": "c",
     "en": {
-      "text": "2027 NEARLY SOLD OUT!"
+      "sub": "MEGAPACK 2027",
+      "text": "ALMOST SOLD OUT!"
     },
     "nl": {
-      "text": "2027 BIJNA UITVERKOCHT!"
+      "sub": "MEGAPACK 2027",
+      "text": "BIJNA UITVERKOCHT!"
     }
   }
 }

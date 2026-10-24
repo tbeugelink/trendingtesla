@@ -33,12 +33,14 @@
     "earnings-7.jpg"
   ],
   "label": {
-    "style": "y",
+    "style": "c",
     "en": {
-      "text": "MARGIN UP, PROFIT -43%"
+      "sub": "MARGINS UP",
+      "text": "BUT PROFIT -43%"
     },
     "nl": {
-      "text": "MARGE OMHOOG, WINST -43%"
+      "sub": "MARGES OMHOOG",
+      "text": "MAAR WINST -43%"
     }
   }
 }

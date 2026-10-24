@@ -39,12 +39,14 @@
     "tunnel-6.jpg"
   ],
   "label": {
-    "style": "y",
+    "style": "c",
     "en": {
-      "text": "5 COMPANIES, 1 WEB"
+      "sub": "5 MUSK COMPANIES",
+      "text": "HOW DO THEY CONNECT?"
     },
     "nl": {
-      "text": "5 BEDRIJVEN, 1 NETWERK"
+      "sub": "5 BEDRIJVEN MUSK",
+      "text": "HOE HANGEN ZE SAMEN?"
     }
   }
 }

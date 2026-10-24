@@ -37,14 +37,14 @@
     "supercharger-7.jpg"
   ],
   "label": {
-    "style": "k",
+    "style": "n",
     "en": {
-      "sub": "PRICES UP",
-      "text": "6 WAYS TO PAY LESS"
+      "sub": "6 WAYS TO PAY LESS",
+      "text": "$0.62/KWH"
     },
     "nl": {
-      "sub": "PRIJZEN OMHOOG",
-      "text": "6 TIPS OM TE BESPAREN"
+      "sub": "ZO BETAAL JE MINDER",
+      "text": "$0,62/KWH"
     }
   }
 }

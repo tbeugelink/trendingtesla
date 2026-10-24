@@ -27,12 +27,14 @@
     "body": "<p>Enkele dagen na de lancering in Austin gaat Tesla's Cybercab op roadshow door Azië. De tournee begon op 9 september in Hongkong en gaat vanaf 11 september verder in Japan. Ook China staat op het programma.</p><h2>De data in Japan</h2><ul><li><strong>Tokio (Aoyama):</strong> 11–14 september, bij OMAKASE Aoyama Garden.</li><li><strong>Osaka:</strong> 17–20 september, bij Tesla Grand Front Osaka.</li><li><strong>Nagoya:</strong> 22–23 september, bij Tesla Nagoya Noritake.</li><li><strong>Tokio (Shinjuku):</strong> 26–28 september, bij Tesla Shinjuku.</li></ul><p>Tesla waarschuwde dat data of inhoud kunnen veranderen door het weer of regels van de locatie.</p><h2>Een tentoonstelling, geen lancering</h2><p>Het gaat om een statische presentatie. Bezoekers kunnen de tweezitter zonder stuur van dichtbij bekijken, maar er zijn geen proefritten, geen robotaxidienst en geen verkoop van de Cybercab in Japan. Op dezelfde locaties staan ook de gewone Model 3 en Model Y.</p><h2>Waarom Japan</h2><p>Japan is een van de markten waar Tesla goedkeuring zoekt voor Full Self-Driving (Supervised), en het bedrijf heeft FSD al op de straten van Tokio laten zien. Een Cybercab zonder bestuurder heeft echter een aparte vergunning voor niveau 4 nodig van het Japanse ministerie van Transport, en dat is een veel grotere stap.</p><h2>Wat het betekent</h2><p>De tournee draait om het merk: Tesla laat de Cybercab zien aan een groot, autogek publiek en peilt de lokale interesse nog voordat er een besluit van de toezichthouder ligt. Verwacht dus niet snel een Japanse robotaxidienst. Verwacht wel dat Tesla de aandacht gebruikt om aan te dringen op goedkeuring van FSD in Japan.</p>"
   },
   "label": {
-    "style": "w",
+    "style": "c",
     "en": {
-      "text": "CYBERCAB TOURS JAPAN"
+      "sub": "CYBERCAB",
+      "text": "ON TOUR IN JAPAN"
     },
     "nl": {
-      "text": "CYBERCAB OP TOUR IN JAPAN"
+      "sub": "CYBERCAB",
+      "text": "OP TOURNEE IN JAPAN"
     }
   }
 }

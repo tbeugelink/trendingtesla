@@ -32,12 +32,12 @@
     "supercharger-5.jpg"
   ],
   "label": {
-    "style": "w",
+    "style": "r",
     "en": {
-      "text": "TESLA UNDER 50%!"
+      "text": "TESLA DROPS BELOW 50%!"
     },
     "nl": {
-      "text": "TESLA ONDER DE 50%!"
+      "text": "TESLA ZAKT ONDER 50%!"
     }
   }
 }

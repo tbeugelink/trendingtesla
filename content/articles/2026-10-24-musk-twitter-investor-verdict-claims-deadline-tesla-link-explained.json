@@ -35,14 +35,12 @@
     "musk-3.jpg"
   ],
   "label": {
-    "style": "k",
+    "style": "r",
     "en": {
-      "sub": "JURY VERDICT",
       "text": "MUSK TWEETS MISLED!"
     },
     "nl": {
-      "sub": "JURY-UITSPRAAK",
-      "text": "TWEETS MUSK MISLEIDEND!"
+      "text": "TWEETS MUSK MISLEIDEND"
     }
   }
 }

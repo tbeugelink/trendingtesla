@@ -36,12 +36,14 @@
     "xai-dc-1.jpg"
   ],
   "label": {
-    "style": "w",
+    "style": "a",
     "en": {
-      "text": "NVIDIA APPROVES MEGAPACK"
+      "sub": "NVIDIA APPROVES",
+      "text": "MEGAPACK FOR AI!"
     },
     "nl": {
-      "text": "NVIDIA KEURT MEGAPACK GOED"
+      "sub": "NVIDIA KEURT",
+      "text": "MEGAPACK GOED VOOR AI!"
     }
   }
 }

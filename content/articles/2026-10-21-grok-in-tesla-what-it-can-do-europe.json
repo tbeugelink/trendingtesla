@@ -29,14 +29,14 @@
     "grok-3.jpg"
   ],
   "label": {
-    "style": "k",
+    "style": "a",
     "en": {
-      "sub": "IN YOUR TESLA",
-      "text": "WHAT CAN GROK DO?"
+      "sub": "WHAT CAN GROK",
+      "text": "DO IN YOUR TESLA?"
     },
     "nl": {
-      "sub": "IN JE TESLA",
-      "text": "WAT KAN GROK?"
+      "sub": "WAT KAN GROK",
+      "text": "IN JE TESLA?"
     }
   }
 }

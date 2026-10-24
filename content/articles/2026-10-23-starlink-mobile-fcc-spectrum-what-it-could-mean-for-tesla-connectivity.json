@@ -32,14 +32,14 @@
     "starlink-1.jpg"
   ],
   "label": {
-    "style": "k",
+    "style": "a",
     "en": {
-      "sub": "FCC",
-      "text": "CARS ON STARLINK MOBILE?"
+      "sub": "STARLINK MOBILE",
+      "text": "IN TESLA CARS ONE DAY?"
     },
     "nl": {
-      "sub": "FCC",
-      "text": "AUTO'S OP STARLINK MOBILE?"
+      "sub": "STARLINK MOBILE",
+      "text": "OOIT IN JE TESLA?"
     }
   }
 }

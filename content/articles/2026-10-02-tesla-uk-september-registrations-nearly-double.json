@@ -29,12 +29,14 @@
   },
   "image": "models/m3h-1.jpg",
   "label": {
-    "style": "w",
+    "style": "c",
     "en": {
-      "text": "UK SALES NEARLY DOUBLE!"
+      "sub": "UK SEPTEMBER",
+      "text": "SALES NEARLY DOUBLE!"
     },
     "nl": {
-      "text": "VK: BIJNA DUBBEL ZOVEEL!"
+      "sub": "VK SEPTEMBER",
+      "text": "BIJNA DUBBEL ZOVEEL!"
     }
   }
 }

@@ -27,14 +27,14 @@
     "fsd-4.jpg"
   ],
   "label": {
-    "style": "k",
+    "style": "a",
     "en": {
-      "sub": "REUTERS",
-      "text": "TESLA PRESSED THE RDW!?"
+      "sub": "REUTERS: TESLA",
+      "text": "PRESSURED THE RDW"
     },
     "nl": {
-      "sub": "REUTERS",
-      "text": "TESLA ZETTE RDW ONDER DRUK!?"
+      "sub": "REUTERS: TESLA",
+      "text": "ZETTE RDW ONDER DRUK"
     }
   }
 }

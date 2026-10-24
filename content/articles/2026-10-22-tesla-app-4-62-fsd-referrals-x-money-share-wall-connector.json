@@ -28,13 +28,13 @@
     "wallbox-4.jpg"
   ],
   "label": {
-    "style": "k",
+    "style": "c",
     "en": {
-      "sub": "IN THE CODE",
+      "sub": "TESLA APP 4.62",
       "text": "PAY WITH X MONEY?"
     },
     "nl": {
-      "sub": "IN DE CODE",
+      "sub": "TESLA-APP 4.62",
       "text": "BETALEN MET X MONEY?"
     }
   }

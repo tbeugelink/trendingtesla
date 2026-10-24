@@ -31,11 +31,13 @@
     "wallbox-5.jpg"
   ],
   "label": {
-    "style": "y",
+    "style": "a",
     "en": {
+      "sub": "HOME CHARGING",
       "text": "11 KW IS ENOUGH"
     },
     "nl": {
+      "sub": "THUISLADEN",
       "text": "11 KW IS GENOEG"
     }
   }

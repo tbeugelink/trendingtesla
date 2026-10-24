@@ -38,12 +38,12 @@
   "label": {
     "style": "n",
     "en": {
-      "text": "$60B",
-      "sub": "CURSOR DEAL CLOSED"
+      "sub": "SPACEX BUYS CURSOR",
+      "text": "$60B"
     },
     "nl": {
-      "text": "$60 mld",
-      "sub": "CURSOR-DEAL ROND"
+      "sub": "SPACEX KOOPT CURSOR",
+      "text": "$60 MLD"
     }
   }
 }

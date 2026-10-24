@@ -28,11 +28,13 @@
     "starlink-2.jpg"
   ],
   "label": {
-    "style": "y",
+    "style": "a",
     "en": {
+      "sub": "STARLINK V3",
       "text": "100X BIGGER NETWORK?"
     },
     "nl": {
+      "sub": "STARLINK V3",
       "text": "100X GROTER NETWERK?"
     }
   }

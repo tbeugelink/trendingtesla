@@ -33,12 +33,14 @@
     "cybercab.jpg"
   ],
   "label": {
-    "style": "y",
+    "style": "c",
     "en": {
-      "text": "LATE, BUT THEY ARRIVE"
+      "sub": "MUSK'S PROMISES",
+      "text": "LATE, BUT THEY COME"
     },
     "nl": {
-      "text": "LAAT, MAAR HET KOMT"
+      "sub": "MUSKS BELOFTEN",
+      "text": "LAAT, MAAR ZE KOMEN"
     }
   }
 }

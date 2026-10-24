@@ -32,14 +32,14 @@
     "models/cc-3.jpg"
   ],
   "label": {
-    "style": "k",
+    "style": "a",
     "en": {
-      "sub": "TESLA SAYS",
+      "sub": "CYBERCAB",
       "text": "HALF THE PARTS"
     },
     "nl": {
-      "sub": "VOLGENS TESLA",
-      "text": "HELFT MINDER ONDERDELEN"
+      "sub": "CYBERCAB",
+      "text": "HALF ZOVEEL ONDERDELEN"
     }
   }
 }

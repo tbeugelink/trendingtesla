@@ -36,12 +36,14 @@
     "energy.jpg"
   ],
   "label": {
-    "style": "w",
+    "style": "c",
     "en": {
-      "text": "110 GWh: WHERE FROM?"
+      "sub": "110 GWH",
+      "text": "FROM 3 MEGAFACTORIES"
     },
     "nl": {
-      "text": "110 GWh: WAARVANDAAN?"
+      "sub": "110 GWH",
+      "text": "UIT 3 MEGAFACTORIES"
     }
   }
 }

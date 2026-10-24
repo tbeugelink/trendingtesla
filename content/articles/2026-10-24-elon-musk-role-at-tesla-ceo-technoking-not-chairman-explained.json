@@ -36,12 +36,14 @@
     "musk-2.jpg"
   ],
   "label": {
-    "style": "w",
+    "style": "c",
     "en": {
-      "text": "CEO, YES. CHAIRMAN, NO"
+      "sub": "CEO, YES",
+      "text": "CHAIRMAN, NO"
     },
     "nl": {
-      "text": "CEO WEL, VOORZITTER NIET"
+      "sub": "CEO WEL",
+      "text": "VOORZITTER NIET"
     }
   }
 }

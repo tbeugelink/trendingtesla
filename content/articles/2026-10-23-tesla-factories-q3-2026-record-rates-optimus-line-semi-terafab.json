@@ -30,12 +30,14 @@
     "gigafactory-nevada.jpg"
   ],
   "label": {
-    "style": "y",
+    "style": "a",
     "en": {
-      "text": "PLANTS AT RECORD PACE"
+      "sub": "RECORD PACE",
+      "text": "IN TESLA FACTORIES"
     },
     "nl": {
-      "text": "FABRIEKEN OP RECORDTEMPO"
+      "sub": "RECORDTEMPO",
+      "text": "IN TESLA-FABRIEKEN"
     }
   }
 }

@@ -35,12 +35,14 @@
     "guide-papers.jpg"
   ],
   "label": {
-    "style": "y",
+    "style": "a",
     "en": {
-      "text": "INSURANCE: WHY SO PRICEY?"
+      "sub": "TESLA INSURANCE",
+      "text": "WHY SO EXPENSIVE?"
     },
     "nl": {
-      "text": "VERZEKERING: WAAROM ZO DUUR?"
+      "sub": "TESLA VERZEKEREN",
+      "text": "WAAROM ZO DUUR?"
     }
   }
 }

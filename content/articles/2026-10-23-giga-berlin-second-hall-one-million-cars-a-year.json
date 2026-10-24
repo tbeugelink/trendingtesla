@@ -27,12 +27,14 @@
     "gigafactory-berlin.jpg"
   ],
   "label": {
-    "style": "w",
+    "style": "a",
     "en": {
+      "sub": "NEW HALL",
       "text": "1 MILLION CARS A YEAR?"
     },
     "nl": {
-      "text": "1 MILJOEN AUTO'S PER JAAR?"
+      "sub": "NIEUWE HAL",
+      "text": "1 MILJOEN AUTO'S?"
     }
   }
 }

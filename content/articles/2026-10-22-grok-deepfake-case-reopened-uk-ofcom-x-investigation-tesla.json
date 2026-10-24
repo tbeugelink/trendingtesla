@@ -31,12 +31,14 @@
     "musk-3.jpg"
   ],
   "label": {
-    "style": "r",
+    "style": "a",
     "en": {
-      "text": "GROK DEEPFAKE CASE REOPENED"
+      "sub": "GROK DEEPFAKE",
+      "text": "UK CASE REOPENED"
     },
     "nl": {
-      "text": "GROK-DEEPFAKEZAAK HEROPEND"
+      "sub": "GROK-DEEPFAKE",
+      "text": "BRITSE ZAAK HEROPEND"
     }
   }
 }

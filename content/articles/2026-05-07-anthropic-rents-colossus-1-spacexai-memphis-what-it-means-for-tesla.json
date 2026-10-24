@@ -36,14 +36,14 @@
     "xai-dc-2.jpg"
   ],
   "label": {
-    "style": "k",
+    "style": "c",
     "en": {
-      "sub": "RIVAL DEAL",
-      "text": "ANTHROPIC RENTS COLOSSUS!?"
+      "sub": "ANTHROPIC RENTS",
+      "text": "ALL OF COLOSSUS 1!"
     },
     "nl": {
-      "sub": "DEAL MET RIVAAL",
-      "text": "ANTHROPIC HUURT COLOSSUS!?"
+      "sub": "ANTHROPIC HUURT",
+      "text": "HEEL COLOSSUS 1!"
     }
   }
 }

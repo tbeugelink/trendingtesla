@@ -26,12 +26,12 @@
   "label": {
     "style": "n",
     "en": {
-      "text": "$16.8B",
-      "sub": "OWN CHIP FACTORY"
+      "sub": "OWN CHIP FACTORY",
+      "text": "$16.8B"
     },
     "nl": {
-      "text": "$16,8 mld",
-      "sub": "EIGEN CHIPFABRIEK"
+      "sub": "EIGEN CHIPFABRIEK",
+      "text": "$16,8 MLD"
     }
   }
 }

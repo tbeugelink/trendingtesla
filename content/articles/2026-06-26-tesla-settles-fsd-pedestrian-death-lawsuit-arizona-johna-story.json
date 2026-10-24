@@ -32,12 +32,14 @@
     "musk-3.jpg"
   ],
   "label": {
-    "style": "r",
+    "style": "a",
     "en": {
-      "text": "FATAL FSD CASE SETTLED"
+      "sub": "TESLA SETTLES",
+      "text": "FATAL FSD LAWSUIT"
     },
     "nl": {
-      "text": "DODELIJKE FSD-ZAAK GESCHIKT"
+      "sub": "TESLA SCHIKT",
+      "text": "DODELIJKE FSD-ZAAK"
     }
   }
 }

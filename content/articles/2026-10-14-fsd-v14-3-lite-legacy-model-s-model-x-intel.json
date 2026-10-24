@@ -31,12 +31,14 @@
   },
   "image": "models/msc-2.jpg",
   "label": {
-    "style": "y",
+    "style": "c",
     "en": {
-      "text": "OLD S/X GET FSD V14!"
+      "sub": "OLD MODEL S/X",
+      "text": "GET FSD V14 LITE!"
     },
     "nl": {
-      "text": "OUDE S/X KRIJGT FSD V14!"
+      "sub": "OUDE MODEL S/X",
+      "text": "KRIJGT FSD V14 LITE!"
     }
   }
 }

@@ -29,12 +29,14 @@
     "charge-port.jpg"
   ],
   "label": {
-    "style": "r",
+    "style": "c",
     "en": {
-      "text": "STILL PLUGGED IN BY HAND"
+      "sub": "ROBOTAXI",
+      "text": "PLUGGED IN BY HAND!"
     },
     "nl": {
-      "text": "NOG MET DE HAND INGEPLUGD"
+      "sub": "ROBOTAXI",
+      "text": "MET DE HAND INGEPLUGD!"
     }
   }
 }

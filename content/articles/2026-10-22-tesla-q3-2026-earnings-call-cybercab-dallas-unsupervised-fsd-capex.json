@@ -37,13 +37,13 @@
     "cybercab.jpg"
   ],
   "label": {
-    "style": "k",
+    "style": "a",
     "en": {
-      "sub": "EARNINGS CALL",
+      "sub": "NEXT MONTH",
       "text": "CYBERCAB TO DALLAS!"
     },
     "nl": {
-      "sub": "CIJFERCALL",
+      "sub": "VOLGENDE MAAND",
       "text": "CYBERCAB NAAR DALLAS!"
     }
   }

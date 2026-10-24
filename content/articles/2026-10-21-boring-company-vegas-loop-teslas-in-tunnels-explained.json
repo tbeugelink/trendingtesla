@@ -30,14 +30,14 @@
     "tunnel-3.jpg"
   ],
   "label": {
-    "style": "k",
+    "style": "a",
     "en": {
-      "sub": "EXPLAINED",
-      "text": "TESLAS UNDERGROUND"
+      "sub": "HOW DO TESLAS",
+      "text": "RIDE IN TUNNELS?"
     },
     "nl": {
-      "sub": "UITGELEGD",
-      "text": "TESLA'S ONDERGRONDS"
+      "sub": "HOE RIJDEN",
+      "text": "TESLA'S DOOR TUNNELS?"
     }
   }
 }

@@ -28,14 +28,14 @@
   },
   "image": "models/cc-2.jpg",
   "label": {
-    "style": "k",
+    "style": "a",
     "en": {
-      "sub": "NHTSA",
-      "text": "ASKED 8 WEEKS, GOT 30 DAYS"
+      "sub": "NHTSA TO TESLA:",
+      "text": "30 DAYS, NOT 8 WEEKS"
     },
     "nl": {
-      "sub": "NHTSA",
-      "text": "8 WEKEN GEVRAAGD, 30 DAGEN"
+      "sub": "NHTSA AAN TESLA:",
+      "text": "30 DAGEN, GEEN 8 WEKEN"
     }
   }
 }

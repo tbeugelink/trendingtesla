@@ -29,12 +29,14 @@
     "fsd-4.jpg"
   ],
   "label": {
-    "style": "y",
+    "style": "n",
     "en": {
-      "text": "SLOVAKIA MAKES IT 9"
+      "sub": "EU NATIONS WITH FSD",
+      "text": "9"
     },
     "nl": {
-      "text": "SLOWAKIJE IS NUMMER 9"
+      "sub": "EU-LANDEN MET FSD",
+      "text": "9"
     }
   }
 }

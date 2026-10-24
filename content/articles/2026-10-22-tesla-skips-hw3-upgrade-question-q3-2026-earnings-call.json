@@ -32,14 +32,12 @@
     "earnings-4.jpg"
   ],
   "label": {
-    "style": "k",
+    "style": "r",
     "en": {
-      "sub": "Q3 CALL",
-      "text": "HW3 QUESTION SKIPPED!?"
+      "text": "HW3 QUESTION SKIPPED!"
     },
     "nl": {
-      "sub": "KWARTAALCALL",
-      "text": "HW3-VRAAG OVERGESLAGEN!?"
+      "text": "HW3-VRAAG OVERGESLAGEN"
     }
   }
 }

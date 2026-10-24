@@ -30,12 +30,14 @@
     "megapack-1.jpg"
   ],
   "label": {
-    "style": "r",
+    "style": "a",
     "en": {
-      "text": "STORAGE MISSES FORECAST"
+      "sub": "STORAGE MISSES",
+      "text": "FORECAST"
     },
     "nl": {
-      "text": "OPSLAG MIST VERWACHTING"
+      "sub": "OPSLAG MIST",
+      "text": "VERWACHTING"
     }
   }
 }

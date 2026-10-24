@@ -29,12 +29,12 @@
   },
   "image": "models/mx-4.jpg",
   "label": {
-    "style": "s",
+    "style": "r",
     "en": {
-      "text": "LAST CALL: MODEL S & X!"
+      "text": "END OF MODEL S AND X!"
     },
     "nl": {
-      "text": "LAATSTE KANS: S EN X!"
+      "text": "EINDE MODEL S EN X!"
     }
   }
 }

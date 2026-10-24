@@ -33,14 +33,14 @@
     "cybercab-street.jpg"
   ],
   "label": {
-    "style": "k",
+    "style": "a",
     "en": {
-      "sub": "NHTSA REVIEW",
-      "text": "SPEEDING IN SCHOOL ZONES?"
+      "sub": "NHTSA CHECKS",
+      "text": "SPEEDING AT SCHOOLS?"
     },
     "nl": {
-      "sub": "NHTSA-ONDERZOEK",
-      "text": "TE HARD IN SCHOOLZONES?"
+      "sub": "NHTSA ONDERZOEKT",
+      "text": "TE HARD BIJ SCHOLEN?"
     }
   }
 }

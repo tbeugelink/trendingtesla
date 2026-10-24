@@ -36,14 +36,14 @@
     "earnings-5.jpg"
   ],
   "label": {
-    "style": "k",
+    "style": "n",
     "en": {
-      "sub": "FROM TODAY",
-      "text": "1.3B SPACEX SHARES FREE"
+      "sub": "SPACEX SHARES FREED",
+      "text": "1.3B"
     },
     "nl": {
-      "sub": "VANAF VANDAAG",
-      "text": "1,3 MLD AANDELEN VRIJ"
+      "sub": "SPACEX-AANDELEN VRIJ",
+      "text": "1,3 MLD"
     }
   }
 }

@@ -33,11 +33,13 @@
     "spacex-5.jpg"
   ],
   "label": {
-    "style": "y",
+    "style": "a",
     "en": {
-      "text": "FIRST SPY SAT LAUNCH!"
+      "sub": "FALCON HEAVY",
+      "text": "FIRST SPY SATELLITE!"
     },
     "nl": {
+      "sub": "FALCON HEAVY",
       "text": "EERSTE SPIONAGEMISSIE!"
     }
   }

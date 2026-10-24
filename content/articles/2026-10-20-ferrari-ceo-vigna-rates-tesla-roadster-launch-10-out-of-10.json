@@ -27,12 +27,14 @@
     "roadster-flying.jpg"
   ],
   "label": {
-    "style": "s",
+    "style": "n",
     "en": {
-      "text": "FERRARI: 10 OUT OF 10!"
+      "sub": "FERRARI ON ROADSTER",
+      "text": "10/10"
     },
     "nl": {
-      "text": "FERRARI GEEFT EEN 10!"
+      "sub": "FERRARI OVER ROADSTER",
+      "text": "10/10"
     }
   }
 }

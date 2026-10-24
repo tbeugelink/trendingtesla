@@ -34,12 +34,12 @@
   "label": {
     "style": "n",
     "en": {
-      "text": "13.6M",
-      "sub": "STARLINK SUBSCRIBERS"
+      "sub": "STARLINK SUBSCRIBERS",
+      "text": "13.6M"
     },
     "nl": {
-      "text": "13,6 mln",
-      "sub": "STARLINK-ABONNEES"
+      "sub": "STARLINK-ABONNEES",
+      "text": "13,6 MLN"
     }
   }
 }

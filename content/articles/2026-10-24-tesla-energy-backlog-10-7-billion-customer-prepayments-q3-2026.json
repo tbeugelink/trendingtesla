@@ -35,12 +35,12 @@
   "label": {
     "style": "n",
     "en": {
-      "sub": "ENERGY ORDERS TO DELIVER",
+      "sub": "ENERGY ORDER BOOK",
       "text": "$10.7B"
     },
     "nl": {
-      "sub": "ENERGIE NOG TE LEVEREN",
-      "text": "$10,7 mld"
+      "sub": "ORDERBOEK ENERGIE",
+      "text": "$10,7 MLD"
     }
   }
 }

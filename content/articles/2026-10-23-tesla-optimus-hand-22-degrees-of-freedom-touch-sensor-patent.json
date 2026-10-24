@@ -37,12 +37,14 @@
     "optimus-kitchen.jpg"
   ],
   "label": {
-    "style": "r",
+    "style": "a",
     "en": {
-      "text": "HANDS: THE BOTTLENECK"
+      "sub": "WHY IS THE",
+      "text": "OPTIMUS HAND SO HARD?"
     },
     "nl": {
-      "text": "DE HAND: HET KNELPUNT"
+      "sub": "WAAROM IS DE",
+      "text": "OPTIMUS-HAND ZO LASTIG?"
     }
   }
 }

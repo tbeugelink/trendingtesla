@@ -29,12 +29,14 @@
   ],
   "image": "models/myj-6.jpg",
   "label": {
-    "style": "s",
+    "style": "a",
     "en": {
+      "sub": "Q3 DELIVERIES",
       "text": "24,500 ABOVE FORECAST!"
     },
     "nl": {
-      "text": "24.500 BOVEN VERWACHTING!"
+      "sub": "Q3-LEVERINGEN",
+      "text": "24.500 BOVEN PROGNOSE!"
     }
   }
 }

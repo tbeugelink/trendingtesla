@@ -37,14 +37,14 @@
     "optimus-line.jpg"
   ],
   "label": {
-    "style": "k",
+    "style": "a",
     "en": {
-      "sub": "EXPLAINED",
-      "text": "HOW DOES OPTIMUS LEARN?"
+      "sub": "HOW",
+      "text": "DOES OPTIMUS LEARN?"
     },
     "nl": {
-      "sub": "UITGELEGD",
-      "text": "HOE LEERT OPTIMUS?"
+      "sub": "HOE",
+      "text": "LEERT OPTIMUS?"
     }
   }
 }

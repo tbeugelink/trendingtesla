@@ -32,12 +32,14 @@
     "spacex-3.jpg"
   ],
   "label": {
-    "style": "r",
+    "style": "a",
     "en": {
-      "text": "V3 FLIES, BOOSTER CRASHES"
+      "sub": "STARSHIP V3",
+      "text": "FLIES, BOOSTER CRASHES"
     },
     "nl": {
-      "text": "V3 VLIEGT, BOOSTER CRASHT"
+      "sub": "STARSHIP V3",
+      "text": "VLIEGT, BOOSTER CRASHT"
     }
   }
 }

@@ -30,12 +30,12 @@
   "label": {
     "style": "n",
     "en": {
-      "text": "1.7 GW",
-      "sub": "AI COMPUTE INSTALLED"
+      "sub": "SPACEX AI COMPUTE",
+      "text": "1.7 GW"
     },
     "nl": {
-      "text": "1,7 GW",
-      "sub": "REKENKRACHT VOOR AI"
+      "sub": "AI-REKENKRACHT SPACEX",
+      "text": "1,7 GW"
     }
   }
 }

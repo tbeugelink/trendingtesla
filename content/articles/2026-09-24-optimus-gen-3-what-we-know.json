@@ -29,12 +29,14 @@
     "optimus.jpg"
   ],
   "label": {
-    "style": "y",
+    "style": "a",
     "en": {
-      "text": "OPTIMUS GEN 3: WHAT'S NEW?"
+      "sub": "WHAT DO WE KNOW",
+      "text": "ABOUT OPTIMUS GEN 3?"
     },
     "nl": {
-      "text": "OPTIMUS GEN 3: WAT IS NIEUW?"
+      "sub": "WAT WETEN WE",
+      "text": "OVER OPTIMUS GEN 3?"
     }
   }
 }

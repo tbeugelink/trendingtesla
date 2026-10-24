@@ -38,12 +38,12 @@
   "label": {
     "style": "n",
     "en": {
-      "text": "22M+",
-      "sub": "STARLINK MOBILE USERS"
+      "sub": "STARLINK MOBILE USERS",
+      "text": "22M+"
     },
     "nl": {
-      "text": "22 mln+",
-      "sub": "GEBRUIKT STARLINK MOBILE"
+      "sub": "OP STARLINK MOBILE",
+      "text": "22 MLN+"
     }
   }
 }

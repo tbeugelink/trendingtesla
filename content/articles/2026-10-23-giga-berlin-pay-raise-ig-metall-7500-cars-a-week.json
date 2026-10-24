@@ -27,14 +27,14 @@
     "gigafactory-berlin.jpg"
   ],
   "label": {
-    "style": "n",
+    "style": "c",
     "en": {
-      "sub": "BUT IG METALL WANTS MORE",
-      "text": "UP TO +5%"
+      "sub": "UP TO +5% PAY",
+      "text": "IG METALL WANTS MORE"
     },
     "nl": {
-      "sub": "MAAR IG METALL WIL MEER",
-      "text": "TOT +5%"
+      "sub": "TOT +5% LOON",
+      "text": "IG METALL WIL MEER"
     }
   }
 }

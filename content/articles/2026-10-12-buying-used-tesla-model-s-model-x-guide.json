@@ -37,12 +37,14 @@
   },
   "image": "models/ms-2.jpg",
   "label": {
-    "style": "r",
+    "style": "c",
     "en": {
-      "text": "WATCH THESE WEAK SPOTS"
+      "sub": "USED MODEL S OR X",
+      "text": "CHECK THESE WEAK SPOTS"
     },
     "nl": {
-      "text": "LET OP DEZE ZWAKKE PLEKKEN"
+      "sub": "OCCASION S OF X",
+      "text": "LET OP ZWAKKE PLEKKEN"
     }
   }
 }

@@ -36,12 +36,14 @@
     "musk-1.jpg"
   ],
   "label": {
-    "style": "y",
+    "style": "a",
     "en": {
-      "text": "WHO REPLACES MUSK?"
+      "sub": "WHO WILL",
+      "text": "SUCCEED MUSK?"
     },
     "nl": {
-      "text": "WIE VOLGT MUSK OP?"
+      "sub": "WIE VOLGT",
+      "text": "MUSK OP?"
     }
   }
 }

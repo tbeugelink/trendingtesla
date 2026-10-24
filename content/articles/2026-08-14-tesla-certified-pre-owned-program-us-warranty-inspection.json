@@ -27,12 +27,14 @@
     "guide-service.jpg"
   ],
   "label": {
-    "style": "w",
+    "style": "c",
     "en": {
-      "text": "USED TESLA, 1-YR WARRANTY"
+      "sub": "USED TESLAS",
+      "text": "WITH 1-YEAR WARRANTY"
     },
     "nl": {
-      "text": "OCCASION + 1 JAAR GARANTIE"
+      "sub": "TESLA-OCCASIONS",
+      "text": "MET 1 JAAR GARANTIE"
     }
   }
 }

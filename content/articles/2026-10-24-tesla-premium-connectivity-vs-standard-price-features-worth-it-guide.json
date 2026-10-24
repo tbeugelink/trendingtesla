@@ -32,12 +32,14 @@
     "fsd.jpg"
   ],
   "label": {
-    "style": "y",
+    "style": "n",
     "en": {
-      "text": "$9.99 A MONTH: WORTH IT?"
+      "sub": "IS PREMIUM WORTH IT?",
+      "text": "$9.99/MO"
     },
     "nl": {
-      "text": "IS €9,99 PER MAAND HET WAARD?"
+      "sub": "IS PREMIUM HET WAARD?",
+      "text": "€9,99/MND"
     }
   }
 }

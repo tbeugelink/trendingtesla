@@ -30,14 +30,14 @@
     "megapack-1.jpg"
   ],
   "label": {
-    "style": "k",
+    "style": "a",
     "en": {
-      "sub": "EXPLAINED",
-      "text": "4 MEGAPACKS IN 1 BLOCK"
+      "sub": "WHY",
+      "text": "4 MEGAPACKS IN 1 BLOCK?"
     },
     "nl": {
-      "sub": "UITGELEGD",
-      "text": "4 MEGAPACKS IN 1 BLOK"
+      "sub": "WAAROM",
+      "text": "4 MEGAPACKS IN 1 BLOK?"
     }
   }
 }

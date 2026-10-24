@@ -32,12 +32,14 @@
     "grok-2.jpg"
   ],
   "label": {
-    "style": "s",
+    "style": "c",
     "en": {
-      "text": "AI BECOMES SI!?"
+      "sub": "SPACEXAI BECOMES",
+      "text": "SPACEXSI!"
     },
     "nl": {
-      "text": "AI WORDT SI!?"
+      "sub": "SPACEXAI WORDT",
+      "text": "SPACEXSI!"
     }
   }
 }

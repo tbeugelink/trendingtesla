@@ -33,14 +33,14 @@
     "gigafactory-2.jpg"
   ],
   "label": {
-    "style": "k",
+    "style": "n",
     "en": {
-      "sub": "GROWTH IS BACK",
-      "text": "480,126 DELIVERIES!"
+      "sub": "DELIVERIES, +25%",
+      "text": "480,126"
     },
     "nl": {
-      "sub": "GROEI IS TERUG",
-      "text": "480.126 LEVERINGEN!"
+      "sub": "LEVERINGEN, +25%",
+      "text": "480.126"
     }
   }
 }

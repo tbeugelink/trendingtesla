@@ -27,12 +27,14 @@
     "winter-1.jpg"
   ],
   "label": {
-    "style": "y",
+    "style": "a",
     "en": {
-      "text": "ARCTIC SUPERCHARGER?"
+      "sub": "SUPERCHARGER",
+      "text": "ABOVE ARCTIC CIRCLE?"
     },
     "nl": {
-      "text": "LADEN BOVEN DE POOLCIRKEL?"
+      "sub": "SUPERCHARGER",
+      "text": "BOVEN DE POOLCIRKEL?"
     }
   }
 }

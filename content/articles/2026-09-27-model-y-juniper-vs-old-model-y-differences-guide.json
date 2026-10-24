@@ -29,12 +29,14 @@
   },
   "image": "models/myj-3.jpg",
   "label": {
-    "style": "y",
+    "style": "c",
     "en": {
-      "text": "JUNIPER: WHAT CHANGED?"
+      "sub": "MODEL Y JUNIPER",
+      "text": "WHAT CHANGED?"
     },
     "nl": {
-      "text": "JUNIPER: WAT IS ER NIEUW?"
+      "sub": "MODEL Y JUNIPER",
+      "text": "WAT IS ER ANDERS?"
     }
   }
 }

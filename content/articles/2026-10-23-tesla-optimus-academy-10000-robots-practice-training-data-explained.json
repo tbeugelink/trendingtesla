@@ -28,11 +28,13 @@
     "optimus-factory.jpg"
   ],
   "label": {
-    "style": "s",
+    "style": "c",
     "en": {
+      "sub": "OPTIMUS ACADEMY",
       "text": "A SCHOOL FOR ROBOTS"
     },
     "nl": {
+      "sub": "OPTIMUS ACADEMY",
       "text": "EEN SCHOOL VOOR ROBOTS"
     }
   }

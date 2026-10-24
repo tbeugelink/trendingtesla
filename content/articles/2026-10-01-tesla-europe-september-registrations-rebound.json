@@ -24,12 +24,14 @@
     "model-3"
   ],
   "label": {
-    "style": "y",
+    "style": "a",
     "en": {
-      "text": "FRANCE +62%, SWEDEN +38%"
+      "sub": "TESLA REBOUNDS",
+      "text": "FRANCE +62%!"
     },
     "nl": {
-      "text": "FRANKRIJK +62%, ZWEDEN +38%"
+      "sub": "TESLA VEERT OP",
+      "text": "FRANKRIJK +62%!"
     }
   }
 }

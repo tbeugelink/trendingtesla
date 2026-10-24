@@ -28,14 +28,14 @@
     "xai-dc-1.jpg"
   ],
   "label": {
-    "style": "k",
+    "style": "a",
     "en": {
-      "sub": "TIMELINE",
-      "text": "WHERE DID XAI GO?"
+      "sub": "WHAT HAPPENED",
+      "text": "TO XAI?"
     },
     "nl": {
-      "sub": "TIJDLIJN",
-      "text": "WAAR IS XAI GEBLEVEN?"
+      "sub": "WAT GEBEURDE ER",
+      "text": "MET XAI?"
     }
   }
 }

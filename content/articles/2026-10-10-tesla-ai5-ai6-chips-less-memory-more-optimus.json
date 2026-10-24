@@ -25,12 +25,14 @@
   },
   "image": "topics/optimus-office.jpg",
   "label": {
-    "style": "w",
+    "style": "a",
     "en": {
-      "text": "LESS MEMORY, MORE ROBOTS"
+      "sub": "LESS CHIP MEMORY",
+      "text": "MORE OPTIMUS ROBOTS"
     },
     "nl": {
-      "text": "MINDER GEHEUGEN, MEER ROBOTS"
+      "sub": "MINDER GEHEUGEN",
+      "text": "MEER OPTIMUS-ROBOTS"
     }
   }
 }

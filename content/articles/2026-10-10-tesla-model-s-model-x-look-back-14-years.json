@@ -35,14 +35,14 @@
   },
   "image": "models/mx-1.jpg",
   "label": {
-    "style": "k",
+    "style": "a",
     "en": {
-      "sub": "14 YEARS",
-      "text": "HOW S AND X CHANGED CARS"
+      "sub": "14 YEARS OF S & X",
+      "text": "HOW THEY CHANGED CARS"
     },
     "nl": {
-      "sub": "14 JAAR",
-      "text": "HOE S EN X ALLES VERANDERDEN"
+      "sub": "14 JAAR S EN X",
+      "text": "ZE VERANDERDEN ALLES"
     }
   }
 }

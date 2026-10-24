@@ -31,14 +31,14 @@
     "tunnel-5.jpg"
   ],
   "label": {
-    "style": "k",
+    "style": "a",
     "en": {
-      "sub": "RISK REPORT",
-      "text": "SINKHOLES AHEAD?"
+      "sub": "NASHVILLE LOOP",
+      "text": "SINKHOLE RISK?"
     },
     "nl": {
-      "sub": "RISICORAPPORT",
-      "text": "ZINKGATEN OP DE ROUTE?"
+      "sub": "MUSIC CITY LOOP",
+      "text": "RISICO OP ZINKGATEN?"
     }
   }
 }

@@ -27,14 +27,14 @@
     "gigafactory-2.jpg"
   ],
   "label": {
-    "style": "k",
+    "style": "c",
     "en": {
-      "sub": "OPTIMUS RIVAL",
-      "text": "DOUG FIELD JOINS MIND!"
+      "sub": "EX-TESLA CHIEF",
+      "text": "JOINS ROBOT RIVAL MIND"
     },
     "nl": {
-      "sub": "OPTIMUS-RIVAAL",
-      "text": "DOUG FIELD NAAR MIND!"
+      "sub": "EX-TESLA-TOPMAN",
+      "text": "NAAR ROBOTRIVAAL MIND"
     }
   }
 }

@@ -27,12 +27,14 @@
     "optimus-full.jpg"
   ],
   "label": {
-    "style": "w",
+    "style": "a",
     "en": {
-      "text": "EX-OPTIMUS CHIEF TO RIVAL"
+      "sub": "EX-OPTIMUS BOSS",
+      "text": "JOINS BOSTON DYNAMICS"
     },
     "nl": {
-      "text": "EX-OPTIMUSBAAS NAAR RIVAAL"
+      "sub": "OUD-OPTIMUSBAAS",
+      "text": "NAAR BOSTON DYNAMICS"
     }
   }
 }

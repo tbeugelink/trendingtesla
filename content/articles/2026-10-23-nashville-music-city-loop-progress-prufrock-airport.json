@@ -27,12 +27,14 @@
     "tunnel-5.jpg"
   ],
   "label": {
-    "style": "y",
+    "style": "a",
     "en": {
-      "text": "NASHVILLE DIGS FASTER"
+      "sub": "MUSIC CITY LOOP",
+      "text": "SPEEDS UP"
     },
     "nl": {
-      "text": "NASHVILLE GRAAFT SNELLER"
+      "sub": "MUSIC CITY LOOP",
+      "text": "GRAAFT SNELLER"
     }
   }
 }

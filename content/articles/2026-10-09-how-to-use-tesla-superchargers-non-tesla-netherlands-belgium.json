@@ -28,14 +28,14 @@
     "supercharger-2.jpg"
   ],
   "label": {
-    "style": "k",
+    "style": "c",
     "en": {
-      "sub": "STEP BY STEP",
-      "text": "NO TESLA? CHARGE ANYWAY"
+      "sub": "NO TESLA?",
+      "text": "HOW TO SUPERCHARGE"
     },
     "nl": {
-      "sub": "STAP VOOR STAP",
-      "text": "GEEN TESLA? TOCH LADEN"
+      "sub": "GEEN TESLA?",
+      "text": "ZO LAAD JE TOCH"
     }
   }
 }

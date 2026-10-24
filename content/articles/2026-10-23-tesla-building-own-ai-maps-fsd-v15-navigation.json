@@ -32,12 +32,14 @@
     "interior-2.jpg"
   ],
   "label": {
-    "style": "y",
+    "style": "a",
     "en": {
-      "text": "TESLA MAKES OWN MAPS"
+      "sub": "FSD V15",
+      "text": "TESLA'S OWN AI MAPS"
     },
     "nl": {
-      "text": "TESLA MAAKT EIGEN KAARTEN"
+      "sub": "FSD V15",
+      "text": "EIGEN AI-KAARTEN"
     }
   }
 }

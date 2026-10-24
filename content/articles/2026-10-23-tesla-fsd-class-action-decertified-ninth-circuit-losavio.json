@@ -31,12 +31,14 @@
     "fsd-2.jpg"
   ],
   "label": {
-    "style": "w",
+    "style": "c",
     "en": {
-      "text": "NO FSD CLASS ACTION!"
+      "sub": "TESLA WINS",
+      "text": "NO FSD CLASS ACTION"
     },
     "nl": {
-      "text": "FSD: GEEN COLLECTIEVE ZAAK!"
+      "sub": "TESLA WINT",
+      "text": "GEEN MASSACLAIM FSD"
     }
   }
 }

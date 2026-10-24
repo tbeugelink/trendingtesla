@@ -35,12 +35,14 @@
     "energy-home-dusk.jpg"
   ],
   "label": {
-    "style": "w",
+    "style": "c",
     "en": {
-      "text": "POWERWALL 3 OR 3P?"
+      "sub": "POWERWALL",
+      "text": "3 OR 3P?"
     },
     "nl": {
-      "text": "POWERWALL 3 OF 3P?"
+      "sub": "POWERWALL",
+      "text": "3 OF 3P?"
     }
   }
 }

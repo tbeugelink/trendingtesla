@@ -31,12 +31,14 @@
     "starlink-car-1.jpg"
   ],
   "label": {
-    "style": "w",
+    "style": "a",
     "en": {
-      "text": "STARLINK IN EVERY CAR?"
+      "sub": "MUSK PREDICTS",
+      "text": "STARLINK IN EVERY CAR"
     },
     "nl": {
-      "text": "STARLINK IN ELKE AUTO?"
+      "sub": "MUSK VOORSPELT",
+      "text": "STARLINK IN ELKE AUTO"
     }
   }
 }

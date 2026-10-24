@@ -36,12 +36,14 @@
     "spacex-5.jpg"
   ],
   "label": {
-    "style": "w",
+    "style": "c",
     "en": {
-      "text": "SPACEX LAUNCHES A RIVAL!?"
+      "sub": "SPACEX LAUNCHES",
+      "text": "GOOGLE'S AI SATELLITE"
     },
     "nl": {
-      "text": "SPACEX LANCEERT CONCURRENT!?"
+      "sub": "SPACEX LANCEERT",
+      "text": "AI-SATELLIET GOOGLE"
     }
   }
 }

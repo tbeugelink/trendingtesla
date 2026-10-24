@@ -26,12 +26,12 @@
   "label": {
     "style": "n",
     "en": {
-      "text": "UP TO 14%",
-      "sub": "BATTERY PER DAY"
+      "sub": "A DAY IN SENTRY MODE",
+      "text": "7-14%"
     },
     "nl": {
-      "text": "TOT 14%",
-      "sub": "ACCU PER DAG"
+      "sub": "PER DAG MET SENTRY",
+      "text": "7-14%"
     }
   }
 }

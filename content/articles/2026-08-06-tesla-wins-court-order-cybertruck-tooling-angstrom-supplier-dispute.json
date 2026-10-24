@@ -31,14 +31,14 @@
     "models/ct-3.jpg"
   ],
   "label": {
-    "style": "k",
+    "style": "a",
     "en": {
-      "sub": "COURT ORDER",
-      "text": "TESLA GETS TOOLS BACK"
+      "sub": "CYBERTRUCK",
+      "text": "TESLA WINS IN COURT"
     },
     "nl": {
-      "sub": "RECHTER",
-      "text": "TESLA KRIJGT MALLEN TERUG"
+      "sub": "CYBERTRUCK",
+      "text": "TESLA WINT BIJ RECHTER"
     }
   }
 }

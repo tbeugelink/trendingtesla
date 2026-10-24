@@ -34,12 +34,12 @@
   "label": {
     "style": "n",
     "en": {
-      "text": "~8 HOURS",
-      "sub": "TO THE ISS, NASA RECORD"
+      "sub": "TO ISS, NASA RECORD",
+      "text": "~8 HOURS"
     },
     "nl": {
-      "text": "~8 UUR",
-      "sub": "NAAR ISS, NASA-RECORD"
+      "sub": "NASA-RECORD NAAR ISS",
+      "text": "~8 UUR"
     }
   }
 }

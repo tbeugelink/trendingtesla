@@ -29,12 +29,14 @@
     "earnings-6.jpg"
   ],
   "label": {
-    "style": "r",
+    "style": "n",
     "en": {
-      "text": "CREDIT BONUS DRIES UP"
+      "sub": "TESLA CREDIT INCOME",
+      "text": "-67%"
     },
     "nl": {
-      "text": "CREDITBONUS DROOGT OP"
+      "sub": "EMISSIERECHTEN TESLA",
+      "text": "-67%"
     }
   }
 }

@@ -27,12 +27,14 @@
     "gigafactory-shanghai.jpg"
   ],
   "label": {
-    "style": "y",
+    "style": "n",
     "en": {
-      "text": "6M PACKS IN 279 DAYS"
+      "sub": "PACKS FROM SHANGHAI",
+      "text": "6 MILLION"
     },
     "nl": {
-      "text": "6 MLN PACKS IN 279 DAGEN"
+      "sub": "ACCUPACKS SHANGHAI",
+      "text": "6 MILJOEN"
     }
   }
 }

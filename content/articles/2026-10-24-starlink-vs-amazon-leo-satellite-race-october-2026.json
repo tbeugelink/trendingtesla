@@ -36,12 +36,14 @@
     "starlink-2.jpg"
   ],
   "label": {
-    "style": "w",
+    "style": "a",
     "en": {
-      "text": "CAN AMAZON CATCH UP?"
+      "sub": "AMAZON LEO",
+      "text": "CAN IT CATCH STARLINK?"
     },
     "nl": {
-      "text": "HAALT AMAZON STARLINK IN?"
+      "sub": "AMAZON LEO",
+      "text": "HAALT HIJ STARLINK IN?"
     }
   }
 }

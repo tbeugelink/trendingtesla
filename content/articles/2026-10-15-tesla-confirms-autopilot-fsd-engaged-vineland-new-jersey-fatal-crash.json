@@ -30,12 +30,14 @@
     "fsd-3.jpg"
   ],
   "label": {
-    "style": "r",
+    "style": "a",
     "en": {
-      "text": "AUTOPILOT OR FSD WAS ON"
+      "sub": "FATAL CRASH",
+      "text": "AUTOPILOT OR FSD ON"
     },
     "nl": {
-      "text": "AUTOPILOT OF FSD STOND AAN"
+      "sub": "DODELIJK ONGELUK",
+      "text": "AUTOPILOT OF FSD AAN"
     }
   }
 }

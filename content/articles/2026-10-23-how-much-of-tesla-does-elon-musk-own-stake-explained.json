@@ -28,12 +28,14 @@
     "earnings-5.jpg"
   ],
   "label": {
-    "style": "y",
+    "style": "n",
     "en": {
-      "text": "MUSK OWNS 19.8%"
+      "sub": "MUSK'S TESLA STAKE",
+      "text": "19.8%"
     },
     "nl": {
-      "text": "MUSK BEZIT 19,8%"
+      "sub": "BELANG VAN MUSK",
+      "text": "19,8%"
     }
   }
 }

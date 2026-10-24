@@ -28,12 +28,14 @@
     "fsd.jpg"
   ],
   "label": {
-    "style": "w",
+    "style": "a",
     "en": {
-      "text": "NEW MAPS FOR US & CANADA"
+      "sub": "NEW TESLA MAPS",
+      "text": "FOR US & CANADA"
     },
     "nl": {
-      "text": "NIEUWE KAARTEN VS & CANADA"
+      "sub": "NIEUWE KAARTEN",
+      "text": "VOOR VS EN CANADA"
     }
   }
 }

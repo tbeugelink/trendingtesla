@@ -28,12 +28,14 @@
     "fsd-japan.jpg"
   ],
   "label": {
-    "style": "w",
+    "style": "c",
     "en": {
-      "text": "FSD IN JAPAN THIS YEAR?"
+      "sub": "FSD IN JAPAN",
+      "text": "STILL THIS YEAR?"
     },
     "nl": {
-      "text": "FSD IN JAPAN DIT JAAR?"
+      "sub": "FSD IN JAPAN",
+      "text": "NOG DIT JAAR?"
     }
   }
 }

@@ -28,12 +28,14 @@
     "supercharger-7.jpg"
   ],
   "label": {
-    "style": "s",
+    "style": "c",
     "en": {
+      "sub": "SUPERCHARGER",
       "text": "8 STALLS ON A TRUCK!"
     },
     "nl": {
-      "text": "8 LAADPALEN PER TRUCK!"
+      "sub": "SUPERCHARGER",
+      "text": "8 PALEN OP 1 TRUCK!"
     }
   }
 }

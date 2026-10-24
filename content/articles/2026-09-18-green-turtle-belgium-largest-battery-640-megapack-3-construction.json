@@ -37,14 +37,14 @@
     "energy-2.jpg"
   ],
   "label": {
-    "style": "k",
+    "style": "n",
     "en": {
-      "sub": "CONSTRUCTION",
-      "text": "BELGIUM'S BIGGEST BATTERY"
+      "sub": "MEGAPACKS FOR BELGIUM",
+      "text": "640"
     },
     "nl": {
-      "sub": "IN AANBOUW",
-      "text": "GROOTSTE ACCU VAN BELGIË"
+      "sub": "MEGAPACKS VOOR BELGIË",
+      "text": "640"
     }
   }
 }

@@ -36,12 +36,14 @@
     "grok-1.jpg"
   ],
   "label": {
-    "style": "y",
+    "style": "a",
     "en": {
-      "text": "CHINA: DOUBAO, NOT GROK"
+      "sub": "CHINA: NO GROK",
+      "text": "DOUBAO AND DEEPSEEK"
     },
     "nl": {
-      "text": "CHINA: DOUBAO, GEEN GROK"
+      "sub": "CHINA: GEEN GROK",
+      "text": "DOUBAO EN DEEPSEEK"
     }
   }
 }

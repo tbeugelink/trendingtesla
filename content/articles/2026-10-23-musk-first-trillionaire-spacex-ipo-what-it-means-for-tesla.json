@@ -33,14 +33,14 @@
     "spacex-6.jpg"
   ],
   "label": {
-    "style": "k",
+    "style": "a",
     "en": {
-      "sub": "VIA SPACEX",
-      "text": "FIRST TRILLIONAIRE!"
+      "sub": "THANKS TO SPACEX",
+      "text": "FIRST TRILLIONAIRE"
     },
     "nl": {
       "sub": "DANKZIJ SPACEX",
-      "text": "EERSTE BILJONAIR!"
+      "text": "EERSTE BILJONAIR"
     }
   }
 }

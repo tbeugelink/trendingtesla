@@ -31,12 +31,14 @@
     "tunnel-5.jpg"
   ],
   "label": {
-    "style": "w",
+    "style": "a",
     "en": {
-      "text": "NO LAUNCH PIT NEEDED"
+      "sub": "HOW DOES",
+      "text": "PRUFROCK DIG?"
     },
     "nl": {
-      "text": "GEEN STARTPUT NODIG"
+      "sub": "HOE GRAAFT",
+      "text": "PRUFROCK?"
     }
   }
 }

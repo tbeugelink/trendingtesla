@@ -27,12 +27,14 @@
     "fsd-4.jpg"
   ],
   "label": {
-    "style": "w",
+    "style": "a",
     "en": {
-      "text": "FSD: NETHERLANDS SAYS YES!"
+      "sub": "FIRST IN EUROPE",
+      "text": "DUTCH APPROVE FSD!"
     },
     "nl": {
-      "text": "FSD: NEDERLAND ZEGT JA!"
+      "sub": "EERSTE IN EUROPA",
+      "text": "NEDERLAND KEURT FSD!"
     }
   }
 }

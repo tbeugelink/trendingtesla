@@ -29,14 +29,14 @@
     "gigafactory-2.jpg"
   ],
   "label": {
-    "style": "k",
+    "style": "c",
     "en": {
-      "sub": "EXPLAINED",
-      "text": "WHERE DOES $25B GO?"
+      "sub": "$25B SPENDING",
+      "text": "WHERE DOES IT GO?"
     },
     "nl": {
-      "sub": "UITGELEGD",
-      "text": "WAAR GAAT $25 MLD HEEN?"
+      "sub": "$25 MLD UITGAVEN",
+      "text": "WAAR GAAT HET HEEN?"
     }
   }
 }

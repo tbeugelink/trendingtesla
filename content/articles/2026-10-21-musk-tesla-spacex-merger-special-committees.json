@@ -33,12 +33,14 @@
     "earnings-2.jpg"
   ],
   "label": {
-    "style": "w",
+    "style": "a",
     "en": {
-      "text": "MERGER NOW BEING STUDIED!"
+      "sub": "TESLA + SPACEX",
+      "text": "MERGER BEING STUDIED"
     },
     "nl": {
-      "text": "FUSIE WORDT ONDERZOCHT!"
+      "sub": "TESLA + SPACEX",
+      "text": "FUSIE WORDT ONDERZOCHT"
     }
   }
 }

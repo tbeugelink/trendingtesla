@@ -969,7 +969,7 @@ def feed(lead, lead_html, rest, lang, active=None, side_title="", left_first=(),
     tl = tips(lang)
     g, ti = "", 1
     for i, a in enumerate(list(left_items) + (list(left_pad) if topic else [])):
-        if i and i % (12 if topic else 6) == 0:
+        if False and i and i % (12 if topic else 6) == 0:  # in-grid tip bars removed (2026-10-24)
             g += f'<div class="span2">{tl[ti % len(tl)]}</div>'
             ti += 1
         g += gcard(a, lang) if topic else card(a, lang)

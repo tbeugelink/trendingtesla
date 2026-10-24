@@ -921,7 +921,7 @@ MAX_RIGHT = 50  # articles in the news column
 PER_PAGE = 36   # articles per archive page
 
 
-def feed(lead, lead_html, rest, lang, active=None, side_title="", left_first=(), more=(), extra_side="", lead_px=None, left_pool=None, min_left=0, left_exact=None, no_left=False, left_pad=()):
+def feed(lead, lead_html, rest, lang, active=None, side_title="", left_first=(), more=(), extra_side="", lead_px=None, left_pool=None, min_left=0, left_exact=None, no_left=False, left_pad=(), article=False):
     """YouTube-style page: lead story open on the left with a two-column grid of further articles
     below it (an ad/tip bar every few rows); a long list of the newest articles on the right."""
     # balance column heights (pixel estimates measured on the live layout)
@@ -952,7 +952,7 @@ def feed(lead, lead_html, rest, lang, active=None, side_title="", left_first=(),
     else:
         best = max(best, len(left_first))
         right_items, left_items = rest[:n - best], left_first + rest[n - best:]
-    if left_exact is not None and active != "news":
+    if left_exact is not None and (active != "news" or article):
         # topic, model and article pages: the 6 most relevant articles open the right column,
         # followed without a heading by the general news
         # topic, model and article pages: the right column holds only articles of this topic
@@ -960,7 +960,7 @@ def feed(lead, lead_html, rest, lang, active=None, side_title="", left_first=(),
     if no_left:
         right_items, left_items = list(rest), []
     more_link = ""
-    topic = left_exact is not None and active != "news"
+    topic = left_exact is not None and (active != "news" or article)
     if len(left_items) > MAX_LEFT and not topic:
         left_items = left_items[:MAX_LEFT]
         more_link = f'<a class="morelink" href="{url(lang, "archive/")}">{LANGS[lang]["archive"]} →</a>'
@@ -1243,7 +1243,7 @@ def build():
             head = f'<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>'
             same = sorted((x for x in arts if x["category"] == a["category"] and x is not a), key=published, reverse=True)
             others = [x for x in arts if x is not a]
-            body = feed(a, story(a, lang), others, lang, a["category"], L["latest"], left_exact=same, left_pad=pad_grid(a, same))
+            body = feed(a, story(a, lang), others, lang, a["category"], L["latest"], left_exact=same, left_pad=pad_grid(a, same), article=True)
             write(url(lang, a["slug"] + "/"),
                   page(lang, a["slug"] + "/", t["title"], t["description"], body, "article", head,
                        image=social_img(a, lang), active=a["category"]))

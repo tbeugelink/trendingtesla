@@ -1,42 +1,40 @@
 {
- "slug": "tesla-q2-2026-earnings-recap-margins-cash-flow",
- "date": "2026-07-23",
- "time": "08:10",
- "category": "earnings",
- "sources": [
-  {
-   "title": "Electrek — Tesla Q3 2026 earnings preview (Q2 recap)",
-   "url": "https://electrek.co/2026/10/20/tesla-tsla-q3-2026-earnings-preview/"
-  },
-  {
-   "title": "Tesla Investor Relations",
-   "url": "https://ir.tesla.com/"
-  }
- ],
- "en": {
-  "title": "Tesla Q2 2026 results: revenue holds, but profit shrinks as spending soars",
-  "description": "Tesla's second quarter showed $28.2 billion in revenue, earnings well below expectations, a 1.4% operating margin and negative free cash flow. Here are the key numbers and what drove them.",
-  "body": "<p>Tesla's results for the second quarter of 2026 showed a company in heavy investment mode. Revenue held up, but profit and cash flow came under pressure as spending on AI, robots and new factories climbed.</p><h2>The key numbers</h2><ul><li><strong>Revenue:</strong> $28.24 billion.</li><li><strong>Earnings per share (non-GAAP):</strong> $0.33, well below the roughly $0.53 analysts expected.</li><li><strong>Operating margin:</strong> 1.4%.</li><li><strong>Operating expenses:</strong> up 47% to $4.35 billion.</li><li><strong>Free cash flow:</strong> about minus $1.09 billion.</li><li><strong>Capital spending:</strong> about $5.8 billion in the quarter.</li></ul><h2>What hurt profit</h2><ul><li><strong>Car margins:</strong> the automotive gross margin excluding regulatory credits fell to 16.3%, from 19.2% in the first quarter, partly due to cheaper Standard versions and price competition.</li><li><strong>Regulatory credits:</strong> income from selling emission credits to other carmakers dropped 67% from a year earlier to $146 million, after US rule changes.</li><li><strong>Spending:</strong> research and development on FSD, the Cybercab and Optimus, plus AI computing, pushed costs up sharply.</li></ul><h2>The bright spot</h2><p>Tesla Energy delivered a gross margin of 20.4%, higher than the car business. Energy revenue was about $3.14 billion.</p><h2>The guidance</h2><p>Management said it expects capital spending of more than $25 billion in 2026, weighted to the second half of the year. That is roughly three times what Tesla spent in 2025, and it means free cash flow is likely to stay under pressure for now.</p><h2>How to read it</h2><p>Tesla is asking investors to accept weaker profits today in exchange for growth in robotaxis, robots and energy later. Whether that trade pays off depends on execution, especially the Cybercab and Optimus ramps.</p><p><em>This article is for information only and is not financial advice.</em></p>"
- },
- "nl": {
-  "title": "Tesla-cijfers Q2 2026: omzet houdt stand, maar winst krimpt door hoge uitgaven",
-  "description": "Tesla boekte in het tweede kwartaal $28,2 miljard omzet, een winst ver onder de verwachting, een bedrijfsmarge van 1,4% en een negatieve vrije kasstroom. De belangrijkste cijfers en wat erachter zit.",
-  "body": "<p>Tesla's cijfers over het tweede kwartaal van 2026 lieten een bedrijf zien dat volop investeert. De omzet hield stand, maar winst en kasstroom kwamen onder druk door hogere uitgaven aan AI, robots en nieuwe fabrieken.</p><h2>De belangrijkste cijfers</h2><ul><li><strong>Omzet:</strong> $28,24 miljard.</li><li><strong>Winst per aandeel (non-GAAP):</strong> $0,33, ruim onder de circa $0,53 die analisten verwachtten.</li><li><strong>Bedrijfsmarge:</strong> 1,4%.</li><li><strong>Bedrijfskosten:</strong> 47% hoger, op $4,35 miljard.</li><li><strong>Vrije kasstroom:</strong> ongeveer min $1,09 miljard.</li><li><strong>Investeringen:</strong> ongeveer $5,8 miljard in het kwartaal.</li></ul><h2>Wat de winst drukte</h2><ul><li><strong>Automarges:</strong> de brutomarge op auto's zonder emissierechten zakte naar 16,3%, van 19,2% in het eerste kwartaal, deels door goedkopere Standard-versies en prijsconcurrentie.</li><li><strong>Emissierechten:</strong> de inkomsten uit het verkopen van emissierechten aan andere autobouwers daalden 67% op jaarbasis naar $146 miljoen, na Amerikaanse regelwijzigingen.</li><li><strong>Uitgaven:</strong> onderzoek en ontwikkeling voor FSD, de Cybercab en Optimus, plus AI-rekenkracht, lieten de kosten flink stijgen.</li></ul><h2>Het lichtpuntje</h2><p>Tesla Energy haalde een brutomarge van 20,4%, hoger dan de autotak. De energieomzet was ongeveer $3,14 miljard.</p><h2>De vooruitblik</h2><p>Het management verwacht in 2026 meer dan $25 miljard te investeren, vooral in de tweede helft van het jaar. Dat is ongeveer drie keer zoveel als in 2025, en betekent dat de vrije kasstroom voorlopig onder druk blijft.</p><h2>Hoe je het moet lezen</h2><p>Tesla vraagt beleggers om nu zwakkere winsten te accepteren, in ruil voor groei in robotaxi's, robots en energie later. Of die ruil uitbetaalt, hangt af van de uitvoering, vooral van de opschaling van de Cybercab en Optimus.</p><p><em>Dit artikel is alleen bedoeld als informatie en is geen financieel advies.</em></p>"
- },
- "image": "topics/earnings-3.jpg",
- "images": [
-  "earnings-2.jpg",
-  "earnings-1.jpg"
- ],
- "label": {
-  "style": "r",
-  "pos": "bl",
-  "rot": -2,
+  "slug": "tesla-q2-2026-earnings-recap-margins-cash-flow",
+  "date": "2026-07-23",
+  "time": "08:10",
+  "category": "earnings",
+  "sources": [
+    {
+      "title": "Electrek — Tesla Q3 2026 earnings preview (Q2 recap)",
+      "url": "https://electrek.co/2026/10/20/tesla-tsla-q3-2026-earnings-preview/"
+    },
+    {
+      "title": "Tesla Investor Relations",
+      "url": "https://ir.tesla.com/"
+    }
+  ],
   "en": {
-   "text": "SPENDING EATS PROFIT"
+    "title": "Tesla Q2 2026 results: revenue holds, but profit shrinks as spending soars",
+    "description": "Tesla's second quarter showed $28.2 billion in revenue, earnings well below expectations, a 1.4% operating margin and negative free cash flow. Here are the key numbers and what drove them.",
+    "body": "<p>Tesla's results for the second quarter of 2026 showed a company in heavy investment mode. Revenue held up, but profit and cash flow came under pressure as spending on AI, robots and new factories climbed.</p><h2>The key numbers</h2><ul><li><strong>Revenue:</strong> $28.24 billion.</li><li><strong>Earnings per share (non-GAAP):</strong> $0.33, well below the roughly $0.53 analysts expected.</li><li><strong>Operating margin:</strong> 1.4%.</li><li><strong>Operating expenses:</strong> up 47% to $4.35 billion.</li><li><strong>Free cash flow:</strong> about minus $1.09 billion.</li><li><strong>Capital spending:</strong> about $5.8 billion in the quarter.</li></ul><h2>What hurt profit</h2><ul><li><strong>Car margins:</strong> the automotive gross margin excluding regulatory credits fell to 16.3%, from 19.2% in the first quarter, partly due to cheaper Standard versions and price competition.</li><li><strong>Regulatory credits:</strong> income from selling emission credits to other carmakers dropped 67% from a year earlier to $146 million, after US rule changes.</li><li><strong>Spending:</strong> research and development on FSD, the Cybercab and Optimus, plus AI computing, pushed costs up sharply.</li></ul><h2>The bright spot</h2><p>Tesla Energy delivered a gross margin of 20.4%, higher than the car business. Energy revenue was about $3.14 billion.</p><h2>The guidance</h2><p>Management said it expects capital spending of more than $25 billion in 2026, weighted to the second half of the year. That is roughly three times what Tesla spent in 2025, and it means free cash flow is likely to stay under pressure for now.</p><h2>How to read it</h2><p>Tesla is asking investors to accept weaker profits today in exchange for growth in robotaxis, robots and energy later. Whether that trade pays off depends on execution, especially the Cybercab and Optimus ramps.</p><p><em>This article is for information only and is not financial advice.</em></p>"
   },
   "nl": {
-   "text": "UITGAVEN VRETEN WINST"
+    "title": "Tesla-cijfers Q2 2026: omzet houdt stand, maar winst krimpt door hoge uitgaven",
+    "description": "Tesla boekte in het tweede kwartaal $28,2 miljard omzet, een winst ver onder de verwachting, een bedrijfsmarge van 1,4% en een negatieve vrije kasstroom. De belangrijkste cijfers en wat erachter zit.",
+    "body": "<p>Tesla's cijfers over het tweede kwartaal van 2026 lieten een bedrijf zien dat volop investeert. De omzet hield stand, maar winst en kasstroom kwamen onder druk door hogere uitgaven aan AI, robots en nieuwe fabrieken.</p><h2>De belangrijkste cijfers</h2><ul><li><strong>Omzet:</strong> $28,24 miljard.</li><li><strong>Winst per aandeel (non-GAAP):</strong> $0,33, ruim onder de circa $0,53 die analisten verwachtten.</li><li><strong>Bedrijfsmarge:</strong> 1,4%.</li><li><strong>Bedrijfskosten:</strong> 47% hoger, op $4,35 miljard.</li><li><strong>Vrije kasstroom:</strong> ongeveer min $1,09 miljard.</li><li><strong>Investeringen:</strong> ongeveer $5,8 miljard in het kwartaal.</li></ul><h2>Wat de winst drukte</h2><ul><li><strong>Automarges:</strong> de brutomarge op auto's zonder emissierechten zakte naar 16,3%, van 19,2% in het eerste kwartaal, deels door goedkopere Standard-versies en prijsconcurrentie.</li><li><strong>Emissierechten:</strong> de inkomsten uit het verkopen van emissierechten aan andere autobouwers daalden 67% op jaarbasis naar $146 miljoen, na Amerikaanse regelwijzigingen.</li><li><strong>Uitgaven:</strong> onderzoek en ontwikkeling voor FSD, de Cybercab en Optimus, plus AI-rekenkracht, lieten de kosten flink stijgen.</li></ul><h2>Het lichtpuntje</h2><p>Tesla Energy haalde een brutomarge van 20,4%, hoger dan de autotak. De energieomzet was ongeveer $3,14 miljard.</p><h2>De vooruitblik</h2><p>Het management verwacht in 2026 meer dan $25 miljard te investeren, vooral in de tweede helft van het jaar. Dat is ongeveer drie keer zoveel als in 2025, en betekent dat de vrije kasstroom voorlopig onder druk blijft.</p><h2>Hoe je het moet lezen</h2><p>Tesla vraagt beleggers om nu zwakkere winsten te accepteren, in ruil voor groei in robotaxi's, robots en energie later. Of die ruil uitbetaalt, hangt af van de uitvoering, vooral van de opschaling van de Cybercab en Optimus.</p><p><em>Dit artikel is alleen bedoeld als informatie en is geen financieel advies.</em></p>"
+  },
+  "image": "topics/earnings-3.jpg",
+  "images": [
+    "earnings-2.jpg",
+    "earnings-1.jpg"
+  ],
+  "label": {
+    "style": "r",
+    "en": {
+      "text": "SPENDING EATS PROFIT"
+    },
+    "nl": {
+      "text": "UITGAVEN VRETEN WINST"
+    }
   }
- }
 }

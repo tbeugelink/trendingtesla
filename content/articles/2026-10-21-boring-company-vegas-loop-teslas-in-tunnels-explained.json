@@ -1,45 +1,43 @@
 {
- "slug": "boring-company-vegas-loop-teslas-in-tunnels-explained",
- "date": "2026-10-21",
- "time": "16:40",
- "category": "boring",
- "image": "topics/tunnel-1.jpg",
- "sources": [
-  {
-   "title": "Tesla North — Boring Company invites engineers on a Vegas Loop tour",
-   "url": "https://teslanorth.com/2026/09/22/boring-company-vegas-loop-tour/"
-  },
-  {
-   "title": "Drive Tesla Canada — Vegas Loop rides to Harry Reid International Airport",
-   "url": "https://driveteslacanada.ca/news/the-boring-company-launches-vegas-loop-rides-to-harry-reid-international-airport/"
-  }
- ],
- "en": {
-  "title": "The Vegas Loop: how The Boring Company moves people through tunnels in Teslas",
-  "description": "Under Las Vegas, Tesla cars shuttle passengers through tunnels between hotels, the convention center and toward the airport. Here is how the Loop works, what a ride costs and where it is going next.",
-  "body": "<p>Of all the links between Elon Musk's companies, The Boring Company's Vegas Loop is the one you can actually ride today. Under Las Vegas, ordinary Tesla cars carry passengers through tunnels between stations at hotels and the convention center. With the company planning to double its number of stations this year, here is how it works.</p><h2>What the Loop is</h2><p>The Loop is not a train or a subway. It is a network of narrow tunnels, about the width of a car, through which Tesla vehicles drive passengers point to point between stations. There are no intermediate stops: you get in, tell the driver or the app where you are going, and the car takes you there.</p><h2>Where it runs</h2><ul><li><strong>Stations:</strong> Encore, Resorts World, Westgate and several locations at the Las Vegas Convention Center.</li><li><strong>Tunnels:</strong> more than 10 miles (about 16 km) have been dug, of which around four miles (about 6.5 km) were operational at the start of 2026.</li><li><strong>Expansion:</strong> The Boring Company said in September that it plans to double its number of stations by the end of 2026.</li></ul><h2>To the airport</h2><p>Since just before CES in January 2026, the Loop offers limited rides to Harry Reid International Airport. For now, it only drops passengers off at the departures curb, daily from 10 a.m. to 9 p.m. A ride from Resorts World or Westgate to Terminal 1 or 3 costs around $12. Because the tunnels do not yet reach under the airport, the trip combines a tunnel section with a short stretch on surface streets. Pick-ups at the airport are planned once the cars are fitted with the required transponders.</p><h2>The Tesla connection</h2><p>Every car in the Loop is a Tesla. That makes the Vegas Loop a daily showcase for Tesla vehicles, and a natural candidate for driverless operation: a closed tunnel network with fixed routes is a far simpler environment than open city streets. Tesla's robotaxi software already runs without a safety driver in several US cities, so using it underground is an obvious next step, although no date has been announced.</p><h2>Money and new cities</h2><p>The Boring Company recently raised $3 billion in a funding round that valued it at $23 billion. The money is meant for expansion to more cities: a new loop has been announced for Nashville, Tennessee, and filings point to an underground loop in downtown Austin, Tesla's home city.</p><h2>Why it matters</h2><p>On its own, the Loop is a niche transport system. As part of Musk's ecosystem, it is a place where Tesla cars, software and possibly future driverless operation come together, and one more piece in the debate about how closely Musk's companies are tied.</p>"
- },
- "nl": {
-  "title": "De Vegas Loop: zo vervoert The Boring Company mensen met Tesla's door tunnels",
-  "description": "Onder Las Vegas brengen Tesla's passagiers door tunnels van hotels naar het congrescentrum en richting het vliegveld. Hoe de Loop werkt, wat een rit kost en waar hij naartoe gaat.",
-  "body": "<p>Van alle verbindingen tussen de bedrijven van Elon Musk is de Vegas Loop van The Boring Company de enige waar je vandaag al in kunt stappen. Onder Las Vegas vervoeren gewone Tesla's passagiers door tunnels tussen stations bij hotels en het congrescentrum. Het bedrijf wil dit jaar het aantal stations verdubbelen. Zo werkt het.</p><h2>Wat de Loop is</h2><p>De Loop is geen trein en geen metro. Het is een netwerk van smalle tunnels, ongeveer zo breed als een auto, waardoor Tesla's passagiers rechtstreeks van station naar station rijden. Tussenstops zijn er niet: je stapt in, zegt tegen de chauffeur of in de app waar je heen wilt, en de auto brengt je erheen.</p><h2>Waar hij rijdt</h2><ul><li><strong>Stations:</strong> Encore, Resorts World, Westgate en meerdere locaties bij het Las Vegas Convention Center.</li><li><strong>Tunnels:</strong> er is ruim 16 km gegraven, waarvan begin 2026 zo'n 6,5 km in gebruik was.</li><li><strong>Uitbreiding:</strong> The Boring Company meldde in september dat het aantal stations eind 2026 moet zijn verdubbeld.</li></ul><h2>Naar het vliegveld</h2><p>Sinds vlak voor de techbeurs CES in januari 2026 biedt de Loop beperkt ritten naar Harry Reid International Airport. Voorlopig alleen om passagiers af te zetten bij de vertrekhal, dagelijks van 10.00 tot 21.00 uur. Een rit van Resorts World of Westgate naar Terminal 1 of 3 kost zo'n $12. Omdat de tunnels nog niet tot onder het vliegveld lopen, combineert de rit een tunnelstuk met een kort stuk over de gewone weg. Ophalen op het vliegveld volgt zodra de auto's de vereiste transponders hebben.</p><h2>De link met Tesla</h2><p>Elke auto in de Loop is een Tesla. Daarmee is de Vegas Loop een dagelijkse etalage voor Tesla's, en een logische plek om zonder bestuurder te gaan rijden: een gesloten tunnelnetwerk met vaste routes is veel eenvoudiger dan de openbare weg. Tesla's robotaxisoftware rijdt in meerdere Amerikaanse steden al zonder veiligheidsbestuurder, dus gebruik onder de grond ligt voor de hand, al is er nog geen datum genoemd.</p><h2>Geld en nieuwe steden</h2><p>The Boring Company haalde onlangs $3 miljard op in een investeringsronde, bij een waardering van $23 miljard. Het geld is bedoeld voor uitbreiding naar meer steden: er is een nieuwe loop aangekondigd in Nashville, Tennessee, en vergunningsaanvragen wijzen op een ondergrondse loop in het centrum van Austin, de thuisstad van Tesla.</p><h2>Waarom dit ertoe doet</h2><p>Op zichzelf is de Loop een nichevervoermiddel. Als onderdeel van Musks ecosysteem is het een plek waar Tesla's auto's, software en mogelijk toekomstig rijden zonder bestuurder samenkomen, en nog een puzzelstuk in de discussie over hoe nauw de bedrijven van Musk met elkaar verbonden zijn.</p>"
- },
- "images": [
-  "tunnel-6.jpg",
-  "tunnel-1.jpg",
-  "tunnel-3.jpg"
- ],
- "label": {
-  "style": "k",
-  "pos": "bl",
-  "rot": 0,
+  "slug": "boring-company-vegas-loop-teslas-in-tunnels-explained",
+  "date": "2026-10-21",
+  "time": "16:40",
+  "category": "boring",
+  "image": "topics/tunnel-1.jpg",
+  "sources": [
+    {
+      "title": "Tesla North — Boring Company invites engineers on a Vegas Loop tour",
+      "url": "https://teslanorth.com/2026/09/22/boring-company-vegas-loop-tour/"
+    },
+    {
+      "title": "Drive Tesla Canada — Vegas Loop rides to Harry Reid International Airport",
+      "url": "https://driveteslacanada.ca/news/the-boring-company-launches-vegas-loop-rides-to-harry-reid-international-airport/"
+    }
+  ],
   "en": {
-   "sub": "EXPLAINED",
-   "text": "TESLAS UNDERGROUND"
+    "title": "The Vegas Loop: how The Boring Company moves people through tunnels in Teslas",
+    "description": "Under Las Vegas, Tesla cars shuttle passengers through tunnels between hotels, the convention center and toward the airport. Here is how the Loop works, what a ride costs and where it is going next.",
+    "body": "<p>Of all the links between Elon Musk's companies, The Boring Company's Vegas Loop is the one you can actually ride today. Under Las Vegas, ordinary Tesla cars carry passengers through tunnels between stations at hotels and the convention center. With the company planning to double its number of stations this year, here is how it works.</p><h2>What the Loop is</h2><p>The Loop is not a train or a subway. It is a network of narrow tunnels, about the width of a car, through which Tesla vehicles drive passengers point to point between stations. There are no intermediate stops: you get in, tell the driver or the app where you are going, and the car takes you there.</p><h2>Where it runs</h2><ul><li><strong>Stations:</strong> Encore, Resorts World, Westgate and several locations at the Las Vegas Convention Center.</li><li><strong>Tunnels:</strong> more than 10 miles (about 16 km) have been dug, of which around four miles (about 6.5 km) were operational at the start of 2026.</li><li><strong>Expansion:</strong> The Boring Company said in September that it plans to double its number of stations by the end of 2026.</li></ul><h2>To the airport</h2><p>Since just before CES in January 2026, the Loop offers limited rides to Harry Reid International Airport. For now, it only drops passengers off at the departures curb, daily from 10 a.m. to 9 p.m. A ride from Resorts World or Westgate to Terminal 1 or 3 costs around $12. Because the tunnels do not yet reach under the airport, the trip combines a tunnel section with a short stretch on surface streets. Pick-ups at the airport are planned once the cars are fitted with the required transponders.</p><h2>The Tesla connection</h2><p>Every car in the Loop is a Tesla. That makes the Vegas Loop a daily showcase for Tesla vehicles, and a natural candidate for driverless operation: a closed tunnel network with fixed routes is a far simpler environment than open city streets. Tesla's robotaxi software already runs without a safety driver in several US cities, so using it underground is an obvious next step, although no date has been announced.</p><h2>Money and new cities</h2><p>The Boring Company recently raised $3 billion in a funding round that valued it at $23 billion. The money is meant for expansion to more cities: a new loop has been announced for Nashville, Tennessee, and filings point to an underground loop in downtown Austin, Tesla's home city.</p><h2>Why it matters</h2><p>On its own, the Loop is a niche transport system. As part of Musk's ecosystem, it is a place where Tesla cars, software and possibly future driverless operation come together, and one more piece in the debate about how closely Musk's companies are tied.</p>"
   },
   "nl": {
-   "sub": "UITGELEGD",
-   "text": "TESLA'S ONDERGRONDS"
+    "title": "De Vegas Loop: zo vervoert The Boring Company mensen met Tesla's door tunnels",
+    "description": "Onder Las Vegas brengen Tesla's passagiers door tunnels van hotels naar het congrescentrum en richting het vliegveld. Hoe de Loop werkt, wat een rit kost en waar hij naartoe gaat.",
+    "body": "<p>Van alle verbindingen tussen de bedrijven van Elon Musk is de Vegas Loop van The Boring Company de enige waar je vandaag al in kunt stappen. Onder Las Vegas vervoeren gewone Tesla's passagiers door tunnels tussen stations bij hotels en het congrescentrum. Het bedrijf wil dit jaar het aantal stations verdubbelen. Zo werkt het.</p><h2>Wat de Loop is</h2><p>De Loop is geen trein en geen metro. Het is een netwerk van smalle tunnels, ongeveer zo breed als een auto, waardoor Tesla's passagiers rechtstreeks van station naar station rijden. Tussenstops zijn er niet: je stapt in, zegt tegen de chauffeur of in de app waar je heen wilt, en de auto brengt je erheen.</p><h2>Waar hij rijdt</h2><ul><li><strong>Stations:</strong> Encore, Resorts World, Westgate en meerdere locaties bij het Las Vegas Convention Center.</li><li><strong>Tunnels:</strong> er is ruim 16 km gegraven, waarvan begin 2026 zo'n 6,5 km in gebruik was.</li><li><strong>Uitbreiding:</strong> The Boring Company meldde in september dat het aantal stations eind 2026 moet zijn verdubbeld.</li></ul><h2>Naar het vliegveld</h2><p>Sinds vlak voor de techbeurs CES in januari 2026 biedt de Loop beperkt ritten naar Harry Reid International Airport. Voorlopig alleen om passagiers af te zetten bij de vertrekhal, dagelijks van 10.00 tot 21.00 uur. Een rit van Resorts World of Westgate naar Terminal 1 of 3 kost zo'n $12. Omdat de tunnels nog niet tot onder het vliegveld lopen, combineert de rit een tunnelstuk met een kort stuk over de gewone weg. Ophalen op het vliegveld volgt zodra de auto's de vereiste transponders hebben.</p><h2>De link met Tesla</h2><p>Elke auto in de Loop is een Tesla. Daarmee is de Vegas Loop een dagelijkse etalage voor Tesla's, en een logische plek om zonder bestuurder te gaan rijden: een gesloten tunnelnetwerk met vaste routes is veel eenvoudiger dan de openbare weg. Tesla's robotaxisoftware rijdt in meerdere Amerikaanse steden al zonder veiligheidsbestuurder, dus gebruik onder de grond ligt voor de hand, al is er nog geen datum genoemd.</p><h2>Geld en nieuwe steden</h2><p>The Boring Company haalde onlangs $3 miljard op in een investeringsronde, bij een waardering van $23 miljard. Het geld is bedoeld voor uitbreiding naar meer steden: er is een nieuwe loop aangekondigd in Nashville, Tennessee, en vergunningsaanvragen wijzen op een ondergrondse loop in het centrum van Austin, de thuisstad van Tesla.</p><h2>Waarom dit ertoe doet</h2><p>Op zichzelf is de Loop een nichevervoermiddel. Als onderdeel van Musks ecosysteem is het een plek waar Tesla's auto's, software en mogelijk toekomstig rijden zonder bestuurder samenkomen, en nog een puzzelstuk in de discussie over hoe nauw de bedrijven van Musk met elkaar verbonden zijn.</p>"
+  },
+  "images": [
+    "tunnel-6.jpg",
+    "tunnel-1.jpg",
+    "tunnel-3.jpg"
+  ],
+  "label": {
+    "style": "k",
+    "en": {
+      "sub": "EXPLAINED",
+      "text": "TESLAS UNDERGROUND"
+    },
+    "nl": {
+      "sub": "UITGELEGD",
+      "text": "TESLA'S ONDERGRONDS"
+    }
   }
- }
 }

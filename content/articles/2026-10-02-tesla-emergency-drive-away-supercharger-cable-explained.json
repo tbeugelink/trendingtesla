@@ -1,52 +1,50 @@
 {
- "slug": "tesla-emergency-drive-away-supercharger-cable-explained",
- "date": "2026-10-02",
- "time": "09:00",
- "category": "software",
- "sources": [
-  {
-   "title": "Electrek — Tesla adds Emergency Drive Away at Superchargers",
-   "url": "https://electrek.co/2026/10/01/tesla-emergency-drive-away-supercharger/"
-  },
-  {
-   "title": "Drive Tesla Canada — Tesla addresses safety concerns with Supercharger 'Emergency Drive Away'",
-   "url": "https://driveteslacanada.ca/?p=124385"
-  },
-  {
-   "title": "electrive — Teslas can now drive off with a charging cable connected",
-   "url": "https://www.electrive.com/2026/10/02/teslas-can-now-drive-off-with-a-charging-cable-connected/"
-  },
-  {
-   "title": "Cybernews — Tesla says you can drive off with your charging cable still in",
-   "url": "https://cybernews.com/tech/tesla-emergency-drive-away-feature/"
-  }
- ],
- "en": {
-  "title": "Tesla's 'Emergency Drive Away' lets you flee a Supercharger with the cable still plugged in",
-  "description": "A new software feature in update 2026.38.3 lets Tesla drivers in the US shift into Drive while connected to a Supercharger, for emergencies only. Here is how it works, what it costs, and why Tesla added it.",
-  "body": "<p>Until now, a Tesla simply would not leave Park while a charging cable was attached. That is a sensible safety rule, but it can trap a driver at the worst possible moment. On October 1, Tesla's charging team announced a way out: a feature called <strong>Emergency Drive Away</strong>.</p><h2>What the feature does</h2><p>Emergency Drive Away lets you shift into Drive and pull away while the car is still connected to a Supercharger. Normally you first have to unlock the charge port on the screen, in the app or with the button on the handle, and wait for the latch to release. In an emergency, those seconds can matter.</p><p>How it works, according to Tesla's description:</p><ul><li>While plugged in, shift into Drive.</li><li>An 'Emergency Drive Away' message appears on the main screen.</li><li>Hold the brake pedal, tap Activate, and drive off.</li></ul><h2>Key facts</h2><ul><li><strong>Software:</strong> it arrives with update 2026.38.3, free of charge.</li><li><strong>Where:</strong> only at Superchargers in the United States for now. Tesla has not said when, or whether, it will come to Canada or other markets.</li><li><strong>Which cars:</strong> all current Teslas, except Model S and Model X vehicles built before 2021.</li><li><strong>Hardware:</strong> Tesla told an owner that no new stall hardware is needed.</li></ul><h2>It is not free to use</h2><p>Tesla is blunt about the downside. Using the feature 'will damage your vehicle and the Supercharger', it says, because the connector and charge port break when the car pulls away. The function is meant for emergencies only, and Tesla warns that deliberate misuse will bring additional penalties, without saying what those are.</p><p>When the feature is activated, a recording of the event is sent to Tesla automatically, which lets the company see what happened. Cybernews reported that Tesla put the electrical and civil repair costs after such an emergency departure at around $25,000. In other words: this is a button for when your safety is at stake, not for when you are in a hurry.</p><h2>Why Tesla added it</h2><p>Tesla's announcement did not mention a specific incident. But the feature follows a shooting on August 1 in Twin Falls, Idaho, near an In-N-Out restaurant and the Supercharger next to it. According to police, three people were killed and several others injured, including a driver who was shot while sitting in a charging Tesla.</p><p>After the attack, many owners asked Tesla for a way to escape a stall without waiting for the latch. Some turned to the EVject, an aftermarket breakaway adapter that separates from the car when it drives off. Tesla sued its maker in 2024 over overheating concerns, and the company later recalled its original connectors. Its current design adds thermal protection.</p><h2>Why it matters</h2><p>Superchargers are often in car parks next to restaurants and shops, and drivers can spend 20 minutes or more sitting in a stationary car. Being unable to leave quickly is a real risk, even if such situations are rare. Tesla's solution is not elegant: Electrek, for example, argued that a cleaner fix would let the car and stall release the latch on command. But it means a driver is never stuck.</p><p>It is also a rare case of Tesla building a feature that is designed to break its own hardware. That says something about how seriously the company takes the problem.</p><h2>What to watch next</h2><ul><li>Whether Tesla brings the feature to Canada, Europe and other markets.</li><li>What the 'additional penalties' for misuse will look like in practice.</li><li>Whether a future version can release the cable without damage, as some owners have suggested.</li></ul>"
- },
- "nl": {
-  "title": "Met 'Emergency Drive Away' rijd je in nood weg bij een Tesla Supercharger, met de kabel er nog in",
-  "description": "Met update 2026.38.3 kunnen Tesla-rijders in de VS in noodgevallen in Drive schakelen terwijl ze nog aan een Supercharger hangen. Hoe het werkt, wat het kost en waarom Tesla dit heeft toegevoegd.",
-  "body": "<p>Tot nu toe kwam een Tesla niet uit de parkeerstand zolang er een laadkabel in zat. Dat is een verstandige veiligheidsregel, maar hij kan een bestuurder op het slechtst denkbare moment vastzetten. Op 1 oktober kondigde Tesla's laadteam een uitweg aan: een functie met de naam <strong>Emergency Drive Away</strong>.</p><h2>Wat de functie doet</h2><p>Met Emergency Drive Away kun je in Drive schakelen en wegrijden terwijl de auto nog aan een Supercharger vastzit. Normaal moet je eerst de laadklep ontgrendelen via het scherm, de app of de knop op de stekker, en wachten tot de vergrendeling loslaat. In een noodsituatie kunnen die seconden ertoe doen.</p><p>Zo werkt het volgens Tesla:</p><ul><li>Schakel tijdens het laden in Drive.</li><li>Op het middenscherm verschijnt de melding 'Emergency Drive Away'.</li><li>Houd het rempedaal ingetrapt, tik op Activate en rijd weg.</li></ul><h2>De belangrijkste feiten</h2><ul><li><strong>Software:</strong> de functie komt gratis met update 2026.38.3.</li><li><strong>Waar:</strong> voorlopig alleen bij Superchargers in de Verenigde Staten. Tesla heeft niet gezegd of en wanneer de functie naar Canada, Europa of andere markten komt.</li><li><strong>Welke auto's:</strong> alle huidige Tesla's, behalve Model S en Model X die vóór 2021 zijn gebouwd.</li><li><strong>Hardware:</strong> volgens Tesla is er geen nieuwe hardware aan de laadpaal nodig.</li></ul><h2>Gebruiken heeft een prijs</h2><p>Tesla is duidelijk over de keerzijde. Het gebruik van de functie beschadigt volgens het bedrijf 'your vehicle and the Supercharger': de stekker en de laadpoort gaan kapot als de auto wegrijdt. De functie is alleen bedoeld voor noodgevallen. Wie hem bewust misbruikt, krijgt volgens Tesla extra sancties, al zegt het bedrijf niet welke.</p><p>Bij activering stuurt de auto automatisch een opname van het voorval naar Tesla, zodat het bedrijf kan zien wat er gebeurde. Cybernews meldde dat Tesla de elektrische en bouwkundige herstelkosten na zo'n noodvertrek op ongeveer 25.000 dollar schat. Kortom: dit is een knop voor als je veiligheid op het spel staat, niet voor als je haast hebt.</p><h2>Waarom Tesla dit heeft toegevoegd</h2><p>In Tesla's aankondiging werd geen specifiek voorval genoemd. Maar de functie volgt op een schietpartij op 1 augustus in Twin Falls in de Amerikaanse staat Idaho, bij een In-N-Out-restaurant en de Supercharger ernaast. Volgens de politie kwamen daarbij drie mensen om het leven en raakten meerdere anderen gewond, onder wie een bestuurder die werd beschoten terwijl hij in een ladende Tesla zat.</p><p>Na de aanval vroegen veel eigenaren Tesla om een manier om snel weg te komen zonder op de vergrendeling te wachten. Sommigen kochten de EVject, een los verkrijgbaar breekstuk dat van de auto loskomt als die wegrijdt. Tesla daagde de maker in 2024 voor de rechter vanwege oververhitting, waarna het bedrijf zijn eerste connectoren terugriep. Het huidige ontwerp heeft een thermische beveiliging.</p><h2>Waarom dit ertoe doet</h2><p>Superchargers liggen vaak op parkeerterreinen bij restaurants en winkels, en rijders zitten er soms twintig minuten of langer in een stilstaande auto. Niet snel weg kunnen is een echt risico, ook al zijn zulke situaties zeldzaam. Tesla's oplossing is niet elegant. Electrek stelde bijvoorbeeld dat het netter zou zijn als auto en laadpaal de vergrendeling op commando loslaten. Maar een bestuurder zit in elk geval nooit meer vast.</p><p>Het is bovendien uitzonderlijk dat Tesla een functie bouwt die bewust zijn eigen hardware kapotmaakt. Dat zegt iets over hoe serieus het bedrijf het probleem neemt.</p><h2>Waar je op moet letten</h2><ul><li>Of Tesla de functie ook naar Canada, Europa en andere markten brengt.</li><li>Hoe de 'extra sancties' bij misbruik er in de praktijk uitzien.</li><li>Of een latere versie de kabel kan loslaten zonder schade, zoals sommige eigenaren voorstellen.</li></ul>"
- },
- "images": [
-  "supercharger.jpg",
-  "supercharger-6.jpg",
-  "charge-port.jpg"
- ],
- "label": {
-  "style": "k",
-  "pos": "ml",
-  "rot": 0,
+  "slug": "tesla-emergency-drive-away-supercharger-cable-explained",
+  "date": "2026-10-02",
+  "time": "09:00",
+  "category": "software",
+  "sources": [
+    {
+      "title": "Electrek — Tesla adds Emergency Drive Away at Superchargers",
+      "url": "https://electrek.co/2026/10/01/tesla-emergency-drive-away-supercharger/"
+    },
+    {
+      "title": "Drive Tesla Canada — Tesla addresses safety concerns with Supercharger 'Emergency Drive Away'",
+      "url": "https://driveteslacanada.ca/?p=124385"
+    },
+    {
+      "title": "electrive — Teslas can now drive off with a charging cable connected",
+      "url": "https://www.electrive.com/2026/10/02/teslas-can-now-drive-off-with-a-charging-cable-connected/"
+    },
+    {
+      "title": "Cybernews — Tesla says you can drive off with your charging cable still in",
+      "url": "https://cybernews.com/tech/tesla-emergency-drive-away-feature/"
+    }
+  ],
   "en": {
-   "sub": "EMERGENCY ONLY",
-   "text": "DRIVE OFF PLUGGED IN!"
+    "title": "Tesla's 'Emergency Drive Away' lets you flee a Supercharger with the cable still plugged in",
+    "description": "A new software feature in update 2026.38.3 lets Tesla drivers in the US shift into Drive while connected to a Supercharger, for emergencies only. Here is how it works, what it costs, and why Tesla added it.",
+    "body": "<p>Until now, a Tesla simply would not leave Park while a charging cable was attached. That is a sensible safety rule, but it can trap a driver at the worst possible moment. On October 1, Tesla's charging team announced a way out: a feature called <strong>Emergency Drive Away</strong>.</p><h2>What the feature does</h2><p>Emergency Drive Away lets you shift into Drive and pull away while the car is still connected to a Supercharger. Normally you first have to unlock the charge port on the screen, in the app or with the button on the handle, and wait for the latch to release. In an emergency, those seconds can matter.</p><p>How it works, according to Tesla's description:</p><ul><li>While plugged in, shift into Drive.</li><li>An 'Emergency Drive Away' message appears on the main screen.</li><li>Hold the brake pedal, tap Activate, and drive off.</li></ul><h2>Key facts</h2><ul><li><strong>Software:</strong> it arrives with update 2026.38.3, free of charge.</li><li><strong>Where:</strong> only at Superchargers in the United States for now. Tesla has not said when, or whether, it will come to Canada or other markets.</li><li><strong>Which cars:</strong> all current Teslas, except Model S and Model X vehicles built before 2021.</li><li><strong>Hardware:</strong> Tesla told an owner that no new stall hardware is needed.</li></ul><h2>It is not free to use</h2><p>Tesla is blunt about the downside. Using the feature 'will damage your vehicle and the Supercharger', it says, because the connector and charge port break when the car pulls away. The function is meant for emergencies only, and Tesla warns that deliberate misuse will bring additional penalties, without saying what those are.</p><p>When the feature is activated, a recording of the event is sent to Tesla automatically, which lets the company see what happened. Cybernews reported that Tesla put the electrical and civil repair costs after such an emergency departure at around $25,000. In other words: this is a button for when your safety is at stake, not for when you are in a hurry.</p><h2>Why Tesla added it</h2><p>Tesla's announcement did not mention a specific incident. But the feature follows a shooting on August 1 in Twin Falls, Idaho, near an In-N-Out restaurant and the Supercharger next to it. According to police, three people were killed and several others injured, including a driver who was shot while sitting in a charging Tesla.</p><p>After the attack, many owners asked Tesla for a way to escape a stall without waiting for the latch. Some turned to the EVject, an aftermarket breakaway adapter that separates from the car when it drives off. Tesla sued its maker in 2024 over overheating concerns, and the company later recalled its original connectors. Its current design adds thermal protection.</p><h2>Why it matters</h2><p>Superchargers are often in car parks next to restaurants and shops, and drivers can spend 20 minutes or more sitting in a stationary car. Being unable to leave quickly is a real risk, even if such situations are rare. Tesla's solution is not elegant: Electrek, for example, argued that a cleaner fix would let the car and stall release the latch on command. But it means a driver is never stuck.</p><p>It is also a rare case of Tesla building a feature that is designed to break its own hardware. That says something about how seriously the company takes the problem.</p><h2>What to watch next</h2><ul><li>Whether Tesla brings the feature to Canada, Europe and other markets.</li><li>What the 'additional penalties' for misuse will look like in practice.</li><li>Whether a future version can release the cable without damage, as some owners have suggested.</li></ul>"
   },
   "nl": {
-   "sub": "ALLEEN IN NOOD",
-   "text": "WEGRIJDEN MET KABEL!"
+    "title": "Met 'Emergency Drive Away' rijd je in nood weg bij een Tesla Supercharger, met de kabel er nog in",
+    "description": "Met update 2026.38.3 kunnen Tesla-rijders in de VS in noodgevallen in Drive schakelen terwijl ze nog aan een Supercharger hangen. Hoe het werkt, wat het kost en waarom Tesla dit heeft toegevoegd.",
+    "body": "<p>Tot nu toe kwam een Tesla niet uit de parkeerstand zolang er een laadkabel in zat. Dat is een verstandige veiligheidsregel, maar hij kan een bestuurder op het slechtst denkbare moment vastzetten. Op 1 oktober kondigde Tesla's laadteam een uitweg aan: een functie met de naam <strong>Emergency Drive Away</strong>.</p><h2>Wat de functie doet</h2><p>Met Emergency Drive Away kun je in Drive schakelen en wegrijden terwijl de auto nog aan een Supercharger vastzit. Normaal moet je eerst de laadklep ontgrendelen via het scherm, de app of de knop op de stekker, en wachten tot de vergrendeling loslaat. In een noodsituatie kunnen die seconden ertoe doen.</p><p>Zo werkt het volgens Tesla:</p><ul><li>Schakel tijdens het laden in Drive.</li><li>Op het middenscherm verschijnt de melding 'Emergency Drive Away'.</li><li>Houd het rempedaal ingetrapt, tik op Activate en rijd weg.</li></ul><h2>De belangrijkste feiten</h2><ul><li><strong>Software:</strong> de functie komt gratis met update 2026.38.3.</li><li><strong>Waar:</strong> voorlopig alleen bij Superchargers in de Verenigde Staten. Tesla heeft niet gezegd of en wanneer de functie naar Canada, Europa of andere markten komt.</li><li><strong>Welke auto's:</strong> alle huidige Tesla's, behalve Model S en Model X die vóór 2021 zijn gebouwd.</li><li><strong>Hardware:</strong> volgens Tesla is er geen nieuwe hardware aan de laadpaal nodig.</li></ul><h2>Gebruiken heeft een prijs</h2><p>Tesla is duidelijk over de keerzijde. Het gebruik van de functie beschadigt volgens het bedrijf 'your vehicle and the Supercharger': de stekker en de laadpoort gaan kapot als de auto wegrijdt. De functie is alleen bedoeld voor noodgevallen. Wie hem bewust misbruikt, krijgt volgens Tesla extra sancties, al zegt het bedrijf niet welke.</p><p>Bij activering stuurt de auto automatisch een opname van het voorval naar Tesla, zodat het bedrijf kan zien wat er gebeurde. Cybernews meldde dat Tesla de elektrische en bouwkundige herstelkosten na zo'n noodvertrek op ongeveer 25.000 dollar schat. Kortom: dit is een knop voor als je veiligheid op het spel staat, niet voor als je haast hebt.</p><h2>Waarom Tesla dit heeft toegevoegd</h2><p>In Tesla's aankondiging werd geen specifiek voorval genoemd. Maar de functie volgt op een schietpartij op 1 augustus in Twin Falls in de Amerikaanse staat Idaho, bij een In-N-Out-restaurant en de Supercharger ernaast. Volgens de politie kwamen daarbij drie mensen om het leven en raakten meerdere anderen gewond, onder wie een bestuurder die werd beschoten terwijl hij in een ladende Tesla zat.</p><p>Na de aanval vroegen veel eigenaren Tesla om een manier om snel weg te komen zonder op de vergrendeling te wachten. Sommigen kochten de EVject, een los verkrijgbaar breekstuk dat van de auto loskomt als die wegrijdt. Tesla daagde de maker in 2024 voor de rechter vanwege oververhitting, waarna het bedrijf zijn eerste connectoren terugriep. Het huidige ontwerp heeft een thermische beveiliging.</p><h2>Waarom dit ertoe doet</h2><p>Superchargers liggen vaak op parkeerterreinen bij restaurants en winkels, en rijders zitten er soms twintig minuten of langer in een stilstaande auto. Niet snel weg kunnen is een echt risico, ook al zijn zulke situaties zeldzaam. Tesla's oplossing is niet elegant. Electrek stelde bijvoorbeeld dat het netter zou zijn als auto en laadpaal de vergrendeling op commando loslaten. Maar een bestuurder zit in elk geval nooit meer vast.</p><p>Het is bovendien uitzonderlijk dat Tesla een functie bouwt die bewust zijn eigen hardware kapotmaakt. Dat zegt iets over hoe serieus het bedrijf het probleem neemt.</p><h2>Waar je op moet letten</h2><ul><li>Of Tesla de functie ook naar Canada, Europa en andere markten brengt.</li><li>Hoe de 'extra sancties' bij misbruik er in de praktijk uitzien.</li><li>Of een latere versie de kabel kan loslaten zonder schade, zoals sommige eigenaren voorstellen.</li></ul>"
+  },
+  "images": [
+    "supercharger.jpg",
+    "supercharger-6.jpg",
+    "charge-port.jpg"
+  ],
+  "label": {
+    "style": "k",
+    "en": {
+      "sub": "EMERGENCY ONLY",
+      "text": "DRIVE OFF PLUGGED IN!"
+    },
+    "nl": {
+      "sub": "ALLEEN IN NOOD",
+      "text": "WEGRIJDEN MET KABEL!"
+    }
   }
- }
 }

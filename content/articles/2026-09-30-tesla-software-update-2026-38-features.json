@@ -1,39 +1,37 @@
 {
- "slug": "tesla-software-update-2026-38-features",
- "date": "2026-09-30",
- "time": "21:10",
- "category": "software",
- "sources": [
-  {
-   "title": "Not a Tesla App — Update 2026.38 release notes",
-   "url": "https://notateslaapp.com/software-updates/version/2026.38/release-notes"
-  }
- ],
- "en": {
-  "title": "Tesla update 2026.38: smarter headlights, Supercharger site maps and Grok out of beta",
-  "description": "Tesla's latest software update brings adaptive headlight leveling, a live map of selected Supercharger sites and better visuals. Here is what is new and which cars get it.",
-  "body": "<p>Tesla started rolling out software update 2026.38 on September 30. It is not a huge release, but it has a few features owners will notice in daily driving.</p><h2>Dynamic headlight leveling</h2><p>The low beams now adjust their aim automatically based on driving conditions and nearby traffic. The goal is better visibility for you and less glare for oncoming drivers. It is available worldwide on specific vehicles, including the Model 3 and Cybertruck.</p><h2>Supercharger site maps</h2><p>At selected Supercharger locations you can now tap 'View Site Map' to see a detailed layout of the site. When you arrive at one of the pilot locations, the map also shows live occupancy, so you can see which stalls are free before you pull in. It is available worldwide, but only at the pilot sites for now.</p><h2>Better visuals</h2><p>The image of your car on the center screen is sharper, and the park scene around it has been improved. This applies to the Model 3 and Model Y with the AMD-based computer.</p><h2>Grok is no longer in beta</h2><p>Not listed as a feature, but noticeable: the beta label has been removed from Grok, the AI assistant built into the car.</p><h2>Security fixes</h2><p>As usual, the update includes security improvements for all supported models.</p><h2>When do you get it?</h2><p>Tesla rolls updates out in waves, starting with a small group of cars and expanding over days or weeks. Your car will show a notification when the update is ready. Connecting to Wi-Fi at home usually speeds things up.</p>"
- },
- "nl": {
-  "title": "Tesla-update 2026.38: slimmere koplampen, plattegronden van Superchargers en Grok uit de bèta",
-  "description": "De nieuwste software-update van Tesla brengt automatisch afstellende koplampen, een live plattegrond van geselecteerde Superchargers en mooiere beelden. Dit is er nieuw, en deze auto's krijgen het.",
-  "body": "<p>Tesla is op 30 september begonnen met de uitrol van software-update 2026.38. Het is geen enorme release, maar er zitten een paar functies in die je in het dagelijks rijden merkt.</p><h2>Dynamische koplampverstelling</h2><p>Het dimlicht past de lichtbundel nu automatisch aan op de omstandigheden en het verkeer om je heen. Het doel: beter zicht voor jou en minder verblinding voor tegenliggers. De functie is wereldwijd beschikbaar op bepaalde auto's, waaronder de Model 3 en de Cybertruck.</p><h2>Plattegronden van Superchargers</h2><p>Bij geselecteerde Superchargers kun je nu op 'View Site Map' tikken voor een gedetailleerde plattegrond van de locatie. Kom je aan bij een van de proeflocaties, dan toont de kaart ook live hoeveel palen bezet zijn, zodat je ziet welke plek vrij is voordat je het terrein oprijdt. De functie is wereldwijd beschikbaar, maar voorlopig alleen op de proeflocaties.</p><h2>Mooiere beelden</h2><p>De afbeelding van je auto op het middenscherm is scherper, en de omgeving in de parkeerweergave is verbeterd. Dit geldt voor de Model 3 en Model Y met de computer op basis van AMD.</p><h2>Grok is uit de bèta</h2><p>Niet als functie genoemd, maar wel zichtbaar: het label 'bèta' is verdwenen bij Grok, de AI-assistent in de auto.</p><h2>Beveiligingsverbeteringen</h2><p>Zoals gebruikelijk bevat de update beveiligingsverbeteringen voor alle ondersteunde modellen.</p><h2>Wanneer krijg je hem?</h2><p>Tesla rolt updates in golven uit: eerst bij een kleine groep auto's, daarna in de loop van dagen of weken bij steeds meer. Je auto meldt het zodra de update klaarstaat. Verbinding met wifi thuis versnelt het meestal.</p>"
- },
- "images": [
-  "software-update.jpg",
-  "fsd.jpg"
- ],
- "label": {
-  "style": "n",
-  "pos": "tl",
-  "rot": 0,
+  "slug": "tesla-software-update-2026-38-features",
+  "date": "2026-09-30",
+  "time": "21:10",
+  "category": "software",
+  "sources": [
+    {
+      "title": "Not a Tesla App — Update 2026.38 release notes",
+      "url": "https://notateslaapp.com/software-updates/version/2026.38/release-notes"
+    }
+  ],
   "en": {
-   "text": "2026.38",
-   "sub": "SMARTER HEADLIGHTS"
+    "title": "Tesla update 2026.38: smarter headlights, Supercharger site maps and Grok out of beta",
+    "description": "Tesla's latest software update brings adaptive headlight leveling, a live map of selected Supercharger sites and better visuals. Here is what is new and which cars get it.",
+    "body": "<p>Tesla started rolling out software update 2026.38 on September 30. It is not a huge release, but it has a few features owners will notice in daily driving.</p><h2>Dynamic headlight leveling</h2><p>The low beams now adjust their aim automatically based on driving conditions and nearby traffic. The goal is better visibility for you and less glare for oncoming drivers. It is available worldwide on specific vehicles, including the Model 3 and Cybertruck.</p><h2>Supercharger site maps</h2><p>At selected Supercharger locations you can now tap 'View Site Map' to see a detailed layout of the site. When you arrive at one of the pilot locations, the map also shows live occupancy, so you can see which stalls are free before you pull in. It is available worldwide, but only at the pilot sites for now.</p><h2>Better visuals</h2><p>The image of your car on the center screen is sharper, and the park scene around it has been improved. This applies to the Model 3 and Model Y with the AMD-based computer.</p><h2>Grok is no longer in beta</h2><p>Not listed as a feature, but noticeable: the beta label has been removed from Grok, the AI assistant built into the car.</p><h2>Security fixes</h2><p>As usual, the update includes security improvements for all supported models.</p><h2>When do you get it?</h2><p>Tesla rolls updates out in waves, starting with a small group of cars and expanding over days or weeks. Your car will show a notification when the update is ready. Connecting to Wi-Fi at home usually speeds things up.</p>"
   },
   "nl": {
-   "text": "2026.38",
-   "sub": "SLIMMERE KOPLAMPEN"
+    "title": "Tesla-update 2026.38: slimmere koplampen, plattegronden van Superchargers en Grok uit de bèta",
+    "description": "De nieuwste software-update van Tesla brengt automatisch afstellende koplampen, een live plattegrond van geselecteerde Superchargers en mooiere beelden. Dit is er nieuw, en deze auto's krijgen het.",
+    "body": "<p>Tesla is op 30 september begonnen met de uitrol van software-update 2026.38. Het is geen enorme release, maar er zitten een paar functies in die je in het dagelijks rijden merkt.</p><h2>Dynamische koplampverstelling</h2><p>Het dimlicht past de lichtbundel nu automatisch aan op de omstandigheden en het verkeer om je heen. Het doel: beter zicht voor jou en minder verblinding voor tegenliggers. De functie is wereldwijd beschikbaar op bepaalde auto's, waaronder de Model 3 en de Cybertruck.</p><h2>Plattegronden van Superchargers</h2><p>Bij geselecteerde Superchargers kun je nu op 'View Site Map' tikken voor een gedetailleerde plattegrond van de locatie. Kom je aan bij een van de proeflocaties, dan toont de kaart ook live hoeveel palen bezet zijn, zodat je ziet welke plek vrij is voordat je het terrein oprijdt. De functie is wereldwijd beschikbaar, maar voorlopig alleen op de proeflocaties.</p><h2>Mooiere beelden</h2><p>De afbeelding van je auto op het middenscherm is scherper, en de omgeving in de parkeerweergave is verbeterd. Dit geldt voor de Model 3 en Model Y met de computer op basis van AMD.</p><h2>Grok is uit de bèta</h2><p>Niet als functie genoemd, maar wel zichtbaar: het label 'bèta' is verdwenen bij Grok, de AI-assistent in de auto.</p><h2>Beveiligingsverbeteringen</h2><p>Zoals gebruikelijk bevat de update beveiligingsverbeteringen voor alle ondersteunde modellen.</p><h2>Wanneer krijg je hem?</h2><p>Tesla rolt updates in golven uit: eerst bij een kleine groep auto's, daarna in de loop van dagen of weken bij steeds meer. Je auto meldt het zodra de update klaarstaat. Verbinding met wifi thuis versnelt het meestal.</p>"
+  },
+  "images": [
+    "software-update.jpg",
+    "fsd.jpg"
+  ],
+  "label": {
+    "style": "n",
+    "en": {
+      "text": "2026.38",
+      "sub": "SMARTER HEADLIGHTS"
+    },
+    "nl": {
+      "text": "2026.38",
+      "sub": "SLIMMERE KOPLAMPEN"
+    }
   }
- }
 }

@@ -1,41 +1,39 @@
 {
- "slug": "cybercab-specs-explained-battery-range-charging",
- "date": "2026-09-08",
- "time": "14:30",
- "category": "robotaxi",
- "models": [
-  "cybercab"
- ],
- "sources": [
-  {
-   "title": "Wikipedia — Tesla Cybercab (EPA data and specifications)",
-   "url": "https://en.wikipedia.org/wiki/Tesla_Cybercab"
-  },
-  {
-   "title": "Motor1 — Tesla Cybercab robotaxi launch in Austin",
-   "url": "https://www.motor1.com/news/805874/tesla-cybercab-robotaxi-launch-austin/"
-  }
- ],
- "en": {
-  "title": "Tesla Cybercab specs explained: battery, range, weight and why it skips AC charging",
-  "description": "A small battery, a light body and DC-only charging: the Cybercab's numbers show a car built for one job. Here is what is inside and what it tells us about Tesla's robotaxi plans.",
-  "body": "<p>Now that the Cybercab is carrying paying passengers in Austin, it is worth looking at what Tesla actually built. Most of the hard numbers come from EPA documents that surfaced in June, with a few details confirmed around the launch.</p><h2>The key numbers</h2><ul><li><strong>Battery:</strong> 48 kWh, built from Tesla's own 4680 cells.</li><li><strong>Range:</strong> about 293 miles (472 km), a preliminary EPA estimate.</li><li><strong>Power:</strong> 219 hp (163 kW).</li><li><strong>Curb weight:</strong> 3,113 lb (1,412 kg), with a payload of 617 lb (280 kg).</li><li><strong>Efficiency:</strong> around 165 Wh per mile.</li><li><strong>Seats:</strong> two, with no steering wheel or pedals.</li></ul><h2>A small battery on purpose</h2><p>For comparison, a Model Y carries a considerably larger pack. The Cybercab gets away with 48 kWh because it is light, aerodynamic and designed to drive short urban trips all day, returning to a hub to recharge. A smaller battery means a cheaper car and less weight to haul around, which is exactly what you want when you are selling rides by the mile.</p><h2>No AC charging</h2><p>Reports in early September confirmed that the Cybercab has no support for AC charging. It uses a NACS port for DC fast charging only. That makes sense for a car that will never be plugged in at someone's home. Tesla has also been reported to be planning robotaxi hubs with wireless charging pads, which would let the cars top up without anyone handling a cable.</p><h2>The software</h2><p>The Cybercab runs an unsupervised version of Full Self-Driving on modified Hardware 4. That software is not yet available in customer cars, which still require an attentive driver.</p><h2>What it tells us</h2><p>Everything about the Cybercab is optimized for low cost per mile: few seats, a small pack, no driver controls and no home-charging hardware. Tesla's target is an operating cost below $0.30 per mile. Whether it gets there depends less on the hardware than on how many hours a day each car can earn money, and that is up to the software and the regulators.</p>"
- },
- "nl": {
-  "title": "Specificaties van de Tesla Cybercab uitgelegd: accu, bereik, gewicht en waarom hij niet aan de wisselstroom kan",
-  "description": "Een kleine accu, een licht lichaam en alleen snelladen: de cijfers van de Cybercab laten een auto zien die voor één taak is gebouwd. Dit zit erin, en dit zegt het over Tesla's robotaxiplannen.",
-  "body": "<p>Nu de Cybercab in Austin betalende passagiers vervoert, is het de moeite waard om te kijken wat Tesla precies heeft gebouwd. De meeste harde cijfers komen uit EPA-documenten die in juni opdoken, aangevuld met een paar details die rond de lancering zijn bevestigd.</p><h2>De belangrijkste cijfers</h2><ul><li><strong>Accu:</strong> 48 kWh, opgebouwd uit Tesla's eigen 4680-cellen.</li><li><strong>Bereik:</strong> ongeveer 472 km, een voorlopige EPA-schatting.</li><li><strong>Vermogen:</strong> 163 kW (219 pk).</li><li><strong>Leeggewicht:</strong> 1.412 kg, met een laadvermogen van 280 kg.</li><li><strong>Verbruik:</strong> ruim 100 Wh per kilometer.</li><li><strong>Zitplaatsen:</strong> twee, zonder stuur of pedalen.</li></ul><h2>Bewust een kleine accu</h2><p>Een Model Y heeft een flink grotere accu. De Cybercab kan toe met 48 kWh omdat hij licht en aerodynamisch is en ontworpen is om de hele dag korte ritten in de stad te maken, waarna hij terugkeert naar een laadhub. Een kleinere accu betekent een goedkopere auto en minder gewicht om mee te slepen. Precies wat je wilt als je ritten per kilometer verkoopt.</p><h2>Geen wisselstroomladen</h2><p>Begin september werd bevestigd dat de Cybercab niet met wisselstroom (AC) kan laden. Hij heeft een NACS-aansluiting en laadt alleen met gelijkstroom (DC) bij snelladers. Logisch voor een auto die nooit bij iemand thuis aan de laadpaal hangt. Volgens berichten plant Tesla ook robotaxihubs met draadloze laadplaten, zodat de auto's kunnen bijladen zonder dat iemand een kabel hoeft aan te sluiten.</p><h2>De software</h2><p>De Cybercab draait een versie van Full Self-Driving zonder toezicht, op aangepaste Hardware 4. Die software is in klantauto's nog niet beschikbaar; daar moet de bestuurder altijd opletten.</p><h2>Wat het ons vertelt</h2><p>Alles aan de Cybercab is gericht op lage kosten per kilometer: weinig stoelen, een kleine accu, geen bediening voor een bestuurder en geen hardware om thuis te laden. Tesla mikt op gebruikskosten onder $0,30 per mijl, omgerekend zo'n €0,17 per kilometer. Of dat lukt, hangt minder af van de hardware dan van hoeveel uur per dag elke auto geld kan verdienen. En dat is aan de software en de toezichthouders.</p>"
- },
- "image": "topics/cybercab-interior.jpg",
- "label": {
-  "style": "y",
-  "pos": "ml",
-  "rot": 2,
+  "slug": "cybercab-specs-explained-battery-range-charging",
+  "date": "2026-09-08",
+  "time": "14:30",
+  "category": "robotaxi",
+  "models": [
+    "cybercab"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia — Tesla Cybercab (EPA data and specifications)",
+      "url": "https://en.wikipedia.org/wiki/Tesla_Cybercab"
+    },
+    {
+      "title": "Motor1 — Tesla Cybercab robotaxi launch in Austin",
+      "url": "https://www.motor1.com/news/805874/tesla-cybercab-robotaxi-launch-austin/"
+    }
+  ],
   "en": {
-   "text": "48 KWH, NO AC CHARGING"
+    "title": "Tesla Cybercab specs explained: battery, range, weight and why it skips AC charging",
+    "description": "A small battery, a light body and DC-only charging: the Cybercab's numbers show a car built for one job. Here is what is inside and what it tells us about Tesla's robotaxi plans.",
+    "body": "<p>Now that the Cybercab is carrying paying passengers in Austin, it is worth looking at what Tesla actually built. Most of the hard numbers come from EPA documents that surfaced in June, with a few details confirmed around the launch.</p><h2>The key numbers</h2><ul><li><strong>Battery:</strong> 48 kWh, built from Tesla's own 4680 cells.</li><li><strong>Range:</strong> about 293 miles (472 km), a preliminary EPA estimate.</li><li><strong>Power:</strong> 219 hp (163 kW).</li><li><strong>Curb weight:</strong> 3,113 lb (1,412 kg), with a payload of 617 lb (280 kg).</li><li><strong>Efficiency:</strong> around 165 Wh per mile.</li><li><strong>Seats:</strong> two, with no steering wheel or pedals.</li></ul><h2>A small battery on purpose</h2><p>For comparison, a Model Y carries a considerably larger pack. The Cybercab gets away with 48 kWh because it is light, aerodynamic and designed to drive short urban trips all day, returning to a hub to recharge. A smaller battery means a cheaper car and less weight to haul around, which is exactly what you want when you are selling rides by the mile.</p><h2>No AC charging</h2><p>Reports in early September confirmed that the Cybercab has no support for AC charging. It uses a NACS port for DC fast charging only. That makes sense for a car that will never be plugged in at someone's home. Tesla has also been reported to be planning robotaxi hubs with wireless charging pads, which would let the cars top up without anyone handling a cable.</p><h2>The software</h2><p>The Cybercab runs an unsupervised version of Full Self-Driving on modified Hardware 4. That software is not yet available in customer cars, which still require an attentive driver.</p><h2>What it tells us</h2><p>Everything about the Cybercab is optimized for low cost per mile: few seats, a small pack, no driver controls and no home-charging hardware. Tesla's target is an operating cost below $0.30 per mile. Whether it gets there depends less on the hardware than on how many hours a day each car can earn money, and that is up to the software and the regulators.</p>"
   },
   "nl": {
-   "text": "48 KWH, GEEN AC-LADEN"
+    "title": "Specificaties van de Tesla Cybercab uitgelegd: accu, bereik, gewicht en waarom hij niet aan de wisselstroom kan",
+    "description": "Een kleine accu, een licht lichaam en alleen snelladen: de cijfers van de Cybercab laten een auto zien die voor één taak is gebouwd. Dit zit erin, en dit zegt het over Tesla's robotaxiplannen.",
+    "body": "<p>Nu de Cybercab in Austin betalende passagiers vervoert, is het de moeite waard om te kijken wat Tesla precies heeft gebouwd. De meeste harde cijfers komen uit EPA-documenten die in juni opdoken, aangevuld met een paar details die rond de lancering zijn bevestigd.</p><h2>De belangrijkste cijfers</h2><ul><li><strong>Accu:</strong> 48 kWh, opgebouwd uit Tesla's eigen 4680-cellen.</li><li><strong>Bereik:</strong> ongeveer 472 km, een voorlopige EPA-schatting.</li><li><strong>Vermogen:</strong> 163 kW (219 pk).</li><li><strong>Leeggewicht:</strong> 1.412 kg, met een laadvermogen van 280 kg.</li><li><strong>Verbruik:</strong> ruim 100 Wh per kilometer.</li><li><strong>Zitplaatsen:</strong> twee, zonder stuur of pedalen.</li></ul><h2>Bewust een kleine accu</h2><p>Een Model Y heeft een flink grotere accu. De Cybercab kan toe met 48 kWh omdat hij licht en aerodynamisch is en ontworpen is om de hele dag korte ritten in de stad te maken, waarna hij terugkeert naar een laadhub. Een kleinere accu betekent een goedkopere auto en minder gewicht om mee te slepen. Precies wat je wilt als je ritten per kilometer verkoopt.</p><h2>Geen wisselstroomladen</h2><p>Begin september werd bevestigd dat de Cybercab niet met wisselstroom (AC) kan laden. Hij heeft een NACS-aansluiting en laadt alleen met gelijkstroom (DC) bij snelladers. Logisch voor een auto die nooit bij iemand thuis aan de laadpaal hangt. Volgens berichten plant Tesla ook robotaxihubs met draadloze laadplaten, zodat de auto's kunnen bijladen zonder dat iemand een kabel hoeft aan te sluiten.</p><h2>De software</h2><p>De Cybercab draait een versie van Full Self-Driving zonder toezicht, op aangepaste Hardware 4. Die software is in klantauto's nog niet beschikbaar; daar moet de bestuurder altijd opletten.</p><h2>Wat het ons vertelt</h2><p>Alles aan de Cybercab is gericht op lage kosten per kilometer: weinig stoelen, een kleine accu, geen bediening voor een bestuurder en geen hardware om thuis te laden. Tesla mikt op gebruikskosten onder $0,30 per mijl, omgerekend zo'n €0,17 per kilometer. Of dat lukt, hangt minder af van de hardware dan van hoeveel uur per dag elke auto geld kan verdienen. En dat is aan de software en de toezichthouders.</p>"
+  },
+  "image": "topics/cybercab-interior.jpg",
+  "label": {
+    "style": "y",
+    "en": {
+      "text": "48 KWH, NO AC CHARGING"
+    },
+    "nl": {
+      "text": "48 KWH, GEEN AC-LADEN"
+    }
   }
- }
 }

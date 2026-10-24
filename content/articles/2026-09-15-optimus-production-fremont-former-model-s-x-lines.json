@@ -1,51 +1,49 @@
 {
- "slug": "optimus-production-fremont-former-model-s-x-lines",
- "date": "2026-09-15",
- "time": "08:20",
- "category": "optimus",
- "models": [
-  "model-s",
-  "model-x"
- ],
- "sources": [
-  {
-   "title": "Nasdaq — Why Tesla's Optimus story is more promise than progress",
-   "url": "https://www.nasdaq.com/articles/why-teslas-optimus-story-more-promise-progress"
-  },
-  {
-   "title": "CarPro — Tesla ending production of Model S and Model X",
-   "url": "https://www.carpro.com/blog/tesla-ending-production-of-model-s-model-x"
-  },
-  {
-   "title": "Wikipedia — Optimus (robot)",
-   "url": "https://en.wikipedia.org/wiki/Optimus_(robot)"
-  }
- ],
- "en": {
-  "title": "From Model S to Optimus: how Tesla turned its Fremont flagship lines into a robot factory",
-  "description": "The lines that built the Model S and Model X for more than a decade now build Optimus robots. Here is what changed in Fremont, the targets and the doubts.",
-  "body": "<p>For more than ten years, Tesla's Fremont factory built the Model S and Model X, the cars that made the brand. In 2026 those lines got a new job: building Optimus, Tesla's humanoid robot.</p><h2>What happened</h2><p>Elon Musk announced the end of the Model S and Model X on Tesla's fourth-quarter call in January 2026, calling it an honorable discharge for the two cars. Production stopped in the second quarter. The space they used in Fremont is being converted into production lines for Optimus.</p><h2>The targets</h2><ul><li><strong>Design capacity:</strong> Tesla said in April that the first-generation Optimus lines in Fremont are designed for up to one million robots a year.</li><li><strong>Start:</strong> on its first-quarter call, Tesla pointed to production starting around late July or August 2026.</li><li><strong>Set-up time:</strong> Musk expected the new line to take about four months to install.</li><li><strong>Second factory:</strong> a much larger Optimus plant at Gigafactory Texas is being prepared for later.</li></ul><h2>Why it is hard</h2><p>A humanoid robot is a far more complex product than a car body. Optimus has more than 10,000 unique parts, none of which were mass-produced before. Musk himself warned that initial production would be slow. Critics also point out that Tesla's earlier target of building around 10,000 robots by the end of 2025 was missed.</p><h2>Why Tesla made the trade</h2><p>The Model S and X had become a small part of Tesla's sales, an estimated 3% of deliveries in 2025. Tesla is betting that robots will be worth far more than low-volume luxury cars. Freeing up an existing, fully equipped factory was the fastest way to get there.</p><h2>For existing S and X owners</h2><p>Tesla says it will keep servicing the Model S and Model X, supplying parts and sending software updates. It has not said for how long.</p>"
- },
- "nl": {
-  "title": "Van Model S naar Optimus: zo maakte Tesla van zijn vlaggenschiplijnen in Fremont een robotfabriek",
-  "description": "De lijnen waar ruim tien jaar de Model S en Model X werden gebouwd, maken nu Optimus-robots. Wat er in Fremont veranderde, de doelen en de twijfels.",
-  "body": "<p>Ruim tien jaar bouwde Tesla's fabriek in Fremont de Model S en Model X, de auto's die het merk groot maakten. In 2026 kregen die lijnen een nieuwe taak: het bouwen van Optimus, Tesla's humanoïde robot.</p><h2>Wat er gebeurde</h2><p>Elon Musk kondigde het einde van de Model S en Model X aan tijdens de toelichting op het vierde kwartaal in januari 2026, en noemde het een eervol ontslag voor beide auto's. De productie stopte in het tweede kwartaal. De ruimte die ze in Fremont gebruikten, wordt omgebouwd tot productielijnen voor Optimus.</p><h2>De doelen</h2><ul><li><strong>Ontwerpcapaciteit:</strong> volgens Tesla zijn de eerste Optimus-lijnen in Fremont ontworpen voor maximaal een miljoen robots per jaar.</li><li><strong>Start:</strong> bij de cijfers over het eerste kwartaal noemde Tesla eind juli of augustus 2026 als begin van de productie.</li><li><strong>Inrichting:</strong> Musk verwachtte dat het installeren van de nieuwe lijn ongeveer vier maanden zou duren.</li><li><strong>Tweede fabriek:</strong> in Gigafactory Texas wordt een veel grotere Optimus-fabriek voorbereid.</li></ul><h2>Waarom het lastig is</h2><p>Een humanoïde robot is veel ingewikkelder dan een autocarrosserie. Optimus heeft meer dan 10.000 unieke onderdelen, waarvan er geen eerder in massa werd geproduceerd. Musk waarschuwde zelf dat de eerste productie langzaam zou gaan. Critici wijzen er ook op dat Tesla's eerdere doel om eind 2025 zo'n 10.000 robots te hebben gebouwd, niet is gehaald.</p><h2>Waarom Tesla deze ruil maakte</h2><p>De Model S en X waren een klein deel van Tesla's verkoop geworden, naar schatting 3% van de leveringen in 2025. Tesla gokt erop dat robots veel meer waard zijn dan luxeauto's in kleine aantallen. Een bestaande, volledig ingerichte fabriek vrijmaken was de snelste weg daarheen.</p><h2>Voor wie al een S of X heeft</h2><p>Tesla zegt dat het de Model S en Model X blijft onderhouden, onderdelen blijft leveren en software-updates blijft sturen. Hoe lang, heeft het bedrijf niet gezegd.</p>"
- },
- "image": "topics/optimus-line.jpg",
- "images": [
-  "optimus-line.jpg",
-  "optimus-factory.jpg",
-  "gigafactory-fremont.jpg"
- ],
- "label": {
-  "style": "w",
-  "pos": "bl",
-  "rot": 0,
+  "slug": "optimus-production-fremont-former-model-s-x-lines",
+  "date": "2026-09-15",
+  "time": "08:20",
+  "category": "optimus",
+  "models": [
+    "model-s",
+    "model-x"
+  ],
+  "sources": [
+    {
+      "title": "Nasdaq — Why Tesla's Optimus story is more promise than progress",
+      "url": "https://www.nasdaq.com/articles/why-teslas-optimus-story-more-promise-progress"
+    },
+    {
+      "title": "CarPro — Tesla ending production of Model S and Model X",
+      "url": "https://www.carpro.com/blog/tesla-ending-production-of-model-s-model-x"
+    },
+    {
+      "title": "Wikipedia — Optimus (robot)",
+      "url": "https://en.wikipedia.org/wiki/Optimus_(robot)"
+    }
+  ],
   "en": {
-   "text": "FROM MODEL S TO OPTIMUS"
+    "title": "From Model S to Optimus: how Tesla turned its Fremont flagship lines into a robot factory",
+    "description": "The lines that built the Model S and Model X for more than a decade now build Optimus robots. Here is what changed in Fremont, the targets and the doubts.",
+    "body": "<p>For more than ten years, Tesla's Fremont factory built the Model S and Model X, the cars that made the brand. In 2026 those lines got a new job: building Optimus, Tesla's humanoid robot.</p><h2>What happened</h2><p>Elon Musk announced the end of the Model S and Model X on Tesla's fourth-quarter call in January 2026, calling it an honorable discharge for the two cars. Production stopped in the second quarter. The space they used in Fremont is being converted into production lines for Optimus.</p><h2>The targets</h2><ul><li><strong>Design capacity:</strong> Tesla said in April that the first-generation Optimus lines in Fremont are designed for up to one million robots a year.</li><li><strong>Start:</strong> on its first-quarter call, Tesla pointed to production starting around late July or August 2026.</li><li><strong>Set-up time:</strong> Musk expected the new line to take about four months to install.</li><li><strong>Second factory:</strong> a much larger Optimus plant at Gigafactory Texas is being prepared for later.</li></ul><h2>Why it is hard</h2><p>A humanoid robot is a far more complex product than a car body. Optimus has more than 10,000 unique parts, none of which were mass-produced before. Musk himself warned that initial production would be slow. Critics also point out that Tesla's earlier target of building around 10,000 robots by the end of 2025 was missed.</p><h2>Why Tesla made the trade</h2><p>The Model S and X had become a small part of Tesla's sales, an estimated 3% of deliveries in 2025. Tesla is betting that robots will be worth far more than low-volume luxury cars. Freeing up an existing, fully equipped factory was the fastest way to get there.</p><h2>For existing S and X owners</h2><p>Tesla says it will keep servicing the Model S and Model X, supplying parts and sending software updates. It has not said for how long.</p>"
   },
   "nl": {
-   "text": "VAN MODEL S NAAR OPTIMUS"
+    "title": "Van Model S naar Optimus: zo maakte Tesla van zijn vlaggenschiplijnen in Fremont een robotfabriek",
+    "description": "De lijnen waar ruim tien jaar de Model S en Model X werden gebouwd, maken nu Optimus-robots. Wat er in Fremont veranderde, de doelen en de twijfels.",
+    "body": "<p>Ruim tien jaar bouwde Tesla's fabriek in Fremont de Model S en Model X, de auto's die het merk groot maakten. In 2026 kregen die lijnen een nieuwe taak: het bouwen van Optimus, Tesla's humanoïde robot.</p><h2>Wat er gebeurde</h2><p>Elon Musk kondigde het einde van de Model S en Model X aan tijdens de toelichting op het vierde kwartaal in januari 2026, en noemde het een eervol ontslag voor beide auto's. De productie stopte in het tweede kwartaal. De ruimte die ze in Fremont gebruikten, wordt omgebouwd tot productielijnen voor Optimus.</p><h2>De doelen</h2><ul><li><strong>Ontwerpcapaciteit:</strong> volgens Tesla zijn de eerste Optimus-lijnen in Fremont ontworpen voor maximaal een miljoen robots per jaar.</li><li><strong>Start:</strong> bij de cijfers over het eerste kwartaal noemde Tesla eind juli of augustus 2026 als begin van de productie.</li><li><strong>Inrichting:</strong> Musk verwachtte dat het installeren van de nieuwe lijn ongeveer vier maanden zou duren.</li><li><strong>Tweede fabriek:</strong> in Gigafactory Texas wordt een veel grotere Optimus-fabriek voorbereid.</li></ul><h2>Waarom het lastig is</h2><p>Een humanoïde robot is veel ingewikkelder dan een autocarrosserie. Optimus heeft meer dan 10.000 unieke onderdelen, waarvan er geen eerder in massa werd geproduceerd. Musk waarschuwde zelf dat de eerste productie langzaam zou gaan. Critici wijzen er ook op dat Tesla's eerdere doel om eind 2025 zo'n 10.000 robots te hebben gebouwd, niet is gehaald.</p><h2>Waarom Tesla deze ruil maakte</h2><p>De Model S en X waren een klein deel van Tesla's verkoop geworden, naar schatting 3% van de leveringen in 2025. Tesla gokt erop dat robots veel meer waard zijn dan luxeauto's in kleine aantallen. Een bestaande, volledig ingerichte fabriek vrijmaken was de snelste weg daarheen.</p><h2>Voor wie al een S of X heeft</h2><p>Tesla zegt dat het de Model S en Model X blijft onderhouden, onderdelen blijft leveren en software-updates blijft sturen. Hoe lang, heeft het bedrijf niet gezegd.</p>"
+  },
+  "image": "topics/optimus-line.jpg",
+  "images": [
+    "optimus-line.jpg",
+    "optimus-factory.jpg",
+    "gigafactory-fremont.jpg"
+  ],
+  "label": {
+    "style": "w",
+    "en": {
+      "text": "FROM MODEL S TO OPTIMUS"
+    },
+    "nl": {
+      "text": "VAN MODEL S NAAR OPTIMUS"
+    }
   }
- }
 }

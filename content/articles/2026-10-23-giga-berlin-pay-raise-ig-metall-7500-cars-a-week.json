@@ -1,42 +1,40 @@
 {
- "slug": "giga-berlin-pay-raise-ig-metall-7500-cars-a-week",
- "date": "2026-10-23",
- "time": "14:38",
- "category": "factories",
- "sources": [
-  {
-   "title": "Drive Tesla Canada — Tesla gives Giga Berlin workers another pay raise",
-   "url": "https://driveteslacanada.ca/news/tesla-giga-berlin-pay-raise-october-2026/"
-  },
-  {
-   "title": "Electrek — Tesla to hire 1,000 more Giga Berlin workers",
-   "url": "https://electrek.co/2026/06/25/tesla-giga-berlin-1000-hires-europe-demand/"
-  }
- ],
- "en": {
-  "title": "Giga Berlin raises pay by up to 5% as it pushes for 7,500 cars a week, but IG Metall wants more",
-  "description": "Tesla's Grünheide workers get another raise from October. What changes, how it compares with the union's demands, and what it says about the plant's production push.",
-  "body": "<p>Tesla has raised wages at its factory in Grünheide, near Berlin, for the fifth year in a row. The increase, announced on September 29, 2026, took effect on October 1. It comes as the plant works extra shifts to reach a new production target and as the IG Metall union keeps pushing for a collective agreement.</p><h2>What changes</h2><ul><li><strong>Production workers:</strong> a 5% raise. They make up most of the nearly 12,000 employees.</li><li><strong>Skilled workers:</strong> a 4% raise plus a performance bonus for those with good recent reviews.</li><li><strong>Lowest pay grades:</strong> the full 5%, since they have no performance reviews.</li><li><strong>Starting pay:</strong> Tesla says a new production worker earns about €45,750 a year. According to Handelsblatt, that figure includes Tesla shares.</li></ul><p>Tesla raised pay by 4% in December 2025 and has increased wages every year since production started in March 2022.</p><h2>The union's view</h2><p>IG Metall started its bargaining round for the German metal and electrical industry on October 7, aiming for a 5% increase. It welcomed Tesla's raise but says the company still falls short of standard car-industry terms, pointing to the lack of holiday pay and a Christmas bonus. The union continues to push for a collective agreement at Giga Berlin, which Tesla has so far resisted.</p><h2>The production push</h2><p>Tesla aims to raise output in Grünheide to 7,500 Model Y cars a week this year. In September it scheduled extra mandatory shifts to close the gap, and it plans to hire up to 3,500 more workers. The plant also builds Model Ys for Canada, where delivery estimates for new orders have reportedly stretched into 2027.</p><h2>Why it matters</h2><p>After a difficult 2025 in Europe, demand has picked up again, with strong September sales in several countries. Keeping enough workers and avoiding labour conflict is essential if Tesla wants to supply that demand from Germany. The company is also planning a much larger second hall at the site.</p><h2>What to watch</h2><p>The outcome of IG Metall's industry-wide talks, whether the works council election or union pressure changes Tesla's position, and whether the plant actually reaches 7,500 cars a week.</p>"
- },
- "nl": {
-  "title": "Giga Berlin verhoogt lonen met tot 5% en jaagt op 7.500 auto's per week, maar IG Metall wil meer",
-  "description": "Medewerkers van Tesla in Grünheide krijgen vanaf oktober opnieuw loonsverhoging. Wat er verandert, hoe het zich verhoudt tot de eisen van de vakbond, en wat het zegt over de productiedruk.",
-  "body": "<p>Tesla heeft de lonen in zijn fabriek in Grünheide, bij Berlijn, voor het vijfde jaar op rij verhoogd. De verhoging werd op 29 september 2026 aangekondigd en ging op 1 oktober in. Ze komt terwijl de fabriek extra diensten draait om een nieuw productiedoel te halen, en terwijl vakbond IG Metall blijft aandringen op een cao.</p><h2>Wat er verandert</h2><ul><li><strong>Productiemedewerkers:</strong> 5% meer loon. Zij vormen het grootste deel van de bijna 12.000 werknemers.</li><li><strong>Vakmensen:</strong> 4% meer plus een prestatiebonus voor wie recent goede beoordelingen had.</li><li><strong>Laagste loonschalen:</strong> de volle 5%, omdat zij geen beoordelingsgesprekken hebben.</li><li><strong>Startsalaris:</strong> volgens Tesla verdient een nieuwe productiemedewerker ongeveer € 45.750 per jaar. Volgens Handelsblatt zitten daar Tesla-aandelen bij inbegrepen.</li></ul><p>Tesla verhoogde de lonen in december 2025 met 4% en heeft ze elk jaar verhoogd sinds de productie in maart 2022 begon.</p><h2>De kijk van de vakbond</h2><p>IG Metall begon op 7 oktober aan de onderhandelingen voor de Duitse metaal- en elektro-industrie, met een looneis van 5%. De bond verwelkomde Tesla's verhoging, maar vindt dat het bedrijf nog achterblijft bij de normale voorwaarden in de autosector en wijst op het ontbreken van vakantiegeld en een kerstuitkering. De vakbond blijft aandringen op een cao bij Giga Berlin, iets wat Tesla tot nu toe afhoudt.</p><h2>De productiedruk</h2><p>Tesla wil de productie in Grünheide dit jaar opvoeren naar 7.500 Model Y's per week. In september plande het extra verplichte diensten om het gat te dichten, en het wil nog tot 3.500 mensen aannemen. De fabriek bouwt ook Model Y's voor Canada, waar de levertijden voor nieuwe bestellingen volgens berichten tot in 2027 lopen.</p><h2>Waarom het ertoe doet</h2><p>Na een moeilijk 2025 in Europa trekt de vraag weer aan, met sterke septembercijfers in meerdere landen. Genoeg personeel houden en arbeidsconflicten vermijden is essentieel als Tesla die vraag vanuit Duitsland wil bedienen. Het bedrijf plant op de locatie ook een veel grotere tweede hal.</p><h2>Waar je op moet letten</h2><p>De uitkomst van de cao-onderhandelingen van IG Metall, of de druk van de vakbond Tesla's houding verandert, en of de fabriek de 7.500 auto's per week echt haalt.</p>"
- },
- "images": [
-  "gigafactory-berlin.jpg"
- ],
- "label": {
-  "style": "n",
-  "pos": "bl",
-  "rot": 0,
+  "slug": "giga-berlin-pay-raise-ig-metall-7500-cars-a-week",
+  "date": "2026-10-23",
+  "time": "14:38",
+  "category": "factories",
+  "sources": [
+    {
+      "title": "Drive Tesla Canada — Tesla gives Giga Berlin workers another pay raise",
+      "url": "https://driveteslacanada.ca/news/tesla-giga-berlin-pay-raise-october-2026/"
+    },
+    {
+      "title": "Electrek — Tesla to hire 1,000 more Giga Berlin workers",
+      "url": "https://electrek.co/2026/06/25/tesla-giga-berlin-1000-hires-europe-demand/"
+    }
+  ],
   "en": {
-   "sub": "BUT IG METALL WANTS MORE",
-   "text": "UP TO +5%"
+    "title": "Giga Berlin raises pay by up to 5% as it pushes for 7,500 cars a week, but IG Metall wants more",
+    "description": "Tesla's Grünheide workers get another raise from October. What changes, how it compares with the union's demands, and what it says about the plant's production push.",
+    "body": "<p>Tesla has raised wages at its factory in Grünheide, near Berlin, for the fifth year in a row. The increase, announced on September 29, 2026, took effect on October 1. It comes as the plant works extra shifts to reach a new production target and as the IG Metall union keeps pushing for a collective agreement.</p><h2>What changes</h2><ul><li><strong>Production workers:</strong> a 5% raise. They make up most of the nearly 12,000 employees.</li><li><strong>Skilled workers:</strong> a 4% raise plus a performance bonus for those with good recent reviews.</li><li><strong>Lowest pay grades:</strong> the full 5%, since they have no performance reviews.</li><li><strong>Starting pay:</strong> Tesla says a new production worker earns about €45,750 a year. According to Handelsblatt, that figure includes Tesla shares.</li></ul><p>Tesla raised pay by 4% in December 2025 and has increased wages every year since production started in March 2022.</p><h2>The union's view</h2><p>IG Metall started its bargaining round for the German metal and electrical industry on October 7, aiming for a 5% increase. It welcomed Tesla's raise but says the company still falls short of standard car-industry terms, pointing to the lack of holiday pay and a Christmas bonus. The union continues to push for a collective agreement at Giga Berlin, which Tesla has so far resisted.</p><h2>The production push</h2><p>Tesla aims to raise output in Grünheide to 7,500 Model Y cars a week this year. In September it scheduled extra mandatory shifts to close the gap, and it plans to hire up to 3,500 more workers. The plant also builds Model Ys for Canada, where delivery estimates for new orders have reportedly stretched into 2027.</p><h2>Why it matters</h2><p>After a difficult 2025 in Europe, demand has picked up again, with strong September sales in several countries. Keeping enough workers and avoiding labour conflict is essential if Tesla wants to supply that demand from Germany. The company is also planning a much larger second hall at the site.</p><h2>What to watch</h2><p>The outcome of IG Metall's industry-wide talks, whether the works council election or union pressure changes Tesla's position, and whether the plant actually reaches 7,500 cars a week.</p>"
   },
   "nl": {
-   "sub": "MAAR IG METALL WIL MEER",
-   "text": "TOT +5%"
+    "title": "Giga Berlin verhoogt lonen met tot 5% en jaagt op 7.500 auto's per week, maar IG Metall wil meer",
+    "description": "Medewerkers van Tesla in Grünheide krijgen vanaf oktober opnieuw loonsverhoging. Wat er verandert, hoe het zich verhoudt tot de eisen van de vakbond, en wat het zegt over de productiedruk.",
+    "body": "<p>Tesla heeft de lonen in zijn fabriek in Grünheide, bij Berlijn, voor het vijfde jaar op rij verhoogd. De verhoging werd op 29 september 2026 aangekondigd en ging op 1 oktober in. Ze komt terwijl de fabriek extra diensten draait om een nieuw productiedoel te halen, en terwijl vakbond IG Metall blijft aandringen op een cao.</p><h2>Wat er verandert</h2><ul><li><strong>Productiemedewerkers:</strong> 5% meer loon. Zij vormen het grootste deel van de bijna 12.000 werknemers.</li><li><strong>Vakmensen:</strong> 4% meer plus een prestatiebonus voor wie recent goede beoordelingen had.</li><li><strong>Laagste loonschalen:</strong> de volle 5%, omdat zij geen beoordelingsgesprekken hebben.</li><li><strong>Startsalaris:</strong> volgens Tesla verdient een nieuwe productiemedewerker ongeveer € 45.750 per jaar. Volgens Handelsblatt zitten daar Tesla-aandelen bij inbegrepen.</li></ul><p>Tesla verhoogde de lonen in december 2025 met 4% en heeft ze elk jaar verhoogd sinds de productie in maart 2022 begon.</p><h2>De kijk van de vakbond</h2><p>IG Metall begon op 7 oktober aan de onderhandelingen voor de Duitse metaal- en elektro-industrie, met een looneis van 5%. De bond verwelkomde Tesla's verhoging, maar vindt dat het bedrijf nog achterblijft bij de normale voorwaarden in de autosector en wijst op het ontbreken van vakantiegeld en een kerstuitkering. De vakbond blijft aandringen op een cao bij Giga Berlin, iets wat Tesla tot nu toe afhoudt.</p><h2>De productiedruk</h2><p>Tesla wil de productie in Grünheide dit jaar opvoeren naar 7.500 Model Y's per week. In september plande het extra verplichte diensten om het gat te dichten, en het wil nog tot 3.500 mensen aannemen. De fabriek bouwt ook Model Y's voor Canada, waar de levertijden voor nieuwe bestellingen volgens berichten tot in 2027 lopen.</p><h2>Waarom het ertoe doet</h2><p>Na een moeilijk 2025 in Europa trekt de vraag weer aan, met sterke septembercijfers in meerdere landen. Genoeg personeel houden en arbeidsconflicten vermijden is essentieel als Tesla die vraag vanuit Duitsland wil bedienen. Het bedrijf plant op de locatie ook een veel grotere tweede hal.</p><h2>Waar je op moet letten</h2><p>De uitkomst van de cao-onderhandelingen van IG Metall, of de druk van de vakbond Tesla's houding verandert, en of de fabriek de 7.500 auto's per week echt haalt.</p>"
+  },
+  "images": [
+    "gigafactory-berlin.jpg"
+  ],
+  "label": {
+    "style": "n",
+    "en": {
+      "sub": "BUT IG METALL WANTS MORE",
+      "text": "UP TO +5%"
+    },
+    "nl": {
+      "sub": "MAAR IG METALL WIL MEER",
+      "text": "TOT +5%"
+    }
   }
- }
 }

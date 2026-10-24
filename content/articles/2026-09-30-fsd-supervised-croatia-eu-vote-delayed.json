@@ -1,42 +1,40 @@
 {
- "slug": "fsd-supervised-croatia-eu-vote-delayed",
- "date": "2026-09-30",
- "time": "08:00",
- "category": "fsd",
- "sources": [
-  {
-   "title": "Tesla North — FSD Supervised wins approval in Croatia, eighth country in Europe",
-   "url": "https://teslanorth.com/2026/09/29/tesla-fsd-croatia-approval/"
-  },
-  {
-   "title": "Basenor — FSD (Supervised) now live in 16 countries",
-   "url": "https://www.basenor.com/blogs/news/tesla-fsd-supervised-now-live-in-16-countries-across-4-continents"
-  }
- ],
- "en": {
-  "title": "Croatia approves Tesla FSD, but the EU-wide vote slips to December at the earliest",
-  "description": "FSD (Supervised) is now approved in eight European countries. The bloc-wide decision that many expected in October is now not expected before December.",
-  "body": "<p>Tesla Europe announced on September 29 that Full Self-Driving (Supervised) has been approved in Croatia. That makes it the eighth country in Europe to allow the system, after the Netherlands, Belgium, Lithuania, Estonia, Denmark, Slovenia and Czechia.</p><h2>The setback: no EU vote in October</h2><p>The bigger news is less positive for Tesla fans. An EU-wide vote on FSD, which had been expected in October, is now not expected before December. Until that happens, approvals continue country by country, each national regulator recognizing the original Dutch approval on its own schedule.</p><h2>Rollout in Croatia</h2><p>Tesla said the rollout in Croatia will begin soon, without giving a date. In earlier countries, owners received the software through an over-the-air update some time after the formal approval.</p><h2>Where FSD (Supervised) is live worldwide</h2><ul><li><strong>North America:</strong> United States, Canada, Mexico, Puerto Rico.</li><li><strong>Europe:</strong> Netherlands, Lithuania, Estonia, Denmark, Belgium, Slovenia, Czechia, Croatia.</li><li><strong>Asia-Pacific:</strong> China (limited rollout), South Korea, Australia, New Zealand.</li></ul><h2>Why it matters</h2><p>The eight European countries approved so far are mostly smaller markets. The big Tesla markets in Europe, such as Germany, France, Italy, Spain and Norway (which is outside the EU), are not on the list yet. An EU-wide decision would change that in one step, which is why the delay matters more than any single new country.</p>"
- },
- "nl": {
-  "title": "Kroatië keurt Tesla FSD goed, maar de EU-stemming schuift op naar op zijn vroegst december",
-  "description": "FSD (Supervised) is nu goedgekeurd in acht Europese landen. Het besluit voor de hele EU, dat velen in oktober verwachtten, komt nu niet vóór december.",
-  "body": "<p>Tesla Europe maakte op 29 september bekend dat Full Self-Driving (Supervised) is goedgekeurd in Kroatië. Daarmee is het het achtste Europese land dat het systeem toestaat, na Nederland, België, Litouwen, Estland, Denemarken, Slovenië en Tsjechië.</p><h2>De tegenvaller: geen EU-stemming in oktober</h2><p>Het grotere nieuws is minder positief voor Tesla-fans. Een stemming over FSD voor de hele EU, die in oktober werd verwacht, komt nu niet vóór december. Tot die tijd gaan de goedkeuringen land voor land verder, waarbij elke nationale toezichthouder de oorspronkelijke Nederlandse goedkeuring in zijn eigen tempo erkent.</p><h2>Uitrol in Kroatië</h2><p>Tesla zei dat de uitrol in Kroatië binnenkort begint, zonder datum. In eerdere landen kregen rijders de software enige tijd na de formele goedkeuring via een draadloze update.</p><h2>Waar FSD (Supervised) wereldwijd actief is</h2><ul><li><strong>Noord-Amerika:</strong> Verenigde Staten, Canada, Mexico, Puerto Rico.</li><li><strong>Europa:</strong> Nederland, Litouwen, Estland, Denemarken, België, Slovenië, Tsjechië, Kroatië.</li><li><strong>Azië-Pacific:</strong> China (beperkte uitrol), Zuid-Korea, Australië, Nieuw-Zeeland.</li></ul><h2>Waarom dit ertoe doet</h2><p>De acht Europese landen met goedkeuring zijn vooral kleinere markten. De grote Tesla-markten in Europa, zoals Duitsland, Frankrijk, Italië, Spanje en Noorwegen (dat buiten de EU valt), staan er nog niet tussen. Een besluit voor de hele EU zou dat in één klap veranderen. Daarom weegt het uitstel zwaarder dan elk nieuw land afzonderlijk.</p><p><em>Voor Nederlandse en Belgische rijders verandert er niets: in beide landen is FSD (Supervised) al toegestaan.</em></p>"
- },
- "images": [
-  "fsd-4.jpg",
-  "fsd-czechia.jpg",
-  "fsd-2.jpg"
- ],
- "label": {
-  "style": "r",
-  "pos": "bl",
-  "rot": -2,
+  "slug": "fsd-supervised-croatia-eu-vote-delayed",
+  "date": "2026-09-30",
+  "time": "08:00",
+  "category": "fsd",
+  "sources": [
+    {
+      "title": "Tesla North — FSD Supervised wins approval in Croatia, eighth country in Europe",
+      "url": "https://teslanorth.com/2026/09/29/tesla-fsd-croatia-approval/"
+    },
+    {
+      "title": "Basenor — FSD (Supervised) now live in 16 countries",
+      "url": "https://www.basenor.com/blogs/news/tesla-fsd-supervised-now-live-in-16-countries-across-4-continents"
+    }
+  ],
   "en": {
-   "text": "NO EU VOTE BEFORE DEC."
+    "title": "Croatia approves Tesla FSD, but the EU-wide vote slips to December at the earliest",
+    "description": "FSD (Supervised) is now approved in eight European countries. The bloc-wide decision that many expected in October is now not expected before December.",
+    "body": "<p>Tesla Europe announced on September 29 that Full Self-Driving (Supervised) has been approved in Croatia. That makes it the eighth country in Europe to allow the system, after the Netherlands, Belgium, Lithuania, Estonia, Denmark, Slovenia and Czechia.</p><h2>The setback: no EU vote in October</h2><p>The bigger news is less positive for Tesla fans. An EU-wide vote on FSD, which had been expected in October, is now not expected before December. Until that happens, approvals continue country by country, each national regulator recognizing the original Dutch approval on its own schedule.</p><h2>Rollout in Croatia</h2><p>Tesla said the rollout in Croatia will begin soon, without giving a date. In earlier countries, owners received the software through an over-the-air update some time after the formal approval.</p><h2>Where FSD (Supervised) is live worldwide</h2><ul><li><strong>North America:</strong> United States, Canada, Mexico, Puerto Rico.</li><li><strong>Europe:</strong> Netherlands, Lithuania, Estonia, Denmark, Belgium, Slovenia, Czechia, Croatia.</li><li><strong>Asia-Pacific:</strong> China (limited rollout), South Korea, Australia, New Zealand.</li></ul><h2>Why it matters</h2><p>The eight European countries approved so far are mostly smaller markets. The big Tesla markets in Europe, such as Germany, France, Italy, Spain and Norway (which is outside the EU), are not on the list yet. An EU-wide decision would change that in one step, which is why the delay matters more than any single new country.</p>"
   },
   "nl": {
-   "text": "GEEN EU-STEMMING VÓÓR DEC."
+    "title": "Kroatië keurt Tesla FSD goed, maar de EU-stemming schuift op naar op zijn vroegst december",
+    "description": "FSD (Supervised) is nu goedgekeurd in acht Europese landen. Het besluit voor de hele EU, dat velen in oktober verwachtten, komt nu niet vóór december.",
+    "body": "<p>Tesla Europe maakte op 29 september bekend dat Full Self-Driving (Supervised) is goedgekeurd in Kroatië. Daarmee is het het achtste Europese land dat het systeem toestaat, na Nederland, België, Litouwen, Estland, Denemarken, Slovenië en Tsjechië.</p><h2>De tegenvaller: geen EU-stemming in oktober</h2><p>Het grotere nieuws is minder positief voor Tesla-fans. Een stemming over FSD voor de hele EU, die in oktober werd verwacht, komt nu niet vóór december. Tot die tijd gaan de goedkeuringen land voor land verder, waarbij elke nationale toezichthouder de oorspronkelijke Nederlandse goedkeuring in zijn eigen tempo erkent.</p><h2>Uitrol in Kroatië</h2><p>Tesla zei dat de uitrol in Kroatië binnenkort begint, zonder datum. In eerdere landen kregen rijders de software enige tijd na de formele goedkeuring via een draadloze update.</p><h2>Waar FSD (Supervised) wereldwijd actief is</h2><ul><li><strong>Noord-Amerika:</strong> Verenigde Staten, Canada, Mexico, Puerto Rico.</li><li><strong>Europa:</strong> Nederland, Litouwen, Estland, Denemarken, België, Slovenië, Tsjechië, Kroatië.</li><li><strong>Azië-Pacific:</strong> China (beperkte uitrol), Zuid-Korea, Australië, Nieuw-Zeeland.</li></ul><h2>Waarom dit ertoe doet</h2><p>De acht Europese landen met goedkeuring zijn vooral kleinere markten. De grote Tesla-markten in Europa, zoals Duitsland, Frankrijk, Italië, Spanje en Noorwegen (dat buiten de EU valt), staan er nog niet tussen. Een besluit voor de hele EU zou dat in één klap veranderen. Daarom weegt het uitstel zwaarder dan elk nieuw land afzonderlijk.</p><p><em>Voor Nederlandse en Belgische rijders verandert er niets: in beide landen is FSD (Supervised) al toegestaan.</em></p>"
+  },
+  "images": [
+    "fsd-4.jpg",
+    "fsd-czechia.jpg",
+    "fsd-2.jpg"
+  ],
+  "label": {
+    "style": "r",
+    "en": {
+      "text": "NO EU VOTE BEFORE DEC."
+    },
+    "nl": {
+      "text": "GEEN EU-STEMMING VÓÓR DEC."
+    }
   }
- }
 }

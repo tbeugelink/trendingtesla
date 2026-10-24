@@ -1,45 +1,43 @@
 {
- "slug": "tesla-megablock-explained-20-mwh",
- "date": "2026-10-17",
- "time": "14:15",
- "category": "energy",
- "sources": [
-  {
-   "title": "SMM — Tesla starts Megapack 3 production in Texas",
-   "url": "https://news.metal.com/en/newscontent/104046720-tesla-starts-megapack-3-production-in-texas"
-  },
-  {
-   "title": "Mysteel — Tesla begins Megapack 3 production at Texas Megafactory",
-   "url": "https://www.mysteel.net/news/5135605-flash-tesla-begins-megapack-3-production-at-texas-megafactory-adding-50-gwh-annual-capacity"
-  }
- ],
- "en": {
-  "title": "Tesla Megablock explained: four Megapacks and a transformer in one 20 MWh building block",
-  "description": "With Megablock, Tesla sells grid batteries as a pre-engineered block instead of loose parts. Here is what it contains and why it can make big battery projects cheaper and faster.",
-  "body": "<p>A large battery project is more than batteries. It also needs transformers, switchgear, cabling, foundations and months of engineering. Tesla's Megablock bundles much of that into one standard unit.</p><h2>What a Megablock is</h2><ul><li><strong>Four Megapack 3 units</strong>, each holding about 5 MWh.</li><li><strong>A medium-voltage transformer and switchgear</strong>, the equipment that connects the batteries to the grid.</li><li><strong>Total:</strong> about 20 MWh per block.</li></ul><p>Instead of designing each site from scratch, a developer places as many Megablocks as needed and connects them. A 1 GWh project, for example, would need around 50 blocks.</p><h2>The savings</h2><p>Tesla says the Megablock approach can cut installation time by 23% and construction costs by up to 40% compared with building a site from separate components. The savings come from fewer custom parts, less wiring on site and less engineering work per project.</p><h2>Why it matters for Tesla</h2><p>Tesla's storage business is growing, but so is the competition, especially from Chinese suppliers offering very low prices on battery containers. Selling a complete, pre-engineered block lets Tesla compete on total project cost, not just on the price of the battery. It also makes Tesla's software, which runs the storage systems and trades their power on electricity markets, part of the package.</p><h2>Who it is for</h2><p>Utilities, independent power producers and increasingly data center operators, which need large amounts of reliable power and backup. Megablock is aimed at large sites; homes and small businesses use the Powerwall instead.</p><h2>What to watch</h2><p>The first projects built with Megablock, and whether the claimed cost savings help Tesla win orders against cheaper rivals.</p>"
- },
- "nl": {
-  "title": "Tesla Megablock uitgelegd: vier Megapacks en een transformator in één bouwblok van 20 MWh",
-  "description": "Met de Megablock verkoopt Tesla netaccu's als kant-en-klaar blok in plaats van losse onderdelen. Wat erin zit, en waarom grote accuprojecten er goedkoper en sneller door kunnen worden.",
-  "body": "<p>Een groot accuproject is meer dan accu's. Er zijn ook transformatoren, schakelapparatuur, bekabeling, funderingen en maanden aan ontwerpwerk nodig. Tesla's Megablock bundelt een groot deel daarvan in één standaard eenheid.</p><h2>Wat een Megablock is</h2><ul><li><strong>Vier Megapack 3-units</strong> van elk ongeveer 5 MWh.</li><li><strong>Een middenspanningstransformator en schakelapparatuur</strong>, de apparatuur die de accu's met het net verbindt.</li><li><strong>Totaal:</strong> ongeveer 20 MWh per blok.</li></ul><p>In plaats van elke locatie vanaf nul te ontwerpen, plaatst een ontwikkelaar zoveel Megablocks als nodig en sluit ze aan. Een project van 1 GWh heeft er bijvoorbeeld ongeveer 50 nodig.</p><h2>De besparing</h2><p>Volgens Tesla kunnen de installatietijd met 23% en de bouwkosten met tot 40% omlaag ten opzichte van een locatie die uit losse onderdelen wordt gebouwd. De winst komt uit minder maatwerk, minder bekabeling ter plekke en minder ontwerpwerk per project.</p><h2>Waarom het belangrijk is voor Tesla</h2><p>Tesla's opslagtak groeit, maar de concurrentie ook, vooral van Chinese leveranciers met heel lage prijzen voor accucontainers. Door een compleet, voorontworpen blok te verkopen, kan Tesla concurreren op de totale projectkosten en niet alleen op de prijs van de accu. Ook Tesla's software, die de opslag aanstuurt en de stroom verhandelt op energiemarkten, wordt zo onderdeel van het pakket.</p><h2>Voor wie het is</h2><p>Energiebedrijven, onafhankelijke stroomproducenten en steeds vaker datacenters, die veel betrouwbare stroom en back-up nodig hebben. De Megablock is bedoeld voor grote locaties; huizen en kleine bedrijven gebruiken de Powerwall.</p><h2>Waar je op moet letten</h2><p>De eerste projecten met Megablocks, en of de beloofde besparing Tesla helpt om orders te winnen van goedkopere concurrenten.</p>"
- },
- "image": "topics/megapack-1.jpg",
- "images": [
-  "energy.jpg",
-  "energy-2.jpg",
-  "megapack-1.jpg"
- ],
- "label": {
-  "style": "k",
-  "pos": "tl",
-  "rot": 0,
+  "slug": "tesla-megablock-explained-20-mwh",
+  "date": "2026-10-17",
+  "time": "14:15",
+  "category": "energy",
+  "sources": [
+    {
+      "title": "SMM — Tesla starts Megapack 3 production in Texas",
+      "url": "https://news.metal.com/en/newscontent/104046720-tesla-starts-megapack-3-production-in-texas"
+    },
+    {
+      "title": "Mysteel — Tesla begins Megapack 3 production at Texas Megafactory",
+      "url": "https://www.mysteel.net/news/5135605-flash-tesla-begins-megapack-3-production-at-texas-megafactory-adding-50-gwh-annual-capacity"
+    }
+  ],
   "en": {
-   "sub": "EXPLAINED",
-   "text": "4 MEGAPACKS IN 1 BLOCK"
+    "title": "Tesla Megablock explained: four Megapacks and a transformer in one 20 MWh building block",
+    "description": "With Megablock, Tesla sells grid batteries as a pre-engineered block instead of loose parts. Here is what it contains and why it can make big battery projects cheaper and faster.",
+    "body": "<p>A large battery project is more than batteries. It also needs transformers, switchgear, cabling, foundations and months of engineering. Tesla's Megablock bundles much of that into one standard unit.</p><h2>What a Megablock is</h2><ul><li><strong>Four Megapack 3 units</strong>, each holding about 5 MWh.</li><li><strong>A medium-voltage transformer and switchgear</strong>, the equipment that connects the batteries to the grid.</li><li><strong>Total:</strong> about 20 MWh per block.</li></ul><p>Instead of designing each site from scratch, a developer places as many Megablocks as needed and connects them. A 1 GWh project, for example, would need around 50 blocks.</p><h2>The savings</h2><p>Tesla says the Megablock approach can cut installation time by 23% and construction costs by up to 40% compared with building a site from separate components. The savings come from fewer custom parts, less wiring on site and less engineering work per project.</p><h2>Why it matters for Tesla</h2><p>Tesla's storage business is growing, but so is the competition, especially from Chinese suppliers offering very low prices on battery containers. Selling a complete, pre-engineered block lets Tesla compete on total project cost, not just on the price of the battery. It also makes Tesla's software, which runs the storage systems and trades their power on electricity markets, part of the package.</p><h2>Who it is for</h2><p>Utilities, independent power producers and increasingly data center operators, which need large amounts of reliable power and backup. Megablock is aimed at large sites; homes and small businesses use the Powerwall instead.</p><h2>What to watch</h2><p>The first projects built with Megablock, and whether the claimed cost savings help Tesla win orders against cheaper rivals.</p>"
   },
   "nl": {
-   "sub": "UITGELEGD",
-   "text": "4 MEGAPACKS IN 1 BLOK"
+    "title": "Tesla Megablock uitgelegd: vier Megapacks en een transformator in één bouwblok van 20 MWh",
+    "description": "Met de Megablock verkoopt Tesla netaccu's als kant-en-klaar blok in plaats van losse onderdelen. Wat erin zit, en waarom grote accuprojecten er goedkoper en sneller door kunnen worden.",
+    "body": "<p>Een groot accuproject is meer dan accu's. Er zijn ook transformatoren, schakelapparatuur, bekabeling, funderingen en maanden aan ontwerpwerk nodig. Tesla's Megablock bundelt een groot deel daarvan in één standaard eenheid.</p><h2>Wat een Megablock is</h2><ul><li><strong>Vier Megapack 3-units</strong> van elk ongeveer 5 MWh.</li><li><strong>Een middenspanningstransformator en schakelapparatuur</strong>, de apparatuur die de accu's met het net verbindt.</li><li><strong>Totaal:</strong> ongeveer 20 MWh per blok.</li></ul><p>In plaats van elke locatie vanaf nul te ontwerpen, plaatst een ontwikkelaar zoveel Megablocks als nodig en sluit ze aan. Een project van 1 GWh heeft er bijvoorbeeld ongeveer 50 nodig.</p><h2>De besparing</h2><p>Volgens Tesla kunnen de installatietijd met 23% en de bouwkosten met tot 40% omlaag ten opzichte van een locatie die uit losse onderdelen wordt gebouwd. De winst komt uit minder maatwerk, minder bekabeling ter plekke en minder ontwerpwerk per project.</p><h2>Waarom het belangrijk is voor Tesla</h2><p>Tesla's opslagtak groeit, maar de concurrentie ook, vooral van Chinese leveranciers met heel lage prijzen voor accucontainers. Door een compleet, voorontworpen blok te verkopen, kan Tesla concurreren op de totale projectkosten en niet alleen op de prijs van de accu. Ook Tesla's software, die de opslag aanstuurt en de stroom verhandelt op energiemarkten, wordt zo onderdeel van het pakket.</p><h2>Voor wie het is</h2><p>Energiebedrijven, onafhankelijke stroomproducenten en steeds vaker datacenters, die veel betrouwbare stroom en back-up nodig hebben. De Megablock is bedoeld voor grote locaties; huizen en kleine bedrijven gebruiken de Powerwall.</p><h2>Waar je op moet letten</h2><p>De eerste projecten met Megablocks, en of de beloofde besparing Tesla helpt om orders te winnen van goedkopere concurrenten.</p>"
+  },
+  "image": "topics/megapack-1.jpg",
+  "images": [
+    "energy.jpg",
+    "energy-2.jpg",
+    "megapack-1.jpg"
+  ],
+  "label": {
+    "style": "k",
+    "en": {
+      "sub": "EXPLAINED",
+      "text": "4 MEGAPACKS IN 1 BLOCK"
+    },
+    "nl": {
+      "sub": "UITGELEGD",
+      "text": "4 MEGAPACKS IN 1 BLOK"
+    }
   }
- }
 }

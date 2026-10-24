@@ -1,44 +1,42 @@
 {
- "slug": "tesla-home-charging-guide-11-kw-wall-connector",
- "date": "2026-10-04",
- "time": "14:05",
- "category": "charging",
- "sources": [
-  {
-   "title": "Tesla — Wall Connector",
-   "url": "https://www.tesla.com/en_eu/support/charging/wall-connector"
-  },
-  {
-   "title": "Tesla — Home charging",
-   "url": "https://www.tesla.com/support/home-charging"
-  }
- ],
- "en": {
-  "title": "Charging a Tesla at home: why 11 kW is enough for almost everyone",
-  "description": "A home charger is the cheapest and easiest way to run a Tesla. Here is what you need, why faster is rarely better, and what to check before you install one.",
-  "body": "<p>Most Tesla owners do the vast majority of their charging at home, overnight. Done right, it is the cheapest and most convenient way to keep the battery topped up. Here is what matters.</p><h2>Your options</h2><ul><li><strong>Regular socket:</strong> works in an emergency, but adds only a few kilometers of range per hour. Not suitable for daily use, and a standard socket is not designed for hours of continuous high load.</li><li><strong>Wall charger on single-phase power:</strong> about 3.7 to 7.4 kW, depending on your connection. Fine if you drive modest distances.</li><li><strong>Wall charger on three-phase power (11 kW):</strong> the sweet spot in most of Europe. It fills a typical Tesla battery from low to full overnight.</li></ul><h2>Why 11 kW is enough</h2><p>An 11 kW charger adds roughly 50 to 70 km of range per hour, depending on the model. In a typical eight-hour night, that is far more than most people drive in a day. Current Tesla Model 3 and Model Y versions in Europe charge at a maximum of 11 kW on AC anyway, so a bigger home charger would not make them charge faster.</p><h2>Tesla Wall Connector or another brand?</h2><p>Tesla's Wall Connector works well and integrates with the Tesla app, but any good charger with a Type 2 connector works with a European Tesla. Useful features to look for: load balancing, so the charger does not overload your home connection when the oven and heat pump are on, and the ability to schedule charging for off-peak hours.</p><h2>Before you install</h2><ul><li>Have an electrician check your home connection: is three-phase available, and how much spare capacity is there?</li><li>Ask about a dedicated circuit and the right residual-current protection.</li><li>Check local rules and any subsidies; in some countries installation by a certified installer is required.</li></ul><h2>Save money</h2><p>Use scheduled charging in the car or the app to charge when electricity is cheapest, usually at night. With a dynamic energy contract, the savings can be significant. Set a daily charge limit of around 80% for most Teslas; for models with an LFP battery, Tesla recommends charging to 100% at least once a week.</p>"
- },
- "nl": {
-  "title": "Een Tesla thuis laden: waarom 11 kW voor bijna iedereen genoeg is",
-  "description": "Een thuislader is de goedkoopste en makkelijkste manier om een Tesla te laden. Wat je nodig hebt, waarom sneller zelden beter is en wat je moet checken voordat je er een laat plaatsen.",
-  "body": "<p>De meeste Tesla-rijders laden het grootste deel van de tijd thuis, 's nachts. Goed geregeld is dat de goedkoopste en makkelijkste manier om de accu vol te houden. Hier draait het om.</p><h2>Je opties</h2><ul><li><strong>Gewoon stopcontact:</strong> werkt in noodgevallen, maar laadt maar een paar kilometer bereik per uur. Niet geschikt voor dagelijks gebruik, en een gewoon stopcontact is niet gemaakt voor urenlange zware belasting.</li><li><strong>Laadpaal op één fase:</strong> ongeveer 3,7 tot 7,4 kW, afhankelijk van je aansluiting. Prima als je niet veel kilometers maakt.</li><li><strong>Laadpaal op drie fasen (11 kW):</strong> de beste keuze voor de meeste Europese huishoudens. Hiermee laad je een gemiddelde Tesla-accu in één nacht van bijna leeg naar vol.</li></ul><h2>Waarom 11 kW genoeg is</h2><p>Een lader van 11 kW voegt per uur ongeveer 50 tot 70 km bereik toe, afhankelijk van het model. In een gemiddelde nacht van acht uur is dat veel meer dan de meeste mensen per dag rijden. De huidige Europese Model 3 en Model Y laden op wisselstroom bovendien maximaal met 11 kW, dus een zwaardere thuislader maakt ze niet sneller.</p><h2>Tesla Wall Connector of een ander merk?</h2><p>Tesla's Wall Connector werkt goed en koppelt met de Tesla-app, maar elke goede lader met een Type 2-stekker werkt met een Europese Tesla. Handige functies: load balancing, zodat de lader je huisaansluiting niet overbelast als de oven en de warmtepomp aanstaan, en laden plannen in de daluren.</p><h2>Voordat je laat installeren</h2><ul><li>Laat een installateur je aansluiting controleren: is er drie fasen, en hoeveel ruimte is er nog?</li><li>Vraag naar een aparte groep en de juiste aardlekbeveiliging.</li><li>Check de regels en eventuele subsidies; in sommige landen is installatie door een erkend installateur verplicht.</li></ul><h2>Bespaar geld</h2><p>Plan het laden in de auto of de app op de goedkoopste uren, meestal 's nachts. Met een dynamisch energiecontract kan dat flink schelen. Zet de dagelijkse laadlimiet voor de meeste Tesla's op ongeveer 80%; voor modellen met een LFP-accu raadt Tesla aan om minstens één keer per week tot 100% te laden.</p>"
- },
- "image": "topics/wallbox-2.jpg",
- "images": [
-  "wallbox-1.jpg",
-  "wallbox-4.jpg",
-  "wallbox-3.jpg",
-  "wallbox-5.jpg"
- ],
- "label": {
-  "style": "y",
-  "pos": "ml",
-  "rot": 2,
+  "slug": "tesla-home-charging-guide-11-kw-wall-connector",
+  "date": "2026-10-04",
+  "time": "14:05",
+  "category": "charging",
+  "sources": [
+    {
+      "title": "Tesla — Wall Connector",
+      "url": "https://www.tesla.com/en_eu/support/charging/wall-connector"
+    },
+    {
+      "title": "Tesla — Home charging",
+      "url": "https://www.tesla.com/support/home-charging"
+    }
+  ],
   "en": {
-   "text": "11 KW IS ENOUGH"
+    "title": "Charging a Tesla at home: why 11 kW is enough for almost everyone",
+    "description": "A home charger is the cheapest and easiest way to run a Tesla. Here is what you need, why faster is rarely better, and what to check before you install one.",
+    "body": "<p>Most Tesla owners do the vast majority of their charging at home, overnight. Done right, it is the cheapest and most convenient way to keep the battery topped up. Here is what matters.</p><h2>Your options</h2><ul><li><strong>Regular socket:</strong> works in an emergency, but adds only a few kilometers of range per hour. Not suitable for daily use, and a standard socket is not designed for hours of continuous high load.</li><li><strong>Wall charger on single-phase power:</strong> about 3.7 to 7.4 kW, depending on your connection. Fine if you drive modest distances.</li><li><strong>Wall charger on three-phase power (11 kW):</strong> the sweet spot in most of Europe. It fills a typical Tesla battery from low to full overnight.</li></ul><h2>Why 11 kW is enough</h2><p>An 11 kW charger adds roughly 50 to 70 km of range per hour, depending on the model. In a typical eight-hour night, that is far more than most people drive in a day. Current Tesla Model 3 and Model Y versions in Europe charge at a maximum of 11 kW on AC anyway, so a bigger home charger would not make them charge faster.</p><h2>Tesla Wall Connector or another brand?</h2><p>Tesla's Wall Connector works well and integrates with the Tesla app, but any good charger with a Type 2 connector works with a European Tesla. Useful features to look for: load balancing, so the charger does not overload your home connection when the oven and heat pump are on, and the ability to schedule charging for off-peak hours.</p><h2>Before you install</h2><ul><li>Have an electrician check your home connection: is three-phase available, and how much spare capacity is there?</li><li>Ask about a dedicated circuit and the right residual-current protection.</li><li>Check local rules and any subsidies; in some countries installation by a certified installer is required.</li></ul><h2>Save money</h2><p>Use scheduled charging in the car or the app to charge when electricity is cheapest, usually at night. With a dynamic energy contract, the savings can be significant. Set a daily charge limit of around 80% for most Teslas; for models with an LFP battery, Tesla recommends charging to 100% at least once a week.</p>"
   },
   "nl": {
-   "text": "11 KW IS GENOEG"
+    "title": "Een Tesla thuis laden: waarom 11 kW voor bijna iedereen genoeg is",
+    "description": "Een thuislader is de goedkoopste en makkelijkste manier om een Tesla te laden. Wat je nodig hebt, waarom sneller zelden beter is en wat je moet checken voordat je er een laat plaatsen.",
+    "body": "<p>De meeste Tesla-rijders laden het grootste deel van de tijd thuis, 's nachts. Goed geregeld is dat de goedkoopste en makkelijkste manier om de accu vol te houden. Hier draait het om.</p><h2>Je opties</h2><ul><li><strong>Gewoon stopcontact:</strong> werkt in noodgevallen, maar laadt maar een paar kilometer bereik per uur. Niet geschikt voor dagelijks gebruik, en een gewoon stopcontact is niet gemaakt voor urenlange zware belasting.</li><li><strong>Laadpaal op één fase:</strong> ongeveer 3,7 tot 7,4 kW, afhankelijk van je aansluiting. Prima als je niet veel kilometers maakt.</li><li><strong>Laadpaal op drie fasen (11 kW):</strong> de beste keuze voor de meeste Europese huishoudens. Hiermee laad je een gemiddelde Tesla-accu in één nacht van bijna leeg naar vol.</li></ul><h2>Waarom 11 kW genoeg is</h2><p>Een lader van 11 kW voegt per uur ongeveer 50 tot 70 km bereik toe, afhankelijk van het model. In een gemiddelde nacht van acht uur is dat veel meer dan de meeste mensen per dag rijden. De huidige Europese Model 3 en Model Y laden op wisselstroom bovendien maximaal met 11 kW, dus een zwaardere thuislader maakt ze niet sneller.</p><h2>Tesla Wall Connector of een ander merk?</h2><p>Tesla's Wall Connector werkt goed en koppelt met de Tesla-app, maar elke goede lader met een Type 2-stekker werkt met een Europese Tesla. Handige functies: load balancing, zodat de lader je huisaansluiting niet overbelast als de oven en de warmtepomp aanstaan, en laden plannen in de daluren.</p><h2>Voordat je laat installeren</h2><ul><li>Laat een installateur je aansluiting controleren: is er drie fasen, en hoeveel ruimte is er nog?</li><li>Vraag naar een aparte groep en de juiste aardlekbeveiliging.</li><li>Check de regels en eventuele subsidies; in sommige landen is installatie door een erkend installateur verplicht.</li></ul><h2>Bespaar geld</h2><p>Plan het laden in de auto of de app op de goedkoopste uren, meestal 's nachts. Met een dynamisch energiecontract kan dat flink schelen. Zet de dagelijkse laadlimiet voor de meeste Tesla's op ongeveer 80%; voor modellen met een LFP-accu raadt Tesla aan om minstens één keer per week tot 100% te laden.</p>"
+  },
+  "image": "topics/wallbox-2.jpg",
+  "images": [
+    "wallbox-1.jpg",
+    "wallbox-4.jpg",
+    "wallbox-3.jpg",
+    "wallbox-5.jpg"
+  ],
+  "label": {
+    "style": "y",
+    "en": {
+      "text": "11 KW IS ENOUGH"
+    },
+    "nl": {
+      "text": "11 KW IS GENOEG"
+    }
   }
- }
 }

@@ -1,40 +1,38 @@
 {
- "slug": "model-y-best-selling-car-all-five-nordic-countries-september",
- "date": "2026-10-07",
- "time": "14:10",
- "category": "models",
- "models": [
-  "model-y"
- ],
- "sources": [
-  {
-   "title": "Tesla North — Model Y sweeps all five Nordic markets in September",
-   "url": "https://teslanorth.com/2026/10/07/tesla-model-y-nordic-sweep-september/"
-  },
-  {
-   "title": "Electrive — Norway: Model Y made up a quarter of new car sales in September",
-   "url": "https://www.electrive.com/2026/10/01/norway-tesla-model-y-made-up-a-quarter-of-new-passenger-car-sales-in-september/"
-  }
- ],
- "en": {
-  "title": "Model Y is the best-selling car in all five Nordic countries, and one in four new cars in Norway",
-  "description": "In September the Model Y topped the sales charts in Norway, Sweden, Denmark, Finland and Iceland. In Norway alone, 4,810 were registered.",
-  "body": "<p>The Tesla Model Y was the best-selling passenger car in all five Nordic countries in September 2026, Tesla Europe announced on October 7. Norway, Sweden, Denmark, Finland and Iceland all had the Model Y at the top of their charts.</p><h2>Norway stands out</h2><p>In Norway, 4,810 Model Ys were registered in September, giving the car a 25.7% share of the entire new-car market. In other words: more than one in four new cars sold in Norway that month was a Model Y. Electric cars made up 98.8% of all new registrations, so Norway has become an almost entirely electric market, and Tesla is its biggest player.</p><h2>Tesla as a brand</h2><p>Tesla was also the best-selling brand overall in Denmark, Iceland and Norway. Tesla did not claim brand leadership in Finland or Sweden, where other manufacturers sold more cars in total even though the Model Y was the top single model.</p><h2>Loyal owners</h2><p>In a follow-up post, Tesla said that three out of four Norwegian Tesla owners buy another Tesla. The company did not say where that figure comes from, so treat it as a claim rather than a measured statistic.</p><h2>Part of a wider European recovery</h2><p>The Nordic results fit a broader picture. In September, the Model Y was also Germany's best-selling car, ahead of the VW Golf, and Tesla's UK registrations nearly doubled. After two weak years in Europe, Tesla's sales are clearly recovering, helped by the refreshed Model Y, cheaper Standard versions and, in some countries, new EV incentives.</p><h2>Why the Nordics matter</h2><p>The Nordic countries are where Europe's electric future arrives first. What happens there, with near-total EV adoption and fierce competition from Chinese and European brands, shows how Tesla holds up once electric cars become the norm. Topping the charts in that environment is a strong signal for the Model Y.</p>"
- },
- "nl": {
-  "title": "Model Y is de bestverkochte auto in alle vijf Noordse landen, en één op de vier nieuwe auto's in Noorwegen",
-  "description": "In september stond de Model Y bovenaan de verkooplijsten in Noorwegen, Zweden, Denemarken, Finland en IJsland. Alleen al in Noorwegen werden er 4.810 geregistreerd.",
-  "body": "<p>De Tesla Model Y was in september 2026 de bestverkochte personenauto in alle vijf Noordse landen, maakte Tesla Europe op 7 oktober bekend. In Noorwegen, Zweden, Denemarken, Finland en IJsland stond de Model Y bovenaan.</p><h2>Noorwegen springt eruit</h2><p>In Noorwegen werden in september 4.810 Model Y's geregistreerd, goed voor 25,7% van de totale markt voor nieuwe auto's. Met andere woorden: meer dan één op de vier nieuwe auto's die die maand in Noorwegen werden verkocht, was een Model Y. Elektrische auto's waren goed voor 98,8% van alle nieuwe registraties. Noorwegen is dus een vrijwel volledig elektrische markt geworden, en Tesla is daar de grootste speler.</p><h2>Tesla als merk</h2><p>Tesla was ook het bestverkochte merk in Denemarken, IJsland en Noorwegen. In Finland en Zweden claimde Tesla dat niet: daar verkochten andere fabrikanten in totaal meer auto's, ook al was de Model Y het populairste losse model.</p><h2>Trouwe rijders</h2><p>In een vervolgbericht meldde Tesla dat drie op de vier Noorse Tesla-rijders opnieuw een Tesla kopen. Waar dat cijfer vandaan komt, zei het bedrijf niet. Zie het dus als een bewering, niet als een gemeten statistiek.</p><h2>Onderdeel van een breder Europees herstel</h2><p>De Noordse cijfers passen in een groter beeld. In september was de Model Y ook de bestverkochte auto van Duitsland, vóór de VW Golf, en bijna verdubbelden Tesla's registraties in het Verenigd Koninkrijk. Na twee zwakke jaren in Europa herstelt Tesla's verkoop duidelijk, geholpen door de vernieuwde Model Y, goedkopere Standard-versies en in sommige landen nieuwe subsidies voor elektrische auto's.</p><h2>Waarom de Noordse landen ertoe doen</h2><p>In de Noordse landen komt de elektrische toekomst van Europa als eerste aan. Wat daar gebeurt, met bijna alleen nog elektrische auto's en felle concurrentie van Chinese en Europese merken, laat zien hoe Tesla het doet zodra elektrisch rijden de norm is. In die omgeving bovenaan staan is een sterk signaal voor de Model Y.</p>"
- },
- "label": {
-  "style": "w",
-  "pos": "bl",
-  "rot": -2,
+  "slug": "model-y-best-selling-car-all-five-nordic-countries-september",
+  "date": "2026-10-07",
+  "time": "14:10",
+  "category": "models",
+  "models": [
+    "model-y"
+  ],
+  "sources": [
+    {
+      "title": "Tesla North — Model Y sweeps all five Nordic markets in September",
+      "url": "https://teslanorth.com/2026/10/07/tesla-model-y-nordic-sweep-september/"
+    },
+    {
+      "title": "Electrive — Norway: Model Y made up a quarter of new car sales in September",
+      "url": "https://www.electrive.com/2026/10/01/norway-tesla-model-y-made-up-a-quarter-of-new-passenger-car-sales-in-september/"
+    }
+  ],
   "en": {
-   "text": "NO. 1 IN ALL 5 NORDICS"
+    "title": "Model Y is the best-selling car in all five Nordic countries, and one in four new cars in Norway",
+    "description": "In September the Model Y topped the sales charts in Norway, Sweden, Denmark, Finland and Iceland. In Norway alone, 4,810 were registered.",
+    "body": "<p>The Tesla Model Y was the best-selling passenger car in all five Nordic countries in September 2026, Tesla Europe announced on October 7. Norway, Sweden, Denmark, Finland and Iceland all had the Model Y at the top of their charts.</p><h2>Norway stands out</h2><p>In Norway, 4,810 Model Ys were registered in September, giving the car a 25.7% share of the entire new-car market. In other words: more than one in four new cars sold in Norway that month was a Model Y. Electric cars made up 98.8% of all new registrations, so Norway has become an almost entirely electric market, and Tesla is its biggest player.</p><h2>Tesla as a brand</h2><p>Tesla was also the best-selling brand overall in Denmark, Iceland and Norway. Tesla did not claim brand leadership in Finland or Sweden, where other manufacturers sold more cars in total even though the Model Y was the top single model.</p><h2>Loyal owners</h2><p>In a follow-up post, Tesla said that three out of four Norwegian Tesla owners buy another Tesla. The company did not say where that figure comes from, so treat it as a claim rather than a measured statistic.</p><h2>Part of a wider European recovery</h2><p>The Nordic results fit a broader picture. In September, the Model Y was also Germany's best-selling car, ahead of the VW Golf, and Tesla's UK registrations nearly doubled. After two weak years in Europe, Tesla's sales are clearly recovering, helped by the refreshed Model Y, cheaper Standard versions and, in some countries, new EV incentives.</p><h2>Why the Nordics matter</h2><p>The Nordic countries are where Europe's electric future arrives first. What happens there, with near-total EV adoption and fierce competition from Chinese and European brands, shows how Tesla holds up once electric cars become the norm. Topping the charts in that environment is a strong signal for the Model Y.</p>"
   },
   "nl": {
-   "text": "NR. 1 IN 5 NOORDSE LANDEN"
+    "title": "Model Y is de bestverkochte auto in alle vijf Noordse landen, en één op de vier nieuwe auto's in Noorwegen",
+    "description": "In september stond de Model Y bovenaan de verkooplijsten in Noorwegen, Zweden, Denemarken, Finland en IJsland. Alleen al in Noorwegen werden er 4.810 geregistreerd.",
+    "body": "<p>De Tesla Model Y was in september 2026 de bestverkochte personenauto in alle vijf Noordse landen, maakte Tesla Europe op 7 oktober bekend. In Noorwegen, Zweden, Denemarken, Finland en IJsland stond de Model Y bovenaan.</p><h2>Noorwegen springt eruit</h2><p>In Noorwegen werden in september 4.810 Model Y's geregistreerd, goed voor 25,7% van de totale markt voor nieuwe auto's. Met andere woorden: meer dan één op de vier nieuwe auto's die die maand in Noorwegen werden verkocht, was een Model Y. Elektrische auto's waren goed voor 98,8% van alle nieuwe registraties. Noorwegen is dus een vrijwel volledig elektrische markt geworden, en Tesla is daar de grootste speler.</p><h2>Tesla als merk</h2><p>Tesla was ook het bestverkochte merk in Denemarken, IJsland en Noorwegen. In Finland en Zweden claimde Tesla dat niet: daar verkochten andere fabrikanten in totaal meer auto's, ook al was de Model Y het populairste losse model.</p><h2>Trouwe rijders</h2><p>In een vervolgbericht meldde Tesla dat drie op de vier Noorse Tesla-rijders opnieuw een Tesla kopen. Waar dat cijfer vandaan komt, zei het bedrijf niet. Zie het dus als een bewering, niet als een gemeten statistiek.</p><h2>Onderdeel van een breder Europees herstel</h2><p>De Noordse cijfers passen in een groter beeld. In september was de Model Y ook de bestverkochte auto van Duitsland, vóór de VW Golf, en bijna verdubbelden Tesla's registraties in het Verenigd Koninkrijk. Na twee zwakke jaren in Europa herstelt Tesla's verkoop duidelijk, geholpen door de vernieuwde Model Y, goedkopere Standard-versies en in sommige landen nieuwe subsidies voor elektrische auto's.</p><h2>Waarom de Noordse landen ertoe doen</h2><p>In de Noordse landen komt de elektrische toekomst van Europa als eerste aan. Wat daar gebeurt, met bijna alleen nog elektrische auto's en felle concurrentie van Chinese en Europese merken, laat zien hoe Tesla het doet zodra elektrisch rijden de norm is. In die omgeving bovenaan staan is een sterk signaal voor de Model Y.</p>"
+  },
+  "label": {
+    "style": "w",
+    "en": {
+      "text": "NO. 1 IN ALL 5 NORDICS"
+    },
+    "nl": {
+      "text": "NR. 1 IN 5 NOORDSE LANDEN"
+    }
   }
- }
 }

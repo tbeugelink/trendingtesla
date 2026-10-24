@@ -1,49 +1,47 @@
 {
- "slug": "cybercab-launch-austin-paid-rides",
- "date": "2026-09-04",
- "time": "08:30",
- "category": "robotaxi",
- "models": [
-  "cybercab"
- ],
- "sources": [
-  {
-   "title": "Wikipedia — Tesla Cybercab",
-   "url": "https://en.wikipedia.org/wiki/Tesla_Cybercab"
-  },
-  {
-   "title": "Electrek — In September, Tesla will re-launch three products",
-   "url": "https://electrek.co/2026/09/01/in-sept-tesla-will-re-launch-3-products-it-launched-a-decade-ago-for-a-stock-pump/"
-  },
-  {
-   "title": "Motor1 — Tesla Cybercab robotaxi launch in Austin",
-   "url": "https://www.motor1.com/news/805874/tesla-cybercab-robotaxi-launch-austin/"
-  }
- ],
- "en": {
-  "title": "Tesla Cybercab launches in Austin: a low-key event, then the first paid rides",
-  "description": "Tesla's two-seat robotaxi without steering wheel or pedals made its debut in Austin. The launch itself was modest, but paying riders can now hail one through the Robotaxi app.",
-  "body": "<p>Tesla's Cybercab, the two-seat robotaxi with no steering wheel and no pedals, officially launched in Austin, Texas, on Thursday, September 3. A day later, on September 4, the first paid rides began through Tesla's existing Robotaxi service.</p><h2>A surprisingly quiet launch</h2><p>For a product Tesla has called central to its future, the launch event was understated. It was an invitation-only gathering at the ACL Live venue in Austin, where executives presented for roughly fifteen minutes. Elon Musk did not attend, and the livestream many fans expected did not happen.</p><p>That contrasts with the October 2024 'We, Robot' event where the Cybercab was first shown. This time the message was simpler: the car exists, it is in production at Gigafactory Texas, and it is carrying passengers.</p><h2>How riders get one</h2><p>The Cybercab joins the Model Y robotaxis that already run in Austin, so riders book through the same app. Early reports pointed to lower fares than the regular Robotaxi service, but Tesla has not published a fare table.</p><h2>The road to this point</h2><ul><li><strong>February 2026:</strong> the first production Cybercab came off the line in Texas.</li><li><strong>April 2026:</strong> formal production began.</li><li><strong>Summer 2026:</strong> hundreds of units were spotted around the factory, and test cars appeared on public roads.</li><li><strong>Late August:</strong> Tesla confirmed the September 3 date, and unsupervised Cybercabs were reported driving around Austin.</li></ul><h2>Why it matters</h2><p>The Cybercab is Tesla's clearest bet that its future lies in autonomous ride-hailing rather than selling cars to individuals. The vehicle runs a version of Tesla's self-driving software that is not yet available in customer cars. Every ride in Austin is now real-world proof, or disproof, of that strategy.</p><p>The big open question is regulation. A car without manual controls does not fit neatly into today's US safety standards, and that issue surfaced almost immediately after launch.</p>"
- },
- "nl": {
-  "title": "Tesla Cybercab gelanceerd in Austin: bescheiden evenement, daarna de eerste betaalde ritten",
-  "description": "Tesla's tweezits robotaxi zonder stuur en pedalen debuteerde in Austin. De lancering was bescheiden, maar betalende passagiers kunnen er nu een bestellen via de Robotaxi-app.",
-  "body": "<p>De Tesla Cybercab, de tweezits robotaxi zonder stuur en zonder pedalen, is op donderdag 3 september officieel gelanceerd in Austin, Texas. Een dag later, op 4 september, begonnen de eerste betaalde ritten via Tesla's bestaande Robotaxi-dienst.</p><h2>Een opvallend stille lancering</h2><p>Voor een product dat Tesla zelf cruciaal noemt voor zijn toekomst, was het evenement ingetogen. Het ging om een bijeenkomst op uitnodiging in de zaal ACL Live in Austin, waar bestuurders zo'n vijftien minuten aan het woord waren. Elon Musk was er niet bij, en de livestream waar veel fans op rekenden, kwam er niet.</p><p>Dat is een groot contrast met het evenement 'We, Robot' van oktober 2024, waar de Cybercab voor het eerst te zien was. Deze keer was de boodschap eenvoudiger: de auto bestaat, wordt gebouwd in de Gigafactory in Texas en vervoert passagiers.</p><h2>Zo krijg je er een</h2><p>De Cybercab rijdt mee met de Model Y-robotaxi's die al in Austin actief zijn, dus je boekt via dezelfde app. Eerste berichten wezen op lagere ritprijzen dan bij de gewone Robotaxi-dienst, maar Tesla heeft geen tarieven gepubliceerd.</p><h2>De weg hiernaartoe</h2><ul><li><strong>Februari 2026:</strong> de eerste productie-Cybercab rolde in Texas van de band.</li><li><strong>April 2026:</strong> de officiële productie begon.</li><li><strong>Zomer 2026:</strong> rond de fabriek werden honderden exemplaren gezien en testauto's verschenen op de openbare weg.</li><li><strong>Eind augustus:</strong> Tesla bevestigde de datum van 3 september, en er werden Cybercabs zonder toezicht door Austin gesignaleerd.</li></ul><h2>Waarom dit ertoe doet</h2><p>De Cybercab is Tesla's duidelijkste gok dat de toekomst ligt bij zelfrijdende taxidiensten in plaats van bij auto's verkopen aan particulieren. De auto draait op een versie van Tesla's zelfrijdsoftware die in klantauto's nog niet beschikbaar is. Elke rit in Austin is nu echt bewijs, of tegenbewijs, voor die strategie.</p><p>De grote open vraag is regelgeving. Een auto zonder handmatige bediening past niet goed in de huidige Amerikaanse veiligheidsnormen, en dat punt kwam vrijwel direct na de lancering op tafel.</p>"
- },
- "image": "topics/cybercab-street.jpg",
- "images": [
-  "cybercab.jpg",
-  "cybercab-street.jpg"
- ],
- "label": {
-  "style": "s",
-  "pos": "tr",
-  "rot": -3,
+  "slug": "cybercab-launch-austin-paid-rides",
+  "date": "2026-09-04",
+  "time": "08:30",
+  "category": "robotaxi",
+  "models": [
+    "cybercab"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia — Tesla Cybercab",
+      "url": "https://en.wikipedia.org/wiki/Tesla_Cybercab"
+    },
+    {
+      "title": "Electrek — In September, Tesla will re-launch three products",
+      "url": "https://electrek.co/2026/09/01/in-sept-tesla-will-re-launch-3-products-it-launched-a-decade-ago-for-a-stock-pump/"
+    },
+    {
+      "title": "Motor1 — Tesla Cybercab robotaxi launch in Austin",
+      "url": "https://www.motor1.com/news/805874/tesla-cybercab-robotaxi-launch-austin/"
+    }
+  ],
   "en": {
-   "text": "FIRST PAID RIDES!"
+    "title": "Tesla Cybercab launches in Austin: a low-key event, then the first paid rides",
+    "description": "Tesla's two-seat robotaxi without steering wheel or pedals made its debut in Austin. The launch itself was modest, but paying riders can now hail one through the Robotaxi app.",
+    "body": "<p>Tesla's Cybercab, the two-seat robotaxi with no steering wheel and no pedals, officially launched in Austin, Texas, on Thursday, September 3. A day later, on September 4, the first paid rides began through Tesla's existing Robotaxi service.</p><h2>A surprisingly quiet launch</h2><p>For a product Tesla has called central to its future, the launch event was understated. It was an invitation-only gathering at the ACL Live venue in Austin, where executives presented for roughly fifteen minutes. Elon Musk did not attend, and the livestream many fans expected did not happen.</p><p>That contrasts with the October 2024 'We, Robot' event where the Cybercab was first shown. This time the message was simpler: the car exists, it is in production at Gigafactory Texas, and it is carrying passengers.</p><h2>How riders get one</h2><p>The Cybercab joins the Model Y robotaxis that already run in Austin, so riders book through the same app. Early reports pointed to lower fares than the regular Robotaxi service, but Tesla has not published a fare table.</p><h2>The road to this point</h2><ul><li><strong>February 2026:</strong> the first production Cybercab came off the line in Texas.</li><li><strong>April 2026:</strong> formal production began.</li><li><strong>Summer 2026:</strong> hundreds of units were spotted around the factory, and test cars appeared on public roads.</li><li><strong>Late August:</strong> Tesla confirmed the September 3 date, and unsupervised Cybercabs were reported driving around Austin.</li></ul><h2>Why it matters</h2><p>The Cybercab is Tesla's clearest bet that its future lies in autonomous ride-hailing rather than selling cars to individuals. The vehicle runs a version of Tesla's self-driving software that is not yet available in customer cars. Every ride in Austin is now real-world proof, or disproof, of that strategy.</p><p>The big open question is regulation. A car without manual controls does not fit neatly into today's US safety standards, and that issue surfaced almost immediately after launch.</p>"
   },
   "nl": {
-   "text": "EERSTE BETAALDE RITTEN!"
+    "title": "Tesla Cybercab gelanceerd in Austin: bescheiden evenement, daarna de eerste betaalde ritten",
+    "description": "Tesla's tweezits robotaxi zonder stuur en pedalen debuteerde in Austin. De lancering was bescheiden, maar betalende passagiers kunnen er nu een bestellen via de Robotaxi-app.",
+    "body": "<p>De Tesla Cybercab, de tweezits robotaxi zonder stuur en zonder pedalen, is op donderdag 3 september officieel gelanceerd in Austin, Texas. Een dag later, op 4 september, begonnen de eerste betaalde ritten via Tesla's bestaande Robotaxi-dienst.</p><h2>Een opvallend stille lancering</h2><p>Voor een product dat Tesla zelf cruciaal noemt voor zijn toekomst, was het evenement ingetogen. Het ging om een bijeenkomst op uitnodiging in de zaal ACL Live in Austin, waar bestuurders zo'n vijftien minuten aan het woord waren. Elon Musk was er niet bij, en de livestream waar veel fans op rekenden, kwam er niet.</p><p>Dat is een groot contrast met het evenement 'We, Robot' van oktober 2024, waar de Cybercab voor het eerst te zien was. Deze keer was de boodschap eenvoudiger: de auto bestaat, wordt gebouwd in de Gigafactory in Texas en vervoert passagiers.</p><h2>Zo krijg je er een</h2><p>De Cybercab rijdt mee met de Model Y-robotaxi's die al in Austin actief zijn, dus je boekt via dezelfde app. Eerste berichten wezen op lagere ritprijzen dan bij de gewone Robotaxi-dienst, maar Tesla heeft geen tarieven gepubliceerd.</p><h2>De weg hiernaartoe</h2><ul><li><strong>Februari 2026:</strong> de eerste productie-Cybercab rolde in Texas van de band.</li><li><strong>April 2026:</strong> de officiële productie begon.</li><li><strong>Zomer 2026:</strong> rond de fabriek werden honderden exemplaren gezien en testauto's verschenen op de openbare weg.</li><li><strong>Eind augustus:</strong> Tesla bevestigde de datum van 3 september, en er werden Cybercabs zonder toezicht door Austin gesignaleerd.</li></ul><h2>Waarom dit ertoe doet</h2><p>De Cybercab is Tesla's duidelijkste gok dat de toekomst ligt bij zelfrijdende taxidiensten in plaats van bij auto's verkopen aan particulieren. De auto draait op een versie van Tesla's zelfrijdsoftware die in klantauto's nog niet beschikbaar is. Elke rit in Austin is nu echt bewijs, of tegenbewijs, voor die strategie.</p><p>De grote open vraag is regelgeving. Een auto zonder handmatige bediening past niet goed in de huidige Amerikaanse veiligheidsnormen, en dat punt kwam vrijwel direct na de lancering op tafel.</p>"
+  },
+  "image": "topics/cybercab-street.jpg",
+  "images": [
+    "cybercab.jpg",
+    "cybercab-street.jpg"
+  ],
+  "label": {
+    "style": "s",
+    "en": {
+      "text": "FIRST PAID RIDES!"
+    },
+    "nl": {
+      "text": "EERSTE BETAALDE RITTEN!"
+    }
   }
- }
 }

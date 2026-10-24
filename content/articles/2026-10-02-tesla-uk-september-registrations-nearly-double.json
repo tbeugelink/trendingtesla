@@ -1,42 +1,40 @@
 {
- "slug": "tesla-uk-september-registrations-nearly-double",
- "date": "2026-10-02",
- "time": "21:05",
- "category": "news",
- "models": [
-  "model-3",
-  "model-y"
- ],
- "sources": [
-  {
-   "title": "Electric Vehicles — Tesla's UK registrations nearly double in September to 15,875",
-   "url": "https://eletric-vehicles.com/tesla/teslas-uk-registrations-nearly-double-in-september-to-15875/"
-  },
-  {
-   "title": "Electrive — UK posts strongest-ever month for BEV registrations in September",
-   "url": "https://www.electrive.com/2026/10/02/uk-posts-strongest-ever-month-for-bev-registrations-in-september/"
-  }
- ],
- "en": {
-  "title": "Tesla UK sales nearly double in September, Model 3 is Britain's top electric car",
-  "description": "Tesla registered 15,875 cars in the UK in September, its best month in at least a year and a half. The Model 3 led the EV charts, with the Model Y in second place.",
-  "body": "<p>Tesla registered 15,875 new cars in the UK in September, almost twice the 7,993 of September 2025, according to preliminary figures from industry body SMMT published on October 2.</p><h2>The highlights</h2><ul><li><strong>Best month in a long time:</strong> Tesla's highest monthly total since at least the start of 2025, ahead of the 12,173 registered in June.</li><li><strong>Model 3 on top:</strong> with 9,929 registrations, it was the UK's best-selling electric car in September.</li><li><strong>Model Y second:</strong> 5,946 registrations, ahead of BYD's Sealion 7.</li><li><strong>Already past last year:</strong> about 46,200 Teslas registered in the first nine months, more than the 45,513 in all of 2025.</li></ul><h2>A record month for EVs</h2><p>The overall UK market had its strongest September since 2017, with registrations up 12.1% to 350,518 cars. Battery-electric cars grew 36.3% to 99,199, a 28.3% share of the market and the strongest month ever for EVs in the UK. Tesla's share of the total market was about 4.5%.</p><h2>BYD still sells more</h2><p>BYD registered 20,140 cars in the UK in September, more than Tesla. That figure includes plug-in hybrids, while Tesla only sells fully electric cars.</p><h2>Why September matters in the UK</h2><p>September is one of two months a year when the UK issues new registration plates, so it is always one of the biggest months for car sales. That makes year-over-year comparisons the fairest way to judge the result, and on that measure Tesla nearly doubled.</p>"
- },
- "nl": {
-  "title": "Tesla-verkoop in het VK verdubbelt bijna in september, Model 3 is de populairste EV van Groot-Brittannië",
-  "description": "Tesla registreerde in september 15.875 auto's in het VK, de beste maand in minstens anderhalf jaar. De Model 3 voerde de EV-lijst aan, met de Model Y op de tweede plaats.",
-  "body": "<p>Tesla registreerde in september 15.875 nieuwe auto's in het Verenigd Koninkrijk, bijna twee keer zoveel als de 7.993 van september 2025. Dat blijkt uit voorlopige cijfers van brancheorganisatie SMMT, gepubliceerd op 2 oktober.</p><h2>De hoogtepunten</h2><ul><li><strong>Beste maand in lange tijd:</strong> Tesla's hoogste maandtotaal sinds minstens begin 2025, boven de 12.173 registraties in juni.</li><li><strong>Model 3 bovenaan:</strong> met 9.929 registraties was hij in september de bestverkochte elektrische auto van het VK.</li><li><strong>Model Y tweede:</strong> 5.946 registraties, vóór de BYD Sealion 7.</li><li><strong>Vorig jaar al ingehaald:</strong> zo'n 46.200 Tesla's geregistreerd in de eerste negen maanden, meer dan de 45.513 in heel 2025.</li></ul><h2>Een recordmaand voor EV's</h2><p>De totale Britse automarkt had de sterkste september sinds 2017, met 12,1% meer registraties: 350.518 auto's. Volledig elektrische auto's groeiden met 36,3% naar 99.199, een marktaandeel van 28,3% en de sterkste maand ooit voor EV's in het VK. Tesla's aandeel in de totale markt was ongeveer 4,5%.</p><h2>BYD verkoopt nog meer</h2><p>BYD registreerde in september 20.140 auto's in het VK, meer dan Tesla. Dat cijfer omvat ook plug-in hybrides, terwijl Tesla alleen volledig elektrische auto's verkoopt.</p><h2>Waarom september telt in het VK</h2><p>September is een van de twee maanden per jaar waarin het VK nieuwe kentekenreeksen uitgeeft, en daarom altijd een van de grootste verkoopmaanden. Vergelijken met dezelfde maand vorig jaar is dus de eerlijkste manier om het resultaat te beoordelen, en daarop verdubbelde Tesla bijna.</p>"
- },
- "image": "models/m3h-1.jpg",
- "label": {
-  "style": "w",
-  "pos": "tr",
-  "rot": 0,
+  "slug": "tesla-uk-september-registrations-nearly-double",
+  "date": "2026-10-02",
+  "time": "21:05",
+  "category": "news",
+  "models": [
+    "model-3",
+    "model-y"
+  ],
+  "sources": [
+    {
+      "title": "Electric Vehicles — Tesla's UK registrations nearly double in September to 15,875",
+      "url": "https://eletric-vehicles.com/tesla/teslas-uk-registrations-nearly-double-in-september-to-15875/"
+    },
+    {
+      "title": "Electrive — UK posts strongest-ever month for BEV registrations in September",
+      "url": "https://www.electrive.com/2026/10/02/uk-posts-strongest-ever-month-for-bev-registrations-in-september/"
+    }
+  ],
   "en": {
-   "text": "UK SALES NEARLY DOUBLE!"
+    "title": "Tesla UK sales nearly double in September, Model 3 is Britain's top electric car",
+    "description": "Tesla registered 15,875 cars in the UK in September, its best month in at least a year and a half. The Model 3 led the EV charts, with the Model Y in second place.",
+    "body": "<p>Tesla registered 15,875 new cars in the UK in September, almost twice the 7,993 of September 2025, according to preliminary figures from industry body SMMT published on October 2.</p><h2>The highlights</h2><ul><li><strong>Best month in a long time:</strong> Tesla's highest monthly total since at least the start of 2025, ahead of the 12,173 registered in June.</li><li><strong>Model 3 on top:</strong> with 9,929 registrations, it was the UK's best-selling electric car in September.</li><li><strong>Model Y second:</strong> 5,946 registrations, ahead of BYD's Sealion 7.</li><li><strong>Already past last year:</strong> about 46,200 Teslas registered in the first nine months, more than the 45,513 in all of 2025.</li></ul><h2>A record month for EVs</h2><p>The overall UK market had its strongest September since 2017, with registrations up 12.1% to 350,518 cars. Battery-electric cars grew 36.3% to 99,199, a 28.3% share of the market and the strongest month ever for EVs in the UK. Tesla's share of the total market was about 4.5%.</p><h2>BYD still sells more</h2><p>BYD registered 20,140 cars in the UK in September, more than Tesla. That figure includes plug-in hybrids, while Tesla only sells fully electric cars.</p><h2>Why September matters in the UK</h2><p>September is one of two months a year when the UK issues new registration plates, so it is always one of the biggest months for car sales. That makes year-over-year comparisons the fairest way to judge the result, and on that measure Tesla nearly doubled.</p>"
   },
   "nl": {
-   "text": "VK: BIJNA DUBBEL ZOVEEL!"
+    "title": "Tesla-verkoop in het VK verdubbelt bijna in september, Model 3 is de populairste EV van Groot-Brittannië",
+    "description": "Tesla registreerde in september 15.875 auto's in het VK, de beste maand in minstens anderhalf jaar. De Model 3 voerde de EV-lijst aan, met de Model Y op de tweede plaats.",
+    "body": "<p>Tesla registreerde in september 15.875 nieuwe auto's in het Verenigd Koninkrijk, bijna twee keer zoveel als de 7.993 van september 2025. Dat blijkt uit voorlopige cijfers van brancheorganisatie SMMT, gepubliceerd op 2 oktober.</p><h2>De hoogtepunten</h2><ul><li><strong>Beste maand in lange tijd:</strong> Tesla's hoogste maandtotaal sinds minstens begin 2025, boven de 12.173 registraties in juni.</li><li><strong>Model 3 bovenaan:</strong> met 9.929 registraties was hij in september de bestverkochte elektrische auto van het VK.</li><li><strong>Model Y tweede:</strong> 5.946 registraties, vóór de BYD Sealion 7.</li><li><strong>Vorig jaar al ingehaald:</strong> zo'n 46.200 Tesla's geregistreerd in de eerste negen maanden, meer dan de 45.513 in heel 2025.</li></ul><h2>Een recordmaand voor EV's</h2><p>De totale Britse automarkt had de sterkste september sinds 2017, met 12,1% meer registraties: 350.518 auto's. Volledig elektrische auto's groeiden met 36,3% naar 99.199, een marktaandeel van 28,3% en de sterkste maand ooit voor EV's in het VK. Tesla's aandeel in de totale markt was ongeveer 4,5%.</p><h2>BYD verkoopt nog meer</h2><p>BYD registreerde in september 20.140 auto's in het VK, meer dan Tesla. Dat cijfer omvat ook plug-in hybrides, terwijl Tesla alleen volledig elektrische auto's verkoopt.</p><h2>Waarom september telt in het VK</h2><p>September is een van de twee maanden per jaar waarin het VK nieuwe kentekenreeksen uitgeeft, en daarom altijd een van de grootste verkoopmaanden. Vergelijken met dezelfde maand vorig jaar is dus de eerlijkste manier om het resultaat te beoordelen, en daarop verdubbelde Tesla bijna.</p>"
+  },
+  "image": "models/m3h-1.jpg",
+  "label": {
+    "style": "w",
+    "en": {
+      "text": "UK SALES NEARLY DOUBLE!"
+    },
+    "nl": {
+      "text": "VK: BIJNA DUBBEL ZOVEEL!"
+    }
   }
- }
 }

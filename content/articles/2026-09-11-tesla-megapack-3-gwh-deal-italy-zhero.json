@@ -1,43 +1,41 @@
 {
- "slug": "tesla-megapack-3-gwh-deal-italy-zhero",
- "date": "2026-09-11",
- "time": "15:00",
- "category": "energy",
- "sources": [
-  {
-   "title": "Drive Tesla Canada — Tesla signs 3 GWh Megapack deal in Italy",
-   "url": "https://driveteslacanada.ca/news/tesla-3gwh-megapack-deal-zhero-italy/"
-  },
-  {
-   "title": "Wikipedia — Tesla Megapack",
-   "url": "https://en.wikipedia.org/wiki/Tesla_Megapack"
-  }
- ],
- "en": {
-  "title": "Tesla Energy lands 3 GWh Megapack deal for Italian battery projects",
-  "description": "Italian developer Zhero and H1 Holdings will buy 3 GWh of Tesla Megapacks under long-term contracts. It is another sign that grid batteries are becoming one of Tesla's steadiest businesses.",
-  "body": "<p>Tesla Energy has signed a deal to supply 3 GWh of Megapack battery storage to Italian developer Zhero and its partner H1 Holdings. The agreement was reported on September 11.</p><h2>The deal</h2><ul><li><strong>Size:</strong> 3 GWh of total storage capacity.</li><li><strong>Location:</strong> projects in Italy.</li><li><strong>First phase:</strong> 200 MW of developments that are ready to build.</li><li><strong>Structure:</strong> long-term purchase contracts.</li></ul><p>No completion dates were given.</p><h2>Why the structure matters</h2><p>Long-term supply contracts make Zhero less dependent on Italian support schemes for storage, and help it move from developing projects to owning and operating them. Zhero has a pipeline of about 1.5 GW of battery projects and wants a bigger share of Italy's commercial and industrial market.</p><h2>Megapack 3 in the background</h2><p>The deal lands as Tesla ramps up Megapack 3, the newest version of its grid-scale battery, which recently entered production in Texas. Tesla says it cuts installation time and cost compared with earlier versions.</p><h2>Part of a bigger European push</h2><p>Italy is becoming an important market for Tesla Energy. An earlier deal with NatPower, worth around $5 billion, covers more than 25 GWh of storage in the UK and Italy. Elsewhere, Tesla has projects ranging from New Zealand to a 500 MWh site in Queensland, Australia.</p><h2>Why it matters</h2><p>While car sales go up and down, energy storage has become one of Tesla's most consistent growth stories. Grids need batteries to absorb solar and wind power, and multi-gigawatt-hour contracts like this one give Tesla Energy years of predictable demand.</p>"
- },
- "nl": {
-  "title": "Tesla Energy sluit 3 GWh Megapack-deal voor Italiaanse batterijprojecten",
-  "description": "De Italiaanse ontwikkelaar Zhero en H1 Holdings kopen via langlopende contracten 3 GWh aan Tesla Megapacks. Opnieuw een teken dat netbatterijen een van Tesla's stabielste activiteiten worden.",
-  "body": "<p>Tesla Energy heeft een overeenkomst gesloten om 3 GWh aan Megapack-batterijopslag te leveren aan de Italiaanse ontwikkelaar Zhero en partner H1 Holdings. De deal werd op 11 september bekend.</p><h2>De deal</h2><ul><li><strong>Omvang:</strong> 3 GWh aan totale opslagcapaciteit.</li><li><strong>Locatie:</strong> projecten in Italië.</li><li><strong>Eerste fase:</strong> 200 MW aan projecten die klaar zijn om te bouwen.</li><li><strong>Opzet:</strong> langlopende inkoopcontracten.</li></ul><p>Data voor oplevering zijn niet genoemd.</p><h2>Waarom de opzet belangrijk is</h2><p>Langlopende leveringscontracten maken Zhero minder afhankelijk van Italiaanse subsidieregelingen voor opslag, en helpen het bedrijf om van projectontwikkelaar eigenaar en exploitant te worden. Zhero heeft zo'n 1,5 GW aan batterijprojecten in de pijplijn en wil een groter deel van de Italiaanse zakelijke markt.</p><h2>Megapack 3 op de achtergrond</h2><p>De deal komt terwijl Tesla de productie opvoert van de Megapack 3, de nieuwste versie van de grote netbatterij, die onlangs in Texas in productie ging. Volgens Tesla gaat de installatie sneller en goedkoper dan bij eerdere versies.</p><h2>Onderdeel van een grotere Europese opmars</h2><p>Italië wordt een belangrijke markt voor Tesla Energy. Een eerdere deal met NatPower, ter waarde van zo'n $5 miljard, omvat meer dan 25 GWh aan opslag in het Verenigd Koninkrijk en Italië. Elders lopen projecten van Nieuw-Zeeland tot een locatie van 500 MWh in Queensland, Australië.</p><h2>Waarom dit ertoe doet</h2><p>Terwijl de autoverkoop op en neer gaat, is energieopslag een van Tesla's meest constante groeiverhalen geworden. Stroomnetten hebben batterijen nodig om zonne- en windstroom op te vangen, en contracten van meerdere gigawattuur zoals deze geven Tesla Energy jarenlang voorspelbare vraag.</p>"
- },
- "image": "topics/megapack-2.jpg",
- "images": [
-  "megapack-2.jpg",
-  "megapack-3.jpg",
-  "energy.jpg"
- ],
- "label": {
-  "style": "y",
-  "pos": "tr",
-  "rot": 2,
+  "slug": "tesla-megapack-3-gwh-deal-italy-zhero",
+  "date": "2026-09-11",
+  "time": "15:00",
+  "category": "energy",
+  "sources": [
+    {
+      "title": "Drive Tesla Canada — Tesla signs 3 GWh Megapack deal in Italy",
+      "url": "https://driveteslacanada.ca/news/tesla-3gwh-megapack-deal-zhero-italy/"
+    },
+    {
+      "title": "Wikipedia — Tesla Megapack",
+      "url": "https://en.wikipedia.org/wiki/Tesla_Megapack"
+    }
+  ],
   "en": {
-   "text": "3 GWh FOR ITALY"
+    "title": "Tesla Energy lands 3 GWh Megapack deal for Italian battery projects",
+    "description": "Italian developer Zhero and H1 Holdings will buy 3 GWh of Tesla Megapacks under long-term contracts. It is another sign that grid batteries are becoming one of Tesla's steadiest businesses.",
+    "body": "<p>Tesla Energy has signed a deal to supply 3 GWh of Megapack battery storage to Italian developer Zhero and its partner H1 Holdings. The agreement was reported on September 11.</p><h2>The deal</h2><ul><li><strong>Size:</strong> 3 GWh of total storage capacity.</li><li><strong>Location:</strong> projects in Italy.</li><li><strong>First phase:</strong> 200 MW of developments that are ready to build.</li><li><strong>Structure:</strong> long-term purchase contracts.</li></ul><p>No completion dates were given.</p><h2>Why the structure matters</h2><p>Long-term supply contracts make Zhero less dependent on Italian support schemes for storage, and help it move from developing projects to owning and operating them. Zhero has a pipeline of about 1.5 GW of battery projects and wants a bigger share of Italy's commercial and industrial market.</p><h2>Megapack 3 in the background</h2><p>The deal lands as Tesla ramps up Megapack 3, the newest version of its grid-scale battery, which recently entered production in Texas. Tesla says it cuts installation time and cost compared with earlier versions.</p><h2>Part of a bigger European push</h2><p>Italy is becoming an important market for Tesla Energy. An earlier deal with NatPower, worth around $5 billion, covers more than 25 GWh of storage in the UK and Italy. Elsewhere, Tesla has projects ranging from New Zealand to a 500 MWh site in Queensland, Australia.</p><h2>Why it matters</h2><p>While car sales go up and down, energy storage has become one of Tesla's most consistent growth stories. Grids need batteries to absorb solar and wind power, and multi-gigawatt-hour contracts like this one give Tesla Energy years of predictable demand.</p>"
   },
   "nl": {
-   "text": "3 GWh VOOR ITALIË"
+    "title": "Tesla Energy sluit 3 GWh Megapack-deal voor Italiaanse batterijprojecten",
+    "description": "De Italiaanse ontwikkelaar Zhero en H1 Holdings kopen via langlopende contracten 3 GWh aan Tesla Megapacks. Opnieuw een teken dat netbatterijen een van Tesla's stabielste activiteiten worden.",
+    "body": "<p>Tesla Energy heeft een overeenkomst gesloten om 3 GWh aan Megapack-batterijopslag te leveren aan de Italiaanse ontwikkelaar Zhero en partner H1 Holdings. De deal werd op 11 september bekend.</p><h2>De deal</h2><ul><li><strong>Omvang:</strong> 3 GWh aan totale opslagcapaciteit.</li><li><strong>Locatie:</strong> projecten in Italië.</li><li><strong>Eerste fase:</strong> 200 MW aan projecten die klaar zijn om te bouwen.</li><li><strong>Opzet:</strong> langlopende inkoopcontracten.</li></ul><p>Data voor oplevering zijn niet genoemd.</p><h2>Waarom de opzet belangrijk is</h2><p>Langlopende leveringscontracten maken Zhero minder afhankelijk van Italiaanse subsidieregelingen voor opslag, en helpen het bedrijf om van projectontwikkelaar eigenaar en exploitant te worden. Zhero heeft zo'n 1,5 GW aan batterijprojecten in de pijplijn en wil een groter deel van de Italiaanse zakelijke markt.</p><h2>Megapack 3 op de achtergrond</h2><p>De deal komt terwijl Tesla de productie opvoert van de Megapack 3, de nieuwste versie van de grote netbatterij, die onlangs in Texas in productie ging. Volgens Tesla gaat de installatie sneller en goedkoper dan bij eerdere versies.</p><h2>Onderdeel van een grotere Europese opmars</h2><p>Italië wordt een belangrijke markt voor Tesla Energy. Een eerdere deal met NatPower, ter waarde van zo'n $5 miljard, omvat meer dan 25 GWh aan opslag in het Verenigd Koninkrijk en Italië. Elders lopen projecten van Nieuw-Zeeland tot een locatie van 500 MWh in Queensland, Australië.</p><h2>Waarom dit ertoe doet</h2><p>Terwijl de autoverkoop op en neer gaat, is energieopslag een van Tesla's meest constante groeiverhalen geworden. Stroomnetten hebben batterijen nodig om zonne- en windstroom op te vangen, en contracten van meerdere gigawattuur zoals deze geven Tesla Energy jarenlang voorspelbare vraag.</p>"
+  },
+  "image": "topics/megapack-2.jpg",
+  "images": [
+    "megapack-2.jpg",
+    "megapack-3.jpg",
+    "energy.jpg"
+  ],
+  "label": {
+    "style": "y",
+    "en": {
+      "text": "3 GWh FOR ITALY"
+    },
+    "nl": {
+      "text": "3 GWh VOOR ITALIË"
+    }
   }
- }
 }

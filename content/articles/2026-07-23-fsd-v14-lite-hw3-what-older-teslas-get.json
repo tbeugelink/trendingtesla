@@ -1,47 +1,45 @@
 {
- "slug": "fsd-v14-lite-hw3-what-older-teslas-get",
- "date": "2026-07-23",
- "time": "21:20",
- "category": "software",
- "models": [
-  "model-3-classic",
-  "model-y-classic"
- ],
- "sources": [
-  {
-   "title": "Tesla Oracle — FSD v14 Lite finally goes wide release with 2026.20.6.11",
-   "url": "https://www.teslaoracle.com/2026/07/23/tesla-fsd-v14-lite-finally-goes-wide-release/"
-  },
-  {
-   "title": "Not a Tesla App — FSD v14 Lite starts rolling out publicly",
-   "url": "https://www.notateslaapp.com/news/4468/tesla-fsd-v14-lite-starts-rolling-out-publicly"
-  }
- ],
- "en": {
-  "title": "FSD v14 Lite for Hardware 3: what older Teslas get, and what they never will",
-  "description": "Tesla has started a wide rollout of FSD v14 Lite to cars with Hardware 3. It brings much of v14's smoother driving to older Model 3 and Model Y, but HW3 has reached its ceiling.",
-  "body": "<p>Owners of older Teslas with Hardware 3 (HW3) have watched newer cars get better versions of FSD for a long time. On July 21, Tesla began rolling out FSD v14 Lite to HW3 cars, and by July 23 the release went wide in the US and Canada.</p><h2>What v14 Lite is</h2><p>Tesla's newest FSD models are too large for the HW3 computer. v14 Lite is a 'distilled' version: Tesla trains a smaller model to mimic the behavior of the full HW4 version, including reinforcement learning techniques. The software version is 2026.20.6.11, the same build number HW4 cars get with FSD v14.3.6.</p><h2>What improves</h2><ul><li>Better handling of merges, forks, pedestrians, traffic lights and cars cutting in.</li><li>Fewer unnecessary slowdowns, smoother steering and steadier lane centering.</li><li>Parking, unparking and reversing on FSD.</li><li>Arrival options: choose whether FSD parks in a lot, on the street, in a driveway or at the curb.</li><li>A 'Start Self-Driving from Park' button, with the driver seated, belted and visible to the cabin camera.</li><li>A new, even calmer 'Sloth' speed profile, below Chill.</li></ul><h2>Who gets it</h2><p>At the start, the rollout covered HW3 Model 3 and Model Y in the US and Canada. HW3 Model S and Model X followed later in stages. European HW3 owners can only use it once FSD (Supervised) is approved in their country.</p><h2>The ceiling</h2><p>v14 Lite is expected to be the last major FSD branch for HW3. HW3 will not get unsupervised FSD or the coming v15. Tesla has promised hardware upgrades with newer AI chips for owners who bought FSD outright, but has not given a schedule.</p><h2>Why it matters</h2><p>There are millions of HW3 Teslas on the road. v14 Lite narrows the gap between old and new cars and keeps those owners in the FSD ecosystem while the upgrade question remains open.</p>"
- },
- "nl": {
-  "title": "FSD v14 Lite voor Hardware 3: wat oudere Tesla's krijgen, en wat nooit komt",
-  "description": "Tesla rolt FSD v14 Lite breed uit naar auto's met Hardware 3. Oudere Model 3's en Model Y's krijgen veel van het soepelere rijgedrag van v14, maar HW3 zit nu aan zijn plafond.",
-  "body": "<p>Eigenaren van oudere Tesla's met Hardware 3 (HW3) zien al lang dat nieuwere auto's betere versies van FSD krijgen. Op 21 juli begon Tesla met het uitrollen van FSD v14 Lite naar HW3-auto's, en op 23 juli ging de release breed in de VS en Canada.</p><h2>Wat v14 Lite is</h2><p>Tesla's nieuwste FSD-modellen zijn te groot voor de HW3-computer. v14 Lite is een 'gedistilleerde' versie: Tesla traint een kleiner model om het gedrag van de volledige HW4-versie na te doen, inclusief technieken als reinforcement learning. De softwareversie is 2026.20.6.11, hetzelfde buildnummer dat HW4-auto's krijgen met FSD v14.3.6.</p><h2>Wat er beter wordt</h2><ul><li>Beter invoegen en afslaan, en betere omgang met voetgangers, verkeerslichten en auto's die invoegen.</li><li>Minder onnodig afremmen, soepeler sturen en stabieler in het midden van de rijstrook.</li><li>Parkeren, wegrijden uit een parkeervak en achteruitrijden met FSD.</li><li>Aankomstopties: kies of FSD parkeert op een parkeerterrein, op straat, op de oprit of langs de stoep.</li><li>Een knop 'Zelfrijden starten vanuit P', met de bestuurder op zijn plek, gordel om en zichtbaar voor de cabinecamera.</li><li>Een nieuw, nog rustiger snelheidsprofiel 'Sloth', onder Chill.</li></ul><h2>Wie het krijgt</h2><p>In het begin ging het om HW3-versies van de Model 3 en Model Y in de VS en Canada. HW3-versies van de Model S en Model X volgden later in stappen. Europese HW3-rijders kunnen het pas gebruiken als FSD (Supervised) in hun land is goedgekeurd.</p><h2>Het plafond</h2><p>v14 Lite wordt naar verwachting de laatste grote FSD-versie voor HW3. HW3 krijgt geen FSD zonder toezicht en ook geen v15. Tesla heeft beloofd dat wie FSD heeft gekocht, een hardware-upgrade met nieuwere AI-chips krijgt, maar heeft daarvoor geen planning gegeven.</p><h2>Waarom dit ertoe doet</h2><p>Er rijden miljoenen HW3-Tesla's rond. v14 Lite verkleint het verschil tussen oude en nieuwe auto's en houdt die rijders bij FSD, terwijl de vraag over de upgrade nog openstaat.</p>"
- },
- "images": [
-  "fsd-2.jpg",
-  "fsd-3.jpg"
- ],
- "label": {
-  "style": "k",
-  "pos": "tl",
-  "rot": 0,
+  "slug": "fsd-v14-lite-hw3-what-older-teslas-get",
+  "date": "2026-07-23",
+  "time": "21:20",
+  "category": "software",
+  "models": [
+    "model-3-classic",
+    "model-y-classic"
+  ],
+  "sources": [
+    {
+      "title": "Tesla Oracle — FSD v14 Lite finally goes wide release with 2026.20.6.11",
+      "url": "https://www.teslaoracle.com/2026/07/23/tesla-fsd-v14-lite-finally-goes-wide-release/"
+    },
+    {
+      "title": "Not a Tesla App — FSD v14 Lite starts rolling out publicly",
+      "url": "https://www.notateslaapp.com/news/4468/tesla-fsd-v14-lite-starts-rolling-out-publicly"
+    }
+  ],
   "en": {
-   "sub": "FSD V14 LITE",
-   "text": "HW3 HITS ITS CEILING"
+    "title": "FSD v14 Lite for Hardware 3: what older Teslas get, and what they never will",
+    "description": "Tesla has started a wide rollout of FSD v14 Lite to cars with Hardware 3. It brings much of v14's smoother driving to older Model 3 and Model Y, but HW3 has reached its ceiling.",
+    "body": "<p>Owners of older Teslas with Hardware 3 (HW3) have watched newer cars get better versions of FSD for a long time. On July 21, Tesla began rolling out FSD v14 Lite to HW3 cars, and by July 23 the release went wide in the US and Canada.</p><h2>What v14 Lite is</h2><p>Tesla's newest FSD models are too large for the HW3 computer. v14 Lite is a 'distilled' version: Tesla trains a smaller model to mimic the behavior of the full HW4 version, including reinforcement learning techniques. The software version is 2026.20.6.11, the same build number HW4 cars get with FSD v14.3.6.</p><h2>What improves</h2><ul><li>Better handling of merges, forks, pedestrians, traffic lights and cars cutting in.</li><li>Fewer unnecessary slowdowns, smoother steering and steadier lane centering.</li><li>Parking, unparking and reversing on FSD.</li><li>Arrival options: choose whether FSD parks in a lot, on the street, in a driveway or at the curb.</li><li>A 'Start Self-Driving from Park' button, with the driver seated, belted and visible to the cabin camera.</li><li>A new, even calmer 'Sloth' speed profile, below Chill.</li></ul><h2>Who gets it</h2><p>At the start, the rollout covered HW3 Model 3 and Model Y in the US and Canada. HW3 Model S and Model X followed later in stages. European HW3 owners can only use it once FSD (Supervised) is approved in their country.</p><h2>The ceiling</h2><p>v14 Lite is expected to be the last major FSD branch for HW3. HW3 will not get unsupervised FSD or the coming v15. Tesla has promised hardware upgrades with newer AI chips for owners who bought FSD outright, but has not given a schedule.</p><h2>Why it matters</h2><p>There are millions of HW3 Teslas on the road. v14 Lite narrows the gap between old and new cars and keeps those owners in the FSD ecosystem while the upgrade question remains open.</p>"
   },
   "nl": {
-   "sub": "FSD V14 LITE",
-   "text": "HW3 ZIT AAN ZIJN PLAFOND"
+    "title": "FSD v14 Lite voor Hardware 3: wat oudere Tesla's krijgen, en wat nooit komt",
+    "description": "Tesla rolt FSD v14 Lite breed uit naar auto's met Hardware 3. Oudere Model 3's en Model Y's krijgen veel van het soepelere rijgedrag van v14, maar HW3 zit nu aan zijn plafond.",
+    "body": "<p>Eigenaren van oudere Tesla's met Hardware 3 (HW3) zien al lang dat nieuwere auto's betere versies van FSD krijgen. Op 21 juli begon Tesla met het uitrollen van FSD v14 Lite naar HW3-auto's, en op 23 juli ging de release breed in de VS en Canada.</p><h2>Wat v14 Lite is</h2><p>Tesla's nieuwste FSD-modellen zijn te groot voor de HW3-computer. v14 Lite is een 'gedistilleerde' versie: Tesla traint een kleiner model om het gedrag van de volledige HW4-versie na te doen, inclusief technieken als reinforcement learning. De softwareversie is 2026.20.6.11, hetzelfde buildnummer dat HW4-auto's krijgen met FSD v14.3.6.</p><h2>Wat er beter wordt</h2><ul><li>Beter invoegen en afslaan, en betere omgang met voetgangers, verkeerslichten en auto's die invoegen.</li><li>Minder onnodig afremmen, soepeler sturen en stabieler in het midden van de rijstrook.</li><li>Parkeren, wegrijden uit een parkeervak en achteruitrijden met FSD.</li><li>Aankomstopties: kies of FSD parkeert op een parkeerterrein, op straat, op de oprit of langs de stoep.</li><li>Een knop 'Zelfrijden starten vanuit P', met de bestuurder op zijn plek, gordel om en zichtbaar voor de cabinecamera.</li><li>Een nieuw, nog rustiger snelheidsprofiel 'Sloth', onder Chill.</li></ul><h2>Wie het krijgt</h2><p>In het begin ging het om HW3-versies van de Model 3 en Model Y in de VS en Canada. HW3-versies van de Model S en Model X volgden later in stappen. Europese HW3-rijders kunnen het pas gebruiken als FSD (Supervised) in hun land is goedgekeurd.</p><h2>Het plafond</h2><p>v14 Lite wordt naar verwachting de laatste grote FSD-versie voor HW3. HW3 krijgt geen FSD zonder toezicht en ook geen v15. Tesla heeft beloofd dat wie FSD heeft gekocht, een hardware-upgrade met nieuwere AI-chips krijgt, maar heeft daarvoor geen planning gegeven.</p><h2>Waarom dit ertoe doet</h2><p>Er rijden miljoenen HW3-Tesla's rond. v14 Lite verkleint het verschil tussen oude en nieuwe auto's en houdt die rijders bij FSD, terwijl de vraag over de upgrade nog openstaat.</p>"
+  },
+  "images": [
+    "fsd-2.jpg",
+    "fsd-3.jpg"
+  ],
+  "label": {
+    "style": "k",
+    "en": {
+      "sub": "FSD V14 LITE",
+      "text": "HW3 HITS ITS CEILING"
+    },
+    "nl": {
+      "sub": "FSD V14 LITE",
+      "text": "HW3 ZIT AAN ZIJN PLAFOND"
+    }
   }
- }
 }

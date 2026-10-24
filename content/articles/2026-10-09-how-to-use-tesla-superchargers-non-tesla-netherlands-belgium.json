@@ -1,43 +1,41 @@
 {
- "slug": "how-to-use-tesla-superchargers-non-tesla-netherlands-belgium",
- "date": "2026-10-09",
- "time": "08:15",
- "category": "charging",
- "sources": [
-  {
-   "title": "electrive — Tesla expands Supercharger access for other electric cars in Europe",
-   "url": "https://www.electrive.com/2022/05/19/tesla-expands-supercharger-access-for-other-electric-cars-in-europe"
-  },
-  {
-   "title": "Fleet News — Tesla announces new pricing structure for Supercharger network",
-   "url": "https://www.fleetnews.co.uk/news/tesla-announces-new-pricing-structure-for-supercharger-network"
-  }
- ],
- "en": {
-  "title": "How to charge a non-Tesla at a Tesla Supercharger in Europe: a step-by-step guide",
-  "description": "Most Superchargers in the Netherlands, Belgium and the rest of Europe are open to every electric car. Here is how it works, what it costs and when a membership pays off.",
-  "body": "<p>Tesla's Superchargers are no longer only for Teslas. In most European countries, including the Netherlands and Belgium, the majority of sites are open to every electric car with a CCS plug. Here is how to use them.</p><h2>Step 1: get the Tesla app</h2><p>You do not need a Tesla to use the Tesla app. Download it, create an account and add a payment method, such as a bank card, Apple Pay or Google Pay.</p><h2>Step 2: find an open site</h2><p>In the app, open the charging map and filter for sites open to non-Tesla vehicles. Most V3 and V4 Superchargers in Europe are open to all; a few older sites still are not.</p><h2>Step 3: park smartly</h2><p>Older Supercharger cables are short and designed for Teslas, which have the charge port at the left rear. Depending on where your car's port is, you may need to park across two bays or nose-in. Newer V4 stalls have longer cables, which makes this much easier. Do not block more bays than you need.</p><h2>Step 4: start charging</h2><p>In the app, select the stall number printed on the charger, plug in, and tap to start. You can watch progress and cost in the app and stop at any time.</p><h2>What it costs</h2><p>Prices differ per site and time of day; the app shows the price before you start. Non-Tesla drivers pay more per kWh than Tesla owners, unless they take a Supercharging membership. The membership has a monthly fee and gives you prices close to what Tesla drivers pay. As a rule of thumb, it pays off if you fast-charge regularly, for example on frequent long trips. Idle fees apply if you stay plugged in after charging finishes while the site is busy.</p><h2>Tips</h2><ul><li>Charge to around 80%: charging slows down sharply above that.</li><li>Precondition your battery if your car supports it; a warm battery charges faster.</li><li>Check the app for live availability before you drive to a site.</li></ul><h2>Why Tesla does this</h2><p>Opening the network brings Tesla extra revenue, helps meet European rules for public charging, and lets the company qualify for subsidies in some countries.</p>"
- },
- "nl": {
-  "title": "Zo laad je een andere elektrische auto bij een Tesla Supercharger: stap voor stap",
-  "description": "De meeste Superchargers in Nederland, België en de rest van Europa zijn open voor elke elektrische auto. Zo werkt het, dit kost het en hier loont een abonnement.",
-  "body": "<p>Tesla's Superchargers zijn allang niet meer alleen voor Tesla's. In de meeste Europese landen, ook in Nederland en België, staat het grootste deel van de locaties open voor elke elektrische auto met een CCS-stekker. Zo gebruik je ze.</p><h2>Stap 1: download de Tesla-app</h2><p>Je hebt geen Tesla nodig voor de Tesla-app. Download hem, maak een account aan en voeg een betaalmethode toe, zoals een bankpas, Apple Pay of Google Pay.</p><h2>Stap 2: zoek een open locatie</h2><p>Open in de app de laadkaart en filter op locaties die open zijn voor andere merken. De meeste V3- en V4-Superchargers in Europa zijn open voor iedereen; een paar oudere locaties nog niet.</p><h2>Stap 3: parkeer slim</h2><p>Oudere Supercharger-kabels zijn kort en gemaakt voor Tesla's, die de laadklep linksachter hebben. Afhankelijk van waar jouw laadpoort zit, moet je misschien schuin over twee vakken of met de neus naar voren parkeren. Nieuwere V4-palen hebben langere kabels, wat het veel makkelijker maakt. Blokkeer niet meer vakken dan nodig.</p><h2>Stap 4: begin met laden</h2><p>Kies in de app het nummer dat op de laadpaal staat, steek de stekker in je auto en tik op starten. In de app zie je de voortgang en de kosten, en je kunt op elk moment stoppen.</p><h2>Wat het kost</h2><p>De prijs verschilt per locatie en per tijdstip; de app toont hem voordat je begint. Wie geen Tesla rijdt, betaalt meer per kWh dan Tesla-rijders, tenzij je een Supercharging-abonnement neemt. Dat kost een vast bedrag per maand en geeft je tarieven die dicht bij die van Tesla-rijders liggen. Vuistregel: het loont als je regelmatig snelladen, bijvoorbeeld bij veel lange ritten. Blijf je aan de lader staan nadat je auto vol is terwijl het druk is, dan betaal je stilstandkosten.</p><h2>Tips</h2><ul><li>Laad tot ongeveer 80%: daarboven gaat het laden flink langzamer.</li><li>Warm je accu voor als je auto dat kan; een warme accu laadt sneller.</li><li>Kijk in de app of er plek is voordat je naar een locatie rijdt.</li></ul><h2>Waarom Tesla dit doet</h2><p>Het netwerk openstellen levert Tesla extra inkomsten op, helpt bij het voldoen aan Europese regels voor openbaar laden en maakt het bedrijf in sommige landen geschikt voor subsidies.</p>"
- },
- "images": [
-  "supercharger-7.jpg",
-  "supercharger-2.jpg"
- ],
- "label": {
-  "style": "k",
-  "pos": "tl",
-  "rot": 0,
+  "slug": "how-to-use-tesla-superchargers-non-tesla-netherlands-belgium",
+  "date": "2026-10-09",
+  "time": "08:15",
+  "category": "charging",
+  "sources": [
+    {
+      "title": "electrive — Tesla expands Supercharger access for other electric cars in Europe",
+      "url": "https://www.electrive.com/2022/05/19/tesla-expands-supercharger-access-for-other-electric-cars-in-europe"
+    },
+    {
+      "title": "Fleet News — Tesla announces new pricing structure for Supercharger network",
+      "url": "https://www.fleetnews.co.uk/news/tesla-announces-new-pricing-structure-for-supercharger-network"
+    }
+  ],
   "en": {
-   "sub": "STEP BY STEP",
-   "text": "NO TESLA? CHARGE ANYWAY"
+    "title": "How to charge a non-Tesla at a Tesla Supercharger in Europe: a step-by-step guide",
+    "description": "Most Superchargers in the Netherlands, Belgium and the rest of Europe are open to every electric car. Here is how it works, what it costs and when a membership pays off.",
+    "body": "<p>Tesla's Superchargers are no longer only for Teslas. In most European countries, including the Netherlands and Belgium, the majority of sites are open to every electric car with a CCS plug. Here is how to use them.</p><h2>Step 1: get the Tesla app</h2><p>You do not need a Tesla to use the Tesla app. Download it, create an account and add a payment method, such as a bank card, Apple Pay or Google Pay.</p><h2>Step 2: find an open site</h2><p>In the app, open the charging map and filter for sites open to non-Tesla vehicles. Most V3 and V4 Superchargers in Europe are open to all; a few older sites still are not.</p><h2>Step 3: park smartly</h2><p>Older Supercharger cables are short and designed for Teslas, which have the charge port at the left rear. Depending on where your car's port is, you may need to park across two bays or nose-in. Newer V4 stalls have longer cables, which makes this much easier. Do not block more bays than you need.</p><h2>Step 4: start charging</h2><p>In the app, select the stall number printed on the charger, plug in, and tap to start. You can watch progress and cost in the app and stop at any time.</p><h2>What it costs</h2><p>Prices differ per site and time of day; the app shows the price before you start. Non-Tesla drivers pay more per kWh than Tesla owners, unless they take a Supercharging membership. The membership has a monthly fee and gives you prices close to what Tesla drivers pay. As a rule of thumb, it pays off if you fast-charge regularly, for example on frequent long trips. Idle fees apply if you stay plugged in after charging finishes while the site is busy.</p><h2>Tips</h2><ul><li>Charge to around 80%: charging slows down sharply above that.</li><li>Precondition your battery if your car supports it; a warm battery charges faster.</li><li>Check the app for live availability before you drive to a site.</li></ul><h2>Why Tesla does this</h2><p>Opening the network brings Tesla extra revenue, helps meet European rules for public charging, and lets the company qualify for subsidies in some countries.</p>"
   },
   "nl": {
-   "sub": "STAP VOOR STAP",
-   "text": "GEEN TESLA? TOCH LADEN"
+    "title": "Zo laad je een andere elektrische auto bij een Tesla Supercharger: stap voor stap",
+    "description": "De meeste Superchargers in Nederland, België en de rest van Europa zijn open voor elke elektrische auto. Zo werkt het, dit kost het en hier loont een abonnement.",
+    "body": "<p>Tesla's Superchargers zijn allang niet meer alleen voor Tesla's. In de meeste Europese landen, ook in Nederland en België, staat het grootste deel van de locaties open voor elke elektrische auto met een CCS-stekker. Zo gebruik je ze.</p><h2>Stap 1: download de Tesla-app</h2><p>Je hebt geen Tesla nodig voor de Tesla-app. Download hem, maak een account aan en voeg een betaalmethode toe, zoals een bankpas, Apple Pay of Google Pay.</p><h2>Stap 2: zoek een open locatie</h2><p>Open in de app de laadkaart en filter op locaties die open zijn voor andere merken. De meeste V3- en V4-Superchargers in Europa zijn open voor iedereen; een paar oudere locaties nog niet.</p><h2>Stap 3: parkeer slim</h2><p>Oudere Supercharger-kabels zijn kort en gemaakt voor Tesla's, die de laadklep linksachter hebben. Afhankelijk van waar jouw laadpoort zit, moet je misschien schuin over twee vakken of met de neus naar voren parkeren. Nieuwere V4-palen hebben langere kabels, wat het veel makkelijker maakt. Blokkeer niet meer vakken dan nodig.</p><h2>Stap 4: begin met laden</h2><p>Kies in de app het nummer dat op de laadpaal staat, steek de stekker in je auto en tik op starten. In de app zie je de voortgang en de kosten, en je kunt op elk moment stoppen.</p><h2>Wat het kost</h2><p>De prijs verschilt per locatie en per tijdstip; de app toont hem voordat je begint. Wie geen Tesla rijdt, betaalt meer per kWh dan Tesla-rijders, tenzij je een Supercharging-abonnement neemt. Dat kost een vast bedrag per maand en geeft je tarieven die dicht bij die van Tesla-rijders liggen. Vuistregel: het loont als je regelmatig snelladen, bijvoorbeeld bij veel lange ritten. Blijf je aan de lader staan nadat je auto vol is terwijl het druk is, dan betaal je stilstandkosten.</p><h2>Tips</h2><ul><li>Laad tot ongeveer 80%: daarboven gaat het laden flink langzamer.</li><li>Warm je accu voor als je auto dat kan; een warme accu laadt sneller.</li><li>Kijk in de app of er plek is voordat je naar een locatie rijdt.</li></ul><h2>Waarom Tesla dit doet</h2><p>Het netwerk openstellen levert Tesla extra inkomsten op, helpt bij het voldoen aan Europese regels voor openbaar laden en maakt het bedrijf in sommige landen geschikt voor subsidies.</p>"
+  },
+  "images": [
+    "supercharger-7.jpg",
+    "supercharger-2.jpg"
+  ],
+  "label": {
+    "style": "k",
+    "en": {
+      "sub": "STEP BY STEP",
+      "text": "NO TESLA? CHARGE ANYWAY"
+    },
+    "nl": {
+      "sub": "STAP VOOR STAP",
+      "text": "GEEN TESLA? TOCH LADEN"
+    }
   }
- }
 }

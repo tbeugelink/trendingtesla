@@ -1,44 +1,42 @@
 {
- "slug": "nhtsa-opens-cybercab-certification-probe",
- "date": "2026-09-05",
- "time": "09:00",
- "category": "robotaxi",
- "models": [
-  "cybercab"
- ],
- "sources": [
-  {
-   "title": "TechCrunch — Feds launch investigation into Tesla's Cybercab deployment",
-   "url": "https://techcrunch.com/2026/09/04/feds-launch-investigation-into-teslas-cybercab-deployment/"
-  },
-  {
-   "title": "NHTSA — Audit Query AQ26002",
-   "url": "https://static.nhtsa.gov/odi/inv/2026/INIM-AQ26002-17090P1.pdf"
-  },
-  {
-   "title": "Wikipedia — Tesla Cybercab",
-   "url": "https://en.wikipedia.org/wiki/Tesla_Cybercab"
-  }
- ],
- "en": {
-  "title": "US safety regulator probes how Tesla certified the Cybercab, one day after launch",
-  "description": "NHTSA has opened an audit into Tesla's claim that the steering-wheel-free Cybercab meets every federal safety standard. Here is what the agency wants to know and why it matters.",
-  "body": "<p>Barely a day after the Cybercab started carrying passengers in Austin, the US National Highway Traffic Safety Administration (NHTSA) opened an inquiry into how Tesla certified the vehicle. The audit query, numbered AQ26002, was opened on September 3.</p><h2>What the issue is</h2><p>In the United States, carmakers certify their own vehicles as compliant with the Federal Motor Vehicle Safety Standards (FMVSS). Tesla told NHTSA that it self-certified the Cybercab as meeting all of them. The catch: several of those standards assume a human driver, with things like a foot-operated brake pedal and mirrors.</p><p>The Cybercab has no steering wheel, no pedals and no traditional side mirrors. NHTSA wants to examine the process and the technical data Tesla relied on, and how much of its certification rests on Tesla's view that certain standards simply do not apply to a driverless car.</p><h2>A familiar playbook</h2><p>NHTSA is following the same route it took with Amazon's Zoox, which also self-certified a vehicle without manual controls. In that case the agency issued a special order for information and an audit query in 2023. Zoox later received a temporary exemption, finalized in July 2026, that allows it to add up to 2,500 vehicles a year to its commercial fleet for two years.</p><p>Tesla, by contrast, did not apply for an exemption. That choice is now part of what regulators are asking about.</p><h2>The rules are changing, slowly</h2><p>The Department of Transportation has proposed dropping the requirement for manual controls on vehicles designed to drive themselves, and NHTSA says it expects to finish revising those rules in the coming months. Until then, the agency stresses, existing standards remain in force. NHTSA's administrator also said the agency supports the safe development of automated vehicles.</p><h2>What to watch</h2><p>The audit does not automatically stop the Cybercab from operating. But it puts a regulatory question mark over Tesla's plan to scale the vehicle quickly to more cities. The key milestones are Tesla's formal answers to NHTSA and the final shape of the new rules for cars without steering wheels.</p>"
- },
- "nl": {
-  "title": "Amerikaanse toezichthouder onderzoekt hoe Tesla de Cybercab certificeerde, een dag na de lancering",
-  "description": "De NHTSA is een audit gestart naar Tesla's bewering dat de Cybercab zonder stuur aan alle federale veiligheidsnormen voldoet. Dit wil de toezichthouder weten, en daarom is het belangrijk.",
-  "body": "<p>Nog geen dag nadat de Cybercab in Austin passagiers begon te vervoeren, opende de Amerikaanse verkeersveiligheidsautoriteit NHTSA een onderzoek naar hoe Tesla het voertuig heeft gecertificeerd. Het onderzoek, met nummer AQ26002, ging op 3 september van start.</p><h2>Waar het om draait</h2><p>In de Verenigde Staten certificeren autofabrikanten zelf dat hun auto's voldoen aan de federale veiligheidsnormen (FMVSS). Tesla heeft de NHTSA laten weten dat het de Cybercab zelf heeft gecertificeerd voor al die normen. Het probleem: een aantal van die normen gaat uit van een menselijke bestuurder, met bijvoorbeeld een rempedaal en spiegels.</p><p>De Cybercab heeft geen stuur, geen pedalen en geen gewone zijspiegels. De NHTSA wil het proces en de technische gegevens bekijken waarop Tesla zich baseerde, en in hoeverre de certificering steunt op Tesla's standpunt dat bepaalde normen gewoon niet gelden voor een auto zonder bestuurder.</p><h2>Een bekend draaiboek</h2><p>De NHTSA volgt dezelfde route als bij Zoox van Amazon, dat ook een voertuig zonder handmatige bediening zelf certificeerde. Daar vroeg de toezichthouder in 2023 met een formeel bevel om informatie en startte een audit. Zoox kreeg later een tijdelijke ontheffing, definitief in juli 2026, waarmee het twee jaar lang maximaal 2.500 voertuigen per jaar aan zijn commerciële vloot mag toevoegen.</p><p>Tesla heeft daarentegen geen ontheffing aangevraagd. Ook die keuze maakt nu deel uit van de vragen van de toezichthouder.</p><h2>De regels veranderen, langzaam</h2><p>Het Amerikaanse ministerie van Transport heeft voorgesteld om de verplichting van handmatige bediening te schrappen voor voertuigen die ontworpen zijn om zelf te rijden. De NHTSA verwacht die regels in de komende maanden aan te passen. Tot die tijd blijven de bestaande normen volgens de toezichthouder gewoon gelden. De directeur van de NHTSA zei ook dat de organisatie de veilige ontwikkeling van zelfrijdende auto's steunt.</p><h2>Waar je op moet letten</h2><p>Het onderzoek zet de Cybercab niet automatisch stil. Maar het plaatst een regelgevend vraagteken bij Tesla's plan om de auto snel in meer steden in te zetten. De belangrijkste mijlpalen zijn Tesla's formele antwoorden aan de NHTSA en de uiteindelijke vorm van de nieuwe regels voor auto's zonder stuur.</p>"
- },
- "label": {
-  "style": "r",
-  "pos": "tl",
-  "rot": 0,
+  "slug": "nhtsa-opens-cybercab-certification-probe",
+  "date": "2026-09-05",
+  "time": "09:00",
+  "category": "robotaxi",
+  "models": [
+    "cybercab"
+  ],
+  "sources": [
+    {
+      "title": "TechCrunch — Feds launch investigation into Tesla's Cybercab deployment",
+      "url": "https://techcrunch.com/2026/09/04/feds-launch-investigation-into-teslas-cybercab-deployment/"
+    },
+    {
+      "title": "NHTSA — Audit Query AQ26002",
+      "url": "https://static.nhtsa.gov/odi/inv/2026/INIM-AQ26002-17090P1.pdf"
+    },
+    {
+      "title": "Wikipedia — Tesla Cybercab",
+      "url": "https://en.wikipedia.org/wiki/Tesla_Cybercab"
+    }
+  ],
   "en": {
-   "text": "NHTSA PROBES CYBERCAB"
+    "title": "US safety regulator probes how Tesla certified the Cybercab, one day after launch",
+    "description": "NHTSA has opened an audit into Tesla's claim that the steering-wheel-free Cybercab meets every federal safety standard. Here is what the agency wants to know and why it matters.",
+    "body": "<p>Barely a day after the Cybercab started carrying passengers in Austin, the US National Highway Traffic Safety Administration (NHTSA) opened an inquiry into how Tesla certified the vehicle. The audit query, numbered AQ26002, was opened on September 3.</p><h2>What the issue is</h2><p>In the United States, carmakers certify their own vehicles as compliant with the Federal Motor Vehicle Safety Standards (FMVSS). Tesla told NHTSA that it self-certified the Cybercab as meeting all of them. The catch: several of those standards assume a human driver, with things like a foot-operated brake pedal and mirrors.</p><p>The Cybercab has no steering wheel, no pedals and no traditional side mirrors. NHTSA wants to examine the process and the technical data Tesla relied on, and how much of its certification rests on Tesla's view that certain standards simply do not apply to a driverless car.</p><h2>A familiar playbook</h2><p>NHTSA is following the same route it took with Amazon's Zoox, which also self-certified a vehicle without manual controls. In that case the agency issued a special order for information and an audit query in 2023. Zoox later received a temporary exemption, finalized in July 2026, that allows it to add up to 2,500 vehicles a year to its commercial fleet for two years.</p><p>Tesla, by contrast, did not apply for an exemption. That choice is now part of what regulators are asking about.</p><h2>The rules are changing, slowly</h2><p>The Department of Transportation has proposed dropping the requirement for manual controls on vehicles designed to drive themselves, and NHTSA says it expects to finish revising those rules in the coming months. Until then, the agency stresses, existing standards remain in force. NHTSA's administrator also said the agency supports the safe development of automated vehicles.</p><h2>What to watch</h2><p>The audit does not automatically stop the Cybercab from operating. But it puts a regulatory question mark over Tesla's plan to scale the vehicle quickly to more cities. The key milestones are Tesla's formal answers to NHTSA and the final shape of the new rules for cars without steering wheels.</p>"
   },
   "nl": {
-   "text": "NHTSA ONDERZOEKT CYBERCAB"
+    "title": "Amerikaanse toezichthouder onderzoekt hoe Tesla de Cybercab certificeerde, een dag na de lancering",
+    "description": "De NHTSA is een audit gestart naar Tesla's bewering dat de Cybercab zonder stuur aan alle federale veiligheidsnormen voldoet. Dit wil de toezichthouder weten, en daarom is het belangrijk.",
+    "body": "<p>Nog geen dag nadat de Cybercab in Austin passagiers begon te vervoeren, opende de Amerikaanse verkeersveiligheidsautoriteit NHTSA een onderzoek naar hoe Tesla het voertuig heeft gecertificeerd. Het onderzoek, met nummer AQ26002, ging op 3 september van start.</p><h2>Waar het om draait</h2><p>In de Verenigde Staten certificeren autofabrikanten zelf dat hun auto's voldoen aan de federale veiligheidsnormen (FMVSS). Tesla heeft de NHTSA laten weten dat het de Cybercab zelf heeft gecertificeerd voor al die normen. Het probleem: een aantal van die normen gaat uit van een menselijke bestuurder, met bijvoorbeeld een rempedaal en spiegels.</p><p>De Cybercab heeft geen stuur, geen pedalen en geen gewone zijspiegels. De NHTSA wil het proces en de technische gegevens bekijken waarop Tesla zich baseerde, en in hoeverre de certificering steunt op Tesla's standpunt dat bepaalde normen gewoon niet gelden voor een auto zonder bestuurder.</p><h2>Een bekend draaiboek</h2><p>De NHTSA volgt dezelfde route als bij Zoox van Amazon, dat ook een voertuig zonder handmatige bediening zelf certificeerde. Daar vroeg de toezichthouder in 2023 met een formeel bevel om informatie en startte een audit. Zoox kreeg later een tijdelijke ontheffing, definitief in juli 2026, waarmee het twee jaar lang maximaal 2.500 voertuigen per jaar aan zijn commerciële vloot mag toevoegen.</p><p>Tesla heeft daarentegen geen ontheffing aangevraagd. Ook die keuze maakt nu deel uit van de vragen van de toezichthouder.</p><h2>De regels veranderen, langzaam</h2><p>Het Amerikaanse ministerie van Transport heeft voorgesteld om de verplichting van handmatige bediening te schrappen voor voertuigen die ontworpen zijn om zelf te rijden. De NHTSA verwacht die regels in de komende maanden aan te passen. Tot die tijd blijven de bestaande normen volgens de toezichthouder gewoon gelden. De directeur van de NHTSA zei ook dat de organisatie de veilige ontwikkeling van zelfrijdende auto's steunt.</p><h2>Waar je op moet letten</h2><p>Het onderzoek zet de Cybercab niet automatisch stil. Maar het plaatst een regelgevend vraagteken bij Tesla's plan om de auto snel in meer steden in te zetten. De belangrijkste mijlpalen zijn Tesla's formele antwoorden aan de NHTSA en de uiteindelijke vorm van de nieuwe regels voor auto's zonder stuur.</p>"
+  },
+  "label": {
+    "style": "r",
+    "en": {
+      "text": "NHTSA PROBES CYBERCAB"
+    },
+    "nl": {
+      "text": "NHTSA ONDERZOEKT CYBERCAB"
+    }
   }
- }
 }

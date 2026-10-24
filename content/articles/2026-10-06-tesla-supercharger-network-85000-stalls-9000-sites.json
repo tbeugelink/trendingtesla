@@ -1,45 +1,43 @@
 {
- "slug": "tesla-supercharger-network-85000-stalls-9000-sites",
- "date": "2026-10-06",
- "time": "08:30",
- "category": "charging",
- "sources": [
-  {
-   "title": "Not a Tesla App — Tesla hits 85,000 Superchargers at 9,000 locations",
-   "url": "https://www.notateslaapp.com/news/4771/tesla-hits-85000-superchargers-at-9000-locations-worldwide"
-  },
-  {
-   "title": "Drive Tesla Canada — Supercharger expansion in Q2 2026",
-   "url": "https://driveteslacanada.ca/news/tesla-supercharger-expansion-q2-2026/"
-  }
- ],
- "en": {
-  "title": "Tesla's Supercharger network passes 85,000 stalls at more than 9,000 sites",
-  "description": "Tesla keeps adding around 2,700 fast-charging stalls a quarter, and new prefabricated designs should speed things up. Here is where the network stands and what it means for drivers.",
-  "body": "<p>Tesla's Supercharger network has passed two milestones: more than 9,000 open locations and over 85,000 charging stalls worldwide. The figures come from the crowd-sourced tracker supercharge.info, and Tesla's director of charging, Max de Zegher, confirmed they are very close to Tesla's own numbers.</p><h2>The growth in numbers</h2><ul><li><strong>Q3 2026:</strong> about 2,700 new stalls, 15% more than in the same quarter last year.</li><li><strong>Energy delivered:</strong> 2.4 TWh between July and September, up 29% year over year.</li><li><strong>Pace:</strong> the network reached 80,000 stalls in April 2026, so about 5,000 were added in six months.</li><li><strong>Long-term:</strong> at the start of 2021 there were about 2,500 sites and 23,000 stalls. Since then, Tesla has added roughly 6,500 sites and more than 60,000 stalls.</li></ul><h2>Where the chargers are</h2><ul><li><strong>North America:</strong> about 43,200 stalls, just over half of the network.</li><li><strong>Europe:</strong> about 22,600 stalls, roughly a quarter.</li><li><strong>Asia-Pacific:</strong> about 18,700 stalls.</li></ul><p>Another 365 sites are under construction and more than 1,400 are planned.</p><h2>Building faster</h2><p>Tesla is changing how it builds stations. It recently introduced a compact 'Accordion' Supercharger for tight locations, and it is moving toward prefabricated posts that can be dropped in and connected, plus folding designs for quicker installation. That should keep the pace at roughly 2,500 to 2,700 new stalls per quarter, putting 90,000 stalls within reach around spring 2027.</p><h2>Not just for Teslas</h2><p>A growing share of the energy goes to other brands. In many countries, including the Netherlands and Belgium, non-Tesla EVs can charge at most Supercharger sites through the Tesla app. Usage keeps climbing: in the second quarter, the network handled about 60 million charging sessions, 32% more than a year earlier.</p><h2>Why it matters</h2><p>Charging is one of the strongest reasons people pick a Tesla, and increasingly a reason other EV drivers open the Tesla app. As car sales growth has slowed, the Supercharger network has quietly become a business of its own, and a key piece of infrastructure for Tesla's robotaxi plans, which need fast, reliable charging hubs.</p>"
- },
- "nl": {
-  "title": "Tesla's Supercharger-netwerk passeert 85.000 laadpalen op meer dan 9.000 locaties",
-  "description": "Tesla blijft zo'n 2.700 snelladers per kwartaal toevoegen, en nieuwe geprefabriceerde ontwerpen moeten dat versnellen. Zo staat het netwerk ervoor, en dit betekent het voor rijders.",
-  "body": "<p>Tesla's Supercharger-netwerk heeft twee mijlpalen gepasseerd: meer dan 9.000 geopende locaties en ruim 85.000 laadpalen wereldwijd. De cijfers komen van de door gebruikers bijgehouden site supercharge.info, en Max de Zegher, directeur laden bij Tesla, bevestigde dat ze heel dicht bij Tesla's eigen cijfers liggen.</p><h2>De groei in cijfers</h2><ul><li><strong>Q3 2026:</strong> zo'n 2.700 nieuwe laadpalen, 15% meer dan in hetzelfde kwartaal vorig jaar.</li><li><strong>Geleverde energie:</strong> 2,4 TWh tussen juli en september, 29% meer dan een jaar eerder.</li><li><strong>Tempo:</strong> in april 2026 telde het netwerk 80.000 laadpalen, dus er kwamen er in zes maanden zo'n 5.000 bij.</li><li><strong>Op lange termijn:</strong> begin 2021 waren er ongeveer 2.500 locaties en 23.000 laadpalen. Sindsdien voegde Tesla zo'n 6.500 locaties en ruim 60.000 laadpalen toe.</li></ul><h2>Waar de laders staan</h2><ul><li><strong>Noord-Amerika:</strong> ongeveer 43.200 laadpalen, iets meer dan de helft van het netwerk.</li><li><strong>Europa:</strong> ongeveer 22.600 laadpalen, zo'n kwart.</li><li><strong>Azië-Pacific:</strong> ongeveer 18.700 laadpalen.</li></ul><p>Er zijn nog 365 locaties in aanbouw en ruim 1.400 gepland.</p><h2>Sneller bouwen</h2><p>Tesla verandert de manier waarop het stations bouwt. Onlangs kwam er een compacte 'Accordion'-Supercharger voor krappe locaties, en het bedrijf stapt over op geprefabriceerde palen die je alleen nog hoeft te plaatsen en aan te sluiten, plus inklapbare ontwerpen die sneller te installeren zijn. Daarmee blijft het tempo rond de 2.500 tot 2.700 nieuwe laadpalen per kwartaal, en komt de grens van 90.000 rond het voorjaar van 2027 in zicht.</p><h2>Niet alleen voor Tesla's</h2><p>Een groeiend deel van de stroom gaat naar andere merken. In veel landen, waaronder Nederland en België, kunnen ook andere elektrische auto's via de Tesla-app laden bij de meeste Superchargers. Het gebruik blijft stijgen: in het tweede kwartaal verwerkte het netwerk zo'n 60 miljoen laadsessies, 32% meer dan een jaar eerder.</p><h2>Waarom dit ertoe doet</h2><p>Laden is een van de sterkste redenen waarom mensen voor een Tesla kiezen, en steeds vaker een reden waarom rijders van andere merken de Tesla-app openen. Nu de groei van de autoverkoop is afgevlakt, is het Supercharger-netwerk ongemerkt een bedrijf op zich geworden. Het is ook een belangrijk onderdeel van Tesla's robotaxiplannen, die snelle en betrouwbare laadhubs nodig hebben.</p>"
- },
- "image": "topics/supercharger-7.jpg",
- "images": [
-  "supercharger-2.jpg",
-  "supercharger-5.jpg",
-  "supercharger-6.jpg"
- ],
- "label": {
-  "style": "n",
-  "pos": "bl",
-  "rot": 0,
+  "slug": "tesla-supercharger-network-85000-stalls-9000-sites",
+  "date": "2026-10-06",
+  "time": "08:30",
+  "category": "charging",
+  "sources": [
+    {
+      "title": "Not a Tesla App — Tesla hits 85,000 Superchargers at 9,000 locations",
+      "url": "https://www.notateslaapp.com/news/4771/tesla-hits-85000-superchargers-at-9000-locations-worldwide"
+    },
+    {
+      "title": "Drive Tesla Canada — Supercharger expansion in Q2 2026",
+      "url": "https://driveteslacanada.ca/news/tesla-supercharger-expansion-q2-2026/"
+    }
+  ],
   "en": {
-   "sub": "STALLS AT 9,000+ SITES",
-   "text": "85,000"
+    "title": "Tesla's Supercharger network passes 85,000 stalls at more than 9,000 sites",
+    "description": "Tesla keeps adding around 2,700 fast-charging stalls a quarter, and new prefabricated designs should speed things up. Here is where the network stands and what it means for drivers.",
+    "body": "<p>Tesla's Supercharger network has passed two milestones: more than 9,000 open locations and over 85,000 charging stalls worldwide. The figures come from the crowd-sourced tracker supercharge.info, and Tesla's director of charging, Max de Zegher, confirmed they are very close to Tesla's own numbers.</p><h2>The growth in numbers</h2><ul><li><strong>Q3 2026:</strong> about 2,700 new stalls, 15% more than in the same quarter last year.</li><li><strong>Energy delivered:</strong> 2.4 TWh between July and September, up 29% year over year.</li><li><strong>Pace:</strong> the network reached 80,000 stalls in April 2026, so about 5,000 were added in six months.</li><li><strong>Long-term:</strong> at the start of 2021 there were about 2,500 sites and 23,000 stalls. Since then, Tesla has added roughly 6,500 sites and more than 60,000 stalls.</li></ul><h2>Where the chargers are</h2><ul><li><strong>North America:</strong> about 43,200 stalls, just over half of the network.</li><li><strong>Europe:</strong> about 22,600 stalls, roughly a quarter.</li><li><strong>Asia-Pacific:</strong> about 18,700 stalls.</li></ul><p>Another 365 sites are under construction and more than 1,400 are planned.</p><h2>Building faster</h2><p>Tesla is changing how it builds stations. It recently introduced a compact 'Accordion' Supercharger for tight locations, and it is moving toward prefabricated posts that can be dropped in and connected, plus folding designs for quicker installation. That should keep the pace at roughly 2,500 to 2,700 new stalls per quarter, putting 90,000 stalls within reach around spring 2027.</p><h2>Not just for Teslas</h2><p>A growing share of the energy goes to other brands. In many countries, including the Netherlands and Belgium, non-Tesla EVs can charge at most Supercharger sites through the Tesla app. Usage keeps climbing: in the second quarter, the network handled about 60 million charging sessions, 32% more than a year earlier.</p><h2>Why it matters</h2><p>Charging is one of the strongest reasons people pick a Tesla, and increasingly a reason other EV drivers open the Tesla app. As car sales growth has slowed, the Supercharger network has quietly become a business of its own, and a key piece of infrastructure for Tesla's robotaxi plans, which need fast, reliable charging hubs.</p>"
   },
   "nl": {
-   "sub": "PALEN, 9.000+ LOCATIES",
-   "text": "85.000"
+    "title": "Tesla's Supercharger-netwerk passeert 85.000 laadpalen op meer dan 9.000 locaties",
+    "description": "Tesla blijft zo'n 2.700 snelladers per kwartaal toevoegen, en nieuwe geprefabriceerde ontwerpen moeten dat versnellen. Zo staat het netwerk ervoor, en dit betekent het voor rijders.",
+    "body": "<p>Tesla's Supercharger-netwerk heeft twee mijlpalen gepasseerd: meer dan 9.000 geopende locaties en ruim 85.000 laadpalen wereldwijd. De cijfers komen van de door gebruikers bijgehouden site supercharge.info, en Max de Zegher, directeur laden bij Tesla, bevestigde dat ze heel dicht bij Tesla's eigen cijfers liggen.</p><h2>De groei in cijfers</h2><ul><li><strong>Q3 2026:</strong> zo'n 2.700 nieuwe laadpalen, 15% meer dan in hetzelfde kwartaal vorig jaar.</li><li><strong>Geleverde energie:</strong> 2,4 TWh tussen juli en september, 29% meer dan een jaar eerder.</li><li><strong>Tempo:</strong> in april 2026 telde het netwerk 80.000 laadpalen, dus er kwamen er in zes maanden zo'n 5.000 bij.</li><li><strong>Op lange termijn:</strong> begin 2021 waren er ongeveer 2.500 locaties en 23.000 laadpalen. Sindsdien voegde Tesla zo'n 6.500 locaties en ruim 60.000 laadpalen toe.</li></ul><h2>Waar de laders staan</h2><ul><li><strong>Noord-Amerika:</strong> ongeveer 43.200 laadpalen, iets meer dan de helft van het netwerk.</li><li><strong>Europa:</strong> ongeveer 22.600 laadpalen, zo'n kwart.</li><li><strong>Azië-Pacific:</strong> ongeveer 18.700 laadpalen.</li></ul><p>Er zijn nog 365 locaties in aanbouw en ruim 1.400 gepland.</p><h2>Sneller bouwen</h2><p>Tesla verandert de manier waarop het stations bouwt. Onlangs kwam er een compacte 'Accordion'-Supercharger voor krappe locaties, en het bedrijf stapt over op geprefabriceerde palen die je alleen nog hoeft te plaatsen en aan te sluiten, plus inklapbare ontwerpen die sneller te installeren zijn. Daarmee blijft het tempo rond de 2.500 tot 2.700 nieuwe laadpalen per kwartaal, en komt de grens van 90.000 rond het voorjaar van 2027 in zicht.</p><h2>Niet alleen voor Tesla's</h2><p>Een groeiend deel van de stroom gaat naar andere merken. In veel landen, waaronder Nederland en België, kunnen ook andere elektrische auto's via de Tesla-app laden bij de meeste Superchargers. Het gebruik blijft stijgen: in het tweede kwartaal verwerkte het netwerk zo'n 60 miljoen laadsessies, 32% meer dan een jaar eerder.</p><h2>Waarom dit ertoe doet</h2><p>Laden is een van de sterkste redenen waarom mensen voor een Tesla kiezen, en steeds vaker een reden waarom rijders van andere merken de Tesla-app openen. Nu de groei van de autoverkoop is afgevlakt, is het Supercharger-netwerk ongemerkt een bedrijf op zich geworden. Het is ook een belangrijk onderdeel van Tesla's robotaxiplannen, die snelle en betrouwbare laadhubs nodig hebben.</p>"
+  },
+  "image": "topics/supercharger-7.jpg",
+  "images": [
+    "supercharger-2.jpg",
+    "supercharger-5.jpg",
+    "supercharger-6.jpg"
+  ],
+  "label": {
+    "style": "n",
+    "en": {
+      "sub": "STALLS AT 9,000+ SITES",
+      "text": "85,000"
+    },
+    "nl": {
+      "sub": "PALEN, 9.000+ LOCATIES",
+      "text": "85.000"
+    }
   }
- }
 }

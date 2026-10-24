@@ -1,38 +1,36 @@
 {
- "slug": "tesla-fsd-v14-3-11-rollout-whats-new",
- "date": "2026-10-08",
- "time": "07:20",
- "category": "fsd",
- "sources": [
-  {
-   "title": "Tesla Oracle — Tesla begins the FSD v14.3.11 (2026.33.5) rollout",
-   "url": "https://www.teslaoracle.com/?p=66853"
-  }
- ],
- "en": {
-  "title": "Tesla starts rolling out FSD v14.3.11: what's new and who gets it first",
-  "description": "The latest version of Full Self-Driving (Supervised) is reaching early testers on software 2026.33.5. HW4 cars get v14.3.11; HW3 cars get a 'Lite' version.",
-  "body": "<p>Tesla began rolling out Full Self-Driving (Supervised) v14.3.11 around October 7, bundled with software version 2026.33.5. As usual, the first wave goes to Tesla's Early Access group of experienced owners and selected influencers. Fleet tracking data suggested it was on less than 1% of cars in the first days.</p><h2>Which cars get what</h2><ul><li><strong>HW4 (AI4) cars:</strong> FSD v14.3.11.</li><li><strong>HW3 cars:</strong> FSD v14.3 Lite, on the same 2026.33.5 firmware.</li></ul><h2>What's new in v14.3</h2><p>The release notes match the previous version, v14.3.9. The main points:</p><ul><li><strong>Faster reactions:</strong> a rewritten AI compiler and runtime that Tesla says cuts reaction time by 20%.</li><li><strong>Better training:</strong> upgraded reinforcement learning and a new vision encoder.</li><li><strong>Automatic Collision Evasion:</strong> can step in during manual driving if a frontal collision looks imminent or the driver seems inattentive.</li><li><strong>Parking:</strong> smarter choice of parking spot, with a parking pin shown on the map.</li><li><strong>Tricky situations:</strong> improved handling of emergency vehicles, school buses, small animals and complex traffic lights.</li><li><strong>Actually Smart Summon:</strong> top speed raised to 8 mph (13 km/h).</li><li><strong>Stats:</strong> the Self-Driving app now shows distance driven and your longest streak without intervention.</li></ul><h2>First impressions</h2><p>Early testers were positive. One reported a smooth, intervention-free drive of about 25 minutes through New York City traffic in a Model S Plaid, including an unprotected left turn, ending with the car parking itself.</p><h2>Coming next</h2><p>Tesla lists expanded reasoning beyond destination handling, and pothole avoidance, as upcoming features.</p><p><em>FSD (Supervised) requires an attentive driver who is ready to take over at all times.</em></p>"
- },
- "nl": {
-  "title": "Tesla begint met de uitrol van FSD v14.3.11: dit is er nieuw en zo krijg je het als eerste",
-  "description": "De nieuwste versie van Full Self-Driving (Supervised) bereikt de eerste testers op software 2026.33.5. Auto's met HW4 krijgen v14.3.11, auto's met HW3 een 'Lite'-versie.",
-  "body": "<p>Tesla begon rond 7 oktober met de uitrol van Full Self-Driving (Supervised) v14.3.11, samen met softwareversie 2026.33.5. Zoals gebruikelijk gaat de eerste golf naar Tesla's Early Access-groep van ervaren rijders en geselecteerde influencers. Volgens gegevens uit de vloot draaide de versie de eerste dagen op minder dan 1% van de auto's.</p><h2>Welke auto's wat krijgen</h2><ul><li><strong>Auto's met HW4 (AI4):</strong> FSD v14.3.11.</li><li><strong>Auto's met HW3:</strong> FSD v14.3 Lite, op dezelfde firmware 2026.33.5.</li></ul><h2>Nieuw in v14.3</h2><p>De releasenotes zijn gelijk aan die van de vorige versie, v14.3.9. De belangrijkste punten:</p><ul><li><strong>Snellere reacties:</strong> een herschreven AI-compiler en runtime die volgens Tesla de reactietijd met 20% verkort.</li><li><strong>Betere training:</strong> verbeterd reinforcement learning en een nieuwe vision-encoder.</li><li><strong>Automatic Collision Evasion:</strong> kan ingrijpen als je zelf rijdt en een frontale botsing dreigt, of als je niet oplet.</li><li><strong>Parkeren:</strong> slimmere keuze van de parkeerplek, met een parkeerpin op de kaart.</li><li><strong>Lastige situaties:</strong> betere omgang met hulpdiensten, schoolbussen, kleine dieren en ingewikkelde verkeerslichten.</li><li><strong>Actually Smart Summon:</strong> topsnelheid verhoogd naar 13 km/u.</li><li><strong>Statistieken:</strong> de Self-Driving-app toont nu de gereden afstand en je langste reeks zonder ingrijpen.</li></ul><h2>Eerste indrukken</h2><p>De eerste testers zijn positief. Eén van hen meldde een soepele rit van zo'n 25 minuten zonder ingrijpen door het verkeer van New York in een Model S Plaid, inclusief een ongeregelde linksaf, waarna de auto zichzelf parkeerde.</p><h2>Wat er nog komt</h2><p>Tesla noemt uitgebreider redeneren, niet alleen bij het vinden van de bestemming, en het ontwijken van kuilen in de weg als komende functies.</p><p><em>FSD (Supervised) vereist een oplettende bestuurder die altijd klaar is om het over te nemen. In Nederland en België verschijnen nieuwe FSD-versies meestal later dan in de VS.</em></p>"
- },
- "images": [
-  "software-update.jpg",
-  "fsd-2.jpg",
-  "fsd-3.jpg"
- ],
- "label": {
-  "style": "tag",
-  "pos": "tr",
-  "rot": 0,
+  "slug": "tesla-fsd-v14-3-11-rollout-whats-new",
+  "date": "2026-10-08",
+  "time": "07:20",
+  "category": "fsd",
+  "sources": [
+    {
+      "title": "Tesla Oracle — Tesla begins the FSD v14.3.11 (2026.33.5) rollout",
+      "url": "https://www.teslaoracle.com/?p=66853"
+    }
+  ],
   "en": {
-   "text": "NEW: V14.3.11"
+    "title": "Tesla starts rolling out FSD v14.3.11: what's new and who gets it first",
+    "description": "The latest version of Full Self-Driving (Supervised) is reaching early testers on software 2026.33.5. HW4 cars get v14.3.11; HW3 cars get a 'Lite' version.",
+    "body": "<p>Tesla began rolling out Full Self-Driving (Supervised) v14.3.11 around October 7, bundled with software version 2026.33.5. As usual, the first wave goes to Tesla's Early Access group of experienced owners and selected influencers. Fleet tracking data suggested it was on less than 1% of cars in the first days.</p><h2>Which cars get what</h2><ul><li><strong>HW4 (AI4) cars:</strong> FSD v14.3.11.</li><li><strong>HW3 cars:</strong> FSD v14.3 Lite, on the same 2026.33.5 firmware.</li></ul><h2>What's new in v14.3</h2><p>The release notes match the previous version, v14.3.9. The main points:</p><ul><li><strong>Faster reactions:</strong> a rewritten AI compiler and runtime that Tesla says cuts reaction time by 20%.</li><li><strong>Better training:</strong> upgraded reinforcement learning and a new vision encoder.</li><li><strong>Automatic Collision Evasion:</strong> can step in during manual driving if a frontal collision looks imminent or the driver seems inattentive.</li><li><strong>Parking:</strong> smarter choice of parking spot, with a parking pin shown on the map.</li><li><strong>Tricky situations:</strong> improved handling of emergency vehicles, school buses, small animals and complex traffic lights.</li><li><strong>Actually Smart Summon:</strong> top speed raised to 8 mph (13 km/h).</li><li><strong>Stats:</strong> the Self-Driving app now shows distance driven and your longest streak without intervention.</li></ul><h2>First impressions</h2><p>Early testers were positive. One reported a smooth, intervention-free drive of about 25 minutes through New York City traffic in a Model S Plaid, including an unprotected left turn, ending with the car parking itself.</p><h2>Coming next</h2><p>Tesla lists expanded reasoning beyond destination handling, and pothole avoidance, as upcoming features.</p><p><em>FSD (Supervised) requires an attentive driver who is ready to take over at all times.</em></p>"
   },
   "nl": {
-   "text": "NIEUW: V14.3.11"
+    "title": "Tesla begint met de uitrol van FSD v14.3.11: dit is er nieuw en zo krijg je het als eerste",
+    "description": "De nieuwste versie van Full Self-Driving (Supervised) bereikt de eerste testers op software 2026.33.5. Auto's met HW4 krijgen v14.3.11, auto's met HW3 een 'Lite'-versie.",
+    "body": "<p>Tesla begon rond 7 oktober met de uitrol van Full Self-Driving (Supervised) v14.3.11, samen met softwareversie 2026.33.5. Zoals gebruikelijk gaat de eerste golf naar Tesla's Early Access-groep van ervaren rijders en geselecteerde influencers. Volgens gegevens uit de vloot draaide de versie de eerste dagen op minder dan 1% van de auto's.</p><h2>Welke auto's wat krijgen</h2><ul><li><strong>Auto's met HW4 (AI4):</strong> FSD v14.3.11.</li><li><strong>Auto's met HW3:</strong> FSD v14.3 Lite, op dezelfde firmware 2026.33.5.</li></ul><h2>Nieuw in v14.3</h2><p>De releasenotes zijn gelijk aan die van de vorige versie, v14.3.9. De belangrijkste punten:</p><ul><li><strong>Snellere reacties:</strong> een herschreven AI-compiler en runtime die volgens Tesla de reactietijd met 20% verkort.</li><li><strong>Betere training:</strong> verbeterd reinforcement learning en een nieuwe vision-encoder.</li><li><strong>Automatic Collision Evasion:</strong> kan ingrijpen als je zelf rijdt en een frontale botsing dreigt, of als je niet oplet.</li><li><strong>Parkeren:</strong> slimmere keuze van de parkeerplek, met een parkeerpin op de kaart.</li><li><strong>Lastige situaties:</strong> betere omgang met hulpdiensten, schoolbussen, kleine dieren en ingewikkelde verkeerslichten.</li><li><strong>Actually Smart Summon:</strong> topsnelheid verhoogd naar 13 km/u.</li><li><strong>Statistieken:</strong> de Self-Driving-app toont nu de gereden afstand en je langste reeks zonder ingrijpen.</li></ul><h2>Eerste indrukken</h2><p>De eerste testers zijn positief. Eén van hen meldde een soepele rit van zo'n 25 minuten zonder ingrijpen door het verkeer van New York in een Model S Plaid, inclusief een ongeregelde linksaf, waarna de auto zichzelf parkeerde.</p><h2>Wat er nog komt</h2><p>Tesla noemt uitgebreider redeneren, niet alleen bij het vinden van de bestemming, en het ontwijken van kuilen in de weg als komende functies.</p><p><em>FSD (Supervised) vereist een oplettende bestuurder die altijd klaar is om het over te nemen. In Nederland en België verschijnen nieuwe FSD-versies meestal later dan in de VS.</em></p>"
+  },
+  "images": [
+    "software-update.jpg",
+    "fsd-2.jpg",
+    "fsd-3.jpg"
+  ],
+  "label": {
+    "style": "tag",
+    "en": {
+      "text": "NEW: V14.3.11"
+    },
+    "nl": {
+      "text": "NIEUW: V14.3.11"
+    }
   }
- }
 }

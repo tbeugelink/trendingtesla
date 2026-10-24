@@ -1,48 +1,46 @@
 {
- "slug": "tesla-semi-megacharger-network-us-66-sites",
- "date": "2026-08-28",
- "time": "14:20",
- "category": "charging",
- "models": [
-  "semi"
- ],
- "sources": [
-  {
-   "title": "electrive — Tesla identifies 66 sites for proprietary truck charging network",
-   "url": "https://www.electrive.com/2026/02/27/tesla-identifies-66-sites-for-proprietary-truck-charging-network/"
-  },
-  {
-   "title": "CCJ — Tesla opens first public Tesla Semi Megacharger in California",
-   "url": "https://www.ccjdigital.com/alternative-power/article/15819083/tesla-opens-first-public-semi-megacharger-in-california"
-  }
- ],
- "en": {
-  "title": "Tesla Semi Megacharger network: where the US truck chargers are, and where they are going",
-  "description": "Tesla's map shows 66 Megacharger sites across 15 US states, concentrated in Texas and California. Here is how the network is built and what it means for the Semi.",
-  "body": "<p>An electric truck is only as useful as the chargers along its route. With the Tesla Semi now in series production in Nevada, the Megacharger network is the piece that decides how far fleets can take it.</p><h2>The map</h2><ul><li><strong>66 sites</strong> on Tesla's Megacharger map across 15 US states.</li><li><strong>Texas</strong> has the most planned sites (19), followed by <strong>California</strong> (17).</li><li>Florida, Georgia, Illinois and Washington have four each; smaller numbers are planned elsewhere.</li><li><strong>Corridors:</strong> I-5 and I-10 in the west, Chicago routes, and I-95 and I-75 in the east and southeast.</li></ul><h2>The hardware</h2><p>Each Megacharger dispenser delivers up to 1.2 MW, using technology derived from Tesla's V4 Supercharger. At that power, most of the Semi's roughly 800 km (500 miles) of range can be replenished in about 30 minutes, which fits within a driver's required break.</p><h2>Partnership with Pilot</h2><p>Tesla is also building Semi charging at Pilot travel centers in California, Georgia, Nevada, New Mexico and Texas, with four to eight stalls per site. The first public Megacharger for Semi customers opened in California earlier this year.</p><h2>Why it matters</h2><p>Truck fleets buy on total cost. Electricity is far cheaper per mile than diesel, but only if trucks do not waste time detouring to chargers. A dense network along freight corridors is what turns the Semi from a depot-only truck into one that can run regional and long-haul routes.</p><h2>What is still unclear</h2><p>Tesla has not published opening dates for most sites or a price per kWh for Megacharger customers. Previous targets have also slipped, so the map is a plan rather than a promise.</p><h2>What to watch</h2><p>How many sites actually open by the end of 2026, and whether the network opens to electric trucks from other brands, as Tesla plans in Europe.</p>"
- },
- "nl": {
-  "title": "Het Megacharger-netwerk van de Tesla Semi: waar de Amerikaanse truckladers staan en komen",
-  "description": "Tesla's kaart toont 66 Megacharger-locaties in 15 Amerikaanse staten, vooral in Texas en Californië. Zo wordt het netwerk opgebouwd en dit betekent het voor de Semi.",
-  "body": "<p>Een elektrische truck is zo bruikbaar als de laders langs zijn route. Nu de Tesla Semi in Nevada in serieproductie is, bepaalt het Megacharger-netwerk hoe ver vervoerders ermee kunnen.</p><h2>De kaart</h2><ul><li><strong>66 locaties</strong> op Tesla's Megacharger-kaart, verspreid over 15 Amerikaanse staten.</li><li><strong>Texas</strong> heeft de meeste geplande locaties (19), gevolgd door <strong>Californië</strong> (17).</li><li>Florida, Georgia, Illinois en Washington krijgen er elk vier; elders gaat het om kleinere aantallen.</li><li><strong>Routes:</strong> de I-5 en I-10 in het westen, routes rond Chicago, en de I-95 en I-75 in het oosten en zuidoosten.</li></ul><h2>De hardware</h2><p>Elke Megacharger levert tot 1,2 MW, met techniek die is afgeleid van Tesla's V4-Supercharger. Daarmee is het grootste deel van de ongeveer 800 km bereik van de Semi in zo'n 30 minuten bij te laden, binnen de verplichte pauze van de chauffeur.</p><h2>Samenwerking met Pilot</h2><p>Tesla bouwt ook laadplekken voor de Semi bij tankstations van Pilot in Californië, Georgia, Nevada, New Mexico en Texas, met vier tot acht laadpunten per locatie. De eerste openbare Megacharger voor Semi-klanten ging eerder dit jaar in Californië open.</p><h2>Waarom dit ertoe doet</h2><p>Vervoerders kijken naar de totale kosten. Stroom is per kilometer veel goedkoper dan diesel, maar alleen als trucks geen tijd verliezen met omrijden naar laders. Een dicht netwerk langs de vrachtroutes maakt van de Semi een truck die niet alleen rond het depot, maar ook op regionale en lange ritten kan rijden.</p><h2>Wat nog onduidelijk is</h2><p>Tesla heeft voor de meeste locaties geen openingsdatum genoemd, en ook geen prijs per kWh voor Megacharger-klanten. Eerdere doelen zijn bovendien verschoven, dus de kaart is een plan en geen belofte.</p><h2>Waar je op moet letten</h2><p>Hoeveel locaties eind 2026 echt open zijn, en of het netwerk opengaat voor elektrische trucks van andere merken, zoals Tesla in Europa van plan is.</p>"
- },
- "image": "models/semi-4.jpg",
- "images": [
-  "models/semi.jpg",
-  "semi-2.jpg",
-  "supercharger-3.jpg"
- ],
- "label": {
-  "style": "n",
-  "pos": "bl",
-  "rot": 0,
+  "slug": "tesla-semi-megacharger-network-us-66-sites",
+  "date": "2026-08-28",
+  "time": "14:20",
+  "category": "charging",
+  "models": [
+    "semi"
+  ],
+  "sources": [
+    {
+      "title": "electrive — Tesla identifies 66 sites for proprietary truck charging network",
+      "url": "https://www.electrive.com/2026/02/27/tesla-identifies-66-sites-for-proprietary-truck-charging-network/"
+    },
+    {
+      "title": "CCJ — Tesla opens first public Tesla Semi Megacharger in California",
+      "url": "https://www.ccjdigital.com/alternative-power/article/15819083/tesla-opens-first-public-semi-megacharger-in-california"
+    }
+  ],
   "en": {
-   "sub": "SEMI CHARGING SITES",
-   "text": "66"
+    "title": "Tesla Semi Megacharger network: where the US truck chargers are, and where they are going",
+    "description": "Tesla's map shows 66 Megacharger sites across 15 US states, concentrated in Texas and California. Here is how the network is built and what it means for the Semi.",
+    "body": "<p>An electric truck is only as useful as the chargers along its route. With the Tesla Semi now in series production in Nevada, the Megacharger network is the piece that decides how far fleets can take it.</p><h2>The map</h2><ul><li><strong>66 sites</strong> on Tesla's Megacharger map across 15 US states.</li><li><strong>Texas</strong> has the most planned sites (19), followed by <strong>California</strong> (17).</li><li>Florida, Georgia, Illinois and Washington have four each; smaller numbers are planned elsewhere.</li><li><strong>Corridors:</strong> I-5 and I-10 in the west, Chicago routes, and I-95 and I-75 in the east and southeast.</li></ul><h2>The hardware</h2><p>Each Megacharger dispenser delivers up to 1.2 MW, using technology derived from Tesla's V4 Supercharger. At that power, most of the Semi's roughly 800 km (500 miles) of range can be replenished in about 30 minutes, which fits within a driver's required break.</p><h2>Partnership with Pilot</h2><p>Tesla is also building Semi charging at Pilot travel centers in California, Georgia, Nevada, New Mexico and Texas, with four to eight stalls per site. The first public Megacharger for Semi customers opened in California earlier this year.</p><h2>Why it matters</h2><p>Truck fleets buy on total cost. Electricity is far cheaper per mile than diesel, but only if trucks do not waste time detouring to chargers. A dense network along freight corridors is what turns the Semi from a depot-only truck into one that can run regional and long-haul routes.</p><h2>What is still unclear</h2><p>Tesla has not published opening dates for most sites or a price per kWh for Megacharger customers. Previous targets have also slipped, so the map is a plan rather than a promise.</p><h2>What to watch</h2><p>How many sites actually open by the end of 2026, and whether the network opens to electric trucks from other brands, as Tesla plans in Europe.</p>"
   },
   "nl": {
-   "sub": "LAADLOCATIES VOOR SEMI",
-   "text": "66"
+    "title": "Het Megacharger-netwerk van de Tesla Semi: waar de Amerikaanse truckladers staan en komen",
+    "description": "Tesla's kaart toont 66 Megacharger-locaties in 15 Amerikaanse staten, vooral in Texas en Californië. Zo wordt het netwerk opgebouwd en dit betekent het voor de Semi.",
+    "body": "<p>Een elektrische truck is zo bruikbaar als de laders langs zijn route. Nu de Tesla Semi in Nevada in serieproductie is, bepaalt het Megacharger-netwerk hoe ver vervoerders ermee kunnen.</p><h2>De kaart</h2><ul><li><strong>66 locaties</strong> op Tesla's Megacharger-kaart, verspreid over 15 Amerikaanse staten.</li><li><strong>Texas</strong> heeft de meeste geplande locaties (19), gevolgd door <strong>Californië</strong> (17).</li><li>Florida, Georgia, Illinois en Washington krijgen er elk vier; elders gaat het om kleinere aantallen.</li><li><strong>Routes:</strong> de I-5 en I-10 in het westen, routes rond Chicago, en de I-95 en I-75 in het oosten en zuidoosten.</li></ul><h2>De hardware</h2><p>Elke Megacharger levert tot 1,2 MW, met techniek die is afgeleid van Tesla's V4-Supercharger. Daarmee is het grootste deel van de ongeveer 800 km bereik van de Semi in zo'n 30 minuten bij te laden, binnen de verplichte pauze van de chauffeur.</p><h2>Samenwerking met Pilot</h2><p>Tesla bouwt ook laadplekken voor de Semi bij tankstations van Pilot in Californië, Georgia, Nevada, New Mexico en Texas, met vier tot acht laadpunten per locatie. De eerste openbare Megacharger voor Semi-klanten ging eerder dit jaar in Californië open.</p><h2>Waarom dit ertoe doet</h2><p>Vervoerders kijken naar de totale kosten. Stroom is per kilometer veel goedkoper dan diesel, maar alleen als trucks geen tijd verliezen met omrijden naar laders. Een dicht netwerk langs de vrachtroutes maakt van de Semi een truck die niet alleen rond het depot, maar ook op regionale en lange ritten kan rijden.</p><h2>Wat nog onduidelijk is</h2><p>Tesla heeft voor de meeste locaties geen openingsdatum genoemd, en ook geen prijs per kWh voor Megacharger-klanten. Eerdere doelen zijn bovendien verschoven, dus de kaart is een plan en geen belofte.</p><h2>Waar je op moet letten</h2><p>Hoeveel locaties eind 2026 echt open zijn, en of het netwerk opengaat voor elektrische trucks van andere merken, zoals Tesla in Europa van plan is.</p>"
+  },
+  "image": "models/semi-4.jpg",
+  "images": [
+    "models/semi.jpg",
+    "semi-2.jpg",
+    "supercharger-3.jpg"
+  ],
+  "label": {
+    "style": "n",
+    "en": {
+      "sub": "SEMI CHARGING SITES",
+      "text": "66"
+    },
+    "nl": {
+      "sub": "LAADLOCATIES VOOR SEMI",
+      "text": "66"
+    }
   }
- }
 }

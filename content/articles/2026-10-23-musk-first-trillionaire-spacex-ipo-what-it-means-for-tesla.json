@@ -1,48 +1,46 @@
 {
- "slug": "musk-first-trillionaire-spacex-ipo-what-it-means-for-tesla",
- "date": "2026-10-23",
- "time": "14:50",
- "category": "musk",
- "sources": [
-  {
-   "title": "Wikipedia — Timeline of the world's richest person",
-   "url": "https://en.wikipedia.org/wiki/Timeline_of_the_world%27s_richest_person"
-  },
-  {
-   "title": "Wikipedia — Initial public offering of SpaceX",
-   "url": "https://en.wikipedia.org/wiki/Initial_public_offering_of_SpaceX"
-  },
-  {
-   "title": "Tesla Oracle — Key takeaways from SpaceX's Q3 2026 earnings call",
-   "url": "https://www.teslaoracle.com/2026/10/21/flight-15-catch-starlink-v3-si-1t-revenue-key-takeaways-from-elon-musks-spacex-spcx-q3-2026-earnings-call/"
-  }
- ],
- "en": {
-  "title": "Musk the trillionaire: why SpaceX, not Tesla, now drives his fortune, and why that matters to Tesla",
-  "description": "SpaceX's IPO made Elon Musk the first person worth more than $1 trillion. How his wealth shifted, where his time goes, and the questions it raises for Tesla shareholders.",
-  "body": "<p>When SpaceX listed on Nasdaq in June 2026, Elon Musk became the first person ever with a verified net worth above $1 trillion, according to Forbes. For years Tesla was the main source of his fortune. That has changed, and it matters for Tesla.</p><h2>How the balance shifted</h2><ul><li><strong>SpaceX:</strong> priced at $135 per share in June and valued at about $1.77 trillion at the offer price, closing its first day at a market value of about $2.1 trillion. Musk owns roughly 42% of the shares and about 82% of the votes.</li><li><strong>Tesla:</strong> Musk remains the largest shareholder, but his stake is far smaller in percentage terms, and his new pay plan has not yet paid out any shares.</li><li><strong>AI:</strong> SpaceX now also owns the former xAI, including Grok and X, so Musk's AI ambitions sit mainly outside Tesla.</li></ul><h2>Where his time goes</h2><p>Musk is CEO of both Tesla and SpaceX. On SpaceX's third-quarter call, he said he spends four days a week at the Colossus AI data centres in Memphis. Tesla's own AI work, from FSD to Optimus, also takes his attention, and the two companies are planning a shared chip factory, Terafab. For Tesla shareholders, the question of how much of Musk's time and loyalty goes to Tesla is not new, but it has become sharper now that SpaceX is a public company with its own investors to answer to.</p><h2>Why the merger talk makes sense to some</h2><p>Tesla and SpaceX have set up committees to study a combination. Supporters argue it would end the conflicts of interest over AI, chips and shared resources and put all of Musk's attention in one place. Critics worry about Musk's control: Barclays estimates that in an all-stock merger he would hold about 37% of the equity and 56% of the votes, and they question whether Tesla shareholders would be paid fairly.</p><h2>What to watch</h2><p>Any merger proposal from the committees, Tesla's shareholder meeting on December 3, and whether Tesla's board sets clearer expectations about Musk's time commitment.</p><p><em>This article is for information only and is not financial advice.</em></p>"
- },
- "nl": {
-  "title": "Musk de biljonair: waarom SpaceX en niet Tesla nu zijn vermogen bepaalt, en waarom dat ertoe doet voor Tesla",
-  "description": "De beursgang van SpaceX maakte Elon Musk de eerste persoon met meer dan $ 1 biljoen vermogen. Hoe zijn vermogen verschoof, waar zijn tijd heen gaat, en welke vragen dat oproept voor Tesla-aandeelhouders.",
-  "body": "<p>Toen SpaceX in juni 2026 naar de Nasdaq ging, werd Elon Musk volgens Forbes de eerste persoon ooit met een bevestigd vermogen van meer dan $ 1 biljoen. Jarenlang was Tesla de belangrijkste bron van zijn vermogen. Dat is veranderd, en dat doet ertoe voor Tesla.</p><h2>Hoe de verhouding verschoof</h2><ul><li><strong>SpaceX:</strong> in juni geprijsd op $ 135 per aandeel en gewaardeerd op ongeveer $ 1,77 biljoen tegen de uitgifteprijs, met een beurswaarde van zo'n $ 2,1 biljoen aan het eind van de eerste handelsdag. Musk bezit ongeveer 42% van de aandelen en zo'n 82% van de stemmen.</li><li><strong>Tesla:</strong> Musk blijft de grootste aandeelhouder, maar zijn belang is procentueel veel kleiner, en zijn nieuwe beloningsplan heeft nog geen aandelen opgeleverd.</li><li><strong>AI:</strong> SpaceX bezit nu ook het vroegere xAI, met Grok en X, dus Musks AI-ambities liggen vooral buiten Tesla.</li></ul><h2>Waar zijn tijd heen gaat</h2><p>Musk is topman van zowel Tesla als SpaceX. Bij de kwartaalcijfers van SpaceX zei hij vier dagen per week bij de Colossus-datacenters in Memphis te zijn. Ook Tesla's eigen AI-werk, van FSD tot Optimus, vraagt zijn aandacht, en beide bedrijven plannen een gezamenlijke chipfabriek, Terafab. Voor Tesla-aandeelhouders is de vraag hoeveel van Musks tijd en loyaliteit naar Tesla gaat niet nieuw, maar wel scherper nu SpaceX een beursbedrijf is met eigen beleggers.</p><h2>Waarom sommigen een fusie logisch vinden</h2><p>Tesla en SpaceX hebben commissies ingesteld om een samengaan te onderzoeken. Voorstanders zeggen dat het de belangenconflicten rond AI, chips en gedeelde middelen beëindigt en al Musks aandacht op één plek brengt. Critici maken zich zorgen over Musks zeggenschap: Barclays schat dat hij bij een fusie in aandelen ongeveer 37% van het vermogen en 56% van de stemmen zou hebben, en ze vragen zich af of Tesla-aandeelhouders een eerlijke prijs krijgen.</p><h2>Waar je op moet letten</h2><p>Een eventueel fusievoorstel van de commissies, Tesla's aandeelhoudersvergadering op 3 december, en of het bestuur van Tesla duidelijkere verwachtingen stelt over Musks tijdsbesteding.</p><p><em>Dit artikel is alleen bedoeld als informatie en is geen financieel advies.</em></p>"
- },
- "images": [
-  "spacex-7.jpg",
-  "spacex-1.jpg",
-  "spacex-6.jpg"
- ],
- "label": {
-  "style": "k",
-  "pos": "tl",
-  "rot": 0,
+  "slug": "musk-first-trillionaire-spacex-ipo-what-it-means-for-tesla",
+  "date": "2026-10-23",
+  "time": "14:50",
+  "category": "musk",
+  "sources": [
+    {
+      "title": "Wikipedia — Timeline of the world's richest person",
+      "url": "https://en.wikipedia.org/wiki/Timeline_of_the_world%27s_richest_person"
+    },
+    {
+      "title": "Wikipedia — Initial public offering of SpaceX",
+      "url": "https://en.wikipedia.org/wiki/Initial_public_offering_of_SpaceX"
+    },
+    {
+      "title": "Tesla Oracle — Key takeaways from SpaceX's Q3 2026 earnings call",
+      "url": "https://www.teslaoracle.com/2026/10/21/flight-15-catch-starlink-v3-si-1t-revenue-key-takeaways-from-elon-musks-spacex-spcx-q3-2026-earnings-call/"
+    }
+  ],
   "en": {
-   "sub": "VIA SPACEX",
-   "text": "FIRST TRILLIONAIRE!"
+    "title": "Musk the trillionaire: why SpaceX, not Tesla, now drives his fortune, and why that matters to Tesla",
+    "description": "SpaceX's IPO made Elon Musk the first person worth more than $1 trillion. How his wealth shifted, where his time goes, and the questions it raises for Tesla shareholders.",
+    "body": "<p>When SpaceX listed on Nasdaq in June 2026, Elon Musk became the first person ever with a verified net worth above $1 trillion, according to Forbes. For years Tesla was the main source of his fortune. That has changed, and it matters for Tesla.</p><h2>How the balance shifted</h2><ul><li><strong>SpaceX:</strong> priced at $135 per share in June and valued at about $1.77 trillion at the offer price, closing its first day at a market value of about $2.1 trillion. Musk owns roughly 42% of the shares and about 82% of the votes.</li><li><strong>Tesla:</strong> Musk remains the largest shareholder, but his stake is far smaller in percentage terms, and his new pay plan has not yet paid out any shares.</li><li><strong>AI:</strong> SpaceX now also owns the former xAI, including Grok and X, so Musk's AI ambitions sit mainly outside Tesla.</li></ul><h2>Where his time goes</h2><p>Musk is CEO of both Tesla and SpaceX. On SpaceX's third-quarter call, he said he spends four days a week at the Colossus AI data centres in Memphis. Tesla's own AI work, from FSD to Optimus, also takes his attention, and the two companies are planning a shared chip factory, Terafab. For Tesla shareholders, the question of how much of Musk's time and loyalty goes to Tesla is not new, but it has become sharper now that SpaceX is a public company with its own investors to answer to.</p><h2>Why the merger talk makes sense to some</h2><p>Tesla and SpaceX have set up committees to study a combination. Supporters argue it would end the conflicts of interest over AI, chips and shared resources and put all of Musk's attention in one place. Critics worry about Musk's control: Barclays estimates that in an all-stock merger he would hold about 37% of the equity and 56% of the votes, and they question whether Tesla shareholders would be paid fairly.</p><h2>What to watch</h2><p>Any merger proposal from the committees, Tesla's shareholder meeting on December 3, and whether Tesla's board sets clearer expectations about Musk's time commitment.</p><p><em>This article is for information only and is not financial advice.</em></p>"
   },
   "nl": {
-   "sub": "DANKZIJ SPACEX",
-   "text": "EERSTE BILJONAIR!"
+    "title": "Musk de biljonair: waarom SpaceX en niet Tesla nu zijn vermogen bepaalt, en waarom dat ertoe doet voor Tesla",
+    "description": "De beursgang van SpaceX maakte Elon Musk de eerste persoon met meer dan $ 1 biljoen vermogen. Hoe zijn vermogen verschoof, waar zijn tijd heen gaat, en welke vragen dat oproept voor Tesla-aandeelhouders.",
+    "body": "<p>Toen SpaceX in juni 2026 naar de Nasdaq ging, werd Elon Musk volgens Forbes de eerste persoon ooit met een bevestigd vermogen van meer dan $ 1 biljoen. Jarenlang was Tesla de belangrijkste bron van zijn vermogen. Dat is veranderd, en dat doet ertoe voor Tesla.</p><h2>Hoe de verhouding verschoof</h2><ul><li><strong>SpaceX:</strong> in juni geprijsd op $ 135 per aandeel en gewaardeerd op ongeveer $ 1,77 biljoen tegen de uitgifteprijs, met een beurswaarde van zo'n $ 2,1 biljoen aan het eind van de eerste handelsdag. Musk bezit ongeveer 42% van de aandelen en zo'n 82% van de stemmen.</li><li><strong>Tesla:</strong> Musk blijft de grootste aandeelhouder, maar zijn belang is procentueel veel kleiner, en zijn nieuwe beloningsplan heeft nog geen aandelen opgeleverd.</li><li><strong>AI:</strong> SpaceX bezit nu ook het vroegere xAI, met Grok en X, dus Musks AI-ambities liggen vooral buiten Tesla.</li></ul><h2>Waar zijn tijd heen gaat</h2><p>Musk is topman van zowel Tesla als SpaceX. Bij de kwartaalcijfers van SpaceX zei hij vier dagen per week bij de Colossus-datacenters in Memphis te zijn. Ook Tesla's eigen AI-werk, van FSD tot Optimus, vraagt zijn aandacht, en beide bedrijven plannen een gezamenlijke chipfabriek, Terafab. Voor Tesla-aandeelhouders is de vraag hoeveel van Musks tijd en loyaliteit naar Tesla gaat niet nieuw, maar wel scherper nu SpaceX een beursbedrijf is met eigen beleggers.</p><h2>Waarom sommigen een fusie logisch vinden</h2><p>Tesla en SpaceX hebben commissies ingesteld om een samengaan te onderzoeken. Voorstanders zeggen dat het de belangenconflicten rond AI, chips en gedeelde middelen beëindigt en al Musks aandacht op één plek brengt. Critici maken zich zorgen over Musks zeggenschap: Barclays schat dat hij bij een fusie in aandelen ongeveer 37% van het vermogen en 56% van de stemmen zou hebben, en ze vragen zich af of Tesla-aandeelhouders een eerlijke prijs krijgen.</p><h2>Waar je op moet letten</h2><p>Een eventueel fusievoorstel van de commissies, Tesla's aandeelhoudersvergadering op 3 december, en of het bestuur van Tesla duidelijkere verwachtingen stelt over Musks tijdsbesteding.</p><p><em>Dit artikel is alleen bedoeld als informatie en is geen financieel advies.</em></p>"
+  },
+  "images": [
+    "spacex-7.jpg",
+    "spacex-1.jpg",
+    "spacex-6.jpg"
+  ],
+  "label": {
+    "style": "k",
+    "en": {
+      "sub": "VIA SPACEX",
+      "text": "FIRST TRILLIONAIRE!"
+    },
+    "nl": {
+      "sub": "DANKZIJ SPACEX",
+      "text": "EERSTE BILJONAIR!"
+    }
   }
- }
 }

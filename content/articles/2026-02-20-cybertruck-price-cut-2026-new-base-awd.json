@@ -1,44 +1,42 @@
 {
- "slug": "cybertruck-price-cut-2026-new-base-awd",
- "date": "2026-02-20",
- "time": "21:10",
- "category": "models",
- "models": [
-  "cybertruck",
-  "cybertruck-awd",
-  "cybertruck-cyberbeast"
- ],
- "sources": [
-  {
-   "title": "Autoweek via Yahoo Autos — Tesla slashes Cybertruck prices to boost demand",
-   "url": "https://autos.yahoo.com/new-vehicles-and-reviews/articles/tesla-slashes-cybertruck-prices-boost-155500517.html"
-  },
-  {
-   "title": "Electrek — Tesla brings Cybertruck to Middle East amid US demand collapse",
-   "url": "https://electrek.co/2026/01/26/tesla-brings-cybertruck-to-middle-east-amid-us-demand-collapse/"
-  }
- ],
- "en": {
-  "title": "Tesla cuts Cybertruck prices: new AWD base model from $59,990, Cyberbeast under $100,000",
-  "description": "Tesla's updated 2026 Cybertruck lineup brings a cheaper dual-motor version and cuts about $15,000 from the top trims. Here is what you get, and what was removed.",
-  "body": "<p>After a year of falling sales, Tesla has reworked the Cybertruck lineup in the US with significantly lower prices.</p><h2>The new lineup</h2><ul><li><strong>New base AWD:</strong> $59,990 before destination and order fees, around $62,235 all-in. That is $10,000 less than the previous cheapest Cybertruck.</li><li><strong>Higher trims:</strong> the premium AWD and the Cyberbeast are each about $15,000 cheaper.</li><li><strong>Cyberbeast:</strong> now under $100,000, partly by dropping some luxury features and no longer including FSD.</li></ul><h2>What the base AWD keeps</h2><p>Unlike the short-lived rear-wheel-drive version from 2025, which sold poorly, the new entry model keeps the features buyers care about most: two motors and all-wheel drive, adaptive suspension damping, Powershare outlets to power tools or a house, and a tonneau cover over the bed. All versions keep the stainless-steel body, the large bed and the built-in ramp.</p><h2>Why Tesla is doing this</h2><p>US Cybertruck sales almost halved in 2025, to about 20,000 according to Cox Automotive. The end of the federal EV tax credit made it even harder to sell a truck that cost far more than the $39,900 promised at its 2019 unveiling. Lower prices are Tesla's most direct lever to win buyers back.</p><h2>Is it a good deal?</h2><p>At around $60,000, the dual-motor Cybertruck competes more directly with electric pickups like the Ford F-150 Lightning and Rivian R1T, and with well-equipped gasoline trucks. Final EPA range figures for the revised trims had not been published at launch, so compare range and towing figures before ordering.</p><h2>What to watch</h2><p>Whether lower prices lift sales in 2026, and how Tesla handles owners who paid much more only months earlier.</p>"
- },
- "nl": {
-  "title": "Tesla verlaagt Cybertruck-prijzen: nieuwe AWD-basisversie vanaf $59.990, Cyberbeast onder $100.000",
-  "description": "In de vernieuwde Cybertruck-line-up voor 2026 zit een goedkopere versie met twee motoren, en de duurste uitvoeringen worden zo'n $15.000 goedkoper. Wat je krijgt, en wat er is geschrapt.",
-  "body": "<p>Na een jaar van dalende verkopen heeft Tesla het Cybertruck-aanbod in de VS omgegooid, met flink lagere prijzen.</p><h2>Het nieuwe aanbod</h2><ul><li><strong>Nieuwe AWD-basisversie:</strong> $59.990 zonder afleverkosten, ongeveer $62.235 inclusief. Dat is $10.000 minder dan de vorige goedkoopste Cybertruck.</li><li><strong>Duurdere uitvoeringen:</strong> de luxere AWD en de Cyberbeast worden elk ongeveer $15.000 goedkoper.</li><li><strong>Cyberbeast:</strong> nu onder $100.000, deels doordat een paar luxe-opties zijn geschrapt en FSD niet meer standaard is.</li></ul><h2>Wat de basis-AWD behoudt</h2><p>Anders dan de kortstondige versie met achterwielaandrijving uit 2025, die slecht verkocht, houdt het nieuwe instapmodel de dingen die kopers het belangrijkst vinden: twee motoren en vierwielaandrijving, adaptieve demping, Powershare-stopcontacten om gereedschap of een huis van stroom te voorzien, en een afdekking over de laadbak. Alle versies houden de roestvrijstalen carrosserie, de grote laadbak en de ingebouwde oprijplaat.</p><h2>Waarom Tesla dit doet</h2><p>De Amerikaanse verkoop van de Cybertruck halveerde in 2025 bijna, naar ongeveer 20.000 volgens Cox Automotive. Door het einde van de federale belastingkorting voor elektrische auto's werd het nog lastiger om een truck te verkopen die veel duurder was dan de $39.900 die bij de presentatie in 2019 werd beloofd. Lagere prijzen zijn Tesla's meest directe middel om kopers terug te winnen.</p><h2>Is het een goede deal?</h2><p>Rond $60.000 concurreert de Cybertruck met twee motoren directer met elektrische pick-ups als de Ford F-150 Lightning en de Rivian R1T, en met goed uitgeruste benzinetrucks. De officiële EPA-bereikcijfers van de nieuwe uitvoeringen waren bij de introductie nog niet bekend, dus vergelijk bereik en trekvermogen voordat je bestelt.</p><h2>Waar je op moet letten</h2><p>Of de lagere prijzen de verkoop in 2026 opstuwen, en hoe Tesla omgaat met kopers die een paar maanden eerder veel meer betaalden.</p>"
- },
- "label": {
-  "style": "n",
-  "pos": "bl",
-  "rot": 0,
+  "slug": "cybertruck-price-cut-2026-new-base-awd",
+  "date": "2026-02-20",
+  "time": "21:10",
+  "category": "models",
+  "models": [
+    "cybertruck",
+    "cybertruck-awd",
+    "cybertruck-cyberbeast"
+  ],
+  "sources": [
+    {
+      "title": "Autoweek via Yahoo Autos — Tesla slashes Cybertruck prices to boost demand",
+      "url": "https://autos.yahoo.com/new-vehicles-and-reviews/articles/tesla-slashes-cybertruck-prices-boost-155500517.html"
+    },
+    {
+      "title": "Electrek — Tesla brings Cybertruck to Middle East amid US demand collapse",
+      "url": "https://electrek.co/2026/01/26/tesla-brings-cybertruck-to-middle-east-amid-us-demand-collapse/"
+    }
+  ],
   "en": {
-   "sub": "NEW CYBERTRUCK AWD BASE",
-   "text": "$59,990"
+    "title": "Tesla cuts Cybertruck prices: new AWD base model from $59,990, Cyberbeast under $100,000",
+    "description": "Tesla's updated 2026 Cybertruck lineup brings a cheaper dual-motor version and cuts about $15,000 from the top trims. Here is what you get, and what was removed.",
+    "body": "<p>After a year of falling sales, Tesla has reworked the Cybertruck lineup in the US with significantly lower prices.</p><h2>The new lineup</h2><ul><li><strong>New base AWD:</strong> $59,990 before destination and order fees, around $62,235 all-in. That is $10,000 less than the previous cheapest Cybertruck.</li><li><strong>Higher trims:</strong> the premium AWD and the Cyberbeast are each about $15,000 cheaper.</li><li><strong>Cyberbeast:</strong> now under $100,000, partly by dropping some luxury features and no longer including FSD.</li></ul><h2>What the base AWD keeps</h2><p>Unlike the short-lived rear-wheel-drive version from 2025, which sold poorly, the new entry model keeps the features buyers care about most: two motors and all-wheel drive, adaptive suspension damping, Powershare outlets to power tools or a house, and a tonneau cover over the bed. All versions keep the stainless-steel body, the large bed and the built-in ramp.</p><h2>Why Tesla is doing this</h2><p>US Cybertruck sales almost halved in 2025, to about 20,000 according to Cox Automotive. The end of the federal EV tax credit made it even harder to sell a truck that cost far more than the $39,900 promised at its 2019 unveiling. Lower prices are Tesla's most direct lever to win buyers back.</p><h2>Is it a good deal?</h2><p>At around $60,000, the dual-motor Cybertruck competes more directly with electric pickups like the Ford F-150 Lightning and Rivian R1T, and with well-equipped gasoline trucks. Final EPA range figures for the revised trims had not been published at launch, so compare range and towing figures before ordering.</p><h2>What to watch</h2><p>Whether lower prices lift sales in 2026, and how Tesla handles owners who paid much more only months earlier.</p>"
   },
   "nl": {
-   "sub": "NIEUWE AWD-BASISVERSIE",
-   "text": "$59.990"
+    "title": "Tesla verlaagt Cybertruck-prijzen: nieuwe AWD-basisversie vanaf $59.990, Cyberbeast onder $100.000",
+    "description": "In de vernieuwde Cybertruck-line-up voor 2026 zit een goedkopere versie met twee motoren, en de duurste uitvoeringen worden zo'n $15.000 goedkoper. Wat je krijgt, en wat er is geschrapt.",
+    "body": "<p>Na een jaar van dalende verkopen heeft Tesla het Cybertruck-aanbod in de VS omgegooid, met flink lagere prijzen.</p><h2>Het nieuwe aanbod</h2><ul><li><strong>Nieuwe AWD-basisversie:</strong> $59.990 zonder afleverkosten, ongeveer $62.235 inclusief. Dat is $10.000 minder dan de vorige goedkoopste Cybertruck.</li><li><strong>Duurdere uitvoeringen:</strong> de luxere AWD en de Cyberbeast worden elk ongeveer $15.000 goedkoper.</li><li><strong>Cyberbeast:</strong> nu onder $100.000, deels doordat een paar luxe-opties zijn geschrapt en FSD niet meer standaard is.</li></ul><h2>Wat de basis-AWD behoudt</h2><p>Anders dan de kortstondige versie met achterwielaandrijving uit 2025, die slecht verkocht, houdt het nieuwe instapmodel de dingen die kopers het belangrijkst vinden: twee motoren en vierwielaandrijving, adaptieve demping, Powershare-stopcontacten om gereedschap of een huis van stroom te voorzien, en een afdekking over de laadbak. Alle versies houden de roestvrijstalen carrosserie, de grote laadbak en de ingebouwde oprijplaat.</p><h2>Waarom Tesla dit doet</h2><p>De Amerikaanse verkoop van de Cybertruck halveerde in 2025 bijna, naar ongeveer 20.000 volgens Cox Automotive. Door het einde van de federale belastingkorting voor elektrische auto's werd het nog lastiger om een truck te verkopen die veel duurder was dan de $39.900 die bij de presentatie in 2019 werd beloofd. Lagere prijzen zijn Tesla's meest directe middel om kopers terug te winnen.</p><h2>Is het een goede deal?</h2><p>Rond $60.000 concurreert de Cybertruck met twee motoren directer met elektrische pick-ups als de Ford F-150 Lightning en de Rivian R1T, en met goed uitgeruste benzinetrucks. De officiële EPA-bereikcijfers van de nieuwe uitvoeringen waren bij de introductie nog niet bekend, dus vergelijk bereik en trekvermogen voordat je bestelt.</p><h2>Waar je op moet letten</h2><p>Of de lagere prijzen de verkoop in 2026 opstuwen, en hoe Tesla omgaat met kopers die een paar maanden eerder veel meer betaalden.</p>"
+  },
+  "label": {
+    "style": "n",
+    "en": {
+      "sub": "NEW CYBERTRUCK AWD BASE",
+      "text": "$59,990"
+    },
+    "nl": {
+      "sub": "NIEUWE AWD-BASISVERSIE",
+      "text": "$59.990"
+    }
   }
- }
 }

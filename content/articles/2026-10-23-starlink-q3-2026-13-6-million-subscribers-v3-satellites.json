@@ -1,47 +1,45 @@
 {
- "slug": "starlink-q3-2026-13-6-million-subscribers-v3-satellites",
- "date": "2026-10-23",
- "time": "00:41",
- "category": "starlink",
- "sources": [
-  {
-   "title": "Tesla Oracle — Key takeaways from SpaceX's Q3 2026 earnings call",
-   "url": "https://www.teslaoracle.com/2026/10/21/flight-15-catch-starlink-v3-si-1t-revenue-key-takeaways-from-elon-musks-spacex-spcx-q3-2026-earnings-call/"
-  },
-  {
-   "title": "Reuters via BusinessDay — SpaceX and Tesla earnings preview",
-   "url": "https://www.businessday.co.za/world/international-companies/2026-10-19-spacex-and-tesla-earnings-stoke-merger-speculation/"
-  },
-  {
-   "title": "Not a Tesla App — Musk hints Starlink is coming to future Teslas",
-   "url": "https://www.notateslaapp.com/news/4580/musk-hints-starlink-is-coming-to-future-teslas-as-cybercab-shows-integrated-dish"
-  }
- ],
- "en": {
-  "title": "Starlink reaches 13.6 million subscribers: the Q3 numbers and the V3 satellites that come next",
-  "description": "SpaceX's latest results show Starlink growing fast and preparing a much bigger third-generation network. What that means for cars, including Teslas, that may one day connect by satellite.",
-  "body": "<p>Starlink is the business that pays for most of what SpaceX does, and its latest numbers show it still growing quickly. It also matters for Tesla: Elon Musk has said all cars will eventually have Starlink, and the first Cybercab robotaxis already carry a built-in Starlink antenna.</p><h2>The third-quarter numbers</h2><ul><li><strong>Subscribers:</strong> 13.6 million at the end of September 2026.</li><li><strong>Countries:</strong> service in 174 countries.</li><li><strong>Average revenue per user:</strong> about $69, according to figures from the earnings call.</li><li><strong>Growth:</strong> revenue in SpaceX's connectivity segment, which is mostly Starlink, rose 69% year on year, and its operating income almost doubled.</li><li><strong>Satellites:</strong> about 11,100 in orbit, most of them second-generation.</li></ul><h2>The third generation has started</h2><p>On Starship's Flight 14, SpaceX deployed the first 26 Starlink V3 satellites. Together they add about 26 terabits per second of capacity, which SpaceX compares to roughly ten Falcon 9 launches of older satellites. Only Starship is big enough to carry them. Musk's goal is to increase Starlink's bandwidth a hundredfold within three years, with around 100,000 V3 satellites. That is a target, and it depends on Starship flying very often.</p><h2>Why this matters for cars</h2><p>Today, Tesla cars connect over regular mobile networks, and Premium Connectivity runs through carriers such as AT&amp;T in the US. Satellite capacity has so far been too limited to replace that. A much larger network changes the equation in a few ways:</p><ul><li><strong>Coverage:</strong> navigation, emergency calls and fleet management could keep working in places without mobile signal.</li><li><strong>Robotaxis:</strong> a driverless car still needs a connection for routing, customer support and remote assistance. The Cybercab carries both 5G and a Starlink antenna in the rear.</li><li><strong>Direct to phone:</strong> SpaceX is building a satellite network that talks directly to normal phone chips, which could one day reach car modems too.</li></ul><p>Tesla has not announced plans to replace mobile networks in its cars, and its AI chief has said a connection is not needed to drive safely.</p><h2>What to watch</h2><p>More V3 launches on Starship, the planned upgrade of Starlink's direct-to-phone service from 2027, and any Tesla announcement about Starlink in regular cars rather than only the Cybercab.</p>"
- },
- "nl": {
-  "title": "Starlink haalt 13,6 miljoen abonnees: de kwartaalcijfers en de V3-satellieten die eraan komen",
-  "description": "De nieuwste cijfers van SpaceX laten zien dat Starlink snel groeit en een veel groter netwerk van de derde generatie voorbereidt. Wat dat betekent voor auto's, ook Tesla's, die ooit via satelliet verbinding maken.",
-  "body": "<p>Starlink is het onderdeel dat het meeste van wat SpaceX doet betaalt, en de nieuwste cijfers laten zien dat het nog steeds snel groeit. Het is ook relevant voor Tesla: Elon Musk zei dat alle auto's uiteindelijk Starlink krijgen, en de eerste Cybercab-robotaxi's hebben al een ingebouwde Starlink-antenne.</p><h2>De cijfers over het derde kwartaal</h2><ul><li><strong>Abonnees:</strong> 13,6 miljoen eind september 2026.</li><li><strong>Landen:</strong> dienst in 174 landen.</li><li><strong>Gemiddelde omzet per gebruiker:</strong> ongeveer $ 69, volgens cijfers uit het kwartaalgesprek.</li><li><strong>Groei:</strong> de omzet van SpaceX' connectiviteitstak, grotendeels Starlink, steeg 69% ten opzichte van een jaar eerder, en het bedrijfsresultaat verdubbelde bijna.</li><li><strong>Satellieten:</strong> zo'n 11.100 in een baan om de aarde, de meeste van de tweede generatie.</li></ul><h2>De derde generatie is begonnen</h2><p>Bij vlucht 14 van Starship zette SpaceX de eerste 26 Starlink V3-satellieten uit. Samen voegen ze ongeveer 26 terabit per seconde aan capaciteit toe, wat SpaceX vergelijkt met zo'n tien Falcon 9-lanceringen met oudere satellieten. Alleen Starship is groot genoeg om ze te vervoeren. Musk wil de bandbreedte van Starlink binnen drie jaar honderd keer zo groot maken, met ongeveer 100.000 V3-satellieten. Dat is een doel, en het hangt af van heel veel Starship-vluchten.</p><h2>Waarom dit belangrijk is voor auto's</h2><p>Tesla's auto's maken nu verbinding via gewone mobiele netwerken, en Premium Connectivity loopt in de VS via providers zoals AT&amp;T. Satellietcapaciteit was tot nu toe te beperkt om dat te vervangen. Een veel groter netwerk verandert dat op een paar punten:</p><ul><li><strong>Dekking:</strong> navigatie, noodoproepen en vlootbeheer kunnen blijven werken op plekken zonder mobiel bereik.</li><li><strong>Robotaxi's:</strong> een auto zonder bestuurder heeft nog steeds verbinding nodig voor routes, klantenservice en hulp op afstand. De Cybercab heeft zowel 5G als een Starlink-antenne achterin.</li><li><strong>Direct naar de telefoon:</strong> SpaceX bouwt een satellietnetwerk dat rechtstreeks met gewone telefoonchips praat, en dat kan ooit ook automodems bereiken.</li></ul><p>Tesla heeft geen plannen aangekondigd om mobiele netwerken in zijn auto's te vervangen, en het hoofd AI zei dat een verbinding niet nodig is om veilig te rijden.</p><h2>Waar je op moet letten</h2><p>Meer V3-lanceringen met Starship, de geplande verbetering van Starlinks directe telefoondienst vanaf 2027, en een eventuele aankondiging van Tesla over Starlink in gewone auto's in plaats van alleen de Cybercab.</p>"
- },
- "images": [
-  "starlink-1.jpg",
-  "starlink-2.jpg"
- ],
- "label": {
-  "style": "n",
-  "pos": "ml",
-  "rot": 0,
+  "slug": "starlink-q3-2026-13-6-million-subscribers-v3-satellites",
+  "date": "2026-10-23",
+  "time": "00:41",
+  "category": "starlink",
+  "sources": [
+    {
+      "title": "Tesla Oracle — Key takeaways from SpaceX's Q3 2026 earnings call",
+      "url": "https://www.teslaoracle.com/2026/10/21/flight-15-catch-starlink-v3-si-1t-revenue-key-takeaways-from-elon-musks-spacex-spcx-q3-2026-earnings-call/"
+    },
+    {
+      "title": "Reuters via BusinessDay — SpaceX and Tesla earnings preview",
+      "url": "https://www.businessday.co.za/world/international-companies/2026-10-19-spacex-and-tesla-earnings-stoke-merger-speculation/"
+    },
+    {
+      "title": "Not a Tesla App — Musk hints Starlink is coming to future Teslas",
+      "url": "https://www.notateslaapp.com/news/4580/musk-hints-starlink-is-coming-to-future-teslas-as-cybercab-shows-integrated-dish"
+    }
+  ],
   "en": {
-   "text": "13.6M",
-   "sub": "STARLINK SUBSCRIBERS"
+    "title": "Starlink reaches 13.6 million subscribers: the Q3 numbers and the V3 satellites that come next",
+    "description": "SpaceX's latest results show Starlink growing fast and preparing a much bigger third-generation network. What that means for cars, including Teslas, that may one day connect by satellite.",
+    "body": "<p>Starlink is the business that pays for most of what SpaceX does, and its latest numbers show it still growing quickly. It also matters for Tesla: Elon Musk has said all cars will eventually have Starlink, and the first Cybercab robotaxis already carry a built-in Starlink antenna.</p><h2>The third-quarter numbers</h2><ul><li><strong>Subscribers:</strong> 13.6 million at the end of September 2026.</li><li><strong>Countries:</strong> service in 174 countries.</li><li><strong>Average revenue per user:</strong> about $69, according to figures from the earnings call.</li><li><strong>Growth:</strong> revenue in SpaceX's connectivity segment, which is mostly Starlink, rose 69% year on year, and its operating income almost doubled.</li><li><strong>Satellites:</strong> about 11,100 in orbit, most of them second-generation.</li></ul><h2>The third generation has started</h2><p>On Starship's Flight 14, SpaceX deployed the first 26 Starlink V3 satellites. Together they add about 26 terabits per second of capacity, which SpaceX compares to roughly ten Falcon 9 launches of older satellites. Only Starship is big enough to carry them. Musk's goal is to increase Starlink's bandwidth a hundredfold within three years, with around 100,000 V3 satellites. That is a target, and it depends on Starship flying very often.</p><h2>Why this matters for cars</h2><p>Today, Tesla cars connect over regular mobile networks, and Premium Connectivity runs through carriers such as AT&amp;T in the US. Satellite capacity has so far been too limited to replace that. A much larger network changes the equation in a few ways:</p><ul><li><strong>Coverage:</strong> navigation, emergency calls and fleet management could keep working in places without mobile signal.</li><li><strong>Robotaxis:</strong> a driverless car still needs a connection for routing, customer support and remote assistance. The Cybercab carries both 5G and a Starlink antenna in the rear.</li><li><strong>Direct to phone:</strong> SpaceX is building a satellite network that talks directly to normal phone chips, which could one day reach car modems too.</li></ul><p>Tesla has not announced plans to replace mobile networks in its cars, and its AI chief has said a connection is not needed to drive safely.</p><h2>What to watch</h2><p>More V3 launches on Starship, the planned upgrade of Starlink's direct-to-phone service from 2027, and any Tesla announcement about Starlink in regular cars rather than only the Cybercab.</p>"
   },
   "nl": {
-   "text": "13,6 mln",
-   "sub": "STARLINK-ABONNEES"
+    "title": "Starlink haalt 13,6 miljoen abonnees: de kwartaalcijfers en de V3-satellieten die eraan komen",
+    "description": "De nieuwste cijfers van SpaceX laten zien dat Starlink snel groeit en een veel groter netwerk van de derde generatie voorbereidt. Wat dat betekent voor auto's, ook Tesla's, die ooit via satelliet verbinding maken.",
+    "body": "<p>Starlink is het onderdeel dat het meeste van wat SpaceX doet betaalt, en de nieuwste cijfers laten zien dat het nog steeds snel groeit. Het is ook relevant voor Tesla: Elon Musk zei dat alle auto's uiteindelijk Starlink krijgen, en de eerste Cybercab-robotaxi's hebben al een ingebouwde Starlink-antenne.</p><h2>De cijfers over het derde kwartaal</h2><ul><li><strong>Abonnees:</strong> 13,6 miljoen eind september 2026.</li><li><strong>Landen:</strong> dienst in 174 landen.</li><li><strong>Gemiddelde omzet per gebruiker:</strong> ongeveer $ 69, volgens cijfers uit het kwartaalgesprek.</li><li><strong>Groei:</strong> de omzet van SpaceX' connectiviteitstak, grotendeels Starlink, steeg 69% ten opzichte van een jaar eerder, en het bedrijfsresultaat verdubbelde bijna.</li><li><strong>Satellieten:</strong> zo'n 11.100 in een baan om de aarde, de meeste van de tweede generatie.</li></ul><h2>De derde generatie is begonnen</h2><p>Bij vlucht 14 van Starship zette SpaceX de eerste 26 Starlink V3-satellieten uit. Samen voegen ze ongeveer 26 terabit per seconde aan capaciteit toe, wat SpaceX vergelijkt met zo'n tien Falcon 9-lanceringen met oudere satellieten. Alleen Starship is groot genoeg om ze te vervoeren. Musk wil de bandbreedte van Starlink binnen drie jaar honderd keer zo groot maken, met ongeveer 100.000 V3-satellieten. Dat is een doel, en het hangt af van heel veel Starship-vluchten.</p><h2>Waarom dit belangrijk is voor auto's</h2><p>Tesla's auto's maken nu verbinding via gewone mobiele netwerken, en Premium Connectivity loopt in de VS via providers zoals AT&amp;T. Satellietcapaciteit was tot nu toe te beperkt om dat te vervangen. Een veel groter netwerk verandert dat op een paar punten:</p><ul><li><strong>Dekking:</strong> navigatie, noodoproepen en vlootbeheer kunnen blijven werken op plekken zonder mobiel bereik.</li><li><strong>Robotaxi's:</strong> een auto zonder bestuurder heeft nog steeds verbinding nodig voor routes, klantenservice en hulp op afstand. De Cybercab heeft zowel 5G als een Starlink-antenne achterin.</li><li><strong>Direct naar de telefoon:</strong> SpaceX bouwt een satellietnetwerk dat rechtstreeks met gewone telefoonchips praat, en dat kan ooit ook automodems bereiken.</li></ul><p>Tesla heeft geen plannen aangekondigd om mobiele netwerken in zijn auto's te vervangen, en het hoofd AI zei dat een verbinding niet nodig is om veilig te rijden.</p><h2>Waar je op moet letten</h2><p>Meer V3-lanceringen met Starship, de geplande verbetering van Starlinks directe telefoondienst vanaf 2027, en een eventuele aankondiging van Tesla over Starlink in gewone auto's in plaats van alleen de Cybercab.</p>"
+  },
+  "images": [
+    "starlink-1.jpg",
+    "starlink-2.jpg"
+  ],
+  "label": {
+    "style": "n",
+    "en": {
+      "text": "13.6M",
+      "sub": "STARLINK SUBSCRIBERS"
+    },
+    "nl": {
+      "text": "13,6 mln",
+      "sub": "STARLINK-ABONNEES"
+    }
   }
- }
 }

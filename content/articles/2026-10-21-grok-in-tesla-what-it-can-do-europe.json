@@ -1,44 +1,42 @@
 {
- "slug": "grok-in-tesla-what-it-can-do-europe",
- "date": "2026-10-21",
- "time": "16:25",
- "category": "xai",
- "sources": [
-  {
-   "title": "autoevolution — Grok available Europe-wide on Tesla EVs with the Summer Update",
-   "url": "https://www.autoevolution.com/news/slightly-more-helpful-grok-available-euro-wide-on-tesla-evs-with-the-upcoming-2026-summer-update-273170.html"
-  },
-  {
-   "title": "Not a Tesla App — Update 2026.38 release notes",
-   "url": "https://notateslaapp.com/software-updates/version/2026.38/release-notes"
-  }
- ],
- "en": {
-  "title": "Grok in your Tesla: what the AI assistant can do now, and what it can't",
-  "description": "Grok is available in Teslas across Europe and has dropped its beta label. Here is what you can ask it, which car functions it controls and where its limits are.",
-  "body": "<p>Grok, the AI assistant from Elon Musk's xAI, has become a standard part of the Tesla software. Since July 2026 it has been available across Europe, and with update 2026.38 at the end of September it lost its beta label. Time for a practical look at what it actually does.</p><h2>Where it is available</h2><p>Until July, Grok worked in Teslas in only nine European countries: the UK, Ireland, Germany, Switzerland, Austria, Italy, France, Portugal and Spain. On July 21, Tesla Europe announced that it is now available in all of Europe, which includes the Netherlands and Belgium.</p><h2>How you use it</h2><p>You start Grok by saying 'Hey Grok' or through the voice button. You can talk to it naturally, as you would with a chatbot on your phone, rather than using fixed voice commands.</p><h2>What it can do</h2><ul><li><strong>Navigation:</strong> set a destination by describing it, and get location-based reminders.</li><li><strong>Calls and music:</strong> make phone calls, and search for and play music.</li><li><strong>Climate:</strong> adjust heating and air conditioning.</li><li><strong>Small car functions:</strong> for example opening the glovebox.</li><li><strong>Owner's manual:</strong> answer questions about your car, such as how a feature works.</li><li><strong>General questions:</strong> like any chatbot, it can answer questions and keep up a conversation during the drive.</li></ul><p>The summer update also added smarter navigation features: suggested routes to places you visit regularly, and a preference for routes you have driven before.</p><h2>What it can't do</h2><p>Grok's control over the car is still limited to a short list of functions. It does not drive the car and has nothing to do with Full Self-Driving, which is a separate system. Reviewers have also pointed out that its car-related skills are modest compared with some competitors, such as Rivian's assistant.</p><h2>Privacy</h2><p>Grok processes your questions in the cloud, through xAI. If you are cautious about what you share, keep that in mind, and check the privacy settings in your car and Tesla account.</p><h2>Why it matters</h2><p>Grok is the most visible link between Tesla and Musk's other companies, and a sign of where Tesla's software is heading: a car you can talk to, that explains itself and gradually takes over more small tasks.</p>"
- },
- "nl": {
-  "title": "Grok in je Tesla: dit kan de AI-assistent nu, en dit (nog) niet",
-  "description": "Grok is in Tesla's in heel Europa beschikbaar en is uit de bèta. Wat je kunt vragen, welke autofuncties het bedient en waar de grenzen liggen.",
-  "body": "<p>Grok, de AI-assistent van Elon Musks bedrijf xAI, is een vast onderdeel van de Tesla-software geworden. Sinds juli 2026 is hij in heel Europa beschikbaar, en met update 2026.38 eind september verdween het label 'bèta'. Tijd voor een praktische blik op wat hij echt doet.</p><h2>Waar hij beschikbaar is</h2><p>Tot juli werkte Grok in Tesla's in slechts negen Europese landen: het Verenigd Koninkrijk, Ierland, Duitsland, Zwitserland, Oostenrijk, Italië, Frankrijk, Portugal en Spanje. Op 21 juli maakte Tesla Europe bekend dat hij nu in heel Europa beschikbaar is, dus ook in Nederland en België.</p><h2>Zo gebruik je hem</h2><p>Je start Grok door 'Hey Grok' te zeggen of via de spraakknop. Je kunt gewoon praten, zoals met een chatbot op je telefoon, in plaats van vaste spraakopdrachten te gebruiken.</p><h2>Wat hij kan</h2><ul><li><strong>Navigatie:</strong> een bestemming instellen door die te omschrijven, en herinneringen op basis van je locatie.</li><li><strong>Bellen en muziek:</strong> iemand bellen, en muziek zoeken en afspelen.</li><li><strong>Klimaat:</strong> de verwarming en airco bijstellen.</li><li><strong>Kleine autofuncties:</strong> bijvoorbeeld het dashboardkastje openen.</li><li><strong>Instructieboekje:</strong> vragen over je auto beantwoorden, bijvoorbeeld hoe een functie werkt.</li><li><strong>Algemene vragen:</strong> zoals elke chatbot beantwoordt hij vragen en kun je onderweg een gesprek voeren.</li></ul><p>De zomerupdate bracht ook slimmere navigatie: voorgestelde routes naar plekken waar je vaak komt, en een voorkeur voor routes die je eerder hebt gereden.</p><h2>Wat hij (nog) niet kan</h2><p>Grok bedient nog maar een korte lijst autofuncties. Hij rijdt de auto niet en heeft niets te maken met Full Self-Driving, dat is een apart systeem. Recensenten wezen er ook op dat zijn vaardigheden rond de auto bescheiden zijn vergeleken met sommige concurrenten, zoals de assistent van Rivian.</p><h2>Privacy</h2><p>Grok verwerkt je vragen in de cloud, via xAI. Ben je voorzichtig met wat je deelt, houd daar dan rekening mee en controleer de privacyinstellingen in je auto en je Tesla-account.</p><h2>Waarom dit ertoe doet</h2><p>Grok is de meest zichtbare verbinding tussen Tesla en de andere bedrijven van Musk, en een teken van waar Tesla's software naartoe gaat: een auto waarmee je praat, die zichzelf uitlegt en steeds meer kleine taken overneemt.</p><p><em>Tip: Grok spreekt ook Nederlands, maar de beste resultaten krijg je met korte, duidelijke vragen.</em></p>"
- },
- "image": "topics/grok-1.jpg",
- "images": [
-  "grok-1.jpg",
-  "grok-3.jpg"
- ],
- "label": {
-  "style": "k",
-  "pos": "bl",
-  "rot": 0,
+  "slug": "grok-in-tesla-what-it-can-do-europe",
+  "date": "2026-10-21",
+  "time": "16:25",
+  "category": "xai",
+  "sources": [
+    {
+      "title": "autoevolution — Grok available Europe-wide on Tesla EVs with the Summer Update",
+      "url": "https://www.autoevolution.com/news/slightly-more-helpful-grok-available-euro-wide-on-tesla-evs-with-the-upcoming-2026-summer-update-273170.html"
+    },
+    {
+      "title": "Not a Tesla App — Update 2026.38 release notes",
+      "url": "https://notateslaapp.com/software-updates/version/2026.38/release-notes"
+    }
+  ],
   "en": {
-   "sub": "IN YOUR TESLA",
-   "text": "WHAT CAN GROK DO?"
+    "title": "Grok in your Tesla: what the AI assistant can do now, and what it can't",
+    "description": "Grok is available in Teslas across Europe and has dropped its beta label. Here is what you can ask it, which car functions it controls and where its limits are.",
+    "body": "<p>Grok, the AI assistant from Elon Musk's xAI, has become a standard part of the Tesla software. Since July 2026 it has been available across Europe, and with update 2026.38 at the end of September it lost its beta label. Time for a practical look at what it actually does.</p><h2>Where it is available</h2><p>Until July, Grok worked in Teslas in only nine European countries: the UK, Ireland, Germany, Switzerland, Austria, Italy, France, Portugal and Spain. On July 21, Tesla Europe announced that it is now available in all of Europe, which includes the Netherlands and Belgium.</p><h2>How you use it</h2><p>You start Grok by saying 'Hey Grok' or through the voice button. You can talk to it naturally, as you would with a chatbot on your phone, rather than using fixed voice commands.</p><h2>What it can do</h2><ul><li><strong>Navigation:</strong> set a destination by describing it, and get location-based reminders.</li><li><strong>Calls and music:</strong> make phone calls, and search for and play music.</li><li><strong>Climate:</strong> adjust heating and air conditioning.</li><li><strong>Small car functions:</strong> for example opening the glovebox.</li><li><strong>Owner's manual:</strong> answer questions about your car, such as how a feature works.</li><li><strong>General questions:</strong> like any chatbot, it can answer questions and keep up a conversation during the drive.</li></ul><p>The summer update also added smarter navigation features: suggested routes to places you visit regularly, and a preference for routes you have driven before.</p><h2>What it can't do</h2><p>Grok's control over the car is still limited to a short list of functions. It does not drive the car and has nothing to do with Full Self-Driving, which is a separate system. Reviewers have also pointed out that its car-related skills are modest compared with some competitors, such as Rivian's assistant.</p><h2>Privacy</h2><p>Grok processes your questions in the cloud, through xAI. If you are cautious about what you share, keep that in mind, and check the privacy settings in your car and Tesla account.</p><h2>Why it matters</h2><p>Grok is the most visible link between Tesla and Musk's other companies, and a sign of where Tesla's software is heading: a car you can talk to, that explains itself and gradually takes over more small tasks.</p>"
   },
   "nl": {
-   "sub": "IN JE TESLA",
-   "text": "WAT KAN GROK?"
+    "title": "Grok in je Tesla: dit kan de AI-assistent nu, en dit (nog) niet",
+    "description": "Grok is in Tesla's in heel Europa beschikbaar en is uit de bèta. Wat je kunt vragen, welke autofuncties het bedient en waar de grenzen liggen.",
+    "body": "<p>Grok, de AI-assistent van Elon Musks bedrijf xAI, is een vast onderdeel van de Tesla-software geworden. Sinds juli 2026 is hij in heel Europa beschikbaar, en met update 2026.38 eind september verdween het label 'bèta'. Tijd voor een praktische blik op wat hij echt doet.</p><h2>Waar hij beschikbaar is</h2><p>Tot juli werkte Grok in Tesla's in slechts negen Europese landen: het Verenigd Koninkrijk, Ierland, Duitsland, Zwitserland, Oostenrijk, Italië, Frankrijk, Portugal en Spanje. Op 21 juli maakte Tesla Europe bekend dat hij nu in heel Europa beschikbaar is, dus ook in Nederland en België.</p><h2>Zo gebruik je hem</h2><p>Je start Grok door 'Hey Grok' te zeggen of via de spraakknop. Je kunt gewoon praten, zoals met een chatbot op je telefoon, in plaats van vaste spraakopdrachten te gebruiken.</p><h2>Wat hij kan</h2><ul><li><strong>Navigatie:</strong> een bestemming instellen door die te omschrijven, en herinneringen op basis van je locatie.</li><li><strong>Bellen en muziek:</strong> iemand bellen, en muziek zoeken en afspelen.</li><li><strong>Klimaat:</strong> de verwarming en airco bijstellen.</li><li><strong>Kleine autofuncties:</strong> bijvoorbeeld het dashboardkastje openen.</li><li><strong>Instructieboekje:</strong> vragen over je auto beantwoorden, bijvoorbeeld hoe een functie werkt.</li><li><strong>Algemene vragen:</strong> zoals elke chatbot beantwoordt hij vragen en kun je onderweg een gesprek voeren.</li></ul><p>De zomerupdate bracht ook slimmere navigatie: voorgestelde routes naar plekken waar je vaak komt, en een voorkeur voor routes die je eerder hebt gereden.</p><h2>Wat hij (nog) niet kan</h2><p>Grok bedient nog maar een korte lijst autofuncties. Hij rijdt de auto niet en heeft niets te maken met Full Self-Driving, dat is een apart systeem. Recensenten wezen er ook op dat zijn vaardigheden rond de auto bescheiden zijn vergeleken met sommige concurrenten, zoals de assistent van Rivian.</p><h2>Privacy</h2><p>Grok verwerkt je vragen in de cloud, via xAI. Ben je voorzichtig met wat je deelt, houd daar dan rekening mee en controleer de privacyinstellingen in je auto en je Tesla-account.</p><h2>Waarom dit ertoe doet</h2><p>Grok is de meest zichtbare verbinding tussen Tesla en de andere bedrijven van Musk, en een teken van waar Tesla's software naartoe gaat: een auto waarmee je praat, die zichzelf uitlegt en steeds meer kleine taken overneemt.</p><p><em>Tip: Grok spreekt ook Nederlands, maar de beste resultaten krijg je met korte, duidelijke vragen.</em></p>"
+  },
+  "image": "topics/grok-1.jpg",
+  "images": [
+    "grok-1.jpg",
+    "grok-3.jpg"
+  ],
+  "label": {
+    "style": "k",
+    "en": {
+      "sub": "IN YOUR TESLA",
+      "text": "WHAT CAN GROK DO?"
+    },
+    "nl": {
+      "sub": "IN JE TESLA",
+      "text": "WAT KAN GROK?"
+    }
   }
- }
 }

@@ -1,44 +1,42 @@
 {
- "slug": "fsd-supervised-czechia-how-eu-approval-works",
- "date": "2026-09-22",
- "time": "08:00",
- "category": "fsd",
- "sources": [
-  {
-   "title": "Electrive — Tesla FSD (Supervised) approved in Czechia",
-   "url": "https://www.electrive.com/2026/09/22/tesla-full-self-driving-approved-in-czechia/"
-  },
-  {
-   "title": "Drive Tesla Canada — Tesla FSD approved in seventh European country",
-   "url": "https://driveteslacanada.ca/news/tesla-fsd-supervised-approved-czechia/"
-  }
- ],
- "en": {
-  "title": "Czechia becomes seventh EU country to allow Tesla FSD, with an EU-wide vote in sight",
-  "description": "The Czech transport ministry has recognized the Dutch approval of FSD (Supervised). An EU-wide vote could follow, but it needs a large qualified majority.",
-  "body": "<p>Czechia has become the seventh European Union country to allow Tesla's Full Self-Driving (Supervised). The Czech decision was taken on September 21.</p><h2>How the Czech decision was made</h2><p>Czechia formally recognized the provisional approval issued by the Dutch vehicle authority RDW. The Czech Ministry of Transport reviewed the system and its EU approval documents, and consulted both EU bodies and Tesla before deciding. The minister said the country wants conditions that support the gradual introduction of the technology while keeping safety standards and oversight in place.</p><h2>The legal route</h2><p>The RDW's approval is based on Article 39 of EU Regulation 2018/858. That article lets a national authority grant a provisional EU type approval for new technology that existing rules do not fully cover. Other member states can then recognize it on their territory, which is what Czechia, Slovenia, Belgium, Denmark, Estonia and Lithuania have done.</p><h2>The EU-wide vote</h2><p>A separate EU-wide decision could come through the committee where member states vote on vehicle rules, possibly as early as October 6. The bar is high: at least 15 of the 27 member states must agree, and together they must represent at least 65% of the EU population. That means the larger countries carry a lot of weight.</p><h2>For drivers</h2><p>FSD (Supervised) remains a Level 2 driver-assistance system. The driver must always be ready to take control, and hands-off, eyes-off driving is not permitted.</p><h2>What to watch</h2><p>If the EU vote passes, FSD (Supervised) could be allowed across the whole union at once, including big markets like Germany and France. If it fails or slips, the country-by-country route continues.</p>"
- },
- "nl": {
-  "title": "Tsjechië is het zevende EU-land dat Tesla FSD toestaat, en een EU-stemming komt in zicht",
-  "description": "Het Tsjechische ministerie van Transport heeft de Nederlandse goedkeuring van FSD (Supervised) erkend. Een stemming voor de hele EU kan volgen, maar daarvoor is een grote gekwalificeerde meerderheid nodig.",
-  "body": "<p>Tsjechië is het zevende land in de Europese Unie dat Tesla's Full Self-Driving (Supervised) toestaat. Het Tsjechische besluit viel op 21 september.</p><h2>Zo kwam het Tsjechische besluit tot stand</h2><p>Tsjechië heeft de voorlopige goedkeuring van de RDW formeel erkend. Het Tsjechische ministerie van Transport beoordeelde het systeem en de Europese goedkeuringsdocumenten, en overlegde met Europese instanties en met Tesla voordat het besloot. De minister zei dat het land voorwaarden wil scheppen voor een geleidelijke invoering van de technologie, met behoud van veiligheidsnormen en toezicht.</p><h2>De juridische route</h2><p>De goedkeuring van de RDW is gebaseerd op artikel 39 van EU-verordening 2018/858. Dat artikel laat een nationale instantie een voorlopige Europese typegoedkeuring verlenen voor nieuwe technologie die nog niet volledig door de bestaande regels wordt gedekt. Andere lidstaten kunnen die vervolgens op hun grondgebied erkennen. Dat hebben Tsjechië, Slovenië, België, Denemarken, Estland en Litouwen gedaan.</p><h2>De stemming voor de hele EU</h2><p>Een apart besluit voor de hele EU kan komen via het comité waarin lidstaten over voertuigregels stemmen, mogelijk al op 6 oktober. De lat ligt hoog: minstens 15 van de 27 lidstaten moeten instemmen, en samen moeten ze minstens 65% van de EU-bevolking vertegenwoordigen. Grote landen wegen dus zwaar.</p><h2>Voor bestuurders</h2><p>FSD (Supervised) blijft een rijhulpsysteem van niveau 2. De bestuurder moet altijd klaar zijn om het over te nemen, en rijden zonder handen en zonder op te letten is niet toegestaan.</p><h2>Waar je op moet letten</h2><p>Als de Europese stemming slaagt, kan FSD (Supervised) in één keer in de hele unie worden toegestaan, inclusief grote markten als Duitsland en Frankrijk. Mislukt de stemming of schuift die op, dan gaat de route land voor land verder.</p>"
- },
- "image": "topics/fsd-czechia.jpg",
- "images": [
-  "fsd-czechia.jpg",
-  "fsd-4.jpg"
- ],
- "label": {
-  "style": "k",
-  "pos": "tl",
-  "rot": 0,
+  "slug": "fsd-supervised-czechia-how-eu-approval-works",
+  "date": "2026-09-22",
+  "time": "08:00",
+  "category": "fsd",
+  "sources": [
+    {
+      "title": "Electrive — Tesla FSD (Supervised) approved in Czechia",
+      "url": "https://www.electrive.com/2026/09/22/tesla-full-self-driving-approved-in-czechia/"
+    },
+    {
+      "title": "Drive Tesla Canada — Tesla FSD approved in seventh European country",
+      "url": "https://driveteslacanada.ca/news/tesla-fsd-supervised-approved-czechia/"
+    }
+  ],
   "en": {
-   "sub": "7TH COUNTRY",
-   "text": "CZECHIA, THEN ALL EU?"
+    "title": "Czechia becomes seventh EU country to allow Tesla FSD, with an EU-wide vote in sight",
+    "description": "The Czech transport ministry has recognized the Dutch approval of FSD (Supervised). An EU-wide vote could follow, but it needs a large qualified majority.",
+    "body": "<p>Czechia has become the seventh European Union country to allow Tesla's Full Self-Driving (Supervised). The Czech decision was taken on September 21.</p><h2>How the Czech decision was made</h2><p>Czechia formally recognized the provisional approval issued by the Dutch vehicle authority RDW. The Czech Ministry of Transport reviewed the system and its EU approval documents, and consulted both EU bodies and Tesla before deciding. The minister said the country wants conditions that support the gradual introduction of the technology while keeping safety standards and oversight in place.</p><h2>The legal route</h2><p>The RDW's approval is based on Article 39 of EU Regulation 2018/858. That article lets a national authority grant a provisional EU type approval for new technology that existing rules do not fully cover. Other member states can then recognize it on their territory, which is what Czechia, Slovenia, Belgium, Denmark, Estonia and Lithuania have done.</p><h2>The EU-wide vote</h2><p>A separate EU-wide decision could come through the committee where member states vote on vehicle rules, possibly as early as October 6. The bar is high: at least 15 of the 27 member states must agree, and together they must represent at least 65% of the EU population. That means the larger countries carry a lot of weight.</p><h2>For drivers</h2><p>FSD (Supervised) remains a Level 2 driver-assistance system. The driver must always be ready to take control, and hands-off, eyes-off driving is not permitted.</p><h2>What to watch</h2><p>If the EU vote passes, FSD (Supervised) could be allowed across the whole union at once, including big markets like Germany and France. If it fails or slips, the country-by-country route continues.</p>"
   },
   "nl": {
-   "sub": "7E LAND",
-   "text": "TSJECHIË, DAN HELE EU?"
+    "title": "Tsjechië is het zevende EU-land dat Tesla FSD toestaat, en een EU-stemming komt in zicht",
+    "description": "Het Tsjechische ministerie van Transport heeft de Nederlandse goedkeuring van FSD (Supervised) erkend. Een stemming voor de hele EU kan volgen, maar daarvoor is een grote gekwalificeerde meerderheid nodig.",
+    "body": "<p>Tsjechië is het zevende land in de Europese Unie dat Tesla's Full Self-Driving (Supervised) toestaat. Het Tsjechische besluit viel op 21 september.</p><h2>Zo kwam het Tsjechische besluit tot stand</h2><p>Tsjechië heeft de voorlopige goedkeuring van de RDW formeel erkend. Het Tsjechische ministerie van Transport beoordeelde het systeem en de Europese goedkeuringsdocumenten, en overlegde met Europese instanties en met Tesla voordat het besloot. De minister zei dat het land voorwaarden wil scheppen voor een geleidelijke invoering van de technologie, met behoud van veiligheidsnormen en toezicht.</p><h2>De juridische route</h2><p>De goedkeuring van de RDW is gebaseerd op artikel 39 van EU-verordening 2018/858. Dat artikel laat een nationale instantie een voorlopige Europese typegoedkeuring verlenen voor nieuwe technologie die nog niet volledig door de bestaande regels wordt gedekt. Andere lidstaten kunnen die vervolgens op hun grondgebied erkennen. Dat hebben Tsjechië, Slovenië, België, Denemarken, Estland en Litouwen gedaan.</p><h2>De stemming voor de hele EU</h2><p>Een apart besluit voor de hele EU kan komen via het comité waarin lidstaten over voertuigregels stemmen, mogelijk al op 6 oktober. De lat ligt hoog: minstens 15 van de 27 lidstaten moeten instemmen, en samen moeten ze minstens 65% van de EU-bevolking vertegenwoordigen. Grote landen wegen dus zwaar.</p><h2>Voor bestuurders</h2><p>FSD (Supervised) blijft een rijhulpsysteem van niveau 2. De bestuurder moet altijd klaar zijn om het over te nemen, en rijden zonder handen en zonder op te letten is niet toegestaan.</p><h2>Waar je op moet letten</h2><p>Als de Europese stemming slaagt, kan FSD (Supervised) in één keer in de hele unie worden toegestaan, inclusief grote markten als Duitsland en Frankrijk. Mislukt de stemming of schuift die op, dan gaat de route land voor land verder.</p>"
+  },
+  "image": "topics/fsd-czechia.jpg",
+  "images": [
+    "fsd-czechia.jpg",
+    "fsd-4.jpg"
+  ],
+  "label": {
+    "style": "k",
+    "en": {
+      "sub": "7TH COUNTRY",
+      "text": "CZECHIA, THEN ALL EU?"
+    },
+    "nl": {
+      "sub": "7E LAND",
+      "text": "TSJECHIË, DAN HELE EU?"
+    }
   }
- }
 }

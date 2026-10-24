@@ -1,39 +1,37 @@
 {
- "slug": "terafab-explained-tesla-spacex-chip-factory",
- "date": "2026-10-21",
- "time": "16:30",
- "category": "spacex",
- "sources": [
-  {
-   "title": "Reuters via Hawaii Tribune-Herald — SpaceX and Tesla to build two chip fabs in Austin",
-   "url": "https://www.hawaiitribune-herald.com/?p=359017"
-  },
-  {
-   "title": "AI Business — SpaceX and Tesla to spend $16.8B on Terafab chip factory in Texas",
-   "url": "https://aibusiness.com/data-centers/tesla-spacex-spend-16-8b-terafab-chip-factory-texas"
-  }
- ],
- "en": {
-  "title": "Terafab explained: why Tesla and SpaceX want to build their own chip factory",
-  "description": "Terafab is a planned chip complex in Texas, shared by Tesla and SpaceX, with an initial $16.8 billion budget. Here is what it should make, why Musk says he needs it, and the risks.",
-  "body": "<p>When Elon Musk talks about why Tesla and SpaceX belong together, one word keeps coming back: Terafab. It is a planned chip manufacturing complex in Texas, shared by both companies, and it has become central to the case for a possible merger. Here is what we know.</p><h2>What Terafab is</h2><p>Musk first presented Terafab in Austin in March 2026, describing it as two factories, each making a single chip design:</p><ul><li><strong>Chip one:</strong> for Tesla's cars and Optimus robots, including the driverless Cybercab.</li><li><strong>Chip two:</strong> a high-power chip for SpaceX's planned AI data centers in space, designed to cope with higher temperatures and harsher conditions.</li></ul><h2>The money and the location</h2><p>In August, SpaceX and Tesla announced an initial investment of $16.8 billion for a complex in Grimes County, Texas, northwest of Houston. The plans include more than 100 million square feet of manufacturing space, for developing, packaging and testing advanced logic and memory chips. Water will come from a local reservoir rather than groundwater. Intel is expected to play a role, but the details have not been shared. How the cost is split between Tesla and SpaceX has not been disclosed.</p><h2>Why Musk says he needs it</h2><p>Musk's argument is about supply. He expects the combined chip demand of his companies to exceed one terawatt of computing capacity a year, more than the world can currently produce. 'We either build the Terafab or we don't have the chips,' he said in March. Existing suppliers such as Samsung, TSMC and Micron will keep supplying in the meantime.</p><h2>The risks</h2><ul><li><strong>No timeline:</strong> no completion date has been given.</li><li><strong>Hard industry:</strong> advanced chip factories are among the most complex and expensive projects in the world, and even experienced chipmakers struggle with delays.</li><li><strong>Track record:</strong> as Reuters noted, several of Musk's ambitious projects have slipped or been abandoned.</li><li><strong>Cost:</strong> Tesla is already spending more than $25 billion on capital projects this year.</li></ul><h2>Why it matters for Tesla</h2><p>Self-driving cars and humanoid robots run on powerful AI chips. Owning chip production would give Tesla more control over cost and supply, but it also ties Tesla more closely to SpaceX. That is exactly why Terafab features so prominently in the merger discussions that both companies' special committees are now studying.</p><p><em>This article is for information only and is not financial advice.</em></p>"
- },
- "nl": {
-  "title": "Terafab uitgelegd: waarom Tesla en SpaceX hun eigen chipfabriek willen bouwen",
-  "description": "Terafab is een gepland chipcomplex in Texas van Tesla en SpaceX samen, met een startbudget van $16,8 miljard. Wat het moet maken, waarom Musk zegt dat hij het nodig heeft, en de risico's.",
-  "body": "<p>Als Elon Musk uitlegt waarom Tesla en SpaceX bij elkaar horen, valt steeds één woord: Terafab. Het is een gepland complex voor de productie van chips in Texas, van beide bedrijven samen, en het is een kernpunt geworden in het verhaal over een mogelijke fusie. Dit is wat we weten.</p><h2>Wat Terafab is</h2><p>Musk presenteerde Terafab voor het eerst in maart 2026 in Austin, als twee fabrieken die elk één chipontwerp maken:</p><ul><li><strong>Chip één:</strong> voor Tesla's auto's en Optimus-robots, inclusief de Cybercab zonder bestuurder.</li><li><strong>Chip twee:</strong> een krachtige chip voor de AI-datacenters die SpaceX in de ruimte wil bouwen, ontworpen voor hogere temperaturen en zwaardere omstandigheden.</li></ul><h2>Het geld en de locatie</h2><p>In augustus maakten SpaceX en Tesla een eerste investering van $16,8 miljard bekend voor een complex in Grimes County, Texas, ten noordwesten van Houston. De plannen omvatten meer dan 9 miljoen vierkante meter productieruimte, voor het ontwikkelen, verpakken en testen van geavanceerde logica- en geheugenchips. Het water komt uit een lokaal stuwmeer in plaats van uit grondwater. Intel krijgt naar verwachting een rol, maar de details zijn niet bekend. Hoe de kosten tussen Tesla en SpaceX worden verdeeld, is evenmin bekendgemaakt.</p><h2>Waarom Musk zegt dat hij het nodig heeft</h2><p>Musks argument draait om aanbod. Hij verwacht dat de gezamenlijke chipvraag van zijn bedrijven uitkomt boven een terawatt aan rekenkracht per jaar, meer dan de wereld nu kan produceren. 'Of we bouwen Terafab, of we hebben de chips niet,' zei hij in maart. Bestaande leveranciers als Samsung, TSMC en Micron blijven intussen gewoon leveren.</p><h2>De risico's</h2><ul><li><strong>Geen planning:</strong> er is geen opleverdatum genoemd.</li><li><strong>Lastige industrie:</strong> geavanceerde chipfabrieken behoren tot de ingewikkeldste en duurste projecten ter wereld, en zelfs ervaren chipmakers kampen met vertraging.</li><li><strong>Eerdere ervaringen:</strong> zoals persbureau Reuters opmerkte, liepen meerdere ambitieuze projecten van Musk vertraging op of werden ze afgeblazen.</li><li><strong>Kosten:</strong> Tesla investeert dit jaar al meer dan $25 miljard in projecten.</li></ul><h2>Waarom dit ertoe doet voor Tesla</h2><p>Zelfrijdende auto's en humanoïde robots draaien op krachtige AI-chips. Eigen chipproductie geeft Tesla meer grip op kosten en aanbod, maar bindt het bedrijf ook nauwer aan SpaceX. Precies daarom speelt Terafab zo'n grote rol in de fusiegesprekken die de speciale commissies van beide bedrijven nu onderzoeken.</p><p><em>Dit artikel is alleen bedoeld als informatie en is geen financieel advies.</em></p>"
- },
- "label": {
-  "style": "n",
-  "pos": "bl",
-  "rot": 0,
+  "slug": "terafab-explained-tesla-spacex-chip-factory",
+  "date": "2026-10-21",
+  "time": "16:30",
+  "category": "spacex",
+  "sources": [
+    {
+      "title": "Reuters via Hawaii Tribune-Herald — SpaceX and Tesla to build two chip fabs in Austin",
+      "url": "https://www.hawaiitribune-herald.com/?p=359017"
+    },
+    {
+      "title": "AI Business — SpaceX and Tesla to spend $16.8B on Terafab chip factory in Texas",
+      "url": "https://aibusiness.com/data-centers/tesla-spacex-spend-16-8b-terafab-chip-factory-texas"
+    }
+  ],
   "en": {
-   "text": "$16.8B",
-   "sub": "OWN CHIP FACTORY"
+    "title": "Terafab explained: why Tesla and SpaceX want to build their own chip factory",
+    "description": "Terafab is a planned chip complex in Texas, shared by Tesla and SpaceX, with an initial $16.8 billion budget. Here is what it should make, why Musk says he needs it, and the risks.",
+    "body": "<p>When Elon Musk talks about why Tesla and SpaceX belong together, one word keeps coming back: Terafab. It is a planned chip manufacturing complex in Texas, shared by both companies, and it has become central to the case for a possible merger. Here is what we know.</p><h2>What Terafab is</h2><p>Musk first presented Terafab in Austin in March 2026, describing it as two factories, each making a single chip design:</p><ul><li><strong>Chip one:</strong> for Tesla's cars and Optimus robots, including the driverless Cybercab.</li><li><strong>Chip two:</strong> a high-power chip for SpaceX's planned AI data centers in space, designed to cope with higher temperatures and harsher conditions.</li></ul><h2>The money and the location</h2><p>In August, SpaceX and Tesla announced an initial investment of $16.8 billion for a complex in Grimes County, Texas, northwest of Houston. The plans include more than 100 million square feet of manufacturing space, for developing, packaging and testing advanced logic and memory chips. Water will come from a local reservoir rather than groundwater. Intel is expected to play a role, but the details have not been shared. How the cost is split between Tesla and SpaceX has not been disclosed.</p><h2>Why Musk says he needs it</h2><p>Musk's argument is about supply. He expects the combined chip demand of his companies to exceed one terawatt of computing capacity a year, more than the world can currently produce. 'We either build the Terafab or we don't have the chips,' he said in March. Existing suppliers such as Samsung, TSMC and Micron will keep supplying in the meantime.</p><h2>The risks</h2><ul><li><strong>No timeline:</strong> no completion date has been given.</li><li><strong>Hard industry:</strong> advanced chip factories are among the most complex and expensive projects in the world, and even experienced chipmakers struggle with delays.</li><li><strong>Track record:</strong> as Reuters noted, several of Musk's ambitious projects have slipped or been abandoned.</li><li><strong>Cost:</strong> Tesla is already spending more than $25 billion on capital projects this year.</li></ul><h2>Why it matters for Tesla</h2><p>Self-driving cars and humanoid robots run on powerful AI chips. Owning chip production would give Tesla more control over cost and supply, but it also ties Tesla more closely to SpaceX. That is exactly why Terafab features so prominently in the merger discussions that both companies' special committees are now studying.</p><p><em>This article is for information only and is not financial advice.</em></p>"
   },
   "nl": {
-   "text": "$16,8 mld",
-   "sub": "EIGEN CHIPFABRIEK"
+    "title": "Terafab uitgelegd: waarom Tesla en SpaceX hun eigen chipfabriek willen bouwen",
+    "description": "Terafab is een gepland chipcomplex in Texas van Tesla en SpaceX samen, met een startbudget van $16,8 miljard. Wat het moet maken, waarom Musk zegt dat hij het nodig heeft, en de risico's.",
+    "body": "<p>Als Elon Musk uitlegt waarom Tesla en SpaceX bij elkaar horen, valt steeds één woord: Terafab. Het is een gepland complex voor de productie van chips in Texas, van beide bedrijven samen, en het is een kernpunt geworden in het verhaal over een mogelijke fusie. Dit is wat we weten.</p><h2>Wat Terafab is</h2><p>Musk presenteerde Terafab voor het eerst in maart 2026 in Austin, als twee fabrieken die elk één chipontwerp maken:</p><ul><li><strong>Chip één:</strong> voor Tesla's auto's en Optimus-robots, inclusief de Cybercab zonder bestuurder.</li><li><strong>Chip twee:</strong> een krachtige chip voor de AI-datacenters die SpaceX in de ruimte wil bouwen, ontworpen voor hogere temperaturen en zwaardere omstandigheden.</li></ul><h2>Het geld en de locatie</h2><p>In augustus maakten SpaceX en Tesla een eerste investering van $16,8 miljard bekend voor een complex in Grimes County, Texas, ten noordwesten van Houston. De plannen omvatten meer dan 9 miljoen vierkante meter productieruimte, voor het ontwikkelen, verpakken en testen van geavanceerde logica- en geheugenchips. Het water komt uit een lokaal stuwmeer in plaats van uit grondwater. Intel krijgt naar verwachting een rol, maar de details zijn niet bekend. Hoe de kosten tussen Tesla en SpaceX worden verdeeld, is evenmin bekendgemaakt.</p><h2>Waarom Musk zegt dat hij het nodig heeft</h2><p>Musks argument draait om aanbod. Hij verwacht dat de gezamenlijke chipvraag van zijn bedrijven uitkomt boven een terawatt aan rekenkracht per jaar, meer dan de wereld nu kan produceren. 'Of we bouwen Terafab, of we hebben de chips niet,' zei hij in maart. Bestaande leveranciers als Samsung, TSMC en Micron blijven intussen gewoon leveren.</p><h2>De risico's</h2><ul><li><strong>Geen planning:</strong> er is geen opleverdatum genoemd.</li><li><strong>Lastige industrie:</strong> geavanceerde chipfabrieken behoren tot de ingewikkeldste en duurste projecten ter wereld, en zelfs ervaren chipmakers kampen met vertraging.</li><li><strong>Eerdere ervaringen:</strong> zoals persbureau Reuters opmerkte, liepen meerdere ambitieuze projecten van Musk vertraging op of werden ze afgeblazen.</li><li><strong>Kosten:</strong> Tesla investeert dit jaar al meer dan $25 miljard in projecten.</li></ul><h2>Waarom dit ertoe doet voor Tesla</h2><p>Zelfrijdende auto's en humanoïde robots draaien op krachtige AI-chips. Eigen chipproductie geeft Tesla meer grip op kosten en aanbod, maar bindt het bedrijf ook nauwer aan SpaceX. Precies daarom speelt Terafab zo'n grote rol in de fusiegesprekken die de speciale commissies van beide bedrijven nu onderzoeken.</p><p><em>Dit artikel is alleen bedoeld als informatie en is geen financieel advies.</em></p>"
+  },
+  "label": {
+    "style": "n",
+    "en": {
+      "text": "$16.8B",
+      "sub": "OWN CHIP FACTORY"
+    },
+    "nl": {
+      "text": "$16,8 mld",
+      "sub": "EIGEN CHIPFABRIEK"
+    }
   }
- }
 }

@@ -1,42 +1,40 @@
 {
- "slug": "tesla-megapack-3-production-starts-brookshire-texas",
- "date": "2026-08-06",
- "time": "14:40",
- "category": "factories",
- "sources": [
-  {
-   "title": "SMM — Tesla starts Megapack 3 production in Texas",
-   "url": "https://news.metal.com/en/newscontent/104046720-tesla-starts-megapack-3-production-in-texas"
-  },
-  {
-   "title": "Fox 26 Houston — Tesla begins hiring for new Megafactory near Houston",
-   "url": "https://www.fox26houston.com/news/tesla-begins-hiring-new-200-million-megafactory-near-houston"
-  }
- ],
- "en": {
-  "title": "First Megapack 3 rolls off the line at Tesla's new Texas Megafactory",
-  "description": "Tesla has started production of the Megapack 3 in Brookshire, near Houston, in a factory designed for 50 GWh a year. Here is what is new about the battery and why it matters.",
-  "body": "<p>Tesla Energy has a second big battery factory in the United States. The first Megapack 3 has rolled off the line at the new Megafactory in Brookshire, Texas, west of Houston, marking the start of production.</p><h2>The factory</h2><ul><li><strong>Location:</strong> Brookshire, Texas, near Houston.</li><li><strong>Capacity:</strong> designed for 50 GWh of storage a year once fully ramped.</li><li><strong>Product:</strong> Megapack 3, Tesla's newest utility-scale battery.</li></ul><p>For comparison, Tesla deployed 46.7 GWh of storage across all its products in all of 2025. One factory of this size alone could produce more than that each year.</p><h2>What is new in Megapack 3</h2><ul><li><strong>About 5 MWh</strong> of energy per unit.</li><li><strong>New cells:</strong> a large-format LFP cell, a chemistry that is cheaper and longer-lasting than the nickel-based cells in many cars.</li><li><strong>Simpler cooling:</strong> the thermal system has 78% fewer connections than the previous generation, which means fewer parts that can leak or fail.</li></ul><h2>Where the cells come from</h2><p>Tesla sources cells from the US, Southeast Asia and China. CATL is reported to be its biggest supplier for storage, with BYD and EVE Energy also in the mix. Tesla is building more US supply through its own LFP line in Nevada and a planned deal with LG Energy Solution. Reducing dependence on Chinese cells matters because of US tariffs and incentive rules.</p><h2>Why it matters</h2><p>Energy storage is Tesla's fastest-growing business and one of its most profitable. Utilities and data centers need large batteries to balance solar and wind power and to handle peaks in demand. A US factory close to the Texas grid, one of the fastest-growing storage markets in the world, shortens delivery times and helps customers qualify for local-content incentives.</p><h2>What to watch</h2><p>How quickly Brookshire ramps up, the first customer projects with Megapack 3, and whether storage deployments return to growth after a softer third quarter.</p>"
- },
- "nl": {
-  "title": "Eerste Megapack 3 rolt van de band in Tesla's nieuwe Megafactory in Texas",
-  "description": "Tesla is in Brookshire bij Houston begonnen met de productie van de Megapack 3, in een fabriek die is ontworpen voor 50 GWh per jaar. Wat er nieuw is aan de accu, en waarom het ertoe doet.",
-  "body": "<p>Tesla Energy heeft een tweede grote accufabriek in de Verenigde Staten. De eerste Megapack 3 is van de band gerold in de nieuwe Megafactory in Brookshire, Texas, ten westen van Houston. Daarmee is de productie begonnen.</p><h2>De fabriek</h2><ul><li><strong>Locatie:</strong> Brookshire, Texas, bij Houston.</li><li><strong>Capaciteit:</strong> ontworpen voor 50 GWh opslag per jaar als hij volledig draait.</li><li><strong>Product:</strong> de Megapack 3, Tesla's nieuwste accu voor energiebedrijven.</li></ul><p>Ter vergelijking: Tesla leverde in heel 2025 met al zijn producten samen 46,7 GWh aan opslag. Eén fabriek van deze omvang kan daar in zijn eentje elk jaar overheen gaan.</p><h2>Wat er nieuw is aan de Megapack 3</h2><ul><li><strong>Ongeveer 5 MWh</strong> energie per unit.</li><li><strong>Nieuwe cellen:</strong> een grote LFP-cel, een chemie die goedkoper is en langer meegaat dan de nikkelcellen in veel auto's.</li><li><strong>Eenvoudiger koeling:</strong> het koelsysteem heeft 78% minder verbindingen dan de vorige generatie, dus minder onderdelen die kunnen lekken of falen.</li></ul><h2>Waar de cellen vandaan komen</h2><p>Tesla koopt cellen in de VS, Zuidoost-Azië en China. CATL is volgens berichten de grootste leverancier voor opslag, met BYD en EVE Energy als andere leveranciers. Tesla bouwt meer Amerikaanse aanvoer op met een eigen LFP-lijn in Nevada en een geplande deal met LG Energy Solution. Minder afhankelijk zijn van Chinese cellen is belangrijk vanwege Amerikaanse importheffingen en subsidieregels.</p><h2>Waarom dit ertoe doet</h2><p>Energieopslag is Tesla's snelst groeiende tak en een van de winstgevendste. Energiebedrijven en datacenters hebben grote accu's nodig om zon- en windstroom op te vangen en pieken in de vraag op te vangen. Een Amerikaanse fabriek dicht bij het stroomnet van Texas, een van de snelst groeiende opslagmarkten ter wereld, verkort levertijden en helpt klanten in aanmerking te komen voor subsidies op lokale productie.</p><h2>Waar je op moet letten</h2><p>Hoe snel Brookshire opschaalt, de eerste klantprojecten met de Megapack 3, en of de opslagleveringen weer groeien na een zwakker derde kwartaal.</p>"
- },
- "image": "topics/megapack-3.jpg",
- "images": [
-  "megapack-3.jpg",
-  "gigafactory-4.jpg"
- ],
- "label": {
-  "style": "s",
-  "pos": "tr",
-  "rot": -3,
+  "slug": "tesla-megapack-3-production-starts-brookshire-texas",
+  "date": "2026-08-06",
+  "time": "14:40",
+  "category": "factories",
+  "sources": [
+    {
+      "title": "SMM — Tesla starts Megapack 3 production in Texas",
+      "url": "https://news.metal.com/en/newscontent/104046720-tesla-starts-megapack-3-production-in-texas"
+    },
+    {
+      "title": "Fox 26 Houston — Tesla begins hiring for new Megafactory near Houston",
+      "url": "https://www.fox26houston.com/news/tesla-begins-hiring-new-200-million-megafactory-near-houston"
+    }
+  ],
   "en": {
-   "text": "MEGAPACK 3 IS HERE!"
+    "title": "First Megapack 3 rolls off the line at Tesla's new Texas Megafactory",
+    "description": "Tesla has started production of the Megapack 3 in Brookshire, near Houston, in a factory designed for 50 GWh a year. Here is what is new about the battery and why it matters.",
+    "body": "<p>Tesla Energy has a second big battery factory in the United States. The first Megapack 3 has rolled off the line at the new Megafactory in Brookshire, Texas, west of Houston, marking the start of production.</p><h2>The factory</h2><ul><li><strong>Location:</strong> Brookshire, Texas, near Houston.</li><li><strong>Capacity:</strong> designed for 50 GWh of storage a year once fully ramped.</li><li><strong>Product:</strong> Megapack 3, Tesla's newest utility-scale battery.</li></ul><p>For comparison, Tesla deployed 46.7 GWh of storage across all its products in all of 2025. One factory of this size alone could produce more than that each year.</p><h2>What is new in Megapack 3</h2><ul><li><strong>About 5 MWh</strong> of energy per unit.</li><li><strong>New cells:</strong> a large-format LFP cell, a chemistry that is cheaper and longer-lasting than the nickel-based cells in many cars.</li><li><strong>Simpler cooling:</strong> the thermal system has 78% fewer connections than the previous generation, which means fewer parts that can leak or fail.</li></ul><h2>Where the cells come from</h2><p>Tesla sources cells from the US, Southeast Asia and China. CATL is reported to be its biggest supplier for storage, with BYD and EVE Energy also in the mix. Tesla is building more US supply through its own LFP line in Nevada and a planned deal with LG Energy Solution. Reducing dependence on Chinese cells matters because of US tariffs and incentive rules.</p><h2>Why it matters</h2><p>Energy storage is Tesla's fastest-growing business and one of its most profitable. Utilities and data centers need large batteries to balance solar and wind power and to handle peaks in demand. A US factory close to the Texas grid, one of the fastest-growing storage markets in the world, shortens delivery times and helps customers qualify for local-content incentives.</p><h2>What to watch</h2><p>How quickly Brookshire ramps up, the first customer projects with Megapack 3, and whether storage deployments return to growth after a softer third quarter.</p>"
   },
   "nl": {
-   "text": "MEGAPACK 3 IS ER!"
+    "title": "Eerste Megapack 3 rolt van de band in Tesla's nieuwe Megafactory in Texas",
+    "description": "Tesla is in Brookshire bij Houston begonnen met de productie van de Megapack 3, in een fabriek die is ontworpen voor 50 GWh per jaar. Wat er nieuw is aan de accu, en waarom het ertoe doet.",
+    "body": "<p>Tesla Energy heeft een tweede grote accufabriek in de Verenigde Staten. De eerste Megapack 3 is van de band gerold in de nieuwe Megafactory in Brookshire, Texas, ten westen van Houston. Daarmee is de productie begonnen.</p><h2>De fabriek</h2><ul><li><strong>Locatie:</strong> Brookshire, Texas, bij Houston.</li><li><strong>Capaciteit:</strong> ontworpen voor 50 GWh opslag per jaar als hij volledig draait.</li><li><strong>Product:</strong> de Megapack 3, Tesla's nieuwste accu voor energiebedrijven.</li></ul><p>Ter vergelijking: Tesla leverde in heel 2025 met al zijn producten samen 46,7 GWh aan opslag. Eén fabriek van deze omvang kan daar in zijn eentje elk jaar overheen gaan.</p><h2>Wat er nieuw is aan de Megapack 3</h2><ul><li><strong>Ongeveer 5 MWh</strong> energie per unit.</li><li><strong>Nieuwe cellen:</strong> een grote LFP-cel, een chemie die goedkoper is en langer meegaat dan de nikkelcellen in veel auto's.</li><li><strong>Eenvoudiger koeling:</strong> het koelsysteem heeft 78% minder verbindingen dan de vorige generatie, dus minder onderdelen die kunnen lekken of falen.</li></ul><h2>Waar de cellen vandaan komen</h2><p>Tesla koopt cellen in de VS, Zuidoost-Azië en China. CATL is volgens berichten de grootste leverancier voor opslag, met BYD en EVE Energy als andere leveranciers. Tesla bouwt meer Amerikaanse aanvoer op met een eigen LFP-lijn in Nevada en een geplande deal met LG Energy Solution. Minder afhankelijk zijn van Chinese cellen is belangrijk vanwege Amerikaanse importheffingen en subsidieregels.</p><h2>Waarom dit ertoe doet</h2><p>Energieopslag is Tesla's snelst groeiende tak en een van de winstgevendste. Energiebedrijven en datacenters hebben grote accu's nodig om zon- en windstroom op te vangen en pieken in de vraag op te vangen. Een Amerikaanse fabriek dicht bij het stroomnet van Texas, een van de snelst groeiende opslagmarkten ter wereld, verkort levertijden en helpt klanten in aanmerking te komen voor subsidies op lokale productie.</p><h2>Waar je op moet letten</h2><p>Hoe snel Brookshire opschaalt, de eerste klantprojecten met de Megapack 3, en of de opslagleveringen weer groeien na een zwakker derde kwartaal.</p>"
+  },
+  "image": "topics/megapack-3.jpg",
+  "images": [
+    "megapack-3.jpg",
+    "gigafactory-4.jpg"
+  ],
+  "label": {
+    "style": "s",
+    "en": {
+      "text": "MEGAPACK 3 IS HERE!"
+    },
+    "nl": {
+      "text": "MEGAPACK 3 IS ER!"
+    }
   }
- }
 }

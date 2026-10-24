@@ -1,41 +1,39 @@
 {
- "slug": "musk-partisan-effect-study-tesla-sales-2026-rebound",
- "date": "2026-10-23",
- "time": "14:56",
- "category": "musk",
- "sources": [
-  {
-   "title": "Carscoops — Economists quantify how many sales Musk's politics cost Tesla",
-   "url": "https://www.carscoops.com/2025/11/yale-economists-quantify-exactly-how-many-sales-musks-politics-cost-tesla/"
-  },
-  {
-   "title": "Reuters via BusinessDay — Tesla Q3 deliveries and outlook",
-   "url": "https://www.businessday.co.za/world/international-companies/2026-10-19-spacex-and-tesla-earnings-stoke-merger-speculation/"
-  }
- ],
- "en": {
-  "title": "Did Musk's politics cost Tesla a million sales? What the study found, and what has changed since",
-  "description": "A widely cited economic study estimated that Elon Musk's political profile cost Tesla more than a million US sales. What it measured, its limits, and how Tesla's sales look in 2026.",
-  "body": "<p>Elon Musk's political activity, from his role in the US government in early 2025 to his public statements, has been blamed for weaker Tesla sales. In late 2025, economists tried to put a number on that. Here is what the research says, and what has happened since.</p><h2>What the study estimated</h2><ul><li><strong>Who:</strong> economists, including researchers at Yale, in a paper published through the National Bureau of Economic Research.</li><li><strong>Period:</strong> October 2022 to April 2025.</li><li><strong>Finding:</strong> Tesla's US sales were an estimated 1 million to 1.26 million vehicles lower than they would otherwise have been, which the authors call a \"partisan effect\". Without it, sales in that period would have been 67% to 83% higher.</li><li><strong>Where buyers went:</strong> some likely bought electric or hybrid cars from other brands instead, whose sales grew faster in that period.</li></ul><h2>How to read it</h2><p>Studies like this compare actual sales with an estimate of what would have happened otherwise, which always involves assumptions. Other factors also hurt Tesla in that period: an ageing model line-up, more competition, price cuts by rivals and changes in subsidies. The study is a serious attempt to separate those effects, but its exact numbers should be read as estimates, not as precise counts. Tesla did not publicly respond, according to the coverage.</p><h2>What has changed since</h2><p>Coverage of the study noted that public sentiment toward Musk improved after he shifted his public focus back to technology such as robotaxis and self-driving. In 2026, Tesla's sales have picked up again: third-quarter deliveries were 486,532, above analysts' expectations, and sales in several European countries rose strongly in September. Tesla also launched cheaper Standard versions of the Model 3 and Model Y. How much of the recovery is due to Musk's lower political profile, and how much to new products and prices, is hard to say.</p><h2>Why it matters</h2><p>For Tesla, Musk is both its biggest marketing asset and a brand risk. Few car companies are so closely tied to one person. That is part of why shareholders watch his public role closely, including at the upcoming meeting on December 3.</p>"
- },
- "nl": {
-  "title": "Kostte de politiek van Musk Tesla een miljoen verkopen? Wat het onderzoek vond, en wat er sindsdien veranderde",
-  "description": "Een veelgeciteerd economisch onderzoek schatte dat het politieke profiel van Elon Musk Tesla meer dan een miljoen verkopen in de VS kostte. Wat er gemeten werd, de beperkingen, en hoe de verkoop er in 2026 voor staat.",
-  "body": "<p>De politieke activiteiten van Elon Musk, van zijn rol in de Amerikaanse regering begin 2025 tot zijn publieke uitspraken, kregen de schuld van zwakkere Tesla-verkopen. Eind 2025 probeerden economen daar een getal op te plakken. Dit zegt het onderzoek, en dit is er sindsdien gebeurd.</p><h2>Wat het onderzoek schatte</h2><ul><li><strong>Wie:</strong> economen, onder wie onderzoekers van Yale, in een paper gepubliceerd via het National Bureau of Economic Research.</li><li><strong>Periode:</strong> oktober 2022 tot april 2025.</li><li><strong>Uitkomst:</strong> Tesla's verkopen in de VS waren naar schatting 1 miljoen tot 1,26 miljoen auto's lager dan anders het geval was geweest, wat de auteurs een \"partijdigheidseffect\" noemen. Zonder dat effect was de verkoop in die periode 67% tot 83% hoger geweest.</li><li><strong>Waar kopers heen gingen:</strong> een deel kocht waarschijnlijk elektrische of hybride auto's van andere merken, waarvan de verkoop in die periode sneller groeide.</li></ul><h2>Hoe je het moet lezen</h2><p>Zulke onderzoeken vergelijken de werkelijke verkoop met een schatting van wat er anders was gebeurd, en daar zitten altijd aannames in. Ook andere factoren drukten Tesla's verkoop in die periode: een verouderend modelaanbod, meer concurrentie, prijsverlagingen bij rivalen en veranderingen in subsidies. Het onderzoek is een serieuze poging om die effecten uit elkaar te halen, maar de precieze getallen zijn schattingen, geen exacte tellingen. Volgens de berichtgeving reageerde Tesla niet publiekelijk.</p><h2>Wat er sindsdien veranderde</h2><p>In de berichtgeving over het onderzoek werd opgemerkt dat de publieke stemming rond Musk verbeterde toen hij zich weer meer op techniek richtte, zoals robotaxi's en zelfrijdende auto's. In 2026 trekt Tesla's verkoop weer aan: in het derde kwartaal werden 486.532 auto's geleverd, meer dan analisten verwachtten, en in verschillende Europese landen steeg de verkoop in september sterk. Tesla bracht ook goedkopere Standard-versies van de Model 3 en Model Y uit. Hoeveel van het herstel komt door Musks lagere politieke profiel, en hoeveel door nieuwe producten en prijzen, is moeilijk te zeggen.</p><h2>Waarom het ertoe doet</h2><p>Voor Tesla is Musk zowel de grootste marketingtroef als een risico voor het merk. Weinig autobedrijven zijn zo nauw verbonden met één persoon. Dat is een van de redenen waarom aandeelhouders zijn publieke rol nauwlettend volgen, ook op de vergadering van 3 december.</p>"
- },
- "images": [
-  "musk-3.jpg",
-  "earnings-6.jpg"
- ],
- "label": {
-  "style": "r",
-  "pos": "bl",
-  "rot": 2,
+  "slug": "musk-partisan-effect-study-tesla-sales-2026-rebound",
+  "date": "2026-10-23",
+  "time": "14:56",
+  "category": "musk",
+  "sources": [
+    {
+      "title": "Carscoops — Economists quantify how many sales Musk's politics cost Tesla",
+      "url": "https://www.carscoops.com/2025/11/yale-economists-quantify-exactly-how-many-sales-musks-politics-cost-tesla/"
+    },
+    {
+      "title": "Reuters via BusinessDay — Tesla Q3 deliveries and outlook",
+      "url": "https://www.businessday.co.za/world/international-companies/2026-10-19-spacex-and-tesla-earnings-stoke-merger-speculation/"
+    }
+  ],
   "en": {
-   "text": "1M SALES LOST TO POLITICS?"
+    "title": "Did Musk's politics cost Tesla a million sales? What the study found, and what has changed since",
+    "description": "A widely cited economic study estimated that Elon Musk's political profile cost Tesla more than a million US sales. What it measured, its limits, and how Tesla's sales look in 2026.",
+    "body": "<p>Elon Musk's political activity, from his role in the US government in early 2025 to his public statements, has been blamed for weaker Tesla sales. In late 2025, economists tried to put a number on that. Here is what the research says, and what has happened since.</p><h2>What the study estimated</h2><ul><li><strong>Who:</strong> economists, including researchers at Yale, in a paper published through the National Bureau of Economic Research.</li><li><strong>Period:</strong> October 2022 to April 2025.</li><li><strong>Finding:</strong> Tesla's US sales were an estimated 1 million to 1.26 million vehicles lower than they would otherwise have been, which the authors call a \"partisan effect\". Without it, sales in that period would have been 67% to 83% higher.</li><li><strong>Where buyers went:</strong> some likely bought electric or hybrid cars from other brands instead, whose sales grew faster in that period.</li></ul><h2>How to read it</h2><p>Studies like this compare actual sales with an estimate of what would have happened otherwise, which always involves assumptions. Other factors also hurt Tesla in that period: an ageing model line-up, more competition, price cuts by rivals and changes in subsidies. The study is a serious attempt to separate those effects, but its exact numbers should be read as estimates, not as precise counts. Tesla did not publicly respond, according to the coverage.</p><h2>What has changed since</h2><p>Coverage of the study noted that public sentiment toward Musk improved after he shifted his public focus back to technology such as robotaxis and self-driving. In 2026, Tesla's sales have picked up again: third-quarter deliveries were 486,532, above analysts' expectations, and sales in several European countries rose strongly in September. Tesla also launched cheaper Standard versions of the Model 3 and Model Y. How much of the recovery is due to Musk's lower political profile, and how much to new products and prices, is hard to say.</p><h2>Why it matters</h2><p>For Tesla, Musk is both its biggest marketing asset and a brand risk. Few car companies are so closely tied to one person. That is part of why shareholders watch his public role closely, including at the upcoming meeting on December 3.</p>"
   },
   "nl": {
-   "text": "POLITIEK KOST 1 MLN AUTO'S?"
+    "title": "Kostte de politiek van Musk Tesla een miljoen verkopen? Wat het onderzoek vond, en wat er sindsdien veranderde",
+    "description": "Een veelgeciteerd economisch onderzoek schatte dat het politieke profiel van Elon Musk Tesla meer dan een miljoen verkopen in de VS kostte. Wat er gemeten werd, de beperkingen, en hoe de verkoop er in 2026 voor staat.",
+    "body": "<p>De politieke activiteiten van Elon Musk, van zijn rol in de Amerikaanse regering begin 2025 tot zijn publieke uitspraken, kregen de schuld van zwakkere Tesla-verkopen. Eind 2025 probeerden economen daar een getal op te plakken. Dit zegt het onderzoek, en dit is er sindsdien gebeurd.</p><h2>Wat het onderzoek schatte</h2><ul><li><strong>Wie:</strong> economen, onder wie onderzoekers van Yale, in een paper gepubliceerd via het National Bureau of Economic Research.</li><li><strong>Periode:</strong> oktober 2022 tot april 2025.</li><li><strong>Uitkomst:</strong> Tesla's verkopen in de VS waren naar schatting 1 miljoen tot 1,26 miljoen auto's lager dan anders het geval was geweest, wat de auteurs een \"partijdigheidseffect\" noemen. Zonder dat effect was de verkoop in die periode 67% tot 83% hoger geweest.</li><li><strong>Waar kopers heen gingen:</strong> een deel kocht waarschijnlijk elektrische of hybride auto's van andere merken, waarvan de verkoop in die periode sneller groeide.</li></ul><h2>Hoe je het moet lezen</h2><p>Zulke onderzoeken vergelijken de werkelijke verkoop met een schatting van wat er anders was gebeurd, en daar zitten altijd aannames in. Ook andere factoren drukten Tesla's verkoop in die periode: een verouderend modelaanbod, meer concurrentie, prijsverlagingen bij rivalen en veranderingen in subsidies. Het onderzoek is een serieuze poging om die effecten uit elkaar te halen, maar de precieze getallen zijn schattingen, geen exacte tellingen. Volgens de berichtgeving reageerde Tesla niet publiekelijk.</p><h2>Wat er sindsdien veranderde</h2><p>In de berichtgeving over het onderzoek werd opgemerkt dat de publieke stemming rond Musk verbeterde toen hij zich weer meer op techniek richtte, zoals robotaxi's en zelfrijdende auto's. In 2026 trekt Tesla's verkoop weer aan: in het derde kwartaal werden 486.532 auto's geleverd, meer dan analisten verwachtten, en in verschillende Europese landen steeg de verkoop in september sterk. Tesla bracht ook goedkopere Standard-versies van de Model 3 en Model Y uit. Hoeveel van het herstel komt door Musks lagere politieke profiel, en hoeveel door nieuwe producten en prijzen, is moeilijk te zeggen.</p><h2>Waarom het ertoe doet</h2><p>Voor Tesla is Musk zowel de grootste marketingtroef als een risico voor het merk. Weinig autobedrijven zijn zo nauw verbonden met één persoon. Dat is een van de redenen waarom aandeelhouders zijn publieke rol nauwlettend volgen, ook op de vergadering van 3 december.</p>"
+  },
+  "images": [
+    "musk-3.jpg",
+    "earnings-6.jpg"
+  ],
+  "label": {
+    "style": "r",
+    "en": {
+      "text": "1M SALES LOST TO POLITICS?"
+    },
+    "nl": {
+      "text": "POLITIEK KOST 1 MLN AUTO'S?"
+    }
   }
- }
 }

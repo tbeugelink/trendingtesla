@@ -1,40 +1,38 @@
 {
- "slug": "giga-berlin-second-hall-one-million-cars-a-year",
- "date": "2026-10-23",
- "time": "14:35",
- "category": "factories",
- "sources": [
-  {
-   "title": "Tesla North — Giga Berlin expansion: Tesla plans second 536,000 m² hall",
-   "url": "https://teslanorth.com/2026/10/14/giga-berlin-second-hall/"
-  },
-  {
-   "title": "Drive Tesla Canada — Tesla gives Giga Berlin workers another pay raise",
-   "url": "https://driveteslacanada.ca/news/tesla-giga-berlin-pay-raise-october-2026/"
-  }
- ],
- "en": {
-  "title": "Giga Berlin plans a second hall twice the size of the first, aiming for up to a million cars a year",
-  "description": "Tesla wants to add a 536,000 m² building north of its Grünheide plant. What is planned, when construction could start, and why it will take years.",
-  "body": "<p>Tesla's only car factory in Europe is preparing for a much bigger future. In Grünheide, near Berlin, the company plans a second production hall of about 536,000 square metres, more than twice the size of the existing building of roughly 219,000 square metres. The long-term goal for the site is up to one million vehicles a year.</p><h2>What is planned</h2><ul><li><strong>The building:</strong> a new hall north of the current plant.</li><li><strong>Infrastructure:</strong> a dedicated electricity substation and expanded wastewater treatment, including an extra water loop that would also handle sanitary wastewater.</li><li><strong>Permits:</strong> Tesla plans to file a partial permit application for the northern building in December 2026. An earlier approval from October 2024 already found the expansion permissible in principle.</li><li><strong>Timing:</strong> construction would start in 2027 at the earliest, and the full build-out is expected to take about ten years.</li></ul><h2>Where Giga Berlin stands today</h2><p>The factory builds the Model Y for Europe and also exports to markets such as Canada. Tesla aims to raise output to 7,500 cars a week this year and plans to hire up to 3,500 more people on top of its nearly 12,000 employees. Tesla also committed about $250 million in 2026 to expand battery production at the site.</p><h2>The history behind it</h2><p>Expansion in Grünheide has been sensitive. In February 2024, residents rejected the original plan, which involved clearing about 100 hectares of forest, in a non-binding vote. In May 2024 the local council approved a revised plan that roughly halved the clearing to about 47 hectares. Water use in a protected drinking-water area has been a recurring concern, which explains the attention to wastewater in the new plans.</p><h2>Why it matters</h2><p>On its third-quarter call, Tesla said its factories are running at record rates and Musk spoke of aiming for about five million vehicles a year around 2030. A much larger Berlin plant would be central to supplying Europe, where Tesla sales recovered in September after a weak 2025. It would also make Grünheide one of the largest car factories in Europe.</p><h2>What to watch</h2><p>The December permit filing, reactions from residents and environmental groups, and whether Tesla gives a new headcount or production schedule for the second hall.</p>"
- },
- "nl": {
-  "title": "Giga Berlin plant een tweede hal, twee keer zo groot als de eerste, met als doel tot een miljoen auto's per jaar",
-  "description": "Tesla wil een gebouw van 536.000 m² toevoegen ten noorden van de fabriek in Grünheide. Wat er gepland is, wanneer de bouw kan beginnen, en waarom het jaren duurt.",
-  "body": "<p>Tesla's enige autofabriek in Europa bereidt zich voor op een veel grotere toekomst. In Grünheide, bij Berlijn, plant het bedrijf een tweede productiehal van ongeveer 536.000 vierkante meter, ruim twee keer zo groot als het bestaande gebouw van zo'n 219.000 vierkante meter. Het doel voor de lange termijn is tot een miljoen auto's per jaar op deze locatie.</p><h2>Wat er gepland is</h2><ul><li><strong>Het gebouw:</strong> een nieuwe hal ten noorden van de huidige fabriek.</li><li><strong>Infrastructuur:</strong> een eigen elektriciteitsstation en uitgebreide afvalwaterzuivering, met een extra waterkringloop die ook sanitair afvalwater verwerkt.</li><li><strong>Vergunningen:</strong> Tesla wil in december 2026 een gedeeltelijke vergunningsaanvraag indienen voor het noordelijke gebouw. Een eerder besluit van oktober 2024 vond de uitbreiding in principe al toelaatbaar.</li><li><strong>Planning:</strong> de bouw begint op zijn vroegst in 2027, en de volledige uitbouw duurt naar verwachting ongeveer tien jaar.</li></ul><h2>Waar Giga Berlin nu staat</h2><p>De fabriek bouwt de Model Y voor Europa en exporteert ook naar markten als Canada. Tesla wil de productie dit jaar opvoeren naar 7.500 auto's per week en wil bovenop de bijna 12.000 medewerkers nog tot 3.500 mensen aannemen. Ook trok Tesla in 2026 ongeveer $ 250 miljoen uit om de accuproductie op de locatie uit te breiden.</p><h2>De voorgeschiedenis</h2><p>Uitbreiding in Grünheide ligt gevoelig. In februari 2024 stemden inwoners in een niet-bindende stemming tegen het oorspronkelijke plan, waarvoor ongeveer 100 hectare bos gekapt zou worden. In mei 2024 keurde de gemeenteraad een aangepast plan goed met ongeveer de helft daarvan, zo'n 47 hectare. Waterverbruik in een beschermd drinkwatergebied is een terugkerende zorg, wat de aandacht voor afvalwater in de nieuwe plannen verklaart.</p><h2>Waarom het ertoe doet</h2><p>Bij de kwartaalcijfers zei Tesla dat zijn fabrieken op recordtempo draaien, en Musk sprak over het doel van ongeveer vijf miljoen auto's per jaar rond 2030. Een veel grotere fabriek in Berlijn zou centraal staan in de bevoorrading van Europa, waar de verkoop van Tesla in september herstelde na een zwak 2025. Grünheide zou er ook een van de grootste autofabrieken van Europa door worden.</p><h2>Waar je op moet letten</h2><p>De vergunningsaanvraag in december, de reacties van omwonenden en milieuorganisaties, en of Tesla een nieuw aantal banen of een productieplanning voor de tweede hal noemt.</p>"
- },
- "images": [
-  "gigafactory-berlin.jpg"
- ],
- "label": {
-  "style": "w",
-  "pos": "tr",
-  "rot": 0,
+  "slug": "giga-berlin-second-hall-one-million-cars-a-year",
+  "date": "2026-10-23",
+  "time": "14:35",
+  "category": "factories",
+  "sources": [
+    {
+      "title": "Tesla North — Giga Berlin expansion: Tesla plans second 536,000 m² hall",
+      "url": "https://teslanorth.com/2026/10/14/giga-berlin-second-hall/"
+    },
+    {
+      "title": "Drive Tesla Canada — Tesla gives Giga Berlin workers another pay raise",
+      "url": "https://driveteslacanada.ca/news/tesla-giga-berlin-pay-raise-october-2026/"
+    }
+  ],
   "en": {
-   "text": "1 MILLION CARS A YEAR?"
+    "title": "Giga Berlin plans a second hall twice the size of the first, aiming for up to a million cars a year",
+    "description": "Tesla wants to add a 536,000 m² building north of its Grünheide plant. What is planned, when construction could start, and why it will take years.",
+    "body": "<p>Tesla's only car factory in Europe is preparing for a much bigger future. In Grünheide, near Berlin, the company plans a second production hall of about 536,000 square metres, more than twice the size of the existing building of roughly 219,000 square metres. The long-term goal for the site is up to one million vehicles a year.</p><h2>What is planned</h2><ul><li><strong>The building:</strong> a new hall north of the current plant.</li><li><strong>Infrastructure:</strong> a dedicated electricity substation and expanded wastewater treatment, including an extra water loop that would also handle sanitary wastewater.</li><li><strong>Permits:</strong> Tesla plans to file a partial permit application for the northern building in December 2026. An earlier approval from October 2024 already found the expansion permissible in principle.</li><li><strong>Timing:</strong> construction would start in 2027 at the earliest, and the full build-out is expected to take about ten years.</li></ul><h2>Where Giga Berlin stands today</h2><p>The factory builds the Model Y for Europe and also exports to markets such as Canada. Tesla aims to raise output to 7,500 cars a week this year and plans to hire up to 3,500 more people on top of its nearly 12,000 employees. Tesla also committed about $250 million in 2026 to expand battery production at the site.</p><h2>The history behind it</h2><p>Expansion in Grünheide has been sensitive. In February 2024, residents rejected the original plan, which involved clearing about 100 hectares of forest, in a non-binding vote. In May 2024 the local council approved a revised plan that roughly halved the clearing to about 47 hectares. Water use in a protected drinking-water area has been a recurring concern, which explains the attention to wastewater in the new plans.</p><h2>Why it matters</h2><p>On its third-quarter call, Tesla said its factories are running at record rates and Musk spoke of aiming for about five million vehicles a year around 2030. A much larger Berlin plant would be central to supplying Europe, where Tesla sales recovered in September after a weak 2025. It would also make Grünheide one of the largest car factories in Europe.</p><h2>What to watch</h2><p>The December permit filing, reactions from residents and environmental groups, and whether Tesla gives a new headcount or production schedule for the second hall.</p>"
   },
   "nl": {
-   "text": "1 MILJOEN AUTO'S PER JAAR?"
+    "title": "Giga Berlin plant een tweede hal, twee keer zo groot als de eerste, met als doel tot een miljoen auto's per jaar",
+    "description": "Tesla wil een gebouw van 536.000 m² toevoegen ten noorden van de fabriek in Grünheide. Wat er gepland is, wanneer de bouw kan beginnen, en waarom het jaren duurt.",
+    "body": "<p>Tesla's enige autofabriek in Europa bereidt zich voor op een veel grotere toekomst. In Grünheide, bij Berlijn, plant het bedrijf een tweede productiehal van ongeveer 536.000 vierkante meter, ruim twee keer zo groot als het bestaande gebouw van zo'n 219.000 vierkante meter. Het doel voor de lange termijn is tot een miljoen auto's per jaar op deze locatie.</p><h2>Wat er gepland is</h2><ul><li><strong>Het gebouw:</strong> een nieuwe hal ten noorden van de huidige fabriek.</li><li><strong>Infrastructuur:</strong> een eigen elektriciteitsstation en uitgebreide afvalwaterzuivering, met een extra waterkringloop die ook sanitair afvalwater verwerkt.</li><li><strong>Vergunningen:</strong> Tesla wil in december 2026 een gedeeltelijke vergunningsaanvraag indienen voor het noordelijke gebouw. Een eerder besluit van oktober 2024 vond de uitbreiding in principe al toelaatbaar.</li><li><strong>Planning:</strong> de bouw begint op zijn vroegst in 2027, en de volledige uitbouw duurt naar verwachting ongeveer tien jaar.</li></ul><h2>Waar Giga Berlin nu staat</h2><p>De fabriek bouwt de Model Y voor Europa en exporteert ook naar markten als Canada. Tesla wil de productie dit jaar opvoeren naar 7.500 auto's per week en wil bovenop de bijna 12.000 medewerkers nog tot 3.500 mensen aannemen. Ook trok Tesla in 2026 ongeveer $ 250 miljoen uit om de accuproductie op de locatie uit te breiden.</p><h2>De voorgeschiedenis</h2><p>Uitbreiding in Grünheide ligt gevoelig. In februari 2024 stemden inwoners in een niet-bindende stemming tegen het oorspronkelijke plan, waarvoor ongeveer 100 hectare bos gekapt zou worden. In mei 2024 keurde de gemeenteraad een aangepast plan goed met ongeveer de helft daarvan, zo'n 47 hectare. Waterverbruik in een beschermd drinkwatergebied is een terugkerende zorg, wat de aandacht voor afvalwater in de nieuwe plannen verklaart.</p><h2>Waarom het ertoe doet</h2><p>Bij de kwartaalcijfers zei Tesla dat zijn fabrieken op recordtempo draaien, en Musk sprak over het doel van ongeveer vijf miljoen auto's per jaar rond 2030. Een veel grotere fabriek in Berlijn zou centraal staan in de bevoorrading van Europa, waar de verkoop van Tesla in september herstelde na een zwak 2025. Grünheide zou er ook een van de grootste autofabrieken van Europa door worden.</p><h2>Waar je op moet letten</h2><p>De vergunningsaanvraag in december, de reacties van omwonenden en milieuorganisaties, en of Tesla een nieuw aantal banen of een productieplanning voor de tweede hal noemt.</p>"
+  },
+  "images": [
+    "gigafactory-berlin.jpg"
+  ],
+  "label": {
+    "style": "w",
+    "en": {
+      "text": "1 MILLION CARS A YEAR?"
+    },
+    "nl": {
+      "text": "1 MILJOEN AUTO'S PER JAAR?"
+    }
   }
- }
 }

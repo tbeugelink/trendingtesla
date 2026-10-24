@@ -1,39 +1,37 @@
 {
- "slug": "boring-company-middle-east-abu-dhabi-dubai-loop-uae-funding",
- "date": "2026-10-23",
- "time": "01:05",
- "category": "boring",
- "sources": [
-  {
-   "title": "Teslarati — Boring Company lands Abu Dhabi deal, Nashville progress",
-   "url": "https://www.teslarati.com/boring-company-abu-dhabi-elon-musk-nashville-progress/"
-  }
- ],
- "en": {
-  "title": "The Boring Company bets on the Gulf: Dubai Loop, an Abu Dhabi study and UAE money",
-  "description": "The UAE led a $3 billion funding round, Dubai has signed for a pilot Loop and Abu Dhabi has started a study. What is agreed, what is only being explored, and how Teslas fit in.",
-  "body": "<p>The Boring Company's biggest growth market may not be in America. In 2026, the United Arab Emirates became both its largest backer and a customer, with a Loop under contract in Dubai and a new study agreement in Abu Dhabi.</p><h2>Money from the Emirates</h2><p>The company raised $3 billion in a Series D funding round led by the UAE and affiliated investors, valuing it at $23 billion, according to Teslarati. As part of that deal, there is a commitment to build more than 150 km of tunnels across the UAE.</p><h2>Dubai: a pilot under contract</h2><ul><li><strong>Route:</strong> a 6.4 km pilot line with four stations linking the DIFC financial district and Dubai Mall.</li><li><strong>Cost:</strong> about $154 million.</li><li><strong>Client:</strong> Dubai's Roads and Transport Authority.</li></ul><p>This is the most concrete project outside the US so far.</p><h2>Abu Dhabi: a study, not a build</h2><p>At the LIVEX 2026 event in early October, The Boring Company's president Steve Davis signed an agreement with Abu Dhabi's projects and infrastructure centre to study tunnels for both transport and utilities across the emirate. This is an exploratory phase: no construction has been committed and no budget has been announced.</p><h2>Why the Gulf</h2><p>Gulf cities combine fast growth, very hot summers in which people avoid walking, and governments that can approve large infrastructure quickly. Underground transport that is air-conditioned and avoids road traffic fits that profile. For The Boring Company, a large state-backed customer provides stable funding while it proves its technology.</p><h2>The Tesla link</h2><p>The Loop concept uses Tesla vehicles to carry passengers, as it does in Las Vegas. A Gulf Loop network would mean Tesla cars operating in tunnels abroad, and it raises the question of whether Tesla's self-driving software will one day run them, something Tesla is already testing for its own robotaxi service in other cities.</p><h2>What to watch</h2><p>The start of construction in Dubai, whether the Abu Dhabi study turns into a contract, and how quickly the promised 150 km of UAE tunnels becomes real projects.</p>"
- },
- "nl": {
-  "title": "The Boring Company zet in op de Golf: Dubai Loop, een studie in Abu Dhabi en geld uit de VAE",
-  "description": "De VAE leidden een financieringsronde van $ 3 miljard, Dubai tekende voor een proef-Loop en Abu Dhabi begon een studie. Wat vastligt, wat alleen wordt verkend, en waar Tesla's in beeld komen.",
-  "body": "<p>De grootste groeimarkt van The Boring Company ligt misschien niet in Amerika. In 2026 werden de Verenigde Arabische Emiraten zowel de grootste financier als een klant, met een Loop onder contract in Dubai en een nieuwe studieovereenkomst in Abu Dhabi.</p><h2>Geld uit de Emiraten</h2><p>Het bedrijf haalde $ 3 miljard op in een financieringsronde (Series D) onder leiding van de VAE en verbonden investeerders, tegen een waardering van $ 23 miljard, volgens Teslarati. Onderdeel van die deal is een toezegging om meer dan 150 km aan tunnels in de VAE te bouwen.</p><h2>Dubai: een proeflijn onder contract</h2><ul><li><strong>Route:</strong> een proeflijn van 6,4 km met vier stations tussen financieel district DIFC en Dubai Mall.</li><li><strong>Kosten:</strong> ongeveer $ 154 miljoen.</li><li><strong>Opdrachtgever:</strong> de Roads and Transport Authority van Dubai.</li></ul><p>Dit is tot nu toe het meest concrete project buiten de VS.</p><h2>Abu Dhabi: een studie, nog geen bouw</h2><p>Op het evenement LIVEX 2026, begin oktober, tekende president Steve Davis van The Boring Company een overeenkomst met het projecten- en infrastructuurcentrum van Abu Dhabi om tunnels voor vervoer en nutsvoorzieningen in het emiraat te onderzoeken. Het gaat om een verkennende fase: er is geen bouw toegezegd en geen budget bekendgemaakt.</p><h2>Waarom de Golf</h2><p>Golfsteden combineren snelle groei, zeer hete zomers waarin mensen liever niet lopen, en overheden die grote infrastructuur snel kunnen goedkeuren. Ondergronds vervoer met airco dat het verkeer ontloopt, past daarbij. Voor The Boring Company levert een grote klant met staatssteun stabiele financiering op terwijl het zijn techniek moet bewijzen.</p><h2>De link met Tesla</h2><p>Het Loop-concept gebruikt Tesla's om passagiers te vervoeren, zoals in Las Vegas. Een Loop-netwerk in de Golf betekent Tesla-auto's in tunnels in het buitenland, en roept de vraag op of Tesla's zelfrijdende software ze ooit gaat besturen, iets wat Tesla al test voor zijn eigen robotaxidienst in andere steden.</p><h2>Waar je op moet letten</h2><p>Het begin van de bouw in Dubai, of de studie in Abu Dhabi een contract oplevert, en hoe snel de beloofde 150 km tunnel in de VAE echte projecten worden.</p>"
- },
- "images": [
-  "tunnel-1.jpg",
-  "tunnel-6.jpg"
- ],
- "label": {
-  "style": "n",
-  "pos": "tr",
-  "rot": 0,
+  "slug": "boring-company-middle-east-abu-dhabi-dubai-loop-uae-funding",
+  "date": "2026-10-23",
+  "time": "01:05",
+  "category": "boring",
+  "sources": [
+    {
+      "title": "Teslarati — Boring Company lands Abu Dhabi deal, Nashville progress",
+      "url": "https://www.teslarati.com/boring-company-abu-dhabi-elon-musk-nashville-progress/"
+    }
+  ],
   "en": {
-   "sub": "ROUND LED BY THE UAE",
-   "text": "$3B"
+    "title": "The Boring Company bets on the Gulf: Dubai Loop, an Abu Dhabi study and UAE money",
+    "description": "The UAE led a $3 billion funding round, Dubai has signed for a pilot Loop and Abu Dhabi has started a study. What is agreed, what is only being explored, and how Teslas fit in.",
+    "body": "<p>The Boring Company's biggest growth market may not be in America. In 2026, the United Arab Emirates became both its largest backer and a customer, with a Loop under contract in Dubai and a new study agreement in Abu Dhabi.</p><h2>Money from the Emirates</h2><p>The company raised $3 billion in a Series D funding round led by the UAE and affiliated investors, valuing it at $23 billion, according to Teslarati. As part of that deal, there is a commitment to build more than 150 km of tunnels across the UAE.</p><h2>Dubai: a pilot under contract</h2><ul><li><strong>Route:</strong> a 6.4 km pilot line with four stations linking the DIFC financial district and Dubai Mall.</li><li><strong>Cost:</strong> about $154 million.</li><li><strong>Client:</strong> Dubai's Roads and Transport Authority.</li></ul><p>This is the most concrete project outside the US so far.</p><h2>Abu Dhabi: a study, not a build</h2><p>At the LIVEX 2026 event in early October, The Boring Company's president Steve Davis signed an agreement with Abu Dhabi's projects and infrastructure centre to study tunnels for both transport and utilities across the emirate. This is an exploratory phase: no construction has been committed and no budget has been announced.</p><h2>Why the Gulf</h2><p>Gulf cities combine fast growth, very hot summers in which people avoid walking, and governments that can approve large infrastructure quickly. Underground transport that is air-conditioned and avoids road traffic fits that profile. For The Boring Company, a large state-backed customer provides stable funding while it proves its technology.</p><h2>The Tesla link</h2><p>The Loop concept uses Tesla vehicles to carry passengers, as it does in Las Vegas. A Gulf Loop network would mean Tesla cars operating in tunnels abroad, and it raises the question of whether Tesla's self-driving software will one day run them, something Tesla is already testing for its own robotaxi service in other cities.</p><h2>What to watch</h2><p>The start of construction in Dubai, whether the Abu Dhabi study turns into a contract, and how quickly the promised 150 km of UAE tunnels becomes real projects.</p>"
   },
   "nl": {
-   "sub": "RONDE GELEID DOOR VAE",
-   "text": "$3 mld"
+    "title": "The Boring Company zet in op de Golf: Dubai Loop, een studie in Abu Dhabi en geld uit de VAE",
+    "description": "De VAE leidden een financieringsronde van $ 3 miljard, Dubai tekende voor een proef-Loop en Abu Dhabi begon een studie. Wat vastligt, wat alleen wordt verkend, en waar Tesla's in beeld komen.",
+    "body": "<p>De grootste groeimarkt van The Boring Company ligt misschien niet in Amerika. In 2026 werden de Verenigde Arabische Emiraten zowel de grootste financier als een klant, met een Loop onder contract in Dubai en een nieuwe studieovereenkomst in Abu Dhabi.</p><h2>Geld uit de Emiraten</h2><p>Het bedrijf haalde $ 3 miljard op in een financieringsronde (Series D) onder leiding van de VAE en verbonden investeerders, tegen een waardering van $ 23 miljard, volgens Teslarati. Onderdeel van die deal is een toezegging om meer dan 150 km aan tunnels in de VAE te bouwen.</p><h2>Dubai: een proeflijn onder contract</h2><ul><li><strong>Route:</strong> een proeflijn van 6,4 km met vier stations tussen financieel district DIFC en Dubai Mall.</li><li><strong>Kosten:</strong> ongeveer $ 154 miljoen.</li><li><strong>Opdrachtgever:</strong> de Roads and Transport Authority van Dubai.</li></ul><p>Dit is tot nu toe het meest concrete project buiten de VS.</p><h2>Abu Dhabi: een studie, nog geen bouw</h2><p>Op het evenement LIVEX 2026, begin oktober, tekende president Steve Davis van The Boring Company een overeenkomst met het projecten- en infrastructuurcentrum van Abu Dhabi om tunnels voor vervoer en nutsvoorzieningen in het emiraat te onderzoeken. Het gaat om een verkennende fase: er is geen bouw toegezegd en geen budget bekendgemaakt.</p><h2>Waarom de Golf</h2><p>Golfsteden combineren snelle groei, zeer hete zomers waarin mensen liever niet lopen, en overheden die grote infrastructuur snel kunnen goedkeuren. Ondergronds vervoer met airco dat het verkeer ontloopt, past daarbij. Voor The Boring Company levert een grote klant met staatssteun stabiele financiering op terwijl het zijn techniek moet bewijzen.</p><h2>De link met Tesla</h2><p>Het Loop-concept gebruikt Tesla's om passagiers te vervoeren, zoals in Las Vegas. Een Loop-netwerk in de Golf betekent Tesla-auto's in tunnels in het buitenland, en roept de vraag op of Tesla's zelfrijdende software ze ooit gaat besturen, iets wat Tesla al test voor zijn eigen robotaxidienst in andere steden.</p><h2>Waar je op moet letten</h2><p>Het begin van de bouw in Dubai, of de studie in Abu Dhabi een contract oplevert, en hoe snel de beloofde 150 km tunnel in de VAE echte projecten worden.</p>"
+  },
+  "images": [
+    "tunnel-1.jpg",
+    "tunnel-6.jpg"
+  ],
+  "label": {
+    "style": "n",
+    "en": {
+      "sub": "ROUND LED BY THE UAE",
+      "text": "$3B"
+    },
+    "nl": {
+      "sub": "RONDE GELEID DOOR VAE",
+      "text": "$3 mld"
+    }
   }
- }
 }

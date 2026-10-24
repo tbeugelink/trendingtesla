@@ -37,5 +37,14 @@
   "starlink-1.jpg",
   "xai-dc-2.jpg",
   "tunnel-6.jpg"
- ]
+ ],
+ "label": {
+  "style": "c",
+  "en": {
+   "text": "How Musk's companies connect"
+  },
+  "nl": {
+   "text": "Musks bedrijven op een rij"
+  }
+ }
 }

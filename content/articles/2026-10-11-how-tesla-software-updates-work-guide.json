@@ -26,5 +26,14 @@
  "image": "topics/interior-2.jpg",
  "images": [
   "software-update.jpg"
- ]
+ ],
+ "label": {
+  "style": "c",
+  "en": {
+   "text": "How software updates work"
+  },
+  "nl": {
+   "text": "Zo werken software-updates"
+  }
+ }
 }

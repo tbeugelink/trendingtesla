@@ -23,5 +23,14 @@
   "grok-1.jpg",
   "software-update.jpg",
   "interior-1.jpg"
- ]
+ ],
+ "label": {
+  "style": "c",
+  "en": {
+   "text": "The Summer Update explained"
+  },
+  "nl": {
+   "text": "De Summer Update uitgelegd"
+  }
+ }
 }

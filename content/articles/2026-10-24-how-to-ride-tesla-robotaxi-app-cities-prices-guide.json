@@ -35,5 +35,14 @@
   "robotaxi-my-2.jpg",
   "cybercab-street.jpg",
   "cybercab-interior.jpg"
- ]
+ ],
+ "label": {
+  "style": "c",
+  "en": {
+   "text": "How to ride a Robotaxi"
+  },
+  "nl": {
+   "text": "Zo rijd je mee in een Robotaxi"
+  }
+ }
 }

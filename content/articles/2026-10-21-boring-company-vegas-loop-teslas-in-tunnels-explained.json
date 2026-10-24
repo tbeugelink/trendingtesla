@@ -28,5 +28,14 @@
   "tunnel-6.jpg",
   "tunnel-1.jpg",
   "tunnel-3.jpg"
- ]
+ ],
+ "label": {
+  "style": "c",
+  "en": {
+   "text": "How the Vegas Loop works"
+  },
+  "nl": {
+   "text": "Zo werkt de Vegas Loop"
+  }
+ }
 }

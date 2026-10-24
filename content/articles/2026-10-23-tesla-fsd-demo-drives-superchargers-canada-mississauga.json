@@ -31,5 +31,14 @@
   "supercharger-6.jpg",
   "supercharger-2.jpg",
   "supercharger-7.jpg"
- ]
+ ],
+ "label": {
+  "style": "c",
+  "en": {
+   "text": "FSD demos at Superchargers"
+  },
+  "nl": {
+   "text": "FSD-demo's bij Superchargers"
+  }
+ }
 }

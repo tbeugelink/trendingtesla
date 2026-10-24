@@ -35,5 +35,14 @@
   "optimus-full.jpg",
   "optimus.jpg",
   "optimus-army.jpg"
- ]
+ ],
+ "label": {
+  "style": "c",
+  "en": {
+   "text": "The story of Optimus"
+  },
+  "nl": {
+   "text": "De geschiedenis van Optimus"
+  }
+ }
 }

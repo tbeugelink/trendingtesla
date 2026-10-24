@@ -26,5 +26,14 @@
  "images": [
   "grok-2.jpg",
   "xai-dc-1.jpg"
- ]
+ ],
+ "label": {
+  "style": "c",
+  "en": {
+   "text": "How xAI became SpaceXAI"
+  },
+  "nl": {
+   "text": "Zo werd xAI SpaceXAI"
+  }
+ }
 }

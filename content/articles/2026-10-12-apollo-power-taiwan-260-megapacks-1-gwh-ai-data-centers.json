@@ -31,5 +31,14 @@
   "megapack-1.jpg",
   "xai-dc-1.jpg",
   "megapack-3.jpg"
- ]
+ ],
+ "label": {
+  "style": "c",
+  "en": {
+   "text": "Megapacks for Taiwan"
+  },
+  "nl": {
+   "text": "Megapacks voor Taiwan"
+  }
+ }
 }

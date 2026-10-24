@@ -30,5 +30,14 @@
  "images": [
   "starlink-car-2.jpg",
   "starlink-car-1.jpg"
- ]
+ ],
+ "label": {
+  "style": "c",
+  "en": {
+   "text": "Where Starlink meets Tesla"
+  },
+  "nl": {
+   "text": "Starlink en Tesla nu"
+  }
+ }
 }

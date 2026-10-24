@@ -26,5 +26,14 @@
  "images": [
   "musk-2.jpg",
   "earnings-3.jpg"
- ]
+ ],
+ "label": {
+  "style": "c",
+  "en": {
+   "text": "How the pay case ended"
+  },
+  "nl": {
+   "text": "Zo eindigde de beloningszaak"
+  }
+ }
 }

@@ -29,5 +29,14 @@
   "wallbox-4.jpg",
   "wallbox-3.jpg",
   "wallbox-5.jpg"
- ]
+ ],
+ "label": {
+  "style": "c",
+  "en": {
+   "text": "Charging at home"
+  },
+  "nl": {
+   "text": "Thuis laden"
+  }
+ }
 }

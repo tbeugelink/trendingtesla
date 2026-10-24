@@ -25,5 +25,14 @@
  },
  "images": [
   "guide-service.jpg"
- ]
+ ],
+ "label": {
+  "style": "c",
+  "en": {
+   "text": "Tesla's certified used cars"
+  },
+  "nl": {
+   "text": "Gecertificeerde occasions"
+  }
+ }
 }

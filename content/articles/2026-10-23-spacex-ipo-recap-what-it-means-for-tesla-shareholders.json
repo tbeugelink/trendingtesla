@@ -30,5 +30,14 @@
  "images": [
   "earnings-1.jpg",
   "earnings-3.jpg"
- ]
+ ],
+ "label": {
+  "style": "c",
+  "en": {
+   "text": "The SpaceX IPO explained"
+  },
+  "nl": {
+   "text": "SpaceX naar de beurs"
+  }
+ }
 }

@@ -26,5 +26,14 @@
  "images": [
   "supercharger-7.jpg",
   "supercharger-2.jpg"
- ]
+ ],
+ "label": {
+  "style": "c",
+  "en": {
+   "text": "Supercharging any EV"
+  },
+  "nl": {
+   "text": "Elke EV aan de Supercharger"
+  }
+ }
 }

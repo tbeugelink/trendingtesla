@@ -36,5 +36,14 @@
   "optimus-line.jpg",
   "optimus-factory.jpg",
   "gigafactory-fremont.jpg"
- ]
+ ],
+ "label": {
+  "style": "c",
+  "en": {
+   "text": "Optimus production in Fremont"
+  },
+  "nl": {
+   "text": "Optimus-productie in Fremont"
+  }
+ }
 }

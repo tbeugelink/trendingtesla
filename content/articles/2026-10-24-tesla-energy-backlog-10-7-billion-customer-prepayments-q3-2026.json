@@ -31,5 +31,14 @@
   "megapack-1.jpg",
   "energy.jpg",
   "energy-2.jpg"
- ]
+ ],
+ "label": {
+  "style": "c",
+  "en": {
+   "text": "Tesla Energy's order book"
+  },
+  "nl": {
+   "text": "Het orderboek van Tesla Energy"
+  }
+ }
 }

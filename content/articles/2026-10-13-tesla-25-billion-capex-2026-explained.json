@@ -27,5 +27,14 @@
  "images": [
   "earnings-4.jpg",
   "gigafactory-2.jpg"
- ]
+ ],
+ "label": {
+  "style": "c",
+  "en": {
+   "text": "Tesla's 2026 spending plan"
+  },
+  "nl": {
+   "text": "Tesla's investeringen in 2026"
+  }
+ }
 }

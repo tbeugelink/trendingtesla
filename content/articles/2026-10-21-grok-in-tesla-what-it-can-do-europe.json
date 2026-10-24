@@ -27,5 +27,14 @@
  "images": [
   "grok-1.jpg",
   "grok-3.jpg"
- ]
+ ],
+ "label": {
+  "style": "c",
+  "en": {
+   "text": "What Grok can do in a Tesla"
+  },
+  "nl": {
+   "text": "Wat Grok kan in je Tesla"
+  }
+ }
 }

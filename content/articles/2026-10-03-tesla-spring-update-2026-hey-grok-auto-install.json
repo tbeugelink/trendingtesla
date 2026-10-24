@@ -26,5 +26,14 @@
  "images": [
   "software-update.jpg",
   "grok-1.jpg"
- ]
+ ],
+ "label": {
+  "style": "c",
+  "en": {
+   "text": "The 2026 Spring Update"
+  },
+  "nl": {
+   "text": "De Spring Update van 2026"
+  }
+ }
 }

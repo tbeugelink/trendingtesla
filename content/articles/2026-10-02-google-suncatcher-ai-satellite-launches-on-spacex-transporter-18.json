@@ -34,5 +34,14 @@
  "images": [
   "spacex-1.jpg",
   "spacex-5.jpg"
- ]
+ ],
+ "label": {
+  "style": "c",
+  "en": {
+   "text": "Google's AI satellite launches"
+  },
+  "nl": {
+   "text": "Google lanceert AI-satelliet"
+  }
+ }
 }

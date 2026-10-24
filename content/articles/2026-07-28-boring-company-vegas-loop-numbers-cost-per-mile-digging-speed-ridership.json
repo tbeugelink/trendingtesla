@@ -31,5 +31,14 @@
   "tunnel-1.jpg",
   "tunnel-6.jpg",
   "tunnel-5.jpg"
- ]
+ ],
+ "label": {
+  "style": "c",
+  "en": {
+   "text": "The Vegas Loop in numbers"
+  },
+  "nl": {
+   "text": "De Vegas Loop in cijfers"
+  }
+ }
 }

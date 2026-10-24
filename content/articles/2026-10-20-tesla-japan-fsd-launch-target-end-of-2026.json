@@ -26,5 +26,14 @@
  "image": "topics/fsd-japan.jpg",
  "images": [
   "fsd-japan.jpg"
- ]
+ ],
+ "label": {
+  "style": "c",
+  "en": {
+   "text": "FSD plans for Japan"
+  },
+  "nl": {
+   "text": "FSD-plannen voor Japan"
+  }
+ }
 }

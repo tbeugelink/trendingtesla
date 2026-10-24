@@ -34,5 +34,14 @@
  "images": [
   "earnings-1.jpg",
   "earnings-5.jpg"
- ]
+ ],
+ "label": {
+  "style": "c",
+  "en": {
+   "text": "Earnings week for the stock"
+  },
+  "nl": {
+   "text": "Het aandeel in de cijferweek"
+  }
+ }
 }

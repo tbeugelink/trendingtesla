@@ -34,5 +34,14 @@
  "images": [
   "earnings-1.jpg",
   "musk-3.jpg"
- ]
+ ],
+ "label": {
+  "style": "c",
+  "en": {
+   "text": "Analysts on the Q3 results"
+  },
+  "nl": {
+   "text": "Analisten over Q3"
+  }
+ }
 }

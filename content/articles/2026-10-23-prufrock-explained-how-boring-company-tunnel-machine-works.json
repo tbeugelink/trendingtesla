@@ -29,5 +29,14 @@
  },
  "images": [
   "tunnel-5.jpg"
- ]
+ ],
+ "label": {
+  "style": "c",
+  "en": {
+   "text": "How Prufrock digs"
+  },
+  "nl": {
+   "text": "Zo graaft Prufrock"
+  }
+ }
 }

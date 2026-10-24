@@ -28,5 +28,14 @@
   "megapack-2.jpg",
   "megapack-3.jpg",
   "energy.jpg"
- ]
+ ],
+ "label": {
+  "style": "c",
+  "en": {
+   "text": "Megapack deal in Italy"
+  },
+  "nl": {
+   "text": "Megapack-deal in Italië"
+  }
+ }
 }

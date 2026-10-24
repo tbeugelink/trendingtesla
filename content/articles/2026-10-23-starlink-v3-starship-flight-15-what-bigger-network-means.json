@@ -26,5 +26,14 @@
  "images": [
   "spacex-7.jpg",
   "starlink-2.jpg"
- ]
+ ],
+ "label": {
+  "style": "c",
+  "en": {
+   "text": "Starlink V3 explained"
+  },
+  "nl": {
+   "text": "Starlink V3 uitgelegd"
+  }
+ }
 }

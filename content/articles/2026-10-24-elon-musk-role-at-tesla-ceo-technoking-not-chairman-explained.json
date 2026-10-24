@@ -34,5 +34,14 @@
  "images": [
   "musk-1.jpg",
   "musk-2.jpg"
- ]
+ ],
+ "label": {
+  "style": "c",
+  "en": {
+   "text": "Musk's role at Tesla"
+  },
+  "nl": {
+   "text": "De rol van Musk bij Tesla"
+  }
+ }
 }

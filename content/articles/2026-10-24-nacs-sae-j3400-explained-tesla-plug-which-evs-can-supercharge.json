@@ -34,5 +34,14 @@
  "images": [
   "charge-port.jpg",
   "supercharger-6.jpg"
- ]
+ ],
+ "label": {
+  "style": "c",
+  "en": {
+   "text": "NACS explained"
+  },
+  "nl": {
+   "text": "NACS uitgelegd"
+  }
+ }
 }

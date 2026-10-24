@@ -34,5 +34,14 @@
  "images": [
   "energy-6.jpg",
   "energy-5.jpg"
- ]
+ ],
+ "label": {
+  "style": "c",
+  "en": {
+   "text": "Tesla's solar factory plan"
+  },
+  "nl": {
+   "text": "Tesla's zonnefabriekplan"
+  }
+ }
 }

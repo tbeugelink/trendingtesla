@@ -29,5 +29,14 @@
  },
  "images": [
   "fsd-3.jpg"
- ]
+ ],
+ "label": {
+  "style": "c",
+  "en": {
+   "text": "FSD crash near Fairfield"
+  },
+  "nl": {
+   "text": "FSD-crash bij Fairfield"
+  }
+ }
 }

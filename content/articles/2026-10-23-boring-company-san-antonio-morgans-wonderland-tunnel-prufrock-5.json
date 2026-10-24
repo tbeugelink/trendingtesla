@@ -21,5 +21,14 @@
  },
  "images": [
   "tunnel-5.jpg"
- ]
+ ],
+ "label": {
+  "style": "c",
+  "en": {
+   "text": "A tunnel in San Antonio"
+  },
+  "nl": {
+   "text": "Een tunnel in San Antonio"
+  }
+ }
 }

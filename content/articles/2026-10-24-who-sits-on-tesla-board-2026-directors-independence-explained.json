@@ -26,5 +26,14 @@
  "images": [
   "musk-1.jpg",
   "earnings-4.jpg"
- ]
+ ],
+ "label": {
+  "style": "c",
+  "en": {
+   "text": "Who sits on Tesla's board"
+  },
+  "nl": {
+   "text": "Wie zitten in Teslas bestuur"
+  }
+ }
 }

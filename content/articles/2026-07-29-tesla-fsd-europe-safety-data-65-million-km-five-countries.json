@@ -31,5 +31,14 @@
   "fsd-czechia.jpg",
   "fsd-4.jpg",
   "fsd-3.jpg"
- ]
+ ],
+ "label": {
+  "style": "c",
+  "en": {
+   "text": "FSD safety data in Europe"
+  },
+  "nl": {
+   "text": "FSD-veiligheid in Europa"
+  }
+ }
 }

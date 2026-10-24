@@ -854,6 +854,7 @@ def listing(items, lang, active=None, model=None):
 
 def pad_grid(lead, own):
     """Related articles from neighbouring topics that complete the last grid row (4, 3 and 2 columns)."""
+    return []  # only articles of the topic itself are shown (owner's choice, 2026-10-24)
     if not own:
         return []
     need = (-len(own)) % 12

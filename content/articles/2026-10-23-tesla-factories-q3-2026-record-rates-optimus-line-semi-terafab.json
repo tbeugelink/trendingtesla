@@ -33,11 +33,11 @@
     "style": "a",
     "en": {
       "sub": "RECORD PACE",
-      "text": "IN TESLA FACTORIES"
+      "text": "AT TESLA PLANTS"
     },
     "nl": {
-      "sub": "RECORDTEMPO",
-      "text": "IN TESLA-FABRIEKEN"
+      "sub": "RECORDTEMPO IN",
+      "text": "TESLA-FABRIEKEN"
     }
   }
 }

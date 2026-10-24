@@ -31,12 +31,12 @@
   "label": {
     "style": "a",
     "en": {
-      "sub": "WHAT DO WE KNOW",
-      "text": "ABOUT OPTIMUS GEN 3?"
+      "sub": "OPTIMUS GEN 3",
+      "text": "WHAT DO WE KNOW?"
     },
     "nl": {
-      "sub": "WAT WETEN WE",
-      "text": "OVER OPTIMUS GEN 3?"
+      "sub": "OPTIMUS GEN 3",
+      "text": "WAT WETEN WE?"
     }
   }
 }

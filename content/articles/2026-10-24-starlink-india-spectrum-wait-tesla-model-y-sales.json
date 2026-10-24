@@ -34,12 +34,12 @@
   "label": {
     "style": "a",
     "en": {
-      "sub": "INDIA",
-      "text": "STARLINK STILL WAITING"
+      "sub": "INDIA: STARLINK",
+      "text": "STILL WAITING"
     },
     "nl": {
-      "sub": "INDIA",
-      "text": "STARLINK WACHT NOG"
+      "sub": "INDIA: STARLINK",
+      "text": "WACHT NOG ALTIJD"
     }
   }
 }

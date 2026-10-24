@@ -39,12 +39,12 @@
   "label": {
     "style": "a",
     "en": {
-      "sub": "NEXT MONTH",
-      "text": "CYBERCAB TO DALLAS!"
+      "sub": "DALLAS: CYBERCAB",
+      "text": "NEXT MONTH!"
     },
     "nl": {
-      "sub": "VOLGENDE MAAND",
-      "text": "CYBERCAB NAAR DALLAS!"
+      "sub": "DALLAS: CYBERCAB",
+      "text": "VOLGENDE MAAND!"
     }
   }
 }

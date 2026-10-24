@@ -30,12 +30,12 @@
   "label": {
     "style": "a",
     "en": {
-      "sub": "FSD'S NEW NAME",
-      "text": "TESLA ASSISTED DRIVING"
+      "sub": "FSD IS NOW TESLA",
+      "text": "ASSISTED DRIVING"
     },
     "nl": {
-      "sub": "NIEUWE NAAM FSD",
-      "text": "TESLA ASSISTED DRIVING"
+      "sub": "FSD WORDT TESLA",
+      "text": "ASSISTED DRIVING"
     }
   }
 }

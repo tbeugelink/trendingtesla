@@ -39,12 +39,12 @@
   "label": {
     "style": "a",
     "en": {
-      "sub": "HOW DO YOU RIDE",
-      "text": "A TESLA ROBOTAXI?"
+      "sub": "HOW TO RIDE A",
+      "text": "TESLA ROBOTAXI?"
     },
     "nl": {
-      "sub": "HOE RIJD JE",
-      "text": "MEE IN EEN ROBOTAXI?"
+      "sub": "HOE RIJD JE MEE",
+      "text": "IN EEN ROBOTAXI?"
     }
   }
 }

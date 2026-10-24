@@ -39,12 +39,12 @@
   "label": {
     "style": "a",
     "en": {
-      "sub": "WHY IS THE",
-      "text": "OPTIMUS HAND SO HARD?"
+      "sub": "OPTIMUS HAND:",
+      "text": "WHY SO HARD?"
     },
     "nl": {
-      "sub": "WAAROM IS DE",
-      "text": "OPTIMUS-HAND ZO LASTIG?"
+      "sub": "OPTIMUS-HAND:",
+      "text": "WAAROM MOEILIJK?"
     }
   }
 }

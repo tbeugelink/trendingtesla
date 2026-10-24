@@ -38,12 +38,12 @@
   "label": {
     "style": "a",
     "en": {
-      "sub": "AMAZON LEO",
-      "text": "CAN IT CATCH STARLINK?"
+      "sub": "CAN AMAZON LEO",
+      "text": "CATCH STARLINK?"
     },
     "nl": {
-      "sub": "AMAZON LEO",
-      "text": "HAALT HIJ STARLINK IN?"
+      "sub": "HAALT AMAZON LEO",
+      "text": "STARLINK IN?"
     }
   }
 }

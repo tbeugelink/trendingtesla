@@ -34,12 +34,12 @@
   "label": {
     "style": "a",
     "en": {
-      "sub": "TAX BREAKS",
-      "text": "4-0 FOR SOLAR FACTORY!"
+      "sub": "TAX BREAKS 4-0",
+      "text": "FOR SOLAR PLANT!"
     },
     "nl": {
-      "sub": "BELASTINGKORTING",
-      "text": "4-0 VOOR ZONNEFABRIEK!"
+      "sub": "4-0 VOOR KORTING",
+      "text": "ZONNEFABRIEK!"
     }
   }
 }

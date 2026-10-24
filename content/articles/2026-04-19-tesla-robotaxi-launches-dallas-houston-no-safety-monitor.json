@@ -35,11 +35,11 @@
     "style": "a",
     "en": {
       "sub": "NO SAFETY MONITOR",
-      "text": "DALLAS & HOUSTON!"
+      "text": "DALLAS, HOUSTON!"
     },
     "nl": {
       "sub": "ZONDER MONITOR",
-      "text": "DALLAS EN HOUSTON!"
+      "text": "DALLAS, HOUSTON!"
     }
   }
 }

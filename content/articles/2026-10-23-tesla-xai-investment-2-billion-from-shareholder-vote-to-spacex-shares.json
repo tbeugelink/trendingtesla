@@ -35,11 +35,11 @@
     "style": "a",
     "en": {
       "sub": "VOTE FAILED,",
-      "text": "$2B TO XAI ANYWAY!?"
+      "text": "YET $2B TO XAI!?"
     },
     "nl": {
-      "sub": "NEE GESTEMD,",
-      "text": "$2 MLD TOCH NAAR XAI!?"
+      "sub": "ONDANKS NEE-STEM",
+      "text": "$2 MLD IN XAI!?"
     }
   }
 }

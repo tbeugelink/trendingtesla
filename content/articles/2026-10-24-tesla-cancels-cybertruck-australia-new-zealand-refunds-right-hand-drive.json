@@ -37,12 +37,12 @@
   "label": {
     "style": "a",
     "en": {
-      "sub": "CANCELLED",
-      "text": "CYBERTRUCK IN AUSTRALIA"
+      "sub": "CYBERTRUCK AXED",
+      "text": "IN AUSTRALIA"
     },
     "nl": {
-      "sub": "EINDE",
-      "text": "CYBERTRUCK IN AUSTRALIË"
+      "sub": "EINDE CYBERTRUCK",
+      "text": "IN AUSTRALIË"
     }
   }
 }

@@ -38,12 +38,12 @@
   "label": {
     "style": "a",
     "en": {
-      "sub": "RECORD",
-      "text": "BEST MONTH IN EUROPE!"
+      "sub": "EUROPE RECORD",
+      "text": "BEST MONTH EVER!"
     },
     "nl": {
-      "sub": "RECORD",
-      "text": "BESTE MAAND IN EUROPA!"
+      "sub": "RECORD IN EUROPA",
+      "text": "BESTE MAAND OOIT"
     }
   }
 }

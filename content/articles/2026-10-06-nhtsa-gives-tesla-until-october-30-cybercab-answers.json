@@ -30,12 +30,12 @@
   "label": {
     "style": "a",
     "en": {
-      "sub": "NHTSA TO TESLA:",
-      "text": "30 DAYS, NOT 8 WEEKS"
+      "sub": "WANTED 8 WEEKS",
+      "text": "NHTSA: 30 DAYS"
     },
     "nl": {
-      "sub": "NHTSA AAN TESLA:",
-      "text": "30 DAGEN, GEEN 8 WEKEN"
+      "sub": "8 WEKEN GEVRAAGD",
+      "text": "NHTSA: 30 DAGEN"
     }
   }
 }

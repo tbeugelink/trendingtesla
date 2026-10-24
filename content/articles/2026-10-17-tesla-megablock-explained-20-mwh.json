@@ -32,12 +32,12 @@
   "label": {
     "style": "a",
     "en": {
-      "sub": "WHY",
-      "text": "4 MEGAPACKS IN 1 BLOCK?"
+      "sub": "WHY 4 MEGAPACKS",
+      "text": "IN 1 BLOCK?"
     },
     "nl": {
-      "sub": "WAAROM",
-      "text": "4 MEGAPACKS IN 1 BLOK?"
+      "sub": "MEGABLOCK",
+      "text": "WAAROM 4 IN 1?"
     }
   }
 }

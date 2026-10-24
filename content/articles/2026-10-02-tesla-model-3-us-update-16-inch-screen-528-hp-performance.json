@@ -30,12 +30,12 @@
   "label": {
     "style": "a",
     "en": {
-      "sub": "MODEL 3 IN THE US",
-      "text": "16-INCH SCREEN, 528 HP"
+      "sub": "US MODEL 3",
+      "text": "16\" SCREEN, 528 HP"
     },
     "nl": {
       "sub": "MODEL 3 IN VS",
-      "text": "16-INCH SCHERM, 528 PK"
+      "text": "16\" SCHERM, 528 PK"
     }
   }
 }

@@ -31,12 +31,12 @@
   "label": {
     "style": "a",
     "en": {
-      "sub": "Q3 DELIVERIES",
-      "text": "24,500 ABOVE FORECAST!"
+      "sub": "Q3 TOPS FORECAST",
+      "text": "BY 24,500 CARS!"
     },
     "nl": {
-      "sub": "Q3-LEVERINGEN",
-      "text": "24.500 BOVEN PROGNOSE!"
+      "sub": "Q3 BOVEN RAMING",
+      "text": "+24.500 AUTO'S!"
     }
   }
 }

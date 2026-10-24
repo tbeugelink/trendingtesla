@@ -30,12 +30,12 @@
   "label": {
     "style": "a",
     "en": {
-      "sub": "BARCLAYS",
-      "text": "DEAL BEFORE DECEMBER?"
+      "sub": "BARCLAYS: MERGER",
+      "text": "BEFORE DECEMBER?"
     },
     "nl": {
-      "sub": "BARCLAYS",
-      "text": "FUSIE VÓÓR DECEMBER?"
+      "sub": "BARCLAYS: FUSIE",
+      "text": "VÓÓR DECEMBER?"
     }
   }
 }

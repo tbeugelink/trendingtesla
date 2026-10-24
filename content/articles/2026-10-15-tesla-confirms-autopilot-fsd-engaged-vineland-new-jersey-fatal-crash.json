@@ -33,11 +33,11 @@
     "style": "a",
     "en": {
       "sub": "FATAL CRASH",
-      "text": "AUTOPILOT OR FSD ON"
+      "text": "AUTOPILOT OR FSD"
     },
     "nl": {
       "sub": "DODELIJK ONGELUK",
-      "text": "AUTOPILOT OF FSD AAN"
+      "text": "AUTOPILOT OF FSD"
     }
   }
 }

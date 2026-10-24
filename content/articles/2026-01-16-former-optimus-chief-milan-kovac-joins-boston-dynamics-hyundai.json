@@ -29,12 +29,12 @@
   "label": {
     "style": "a",
     "en": {
-      "sub": "EX-OPTIMUS BOSS",
-      "text": "JOINS BOSTON DYNAMICS"
+      "sub": "OPTIMUS BOSS TO",
+      "text": "BOSTON DYNAMICS!"
     },
     "nl": {
-      "sub": "OUD-OPTIMUSBAAS",
-      "text": "NAAR BOSTON DYNAMICS"
+      "sub": "OPTIMUSBAAS NAAR",
+      "text": "BOSTON DYNAMICS!"
     }
   }
 }

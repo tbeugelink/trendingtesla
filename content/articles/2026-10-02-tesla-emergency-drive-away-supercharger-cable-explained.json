@@ -39,12 +39,12 @@
   "label": {
     "style": "a",
     "en": {
-      "sub": "EMERGENCY ONLY",
-      "text": "DRIVE OFF PLUGGED IN"
+      "sub": "EMERGENCY: DRIVE",
+      "text": "OFF PLUGGED IN"
     },
     "nl": {
-      "sub": "ALLEEN IN NOOD",
-      "text": "WEGRIJDEN MET KABEL!"
+      "sub": "NOOD: WEGRIJDEN",
+      "text": "MET KABEL ERIN!"
     }
   }
 }

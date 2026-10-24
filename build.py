@@ -349,7 +349,7 @@ article .st{font-size:clamp(1.05rem,2vw,1.3rem);line-height:1.22;letter-spacing:
 .smeta{margin:0 0 14px;font-size:.88rem}.smeta a.tag{color:var(--blue)}.smeta a.tag:hover{color:var(--blue2)}
 .sideh{font-size:.7rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--blue);margin:11px 0 -2px;padding-top:9px;border-top:1px solid var(--border2)}
 .hi,.th,.im{position:relative}.hi{margin:0 0 8px}.hi .hero-img{margin:0}
-.dur{display:inline-flex;align-items:center;gap:4px;position:absolute;right:8px;bottom:8px;background:rgba(0,0,0,.8);color:#fff;font-size:.74rem;font-weight:700;line-height:1;padding:4px 6px;border-radius:7px;cursor:help}.agotip{position:fixed;z-index:60;pointer-events:none;background:rgba(0,0,0,.88);color:#fff;font-size:.74rem;font-weight:700;line-height:1;padding:5px 7px;border-radius:7px;white-space:nowrap}time.ago{cursor:help}.th .dur{right:6px;bottom:6px;font-size:.68rem;padding:3px 5px}.th .dur svg{width:12px;height:12px}
+.dur{display:inline-flex;align-items:center;gap:4px;position:absolute;right:8px;bottom:8px;background:rgba(0,0,0,.8);color:#fff;font-size:.74rem;font-weight:700;line-height:1;padding:4px 6px;border-radius:7px;cursor:help}.agotip{position:fixed;z-index:60;pointer-events:none;background:rgba(0,0,0,.88);color:#fff;font-size:.74rem;font-weight:700;line-height:1;padding:5px 7px;border-radius:7px;white-space:nowrap}time.ago{cursor:help}.im,.th,.hi{container-type:inline-size}.kk{position:absolute;left:clamp(6px,3cqw,16px);bottom:clamp(6px,3cqw,16px);z-index:2;pointer-events:none;max-width:calc(100% - 96px);line-height:.95;font-family:Inter,Manrope,system-ui,sans-serif;font-weight:900;letter-spacing:-.01em;text-transform:uppercase;overflow-wrap:break-word}.kk.y{color:#ffd400;text-shadow:-2px -2px 0 #d61a1a,2px -2px 0 #d61a1a,-2px 2px 0 #d61a1a,2px 2px 0 #d61a1a,0 2px 0 #d61a1a,0 -2px 0 #d61a1a,2px 0 0 #d61a1a,-2px 0 0 #d61a1a,0 4px 10px rgba(0,0,0,.45);font-size:clamp(15px,7.4cqw,46px)}.kk.w{color:#fff;font-size:clamp(13px,6.4cqw,40px);text-shadow:0 2px 12px rgba(0,0,0,.6)}.kk.w span{background:#d61a1a;padding:.08em .24em .03em;-webkit-box-decoration-break:clone;box-decoration-break:clone}.kk.tag{top:clamp(6px,3cqw,14px);bottom:auto;max-width:calc(100% - 20px);font-size:clamp(10px,3.4cqw,16px);letter-spacing:.06em;background:#ffd400;color:#111;padding:.38em .62em .3em;border-radius:5px;box-shadow:0 2px 8px rgba(0,0,0,.35)}.kk.n{font-size:clamp(18px,9.5cqw,60px);color:#ffd400;text-shadow:0 3px 14px rgba(0,0,0,.7),0 0 2px #000}.kk.n small{display:block;font-size:.36em;letter-spacing:.03em;color:#fff;margin-top:.22em;text-transform:none;font-weight:800;line-height:1.1}.th .dur{right:6px;bottom:6px;font-size:.68rem;padding:3px 5px}.th .dur svg{width:12px;height:12px}
 /* buttons, labels */
 .btn{display:inline-flex;align-items:center;justify-content:center;background:var(--red);color:#fff;font-weight:800;font-size:.9rem;padding:11px 20px;border-radius:7px;text-decoration:none;transition:background .2s}
 .btn:hover{background:var(--red2)}
@@ -548,6 +548,14 @@ def candidates(a):
     out = []
     if a.get("image") and (STATIC / "img" / a["image"]).exists():
         out.append(f"/img/{a['image']}")
+    pics = [x if "/" in x else f"topics/{x}" for x in a.get("images", [])]
+    pics = [f"/img/{x}" for x in pics if (STATIC / "img" / x).exists()]
+    if pics:
+        r = PHOTO_ORDER.get(a["slug"], 0) % len(pics)
+        out += pics[r:] + pics[:r]
+        out.append(f"/img/v/{a['slug']}.jpg")
+        seen = set()
+        return [x for x in out if not (x in seen or seen.add(x))]
     for k in a.get("models", []):
         m = MODELS[k]
         gal = m.get("gallery") or MODELS.get(m.get("parent", ""), {}).get("gallery") or []
@@ -743,7 +751,7 @@ def story(a, lang, tag="h1"):
     title = esc(t["title"]) if tag == "h1" else f'<a href="{url(lang, a["slug"] + "/")}">{esc(t["title"])}</a>'
     toc, body = enrich(a, lang)
     return (f'<article>'
-            f'<div class="hi"><img class="hero-img" src="{site_img(a)}" alt="{esc(t["title"])}" width="1200" height="630" fetchpriority="high">{dur(a, lang)}</div>'
+            f'<div class="hi"><img class="hero-img" src="{site_img(a)}" alt="{esc(t["title"])}" width="1200" height="630" fetchpriority="high">{dur(a, lang)}{ovl(a, lang)}</div>'
             f'<{tag} class="st">{title}</{tag}>'
             f'<div class="srow"><p class="meta smeta"><a class="tag" href="{url(lang, "category/" + a["category"] + "/")}">{c.get("tag", c[lang])}</a> · {when(a, lang)}</p>'
             f'<div class="acts"><button class="act like" type="button" data-like="{a["slug"]}" aria-pressed="false" title="{L["like"]}">{HEART_SVG}<span>0</span></button>'
@@ -1039,7 +1047,7 @@ def card(a, lang, lead=False):
     t = a[lang]
     cls = "card lead" if lead else "card"
     return (f'<a class="{cls}" href="{url(lang, a["slug"] + "/")}">'
-            f'<div class="im"><img src="{site_img(a)}" alt="" width="1200" height="630" loading="lazy" decoding="async">{dur(a, lang)}</div>'
+            f'<div class="im"><img src="{site_img(a)}" alt="" width="1200" height="630" loading="lazy" decoding="async">{dur(a, lang)}{ovl(a, lang)}</div>'
             f'<div class="body">{label(a, lang)} <span class="meta">· {when(a, lang)}</span>'
             f'<h3>{esc(t["title"])}</h3><p>{esc(t["description"])}</p></div></a>')
 
@@ -1048,9 +1056,25 @@ def gcard(a, lang):
     """Topic list under the lead: photo on top, then title, summary and date."""
     t = a[lang]
     return (f'<a class="card" href="{url(lang, a["slug"] + "/")}">'
-            f'<div class="im"><img src="{site_img(a)}" alt="" width="1200" height="630" loading="lazy" decoding="async">{dur(a, lang)}</div>'
+            f'<div class="im"><img src="{site_img(a)}" alt="" width="1200" height="630" loading="lazy" decoding="async">{dur(a, lang)}{ovl(a, lang)}</div>'
             f'<div class="body"><h3>{esc(t["title"])}</h3><p>{esc(t["description"])}</p>'
             f'<span class="meta">{when(a, lang)}</span></div></a>')
+
+
+def ovl(a, lang):
+    """Short headline label on the photo (style y / w / n / tag), set per article in "label"."""
+    lb = a.get("label")
+    if not lb or not lb.get(lang, {}).get("text"):
+        return ""
+    st, t = lb.get("style", "y"), lb[lang]
+    txt = esc(t["text"])
+    if st == "n":
+        inner = txt + (f'<small>{esc(t["sub"])}</small>' if t.get("sub") else "")
+    elif st == "w":
+        inner = f'<span>{txt}</span>'
+    else:
+        inner = txt
+    return f'<div class="kk {st}" aria-hidden="true">{inner}</div>'
 
 
 def dur(a, lang):
@@ -1065,7 +1089,7 @@ def dur(a, lang):
 def mini(a, lang):
     t = a[lang]
     return (f'<a class="mini" href="{url(lang, a["slug"] + "/")}">'
-            f'<div class="th"><img src="{site_img(a)}" alt="" width="1200" height="630" loading="lazy" decoding="async">{dur(a, lang)}</div>'
+            f'<div class="th"><img src="{site_img(a)}" alt="" width="1200" height="630" loading="lazy" decoding="async">{dur(a, lang)}{ovl(a, lang)}</div>'
             f'<div><h3>{esc(t["title"])}</h3><p class="mdesc">{esc(t["description"])}</p><span class="meta">{when(a, lang)}</span></div></a>')
 
 

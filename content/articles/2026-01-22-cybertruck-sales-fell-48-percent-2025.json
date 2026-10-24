@@ -27,14 +27,14 @@
   "body": "<p>De Cybertruck moest een hit worden. In 2025 ging het de andere kant op. Volgens schattingen van Cox Automotive daalde de Amerikaanse verkoop van Tesla's roestvrijstalen pick-up flink.</p><h2>De cijfers</h2><ul><li><strong>2024:</strong> 38.965 Cybertrucks verkocht in de VS.</li><li><strong>2025:</strong> 20.237, een daling van 48%.</li><li><strong>Vierde kwartaal 2025:</strong> ongeveer 4.140, 68% minder dan een jaar eerder.</li></ul><p>Ter vergelijking: Elon Musk voorspelde ooit een jaarverkoop van 250.000 tot 500.000. Tesla meldt de Cybertruck-verkoop zelf niet apart, dus dit zijn schattingen van buitenaf.</p><h2>De oorzaken</h2><ul><li><strong>Prijs:</strong> de Cybertruck werd in 2019 gepresenteerd met een vanafprijs van $39.900. Bij de introductie lagen de prijzen veel hoger, waardoor hij voor veel kopers onbereikbaar werd.</li><li><strong>Belastingkorting:</strong> de Amerikaanse federale korting van $7.500 op elektrische auto's verdween in 2025, waardoor elektrisch rijden duurder werd.</li><li><strong>Politiek:</strong> analisten wijzen op de imagoschade door Musks politieke rol. Een studie van Yale schatte dat Tesla daardoor tussen 2022 en 2025 veel verkopen misliep.</li><li><strong>Terugroepacties:</strong> meerdere terugroepacties, onder meer voor loszittende sierpanelen, schaadden het vertrouwen.</li><li><strong>Een nicheproduct:</strong> het polariserende ontwerp en het formaat beperken de aantrekkingskracht, en in Europa mag hij niet worden verkocht.</li></ul><h2>De bredere markt</h2><p>De Amerikaanse verkoop van elektrische auto's daalde in 2025 in totaal met ongeveer 2%, en die van Tesla in de VS met 7%. De daling van de Cybertruck was veruit de sterkste van alle grote elektrische modellen.</p><h2>Tesla's reactie</h2><p>Tesla is de Cybertruck in het Midden-Oosten gaan verkopen en heeft de prijzen verlaagd om nieuwe kopers te trekken. Of dat de verkoop kan keren, is de grote vraag voor 2026.</p>"
  },
  "label": {
-  "style": "n",
+  "style": "r",
+  "pos": "bl",
+  "rot": 0,
   "en": {
-   "text": "-48%",
-   "sub": "US sales in 2025"
+   "text": "CYBERTRUCK SALES -48%"
   },
   "nl": {
-   "text": "-48%",
-   "sub": "VS-verkoop in 2025"
+   "text": "CYBERTRUCK-VERKOOP -48%"
   }
  }
 }

@@ -32,12 +32,16 @@
   "musk-1.jpg"
  ],
  "label": {
-  "style": "w",
+  "style": "k",
+  "pos": "tl",
+  "rot": 0,
   "en": {
-   "text": "SUITS BELONG IN TEXAS"
+   "sub": "RULING",
+   "text": "SUITS SENT TO TEXAS"
   },
   "nl": {
-   "text": "ZAKEN HOREN IN TEXAS"
+   "sub": "UITSPRAAK",
+   "text": "ZAKEN NAAR TEXAS"
   }
  }
 }

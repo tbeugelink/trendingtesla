@@ -37,12 +37,14 @@
   "tunnel-6.jpg"
  ],
  "label": {
-  "style": "y",
+  "style": "r",
+  "pos": "bl",
+  "rot": 2,
   "en": {
-   "text": "STILL SAFETY DRIVERS"
+   "text": "DRIVERLESS? NOT YET"
   },
   "nl": {
-   "text": "NOG ALTIJD BESTUURDERS"
+   "text": "ZELFRIJDEND? NOG NIET"
   }
  }
 }

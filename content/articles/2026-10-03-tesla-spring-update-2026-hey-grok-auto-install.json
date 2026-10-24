@@ -28,12 +28,14 @@
   "grok-1.jpg"
  ],
  "label": {
-  "style": "c",
+  "style": "y",
+  "pos": "bl",
+  "rot": -2,
   "en": {
-   "text": "The 2026 Spring Update"
+   "text": "HEY GROK & AUTO-UPDATES"
   },
   "nl": {
-   "text": "De Spring Update van 2026"
+   "text": "HEY GROK & AUTO-UPDATES"
   }
  }
 }

@@ -32,14 +32,16 @@
   "energy-6.jpg"
  ],
  "label": {
-  "style": "n",
+  "style": "k",
+  "pos": "bl",
+  "rot": 0,
   "en": {
-   "text": "35 YEARS",
-   "sub": "tax breaks could last"
+   "sub": "TAX BREAKS",
+   "text": "4-0 FOR SOLAR FACTORY!"
   },
   "nl": {
-   "text": "35 JAAR",
-   "sub": "belastingvoordeel max."
+   "sub": "BELASTINGKORTING",
+   "text": "4-0 VOOR ZONNEFABRIEK!"
   }
  }
 }

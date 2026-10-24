@@ -25,13 +25,15 @@
  },
  "label": {
   "style": "n",
+  "pos": "bl",
+  "rot": 0,
   "en": {
    "text": "$16.8B",
-   "sub": "initial chip fab budget"
+   "sub": "OWN CHIP FACTORY"
   },
   "nl": {
    "text": "$16,8 mld",
-   "sub": "startbudget chipfabriek"
+   "sub": "EIGEN CHIPFABRIEK"
   }
  }
 }

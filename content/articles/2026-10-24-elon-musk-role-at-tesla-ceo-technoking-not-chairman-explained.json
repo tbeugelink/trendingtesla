@@ -36,12 +36,14 @@
   "musk-2.jpg"
  ],
  "label": {
-  "style": "c",
+  "style": "w",
+  "pos": "bl",
+  "rot": 0,
   "en": {
-   "text": "Musk's role at Tesla"
+   "text": "CEO, YES. CHAIRMAN, NO"
   },
   "nl": {
-   "text": "De rol van Musk bij Tesla"
+   "text": "CEO WEL, VOORZITTER NIET"
   }
  }
 }

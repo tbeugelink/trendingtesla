@@ -30,13 +30,15 @@
  ],
  "label": {
   "style": "n",
+  "pos": "bl",
+  "rot": 0,
   "en": {
-   "text": "25 GWh",
-   "sub": "Megapack deal"
+   "sub": "ORDER FOR UK AND ITALY",
+   "text": "25 GWh"
   },
   "nl": {
-   "text": "25 GWh",
-   "sub": "Megapack-deal"
+   "sub": "ORDER VOOR VK EN ITALIË",
+   "text": "25 GWh"
   }
  }
 }

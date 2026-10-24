@@ -29,12 +29,14 @@
   "earnings-3.jpg"
  ],
  "label": {
-  "style": "w",
+  "style": "y",
+  "pos": "tl",
+  "rot": 0,
   "en": {
-   "text": "DEALS WITH MUSK FIRMS"
+   "text": "ALL DEALS WITH MUSK FIRMS"
   },
   "nl": {
-   "text": "ZAKEN MET MUSK-FIRMA'S"
+   "text": "ALLE DEALS MET MUSK-FIRMA'S"
   }
  }
 }

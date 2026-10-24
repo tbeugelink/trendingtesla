@@ -32,12 +32,14 @@
   "starlink-car-1.jpg"
  ],
  "label": {
-  "style": "w",
+  "style": "s",
+  "pos": "bl",
+  "rot": -3,
   "en": {
-   "text": "WHAT STARLINK COSTS"
+   "text": "+$5-10 A MONTH!"
   },
   "nl": {
-   "text": "DIT KOST STARLINK"
+   "text": "+$5-10 PER MAAND!"
   }
  }
 }

@@ -32,11 +32,13 @@
  "image": "models/msc-2.jpg",
  "label": {
   "style": "y",
+  "pos": "ml",
+  "rot": 0,
   "en": {
-   "text": "FINALLY FSD V14 LITE"
+   "text": "OLD S/X GET FSD V14!"
   },
   "nl": {
-   "text": "EINDELIJK FSD V14 LITE"
+   "text": "OUDE S/X KRIJGT FSD V14!"
   }
  }
 }

@@ -31,13 +31,15 @@
  ],
  "label": {
   "style": "n",
+  "pos": "bl",
+  "rot": 0,
   "en": {
-   "text": "85,000",
-   "sub": "Supercharger stalls"
+   "sub": "STALLS AT 9,000+ SITES",
+   "text": "85,000"
   },
   "nl": {
-   "text": "85.000",
-   "sub": "Superchargerpalen"
+   "sub": "PALEN, 9.000+ LOCATIES",
+   "text": "85.000"
   }
  }
 }

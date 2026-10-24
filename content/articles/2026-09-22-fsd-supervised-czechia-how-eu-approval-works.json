@@ -29,14 +29,16 @@
   "fsd-4.jpg"
  ],
  "label": {
-  "style": "n",
+  "style": "k",
+  "pos": "tl",
+  "rot": 0,
   "en": {
-   "text": "7TH",
-   "sub": "EU country with FSD"
+   "sub": "7TH COUNTRY",
+   "text": "CZECHIA, THEN ALL EU?"
   },
   "nl": {
-   "text": "7E",
-   "sub": "EU-land met FSD"
+   "sub": "7E LAND",
+   "text": "TSJECHIË, DAN HELE EU?"
   }
  }
 }

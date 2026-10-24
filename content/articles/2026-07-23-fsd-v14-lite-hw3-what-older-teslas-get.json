@@ -32,12 +32,16 @@
   "fsd-3.jpg"
  ],
  "label": {
-  "style": "y",
+  "style": "k",
+  "pos": "tl",
+  "rot": 0,
   "en": {
-   "text": "HW3: AT ITS LIMIT"
+   "sub": "FSD V14 LITE",
+   "text": "HW3 HITS ITS CEILING"
   },
   "nl": {
-   "text": "HW3 ZIT AAN ZIJN MAX"
+   "sub": "FSD V14 LITE",
+   "text": "HW3 ZIT AAN ZIJN PLAFOND"
   }
  }
 }

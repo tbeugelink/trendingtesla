@@ -25,12 +25,14 @@
  },
  "image": "topics/optimus-office.jpg",
  "label": {
-  "style": "c",
+  "style": "w",
+  "pos": "tr",
+  "rot": 0,
   "en": {
-   "text": "Less memory on AI5 and AI6"
+   "text": "LESS MEMORY, MORE ROBOTS"
   },
   "nl": {
-   "text": "Minder geheugen in AI5 en AI6"
+   "text": "MINDER GEHEUGEN, MEER ROBOTS"
   }
  }
 }

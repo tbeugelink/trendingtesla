@@ -32,12 +32,14 @@
   "grok-2.jpg"
  ],
  "label": {
-  "style": "tag",
+  "style": "s",
+  "pos": "bl",
+  "rot": -3,
   "en": {
-   "text": "NEW NAME"
+   "text": "AI BECOMES SI!?"
   },
   "nl": {
-   "text": "NIEUWE NAAM"
+   "text": "AI WORDT SI!?"
   }
  }
 }

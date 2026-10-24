@@ -29,11 +29,13 @@
  ],
  "label": {
   "style": "w",
+  "pos": "bl",
+  "rot": 0,
   "en": {
-   "text": "CYBERCAB CHIEF LEAVES"
+   "text": "CYBERCAB BOSS TO RIVIAN"
   },
   "nl": {
-   "text": "CYBERCAB-BAAS VERTREKT"
+   "text": "CYBERCAB-BAAS NAAR RIVIAN"
   }
  }
 }

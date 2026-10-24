@@ -27,12 +27,14 @@
   "body": "<p>Tesla heeft opnieuw een terugroepactie voor de Cybertruck, dit keer een kleine. Hij volgt op een jaar waarin de truck meer terugroepacties had dan ooit.</p><h2>De nieuwe terugroepactie</h2><ul><li><strong>Voertuigen:</strong> 173 Cybertrucks van modeljaar 2024 tot en met 2026.</li><li><strong>Welke:</strong> trucks met stalen 18-inch velgen.</li><li><strong>Het probleem:</strong> de boutgaten in de remschijf kunnen scheuren, waardoor een wielbout los kan komen van de naaf.</li><li><strong>De oplossing:</strong> Tesla Service vervangt gratis de remschijven, naven en wielmoeren voor en achter.</li><li><strong>Brieven:</strong> eigenaren krijgen vanaf 20 juni 2026 bericht per post.</li></ul><h2>De golf van 2025</h2><p>In 2025 gingen Tesla's meldingen bij de Amerikaanse verkeersveiligheidsdienst NHTSA over 115.912 Cybertrucks, verdeeld over drie terugroepacties:</p><ul><li>Een roestvrijstalen sierpaneel langs de dakrand dat tijdens het rijden los kon raken.</li><li>Een softwarefout waardoor de parkeerlichten voor feller brandden dan toegestaan, opgelost via een update.</li><li>Een optionele lichtbalk voor offroadgebruik.</li></ul><p>Dat aantal is het maximale aantal trucks dat geraakt kan zijn, niet het aantal dat echt een probleem had. Meerdere acties kunnen over dezelfde truck gaan.</p><h2>Wat eigenaren moeten doen</h2><ul><li>Controleer je truck in de Tesla-app of met je VIN in de terugroepdatabase van de NHTSA.</li><li>Plan de reparatie via de app als je truck eronder valt; reparaties bij terugroepacties zijn gratis.</li><li>Softwareproblemen worden meestal automatisch opgelost met een update via internet.</li></ul><h2>Waarom het ertoe doet</h2><p>Terugroepacties komen vaak voor bij nieuwe ontwerpen, en veel ervan zijn klein. Maar voor een truck die al last heeft van dalende verkopen, voedt elke actie de twijfel over de kwaliteit. Dat Tesla veel problemen via internet kan oplossen, beperkt wel de gevolgen voor eigenaren.</p>"
  },
  "label": {
-  "style": "tag",
+  "style": "r",
+  "pos": "bl",
+  "rot": 2,
   "en": {
-   "text": "RECALL"
+   "text": "173 CYBERTRUCKS RECALLED"
   },
   "nl": {
-   "text": "TERUGROEPACTIE"
+   "text": "173 CYBERTRUCKS TERUGGEROEPEN"
   }
  }
 }

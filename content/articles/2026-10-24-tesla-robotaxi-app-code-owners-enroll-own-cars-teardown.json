@@ -28,12 +28,14 @@
   "robotaxi-my-1.jpg"
  ],
  "label": {
-  "style": "w",
+  "style": "s",
+  "pos": "tr",
+  "rot": -3,
   "en": {
-   "text": "YOUR CAR IN THE FLEET?"
+   "text": "YOUR TESLA AS ROBOTAXI?"
   },
   "nl": {
-   "text": "JOUW AUTO IN DE VLOOT?"
+   "text": "JOUW TESLA ALS ROBOTAXI?"
   }
  }
 }

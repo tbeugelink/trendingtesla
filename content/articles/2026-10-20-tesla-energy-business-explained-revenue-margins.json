@@ -30,12 +30,14 @@
   "energy-2.jpg"
  ],
  "label": {
-  "style": "c",
+  "style": "y",
+  "pos": "bl",
+  "rot": 2,
   "en": {
-   "text": "Tesla Energy explained"
+   "text": "TESLA'S QUIET CASH COW"
   },
   "nl": {
-   "text": "Tesla Energy uitgelegd"
+   "text": "TESLA'S STILLE MELKKOE"
   }
  }
 }

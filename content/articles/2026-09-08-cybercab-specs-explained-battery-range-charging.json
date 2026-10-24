@@ -28,12 +28,14 @@
  },
  "image": "topics/cybercab-interior.jpg",
  "label": {
-  "style": "c",
+  "style": "y",
+  "pos": "ml",
+  "rot": 2,
   "en": {
-   "text": "Cybercab specs explained"
+   "text": "48 KWH, NO AC CHARGING"
   },
   "nl": {
-   "text": "De Cybercab uitgelegd"
+   "text": "48 KWH, GEEN AC-LADEN"
   }
  }
 }

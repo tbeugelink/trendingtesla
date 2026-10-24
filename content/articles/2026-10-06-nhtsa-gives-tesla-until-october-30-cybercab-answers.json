@@ -28,14 +28,16 @@
  },
  "image": "models/cc-2.jpg",
  "label": {
-  "style": "n",
+  "style": "k",
+  "pos": "bl",
+  "rot": 0,
   "en": {
-   "text": "30 DAYS",
-   "sub": "to answer NHTSA"
+   "sub": "NHTSA",
+   "text": "ASKED 8 WEEKS, GOT 30 DAYS"
   },
   "nl": {
-   "text": "30 DAGEN",
-   "sub": "om NHTSA te antwoorden"
+   "sub": "NHTSA",
+   "text": "8 WEKEN GEVRAAGD, 30 DAGEN"
   }
  }
 }

@@ -28,12 +28,16 @@
   "supercharger-2.jpg"
  ],
  "label": {
-  "style": "c",
+  "style": "k",
+  "pos": "tl",
+  "rot": 0,
   "en": {
-   "text": "Supercharging any EV"
+   "sub": "STEP BY STEP",
+   "text": "NO TESLA? CHARGE ANYWAY"
   },
   "nl": {
-   "text": "Elke EV aan de Supercharger"
+   "sub": "STAP VOOR STAP",
+   "text": "GEEN TESLA? TOCH LADEN"
   }
  }
 }

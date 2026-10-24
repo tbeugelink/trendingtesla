@@ -28,12 +28,16 @@
   "earnings-4.jpg"
  ],
  "label": {
-  "style": "c",
+  "style": "k",
+  "pos": "bl",
+  "rot": 0,
   "en": {
-   "text": "Who sits on Tesla's board"
+   "sub": "TESLA BOARD",
+   "text": "HOW INDEPENDENT?"
   },
   "nl": {
-   "text": "Wie zitten in Teslas bestuur"
+   "sub": "TESLA-BESTUUR",
+   "text": "HOE ONAFHANKELIJK?"
   }
  }
 }

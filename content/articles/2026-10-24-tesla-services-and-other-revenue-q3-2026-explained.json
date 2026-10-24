@@ -33,12 +33,14 @@
   "supercharger-2.jpg"
  ],
  "label": {
-  "style": "w",
+  "style": "s",
+  "pos": "tl",
+  "rot": -3,
   "en": {
-   "text": "QUIET GROWTH ENGINE"
+   "text": "SERVICES +33%!"
   },
   "nl": {
-   "text": "STILLE GROEIMOTOR"
+   "text": "DIENSTEN +33%!"
   }
  }
 }

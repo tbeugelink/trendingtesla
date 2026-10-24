@@ -28,12 +28,14 @@
   "fsd.jpg"
  ],
  "label": {
-  "style": "tag",
+  "style": "w",
+  "pos": "tr",
+  "rot": -2,
   "en": {
-   "text": "NEW MAPS"
+   "text": "NEW MAPS FOR US & CANADA"
   },
   "nl": {
-   "text": "NIEUWE KAARTEN"
+   "text": "NIEUWE KAARTEN VS & CANADA"
   }
  }
 }

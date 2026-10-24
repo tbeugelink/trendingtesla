@@ -36,11 +36,13 @@
  ],
  "label": {
   "style": "y",
+  "pos": "ml",
+  "rot": 2,
   "en": {
-   "text": "FLYING ROADSTER?"
+   "text": "A ROADSTER THAT HOPS!?"
   },
   "nl": {
-   "text": "VLIEGENDE ROADSTER?"
+   "text": "EEN ROADSTER DIE SPRINGT!?"
   }
  }
 }

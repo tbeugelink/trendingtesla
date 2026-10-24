@@ -29,12 +29,14 @@
  },
  "image": "models/m3h-3.jpg",
  "label": {
-  "style": "tag",
+  "style": "w",
+  "pos": "ml",
+  "rot": 2,
   "en": {
-   "text": "BUYING GUIDE"
+   "text": "HW3 OR HW4? IT MATTERS"
   },
   "nl": {
-   "text": "KOOPGIDS"
+   "text": "HW3 OF HW4? DAT TELT"
   }
  }
 }

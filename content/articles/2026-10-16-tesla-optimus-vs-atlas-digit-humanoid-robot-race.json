@@ -30,11 +30,13 @@
  ],
  "label": {
   "style": "y",
+  "pos": "tl",
+  "rot": 3,
   "en": {
-   "text": "WHO LEADS?"
+   "text": "WHO LEADS THE ROBOT RACE?"
   },
   "nl": {
-   "text": "WIE LOOPT VOOROP?"
+   "text": "WIE LEIDT DE ROBOTRACE?"
   }
  }
 }

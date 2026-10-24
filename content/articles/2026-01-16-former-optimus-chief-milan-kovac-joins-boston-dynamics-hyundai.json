@@ -28,11 +28,13 @@
  ],
  "label": {
   "style": "w",
+  "pos": "tl",
+  "rot": 0,
   "en": {
-   "text": "TO BOSTON DYNAMICS"
+   "text": "EX-OPTIMUS CHIEF TO RIVAL"
   },
   "nl": {
-   "text": "NAAR BOSTON DYNAMICS"
+   "text": "EX-OPTIMUSBAAS NAAR RIVAAL"
   }
  }
 }

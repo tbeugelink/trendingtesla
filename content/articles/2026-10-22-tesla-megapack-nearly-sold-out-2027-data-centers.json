@@ -38,12 +38,14 @@
   "energy.jpg"
  ],
  "label": {
-  "style": "w",
+  "style": "s",
+  "pos": "tl",
+  "rot": -3,
   "en": {
-   "text": "NEARLY SOLD OUT"
+   "text": "2027 NEARLY SOLD OUT!"
   },
   "nl": {
-   "text": "BIJNA UITVERKOCHT"
+   "text": "2027 BIJNA UITVERKOCHT!"
   }
  }
 }

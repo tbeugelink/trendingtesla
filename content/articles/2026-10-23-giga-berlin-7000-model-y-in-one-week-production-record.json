@@ -32,11 +32,13 @@
  ],
  "label": {
   "style": "y",
+  "pos": "tl",
+  "rot": -2,
   "en": {
-   "text": "7,000 A WEEK"
+   "text": "7,000 IN ONE WEEK!"
   },
   "nl": {
-   "text": "7.000 PER WEEK"
+   "text": "7.000 IN ÉÉN WEEK!"
   }
  }
 }

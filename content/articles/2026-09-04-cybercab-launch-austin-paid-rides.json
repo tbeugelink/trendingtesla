@@ -36,12 +36,14 @@
   "cybercab-street.jpg"
  ],
  "label": {
-  "style": "y",
+  "style": "s",
+  "pos": "tr",
+  "rot": -3,
   "en": {
-   "text": "FIRST PAID RIDES"
+   "text": "FIRST PAID RIDES!"
   },
   "nl": {
-   "text": "EERSTE BETAALDE RITTEN"
+   "text": "EERSTE BETAALDE RITTEN!"
   }
  }
 }

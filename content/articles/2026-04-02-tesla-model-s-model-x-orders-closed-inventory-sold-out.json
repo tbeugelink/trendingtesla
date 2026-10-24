@@ -29,12 +29,14 @@
  },
  "image": "models/mx-4.jpg",
  "label": {
-  "style": "c",
+  "style": "s",
+  "pos": "tr",
+  "rot": -3,
   "en": {
-   "text": "Model S and X orders closed"
+   "text": "LAST CALL: MODEL S & X!"
   },
   "nl": {
-   "text": "Model S en X uitverkocht"
+   "text": "LAATSTE KANS: S EN X!"
   }
  }
 }

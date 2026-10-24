@@ -28,11 +28,13 @@
  ],
  "label": {
   "style": "y",
+  "pos": "tl",
+  "rot": 3,
   "en": {
-   "text": "ARCTIC SUPERCHARGER"
+   "text": "ARCTIC SUPERCHARGER?"
   },
   "nl": {
-   "text": "BOVEN DE POOLCIRKEL"
+   "text": "LADEN BOVEN DE POOLCIRKEL?"
   }
  }
 }

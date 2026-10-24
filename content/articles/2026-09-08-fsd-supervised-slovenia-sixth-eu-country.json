@@ -29,11 +29,13 @@
  ],
  "label": {
   "style": "y",
+  "pos": "bl",
+  "rot": 2,
   "en": {
-   "text": "6TH EU COUNTRY"
+   "text": "FSD IN SLOVENIA TOO"
   },
   "nl": {
-   "text": "6E EU-LAND"
+   "text": "FSD OOK IN SLOVENIË"
   }
  }
 }

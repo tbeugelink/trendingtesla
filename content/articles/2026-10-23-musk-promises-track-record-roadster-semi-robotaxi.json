@@ -33,12 +33,14 @@
   "cybercab.jpg"
  ],
  "label": {
-  "style": "tag",
+  "style": "y",
+  "pos": "bl",
+  "rot": 0,
   "en": {
-   "text": "FACT CHECK"
+   "text": "LATE, BUT THEY ARRIVE"
   },
   "nl": {
-   "text": "FACTCHECK"
+   "text": "LAAT, MAAR HET KOMT"
   }
  }
 }

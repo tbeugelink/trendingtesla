@@ -37,13 +37,15 @@
  ],
  "label": {
   "style": "n",
+  "pos": "bl",
+  "rot": 0,
   "en": {
    "text": "$60B",
-   "sub": "Cursor deal closed"
+   "sub": "CURSOR DEAL CLOSED"
   },
   "nl": {
    "text": "$60 mld",
-   "sub": "Cursor-deal rond"
+   "sub": "CURSOR-DEAL ROND"
   }
  }
 }

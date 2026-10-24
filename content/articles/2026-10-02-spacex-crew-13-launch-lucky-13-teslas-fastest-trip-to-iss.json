@@ -32,12 +32,16 @@
   "spacex-1.jpg"
  ],
  "label": {
-  "style": "y",
+  "style": "n",
+  "pos": "bl",
+  "rot": 0,
   "en": {
-   "text": "LUCKY 13"
+   "text": "~8 HOURS",
+   "sub": "TO THE ISS, NASA RECORD"
   },
   "nl": {
-   "text": "LUCKY 13"
+   "text": "~8 UUR",
+   "sub": "NAAR ISS, NASA-RECORD"
   }
  }
 }

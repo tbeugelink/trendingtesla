@@ -30,12 +30,16 @@
   "megapack-1.jpg"
  ],
  "label": {
-  "style": "tag",
+  "style": "k",
+  "pos": "tl",
+  "rot": 0,
   "en": {
-   "text": "EXPLAINED"
+   "sub": "EXPLAINED",
+   "text": "4 MEGAPACKS IN 1 BLOCK"
   },
   "nl": {
-   "text": "UITGELEGD"
+   "sub": "UITGELEGD",
+   "text": "4 MEGAPACKS IN 1 BLOK"
   }
  }
 }

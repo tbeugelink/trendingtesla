@@ -30,12 +30,14 @@
   "energy-3.jpg"
  ],
  "label": {
-  "style": "y",
+  "style": "r",
+  "pos": "tr",
+  "rot": 0,
   "en": {
-   "text": "SOLAR ROOF GONE"
+   "text": "SOLAR ROOF IS GONE!"
   },
   "nl": {
-   "text": "SOLAR ROOF VERDWENEN"
+   "text": "EINDE VOOR SOLAR ROOF!"
   }
  }
 }

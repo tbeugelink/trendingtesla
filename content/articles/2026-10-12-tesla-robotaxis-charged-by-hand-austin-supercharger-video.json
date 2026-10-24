@@ -29,12 +29,14 @@
   "charge-port.jpg"
  ],
  "label": {
-  "style": "w",
+  "style": "r",
+  "pos": "bl",
+  "rot": -2,
   "en": {
-   "text": "PLUGGED IN BY HAND"
+   "text": "STILL PLUGGED IN BY HAND"
   },
   "nl": {
-   "text": "MET DE HAND INGEPLUGD"
+   "text": "NOG MET DE HAND INGEPLUGD"
   }
  }
 }

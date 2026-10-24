@@ -36,12 +36,14 @@
   "supercharger-6.jpg"
  ],
  "label": {
-  "style": "c",
+  "style": "w",
+  "pos": "tr",
+  "rot": 0,
   "en": {
-   "text": "NACS explained"
+   "text": "WHICH EVS CAN SUPERCHARGE?"
   },
   "nl": {
-   "text": "NACS uitgelegd"
+   "text": "WIE MAG SUPERCHARGEN?"
   }
  }
 }

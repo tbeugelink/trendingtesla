@@ -33,11 +33,13 @@
  ],
  "label": {
   "style": "y",
+  "pos": "tl",
+  "rot": -2,
   "en": {
-   "text": "200 MPH TUNNEL?"
+   "text": "200 MPH TO SAN ANTONIO?"
   },
   "nl": {
-   "text": "320 KM/U-TUNNEL?"
+   "text": "320 KM/U NAAR SAN ANTONIO?"
   }
  }
 }

@@ -31,13 +31,15 @@
  ],
  "label": {
   "style": "n",
+  "pos": "bl",
+  "rot": 0,
   "en": {
-   "text": "1,000",
-   "sub": "a week: year-end target"
+   "sub": "WEEKLY GOAL BY YEAR-END",
+   "text": "1,000"
   },
   "nl": {
-   "text": "1.000",
-   "sub": "per week: doel eind 2026"
+   "sub": "PER WEEK, DOEL EIND 2026",
+   "text": "1.000"
   }
  }
 }

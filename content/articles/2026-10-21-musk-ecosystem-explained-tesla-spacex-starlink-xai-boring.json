@@ -39,12 +39,14 @@
   "tunnel-6.jpg"
  ],
  "label": {
-  "style": "c",
+  "style": "y",
+  "pos": "bl",
+  "rot": -2,
   "en": {
-   "text": "How Musk's companies connect"
+   "text": "5 COMPANIES, 1 WEB"
   },
   "nl": {
-   "text": "Musks bedrijven op een rij"
+   "text": "5 BEDRIJVEN, 1 NETWERK"
   }
  }
 }

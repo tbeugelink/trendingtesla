@@ -32,12 +32,16 @@
   "starlink-1.jpg"
  ],
  "label": {
-  "style": "tag",
+  "style": "k",
+  "pos": "tr",
+  "rot": 0,
   "en": {
-   "text": "MORE SPECTRUM"
+   "sub": "FCC",
+   "text": "CARS ON STARLINK MOBILE?"
   },
   "nl": {
-   "text": "MEER FREQUENTIES"
+   "sub": "FCC",
+   "text": "AUTO'S OP STARLINK MOBILE?"
   }
  }
 }

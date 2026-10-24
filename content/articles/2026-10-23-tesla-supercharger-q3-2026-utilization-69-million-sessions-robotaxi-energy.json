@@ -33,12 +33,16 @@
   "supercharger.jpg"
  ],
  "label": {
-  "style": "w",
+  "style": "n",
+  "pos": "bl",
+  "rot": 0,
   "en": {
-   "text": "1 IN 200 WAITS"
+   "sub": "DRIVERS HAS TO WAIT",
+   "text": "1 IN 200"
   },
   "nl": {
-   "text": "1 OP 200 WACHT"
+   "sub": "BESTUURDERS MOET WACHTEN",
+   "text": "1 OP 200"
   }
  }
 }

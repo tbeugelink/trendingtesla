@@ -29,12 +29,14 @@
  ],
  "image": "models/myj-6.jpg",
  "label": {
-  "style": "y",
+  "style": "s",
+  "pos": "tr",
+  "rot": -3,
   "en": {
-   "text": "486,532 DELIVERED"
+   "text": "24,500 ABOVE FORECAST!"
   },
   "nl": {
-   "text": "486.532 GELEVERD"
+   "text": "24.500 BOVEN VERWACHTING!"
   }
  }
 }

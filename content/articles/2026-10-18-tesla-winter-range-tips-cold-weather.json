@@ -29,13 +29,15 @@
  ],
  "label": {
   "style": "n",
+  "pos": "tl",
+  "rot": 0,
   "en": {
-   "text": "9 TIPS",
-   "sub": "for winter range"
+   "sub": "FOR MORE RANGE IN WINTER",
+   "text": "9 TIPS"
   },
   "nl": {
-   "text": "9 TIPS",
-   "sub": "voor bereik in de winter"
+   "sub": "VOOR BEREIK IN DE WINTER",
+   "text": "9 TIPS"
   }
  }
 }

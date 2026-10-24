@@ -25,12 +25,14 @@
   "interior-1.jpg"
  ],
  "label": {
-  "style": "c",
+  "style": "y",
+  "pos": "bl",
+  "rot": 2,
   "en": {
-   "text": "The Summer Update explained"
+   "text": "GROK NOW MAKES CALLS"
   },
   "nl": {
-   "text": "De Summer Update uitgelegd"
+   "text": "GROK BELT NU VOOR JE"
   }
  }
 }

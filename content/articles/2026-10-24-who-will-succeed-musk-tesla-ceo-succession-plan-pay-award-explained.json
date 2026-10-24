@@ -37,8 +37,10 @@
  ],
  "label": {
   "style": "y",
+  "pos": "tr",
+  "rot": -2,
   "en": {
-   "text": "WHO COMES NEXT?"
+   "text": "WHO REPLACES MUSK?"
   },
   "nl": {
    "text": "WIE VOLGT MUSK OP?"

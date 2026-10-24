@@ -32,12 +32,14 @@
   "interior-2.jpg"
  ],
  "label": {
-  "style": "y",
+  "style": "w",
+  "pos": "tl",
+  "rot": 0,
   "en": {
-   "text": "IF THIS, THEN THAT"
+   "text": "PROGRAM YOUR OWN TESLA"
   },
   "nl": {
-   "text": "ALS DIT, DAN DAT"
+   "text": "PROGRAMMEER JE EIGEN TESLA"
   }
  }
 }

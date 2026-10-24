@@ -28,12 +28,14 @@
   "optimus-factory.jpg"
  ],
  "label": {
-  "style": "y",
+  "style": "s",
+  "pos": "ml",
+  "rot": -3,
   "en": {
-   "text": "ROBOTS TRAIN ROBOTS"
+   "text": "A SCHOOL FOR ROBOTS"
   },
   "nl": {
-   "text": "ROBOTS TRAINEN ROBOTS"
+   "text": "EEN SCHOOL VOOR ROBOTS"
   }
  }
 }

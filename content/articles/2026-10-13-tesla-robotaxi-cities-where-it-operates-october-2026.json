@@ -34,13 +34,15 @@
  ],
  "label": {
   "style": "n",
+  "pos": "bl",
+  "rot": 0,
   "en": {
-   "text": "6 CITIES",
-   "sub": "without a safety driver"
+   "sub": "NO SAFETY DRIVER",
+   "text": "6 CITIES"
   },
   "nl": {
-   "text": "6 STEDEN",
-   "sub": "zonder chauffeur"
+   "sub": "ZONDER BESTUURDER",
+   "text": "6 STEDEN"
   }
  }
 }

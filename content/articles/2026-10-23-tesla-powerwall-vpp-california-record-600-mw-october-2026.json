@@ -28,13 +28,15 @@
  ],
  "label": {
   "style": "n",
+  "pos": "bl",
+  "rot": 0,
   "en": {
-   "text": "601 MW",
-   "sub": "from home batteries"
+   "sub": "RECORD FROM POWERWALLS",
+   "text": "601 MW"
   },
   "nl": {
-   "text": "601 MW",
-   "sub": "uit thuisaccu's"
+   "sub": "RECORD UIT POWERWALLS",
+   "text": "601 MW"
   }
  }
 }

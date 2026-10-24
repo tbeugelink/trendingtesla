@@ -25,12 +25,14 @@
   "fsd-3.jpg"
  ],
  "label": {
-  "style": "y",
+  "style": "tag",
+  "pos": "tr",
+  "rot": 0,
   "en": {
-   "text": "FSD V14.3.11"
+   "text": "NEW: V14.3.11"
   },
   "nl": {
-   "text": "FSD V14.3.11"
+   "text": "NIEUW: V14.3.11"
   }
  }
 }

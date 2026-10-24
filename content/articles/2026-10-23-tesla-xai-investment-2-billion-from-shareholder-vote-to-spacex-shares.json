@@ -32,14 +32,14 @@
   "musk-1.jpg"
  ],
  "label": {
-  "style": "n",
+  "style": "y",
+  "pos": "tr",
+  "rot": 3,
   "en": {
-   "text": "$2B",
-   "sub": "now SpaceX shares"
+   "text": "VOTE FAILED, $2B ANYWAY!?"
   },
   "nl": {
-   "text": "$2 mld",
-   "sub": "nu SpaceX-aandelen"
+   "text": "NEE GESTEMD, TOCH $2 MLD!?"
   }
  }
 }

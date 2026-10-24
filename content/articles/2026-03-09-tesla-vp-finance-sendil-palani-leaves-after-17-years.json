@@ -28,12 +28,16 @@
   "musk-2.jpg"
  ],
  "label": {
-  "style": "w",
+  "style": "n",
+  "pos": "tl",
+  "rot": 0,
   "en": {
-   "text": "FINANCE VP LEAVES"
+   "sub": "FINANCE VP LEAVES TESLA",
+   "text": "17 YEARS"
   },
   "nl": {
-   "text": "FINANCIEEL VP VERTREKT"
+   "sub": "FINANCIEEL VP VERTREKT",
+   "text": "17 JAAR"
   }
  }
 }

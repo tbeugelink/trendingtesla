@@ -35,12 +35,14 @@
   "guide-papers.jpg"
  ],
  "label": {
-  "style": "tag",
+  "style": "w",
+  "pos": "tl",
+  "rot": 0,
   "en": {
-   "text": "EXPLAINED"
+   "text": "WARRANTY: WHAT'S COVERED?"
   },
   "nl": {
-   "text": "UITGELEGD"
+   "text": "GARANTIE: WAT DEKT HET?"
   }
  }
 }

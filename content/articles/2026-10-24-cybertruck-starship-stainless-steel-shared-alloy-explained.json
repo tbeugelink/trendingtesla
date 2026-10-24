@@ -40,12 +40,14 @@
   "models/ct-2.jpg"
  ],
  "label": {
-  "style": "w",
+  "style": "y",
+  "pos": "bl",
+  "rot": 2,
   "en": {
-   "text": "SAME STEEL"
+   "text": "SAME STEEL AS STARSHIP"
   },
   "nl": {
-   "text": "HETZELFDE STAAL"
+   "text": "ZELFDE STAAL ALS STARSHIP"
   }
  }
 }

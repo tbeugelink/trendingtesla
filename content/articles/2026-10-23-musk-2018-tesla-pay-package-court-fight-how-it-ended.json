@@ -28,12 +28,14 @@
   "earnings-3.jpg"
  ],
  "label": {
-  "style": "c",
+  "style": "s",
+  "pos": "bl",
+  "rot": -3,
   "en": {
-   "text": "How the pay case ended"
+   "text": "8-YEAR FIGHT OVER!"
   },
   "nl": {
-   "text": "Zo eindigde de beloningszaak"
+   "text": "8 JAAR STRIJD VOORBIJ!"
   }
  }
 }

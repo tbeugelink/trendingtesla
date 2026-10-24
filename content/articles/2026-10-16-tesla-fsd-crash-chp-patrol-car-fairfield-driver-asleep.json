@@ -31,12 +31,16 @@
   "fsd-3.jpg"
  ],
  "label": {
-  "style": "c",
+  "style": "k",
+  "pos": "tr",
+  "rot": 0,
   "en": {
-   "text": "FSD crash near Fairfield"
+   "sub": "FSD CRASH",
+   "text": "DRIVER SAYS HE SLEPT"
   },
   "nl": {
-   "text": "FSD-crash bij Fairfield"
+   "sub": "FSD-CRASH",
+   "text": "BESTUURDER ZEGT DAT HIJ SLIEP"
   }
  }
 }

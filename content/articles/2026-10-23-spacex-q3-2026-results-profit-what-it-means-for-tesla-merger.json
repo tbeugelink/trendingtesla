@@ -30,13 +30,15 @@
  ],
  "label": {
   "style": "n",
+  "pos": "bl",
+  "rot": 0,
   "en": {
    "text": "$4.4B",
-   "sub": "Q3 profit"
+   "sub": "PROFIT, MORE THAN TESLA"
   },
   "nl": {
    "text": "$4,4 mld",
-   "sub": "winst in Q3"
+   "sub": "WINST, MEER DAN TESLA"
   }
  }
 }

@@ -33,12 +33,16 @@
   "supercharger-6.jpg"
  ],
  "label": {
-  "style": "tag",
+  "style": "k",
+  "pos": "ml",
+  "rot": 0,
   "en": {
-   "text": "CANADA"
+   "sub": "CANADA",
+   "text": "BUY YOUR OWN SUPERCHARGER!"
   },
   "nl": {
-   "text": "CANADA"
+   "sub": "CANADA",
+   "text": "EIGEN SUPERCHARGER KOPEN!"
   }
  }
 }

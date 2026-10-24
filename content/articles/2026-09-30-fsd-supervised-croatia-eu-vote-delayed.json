@@ -29,12 +29,14 @@
   "fsd-2.jpg"
  ],
  "label": {
-  "style": "w",
+  "style": "r",
+  "pos": "bl",
+  "rot": -2,
   "en": {
-   "text": "EU VOTE DELAYED"
+   "text": "NO EU VOTE BEFORE DEC."
   },
   "nl": {
-   "text": "EU-STEMMING UITGESTELD"
+   "text": "GEEN EU-STEMMING VÓÓR DEC."
   }
  }
 }

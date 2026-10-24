@@ -37,12 +37,16 @@
   "starlink-car-2.jpg"
  ],
  "label": {
-  "style": "tag",
+  "style": "k",
+  "pos": "tl",
+  "rot": 0,
   "en": {
-   "text": "EXPLAINED"
+   "sub": "EXPLAINED",
+   "text": "HOW SPACE INTERNET WORKS"
   },
   "nl": {
-   "text": "UITGELEGD"
+   "sub": "UITGELEGD",
+   "text": "ZO WERKT RUIMTE-INTERNET"
   }
  }
 }

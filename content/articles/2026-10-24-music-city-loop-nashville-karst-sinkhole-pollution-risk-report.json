@@ -31,12 +31,16 @@
   "tunnel-5.jpg"
  ],
  "label": {
-  "style": "tag",
+  "style": "k",
+  "pos": "tl",
+  "rot": 0,
   "en": {
-   "text": "RISK REPORT"
+   "sub": "RISK REPORT",
+   "text": "SINKHOLES AHEAD?"
   },
   "nl": {
-   "text": "RISICORAPPORT"
+   "sub": "RISICORAPPORT",
+   "text": "ZINKGATEN OP DE ROUTE?"
   }
  }
 }

@@ -36,12 +36,14 @@
   "optimus-full.jpg"
  ],
  "label": {
-  "style": "y",
+  "style": "r",
+  "pos": "ml",
+  "rot": -2,
   "en": {
-   "text": "MOON FIRST"
+   "text": "NO MARS FOR OPTIMUS"
   },
   "nl": {
-   "text": "EERST DE MAAN"
+   "text": "GEEN MARS VOOR OPTIMUS"
   }
  }
 }

@@ -31,12 +31,14 @@
   "fsd-2.jpg"
  ],
  "label": {
-  "style": "y",
+  "style": "w",
+  "pos": "tl",
+  "rot": 0,
   "en": {
-   "text": "TESLA WINS APPEAL"
+   "text": "NO FSD CLASS ACTION!"
   },
   "nl": {
-   "text": "TESLA WINT IN BEROEP"
+   "text": "FSD: GEEN COLLECTIEVE ZAAK!"
   }
  }
 }

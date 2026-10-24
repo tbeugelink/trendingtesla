@@ -28,14 +28,14 @@
   "earnings-5.jpg"
  ],
  "label": {
-  "style": "n",
+  "style": "y",
+  "pos": "bl",
+  "rot": -2,
   "en": {
-   "text": "19.8%",
-   "sub": "of Tesla owned by Musk"
+   "text": "MUSK OWNS 19.8%"
   },
   "nl": {
-   "text": "19,8%",
-   "sub": "van Tesla is van Musk"
+   "text": "MUSK BEZIT 19,8%"
   }
  }
 }

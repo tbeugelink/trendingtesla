@@ -32,14 +32,16 @@
   "fsd-2.jpg"
  ],
  "label": {
-  "style": "n",
+  "style": "k",
+  "pos": "tl",
+  "rot": 0,
   "en": {
-   "text": "3.2M",
-   "sub": "cars in the probe"
+   "sub": "ESCALATED",
+   "text": "3.2M TESLAS: RECALL?"
   },
   "nl": {
-   "text": "3,2 mln",
-   "sub": "auto's in onderzoek"
+   "sub": "OPGESCHAALD",
+   "text": "3,2 MLN TESLA'S: RECALL?"
   }
  }
 }

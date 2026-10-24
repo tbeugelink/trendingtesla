@@ -32,12 +32,14 @@
   "earnings-3.jpg"
  ],
  "label": {
-  "style": "c",
+  "style": "s",
+  "pos": "bl",
+  "rot": -3,
   "en": {
-   "text": "The SpaceX IPO explained"
+   "text": "BIGGEST IPO EVER!"
   },
   "nl": {
-   "text": "SpaceX naar de beurs"
+   "text": "GROOTSTE IPO OOIT!"
   }
  }
 }

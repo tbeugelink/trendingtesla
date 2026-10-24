@@ -33,14 +33,14 @@
   "tunnel-5.jpg"
  ],
  "label": {
-  "style": "n",
+  "style": "r",
+  "pos": "bl",
+  "rot": -2,
   "en": {
-   "text": "17",
-   "sub": "OSHA complaints"
+   "text": "17 SAFETY COMPLAINTS"
   },
   "nl": {
-   "text": "17",
-   "sub": "OSHA-klachten"
+   "text": "17 VEILIGHEIDSKLACHTEN"
   }
  }
 }

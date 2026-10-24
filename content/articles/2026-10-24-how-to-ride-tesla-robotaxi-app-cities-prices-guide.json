@@ -37,12 +37,14 @@
   "cybercab-interior.jpg"
  ],
  "label": {
-  "style": "c",
+  "style": "y",
+  "pos": "ml",
+  "rot": -2,
   "en": {
-   "text": "How to ride a Robotaxi"
+   "text": "HOW DO YOU RIDE ONE?"
   },
   "nl": {
-   "text": "Zo rijd je mee in een Robotaxi"
+   "text": "HOE RIJD JE MEE?"
   }
  }
 }

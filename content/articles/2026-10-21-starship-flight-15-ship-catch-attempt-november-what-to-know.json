@@ -32,12 +32,14 @@
   "spacex-4.jpg"
  ],
  "label": {
-  "style": "w",
+  "style": "y",
+  "pos": "tr",
+  "rot": 3,
   "en": {
-   "text": "SHIP CATCH ATTEMPT"
+   "text": "NEXT: CATCH THE SHIP!"
   },
   "nl": {
-   "text": "POGING: SCHIP OPVANGEN"
+   "text": "VOLGENDE: SCHIP VANGEN!"
   }
  }
 }

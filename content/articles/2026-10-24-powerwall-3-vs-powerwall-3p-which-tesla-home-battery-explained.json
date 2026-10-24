@@ -35,7 +35,9 @@
   "energy-home-dusk.jpg"
  ],
  "label": {
-  "style": "y",
+  "style": "w",
+  "pos": "ml",
+  "rot": 0,
   "en": {
    "text": "POWERWALL 3 OR 3P?"
   },

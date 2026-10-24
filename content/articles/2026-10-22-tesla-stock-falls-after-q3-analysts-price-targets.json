@@ -36,12 +36,14 @@
   "musk-3.jpg"
  ],
  "label": {
-  "style": "c",
+  "style": "r",
+  "pos": "bl",
+  "rot": 2,
   "en": {
-   "text": "Analysts on the Q3 results"
+   "text": "BEAT, YET STOCK FALLS!?"
   },
   "nl": {
-   "text": "Analisten over Q3"
+   "text": "BETER, MAAR AANDEEL ZAKT!?"
   }
  }
 }

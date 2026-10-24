@@ -30,11 +30,13 @@
  "image": "models/ms-4.jpg",
  "label": {
   "style": "w",
+  "pos": "bl",
+  "rot": 0,
   "en": {
-   "text": "END OF AN ERA"
+   "text": "LAST MODEL S AND X BUILT"
   },
   "nl": {
-   "text": "EINDE VAN EEN TIJDPERK"
+   "text": "LAATSTE MODEL S EN X GEBOUWD"
   }
  }
 }

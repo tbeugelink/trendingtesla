@@ -27,12 +27,16 @@
   "fsd-4.jpg"
  ],
  "label": {
-  "style": "w",
+  "style": "k",
+  "pos": "bl",
+  "rot": 0,
   "en": {
-   "text": "TESLA PUSHED RDW"
+   "sub": "REUTERS",
+   "text": "TESLA PRESSED THE RDW!?"
   },
   "nl": {
-   "text": "DRUK OP DE RDW"
+   "sub": "REUTERS",
+   "text": "TESLA ZETTE RDW ONDER DRUK!?"
   }
  }
 }

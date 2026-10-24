@@ -28,12 +28,16 @@
   "optimus-factory.jpg"
  ],
  "label": {
-  "style": "tag",
+  "style": "k",
+  "pos": "ml",
+  "rot": 0,
   "en": {
-   "text": "REPORT"
+   "sub": "REPORTED",
+   "text": "AUDIT IN CHINA FOR GEN 3"
   },
   "nl": {
-   "text": "BERICHT"
+   "sub": "GEMELD",
+   "text": "CONTROLE IN CHINA VOOR GEN 3"
   }
  }
 }

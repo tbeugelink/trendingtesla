@@ -27,12 +27,14 @@
   "guide-service.jpg"
  ],
  "label": {
-  "style": "c",
+  "style": "w",
+  "pos": "tl",
+  "rot": 0,
   "en": {
-   "text": "Tesla's certified used cars"
+   "text": "USED TESLA, 1-YR WARRANTY"
   },
   "nl": {
-   "text": "Gecertificeerde occasions"
+   "text": "OCCASION + 1 JAAR GARANTIE"
   }
  }
 }

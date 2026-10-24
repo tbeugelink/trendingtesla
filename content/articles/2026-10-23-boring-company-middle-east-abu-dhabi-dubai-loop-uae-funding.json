@@ -24,12 +24,16 @@
   "tunnel-6.jpg"
  ],
  "label": {
-  "style": "w",
+  "style": "n",
+  "pos": "tr",
+  "rot": 0,
   "en": {
-   "text": "BETTING ON THE GULF"
+   "sub": "ROUND LED BY THE UAE",
+   "text": "$3B"
   },
   "nl": {
-   "text": "INZET OP DE GOLF"
+   "sub": "RONDE GELEID DOOR VAE",
+   "text": "$3 mld"
   }
  }
 }

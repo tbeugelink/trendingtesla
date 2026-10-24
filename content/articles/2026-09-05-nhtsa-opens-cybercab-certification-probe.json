@@ -31,12 +31,14 @@
   "body": "<p>Nog geen dag nadat de Cybercab in Austin passagiers begon te vervoeren, opende de Amerikaanse verkeersveiligheidsautoriteit NHTSA een onderzoek naar hoe Tesla het voertuig heeft gecertificeerd. Het onderzoek, met nummer AQ26002, ging op 3 september van start.</p><h2>Waar het om draait</h2><p>In de Verenigde Staten certificeren autofabrikanten zelf dat hun auto's voldoen aan de federale veiligheidsnormen (FMVSS). Tesla heeft de NHTSA laten weten dat het de Cybercab zelf heeft gecertificeerd voor al die normen. Het probleem: een aantal van die normen gaat uit van een menselijke bestuurder, met bijvoorbeeld een rempedaal en spiegels.</p><p>De Cybercab heeft geen stuur, geen pedalen en geen gewone zijspiegels. De NHTSA wil het proces en de technische gegevens bekijken waarop Tesla zich baseerde, en in hoeverre de certificering steunt op Tesla's standpunt dat bepaalde normen gewoon niet gelden voor een auto zonder bestuurder.</p><h2>Een bekend draaiboek</h2><p>De NHTSA volgt dezelfde route als bij Zoox van Amazon, dat ook een voertuig zonder handmatige bediening zelf certificeerde. Daar vroeg de toezichthouder in 2023 met een formeel bevel om informatie en startte een audit. Zoox kreeg later een tijdelijke ontheffing, definitief in juli 2026, waarmee het twee jaar lang maximaal 2.500 voertuigen per jaar aan zijn commerciële vloot mag toevoegen.</p><p>Tesla heeft daarentegen geen ontheffing aangevraagd. Ook die keuze maakt nu deel uit van de vragen van de toezichthouder.</p><h2>De regels veranderen, langzaam</h2><p>Het Amerikaanse ministerie van Transport heeft voorgesteld om de verplichting van handmatige bediening te schrappen voor voertuigen die ontworpen zijn om zelf te rijden. De NHTSA verwacht die regels in de komende maanden aan te passen. Tot die tijd blijven de bestaande normen volgens de toezichthouder gewoon gelden. De directeur van de NHTSA zei ook dat de organisatie de veilige ontwikkeling van zelfrijdende auto's steunt.</p><h2>Waar je op moet letten</h2><p>Het onderzoek zet de Cybercab niet automatisch stil. Maar het plaatst een regelgevend vraagteken bij Tesla's plan om de auto snel in meer steden in te zetten. De belangrijkste mijlpalen zijn Tesla's formele antwoorden aan de NHTSA en de uiteindelijke vorm van de nieuwe regels voor auto's zonder stuur.</p>"
  },
  "label": {
-  "style": "tag",
+  "style": "r",
+  "pos": "tl",
+  "rot": 0,
   "en": {
-   "text": "PROBE"
+   "text": "NHTSA PROBES CYBERCAB"
   },
   "nl": {
-   "text": "ONDERZOEK"
+   "text": "NHTSA ONDERZOEKT CYBERCAB"
   }
  }
 }

@@ -36,12 +36,16 @@
   "robotaxi-my-2.jpg"
  ],
  "label": {
-  "style": "y",
+  "style": "k",
+  "pos": "bl",
+  "rot": 0,
   "en": {
-   "text": "OPEN UNTIL 1 A.M."
+   "sub": "F1 WEEKEND",
+   "text": "TO COTA, UNTIL 1 A.M.!"
   },
   "nl": {
-   "text": "TOT 1 UUR 'S NACHTS"
+   "sub": "F1-WEEKEND",
+   "text": "NAAR COTA, TOT 1 UUR!"
   }
  }
 }

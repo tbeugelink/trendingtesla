@@ -35,12 +35,16 @@
  },
  "image": "models/mx-1.jpg",
  "label": {
-  "style": "c",
+  "style": "k",
+  "pos": "ml",
+  "rot": 0,
   "en": {
-   "text": "Model S and X look back"
+   "sub": "14 YEARS",
+   "text": "HOW S AND X CHANGED CARS"
   },
   "nl": {
-   "text": "Terugblik op Model S en X"
+   "sub": "14 JAAR",
+   "text": "HOE S EN X ALLES VERANDERDEN"
   }
  }
 }

@@ -29,12 +29,16 @@
   "guide-roadtrip.jpg"
  ],
  "label": {
-  "style": "y",
+  "style": "n",
+  "pos": "bl",
+  "rot": 0,
   "en": {
-   "text": "STARLINK MINI IN TESLA"
+   "text": "<1%",
+   "sub": "BATTERY FOR 10 HOURS"
   },
   "nl": {
-   "text": "STARLINK MINI IN TESLA"
+   "text": "<1%",
+   "sub": "ACCU VOOR 10 UUR"
   }
  }
 }

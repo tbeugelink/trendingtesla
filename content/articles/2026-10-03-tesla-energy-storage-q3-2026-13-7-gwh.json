@@ -30,14 +30,14 @@
   "megapack-1.jpg"
  ],
  "label": {
-  "style": "n",
+  "style": "r",
+  "pos": "bl",
+  "rot": -2,
   "en": {
-   "text": "13.7 GWh",
-   "sub": "deployed in Q3"
+   "text": "STORAGE MISSES FORECAST"
   },
   "nl": {
-   "text": "13,7 GWh",
-   "sub": "geïnstalleerd in Q3"
+   "text": "OPSLAG MIST VERWACHTING"
   }
  }
 }

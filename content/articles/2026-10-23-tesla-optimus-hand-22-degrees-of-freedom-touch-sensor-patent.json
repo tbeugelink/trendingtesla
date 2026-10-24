@@ -37,12 +37,14 @@
   "optimus-kitchen.jpg"
  ],
  "label": {
-  "style": "w",
+  "style": "r",
+  "pos": "tr",
+  "rot": 0,
   "en": {
-   "text": "HAND = HARDEST PART"
+   "text": "HANDS: THE BOTTLENECK"
   },
   "nl": {
-   "text": "HAND IS HET LASTIGST"
+   "text": "DE HAND: HET KNELPUNT"
   }
  }
 }

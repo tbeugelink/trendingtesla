@@ -29,13 +29,15 @@
  ],
  "label": {
   "style": "n",
+  "pos": "tl",
+  "rot": 0,
   "en": {
-   "text": "$30B",
-   "sub": "in new credit lines"
+   "sub": "CREDIT, NONE USED YET",
+   "text": "$30B"
   },
   "nl": {
-   "text": "$30 mld",
-   "sub": "aan nieuwe kredietlijnen"
+   "sub": "KREDIET, NOG ONGEBRUIKT",
+   "text": "$30 mld"
   }
  }
 }

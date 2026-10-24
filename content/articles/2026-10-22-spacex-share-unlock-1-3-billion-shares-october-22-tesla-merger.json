@@ -36,14 +36,16 @@
   "earnings-5.jpg"
  ],
  "label": {
-  "style": "n",
+  "style": "k",
+  "pos": "tl",
+  "rot": 0,
   "en": {
-   "text": "1.3B",
-   "sub": "SpaceX shares unlocked"
+   "sub": "FROM TODAY",
+   "text": "1.3B SPACEX SHARES FREE"
   },
   "nl": {
-   "text": "1,3 mld",
-   "sub": "SpaceX-aandelen vrij"
+   "sub": "VANAF VANDAAG",
+   "text": "1,3 MLD AANDELEN VRIJ"
   }
  }
 }

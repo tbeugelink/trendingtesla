@@ -33,12 +33,14 @@
   "tunnel-5.jpg"
  ],
  "label": {
-  "style": "c",
+  "style": "y",
+  "pos": "tl",
+  "rot": 2,
   "en": {
-   "text": "The Vegas Loop in numbers"
+   "text": "CHEAP, BUT TOO SLOW?"
   },
   "nl": {
-   "text": "De Vegas Loop in cijfers"
+   "text": "GOEDKOOP, MAAR TE TRAAG?"
   }
  }
 }

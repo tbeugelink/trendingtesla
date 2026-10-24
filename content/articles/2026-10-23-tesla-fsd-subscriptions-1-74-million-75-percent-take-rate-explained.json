@@ -38,13 +38,15 @@
  ],
  "label": {
   "style": "n",
+  "pos": "bl",
+  "rot": 0,
   "en": {
-   "text": "1.74M",
-   "sub": "active FSD users"
+   "sub": "TAKE FSD IN N. AMERICA",
+   "text": "3 IN 4"
   },
   "nl": {
-   "text": "1,74 MLN",
-   "sub": "actieve FSD-gebruikers"
+   "sub": "NEMEN FSD IN N.-AMERIKA",
+   "text": "3 OP 4"
   }
  }
 }

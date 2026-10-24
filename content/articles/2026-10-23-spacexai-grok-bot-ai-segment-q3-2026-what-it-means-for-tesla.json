@@ -29,13 +29,15 @@
  ],
  "label": {
   "style": "n",
+  "pos": "bl",
+  "rot": 0,
   "en": {
    "text": "1.7 GW",
-   "sub": "of AI compute"
+   "sub": "AI COMPUTE INSTALLED"
   },
   "nl": {
    "text": "1,7 GW",
-   "sub": "AI-rekenkracht"
+   "sub": "REKENKRACHT VOOR AI"
   }
  }
 }

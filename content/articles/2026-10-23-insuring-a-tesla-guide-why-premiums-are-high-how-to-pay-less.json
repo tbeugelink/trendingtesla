@@ -36,11 +36,13 @@
  ],
  "label": {
   "style": "y",
+  "pos": "bl",
+  "rot": 0,
   "en": {
-   "text": "CHEAPER INSURANCE"
+   "text": "INSURANCE: WHY SO PRICEY?"
   },
   "nl": {
-   "text": "GOEDKOPER VERZEKEREN"
+   "text": "VERZEKERING: WAAROM ZO DUUR?"
   }
  }
 }

@@ -33,12 +33,16 @@
   "fsd-3.jpg"
  ],
  "label": {
-  "style": "c",
+  "style": "n",
+  "pos": "tr",
+  "rot": 0,
   "en": {
-   "text": "FSD safety data in Europe"
+   "sub": "SAFER, SAYS TESLA",
+   "text": "5.2X"
   },
   "nl": {
-   "text": "FSD-veiligheid in Europa"
+   "sub": "VEILIGER, ZEGT TESLA",
+   "text": "5,2X"
   }
  }
 }

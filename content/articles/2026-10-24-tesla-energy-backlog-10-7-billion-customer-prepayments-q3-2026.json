@@ -33,12 +33,16 @@
   "energy-2.jpg"
  ],
  "label": {
-  "style": "c",
+  "style": "n",
+  "pos": "tr",
+  "rot": 0,
   "en": {
-   "text": "Tesla Energy's order book"
+   "sub": "ENERGY ORDERS TO DELIVER",
+   "text": "$10.7B"
   },
   "nl": {
-   "text": "Het orderboek van Tesla Energy"
+   "sub": "ENERGIE NOG TE LEVEREN",
+   "text": "$10,7 mld"
   }
  }
 }

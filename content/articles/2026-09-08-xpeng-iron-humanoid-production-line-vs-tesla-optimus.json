@@ -29,11 +29,13 @@
  },
  "label": {
   "style": "y",
+  "pos": "tr",
+  "rot": 2,
   "en": {
-   "text": "IRON VS OPTIMUS"
+   "text": "IRON CATCHING OPTIMUS?"
   },
   "nl": {
-   "text": "IRON TEGEN OPTIMUS"
+   "text": "HAALT IRON OPTIMUS IN?"
   }
  }
 }

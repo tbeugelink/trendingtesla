@@ -27,12 +27,16 @@
   "gigafactory-2.jpg"
  ],
  "label": {
-  "style": "w",
+  "style": "k",
+  "pos": "bl",
+  "rot": 0,
   "en": {
-   "text": "DOUG FIELD TO MIND"
+   "sub": "OPTIMUS RIVAL",
+   "text": "DOUG FIELD JOINS MIND!"
   },
   "nl": {
-   "text": "DOUG FIELD NAAR MIND"
+   "sub": "OPTIMUS-RIVAAL",
+   "text": "DOUG FIELD NAAR MIND!"
   }
  }
 }

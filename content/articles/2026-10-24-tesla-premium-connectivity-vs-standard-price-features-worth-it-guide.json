@@ -32,14 +32,14 @@
   "fsd.jpg"
  ],
  "label": {
-  "style": "n",
+  "style": "y",
+  "pos": "bl",
+  "rot": 0,
   "en": {
-   "text": "$9.99",
-   "sub": "a month for Premium"
+   "text": "$9.99 A MONTH: WORTH IT?"
   },
   "nl": {
-   "text": "€9,99",
-   "sub": "per maand voor Premium"
+   "text": "IS €9,99 PER MAAND HET WAARD?"
   }
  }
 }

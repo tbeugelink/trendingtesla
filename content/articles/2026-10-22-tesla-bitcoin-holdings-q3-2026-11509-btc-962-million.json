@@ -32,12 +32,16 @@
   "earnings-8.jpg"
  ],
  "label": {
-  "style": "y",
+  "style": "n",
+  "pos": "tr",
+  "rot": 0,
   "en": {
-   "text": "11,509 BITCOIN"
+   "sub": "TESLA STILL OWNS BITCOIN",
+   "text": "$962M"
   },
   "nl": {
-   "text": "11.509 BITCOIN"
+   "sub": "TESLA HEEFT NOG BITCOIN",
+   "text": "$962 mln"
   }
  }
 }

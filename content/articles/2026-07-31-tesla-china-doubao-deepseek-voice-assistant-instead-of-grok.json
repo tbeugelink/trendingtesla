@@ -37,11 +37,13 @@
  ],
  "label": {
   "style": "y",
+  "pos": "ml",
+  "rot": -2,
   "en": {
-   "text": "NO GROK IN CHINA"
+   "text": "CHINA: DOUBAO, NOT GROK"
   },
   "nl": {
-   "text": "GEEN GROK IN CHINA"
+   "text": "CHINA: DOUBAO, GEEN GROK"
   }
  }
 }

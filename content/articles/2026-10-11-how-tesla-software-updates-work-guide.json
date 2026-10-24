@@ -28,12 +28,16 @@
   "software-update.jpg"
  ],
  "label": {
-  "style": "c",
+  "style": "k",
+  "pos": "bl",
+  "rot": 0,
   "en": {
-   "text": "How software updates work"
+   "sub": "EXPLAINED",
+   "text": "WHY IS YOUR UPDATE LATE?"
   },
   "nl": {
-   "text": "Zo werken software-updates"
+   "sub": "UITGELEGD",
+   "text": "WAAROM KOMT JE UPDATE LATER?"
   }
  }
 }

@@ -34,12 +34,16 @@
   "xai-dc-1.jpg"
  ],
  "label": {
-  "style": "y",
+  "style": "n",
+  "pos": "tl",
+  "rot": 0,
   "en": {
-   "text": "ABOUT $1B IN MEGAPACKS"
+   "text": "~$1B",
+   "sub": "TESLA MEGAPACKS FOR XAI"
   },
   "nl": {
-   "text": "ZO'N $1 MLD AAN MEGAPACKS"
+   "text": "~$1 mld",
+   "sub": "TESLA-MEGAPACKS VOOR XAI"
   }
  }
 }

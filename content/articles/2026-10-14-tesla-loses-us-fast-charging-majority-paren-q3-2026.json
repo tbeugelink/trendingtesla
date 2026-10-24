@@ -32,14 +32,14 @@
   "supercharger-5.jpg"
  ],
  "label": {
-  "style": "n",
+  "style": "w",
+  "pos": "bl",
+  "rot": 0,
   "en": {
-   "text": "49.3%",
-   "sub": "of US fast-charge ports"
+   "text": "TESLA UNDER 50%!"
   },
   "nl": {
-   "text": "49,3%",
-   "sub": "van VS-snellaadpunten"
+   "text": "TESLA ONDER DE 50%!"
   }
  }
 }

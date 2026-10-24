@@ -33,14 +33,14 @@
   "earnings-7.jpg"
  ],
  "label": {
-  "style": "n",
+  "style": "y",
+  "pos": "bl",
+  "rot": 0,
   "en": {
-   "text": "-43%",
-   "sub": "net profit vs last year"
+   "text": "MARGIN UP, PROFIT -43%"
   },
   "nl": {
-   "text": "-43%",
-   "sub": "winst t.o.v. vorig jaar"
+   "text": "MARGE OMHOOG, WINST -43%"
   }
  }
 }

@@ -25,13 +25,15 @@
  ],
  "label": {
   "style": "n",
+  "pos": "tl",
+  "rot": 0,
   "en": {
    "text": "2026.38",
-   "sub": "headlights, maps, Grok"
+   "sub": "SMARTER HEADLIGHTS"
   },
   "nl": {
    "text": "2026.38",
-   "sub": "koplampen, kaarten, Grok"
+   "sub": "SLIMMERE KOPLAMPEN"
   }
  }
 }

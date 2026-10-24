@@ -37,12 +37,16 @@
   "supercharger-7.jpg"
  ],
  "label": {
-  "style": "y",
+  "style": "k",
+  "pos": "bl",
+  "rot": 2,
   "en": {
-   "text": "WHAT DOES IT COST?"
+   "sub": "PRICES UP",
+   "text": "6 WAYS TO PAY LESS"
   },
   "nl": {
-   "text": "WAT KOST HET?"
+   "sub": "PRIJZEN OMHOOG",
+   "text": "6 TIPS OM TE BESPAREN"
   }
  }
 }

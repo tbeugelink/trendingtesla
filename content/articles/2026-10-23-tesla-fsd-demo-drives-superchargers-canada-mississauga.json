@@ -33,12 +33,14 @@
   "supercharger-7.jpg"
  ],
  "label": {
-  "style": "c",
+  "style": "s",
+  "pos": "tr",
+  "rot": -3,
   "en": {
-   "text": "FSD demos at Superchargers"
+   "text": "TRY FSD AT THE CHARGER!"
   },
   "nl": {
-   "text": "FSD-demo's bij Superchargers"
+   "text": "FSD PROBEREN BIJ DE LADER!"
   }
  }
 }

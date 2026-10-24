@@ -28,11 +28,13 @@
  ],
  "label": {
   "style": "w",
+  "pos": "bl",
+  "rot": 0,
   "en": {
-   "text": "FIRST IN EUROPE"
+   "text": "FSD: NETHERLANDS SAYS YES!"
   },
   "nl": {
-   "text": "EERSTE IN EUROPA"
+   "text": "FSD: NEDERLAND ZEGT JA!"
   }
  }
 }

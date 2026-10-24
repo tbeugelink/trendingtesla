@@ -28,12 +28,16 @@
  },
  "image": "models/myl-1.jpg",
  "label": {
-  "style": "w",
+  "style": "n",
+  "pos": "bl",
+  "rot": 0,
   "en": {
-   "text": "WAIT UNTIL MARCH 2027"
+   "sub": "MODEL Y L WAIT IN THE US",
+   "text": "2027"
   },
   "nl": {
-   "text": "WACHTEN TOT MAART 2027"
+   "sub": "WACHTTIJD Y L IN DE VS",
+   "text": "2027"
   }
  }
 }

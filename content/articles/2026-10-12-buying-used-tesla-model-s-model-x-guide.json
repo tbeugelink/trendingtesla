@@ -37,12 +37,14 @@
  },
  "image": "models/ms-2.jpg",
  "label": {
-  "style": "c",
+  "style": "r",
+  "pos": "tr",
+  "rot": 0,
   "en": {
-   "text": "Buying a used Model S or X"
+   "text": "WATCH THESE WEAK SPOTS"
   },
   "nl": {
-   "text": "Tweedehands Model S of X kopen"
+   "text": "LET OP DEZE ZWAKKE PLEKKEN"
   }
  }
 }

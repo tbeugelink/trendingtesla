@@ -31,12 +31,14 @@
   "tunnel-5.jpg"
  ],
  "label": {
-  "style": "c",
+  "style": "w",
+  "pos": "tl",
+  "rot": 0,
   "en": {
-   "text": "How Prufrock digs"
+   "text": "NO LAUNCH PIT NEEDED"
   },
   "nl": {
-   "text": "Zo graaft Prufrock"
+   "text": "GEEN STARTPUT NODIG"
   }
  }
 }

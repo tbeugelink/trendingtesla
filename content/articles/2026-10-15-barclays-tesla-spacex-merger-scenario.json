@@ -28,12 +28,16 @@
   "earnings-1.jpg"
  ],
  "label": {
-  "style": "w",
+  "style": "k",
+  "pos": "tl",
+  "rot": 0,
   "en": {
-   "text": "TESLA + SPACEX?"
+   "sub": "BARCLAYS",
+   "text": "MERGER BEFORE DEC.?"
   },
   "nl": {
-   "text": "TESLA + SPACEX?"
+   "sub": "BARCLAYS",
+   "text": "FUSIE VÓÓR DECEMBER?"
   }
  }
 }

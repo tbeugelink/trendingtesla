@@ -28,12 +28,16 @@
   "wallbox-4.jpg"
  ],
  "label": {
-  "style": "tag",
+  "style": "k",
+  "pos": "bl",
+  "rot": 0,
   "en": {
-   "text": "IN THE CODE"
+   "sub": "IN THE CODE",
+   "text": "PAY WITH X MONEY?"
   },
   "nl": {
-   "text": "IN DE CODE"
+   "sub": "IN DE CODE",
+   "text": "BETALEN MET X MONEY?"
   }
  }
 }

@@ -32,12 +32,14 @@
   "earnings-7.jpg"
  ],
  "label": {
-  "style": "y",
+  "style": "w",
+  "pos": "bl",
+  "rot": 0,
   "en": {
-   "text": "$447M BOOST"
+   "text": "TARIFF REFUND: +$447M"
   },
   "nl": {
-   "text": "$447 MLN EXTRA"
+   "text": "HEFFINGEN TERUG: +$447 MLN"
   }
  }
 }

@@ -37,12 +37,16 @@
   "energy-2.jpg"
  ],
  "label": {
-  "style": "y",
+  "style": "k",
+  "pos": "bl",
+  "rot": 0,
   "en": {
-   "text": "640 MEGAPACK 3S"
+   "sub": "CONSTRUCTION",
+   "text": "BELGIUM'S BIGGEST BATTERY"
   },
   "nl": {
-   "text": "640 MEGAPACK 3'S"
+   "sub": "IN AANBOUW",
+   "text": "GROOTSTE ACCU VAN BELGIË"
   }
  }
 }

@@ -33,11 +33,13 @@
  ],
  "label": {
   "style": "y",
+  "pos": "ml",
+  "rot": 0,
   "en": {
-   "text": "12 MILESTONES"
+   "text": "$1T PAY: HOW FAR?"
   },
   "nl": {
-   "text": "12 MIJLPALEN"
+   "text": "BILJOENBELONING: HOE VER?"
   }
  }
 }

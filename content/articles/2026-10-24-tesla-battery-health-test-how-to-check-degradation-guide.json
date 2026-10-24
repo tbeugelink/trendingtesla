@@ -35,12 +35,14 @@
   "guide-battery.jpg"
  ],
  "label": {
-  "style": "w",
+  "style": "s",
+  "pos": "tl",
+  "rot": -3,
   "en": {
-   "text": "CHECK YOUR BATTERY"
+   "text": "TEST YOUR BATTERY"
   },
   "nl": {
-   "text": "CHECK JE ACCU"
+   "text": "TEST JE ACCU"
   }
  }
 }

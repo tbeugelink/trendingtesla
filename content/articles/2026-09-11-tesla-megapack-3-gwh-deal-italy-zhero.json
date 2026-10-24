@@ -30,12 +30,14 @@
   "energy.jpg"
  ],
  "label": {
-  "style": "c",
+  "style": "y",
+  "pos": "tr",
+  "rot": 2,
   "en": {
-   "text": "Megapack deal in Italy"
+   "text": "3 GWh FOR ITALY"
   },
   "nl": {
-   "text": "Megapack-deal in Italië"
+   "text": "3 GWh VOOR ITALIË"
   }
  }
 }

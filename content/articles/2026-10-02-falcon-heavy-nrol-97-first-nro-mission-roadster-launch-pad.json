@@ -33,12 +33,14 @@
   "spacex-5.jpg"
  ],
  "label": {
-  "style": "tag",
+  "style": "y",
+  "pos": "ml",
+  "rot": 2,
   "en": {
-   "text": "SPY SATELLITE"
+   "text": "FIRST SPY SAT LAUNCH!"
   },
   "nl": {
-   "text": "SPIONAGESATELLIET"
+   "text": "EERSTE SPIONAGEMISSIE!"
   }
  }
 }

@@ -37,12 +37,16 @@
   "tunnel-5.jpg"
  ],
  "label": {
-  "style": "y",
+  "style": "n",
+  "pos": "bl",
+  "rot": 0,
   "en": {
-   "text": "82,000 RIDERS"
+   "sub": "RIDERS IN 5 DAYS",
+   "text": "82,000"
   },
   "nl": {
-   "text": "82.000 REIZIGERS"
+   "sub": "REIZIGERS IN 5 DAGEN",
+   "text": "82.000"
   }
  }
 }

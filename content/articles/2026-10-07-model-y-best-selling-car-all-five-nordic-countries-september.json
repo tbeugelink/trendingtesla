@@ -27,12 +27,14 @@
   "body": "<p>De Tesla Model Y was in september 2026 de bestverkochte personenauto in alle vijf Noordse landen, maakte Tesla Europe op 7 oktober bekend. In Noorwegen, Zweden, Denemarken, Finland en IJsland stond de Model Y bovenaan.</p><h2>Noorwegen springt eruit</h2><p>In Noorwegen werden in september 4.810 Model Y's geregistreerd, goed voor 25,7% van de totale markt voor nieuwe auto's. Met andere woorden: meer dan één op de vier nieuwe auto's die die maand in Noorwegen werden verkocht, was een Model Y. Elektrische auto's waren goed voor 98,8% van alle nieuwe registraties. Noorwegen is dus een vrijwel volledig elektrische markt geworden, en Tesla is daar de grootste speler.</p><h2>Tesla als merk</h2><p>Tesla was ook het bestverkochte merk in Denemarken, IJsland en Noorwegen. In Finland en Zweden claimde Tesla dat niet: daar verkochten andere fabrikanten in totaal meer auto's, ook al was de Model Y het populairste losse model.</p><h2>Trouwe rijders</h2><p>In een vervolgbericht meldde Tesla dat drie op de vier Noorse Tesla-rijders opnieuw een Tesla kopen. Waar dat cijfer vandaan komt, zei het bedrijf niet. Zie het dus als een bewering, niet als een gemeten statistiek.</p><h2>Onderdeel van een breder Europees herstel</h2><p>De Noordse cijfers passen in een groter beeld. In september was de Model Y ook de bestverkochte auto van Duitsland, vóór de VW Golf, en bijna verdubbelden Tesla's registraties in het Verenigd Koninkrijk. Na twee zwakke jaren in Europa herstelt Tesla's verkoop duidelijk, geholpen door de vernieuwde Model Y, goedkopere Standard-versies en in sommige landen nieuwe subsidies voor elektrische auto's.</p><h2>Waarom de Noordse landen ertoe doen</h2><p>In de Noordse landen komt de elektrische toekomst van Europa als eerste aan. Wat daar gebeurt, met bijna alleen nog elektrische auto's en felle concurrentie van Chinese en Europese merken, laat zien hoe Tesla het doet zodra elektrisch rijden de norm is. In die omgeving bovenaan staan is een sterk signaal voor de Model Y.</p>"
  },
  "label": {
-  "style": "tag",
+  "style": "w",
+  "pos": "bl",
+  "rot": -2,
   "en": {
-   "text": "NO. 1"
+   "text": "NO. 1 IN ALL 5 NORDICS"
   },
   "nl": {
-   "text": "NR. 1"
+   "text": "NR. 1 IN 5 NOORDSE LANDEN"
   }
  }
 }

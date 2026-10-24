@@ -33,11 +33,13 @@
  ],
  "label": {
   "style": "w",
+  "pos": "ml",
+  "rot": 0,
   "en": {
-   "text": "NOISE AND HOME BUYOUTS"
+   "text": "NOISE FIGHT AT COLOSSUS"
   },
   "nl": {
-   "text": "LAWAAI EN HUIZENOPKOOP"
+   "text": "LAWAAIRUZIE BIJ COLOSSUS"
   }
  }
 }

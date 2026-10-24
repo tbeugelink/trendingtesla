@@ -37,12 +37,16 @@
   "charge-port.jpg"
  ],
  "label": {
-  "style": "y",
+  "style": "k",
+  "pos": "ml",
+  "rot": 0,
   "en": {
-   "text": "DRIVE AWAY PLUGGED IN"
+   "sub": "EMERGENCY ONLY",
+   "text": "DRIVE OFF PLUGGED IN!"
   },
   "nl": {
-   "text": "WEGRIJDEN MET KABEL ERIN"
+   "sub": "ALLEEN IN NOOD",
+   "text": "WEGRIJDEN MET KABEL!"
   }
  }
 }

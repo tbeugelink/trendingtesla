@@ -31,12 +31,16 @@
   "models/ct-3.jpg"
  ],
  "label": {
-  "style": "w",
+  "style": "k",
+  "pos": "bl",
+  "rot": 0,
   "en": {
-   "text": "COURT SIDES WITH TESLA"
+   "sub": "COURT ORDER",
+   "text": "TESLA GETS TOOLS BACK"
   },
   "nl": {
-   "text": "TESLA WINT BIJ RECHTER"
+   "sub": "RECHTER",
+   "text": "TESLA KRIJGT MALLEN TERUG"
   }
  }
 }

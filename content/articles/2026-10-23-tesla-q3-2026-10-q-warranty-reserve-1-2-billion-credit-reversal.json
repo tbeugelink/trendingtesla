@@ -28,14 +28,14 @@
   "earnings-6.jpg"
  ],
  "label": {
-  "style": "n",
+  "style": "y",
+  "pos": "tl",
+  "rot": -2,
   "en": {
-   "text": "$1.2B",
-   "sub": "extra for warranty"
+   "text": "3 NUMBERS IN FINE PRINT"
   },
   "nl": {
-   "text": "$1,2 mld",
-   "sub": "extra voor garantie"
+   "text": "3 VERSTOPTE CIJFERS"
   }
  }
 }

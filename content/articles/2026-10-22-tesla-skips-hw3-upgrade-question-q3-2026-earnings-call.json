@@ -32,12 +32,16 @@
   "earnings-4.jpg"
  ],
  "label": {
-  "style": "w",
+  "style": "k",
+  "pos": "bl",
+  "rot": 0,
   "en": {
-   "text": "NO HW3 ANSWER"
+   "sub": "Q3 CALL",
+   "text": "HW3 QUESTION SKIPPED!?"
   },
   "nl": {
-   "text": "GEEN ANTWOORD OVER HW3"
+   "sub": "KWARTAALCALL",
+   "text": "HW3-VRAAG OVERGESLAGEN!?"
   }
  }
 }

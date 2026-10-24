@@ -36,14 +36,16 @@
   "tunnel-3.jpg"
  ],
  "label": {
-  "style": "n",
+  "style": "k",
+  "pos": "bl",
+  "rot": 0,
   "en": {
-   "text": "123",
-   "sub": "approved stations"
+   "sub": "APPROVED",
+   "text": "19 MORE STATIONS!"
   },
   "nl": {
-   "text": "123",
-   "sub": "goedgekeurde stations"
+   "sub": "GOEDGEKEURD",
+   "text": "19 STATIONS ERBIJ!"
   }
  }
 }

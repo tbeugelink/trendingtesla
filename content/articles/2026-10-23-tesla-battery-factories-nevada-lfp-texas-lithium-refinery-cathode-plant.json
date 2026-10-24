@@ -35,12 +35,14 @@
   "gigafactory-nevada.jpg"
  ],
  "label": {
-  "style": "y",
+  "style": "r",
+  "pos": "ml",
+  "rot": 0,
   "en": {
-   "text": "BATTERY BOTTLENECK"
+   "text": "BATTERIES HOLD TESLA BACK"
   },
   "nl": {
-   "text": "BATTERIJKNELPUNT"
+   "text": "BATTERIJEN REMMEN TESLA AF"
   }
  }
 }

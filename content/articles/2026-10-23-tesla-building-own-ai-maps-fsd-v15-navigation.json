@@ -32,12 +32,14 @@
   "interior-2.jpg"
  ],
  "label": {
-  "style": "tag",
+  "style": "y",
+  "pos": "bl",
+  "rot": -2,
   "en": {
-   "text": "FSD V15"
+   "text": "TESLA MAKES OWN MAPS"
   },
   "nl": {
-   "text": "FSD V15"
+   "text": "TESLA MAAKT EIGEN KAARTEN"
   }
  }
 }

@@ -33,12 +33,14 @@
   "optimus-store.jpg"
  ],
  "label": {
-  "style": "y",
+  "style": "w",
+  "pos": "bl",
+  "rot": 2,
   "en": {
-   "text": "NO PRICE YET"
+   "text": "CAN YOU BUY ONE? NOT YET"
   },
   "nl": {
-   "text": "NOG GEEN PRIJS"
+   "text": "TE KOOP? NOG NIET"
   }
  }
 }

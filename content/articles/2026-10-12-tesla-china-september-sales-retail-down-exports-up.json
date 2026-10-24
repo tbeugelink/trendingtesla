@@ -32,13 +32,15 @@
  ],
  "label": {
   "style": "n",
+  "pos": "bl",
+  "rot": 0,
   "en": {
-   "text": "+58%",
-   "sub": "exports from Shanghai"
+   "sub": "EXPORTS; CHINA SALES -9%",
+   "text": "+58%"
   },
   "nl": {
-   "text": "+58%",
-   "sub": "export uit Shanghai"
+   "sub": "EXPORT; IN CHINA -9%",
+   "text": "+58%"
   }
  }
 }

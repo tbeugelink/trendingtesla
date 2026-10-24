@@ -27,14 +27,14 @@
   "roadster-flying.jpg"
  ],
  "label": {
-  "style": "n",
+  "style": "s",
+  "pos": "bl",
+  "rot": -3,
   "en": {
-   "text": "10/10",
-   "sub": "from Ferrari's CEO"
+   "text": "FERRARI: 10 OUT OF 10!"
   },
   "nl": {
-   "text": "10/10",
-   "sub": "van Ferrari-topman"
+   "text": "FERRARI GEEFT EEN 10!"
   }
  }
 }

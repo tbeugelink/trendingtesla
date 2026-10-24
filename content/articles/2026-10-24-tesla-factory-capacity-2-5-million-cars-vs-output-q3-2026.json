@@ -35,13 +35,15 @@
  ],
  "label": {
   "style": "n",
+  "pos": "tr",
+  "rot": 0,
   "en": {
-   "text": "2.5M",
-   "sub": "cars a year, capacity"
+   "sub": "A YEAR. CAPACITY: 2.5M",
+   "text": "1.86M"
   },
   "nl": {
-   "text": "2,5 mln",
-   "sub": "capaciteit per jaar"
+   "sub": "PER JAAR. KAN: 2,5 MLN",
+   "text": "1,86 MLN"
   }
  }
 }

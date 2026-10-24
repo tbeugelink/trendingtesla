@@ -32,12 +32,16 @@
   "models/cc-3.jpg"
  ],
  "label": {
-  "style": "c",
+  "style": "k",
+  "pos": "bl",
+  "rot": 0,
   "en": {
-   "text": "Building the Cybercab"
+   "sub": "TESLA SAYS",
+   "text": "HALF THE PARTS"
   },
   "nl": {
-   "text": "Zo wordt de Cybercab gebouwd"
+   "sub": "VOLGENS TESLA",
+   "text": "HELFT MINDER ONDERDELEN"
   }
  }
 }

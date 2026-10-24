@@ -28,12 +28,16 @@
   "xai-dc-1.jpg"
  ],
  "label": {
-  "style": "c",
+  "style": "k",
+  "pos": "bl",
+  "rot": 0,
   "en": {
-   "text": "How xAI became SpaceXAI"
+   "sub": "TIMELINE",
+   "text": "WHERE DID XAI GO?"
   },
   "nl": {
-   "text": "Zo werd xAI SpaceXAI"
+   "sub": "TIJDLIJN",
+   "text": "WAAR IS XAI GEBLEVEN?"
   }
  }
 }

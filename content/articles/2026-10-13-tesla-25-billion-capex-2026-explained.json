@@ -29,12 +29,16 @@
   "gigafactory-2.jpg"
  ],
  "label": {
-  "style": "c",
+  "style": "k",
+  "pos": "ml",
+  "rot": 0,
   "en": {
-   "text": "Tesla's 2026 spending plan"
+   "sub": "EXPLAINED",
+   "text": "WHERE DOES $25B GO?"
   },
   "nl": {
-   "text": "Tesla's investeringen in 2026"
+   "sub": "UITGELEGD",
+   "text": "WAAR GAAT $25 MLD HEEN?"
   }
  }
 }

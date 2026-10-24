@@ -33,11 +33,13 @@
  ],
  "label": {
   "style": "w",
+  "pos": "ml",
+  "rot": 0,
   "en": {
-   "text": "NEW STATIONS BEFORE F1"
+   "text": "TO UNLV BEFORE F1?"
   },
   "nl": {
-   "text": "NIEUWE HALTES VOOR F1"
+   "text": "VÓÓR DE F1 NAAR UNLV?"
   }
  }
 }

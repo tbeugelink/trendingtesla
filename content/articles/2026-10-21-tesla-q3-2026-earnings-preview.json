@@ -33,12 +33,16 @@
   "earnings-1.jpg"
  ],
  "label": {
-  "style": "tag",
+  "style": "k",
+  "pos": "bl",
+  "rot": 0,
   "en": {
-   "text": "TONIGHT"
+   "sub": "TONIGHT",
+   "text": "WHAT WILL Q3 SHOW?"
   },
   "nl": {
-   "text": "VANAVOND"
+   "sub": "VANAVOND",
+   "text": "WAT BRENGT Q3?"
   }
  }
 }

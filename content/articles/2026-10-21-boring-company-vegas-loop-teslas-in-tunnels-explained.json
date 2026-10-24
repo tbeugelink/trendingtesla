@@ -30,12 +30,16 @@
   "tunnel-3.jpg"
  ],
  "label": {
-  "style": "c",
+  "style": "k",
+  "pos": "bl",
+  "rot": 0,
   "en": {
-   "text": "How the Vegas Loop works"
+   "sub": "EXPLAINED",
+   "text": "TESLAS UNDERGROUND"
   },
   "nl": {
-   "text": "Zo werkt de Vegas Loop"
+   "sub": "UITGELEGD",
+   "text": "TESLA'S ONDERGRONDS"
   }
  }
 }

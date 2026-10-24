@@ -36,12 +36,16 @@
   "starlink-1.jpg"
  ],
  "label": {
-  "style": "y",
+  "style": "n",
+  "pos": "tr",
+  "rot": 0,
   "en": {
-   "text": "22 MILLION USERS"
+   "text": "22M+",
+   "sub": "STARLINK MOBILE USERS"
   },
   "nl": {
-   "text": "22 MILJOEN GEBRUIKERS"
+   "text": "22 mln+",
+   "sub": "GEBRUIKT STARLINK MOBILE"
   }
  }
 }

@@ -28,12 +28,14 @@
   "earnings-6.jpg"
  ],
  "label": {
-  "style": "y",
+  "style": "r",
+  "pos": "bl",
+  "rot": 2,
   "en": {
-   "text": "A MILLION SALES LOST?"
+   "text": "1M SALES LOST TO POLITICS?"
   },
   "nl": {
-   "text": "1 MLN VERKOPEN KWIJT?"
+   "text": "POLITIEK KOST 1 MLN AUTO'S?"
   }
  }
 }

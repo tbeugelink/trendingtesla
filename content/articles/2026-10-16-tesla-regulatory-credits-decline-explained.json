@@ -29,12 +29,14 @@
   "earnings-6.jpg"
  ],
  "label": {
-  "style": "tag",
+  "style": "r",
+  "pos": "bl",
+  "rot": 0,
   "en": {
-   "text": "EXPLAINED"
+   "text": "CREDIT BONUS DRIES UP"
   },
   "nl": {
-   "text": "UITGELEGD"
+   "text": "CREDITBONUS DROOGT OP"
   }
  }
 }

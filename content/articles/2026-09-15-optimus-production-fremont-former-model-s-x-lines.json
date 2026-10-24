@@ -38,12 +38,14 @@
   "gigafactory-fremont.jpg"
  ],
  "label": {
-  "style": "c",
+  "style": "w",
+  "pos": "bl",
+  "rot": 0,
   "en": {
-   "text": "Optimus production in Fremont"
+   "text": "FROM MODEL S TO OPTIMUS"
   },
   "nl": {
-   "text": "Optimus-productie in Fremont"
+   "text": "VAN MODEL S NAAR OPTIMUS"
   }
  }
 }

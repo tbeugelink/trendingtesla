@@ -38,11 +38,13 @@
  ],
  "label": {
   "style": "y",
+  "pos": "tr",
+  "rot": 2,
   "en": {
-   "text": "GROK 5 BY YEAR-END?"
+   "text": "3 GROKS IN 10 WEEKS"
   },
   "nl": {
-   "text": "GROK 5 VOOR NIEUWJAAR?"
+   "text": "3 GROKS IN 10 WEKEN"
   }
  }
 }

@@ -34,11 +34,13 @@
  ],
  "label": {
   "style": "w",
+  "pos": "bl",
+  "rot": 0,
   "en": {
-   "text": "MEGACHARGER TO EUROPE"
+   "text": "21 TRUCK SITES IN EUROPE"
   },
   "nl": {
-   "text": "MEGACHARGERS IN EUROPA"
+   "text": "21 TRUCKLAADPLEKKEN IN EU"
   }
  }
 }

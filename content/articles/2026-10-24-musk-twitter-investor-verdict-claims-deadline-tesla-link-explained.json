@@ -35,12 +35,16 @@
   "musk-3.jpg"
  ],
  "label": {
-  "style": "y",
+  "style": "k",
+  "pos": "bl",
+  "rot": 0,
   "en": {
-   "text": "CLAIM BY NOV 24"
+   "sub": "JURY VERDICT",
+   "text": "MUSK TWEETS MISLED!"
   },
   "nl": {
-   "text": "CLAIMEN TOT 24 NOV"
+   "sub": "JURY-UITSPRAAK",
+   "text": "TWEETS MUSK MISLEIDEND!"
   }
  }
 }

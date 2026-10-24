@@ -36,12 +36,16 @@
   "tunnel-1.jpg"
  ],
  "label": {
-  "style": "w",
+  "style": "k",
+  "pos": "ml",
+  "rot": 0,
   "en": {
-   "text": "ONE WINNER PULLED OUT"
+   "sub": "FREE TUNNELS",
+   "text": "WHO'S STILL IN?"
   },
   "nl": {
-   "text": "ÉÉN WINNAAR HAAKTE AF"
+   "sub": "GRATIS TUNNELS",
+   "text": "WIE DOET NOG MEE?"
   }
  }
 }

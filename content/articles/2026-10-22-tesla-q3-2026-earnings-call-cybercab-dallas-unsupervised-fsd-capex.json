@@ -37,12 +37,16 @@
   "cybercab.jpg"
  ],
  "label": {
-  "style": "w",
+  "style": "k",
+  "pos": "ml",
+  "rot": 0,
   "en": {
-   "text": "CYBERCAB TO DALLAS"
+   "sub": "EARNINGS CALL",
+   "text": "CYBERCAB TO DALLAS!"
   },
   "nl": {
-   "text": "CYBERCAB NAAR DALLAS"
+   "sub": "CIJFERCALL",
+   "text": "CYBERCAB NAAR DALLAS!"
   }
  }
 }

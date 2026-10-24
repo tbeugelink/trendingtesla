@@ -28,11 +28,13 @@
  ],
  "label": {
   "style": "w",
+  "pos": "tr",
+  "rot": 0,
   "en": {
-   "text": "SECOND HALL PLANNED"
+   "text": "1 MILLION CARS A YEAR?"
   },
   "nl": {
-   "text": "TWEEDE HAL GEPLAND"
+   "text": "1 MILJOEN AUTO'S PER JAAR?"
   }
  }
 }

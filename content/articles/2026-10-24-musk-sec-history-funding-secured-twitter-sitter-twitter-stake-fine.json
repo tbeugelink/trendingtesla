@@ -36,13 +36,15 @@
  ],
  "label": {
   "style": "n",
+  "pos": "ml",
+  "rot": 3,
   "en": {
-   "text": "$1.5M",
-   "sub": "SEC fine over Twitter"
+   "sub": "SEC FINE OVER TWITTER",
+   "text": "$1.5M"
   },
   "nl": {
-   "text": "$1,5 MLN",
-   "sub": "SEC-boete om Twitter"
+   "sub": "SEC-BOETE OM TWITTER",
+   "text": "$1,5 MLN"
   }
  }
 }

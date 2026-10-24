@@ -33,14 +33,16 @@
   "gigafactory-2.jpg"
  ],
  "label": {
-  "style": "n",
+  "style": "k",
+  "pos": "bl",
+  "rot": 0,
   "en": {
-   "text": "480,126",
-   "sub": "deliveries in Q2"
+   "sub": "GROWTH IS BACK",
+   "text": "480,126 DELIVERIES!"
   },
   "nl": {
-   "text": "480.126",
-   "sub": "leveringen in Q2"
+   "sub": "GROEI IS TERUG",
+   "text": "480.126 LEVERINGEN!"
   }
  }
 }

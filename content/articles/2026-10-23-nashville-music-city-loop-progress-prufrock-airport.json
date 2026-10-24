@@ -27,14 +27,14 @@
   "tunnel-5.jpg"
  ],
  "label": {
-  "style": "n",
+  "style": "y",
+  "pos": "bl",
+  "rot": 0,
   "en": {
-   "text": "LATE 2026",
-   "sub": "first segment due"
+   "text": "NASHVILLE DIGS FASTER"
   },
   "nl": {
-   "text": "EIND 2026",
-   "sub": "eerste stuk klaar"
+   "text": "NASHVILLE GRAAFT SNELLER"
   }
  }
 }

@@ -29,13 +29,15 @@
  ],
  "label": {
   "style": "n",
+  "pos": "bl",
+  "rot": 0,
   "en": {
    "text": "20 MIN",
-   "sub": "then seat heater off"
+   "sub": "THEN SEAT HEATER OFF"
   },
   "nl": {
    "text": "20 MIN",
-   "sub": "dan stoelverwarming uit"
+   "sub": "DAN STOELVERWARMING UIT"
   }
  }
 }

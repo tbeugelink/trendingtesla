@@ -33,12 +33,16 @@
   "supercharger-3.jpg"
  ],
  "label": {
-  "style": "y",
+  "style": "n",
+  "pos": "bl",
+  "rot": 0,
   "en": {
-   "text": "66 TRUCK SITES"
+   "sub": "SEMI CHARGING SITES",
+   "text": "66"
   },
   "nl": {
-   "text": "66 TRUCKLOCATIES"
+   "sub": "LAADLOCATIES VOOR SEMI",
+   "text": "66"
   }
  }
 }

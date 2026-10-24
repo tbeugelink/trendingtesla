@@ -32,13 +32,15 @@
  ],
  "label": {
   "style": "n",
+  "pos": "bl",
+  "rot": 0,
   "en": {
-   "text": "73,000",
-   "sub": "fleet interest sign-ups"
+   "sub": "INTERESTED IN A FLEET",
+   "text": "73,000"
   },
   "nl": {
-   "text": "73.000",
-   "sub": "aanmeldingen voor vloot"
+   "sub": "INTERESSE IN EEN VLOOT",
+   "text": "73.000"
   }
  }
 }

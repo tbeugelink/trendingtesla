@@ -29,13 +29,15 @@
  ],
  "label": {
   "style": "n",
+  "pos": "bl",
+  "rot": 0,
   "en": {
-   "text": "10M",
-   "sub": "robots a year (plan)"
+   "sub": "ROBOTS/YEAR: TEXAS PLAN",
+   "text": "10M"
   },
   "nl": {
-   "text": "10 MLN",
-   "sub": "robots per jaar (plan)"
+   "sub": "ROBOTS/JAAR: PLAN TEXAS",
+   "text": "10 MLN"
   }
  }
 }

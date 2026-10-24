@@ -33,13 +33,15 @@
  ],
  "label": {
   "style": "n",
+  "pos": "tl",
+  "rot": 0,
   "en": {
-   "text": "10,000,000",
-   "sub": "Teslas built"
+   "sub": "TESLAS BUILT",
+   "text": "10,000,000"
   },
   "nl": {
-   "text": "10.000.000",
-   "sub": "Tesla's gebouwd"
+   "sub": "TESLA'S GEBOUWD",
+   "text": "10.000.000"
   }
  }
 }

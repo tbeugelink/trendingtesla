@@ -30,11 +30,13 @@
  "image": "models/m3h-1.jpg",
  "label": {
   "style": "w",
+  "pos": "tr",
+  "rot": 0,
   "en": {
-   "text": "UK SALES NEARLY DOUBLE"
+   "text": "UK SALES NEARLY DOUBLE!"
   },
   "nl": {
-   "text": "VK: BIJNA VERDUBBELD"
+   "text": "VK: BIJNA DUBBEL ZOVEEL!"
   }
  }
 }

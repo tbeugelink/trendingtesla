@@ -37,12 +37,16 @@
   "optimus-army.jpg"
  ],
  "label": {
-  "style": "c",
+  "style": "n",
+  "pos": "tl",
+  "rot": 0,
   "en": {
-   "text": "The story of Optimus"
+   "sub": "FROM STAGE TO FACTORY",
+   "text": "5 YEARS"
   },
   "nl": {
-   "text": "De geschiedenis van Optimus"
+   "sub": "VAN PODIUM NAAR FABRIEK",
+   "text": "5 JAAR"
   }
  }
 }

@@ -33,12 +33,14 @@
   "earnings-2.jpg"
  ],
  "label": {
-  "style": "y",
+  "style": "w",
+  "pos": "ml",
+  "rot": 0,
   "en": {
-   "text": "'A GOOD IDEA'"
+   "text": "MERGER NOW BEING STUDIED!"
   },
   "nl": {
-   "text": "'EEN GOED IDEE'"
+   "text": "FUSIE WORDT ONDERZOCHT!"
   }
  }
 }

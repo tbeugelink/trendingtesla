@@ -28,11 +28,13 @@
  ],
  "label": {
   "style": "y",
+  "pos": "ml",
+  "rot": 2,
   "en": {
-   "text": "6 MILLION PACKS"
+   "text": "6M PACKS IN 279 DAYS"
   },
   "nl": {
-   "text": "6 MILJOEN PACKS"
+   "text": "6 MLN PACKS IN 279 DAGEN"
   }
  }
 }

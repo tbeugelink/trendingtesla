@@ -23,12 +23,14 @@
   "tunnel-5.jpg"
  ],
  "label": {
-  "style": "c",
+  "style": "w",
+  "pos": "bl",
+  "rot": 0,
   "en": {
-   "text": "A tunnel in San Antonio"
+   "text": "TUNNEL FOR A THEME PARK"
   },
   "nl": {
-   "text": "Een tunnel in San Antonio"
+   "text": "TUNNEL VOOR EEN PRETPARK"
   }
  }
 }

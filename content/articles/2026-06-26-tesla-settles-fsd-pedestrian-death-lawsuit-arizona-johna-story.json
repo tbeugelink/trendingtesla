@@ -32,12 +32,14 @@
   "musk-3.jpg"
  ],
  "label": {
-  "style": "tag",
+  "style": "r",
+  "pos": "ml",
+  "rot": 0,
   "en": {
-   "text": "SETTLED"
+   "text": "FATAL FSD CASE SETTLED"
   },
   "nl": {
-   "text": "GESCHIKT"
+   "text": "DODELIJKE FSD-ZAAK GESCHIKT"
   }
  }
 }

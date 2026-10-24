@@ -29,14 +29,14 @@
   "body": "<p>De Cybertruck heeft een nieuwe markt gevonden. Tesla leverde in januari ongeveer 60 Cybertrucks af tijdens een evenement in de woestijn bij Dubai, en begon daarmee met leveringen in de Verenigde Arabische Emiraten.</p><h2>De lancering</h2><ul><li><strong>Eerste in de regio:</strong> de VAE zijn de eerste markt voor de Cybertruck in het Midden-Oosten, en de tweede buiten Noord-Amerika na Zuid-Korea, waar de leveringen in november 2025 begonnen.</li><li><strong>Eerste dag:</strong> ongeveer 60 trucks op één dag, volgens lokale berichten een record voor Tesla-leveringen buiten de VS.</li><li><strong>Meer landen:</strong> Tesla opende ook de configurator in Saudi-Arabië, Qatar, Jordanië en Israël.</li></ul><h2>De prijzen</h2><ul><li><strong>All-Wheel Drive:</strong> AED 404.900, ongeveer $110.000.</li><li><strong>Cyberbeast:</strong> AED 454.900, ongeveer $123.000.</li></ul><p>Dat lag ruim boven de Amerikaanse prijzen van dat moment: $79.990 voor de AWD en $114.990 voor de Cyberbeast.</p><h2>Waarom het Midden-Oosten</h2><p>Grote auto's, brede wegen en kopers die van opvallende auto's houden: de Golfregio past goed bij de Cybertruck. Minstens zo belangrijk: de VAE en Zuid-Korea laten de Cybertruck toe zonder grote aanpassingen.</p><h2>Waarom niet in Europa</h2><p>In de Europese Unie kan de Cybertruck niet worden geregistreerd. De scherpe randen en de stijve stalen carrosserie botsen met de regels voor voetgangersbescherming, en zijn maximaal toegestane massa ligt boven de grens van 3.500 kg voor een gewoon B-rijbewijs. Duitsland wees verzoeken om een uitzondering af, omdat de truck te veel afwijkt van de Europese regels, en in het VK zijn geïmporteerde exemplaren in beslag genomen.</p><h2>Gaat het helpen?</h2><p>De markt in het Midden-Oosten is klein vergeleken met de VS, waar de verkoop in 2025 bijna halveerde. Analisten verwachten niet dat het die daling goedmaakt, maar het geeft de Cybertruck een tweede leven buiten Amerika.</p>"
  },
  "label": {
-  "style": "n",
+  "style": "s",
+  "pos": "tr",
+  "rot": -3,
   "en": {
-   "text": "ABOUT 60",
-   "sub": "on day one in Dubai"
+   "text": "CYBERTRUCK IN DUBAI!"
   },
   "nl": {
-   "text": "CIRCA 60",
-   "sub": "op dag één in Dubai"
+   "text": "CYBERTRUCK IN DUBAI!"
   }
  }
 }

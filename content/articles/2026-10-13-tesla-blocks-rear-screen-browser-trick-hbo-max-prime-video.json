@@ -27,12 +27,14 @@
   "interior-1.jpg"
  ],
  "label": {
-  "style": "w",
+  "style": "r",
+  "pos": "tl",
+  "rot": 2,
   "en": {
-   "text": "BROWSER TRICK BLOCKED"
+   "text": "NO MORE HBO MAX IN BACK"
   },
   "nl": {
-   "text": "BROWSERTRUC GEBLOKKEERD"
+   "text": "GEEN HBO MAX MEER ACHTERIN"
   }
  }
 }

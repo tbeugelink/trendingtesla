@@ -36,12 +36,16 @@
   "guide-tread.jpg"
  ],
  "label": {
-  "style": "y",
+  "style": "k",
+  "pos": "bl",
+  "rot": 0,
   "en": {
-   "text": "NO OIL CHANGES"
+   "sub": "NO OIL CHANGES",
+   "text": "SO WHAT DOES IT NEED?"
   },
   "nl": {
-   "text": "GEEN OLIE VERVERSEN"
+   "sub": "GEEN OLIEBEURT",
+   "text": "WAT MOET ER DAN WEL?"
   }
  }
 }

@@ -33,13 +33,15 @@
  ],
  "label": {
   "style": "n",
+  "pos": "ml",
+  "rot": 0,
   "en": {
    "text": "13.6M",
-   "sub": "Starlink subscribers"
+   "sub": "STARLINK SUBSCRIBERS"
   },
   "nl": {
    "text": "13,6 mln",
-   "sub": "Starlink-abonnees"
+   "sub": "STARLINK-ABONNEES"
   }
  }
 }

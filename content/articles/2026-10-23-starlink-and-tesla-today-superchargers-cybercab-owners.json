@@ -32,12 +32,14 @@
   "starlink-car-1.jpg"
  ],
  "label": {
-  "style": "c",
+  "style": "y",
+  "pos": "bl",
+  "rot": 0,
   "en": {
-   "text": "Where Starlink meets Tesla"
+   "text": "STARLINK + TESLA: WHAT'S REAL?"
   },
   "nl": {
-   "text": "Starlink en Tesla nu"
+   "text": "STARLINK + TESLA: WAT IS ECHT?"
   }
  }
 }

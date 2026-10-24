@@ -36,12 +36,14 @@
   "earnings-5.jpg"
  ],
  "label": {
-  "style": "c",
+  "style": "y",
+  "pos": "bl",
+  "rot": 0,
   "en": {
-   "text": "Earnings week for the stock"
+   "text": "+4.9% IN EARNINGS WEEK"
   },
   "nl": {
-   "text": "Het aandeel in de cijferweek"
+   "text": "+4,9% IN CIJFERWEEK"
   }
  }
 }

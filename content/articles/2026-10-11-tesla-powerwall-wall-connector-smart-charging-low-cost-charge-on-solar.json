@@ -33,12 +33,14 @@
   "wallbox-2.jpg"
  ],
  "label": {
-  "style": "y",
+  "style": "s",
+  "pos": "tr",
+  "rot": -3,
   "en": {
-   "text": "SMART CHARGING"
+   "text": "CHARGE ON SUN OR CHEAP!"
   },
   "nl": {
-   "text": "SLIM LADEN"
+   "text": "LADEN OP ZON OF DAL!"
   }
  }
 }

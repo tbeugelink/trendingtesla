@@ -37,11 +37,13 @@
  ],
  "label": {
   "style": "w",
+  "pos": "tl",
+  "rot": 0,
   "en": {
-   "text": "QUALIFIED FOR AI"
+   "text": "NVIDIA APPROVES MEGAPACK"
   },
   "nl": {
-   "text": "GOEDGEKEURD VOOR AI"
+   "text": "NVIDIA KEURT MEGAPACK GOED"
   }
  }
 }

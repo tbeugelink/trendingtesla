@@ -36,12 +36,16 @@
   "guide-wintertyres.jpg"
  ],
  "label": {
-  "style": "tag",
+  "style": "k",
+  "pos": "tr",
+  "rot": 0,
   "en": {
-   "text": "EXPLAINED"
+   "sub": "EXPLAINED",
+   "text": "WHAT DOES THE T MEAN?"
   },
   "nl": {
-   "text": "UITGELEGD"
+   "sub": "UITGELEGD",
+   "text": "WAT BETEKENT DIE T?"
   }
  }
 }

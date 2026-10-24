@@ -36,12 +36,16 @@
   "earnings-3.jpg"
  ],
  "label": {
-  "style": "y",
+  "style": "k",
+  "pos": "ml",
+  "rot": 0,
   "en": {
-   "text": "TESLA VS GM"
+   "sub": "GM VS TESLA",
+   "text": "MORE PROFIT, LESS VALUE?"
   },
   "nl": {
-   "text": "TESLA TEGEN GM"
+   "sub": "GM VS TESLA",
+   "text": "MEER WINST, MINDER WAARD?"
   }
  }
 }

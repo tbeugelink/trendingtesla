@@ -30,11 +30,13 @@
  "image": "models/myj-3.jpg",
  "label": {
   "style": "y",
+  "pos": "bl",
+  "rot": 0,
   "en": {
-   "text": "OLD OR NEW?"
+   "text": "JUNIPER: WHAT CHANGED?"
   },
   "nl": {
-   "text": "OUD OF NIEUW?"
+   "text": "JUNIPER: WAT IS ER NIEUW?"
   }
  }
 }

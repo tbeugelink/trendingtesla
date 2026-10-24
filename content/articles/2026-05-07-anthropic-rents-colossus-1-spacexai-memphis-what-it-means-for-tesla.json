@@ -36,14 +36,16 @@
   "xai-dc-2.jpg"
  ],
  "label": {
-  "style": "n",
+  "style": "k",
+  "pos": "tl",
+  "rot": 0,
   "en": {
-   "text": "220,000",
-   "sub": "Nvidia GPUs to Anthropic"
+   "sub": "RIVAL DEAL",
+   "text": "ANTHROPIC RENTS COLOSSUS!?"
   },
   "nl": {
-   "text": "220.000",
-   "sub": "GPU's voor Anthropic"
+   "sub": "DEAL MET RIVAAL",
+   "text": "ANTHROPIC HUURT COLOSSUS!?"
   }
  }
 }

@@ -32,12 +32,14 @@
   "musk-1.jpg"
  ],
  "label": {
-  "style": "w",
+  "style": "r",
+  "pos": "bl",
+  "rot": 0,
   "en": {
-   "text": "ALL 11 CO-FOUNDERS GONE"
+   "text": "ALL 11 CO-FOUNDERS GONE!"
   },
   "nl": {
-   "text": "ALLE 11 OPRICHTERS WEG"
+   "text": "ALLE 11 OPRICHTERS WEG!"
   }
  }
 }

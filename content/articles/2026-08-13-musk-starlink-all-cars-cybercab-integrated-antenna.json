@@ -32,6 +32,8 @@
  ],
  "label": {
   "style": "w",
+  "pos": "tr",
+  "rot": -2,
   "en": {
    "text": "STARLINK IN EVERY CAR?"
   },

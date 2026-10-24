@@ -29,13 +29,15 @@
  ],
  "label": {
   "style": "n",
+  "pos": "bl",
+  "rot": 0,
   "en": {
-   "text": "$158B",
-   "sub": "on paper; he got $0"
+   "sub": "PAY ON PAPER, GOT $0",
+   "text": "$158B"
   },
   "nl": {
-   "text": "$158 MLD",
-   "sub": "op papier; hij kreeg $0"
+   "sub": "OP PAPIER, KREEG $0",
+   "text": "$158 MLD"
   }
  }
 }

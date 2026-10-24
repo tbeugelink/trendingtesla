@@ -28,12 +28,14 @@
   "fsd-japan.jpg"
  ],
  "label": {
-  "style": "c",
+  "style": "w",
+  "pos": "tr",
+  "rot": 2,
   "en": {
-   "text": "FSD plans for Japan"
+   "text": "FSD IN JAPAN THIS YEAR?"
   },
   "nl": {
-   "text": "FSD-plannen voor Japan"
+   "text": "FSD IN JAPAN DIT JAAR?"
   }
  }
 }

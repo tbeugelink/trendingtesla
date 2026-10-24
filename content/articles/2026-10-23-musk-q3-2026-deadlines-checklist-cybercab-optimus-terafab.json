@@ -25,12 +25,16 @@
   "earnings-2.jpg"
  ],
  "label": {
-  "style": "w",
+  "style": "k",
+  "pos": "tr",
+  "rot": 0,
   "en": {
-   "text": "THE NEW DEADLINES"
+   "sub": "CHECKLIST",
+   "text": "WILL MUSK DELIVER?"
   },
   "nl": {
-   "text": "DE NIEUWE DEADLINES"
+   "sub": "CHECKLIST",
+   "text": "HAALT MUSK DEZE DATA?"
   }
  }
 }

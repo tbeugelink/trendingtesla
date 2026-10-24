@@ -28,12 +28,16 @@
   "fsd-czechia.jpg"
  ],
  "label": {
-  "style": "tag",
+  "style": "k",
+  "pos": "ml",
+  "rot": 0,
   "en": {
-   "text": "NEW NAME"
+   "sub": "NEW NAME",
+   "text": "FSD IS NOW 'ASSISTED'"
   },
   "nl": {
-   "text": "NIEUWE NAAM"
+   "sub": "NIEUWE NAAM",
+   "text": "FSD HEET NU 'ASSISTED'"
   }
  }
 }

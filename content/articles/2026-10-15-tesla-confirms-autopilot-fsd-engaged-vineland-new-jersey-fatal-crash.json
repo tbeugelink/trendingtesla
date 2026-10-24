@@ -30,12 +30,14 @@
   "fsd-3.jpg"
  ],
  "label": {
-  "style": "c",
+  "style": "r",
+  "pos": "tl",
+  "rot": 0,
   "en": {
-   "text": "Crash data from New Jersey"
+   "text": "AUTOPILOT OR FSD WAS ON"
   },
   "nl": {
-   "text": "Crashgegevens uit New Jersey"
+   "text": "AUTOPILOT OF FSD STOND AAN"
   }
  }
 }

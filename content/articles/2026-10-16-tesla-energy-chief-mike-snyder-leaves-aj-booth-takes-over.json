@@ -32,12 +32,14 @@
   "musk-1.jpg"
  ],
  "label": {
-  "style": "w",
+  "style": "r",
+  "pos": "ml",
+  "rot": 0,
   "en": {
-   "text": "ENERGY CHIEF LEAVES"
+   "text": "ENERGY CHIEF QUITS?"
   },
   "nl": {
-   "text": "ENERGIETOPMAN VERTREKT"
+   "text": "ENERGIETOPMAN WEG?"
   }
  }
 }

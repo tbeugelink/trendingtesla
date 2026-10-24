@@ -1,30 +1,44 @@
 {
-  "slug": "tesla-china-september-sales-retail-down-exports-up",
-  "date": "2026-10-12",
-  "time": "13:50",
-  "category": "news",
-  "sources": [
-    {
-      "title": "Drive Tesla Canada — Tesla China retail sales drop 9% in September, exports surge 58%",
-      "url": "https://driveteslacanada.ca/?p=125285"
-    },
-    {
-      "title": "Newsquawk — CPCA: Tesla sold 95,366 China-made vehicles in September",
-      "url": "https://www.newsquawk.com/headlines/chinas-cpca-says-tesla-tsla-sold-95366-chinese-made-vehicles-in-september"
-    }
-  ],
+ "slug": "tesla-china-september-sales-retail-down-exports-up",
+ "date": "2026-10-12",
+ "time": "13:50",
+ "category": "news",
+ "sources": [
+  {
+   "title": "Drive Tesla Canada — Tesla China retail sales drop 9% in September, exports surge 58%",
+   "url": "https://driveteslacanada.ca/?p=125285"
+  },
+  {
+   "title": "Newsquawk — CPCA: Tesla sold 95,366 China-made vehicles in September",
+   "url": "https://www.newsquawk.com/headlines/chinas-cpca-says-tesla-tsla-sold-95366-chinese-made-vehicles-in-september"
+  }
+ ],
+ "en": {
+  "title": "Tesla in China: September retail sales fall 9%, but Shanghai exports jump 58%",
+  "description": "Giga Shanghai shipped 95,366 cars in September, up 5%, as exports made up for weaker domestic demand. It is the fourth straight month of falling retail sales in China.",
+  "body": "<p>Tesla's Shanghai factory sold 95,366 cars in September, up 5% from a year earlier, according to data from the China Passenger Car Association (CPCA). Underneath that headline, two very different trends are at work.</p><h2>The split</h2><ul><li><strong>Retail sales in China:</strong> 64,837, down 9% from 71,525 in September 2025.</li><li><strong>Exports from Shanghai:</strong> 30,529, up 58% from 19,287.</li></ul><p>The domestic decline came despite discounts of up to about $1,040 on the Model 3 and Model Y.</p><h2>A four-month trend</h2><p>Retail sales in China have now fallen for four months in a row. In August, Tesla sold 57,152 cars domestically, down 12.4%, while exports more than doubled to 36,119.</p><h2>The year so far</h2><p>In the first three quarters of 2026, Tesla sold 381,088 cars inside China and exported 361,972 from Shanghai. Globally, Tesla has delivered about 1.32 million cars since January.</p><h2>A tough market overall</h2><p>Tesla is not alone. China's overall retail car sales fell around 20% in September, and BYD's domestic sales dropped 13%, while its exports rose more than 150%. Chinese carmakers are increasingly looking abroad as competition at home intensifies.</p><h2>Why it matters</h2><p>Shanghai is Tesla's biggest factory and the main source of cars for Europe and Asia-Pacific. Strong exports helped Tesla beat delivery expectations in the third quarter. But relying on exports to fill the factory leaves Tesla exposed to trade barriers and price competition in those markets.</p>"
+ },
+ "nl": {
+  "title": "Tesla in China: verkoop in september 9% lager, maar export uit Shanghai 58% hoger",
+  "description": "Giga Shanghai leverde in september 95.366 auto's, 5% meer, doordat de export de zwakkere binnenlandse vraag opving. Het is de vierde maand op rij met dalende verkoop in China.",
+  "body": "<p>Tesla's fabriek in Shanghai verkocht in september 95.366 auto's, 5% meer dan een jaar eerder, blijkt uit cijfers van de Chinese vereniging voor personenauto's CPCA. Onder dat cijfer gaan twee heel verschillende trends schuil.</p><h2>De verdeling</h2><ul><li><strong>Verkoop in China zelf:</strong> 64.837, 9% minder dan de 71.525 van september 2025.</li><li><strong>Export vanuit Shanghai:</strong> 30.529, 58% meer dan de 19.287 van vorig jaar.</li></ul><p>De binnenlandse daling kwam ondanks kortingen van omgerekend zo'n €900 op de Model 3 en Model Y.</p><h2>Een trend van vier maanden</h2><p>De verkoop in China daalt nu vier maanden op rij. In augustus verkocht Tesla 57.152 auto's in het land, 12,4% minder, terwijl de export meer dan verdubbelde naar 36.119.</p><h2>Het jaar tot nu toe</h2><p>In de eerste drie kwartalen van 2026 verkocht Tesla 381.088 auto's in China en exporteerde het er 361.972 vanuit Shanghai. Wereldwijd leverde Tesla sinds januari zo'n 1,32 miljoen auto's.</p><h2>Een zware markt</h2><p>Tesla staat daarin niet alleen. De totale autoverkoop in China daalde in september met zo'n 20%, en de binnenlandse verkoop van BYD zakte 13%, terwijl de export van BYD met meer dan 150% steeg. Chinese autobouwers kijken steeds meer naar het buitenland nu de concurrentie in eigen land toeneemt.</p><h2>Waarom dit ertoe doet</h2><p>Shanghai is Tesla's grootste fabriek en de belangrijkste bron van auto's voor Europa en de regio Azië-Pacific. Veel Model 3's in Nederland en België komen daarvandaan. De sterke export hielp Tesla in het derde kwartaal de verwachtingen te verslaan. Maar wie op export leunt om de fabriek vol te krijgen, is kwetsbaar voor handelsbarrières en prijsconcurrentie in die markten.</p>"
+ },
+ "models": [
+  "model-y",
+  "model-3"
+ ],
+ "images": [
+  "gigafactory-shanghai.jpg"
+ ],
+ "label": {
+  "style": "n",
   "en": {
-    "title": "Tesla in China: September retail sales fall 9%, but Shanghai exports jump 58%",
-    "description": "Giga Shanghai shipped 95,366 cars in September, up 5%, as exports made up for weaker domestic demand. It is the fourth straight month of falling retail sales in China.",
-    "body": "<p>Tesla's Shanghai factory sold 95,366 cars in September, up 5% from a year earlier, according to data from the China Passenger Car Association (CPCA). Underneath that headline, two very different trends are at work.</p><h2>The split</h2><ul><li><strong>Retail sales in China:</strong> 64,837, down 9% from 71,525 in September 2025.</li><li><strong>Exports from Shanghai:</strong> 30,529, up 58% from 19,287.</li></ul><p>The domestic decline came despite discounts of up to about $1,040 on the Model 3 and Model Y.</p><h2>A four-month trend</h2><p>Retail sales in China have now fallen for four months in a row. In August, Tesla sold 57,152 cars domestically, down 12.4%, while exports more than doubled to 36,119.</p><h2>The year so far</h2><p>In the first three quarters of 2026, Tesla sold 381,088 cars inside China and exported 361,972 from Shanghai. Globally, Tesla has delivered about 1.32 million cars since January.</p><h2>A tough market overall</h2><p>Tesla is not alone. China's overall retail car sales fell around 20% in September, and BYD's domestic sales dropped 13%, while its exports rose more than 150%. Chinese carmakers are increasingly looking abroad as competition at home intensifies.</p><h2>Why it matters</h2><p>Shanghai is Tesla's biggest factory and the main source of cars for Europe and Asia-Pacific. Strong exports helped Tesla beat delivery expectations in the third quarter. But relying on exports to fill the factory leaves Tesla exposed to trade barriers and price competition in those markets.</p>"
+   "text": "+58%",
+   "sub": "exports from Shanghai"
   },
   "nl": {
-    "title": "Tesla in China: verkoop in september 9% lager, maar export uit Shanghai 58% hoger",
-    "description": "Giga Shanghai leverde in september 95.366 auto's, 5% meer, doordat de export de zwakkere binnenlandse vraag opving. Het is de vierde maand op rij met dalende verkoop in China.",
-    "body": "<p>Tesla's fabriek in Shanghai verkocht in september 95.366 auto's, 5% meer dan een jaar eerder, blijkt uit cijfers van de Chinese vereniging voor personenauto's CPCA. Onder dat cijfer gaan twee heel verschillende trends schuil.</p><h2>De verdeling</h2><ul><li><strong>Verkoop in China zelf:</strong> 64.837, 9% minder dan de 71.525 van september 2025.</li><li><strong>Export vanuit Shanghai:</strong> 30.529, 58% meer dan de 19.287 van vorig jaar.</li></ul><p>De binnenlandse daling kwam ondanks kortingen van omgerekend zo'n €900 op de Model 3 en Model Y.</p><h2>Een trend van vier maanden</h2><p>De verkoop in China daalt nu vier maanden op rij. In augustus verkocht Tesla 57.152 auto's in het land, 12,4% minder, terwijl de export meer dan verdubbelde naar 36.119.</p><h2>Het jaar tot nu toe</h2><p>In de eerste drie kwartalen van 2026 verkocht Tesla 381.088 auto's in China en exporteerde het er 361.972 vanuit Shanghai. Wereldwijd leverde Tesla sinds januari zo'n 1,32 miljoen auto's.</p><h2>Een zware markt</h2><p>Tesla staat daarin niet alleen. De totale autoverkoop in China daalde in september met zo'n 20%, en de binnenlandse verkoop van BYD zakte 13%, terwijl de export van BYD met meer dan 150% steeg. Chinese autobouwers kijken steeds meer naar het buitenland nu de concurrentie in eigen land toeneemt.</p><h2>Waarom dit ertoe doet</h2><p>Shanghai is Tesla's grootste fabriek en de belangrijkste bron van auto's voor Europa en de regio Azië-Pacific. Veel Model 3's in Nederland en België komen daarvandaan. De sterke export hielp Tesla in het derde kwartaal de verwachtingen te verslaan. Maar wie op export leunt om de fabriek vol te krijgen, is kwetsbaar voor handelsbarrières en prijsconcurrentie in die markten.</p>"
-  },
-  "models": [
-    "model-y",
-    "model-3"
-  ]
+   "text": "+58%",
+   "sub": "export uit Shanghai"
+  }
+ }
 }

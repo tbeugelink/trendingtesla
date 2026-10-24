@@ -27,5 +27,19 @@
   "title": "Hoe Tesla Megapacks xAI's Colossus van stroom voorzien: zo'n $ 1 miljard aan batterijen sinds 2024",
   "description": "De beursdocumenten van SpaceX lieten zien hoeveel xAI aan Tesla-batterijen uitgaf voor zijn AI-datacenters. De cijfers, waarom een supercomputer Megapacks nodig heeft, en wat het betekent voor Tesla Energy.",
   "body": "<p>Een van de meest concrete zakelijke banden tussen Tesla en het AI-bedrijf van Elon Musk is geen software, maar hardware: grote lithium-ionbatterijen. Uit de documenten voor de beursgang van SpaceX bleek dat xAI, inmiddels de AI-divisie van SpaceX, sinds 2024 voor ongeveer $ 1 miljard aan Tesla Megapacks heeft gekocht voor zijn Colossus-datacenters.</p><h2>De cijfers</h2><p>Volgens het aangepaste beursprospectus, waarover Electrek in juni 2026 schreef, kocht xAI deze Megapacks bij Tesla:</p><ul><li><strong>2024:</strong> ongeveer $ 191 miljoen</li><li><strong>2025:</strong> ongeveer $ 506 miljoen</li><li><strong>januari tot en met maart 2026:</strong> ongeveer $ 34 miljoen</li><li><strong>alleen april 2026:</strong> ongeveer $ 269 miljoen</li></ul><p>Het document liet ook zien dat Tesla in 2025 zo'n $ 573 miljoen omzet boekte bij SpaceX en xAI, ongeveer 4,5% van de energieomzet. Daarnaast kocht SpaceX in 2025 voor ongeveer $ 131 miljoen aan Cybertrucks.</p><h2>Waarom een AI-supercomputer batterijen nodig heeft</h2><p>Colossus, het eerste datacenter van xAI in Memphis (Tennessee), werd in ongeveer vier maanden gebouwd en ging in december 2024 draaien. Het trainen van AI-modellen vraagt enorm veel stroom, en die vraag schommelt binnen seconden sterk wanneer duizenden chips tegelijk aan en uit het werk gaan. Lokale stroomnetten kunnen die pieken slecht aan. Een grote batterijbank tussen het net en de computers vangt de schommelingen op, levert noodstroom en laat het datacenter draaien terwijl extra netcapaciteit nog wordt aangelegd. Megapacks zijn daarvoor geschikt omdat ze als kant-en-klare eenheden komen die snel te plaatsen zijn.</p><h2>Wat het betekent voor Tesla</h2><p>Voor Tesla Energy zijn AI-datacenters een van de snelst groeiende klantgroepen geworden. Bij de kwartaalcijfers deze week zei Tesla dat de vraag naar Megapacks zo groot is dat de productie voor 2027 bijna is uitverkocht, met datacenters als belangrijke drijfveer. xAI is een van de eerste en meest zichtbare van die klanten.</p><p>Voor aandeelhouders zit er wel een haakje aan: verkopen aan een bedrijf dat wordt gecontroleerd door Tesla's eigen topman zijn transacties met verbonden partijen. Die moeten openbaar worden gemaakt en tegen normale marktvoorwaarden gebeuren. Critici wijzen er ook op dat aankopen zoals de Cybertruck-bestelling van SpaceX Tesla's verkoopcijfers sterker laten lijken dan met alleen externe klanten.</p><h2>De ophef rond Colossus</h2><p>De datacenters zelf blijven omstreden. Bewoners en de NAACP zijn rechtszaken begonnen over de gasturbines die de locaties van stroom voorzien, en in Southaven (Mississippi) biedt een dochter van SpaceXAI aan huizen bij de centrale op te kopen. Batterijen lossen dat niet op: ze slaan stroom op, maar wekken die niet op.</p><h2>Waar je op moet letten</h2><p>SpaceX meldde eind september 1,7 gigawatt aan rekencapaciteit en breidt verder uit. Elk nieuw gebouw is een mogelijke Megapack-order. Daarmee zijn de AI-plannen van SpaceX het volgen waard voor iedereen die geïnteresseerd is in Tesla Energy.</p>"
+ },
+ "images": [
+  "megapack-1.jpg",
+  "energy.jpg",
+  "xai-dc-1.jpg"
+ ],
+ "label": {
+  "style": "y",
+  "en": {
+   "text": "ABOUT $1B IN MEGAPACKS"
+  },
+  "nl": {
+   "text": "ZO'N $1 MLD AAN MEGAPACKS"
+  }
  }
 }

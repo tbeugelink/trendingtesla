@@ -1,29 +1,38 @@
 {
-  "slug": "tesla-model-y-germany-best-selling-car-september",
-  "date": "2026-10-14",
-  "time": "08:10",
-  "category": "models",
-  "models": [
-    "model-y"
-  ],
-  "sources": [
-    {
-      "title": "EV Wire — Tesla Model Y becomes Germany's best-selling car in September",
-      "url": "https://evwire.com/p/tesla-model-y-germany-best-selling-suv-september-2026-outsells-vw-golf"
-    },
-    {
-      "title": "Notebookcheck — German car market in September: twice as many new electric cars",
-      "url": "https://www.notebookcheck.net/German-automotive-market-in-September-Twice-as-many-new-electric-cars-as-in-September-2025.1416285.0.html"
-    }
-  ],
+ "slug": "tesla-model-y-germany-best-selling-car-september",
+ "date": "2026-10-14",
+ "time": "08:10",
+ "category": "models",
+ "models": [
+  "model-y"
+ ],
+ "sources": [
+  {
+   "title": "EV Wire — Tesla Model Y becomes Germany's best-selling car in September",
+   "url": "https://evwire.com/p/tesla-model-y-germany-best-selling-suv-september-2026-outsells-vw-golf"
+  },
+  {
+   "title": "Notebookcheck — German car market in September: twice as many new electric cars",
+   "url": "https://www.notebookcheck.net/German-automotive-market-in-September-Twice-as-many-new-electric-cars-as-in-September-2025.1416285.0.html"
+  }
+ ],
+ "en": {
+  "title": "Model Y beats the VW Golf: Tesla has Germany's best-selling car in September",
+  "description": "With 8,038 registrations, the Model Y was the most popular new car in Germany in September. Tesla's German sales nearly quadrupled, helped by a new EV subsidy.",
+  "body": "<p>In the home country of Volkswagen, a Tesla was the best-selling new car in September. The Model Y recorded 8,038 registrations, ahead of the VW Golf with 6,580, according to Germany's Federal Motor Transport Authority (KBA).</p><h2>The key numbers</h2><ul><li><strong>Model Y:</strong> 8,038, the best-selling car of any type, the top SUV and the top electric car. Its best month of 2026, beating March's 6,841.</li><li><strong>Model 3:</strong> 4,512, leader of the mid-size segment and sixth overall.</li><li><strong>Tesla total:</strong> 12,552 registrations, up 268.7% from a year earlier, for a 4.9% market share.</li><li><strong>Top EV brand:</strong> Tesla led all brands in electric registrations, ahead of VW (9,440) and Skoda (7,673).</li></ul><h2>A booming EV market</h2><p>Germany registered a record 88,599 battery-electric cars in September, 34.5% of all new car registrations and almost double the level of a year ago. A new government EV subsidy, introduced in May, is a big part of the story. The Model Y is the most popular car under that program, with 8,297 approved applications as of October 1.</p><h2>The year so far</h2><p>Despite its strong September, the Model Y is second among electric cars in Germany this year, with 29,464 registrations, just behind the Skoda Elroq at 30,845.</p><h2>Why it matters</h2><p>Germany is Europe's biggest car market and was one of Tesla's weakest spots in 2025. A month in which the Model Y outsells the Golf is symbolic, and shows how quickly demand can return when prices and incentives line up. The question now is whether Tesla can keep that pace outside quarter-end months.</p>"
+ },
+ "nl": {
+  "title": "Model Y verslaat de VW Golf: Tesla heeft de bestverkochte auto van Duitsland in september",
+  "description": "Met 8.038 registraties was de Model Y in september de populairste nieuwe auto in Duitsland. Tesla's Duitse verkoop werd bijna vier keer zo groot, geholpen door een nieuwe subsidie.",
+  "body": "<p>In het thuisland van Volkswagen was in september een Tesla de bestverkochte nieuwe auto. De Model Y kwam op 8.038 registraties, vóór de VW Golf met 6.580, volgens de Duitse dienst voor het wegverkeer KBA.</p><h2>De belangrijkste cijfers</h2><ul><li><strong>Model Y:</strong> 8.038, de bestverkochte auto van alle soorten, de populairste SUV en de populairste elektrische auto. Zijn beste maand van 2026, boven de 6.841 van maart.</li><li><strong>Model 3:</strong> 4.512, koploper in de middenklasse en zesde overall.</li><li><strong>Tesla totaal:</strong> 12.552 registraties, 268,7% meer dan een jaar eerder, goed voor een marktaandeel van 4,9%.</li><li><strong>Populairste EV-merk:</strong> Tesla had van alle merken de meeste elektrische registraties, vóór VW (9.440) en Skoda (7.673).</li></ul><h2>Een booming EV-markt</h2><p>Duitsland registreerde in september een recordaantal van 88.599 volledig elektrische auto's, 34,5% van alle nieuwe auto's en bijna het dubbele van een jaar eerder. Een nieuwe overheidssubsidie voor elektrische auto's, ingevoerd in mei, speelt daarin een grote rol. De Model Y is de populairste auto binnen die regeling, met 8.297 goedgekeurde aanvragen op 1 oktober.</p><h2>Het jaar tot nu toe</h2><p>Ondanks de sterke septembermaand staat de Model Y dit jaar tweede onder de elektrische auto's in Duitsland, met 29.464 registraties, net achter de Skoda Elroq met 30.845.</p><h2>Waarom dit ertoe doet</h2><p>Duitsland is de grootste automarkt van Europa en was in 2025 een van Tesla's zwakste plekken. Een maand waarin de Model Y meer verkoopt dan de Golf is symbolisch, en laat zien hoe snel de vraag kan terugkeren als prijs en subsidie op één lijn liggen. De vraag is nu of Tesla dat tempo ook vasthoudt buiten de laatste maand van een kwartaal.</p>"
+ },
+ "label": {
+  "style": "w",
   "en": {
-    "title": "Model Y beats the VW Golf: Tesla has Germany's best-selling car in September",
-    "description": "With 8,038 registrations, the Model Y was the most popular new car in Germany in September. Tesla's German sales nearly quadrupled, helped by a new EV subsidy.",
-    "body": "<p>In the home country of Volkswagen, a Tesla was the best-selling new car in September. The Model Y recorded 8,038 registrations, ahead of the VW Golf with 6,580, according to Germany's Federal Motor Transport Authority (KBA).</p><h2>The key numbers</h2><ul><li><strong>Model Y:</strong> 8,038, the best-selling car of any type, the top SUV and the top electric car. Its best month of 2026, beating March's 6,841.</li><li><strong>Model 3:</strong> 4,512, leader of the mid-size segment and sixth overall.</li><li><strong>Tesla total:</strong> 12,552 registrations, up 268.7% from a year earlier, for a 4.9% market share.</li><li><strong>Top EV brand:</strong> Tesla led all brands in electric registrations, ahead of VW (9,440) and Skoda (7,673).</li></ul><h2>A booming EV market</h2><p>Germany registered a record 88,599 battery-electric cars in September, 34.5% of all new car registrations and almost double the level of a year ago. A new government EV subsidy, introduced in May, is a big part of the story. The Model Y is the most popular car under that program, with 8,297 approved applications as of October 1.</p><h2>The year so far</h2><p>Despite its strong September, the Model Y is second among electric cars in Germany this year, with 29,464 registrations, just behind the Skoda Elroq at 30,845.</p><h2>Why it matters</h2><p>Germany is Europe's biggest car market and was one of Tesla's weakest spots in 2025. A month in which the Model Y outsells the Golf is symbolic, and shows how quickly demand can return when prices and incentives line up. The question now is whether Tesla can keep that pace outside quarter-end months.</p>"
+   "text": "BEATS THE VW GOLF"
   },
   "nl": {
-    "title": "Model Y verslaat de VW Golf: Tesla heeft de bestverkochte auto van Duitsland in september",
-    "description": "Met 8.038 registraties was de Model Y in september de populairste nieuwe auto in Duitsland. Tesla's Duitse verkoop werd bijna vier keer zo groot, geholpen door een nieuwe subsidie.",
-    "body": "<p>In het thuisland van Volkswagen was in september een Tesla de bestverkochte nieuwe auto. De Model Y kwam op 8.038 registraties, vóór de VW Golf met 6.580, volgens de Duitse dienst voor het wegverkeer KBA.</p><h2>De belangrijkste cijfers</h2><ul><li><strong>Model Y:</strong> 8.038, de bestverkochte auto van alle soorten, de populairste SUV en de populairste elektrische auto. Zijn beste maand van 2026, boven de 6.841 van maart.</li><li><strong>Model 3:</strong> 4.512, koploper in de middenklasse en zesde overall.</li><li><strong>Tesla totaal:</strong> 12.552 registraties, 268,7% meer dan een jaar eerder, goed voor een marktaandeel van 4,9%.</li><li><strong>Populairste EV-merk:</strong> Tesla had van alle merken de meeste elektrische registraties, vóór VW (9.440) en Skoda (7.673).</li></ul><h2>Een booming EV-markt</h2><p>Duitsland registreerde in september een recordaantal van 88.599 volledig elektrische auto's, 34,5% van alle nieuwe auto's en bijna het dubbele van een jaar eerder. Een nieuwe overheidssubsidie voor elektrische auto's, ingevoerd in mei, speelt daarin een grote rol. De Model Y is de populairste auto binnen die regeling, met 8.297 goedgekeurde aanvragen op 1 oktober.</p><h2>Het jaar tot nu toe</h2><p>Ondanks de sterke septembermaand staat de Model Y dit jaar tweede onder de elektrische auto's in Duitsland, met 29.464 registraties, net achter de Skoda Elroq met 30.845.</p><h2>Waarom dit ertoe doet</h2><p>Duitsland is de grootste automarkt van Europa en was in 2025 een van Tesla's zwakste plekken. Een maand waarin de Model Y meer verkoopt dan de Golf is symbolisch, en laat zien hoe snel de vraag kan terugkeren als prijs en subsidie op één lijn liggen. De vraag is nu of Tesla dat tempo ook vasthoudt buiten de laatste maand van een kwartaal.</p>"
+   "text": "VERSLAAT DE VW GOLF"
   }
+ }
 }

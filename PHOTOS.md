@@ -1,0 +1,121 @@
+# Photo catalog (static/img/topics/<name>.jpg)
+
+Each line: file — what is actually visible. Pick only photos whose visible subject matches the article's core subject. Never show a product the article is not about (no Megapack on a home-battery story, no solar roof on a Powerwall story, no Cybertruck on a Model Y story, etc.).
+
+## Charging
+- charge-port.jpg — close-up of a white Tesla's charge port with a cable plugged in
+- supercharger.jpg — Supercharger site at sunset, white/red stalls, Teslas charging, a Semi truck behind
+- supercharger-2.jpg — row of white/red Supercharger stalls, a few cars, dusk
+- supercharger-3.jpg — Supercharger at night in rain, a Semi in the background
+- supercharger-4.jpg — covered Supercharger station at night, one grey Tesla
+- supercharger-5.jpg — large covered Supercharger at night, wet ground, a gold Model Y
+- supercharger-6.jpg — open-air V4 Supercharger posts at dusk, two Teslas
+- supercharger-7.jpg — tall V4 Supercharger posts in a green setting, car charging
+- winter-1.jpg — blue Tesla charging at a snowy Supercharger at night
+- wallbox-1.jpg — white Tesla Wall Connector on a house wall, blue Model 3 behind
+- wallbox-2.jpg — red Tesla plugged into a Wall Connector on a green wall
+- wallbox-3.jpg — Wall Connector on a pillar under a carport, grey Tesla
+- wallbox-4.jpg — Wall Connector inside a white garage
+- wallbox-5.jpg — Wall Connector beside a garage door outside
+
+## Energy (be strict: utility-scale vs home)
+- megapack-1.jpg — row of Megapack units on grassy hills (utility-scale battery)
+- megapack-2.jpg — Megapacks in a desert at sunset (utility-scale)
+- megapack-3.jpg — single Megapack, studio-like grass setting (utility-scale)
+- energy.jpg — long rows of Megapacks on concrete (utility-scale)
+- energy-2.jpg — aerial view of a large Megapack battery park in the desert (utility-scale)
+- energy-3.jpg — man on a balcony pointing at a dark solar-tile roof, mountains (Solar Roof)
+- energy-4.jpg — modern house with dark solar roof at sunset, Cybertruck in driveway (solar roof / home solar)
+- energy-5.jpg — large dark solar panels on a roof, small-town US street behind (solar panels)
+- energy-6.jpg — dark solar panels on a roof in a desert with cacti (solar panels)
+- energy-home-dusk.jpg — house with solar panels, a white wall-mounted Powerwall by the garage, Model Y charging (home: Powerwall + solar + EV)
+
+## Factories
+- gigafactory.jpg — sunny factory with glass hall, robots building cars, Semi trucks parked (generic Tesla factory)
+- gigafactory-2.jpg — car body on an assembly line with robot arms (production line)
+- gigafactory-3.jpg — aerial of a big white factory with TESLA lettering in green fields
+- gigafactory-4.jpg — aerial of a large modern factory roof at golden hour (generic)
+- gigafactory-5.jpg — aerial of a futuristic white factory in a forest
+- gigafactory-6.jpg — futuristic factory at sunset, aerial
+- gigafactory-berlin.jpg — aerial of Giga Berlin in pine forest near a highway
+- gigafactory-fremont.jpg — Fremont factory with car lots, hills and bay
+- gigafactory-nevada.jpg — Giga Nevada in a dry desert valley
+- gigafactory-shanghai.jpg — Giga Shanghai at dusk with car lots and city skyline
+
+## FSD / driving / software
+- fsd.jpg — driver's hand on the big screen showing navigation, city street
+- fsd-2.jpg — Tesla screen showing a FSD visualisation, city street ahead
+- fsd-3.jpg — highway view from the driver's seat, FSD visualisation on screen
+- fsd-4.jpg — Amsterdam canal street seen from the driver's seat, phone and screen
+- fsd-czechia.jpg — European city street from the driver's seat
+- fsd-japan.jpg — driver on a Japanese mountain highway, screen visible
+- interior-1.jpg — Tesla rear seats and interior, daylight
+- interior-2.jpg — Tesla dashboard and centre screen with map, countryside
+- software-update.jpg — dark Tesla interior at night, rain on windscreen, screen showing an update progress ring
+- grok-1.jpg — car screen with chat bubbles (AI assistant)
+- grok-2.jpg — car screen with abstract AI chat interface
+- grok-3.jpg — Tesla interior at night, city lights, AI assistant glow on screen
+
+## Robotaxi / Cybercab
+- cybercab.jpg — gold two-seat Cybercab with butterfly doors open, people getting in, street
+- cybercab-street.jpg — same scene as cybercab.jpg (Cybercab boarding)
+- cybercab-fleet.jpg — dozens of gold Cybercabs parked in rows, city skyline at dusk
+- cybercab-interior.jpg — Cybercab-style interior with neon city outside
+- cybertruck-fleet.jpg — many Cybertrucks in rows at sunset
+- robotaxi-my-1.jpg — black Model Y robotaxi driving in a city street
+- robotaxi-my-2.jpg — black Model Y robotaxi at an intersection, front view
+
+## Optimus
+- optimus.jpg — Optimus head and shoulders close-up, neutral room
+- optimus-army.jpg — hundreds of Optimus robots standing in rows in a factory
+- optimus-factory.jpg — Optimus in a factory with robot arms
+- optimus-full.jpg — full-body Optimus in a concrete room
+- optimus-garden.jpg — Optimus standing in a garden
+- optimus-kitchen.jpg — Optimus in a home kitchen
+- optimus-line.jpg — gold-armed Optimus working at a production line
+- optimus-office.jpg — Optimus in an office
+- optimus-store.jpg — Optimus walking in a supermarket aisle
+
+## SpaceX / Starlink / xAI / Boring
+- spacex-1.jpg … spacex-5.jpg — Falcon/Starship rockets on the launch pad with steam, various skies
+- spacex-6.jpg — Falcon 9 booster landing on a drone ship at sea, sunset
+- spacex-7.jpg — Starship stacked at the launch tower at dawn
+- spacex-8.jpg — empty clean rocket factory hall with one stainless steel section
+- starlink-1.jpg — Starlink satellite constellation above Earth, Milky Way
+- starlink-2.jpg — close-up of a Starlink satellite above Earth with others around
+- starlink-car-1.jpg — Model Y with a Starlink dish on the roof in a desert at sunset
+- starlink-car-2.jpg — Model S with a Starlink dish on the roof under a night sky
+- starlink-car-3.jpg — dark Model Y with a dish on the roof under the Milky Way
+- xai-dc-1.jpg — large AI data center building with power lines, hazy morning (outside)
+- xai-dc-2.jpg — long aisle between server racks (inside a data center)
+- tunnel-1.jpg — white Model 3 in a lit Loop tunnel
+- tunnel-2.jpg — Cybertruck in a colourful lit tunnel
+- tunnel-3.jpg — red Model X in a lit tunnel
+- tunnel-4.jpg — gold Cybertruck in a tunnel
+- tunnel-5.jpg — tunnel boring machine being lowered into a launch pit, city skyline
+- tunnel-6.jpg — underground Loop station with several gold Model Ys waiting
+
+## Business / people / stage
+- earnings-1.jpg — big dark screen with stock chart
+- earnings-2.jpg — presentation screen with bar charts on a stage
+- earnings-3.jpg — screen "Annual Figures" with bar chart
+- earnings-4.jpg — stage with podium and rising chart
+- earnings-5.jpg … earnings-8.jpg — dashboards with colourful charts on screens
+- musk-1.jpg — empty stage with one stool and microphone in a dark auditorium (shareholder meeting / keynote)
+- musk-2.jpg — outdoor press podium with microphones in front of a factory, empty chairs
+- musk-3.jpg — smartphone with a social feed on a dark desk, coffee cup
+
+## Guides / ownership
+- guide-battery.jpg — car screen showing a battery health icon
+- guide-papers.jpg — insurance policy and warranty booklet on a table, white Model 3 outside
+- guide-roadtrip.jpg — blue Model Y with roof box and open boot on an Alpine pass
+- guide-service.jpg — technician kneeling at a grey Model 3's wheel, service van, autumn street
+- guide-tread.jpg — man checking tyre tread on a white Model Y in a home garage
+- guide-wintertyres.jpg — blue Model 3 in a garage with a stack of winter tyres, snow outside
+
+## Other
+- roadster-flying.jpg — Roadster with thrusters hovering over a dark track
+- semi-2.jpg, semi-3.jpg — Tesla Semi truck on a desert road at sunset
+
+# Model photos (static/img/models/)
+Articles with a "models" key automatically use real-life photos of that model. You can also name one explicitly, e.g. "models/ct-2.jpg" (Cybertruck towing a caravan at sunset). Galleries: ms-* Model S, msc-* older Model S, m3h-* Model 3 Highland, m3c-* older Model 3, m3s-* Model 3 Standard, m3p-* Model 3 Performance, mx-* Model X, mxc-* older Model X, mxp-1 Model X Plaid, myj-* new Model Y, myc-* older Model Y, mys-* Model Y Standard, myp-* Model Y Performance, myl-* Model Y L, ct-* Cybertruck, cb-* Cyberbeast, ctf-1 Cybertruck Foundation, cc-* Cybercab, rd-* Roadster, semi* Semi.

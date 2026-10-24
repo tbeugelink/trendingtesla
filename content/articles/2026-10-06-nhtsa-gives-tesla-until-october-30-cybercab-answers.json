@@ -1,30 +1,41 @@
 {
-  "slug": "nhtsa-gives-tesla-until-october-30-cybercab-answers",
-  "date": "2026-10-06",
-  "time": "14:40",
-  "category": "robotaxi",
-  "models": [
-    "cybercab"
-  ],
-  "sources": [
-    {
-      "title": "Not a Tesla App — Tesla gets extension to respond to NHTSA's Cybercab probe",
-      "url": "https://notateslaapp.com/news/4793/tesla-gets-extension-to-respond-to-nhtsas-cybercab-probe"
-    },
-    {
-      "title": "TechCrunch — Feds launch investigation into Tesla's Cybercab deployment",
-      "url": "https://techcrunch.com/2026/09/04/feds-launch-investigation-into-teslas-cybercab-deployment/"
-    }
-  ],
+ "slug": "nhtsa-gives-tesla-until-october-30-cybercab-answers",
+ "date": "2026-10-06",
+ "time": "14:40",
+ "category": "robotaxi",
+ "models": [
+  "cybercab"
+ ],
+ "sources": [
+  {
+   "title": "Not a Tesla App — Tesla gets extension to respond to NHTSA's Cybercab probe",
+   "url": "https://notateslaapp.com/news/4793/tesla-gets-extension-to-respond-to-nhtsas-cybercab-probe"
+  },
+  {
+   "title": "TechCrunch — Feds launch investigation into Tesla's Cybercab deployment",
+   "url": "https://techcrunch.com/2026/09/04/feds-launch-investigation-into-teslas-cybercab-deployment/"
+  }
+ ],
+ "en": {
+  "title": "Tesla asked for eight more weeks to answer NHTSA on the Cybercab. It got 30 days",
+  "description": "The US regulator has moved Tesla's deadline to October 30. Its 21 questions cover everything from mirrors and brakes to why Tesla never applied for an exemption.",
+  "body": "<p>Tesla now has until October 30 to answer the US National Highway Traffic Safety Administration's questions about the Cybercab. The original deadline was September 30.</p><h2>Tesla wanted more time</h2><p>Tesla asked for eight extra weeks, until November 20, pointing to the voluminous nature of the request. NHTSA granted 30 days instead.</p><h2>What NHTSA wants to know</h2><p>The questions are part of a special order linked to Audit Query 26002, which NHTSA opened on September 3 to examine how Tesla certified that the steering-wheel-free Cybercab meets federal safety standards. The order contains 21 requests, including:</p><ul><li>Tesla's plans to expand commercial Cybercab operations to more vehicles and cities.</li><li>The vehicle's operating limits.</li><li>How the Cybercab meets rules for turn signals, mirrors, rear-view cameras and foot-operated service brakes.</li><li>Whether temporary human controls were used during certification testing.</li><li>Whether passengers can move the vehicle using the touchscreen.</li><li>Why Tesla did not apply for an exemption, and how the car complies with existing rules without one.</li></ul><h2>Why the exemption question matters</h2><p>Zoox, Amazon's robotaxi company, went through a similar process and ended up with a temporary exemption that caps how many vehicles it can add each year. Tesla chose to self-certify instead. If NHTSA is not convinced, Tesla could face a slower, capped path, just as it wants to scale up.</p><h2>What to watch</h2><p>The Cybercab keeps operating in Austin in the meantime. After October 30, NHTSA will review Tesla's answers; that can take months. Meanwhile, the agency is rewriting the rules on manual controls, which could make much of the dispute moot.</p>"
+ },
+ "nl": {
+  "title": "Tesla vroeg acht weken extra om de NHTSA te antwoorden over de Cybercab. Het kreeg er 30 dagen",
+  "description": "De Amerikaanse toezichthouder heeft Tesla's deadline verschoven naar 30 oktober. De 21 vragen gaan over alles van spiegels en remmen tot waarom Tesla nooit een ontheffing aanvroeg.",
+  "body": "<p>Tesla heeft nu tot 30 oktober om de vragen van de Amerikaanse verkeersveiligheidsautoriteit NHTSA over de Cybercab te beantwoorden. De oorspronkelijke deadline was 30 september.</p><h2>Tesla wilde meer tijd</h2><p>Tesla vroeg om acht weken extra, tot 20 november, en wees op de omvang van het verzoek. De NHTSA gaf 30 dagen.</p><h2>Wat de NHTSA wil weten</h2><p>De vragen horen bij een formeel informatiebevel binnen Audit Query 26002, die de NHTSA op 3 september opende om te onderzoeken hoe Tesla heeft gecertificeerd dat de Cybercab zonder stuur aan de federale veiligheidsnormen voldoet. Het bevel bevat 21 verzoeken, waaronder:</p><ul><li>Tesla's plannen om de commerciële inzet van de Cybercab uit te breiden naar meer auto's en steden.</li><li>De grenzen waarbinnen het voertuig mag rijden.</li><li>Hoe de Cybercab voldoet aan regels voor richtingaanwijzers, spiegels, achteruitrijcamera's en een rempedaal.</li><li>Of er tijdens de certificeringstests tijdelijk handmatige bediening is gebruikt.</li><li>Of passagiers de auto via het touchscreen kunnen laten rijden.</li><li>Waarom Tesla geen ontheffing aanvroeg, en hoe de auto zonder ontheffing aan de bestaande regels voldoet.</li></ul><h2>Waarom de vraag over een ontheffing belangrijk is</h2><p>Zoox, het robotaxibedrijf van Amazon, doorliep een vergelijkbaar proces en kreeg uiteindelijk een tijdelijke ontheffing met een maximum aantal voertuigen dat het per jaar mag toevoegen. Tesla koos ervoor zelf te certificeren. Is de NHTSA niet overtuigd, dan kan Tesla op een tragere route met een plafond belanden, net nu het wil opschalen.</p><h2>Waar je op moet letten</h2><p>De Cybercab blijft intussen gewoon rijden in Austin. Na 30 oktober beoordeelt de NHTSA Tesla's antwoorden, en dat kan maanden duren. Tegelijk herschrijft de toezichthouder de regels over handmatige bediening, waardoor een groot deel van het geschil overbodig kan worden.</p>"
+ },
+ "image": "models/cc-2.jpg",
+ "label": {
+  "style": "n",
   "en": {
-    "title": "Tesla asked for eight more weeks to answer NHTSA on the Cybercab. It got 30 days",
-    "description": "The US regulator has moved Tesla's deadline to October 30. Its 21 questions cover everything from mirrors and brakes to why Tesla never applied for an exemption.",
-    "body": "<p>Tesla now has until October 30 to answer the US National Highway Traffic Safety Administration's questions about the Cybercab. The original deadline was September 30.</p><h2>Tesla wanted more time</h2><p>Tesla asked for eight extra weeks, until November 20, pointing to the voluminous nature of the request. NHTSA granted 30 days instead.</p><h2>What NHTSA wants to know</h2><p>The questions are part of a special order linked to Audit Query 26002, which NHTSA opened on September 3 to examine how Tesla certified that the steering-wheel-free Cybercab meets federal safety standards. The order contains 21 requests, including:</p><ul><li>Tesla's plans to expand commercial Cybercab operations to more vehicles and cities.</li><li>The vehicle's operating limits.</li><li>How the Cybercab meets rules for turn signals, mirrors, rear-view cameras and foot-operated service brakes.</li><li>Whether temporary human controls were used during certification testing.</li><li>Whether passengers can move the vehicle using the touchscreen.</li><li>Why Tesla did not apply for an exemption, and how the car complies with existing rules without one.</li></ul><h2>Why the exemption question matters</h2><p>Zoox, Amazon's robotaxi company, went through a similar process and ended up with a temporary exemption that caps how many vehicles it can add each year. Tesla chose to self-certify instead. If NHTSA is not convinced, Tesla could face a slower, capped path, just as it wants to scale up.</p><h2>What to watch</h2><p>The Cybercab keeps operating in Austin in the meantime. After October 30, NHTSA will review Tesla's answers; that can take months. Meanwhile, the agency is rewriting the rules on manual controls, which could make much of the dispute moot.</p>"
+   "text": "30 DAYS",
+   "sub": "to answer NHTSA"
   },
   "nl": {
-    "title": "Tesla vroeg acht weken extra om de NHTSA te antwoorden over de Cybercab. Het kreeg er 30 dagen",
-    "description": "De Amerikaanse toezichthouder heeft Tesla's deadline verschoven naar 30 oktober. De 21 vragen gaan over alles van spiegels en remmen tot waarom Tesla nooit een ontheffing aanvroeg.",
-    "body": "<p>Tesla heeft nu tot 30 oktober om de vragen van de Amerikaanse verkeersveiligheidsautoriteit NHTSA over de Cybercab te beantwoorden. De oorspronkelijke deadline was 30 september.</p><h2>Tesla wilde meer tijd</h2><p>Tesla vroeg om acht weken extra, tot 20 november, en wees op de omvang van het verzoek. De NHTSA gaf 30 dagen.</p><h2>Wat de NHTSA wil weten</h2><p>De vragen horen bij een formeel informatiebevel binnen Audit Query 26002, die de NHTSA op 3 september opende om te onderzoeken hoe Tesla heeft gecertificeerd dat de Cybercab zonder stuur aan de federale veiligheidsnormen voldoet. Het bevel bevat 21 verzoeken, waaronder:</p><ul><li>Tesla's plannen om de commerciële inzet van de Cybercab uit te breiden naar meer auto's en steden.</li><li>De grenzen waarbinnen het voertuig mag rijden.</li><li>Hoe de Cybercab voldoet aan regels voor richtingaanwijzers, spiegels, achteruitrijcamera's en een rempedaal.</li><li>Of er tijdens de certificeringstests tijdelijk handmatige bediening is gebruikt.</li><li>Of passagiers de auto via het touchscreen kunnen laten rijden.</li><li>Waarom Tesla geen ontheffing aanvroeg, en hoe de auto zonder ontheffing aan de bestaande regels voldoet.</li></ul><h2>Waarom de vraag over een ontheffing belangrijk is</h2><p>Zoox, het robotaxibedrijf van Amazon, doorliep een vergelijkbaar proces en kreeg uiteindelijk een tijdelijke ontheffing met een maximum aantal voertuigen dat het per jaar mag toevoegen. Tesla koos ervoor zelf te certificeren. Is de NHTSA niet overtuigd, dan kan Tesla op een tragere route met een plafond belanden, net nu het wil opschalen.</p><h2>Waar je op moet letten</h2><p>De Cybercab blijft intussen gewoon rijden in Austin. Na 30 oktober beoordeelt de NHTSA Tesla's antwoorden, en dat kan maanden duren. Tegelijk herschrijft de toezichthouder de regels over handmatige bediening, waardoor een groot deel van het geschil overbodig kan worden.</p>"
-  },
-  "image": "models/cc-2.jpg"
+   "text": "30 DAGEN",
+   "sub": "om NHTSA te antwoorden"
+  }
+ }
 }

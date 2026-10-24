@@ -1,27 +1,41 @@
 {
-  "slug": "tesla-winter-range-tips-cold-weather",
-  "date": "2026-10-18",
-  "time": "08:15",
-  "category": "guides",
-  "sources": [
-    {
-      "title": "Tesla — Winter driving tips",
-      "url": "https://www.tesla.com/support/winter-driving-tips"
-    },
-    {
-      "title": "Tesla — Tips voor rijden in de winter (NL)",
-      "url": "https://www.tesla.com/nl_NL/support/preconditioning-cold-weather"
-    }
-  ],
+ "slug": "tesla-winter-range-tips-cold-weather",
+ "date": "2026-10-18",
+ "time": "08:15",
+ "category": "guides",
+ "sources": [
+  {
+   "title": "Tesla — Winter driving tips",
+   "url": "https://www.tesla.com/support/winter-driving-tips"
+  },
+  {
+   "title": "Tesla — Tips voor rijden in de winter (NL)",
+   "url": "https://www.tesla.com/nl_NL/support/preconditioning-cold-weather"
+  }
+ ],
+ "en": {
+  "title": "Tesla in winter: 9 practical tips to keep your range up when it gets cold",
+  "description": "Cold weather costs every electric car range. With the right settings, you can limit the loss and charge faster. Here is what actually works in a Tesla.",
+  "body": "<p>Every electric car loses range in winter. The battery works less efficiently when it is cold, and heating the cabin takes energy. Depending on temperature and trip length, a drop of 20% or more compared with summer is common. These tips help you keep as much as possible.</p><h2>Before you leave</h2><ul><li><strong>1. Precondition while plugged in.</strong> Warm up the cabin and battery from the app while the car is still on the charger. The energy then comes from the grid, not your battery.</li><li><strong>2. Use Scheduled Departure.</strong> Set the time you leave, and the car makes sure it is warm and charged by then, using cheaper night-time electricity where possible.</li><li><strong>3. Clear snow and ice.</strong> Snow on the car adds weight and drag, and can block cameras and sensors that Autopilot needs.</li></ul><h2>While driving</h2><ul><li><strong>4. Use seat and steering wheel heating.</strong> Heating your body directly uses far less energy than heating all the air in the cabin. You can then set the cabin temperature a bit lower.</li><li><strong>5. Drive a little slower.</strong> Air resistance rises sharply with speed; on the highway, a few km/h less makes a noticeable difference.</li><li><strong>6. Check tire pressure.</strong> Cold air lowers tire pressure, which increases rolling resistance. Check it more often in winter.</li></ul><h2>When charging</h2><ul><li><strong>7. Navigate to the Supercharger.</strong> When you set a Supercharger as your destination, the car warms the battery on the way so it can charge faster when you arrive.</li><li><strong>8. Charge after driving.</strong> A battery that is still warm from driving accepts charge better than one that has cooled down overnight.</li></ul><h2>When parked</h2><ul><li><strong>9. Watch the energy users.</strong> Sentry Mode and Cabin Overheat Protection use energy while parked. Turn them off where you don't need them, especially if you leave the car parked for days.</li></ul><h2>Good to know</h2><p>Most Teslas built since around 2021 have a heat pump, which heats the cabin more efficiently than older systems. The range shown on the screen is an estimate; the energy graph in the car gives a more realistic forecast for your current driving. And the loss is temporary: when it warms up, your range returns.</p>"
+ },
+ "nl": {
+  "title": "Tesla in de winter: 9 praktische tips om je bereik op peil te houden als het koud wordt",
+  "description": "Kou kost elke elektrische auto bereik. Met de juiste instellingen beperk je het verlies en laad je sneller. Dit werkt echt in een Tesla.",
+  "body": "<p>Elke elektrische auto verliest in de winter bereik. De accu werkt minder efficiënt als hij koud is, en het interieur verwarmen kost energie. Afhankelijk van de temperatuur en de lengte van de rit is een daling van 20% of meer ten opzichte van de zomer normaal. Met deze tips hou je zoveel mogelijk over.</p><h2>Voordat je vertrekt</h2><ul><li><strong>1. Voorverwarmen aan de lader.</strong> Warm het interieur en de accu op via de app terwijl de auto nog aan de lader hangt. De energie komt dan van het net, niet uit je accu.</li><li><strong>2. Gebruik Gepland vertrek.</strong> Stel in hoe laat je vertrekt, dan zorgt de auto dat hij op tijd warm en geladen is, waar mogelijk met goedkopere nachtstroom.</li><li><strong>3. Haal sneeuw en ijs weg.</strong> Sneeuw op de auto maakt hem zwaarder en minder gestroomlijnd, en kan camera's en sensoren blokkeren die Autopilot nodig heeft.</li></ul><h2>Tijdens het rijden</h2><ul><li><strong>4. Gebruik stoel- en stuurverwarming.</strong> Je lichaam direct verwarmen kost veel minder energie dan alle lucht in de auto. Daarna kun je de binnentemperatuur iets lager zetten.</li><li><strong>5. Rij iets rustiger.</strong> De luchtweerstand stijgt hard met de snelheid; op de snelweg maken een paar km/u minder al merkbaar verschil.</li><li><strong>6. Controleer de bandenspanning.</strong> Kou verlaagt de bandenspanning, en dat verhoogt de rolweerstand. Check het in de winter vaker.</li></ul><h2>Bij het laden</h2><ul><li><strong>7. Navigeer naar de Supercharger.</strong> Als je een Supercharger als bestemming instelt, warmt de auto onderweg de accu op, zodat hij bij aankomst sneller laadt.</li><li><strong>8. Laad na het rijden.</strong> Een accu die nog warm is van de rit, laadt beter dan een die 's nachts is afgekoeld.</li></ul><h2>Als je geparkeerd staat</h2><ul><li><strong>9. Let op stroomverbruikers.</strong> Schildwachtmodus en de bescherming tegen oververhitting van het interieur kosten energie als je stilstaat. Zet ze uit waar je ze niet nodig hebt, zeker als de auto dagen stilstaat.</li></ul><h2>Goed om te weten</h2><p>De meeste Tesla's die sinds ongeveer 2021 zijn gebouwd, hebben een warmtepomp, die het interieur efficiënter verwarmt dan oudere systemen. Het bereik op het scherm is een schatting; de energiegrafiek in de auto geeft een realistischere voorspelling voor je huidige rit. En het verlies is tijdelijk: als het warmer wordt, komt je bereik terug.</p>"
+ },
+ "image": "topics/winter-2.jpg",
+ "images": [
+  "winter-1.jpg"
+ ],
+ "label": {
+  "style": "n",
   "en": {
-    "title": "Tesla in winter: 9 practical tips to keep your range up when it gets cold",
-    "description": "Cold weather costs every electric car range. With the right settings, you can limit the loss and charge faster. Here is what actually works in a Tesla.",
-    "body": "<p>Every electric car loses range in winter. The battery works less efficiently when it is cold, and heating the cabin takes energy. Depending on temperature and trip length, a drop of 20% or more compared with summer is common. These tips help you keep as much as possible.</p><h2>Before you leave</h2><ul><li><strong>1. Precondition while plugged in.</strong> Warm up the cabin and battery from the app while the car is still on the charger. The energy then comes from the grid, not your battery.</li><li><strong>2. Use Scheduled Departure.</strong> Set the time you leave, and the car makes sure it is warm and charged by then, using cheaper night-time electricity where possible.</li><li><strong>3. Clear snow and ice.</strong> Snow on the car adds weight and drag, and can block cameras and sensors that Autopilot needs.</li></ul><h2>While driving</h2><ul><li><strong>4. Use seat and steering wheel heating.</strong> Heating your body directly uses far less energy than heating all the air in the cabin. You can then set the cabin temperature a bit lower.</li><li><strong>5. Drive a little slower.</strong> Air resistance rises sharply with speed; on the highway, a few km/h less makes a noticeable difference.</li><li><strong>6. Check tire pressure.</strong> Cold air lowers tire pressure, which increases rolling resistance. Check it more often in winter.</li></ul><h2>When charging</h2><ul><li><strong>7. Navigate to the Supercharger.</strong> When you set a Supercharger as your destination, the car warms the battery on the way so it can charge faster when you arrive.</li><li><strong>8. Charge after driving.</strong> A battery that is still warm from driving accepts charge better than one that has cooled down overnight.</li></ul><h2>When parked</h2><ul><li><strong>9. Watch the energy users.</strong> Sentry Mode and Cabin Overheat Protection use energy while parked. Turn them off where you don't need them, especially if you leave the car parked for days.</li></ul><h2>Good to know</h2><p>Most Teslas built since around 2021 have a heat pump, which heats the cabin more efficiently than older systems. The range shown on the screen is an estimate; the energy graph in the car gives a more realistic forecast for your current driving. And the loss is temporary: when it warms up, your range returns.</p>"
+   "text": "9 TIPS",
+   "sub": "for winter range"
   },
   "nl": {
-    "title": "Tesla in de winter: 9 praktische tips om je bereik op peil te houden als het koud wordt",
-    "description": "Kou kost elke elektrische auto bereik. Met de juiste instellingen beperk je het verlies en laad je sneller. Dit werkt echt in een Tesla.",
-    "body": "<p>Elke elektrische auto verliest in de winter bereik. De accu werkt minder efficiënt als hij koud is, en het interieur verwarmen kost energie. Afhankelijk van de temperatuur en de lengte van de rit is een daling van 20% of meer ten opzichte van de zomer normaal. Met deze tips hou je zoveel mogelijk over.</p><h2>Voordat je vertrekt</h2><ul><li><strong>1. Voorverwarmen aan de lader.</strong> Warm het interieur en de accu op via de app terwijl de auto nog aan de lader hangt. De energie komt dan van het net, niet uit je accu.</li><li><strong>2. Gebruik Gepland vertrek.</strong> Stel in hoe laat je vertrekt, dan zorgt de auto dat hij op tijd warm en geladen is, waar mogelijk met goedkopere nachtstroom.</li><li><strong>3. Haal sneeuw en ijs weg.</strong> Sneeuw op de auto maakt hem zwaarder en minder gestroomlijnd, en kan camera's en sensoren blokkeren die Autopilot nodig heeft.</li></ul><h2>Tijdens het rijden</h2><ul><li><strong>4. Gebruik stoel- en stuurverwarming.</strong> Je lichaam direct verwarmen kost veel minder energie dan alle lucht in de auto. Daarna kun je de binnentemperatuur iets lager zetten.</li><li><strong>5. Rij iets rustiger.</strong> De luchtweerstand stijgt hard met de snelheid; op de snelweg maken een paar km/u minder al merkbaar verschil.</li><li><strong>6. Controleer de bandenspanning.</strong> Kou verlaagt de bandenspanning, en dat verhoogt de rolweerstand. Check het in de winter vaker.</li></ul><h2>Bij het laden</h2><ul><li><strong>7. Navigeer naar de Supercharger.</strong> Als je een Supercharger als bestemming instelt, warmt de auto onderweg de accu op, zodat hij bij aankomst sneller laadt.</li><li><strong>8. Laad na het rijden.</strong> Een accu die nog warm is van de rit, laadt beter dan een die 's nachts is afgekoeld.</li></ul><h2>Als je geparkeerd staat</h2><ul><li><strong>9. Let op stroomverbruikers.</strong> Schildwachtmodus en de bescherming tegen oververhitting van het interieur kosten energie als je stilstaat. Zet ze uit waar je ze niet nodig hebt, zeker als de auto dagen stilstaat.</li></ul><h2>Goed om te weten</h2><p>De meeste Tesla's die sinds ongeveer 2021 zijn gebouwd, hebben een warmtepomp, die het interieur efficiënter verwarmt dan oudere systemen. Het bereik op het scherm is een schatting; de energiegrafiek in de auto geeft een realistischere voorspelling voor je huidige rit. En het verlies is tijdelijk: als het warmer wordt, komt je bereik terug.</p>"
-  },
-  "image": "topics/winter-2.jpg"
+   "text": "9 TIPS",
+   "sub": "voor bereik in de winter"
+  }
+ }
 }

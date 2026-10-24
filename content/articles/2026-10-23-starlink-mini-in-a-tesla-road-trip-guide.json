@@ -22,5 +22,19 @@
   "title": "Een Starlink Mini in je Tesla: stroomverbruik, plaatsing en kosten voor roadtrips en kamperen",
   "description": "Een Starlink Mini geeft je internet op plekken waar je Tesla geen bereik heeft. Hoeveel stroom hij uit de accu haalt, waar je hem neerzet, wat het kost, en de regels om op te letten.",
   "body": "<p>Tesla's auto's maken verbinding via mobiele netwerken, en in afgelegen gebieden kan die verbinding wegvallen. Steeds meer rijders lossen dat op met een Starlink Mini, een kleine satellietschotel die heel weinig stroom gebruikt. Tesla verkoopt of ondersteunt hem niet, maar hij past goed bij de Kampeermodus en lange reizen. Dit moet je weten.</p><h2>Wat de Starlink Mini is</h2><ul><li><strong>Formaat en gewicht:</strong> ongeveer 30 bij 26 cm en zo'n 1,2 kg, dus ongeveer zo groot als een laptop.</li><li><strong>Stroom:</strong> ongeveer 20 tot 40 watt bij normaal gebruik. Hij heeft een voeding van 12 tot 20 volt nodig, zoals de 12-voltaansluiting van de auto met de juiste kabel, of een USB-C-powerbank die genoeg vermogen levert.</li><li><strong>Snelheid:</strong> tot ongeveer 260 Mbit/s met Roam-abonnementen, met mogelijk vertraging in drukke uren.</li><li><strong>Prijs (VS, oktober 2026):</strong> $ 149 voor de hardware. Roam-abonnementen kosten $ 55 per maand voor 100 GB, $ 80 voor 300 GB en $ 175 voor onbeperkt.</li></ul><p>Prijzen en abonnementen verschillen per land; kijk op de Starlink-website voor jouw regio.</p><h2>Hoeveel accu kost het?</h2><p>De Mini zelf is het probleem niet. Bij ongeveer 30 watt kost tien uur gebruik zo'n 0,3 kWh, minder dan 1% van een gemiddelde Model Y-accu. In de Kampeermodus houdt de auto wel zijn eigen systemen, scherm en klimaatregeling aan, en dat kost meestal veel meer energie dan de schotel, zeker bij verwarmen of koelen. Stem je laadniveau af op de klimaatregeling, niet op Starlink.</p><h2>Waar je hem neerzet</h2><ul><li><strong>Vrij zicht op de lucht:</strong> bomen en gebouwen blokkeren het signaal. Op een camping werkt een plek een paar meter van de auto vaak beter dan het dak.</li><li><strong>Niet achter het glas:</strong> een schotel onder een getint of gecoat glazen dak kan een zwakker signaal geven. Sommige Cybertruck-rijders melden dat het onder hun dakglas werkt, maar de resultaten verschillen.</li><li><strong>Dakbevestiging:</strong> er bestaan bevestigingen van derden, vooral voor de Cybertruck. Zorg dat een bevestiging de lak of het glas niet beschadigt, en leg kabels zo dat ze niet tussen een deur klem raken.</li></ul><h2>Regels en veiligheid</h2><p>Of je Starlink tijdens het rijden mag gebruiken, hangt af van je abonnement en de lokale regels; controleer dat vooraf. Laat nooit een losse schotel of powerbank door het interieur schuiven, en leg kabels niet zo dat ze de bestuurder afleiden. In sommige landen moet apparatuur op het dak tijdens het rijden ook voldoen aan voertuigregels.</p><h2>Is het de moeite waard?</h2><p>Voor de meeste dagelijkse ritten is de eigen verbinding van de auto genoeg. Een Starlink Mini is zinvol als je op afgelegen plekken kampeert, reist in gebieden met slecht bereik, of onderweg moet werken. Musk heeft gezegd dat toekomstige auto's Starlink ingebouwd krijgen, zoals de Cybercab al heeft, maar voor privé-Tesla's is er nog geen fabrieksoptie.</p>"
+ },
+ "images": [
+  "starlink-car-1.jpg",
+  "starlink-car-3.jpg",
+  "guide-roadtrip.jpg"
+ ],
+ "label": {
+  "style": "y",
+  "en": {
+   "text": "STARLINK MINI IN TESLA"
+  },
+  "nl": {
+   "text": "STARLINK MINI IN TESLA"
+  }
  }
 }

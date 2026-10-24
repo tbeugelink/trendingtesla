@@ -1,29 +1,38 @@
 {
-  "slug": "tesla-roadster-unveil-postponed-october-15",
-  "date": "2026-10-01",
-  "time": "07:00",
-  "category": "models",
-  "models": [
-    "roadster"
-  ],
-  "sources": [
-    {
-      "title": "Electrive — Tesla postpones Roadster unveiling due to weather",
-      "url": "https://www.electrive.com/2026/10/01/tesla-postpones-roadster-unveiling-due-to-weather/"
-    },
-    {
-      "title": "Motor1 — Tesla Roadster demo pushed to October",
-      "url": "https://motor1.com/news/809958/tesla-roadster-demo-pushed-october"
-    }
-  ],
+ "slug": "tesla-roadster-unveil-postponed-october-15",
+ "date": "2026-10-01",
+ "time": "07:00",
+ "category": "models",
+ "models": [
+  "roadster"
+ ],
+ "sources": [
+  {
+   "title": "Electrive — Tesla postpones Roadster unveiling due to weather",
+   "url": "https://www.electrive.com/2026/10/01/tesla-postpones-roadster-unveiling-due-to-weather/"
+  },
+  {
+   "title": "Motor1 — Tesla Roadster demo pushed to October",
+   "url": "https://motor1.com/news/809958/tesla-roadster-demo-pushed-october"
+  }
+ ],
+ "en": {
+  "title": "Tesla Roadster reveal pushed back two weeks to October 15, blamed on the weather",
+  "description": "The long-awaited Roadster unveiling in Waco, Texas, has moved from October 1 to October 15. Tesla says the event can only be held outdoors and severe conditions were forecast.",
+  "body": "<p>The unveiling of Tesla's next-generation Roadster has been delayed again, this time by two weeks. The event, planned for October 1 in Waco, Texas, will now take place on October 15.</p><h2>The reason</h2><p>Tesla pointed to severe conditions in the forecast and said the event can only be held outdoors. Local forecasts showed warm temperatures, wind and rain, and it was not entirely clear which conditions Tesla considered too severe. The outdoor requirement hints that the demonstration involves more than a car on a stage.</p><h2>A long history of delays</h2><p>This is far from the first time the Roadster has slipped:</p><ul><li><strong>November 2017:</strong> the second-generation prototype was shown, with production planned for 2020.</li><li><strong>2020 to 2024:</strong> the launch was pushed back repeatedly.</li><li><strong>2022:</strong> reservations reopened.</li><li><strong>2026:</strong> the reveal moved from the end of 2025 to April 1, then to October 1 and now October 15.</li></ul><h2>Where and what</h2><p>Waco is about 90 minutes north of Tesla's headquarters in Austin. Tesla has not shared details of what it will show, but rumors and earlier comments from Musk have long pointed to unusual features, including thrusters.</p><h2>What to watch</h2><p>A two-week weather delay is minor next to the years the Roadster has already waited. What matters on October 15 is whether Tesla shows a production-ready car with a price and a delivery date, or another spectacular demo with the details still to come.</p>"
+ },
+ "nl": {
+  "title": "Presentatie Tesla Roadster twee weken uitgesteld naar 15 oktober, het weer krijgt de schuld",
+  "description": "De langverwachte onthulling van de Roadster in Waco, Texas, is verschoven van 1 naar 15 oktober. Volgens Tesla kan het evenement alleen buiten plaatsvinden en was zwaar weer voorspeld.",
+  "body": "<p>De onthulling van de nieuwe generatie Tesla Roadster is opnieuw uitgesteld, dit keer met twee weken. Het evenement dat op 1 oktober in Waco, Texas, gepland stond, vindt nu plaats op 15 oktober.</p><h2>De reden</h2><p>Tesla wees op zware omstandigheden in de weersverwachting en zei dat het evenement alleen buiten kan plaatsvinden. De lokale verwachting meldde warm weer, wind en regen, en het was niet helemaal duidelijk welke omstandigheden Tesla te zwaar vond. Dat het buiten moet, doet vermoeden dat de demonstratie meer inhoudt dan een auto op een podium.</p><h2>Een lange geschiedenis van uitstel</h2><p>Het is lang niet de eerste keer dat de Roadster opschuift:</p><ul><li><strong>November 2017:</strong> het prototype van de tweede generatie werd getoond, met productie gepland voor 2020.</li><li><strong>2020 tot 2024:</strong> de lancering werd steeds verder uitgesteld.</li><li><strong>2022:</strong> reserveringen gingen weer open.</li><li><strong>2026:</strong> de onthulling schoof van eind 2025 naar 1 april, toen naar 1 oktober en nu naar 15 oktober.</li></ul><h2>Waar en wat</h2><p>Waco ligt zo'n anderhalf uur rijden ten noorden van Tesla's hoofdkantoor in Austin. Tesla heeft niet gezegd wat het precies laat zien, maar geruchten en eerdere uitspraken van Musk wijzen al lang op ongebruikelijke functies, waaronder stuwraketjes.</p><h2>Waar je op moet letten</h2><p>Twee weken uitstel door het weer valt in het niet bij de jaren die de Roadster al heeft gewacht. Op 15 oktober gaat het erom of Tesla een productierijpe auto laat zien met een prijs en een leverdatum, of opnieuw een spectaculaire demo waarbij de details later volgen.</p>"
+ },
+ "label": {
+  "style": "tag",
   "en": {
-    "title": "Tesla Roadster reveal pushed back two weeks to October 15, blamed on the weather",
-    "description": "The long-awaited Roadster unveiling in Waco, Texas, has moved from October 1 to October 15. Tesla says the event can only be held outdoors and severe conditions were forecast.",
-    "body": "<p>The unveiling of Tesla's next-generation Roadster has been delayed again, this time by two weeks. The event, planned for October 1 in Waco, Texas, will now take place on October 15.</p><h2>The reason</h2><p>Tesla pointed to severe conditions in the forecast and said the event can only be held outdoors. Local forecasts showed warm temperatures, wind and rain, and it was not entirely clear which conditions Tesla considered too severe. The outdoor requirement hints that the demonstration involves more than a car on a stage.</p><h2>A long history of delays</h2><p>This is far from the first time the Roadster has slipped:</p><ul><li><strong>November 2017:</strong> the second-generation prototype was shown, with production planned for 2020.</li><li><strong>2020 to 2024:</strong> the launch was pushed back repeatedly.</li><li><strong>2022:</strong> reservations reopened.</li><li><strong>2026:</strong> the reveal moved from the end of 2025 to April 1, then to October 1 and now October 15.</li></ul><h2>Where and what</h2><p>Waco is about 90 minutes north of Tesla's headquarters in Austin. Tesla has not shared details of what it will show, but rumors and earlier comments from Musk have long pointed to unusual features, including thrusters.</p><h2>What to watch</h2><p>A two-week weather delay is minor next to the years the Roadster has already waited. What matters on October 15 is whether Tesla shows a production-ready car with a price and a delivery date, or another spectacular demo with the details still to come.</p>"
+   "text": "POSTPONED"
   },
   "nl": {
-    "title": "Presentatie Tesla Roadster twee weken uitgesteld naar 15 oktober, het weer krijgt de schuld",
-    "description": "De langverwachte onthulling van de Roadster in Waco, Texas, is verschoven van 1 naar 15 oktober. Volgens Tesla kan het evenement alleen buiten plaatsvinden en was zwaar weer voorspeld.",
-    "body": "<p>De onthulling van de nieuwe generatie Tesla Roadster is opnieuw uitgesteld, dit keer met twee weken. Het evenement dat op 1 oktober in Waco, Texas, gepland stond, vindt nu plaats op 15 oktober.</p><h2>De reden</h2><p>Tesla wees op zware omstandigheden in de weersverwachting en zei dat het evenement alleen buiten kan plaatsvinden. De lokale verwachting meldde warm weer, wind en regen, en het was niet helemaal duidelijk welke omstandigheden Tesla te zwaar vond. Dat het buiten moet, doet vermoeden dat de demonstratie meer inhoudt dan een auto op een podium.</p><h2>Een lange geschiedenis van uitstel</h2><p>Het is lang niet de eerste keer dat de Roadster opschuift:</p><ul><li><strong>November 2017:</strong> het prototype van de tweede generatie werd getoond, met productie gepland voor 2020.</li><li><strong>2020 tot 2024:</strong> de lancering werd steeds verder uitgesteld.</li><li><strong>2022:</strong> reserveringen gingen weer open.</li><li><strong>2026:</strong> de onthulling schoof van eind 2025 naar 1 april, toen naar 1 oktober en nu naar 15 oktober.</li></ul><h2>Waar en wat</h2><p>Waco ligt zo'n anderhalf uur rijden ten noorden van Tesla's hoofdkantoor in Austin. Tesla heeft niet gezegd wat het precies laat zien, maar geruchten en eerdere uitspraken van Musk wijzen al lang op ongebruikelijke functies, waaronder stuwraketjes.</p><h2>Waar je op moet letten</h2><p>Twee weken uitstel door het weer valt in het niet bij de jaren die de Roadster al heeft gewacht. Op 15 oktober gaat het erom of Tesla een productierijpe auto laat zien met een prijs en een leverdatum, of opnieuw een spectaculaire demo waarbij de details later volgen.</p>"
+   "text": "UITGESTELD"
   }
+ }
 }

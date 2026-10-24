@@ -1,29 +1,38 @@
 {
-  "slug": "cybertruck-recalls-2025-2026-what-owners-should-know",
-  "date": "2026-05-10",
-  "time": "08:25",
-  "category": "news",
-  "models": [
-    "cybertruck"
-  ],
-  "sources": [
-    {
-      "title": "Local 3 News — Tesla Cybertrucks recalled because of wheel problem",
-      "url": "https://www.local3news.com/local-news/tesla-cybertrucks-being-recalled-because-of-wheel-problem/article_91593964-c0b6-42a1-acfe-ea37913aa661.html"
-    },
-    {
-      "title": "Curaçao Chronicle — Tesla recalled more than 115,000 Cybertrucks in 2025, NHTSA data shows",
-      "url": "https://www.curacaochronicle.com/post/local/tesla-recalled-more-than-115000-cybertrucks-in-2025-nhtsa-data-shows"
-    }
-  ],
+ "slug": "cybertruck-recalls-2025-2026-what-owners-should-know",
+ "date": "2026-05-10",
+ "time": "08:25",
+ "category": "news",
+ "models": [
+  "cybertruck"
+ ],
+ "sources": [
+  {
+   "title": "Local 3 News — Tesla Cybertrucks recalled because of wheel problem",
+   "url": "https://www.local3news.com/local-news/tesla-cybertrucks-being-recalled-because-of-wheel-problem/article_91593964-c0b6-42a1-acfe-ea37913aa661.html"
+  },
+  {
+   "title": "Curaçao Chronicle — Tesla recalled more than 115,000 Cybertrucks in 2025, NHTSA data shows",
+   "url": "https://www.curacaochronicle.com/post/local/tesla-recalled-more-than-115000-cybertrucks-in-2025-nhtsa-data-shows"
+  }
+ ],
+ "en": {
+  "title": "Cybertruck recalls: a new wheel recall, and what the 2025 recall wave means for owners",
+  "description": "Tesla is recalling 173 Cybertrucks with 18-inch steel wheels over cracking stud holes. It follows three recalls covering nearly 116,000 trucks in 2025. Here is what owners should check.",
+  "body": "<p>Tesla has issued another recall for the Cybertruck, this time a small one. It comes after a year in which the truck had more recall actions than ever.</p><h2>The new recall</h2><ul><li><strong>Vehicles:</strong> 173 Cybertrucks from model years 2024 to 2026.</li><li><strong>Which ones:</strong> trucks with 18-inch steel wheels.</li><li><strong>The problem:</strong> the stud holes in the brake rotor can crack, which could let a wheel stud separate from the hub.</li><li><strong>The fix:</strong> Tesla Service will replace the front and rear brake rotors, hubs and lug nuts for free.</li><li><strong>Letters:</strong> owners will be notified by mail from June 20, 2026.</li></ul><h2>The 2025 recall wave</h2><p>In 2025, Tesla's filings with the US safety regulator NHTSA covered 115,912 Cybertrucks across three recall campaigns:</p><ul><li>A stainless-steel exterior trim panel along the roof edge that could come loose while driving.</li><li>A software issue that made the front parking lights brighter than allowed, fixed over the air.</li><li>An optional off-road light bar accessory.</li></ul><p>That number is the maximum count of trucks that could be affected, not the number that actually had a problem. Several recalls can cover the same truck.</p><h2>What owners should do</h2><ul><li>Check your truck in the Tesla app or on NHTSA's recall lookup with your VIN.</li><li>Book the repair through the app if your truck is affected; recall repairs are free.</li><li>Software recalls are usually fixed automatically with an over-the-air update.</li></ul><h2>Why it matters</h2><p>Recalls are common for new vehicle designs, and many are minor. But for a truck already struggling with falling sales, every recall adds to doubts about quality. Tesla's ability to fix many issues over the air does help limit the impact for owners.</p>"
+ },
+ "nl": {
+  "title": "Terugroepacties Cybertruck: een nieuwe actie voor wielen, en wat de golf van 2025 betekent",
+  "description": "Tesla roept 173 Cybertrucks met stalen 18-inch velgen terug vanwege scheurende boutgaten. Eerder waren er in 2025 drie acties voor bijna 116.000 trucks. Waar eigenaren op moeten letten.",
+  "body": "<p>Tesla heeft opnieuw een terugroepactie voor de Cybertruck, dit keer een kleine. Hij volgt op een jaar waarin de truck meer terugroepacties had dan ooit.</p><h2>De nieuwe terugroepactie</h2><ul><li><strong>Voertuigen:</strong> 173 Cybertrucks van modeljaar 2024 tot en met 2026.</li><li><strong>Welke:</strong> trucks met stalen 18-inch velgen.</li><li><strong>Het probleem:</strong> de boutgaten in de remschijf kunnen scheuren, waardoor een wielbout los kan komen van de naaf.</li><li><strong>De oplossing:</strong> Tesla Service vervangt gratis de remschijven, naven en wielmoeren voor en achter.</li><li><strong>Brieven:</strong> eigenaren krijgen vanaf 20 juni 2026 bericht per post.</li></ul><h2>De golf van 2025</h2><p>In 2025 gingen Tesla's meldingen bij de Amerikaanse verkeersveiligheidsdienst NHTSA over 115.912 Cybertrucks, verdeeld over drie terugroepacties:</p><ul><li>Een roestvrijstalen sierpaneel langs de dakrand dat tijdens het rijden los kon raken.</li><li>Een softwarefout waardoor de parkeerlichten voor feller brandden dan toegestaan, opgelost via een update.</li><li>Een optionele lichtbalk voor offroadgebruik.</li></ul><p>Dat aantal is het maximale aantal trucks dat geraakt kan zijn, niet het aantal dat echt een probleem had. Meerdere acties kunnen over dezelfde truck gaan.</p><h2>Wat eigenaren moeten doen</h2><ul><li>Controleer je truck in de Tesla-app of met je VIN in de terugroepdatabase van de NHTSA.</li><li>Plan de reparatie via de app als je truck eronder valt; reparaties bij terugroepacties zijn gratis.</li><li>Softwareproblemen worden meestal automatisch opgelost met een update via internet.</li></ul><h2>Waarom het ertoe doet</h2><p>Terugroepacties komen vaak voor bij nieuwe ontwerpen, en veel ervan zijn klein. Maar voor een truck die al last heeft van dalende verkopen, voedt elke actie de twijfel over de kwaliteit. Dat Tesla veel problemen via internet kan oplossen, beperkt wel de gevolgen voor eigenaren.</p>"
+ },
+ "label": {
+  "style": "tag",
   "en": {
-    "title": "Cybertruck recalls: a new wheel recall, and what the 2025 recall wave means for owners",
-    "description": "Tesla is recalling 173 Cybertrucks with 18-inch steel wheels over cracking stud holes. It follows three recalls covering nearly 116,000 trucks in 2025. Here is what owners should check.",
-    "body": "<p>Tesla has issued another recall for the Cybertruck, this time a small one. It comes after a year in which the truck had more recall actions than ever.</p><h2>The new recall</h2><ul><li><strong>Vehicles:</strong> 173 Cybertrucks from model years 2024 to 2026.</li><li><strong>Which ones:</strong> trucks with 18-inch steel wheels.</li><li><strong>The problem:</strong> the stud holes in the brake rotor can crack, which could let a wheel stud separate from the hub.</li><li><strong>The fix:</strong> Tesla Service will replace the front and rear brake rotors, hubs and lug nuts for free.</li><li><strong>Letters:</strong> owners will be notified by mail from June 20, 2026.</li></ul><h2>The 2025 recall wave</h2><p>In 2025, Tesla's filings with the US safety regulator NHTSA covered 115,912 Cybertrucks across three recall campaigns:</p><ul><li>A stainless-steel exterior trim panel along the roof edge that could come loose while driving.</li><li>A software issue that made the front parking lights brighter than allowed, fixed over the air.</li><li>An optional off-road light bar accessory.</li></ul><p>That number is the maximum count of trucks that could be affected, not the number that actually had a problem. Several recalls can cover the same truck.</p><h2>What owners should do</h2><ul><li>Check your truck in the Tesla app or on NHTSA's recall lookup with your VIN.</li><li>Book the repair through the app if your truck is affected; recall repairs are free.</li><li>Software recalls are usually fixed automatically with an over-the-air update.</li></ul><h2>Why it matters</h2><p>Recalls are common for new vehicle designs, and many are minor. But for a truck already struggling with falling sales, every recall adds to doubts about quality. Tesla's ability to fix many issues over the air does help limit the impact for owners.</p>"
+   "text": "RECALL"
   },
   "nl": {
-    "title": "Terugroepacties Cybertruck: een nieuwe actie voor wielen, en wat de golf van 2025 betekent",
-    "description": "Tesla roept 173 Cybertrucks met stalen 18-inch velgen terug vanwege scheurende boutgaten. Eerder waren er in 2025 drie acties voor bijna 116.000 trucks. Waar eigenaren op moeten letten.",
-    "body": "<p>Tesla heeft opnieuw een terugroepactie voor de Cybertruck, dit keer een kleine. Hij volgt op een jaar waarin de truck meer terugroepacties had dan ooit.</p><h2>De nieuwe terugroepactie</h2><ul><li><strong>Voertuigen:</strong> 173 Cybertrucks van modeljaar 2024 tot en met 2026.</li><li><strong>Welke:</strong> trucks met stalen 18-inch velgen.</li><li><strong>Het probleem:</strong> de boutgaten in de remschijf kunnen scheuren, waardoor een wielbout los kan komen van de naaf.</li><li><strong>De oplossing:</strong> Tesla Service vervangt gratis de remschijven, naven en wielmoeren voor en achter.</li><li><strong>Brieven:</strong> eigenaren krijgen vanaf 20 juni 2026 bericht per post.</li></ul><h2>De golf van 2025</h2><p>In 2025 gingen Tesla's meldingen bij de Amerikaanse verkeersveiligheidsdienst NHTSA over 115.912 Cybertrucks, verdeeld over drie terugroepacties:</p><ul><li>Een roestvrijstalen sierpaneel langs de dakrand dat tijdens het rijden los kon raken.</li><li>Een softwarefout waardoor de parkeerlichten voor feller brandden dan toegestaan, opgelost via een update.</li><li>Een optionele lichtbalk voor offroadgebruik.</li></ul><p>Dat aantal is het maximale aantal trucks dat geraakt kan zijn, niet het aantal dat echt een probleem had. Meerdere acties kunnen over dezelfde truck gaan.</p><h2>Wat eigenaren moeten doen</h2><ul><li>Controleer je truck in de Tesla-app of met je VIN in de terugroepdatabase van de NHTSA.</li><li>Plan de reparatie via de app als je truck eronder valt; reparaties bij terugroepacties zijn gratis.</li><li>Softwareproblemen worden meestal automatisch opgelost met een update via internet.</li></ul><h2>Waarom het ertoe doet</h2><p>Terugroepacties komen vaak voor bij nieuwe ontwerpen, en veel ervan zijn klein. Maar voor een truck die al last heeft van dalende verkopen, voedt elke actie de twijfel over de kwaliteit. Dat Tesla veel problemen via internet kan oplossen, beperkt wel de gevolgen voor eigenaren.</p>"
+   "text": "TERUGROEPACTIE"
   }
+ }
 }

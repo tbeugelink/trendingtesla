@@ -1,31 +1,31 @@
 {
-  "slug": "tesla-model-s-model-x-orders-closed-inventory-sold-out",
-  "date": "2026-04-02",
-  "time": "14:30",
-  "category": "news",
-  "models": [
-    "model-s",
-    "model-x"
-  ],
-  "sources": [
-    {
-      "title": "Not a Tesla App — Model X inventory sold out in the US, Model S nearly gone",
-      "url": "https://www.notateslaapp.com/news/3900/tesla-model-x-inventory-sold-out-in-us-model-s-nearly-gone"
-    },
-    {
-      "title": "CarPro — Tesla ending production of Model S and Model X",
-      "url": "https://www.carpro.com/blog/tesla-ending-production-of-model-s-model-x"
-    }
-  ],
-  "en": {
-    "title": "Last call for the Model S and Model X: custom orders closed, inventory nearly gone",
-    "description": "Tesla has stopped taking custom orders for its two flagship cars. The Model X appears sold out in the US and the Model S Plaid is hard to find. Here is what is still possible.",
-    "body": "<p>The end of Tesla's two original flagships is getting very real. Elon Musk announced on X that custom orders for the Model S and Model X have ended, and new cars in stock are disappearing fast.</p><h2>What changed</h2><ul><li><strong>No more custom orders:</strong> you can no longer configure a new Model S or Model X to your own specification.</li><li><strong>Inventory only:</strong> at the time of the announcement, roughly 600 new units were available worldwide.</li><li><strong>Model X:</strong> appears sold out across the US, with mostly demo cars left.</li><li><strong>Model S:</strong> the Plaid looks sold out in most regions, and the remaining stock is shrinking.</li></ul><p>Availability varies by location, so a few cars may still turn up in local inventory.</p><h2>Why it is happening</h2><p>Tesla announced in January that it would end production of the Model S and Model X in the second quarter of 2026. The two cars had become a small part of sales, and Tesla wants the space in its Fremont factory to build Optimus, its humanoid robot.</p><h2>What comes next</h2><p>There is no direct successor. Musk has hinted at a larger, 'way cooler' SUV in the future, and the new Roadster is meant to take over the role of Tesla's performance flagship. Neither has a confirmed launch date.</p><h2>If you want one</h2><ul><li>Check Tesla's inventory page regularly and widen your search area.</li><li>Ask about demo cars: they have some kilometers on them but are often cheaper.</li><li>Consider a used one: there are many well-kept Model S and Model X cars on the market, and Tesla has said it will keep servicing them and sending software updates.</li></ul><h2>What to watch</h2><p>The final production date and any farewell edition for the last cars.</p>"
+ "slug": "tesla-model-s-model-x-orders-closed-inventory-sold-out",
+ "date": "2026-04-02",
+ "time": "14:30",
+ "category": "news",
+ "models": [
+  "model-s",
+  "model-x"
+ ],
+ "sources": [
+  {
+   "title": "Not a Tesla App — Model X inventory sold out in the US, Model S nearly gone",
+   "url": "https://www.notateslaapp.com/news/3900/tesla-model-x-inventory-sold-out-in-us-model-s-nearly-gone"
   },
-  "nl": {
-    "title": "Laatste kans op een Model S of Model X: geen bestellingen meer, voorraad bijna op",
-    "description": "Tesla neemt geen bestellingen naar wens meer aan voor zijn twee vlaggenschepen. De Model X lijkt in de VS uitverkocht en de Model S Plaid is lastig te vinden. Dit kan nog wel.",
-    "body": "<p>Het einde van Tesla's twee originele vlaggenschepen komt nu echt dichtbij. Elon Musk meldde op X dat bestellingen naar wens voor de Model S en Model X zijn gestopt, en nieuwe auto's op voorraad verdwijnen snel.</p><h2>Wat er veranderde</h2><ul><li><strong>Geen bestellingen naar wens meer:</strong> je kunt geen nieuwe Model S of Model X meer samenstellen.</li><li><strong>Alleen voorraad:</strong> bij de aankondiging waren er wereldwijd nog ongeveer 600 nieuwe exemplaren beschikbaar.</li><li><strong>Model X:</strong> lijkt in de hele VS uitverkocht, met vooral demoauto's als restant.</li><li><strong>Model S:</strong> de Plaid lijkt in de meeste regio's uitverkocht en de overige voorraad slinkt.</li></ul><p>De beschikbaarheid verschilt per locatie, dus er kunnen lokaal nog enkele auto's opduiken.</p><h2>Waarom dit gebeurt</h2><p>Tesla kondigde in januari aan dat de productie van de Model S en Model X in het tweede kwartaal van 2026 stopt. De twee auto's waren een klein deel van de verkoop geworden, en Tesla wil de ruimte in de fabriek in Fremont gebruiken om Optimus te bouwen, zijn humanoïde robot.</p><h2>Wat er daarna komt</h2><p>Er is geen directe opvolger. Musk heeft gehint op een grotere, 'veel coolere' SUV, en de nieuwe Roadster moet de rol van sportief vlaggenschip overnemen. Van geen van beide is een introductiedatum bevestigd.</p><h2>Als je er een wilt</h2><ul><li>Kijk regelmatig op Tesla's voorraadpagina en zoek in een groter gebied.</li><li>Vraag naar demoauto's: die hebben wat kilometers gemaakt, maar zijn vaak goedkoper.</li><li>Overweeg een occasion: er zijn veel goed onderhouden Model S'en en Model X'en te koop, en Tesla zegt dat het ze blijft onderhouden en van software-updates blijft voorzien.</li></ul><h2>Waar je op moet letten</h2><p>De definitieve einddatum van de productie, en of er een afscheidseditie komt voor de laatste auto's.</p>"
-  },
-  "image": "models/mx-4.jpg"
+  {
+   "title": "CarPro — Tesla ending production of Model S and Model X",
+   "url": "https://www.carpro.com/blog/tesla-ending-production-of-model-s-model-x"
+  }
+ ],
+ "en": {
+  "title": "Last call for the Model S and Model X: custom orders closed, inventory nearly gone",
+  "description": "Tesla has stopped taking custom orders for its two flagship cars. The Model X appears sold out in the US and the Model S Plaid is hard to find. Here is what is still possible.",
+  "body": "<p>The end of Tesla's two original flagships is getting very real. Elon Musk announced on X that custom orders for the Model S and Model X have ended, and new cars in stock are disappearing fast.</p><h2>What changed</h2><ul><li><strong>No more custom orders:</strong> you can no longer configure a new Model S or Model X to your own specification.</li><li><strong>Inventory only:</strong> at the time of the announcement, roughly 600 new units were available worldwide.</li><li><strong>Model X:</strong> appears sold out across the US, with mostly demo cars left.</li><li><strong>Model S:</strong> the Plaid looks sold out in most regions, and the remaining stock is shrinking.</li></ul><p>Availability varies by location, so a few cars may still turn up in local inventory.</p><h2>Why it is happening</h2><p>Tesla announced in January that it would end production of the Model S and Model X in the second quarter of 2026. The two cars had become a small part of sales, and Tesla wants the space in its Fremont factory to build Optimus, its humanoid robot.</p><h2>What comes next</h2><p>There is no direct successor. Musk has hinted at a larger, 'way cooler' SUV in the future, and the new Roadster is meant to take over the role of Tesla's performance flagship. Neither has a confirmed launch date.</p><h2>If you want one</h2><ul><li>Check Tesla's inventory page regularly and widen your search area.</li><li>Ask about demo cars: they have some kilometers on them but are often cheaper.</li><li>Consider a used one: there are many well-kept Model S and Model X cars on the market, and Tesla has said it will keep servicing them and sending software updates.</li></ul><h2>What to watch</h2><p>The final production date and any farewell edition for the last cars.</p>"
+ },
+ "nl": {
+  "title": "Laatste kans op een Model S of Model X: geen bestellingen meer, voorraad bijna op",
+  "description": "Tesla neemt geen bestellingen naar wens meer aan voor zijn twee vlaggenschepen. De Model X lijkt in de VS uitverkocht en de Model S Plaid is lastig te vinden. Dit kan nog wel.",
+  "body": "<p>Het einde van Tesla's twee originele vlaggenschepen komt nu echt dichtbij. Elon Musk meldde op X dat bestellingen naar wens voor de Model S en Model X zijn gestopt, en nieuwe auto's op voorraad verdwijnen snel.</p><h2>Wat er veranderde</h2><ul><li><strong>Geen bestellingen naar wens meer:</strong> je kunt geen nieuwe Model S of Model X meer samenstellen.</li><li><strong>Alleen voorraad:</strong> bij de aankondiging waren er wereldwijd nog ongeveer 600 nieuwe exemplaren beschikbaar.</li><li><strong>Model X:</strong> lijkt in de hele VS uitverkocht, met vooral demoauto's als restant.</li><li><strong>Model S:</strong> de Plaid lijkt in de meeste regio's uitverkocht en de overige voorraad slinkt.</li></ul><p>De beschikbaarheid verschilt per locatie, dus er kunnen lokaal nog enkele auto's opduiken.</p><h2>Waarom dit gebeurt</h2><p>Tesla kondigde in januari aan dat de productie van de Model S en Model X in het tweede kwartaal van 2026 stopt. De twee auto's waren een klein deel van de verkoop geworden, en Tesla wil de ruimte in de fabriek in Fremont gebruiken om Optimus te bouwen, zijn humanoïde robot.</p><h2>Wat er daarna komt</h2><p>Er is geen directe opvolger. Musk heeft gehint op een grotere, 'veel coolere' SUV, en de nieuwe Roadster moet de rol van sportief vlaggenschip overnemen. Van geen van beide is een introductiedatum bevestigd.</p><h2>Als je er een wilt</h2><ul><li>Kijk regelmatig op Tesla's voorraadpagina en zoek in een groter gebied.</li><li>Vraag naar demoauto's: die hebben wat kilometers gemaakt, maar zijn vaak goedkoper.</li><li>Overweeg een occasion: er zijn veel goed onderhouden Model S'en en Model X'en te koop, en Tesla zegt dat het ze blijft onderhouden en van software-updates blijft voorzien.</li></ul><h2>Waar je op moet letten</h2><p>De definitieve einddatum van de productie, en of er een afscheidseditie komt voor de laatste auto's.</p>"
+ },
+ "image": "models/mx-4.jpg"
 }

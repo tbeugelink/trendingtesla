@@ -1,26 +1,41 @@
 {
-  "slug": "tesla-30-billion-credit-lines",
-  "date": "2026-09-30",
-  "time": "14:20",
-  "category": "earnings",
-  "sources": [
-    {
-      "title": "Drive Tesla Canada — Tesla lines up $30 billion in credit",
-      "url": "https://driveteslacanada.ca/news/tesla-30-billion-credit-lines/"
-    },
-    {
-      "title": "Capital.com — Tesla lines up $30 billion credit lines as capex push accelerates",
-      "url": "https://capital.com/en-int/news/tesla-lines-up-30-billion-credit-lines-as-capex-ai"
-    }
-  ],
+ "slug": "tesla-30-billion-credit-lines",
+ "date": "2026-09-30",
+ "time": "14:20",
+ "category": "earnings",
+ "sources": [
+  {
+   "title": "Drive Tesla Canada — Tesla lines up $30 billion in credit",
+   "url": "https://driveteslacanada.ca/news/tesla-30-billion-credit-lines/"
+  },
+  {
+   "title": "Capital.com — Tesla lines up $30 billion credit lines as capex push accelerates",
+   "url": "https://capital.com/en-int/news/tesla-lines-up-30-billion-credit-lines-as-capex-ai"
+  }
+ ],
+ "en": {
+  "title": "Tesla lines up $30 billion in new credit as spending on factories climbs",
+  "description": "A new set of credit facilities gives Tesla about $25 billion more borrowing room than before. It has not drawn on them, but the size says a lot about its spending plans.",
+  "body": "<p>Tesla has arranged $30 billion in new credit facilities, according to a filing with the US Securities and Exchange Commission on September 29. The company says it has not borrowed any of the money and does not currently plan to in 2026.</p><h2>How the $30 billion is built up</h2><ul><li><strong>$20 billion loan facility:</strong> available to draw for 18 months, with the unused amount shrinking over time. Citibank is the administrative agent.</li><li><strong>$8 billion revolving credit line:</strong> runs for five years.</li><li><strong>$2 billion revolving credit line:</strong> runs for 364 days.</li></ul><p>Wells Fargo handles the two smaller lines. The package replaces an older $5 billion credit line that Tesla never used, so its available borrowing capacity rises by roughly $25 billion.</p><h2>Why Tesla wants it</h2><p>The filing does not tie the money to any specific project. But Tesla is in the middle of its heaviest investment phase in years. It expects to spend at least $25 billion on capital projects in 2026, covering Cybercab production, Optimus and its factory lines, and the ramp of the new Semi plant.</p><h2>Not a sign of trouble, but worth watching</h2><p>Tesla ended the second quarter with more than $40 billion in cash and investments, so this is a safety net rather than an emergency loan. Large companies often line up credit they hope never to use. Still, critics point out that the extra borrowing room comes at a time when profits have been under pressure while spending rises.</p><h2>What to watch</h2><p>The third-quarter results on October 21 will show how fast cash is going out the door. If capital spending keeps rising faster than cash from operations, the credit lines may not stay untouched for long.</p><p><em>This article is for information only and is not financial advice.</em></p>"
+ },
+ "nl": {
+  "title": "Tesla regelt $30 miljard aan nieuwe kredietlijnen nu de investeringen in fabrieken stijgen",
+  "description": "Met nieuwe kredietfaciliteiten krijgt Tesla zo'n $25 miljard extra leenruimte. Het bedrijf heeft er niets van opgenomen, maar de omvang zegt veel over de investeringsplannen.",
+  "body": "<p>Tesla heeft voor $30 miljard aan nieuwe kredietfaciliteiten geregeld, blijkt uit een melding bij de Amerikaanse beurswaakhond SEC van 29 september. Volgens het bedrijf is er nog niets van geleend en is dat in 2026 ook niet gepland.</p><h2>Zo is de $30 miljard opgebouwd</h2><ul><li><strong>Lening van $20 miljard:</strong> 18 maanden lang op te nemen, waarbij het ongebruikte bedrag in de loop van de tijd kleiner wordt. Citibank is de administratief agent.</li><li><strong>Doorlopend krediet van $8 miljard:</strong> met een looptijd van vijf jaar.</li><li><strong>Doorlopend krediet van $2 miljard:</strong> met een looptijd van 364 dagen.</li></ul><p>Wells Fargo beheert de twee kleinere lijnen. Het pakket vervangt een oudere kredietlijn van $5 miljard die Tesla nooit gebruikte, dus de beschikbare leenruimte stijgt met ongeveer $25 miljard.</p><h2>Waarom Tesla dit wil</h2><p>De melding koppelt het geld niet aan een specifiek project. Maar Tesla zit midden in zijn zwaarste investeringsfase in jaren. Het bedrijf verwacht in 2026 minstens $25 miljard aan investeringen uit te geven, onder meer voor de productie van de Cybercab, Optimus en de bijbehorende productielijnen, en de opschaling van de nieuwe Semi-fabriek.</p><h2>Geen teken van problemen, wel iets om te volgen</h2><p>Tesla sloot het tweede kwartaal af met meer dan $40 miljard aan liquide middelen en beleggingen. Dit is dus een vangnet, geen noodlening. Grote bedrijven regelen vaak krediet dat ze hopen nooit te gebruiken. Critici wijzen er wel op dat de extra leenruimte komt op een moment dat de winst onder druk staat terwijl de uitgaven stijgen.</p><h2>Waar je op moet letten</h2><p>De kwartaalcijfers van 21 oktober laten zien hoe snel het geld de deur uit gaat. Als de investeringen sneller blijven stijgen dan de kasstroom uit de bedrijfsvoering, blijven de kredietlijnen misschien niet lang onaangeroerd.</p><p><em>Dit artikel is alleen bedoeld als informatie en is geen financieel advies.</em></p>"
+ },
+ "images": [
+  "earnings-5.jpg",
+  "earnings-3.jpg"
+ ],
+ "label": {
+  "style": "n",
   "en": {
-    "title": "Tesla lines up $30 billion in new credit as spending on factories climbs",
-    "description": "A new set of credit facilities gives Tesla about $25 billion more borrowing room than before. It has not drawn on them, but the size says a lot about its spending plans.",
-    "body": "<p>Tesla has arranged $30 billion in new credit facilities, according to a filing with the US Securities and Exchange Commission on September 29. The company says it has not borrowed any of the money and does not currently plan to in 2026.</p><h2>How the $30 billion is built up</h2><ul><li><strong>$20 billion loan facility:</strong> available to draw for 18 months, with the unused amount shrinking over time. Citibank is the administrative agent.</li><li><strong>$8 billion revolving credit line:</strong> runs for five years.</li><li><strong>$2 billion revolving credit line:</strong> runs for 364 days.</li></ul><p>Wells Fargo handles the two smaller lines. The package replaces an older $5 billion credit line that Tesla never used, so its available borrowing capacity rises by roughly $25 billion.</p><h2>Why Tesla wants it</h2><p>The filing does not tie the money to any specific project. But Tesla is in the middle of its heaviest investment phase in years. It expects to spend at least $25 billion on capital projects in 2026, covering Cybercab production, Optimus and its factory lines, and the ramp of the new Semi plant.</p><h2>Not a sign of trouble, but worth watching</h2><p>Tesla ended the second quarter with more than $40 billion in cash and investments, so this is a safety net rather than an emergency loan. Large companies often line up credit they hope never to use. Still, critics point out that the extra borrowing room comes at a time when profits have been under pressure while spending rises.</p><h2>What to watch</h2><p>The third-quarter results on October 21 will show how fast cash is going out the door. If capital spending keeps rising faster than cash from operations, the credit lines may not stay untouched for long.</p><p><em>This article is for information only and is not financial advice.</em></p>"
+   "text": "$30B",
+   "sub": "in new credit lines"
   },
   "nl": {
-    "title": "Tesla regelt $30 miljard aan nieuwe kredietlijnen nu de investeringen in fabrieken stijgen",
-    "description": "Met nieuwe kredietfaciliteiten krijgt Tesla zo'n $25 miljard extra leenruimte. Het bedrijf heeft er niets van opgenomen, maar de omvang zegt veel over de investeringsplannen.",
-    "body": "<p>Tesla heeft voor $30 miljard aan nieuwe kredietfaciliteiten geregeld, blijkt uit een melding bij de Amerikaanse beurswaakhond SEC van 29 september. Volgens het bedrijf is er nog niets van geleend en is dat in 2026 ook niet gepland.</p><h2>Zo is de $30 miljard opgebouwd</h2><ul><li><strong>Lening van $20 miljard:</strong> 18 maanden lang op te nemen, waarbij het ongebruikte bedrag in de loop van de tijd kleiner wordt. Citibank is de administratief agent.</li><li><strong>Doorlopend krediet van $8 miljard:</strong> met een looptijd van vijf jaar.</li><li><strong>Doorlopend krediet van $2 miljard:</strong> met een looptijd van 364 dagen.</li></ul><p>Wells Fargo beheert de twee kleinere lijnen. Het pakket vervangt een oudere kredietlijn van $5 miljard die Tesla nooit gebruikte, dus de beschikbare leenruimte stijgt met ongeveer $25 miljard.</p><h2>Waarom Tesla dit wil</h2><p>De melding koppelt het geld niet aan een specifiek project. Maar Tesla zit midden in zijn zwaarste investeringsfase in jaren. Het bedrijf verwacht in 2026 minstens $25 miljard aan investeringen uit te geven, onder meer voor de productie van de Cybercab, Optimus en de bijbehorende productielijnen, en de opschaling van de nieuwe Semi-fabriek.</p><h2>Geen teken van problemen, wel iets om te volgen</h2><p>Tesla sloot het tweede kwartaal af met meer dan $40 miljard aan liquide middelen en beleggingen. Dit is dus een vangnet, geen noodlening. Grote bedrijven regelen vaak krediet dat ze hopen nooit te gebruiken. Critici wijzen er wel op dat de extra leenruimte komt op een moment dat de winst onder druk staat terwijl de uitgaven stijgen.</p><h2>Waar je op moet letten</h2><p>De kwartaalcijfers van 21 oktober laten zien hoe snel het geld de deur uit gaat. Als de investeringen sneller blijven stijgen dan de kasstroom uit de bedrijfsvoering, blijven de kredietlijnen misschien niet lang onaangeroerd.</p><p><em>Dit artikel is alleen bedoeld als informatie en is geen financieel advies.</em></p>"
+   "text": "$30 mld",
+   "sub": "aan nieuwe kredietlijnen"
   }
+ }
 }

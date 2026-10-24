@@ -1,26 +1,39 @@
 {
-  "slug": "fsd-supervised-slovenia-sixth-eu-country",
-  "date": "2026-09-08",
-  "time": "07:45",
-  "category": "fsd",
-  "sources": [
-    {
-      "title": "Electrive — Tesla FSD (Supervised) approved in Czechia (country timeline)",
-      "url": "https://www.electrive.com/2026/09/22/tesla-full-self-driving-approved-in-czechia/"
-    },
-    {
-      "title": "EV Wire — Slovenia approves FSD Supervised as sixth EU country",
-      "url": "https://evwire.com/p/slovenia-approves-fsd-supervised-sixth-eu-country"
-    }
-  ],
+ "slug": "fsd-supervised-slovenia-sixth-eu-country",
+ "date": "2026-09-08",
+ "time": "07:45",
+ "category": "fsd",
+ "sources": [
+  {
+   "title": "Electrive — Tesla FSD (Supervised) approved in Czechia (country timeline)",
+   "url": "https://www.electrive.com/2026/09/22/tesla-full-self-driving-approved-in-czechia/"
+  },
+  {
+   "title": "EV Wire — Slovenia approves FSD Supervised as sixth EU country",
+   "url": "https://evwire.com/p/slovenia-approves-fsd-supervised-sixth-eu-country"
+  }
+ ],
+ "en": {
+  "title": "Slovenia approves Tesla FSD Supervised: where in Europe you can use it now",
+  "description": "Slovenia has become the sixth EU country to allow Tesla's FSD (Supervised). Here is the full list, how the approvals work and what European owners should know.",
+  "body": "<p>Slovenia has approved Tesla's Full Self-Driving (Supervised) system, making it the sixth country in the European Union where the software is allowed. The Slovenian decision came on September 7.</p><h2>The European list so far</h2><ul><li><strong>Netherlands:</strong> April 2026, the original approval by Dutch regulator RDW.</li><li><strong>Lithuania:</strong> May 20.</li><li><strong>Estonia:</strong> May 29.</li><li><strong>Denmark:</strong> June 9.</li><li><strong>Belgium:</strong> June 10.</li><li><strong>Slovenia:</strong> September 7.</li></ul><h2>How it works</h2><p>The Netherlands did the heavy lifting. The RDW granted a provisional EU type approval under a rule designed for new technologies that existing EU regulations do not yet fully cover. Other member states can then choose to recognize that approval on their own roads. Each country makes that decision separately, which is why the list grows one country at a time.</p><p>In parallel, there is a route to an EU-wide decision through the committee of member states that votes on vehicle rules. That would remove the need for country-by-country recognition, but it requires a broad qualified majority.</p><h2>What 'Supervised' means</h2><p>Despite the name, this is a Level 2 driver-assistance system. The car can steer, brake and navigate, but the driver must watch the road at all times and be ready to take over. Hands-off, eyes-off driving is not allowed anywhere in Europe.</p><h2>What to watch</h2><p>Each new country adds momentum, but the big prize is an EU-wide approval, which would open the much larger markets such as Germany, France and Italy in one go. Until then, owners in non-approved countries have to wait for their own national regulator.</p>"
+ },
+ "nl": {
+  "title": "Slovenië keurt Tesla FSD Supervised goed: hier in Europa mag je het nu gebruiken",
+  "description": "Slovenië is het zesde EU-land dat Tesla's FSD (Supervised) toestaat. De volledige lijst, hoe de goedkeuringen werken en wat Europese rijders moeten weten.",
+  "body": "<p>Slovenië heeft Tesla's Full Self-Driving (Supervised) goedgekeurd en is daarmee het zesde land in de Europese Unie waar de software is toegestaan. Het Sloveense besluit viel op 7 september.</p><h2>De Europese lijst tot nu toe</h2><ul><li><strong>Nederland:</strong> april 2026, de oorspronkelijke goedkeuring door de RDW.</li><li><strong>Litouwen:</strong> 20 mei.</li><li><strong>Estland:</strong> 29 mei.</li><li><strong>Denemarken:</strong> 9 juni.</li><li><strong>België:</strong> 10 juni.</li><li><strong>Slovenië:</strong> 7 september.</li></ul><h2>Zo werkt het</h2><p>Nederland deed het zware werk. De RDW verleende een voorlopige Europese typegoedkeuring op basis van een regel voor nieuwe technologie die nog niet volledig in de bestaande EU-regels past. Andere lidstaten kunnen die goedkeuring vervolgens erkennen voor hun eigen wegen. Elk land beslist daar apart over, en daarom groeit de lijst land voor land.</p><p>Daarnaast loopt er een route naar een besluit voor de hele EU, via het comité van lidstaten dat over voertuigregels stemt. Dan is erkenning per land niet meer nodig, maar daarvoor is een brede gekwalificeerde meerderheid vereist.</p><h2>Wat 'Supervised' betekent</h2><p>Ondanks de naam gaat het om een rijhulpsysteem van niveau 2. De auto kan sturen, remmen en navigeren, maar de bestuurder moet altijd op de weg letten en klaar zijn om het over te nemen. Rijden zonder handen en zonder op te letten is nergens in Europa toegestaan.</p><h2>Waar je op moet letten</h2><p>Elk nieuw land geeft extra vaart, maar de echte prijs is goedkeuring voor de hele EU. Daarmee gaan de veel grotere markten zoals Duitsland, Frankrijk en Italië in één keer open. Tot die tijd moeten rijders in andere landen wachten op hun eigen nationale toezichthouder.</p>"
+ },
+ "images": [
+  "fsd-czechia.jpg",
+  "fsd-4.jpg"
+ ],
+ "label": {
+  "style": "y",
   "en": {
-    "title": "Slovenia approves Tesla FSD Supervised: where in Europe you can use it now",
-    "description": "Slovenia has become the sixth EU country to allow Tesla's FSD (Supervised). Here is the full list, how the approvals work and what European owners should know.",
-    "body": "<p>Slovenia has approved Tesla's Full Self-Driving (Supervised) system, making it the sixth country in the European Union where the software is allowed. The Slovenian decision came on September 7.</p><h2>The European list so far</h2><ul><li><strong>Netherlands:</strong> April 2026, the original approval by Dutch regulator RDW.</li><li><strong>Lithuania:</strong> May 20.</li><li><strong>Estonia:</strong> May 29.</li><li><strong>Denmark:</strong> June 9.</li><li><strong>Belgium:</strong> June 10.</li><li><strong>Slovenia:</strong> September 7.</li></ul><h2>How it works</h2><p>The Netherlands did the heavy lifting. The RDW granted a provisional EU type approval under a rule designed for new technologies that existing EU regulations do not yet fully cover. Other member states can then choose to recognize that approval on their own roads. Each country makes that decision separately, which is why the list grows one country at a time.</p><p>In parallel, there is a route to an EU-wide decision through the committee of member states that votes on vehicle rules. That would remove the need for country-by-country recognition, but it requires a broad qualified majority.</p><h2>What 'Supervised' means</h2><p>Despite the name, this is a Level 2 driver-assistance system. The car can steer, brake and navigate, but the driver must watch the road at all times and be ready to take over. Hands-off, eyes-off driving is not allowed anywhere in Europe.</p><h2>What to watch</h2><p>Each new country adds momentum, but the big prize is an EU-wide approval, which would open the much larger markets such as Germany, France and Italy in one go. Until then, owners in non-approved countries have to wait for their own national regulator.</p>"
+   "text": "6TH EU COUNTRY"
   },
   "nl": {
-    "title": "Slovenië keurt Tesla FSD Supervised goed: hier in Europa mag je het nu gebruiken",
-    "description": "Slovenië is het zesde EU-land dat Tesla's FSD (Supervised) toestaat. De volledige lijst, hoe de goedkeuringen werken en wat Europese rijders moeten weten.",
-    "body": "<p>Slovenië heeft Tesla's Full Self-Driving (Supervised) goedgekeurd en is daarmee het zesde land in de Europese Unie waar de software is toegestaan. Het Sloveense besluit viel op 7 september.</p><h2>De Europese lijst tot nu toe</h2><ul><li><strong>Nederland:</strong> april 2026, de oorspronkelijke goedkeuring door de RDW.</li><li><strong>Litouwen:</strong> 20 mei.</li><li><strong>Estland:</strong> 29 mei.</li><li><strong>Denemarken:</strong> 9 juni.</li><li><strong>België:</strong> 10 juni.</li><li><strong>Slovenië:</strong> 7 september.</li></ul><h2>Zo werkt het</h2><p>Nederland deed het zware werk. De RDW verleende een voorlopige Europese typegoedkeuring op basis van een regel voor nieuwe technologie die nog niet volledig in de bestaande EU-regels past. Andere lidstaten kunnen die goedkeuring vervolgens erkennen voor hun eigen wegen. Elk land beslist daar apart over, en daarom groeit de lijst land voor land.</p><p>Daarnaast loopt er een route naar een besluit voor de hele EU, via het comité van lidstaten dat over voertuigregels stemt. Dan is erkenning per land niet meer nodig, maar daarvoor is een brede gekwalificeerde meerderheid vereist.</p><h2>Wat 'Supervised' betekent</h2><p>Ondanks de naam gaat het om een rijhulpsysteem van niveau 2. De auto kan sturen, remmen en navigeren, maar de bestuurder moet altijd op de weg letten en klaar zijn om het over te nemen. Rijden zonder handen en zonder op te letten is nergens in Europa toegestaan.</p><h2>Waar je op moet letten</h2><p>Elk nieuw land geeft extra vaart, maar de echte prijs is goedkeuring voor de hele EU. Daarmee gaan de veel grotere markten zoals Duitsland, Frankrijk en Italië in één keer open. Tot die tijd moeten rijders in andere landen wachten op hun eigen nationale toezichthouder.</p>"
+   "text": "6E EU-LAND"
   }
+ }
 }

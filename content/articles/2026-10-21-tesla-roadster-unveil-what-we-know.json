@@ -1,34 +1,46 @@
 {
-  "slug": "tesla-roadster-unveil-what-we-know",
-  "date": "2026-10-21",
-  "time": "10:00",
-  "category": "models",
-  "models": [
-    "roadster"
-  ],
-  "sources": [
-    {
-      "title": "TechCrunch — Tesla reveals SpaceX-powered Roadster",
-      "url": "https://techcrunch.com/2026/10/15/tesla-reveals-spacex-powered-roadster-that-flies-and-falls-with-style/"
-    },
-    {
-      "title": "CNN — Tesla unveils what it says is a flying car, called the Roadster",
-      "url": "https://www.cnn.com/2026/10/15/business/tesla-unveils-what-it-says-is-a-flying-car"
-    },
-    {
-      "title": "CNBC — Tesla unveils long-delayed Roadster developed with SpaceX",
-      "url": "https://www.cnbc.com/2026/10/15/tesla-roadster-reveal-what-to-know-about-the-delayed-ev.html"
-    }
-  ],
+ "slug": "tesla-roadster-unveil-what-we-know",
+ "date": "2026-10-21",
+ "time": "10:00",
+ "category": "models",
+ "models": [
+  "roadster"
+ ],
+ "sources": [
+  {
+   "title": "TechCrunch — Tesla reveals SpaceX-powered Roadster",
+   "url": "https://techcrunch.com/2026/10/15/tesla-reveals-spacex-powered-roadster-that-flies-and-falls-with-style/"
+  },
+  {
+   "title": "CNN — Tesla unveils what it says is a flying car, called the Roadster",
+   "url": "https://www.cnn.com/2026/10/15/business/tesla-unveils-what-it-says-is-a-flying-car"
+  },
+  {
+   "title": "CNBC — Tesla unveils long-delayed Roadster developed with SpaceX",
+   "url": "https://www.cnbc.com/2026/10/15/tesla-roadster-reveal-what-to-know-about-the-delayed-ev.html"
+  }
+ ],
+ "en": {
+  "title": "Tesla's 'flying' Roadster: what we actually know about the thruster-powered supercar",
+  "description": "Tesla finally showed its next-generation Roadster, complete with cold-gas thrusters that let it hop over other cars. Here are the specs, trims, deposits and the open questions.",
+  "body": "<p>After years of delays, Tesla finally unveiled its next-generation Roadster at an event outside Waco, Texas, last week. The original date of October 1 was pushed back because of severe weather. What Tesla showed goes well beyond a fast electric sports car: in the demo, the Roadster used fans and thrusters to drive up an inverted ramp, spin around and land on the pavement, and to hop over a lineup of other Tesla vehicles.</p><h2>How the 'flying' works</h2><p>According to Tesla's vice president of engineering Lars Moravy, the car carries ten cold-gas thrusters fed by about 600 liters of compressed air. That air lifts and rotates the car briefly in midair, and the tank can be refilled. Tesla says the car is packed with carbon-fiber pressure vessels to store that air, a technology borrowed from rocketry. The company also says the Roadster was developed together with SpaceX, which has added to speculation about closer ties between Elon Musk's companies.</p><h2>The claimed specs</h2><ul><li><strong>Acceleration:</strong> 0–60 mph in about one second, and under one second for the most extreme version.</li><li><strong>Range:</strong> around 300 miles for all versions.</li><li><strong>Top speed:</strong> more than 230 mph.</li></ul><p>Tesla did not share battery size, motor output or an official weight.</p><h2>Three versions</h2><ul><li><strong>Performance</strong> — the road car: two seats, active aerodynamics and a suction system for extra grip.</li><li><strong>Thrust</strong> — aimed at the track: two seats and rear cold-gas thrusters.</li><li><strong>Rocket</strong> — a single-seater with thrusters all around the car, available by invitation only.</li></ul><h2>Deposits, price and timing</h2><p>Musk did not give a price during the event. Tesla's website is taking reservations with a deposit of $50,000 for the Performance version and $250,000 for Thrust. Production is planned for 2028, according to Musk.</p><h2>The open questions</h2><p>Skepticism is understandable. The Roadster was first promised years ago and has been delayed many times, including more than once this year. Musk himself suggested the car will not change Tesla's revenue in a meaningful way. It is also unclear how a car with high-pressure air tanks and thrusters will be approved for public roads, and the flying features have not been independently tested. Popular tech reviewer Marques Brownlee even wondered openly whether the reveal was partly a stunt.</p><h2>Why it matters</h2><p>Financially the Roadster is a halo product, not a volume car. Its real role is to show what Tesla's engineering can do and to keep the brand in the spotlight while the core business, the Model 3 and Model Y, is not growing. Whether it ever reaches customers in this form is the question to watch between now and 2028.</p>"
+ },
+ "nl": {
+  "title": "Tesla's 'vliegende' Roadster: dit weten we echt over de supercar met stuwraketjes",
+  "description": "Tesla toonde eindelijk de nieuwe Roadster, compleet met persluchtstuwers waarmee hij over andere auto's springt. De specificaties, uitvoeringen, aanbetalingen en de open vragen op een rij.",
+  "body": "<p>Na jaren van uitstel presenteerde Tesla vorige week eindelijk de nieuwe generatie Roadster, tijdens een evenement bij Waco in Texas. De oorspronkelijke datum van 1 oktober werd verschoven vanwege zwaar weer. Wat Tesla liet zien, gaat veel verder dan een snelle elektrische sportwagen: in de demonstratie reed de Roadster met behulp van ventilatoren en stuwers een omgekeerde schans op, draaide om en landde op het asfalt. Ook sprong hij over een rij andere Tesla's heen.</p><h2>Zo werkt het 'vliegen'</h2><p>Volgens Lars Moravy, vicepresident engineering bij Tesla, heeft de auto tien stuwers die werken op ongeveer 600 liter perslucht. Die lucht tilt en draait de auto even in de lucht, en de tank kan opnieuw worden gevuld. Om die lucht op te slaan zit de auto volgens Tesla vol drukvaten van koolstofvezel, een techniek uit de ruimtevaart. Het bedrijf meldt ook dat de Roadster samen met SpaceX is ontwikkeld. Dat voedt de speculatie over nauwere banden tussen de bedrijven van Elon Musk.</p><h2>De beloofde specificaties</h2><ul><li><strong>Acceleratie:</strong> 0 naar 96 km/u in ongeveer een seconde, en onder de seconde voor de meest extreme versie.</li><li><strong>Bereik:</strong> zo'n 480 kilometer voor alle versies.</li><li><strong>Topsnelheid:</strong> meer dan 370 km/u.</li></ul><p>Accucapaciteit, motorvermogen en een officieel gewicht maakte Tesla niet bekend.</p><h2>Drie uitvoeringen</h2><ul><li><strong>Performance</strong>: de versie voor de weg, met twee zitplaatsen, actieve aerodynamica en een zuigsysteem voor extra grip.</li><li><strong>Thrust</strong>: bedoeld voor het circuit, met twee zitplaatsen en stuwers achterop.</li><li><strong>Rocket</strong>: een eenpersoons versie met stuwers rondom de auto, alleen op uitnodiging.</li></ul><h2>Aanbetaling, prijs en planning</h2><p>Musk noemde tijdens het evenement geen prijs. Op de website van Tesla kun je reserveren met een aanbetaling van $50.000 voor de Performance en $250.000 voor de Thrust. Volgens Musk start de productie in 2028.</p><h2>De open vragen</h2><p>Scepsis is begrijpelijk. De Roadster werd jaren geleden al beloofd en is vaak uitgesteld, dit jaar zelfs meer dan eens. Musk zei zelf dat de auto weinig zal veranderen aan de omzet van Tesla. Ook is onduidelijk hoe een auto met hogedruktanks en stuwers wordt goedgekeurd voor de openbare weg, en de vliegfuncties zijn niet onafhankelijk getest. De bekende techrecensent Marques Brownlee vroeg zich zelfs hardop af of de presentatie deels een stunt was.</p><h2>Waarom dit ertoe doet</h2><p>Financieel is de Roadster een prestigeproduct, geen volumeauto. Zijn echte rol is laten zien wat Tesla technisch kan en het merk in de schijnwerpers houden, terwijl de kern van het bedrijf, de Model 3 en Model Y, niet groeit. Of hij in deze vorm ooit bij klanten komt, is de vraag om tot 2028 in de gaten te houden.</p>"
+ },
+ "image": "topics/roadster-flying.jpg",
+ "images": [
+  "roadster-flying.jpg"
+ ],
+ "label": {
+  "style": "y",
   "en": {
-    "title": "Tesla's 'flying' Roadster: what we actually know about the thruster-powered supercar",
-    "description": "Tesla finally showed its next-generation Roadster, complete with cold-gas thrusters that let it hop over other cars. Here are the specs, trims, deposits and the open questions.",
-    "body": "<p>After years of delays, Tesla finally unveiled its next-generation Roadster at an event outside Waco, Texas, last week. The original date of October 1 was pushed back because of severe weather. What Tesla showed goes well beyond a fast electric sports car: in the demo, the Roadster used fans and thrusters to drive up an inverted ramp, spin around and land on the pavement, and to hop over a lineup of other Tesla vehicles.</p><h2>How the 'flying' works</h2><p>According to Tesla's vice president of engineering Lars Moravy, the car carries ten cold-gas thrusters fed by about 600 liters of compressed air. That air lifts and rotates the car briefly in midair, and the tank can be refilled. Tesla says the car is packed with carbon-fiber pressure vessels to store that air, a technology borrowed from rocketry. The company also says the Roadster was developed together with SpaceX, which has added to speculation about closer ties between Elon Musk's companies.</p><h2>The claimed specs</h2><ul><li><strong>Acceleration:</strong> 0–60 mph in about one second, and under one second for the most extreme version.</li><li><strong>Range:</strong> around 300 miles for all versions.</li><li><strong>Top speed:</strong> more than 230 mph.</li></ul><p>Tesla did not share battery size, motor output or an official weight.</p><h2>Three versions</h2><ul><li><strong>Performance</strong> — the road car: two seats, active aerodynamics and a suction system for extra grip.</li><li><strong>Thrust</strong> — aimed at the track: two seats and rear cold-gas thrusters.</li><li><strong>Rocket</strong> — a single-seater with thrusters all around the car, available by invitation only.</li></ul><h2>Deposits, price and timing</h2><p>Musk did not give a price during the event. Tesla's website is taking reservations with a deposit of $50,000 for the Performance version and $250,000 for Thrust. Production is planned for 2028, according to Musk.</p><h2>The open questions</h2><p>Skepticism is understandable. The Roadster was first promised years ago and has been delayed many times, including more than once this year. Musk himself suggested the car will not change Tesla's revenue in a meaningful way. It is also unclear how a car with high-pressure air tanks and thrusters will be approved for public roads, and the flying features have not been independently tested. Popular tech reviewer Marques Brownlee even wondered openly whether the reveal was partly a stunt.</p><h2>Why it matters</h2><p>Financially the Roadster is a halo product, not a volume car. Its real role is to show what Tesla's engineering can do and to keep the brand in the spotlight while the core business, the Model 3 and Model Y, is not growing. Whether it ever reaches customers in this form is the question to watch between now and 2028.</p>"
+   "text": "FLYING ROADSTER?"
   },
   "nl": {
-    "title": "Tesla's 'vliegende' Roadster: dit weten we echt over de supercar met stuwraketjes",
-    "description": "Tesla toonde eindelijk de nieuwe Roadster, compleet met persluchtstuwers waarmee hij over andere auto's springt. De specificaties, uitvoeringen, aanbetalingen en de open vragen op een rij.",
-    "body": "<p>Na jaren van uitstel presenteerde Tesla vorige week eindelijk de nieuwe generatie Roadster, tijdens een evenement bij Waco in Texas. De oorspronkelijke datum van 1 oktober werd verschoven vanwege zwaar weer. Wat Tesla liet zien, gaat veel verder dan een snelle elektrische sportwagen: in de demonstratie reed de Roadster met behulp van ventilatoren en stuwers een omgekeerde schans op, draaide om en landde op het asfalt. Ook sprong hij over een rij andere Tesla's heen.</p><h2>Zo werkt het 'vliegen'</h2><p>Volgens Lars Moravy, vicepresident engineering bij Tesla, heeft de auto tien stuwers die werken op ongeveer 600 liter perslucht. Die lucht tilt en draait de auto even in de lucht, en de tank kan opnieuw worden gevuld. Om die lucht op te slaan zit de auto volgens Tesla vol drukvaten van koolstofvezel, een techniek uit de ruimtevaart. Het bedrijf meldt ook dat de Roadster samen met SpaceX is ontwikkeld. Dat voedt de speculatie over nauwere banden tussen de bedrijven van Elon Musk.</p><h2>De beloofde specificaties</h2><ul><li><strong>Acceleratie:</strong> 0 naar 96 km/u in ongeveer een seconde, en onder de seconde voor de meest extreme versie.</li><li><strong>Bereik:</strong> zo'n 480 kilometer voor alle versies.</li><li><strong>Topsnelheid:</strong> meer dan 370 km/u.</li></ul><p>Accucapaciteit, motorvermogen en een officieel gewicht maakte Tesla niet bekend.</p><h2>Drie uitvoeringen</h2><ul><li><strong>Performance</strong>: de versie voor de weg, met twee zitplaatsen, actieve aerodynamica en een zuigsysteem voor extra grip.</li><li><strong>Thrust</strong>: bedoeld voor het circuit, met twee zitplaatsen en stuwers achterop.</li><li><strong>Rocket</strong>: een eenpersoons versie met stuwers rondom de auto, alleen op uitnodiging.</li></ul><h2>Aanbetaling, prijs en planning</h2><p>Musk noemde tijdens het evenement geen prijs. Op de website van Tesla kun je reserveren met een aanbetaling van $50.000 voor de Performance en $250.000 voor de Thrust. Volgens Musk start de productie in 2028.</p><h2>De open vragen</h2><p>Scepsis is begrijpelijk. De Roadster werd jaren geleden al beloofd en is vaak uitgesteld, dit jaar zelfs meer dan eens. Musk zei zelf dat de auto weinig zal veranderen aan de omzet van Tesla. Ook is onduidelijk hoe een auto met hogedruktanks en stuwers wordt goedgekeurd voor de openbare weg, en de vliegfuncties zijn niet onafhankelijk getest. De bekende techrecensent Marques Brownlee vroeg zich zelfs hardop af of de presentatie deels een stunt was.</p><h2>Waarom dit ertoe doet</h2><p>Financieel is de Roadster een prestigeproduct, geen volumeauto. Zijn echte rol is laten zien wat Tesla technisch kan en het merk in de schijnwerpers houden, terwijl de kern van het bedrijf, de Model 3 en Model Y, niet groeit. Of hij in deze vorm ooit bij klanten komt, is de vraag om tot 2028 in de gaten te houden.</p>"
-  },
-  "image": "topics/roadster-flying.jpg"
+   "text": "VLIEGENDE ROADSTER?"
+  }
+ }
 }

@@ -23,5 +23,18 @@
   "description": "Tesla is in Brookshire bij Houston begonnen met de productie van de Megapack 3, in een fabriek die is ontworpen voor 50 GWh per jaar. Wat er nieuw is aan de accu, en waarom het ertoe doet.",
   "body": "<p>Tesla Energy heeft een tweede grote accufabriek in de Verenigde Staten. De eerste Megapack 3 is van de band gerold in de nieuwe Megafactory in Brookshire, Texas, ten westen van Houston. Daarmee is de productie begonnen.</p><h2>De fabriek</h2><ul><li><strong>Locatie:</strong> Brookshire, Texas, bij Houston.</li><li><strong>Capaciteit:</strong> ontworpen voor 50 GWh opslag per jaar als hij volledig draait.</li><li><strong>Product:</strong> de Megapack 3, Tesla's nieuwste accu voor energiebedrijven.</li></ul><p>Ter vergelijking: Tesla leverde in heel 2025 met al zijn producten samen 46,7 GWh aan opslag. Eén fabriek van deze omvang kan daar in zijn eentje elk jaar overheen gaan.</p><h2>Wat er nieuw is aan de Megapack 3</h2><ul><li><strong>Ongeveer 5 MWh</strong> energie per unit.</li><li><strong>Nieuwe cellen:</strong> een grote LFP-cel, een chemie die goedkoper is en langer meegaat dan de nikkelcellen in veel auto's.</li><li><strong>Eenvoudiger koeling:</strong> het koelsysteem heeft 78% minder verbindingen dan de vorige generatie, dus minder onderdelen die kunnen lekken of falen.</li></ul><h2>Waar de cellen vandaan komen</h2><p>Tesla koopt cellen in de VS, Zuidoost-Azië en China. CATL is volgens berichten de grootste leverancier voor opslag, met BYD en EVE Energy als andere leveranciers. Tesla bouwt meer Amerikaanse aanvoer op met een eigen LFP-lijn in Nevada en een geplande deal met LG Energy Solution. Minder afhankelijk zijn van Chinese cellen is belangrijk vanwege Amerikaanse importheffingen en subsidieregels.</p><h2>Waarom dit ertoe doet</h2><p>Energieopslag is Tesla's snelst groeiende tak en een van de winstgevendste. Energiebedrijven en datacenters hebben grote accu's nodig om zon- en windstroom op te vangen en pieken in de vraag op te vangen. Een Amerikaanse fabriek dicht bij het stroomnet van Texas, een van de snelst groeiende opslagmarkten ter wereld, verkort levertijden en helpt klanten in aanmerking te komen voor subsidies op lokale productie.</p><h2>Waar je op moet letten</h2><p>Hoe snel Brookshire opschaalt, de eerste klantprojecten met de Megapack 3, en of de opslagleveringen weer groeien na een zwakker derde kwartaal.</p>"
  },
- "image": "topics/megapack-3.jpg"
+ "image": "topics/megapack-3.jpg",
+ "images": [
+  "megapack-3.jpg",
+  "gigafactory-4.jpg"
+ ],
+ "label": {
+  "style": "tag",
+  "en": {
+   "text": "STARTED"
+  },
+  "nl": {
+   "text": "GESTART"
+  }
+ }
 }

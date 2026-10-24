@@ -1,31 +1,40 @@
 {
-  "slug": "last-tesla-model-s-model-x-roll-off-line-signature-edition",
-  "date": "2026-05-11",
-  "time": "14:20",
-  "category": "models",
-  "models": [
-    "model-s",
-    "model-x"
-  ],
-  "sources": [
-    {
-      "title": "electrive — Final Tesla Model S rolls off the production line",
-      "url": "https://www.electrive.com/2026/05/11/final-tesla-model-s-rolls-off-the-production-line/"
-    },
-    {
-      "title": "Jalopnik — Last Tesla Model S and X roll off the production line",
-      "url": "https://www.jalopnik.com/2173749/last-tesla-model-s-and-model-x-off-production-line/"
-    }
-  ],
+ "slug": "last-tesla-model-s-model-x-roll-off-line-signature-edition",
+ "date": "2026-05-11",
+ "time": "14:20",
+ "category": "models",
+ "models": [
+  "model-s",
+  "model-x"
+ ],
+ "sources": [
+  {
+   "title": "electrive — Final Tesla Model S rolls off the production line",
+   "url": "https://www.electrive.com/2026/05/11/final-tesla-model-s-rolls-off-the-production-line/"
+  },
+  {
+   "title": "Jalopnik — Last Tesla Model S and X roll off the production line",
+   "url": "https://www.jalopnik.com/2173749/last-tesla-model-s-and-model-x-off-production-line/"
+  }
+ ],
+ "en": {
+  "title": "End of an era: the last Tesla Model S and Model X roll off the line in Fremont",
+  "description": "After 14 years of the Model S and 11 of the Model X, production has ended. The final car was a black Model S signed by the workers, and a 350-car Signature Edition says goodbye.",
+  "body": "<p>The car that made Tesla a serious carmaker is no longer in production. Over the weekend of May 9 and 10, Tesla confirmed that production of the Model S and Model X has ended at its factory in Fremont, California.</p><h2>The last car</h2><p>The final vehicle off the line was a black Model S. The production staff signed its bodywork, and it is likely to become a museum piece.</p><h2>Signature Edition farewell</h2><ul><li><strong>Limited run:</strong> 350 cars, 250 Model S and 100 Model X.</li><li><strong>Price:</strong> $159,420 each.</li><li><strong>Only by invitation:</strong> offered to selected existing Tesla owners, not sold publicly.</li><li><strong>Look:</strong> garnet red paint, gold Tesla logos, gold brake calipers and gold accents, plus 'Signature' lettering inside.</li></ul><p>A delivery event for the Signature Edition planned for May 12 was postponed at short notice, without a new date. Some buyers had already booked travel.</p><h2>A long run</h2><p>The Model S was built for 14 years and the Model X for 11. The Model S was Tesla's second car after the original Roadster, and the first it designed fully in-house. It showed that an electric car could be fast, long-range and desirable, and it changed how the whole industry thought about EVs.</p><h2>Why now</h2><p>Sales had fallen to a small share of Tesla's total. Tesla groups the S, X and Cybertruck as 'other models', which together came to about 50,850 deliveries in 2025, compared with about 1.6 million Model 3 and Model Y. Fremont's S and X lines, built for up to 100,000 cars a year, were far from full. The space now goes to Optimus.</p><h2>For owners</h2><p>Tesla says it will keep servicing the cars, supplying parts and sending software updates. The used market is the only way to get one from now on.</p>"
+ },
+ "nl": {
+  "title": "Einde van een tijdperk: de laatste Tesla Model S en Model X rollen van de band in Fremont",
+  "description": "Na 14 jaar Model S en 11 jaar Model X is de productie gestopt. De laatste auto was een zwarte Model S, gesigneerd door de medewerkers, en een Signature Edition van 350 stuks neemt afscheid.",
+  "body": "<p>De auto die van Tesla een serieuze autobouwer maakte, wordt niet meer gebouwd. In het weekend van 9 en 10 mei bevestigde Tesla dat de productie van de Model S en Model X in de fabriek in Fremont, Californië, is gestopt.</p><h2>De laatste auto</h2><p>De laatste auto van de band was een zwarte Model S. De productiemedewerkers zetten hun handtekening op de carrosserie, en hij wordt waarschijnlijk een museumstuk.</p><h2>Afscheid met een Signature Edition</h2><ul><li><strong>Beperkte oplage:</strong> 350 auto's, 250 Model S en 100 Model X.</li><li><strong>Prijs:</strong> $159.420 per stuk.</li><li><strong>Alleen op uitnodiging:</strong> aangeboden aan geselecteerde Tesla-rijders, niet openbaar te koop.</li><li><strong>Uiterlijk:</strong> granaatrode lak, gouden Tesla-logo's, gouden remklauwen en gouden accenten, plus 'Signature'-letters in het interieur.</li></ul><p>Een afleverevenement voor de Signature Edition op 12 mei werd op het laatste moment uitgesteld, zonder nieuwe datum. Sommige kopers hadden hun reis al geboekt.</p><h2>Een lange carrière</h2><p>De Model S werd 14 jaar gebouwd, de Model X 11 jaar. De Model S was Tesla's tweede auto na de originele Roadster en de eerste die het bedrijf volledig zelf ontwierp. Hij liet zien dat een elektrische auto snel, ver en begeerlijk kon zijn, en veranderde hoe de hele auto-industrie over elektrisch rijden dacht.</p><h2>Waarom nu</h2><p>De verkoop was een klein deel van Tesla's totaal geworden. Tesla rekent de S, X en Cybertruck samen tot 'overige modellen', goed voor zo'n 50.850 leveringen in 2025, tegen ongeveer 1,6 miljoen Model 3 en Model Y. De lijnen in Fremont, gebouwd voor maximaal 100.000 auto's per jaar, draaiden lang niet vol. De ruimte gaat nu naar Optimus.</p><h2>Voor eigenaren</h2><p>Tesla zegt de auto's te blijven onderhouden, onderdelen te blijven leveren en software-updates te blijven sturen. Vanaf nu kun je er alleen nog een tweedehands kopen.</p>"
+ },
+ "image": "models/ms-4.jpg",
+ "label": {
+  "style": "w",
   "en": {
-    "title": "End of an era: the last Tesla Model S and Model X roll off the line in Fremont",
-    "description": "After 14 years of the Model S and 11 of the Model X, production has ended. The final car was a black Model S signed by the workers, and a 350-car Signature Edition says goodbye.",
-    "body": "<p>The car that made Tesla a serious carmaker is no longer in production. Over the weekend of May 9 and 10, Tesla confirmed that production of the Model S and Model X has ended at its factory in Fremont, California.</p><h2>The last car</h2><p>The final vehicle off the line was a black Model S. The production staff signed its bodywork, and it is likely to become a museum piece.</p><h2>Signature Edition farewell</h2><ul><li><strong>Limited run:</strong> 350 cars, 250 Model S and 100 Model X.</li><li><strong>Price:</strong> $159,420 each.</li><li><strong>Only by invitation:</strong> offered to selected existing Tesla owners, not sold publicly.</li><li><strong>Look:</strong> garnet red paint, gold Tesla logos, gold brake calipers and gold accents, plus 'Signature' lettering inside.</li></ul><p>A delivery event for the Signature Edition planned for May 12 was postponed at short notice, without a new date. Some buyers had already booked travel.</p><h2>A long run</h2><p>The Model S was built for 14 years and the Model X for 11. The Model S was Tesla's second car after the original Roadster, and the first it designed fully in-house. It showed that an electric car could be fast, long-range and desirable, and it changed how the whole industry thought about EVs.</p><h2>Why now</h2><p>Sales had fallen to a small share of Tesla's total. Tesla groups the S, X and Cybertruck as 'other models', which together came to about 50,850 deliveries in 2025, compared with about 1.6 million Model 3 and Model Y. Fremont's S and X lines, built for up to 100,000 cars a year, were far from full. The space now goes to Optimus.</p><h2>For owners</h2><p>Tesla says it will keep servicing the cars, supplying parts and sending software updates. The used market is the only way to get one from now on.</p>"
+   "text": "END OF AN ERA"
   },
   "nl": {
-    "title": "Einde van een tijdperk: de laatste Tesla Model S en Model X rollen van de band in Fremont",
-    "description": "Na 14 jaar Model S en 11 jaar Model X is de productie gestopt. De laatste auto was een zwarte Model S, gesigneerd door de medewerkers, en een Signature Edition van 350 stuks neemt afscheid.",
-    "body": "<p>De auto die van Tesla een serieuze autobouwer maakte, wordt niet meer gebouwd. In het weekend van 9 en 10 mei bevestigde Tesla dat de productie van de Model S en Model X in de fabriek in Fremont, Californië, is gestopt.</p><h2>De laatste auto</h2><p>De laatste auto van de band was een zwarte Model S. De productiemedewerkers zetten hun handtekening op de carrosserie, en hij wordt waarschijnlijk een museumstuk.</p><h2>Afscheid met een Signature Edition</h2><ul><li><strong>Beperkte oplage:</strong> 350 auto's, 250 Model S en 100 Model X.</li><li><strong>Prijs:</strong> $159.420 per stuk.</li><li><strong>Alleen op uitnodiging:</strong> aangeboden aan geselecteerde Tesla-rijders, niet openbaar te koop.</li><li><strong>Uiterlijk:</strong> granaatrode lak, gouden Tesla-logo's, gouden remklauwen en gouden accenten, plus 'Signature'-letters in het interieur.</li></ul><p>Een afleverevenement voor de Signature Edition op 12 mei werd op het laatste moment uitgesteld, zonder nieuwe datum. Sommige kopers hadden hun reis al geboekt.</p><h2>Een lange carrière</h2><p>De Model S werd 14 jaar gebouwd, de Model X 11 jaar. De Model S was Tesla's tweede auto na de originele Roadster en de eerste die het bedrijf volledig zelf ontwierp. Hij liet zien dat een elektrische auto snel, ver en begeerlijk kon zijn, en veranderde hoe de hele auto-industrie over elektrisch rijden dacht.</p><h2>Waarom nu</h2><p>De verkoop was een klein deel van Tesla's totaal geworden. Tesla rekent de S, X en Cybertruck samen tot 'overige modellen', goed voor zo'n 50.850 leveringen in 2025, tegen ongeveer 1,6 miljoen Model 3 en Model Y. De lijnen in Fremont, gebouwd voor maximaal 100.000 auto's per jaar, draaiden lang niet vol. De ruimte gaat nu naar Optimus.</p><h2>Voor eigenaren</h2><p>Tesla zegt de auto's te blijven onderhouden, onderdelen te blijven leveren en software-updates te blijven sturen. Vanaf nu kun je er alleen nog een tweedehands kopen.</p>"
-  },
-  "image": "models/ms-4.jpg"
+   "text": "EINDE VAN EEN TIJDPERK"
+  }
+ }
 }

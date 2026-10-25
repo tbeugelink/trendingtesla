@@ -349,7 +349,7 @@ article .st{font-size:clamp(1.05rem,2vw,1.3rem);line-height:1.22;letter-spacing:
 .smeta{margin:0 0 14px;font-size:.88rem}.smeta a.tag{color:var(--blue)}.smeta a.tag:hover{color:var(--blue2)}
 .sideh{font-size:.7rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--blue);margin:11px 0 -2px;padding-top:9px;border-top:1px solid var(--border2)}
 .hi,.th,.im{position:relative}.hi{margin:0 0 8px}.hi .hero-img{margin:0}
-.dur{display:inline-flex;align-items:center;gap:4px;position:absolute;right:8px;bottom:8px;background:rgba(0,0,0,.8);color:#fff;font-size:.74rem;font-weight:700;line-height:1;padding:4px 6px;border-radius:7px;cursor:help}.agotip{position:fixed;z-index:60;pointer-events:none;background:rgba(0,0,0,.88);color:#fff;font-size:.74rem;font-weight:700;line-height:1;padding:5px 7px;border-radius:7px;white-space:nowrap}time.ago{cursor:help}.im,.th,.hi{container-type:inline-size}.kk{position:absolute;left:2.6cqw;bottom:2.6cqw;z-index:2;pointer-events:none;font-family:Inter,Manrope,system-ui,sans-serif;font-weight:900;letter-spacing:-.01em;text-transform:uppercase;line-height:1}.kk b{display:table;font-weight:900;white-space:nowrap}.kk b+b{margin-top:.1em}.kk i{font-style:normal;display:inline-block}.kk .yo{color:#ffd400;text-shadow:-.16cqw -.16cqw 0 #d61a1a,.16cqw -.16cqw 0 #d61a1a,-.16cqw .16cqw 0 #d61a1a,.16cqw .16cqw 0 #d61a1a,0 .2cqw 0 #d61a1a,0 -.2cqw 0 #d61a1a,.2cqw 0 0 #d61a1a,-.2cqw 0 0 #d61a1a,0 .5cqw 1.2cqw rgba(0,0,0,.45)}.kk .bk i{background:#d61a1a;color:#fff;padding:.13em .24em .12em;box-shadow:0 .4cqw 1.2cqw rgba(0,0,0,.35)}.kk .nb{font-size:1.32em}.kk .bk .nb{font-size:1.22em}.kk .l1{font-size:6.4cqw}.kk .l2{font-size:8cqw}.th .dur{right:6px;bottom:6px;font-size:.68rem;padding:3px 5px}.th .dur svg{width:12px;height:12px}
+.dur{display:inline-flex;align-items:center;gap:4px;position:absolute;right:8px;bottom:8px;background:rgba(0,0,0,.8);color:#fff;font-size:.74rem;font-weight:700;line-height:1;padding:4px 6px;border-radius:7px;cursor:help}.agotip{position:fixed;z-index:60;pointer-events:none;background:rgba(0,0,0,.88);color:#fff;font-size:.74rem;font-weight:700;line-height:1;padding:5px 7px;border-radius:7px;white-space:nowrap}time.ago{cursor:help}.im,.th,.hi{container-type:inline-size}.kk{position:absolute;left:2.6cqw;bottom:2.6cqw;z-index:2;pointer-events:none;font-family:Inter,Manrope,system-ui,sans-serif;font-weight:900;letter-spacing:-.01em;text-transform:uppercase;line-height:1}.kk b{display:table;font-weight:900;white-space:nowrap}.kk b+b{margin-top:.1em}.kk i{font-style:normal;display:inline-block}.kk .yo{color:#ffd400;text-shadow:-.16cqw -.16cqw 0 #d61a1a,.16cqw -.16cqw 0 #d61a1a,-.16cqw .16cqw 0 #d61a1a,.16cqw .16cqw 0 #d61a1a,0 .2cqw 0 #d61a1a,0 -.2cqw 0 #d61a1a,.2cqw 0 0 #d61a1a,-.2cqw 0 0 #d61a1a,0 .5cqw 1.2cqw rgba(0,0,0,.45)}.kk .bk i{background:#d61a1a;color:#fff;padding:.13em .24em .12em;box-shadow:0 .4cqw 1.2cqw rgba(0,0,0,.35)}.kk.p-bw .bk i,.kk.p-by .bk i{background:#1d5cff}.kk.p-kw .bk i{background:#111}.kk.p-wb .bk i{background:#fff;color:#111}.kk.p-bw .yo{color:#fff;text-shadow:0.16cqw 0.16cqw 0 #000,-0.16cqw 0.16cqw 0 #000,0.16cqw -0.16cqw 0 #000,-0.16cqw -0.16cqw 0 #000,0 .2cqw 0 #000,0 -.2cqw 0 #000,.2cqw 0 0 #000,-.2cqw 0 0 #000,0 .5cqw 1.4cqw rgba(0,0,0,.6)}.kk.p-kw .yo{color:#fff;text-shadow:0.16cqw 0.16cqw 0 #1d5cff,-0.16cqw 0.16cqw 0 #1d5cff,0.16cqw -0.16cqw 0 #1d5cff,-0.16cqw -0.16cqw 0 #1d5cff,0 .2cqw 0 #1d5cff,0 -.2cqw 0 #1d5cff,.2cqw 0 0 #1d5cff,-.2cqw 0 0 #1d5cff,0 .5cqw 1.4cqw rgba(0,0,0,.55)}.kk.p-wb .yo{color:#3d7bff;text-shadow:0.16cqw 0.16cqw 0 #fff,-0.16cqw 0.16cqw 0 #fff,0.16cqw -0.16cqw 0 #fff,-0.16cqw -0.16cqw 0 #fff,0 .2cqw 0 #fff,0 -.2cqw 0 #fff,.2cqw 0 0 #fff,-.2cqw 0 0 #fff,0 .5cqw 1.4cqw rgba(0,0,0,.5)}.kk.p-by .yo{color:#ffd400;text-shadow:0.16cqw 0.16cqw 0 #111,-0.16cqw 0.16cqw 0 #111,0.16cqw -0.16cqw 0 #111,-0.16cqw -0.16cqw 0 #111,0 .2cqw 0 #111,0 -.2cqw 0 #111,.2cqw 0 0 #111,-.2cqw 0 0 #111,0 .5cqw 1.4cqw rgba(0,0,0,.5)}.kk .nb{font-size:1.32em}.kk .bk .nb{font-size:1.22em}.kk .l1{font-size:6.4cqw}.kk .l2{font-size:8cqw}.th .dur{right:6px;bottom:6px;font-size:.68rem;padding:3px 5px}.th .dur svg{width:12px;height:12px}
 /* buttons, labels */
 .btn{display:inline-flex;align-items:center;justify-content:center;background:var(--red);color:#fff;font-weight:800;font-size:.9rem;padding:11px 20px;border-radius:7px;text-decoration:none;transition:background .2s}
 .btn:hover{background:var(--red2)}
@@ -611,6 +611,85 @@ def assign_photos(arts):
 
 GALLERY_ORDER = {}  # slug -> position among articles sharing the same first model (set in build)
 PHOTO_ORDER = {}  # slug -> position among articles of its category, oldest first (set in build)
+
+
+PALETTES = ["yr", "bw", "kw", "wb", "by"]  # yellow/red, blue block+white, black block+white/blue, white block+blue, blue block+yellow
+PALETTE = {}  # slug -> palette
+_TONE = {}
+
+
+def tone(path):
+    """Colour mix of the bottom-left area of a photo, where the label sits."""
+    if path in _TONE:
+        return _TONE[path]
+    f = STATIC / path.lstrip("/")
+    if path.startswith("/img/v/") or not f.exists():
+        f = STATIC / "img" / path.split("/img/", 1)[-1]
+    res = None
+    try:
+        from PIL import Image
+        import colorsys
+        im = Image.open(f).convert("RGB")
+        w, h = im.size
+        raw = im.crop((0, int(h * .5), int(w * .6), h)).resize((48, 24)).tobytes()
+        px = [tuple(raw[i:i + 3]) for i in range(0, len(raw), 3)]
+        warm = blue = green = 0
+        light = 0.0
+        for r, g, b in px:
+            hh, ll, ss = colorsys.rgb_to_hls(r / 255, g / 255, b / 255)
+            light += ll
+            if ss < .22 or ll < .12 or ll > .9:
+                continue
+            d = hh * 360
+            if d < 55 or d > 330:
+                warm += 1
+            elif 180 <= d <= 260:
+                blue += 1
+            elif 65 <= d < 170:
+                green += 1
+        n = len(px)
+        res = {"warm": warm / n, "blue": blue / n, "green": green / n, "light": light / n}
+    except Exception:
+        pass
+    _TONE[path] = res
+    return res
+
+
+def assign_palettes(arts):
+    """Pick per article a label colour set that complements its photo, keeping the overall mix balanced."""
+    use, last = {p: 0 for p in PALETTES}, {}
+    for a in sorted(arts, key=published):
+        lb = a.get("label") or {}
+        words = " ".join(str(lb.get(g, {}).get(k, "")) for g in ("en", "nl") for k in ("sub", "text")).upper()
+        if lb.get("pal") in PALETTES:
+            pick = lb["pal"]
+        elif lb.get("style") == "r" or re.search(r"\b(EINDE|END|ENDS|STOP|STOPS|STOPT|GESTOPT|GESCHRAPT|SCRAPPED|CANCELL?ED|"
+                                                    r"RECALL|TERUGROEP|CRASH|ONGELUK|VERBOD|BAN|BANNED|WEG|LEAVES|QUITS|"
+                                                    r"DAALT|DALING|FALLS|DROPS|MIST|MISSES|BOETE|FINE|RECHTSZAAK|LAWSUIT|"
+                                                    r"ONDERZOEK|PROBE|SLUIT|CLOSES|VERLIES|LOSS)\b", words):
+            pick = "yr"   # bad news stays red
+        else:
+            t = tone(CHOSEN.get(a["slug"], "")) or {"warm": 0, "blue": 0, "green": 0, "light": .45}
+            score = {p: 0.0 for p in PALETTES}
+            for p in ("bw", "kw", "wb", "by"):
+                score[p] += t["warm"] * 2          # blue complements warm/gold/sunset
+            score["yr"] += t["blue"] * 2 + t["green"] * 1.5   # yellow/red complements blue and green
+            score["kw"] += t["green"] * .8
+            if t["warm"] > .35:
+                score["yr"] -= 1; score["by"] -= 1   # yellow on gold/orange: weak
+            if t["blue"] > .3:
+                score["bw"] -= 1; score["wb"] -= 1; score["by"] -= .6
+            if t["light"] < .5:
+                score["wb"] -= 2   # blue letters need a light background
+            if t["light"] > .68:
+                score["bw"] -= .6; score["kw"] -= .6
+            prev = last.get(a["category"], [])
+            for p in PALETTES:
+                score[p] -= use[p] * .02 + (.5 if p in prev[-1:] else 0) + (.25 if p in prev[-2:-1] else 0)
+            pick = max(PALETTES, key=lambda p: score[p])
+        PALETTE[a["slug"]] = pick
+        use[pick] += 1
+        last.setdefault(a["category"], []).append(pick)
 
 
 def topic_photo(category, slug=""):
@@ -1108,7 +1187,8 @@ def ovl(a, lang):
             sub, txt = split2(txt)
         lines = [("bk", numbig(sub)), ("yo", numbig(txt))] if st == "a" else [("yo", numbig(sub)), ("bk", numbig(txt))]
     inner = "".join(f'<b class="l{i + 1} {c}"><i>{x}</i></b>' for i, (c, x) in enumerate(lines) if x)
-    return f'<div class="kk t-{st}" aria-hidden="true">{inner}</div>'
+    pal = "" if st == "r" else PALETTE.get(a.get("slug"), "yr")
+    return f'<div class="kk t-{st} p-{pal or "yr"}" aria-hidden="true">{inner}</div>'
 
 def dur(a, lang):
     secs = max(10, round(len(html.unescape(re.sub(r"<[^>]+>", " ", a[lang]["body"])).split()) / 220 * 60))
@@ -1219,6 +1299,7 @@ def build():
             GALLERY_ORDER[x["slug"]] = seen.get(gk, 0)
             seen[gk] = GALLERY_ORDER[x["slug"]] + 1
     assign_photos(arts)
+    assign_palettes(arts)
     news = [a for a in arts if a["category"] != "guides"]
     guides = [a for a in arts if a["category"] == "guides"]
     if OUT.exists():

@@ -151,3 +151,4 @@ Articles with a "models" key automatically use real-life photos of that model. Y
 - powerwall-garage.jpg — Powerwall on a garage wall, blue Model S charging (home battery)
 - tunnel-freight.jpg — Tesla Semi with a red shipping container in a lit concrete tunnel (Boring Company freight)
 - dubai-loop.jpg — white Model Y entering a lit tunnel entrance, Dubai skyline with Burj Khalifa at dusk (Dubai/UAE Loop)
+- wireless-hub-1.jpg, wireless-hub-2.jpg, wireless-hub-3.jpg — many gold Cybercab-style robotaxis on glowing blue wireless charging pads, Austin skyline at sunset (Cybercab charging hub)

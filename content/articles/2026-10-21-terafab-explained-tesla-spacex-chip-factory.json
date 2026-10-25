@@ -33,5 +33,8 @@
       "sub": "EIGEN CHIPFABRIEK",
       "text": "$16,8 MLD"
     }
-  }
+  },
+  "images": [
+    "chip-fab.jpg"
+  ]
 }

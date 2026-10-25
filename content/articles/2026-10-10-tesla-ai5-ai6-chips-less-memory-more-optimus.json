@@ -34,5 +34,8 @@
       "sub": "MINDER GEHEUGEN",
       "text": "MEER OPTIMUS"
     }
-  }
+  },
+  "images": [
+    "ai-chip.jpg"
+  ]
 }

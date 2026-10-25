@@ -119,3 +119,33 @@ Each line: file — what is actually visible. Pick only photos whose visible sub
 
 # Model photos (static/img/models/)
 Articles with a "models" key automatically use real-life photos of that model. You can also name one explicitly, e.g. "models/ct-2.jpg" (Cybertruck towing a caravan at sunset). Galleries: ms-* Model S, msc-* older Model S, m3h-* Model 3 Highland, m3c-* older Model 3, m3s-* Model 3 Standard, m3p-* Model 3 Performance, mx-* Model X, mxc-* older Model X, mxp-1 Model X Plaid, myj-* new Model Y, myc-* older Model Y, mys-* Model Y Standard, myp-* Model Y Performance, myl-* Model Y L, ct-* Cybertruck, cb-* Cyberbeast, ctf-1 Cybertruck Foundation, cc-* Cybercab, rd-* Roadster, semi* Semi.
+
+## Added 25 October 2026
+- humanoid-line.jpg — white humanoid robot (not Optimus) next to a car-body line with blue robot arms (competitor humanoids, e.g. XPeng IRON)
+- humanoids-cells.jpg — two white humanoid robots (not Optimus) sorting battery cells at a workbench (supplier / humanoid production)
+- robovan-loop.jpg — silver Tesla Robovan-style van in an underground Loop station
+- halloween-mode.jpg — red Model S at night, ghost on the screen, Halloween pumpkins (Halloween Mode)
+- sentry-mode.jpg — white Model S parked at night, red Sentry Mode eye on the screen
+- app-ipad.jpg — Tesla app on an iPad on a kitchen table, Model 3 outside
+- app-faceid.jpg — hand holding a phone with a Face ID sign-in screen, red Model S behind (Tesla app)
+- robotaxi-app.jpg — phone with a ride-hailing map, Waymo-style white SUV behind (competitor robotaxi / ride apps, NOT a Tesla)
+- ride-open-doors.jpg — gold Tesla with falcon-wing doors open at a taxi lane, Austin skyline at dusk
+- camera-rain.jpg — windshield camera behind the mirror, raindrops, wet road (FSD cameras, low visibility)
+- india-street.jpg — busy Indian street with buses and rickshaws, white SUV (not clearly a Tesla)
+- starlink-disaster.jpg — Starlink dish next to a storm-damaged house, pickup (not a Cybertruck) powering devices
+- cell-tower.jpg — mobile phone mast in a wheat field (cellular / direct-to-cell)
+- inflight-wifi.jpg — laptop on a plane tray table at sunset (in-flight wifi)
+- satellite-ai.jpg — large satellite with solar panels above Earth (orbital computing)
+- chip-fab.jpg — cleanroom worker holding a silicon wafer at a tool (chip fab, Terafab)
+- ai-chip.jpg — close-up of a processor on a circuit board (AI chips)
+- steel-tubes.jpg — large stainless steel cylinder sections in a factory hall (Starship steel / tubes)
+- delivery-handover.jpg — key card handed over at a delivery centre desk, red Model Y outside
+- courtroom.jpg — empty US courtroom with flag and gavel (US lawsuits only)
+- giga-mexico-site.jpg — empty plot with an excavator below mountains (Giga Mexico site)
+- giga-newyork.jpg — snowy factory by a lake with a red Cybertruck, Buffalo skyline (Giga New York)
+- lithium-refinery.jpg — refinery with tanks and towers on a coastal plain (Texas lithium refinery)
+- solar-factory.jpg — robot arm handling solar panels on a production line (solar factory)
+- megafactory.jpg — large factory hall building Megapacks (Megafactory)
+- gigafactory-texas.jpg — aerial of Giga Texas by the river with Austin skyline
+- megacharger.jpg — Tesla Semi plugged into a Megacharger, diesel truck behind
+- powerwall-garage.jpg — Powerwall on a garage wall, blue Model S charging (home battery)

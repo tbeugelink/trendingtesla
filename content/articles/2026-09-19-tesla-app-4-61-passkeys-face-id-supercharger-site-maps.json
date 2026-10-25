@@ -41,5 +41,8 @@
       "sub": "TESLA-APP 4.61",
       "text": "INLOGGEN MET FACE ID"
     }
-  }
+  },
+  "images": [
+    "app-faceid.jpg"
+  ]
 }

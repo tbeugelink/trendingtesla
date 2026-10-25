@@ -41,5 +41,8 @@
       "sub": "HALLOWEEN MODE",
       "text": "TESLA ALS SPOOK!"
     }
-  }
+  },
+  "images": [
+    "halloween-mode.jpg"
+  ]
 }

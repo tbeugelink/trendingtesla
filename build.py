@@ -1066,7 +1066,7 @@ def feed(lead, lead_html, rest, lang, active=None, side_title="", left_first=(),
     grid = (f'<div class="grid2 gall wide">{g}</div>' if topic else f'<div class=grid2>{g}</div>') if g else ""
     return (f'<section class="read home{" topic" if topic else ""}"><div class="lcol">{lead_html}</div>'
             f'<aside class="rside">{extra_side}'
-            + ("" if active == "models" else f'<h2 class="sr">{side_title}</h2><div class="side">{side}</div>'
+            + ("" if active == "models" and not article else f'<h2 class="sr">{side_title}</h2><div class="side">{side}</div>'
                f'<a class="morelink" href="{url(lang, "archive/")}">{LANGS[lang]["archive"]} →</a>')
             + '</aside></section>'
             f'<section class="below">{tl[0]}{grid}{more_link}</section>')

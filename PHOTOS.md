@@ -180,3 +180,5 @@ Articles with a "models" key automatically use real-life photos of that model. Y
 - optimus-gen3-compare.jpg — studio comparison of Optimus Gen 2.5 and Gen 3 (illustration with text "Tesla Optimus", "Gen 2.5", "Gen 3")
 - optimus-hand.jpg — close-up of Optimus hands and chest in a kitchen (Optimus hand / dexterity)
 - optimus-touch.jpg — black robot hand and human hand touching fingertips, blue background (robots and humans, robot hand)
+- optimus-car-door.jpg — Optimus fitting a door panel on a red Model Y on the assembly line (Optimus working in Tesla factories)
+- optimus-unboxing.jpg — Optimus Gen 3 standing in an opened delivery box in a home hallway (buying / delivery of Optimus)

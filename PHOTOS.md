@@ -149,3 +149,5 @@ Articles with a "models" key automatically use real-life photos of that model. Y
 - gigafactory-texas.jpg — aerial of Giga Texas by the river with Austin skyline
 - megacharger.jpg — Tesla Semi plugged into a Megacharger, diesel truck behind
 - powerwall-garage.jpg — Powerwall on a garage wall, blue Model S charging (home battery)
+- tunnel-freight.jpg — Tesla Semi with a red shipping container in a lit concrete tunnel (Boring Company freight)
+- dubai-loop.jpg — white Model Y entering a lit tunnel entrance, Dubai skyline with Burj Khalifa at dusk (Dubai/UAE Loop)

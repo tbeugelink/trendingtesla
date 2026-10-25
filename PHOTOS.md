@@ -128,10 +128,10 @@ Articles with a "models" key automatically use real-life photos of that model. Y
 - sentry-mode.jpg — white Model S parked at night, red Sentry Mode eye on the screen
 - app-ipad.jpg — Tesla app on an iPad on a kitchen table, Model 3 outside
 - app-faceid.jpg — hand holding a phone with a Face ID sign-in screen, red Model S behind (Tesla app)
-- robotaxi-app.jpg — phone with a ride-hailing map, Waymo-style white SUV behind (competitor robotaxi / ride apps, NOT a Tesla)
+- robotaxi-app.jpg — hand holding a phone with a ride map, black Tesla Model Y robotaxi at a rainy neon curb (Tesla Robotaxi app)
 - ride-open-doors.jpg — gold Tesla with falcon-wing doors open at a taxi lane, Austin skyline at dusk
 - camera-rain.jpg — windshield camera behind the mirror, raindrops, wet road (FSD cameras, low visibility)
-- india-street.jpg — busy Indian street with buses and rickshaws, white SUV (not clearly a Tesla)
+- india-street.jpg — white Tesla Model Y among rickshaws and a red bus in Mumbai at golden hour (Tesla in India)
 - starlink-disaster.jpg — Starlink dish next to a storm-damaged house, pickup (not a Cybertruck) powering devices
 - cell-tower.jpg — mobile phone mast in a wheat field (cellular / direct-to-cell)
 - inflight-wifi.jpg — laptop on a plane tray table at sunset (in-flight wifi)
@@ -152,3 +152,11 @@ Articles with a "models" key automatically use real-life photos of that model. Y
 - tunnel-freight.jpg — Tesla Semi with a red shipping container in a lit concrete tunnel (Boring Company freight)
 - dubai-loop.jpg — white Model Y entering a lit tunnel entrance, Dubai skyline with Burj Khalifa at dusk (Dubai/UAE Loop)
 - wireless-hub-1.jpg, wireless-hub-2.jpg, wireless-hub-3.jpg — many gold Cybercab-style robotaxis on glowing blue wireless charging pads, Austin skyline at sunset (Cybercab charging hub)
+- ai-agent-desk.jpg — monitor with an AI agent working across spreadsheets, mail and code, city at night (Macrohard / AI agents)
+- ai-agent-screen.jpg — ultrawide monitor with a glowing AI assistant figure and dashboards (AI assistant / Grok)
+- courtroom-canada.jpg — Canadian courtroom with maple-leaf flag and gavel (Canadian lawsuits)
+- cybertruck-powerwall.jpg — Cybertruck plugged into a wall unit beside a garage at dusk (Powershare / vehicle-to-home)
+- uk-street.jpg — British terraced street with solar roofs at dusk, blue Model 3 (UK energy / UK news)
+- bitcoin-1.jpg — gold Bitcoin coin on a desk with a price chart (Tesla bitcoin holdings)
+- bitcoin-2.jpg — black Tesla next to a vault with gold coins (Tesla bitcoin / finance)
+- wireless-hub-4.jpg — gold robotaxis on blue wireless charging pads, Austin skyline at sunset

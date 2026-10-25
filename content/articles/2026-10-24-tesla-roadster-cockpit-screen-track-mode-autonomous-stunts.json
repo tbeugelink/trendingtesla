@@ -36,5 +36,10 @@
       "sub": "ROADSTER STUNT",
       "text": "HELEMAAL ZELF!?"
     }
-  }
+  },
+  "images": [
+    "models/rd-13.jpg",
+    "models/rd-12.jpg",
+    "models/rd-11.jpg"
+  ]
 }

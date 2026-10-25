@@ -32,7 +32,9 @@
   },
   "image": "topics/roadster-flying.jpg",
   "images": [
-    "roadster-flying.jpg"
+    "models/rd-5.jpg",
+    "models/rd-10.jpg",
+    "models/rd-7.jpg"
   ],
   "label": {
     "style": "c",

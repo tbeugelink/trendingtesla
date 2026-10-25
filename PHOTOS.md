@@ -174,3 +174,9 @@ Articles with a "models" key automatically use real-life photos of that model. Y
 - models/rd-15..rd-24.jpg — new Roadster details: rd-15 driving front 3/4, rd-16 parked in a car park, rd-17 side profile, rd-18 rear with wing and four thruster nozzles, rd-19 white seats and yoke, rd-20 red Track Mode screen ("Thruster 5,500 PSI"), rd-21 cold-gas tank with four nozzles on display, rd-22 carbon pressure tank in the car, rd-23 close-up of thruster nozzles, rd-24 battery pack with drive unit on display
 - models/rd-25.jpg — new Roadster unveiled on stage with presenter, giant screen, audience with phones
 - optimus-stage.jpg — presentation stage with two Optimus robots, presenter and "Sustainable Abundance" screen (Optimus / product event)
+- optimus-restaurant.jpg — Optimus serving drinks to guests in a restaurant (Optimus at home / service, consumer use)
+- optimus-checkout.jpg — Optimus scanning groceries at a supermarket checkout (Optimus in retail / jobs)
+- optimus-bedroom.jpg — Optimus making a bed in a sunny bedroom (household robot)
+- optimus-gen3-compare.jpg — studio comparison of Optimus Gen 2.5 and Gen 3 (illustration with text "Tesla Optimus", "Gen 2.5", "Gen 3")
+- optimus-hand.jpg — close-up of Optimus hands and chest in a kitchen (Optimus hand / dexterity)
+- optimus-touch.jpg — black robot hand and human hand touching fingertips, blue background (robots and humans, robot hand)

@@ -169,3 +169,5 @@ Articles with a "models" key automatically use real-life photos of that model. Y
 - powerwall-texas.jpg — Texas brick house with two Powerwalls on the garage wall, white Model Y (Texas lease / Tesla Electric)
 - powerwall-japan.jpg — modern Japanese wooden house with solar and a Powerwall by the door, red maple (Powerwall Japan)
 - models/rd-4..rd-13.jpg — the NEW 2026 Roadster (angular white wedge, full-width red rear light, diffuser with fans/thrusters, scissor doors, yoke cockpit): rd-4 rear in Tuscan dust, rd-5 flying over thrust jets at night, rd-6 rear on highway, rd-7 driving upside down on red ramp, rd-8 on loop track from above, rd-9 rear on Alpine pass, rd-10 front in smoke airborne, rd-11 scissor door open, rd-12 interior side view at sunset, rd-13 cockpit with yoke and screen. (rd-1..3 are older renders, no longer in the gallery)
+- models/rd-14.jpg — new Roadster hovering on four cold-gas jets over a runway, blue sky
+- models/myl-3..7.jpg — Model Y L (6-seat, long): myl-3 silver on highway, myl-4 at the beach, myl-5 rear on country road, myl-6 two open boots with suitcases, myl-7 rear seats / third row at sunset; menu-myl.jpg studio shot

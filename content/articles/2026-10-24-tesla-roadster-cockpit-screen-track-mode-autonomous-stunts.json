@@ -38,8 +38,9 @@
     }
   },
   "images": [
+    "models/rd-20.jpg",
     "models/rd-13.jpg",
-    "models/rd-12.jpg",
-    "models/rd-11.jpg"
+    "models/rd-19.jpg",
+    "models/rd-12.jpg"
   ]
 }

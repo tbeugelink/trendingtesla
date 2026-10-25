@@ -173,3 +173,4 @@ Articles with a "models" key automatically use real-life photos of that model. Y
 - models/myl-3..7.jpg — Model Y L (6-seat, long): myl-3 silver on highway, myl-4 at the beach, myl-5 rear on country road, myl-6 two open boots with suitcases, myl-7 rear seats / third row at sunset; menu-myl.jpg studio shot
 - models/rd-15..rd-24.jpg — new Roadster details: rd-15 driving front 3/4, rd-16 parked in a car park, rd-17 side profile, rd-18 rear with wing and four thruster nozzles, rd-19 white seats and yoke, rd-20 red Track Mode screen ("Thruster 5,500 PSI"), rd-21 cold-gas tank with four nozzles on display, rd-22 carbon pressure tank in the car, rd-23 close-up of thruster nozzles, rd-24 battery pack with drive unit on display
 - models/rd-25.jpg — new Roadster unveiled on stage with presenter, giant screen, audience with phones
+- optimus-stage.jpg — presentation stage with two Optimus robots, presenter and "Sustainable Abundance" screen (Optimus / product event)

@@ -97,11 +97,11 @@ Each line: file — what is actually visible. Pick only photos whose visible sub
 
 ## Business / people / stage
 - earnings-1.jpg — big dark screen with stock chart
-- earnings-2.jpg — presentation screen with bar charts on a stage
-- earnings-3.jpg — screen "Annual Figures" with bar chart
-- earnings-4.jpg — stage with podium and rising chart
+- earnings-2.jpg — presenter on a big stage, screen with glowing globe and rising charts, audience with phones (results / investor presentation)
+- earnings-3.jpg — lone presenter in front of a huge blue rising chart, arena audience (results / growth)
+- earnings-4.jpg — presenter seen from behind facing an orange bar chart, warm arena light (earnings / forecasts)
 - earnings-5.jpg … earnings-8.jpg — dashboards with colourful charts on screens
-- musk-1.jpg — empty stage with one stool and microphone in a dark auditorium (shareholder meeting / keynote)
+- musk-1.jpg — keynote stage with purple globe, network and stock charts, arena full of phones (keynote / shareholder meeting)
 - musk-2.jpg — outdoor press podium with microphones in front of a factory, empty chairs
 - musk-3.jpg — smartphone with a social feed on a dark desk, coffee cup
 
@@ -172,3 +172,4 @@ Articles with a "models" key automatically use real-life photos of that model. Y
 - models/rd-14.jpg — new Roadster hovering on four cold-gas jets over a runway, blue sky
 - models/myl-3..7.jpg — Model Y L (6-seat, long): myl-3 silver on highway, myl-4 at the beach, myl-5 rear on country road, myl-6 two open boots with suitcases, myl-7 rear seats / third row at sunset; menu-myl.jpg studio shot
 - models/rd-15..rd-24.jpg — new Roadster details: rd-15 driving front 3/4, rd-16 parked in a car park, rd-17 side profile, rd-18 rear with wing and four thruster nozzles, rd-19 white seats and yoke, rd-20 red Track Mode screen ("Thruster 5,500 PSI"), rd-21 cold-gas tank with four nozzles on display, rd-22 carbon pressure tank in the car, rd-23 close-up of thruster nozzles, rd-24 battery pack with drive unit on display
+- models/rd-25.jpg — new Roadster unveiled on stage with presenter, giant screen, audience with phones

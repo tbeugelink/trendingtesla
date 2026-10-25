@@ -160,3 +160,11 @@ Articles with a "models" key automatically use real-life photos of that model. Y
 - bitcoin-1.jpg — gold Bitcoin coin on a desk with a price chart (Tesla bitcoin holdings)
 - bitcoin-2.jpg — black Tesla next to a vault with gold coins (Tesla bitcoin / finance)
 - wireless-hub-4.jpg — gold robotaxis on blue wireless charging pads, Austin skyline at sunset
+- vpp-suburb.jpg — California suburb at dusk, solar roofs and Powerwalls linked by glowing lines to a substation (virtual power plant)
+- energy-app-kitchen.jpg — phone with a home energy app (solar, battery, grid) on a kitchen table, Dutch houses with solar outside
+- powerwall-dutch-house.jpg — Dutch brick end-terrace house with solar panels, Powerwall on the shed, bikes and tulips (Netherlands home battery)
+- powershare-modely.jpg — dark Model Y plugged in at dusk beside a Powerwall on the garage wall (Powershare / vehicle backup)
+- powerwall-2-and-3.jpg — rounded Powerwall 2 and flat Powerwall 3 side by side in a garage (Powerwall 2 + 3)
+- powerwall-newengland.jpg — New England colonial house in autumn with a Powerwall, phone with battery app (US Northeast VPP)
+- powerwall-texas.jpg — Texas brick house with two Powerwalls on the garage wall, white Model Y (Texas lease / Tesla Electric)
+- powerwall-japan.jpg — modern Japanese wooden house with solar and a Powerwall by the door, red maple (Powerwall Japan)

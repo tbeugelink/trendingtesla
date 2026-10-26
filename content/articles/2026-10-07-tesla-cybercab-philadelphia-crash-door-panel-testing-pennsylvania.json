@@ -34,5 +34,10 @@
     "nl": {
       "text": "CYBERCAB VERLIEST DEUR!"
     }
-  }
+  },
+  "images": [
+    "models/cc-1.jpg",
+    "models/cc-2.jpg",
+    "models/cybercab.jpg"
+  ]
 }

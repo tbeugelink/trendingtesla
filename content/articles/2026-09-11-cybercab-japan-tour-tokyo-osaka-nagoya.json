@@ -36,5 +36,10 @@
       "sub": "CYBERCAB",
       "text": "OP TOURNEE IN JAPAN"
     }
-  }
+  },
+  "images": [
+    "cybercab.jpg",
+    "models/cc-3.jpg",
+    "cybercab-street.jpg"
+  ]
 }

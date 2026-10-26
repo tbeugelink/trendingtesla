@@ -36,5 +36,10 @@
       "sub": "ROBOTAXI'S",
       "text": "CYAAN LICHT?"
     }
-  }
+  },
+  "images": [
+    "models/cc-3.jpg",
+    "models/cc-1.jpg",
+    "cybercab.jpg"
+  ]
 }

@@ -27,7 +27,6 @@
     "description": "Na 14 jaar Model S en 11 jaar Model X is de productie gestopt. De laatste auto was een zwarte Model S, gesigneerd door de medewerkers, en een Signature Edition van 350 stuks neemt afscheid.",
     "body": "<p>De auto die van Tesla een serieuze autobouwer maakte, wordt niet meer gebouwd. In het weekend van 9 en 10 mei bevestigde Tesla dat de productie van de Model S en Model X in de fabriek in Fremont, Californië, is gestopt.</p><h2>De laatste auto</h2><p>De laatste auto van de band was een zwarte Model S. De productiemedewerkers zetten hun handtekening op de carrosserie, en hij wordt waarschijnlijk een museumstuk.</p><h2>Afscheid met een Signature Edition</h2><ul><li><strong>Beperkte oplage:</strong> 350 auto's, 250 Model S en 100 Model X.</li><li><strong>Prijs:</strong> $159.420 per stuk.</li><li><strong>Alleen op uitnodiging:</strong> aangeboden aan geselecteerde Tesla-rijders, niet openbaar te koop.</li><li><strong>Uiterlijk:</strong> granaatrode lak, gouden Tesla-logo's, gouden remklauwen en gouden accenten, plus 'Signature'-letters in het interieur.</li></ul><p>Een afleverevenement voor de Signature Edition op 12 mei werd op het laatste moment uitgesteld, zonder nieuwe datum. Sommige kopers hadden hun reis al geboekt.</p><h2>Een lange carrière</h2><p>De Model S werd 14 jaar gebouwd, de Model X 11 jaar. De Model S was Tesla's tweede auto na de originele Roadster en de eerste die het bedrijf volledig zelf ontwierp. Hij liet zien dat een elektrische auto snel, ver en begeerlijk kon zijn, en veranderde hoe de hele auto-industrie over elektrisch rijden dacht.</p><h2>Waarom nu</h2><p>De verkoop was een klein deel van Tesla's totaal geworden. Tesla rekent de S, X en Cybertruck samen tot 'overige modellen', goed voor zo'n 50.850 leveringen in 2025, tegen ongeveer 1,6 miljoen Model 3 en Model Y. De lijnen in Fremont, gebouwd voor maximaal 100.000 auto's per jaar, draaiden lang niet vol. De ruimte gaat nu naar Optimus.</p><h2>Voor eigenaren</h2><p>Tesla zegt de auto's te blijven onderhouden, onderdelen te blijven leveren en software-updates te blijven sturen. Vanaf nu kun je er alleen nog een tweedehands kopen.</p>"
   },
-  "image": "models/ms-4.jpg",
   "label": {
     "style": "r",
     "en": {
@@ -36,5 +35,8 @@
     "nl": {
       "text": "EINDE MODEL S EN X!"
     }
-  }
+  },
+  "images": [
+    "models/ms-4.jpg"
+  ]
 }

@@ -40,5 +40,9 @@
       "sub": "CYBERCAB-ONGELUK",
       "text": "8 KM/U IN KUIL"
     }
-  }
+  },
+  "images": [
+    "models/cc-1.jpg",
+    "cybercab-street.jpg"
+  ]
 }

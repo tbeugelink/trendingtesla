@@ -552,8 +552,7 @@ def candidates(a):
     pics = [x if "/" in x else f"topics/{x}" for x in a.get("images", [])]
     pics = [f"/img/{x}" for x in pics if (STATIC / "img" / x).exists()]
     if pics:
-        r = PHOTO_ORDER.get(a["slug"], 0) % len(pics)
-        out += pics[r:] + pics[:r]
+        out += pics  # explicit photos keep their order: best first
         out.append(f"/img/v/{a['slug']}.jpg")
         seen = set()
         return [x for x in out if not (x in seen or seen.add(x))]
@@ -596,6 +595,12 @@ def assign_photos(arts):
         recent_scenes = [h[1] for h in hist[-3:]] + [h[1] for h in local]
         own = f"/img/{a['image']}" if a.get("image") and (STATIC / "img" / a["image"]).exists() else None
         pick = own if own and own not in recent_files else None
+        if not pick and a.get("images"):
+            # explicit images: keep their order (best first), only skip one that a neighbour just used
+            exp = [c for c in photos if c.split("/img/", 1)[-1].replace("topics/", "") in a["images"]
+                   or c.split("/img/", 1)[-1] in a["images"]]
+            if exp:
+                pick = next((c for c in exp if c not in recent_files), exp[0])
         for n in sorted({used.get(c, 0) for c in photos}):
             if pick:
                 break

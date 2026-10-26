@@ -40,5 +40,10 @@
       "sub": "MODEL Y L ZUID-KOREA",
       "text": "8.690"
     }
-  }
+  },
+  "images": [
+    "models/myl-3.jpg",
+    "models/myl-4.jpg",
+    "models/myl-6.jpg"
+  ]
 }

@@ -27,7 +27,6 @@
     "model-y",
     "model-3"
   ],
-  "image": "models/myj-6.jpg",
   "label": {
     "style": "a",
     "en": {
@@ -38,5 +37,8 @@
       "sub": "Q3 BOVEN RAMING",
       "text": "+24.500 AUTO'S!"
     }
-  }
+  },
+  "images": [
+    "models/myj-6.jpg"
+  ]
 }

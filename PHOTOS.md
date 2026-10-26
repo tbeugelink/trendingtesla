@@ -69,7 +69,6 @@ Each line: file — what is actually visible. Pick only photos whose visible sub
 - optimus.jpg — Optimus head and shoulders close-up, neutral room
 - optimus-army.jpg — hundreds of Optimus robots standing in rows in a factory
 - optimus-factory.jpg — Optimus in a factory with robot arms
-- optimus-full.jpg — full-body Optimus in a concrete room
 - optimus-garden.jpg — Optimus standing in a garden
 - optimus-kitchen.jpg — Optimus in a home kitchen
 - optimus-line.jpg — gold-armed Optimus working at a production line

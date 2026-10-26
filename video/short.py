@@ -1,4 +1,4 @@
-"""Make a vertical YouTube Short (1080x1920) for an article.
+"""Make a video for an article: landscape 1920x1080 (default) or a vertical Short 1080x1920 (--portrait).
 
 Usage:  python3 video/short.py <slug> [en|nl] [--voice piper|elevenlabs]
 
@@ -24,7 +24,11 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 import build  # noqa: E402
 
-W, H, FPS = 1080, 1920, 30
+PORTRAIT = "--portrait" in sys.argv or os.environ.get("VIDEO_FORMAT") == "portrait"
+W, H, FPS = (1080, 1920, 30) if PORTRAIT else (1920, 1080, 30)
+# layout per format: brand y, label y, caption top y, caption line height, caption size, end screen y, label width
+LAY = dict(brand=92, label=1080, cap=1460, capl=96, caps=74, end=760, lw=W - 140) if PORTRAIT else \
+      dict(brand=44, label=640, cap=880, capl=78, caps=62, end=400, lw=int(W * 0.55))
 FB = str(ROOT / "video/fonts/Inter-Black.otf")
 FX = str(ROOT / "video/fonts/Inter-ExtraBold.otf")
 OUT = ROOT / "video/out"
@@ -147,7 +151,7 @@ def label(d, a, lang, y):
     lb = a.get("label") or {}
     t = lb.get(lang) or {}
     st = {"k": "a", "y": "a", "tag": "a", "w": "c", "s": "c"}.get(lb.get("style", "a"), lb.get("style", "a"))
-    sub, txt, mw = t.get("sub", ""), t.get("text", a[lang]["title"]), W - 140
+    sub, txt, mw = t.get("sub", ""), t.get("text", a[lang]["title"]), LAY["lw"]
     if st == "r":
         block(d, 60, y, txt, fit(d, txt, FB, 92, mw - 40), RED, "#fff")
     elif st == "n":
@@ -182,22 +186,22 @@ def render(a, lang, audio, words, total):
         im = im.resize((max(W + 2, int(im.width * sc)), H), Image.LANCZOS)
         sh = shade.resize((im.width, H))  # shade only depends on y, so darken the whole strip once
         pics.append(Image.composite(Image.new("RGB", im.size), im, sh))
-    fbrand, fcap = font(FX, 50), font(FB, 74)
+    fbrand, fcap = font(FX, 50), font(FB, LAY["caps"])
 
     def brand(d):
-        d.text((60, 92), "Trending", font=fbrand, fill="#fff")
-        d.text((60 + d.textlength("Trending", font=fbrand), 92), "Tesla", font=fbrand, fill="#e8231c")
+        d.text((60, LAY["brand"]), "Trending", font=fbrand, fill="#fff")
+        d.text((60 + d.textlength("Trending", font=fbrand), LAY["brand"]), "Tesla", font=fbrand, fill="#e8231c")
 
     def ending(d):
         fe = font(FB, 104)
         w1, w2 = d.textlength("Trending", font=fe), d.textlength("Tesla", font=fe)
         x = (W - w1 - w2) / 2
-        d.text((x, 760), "Trending", font=fe, fill="#fff")
-        d.text((x + w1, 760), "Tesla", font=fe, fill="#e8231c")
+        d.text((x, LAY["end"]), "Trending", font=fe, fill="#fff")
+        d.text((x + w1, LAY["end"]), "Tesla", font=fe, fill="#e8231c")
         fs = font(FX, 58)
-        d.text(((W - d.textlength(SITE, font=fs)) / 2, 900), SITE, font=fs, fill=YEL)
+        d.text(((W - d.textlength(SITE, font=fs)) / 2, LAY["end"] + 140), SITE, font=fs, fill=YEL)
 
-    o_brand, o_label, o_end = overlay(brand), overlay(lambda d: label(d, a, lang, 1080)), overlay(ending)
+    o_brand, o_label, o_end = overlay(brand), overlay(lambda d: label(d, a, lang, LAY["label"])), overlay(ending)
     # captions: chunks of max ~4 words, timed from the voice
     chunks, cur = [], []
     for w in words:
@@ -212,16 +216,17 @@ def render(a, lang, audio, words, total):
     def cap(txt):
         if txt not in caps:
             def dr(d):
-                y = 1460
-                for ln in wrap(d, txt, fcap, W - 140):
+                lines = wrap(d, txt, fcap, W - 140 if PORTRAIT else W - 360)
+                y = LAY["cap"] if PORTRAIT else H - 70 - len(lines) * LAY["capl"]
+                for ln in lines:
                     w = d.textlength(ln, font=fcap)
                     d.text(((W - w) / 2, y), ln, font=fcap, fill="#fff", stroke_width=7, stroke_fill="#000")
-                    y += 96
+                    y += LAY["capl"]
             caps[txt] = overlay(dr)
         return caps[txt]
 
     scene_len = max(3.2, total / max(1, len(pics)))
-    out = OUT / f"{a['slug']}-{lang}.mp4"
+    out = OUT / f"{a['slug']}-{lang}{'-short' if PORTRAIT else ''}.mp4"
     cmd = ["ffmpeg", "-loglevel", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-"]
     if audio:  # pad the voice with silence so it never ends before the picture
         cmd += ["-i", str(audio), "-af", "apad", "-c:a", "aac", "-b:a", "160k"]
@@ -270,7 +275,7 @@ def meta(a, lang, out):
     read = {"en": "Read the full article", "nl": "Lees het hele artikel"}[lang]
     note = {"en": "Voice-over generated with AI (ElevenLabs); script written and checked by TrendingTesla.",
             "nl": "Voice-over gemaakt met AI (ElevenLabs); tekst geschreven en gecontroleerd door TrendingTesla."}[lang]
-    txt = (f"TITLE:\n{t['title'][:95]} #Shorts\n\nDESCRIPTION:\n{t['description']}\n\n{read}: {url}\n\n{note}\n\n"
+    txt = (f"TITLE:\n{t['title'][:95]}{' #Shorts' if PORTRAIT else ''}\n\nDESCRIPTION:\n{t['description']}\n\n{read}: {url}\n\n{note}\n\n"
            f"TAGS:\n{', '.join(dict.fromkeys(tags))}\n")
     out.with_suffix(".txt").write_text(txt, encoding="utf-8")
 

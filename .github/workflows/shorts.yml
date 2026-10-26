@@ -1,4 +1,4 @@
-name: Make YouTube Shorts
+name: Make YouTube videos
 
 # Runs when new articles are pushed (only for articles that have a "short" script),
 # or by hand from the Actions tab for any article slug.

@@ -128,7 +128,6 @@ Articles with a "models" key automatically use real-life photos of that model. Y
 - app-ipad.jpg — Tesla app on an iPad on a kitchen table, Model 3 outside
 - app-faceid.jpg — hand holding a phone with a Face ID sign-in screen, red Model S behind (Tesla app)
 - robotaxi-app.jpg — hand holding a phone with a ride map, black Tesla Model Y robotaxi at a rainy neon curb (Tesla Robotaxi app)
-- ride-open-doors.jpg — gold Tesla with falcon-wing doors open at a taxi lane, Austin skyline at dusk
 - camera-rain.jpg — windshield camera behind the mirror, raindrops, wet road (FSD cameras, low visibility)
 - india-street.jpg — white Tesla Model Y among rickshaws and a red bus in Mumbai at golden hour (Tesla in India)
 - starlink-disaster.jpg — Starlink dish next to a storm-damaged house, pickup (not a Cybertruck) powering devices

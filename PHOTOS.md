@@ -191,5 +191,6 @@ Articles with a "models" key automatically use real-life photos of that model. Y
 - japan-chademo.jpg — red Model Y charging at a Japanese roadside station in autumn, vending machine (Tesla in Japan / CHAdeMO) — place-specific
 - cybertruck-sydney.jpg — Cybertruck parked on a Sydney street, Opera House and Harbour Bridge (Australia) — place-specific
 - tunnel-nashville.jpg — red tunnel boring machine lowered into a limestone pit, Nashville skyline (Music City Loop) — place-specific
-- cybercab-pothole.jpg — gold Cybercab with a wheel in a flooded pothole, cone and police car (minor robotaxi incident; London skyline behind)
+- cybercab-pothole.jpg — gold Cybercab with a wheel in a flooded pothole, cone and police car (London skyline behind — only for UK/London stories)
 - cybercab-tokyo.jpg — gold Cybercab with door open on a rainy Tokyo street, lanterns and Tokyo Tower (Cybercab in Japan) — place-specific
+- cybercab-pothole-austin.jpg — gold Cybercab with a wheel in a flooded pothole in downtown Austin, police car, Capitol dome (Austin robotaxi incident)

@@ -350,7 +350,7 @@ article .st{font-size:clamp(1.05rem,2vw,1.3rem);line-height:1.22;letter-spacing:
 .smeta{margin:0 0 14px;font-size:.88rem}.smeta a.tag{color:var(--blue)}.smeta a.tag:hover{color:var(--blue2)}
 .sideh{font-size:.7rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--blue);margin:11px 0 -2px;padding-top:9px;border-top:1px solid var(--border2)}
 .hi,.th,.im{position:relative}.hi{margin:0 0 8px}.hi .hero-img{margin:0}
-.dur{display:inline-flex;align-items:center;gap:4px;position:absolute;right:8px;bottom:8px;background:rgba(0,0,0,.8);color:#fff;font-size:.74rem;font-weight:700;line-height:1;padding:4px 6px;border-radius:7px;cursor:help}.agotip{position:fixed;z-index:60;pointer-events:none;background:rgba(0,0,0,.88);color:#fff;font-size:.74rem;font-weight:700;line-height:1;padding:5px 7px;border-radius:7px;white-space:nowrap}time.ago{cursor:help}.im,.th,.hi{container-type:inline-size}.kk{position:absolute;left:2.6cqw;bottom:2.6cqw;z-index:2;pointer-events:none;font-family:Inter,Manrope,system-ui,sans-serif;font-weight:900;letter-spacing:-.01em;text-transform:uppercase;line-height:1}.kk b{display:table;font-weight:900;white-space:nowrap}.kk b+b{margin-top:.1em}.kk i{font-style:normal;display:inline-block}.kk .yo{color:#ffd400;text-shadow:-.16cqw -.16cqw 0 #d61a1a,.16cqw -.16cqw 0 #d61a1a,-.16cqw .16cqw 0 #d61a1a,.16cqw .16cqw 0 #d61a1a,0 .2cqw 0 #d61a1a,0 -.2cqw 0 #d61a1a,.2cqw 0 0 #d61a1a,-.2cqw 0 0 #d61a1a,0 .5cqw 1.2cqw rgba(0,0,0,.45)}.kk .bk i{background:#d61a1a;color:#fff;padding:.13em .24em .12em;box-shadow:0 .4cqw 1.2cqw rgba(0,0,0,.35)}.kk.p-bw .bk i,.kk.p-by .bk i{background:#1d5cff}.kk.p-wb .bk i{background:#fff;color:#1d5cff}.kk.p-bw .yo{color:#fff;text-shadow:0.16cqw 0.16cqw 0 #0b2f8f,-0.16cqw 0.16cqw 0 #0b2f8f,0.16cqw -0.16cqw 0 #0b2f8f,-0.16cqw -0.16cqw 0 #0b2f8f,0 .2cqw 0 #0b2f8f,0 -.2cqw 0 #0b2f8f,.2cqw 0 0 #0b2f8f,-.2cqw 0 0 #0b2f8f,0 .5cqw 1.4cqw rgba(0,0,0,.6)}.kk.p-wb .yo{color:#3d7bff;text-shadow:0.16cqw 0.16cqw 0 #fff,-0.16cqw 0.16cqw 0 #fff,0.16cqw -0.16cqw 0 #fff,-0.16cqw -0.16cqw 0 #fff,0 .2cqw 0 #fff,0 -.2cqw 0 #fff,.2cqw 0 0 #fff,-.2cqw 0 0 #fff,0 .5cqw 1.4cqw rgba(0,0,0,.5)}.kk.p-by .yo{color:#ffd400;text-shadow:0.16cqw 0.16cqw 0 #0b2f8f,-0.16cqw 0.16cqw 0 #0b2f8f,0.16cqw -0.16cqw 0 #0b2f8f,-0.16cqw -0.16cqw 0 #0b2f8f,0 .2cqw 0 #0b2f8f,0 -.2cqw 0 #0b2f8f,.2cqw 0 0 #0b2f8f,-.2cqw 0 0 #0b2f8f,0 .5cqw 1.4cqw rgba(0,0,0,.5)}.kk .nb{font-size:1.32em}.kk .bk .nb{font-size:1.22em}.kk .l1{font-size:6.4cqw}.kk .l2{font-size:8cqw}.th .dur{right:6px;bottom:6px;font-size:.68rem;padding:3px 5px}.th .dur svg{width:12px;height:12px}
+.dur{display:inline-flex;align-items:center;gap:4px;position:absolute;right:8px;bottom:8px;background:rgba(0,0,0,.8);color:#fff;font-size:.74rem;font-weight:700;line-height:1;padding:4px 6px;border-radius:7px;cursor:help}.agotip{position:fixed;z-index:60;pointer-events:none;background:rgba(0,0,0,.88);color:#fff;font-size:.74rem;font-weight:700;line-height:1;padding:5px 7px;border-radius:7px;white-space:nowrap}time.ago{cursor:help}.im,.th,.hi{container-type:inline-size}.kk{position:absolute;left:2.6cqw;bottom:2.6cqw;z-index:2;pointer-events:none;font-family:Inter,Manrope,system-ui,sans-serif;font-weight:900;letter-spacing:-.01em;text-transform:uppercase;line-height:1}.kk b{display:table;font-weight:900;white-space:nowrap}.kk b+b{margin-top:.1em}.kk i{font-style:normal;display:inline-block}.kk .yo{color:#ffd400;text-shadow:-.16cqw -.16cqw 0 #d61a1a,.16cqw -.16cqw 0 #d61a1a,-.16cqw .16cqw 0 #d61a1a,.16cqw .16cqw 0 #d61a1a,0 .2cqw 0 #d61a1a,0 -.2cqw 0 #d61a1a,.2cqw 0 0 #d61a1a,-.2cqw 0 0 #d61a1a,0 .5cqw 1.2cqw rgba(0,0,0,.45)}.kk .bk i{background:#d61a1a;color:#fff;padding:.13em .24em .12em;box-shadow:0 .4cqw 1.2cqw rgba(0,0,0,.35)}.kk.p-bw .bk i,.kk.p-by .bk i{background:#1d5cff}.kk.p-gy .bk i{background:#12a150}.kk.p-gy .yo{color:#ffd400;text-shadow:0.16cqw 0.16cqw 0 #0b6b34,-0.16cqw 0.16cqw 0 #0b6b34,0.16cqw -0.16cqw 0 #0b6b34,-0.16cqw -0.16cqw 0 #0b6b34,0cqw 0.2cqw 0 #0b6b34,0cqw -0.2cqw 0 #0b6b34,0.2cqw 0cqw 0 #0b6b34,-0.2cqw 0cqw 0 #0b6b34,0 .5cqw 1.4cqw rgba(0,0,0,.5)}.kk.p-wb .bk i{background:#fff;color:#1d5cff}.kk.p-bw .yo{color:#fff;text-shadow:0.16cqw 0.16cqw 0 #0b2f8f,-0.16cqw 0.16cqw 0 #0b2f8f,0.16cqw -0.16cqw 0 #0b2f8f,-0.16cqw -0.16cqw 0 #0b2f8f,0 .2cqw 0 #0b2f8f,0 -.2cqw 0 #0b2f8f,.2cqw 0 0 #0b2f8f,-.2cqw 0 0 #0b2f8f,0 .5cqw 1.4cqw rgba(0,0,0,.6)}.kk.p-wb .yo{color:#3d7bff;text-shadow:0.16cqw 0.16cqw 0 #fff,-0.16cqw 0.16cqw 0 #fff,0.16cqw -0.16cqw 0 #fff,-0.16cqw -0.16cqw 0 #fff,0 .2cqw 0 #fff,0 -.2cqw 0 #fff,.2cqw 0 0 #fff,-.2cqw 0 0 #fff,0 .5cqw 1.4cqw rgba(0,0,0,.5)}.kk.p-by .yo{color:#ffd400;text-shadow:0.16cqw 0.16cqw 0 #0b2f8f,-0.16cqw 0.16cqw 0 #0b2f8f,0.16cqw -0.16cqw 0 #0b2f8f,-0.16cqw -0.16cqw 0 #0b2f8f,0 .2cqw 0 #0b2f8f,0 -.2cqw 0 #0b2f8f,.2cqw 0 0 #0b2f8f,-.2cqw 0 0 #0b2f8f,0 .5cqw 1.4cqw rgba(0,0,0,.5)}.kk .nb{font-size:1.32em}.kk .bk .nb{font-size:1.22em}.kk .l1{font-size:6.4cqw}.kk .l2{font-size:8cqw}.th .dur{right:6px;bottom:6px;font-size:.68rem;padding:3px 5px}.th .dur svg{width:12px;height:12px}
 /* buttons, labels */
 .btn{display:inline-flex;align-items:center;justify-content:center;background:var(--red);color:#fff;font-weight:800;font-size:.9rem;padding:11px 20px;border-radius:7px;text-decoration:none;transition:background .2s}
 .btn:hover{background:var(--red2)}
@@ -627,7 +627,7 @@ GALLERY_ORDER = {}  # slug -> position among articles sharing the same first mod
 PHOTO_ORDER = {}  # slug -> position among articles of its category, oldest first (set in build)
 
 
-PALETTES = ["yr", "bw", "wb", "by"]  # yellow/red, blue block+white, white block+blue, blue block+yellow (no black)
+PALETTES = ["yr", "bw", "wb", "by", "gy"]  # yellow/red, blue block+white, white block+blue, blue block+yellow, green block+yellow (good news); no black
 PALETTE = {}  # slug -> palette
 _TONE = {}
 
@@ -669,6 +669,12 @@ def tone(path):
     return res
 
 
+GREEN_CATS = {"energy", "charging", "factories"}
+GOOD_NEWS = (r"\bRECORD|\bBEVESTIGD|\bCONFIRMED|GOEDGEKEURD|\bAPPROVED|\d-\d VOOR|\bGROEI|\bGROWTH|UITVERKOCHT|SOLD OUT|"
+             r"\bEERDER\b|\bSOONER|\bEARLIER|\bNIEUWE?\b|\bNEW\b|\bOPEN|\bSNELLER|\bFASTER|"
+             r"\bGOEDKOPER|\bCHEAPER|\bMELKKOE|\bCASH COW|\bWINST|\bPROFIT|\bGROOTSTE|\bBIGGEST|\bLARGEST")
+
+
 def assign_palettes(arts):
     """Pick per article a label colour set that complements its photo, keeping the overall mix balanced."""
     use, last = {p: 0 for p in PALETTES}, {}
@@ -682,6 +688,10 @@ def assign_palettes(arts):
                                                     r"DAALT|DALING|FALLS|DROPS|MIST|MISSES|BOETE|FINE|RECHTSZAAK|LAWSUIT|"
                                                     r"ONDERZOEK|PROBE|SLUIT|CLOSES|VERLIES|LOSS)\b", words):
             pick = "yr"   # bad news stays red
+        elif (a["category"] in GREEN_CATS or set(a.get("also", [])) & GREEN_CATS) and re.search(GOOD_NEWS, words) and "?" not in words \
+                and (tone(CHOSEN.get(a["slug"], "")) or {"green": 1})["green"] < .22 \
+                and "gy" not in last.get(a["category"], [])[-1:]:
+            pick = "gy"   # good news on energy, charging and factories: green with yellow
         else:
             t = tone(CHOSEN.get(a["slug"], "")) or {"warm": 0, "blue": 0, "green": 0, "light": .45}
             score = {p: 0.0 for p in PALETTES}
@@ -698,6 +708,7 @@ def assign_palettes(arts):
             if t["light"] > .68:
                 score["bw"] -= .6
             prev = last.get(a["category"], [])
+            score["gy"] = -9  # green only through the good-news rule above
             for p in PALETTES:
                 score[p] -= use[p] * .02 + (.5 if p in prev[-1:] else 0) + (.25 if p in prev[-2:-1] else 0)
             pick = max(PALETTES, key=lambda p: score[p])

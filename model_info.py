@@ -366,13 +366,13 @@ INFO = {
 "roadster": {"sources": [("TrendingTesla — Roadster unveiled", "/tesla-roadster-unveil-what-we-know/")], "en": {
   "intro": "Tesla's next-generation sports car, unveiled in October 2026 with cold-gas thrusters. Production is planned for 2028.",
   "specs": [("0–60 mph", "about 1 s (claimed)"), ("Top speed", "over 230 mph (claimed)"), ("Range", "about 300 miles (claimed)"),
-            ("Versions", "Performance · Thrust · Rocket"), ("Seats", "2 (Rocket: 1); no 2+2"), ("Weight", "about 1,700 kg (expected)"), ("Deposit", "$50,000 (Performance)")],
+            ("Versions", "Performance · Thrust · Rocket"), ("Seats", "2 (Rocket: 1); no 2+2"), ("Deposit", "$50,000 (Performance)")],
   "watch": ["All figures are Tesla claims; no independent tests yet.", "The original 2017 Roadster was delayed for years."],
   "special": ["Cold-gas thrusters, developed with SpaceX."]},
  "nl": {
   "intro": "Tesla's nieuwe sportwagen, in oktober 2026 onthuld met koudgas-stuwraketjes. Productie is gepland voor 2028.",
   "specs": [("0–96 km/u", "ongeveer 1 s (claim)"), ("Topsnelheid", "ruim 370 km/u (claim)"), ("Bereik", "ongeveer 480 km (claim)"),
-            ("Versies", "Performance · Thrust · Rocket"), ("Zitplaatsen", "2 (Rocket: 1); geen 2+2"), ("Gewicht", "ongeveer 1.700 kg (verwacht)"), ("Aanbetaling", "$ 50.000 (Performance)")],
+            ("Versies", "Performance · Thrust · Rocket"), ("Zitplaatsen", "2 (Rocket: 1); geen 2+2"), ("Aanbetaling", "$ 50.000 (Performance)")],
   "watch": ["Alle cijfers zijn claims van Tesla; nog geen onafhankelijke tests.", "De originele Roadster uit 2017 liep jarenlang vertraging op."],
   "special": ["Koudgas-stuwraketjes, ontwikkeld samen met SpaceX."]}},
 }
@@ -626,11 +626,11 @@ EXTRA = {
    _cons(106, None, ("Tesla: 1.7 kWh per mile", "Tesla: 1,7 kWh per mijl"), fuel="diesel"),
    _r("Glass roof", "no", "Glazen dak", "nee")],
  "roadster": [
-   _r("Weight", "not announced", "Gewicht", "niet bekendgemaakt"),
+   _r("Weight", "about 1,700 kg (expected, not final)", "Gewicht", "ongeveer 1.700 kg (verwacht, nog niet definitief)"),
    _r("Towing", "not intended", "Trekgewicht", "niet bedoeld"),
-   _r("Price", "about $200,000+ expected (2017 announcement); final price not confirmed", "Prijs", "rond $ 200.000+ verwacht (aankondiging 2017); definitieve prijs niet bevestigd"),
+   _r("Price", "not announced; deposit $50,000 (Performance) or $250,000 (Thrust)", "Prijs", "niet bekendgemaakt; aanbetaling $ 50.000 (Performance) of $ 250.000 (Thrust)"),
    _r("Consumption", "not announced", "Verbruik", "niet bekendgemaakt"),
-   _r("Glass roof", "removable roof panel (as on the 2017 prototype); not confirmed for the production car", "Glazen dak", "uitneembaar dakdeel (zoals op het prototype uit 2017); niet bevestigd voor de productieauto")],
+   _r("Glass roof", "removable roof panels; gold-tinted titanium-oxide glass", "Glazen dak", "uitneembare dakpanelen; goudkleurig getint glas")],
 }
 for _k, _rows in EXTRA.items():
     for _el, _ev, _nl, _nv in _rows:
@@ -789,7 +789,7 @@ OVR = {
    pnew=_t("about $260,000 (Standard) · $290,000 (Long Range), reported", "ongeveer $ 260.000 (Standard) · $ 290.000 (Long Range), volgens berichten"),
    pused=_t("not applicable", "niet van toepassing")),
  "roadster": dict(built=_t("production planned for 2028", "productie gepland voor 2028"), body=_t("2-door sports car with scissor doors and removable roof panels, 2 seats (no 2+2); Rocket version 1 seat", "2-deurs sportwagen met schaardeuren en uitneembare dakpanelen, 2 zitplaatsen (geen 2+2); Rocket-versie 1 zitplaats"),
-   drive=_t("two motors, rear-wheel drive, over 1 MW", "twee motoren, achterwielaandrijving, ruim 1 MW"), charge=NANN,
+   drive=_t("rear-wheel drive: one rear drive unit (two compact motors, planetary gears), over 1 MW", "achterwielaandrijving: één aandrijfeenheid achter (twee compacte motoren, planetaire tandwielen), ruim 1 MW"), charge=NANN,
    btype=_t("4680-format high-power cells — Tesla (expected), 800–1,000 V", "hoogvermogencellen in 4680-formaat — Tesla (verwacht), 800–1.000 V"),
    steer=_t("yoke, steer-by-wire", "stuurjuk, elektronische besturing (steer-by-wire)"), ap=NANN, pused=_t("not applicable", "niet van toepassing")),
 }
@@ -829,7 +829,7 @@ BODY = {
  "cybertruck": CT_BODY, "cybertruck-awd": CT_BODY, "cybertruck-cyberbeast": CT_BODY, "cybertruck-foundation": CT_BODY,
  "cybercab": _t("2-door with butterfly doors, 2 seats", "2-deurs met vlinderdeuren, 2 zitplaatsen"),
  "semi": _t("2-door heavy tractor (Class 8), central driver's seat", "2-deurs zware trekker (Class 8), bestuurder in het midden"),
- "roadster": _t("2-door sports car, 2+2 seats (2017 prototype)", "2-deurs sportwagen, 2+2 zitplaatsen (prototype 2017)"),
+ "roadster": _t("2-door sports car with scissor doors and removable roof panels, 2 seats (no 2+2); Rocket version 1 seat", "2-deurs sportwagen met schaardeuren en uitneembare dakpanelen, 2 zitplaatsen (geen 2+2); Rocket-versie 1 zitplaats"),
 }
 for _k, _v in BODY.items():
     OVR.setdefault(_k, {})["body"] = _v

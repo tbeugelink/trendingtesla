@@ -14,6 +14,7 @@ Article JSON format:
   "time": "07:00",                                 # publication time (HH:MM, Europe/Amsterdam); optional
   "category": "earnings",                          # key from CATEGORIES below
   "models": ["model-y"],                           # optional: keys from MODELS below the article is about
+  "also": ["optimus"],                             # optional: extra categories where the article also appears
   "image": "topics/optimus.jpg",                   # optional: specific photo (path inside static/img/)
   "sources": [{"title": "...", "url": "https://..."}],
   "en": {"title": "...", "description": "...", "body": "<p>...</p>"},
@@ -1333,7 +1334,7 @@ def build():
 
         # ---------- Category pages ----------
         for key, c in CATEGORIES.items():
-            items = arts if key == "news" else [a for a in arts if a["category"] == key or (key == "ecosystem" and a["category"] in ECO)]
+            items = arts if key == "news" else [a for a in arts if a["category"] == key or key in a.get("also", []) or (key == "ecosystem" and a["category"] in ECO)]
             if key == "news":
                 items = news
             intro = L["eco_intro"] if key in ECO else L["cat_intro"].format(c[lang])
@@ -1381,7 +1382,7 @@ def build():
                 "author": {"@type": "Organization", "name": NAME, "url": SITE},
             }
             head = f'<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>'
-            same = sorted((x for x in arts if x["category"] == a["category"] and x is not a), key=published, reverse=True)
+            same = sorted((x for x in arts if (x["category"] == a["category"] or a["category"] in x.get("also", [])) and x is not a), key=published, reverse=True)
             others = [x for x in arts if x is not a]
             body = feed(a, story(a, lang), others, lang, a["category"], L["latest"], left_exact=same, left_pad=pad_grid(a, same), article=True)
             write(url(lang, a["slug"] + "/"),

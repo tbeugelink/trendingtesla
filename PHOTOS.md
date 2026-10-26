@@ -184,3 +184,12 @@ Articles with a "models" key automatically use real-life photos of that model. Y
 - optimus-mars.jpg — three Optimus Gen 3 robots walking across a red Mars landscape (Optimus / Starship Mars plans)
 - models/semi-6.jpg — aerial of rows of white Tesla Semis on a delivery lot (Semi production / deliveries)
 - models/semi-7.jpg — driver in a Tesla Semi cab on a highway at sunset, centre screens (Semi driving / Autopilot)
+- starship-moon.jpg — Starship standing on the Moon, astronauts, Earth on the horizon (Artemis / Moon plans)
+- falcon-heavy.jpg — Falcon Heavy lifting off at sunset, spectators with red umbrella on the beach (Falcon Heavy launches)
+- falcon-boosters.jpg — two Falcon side boosters landing side by side at Cape Canaveral at dusk (Falcon Heavy booster landings)
+- crew-dragon-pad.jpg — astronauts walking to Falcon 9 with Crew Dragon, red Model X with open doors (crewed launches; Teslas drive the crew)
+- japan-chademo.jpg — red Model Y charging at a Japanese roadside station in autumn, vending machine (Tesla in Japan / CHAdeMO) — place-specific
+- cybertruck-sydney.jpg — Cybertruck parked on a Sydney street, Opera House and Harbour Bridge (Australia) — place-specific
+- tunnel-nashville.jpg — red tunnel boring machine lowered into a limestone pit, Nashville skyline (Music City Loop) — place-specific
+- cybercab-pothole.jpg — gold Cybercab with a wheel in a flooded pothole, cone and police car (minor robotaxi incident; London skyline behind)
+- cybercab-tokyo.jpg — gold Cybercab with door open on a rainy Tokyo street, lanterns and Tokyo Tower (Cybercab in Japan) — place-specific

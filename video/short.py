@@ -66,6 +66,43 @@ def photos(a):
     return out or [build.STATIC / "img/topics/gigafactory.jpg"]
 
 
+# what the voice talks about -> which photos fit: (spoken pattern, file-name pattern, model gallery)
+SUBJECTS = {
+    "model-y": (r"\bmodel y\b", r"(^|/)(my[a-z]?-\d|robotaxi-my|model-y)", "model-y"),
+    "model-3": (r"\bmodel 3\b", r"(^|/)(m3[a-z]?-\d|model-3)", "model-3"),
+    "model-s": (r"\bmodel s\b", r"(^|/)(ms[a-z]?-\d|model-s)", "model-s"),
+    "model-x": (r"\bmodel x\b", r"(^|/)(mx[a-z]?-\d|model-x)", "model-x"),
+    "cybertruck": (r"\bcybertruck|cyberbeast", r"(^|/)(ct-|cb-|ctf-|cybertruck)", "cybertruck"),
+    "cybercab": (r"\bcybercab", r"(^|/)(cc-\d|cybercab)", "cybercab"),
+    "roadster": (r"\broadster", r"(^|/)(rd-\d|roadster)", "roadster"),
+    "semi": (r"\bsemi\b", r"(^|/)semi", "semi"),
+    "optimus": (r"\boptimus", r"optimus", None),
+    "powerwall": (r"\bpowerwall", r"powerwall", None),
+    "megapack": (r"\bmegapack|megablock", r"megapack|megablock", None),
+    "starship": (r"\bstarship|spacex", r"starship|spacex|falcon", None),
+    "robotaxi": (r"\brobotaxi", r"robotaxi-(my|app)|ride-", None),
+}
+
+
+def pool(a, subj):
+    """Photos that show a subject: the article's own first, then the model gallery, then the category's photos."""
+    _, fpat, gal = SUBJECTS[subj]
+    if subj == "roadster" and a.get("date", "") < "2026-10-15":
+        fpat = r"(^|/)roadster(?!.*20(25|26))"  # no new-Roadster pictures before its reveal
+        gal = None
+    names = list(build.candidates(a))
+    if gal:
+        names += ["/img/models/" + g for g in build.MODELS.get(gal, {}).get("gallery", [])]
+    for c in [a["category"]] + a.get("also", []):
+        names += ["/img/topics/" + x if "/" not in x else "/img/" + x for x in build.TOPIC_PHOTOS.get(c, [])]
+    out = []
+    for c in names:
+        q = build.STATIC / "img" / c.split("/img/", 1)[-1] if c.startswith("/img/") else None
+        if q and q.exists() and re.search(fpat, c.lower()) and q.name not in {o.name for o in out}:
+            out.append(q)
+    return out
+
+
 OUTRO = {"en": ("For more information go to", "For more information, go to trendingtesla.com."),
          "nl": ("Voor meer informatie ga naar", "Voor meer informatie, ga naar trendingtesla.com.")}
 KEEP_UPPER = {"AI", "FSD", "EV", "EVS", "USA", "US", "UK", "EU", "NHTSA", "SEC", "CEO", "CFO", "HW3", "HW4", "AI5",
@@ -158,7 +195,7 @@ def tts_elevenlabs(text, out_mp3):
     with urllib.request.urlopen(req, timeout=300) as r:
         d = json.load(r)
     out_mp3.write_bytes(base64.b64decode(d["audio_base64"]))
-    al = d.get("normalized_alignment") or d["alignment"]
+    al = d.get("alignment") or d["normalized_alignment"]  # original characters, so text positions line up
     return al["characters"], al["character_start_times_seconds"], al["character_end_times_seconds"]
 
 
@@ -221,9 +258,9 @@ def fit(d, t, f, s, maxw):
     return font(f, s)
 
 
-PAL = {  # same colour sets as the site labels: (block bg, block text, big text, big text outline)
-    "yr": (RED, "#fff", YEL, RED), "bw": (BLUE, "#fff", "#fff", "#000"), "kw": ("#111", "#fff", "#fff", BLUE),
-    "wb": ("#fff", "#111", "#3d7bff", "#fff"), "by": (BLUE, "#fff", YEL, "#111"),
+PAL = {  # same colour sets as the site labels: (block bg, block text, big text, big text outline); no black
+    "yr": (RED, "#fff", YEL, RED), "bw": (BLUE, "#fff", "#fff", "#0b2f8f"),
+    "wb": ("#fff", BLUE, "#3d7bff", "#fff"), "by": (BLUE, "#fff", YEL, "#0b2f8f"),
 }
 SIZES = {"a": [6.6, 10.5], "c": [8, 6.2], "n": [10, 5.8], "r": [7.4, 7.4]}  # % of width, as on the site
 
@@ -348,11 +385,63 @@ def overlay(draw_fn):
     return im
 
 
-ZOOM, TR, SCENE = 1.35, 2.0, 7.0  # image headroom for zoom/pan, crossfade length, seconds per photo
+ZOOM, TR, SCENE = 1.35, 2.0, 6.0  # image headroom for zoom/pan, crossfade length, seconds per photo
 
 
 def ease(x):
     return x * x * (3 - 2 * x)
+
+
+def plan(a, words, total, label_end):
+    """List of (start, photo). The opening photo stays for the title; after that a named car or product
+    comes in about 1 s before the voice says it (the 2 s fade is then half way), other scenes last ~6 s."""
+    general = photos(a)
+    pools = {k: pool(a, k) for k in SUBJECTS}
+    used, shown = {}, {general[0]}
+
+    def take(subj, avoid):
+        """Next photo for a subject, preferring ones not shown yet in this video."""
+        lst = pools.get(subj) or general
+        fresh = [ph for ph in lst if ph not in shown and ph != avoid]
+        if fresh:
+            ph = fresh[0]
+        else:
+            n = used.get(subj, 0)
+            ph = next((lst[(n + j) % len(lst)] for j in range(len(lst)) if lst[(n + j) % len(lst)] != avoid), lst[0])
+            used[subj] = lst.index(ph) + 1
+        shown.add(ph)
+        return ph
+
+    # cues: when a subject is named (first word of the mention), from the voice timings
+    toks = [(w[0].lower().strip(".,!?:;\"'()"), w[1]) for w in words]
+    cues = []
+    for i, (tok, t0) in enumerate(toks):
+        two = tok + " " + (toks[i + 1][0] if i + 1 < len(toks) else "")
+        for k, (spat, _, _) in SUBJECTS.items():
+            if pools[k] and (re.match(spat, two) or re.match(spat, tok)):
+                cues.append((t0, k))
+                break
+    scenes = [(0.0, general[0], None)]
+    MIN = 3.5
+
+    def fill_until(t_end):
+        while t_end - scenes[-1][0] > SCENE + MIN:
+            st, ph, sj = scenes[-1]
+            scenes.append((st + SCENE, take(sj, ph), sj))
+
+    first_free = max(label_end, 0.0)
+    for t0, k in cues:
+        if k == scenes[-1][2]:
+            continue
+        start = max(t0 - 1.0, scenes[-1][0] + MIN, first_free if len(scenes) == 1 else 0)
+        if start > t0 + 2.0:
+            continue
+        fill_until(start)
+        scenes.append((start, take(k, scenes[-1][1]), k))
+    while total - scenes[-1][0] > SCENE + 2.5:
+        st, ph, sj = scenes[-1]
+        scenes.append((st + SCENE, take(sj if sj else None, ph), sj))
+    return [(st, ph) for st, ph, _ in scenes]
 
 
 def render(a, lang, audio, words, total, label_end, end_start):
@@ -361,11 +450,6 @@ def render(a, lang, audio, words, total, label_end, end_start):
     for y in range(H):
         shade.putpixel((0, y), int(185 * max(0, (y - H * 0.5) / (H * 0.5)) ** 1.25 + 120 * max(0, (H * 0.16 - y) / (H * 0.16))))
     shade = shade.resize((W, H))
-    pics = []
-    for p in imgs[:8]:  # scaled to cover the frame with room to zoom and pan
-        im = Image.open(p).convert("RGB")
-        sc = max(H * ZOOM / im.height, W * ZOOM / im.width)
-        pics.append(im.resize((int(im.width * sc) + 1, int(im.height * sc) + 1), Image.LANCZOS))
     fbrand, fcap = font(FX, 50), font(FB, LAY["caps"])
 
     def brand(d):
@@ -416,9 +500,19 @@ def render(a, lang, audio, words, total, label_end, end_start):
             caps[key] = overlay(dr)
         return caps[key]
 
-    # one photo per ~7 s, always slowly zooming in while the camera drifts, 2 s crossfade
-    nsc = max(1, round(total / SCENE))
-    starts = [k * total / nsc for k in range(nsc)]
+    # scenes: ~6 s each, but a car (or product) appears when the voice names it
+    scenes = plan(a, words, total, label_end)
+    starts = [st for st, _ in scenes]
+    cache = {}
+
+    def pic(path):
+        if path not in cache:
+            im = Image.open(path).convert("RGB")
+            sc = max(H * ZOOM / im.height, W * ZOOM / im.width)
+            cache[path] = im.resize((int(im.width * sc) + 1, int(im.height * sc) + 1), Image.LANCZOS)
+            if len(cache) > 4:
+                cache.pop(next(iter(cache)))
+        return cache[path]
     out = OUT / f"{a['slug']}-{lang}{'-short' if PORTRAIT else ''}.mp4"
     cmd = ["ffmpeg", "-loglevel", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-"]
     if audio:  # pad the voice with silence so it never ends before the picture
@@ -429,21 +523,15 @@ def render(a, lang, audio, words, total, label_end, end_start):
     black, white = Image.new("RGB", (W, H)), Image.new("RGB", (W, H), "#fff")
     nsc = len(starts)
 
-    MOVES = [((0.5, 0.5), (0.5, 0.45)),   # straight in
-             ((0.15, 0.5), (0.85, 0.5)),  # in, left to right
-             ((0.85, 0.5), (0.15, 0.5)),  # in, right to left
-             ((0.5, 0.15), (0.5, 0.75)),  # in, top to bottom
-             ((0.2, 0.75), (0.8, 0.3)),   # in, diagonal up
-             ((0.5, 0.8), (0.5, 0.25))]   # in, bottom to top
+    FOCUS = [(0.5, 0.45), (0.42, 0.5), (0.58, 0.5), (0.5, 0.55)]
 
     def shot(k, t):
-        """Scene k at time t: always zooming in, combined with a camera drift that differs per scene."""
-        im = pics[k % len(pics)]
-        span = (starts[k + 1] if k + 1 < nsc else total) - starts[k] + TR  # keeps moving through the fade
+        """Scene k at time t: a calm zoom straight in on a fixed point (no panning)."""
+        im = pic(scenes[k][1])
+        span = (starts[k + 1] if k + 1 < nsc else total) - starts[k] + TR
         p = ease(max(0.0, min(1.0, (t - starts[k]) / span)))
-        (x0c, y0c), (x1c, y1c) = MOVES[k % len(MOVES)]
-        z = 1.0 + 0.32 * p
-        cx, cy = x0c + (x1c - x0c) * p, y0c + (y1c - y0c) * p
+        cx, cy = FOCUS[k % len(FOCUS)]
+        z = 1.0 + 0.30 * p
         cw, chh = min(W * ZOOM / z, im.width), min(H * ZOOM / z, im.height)  # z=ZOOM: native pixels
         x0, y0 = (im.width - cw) * cx, (im.height - chh) * cy
         return im.resize((W, H), Image.BILINEAR, box=(x0, y0, x0 + cw, y0 + chh))
@@ -504,41 +592,58 @@ def main():
     a = load(slug)
     OUT.mkdir(parents=True, exist_ok=True)
     title, text, outro = title_say(a, lang), script(a, lang), OUTRO[lang][1]
+    pieces = [spoken(x, lang) for x in (title, text, outro)]
     audio = None
-    if os.environ.get("ELEVENLABS_API_KEY") and os.environ.get("ELEVENLABS_VOICE_ID"):
-        parts = []
+    have_voice = os.environ.get("ELEVENLABS_API_KEY") and os.environ.get("ELEVENLABS_VOICE_ID")
+    if have_voice:
+        # one request for everything, so the title has the same pace and tone as the rest; then cut it in three
+        mp3 = OUT / f"{slug}-{lang}-all.mp3"
         try:
-            for i, txt in enumerate((title, text, outro)):
-                mp3 = OUT / f"{slug}-{lang}-{i}.mp3"
-                chars, s, e = tts_elevenlabs(spoken(txt, lang), mp3)
-                parts.append((mp3, words_timed(chars, s, e), duration(mp3)))
+            chars, cs, ce = tts_elevenlabs(" ".join(pieces), mp3)
         except urllib.error.HTTPError as err:
             body = err.read().decode("utf-8", "replace")[:300]
             print(f"::error::ElevenLabs HTTP {err.code}: {body}")
             raise SystemExit(1)
         print(f"::notice::ElevenLabs ok for {slug}-{lang} after {time.time() - T0:.0f}s")
-        durs = [d for _, _, d in parts]
-        body_words = parts[1][1]
+        full = duration(mp3)
+        joined = " ".join(pieces)
+        if len(chars) != len(joined):  # should not happen; map positions proportionally
+            print(f"::warning::alignment has {len(chars)} chars, text {len(joined)}")
+            r = len(chars) / len(joined)
+            cs = [cs[min(len(cs) - 1, int(i * r))] for i in range(len(joined))]
+            ce = [ce[min(len(ce) - 1, int(i * r))] for i in range(len(joined))]
+            chars = list(joined)
+        segs, pos = [], 0
+        for i, pc in enumerate(pieces):
+            i0, i1 = pos, pos + len(pc) - 1
+            while i0 < i1 and chars[i0].isspace():
+                i0 += 1
+            a0 = max(0.0, cs[i0] - 0.05)
+            a1 = min(full, ce[i1] + 0.12) if i < 2 else full
+            segs.append((a0, a1))
+            pos += len(pc) + 1
+        body_words = [(w, s0 - segs[1][0], e0 - segs[1][0]) for w, s0, e0 in
+                      words_timed(chars, cs, ce) if segs[1][0] <= s0 < segs[1][1]]
+        durs = [b1 - b0 for b0, b1 in segs]
     else:  # silent preview: ~2.6 words per second
-        durs = [len(x.split()) / 2.6 for x in (title, text, outro)]
-        ws = text.split()
-        body_words = [(w, i / 2.6, (i + 1) / 2.6) for i, w in enumerate(ws)]
-    # timeline: title (label on screen, no captions) -> label off, 2 s pause -> body with captions -> outro card 5 s+
+        durs = [len(x.split()) / 2.6 for x in pieces]
+        body_words = [(w, i / 2.6, (i + 1) / 2.6) for i, w in enumerate(text.split())]
+    # timeline: title (label on screen, no captions) -> 0.7 s -> body with captions -> outro card for 5 s
     t_title = 0.3
-    label_end = t_title + durs[0] + 0.5
-    t_body = label_end + 2.0
-    end_start = t_body + durs[1] + 0.5
-    total = end_start + max(5.0, durs[2] + 1.0)
+    label_end = t_title + durs[0] + 0.25
+    t_body = t_title + durs[0] + 0.7
+    end_start = t_body + durs[1] + 0.4
+    total = end_start + max(5.0, durs[2] + 0.8)
     words = [(w, s0 + t_body, e0 + t_body) for w, s0, e0 in body_words]
-    if os.environ.get("ELEVENLABS_API_KEY") and os.environ.get("ELEVENLABS_VOICE_ID"):
+    if have_voice:
         audio = OUT / f"{slug}-{lang}.m4a"
-        ins, fl = [], []
-        for i, (t0, (mp3, _, _)) in enumerate(zip((t_title, t_body, end_start), parts)):
-            ins += ["-i", str(mp3)]
+        fl = []
+        for i, ((a0, a1), t0) in enumerate(zip(segs, (t_title, t_body, end_start))):
             ms = int(t0 * 1000)
-            fl.append(f"[{i}]adelay={ms}|{ms}[a{i}]")
+            fl.append(f"[0]atrim={a0:.3f}:{a1:.3f},asetpts=PTS-STARTPTS,afade=t=out:st={max(0, a1 - a0 - 0.04):.3f}:d=0.04,"
+                      f"adelay={ms}|{ms}[a{i}]")
         fl.append("[a0][a1][a2]amix=inputs=3:normalize=0:duration=longest[out]")
-        subprocess.run(["ffmpeg", "-loglevel", "error", "-y", *ins, "-filter_complex", ";".join(fl), "-map", "[out]",
+        subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", str(mp3), "-filter_complex", ";".join(fl), "-map", "[out]",
                         "-c:a", "aac", "-b:a", "160k", str(audio)], check=True)
     out = render(a, lang, audio, words, total, label_end, end_start)
     print(f"::notice::Video {out.name} ready after {time.time() - T0:.0f}s ({total:.0f}s long)")

@@ -196,3 +196,4 @@ Articles with a "models" key automatically use real-life photos of that model. Y
 - cybercab-pothole-austin.jpg — gold Cybercab with a wheel in a flooded pothole in downtown Austin, police car, Capitol dome (Austin robotaxi incident)
 - terafab-keynote.jpg — Musk on stage at the Terafab keynote in Austin, "TERAFAB · Tesla | xAI | SpaceX" screen (Terafab events)
 - robotaxi-vs-cybercab.jpg — silver new Model Y (Robotaxi) next to a gold Cybercab, Austin skyline (Robotaxi service vs Cybercab vehicle)
+- robotaxi-vs-cybercab-night.jpg — same pair (new Model Y Robotaxi + gold Cybercab) at dusk, purple sky over the Austin skyline

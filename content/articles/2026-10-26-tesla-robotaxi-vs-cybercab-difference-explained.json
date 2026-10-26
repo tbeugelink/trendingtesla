@@ -7,6 +7,7 @@
     "cybercab"
   ],
   "images": [
+    "robotaxi-vs-cybercab-night.jpg",
     "robotaxi-vs-cybercab.jpg",
     "robotaxi-my-2.jpg",
     "cybercab.jpg"
@@ -20,7 +21,8 @@
     "nl": {
       "sub": "ROBOTAXI - CYBERCAB",
       "text": "WAT IS HET VERSCHIL?"
-    }
+    },
+    "pal": "yr"
   },
   "sources": [
     {

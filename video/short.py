@@ -241,9 +241,9 @@ def render(a, lang, audio, words, total):
             caps[txt] = overlay(dr)
         return caps[txt]
 
-    # scenes of ~2.7 s (the first a bit longer for the label); photos repeat with a different framing
+    # scenes of ~3 s (the first a bit longer for the label); photos repeat with a different framing
     first = min(3.6, total / 2)
-    nsc = max(1, round((total - first) / 2.7))
+    nsc = max(1, round((total - first) / 3.0))
     rest_len = (total - first) / nsc
     starts = [0.0] + [first + k * rest_len for k in range(nsc)]
     out = OUT / f"{a['slug']}-{lang}{'-short' if PORTRAIT else ''}.mp4"
@@ -302,8 +302,6 @@ def render(a, lang, audio, words, total):
     for fr in range(n):
         t = fr / FPS
         frame = picture(t)
-        if t < 0.25:
-            frame = Image.blend(black, frame, t / 0.25)
         frame.paste(o_brand, (0, 0), o_brand)
         last = t > total - 2.6
         if t < first:  # opening: the article label, like the thumbnail

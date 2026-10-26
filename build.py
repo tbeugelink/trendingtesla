@@ -290,7 +290,7 @@ h1,h2,h3{color:#ebebeb;font-weight:800}
 .pager{display:flex;justify-content:space-between;align-items:center;margin:34px 0 0;font-size:.9rem;color:var(--dim)}
 .pager a,.morelink{color:var(--head);text-decoration:none;font-weight:700;background:#272727;border-radius:7px;padding:9px 14px 7px}
 .pager a:hover,.morelink:hover{background:#3f3f3f}
-.morelink{display:block;text-align:center;margin-top:12px;font-size:.88rem}
+.morelink{display:block;text-align:center;margin-top:12px;font-size:.88rem}.rubh{scroll-margin-top:84px}html{scroll-behavior:smooth}
 .srow{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 14px}.srow .smeta{margin:0;white-space:nowrap}
 .acts{display:flex;gap:8px;flex:none}
 .act{display:inline-flex;align-items:center;gap:6px;border:0;border-radius:7px;background:#272727;color:#ebebeb;font:inherit;font-size:.82rem;font-weight:700;padding:7px 13px 6px;cursor:pointer;transition:background .15s}
@@ -1012,6 +1012,7 @@ def words(a, lang):
 ROW_PX = 168
 MAX_LEFT = 24   # articles in the list under the lead
 MAX_RIGHT = 50  # articles in the news column
+MAX_HOME_GRID = 60  # articles in the grid under the tip bar on the home page
 PER_PAGE = 36   # articles per archive page
 
 
@@ -1052,9 +1053,10 @@ def feed(lead, lead_html, rest, lang, active=None, side_title="", left_first=(),
         # topic, model and article pages: the right column holds only articles of this topic
         right_items = [x for x in left_items if x is not lead]
     if no_left:
-        right_items, left_items = list(rest), []
+        # home / news: newest news on the right, the same news continues as a grid under the tip bar
+        right_items, left_items = list(rest), list(rest)[:MAX_HOME_GRID]
     more_link = ""
-    topic = left_exact is not None and (active != "news" or article)
+    topic = (left_exact is not None and (active != "news" or article)) or no_left
     if len(left_items) > MAX_LEFT and not topic:
         left_items = left_items[:MAX_LEFT]
         more_link = f'<a class="morelink" href="{url(lang, "archive/")}">{LANGS[lang]["archive"]} →</a>'
@@ -1070,11 +1072,15 @@ def feed(lead, lead_html, rest, lang, active=None, side_title="", left_first=(),
     if more and len(right_items) > n_own:
         side += f'<h2 class="sideh">{CATEGORIES["news"][lang]}</h2>' + "".join(mini(a, lang) for a in right_items[n_own:])
     grid = (f'<div class="grid2 gall wide">{g}</div>' if topic else f'<div class=grid2>{g}</div>') if g else ""
-    rubh = f'<h2 class="rubh">{esc(CATEGORIES[active][lang])} info</h2>' if g and topic and active in CATEGORIES and active != "news" else ""
+    rubh = f'<h2 class="rubh" id="meer">{esc(CATEGORIES[active][lang])} info</h2>' if g and topic and active in CATEGORIES else ""
+    if no_left and len(rest) > MAX_HOME_GRID:
+        more_link = f'<a class="morelink" href="{url(lang, "archive/")}">{LANGS[lang]["archive"]} →</a>'
+    side_more = (f'<a class="morelink moredn" href="#meer">{LANGS[lang]["d_more"]} <span aria-hidden="true">↓</span></a>' if rubh
+                 else f'<a class="morelink" href="{url(lang, "archive/")}">{LANGS[lang]["archive"]} →</a>')
     return (f'<section class="read home{" topic" if topic else ""}"><div class="lcol">{lead_html}</div>'
             f'<aside class="rside">{extra_side}'
             + ("" if active == "models" and not article else f'<h2 class="sr">{side_title}</h2><div class="side">{side}</div>'
-               f'<a class="morelink" href="{url(lang, "archive/")}">{LANGS[lang]["archive"]} →</a>')
+               + side_more)
             + '</aside></section>'
             f'<section class="below">{tl[0]}{rubh}{grid}{more_link}</section>')
 

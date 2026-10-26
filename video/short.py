@@ -66,13 +66,76 @@ def photos(a):
     return out or [build.STATIC / "img/topics/gigafactory.jpg"]
 
 
+OUTRO = {"en": ("For more information go to", "For more information, go to trendingtesla.com."),
+         "nl": ("Voor meer informatie ga naar", "Voor meer informatie, ga naar trendingtesla.com.")}
+KEEP_UPPER = {"AI", "FSD", "EV", "EVS", "USA", "US", "UK", "EU", "NHTSA", "SEC", "CEO", "CFO", "HW3", "HW4", "AI5",
+              "V2", "V3", "V4", "Y", "S", "X", "3", "Q1", "Q2", "Q3", "Q4", "XAI", "BYD", "NL", "DMV", "CPUC", "MW", "GW",
+              "KWH", "MWH", "GWH", "MPH", "ISO", "V2L"}
+
+
+NAMES = ("tesla", "elon musk", "musk", "robotaxi", "cybercab", "cybertruck", "optimus", "roadster", "semi",
+                 "powerwall", "megapack", "spacex", "starship", "starlink", "twitter", "japan", "australië", "australia",
+                 "china", "europa", "europe", "duitsland", "germany", "nederland", "netherlands", "waymo", "uber", "turo", "model", "austin", "texas", "giga", "terafab", "dallas")
+
+
+def say_case(t):
+    """Label text is in capitals; turn it into normal case so the voice does not spell words out."""
+    out = []
+    for w in t.replace(" - ", ", ").split():
+        core = re.sub(r"[^A-Z0-9]", "", w.upper())
+        out.append(w if core in KEEP_UPPER or re.search(r"\d", core) else w.lower())
+    x = " ".join(out)
+    x = re.sub(r"(^|[.?!]\s+)([a-z])", lambda m: m.group(1) + m.group(2).upper(), x)
+    for name in NAMES:
+        x = re.sub(rf"\b{name}\b", name.title(), x)
+    for k, v in {"Spacex": "SpaceX", "Xai": "xAI", "Starship": "Starship"}.items():
+        x = re.sub(rf"\b{k}\b", v, x)
+    return x
+
+
+def low1(t):
+    """Lower-case the first letter unless the word is an acronym."""
+    w = re.split(r"[\s,-]", t, 1)[0].lower()
+    return t[0].lower() + t[1:] if len(t) > 1 and t[1].islower() and w not in NAMES else t
+
+
+def title_say(a, lang):
+    """The opening line the voice reads: the photo label, in the order it is shown."""
+    sh = a.get("short") or {}
+    if sh.get(f"title_{lang}"):
+        return sh[f"title_{lang}"]
+    lb = a.get("label") or {}
+    t = lb.get(lang) or {}
+    st = lb.get("style", "a")
+    txt, sub = t.get("text", ""), t.get("sub", "")
+    if not txt:
+        return a[lang]["title"]
+    parts = [txt, sub] if st == "n" else [txt] if st == "r" else [sub, txt]
+    parts = [say_case(x).rstrip(".") for x in parts if x]
+    if len(parts) == 1:
+        x = parts[0]
+    else:
+        p0, p1 = parts
+        q = r"^(what|why|how|who|when|which|is|are|does|do|can|will|wat|waarom|hoe|wie|wanneer|welke|is|zijn|kan|komt|gaat)\b"
+        last = p0.split()[-1].lower()
+        if last in {"de", "het", "een", "the", "a", "an", "van", "of", "met", "with", "to", "op", "in", "voor", "for", "en", "and"} \
+                or re.match(r"^[\d€$+\-]", p0) or (re.match(q, p0, re.I) and not re.match(q, p1, re.I)):
+            x = p0 + " " + low1(p1) if not re.match(r"^[A-Z][a-z]+[A-Z]|^(Tesla|Musk|Model|Powerwall|Roadster|Cybercab|Optimus)", p1) else p0 + " " + p1
+        elif re.match(q, p1, re.I):
+            x = p0 + ". " + p1
+        else:
+            x = p0 + ", " + low1(p1) if not re.match(r"^(Tesla|Musk|Model|Powerwall|Roadster|Cybercab|Optimus|Spacex|Starlink|FSD|AI)", p1) else p0 + ", " + p1
+    x = x.replace(" + ", " and " if lang == "en" else " en ")
+    return x if x.endswith(("?", "!", ".")) else x + "."
+
+
 def script(a, lang):
+    """The body text, without any closing line about the site (the outro adds that)."""
     s = (a.get("short") or {}).get(lang)
     if not s:
         s = a[lang]["title"] + ". " + a[lang]["description"]
-    end = {"en": f"More on {SITE}.", "nl": f"Meer op {SITE}."}[lang]
-    if SITE not in s:
-        s = s.rstrip() + " " + end
+    s = re.sub(r"\s*(More (information )?on|Meer (informatie )?op|Lees meer op|Read more on)\s+trendingtesla\.com\.?\s*$", "",
+               s.strip(), flags=re.I)
     return s
 
 
@@ -285,14 +348,14 @@ def overlay(draw_fn):
     return im
 
 
-ZOOM, TR, SCENE = 1.35, 1.0, 5.0  # image headroom for zoom/pan, crossfade length, seconds per photo
+ZOOM, TR, SCENE = 1.35, 2.0, 7.0  # image headroom for zoom/pan, crossfade length, seconds per photo
 
 
 def ease(x):
     return x * x * (3 - 2 * x)
 
 
-def render(a, lang, audio, words, total):
+def render(a, lang, audio, words, total, label_end, end_start):
     imgs = photos(a)
     shade = Image.new("L", (1, H))
     for y in range(H):
@@ -310,13 +373,20 @@ def render(a, lang, audio, words, total):
         d.text((60 + d.textlength("Trending", font=fbrand), LAY["brand"]), "Tesla", font=fbrand, fill="#e8231c")
 
     def ending(d):
-        fe = font(FB, 104)
-        w1, w2 = d.textlength("Trending", font=fe), d.textlength("Tesla", font=fe)
-        x = (W - w1 - w2) / 2
-        d.text((x, LAY["end"]), "Trending", font=fe, fill="#fff")
-        d.text((x + w1, LAY["end"]), "Tesla", font=fe, fill="#e8231c")
-        fs = font(FX, 58)
-        d.text(((W - d.textlength(SITE, font=fs)) / 2, LAY["end"] + 140), SITE, font=fs, fill=YEL)
+        """Closing card: dark see-through panel with the site name, readable on any photo."""
+        f1, f2 = font(FX, 64 if not PORTRAIT else 56), font(FB, 132 if not PORTRAIT else 104)
+        l1 = OUTRO[lang][0]
+        parts = [("Trending", "#fff"), ("Tesla", "#e8231c"), (".com", YEL)]
+        w2 = sum(d.textlength(x, font=f2) for x, _ in parts)
+        w = max(d.textlength(l1, font=f1), w2) + 140
+        h = 330 if not PORTRAIT else 290
+        x0, y0 = (W - w) / 2, (H - h) / 2
+        d.rounded_rectangle([x0, y0, x0 + w, y0 + h], radius=36, fill=(0, 0, 0, 175))
+        d.text(((W - d.textlength(l1, font=f1)) / 2, y0 + 60), l1, font=f1, fill="#fff")
+        x = (W - w2) / 2
+        for txt, col in parts:
+            d.text((x, y0 + 140), txt, font=f2, fill=col)
+            x += d.textlength(txt, font=f2)
 
     o_brand, o_end = overlay(brand), overlay(ending)
     o_label, label_top = label_overlay(a, lang)
@@ -346,10 +416,9 @@ def render(a, lang, audio, words, total):
             caps[key] = overlay(dr)
         return caps[key]
 
-    # one photo per ~5 s, each with a calm but clear move, 1 s crossfade into the next
+    # one photo per ~7 s, always slowly zooming in while the camera drifts, 2 s crossfade
     nsc = max(1, round(total / SCENE))
-    first = total / nsc
-    starts = [k * first for k in range(nsc)]
+    starts = [k * total / nsc for k in range(nsc)]
     out = OUT / f"{a['slug']}-{lang}{'-short' if PORTRAIT else ''}.mp4"
     cmd = ["ffmpeg", "-loglevel", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-"]
     if audio:  # pad the voice with silence so it never ends before the picture
@@ -360,16 +429,21 @@ def render(a, lang, audio, words, total):
     black, white = Image.new("RGB", (W, H)), Image.new("RGB", (W, H), "#fff")
     nsc = len(starts)
 
+    MOVES = [((0.5, 0.5), (0.5, 0.45)),   # straight in
+             ((0.15, 0.5), (0.85, 0.5)),  # in, left to right
+             ((0.85, 0.5), (0.15, 0.5)),  # in, right to left
+             ((0.5, 0.15), (0.5, 0.75)),  # in, top to bottom
+             ((0.2, 0.75), (0.8, 0.3)),   # in, diagonal up
+             ((0.5, 0.8), (0.5, 0.25))]   # in, bottom to top
+
     def shot(k, t):
-        """Scene k at time t: alternately a slow deep zoom-in and a camera move from left to right."""
+        """Scene k at time t: always zooming in, combined with a camera drift that differs per scene."""
         im = pics[k % len(pics)]
-        rnd = k // len(pics)  # repeat round: frame another part of the photo
         span = (starts[k + 1] if k + 1 < nsc else total) - starts[k] + TR  # keeps moving through the fade
         p = ease(max(0.0, min(1.0, (t - starts[k]) / span)))
-        if (k + rnd) % 2 == 0:
-            z, cx, cy = 1.0 + 0.32 * p, [0.5, 0.35, 0.65][rnd % 3], 0.45   # zoom in
-        else:
-            z, cx, cy = 1.3, p, 0.5                                          # pan left -> right
+        (x0c, y0c), (x1c, y1c) = MOVES[k % len(MOVES)]
+        z = 1.0 + 0.32 * p
+        cx, cy = x0c + (x1c - x0c) * p, y0c + (y1c - y0c) * p
         cw, chh = min(W * ZOOM / z, im.width), min(H * ZOOM / z, im.height)  # z=ZOOM: native pixels
         x0, y0 = (im.width - cw) * cx, (im.height - chh) * cy
         return im.resize((W, H), Image.BILINEAR, box=(x0, y0, x0 + cw, y0 + chh))
@@ -386,14 +460,14 @@ def render(a, lang, audio, words, total):
         t = fr / FPS
         frame = picture(t)
         frame.paste(o_brand, (0, 0), o_brand)
-        last = t > total - 2.6
-        if t < first:  # opening: the article label, like the thumbnail
+        last = t >= end_start
+        if t < label_end:  # opening: the article label, like the thumbnail, while the voice reads it
             frame.paste(o_label, (0, 0), o_label)
         if last:
             frame.paste(o_end, (0, 0), o_end)
         ch = next((c for c in chunks if c[0][1] <= t <= c[-1][2] + 0.25), None)
         if ch and not last:
-            o = cap(" ".join(w[0] for w in ch), int(label_top - 0.02 * W) if t < first else None)
+            o = cap(" ".join(w[0] for w in ch))
             frame.paste(o, (0, 0), o)
         ImageDraw.Draw(frame).rectangle([0, H - 12, int(W * t / total), H], fill="#e8231c")
         try:
@@ -429,24 +503,44 @@ def main():
     slug, lang = args[0], (args[1] if len(args) > 1 else "en")
     a = load(slug)
     OUT.mkdir(parents=True, exist_ok=True)
-    text = script(a, lang)
+    title, text, outro = title_say(a, lang), script(a, lang), OUTRO[lang][1]
     audio = None
     if os.environ.get("ELEVENLABS_API_KEY") and os.environ.get("ELEVENLABS_VOICE_ID"):
-        audio = OUT / f"{slug}-{lang}.mp3"
+        parts = []
         try:
-            chars, s, e = tts_elevenlabs(spoken(text, lang), audio)
+            for i, txt in enumerate((title, text, outro)):
+                mp3 = OUT / f"{slug}-{lang}-{i}.mp3"
+                chars, s, e = tts_elevenlabs(spoken(txt, lang), mp3)
+                parts.append((mp3, words_timed(chars, s, e), duration(mp3)))
         except urllib.error.HTTPError as err:
             body = err.read().decode("utf-8", "replace")[:300]
             print(f"::error::ElevenLabs HTTP {err.code}: {body}")
             raise SystemExit(1)
         print(f"::notice::ElevenLabs ok for {slug}-{lang} after {time.time() - T0:.0f}s")
-        words = words_timed(chars, s, e)
-        total = duration(audio) + 0.6
-    else:  # silent preview: spread the words over ~2.6 words per second
+        durs = [d for _, _, d in parts]
+        body_words = parts[1][1]
+    else:  # silent preview: ~2.6 words per second
+        durs = [len(x.split()) / 2.6 for x in (title, text, outro)]
         ws = text.split()
-        words = [(w, i / 2.6, (i + 1) / 2.6) for i, w in enumerate(ws)]
-        total = len(ws) / 2.6 + 1
-    out = render(a, lang, audio, words, total)
+        body_words = [(w, i / 2.6, (i + 1) / 2.6) for i, w in enumerate(ws)]
+    # timeline: title (label on screen, no captions) -> label off, 2 s pause -> body with captions -> outro card 5 s+
+    t_title = 0.3
+    label_end = t_title + durs[0] + 0.5
+    t_body = label_end + 2.0
+    end_start = t_body + durs[1] + 0.5
+    total = end_start + max(5.0, durs[2] + 1.0)
+    words = [(w, s0 + t_body, e0 + t_body) for w, s0, e0 in body_words]
+    if os.environ.get("ELEVENLABS_API_KEY") and os.environ.get("ELEVENLABS_VOICE_ID"):
+        audio = OUT / f"{slug}-{lang}.m4a"
+        ins, fl = [], []
+        for i, (t0, (mp3, _, _)) in enumerate(zip((t_title, t_body, end_start), parts)):
+            ins += ["-i", str(mp3)]
+            ms = int(t0 * 1000)
+            fl.append(f"[{i}]adelay={ms}|{ms}[a{i}]")
+        fl.append("[a0][a1][a2]amix=inputs=3:normalize=0:duration=longest[out]")
+        subprocess.run(["ffmpeg", "-loglevel", "error", "-y", *ins, "-filter_complex", ";".join(fl), "-map", "[out]",
+                        "-c:a", "aac", "-b:a", "160k", str(audio)], check=True)
+    out = render(a, lang, audio, words, total, label_end, end_start)
     print(f"::notice::Video {out.name} ready after {time.time() - T0:.0f}s ({total:.0f}s long)")
     meta(a, lang, out)
     print(out, f"{total:.1f}s", "audio" if audio else "silent")

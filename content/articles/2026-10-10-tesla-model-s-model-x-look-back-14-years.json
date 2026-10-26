@@ -44,6 +44,5 @@
       "text": "GAMECHANGERS"
     }
   },
-  "images": [
-  ]
+  "images": ["models/ms-4.jpg", "models/mx-1.jpg", "models/msc-2.jpg", "models/mxc-1.jpg"]
 }

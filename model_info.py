@@ -366,13 +366,13 @@ INFO = {
 "roadster": {"sources": [("TrendingTesla — Roadster unveiled", "/tesla-roadster-unveil-what-we-know/")], "en": {
   "intro": "Tesla's next-generation sports car, unveiled in October 2026 with cold-gas thrusters. Production is planned for 2028.",
   "specs": [("0–60 mph", "about 1 s (claimed)"), ("Top speed", "over 230 mph (claimed)"), ("Range", "about 300 miles (claimed)"),
-            ("Versions", "Performance · Thrust · Rocket"), ("Deposit", "$50,000 (Performance)")],
+            ("Versions", "Performance · Thrust · Rocket"), ("Seats", "2 (Rocket: 1); no 2+2"), ("Weight", "about 1,700 kg (expected)"), ("Deposit", "$50,000 (Performance)")],
   "watch": ["All figures are Tesla claims; no independent tests yet.", "The original 2017 Roadster was delayed for years."],
   "special": ["Cold-gas thrusters, developed with SpaceX."]},
  "nl": {
   "intro": "Tesla's nieuwe sportwagen, in oktober 2026 onthuld met koudgas-stuwraketjes. Productie is gepland voor 2028.",
   "specs": [("0–96 km/u", "ongeveer 1 s (claim)"), ("Topsnelheid", "ruim 370 km/u (claim)"), ("Bereik", "ongeveer 480 km (claim)"),
-            ("Versies", "Performance · Thrust · Rocket"), ("Aanbetaling", "$ 50.000 (Performance)")],
+            ("Versies", "Performance · Thrust · Rocket"), ("Zitplaatsen", "2 (Rocket: 1); geen 2+2"), ("Gewicht", "ongeveer 1.700 kg (verwacht)"), ("Aanbetaling", "$ 50.000 (Performance)")],
   "watch": ["Alle cijfers zijn claims van Tesla; nog geen onafhankelijke tests.", "De originele Roadster uit 2017 liep jarenlang vertraging op."],
   "special": ["Koudgas-stuwraketjes, ontwikkeld samen met SpaceX."]}},
 }
@@ -788,10 +788,10 @@ OVR = {
    ap=_t("Enhanced Autopilot (lane keeping, adaptive cruise, emergency braking); no FSD announced for customers", "Enhanced Autopilot (rijstrookassistent, adaptieve cruise control, noodremsysteem); geen FSD aangekondigd voor klanten"),
    pnew=_t("about $260,000 (Standard) · $290,000 (Long Range), reported", "ongeveer $ 260.000 (Standard) · $ 290.000 (Long Range), volgens berichten"),
    pused=_t("not applicable", "niet van toepassing")),
- "roadster": dict(built=_t("production planned for 2028", "productie gepland voor 2028"), body=_t("2-door sports car, 2+2 seats (2017 prototype)", "2-deurs sportwagen, 2+2 zitplaatsen (prototype 2017)"),
-   drive=_t("three motors, AWD (2017 announcement)", "drie motoren, AWD (aankondiging 2017)"), charge=NANN,
+ "roadster": dict(built=_t("production planned for 2028", "productie gepland voor 2028"), body=_t("2-door sports car with scissor doors and removable roof panels, 2 seats (no 2+2); Rocket version 1 seat", "2-deurs sportwagen met schaardeuren en uitneembare dakpanelen, 2 zitplaatsen (geen 2+2); Rocket-versie 1 zitplaats"),
+   drive=_t("two motors, rear-wheel drive, over 1 MW", "twee motoren, achterwielaandrijving, ruim 1 MW"), charge=NANN,
    btype=_t("4680-format high-power cells — Tesla (expected), 800–1,000 V", "hoogvermogencellen in 4680-formaat — Tesla (verwacht), 800–1.000 V"),
-   steer=_t("not confirmed for the production car", "niet bevestigd voor de productieauto"), ap=NANN, pused=_t("not applicable", "niet van toepassing")),
+   steer=_t("yoke, steer-by-wire", "stuurjuk, elektronische besturing (steer-by-wire)"), ap=NANN, pused=_t("not applicable", "niet van toepassing")),
 }
 
 def _m(en, nl=None):

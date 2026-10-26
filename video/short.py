@@ -262,6 +262,7 @@ PAL = {  # same colour sets as the site labels: (block bg, block text, big text,
     "yr": (RED, "#fff", YEL, RED), "bw": (BLUE, "#fff", "#fff", "#0b2f8f"),
     "wb": ("#fff", BLUE, "#3d7bff", "#fff"), "by": (BLUE, "#fff", YEL, "#0b2f8f"),
     "gy": ("#12a150", "#fff", YEL, "#0b6b34"),
+    "yk": (YEL, "#111", YEL, RED),
 }
 SIZES = {"a": [6.6, 10.5], "c": [8, 6.2], "n": [10, 5.8], "r": [7.4, 7.4]}  # % of width, as on the site
 
@@ -299,7 +300,7 @@ def label_overlay(a, lang):
             sub, txt = build.split2(txt)
         lines = [("bk", sub, True), ("yo", txt, True)] if st == "a" else [("yo", sub, True), ("bk", txt, True)]
     lines = [(c, x.upper(), nb) for c, x, nb in lines if x]
-    bg, fg, yc, yo_line = PAL["yr"] if st == "r" else PAL.get(site_palette(a["slug"]), PAL["yr"])
+    bg, fg, yc, yo_line = PAL.get(site_palette(a["slug"]), PAL["yr"])
     cq = W / 100
     left = 2.6 * cq
     avail = 0.85 * W  # the site leaves room for the reading-time badge on the right

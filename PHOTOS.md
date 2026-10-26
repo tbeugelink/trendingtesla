@@ -182,3 +182,5 @@ Articles with a "models" key automatically use real-life photos of that model. Y
 - optimus-car-door.jpg — Optimus fitting a door panel on a red Model Y on the assembly line (Optimus working in Tesla factories)
 - optimus-unboxing.jpg — Optimus Gen 3 standing in an opened delivery box in a home hallway (buying / delivery of Optimus)
 - optimus-mars.jpg — three Optimus Gen 3 robots walking across a red Mars landscape (Optimus / Starship Mars plans)
+- models/semi-6.jpg — aerial of rows of white Tesla Semis on a delivery lot (Semi production / deliveries)
+- models/semi-7.jpg — driver in a Tesla Semi cab on a highway at sunset, centre screens (Semi driving / Autopilot)

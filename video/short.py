@@ -53,6 +53,16 @@ def photos(a):
         p = build.STATIC / "img" / c.split("/img/", 1)[-1] if c.startswith("/img/") else None
         if p and p.exists() and "/v/" not in c and p not in out:
             out.append(p)
+    # short on photos? add the gallery of the car the article is about (never a new Roadster before its reveal)
+    for m in a.get("models", []):
+        if len(out) >= 5:
+            break
+        if m.startswith("roadster") and a.get("date", "") < "2026-10-15":
+            continue
+        for g in build.MODELS.get(m, {}).get("gallery", []):
+            q = build.STATIC / "img/models" / g
+            if q.exists() and g not in {o.name for o in out} and len(out) < 6:
+                out.append(q)
     return out or [build.STATIC / "img/topics/gigafactory.jpg"]
 
 
@@ -79,7 +89,8 @@ def tts_elevenlabs(text, out_mp3):
     req = urllib.request.Request(
         f"https://api.elevenlabs.io/v1/text-to-speech/{voice}/with-timestamps?output_format=mp3_44100_128",
         data=json.dumps({"text": text, "model_id": model,
-                         "voice_settings": {"stability": 0.45, "similarity_boost": 0.8, "style": 0.15}}).encode(),
+                         "voice_settings": {"stability": 0.45, "similarity_boost": 0.8, "style": 0.15,
+                                            "speed": float(os.environ.get("ELEVENLABS_SPEED", "1.08"))}}).encode(),
         headers={"xi-api-key": key, "Content-Type": "application/json"})
     with urllib.request.urlopen(req, timeout=300) as r:
         d = json.load(r)
@@ -173,6 +184,13 @@ def overlay(draw_fn):
     return im
 
 
+ZOOM, TR = 1.2, 0.4  # image headroom for zoom/pan, transition length in seconds
+
+
+def ease(x):
+    return x * x * (3 - 2 * x)
+
+
 def render(a, lang, audio, words, total):
     imgs = photos(a)
     shade = Image.new("L", (1, H))
@@ -180,12 +198,10 @@ def render(a, lang, audio, words, total):
         shade.putpixel((0, y), int(185 * max(0, (y - H * 0.5) / (H * 0.5)) ** 1.25 + 120 * max(0, (H * 0.16 - y) / (H * 0.16))))
     shade = shade.resize((W, H))
     pics = []
-    for p in imgs[:6]:
+    for p in imgs[:8]:  # scaled to cover the frame with room to zoom and pan
         im = Image.open(p).convert("RGB")
-        sc = H / im.height
-        im = im.resize((max(W + 2, int(im.width * sc)), H), Image.LANCZOS)
-        sh = shade.resize((im.width, H))  # shade only depends on y, so darken the whole strip once
-        pics.append(Image.composite(Image.new("RGB", im.size), im, sh))
+        sc = max(H * ZOOM / im.height, W * ZOOM / im.width)
+        pics.append(im.resize((int(im.width * sc) + 1, int(im.height * sc) + 1), Image.LANCZOS))
     fbrand, fcap = font(FX, 50), font(FB, LAY["caps"])
 
     def brand(d):
@@ -225,7 +241,11 @@ def render(a, lang, audio, words, total):
             caps[txt] = overlay(dr)
         return caps[txt]
 
-    scene_len = max(3.2, total / max(1, len(pics)))
+    # scenes of ~2.7 s (the first a bit longer for the label); photos repeat with a different framing
+    first = min(3.6, total / 2)
+    nsc = max(1, round((total - first) / 2.7))
+    rest_len = (total - first) / nsc
+    starts = [0.0] + [first + k * rest_len for k in range(nsc)]
     out = OUT / f"{a['slug']}-{lang}{'-short' if PORTRAIT else ''}.mp4"
     cmd = ["ffmpeg", "-loglevel", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-"]
     if audio:  # pad the voice with silence so it never ends before the picture
@@ -233,19 +253,60 @@ def render(a, lang, audio, words, total):
     cmd += ["-t", f"{total:.2f}", "-c:v", "libx264", "-pix_fmt", "yuv420p", "-preset", "veryfast", "-crf", "21",
             "-movflags", "+faststart", str(out)]
     proc = subprocess.Popen(cmd, stdin=subprocess.PIPE)
-    black = Image.new("RGB", (W, H))
+    black, white = Image.new("RGB", (W, H)), Image.new("RGB", (W, H), "#fff")
+    nsc = len(starts)
+
+    def shot(k, t):
+        """Frame of scene k at time t: Ken Burns zoom/pan, a different move per scene."""
+        im = pics[k % len(pics)]
+        rnd = k // len(pics)  # repeat round: pick another part of the photo
+        span = (starts[k + 1] if k + 1 < nsc else total) - starts[k]
+        p = ease(max(0.0, min(1.15, (t - starts[k]) / span)) / 1.15)
+        mv = (k + rnd * 2) % 5
+        fx = [0.5, 0.3, 0.7][rnd % 3]
+        if mv == 0:   z, cx, cy = 1.0 + 0.16 * p, fx, 0.5          # zoom in
+        elif mv == 1: z, cx, cy = 1.16 - 0.16 * p, fx, 0.45        # zoom out
+        elif mv == 2: z, cx, cy = 1.08, 0.2 + 0.6 * p, 0.5        # pan right
+        elif mv == 3: z, cx, cy = 1.08, 0.8 - 0.6 * p, 0.5        # pan left
+        else:         z, cx, cy = 1.04 + 0.12 * p, fx, 0.6 - 0.2 * p  # zoom in, drift up
+        cw, chh = W * ZOOM / z, H * ZOOM / z  # z=1: widest view, z=ZOOM: native pixels
+        cw, chh = min(cw, im.width), min(chh, im.height)
+        x0 = (im.width - cw) * cx
+        y0 = (im.height - chh) * cy
+        fr = im.resize((W, H), Image.BILINEAR, box=(x0, y0, x0 + cw, y0 + chh))
+        return fr
+
+    def picture(t):
+        k = max(i for i, s0 in enumerate(starts) if s0 <= t)
+        fr = shot(k, t)
+        d = t - starts[k]
+        if k > 0 and d < TR:  # transition from the previous scene
+            q, prev = ease(d / TR), shot(k - 1, t)
+            style = k % 3
+            if style == 0:    # crossfade
+                fr = Image.blend(prev, fr, q)
+            elif style == 1:  # push: new photo slides in, old one slides out
+                off = int(W * q)
+                c = Image.new("RGB", (W, H))
+                c.paste(prev, (-off if k % 2 else off, 0))
+                c.paste(fr, ((W - off) if k % 2 else (off - W), 0))
+                fr = c
+            else:             # zoom punch with a short flash
+                s2 = 1.10 - 0.10 * q
+                big = fr.resize((int(W * s2), int(H * s2)), Image.BILINEAR)
+                fr = big.crop(((big.width - W) // 2, (big.height - H) // 2, (big.width - W) // 2 + W, (big.height - H) // 2 + H))
+                fr = Image.blend(white, fr, min(1.0, 0.35 + 0.65 * q))
+        return Image.composite(black, fr, shade)
+
     n = int(total * FPS) + 1
     for fr in range(n):
         t = fr / FPS
-        i = min(len(pics) - 1, int(t / scene_len))
-        im, p = pics[i], min(1.0, (t - i * scene_len) / scene_len)
-        x0 = int((im.width - W) * (0.15 + 0.7 * (p if i % 2 == 0 else 1 - p)))
-        frame = im.crop((x0, 0, x0 + W, H))
+        frame = picture(t)
         if t < 0.25:
             frame = Image.blend(black, frame, t / 0.25)
         frame.paste(o_brand, (0, 0), o_brand)
         last = t > total - 2.6
-        if t < min(scene_len, 4.0):  # opening: the article label, like the thumbnail
+        if t < first:  # opening: the article label, like the thumbnail
             frame.paste(o_label, (0, 0), o_label)
         if last:
             frame.paste(o_end, (0, 0), o_end)

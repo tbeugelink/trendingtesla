@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 40
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           fetch-depth: 2
       - name: Install tools
@@ -46,14 +46,18 @@ jobs:
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
           ELEVENLABS_VOICE_ID: ${{ vars.ELEVENLABS_VOICE_ID }}
         run: |
+          if [ -z "$ELEVENLABS_API_KEY" ]; then echo "::error::Secret ELEVENLABS_API_KEY is empty or missing"; fi
+          if [ -z "$ELEVENLABS_VOICE_ID" ]; then echo "::error::Variable ELEVENLABS_VOICE_ID is empty or missing"; fi
+          fail=0
           for s in ${{ steps.find.outputs.slugs }}; do
             for l in ${{ steps.find.outputs.langs }}; do
-              python3 video/short.py "$s" "$l"
+              python3 video/short.py "$s" "$l" 2> err.txt || { fail=1; echo "::error::short.py $s $l failed: $(tail -c 600 err.txt | tr '\n' ' ')"; }
             done
           done
+          exit $fail
       - name: Upload videos
-        if: steps.find.outputs.slugs != ''
-        uses: actions/upload-artifact@v4
+        if: always() && steps.find.outputs.slugs != ''
+        uses: actions/upload-artifact@v5
         with:
           name: shorts-${{ github.run_number }}
           path: |

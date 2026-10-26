@@ -14,6 +14,7 @@ import os
 import re
 import subprocess
 import sys
+import urllib.error
 import urllib.request
 from pathlib import Path
 
@@ -188,7 +189,7 @@ def render(a, lang, audio, words, total):
     cmd = ["ffmpeg", "-loglevel", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-"]
     if audio:
         cmd += ["-i", str(audio), "-c:a", "aac", "-b:a", "160k", "-shortest"]
-    cmd += ["-c:v", "libx264", "-pix_fmt", "yuv420p", "-preset", "medium", "-crf", "20", "-movflags", "+faststart", str(out)]
+    cmd += ["-c:v", "libx264", "-pix_fmt", "yuv420p", "-preset", "veryfast", "-crf", "21", "-movflags", "+faststart", str(out)]
     proc = subprocess.Popen(cmd, stdin=subprocess.PIPE)
     n = int(total * FPS) + 1
     for fr in range(n):
@@ -246,6 +247,8 @@ def meta(a, lang, out):
 
 
 def main():
+    import time
+    T0 = time.time()
     args = [x for x in sys.argv[1:] if not x.startswith("--")]
     slug, lang = args[0], (args[1] if len(args) > 1 else "en")
     a = load(slug)
@@ -254,7 +257,13 @@ def main():
     audio = None
     if os.environ.get("ELEVENLABS_API_KEY") and os.environ.get("ELEVENLABS_VOICE_ID"):
         audio = OUT / f"{slug}-{lang}.mp3"
-        chars, s, e = tts_elevenlabs(spoken(text, lang), audio)
+        try:
+            chars, s, e = tts_elevenlabs(spoken(text, lang), audio)
+        except urllib.error.HTTPError as err:
+            body = err.read().decode("utf-8", "replace")[:300]
+            print(f"::error::ElevenLabs HTTP {err.code}: {body}")
+            raise SystemExit(1)
+        print(f"::notice::ElevenLabs ok for {slug}-{lang} after {time.time() - T0:.0f}s")
         words = words_timed(chars, s, e)
         total = duration(audio) + 0.6
     else:  # silent preview: spread the words over ~2.6 words per second
@@ -262,6 +271,7 @@ def main():
         words = [(w, i / 2.6, (i + 1) / 2.6) for i, w in enumerate(ws)]
         total = len(ws) / 2.6 + 1
     out = render(a, lang, audio, words, total)
+    print(f"::notice::Video {out.name} ready after {time.time() - T0:.0f}s ({total:.0f}s long)")
     meta(a, lang, out)
     print(out, f"{total:.1f}s", "audio" if audio else "silent")
 

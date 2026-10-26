@@ -1,1 +1,3 @@
 video/out/
+__pycache__/
+video/__pycache__/

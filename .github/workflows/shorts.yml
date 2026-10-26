@@ -5,7 +5,7 @@ name: Make YouTube Shorts
 on:
   push:
     branches: [main]
-    paths: ["content/articles/**.json"]
+    paths: ["content/articles/**.json", "video/queue.txt"]
   workflow_dispatch:
     inputs:
       slug:
@@ -37,8 +37,15 @@ jobs:
           else
             slugs=$(git diff --name-only --diff-filter=A HEAD~1 HEAD -- content/articles | while read f; do
               python3 -c "import json,sys; d=json.load(open('$f')); print(d['slug'] if d.get('short') else '')"; done | xargs)
+            langs=en
+            # video/queue.txt: first line "slug [langs]" requests a video on demand
+            if git diff --name-only HEAD~1 HEAD | grep -qx video/queue.txt; then
+              q=$(grep -v '^#' video/queue.txt | head -1)
+              slugs=$(echo "$q" | awk '{print $1}')
+              l=$(echo "$q" | cut -s -d' ' -f2-); [ -n "$l" ] && langs="$l"
+            fi
             echo "slugs=$slugs" >> "$GITHUB_OUTPUT"
-            echo "langs=en" >> "$GITHUB_OUTPUT"
+            echo "langs=$langs" >> "$GITHUB_OUTPUT"
           fi
       - name: Make videos
         if: steps.find.outputs.slugs != ''

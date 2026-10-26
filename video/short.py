@@ -162,19 +162,42 @@ def label(d, a, lang, y):
         outlined(d, 60, y, txt, fit(d, txt, FB, 112, mw), YEL, RED)
 
 
+def overlay(draw_fn):
+    """Pre-render an RGBA overlay once; pasting it per frame is far cheaper than drawing text."""
+    im = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    draw_fn(ImageDraw.Draw(im))
+    return im
+
+
 def render(a, lang, audio, words, total):
     imgs = photos(a)
-    pics = []
-    for p in imgs[:6]:
-        im = Image.open(p).convert("RGB")
-        sc = H * 1.08 / im.height
-        pics.append(im.resize((int(im.width * sc), int(H * 1.08)), Image.LANCZOS))
     shade = Image.new("L", (1, H))
     for y in range(H):
         shade.putpixel((0, y), int(185 * max(0, (y - H * 0.5) / (H * 0.5)) ** 1.25 + 120 * max(0, (H * 0.16 - y) / (H * 0.16))))
     shade = shade.resize((W, H))
-    black = Image.new("RGB", (W, H))
+    pics = []
+    for p in imgs[:6]:
+        im = Image.open(p).convert("RGB")
+        sc = H / im.height
+        im = im.resize((max(W + 2, int(im.width * sc)), H), Image.LANCZOS)
+        sh = shade.resize((im.width, H))  # shade only depends on y, so darken the whole strip once
+        pics.append(Image.composite(Image.new("RGB", im.size), im, sh))
     fbrand, fcap = font(FX, 50), font(FB, 74)
+
+    def brand(d):
+        d.text((60, 92), "Trending", font=fbrand, fill="#fff")
+        d.text((60 + d.textlength("Trending", font=fbrand), 92), "Tesla", font=fbrand, fill="#e8231c")
+
+    def ending(d):
+        fe = font(FB, 104)
+        w1, w2 = d.textlength("Trending", font=fe), d.textlength("Tesla", font=fe)
+        x = (W - w1 - w2) / 2
+        d.text((x, 760), "Trending", font=fe, fill="#fff")
+        d.text((x + w1, 760), "Tesla", font=fe, fill="#e8231c")
+        fs = font(FX, 58)
+        d.text(((W - d.textlength(SITE, font=fs)) / 2, 900), SITE, font=fs, fill=YEL)
+
+    o_brand, o_label, o_end = overlay(brand), overlay(lambda d: label(d, a, lang, 1080)), overlay(ending)
     # captions: chunks of max ~4 words, timed from the voice
     chunks, cur = [], []
     for w in words:
@@ -184,52 +207,58 @@ def render(a, lang, audio, words, total):
             cur = []
     if cur:
         chunks.append(cur)
+    caps = {}
+
+    def cap(txt):
+        if txt not in caps:
+            def dr(d):
+                y = 1460
+                for ln in wrap(d, txt, fcap, W - 140):
+                    w = d.textlength(ln, font=fcap)
+                    d.text(((W - w) / 2, y), ln, font=fcap, fill="#fff", stroke_width=7, stroke_fill="#000")
+                    y += 96
+            caps[txt] = overlay(dr)
+        return caps[txt]
+
     scene_len = max(3.2, total / max(1, len(pics)))
     out = OUT / f"{a['slug']}-{lang}.mp4"
     cmd = ["ffmpeg", "-loglevel", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-"]
-    if audio:
-        cmd += ["-i", str(audio), "-c:a", "aac", "-b:a", "160k", "-shortest"]
-    cmd += ["-c:v", "libx264", "-pix_fmt", "yuv420p", "-preset", "veryfast", "-crf", "21", "-movflags", "+faststart", str(out)]
+    if audio:  # pad the voice with silence so it never ends before the picture
+        cmd += ["-i", str(audio), "-af", "apad", "-c:a", "aac", "-b:a", "160k"]
+    cmd += ["-t", f"{total:.2f}", "-c:v", "libx264", "-pix_fmt", "yuv420p", "-preset", "veryfast", "-crf", "21",
+            "-movflags", "+faststart", str(out)]
     proc = subprocess.Popen(cmd, stdin=subprocess.PIPE)
+    black = Image.new("RGB", (W, H))
     n = int(total * FPS) + 1
     for fr in range(n):
         t = fr / FPS
         i = min(len(pics) - 1, int(t / scene_len))
-        im, p = pics[i], (t - i * scene_len) / scene_len
-        x0 = int((im.width - W) * (0.2 + 0.6 * (p if i % 2 == 0 else 1 - p)))
-        frame = im.crop((x0, int((im.height - H) / 2), x0 + W, int((im.height - H) / 2) + H))
-        z = 1 + 0.035 * p
-        cw, chh = int(W / z), int(H / z)
-        frame = frame.crop(((W - cw) // 2, (H - chh) // 2, (W - cw) // 2 + cw, (H - chh) // 2 + chh)).resize((W, H))
+        im, p = pics[i], min(1.0, (t - i * scene_len) / scene_len)
+        x0 = int((im.width - W) * (0.15 + 0.7 * (p if i % 2 == 0 else 1 - p)))
+        frame = im.crop((x0, 0, x0 + W, H))
         if t < 0.25:
             frame = Image.blend(black, frame, t / 0.25)
-        frame = Image.composite(black, frame, shade)
-        d = ImageDraw.Draw(frame)
-        d.text((60, 92), "Trending", font=fbrand, fill="#fff")
-        d.text((60 + d.textlength("Trending", font=fbrand), 92), "Tesla", font=fbrand, fill="#e8231c")
-        if t < min(scene_len, 4.0):  # opening: the article label, like the thumbnail
-            label(d, a, lang, 1080)
+        frame.paste(o_brand, (0, 0), o_brand)
         last = t > total - 2.6
+        if t < min(scene_len, 4.0):  # opening: the article label, like the thumbnail
+            frame.paste(o_label, (0, 0), o_label)
         if last:
-            fe = font(FB, 104)
-            w1, w2 = d.textlength("Trending", font=fe), d.textlength("Tesla", font=fe)
-            x = (W - w1 - w2) / 2
-            d.text((x, 760), "Trending", font=fe, fill="#fff")
-            d.text((x + w1, 760), "Tesla", font=fe, fill="#e8231c")
-            fs = font(FX, 58)
-            d.text(((W - d.textlength(SITE, font=fs)) / 2, 900), SITE, font=fs, fill=YEL)
+            frame.paste(o_end, (0, 0), o_end)
         ch = next((c for c in chunks if c[0][1] <= t <= c[-1][2] + 0.25), None)
         if ch and not last:
-            txt = " ".join(w[0] for w in ch)
-            y = 1460
-            for ln in wrap(d, txt, fcap, W - 140):
-                w = d.textlength(ln, font=fcap)
-                d.text(((W - w) / 2, y), ln, font=fcap, fill="#fff", stroke_width=7, stroke_fill="#000")
-                y += 96
-        d.rectangle([0, H - 12, int(W * t / total), H], fill="#e8231c")
-        proc.stdin.write(frame.tobytes())
-    proc.stdin.close()
-    proc.wait()
+            o = cap(" ".join(w[0] for w in ch))
+            frame.paste(o, (0, 0), o)
+        ImageDraw.Draw(frame).rectangle([0, H - 12, int(W * t / total), H], fill="#e8231c")
+        try:
+            proc.stdin.write(frame.tobytes())
+        except BrokenPipeError:
+            break
+    try:
+        proc.stdin.close()
+    except BrokenPipeError:
+        pass
+    if proc.wait() != 0:
+        raise SystemExit(f"ffmpeg failed with code {proc.returncode}")
     return out
 
 

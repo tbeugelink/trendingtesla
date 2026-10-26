@@ -196,3 +196,14 @@ Articles with a "models" key automatically use real-life photos of that model. Y
 - terafab-keynote.jpg — Musk on stage at the Terafab keynote in Austin, "TERAFAB · Tesla | xAI | SpaceX" screen (Terafab events)
 - robotaxi-vs-cybercab.jpg — silver new Model Y (Robotaxi) next to a gold Cybercab, Austin skyline (Robotaxi service vs Cybercab vehicle)
 - robotaxi-vs-cybercab-night.jpg — same pair (new Model Y Robotaxi + gold Cybercab) at dusk, purple sky over the Austin skyline
+
+## Added 27 October 2026 (Moon / Mars, Optimus, keynote)
+- moon-base-optimus-1.jpg — Moon base of white cylindrical habitats with scaffolding, gold/black Optimus robots working, Earth in the black sky (Moon base / Optimus in space)
+- moon-base-optimus-2.jpg — Optimus robots building an arched habitat frame on the Moon, carrying a beam, Earth above (Moon base construction)
+- starship-fleet-mars.jpg — five Starships flying in formation towards Mars, Milky Way (Starship to Mars)
+- mars-keynote-fleet.jpg — presenter on a dark stage, giant screen with five Starships landed on Mars at sunset, audience (SpaceX/Mars keynote)
+- mars-keynote-optimus.jpg — presenter on stage, screen with a landed Starship on Mars, Optimus carrying a crate, a rover (keynote: Optimus on Mars)
+- mars-keynote-rover.jpg — presenter on stage, screen with a landed Starship on Mars and a rover (keynote: Mars landing)
+- mars-keynote-optimus-door.jpg — presenter on stage, screen with Optimus waving from the door of a Starship on Mars (keynote: Optimus on Mars)
+- starship-optimus-door.jpg — close-up: Optimus waving in the open door of a shiny Starship on Mars, stairs (Optimus to Mars)
+- mars-keynote-planet.jpg — presenter on stage, giant screen with Mars and Earth in space, audience (keynote: Mars plans)

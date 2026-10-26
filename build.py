@@ -589,7 +589,7 @@ def assign_photos(arts):
         used = cat_use.setdefault(a["category"], {})
         photos.sort(key=lambda c: used.get(c, 0))
         # neighbours on the homepage (all articles) and on the category / model pages
-        groups = [a["category"]] + [MODELS[k].get("parent") or k for k in a.get("models", [])]
+        groups = [a["category"]] + a.get("also", []) + [MODELS[k].get("parent") or k for k in a.get("models", [])]
         local = [h for g in groups for h in cat_hist.get(g, [])[-3:]]
         recent_files = [h[0] for h in hist[-4:]] + [h[0] for h in local]
         recent_scenes = [h[1] for h in hist[-3:]] + [h[1] for h in local]
@@ -600,7 +600,15 @@ def assign_photos(arts):
             exp = [c for c in photos if c.split("/img/", 1)[-1].replace("topics/", "") in a["images"]
                    or c.split("/img/", 1)[-1] in a["images"]]
             if exp:
-                pick = next((c for c in exp if c not in recent_files), exp[0])
+                pick = next((c for c in exp if c not in recent_files), None)
+            if not pick:
+                # every listed photo was just used by a neighbour: borrow a fitting one from the model
+                # gallery / category instead of showing the same picture twice in a row
+                alt = [c for c in candidates({**a, "images": []}) if not c.startswith("/img/v/") and c not in recent_files
+                       and not (re.search(r"/rd-\d", c) and a.get("date", "") < "2026-10-15")]
+                alt.sort(key=lambda c: used.get(c, 0))
+                pick = next((c for c in alt if scene_of(c) not in recent_scenes), None) or (alt[0] if alt else None) \
+                    or (exp[0] if exp else None)
         for n in sorted({used.get(c, 0) for c in photos}):
             if pick:
                 break

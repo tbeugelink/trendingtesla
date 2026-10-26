@@ -34,7 +34,5 @@
       "text": "CHECK VOOR JE TEKENT"
     }
   },
-  "images": [
-    "delivery-handover.jpg"
-  ]
+  "images": ["delivery-handover.jpg", "app-faceid.jpg", "models/myj-5.jpg"]
 }

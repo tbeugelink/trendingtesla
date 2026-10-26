@@ -3,14 +3,42 @@
   "date": "2026-10-26",
   "time": "12:00",
   "category": "robotaxi",
-  "models": ["cybercab"],
-  "images": ["robotaxi-vs-cybercab.jpg", "robotaxi-my-2.jpg", "cybercab.jpg"],
-  "label": {"style": "c", "en": {"sub": "ROBOTAXI - CYBERCAB", "text": "WHAT'S THE DIFFERENCE?"}, "nl": {"sub": "ROBOTAXI - CYBERCAB", "text": "WAT IS HET VERSCHIL?"}},
+  "models": [
+    "cybercab"
+  ],
+  "images": [
+    "robotaxi-vs-cybercab.jpg",
+    "robotaxi-my-2.jpg",
+    "cybercab.jpg"
+  ],
+  "label": {
+    "style": "c",
+    "en": {
+      "sub": "ROBOTAXI - CYBERCAB",
+      "text": "WHAT'S THE DIFFERENCE?"
+    },
+    "nl": {
+      "sub": "ROBOTAXI - CYBERCAB",
+      "text": "WAT IS HET VERSCHIL?"
+    }
+  },
   "sources": [
-    {"title": "Not a Tesla App — Cybercab joins Tesla's Robotaxi fleet with cheaper fares", "url": "https://notateslaapp.com/news/4651/cybercab-joins-teslas-robotaxi-fleet-with-cheaper-fares"},
-    {"title": "Not a Tesla App — Tesla's active Robotaxi markets and their sizes", "url": "https://www.notateslaapp.com/news/4748/teslas-active-robotaxi-markets-and-their-sizes"},
-    {"title": "Wikipedia — Tesla Cybercab", "url": "https://en.wikipedia.org/wiki/Tesla_Cybercab"},
-    {"title": "Teslanorth — Tesla Q3 2026 call takeaways", "url": "https://teslanorth.com/2026/10/21/tesla-q3-2026-call-takeaways/"}
+    {
+      "title": "Not a Tesla App — Cybercab joins Tesla's Robotaxi fleet with cheaper fares",
+      "url": "https://notateslaapp.com/news/4651/cybercab-joins-teslas-robotaxi-fleet-with-cheaper-fares"
+    },
+    {
+      "title": "Not a Tesla App — Tesla's active Robotaxi markets and their sizes",
+      "url": "https://www.notateslaapp.com/news/4748/teslas-active-robotaxi-markets-and-their-sizes"
+    },
+    {
+      "title": "Wikipedia — Tesla Cybercab",
+      "url": "https://en.wikipedia.org/wiki/Tesla_Cybercab"
+    },
+    {
+      "title": "Teslanorth — Tesla Q3 2026 call takeaways",
+      "url": "https://teslanorth.com/2026/10/21/tesla-q3-2026-call-takeaways/"
+    }
   ],
   "en": {
     "title": "Robotaxi vs Cybercab: what is the difference between Tesla's ride service and its driverless car?",
@@ -21,5 +49,9 @@
     "title": "Robotaxi of Cybercab: wat is het verschil tussen Tesla's taxidienst en zijn zelfrijdende auto?",
     "description": "Robotaxi en Cybercab worden vaak door elkaar gebruikt, maar ze betekenen niet hetzelfde. Robotaxi is Tesla's taxidienst; de Cybercab is een van de auto's die daarin rijdt. Dit is het verschil, in gewone taal.",
     "body": "<p>Wie over Tesla's zelfrijdende plannen leest, ziet twee woorden die bijna door elkaar worden gebruikt: Robotaxi en Cybercab. Ze hebben met elkaar te maken, maar ze zijn niet hetzelfde. Kort gezegd: <strong>Robotaxi is de dienst, de Cybercab is een auto.</strong></p><h2>Robotaxi: de taxidienst</h2><p>Tesla Robotaxi is een ritdienst, vergelijkbaar met Uber of Waymo. Je boekt een rit in de aparte Tesla Robotaxi-app, een auto haalt je op en brengt je naar je bestemming binnen een vast gebied. Je hoeft zelf geen Tesla te hebben.</p><ul><li><strong>Gestart:</strong> juni 2025 in Austin, Texas.</li><li><strong>Waar nu:</strong> zonder bestuurder in Austin, Dallas, Houston, Miami, Orlando en Tampa. In de San Francisco Bay Area zit er nog een veiligheidsbestuurder achter het stuur.</li><li><strong>Welke auto's:</strong> vooral gewone Tesla Model Y's met Tesla's zelfrijdende software, en sinds september 2026 in Austin ook de Cybercab.</li></ul><p>Wie dus vertelt dat hij \"een Robotaxi nam\" in Dallas of Miami, zat vrijwel zeker in een Model Y.</p><h2>Cybercab: de speciaal gebouwde zelfrijdende auto</h2><p>De Cybercab is een auto, vanaf de grond ontworpen om zonder bestuurder te rijden. Hij werd in oktober 2024 voor het eerst getoond, ging in 2026 in productie in Giga Texas en vervoert sinds 4 september 2026 betalende passagiers in Austin.</p><ul><li><strong>Geen stuur, geen pedalen:</strong> hij kan alleen zelf rijden.</li><li><strong>Twee zitplaatsen</strong> en vlinderdeuren.</li><li><strong>Kleine, zuinige accu:</strong> 48 kWh aan Tesla's eigen 4680-cellen, met een voorlopige EPA-actieradius van ongeveer 472 km.</li><li><strong>Gebouwd voor lage kosten per kilometer:</strong> alleen snelladen met gelijkstroom, geen wisselstroom voor thuisladen, en Tesla test laadplekken met draadloze laadplaten.</li></ul><h2>De verschillen op een rij</h2><ul><li><strong>Wat het is:</strong> Robotaxi is een dienst en een app. Cybercab is een automodel.</li><li><strong>Auto's:</strong> Robotaxi gebruikt Model Y's en Cybercabs. De Cybercab is één specifieke auto.</li><li><strong>Bediening:</strong> een Robotaxi-Model Y heeft nog gewoon een stuur en pedalen. De Cybercab heeft geen van beide.</li><li><strong>Zitplaatsen:</strong> tot vijf in een Model Y, twee in een Cybercab.</li><li><strong>Waar:</strong> Robotaxi rijdt in zeven Amerikaanse regio's. De Cybercab vervoert tot nu toe alleen passagiers in Austin; tijdens de kwartaalcall over Q3 2026 zei Tesla dat Dallas de volgende is, gepland voor november.</li><li><strong>Prijs:</strong> volgens de eerste berichten zijn ritten in een Cybercab goedkoper dan in de gewone Robotaxi-dienst, maar Tesla heeft geen volledige tarieflijst gepubliceerd.</li></ul><h2>Kun je er een kopen?</h2><p>De Robotaxi-dienst koop je niet, die boek je. Tesla heeft het erover gehad dat eigenaren later hun eigen auto aan het netwerk kunnen toevoegen, maar dat kan nog niet.</p><p>De Cybercab gaat voorlopig naar Tesla's eigen vloot. Tijdens de Q3-call zei engineeringbaas Lars Moravy dat Tesla probeert de eerste Cybercabs eind 2026 aan particulieren te leveren, terwijl Elon Musk zei dat de meeste Cybercabs bij Tesla blijven en als ritdienst worden verkocht. De Model 3, Model Y en de nieuwe Roadster blijven volgens Tesla de auto's die mensen zelf willen hebben.</p><h2>Waarom het verschil ertoe doet</h2><p>De Model Y-robotaxi's laten zien dat Tesla gewone productieauto's met software kan omzetten in taxi's zonder bestuurder, waardoor een vloot snel kan groeien. De Cybercab is de volgende stap: een goedkopere, eenvoudigere auto die alleen voor dat werk is gebouwd. Die heeft Tesla nodig om onder zijn doel van $ 0,30 per mijl (ongeveer 19 eurocent per kilometer) aan rijkosten te komen. Of dat lukt, blijkt als de Cybercab buiten Austin gaat rijden en als toezichthouders bepalen hoe een auto zonder stuur in de regels past.</p>"
+  },
+  "short": {
+    "en": "Robotaxi or Cybercab? They are not the same thing. Robotaxi is Tesla's ride-hailing service. You book a ride in the Robotaxi app, and it now runs in seven US cities, mostly with a normal Model Y. The Cybercab is a car. It was built only to drive itself: no steering wheel, no pedals, two seats and butterfly doors. So far it carries passengers only in Austin, and Tesla says Dallas is next. In short: Robotaxi is the service, the Cybercab is one of the cars in it. More on trendingtesla.com.",
+    "nl": "Robotaxi of Cybercab? Dat is niet hetzelfde. Robotaxi is de taxidienst van Tesla. Je boekt een rit in de Robotaxi-app, en die rijdt nu in zeven Amerikaanse steden, meestal met een gewone Model Y. De Cybercab is een auto. Hij is alleen gebouwd om zelf te rijden: geen stuur, geen pedalen, twee stoelen en vlinderdeuren. Voorlopig vervoert hij alleen passagiers in Austin, en volgens Tesla is Dallas de volgende. Kort gezegd: Robotaxi is de dienst, de Cybercab is een van de auto's daarin. Meer op trendingtesla.com."
   }
 }

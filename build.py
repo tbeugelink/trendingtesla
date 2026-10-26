@@ -1359,7 +1359,6 @@ def build():
             body += feed(top, story(top, lang, "h2"), [a for a in arts if a is not top], lang, "news", L["latest"], no_left=True)
         else:
             body += section(L["latest"], f'<p class="empty">{L["empty"]}</p>', anchor="news")
-        body += section(L["why_h"], why(lang))
         write(url(lang), page(lang, "", NAME, L["tagline"], body))
         home_body = body
 

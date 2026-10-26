@@ -182,3 +182,4 @@ Articles with a "models" key automatically use real-life photos of that model. Y
 - optimus-touch.jpg — black robot hand and human hand touching fingertips, blue background (robots and humans, robot hand)
 - optimus-car-door.jpg — Optimus fitting a door panel on a red Model Y on the assembly line (Optimus working in Tesla factories)
 - optimus-unboxing.jpg — Optimus Gen 3 standing in an opened delivery box in a home hallway (buying / delivery of Optimus)
+- optimus-mars.jpg — three Optimus Gen 3 robots walking across a red Mars landscape (Optimus / Starship Mars plans)

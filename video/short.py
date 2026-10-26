@@ -158,23 +158,124 @@ def fit(d, t, f, s, maxw):
     return font(f, s)
 
 
-def label(d, a, lang, y):
+PAL = {  # same colour sets as the site labels: (block bg, block text, big text, big text outline)
+    "yr": (RED, "#fff", YEL, RED), "bw": (BLUE, "#fff", "#fff", "#000"), "kw": ("#111", "#fff", "#fff", BLUE),
+    "wb": ("#fff", "#111", "#3d7bff", "#fff"), "by": (BLUE, "#fff", YEL, "#111"),
+}
+SIZES = {"a": [6.6, 10.5], "c": [8, 6.2], "n": [10, 5.8], "r": [7.4, 7.4]}  # % of width, as on the site
+
+
+def site_palette(slug):
+    """Run the site's own photo and palette choice so the video label has the same colours."""
+    arts = build.load_articles()
+    build.ALL_ARTS[:] = arts
+    seen = {}
+    for x in sorted(arts, key=build.published):
+        build.PHOTO_ORDER[x["slug"]] = seen.get(x["category"], 0)
+        seen[x["category"]] = build.PHOTO_ORDER[x["slug"]] + 1
+        if x.get("models"):
+            gk = "g:" + (build.MODELS[x["models"][0]].get("parent") or x["models"][0])
+            build.GALLERY_ORDER[x["slug"]] = seen.get(gk, 0)
+            seen[gk] = build.GALLERY_ORDER[x["slug"]] + 1
+    build.assign_photos(arts)
+    build.assign_palettes(arts)
+    return build.PALETTE.get(slug, "yr")
+
+
+def label_overlay(a, lang):
+    """The photo label exactly as the site draws it: bottom-left, 2.6% margin, same type sizes and colours.
+    Returns the RGBA overlay and the y of its top edge."""
     lb = a.get("label") or {}
     t = lb.get(lang) or {}
     st = {"k": "a", "y": "a", "tag": "a", "w": "c", "s": "c"}.get(lb.get("style", "a"), lb.get("style", "a"))
-    sub, txt, mw = t.get("sub", ""), t.get("text", a[lang]["title"]), LAY["lw"]
-    if st == "r":
-        block(d, 60, y, txt, fit(d, txt, FB, 92, mw - 40), RED, "#fff")
-    elif st == "n":
-        y = outlined(d, 60, y, txt, fit(d, txt, FB, 190, mw), YEL, "#111")
-        block(d, 60, y + 10, sub, fit(d, sub, FB, 64, mw - 40), RED, "#fff")
-    elif st == "c":
-        y = outlined(d, 60, y, sub, fit(d, sub, FB, 100, mw), YEL, RED)
-        block(d, 60, y + 6, txt, fit(d, txt, FB, 76, mw - 40), RED, "#fff")
+    txt, sub = t.get("text") or a[lang]["title"], t.get("sub", "")
+    if st == "n":
+        lines = [("yo", txt, False), ("bk", sub, False)]
+    elif st == "r":
+        lines = [("bk", txt, True)]
     else:
-        if sub:
-            y = block(d, 60, y, sub, fit(d, sub, FB, 68, mw - 40), RED, "#fff") + 14
-        outlined(d, 60, y, txt, fit(d, txt, FB, 112, mw), YEL, RED)
+        if not sub:
+            sub, txt = build.split2(txt)
+        lines = [("bk", sub, True), ("yo", txt, True)] if st == "a" else [("yo", sub, True), ("bk", txt, True)]
+    lines = [(c, x.upper(), nb) for c, x, nb in lines if x]
+    bg, fg, yc, yo_line = PAL["yr"] if st == "r" else PAL.get(site_palette(a["slug"]), PAL["yr"])
+    cq = W / 100
+    left = 2.6 * cq
+    avail = 0.85 * W  # the site leaves room for the reading-time badge on the right
+    m = SIZES.get(st, SIZES["a"])
+
+    def parts(x, use_nb, cls):
+        """Split a leading number with its unit off, shown bigger (like the site's numbig)."""
+        mm = build.NUMRE.match(x) if use_nb else None
+        if mm and mm.group(2).strip():
+            tok = mm.group(1)
+            if sum(ch.isdigit() for ch in tok) >= 2 or re.search(r"[€$%+\-–−]|[A-Z]", tok):
+                return [(tok, 1.32 if cls == "yo" else 1.22), (mm.group(2), 1.0)]
+        return [(x, 1.0)]
+
+    def width(segs, f, cls):
+        w = sum(font(FB, max(8, int(f * k))).getlength(s) for s, k in segs)
+        return w + (0.48 * f if cls == "bk" else 0)
+
+    segs = [parts(x, nb, c) for c, x, nb in lines]
+    fs = []
+    for i, (c, x, nb) in enumerate(lines):
+        f = (m[1] if len(lines) == 1 else m[i]) * cq
+        for _ in range(3):
+            w = width(segs[i], f, c)
+            if w > avail:
+                f *= avail / w * 0.995
+        fs.append(f)
+    if len(fs) == 2:
+        if st == "a":
+            w0, w1 = width(segs[0], fs[0], "bk"), width(segs[1], fs[1], "yo")
+            if w1 > w0 * 1.04:
+                g = max(fs[1] * w0 / w1, fs[0] * 1.18)
+                fs[1] = min(fs[1], g)
+            fs[0] = min(fs[0], fs[1] * 0.85)
+        if st == "c":
+            fs[1] = min(fs[1], fs[0] * 0.9)
+        if st == "n":
+            fs[1] = min(fs[1], fs[0] * 0.62)
+    # line boxes (CSS line-height 1 with Inter: baseline at 0.864em, 0.136em below)
+    boxes = []
+    for i, (c, x, nb) in enumerate(lines):
+        f = fs[i]
+        up = max(0.864 * f * k for _, k in segs[i] + [("", 1.0)])
+        dn = max(0.136 * f * k for _, k in segs[i] + [("", 1.0)])
+        if c == "bk":
+            up, dn = up + 0.13 * f, dn + 0.12 * f
+        gap = 0.1 * f if i else 0
+        boxes.append((gap, up, dn))
+    height = sum(g + u + d for g, u, d in boxes)
+    y = H - 2.6 * cq - height
+    top = y
+    im = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    sh = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    d, ds = ImageDraw.Draw(im), ImageDraw.Draw(sh)
+    for i, (c, x, nb) in enumerate(lines):
+        g, up, dn = boxes[i]
+        y += g
+        f, base = fs[i], y + up
+        if c == "bk":
+            w = width(segs[i], f, c)
+            ds.rectangle([left, y + 0.4 * cq, left + w, y + up + dn + 0.4 * cq], fill=(0, 0, 0, 90))
+            d.rectangle([left, y, left + w, y + up + dn], fill=bg)
+            xx = left + 0.24 * f
+        else:
+            xx = left
+        for sgm, k in segs[i]:
+            fo = font(FB, max(8, int(f * k)))
+            if c == "bk":
+                d.text((xx, base), sgm, font=fo, fill=fg, anchor="ls")
+            else:
+                ds.text((xx, base + 0.5 * cq), sgm, font=fo, fill=(0, 0, 0, 110), anchor="ls")
+                d.text((xx, base), sgm, font=fo, fill=yc, anchor="ls", stroke_width=max(2, round(0.2 * cq)), stroke_fill=yo_line)
+            xx += fo.getlength(sgm)
+        y += up + dn
+    sh = sh.filter(ImageFilter.GaussianBlur(cq * 0.6))
+    sh.alpha_composite(im)
+    return sh, top
 
 
 def overlay(draw_fn):
@@ -184,7 +285,7 @@ def overlay(draw_fn):
     return im
 
 
-ZOOM, TR = 1.2, 0.4  # image headroom for zoom/pan, transition length in seconds
+ZOOM, TR, SCENE = 1.35, 1.0, 5.0  # image headroom for zoom/pan, crossfade length, seconds per photo
 
 
 def ease(x):
@@ -217,7 +318,8 @@ def render(a, lang, audio, words, total):
         fs = font(FX, 58)
         d.text(((W - d.textlength(SITE, font=fs)) / 2, LAY["end"] + 140), SITE, font=fs, fill=YEL)
 
-    o_brand, o_label, o_end = overlay(brand), overlay(lambda d: label(d, a, lang, LAY["label"])), overlay(ending)
+    o_brand, o_end = overlay(brand), overlay(ending)
+    o_label, label_top = label_overlay(a, lang)
     # captions: chunks of max ~4 words, timed from the voice
     chunks, cur = [], []
     for w in words:
@@ -229,23 +331,25 @@ def render(a, lang, audio, words, total):
         chunks.append(cur)
     caps = {}
 
-    def cap(txt):
-        if txt not in caps:
+    def cap(txt, above=None):
+        """Caption overlay; while the label shows, captions sit just above it."""
+        key = (txt, above)
+        if key not in caps:
             def dr(d):
                 lines = wrap(d, txt, fcap, W - 140 if PORTRAIT else W - 360)
-                y = LAY["cap"] if PORTRAIT else H - 70 - len(lines) * LAY["capl"]
+                bottom = above if above is not None else (LAY["cap"] + len(lines) * LAY["capl"] if PORTRAIT else H - 70)
+                y = bottom - len(lines) * LAY["capl"]
                 for ln in lines:
                     w = d.textlength(ln, font=fcap)
                     d.text(((W - w) / 2, y), ln, font=fcap, fill="#fff", stroke_width=7, stroke_fill="#000")
                     y += LAY["capl"]
-            caps[txt] = overlay(dr)
-        return caps[txt]
+            caps[key] = overlay(dr)
+        return caps[key]
 
-    # scenes of ~3 s (the first a bit longer for the label); photos repeat with a different framing
-    first = min(3.6, total / 2)
-    nsc = max(1, round((total - first) / 3.0))
-    rest_len = (total - first) / nsc
-    starts = [0.0] + [first + k * rest_len for k in range(nsc)]
+    # one photo per ~5 s, each with a calm but clear move, 1 s crossfade into the next
+    nsc = max(1, round(total / SCENE))
+    first = total / nsc
+    starts = [k * first for k in range(nsc)]
     out = OUT / f"{a['slug']}-{lang}{'-short' if PORTRAIT else ''}.mp4"
     cmd = ["ffmpeg", "-loglevel", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-"]
     if audio:  # pad the voice with silence so it never ends before the picture
@@ -257,45 +361,24 @@ def render(a, lang, audio, words, total):
     nsc = len(starts)
 
     def shot(k, t):
-        """Frame of scene k at time t: Ken Burns zoom/pan, a different move per scene."""
+        """Scene k at time t: alternately a slow deep zoom-in and a camera move from left to right."""
         im = pics[k % len(pics)]
-        rnd = k // len(pics)  # repeat round: pick another part of the photo
-        span = (starts[k + 1] if k + 1 < nsc else total) - starts[k]
-        p = ease(max(0.0, min(1.15, (t - starts[k]) / span)) / 1.15)
-        mv = (k + rnd * 2) % 5
-        fx = [0.5, 0.3, 0.7][rnd % 3]
-        if mv == 0:   z, cx, cy = 1.0 + 0.16 * p, fx, 0.5          # zoom in
-        elif mv == 1: z, cx, cy = 1.16 - 0.16 * p, fx, 0.45        # zoom out
-        elif mv == 2: z, cx, cy = 1.08, 0.2 + 0.6 * p, 0.5        # pan right
-        elif mv == 3: z, cx, cy = 1.08, 0.8 - 0.6 * p, 0.5        # pan left
-        else:         z, cx, cy = 1.04 + 0.12 * p, fx, 0.6 - 0.2 * p  # zoom in, drift up
-        cw, chh = W * ZOOM / z, H * ZOOM / z  # z=1: widest view, z=ZOOM: native pixels
-        cw, chh = min(cw, im.width), min(chh, im.height)
-        x0 = (im.width - cw) * cx
-        y0 = (im.height - chh) * cy
-        fr = im.resize((W, H), Image.BILINEAR, box=(x0, y0, x0 + cw, y0 + chh))
-        return fr
+        rnd = k // len(pics)  # repeat round: frame another part of the photo
+        span = (starts[k + 1] if k + 1 < nsc else total) - starts[k] + TR  # keeps moving through the fade
+        p = ease(max(0.0, min(1.0, (t - starts[k]) / span)))
+        if (k + rnd) % 2 == 0:
+            z, cx, cy = 1.0 + 0.32 * p, [0.5, 0.35, 0.65][rnd % 3], 0.45   # zoom in
+        else:
+            z, cx, cy = 1.3, p, 0.5                                          # pan left -> right
+        cw, chh = min(W * ZOOM / z, im.width), min(H * ZOOM / z, im.height)  # z=ZOOM: native pixels
+        x0, y0 = (im.width - cw) * cx, (im.height - chh) * cy
+        return im.resize((W, H), Image.BILINEAR, box=(x0, y0, x0 + cw, y0 + chh))
 
     def picture(t):
         k = max(i for i, s0 in enumerate(starts) if s0 <= t)
         fr = shot(k, t)
-        d = t - starts[k]
-        if k > 0 and d < TR:  # transition from the previous scene
-            q, prev = ease(d / TR), shot(k - 1, t)
-            style = k % 3
-            if style == 0:    # crossfade
-                fr = Image.blend(prev, fr, q)
-            elif style == 1:  # push: new photo slides in, old one slides out
-                off = int(W * q)
-                c = Image.new("RGB", (W, H))
-                c.paste(prev, (-off if k % 2 else off, 0))
-                c.paste(fr, ((W - off) if k % 2 else (off - W), 0))
-                fr = c
-            else:             # zoom punch with a short flash
-                s2 = 1.10 - 0.10 * q
-                big = fr.resize((int(W * s2), int(H * s2)), Image.BILINEAR)
-                fr = big.crop(((big.width - W) // 2, (big.height - H) // 2, (big.width - W) // 2 + W, (big.height - H) // 2 + H))
-                fr = Image.blend(white, fr, min(1.0, 0.35 + 0.65 * q))
+        if k > 0 and t - starts[k] < TR:  # crossfade from the previous photo
+            fr = Image.blend(shot(k - 1, t), fr, ease((t - starts[k]) / TR))
         return Image.composite(black, fr, shade)
 
     n = int(total * FPS) + 1
@@ -310,7 +393,7 @@ def render(a, lang, audio, words, total):
             frame.paste(o_end, (0, 0), o_end)
         ch = next((c for c in chunks if c[0][1] <= t <= c[-1][2] + 0.25), None)
         if ch and not last:
-            o = cap(" ".join(w[0] for w in ch))
+            o = cap(" ".join(w[0] for w in ch), int(label_top - 0.02 * W) if t < first else None)
             frame.paste(o, (0, 0), o)
         ImageDraw.Draw(frame).rectangle([0, H - 12, int(W * t / total), H], fill="#e8231c")
         try:

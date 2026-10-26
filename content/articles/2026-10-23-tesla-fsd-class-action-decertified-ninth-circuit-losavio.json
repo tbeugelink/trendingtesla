@@ -40,5 +40,8 @@
       "sub": "TESLA WINT",
       "text": "GEEN MASSACLAIM FSD"
     }
-  }
+  },
+  "also": [
+    "fsd"
+  ]
 }

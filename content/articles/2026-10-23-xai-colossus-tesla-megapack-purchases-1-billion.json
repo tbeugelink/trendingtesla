@@ -43,5 +43,8 @@
       "sub": "MEGAPACKS VOOR XAI",
       "text": "~$1 MLD"
     }
-  }
+  },
+  "also": [
+    "energy"
+  ]
 }

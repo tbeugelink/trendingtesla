@@ -39,5 +39,8 @@
       "sub": "RECORDTEMPO IN",
       "text": "TESLA-FABRIEKEN"
     }
-  }
+  },
+  "also": [
+    "optimus"
+  ]
 }

@@ -43,5 +43,8 @@
     "nl": {
       "text": "GEEN MARS VOOR OPTIMUS!"
     }
-  }
+  },
+  "also": [
+    "optimus"
+  ]
 }

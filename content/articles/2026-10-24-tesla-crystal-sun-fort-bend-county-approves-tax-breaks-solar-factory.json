@@ -42,5 +42,8 @@
       "sub": "4-0 VOOR KORTING",
       "text": "ZONNEFABRIEK!"
     }
-  }
+  },
+  "also": [
+    "factories"
+  ]
 }

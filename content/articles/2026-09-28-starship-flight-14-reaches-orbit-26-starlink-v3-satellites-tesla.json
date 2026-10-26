@@ -42,5 +42,8 @@
       "sub": "STARSHIP",
       "text": "IN BAAN OM DE AARDE!"
     }
-  }
+  },
+  "also": [
+    "starlink"
+  ]
 }

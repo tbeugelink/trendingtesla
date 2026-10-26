@@ -48,5 +48,8 @@
       "sub": "VAN MODEL S",
       "text": "NAAR OPTIMUS"
     }
-  }
+  },
+  "also": [
+    "factories"
+  ]
 }

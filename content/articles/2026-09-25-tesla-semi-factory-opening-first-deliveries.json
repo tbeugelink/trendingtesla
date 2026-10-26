@@ -45,5 +45,8 @@
       "sub": "TESLA SEMI",
       "text": "LEVERINGEN GESTART!"
     }
-  }
+  },
+  "also": [
+    "models"
+  ]
 }

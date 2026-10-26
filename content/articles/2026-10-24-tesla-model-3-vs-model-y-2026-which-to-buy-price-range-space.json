@@ -47,5 +47,8 @@
       "sub": "MODEL 3 OF Y",
       "text": "WELKE MOET JE KOPEN?"
     }
-  }
+  },
+  "also": [
+    "models"
+  ]
 }

@@ -40,5 +40,8 @@
   },
   "images": [
     "giga-newyork.jpg"
+  ],
+  "also": [
+    "energy"
   ]
 }

@@ -46,5 +46,8 @@
       "sub": "CYBERTRUCK +",
       "text": "POWERWALL 3"
     }
-  }
+  },
+  "also": [
+    "models"
+  ]
 }

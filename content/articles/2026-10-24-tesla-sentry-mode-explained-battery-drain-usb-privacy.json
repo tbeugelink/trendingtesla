@@ -36,5 +36,8 @@
   },
   "images": [
     "sentry-mode.jpg"
+  ],
+  "also": [
+    "guides"
   ]
 }

@@ -46,5 +46,8 @@
       "sub": "NOOD: WEGRIJDEN",
       "text": "MET KABEL ERIN!"
     }
-  }
+  },
+  "also": [
+    "charging"
+  ]
 }

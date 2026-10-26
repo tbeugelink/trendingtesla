@@ -46,5 +46,8 @@
       "sub": "ZONNEFABRIEK?",
       "text": "$10,1 MLD"
     }
-  }
+  },
+  "also": [
+    "factories"
+  ]
 }

@@ -46,5 +46,8 @@
       "sub": "OCCASION S OF X",
       "text": "LET OP ZWAKKE PLEKKEN"
     }
-  }
+  },
+  "also": [
+    "models"
+  ]
 }

@@ -37,5 +37,8 @@
       "sub": "FSD WORDT TESLA",
       "text": "ASSISTED DRIVING"
     }
-  }
+  },
+  "also": [
+    "fsd"
+  ]
 }

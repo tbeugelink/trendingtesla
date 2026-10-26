@@ -37,5 +37,8 @@
       "sub": "HEY GROK +",
       "text": "AUTOMATISCH UPDATEN"
     }
-  }
+  },
+  "also": [
+    "xai"
+  ]
 }

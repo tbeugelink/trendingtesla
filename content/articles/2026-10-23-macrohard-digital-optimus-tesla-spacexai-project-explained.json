@@ -45,5 +45,8 @@
   "images": [
     "ai-agent-desk.jpg",
     "ai-agent-screen.jpg"
+  ],
+  "also": [
+    "optimus"
   ]
 }

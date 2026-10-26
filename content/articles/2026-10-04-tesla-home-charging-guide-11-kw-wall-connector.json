@@ -40,5 +40,8 @@
       "sub": "THUISLADEN",
       "text": "11 KW IS GENOEG"
     }
-  }
+  },
+  "also": [
+    "guides"
+  ]
 }

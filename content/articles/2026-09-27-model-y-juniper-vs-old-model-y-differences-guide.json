@@ -38,5 +38,8 @@
       "sub": "MODEL Y JUNIPER",
       "text": "WAT IS ER ANDERS?"
     }
-  }
+  },
+  "also": [
+    "models"
+  ]
 }

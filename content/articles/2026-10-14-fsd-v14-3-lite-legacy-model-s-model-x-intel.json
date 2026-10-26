@@ -40,5 +40,8 @@
       "sub": "OUDE MODEL S/X",
       "text": "KRIJGT FSD V14 LITE!"
     }
-  }
+  },
+  "also": [
+    "fsd"
+  ]
 }

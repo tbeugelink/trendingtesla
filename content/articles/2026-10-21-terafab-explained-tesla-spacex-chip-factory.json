@@ -36,5 +36,8 @@
   },
   "images": [
     "chip-fab.jpg"
+  ],
+  "also": [
+    "factories"
   ]
 }

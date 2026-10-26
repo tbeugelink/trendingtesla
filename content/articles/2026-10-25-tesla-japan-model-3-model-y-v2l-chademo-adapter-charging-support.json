@@ -3,13 +3,35 @@
   "date": "2026-10-25",
   "time": "06:50",
   "category": "models",
-  "models": ["model-3", "model-y"],
-  "sources": [
-    {"title": "PR TIMES (Tesla Japan press release) — New Model 3, Model Y and Model Y L", "url": "https://prtimes.jp/main/html/rd/p/000000077.000038481.html"},
-    {"title": "Impress Watch — Tesla's Japanese Model 3 and Model Y can now power home appliances", "url": "https://www.watch.impress.co.jp/docs/news/2150717.html"},
-    {"title": "Tesla North — Tesla Japan's Model 3 and Model Y get V2L, plus charging perks", "url": "https://teslanorth.com/2026/10/22/tesla-japan-model-3-model-y-v2l/"}
+  "models": [
+    "model-3",
+    "model-y"
   ],
-  "label": {"style": "c", "en": {"sub": "JAPAN: MODEL 3/Y", "text": "GET V2L + CHADEMO"}, "nl": {"sub": "JAPAN: MODEL 3/Y", "text": "MET V2L + CHADEMO"}},
+  "sources": [
+    {
+      "title": "PR TIMES (Tesla Japan press release) — New Model 3, Model Y and Model Y L",
+      "url": "https://prtimes.jp/main/html/rd/p/000000077.000038481.html"
+    },
+    {
+      "title": "Impress Watch — Tesla's Japanese Model 3 and Model Y can now power home appliances",
+      "url": "https://www.watch.impress.co.jp/docs/news/2150717.html"
+    },
+    {
+      "title": "Tesla North — Tesla Japan's Model 3 and Model Y get V2L, plus charging perks",
+      "url": "https://teslanorth.com/2026/10/22/tesla-japan-model-3-model-y-v2l/"
+    }
+  ],
+  "label": {
+    "style": "c",
+    "en": {
+      "sub": "JAPAN: MODEL 3/Y",
+      "text": "GET V2L + CHADEMO"
+    },
+    "nl": {
+      "sub": "JAPAN: MODEL 3/Y",
+      "text": "MET V2L + CHADEMO"
+    }
+  },
   "en": {
     "title": "Tesla's new Model 3 and Model Y in Japan get vehicle-to-load and a CHAdeMO adapter for 14,000 fast chargers",
     "description": "Tesla Japan has launched updated Model 3 and Model Y cars that can power appliances, plus a CHAdeMO adapter that unlocks about 14,000 extra fast chargers. A discount worth up to ¥264,000 goes to the first 5,000 buyers.",
@@ -19,5 +41,8 @@
     "title": "Nieuwe Tesla Model 3 en Model Y in Japan kunnen stroom leveren en krijgen een CHAdeMO-adapter voor 14.000 snelladers",
     "description": "Tesla Japan brengt een vernieuwde Model 3 en Model Y uit die huishoudelijke apparaten van stroom kunnen voorzien. Een CHAdeMO-adapter geeft toegang tot zo'n 14.000 extra snelladers, en de eerste 5.000 kopers krijgen tot ¥264.000 korting.",
     "body": "<p>Tesla heeft de Model 3 en Model Y in Japan vernieuwd, en het opvallendste nieuws gaat over stroom: wat erin gaat én wat eruit kan. In een persbericht van 23 oktober meldt Tesla Japan dat beide modellen nu <strong>vehicle-to-load (V2L)</strong> ondersteunen, waarmee de accu gewone elektrische apparaten kan voeden. Daarnaast komt er een <strong>CHAdeMO-adapter</strong> die Tesla-rijders toegang geeft tot ongeveer 14.000 openbare snelladers. En om de verkoop een duw te geven, krijgen de eerste 5.000 kopers een flinke korting.</p><h2>Wat er verandert</h2><ul><li><strong>Model 3:</strong> V2L, een middenscherm van 16 inch, een zwarte hemelbekleding, optioneel stoelen in Zen Grey en optionele 19-inch Dark Nova-velgen.</li><li><strong>Model Y:</strong> V2L.</li><li><strong>Model Y L:</strong> ook de zespersoonsversie werkt met de nieuwe stroomadapter.</li></ul><p>Het grotere scherm kregen de Model 3's in de VS, Puerto Rico en Mexico begin oktober al, en in China een dag eerder. Stroom leveren vanuit de auto is voor deze modellen in Japan wel nieuw.</p><h2>Zo werkt V2L</h2><p>Voor V2L is een losse adapter nodig die in de laadpoort gaat en stopcontacten biedt. Tesla wil die in <strong>januari 2027 verkopen voor ¥15.000</strong>. Hij werkt alleen met de nieuwe Model 3, Model Y en Model Y L, niet met oudere exemplaren. Hoeveel vermogen de adapter maximaal levert, heeft Tesla niet bekendgemaakt. Dat is belangrijk voor zwaardere apparaten zoals een kachel of kookplaat.</p><p>Tesla rekent zelf met een stroomstoring: een volle Model Y L zou genoeg energie bevatten voor zo'n acht dagen huishoudelijk verbruik, uitgaande van ongeveer 10 kWh per dag, of voor ruim 4.000 keer een smartphone opladen. Omzettingsverliezen zijn daarbij niet meegerekend, dus in de praktijk ligt het lager. In een land met regelmatig aardbevingen en tyfoons is noodstroom een argument waar Japanse merken al jaren mee adverteren.</p><h2>De CHAdeMO-adapter is misschien nog belangrijker</h2><p>Japan laadt snel via CHAdeMO, de standaard van de Japanse autofabrikanten. Tesla heeft daar volgens eigen opgave <strong>768 Superchargers op 156 locaties</strong>. De nieuwe adapter voegt daar ongeveer <strong>14.000 CHAdeMO-laders</strong> aan toe, bij gemakswinkels, langs de weg en op snelwegparkeerplaatsen. Hij komt in januari 2027 uit en kost <strong>¥95.900</strong>. Hoe snel je ermee laadt, zegt Tesla niet. Het vermogen van Japanse CHAdeMO-laders loopt sterk uiteen, dus vaak zal het trager gaan dan bij een Supercharger.</p><h2>Prijzen en de actie voor 5.000 auto's</h2><p>Tot en met 31 december loopt een 'laadsteunprogramma': de eerste 1.500 kopers van een nieuwe Model 3 krijgen tot <strong>¥264.000</strong> korting, de eerste 3.500 kopers van een nieuwe Model Y <strong>¥88.000</strong>. De Model Y L doet niet mee. Na die korting begint de Model 3 bij ¥5.049.000 en de Model Y bij ¥5.499.000. Met de Japanse landelijke subsidie voor schone voertuigen komt Tesla uit op effectieve vanafprijzen van ¥3.779.000 en ¥4.229.000.</p><p>De voorwaarden zijn streng. Alleen een bestelling plaatsen is niet genoeg: je moet een betaalmethode hebben gekozen en een bevestigde leverdatum hebben, en wie financiert, moet eerst door de kredietcheck. Wie een termijn voor papieren of betaling mist, verliest zijn plek, en per model stopt de actie zodra het quotum op is. Tesla mag het programma bovendien zonder aankondiging wijzigen of beëindigen.</p><h2>Waarom dit ertoe doet</h2><p>Japan is voor Tesla altijd een lastige markt geweest: Japanse merken domineren en de laadstandaard wijkt af van de rest van Tesla's wereld. Toch groeit Tesla er, met dit jaar recordregistraties in een maand en het doel om FSD (Supervised) nog vóór eind 2026 in Japan te lanceren. Dat Tesla's straks kunnen laden bij de laders die Japanners dagelijks tegenkomen, haalt een van de meest praktische bezwaren tegen de aanschaf weg.</p><h2>Waar je op moet letten</h2><ul><li>Of Tesla vóór de lancering in januari het vermogen van de V2L- en CHAdeMO-adapter bekendmaakt.</li><li>Hoe snel de 1.500 kortingsplekken voor de Model 3 op zijn: een goede graadmeter voor de vraag.</li><li>Of V2L, dat Tesla ook in landen als Australië en Zuid-Korea invoert, ook naar Model 3- en Model Y-kopers in Europa en de VS komt.</li><li>De voortgang van de FSD-goedkeuring in Japan.</li></ul>"
-  }
+  },
+  "also": [
+    "charging"
+  ]
 }

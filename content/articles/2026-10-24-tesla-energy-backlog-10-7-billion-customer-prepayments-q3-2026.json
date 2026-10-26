@@ -42,5 +42,8 @@
       "sub": "ORDERBOEK ENERGIE",
       "text": "$10,7 MLD"
     }
-  }
+  },
+  "also": [
+    "energy"
+  ]
 }

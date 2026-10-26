@@ -39,5 +39,8 @@
       "sub": "MEGAPACK 3",
       "text": "PRODUCTIE GESTART!"
     }
-  }
+  },
+  "also": [
+    "energy"
+  ]
 }

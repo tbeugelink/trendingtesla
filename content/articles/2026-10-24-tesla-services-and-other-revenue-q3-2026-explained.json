@@ -42,5 +42,8 @@
       "sub": "TESLA'S STILLE",
       "text": "GROEIMOTOR"
     }
-  }
+  },
+  "also": [
+    "charging"
+  ]
 }

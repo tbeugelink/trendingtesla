@@ -259,10 +259,10 @@ def fit(d, t, f, s, maxw):
 
 
 PAL = {  # same colour sets as the site labels: (block bg, block text, big text, big text outline); no black
-    "yr": (RED, "#fff", YEL, RED), "bw": (BLUE, "#fff", "#fff", "#0b2f8f"),
-    "wb": ("#fff", BLUE, "#3d7bff", "#fff"), "by": (BLUE, "#fff", YEL, "#0b2f8f"),
-    "gy": ("#12a150", "#fff", YEL, "#0b6b34"),
-    "yk": (YEL, "#111", YEL, RED),
+    "yr": (RED, "#fff", YEL, "#2b2b2b"), "bw": (BLUE, "#fff", "#fff", "#0b2f8f"),
+    "wb": ("#fff", BLUE, "#3d7bff", "#fff"), "by": (BLUE, "#fff", YEL, "#2b2b2b"),
+    "gy": ("#12a150", "#fff", YEL, "#2b2b2b"),
+    "yk": (YEL, "#111", YEL, "#2b2b2b"),
 }
 SIZES = {"a": [6.6, 10.5], "c": [8, 6.2], "n": [10, 5.8], "r": [7.4, 7.4]}  # % of width, as on the site
 

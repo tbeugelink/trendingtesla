@@ -186,7 +186,7 @@ def spoken(text, lang):
 
 def tts_elevenlabs(text, out_mp3):
     key, voice = os.environ["ELEVENLABS_API_KEY"], os.environ["ELEVENLABS_VOICE_ID"]
-    if LANG[0] == "nl" and os.environ.get("ELEVENLABS_VOICE_ID_NL") and os.environ.get("USE_NL_VOICE") == "1":
+    if LANG[0] == "nl" and os.environ.get("ELEVENLABS_VOICE_ID_NL"):  # own Dutch voice, if set
         voice = os.environ["ELEVENLABS_VOICE_ID_NL"]
     model = os.environ.get("ELEVENLABS_MODEL", "eleven_multilingual_v2")
     req = urllib.request.Request(

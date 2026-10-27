@@ -38,7 +38,7 @@ SAY_NL = None
 def say_fix(tok, lang):
     """Respell a Dutch word so the English voice pronounces it naturally (video/say_nl.json)."""
     global SAY_NL
-    if lang != "nl":
+    if lang != "nl" or os.environ.get("ELEVENLABS_VOICE_ID_NL"):  # a native Dutch voice needs no respelling
         return tok
     if SAY_NL is None:
         import json

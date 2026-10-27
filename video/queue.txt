@@ -1,2 +1,2 @@
 how-starlink-works-satellites-lasers-dish-explained nl --full
-# 2026-10-27T19:55:06 v6: Engelse stem voor NL + uitspraaklijst
+# 2026-10-27T20:30:42 v7: andere Nederlandse stem

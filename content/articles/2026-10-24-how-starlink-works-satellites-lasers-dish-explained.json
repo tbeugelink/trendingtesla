@@ -31,7 +31,13 @@
     "description": "Een heldere uitleg van hoe Starlink van SpaceX internet vanuit de ruimte naar je huis, telefoon of auto brengt, waarom het sneller is dan oudere satellietdiensten en wat het betekent voor Tesla.",
     "body": "<p>Starlink heeft inmiddels zo'n 13,6 miljoen abonnees en ongeveer 11.100 satellieten in de ruimte. De Cybercab van Tesla heeft een Starlink-antenne aan boord, en Elon Musk zegt dat alle auto's ooit Starlink krijgen. Maar hoe komt internet uit de ruimte eigenlijk bij een schotel, telefoon of auto? We lopen het systeem stap voor stap door.</p><h2>1. Satellieten die laag vliegen</h2><p>Klassiek satellietinternet gebruikt een paar grote satellieten in een geostationaire baan, zo'n 36.000 km boven de evenaar. Starlink doet het andersom: duizenden kleinere satellieten in een lage baan, een paar honderd kilometer hoog. De eerste lichting vloog op ongeveer 550 km. In de loop van 2026 brengt SpaceX die satellieten omlaag naar zo'n 480 km. Volgens het bedrijf verkleint dat de kans op botsingen, omdat er onder de 500 km minder ruimtepuin rondvliegt.</p><p>Laag vliegen heeft één groot voordeel: minder vertraging. Een signaal naar een geostationaire satelliet en terug duurt minstens 477 milliseconden. Bij Starlink kost de sprong naar een satelliet ongeveer 25 tot 35 milliseconden, genoeg voor videobellen en online gamen. Het nadeel: elke satelliet ziet maar een klein stukje aarde en schiet in een paar minuten over, dus er zijn er heel veel nodig en de verbinding wordt voortdurend doorgegeven van de ene satelliet aan de volgende.</p><h2>2. In een satelliet</h2><ul><li><strong>Phased-array-antennes:</strong> platte antennes die hun bundels elektronisch richten, zonder bewegende delen, voor gebruikers in de Ku- en Ka-band.</li><li><strong>Laserverbindingen:</strong> satellieten sturen data per laser naar elkaar door, zodat verkeer via de ruimte naar een ver grondstation kan, bijvoorbeeld boven oceanen.</li><li><strong>Elektrische motoren:</strong> Hall-motoren op krypton of argon brengen de satelliet naar zijn werkhoogte en houden hem daar.</li><li><strong>Formaat:</strong> de huidige V2 Mini-satellieten wegen zo'n 800 kilo. De nieuwe V3-generatie is veel groter en kan alleen met Starship worden gelanceerd.</li></ul><p>Een satelliet gaat ongeveer vijf tot zeven jaar mee. Daarna wordt hij omlaag gestuurd en verbrandt hij in de atmosfeer, meestal binnen ongeveer een jaar.</p><h2>3. Grondstations</h2><p>Het internet zelf zit nog altijd op aarde. Grondstations, vaak groepjes van negen schotels van 2,86 meter achter een hek, verbinden de satellieten met glasvezel en datacentra. Is er geen grondstation in de buurt, dan dragen de laserverbindingen de data door het netwerk tot ze ergens omlaag kunnen.</p><h2>4. De schotel</h2><p>De ontvanger bij de gebruiker is zelf ook een phased-array-antenne: een plat paneel dat satellieten elektronisch volgt. De standaardschotel is ongeveer zo groot als een pizzadoos. De Starlink Mini uit 2024 past in een rugzak en haalt tot 100 Mbps. Daarnaast verbindt de direct-to-cell-dienst van Starlink gewone 4G-telefoons rechtstreeks met satellieten, te beginnen met sms via partners zoals T-Mobile in de VS, al is de capaciteit veel kleiner dan die van een zendmast.</p><h2>Waar Tesla in beeld komt</h2><p>Auto's zijn het lastigste geval voor dit systeem: ze bewegen, hebben een metalen dak en er past maar een kleine antenne in. De Cybercab is de eerste Tesla met een ingebouwde Starlink-antenne, achter in de auto, naast 5G. Volgens Tesla heeft de auto geen verbinding nodig om veilig te rijden, maar robotaxi's gebruiken die wel voor navigatie, klantenservice en vlootbeheer. Musk zegt dat Starlink ze online kan houden als het mobiele bereik wegvalt.</p><p>Op grote schaal kan dat alleen als het netwerk genoeg vrije capaciteit heeft. Daarom is de nieuwe generatie belangrijk: de eerste 26 V3-satellieten voegden samen ongeveer 26 terabit per seconde toe, en Musk mikt op honderd keer zoveel bandbreedte binnen drie jaar. Dat is een doel, geen ingeloste belofte.</p><h2>Waarom het ertoe doet</h2><p>Starlink ruilt een paar dure satellieten in voor duizenden goedkope exemplaren met een korte levensduur, die voortdurend lanceringen nodig hebben. Dat werkt alleen voor een bedrijf met eigen herbruikbare raketten. Daarom zijn Starlink en SpaceX onlosmakelijk verbonden, en daarom hangt Starlink in Tesla's auto's ook af van hoe vaak Starship vliegt.</p>"
   },
-  "images": ["starlink-1.jpg", "starlink-2.jpg", "starlink-car-2.jpg", "starlink-farm.jpg", "starlink-boat.jpg"],
+  "images": [
+    "starlink-1.jpg",
+    "starlink-2.jpg",
+    "starlink-car-2.jpg",
+    "starlink-farm.jpg",
+    "starlink-boat.jpg"
+  ],
   "label": {
     "style": "a",
     "en": {
@@ -42,5 +48,245 @@
       "sub": "HOE",
       "text": "WERKT STARLINK?"
     }
+  },
+  "video": {
+    "en": [
+      {
+        "text": "Starlink now has around 13.6 million subscribers and roughly 11,100 satellites in orbit. Tesla's Cybercab carries a Starlink antenna, and Elon Musk says all cars will have Starlink one day. But how does internet from space actually reach a dish, a phone or a car? Let's go through the system, piece by piece.",
+        "img": [
+          "starlink-1.jpg",
+          "starlink-launch-stack.jpg"
+        ]
+      },
+      {
+        "head": "Satellites that fly low",
+        "img": [
+          "starlink-2.jpg"
+        ]
+      },
+      {
+        "text": "Traditional satellite internet uses a few large satellites in geostationary orbit, about 36,000 kilometres above the equator. Starlink does the opposite: thousands of smaller satellites in low Earth orbit, just a few hundred kilometres up. The first batch flew at about 550 kilometres. During 2026, SpaceX is moving them down to about 480 kilometres, which it says lowers the risk of collisions, because there is less debris below 500 kilometres."
+      },
+      {
+        "text": "Flying low has one big advantage: delay. A signal to a geostationary satellite and back takes at least 477 milliseconds. For Starlink, the hop to a satellite takes about 25 to 35 milliseconds, and that makes video calls and online gaming practical. The downside is that each satellite only sees a small patch of Earth and races across the sky in minutes. So you need very many of them, and your connection is handed from one satellite to the next all the time.",
+        "img": [
+          "starlink-boat.jpg",
+          "starlink-1.jpg"
+        ]
+      },
+      {
+        "head": "Inside a satellite",
+        "img": [
+          "starlink-launch-stack.jpg"
+        ]
+      },
+      {
+        "key": "Phased-array antennas",
+        "text": "First, phased-array antennas. These flat antennas steer their beams electronically, with no moving parts, to serve users on the ground."
+      },
+      {
+        "key": "Laser links",
+        "text": "Then there are laser links. Satellites pass data to each other by laser, so traffic can travel through space to a distant ground station, for example across an ocean.",
+        "img": [
+          "starlink-2.jpg"
+        ]
+      },
+      {
+        "key": "Electric thrusters",
+        "text": "Electric thrusters, running on krypton or argon, raise the satellite to its working orbit and keep it there."
+      },
+      {
+        "key": "Size",
+        "text": "And then size. The current V2 Mini satellites weigh about 800 kilograms. The new V3 generation is much larger, and only Starship can launch it.",
+        "img": [
+          "spacex-7.jpg"
+        ]
+      },
+      {
+        "text": "A satellite works for roughly five to seven years. It is then steered down and burns up in the atmosphere, usually within about a year.",
+        "img": [
+          "starlink-1.jpg"
+        ]
+      },
+      {
+        "head": "Ground stations",
+        "img": [
+          "xai-dc-night.jpg"
+        ]
+      },
+      {
+        "text": "The internet itself still lives on the ground. Gateways, usually clusters of nine dishes almost three metres wide behind a fence, connect the satellites to fibre networks and data centres. Where no gateway is in reach, the laser links carry the data across the constellation until it can come down.",
+        "img": [
+          "xai-dc-2.jpg"
+        ]
+      },
+      {
+        "head": "The dish",
+        "img": [
+          "starlink-farm.jpg"
+        ]
+      },
+      {
+        "text": "The dish at your home is itself a phased-array antenna: a flat panel that tracks satellites electronically. The standard dish is about the size of a pizza box. The Starlink Mini, launched in 2024, fits in a backpack and delivers up to 100 megabits per second.",
+        "img": [
+          "starlink-camper.jpg"
+        ]
+      },
+      {
+        "text": "Separately, Starlink's direct-to-cell service connects ordinary phones straight to satellites. It starts with text messages through partners like T-Mobile, but with far less capacity than a normal mobile mast.",
+        "img": [
+          "starlink-phone-mountain.jpg"
+        ]
+      },
+      {
+        "head": "Where Tesla fits in",
+        "img": [
+          "models/cybercab.jpg"
+        ]
+      },
+      {
+        "text": "Cars are the hardest case for this system. They move, they have metal roofs, and they need a small antenna. The Cybercab is the first Tesla with a Starlink antenna built in, at the rear of the car, next to 5G. According to Tesla, the car does not need a connection to drive safely. But robotaxis use one for navigation, customer support and fleet management, and Musk says Starlink can keep them online when mobile coverage disappears.",
+        "img": [
+          "models/cc-1.jpg"
+        ]
+      },
+      {
+        "text": "That only works at scale if the network has spare capacity, and that is why the next generation matters. SpaceX's first 26 V3 satellites added about 26 terabits per second, and Musk is aiming for a hundred times more bandwidth within three years. That is a target, not a promise kept.",
+        "img": [
+          "starlink-launch-stack.jpg"
+        ]
+      },
+      {
+        "head": "Why it matters",
+        "img": [
+          "spacex-6.jpg"
+        ]
+      },
+      {
+        "text": "Starlink swaps a few expensive satellites for thousands of cheap, short-lived ones that need constant launches. That only makes sense for a company with its own reusable rockets. That is why Starlink and SpaceX are inseparable, and why any future Starlink in Tesla cars depends on how fast Starship flies.",
+        "img": [
+          "spacex-7.jpg"
+        ]
+      }
+    ],
+    "nl": [
+      {
+        "text": "Starlink heeft nu zo'n 13,6 miljoen abonnees en ongeveer 11.100 satellieten in een baan om de aarde. Tesla's Cybercab heeft een Starlink-antenne aan boord, en Elon Musk zegt dat alle auto's ooit Starlink krijgen. Maar hoe komt internet uit de ruimte eigenlijk bij een schotel, een telefoon of een auto? We lopen het systeem stap voor stap door.",
+        "img": [
+          "starlink-1.jpg",
+          "starlink-launch-stack.jpg"
+        ]
+      },
+      {
+        "head": "Satellieten die laag vliegen",
+        "img": [
+          "starlink-2.jpg"
+        ]
+      },
+      {
+        "text": "Gewoon satellietinternet gebruikt een paar grote satellieten in een geostationaire baan, zo'n 36.000 kilometer boven de evenaar. Starlink doet het omgekeerde: duizenden kleinere satellieten in een lage baan, maar een paar honderd kilometer hoog. De eerste lichting vloog op ongeveer 550 kilometer. In 2026 brengt SpaceX ze omlaag naar ongeveer 480 kilometer. Volgens SpaceX verkleint dat de kans op botsingen, omdat er onder de 500 kilometer minder ruimteafval is."
+      },
+      {
+        "text": "Laag vliegen heeft één groot voordeel: minder vertraging. Een signaal naar een geostationaire satelliet en terug duurt minstens 477 milliseconden. Bij Starlink duurt de sprong naar een satelliet zo'n 25 tot 35 milliseconden, en daardoor zijn videobellen en online gamen goed te doen. Het nadeel is dat elke satelliet maar een klein stukje aarde ziet en in een paar minuten langs de hemel schiet. Je hebt er dus heel veel nodig, en je verbinding springt steeds van de ene satelliet naar de volgende.",
+        "img": [
+          "starlink-boat.jpg",
+          "starlink-1.jpg"
+        ]
+      },
+      {
+        "head": "In een satelliet",
+        "img": [
+          "starlink-launch-stack.jpg"
+        ]
+      },
+      {
+        "key": "Phased-array-antennes",
+        "text": "Om te beginnen phased-array-antennes. Dat zijn platte antennes die hun bundels elektronisch richten, zonder bewegende delen, om gebruikers op de grond te bedienen."
+      },
+      {
+        "key": "Laserverbindingen",
+        "text": "Dan de laserverbindingen. Satellieten geven data met lasers aan elkaar door, zodat verkeer door de ruimte naar een ver grondstation kan reizen, bijvoorbeeld over een oceaan.",
+        "img": [
+          "starlink-2.jpg"
+        ]
+      },
+      {
+        "key": "Elektrische motoren",
+        "text": "Elektrische motoren, die op krypton of argon werken, brengen de satelliet naar zijn werkbaan en houden hem daar."
+      },
+      {
+        "key": "Formaat",
+        "text": "En het formaat. De huidige V2 Mini-satellieten wegen zo'n 800 kilo. De nieuwe V3-generatie is veel groter, en alleen Starship kan die lanceren.",
+        "img": [
+          "spacex-7.jpg"
+        ]
+      },
+      {
+        "text": "Een satelliet gaat ongeveer vijf tot zeven jaar mee. Daarna wordt hij omlaag gestuurd en verbrandt hij in de atmosfeer, meestal binnen ongeveer een jaar.",
+        "img": [
+          "starlink-1.jpg"
+        ]
+      },
+      {
+        "head": "Grondstations",
+        "img": [
+          "xai-dc-night.jpg"
+        ]
+      },
+      {
+        "text": "Het internet zelf zit nog gewoon op de grond. Gateways, meestal groepjes van negen schotels van bijna drie meter breed achter een hek, verbinden de satellieten met glasvezelnetten en datacenters. Is er geen gateway in de buurt, dan dragen de laserverbindingen de data door het netwerk tot die ergens omlaag kan.",
+        "img": [
+          "xai-dc-2.jpg"
+        ]
+      },
+      {
+        "head": "De schotel",
+        "img": [
+          "starlink-farm.jpg"
+        ]
+      },
+      {
+        "text": "De schotel bij je thuis is zelf ook een phased-array-antenne: een plat paneel dat satellieten elektronisch volgt. De standaardschotel is ongeveer zo groot als een pizzadoos. De Starlink Mini, sinds 2024 te koop, past in een rugzak en haalt tot 100 megabit per seconde.",
+        "img": [
+          "starlink-camper.jpg"
+        ]
+      },
+      {
+        "text": "Daarnaast verbindt de direct-to-cell-dienst van Starlink gewone telefoons rechtstreeks met satellieten. Dat begint met sms'jes via partners zoals T-Mobile, maar met veel minder capaciteit dan een gewone zendmast.",
+        "img": [
+          "starlink-phone-mountain.jpg"
+        ]
+      },
+      {
+        "head": "Waar Tesla past",
+        "img": [
+          "models/cybercab.jpg"
+        ]
+      },
+      {
+        "text": "Auto's zijn voor dit systeem het lastigst. Ze bewegen, ze hebben een metalen dak en ze hebben een kleine antenne nodig. De Cybercab is de eerste Tesla met een ingebouwde Starlink-antenne, achterin de auto, naast 5G. Volgens Tesla heeft de auto geen verbinding nodig om veilig te rijden. Maar robotaxi's gebruiken er wel een voor navigatie, klantenservice en vlootbeheer, en volgens Musk houdt Starlink ze online als het mobiele netwerk wegvalt.",
+        "img": [
+          "models/cc-1.jpg"
+        ]
+      },
+      {
+        "text": "Dat werkt alleen op grote schaal als het netwerk capaciteit over heeft, en daarom is de nieuwe generatie belangrijk. De eerste 26 V3-satellieten van SpaceX voegden zo'n 26 terabit per seconde toe, en Musk mikt op honderd keer zoveel bandbreedte binnen drie jaar. Dat is een doel, geen waargemaakte belofte.",
+        "img": [
+          "starlink-launch-stack.jpg"
+        ]
+      },
+      {
+        "head": "Waarom het ertoe doet",
+        "img": [
+          "spacex-6.jpg"
+        ]
+      },
+      {
+        "text": "Starlink ruilt een paar dure satellieten in voor duizenden goedkope satellieten die maar kort meegaan en dus steeds nieuwe lanceringen nodig hebben. Dat kan alleen voor een bedrijf met eigen herbruikbare raketten. Daarom zijn Starlink en SpaceX onlosmakelijk verbonden, en daarom hangt Starlink in Tesla's in de toekomst af van hoe snel Starship vliegt.",
+        "img": [
+          "spacex-7.jpg"
+        ]
+      }
+    ]
   }
 }

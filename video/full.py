@@ -32,6 +32,30 @@ SCENE_MAX, ZOOM_IN = 6.0, 0.42
 NUM = re.compile(r"^([(\"'“]?)(\$?)(\d[\d.,]*\d|\d)(%?)([)\"'”.,:;!?]*)$")
 
 
+SAY_NL = None
+
+
+def say_fix(tok, lang):
+    """Respell a Dutch word so the English voice pronounces it naturally (video/say_nl.json)."""
+    global SAY_NL
+    if lang != "nl":
+        return tok
+    if SAY_NL is None:
+        import json
+        SAY_NL = json.loads((S.ROOT / "video/say_nl.json").read_text(encoding="utf-8"))
+    m = re.match(r"^([(\"'“]*)(.*?)([)\"'”.,:;!?]*)$", tok)
+    pre, core, post = m.groups()
+    if core in SAY_NL["words"]:
+        core = SAY_NL["words"][core]
+    else:
+        new = core
+        for k, v in SAY_NL["parts"].items():
+            new = new.replace(k, v)
+        if new != core:
+            core = re.sub(r"\s*-\s*|\s+", " ", new).strip()
+    return pre + core + post if core else tok
+
+
 def say_numbers(text, lang):
     """Write numbers out in words so the voice says them clearly. Returns the spoken text and, per original
     word, how many spoken words it became (so captions can still show the digits)."""
@@ -40,8 +64,9 @@ def say_numbers(text, lang):
     for tok in text.split():
         m = NUM.match(tok)
         if not m:
-            out.append(tok)
-            counts.append(1)
+            ws = say_fix(tok, lang).split()
+            out += ws
+            counts.append(len(ws))
             continue
         pre, dollar, num, pct, post = m.groups()
         thou, dec = (",", ".") if lang == "en" else (".", ",")

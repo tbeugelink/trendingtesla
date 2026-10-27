@@ -1,0 +1,19 @@
+{
+  "_doc": "Pronunciation help for Dutch with the English voice. Only the voice gets these spellings; captions keep the real words. 'words': whole word (punctuation is kept); 'parts': replaced inside words.",
+  "words": {
+    "één": "ééén",
+    "Tesla's": "Teslaas",
+    "auto's": "autoos",
+    "robotaxi's": "robotaxies",
+    "sms'jes": "es-em-essjes",
+    "Phased-array-antennes": "Feesd-erree antennes",
+    "phased-array-antenne": "feesd-erree antenne",
+    "Mini-satellieten": "Mini satellieten",
+    "phased-array-antennes": "feesd-erree antennes"
+  },
+  "parts": {
+    "V3": "vee drie ",
+    "V2": "vee twee ",
+    "5G": "vijf gee"
+  }
+}

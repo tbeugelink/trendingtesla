@@ -282,6 +282,9 @@ article .prose{font-size:15px}article .prose h2{font-size:.98rem}.grid2{grid-tem
 /* header controls: same border colour as the photos */
 .bar .search input,.bar .search>button,.bar .tdd .tdb,.bar .tdd .tdl,.bar .lang,.sbtn{border-color:#3a4a60}
 .act,.morelink,.pager a{box-shadow:inset 0 0 0 1px #3a4a60}
+
+/* shadow edge at the very top: 30% of the nav bar, dark fading down */
+header.top::before{content:"";position:absolute;left:0;right:0;top:0;height:30%;background:linear-gradient(#0f0f0f,rgba(15,15,15,0));pointer-events:none;z-index:1}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "ISO 25785-1 explained: the first safety standard for humanoid robots, and what it means for Tesla Optimus", "description": "Humanoid robots like Optimus do not fit existing robot safety rules, because they fall over when they lose power. A new ISO standard, still in draft, is meant to fix that.", "image": ["https://trendingtesla.com/img/iso-25785-1-humanoid-robot-safety-standard-what-it-means-for-tesla-optimus-en.jpg"], "datePublished": "2026-10-26T12:00:00+01:00", "dateModified": "2026-10-26T12:00:00+01:00", "inLanguage": "en", "articleSection": "Optimus", "mainEntityOfPage": "https://trendingtesla.com/iso-25785-1-humanoid-robot-safety-standard-what-it-means-for-tesla-optimus/", "publisher": {"@type": "Organization", "name": "TrendingTesla", "url": "https://trendingtesla.com", "logo": {"@type": "ImageObject", "url": "https://trendingtesla.com/favicon.svg"}}, "author": {"@type": "Organization", "name": "TrendingTesla", "url": "https://trendingtesla.com"}}</script>
 </head>

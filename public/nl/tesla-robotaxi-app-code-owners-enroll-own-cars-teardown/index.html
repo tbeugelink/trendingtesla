@@ -282,6 +282,9 @@ article .prose{font-size:15px}article .prose h2{font-size:.98rem}.grid2{grid-tem
 /* header controls: same border colour as the photos */
 .bar .search input,.bar .search>button,.bar .tdd .tdb,.bar .tdd .tdl,.bar .lang,.sbtn{border-color:#3a4a60}
 .act,.morelink,.pager a{box-shadow:inset 0 0 0 1px #3a4a60}
+
+/* shadow edge at the very top: 30% of the nav bar, dark fading down */
+header.top::before{content:"";position:absolute;left:0;right:0;top:0;height:30%;background:linear-gradient(#0f0f0f,rgba(15,15,15,0));pointer-events:none;z-index:1}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Code in Tesla's Robotaxi-app wijst erop dat eigenaren hun eigen auto aan de vloot kunnen toevoegen", "description": "In versie 26.10 van de Tesla Robotaxi-app is code gevonden waarmee eigenaren hun eigen Tesla per chassisnummer kunnen aanmelden voor de taxidienst. Ook zitten er nieuwe functies voor passagiers in, zoals een AR-zoekfunctie en bediening van de achterbank. Officieel is er nog niets.", "image": ["https://trendingtesla.com/img/tesla-robotaxi-app-code-owners-enroll-own-cars-teardown-nl.jpg"], "datePublished": "2026-10-24T11:12:00+02:00", "dateModified": "2026-10-24T11:12:00+02:00", "inLanguage": "nl", "articleSection": "Robotaxi", "mainEntityOfPage": "https://trendingtesla.com/nl/tesla-robotaxi-app-code-owners-enroll-own-cars-teardown/", "publisher": {"@type": "Organization", "name": "TrendingTesla", "url": "https://trendingtesla.com", "logo": {"@type": "ImageObject", "url": "https://trendingtesla.com/favicon.svg"}}, "author": {"@type": "Organization", "name": "TrendingTesla", "url": "https://trendingtesla.com"}}</script>
 </head>

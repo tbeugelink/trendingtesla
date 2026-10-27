@@ -282,6 +282,9 @@ article .prose{font-size:15px}article .prose h2{font-size:.98rem}.grid2{grid-tem
 /* header controls: same border colour as the photos */
 .bar .search input,.bar .search>button,.bar .tdd .tdb,.bar .tdd .tdl,.bar .lang,.sbtn{border-color:#3a4a60}
 .act,.morelink,.pager a{box-shadow:inset 0 0 0 1px #3a4a60}
+
+/* shadow edge at the very top: 30% of the nav bar, dark fading down */
+header.top::before{content:"";position:absolute;left:0;right:0;top:0;height:30%;background:linear-gradient(#0f0f0f,rgba(15,15,15,0));pointer-events:none;z-index:1}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Tesla starts rolling out FSD v14.3.11: what's new and who gets it first", "description": "The latest version of Full Self-Driving (Supervised) is reaching early testers on software 2026.33.5. HW4 cars get v14.3.11; HW3 cars get a 'Lite' version.", "image": ["https://trendingtesla.com/img/tesla-fsd-v14-3-11-rollout-whats-new-en.jpg"], "datePublished": "2026-10-08T07:20:00+02:00", "dateModified": "2026-10-08T07:20:00+02:00", "inLanguage": "en", "articleSection": "FSD", "mainEntityOfPage": "https://trendingtesla.com/tesla-fsd-v14-3-11-rollout-whats-new/", "publisher": {"@type": "Organization", "name": "TrendingTesla", "url": "https://trendingtesla.com", "logo": {"@type": "ImageObject", "url": "https://trendingtesla.com/favicon.svg"}}, "author": {"@type": "Organization", "name": "TrendingTesla", "url": "https://trendingtesla.com"}}</script>
 </head>

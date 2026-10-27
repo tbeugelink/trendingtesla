@@ -228,3 +228,4 @@ Articles with a "models" key automatically use real-life photos of that model. Y
 - loop-entrance-city.jpg — red Model 3 driving into a lit tunnel portal in a downtown plaza with palm trees at dusk (Loop entrance)
 - tunnel-segments.jpg — tunnel lining segments, blue crane and a red tunnel boring machine at a construction yard at sunset (tunnel construction)
 - loop-aerial-map.jpg — aerial city at dusk with a glowing underground tunnel network and stations (Loop network plans)
+- fsd-highway-sunset.jpg — driver's seat on a desert highway with trucks and red rock buttes at sunset, screen with lane visualisation (FSD on the highway, US)

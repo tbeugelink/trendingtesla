@@ -483,6 +483,7 @@ article .prose{font-size:15px}article .prose h2{font-size:.98rem}.grid2{grid-tem
 
 /* header controls: same border colour as the photos */
 .bar .search input,.bar .search>button,.bar .tdd .tdb,.bar .tdd .tdl,.bar .lang,.sbtn{border-color:#3a4a60}
+.act,.morelink,.pager a{box-shadow:inset 0 0 0 1px #3a4a60}
 """
 
 

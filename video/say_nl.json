@@ -1,5 +1,8 @@
 {
-  "_doc": "Pronunciation help for Dutch with the English voice. Only the voice gets these spellings; captions keep the real words. 'words': whole word (punctuation is kept); 'parts': replaced inside words.",
+  "_doc": "Pronunciation help for Dutch. 'always': respellings for every Dutch voice. 'words'/'parts': only when the English voice reads Dutch. Captions keep the real words.",
+  "always": {
+    "T-Mobile": "Tie-Mobile"
+  },
   "words": {
     "één": "ééén",
     "Tesla's": "Teslaas",

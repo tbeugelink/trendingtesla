@@ -23,7 +23,7 @@ sys.argv = [x for x in sys.argv if x != "--portrait"]
 import short as S  # noqa: E402  (same folder; landscape layout)
 from short import W, H, FPS, font, FB, FX, YEL  # noqa: E402
 
-SPEED = {"en": "1.15", "nl": "1.08"}
+SPEED = {"en": "1.15", "nl": "1.15"}
 OUTRO_SAY = {"en": "Like and subscribe for more Tesla news, or go to TrendingTesla.com. I'll see you there!",
              "nl": "Like en abonneer voor meer Tesla-nieuws, of ga naar TrendingTesla.com. Ik zie je daar!"}
 OUTRO_CARD = {"en": "LIKE & SUBSCRIBE", "nl": "LIKE & ABONNEER"}
@@ -38,13 +38,17 @@ SAY_NL = None
 def say_fix(tok, lang):
     """Respell a Dutch word so the English voice pronounces it naturally (video/say_nl.json)."""
     global SAY_NL
-    if lang != "nl" or os.environ.get("ELEVENLABS_VOICE_ID_NL"):  # a native Dutch voice needs no respelling
+    if lang != "nl":
         return tok
     if SAY_NL is None:
         import json
         SAY_NL = json.loads((S.ROOT / "video/say_nl.json").read_text(encoding="utf-8"))
     m = re.match(r"^([(\"'“]*)(.*?)([)\"'”.,:;!?]*)$", tok)
     pre, core, post = m.groups()
+    if core in SAY_NL.get("always", {}):
+        return pre + SAY_NL["always"][core] + post
+    if os.environ.get("ELEVENLABS_VOICE_ID_NL"):  # a native Dutch voice needs no further respelling
+        return tok
     if core in SAY_NL["words"]:
         core = SAY_NL["words"][core]
     else:

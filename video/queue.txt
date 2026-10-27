@@ -1,2 +1,2 @@
 how-starlink-works-satellites-lasers-dish-explained en nl --full
-# 2026-10-27T12:13:43 v2: sneller, cijfers uitgeschreven, vraag-koppen, nieuw einde
+# 2026-10-27T16:14:12 v3: probleem -> vraag -> antwoord, NL-stem, EN sneller

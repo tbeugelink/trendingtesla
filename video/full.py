@@ -23,7 +23,7 @@ sys.argv = [x for x in sys.argv if x != "--portrait"]
 import short as S  # noqa: E402  (same folder; landscape layout)
 from short import W, H, FPS, font, FB, FX, YEL  # noqa: E402
 
-SPEED = {"en": "1.12", "nl": "1.15"}
+SPEED = {"en": "1.15", "nl": "1.15"}
 OUTRO_SAY = {"en": "Like and subscribe for more Tesla news, or go to TrendingTesla.com. I'll see you there!",
              "nl": "Like en abonneer voor meer Tesla-nieuws, of ga naar TrendingTesla.com. Tot daar!"}
 OUTRO_CARD = {"en": "LIKE & SUBSCRIBE", "nl": "LIKE & ABONNEER"}
@@ -417,7 +417,10 @@ def meta(a, lang, pieces, place, out):
         s = int(s)
         return f"{s // 60}:{s % 60:02d}"
     chap = [f"0:00 {S.title_say(a, lang).rstrip('.')}"]
-    chap += [f"{ts(max(0, place[i] - 0.6))} {txt.rstrip('.')}" for i, (k, txt, _) in enumerate(pieces) if k == "head"]
+    def clean(h):  # chapter titles without the spoken "So, ..." lead-in
+        h = re.sub(r"^(So,? |Dus,? )", "", h.rstrip("."))
+        return h[:1].upper() + h[1:]
+    chap += [f"{ts(max(0, place[i] - 0.6))} {clean(txt)}" for i, (k, txt, _) in enumerate(pieces) if k == "head"]
     read = {"en": "Read the full article", "nl": "Lees het hele artikel"}[lang]
     chl = {"en": "Chapters", "nl": "Hoofdstukken"}[lang]
     note = {"en": "Voice-over generated with AI (ElevenLabs); script written and checked by TrendingTesla.",

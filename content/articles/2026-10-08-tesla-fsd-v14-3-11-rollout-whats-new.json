@@ -19,11 +19,7 @@
     "description": "De nieuwste versie van Full Self-Driving (Supervised) bereikt de eerste testers op software 2026.33.5. Auto's met HW4 krijgen v14.3.11, auto's met HW3 een 'Lite'-versie.",
     "body": "<p>Tesla begon rond 7 oktober met de uitrol van Full Self-Driving (Supervised) v14.3.11, samen met softwareversie 2026.33.5. Zoals gebruikelijk gaat de eerste golf naar Tesla's Early Access-groep van ervaren rijders en geselecteerde influencers. Volgens gegevens uit de vloot draaide de versie de eerste dagen op minder dan 1% van de auto's.</p><h2>Welke auto's wat krijgen</h2><ul><li><strong>Auto's met HW4 (AI4):</strong> FSD v14.3.11.</li><li><strong>Auto's met HW3:</strong> FSD v14.3 Lite, op dezelfde firmware 2026.33.5.</li></ul><h2>Nieuw in v14.3</h2><p>De releasenotes zijn gelijk aan die van de vorige versie, v14.3.9. De belangrijkste punten:</p><ul><li><strong>Snellere reacties:</strong> een herschreven AI-compiler en runtime die volgens Tesla de reactietijd met 20% verkort.</li><li><strong>Betere training:</strong> verbeterd reinforcement learning en een nieuwe vision-encoder.</li><li><strong>Automatic Collision Evasion:</strong> kan ingrijpen als je zelf rijdt en een frontale botsing dreigt, of als je niet oplet.</li><li><strong>Parkeren:</strong> slimmere keuze van de parkeerplek, met een parkeerpin op de kaart.</li><li><strong>Lastige situaties:</strong> betere omgang met hulpdiensten, schoolbussen, kleine dieren en ingewikkelde verkeerslichten.</li><li><strong>Actually Smart Summon:</strong> topsnelheid verhoogd naar 13 km/u.</li><li><strong>Statistieken:</strong> de Self-Driving-app toont nu de gereden afstand en je langste reeks zonder ingrijpen.</li></ul><h2>Eerste indrukken</h2><p>De eerste testers zijn positief. Eén van hen meldde een soepele rit van zo'n 25 minuten zonder ingrijpen door het verkeer van New York in een Model S Plaid, inclusief een ongeregelde linksaf, waarna de auto zichzelf parkeerde.</p><h2>Wat er nog komt</h2><p>Tesla noemt uitgebreider redeneren, niet alleen bij het vinden van de bestemming, en het ontwijken van kuilen in de weg als komende functies.</p><p><em>FSD (Supervised) vereist een oplettende bestuurder die altijd klaar is om het over te nemen. In Nederland en België verschijnen nieuwe FSD-versies meestal later dan in de VS.</em></p>"
   },
-  "images": [
-    "software-update.jpg",
-    "fsd-2.jpg",
-    "fsd-3.jpg"
-  ],
+  "images": ["software-update.jpg", "fsd-2.jpg", "fsd-3.jpg", "fsd-night-rain.jpg"],
   "label": {
     "style": "c",
     "en": {

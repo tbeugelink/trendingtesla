@@ -3,7 +3,7 @@
 Each line: file — what is actually visible. Pick only photos whose visible subject matches the article's core subject. Never show a product the article is not about (no Megapack on a home-battery story, no solar roof on a Powerwall story, no Cybertruck on a Model Y story, etc.).
 
 ## Charging
-- charge-port.jpg — close-up of a white Tesla's charge port with a cable plugged in
+- charge-port-2.jpg — white Tesla Model 3 charging, blue cable plugged into the rear charge port by the tail light, sunny street
 - supercharger.jpg — Supercharger site at sunset, white/red stalls, Teslas charging, a Semi truck behind
 - supercharger-2.jpg — row of white/red Supercharger stalls, a few cars, dusk
 - supercharger-3.jpg — Supercharger at night in rain, a Semi in the background

@@ -11,6 +11,7 @@ trendingtesla.com". Output: video/out/<slug>-<lang>-full.mp4 plus a .txt with ti
 YouTube chapters (one per head) and tags.
 """
 import os
+import re
 import subprocess
 import sys
 import time
@@ -21,6 +22,50 @@ from PIL import Image, ImageDraw, ImageFilter
 sys.argv = [x for x in sys.argv if x != "--portrait"]
 import short as S  # noqa: E402  (same folder; landscape layout)
 from short import W, H, FPS, font, FB, FX, YEL  # noqa: E402
+
+SPEED = {"en": "1.12", "nl": "1.15"}
+OUTRO_SAY = {"en": "Like and subscribe for more Tesla news, or go to TrendingTesla.com. I'll see you there!",
+             "nl": "Like en abonneer voor meer Tesla-nieuws, of ga naar TrendingTesla.com. Tot daar!"}
+OUTRO_CARD = {"en": "LIKE & SUBSCRIBE", "nl": "LIKE & ABONNEER"}
+OUTRO_SEC = 10.0
+SCENE_MAX, ZOOM_IN = 6.0, 0.42
+NUM = re.compile(r"^([(\"'“]?)(\$?)(\d[\d.,]*\d|\d)(%?)([)\"'”.,:;!?]*)$")
+
+
+def say_numbers(text, lang):
+    """Write numbers out in words so the voice says them clearly. Returns the spoken text and, per original
+    word, how many spoken words it became (so captions can still show the digits)."""
+    from num2words import num2words
+    out, counts = [], []
+    for tok in text.split():
+        m = NUM.match(tok)
+        if not m:
+            out.append(tok)
+            counts.append(1)
+            continue
+        pre, dollar, num, pct, post = m.groups()
+        thou, dec = (",", ".") if lang == "en" else (".", ",")
+        try:
+            if len(num) == 4 and num.isdigit() and 1900 <= int(num) <= 2099:
+                words = num2words(int(num), lang=lang, to="year")
+            else:
+                v = num.replace(thou, "")
+                v = float(v.replace(dec, ".")) if dec in v else int(v)
+                words = num2words(v, lang=lang)
+        except (ValueError, NotImplementedError):
+            out.append(tok)
+            counts.append(1)
+            continue
+        if pct:
+            words += " percent" if lang == "en" else " procent"
+        if dollar:
+            words += " dollars" if lang == "en" else " dollar"
+        ws = words.replace("-", " ").split() if lang == "en" else words.split()
+        ws[0], ws[-1] = pre + ws[0], ws[-1] + post
+        out += ws
+        counts.append(len(ws))
+    return " ".join(out), counts
+
 
 PAUSE = {"title": 0.7, "head_before": 0.8, "head_after": 1.0, "text": 0.3, "outro": 0.6}
 
@@ -91,7 +136,7 @@ def build_timeline(a, lang):
             pieces.append(("head", b["head"].rstrip(".") + ".", b))
         if b.get("text"):
             pieces.append(("text", b["text"], b if not b.get("head") else {k: v for k, v in b.items() if k != "img"}))
-    pieces.append(("outro", S.OUTRO[lang][1], {}))
+    pieces.append(("outro", OUTRO_SAY[lang], {}))
     return pieces
 
 
@@ -102,7 +147,10 @@ def main():
     a = S.load(slug)
     S.OUT.mkdir(parents=True, exist_ok=True)
     pieces = build_timeline(a, lang)
-    spoken = [S.spoken(t, lang) for _, t, _ in pieces]
+    os.environ["ELEVENLABS_SPEED"] = SPEED.get(lang, "1.1")
+    base = [S.spoken(t, lang) for _, t, _ in pieces]
+    conv = [say_numbers(t, lang) for t in base]
+    spoken = [c[0] for c in conv]
     joined = " ".join(spoken)
     have_voice = os.environ.get("ELEVENLABS_API_KEY") and os.environ.get("ELEVENLABS_VOICE_ID")
     if have_voice:
@@ -147,13 +195,22 @@ def main():
         place.append(t)
         t += a1 - a0
     end_start = place[-1] - 0.3
-    total = place[-1] + max(5.0, segs[-1][1] - segs[-1][0] + 0.8)
+    total = place[-1] + max(OUTRO_SEC, segs[-1][1] - segs[-1][0] + 1.5)
     # words of text pieces on the video timeline (captions)
     words = []
-    for (kind, _, _), (a0, a1), t0, (i0, i1) in zip(pieces, segs, place, spans):
-        if kind == "text":  # words by character position, so a head never leaks into the captions
-            words += [(w, s0 - a0 + t0, e0 - a0 + t0) for w, s0, e0 in
-                      S.words_timed(chars[i0:i1 + 1], cs[i0:i1 + 1], ce[i0:i1 + 1])]
+    for (kind, _, _), (a0, a1), t0, (i0, i1), orig, (_, counts) in zip(pieces, segs, place, spans, base, conv):
+        if kind != "text":
+            continue
+        # words by character position, so a head never leaks into the captions
+        sw = [(w, s0 - a0 + t0, e0 - a0 + t0) for w, s0, e0 in S.words_timed(chars[i0:i1 + 1], cs[i0:i1 + 1], ce[i0:i1 + 1])]
+        ow = orig.split()
+        if len(sw) == sum(counts) and len(ow) == len(counts):  # show the digits again in the captions
+            j = 0
+            for w, n in zip(ow, counts):
+                words.append((w, sw[j][1], sw[j + n - 1][2]))
+                j += n
+        else:
+            words += sw
     if have_voice:
         audio = S.OUT / f"{slug}-{lang}-full.m4a"
         fl, ins = [], []
@@ -189,14 +246,25 @@ def render(a, lang, pieces, segs, place, words, total, end_start, audio):
             scenes.append((t0 + span * k / len(imgs), p))
     if not scenes:
         scenes = [(0.0, S.photos(a)[0])]
-    # very long scenes: add another photo of the article so nothing stays longer than ~11 s
+    # very long scenes: show another photo of the same section (or of the article) so nothing stays longer than ~6 s
+    sec_of, sec_imgs, sec = [], {}, 0
+    for i, (kind, _, b) in enumerate(pieces):
+        if kind == "head":
+            sec += 1
+        sec_of.append(sec)
+        for x in b.get("img") or []:
+            q = img_path(x)
+            if q and q not in sec_imgs.setdefault(sec, []):
+                sec_imgs[sec].append(q)
     pool = S.photos(a)
     fixed = []
     for k, (st, p) in enumerate(scenes):
         end = scenes[k + 1][0] if k + 1 < len(scenes) else total
-        n = max(1, round((end - st) / 9.0))
+        i = max([j for j in range(len(pieces)) if place[j] - 0.7 <= st] or [0])
+        cand = [x for x in sec_imgs.get(sec_of[i], []) + pool if x != p]
+        n = max(1, round((end - st) / SCENE_MAX))
         for j in range(n):
-            q = p if j == 0 else next((x for x in pool if x != p and x not in [f[1] for f in fixed[-2:]]), p)
+            q = p if j == 0 else next((x for x in cand if x not in [f[1] for f in fixed[-2:]]), p)
             fixed.append((st + (end - st) * j / n, q))
     scenes = fixed
     starts = [s for s, _ in scenes]
@@ -213,18 +281,22 @@ def render(a, lang, pieces, segs, place, words, total, end_start, audio):
         d.text((60 + d.textlength("Trending", font=fbrand), S.LAY["brand"]), "Tesla", font=fbrand, fill="#e8231c")
 
     def ending(d):
-        f1, f2 = font(FX, 64), font(FB, 132)
-        l1 = S.OUTRO[lang][0]
-        parts = [("Trending", "#fff"), ("Tesla", "#e8231c"), (".com", YEL)]
+        """Closing card: LIKE & SUBSCRIBE above TrendingTesla.com (white / red / white)."""
+        f1, f2 = font(FB, 60), font(FB, 132)
+        l1 = OUTRO_CARD[lang]
+        parts = [("Trending", "#fff"), ("Tesla", "#e8231c"), (".com", "#fff")]
         w2 = sum(d.textlength(x, font=f2) for x, _ in parts)
-        w = max(d.textlength(l1, font=f1), w2) + 140
-        h = 330
+        w = max(d.textlength(l1, font=f1) + 60, w2) + 140
+        h = 360
         x0, y0 = (W - w) / 2, (H - h) / 2
         d.rounded_rectangle([x0, y0, x0 + w, y0 + h], radius=36, fill=(0, 0, 0, 175))
-        d.text(((W - d.textlength(l1, font=f1)) / 2, y0 + 60), l1, font=f1, fill="#fff")
+        bw = d.textlength(l1, font=f1) + 60
+        bx = (W - bw) / 2
+        d.rounded_rectangle([bx, y0 + 44, bx + bw, y0 + 44 + 92], radius=14, fill="#e8231c")
+        d.text((W / 2, y0 + 44 + 46), l1, font=f1, fill="#fff", anchor="mm")
         x = (W - w2) / 2
         for txt, col in parts:
-            d.text((x, y0 + 140), txt, font=f2, fill=col)
+            d.text((x, y0 + 172), txt, font=f2, fill=col)
             x += d.textlength(txt, font=f2)
 
     o_brand, o_end = S.overlay(brand), S.overlay(ending)
@@ -279,7 +351,7 @@ def render(a, lang, pieces, segs, place, words, total, end_start, audio):
         span = (starts[k + 1] if k + 1 < nsc else total) - starts[k] + S.TR
         p = S.ease(max(0.0, min(1.0, (t - starts[k]) / span)))
         cx, cy = FOCUS[k % len(FOCUS)]
-        z = 1.0 + 0.30 * p
+        z = 1.0 + ZOOM_IN * p
         cw, chh = min(W * S.ZOOM / z, im.width), min(H * S.ZOOM / z, im.height)
         x0, y0 = (im.width - cw) * cx, (im.height - chh) * cy
         return im.resize((W, H), Image.BILINEAR, box=(x0, y0, x0 + cw, y0 + chh))
@@ -301,7 +373,11 @@ def render(a, lang, pieces, segs, place, words, total, end_start, audio):
             "-movflags", "+faststart", str(out)]
     proc = subprocess.Popen(cmd, stdin=subprocess.PIPE)
     ci = 0
-    for fr in range(int(total * FPS) + 1):
+    rng = range(int(total * FPS) + 1)
+    if os.environ.get("FULL_PREVIEW"):  # quick check: only the given seconds, e.g. "20-30,255-270"
+        rng = [f for part in os.environ["FULL_PREVIEW"].split(",") for f in
+               range(int(float(part.split("-")[0]) * FPS), int(float(part.split("-")[1]) * FPS))]
+    for fr in rng:
         t = fr / FPS
         frame = picture(t)
         frame.paste(o_brand, (0, 0), o_brand)

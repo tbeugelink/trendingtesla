@@ -25,7 +25,7 @@ from short import W, H, FPS, font, FB, FX, YEL  # noqa: E402
 
 SPEED = {"en": "1.15", "nl": "1.15"}
 OUTRO_SAY = {"en": "Like and subscribe for more Tesla news, or go to TrendingTesla.com. I'll see you there!",
-             "nl": "Like en abonneer voor meer Tesla-nieuws, of ga naar TrendingTesla.com. Tot daar!"}
+             "nl": "Like en abonneer voor meer Tesla-nieuws, of ga naar TrendingTesla.com. Ik zie je daar!"}
 OUTRO_CARD = {"en": "LIKE & SUBSCRIBE", "nl": "LIKE & ABONNEER"}
 OUTRO_SEC = 10.0
 SCENE_MAX, ZOOM_IN = 6.0, 0.42

@@ -33,6 +33,7 @@ FB = str(ROOT / "video/fonts/Inter-Black.otf")
 FX = str(ROOT / "video/fonts/Inter-ExtraBold.otf")
 OUT = ROOT / "video/out"
 SITE = "trendingtesla.com"
+LANG = ["en"]  # language of the video being made (set in main)
 RED, YEL, BLUE = "#d61a1a", "#ffd400", "#1d5cff"
 
 
@@ -185,6 +186,8 @@ def spoken(text, lang):
 
 def tts_elevenlabs(text, out_mp3):
     key, voice = os.environ["ELEVENLABS_API_KEY"], os.environ["ELEVENLABS_VOICE_ID"]
+    if LANG[0] == "nl" and os.environ.get("ELEVENLABS_VOICE_ID_NL"):  # own Dutch voice, if set
+        voice = os.environ["ELEVENLABS_VOICE_ID_NL"]
     model = os.environ.get("ELEVENLABS_MODEL", "eleven_multilingual_v2")
     req = urllib.request.Request(
         f"https://api.elevenlabs.io/v1/text-to-speech/{voice}/with-timestamps?output_format=mp3_44100_128",
@@ -591,6 +594,7 @@ def main():
     T0 = time.time()
     args = [x for x in sys.argv[1:] if not x.startswith("--")]
     slug, lang = args[0], (args[1] if len(args) > 1 else "en")
+    LANG[0] = lang
     a = load(slug)
     OUT.mkdir(parents=True, exist_ok=True)
     title, text, outro = title_say(a, lang), script(a, lang), OUTRO[lang][1]

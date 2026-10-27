@@ -148,6 +148,7 @@ def main():
     S.OUT.mkdir(parents=True, exist_ok=True)
     pieces = build_timeline(a, lang)
     os.environ["ELEVENLABS_SPEED"] = SPEED.get(lang, "1.1")
+    S.LANG[0] = lang
     base = [S.spoken(t, lang) for _, t, _ in pieces]
     conv = [say_numbers(t, lang) for t in base]
     spoken = [c[0] for c in conv]

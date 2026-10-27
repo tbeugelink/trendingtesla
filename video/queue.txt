@@ -1,2 +1,2 @@
 how-starlink-works-satellites-lasers-dish-explained nl --full
-# 2026-10-27T22:38:31 v11: NL tempo 1.15, 'één', Tie-Mobile
+# 2026-10-27T23:33:55 v12: Engelse stem voor NL (zoals run 22), soepelere getallen

@@ -47,7 +47,7 @@ def say_fix(tok, lang):
     pre, core, post = m.groups()
     if core in SAY_NL.get("always", {}):
         return pre + SAY_NL["always"][core] + post
-    if os.environ.get("ELEVENLABS_VOICE_ID_NL"):  # a native Dutch voice needs no further respelling
+    if os.environ.get("RESPELL_NL") != "1":  # the extra respellings made the English voice sound odd; off by default
         return tok
     if core in SAY_NL["words"]:
         core = SAY_NL["words"][core]
@@ -85,6 +85,8 @@ def say_numbers(text, lang):
             out.append(tok)
             counts.append(1)
             continue
+        if lang == "nl":  # "elfduizend honderd", "vierhonderd zevenenzeventig": easier to say smoothly
+            words = re.sub(r"(duizend|honderd)(?=[a-z])", r"\1 ", words)
         if pct:
             words += " percent" if lang == "en" else " procent"
         if dollar:

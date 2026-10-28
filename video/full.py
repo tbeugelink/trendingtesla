@@ -257,7 +257,7 @@ def main():
             ins.append(f"[a{i}]")
         fl.append("".join(ins) + f"amix=inputs={len(ins)}:normalize=0:duration=longest[out]")
         subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", str(mp3), "-filter_complex", ";".join(fl), "-map", "[out]",
-                        "-c:a", "aac", "-b:a", "160k", str(audio)], check=True)
+                        "-c:a", "aac", "-b:a", "192k", str(audio)], check=True)
     else:
         audio = None
     out = render(a, lang, pieces, segs, place, words, total, end_start, audio)
@@ -404,7 +404,7 @@ def render(a, lang, pieces, segs, place, words, total, end_start, audio):
     out = S.OUT / f"{a['slug']}-{lang}-full.mp4"
     cmd = ["ffmpeg", "-loglevel", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-"]
     if audio:
-        cmd += ["-i", str(audio), "-af", "apad", "-c:a", "aac", "-b:a", "160k"]
+        cmd += ["-i", str(audio), "-af", "apad", "-c:a", "aac", "-b:a", "192k"]
     cmd += ["-t", f"{total:.2f}", "-c:v", "libx264", "-pix_fmt", "yuv420p", "-preset", "veryfast", "-crf", "21",
             "-movflags", "+faststart", str(out)]
     proc = subprocess.Popen(cmd, stdin=subprocess.PIPE)

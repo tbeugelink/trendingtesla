@@ -191,7 +191,7 @@ def tts_elevenlabs(text, out_mp3):
         voice = os.environ["ELEVENLABS_VOICE_ID_NL"]
     model = os.environ.get("ELEVENLABS_MODEL", "eleven_multilingual_v2")
     req = urllib.request.Request(
-        f"https://api.elevenlabs.io/v1/text-to-speech/{voice}/with-timestamps?output_format=mp3_44100_128",
+        f"https://api.elevenlabs.io/v1/text-to-speech/{voice}/with-timestamps?output_format=mp3_44100_192",
         data=json.dumps({"text": text, "model_id": model,
                          "voice_settings": {"stability": 0.45, "similarity_boost": 0.8, "style": 0.15,
                                             "speed": float(os.environ.get("ELEVENLABS_SPEED", "1.08"))}}).encode(),
@@ -527,7 +527,7 @@ def render(a, lang, audio, words, total, label_end, end_start):
     out = OUT / f"{a['slug']}-{lang}{'-short' if PORTRAIT else ''}.mp4"
     cmd = ["ffmpeg", "-loglevel", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-"]
     if audio:  # pad the voice with silence so it never ends before the picture
-        cmd += ["-i", str(audio), "-af", "apad", "-c:a", "aac", "-b:a", "160k"]
+        cmd += ["-i", str(audio), "-af", "apad", "-c:a", "aac", "-b:a", "192k"]
     cmd += ["-t", f"{total:.2f}", "-c:v", "libx264", "-pix_fmt", "yuv420p", "-preset", "veryfast", "-crf", "21",
             "-movflags", "+faststart", str(out)]
     proc = subprocess.Popen(cmd, stdin=subprocess.PIPE)
@@ -660,7 +660,7 @@ def main():
                       f"adelay={ms}|{ms}[a{i}]")
         fl.append("[a0][a1][a2]amix=inputs=3:normalize=0:duration=longest[out]")
         subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", str(mp3), "-filter_complex", ";".join(fl), "-map", "[out]",
-                        "-c:a", "aac", "-b:a", "160k", str(audio)], check=True)
+                        "-c:a", "aac", "-b:a", "192k", str(audio)], check=True)
     out = render(a, lang, audio, words, total, label_end, end_start)
     print(f"::notice::Video {out.name} ready after {time.time() - T0:.0f}s ({total:.0f}s long)")
     meta(a, lang, out)

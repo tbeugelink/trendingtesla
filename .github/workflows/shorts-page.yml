@@ -1,7 +1,8 @@
-name: Update Shorts page
+name: Update YouTube videos on site
 
-# Checks the public feed of the @TrendingTesla channel. As soon as a Short is public on YouTube,
-# it is added to content/shorts.json and the /shorts/ pages are rebuilt and pushed (Cloudflare deploys).
+# Checks the public feed of the @TrendingTesla channel. As soon as a video is public on YouTube,
+# it is added to the site: Shorts go to content/shorts.json (/shorts/ page), long videos to content/videos.json (shown in
+# their article); then the site is rebuilt and pushed (Cloudflare deploys).
 on:
   schedule:
     - cron: "*/15 * * * *"
@@ -26,16 +27,17 @@ jobs:
           out=$(python3 tools/sync_shorts.py)
           echo "$out"
           [ "$out" = "changed" ] && echo "changed=1" >> "$GITHUB_OUTPUT" || true
-      - name: Rebuild and push the Shorts pages
+      - name: Rebuild and push the site
         if: steps.sync.outputs.changed == '1'
         run: |
           pip install --quiet pillow
           python3 build.py > /dev/null
           git config user.name "TrendingTesla bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          # only the Shorts pages change; other pages pick up shorts.json on the next normal build
-          git add content/shorts.json public/shorts public/nl/shorts
-          git commit -m "Shorts page: new YouTube Shorts"
+          # keep the committed images (covers are made by the normal build; avoid re-encoding noise)
+          git checkout -- $(git diff --name-only -- public | grep -E '\.(jpg|jpeg|png|webp)$') 2>/dev/null || true
+          git add content/*.json public
+          git commit -m "Site: new YouTube videos"
           for i in 1 2 3; do
             git pull --rebase -q origin main && git push -q origin HEAD:main && exit 0
             sleep 10

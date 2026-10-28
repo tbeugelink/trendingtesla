@@ -48,6 +48,7 @@ jobs:
               slugs=$(echo "$q" | awk '{print $1}')
               l=$(echo "$q" | cut -s -d' ' -f2- | tr ' ' '\n' | grep -v '^--' | xargs); [ -n "$l" ] && langs="$l"
               echo "$q" | grep -q -- '--full' && echo "full=1" >> "$GITHUB_OUTPUT"
+              echo "$q" | grep -q -- '--upload' && echo "upload=1" >> "$GITHUB_OUTPUT"
               echo "queue=1" >> "$GITHUB_OUTPUT"
             fi
             echo "slugs=$slugs" >> "$GITHUB_OUTPUT"
@@ -81,6 +82,15 @@ jobs:
         run: |
           if [ -z "$YT_REFRESH_TOKEN" ]; then echo "::warning::YouTube secrets missing, skipping upload"; exit 0; fi
           for f in video/out/*-en-short.mp4; do [ -f "$f" ] && python3 video/upload.py "$f" en; done
+      - name: Upload requested queue video to YouTube
+        if: steps.find.outputs.queue == '1' && steps.find.outputs.upload == '1'
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+          YT_PRIVACY: ${{ vars.YT_PRIVACY }}
+        run: |
+          for f in video/out/*.mp4; do [ -f "$f" ] && python3 video/upload.py "$f" "$(basename "$f" | sed -E 's/.*-(en|nl)-(full|short)\.mp4/\1/')"; done
       - name: Upload videos
         if: always() && steps.find.outputs.slugs != ''
         uses: actions/upload-artifact@v5

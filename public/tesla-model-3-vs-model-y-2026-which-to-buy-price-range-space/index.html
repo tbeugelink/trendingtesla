@@ -395,5 +395,6 @@ var sp=b.querySelector('span');sp.textContent=Math.max(0,(+sp.textContent||0)+d)
 var sl=document.querySelector('.savedlist');if(sl){var keep=LS.get('tt_saved');if(!keep.length){sl.innerHTML='<p class="empty">'+e(sl.dataset.empty)+'</p>'}else{load().then(function(){var m={};idx.forEach(function(a){var k=a.u.replace(/\/$/,'').split('/').pop();m[k]=a});
 sl.innerHTML=keep.filter(function(k){return m[k]}).map(function(k){var a=m[k];return '<a class="card" href="'+a.u+'"><div class="im"><img src="'+a.i+'" alt=""></div><div class="body"><h3>'+e(a.t)+'</h3><p>'+e(a.d)+'</p><span class="meta">'+'<time class="ago" datetime="'+a.ts+'">'+e(a.dt)+'</time></span></div></a>'}).join('');ttAgo()})}}window.addEventListener('resize',bal);bal();
 })();</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "5c536a7c183844ccb97e1ac151b5d018"}'></script>
 </body>
 </html>

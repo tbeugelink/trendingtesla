@@ -211,7 +211,7 @@ PAGES = {
                "personal data through forms.</p>"
                "<p>The site is served through Cloudflare, which processes technical data such "
                "as IP addresses to deliver and protect the site. Fonts are served from our own "
-               "domain, not from third parties. We do not use tracking cookies at this moment.</p>"
+               "domain, not from third parties. We use Cloudflare Web Analytics to count visits; it does not use cookies and does not track you across sites. We do not use tracking cookies.</p>"
                "<p>If we add advertising or analytics in the future, this page will be updated "
                "first and you will be asked for consent where the law requires it.</p>"
                "<p>Saved articles and the articles you liked are stored only in your own browser (local storage), "
@@ -821,6 +821,7 @@ def page(lang, path, title, description, body, og_type="website", extra_head="",
 <div><h4>{L['d_more']}</h4><div class="flist"><a href="{url(lang, 'archive/')}">{L['archive']}</a><a href="{url(lang, 'about/')}">{L['about']}</a><a href="{url(lang, 'privacy/')}">{L['privacy']}</a><a href="{url(lang, 'feed.xml')}">RSS</a><a href="{url(alt, path)}">{L['switch_full']}</a></div></div>
 </div><p class="fcopy">&copy; {datetime.now().year} {NAME}</p></div></footer>
 <script>{JS}</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{{"token": "5c536a7c183844ccb97e1ac151b5d018"}}'></script>
 </body>
 </html>
 """

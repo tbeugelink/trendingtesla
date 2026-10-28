@@ -542,6 +542,7 @@ article.narrow > h1{margin-left:14px}article.narrow .cform{margin-left:14px}
 .res b{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:2.6em}
 .res a,.sopen .search .res a{display:flex!important;gap:12px;align-items:center}.res img,.sopen .search .res img{margin:0;flex:none;max-width:none;aspect-ratio:auto}.res a>span{flex:1;min-width:0}
 .res small{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.drawer .dmodels{display:none}.drawer .dmodels.show{display:block}
 """
 
 
@@ -888,7 +889,8 @@ def drawer(lang, active=None, model=None):
     out += "".join(f'<a class="{"on" if k == active else ""}" href="{url(lang, "category/" + k + "/")}">{btn_label(c, lang)}</a>'
                    for k, c in CATEGORIES.items() if c["menu"])
     out += f'</div><hr class="dsep"></div>'
-    out += modelnav(lang, model if model in MODELS else None)
+    show = active == "models" or model in MODELS
+    out += f'<div class="dmodels{" show" if show else ""}">' + modelnav(lang, model if model in MODELS else None) + '</div>'
     return out
 
 
@@ -1183,7 +1185,7 @@ o.onclick=function(){t(false)};(function(){var dr=document.querySelector('.drawe
 dr.addEventListener('touchstart',function(e){x0=e.touches[0].clientX;y0=e.touches[0].clientY},{passive:true});
 dr.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0,dy=e.changedTouches[0].clientY-y0;x0=null;
 if(dx<-60&&Math.abs(dx)>Math.abs(dy)*1.5)t(false)},{passive:true})})();document.querySelectorAll('.dclose').forEach(function(b){b.onclick=function(){t(false)}});
-document.querySelectorAll('.drawer .dtopics a[href$="/category/models/"]').forEach(function(a){a.addEventListener('click',function(){try{sessionStorage.setItem('tt_dm','1')}catch(_){}})});
+document.querySelectorAll('.drawer .dtopics a[href$="/category/models/"]').forEach(function(a){a.addEventListener('click',function(){var m=document.querySelector('.drawer .dmodels');if(m)m.classList.add('show');a.classList.add('on');try{sessionStorage.setItem('tt_dm','1')}catch(_){}})});
 (function(){var k=null;try{k=sessionStorage.getItem('tt_dm');sessionStorage.removeItem('tt_dm')}catch(_){}
 if(k&&window.matchMedia('(max-width:860px)').matches){d.classList.add('dnoanim');t(true);
 requestAnimationFrame(function(){requestAnimationFrame(function(){d.classList.remove('dnoanim')})})}})();

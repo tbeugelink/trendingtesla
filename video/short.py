@@ -27,7 +27,7 @@ import build  # noqa: E402
 PORTRAIT = "--portrait" in sys.argv or os.environ.get("VIDEO_FORMAT") == "portrait"
 W, H, FPS = (1080, 1920, 30) if PORTRAIT else (1920, 1080, 30)
 # layout per format: brand y, label y, caption top y, caption line height, caption size, end screen y, label width
-LAY = dict(brand=92, label=1080, cap=1460, capl=96, caps=74, end=760, lw=W - 140) if PORTRAIT else \
+LAY = dict(brand=92, label=1080, cap=1250, capl=96, caps=74, end=760, lw=W - 140) if PORTRAIT else \
       dict(brand=44, label=640, cap=880, capl=78, caps=62, end=400, lw=int(W * 0.55))
 FB = str(ROOT / "video/fonts/Inter-Black.otf")
 FX = str(ROOT / "video/fonts/Inter-ExtraBold.otf")
@@ -353,7 +353,8 @@ def label_overlay(a, lang):
         gap = 0.1 * f if i else 0
         boxes.append((gap, up, dn))
     height = sum(g + u + d for g, u, d in boxes)
-    y = H - 2.6 * cq - height
+    # vertical Shorts: keep the label out of the bottom area that YouTube covers with title and buttons
+    y = (H * 0.70 if PORTRAIT else H - 2.6 * cq) - height
     top = y
     im = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     sh = Image.new("RGBA", (W, H), (0, 0, 0, 0))

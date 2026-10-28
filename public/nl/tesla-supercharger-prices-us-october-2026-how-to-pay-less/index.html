@@ -306,6 +306,19 @@ article.narrow > h1{margin-left:14px}article.narrow .cform{margin-left:14px}
 .sopen .search .res img{width:100%;border-radius:10px;margin-bottom:8px;border:1px solid #3a4a60}
 .sopen .search .res b{font-size:1rem;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .sopen .search .res small{display:block;margin-top:3px}
+
+/* search results follow the width of the search field: narrow field -> cards with the photo on top */
+.search{container:srch/inline-size}
+.res small{display:block;line-height:1.4;margin-top:3px}
+.bar .search .res{min-width:300px}
+@container srch (max-width:400px){
+.res{padding:8px 10px}
+.res a{display:block;padding:8px 0 12px;border-bottom:1px solid var(--border2);border-radius:0}
+.res a:last-child{border-bottom:0}
+.res a:hover{background:none}.res a:hover b{color:#fff;text-decoration:underline}
+.res img{width:100%;border-radius:10px;margin-bottom:8px;border:1px solid #3a4a60}
+.res b{font-size:.95rem;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Wat kost laden bij een Tesla Supercharger in 2026? Prijzen per Amerikaanse staat en 6 manieren om minder te betalen", "description": "De prijzen bij Superchargers in de VS zijn dit jaar gestegen, met grote verschillen tussen staten en tussen leden en niet-leden. Dit kost een laadbeurt nu, en zo houd je de rekening laag.", "image": ["https://trendingtesla.com/img/tesla-supercharger-prices-us-october-2026-how-to-pay-less-nl.jpg"], "datePublished": "2026-10-24T01:10:00+02:00", "dateModified": "2026-10-24T01:10:00+02:00", "inLanguage": "nl", "articleSection": "Laden", "mainEntityOfPage": "https://trendingtesla.com/nl/tesla-supercharger-prices-us-october-2026-how-to-pay-less/", "publisher": {"@type": "Organization", "name": "TrendingTesla", "url": "https://trendingtesla.com", "logo": {"@type": "ImageObject", "url": "https://trendingtesla.com/favicon.svg"}}, "author": {"@type": "Organization", "name": "TrendingTesla", "url": "https://trendingtesla.com"}}</script>
 </head>

@@ -306,6 +306,19 @@ article.narrow > h1{margin-left:14px}article.narrow .cform{margin-left:14px}
 .sopen .search .res img{width:100%;border-radius:10px;margin-bottom:8px;border:1px solid #3a4a60}
 .sopen .search .res b{font-size:1rem;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .sopen .search .res small{display:block;margin-top:3px}
+
+/* search results follow the width of the search field: narrow field -> cards with the photo on top */
+.search{container:srch/inline-size}
+.res small{display:block;line-height:1.4;margin-top:3px}
+.bar .search .res{min-width:300px}
+@container srch (max-width:400px){
+.res{padding:8px 10px}
+.res a{display:block;padding:8px 0 12px;border-bottom:1px solid var(--border2);border-radius:0}
+.res a:last-child{border-bottom:0}
+.res a:hover{background:none}.res a:hover b{color:#fff;text-decoration:underline}
+.res img{width:100%;border-radius:10px;margin-bottom:8px;border:1px solid #3a4a60}
+.res b{font-size:.95rem;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Tesla sales rebound in Europe: France up 62%, Sweden up 38% in September", "description": "After two years of decline, Tesla's European registrations are climbing again. Early September data from France, Sweden and Norway all point up.", "image": ["https://trendingtesla.com/img/tesla-europe-september-registrations-rebound-en.jpg"], "datePublished": "2026-10-01T14:15:00+02:00", "dateModified": "2026-10-01T14:15:00+02:00", "inLanguage": "en", "articleSection": "News", "mainEntityOfPage": "https://trendingtesla.com/tesla-europe-september-registrations-rebound/", "publisher": {"@type": "Organization", "name": "TrendingTesla", "url": "https://trendingtesla.com", "logo": {"@type": "ImageObject", "url": "https://trendingtesla.com/favicon.svg"}}, "author": {"@type": "Organization", "name": "TrendingTesla", "url": "https://trendingtesla.com"}}</script>
 </head>

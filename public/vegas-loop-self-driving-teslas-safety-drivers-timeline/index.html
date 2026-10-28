@@ -306,6 +306,19 @@ article.narrow > h1{margin-left:14px}article.narrow .cform{margin-left:14px}
 .sopen .search .res img{width:100%;border-radius:10px;margin-bottom:8px;border:1px solid #3a4a60}
 .sopen .search .res b{font-size:1rem;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .sopen .search .res small{display:block;margin-top:3px}
+
+/* search results follow the width of the search field: narrow field -> cards with the photo on top */
+.search{container:srch/inline-size}
+.res small{display:block;line-height:1.4;margin-top:3px}
+.bar .search .res{min-width:300px}
+@container srch (max-width:400px){
+.res{padding:8px 10px}
+.res a{display:block;padding:8px 0 12px;border-bottom:1px solid var(--border2);border-radius:0}
+.res a:last-child{border-bottom:0}
+.res a:hover{background:none}.res a:hover b{color:#fff;text-decoration:underline}
+.res img{width:100%;border-radius:10px;margin-bottom:8px;border:1px solid #3a4a60}
+.res b{font-size:.95rem;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Self-driving Teslas in the Vegas Loop: why the tunnels still have safety drivers", "description": "Driverless Teslas in The Boring Company's Las Vegas tunnels were first expected in 2023. Here is the timeline of promises and tests, and where things stand now.", "image": ["https://trendingtesla.com/img/vegas-loop-self-driving-teslas-safety-drivers-timeline-en.jpg"], "datePublished": "2026-10-23T23:54:00+02:00", "dateModified": "2026-10-23T23:54:00+02:00", "inLanguage": "en", "articleSection": "Boring Co.", "mainEntityOfPage": "https://trendingtesla.com/vegas-loop-self-driving-teslas-safety-drivers-timeline/", "publisher": {"@type": "Organization", "name": "TrendingTesla", "url": "https://trendingtesla.com", "logo": {"@type": "ImageObject", "url": "https://trendingtesla.com/favicon.svg"}}, "author": {"@type": "Organization", "name": "TrendingTesla", "url": "https://trendingtesla.com"}}</script>
 </head>

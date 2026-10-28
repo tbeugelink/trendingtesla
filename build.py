@@ -513,6 +513,9 @@ article .imgnote{padding-bottom:20px;border-bottom:1px solid var(--border2)}
 .cform input:focus,.cform textarea:focus{outline:none;border-color:#1c62b9}
 .cform button{justify-self:start;background:#e8231c;color:#fff;border:0;border-radius:10px;font:inherit;font-weight:700;padding:11px 22px;cursor:pointer}
 .cform button:disabled{opacity:.6;cursor:default}.cform .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}.cstatus{min-height:1.4em;margin:0}
+
+/* static pages (about, privacy, contact): title and text start on the same line */
+article.narrow > h1{margin-left:14px}article.narrow .cform{margin-left:14px}
 """
 
 

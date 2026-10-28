@@ -1138,7 +1138,7 @@ def feed(lead, lead_html, rest, lang, active=None, side_title="", left_first=(),
     rubh = f'<h2 class="rubh" id="meer">{esc(CATEGORIES[active][lang])} info</h2>' if g and topic and active in CATEGORIES else ""
     if no_left and len(rest) > MAX_HOME_GRID:
         L = LANGS[lang]
-        more_link = (f'<nav class="pager"><span></span><span>{L["page"]} 1 / {1 + -(-(len(rest) + 1 - MAX_HOME_GRID) // PER_PAGE)}</span>'
+        more_link = (f'<nav class="pager"><span></span><span>{L["page"]} 1 / {1 + max(1, -(-(len(rest) + 1 - PER_PAGE) // PER_PAGE))}</span>'
                      f'<a href="{url(lang, "archive/2/")}">{L["older"]} ›</a></nav>')
     side_more = (f'<a class="morelink moredn" href="#meer">{LANGS[lang]["d_more"]} <span aria-hidden="true">↓</span></a>' if rubh
                  else f'<a class="morelink" href="{url(lang, "archive/")}">{LANGS[lang]["archive"]} →</a>')
@@ -1469,11 +1469,11 @@ def build():
         (OUT / f"search-{lang}.json").write_text(json.dumps(idx, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
 
         # ---------- Archive: all articles, newest first, paginated ----------
-        # page 1 is the news grid on the home page (MAX_HOME_GRID articles after the lead); archive/2/ continues from there
-        rest_arch = arts[1 + MAX_HOME_GRID:]
+        # every archive page holds PER_PAGE (60) articles so the rows are always full; page 1 = the newest 60
+        rest_arch = arts[PER_PAGE:]
         pages = 1 + max(1, -(-len(rest_arch) // PER_PAGE))
         for pi in range(pages):
-            chunk = arts[:1 + MAX_HOME_GRID] if pi == 0 else rest_arch[(pi - 1) * PER_PAGE:pi * PER_PAGE]
+            chunk = arts[:PER_PAGE] if pi == 0 else rest_arch[(pi - 1) * PER_PAGE:pi * PER_PAGE]
             path = "archive/" if pi == 0 else f"archive/{pi + 1}/"
             prev = (url(lang, "") + "#meer" if pi == 1 else url(lang, f"archive/{pi}/")) if pi else ""
             nxt = url(lang, f"archive/{pi + 2}/") if pi + 1 < pages else ""

@@ -26,7 +26,7 @@ permissions:
 jobs:
   shorts:
     runs-on: ubuntu-latest
-    timeout-minutes: 75
+    timeout-minutes: 110
     steps:
       - uses: actions/checkout@v5
         with:
@@ -44,6 +44,10 @@ jobs:
           else
             slugs=$(git diff --name-only --diff-filter=A HEAD~1 HEAD -- content/articles | while read f; do
               python3 -c "import json,sys; d=json.load(open('$f')); print(d['slug'] if d.get('short') else '')"; done | xargs)
+            # every new article with a "video" script also gets a long video (made after the Short)
+            longs=$(git diff --name-only --diff-filter=A HEAD~1 HEAD -- content/articles | while read f; do
+              python3 -c "import json,sys; d=json.load(open('$f')); print(d['slug'] if (d.get('video') or {}).get('en') else '')"; done | xargs)
+            echo "longs=$longs" >> "$GITHUB_OUTPUT"
             langs=en
             # video/queue.txt: first line "slug [langs]" requests a video on demand
             if git diff --name-only HEAD~1 HEAD | grep -qx video/queue.txt; then
@@ -85,6 +89,30 @@ jobs:
         run: |
           if [ -z "$YT_REFRESH_TOKEN" ]; then echo "::warning::YouTube secrets missing, skipping upload"; exit 0; fi
           for f in video/out/*-en-short.mp4; do [ -f "$f" ] && python3 video/upload.py "$f" en; done
+      - name: Make and upload long videos
+        if: steps.find.outputs.longs != '' && steps.find.outputs.queue != '1' && github.event_name != 'workflow_dispatch'
+        continue-on-error: true
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          ELEVENLABS_VOICE_ID: ${{ vars.ELEVENLABS_VOICE_ID }}
+          ELEVENLABS_VOICE_ID_NL: ${{ vars.ELEVENLABS_VOICE_ID_NL }}
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+          YT_PRIVACY: ${{ vars.YT_PRIVACY }}
+        run: |
+          fail=0
+          for s in ${{ steps.find.outputs.longs }}; do
+            python3 video/full.py "$s" en 2> err.txt || { fail=1; echo "::error::video/full.py $s en failed: $(tail -c 600 err.txt | tr '\n' ' ')"; continue; }
+            [ -n "$YT_REFRESH_TOKEN" ] && python3 video/upload.py "video/out/$s-en-full.mp4" en || fail=1
+          done
+          if [ -n "$(git status --porcelain content/video_lengths.json)" ]; then
+            git config user.name "TrendingTesla bot"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add content/video_lengths.json && git commit -qm "Video length for the site"
+            for i in 1 2 3; do git pull --rebase -q origin main && git push -q origin HEAD:main && break; sleep 10; done
+          fi
+          exit $fail
       - name: Upload requested queue video to YouTube
         if: steps.find.outputs.queue == '1' && steps.find.outputs.upload == '1'
         env:

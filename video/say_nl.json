@@ -1,7 +1,20 @@
 {
-  "_doc": "Pronunciation help for Dutch. 'always': respellings for every Dutch voice. 'words'/'parts': only when the English voice reads Dutch. Captions keep the real words.",
+  "_doc": "Pronunciation help for Dutch read by the English voice. 'always' (whole words) and 'always_parts' (inside words) are always used; 'words'/'parts' only with RESPELL_NL=1. Captions keep the real words.",
   "always": {
-    "T-Mobile": "Tie-Mobile"
+    "T-Mobile": "Tiemóbeil",
+    "sms'jes": "essemmesjes",
+    "zoveel": "zovéél",
+    "zo'n": "zon",
+    "Zo'n": "Zon",
+    "terabit": "terrabeit"
+  },
+  "always_parts": {
+    "array": "arreey",
+    "Array": "Arreey",
+    "laser": "lezer",
+    "Laser": "Lezer",
+    "gateway": "gateweey",
+    "Gateway": "Gateweey"
   },
   "words": {
     "één": "ééén",

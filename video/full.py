@@ -47,8 +47,10 @@ def say_fix(tok, lang):
     pre, core, post = m.groups()
     if core in SAY_NL.get("always", {}):
         return pre + SAY_NL["always"][core] + post
+    for k, v in SAY_NL.get("always_parts", {}).items():
+        core = core.replace(k, v)
     if os.environ.get("RESPELL_NL") != "1":  # the extra respellings made the English voice sound odd; off by default
-        return tok
+        return pre + core + post
     if core in SAY_NL["words"]:
         core = SAY_NL["words"][core]
     else:
@@ -164,7 +166,8 @@ def build_timeline(a, lang):
     pieces = [("title", S.title_say(a, lang), {"img": (a.get("images") or [])[:1]})]
     for b in blocks:
         if b.get("head"):
-            pieces.append(("head", b["head"].rstrip(".") + ".", b))
+            h = b["head"].strip()
+            pieces.append(("head", h if h.endswith(("?", "!", ".")) else h + ".", b))  # keep "?" so the voice rises
         if b.get("text"):
             pieces.append(("text", b["text"], b if not b.get("head") else {k: v for k, v in b.items() if k != "img"}))
     pieces.append(("outro", OUTRO_SAY[lang], {}))

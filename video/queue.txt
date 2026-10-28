@@ -1,2 +1,2 @@
-how-starlink-works-satellites-lasers-dish-explained nl --full
-# 2026-10-28T00:34:46 v14: feest arree, zòn, één-komma, zès, zo veel
+how-starlink-works-satellites-lasers-dish-explained en --full --upload
+# 2026-10-28T21:37:27 v15: English long video, current settings, upload to YouTube

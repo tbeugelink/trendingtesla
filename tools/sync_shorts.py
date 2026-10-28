@@ -22,6 +22,8 @@ DIR = Path(__file__).resolve().parent.parent / "content"
 FILES = {"short": DIR / "shorts.json", "long": DIR / "videos.json"}
 NS = {"a": "http://www.w3.org/2005/Atom", "yt": "http://www.youtube.com/xml/schemas/2015",
       "m": "http://search.yahoo.com/mrss/"}
+LF = DIR / "video_lengths.json"  # written by video/upload.py: {video id: seconds}
+LENGTHS = json.loads(LF.read_text(encoding="utf-8")) if LF.exists() else {}
 UA = {"User-Agent": "Mozilla/5.0 trendingtesla.com"}
 
 
@@ -61,7 +63,7 @@ def main():
         if kind == "long":
             item["lang"] = "nl" if m and m.group(1) else "en"
             prev = have["long"].get(vid, {})
-            item["seconds"] = prev.get("seconds") or seconds(vid)
+            item["seconds"] = prev.get("seconds") or LENGTHS.get(vid) or seconds(vid)
         have[kind][vid] = {**have[kind].get(vid, {}), **item}
     changed = False
     for kind, items in have.items():

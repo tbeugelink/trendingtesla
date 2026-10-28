@@ -20,6 +20,9 @@ on:
         required: false
         default: "no"
 
+permissions:
+  contents: write
+
 jobs:
   shorts:
     runs-on: ubuntu-latest
@@ -91,6 +94,12 @@ jobs:
           YT_PRIVACY: ${{ vars.YT_PRIVACY }}
         run: |
           for f in video/out/*.mp4; do [ -f "$f" ] && python3 video/upload.py "$f" "$(basename "$f" | sed -E 's/.*-(en|nl)-(full|short)\.mp4/\1/')"; done
+          if [ -n "$(git status --porcelain content/video_lengths.json)" ]; then
+            git config user.name "TrendingTesla bot"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add content/video_lengths.json && git commit -qm "Video length for the site"
+            for i in 1 2 3; do git pull --rebase -q origin main && git push -q origin HEAD:main && break; sleep 10; done
+          fi
       - name: Upload videos
         if: always() && steps.find.outputs.slugs != ''
         uses: actions/upload-artifact@v5

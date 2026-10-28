@@ -64,6 +64,15 @@ def main():
                                      headers={"Authorization": f"Bearer {at}", "Content-Type": "video/mp4"})
     with urllib.request.urlopen(put, timeout=600) as r:
         vid = json.load(r)["id"]
+    # remember the length of long videos; the site shows it ("▶ 5 min") and YouTube's feed has none
+    if mp4.name.endswith("-full.mp4"):
+        import subprocess
+        secs = round(float(subprocess.check_output(["ffprobe", "-v", "error", "-show_entries", "format=duration",
+                                                    "-of", "csv=p=0", str(mp4)], text=True).strip()))
+        lf = Path(__file__).resolve().parent.parent / "content" / "video_lengths.json"
+        lengths = json.loads(lf.read_text(encoding="utf-8")) if lf.exists() else {}
+        lengths[vid] = secs
+        lf.write_text(json.dumps(lengths, indent=2) + "\n", encoding="utf-8")
     print(f"::notice::Uploaded {mp4.name} to YouTube ({body['status']['privacyStatus']}): https://youtu.be/{vid}")
 
 

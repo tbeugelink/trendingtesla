@@ -585,7 +585,11 @@ def meta(a, lang, out):
     read = {"en": "Read the full article", "nl": "Lees het hele artikel"}[lang]
     note = {"en": "Voice-over generated with AI (ElevenLabs); script written and checked by TrendingTesla.",
             "nl": "Voice-over gemaakt met AI (ElevenLabs); tekst geschreven en gecontroleerd door TrendingTesla."}[lang]
-    txt = (f"TITLE:\n{t['title'][:95]}{' #Shorts' if PORTRAIT else ''}\n\nDESCRIPTION:\n{t['description']}\n\n{read}: {url}\n\n{note}\n\n"
+    ttl = t["title"]
+    lim = 90 if PORTRAIT else 100
+    if len(ttl) > lim:
+        ttl = ttl[:lim - 1].rsplit(" ", 1)[0].rstrip(",:;–-") + "…"
+    txt = (f"TITLE:\n{ttl}{' #Shorts' if PORTRAIT else ''}\n\nDESCRIPTION:\n{t['description']}\n\n{read}: {url}\n\n{note}\n\n"
            f"TAGS:\n{', '.join(dict.fromkeys(tags))}\n")
     out.with_suffix(".txt").write_text(txt, encoding="utf-8")
 

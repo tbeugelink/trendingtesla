@@ -3,10 +3,13 @@
   "always": {
     "T-Mobile": "Tiemóbeil",
     "sms'jes": "essemmesjes",
-    "zoveel": "zovéél",
-    "zo'n": "zon",
-    "Zo'n": "Zon",
-    "terabit": "terrabeit"
+    "zoveel": "zo veel",
+    "zo'n": "zòn",
+    "Zo'n": "Zòn",
+    "terabit": "terrabeit",
+    "Phased-array-antennes": "Feest arree antennes",
+    "phased-array-antennes": "feest arree antennes",
+    "phased-array-antenne": "feest arree antenne"
   },
   "always_parts": {
     "array": "arreey",

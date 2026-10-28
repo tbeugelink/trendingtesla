@@ -89,6 +89,7 @@ def say_numbers(text, lang):
             continue
         if lang == "nl":  # "elfduizend honderd", "vierhonderd zevenenzeventig": easier to say smoothly
             words = re.sub(r"(duizend|honderd)(?=[a-z])", r"\1 ", words)
+            words = words.replace("zes", "zès")  # otherwise the voice says "zees"
         if pct:
             words += " percent" if lang == "en" else " procent"
         if dollar:

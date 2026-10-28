@@ -234,13 +234,11 @@ PAGES = {
     },
     "contact": {
         "en": ("Contact", "Get in touch with TrendingTesla: tips, corrections and questions.",
-               "<p>Spotted a mistake, have a tip or a question? Send us a message. You can also email "
-               "<a href=\"mailto:info@trendingtesla.com\">info@trendingtesla.com</a>.</p>"
-               '<form class="cform" data-ok="Thanks! Your message has been sent. We will reply as soon as we can." data-err="Sending failed. Please try again later or email info@trendingtesla.com."><label>Name<input name="name" maxlength="100" required autocomplete="name"></label><label>Email<input name="email" type="email" maxlength="200" required autocomplete="email"></label><label class="hp" aria-hidden="true">Website<input name="website" tabindex="-1" autocomplete="off"></label><label>Message<textarea name="message" rows="7" maxlength="5000" required></textarea></label><button type="submit">Send message</button><p class="cstatus" role="status"></p></form>'),
+               "<p>Spotted a mistake, have a tip or a question? Send us a message.</p>"
+               '<form class="cform" data-ok="Thanks! Your message has been sent. We will reply as soon as we can." data-err="Sending failed. Please try again later."><label>Name<input name="name" maxlength="100" required autocomplete="name"></label><label>Email<input name="email" type="email" maxlength="200" required autocomplete="email"></label><label class="hp" aria-hidden="true">Website<input name="website" tabindex="-1" autocomplete="off"></label><label>Message<textarea name="message" rows="7" maxlength="5000" required></textarea></label><button type="submit">Send message</button><p class="cstatus" role="status"></p></form>'),
         "nl": ("Contact", "Neem contact op met TrendingTesla: tips, correcties en vragen.",
-               "<p>Een fout gezien, een tip of een vraag? Stuur ons een bericht. Mailen kan ook naar "
-               "<a href=\"mailto:info@trendingtesla.com\">info@trendingtesla.com</a>.</p>"
-               '<form class="cform" data-ok="Bedankt! Je bericht is verstuurd. We reageren zo snel mogelijk." data-err="Versturen is mislukt. Probeer het later nog eens of mail naar info@trendingtesla.com."><label>Naam<input name="name" maxlength="100" required autocomplete="name"></label><label>E-mail<input name="email" type="email" maxlength="200" required autocomplete="email"></label><label class="hp" aria-hidden="true">Website<input name="website" tabindex="-1" autocomplete="off"></label><label>Bericht<textarea name="message" rows="7" maxlength="5000" required></textarea></label><button type="submit">Verstuur bericht</button><p class="cstatus" role="status"></p></form>'),
+               "<p>Een fout gezien, een tip of een vraag? Stuur ons een bericht.</p>"
+               '<form class="cform" data-ok="Bedankt! Je bericht is verstuurd. We reageren zo snel mogelijk." data-err="Versturen is mislukt. Probeer het later nog eens."><label>Naam<input name="name" maxlength="100" required autocomplete="name"></label><label>E-mail<input name="email" type="email" maxlength="200" required autocomplete="email"></label><label class="hp" aria-hidden="true">Website<input name="website" tabindex="-1" autocomplete="off"></label><label>Bericht<textarea name="message" rows="7" maxlength="5000" required></textarea></label><button type="submit">Verstuur bericht</button><p class="cstatus" role="status"></p></form>'),
     },
 }
 

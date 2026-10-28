@@ -104,8 +104,9 @@ def pool(a, subj):
     return out
 
 
-OUTRO = {"en": ("For more information go to", "For more information, go to trendingtesla.com."),
-         "nl": ("Voor meer informatie ga naar", "Voor meer informatie, ga naar trendingtesla.com.")}
+OUTRO = {"en": ("LIKE & SUBSCRIBE", "Like and subscribe for more Tesla news, or go to TrendingTesla.com. I'll see you there!"),
+         "nl": ("LIKE & ABONNEER", "Like en abonneer voor meer Tesla-nieuws, of ga naar TrendingTesla.com. Ik zie je daar!")}
+OUTRO_SEC = 10.0
 KEEP_UPPER = {"AI", "FSD", "EV", "EVS", "USA", "US", "UK", "EU", "NHTSA", "SEC", "CEO", "CFO", "HW3", "HW4", "AI5",
               "V2", "V3", "V4", "Y", "S", "X", "3", "Q1", "Q2", "Q3", "Q4", "XAI", "BYD", "NL", "DMV", "CPUC", "MW", "GW",
               "KWH", "MWH", "GWH", "MPH", "ISO", "V2L"}
@@ -179,7 +180,7 @@ def script(a, lang):
 
 def spoken(text, lang):
     """Make numbers and symbols easier to pronounce."""
-    t = text.replace("trendingtesla.com", "Trending Tesla dot com" if lang == "en" else "Trending Tesla punt com")
+    t = re.sub(r"trendingtesla\.com", "Trending Tesla dot com" if lang == "en" else "Trending Tesla punt com", text, flags=re.I)
     t = t.replace("TrendingTesla", "Trending Tesla")
     return t
 
@@ -463,19 +464,23 @@ def render(a, lang, audio, words, total, label_end, end_start):
         d.text((60 + d.textlength("Trending", font=fbrand), LAY["brand"]), "Tesla", font=fbrand, fill="#e8231c")
 
     def ending(d):
-        """Closing card: dark see-through panel with the site name, readable on any photo."""
-        f1, f2 = font(FX, 64 if not PORTRAIT else 56), font(FB, 132 if not PORTRAIT else 104)
+        """Closing card (same as the long videos): LIKE & SUBSCRIBE in a red block above TrendingTesla.com."""
+        k = 0.66 if PORTRAIT else 1.0
+        f1, f2 = font(FB, int(60 * k)), font(FB, int(132 * k))
         l1 = OUTRO[lang][0]
-        parts = [("Trending", "#fff"), ("Tesla", "#e8231c"), (".com", YEL)]
+        parts = [("Trending", "#fff"), ("Tesla", "#e8231c"), (".com", "#fff")]
         w2 = sum(d.textlength(x, font=f2) for x, _ in parts)
-        w = max(d.textlength(l1, font=f1), w2) + 140
-        h = 330 if not PORTRAIT else 290
+        w = max(d.textlength(l1, font=f1) + 60 * k, w2) + 140 * k
+        h = 360 * k
         x0, y0 = (W - w) / 2, (H - h) / 2
         d.rounded_rectangle([x0, y0, x0 + w, y0 + h], radius=36, fill=(0, 0, 0, 175))
-        d.text(((W - d.textlength(l1, font=f1)) / 2, y0 + 60), l1, font=f1, fill="#fff")
+        bw = d.textlength(l1, font=f1) + 60 * k
+        bx = (W - bw) / 2
+        d.rounded_rectangle([bx, y0 + 44 * k, bx + bw, y0 + 136 * k], radius=14, fill="#e8231c")
+        d.text((W / 2, y0 + 90 * k), l1, font=f1, fill="#fff", anchor="mm")
         x = (W - w2) / 2
         for txt, col in parts:
-            d.text((x, y0 + 140), txt, font=f2, fill=col)
+            d.text((x, y0 + 172 * k), txt, font=f2, fill=col)
             x += d.textlength(txt, font=f2)
 
     o_brand, o_end = overlay(brand), overlay(ending)
@@ -644,7 +649,7 @@ def main():
     label_end = t_title + durs[0] + 0.25
     t_body = t_title + durs[0] + 0.7
     end_start = t_body + durs[1] + 0.4
-    total = end_start + max(5.0, durs[2] + 0.8)
+    total = end_start + max(OUTRO_SEC, durs[2] + 0.8)
     words = [(w, s0 + t_body, e0 + t_body) for w, s0, e0 in body_words]
     if have_voice:
         audio = OUT / f"{slug}-{lang}.m4a"

@@ -313,8 +313,10 @@ def render(a, lang, pieces, segs, place, words, total, end_start, audio):
     fbrand, fcap = font(FX, 50), font(FB, S.LAY["caps"])
 
     def brand(d):
-        d.text((60, S.LAY["brand"]), "Trending", font=fbrand, fill="#fff")
-        d.text((60 + d.textlength("Trending", font=fbrand), S.LAY["brand"]), "Tesla", font=fbrand, fill="#e8231c")
+        # thin dark edge + slightly lighter red: stays sharp after video compression (red loses detail first)
+        d.text((60, S.LAY["brand"]), "Trending", font=fbrand, fill="#fff", stroke_width=2, stroke_fill=(10, 10, 12))
+        d.text((60 + d.textlength("Trending", font=fbrand), S.LAY["brand"]), "Tesla", font=fbrand, fill="#ff2d24",
+               stroke_width=2, stroke_fill=(10, 10, 12))
 
     def ending(d):
         """Closing card: LIKE & SUBSCRIBE above TrendingTesla.com (white / red / white)."""
@@ -405,7 +407,9 @@ def render(a, lang, pieces, segs, place, words, total, end_start, audio):
     cmd = ["ffmpeg", "-loglevel", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-"]
     if audio:
         cmd += ["-i", str(audio), "-af", "apad", "-c:a", "aac", "-b:a", "192k"]
-    cmd += ["-t", f"{total:.2f}", "-c:v", "libx264", "-pix_fmt", "yuv420p", "-preset", "veryfast", "-crf", "21",
+    # delivered at 1440p: YouTube then streams it with a much higher bitrate, so text stays sharp
+    cmd += ["-vf", "scale=2560:1440:flags=lanczos"]
+    cmd += ["-t", f"{total:.2f}", "-c:v", "libx264", "-pix_fmt", "yuv420p", "-preset", "veryfast", "-crf", "18",
             "-movflags", "+faststart", str(out)]
     proc = subprocess.Popen(cmd, stdin=subprocess.PIPE)
     ci = 0

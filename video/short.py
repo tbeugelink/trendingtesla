@@ -460,8 +460,10 @@ def render(a, lang, audio, words, total, label_end, end_start):
     fbrand, fcap = font(FX, 50), font(FB, LAY["caps"])
 
     def brand(d):
-        d.text((60, LAY["brand"]), "Trending", font=fbrand, fill="#fff")
-        d.text((60 + d.textlength("Trending", font=fbrand), LAY["brand"]), "Tesla", font=fbrand, fill="#e8231c")
+        # thin dark edge + slightly lighter red: stays sharp after video compression (red loses detail first)
+        d.text((60, LAY["brand"]), "Trending", font=fbrand, fill="#fff", stroke_width=2, stroke_fill=(10, 10, 12))
+        d.text((60 + d.textlength("Trending", font=fbrand), LAY["brand"]), "Tesla", font=fbrand, fill="#ff2d24",
+               stroke_width=2, stroke_fill=(10, 10, 12))
 
     def ending(d):
         """Closing card (same as the long videos): LIKE & SUBSCRIBE in a red block above TrendingTesla.com."""
@@ -528,7 +530,7 @@ def render(a, lang, audio, words, total, label_end, end_start):
     cmd = ["ffmpeg", "-loglevel", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-"]
     if audio:  # pad the voice with silence so it never ends before the picture
         cmd += ["-i", str(audio), "-af", "apad", "-c:a", "aac", "-b:a", "192k"]
-    cmd += ["-t", f"{total:.2f}", "-c:v", "libx264", "-pix_fmt", "yuv420p", "-preset", "veryfast", "-crf", "21",
+    cmd += ["-t", f"{total:.2f}", "-c:v", "libx264", "-pix_fmt", "yuv420p", "-preset", "veryfast", "-crf", "18",
             "-movflags", "+faststart", str(out)]
     proc = subprocess.Popen(cmd, stdin=subprocess.PIPE)
     black, white = Image.new("RGB", (W, H)), Image.new("RGB", (W, H), "#fff")

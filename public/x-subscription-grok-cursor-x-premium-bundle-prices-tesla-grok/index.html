@@ -298,6 +298,14 @@ article .imgnote{padding-bottom:20px;border-bottom:1px solid var(--border2)}
 
 /* static pages (about, privacy, contact): title and text start on the same line */
 article.narrow > h1{margin-left:14px}article.narrow .cform{margin-left:14px}
+
+/* mobile search: results attach to the bar, fill the screen, cards with the photo on top */
+.sopen .search .res{top:100%;left:0;right:0;margin:0;border-radius:0 0 10px 10px;border-top:0;max-height:calc(100vh - 56px);max-height:calc(100dvh - 56px);padding:10px 12px}
+.sopen .search .res a{display:block;padding:8px 0 12px;border-bottom:1px solid var(--border2);border-radius:0}
+.sopen .search .res a:last-child{border-bottom:0}
+.sopen .search .res img{width:100%;border-radius:10px;margin-bottom:8px;border:1px solid #3a4a60}
+.sopen .search .res b{font-size:1rem;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.sopen .search .res small{display:block;margin-top:3px}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "The new X Subscription bundles Grok, Grok Bot, Cursor and X Premium from $8 a month: what it means for Grok in your Tesla", "description": "Musk's AI company has merged its consumer plans into one X Subscription with five tiers, from free to $200 a month. Here are the prices, what each tier includes, and how it relates to the Grok features in Tesla cars.", "image": ["https://trendingtesla.com/img/x-subscription-grok-cursor-x-premium-bundle-prices-tesla-grok-en.jpg"], "datePublished": "2026-10-13T10:00:00+02:00", "dateModified": "2026-10-13T10:00:00+02:00", "inLanguage": "en", "articleSection": "xAI / Grok", "mainEntityOfPage": "https://trendingtesla.com/x-subscription-grok-cursor-x-premium-bundle-prices-tesla-grok/", "publisher": {"@type": "Organization", "name": "TrendingTesla", "url": "https://trendingtesla.com", "logo": {"@type": "ImageObject", "url": "https://trendingtesla.com/favicon.svg"}}, "author": {"@type": "Organization", "name": "TrendingTesla", "url": "https://trendingtesla.com"}}</script>
 </head>

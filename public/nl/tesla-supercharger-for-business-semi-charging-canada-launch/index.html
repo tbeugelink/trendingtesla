@@ -319,6 +319,8 @@ article.narrow > h1{margin-left:14px}article.narrow .cform{margin-left:14px}
 .res img{width:100%;border-radius:10px;margin-bottom:8px;border:1px solid #3a4a60}
 .res b{font-size:.95rem;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 }
+
+.res a{align-items:flex-start}.res img{object-fit:cover;max-width:40%}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Canadese bedrijven kunnen nu zelf Tesla Superchargers en Megachargers voor de Semi kopen", "description": "Tesla heeft Supercharger for Business en Semi Charging for Business gelanceerd in Canada. Bedrijven kopen minimaal vier V4-palen of twee truckladers, bepalen zelf de prijs en Tesla verzorgt het onderhoud.", "image": ["https://trendingtesla.com/img/tesla-supercharger-for-business-semi-charging-canada-launch-nl.jpg"], "datePublished": "2026-10-23T13:05:00+02:00", "dateModified": "2026-10-23T13:05:00+02:00", "inLanguage": "nl", "articleSection": "Laden", "mainEntityOfPage": "https://trendingtesla.com/nl/tesla-supercharger-for-business-semi-charging-canada-launch/", "publisher": {"@type": "Organization", "name": "TrendingTesla", "url": "https://trendingtesla.com", "logo": {"@type": "ImageObject", "url": "https://trendingtesla.com/favicon.svg"}}, "author": {"@type": "Organization", "name": "TrendingTesla", "url": "https://trendingtesla.com"}}</script>
 </head>
@@ -387,7 +389,7 @@ function load(){return idx?Promise.resolve(idx):fetch(f.dataset.idx).then(functi
 i.addEventListener('focus',load);
 i.addEventListener('input',function(){var q=i.value.trim().toLowerCase();if(q.length<2){r.hidden=true;return}
 load().then(function(){var w=q.split(/\s+/),h=idx.filter(function(a){var s=(a.t+' '+a.d+' '+a.c).toLowerCase();return w.every(function(x){return s.indexOf(x)>-1})}).slice(0,8);
-r.innerHTML=h.length?h.map(function(a){return '<a href="'+a.u+'"><img src="'+a.i+'" alt=""><span><b>'+e(a.t)+'</b><small>'+e(a.c)+' · '+e(a.dt)+'</small></span></a>'}).join(''):'<p>'+e(f.dataset.none)+'</p>';r.hidden=false})});
+r.innerHTML=h.length?h.map(function(a){return '<a href="'+a.u+'"><img src="'+a.i+'" alt=""><span><b>'+e(a.t)+'</b><small>'+e(a.c)+' · '+e(a.dt)+'</small></span></a>'}).join(''):'<p>'+e(f.dataset.none)+'</p>';r.hidden=false;[].forEach.call(r.querySelectorAll('a'),function(x){var im=x.querySelector('img'),t=x.querySelector('span');if(!im||!t)return;if(getComputedStyle(x).display=='flex'){im.style.height=t.offsetHeight+'px';im.style.width='auto'}else{im.style.height='';im.style.width=''}})})});
 f.addEventListener('submit',function(x){x.preventDefault();var a=r.querySelector('a');if(a)location.href=a.href});
 document.addEventListener('click',function(x){if(!f.contains(x.target)&&!x.target.closest('.sbtn')){r.hidden=true;d.classList.remove('sopen')}});
 document.querySelector('.sbtn').onclick=function(){d.classList.add('sopen');i.focus()};

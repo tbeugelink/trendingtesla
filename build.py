@@ -70,6 +70,7 @@ LANGS = {
                 ("Explained, not copied", "Our own articles: what happened, why it matters and what to watch."),
                 ("Sources included", "Every article links to the sources we used, so you can check them."),
                 ("Always free", "If you buy through our links we may earn a small commission, at no extra cost to you.")],
+        "imgnote": "Images are illustrations.",
         "disclaimer": "TrendingTesla is an independent site and is not affiliated with Tesla, Inc. Nothing on this site is financial advice.",
         "months": ["January", "February", "March", "April", "May", "June", "July",
                    "August", "September", "October", "November", "December"],
@@ -84,7 +85,7 @@ LANGS = {
         "latest": "Laatste nieuws", "more": "Meer nieuws", "top": "Hoofdverhaal",
         "models_h": "Nieuws en advies voor jouw model", "guides_h": "De beste keuzes voor je Tesla",
         "guides_sub": "Uitgezocht per model en bouwjaar, met plus- en minpunten.",
-        "related": "Lees ook", "sources": "Bronnen", "about": "Over ons", "privacy": "Privacy",
+        "related": "Lees ook", "sources": "Bronnen", "imgnote": "Afbeeldingen zijn illustraties.", "about": "Over ons", "privacy": "Privacy",
         "switch": "EN", "switch_full": "English", "i_specs": "Specificaties", "i_watch": "Aandachtspunten", "i_special": "Bijzonderheden", "i_acc": "Accessoires", "i_acc_soon": "Binnenkort: accessoires die op deze uitvoering passen, getest en uitgelegd.", "slogan": "Iedere dag het laatste nieuws &amp; trends", "search": "Zoek in Tesla-nieuws", "none": "Niets gevonden", "home": "Home", "collapse": "Inklappen", "like": "Vind ik leuk", "save": "Bewaren", "saved_btn": "Bewaard", "saved": "Bewaarde artikelen", "saved_empty": "Je hebt nog geen artikelen bewaard. Tik op Bewaren onder de titel van een artikel om het hier terug te vinden. Bewaarde artikelen blijven in deze browser op dit apparaat.", "archive": "Alle nieuws", "newer": "Nieuwer", "older": "Ouder", "page": "Pagina", "d_topics": "Onderwerpen", "d_models": "Modellen", "d_more": "Meer", "menu": "Menu", "tip_h": "Een 22 kW-laadpaal laadt je Tesla niet sneller", "tip_p": "Veel Tesla-modellen laden thuis met maximaal 11 kW AC.", "tip_btn": "Lees waarom", "tips": [("HW4", "Tweedehands Model 3 kopen? Check eerst de hardware", "De Highland heeft HW4, oudere Model 3's HW3. Dat bepaalt wat FSD kan.", "Zo check je het", "used-model-3-highland-vs-classic-hw3-hw4-buying-guide"), ("−20%", "Minder bereik in de winter? Dat hoeft niet", "Met voorverwarmen en de juiste instellingen houd je meer kilometers over.", "9 wintertips", "tesla-winter-range-tips-cold-weather")],
         "empty": "Hier staan nog geen artikelen. Er verschijnen meerdere keren per dag nieuwe verhalen.",
         "cat_intro": "Alle artikelen van TrendingTesla over {}.",
@@ -175,6 +176,8 @@ PAGES = {
                "<p>Several times a day we pick the stories that matter most and explain them in "
                "plain language: what happened, why it matters and what to watch next. We write "
                "our own articles and always link to the sources we used, so you can check them.</p>"
+               "<p>Most images on this site are illustrations made for TrendingTesla, not news photos. "
+               "They show the subject of an article, not the exact event, place or vehicle.</p>"
                "<p>Articles are researched and written with the help of AI and published "
                "under editorial supervision. Spotted a mistake? We correct it as soon as we "
                "know about it.</p>"
@@ -190,6 +193,8 @@ PAGES = {
                "helder uit: wat er gebeurde, waarom het ertoe doet en waar je op moet letten. We "
                "schrijven onze eigen artikelen en linken altijd naar de bronnen die we gebruikten, "
                "zodat je ze kunt controleren.</p>"
+               "<p>De meeste afbeeldingen op deze site zijn illustraties die voor TrendingTesla zijn gemaakt, geen nieuwsfoto's. "
+               "Ze tonen het onderwerp van een artikel, niet de precieze gebeurtenis, plek of auto.</p>"
                "<p>Artikelen worden met hulp van AI onderzocht en geschreven en onder "
                "redactioneel toezicht gepubliceerd. Een fout gezien? We verbeteren hem zodra "
                "we ervan weten.</p>"
@@ -487,6 +492,8 @@ article .prose{font-size:15px}article .prose h2{font-size:.98rem}.grid2{grid-tem
 
 /* shadow edge at the very top: 60px, dark fading down, behind the logo and controls */
 header.top::before{content:"";position:absolute;left:0;right:0;top:0;height:60px;background:linear-gradient(#0f0f0f,rgba(15,15,15,0));pointer-events:none;z-index:-1}
+
+.imgnote{color:var(--muted);font-size:.8rem;margin:10px 0 0;opacity:.8}
 """
 
 
@@ -859,6 +866,7 @@ def story(a, lang, tag="h1"):
         items = "".join(f'<li><a href="{esc(s["url"])}" rel="nofollow noopener" target="_blank">{esc(s["title"])}</a></li>'
                         for s in a["sources"])
         src = f'<details class="sources"><summary>{L["sources"]} ({len(a["sources"])})</summary><ul>{items}</ul></details>'
+    src += f'<p class="imgnote">{L["imgnote"]}</p>'
     chips = ""
     if a.get("models"):
         chips = '<div class="chips">' + "".join(

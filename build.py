@@ -539,6 +539,7 @@ article.narrow > h1{margin-left:14px}article.narrow .cform{margin-left:14px}
 }
 
 .res a{align-items:flex-start}.res img{object-fit:cover;max-width:40%}
+.res b{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:2.6em}
 """
 
 

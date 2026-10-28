@@ -37,7 +37,12 @@ export class Likes extends DurableObject {
     for (const k of [key, "*"]) {
       this.sql.exec("INSERT INTO contact_rate (k, n, t) VALUES (?, 1, ?) ON CONFLICT(k) DO UPDATE SET n = n + 1", k, hour);
     }
+    // wipe the hashed IPs automatically shortly after the hour ends
+    this.ctx.storage.setAlarm((hour + 1) * 3600000 + 60000);
     return true;
+  }
+  alarm() {
+    this.sql.exec("DELETE FROM contact_rate WHERE t < ?", Math.floor(Date.now() / 3600000));
   }
 }
 

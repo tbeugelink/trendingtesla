@@ -1,0 +1,37 @@
+name: IndexNow
+on:
+  push:
+    branches: [main]
+    paths: ["content/articles/**"]
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Notify search engines of new/changed articles
+        env:
+          BEFORE: ${{ github.event.before }}
+          AFTER: ${{ github.sha }}
+        run: |
+          python3 - <<'PY'
+          import json, os, subprocess, time, urllib.request
+          b, a = os.environ["BEFORE"], os.environ["AFTER"]
+          try:
+              files = subprocess.check_output(["git", "diff", "--name-only", "--diff-filter=AM", b, a, "--", "content/articles/"], text=True).split()
+          except Exception:
+              files = subprocess.check_output(["git", "diff", "--name-only", "--diff-filter=AM", "HEAD~1", "HEAD", "--", "content/articles/"], text=True).split()
+          urls = []
+          for f in files:
+              if f.endswith(".json") and os.path.exists(f):
+                  s = json.load(open(f))["slug"]
+                  urls += [f"https://trendingtesla.com/{s}/", f"https://trendingtesla.com/nl/{s}/"]
+          if not urls:
+              print("nothing to ping"); raise SystemExit
+          time.sleep(240)  # let Cloudflare finish deploying
+          body = json.dumps({"host": "trendingtesla.com", "key": "898140fa5384efdf934027b6d7051b19", "keyLocation": "https://trendingtesla.com/898140fa5384efdf934027b6d7051b19.txt", "urlList": urls[:10000]}).encode()
+          req = urllib.request.Request("https://api.indexnow.org/indexnow", data=body, headers={"Content-Type": "application/json; charset=utf-8"})
+          r = urllib.request.urlopen(req, timeout=60)
+          print("IndexNow", r.status, len(urls), "urls")
+          PY

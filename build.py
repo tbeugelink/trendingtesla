@@ -1540,7 +1540,26 @@ def build():
     write("/sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>'
           '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">'
           f"{urls}</urlset>")
-    write("/robots.txt", f"User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n")
+    # Google News sitemap: articles from the last 2 days
+    from zoneinfo import ZoneInfo
+    cutoff = datetime.now(timezone.utc).timestamp() - 2 * 86400
+    news = ""
+    for a in arts:
+        try:
+            dt = datetime.strptime(a["date"] + " " + a.get("time", "12:00"), "%Y-%m-%d %H:%M").replace(tzinfo=ZoneInfo("Europe/Amsterdam"))
+        except ValueError:
+            continue
+        if dt.timestamp() < cutoff:
+            continue
+        for lang in LANGS:
+            news += (f"<url><loc>{SITE + url(lang, a['slug'] + '/')}</loc><news:news><news:publication><news:name>{NAME}</news:name>"
+                     f"<news:language>{lang}</news:language></news:publication><news:publication_date>{dt.isoformat()}</news:publication_date>"
+                     f"<news:title>{esc(a[lang]['title'])}</news:title></news:news></url>")
+    write("/news-sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>'
+          '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">'
+          f"{news}</urlset>")
+    write("/898140fa5384efdf934027b6d7051b19.txt", "898140fa5384efdf934027b6d7051b19")
+    write("/robots.txt", f"User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\nSitemap: {SITE}/news-sitemap.xml\n")
     write("/favicon.svg",
           '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#e22822"/>'
           '<text x="32" y="45" font-family="system-ui,sans-serif" font-size="38" font-weight="800" fill="#fff" text-anchor="middle">T</text></svg>')

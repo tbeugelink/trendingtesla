@@ -402,7 +402,7 @@ article .st{font-size:clamp(1.05rem,2vw,1.3rem);line-height:1.22;letter-spacing:
 .card.lead h3{font-size:clamp(1.35rem,2.4vw,1.85rem);line-height:1.2;letter-spacing:-.02em}
 .card.lead p{font-size:1rem;-webkit-line-clamp:2}
 .card .body{padding:18px 4px 0}
-.card h3{font-size:1.08rem;line-height:1.3;margin:6px 0 6px}.card h3{font-weight:700;color:#ebebeb}.grid2>.card h3{font-size:1rem}.mini h3{font-weight:700;font-size:.9rem;color:#ebebeb}.mini h3{margin-top:0}.meta>time.ago::before{content:'';display:inline-block;width:.62em;height:.72em;margin-right:.42em;vertical-align:-.04em;background:currentColor;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 12'%3E%3Cpath d='M1.2 1.2v9.6L9 6z' fill='none' stroke='black' stroke-width='1.6' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 12'%3E%3Cpath d='M1.2 1.2v9.6L9 6z' fill='none' stroke='black' stroke-width='1.6' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat}.smeta time.ago::before{content:none}.mini .mdesc{margin-bottom:0}.mini .meta{display:block;margin-top:3px;line-height:1.3}@media (min-width:905px){.rside .mini>div:not(.th){padding-top:0;contain:size;overflow:visible}.rside .mini h3{margin-top:0;line-height:1.22}.rside .mini .mdesc{line-height:1.25}.rside .mini .meta{margin-top:2px}}.mdesc{color:var(--muted);font-size:.8rem;line-height:1.35;margin:0 0 4px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}@media (max-width:904.98px){.rside .mini h3{-webkit-line-clamp:2}.rside .mini .mdesc{-webkit-line-clamp:1}}.mini .meta{font-size:.74rem}
+.card h3{font-size:1.08rem;line-height:1.3;margin:6px 0 6px}.card h3{font-weight:700;color:#ebebeb}.grid2>.card h3{font-size:1rem}.mini h3{font-weight:700;font-size:.9rem;color:#ebebeb}.mini h3{margin-top:0}.meta>time.ago::before{content:'';display:inline-block;width:.62em;height:.72em;margin-right:.42em;vertical-align:-.04em;background:currentColor;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 12'%3E%3Cpath d='M1.2 1.2v9.6L9 6z' fill='none' stroke='black' stroke-width='1.6' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 12'%3E%3Cpath d='M1.2 1.2v9.6L9 6z' fill='none' stroke='black' stroke-width='1.6' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat}.smeta time.ago::before{content:none}.mini .mdesc{margin-bottom:0}.mini .meta{display:block;margin-top:3px;line-height:1.3}@media (min-width:905px){.rside .mini>div:not(.th){padding-top:0;contain:size;overflow:visible}.rside .mini h3{margin-top:0;line-height:1.22}.rside .mini .mdesc{line-height:1.25}.rside .mini .meta{margin-top:2px}}.mdesc{color:var(--muted);font-size:.8rem;line-height:1.35;margin:0 0 4px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}@media (max-width:904.98px){.rside .mini h3{-webkit-line-clamp:2}.rside .mini .mdesc{-webkit-line-clamp:1}}.shintro{color:var(--muted);margin:4px 0 18px;font-size:.95rem}.shintro a{color:inherit}.shgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:22px 14px}.shc{display:flex;flex-direction:column;gap:6px;min-width:0}.shv{position:relative;display:block;width:100%;aspect-ratio:9/16;padding:0;border:0;border-radius:10px;overflow:hidden;background:#000;cursor:pointer}.shv img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s}.shv:hover img{transform:scale(1.04)}.shv iframe{position:absolute;inset:0;width:100%;height:100%;border:0}.shp{position:absolute;left:50%;top:50%;width:54px;height:54px;margin:-27px 0 0 -27px;border-radius:50%;background:rgba(0,0,0,.55);box-shadow:0 0 0 2px rgba(255,255,255,.85)}.shp::after{content:"";position:absolute;left:21px;top:16px;border-left:17px solid #fff;border-top:11px solid transparent;border-bottom:11px solid transparent}.sht{font-weight:700;font-size:.92rem;line-height:1.3;color:#ebebeb;text-decoration:none;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}a.sht:hover{text-decoration:underline}.shc .meta{font-size:.74rem}@media (max-width:600.98px){.shgrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 10px}}.mini .meta{font-size:.74rem}
 .card p{color:var(--muted);font-size:.9rem;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
 .empty{color:var(--muted);background:var(--surface);border:1px dashed var(--border2);border-radius:10px;padding:28px;text-align:center}
 /* models */
@@ -850,7 +850,7 @@ def page(lang, path, title, description, body, og_type="website", extra_head="",
 <div class="fbrand"><a class="logo" href="{url(lang)}">Trending<span>Tesla</span></a><p>{L['tagline']} {L['disclaimer']}</p></div>
 <div><h4>{L['d_topics']}</h4><div class="flist two">{fcats}</div></div>
 <div><h4>{L['d_models']}</h4><div class="flist">{fmods}</div></div>
-<div><h4>{L['d_more']}</h4><div class="flist"><a href="{url(lang, 'archive/')}">{L['archive']}</a><a href="{url(lang, 'about/')}">{L['about']}</a><a href="{url(lang, 'privacy/')}">{L['privacy']}</a><a href="{url(lang, 'contact/')}">Contact</a><a href="{url(lang, 'terms/')}">{'Terms' if lang == 'en' else 'Voorwaarden'}</a><a href="https://www.youtube.com/@TrendingTesla" rel="noopener" target="_blank">YouTube</a><a href="{url(lang, 'feed.xml')}">RSS</a><a href="{url(alt, path)}">{L['switch_full']}</a></div></div>
+<div><h4>{L['d_more']}</h4><div class="flist"><a href="{url(lang, 'archive/')}">{L['archive']}</a><a href="{url(lang, 'about/')}">{L['about']}</a><a href="{url(lang, 'privacy/')}">{L['privacy']}</a><a href="{url(lang, 'contact/')}">Contact</a><a href="{url(lang, 'terms/')}">{'Terms' if lang == 'en' else 'Voorwaarden'}</a><a href="{url(lang, 'shorts/')}">Shorts</a><a href="https://www.youtube.com/@TrendingTesla" rel="noopener" target="_blank">YouTube</a><a href="{url(lang, 'feed.xml')}">RSS</a><a href="{url(alt, path)}">{L['switch_full']}</a></div></div>
 </div><p class="fcopy">&copy; {datetime.now().year} {NAME}</p></div></footer>
 <script>{JS}</script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{{"token": "5c536a7c183844ccb97e1ac151b5d018"}}'></script>
@@ -1507,6 +1507,32 @@ def build():
                 f'<div class="grid2 gall wide savedlist" data-empty="{esc(L["saved_empty"])}"></div></section>')
         write(url(lang, "saved/"), page(lang, "saved/", L["saved"], L["saved"], body).replace("<head>", '<head>\n<meta name="robots" content="noindex">', 1))
 
+        # ---------- YouTube Shorts (content/shorts.json, kept up to date by tools/sync_shorts.py) ----------
+        sf = ROOT / "content" / "shorts.json"
+        shorts = json.loads(sf.read_text(encoding="utf-8")) if sf.exists() else []
+        by_slug = {a["slug"]: a for a in arts}
+        en = lang == "en"
+        cards = ""
+        for sh in shorts:
+            a = by_slug.get(sh.get("slug"))
+            t = a[lang]["title"] if a else sh["title"]
+            dt = sh["published"]
+            cap = (f'<a class="sht" href="{url(lang, a["slug"] + "/")}">{esc(t)}</a>' if a else f'<span class="sht">{esc(t)}</span>')
+            cards += (f'<div class="shc"><button class="shv" type="button" data-id="{esc(sh["id"])}" aria-label="{"Play" if en else "Afspelen"}: {esc(t)}">'
+                      f'<img src="https://i.ytimg.com/vi/{esc(sh["id"])}/hqdefault.jpg" alt="" loading="lazy" width="480" height="360">'
+                      f'<span class="shp" aria-hidden="true"></span></button>{cap}'
+                      f'<span class="meta"><time class="ago" datetime="{esc(dt)}">{fmt_date(dt[:10], lang)}</time></span></div>')
+        intro = ("Tesla news in under a minute. New Shorts appear here as soon as they are live on YouTube."
+                 if en else "Tesla-nieuws in minder dan een minuut. Nieuwe Shorts verschijnen hier zodra ze live staan op YouTube.")
+        empty = "No Shorts yet, check back soon." if en else "Nog geen Shorts, kijk binnenkort nog eens."
+        body = (f'<section class="wide"><h1 class="st archh">Shorts</h1><p class="shintro">{intro} '
+                f'<a href="https://www.youtube.com/@TrendingTesla" rel="noopener" target="_blank">@TrendingTesla</a></p>'
+                f'<div class="shgrid">{cards or f"<p class=shintro>{empty}</p>"}</div></section>'
+                "<script>document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('.shv');if(!b||b.classList.contains('on'))return;"
+                "b.classList.add('on');b.innerHTML='<iframe src=\"https://www.youtube-nocookie.com/embed/'+b.dataset.id+'?autoplay=1&playsinline=1&rel=0\" "
+                "title=\"YouTube\" allow=\"autoplay; encrypted-media; picture-in-picture; fullscreen\" allowfullscreen></iframe>'})</script>")
+        write(url(lang, "shorts/"), page(lang, "shorts/", "Shorts", intro, body))
+
         # ---------- Static pages ----------
         for key, p in PAGES.items():
             title, desc, content = p[lang]
@@ -1537,6 +1563,7 @@ def build():
     entries = ([("", today)] + [(a["slug"] + "/", a.get("updated", a["date"])[:10]) for a in arts]
                + [(f"category/{k}/", today) for k in CATEGORIES] + [(f"model/{k}/", today) for k in MODELS]
                + [(k + "/", today) for k in PAGES]
+               + [("shorts/", today)]
                + [("archive/" if i == 0 else f"archive/{i + 1}/", today) for i in range(ARCH_PAGES[0])])
     urls = ""
     for path, mod in entries:

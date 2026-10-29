@@ -86,6 +86,9 @@ def main():
     # remember the length of long videos; the site shows it ("▶ 4:15") and YouTube's feed has none
     if mp4.name.endswith("-full.mp4"):
         set_thumbnail(vid, mp4, at)
+        sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "tools"))
+        import yt_playlists  # topic playlist on YouTube (needs the youtube scope; never fails the upload)
+        yt_playlists.add(vid, mp4.name.rsplit(f"-{lang}-full.mp4", 1)[0], at)
         import subprocess
         secs = round(float(subprocess.check_output(["ffprobe", "-v", "error", "-show_entries", "format=duration",
                                                     "-of", "csv=p=0", str(mp4)], text=True).strip()))

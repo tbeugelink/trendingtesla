@@ -214,9 +214,9 @@ def run(slug):
         return
     out, used, mdl = make(g)
     old = a.get("image") if str(a.get("image", "")).startswith(f"gen/{slug}") else None
-    rel, n = f"gen/{slug}.jpg", 2
-    while (IMG / rel).exists():  # a redo gets a new file name, so no browser or CDN shows the old photo
-        rel, n = f"gen/{slug}-{n}.jpg", n + 1
+    rel = f"gen/{slug}.jpg"
+    if old or (IMG / rel).exists():  # a redo gets a fresh file name, so no browser or CDN shows the old photo
+        rel = f"gen/{slug}-{datetime.now(timezone.utc).strftime('%m%d%H%M')}.jpg"
     if old:  # replacing a wrong photo: drop it everywhere
         (IMG / old).unlink(missing_ok=True)
         a["images"] = [x for x in a.get("images", []) if x != old]

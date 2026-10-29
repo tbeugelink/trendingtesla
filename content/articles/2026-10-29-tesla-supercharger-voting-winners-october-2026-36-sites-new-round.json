@@ -18,7 +18,7 @@
     }
   ],
   "images": [
-    "gen/tesla-supercharger-voting-winners-october-2026-36-sites-new-round.jpg",
+    "gen/tesla-supercharger-voting-winners-october-2026-36-sites-new-round-10291545.jpg",
     "supercharger.jpg",
     "supercharger-2.jpg",
     "supercharger-4.jpg"
@@ -254,5 +254,5 @@
     "done": true,
     "model": "gemini-3.1-flash-image"
   },
-  "image": "gen/tesla-supercharger-voting-winners-october-2026-36-sites-new-round.jpg"
+  "image": "gen/tesla-supercharger-voting-winners-october-2026-36-sites-new-round-10291545.jpg"
 }

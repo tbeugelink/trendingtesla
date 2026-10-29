@@ -288,5 +288,9 @@
         ]
       }
     ]
+  },
+  "short": {
+    "en": "Old satellite internet was slow for one reason: the satellites sat 36,000 kilometres up. Starlink flies its satellites just a few hundred kilometres high. That cuts the delay from almost half a second to around 30 milliseconds, fast enough for video calls and gaming. The catch is that each satellite only covers a small patch of Earth, so SpaceX needs thousands of them, linked to each other by lasers. Your dish is a flat antenna that tracks them without moving. And Tesla's Cybercab is the first car with a Starlink antenna built in. Whether millions of cars can follow depends on capacity, and on how fast Starship can launch the new, bigger satellites.",
+    "nl": "Satellietinternet was vroeger traag om één reden: de satellieten hingen op 36.000 kilometer hoogte. Starlink laat zijn satellieten maar een paar honderd kilometer hoog vliegen. Daardoor daalt de vertraging van bijna een halve seconde naar zo'n 30 milliseconden, snel genoeg voor videobellen en gamen. Het nadeel: elke satelliet ziet maar een klein stukje aarde, dus SpaceX heeft er duizenden nodig, die onderling met lasers praten. Je schotel is een platte antenne die ze volgt zonder te bewegen. En de Cybercab van Tesla is de eerste auto met een ingebouwde Starlink-antenne. Of miljoenen auto's volgen, hangt af van de capaciteit, en van hoe snel Starship de nieuwe, grotere satellieten lanceert."
   }
 }

@@ -1329,14 +1329,15 @@ def dur(a, lang):
 
 
 def vdur(a, lang):
-    """Extra '▶ 5 min' in the duration badge when the article has a long video."""
+    """Extra '▶ 4:15' in the duration badge when the article has a long video."""
     v = VIDEOS.get((a["slug"], lang))
     if not v:
         return ""
-    m = max(1, round((v.get("seconds") or 0) / 60))
+    sec = int(v.get("seconds") or 0)
+    t = f"{sec // 60}:{sec % 60:02d}" if sec else "video"  # exact length like YouTube, e.g. 4:15
     lbl = {"en": "Video", "nl": "Video"}[lang]
-    return (f'<i class="dv" title="{lbl}" aria-label="{lbl}: {m} min">'
-            f'<svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5z" fill="currentColor"/></svg>{m} min</i>')
+    return (f'<i class="dv" title="{lbl}" aria-label="{lbl}: {t}">'
+            f'<svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5z" fill="currentColor"/></svg>{t}</i>')
 
 
 def vhero(a, lang):

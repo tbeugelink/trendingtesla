@@ -213,7 +213,20 @@ def run(slug):
         print(f"{slug}: nothing to generate")
         return
     out, used, mdl = make(g)
-    rel = f"gen/{slug}.jpg"
+    old = a.get("image") if str(a.get("image", "")).startswith(f"gen/{slug}") else None
+    rel, n = f"gen/{slug}.jpg", 2
+    while (IMG / rel).exists():  # a redo gets a new file name, so no browser or CDN shows the old photo
+        rel, n = f"gen/{slug}-{n}.jpg", n + 1
+    if old:  # replacing a wrong photo: drop it everywhere
+        (IMG / old).unlink(missing_ok=True)
+        a["images"] = [x for x in a.get("images", []) if x != old]
+        for bl in (a.get("video") or {}).values():
+            for b in bl:
+                im = b.get("img")
+                if im == old:
+                    b["img"] = rel
+                elif isinstance(im, list) and old in im:
+                    b["img"] = [rel if x == old else x for x in im]
     (IMG / "gen").mkdir(parents=True, exist_ok=True)
     out.save(IMG / rel, "JPEG", quality=88, optimize=True, progressive=True)
     a["image"] = rel
@@ -224,12 +237,16 @@ def run(slug):
     f.write_text(json.dumps(a, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     src_file = ROOT / "content" / "image_sources.json"
     src = json.loads(src_file.read_text(encoding="utf-8")) if src_file.exists() else {}
+    if old:
+        src.pop(old, None)
     src[rel] = {"article": slug, "model": mdl, "made": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
                 "references": [{k: r[k] for k in ("src", "page", "license", "commons") if r.get(k)} for r in used]}
     src_file.write_text(json.dumps(src, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     cat = ROOT / "PHOTOS.md"
     line = f"- {rel} — {g.get('describe') or g['prompt'][:140]}"
     text = cat.read_text(encoding="utf-8")
+    if old:
+        text = "".join(x for x in text.splitlines(True) if not x.startswith(f"- {old} "))
     if "## Generated photos" not in text:
         text = text.rstrip() + ("\n\n## Generated photos (made per article with Nano Banana; reusable, give as "
                                 "\"gen/<file>.jpg\" in \"images\" or as a reference)\n")

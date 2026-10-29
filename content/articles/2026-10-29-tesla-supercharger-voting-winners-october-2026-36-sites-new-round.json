@@ -19,9 +19,9 @@
   ],
   "images": [
     "gen/tesla-supercharger-voting-winners-october-2026-36-sites-new-round.jpg",
-    "supercharger-7.jpg",
     "supercharger.jpg",
-    "supercharger-6.jpg"
+    "supercharger-2.jpg",
+    "supercharger-4.jpg"
   ],
   "label": {
     "style": "a",
@@ -55,7 +55,7 @@
       {
         "text": "Tesla owners have picked 36 new Supercharger locations. Tesla Charging named the winners of its latest voting round on Wednesday, October 28, and opened a new round straight away. 17 of the sites are in the United States. One is in Canada. And 18 are spread across Europe, Asia, Turkey and Latin America, including two in the UK. But winning a vote is not the same as getting a charger. Some earlier winners have taken years to open.",
         "img": [
-          "supercharger-7.jpg"
+          "supercharger-4.jpg"
         ]
       },
       {
@@ -97,7 +97,7 @@
       {
         "head": "Why can a winning site take years to open?",
         "img": [
-          "supercharger-6.jpg"
+          "supercharger-2.jpg"
         ]
       },
       {
@@ -142,7 +142,7 @@
       {
         "text": "So if one of the 36 towns is on your route, do not plan around it yet. Until Tesla puts a site on its map as open or coming soon, a win is a wish list, not a promise.",
         "img": [
-          "supercharger-7.jpg"
+          "supercharger-4.jpg"
         ]
       }
     ],
@@ -150,7 +150,7 @@
       {
         "text": "Tesla-rijders hebben 36 nieuwe Supercharger-locaties gekozen. Tesla Charging maakte woensdag 28 oktober de winnaars van de laatste stemronde bekend en opende meteen een nieuwe ronde. 17 locaties liggen in de Verenigde Staten. Eén ligt in Canada. En 18 zijn verspreid over Europa, Azië, Turkije en Latijns-Amerika, waarvan twee in het Verenigd Koninkrijk. Maar een gewonnen stemming is nog geen laadstation. Sommige eerdere winnaars bleven jaren op papier staan.",
         "img": [
-          "supercharger-7.jpg"
+          "supercharger-4.jpg"
         ]
       },
       {
@@ -192,7 +192,7 @@
       {
         "head": "Waarom duurt het soms jaren voordat een winnaar opengaat?",
         "img": [
-          "supercharger-6.jpg"
+          "supercharger-2.jpg"
         ]
       },
       {
@@ -237,25 +237,20 @@
       {
         "text": "Ligt een van de 36 plaatsen op jouw route? Reken er dan nog niet op. Zolang Tesla een locatie niet als open of binnenkort op de kaart zet, is een overwinning een wens, geen belofte.",
         "img": [
-          "supercharger-7.jpg"
+          "supercharger-4.jpg"
         ]
       }
     ]
   },
   "gen_image": {
-    "prompt": "A brand-new Tesla V4 Supercharger site in a small coastal town at golden hour: a row of slim white and red charging posts beside a seaside road, two Tesla cars charging, rocky sea stacks and a sandy beach in the background, a few pine trees, warm sunset sky with yellow and orange tones, a red and blue beach shop sign out of focus.",
-    "subject": "the Tesla V4 Supercharger posts (tall slim white post with red accent, cable and connector) and modern Tesla cars",
+    "prompt": "A new Tesla Supercharger site in a small coastal town at golden hour, seen from a low angle at the side of the row. Layout exactly like a real V4 Supercharger: a row of parking bays side by side, and one charging post standing at the head end of each bay, on the kerb at the back of the bay. Two Tesla cars are reversed into their bays, rear towards the post, cable plugged into the rear-left charge port. Rocky sea stacks and a beach behind, a few pine trees, warm sky with yellow and orange tones, a small red and blue beach shop sign out of focus.",
+    "subject": "the real Tesla V4 Supercharger posts exactly as in the reference: shape, height and colours of the post, cable and connector; one post per parking bay at the head end of the bay, cars reversed in; NO lamp posts, poles, pillars or other chargers between or behind the chargers",
     "refs": [
       {
-        "src": "topics/supercharger-6.jpg"
-      },
-      {
-        "src": "topics/supercharger-7.jpg"
+        "commons": "Tesla V4 Supercharger"
       }
     ],
-    "describe": "new V4 Supercharger site in a coastal town at sunset, sea stacks behind, two Teslas charging",
-    "done": true,
-    "model": "gemini-3.1-flash-image"
+    "describe": "new V4 Supercharger site in a coastal town at sunset, sea stacks behind, two Teslas charging"
   },
   "image": "gen/tesla-supercharger-voting-winners-october-2026-36-sites-new-round.jpg"
 }

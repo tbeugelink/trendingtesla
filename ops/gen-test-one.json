@@ -1,10 +1,13 @@
 {
-  "giga-texas": {
-    "prompt": "Aerial drone photo of Tesla's Giga Texas factory beside the Colorado River at sunrise, long white building, rows of new cars on the outdoor lots, golden light, blue river, green fields with yellow wildflowers.",
-    "subject": "Giga Texas (very long low white factory building with a flat roof, beside a river near Austin)",
+  "supercharger-v4": {
+    "prompt": "A new Tesla Supercharger site in a small coastal town at golden hour, seen from a low angle at the side of the row. Layout exactly like a real Supercharger: a row of parking bays side by side, and one charging post standing at the head end of each bay, on the kerb at the back of the bay. Two Tesla cars are reversed into their bays, rear towards the post, cable plugged into the rear-left charge port. Rocky sea stacks and a beach behind, pine trees, warm sky with yellow and orange tones.",
+    "subject": "the real Tesla Supercharger posts and their layout: one post per parking bay at the head end of the bay, cars reversed in; NO lamp posts, poles or pillars between or behind the chargers",
     "refs": [
       {
-        "commons": "Gigafactory Texas aerial"
+        "commons": "Tesla Supercharger V4"
+      },
+      {
+        "commons": "Tesla Supercharger station"
       }
     ]
   }

@@ -9,8 +9,8 @@ Each line: file — what is actually visible. Pick only photos whose visible sub
 - supercharger-3.jpg — Supercharger at night in rain, a Semi in the background
 - supercharger-4.jpg — covered Supercharger station at night, one grey Tesla
 - supercharger-5.jpg — large covered Supercharger at night, wet ground, a gold Model Y
-- supercharger-6.jpg — open-air V4 Supercharger posts at dusk, two Teslas
-- supercharger-7.jpg — tall V4 Supercharger posts in a green setting, car charging
+- supercharger-6.jpg — open-air V4 Supercharger posts at dusk, two Teslas (AI-made, not accurate: extra tall poles; fine as a mood photo, never use as a reference for generated photos)
+- supercharger-7.jpg — tall V4 Supercharger posts in a green setting, car charging (AI-made, not accurate: extra tall poles; fine as a mood photo, never use as a reference for generated photos)
 - winter-1.jpg — blue Tesla charging at a snowy Supercharger at night
 - wallbox-1.jpg — white Tesla Wall Connector on a house wall, blue Model 3 behind
 - wallbox-2.jpg — red Tesla plugged into a Wall Connector on a green wall

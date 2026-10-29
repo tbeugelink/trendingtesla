@@ -910,7 +910,7 @@ def story(a, lang, tag="h1"):
     title = esc(t["title"]) if tag == "h1" else f'<a href="{url(lang, a["slug"] + "/")}">{esc(t["title"])}</a>'
     toc, body = enrich(a, lang)
     return (f'<article>'
-            f'<div class="hi"{vhero(a, lang) if tag == "h1" else ""}><img class="hero-img" src="{site_img(a)}" alt="{esc(t["title"])}" width="1200" height="630" fetchpriority="high">{dur(a, lang)}{ovl(a, lang)}</div>{vscript(a, lang) if tag == "h1" else ""}'
+            f'<div class="hi"{vhero(a, lang)}><img class="hero-img" src="{site_img(a)}" alt="{esc(t["title"])}" width="1200" height="630" fetchpriority="high">{dur(a, lang)}{ovl(a, lang)}</div>{vscript(a, lang)}'
             f'<{tag} class="st">{title}</{tag}>'
             f'<div class="srow"><p class="meta smeta"><a class="tag" href="{url(lang, "category/" + a["category"] + "/")}">{c.get("tag", c[lang])}</a> · {when(a, lang)}</p>'
             f'<div class="acts"><button class="act like" type="button" data-like="{a["slug"]}" aria-pressed="false" title="{L["like"]}">{HEART_SVG}<span>0</span></button>'
@@ -1317,10 +1317,10 @@ def vhero(a, lang):
 def vscript(a, lang):
     if not VIDEOS.get((a["slug"], lang)):
         return ""
-    return ("<script>(function(){var h=document.querySelector('.hi[data-vid]');if(!h)return;function go(){if(h.classList.contains('on'))return;"
+    return ("<script>(function(){[].forEach.call(document.querySelectorAll('.hi[data-vid]:not([data-on])'),function(h){h.setAttribute('data-on','');function go(){if(h.classList.contains('on'))return;"
             "h.classList.add('on');h.innerHTML='<iframe src=\"https://www.youtube-nocookie.com/embed/'+h.dataset.vid+'?autoplay=1&playsinline=1&rel=0\" title=\"YouTube\" "
             "allow=\"autoplay; encrypted-media; picture-in-picture; fullscreen\" allowfullscreen></iframe>'}"
-            "h.addEventListener('click',go);h.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();go()}})})()</script>")
+            "h.addEventListener('click',go);h.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();go()}})})})()</script>")
 
 
 def mini(a, lang):

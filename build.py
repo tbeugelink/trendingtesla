@@ -814,6 +814,7 @@ def page(lang, path, title, description, body, og_type="website", extra_head="",
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <title>{esc(full_title)}</title>
 <meta name="description" content="{esc(description)}">
 <link rel="canonical" href="{canonical}">
@@ -1548,6 +1549,16 @@ def build():
                               "logo": {"@type": "ImageObject", "url": SITE + "/favicon.svg"}},
                 "author": {"@type": "Organization", "name": NAME, "url": SITE},
             }
+            v = VIDEOS.get((a["slug"], lang))
+            if v:  # video rich result in Google (video thumbnail + length in search)
+                sec = int(v.get("seconds") or 0)
+                ld["video"] = {"@type": "VideoObject", "name": t["title"], "description": t["description"],
+                               "thumbnailUrl": [f"https://i.ytimg.com/vi/{v['id']}/maxresdefault.jpg",
+                                                f"https://i.ytimg.com/vi/{v['id']}/hqdefault.jpg"],
+                               "uploadDate": v["published"], "duration": f"PT{sec // 60}M{sec % 60}S" if sec else None,
+                               "embedUrl": f"https://www.youtube-nocookie.com/embed/{v['id']}",
+                               "contentUrl": f"https://www.youtube.com/watch?v={v['id']}"}
+                ld["video"] = {k: x for k, x in ld["video"].items() if x}
             head = f'<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>'
             same = sorted((x for x in arts if (x["category"] == a["category"] or a["category"] in x.get("also", [])) and x is not a), key=published, reverse=True)
             others = [x for x in arts if x is not a]

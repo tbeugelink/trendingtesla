@@ -460,10 +460,10 @@ def render(a, lang, audio, words, total, label_end, end_start):
     fbrand, fcap = font(FX, 50), font(FB, LAY["caps"])
 
     def brand(d):
-        # thin dark edge + slightly lighter red: stays sharp after video compression (red loses detail first)
-        d.text((60, LAY["brand"]), "Trending", font=fbrand, fill="#fff", stroke_width=2, stroke_fill=(10, 10, 12))
+        # 1px dark edge + slightly lighter red: stays sharp after video compression (red loses detail first)
+        d.text((60, LAY["brand"]), "Trending", font=fbrand, fill="#fff", stroke_width=1, stroke_fill=(55, 55, 60))
         d.text((60 + d.textlength("Trending", font=fbrand), LAY["brand"]), "Tesla", font=fbrand, fill="#ff2d24",
-               stroke_width=2, stroke_fill=(10, 10, 12))
+               stroke_width=1, stroke_fill=(55, 55, 60))
 
     def ending(d):
         """Closing card (same as the long videos): LIKE & SUBSCRIBE in a red block above TrendingTesla.com."""
@@ -610,7 +610,8 @@ def main():
     a = load(slug)
     OUT.mkdir(parents=True, exist_ok=True)
     title, text, outro = title_say(a, lang), script(a, lang), OUTRO[lang][1]
-    pieces = [spoken(x, lang) for x in (title, text, outro)]
+    o1, _, o2 = outro.rpartition(". ")  # last sentence gets its own pause, so it is not swallowed after ".com"
+    pieces = [spoken(x, lang) for x in (title, text, o1 + ".", o2)]
     audio = None
     have_voice = os.environ.get("ELEVENLABS_API_KEY") and os.environ.get("ELEVENLABS_VOICE_ID")
     if have_voice:
@@ -637,7 +638,7 @@ def main():
             while i0 < i1 and chars[i0].isspace():
                 i0 += 1
             a0 = max(0.0, cs[i0] - 0.05)
-            a1 = min(full, ce[i1] + 0.12) if i < 2 else full
+            a1 = min(full, ce[i1] + 0.12) if i < len(pieces) - 1 else full
             segs.append((a0, a1))
             pos += len(pc) + 1
         body_words = [(w, s0 - segs[1][0], e0 - segs[1][0]) for w, s0, e0 in
@@ -651,16 +652,17 @@ def main():
     label_end = t_title + durs[0] + 0.25
     t_body = t_title + durs[0] + 0.7
     end_start = t_body + durs[1] + 0.4
-    total = end_start + max(OUTRO_SEC, durs[2] + 0.8)
+    t_out2 = end_start + durs[2] + 0.45
+    total = end_start + max(OUTRO_SEC, durs[2] + 0.45 + durs[3] + 0.8)
     words = [(w, s0 + t_body, e0 + t_body) for w, s0, e0 in body_words]
     if have_voice:
         audio = OUT / f"{slug}-{lang}.m4a"
         fl = []
-        for i, ((a0, a1), t0) in enumerate(zip(segs, (t_title, t_body, end_start))):
+        for i, ((a0, a1), t0) in enumerate(zip(segs, (t_title, t_body, end_start, t_out2))):
             ms = int(t0 * 1000)
             fl.append(f"[0]atrim={a0:.3f}:{a1:.3f},asetpts=PTS-STARTPTS,afade=t=out:st={max(0, a1 - a0 - 0.04):.3f}:d=0.04,"
                       f"adelay={ms}|{ms}[a{i}]")
-        fl.append("[a0][a1][a2]amix=inputs=3:normalize=0:duration=longest[out]")
+        fl.append("[a0][a1][a2][a3]amix=inputs=4:normalize=0:duration=longest[out]")
         subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", str(mp3), "-filter_complex", ";".join(fl), "-map", "[out]",
                         "-c:a", "aac", "-b:a", "192k", str(audio)], check=True)
     out = render(a, lang, audio, words, total, label_end, end_start)

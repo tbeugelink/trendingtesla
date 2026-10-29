@@ -101,7 +101,7 @@ def say_numbers(text, lang):
     return " ".join(out), counts
 
 
-PAUSE = {"title": 0.7, "head_before": 0.8, "head_after": 1.0, "text": 0.3, "outro": 0.6}
+PAUSE = {"title": 0.7, "head_before": 0.8, "head_after": 1.0, "text": 0.3, "outro": 0.6, "outro2": 0.45}
 
 
 def img_path(name):
@@ -174,7 +174,10 @@ def build_timeline(a, lang):
             pieces.append(("head", h if h.endswith(("?", "!", ".")) else h + ".", b))  # keep "?" so the voice rises
         if b.get("text"):
             pieces.append(("text", b["text"], b if not b.get("head") else {k: v for k, v in b.items() if k != "img"}))
-    pieces.append(("outro", OUTRO_SAY[lang], {}))
+    # the last sentence gets its own short pause, so "I'll see you there!" is not swallowed after ".com"
+    o1, _, o2 = OUTRO_SAY[lang].rpartition(". ")
+    pieces.append(("outro", o1 + ".", {}))
+    pieces.append(("outro2", o2, {}))
     return pieces
 
 
@@ -229,12 +232,13 @@ def main():
         if i:
             prev = pieces[i - 1][0]
             gap = PAUSE["title"] if prev == "title" else PAUSE["head_after"] if prev == "head" else \
-                PAUSE["head_before"] if kind == "head" else PAUSE["outro"] if kind == "outro" else PAUSE["text"]
+                PAUSE["head_before"] if kind == "head" else PAUSE.get(kind, PAUSE["text"])
             t += gap
         place.append(t)
         t += a1 - a0
-    end_start = place[-1] - 0.3
-    total = place[-1] + max(OUTRO_SEC, segs[-1][1] - segs[-1][0] + 1.5)
+    oi = next(i for i, p in enumerate(pieces) if p[0] == "outro")
+    end_start = place[oi] - 0.3
+    total = place[oi] + max(OUTRO_SEC, place[-1] - place[oi] + segs[-1][1] - segs[-1][0] + 1.5)
     # words of text pieces on the video timeline (captions)
     words = []
     for (kind, _, _), (a0, a1), t0, (i0, i1), orig, (_, counts) in zip(pieces, segs, place, spans, base, conv):
@@ -316,10 +320,10 @@ def render(a, lang, pieces, segs, place, words, total, end_start, audio):
     fbrand, fcap = font(FX, 50), font(FB, S.LAY["caps"])
 
     def brand(d):
-        # thin dark edge + slightly lighter red: stays sharp after video compression (red loses detail first)
-        d.text((60, S.LAY["brand"]), "Trending", font=fbrand, fill="#fff", stroke_width=2, stroke_fill=(10, 10, 12))
+        # 1px dark edge + slightly lighter red: stays sharp after video compression (red loses detail first)
+        d.text((60, S.LAY["brand"]), "Trending", font=fbrand, fill="#fff", stroke_width=1, stroke_fill=(55, 55, 60))
         d.text((60 + d.textlength("Trending", font=fbrand), S.LAY["brand"]), "Tesla", font=fbrand, fill="#ff2d24",
-               stroke_width=2, stroke_fill=(10, 10, 12))
+               stroke_width=1, stroke_fill=(55, 55, 60))
 
     def ending(d):
         """Closing card: LIKE & SUBSCRIBE above TrendingTesla.com (white / red / white)."""

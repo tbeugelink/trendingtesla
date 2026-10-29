@@ -23,6 +23,10 @@ Article JSON format:
 Writing rule (articles and video scripts): the paragraph or spoken text right before a heading
 states the next problem as a plain statement and never ends with a question; the <h2>/"head"
 itself is the question. (The build also drops such a duplicate question automatically.)
+Heading style: write "What to watch for next" / "What should we watch for next?", never "What should
+we watch next?" (that sounds like the video is ending and suggesting another video). Start one or two
+headings per article with "So" ("So how does ...?", NL "Dus ..." or "... dan?") so it sounds natural
+when spoken; not every heading.
 Guides (buying advice) use category "guides"; they appear in the "Best picks" section
 and on the model pages they are tagged with.
 

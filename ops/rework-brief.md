@@ -18,7 +18,7 @@ For EACH assigned article:
 
 ## 2. Restructure the body (en and nl) to the storyline
 - Intro paragraph(s) give the key facts and end with a clear problem, stated as a plain statement (never as a question: the heading is the question).
-- Then 4-6 `<h2>` headings phrased as the QUESTION that problem raises (EN "So how does ...?", "Why ...?", "What ...?"; NL "Hoe ... dan?", "Waarom ...?").
+- Then 4-6 `<h2>` headings phrased as the QUESTION that problem raises (start one or two of them with "So", not all; never "What should we watch next?", use "What should we watch for next?") (EN "So how does ...?", "Why ...?", "What ...?"; NL "Hoe ... dan?", "Waarom ...?").
 - Each section starts with the direct answer in bold: `<p><strong>Short answer.</strong> explanation...</p>`, and ends with the next problem, stated as a plain statement (never as a question), that leads to the next heading.
 - Keep the same facts (after your fact check), roughly the same length (±20%), keep lists as `<ul><li>`, keep the financial-advice disclaimer if present, keep the article readable as a normal written article. Dutch must be natural fluent Dutch, Dutch number formats.
 - Do NOT change: slug, date, time, category, models, images, label, title, description (only change title/description if they contain a factual error), and keep "short" as is unless it contains a factual error (then fix that error in it).

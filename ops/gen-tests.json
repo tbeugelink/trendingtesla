@@ -1,0 +1,22 @@
+{
+  "cybercab": {
+    "prompt": "A gold Tesla Cybercab robotaxi waiting at the curb outside a modern train station in Austin, Texas, at blue hour after rain; wet street with reflections, a passenger with a red jacket walking towards it (back to camera), warm yellow shop lights, blue sky glow.",
+    "subject": "the Tesla Cybercab (two-seat gold robotaxi: low smooth body, full-width light bar, no door handles, enclosed rear wheels)",
+    "refs": [{"src": "models/cc-1.jpg"}, {"src": "models/cc-2.jpg"}]
+  },
+  "optimus": {
+    "prompt": "Tesla's Optimus humanoid robot carefully folding a blue T-shirt on a wooden table in a bright, modern Scandinavian-style living room, morning sun through large windows, a yellow armchair and red cushions in the background.",
+    "subject": "the Tesla Optimus humanoid robot (white and black body, black glossy face plate, slim proportions, articulated hands)",
+    "refs": [{"src": "topics/optimus.jpg"}, {"src": "topics/optimus-factory.jpg"}]
+  },
+  "giga-texas": {
+    "prompt": "Aerial drone photo of Tesla's Giga Texas factory beside the Colorado River at sunrise, long white building, rows of new cars on the outdoor lots, golden light, blue river, green fields with yellow wildflowers.",
+    "subject": "Giga Texas (very long low white factory building with a flat roof, beside a river near Austin)",
+    "refs": [{"commons": "Gigafactory Texas aerial"}]
+  },
+  "supercharger-v4": {
+    "prompt": "A new Tesla V4 Supercharger site in a small coastal town at golden hour: a row of charging posts beside a seaside road, two Tesla cars charging, rocky sea stacks and a beach behind, pine trees, warm sky with yellow and orange tones.",
+    "subject": "the Tesla V4 Supercharger post (a single tall slim white post with a red accent strip and a long cable with connector; nothing else behind or above it)",
+    "refs": [{"src": "topics/supercharger-6.jpg"}, {"src": "topics/supercharger-7.jpg"}]
+  }
+}

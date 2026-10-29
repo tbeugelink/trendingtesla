@@ -38,7 +38,8 @@ STYLE = ("Photorealistic editorial news photo, landscape 16:9, natural light, sh
          "Colourful but natural colour grading with yellow, red and blue accents in the scene (sky, surroundings, "
          "clothing, signs), never grey or washed out. Leave calm space in the lower-left third for a text label. ")
 RULES = ("Use the reference images ONLY to get the subject's real design right ({subject}): exact shape, "
-         "proportions, lights, wheels and details. Create a NEW photo: different camera angle, different place and "
+         "proportions, lights, wheels and details; reproduce how the objects are really built and do not invent extra "
+         "parts (no extra poles, cables, screens, doors or wheels). Create a NEW photo: different camera angle, different place and "
          "background, different composition and lighting than every reference. Do not copy any reference photo. "
          "No text, no captions, no logos or brand marks, no watermarks, no readable licence plates, no recognisable "
          "real people's faces.")
@@ -94,6 +95,26 @@ def model():
     return sorted(names, key=rank)[-1]
 
 
+FREE = ("cc0", "cc by", "cc-by", "public domain", "pd")
+
+
+def commons(query):
+    """First freely licensed photo on Wikimedia Commons for `query` -> {"src", "page", "license"}."""
+    import urllib.parse
+    q = urllib.parse.urlencode({"action": "query", "format": "json", "generator": "search", "gsrnamespace": 6,
+                                "gsrsearch": f"{query} filetype:bitmap", "gsrlimit": 10, "prop": "imageinfo",
+                                "iiprop": "url|extmetadata|mime", "iiurlwidth": 1280})
+    with urllib.request.urlopen(urllib.request.Request(f"https://commons.wikimedia.org/w/api.php?{q}", headers=UA),
+                                timeout=60) as r:
+        pages = sorted(json.load(r).get("query", {}).get("pages", {}).values(), key=lambda p: p.get("index", 99))
+    for p in pages:
+        ii = (p.get("imageinfo") or [{}])[0]
+        lic = ii.get("extmetadata", {}).get("LicenseShortName", {}).get("value", "")
+        if ii.get("mime") == "image/jpeg" and lic.lower().startswith(FREE):
+            return {"src": ii.get("thumburl") or ii["url"], "page": ii.get("descriptionurl"), "license": lic}
+    raise RuntimeError(f"no freely licensed Commons photo for '{query}'")
+
+
 def load_ref(src):
     if src.startswith("http"):
         with urllib.request.urlopen(urllib.request.Request(src, headers=UA), timeout=60) as r:
@@ -147,6 +168,30 @@ def fit_16x9(im, w=1920):
     return ImageOps.fit(im, (w, h), Image.LANCZOS, centering=(0.5, 0.5))
 
 
+def make(g, label="photo"):
+    """Generate one image for spec g -> (image, references used, model)."""
+    refs, used = [], []
+    for r in g.get("refs", [])[:4]:
+        try:
+            if r.get("commons") and not r.get("src"):
+                r = {**commons(r["commons"]), **r}
+            refs.append(load_ref(r["src"]))
+            used.append(r)
+        except Exception as e:  # a dead link must not stop the rest
+            print(f"::warning::{label}: reference {r.get('src') or r.get('commons')} skipped: {e}")
+    if not refs:
+        raise RuntimeError("no usable reference photo")
+    mdl = model()
+    prompt = STYLE + g["prompt"].strip() + "\n\n" + RULES.format(subject=g.get("subject") or "the main subject")
+    for attempt in range(3):
+        im = fit_16x9(generate(mdl, prompt, refs))
+        if not too_similar(im, refs):
+            return im, used, mdl
+        print(f"::warning::{label}: result {attempt + 1} too close to a reference, trying again")
+        prompt += "\nThe previous attempt looked too much like a reference photo: change the camera angle and the whole setting completely."
+    raise RuntimeError("every result was too close to a reference photo")
+
+
 def run(slug):
     files = [f for f in glob.glob(str(ROOT / "content/articles" / f"*{slug}.json"))
              if json.load(open(f, encoding="utf-8")).get("slug") == slug]
@@ -158,27 +203,7 @@ def run(slug):
     if not g.get("prompt") or g.get("done"):
         print(f"{slug}: nothing to generate")
         return
-    refs, used = [], []
-    for r in g.get("refs", [])[:4]:
-        try:
-            refs.append(load_ref(r["src"]))
-            used.append(r)
-        except Exception as e:  # a dead link must not stop the rest
-            print(f"::warning::{slug}: reference {r.get('src')} skipped: {e}")
-    if not refs:
-        raise RuntimeError("no usable reference photo")
-    mdl = model()
-    prompt = STYLE + g["prompt"].strip() + "\n\n" + RULES.format(subject=g.get("subject") or "the main subject")
-    out = None
-    for attempt in range(3):
-        im = fit_16x9(generate(mdl, prompt, refs))
-        if not too_similar(im, refs):
-            out = im
-            break
-        print(f"::warning::{slug}: result {attempt + 1} too close to a reference, trying again")
-        prompt += "\nThe previous attempt looked too much like a reference photo: change the camera angle and the whole setting completely."
-    if out is None:
-        raise RuntimeError("every result was too close to a reference photo")
+    out, used, mdl = make(g)
     rel = f"gen/{slug}.jpg"
     (IMG / "gen").mkdir(parents=True, exist_ok=True)
     out.save(IMG / rel, "JPEG", quality=88, optimize=True, progressive=True)
@@ -191,7 +216,7 @@ def run(slug):
     src_file = ROOT / "content" / "image_sources.json"
     src = json.loads(src_file.read_text(encoding="utf-8")) if src_file.exists() else {}
     src[rel] = {"article": slug, "model": mdl, "made": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
-                "references": [{"src": r["src"], **({"page": r["page"]} if r.get("page") else {})} for r in used]}
+                "references": [{k: r[k] for k in ("src", "page", "license", "commons") if r.get(k)} for r in used]}
     src_file.write_text(json.dumps(src, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     cat = ROOT / "PHOTOS.md"
     line = f"- {rel} — {g.get('describe') or g['prompt'][:140]}"
@@ -203,7 +228,23 @@ def run(slug):
     print(f"::notice::{slug}: new photo {rel} ({mdl}, {len(used)} reference(s))")
 
 
+def test(spec_file, out_dir):
+    """Test specs (no article changes): {"name": spec, ...} -> <out_dir>/<name>.jpg"""
+    out = Path(out_dir)
+    out.mkdir(parents=True, exist_ok=True)
+    for name, g in json.loads(Path(spec_file).read_text(encoding="utf-8")).items():
+        try:
+            im, used, mdl = make(g, name)
+            im.save(out / f"{name}.jpg", "JPEG", quality=88)
+            print(f"::notice::test {name}: ok ({mdl}; refs: {', '.join(r.get('page') or r['src'] for r in used)})")
+        except Exception as e:
+            print(f"::warning::test {name}: {e}")
+
+
 if __name__ == "__main__":
+    if sys.argv[1:2] == ["--test"]:
+        test(sys.argv[2], sys.argv[3])
+        sys.exit(0)
     for s in sys.argv[1:]:
         try:
             run(s)

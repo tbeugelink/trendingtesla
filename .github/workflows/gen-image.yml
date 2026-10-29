@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
     inputs:
       slug:
-        description: "Article slug"
+        description: "Article slug, or 'test' to make the test images in ops/gen-tests.json (nothing is published)"
         required: true
 
 permissions:
@@ -18,7 +18,21 @@ jobs:
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v5
+      - name: Test images
+        if: github.event.inputs.slug == 'test'
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          pip install --quiet pillow
+          python3 tools/gen_image.py --test ops/gen-tests.json gen-test
+      - uses: actions/upload-artifact@v5
+        if: github.event.inputs.slug == 'test'
+        with:
+          name: gen-test-${{ github.run_number }}
+          path: gen-test/*.jpg
+          retention-days: 14
       - name: Generate and publish
+        if: github.event.inputs.slug != 'test'
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |

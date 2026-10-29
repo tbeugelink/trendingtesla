@@ -243,16 +243,14 @@
     ]
   },
   "gen_image": {
-    "prompt": "A new Tesla Supercharger site in a small coastal town at golden hour, seen from a low angle at the side of the row. Layout exactly like a real V4 Supercharger: a row of parking bays side by side, and one charging post standing at the head end of each bay, on the kerb at the back of the bay. Two Tesla cars are reversed into their bays, rear towards the post, cable plugged into the rear-left charge port. Rocky sea stacks and a beach behind, a few pine trees, warm sky with yellow and orange tones, a small red and blue beach shop sign out of focus.",
-    "subject": "the real Tesla V4 Supercharger posts exactly as in the reference: shape, height and colours of the post, cable and connector; one post per parking bay at the head end of the bay, cars reversed in; NO lamp posts, poles, pillars or other chargers between or behind the chargers",
+    "prompt": "A new Tesla Supercharger site in a small coastal town at golden hour. Camera at eye height in front of the row, looking at the fronts of the cars, with the charging posts behind the cars. Layout exactly like a real V4 Supercharger: a long kerb with one charging post on it every 2.7 metres; in front of each post a parking bay at a right angle to the kerb, with painted lines between the bays that run straight away from the kerb. Two Tesla cars are parked inside their own bays, reversed in, so the rear of each car is close to its post and the front faces the camera; the short cable runs from the post to the rear-left corner of the car. The other bays are empty. Rocky sea stacks and a beach on one side, a few pine trees, warm sky with yellow and orange tones, a small red and blue beach shop sign out of focus.",
+    "subject": "the real Tesla V4 Supercharger posts exactly as in the reference (shape, height, colours, cable and connector) and how they are placed: a single straight row of posts on the kerb, one post at the back of each parking bay; cars parked at a right angle to the kerb, rear towards the post; NO lamp posts, poles, pillars or other chargers between or behind the chargers",
     "refs": [
       {
         "commons": "Tesla V4 Supercharger"
       }
     ],
-    "describe": "new V4 Supercharger site in a coastal town at sunset, sea stacks behind, two Teslas charging",
-    "done": true,
-    "model": "gemini-3.1-flash-image"
+    "describe": "new V4 Supercharger site in a coastal town at sunset, sea stacks behind, two Teslas charging"
   },
   "image": "gen/tesla-supercharger-voting-winners-october-2026-36-sites-new-round-2.jpg"
 }

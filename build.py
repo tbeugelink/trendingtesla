@@ -20,6 +20,9 @@ Article JSON format:
   "en": {"title": "...", "description": "...", "body": "<p>...</p>"},
   "nl": {"title": "...", "description": "...", "body": "<p>...</p>"}
 }
+Writing rule (articles and video scripts): the paragraph or spoken text right before a heading
+states the next problem as a plain statement and never ends with a question; the <h2>/"head"
+itself is the question. (The build also drops such a duplicate question automatically.)
 Guides (buying advice) use category "guides"; they appear in the "Best picks" section
 and on the model pages they are tagged with.
 
@@ -879,9 +882,36 @@ def drawer(lang, active=None, model=None):
     return out
 
 
+# --- no question right before a heading (the heading is the question) ---
+Q_LEAD = re.compile(r"(so here is the (big |real )?question|here is the (big |real )?question|the (big |real )?question is|"
+                  r"dus de (grote )?vraag is|de (grote )?vraag is dus|dat roept de vraag op|en dan de (grote )?vraag)[.:!]?$", re.I)
+Q_SENT = re.compile(r"[^.!?]+[.!?]+[\"'”’)]*\s*$")
+
+def strip_q(t):
+    t0 = t.rstrip()
+    if not t0.endswith("?"):
+        return t
+    m = Q_SENT.search(t0)
+    rest = t0[:m.start()].rstrip() if m else ""
+    while rest:
+        m2 = Q_SENT.search(rest)
+        last = rest[m2.start():].strip() if m2 else rest
+        if Q_LEAD.search(last.strip()) or last.endswith("?"):
+            rest = rest[:m2.start()].rstrip() if m2 else ""
+        else:
+            break
+    return rest if rest else t
+
+
+
+def drop_q_before_h2(body):
+    return re.sub(r"<p>((?:(?!</?p>).)*?\?)\s*</p>(\s*<h2)",
+                  lambda m: f"<p>{strip_q(m.group(1))}</p>{m.group(2)}", body, flags=re.S)
+
+
 def enrich(a, lang):
     """Article body extras: anchors + table of contents from the subheadings, and a second photo halfway."""
-    body = a[lang]["body"]
+    body = drop_q_before_h2(a[lang]["body"])
     heads = []
 
     def anchor(m):

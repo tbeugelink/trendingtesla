@@ -162,6 +162,9 @@ def key_overlay(a, text):
 def build_timeline(a, lang):
     """Pieces in spoken order: (kind, text, block) with kind title/head/text/outro."""
     blocks = (a.get("video") or {}).get(lang)
+    for i, b in enumerate(blocks or []):  # the head is the question: drop a duplicate question before it
+        if "head" in b and i > 0 and "text" in blocks[i - 1]:
+            blocks[i - 1]["text"] = S.build.strip_q(blocks[i - 1]["text"])
     if not blocks:
         raise SystemExit(f"article has no video script for {lang}")
     pieces = [("title", S.title_say(a, lang), {"img": (a.get("images") or [])[:1]})]

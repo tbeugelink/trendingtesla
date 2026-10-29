@@ -1,2 +1,2 @@
-latvia-tenth-eu-country-tesla-fsd-supervised-why-december-vote-needs-big-four en --full --upload
-# 2026-10-29T10:48:00 long video for the Latvia article (its Short is already online)
+how-starlink-works-satellites-lasers-dish-explained en --upload
+# 2026-10-29T10:55:06 Short for the Starlink article (its long video is already online)

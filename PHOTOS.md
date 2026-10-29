@@ -229,3 +229,6 @@ Articles with a "models" key automatically use real-life photos of that model. Y
 - tunnel-segments.jpg — tunnel lining segments, blue crane and a red tunnel boring machine at a construction yard at sunset (tunnel construction)
 - loop-aerial-map.jpg — aerial city at dusk with a glowing underground tunnel network and stations (Loop network plans)
 - fsd-highway-sunset.jpg — driver's seat on a desert highway with trucks and red rock buttes at sunset, screen with lane visualisation (FSD on the highway, US)
+
+## Generated photos (made per article with Nano Banana; reusable, give as "gen/<file>.jpg" in "images" or as a reference)
+- gen/tesla-supercharger-voting-winners-october-2026-36-sites-new-round.jpg — new V4 Supercharger site in a coastal town at sunset, sea stacks behind, two Teslas charging

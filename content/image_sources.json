@@ -1,0 +1,15 @@
+{
+  "gen/tesla-supercharger-voting-winners-october-2026-36-sites-new-round.jpg": {
+    "article": "tesla-supercharger-voting-winners-october-2026-36-sites-new-round",
+    "model": "gemini-3.1-flash-image",
+    "made": "2026-10-29",
+    "references": [
+      {
+        "src": "topics/supercharger-6.jpg"
+      },
+      {
+        "src": "topics/supercharger-7.jpg"
+      }
+    ]
+  }
+}

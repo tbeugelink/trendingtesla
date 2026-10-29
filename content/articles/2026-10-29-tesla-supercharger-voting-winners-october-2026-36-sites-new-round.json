@@ -18,6 +18,7 @@
     }
   ],
   "images": [
+    "gen/tesla-supercharger-voting-winners-october-2026-36-sites-new-round.jpg",
     "supercharger-7.jpg",
     "supercharger.jpg",
     "supercharger-6.jpg"
@@ -252,6 +253,9 @@
         "src": "topics/supercharger-7.jpg"
       }
     ],
-    "describe": "new V4 Supercharger site in a coastal town at sunset, sea stacks behind, two Teslas charging"
-  }
+    "describe": "new V4 Supercharger site in a coastal town at sunset, sea stacks behind, two Teslas charging",
+    "done": true,
+    "model": "gemini-3.1-flash-image"
+  },
+  "image": "gen/tesla-supercharger-voting-winners-october-2026-36-sites-new-round.jpg"
 }

@@ -106,12 +106,6 @@ jobs:
             python3 video/full.py "$s" en 2> err.txt || { fail=1; echo "::error::video/full.py $s en failed: $(tail -c 600 err.txt | tr '\n' ' ')"; continue; }
             [ -n "$YT_REFRESH_TOKEN" ] && python3 video/upload.py "video/out/$s-en-full.mp4" en || fail=1
           done
-          if [ -n "$(git status --porcelain content/video_lengths.json)" ]; then
-            git config user.name "TrendingTesla bot"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add content/video_lengths.json && git commit -qm "Video length for the site"
-            for i in 1 2 3; do git pull --rebase -q origin main && git push -q origin HEAD:main && break; sleep 10; done
-          fi
           exit $fail
       - name: Upload requested queue video to YouTube
         if: steps.find.outputs.queue == '1' && steps.find.outputs.upload == '1'
@@ -122,12 +116,22 @@ jobs:
           YT_PRIVACY: ${{ vars.YT_PRIVACY }}
         run: |
           for f in video/out/*.mp4; do [ -f "$f" ] && python3 video/upload.py "$f" "$(basename "$f" | sed -E 's/.*-(en|nl)-(full|short)\.mp4/\1/')"; done
-          if [ -n "$(git status --porcelain content/video_lengths.json)" ]; then
-            git config user.name "TrendingTesla bot"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add content/video_lengths.json && git commit -qm "Video length for the site"
-            for i in 1 2 3; do git pull --rebase -q origin main && git push -q origin HEAD:main && break; sleep 10; done
-          fi
+      - name: Put the new videos on the site
+        if: always() && steps.find.outputs.slugs != ''
+        run: |
+          [ -z "$(git status --porcelain content)" ] && exit 0
+          git config user.name "TrendingTesla bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git stash -q -- content
+          for i in 1 2 3 4; do
+            git pull -q --rebase origin main || true
+            git stash apply -q || { git checkout -- content; git stash apply -q; }
+            python3 build.py > /dev/null
+            git checkout -- $(git diff --name-only -- public | grep -E '\.(jpg|jpeg|png|webp)$') 2>/dev/null || true
+            git add content public && git commit -qm "Site: new YouTube videos" && git push -q origin HEAD:main && exit 0
+            git reset -q --hard origin/main; sleep 10
+          done
+          exit 1
       - name: Upload videos
         if: always() && steps.find.outputs.slugs != ''
         uses: actions/upload-artifact@v5

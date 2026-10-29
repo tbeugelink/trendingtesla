@@ -57,6 +57,30 @@ def set_thumbnail(vid, mp4, at=None, at_sec=1.0):
         print(f"::warning::Thumbnail for {vid} failed: {e.code} {e.read().decode(errors='replace')[:300]}")
 
 
+def register(vid, mp4, lang, title):
+    """Put the new (public) video on the site right away, instead of waiting for YouTube's slow feed."""
+    import re
+    import subprocess
+    from datetime import datetime, timezone
+    if (os.environ.get("YT_PRIVACY") or "private") != "public":
+        return
+    long = mp4.name.endswith("-full.mp4")
+    slug = re.sub(r"-(en|nl)-(full|short)\.mp4$", "", mp4.name)
+    f = Path(__file__).resolve().parent.parent / "content" / ("videos.json" if long else "shorts.json")
+    items = json.loads(f.read_text(encoding="utf-8")) if f.exists() else []
+    if any(x["id"] == vid for x in items):
+        return
+    item = {"id": vid, "slug": slug, "title": re.sub(r"\s*#Shorts\s*$", "", title).strip(),
+            "published": datetime.now(timezone.utc).replace(microsecond=0).isoformat()}
+    if long:
+        item["lang"] = lang
+        item["seconds"] = round(float(subprocess.check_output(
+            ["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", str(mp4)], text=True)))
+        items = [x for x in items if not (x.get("slug") == slug and x.get("lang", "en") == lang)]  # a remake replaces
+    items.insert(0, item)
+    f.write_text(json.dumps(items, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+
+
 def main():
     mp4 = Path(sys.argv[1])
     lang = sys.argv[2] if len(sys.argv) > 2 else "en"
@@ -83,6 +107,7 @@ def main():
                                      headers={"Authorization": f"Bearer {at}", "Content-Type": "video/mp4"})
     with urllib.request.urlopen(put, timeout=600) as r:
         vid = json.load(r)["id"]
+    register(vid, mp4, lang, title)
     # remember the length of long videos; the site shows it ("▶ 4:15") and YouTube's feed has none
     if mp4.name.endswith("-full.mp4"):
         set_thumbnail(vid, mp4, at)

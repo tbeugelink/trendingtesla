@@ -242,6 +242,15 @@ def test(spec_file, out_dir):
     out = Path(out_dir)
     out.mkdir(parents=True, exist_ok=True)
     for name, g in json.loads(Path(spec_file).read_text(encoding="utf-8")).items():
+        if os.environ.get("REFS_ONLY"):  # only fetch and save the reference photos (free, for checking them)
+            for i, r in enumerate(g.get("refs", []), 1):
+                try:
+                    r = {**commons(r["commons"]), **r} if r.get("commons") and not r.get("src") else r
+                    load_ref(r["src"]).save(out / f"{name}-ref{i}.jpg", "JPEG", quality=88)
+                    print(f"::notice::{name}-ref{i}: {r.get('page') or r['src']} ({r.get('license', 'own')})")
+                except Exception as e:
+                    print(f"::warning::{name}-ref{i}: {e}")
+            continue
         try:
             im, used, mdl = make(g, name)
             im.save(out / f"{name}.jpg", "JPEG", quality=88)

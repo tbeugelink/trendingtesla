@@ -8,6 +8,10 @@ on:
       slug:
         description: "Article slug, or 'test' to make the test images in ops/gen-tests.json (nothing is published)"
         required: true
+      refs_only:
+        description: "Test only: just save the reference photos (yes/no)"
+        required: false
+        default: "no"
       spec:
         description: "Test spec file (only with slug 'test')"
         required: false
@@ -26,6 +30,7 @@ jobs:
         if: github.event.inputs.slug == 'test'
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          REFS_ONLY: ${{ github.event.inputs.refs_only == 'yes' && '1' || '' }}
         run: |
           pip install --quiet pillow
           python3 tools/gen_image.py --test "${{ github.event.inputs.spec || 'ops/gen-tests.json' }}" gen-test

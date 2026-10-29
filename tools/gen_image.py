@@ -52,11 +52,27 @@ def key():
     return k
 
 
+AUTH = []  # the header style that works for this key (API key or the newer auth key)
+
+
 def api(path, body=None):
-    req = urllib.request.Request(f"{API}/{path}", data=json.dumps(body).encode() if body else None,
-                                 headers={"x-goog-api-key": key(), "Content-Type": "application/json"})
-    with urllib.request.urlopen(req, timeout=240) as r:
-        return json.load(r)
+    styles = AUTH or [{"x-goog-api-key": key()}, {"Authorization": f"Bearer {key()}"}]
+    err = None
+    for h in styles:
+        req = urllib.request.Request(f"{API}/{path}", data=json.dumps(body).encode() if body else None,
+                                     headers={**h, "Content-Type": "application/json"})
+        try:
+            with urllib.request.urlopen(req, timeout=240) as r:
+                if not AUTH:
+                    AUTH.append(h)
+                return json.load(r)
+        except urllib.error.HTTPError as e:
+            msg = e.read().decode(errors="replace")[:400]
+            err = RuntimeError(f"HTTP {e.code}: {msg}")
+            err.code = e.code
+            if e.code not in (401, 403) or AUTH:
+                raise err
+    raise err
 
 
 def model():
@@ -112,8 +128,8 @@ def generate(mdl, prompt, refs):
             "generationConfig": {"responseModalities": ["IMAGE"], "imageConfig": {"aspectRatio": "16:9"}}}
     try:
         d = api(f"models/{mdl}:generateContent", body)
-    except urllib.error.HTTPError as e:
-        if e.code == 400:  # older models without imageConfig
+    except RuntimeError as e:
+        if getattr(e, "code", 0) == 400:  # older models without imageConfig
             body["generationConfig"] = {"responseModalities": ["TEXT", "IMAGE"]}
             d = api(f"models/{mdl}:generateContent", body)
         else:

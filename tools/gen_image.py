@@ -67,7 +67,7 @@ def api(path, body=None):
                     AUTH.append(h)
                 return json.load(r)
         except urllib.error.HTTPError as e:
-            msg = e.read().decode(errors="replace")[:400]
+            msg = " ".join(e.read().decode(errors="replace").split())[:400]
             err = RuntimeError(f"HTTP {e.code}: {msg}")
             err.code = e.code
             if e.code not in (401, 403) or AUTH:

@@ -7,6 +7,7 @@ upload; run by hand to sort existing videos:  python3 tools/yt_playlists.py   (a
 import glob
 import json
 import sys
+import time
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -68,10 +69,22 @@ def add(vid, slug, at, cache=None):
                         "status": {"privacyStatus": "public"}})["id"]
             have[title] = pid
             print(f"::notice::Created playlist '{title}'")
-        items = call(at, "GET", "playlistItems", {"part": "snippet", "playlistId": pid, "videoId": vid})
-        if not items.get("items"):
-            call(at, "POST", "playlistItems", {"part": "snippet"},
-                 {"snippet": {"playlistId": pid, "resourceId": {"kind": "youtube#video", "videoId": vid}}})
+        try:
+            there = call(at, "GET", "playlistItems", {"part": "snippet", "playlistId": pid, "videoId": vid}).get("items")
+        except urllib.error.HTTPError as e:
+            if e.code != 404:  # a brand-new playlist can answer 404 for a short while
+                raise
+            there = None
+        if not there:
+            for attempt in range(4):
+                try:
+                    call(at, "POST", "playlistItems", {"part": "snippet"},
+                         {"snippet": {"playlistId": pid, "resourceId": {"kind": "youtube#video", "videoId": vid}}})
+                    break
+                except urllib.error.HTTPError as e:
+                    if e.code != 404 or attempt == 3:
+                        raise
+                    time.sleep(10)
             print(f"::notice::Added https://youtu.be/{vid} to playlist '{title}'")
     except urllib.error.HTTPError as e:
         print(f"::warning::Playlist for {vid} failed: {e.code} {e.read().decode(errors='replace')[:300]}")

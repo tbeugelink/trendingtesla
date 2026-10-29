@@ -1,0 +1,258 @@
+{
+ "slug": "tesla-cybercab-battery-pack-lfp-ready-four-modules-no-paint-optimus-charging",
+ "date": "2026-10-29",
+ "time": "21:30",
+ "category": "models",
+ "models": [
+  "cybercab"
+ ],
+ "also": [
+  "robotaxi"
+ ],
+ "sources": [
+  {
+   "title": "Teslarati — Tesla's Cybercab battery design could make robotaxis even cheaper",
+   "url": "https://www.teslarati.com/tesla-cybercab-battery-pack-design-structure/"
+  },
+  {
+   "title": "Teslarati — Tesla Cybercab's unorthodox paint process explained",
+   "url": "https://www.teslarati.com/tesla-cybercab-unorthodox-paint-process-explained/"
+  },
+  {
+   "title": "Not a Tesla App — Tesla's Optimus robot will soon plug in Robotaxis to charge",
+   "url": "https://www.notateslaapp.com/news/4904/teslas-optimus-robot-will-soon-plug-in-robotaxis-to-charge"
+  }
+ ],
+ "images": [
+  "models/cc-2.jpg",
+  "cybercab-fleet.jpg",
+  "models/cc-3.jpg"
+ ],
+ "label": {
+  "style": "c",
+  "en": {
+   "sub": "CYBERCAB BATTERY",
+   "text": "READY FOR LFP"
+  },
+  "nl": {
+   "sub": "CYBERCAB-ACCU",
+   "text": "KLAAR VOOR LFP"
+  }
+ },
+ "short": {
+  "title_en": "Cybercab battery: ready for LFP",
+  "title_nl": "Cybercab-accu: klaar voor LFP",
+  "en": "Tesla left empty space inside the Cybercab's battery pack on purpose. Its engineers told Munro Live the room is there so Tesla can switch to cheaper LFP cells later. Those cells hold less energy, but they cost less, run cooler and last longer. The pack is split into four sealed modules, so one bad module can be swapped instead of the whole battery. The body panels are not painted at all: the colour is mixed into the plastic, which removes a paint shop worth hundreds of millions of dollars. And Tesla hopes Optimus robots will soon plug the robotaxis in. The goal is clear: a robotaxi that is cheap to build and cheap to keep running.",
+  "nl": "Tesla heeft bewust lege ruimte gelaten in het accupakket van de Cybercab. De ingenieurs vertelden aan Munro Live dat die ruimte er is zodat Tesla later kan overstappen op goedkopere LFP-cellen. Die slaan minder energie op, maar zijn goedkoper, blijven koeler en gaan langer mee. Het pakket bestaat uit vier afgesloten modules, dus een kapotte module kan los worden vervangen in plaats van de hele accu. De carrosseriedelen worden helemaal niet gespoten: de kleur zit in het kunststof zelf. Dat scheelt een lakstraat van honderden miljoenen dollars. En Tesla hoopt dat Optimus-robots binnenkort de stekker in de robotaxi's steken. Het doel is duidelijk: een robotaxi die goedkoop te bouwen is en goedkoop blijft rijden."
+ },
+ "video": {
+  "en": [
+   {
+    "text": "Tesla's engineers just gave a rare look inside the Cybercab, the two-seat robotaxi with no steering wheel or pedals. In a deep-dive interview with Munro Live, they revealed that the battery pack has spare room for cheaper LFP cells later. The pack is made of four sealed modules. The body panels are coloured in the mould instead of painted. And Tesla hopes Optimus robots will soon plug the cars in. The Cybercab only works as a business if it is cheap to build and cheap to run for hundreds of thousands of miles. And the battery is one of its most expensive parts.",
+    "img": [
+     "models/cc-2.jpg"
+    ]
+   },
+   {
+    "head": "So why does the Cybercab's battery pack have empty space?",
+    "img": [
+     "models/cc-1.jpg"
+    ]
+   },
+   {
+    "text": "To make room for cheaper LFP cells later. Robert Sumpf, who leads mechanical design for Tesla's battery packs, said there is free space beside and below the modules. Today the Cybercab uses Tesla's own 4680 cells with a nickel-based chemistry. LFP cells hold less energy in the same space, so a straight swap would cut range. But extra LFP cells in that spare room could make up the difference. And LFP cells are cheaper, run cooler and last more charge cycles."
+   },
+   {
+    "text": "Tesla's vehicle engineering chief, Lars Moravy, said the car simply needed fewer batteries than expected. In early 2025, Tesla was aiming for a pack under 50 kilowatt hours, with close to 300 miles of range. There is no date yet for an LFP version, and no word on suppliers or range. Cheap cells are only half the story. A robotaxi battery also has to be repairable over a very long life.",
+    "img": [
+     "cybercab-fleet.jpg"
+    ]
+   },
+   {
+    "head": "Why did Tesla split the pack into four modules?",
+    "img": [
+     "models/cc-3.jpg"
+    ]
+   },
+   {
+    "text": "So that one faulty module can be swapped instead of the whole pack. The Cybercab pack has four separate modules, each sealed on its own. That is a clear break from the Model Y, where the battery is part of the car's structure. Sumpf gave that Model Y design a grade D, because it is hard to build and nearly impossible to repair. A fully structural pack fits about 10% more cells, he said, but service costs are the real problem."
+   },
+   {
+    "text": "Cybercab chief engineer Eric Earley explained why. Replacing a pack before half a million miles is expensive. So remanufacturing and easy service were built in from day one. The battery is not the only big cost in a car factory, though. A conventional paint shop is one of the most expensive parts of any plant.",
+    "img": [
+     "gigafactory-2.jpg"
+    ]
+   },
+   {
+    "head": "So how do you give a car colour without painting it?",
+    "img": [
+     "cybercab.jpg"
+    ]
+   },
+   {
+    "text": "By mixing the colour into the material. Moravy said a traditional paint line can cost a few hundred million dollars and around a million hours of work to build. So the team asked why the car needs paint at all. The body panels are injection moulded from a polyurethane resin, with the colour mixed in just before injection. They come out already coloured, with a smooth, show-quality surface. And because the colour runs all the way through, a light scratch does not show a different layer underneath. The metal structure only gets what it needs."
+   },
+   {
+    "key": "Side modules",
+    "text": "First, the side modules. They are built around hot-stamped boron steel door rings and dipped in an anti-corrosion coating.",
+    "img": [
+     "gigafactory.jpg"
+    ]
+   },
+   {
+    "key": "Front and rear castings",
+    "text": "Second, the front and rear castings get no coating at all, because their aluminium alloys do not corrode or weaken over time."
+   },
+   {
+    "key": "Factory floor",
+    "text": "Third, the factory floor. Dropping the paint shop, together with Tesla's unboxed build in separate modules, cuts floor space per car by about half."
+   },
+   {
+    "key": "Automation",
+    "text": "And fourth, automation. Final assembly has about 25 automated stations, and Moravy put the whole line at roughly 78% automated."
+   },
+   {
+    "text": "A cheap car still has to be charged. And right now, Tesla staff plug in every robotaxi by hand.",
+    "img": [
+     "supercharger-2.jpg"
+    ]
+   },
+   {
+    "head": "Who will plug in the Cybercabs?",
+    "img": [
+     "optimus-line.jpg"
+    ]
+   },
+   {
+    "text": "For a while, Tesla hopes it will be Optimus. Moravy and Earley told Munro they hope Optimus will help with that shortly. The Cybercab cannot charge on AC power, so it depends on Superchargers, with a charging port in its rear bumper. A recent video from an Austin Supercharger showed a Tesla worker plugging in Cybercabs and Model Y robotaxis by hand."
+   },
+   {
+    "text": "The long-term plan is wireless charging. Tesla got approval from the FCC for wireless Cybercab charging earlier this year, and it plans an Austin robotaxi hub with 80 wireless chargers. Not a Tesla App expects that wireless charging probably won't be ready in 2027. That is where a robot with hands could fill the gap. The engineers even said Optimus might service the fleet. But none of these plans has a firm date yet.",
+    "img": [
+     "wireless-hub-1.jpg"
+    ]
+   },
+   {
+    "head": "What should we watch for next?",
+    "img": [
+     "cybercab-fleet.jpg"
+    ]
+   },
+   {
+    "text": "Customer deliveries and the first signs of LFP. Tesla aims to deliver the first Cybercabs to outside customers by the end of 2026, although Elon Musk has said most will stay in Tesla's own ride service. Texas records already list 544 Cybercabs on Tesla's robotaxi roster, next to 507 Model Ys. Optimus production has started at Fremont, with the first deliveries to business customers planned for 2027. So watch for an LFP Cybercab or a lower price, for the first robots at Tesla's charging hubs, and for how cheaply Tesla can really keep these cars on the road.",
+    "img": [
+     "cybercab-interior.jpg"
+    ]
+   }
+  ],
+  "nl": [
+   {
+    "text": "Tesla-ingenieurs gaven net een zeldzame blik in de Cybercab, de tweezits robotaxi zonder stuur of pedalen. In een uitgebreid interview met Munro Live vertelden ze dat het accupakket ruimte overhoudt voor goedkopere LFP-cellen. Het pakket bestaat uit vier afgesloten modules. De carrosseriedelen krijgen hun kleur in de mal, in plaats van in een spuitcabine. En Tesla hoopt dat Optimus-robots straks de stekker in de auto's steken. De Cybercab is alleen een goed verdienmodel als hij goedkoop te bouwen is, en honderdduizenden kilometers goedkoop blijft rijden. En juist de accu is een van de duurste onderdelen.",
+    "img": [
+     "models/cc-2.jpg"
+    ]
+   },
+   {
+    "head": "Waarom zit er dan lege ruimte in het accupakket van de Cybercab?",
+    "img": [
+     "models/cc-1.jpg"
+    ]
+   },
+   {
+    "text": "Om later goedkopere LFP-cellen te kunnen gebruiken. Robert Sumpf, die bij Tesla het mechanisch ontwerp van de accupakketten leidt, zei dat er naast en onder de modules vrije ruimte is. Nu gebruikt de Cybercab Tesla's eigen 4680-cellen, met een chemie op basis van nikkel. LFP-cellen slaan in dezelfde ruimte minder energie op, dus een directe wissel kost actieradius. Maar met extra LFP-cellen in die vrije ruimte kan Tesla dat goedmaken. En LFP-cellen zijn goedkoper, blijven koeler en gaan meer laadcycli mee."
+   },
+   {
+    "text": "Volgens Lars Moravy, de baas van voertuigtechniek, had de auto gewoon minder accu's nodig dan gedacht. Begin 2025 mikte Tesla op een pakket van minder dan 50 kilowattuur, met bijna 300 mijl bereik. Dat is zo'n 480 kilometer. Een datum voor een LFP-versie is er nog niet, en ook niets over leveranciers of bereik. Goedkope cellen zijn maar de helft van het verhaal. Een robotaxi-accu moet ook te repareren zijn, tijdens een heel lang leven.",
+    "img": [
+     "cybercab-fleet.jpg"
+    ]
+   },
+   {
+    "head": "Waarom heeft Tesla het pakket in vier modules verdeeld?",
+    "img": [
+     "models/cc-3.jpg"
+    ]
+   },
+   {
+    "text": "Zodat één kapotte module los te vervangen is, in plaats van het hele pakket. Het pakket van de Cybercab heeft vier aparte modules, die elk afzonderlijk zijn afgesloten. Dat is een duidelijke breuk met de Model Y, waar de accu deel uitmaakt van de carrosserie. Sumpf gaf dat ontwerp van de Model Y een D als cijfer, omdat het lastig te bouwen en bijna niet te repareren is. In een volledig structureel pakket past zo'n 10% meer cellen, zei hij, maar de onderhoudskosten zijn het echte probleem."
+   },
+   {
+    "text": "Cybercab-hoofdingenieur Eric Earley legde uit waarom. Een accupakket vervangen voordat de auto een half miljoen mijl heeft gereden, is duur. Daarom zijn hergebruik en makkelijk onderhoud vanaf dag één meegenomen. Toch is de accu niet de enige grote kostenpost in een autofabriek. Een gewone lakstraat is een van de duurste onderdelen van elke fabriek.",
+    "img": [
+     "gigafactory-2.jpg"
+    ]
+   },
+   {
+    "head": "Hoe geef je een auto kleur zonder hem te spuiten?",
+    "img": [
+     "cybercab.jpg"
+    ]
+   },
+   {
+    "text": "Door de kleur in het materiaal zelf te mengen. Volgens Moravy kost een traditionele lakstraat een paar honderd miljoen dollar en zo'n miljoen manuren om te bouwen. Dus vroeg het team zich af waarom de auto eigenlijk gelakt moet worden. De carrosseriedelen worden gespoten uit een polyurethaanhars, waar vlak voor het inspuiten kleurstof doorheen wordt gemengd. Ze komen er meteen gekleurd uit, met een strak oppervlak van showroomkwaliteit. En omdat de kleur er helemaal doorheen zit, zie je bij een lichte kras geen andere laag. Het metalen skelet krijgt alleen wat echt nodig is."
+   },
+   {
+    "key": "Zijmodules",
+    "text": "Ten eerste de zijmodules. Die zijn opgebouwd rond warmgevormde deurringen van boriumstaal, en worden ondergedompeld in een roestwerende coating.",
+    "img": [
+     "gigafactory.jpg"
+    ]
+   },
+   {
+    "key": "Gietstukken voor en achter",
+    "text": "Ten tweede krijgen de gietstukken voor en achter helemaal geen coating, omdat deze aluminiumlegeringen niet roesten en niet zwakker worden."
+   },
+   {
+    "key": "Fabrieksvloer",
+    "text": "Ten derde de fabrieksvloer. Zonder lakstraat, en met Tesla's bouw in losse modules, is per auto ongeveer de helft minder ruimte nodig."
+   },
+   {
+    "key": "Automatisering",
+    "text": "En ten vierde de automatisering. De eindassemblage telt zo'n 25 geautomatiseerde stations, en volgens Moravy is de hele lijn voor ongeveer 78% geautomatiseerd."
+   },
+   {
+    "text": "Ook een goedkope auto moet geladen worden. En nu steken Tesla-medewerkers bij elke robotaxi de stekker er met de hand in.",
+    "img": [
+     "supercharger-2.jpg"
+    ]
+   },
+   {
+    "head": "Wie steekt de stekker in de Cybercabs?",
+    "img": [
+     "optimus-line.jpg"
+    ]
+   },
+   {
+    "text": "Voorlopig hoopt Tesla dat Optimus dat gaat doen. Moravy en Earley zeiden tegen Munro dat ze hopen dat Optimus daar binnenkort bij helpt. De Cybercab kan niet laden op wisselstroom, dus hij is aangewezen op Superchargers, met een laadpoort in de achterbumper. Een recente video van een Supercharger in Austin liet zien hoe een Tesla-medewerker Cybercabs en Model Y-robotaxi's met de hand aan de lader legde."
+   },
+   {
+    "text": "Op de lange termijn moet het draadloos. Tesla kreeg eerder dit jaar toestemming van de FCC voor draadloos laden van de Cybercab, en plant in Austin een robotaxi-hub met 80 draadloze laders. Not a Tesla App verwacht dat draadloos laden in 2027 waarschijnlijk nog niet klaar is. Daar kan een robot met handen het gat vullen. De ingenieurs zeiden zelfs dat Optimus misschien onderhoud aan de vloot kan doen. Maar geen van deze plannen heeft al een vaste datum.",
+    "img": [
+     "wireless-hub-1.jpg"
+    ]
+   },
+   {
+    "head": "Waar moeten we hierna op letten?",
+    "img": [
+     "cybercab-fleet.jpg"
+    ]
+   },
+   {
+    "text": "Op de eerste leveringen aan klanten en op tekenen van LFP. Tesla wil de eerste Cybercabs eind 2026 aan externe klanten leveren, al zei Elon Musk dat de meeste in Tesla's eigen taxidienst blijven. Texaanse registratiegegevens tonen al 544 Cybercabs op Tesla's robotaxi-lijst, naast 507 Model Y's. De productie van Optimus is in Fremont begonnen, en de eerste leveringen aan zakelijke klanten staan voor 2027 gepland. Let dus op een Cybercab met LFP-cellen of een lagere prijs, op de eerste robots bij Tesla's laadhubs, en op hoe goedkoop Tesla deze auto's echt op de weg kan houden.",
+    "img": [
+     "cybercab-interior.jpg"
+    ]
+   }
+  ]
+ },
+ "en": {
+  "title": "Inside the Tesla Cybercab: a battery pack ready for cheaper LFP cells, four swappable modules and no paint shop",
+  "description": "Tesla engineers told Munro Live that the Cybercab's pack has spare room for cheaper LFP cells, is split into four replaceable modules, and that the body is coloured without paint. Optimus may soon plug the robotaxis in.",
+  "body": "<p>Tesla's engineers have given an unusually detailed look inside the Cybercab, the two-seat robotaxi without a steering wheel or pedals. In a deep-dive interview with Sandy Munro's YouTube channel Munro Live, reported on October 27 by Teslarati and Not a Tesla App, they explained that the battery pack was left with spare room so Tesla can switch to cheaper lithium iron phosphate (LFP) cells later. The pack is made of four sealed modules that can be replaced one by one, the plastic body panels are coloured in the mould instead of painted, and Tesla hopes Optimus robots will soon plug the cars in. The Cybercab only makes sense as a business if it is cheap to build and cheap to keep running for hundreds of thousands of miles, and the battery is one of its most expensive parts.</p>\n<h2>So why does the Cybercab's battery pack have empty space?</h2>\n<p><strong>To make room for cheaper LFP cells later.</strong> Robert Sumpf, Tesla's director of mechanical design for battery modules and packs, said the pack was designed with free space beside and below the modules, so it is \"protected\" for a chemistry with lower energy density. Today the Cybercab runs on Tesla's own 4680 cells with a nickel-based chemistry. LFP cells store less energy for the same volume, so a straight swap would cut range. Filling the reserved space with extra LFP cells could make up for that, while giving Tesla cells that are cheaper, run cooler and survive more charge cycles.</p>\n<p>Part of the room exists for a simpler reason. Lars Moravy, Tesla's vice president of vehicle engineering, said the car turned out to need fewer batteries than expected. In early 2025, Tesla told Munro it was aiming for a pack under 50 kWh with close to 300 miles of range. Sumpf gave no date for an LFP version, named no cell supplier and did not say how a switch would change the range. Cheap cells are only half of the story, because a robotaxi battery also has to be repairable over a very long life.</p>\n<h2>Why did Tesla split the pack into four modules?</h2>\n<p><strong>So that one faulty module can be swapped instead of the whole pack.</strong> The Cybercab pack consists of four separate modules, each sealed on its own. That is a clear break from the structural battery in the Model Y, where the pack is part of the car's body. Sumpf was openly critical of that design, giving it a \"grade D\" because it is hard to build and nearly impossible to repair. He estimated that a fully structural pack fits about 10% more cell volume, but said the service cost is the real problem.</p>\n<p>Cybercab chief engineer Eric Earley explained why that matters for a robotaxi: replacing a pack before half a million miles is expensive, so remanufacturing and easy service were built in from the start. The battery is not the only big cost in a car factory, though. A conventional paint shop is one of the most expensive parts of any plant.</p>\n<h2>So how do you give a car colour without painting it?</h2>\n<p><strong>By mixing the colour into the material.</strong> Moravy said a traditional paint line can cost a few hundred million dollars and around a million hours of work to build, so the team simply asked why the car needs paint at all. The body panels are made by reaction injection moulding: colour is mixed into a polyurethane resin just before it is injected, and the panels come out already coloured with a smooth, show-quality surface. Because the colour runs all the way through, a light scratch does not reveal a different layer underneath.</p>\n<p>The metal structure gets only what it needs:</p>\n<ul>\n<li><strong>Side modules:</strong> built around hot-stamped boron steel door rings and dipped in an anti-corrosion e-coat.</li>\n<li><strong>Front and rear castings:</strong> no coating at all, because their aluminium alloys do not corrode or lose strength over time.</li>\n<li><strong>Factory floor:</strong> dropping the paint shop, together with Tesla's \"unboxed\" build of separate modules, cuts floor space per car by about 50%.</li>\n<li><strong>Automation:</strong> final assembly has about 25 automated stations, and Moravy put the whole line at roughly 78% automated.</li>\n</ul>\n<p>A cheap car still has to be charged, and for now Tesla staff plug in every robotaxi by hand.</p>\n<h2>Who will plug in the Cybercabs?</h2>\n<p><strong>For a while, Tesla hopes it will be Optimus.</strong> According to Not a Tesla App, Moravy and Earley told Munro that they hope Optimus will \"help us with that shortly\". The Cybercab cannot charge on AC power, so it depends on Superchargers and has a charging port in its rear bumper. Tesla employees currently connect the cars by hand, and a recent video from an Austin Supercharger showed a worker plugging in Cybercabs and Model Y robotaxis.</p>\n<p>The long-term plan is wireless charging. Tesla received approval from the US Federal Communications Commission for wireless Cybercab charging earlier this year and plans an Austin robotaxi hub with 80 wireless chargers. Not a Tesla App expects that wireless charging will probably not be ready in 2027, which is why a robot with hands could fill the gap. Asked about servicing the fleet, the engineers said Optimus might also do that. None of these plans comes with a firm date yet.</p>\n<h2>What should we watch for next?</h2>\n<p><strong>Customer deliveries and the first signs of LFP.</strong> Tesla aims to deliver the first Cybercabs to outside customers by the end of 2026, although Elon Musk has said most of them will stay in Tesla's own ride service. Texas vehicle records cited by Teslarati already list 544 Cybercabs on Tesla's robotaxi roster, next to 507 Model Ys. Optimus production has started at Fremont, with the first deliveries to corporate customers planned for 2027. Watch for an LFP Cybercab or a lower price, for the first robots at Tesla's charging hubs, and for how cheaply Tesla can really keep these cars on the road.</p>"
+ },
+ "nl": {
+  "title": "Zo zit de Tesla Cybercab in elkaar: een accu klaar voor goedkopere LFP-cellen, vier losse modules en geen lakstraat",
+  "description": "Tesla-ingenieurs vertelden Munro Live dat het accupakket van de Cybercab ruimte heeft voor goedkopere LFP-cellen, uit vier vervangbare modules bestaat en dat de carrosserie zonder lak zijn kleur krijgt. Optimus moet straks de stekker erin steken.",
+  "body": "<p>Tesla-ingenieurs hebben een ongewoon gedetailleerde blik gegeven in de Cybercab, de tweezits robotaxi zonder stuur of pedalen. In een uitgebreid interview met Munro Live, het YouTube-kanaal van Sandy Munro, waarover Teslarati en Not a Tesla App op 27 oktober berichtten, vertelden ze dat het accupakket bewust ruimte overhoudt, zodat Tesla later kan overstappen op goedkopere lithium-ijzerfosfaatcellen (LFP). Het pakket bestaat uit vier afgesloten modules die los te vervangen zijn, de kunststof carrosseriedelen krijgen hun kleur in de mal in plaats van in een spuitcabine, en Tesla hoopt dat Optimus-robots binnenkort de stekker in de auto's steken. De Cybercab is alleen een goed verdienmodel als hij goedkoop te bouwen is én honderdduizenden kilometers goedkoop blijft rijden, en juist de accu is een van de duurste onderdelen.</p>\n<h2>Waarom zit er dan lege ruimte in het accupakket van de Cybercab?</h2>\n<p><strong>Om later goedkopere LFP-cellen te kunnen gebruiken.</strong> Robert Sumpf, bij Tesla directeur mechanisch ontwerp van accumodules en -pakketten, zei dat er naast en onder de modules vrije ruimte is gelaten. Zo is het pakket voorbereid op een celchemie met een lagere energiedichtheid. Nu rijdt de Cybercab op Tesla's eigen 4680-cellen met een chemie op basis van nikkel. LFP-cellen slaan in hetzelfde volume minder energie op, dus een directe wissel zou actieradius kosten. Met extra LFP-cellen in de vrijgehouden ruimte kan Tesla dat compenseren, en krijgt het cellen die goedkoper zijn, koeler blijven en meer laadcycli aankunnen.</p>\n<p>Een deel van die ruimte heeft een eenvoudiger oorzaak. Lars Moravy, vicepresident voertuigtechniek bij Tesla, zei dat de auto minder accu's nodig bleek te hebben dan verwacht. Begin 2025 vertelde Tesla aan Munro dat het mikte op een pakket van minder dan 50 kWh met bijna 300 mijl (zo'n 480 kilometer) bereik. Sumpf noemde geen datum voor een LFP-versie, geen celleverancier en ook niet wat een overstap met de actieradius doet. Goedkope cellen zijn maar de helft van het verhaal, want een robotaxi-accu moet ook gerepareerd kunnen worden tijdens een heel lang leven.</p>\n<h2>Waarom heeft Tesla het pakket in vier modules verdeeld?</h2>\n<p><strong>Zodat één kapotte module los te vervangen is, in plaats van het hele pakket.</strong> Het pakket van de Cybercab bestaat uit vier aparte modules die elk afzonderlijk zijn afgesloten. Dat is een duidelijke breuk met de structurele accu van de Model Y, waarbij het pakket deel uitmaakt van de carrosserie. Sumpf was daar opvallend kritisch over en gaf dat ontwerp een \"D\" als cijfer, omdat het lastig te bouwen en bijna niet te repareren is. Volgens zijn schatting past er in een volledig structureel pakket zo'n 10% meer celvolume, maar de onderhoudskosten zijn het echte probleem.</p>\n<p>Cybercab-hoofdingenieur Eric Earley legde uit waarom dat voor een robotaxi telt: een accupakket vervangen voordat de auto een half miljoen mijl heeft gereden, is duur. Daarom zijn hergebruik en makkelijk onderhoud vanaf het begin in het ontwerp meegenomen. Toch is de accu niet de enige grote kostenpost in een autofabriek. Een gewone lakstraat is een van de duurste onderdelen van elke fabriek.</p>\n<h2>Hoe geef je een auto kleur zonder hem te spuiten?</h2>\n<p><strong>Door de kleur in het materiaal zelf te mengen.</strong> Moravy zei dat een traditionele lakstraat een paar honderd miljoen dollar en zo'n miljoen manuren kan kosten om te bouwen. Het team vroeg zich daarom af waarom de auto eigenlijk gelakt moet worden. De carrosseriedelen worden gemaakt met reactiespuitgieten: vlak voor het inspuiten wordt kleurstof door een polyurethaanhars gemengd, en de panelen komen er meteen gekleurd uit, met een strak oppervlak van showroomkwaliteit. Omdat de kleur er helemaal doorheen zit, zie je bij een lichte kras geen andere laag eronder.</p>\n<p>Het metalen skelet krijgt alleen wat echt nodig is:</p>\n<ul>\n<li><strong>Zijmodules:</strong> opgebouwd rond warmgevormde deurringen van boriumstaal en ondergedompeld in een roestwerende e-coat.</li>\n<li><strong>Gietstukken voor en achter:</strong> helemaal geen coating, omdat deze aluminiumlegeringen niet roesten en na verloop van tijd niet zwakker worden.</li>\n<li><strong>Fabrieksvloer:</strong> zonder lakstraat, en met Tesla's \"unboxed\" bouw in losse modules, is per auto ongeveer de helft minder vloeroppervlak nodig.</li>\n<li><strong>Automatisering:</strong> de eindassemblage telt zo'n 25 geautomatiseerde stations, en volgens Moravy is de hele lijn voor ongeveer 78% geautomatiseerd.</li>\n</ul>\n<p>Ook een goedkope auto moet geladen worden, en op dit moment steken Tesla-medewerkers bij elke robotaxi de stekker er met de hand in.</p>\n<h2>Wie steekt de stekker in de Cybercabs?</h2>\n<p><strong>Voorlopig hoopt Tesla dat Optimus dat gaat doen.</strong> Volgens Not a Tesla App zeiden Moravy en Earley tegen Munro dat ze hopen dat Optimus hen daar \"binnenkort mee helpt\". De Cybercab kan niet laden op wisselstroom, dus hij is aangewezen op Superchargers en heeft een laadpoort in de achterbumper. Tesla-medewerkers sluiten de auto's nu met de hand aan; een recente video van een Supercharger in Austin liet een medewerker zien die Cybercabs en Model Y-robotaxi's aan de lader legde.</p>\n<p>Op de lange termijn moet het draadloos. Tesla kreeg eerder dit jaar toestemming van de Amerikaanse telecomtoezichthouder FCC voor draadloos laden van de Cybercab, en plant in Austin een robotaxi-hub met 80 draadloze laders. Not a Tesla App verwacht dat draadloos laden in 2027 waarschijnlijk nog niet klaar is, en daar zou een robot met handen het gat kunnen vullen. Op de vraag of Optimus ook onderhoud aan de vloot kan doen, zeiden de ingenieurs dat dat mogelijk is. Geen van deze plannen heeft al een vaste datum.</p>\n<h2>Waar moeten we hierna op letten?</h2>\n<p><strong>Op de eerste leveringen aan klanten en op tekenen van LFP.</strong> Tesla wil de eerste Cybercabs eind 2026 aan externe klanten leveren, al heeft Elon Musk gezegd dat de meeste in Tesla's eigen taxidienst blijven. Volgens Texaanse registratiegegevens waar Teslarati naar verwijst, staan er al 544 Cybercabs op Tesla's robotaxi-lijst, naast 507 Model Y's. De productie van Optimus is in Fremont begonnen, en de eerste leveringen aan zakelijke klanten staan voor 2027 gepland. Let op een Cybercab met LFP-cellen of een lagere prijs, op de eerste robots bij Tesla's laadhubs, en op hoe goedkoop Tesla deze auto's echt op de weg kan houden.</p>"
+ }
+}

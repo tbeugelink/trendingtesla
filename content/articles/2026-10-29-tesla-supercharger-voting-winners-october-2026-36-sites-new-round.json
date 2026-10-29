@@ -240,5 +240,18 @@
         ]
       }
     ]
+  },
+  "gen_image": {
+    "prompt": "A brand-new Tesla V4 Supercharger site in a small coastal town at golden hour: a row of slim white and red charging posts beside a seaside road, two Tesla cars charging, rocky sea stacks and a sandy beach in the background, a few pine trees, warm sunset sky with yellow and orange tones, a red and blue beach shop sign out of focus.",
+    "subject": "the Tesla V4 Supercharger posts (tall slim white post with red accent, cable and connector) and modern Tesla cars",
+    "refs": [
+      {
+        "src": "topics/supercharger-6.jpg"
+      },
+      {
+        "src": "topics/supercharger-7.jpg"
+      }
+    ],
+    "describe": "new V4 Supercharger site in a coastal town at sunset, sea stacks behind, two Teslas charging"
   }
 }

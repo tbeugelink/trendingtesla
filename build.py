@@ -27,6 +27,15 @@ Heading style: write "What to watch for next" / "What should we watch for next?"
 we watch next?" (that sounds like the video is ending and suggesting another video). Start one or two
 headings per article with "So" ("So how does ...?", NL "Dus ..." or "... dan?") so it sounds natural
 when spoken; not every heading.
+Generated photo (optional, see tools/gen_image.py): "gen_image": {"prompt", "subject", "refs", "describe"}.
+Right after publishing, the video workflow makes a new photo with Nano Banana from 1-3 reference photos of the
+REAL subject and uses it on the site and in the videos (falls back to the normal photos on any problem).
+Rules: refs show exactly the same product and version (never mix e.g. Supercharger V3 and V4, or two car
+generations); prefer real photos (Wikimedia Commons via {"commons": "search words"}, Tesla press photos via
+{"src": "https://...", "page": "..."}) or our photos marked as real in PHOTOS.md, never ones marked AI-made;
+describe how the subject is really built and placed (e.g. "one charger post at the head end of each bay, cars
+reversed in"); the scene is illustrative, never a fake documentary photo of the news event itself (no crash,
+fire, arrest or real person). Skip "gen_image" for news about one specific car model (its real photos are used).
 Guides (buying advice) use category "guides"; they appear in the "Best picks" section
 and on the model pages they are tagged with.
 

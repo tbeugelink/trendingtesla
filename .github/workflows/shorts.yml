@@ -61,6 +61,21 @@ jobs:
             echo "slugs=$slugs" >> "$GITHUB_OUTPUT"
             echo "langs=$langs" >> "$GITHUB_OUTPUT"
           fi
+      - name: Generate article photos (Nano Banana) and publish them first
+        if: steps.find.outputs.slugs != '' && steps.find.outputs.queue != '1' && github.event_name != 'workflow_dispatch'
+        continue-on-error: true
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          [ -z "$GEMINI_API_KEY" ] && exit 0
+          python3 tools/gen_image.py ${{ steps.find.outputs.slugs }}
+          [ -z "$(git status --porcelain content static)" ] && exit 0
+          git config user.name "TrendingTesla bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          python3 build.py > /dev/null
+          git add -A content static PHOTOS.md public
+          git commit -qm "Photo: new image for ${{ steps.find.outputs.slugs }}"
+          for i in 1 2 3; do git pull --rebase -q origin main && git push -q origin HEAD:main && exit 0; sleep 10; done
       - name: Make videos
         if: steps.find.outputs.slugs != ''
         env:

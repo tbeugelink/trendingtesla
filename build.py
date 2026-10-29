@@ -836,6 +836,9 @@ def page(lang, path, title, description, body, og_type="website", extra_head="",
 <meta name="twitter:image" content="{img}">
 <meta name="theme-color" content="#03050a">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-48.png" sizes="48x48" type="image/png">
+<link rel="icon" href="/favicon-192.png" sizes="192x192" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <style>{CSS}</style>
 {extra_head}
 </head>
@@ -1497,7 +1500,13 @@ def build():
             body += feed(top, story(top, lang, "h2"), [a for a in arts if a is not top], lang, "news", L["latest"], no_left=True)
         else:
             body += section(L["latest"], f'<p class="empty">{L["empty"]}</p>', anchor="news")
-        write(url(lang), page(lang, "", NAME, L["tagline"], body))
+        site_ld = {"@context": "https://schema.org", "@type": "WebSite", "name": NAME, "alternateName": ["Trending Tesla", "trendingtesla.com"],
+                   "url": SITE + url(lang), "inLanguage": lang,
+                   "publisher": {"@type": "Organization", "name": NAME, "url": SITE,
+                                 "logo": {"@type": "ImageObject", "url": SITE + "/favicon-512.png", "width": 512, "height": 512},
+                                 "sameAs": ["https://www.youtube.com/@TrendingTesla"]}}
+        write(url(lang), page(lang, "", NAME, L["tagline"], body,
+                              extra_head=f'<script type="application/ld+json">{json.dumps(site_ld, ensure_ascii=False)}</script>'))
         home_body = body
 
         # ---------- Category pages ----------
@@ -1546,7 +1555,7 @@ def build():
                 "inLanguage": lang, "articleSection": c[lang],
                 "mainEntityOfPage": SITE + url(lang, a["slug"] + "/"),
                 "publisher": {"@type": "Organization", "name": NAME, "url": SITE,
-                              "logo": {"@type": "ImageObject", "url": SITE + "/favicon.svg"}},
+                              "logo": {"@type": "ImageObject", "url": SITE + "/favicon-512.png", "width": 512, "height": 512}},
                 "author": {"@type": "Organization", "name": NAME, "url": SITE},
             }
             v = VIDEOS.get((a["slug"], lang))

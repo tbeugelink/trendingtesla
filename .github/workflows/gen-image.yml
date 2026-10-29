@@ -8,6 +8,10 @@ on:
       slug:
         description: "Article slug, or 'test' to make the test images in ops/gen-tests.json (nothing is published)"
         required: true
+      spec:
+        description: "Test spec file (only with slug 'test')"
+        required: false
+        default: "ops/gen-tests.json"
 
 permissions:
   contents: write
@@ -24,7 +28,7 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
           pip install --quiet pillow
-          python3 tools/gen_image.py --test ops/gen-tests.json gen-test
+          python3 tools/gen_image.py --test "${{ github.event.inputs.spec || 'ops/gen-tests.json' }}" gen-test
       - uses: actions/upload-artifact@v5
         if: github.event.inputs.slug == 'test'
         with:

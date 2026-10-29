@@ -112,7 +112,9 @@ def commons(query):
         lic = ii.get("extmetadata", {}).get("LicenseShortName", {}).get("value", "")
         if ii.get("mime") == "image/jpeg" and lic.lower().startswith(FREE):
             return {"src": ii.get("thumburl") or ii["url"], "page": ii.get("descriptionurl"), "license": lic}
-    raise RuntimeError(f"no freely licensed Commons photo for '{query}'")
+    seen = [(p.get("title"), (p.get("imageinfo") or [{}])[0].get("mime"),
+             (p.get("imageinfo") or [{}])[0].get("extmetadata", {}).get("LicenseShortName", {}).get("value")) for p in pages[:4]]
+    raise RuntimeError(f"no freely licensed Commons photo for '{query}' ({len(pages)} results: {seen})")
 
 
 def load_ref(src):

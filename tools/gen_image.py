@@ -101,12 +101,19 @@ FREE = ("cc0", "cc by", "cc-by", "public domain", "pd")
 def commons(query):
     """First freely licensed photo on Wikimedia Commons for `query` -> {"src", "page", "license"}."""
     import urllib.parse
-    q = urllib.parse.urlencode({"action": "query", "format": "json", "generator": "search", "gsrnamespace": 6,
-                                "gsrsearch": f"{query} filetype:bitmap", "gsrlimit": 10, "prop": "imageinfo",
-                                "iiprop": "url|extmetadata|mime", "iiurlwidth": 1280})
-    with urllib.request.urlopen(urllib.request.Request(f"https://commons.wikimedia.org/w/api.php?{q}", headers=UA),
-                                timeout=60) as r:
-        pages = sorted(json.load(r).get("query", {}).get("pages", {}).values(), key=lambda p: p.get("index", 99))
+    pages = []
+    words = query.split()
+    for qq in dict.fromkeys([query, " ".join(words[:-1]), " ".join(words[:2])]):  # fall back to shorter queries
+        if not qq:
+            continue
+        q = urllib.parse.urlencode({"action": "query", "format": "json", "generator": "search", "gsrnamespace": 6,
+                                    "gsrsearch": qq, "gsrlimit": 15, "prop": "imageinfo",
+                                    "iiprop": "url|extmetadata|mime", "iiurlwidth": 1280})
+        with urllib.request.urlopen(urllib.request.Request(f"https://commons.wikimedia.org/w/api.php?{q}", headers=UA),
+                                    timeout=60) as r:
+            pages = sorted(json.load(r).get("query", {}).get("pages", {}).values(), key=lambda p: p.get("index", 99))
+        if any((p.get("imageinfo") or [{}])[0].get("mime") == "image/jpeg" for p in pages):
+            break
     for p in pages:
         ii = (p.get("imageinfo") or [{}])[0]
         lic = ii.get("extmetadata", {}).get("LicenseShortName", {}).get("value", "")

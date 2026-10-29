@@ -1,14 +1,14 @@
 {
-  "gen/tesla-supercharger-voting-winners-october-2026-36-sites-new-round.jpg": {
+  "gen/tesla-supercharger-voting-winners-october-2026-36-sites-new-round-2.jpg": {
     "article": "tesla-supercharger-voting-winners-october-2026-36-sites-new-round",
     "model": "gemini-3.1-flash-image",
     "made": "2026-10-29",
     "references": [
       {
-        "src": "topics/supercharger-6.jpg"
-      },
-      {
-        "src": "topics/supercharger-7.jpg"
+        "src": "https://upload.wikimedia.org/wikipedia/commons/8/80/Tesla_V4_Supercharger.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page": "https://commons.wikimedia.org/wiki/File:Tesla_V4_Supercharger.jpg",
+        "license": "CC BY-SA 4.0",
+        "commons": "Tesla V4 Supercharger"
       }
     ]
   }

@@ -231,4 +231,4 @@ Articles with a "models" key automatically use real-life photos of that model. Y
 - fsd-highway-sunset.jpg — driver's seat on a desert highway with trucks and red rock buttes at sunset, screen with lane visualisation (FSD on the highway, US)
 
 ## Generated photos (made per article with Nano Banana; reusable, give as "gen/<file>.jpg" in "images" or as a reference)
-- gen/tesla-supercharger-voting-winners-october-2026-36-sites-new-round.jpg — new V4 Supercharger site in a coastal town at sunset, sea stacks behind, two Teslas charging
+- gen/tesla-supercharger-voting-winners-october-2026-36-sites-new-round-2.jpg — new V4 Supercharger site in a coastal town at sunset, sea stacks behind, two Teslas charging

@@ -8,6 +8,7 @@ channel). Privacy comes from YT_PRIVACY (default "private": Google keeps uploads
 projects private anyway until the project passes its audit).
 """
 import json
+import urllib.error
 import os
 import sys
 import urllib.parse
@@ -38,6 +39,24 @@ def read_meta(txt):
     return get("TITLE"), get("DESCRIPTION"), [t.strip() for t in get("TAGS").split(",") if t.strip()]
 
 
+def set_thumbnail(vid, mp4, at=None, at_sec=1.0):
+    """Use the opening frame (photo + label) of a long video as its YouTube thumbnail (1280x720 JPEG)."""
+    import subprocess
+    import tempfile
+    jpg = Path(tempfile.mkdtemp()) / f"{vid}.jpg"
+    subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-ss", str(at_sec), "-i", str(mp4), "-frames:v", "1",
+                    "-vf", "scale=1280:720:flags=lanczos", "-q:v", "2", str(jpg)], check=True)
+    req = urllib.request.Request(
+        f"https://www.googleapis.com/upload/youtube/v3/thumbnails/set?videoId={vid}&uploadType=media",
+        data=jpg.read_bytes(), method="POST",
+        headers={"Authorization": f"Bearer {at or token()}", "Content-Type": "image/jpeg"})
+    try:
+        with urllib.request.urlopen(req, timeout=120):
+            print(f"::notice::Thumbnail set for https://youtu.be/{vid}")
+    except urllib.error.HTTPError as e:  # a missing thumbnail must never fail the upload
+        print(f"::warning::Thumbnail for {vid} failed: {e.code} {e.read().decode(errors='replace')[:300]}")
+
+
 def main():
     mp4 = Path(sys.argv[1])
     lang = sys.argv[2] if len(sys.argv) > 2 else "en"
@@ -64,8 +83,9 @@ def main():
                                      headers={"Authorization": f"Bearer {at}", "Content-Type": "video/mp4"})
     with urllib.request.urlopen(put, timeout=600) as r:
         vid = json.load(r)["id"]
-    # remember the length of long videos; the site shows it ("▶ 5 min") and YouTube's feed has none
+    # remember the length of long videos; the site shows it ("▶ 4:15") and YouTube's feed has none
     if mp4.name.endswith("-full.mp4"):
+        set_thumbnail(vid, mp4, at)
         import subprocess
         secs = round(float(subprocess.check_output(["ffprobe", "-v", "error", "-show_entries", "format=duration",
                                                     "-of", "csv=p=0", str(mp4)], text=True).strip()))

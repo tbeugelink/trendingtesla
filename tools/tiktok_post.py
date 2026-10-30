@@ -104,7 +104,7 @@ def post(mp4, url):
 
 def introspect():
     """Print the input fields Buffer accepts for posts (used to find the TikTok and asset options)."""
-    q = """query($n: String!) { __type(name: $n) { name inputFields { name type { name kind ofType { name kind ofType { name } } } } } }"""
+    q = """query($n: String!) { __type(name: $n) { name inputFields { name type { name kind ofType { name kind ofType { name kind ofType { name kind ofType { name } } } } } } } }"""
     todo, seen = ["CreatePostInput"], set()
     while todo:
         n = todo.pop(0)
@@ -119,7 +119,7 @@ def introspect():
             ty = f["type"]
             while ty and not ty.get("name"):
                 ty = ty.get("ofType")
-            if ty and re.search(r"Metadata|Asset|Video|Tiktok|TikTok", ty["name"] or ""):
+            if ty and re.search(r"metadata|asset|video|tiktok", ty["name"] or "", re.I):
                 todo.append(ty["name"])
 
 

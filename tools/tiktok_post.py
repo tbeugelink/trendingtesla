@@ -1,6 +1,9 @@
-"""Post a finished Short to TikTok through Buffer (Buffer is an approved TikTok partner, so posts are public).
+"""Post a finished Short to TikTok, Instagram (Reel) and Facebook (Reel) through Buffer.
 
-Usage (in GitHub Actions):  python3 tools/tiktok_post.py <video/out/...-en-short.mp4> <public video URL> [cover URL]
+Buffer is an approved partner of TikTok and Meta, so posts are public. Which networks: env SOCIAL_SERVICES
+(comma list, default "tiktok,instagram,facebook"); every connected Buffer channel of those services gets it.
+
+Usage (in GitHub Actions):  python3 tools/tiktok_post.py <video/out/...-en-short.mp4> <public video URL>
 Needs the secret BUFFER_API_KEY. The video must stay reachable at the URL until Buffer has published it
 (the workflow puts it on a GitHub release of the public repo). Caption: the article title, a link to the
 article, a few hashtags and the AI note TikTok asks for. Never fails the workflow: problems are warnings.
@@ -33,7 +36,7 @@ def gql(query, variables=None):
     return d["data"]
 
 
-ENUMS = {"mode", "schedulingType"}
+ENUMS = {"mode", "schedulingType", "type"}
 
 
 def literal(v, key=None):
@@ -47,14 +50,22 @@ def literal(v, key=None):
     return json.dumps(v)
 
 
-def tiktok_channel():
+def channels(services):
+    out = []
     orgs = gql("query { account { organizations { id name } } }")["account"]["organizations"]
     for o in orgs:
         chans = gql(f"query {{ channels(input: {{organizationId: {json.dumps(o['id'])}}}) {{ id name service }} }}")["channels"]
-        for c in chans:
-            if c["service"].lower() == "tiktok":
-                return c["id"], c["name"]
-    raise RuntimeError("no TikTok channel connected in Buffer")
+        out += [c for c in chans if c["service"].lower() in services]
+    if not out:
+        raise RuntimeError(f"no {'/'.join(services)} channel connected in Buffer")
+    return out
+
+
+def metadata(service, title):
+    """Per network: post as a Reel where that applies, and always the network's own AI-content label."""
+    return {"tiktok": {"tiktok": {"isAiGenerated": True, "title": title[:90]}},
+            "instagram": {"instagram": {"type": "reel", "isAiGenerated": True, "shouldShareToFeed": True}},
+            "facebook": {"facebook": {"type": "reel"}}}.get(service, {})
 
 
 def caption(slug):
@@ -76,35 +87,40 @@ def caption(slug):
             f"{' '.join(dict.fromkeys(tags))}\n\nAI-generated voice-over; script written and checked by TrendingTesla.")
 
 
-def post(mp4, url, cover=None):
+def post(mp4, url):
     slug = re.sub(r"-(en|nl)-short\.mp4$", "", Path(mp4).name)
-    cid, name = tiktok_channel()
+    services = [x.strip().lower() for x in os.environ.get("SOCIAL_SERVICES", "tiktok,instagram,facebook").split(",") if x.strip()]
     text = caption(slug)
-    # cover: a frame from the video (Buffer refuses custom cover images); 0.5 s = photo + label on screen
-    video = {"url": url, "metadata": {"thumbnailOffset": 500}}
-    asset = [{"video": video}]
-    import build
     a = json.loads(next((ROOT / "content/articles").glob(f"*-{slug}.json")).read_text(encoding="utf-8"))
-    meta = {"tiktok": {"isAiGenerated": True, "title": a["en"]["title"][:90]}}  # official TikTok AI label
+    # cover: a frame from the video (Buffer refuses custom cover images); 0.5 s = photo + label on screen
+    asset = [{"video": {"url": url, "metadata": {"thumbnailOffset": 500}}}]
     mut = """mutation { createPost(input: %s) {
         ... on PostActionSuccess { post { id } }
         ... on MutationError { message } } }"""
-    base = {"text": text, "channelId": cid, "schedulingType": "automatic", "assets": asset, "metadata": meta}
-    attempts = [{**base, "mode": "shareNow"},
-                {**base, "mode": "customScheduled",
-                 "dueAt": (datetime.now(timezone.utc) + timedelta(minutes=3)).strftime("%Y-%m-%dT%H:%M:%S.000Z")}]
-    last = None
-    for inp in attempts:
-        try:
-            res = gql(mut % literal(inp))["createPost"]
-        except RuntimeError as e:
-            last = e
-            continue
-        if res.get("post"):
-            print(f"::notice::TikTok via Buffer ({name}): post {res['post']['id']} for {slug} ({inp['mode']})")
-            return
-        last = RuntimeError(res.get("message"))
-    raise last
+    failed = []
+    for ch in channels(services):
+        svc = ch["service"].lower()
+        base = {"text": text, "channelId": ch["id"], "schedulingType": "automatic", "assets": asset,
+                "metadata": metadata(svc, a["en"]["title"])}
+        attempts = [{**base, "mode": "shareNow"},
+                    {**base, "mode": "customScheduled",
+                     "dueAt": (datetime.now(timezone.utc) + timedelta(minutes=3)).strftime("%Y-%m-%dT%H:%M:%S.000Z")}]
+        last, ok = None, False
+        for inp in attempts:
+            try:
+                res = gql(mut % literal(inp))["createPost"]
+            except RuntimeError as e:
+                last = e
+                continue
+            if res.get("post"):
+                print(f"::notice::{svc} via Buffer ({ch['name']}): post {res['post']['id']} for {slug} ({inp['mode']})")
+                ok = True
+                break
+            last = RuntimeError(res.get("message"))
+        if not ok:
+            print(f"::warning::{svc} post for {slug} failed: {last}")
+            failed.append(svc)
+    return failed
 
 
 def introspect():
@@ -138,6 +154,6 @@ if __name__ == "__main__":
         print("::warning::BUFFER_API_KEY missing, skipping TikTok")
         sys.exit(0)
     try:
-        post(sys.argv[1], sys.argv[2], sys.argv[3] if len(sys.argv) > 3 else None)
+        post(sys.argv[1], sys.argv[2])
     except Exception as e:
-        print(f"::warning::TikTok post for {sys.argv[1]} failed: {e}")
+        print(f"::warning::social post for {sys.argv[1]} failed: {e}")

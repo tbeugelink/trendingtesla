@@ -1,0 +1,39 @@
+name: Post a Short to TikTok
+
+# By hand from the Actions tab: post an existing Short to TikTok (via Buffer). New Shorts are posted
+# automatically in "Make YouTube videos". The video is taken from the artifact of the run that made it.
+on:
+  workflow_dispatch:
+    inputs:
+      slug:
+        description: "Article slug"
+        required: true
+      run_id:
+        description: "Id of the 'Make YouTube videos' run whose artifact holds the Short"
+        required: true
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  tiktok:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+      - name: Get the Short
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh run download "${{ github.event.inputs.run_id }}" -D art
+          f=$(find art -name "${{ github.event.inputs.slug }}-en-short.mp4" | head -1)
+          [ -n "$f" ] || { echo "::error::Short not found in that run"; exit 1; }
+          mkdir -p video/out && cp "$f" video/out/
+      - name: Post to TikTok
+        env:
+          GH_TOKEN: ${{ github.token }}
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+        run: |
+          pip install --quiet pillow
+          tools/tiktok_publish.sh video/out/*-en-short.mp4

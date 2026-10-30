@@ -130,7 +130,9 @@ def introspect():
 
 if __name__ == "__main__":
     if sys.argv[1:] == ["--introspect"]:
-        introspect()
+        for n in ("PostType", "PostTypeFacebook", "ShareMode", "SchedulingType"):
+            t = gql('query { __type(name: "%s") { enumValues { name } } }' % n)["__type"]
+            print("ENUM", n, [e["name"] for e in (t or {}).get("enumValues") or []])
         sys.exit(0)
     if not os.environ.get("BUFFER_API_KEY"):
         print("::warning::BUFFER_API_KEY missing, skipping TikTok")

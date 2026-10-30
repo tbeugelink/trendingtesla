@@ -42,5 +42,6 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
         run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg > /dev/null
           pip install --quiet pillow
           tools/tiktok_publish.sh video/out/*-en-short.mp4

@@ -10,7 +10,7 @@ on:
         required: false
         default: ""
       model:
-        description: "Veo model id (empty = cheapest available)"
+        description: "Veo model id, or 'omni' for Gemini Omni Flash (empty = cheapest Veo)"
         required: false
         default: ""
       seconds:
@@ -32,10 +32,14 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
           pip install --quiet pillow
-          python3 tools/veo_test.py list
+          python3 tools/veo_test.py list || true
           if [ -n "${{ github.event.inputs.image }}" ]; then
             mkdir -p veo-test
+            if [ "${{ github.event.inputs.model }}" = "omni" ]; then
+              python3 tools/veo_test.py omni "static/img/${{ github.event.inputs.image }}" veo-test/clip.mp4 "${{ github.event.inputs.seconds == '16:9' && '16:9' || '9:16' }}"
+            else
             python3 tools/veo_test.py clip "static/img/${{ github.event.inputs.image }}" veo-test/clip.mp4 ${{ github.event.inputs.model || '""' }} ${{ github.event.inputs.seconds || '6' }}
+            fi
           fi
       - uses: actions/upload-artifact@v5
         if: github.event.inputs.image != ''

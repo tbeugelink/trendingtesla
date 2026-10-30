@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
     inputs:
       action:
-        description: "thumbs, playlists or both"
+        description: "thumbs, playlists, both or stats"
         required: false
         default: "both"
       ids:
@@ -25,16 +25,23 @@ jobs:
           sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg > /dev/null
           pip install --quiet pillow num2words
       - name: Set thumbnails
-        if: github.event.inputs.action != 'playlists'
+        if: github.event.inputs.action == 'thumbs' || github.event.inputs.action == 'both'
         env:
           YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
           YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
           YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
         run: python3 tools/yt_thumbs.py ${{ github.event.inputs.ids }}
       - name: Topic playlists
-        if: github.event.inputs.action != 'thumbs'
+        if: github.event.inputs.action == 'playlists' || github.event.inputs.action == 'both'
         env:
           YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
           YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
           YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
         run: python3 tools/yt_playlists.py
+      - name: Video statistics
+        if: github.event.inputs.action == 'stats'
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+        run: python3 tools/yt_stats.py

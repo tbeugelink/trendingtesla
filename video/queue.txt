@@ -1,2 +1,2 @@
-how-starlink-works-satellites-lasers-dish-explained en --upload
-# 2026-10-29T10:55:06 Short for the Starlink article (its long video is already online)
+tesla-houston-robotaxi-zone-10x-bigger-texas-fleet-passes-1000 en --full --upload
+# 2026-10-30T10:16:06 Long video for the Houston Robotaxi article (requested on demand)

@@ -23,7 +23,11 @@
     "description": "Slovenië is het zesde EU-land dat Tesla's FSD (Supervised) toestaat. De volledige lijst, hoe de goedkeuringen werken en wat Europese rijders moeten weten.",
     "body": "<p>Slovenië heeft Tesla's Full Self-Driving (Supervised) goedgekeurd en is daarmee het zesde land in de Europese Unie waar de software is toegestaan. Het Sloveense besluit viel op 7 september.</p><h2>De Europese lijst tot nu toe</h2><ul><li><strong>Nederland:</strong> april 2026, de oorspronkelijke goedkeuring door de RDW.</li><li><strong>Litouwen:</strong> 20 mei.</li><li><strong>Estland:</strong> 29 mei.</li><li><strong>Denemarken:</strong> 9 juni.</li><li><strong>België:</strong> 10 juni.</li><li><strong>Slovenië:</strong> 7 september.</li></ul><h2>Zo werkt het</h2><p>Nederland deed het zware werk. De RDW verleende een voorlopige Europese typegoedkeuring op basis van een regel voor nieuwe technologie die nog niet volledig in de bestaande EU-regels past. Andere lidstaten kunnen die goedkeuring vervolgens erkennen voor hun eigen wegen. Elk land beslist daar apart over, en daarom groeit de lijst land voor land.</p><p>Daarnaast loopt er een route naar een besluit voor de hele EU, via het comité van lidstaten dat over voertuigregels stemt. Dan is erkenning per land niet meer nodig, maar daarvoor is een brede gekwalificeerde meerderheid vereist.</p><h2>Wat 'Supervised' betekent</h2><p>Ondanks de naam gaat het om een rijhulpsysteem van niveau 2. De auto kan sturen, remmen en navigeren, maar de bestuurder moet altijd op de weg letten en klaar zijn om het over te nemen. Rijden zonder handen en zonder op te letten is nergens in Europa toegestaan.</p><h2>Waar je op moet letten</h2><p>Elk nieuw land geeft extra vaart, maar de echte prijs is goedkeuring voor de hele EU. Daarmee gaan de veel grotere markten zoals Duitsland, Frankrijk en Italië in één keer open. Tot die tijd moeten rijders in andere landen wachten op hun eigen nationale toezichthouder.</p>"
   },
-  "images": ["fsd-czechia.jpg", "fsd-4.jpg", "fsd-roundabout-eu.jpg", "fsd-snow.jpg"],
+  "images": [
+    "fsd-4.jpg",
+    "fsd-roundabout-eu.jpg",
+    "fsd-snow.jpg"
+  ],
   "label": {
     "style": "c",
     "en": {

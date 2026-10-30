@@ -279,7 +279,7 @@ def render(a, lang, pieces, segs, place, words, total, end_start, audio):
     # scenes: a block's photos start with that block (just before it, so the fade is done when it begins)
     scenes = []
     for i, (kind, _, b) in enumerate(pieces):
-        imgs = [p for p in (img_path(x) for x in (b.get("img") or [])) if p]
+        imgs = [p for p in (img_path(x) for x in (b.get("img") or [])) if p and p.name not in S.BLOCKED]
         if not imgs:
             continue
         t0 = max(0.0, place[i] - 0.6) if i else 0.0
@@ -302,14 +302,20 @@ def render(a, lang, pieces, segs, place, words, total, end_start, audio):
             if q and q not in sec_imgs.setdefault(sec, []):
                 sec_imgs[sec].append(q)
     pool = S.photos(a)
-    fixed = []
+    fixed, uses = [], {}
     for k, (st, p) in enumerate(scenes):
         end = scenes[k + 1][0] if k + 1 < len(scenes) else total
         i = max([j for j in range(len(pieces)) if place[j] - 0.7 <= st] or [0])
-        cand = [x for x in sec_imgs.get(sec_of[i], []) + pool if x != p]
+        cand = list(dict.fromkeys(x for x in sec_imgs.get(sec_of[i], []) + pool if x != p))
         n = max(1, round((end - st) / SCENE_MAX))
         for j in range(n):
-            q = p if j == 0 else next((x for x in cand if x not in [f[1] for f in fixed[-2:]]), p)
+            if j == 0:
+                q = p
+            else:  # the photo this video has shown least so far (section photos first on a tie), never the last 3
+                recent = [f[1] for f in fixed[-3:]]
+                ok = [x for x in cand if x not in recent] or [x for x in cand if x != fixed[-1][1]] or [p]
+                q = min(ok, key=lambda x: (uses.get(x, 0), ok.index(x)))
+            uses[q] = uses.get(q, 0) + 1
             fixed.append((st + (end - st) * j / n, q))
     scenes = fixed
     starts = [s for s, _ in scenes]

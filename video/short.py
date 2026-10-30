@@ -54,6 +54,14 @@ def load(slug):
     return json.loads(f.read_text(encoding="utf-8"))
 
 
+# photos that must never appear in a video (e.g. readable licence plates or brand text on another car)
+BLOCKED = {"fsd-czechia.jpg"}
+# categories whose topic photos all show the same kind of subject, so any of them fits any article in it
+# (not energy/charging: Powerwall vs Megapack vs solar, Supercharger vs Megacharger must not be mixed)
+SAFE_TOPIC_POOL = {"fsd", "robotaxi", "software", "optimus", "factories", "earnings", "musk", "news",
+                   "spacex", "starlink", "xai", "boring"}
+
+
 def photos(a):
     """Article photos in order, falling back to the site's own choice."""
     build.ALL_ARTS[:] = build.load_articles()
@@ -72,14 +80,32 @@ def photos(a):
             q = build.STATIC / "img/models" / g
             if q.exists() and g not in {o.name for o in out} and len(out) < 6:
                 out.append(q)
+    # more variety: the photos the video script names, then (for categories whose topic photos all show the same
+    # kind of subject) the category's topic photos, so a long video does not keep cycling through 3 pictures
+    extra = []
+    for lang in ("en", "nl"):
+        for b in (a.get("video") or {}).get(lang) or []:
+            for x in b.get("img") or []:
+                q = build.STATIC / "img" / (x if "/" in x else f"topics/{x}")
+                if q.exists() and q not in out and q not in extra:
+                    extra.append(q)
+    if a.get("category") in SAFE_TOPIC_POOL and not a.get("models"):
+        f = build.TOPIC_PHOTOS.get(a["category"]) or []
+        for x in [f] if isinstance(f, str) else f:
+            q = build.STATIC / "img" / (x if "/" in x else f"topics/{x}")
+            if q.exists() and q not in out and q not in extra:
+                extra.append(q)
+    out = [q for q in out if q.name not in BLOCKED]
+    extra = [q for q in extra if q.name not in BLOCKED]
+    recent = sorted((x for x in build.ALL_ARTS if x["slug"] != a["slug"] and x.get("date", "") <= a.get("date", "9")),
+                    key=lambda x: (x.get("date", ""), x.get("time", "")))[-8:]
+    count = {}
+    for x in recent:
+        for c in list(build.candidates(x))[:4]:
+            count[c.rsplit("/", 1)[-1]] = count.get(c.rsplit("/", 1)[-1], 0) + 1
     if len(out) > 2:  # after the opening photo: photos the latest other videos used least come first
-        recent = sorted((x for x in build.ALL_ARTS if x["slug"] != a["slug"] and x.get("date", "") <= a.get("date", "9")),
-                        key=lambda x: (x.get("date", ""), x.get("time", "")))[-8:]
-        count = {}
-        for x in recent:
-            for c in list(build.candidates(x))[:4]:
-                count[c.rsplit("/", 1)[-1]] = count.get(c.rsplit("/", 1)[-1], 0) + 1
         out = out[:1] + sorted(out[1:], key=lambda q: count.get(q.name, 0))
+    out += sorted(extra, key=lambda q: count.get(q.name, 0))
     return out or [build.STATIC / "img/topics/gigafactory.jpg"]
 
 
@@ -210,9 +236,9 @@ def tts_elevenlabs(text, out_mp3):
         f"https://api.elevenlabs.io/v1/text-to-speech/{voice}/with-timestamps?output_format=mp3_44100_192",
         data=json.dumps({"text": text, "model_id": model,
                          "voice_settings": {  # lower stability + more style = livelier, more enthusiastic delivery
-                             "stability": float(os.environ.get("ELEVENLABS_STABILITY", "0.36")),
+                             "stability": float(os.environ.get("ELEVENLABS_STABILITY", "0.28")),
                              "similarity_boost": 0.8,
-                             "style": float(os.environ.get("ELEVENLABS_STYLE", "0.32")),
+                             "style": float(os.environ.get("ELEVENLABS_STYLE", "0.5")),
                                             "speed": float(os.environ.get("ELEVENLABS_SPEED", "1.08"))}}).encode(),
         headers={"xi-api-key": key, "Content-Type": "application/json"})
     with urllib.request.urlopen(req, timeout=300) as r:

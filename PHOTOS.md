@@ -47,7 +47,6 @@ Each line: file — what is actually visible. Pick only photos whose visible sub
 - fsd-2.jpg — Tesla screen showing a FSD visualisation, city street ahead
 - fsd-3.jpg — highway view from the driver's seat, FSD visualisation on screen
 - fsd-4.jpg — Amsterdam canal street seen from the driver's seat, phone and screen
-- fsd-czechia.jpg — European city street from the driver's seat
 - fsd-japan.jpg — driver on a Japanese mountain highway, screen visible
 - interior-1.jpg — Tesla rear seats and interior, daylight
 - interior-2.jpg — Tesla dashboard and centre screen with map, countryside

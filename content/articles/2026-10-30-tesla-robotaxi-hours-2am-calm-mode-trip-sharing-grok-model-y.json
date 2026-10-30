@@ -1,0 +1,276 @@
+{
+  "slug": "tesla-robotaxi-hours-2am-calm-mode-trip-sharing-grok-model-y",
+  "date": "2026-10-30",
+  "time": "11:00",
+  "category": "robotaxi",
+  "sources": [
+    {
+      "title": "TeslaNorth: Tesla Extends Robotaxi Hours to 2 AM With Share and Calm Mode",
+      "url": "https://teslanorth.com/2026/10/29/robotaxi-hours-2am-calm-mode-share/"
+    },
+    {
+      "title": "RuntimeWire: Tesla Robotaxi extends service to 2 a.m. and adds Grok to Model Y",
+      "url": "https://runtimewire.com/article/tesla-robotaxi-extends-service-2am-grok-model-y"
+    },
+    {
+      "title": "Teslarati: Tesla made napping in a Robotaxi easier with its latest update",
+      "url": "https://www.teslarati.com/tesla-robotaxi-sleeping-nap-quiet-mode/"
+    },
+    {
+      "title": "Not a Tesla App: Tesla Extends Robotaxi Hours Again, Now Until Midnight",
+      "url": "https://www.notateslaapp.com/news/4844/tesla-extends-robotaxi-hours-again-now-until-midnight"
+    }
+  ],
+  "images": [
+    "robotaxi-app.jpg",
+    "robotaxi-vs-cybercab-night.jpg",
+    "robotaxi-my-2.jpg"
+  ],
+  "gen_image": {
+    "prompt": "A black new-generation Tesla Model Y robotaxi waiting at the curb of a quiet downtown Texas street late at night in autumn, nobody in the driver's seat, the cabin softly lit in warm dimmed light, wet asphalt reflecting neon signs; colourful but natural, with yellow street lights, red tail-light glow and blue neon accents; calm, safe late-night mood",
+    "subject": "the 2025-2026 refreshed Tesla Model Y (Juniper generation): full-width front light bar across the nose, full-width red rear light bar, smooth front without grille, black paint, standard road wheels; no roof rack, no sensors added on the roof",
+    "refs": [
+      {
+        "commons": "Tesla Model Y Juniper 2025"
+      }
+    ],
+    "describe": "A black new Tesla Model Y robotaxi with a softly lit, empty cabin waiting at a neon-lit Texas curb late at night"
+  },
+  "label": {
+    "style": "n",
+    "en": {
+      "text": "20 HOURS",
+      "sub": "ROBOTAXI A DAY"
+    },
+    "nl": {
+      "text": "20 UUR",
+      "sub": "ROBOTAXI PER DAG"
+    }
+  },
+  "short": {
+    "title_en": "Robotaxi, 20 hours a day.",
+    "title_nl": "Robotaxi, 20 uur per dag.",
+    "en": "Tesla's Robotaxi now runs until 2 in the morning. The official Robotaxi account announced it late on Thursday: service from 6 a.m. to 2 a.m., local time. Two months ago, rides in Austin stopped at 10 p.m. The update also brings features for night riders. You can watch the rear camera during the ride, share your trip with a friend, and switch on Calm Mode, which dims the screen and the cabin lights. Grok now works in the Model Y robotaxis too. Tesla did not say which cities get the new hours, and there is still a four-hour break every night. Its AI software chief says round-the-clock service is the next step. Waymo already runs at all hours.",
+    "nl": "De Robotaxi van Tesla rijdt nu tot 2 uur 's nachts. Het officiële Robotaxi-account maakte het donderdag laat bekend: ritten van 6 uur 's ochtends tot 2 uur 's nachts, lokale tijd. Twee maanden geleden stopten de ritten in Austin nog om 10 uur 's avonds. De update brengt ook functies voor nachtelijke passagiers. Je kunt tijdens de rit meekijken met de achteruitrijcamera, je rit delen met een vriend en Calm Mode aanzetten, die het scherm en de verlichting dimt. Grok werkt nu ook in de Model Y-robotaxi's. Tesla zegt niet in welke steden de nieuwe tijden gelden, en elke nacht is er nog een pauze van vier uur. Volgens Tesla's AI-softwarebaas is een dienst rond de klok de volgende stap. Waymo rijdt al dag en nacht."
+  },
+  "video": {
+    "en": [
+      {
+        "text": "Tesla's Robotaxi service now runs from 6 in the morning until 2 at night, local time. The official Robotaxi account announced it late on Thursday, October 29. It came with a batch of updates: a live rear camera view during the ride, trip sharing, a new lock screen view, a Calm Mode for the cabin, and Grok in the Model Y robotaxis. So the driverless cars are now available 20 hours a day. That also means more rides at the time when riders are most likely to be tired, alone, or uneasy in a car with nobody at the wheel."
+      },
+      {
+        "head": "So what changes for riders at night?",
+        "img": [
+          "robotaxi-app.jpg"
+        ]
+      },
+      {
+        "text": "Mostly features that give riders comfort and peace of mind. Here is what the update brings."
+      },
+      {
+        "key": "Rear camera view",
+        "text": "First, passengers can watch the rear camera feed while the car is driving. It showed up in the Cybercab a week ago, and now it is listed for all riders.",
+        "img": [
+          "cybercab-interior.jpg"
+        ]
+      },
+      {
+        "key": "Share",
+        "text": "Second, riders can send their trip details to a friend. That matters most at night."
+      },
+      {
+        "key": "Live Activity",
+        "text": "Third, a redesigned status view on the phone's lock screen, so you can follow the car without opening the app."
+      },
+      {
+        "key": "Calm Mode",
+        "text": "Fourth, Calm Mode. It dims the centre screen and sets the cabin lighting to a relaxing state. A rider in Dallas already filmed a dark screen version in a Model Y robotaxi on Thursday night.",
+        "img": [
+          "interior-1.jpg"
+        ]
+      },
+      {
+        "key": "Grok",
+        "text": "Fifth, Grok. The xAI chatbot is now available in the Model Y robotaxis. The Cybercab already had it built in.",
+        "img": [
+          "grok-3.jpg"
+        ]
+      },
+      {
+        "key": "Accessibility",
+        "text": "And finally, accessibility. A better arrow to find your car, vibration feedback on your phone, and music control through the screen reader."
+      },
+      {
+        "text": "Tesla has not published separate release notes, so these details come from the post and from riders. The new features fit the late hours well. But the hours themselves did not arrive overnight."
+      },
+      {
+        "head": "How did Tesla get from 10 p.m. to 2 a.m.?",
+        "img": [
+          "robotaxi-my-1.jpg"
+        ]
+      },
+      {
+        "text": "Step by step, in about two months. In late August, Robotaxi rides in Austin ran from 6 in the morning until 10 at night. Early in October, the cut-off moved to 11. Around October 17, it moved to midnight. During the Grand Prix weekend in Austin, the app showed a last call of 1 in the morning, which looked like a temporary change for the race crowds. Then, on the earnings call on October 21, Tesla's AI software chief Ashok Elluswamy said 2 o'clock was coming soon. Nine days later, it is official. What the post does not say is where exactly the new hours apply."
+      },
+      {
+        "head": "Which cities get the longer hours?",
+        "img": [
+          "robotaxi-vs-cybercab-night.jpg"
+        ]
+      },
+      {
+        "text": "Tesla did not say. But Texas is where most of the action is. Tesla runs driverless Model Y rides in Austin, Dallas and Houston. And the Cybercab, the two-seater without a steering wheel or pedals, has carried riders in Austin since September. Tesla is also trying to pull in new riders. New users in Dallas and Houston were recently offered a free first ride in the app. Longer hours make that offer more useful, because late evening is a busy time for ride-hailing, when bars and restaurants close. Even so, there is still a four-hour gap every night.",
+        "img": [
+          "robotaxi-my-2.jpg"
+        ]
+      },
+      {
+        "head": "So why does Tesla still stop at 2 a.m.?",
+        "img": [
+          "cybercab-fleet.jpg"
+        ]
+      },
+      {
+        "text": "Tesla has not explained it. A common reason for a nightly break in a robotaxi fleet is the time needed for charging, cleaning and checks. And demand between 2 and 6 in the morning is low. But that is general reasoning, not something Tesla has confirmed. What is clear is that 2 o'clock is not the end point. On the earnings call, Elluswamy pointed to round-the-clock rides as the next step. That matters, because Waymo, Tesla's main rival in driverless rides, already runs at all hours in its main US cities. Closing that gap is now the obvious next test."
+      },
+      {
+        "head": "What should we watch for next?",
+        "img": [
+          "cybercab.jpg"
+        ]
+      },
+      {
+        "text": "Three things."
+      },
+      {
+        "key": "24-hour service",
+        "text": "First, whether Tesla drops the nightly break and moves to 24-hour service, and in which city that happens first."
+      },
+      {
+        "key": "Cybercab in Dallas",
+        "text": "Second, the Cybercab. Tesla said on its earnings call that Cybercab rides would start in Dallas in November. That would bring the purpose-built robotaxi to a second city."
+      },
+      {
+        "key": "NHTSA",
+        "text": "Third, regulators. Tesla had until October 30 to answer questions from NHTSA, the US road safety agency, about how the Cybercab meets federal safety rules, including the rules on mirrors and rear-view cameras. How that review ends could shape how fast the Cybercab part of the fleet can grow, whatever its operating hours.",
+        "img": [
+          "fsd-camera-view.jpg"
+        ]
+      }
+    ],
+    "nl": [
+      {
+        "text": "De Robotaxi-dienst van Tesla rijdt voortaan van 6 uur 's ochtends tot 2 uur 's nachts, lokale tijd. Het officiële Robotaxi-account maakte dat bekend in de nacht van donderdag op vrijdag, Nederlandse tijd. Er kwam meteen een reeks updates bij: live meekijken met de achteruitrijcamera, je rit delen, een nieuwe weergave op je vergrendelscherm, een Calm Mode voor het interieur en Grok in de Model Y-robotaxi's. De auto's zonder chauffeur rijden nu dus 20 uur per dag. Dat betekent ook meer ritten op het moment dat passagiers vaak moe zijn, alleen reizen of zich minder op hun gemak voelen in een auto zonder iemand achter het stuur."
+      },
+      {
+        "head": "Wat verandert er 's nachts voor passagiers?",
+        "img": [
+          "robotaxi-app.jpg"
+        ]
+      },
+      {
+        "text": "Vooral functies voor comfort en een veilig gevoel. Dit zit er in de update."
+      },
+      {
+        "key": "Achteruitrijcamera",
+        "text": "Ten eerste kun je tijdens de rit het beeld van de camera achterop bekijken. Dat dook een week geleden al op in de Cybercab, en staat nu in de lijst voor alle ritten.",
+        "img": [
+          "cybercab-interior.jpg"
+        ]
+      },
+      {
+        "key": "Delen",
+        "text": "Ten tweede kun je de gegevens van je rit naar een vriend sturen. Juist 's nachts handig."
+      },
+      {
+        "key": "Live Activity",
+        "text": "Ten derde een vernieuwde statusweergave op het vergrendelscherm, zodat je de auto volgt zonder de app te openen."
+      },
+      {
+        "key": "Calm Mode",
+        "text": "Ten vierde Calm Mode. Die dimt het middenscherm en zet de verlichting in de auto op een rustige stand. Een passagier in Dallas filmde donderdagnacht al een versie met een donker scherm in een Model Y-robotaxi.",
+        "img": [
+          "interior-1.jpg"
+        ]
+      },
+      {
+        "key": "Grok",
+        "text": "Ten vijfde Grok. De chatbot van xAI is nu ook beschikbaar in de Model Y-robotaxi's. In de Cybercab zat hij al ingebouwd.",
+        "img": [
+          "grok-3.jpg"
+        ]
+      },
+      {
+        "key": "Toegankelijkheid",
+        "text": "En tot slot toegankelijkheid. Een betere pijl om je auto te vinden, trillingen op je telefoon als hulp en muziekbediening via de schermlezer."
+      },
+      {
+        "text": "Tesla heeft geen aparte release notes gepubliceerd. De details komen uit het bericht en van passagiers. De nieuwe functies passen goed bij de late uren. Maar die uren kwamen er niet in één keer."
+      },
+      {
+        "head": "Hoe ging Tesla van 22:00 naar 02:00 uur?",
+        "img": [
+          "robotaxi-my-1.jpg"
+        ]
+      },
+      {
+        "text": "Stap voor stap, in ongeveer twee maanden. Eind augustus reden de robotaxi's in Austin van 6 uur 's ochtends tot 10 uur 's avonds. Begin oktober werd dat 11 uur. Rond 17 oktober werd het middernacht. Tijdens het Formule 1-weekend in Austin toonde de app een laatste rit om 1 uur 's nachts, wat leek op een tijdelijke aanpassing voor de racebezoekers. Tijdens de kwartaalcall op 21 oktober zei Ashok Elluswamy, de baas van Tesla's AI-software, dat 2 uur er snel aan zou komen. Negen dagen later is het officieel. Wat het bericht niet zegt, is waar de nieuwe tijden precies gelden."
+      },
+      {
+        "head": "In welke steden gelden de langere tijden?",
+        "img": [
+          "robotaxi-vs-cybercab-night.jpg"
+        ]
+      },
+      {
+        "text": "Dat zegt Tesla niet. Maar Texas is waar het meeste gebeurt. Tesla rijdt zonder chauffeur met de Model Y in Austin, Dallas en Houston. En de Cybercab, de tweezitter zonder stuur en pedalen, vervoert sinds september passagiers in Austin. Tesla probeert ook nieuwe klanten te trekken. Nieuwe gebruikers in Dallas en Houston kregen onlangs een gratis eerste rit aangeboden. Langere tijden maken dat aanbod nuttiger, want de late avond is een drukke tijd voor taxiritten, als cafés en restaurants sluiten. Toch zit er nog elke nacht een gat van vier uur in de dienst.",
+        "img": [
+          "robotaxi-my-2.jpg"
+        ]
+      },
+      {
+        "head": "Waarom stopt Tesla dan nog om 2 uur?",
+        "img": [
+          "cybercab-fleet.jpg"
+        ]
+      },
+      {
+        "text": "Dat heeft Tesla niet uitgelegd. Een gebruikelijke reden voor een nachtpauze bij een robotaxivloot is de tijd om te laden, schoon te maken en te controleren. En tussen 2 en 6 uur 's nachts is er weinig vraag. Maar dat is een algemene redenering, Tesla heeft het niet bevestigd. Wel is duidelijk dat 2 uur niet het eindpunt is. Tijdens de kwartaalcall wees Elluswamy op ritten rond de klok als volgende stap. Dat is belangrijk, want Waymo, Tesla's grootste rivaal bij taxi's zonder chauffeur, rijdt in zijn belangrijkste Amerikaanse steden al dag en nacht. Dat gat dichten is nu de logische volgende test."
+      },
+      {
+        "head": "Waar moeten we nu op letten?",
+        "img": [
+          "cybercab.jpg"
+        ]
+      },
+      {
+        "text": "Drie dingen."
+      },
+      {
+        "key": "Dienst van 24 uur",
+        "text": "Ten eerste of Tesla de nachtpauze schrapt en overstapt op een dienst van 24 uur, en in welke stad dat het eerst gebeurt."
+      },
+      {
+        "key": "Cybercab in Dallas",
+        "text": "Ten tweede de Cybercab. Tesla zei tijdens de kwartaalcall dat Cybercab-ritten in november in Dallas beginnen. Dan krijgt de speciaal gebouwde robotaxi een tweede stad."
+      },
+      {
+        "key": "NHTSA",
+        "text": "Ten derde de toezichthouder. Tesla had tot 30 oktober om vragen van NHTSA, de Amerikaanse verkeersveiligheidsdienst, te beantwoorden over hoe de Cybercab aan de federale veiligheidsregels voldoet, onder meer die voor spiegels en achteruitrijcamera's. De uitkomst kan bepalen hoe snel het Cybercab-deel van de vloot kan groeien, los van de rijtijden.",
+        "img": [
+          "fsd-camera-view.jpg"
+        ]
+      }
+    ]
+  },
+  "en": {
+    "title": "Tesla Robotaxi now runs until 2 a.m., adding trip sharing, Calm Mode, a live rear camera and Grok in Model Y",
+    "description": "Tesla's driverless ride service now operates from 6 a.m. to 2 a.m., 20 hours a day. The update also adds features aimed at night riders, but Tesla has not said which cities get the new hours.",
+    "body": "<p>Tesla's Robotaxi service now runs from 6 a.m. to 2 a.m., local time. The official Robotaxi account announced the new hours late on Thursday, October 29, together with a batch of app and in-car updates: a live rear camera view during the ride, trip sharing with a friend, a redesigned Live Activity on the phone's lock screen, a Calm Mode for the cabin and Grok in the Model Y robotaxis. That means the driverless cars are now available 20 hours a day. It also means more rides at the time of day when riders are most likely to be tired, alone or uneasy in a car with nobody at the wheel.</p>\n<h2>So what changes for riders at night?</h2>\n<p><strong>Mostly features that give riders comfort and peace of mind.</strong> According to the Robotaxi account's post, as summed up by TeslaNorth, the update brings:</p>\n<ul>\n<li><strong>Rear camera view:</strong> passengers can watch the rear camera feed while the car is driving. It first appeared in the Cybercab a week ago, and the post now lists it as a feature for all riders.</li>\n<li><strong>Share:</strong> riders can send their trip details to a friend, a feature ride-hailing users know from other apps and one that matters most at night.</li>\n<li><strong>Live Activity:</strong> a redesigned status view on the phone's lock screen, so riders can follow the car without opening the app.</li>\n<li><strong>Calm Mode:</strong> dims the centre screen and sets the cabin lighting to a relaxing state. A rider in Dallas filmed a dark-screen version of this in a Model Y robotaxi on Thursday night, Teslarati reports.</li>\n<li><strong>Grok:</strong> xAI's chatbot is now available in the Model Y robotaxis. It was already built into the Cybercab.</li>\n<li><strong>Accessibility:</strong> a better arrow to find the car, haptic feedback on the phone and music control through the screen reader.</li>\n</ul>\n<p>Tesla has not published separate release notes, so these details come from the post and from riders. The new features fit the late hours well, but the hours themselves did not arrive overnight.</p>\n<h2>How did Tesla get from 10 p.m. to 2 a.m.?</h2>\n<p><strong>Step by step, in about two months.</strong> In late August, Robotaxi rides in Austin ran from 6 a.m. to 10 p.m. Early in October the cut-off moved to 11 p.m., and around October 17 it moved to midnight, Not a Tesla App reported at the time. During the US Grand Prix weekend in Austin, from October 23 to 25, the app showed a last call of 1 a.m., which looked like a temporary change for the race crowds. On the third-quarter earnings call on October 21, Tesla's AI software chief Ashok Elluswamy said a 2 a.m. cut-off was coming soon. Nine days later it is official. What the post does not say is where exactly the new hours apply.</p>\n<h2>Which cities get the longer hours?</h2>\n<p><strong>Tesla did not say, but Texas is where most of the action is.</strong> The post simply lists the new hours without naming cities. Tesla runs driverless Model Y rides in Austin, Dallas and Houston, and the Cybercab, its two-seater without a steering wheel or pedals, has carried riders in Austin since September. Tesla is also trying to pull in new riders: new users in Dallas and Houston were recently shown a free first ride in the app, Teslarati reports. Longer hours make that offer more useful, because late evening is a busy time for ride-hailing once bars and restaurants close. Even so, there is still a four-hour gap every night.</p>\n<h2>So why does Tesla still stop at 2 a.m.?</h2>\n<p><strong>Tesla has not explained it.</strong> A common reason for a nightly break in a robotaxi fleet is the time it needs for charging, cleaning and checks, and demand between 2 and 6 a.m. is low. But that is general reasoning, not something Tesla has confirmed. What is clear is that the company does not see 2 a.m. as the end point: on the earnings call, Elluswamy pointed to round-the-clock rides as the next step. That matters for competition, because Waymo, Tesla's main rival in driverless rides, already offers service at all hours in its main US cities. Closing that gap is now the obvious next test.</p>\n<h2>What should we watch for next?</h2>\n<p><strong>Three things.</strong> First, whether Tesla drops the nightly break and moves to 24-hour service, and in which cities that happens first. Second, the Cybercab: Tesla said on its earnings call that Cybercab rides would start in Dallas in November, which would bring the purpose-built robotaxi to a second city. Third, regulators. Tesla had until October 30 to answer questions from the US road safety agency NHTSA about how the Cybercab meets federal safety rules, including those on mirrors and rear-view cameras. How that review ends could shape how fast the Cybercab part of the fleet can grow, whatever its operating hours.</p>"
+  },
+  "nl": {
+    "title": "Tesla Robotaxi rijdt nu tot 2 uur 's nachts, met rit delen, Calm Mode, live achteruitrijcamera en Grok in de Model Y",
+    "description": "De taxidienst zonder chauffeur van Tesla rijdt voortaan van 6 tot 2 uur, 20 uur per dag. De update brengt ook functies voor nachtelijke passagiers, maar Tesla zegt niet in welke steden de nieuwe tijden gelden.",
+    "body": "<p>De Robotaxi-dienst van Tesla rijdt voortaan van 6 uur 's ochtends tot 2 uur 's nachts, lokale tijd. Het officiële Robotaxi-account maakte de nieuwe tijden in de nacht van donderdag op vrijdag (Nederlandse tijd) bekend, samen met een reeks updates voor de app en de auto: tijdens de rit live meekijken met de achteruitrijcamera, je rit delen met een vriend, een vernieuwde Live Activity op het vergrendelscherm van je telefoon, een Calm Mode voor het interieur en Grok in de Model Y-robotaxi's. De auto's zonder chauffeur zijn daarmee 20 uur per dag beschikbaar. Dat betekent ook meer ritten op het moment dat passagiers vaak moe zijn, alleen reizen of zich minder op hun gemak voelen in een auto zonder iemand achter het stuur.</p>\n<h2>Wat verandert er 's nachts voor passagiers?</h2>\n<p><strong>Vooral functies voor comfort en een veilig gevoel.</strong> Volgens het bericht van het Robotaxi-account, samengevat door TeslaNorth, gaat het om:</p>\n<ul>\n<li><strong>Achteruitrijcamera:</strong> passagiers kunnen tijdens de rit het beeld van de camera achterop bekijken. De functie dook een week geleden al op in de Cybercab en staat nu in de lijst voor alle ritten.</li>\n<li><strong>Delen:</strong> je kunt de gegevens van je rit naar een vriend sturen. Bekend van andere taxi-apps, en juist 's nachts handig.</li>\n<li><strong>Live Activity:</strong> een vernieuwde statusweergave op het vergrendelscherm, zodat je de auto kunt volgen zonder de app te openen.</li>\n<li><strong>Calm Mode:</strong> dimt het middenscherm en zet de verlichting in de auto op een rustige stand. Een passagier in Dallas filmde donderdagnacht al een versie met donker scherm in een Model Y-robotaxi, meldt Teslarati.</li>\n<li><strong>Grok:</strong> de chatbot van xAI is nu ook beschikbaar in de Model Y-robotaxi's. In de Cybercab zat hij al ingebouwd.</li>\n<li><strong>Toegankelijkheid:</strong> een betere pijl om de auto te vinden, trillingen op de telefoon als hulp en muziekbediening via de schermlezer.</li>\n</ul>\n<p>Tesla heeft geen aparte release notes gepubliceerd; de details komen uit het bericht en van passagiers. De nieuwe functies passen goed bij de late uren, maar die uren kwamen er niet in één keer.</p>\n<h2>Hoe ging Tesla van 22:00 naar 02:00 uur?</h2>\n<p><strong>Stap voor stap, in ongeveer twee maanden.</strong> Eind augustus reden de robotaxi's in Austin van 6:00 tot 22:00 uur. Begin oktober schoof de eindtijd op naar 23:00 uur en rond 17 oktober naar middernacht, meldde Not a Tesla App toen. Tijdens het Formule 1-weekend in Austin, van 23 tot en met 25 oktober, toonde de app een laatste rit om 1 uur 's nachts, wat leek op een tijdelijke aanpassing voor de racebezoekers. Tijdens de kwartaalcall op 21 oktober zei Ashok Elluswamy, de baas van Tesla's AI-software, dat 2 uur 's nachts er snel aan zou komen. Negen dagen later is het officieel. Wat het bericht niet zegt, is waar de nieuwe tijden precies gelden.</p>\n<h2>In welke steden gelden de langere tijden?</h2>\n<p><strong>Dat zegt Tesla niet, maar Texas is waar het meeste gebeurt.</strong> Het bericht noemt alleen de tijden, geen steden. Tesla rijdt zonder chauffeur met de Model Y in Austin, Dallas en Houston, en de Cybercab, de tweezitter zonder stuur en pedalen, vervoert sinds september passagiers in Austin. Tesla probeert ook nieuwe klanten te trekken: nieuwe gebruikers in Dallas en Houston kregen onlangs een gratis eerste rit aangeboden in de app, aldus Teslarati. Langere tijden maken dat aanbod nuttiger, want de late avond is een drukke tijd voor taxiritten, als cafés en restaurants sluiten. Toch zit er nog elke nacht een gat van vier uur in de dienst.</p>\n<h2>Waarom stopt Tesla dan nog om 2 uur?</h2>\n<p><strong>Dat heeft Tesla niet uitgelegd.</strong> Een gebruikelijke reden voor een nachtelijke pauze bij een robotaxivloot is de tijd die nodig is om te laden, schoon te maken en te controleren, en tussen 2 en 6 uur is er weinig vraag. Maar dat is een algemene redenering; Tesla heeft het niet bevestigd. Wel is duidelijk dat 2 uur niet het eindpunt is: tijdens de kwartaalcall wees Elluswamy op ritten rond de klok als volgende stap. Dat is belangrijk voor de concurrentie, want Waymo, Tesla's grootste rivaal bij taxi's zonder chauffeur, rijdt in zijn belangrijkste Amerikaanse steden al dag en nacht. Dat gat dichten is nu de logische volgende test.</p>\n<h2>Waar moeten we nu op letten?</h2>\n<p><strong>Drie dingen.</strong> Ten eerste of Tesla de nachtpauze schrapt en overstapt op een dienst van 24 uur, en in welke stad dat het eerst gebeurt. Ten tweede de Cybercab: Tesla zei tijdens de kwartaalcall dat Cybercab-ritten in november in Dallas beginnen, waarmee de speciaal gebouwde robotaxi een tweede stad krijgt. Ten derde de toezichthouder. Tesla had tot 30 oktober om vragen van de Amerikaanse verkeersveiligheidsdienst NHTSA te beantwoorden over hoe de Cybercab aan de federale veiligheidsregels voldoet, onder meer die voor spiegels en achteruitrijcamera's. De uitkomst daarvan kan bepalen hoe snel het Cybercab-deel van de vloot kan groeien, los van de rijtijden.</p>"
+  }
+}

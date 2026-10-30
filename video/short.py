@@ -209,7 +209,10 @@ def tts_elevenlabs(text, out_mp3):
     req = urllib.request.Request(
         f"https://api.elevenlabs.io/v1/text-to-speech/{voice}/with-timestamps?output_format=mp3_44100_192",
         data=json.dumps({"text": text, "model_id": model,
-                         "voice_settings": {"stability": 0.45, "similarity_boost": 0.8, "style": 0.15,
+                         "voice_settings": {  # lower stability + more style = livelier, more enthusiastic delivery
+                             "stability": float(os.environ.get("ELEVENLABS_STABILITY", "0.36")),
+                             "similarity_boost": 0.8,
+                             "style": float(os.environ.get("ELEVENLABS_STYLE", "0.32")),
                                             "speed": float(os.environ.get("ELEVENLABS_SPEED", "1.08"))}}).encode(),
         headers={"xi-api-key": key, "Content-Type": "application/json"})
     with urllib.request.urlopen(req, timeout=300) as r:

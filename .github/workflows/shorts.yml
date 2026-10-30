@@ -137,14 +137,17 @@ jobs:
           [ -z "$(git status --porcelain content)" ] && exit 0
           git config user.name "TrendingTesla bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git stash -q -- content
-          for i in 1 2 3 4; do
-            git pull -q --rebase origin main || true
-            git stash apply -q || { git checkout -- content; git stash apply -q; }
+          # other video runs may have pushed meanwhile: merge our new videos into the newest lists
+          # (never a git merge of the JSON files, that conflicted when two runs overlapped)
+          python3 tools/merge_video_lists.py save "$RUNNER_TEMP/vl"
+          for i in 1 2 3 4 5 6; do
+            git fetch -q origin main && git reset -q --hard origin/main
+            python3 tools/merge_video_lists.py apply "$RUNNER_TEMP/vl"
+            [ -z "$(git status --porcelain content)" ] && exit 0
             python3 build.py > /dev/null
             git checkout -- $(git diff --name-only -- public | grep -E '\.(jpg|jpeg|png|webp)$') 2>/dev/null || true
             git add content public && git commit -qm "Site: new YouTube videos" && git push -q origin HEAD:main && exit 0
-            git reset -q --hard origin/main; sleep 10
+            sleep $((10 + RANDOM % 20))
           done
           exit 1
       - name: Upload videos

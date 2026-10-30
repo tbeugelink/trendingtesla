@@ -237,3 +237,4 @@ Articles with a "models" key automatically use real-life photos of that model. Y
 ## News photos (real, freely licensed; credit required, the build shows it: only use for the same subject)
 - news/tesla-semi-fire-i-880-hayward-no-crash-freeway-closed-10-hours-1.jpg — Tesla Semi truck (real photo) (Photo: Steve Jurvetson from Menlo Park, USA, CC BY 2.0, Wikimedia Commons)
 - news/tesla-semi-fire-i-880-hayward-no-crash-freeway-closed-10-hours-2.jpg — Tesla Semi truck (real photo) (Photo: Steve Jurvetson from Menlo Park, USA, CC BY 2.0, Wikimedia Commons)
+- gen/italy-backs-eu-wide-tesla-fsd-approval-salvini-musk-65-percent-vote-math.jpg — A white new Tesla Model Y driving on a winding road through the autumn hills of Tuscany

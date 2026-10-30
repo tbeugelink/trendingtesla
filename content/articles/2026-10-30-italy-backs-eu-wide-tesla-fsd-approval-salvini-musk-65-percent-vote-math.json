@@ -18,6 +18,7 @@
     }
   ],
   "images": [
+    "gen/italy-backs-eu-wide-tesla-fsd-approval-salvini-musk-65-percent-vote-math.jpg",
     "fsd-czechia.jpg",
     "fsd-roundabout-eu.jpg",
     "fsd-3.jpg"
@@ -30,7 +31,9 @@
         "commons": "Tesla Model Y Juniper 2025"
       }
     ],
-    "describe": "A white new Tesla Model Y driving on a winding road through the autumn hills of Tuscany"
+    "describe": "A white new Tesla Model Y driving on a winding road through the autumn hills of Tuscany",
+    "done": true,
+    "model": "gemini-3.1-flash-image"
   },
   "label": {
     "style": "c",
@@ -246,5 +249,6 @@
         "text": "De datum van de stemming, Frankrijk en de deadline van Musk. Een stemming wordt op zijn vroegst in december verwacht, maar er is nog geen vergadering gepland. Frankrijk is nu de grootste open vraag: een ja uit Parijs zou Tesla een veel veiligere marge geven. Let ook op of Italië de daad bij het woord voegt en de Nederlandse goedkeuring alvast erkent, zoals tien kleinere landen al deden. Bij de kwartaalcijfers op 21 oktober zei Musk dat het hem zou verbazen als de Europese goedkeuring langer duurt dan het eerste kwartaal van 2027. En onthoud: dit blijft een systeem van niveau 2. Het stuurt, remt en accelereert, maar de bestuurder moet de weg in de gaten houden en altijd klaar zijn om in te grijpen."
       }
     ]
-  }
+  },
+  "image": "gen/italy-backs-eu-wide-tesla-fsd-approval-salvini-musk-65-percent-vote-math.jpg"
 }

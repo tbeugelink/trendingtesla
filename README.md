@@ -21,6 +21,28 @@ Every article task reads `ops/performance.md` before picking the story and follo
 - keep exploring: about one in three articles tries a topic, label type or title style that is not in the
   "does well" list, so the channel keeps learning.
 
+## Thumbnail and first frame (read this before choosing photos)
+
+The first photo of an article is the YouTube thumbnail, the first frame of the Short and the long video, and
+the cover on the site. Viewers decide in a second, so it must show something striking right away:
+
+- **One concrete subject, big and sharp**: the car, robot, battery, charger or rocket the story is about,
+  filling roughly half of the frame, seen close from a dynamic angle, with strong light and contrast.
+  Never a wide landscape with a tiny car, a generic interior, a screen full of text or a cluttered scene.
+- **The main `gen_image` scene is that photo** (it is put first automatically): write its prompt as a
+  close, eye-catching shot of the subject. Use `gen_image.extra` for the wider or calmer scenes.
+  `tools/gen_image.py` adds this thumbnail instruction to the main scene by itself.
+- Without a `gen_image` (stories about one car model, or when a real photo becomes the cover), put the
+  most striking fitting photo first in `"images"`.
+- Keep the lower-left third calm: the label goes there.
+
+Early hint from the first Shorts (not yet a rule, ops/performance.md takes over once there is enough data):
+stories about a **concrete thing you can see** (how a product works, what is inside it, why something
+happened to it) with a **WHY/HOW question label** got about 3-5 times more views than stories about
+procedures, votes or rules. When two stories are about equally newsworthy, prefer the concrete one, and for a
+procedural story look for the concrete angle (what changes for the car or the driver). News value and
+accuracy still come first.
+
 ## Photos: real ones first, and more of them (read this before writing an article)
 
 Videos repeat the same few pictures when an article has only 2-3 photos, and real photos of the news

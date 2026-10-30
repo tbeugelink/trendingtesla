@@ -43,6 +43,10 @@ RULES = ("Use the reference images ONLY to get the subject's real design right (
          "background, different composition and lighting than every reference. Do not copy any reference photo. "
          "No text, no captions, no logos or brand marks, no watermarks, no readable licence plates, no recognisable "
          "real people's faces.")
+HERO = ("This is the thumbnail and the first frame of the video, so it must grab attention at phone size within a "
+        "second: one clear subject, big in the frame (filling roughly half of it), sharp and close, seen from a dynamic, "
+        "low or three-quarter angle, with strong light and contrast against a clean background; no wide empty landscape "
+        "with a small subject, no clutter. ")
 SIMILAR = 10  # dHash distance (of 64 bits) at or below which a result counts as a copy of a reference
 
 
@@ -177,7 +181,7 @@ def fit_16x9(im, w=1920):
     return ImageOps.fit(im, (w, h), Image.LANCZOS, centering=(0.5, 0.5))
 
 
-def make(g, label="photo"):
+def make(g, label="photo", hero=False):
     """Generate one image for spec g -> (image, references used, model)."""
     refs, used = [], []
     for r in g.get("refs", [])[:4]:
@@ -191,7 +195,7 @@ def make(g, label="photo"):
     if not refs:
         raise RuntimeError("no usable reference photo")
     mdl = model()
-    prompt = STYLE + g["prompt"].strip() + "\n\n" + RULES.format(subject=g.get("subject") or "the main subject")
+    prompt = STYLE + (HERO if hero else "") + g["prompt"].strip() + "\n\n" + RULES.format(subject=g.get("subject") or "the main subject")
     for attempt in range(3):
         im = fit_16x9(generate(mdl, prompt, refs))
         if not too_similar(im, refs):
@@ -212,7 +216,7 @@ def run(slug):
     if not g.get("prompt") or g.get("done"):
         print(f"{slug}: nothing to generate")
         return
-    out, used, mdl = make(g)
+    out, used, mdl = make(g, hero=True)
     old = a.get("image") if str(a.get("image", "")).startswith(f"gen/{slug}") else None
     rel = f"gen/{slug}.jpg"
     if old or (IMG / rel).exists():  # a redo gets a fresh file name, so no browser or CDN shows the old photo

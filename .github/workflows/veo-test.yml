@@ -1,0 +1,45 @@
+name: Veo test
+
+# By hand: check whether the Gemini key can use Veo, and optionally make one test clip from a photo.
+# Nothing on the site changes; the clip is uploaded as an artifact.
+on:
+  workflow_dispatch:
+    inputs:
+      image:
+        description: "Photo inside static/img/ to animate (empty = only list the models, free)"
+        required: false
+        default: ""
+      model:
+        description: "Veo model id (empty = cheapest available)"
+        required: false
+        default: ""
+      seconds:
+        description: "Clip length in seconds (4, 6 or 8)"
+        required: false
+        default: "6"
+
+permissions:
+  contents: read
+
+jobs:
+  veo:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+      - name: List and test
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          pip install --quiet pillow
+          python3 tools/veo_test.py list
+          if [ -n "${{ github.event.inputs.image }}" ]; then
+            mkdir -p veo-test
+            python3 tools/veo_test.py clip "static/img/${{ github.event.inputs.image }}" veo-test/clip.mp4 ${{ github.event.inputs.model || '""' }} ${{ github.event.inputs.seconds || '6' }}
+          fi
+      - uses: actions/upload-artifact@v5
+        if: github.event.inputs.image != ''
+        with:
+          name: veo-test-${{ github.run_number }}
+          path: veo-test/*
+          retention-days: 14

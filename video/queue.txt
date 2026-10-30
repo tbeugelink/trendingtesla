@@ -1,2 +1,2 @@
-tesla-houston-robotaxi-zone-10x-bigger-texas-fleet-passes-1000 en --full --upload
-# 2026-10-30T10:16:06 Long video for the Houston Robotaxi article (requested on demand)
+tesla-houston-robotaxi-zone-10x-bigger-texas-fleet-passes-1000 en --upload
+# 2026-10-30T10:16:29 Short for the Houston Robotaxi article

@@ -1,6 +1,6 @@
 """Post a finished Short to TikTok through Buffer (Buffer is an approved TikTok partner, so posts are public).
 
-Usage (in GitHub Actions):  python3 tools/tiktok_post.py <video/out/...-en-short.mp4> <public video URL>
+Usage (in GitHub Actions):  python3 tools/tiktok_post.py <video/out/...-en-short.mp4> <public video URL> [cover URL]
 Needs the secret BUFFER_API_KEY. The video must stay reachable at the URL until Buffer has published it
 (the workflow puts it on a GitHub release of the public repo). Caption: the article title, a link to the
 article, a few hashtags and the AI note TikTok asks for. Never fails the workflow: problems are warnings.
@@ -76,15 +76,21 @@ def caption(slug):
             f"{' '.join(dict.fromkeys(tags))}\n\nAI-generated voice-over; script written and checked by TrendingTesla.")
 
 
-def post(mp4, url):
+def post(mp4, url, cover=None):
     slug = re.sub(r"-(en|nl)-short\.mp4$", "", Path(mp4).name)
     cid, name = tiktok_channel()
     text = caption(slug)
-    asset = [{"video": {"url": url, "metadata": {"thumbnailOffset": 1000}}}]  # opening frame with the label
+    video = {"url": url, "metadata": {"thumbnailOffset": 1000}}  # opening frame with the label
+    if cover:
+        video["thumbnailUrl"] = cover  # the same opening frame as an image, in case TikTok ignores the offset
+    asset = [{"video": video}]
+    import build
+    a = json.loads(next((ROOT / "content/articles").glob(f"*-{slug}.json")).read_text(encoding="utf-8"))
+    meta = {"tiktok": {"isAiGenerated": True, "title": a["en"]["title"][:90]}}  # official TikTok AI label
     mut = """mutation { createPost(input: %s) {
         ... on PostActionSuccess { post { id } }
         ... on MutationError { message } } }"""
-    base = {"text": text, "channelId": cid, "schedulingType": "automatic", "assets": asset}
+    base = {"text": text, "channelId": cid, "schedulingType": "automatic", "assets": asset, "metadata": meta}
     attempts = [{**base, "mode": "shareNow"},
                 {**base, "mode": "customScheduled",
                  "dueAt": (datetime.now(timezone.utc) + timedelta(minutes=3)).strftime("%Y-%m-%dT%H:%M:%S.000Z")}]
@@ -131,6 +137,6 @@ if __name__ == "__main__":
         print("::warning::BUFFER_API_KEY missing, skipping TikTok")
         sys.exit(0)
     try:
-        post(sys.argv[1], sys.argv[2])
+        post(sys.argv[1], sys.argv[2], sys.argv[3] if len(sys.argv) > 3 else None)
     except Exception as e:
         print(f"::warning::TikTok post for {sys.argv[1]} failed: {e}")

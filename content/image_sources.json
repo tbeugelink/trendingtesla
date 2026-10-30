@@ -11,5 +11,18 @@
         "commons": "Tesla V4 Supercharger"
       }
     ]
+  },
+  "gen/tesla-robotaxi-hours-2am-calm-mode-trip-sharing-grok-model-y.jpg": {
+    "article": "tesla-robotaxi-hours-2am-calm-mode-trip-sharing-grok-model-y",
+    "model": "gemini-3.1-flash-image",
+    "made": "2026-10-30",
+    "references": [
+      {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Tesla_Model_Y_Juniper_Washington_DC_Metro_Area%2C_USA.jpg/1280px-Tesla_Model_Y_Juniper_Washington_DC_Metro_Area%2C_USA.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page": "https://commons.wikimedia.org/wiki/File:Tesla_Model_Y_Juniper_Washington_DC_Metro_Area,_USA.jpg",
+        "license": "CC BY 4.0",
+        "commons": "Tesla Model Y Juniper 2025"
+      }
+    ]
   }
 }

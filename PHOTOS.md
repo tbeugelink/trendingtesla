@@ -232,3 +232,4 @@ Articles with a "models" key automatically use real-life photos of that model. Y
 
 ## Generated photos (made per article with Nano Banana; reusable, give as "gen/<file>.jpg" in "images" or as a reference)
 - gen/tesla-supercharger-voting-winners-october-2026-36-sites-new-round-10291545.jpg — new V4 Supercharger site in a coastal town at sunset, sea stacks behind, two Teslas charging
+- gen/tesla-robotaxi-hours-2am-calm-mode-trip-sharing-grok-model-y.jpg — A black new Tesla Model Y robotaxi with a softly lit, empty cabin waiting at a neon-lit Texas curb late at night

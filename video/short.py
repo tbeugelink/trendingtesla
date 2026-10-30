@@ -441,7 +441,11 @@ def overlay(draw_fn):
 # the first sentence of the script, the label is only shown (LABEL_SEC), and the first photo starts with a quick
 # punch-in. SPOKEN_TITLE=1 brings back the old opening where the voice reads the label first.
 SPOKEN_TITLE = os.environ.get("SPOKEN_TITLE") == "1"
-LABEL_SEC, PUNCH_SEC, PUNCH = 2.2, 1.2, 0.10
+LABEL_SEC, PUNCH_SEC, PUNCH = 2.2, 0.9, 0.22
+# quick cuts right after the label: the next photos come in fast (short fade) so the opening keeps moving,
+# then the normal ~6 s scenes follow. FAST holds the scene numbers that use the short fade.
+QUICK, QUICK_TR = (0.0, 1.3), 0.22
+FAST = set()
 ZOOM, TR, SCENE = 1.35, 2.0, 6.0  # image headroom for zoom/pan, crossfade length, seconds per photo
 
 
@@ -480,6 +484,11 @@ def plan(a, words, total, label_end):
                 break
     scenes = [(0.0, general[0], None)]
     MIN = 3.5
+    FAST.clear()
+    if PORTRAIT and len(general) >= 3:  # Shorts: two quick cuts right after the label
+        for dt in QUICK:
+            FAST.add(len(scenes))
+            scenes.append((label_end + dt, take(None, scenes[-1][1]), None))
 
     def fill_until(t_end):
         while t_end - scenes[-1][0] > SCENE + MIN:
@@ -604,8 +613,9 @@ def render(a, lang, audio, words, total, label_end, end_start):
     def picture(t):
         k = max(i for i, s0 in enumerate(starts) if s0 <= t)
         fr = shot(k, t)
-        if k > 0 and t - starts[k] < TR:  # crossfade from the previous photo
-            fr = Image.blend(shot(k - 1, t), fr, ease((t - starts[k]) / TR))
+        tr = QUICK_TR if k in FAST else TR
+        if k > 0 and t - starts[k] < tr:  # crossfade from the previous photo (short after the label)
+            fr = Image.blend(shot(k - 1, t), fr, ease((t - starts[k]) / tr))
         return Image.composite(black, fr, shade)
 
     n = int(total * FPS) + 1

@@ -35,6 +35,7 @@ the cover on the site. Viewers decide in a second, so it must show something str
 - Without a `gen_image` (stories about one car model, or when a real photo becomes the cover), put the
   most striking fitting photo first in `"images"`.
 - Keep the lower-left third calm: the label goes there.
+- Keep the subject in the **horizontal centre**: the vertical Short shows only the middle third of the photo.
 
 Early hint from the first Shorts (not yet a rule, ops/performance.md takes over once there is enough data):
 stories about a **concrete thing you can see** (how a product works, what is inside it, why something

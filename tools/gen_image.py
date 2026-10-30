@@ -46,7 +46,8 @@ RULES = ("Use the reference images ONLY to get the subject's real design right (
 HERO = ("This is the thumbnail and the first frame of the video, so it must grab attention at phone size within a "
         "second: one clear subject, big in the frame (filling roughly half of it), sharp and close, seen from a dynamic, "
         "low or three-quarter angle, with strong light and contrast against a clean background; no wide empty landscape "
-        "with a small subject, no clutter. ")
+        "with a small subject, no clutter. Keep the subject in the horizontal centre of the frame: the vertical "
+        "Short shows only the middle third of this photo. ")
 SIMILAR = 10  # dHash distance (of 64 bits) at or below which a result counts as a copy of a reference
 
 

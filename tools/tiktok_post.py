@@ -102,7 +102,31 @@ def post(mp4, url):
     raise last
 
 
+def introspect():
+    """Print the input fields Buffer accepts for posts (used to find the TikTok and asset options)."""
+    q = """query($n: String!) { __type(name: $n) { name inputFields { name type { name kind ofType { name kind ofType { name } } } } } }"""
+    todo, seen = ["CreatePostInput"], set()
+    while todo:
+        n = todo.pop(0)
+        if n in seen:
+            continue
+        seen.add(n)
+        t = gql(q, {"n": n})["__type"]
+        if not t or not t.get("inputFields"):
+            continue
+        print("TYPE", n, json.dumps([(f["name"], f["type"]) for f in t["inputFields"]])[:1500])
+        for f in t["inputFields"]:
+            ty = f["type"]
+            while ty and not ty.get("name"):
+                ty = ty.get("ofType")
+            if ty and re.search(r"Metadata|Asset|Video|Tiktok|TikTok", ty["name"] or ""):
+                todo.append(ty["name"])
+
+
 if __name__ == "__main__":
+    if sys.argv[1:] == ["--introspect"]:
+        introspect()
+        sys.exit(0)
     if not os.environ.get("BUFFER_API_KEY"):
         print("::warning::BUFFER_API_KEY missing, skipping TikTok")
         sys.exit(0)

@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
     inputs:
       slug:
-        description: "Article slug"
+        description: "Article slug ('introspect' = list Buffer's post options, posts nothing)"
         required: true
       run_id:
         description: "Id of the 'Make YouTube videos' run whose artifact holds the Short"
@@ -22,7 +22,13 @@ jobs:
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v5
+      - name: List Buffer post options
+        if: github.event.inputs.slug == 'introspect'
+        env:
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+        run: python3 tools/tiktok_post.py --introspect
       - name: Get the Short
+        if: github.event.inputs.slug != 'introspect'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
@@ -31,6 +37,7 @@ jobs:
           [ -n "$f" ] || { echo "::error::Short not found in that run"; exit 1; }
           mkdir -p video/out && cp "$f" video/out/
       - name: Post to TikTok
+        if: github.event.inputs.slug != 'introspect'
         env:
           GH_TOKEN: ${{ github.token }}
           BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}

@@ -2,6 +2,7 @@
 
 Usage (in GitHub Actions, with the YT_* secrets):  python3 tools/yt_stats.py
 Prints one JSON line per video (for Claude to read in the log) and a table in the run summary.
+With --history: also appends this snapshot to ops/stats/history.jsonl (used by tools/learn.py).
 Only public counts from the YouTube Data API; watch time and click-through need the Analytics scope.
 """
 import json
@@ -49,6 +50,14 @@ for i in range(0, len(ids), 50):
                      "comments": int(s.get("commentCount", 0))})
 rows.sort(key=lambda r: r["published"], reverse=True)
 print("CHANNEL", json.dumps(ch["statistics"]))
+if "--history" in sys.argv:
+    from datetime import datetime, timezone
+    at = datetime.now(timezone.utc).replace(microsecond=0).isoformat()
+    h = ROOT / "ops/stats/history.jsonl"
+    h.parent.mkdir(parents=True, exist_ok=True)
+    with h.open("a", encoding="utf-8") as f:
+        for r in rows:
+            f.write(json.dumps({"at": at, **{k: r[k] for k in ("id", "type", "published", "views", "likes", "comments")}}) + "\n")
 for r in rows:
     print("STAT", json.dumps(r, ensure_ascii=False))
 summ = os.environ.get("GITHUB_STEP_SUMMARY")

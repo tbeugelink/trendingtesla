@@ -1,0 +1,46 @@
+name: Learn from YouTube statistics
+
+# Every morning before the morning article (06:38 Amsterdam): save today's YouTube numbers and update
+# ops/performance.md, the "what works" guidance that the article tasks read. Can also be run by hand.
+on:
+  schedule:
+    - cron: "17 4 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: yt-learn
+  cancel-in-progress: false
+
+jobs:
+  learn:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+      - name: Save statistics snapshot
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+        run: python3 tools/yt_stats.py --history
+      - name: Update the guidance
+        run: python3 tools/learn.py >> "$GITHUB_STEP_SUMMARY"
+      - name: Commit
+        run: |
+          git config user.name "TrendingTesla bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          cp ops/stats/history.jsonl "$RUNNER_TEMP/h" && cp ops/performance.md "$RUNNER_TEMP/p"
+          for i in 1 2 3 4 5; do
+            git fetch -q origin main && git reset -q --hard origin/main
+            # only this workflow writes these files; keep any lines added meanwhile and add ours
+            sort -u ops/stats/history.jsonl "$RUNNER_TEMP/h" 2>/dev/null | sort -t'"' -k4 > "$RUNNER_TEMP/m" || cp "$RUNNER_TEMP/h" "$RUNNER_TEMP/m"
+            mkdir -p ops/stats && cp "$RUNNER_TEMP/m" ops/stats/history.jsonl && cp "$RUNNER_TEMP/p" ops/performance.md
+            git add ops/stats/history.jsonl ops/performance.md
+            git diff --cached --quiet && exit 0
+            git commit -qm "Stats: daily YouTube snapshot and updated performance guidance" && git push -q origin HEAD:main && exit 0
+            sleep $((10 + RANDOM % 20))
+          done
+          exit 1

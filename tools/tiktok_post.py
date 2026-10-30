@@ -80,9 +80,8 @@ def post(mp4, url, cover=None):
     slug = re.sub(r"-(en|nl)-short\.mp4$", "", Path(mp4).name)
     cid, name = tiktok_channel()
     text = caption(slug)
-    video = {"url": url, "metadata": {"thumbnailOffset": 1000}}  # opening frame with the label
-    if cover:
-        video["thumbnailUrl"] = cover  # the same opening frame as an image, in case TikTok ignores the offset
+    # cover: a frame from the video (Buffer refuses custom cover images); 0.5 s = photo + label on screen
+    video = {"url": url, "metadata": {"thumbnailOffset": 500}}
     asset = [{"video": video}]
     import build
     a = json.loads(next((ROOT / "content/articles").glob(f"*-{slug}.json")).read_text(encoding="utf-8"))

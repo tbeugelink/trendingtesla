@@ -21,6 +21,8 @@
     }
   ],
   "images": [
+    "news/tesla-semi-fire-i-880-hayward-no-crash-freeway-closed-10-hours-1.jpg",
+    "news/tesla-semi-fire-i-880-hayward-no-crash-freeway-closed-10-hours-2.jpg",
     "models/semi-2.jpg",
     "models/semi-7.jpg",
     "models/semi-6.jpg"
@@ -241,11 +243,27 @@
   "real_photos": [
     {
       "page": "https://commons.wikimedia.org/wiki/File:Tesla_Semi_Ready_to_Ride_(47672278541).jpg",
-      "describe": "Tesla Semi truck (real photo)"
+      "describe": "Tesla Semi truck (real photo)",
+      "file": "news/tesla-semi-fire-i-880-hayward-no-crash-freeway-closed-10-hours-1.jpg",
+      "credit": "Steve Jurvetson from Menlo Park, USA, CC BY 2.0, Wikimedia Commons"
     },
     {
       "page": "https://commons.wikimedia.org/wiki/File:The_Tesla_Semi_Truck_(40705940423).jpg",
-      "describe": "Tesla Semi truck (real photo)"
+      "describe": "Tesla Semi truck (real photo)",
+      "file": "news/tesla-semi-fire-i-880-hayward-no-crash-freeway-closed-10-hours-2.jpg",
+      "credit": "Steve Jurvetson from Menlo Park, USA, CC BY 2.0, Wikimedia Commons"
+    }
+  ],
+  "credits": [
+    {
+      "file": "news/tesla-semi-fire-i-880-hayward-no-crash-freeway-closed-10-hours-1.jpg",
+      "credit": "Steve Jurvetson from Menlo Park, USA, CC BY 2.0, Wikimedia Commons",
+      "page": "https://commons.wikimedia.org/wiki/File:Tesla_Semi_Ready_to_Ride_(47672278541).jpg"
+    },
+    {
+      "file": "news/tesla-semi-fire-i-880-hayward-no-crash-freeway-closed-10-hours-2.jpg",
+      "credit": "Steve Jurvetson from Menlo Park, USA, CC BY 2.0, Wikimedia Commons",
+      "page": "https://commons.wikimedia.org/wiki/File:The_Tesla_Semi_Truck_(40705940423).jpg"
     }
   ]
 }

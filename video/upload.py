@@ -39,13 +39,18 @@ def read_meta(txt):
     return get("TITLE"), get("DESCRIPTION"), [t.strip() for t in get("TAGS").split(",") if t.strip()]
 
 
-def set_thumbnail(vid, mp4, at=None, at_sec=1.0):
-    """Use the opening frame (photo + label) of a long video as its YouTube thumbnail (1280x720 JPEG)."""
+def set_thumbnail(vid, mp4, at=None, at_sec=1.0, jpg=None):
+    """Use the opening frame (photo + label) as the YouTube thumbnail: 1280x720 for long videos, 720x1280 for
+    Shorts (otherwise YouTube picks a random frame, and Shorts with shared photos end up looking the same).
+    jpg: upload this ready-made image instead of taking a frame from mp4."""
     import subprocess
     import tempfile
-    jpg = Path(tempfile.mkdtemp()) / f"{vid}.jpg"
-    subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-ss", str(at_sec), "-i", str(mp4), "-frames:v", "1",
-                    "-vf", "scale=1280:720:flags=lanczos", "-q:v", "2", str(jpg)], check=True)
+    if jpg is None:
+        jpg = Path(tempfile.mkdtemp()) / f"{vid}.jpg"
+        size = "720:1280" if str(mp4).endswith("-short.mp4") else "1280:720"
+        subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-ss", str(at_sec), "-i", str(mp4), "-frames:v", "1",
+                        "-vf", f"scale={size}:flags=lanczos", "-q:v", "2", str(jpg)], check=True)
+    jpg = Path(jpg)
     req = urllib.request.Request(
         f"https://www.googleapis.com/upload/youtube/v3/thumbnails/set?videoId={vid}&uploadType=media",
         data=jpg.read_bytes(), method="POST",
@@ -108,6 +113,8 @@ def main():
     with urllib.request.urlopen(put, timeout=600) as r:
         vid = json.load(r)["id"]
     register(vid, mp4, lang, title)
+    if mp4.name.endswith("-short.mp4"):
+        set_thumbnail(vid, mp4, at)
     # remember the length of long videos; the site shows it ("▶ 4:15") and YouTube's feed has none
     if mp4.name.endswith("-full.mp4"):
         set_thumbnail(vid, mp4, at)

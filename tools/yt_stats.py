@@ -63,16 +63,18 @@ def analytics(rows):
                     "views,averageViewDuration,averageViewPercentage"):
         q = urllib.parse.urlencode({"ids": "channel==MINE", "startDate": "2026-01-01", "endDate": date.today().isoformat(),
                                     "metrics": metrics, "dimensions": "video", "filters": f"video=={ids}",
-                                    "maxResults": 200})
+                                    "sort": "-views", "maxResults": 200})
         req = urllib.request.Request(f"https://youtubeanalytics.googleapis.com/v2/reports?{q}",
                                      headers={"Authorization": f"Bearer {at}"})
         try:
             with urllib.request.urlopen(req, timeout=60) as r:
                 d = json.load(r)
         except urllib.error.HTTPError as e:
-            if e.code == 403:
+            body = e.read().decode(errors="replace")[:400]
+            if e.code == 403 and "insufficient" in body.lower():
                 print("::notice::No YouTube Analytics access yet (scope yt-analytics.readonly missing); views only")
                 return
+            print(f"::warning::YouTube Analytics {e.code} for metrics {metrics}: {body}")
             continue  # e.g. a metric YouTube does not offer: try the shorter list
         cols = [c["name"] for c in d.get("columnHeaders", [])]
         by = {row[0]: dict(zip(cols, row)) for row in d.get("rows", [])}

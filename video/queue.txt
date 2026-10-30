@@ -1,2 +1,2 @@
-tesla-houston-robotaxi-zone-10x-bigger-texas-fleet-passes-1000 en --upload
-# 2026-10-30T10:16:29 Short for the Houston Robotaxi article
+italy-backs-eu-wide-tesla-fsd-approval-salvini-musk-65-percent-vote-math en --full --upload
+# 2026-10-30T21:08:01 Long video for the Italy FSD article, remade without fsd-czechia.jpg

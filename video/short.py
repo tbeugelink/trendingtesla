@@ -37,6 +37,14 @@ LANG = ["en"]  # language of the video being made (set in main)
 RED, YEL, BLUE = "#d61a1a", "#ffd400", "#1d5cff"
 
 
+
+def photo_credits(a, lang):
+    """Credit line for real, freely licensed photos (required by their licence)."""
+    if not a.get("credits"):
+        return ""
+    lab = {"en": "Photos", "nl": "Foto's"}[lang]
+    return f"{lab}: " + "; ".join(f"{c['credit']} ({c['page']})" for c in a["credits"]) + "\n\n"
+
 def font(f, s):
     return ImageFont.truetype(f, s)
 
@@ -64,6 +72,14 @@ def photos(a):
             q = build.STATIC / "img/models" / g
             if q.exists() and g not in {o.name for o in out} and len(out) < 6:
                 out.append(q)
+    if len(out) > 2:  # after the opening photo: photos the latest other videos used least come first
+        recent = sorted((x for x in build.ALL_ARTS if x["slug"] != a["slug"] and x.get("date", "") <= a.get("date", "9")),
+                        key=lambda x: (x.get("date", ""), x.get("time", "")))[-8:]
+        count = {}
+        for x in recent:
+            for c in list(build.candidates(x))[:4]:
+                count[c.rsplit("/", 1)[-1]] = count.get(c.rsplit("/", 1)[-1], 0) + 1
+        out = out[:1] + sorted(out[1:], key=lambda q: count.get(q.name, 0))
     return out or [build.STATIC / "img/topics/gigafactory.jpg"]
 
 
@@ -596,7 +612,7 @@ def meta(a, lang, out):
     lim = 90 if PORTRAIT else 100
     if len(ttl) > lim:
         ttl = ttl[:lim - 1].rsplit(" ", 1)[0].rstrip(",:;–-") + "…"
-    txt = (f"TITLE:\n{ttl}{' #Shorts' if PORTRAIT else ''}\n\nDESCRIPTION:\n{t['description']}\n\n{read}: {url}\n\n{note}\n\n"
+    txt = (f"TITLE:\n{ttl}{' #Shorts' if PORTRAIT else ''}\n\nDESCRIPTION:\n{t['description']}\n\n{read}: {url}\n\n{photo_credits(a, lang)}{note}\n\n"
            f"TAGS:\n{', '.join(dict.fromkeys(tags))}\n")
     out.with_suffix(".txt").write_text(txt, encoding="utf-8")
 

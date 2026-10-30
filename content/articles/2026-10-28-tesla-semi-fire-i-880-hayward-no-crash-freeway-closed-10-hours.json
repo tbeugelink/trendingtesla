@@ -237,5 +237,15 @@
         "text": "Zolang de oorzaak onbekend is, valt niet te zeggen of dit een incident was, of een teken van een groter probleem."
       }
     ]
-  }
+  },
+  "real_photos": [
+    {
+      "page": "https://commons.wikimedia.org/wiki/File:Tesla_Semi_Ready_to_Ride_(47672278541).jpg",
+      "describe": "Tesla Semi truck (real photo)"
+    },
+    {
+      "page": "https://commons.wikimedia.org/wiki/File:The_Tesla_Semi_Truck_(40705940423).jpg",
+      "describe": "Tesla Semi truck (real photo)"
+    }
+  ]
 }

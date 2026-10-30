@@ -42,6 +42,7 @@ def read_meta(txt):
 def set_thumbnail(vid, mp4, at=None, at_sec=1.0, jpg=None):
     """Use the opening frame (photo + label) as the YouTube thumbnail: 1280x720 for long videos, 720x1280 for
     Shorts (otherwise YouTube picks a random frame, and Shorts with shared photos end up looking the same).
+    A little extra contrast, colour and sharpness makes it stand out in the small feed tiles.
     jpg: upload this ready-made image instead of taking a frame from mp4."""
     import subprocess
     import tempfile
@@ -49,7 +50,7 @@ def set_thumbnail(vid, mp4, at=None, at_sec=1.0, jpg=None):
         jpg = Path(tempfile.mkdtemp()) / f"{vid}.jpg"
         size = "720:1280" if str(mp4).endswith("-short.mp4") else "1280:720"
         subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-ss", str(at_sec), "-i", str(mp4), "-frames:v", "1",
-                        "-vf", f"scale={size}:flags=lanczos", "-q:v", "2", str(jpg)], check=True)
+                        "-vf", f"scale={size}:flags=lanczos,eq=contrast=1.08:saturation=1.22,unsharp=5:5:0.6", "-q:v", "2", str(jpg)], check=True)
     jpg = Path(jpg)
     req = urllib.request.Request(
         f"https://www.googleapis.com/upload/youtube/v3/thumbnails/set?videoId={vid}&uploadType=media",

@@ -472,7 +472,7 @@ def meta(a, lang, pieces, place, out):
     note = {"en": "Voice-over generated with AI (ElevenLabs); script written and checked by TrendingTesla.",
             "nl": "Voice-over gemaakt met AI (ElevenLabs); tekst geschreven en gecontroleerd door TrendingTesla."}[lang]
     txt = (f"TITLE:\n{t['title'][:100]}\n\nDESCRIPTION:\n{t['description']}\n\n{chl}:\n" + "\n".join(chap) +
-           f"\n\n{read}: {url}\n\n{note}\n\nTAGS:\n{', '.join(dict.fromkeys(tags))}\n")
+           f"\n\n{read}: {url}\n\n{S.photo_credits(a, lang)}{note}\n\nTAGS:\n{', '.join(dict.fromkeys(tags))}\n")
     out.with_suffix(".txt").write_text(txt, encoding="utf-8")
 
 

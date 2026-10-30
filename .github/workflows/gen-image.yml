@@ -1,7 +1,7 @@
 name: Generate article photo
 
 # By hand from the Actions tab: make a Nano Banana photo for an article that has a "gen_image" spec
-# (new articles get theirs automatically in "Make YouTube videos").
+# and/or add its "real_photos" (new articles get both automatically in "Make YouTube videos").
 on:
   workflow_dispatch:
     inputs:
@@ -47,6 +47,7 @@ jobs:
         run: |
           pip install --quiet pillow
           python3 tools/gen_image.py "${{ github.event.inputs.slug }}"
+          python3 tools/real_photos.py "${{ github.event.inputs.slug }}"
           [ -z "$(git status --porcelain content static)" ] && exit 0
           python3 build.py > /dev/null
           git config user.name "TrendingTesla bot"

@@ -252,6 +252,33 @@ def run(slug):
                                 "\"gen/<file>.jpg\" in \"images\" or as a reference)\n")
     cat.write_text(text.rstrip() + "\n" + line + "\n", encoding="utf-8")
     print(f"::notice::{slug}: new photo {rel} ({mdl}, {len(used)} reference(s))")
+    extras(slug, f, src_file, cat)
+
+
+def extras(slug, f, src_file, cat):
+    """"gen_image.extra": up to 2 more scenes of the same subject (same refs), so videos have more variety."""
+    a = json.loads(f.read_text(encoding="utf-8"))
+    g = a.get("gen_image") or {}
+    todo = [x for x in (g.get("extra") or [])[:2] if x.get("prompt") and not x.get("file")]
+    for i, x in enumerate(todo, 2):
+        try:
+            out, used, mdl = make({**g, "prompt": x["prompt"]}, label=f"extra {i}")
+        except Exception as e:
+            print(f"::warning::{slug}: extra photo skipped: {e}")
+            continue
+        rel = f"gen/{slug}-x{i}-{datetime.now(timezone.utc).strftime('%m%d%H%M')}.jpg"
+        out.save(IMG / rel, "JPEG", quality=88, optimize=True, progressive=True)
+        x["file"] = rel
+        a["images"] = a.get("images", [])[:1] + [rel] + a.get("images", [])[1:]
+        src = json.loads(src_file.read_text(encoding="utf-8"))
+        src[rel] = {"article": slug, "model": mdl, "made": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
+                    "references": [{k: r[k] for k in ("src", "page", "license", "commons") if r.get(k)} for r in used]}
+        src_file.write_text(json.dumps(src, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+        cat.write_text(cat.read_text(encoding="utf-8").rstrip() + f"\n- {rel} — {x.get('describe') or x['prompt'][:140]}\n",
+                       encoding="utf-8")
+        print(f"::notice::{slug}: extra photo {rel}")
+    a["gen_image"] = g
+    f.write_text(json.dumps(a, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
 
 def test(spec_file, out_dir):

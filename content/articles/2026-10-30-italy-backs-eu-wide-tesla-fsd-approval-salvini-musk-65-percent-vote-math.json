@@ -1,0 +1,250 @@
+{
+  "slug": "italy-backs-eu-wide-tesla-fsd-approval-salvini-musk-65-percent-vote-math",
+  "date": "2026-10-30",
+  "time": "21:13",
+  "category": "fsd",
+  "sources": [
+    {
+      "title": "Not a Tesla App — Italy backs EU-wide Tesla FSD approval after Salvini speaks with Elon Musk",
+      "url": "https://www.notateslaapp.com/news/4921/italy-backs-eu-wide-tesla-fsd-approval-after-salvini-speaks-with-elon-musk"
+    },
+    {
+      "title": "Drive Tesla — Italy backs swift EU approval of Tesla Assisted Driving after Musk talks",
+      "url": "https://driveteslacanada.ca/news/italy-backs-tesla-assisted-driving-eu-approval-musk/"
+    },
+    {
+      "title": "Tesla Mag — Tesla FSD: Italy backs a swift EU approval",
+      "url": "https://www.tesla-mag.com/en/tesla-fsd-italy-salvini-eu-approval/"
+    }
+  ],
+  "images": [
+    "fsd-czechia.jpg",
+    "fsd-roundabout-eu.jpg",
+    "fsd-3.jpg"
+  ],
+  "gen_image": {
+    "prompt": "A pearl-white Tesla Model Y driving along a winding road through Tuscan hills in autumn, cypress trees, a small Italian hill town with terracotta roofs in the background, golden late-afternoon light; colourful but natural, with yellow autumn leaves, red roof tiles and a deep blue sky; calm, optimistic mood",
+    "subject": "the 2025-2026 refreshed Tesla Model Y (Juniper generation): full-width front light bar across the nose, full-width red rear light bar, smooth front without grille, pearl-white paint, standard road wheels; no roof rack, nothing added on the roof",
+    "refs": [
+      {
+        "commons": "Tesla Model Y Juniper 2025"
+      }
+    ],
+    "describe": "A white new Tesla Model Y driving on a winding road through the autumn hills of Tuscany"
+  },
+  "label": {
+    "style": "c",
+    "en": {
+      "sub": "ITALY BACKS",
+      "text": "TESLA FSD IN THE EU"
+    },
+    "nl": {
+      "sub": "ITALIË STEUNT",
+      "text": "TESLA FSD IN DE EU"
+    }
+  },
+  "en": {
+    "title": "Italy backs EU-wide approval of Tesla FSD after Salvini's call with Musk, putting the 65% vote bar within reach",
+    "description": "Italy's transport minister says Rome supports a swift EU approval of Tesla Assisted Driving. With Germany already on board, Tesla now has a path past the EU's population rule, but only just.",
+    "body": "<p>Italy's transport minister and deputy prime minister, Matteo Salvini, said on Thursday, October 29, that Italy supports a swift EU approval of <strong>Tesla Assisted Driving</strong>, the European name for FSD (Supervised). He posted the message on X after what he called a positive conversation with Elon Musk, who replied with a short thank-you. Italy is the third most populous country in the EU, with about 59 million people, roughly 13% of the bloc. Germany already said in early October that it backs a quick European approval. Still, a minister's post on social media is not an approval, and Tesla owners in Italy cannot switch the system on today.</p>\n<h2>So does this mean Italian Teslas get FSD now?</h2>\n<p><strong>No, not yet.</strong> Salvini did not announce a national procedure, and Italy has not recognized the provisional approval that the Dutch vehicle authority RDW granted on April 10. Tesla's application is still being reviewed by Italy's Ministry of Infrastructure and Transport, and the ministry had not issued a press release about the call. That makes Salvini's message a political signal for the EU process rather than a green light at home. That EU process is decided by a population rule that has so far worked against Tesla.</p>\n<h2>Why does Italy's support matter so much?</h2>\n<p><strong>Because of the 65% rule.</strong> An EU-wide approval needs a qualified majority in the Technical Committee on Motor Vehicles: at least 15 of the 27 member states, and together they must represent at least 65% of the EU population. Here is roughly how the numbers stack up:</p>\n<ul>\n<li>the ten countries that already allow the system hold about 14% of EU residents</li>\n<li>all 23 countries outside the big four together hold about 42%</li>\n<li>adding Germany brings that to about 61%</li>\n<li>adding Italy as well lifts it to about 74%</li>\n</ul>\n<p>For the first time, Tesla has a path above the 65% bar on paper. But that path only works if almost every smaller country votes yes too.</p>\n<h2>So can Tesla win without France and Spain?</h2>\n<p><strong>In theory yes, but with little room to spare.</strong> With Germany and Italy on board, the remaining support could lose only about nine percentage points of population before falling below 65%, and Tesla would still need at least 15 countries in favor. France, the EU's second largest country, has not taken a position; its transport ministry started its own road tests on September 2. Spain is waiting for the EU decision instead of recognizing the Dutch approval nationally. A no or an abstention from one or two mid-sized countries could still tip the balance. And the support Tesla has won so far came with conditions.</p>\n<h2>What did Tesla change to win Germany over?</h2>\n<p><strong>The name and the speed rules.</strong> Germany's transport ministry backed a quick approval on October 6 after reaching an agreement with Tesla on several points. The European version differs from the US one in a few ways:</p>\n<ul>\n<li>it is sold as Tesla Assisted Driving instead of Full Self-Driving</li>\n<li>speed limits and speed offsets were part of the deal with Germany</li>\n<li>the driver stays legally responsible at all times</li>\n<li>approval is expected to cover only cars with HW4 hardware, so older HW3 cars would likely need Tesla's planned upgrade</li>\n</ul>\n<p>Even with those changes in place, nobody has set a date for the vote yet.</p>\n<h2>What should we watch for next?</h2>\n<p><strong>The vote date, France and Musk's own deadline.</strong> A vote is expected in December at the earliest, but no meeting has been scheduled. France's stance is now the biggest open question, because a yes from Paris would give Tesla a much safer margin. It is also worth watching whether Italy turns words into action by recognizing the Dutch approval before the EU vote, as ten smaller countries have done. On Tesla's earnings call on October 21, Musk said he would be surprised if EU-wide approval took longer than the first quarter of 2027. Keep in mind this remains a Level 2 system: it can steer, brake and accelerate, but the driver must watch the road and be ready to take over at any moment.</p>"
+  },
+  "nl": {
+    "title": "Italië steunt Europese goedkeuring van Tesla FSD na gesprek Salvini met Musk: de 65-procentgrens komt in zicht",
+    "description": "De Italiaanse minister van Transport zegt dat Rome een snelle EU-goedkeuring van Tesla Assisted Driving steunt. Met Duitsland erbij heeft Tesla nu een weg langs de bevolkingsregel van de EU, maar met weinig marge.",
+    "body": "<p>Matteo Salvini, de Italiaanse minister van Transport en vicepremier, liet donderdag 29 oktober weten dat Italië een snelle Europese goedkeuring van <strong>Tesla Assisted Driving</strong> steunt. Zo heet FSD (Supervised) in Europa. Hij zette het bericht op X na wat hij een positief gesprek met Elon Musk noemde; Musk reageerde met een kort bedankje. Italië is met zo'n 59 miljoen inwoners het op twee na grootste land van de EU, goed voor ongeveer 13 procent van de bevolking. Duitsland sprak zich begin oktober al uit voor een snelle Europese goedkeuring. Toch is een bericht van een minister op sociale media geen goedkeuring, en Italiaanse Tesla-rijders kunnen het systeem vandaag nog niet aanzetten.</p>\n<h2>Krijgen Italiaanse Tesla's nu dan FSD?</h2>\n<p><strong>Nee, nog niet.</strong> Salvini kondigde geen nationale procedure aan, en Italië heeft de voorlopige goedkeuring die de RDW op 10 april gaf niet erkend. De aanvraag van Tesla ligt nog bij het Italiaanse ministerie van Infrastructuur en Transport, dat over het gesprek geen persbericht uitbracht. Het bericht van Salvini is dus vooral een politiek signaal richting Brussel, geen groen licht in eigen land. En in Brussel beslist een bevolkingsregel die tot nu toe in het nadeel van Tesla werkte.</p>\n<h2>Waarom telt de steun van Italië zo zwaar?</h2>\n<p><strong>Door de 65-procentregel.</strong> Voor een goedkeuring in de hele EU is een gekwalificeerde meerderheid nodig in het Technisch Comité Motorvoertuigen: minstens 15 van de 27 lidstaten, die samen minstens 65 procent van de EU-bevolking vertegenwoordigen. Zo ongeveer ziet de rekensom eruit:</p>\n<ul>\n<li>de tien landen waar het systeem al mag, hebben samen zo'n 14 procent van de inwoners</li>\n<li>alle 23 landen buiten de grote vier samen komen op ongeveer 42 procent</li>\n<li>met Duitsland erbij wordt dat ongeveer 61 procent</li>\n<li>met ook Italië erbij komt het op ongeveer 74 procent</li>\n</ul>\n<p>Voor het eerst heeft Tesla op papier een weg boven de 65 procent. Maar die weg werkt alleen als bijna elk kleiner land ook voor stemt.</p>\n<h2>Kan Tesla dan winnen zonder Frankrijk en Spanje?</h2>\n<p><strong>In theorie wel, maar met weinig speling.</strong> Met Duitsland en Italië aan boord mag de rest van de steun nog maar zo'n negen procentpunt aan bevolking verliezen voordat het onder de 65 procent zakt, en Tesla heeft daarnaast nog altijd minstens 15 landen nodig. Frankrijk, het op één na grootste EU-land, heeft nog geen standpunt ingenomen; het Franse ministerie begon op 2 september met eigen testritten. Spanje wacht op het Europese besluit en erkent de Nederlandse goedkeuring niet zelf. Een tegenstem of onthouding van één of twee middelgrote landen kan de balans dus nog doen omslaan. Bovendien kwam de steun die Tesla tot nu toe kreeg niet zonder voorwaarden.</p>\n<h2>Wat veranderde Tesla om Duitsland over de streep te trekken?</h2>\n<p><strong>De naam en de snelheidsregels.</strong> Het Duitse ministerie van Transport steunde op 6 oktober een snelle goedkeuring, nadat het met Tesla afspraken had gemaakt over een aantal punten. De Europese versie verschilt op een paar punten van de Amerikaanse:</p>\n<ul>\n<li>het heet Tesla Assisted Driving in plaats van Full Self-Driving</li>\n<li>snelheidslimieten en de marge boven de limiet waren onderdeel van de afspraken met Duitsland</li>\n<li>de bestuurder blijft altijd wettelijk verantwoordelijk</li>\n<li>de goedkeuring geldt naar verwachting alleen voor auto's met HW4-hardware, dus oudere HW3-auto's hebben waarschijnlijk de geplande upgrade van Tesla nodig</li>\n</ul>\n<p>Ook met die aanpassingen is er nog geen datum voor de stemming.</p>\n<h2>Waar moeten we nu op letten?</h2>\n<p><strong>De datum van de stemming, Frankrijk en de deadline van Musk.</strong> Een stemming wordt op zijn vroegst in december verwacht, maar er is nog geen vergadering gepland. Frankrijk is nu de grootste open vraag: een ja uit Parijs zou Tesla een veel veiligere marge geven. Let ook op of Italië de daad bij het woord voegt en de Nederlandse goedkeuring alvast erkent, zoals tien kleinere landen al deden. Tijdens de kwartaalcijfers van Tesla op 21 oktober zei Musk dat het hem zou verbazen als de Europese goedkeuring langer duurt dan het eerste kwartaal van 2027. Onthoud wel dat dit een systeem van niveau 2 blijft: het stuurt, remt en accelereert, maar de bestuurder moet de weg in de gaten houden en altijd klaar zijn om in te grijpen.</p>"
+  },
+  "short": {
+    "en": "Italy now backs Tesla's driver assistance system for the whole EU. On October 29, transport minister Matteo Salvini said on X, after a call with Elon Musk, that Italy supports a swift EU approval of Tesla Assisted Driving, the European name for FSD Supervised. That matters because of a population rule. An EU wide approval needs 15 countries that hold at least 65 percent of EU residents. With Germany and Italy on board, Tesla can now reach about 74 percent on paper, but only if nearly every smaller country votes yes too. France and Spain have not committed. And Italian owners still cannot switch it on today. The vote is expected in December at the earliest.",
+    "nl": "Italië steunt nu het rijhulpsysteem van Tesla voor de hele EU. Op 29 oktober zei minister van Transport Matteo Salvini op X, na een gesprek met Elon Musk, dat Italië een snelle Europese goedkeuring van Tesla Assisted Driving steunt. Zo heet FSD Supervised in Europa. Dat is belangrijk door een bevolkingsregel. Voor goedkeuring in de hele EU zijn 15 landen nodig met samen minstens 65 procent van de inwoners. Met Duitsland en Italië erbij komt Tesla op papier op zo'n 74 procent, maar alleen als bijna elk kleiner land ook voor stemt. Frankrijk en Spanje hebben nog niets toegezegd. En Italiaanse rijders kunnen het systeem vandaag nog niet aanzetten. De stemming komt op zijn vroegst in december."
+  },
+  "video": {
+    "en": [
+      {
+        "text": "Italy has just thrown its weight behind Tesla's driver assistance system in Europe. On Thursday, October 29, Italy's transport minister and deputy prime minister, Matteo Salvini, posted on X that Italy supports a swift EU approval of Tesla Assisted Driving. That is the European name for FSD Supervised. He wrote it after what he called a positive conversation with Elon Musk, and Musk replied with a short thank you. Italy has about 59 million people, roughly 13 percent of the EU. And Germany already said in early October that it backs a quick European approval. Still, a minister's post is not an approval. Tesla owners in Italy cannot switch the system on today.",
+        "img": [
+          "fsd-czechia.jpg"
+        ]
+      },
+      {
+        "head": "So does this mean Italian Teslas get FSD now?",
+        "img": [
+          "fsd-roundabout-eu.jpg"
+        ]
+      },
+      {
+        "text": "No, not yet. Salvini did not announce a national procedure. Italy has not recognized the provisional approval that the Dutch vehicle authority, RDW, gave on April 10. Tesla's application is still under review at Italy's transport ministry, and the ministry did not put out a press release about the call. So this is a political signal for the EU process, not a green light at home. And that EU process is decided by a population rule that has so far worked against Tesla."
+      },
+      {
+        "head": "Why does Italy's support matter so much?",
+        "img": [
+          "fsd-3.jpg"
+        ]
+      },
+      {
+        "text": "Because of the 65 percent rule. An EU wide approval needs a qualified majority in the Technical Committee on Motor Vehicles. That means at least 15 of the 27 member states, and together they must hold at least 65 percent of the EU population. Here is roughly how the numbers stack up."
+      },
+      {
+        "key": "Ten countries",
+        "text": "First, the ten countries that already allow the system hold only about 14 percent of EU residents."
+      },
+      {
+        "key": "23 smaller states",
+        "text": "Second, all 23 countries outside the big four together hold about 42 percent."
+      },
+      {
+        "key": "Plus Germany",
+        "text": "Third, adding Germany brings that to about 61 percent."
+      },
+      {
+        "key": "Plus Italy",
+        "text": "And fourth, adding Italy as well lifts it to about 74 percent."
+      },
+      {
+        "text": "So for the first time, Tesla has a path above the 65 percent bar on paper. But that path only works if almost every smaller country votes yes too."
+      },
+      {
+        "head": "So can Tesla win without France and Spain?",
+        "img": [
+          "fsd-4.jpg"
+        ]
+      },
+      {
+        "text": "In theory yes, but with little room to spare. With Germany and Italy on board, the rest of the support could lose only about 9 percentage points of population before dropping below 65 percent. And Tesla would still need at least 15 countries in favor. France, the second largest EU country, has not taken a position. Its transport ministry started its own road tests on September 2. Spain is waiting for the EU decision instead of accepting the Dutch approval on its own. So a no or an abstention from one or two mid-sized countries could still tip the balance. And the support Tesla has won so far came with conditions."
+      },
+      {
+        "head": "What did Tesla change to win Germany over?",
+        "img": [
+          "fsd-2.jpg"
+        ]
+      },
+      {
+        "text": "The name and the speed rules. Germany's transport ministry backed a quick approval on October 6, after reaching an agreement with Tesla on several points. The European version differs from the US one in a few ways."
+      },
+      {
+        "key": "New name",
+        "text": "First, it is sold as Tesla Assisted Driving instead of Full Self-Driving."
+      },
+      {
+        "key": "Speed rules",
+        "text": "Second, speed limits and speed offsets were part of the deal with Germany."
+      },
+      {
+        "key": "Driver responsible",
+        "text": "Third, the driver stays legally responsible at all times."
+      },
+      {
+        "key": "HW4 only",
+        "text": "And fourth, approval is expected to cover only cars with HW4 hardware. Older HW3 cars would likely need Tesla's planned upgrade.",
+        "img": [
+          "fsd-camera-view.jpg"
+        ]
+      },
+      {
+        "text": "Even with those changes in place, nobody has set a date for the vote yet."
+      },
+      {
+        "head": "What should we watch for next?",
+        "img": [
+          "fsd.jpg"
+        ]
+      },
+      {
+        "text": "The vote date, France, and Musk's own deadline. A vote is expected in December at the earliest, but no meeting has been scheduled. France is now the biggest open question, because a yes from Paris would give Tesla a much safer margin. It is also worth watching whether Italy turns words into action and recognizes the Dutch approval before the EU vote, like ten smaller countries already did. On Tesla's earnings call on October 21, Musk said he would be surprised if EU wide approval took longer than the first quarter of 2027. And keep in mind, this is still a Level 2 system. It can steer, brake and accelerate, but the driver must watch the road and be ready to take over at any moment."
+      }
+    ],
+    "nl": [
+      {
+        "text": "Italië schaart zich achter het rijhulpsysteem van Tesla in Europa. Op donderdag 29 oktober zette de Italiaanse minister van Transport en vicepremier, Matteo Salvini, op X dat Italië een snelle Europese goedkeuring van Tesla Assisted Driving steunt. Zo heet FSD Supervised in Europa. Hij schreef dat na wat hij een positief gesprek met Elon Musk noemde, en Musk reageerde met een kort bedankje. Italië heeft zo'n 59 miljoen inwoners, ongeveer 13 procent van de EU. En Duitsland zei begin oktober al dat het een snelle Europese goedkeuring steunt. Toch is een bericht van een minister geen goedkeuring. Tesla-rijders in Italië kunnen het systeem vandaag nog niet aanzetten.",
+        "img": [
+          "fsd-czechia.jpg"
+        ]
+      },
+      {
+        "head": "Krijgen Italiaanse Tesla's nu dan FSD?",
+        "img": [
+          "fsd-roundabout-eu.jpg"
+        ]
+      },
+      {
+        "text": "Nee, nog niet. Salvini kondigde geen nationale procedure aan. Italië heeft de voorlopige goedkeuring die de RDW op 10 april gaf, niet erkend. De aanvraag van Tesla ligt nog bij het Italiaanse ministerie van Transport, en dat bracht over het gesprek geen persbericht uit. Het is dus een politiek signaal richting Brussel, geen groen licht in eigen land. En in Brussel beslist een bevolkingsregel die tot nu toe in het nadeel van Tesla werkte."
+      },
+      {
+        "head": "Waarom telt de steun van Italië zo zwaar?",
+        "img": [
+          "fsd-3.jpg"
+        ]
+      },
+      {
+        "text": "Door de 65-procentregel. Voor goedkeuring in de hele EU is een gekwalificeerde meerderheid nodig in het Technisch Comité Motorvoertuigen. Dat zijn minstens 15 van de 27 lidstaten, en samen moeten die minstens 65 procent van de EU-bevolking vertegenwoordigen. Zo ongeveer ziet de rekensom eruit."
+      },
+      {
+        "key": "Tien landen",
+        "text": "Ten eerste: de tien landen waar het systeem al mag, hebben samen maar zo'n 14 procent van de inwoners."
+      },
+      {
+        "key": "23 kleinere landen",
+        "text": "Ten tweede: alle 23 landen buiten de grote vier komen samen op ongeveer 42 procent."
+      },
+      {
+        "key": "Plus Duitsland",
+        "text": "Ten derde: met Duitsland erbij wordt dat ongeveer 61 procent."
+      },
+      {
+        "key": "Plus Italië",
+        "text": "En ten vierde: met ook Italië erbij komt het op ongeveer 74 procent."
+      },
+      {
+        "text": "Voor het eerst heeft Tesla dus op papier een weg boven de 65 procent. Maar die weg werkt alleen als bijna elk kleiner land ook voor stemt."
+      },
+      {
+        "head": "Kan Tesla dan winnen zonder Frankrijk en Spanje?",
+        "img": [
+          "fsd-4.jpg"
+        ]
+      },
+      {
+        "text": "In theorie wel, maar met weinig speling. Met Duitsland en Italië aan boord mag de rest van de steun nog maar zo'n 9 procentpunt aan bevolking verliezen voordat het onder de 65 procent zakt. En Tesla heeft daarnaast nog altijd minstens 15 landen nodig. Frankrijk, het op één na grootste EU-land, heeft nog geen standpunt ingenomen. Het Franse ministerie begon op 2 september met eigen testritten. Spanje wacht op het Europese besluit en erkent de Nederlandse goedkeuring niet zelf. Een tegenstem of onthouding van één of twee middelgrote landen kan de balans dus nog doen omslaan. Bovendien kwam de steun die Tesla tot nu toe kreeg niet zonder voorwaarden."
+      },
+      {
+        "head": "Wat veranderde Tesla om Duitsland over de streep te trekken?",
+        "img": [
+          "fsd-2.jpg"
+        ]
+      },
+      {
+        "text": "De naam en de snelheidsregels. Het Duitse ministerie van Transport steunde op 6 oktober een snelle goedkeuring, nadat het met Tesla afspraken had gemaakt over een aantal punten. De Europese versie verschilt op een paar punten van de Amerikaanse."
+      },
+      {
+        "key": "Nieuwe naam",
+        "text": "Ten eerste heet het Tesla Assisted Driving in plaats van Full Self-Driving."
+      },
+      {
+        "key": "Snelheidsregels",
+        "text": "Ten tweede waren snelheidslimieten en de marge boven de limiet onderdeel van de afspraken met Duitsland."
+      },
+      {
+        "key": "Bestuurder verantwoordelijk",
+        "text": "Ten derde blijft de bestuurder altijd wettelijk verantwoordelijk."
+      },
+      {
+        "key": "Alleen HW4",
+        "text": "En ten vierde geldt de goedkeuring naar verwachting alleen voor auto's met HW4-hardware. Oudere HW3-auto's hebben waarschijnlijk de geplande upgrade van Tesla nodig.",
+        "img": [
+          "fsd-camera-view.jpg"
+        ]
+      },
+      {
+        "text": "Ook met die aanpassingen is er nog geen datum voor de stemming."
+      },
+      {
+        "head": "Waar moeten we nu op letten?",
+        "img": [
+          "fsd.jpg"
+        ]
+      },
+      {
+        "text": "De datum van de stemming, Frankrijk en de deadline van Musk. Een stemming wordt op zijn vroegst in december verwacht, maar er is nog geen vergadering gepland. Frankrijk is nu de grootste open vraag: een ja uit Parijs zou Tesla een veel veiligere marge geven. Let ook op of Italië de daad bij het woord voegt en de Nederlandse goedkeuring alvast erkent, zoals tien kleinere landen al deden. Bij de kwartaalcijfers op 21 oktober zei Musk dat het hem zou verbazen als de Europese goedkeuring langer duurt dan het eerste kwartaal van 2027. En onthoud: dit blijft een systeem van niveau 2. Het stuurt, remt en accelereert, maar de bestuurder moet de weg in de gaten houden en altijd klaar zijn om in te grijpen."
+      }
+    ]
+  }
+}

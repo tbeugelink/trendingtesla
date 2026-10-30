@@ -167,13 +167,15 @@ def build_timeline(a, lang):
             blocks[i - 1]["text"] = S.build.strip_q(blocks[i - 1]["text"])
     if not blocks:
         raise SystemExit(f"article has no video script for {lang}")
-    pieces = [("title", S.title_say(a, lang), {"img": (a.get("images") or [])[:1]})]
+    pieces = [("title", S.title_say(a, lang), {"img": (a.get("images") or [])[:1]})] if S.SPOKEN_TITLE else []
     for b in blocks:
         if b.get("head"):
             h = b["head"].strip()
             pieces.append(("head", h if h.endswith(("?", "!", ".")) else h + ".", b))  # keep "?" so the voice rises
         if b.get("text"):
             pieces.append(("text", b["text"], b if not b.get("head") else {k: v for k, v in b.items() if k != "img"}))
+    if not S.SPOKEN_TITLE and pieces and not pieces[0][2].get("img"):  # opening photo = the article's first photo
+        pieces[0] = (pieces[0][0], pieces[0][1], {**pieces[0][2], "img": (a.get("images") or [])[:1]})
     # the last sentence gets its own short pause, so "I'll see you there!" is not swallowed after ".com"
     o1, _, o2 = OUTRO_SAY[lang].rpartition(". ")
     pieces.append(("outro", o1 + ".", {}))
@@ -227,7 +229,7 @@ def main():
         segs.append((a0, a1))
         pos += len(pc) + 1
     # place pieces on the video timeline with pauses
-    t, place = 0.3, []
+    t, place = (0.3 if S.SPOKEN_TITLE else 0.1), []
     for i, ((kind, _, _), (a0, a1)) in enumerate(zip(pieces, segs)):
         if i:
             prev = pieces[i - 1][0]
@@ -347,7 +349,8 @@ def render(a, lang, pieces, segs, place, words, total, end_start, audio):
     o_brand, o_end = S.overlay(brand), S.overlay(ending)
     o_label, _ = S.label_overlay(a, lang)
     # overlays with their time windows
-    wins = [(0.0, place[0] + (segs[0][1] - segs[0][0]) + 0.25, o_label)]
+    label_end = place[0] + (segs[0][1] - segs[0][0]) + 0.25 if S.SPOKEN_TITLE else S.LABEL_SEC
+    wins = [(0.0, label_end, o_label)]
     num = 0
     for i, (kind, txt, b) in enumerate(pieces):
         if kind == "head":
@@ -397,6 +400,8 @@ def render(a, lang, pieces, segs, place, words, total, end_start, audio):
         p = S.ease(max(0.0, min(1.0, (t - starts[k]) / span)))
         cx, cy = FOCUS[k % len(FOCUS)]
         z = 1.0 + ZOOM_IN * p
+        if k == 0 and t < S.PUNCH_SEC:  # quick punch-in on the opening photo
+            z *= 1.0 + S.PUNCH * (1 - S.ease(t / S.PUNCH_SEC))
         cw, chh = min(W * S.ZOOM / z, im.width), min(H * S.ZOOM / z, im.height)
         x0, y0 = (im.width - cw) * cx, (im.height - chh) * cy
         return im.resize((W, H), Image.BILINEAR, box=(x0, y0, x0 + cw, y0 + chh))
@@ -436,7 +441,7 @@ def render(a, lang, pieces, segs, place, words, total, end_start, audio):
             frame.paste(o_end, (0, 0), o_end)
         while ci < len(chunks) and chunks[ci][-1][2] + 0.25 < t:
             ci += 1
-        if ci < len(chunks) and chunks[ci][0][1] <= t and not last:
+        if ci < len(chunks) and chunks[ci][0][1] <= t and not last and t >= label_end:
             o = cap(" ".join(w[0] for w in chunks[ci]))
             frame.paste(o, (0, 0), o)
         ImageDraw.Draw(frame).rectangle([0, H - 12, int(W * t / total), H], fill="#e8231c")

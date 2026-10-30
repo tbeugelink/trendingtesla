@@ -41,3 +41,22 @@ perform much better than illustrations. So for every new article:
 3. **`gen_image.extra`: 1-2 more AI scenes** of the same subject (same refs), each `{"prompt": "...",
    "describe": "..."}`: a different setting, angle or moment than the main scene, so the video can change
    pictures without repeating. Same rules as gen_image: illustrations, never a fake photo of the event.
+
+## Openings and variety (read this before writing the "short" and "video" scripts)
+
+Viewers decide in the first 1-2 seconds whether to swipe away, and YouTube gives less reach to channels
+whose videos all look mass-produced. The videos therefore no longer read the label aloud: the voice starts
+straight with the first sentence of the script while the label is shown for about 2 seconds (this
+replaces the older instruction that the voice first reads the label).
+
+- **The first sentence of the Short and of the long video is the hook**: the single most striking concrete
+  fact or consequence of the story, at most about 12 words, no greeting, no "today", no "Tesla news".
+  It must make sense on its own, because the label is not spoken. Never repeat the label word for word.
+- **Tag the hook type** in the Short: `"short": {"en": ..., "nl": ..., "hook": "<type>"}`, one of
+  `number` (a striking figure), `consequence` (what it means for owners, riders or investors),
+  `contrast` (expectation vs reality, before vs after), `question` (a real open question the Short answers),
+  `first` (a first, record or end). The learning loop (ops/performance.md) measures which types work;
+  rotate types so every type keeps being tested, and do not use the same type as the previous Short.
+- **Vary the long-video shape** with the story: 3-6 heads (not always 5), sometimes start with the
+  consequence and then the facts, sometimes with the facts; at least one section that is our own analysis
+  (why it matters, what is new compared with earlier news, what to watch for) rather than a summary of the sources.

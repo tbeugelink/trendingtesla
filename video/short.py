@@ -408,6 +408,11 @@ def overlay(draw_fn):
     return im
 
 
+# Opening (viewers decide in the first 1-2 s whether to swipe away): by default the voice starts straight with
+# the first sentence of the script, the label is only shown (LABEL_SEC), and the first photo starts with a quick
+# punch-in. SPOKEN_TITLE=1 brings back the old opening where the voice reads the label first.
+SPOKEN_TITLE = os.environ.get("SPOKEN_TITLE") == "1"
+LABEL_SEC, PUNCH_SEC, PUNCH = 2.2, 1.2, 0.10
 ZOOM, TR, SCENE = 1.35, 2.0, 6.0  # image headroom for zoom/pan, crossfade length, seconds per photo
 
 
@@ -561,6 +566,8 @@ def render(a, lang, audio, words, total, label_end, end_start):
         p = ease(max(0.0, min(1.0, (t - starts[k]) / span)))
         cx, cy = FOCUS[k % len(FOCUS)]
         z = 1.0 + 0.30 * p
+        if k == 0 and t < PUNCH_SEC:  # quick punch-in on the first photo, so the first frame already moves
+            z *= 1.0 + PUNCH * (1 - ease(t / PUNCH_SEC))
         cw, chh = min(W * ZOOM / z, im.width), min(H * ZOOM / z, im.height)  # z=ZOOM: native pixels
         x0, y0 = (im.width - cw) * cx, (im.height - chh) * cy
         return im.resize((W, H), Image.BILINEAR, box=(x0, y0, x0 + cw, y0 + chh))
@@ -583,7 +590,7 @@ def render(a, lang, audio, words, total, label_end, end_start):
         if last:
             frame.paste(o_end, (0, 0), o_end)
         ch = next((c for c in chunks if c[0][1] <= t <= c[-1][2] + 0.25), None)
-        if ch and not last:
+        if ch and not last and t >= label_end:
             o = cap(" ".join(w[0] for w in ch))
             frame.paste(o, (0, 0), o)
         ImageDraw.Draw(frame).rectangle([0, H - 12, int(W * t / total), H], fill="#e8231c")
@@ -664,9 +671,13 @@ def main():
         durs = [len(x.split()) / 2.6 for x in pieces]
         body_words = [(w, i / 2.6, (i + 1) / 2.6) for i, w in enumerate(text.split())]
     # timeline: title (label on screen, no captions) -> 0.7 s -> body with captions -> outro card for 5 s
-    t_title = 0.3
-    label_end = t_title + durs[0] + 0.25
-    t_body = t_title + durs[0] + 0.7
+    if SPOKEN_TITLE:
+        t_title = 0.3
+        label_end = t_title + durs[0] + 0.25
+        t_body = t_title + durs[0] + 0.7
+    else:  # no spoken title: the striking first sentence starts right away, the label is only shown
+        t_title, t_body = -1.0, 0.1
+        label_end = LABEL_SEC
     end_start = t_body + durs[1] + 0.4
     t_out2 = end_start + durs[2] + 0.45
     total = end_start + max(OUTRO_SEC, durs[2] + 0.45 + durs[3] + 0.8)
@@ -675,6 +686,9 @@ def main():
         audio = OUT / f"{slug}-{lang}.m4a"
         fl = []
         for i, ((a0, a1), t0) in enumerate(zip(segs, (t_title, t_body, end_start, t_out2))):
+            if t0 < 0:  # the title is not spoken
+                fl.append(f"[0]atrim=0:0.01,volume=0[a{i}]")
+                continue
             ms = int(t0 * 1000)
             fl.append(f"[0]atrim={a0:.3f}:{a1:.3f},asetpts=PTS-STARTPTS,afade=t=out:st={max(0, a1 - a0 - 0.04):.3f}:d=0.04,"
                       f"adelay={ms}|{ms}[a{i}]")

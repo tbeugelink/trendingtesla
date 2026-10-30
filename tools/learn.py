@@ -12,6 +12,9 @@ Method (kept simple on purpose, the channel is young and numbers are small):
 - For each feature of the article (topic, label type, kind of label, models, title style, morning/evening)
   the average score of its videos, with the number of videos. Values from fewer than 3 videos count as a hint.
 - Newer data counts more (half-life 30 days), so tastes that change are followed.
+- When YouTube Analytics is connected: also how much of each video people watch (average view percentage,
+  latest value), compared with the median of the same kind in percentage points. Views say whether people
+  start watching (title, thumbnail, first seconds); this says whether the video holds them.
 - Exploration: the guidance always tells the writers to keep trying other topics and styles, so the
   system does not lock itself into a few early winners.
 """
@@ -61,6 +64,7 @@ def features(a):
         "title length": "short (<= 10 words)" if len(title.split()) <= 10 else "long (> 10 words)",
         "explainer or news": "explainer" if re.search(r"explained|how |what |which |why |vs\b", title.lower()) else "news",
         "published": "morning" if hour < 15 else "evening",
+        "Short hook type": (a.get("short") or {}).get("hook") or "not tagged",
     }
     return f, title, text
 
@@ -100,7 +104,7 @@ def main():
                 v48, l48 = v0 + k * (v1 - v0), l0 + k * (l1 - l0)
                 break
         w = 0.5 ** ((now - pub).days / HALF_LIFE)
-        rows.append({"id": vid, "slug": slug, "kind": kind, "v48": v48, "l48": l48, "w": w,
+        rows.append({"id": vid, "slug": slug, "kind": kind, "v48": v48, "l48": l48, "w": w, "pct": last.get("avg_pct"),
                      "feat": features(arts[slug])[0], "title": features(arts[slug])[1],
                      "label": features(arts[slug])[2]})
 
@@ -111,6 +115,10 @@ def main():
             if r["kind"] == kind:
                 r["score"] = math.log(r["v48"] + 1) - med
                 r["median"] = math.exp(med) - 1
+        pcts = sorted(r["pct"] for r in rows if r["kind"] == kind and r.get("pct") is not None)
+        for r in rows:
+            if r["kind"] == kind and r.get("pct") is not None:
+                r["hold"] = r["pct"] - pcts[len(pcts) // 2]
 
     lines = ["# What works on the TrendingTesla YouTube channel", "",
              f"Updated {now:%Y-%m-%d %H:%M} UTC by tools/learn.py from daily YouTube statistics "
@@ -138,7 +146,8 @@ def main():
                 both[(k, v)].append(r)
         strong, weak = [], []
         lines += ["## By feature", "",
-                  "Views after 48 hours compared with a typical video of the same kind (1.0x = typical). "
+                  "Views after 48 hours compared with a typical video of the same kind (1.0x = typical); with "
+                  "YouTube Analytics also how much of the video people watch, in percentage points vs typical. "
                   "n = number of videos; below 3 it is only a hint.", ""]
         by_key = defaultdict(list)
         for (k, v), rs in both.items():
@@ -147,7 +156,14 @@ def main():
             lines.append(f"**{k}**")
             for v, rs in sorted(by_key[k], key=lambda x: -avg(x[1])):
                 s = avg(rs)
-                lines.append(f"- {v}: {mult(s)} (n={len(rs)})")
+                hs = [r["hold"] for r in rs if r.get("hold") is not None]
+                hold = sum(hs) / len(hs) if hs else None
+                extra = f", watched {hold:+.0f} pts vs typical" if hold is not None else ""
+                lines.append(f"- {v}: {mult(s)} views{extra} (n={len(rs)})")
+                if hold is not None and len(hs) >= 3 and hold >= 5:
+                    strong.append((0.34 + hold / 100, f"{k}: {v} (people keep watching longer: {hold:+.0f} pts, n={len(hs)})"))
+                if hold is not None and len(hs) >= 3 and hold <= -5:
+                    weak.append((-0.34 + hold / 100, f"{k}: {v} (people stop watching sooner: {hold:+.0f} pts, n={len(hs)})"))
                 if len(rs) >= 3 and s >= 0.35:
                     strong.append((s, f"{k}: {v} ({mult(s)}, n={len(rs)})"))
                 if len(rs) >= 3 and s <= -0.35:

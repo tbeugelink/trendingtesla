@@ -3,7 +3,7 @@ import json, sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "tools"))
 import tiktok_post as tp
-IDS = ["6ae5e3dcb84259308bd89aa2", "6ae5e3e7eaa24d6f9a75ab09", "6ae5e3e91891472093d2b3cb"]
+IDS = ["6ae6144bab019b9087118382", "6ae614ff21c807e9d572ba4d", "6ae6150a21c807e9d572c179", "6ae6150cf0984eef331bdde8"]
 t = tp.gql('query { __type(name: "Post") { fields { name type { name kind ofType { name } } } } }')["__type"]
 names = [f["name"] for f in t["fields"]]
 print("Post fields:", names)

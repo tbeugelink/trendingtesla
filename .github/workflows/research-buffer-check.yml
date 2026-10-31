@@ -1,0 +1,16 @@
+name: Research - check Buffer posts
+
+on:
+  push:
+    branches: [research/story-short]
+    paths: ["research/story/check_buffer.py"]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v5
+      - env:
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+        run: python3 research/story/check_buffer.py

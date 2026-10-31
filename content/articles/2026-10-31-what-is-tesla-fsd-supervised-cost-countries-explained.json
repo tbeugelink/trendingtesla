@@ -1,400 +1,408 @@
 {
- "slug": "what-is-tesla-fsd-supervised-cost-countries-explained",
- "date": "2026-10-31",
- "time": "21:20",
- "category": "fsd",
- "also": [
-  "guides"
- ],
- "sources": [
-  {
-   "title": "Tesla Support — Full Self-Driving (Supervised) Subscriptions",
-   "url": "https://www.tesla.com/support/full-self-driving-subscriptions"
-  },
-  {
-   "title": "Tesla Support — Full Self-Driving (Supervised)",
-   "url": "https://www.tesla.com/support/fsd"
-  },
-  {
-   "title": "InsideEVs — Tesla drops one-time purchase for Full Self-Driving in Europe",
-   "url": "https://insideevs.com/news/796684/tesla-fsd-subscription-europe/"
-  },
-  {
-   "title": "TechCrunch — Tesla renames 'Full Self-Driving' to 'Tesla Assisted Driving' in Europe",
-   "url": "https://techcrunch.com/2026/10/09/tesla-renames-full-self-driving-to-tesla-assisted-driving-in-europe/"
-  }
- ],
- "images": [
-  "fsd-highway-sunset.jpg",
-  "fsd-roundabout-eu.jpg",
-  "fsd-2.jpg",
-  "fsd-4.jpg",
-  "fsd-night-rain.jpg"
- ],
- "gen_image": {
-  "prompt": "Close, dynamic shot from the back seat between the front seats of a Tesla Model 3 driving itself on a US suburban boulevard at golden hour: the driver's hands rest in their lap near the steering wheel, the big centre touchscreen glows with a colourful driving visualisation of the road, cars and lane lines; warm low sun through the windscreen, yellow street signs, a red car ahead and a deep blue sky; sharp, high contrast, optimistic mood",
-  "subject": "the cabin of a 2024-2026 Tesla Model 3 (Highland generation): one large landscape centre touchscreen floating above a flat, minimal dashboard with a thin ambient light strip running across it, no instrument display behind the round steering wheel, no gear stalks, two scroll wheels on the steering wheel; no extra screens, buttons or displays",
-  "refs": [
-   {
-    "commons": "Tesla Model 3 Highland interior"
-   }
+  "slug": "what-is-tesla-fsd-supervised-cost-countries-explained",
+  "date": "2026-10-31",
+  "time": "21:20",
+  "category": "fsd",
+  "also": [
+    "guides"
   ],
-  "describe": "Inside a Tesla Model 3 driving itself at golden hour, the driver's hands off the wheel and the screen showing the road",
-  "extra": [
-   {
-    "prompt": "View from the driver's seat of a Tesla Model 3 waiting at a Dutch canal-side junction on a grey autumn morning: cyclists in rain jackets crossing, brick canal houses, yellow autumn leaves on wet cobbles, a red tram stop sign and a blue bike-lane sign; the centre touchscreen shows the cyclists in its driving visualisation; calm, everyday European mood",
-    "describe": "A Tesla Model 3 at a Dutch canal junction with cyclists, the screen showing them"
-   },
-   {
-    "prompt": "Wide side view across the front seats of a Tesla Model 3 on a motorway at night: the driver looks ahead at the road with hands resting near the wheel, red tail lights and yellow overhead lights stretch ahead, blue dusk glow on the horizon, the centre touchscreen lights the cabin with the lane visualisation; quiet, focused mood",
-    "describe": "A driver watching the road in a Tesla Model 3 on a motorway at night"
-   }
-  ]
- },
- "label": {
-  "style": "c",
+  "sources": [
+    {
+      "title": "Tesla Support — Full Self-Driving (Supervised) Subscriptions",
+      "url": "https://www.tesla.com/support/full-self-driving-subscriptions"
+    },
+    {
+      "title": "Tesla Support — Full Self-Driving (Supervised)",
+      "url": "https://www.tesla.com/support/fsd"
+    },
+    {
+      "title": "InsideEVs — Tesla drops one-time purchase for Full Self-Driving in Europe",
+      "url": "https://insideevs.com/news/796684/tesla-fsd-subscription-europe/"
+    },
+    {
+      "title": "TechCrunch — Tesla renames 'Full Self-Driving' to 'Tesla Assisted Driving' in Europe",
+      "url": "https://techcrunch.com/2026/10/09/tesla-renames-full-self-driving-to-tesla-assisted-driving-in-europe/"
+    }
+  ],
+  "images": [
+    "gen/what-is-tesla-fsd-supervised-cost-countries-explained.jpg",
+    "gen/what-is-tesla-fsd-supervised-cost-countries-explained-x3-10312024.jpg",
+    "gen/what-is-tesla-fsd-supervised-cost-countries-explained-x2-10312024.jpg",
+    "fsd-highway-sunset.jpg",
+    "fsd-roundabout-eu.jpg",
+    "fsd-2.jpg",
+    "fsd-4.jpg",
+    "fsd-night-rain.jpg"
+  ],
+  "gen_image": {
+    "prompt": "Close, dynamic shot from the back seat between the front seats of a Tesla Model 3 driving itself on a US suburban boulevard at golden hour: the driver's hands rest in their lap near the steering wheel, the big centre touchscreen glows with a colourful driving visualisation of the road, cars and lane lines; warm low sun through the windscreen, yellow street signs, a red car ahead and a deep blue sky; sharp, high contrast, optimistic mood",
+    "subject": "the cabin of a 2024-2026 Tesla Model 3 (Highland generation): one large landscape centre touchscreen floating above a flat, minimal dashboard with a thin ambient light strip running across it, no instrument display behind the round steering wheel, no gear stalks, two scroll wheels on the steering wheel; no extra screens, buttons or displays",
+    "refs": [
+      {
+        "commons": "Tesla Model 3 Highland interior"
+      }
+    ],
+    "describe": "Inside a Tesla Model 3 driving itself at golden hour, the driver's hands off the wheel and the screen showing the road",
+    "extra": [
+      {
+        "prompt": "View from the driver's seat of a Tesla Model 3 waiting at a Dutch canal-side junction on a grey autumn morning: cyclists in rain jackets crossing, brick canal houses, yellow autumn leaves on wet cobbles, a red tram stop sign and a blue bike-lane sign; the centre touchscreen shows the cyclists in its driving visualisation; calm, everyday European mood",
+        "describe": "A Tesla Model 3 at a Dutch canal junction with cyclists, the screen showing them",
+        "file": "gen/what-is-tesla-fsd-supervised-cost-countries-explained-x2-10312024.jpg"
+      },
+      {
+        "prompt": "Wide side view across the front seats of a Tesla Model 3 on a motorway at night: the driver looks ahead at the road with hands resting near the wheel, red tail lights and yellow overhead lights stretch ahead, blue dusk glow on the horizon, the centre touchscreen lights the cabin with the lane visualisation; quiet, focused mood",
+        "describe": "A driver watching the road in a Tesla Model 3 on a motorway at night",
+        "file": "gen/what-is-tesla-fsd-supervised-cost-countries-explained-x3-10312024.jpg"
+      }
+    ],
+    "done": true,
+    "model": "gemini-3.1-flash-image"
+  },
+  "label": {
+    "style": "c",
+    "en": {
+      "sub": "TESLA FSD",
+      "text": "WHAT DOES IT COST?"
+    },
+    "nl": {
+      "sub": "TESLA FSD",
+      "text": "WAT KOST HET?"
+    }
+  },
   "en": {
-   "sub": "TESLA FSD",
-   "text": "WHAT DOES IT COST?"
+    "title": "What is Tesla FSD (Supervised)? What it does, what it costs and where you can use it",
+    "description": "Tesla's Full Self-Driving (Supervised) explained: what the system really does, why you must keep watching, the monthly price in the US, UK, Europe and Australia, and the countries where it is allowed as of October 2026.",
+    "body": "<p>Tesla FSD (Supervised) is a driver-assistance system that can steer, brake, change lanes, take turns and park on almost any road, as long as you watch and stay ready to take over. As of October 2026 it costs <strong>$99 a month</strong> in the US, and in most markets you can no longer buy it outright: it is a subscription. Tesla lists 16 countries where it runs, from the US and Canada to Australia and ten EU countries led by the Netherlands, and it is also live in South Korea. The UK, Germany and France are not on that list yet. The name promises more than the system is allowed to do, and that gap decides how you can use it.</p>\n<h2>What does FSD (Supervised) actually do?</h2>\n<p><strong>It drives the car from A to B while you supervise.</strong> You enter a destination, tap Start Self-Driving on the screen, and the car follows the route on its own. According to Tesla, the system:</p>\n<ul>\n<li>follows the navigation, including turns at junctions, roundabouts and highway ramps;</li>\n<li>changes lanes by itself and checks blind spots with cameras that see 360 degrees around the car;</li>\n<li>works on residential and city streets as well as on highways;</li>\n<li>parks the car with Autopark, and on some cars drives to you in a car park with Actually Smart Summon.</li>\n</ul>\n<p>You can choose how assertive it is, from the calm Sloth and Chill profiles through Standard to Hurry and Mad Max, which drive faster and change lanes more often. In the US it can be switched on below 85 mph (about 137 km/h). All of that sounds like a self-driving car, but legally and technically it is not one.</p>\n<h2>So why do you still have to watch the road?</h2>\n<p><strong>Because FSD is a driver aid, and you stay responsible.</strong> Tesla states plainly that the features \"do not make the vehicle autonomous\" and require a fully attentive driver who can take over at any moment. You are also responsible for the speed, whether the system is on or off.</p>\n<p>The car checks that you pay attention. If you look away or ignore its warnings too often, you get a so-called strikeout and FSD switches off for the rest of the trip. Collect three or five strikeouts, depending on the car, and the system is suspended for a week. You can take over at any time by braking or steering. In Europe the system has even been renamed: since October 2026 it is sold there as <em>Tesla Assisted Driving</em>, after Germany's transport ministry called the old name misleading. That responsibility comes with a monthly bill, and the bill depends on where you live.</p>\n<h2>How much does FSD cost?</h2>\n<p><strong>In most markets about 99 a month, in dollars, euros or pounds.</strong> The prices as of October 2026:</p>\n<ul>\n<li><strong>US:</strong> $99 a month. The one-time purchase, last priced at $8,000, ended on February 14, 2026. Elon Musk has said the price will rise as the system improves, without giving a date or amount.</li>\n<li><strong>Canada:</strong> $99 a month on Tesla's Canadian site.</li>\n<li><strong>Australia:</strong> A$149 a month, or A$75 if the car already has Enhanced Autopilot.</li>\n<li><strong>Netherlands and the other approved EU countries:</strong> €99 a month. The €7,500 purchase option ended in May 2026.</li>\n<li><strong>UK:</strong> £99 a month, but the full system is not approved there, so subscribers get the Basic package with features such as Autopark and Summon.</li>\n</ul>\n<p>You subscribe in the Tesla app under Upgrades or on the car's screen, and you can cancel at any time. There are no refunds and no partial months: you keep the features until the end of the billing period. Some older cars first need a paid hardware upgrade before they can subscribe. A full year at $99 adds up to $1,188, which is why many owners only switch it on for a long trip or a holiday. Paying is only possible if your car has the right computer.</p>\n<h2>Which Teslas can run FSD?</h2>\n<p><strong>A Model S, Model 3, Model X or Model Y with FSD computer 3.0 or newer.</strong> That covers most Teslas built since 2019. Newer cars have the AI4 computer, often called HW4, and get the newest FSD versions first. Cars with the older Hardware 3 can still subscribe, but they run a lighter version with fewer features, and Tesla has not announced an upgrade plan for them.</p>\n<p>The quickest check is the Tesla app: under Upgrades it shows whether your car is eligible and whether an upgrade is needed first. Having the right car is not enough, though, because the law in your country decides whether the system may run at all.</p>\n<h2>Where can you use FSD today?</h2>\n<p><strong>In 17 countries, most of them in North America, Europe and the Pacific.</strong> Tesla's own support page lists these markets:</p>\n<ul>\n<li><strong>North America:</strong> the US, Canada, Mexico and Puerto Rico.</li>\n<li><strong>Pacific:</strong> Australia and New Zealand.</li>\n<li><strong>Europe:</strong> the Netherlands, Lithuania, Estonia, Denmark, Belgium, Slovenia, Czechia, Croatia, Slovakia and Latvia.</li>\n</ul>\n<p>Tesla also lists South Korea as a live market. In China owners have a more limited version while Tesla waits for approval of the full system. The Netherlands was the first European country, on April 10, 2026: the Dutch vehicle authority RDW tested and approved the system, and the other nine EU countries recognized that Dutch decision one by one. Latvia joined on October 26. The biggest European markets are still missing, and so is the UK.</p>\n<h2>So when will FSD come to Germany, the UK and the rest of Europe?</h2>\n<p><strong>For most of the EU, not before a vote that can take place in December 2026 at the earliest.</strong> An EU-wide approval needs at least 15 of the 27 member states, together representing at least 65% of the EU population. Germany and Italy have said they support a quick approval, while France and Spain have not taken that step. If the vote passes, Tesla could switch the system on in every EU country.</p>\n<p>The UK is on its own track. An EU decision does not apply automatically in Great Britain, so Tesla needs a separate British approval, and there is no confirmed date. Until then, British owners who subscribe get the Basic features only. The two things to watch for next are the December vote in Brussels and the price rise Musk has promised.</p>"
   },
   "nl": {
-   "sub": "TESLA FSD",
-   "text": "WAT KOST HET?"
-  }
- },
- "en": {
-  "title": "What is Tesla FSD (Supervised)? What it does, what it costs and where you can use it",
-  "description": "Tesla's Full Self-Driving (Supervised) explained: what the system really does, why you must keep watching, the monthly price in the US, UK, Europe and Australia, and the countries where it is allowed as of October 2026.",
-  "body": "<p>Tesla FSD (Supervised) is a driver-assistance system that can steer, brake, change lanes, take turns and park on almost any road, as long as you watch and stay ready to take over. As of October 2026 it costs <strong>$99 a month</strong> in the US, and in most markets you can no longer buy it outright: it is a subscription. Tesla lists 16 countries where it runs, from the US and Canada to Australia and ten EU countries led by the Netherlands, and it is also live in South Korea. The UK, Germany and France are not on that list yet. The name promises more than the system is allowed to do, and that gap decides how you can use it.</p>\n<h2>What does FSD (Supervised) actually do?</h2>\n<p><strong>It drives the car from A to B while you supervise.</strong> You enter a destination, tap Start Self-Driving on the screen, and the car follows the route on its own. According to Tesla, the system:</p>\n<ul>\n<li>follows the navigation, including turns at junctions, roundabouts and highway ramps;</li>\n<li>changes lanes by itself and checks blind spots with cameras that see 360 degrees around the car;</li>\n<li>works on residential and city streets as well as on highways;</li>\n<li>parks the car with Autopark, and on some cars drives to you in a car park with Actually Smart Summon.</li>\n</ul>\n<p>You can choose how assertive it is, from the calm Sloth and Chill profiles through Standard to Hurry and Mad Max, which drive faster and change lanes more often. In the US it can be switched on below 85 mph (about 137 km/h). All of that sounds like a self-driving car, but legally and technically it is not one.</p>\n<h2>So why do you still have to watch the road?</h2>\n<p><strong>Because FSD is a driver aid, and you stay responsible.</strong> Tesla states plainly that the features \"do not make the vehicle autonomous\" and require a fully attentive driver who can take over at any moment. You are also responsible for the speed, whether the system is on or off.</p>\n<p>The car checks that you pay attention. If you look away or ignore its warnings too often, you get a so-called strikeout and FSD switches off for the rest of the trip. Collect three or five strikeouts, depending on the car, and the system is suspended for a week. You can take over at any time by braking or steering. In Europe the system has even been renamed: since October 2026 it is sold there as <em>Tesla Assisted Driving</em>, after Germany's transport ministry called the old name misleading. That responsibility comes with a monthly bill, and the bill depends on where you live.</p>\n<h2>How much does FSD cost?</h2>\n<p><strong>In most markets about 99 a month, in dollars, euros or pounds.</strong> The prices as of October 2026:</p>\n<ul>\n<li><strong>US:</strong> $99 a month. The one-time purchase, last priced at $8,000, ended on February 14, 2026. Elon Musk has said the price will rise as the system improves, without giving a date or amount.</li>\n<li><strong>Canada:</strong> $99 a month on Tesla's Canadian site.</li>\n<li><strong>Australia:</strong> A$149 a month, or A$75 if the car already has Enhanced Autopilot.</li>\n<li><strong>Netherlands and the other approved EU countries:</strong> €99 a month. The €7,500 purchase option ended in May 2026.</li>\n<li><strong>UK:</strong> £99 a month, but the full system is not approved there, so subscribers get the Basic package with features such as Autopark and Summon.</li>\n</ul>\n<p>You subscribe in the Tesla app under Upgrades or on the car's screen, and you can cancel at any time. There are no refunds and no partial months: you keep the features until the end of the billing period. Some older cars first need a paid hardware upgrade before they can subscribe. A full year at $99 adds up to $1,188, which is why many owners only switch it on for a long trip or a holiday. Paying is only possible if your car has the right computer.</p>\n<h2>Which Teslas can run FSD?</h2>\n<p><strong>A Model S, Model 3, Model X or Model Y with FSD computer 3.0 or newer.</strong> That covers most Teslas built since 2019. Newer cars have the AI4 computer, often called HW4, and get the newest FSD versions first. Cars with the older Hardware 3 can still subscribe, but they run a lighter version with fewer features, and Tesla has not announced an upgrade plan for them.</p>\n<p>The quickest check is the Tesla app: under Upgrades it shows whether your car is eligible and whether an upgrade is needed first. Having the right car is not enough, though, because the law in your country decides whether the system may run at all.</p>\n<h2>Where can you use FSD today?</h2>\n<p><strong>In 17 countries, most of them in North America, Europe and the Pacific.</strong> Tesla's own support page lists these markets:</p>\n<ul>\n<li><strong>North America:</strong> the US, Canada, Mexico and Puerto Rico.</li>\n<li><strong>Pacific:</strong> Australia and New Zealand.</li>\n<li><strong>Europe:</strong> the Netherlands, Lithuania, Estonia, Denmark, Belgium, Slovenia, Czechia, Croatia, Slovakia and Latvia.</li>\n</ul>\n<p>Tesla also lists South Korea as a live market. In China owners have a more limited version while Tesla waits for approval of the full system. The Netherlands was the first European country, on April 10, 2026: the Dutch vehicle authority RDW tested and approved the system, and the other nine EU countries recognized that Dutch decision one by one. Latvia joined on October 26. The biggest European markets are still missing, and so is the UK.</p>\n<h2>So when will FSD come to Germany, the UK and the rest of Europe?</h2>\n<p><strong>For most of the EU, not before a vote that can take place in December 2026 at the earliest.</strong> An EU-wide approval needs at least 15 of the 27 member states, together representing at least 65% of the EU population. Germany and Italy have said they support a quick approval, while France and Spain have not taken that step. If the vote passes, Tesla could switch the system on in every EU country.</p>\n<p>The UK is on its own track. An EU decision does not apply automatically in Great Britain, so Tesla needs a separate British approval, and there is no confirmed date. Until then, British owners who subscribe get the Basic features only. The two things to watch for next are the December vote in Brussels and the price rise Musk has promised.</p>"
- },
- "nl": {
-  "title": "Wat is Tesla FSD (Supervised)? Wat het doet, wat het kost en waar je het mag gebruiken",
-  "description": "Teslas Full Self-Driving (Supervised), in Europa nu Tesla Assisted Driving, uitgelegd: wat het systeem echt doet, waarom je moet blijven opletten, de prijs per maand in Nederland, de VS en het VK, en in welke landen het mag (stand oktober 2026).",
-  "body": "<p>Tesla FSD (Supervised) is een rijhulpsysteem dat op bijna elke weg kan sturen, remmen, van rijstrook wisselen, afslaan en parkeren, zolang jij oplet en klaarzit om het over te nemen. In Nederland heet het sinds oktober 2026 <strong>Tesla Assisted Driving</strong> en het kost <strong>€ 99 per maand</strong>; kopen kan niet meer, het is alleen nog een abonnement. Tesla noemt zestien landen waar het werkt, van de VS en Canada tot Australië en tien EU-landen met Nederland voorop, en ook in Zuid-Korea rijdt het al. Duitsland, Frankrijk en het Verenigd Koninkrijk staan nog niet op die lijst. De naam belooft meer dan het systeem mag, en juist dat verschil bepaalt hoe je het kunt gebruiken.</p>\n<h2>Wat doet FSD (Supervised) eigenlijk?</h2>\n<p><strong>Het rijdt de auto van A naar B terwijl jij toezicht houdt.</strong> Je kiest een bestemming, tikt op het scherm op Start Self-Driving en de auto volgt zelf de route. Volgens Tesla kan het systeem:</p>\n<ul>\n<li>de navigatie volgen, inclusief afslaan op kruispunten, rotondes en op- en afritten;</li>\n<li>zelf van rijstrook wisselen, waarbij camera's rondom de dode hoek controleren;</li>\n<li>rijden in woonwijken en in de stad, en op de snelweg;</li>\n<li>zelf inparkeren met Autopark, en bij sommige auto's op een parkeerterrein naar je toe rijden met Actually Smart Summon.</li>\n</ul>\n<p>Je bepaalt zelf hoe vlot hij rijdt: van de rustige profielen Sloth en Chill via Standard tot Hurry en Mad Max, die harder rijden en vaker van baan wisselen. Dat klinkt als een zelfrijdende auto, maar juridisch en technisch is het dat niet.</p>\n<h2>Waarom moet je dan toch zelf blijven opletten?</h2>\n<p><strong>Omdat FSD een rijhulp is en jij verantwoordelijk blijft.</strong> Tesla zegt het zelf: de functies maken de auto niet autonoom en vragen een bestuurder die volledig oplet en elk moment kan ingrijpen. Ook voor de snelheid ben jij verantwoordelijk, of het systeem nu aan staat of niet.</p>\n<p>De auto controleert of je oplet. Kijk je te vaak weg of negeer je de waarschuwingen, dan krijg je een zogeheten strikeout en schakelt FSD uit voor de rest van de rit. Na drie of vijf strikeouts, afhankelijk van de auto, ligt het systeem een week stil. Remmen of sturen haalt het systeem altijd direct uit. Juist daarom heet het in Europa nu Tesla Assisted Driving: het Duitse ministerie van Verkeer vond de oude naam misleidend. Die verantwoordelijkheid komt met een maandelijkse rekening, en hoe hoog die is hangt af van waar je woont.</p>\n<h2>Wat kost FSD?</h2>\n<p><strong>In de meeste landen ongeveer 99 per maand, in euro's, dollars of ponden.</strong> De prijzen in oktober 2026:</p>\n<ul>\n<li><strong>Nederland en de andere goedgekeurde EU-landen:</strong> € 99 per maand. Eenmalig kopen voor € 7.500 kan sinds mei 2026 niet meer.</li>\n<li><strong>Verenigde Staten:</strong> $ 99 per maand. De koopoptie, laatst $ 8.000, verdween op 14 februari 2026. Elon Musk zei dat de prijs omhooggaat naarmate het systeem beter wordt, zonder datum of bedrag.</li>\n<li><strong>Verenigd Koninkrijk:</strong> £ 99 per maand, maar het volledige systeem is daar niet goedgekeurd. Abonnees krijgen alleen het Basic-pakket, met onder meer Autopark en Summon.</li>\n<li><strong>Canada:</strong> $ 99 per maand op Tesla's Canadese site.</li>\n<li><strong>Australië:</strong> 149 Australische dollar per maand, of 75 als de auto al Enhanced Autopilot heeft.</li>\n</ul>\n<p>Je sluit het abonnement af in de Tesla-app onder Upgrades of op het scherm in de auto, en je kunt altijd opzeggen. Geld terug krijg je niet; je houdt de functies tot het einde van de lopende maand. Sommige oudere auto's hebben eerst een betaalde hardware-upgrade nodig. Een heel jaar kost € 1.188, en daarom zetten veel rijders het alleen aan voor een lange rit of de vakantie. Betalen heeft alleen zin als je auto de juiste computer heeft.</p>\n<h2>Welke Tesla's kunnen FSD draaien?</h2>\n<p><strong>Een Model S, Model 3, Model X of Model Y met FSD-computer 3.0 of nieuwer.</strong> Dat zijn de meeste Tesla's vanaf bouwjaar 2019. Nieuwere auto's hebben de AI4-computer, vaak HW4 genoemd, en krijgen de nieuwste FSD-versies als eerste. Auto's met de oudere Hardware 3 kunnen ook een abonnement nemen, maar draaien een lichtere versie met minder functies, en Tesla heeft voor die auto's geen upgradeplan aangekondigd.</p>\n<p>De snelste check is de Tesla-app: onder Upgrades zie je of je auto geschikt is en of er eerst een upgrade nodig is. Alleen de juiste auto is niet genoeg, want de wet in je land bepaalt of het systeem überhaupt aan mag.</p>\n<h2>Waar kun je FSD nu gebruiken?</h2>\n<p><strong>In zeventien landen, vooral in Noord-Amerika, Europa en rond de Stille Oceaan.</strong> Tesla's eigen supportpagina noemt deze markten:</p>\n<ul>\n<li><strong>Europa:</strong> Nederland, Litouwen, Estland, Denemarken, België, Slovenië, Tsjechië, Kroatië, Slowakije en Letland.</li>\n<li><strong>Noord-Amerika:</strong> de VS, Canada, Mexico en Puerto Rico.</li>\n<li><strong>Stille Oceaan:</strong> Australië en Nieuw-Zeeland.</li>\n</ul>\n<p>Daarnaast noemt Tesla Zuid-Korea als markt waar het systeem live is. In China hebben eigenaren een beperktere versie, terwijl Tesla wacht op goedkeuring van het volledige systeem. Nederland was op 10 april 2026 het eerste Europese land: de RDW testte en keurde het systeem zelf goed, en de andere negen EU-landen erkenden dat Nederlandse besluit een voor een. Letland kwam er op 26 oktober bij. De grootste Europese markten ontbreken nog, en het Verenigd Koninkrijk ook.</p>\n<h2>Wanneer komt FSD dan naar Duitsland, het VK en de rest van Europa?</h2>\n<p><strong>Voor het grootste deel van de EU niet vóór een stemming die op zijn vroegst in december 2026 kan plaatsvinden.</strong> Een EU-brede goedkeuring vraagt steun van minstens 15 van de 27 lidstaten, die samen minstens 65 procent van de EU-bevolking vertegenwoordigen. Duitsland en Italië zeiden een snelle goedkeuring te steunen; Frankrijk en Spanje hebben die stap nog niet gezet. Gaat de stemming door, dan kan Tesla het systeem in elk EU-land aanzetten, dus ook als je met je Tesla naar Duitsland of Frankrijk rijdt.</p>\n<p>Het Verenigd Koninkrijk volgt een eigen route. Een EU-besluit geldt daar niet automatisch, dus Tesla heeft een aparte Britse goedkeuring nodig, en daarvoor is geen datum bekend. Tot die tijd krijgen Britse abonnees alleen de Basic-functies. De twee dingen om op te letten: de stemming in Brussel in december en de prijsverhoging die Musk heeft aangekondigd.</p>"
- },
- "short": {
-  "hook": "contrast",
-  "en": "You can no longer buy Tesla's Full Self-Driving outright. You can only rent it. In the US, FSD Supervised now costs 99 dollars a month. In the Netherlands it is 99 euros, in the UK 99 pounds. For that, the car steers, brakes, changes lanes, takes turns and even parks on almost any road. But you have to watch the road the whole time. Look away too often and the system can lock you out for a week. It works in the US, Canada, Australia, South Korea and ten EU countries, led by the Netherlands. In the UK you only get the Basic features. Germany and France are still waiting for an EU vote, in December at the earliest. Would you pay 99 a month for it?",
-  "nl": "Teslas Full Self-Driving kun je niet meer kopen. Je kunt het alleen nog huren. In Nederland kost het nu 99 euro per maand, en het heet hier sinds oktober Tesla Assisted Driving. Daarvoor stuurt, remt en parkeert de auto zelf, wisselt hij van rijstrook en slaat hij af, op bijna elke weg. Maar jij moet de hele tijd blijven opletten. Kijk je te vaak weg, dan kan het systeem een week op slot gaan. Het werkt in de VS, Canada, Australië, Zuid-Korea en tien EU-landen, met Nederland als eerste. Duitsland en Frankrijk wachten nog op een Europese stemming, op zijn vroegst in december. Zou jij er 99 euro per maand voor betalen?"
- },
- "video": {
-  "en": [
-   {
-    "text": "You can no longer buy Tesla's Full Self-Driving outright. You can only rent it.",
-    "img": [
-     "fsd-highway-sunset.jpg"
+    "title": "Wat is Tesla FSD (Supervised)? Wat het doet, wat het kost en waar je het mag gebruiken",
+    "description": "Teslas Full Self-Driving (Supervised), in Europa nu Tesla Assisted Driving, uitgelegd: wat het systeem echt doet, waarom je moet blijven opletten, de prijs per maand in Nederland, de VS en het VK, en in welke landen het mag (stand oktober 2026).",
+    "body": "<p>Tesla FSD (Supervised) is een rijhulpsysteem dat op bijna elke weg kan sturen, remmen, van rijstrook wisselen, afslaan en parkeren, zolang jij oplet en klaarzit om het over te nemen. In Nederland heet het sinds oktober 2026 <strong>Tesla Assisted Driving</strong> en het kost <strong>€ 99 per maand</strong>; kopen kan niet meer, het is alleen nog een abonnement. Tesla noemt zestien landen waar het werkt, van de VS en Canada tot Australië en tien EU-landen met Nederland voorop, en ook in Zuid-Korea rijdt het al. Duitsland, Frankrijk en het Verenigd Koninkrijk staan nog niet op die lijst. De naam belooft meer dan het systeem mag, en juist dat verschil bepaalt hoe je het kunt gebruiken.</p>\n<h2>Wat doet FSD (Supervised) eigenlijk?</h2>\n<p><strong>Het rijdt de auto van A naar B terwijl jij toezicht houdt.</strong> Je kiest een bestemming, tikt op het scherm op Start Self-Driving en de auto volgt zelf de route. Volgens Tesla kan het systeem:</p>\n<ul>\n<li>de navigatie volgen, inclusief afslaan op kruispunten, rotondes en op- en afritten;</li>\n<li>zelf van rijstrook wisselen, waarbij camera's rondom de dode hoek controleren;</li>\n<li>rijden in woonwijken en in de stad, en op de snelweg;</li>\n<li>zelf inparkeren met Autopark, en bij sommige auto's op een parkeerterrein naar je toe rijden met Actually Smart Summon.</li>\n</ul>\n<p>Je bepaalt zelf hoe vlot hij rijdt: van de rustige profielen Sloth en Chill via Standard tot Hurry en Mad Max, die harder rijden en vaker van baan wisselen. Dat klinkt als een zelfrijdende auto, maar juridisch en technisch is het dat niet.</p>\n<h2>Waarom moet je dan toch zelf blijven opletten?</h2>\n<p><strong>Omdat FSD een rijhulp is en jij verantwoordelijk blijft.</strong> Tesla zegt het zelf: de functies maken de auto niet autonoom en vragen een bestuurder die volledig oplet en elk moment kan ingrijpen. Ook voor de snelheid ben jij verantwoordelijk, of het systeem nu aan staat of niet.</p>\n<p>De auto controleert of je oplet. Kijk je te vaak weg of negeer je de waarschuwingen, dan krijg je een zogeheten strikeout en schakelt FSD uit voor de rest van de rit. Na drie of vijf strikeouts, afhankelijk van de auto, ligt het systeem een week stil. Remmen of sturen haalt het systeem altijd direct uit. Juist daarom heet het in Europa nu Tesla Assisted Driving: het Duitse ministerie van Verkeer vond de oude naam misleidend. Die verantwoordelijkheid komt met een maandelijkse rekening, en hoe hoog die is hangt af van waar je woont.</p>\n<h2>Wat kost FSD?</h2>\n<p><strong>In de meeste landen ongeveer 99 per maand, in euro's, dollars of ponden.</strong> De prijzen in oktober 2026:</p>\n<ul>\n<li><strong>Nederland en de andere goedgekeurde EU-landen:</strong> € 99 per maand. Eenmalig kopen voor € 7.500 kan sinds mei 2026 niet meer.</li>\n<li><strong>Verenigde Staten:</strong> $ 99 per maand. De koopoptie, laatst $ 8.000, verdween op 14 februari 2026. Elon Musk zei dat de prijs omhooggaat naarmate het systeem beter wordt, zonder datum of bedrag.</li>\n<li><strong>Verenigd Koninkrijk:</strong> £ 99 per maand, maar het volledige systeem is daar niet goedgekeurd. Abonnees krijgen alleen het Basic-pakket, met onder meer Autopark en Summon.</li>\n<li><strong>Canada:</strong> $ 99 per maand op Tesla's Canadese site.</li>\n<li><strong>Australië:</strong> 149 Australische dollar per maand, of 75 als de auto al Enhanced Autopilot heeft.</li>\n</ul>\n<p>Je sluit het abonnement af in de Tesla-app onder Upgrades of op het scherm in de auto, en je kunt altijd opzeggen. Geld terug krijg je niet; je houdt de functies tot het einde van de lopende maand. Sommige oudere auto's hebben eerst een betaalde hardware-upgrade nodig. Een heel jaar kost € 1.188, en daarom zetten veel rijders het alleen aan voor een lange rit of de vakantie. Betalen heeft alleen zin als je auto de juiste computer heeft.</p>\n<h2>Welke Tesla's kunnen FSD draaien?</h2>\n<p><strong>Een Model S, Model 3, Model X of Model Y met FSD-computer 3.0 of nieuwer.</strong> Dat zijn de meeste Tesla's vanaf bouwjaar 2019. Nieuwere auto's hebben de AI4-computer, vaak HW4 genoemd, en krijgen de nieuwste FSD-versies als eerste. Auto's met de oudere Hardware 3 kunnen ook een abonnement nemen, maar draaien een lichtere versie met minder functies, en Tesla heeft voor die auto's geen upgradeplan aangekondigd.</p>\n<p>De snelste check is de Tesla-app: onder Upgrades zie je of je auto geschikt is en of er eerst een upgrade nodig is. Alleen de juiste auto is niet genoeg, want de wet in je land bepaalt of het systeem überhaupt aan mag.</p>\n<h2>Waar kun je FSD nu gebruiken?</h2>\n<p><strong>In zeventien landen, vooral in Noord-Amerika, Europa en rond de Stille Oceaan.</strong> Tesla's eigen supportpagina noemt deze markten:</p>\n<ul>\n<li><strong>Europa:</strong> Nederland, Litouwen, Estland, Denemarken, België, Slovenië, Tsjechië, Kroatië, Slowakije en Letland.</li>\n<li><strong>Noord-Amerika:</strong> de VS, Canada, Mexico en Puerto Rico.</li>\n<li><strong>Stille Oceaan:</strong> Australië en Nieuw-Zeeland.</li>\n</ul>\n<p>Daarnaast noemt Tesla Zuid-Korea als markt waar het systeem live is. In China hebben eigenaren een beperktere versie, terwijl Tesla wacht op goedkeuring van het volledige systeem. Nederland was op 10 april 2026 het eerste Europese land: de RDW testte en keurde het systeem zelf goed, en de andere negen EU-landen erkenden dat Nederlandse besluit een voor een. Letland kwam er op 26 oktober bij. De grootste Europese markten ontbreken nog, en het Verenigd Koninkrijk ook.</p>\n<h2>Wanneer komt FSD dan naar Duitsland, het VK en de rest van Europa?</h2>\n<p><strong>Voor het grootste deel van de EU niet vóór een stemming die op zijn vroegst in december 2026 kan plaatsvinden.</strong> Een EU-brede goedkeuring vraagt steun van minstens 15 van de 27 lidstaten, die samen minstens 65 procent van de EU-bevolking vertegenwoordigen. Duitsland en Italië zeiden een snelle goedkeuring te steunen; Frankrijk en Spanje hebben die stap nog niet gezet. Gaat de stemming door, dan kan Tesla het systeem in elk EU-land aanzetten, dus ook als je met je Tesla naar Duitsland of Frankrijk rijdt.</p>\n<p>Het Verenigd Koninkrijk volgt een eigen route. Een EU-besluit geldt daar niet automatisch, dus Tesla heeft een aparte Britse goedkeuring nodig, en daarvoor is geen datum bekend. Tot die tijd krijgen Britse abonnees alleen de Basic-functies. De twee dingen om op te letten: de stemming in Brussel in december en de prijsverhoging die Musk heeft aangekondigd.</p>"
+  },
+  "short": {
+    "hook": "contrast",
+    "en": "You can no longer buy Tesla's Full Self-Driving outright. You can only rent it. In the US, FSD Supervised now costs 99 dollars a month. In the Netherlands it is 99 euros, in the UK 99 pounds. For that, the car steers, brakes, changes lanes, takes turns and even parks on almost any road. But you have to watch the road the whole time. Look away too often and the system can lock you out for a week. It works in the US, Canada, Australia, South Korea and ten EU countries, led by the Netherlands. In the UK you only get the Basic features. Germany and France are still waiting for an EU vote, in December at the earliest. Would you pay 99 a month for it?",
+    "nl": "Teslas Full Self-Driving kun je niet meer kopen. Je kunt het alleen nog huren. In Nederland kost het nu 99 euro per maand, en het heet hier sinds oktober Tesla Assisted Driving. Daarvoor stuurt, remt en parkeert de auto zelf, wisselt hij van rijstrook en slaat hij af, op bijna elke weg. Maar jij moet de hele tijd blijven opletten. Kijk je te vaak weg, dan kan het systeem een week op slot gaan. Het werkt in de VS, Canada, Australië, Zuid-Korea en tien EU-landen, met Nederland als eerste. Duitsland en Frankrijk wachten nog op een Europese stemming, op zijn vroegst in december. Zou jij er 99 euro per maand voor betalen?"
+  },
+  "video": {
+    "en": [
+      {
+        "text": "You can no longer buy Tesla's Full Self-Driving outright. You can only rent it.",
+        "img": [
+          "fsd-highway-sunset.jpg"
+        ]
+      },
+      {
+        "text": "FSD Supervised is a system that steers, brakes, changes lanes, takes turns and even parks on almost any road. In the US it costs 99 dollars a month. In the Netherlands it is 99 euros. It works in the US, Canada, Australia, South Korea and ten EU countries. But not yet in the UK, Germany or France."
+      },
+      {
+        "text": "The name promises more than the system is allowed to do. And that gap decides how you can actually use it."
+      },
+      {
+        "head": "What does FSD (Supervised) actually do?",
+        "img": [
+          "fsd.jpg"
+        ]
+      },
+      {
+        "text": "It drives the car from A to B while you supervise. You enter a destination, tap Start Self-Driving, and the car follows the route. According to Tesla, it handles four main jobs."
+      },
+      {
+        "key": "Navigation",
+        "text": "It follows the route, including turns at junctions, roundabouts and highway ramps."
+      },
+      {
+        "key": "Lane changes",
+        "text": "It changes lanes by itself, and cameras all around the car check the blind spots."
+      },
+      {
+        "key": "City and highway",
+        "text": "It works on small residential streets, in busy cities and on the highway."
+      },
+      {
+        "key": "Parking",
+        "text": "It parks itself. And on some cars it can drive to you in a car park.",
+        "img": [
+          "fsd-camera-view.jpg"
+        ]
+      },
+      {
+        "text": "You can even pick a driving style. From calm profiles called Sloth and Chill, to Hurry and Mad Max, which drive faster and change lanes more often. It all sounds like a self-driving car. Legally and technically, it is not one."
+      },
+      {
+        "head": "So why do you still have to watch the road?",
+        "img": [
+          "fsd-night-rain.jpg"
+        ]
+      },
+      {
+        "text": "Because FSD is a driver aid, and you stay responsible. Tesla says it plainly. The features do not make the car autonomous. The driver must be fully attentive and ready to take over at any moment. You are even responsible for the speed."
+      },
+      {
+        "text": "And the car checks. Look away or ignore the warnings too often, and you get a strikeout. FSD then switches off for the rest of the trip. Collect three or five strikeouts, depending on the car, and the system is suspended for a whole week."
+      },
+      {
+        "text": "In Europe the system even got a new name in October. It is now called Tesla Assisted Driving, after Germany's transport ministry said Full Self-Driving was misleading. That responsibility comes with a monthly bill. And the bill depends on where you live."
+      },
+      {
+        "head": "How much does FSD cost?",
+        "img": [
+          "fsd-2.jpg"
+        ]
+      },
+      {
+        "text": "In most countries, about 99 a month. In dollars, euros or pounds."
+      },
+      {
+        "key": "USA",
+        "text": "99 dollars a month. The one-time purchase, last priced at 8,000 dollars, ended on February 14. Elon Musk has said the price will go up as the system improves. He gave no date and no amount."
+      },
+      {
+        "key": "Europe",
+        "text": "99 euros a month in the Netherlands and the other approved EU countries. Buying it once for 7,500 euros stopped in May."
+      },
+      {
+        "key": "UK",
+        "text": "99 pounds a month. But the full system is not approved there, so British subscribers only get the Basic package, with features like Autopark and Summon."
+      },
+      {
+        "key": "Australia",
+        "text": "149 Australian dollars a month. Or 75, if the car already has Enhanced Autopilot."
+      },
+      {
+        "text": "You can cancel at any time in the Tesla app. But there are no refunds. You keep it until the end of the month you paid for. A full year adds up to almost 1,200 dollars. That is why many owners only switch it on for a long road trip. And paying only makes sense if your car has the right computer."
+      },
+      {
+        "head": "Which Teslas can run FSD?",
+        "img": [
+          "interior-2.jpg"
+        ]
+      },
+      {
+        "text": "A Model S, Model 3, Model X or Model Y with FSD computer 3.0 or newer. That covers most Teslas built since 2019."
+      },
+      {
+        "key": "AI4",
+        "text": "Newer cars have the AI4 computer, often called HW4. They get the newest FSD versions first."
+      },
+      {
+        "key": "Hardware 3",
+        "text": "Older cars with Hardware 3 can still subscribe. But they run a lighter version with fewer features. And Tesla still has no upgrade plan for them."
+      },
+      {
+        "text": "The quickest check is the Tesla app. Under Upgrades, it shows whether your car is eligible. But the right car is not enough. The law in your country decides whether the system may run at all."
+      },
+      {
+        "head": "Where can you use FSD today?",
+        "img": [
+          "fsd-4.jpg"
+        ]
+      },
+      {
+        "text": "In 17 countries. Tesla's own support page lists 16 of them. And Tesla also counts South Korea as a live market."
+      },
+      {
+        "key": "North America",
+        "text": "The US, Canada, Mexico and Puerto Rico."
+      },
+      {
+        "key": "Pacific",
+        "text": "Australia and New Zealand. Plus South Korea."
+      },
+      {
+        "key": "Europe",
+        "text": "Ten EU countries. The Netherlands, Belgium, Denmark, the three Baltic states, Slovenia, Czechia, Croatia and Slovakia.",
+        "img": [
+          "fsd-roundabout-eu.jpg"
+        ]
+      },
+      {
+        "text": "The Netherlands went first, on April 10. The Dutch vehicle authority tested the system and approved it. The other nine countries then recognized that Dutch decision, one by one. Latvia joined on October 26. China has a more limited version, while Tesla waits for approval of the full system. The biggest European markets are still missing. And so is the UK."
+      },
+      {
+        "head": "So when will FSD come to Germany, the UK and the rest of Europe?",
+        "img": [
+          "fsd-snow.jpg"
+        ]
+      },
+      {
+        "text": "For most of the EU, not before a vote that can happen in December at the earliest. An EU-wide approval needs 15 of the 27 member states. And together they must hold at least 65 percent of the EU population."
+      },
+      {
+        "text": "Germany and Italy have said they back a quick approval. France and Spain have not. Our take: with the two big supporters on board, the math finally works for Tesla. But only if almost every smaller country votes yes as well. One or two abstentions could still sink it."
+      },
+      {
+        "text": "The UK is on its own track. An EU decision does not apply in Great Britain automatically. Tesla needs a separate British approval, and there is no date for it. Until then, British subscribers pay for the Basic features only.",
+        "img": [
+          "camera-rain.jpg"
+        ]
+      },
+      {
+        "text": "So, two things to watch for next. The December vote in Brussels. And the price rise Musk has promised. Would you pay 99 a month for a car that drives itself, as long as you keep watching?",
+        "img": [
+          "fsd-3.jpg"
+        ]
+      }
+    ],
+    "nl": [
+      {
+        "text": "Teslas Full Self-Driving kun je niet meer kopen. Je kunt het alleen nog huren.",
+        "img": [
+          "fsd-roundabout-eu.jpg"
+        ]
+      },
+      {
+        "text": "FSD Supervised stuurt, remt, wisselt van rijstrook, slaat af en parkeert zelfs, op bijna elke weg. In Nederland kost het 99 euro per maand. Het werkt in de VS, Canada, Australië, Zuid-Korea en tien EU-landen, met Nederland voorop. Maar nog niet in Duitsland, Frankrijk of het Verenigd Koninkrijk."
+      },
+      {
+        "text": "De naam belooft meer dan het systeem mag. En juist dat verschil bepaalt hoe je het echt kunt gebruiken."
+      },
+      {
+        "head": "Wat doet FSD (Supervised) eigenlijk?",
+        "img": [
+          "fsd.jpg"
+        ]
+      },
+      {
+        "text": "Het rijdt de auto van A naar B, terwijl jij toezicht houdt. Je kiest een bestemming, tikt op Start Self-Driving, en de auto volgt zelf de route. Volgens Tesla doet het vier dingen."
+      },
+      {
+        "key": "Navigatie",
+        "text": "Het volgt de route, ook bij kruispunten, rotondes en op- en afritten."
+      },
+      {
+        "key": "Rijstrook wisselen",
+        "text": "Het wisselt zelf van rijstrook, en camera's rondom de auto controleren de dode hoek."
+      },
+      {
+        "key": "Stad en snelweg",
+        "text": "Het werkt in woonwijken, in drukke steden en op de snelweg."
+      },
+      {
+        "key": "Parkeren",
+        "text": "Het parkeert zelf in. En sommige auto's rijden op een parkeerterrein naar je toe.",
+        "img": [
+          "fsd-camera-view.jpg"
+        ]
+      },
+      {
+        "text": "Je kiest zelfs een rijstijl. Van rustige profielen als Sloth en Chill, tot Hurry en Mad Max, die harder rijden en vaker van baan wisselen. Het klinkt als een zelfrijdende auto. Maar juridisch en technisch is het dat niet."
+      },
+      {
+        "head": "Waarom moet je dan toch zelf blijven opletten?",
+        "img": [
+          "fsd-night-rain.jpg"
+        ]
+      },
+      {
+        "text": "Omdat FSD een rijhulp is, en jij verantwoordelijk blijft. Tesla zegt het zelf. De auto wordt er niet autonoom door. Je moet volledig opletten en elk moment kunnen ingrijpen. Zelfs voor de snelheid ben jij verantwoordelijk."
+      },
+      {
+        "text": "En de auto controleert dat. Kijk je te vaak weg, of negeer je de waarschuwingen, dan krijg je een strikeout. FSD gaat dan uit voor de rest van de rit. Na drie of vijf strikeouts, afhankelijk van de auto, ligt het systeem een hele week stil."
+      },
+      {
+        "text": "In Europa kreeg het systeem in oktober zelfs een nieuwe naam: Tesla Assisted Driving. Het Duitse ministerie van Verkeer vond Full Self-Driving misleidend. Die verantwoordelijkheid komt met een maandelijkse rekening. En hoe hoog die is, hangt af van waar je woont."
+      },
+      {
+        "head": "Wat kost FSD?",
+        "img": [
+          "fsd-2.jpg"
+        ]
+      },
+      {
+        "text": "In de meeste landen ongeveer 99 per maand. In euro's, dollars of ponden."
+      },
+      {
+        "key": "Nederland",
+        "text": "99 euro per maand, net als in de andere goedgekeurde EU-landen. Eenmalig kopen voor 7.500 euro kan sinds mei niet meer."
+      },
+      {
+        "key": "VS",
+        "text": "99 dollar per maand. De koopoptie, laatst 8.000 dollar, verdween op 14 februari. Elon Musk zei dat de prijs omhooggaat naarmate het systeem beter wordt. Een datum of bedrag noemde hij niet."
+      },
+      {
+        "key": "Verenigd Koninkrijk",
+        "text": "99 pond per maand. Maar het volledige systeem is daar niet goedgekeurd. Britse abonnees krijgen alleen het Basic-pakket, met onder meer Autopark en Summon."
+      },
+      {
+        "key": "Australië",
+        "text": "149 Australische dollar per maand. Of 75, als de auto al Enhanced Autopilot heeft."
+      },
+      {
+        "text": "Opzeggen kan altijd, in de Tesla-app. Maar geld terug krijg je niet. Een heel jaar kost 1.188 euro. Daarom zetten veel rijders het alleen aan voor een lange rit of de vakantie. En betalen heeft alleen zin als je auto de juiste computer heeft."
+      },
+      {
+        "head": "Welke Tesla's kunnen FSD draaien?",
+        "img": [
+          "interior-2.jpg"
+        ]
+      },
+      {
+        "text": "Een Model S, Model 3, Model X of Model Y met FSD-computer 3.0 of nieuwer. Dat zijn de meeste Tesla's vanaf bouwjaar 2019."
+      },
+      {
+        "key": "AI4",
+        "text": "Nieuwere auto's hebben de AI4-computer, vaak HW4 genoemd. Die krijgen de nieuwste FSD-versies als eerste."
+      },
+      {
+        "key": "Hardware 3",
+        "text": "Oudere auto's met Hardware 3 kunnen ook een abonnement nemen. Maar ze draaien een lichtere versie met minder functies. En Tesla heeft voor die auto's nog steeds geen upgradeplan."
+      },
+      {
+        "text": "De snelste check is de Tesla-app. Onder Upgrades zie je of je auto geschikt is. Maar alleen de juiste auto is niet genoeg. De wet in je land bepaalt of het systeem überhaupt aan mag."
+      },
+      {
+        "head": "Waar kun je FSD nu gebruiken?",
+        "img": [
+          "fsd-4.jpg"
+        ]
+      },
+      {
+        "text": "In zeventien landen. Tesla's supportpagina noemt er zestien. En daarnaast telt Tesla Zuid-Korea als markt waar het al werkt."
+      },
+      {
+        "key": "Europa",
+        "text": "Tien EU-landen. Nederland, België, Denemarken, de drie Baltische staten, Slovenië, Tsjechië, Kroatië en Slowakije."
+      },
+      {
+        "key": "Noord-Amerika",
+        "text": "De VS, Canada, Mexico en Puerto Rico."
+      },
+      {
+        "key": "Stille Oceaan",
+        "text": "Australië en Nieuw-Zeeland. Plus Zuid-Korea.",
+        "img": [
+          "fsd-highway-sunset.jpg"
+        ]
+      },
+      {
+        "text": "Nederland was de eerste, op 10 april. De RDW testte het systeem zelf en keurde het goed. Daarna erkenden de andere negen landen dat Nederlandse besluit, een voor een. Letland kwam er op 26 oktober bij. China heeft een beperktere versie, terwijl Tesla wacht op goedkeuring van het volledige systeem. De grootste Europese markten ontbreken nog. En het Verenigd Koninkrijk ook."
+      },
+      {
+        "head": "Wanneer komt FSD dan naar Duitsland, het VK en de rest van Europa?",
+        "img": [
+          "fsd-snow.jpg"
+        ]
+      },
+      {
+        "text": "Voor het grootste deel van de EU niet vóór een stemming, op zijn vroegst in december. Een EU-brede goedkeuring vraagt steun van 15 van de 27 lidstaten. En samen moeten die minstens 65 procent van de EU-bevolking vertegenwoordigen."
+      },
+      {
+        "text": "Duitsland en Italië zeiden een snelle goedkeuring te steunen. Frankrijk en Spanje nog niet. Onze inschatting: met die twee grote landen erbij klopt de rekensom voor Tesla eindelijk. Maar alleen als bijna elk kleiner land ook ja stemt. Een of twee onthoudingen kunnen het nog laten mislukken."
+      },
+      {
+        "text": "Voor Nederlanders betekent een ja vooral dit: je kunt het systeem dan ook gebruiken als je naar Duitsland, België of Frankrijk rijdt. Het Verenigd Koninkrijk volgt een eigen route. Een EU-besluit geldt daar niet automatisch, en een datum is er niet.",
+        "img": [
+          "camera-rain.jpg"
+        ]
+      },
+      {
+        "text": "Dus, twee dingen om op te letten. De stemming in Brussel in december. En de prijsverhoging die Musk heeft aangekondigd. Zou jij 99 euro per maand betalen voor een auto die zelf rijdt, zolang jij blijft opletten?",
+        "img": [
+          "fsd-3.jpg"
+        ]
+      }
     ]
-   },
-   {
-    "text": "FSD Supervised is a system that steers, brakes, changes lanes, takes turns and even parks on almost any road. In the US it costs 99 dollars a month. In the Netherlands it is 99 euros. It works in the US, Canada, Australia, South Korea and ten EU countries. But not yet in the UK, Germany or France."
-   },
-   {
-    "text": "The name promises more than the system is allowed to do. And that gap decides how you can actually use it."
-   },
-   {
-    "head": "What does FSD (Supervised) actually do?",
-    "img": [
-     "fsd.jpg"
-    ]
-   },
-   {
-    "text": "It drives the car from A to B while you supervise. You enter a destination, tap Start Self-Driving, and the car follows the route. According to Tesla, it handles four main jobs."
-   },
-   {
-    "key": "Navigation",
-    "text": "It follows the route, including turns at junctions, roundabouts and highway ramps."
-   },
-   {
-    "key": "Lane changes",
-    "text": "It changes lanes by itself, and cameras all around the car check the blind spots."
-   },
-   {
-    "key": "City and highway",
-    "text": "It works on small residential streets, in busy cities and on the highway."
-   },
-   {
-    "key": "Parking",
-    "text": "It parks itself. And on some cars it can drive to you in a car park.",
-    "img": [
-     "fsd-camera-view.jpg"
-    ]
-   },
-   {
-    "text": "You can even pick a driving style. From calm profiles called Sloth and Chill, to Hurry and Mad Max, which drive faster and change lanes more often. It all sounds like a self-driving car. Legally and technically, it is not one."
-   },
-   {
-    "head": "So why do you still have to watch the road?",
-    "img": [
-     "fsd-night-rain.jpg"
-    ]
-   },
-   {
-    "text": "Because FSD is a driver aid, and you stay responsible. Tesla says it plainly. The features do not make the car autonomous. The driver must be fully attentive and ready to take over at any moment. You are even responsible for the speed."
-   },
-   {
-    "text": "And the car checks. Look away or ignore the warnings too often, and you get a strikeout. FSD then switches off for the rest of the trip. Collect three or five strikeouts, depending on the car, and the system is suspended for a whole week."
-   },
-   {
-    "text": "In Europe the system even got a new name in October. It is now called Tesla Assisted Driving, after Germany's transport ministry said Full Self-Driving was misleading. That responsibility comes with a monthly bill. And the bill depends on where you live."
-   },
-   {
-    "head": "How much does FSD cost?",
-    "img": [
-     "fsd-2.jpg"
-    ]
-   },
-   {
-    "text": "In most countries, about 99 a month. In dollars, euros or pounds."
-   },
-   {
-    "key": "USA",
-    "text": "99 dollars a month. The one-time purchase, last priced at 8,000 dollars, ended on February 14. Elon Musk has said the price will go up as the system improves. He gave no date and no amount."
-   },
-   {
-    "key": "Europe",
-    "text": "99 euros a month in the Netherlands and the other approved EU countries. Buying it once for 7,500 euros stopped in May."
-   },
-   {
-    "key": "UK",
-    "text": "99 pounds a month. But the full system is not approved there, so British subscribers only get the Basic package, with features like Autopark and Summon."
-   },
-   {
-    "key": "Australia",
-    "text": "149 Australian dollars a month. Or 75, if the car already has Enhanced Autopilot."
-   },
-   {
-    "text": "You can cancel at any time in the Tesla app. But there are no refunds. You keep it until the end of the month you paid for. A full year adds up to almost 1,200 dollars. That is why many owners only switch it on for a long road trip. And paying only makes sense if your car has the right computer."
-   },
-   {
-    "head": "Which Teslas can run FSD?",
-    "img": [
-     "interior-2.jpg"
-    ]
-   },
-   {
-    "text": "A Model S, Model 3, Model X or Model Y with FSD computer 3.0 or newer. That covers most Teslas built since 2019."
-   },
-   {
-    "key": "AI4",
-    "text": "Newer cars have the AI4 computer, often called HW4. They get the newest FSD versions first."
-   },
-   {
-    "key": "Hardware 3",
-    "text": "Older cars with Hardware 3 can still subscribe. But they run a lighter version with fewer features. And Tesla still has no upgrade plan for them."
-   },
-   {
-    "text": "The quickest check is the Tesla app. Under Upgrades, it shows whether your car is eligible. But the right car is not enough. The law in your country decides whether the system may run at all."
-   },
-   {
-    "head": "Where can you use FSD today?",
-    "img": [
-     "fsd-4.jpg"
-    ]
-   },
-   {
-    "text": "In 17 countries. Tesla's own support page lists 16 of them. And Tesla also counts South Korea as a live market."
-   },
-   {
-    "key": "North America",
-    "text": "The US, Canada, Mexico and Puerto Rico."
-   },
-   {
-    "key": "Pacific",
-    "text": "Australia and New Zealand. Plus South Korea."
-   },
-   {
-    "key": "Europe",
-    "text": "Ten EU countries. The Netherlands, Belgium, Denmark, the three Baltic states, Slovenia, Czechia, Croatia and Slovakia.",
-    "img": [
-     "fsd-roundabout-eu.jpg"
-    ]
-   },
-   {
-    "text": "The Netherlands went first, on April 10. The Dutch vehicle authority tested the system and approved it. The other nine countries then recognized that Dutch decision, one by one. Latvia joined on October 26. China has a more limited version, while Tesla waits for approval of the full system. The biggest European markets are still missing. And so is the UK."
-   },
-   {
-    "head": "So when will FSD come to Germany, the UK and the rest of Europe?",
-    "img": [
-     "fsd-snow.jpg"
-    ]
-   },
-   {
-    "text": "For most of the EU, not before a vote that can happen in December at the earliest. An EU-wide approval needs 15 of the 27 member states. And together they must hold at least 65 percent of the EU population."
-   },
-   {
-    "text": "Germany and Italy have said they back a quick approval. France and Spain have not. Our take: with the two big supporters on board, the math finally works for Tesla. But only if almost every smaller country votes yes as well. One or two abstentions could still sink it."
-   },
-   {
-    "text": "The UK is on its own track. An EU decision does not apply in Great Britain automatically. Tesla needs a separate British approval, and there is no date for it. Until then, British subscribers pay for the Basic features only.",
-    "img": [
-     "camera-rain.jpg"
-    ]
-   },
-   {
-    "text": "So, two things to watch for next. The December vote in Brussels. And the price rise Musk has promised. Would you pay 99 a month for a car that drives itself, as long as you keep watching?",
-    "img": [
-     "fsd-3.jpg"
-    ]
-   }
-  ],
-  "nl": [
-   {
-    "text": "Teslas Full Self-Driving kun je niet meer kopen. Je kunt het alleen nog huren.",
-    "img": [
-     "fsd-roundabout-eu.jpg"
-    ]
-   },
-   {
-    "text": "FSD Supervised stuurt, remt, wisselt van rijstrook, slaat af en parkeert zelfs, op bijna elke weg. In Nederland kost het 99 euro per maand. Het werkt in de VS, Canada, Australië, Zuid-Korea en tien EU-landen, met Nederland voorop. Maar nog niet in Duitsland, Frankrijk of het Verenigd Koninkrijk."
-   },
-   {
-    "text": "De naam belooft meer dan het systeem mag. En juist dat verschil bepaalt hoe je het echt kunt gebruiken."
-   },
-   {
-    "head": "Wat doet FSD (Supervised) eigenlijk?",
-    "img": [
-     "fsd.jpg"
-    ]
-   },
-   {
-    "text": "Het rijdt de auto van A naar B, terwijl jij toezicht houdt. Je kiest een bestemming, tikt op Start Self-Driving, en de auto volgt zelf de route. Volgens Tesla doet het vier dingen."
-   },
-   {
-    "key": "Navigatie",
-    "text": "Het volgt de route, ook bij kruispunten, rotondes en op- en afritten."
-   },
-   {
-    "key": "Rijstrook wisselen",
-    "text": "Het wisselt zelf van rijstrook, en camera's rondom de auto controleren de dode hoek."
-   },
-   {
-    "key": "Stad en snelweg",
-    "text": "Het werkt in woonwijken, in drukke steden en op de snelweg."
-   },
-   {
-    "key": "Parkeren",
-    "text": "Het parkeert zelf in. En sommige auto's rijden op een parkeerterrein naar je toe.",
-    "img": [
-     "fsd-camera-view.jpg"
-    ]
-   },
-   {
-    "text": "Je kiest zelfs een rijstijl. Van rustige profielen als Sloth en Chill, tot Hurry en Mad Max, die harder rijden en vaker van baan wisselen. Het klinkt als een zelfrijdende auto. Maar juridisch en technisch is het dat niet."
-   },
-   {
-    "head": "Waarom moet je dan toch zelf blijven opletten?",
-    "img": [
-     "fsd-night-rain.jpg"
-    ]
-   },
-   {
-    "text": "Omdat FSD een rijhulp is, en jij verantwoordelijk blijft. Tesla zegt het zelf. De auto wordt er niet autonoom door. Je moet volledig opletten en elk moment kunnen ingrijpen. Zelfs voor de snelheid ben jij verantwoordelijk."
-   },
-   {
-    "text": "En de auto controleert dat. Kijk je te vaak weg, of negeer je de waarschuwingen, dan krijg je een strikeout. FSD gaat dan uit voor de rest van de rit. Na drie of vijf strikeouts, afhankelijk van de auto, ligt het systeem een hele week stil."
-   },
-   {
-    "text": "In Europa kreeg het systeem in oktober zelfs een nieuwe naam: Tesla Assisted Driving. Het Duitse ministerie van Verkeer vond Full Self-Driving misleidend. Die verantwoordelijkheid komt met een maandelijkse rekening. En hoe hoog die is, hangt af van waar je woont."
-   },
-   {
-    "head": "Wat kost FSD?",
-    "img": [
-     "fsd-2.jpg"
-    ]
-   },
-   {
-    "text": "In de meeste landen ongeveer 99 per maand. In euro's, dollars of ponden."
-   },
-   {
-    "key": "Nederland",
-    "text": "99 euro per maand, net als in de andere goedgekeurde EU-landen. Eenmalig kopen voor 7.500 euro kan sinds mei niet meer."
-   },
-   {
-    "key": "VS",
-    "text": "99 dollar per maand. De koopoptie, laatst 8.000 dollar, verdween op 14 februari. Elon Musk zei dat de prijs omhooggaat naarmate het systeem beter wordt. Een datum of bedrag noemde hij niet."
-   },
-   {
-    "key": "Verenigd Koninkrijk",
-    "text": "99 pond per maand. Maar het volledige systeem is daar niet goedgekeurd. Britse abonnees krijgen alleen het Basic-pakket, met onder meer Autopark en Summon."
-   },
-   {
-    "key": "Australië",
-    "text": "149 Australische dollar per maand. Of 75, als de auto al Enhanced Autopilot heeft."
-   },
-   {
-    "text": "Opzeggen kan altijd, in de Tesla-app. Maar geld terug krijg je niet. Een heel jaar kost 1.188 euro. Daarom zetten veel rijders het alleen aan voor een lange rit of de vakantie. En betalen heeft alleen zin als je auto de juiste computer heeft."
-   },
-   {
-    "head": "Welke Tesla's kunnen FSD draaien?",
-    "img": [
-     "interior-2.jpg"
-    ]
-   },
-   {
-    "text": "Een Model S, Model 3, Model X of Model Y met FSD-computer 3.0 of nieuwer. Dat zijn de meeste Tesla's vanaf bouwjaar 2019."
-   },
-   {
-    "key": "AI4",
-    "text": "Nieuwere auto's hebben de AI4-computer, vaak HW4 genoemd. Die krijgen de nieuwste FSD-versies als eerste."
-   },
-   {
-    "key": "Hardware 3",
-    "text": "Oudere auto's met Hardware 3 kunnen ook een abonnement nemen. Maar ze draaien een lichtere versie met minder functies. En Tesla heeft voor die auto's nog steeds geen upgradeplan."
-   },
-   {
-    "text": "De snelste check is de Tesla-app. Onder Upgrades zie je of je auto geschikt is. Maar alleen de juiste auto is niet genoeg. De wet in je land bepaalt of het systeem überhaupt aan mag."
-   },
-   {
-    "head": "Waar kun je FSD nu gebruiken?",
-    "img": [
-     "fsd-4.jpg"
-    ]
-   },
-   {
-    "text": "In zeventien landen. Tesla's supportpagina noemt er zestien. En daarnaast telt Tesla Zuid-Korea als markt waar het al werkt."
-   },
-   {
-    "key": "Europa",
-    "text": "Tien EU-landen. Nederland, België, Denemarken, de drie Baltische staten, Slovenië, Tsjechië, Kroatië en Slowakije."
-   },
-   {
-    "key": "Noord-Amerika",
-    "text": "De VS, Canada, Mexico en Puerto Rico."
-   },
-   {
-    "key": "Stille Oceaan",
-    "text": "Australië en Nieuw-Zeeland. Plus Zuid-Korea.",
-    "img": [
-     "fsd-highway-sunset.jpg"
-    ]
-   },
-   {
-    "text": "Nederland was de eerste, op 10 april. De RDW testte het systeem zelf en keurde het goed. Daarna erkenden de andere negen landen dat Nederlandse besluit, een voor een. Letland kwam er op 26 oktober bij. China heeft een beperktere versie, terwijl Tesla wacht op goedkeuring van het volledige systeem. De grootste Europese markten ontbreken nog. En het Verenigd Koninkrijk ook."
-   },
-   {
-    "head": "Wanneer komt FSD dan naar Duitsland, het VK en de rest van Europa?",
-    "img": [
-     "fsd-snow.jpg"
-    ]
-   },
-   {
-    "text": "Voor het grootste deel van de EU niet vóór een stemming, op zijn vroegst in december. Een EU-brede goedkeuring vraagt steun van 15 van de 27 lidstaten. En samen moeten die minstens 65 procent van de EU-bevolking vertegenwoordigen."
-   },
-   {
-    "text": "Duitsland en Italië zeiden een snelle goedkeuring te steunen. Frankrijk en Spanje nog niet. Onze inschatting: met die twee grote landen erbij klopt de rekensom voor Tesla eindelijk. Maar alleen als bijna elk kleiner land ook ja stemt. Een of twee onthoudingen kunnen het nog laten mislukken."
-   },
-   {
-    "text": "Voor Nederlanders betekent een ja vooral dit: je kunt het systeem dan ook gebruiken als je naar Duitsland, België of Frankrijk rijdt. Het Verenigd Koninkrijk volgt een eigen route. Een EU-besluit geldt daar niet automatisch, en een datum is er niet.",
-    "img": [
-     "camera-rain.jpg"
-    ]
-   },
-   {
-    "text": "Dus, twee dingen om op te letten. De stemming in Brussel in december. En de prijsverhoging die Musk heeft aangekondigd. Zou jij 99 euro per maand betalen voor een auto die zelf rijdt, zolang jij blijft opletten?",
-    "img": [
-     "fsd-3.jpg"
-    ]
-   }
-  ]
- }
+  },
+  "image": "gen/what-is-tesla-fsd-supervised-cost-countries-explained.jpg"
 }

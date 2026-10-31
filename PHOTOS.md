@@ -237,3 +237,6 @@ Articles with a "models" key automatically use real-life photos of that model. Y
 - news/tesla-semi-fire-i-880-hayward-no-crash-freeway-closed-10-hours-1.jpg — Tesla Semi truck (real photo) (Photo: Steve Jurvetson from Menlo Park, USA, CC BY 2.0, Wikimedia Commons)
 - news/tesla-semi-fire-i-880-hayward-no-crash-freeway-closed-10-hours-2.jpg — Tesla Semi truck (real photo) (Photo: Steve Jurvetson from Menlo Park, USA, CC BY 2.0, Wikimedia Commons)
 - gen/italy-backs-eu-wide-tesla-fsd-approval-salvini-musk-65-percent-vote-math.jpg — A white new Tesla Model Y driving on a winding road through the autumn hills of Tuscany
+- gen/what-is-tesla-fsd-supervised-cost-countries-explained.jpg — Inside a Tesla Model 3 driving itself at golden hour, the driver's hands off the wheel and the screen showing the road
+- gen/what-is-tesla-fsd-supervised-cost-countries-explained-x2-10312024.jpg — A Tesla Model 3 at a Dutch canal junction with cyclists, the screen showing them
+- gen/what-is-tesla-fsd-supervised-cost-countries-explained-x3-10312024.jpg — A driver watching the road in a Tesla Model 3 on a motorway at night

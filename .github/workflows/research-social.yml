@@ -1,0 +1,25 @@
+name: Research - story Short to TikTok, Instagram, Facebook
+
+on:
+  push:
+    branches: [research/story-short]
+    paths: ["research/story/social.py"]
+
+permissions:
+  contents: write
+
+jobs:
+  social:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+      - name: Host the video and post via Buffer
+        env:
+          GH_TOKEN: ${{ github.token }}
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+        run: |
+          f=research/story/publish/falcon-1-fourth-try-en-short.mp4
+          tag=tiktok-falcon-1-fourth-try
+          gh release view "$tag" >/dev/null 2>&1 || gh release create "$tag" "$f" --title "TikTok: falcon-1-fourth-try" --notes "Video file for TikTok (via Buffer)." --latest=false --target research/story-short
+          python3 research/story/social.py "$f" "https://github.com/${GITHUB_REPOSITORY}/releases/download/${tag}/$(basename "$f")"

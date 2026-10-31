@@ -21,6 +21,18 @@ Every article task reads `ops/performance.md` before picking the story and follo
 - keep exploring: about one in three articles tries a topic, label type or title style that is not in the
   "does well" list, so the channel keeps learning.
 
+## Scouting other channels
+
+`tools/scout.py` (settings in `ops/scout.json`) looks at other YouTube channels:
+- **Daily, Tesla/SpaceX/xAI** (in `yt-learn.yml`): outlier videos of the last 7 days (views divided by what
+  that channel usually gets) and the most-liked viewer questions the creator left unanswered, written to
+  `ops/scout-tesla.md` and added to the bottom of `ops/performance.md`, so article tasks see it automatically.
+  It is a hint, never a reason to drop news value or accuracy, and never a reason to copy a script or title.
+- **Weekly, candidate niches for a second channel** (`niche-scout.yml`, Sundays): compares the niches in
+  `ops/scout.json` by how many different small or young channels have outliers in them -> `ops/niches.md`.
+Raw results per run are kept in `ops/scout/`. The scans stay within a YouTube API unit budget so uploads
+always keep enough quota.
+
 ## Thumbnail and first frame (read this before choosing photos)
 
 The first photo of an article is the YouTube thumbnail, the first frame of the Short and the long video, and

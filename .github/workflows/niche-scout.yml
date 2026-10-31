@@ -1,0 +1,43 @@
+name: Niche scout (second channel)
+
+# Every Sunday: compares the candidate niches in ops/scout.json for a second (and third) channel by how many
+# different, preferably small or young channels have outlier videos in them -> ops/niches.md.
+# Can also be run by hand from the Actions tab.
+on:
+  schedule:
+    - cron: "41 12 * * 0"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: niche-scout
+  cancel-in-progress: false
+
+jobs:
+  scout:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+      - name: Scan candidate niches
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+        run: python3 tools/scout.py niches >> "$GITHUB_STEP_SUMMARY"
+      - name: Commit
+        run: |
+          git config user.name "TrendingTesla bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          mkdir -p "$RUNNER_TEMP/s" && cp -r ops/niches.md ops/scout.json ops/scout "$RUNNER_TEMP/s/"
+          for i in 1 2 3 4 5; do
+            git fetch -q origin main && git reset -q --hard origin/main
+            cp -r "$RUNNER_TEMP/s/." ops/
+            git add ops/niches.md ops/scout.json ops/scout
+            git diff --cached --quiet && exit 0
+            git commit -qm "Scout: weekly niche comparison for a second channel" && git push -q origin HEAD:main && exit 0
+            sleep $((10 + RANDOM % 20))
+          done
+          exit 1

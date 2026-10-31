@@ -197,6 +197,10 @@ def main():
               "- Keep exploring: about one in three articles should try a topic, label type or title style that "
               "is not in the 'does well' list, so the channel keeps learning.",
               ""]
+    scout = ROOT / "ops/scout-tesla.md"  # outliers at other channels (tools/scout.py, runs just before this)
+    if scout.exists():
+        body = scout.read_text(encoding="utf-8").splitlines()
+        lines += ["## " + body[0].lstrip("# ")] + [("#" + l if l.startswith("## ") else l) for l in body[1:]]
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text("\n".join(lines), encoding="utf-8")
     print("\n".join(lines))

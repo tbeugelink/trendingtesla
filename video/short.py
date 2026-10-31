@@ -644,7 +644,9 @@ def meta(a, lang, out):
     read = {"en": "Read the full article", "nl": "Lees het hele artikel"}[lang]
     note = {"en": "Voice-over generated with AI (ElevenLabs); script written and checked by TrendingTesla.",
             "nl": "Voice-over gemaakt met AI (ElevenLabs); tekst geschreven en gecontroleerd door TrendingTesla."}[lang]
-    ttl = t["title"]
+    # a short, punchy YouTube title from the script when given ("SpaceX Had Money for ONE More Launch");
+    # the long search-friendly article title is for the site
+    ttl = ((a.get("short") or {}).get(f"yt_title_{lang}") if PORTRAIT else None) or t["title"]
     lim = 90 if PORTRAIT else 100
     if len(ttl) > lim:
         ttl = ttl[:lim - 1].rsplit(" ", 1)[0].rstrip(",:;–-") + "…"

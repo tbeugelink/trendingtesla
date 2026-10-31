@@ -77,6 +77,24 @@ perform much better than illustrations. So for every new article:
    "describe": "..."}`: a different setting, angle or moment than the main scene, so the video can change
    pictures without repeating. Same rules as gen_image: illustrations, never a fake photo of the event.
 
+## Shorts first (decided 31 Oct 2026, read this before writing the "short" script)
+
+The numbers of the first days were clear: Shorts got 450-1,100 views each, long news videos 4-218 (mostly ~15),
+and the story-style Shorts ("SpaceX Had Money for ONE More Launch": 1,122 views in 7 hours) beat the news
+Shorts (typically 741 views after 48 hours) by far. So:
+- **News articles get a Short only, no long video and no "video" script.** Only the weekly evergreen
+  explainer has `"evergreen": true` and a "video" script, and gets a long video too.
+- **Write the Short as a story: hook -> tension -> payoff**, under 60 seconds. Hook: the most striking concrete
+  fact or turn, in the first sentence. Tension: what was at stake, what stood in the way, what people expected.
+  Payoff: what happened and why it matters, ending on the strongest line. Short sentences, a few words in
+  capitals for spoken emphasis ("ONE more launch"), never invented drama: the same facts as the article.
+- **Add a YouTube title for the Short**: `"short": {..., "yt_title_en": "...", "yt_title_nl": "..."}`, 4-8 words,
+  title case, a story in one line ("Tesla Broke Henry Ford's Assembly Line", "SpaceX Had Money for ONE More
+  Launch"); at most one word in capitals; factually exact; no number unless the number IS the story; never a
+  promise the Short does not keep. The long search-friendly article title stays on the site.
+- Explainers hold viewers best ("How Starlink works": 93% watched): a "why/how" angle on the news works well.
+  Small routine items (a list of new Supercharger sites) do badly: only cover them when they are big.
+
 ## Openings and variety (read this before writing the "short" and "video" scripts)
 
 Viewers decide in the first 1-2 seconds whether to swipe away, and YouTube gives less reach to channels

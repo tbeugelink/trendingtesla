@@ -44,9 +44,10 @@ jobs:
           else
             slugs=$(git diff --name-only --diff-filter=A HEAD~1 HEAD -- content/articles | while read f; do
               python3 -c "import json,sys; d=json.load(open('$f')); print(d['slug'] if d.get('short') else '')"; done | xargs)
-            # every new article with a "video" script also gets a long video (made after the Short)
+            # only the weekly evergreen explainer ("evergreen": true) also gets a long video (made after the Short);
+            # news articles are Shorts only (long news videos got ~15 views, Shorts 40x more; decided 31 Oct 2026)
             longs=$(git diff --name-only --diff-filter=A HEAD~1 HEAD -- content/articles | while read f; do
-              python3 -c "import json,sys; d=json.load(open('$f')); print(d['slug'] if (d.get('video') or {}).get('en') else '')"; done | xargs)
+              python3 -c "import json,sys; d=json.load(open('$f')); print(d['slug'] if d.get('evergreen') and (d.get('video') or {}).get('en') else '')"; done | xargs)
             echo "longs=$longs" >> "$GITHUB_OUTPUT"
             langs=en
             # video/queue.txt: first line "slug [langs]" requests a video on demand

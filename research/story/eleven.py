@@ -16,7 +16,10 @@ def post(url, body):
         return r.read()
 
 script = json.load(open(D / "script.json"))
+ONLY = [int(x) for x in os.environ.get("ONLY", "").split(",") if x.strip()]
 for i, s in enumerate(script):
+    if ONLY and i not in ONLY:
+        continue
     if not s["text"]:
         continue
     d = json.loads(post(f"https://api.elevenlabs.io/v1/text-to-speech/{VOICE}/with-timestamps?output_format=mp3_44100_192",

@@ -1,17 +1,77 @@
 [
- {"part": "hook", "img": "c04", "text": "Since nineteen thirteen, every car has been built on Henry Ford's assembly line. Tesla just broke it up."},
- {"part": "tension", "img": "c10", "text": "The Cybercab is unboxed into three parts. Each built in its own corner of the factory."},
- {"part": "tension", "img": "c00", "text": "The front: a cast aluminum frame. Motor, drivetrain, electronics, fluids."},
- {"part": "tension", "img": "c09", "text": "Suspension, and brake by wire."},
- {"part": "tension", "img": "c03", "text": "Body panels: polyurethane, with the color right in it."},
- {"part": "tension", "img": "c02", "text": "So, no paint shop at all."},
- {"part": "tension", "img": "c01", "text": "The back: another casting. Suspension, tailgate, panels."},
- {"part": "tension", "img": "c11", "text": "The middle: the battery pack is the floor."},
- {"part": "tension", "img": "c07", "text": "Seats and trim go straight on top."},
- {"part": "tension", "img": "c08", "text": "Side frames close it in. Then the roof."},
- {"part": "payoff", "img": "c06", "text": "Then, the marriage. Front and back join the middle."},
- {"part": "payoff", "img": "c12", "text": "Everything plugs in."},
- {"part": "payoff", "img": "c05", "text": "And the Hulk, a giant robot, puts it on its wheels for the first time."},
- {"part": "payoff", "img": "c04", "text": "Tesla says it's up to half the cost to build. The goal: one Cybercab every ten seconds."},
- {"part": "payoff", "img": "final", "text": "Tesla UNBOXED, THE, CAR."}
+ {
+  "part": "hook",
+  "img": "c04",
+  "text": "Since nineteen thirteen, every car has been built on Henry Ford's assembly line. Tesla just broke it up."
+ },
+ {
+  "part": "tension",
+  "img": "c10",
+  "text": "The Cybercab is unboxed into three parts. Each built in its own corner of the factory."
+ },
+ {
+  "part": "tension",
+  "img": "c00",
+  "text": "The front: a cast aluminum frame. Motor, drivetrain, electronics, fluids."
+ },
+ {
+  "part": "tension",
+  "img": "c09",
+  "text": "Suspension, and brake by wire."
+ },
+ {
+  "part": "tension",
+  "img": "c03",
+  "text": "Body panels: polyurethane, with the color right in it."
+ },
+ {
+  "part": "tension",
+  "img": "c02",
+  "text": "So, no paint shop at all."
+ },
+ {
+  "part": "tension",
+  "img": "c01",
+  "text": "The back: another casting. Suspension, tailgate, panels."
+ },
+ {
+  "part": "tension",
+  "img": "c11",
+  "text": "The middle: the battery pack is the floor."
+ },
+ {
+  "part": "tension",
+  "img": "c07",
+  "text": "Seats and trim go straight on top."
+ },
+ {
+  "part": "tension",
+  "img": "c08",
+  "text": "Side frames close it in. Then the roof."
+ },
+ {
+  "part": "payoff",
+  "img": "c06",
+  "text": "Then, the marriage. Front and back join the middle."
+ },
+ {
+  "part": "payoff",
+  "img": "c12",
+  "text": "Everything plugs in."
+ },
+ {
+  "part": "payoff",
+  "img": "c05",
+  "text": "And the Hulk, a giant robot, puts it on its wheels for the first time."
+ },
+ {
+  "part": "payoff",
+  "img": "c04",
+  "text": "Tesla says it's up to half the cost to build. A Model Y takes about forty seconds. The Cybercab goal: ten. Long term: five."
+ },
+ {
+  "part": "payoff",
+  "img": "final",
+  "text": "Tesla UNBOXED. A revolution in the car industry!"
+ }
 ]

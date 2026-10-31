@@ -22,6 +22,8 @@ jobs:
           ELEVENLABS_VOICE_ID_2: ${{ vars.ELEVENLABS_VOICE_ID_2 }}
           ELEVENLABS_VOICE_ID_3: ${{ vars.ELEVENLABS_VOICE_ID_3 }}
           VOICE_SLOT: "3"
+          SPEED: "1.0"
+          SPEED_PAYOFF: "0.95"
           MAKE_SFX: "0"
         run: python3 research/story/eleven.py
       - name: Commit results to the research branch

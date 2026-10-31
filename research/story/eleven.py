@@ -22,7 +22,7 @@ for i, s in enumerate(script):
     d = json.loads(post(f"https://api.elevenlabs.io/v1/text-to-speech/{VOICE}/with-timestamps?output_format=mp3_44100_192",
                         {"text": s["text"], "model_id": "eleven_multilingual_v2",
                          "voice_settings": {"stability": 0.28, "similarity_boost": 0.8, "style": 0.5,
-                                            "speed": 1.12 if s["part"] != "payoff" else 1.0}}))
+                                            "speed": float(os.environ.get("SPEED", "1.12")) if s["part"] != "payoff" else float(os.environ.get("SPEED_PAYOFF", "1.0"))}}))
     (OUT / f"voice_{i:02d}.mp3").write_bytes(base64.b64decode(d["audio_base64"]))
     al = d.get("alignment") or d["normalized_alignment"]
     json.dump(al, open(OUT / f"voice_{i:02d}.json", "w"))

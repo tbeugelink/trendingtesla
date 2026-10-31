@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
     inputs:
       action:
-        description: "thumbs, playlists, both or stats"
+        description: "thumbs, playlists, both, stats or scout"
         required: false
         default: "both"
       ids:
@@ -45,3 +45,10 @@ jobs:
           YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
           YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
         run: python3 tools/yt_stats.py
+      - name: Scout other channels (test run, results only in the log)
+        if: github.event.inputs.action == 'scout'
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+        run: python3 tools/scout.py tesla

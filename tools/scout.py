@@ -70,6 +70,7 @@ def videos(ids):
             secs = seconds(v["contentDetails"].get("duration"))
             out[v["id"]] = {"id": v["id"], "title": v["snippet"]["title"], "channel_id": v["snippet"]["channelId"],
                             "channel": v["snippet"]["channelTitle"], "published": v["snippet"]["publishedAt"],
+                            "lang": v["snippet"].get("defaultAudioLanguage") or v["snippet"].get("defaultLanguage") or "",
                             "seconds": secs, "kind": "short" if secs <= 180 else "long",
                             "views": int(v["statistics"].get("viewCount", 0)),
                             "comments": int(v["statistics"].get("commentCount", 0))}
@@ -125,8 +126,11 @@ def questions(v, keep=6):
     try:
         d = get("commentThreads?" + q(part="snippet,replies", videoId=v["id"], order="relevance",
                                       maxResults=100, textFormat="plainText"))
-    except urllib.error.HTTPError:
-        return []  # comments switched off
+    except urllib.error.HTTPError as e:
+        body = e.read().decode(errors="replace")[:300]
+        if "commentsDisabled" not in body:
+            print(f"::warning::comments {v['id']}: HTTP {e.code} {body}")
+        return []
     out = []
     for t in d.get("items", []):
         top = t["snippet"]["topLevelComment"]["snippet"]
@@ -155,10 +159,18 @@ def own_channel():
         return None
 
 
+def english(v):
+    """English videos only: the channels we make are English-language (Dutch versions come from our own text)."""
+    if v["lang"] and not v["lang"].lower().startswith("en"):
+        return False
+    letters = [ch for ch in v["title"] if ch.isalpha()]
+    return bool(letters) and sum(ch.isascii() for ch in letters) / len(letters) >= 0.9
+
+
 def judge(ids, own, top=25):
     """Outlier factor for each video, with its channel's size and age. Only the `top` most-viewed videos are
     judged (each new channel costs 2 API units for its baseline)."""
-    vids = sorted((v for v in videos(ids).values() if v["channel_id"] != own), key=lambda v: v["views"], reverse=True)
+    vids = sorted((v for v in videos(ids).values() if v["channel_id"] != own and english(v)), key=lambda v: v["views"], reverse=True)
     vids = {v["id"]: v for v in vids[:top]}
     chans = channels([v["channel_id"] for v in vids.values()])
     base = {}

@@ -1,0 +1,26 @@
+name: Research - Cybercab Short to TikTok, Instagram, Facebook
+
+on:
+  push:
+    branches: [research/story-short]
+    paths: ["research/cybercab/social.py"]
+
+permissions:
+  contents: write
+
+jobs:
+  social:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+      - name: Host the video and post via Buffer
+        env:
+          GH_TOKEN: ${{ github.token }}
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+          SOCIAL_SERVICES: tiktok,instagram,facebook
+        run: |
+          f=research/cybercab/publish/cybercab-unboxed-en-short.mp4
+          tag=tiktok-cybercab-unboxed
+          gh release view "$tag" >/dev/null 2>&1 || gh release create "$tag" "$f" --title "TikTok: cybercab-unboxed" --notes "Video file for TikTok (via Buffer)." --latest=false --target research/story-short
+          python3 research/cybercab/social.py "$f" "https://github.com/${GITHUB_REPOSITORY}/releases/download/${tag}/$(basename "$f")"

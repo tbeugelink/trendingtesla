@@ -6,9 +6,9 @@ already have an article that answers the same question (if it does, it skips to 
 ticks the old one with "(already covered: <slug>)"), writes it, and ticks it here with the slug.
 Add new ideas at the bottom at any time.
 
-- [ ] How much does it cost to charge a Tesla at a Supercharger (US, UK, Netherlands, Germany)?
-- [ ] Tesla Model 3 vs Model Y in 2026: which one should you buy?
-- [ ] What is Tesla FSD (Supervised), what does it cost, and where can you use it?
+- [x] How much does it cost to charge a Tesla at a Supercharger (US, UK, Netherlands, Germany)? (already covered: tesla-supercharger-prices-us-october-2026-how-to-pay-less)
+- [x] Tesla Model 3 vs Model Y in 2026: which one should you buy? (already covered: tesla-model-3-vs-model-y-2026-which-to-buy-price-range-space)
+- [x] What is Tesla FSD (Supervised), what does it cost, and where can you use it? (what-is-tesla-fsd-supervised-cost-countries-explained)
 - [ ] How long does a Tesla battery last, and what does a replacement cost?
 - [ ] How far can a Tesla really drive in winter? Range loss and how to limit it
 - [ ] Charging a Tesla at home: wallbox, cable and costs explained

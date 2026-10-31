@@ -1,0 +1,23 @@
+name: Research - publish Cybercab Short
+
+on:
+  push:
+    branches: [research/story-short]
+    paths: ["research/cybercab/publish/*.mp4"]
+
+permissions:
+  contents: read
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+      - name: Upload to YouTube with designed thumbnail
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+          YT_PRIVACY: ${{ vars.YT_PRIVACY }}
+        run: python3 research/cybercab/publish.py

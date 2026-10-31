@@ -1,0 +1,11 @@
+{
+  "note": "Research Short (Falcon 1 story). Not part of the site pipeline; nothing is uploaded.",
+  "sfx": {
+    "roar_close": ["Rocket engine roaring extremely close to the microphone, intense deep rumble and crackle, launch pad", 6],
+    "explosion": ["Large rocket explosion, huge fireball, deep booming blast with debris falling, cinematic", 5],
+    "clang": ["Two heavy metal rocket stages smashing into each other, harsh metallic clang and crunch", 3],
+    "separation": ["Rocket stage separation in flight, sharp pyrotechnic bang followed by a fast whoosh", 2.5],
+    "tumble": ["Rocket stage tumbling out of control, spinning whooshing warble with straining engine", 4],
+    "whoosh": ["Fast cinematic swoosh transition", 1]
+  }
+}

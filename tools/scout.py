@@ -126,7 +126,13 @@ def search(query, days, n=25):
     return [i["id"]["videoId"] for i in d.get("items", []) if i["id"].get("videoId")]
 
 
-QWORDS = re.compile(r"\?|^(how|why|what|when|where|who|which|is|are|can|could|does|do|will|would|should)\b", re.I)
+def is_question(text):
+    """A real question: a sentence ending in '?' with at least 5 words (not 'WHAT?!' or 'Where's the car?')."""
+    for sent in re.findall(r"[^.!?]*\?", text):
+        words = re.findall(r"[A-Za-z']+", sent)
+        if len(words) >= 5 and not re.match(r"\s*what an? ", sent, re.I):
+            return True
+    return False
 
 
 def questions(v, keep=6):
@@ -152,7 +158,7 @@ def questions(v, keep=6):
     for t in d.get("items", []):
         top = t["snippet"]["topLevelComment"]["snippet"]
         text = re.sub(r"\s+", " ", top.get("textDisplay", "")).strip()
-        if not (15 <= len(text) <= 300) or not QWORDS.search(text):
+        if not (15 <= len(text) <= 300) or not is_question(text):
             continue
         replies = (t.get("replies") or {}).get("comments", [])
         answered = any(r["snippet"].get("authorChannelId", {}).get("value") == v["channel_id"] for r in replies)

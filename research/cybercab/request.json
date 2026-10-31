@@ -1,0 +1,11 @@
+{
+  "note": "Research story Short: Cybercab unboxed process.",
+  "sfx": {
+    "servo": ["Industrial robot arms moving fast, servo motors whirring, pneumatic hiss, factory", 4],
+    "clunk": ["Heavy car body lowered onto a chassis, hydraulic hiss then a deep metallic clunk and lock", 3],
+    "factory": ["Busy modern car factory ambience, distant robots, conveyor hum, no voices", 10],
+    "impact": ["Deep cinematic impact boom with sub bass", 3],
+    "riser": ["Tense cinematic riser building up for four seconds, ending abruptly", 4],
+    "whoosh": ["Fast cinematic swoosh transition", 1]
+  }
+}

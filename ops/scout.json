@@ -2,20 +2,46 @@
   "_about": "Settings for tools/scout.py. 'tesla' is scanned every day for TrendingTesla. 'candidates' are possible niches for a second (and third) channel, scanned every Sunday. Add, remove or reword niches freely; each search query costs 100 of the 10,000 daily YouTube API units, so keep it to about 2 queries per niche.",
   "tesla": {
     "days": 7,
-    "queries": ["Tesla news", "SpaceX Starship", "Tesla Optimus robot", "Elon Musk xAI Grok Starlink"]
+    "queries": [
+      "Tesla news",
+      "SpaceX Starship",
+      "Tesla Optimus robot",
+      "Elon Musk xAI Grok Starlink"
+    ]
   },
   "candidates": {
     "days": 30,
     "niches": {
-      "ai-future-humanity": {"label": "AI and the future of humanity (Squazoo)", "queries": ["AI future of humanity", "AI takeover what happens next"]},
-      "transhumanism": {"label": "Brain chips, transhumanism, merging with machines", "queries": ["transhumanism explained", "brain chip future humans"]},
-      "prophecy-technology": {"label": "Bible prophecy and technology / end times", "queries": ["bible prophecy technology", "end times AI"]},
-      "history-stories": {"label": "History told as a story", "queries": ["history documentary story", "forgotten history explained"]},
-      "inventions": {"label": "Inventions and the inventors behind them", "queries": ["invention history story", "inventors who changed the world"]},
-      "megaprojects": {"label": "Megaprojects and engineering", "queries": ["megaprojects explained", "engineering marvel explained"]},
-      "space-future": {"label": "Space, Mars and the far future", "queries": ["Mars colony future", "space documentary explained"]},
-      "humanoid-robots": {"label": "Humanoid robots and automation of work", "queries": ["humanoid robots future", "robots replacing jobs"]},
-      "philosophy": {"label": "Philosophy and big questions", "queries": ["philosophy explained", "meaning of life philosophy"]}
+      "squazoo": {
+        "label": "Squazoo: AI, robots and the future of work and freedom",
+        "queries": [
+          "AI taking jobs future",
+          "AI warning humanity",
+          "humanoid robots replacing workers",
+          "end times AI technology"
+        ]
+      },
+      "inventions": {
+        "label": "Inventions told as stories (third channel candidate)",
+        "queries": [
+          "invention history story",
+          "invented by accident story"
+        ]
+      },
+      "history-stories": {
+        "label": "History told as a story (comparison)",
+        "queries": [
+          "history documentary story",
+          "forgotten history explained"
+        ]
+      },
+      "philosophy": {
+        "label": "Philosophy and big questions (comparison)",
+        "queries": [
+          "philosophy explained",
+          "meaning of life philosophy"
+        ]
+      }
     }
   }
 }

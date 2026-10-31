@@ -1,0 +1,26 @@
+name: Research - publish story Short
+
+# Uploads the finished story Short from research/story/publish to YouTube. Research branch only.
+on:
+  push:
+    branches: [research/story-short]
+    paths: ["research/story/publish/*.mp4"]
+
+permissions:
+  contents: read
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+      - name: Upload to YouTube
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+          YT_PRIVACY: ${{ vars.YT_PRIVACY }}
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg > /dev/null
+          python3 video/upload.py research/story/publish/falcon-1-fourth-try-en-short.mp4 en

@@ -24,7 +24,8 @@ jobs:
           VOICE_SLOT: "3"
           SPEED: "1.0"
           SPEED_PAYOFF: "0.95"
-          ONLY: "0,6,11"
+          ONLY: "0,1,2,11"
+          PER_SPEED: "0:0.93,1:0.95,2:0.97"
           MAKE_SFX: "0"
         run: python3 research/story/eleven.py
       - name: Commit results to the research branch

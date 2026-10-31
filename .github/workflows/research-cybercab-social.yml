@@ -18,7 +18,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
           BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
-          SOCIAL_SERVICES: tiktok,instagram,facebook
+          SOCIAL_SERVICES: instagram
         run: |
           f=research/cybercab/publish/cybercab-unboxed-en-short.mp4
           tag=tiktok-cybercab-unboxed

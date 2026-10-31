@@ -1,4 +1,4 @@
-"""(Re-run 31 Oct: Instagram only, after reconnecting the channel in Buffer.)
+"""(Re-run 31 Oct: Instagram only, after refreshing the channel in Buffer.)
 Post the story Short to TikTok, Instagram and Facebook through Buffer, reusing tools/tiktok_post.py.
 The Short has no site article, so this supplies its own title and caption (no article link)."""
 import json, sys

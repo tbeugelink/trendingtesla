@@ -1,4 +1,5 @@
-"""Post the story Short to TikTok, Instagram and Facebook through Buffer, reusing tools/tiktok_post.py.
+"""(Instagram only: channel refreshed in Buffer.)
+Post the story Short to TikTok, Instagram and Facebook through Buffer, reusing tools/tiktok_post.py.
 The Short has no site article, so this supplies its own title and caption (no article link)."""
 import json, sys
 from pathlib import Path

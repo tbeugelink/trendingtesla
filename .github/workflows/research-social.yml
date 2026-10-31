@@ -18,6 +18,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
           BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+          SOCIAL_SERVICES: instagram
         run: |
           f=research/story/publish/falcon-1-fourth-try-en-short.mp4
           tag=tiktok-falcon-1-fourth-try

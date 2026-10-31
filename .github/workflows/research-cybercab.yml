@@ -23,7 +23,7 @@ jobs:
           SPEED: "1.0"
           SPEED_PAYOFF: "0.95"
           PER_SPEED: "0:0.93,1:0.95,2:0.97"
-          MAKE_SFX: "1"
+          MAKE_SFX: "0"
           ONLY: ""
         run: python3 research/cybercab/eleven.py
       - name: Commit results

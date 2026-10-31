@@ -2,7 +2,7 @@
  {
   "part": "hook",
   "img": "c04",
-  "text": "Since nineteen thirteen, every car has been built on Henry Ford's assembly line. Tesla just broke it up."
+  "text": "Since nineteen thirteen, cars have been built on Henry Ford's assembly line. Tesla just broke it up."
  },
  {
   "part": "tension",
@@ -32,7 +32,7 @@
  {
   "part": "tension",
   "img": "c01",
-  "text": "The back: another casting. Suspension, tailgate, panels."
+  "text": "The back: suspension, tailgate, panels."
  },
  {
   "part": "tension",
@@ -47,7 +47,7 @@
  {
   "part": "tension",
   "img": "c08",
-  "text": "Side frames close it in. Then the roof."
+  "text": "Side frames, then the roof."
  },
  {
   "part": "payoff",
@@ -67,7 +67,7 @@
  {
   "part": "payoff",
   "img": "c04",
-  "text": "Tesla says it's up to half the cost to build. A Model Y takes about forty seconds. The Cybercab goal: ten. Long term: five."
+  "text": "Half the cost to build. A Model Y takes about forty seconds. The Cybercab goal: ten. Long term: five."
  },
  {
   "part": "payoff",

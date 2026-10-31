@@ -13,12 +13,14 @@
     "days": 30,
     "niches": {
       "squazoo": {
-        "label": "Squazoo: AI, robots and the future of work and freedom",
+        "label": "Squazoo: AI, robots, transhumanism and the future of work and freedom",
         "queries": [
           "AI taking jobs future",
           "AI warning humanity",
           "humanoid robots replacing workers",
-          "end times AI technology"
+          "end times AI technology",
+          "transhumanism explained",
+          "brain chip future humans"
         ]
       },
       "inventions": {

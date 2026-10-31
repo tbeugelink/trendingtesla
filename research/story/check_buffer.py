@@ -9,9 +9,11 @@ names = [f["name"] for f in t["fields"]]
 print("Post fields:", names)
 q = tp.gql('query { __type(name: "Query") { fields { name args { name type { name ofType { name } } } } } }')["__type"]
 print("Query fields:", [(f["name"], [a["name"] for a in f["args"]]) for f in q["fields"] if "post" in f["name"].lower()])
-want = [n for n in ("id", "status", "error", "errorMessage", "dueAt", "sentAt", "externalLink", "text") if n in names]
+ef = tp.gql('query { __type(name: "PostPublishingError") { fields { name } } }')["__type"]["fields"]
+print("error fields:", [f["name"] for f in ef])
+want = ["id", "status", "channelService", "dueAt", "sentAt", "externalLink", "error { %s }" % " ".join(f["name"] for f in ef)]
 for i in IDS:
-    for form in ('post(input: {id: "%s"})', 'post(id: "%s")'):
+    for form in ('post(input: {id: "%s"})',):
         try:
             d = tp.gql("query { %s { %s } }" % (form % i, " ".join(want)))
             print(i, json.dumps(d)[:600]); break

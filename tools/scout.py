@@ -17,6 +17,7 @@ Uses only the YouTube Data API (search = 100 units, other calls 1 unit; the dail
 with the uploads), with a unit budget so a scan never eats the upload quota.
 """
 import json
+import os
 import re
 import statistics
 import sys
@@ -39,13 +40,20 @@ class OutOfBudget(Exception):
     pass
 
 
-def get(path, cost=1):
+KEY = os.environ.get("YT_API_KEY", "").strip()  # plain API key: needed to read comments (the OAuth token lacks that scope)
+no_comments = False
+
+
+def get(path, cost=1, key=False):
     global units
     if units + cost > LIMIT:
         raise OutOfBudget
     units += cost
-    req = urllib.request.Request("https://www.googleapis.com/youtube/v3/" + path,
-                                 headers={"Authorization": f"Bearer {at}"})
+    if key:
+        req = urllib.request.Request(f"https://www.googleapis.com/youtube/v3/{path}&key={KEY}")
+    else:
+        req = urllib.request.Request("https://www.googleapis.com/youtube/v3/" + path,
+                                     headers={"Authorization": f"Bearer {at}"})
     with urllib.request.urlopen(req, timeout=60) as r:
         return json.load(r)
 
@@ -123,13 +131,22 @@ QWORDS = re.compile(r"\?|^(how|why|what|when|where|who|which|is|are|can|could|do
 
 def questions(v, keep=6):
     """Most-liked top-level comments that ask something and got no answer from the creator."""
+    global no_comments
+    if no_comments:
+        return []
+    if not KEY:
+        no_comments = True
+        print("::notice::No YT_API_KEY secret: skipping viewer questions (outliers still work)")
+        return []
     try:
         d = get("commentThreads?" + q(part="snippet,replies", videoId=v["id"], order="relevance",
-                                      maxResults=100, textFormat="plainText"))
+                                      maxResults=100, textFormat="plainText"), key=True)
     except urllib.error.HTTPError as e:
-        body = e.read().decode(errors="replace")[:300]
+        body = e.read().decode(errors="replace")
         if "commentsDisabled" not in body:
-            print(f"::warning::comments {v['id']}: HTTP {e.code} {body}")
+            print(f"::warning::comments {v['id']}: HTTP {e.code} " + re.sub(r"\s+", " ", body)[:300])
+            if e.code in (400, 403) and "commentsDisabled" not in body:
+                no_comments = True  # key problem: do not repeat the same error for every video
         return []
     out = []
     for t in d.get("items", []):

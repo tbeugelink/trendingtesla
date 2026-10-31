@@ -2,37 +2,37 @@
  {
   "part": "hook",
   "img": "flight4",
-  "text": "Three launches. Three failures. And money for just one more try."
+  "text": "Three launches. Three failures. Money for one more try."
  },
  {
   "part": "tension",
   "img": "engine",
-  "text": "Twenty oh six. SpaceX's first rocket lifts off from a tiny island in the Pacific."
+  "text": "Twenty oh six. SpaceX's first rocket lifts off."
  },
  {
   "part": "tension",
   "img": "pad",
-  "text": "Thirty seconds later, it's on fire and falling into the reef."
+  "text": "Thirty seconds later, it's on fire."
  },
  {
   "part": "tension",
   "img": "pad2",
-  "text": "Twenty oh seven. This time it reaches space. Then the second stage starts to spin, and never makes orbit."
+  "text": "Twenty oh seven. It reaches space. Then the second stage spins out of control."
  },
  {
   "part": "tension",
   "img": "engine",
-  "text": "August twenty oh eight. The third try. The stages collide after separation. Everything is lost."
+  "text": "August twenty oh eight. The stages collide. Everything is lost."
  },
  {
   "part": "tension",
   "img": "pad",
-  "text": "Elon Musk later said he only had money for three attempts. And Tesla was running out of cash at the same time."
+  "text": "Musk had money for three attempts. And Tesla was nearly broke too."
  },
  {
   "part": "tension",
   "img": "pad2",
-  "text": "Less than two months later, one last rocket stands on the pad. If it fails, it's over."
+  "text": "Eight weeks later, one last rocket stands on the pad. If it fails, it's over."
  },
  {
   "part": "countdown",
@@ -42,7 +42,7 @@
  {
   "part": "tension",
   "img": "flight4",
-  "text": "Stage separation. Clean. The engine keeps burning."
+  "text": "Stage separation. Clean. Still burning."
  },
  {
   "part": "payoff",
@@ -52,11 +52,11 @@
  {
   "part": "payoff",
   "img": "boosters",
-  "text": "The first privately built liquid-fueled rocket ever to reach orbit. Three months later, NASA signed a one point six billion dollar contract."
+  "text": "The first privately built liquid-fueled rocket to reach orbit. Months later, NASA signed a one point six billion dollar contract."
  },
  {
   "part": "payoff",
   "img": "heavy",
-  "text": "Every SpaceX rocket flying today started with that fourth try."
+  "text": "Every SpaceX rocket today started with that fourth try."
  }
 ]

@@ -3,8 +3,10 @@ import base64, json, os, urllib.request
 from pathlib import Path
 
 D = Path(__file__).parent
-KEY, VOICE = os.environ["ELEVENLABS_API_KEY"], os.environ.get("ELEVENLABS_VOICE_ID_2") or os.environ["ELEVENLABS_VOICE_ID"]
-OUT = D / ("out_v2" if os.environ.get("ELEVENLABS_VOICE_ID_2") else "out"); OUT.mkdir(exist_ok=True)
+SLOT = os.environ.get("VOICE_SLOT", "1")   # which ElevenLabs voice variable to use: 1, 2 or 3
+KEY = os.environ["ELEVENLABS_API_KEY"]
+VOICE = os.environ["ELEVENLABS_VOICE_ID" + ("" if SLOT == "1" else "_" + SLOT)]
+OUT = D / ("out" if SLOT == "1" else "out_v" + SLOT); OUT.mkdir(exist_ok=True)
 SFX = os.environ.get("MAKE_SFX", "1") == "1"
 H = {"xi-api-key": KEY, "Content-Type": "application/json"}
 

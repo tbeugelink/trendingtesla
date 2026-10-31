@@ -19,10 +19,12 @@ jobs:
         env:
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
           ELEVENLABS_VOICE_ID: ${{ vars.ELEVENLABS_VOICE_ID }}
+          ELEVENLABS_VOICE_ID_2: ${{ vars.ELEVENLABS_VOICE_ID_2 }}
+          MAKE_SFX: "0"
         run: python3 research/story/eleven.py
       - name: Commit results to the research branch
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898299+github-actions[bot]@users.noreply.github.com"
-          git add research/story/out
+          git add research/story/out research/story/out_v2
           git commit -m "Research: story Short audio" && git push || echo "nothing to commit"

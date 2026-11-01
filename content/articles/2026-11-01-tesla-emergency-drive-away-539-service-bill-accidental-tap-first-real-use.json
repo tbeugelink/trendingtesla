@@ -78,5 +78,193 @@
     "yt_title_en": "One Wrong Tap Reportedly Cost a Tesla Owner $539",
     "yt_title_nl": "Tesla-Eigenaar Krijgt Naar Verluidt $539 Rekening Na Eén Tik"
   },
-  "image": "gen/tesla-emergency-drive-away-539-service-bill-accidental-tap-first-real-use.jpg"
+  "image": "gen/tesla-emergency-drive-away-539-service-bill-accidental-tap-first-real-use.jpg",
+  "video": {
+    "en": [
+      {
+        "text": "A month ago, Tesla gave its US Superchargers a new emergency button. It lets you drive away while the cable is still plugged in. Now the feature has met the real world. And the first lessons are about mistakes, not emergencies. On October 28, a video showed a Model Y driver in Austin pulling away with the cable still attached. Two days later, an owner who tapped the button by accident, and never moved the car, was reportedly told the check-up would cost 539 dollars. A button meant to save lives in a crisis is turning out to be easy to press when nothing is wrong.",
+        "img": [
+          "gen/tesla-emergency-drive-away-539-service-bill-accidental-tap-first-real-use.jpg"
+        ]
+      },
+      {
+        "head": "What is Emergency Drive Away supposed to do?",
+        "img": [
+          "supercharger-4.jpg"
+        ]
+      },
+      {
+        "text": "Let you escape a Supercharger stall without unplugging first. Normally a Tesla will not leave Park while a charging cable is connected. Since software update 2026.38.3, a driver at a US Supercharger can shift into Drive while plugged in, hold the brake pedal, and tap Activate on the screen. When the car pulls away, the handle breaks away from the port. It works on all current Teslas, except Model S and Model X cars built before 2021."
+      },
+      {
+        "text": "Tesla has been clear that it comes at a price. The breakaway damages both the car and the charger, and Tesla puts the possible repair costs at up to about 25,000 dollars. Short camera clips are sent to Tesla to check that there really was an emergency, and misuse can lead to penalties. That makes every activation that was not an emergency expensive. And the first reports show those activations are already happening.",
+        "img": [
+          "charge-port-2.jpg"
+        ]
+      },
+      {
+        "head": "So what happened in Austin?",
+        "img": [
+          "gen/tesla-emergency-drive-away-539-service-bill-accidental-tap-first-real-use-x2-11010557.jpg"
+        ]
+      },
+      {
+        "text": "A driver appears to have used it without meaning to. Early on a Sunday morning, before the Formula 1 race in Austin, a Reddit user charging his car heard a noise. The Model Y next to him pulled out of its stall with the cable still in the port. In the video he posted, the driver taps through the prompts, drives off, then gets out and walks back to the charger. The person filming said the driver looked tired and seemed to skim the warnings. It is not known whether that driver was charged or fined."
+      },
+      {
+        "text": "It was described as the first documented real-world use of the feature. And it was not an emergency. The second case went even less far, and still did not end cheaply."
+      },
+      {
+        "head": "How can a car that never moved cost $539?",
+        "img": [
+          "supercharger-2.jpg"
+        ]
+      },
+      {
+        "text": "Because the alert can only be cleared by Tesla Service. According to posts on X by a user called Yaro, one of their customers tapped Activate while still plugged in, then stopped before driving away. The car showed a warning that service was required. Yaro later wrote that Tesla Service charges 539 dollars to inspect the charge port and clear that alert."
+      },
+      {
+        "text": "Some details are still missing. The reports do not say whether the 539 dollars was a quote or a paid bill, whether anything was replaced, or whether the alert limits charging or driving. Tesla has not commented publicly. Still, the logic is easy to follow. Once the system has been triggered, the car assumes the port may be damaged, and asks for a check. The weak spot is the step that lets a tired driver reach that point in the first place.",
+        "img": [
+          "gen/tesla-emergency-drive-away-539-service-bill-accidental-tap-first-real-use-x3-11010557.jpg"
+        ]
+      },
+      {
+        "head": "Why is it so easy to trigger by accident?",
+        "img": [
+          "gen/tesla-emergency-drive-away-539-service-bill-accidental-tap-first-real-use.jpg"
+        ]
+      },
+      {
+        "text": "Because the safety step looks a lot like a normal one. Holding the brake and tapping a button on the screen are things drivers do every day. The red warning appears in the same place as other messages. And a driver who expects to shift into Drive may confirm it on autopilot. The Reddit user suggested a much louder warning, like turning the whole screen red and sounding an alarm. Others asked for a clearer explanation of the damage, or an audible warning."
+      },
+      {
+        "text": "Tesla's charging director, Max de Zegher, said earlier that Tesla would improve the feature quickly based on feedback. These two cases are exactly that feedback. But nothing has changed yet."
+      },
+      {
+        "head": "What should we watch for next?",
+        "img": [
+          "supercharger-4.jpg"
+        ]
+      },
+      {
+        "text": "A software tweak, and whether Tesla shows leniency. Here is what to look for."
+      },
+      {
+        "key": "A stronger warning",
+        "text": "First, a stronger warning. A second confirmation, a sound, or a full-screen alert in a future update."
+      },
+      {
+        "key": "How Tesla handles mistakes",
+        "text": "Second, how Tesla handles mistakes. Will accidental activations, where the car never moved, be inspected for free, or still billed?"
+      },
+      {
+        "key": "Penalties",
+        "text": "Third, penalties. Tesla has never said what misuse penalties look like, and the Austin case may be the first test."
+      },
+      {
+        "key": "Other markets",
+        "text": "And fourth, other markets. For now, the feature is limited to US Superchargers."
+      },
+      {
+        "text": "For owners, the advice is simple. If your car shows a red Emergency Drive Away message at a Supercharger, read it before you tap anything. Unless you are in danger, the right move is to unplug first.",
+        "img": [
+          "gen/tesla-emergency-drive-away-539-service-bill-accidental-tap-first-real-use-x2-11010557.jpg"
+        ]
+      }
+    ],
+    "nl": [
+      {
+        "text": "Een maand geleden kregen de Amerikaanse Superchargers van Tesla een nieuwe noodknop. Daarmee kun je wegrijden terwijl de kabel nog vastzit. Nu is de functie voor het eerst echt gebruikt. En de eerste lessen gaan over vergissingen, niet over noodgevallen. Op 28 oktober dook een video op van een Model Y-bestuurder in Austin die wegreed met de kabel nog in de auto. Twee dagen later kreeg een eigenaar die per ongeluk op de knop tikte, en de auto niet eens bewoog, naar verluidt te horen dat de controle 539 dollar kost. Een knop die in nood levens moet redden, blijkt makkelijk in te drukken als er niets aan de hand is.",
+        "img": [
+          "gen/tesla-emergency-drive-away-539-service-bill-accidental-tap-first-real-use.jpg"
+        ]
+      },
+      {
+        "head": "Waar is Emergency Drive Away eigenlijk voor?",
+        "img": [
+          "supercharger-4.jpg"
+        ]
+      },
+      {
+        "text": "Om weg te komen bij een Supercharger zonder eerst de stekker eruit te halen. Normaal rijdt een Tesla niet weg zolang er een laadkabel aan zit. Sinds software-update 2026.38.3 kan een bestuurder bij een Amerikaanse Supercharger in D zetten terwijl de kabel vastzit, het rempedaal ingedrukt houden en op het scherm op Activeren tikken. Als de auto wegrijdt, breekt de handgreep los uit de laadpoort. Het werkt op alle huidige Tesla's, behalve Model S en Model X van voor 2021."
+      },
+      {
+        "text": "Tesla zegt er duidelijk bij dat dit niet gratis is. Het losbreken beschadigt zowel de auto als de lader, en Tesla schat de mogelijke reparatiekosten op maximaal zo'n 25.000 dollar. Korte camerabeelden gaan naar Tesla, om te controleren of er echt sprake was van nood, en misbruik kan tot boetes leiden. Daardoor wordt elke activering zonder noodgeval duur. En uit de eerste meldingen blijkt dat die nu al gebeuren.",
+        "img": [
+          "charge-port-2.jpg"
+        ]
+      },
+      {
+        "head": "Wat gebeurde er dan in Austin?",
+        "img": [
+          "gen/tesla-emergency-drive-away-539-service-bill-accidental-tap-first-real-use-x2-11010557.jpg"
+        ]
+      },
+      {
+        "text": "Een bestuurder lijkt de functie onbedoeld te hebben gebruikt. Op een zondagochtend vroeg, voor de Formule 1-race in Austin, hoorde een Reddit-gebruiker die stond te laden een geluid. De Model Y naast hem reed weg met de kabel nog in de laadpoort. In zijn video tikt de bestuurder door de meldingen, rijdt weg, stapt dan uit en loopt terug naar de lader. Volgens de filmer zag de bestuurder er moe uit en las hij de waarschuwingen maar half. Of die bestuurder een rekening of boete kreeg, is niet bekend."
+      },
+      {
+        "text": "Het werd het eerste vastgelegde gebruik van de functie in de praktijk genoemd. En het was geen noodgeval. Het tweede geval ging nog minder ver, en liep toch niet goedkoop af."
+      },
+      {
+        "head": "Hoe kan een auto die niet bewoog 539 dollar kosten?",
+        "img": [
+          "supercharger-2.jpg"
+        ]
+      },
+      {
+        "text": "Omdat alleen Tesla Service de melding kan wissen. Volgens berichten op X van een gebruiker die Yaro heet, tikte een van zijn klanten op Activeren terwijl de kabel nog vastzat, en stopte daarna voordat hij wegreed. De auto gaf een melding dat service nodig was. Yaro schreef later dat Tesla Service 539 dollar rekent om de laadpoort te controleren en die melding te wissen."
+      },
+      {
+        "text": "Er ontbreekt nog wel wat. De berichten zeggen niet of die 539 dollar een offerte was of een betaalde rekening, of er iets is vervangen, en of de melding het laden of rijden beperkt. Tesla heeft niet publiek gereageerd. Toch is de logica makkelijk te volgen. Zodra het systeem is geactiveerd, gaat de auto ervan uit dat de laadpoort beschadigd kan zijn, en vraagt om een controle. Het zwakke punt is de stap waarmee een vermoeide bestuurder dat punt überhaupt bereikt.",
+        "img": [
+          "gen/tesla-emergency-drive-away-539-service-bill-accidental-tap-first-real-use-x3-11010557.jpg"
+        ]
+      },
+      {
+        "head": "Waarom gaat het zo makkelijk per ongeluk mis?",
+        "img": [
+          "gen/tesla-emergency-drive-away-539-service-bill-accidental-tap-first-real-use.jpg"
+        ]
+      },
+      {
+        "text": "Omdat de veiligheidsstap veel lijkt op een gewone handeling. De rem vasthouden en op een knop op het scherm tikken doen bestuurders elke dag. De rode waarschuwing verschijnt op dezelfde plek als andere meldingen. En wie verwacht in D te zetten, bevestigt hem misschien op de automatische piloot. De Reddit-gebruiker stelde een veel luidere waarschuwing voor, zoals het hele scherm rood maken en een alarm laten klinken. Anderen vroegen om een duidelijkere uitleg over de schade, of een hoorbare waarschuwing."
+      },
+      {
+        "text": "De laaddirecteur van Tesla, Max de Zegher, zei eerder dat Tesla de functie snel zou verbeteren op basis van feedback. Deze twee gevallen zijn precies die feedback. Maar er is nog niets veranderd."
+      },
+      {
+        "head": "Waar letten we nu op?",
+        "img": [
+          "supercharger-4.jpg"
+        ]
+      },
+      {
+        "text": "Een software-aanpassing, en of Tesla coulant is. Hier letten we op."
+      },
+      {
+        "key": "Sterkere waarschuwing",
+        "text": "Ten eerste een sterkere waarschuwing. Een tweede bevestiging, een geluid of een melding over het hele scherm in een volgende update."
+      },
+      {
+        "key": "Omgang met vergissingen",
+        "text": "Ten tweede hoe Tesla met vergissingen omgaat. Worden activeringen per ongeluk, waarbij de auto niet bewoog, gratis gecontroleerd, of toch gefactureerd?"
+      },
+      {
+        "key": "Boetes",
+        "text": "Ten derde boetes. Tesla heeft nooit gezegd hoe boetes bij misbruik eruitzien, en het geval in Austin is misschien de eerste test."
+      },
+      {
+        "key": "Andere markten",
+        "text": "En ten vierde andere markten. Voorlopig werkt de functie alleen bij Amerikaanse Superchargers."
+      },
+      {
+        "text": "Voor eigenaren is het advies simpel. Zie je bij een Supercharger een rode melding over Emergency Drive Away, lees hem dan voordat je ergens op tikt. Tenzij je in gevaar bent, haal je eerst de stekker eruit.",
+        "img": [
+          "gen/tesla-emergency-drive-away-539-service-bill-accidental-tap-first-real-use-x2-11010557.jpg"
+        ]
+      }
+    ]
+  }
 }

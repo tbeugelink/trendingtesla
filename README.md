@@ -79,11 +79,12 @@ perform much better than illustrations. So for every new article:
 
 ## Shorts first (decided 31 Oct 2026, read this before writing the "short" script)
 
-The numbers of the first days were clear: Shorts got 450-1,100 views each, long news videos 4-218 (mostly ~15),
+The numbers of the first days were clear: Shorts got 450-1,400 views each, long news videos 4-243 (mostly ~15),
 and the story-style Shorts ("SpaceX Had Money for ONE More Launch": 1,122 views in 7 hours) beat the news
 Shorts (typically 741 views after 48 hours) by far. So:
-- **News articles get a Short only, no long video and no "video" script.** Only the weekly evergreen
-  explainer has `"evergreen": true` and a "video" script, and gets a long video too.
+- **Every article still gets a long video too** (a "video" script is required), so the video series on the
+  site and the channel is never interrupted (decided 1 Nov 2026). The Short is where the growth comes from, so
+  it gets the most care.
 - **Write the Short as a story: hook -> tension -> payoff**, under 60 seconds. Hook: the most striking concrete
   fact or turn, in the first sentence. Tension: what was at stake, what stood in the way, what people expected.
   Payoff: what happened and why it matters, ending on the strongest line. Short sentences, a few words in

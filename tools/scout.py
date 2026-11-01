@@ -31,7 +31,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "video"))
 
 CFG = json.loads((ROOT / "ops/scout.json").read_text(encoding="utf-8"))
-BUDGET = {"tesla": 700, "niches": 2500}  # API units per run (uploads need the rest of the daily 10,000)
+BUDGET = {"tesla": 700, "niches": 1800}  # 4 uploads a day (1,600 each) also need quota  # API units per run (uploads need the rest of the daily 10,000)
 units = 0
 at = None
 

@@ -11,6 +11,8 @@ Add new ideas at the bottom at any time.
 - [x] What is Tesla FSD (Supervised), what does it cost, and where can you use it? (what-is-tesla-fsd-supervised-cost-countries-explained)
 - [ ] Grok and FSD: what does it mean when Tesla's AI chatbot meets its self-driving software? (check carefully what is real and what is only announced)
 - [ ] A Tesla phone: what is known, what is rumour, and how could it work with Starlink and your Tesla? (clearly separate facts, statements and speculation)
+- [ ] Step into my office: inside the Tesla Semi cabin, the centre seat, the two screens and what a driver's day looks like
+- [ ] Grok in your Tesla, FSD at the wheel: what each one does, and why you still have to watch the road (FSD Supervised: the driver stays responsible)
 - [ ] Why could Optimus become Tesla's biggest product ever, as Musk says? What it can do now, what it costs and what has to happen first
 - [ ] Tesla's giant solar panel factory: what is planned, where, how big, and why Tesla wants to make its own panels (check the latest official plans)
 - [ ] When the power goes out: why every home should have a backup. We depend on power and internet for almost everything; how a Powerwall keeps the lights, fridge and internet (router or Starlink) on, how long it lasts, what you need for it (backup switch/gateway), and what it costs with and without solar panels (factual: real outage examples, no sales talk)
@@ -62,7 +64,7 @@ Add new ideas at the bottom at any time.
 - [ ] From Falcon 1 to Starship: SpaceX's road from three failures to catching rockets
 - [ ] The Model S that crushed the crash test machine: Tesla's safety story
 - [ ] Why Tesla removed the radar, and then the sensors: the "vision only" bet
-- [ ] The Tesla Semi: from the 2017 reveal to trucks on the road
+- [ ] Tesla Semi: the start of fully autonomous transport? From the 2017 reveal to trucks on the road, and how far self-driving trucks really are
 - [ ] Boring Company: how a traffic joke became the Las Vegas Loop
 - [ ] The Plaid that beat supercars: how Tesla made a family sedan the quickest car in the world
 - [ ] AC Propulsion's tzero: the hand-built electric car that inspired Tesla's founders, and why its makers would not build it
@@ -74,6 +76,7 @@ Strictly factual and balanced: his decisions, risks, failures and successes, wha
 opinion, no hero worship and no bashing. Check every claim (titles are questions on purpose).
 
 - [ ] From Blaster to Master: the 12-year-old who sold his first video game, and what it says about Elon Musk (Blaster, a space game he wrote in BASIC and sold to a computer magazine for about $500; check the exact amount, buyer and year in good sources: often told as PC and Office Technology, 1984)
+- [ ] From PayPal to production hell: how Elon Musk bet his PayPal money on Tesla and SpaceX, and nearly lost it all
 - [ ] How did Elon Musk go from a bullied boy in South Africa to one of the most influential people on Earth?
 - [ ] How did Elon Musk become the richest person on Earth? Where his wealth really comes from
 - [ ] Is Elon Musk on his way to becoming the world's first trillionaire? (check the current figures and what it depends on)

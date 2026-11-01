@@ -685,7 +685,7 @@ def main():
         box = frame(src, shot, st, (tt - pg[0]) if pg else None)
         fr = src.resize((W, H), Image.BILINEAR, box=box)
         xf = min(XFADE, 0.6 * shot["dur"], 0.6 * shots[si - 1]["dur"]) if si > 0 else 0
-        if st < xf:  # smooth crossfade from the previous shot, which keeps moving meanwhile
+        if xf > 0.01 and st < xf:  # smooth crossfade from the previous shot, which keeps moving meanwhile
             pv = shots[si - 1]
             if pv["img"] not in srcs:
                 srcs[pv["img"]] = load_src(pv["img"])

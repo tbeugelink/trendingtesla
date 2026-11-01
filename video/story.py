@@ -607,15 +607,42 @@ def title_card(a, lang):
     return im
 
 
-def end_card(lang):
-    im = Image.new("RGB", (W, H), (12, 12, 14))
-    d = ImageDraw.Draw(im)
-    f1, f2 = S.font(S.FB, 86), S.font(S.FX, 52)
-    t1 = "trendingtesla.com"
-    t2 = {"en": "More Tesla stories", "nl": "Meer Tesla-verhalen"}[lang]
-    d.text(((W - f2.getlength(t2)) / 2, H * 0.42), t2, font=f2, fill=(255, 214, 0))
-    d.text(((W - f1.getlength(t1)) / 2, H * 0.47), t1, font=f1, fill=(255, 255, 255))
-    return im
+SLOGAN = {"en": "Like and subscribe, and go to Trending Tesla dot com for more Tesla news!",
+          "nl": "Like en abonneer, en ga naar Trending Tesla punt com voor meer Tesla-nieuws!"}
+RED = (214, 24, 30)
+
+
+def end_card(lang, bg=None):
+    """The closing card: blurred last photo, a dark band, red LIKE & SUBSCRIBE pill, TrendingTesla.com."""
+    from PIL import ImageFilter, ImageOps
+    if bg is not None:
+        im = ImageOps.fit(bg, (W, H)).filter(ImageFilter.GaussianBlur(18))
+        im = Image.blend(im, Image.new("RGB", (W, H), (0, 0, 0)), 0.45)
+    else:
+        im = Image.new("RGB", (W, H), (12, 12, 14))
+    ov = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    d = ImageDraw.Draw(ov)
+    cy = H * 0.50
+    d.rectangle((0, cy - 190, W, cy + 170), fill=(0, 0, 0, 150))
+    fp = S.font(S.FB, 64)
+    t1 = {"en": "LIKE & SUBSCRIBE", "nl": "LIKE & ABONNEER"}[lang]
+    pw, ph = fp.getlength(t1) + 80, 104
+    d.rounded_rectangle(((W - pw) / 2, cy - 150, (W + pw) / 2, cy - 150 + ph), radius=22, fill=RED + (255,))
+    bb = fp.getbbox(t1)
+    d.text(((W - fp.getlength(t1)) / 2, cy - 150 + (ph - (bb[3] + bb[1])) / 2), t1, font=fp, fill="white")
+    fs = 136
+    parts = [("Trending", (255, 255, 255)), ("Tesla", RED), (".com", (255, 255, 255))]
+    while True:
+        f = S.font(S.FB, fs)
+        tw = sum(f.getlength(t) for t, _ in parts)
+        if tw < W * 0.92 or fs < 60:
+            break
+        fs -= 4
+    x, y = (W - tw) / 2, cy - 10
+    for t, c in parts:
+        d.text((x, y), t, font=f, fill=c, stroke_width=3, stroke_fill=(0, 0, 0))
+        x += f.getlength(t)
+    return Image.alpha_composite(im.convert("RGBA"), ov).convert("RGB")
 
 
 def main():
@@ -646,13 +673,17 @@ def main():
         t += b["_dur"]
         print(f"beat {i} {b['part']:7s} {b['move']:5s} {dur:5.2f}s {b['_img'].name}: {b['text'][:60]}")
     body_end = t
-    total = body_end + END_SEC
+    slog = tmp / "slogan.mp3"
+    tts(SLOGAN[lang], 1.05, slog)
+    end_sec = max(END_SEC, S.duration(slog) + 0.8)
+    total = body_end + end_sec
     if total > 60:
         print(f"::warning::story Short is {total:.1f}s (over 60 s): shorten the script")
 
     # 2. sound: voice on the timeline, impact at the hook, a low bed under the tension, a drop at the payoff
     pay = next((b["_t0"] for b in beats if b["part"] == "payoff"), None)
     layers = [(b["_voice"], b["_t0"] + (0.25 if i == 0 else 0), 1.0) for i, b in enumerate(beats)]
+    layers.append((slog, body_end + 0.2, 1.0))
     try:
         layers.append((sfx(beats[0].get("sfx") or DEFAULT_SFX["hook"], 2.5, tmp), 0.0, SFX_VOL))
         bed_len = (pay or body_end) - beats[0]["_dur"]
@@ -678,7 +709,6 @@ def main():
     # 3. picture: every frame moves; label on the opening shot; captions; end card
     label, ltop = title_card(a, lang), H * 0.60
     capimgs = {}
-    endimg = end_card(lang)
     out = OUT / f"{slug}-{lang}-short.mp4"
     enc = subprocess.Popen(["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24",
                             "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-", "-i", str(audio), "-map", "0:v", "-map", "1:a",
@@ -687,6 +717,11 @@ def main():
     rnd = random.Random(slug)
     shots = make_shots(beats, a["_pool"], rnd)
     print(f"{len(shots)} shots, {len(set(x['img'] for x in shots))} photos")
+    try:
+        endimg = end_card(lang, load_src(shots[-1]["img"]))
+    except Exception as e:
+        print(f"::warning::end card background skipped: {e}")
+        endimg = end_card(lang)
     srcs = {}
     n = int(round(total * FPS))
     si = 0
@@ -707,7 +742,7 @@ def main():
         tt = k / FPS
         if tt >= body_end:
             fr = endimg.copy()
-            zz = 1 + 0.03 * (tt - body_end) / END_SEC
+            zz = 1 + 0.03 * (tt - body_end) / end_sec
             if zz > 1:
                 cw, ch = W / zz, H / zz
                 fr = fr.resize((W, H), Image.BILINEAR, box=((W - cw) / 2, (H - ch) / 2, (W + cw) / 2, (H + ch) / 2))

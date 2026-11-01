@@ -142,8 +142,17 @@ def gen_scene(a, b, scene):
     subject = b.get("subject") or g.get("subject") or "the Tesla product in the story"
     h = hashlib.md5(f"{scene}|{subject}".encode()).hexdigest()[:10]
     f = S.build.STATIC / "img/gen/story" / f"{a['slug'][:70]}-{h}.jpg"
+    qa_f = f.parent / "qa.json"
+    qa = json.loads(qa_f.read_text()) if qa_f.exists() else {}
     if f.exists():
-        return f
+        if f.name in qa:
+            return f
+        ok, why = check_scene(G, Image.open(f), scene, subject, b)
+        if ok:
+            qa[f.name] = "ok"
+            qa_f.write_text(json.dumps(qa, indent=1))
+            return f
+        print(f"::warning::kept photo rejected ({why[:160]}), making a new one")
     refs = []
     for r in (b.get("refs") or g.get("refs") or [])[:3]:
         k = json.dumps(r, sort_keys=True)
@@ -169,6 +178,8 @@ def gen_scene(a, b, scene):
         raise RuntimeError(f"no correct photo for: {scene[:60]}")
     f.parent.mkdir(parents=True, exist_ok=True)
     im.save(f, "JPEG", quality=92)
+    qa[f.name] = "ok"
+    qa_f.write_text(json.dumps(qa, indent=1))
     return f
 
 
@@ -201,8 +212,13 @@ def check_scene(G, im, scene, subject, b):
         names = [m["name"].split("/", 1)[1] for m in G.api("models?pageSize=200").get("models", [])
                  if "generateContent" in m.get("supportedGenerationMethods", []) and "flash" in m["name"]
                  and "image" not in m["name"] and "tts" not in m["name"] and "live" not in m["name"]]
-        pick = [n for n in names if n.startswith("gemini-2.5-flash") and "lite" not in n and "preview" not in n] or names
-        CHECKER.append(pick[0] if pick else None)
+        def ver(n):  # newest version first: gemini-3.8-flash before gemini-2.5-flash
+            m = re.search(r"gemini-(\d+(?:\.\d+)?)", n)
+            return float(m.group(1)) if m else 0.0
+        good = [n for n in names if "lite" not in n and "preview" not in n and "exp" not in n] or names
+        good.sort(key=lambda n: (ver(n), -len(n)), reverse=True)
+        CHECKER.extend(good[:3] or [None])
+        print(f"photo check model: {CHECKER[0]}")
     if not CHECKER[0]:
         return True, ""
     buf = io.BytesIO()
@@ -213,17 +229,18 @@ def check_scene(G, im, scene, subject, b):
          "a cable going to the wrong side of the car, invented readable text on screens or signs, extra or missing "
          "parts, physically impossible things, and whether it really shows the requested moment. "
          'Answer only JSON: {"ok": true or false, "problems": "short list, empty when ok"}')
-    try:
-        d = G.api(f"models/{CHECKER[0]}:generateContent",
+    for mdl in CHECKER:
+      try:
+        d = G.api(f"models/{mdl}:generateContent",
                   {"contents": [{"role": "user", "parts": [{"text": q}, {"inline_data": {
                       "mime_type": "image/jpeg", "data": base64.b64encode(buf.getvalue()).decode()}}]}],
                    "generationConfig": {"responseMimeType": "application/json", "temperature": 0}})
         txt = d["candidates"][0]["content"]["parts"][0]["text"]
         r = json.loads(txt[txt.find("{"):txt.rfind("}") + 1])
         return bool(r.get("ok")), str(r.get("problems") or "")
-    except Exception as e:  # the check is a safety net: never block the video on it
-        print(f"::warning::photo check skipped: {e}")
-        return True, ""
+      except Exception as e:  # try the next model; the check is a safety net and never blocks the video
+        print(f"::warning::photo check with {mdl} failed: {str(e)[:150]}")
+    return True, ""
 
 
 def assign_images(a, beats):

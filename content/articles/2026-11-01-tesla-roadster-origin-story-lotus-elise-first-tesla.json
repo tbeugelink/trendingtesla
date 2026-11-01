@@ -22,6 +22,9 @@
     }
   ],
   "images": [
+    "gen/tesla-roadster-origin-story-lotus-elise-first-tesla.jpg",
+    "gen/tesla-roadster-origin-story-lotus-elise-first-tesla-x3-11012026.jpg",
+    "gen/tesla-roadster-origin-story-lotus-elise-first-tesla-x2-11012026.jpg",
     "models/msc-2.jpg",
     "models/rd-25.jpg",
     "gigafactory-fremont.jpg"
@@ -38,13 +41,17 @@
     "extra": [
       {
         "prompt": "A red first-generation Tesla Roadster parked inside a small, cluttered Silicon Valley engineering workshop at night in the mid-2000s, seen from the side, a workbench in the foreground with neat trays of small cylindrical battery cells, yellow and red tool chests, cool blue work lights, quiet late-night mood",
-        "describe": "An early Tesla Roadster in a small workshop at night, with trays of battery cells on the bench"
+        "describe": "An early Tesla Roadster in a small workshop at night, with trays of battery cells on the bench",
+        "file": "gen/tesla-roadster-origin-story-lotus-elise-first-tesla-x2-11012026.jpg"
       },
       {
         "prompt": "A red first-generation Tesla Roadster standing alone under warm spotlights in a quiet car museum hall, seen from the rear three-quarter at eye level, polished concrete floor reflecting the car, soft blue and yellow light on the walls, calm and reverent mood",
-        "describe": "The original Tesla Roadster on display under spotlights in a museum hall"
+        "describe": "The original Tesla Roadster on display under spotlights in a museum hall",
+        "file": "gen/tesla-roadster-origin-story-lotus-elise-first-tesla-x3-11012026.jpg"
       }
-    ]
+    ],
+    "done": true,
+    "model": "gemini-3.1-flash-image"
   },
   "label": {
     "style": "a",
@@ -880,5 +887,6 @@
     ],
     "yt_title_en": "How the First Tesla Roadster Nearly Broke the Company",
     "yt_title_nl": "Hoe de Eerste Tesla Roadster het Bedrijf Bijna Brak"
-  }
+  },
+  "image": "gen/tesla-roadster-origin-story-lotus-elise-first-tesla.jpg"
 }

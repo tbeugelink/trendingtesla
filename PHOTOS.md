@@ -243,3 +243,6 @@ Articles with a "models" key automatically use real-life photos of that model. Y
 - gen/tesla-emergency-drive-away-539-service-bill-accidental-tap-first-real-use.jpg — A Model Y charging at a V3 Supercharger on a quiet autumn night
 - gen/tesla-emergency-drive-away-539-service-bill-accidental-tap-first-real-use-x2-11010557.jpg — Close-up of a Supercharger handle in a Model Y charge port in the rain
 - gen/tesla-emergency-drive-away-539-service-bill-accidental-tap-first-real-use-x3-11010557.jpg — A row of V3 Supercharger stalls with Teslas charging on a sunny morning
+- gen/tesla-roadster-origin-story-lotus-elise-first-tesla.jpg — A red first-generation Tesla Roadster driving along a California coastal road at golden hour
+- gen/tesla-roadster-origin-story-lotus-elise-first-tesla-x2-11012026.jpg — An early Tesla Roadster in a small workshop at night, with trays of battery cells on the bench
+- gen/tesla-roadster-origin-story-lotus-elise-first-tesla-x3-11012026.jpg — The original Tesla Roadster on display under spotlights in a museum hall

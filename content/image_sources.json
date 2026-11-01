@@ -133,5 +133,44 @@
         "commons": "Tesla Supercharger V3"
       }
     ]
+  },
+  "gen/tesla-roadster-origin-story-lotus-elise-first-tesla.jpg": {
+    "article": "tesla-roadster-origin-story-lotus-elise-first-tesla",
+    "model": "gemini-3.1-flash-image",
+    "made": "2026-11-01",
+    "references": [
+      {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Tesla_%22Roadster%22_-_2008.jpg/1280px-Tesla_%22Roadster%22_-_2008.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page": "https://commons.wikimedia.org/wiki/File:Tesla_%22Roadster%22_-_2008.jpg",
+        "license": "CC BY 2.0",
+        "commons": "Tesla Roadster 2008"
+      }
+    ]
+  },
+  "gen/tesla-roadster-origin-story-lotus-elise-first-tesla-x2-11012026.jpg": {
+    "article": "tesla-roadster-origin-story-lotus-elise-first-tesla",
+    "model": "gemini-3.1-flash-image",
+    "made": "2026-11-01",
+    "references": [
+      {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Tesla_%22Roadster%22_-_2008.jpg/1280px-Tesla_%22Roadster%22_-_2008.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page": "https://commons.wikimedia.org/wiki/File:Tesla_%22Roadster%22_-_2008.jpg",
+        "license": "CC BY 2.0",
+        "commons": "Tesla Roadster 2008"
+      }
+    ]
+  },
+  "gen/tesla-roadster-origin-story-lotus-elise-first-tesla-x3-11012026.jpg": {
+    "article": "tesla-roadster-origin-story-lotus-elise-first-tesla",
+    "model": "gemini-3.1-flash-image",
+    "made": "2026-11-01",
+    "references": [
+      {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Tesla_%22Roadster%22_-_2008.jpg/1280px-Tesla_%22Roadster%22_-_2008.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page": "https://commons.wikimedia.org/wiki/File:Tesla_%22Roadster%22_-_2008.jpg",
+        "license": "CC BY 2.0",
+        "commons": "Tesla Roadster 2008"
+      }
+    ]
   }
 }

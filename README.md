@@ -100,6 +100,11 @@ Goal: **interesting, entertaining and educational**, always factually exact.
   actually work, and why does it still stop at night?" rather than "Robotaxi now runs until 2 a.m.".
 - Big lasting news (a new model, a first, a milestone) may be the subject, written with the lasting angle
   (what it is, how it works, why it matters) and a title that will still make sense next year.
+- **Space and Optimus get much more room** (decided 1 Nov 2026): SpaceX (Starship, the Moon, Mars, Starlink
+  launches) is a core subject, about one in three articles; the link to Tesla can be the Tesla-SpaceX merger or
+  the shared technology and vision, one or two sentences are enough. Optimus, which Musk calls Tesla's biggest
+  product ever, comes back often: as its own topic, and named wherever it plays a role (factories, Robotaxi,
+  Mars). Keep promises and facts apart: what Musk says will happen is a statement, not a fact.
 - Titles, headings, labels and YouTube titles must not date quickly: no "today", "this week", no dates; a year
   only when it is part of the question ("in 2026").
 - After writing, tick the topic in ops/evergreen-topics.md with the slug, and add 1-3 new ideas you came

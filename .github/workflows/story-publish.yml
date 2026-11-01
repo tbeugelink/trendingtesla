@@ -1,0 +1,39 @@
+name: Publish story Short
+
+# By hand (or by Claude): give a reviewed story Short its title thumbnail and make it public. Within 15 minutes
+# shorts-page.yml posts it to TikTok, Instagram and Facebook and puts it on the site.
+on:
+  workflow_dispatch:
+    inputs:
+      id:
+        description: "YouTube video id"
+        required: true
+      run:
+        description: "Run id of the 'Make story Short' run that made it"
+        required: true
+      slug:
+        description: "Article slug"
+        required: true
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+      - name: Install ffmpeg
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg > /dev/null
+      - name: Get the video file
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh run download "${{ github.event.inputs.run }}" -n "story-${{ github.event.inputs.slug }}" -D video/out
+      - name: Thumbnail and publish
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+        run: python3 tools/story_publish.py "${{ github.event.inputs.id }}" "video/out/${{ github.event.inputs.slug }}-en-short.mp4"

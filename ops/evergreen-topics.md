@@ -13,7 +13,7 @@ Add new ideas at the bottom at any time.
 - [ ] A Tesla phone: what is known, what is rumour, and how could it work with Starlink and your Tesla? (clearly separate facts, statements and speculation)
 - [ ] Why could Optimus become Tesla's biggest product ever, as Musk says? What it can do now, what it costs and what has to happen first
 - [ ] Tesla's giant solar panel factory: what is planned, where, how big, and why Tesla wants to make its own panels (check the latest official plans)
-- [ ] Does every home need a battery? What a Powerwall does with and without solar panels, who gains most and who does not
+- [ ] When the power goes out: why every home should have a backup. We depend on power and internet for almost everything; how a Powerwall keeps the lights, fridge and internet (router or Starlink) on, how long it lasts, what you need for it (backup switch/gateway), and what it costs with and without solar panels (factual: real outage examples, no sales talk)
 - [ ] Is FSD really 8 times safer than human drivers? What Tesla's safety data says, how it is measured and what critics point out
 - [ ] Starship and Starlink: how one launch can put a whole batch of satellites into a very low orbit, and why so low (check the real numbers per launch and the orbit height)
 - [ ] When are we going to Mars? The real timeline, what Starship still has to prove, and the launch windows

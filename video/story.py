@@ -123,6 +123,9 @@ VERT = ("Photorealistic editorial photo, VERTICAL 9:16 portrait format, natural 
         "no licence plates, no recognisable real person. It must show exactly this moment of the story: ")
 
 
+REFS = {}
+
+
 def gen_scene(a, b, scene):
     """A new vertical photo for one moment of the story (Nano Banana), cached in static/img/gen/story/."""
     sys.path.insert(0, str(S.ROOT / "tools"))
@@ -135,12 +138,16 @@ def gen_scene(a, b, scene):
         return f
     refs = []
     for r in (b.get("refs") or g.get("refs") or [])[:3]:
-        try:
-            if r.get("commons") and not r.get("src"):
-                r = {**G.commons(r["commons"]), **r}
-            refs.append(G.load_ref(r["src"]))
-        except Exception as e:
-            print(f"::warning::scene reference skipped: {e}")
+        k = json.dumps(r, sort_keys=True)
+        if k not in REFS:  # fetch each reference once per video (Wikimedia limits repeated requests)
+            try:
+                rr = {**G.commons(r["commons"]), **r} if r.get("commons") and not r.get("src") else r
+                REFS[k] = G.load_ref(rr["src"])
+            except Exception as e:
+                print(f"::warning::scene reference skipped: {e}")
+                REFS[k] = None
+        if REFS[k] is not None:
+            refs.append(REFS[k])
     parts = [{"text": VERT + scene.strip() + "\n\n" + G.RULES.format(subject=subject)}]
     for r in refs:
         import io

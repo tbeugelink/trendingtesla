@@ -1,0 +1,68 @@
+name: Make story Short (for review)
+
+# Story-style Short (video/story.py): uploaded to YouTube as PRIVATE so William can watch and listen first.
+# He approves by setting it to Public in YouTube Studio; tools/story_approve.py (in shorts-page.yml) then posts it
+# to TikTok, Instagram and Facebook, and the site picks it up from the public feed.
+on:
+  workflow_dispatch:
+    inputs:
+      slug:
+        description: "Article slug (without date)"
+        required: true
+      upload:
+        description: "Upload to YouTube as private for review (yes/no)"
+        required: false
+        default: "yes"
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  story:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v5
+      - name: Install tools
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg > /dev/null
+          pip install --quiet pillow num2words
+      - name: Make the story Short
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          ELEVENLABS_VOICE_ID: ${{ vars.ELEVENLABS_VOICE_ID }}
+          ELEVENLABS_VOICE_ID_3: ${{ vars.ELEVENLABS_VOICE_ID_3 }}
+        run: python3 video/story.py "${{ github.event.inputs.slug }}" en
+      - uses: actions/upload-artifact@v4
+        with:
+          name: story-${{ github.event.inputs.slug }}
+          path: video/out/${{ github.event.inputs.slug }}-en-short.mp4
+          retention-days: 30
+      - name: Upload to YouTube as private (for review)
+        if: github.event.inputs.upload == 'yes'
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+          YT_PRIVACY: private
+        run: |
+          s="${{ github.event.inputs.slug }}"
+          python3 video/upload.py "video/out/$s-en-short.mp4" en | tee up.txt
+          id=$(grep -o 'youtu.be/[A-Za-z0-9_-]*' up.txt | head -1 | cut -d/ -f2)
+          [ -n "$id" ] || exit 1
+          echo "### Story Short ready for review: https://youtu.be/$id (private). Set it to Public in YouTube Studio to publish." >> "$GITHUB_STEP_SUMMARY"
+          git config user.name "TrendingTesla bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for i in 1 2 3 4 5; do
+            git fetch -q origin main && git reset -q --hard origin/main
+            python3 -c "
+          import json,sys,datetime,pathlib
+          p=pathlib.Path('ops/story-pending.json'); d=json.loads(p.read_text()) if p.exists() else []
+          d.append({'id':'$id','slug':'$s','run':${{ github.run_id }},'made':datetime.datetime.now(datetime.timezone.utc).isoformat(timespec='seconds')})
+          p.write_text(json.dumps(d,indent=1)+'\n')"
+            git add ops/story-pending.json
+            git commit -qm "Story Short for review: $s (https://youtu.be/$id, private)" && git push -q origin HEAD:main && exit 0
+            sleep $((5 + RANDOM % 10))
+          done
+          exit 1

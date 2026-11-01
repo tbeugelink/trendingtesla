@@ -77,6 +77,37 @@ perform much better than illustrations. So for every new article:
    "describe": "..."}`: a different setting, angle or moment than the main scene, so the video can change
    pictures without repeating. Same rules as gen_image: illustrations, never a fake photo of the event.
 
+## Timeless content first (decided 1 Nov 2026, read this before choosing a topic)
+
+TrendingTesla is a trend site, not a news site: news channels exist plenty, and news is only relevant for a
+few days. Every article (and its Short and long video) must stay interesting for months or years, so it keeps
+bringing views and visitors. Our best videos prove it: "Tesla Broke Henry Ford's Assembly Line" (1,987 views),
+"SpaceX Had Money for ONE More Launch" (1,139) and "How Starlink works" (93% watched) beat every news item.
+Goal: **interesting, entertaining and educational**, always factually exact.
+
+- **Morning task: an explainer** people search for and keep asking: how/why/what/which, comparisons
+  ("Model 3 vs Model Y"), myths ("Does a Tesla battery really die after 8 years?"), "what happens if…",
+  how-to for owners. First choice: the first unchecked topic in ops/evergreen-topics.md (check the site does
+  not already answer it; if it does, tick it with "(already covered: <slug>)" and take the next).
+- **Evening task: a story** that entertains and teaches: the history and the people behind a product or a
+  decision, how something is made, a turning point, a near failure, a record, a bold bet and how it played
+  out (like Henry Ford's assembly line and the Cybercab's unboxed process, or SpaceX's last-chance launch).
+  First choice: the first unchecked topic under "Stories" in ops/evergreen-topics.md.
+- **Trending is the hook, not the subject.** Use what Tesla fans talk about now (the news of the week,
+  ops/scout-tesla.md: other channels' outlier videos and viewers' questions) to pick WHICH timeless topic to
+  do today, and mention the current event in a sentence or two as the reason it matters now. The article
+  itself answers the lasting question. Example: the Robotaxi got longer hours -> "How does Tesla's Robotaxi
+  actually work, and why does it still stop at night?" rather than "Robotaxi now runs until 2 a.m.".
+- Big lasting news (a new model, a first, a milestone) may be the subject, written with the lasting angle
+  (what it is, how it works, why it matters) and a title that will still make sense next year.
+- Titles, headings, labels and YouTube titles must not date quickly: no "today", "this week", no dates; a year
+  only when it is part of the question ("in 2026").
+- After writing, tick the topic in ops/evergreen-topics.md with the slug, and add 1-3 new ideas you came
+  across (explainers to the list, stories under "Stories"), so the lists never run dry. Never repeat a topic
+  the site already covers; a new angle on it is fine.
+- Still: own words, verified facts with sources, no invented drama, no hype words, no promise the title does
+  not keep.
+
 ## Shorts first (decided 31 Oct 2026, read this before writing the "short" script)
 
 The numbers of the first days were clear: Shorts got 450-1,400 views each, long news videos 4-243 (mostly ~15),

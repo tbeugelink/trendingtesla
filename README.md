@@ -114,6 +114,7 @@ A story Short is a list of beats in `"short": {"story": [...]}`: one beat per se
   put it - e.g. NEVER MOVED, BILL $539, WHY?, SINCE OCTOBER, HIDDEN BUTTON, EMERGENCY, REPAIRS?, TAPPED ACTIVATE,
   READ BEFORE -> YOU TAP! (split a longer phrase into two pops that follow the voice), $25,000!. `"say"` = the exact spoken words where it appears (it shows 0.15 s before them), `"show"`
   = what is on screen. Every shot has a key word; never one that belongs to another sentence.
+- The last key word is the core message of the Short (e.g. YOU TAP!): it stays 2 s longer after the voice.
 - Calm pictures: about 3 s per photo, long crossfades, slow steady motion; shaking only for launches.
 
 ## Openings and variety (read this before writing the "short" and "video" scripts)

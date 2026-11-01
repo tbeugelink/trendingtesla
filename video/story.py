@@ -43,6 +43,7 @@ DEFAULT_SFX = {  # natural cinematic sounds only (no whistles, coins, spins)
     "bed": "Low tense cinematic ambient drone, dark and subtle, slowly building, no melody",
 }
 END_SEC = 2.2
+END_HOLD = 2.0  # the closing key word (the core message) stays 2 s longer after the voice ends
 
 
 def post(url, body):
@@ -641,7 +642,7 @@ def main():
         pops += [(p0, p1, txt, i) for p0, p1, txt in find_pops(b, words, t + (0.25 if i == 0 else 0))]
         nxt = beats[i + 1]["part"] if i + 1 < len(beats) else None
         gap = GAP["payoff"] if nxt == "payoff" and b["part"] != "payoff" else GAP[b["part"]]
-        b["_dur"] = dur + gap + (0.25 if i == 0 else 0)
+        b["_dur"] = dur + gap + (0.25 if i == 0 else 0) + (END_HOLD if i == len(beats) - 1 else 0)
         t += b["_dur"]
         print(f"beat {i} {b['part']:7s} {b['move']:5s} {dur:5.2f}s {b['_img'].name}: {b['text'][:60]}")
     body_end = t

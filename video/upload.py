@@ -39,13 +39,15 @@ def read_meta(txt):
     return get("TITLE"), get("DESCRIPTION"), [t.strip() for t in get("TAGS").split(",") if t.strip()]
 
 
-def set_thumbnail(vid, mp4, at=None, at_sec=1.0, jpg=None):
+def set_thumbnail(vid, mp4, at=None, at_sec=None, jpg=None):
     """Use the opening frame (photo + label) as the YouTube thumbnail: 1280x720 for long videos, 720x1280 for
     Shorts (otherwise YouTube picks a random frame, and Shorts with shared photos end up looking the same).
     A little extra contrast, colour and sharpness makes it stand out in the small feed tiles.
     jpg: upload this ready-made image instead of taking a frame from mp4."""
     import subprocess
     import tempfile
+    if at_sec is None:  # story Shorts show their big title only in the first moment, before the first key word
+        at_sec = float(os.environ.get("THUMB_AT", "1.0"))
     if jpg is None:
         jpg = Path(tempfile.mkdtemp()) / f"{vid}.jpg"
         size = "720:1280" if str(mp4).endswith("-short.mp4") else "1280:720"

@@ -62,6 +62,7 @@ jobs:
           YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
           YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
           YT_PRIVACY: private
+          THUMB_AT: "0.2"
         run: |
           s="${{ github.event.inputs.slug }}"
           python3 video/upload.py "video/out/$s-en-short.mp4" en | tee up.txt

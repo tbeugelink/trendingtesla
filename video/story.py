@@ -32,8 +32,8 @@ W, H, FPS = 1080, 1920, 30
 OUT = S.OUT
 KEY = os.environ.get("ELEVENLABS_API_KEY", "")
 VOICE = os.environ.get("ELEVENLABS_VOICE_ID_3") or os.environ.get("ELEVENLABS_VOICE_ID", "")
-SPEED = {"hook": 0.95, "tension": 1.0, "payoff": 0.95}
-GAP = {"hook": 0.45, "tension": 0.22, "payoff": 0.35}
+SPEED = {"hook": 1.0, "tension": 1.1, "payoff": 1.0}
+GAP = {"hook": 0.35, "tension": 0.12, "payoff": 0.3}
 SFX_VOL, BED_VOL = 0.45, 0.14
 DEFAULT_SFX = {  # natural cinematic sounds only (no whistles, coins, spins)
     "hook": "Deep cinematic impact hit with a low boom and short rumble tail",
@@ -53,7 +53,9 @@ def post(url, body):
 def tts(text, speed, out):
     d = json.loads(post(f"https://api.elevenlabs.io/v1/text-to-speech/{VOICE}/with-timestamps?output_format=mp3_44100_192",
                         {"text": text, "model_id": os.environ.get("ELEVENLABS_MODEL", "eleven_multilingual_v2"),
-                         "voice_settings": {"stability": 0.28, "similarity_boost": 0.8, "style": 0.5, "speed": speed}}))
+                         "voice_settings": {"stability": float(os.environ.get("STORY_STABILITY", "0.2")), "similarity_boost": 0.8,
+                                            "style": float(os.environ.get("STORY_STYLE", "0.8")),
+                                            "use_speaker_boost": True, "speed": speed}}))
     out.write_bytes(base64.b64decode(d["audio_base64"]))
     al = d.get("alignment") or d["normalized_alignment"]
     return S.words_timed(al["characters"], al["character_start_times_seconds"], al["character_end_times_seconds"])
@@ -124,7 +126,7 @@ def assign_images(a, beats):
         own += [q for q in S.photos(a) if q not in own][:3 - len(own)]
     gen = [p for p in own if "/gen/" in str(p)]
     order = gen + [p for p in own if p not in gen]
-    j = 0
+    j, used = 0, {}
     for i, b in enumerate(beats):
         p = resolve(b["img"]) if b.get("img") else None
         if not p:
@@ -134,9 +136,11 @@ def assign_images(a, beats):
                 p = order[j % len(order)]
             j += 1
         b["_img"] = p
+        b["_use"] = used.get(p, 0)  # 0 = whole photo; 1, 2, ... = a different close-up detail of it
+        used[p] = b["_use"] + 1
 
 
-def load_src(p, move):
+def load_src(p, move, use=0):
     im = Image.open(p).convert("RGB")
     # cover the portrait frame with room to move: "rise" needs extra height, the rest a little zoom margin
     need_h = H * (1.30 if move == "rise" else 1.12)
@@ -148,7 +152,10 @@ def ease(x):
     return 0.5 - 0.5 * math.cos(math.pi * max(0.0, min(1.0, x)))
 
 
-def frame(src, move, u, t, d, rnd):
+DETAIL = [(0.0, 0.0), (-0.22, 0.10), (0.22, -0.12), (0.0, -0.25), (0.0, 0.22)]  # focus offsets for close-ups
+
+
+def frame(src, move, u, t, d, rnd, use=0):
     """Crop box (in source pixels) for progress u (0..1) of a shot; t = seconds into the shot."""
     sw, sh = src.size
     if move == "punch":
@@ -159,9 +166,15 @@ def frame(src, move, u, t, d, rnd):
         z = 1.0 + 0.07 * u
     else:
         z = 1.02
+    if use:  # a photo shown again: a tighter close-up of another part of it, so it feels like a new shot
+        z *= 1.55
     fh = min(H / z, sh)  # the source is scaled so 1 source pixel = 1 video pixel at zoom 1
     fw = fh * W / H
     cx, cy = sw / 2, sh / 2
+    if use:
+        ox, oy = DETAIL[use % len(DETAIL)] if use % len(DETAIL) else DETAIL[1]
+        cx += ox * (sw - fw)
+        cy += oy * (sh - fh)
     if move == "pan":  # small, so the subject stays near the centre (the Short shows only the middle of the photo)
         dirn = 1 if rnd < 0.5 else -1
         cx += dirn * (ease(u) - 0.5) * min(0.10 * sw, (sw - fw) / 2)
@@ -184,6 +197,43 @@ def frame(src, move, u, t, d, rnd):
 
 
 FCAP = S.font(S.FB, 92)
+FPOP = S.font(S.FB, 230)
+NUM = re.compile(r"^[$€£]?\d[\d.,]*[%kKmM]?$")
+
+
+def norm(w):
+    return re.sub(r"[^\w$€£%'-]", "", w).lower()
+
+
+def pop_img(txt):
+    """A key word or number, huge and yellow, on its own (not part of the caption)."""
+    f = FPOP
+    while f.getlength(txt) > W - 120 and f.size > 90:
+        f = S.font(S.FB, f.size - 10)
+    im = Image.new("RGBA", (W, 420), (0, 0, 0, 0))
+    d = ImageDraw.Draw(im)
+    d.text(((W - f.getlength(txt)) / 2 + 8, 70 + 10), txt, font=f, fill=(0, 0, 0, 150))
+    d.text(((W - f.getlength(txt)) / 2, 70), txt, font=f, fill=(255, 214, 0), stroke_width=12, stroke_fill=(0, 0, 0))
+    return im
+
+
+def find_pops(b, words, t0):
+    """Pop words of a beat: its "pop" list (words or phrases as spoken, shown as written in "pop") or, without
+    one, words in capitals and numbers. Returns (start, end, text) on the video timeline."""
+    wanted = b.get("pop")
+    if wanted is None:
+        wanted = [w for w, _, _ in words if (w.strip(".,!?;:").isupper() and len(re.sub(r"\W", "", w)) > 1)
+                  or NUM.match(w.strip(".,!?;:"))]
+    out = []
+    for p in wanted if isinstance(wanted, list) else [wanted]:
+        shown, say = (p.get("show"), p.get("say")) if isinstance(p, dict) else (p, p)
+        toks = [norm(x) for x in str(say).split()]
+        for k in range(len(words) - len(toks) + 1):
+            if [norm(w) for w, _, _ in words[k:k + len(toks)]] == toks:
+                st, en = words[k][1], words[k + len(toks) - 1][2]
+                out.append((t0 + st, t0 + max(en, st + 0.9), str(shown).strip(".,!?;:").upper()))
+                break
+    return out
 
 
 def caption_img(words):
@@ -244,13 +294,14 @@ def main():
     assign_images(a, beats)
 
     # 1. voice per beat, timeline
-    t, caps = 0.25, []
+    t, caps, pops = 0.25, [], []
     for i, b in enumerate(beats):
         f = tmp / f"v{i:02d}.mp3"
         words = tts(S.spoken(b["text"], lang), float(b.get("speed") or SPEED[b["part"]]), f)
         dur = S.duration(f)
         b["_voice"], b["_t0"] = f, t
         caps += groups(words, t)
+        pops += find_pops(b, words, t + (0.25 if i == 0 else 0))
         nxt = beats[i + 1]["part"] if i + 1 < len(beats) else None
         gap = GAP["payoff"] if nxt == "payoff" and b["part"] != "payoff" else GAP[b["part"]]
         b["_dur"] = dur + gap + (0.25 if i == 0 else 0)
@@ -313,14 +364,26 @@ def main():
             bi += 1
         b = beats[bi]
         if bi not in srcs:
-            srcs = {bi: (load_src(b["_img"], b["move"]), rnd.random())}
+            srcs = {bi: (load_src(b["_img"], b["move"], b["_use"]), rnd.random())}
         src, r = srcs[bi]
         st = tt - b["_t0"]
-        box = frame(src, b["move"], st / b["_dur"], st, b["_dur"], r)
+        box = frame(src, b["move"], st / b["_dur"], st, b["_dur"], r, b["_use"])
         fr = src.resize((W, H), Image.BILINEAR, box=box).convert("RGBA")
         if bi == 0:  # the label tells what the story is about while the hook is spoken
             fr.alpha_composite(label)
-        cg = next((c for c in caps if c[0] <= tt < c[1] + 0.15), None)
+        pg = next((p for p in pops if p[0] <= tt < p[1]), None)
+        cg = None if pg else next((c for c in caps if c[0] <= tt < c[1] + 0.15), None)
+        if pg:  # a key word pops in big (scale 1.35 -> 1 in 0.15 s) and replaces the caption while it is spoken
+            key = "POP " + pg[2]
+            if key not in capimgs:
+                capimgs[key] = pop_img(pg[2])
+            pi = capimgs[key]
+            sc = 1 + 0.35 * max(0.0, 1 - (tt - pg[0]) / 0.15)
+            if sc > 1.001:
+                pi = pi.resize((int(W * sc), int(420 * sc)), Image.BILINEAR)
+                ox, oy = (pi.width - W) // 2, (pi.height - 420) // 2
+                pi = pi.crop((ox, oy, ox + W, oy + 420))
+            fr.alpha_composite(pi, (0, int(H * 0.40)))
         if cg:
             key = " ".join(cg[2])
             if key not in capimgs:

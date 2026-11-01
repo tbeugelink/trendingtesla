@@ -76,7 +76,114 @@
     "title_en": "One wrong tap, a five hundred thirty-nine dollar bill?",
     "title_nl": "Eén foute tik, een rekening van vijfhonderdnegenendertig dollar?",
     "yt_title_en": "One Wrong Tap Reportedly Cost a Tesla Owner $539",
-    "yt_title_nl": "Tesla-Eigenaar Krijgt Naar Verluidt $539 Rekening Na Eén Tik"
+    "yt_title_nl": "Tesla-Eigenaar Krijgt Naar Verluidt $539 Rekening Na Eén Tik",
+    "story": [
+      {
+        "part": "hook",
+        "text": "This Tesla NEVER moved an inch. And the bill was still five hundred thirty-nine dollars!",
+        "pop": [
+          {
+            "say": "NEVER",
+            "show": "NEVER"
+          },
+          {
+            "say": "five hundred thirty-nine dollars",
+            "show": "$539"
+          }
+        ]
+      },
+      {
+        "part": "tension",
+        "text": "Here's why. Since October, US Superchargers have a hidden emergency button.",
+        "pop": [
+          {
+            "say": "emergency button",
+            "show": "EMERGENCY BUTTON"
+          }
+        ]
+      },
+      {
+        "part": "tension",
+        "text": "In danger? Just drive off, with the cable still plugged in!",
+        "pop": [
+          {
+            "say": "drive off",
+            "show": "DRIVE OFF"
+          }
+        ]
+      },
+      {
+        "part": "tension",
+        "text": "The handle simply, breaks, away.",
+        "sfx": "Heavy plastic charging plug snapping out of a car port, sharp crack and thud",
+        "pop": [
+          {
+            "say": "breaks",
+            "show": "SNAP!"
+          }
+        ]
+      },
+      {
+        "part": "tension",
+        "text": "But Tesla warns: it damages the car AND the charger. Repairs? Up to twenty-five thousand dollars!",
+        "pop": [
+          {
+            "say": "twenty-five thousand dollars",
+            "show": "$25,000"
+          }
+        ]
+      },
+      {
+        "part": "tension",
+        "text": "Real emergencies only.",
+        "pop": [
+          {
+            "say": "emergencies only",
+            "show": "EMERGENCIES ONLY"
+          }
+        ]
+      },
+      {
+        "part": "tension",
+        "text": "Then, the real world arrived. In Austin, a tired Model Y driver tapped right through the warnings, and drove off.",
+        "pop": [
+          {
+            "say": "Austin",
+            "show": "AUSTIN"
+          }
+        ]
+      },
+      {
+        "part": "tension",
+        "text": "Another owner tapped Activate, by mistake. And stopped.",
+        "pop": [
+          {
+            "say": "by mistake",
+            "show": "BY MISTAKE"
+          }
+        ]
+      },
+      {
+        "part": "payoff",
+        "text": "Too late. The alert stayed on. And only Tesla Service can clear it.",
+        "pop": [
+          {
+            "say": "Too late",
+            "show": "TOO LATE"
+          }
+        ]
+      },
+      {
+        "part": "payoff",
+        "text": "So the lesson is simple. Unless you're in danger, READ the red message, before you tap.",
+        "pop": [
+          {
+            "say": "READ",
+            "show": "READ IT"
+          }
+        ]
+      }
+    ]
   },
   "image": "gen/tesla-emergency-drive-away-539-service-bill-accidental-tap-first-real-use.jpg",
   "video": {

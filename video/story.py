@@ -43,7 +43,7 @@ DEFAULT_SFX = {  # natural cinematic sounds only (no whistles, coins, spins)
     "bed": "Low tense cinematic ambient drone, dark and subtle, slowly building, no melody",
 }
 END_SEC = 2.2
-END_HOLD = 2.0  # the closing key word (the core message) stays 2 s longer after the voice ends
+END_HOLD = 1.0  # the closing key word (the core message) stays 1 s longer after the voice ends
 
 
 def post(url, body):
@@ -497,10 +497,11 @@ POP_H = 640
 
 
 def pop_img(txt):
-    """A key word or number, huge and yellow, on its own; two or more words are stacked (one per line)."""
-    words = txt.split()
-    lines = [txt] if len(words) == 1 else [" ".join(words[:len(words) // 2 + len(words) % 2]), " ".join(words[len(words) // 2 + len(words) % 2:])] \
-        if len(words) > 3 else words
+    """A key word or number, huge and yellow, on its own; two or more words on two lines (never more)."""
+    words = txt.split()  # at most two lines: split where the two lines are most even
+    lines = [txt] if len(words) == 1 else min(
+        ([" ".join(words[:k]), " ".join(words[k:])] for k in range(1, len(words))),
+        key=lambda ls: max(FPOP.getlength(x) for x in ls))
     f = FPOP
     while max(f.getlength(ln) for ln in lines) > W - 110 and f.size > 90:
         f = S.font(S.FB, f.size - 8)

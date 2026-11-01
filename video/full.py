@@ -28,7 +28,7 @@ OUTRO_SAY = {"en": "Like and subscribe for more Tesla news, or go to TrendingTes
              "nl": "Like en abonneer voor meer Tesla-nieuws, of ga naar TrendingTesla.com. Ik zie je daar!"}
 OUTRO_CARD = {"en": "LIKE & SUBSCRIBE", "nl": "LIKE & ABONNEER"}
 OUTRO_SEC = 10.0
-SCENE_MAX, ZOOM_IN = 5.0, 0.07  # calm like the story Shorts: slow steady zoom, a new photo every ~5 s
+SCENE_MAX, ZOOM_IN = 8.0, 0.07  # calm like the story Shorts: slow steady zoom, a new photo every ~5 s
 NUM = re.compile(r"^([(\"'“]?)(\$?)(\d[\d.,]*\d|\d)(%?)([)\"'”.,:;!?]*)$")
 
 
@@ -159,7 +159,7 @@ def key_overlay(a, text):
     return im
 
 
-POP_SIZE, POP_HOLD = 150, 3.0  # key words: big yellow, centre; at most 3 s each
+POP_SIZE = 150  # key words: big yellow, centre; each stays until the next one (no empty gaps)
 
 
 def norm(w):
@@ -331,10 +331,30 @@ def main():
                         "-c:a", "aac", "-b:a", "192k", str(audio)], check=True)
     else:
         audio = None
+    credits = add_real_photos(a, pieces) if os.environ.get("GEMINI_API_KEY") else {}
     out = render(a, lang, pieces, segs, place, words, total, end_start, audio)
     print(f"::notice::Video {out.name} ready after {time.time() - T0:.0f}s ({total / 60:.1f} min)")
     meta(a, lang, pieces, place, out)
+    if credits:  # credit the real photos in the YouTube description
+        txt = out.with_suffix(".txt")
+        if txt.exists():
+            txt.write_text(txt.read_text(encoding="utf-8").rstrip() + "\n\nPhotos: " + "; ".join(dict.fromkeys(credits.values())) + "\n",
+                           encoding="utf-8")
     print(out, f"{total:.1f}s", "audio" if audio else "silent")
+
+
+def add_real_photos(a, pieces):
+    """Blocks with "photo": [{"q": [search words], "want": "what it must show"}] get a real, freely licensed photo
+    from Wikimedia Commons (picked and checked by Gemini, as in the story Shorts); its credit goes in the description."""
+    import story as ST
+    for kind, txt, b in pieces:
+        for spec in b.get("photo") or []:
+            try:
+                f, _ = ST.real_photo(a, {"text": txt}, spec)
+                b.setdefault("img", []).append(str(f.relative_to(S.build.STATIC / "img")))
+            except Exception as e:
+                print(f"::warning::no real photo for '{(spec.get('want') or txt)[:50]}': {str(e)[:120]}")
+    return ST.CREDITS
 
 
 def render(a, lang, pieces, segs, place, words, total, end_start, audio):
@@ -368,7 +388,11 @@ def render(a, lang, pieces, segs, place, words, total, end_start, audio):
     for k, (st, p) in enumerate(scenes):
         end = scenes[k + 1][0] if k + 1 < len(scenes) else total
         i = max([j for j in range(len(pieces)) if place[j] - 0.7 <= st] or [0])
-        cand = list(dict.fromkeys(x for x in sec_imgs.get(sec_of[i], []) + pool if x != p))
+        cand = list(dict.fromkeys(x for x in sec_imgs.get(sec_of[i], []) if x != p))
+        if not cand:  # no other photo for this section: hold the fitting one (slow zoom) rather than repeat others
+            fixed.append((st, p))
+            uses[p] = uses.get(p, 0) + 1
+            continue
         n = max(1, round((end - st) / SCENE_MAX))
         for j in range(n):
             if j == 0:
@@ -435,8 +459,9 @@ def render(a, lang, pieces, segs, place, words, total, end_start, audio):
         ws = [w for w in words if place[i] - 0.05 <= w[1] < t1 + 0.05]
         found = find_pops(b, ws)
         for k, (st, show) in enumerate(found):
-            nxt = found[k + 1][0] if k + 1 < len(found) else t1 + 0.4
-            pops.append((max(st - 0.15, label_end), min(nxt - 0.15, st + POP_HOLD), pop_overlay(show)))
+            p0 = place[i] + 0.05 if k == 0 else st - 0.15  # the first key word shows from the start of its block
+            nxt = found[k + 1][0] - 0.15 if k + 1 < len(found) else t1 + 0.4
+            pops.append((max(p0, label_end), nxt, pop_overlay(show)))
     print(f"{len(pops)} key words")
     chunks, cur = [], []
     for w in words:

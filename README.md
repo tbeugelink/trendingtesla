@@ -130,6 +130,14 @@ Shorts (typically 741 views after 48 hours) by far. So:
   own YouTube title: `"video": {"en": [...], "nl": [...], "yt_title_en": "...", "yt_title_nl": "..."}`,
   5-10 words, title case, a story or a sharp question in one line ("The $539 Button Tesla Owners Keep Pressing
   by Accident"), factually exact, never a promise the video does not keep.
+- **Pictures in the long video must follow the story** (decided 1 Nov 2026): give EVERY "text" block its own
+  fitting picture, never let one block borrow another's. Use, in this order: `"img": ["lib/<file>"]` from
+  ops/library.json when it shows exactly what is said; this article's own gen/ photos and model/topic photos
+  from PHOTOS.md; and for everything else (history, old cars, places, factories, launches) a real photo:
+  `"photo": [{"q": ["2008 Tesla Roadster", "Tesla Roadster first generation"], "want": "a first-generation
+  Tesla Roadster, the 2008 sports car"}]` (Wikimedia Commons, checked by Gemini; give 2-3 search phrasings).
+  Never a recognisable real person. A photo that does not show the subject of the block is worse than none:
+  the video then holds the last fitting photo. Aim for 15-25 different fitting pictures in a long video.
 - **Key words in the long video** (decided 1 Nov 2026): no captions in the picture any more (YouTube makes its own
   closed captions, CC, which viewers can translate into almost any language); instead big yellow key words in the centre, like the story Shorts. Give
   every "text" block of the "video" script a `"pop": [{"say": "...", "show": "..."}]` list of 2-4 headline-style

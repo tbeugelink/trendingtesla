@@ -333,7 +333,7 @@ def rate_photo(G, im, want, b):
     small.save(buf, "JPEG", quality=85)
     q = (f"Rate this photo for a Tesla news Short. It must clearly show: {want}. Score 0-10: 10 = shows exactly "
          "that, sharp and attractive; 5 = related but not that moment or detail; 0 = something else, a wrong car or "
-         "product, a diagram, a screenshot or a poor photo. Also give focus_x: the horizontal position (0-1) of the "
+         "product, a diagram, a screenshot or a poor photo. A recognisable real person (face visible) always scores 0. Also give focus_x: the horizontal position (0-1) of the "
          'main subject. Answer only JSON: {"score": n, "focus_x": x}')
     for mdl in CHECKER:
         try:

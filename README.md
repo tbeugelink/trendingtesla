@@ -130,6 +130,11 @@ Shorts (typically 741 views after 48 hours) by far. So:
   block, "show" = 1-3 capitalised words, 4 at most, two lines at most; e.g. NEVER MOVED, BILL $539, WHY?).
   Each shows for up to 3 s. The last block's last key word is the core message. Without a "pop" list only
   numbers and words in capitals pop up, which is too little. "key" blocks keep their keyword bar.
+- **Keep the Short's promise** (decided 1 Nov 2026): every Short ends with "for the full story go to
+  TrendingTesla.com", so the article and the long video must really give the full story: clearly more than
+  the Short (the background, the how and why, the numbers, the turns, what it means), never the same 60
+  seconds again in longer words. Write the Short as the most gripping slice of the story; keep one or two
+  strong details for the article and the long video. The Short's description always links to the article.
 - **Write the Short as a story: hook -> tension -> payoff**, under 60 seconds. Hook: the most striking concrete
   fact or turn, in the first sentence. Tension: what was at stake, what stood in the way, what people expected.
   Payoff: what happened and why it matters, ending on the strongest line. Short sentences, a few words in

@@ -32,6 +32,10 @@ Add new ideas at the bottom at any time.
 
 ## Stories (evening task: entertaining and educational, timeless)
 
+- [ ] Is the Cybertruck the best truck ever made? What it does better, and worse, than any pickup before it
+- [ ] Tesla and SpaceX: one company in the making? How the two are already linked, and what a fusion would change
+- [ ] The new Roadster: a prelude to "suction" downforce and rocket tech in a road car? What is promised, and what is real
+
 - [ ] The Roadster that started it all: how a small startup turned a Lotus into the first Tesla
 - [ ] 2008: the year Tesla almost died, and the Christmas Eve deal that saved it
 - [ ] Model 3 "production hell": sleeping in the factory and the tent on the parking lot

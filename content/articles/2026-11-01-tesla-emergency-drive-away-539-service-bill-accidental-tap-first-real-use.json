@@ -90,6 +90,10 @@
             "say": "five hundred thirty-nine dollars",
             "show": "$539"
           }
+        ],
+        "scene": [
+          "A white Tesla Model Y standing still in a Supercharger bay at night, the charging cable plugged into its left rear charge port, wet asphalt reflecting the canopy lights",
+          "Close-up of a worried Tesla owner's hand holding a smartphone showing a service appointment, the parked white Model Y blurred behind, at night"
         ]
       },
       {
@@ -100,16 +104,26 @@
             "say": "emergency button",
             "show": "EMERGENCY BUTTON"
           }
-        ]
+        ],
+        "subject": "the Tesla center touchscreen (large landscape screen on the dashboard) inside a Tesla Model Y",
+        "scene": "Close-up of the Tesla center touchscreen inside a Model Y at night, a big red warning pop-up with one red button glowing on the screen, the Supercharger visible through the windshield"
       },
       {
         "part": "tension",
         "text": "In danger? Just drive off, with the cable still plugged in!",
         "pop": [
           {
+            "say": "danger",
+            "show": "DANGER?"
+          },
+          {
             "say": "drive off",
             "show": "DRIVE OFF"
           }
+        ],
+        "scene": [
+          "Extreme close-up of the black Tesla Supercharger plug firmly inserted into the charge port in the left rear tail light of a white Model Y",
+          "A white Tesla Model Y starting to pull forward out of a Supercharger bay with the charging cable still attached and stretched tight, motion blur"
         ]
       },
       {
@@ -121,7 +135,8 @@
             "say": "breaks",
             "show": "SNAP!"
           }
-        ]
+        ],
+        "scene": "Close-up of a black Tesla Supercharger cable handle snapped off, lying on wet asphalt in front of the white Supercharger post, broken plastic pieces around it"
       },
       {
         "part": "tension",
@@ -131,6 +146,10 @@
             "say": "twenty-five thousand dollars",
             "show": "$25,000"
           }
+        ],
+        "scene": [
+          "Close-up of a damaged charge port door on the left rear tail light of a white Tesla, scratched and bent",
+          "A damaged white Tesla Supercharger post with a torn cable and cracked housing, orange warning cones around it, at dusk"
         ]
       },
       {
@@ -141,7 +160,8 @@
             "say": "emergencies only",
             "show": "EMERGENCIES ONLY"
           }
-        ]
+        ],
+        "scene": "A Tesla Supercharger bay at night lit by flashing red emergency lights from out of frame, dramatic red glow on the white posts and wet asphalt"
       },
       {
         "part": "tension",
@@ -151,6 +171,11 @@
             "say": "Austin",
             "show": "AUSTIN"
           }
+        ],
+        "scene": [
+          "A Tesla Supercharger station in Austin, Texas at early morning, the Austin skyline in the distance, a white Model Y charging",
+          "Inside a Tesla Model Y at dawn, a tired driver's hand quickly tapping the center touchscreen, warning on screen, soft focus",
+          "A white Tesla Model Y driving away from a Supercharger stall at dawn, the charging cable stretched out behind it"
         ]
       },
       {
@@ -161,7 +186,9 @@
             "say": "by mistake",
             "show": "BY MISTAKE"
           }
-        ]
+        ],
+        "subject": "the Tesla center touchscreen (large landscape screen on the dashboard) inside a Tesla Model Y",
+        "scene": "Extreme close-up of a fingertip touching a red Activate button on a Tesla touchscreen, the finger freezing in surprise"
       },
       {
         "part": "payoff",
@@ -171,6 +198,11 @@
             "say": "Too late",
             "show": "TOO LATE"
           }
+        ],
+        "subject": "the Tesla center touchscreen inside a Tesla Model Y; a Tesla Service Center",
+        "scene": [
+          "Close-up of a Tesla touchscreen with a red service warning triangle that stays on, the car parked and dark",
+          "A Tesla Service Center at dusk, a white Model Y waiting in front of the service bay door"
         ]
       },
       {
@@ -181,7 +213,9 @@
             "say": "READ",
             "show": "READ IT"
           }
-        ]
+        ],
+        "subject": "the Tesla center touchscreen inside a Tesla Model Y",
+        "scene": "A driver's hand pulled back from the Tesla touchscreen, the red warning message clearly on screen, the driver leaning in to read it, calm careful moment"
       }
     ]
   },

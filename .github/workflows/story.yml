@@ -33,7 +33,21 @@ jobs:
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
           ELEVENLABS_VOICE_ID: ${{ vars.ELEVENLABS_VOICE_ID }}
           ELEVENLABS_VOICE_ID_3: ${{ vars.ELEVENLABS_VOICE_ID_3 }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          STORY_VOICE: "1"
         run: python3 video/story.py "${{ github.event.inputs.slug }}" en
+      - name: Keep the generated scene photos (so a re-render does not pay for them again)
+        run: |
+          [ -z "$(git status --porcelain static/img/gen/story)" ] && exit 0
+          cp -r static/img/gen/story "$RUNNER_TEMP/story-img"
+          git config user.name "TrendingTesla bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for i in 1 2 3 4 5; do
+            git fetch -q origin main && git reset -q --hard origin/main
+            mkdir -p static/img/gen/story && cp -r "$RUNNER_TEMP/story-img/." static/img/gen/story/
+            git add static/img/gen/story && git commit -qm "Story Short scene photos: ${{ github.event.inputs.slug }}" && git push -q origin HEAD:main && exit 0
+            sleep 5
+          done
       - uses: actions/upload-artifact@v4
         with:
           name: story-${{ github.event.inputs.slug }}

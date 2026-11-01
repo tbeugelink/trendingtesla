@@ -31,7 +31,9 @@ from PIL import Image, ImageDraw  # noqa: E402
 W, H, FPS = 1080, 1920, 30
 OUT = S.OUT
 KEY = os.environ.get("ELEVENLABS_API_KEY", "")
-VOICE = os.environ.get("ELEVENLABS_VOICE_ID_3") or os.environ.get("ELEVENLABS_VOICE_ID", "")
+VOICE = (os.environ.get(f"ELEVENLABS_VOICE_ID_{os.environ.get('STORY_VOICE', '1')}") or
+         os.environ.get("ELEVENLABS_VOICE_ID", ""))  # STORY_VOICE=1 (default) uses ELEVENLABS_VOICE_ID
+CAPTIONS = os.environ.get("STORY_CAPTIONS", "0") == "1"  # running subtitles off: only key words pop in
 SPEED = {"hook": 1.0, "tension": 1.1, "payoff": 1.0}
 GAP = {"hook": 0.35, "tension": 0.12, "payoff": 0.3}
 SFX_VOL, BED_VOL = 0.45, 0.14
@@ -115,6 +117,50 @@ def resolve(x):
     return q if q.exists() else None
 
 
+VERT = ("Photorealistic editorial photo, VERTICAL 9:16 portrait format, natural light, sharp focus, realistic "
+        "proportions, colourful but natural colours (never grey). The main subject large and sharp in the middle of the "
+        "frame (the centre third), clean background, no readable text, no logos other than on the real product, "
+        "no licence plates, no recognisable real person. It must show exactly this moment of the story: ")
+
+
+def gen_scene(a, b, scene):
+    """A new vertical photo for one moment of the story (Nano Banana), cached in static/img/gen/story/."""
+    sys.path.insert(0, str(S.ROOT / "tools"))
+    import gen_image as G
+    g = a.get("gen_image") or {}
+    subject = b.get("subject") or g.get("subject") or "the Tesla product in the story"
+    h = hashlib.md5(f"{scene}|{subject}".encode()).hexdigest()[:10]
+    f = S.build.STATIC / "img/gen/story" / f"{a['slug'][:70]}-{h}.jpg"
+    if f.exists():
+        return f
+    refs = []
+    for r in (b.get("refs") or g.get("refs") or [])[:3]:
+        try:
+            if r.get("commons") and not r.get("src"):
+                r = {**G.commons(r["commons"]), **r}
+            refs.append(G.load_ref(r["src"]))
+        except Exception as e:
+            print(f"::warning::scene reference skipped: {e}")
+    parts = [{"text": VERT + scene.strip() + "\n\n" + G.RULES.format(subject=subject)}]
+    for r in refs:
+        import io
+        buf = io.BytesIO()
+        r.save(buf, "JPEG", quality=90)
+        parts.append({"inline_data": {"mime_type": "image/jpeg", "data": base64.b64encode(buf.getvalue()).decode()}})
+    d = G.api(f"models/{G.model()}:generateContent",
+              {"contents": [{"role": "user", "parts": parts}],
+               "generationConfig": {"responseModalities": ["IMAGE"], "imageConfig": {"aspectRatio": "9:16"}}})
+    for c in d.get("candidates", []):
+        for pt in c.get("content", {}).get("parts", []):
+            blob = pt.get("inline_data") or pt.get("inlineData")
+            if blob and blob.get("data"):
+                import io
+                f.parent.mkdir(parents=True, exist_ok=True)
+                Image.open(io.BytesIO(base64.b64decode(blob["data"]))).convert("RGB").save(f, "JPEG", quality=92)
+                return f
+    raise RuntimeError(f"no image for scene: {scene[:60]}")
+
+
 def assign_images(a, beats):
     # only photos chosen for this article (its new gen/ photos first, then its own images and car galleries):
     # better to repeat a fitting photo than to show an unrelated topic photo
@@ -137,6 +183,14 @@ def assign_images(a, beats):
                 p = order[j % len(order)]
             j += 1
         b["_img"] = p
+        b["_imgs"] = []
+        for sc in ([b["scene"]] if isinstance(b.get("scene"), str) else b.get("scene") or []):
+            try:  # one generated photo per moment of the story: what is said is what you see
+                b["_imgs"].append(gen_scene(a, b, sc))
+            except Exception as e:
+                print(f"::warning::scene photo failed, using an article photo: {e}")
+        if b["_imgs"]:
+            b["_img"] = b["_imgs"][0]
         b["_use"] = used.get(p, 0)  # 0 = whole photo; 1, 2, ... = a different close-up detail of it
         used[p] = b["_use"] + 1
 
@@ -152,7 +206,8 @@ def load_src(p):
     from PIL import ImageEnhance
     im = Image.open(p).convert("RGB")
     im = ImageEnhance.Contrast(ImageEnhance.Color(im).enhance(1.2)).enhance(1.08)  # less flat, more colour
-    s = max(H * 1.30 / im.height, W * 1.15 / im.width)  # room to move in every direction
+    room = 1.12 if im.height > im.width else 1.30  # generated vertical photos are smaller: less spare room
+    s = max(H * room / im.height, W * 1.12 / im.width)  # room to move in every direction
     return im.resize((round(im.width * s), round(im.height * s)), Image.LANCZOS)
 
 
@@ -165,9 +220,14 @@ def make_shots(beats, pool, rnd):
     rot = [(im, f) for f in range(len(FRAMINGS)) for im in pool]  # every photo whole first, then close-ups
     k, shots, last = 0, [], None
     for bi, b in enumerate(beats):
-        n = max(1, math.ceil(b["_dur"] / SHOT_MAX - 0.15))
+        own = b.get("_imgs") or []
+        n = max(len(own), 1, math.ceil(b["_dur"] / SHOT_MAX - 0.15))
         for j in range(n):
-            if j == 0 and b.get("img"):
+            if own:  # this beat's own scene photos; extra shots are close-ups of them (still on topic)
+                q = j * len(own) // n
+                img = own[q]
+                fi = 0 if j == q * n // len(own) else 1 + (j % (len(FRAMINGS) - 1))
+            elif j == 0 and b.get("img"):
                 img, fi = b["_img"], 0
             else:
                 for _ in range(len(rot)):
@@ -333,7 +393,8 @@ def main():
         words = tts(S.spoken(b["text"], lang), float(b.get("speed") or SPEED[b["part"]]), f)
         dur = S.duration(f)
         b["_voice"], b["_t0"] = f, t
-        caps += groups(words, t)
+        if CAPTIONS:
+            caps += groups(words, t)
         pops += find_pops(b, words, t + (0.25 if i == 0 else 0))
         nxt = beats[i + 1]["part"] if i + 1 < len(beats) else None
         gap = GAP["payoff"] if nxt == "payoff" and b["part"] != "payoff" else GAP[b["part"]]
@@ -386,6 +447,7 @@ def main():
     n = int(round(total * FPS))
     si = 0
     hook_end = beats[1]["_t0"] if len(beats) > 1 else body_end
+    label_end = min([p[0] for p in pops] + [2.2])
     for k in range(n):
         tt = k / FPS
         if tt >= body_end:
@@ -407,7 +469,7 @@ def main():
         box = frame(src, shot, st, (tt - pg[0]) if pg else None)
         fr = src.resize((W, H), Image.BILINEAR, box=box).convert("RGBA")
         bi = 0 if tt < hook_end else 1
-        if bi == 0:  # the label tells what the story is about while the hook is spoken
+        if tt < label_end:  # the label alone for a moment: what the story is about
             fr.alpha_composite(label)
         cg = None if pg else next((c for c in caps if c[0] <= tt < c[1] + 0.15), None)
         if pg:  # a key word pops in big (scale 1.35 -> 1 in 0.15 s) and replaces the caption while it is spoken

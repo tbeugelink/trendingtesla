@@ -117,6 +117,14 @@ def resolve(x):
     return q if q.exists() else None
 
 
+TESLA_FACTS = (
+    "Facts Tesla owners know (must be right): Model 3 and Model Y have the charge port behind a small flap in the "
+    "LEFT (driver's side) REAR tail light, nowhere else, and only one port; at a Supercharger cars usually back in, "
+    "so the post stands behind the car's left rear corner and its single cable goes into that left rear tail light. "
+    "Superchargers (V3/V4) are slim white posts with a red accent, one thick black cable each, a small Tesla logo. "
+    "Model 3/Y inside: one large landscape touchscreen in the middle of the dashboard, NO screen behind the steering "
+    "wheel, a round two-spoke steering wheel, a clean flat dashboard with a wood or fabric strip. Screens never show "
+    "invented readable text: messages are short and blurred or simply a red warning box with an icon. ")
 VERT = ("Photorealistic editorial photo, VERTICAL 9:16 portrait format, natural light, sharp focus, realistic "
         "proportions, colourful but natural colours (never grey). The main subject large and sharp in the middle of the "
         "frame (the centre third), clean background, no readable text, no logos other than on the real product, "
@@ -148,7 +156,24 @@ def gen_scene(a, b, scene):
                 REFS[k] = None
         if REFS[k] is not None:
             refs.append(REFS[k])
-    parts = [{"text": VERT + scene.strip() + "\n\n" + G.RULES.format(subject=subject)}]
+    base = VERT + scene.strip() + "\n\n" + TESLA_FACTS + (b.get("facts") or a.get("facts") or "") + "\n" + \
+        G.RULES.format(subject=subject)
+    for attempt in range(3):
+        im = scene_image(G, base, refs)
+        ok, why = check_scene(G, im, scene, subject, b)
+        if ok:
+            break
+        print(f"::warning::scene photo rejected ({why[:160]}), trying again")
+        base += f"\nA previous attempt was wrong: {why}. Fix exactly that."
+    else:
+        raise RuntimeError(f"no correct photo for: {scene[:60]}")
+    f.parent.mkdir(parents=True, exist_ok=True)
+    im.save(f, "JPEG", quality=92)
+    return f
+
+
+def scene_image(G, prompt, refs):
+    parts = [{"text": prompt}]
     for r in refs:
         import io
         buf = io.BytesIO()
@@ -162,10 +187,43 @@ def gen_scene(a, b, scene):
             blob = pt.get("inline_data") or pt.get("inlineData")
             if blob and blob.get("data"):
                 import io
-                f.parent.mkdir(parents=True, exist_ok=True)
-                Image.open(io.BytesIO(base64.b64decode(blob["data"]))).convert("RGB").save(f, "JPEG", quality=92)
-                return f
-    raise RuntimeError(f"no image for scene: {scene[:60]}")
+                return Image.open(io.BytesIO(base64.b64decode(blob["data"]))).convert("RGB")
+    raise RuntimeError("no image in the response")
+
+
+CHECKER = []
+
+
+def check_scene(G, im, scene, subject, b):
+    """Ask a Gemini vision model whether the photo gets the real details right. Returns (ok, problems)."""
+    import io
+    if not CHECKER:
+        names = [m["name"].split("/", 1)[1] for m in G.api("models?pageSize=200").get("models", [])
+                 if "generateContent" in m.get("supportedGenerationMethods", []) and "flash" in m["name"]
+                 and "image" not in m["name"] and "tts" not in m["name"] and "live" not in m["name"]]
+        pick = [n for n in names if n.startswith("gemini-2.5-flash") and "lite" not in n and "preview" not in n] or names
+        CHECKER.append(pick[0] if pick else None)
+    if not CHECKER[0]:
+        return True, ""
+    buf = io.BytesIO()
+    im.convert("RGB").save(buf, "JPEG", quality=85)
+    q = ("You check AI-made photos for a Tesla news channel whose viewers are Tesla owners who notice every wrong "
+         f"detail. Subject: {subject}. The photo must show: {scene}\n{TESLA_FACTS}{b.get('facts') or ''}\n"
+         "Check strictly: wrong product design or version, charge port in the wrong place or more than one port, "
+         "a cable going to the wrong side of the car, invented readable text on screens or signs, extra or missing "
+         "parts, physically impossible things, and whether it really shows the requested moment. "
+         'Answer only JSON: {"ok": true or false, "problems": "short list, empty when ok"}')
+    try:
+        d = G.api(f"models/{CHECKER[0]}:generateContent",
+                  {"contents": [{"role": "user", "parts": [{"text": q}, {"inline_data": {
+                      "mime_type": "image/jpeg", "data": base64.b64encode(buf.getvalue()).decode()}}]}],
+                   "generationConfig": {"responseMimeType": "application/json", "temperature": 0}})
+        txt = d["candidates"][0]["content"]["parts"][0]["text"]
+        r = json.loads(txt[txt.find("{"):txt.rfind("}") + 1])
+        return bool(r.get("ok")), str(r.get("problems") or "")
+    except Exception as e:  # the check is a safety net: never block the video on it
+        print(f"::warning::photo check skipped: {e}")
+        return True, ""
 
 
 def assign_images(a, beats):
@@ -251,7 +309,7 @@ def make_shots(beats, pool, rnd):
                 mv = "zoom"
             else:
                 mv = MOVES[(len(shots) + rnd.randrange(2)) % len(MOVES)]
-            shots.append({"img": img, "f": fi, "move": mv, "t0": b["_t0"] + j * b["_dur"] / n, "dur": b["_dur"] / n,
+            shots.append({"img": img, "f": fi, "move": mv, "shake": bool(b.get("shake")), "t0": b["_t0"] + j * b["_dur"] / n, "dur": b["_dur"] / n,
                           "beat": bi})
     return shots
 
@@ -264,30 +322,28 @@ def frame(src, sh_, t, pop_t):
     mv = sh_["move"]
     z, ox, oy = z0, fx, fy
     if mv == "punch":
-        z = z0 * (1.28 - 0.28 * ease(t / 0.4))
+        z = z0 * (1.10 - 0.10 * ease(t / 0.5))
     elif mv == "in":
-        z = z0 * (1.0 + 0.16 * ease(u))
+        z = z0 * (1.0 + 0.09 * ease(u))
     elif mv == "out":
-        z = z0 * (1.16 - 0.16 * ease(u))
+        z = z0 * (1.09 - 0.09 * ease(u))
     elif mv == "zoom":
-        z = z0 * (1.0 + 0.22 * ease(u))
+        z = z0 * (1.0 + 0.12 * ease(u))
     elif mv in ("panL", "panR"):
-        z = z0 * 1.08
-        ox = fx + (0.22 if mv == "panR" else -0.22) * (ease(u) - 0.5)
+        z = z0 * 1.06
+        ox = fx + (0.14 if mv == "panR" else -0.14) * (ease(u) - 0.5)
     elif mv == "tilt":
-        z = z0 * 1.08
-        oy = fy + 0.30 * (ease(u) - 0.5)
-    if pop_t is not None and pop_t < 0.22:  # a short "hit" when a key word pops in
-        z *= 1 + 0.07 * (1 - pop_t / 0.22)
+        z = z0 * 1.06
+        oy = fy + 0.18 * (ease(u) - 0.5)
+    if pop_t is not None and pop_t < 0.25:  # a soft push when a key word pops in
+        z *= 1 + 0.025 * (1 - pop_t / 0.25)
     fh = min(H / z, shh)
     fw = min(fh * W / H, sw)
     cx = sw / 2 + ox * (sw - fw) / 2
     cy = shh / 2 + oy * (shh - fh) / 2
     if mv == "rise":  # camera moves top-to-bottom: the subject seems to rise
         cy = fh / 2 + (shh - fh) * ease(u)
-    shake = 18 * max(0.0, 1 - t / 1.0) if mv == "punch" else 3.0 if mv in ("zoom", "rise") else 0.0
-    if pop_t is not None and pop_t < 0.3:
-        shake += 10 * (1 - pop_t / 0.3)
+    shake = 3.0 if mv == "rise" or sh_.get("shake") else 0.0  # shaking only fits rockets and launches
     if shake:
         cx += shake * (math.sin(t * 47.0) + 0.5 * math.sin(t * 83.0 + 1.3))
         cy += shake * (math.cos(t * 41.0) + 0.5 * math.sin(t * 71.0 + 0.7))
@@ -497,7 +553,7 @@ def main():
             # opening shot: captions above the label; afterwards in the usual place
             fr.alpha_composite(capimgs[key], (0, int(ltop - 300) if bi == 0 else int(H * 0.60)))
         if st < 0.1 and si > 0 and shot["beat"] != shots[si - 1]["beat"]:  # quick flash on a new sentence
-            fr = Image.blend(fr.convert("RGB"), Image.new("RGB", (W, H), (255, 255, 255)), 0.2 * (1 - st / 0.1)).convert("RGBA")
+            fr = Image.blend(fr.convert("RGB"), Image.new("RGB", (W, H), (255, 255, 255)), 0.1 * (1 - st / 0.1)).convert("RGBA")
         enc.stdin.write(fr.convert("RGB").tobytes())
     enc.stdin.close()
     if enc.wait():

@@ -585,13 +585,13 @@ def title_card(a, lang):
     d = ImageDraw.Draw(im)
     fonts = []
     for kind, x in rows:
-        f = S.font(S.FB, 150 if kind == "big" else 118)
+        f = S.font(S.FB, 150 if kind == "big" else 165)  # the red block (often the number) at least as big
         while f.getlength(x) > W - (120 if kind == "big" else 190) and f.size > 60:
             f = S.font(S.FB, f.size - 6)
         fonts.append(f)
     gap = 30
     heights = [f.size * (1.05 if k == "big" else 1.35) for (k, _), f in zip(rows, fonts)]
-    y = H * 0.42 - (sum(heights) + gap * (len(rows) - 1)) / 2
+    y = H * 0.50 - (sum(heights) + gap * (len(rows) - 1)) / 2  # in the exact centre of the frame
     for (kind, x), f, h in zip(rows, fonts, heights):
         w = f.getlength(x)
         if kind == "big":

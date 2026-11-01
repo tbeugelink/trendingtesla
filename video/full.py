@@ -23,12 +23,12 @@ sys.argv = [x for x in sys.argv if x != "--portrait"]
 import short as S  # noqa: E402  (same folder; landscape layout)
 from short import W, H, FPS, font, FB, FX, YEL  # noqa: E402
 
-SPEED = {"en": "1.15", "nl": "1.15"}
+SPEED = {"en": "1.1", "nl": "1.1"}
 OUTRO_SAY = {"en": "Like and subscribe for more Tesla news, or go to TrendingTesla.com. I'll see you there!",
              "nl": "Like en abonneer voor meer Tesla-nieuws, of ga naar TrendingTesla.com. Ik zie je daar!"}
 OUTRO_CARD = {"en": "LIKE & SUBSCRIBE", "nl": "LIKE & ABONNEER"}
 OUTRO_SEC = 10.0
-SCENE_MAX, ZOOM_IN = 6.0, 0.42
+SCENE_MAX, ZOOM_IN = 5.0, 0.07  # calm like the story Shorts: slow steady zoom, a new photo every ~5 s
 NUM = re.compile(r"^([(\"'“]?)(\$?)(\d[\d.,]*\d|\d)(%?)([)\"'”.,:;!?]*)$")
 
 
@@ -191,6 +191,8 @@ def main():
     S.OUT.mkdir(parents=True, exist_ok=True)
     pieces = build_timeline(a, lang)
     os.environ["ELEVENLABS_SPEED"] = SPEED.get(lang, "1.1")
+    os.environ.setdefault("ELEVENLABS_STABILITY", "0.2")  # same lively delivery as the story Shorts
+    os.environ.setdefault("ELEVENLABS_STYLE", "0.8")
     S.LANG[0] = lang
     base = [S.spoken(t, lang) for _, t, _ in pieces]
     conv = [say_numbers(t, lang) for t in base]
@@ -261,7 +263,7 @@ def main():
         fl, ins = [], []
         for i, ((a0, a1), t0) in enumerate(zip(segs, place)):
             ms = int(t0 * 1000)
-            fl.append(f"[0]atrim={a0:.3f}:{a1:.3f},asetpts=PTS-STARTPTS,afade=t=out:st={max(0, a1 - a0 - 0.04):.3f}:d=0.04,"
+            fl.append(f"[0]atrim={a0:.3f}:{a1:.3f},asetpts=PTS-STARTPTS,afade=t=in:d=0.03,afade=t=out:st={max(0, a1 - a0 - 0.04):.3f}:d=0.04,"
                       f"adelay={ms}|{ms}[a{i}]")
             ins.append(f"[a{i}]")
         fl.append("".join(ins) + f"amix=inputs={len(ins)}:normalize=0:duration=longest[out]")
@@ -403,11 +405,9 @@ def render(a, lang, pieces, segs, place, words, total, end_start, audio):
     def shot(k, t):
         im = pic(scenes[k][1])
         span = (starts[k + 1] if k + 1 < nsc else total) - starts[k] + S.TR
-        p = S.ease(max(0.0, min(1.0, (t - starts[k]) / span)))
+        p = max(0.0, min(1.0, (t - starts[k]) / span))  # linear: no stop-start stutter
         cx, cy = FOCUS[k % len(FOCUS)]
         z = 1.0 + ZOOM_IN * p
-        if k == 0 and t < S.PUNCH_SEC:  # quick punch-in on the opening photo
-            z *= 1.0 + S.PUNCH * (1 - S.ease(t / S.PUNCH_SEC))
         cw, chh = min(W * S.ZOOM / z, im.width), min(H * S.ZOOM / z, im.height)
         x0, y0 = (im.width - cw) * cx, (im.height - chh) * cy
         return im.resize((W, H), Image.BILINEAR, box=(x0, y0, x0 + cw, y0 + chh))
@@ -461,7 +461,19 @@ def render(a, lang, pieces, segs, place, words, total, end_start, audio):
         pass
     if proc.wait() != 0:
         raise SystemExit(f"ffmpeg failed with code {proc.returncode}")
+    check_brand(out, o_brand)
     return out
+
+
+def check_brand(out, logo):
+    """Stop when the TrendingTesla logo is missing in the finished video (it must never silently disappear)."""
+    fr = subprocess.run(["ffmpeg", "-loglevel", "error", "-ss", "5", "-i", str(out), "-frames:v", "1", "-vf", f"scale={W}:{H}",
+                         "-f", "rawvideo", "-pix_fmt", "rgb24", "-"], capture_output=True, check=True).stdout
+    img = Image.frombytes("RGB", (W, H), fr[:W * H * 3])
+    pts = [(x, y) for x in range(0, W // 2, 2) for y in range(0, 220, 2)
+           if (p := logo.getpixel((x, y)))[3] > 200 and p[0] > 240 and p[1] > 240]
+    if not pts or sum(sum(img.getpixel(q)) / 3 for q in pts) / len(pts) < 190:
+        raise SystemExit("::error::the TrendingTesla logo is missing in the long video")
 
 
 def meta(a, lang, pieces, place, out):

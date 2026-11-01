@@ -17,6 +17,9 @@
     }
   ],
   "images": [
+    "gen/tesla-emergency-drive-away-539-service-bill-accidental-tap-first-real-use.jpg",
+    "gen/tesla-emergency-drive-away-539-service-bill-accidental-tap-first-real-use-x3-11010557.jpg",
+    "gen/tesla-emergency-drive-away-539-service-bill-accidental-tap-first-real-use-x2-11010557.jpg",
     "supercharger-4.jpg",
     "charge-port-2.jpg",
     "supercharger-2.jpg"
@@ -33,13 +36,17 @@
     "extra": [
       {
         "prompt": "Close-up from low behind the car of the Supercharger handle plugged into the charge port in the left rear tail light of a white Tesla Model Y, rain drops on the paint, soft blue and red station light, shallow depth of field",
-        "describe": "Close-up of a Supercharger handle in a Model Y charge port in the rain"
+        "describe": "Close-up of a Supercharger handle in a Model Y charge port in the rain",
+        "file": "gen/tesla-emergency-drive-away-539-service-bill-accidental-tap-first-real-use-x2-11010557.jpg"
       },
       {
         "prompt": "Wide daytime view of a sunny Tesla V3 Supercharger row next to a highway rest stop in early morning light, several Teslas reversed into stalls, a yellow road sign and blue sky, peaceful everyday scene",
-        "describe": "A row of V3 Supercharger stalls with Teslas charging on a sunny morning"
+        "describe": "A row of V3 Supercharger stalls with Teslas charging on a sunny morning",
+        "file": "gen/tesla-emergency-drive-away-539-service-bill-accidental-tap-first-real-use-x3-11010557.jpg"
       }
-    ]
+    ],
+    "done": true,
+    "model": "gemini-3.1-flash-image"
   },
   "label": {
     "style": "c",
@@ -70,5 +77,6 @@
     "title_nl": "Eén foute tik, een rekening van vijfhonderdnegenendertig dollar?",
     "yt_title_en": "One Wrong Tap Reportedly Cost a Tesla Owner $539",
     "yt_title_nl": "Tesla-Eigenaar Krijgt Naar Verluidt $539 Rekening Na Eén Tik"
-  }
+  },
+  "image": "gen/tesla-emergency-drive-away-539-service-bill-accidental-tap-first-real-use.jpg"
 }

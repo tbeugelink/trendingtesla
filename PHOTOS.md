@@ -240,3 +240,6 @@ Articles with a "models" key automatically use real-life photos of that model. Y
 - gen/what-is-tesla-fsd-supervised-cost-countries-explained.jpg — Inside a Tesla Model 3 driving itself at golden hour, the driver's hands off the wheel and the screen showing the road
 - gen/what-is-tesla-fsd-supervised-cost-countries-explained-x2-10312024.jpg — A Tesla Model 3 at a Dutch canal junction with cyclists, the screen showing them
 - gen/what-is-tesla-fsd-supervised-cost-countries-explained-x3-10312024.jpg — A driver watching the road in a Tesla Model 3 on a motorway at night
+- gen/tesla-emergency-drive-away-539-service-bill-accidental-tap-first-real-use.jpg — A Model Y charging at a V3 Supercharger on a quiet autumn night
+- gen/tesla-emergency-drive-away-539-service-bill-accidental-tap-first-real-use-x2-11010557.jpg — Close-up of a Supercharger handle in a Model Y charge port in the rain
+- gen/tesla-emergency-drive-away-539-service-bill-accidental-tap-first-real-use-x3-11010557.jpg — A row of V3 Supercharger stalls with Teslas charging on a sunny morning

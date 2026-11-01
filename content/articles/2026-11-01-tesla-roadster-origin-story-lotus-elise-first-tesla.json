@@ -1,0 +1,884 @@
+{
+  "slug": "tesla-roadster-origin-story-lotus-elise-first-tesla",
+  "date": "2026-11-01",
+  "time": "21:21",
+  "category": "models",
+  "sources": [
+    {
+      "title": "Tesla: The Secret Tesla Motors Master Plan (just between you and me)",
+      "url": "https://www.tesla.com/secret-master-plan"
+    },
+    {
+      "title": "VentureBeat: Tesla's Musk fires back at founder lawsuit",
+      "url": "https://venturebeat.com/2009/06/22/teslas-musk-fires-back-at-founder-lawsuit"
+    },
+    {
+      "title": "US Senate Finance Committee: testimony of Martin Eberhard (2007)",
+      "url": "https://www.finance.senate.gov/download/2007/05/01/martin-eberhard&download=1"
+    },
+    {
+      "title": "Wikipedia: Tesla Roadster (first generation)",
+      "url": "https://en.wikipedia.org/wiki/Tesla_Roadster_(first_generation)"
+    }
+  ],
+  "images": [
+    "models/msc-2.jpg",
+    "models/rd-25.jpg",
+    "gigafactory-fremont.jpg"
+  ],
+  "gen_image": {
+    "prompt": "Close, dynamic low front three-quarter shot of a red first-generation Tesla Roadster (2008) with its roof off, driving along a winding California coastal road at golden hour in late summer, cliffs and a deep blue ocean behind, warm sunlight on the paint; colourful but natural with yellow wildflowers by the road, the red car and blue sea and sky as accents",
+    "subject": "the first-generation Tesla Roadster (2008-2012): a small, low two-seat open sports car based on the Lotus Elise, with a short rounded nose, a narrow lower intake and no large grille, slim swept-back headlights, side air intakes just behind the doors, a short rounded rear deck with small round-edged tail lights, a removable black soft top; NOT the angular 2026 Roadster, not a Lotus badge, Tesla 'T' logo on the nose",
+    "refs": [
+      {
+        "commons": "Tesla Roadster 2008"
+      }
+    ],
+    "describe": "A red first-generation Tesla Roadster driving along a California coastal road at golden hour",
+    "extra": [
+      {
+        "prompt": "A red first-generation Tesla Roadster parked inside a small, cluttered Silicon Valley engineering workshop at night in the mid-2000s, seen from the side, a workbench in the foreground with neat trays of small cylindrical battery cells, yellow and red tool chests, cool blue work lights, quiet late-night mood",
+        "describe": "An early Tesla Roadster in a small workshop at night, with trays of battery cells on the bench"
+      },
+      {
+        "prompt": "A red first-generation Tesla Roadster standing alone under warm spotlights in a quiet car museum hall, seen from the rear three-quarter at eye level, polished concrete floor reflecting the car, soft blue and yellow light on the walls, calm and reverent mood",
+        "describe": "The original Tesla Roadster on display under spotlights in a museum hall"
+      }
+    ]
+  },
+  "label": {
+    "style": "a",
+    "en": {
+      "sub": "HOW A LOTUS",
+      "text": "BECAME A TESLA?"
+    },
+    "nl": {
+      "sub": "HOE EEN LOTUS",
+      "text": "EEN TESLA WERD?"
+    }
+  },
+  "en": {
+    "title": "The Lotus that became the first Tesla: how the original Roadster nearly broke the company",
+    "description": "Tesla's first car was meant to be a quick electric conversion of a Lotus Elise. In the end only about 7% of the Lotus survived, the costs exploded, and the Roadster still started everything Tesla is today.",
+    "body": "<p>In February 2008, a small, low electric sports car was handed to its first owner. The owner was Elon Musk, Tesla's chairman and biggest investor, and the car was the first production Tesla Roadster. From the outside it looked a lot like a Lotus Elise, the British sports car it was based on. Underneath, very little of the Lotus was left: by Musk's own later count, only about 7% of the parts were shared. Tesla set out to make a quick electric version of an existing car, and the quick part nearly destroyed the company.</p>\n<h2>Why would a startup build its first car out of a Lotus?</h2>\n<p><strong>Because it looked like the fastest, cheapest shortcut.</strong> Tesla Motors was founded on July 1, 2003, by two Silicon Valley engineers, Martin Eberhard and Marc Tarpenning. They had driven the tzero, a hand-built electric prototype from a small Californian company called AC Propulsion, and came away convinced that an electric car could be thrilling instead of merely worthy. In February 2004 Elon Musk put $6.5 million into a $7.5 million first funding round and became chairman. Ian Wright and JB Straubel joined early as well; after a legal settlement in 2009, all five may call themselves co-founders.</p>\n<p>The idea was to skip the hardest parts of making a car. In July 2005 Tesla signed a deal with Lotus to supply \"gliders\": complete cars without an engine. Tesla would add the motor, the electronics and the battery. For that battery it made an unusual choice: thousands of small, mass-produced lithium-ion cells of the kind used in laptops, instead of custom car cells. The finished pack held 6,831 of them and weighed about 450 kilograms (992 lb). On paper the plan made sense. In practice, the shortcut kept getting longer.</p>\n<h2>So what went wrong with such a simple plan?</h2>\n<p><strong>Almost everything had to be changed.</strong> When Tesla revealed the Roadster in Santa Monica on July 19, 2006, in front of about 350 invited guests, it promised 0 to 60 mph in about 4 seconds and more than 200 miles on a charge. In a 2007 Senate hearing, Eberhard put the price at $92,000. The battery and motor did not fit the Elise's layout, so the chassis grew 2 inches longer. Musk pushed for a carbon-fibre body.</p>\n<p>The worst headache was the gearbox. The plan called for two gears, but the first two suppliers could not build a transmission that survived the motor's torque and high revs. In December 2007 Tesla admitted that the first cars would be locked in second gear, which stretched 0 to 60 mph to 5.7 seconds. A simpler single-speed gearbox from BorgWarner only arrived in September 2008. Behind all these delays, an even bigger problem was hiding in the numbers.</p>\n<h2>How bad did the money problem get?</h2>\n<p><strong>Bad enough to threaten the whole company.</strong> In August 2007 the board asked Eberhard to step down as CEO. The figures below are Musk's version, written in 2009 after Eberhard had sued him. According to Musk, the planned cost of about $65,000 per car was far too low: a later study put the materials alone at around $140,000, for a car priced at $92,000 with hundreds of orders already taken. He called it a \"life threatening problem\". Eberhard disputed Musk's account, and the lawsuit was settled the same year.</p>\n<p>The fix was painful. Musk took over as CEO himself in October 2008, in the middle of the financial crisis, and cut about a quarter of the staff. The price rose to $109,000, and in early 2009 customers who had already paid deposits of up to $50,000 were asked to choose their options again, which made the same car about $6,700 more expensive. Some buyers were furious. But the cars were finally reaching people, and that put the real test in front of them.</p>\n<h2>Did the Roadster actually work once it reached customers?</h2>\n<p><strong>Yes, and it changed how people saw electric cars.</strong> Regular production started on March 17, 2008. The finished car went 244 miles (393 km) on the official EPA test from a 53 kWh pack, and the standard car was rated at 3.9 seconds from 0 to 60 mph. In 2008 most people pictured electric cars as slow and short-legged. Here was one that could outrun many petrol sports cars and cover a full day of driving.</p>\n<p>The Roadster was never meant to last, though. Lotus had agreed to build 2,500 gliders, and when that contract ran out at the end of 2011, production ended. In total about 2,450 Roadsters were delivered between 2008 and 2012. Its influence is far bigger than its sales.</p>\n<h2>So why does a car with only 2,450 copies still matter?</h2>\n<p><strong>Because it was step one of a plan Tesla still follows.</strong> In August 2006 Musk published \"The Secret Tesla Motors Master Plan\" on Tesla's website. It had four steps: build a sports car, use that money to build an affordable car, use that money to build an even more affordable car, and offer zero-emission power generation. The Roadster was step one: an expensive car for buyers willing to pay a premium for new technology. The Model S, then the Model 3 and Model Y, and Tesla's solar and battery business followed that script.</p>\n<p>The Roadster also taught hard lessons. In 2018 Musk said that basing it on the Elise had been a poor strategy, because so little of the Lotus survived. The car even had a famous afterlife: on February 6, 2018, Musk's own red Roadster flew on the first Falcon Heavy launch by SpaceX and was sent into an orbit around the Sun. And in October 2026 a new chapter began, when Tesla revealed a new Roadster with cold-gas thrusters developed with SpaceX. It is a far wilder machine than the reworked Lotus of 2008, but it exists because that first, nearly impossible car proved people would want an electric sports car at all.</p>"
+  },
+  "nl": {
+    "title": "De Lotus die de eerste Tesla werd: hoe de originele Roadster het bedrijf bijna brak",
+    "description": "De eerste Tesla moest een snelle elektrische ombouw van een Lotus Elise worden. Uiteindelijk bleef er maar zo'n 7% van de Lotus over, liepen de kosten uit de hand, en begon met de Roadster toch alles wat Tesla nu is.",
+    "body": "<p>In februari 2008 kreeg een kleine, lage elektrische sportwagen zijn eerste eigenaar. Die eigenaar was Elon Musk, de voorzitter en grootste investeerder van Tesla, en de auto was de allereerste productie-Roadster. Van buiten leek hij sterk op een Lotus Elise, de lichte Britse sportwagen waarop hij gebaseerd was. Onder de huid was er weinig van die Lotus over: volgens Musk zelf deelden de twee auto's later nog maar zo'n 7% van hun onderdelen. Tesla wilde snel even een elektrische versie van een bestaande auto maken, en juist dat 'snel even' bracht het bedrijf bijna ten val.</p>\n<h2>Waarom bouwt een startup zijn eerste auto uit een Lotus?</h2>\n<p><strong>Omdat het de snelste en goedkoopste route leek.</strong> Tesla Motors werd op 1 juli 2003 opgericht door twee ingenieurs uit Silicon Valley, Martin Eberhard en Marc Tarpenning. Ze hadden gereden in de tzero, een met de hand gebouwd elektrisch prototype van het kleine Californische bedrijf AC Propulsion, en waren ervan overtuigd geraakt dat een elektrische auto spannend kon zijn in plaats van alleen maar braaf. In februari 2004 stak Elon Musk 6,5 miljoen dollar in een eerste financieringsronde van 7,5 miljoen en werd hij voorzitter. Ook Ian Wright en JB Straubel kwamen vroeg aan boord; na een juridische schikking in 2009 mogen ze zich alle vijf medeoprichter noemen.</p>\n<p>Het idee was om het moeilijkste deel van het autobouwen over te slaan. In juli 2005 sloot Tesla een deal met Lotus voor zogeheten 'gliders': complete auto's zonder motor. Tesla zou zelf de elektromotor, de elektronica en de accu toevoegen. Voor die accu maakte het een opvallende keuze: duizenden kleine, in massa geproduceerde lithium-ioncellen, het soort dat in laptops zit, in plaats van speciale autocellen. Het accupakket bevatte er uiteindelijk 6.831 en woog zo'n 450 kilo. Op papier klopte het plan. In de praktijk werd de kortere weg steeds langer.</p>\n<h2>Wat ging er dan mis met zo'n simpel plan?</h2>\n<p><strong>Bijna alles moest anders.</strong> Toen Tesla de Roadster op 19 juli 2006 in Santa Monica onthulde, voor zo'n 350 genodigden, beloofde het in ongeveer 4 seconden van 0 naar 60 mijl per uur (bijna 100 km/u) en meer dan 320 kilometer actieradius. Tijdens een hoorzitting in de Amerikaanse Senaat in 2007 noemde Eberhard een prijs van 92.000 dollar. Accu en motor pasten niet in de Elise, dus werd het chassis 5 centimeter langer. Musk wilde een carrosserie van koolstofvezel.</p>\n<p>De grootste hoofdpijn was de versnellingsbak. Het plan ging uit van twee versnellingen, maar de eerste twee leveranciers kregen geen bak gebouwd die het koppel en de hoge toerentallen van de motor overleefde. In december 2007 gaf Tesla toe dat de eerste auto's vast in de tweede versnelling zouden staan, waardoor de sprint naar 60 mijl per uur opliep tot 5,7 seconden. Een eenvoudigere bak met één versnelling van BorgWarner kwam pas in september 2008. Achter al die vertraging zat in de cijfers een nog groter probleem verstopt.</p>\n<h2>Hoe groot werd het geldprobleem?</h2>\n<p><strong>Groot genoeg om het hele bedrijf te bedreigen.</strong> In augustus 2007 vroeg het bestuur Eberhard om op te stappen als topman. De cijfers hieronder zijn de versie van Musk, opgeschreven in 2009 nadat Eberhard hem had aangeklaagd. Volgens Musk was de geplande kostprijs van zo'n 65.000 dollar per auto veel te laag: een latere studie kwam alleen al aan materialen op ongeveer 140.000 dollar, voor een auto van 92.000 dollar waarvan er al honderden besteld waren. Hij noemde het een levensbedreigend probleem. Eberhard bestreed die lezing, en de rechtszaak werd nog datzelfde jaar geschikt.</p>\n<p>De oplossing deed pijn. Musk werd in oktober 2008 zelf topman, midden in de financiële crisis, en ontsloeg ongeveer een kwart van het personeel. De prijs ging omhoog naar 109.000 dollar, en begin 2009 moesten klanten die al aanbetalingen tot 50.000 dollar hadden gedaan hun opties opnieuw kiezen, waardoor dezelfde auto zo'n 6.700 dollar duurder werd. Sommige kopers waren woedend. Maar de auto's kwamen eindelijk bij mensen aan, en daarmee begon de echte test.</p>\n<h2>Werkte de Roadster eenmaal bij de klant?</h2>\n<p><strong>Ja, en hij veranderde hoe mensen naar elektrische auto's keken.</strong> De gewone productie begon op 17 maart 2008. De auto haalde 393 kilometer op de officiële Amerikaanse EPA-test, uit een accu van 53 kWh, en de standaardversie sprintte in 3,9 seconden naar 60 mijl per uur. In 2008 zagen de meeste mensen een elektrische auto als traag en met een kleine actieradius. Dit was er een die veel benzinesportwagens bijhield en een hele dag kon rijden.</p>\n<p>Toch was de Roadster nooit bedoeld als blijvertje. Lotus had afgesproken 2.500 gliders te bouwen, en toen dat contract eind 2011 afliep, stopte de productie. In totaal werden er tussen 2008 en 2012 zo'n 2.450 Roadsters geleverd. Zijn invloed is veel groter dan zijn verkoopcijfers.</p>\n<h2>Waarom doet een auto met maar 2.450 exemplaren er dan nog steeds toe?</h2>\n<p><strong>Omdat hij stap één was van een plan dat Tesla nog altijd volgt.</strong> In augustus 2006 publiceerde Musk op de website van Tesla 'The Secret Tesla Motors Master Plan'. Dat plan had vier stappen: bouw een sportwagen, gebruik dat geld voor een betaalbare auto, gebruik dat geld weer voor een nog betaalbaardere auto, en bied emissievrije stroomopwekking aan. De Roadster was stap één: een dure auto voor kopers die extra wilden betalen voor nieuwe techniek. De Model S, daarna de Model 3 en Model Y, en de zonne- en accutak van Tesla volgden dat script.</p>\n<p>De Roadster leerde Tesla ook harde lessen. In 2018 zei Musk dat het een slechte strategie was geweest om de Elise als basis te nemen, omdat er zo weinig van de Lotus overbleef. De auto kreeg zelfs een beroemd tweede leven: op 6 februari 2018 vloog Musks eigen rode Roadster mee met de eerste lancering van de Falcon Heavy van SpaceX, en hij draait sindsdien in een baan om de zon. In oktober 2026 begon een nieuw hoofdstuk, toen Tesla een nieuwe Roadster liet zien met koudgas-stuwers die samen met SpaceX zijn ontwikkeld. Dat is een veel wildere machine dan de omgebouwde Lotus van 2008, maar hij bestaat omdat die eerste, bijna onmogelijke auto bewees dat mensen een elektrische sportwagen überhaupt wilden.</p>"
+  },
+  "short": {
+    "hook": "first",
+    "en": "The very first Tesla was meant to be a simple Lotus with batteries. It nearly killed the company. The plan sounded easy. Take a British sports car, pull out the engine, and fit nearly seven thousand laptop-style cells. But NOTHING fit. The battery forced a longer chassis. The two-speed gearbox kept failing. The founding CEO was pushed out. And by Musk's account, each car cost more to build than its price. So the price jumped to one hundred nine thousand dollars. Yet in 2008, the Roadster finally reached customers. Two hundred forty-four miles on a charge. Quicker than many petrol sports cars. In the end, only about SEVEN percent of the Lotus was left. Only two thousand four hundred fifty were built. But that little car started EVERYTHING Tesla is today.",
+    "nl": "De allereerste Tesla moest een simpele Lotus met accu's worden. Het kostte het bedrijf bijna de kop. Het plan klonk makkelijk. Neem een Britse sportwagen, haal de motor eruit en stop er bijna zevenduizend laptopcellen in. Maar NIETS paste. Door de accu moest het chassis langer. De versnellingsbak met twee versnellingen ging steeds kapot. De oprichter moest weg als topman. En volgens Musk kostte elke auto meer om te bouwen dan hij opbracht. Dus ging de prijs omhoog naar honderdnegenduizend dollar. Toch kwam de Roadster in 2008 eindelijk bij de klanten. Bijna vierhonderd kilometer op één lading. Sneller dan veel benzinesportwagens. Uiteindelijk was er nog maar zo'n ZEVEN procent van de Lotus over. Er werden er maar tweeduizend vierhonderdvijftig gebouwd. Maar met dat kleine autootje begon ALLES wat Tesla nu is.",
+    "yt_title_en": "The First Tesla Started as a Lotus",
+    "yt_title_nl": "De Eerste Tesla Begon als Lotus",
+    "story": [
+      {
+        "part": "hook",
+        "text": "The very first Tesla was meant to be a simple Lotus with batteries. It nearly killed the company.",
+        "img": "gen/tesla-roadster-origin-story-lotus-elise-first-tesla.jpg",
+        "pop": [
+          {
+            "say": "very first Tesla",
+            "show": "FIRST TESLA"
+          },
+          {
+            "say": "Lotus with batteries",
+            "show": "A LOTUS?"
+          },
+          {
+            "say": "nearly killed",
+            "show": "NEARLY KILLED"
+          }
+        ]
+      },
+      {
+        "part": "tension",
+        "text": "The plan sounded easy. Take a British sports car, pull out the engine, and fit nearly seven thousand laptop-style cells.",
+        "img": "gen/tesla-roadster-origin-story-lotus-elise-first-tesla.jpg",
+        "scene": "A small, cluttered Silicon Valley engineering workshop at night in the mid-2000s: a red first-generation Tesla Roadster parked inside, a workbench in front with neat trays of small cylindrical laptop-style battery cells, yellow and red tool chests, blue work lights",
+        "pop": [
+          {
+            "say": "sounded easy",
+            "show": "EASY?"
+          },
+          {
+            "say": "pull out the engine",
+            "show": "NO ENGINE"
+          },
+          {
+            "say": "seven thousand",
+            "show": "~7,000 CELLS"
+          },
+          {
+            "say": "laptop-style",
+            "show": "LAPTOP-STYLE"
+          }
+        ]
+      },
+      {
+        "part": "tension",
+        "text": "But NOTHING fit. The battery forced a longer chassis. The two-speed gearbox kept failing.",
+        "img": "gen/tesla-roadster-origin-story-lotus-elise-first-tesla.jpg",
+        "scene": "A red first-generation Tesla Roadster raised on a car lift in a small workshop, seen from a low front three-quarter angle, mechanics' tools and a transmission part on a cart beside it, warm work lights",
+        "pop": [
+          {
+            "say": "NOTHING fit",
+            "show": "NOTHING FIT"
+          },
+          {
+            "say": "longer chassis",
+            "show": "LONGER CHASSIS"
+          },
+          {
+            "say": "gearbox kept failing",
+            "show": "GEARBOX FAILS"
+          }
+        ]
+      },
+      {
+        "part": "tension",
+        "text": "The founding CEO was pushed out. And by Musk's account, each car cost more to build than its price.",
+        "img": "gen/tesla-roadster-origin-story-lotus-elise-first-tesla.jpg",
+        "pop": [
+          {
+            "say": "founding CEO",
+            "show": "CEO OUT"
+          },
+          {
+            "say": "Musk's account",
+            "show": "MUSK'S ACCOUNT"
+          },
+          {
+            "say": "more to build",
+            "show": "COST > PRICE"
+          }
+        ]
+      },
+      {
+        "part": "tension",
+        "text": "So the price jumped to one hundred nine thousand dollars.",
+        "img": "gen/tesla-roadster-origin-story-lotus-elise-first-tesla.jpg",
+        "pop": [
+          {
+            "say": "price jumped",
+            "show": "PRICE UP"
+          },
+          {
+            "say": "one hundred nine thousand dollars",
+            "show": "$109,000"
+          }
+        ]
+      },
+      {
+        "part": "payoff",
+        "text": "Yet in 2008, the Roadster finally reached customers.",
+        "img": "gen/tesla-roadster-origin-story-lotus-elise-first-tesla.jpg",
+        "pop": [
+          {
+            "say": "in 2008",
+            "show": "2008"
+          },
+          {
+            "say": "finally reached customers",
+            "show": "DELIVERED!"
+          }
+        ]
+      },
+      {
+        "part": "payoff",
+        "text": "Two hundred forty-four miles on a charge. Quicker than many petrol sports cars.",
+        "img": "gen/tesla-roadster-origin-story-lotus-elise-first-tesla.jpg",
+        "scene": "A red first-generation Tesla Roadster driving fast along a winding California coastal road at golden hour, low front three-quarter view, roof off, ocean and cliffs behind, slight motion blur on the road",
+        "pop": [
+          {
+            "say": "Two hundred forty-four miles",
+            "show": "244 MILES"
+          },
+          {
+            "say": "Quicker",
+            "show": "QUICKER"
+          },
+          {
+            "say": "petrol sports cars",
+            "show": "THAN SPORTS CARS"
+          }
+        ]
+      },
+      {
+        "part": "payoff",
+        "text": "In the end, only about SEVEN percent of the Lotus was left.",
+        "img": "gen/tesla-roadster-origin-story-lotus-elise-first-tesla.jpg",
+        "pop": [
+          {
+            "say": "only about SEVEN percent",
+            "show": "ONLY 7%"
+          },
+          {
+            "say": "of the Lotus",
+            "show": "LOTUS LEFT"
+          }
+        ]
+      },
+      {
+        "part": "payoff",
+        "text": "Only two thousand four hundred fifty were built. But that little car started EVERYTHING Tesla is today.",
+        "img": "gen/tesla-roadster-origin-story-lotus-elise-first-tesla.jpg",
+        "scene": "A red first-generation Tesla Roadster parked alone under warm spotlights in a quiet car museum hall, seen from the front three-quarter, polished floor, soft blue and yellow light behind",
+        "pop": [
+          {
+            "say": "two thousand four hundred fifty",
+            "show": "2,450 BUILT"
+          },
+          {
+            "say": "that little car",
+            "show": "ONE LITTLE CAR"
+          },
+          {
+            "say": "started EVERYTHING",
+            "show": "STARTED EVERYTHING"
+          }
+        ]
+      }
+    ]
+  },
+  "video": {
+    "en": [
+      {
+        "text": "The very first Tesla ever delivered went to Elon Musk himself, in February 2008. It looked a lot like a Lotus Elise, a light British sports car. But underneath, very little of the Lotus was left. By Musk's own later count, only about 7 percent of the parts were shared. That one number tells the whole story. Tesla set out to make a quick electric version of an existing car. And the quick part nearly destroyed the company.",
+        "img": [
+          "gen/tesla-roadster-origin-story-lotus-elise-first-tesla.jpg"
+        ],
+        "pop": [
+          {
+            "say": "Elon Musk himself",
+            "show": "MUSK GOT #1"
+          },
+          {
+            "say": "Lotus Elise",
+            "show": "A LOTUS?"
+          },
+          {
+            "say": "7 percent",
+            "show": "ONLY 7%"
+          },
+          {
+            "say": "nearly destroyed",
+            "show": "NEARLY DESTROYED"
+          }
+        ]
+      },
+      {
+        "head": "Why would a startup build its first car out of a Lotus?",
+        "img": [
+          "gen/tesla-roadster-origin-story-lotus-elise-first-tesla.jpg"
+        ]
+      },
+      {
+        "text": "Because it looked like the fastest, cheapest shortcut. Tesla Motors was founded on July 1, 2003, by two Silicon Valley engineers, Martin Eberhard and Marc Tarpenning. They had driven the tzero, a hand-built electric prototype from a small Californian company called AC Propulsion. And they came away convinced that an electric car could be thrilling, not just worthy. In February 2004, Elon Musk put 6.5 million dollars into a 7.5 million dollar first funding round, and became chairman. Ian Wright and JB Straubel joined early as well. After a legal settlement in 2009, all five may call themselves co-founders.",
+        "pop": [
+          {
+            "say": "fastest, cheapest shortcut",
+            "show": "SHORTCUT"
+          },
+          {
+            "say": "July 1, 2003",
+            "show": "2003"
+          },
+          {
+            "say": "thrilling",
+            "show": "THRILLING"
+          },
+          {
+            "say": "6.5 million dollars",
+            "show": "$6.5M"
+          },
+          {
+            "say": "all five",
+            "show": "5 CO-FOUNDERS"
+          }
+        ]
+      },
+      {
+        "text": "The idea was to skip the hardest parts of making a car. In July 2005, Tesla signed a deal with Lotus to supply gliders: complete cars without an engine. Tesla would add the motor, the electronics and the battery. And for that battery, it made an unusual choice. Thousands of small, mass-produced lithium-ion cells, the kind used in laptops, instead of custom car cells. The finished pack held 6,831 of them, and weighed about 450 kilograms. On paper, the plan made sense. In practice, the shortcut kept getting longer.",
+        "pop": [
+          {
+            "say": "gliders",
+            "show": "GLIDERS"
+          },
+          {
+            "say": "without an engine",
+            "show": "NO ENGINE"
+          },
+          {
+            "say": "used in laptops",
+            "show": "LAPTOP CELLS"
+          },
+          {
+            "say": "6,831",
+            "show": "6,831 CELLS"
+          }
+        ]
+      },
+      {
+        "head": "So what went wrong with such a simple plan?"
+      },
+      {
+        "text": "Almost everything had to be changed. Tesla revealed the Roadster in Santa Monica on July 19, 2006, in front of about 350 invited guests. It promised 0 to 60 miles per hour in about 4 seconds, and more than 200 miles on a charge. In a 2007 Senate hearing, Eberhard put the price at 92,000 dollars. But turning that prototype into a car you could actually sell was another matter. The battery and motor did not fit the Elise's layout, so the chassis grew 2 inches longer. Musk pushed for a carbon fibre body.",
+        "pop": [
+          {
+            "say": "Almost everything",
+            "show": "EVERYTHING CHANGED"
+          },
+          {
+            "say": "about 4 seconds",
+            "show": "0-60: 4 SEC"
+          },
+          {
+            "say": "92,000 dollars",
+            "show": "$92,000"
+          },
+          {
+            "say": "2 inches longer",
+            "show": "LONGER CHASSIS"
+          }
+        ]
+      },
+      {
+        "text": "The worst headache was the gearbox. The plan called for two gears. But the first two suppliers could not build a transmission that survived the motor's torque and high revs. In December 2007, Tesla admitted that the first cars would be locked in second gear. That stretched 0 to 60 to 5.7 seconds. A simpler single-speed gearbox from BorgWarner only arrived in September 2008. And behind all these delays, an even bigger problem was hiding in the numbers.",
+        "pop": [
+          {
+            "say": "the gearbox",
+            "show": "GEARBOX"
+          },
+          {
+            "say": "could not build",
+            "show": "FAILED"
+          },
+          {
+            "say": "locked in second gear",
+            "show": "STUCK IN 2ND"
+          },
+          {
+            "say": "bigger problem",
+            "show": "BIGGER PROBLEM"
+          }
+        ]
+      },
+      {
+        "head": "How bad did the money problem get?"
+      },
+      {
+        "text": "Bad enough to threaten the whole company. In August 2007, the board asked Eberhard to step down as CEO. What happened next is told very differently by the two men. These figures are Musk's version, written in 2009 after Eberhard had sued him. According to Musk, the planned cost of about 65,000 dollars per car was far too low. A later study put the materials alone at around 140,000 dollars. For a car priced at 92,000 dollars, with hundreds of orders already taken. He called it a life threatening problem. Eberhard disputed Musk's account, and the lawsuit was settled that same year.",
+        "pop": [
+          {
+            "say": "threaten the whole company",
+            "show": "THREAT"
+          },
+          {
+            "say": "step down as CEO",
+            "show": "CEO OUT"
+          },
+          {
+            "say": "140,000 dollars",
+            "show": "$140,000"
+          },
+          {
+            "say": "92,000 dollars",
+            "show": "PRICE $92,000"
+          },
+          {
+            "say": "life threatening",
+            "show": "LIFE THREATENING"
+          }
+        ]
+      },
+      {
+        "text": "The fix was painful. Musk took over as CEO himself in October 2008, in the middle of the financial crisis, and cut about a quarter of the staff. The price rose to 109,000 dollars. And in early 2009, customers who had already paid deposits of up to 50,000 dollars were asked to choose their options again. That made the same car about 6,700 dollars more expensive. Some buyers were furious. But the cars were finally reaching people. And that put the real test in front of them.",
+        "pop": [
+          {
+            "say": "Musk took over",
+            "show": "MUSK CEO"
+          },
+          {
+            "say": "a quarter of the staff",
+            "show": "25% CUT"
+          },
+          {
+            "say": "109,000 dollars",
+            "show": "$109,000"
+          },
+          {
+            "say": "furious",
+            "show": "FURIOUS"
+          }
+        ]
+      },
+      {
+        "head": "Did the Roadster actually work once it reached customers?"
+      },
+      {
+        "text": "Yes, and it changed how people saw electric cars. Regular production started on March 17, 2008. The finished car went 244 miles on the official EPA test, from a 53 kilowatt hour pack. The standard car was rated at 3.9 seconds from 0 to 60. Back then, most people pictured electric cars as slow and short-legged. Here was one that could outrun many petrol sports cars, and cover a full day of driving.",
+        "pop": [
+          {
+            "say": "Yes",
+            "show": "YES!"
+          },
+          {
+            "say": "244 miles",
+            "show": "244 MILES"
+          },
+          {
+            "say": "3.9 seconds",
+            "show": "0-60: 3.9 SEC"
+          },
+          {
+            "say": "full day",
+            "show": "A FULL DAY"
+          }
+        ]
+      },
+      {
+        "text": "The Roadster was never meant to last, though. Lotus had agreed to build 2,500 gliders. When that contract ran out at the end of 2011, production ended. In total, about 2,450 Roadsters were delivered between 2008 and 2012. For a car company, that is a tiny number. But its influence is far bigger than its sales.",
+        "pop": [
+          {
+            "say": "never meant to last",
+            "show": "NOT TO LAST"
+          },
+          {
+            "say": "2,450 Roadsters",
+            "show": "2,450 BUILT"
+          },
+          {
+            "say": "tiny number",
+            "show": "TINY"
+          },
+          {
+            "say": "far bigger",
+            "show": "BIG INFLUENCE"
+          }
+        ]
+      },
+      {
+        "head": "So why does a car with only 2,450 copies still matter?",
+        "img": [
+          "models/msc-2.jpg"
+        ]
+      },
+      {
+        "text": "Because it was step one of a plan Tesla still follows. In August 2006, Musk published The Secret Tesla Motors Master Plan on Tesla's website. It had four steps.",
+        "pop": [
+          {
+            "say": "step one",
+            "show": "STEP ONE"
+          },
+          {
+            "say": "Master Plan",
+            "show": "MASTER PLAN"
+          },
+          {
+            "say": "four steps",
+            "show": "4 STEPS"
+          }
+        ]
+      },
+      {
+        "key": "Sports car",
+        "text": "First, build a sports car."
+      },
+      {
+        "key": "Affordable car",
+        "text": "Second, use that money to build an affordable car.",
+        "img": [
+          "models/msc-1.jpg"
+        ]
+      },
+      {
+        "key": "Even cheaper car",
+        "text": "Third, use that money to build an even more affordable car."
+      },
+      {
+        "key": "Clean power",
+        "text": "And fourth, offer zero emission power generation."
+      },
+      {
+        "text": "The Roadster was step one: an expensive car for buyers willing to pay a premium for new technology. The Model S, then the Model 3 and Model Y, and Tesla's solar and battery business followed that script.",
+        "img": [
+          "gigafactory-fremont.jpg"
+        ],
+        "pop": [
+          {
+            "say": "expensive car",
+            "show": "PREMIUM FIRST"
+          },
+          {
+            "say": "followed that script",
+            "show": "THE SCRIPT"
+          }
+        ]
+      },
+      {
+        "text": "The Roadster also taught hard lessons. In 2018, Musk said that basing it on the Elise had been a poor strategy, because so little of the Lotus survived. The car even had a famous afterlife. On February 6, 2018, Musk's own red Roadster flew on the first Falcon Heavy launch by SpaceX, and was sent into an orbit around the Sun.",
+        "pop": [
+          {
+            "say": "poor strategy",
+            "show": "POOR STRATEGY"
+          },
+          {
+            "say": "Falcon Heavy",
+            "show": "FALCON HEAVY"
+          },
+          {
+            "say": "orbit around the Sun",
+            "show": "AROUND THE SUN"
+          }
+        ]
+      },
+      {
+        "text": "And in October 2026, a new chapter began. Tesla revealed a new Roadster, with cold gas thrusters developed with SpaceX. It is a far wilder machine than the reworked Lotus of 2008. But it only exists because that first, nearly impossible car proved that people wanted an electric sports car at all.",
+        "img": [
+          "models/rd-25.jpg",
+          "models/rd-14.jpg"
+        ],
+        "pop": [
+          {
+            "say": "new Roadster",
+            "show": "NEW ROADSTER"
+          },
+          {
+            "say": "cold gas thrusters",
+            "show": "THRUSTERS"
+          },
+          {
+            "say": "nearly impossible car",
+            "show": "NEARLY IMPOSSIBLE"
+          },
+          {
+            "say": "electric sports car at all",
+            "show": "IT STARTED HERE"
+          }
+        ]
+      }
+    ],
+    "nl": [
+      {
+        "text": "De allereerste Tesla die ooit werd geleverd, ging in februari 2008 naar Elon Musk zelf. Hij leek sterk op een Lotus Elise, een lichte Britse sportwagen. Maar onder de huid was er weinig van die Lotus over. Volgens Musk zelf deelden de twee auto's nog maar zo'n 7 procent van hun onderdelen. Dat ene getal vat het hele verhaal samen. Tesla wilde snel even een elektrische versie van een bestaande auto maken. En juist dat snel even bracht het bedrijf bijna ten val.",
+        "img": [
+          "gen/tesla-roadster-origin-story-lotus-elise-first-tesla.jpg"
+        ],
+        "pop": [
+          {
+            "say": "Elon Musk zelf",
+            "show": "MUSK KREEG #1"
+          },
+          {
+            "say": "Lotus Elise",
+            "show": "EEN LOTUS?"
+          },
+          {
+            "say": "7 procent",
+            "show": "MAAR 7%"
+          },
+          {
+            "say": "bijna ten val",
+            "show": "BIJNA TEN VAL"
+          }
+        ]
+      },
+      {
+        "head": "Waarom bouwt een startup zijn eerste auto uit een Lotus?",
+        "img": [
+          "gen/tesla-roadster-origin-story-lotus-elise-first-tesla.jpg"
+        ]
+      },
+      {
+        "text": "Omdat het de snelste en goedkoopste route leek. Tesla Motors werd op 1 juli 2003 opgericht door twee ingenieurs uit Silicon Valley, Martin Eberhard en Marc Tarpenning. Ze hadden gereden in de tzero, een met de hand gebouwd elektrisch prototype van het kleine Californische bedrijf AC Propulsion. En ze waren ervan overtuigd geraakt dat een elektrische auto spannend kon zijn, niet alleen braaf. In februari 2004 stak Elon Musk 6,5 miljoen dollar in een eerste financieringsronde van 7,5 miljoen, en werd hij voorzitter. Ook Ian Wright en JB Straubel kwamen vroeg aan boord. Na een schikking in 2009 mogen ze zich alle vijf medeoprichter noemen.",
+        "pop": [
+          {
+            "say": "snelste en goedkoopste route",
+            "show": "KORTE ROUTE"
+          },
+          {
+            "say": "1 juli 2003",
+            "show": "2003"
+          },
+          {
+            "say": "spannend",
+            "show": "SPANNEND"
+          },
+          {
+            "say": "6,5 miljoen dollar",
+            "show": "$6,5 MLN"
+          },
+          {
+            "say": "alle vijf",
+            "show": "5 OPRICHTERS"
+          }
+        ]
+      },
+      {
+        "text": "Het idee was om het moeilijkste deel van het autobouwen over te slaan. In juli 2005 sloot Tesla een deal met Lotus voor zogeheten gliders: complete auto's zonder motor. Tesla zou zelf de elektromotor, de elektronica en de accu toevoegen. En voor die accu maakte het een opvallende keuze. Duizenden kleine lithium-ioncellen uit massaproductie, het soort dat in laptops zit, in plaats van speciale autocellen. Het accupakket bevatte er uiteindelijk 6831, en woog zo'n 450 kilo. Op papier klopte het plan. In de praktijk werd de kortere weg steeds langer.",
+        "pop": [
+          {
+            "say": "gliders",
+            "show": "GLIDERS"
+          },
+          {
+            "say": "zonder motor",
+            "show": "ZONDER MOTOR"
+          },
+          {
+            "say": "in laptops",
+            "show": "LAPTOPCELLEN"
+          },
+          {
+            "say": "6831",
+            "show": "6.831 CELLEN"
+          }
+        ]
+      },
+      {
+        "head": "Wat ging er dan mis met zo'n simpel plan?"
+      },
+      {
+        "text": "Bijna alles moest anders. Tesla onthulde de Roadster op 19 juli 2006 in Santa Monica, voor zo'n 350 genodigden. Het beloofde in ongeveer 4 seconden van 0 naar 60 mijl per uur, bijna 100 kilometer per uur, en meer dan 320 kilometer op één lading. Tijdens een hoorzitting in de Amerikaanse Senaat in 2007 noemde Eberhard een prijs van 92.000 dollar. Accu en motor pasten niet in de Elise, dus werd het chassis 5 centimeter langer. Musk wilde een carrosserie van koolstofvezel.",
+        "pop": [
+          {
+            "say": "Bijna alles",
+            "show": "ALLES ANDERS"
+          },
+          {
+            "say": "4 seconden",
+            "show": "4 SECONDEN"
+          },
+          {
+            "say": "92.000 dollar",
+            "show": "$92.000"
+          },
+          {
+            "say": "5 centimeter langer",
+            "show": "LANGER CHASSIS"
+          }
+        ]
+      },
+      {
+        "text": "De grootste hoofdpijn was de versnellingsbak. Het plan ging uit van twee versnellingen. Maar de eerste twee leveranciers kregen geen bak gebouwd die het koppel en de hoge toerentallen van de motor overleefde. In december 2007 gaf Tesla toe dat de eerste auto's vast in de tweede versnelling zouden staan. Daardoor duurde de sprint 5,7 seconden. Een eenvoudigere bak met één versnelling van BorgWarner kwam pas in september 2008. En achter al die vertraging zat in de cijfers een nog groter probleem verstopt.",
+        "pop": [
+          {
+            "say": "versnellingsbak",
+            "show": "VERSNELLINGSBAK"
+          },
+          {
+            "say": "geen bak gebouwd",
+            "show": "MISLUKT"
+          },
+          {
+            "say": "tweede versnelling",
+            "show": "VAST IN 2"
+          },
+          {
+            "say": "groter probleem",
+            "show": "GROTER PROBLEEM"
+          }
+        ]
+      },
+      {
+        "head": "Hoe groot werd het geldprobleem?"
+      },
+      {
+        "text": "Groot genoeg om het hele bedrijf te bedreigen. In augustus 2007 vroeg het bestuur Eberhard om op te stappen als topman. Wat daarna gebeurde, vertellen de twee mannen heel verschillend. Deze cijfers zijn de versie van Musk, opgeschreven in 2009 nadat Eberhard hem had aangeklaagd. Volgens Musk was de geplande kostprijs van zo'n 65.000 dollar per auto veel te laag. Een latere studie kwam alleen al aan materialen op ongeveer 140.000 dollar. Voor een auto van 92.000 dollar, waarvan er al honderden besteld waren. Hij noemde het een levensbedreigend probleem. Eberhard bestreed die lezing, en de rechtszaak werd nog datzelfde jaar geschikt.",
+        "pop": [
+          {
+            "say": "hele bedrijf te bedreigen",
+            "show": "BEDREIGING"
+          },
+          {
+            "say": "op te stappen",
+            "show": "TOPMAN WEG"
+          },
+          {
+            "say": "140.000 dollar",
+            "show": "$140.000"
+          },
+          {
+            "say": "92.000 dollar",
+            "show": "PRIJS $92.000"
+          },
+          {
+            "say": "levensbedreigend",
+            "show": "LEVENSBEDREIGEND"
+          }
+        ]
+      },
+      {
+        "text": "De oplossing deed pijn. Musk werd in oktober 2008 zelf topman, midden in de financiële crisis, en ontsloeg ongeveer een kwart van het personeel. De prijs ging omhoog naar 109.000 dollar. En begin 2009 moesten klanten die al aanbetalingen tot 50.000 dollar hadden gedaan, hun opties opnieuw kiezen. Daardoor werd dezelfde auto zo'n 6700 dollar duurder. Sommige kopers waren woedend. Maar de auto's kwamen eindelijk bij mensen aan. En daarmee begon de echte test.",
+        "pop": [
+          {
+            "say": "zelf topman",
+            "show": "MUSK TOPMAN"
+          },
+          {
+            "say": "een kwart van het personeel",
+            "show": "25% ERUIT"
+          },
+          {
+            "say": "109.000 dollar",
+            "show": "$109.000"
+          },
+          {
+            "say": "woedend",
+            "show": "WOEDEND"
+          }
+        ]
+      },
+      {
+        "head": "Werkte de Roadster eenmaal bij de klant?"
+      },
+      {
+        "text": "Ja, en hij veranderde hoe mensen naar elektrische auto's keken. De gewone productie begon op 17 maart 2008. De auto haalde 393 kilometer op de officiële Amerikaanse test, uit een accu van 53 kilowattuur. De standaardversie sprintte in 3,9 seconden naar 60 mijl per uur. Toen zagen de meeste mensen een elektrische auto als traag, met weinig bereik. Dit was er een die veel benzinesportwagens bijhield, en een hele dag kon rijden.",
+        "pop": [
+          {
+            "say": "Ja",
+            "show": "JA!"
+          },
+          {
+            "say": "393 kilometer",
+            "show": "393 KM"
+          },
+          {
+            "say": "3,9 seconden",
+            "show": "3,9 SEC"
+          },
+          {
+            "say": "hele dag",
+            "show": "HELE DAG"
+          }
+        ]
+      },
+      {
+        "text": "Toch was de Roadster nooit bedoeld als blijvertje. Lotus had afgesproken 2500 gliders te bouwen. Toen dat contract eind 2011 afliep, stopte de productie. In totaal werden er tussen 2008 en 2012 zo'n 2450 Roadsters geleverd. Voor een autobedrijf is dat een piepklein aantal. Maar zijn invloed is veel groter dan zijn verkoopcijfers.",
+        "pop": [
+          {
+            "say": "nooit bedoeld als blijvertje",
+            "show": "GEEN BLIJVERTJE"
+          },
+          {
+            "say": "2450 Roadsters",
+            "show": "2.450 GEBOUWD"
+          },
+          {
+            "say": "piepklein",
+            "show": "PIEPKLEIN"
+          },
+          {
+            "say": "veel groter",
+            "show": "GROTE INVLOED"
+          }
+        ]
+      },
+      {
+        "head": "Waarom doet een auto met maar 2.450 exemplaren er dan nog steeds toe?",
+        "img": [
+          "models/msc-2.jpg"
+        ]
+      },
+      {
+        "text": "Omdat hij stap één was van een plan dat Tesla nog altijd volgt. In augustus 2006 publiceerde Musk op de website van Tesla The Secret Tesla Motors Master Plan. Dat plan had vier stappen.",
+        "pop": [
+          {
+            "say": "stap één",
+            "show": "STAP ÉÉN"
+          },
+          {
+            "say": "Master Plan",
+            "show": "MASTER PLAN"
+          },
+          {
+            "say": "vier stappen",
+            "show": "4 STAPPEN"
+          }
+        ]
+      },
+      {
+        "key": "Sportwagen",
+        "text": "Eén: bouw een sportwagen."
+      },
+      {
+        "key": "Betaalbare auto",
+        "text": "Twee: gebruik dat geld voor een betaalbare auto.",
+        "img": [
+          "models/msc-1.jpg"
+        ]
+      },
+      {
+        "key": "Nog goedkoper",
+        "text": "Drie: gebruik dat geld weer voor een nog betaalbaardere auto."
+      },
+      {
+        "key": "Schone stroom",
+        "text": "En vier: bied emissievrije stroomopwekking aan."
+      },
+      {
+        "text": "De Roadster was stap één: een dure auto voor kopers die extra wilden betalen voor nieuwe techniek. De Model S, daarna de Model 3 en Model Y, en de zonne- en accutak van Tesla volgden dat script.",
+        "img": [
+          "gigafactory-fremont.jpg"
+        ],
+        "pop": [
+          {
+            "say": "dure auto",
+            "show": "EERST DUUR"
+          },
+          {
+            "say": "volgden dat script",
+            "show": "HET SCRIPT"
+          }
+        ]
+      },
+      {
+        "text": "De Roadster leerde Tesla ook harde lessen. In 2018 zei Musk dat het een slechte strategie was geweest om de Elise als basis te nemen, omdat er zo weinig van de Lotus overbleef. De auto kreeg zelfs een beroemd tweede leven. Op 6 februari 2018 vloog Musks eigen rode Roadster mee met de eerste lancering van de Falcon Heavy van SpaceX. Sindsdien draait hij in een baan om de zon.",
+        "pop": [
+          {
+            "say": "slechte strategie",
+            "show": "SLECHTE STRATEGIE"
+          },
+          {
+            "say": "Falcon Heavy",
+            "show": "FALCON HEAVY"
+          },
+          {
+            "say": "baan om de zon",
+            "show": "ROND DE ZON"
+          }
+        ]
+      },
+      {
+        "text": "En in oktober 2026 begon een nieuw hoofdstuk. Tesla liet een nieuwe Roadster zien, met koudgas-stuwers die samen met SpaceX zijn ontwikkeld. Dat is een veel wildere machine dan de omgebouwde Lotus van 2008. Maar hij bestaat alleen omdat die eerste, bijna onmogelijke auto bewees dat mensen überhaupt een elektrische sportwagen wilden.",
+        "img": [
+          "models/rd-25.jpg",
+          "models/rd-14.jpg"
+        ],
+        "pop": [
+          {
+            "say": "nieuwe Roadster",
+            "show": "NIEUWE ROADSTER"
+          },
+          {
+            "say": "koudgas-stuwers",
+            "show": "STUWERS"
+          },
+          {
+            "say": "bijna onmogelijke auto",
+            "show": "BIJNA ONMOGELIJK"
+          },
+          {
+            "say": "elektrische sportwagen wilden",
+            "show": "HIER BEGON HET"
+          }
+        ]
+      }
+    ],
+    "yt_title_en": "How the First Tesla Roadster Nearly Broke the Company",
+    "yt_title_nl": "Hoe de Eerste Tesla Roadster het Bedrijf Bijna Brak"
+  }
+}

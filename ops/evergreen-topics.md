@@ -39,6 +39,7 @@ Add new ideas at the bottom at any time.
 - [ ] What happens if your Tesla runs out of charge on the road?
 - [ ] Why does Tesla have no dealers? How buying a Tesla works
 - [ ] Gigacasting explained: why Tesla casts a car's body in a few huge pieces
+- [ ] Why does Tesla build its batteries from thousands of small cells instead of a few big ones? From laptop cells to the 4680
 
 ## Stories (evening task: entertaining and educational, timeless)
 
@@ -50,7 +51,7 @@ Add new ideas at the bottom at any time.
 - [ ] From a dancer in a suit to walking robots: the story of Optimus, and why Musk calls it Tesla's biggest product ever
 - [ ] The first Starship catch: how SpaceX caught a 70-metre booster with "chopsticks"
 
-- [ ] The Roadster that started it all: how a small startup turned a Lotus into the first Tesla
+- [x] The Roadster that started it all: how a small startup turned a Lotus into the first Tesla (tesla-roadster-origin-story-lotus-elise-first-tesla)
 - [ ] 2008: the year Tesla almost died, and the Christmas Eve deal that saved it
 - [ ] Model 3 "production hell": sleeping in the factory and the tent on the parking lot
 - [ ] Why the Cybertruck looks like that: stainless steel, the broken window and the design bet
@@ -64,6 +65,8 @@ Add new ideas at the bottom at any time.
 - [ ] The Tesla Semi: from the 2017 reveal to trucks on the road
 - [ ] Boring Company: how a traffic joke became the Las Vegas Loop
 - [ ] The Plaid that beat supercars: how Tesla made a family sedan the quickest car in the world
+- [ ] AC Propulsion's tzero: the hand-built electric car that inspired Tesla's founders, and why its makers would not build it
+- [ ] Starman: why SpaceX launched Musk's own Roadster on the first Falcon Heavy, and where that car is now
 
 ## Series: How did Elon Musk ...? (evening task; one per week at most, category "musk")
 

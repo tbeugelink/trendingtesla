@@ -73,6 +73,7 @@ Add new ideas at the bottom at any time.
 Strictly factual and balanced: his decisions, risks, failures and successes, what others say, no political
 opinion, no hero worship and no bashing. Check every claim (titles are questions on purpose).
 
+- [ ] From Blaster to Master: the 12-year-old who sold his first video game, and what it says about Elon Musk (Blaster, a space game he wrote in BASIC and sold to a computer magazine for about $500; check the exact amount, buyer and year in good sources: often told as PC and Office Technology, 1984)
 - [ ] How did Elon Musk go from a bullied boy in South Africa to one of the most influential people on Earth?
 - [ ] How did Elon Musk become the richest person on Earth? Where his wealth really comes from
 - [ ] Is Elon Musk on his way to becoming the world's first trillionaire? (check the current figures and what it depends on)

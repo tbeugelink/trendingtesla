@@ -62,7 +62,7 @@ jobs:
             echo "slugs=$slugs" >> "$GITHUB_OUTPUT"
             echo "langs=$langs" >> "$GITHUB_OUTPUT"
             # ops/videos-paused: articles still get their photos, but no Shorts or long videos are made or posted
-            [ -f ops/videos-paused ] && [ -z "$(git diff --name-only HEAD~1 HEAD | grep -x video/queue.txt)" ] && echo "paused=1" >> "$GITHUB_OUTPUT"
+            if [ -f ops/videos-paused ] && [ -z "$(git diff --name-only HEAD~1 HEAD | grep -x video/queue.txt)" ]; then echo "paused=1" >> "$GITHUB_OUTPUT"; fi
           fi
       - name: Generate article photos (Nano Banana) and publish them first
         if: steps.find.outputs.slugs != '' && steps.find.outputs.queue != '1' && github.event_name != 'workflow_dispatch'

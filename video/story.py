@@ -126,6 +126,7 @@ def assign_images(a, beats):
         own += [q for q in S.photos(a) if q not in own][:3 - len(own)]
     gen = [p for p in own if "/gen/" in str(p)]
     order = gen + [p for p in own if p not in gen]
+    a["_pool"] = order
     j, used = 0, {}
     for i, b in enumerate(beats):
         p = resolve(b["img"]) if b.get("img") else None
@@ -140,11 +141,18 @@ def assign_images(a, beats):
         used[p] = b["_use"] + 1
 
 
-def load_src(p, move, use=0):
+SHOT_MAX = 1.6  # seconds: longer sentences are cut into several shots
+FRAMINGS = [(1.0, 0.0, 0.0), (1.45, -0.28, -0.05), (1.45, 0.28, -0.05), (1.6, 0.0, -0.12), (1.35, -0.15, 0.05),
+            (1.35, 0.15, 0.05)]  # (zoom, x, y offset as share of the free room): whole photo, then close-ups that
+#                                  stay near the middle height, where the subject is (not the sky or the ground)
+MOVES = ["in", "panL", "out", "panR", "tilt", "in"]
+
+
+def load_src(p):
+    from PIL import ImageEnhance
     im = Image.open(p).convert("RGB")
-    # cover the portrait frame with room to move: "rise" needs extra height, the rest a little zoom margin
-    need_h = H * (1.30 if move == "rise" else 1.12)
-    s = max(need_h / im.height, W * 1.12 / im.width)
+    im = ImageEnhance.Contrast(ImageEnhance.Color(im).enhance(1.2)).enhance(1.08)  # less flat, more colour
+    s = max(H * 1.30 / im.height, W * 1.15 / im.width)  # room to move in every direction
     return im.resize((round(im.width * s), round(im.height * s)), Image.LANCZOS)
 
 
@@ -152,47 +160,72 @@ def ease(x):
     return 0.5 - 0.5 * math.cos(math.pi * max(0.0, min(1.0, x)))
 
 
-DETAIL = [(0.0, 0.0), (-0.22, 0.10), (0.22, -0.12), (0.0, -0.25), (0.0, 0.22)]  # focus offsets for close-ups
+def make_shots(beats, pool, rnd):
+    """Cut every beat into shots of at most SHOT_MAX s; each shot gets its own photo or framing and its own move."""
+    rot = [(im, f) for f in range(len(FRAMINGS)) for im in pool]  # every photo whole first, then close-ups
+    k, shots, last = 0, [], None
+    for bi, b in enumerate(beats):
+        n = max(1, math.ceil(b["_dur"] / SHOT_MAX - 0.15))
+        for j in range(n):
+            if j == 0 and b.get("img"):
+                img, fi = b["_img"], 0
+            else:
+                for _ in range(len(rot)):
+                    img, fi = rot[k % len(rot)]
+                    k += 1
+                    if img != last or len(pool) == 1:
+                        break
+            last = img
+            if bi == 0 and j == 0:
+                mv = "punch"
+            elif b.get("move") == "rise":
+                mv = "rise"
+            elif bi == len(beats) - 1 and j == n - 1:
+                mv = "zoom"
+            else:
+                mv = MOVES[(len(shots) + rnd.randrange(2)) % len(MOVES)]
+            shots.append({"img": img, "f": fi, "move": mv, "t0": b["_t0"] + j * b["_dur"] / n, "dur": b["_dur"] / n,
+                          "beat": bi})
+    return shots
 
 
-def frame(src, move, u, t, d, rnd, use=0):
-    """Crop box (in source pixels) for progress u (0..1) of a shot; t = seconds into the shot."""
-    sw, sh = src.size
-    if move == "punch":
-        z = 1.18 - 0.18 * ease(t / 0.45) + 0.04 * u
-    elif move == "zoom":
-        z = 1.0 + 0.12 * ease(u)
-    elif move == "push":
-        z = 1.0 + 0.07 * u
-    else:
-        z = 1.02
-    if use:  # a photo shown again: a tighter close-up of another part of it, so it feels like a new shot
-        z *= 1.55
-    fh = min(H / z, sh)  # the source is scaled so 1 source pixel = 1 video pixel at zoom 1
-    fw = fh * W / H
-    cx, cy = sw / 2, sh / 2
-    if use:
-        ox, oy = DETAIL[use % len(DETAIL)] if use % len(DETAIL) else DETAIL[1]
-        cx += ox * (sw - fw)
-        cy += oy * (sh - fh)
-    if move == "pan":  # small, so the subject stays near the centre (the Short shows only the middle of the photo)
-        dirn = 1 if rnd < 0.5 else -1
-        cx += dirn * (ease(u) - 0.5) * min(0.10 * sw, (sw - fw) / 2)
-    if move == "rise":  # camera moves top-to-bottom: the subject seems to rise
-        top, bot = fh / 2, sh - fh / 2
-        cy = top + (bot - top) * ease(u)
-    shake = 0.0
-    if move == "punch":
-        shake = 18 * max(0.0, 1 - t / 1.3)
-    elif move == "zoom":
-        shake = 2.5
-    elif move == "rise":
-        shake = 4.0
+def frame(src, sh_, t, pop_t):
+    """Crop box (source pixels) at t seconds into the shot; pop_t = seconds since a key word popped (or None)."""
+    sw, shh = src.size
+    u = t / sh_["dur"]
+    z0, fx, fy = FRAMINGS[sh_["f"]]
+    mv = sh_["move"]
+    z, ox, oy = z0, fx, fy
+    if mv == "punch":
+        z = z0 * (1.28 - 0.28 * ease(t / 0.4))
+    elif mv == "in":
+        z = z0 * (1.0 + 0.16 * ease(u))
+    elif mv == "out":
+        z = z0 * (1.16 - 0.16 * ease(u))
+    elif mv == "zoom":
+        z = z0 * (1.0 + 0.22 * ease(u))
+    elif mv in ("panL", "panR"):
+        z = z0 * 1.08
+        ox = fx + (0.22 if mv == "panR" else -0.22) * (ease(u) - 0.5)
+    elif mv == "tilt":
+        z = z0 * 1.08
+        oy = fy + 0.30 * (ease(u) - 0.5)
+    if pop_t is not None and pop_t < 0.22:  # a short "hit" when a key word pops in
+        z *= 1 + 0.07 * (1 - pop_t / 0.22)
+    fh = min(H / z, shh)
+    fw = min(fh * W / H, sw)
+    cx = sw / 2 + ox * (sw - fw) / 2
+    cy = shh / 2 + oy * (shh - fh) / 2
+    if mv == "rise":  # camera moves top-to-bottom: the subject seems to rise
+        cy = fh / 2 + (shh - fh) * ease(u)
+    shake = 18 * max(0.0, 1 - t / 1.0) if mv == "punch" else 3.0 if mv in ("zoom", "rise") else 0.0
+    if pop_t is not None and pop_t < 0.3:
+        shake += 10 * (1 - pop_t / 0.3)
     if shake:
         cx += shake * (math.sin(t * 47.0) + 0.5 * math.sin(t * 83.0 + 1.3))
         cy += shake * (math.cos(t * 41.0) + 0.5 * math.sin(t * 71.0 + 0.7))
     cx = min(max(cx, fw / 2), sw - fw / 2)
-    cy = min(max(cy, fh / 2), sh - fh / 2)
+    cy = min(max(cy, fh / 2), shh - fh / 2)
     return (cx - fw / 2, cy - fh / 2, cx + fw / 2, cy + fh / 2)
 
 
@@ -347,9 +380,12 @@ def main():
                             "-c:v", "libx264", "-preset", "veryfast", "-crf", "20", "-pix_fmt", "yuv420p",
                             "-c:a", "copy", "-t", f"{total:.2f}", "-movflags", "+faststart", str(out)], stdin=subprocess.PIPE)
     rnd = random.Random(slug)
+    shots = make_shots(beats, a["_pool"], rnd)
+    print(f"{len(shots)} shots, {len(set(x['img'] for x in shots))} photos")
     srcs = {}
     n = int(round(total * FPS))
-    bi = 0
+    si = 0
+    hook_end = beats[1]["_t0"] if len(beats) > 1 else body_end
     for k in range(n):
         tt = k / FPS
         if tt >= body_end:
@@ -360,18 +396,19 @@ def main():
                 fr = fr.resize((W, H), Image.BILINEAR, box=((W - cw) / 2, (H - ch) / 2, (W + cw) / 2, (H + ch) / 2))
             enc.stdin.write(fr.tobytes())
             continue
-        while bi + 1 < len(beats) and tt >= beats[bi + 1]["_t0"]:
-            bi += 1
-        b = beats[bi]
-        if bi not in srcs:
-            srcs = {bi: (load_src(b["_img"], b["move"], b["_use"]), rnd.random())}
-        src, r = srcs[bi]
-        st = tt - b["_t0"]
-        box = frame(src, b["move"], st / b["_dur"], st, b["_dur"], r, b["_use"])
+        while si + 1 < len(shots) and tt >= shots[si + 1]["t0"]:
+            si += 1
+        shot = shots[si]
+        if shot["img"] not in srcs:
+            srcs[shot["img"]] = load_src(shot["img"])
+        src = srcs[shot["img"]]
+        st = tt - shot["t0"]
+        pg = next((p for p in pops if p[0] <= tt < p[1]), None)
+        box = frame(src, shot, st, (tt - pg[0]) if pg else None)
         fr = src.resize((W, H), Image.BILINEAR, box=box).convert("RGBA")
+        bi = 0 if tt < hook_end else 1
         if bi == 0:  # the label tells what the story is about while the hook is spoken
             fr.alpha_composite(label)
-        pg = next((p for p in pops if p[0] <= tt < p[1]), None)
         cg = None if pg else next((c for c in caps if c[0] <= tt < c[1] + 0.15), None)
         if pg:  # a key word pops in big (scale 1.35 -> 1 in 0.15 s) and replaces the caption while it is spoken
             key = "POP " + pg[2]
@@ -390,8 +427,8 @@ def main():
                 capimgs[key] = caption_img(cg[2])
             # opening shot: captions above the label; afterwards in the usual place
             fr.alpha_composite(capimgs[key], (0, int(ltop - 300) if bi == 0 else int(H * 0.60)))
-        if st < 0.12 and bi > 0:  # quick flash-cut between shots instead of a still crossfade
-            fr = Image.blend(fr.convert("RGB"), Image.new("RGB", (W, H), (255, 255, 255)), 0.18 * (1 - st / 0.12)).convert("RGBA")
+        if st < 0.1 and si > 0 and shot["beat"] != shots[si - 1]["beat"]:  # quick flash on a new sentence
+            fr = Image.blend(fr.convert("RGB"), Image.new("RGB", (W, H), (255, 255, 255)), 0.2 * (1 - st / 0.1)).convert("RGBA")
         enc.stdin.write(fr.convert("RGB").tobytes())
     enc.stdin.close()
     if enc.wait():

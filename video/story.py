@@ -395,6 +395,7 @@ def assign_images(a, beats):
         used[p] = b["_use"] + 1
 
 
+XFADE = 0.28  # seconds of crossfade between shots
 SHOT_MAX = 1.6  # seconds: longer sentences are cut into several shots
 FRAMINGS = [(1.0, 0.0, 0.0), (1.45, -0.28, -0.05), (1.45, 0.28, -0.05), (1.6, 0.0, -0.12), (1.35, -0.15, 0.05),
             (1.35, 0.15, 0.05)]  # (zoom, x, y offset as share of the free room): whole photo, then close-ups that
@@ -496,15 +497,26 @@ def norm(w):
     return re.sub(r"[^\w$€£%'-]", "", w).lower()
 
 
+POP_H = 640
+
+
 def pop_img(txt):
-    """A key word or number, huge and yellow, on its own (not part of the caption)."""
+    """A key word or number, huge and yellow, on its own; two or more words are stacked (one per line)."""
+    words = txt.split()
+    lines = [txt] if len(words) == 1 else [" ".join(words[:len(words) // 2 + len(words) % 2]), " ".join(words[len(words) // 2 + len(words) % 2:])] \
+        if len(words) > 3 else words
     f = FPOP
-    while f.getlength(txt) > W - 120 and f.size > 90:
-        f = S.font(S.FB, f.size - 10)
-    im = Image.new("RGBA", (W, 420), (0, 0, 0, 0))
+    while max(f.getlength(ln) for ln in lines) > W - 110 and f.size > 90:
+        f = S.font(S.FB, f.size - 8)
+    lh = int(f.size * 1.02)
+    im = Image.new("RGBA", (W, POP_H), (0, 0, 0, 0))
     d = ImageDraw.Draw(im)
-    d.text(((W - f.getlength(txt)) / 2 + 8, 70 + 10), txt, font=f, fill=(0, 0, 0, 150))
-    d.text(((W - f.getlength(txt)) / 2, 70), txt, font=f, fill=(255, 214, 0), stroke_width=12, stroke_fill=(0, 0, 0))
+    y = (POP_H - lh * len(lines)) / 2 - f.size * 0.12
+    for ln in lines:
+        x = (W - f.getlength(ln)) / 2
+        d.text((x + 8, y + 10), ln, font=f, fill=(0, 0, 0, 150))
+        d.text((x, y), ln, font=f, fill=(255, 214, 0), stroke_width=12, stroke_fill=(0, 0, 0))
+        y += lh
     return im
 
 
@@ -593,7 +605,7 @@ def main():
         b["_voice"], b["_t0"] = f, t
         if CAPTIONS:
             caps += groups(words, t)
-        pops += find_pops(b, words, t + (0.25 if i == 0 else 0))
+        pops += [(p0, p1, txt, i) for p0, p1, txt in find_pops(b, words, t + (0.25 if i == 0 else 0))]
         nxt = beats[i + 1]["part"] if i + 1 < len(beats) else None
         gap = GAP["payoff"] if nxt == "payoff" and b["part"] != "payoff" else GAP[b["part"]]
         b["_dur"] = dur + gap + (0.25 if i == 0 else 0)
@@ -646,6 +658,17 @@ def main():
     si = 0
     hook_end = beats[1]["_t0"] if len(beats) > 1 else body_end
     label_end = min([p[0] for p in pops] + [2.2])
+    # key words fill each sentence: the first one shows from the start of its sentence (after the label), each one
+    # stays until the next one, and never runs into the next sentence (that is another subject)
+    pops.sort()
+    held = []
+    for k, (p0, p1, txt, bi) in enumerate(pops):
+        bstart = max(beats[bi]["_t0"] + 0.1, label_end) if bi else p0
+        bend = beats[bi]["_t0"] + beats[bi]["_dur"]
+        first = k == 0 or pops[k - 1][3] != bi
+        nxt = pops[k + 1][0] if k + 1 < len(pops) and pops[k + 1][3] == bi else bend
+        held.append((min(p0, bstart) if first else p0, max(p1, nxt), txt))
+    pops = held
     for k in range(n):
         tt = k / FPS
         if tt >= body_end:
@@ -665,7 +688,15 @@ def main():
         st = tt - shot["t0"]
         pg = next((p for p in pops if p[0] <= tt < p[1]), None)
         box = frame(src, shot, st, (tt - pg[0]) if pg else None)
-        fr = src.resize((W, H), Image.BILINEAR, box=box).convert("RGBA")
+        fr = src.resize((W, H), Image.BILINEAR, box=box)
+        if st < XFADE and si > 0:  # smooth crossfade from the previous shot, which keeps moving meanwhile
+            pv = shots[si - 1]
+            if pv["img"] not in srcs:
+                srcs[pv["img"]] = load_src(pv["img"])
+            pbox = frame(srcs[pv["img"]], {**pv, "dur": pv["dur"] + XFADE}, tt - pv["t0"], None)
+            prev = srcs[pv["img"]].resize((W, H), Image.BILINEAR, box=pbox)
+            fr = Image.blend(prev, fr, ease(st / XFADE))
+        fr = fr.convert("RGBA")
         bi = 0 if tt < hook_end else 1
         if tt < label_end:  # the label alone for a moment: what the story is about
             fr.alpha_composite(label)
@@ -677,18 +708,16 @@ def main():
             pi = capimgs[key]
             sc = 1 + 0.35 * max(0.0, 1 - (tt - pg[0]) / 0.15)
             if sc > 1.001:
-                pi = pi.resize((int(W * sc), int(420 * sc)), Image.BILINEAR)
-                ox, oy = (pi.width - W) // 2, (pi.height - 420) // 2
-                pi = pi.crop((ox, oy, ox + W, oy + 420))
-            fr.alpha_composite(pi, (0, int(H * 0.40)))
+                pi = pi.resize((int(W * sc), int(POP_H * sc)), Image.BILINEAR)
+                ox, oy = (pi.width - W) // 2, (pi.height - POP_H) // 2
+                pi = pi.crop((ox, oy, ox + W, oy + POP_H))
+            fr.alpha_composite(pi, (0, int(H * 0.36)))
         if cg:
             key = " ".join(cg[2])
             if key not in capimgs:
                 capimgs[key] = caption_img(cg[2])
             # opening shot: captions above the label; afterwards in the usual place
             fr.alpha_composite(capimgs[key], (0, int(ltop - 300) if bi == 0 else int(H * 0.60)))
-        if st < 0.1 and si > 0 and shot["beat"] != shots[si - 1]["beat"]:  # quick flash on a new sentence
-            fr = Image.blend(fr.convert("RGB"), Image.new("RGB", (W, H), (255, 255, 255)), 0.1 * (1 - st / 0.1)).convert("RGBA")
         enc.stdin.write(fr.convert("RGB").tobytes())
     enc.stdin.close()
     if enc.wait():

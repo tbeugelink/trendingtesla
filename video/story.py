@@ -608,8 +608,8 @@ def title_card(a, lang):
     return im
 
 
-SLOGAN = {"en": "Like and subscribe, and go to Trending Tesla dot com for more Tesla news!",
-          "nl": "Like en abonneer, en ga naar Trending Tesla punt com voor meer Tesla-nieuws!"}
+SLOGAN = {"en": "Like and subscribe, for the full story go to Trending Tesla dot com. I'll see you there!",
+          "nl": "Like en abonneer, voor het hele verhaal ga je naar Trending Tesla punt com. Tot daar!"}
 RED = (214, 24, 30)
 
 
@@ -701,9 +701,11 @@ def main():
     cmd = ["ffmpeg", "-y", "-loglevel", "error"]
     for f, _, _ in layers:
         cmd += ["-i", str(f)]
-    fl = [f"[{k}:a]adelay={int(st * 1000)}|{int(st * 1000)},volume={v}[a{k}]" for k, (_, st, v) in enumerate(layers)]
+    # every layer fades in over 30 ms and the whole mix over 80 ms: no click or crackle where a sound starts
+    fl = [f"[{k}:a]aresample=44100,aformat=channel_layouts=stereo,afade=t=in:d=0.03,adelay={int(st * 1000)}|{int(st * 1000)},"
+          f"volume={v}[a{k}]" for k, (_, st, v) in enumerate(layers)]
     fl.append("".join(f"[a{k}]" for k in range(len(layers))) +
-              f"amix=inputs={len(layers)}:normalize=0,alimiter=limit=0.95,apad,atrim=0:{total:.2f}[out]")
+              f"amix=inputs={len(layers)}:normalize=0,alimiter=limit=0.95,apad,atrim=0:{total:.2f},afade=t=in:d=0.08,afade=t=out:st={total - 0.3:.2f}:d=0.3[out]")
     subprocess.run(cmd + ["-filter_complex", ";".join(fl), "-map", "[out]", "-c:a", "aac", "-b:a", "192k",
                           "-ar", "44100", str(audio)], check=True)
 

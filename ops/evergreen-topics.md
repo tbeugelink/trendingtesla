@@ -12,6 +12,9 @@ Add new ideas at the bottom at any time.
 - [ ] Grok and FSD: what does it mean when Tesla's AI chatbot meets its self-driving software? (check carefully what is real and what is only announced)
 - [ ] A Tesla phone: what is known, what is rumour, and how could it work with Starlink and your Tesla? (clearly separate facts, statements and speculation)
 - [ ] Why could Optimus become Tesla's biggest product ever, as Musk says? What it can do now, what it costs and what has to happen first
+- [ ] Tesla's giant solar panel factory: what is planned, where, how big, and why Tesla wants to make its own panels (check the latest official plans)
+- [ ] Does every home need a battery? What a Powerwall does with and without solar panels, who gains most and who does not
+- [ ] Is FSD really 8 times safer than human drivers? What Tesla's safety data says, how it is measured and what critics point out
 - [ ] Starship and Starlink: how one launch can put a whole batch of satellites into a very low orbit, and why so low (check the real numbers per launch and the orbit height)
 - [ ] When are we going to Mars? The real timeline, what Starship still has to prove, and the launch windows
 - [ ] Optimus vs other humanoid robots: what makes Tesla's robot different
@@ -61,3 +64,15 @@ Add new ideas at the bottom at any time.
 - [ ] The Tesla Semi: from the 2017 reveal to trucks on the road
 - [ ] Boring Company: how a traffic joke became the Las Vegas Loop
 - [ ] The Plaid that beat supercars: how Tesla made a family sedan the quickest car in the world
+
+## Series: How did Elon Musk ...? (evening task; one per week at most, category "musk")
+
+Strictly factual and balanced: his decisions, risks, failures and successes, what others say, no political
+opinion, no hero worship and no bashing. Check every claim (titles are questions on purpose).
+
+- [ ] How did Elon Musk go from a bullied boy in South Africa to one of the most influential people on Earth?
+- [ ] How did Elon Musk become the richest person on Earth? Where his wealth really comes from
+- [ ] Is Elon Musk on his way to becoming the world's first trillionaire? (check the current figures and what it depends on)
+- [ ] Is Elon Musk the most successful entrepreneur of all time? Tesla, SpaceX, PayPal and the rest, compared with history
+- [ ] Why did Elon Musk buy Twitter, and what did it become?
+- [ ] Which other companies and media did Musk buy, try to buy, or only joke about buying? (check what is real; only report what really happened)

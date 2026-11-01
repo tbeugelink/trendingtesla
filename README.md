@@ -105,6 +105,8 @@ Goal: **interesting, entertaining and educational**, always factually exact.
   the shared technology and vision, one or two sentences are enough. Optimus, which Musk calls Tesla's biggest
   product ever, comes back often: as its own topic, and named wherever it plays a role (factories, Robotaxi,
   Mars). Keep promises and facts apart: what Musk says will happen is a statement, not a fact.
+- **Series "How did Elon Musk ...?"**: at most one per week, in the evening slot, from the series list in
+  ops/evergreen-topics.md. Strictly factual and balanced (successes, failures, criticism), no political opinion.
 - Titles, headings, labels and YouTube titles must not date quickly: no "today", "this week", no dates; a year
   only when it is part of the question ("in 2026").
 - After writing, tick the topic in ops/evergreen-topics.md with the slug, and add 1-3 new ideas you came

@@ -34,7 +34,7 @@ KEY = os.environ.get("ELEVENLABS_API_KEY", "")
 VOICE = (os.environ.get(f"ELEVENLABS_VOICE_ID_{os.environ.get('STORY_VOICE', '1')}") or
          os.environ.get("ELEVENLABS_VOICE_ID", ""))  # STORY_VOICE=1 (default) uses ELEVENLABS_VOICE_ID
 CAPTIONS = os.environ.get("STORY_CAPTIONS", "0") == "1"  # running subtitles off: only key words pop in
-SPEED = {"hook": 1.0, "tension": 1.1, "payoff": 1.0}
+SPEED = {"hook": 1.17, "tension": 1.17, "payoff": 1.17}  # same pace as the long videos
 GAP = {"hook": 0.35, "tension": 0.12, "payoff": 0.3}
 SFX_VOL, BED_VOL = 0.45, 0.14
 DEFAULT_SFX = {  # natural cinematic sounds only (no whistles, coins, spins)

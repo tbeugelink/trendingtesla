@@ -298,6 +298,12 @@
     "head": "Why would a startup build its first car out of a Lotus?",
     "img": [
      "gen/tesla-roadster-origin-story-lotus-elise-first-tesla.jpg"
+    ],
+    "pop": [
+     {
+      "say": "",
+      "show": "WHY A LOTUS?"
+     }
     ]
    },
    {
@@ -338,6 +344,7 @@
      }
     ],
     "img": [
+     "lib/musk-90s-office.jpg",
      "lib/musk-dotcom-cheque.jpg"
     ]
    },
@@ -399,7 +406,13 @@
     ]
    },
    {
-    "head": "So what went wrong with such a simple plan?"
+    "head": "So what went wrong with such a simple plan?",
+    "pop": [
+     {
+      "say": "",
+      "show": "WHAT WENT WRONG?"
+     }
+    ]
    },
    {
     "text": "Almost everything had to be changed. Tesla revealed the Roadster in Santa Monica on July 19, 2006, in front of about 350 invited guests. It promised 0 to 60 miles per hour in about 4 seconds, and more than 200 miles on a charge. In a 2007 Senate hearing, Eberhard put the price at 92,000 dollars. But turning that prototype into a car you could actually sell was another matter. The battery and motor did not fit the Elise's layout, so the chassis grew 2 inches longer. Musk pushed for a carbon fibre body.",
@@ -498,7 +511,13 @@
     ]
    },
    {
-    "head": "How bad did the money problem get?"
+    "head": "How bad did the money problem get?",
+    "pop": [
+     {
+      "say": "",
+      "show": "HOW BAD?"
+     }
+    ]
    },
    {
     "text": "Bad enough to threaten the whole company. In August 2007, the board asked Eberhard to step down as CEO. What happened next is told very differently by the two men. These figures are Musk's version, written in 2009 after Eberhard had sued him. According to Musk, the planned cost of about 65,000 dollars per car was far too low. A later study put the materials alone at around 140,000 dollars. For a car priced at 92,000 dollars, with hundreds of orders already taken. He called it a life threatening problem. Eberhard disputed Musk's account, and the lawsuit was settled that same year.",
@@ -580,7 +599,13 @@
     ]
    },
    {
-    "head": "Did the Roadster actually work once it reached customers?"
+    "head": "Did the Roadster actually work once it reached customers?",
+    "pop": [
+     {
+      "say": "",
+      "show": "DID IT WORK?"
+     }
+    ]
    },
    {
     "text": "Yes, and it changed how people saw electric cars. Regular production started on March 17, 2008. The finished car went 244 miles on the official EPA test, from a 53 kilowatt hour pack. The standard car was rated at 3.9 seconds from 0 to 60. Back then, most people pictured electric cars as slow and short-legged. Here was one that could outrun many petrol sports cars, and cover a full day of driving.",
@@ -690,6 +715,12 @@
     "head": "So why does a car with only 2,450 copies still matter?",
     "img": [
      "models/msc-2.jpg"
+    ],
+    "pop": [
+     {
+      "say": "",
+      "show": "WHY IT MATTERS"
+     }
     ]
    },
    {
@@ -723,14 +754,16 @@
     "key": "Affordable car",
     "text": "Second, use that money to build an affordable car.",
     "img": [
-     "models/msc-1.jpg"
+     "models/msc-1.jpg",
+     "models/msc-3.jpg"
     ]
    },
    {
     "key": "Even cheaper car",
     "text": "Third, use that money to build an even more affordable car.",
     "img": [
-     "models/m3h-1.jpg"
+     "models/m3h-1.jpg",
+     "models/m3h-3.jpg"
     ]
    },
    {
@@ -745,7 +778,8 @@
     "text": "The Roadster was step one: an expensive car for buyers willing to pay a premium for new technology. The Model S, then the Model 3 and Model Y, and Tesla's solar and battery business followed that script.",
     "img": [
      "models/msc-2.jpg",
-     "models/m3h-2.jpg"
+     "models/m3h-2.jpg",
+     "lib/solar-roof-house.jpg"
     ],
     "pop": [
      {

@@ -28,6 +28,7 @@ OUTRO_SAY = {"en": "Like and subscribe for more Tesla news, or go to TrendingTes
              "nl": "Like en abonneer voor meer Tesla-nieuws, of ga naar TrendingTesla.com. Ik zie je daar!"}
 OUTRO_CARD = {"en": "LIKE & SUBSCRIBE", "nl": "LIKE & ABONNEER"}
 OUTRO_SEC = 10.0
+GAP = 8  # at least 8 other photos before one comes back
 SCENE_MAX, ZOOM_IN = 3.0, 0.07  # the story-Short rhythm: a new shot every 3 s, 2 s crossfades  # calm like the story Shorts: slow steady zoom, a new photo every ~5 s
 NUM = re.compile(r"^([(\"'“]?)(\$?)(\d[\d.,]*\d|\d)(%?)([)\"'”.,:;!?]*)$")
 
@@ -159,6 +160,19 @@ def key_overlay(a, text):
     return im
 
 
+LEAD = 0.25  # key words appear this much before the spoken word
+STOP = set("so the a an of to in on for with such and or but its it is was were be been that this these those "
+           "would could should did does do had has have get got really still actually".split())
+
+
+def short_head(txt):
+    """A chapter question as key words: question word + the last meaningful words, at most 4 ("WHY A LOTUS?")."""
+    ws = re.findall(r"[\w$%',.-]+", txt.rstrip("?.!"))
+    qw = next((w for w in ws if w.lower() in ("why", "how", "what", "when", "who", "which", "where")), "")
+    rest = [w for w in ws if w.lower() not in STOP and w != qw]
+    return (" ".join(([qw] if qw else []) + rest[-(3 if qw else 4):]) + ("?" if txt.strip().endswith("?") else "")).upper()
+
+
 POP_SIZE = 150  # key words: big yellow, centre; each stays until the next one (no empty gaps)
 
 
@@ -169,13 +183,14 @@ def norm(w):
 def pop_overlay(txt):
     """A key word or short phrase, big and yellow in the centre (like the story Shorts), always on one line."""
     f = font(FB, POP_SIZE)
+    txt = " ".join(txt.split()[:4])  # never more than 4 words, one line
     lines = [txt]  # landscape: always one line, there is room enough
     while f.getlength(txt) > W - 200 and f.size > 60:
         f = font(FB, f.size - 6)
     lh = int(f.size * 1.04)
     im = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     d = ImageDraw.Draw(im)
-    y = H * 0.44 - lh * len(lines) / 2
+    y = H * 0.5 - f.size * 0.62  # centred horizontally and vertically
     for ln in lines:
         x = (W - f.getlength(ln)) / 2
         d.text((x + 6, y + 8), ln, font=f, fill=(0, 0, 0, 150))
@@ -341,6 +356,45 @@ def main():
     print(out, f"{total:.1f}s", "audio" if audio else "silent")
 
 
+MODEL_RE = [("cybertruck", r"cybertruck"), ("cybercab", r"cybercab"), ("semi", r"\bsemi\b"),
+            ("model-s", r"model s\b"), ("model-3", r"model 3\b"), ("model-y", r"model y\b"), ("model-x", r"model x\b"),
+            ("roadster-new", r"(new|next.generation|second.generation|2020|2026) roadster"),
+            ("roadster-1", r"(first.generation|original|2008|first) (tesla )?roadster|roadster \(2008")]
+
+
+def models_in(text):
+    t = (text or "").lower()
+    out = {k for k, rx in MODEL_RE if re.search(rx, t)}
+    if "roadster" in t and not out & {"roadster-new", "roadster-1"}:
+        out.add("roadster-1" if "roadster-new" not in out else "roadster-new")
+    return out
+
+
+def photo_tags(a):
+    """Which car model each photo shows: model galleries, library descriptions, real photo and gen descriptions."""
+    import json as J
+    tags = {}
+    for key, m in S.build.MODELS.items():
+        fam = "roadster-new" if key.startswith("roadster") else (m.get("parent") or key).split("-classic")[0]
+        fam = {"model-y-juniper": "model-y", "model-3-highland": "model-3"}.get(fam, fam)
+        for g in (m.get("gallery") or []) + [m.get("photo") or ""]:
+            if g:
+                tags.setdefault(S.build.STATIC / "img/models" / g, set()).add(fam)
+    lib = S.ROOT / "ops/library.json"
+    for f, d in (J.loads(lib.read_text()) if lib.exists() else {}).items():
+        if models_in(d):
+            tags[S.build.STATIC / "img/lib" / f] = models_in(d)
+    cr = S.build.STATIC / "img/real/story/credits.json"
+    for f, d in (J.loads(cr.read_text()) if cr.exists() else {}).items():
+        if models_in(d.get("want", "")):
+            tags[S.build.STATIC / "img/real/story" / f] = models_in(d.get("want", ""))
+    gi = a.get("gen_image") or {}
+    if models_in(gi.get("subject", "") + " " + gi.get("describe", "")):
+        for p in (S.build.STATIC / "img/gen").glob(a["slug"] + "*.jpg"):
+            tags[p] = models_in(gi.get("subject", "") + " " + gi.get("describe", ""))
+    return tags
+
+
 def add_real_photos(a, pieces):
     """Blocks with "photo": [{"q": [search words], "want": "what it must show"}] get a real, freely licensed photo
     from Wikimedia Commons (picked and checked by Gemini, as in the story Shorts); its credit goes in the description."""
@@ -361,26 +415,39 @@ def add_real_photos(a, pieces):
 
 def render(a, lang, pieces, segs, place, words, total, end_start, audio):
     # scenes: a block's photos start with that block (just before it, so the fade is done when it begins)
-    # shots: every ~3 s a new shot, only from the photos chosen for THIS block (or, if it has none, the last block
-    # that had some); each new shot is a different photo or a different framing, so nothing looks repeated
-    scenes, cur, uses = [], [], {}
+    # shots: a new shot every ~3 s. Each block first shows its own photos; around them come photos of nearby
+    # blocks (same section first). A photo never comes back until at least GAP other photos were shown, and a
+    # photo of a different car model than the block talks about is never used as a fill-in.
+    tags = photo_tags(a)
+    sec_of, sec = [], 0
+    for kind, _, b in pieces:
+        sec += kind == "head"
+        sec_of.append(sec)
+    own = [list(dict.fromkeys(p for p in (img_path(x) for x in (b.get("img") or [])) if p and p.name not in S.BLOCKED))
+           for _, _, b in pieces]
+    pool = [p for p in S.photos(a) if p.name not in S.BLOCKED]
+    scenes, uses = [], {}
     bounds = [max(0.0, place[i] - 0.6) if i else 0.0 for i in range(len(pieces))] + [total]
-    for i, (kind, _, b) in enumerate(pieces):
-        imgs = [p for p in (img_path(x) for x in (b.get("img") or [])) if p and p.name not in S.BLOCKED]
-        if imgs:
-            cur = list(dict.fromkeys(imgs))
-        if not cur:
-            cur = S.photos(a)[:1]
-        t0, t1 = bounds[i], bounds[i + 1]
-        n = max(1, round((t1 - t0) / SCENE_MAX))
+    for i, (kind, txt, b) in enumerate(pieces):
+        want = models_in(txt)
+        near = sorted(range(len(pieces)), key=lambda j: (sec_of[j] != sec_of[i], abs(j - i)))
+        cand = list(dict.fromkeys([p for j in near for p in own[j]] + pool))
+        fits = lambda p: p in own[i] or not tags.get(p) or not want or tags[p] & want
+        n = max(1, round((bounds[i + 1] - bounds[i]) / SCENE_MAX))
         for j in range(n):
-            recent = [x[1] for x in scenes[-2:]]
-            ok = [x for x in cur if x not in recent] or cur
-            q = ok[0] if j == 0 and imgs else min(ok, key=lambda x: (uses.get(x, 0), ok.index(x)))
+            q = None
+            for gap in range(GAP, -1, -1):  # relax the gap only when there are not enough photos at all
+                recent = [x[1] for x in scenes[-gap:]] if gap else []
+                ok = [p for p in cand if p not in recent and fits(p)]
+                if ok:
+                    mine = [p for p in ok if p in own[i]]
+                    q = min(mine, key=lambda p: uses.get(p, 0)) if mine else ok[0]
+                    break
+            q = q or (own[i] or pool or [S.photos(a)[0]])[0]
             uses[q] = uses.get(q, 0) + 1
-            scenes.append((t0 + (t1 - t0) * j / n, q, uses[q] - 1))
-    starts = [x[0] for x in scenes]
+            scenes.append((bounds[i] + (bounds[i + 1] - bounds[i]) * j / n, q, uses[q] - 1))
     nsc = len(scenes)
+    starts = [x[0] for x in scenes]
 
     shade = Image.new("L", (1, H))
     for y in range(H):
@@ -429,20 +496,20 @@ def render(a, lang, pieces, segs, place, words, total, end_start, audio):
     pops = []
     for i, (kind, txt, b) in enumerate(pieces):
         if kind == "head":
-            pops.append((place[i] - 0.1, None, pop_overlay(txt.upper().rstrip("."))))
+            hp = b.get("pop")
+            show = (hp[0]["show"] if isinstance(hp, list) and hp and isinstance(hp[0], dict) else hp) if hp else short_head(txt)
+            pops.append((max(place[i] - LEAD, label_end), None, pop_overlay(show)))
             continue
         if kind != "text":
             continue
         t1 = place[i] + (segs[i][1] - segs[i][0])
         if b.get("key"):
-            pops.append((place[i], None, pop_overlay(b["key"].upper())))
+            pops.append((max(place[i] - LEAD, label_end), None, pop_overlay(b["key"].upper())))
             continue
         ws = [w for w in words if place[i] - 0.05 <= w[1] < t1 + 0.05]
         found = find_pops(b, ws)
         for k, (st, show) in enumerate(found):
-            p0 = place[i] + 0.05 if k == 0 else st - 0.15  # the first key word shows from the start of its block
-            nxt = found[k + 1][0] - 0.15 if k + 1 < len(found) else t1 + 0.4
-            pops.append((max(p0, label_end), None, pop_overlay(show)))
+            pops.append((max(st - LEAD, label_end), None, pop_overlay(show)))  # a fraction before the voice
     pops.sort(key=lambda x: x[0])
     pops = [(p0, pops[k + 1][0] if k + 1 < len(pops) else end_start, o) for k, (p0, _, o) in enumerate(pops)]
     print(f"{len(pops)} key words")

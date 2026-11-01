@@ -143,6 +143,12 @@ Shorts (typically 741 views after 48 hours) by far. So:
   needs its own "img" or "photo".
 - **No chapter cards in the long video** (decided 1 Nov 2026): the heads are spoken in the flow and shown as a
   big key word; list keywords too. Key words stay on screen until the next one.
+- **Long video rules from William (2 Nov 2026), always:** a photo never comes back until at least 8 other photos
+  were shown (the renderer enforces it, so give enough pictures: 30+ for a 6-7 minute video, 2-4 per text block);
+  the right picture with the right words; a car model on screen only when the words are about THAT model
+  (Model 3 words -> Model 3 photo, never another model); key words only, 1-4 words, one line, in the centre,
+  a fraction before the voice. Heads are shown as key words too: give every {"head": ...} block a
+  `"pop": [{"say": "", "show": "WHY A LOTUS?"}]` with 1-4 words. The thumbnail stays the opening frame with the label.
 - **Key words in the long video** (decided 1 Nov 2026): no captions in the picture any more (YouTube makes its own
   closed captions, CC, which viewers can translate into almost any language); instead big yellow key words in the centre, like the story Shorts. Give
   every "text" block of the "video" script a `"pop": [{"say": "...", "show": "..."}]` list of 4-6 headline-style

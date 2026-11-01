@@ -1,7 +1,7 @@
 """Story Shorts wait for William's review: they are uploaded as PRIVATE videos and listed in ops/story-pending.json.
-He approves one by setting it to Public in YouTube Studio. This script (run every 15 minutes by shorts-page.yml)
-then posts the approved Short to TikTok, Instagram and Facebook via Buffer (the site picks it up from the public
-feed by itself). A Short that stays private is simply never posted; entries older than 30 days are dropped.
+He checks them in YouTube Studio and DELETES the ones that are not good. This script (every 15 minutes, in
+shorts-page.yml) makes a Short that is still private after REVIEW_HOURS public (with its title as thumbnail), and
+posts every public one to TikTok, Instagram and Facebook via Buffer; the site picks it up from the public feed.
 
 Usage (GitHub Actions, with the YT_* secrets, BUFFER_API_KEY and GH_TOKEN):  python3 tools/story_approve.py
 Prints "changed" when ops/story-pending.json was updated.
@@ -27,14 +27,23 @@ req = urllib.request.Request(f"https://www.googleapis.com/youtube/v3/videos?part
                              headers={"Authorization": f"Bearer {at}"})
 with urllib.request.urlopen(req, timeout=60) as r:
     status = {v["id"]: v["status"]["privacyStatus"] for v in json.load(r)["items"]}
+REVIEW_HOURS = 2
 keep, changed = [], False
 now = datetime.now(timezone.utc)
 for p in pending:
     st = status.get(p["id"])
+    if st == "private" and now - datetime.fromisoformat(p["made"]) > timedelta(hours=REVIEW_HOURS):
+        mp4 = ROOT / "video/out" / f"{p['slug']}-en-short.mp4"
+        mp4.parent.mkdir(parents=True, exist_ok=True)
+        if not mp4.exists():
+            subprocess.run(["gh", "run", "download", str(p["run"]), "-n", f"story-{p['slug']}", "-D", str(mp4.parent)])
+        if mp4.exists() and subprocess.run([sys.executable, str(ROOT / "tools/story_publish.py"), p["id"], str(mp4)]).returncode == 0:
+            st = "public"
     if st == "public":
         mp4 = ROOT / "video/out" / f"{p['slug']}-en-short.mp4"
         mp4.parent.mkdir(parents=True, exist_ok=True)
-        ok = subprocess.run(["gh", "run", "download", str(p["run"]), "-n", f"story-{p['slug']}", "-D", str(mp4.parent)]).returncode == 0
+        ok = mp4.exists() or subprocess.run(["gh", "run", "download", str(p["run"]), "-n", f"story-{p['slug']}",
+                                             "-D", str(mp4.parent)]).returncode == 0
         if ok and mp4.exists():
             subprocess.run(["bash", str(ROOT / "tools/tiktok_publish.sh"), str(mp4)])
             print(f"::notice::Approved story Short {p['slug']} (https://youtu.be/{p['id']}): posted via Buffer")

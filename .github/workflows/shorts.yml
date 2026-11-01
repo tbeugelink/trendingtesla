@@ -48,6 +48,10 @@ jobs:
             longs=$(git diff --name-only --diff-filter=A HEAD~1 HEAD -- content/articles | while read f; do
               python3 -c "import json,sys; d=json.load(open('$f')); print(d['slug'] if (d.get('video') or {}).get('en') else '')"; done | xargs)
             echo "longs=$longs" >> "$GITHUB_OUTPUT"
+            # articles with "short.story" get a story Short (video/story.py), uploaded private for William's review
+            story=$(git diff --name-only --diff-filter=A HEAD~1 HEAD -- content/articles | while read f; do
+              python3 -c "import json,sys; d=json.load(open('$f')); print(d['slug'] if (d.get('short') or {}).get('story') else '')"; done | xargs)
+            echo "story=$story" >> "$GITHUB_OUTPUT"
             langs=en
             # video/queue.txt: first line "slug [langs]" requests a video on demand
             if git diff --name-only HEAD~1 HEAD | grep -qx video/queue.txt; then
@@ -96,6 +100,9 @@ jobs:
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
           ELEVENLABS_VOICE_ID: ${{ vars.ELEVENLABS_VOICE_ID }}
           ELEVENLABS_VOICE_ID_NL: ${{ vars.ELEVENLABS_VOICE_ID_NL }}
+          ELEVENLABS_VOICE_ID_3: ${{ vars.ELEVENLABS_VOICE_ID_3 }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          STORY_VOICE: "1"
         run: |
           if [ -z "$ELEVENLABS_API_KEY" ]; then echo "::error::Secret ELEVENLABS_API_KEY is empty or missing"; fi
           if [ -z "$ELEVENLABS_VOICE_ID" ]; then echo "::error::Variable ELEVENLABS_VOICE_ID is empty or missing"; fi
@@ -103,6 +110,9 @@ jobs:
           for s in ${{ steps.find.outputs.slugs }}; do
             for l in ${{ steps.find.outputs.langs }}; do
               if [ "${{ steps.find.outputs.full }}" = "1" ]; then script=video/full.py; fmt=""; else script=video/short.py; fmt="--portrait"; fi
+              if [ "$l" = "en" ] && [ "${{ steps.find.outputs.full }}" != "1" ] && echo " ${{ steps.find.outputs.story }} " | grep -q " $s "; then
+                script=video/story.py; fmt=""; touch "video/out/$s-en-short.story" 2>/dev/null || { mkdir -p video/out; touch "video/out/$s-en-short.story"; }
+              fi
               python3 $script "$s" "$l" $fmt 2> err.txt || { fail=1; echo "::error::$script $s $l failed: $(tail -c 600 err.txt | tr '\n' ' ')"; }
             done
           done
@@ -117,14 +127,49 @@ jobs:
           YT_PRIVACY: ${{ vars.YT_PRIVACY }}
         run: |
           if [ -z "$YT_REFRESH_TOKEN" ]; then echo "::warning::YouTube secrets missing, skipping upload"; exit 0; fi
-          for f in video/out/*-en-short.mp4; do [ -f "$f" ] && python3 video/upload.py "$f" en; done
+          for f in video/out/*-en-short.mp4; do
+            [ -f "$f" ] || continue
+            if [ -f "${f%.mp4}.story" ]; then  # story Short: private for review, title as thumbnail, into the queue
+              s=$(basename "$f" -en-short.mp4)
+              YT_PRIVACY=private THUMB_AT=0.2 python3 video/upload.py "$f" en | tee up.txt
+              id=$(grep -o 'youtu.be/[A-Za-z0-9_-]*' up.txt | head -1 | cut -d/ -f2)
+              [ -n "$id" ] && echo "$id $s" >> "$RUNNER_TEMP/story-review"
+            else
+              python3 video/upload.py "$f" en
+            fi
+          done
+          [ -f "$RUNNER_TEMP/story-review" ] || exit 0
+          git config user.name "TrendingTesla bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          cp "$RUNNER_TEMP/story-review" "$RUNNER_TEMP/sr"
+          for i in 1 2 3 4 5; do
+            git stash -q 2>/dev/null; git fetch -q origin main && git reset -q --hard origin/main
+            python3 -c "
+          import json,datetime,pathlib
+          p=pathlib.Path('ops/story-pending.json'); d=json.loads(p.read_text()) if p.exists() else []
+          for ln in open('$RUNNER_TEMP/sr'):
+              vid,slug=ln.split()
+              d.append({'id':vid,'slug':slug,'run':${{ github.run_id }},'made':datetime.datetime.now(datetime.timezone.utc).isoformat(timespec='seconds')})
+          p.write_text(json.dumps(d,indent=1)+'\n')"
+            git add ops/story-pending.json && git commit -qm "Story Short for review (public after 2 hours unless deleted)" && git push -q origin HEAD:main && break
+            sleep 5
+          done
+          echo "### Story Short(s) for review: $(cat $RUNNER_TEMP/sr). Public after 2 hours unless deleted in YouTube Studio." >> "$GITHUB_STEP_SUMMARY"
+      - name: Keep story Shorts for the post after review
+        if: steps.find.outputs.story != '' && steps.find.outputs.paused != '1'
+        uses: actions/upload-artifact@v4
+        with:
+          name: story-${{ steps.find.outputs.story }}
+          path: video/out/*-en-short.mp4
+          retention-days: 14
       - name: Post Shorts to TikTok, Instagram and Facebook (via Buffer)
         if: steps.find.outputs.slugs != '' && steps.find.outputs.full != '1' && steps.find.outputs.queue != '1' && github.event_name != 'workflow_dispatch' && steps.find.outputs.paused != '1'
         continue-on-error: true
         env:
           GH_TOKEN: ${{ github.token }}
           BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
-        run: tools/tiktok_publish.sh video/out/*-en-short.mp4
+        run: |  # story Shorts are posted after the review instead (tools/story_approve.py)
+          for f in video/out/*-en-short.mp4; do [ -f "$f" ] && [ ! -f "${f%.mp4}.story" ] && tools/tiktok_publish.sh "$f"; done; exit 0
       - name: Make and upload long videos
         if: steps.find.outputs.longs != '' && steps.find.outputs.queue != '1' && github.event_name != 'workflow_dispatch' && steps.find.outputs.paused != '1'
         continue-on-error: true

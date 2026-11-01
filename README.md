@@ -108,7 +108,11 @@ Shorts (typically 741 views after 48 hours) by far. So:
 A story Short is a list of beats in `"short": {"story": [...]}`: one beat per sentence or two,
 `{"part": "hook|tension|payoff", "text": "...", "lib": ["file.jpg"], "pop": [{"say": "...", "show": "..."}]}`.
 - **Pictures follow the words:** every beat shows what is said at that moment. Use William's checked detail
-  photos in `static/img/lib/` (see `ops/library-prompts.md`) first; a beat with two subjects gets two photos.
+  photos (`"lib"`, the list with what each one shows is `ops/library.json`) first; a beat with two subjects gets
+  two photos. Where no library photo fits, use the article's own photos (`"img"` with a file from `"images"`).
+  Never a photo that shows something else than what is said (a door handle is not a charger handle).
+- Review: a story Short is uploaded private; William deletes bad ones in YouTube Studio, the rest goes public
+  automatically after 2 hours (`tools/story_approve.py`) and then to TikTok, Instagram and Facebook.
 - **Key words tell the story on their own** (there are no running subtitles): 2-5 per beat, in the rhythm of the
   voice, each a short phrase of 1-3 words (4 at most, shown on two lines), in capitals, the way a headline would
   put it - e.g. NEVER MOVED, BILL $539, WHY?, SINCE OCTOBER, HIDDEN BUTTON, EMERGENCY, REPAIRS?, TAPPED ACTIVATE,

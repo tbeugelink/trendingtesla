@@ -371,6 +371,12 @@ def assign_images(a, beats):
             j += 1
         b["_img"] = p
         b["_imgs"] = []
+        for lb in ([b["lib"]] if isinstance(b.get("lib"), str) else b.get("lib") or []):
+            q = S.build.STATIC / "img/lib" / lb  # William's own checked detail photos come first
+            if q.exists():
+                b["_imgs"].append(q)
+            else:
+                print(f"::warning::library photo {lb} not found")
         for ph in ([b["photo"]] if isinstance(b.get("photo"), dict) else b.get("photo") or []):
             try:  # a real photo first where details matter (charge port, plug, screen, a real place)
                 rf, fx = real_photo(a, b, ph)

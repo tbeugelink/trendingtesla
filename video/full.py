@@ -374,12 +374,18 @@ def photo_tags(a):
     """Which car model each photo shows: model galleries, library descriptions, real photo and gen descriptions."""
     import json as J
     tags = {}
+    prefix = {}
     for key, m in S.build.MODELS.items():
-        fam = "roadster-new" if key.startswith("roadster") else (m.get("parent") or key).split("-classic")[0]
-        fam = {"model-y-juniper": "model-y", "model-3-highland": "model-3"}.get(fam, fam)
+        fam = "roadster-new" if key.startswith("roadster") else (m.get("parent") or key)
+        fam = re.sub(r"-(classic|juniper|highland|standard|plaid|performance|20\d\d.*)$", "", fam)
         for g in (m.get("gallery") or []) + [m.get("photo") or ""]:
             if g:
                 tags.setdefault(S.build.STATIC / "img/models" / g, set()).add(fam)
+                prefix[re.sub(r"-?\d+\.jpg$", "", g)] = fam
+    for p in (S.build.STATIC / "img/models").glob("*.jpg"):  # photos not in a gallery: by their file prefix
+        fam = prefix.get(re.sub(r"-?\d+$", "", p.stem))
+        if fam and p not in tags:
+            tags[p] = {fam}
     lib = S.ROOT / "ops/library.json"
     for f, d in (J.loads(lib.read_text()) if lib.exists() else {}).items():
         if models_in(d):
@@ -419,6 +425,8 @@ def render(a, lang, pieces, segs, place, words, total, end_start, audio):
     # blocks (same section first). A photo never comes back until at least GAP other photos were shown, and a
     # photo of a different car model than the block talks about is never used as a fill-in.
     tags = photo_tags(a)
+    main = models_in(a[lang]["title"] + " " + a[lang].get("description", "")) | {
+        ("roadster-new" if m.startswith("roadster") else m) for m in a.get("models") or []}
     sec_of, sec = [], 0
     for kind, _, b in pieces:
         sec += kind == "head"
@@ -431,8 +439,18 @@ def render(a, lang, pieces, segs, place, words, total, end_start, audio):
     for i, (kind, txt, b) in enumerate(pieces):
         want = models_in(txt)
         near = sorted(range(len(pieces)), key=lambda j: (sec_of[j] != sec_of[i], abs(j - i)))
-        cand = list(dict.fromkeys([p for j in near for p in own[j]] + pool))
-        fits = lambda p: p in own[i] or not tags.get(p) or not want or tags[p] & want
+        same = {p for j in range(len(pieces)) if sec_of[j] == sec_of[i] for p in own[j]}
+        allp = list(dict.fromkeys([p for j in near for p in own[j]] + pool))
+        # fill-ins: first photos of the car this block (or, if it names none, the article) is about, then the rest
+        topic = want or main
+        cand = list(dict.fromkeys(own[i] + [p for p in allp if tags.get(p, set()) & topic] + allp))
+
+        def fits(p, i=i, want=want, same=same):
+            if p in own[i]:
+                return True
+            if tags.get(p):  # a car photo: only when the words (or the article) are about that very model
+                return bool(tags[p] & (want or main))
+            return p in same  # a generic photo only within its own section
         n = max(1, round((bounds[i + 1] - bounds[i]) / SCENE_MAX))
         for j in range(n):
             q = None

@@ -91,23 +91,9 @@
             "show": "$539"
           }
         ],
-        "photo": [
-          {
-            "q": [
-              "Tesla Supercharger Model Y",
-              "Tesla Model Y charging",
-              "Tesla Supercharger station"
-            ],
-            "want": "a Tesla Model Y (or Model 3) charging at a Tesla Supercharger"
-          },
-          {
-            "q": [
-              "Tesla charge port",
-              "Tesla Model 3 charging port",
-              "Tesla Model Y charge port"
-            ],
-            "want": "close-up of the charge port in the rear tail light of a Tesla, open or with a plug in it"
-          }
+        "lib": [
+          "supercharger-v3.jpg",
+          "charge-port-us-plugged.jpg"
         ]
       },
       {
@@ -119,15 +105,8 @@
             "show": "EMERGENCY BUTTON"
           }
         ],
-        "photo": [
-          {
-            "q": [
-              "Tesla Model Y interior",
-              "Tesla Model 3 interior touchscreen",
-              "Tesla Model 3 dashboard"
-            ],
-            "want": "the large center touchscreen on the dashboard inside a Tesla Model 3 or Model Y"
-          }
+        "lib": [
+          "screen-red-warning.jpg"
         ]
       },
       {
@@ -143,23 +122,9 @@
             "show": "DRIVE OFF"
           }
         ],
-        "photo": [
-          {
-            "q": [
-              "Tesla Supercharger plugged in",
-              "Tesla Supercharger connector car",
-              "Tesla charging cable plugged"
-            ],
-            "want": "close-up of a Tesla Supercharger cable plugged into a Tesla car"
-          },
-          {
-            "q": [
-              "Tesla Supercharger Model Y",
-              "Tesla Model Y charging",
-              "Tesla Supercharger station"
-            ],
-            "want": "a Tesla Model Y (or Model 3) charging at a Tesla Supercharger"
-          }
+        "lib": [
+          "supercharger-row-night.jpg",
+          "modely-drive-away.jpg"
         ]
       },
       {
@@ -172,15 +137,8 @@
             "show": "SNAP!"
           }
         ],
-        "photo": [
-          {
-            "q": [
-              "Tesla Supercharger connector",
-              "Tesla Supercharger handle",
-              "Tesla charging connector"
-            ],
-            "want": "close-up of a Tesla Supercharger connector (the plug at the end of the cable)"
-          }
+        "lib": [
+          "connector-broken.jpg"
         ]
       },
       {
@@ -196,23 +154,9 @@
             "show": "$25,000"
           }
         ],
-        "photo": [
-          {
-            "q": [
-              "Tesla charge port",
-              "Tesla Model 3 charging port",
-              "Tesla Model Y charge port"
-            ],
-            "want": "close-up of the charge port in the rear tail light of a Tesla, open or with a plug in it"
-          },
-          {
-            "q": [
-              "Tesla Supercharger V3",
-              "Tesla Supercharger stall",
-              "Tesla Supercharger"
-            ],
-            "want": "a Tesla Supercharger post (charging stall) seen up close"
-          }
+        "lib": [
+          "charge-port-us-open.jpg",
+          "supercharger-damaged.jpg"
         ]
       },
       {
@@ -224,7 +168,9 @@
             "show": "EMERGENCIES ONLY"
           }
         ],
-        "scene": "A Tesla Supercharger bay at night lit by flashing red emergency lights from out of frame, dramatic red glow on the white posts and wet asphalt"
+        "lib": [
+          "supercharger-v4.jpg"
+        ]
       },
       {
         "part": "tension",
@@ -243,25 +189,9 @@
             "show": "DROVE OFF!"
           }
         ],
-        "scene": [
-          "A Tesla Supercharger station in Austin, Texas at early morning, the Austin skyline in the distance, a white Model Y charging"
-        ],
-        "photo": [
-          {
-            "q": [
-              "Tesla Model Y interior",
-              "Tesla Model 3 interior touchscreen",
-              "Tesla Model 3 dashboard"
-            ],
-            "want": "the large center touchscreen on the dashboard inside a Tesla Model 3 or Model Y"
-          },
-          {
-            "q": [
-              "Tesla Model Y",
-              "Tesla Model Y road"
-            ],
-            "want": "a Tesla Model Y on the road"
-          }
+        "lib": [
+          "modely-front.jpg",
+          "screen-modely.jpg"
         ]
       },
       {
@@ -277,15 +207,8 @@
             "show": "BY MISTAKE"
           }
         ],
-        "photo": [
-          {
-            "q": [
-              "Tesla Model Y interior",
-              "Tesla Model 3 interior touchscreen",
-              "Tesla Model 3 dashboard"
-            ],
-            "want": "the large center touchscreen on the dashboard inside a Tesla Model 3 or Model Y"
-          }
+        "lib": [
+          "finger-tap-screen.jpg"
         ]
       },
       {
@@ -301,22 +224,9 @@
             "show": "TESLA SERVICE"
           }
         ],
-        "photo": [
-          {
-            "q": [
-              "Tesla Model Y interior",
-              "Tesla Model 3 interior touchscreen",
-              "Tesla Model 3 dashboard"
-            ],
-            "want": "the large center touchscreen on the dashboard inside a Tesla Model 3 or Model Y"
-          },
-          {
-            "q": [
-              "Tesla Service Center",
-              "Tesla service centre"
-            ],
-            "want": "a Tesla Service Center building"
-          }
+        "lib": [
+          "screen-red-warning.jpg",
+          "service-center.jpg"
         ]
       },
       {
@@ -332,15 +242,8 @@
             "show": "READ IT"
           }
         ],
-        "photo": [
-          {
-            "q": [
-              "Tesla Model Y interior",
-              "Tesla Model 3 interior touchscreen",
-              "Tesla Model 3 dashboard"
-            ],
-            "want": "the large center touchscreen on the dashboard inside a Tesla Model 3 or Model Y"
-          }
+        "lib": [
+          "connector-handle.jpg"
         ]
       }
     ]

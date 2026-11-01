@@ -395,8 +395,8 @@ def assign_images(a, beats):
         used[p] = b["_use"] + 1
 
 
-XFADE = 0.28  # seconds of crossfade between shots
-SHOT_MAX = 1.6  # seconds: longer sentences are cut into several shots
+XFADE = 2.0  # seconds of crossfade between shots (at most 60% of the shorter of the two shots)
+SHOT_MAX = 3.0  # seconds: longer sentences are cut into several shots
 FRAMINGS = [(1.0, 0.0, 0.0), (1.45, -0.28, -0.05), (1.45, 0.28, -0.05), (1.6, 0.0, -0.12), (1.35, -0.15, 0.05),
             (1.35, 0.15, 0.05)]  # (zoom, x, y offset as share of the free room): whole photo, then close-ups that
 #                                  stay near the middle height, where the subject is (not the sky or the ground)
@@ -457,28 +457,23 @@ def frame(src, sh_, t, pop_t):
     z0, fx, fy = FRAMINGS[sh_["f"]]
     mv = sh_["move"]
     z, ox, oy = z0, fx, fy
-    if mv == "punch":
-        z = z0 * (1.10 - 0.10 * ease(t / 0.5))
-    elif mv == "in":
-        z = z0 * (1.0 + 0.09 * ease(u))
+    u = t / (sh_["dur"] + XFADE)  # even, steady motion that keeps going through the crossfade (no stop-start)
+    if mv in ("in", "punch", "zoom"):
+        z = z0 * (1.0 + 0.07 * u)
     elif mv == "out":
-        z = z0 * (1.09 - 0.09 * ease(u))
-    elif mv == "zoom":
-        z = z0 * (1.0 + 0.12 * ease(u))
+        z = z0 * (1.07 - 0.07 * u)
     elif mv in ("panL", "panR"):
-        z = z0 * 1.06
-        ox = fx + (0.14 if mv == "panR" else -0.14) * (ease(u) - 0.5)
+        z = z0 * 1.05
+        ox = fx + (0.10 if mv == "panR" else -0.10) * (u - 0.5)
     elif mv == "tilt":
-        z = z0 * 1.06
-        oy = fy + 0.18 * (ease(u) - 0.5)
-    if pop_t is not None and pop_t < 0.25:  # a soft push when a key word pops in
-        z *= 1 + 0.025 * (1 - pop_t / 0.25)
+        z = z0 * 1.05
+        oy = fy + 0.12 * (u - 0.5)
     fh = min(H / z, shh)
     fw = min(fh * W / H, sw)
     cx = sw * sh_.get("fx", 0.5) + ox * (sw - fw) / 2
     cy = shh / 2 + oy * (shh - fh) / 2
     if mv == "rise":  # camera moves top-to-bottom: the subject seems to rise
-        cy = fh / 2 + (shh - fh) * ease(u)
+        cy = fh / 2 + (shh - fh) * min(1.0, u)
     shake = 3.0 if mv == "rise" or sh_.get("shake") else 0.0  # shaking only fits rockets and launches
     if shake:
         cx += shake * (math.sin(t * 47.0) + 0.5 * math.sin(t * 83.0 + 1.3))
@@ -534,7 +529,7 @@ def find_pops(b, words, t0):
         for k in range(len(words) - len(toks) + 1):
             if [norm(w) for w, _, _ in words[k:k + len(toks)]] == toks:
                 st, en = words[k][1], words[k + len(toks) - 1][2]
-                out.append((t0 + st, t0 + max(en, st + 0.9), str(shown).strip(".,!?;:").upper()))
+                out.append((t0 + st - 0.15, t0 + max(en, st + 0.9), str(shown).strip(".,!?;:").upper()))
                 break
     return out
 
@@ -689,13 +684,14 @@ def main():
         pg = next((p for p in pops if p[0] <= tt < p[1]), None)
         box = frame(src, shot, st, (tt - pg[0]) if pg else None)
         fr = src.resize((W, H), Image.BILINEAR, box=box)
-        if st < XFADE and si > 0:  # smooth crossfade from the previous shot, which keeps moving meanwhile
+        xf = min(XFADE, 0.6 * shot["dur"], 0.6 * shots[si - 1]["dur"]) if si > 0 else 0
+        if st < xf:  # smooth crossfade from the previous shot, which keeps moving meanwhile
             pv = shots[si - 1]
             if pv["img"] not in srcs:
                 srcs[pv["img"]] = load_src(pv["img"])
             pbox = frame(srcs[pv["img"]], {**pv, "dur": pv["dur"] + XFADE}, tt - pv["t0"], None)
             prev = srcs[pv["img"]].resize((W, H), Image.BILINEAR, box=pbox)
-            fr = Image.blend(prev, fr, ease(st / XFADE))
+            fr = Image.blend(prev, fr, ease(st / xf))
         fr = fr.convert("RGBA")
         bi = 0 if tt < hook_end else 1
         if tt < label_end:  # the label alone for a moment: what the story is about

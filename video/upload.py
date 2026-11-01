@@ -141,7 +141,8 @@ def main():
     # remember the length of long videos; the site shows it ("▶ 4:15") and YouTube's feed has none
     if mp4.name.endswith("-full.mp4"):
         set_thumbnail(vid, mp4, at)
-        add_captions(vid, mp4.with_suffix(".srt"), lang, at)
+        if os.environ.get("YT_CAPTIONS") == "1":  # off: YouTube makes its own captions, translatable into most languages
+            add_captions(vid, mp4.with_suffix(".srt"), lang, at)
         sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "tools"))
         import yt_playlists  # topic playlist on YouTube (needs the youtube scope; never fails the upload)
         yt_playlists.add(vid, mp4.name.rsplit(f"-{lang}-full.mp4", 1)[0], at)

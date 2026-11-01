@@ -59,7 +59,8 @@ def analytics(rows):
     """Watch-time figures per video from the YouTube Analytics API (needs the yt-analytics.readonly scope)."""
     from datetime import date
     ids = ",".join(r["id"] for r in rows)
-    for metrics in ("views,engagedViews,averageViewDuration,averageViewPercentage",
+    for metrics in ("views,engagedViews,averageViewDuration,averageViewPercentage,subscribersGained",
+                    "views,engagedViews,averageViewDuration,averageViewPercentage",
                     "views,averageViewDuration,averageViewPercentage"):
         q = urllib.parse.urlencode({"ids": "channel==MINE", "startDate": "2026-01-01", "endDate": date.today().isoformat(),
                                     "metrics": metrics, "dimensions": "video", "filters": f"video=={ids}",
@@ -85,6 +86,8 @@ def analytics(rows):
                 r["avg_sec"] = round(float(m.get("averageViewDuration", 0)))
                 if "engagedViews" in m:
                     r["engaged"] = int(m["engagedViews"])
+                if "subscribersGained" in m:
+                    r["subs_gained"] = int(m["subscribersGained"])
         print(f"::notice::YouTube Analytics: watch-time figures for {len(by)} videos")
         return
 
@@ -99,7 +102,12 @@ if "--history" in sys.argv:
     h.parent.mkdir(parents=True, exist_ok=True)
     with h.open("a", encoding="utf-8") as f:
         for r in rows:
-            f.write(json.dumps({"at": at, **{k: r[k] for k in ("id", "type", "published", "views", "likes", "comments", "avg_pct", "avg_sec", "engaged") if k in r}}) + "\n")
+            f.write(json.dumps({"at": at, **{k: r[k] for k in ("id", "type", "published", "views", "likes", "comments", "avg_pct", "avg_sec", "engaged", "subs_gained") if k in r}}) + "\n")
+    # channel totals per day: subscriber growth and how many Shorts viewers become subscribers
+    st = ch["statistics"]
+    with (ROOT / "ops/stats/channel.jsonl").open("a", encoding="utf-8") as f:
+        f.write(json.dumps({"at": at, "subscribers": int(st.get("subscriberCount", 0)), "views": int(st.get("viewCount", 0)),
+                            "videos": int(st.get("videoCount", 0))}) + "\n")
 for r in rows:
     print("STAT", json.dumps(r, ensure_ascii=False))
 summ = os.environ.get("GITHUB_STEP_SUMMARY")

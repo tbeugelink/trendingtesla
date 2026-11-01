@@ -43,6 +43,7 @@ jobs:
           git config user.name "TrendingTesla bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           cp ops/stats/history.jsonl "$RUNNER_TEMP/h" && cp ops/performance.md "$RUNNER_TEMP/p"
+          cp ops/stats/channel.jsonl "$RUNNER_TEMP/c" 2>/dev/null || true
           mkdir -p "$RUNNER_TEMP/s" && cp -r ops/scout-tesla.md ops/scout "$RUNNER_TEMP/s/" 2>/dev/null || true
           for i in 1 2 3 4 5; do
             git fetch -q origin main && git reset -q --hard origin/main
@@ -51,6 +52,7 @@ jobs:
             mkdir -p ops/stats && cp "$RUNNER_TEMP/m" ops/stats/history.jsonl && cp "$RUNNER_TEMP/p" ops/performance.md
             cp -r "$RUNNER_TEMP/s/." ops/ 2>/dev/null || true
             git add ops/stats/history.jsonl ops/performance.md
+            [ -f "$RUNNER_TEMP/c" ] && cp "$RUNNER_TEMP/c" ops/stats/channel.jsonl && git add ops/stats/channel.jsonl
             git add ops/scout-tesla.md 2>/dev/null || true; git add ops/scout 2>/dev/null || true
             git diff --cached --quiet && exit 0
             git commit -qm "Stats: daily YouTube snapshot and updated performance guidance" && git push -q origin HEAD:main && exit 0

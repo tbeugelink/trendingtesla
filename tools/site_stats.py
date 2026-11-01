@@ -24,10 +24,13 @@ def api(path, body=None):
         return json.load(r)
 
 
-accounts = api("accounts")["result"]
-if not accounts:
-    sys.exit("::error::The token sees no Cloudflare account (needs Account Analytics: Read on your account)")
-acct = accounts[0]["id"]
+acct = os.environ.get("CF_ACCOUNT_ID", "").strip()
+if not acct:  # listing accounts needs the extra permission Account Settings: Read on the token
+    accounts = api("accounts")["result"]
+    if not accounts:
+        sys.exit("::error::The token cannot list the account: add 'Account Settings: Read' to the token, "
+                 "or set the repository variable CF_ACCOUNT_ID")
+    acct = accounts[0]["id"]
 
 end = date.today()
 start = end - timedelta(days=7)

@@ -83,12 +83,12 @@
         "text": "This Tesla NEVER moved an inch. And the bill was still five hundred thirty-nine dollars!",
         "pop": [
           {
-            "say": "NEVER",
-            "show": "NEVER"
+            "say": "NEVER moved",
+            "show": "NEVER MOVED"
           },
           {
-            "say": "five hundred thirty-nine dollars",
-            "show": "$539"
+            "say": "bill",
+            "show": "BILL $539"
           }
         ],
         "lib": [
@@ -101,8 +101,20 @@
         "text": "Here's why. Since October, US Superchargers have a hidden emergency button.",
         "pop": [
           {
+            "say": "why",
+            "show": "WHY?"
+          },
+          {
+            "say": "Since October",
+            "show": "SINCE OCTOBER"
+          },
+          {
+            "say": "hidden",
+            "show": "HIDDEN BUTTON"
+          },
+          {
             "say": "emergency button",
-            "show": "EMERGENCY BUTTON"
+            "show": "EMERGENCY"
           }
         ],
         "lib": [
@@ -115,11 +127,15 @@
         "pop": [
           {
             "say": "danger",
-            "show": "DANGER?"
+            "show": "IN DANGER?"
           },
           {
             "say": "drive off",
             "show": "DRIVE OFF"
+          },
+          {
+            "say": "still plugged in",
+            "show": "STILL PLUGGED IN"
           }
         ],
         "lib": [
@@ -132,6 +148,10 @@
         "text": "The handle simply, breaks, away.",
         "sfx": "Heavy plastic charging plug snapping out of a car port, sharp crack and thud",
         "pop": [
+          {
+            "say": "handle",
+            "show": "THE HANDLE"
+          },
           {
             "say": "breaks",
             "show": "SNAP!"
@@ -146,8 +166,16 @@
         "text": "But Tesla warns: it damages the car AND the charger. Repairs? Up to twenty-five thousand dollars!",
         "pop": [
           {
-            "say": "AND",
+            "say": "warns",
+            "show": "TESLA WARNS"
+          },
+          {
+            "say": "car",
             "show": "CAR + CHARGER"
+          },
+          {
+            "say": "Repairs",
+            "show": "REPAIRS?"
           },
           {
             "say": "twenty-five thousand dollars",
@@ -177,8 +205,16 @@
         "text": "Then, the real world arrived. In Austin, a tired Model Y driver tapped right through the warnings, and drove off.",
         "pop": [
           {
+            "say": "real world",
+            "show": "REAL WORLD"
+          },
+          {
             "say": "Austin",
             "show": "AUSTIN"
+          },
+          {
+            "say": "tired",
+            "show": "TIRED DRIVER"
           },
           {
             "say": "warnings",
@@ -199,12 +235,16 @@
         "text": "Another owner tapped Activate, by mistake. And stopped.",
         "pop": [
           {
-            "say": "Activate",
-            "show": "ACTIVATE"
+            "say": "tapped Activate",
+            "show": "TAPPED ACTIVATE"
           },
           {
             "say": "by mistake",
             "show": "BY MISTAKE"
+          },
+          {
+            "say": "stopped",
+            "show": "STOPPED"
           }
         ],
         "lib": [
@@ -218,6 +258,10 @@
           {
             "say": "Too late",
             "show": "TOO LATE"
+          },
+          {
+            "say": "alert",
+            "show": "ALERT ON"
           },
           {
             "say": "Tesla Service",
@@ -234,12 +278,16 @@
         "text": "So the lesson is simple. Unless you're in danger, READ the red message, before you tap.",
         "pop": [
           {
+            "say": "lesson",
+            "show": "THE LESSON"
+          },
+          {
             "say": "danger",
-            "show": "DANGER?"
+            "show": "UNLESS IN DANGER"
           },
           {
             "say": "READ",
-            "show": "READ IT"
+            "show": "READ BEFORE YOU TAP"
           }
         ],
         "lib": [

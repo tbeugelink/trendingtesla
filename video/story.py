@@ -529,7 +529,7 @@ def find_pops(b, words, t0):
         for k in range(len(words) - len(toks) + 1):
             if [norm(w) for w, _, _ in words[k:k + len(toks)]] == toks:
                 st, en = words[k][1], words[k + len(toks) - 1][2]
-                out.append((t0 + st - 0.15, t0 + max(en, st + 0.9), str(shown).strip(".,!?;:").upper()))
+                out.append((t0 + st - 0.15, t0 + max(en, st + 0.9), str(shown).strip(".,;: ").upper()))
                 break
     return out
 

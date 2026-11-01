@@ -103,6 +103,19 @@ Shorts (typically 741 views after 48 hours) by far. So:
 - Explainers hold viewers best ("How Starlink works": 93% watched): a "why/how" angle on the news works well.
   Small routine items (a list of new Supercharger sites) do badly: only cover them when they are big.
 
+## Story Shorts (video/story.py, read this before writing "short.story")
+
+A story Short is a list of beats in `"short": {"story": [...]}`: one beat per sentence or two,
+`{"part": "hook|tension|payoff", "text": "...", "lib": ["file.jpg"], "pop": [{"say": "...", "show": "..."}]}`.
+- **Pictures follow the words:** every beat shows what is said at that moment. Use William's checked detail
+  photos in `static/img/lib/` (see `ops/library-prompts.md`) first; a beat with two subjects gets two photos.
+- **Key words tell the story on their own** (there are no running subtitles): 2-5 per beat, in the rhythm of the
+  voice, each a short phrase of 1-3 words (4 at most, shown on two lines), in capitals, the way a headline would
+  put it - e.g. NEVER MOVED, BILL $539, WHY?, SINCE OCTOBER, HIDDEN BUTTON, EMERGENCY, REPAIRS?, TAPPED ACTIVATE,
+  READ BEFORE YOU TAP. `"say"` = the exact spoken words where it appears (it shows 0.15 s before them), `"show"`
+  = what is on screen. Every shot has a key word; never one that belongs to another sentence.
+- Calm pictures: about 3 s per photo, long crossfades, slow steady motion; shaking only for launches.
+
 ## Openings and variety (read this before writing the "short" and "video" scripts)
 
 Viewers decide in the first 1-2 seconds whether to swipe away, and YouTube gives less reach to channels

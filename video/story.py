@@ -613,6 +613,28 @@ SLOGAN = {"en": "Like and subscribe, for the full story go to Trending Tesla dot
 RED = (214, 24, 30)
 
 
+def brand_img():
+    """The small TrendingTesla logo top left, on every frame of the story (the end card has the big one)."""
+    im = Image.new("RGBA", (W, 200), (0, 0, 0, 0))
+    d = ImageDraw.Draw(im)
+    f = S.font(S.FX, 50)
+    d.text((60, 92), "Trending", font=f, fill="#fff", stroke_width=2, stroke_fill=(30, 30, 34))
+    d.text((60 + d.textlength("Trending", font=f), 92), "Tesla", font=f, fill="#ff2d24", stroke_width=2,
+           stroke_fill=(30, 30, 34))
+    return im
+
+
+def check_brand(out, logo):
+    """Stop when the logo is missing in the finished video (it must never silently disappear again)."""
+    fr = subprocess.run(["ffmpeg", "-loglevel", "error", "-ss", "1.0", "-i", str(out), "-frames:v", "1", "-f", "rawvideo",
+                         "-pix_fmt", "rgb24", "-"], capture_output=True, check=True).stdout
+    img = Image.frombytes("RGB", (W, H), fr[:W * H * 3])
+    pts = [(x, y) for x in range(0, W, 2) for y in range(0, 200, 2)
+           if (p := logo.getpixel((x, y)))[3] > 200 and p[0] > 240 and p[1] > 240]  # the white "Trending" letters
+    if not pts or sum(sum(img.getpixel(q)) / 3 for q in pts) / len(pts) < 200:
+        sys.exit("::error::the TrendingTesla logo is missing in the story Short")
+
+
 def end_card(lang, bg=None):
     """The closing card: blurred last photo, a dark band, red LIKE & SUBSCRIBE pill, TrendingTesla.com."""
     from PIL import ImageFilter, ImageOps
@@ -717,6 +739,7 @@ def main():
                             "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-", "-i", str(audio), "-map", "0:v", "-map", "1:a",
                             "-c:v", "libx264", "-preset", "veryfast", "-crf", "20", "-pix_fmt", "yuv420p",
                             "-c:a", "copy", "-t", f"{total:.2f}", "-movflags", "+faststart", str(out)], stdin=subprocess.PIPE)
+    logo = brand_img()
     rnd = random.Random(slug)
     shots = make_shots(beats, a["_pool"], rnd)
     print(f"{len(shots)} shots, {len(set(x['img'] for x in shots))} photos")
@@ -791,10 +814,12 @@ def main():
                 capimgs[key] = caption_img(cg[2])
             # opening shot: captions above the label; afterwards in the usual place
             fr.alpha_composite(capimgs[key], (0, int(ltop - 300) if bi == 0 else int(H * 0.60)))
+        fr.alpha_composite(logo, (0, 0))
         enc.stdin.write(fr.convert("RGB").tobytes())
     enc.stdin.close()
     if enc.wait():
         sys.exit("ffmpeg failed")
+    check_brand(out, logo)
     S.PORTRAIT = True
     S.meta(a, lang, out)
     used = [CREDITS[x] for x in dict.fromkeys(sh["img"] for sh in shots) if x in CREDITS]

@@ -36,6 +36,11 @@ jobs:
           YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
           YT_API_KEY: ${{ secrets.YT_API_KEY }}
         run: python3 tools/scout.py tesla >> "$GITHUB_STEP_SUMMARY"
+      - name: Site visitors (Cloudflare Web Analytics)
+        continue-on-error: true
+        env:
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+        run: python3 tools/site_stats.py --history >> "$GITHUB_STEP_SUMMARY"
       - name: Update the guidance
         run: python3 tools/learn.py >> "$GITHUB_STEP_SUMMARY"
       - name: Commit
@@ -44,6 +49,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           cp ops/stats/history.jsonl "$RUNNER_TEMP/h" && cp ops/performance.md "$RUNNER_TEMP/p"
           cp ops/stats/channel.jsonl "$RUNNER_TEMP/c" 2>/dev/null || true
+          cp ops/stats/site.jsonl "$RUNNER_TEMP/v" 2>/dev/null || true
           mkdir -p "$RUNNER_TEMP/s" && cp -r ops/scout-tesla.md ops/scout "$RUNNER_TEMP/s/" 2>/dev/null || true
           for i in 1 2 3 4 5; do
             git fetch -q origin main && git reset -q --hard origin/main
@@ -53,6 +59,7 @@ jobs:
             cp -r "$RUNNER_TEMP/s/." ops/ 2>/dev/null || true
             git add ops/stats/history.jsonl ops/performance.md
             [ -f "$RUNNER_TEMP/c" ] && cp "$RUNNER_TEMP/c" ops/stats/channel.jsonl && git add ops/stats/channel.jsonl
+            [ -f "$RUNNER_TEMP/v" ] && cp "$RUNNER_TEMP/v" ops/stats/site.jsonl && git add ops/stats/site.jsonl
             git add ops/scout-tesla.md 2>/dev/null || true; git add ops/scout 2>/dev/null || true
             git diff --cached --quiet && exit 0
             git commit -qm "Stats: daily YouTube snapshot and updated performance guidance" && git push -q origin HEAD:main && exit 0

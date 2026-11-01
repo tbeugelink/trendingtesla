@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
     inputs:
       action:
-        description: "thumbs, playlists, both, stats or scout"
+        description: "thumbs, playlists, both, stats, scout or site"
         required: false
         default: "both"
       ids:
@@ -53,3 +53,8 @@ jobs:
           YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
           YT_API_KEY: ${{ secrets.YT_API_KEY }}
         run: python3 tools/scout.py tesla
+      - name: Site visitors (Cloudflare Web Analytics)
+        if: github.event.inputs.action == 'site'
+        env:
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+        run: python3 tools/site_stats.py

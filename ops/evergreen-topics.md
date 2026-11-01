@@ -9,6 +9,8 @@ Add new ideas at the bottom at any time.
 - [x] How much does it cost to charge a Tesla at a Supercharger (US, UK, Netherlands, Germany)? (already covered: tesla-supercharger-prices-us-october-2026-how-to-pay-less)
 - [x] Tesla Model 3 vs Model Y in 2026: which one should you buy? (already covered: tesla-model-3-vs-model-y-2026-which-to-buy-price-range-space)
 - [x] What is Tesla FSD (Supervised), what does it cost, and where can you use it? (what-is-tesla-fsd-supervised-cost-countries-explained)
+- [ ] Grok and FSD: what does it mean when Tesla's AI chatbot meets its self-driving software? (check carefully what is real and what is only announced)
+- [ ] A Tesla phone: what is known, what is rumour, and how could it work with Starlink and your Tesla? (clearly separate facts, statements and speculation)
 - [ ] How long does a Tesla battery last, and what does a replacement cost?
 - [ ] How far can a Tesla really drive in winter? Range loss and how to limit it
 - [ ] Charging a Tesla at home: wallbox, cable and costs explained
@@ -35,6 +37,7 @@ Add new ideas at the bottom at any time.
 - [ ] Is the Cybertruck the best truck ever made? What it does better, and worse, than any pickup before it
 - [ ] Tesla and SpaceX: one company in the making? How the two are already linked, and what a fusion would change
 - [ ] The new Roadster: a prelude to "suction" downforce and rocket tech in a road car? What is promised, and what is real
+- [ ] No more paint shop? Tesla's plan to build every car "unboxed", with coloured polyurethane panels: another revolution after the Cybercab (source: Munro Live interview with Lars Moravy and team)
 
 - [ ] The Roadster that started it all: how a small startup turned a Lotus into the first Tesla
 - [ ] 2008: the year Tesla almost died, and the Christmas Eve deal that saved it

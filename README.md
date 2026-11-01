@@ -85,6 +85,13 @@ Shorts (typically 741 views after 48 hours) by far. So:
 - **Every article still gets a long video too** (a "video" script is required), so the video series on the
   site and the channel is never interrupted (decided 1 Nov 2026). The Short is where the growth comes from, so
   it gets the most care.
+- **The long video uses the same story style** (decided 1 Nov 2026): its first sentence is the hook (the most
+  striking concrete fact or turn, never a dry summary), the opening builds what is at stake before the first
+  heading, every section answers one question and raises the next, and the last block ends on the strongest
+  line, not a summary. It keeps exactly the article's headings, so readers can follow along. It also gets its
+  own YouTube title: `"video": {"en": [...], "nl": [...], "yt_title_en": "...", "yt_title_nl": "..."}`,
+  5-10 words, title case, a story or a sharp question in one line ("The $539 Button Tesla Owners Keep Pressing
+  by Accident"), factually exact, never a promise the video does not keep.
 - **Write the Short as a story: hook -> tension -> payoff**, under 60 seconds. Hook: the most striking concrete
   fact or turn, in the first sentence. Tension: what was at stake, what stood in the way, what people expected.
   Payoff: what happened and why it matters, ending on the strongest line. Short sentences, a few words in

@@ -38,14 +38,16 @@ jobs:
         run: python3 video/story.py "${{ github.event.inputs.slug }}" en
       - name: Keep the generated scene photos (so a re-render does not pay for them again)
         run: |
-          [ -z "$(git status --porcelain static/img/gen/story)" ] && exit 0
-          cp -r static/img/gen/story "$RUNNER_TEMP/story-img"
+          [ -z "$(git status --porcelain static/img/gen/story static/img/real/story)" ] && exit 0
+          mkdir -p static/img/gen/story static/img/real/story
+          cp -r static/img/gen/story "$RUNNER_TEMP/story-img"; cp -r static/img/real/story "$RUNNER_TEMP/story-real"
           git config user.name "TrendingTesla bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           for i in 1 2 3 4 5; do
             git fetch -q origin main && git reset -q --hard origin/main
-            mkdir -p static/img/gen/story && cp -r "$RUNNER_TEMP/story-img/." static/img/gen/story/
-            git add static/img/gen/story && git commit -qm "Story Short scene photos: ${{ github.event.inputs.slug }}" && git push -q origin HEAD:main && exit 0
+            mkdir -p static/img/gen/story static/img/real/story
+            cp -r "$RUNNER_TEMP/story-img/." static/img/gen/story/; cp -r "$RUNNER_TEMP/story-real/." static/img/real/story/
+            git add static/img/gen/story static/img/real/story && git commit -qm "Story Short scene photos: ${{ github.event.inputs.slug }}" && git push -q origin HEAD:main && exit 0
             sleep 5
           done
       - uses: actions/upload-artifact@v4

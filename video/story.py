@@ -205,20 +205,25 @@ def scene_image(G, prompt, refs):
 CHECKER = []
 
 
+def init_checker(G):
+    if CHECKER:
+        return
+    names = [m["name"].split("/", 1)[1] for m in G.api("models?pageSize=200").get("models", [])
+             if "generateContent" in m.get("supportedGenerationMethods", []) and "flash" in m["name"]
+             and "image" not in m["name"] and "tts" not in m["name"] and "live" not in m["name"]]
+    def ver(n):  # newest version first: gemini-3.8-flash before gemini-2.5-flash
+        m = re.search(r"gemini-(\d+(?:\.\d+)?)", n)
+        return float(m.group(1)) if m else 0.0
+    good = [n for n in names if "lite" not in n and "preview" not in n and "exp" not in n] or names
+    good.sort(key=lambda n: (ver(n), -len(n)), reverse=True)
+    CHECKER.extend(good[:3] or [None])
+    print(f"photo check model: {CHECKER[0]}")
+
+
 def check_scene(G, im, scene, subject, b):
     """Ask a Gemini vision model whether the photo gets the real details right. Returns (ok, problems)."""
     import io
-    if not CHECKER:
-        names = [m["name"].split("/", 1)[1] for m in G.api("models?pageSize=200").get("models", [])
-                 if "generateContent" in m.get("supportedGenerationMethods", []) and "flash" in m["name"]
-                 and "image" not in m["name"] and "tts" not in m["name"] and "live" not in m["name"]]
-        def ver(n):  # newest version first: gemini-3.8-flash before gemini-2.5-flash
-            m = re.search(r"gemini-(\d+(?:\.\d+)?)", n)
-            return float(m.group(1)) if m else 0.0
-        good = [n for n in names if "lite" not in n and "preview" not in n and "exp" not in n] or names
-        good.sort(key=lambda n: (ver(n), -len(n)), reverse=True)
-        CHECKER.extend(good[:3] or [None])
-        print(f"photo check model: {CHECKER[0]}")
+    init_checker(G)
     if not CHECKER[0]:
         return True, ""
     buf = io.BytesIO()
@@ -241,6 +246,106 @@ def check_scene(G, im, scene, subject, b):
       except Exception as e:  # try the next model; the check is a safety net and never blocks the video
         print(f"::warning::photo check with {mdl} failed: {str(e)[:150]}")
     return True, ""
+
+
+CREDITS = {}  # photo file -> credit line for the description
+USED = set()  # Commons pages already used in this video
+FOCUS = {}  # photo file -> horizontal position of its subject (0..1), for the vertical crop
+
+
+def real_photo(a, b, spec):
+    """A real, freely licensed photo from Wikimedia Commons for one moment: several searches, Gemini picks the
+    photo that best shows what is said (and where its subject is, for the vertical crop). Cached with its credit."""
+    import html
+    import io
+    import urllib.parse
+    sys.path.insert(0, str(S.ROOT / "tools"))
+    import gen_image as G
+    import real_photos as R
+    want = spec.get("want") or b["text"]
+    qs = spec["q"] if isinstance(spec.get("q"), list) else [spec.get("q") or want]
+    h = hashlib.md5((json.dumps(spec, sort_keys=True) + b["text"]).encode()).hexdigest()[:10]
+    d = S.build.STATIC / "img/real/story"
+    f = d / f"{a['slug'][:70]}-{h}.jpg"
+    meta_f = d / "credits.json"
+    meta = json.loads(meta_f.read_text()) if meta_f.exists() else {}
+    if f.exists() and f.name in meta:
+        CREDITS[f] = meta[f.name]["credit"]
+        USED.add(meta[f.name]["page"])
+        return f, meta[f.name].get("focus", 0.5)
+    cands, seen = [], set()
+    for q in qs:
+        qq = urllib.parse.urlencode({"action": "query", "format": "json", "generator": "search", "gsrnamespace": 6,
+                                     "gsrsearch": q, "gsrlimit": 12, "prop": "imageinfo",
+                                     "iiprop": "url|extmetadata|mime|size", "iiurlwidth": 1600})
+        try:
+            with urllib.request.urlopen(urllib.request.Request(f"https://commons.wikimedia.org/w/api.php?{qq}",
+                                                               headers=G.UA), timeout=60) as r:
+                pages = sorted(json.load(r).get("query", {}).get("pages", {}).values(), key=lambda p: p.get("index", 99))
+        except Exception as e:
+            print(f"::warning::Commons search '{q}' failed: {e}")
+            continue
+        for p in pages:
+            ii = (p.get("imageinfo") or [{}])[0]
+            m = ii.get("extmetadata", {})
+            lic = m.get("LicenseShortName", {}).get("value", "")
+            if ii.get("mime") != "image/jpeg" or not R.free_licence(lic) or p.get("title") in seen:
+                continue
+            if min(ii.get("width", 0), ii.get("height", 0)) < 900:
+                continue
+            seen.add(p.get("title"))
+            artist = re.sub(r"<[^>]+>", "", html.unescape(m.get("Artist", {}).get("value", ""))).strip() or "unknown"
+            artist = re.sub(r"\s+", " ", artist)[:60]
+            cands.append({"src": ii.get("thumburl") or ii["url"], "page": ii.get("descriptionurl"),
+                          "credit": f"{artist}, {lic}, Wikimedia Commons"})
+    best = None
+    for c in [c for c in cands if c["page"] not in USED][:8]:  # a different real photo for every moment
+        try:
+            with urllib.request.urlopen(urllib.request.Request(c["src"], headers=G.UA), timeout=60) as r:
+                im = Image.open(io.BytesIO(r.read())).convert("RGB")
+        except Exception:
+            continue
+        sc, fx = rate_photo(G, im, want, b)
+        print(f"real photo {sc}/10 for '{want[:50]}': {c['page']}")
+        if sc >= 7 and (not best or sc > best[0]):
+            best = (sc, fx, im, c)
+            if sc >= 9:
+                break
+    if not best:
+        raise RuntimeError(f"no fitting real photo for: {want[:60]}")
+    d.mkdir(parents=True, exist_ok=True)
+    best[2].save(f, "JPEG", quality=92)
+    meta[f.name] = {"credit": best[3]["credit"], "page": best[3]["page"], "focus": best[1], "want": want}
+    meta_f.write_text(json.dumps(meta, indent=1))
+    CREDITS[f] = best[3]["credit"]
+    USED.add(best[3]["page"])
+    return f, best[1]
+
+
+def rate_photo(G, im, want, b):
+    """Gemini: how well does this real photo show `want` (0-10), and where is its subject (0 = left, 1 = right)?"""
+    import io
+    init_checker(G)
+    buf = io.BytesIO()
+    small = im.copy()
+    small.thumbnail((1024, 1024))
+    small.save(buf, "JPEG", quality=85)
+    q = (f"Rate this photo for a Tesla news Short. It must clearly show: {want}. Score 0-10: 10 = shows exactly "
+         "that, sharp and attractive; 5 = related but not that moment or detail; 0 = something else, a wrong car or "
+         "product, a diagram, a screenshot or a poor photo. Also give focus_x: the horizontal position (0-1) of the "
+         'main subject. Answer only JSON: {"score": n, "focus_x": x}')
+    for mdl in CHECKER:
+        try:
+            d = G.api(f"models/{mdl}:generateContent",
+                      {"contents": [{"role": "user", "parts": [{"text": q}, {"inline_data": {
+                          "mime_type": "image/jpeg", "data": base64.b64encode(buf.getvalue()).decode()}}]}],
+                       "generationConfig": {"responseMimeType": "application/json", "temperature": 0}})
+            txt = d["candidates"][0]["content"]["parts"][0]["text"]
+            r = json.loads(txt[txt.find("{"):txt.rfind("}") + 1])
+            return float(r.get("score", 0)), min(1.0, max(0.0, float(r.get("focus_x", 0.5))))
+        except Exception as e:
+            print(f"::warning::photo rating with {mdl} failed: {str(e)[:120]}")
+    return 0.0, 0.5
 
 
 def assign_images(a, beats):
@@ -266,6 +371,13 @@ def assign_images(a, beats):
             j += 1
         b["_img"] = p
         b["_imgs"] = []
+        for ph in ([b["photo"]] if isinstance(b.get("photo"), dict) else b.get("photo") or []):
+            try:  # a real photo first where details matter (charge port, plug, screen, a real place)
+                rf, fx = real_photo(a, b, ph)
+                FOCUS[rf] = fx
+                b["_imgs"].append(rf)
+            except Exception as e:
+                print(f"::warning::real photo failed: {e}")
         for sc in ([b["scene"]] if isinstance(b.get("scene"), str) else b.get("scene") or []):
             try:  # one generated photo per moment of the story: what is said is what you see
                 b["_imgs"].append(gen_scene(a, b, sc))
@@ -326,7 +438,7 @@ def make_shots(beats, pool, rnd):
                 mv = "zoom"
             else:
                 mv = MOVES[(len(shots) + rnd.randrange(2)) % len(MOVES)]
-            shots.append({"img": img, "f": fi, "move": mv, "shake": bool(b.get("shake")), "t0": b["_t0"] + j * b["_dur"] / n, "dur": b["_dur"] / n,
+            shots.append({"img": img, "f": fi, "move": mv, "shake": bool(b.get("shake")), "fx": FOCUS.get(img, 0.5), "t0": b["_t0"] + j * b["_dur"] / n, "dur": b["_dur"] / n,
                           "beat": bi})
     return shots
 
@@ -356,7 +468,7 @@ def frame(src, sh_, t, pop_t):
         z *= 1 + 0.025 * (1 - pop_t / 0.25)
     fh = min(H / z, shh)
     fw = min(fh * W / H, sw)
-    cx = sw / 2 + ox * (sw - fw) / 2
+    cx = sw * sh_.get("fx", 0.5) + ox * (sw - fw) / 2
     cy = shh / 2 + oy * (shh - fh) / 2
     if mv == "rise":  # camera moves top-to-bottom: the subject seems to rise
         cy = fh / 2 + (shh - fh) * ease(u)
@@ -577,6 +689,12 @@ def main():
         sys.exit("ffmpeg failed")
     S.PORTRAIT = True
     S.meta(a, lang, out)
+    used = [CREDITS[x] for x in dict.fromkeys(sh["img"] for sh in shots) if x in CREDITS]
+    if used:
+        t = out.with_suffix(".txt")
+        lab = {"en": "Photos", "nl": "Foto's"}[lang]
+        t.write_text(t.read_text(encoding="utf-8").replace("\n\nTAGS:", f"\n\n{lab}: " + "; ".join(dict.fromkeys(used)) + "\n\nTAGS:", 1),
+                     encoding="utf-8")
     print(f"::notice::Story Short {out.name} ready ({total:.1f}s, {len(beats)} shots)")
 
 

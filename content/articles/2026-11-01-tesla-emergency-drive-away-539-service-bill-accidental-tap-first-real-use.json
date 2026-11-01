@@ -91,9 +91,23 @@
             "show": "$539"
           }
         ],
-        "scene": [
-          "A white Tesla Model Y standing still in a Supercharger bay at night, the charging cable plugged into its left rear charge port, wet asphalt reflecting the canopy lights",
-          "Close-up of a worried Tesla owner's hand holding a smartphone showing a service appointment, the parked white Model Y blurred behind, at night"
+        "photo": [
+          {
+            "q": [
+              "Tesla Supercharger Model Y",
+              "Tesla Model Y charging",
+              "Tesla Supercharger station"
+            ],
+            "want": "a Tesla Model Y (or Model 3) charging at a Tesla Supercharger"
+          },
+          {
+            "q": [
+              "Tesla charge port",
+              "Tesla Model 3 charging port",
+              "Tesla Model Y charge port"
+            ],
+            "want": "close-up of the charge port in the rear tail light of a Tesla, open or with a plug in it"
+          }
         ]
       },
       {
@@ -105,8 +119,16 @@
             "show": "EMERGENCY BUTTON"
           }
         ],
-        "subject": "the Tesla center touchscreen (large landscape screen on the dashboard) inside a Tesla Model Y",
-        "scene": "Close-up of the Tesla center touchscreen inside a Model Y at night, a big red warning pop-up with one red button glowing on the screen, the Supercharger visible through the windshield"
+        "photo": [
+          {
+            "q": [
+              "Tesla Model Y interior",
+              "Tesla Model 3 interior touchscreen",
+              "Tesla Model 3 dashboard"
+            ],
+            "want": "the large center touchscreen on the dashboard inside a Tesla Model 3 or Model Y"
+          }
+        ]
       },
       {
         "part": "tension",
@@ -121,9 +143,23 @@
             "show": "DRIVE OFF"
           }
         ],
-        "scene": [
-          "Extreme close-up of the black Tesla Supercharger plug firmly inserted into the charge port in the left rear tail light of a white Model Y",
-          "A white Tesla Model Y starting to pull forward out of a Supercharger bay with the charging cable still attached and stretched tight, motion blur"
+        "photo": [
+          {
+            "q": [
+              "Tesla Supercharger plugged in",
+              "Tesla Supercharger connector car",
+              "Tesla charging cable plugged"
+            ],
+            "want": "close-up of a Tesla Supercharger cable plugged into a Tesla car"
+          },
+          {
+            "q": [
+              "Tesla Supercharger Model Y",
+              "Tesla Model Y charging",
+              "Tesla Supercharger station"
+            ],
+            "want": "a Tesla Model Y (or Model 3) charging at a Tesla Supercharger"
+          }
         ]
       },
       {
@@ -136,7 +172,16 @@
             "show": "SNAP!"
           }
         ],
-        "scene": "Close-up of a black Tesla Supercharger cable handle snapped off, lying on wet asphalt in front of the white Supercharger post, broken plastic pieces around it"
+        "photo": [
+          {
+            "q": [
+              "Tesla Supercharger connector",
+              "Tesla Supercharger handle",
+              "Tesla charging connector"
+            ],
+            "want": "close-up of a Tesla Supercharger connector (the plug at the end of the cable)"
+          }
+        ]
       },
       {
         "part": "tension",
@@ -151,9 +196,23 @@
             "show": "$25,000"
           }
         ],
-        "scene": [
-          "Close-up of a damaged charge port door on the left rear tail light of a white Tesla, scratched and bent",
-          "A damaged white Tesla Supercharger post with a torn cable and cracked housing, orange warning cones around it, at dusk"
+        "photo": [
+          {
+            "q": [
+              "Tesla charge port",
+              "Tesla Model 3 charging port",
+              "Tesla Model Y charge port"
+            ],
+            "want": "close-up of the charge port in the rear tail light of a Tesla, open or with a plug in it"
+          },
+          {
+            "q": [
+              "Tesla Supercharger V3",
+              "Tesla Supercharger stall",
+              "Tesla Supercharger"
+            ],
+            "want": "a Tesla Supercharger post (charging stall) seen up close"
+          }
         ]
       },
       {
@@ -185,9 +244,24 @@
           }
         ],
         "scene": [
-          "A Tesla Supercharger station in Austin, Texas at early morning, the Austin skyline in the distance, a white Model Y charging",
-          "Inside a Tesla Model Y at dawn, a tired driver's hand quickly tapping the center touchscreen, warning on screen, soft focus",
-          "A white Tesla Model Y driving away from a Supercharger stall at dawn, the charging cable stretched out behind it"
+          "A Tesla Supercharger station in Austin, Texas at early morning, the Austin skyline in the distance, a white Model Y charging"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Tesla Model Y interior",
+              "Tesla Model 3 interior touchscreen",
+              "Tesla Model 3 dashboard"
+            ],
+            "want": "the large center touchscreen on the dashboard inside a Tesla Model 3 or Model Y"
+          },
+          {
+            "q": [
+              "Tesla Model Y",
+              "Tesla Model Y road"
+            ],
+            "want": "a Tesla Model Y on the road"
+          }
         ]
       },
       {
@@ -203,8 +277,16 @@
             "show": "BY MISTAKE"
           }
         ],
-        "subject": "the Tesla center touchscreen (large landscape screen on the dashboard) inside a Tesla Model Y",
-        "scene": "Extreme close-up of a fingertip touching a red Activate button on a Tesla touchscreen, the finger freezing in surprise"
+        "photo": [
+          {
+            "q": [
+              "Tesla Model Y interior",
+              "Tesla Model 3 interior touchscreen",
+              "Tesla Model 3 dashboard"
+            ],
+            "want": "the large center touchscreen on the dashboard inside a Tesla Model 3 or Model Y"
+          }
+        ]
       },
       {
         "part": "payoff",
@@ -219,10 +301,22 @@
             "show": "TESLA SERVICE"
           }
         ],
-        "subject": "the Tesla center touchscreen inside a Tesla Model Y; a Tesla Service Center",
-        "scene": [
-          "Close-up of a Tesla touchscreen with a red service warning triangle that stays on, the car parked and dark",
-          "A Tesla Service Center at dusk, a white Model Y waiting in front of the service bay door"
+        "photo": [
+          {
+            "q": [
+              "Tesla Model Y interior",
+              "Tesla Model 3 interior touchscreen",
+              "Tesla Model 3 dashboard"
+            ],
+            "want": "the large center touchscreen on the dashboard inside a Tesla Model 3 or Model Y"
+          },
+          {
+            "q": [
+              "Tesla Service Center",
+              "Tesla service centre"
+            ],
+            "want": "a Tesla Service Center building"
+          }
         ]
       },
       {
@@ -238,8 +332,16 @@
             "show": "READ IT"
           }
         ],
-        "subject": "the Tesla center touchscreen inside a Tesla Model Y",
-        "scene": "A driver's hand pulled back from the Tesla touchscreen, the red warning message clearly on screen, the driver leaning in to read it, calm careful moment"
+        "photo": [
+          {
+            "q": [
+              "Tesla Model Y interior",
+              "Tesla Model 3 interior touchscreen",
+              "Tesla Model 3 dashboard"
+            ],
+            "want": "the large center touchscreen on the dashboard inside a Tesla Model 3 or Model Y"
+          }
+        ]
       }
     ]
   },

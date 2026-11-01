@@ -568,6 +568,44 @@ def groups(words, t0):
     return out
 
 
+def title_card(a, lang):
+    """The opening title, big and centred: yellow words plus a red block (story Shorts always use red)."""
+    lb = a.get("label") or {}
+    t = lb.get(lang) or {}
+    st = {"k": "a", "y": "a", "tag": "a", "w": "c", "s": "c"}.get(lb.get("style", "a"), lb.get("style", "a"))
+    txt, sub = (t.get("text") or a[lang]["title"]).strip(), t.get("sub", "").strip()
+    if st == "r":
+        rows = [("block", txt)]
+    elif st == "a":
+        rows = [("block", sub), ("big", txt)] if sub else [("big", txt)]
+    else:  # "c" and "n": the big yellow words on top, the red block below
+        rows = [("big", sub or txt), ("block", txt if sub else "")]
+    rows = [r for r in rows if r[1]]
+    im = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    d = ImageDraw.Draw(im)
+    fonts = []
+    for kind, x in rows:
+        f = S.font(S.FB, 150 if kind == "big" else 118)
+        while f.getlength(x) > W - (120 if kind == "big" else 190) and f.size > 60:
+            f = S.font(S.FB, f.size - 6)
+        fonts.append(f)
+    gap = 30
+    heights = [f.size * (1.05 if k == "big" else 1.35) for (k, _), f in zip(rows, fonts)]
+    y = H * 0.42 - (sum(heights) + gap * (len(rows) - 1)) / 2
+    for (kind, x), f, h in zip(rows, fonts, heights):
+        w = f.getlength(x)
+        if kind == "big":
+            d.text(((W - w) / 2 + 8, y + 10), x, font=f, fill=(0, 0, 0, 150))
+            d.text(((W - w) / 2, y), x, font=f, fill=(255, 214, 0), stroke_width=12, stroke_fill=(0, 0, 0))
+        else:
+            pad = f.size * 0.32
+            d.rectangle([(W - w) / 2 - pad + 8, y + 10, (W + w) / 2 + pad + 8, y + h + 10], fill=(0, 0, 0, 110))
+            d.rectangle([(W - w) / 2 - pad, y, (W + w) / 2 + pad, y + h], fill=(214, 24, 30))
+            d.text(((W - w) / 2, y + (h - f.size) / 2 - f.size * 0.08), x, font=f, fill=(255, 255, 255))
+        y += h + gap
+    return im
+
+
 def end_card(lang):
     im = Image.new("RGB", (W, H), (12, 12, 14))
     d = ImageDraw.Draw(im)
@@ -637,7 +675,7 @@ def main():
                           "-ar", "44100", str(audio)], check=True)
 
     # 3. picture: every frame moves; label on the opening shot; captions; end card
-    label, ltop = S.label_overlay(a, lang)
+    label, ltop = title_card(a, lang), H * 0.60
     capimgs = {}
     endimg = end_card(lang)
     out = OUT / f"{slug}-{lang}-short.mp4"

@@ -112,7 +112,7 @@ A story Short is a list of beats in `"short": {"story": [...]}`: one beat per se
 - **Key words tell the story on their own** (there are no running subtitles): 2-5 per beat, in the rhythm of the
   voice, each a short phrase of 1-3 words (4 at most, shown on two lines), in capitals, the way a headline would
   put it - e.g. NEVER MOVED, BILL $539, WHY?, SINCE OCTOBER, HIDDEN BUTTON, EMERGENCY, REPAIRS?, TAPPED ACTIVATE,
-  READ BEFORE YOU TAP. `"say"` = the exact spoken words where it appears (it shows 0.15 s before them), `"show"`
+  READ BEFORE -> YOU TAP! (split a longer phrase into two pops that follow the voice), $25,000!. `"say"` = the exact spoken words where it appears (it shows 0.15 s before them), `"show"`
   = what is on screen. Every shot has a key word; never one that belongs to another sentence.
 - Calm pictures: about 3 s per photo, long crossfades, slow steady motion; shaking only for launches.
 

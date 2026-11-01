@@ -179,7 +179,7 @@
           },
           {
             "say": "twenty-five thousand dollars",
-            "show": "$25,000"
+            "show": "$25,000!"
           }
         ],
         "lib": [
@@ -217,8 +217,12 @@
             "show": "TIRED DRIVER"
           },
           {
+            "say": "tapped",
+            "show": "TAPPED"
+          },
+          {
             "say": "warnings",
-            "show": "WARNINGS"
+            "show": "WARNING"
           },
           {
             "say": "drove off",
@@ -287,7 +291,11 @@
           },
           {
             "say": "READ",
-            "show": "READ BEFORE YOU TAP"
+            "show": "READ BEFORE"
+          },
+          {
+            "say": "you tap",
+            "show": "YOU TAP!"
           }
         ],
         "lib": [

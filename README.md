@@ -142,9 +142,9 @@ Shorts (typically 741 views after 48 hours) by far. So:
   needs its own "img" or "photo".
 - **Key words in the long video** (decided 1 Nov 2026): no captions in the picture any more (YouTube makes its own
   closed captions, CC, which viewers can translate into almost any language); instead big yellow key words in the centre, like the story Shorts. Give
-  every "text" block of the "video" script a `"pop": [{"say": "...", "show": "..."}]` list of 2-4 headline-style
+  every "text" block of the "video" script a `"pop": [{"say": "...", "show": "..."}]` list of 4-6 headline-style
   key words in the rhythm of the voice (same rules as "Story Shorts": "say" = the exact words as spoken in that
-  block, "show" = 1-3 capitalised words, 4 at most, two lines at most; e.g. NEVER MOVED, BILL $539, WHY?).
+  block, "show" = 1-4 capitalised words, shown on one line; e.g. NEVER MOVED, BILL $539, WHY?).
   Each shows for up to 3 s. The last block's last key word is the core message. Without a "pop" list only
   numbers and words in capitals pop up, which is too little. "key" blocks keep their keyword bar.
 - **Keep the Short's promise** (decided 1 Nov 2026): every Short ends with "for the full story go to

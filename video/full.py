@@ -167,13 +167,11 @@ def norm(w):
 
 
 def pop_overlay(txt):
-    """A key word or short phrase, big and yellow in the centre (like the story Shorts); never more than 2 lines."""
-    words = txt.split()
+    """A key word or short phrase, big and yellow in the centre (like the story Shorts), always on one line."""
     f = font(FB, POP_SIZE)
-    lines = [txt] if len(words) == 1 else min(([" ".join(words[:k]), " ".join(words[k:])] for k in range(1, len(words))),
-                                              key=lambda ls: max(f.getlength(x) for x in ls))
-    while max(f.getlength(x) for x in lines) > W - 200 and f.size > 70:
-        f = font(FB, f.size - 8)
+    lines = [txt]  # landscape: always one line, there is room enough
+    while f.getlength(txt) > W - 200 and f.size > 60:
+        f = font(FB, f.size - 6)
     lh = int(f.size * 1.04)
     im = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     d = ImageDraw.Draw(im)
@@ -573,6 +571,8 @@ def check_brand(out, logo):
     """Stop when the TrendingTesla logo is missing in the finished video (it must never silently disappear)."""
     fr = subprocess.run(["ffmpeg", "-loglevel", "error", "-ss", "5", "-i", str(out), "-frames:v", "1", "-vf", f"scale={W}:{H}",
                          "-f", "rawvideo", "-pix_fmt", "rgb24", "-"], capture_output=True, check=True).stdout
+    if len(fr) < W * H * 3:  # short preview: nothing to check at 5 s
+        return
     img = Image.frombytes("RGB", (W, H), fr[:W * H * 3])
     pts = [(x, y) for x in range(0, W // 2, 2) for y in range(0, 220, 2)
            if (p := logo.getpixel((x, y)))[3] > 200 and p[0] > 240 and p[1] > 240]

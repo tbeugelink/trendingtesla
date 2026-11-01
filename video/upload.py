@@ -89,6 +89,26 @@ def register(vid, mp4, lang, title):
     f.write_text(json.dumps(items, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
 
+def add_captions(vid, path, lang, at):
+    """Closed captions (CC) for long videos; needs the youtube.force-ssl scope. Never fails the upload."""
+    if not path.exists():
+        return
+    meta = json.dumps({"snippet": {"videoId": vid, "language": lang, "name": {"en": "English", "nl": "Nederlands"}[lang],
+                                   "isDraft": False}}).encode()
+    b = "ttcaptions"
+    body = (f"--{b}\r\nContent-Type: application/json; charset=UTF-8\r\n\r\n".encode() + meta +
+            f"\r\n--{b}\r\nContent-Type: application/octet-stream\r\n\r\n".encode() + path.read_bytes() +
+            f"\r\n--{b}--\r\n".encode())
+    req = urllib.request.Request("https://www.googleapis.com/upload/youtube/v3/captions?part=snippet&uploadType=multipart",
+                                 data=body, method="POST", headers={"Authorization": f"Bearer {at}",
+                                                                     "Content-Type": f"multipart/related; boundary={b}"})
+    try:
+        with urllib.request.urlopen(req, timeout=120):
+            print(f"captions added to {vid}")
+    except urllib.error.HTTPError as e:
+        print(f"::warning::captions not added ({e.code}): {e.read().decode('utf-8', 'replace')[:200]}")
+
+
 def main():
     mp4 = Path(sys.argv[1])
     lang = sys.argv[2] if len(sys.argv) > 2 else "en"
@@ -121,6 +141,7 @@ def main():
     # remember the length of long videos; the site shows it ("▶ 4:15") and YouTube's feed has none
     if mp4.name.endswith("-full.mp4"):
         set_thumbnail(vid, mp4, at)
+        add_captions(vid, mp4.with_suffix(".srt"), lang, at)
         sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "tools"))
         import yt_playlists  # topic playlist on YouTube (needs the youtube scope; never fails the upload)
         yt_playlists.add(vid, mp4.name.rsplit(f"-{lang}-full.mp4", 1)[0], at)

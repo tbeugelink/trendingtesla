@@ -92,6 +92,13 @@ Shorts (typically 741 views after 48 hours) by far. So:
   own YouTube title: `"video": {"en": [...], "nl": [...], "yt_title_en": "...", "yt_title_nl": "..."}`,
   5-10 words, title case, a story or a sharp question in one line ("The $539 Button Tesla Owners Keep Pressing
   by Accident"), factually exact, never a promise the video does not keep.
+- **Key words in the long video** (decided 1 Nov 2026): no captions in the picture any more (they go to YouTube
+  as closed captions, CC, automatically); instead big yellow key words in the centre, like the story Shorts. Give
+  every "text" block of the "video" script a `"pop": [{"say": "...", "show": "..."}]` list of 2-4 headline-style
+  key words in the rhythm of the voice (same rules as "Story Shorts": "say" = the exact words as spoken in that
+  block, "show" = 1-3 capitalised words, 4 at most, two lines at most; e.g. NEVER MOVED, BILL $539, WHY?).
+  Each shows for up to 3 s. The last block's last key word is the core message. Without a "pop" list only
+  numbers and words in capitals pop up, which is too little. "key" blocks keep their keyword bar.
 - **Write the Short as a story: hook -> tension -> payoff**, under 60 seconds. Hook: the most striking concrete
   fact or turn, in the first sentence. Tension: what was at stake, what stood in the way, what people expected.
   Payoff: what happened and why it matters, ending on the strongest line. Short sentences, a few words in

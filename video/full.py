@@ -159,6 +159,66 @@ def key_overlay(a, text):
     return im
 
 
+POP_SIZE, POP_HOLD = 150, 3.0  # key words: big yellow, centre; at most 3 s each
+
+
+def norm(w):
+    return re.sub(r"[^\w$%]", "", w.lower())
+
+
+def pop_overlay(txt):
+    """A key word or short phrase, big and yellow in the centre (like the story Shorts); never more than 2 lines."""
+    words = txt.split()
+    f = font(FB, POP_SIZE)
+    lines = [txt] if len(words) == 1 else min(([" ".join(words[:k]), " ".join(words[k:])] for k in range(1, len(words))),
+                                              key=lambda ls: max(f.getlength(x) for x in ls))
+    while max(f.getlength(x) for x in lines) > W - 200 and f.size > 70:
+        f = font(FB, f.size - 8)
+    lh = int(f.size * 1.04)
+    im = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    d = ImageDraw.Draw(im)
+    y = H * 0.44 - lh * len(lines) / 2
+    for ln in lines:
+        x = (W - f.getlength(ln)) / 2
+        d.text((x + 6, y + 8), ln, font=f, fill=(0, 0, 0, 150))
+        d.text((x, y), ln, font=f, fill=(255, 214, 0), stroke_width=9, stroke_fill=(0, 0, 0))
+        y += lh
+    return im
+
+
+def find_pops(b, ws):
+    """Key words of one text block: its "pop" list [{"say": spoken words, "show": text on screen}] or, without one,
+    numbers and words in capitals. ws = [(word, start, end)] of that block. Returns [(start, text)]."""
+    wanted = b.get("pop")
+    if wanted is None:
+        if b.get("key"):
+            return []
+        wanted = [w for w, _, _ in ws if (w.strip(".,!?;:").isupper() and len(re.sub(r"\W", "", w)) > 1)
+                  or re.match(r"^\$?\d[\d,.]*%?$", w.strip(".,!?;:"))]
+    out, k0 = [], 0
+    for p in wanted:
+        show, say = (p.get("show"), p.get("say")) if isinstance(p, dict) else (p, p)
+        toks = [norm(x) for x in str(say).split()]
+        for k in range(k0, len(ws) - len(toks) + 1):
+            if [norm(w) for w, _, _ in ws[k:k + len(toks)]] == toks:
+                out.append((ws[k][1], str(show).upper().strip(".,;: ")))
+                k0 = k + len(toks)
+                break
+    return out
+
+
+def srt(chunks, path):
+    """YouTube closed captions (CC): same word timing as the voice."""
+    def ts(t):
+        ms = int(round(t * 1000))
+        return f"{ms // 3600000:02d}:{ms // 60000 % 60:02d}:{ms // 1000 % 60:02d},{ms % 1000:03d}"
+    rows = []
+    for i, c in enumerate(chunks):
+        end = c[-1][2] + 0.2 if i + 1 == len(chunks) else min(c[-1][2] + 0.2, chunks[i + 1][0][1] - 0.01)
+        rows.append(f"{i + 1}\n{ts(c[0][1])} --> {ts(end)}\n{' '.join(w[0] for w in c)}\n")
+    path.write_text("\n".join(rows), encoding="utf-8")
+
+
 def build_timeline(a, lang):
     """Pieces in spoken order: (kind, text, block) with kind title/head/text/outro."""
     blocks = (a.get("video") or {}).get(lang)
@@ -366,6 +426,18 @@ def render(a, lang, pieces, segs, place, words, total, end_start, audio):
             wins.append((place[i] - 0.1, place[i] + (segs[i][1] - segs[i][0]) + PAUSE["head_after"] - 0.05, head_overlay(a, lang, num, txt.rstrip("."))))
         if kind == "text" and b.get("key"):
             wins.append((place[i], place[i] + (segs[i][1] - segs[i][0]) + 0.2, key_overlay(a, b["key"])))
+    # key words per text block (instead of captions in the picture; the captions go to YouTube as CC)
+    pops = []
+    for i, (kind, txt, b) in enumerate(pieces):
+        if kind != "text":
+            continue
+        t1 = place[i] + (segs[i][1] - segs[i][0])
+        ws = [w for w in words if place[i] - 0.05 <= w[1] < t1 + 0.05]
+        found = find_pops(b, ws)
+        for k, (st, show) in enumerate(found):
+            nxt = found[k + 1][0] if k + 1 < len(found) else t1 + 0.4
+            pops.append((max(st - 0.15, label_end), min(nxt - 0.15, st + POP_HOLD), pop_overlay(show)))
+    print(f"{len(pops)} key words")
     chunks, cur = [], []
     for w in words:
         cur.append(w)
@@ -374,6 +446,7 @@ def render(a, lang, pieces, segs, place, words, total, end_start, audio):
             cur = []
     if cur:
         chunks.append(cur)
+    srt(chunks, S.OUT / f"{a['slug']}-{lang}-full.srt")
     caps = {}
 
     def cap(txt):
@@ -445,11 +518,17 @@ def render(a, lang, pieces, segs, place, words, total, end_start, audio):
                 frame.paste(o, (0, 0), o)
         if last:
             frame.paste(o_end, (0, 0), o_end)
-        while ci < len(chunks) and chunks[ci][-1][2] + 0.25 < t:
-            ci += 1
-        if ci < len(chunks) and chunks[ci][0][1] <= t and not last and t >= label_end:
-            o = cap(" ".join(w[0] for w in chunks[ci]))
-            frame.paste(o, (0, 0), o)
+        if not last:
+            for p0, p1, o in pops:
+                if p0 <= t < p1:
+                    frame.paste(o, (0, 0), o)
+                    break
+        if os.environ.get("FULL_CAPTIONS") == "1":  # old style: captions burned into the picture
+            while ci < len(chunks) and chunks[ci][-1][2] + 0.25 < t:
+                ci += 1
+            if ci < len(chunks) and chunks[ci][0][1] <= t and not last and t >= label_end:
+                o = cap(" ".join(w[0] for w in chunks[ci]))
+                frame.paste(o, (0, 0), o)
         ImageDraw.Draw(frame).rectangle([0, H - 12, int(W * t / total), H], fill="#e8231c")
         try:
             proc.stdin.write(frame.tobytes())

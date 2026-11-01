@@ -282,6 +282,16 @@
       "say": "nearly destroyed",
       "show": "NEARLY DESTROYED"
      }
+    ],
+    "photo": [
+     {
+      "q": [
+       "2008 Tesla Roadster",
+       "Tesla Roadster first generation",
+       "Tesla Roadster 2010"
+      ],
+      "want": "a first-generation Tesla Roadster (2008-2012 electric sports car)"
+     }
     ]
    },
    {
@@ -318,9 +328,6 @@
       "show": "5 CO-FOUNDERS"
      }
     ],
-    "img": [
-     "lib/musk-dotcom-cheque.jpg"
-    ],
     "photo": [
      {
       "q": [
@@ -329,6 +336,9 @@
       ],
       "want": "the AC Propulsion tzero, a small electric sports car prototype"
      }
+    ],
+    "img": [
+     "lib/musk-dotcom-cheque.jpg"
     ]
    },
    {
@@ -378,6 +388,13 @@
        "lithium-ion battery cells cylindrical"
       ],
       "want": "many small cylindrical lithium-ion battery cells"
+     },
+     {
+      "q": [
+       "Tesla Roadster battery pack",
+       "Tesla Roadster battery"
+      ],
+      "want": "the battery pack of a Tesla Roadster"
      }
     ]
    },
@@ -420,6 +437,13 @@
        "Tesla Roadster 2010"
       ],
       "want": "a first-generation Tesla Roadster (2008-2012 electric sports car)"
+     },
+     {
+      "q": [
+       "Tesla Roadster side view",
+       "Tesla Roadster 2008 side"
+      ],
+      "want": "side view of a first-generation Tesla Roadster"
      }
     ]
    },
@@ -605,6 +629,14 @@
        "Tesla Roadster interior"
       ],
       "want": "a Tesla Roadster charging, or its interior"
+     },
+     {
+      "q": [
+       "2008 Tesla Roadster",
+       "Tesla Roadster first generation",
+       "Tesla Roadster 2010"
+      ],
+      "want": "a first-generation Tesla Roadster (2008-2012 electric sports car)"
      }
     ]
    },
@@ -644,6 +676,13 @@
        "Lotus Cars Hethel"
       ],
       "want": "the Lotus Cars factory in Hethel, England"
+     },
+     {
+      "q": [
+       "Tesla Roadster rear",
+       "2008 Tesla Roadster rear"
+      ],
+      "want": "the rear of a first-generation Tesla Roadster"
      }
     ]
    },
@@ -781,7 +820,8 @@
     "text": "And in October 2026, a new chapter began. Tesla revealed a new Roadster, with cold gas thrusters developed with SpaceX. It is a far wilder machine than the reworked Lotus of 2008. But it only exists because that first, nearly impossible car proved that people wanted an electric sports car at all.",
     "img": [
      "models/rd-14.jpg",
-     "models/rd-1.jpg"
+     "models/rd-1.jpg",
+     "models/rd-12.jpg"
     ],
     "pop": [
      {

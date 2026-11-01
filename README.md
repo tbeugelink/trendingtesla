@@ -137,9 +137,12 @@ Shorts (typically 741 views after 48 hours) by far. So:
   `"photo": [{"q": ["2008 Tesla Roadster", "Tesla Roadster first generation"], "want": "a first-generation
   Tesla Roadster, the 2008 sports car"}]` (Wikimedia Commons, checked by Gemini; give 2-3 search phrasings).
   Never a recognisable real person. A photo that does not show the subject of the block is worse than none:
-  the video then holds the last fitting photo. Aim for 15-25 different fitting pictures in a long video.
+  the video then holds the last fitting photo. Aim for 25-40 different fitting pictures in a long video (a new shot every 3 s, like the Shorts: give
+  each text block 2-4 pictures, ideally several "photo" searches).
   This replaces the older "6-12 photos" and "optional img" wording in the task prompts: every text block
   needs its own "img" or "photo".
+- **No chapter cards in the long video** (decided 1 Nov 2026): the heads are spoken in the flow and shown as a
+  big key word; list keywords too. Key words stay on screen until the next one.
 - **Key words in the long video** (decided 1 Nov 2026): no captions in the picture any more (YouTube makes its own
   closed captions, CC, which viewers can translate into almost any language); instead big yellow key words in the centre, like the story Shorts. Give
   every "text" block of the "video" script a `"pop": [{"say": "...", "show": "..."}]` list of 4-6 headline-style

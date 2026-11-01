@@ -23,12 +23,12 @@ sys.argv = [x for x in sys.argv if x != "--portrait"]
 import short as S  # noqa: E402  (same folder; landscape layout)
 from short import W, H, FPS, font, FB, FX, YEL  # noqa: E402
 
-SPEED = {"en": "1.1", "nl": "1.1"}
+SPEED = {"en": "1.17", "nl": "1.17"}
 OUTRO_SAY = {"en": "Like and subscribe for more Tesla news, or go to TrendingTesla.com. I'll see you there!",
              "nl": "Like en abonneer voor meer Tesla-nieuws, of ga naar TrendingTesla.com. Ik zie je daar!"}
 OUTRO_CARD = {"en": "LIKE & SUBSCRIBE", "nl": "LIKE & ABONNEER"}
 OUTRO_SEC = 10.0
-SCENE_MAX, ZOOM_IN = 8.0, 0.07  # calm like the story Shorts: slow steady zoom, a new photo every ~5 s
+SCENE_MAX, ZOOM_IN = 3.0, 0.07  # the story-Short rhythm: a new shot every 3 s, 2 s crossfades  # calm like the story Shorts: slow steady zoom, a new photo every ~5 s
 NUM = re.compile(r"^([(\"'“]?)(\$?)(\d[\d.,]*\d|\d)(%?)([)\"'”.,:;!?]*)$")
 
 
@@ -345,64 +345,41 @@ def add_real_photos(a, pieces):
     """Blocks with "photo": [{"q": [search words], "want": "what it must show"}] get a real, freely licensed photo
     from Wikimedia Commons (picked and checked by Gemini, as in the story Shorts); its credit goes in the description."""
     import story as ST
-    for kind, txt, b in pieces:
+    for n, (kind, txt, b) in enumerate(pieces):
+        found = []
         for spec in b.get("photo") or []:
             try:
                 f, _ = ST.real_photo(a, {"text": txt}, spec)
-                b.setdefault("img", []).append(str(f.relative_to(S.build.STATIC / "img")))
+                found.append(str(f.relative_to(S.build.STATIC / "img")))
             except Exception as e:
                 print(f"::warning::no real photo for '{(spec.get('want') or txt)[:50]}': {str(e)[:120]}")
+        if found:  # the specific real photos lead the block (the opening keeps its own first photo)
+            own = b.get("img") or []
+            b["img"] = (own[:1] + found + own[1:]) if n == 0 else (found + own)
     return ST.CREDITS
 
 
 def render(a, lang, pieces, segs, place, words, total, end_start, audio):
     # scenes: a block's photos start with that block (just before it, so the fade is done when it begins)
-    scenes = []
+    # shots: every ~3 s a new shot, only from the photos chosen for THIS block (or, if it has none, the last block
+    # that had some); each new shot is a different photo or a different framing, so nothing looks repeated
+    scenes, cur, uses = [], [], {}
+    bounds = [max(0.0, place[i] - 0.6) if i else 0.0 for i in range(len(pieces))] + [total]
     for i, (kind, _, b) in enumerate(pieces):
         imgs = [p for p in (img_path(x) for x in (b.get("img") or [])) if p and p.name not in S.BLOCKED]
-        if not imgs:
-            continue
-        t0 = max(0.0, place[i] - 0.6) if i else 0.0
-        nxt = next((place[j] for j in range(i + 1, len(pieces)) if pieces[j][2].get("img")), total)
-        span = nxt - t0
-        for k, p in enumerate(imgs):
-            if scenes and scenes[-1][1] == p:
-                continue
-            scenes.append((t0 + span * k / len(imgs), p))
-    if not scenes:
-        scenes = [(0.0, S.photos(a)[0])]
-    # very long scenes: show another photo of the same section (or of the article) so nothing stays longer than ~6 s
-    sec_of, sec_imgs, sec = [], {}, 0
-    for i, (kind, _, b) in enumerate(pieces):
-        if kind == "head":
-            sec += 1
-        sec_of.append(sec)
-        for x in b.get("img") or []:
-            q = img_path(x)
-            if q and q not in sec_imgs.setdefault(sec, []):
-                sec_imgs[sec].append(q)
-    pool = S.photos(a)
-    fixed, uses = [], {}
-    for k, (st, p) in enumerate(scenes):
-        end = scenes[k + 1][0] if k + 1 < len(scenes) else total
-        i = max([j for j in range(len(pieces)) if place[j] - 0.7 <= st] or [0])
-        cand = list(dict.fromkeys(x for x in sec_imgs.get(sec_of[i], []) if x != p))
-        if not cand:  # no other photo for this section: hold the fitting one (slow zoom) rather than repeat others
-            fixed.append((st, p))
-            uses[p] = uses.get(p, 0) + 1
-            continue
-        n = max(1, round((end - st) / SCENE_MAX))
+        if imgs:
+            cur = list(dict.fromkeys(imgs))
+        if not cur:
+            cur = S.photos(a)[:1]
+        t0, t1 = bounds[i], bounds[i + 1]
+        n = max(1, round((t1 - t0) / SCENE_MAX))
         for j in range(n):
-            if j == 0:
-                q = p
-            else:  # the photo this video has shown least so far (section photos first on a tie), never the last 3
-                recent = [f[1] for f in fixed[-3:]]
-                ok = [x for x in cand if x not in recent] or [x for x in cand if x != fixed[-1][1]] or [p]
-                q = min(ok, key=lambda x: (uses.get(x, 0), ok.index(x)))
+            recent = [x[1] for x in scenes[-2:]]
+            ok = [x for x in cur if x not in recent] or cur
+            q = ok[0] if j == 0 and imgs else min(ok, key=lambda x: (uses.get(x, 0), ok.index(x)))
             uses[q] = uses.get(q, 0) + 1
-            fixed.append((st + (end - st) * j / n, q))
-    scenes = fixed
-    starts = [s for s, _ in scenes]
+            scenes.append((t0 + (t1 - t0) * j / n, q, uses[q] - 1))
+    starts = [x[0] for x in scenes]
     nsc = len(scenes)
 
     shade = Image.new("L", (1, H))
@@ -445,21 +422,29 @@ def render(a, lang, pieces, segs, place, words, total, end_start, audio):
     for i, (kind, txt, b) in enumerate(pieces):
         if kind == "head":
             num += 1
-            wins.append((place[i] - 0.1, place[i] + (segs[i][1] - segs[i][0]) + PAUSE["head_after"] - 0.05, head_overlay(a, lang, num, txt.rstrip("."))))
+            pass  # no chapter card: the question is spoken in the flow and shown as a key word
         if kind == "text" and b.get("key"):
-            wins.append((place[i], place[i] + (segs[i][1] - segs[i][0]) + 0.2, key_overlay(a, b["key"])))
+            pass  # list keywords are shown as key words
     # key words per text block (instead of captions in the picture; the captions go to YouTube as CC)
     pops = []
     for i, (kind, txt, b) in enumerate(pieces):
+        if kind == "head":
+            pops.append((place[i] - 0.1, None, pop_overlay(txt.upper().rstrip("."))))
+            continue
         if kind != "text":
             continue
         t1 = place[i] + (segs[i][1] - segs[i][0])
+        if b.get("key"):
+            pops.append((place[i], None, pop_overlay(b["key"].upper())))
+            continue
         ws = [w for w in words if place[i] - 0.05 <= w[1] < t1 + 0.05]
         found = find_pops(b, ws)
         for k, (st, show) in enumerate(found):
             p0 = place[i] + 0.05 if k == 0 else st - 0.15  # the first key word shows from the start of its block
             nxt = found[k + 1][0] - 0.15 if k + 1 < len(found) else t1 + 0.4
-            pops.append((max(p0, label_end), nxt, pop_overlay(show)))
+            pops.append((max(p0, label_end), None, pop_overlay(show)))
+    pops.sort(key=lambda x: x[0])
+    pops = [(p0, pops[k + 1][0] if k + 1 < len(pops) else end_start, o) for k, (p0, _, o) in enumerate(pops)]
     print(f"{len(pops)} key words")
     chunks, cur = [], []
     for w in words:
@@ -496,14 +481,16 @@ def render(a, lang, pieces, segs, place, words, total, end_start, audio):
                 cache.pop(next(iter(cache)))
         return cache[path]
 
-    FOCUS = [(0.5, 0.45), (0.42, 0.5), (0.58, 0.5), (0.5, 0.55)]
+    # framings for repeated photos: whole photo, then closer left / right / centre, so a second look is a new shot
+    FRAMES = [(1.0, 0.5, 0.45), (1.3, 0.25, 0.45), (1.3, 0.75, 0.45), (1.45, 0.5, 0.35), (1.2, 0.35, 0.6), (1.2, 0.65, 0.6)]
 
     def shot(k, t):
         im = pic(scenes[k][1])
+        fz, fcx, fcy = FRAMES[scenes[k][2] % len(FRAMES)]
         span = (starts[k + 1] if k + 1 < nsc else total) - starts[k] + S.TR
         p = max(0.0, min(1.0, (t - starts[k]) / span))  # linear: no stop-start stutter
-        cx, cy = FOCUS[k % len(FOCUS)]
-        z = 1.0 + ZOOM_IN * p
+        cx, cy = fcx, fcy
+        z = fz * (1.0 + ZOOM_IN * p)
         cw, chh = min(W * S.ZOOM / z, im.width), min(H * S.ZOOM / z, im.height)
         x0, y0 = (im.width - cw) * cx, (im.height - chh) * cy
         return im.resize((W, H), Image.BILINEAR, box=(x0, y0, x0 + cw, y0 + chh))

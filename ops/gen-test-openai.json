@@ -1,0 +1,12 @@
+{
+ "model-y-v4": {
+  "prompt": "A white 2025 Tesla Model Y (Juniper) charging at a V4 Supercharger site at sunset, seen from the rear three-quarter, warm light, blue sky.",
+  "subject": "a white 2025 Tesla Model Y Juniper (full-width rear light bar, charge port in the LEFT rear tail light) at Tesla V4 Supercharger posts (one long black cable per post)",
+  "refs": [
+   {
+    "commons": "Tesla Model Y 2025"
+   }
+  ],
+  "describe": "test"
+ }
+}

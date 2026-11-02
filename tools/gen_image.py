@@ -21,6 +21,7 @@ import base64
 import glob
 import io
 import json
+import re
 import os
 import sys
 import urllib.error
@@ -245,6 +246,15 @@ def make_openai(g, refs, used, label, hero):
     import image_openai as O
     import image_check as C
     ok_refs = [(im, r) for im, r in zip(refs, used) if ref_allowed(r)][:2]
+    if not ok_refs:  # no library reference given: take the library photo whose description best fits the subject
+        lib = ROOT / "ops/library.json"
+        words = set(re.findall(r"[a-z0-9]{3,}", (g.get("subject", "") + " " + g.get("prompt", "")).lower()))
+        best = max(((len(words & set(re.findall(r"[a-z0-9]{3,}", (f + " " + d).lower()))), f)
+                    for f, d in json.loads(lib.read_text()).items()), default=(0, None)) if lib.exists() else (0, None)
+        if best[0] >= 3:
+            r = {"src": f"lib/{best[1]}"}
+            ok_refs = [(load_ref(r["src"]), r)]
+            print(f"::notice::{label}: library reference {best[1]} ({best[0]} matching words)")
     if not ok_refs:
         print(f"::notice::{label}: no reference with derivative rights; using Nano Banana")
         return None

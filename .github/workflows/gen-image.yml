@@ -30,6 +30,8 @@ jobs:
         if: github.event.inputs.slug == 'test'
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          IMAGE_PROVIDER: ${{ vars.IMAGE_PROVIDER || 'openai' }}
           REFS_ONLY: ${{ github.event.inputs.refs_only == 'yes' && '1' || '' }}
         run: |
           pip install --quiet pillow
@@ -44,6 +46,8 @@ jobs:
         if: github.event.inputs.slug != 'test'
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          IMAGE_PROVIDER: ${{ vars.IMAGE_PROVIDER || 'openai' }}
         run: |
           pip install --quiet pillow
           python3 tools/gen_image.py "${{ github.event.inputs.slug }}"

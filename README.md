@@ -115,6 +115,17 @@ Goal: **interesting, entertaining and educational**, always factually exact.
 - Still: own words, verified facts with sources, no invented drama, no hype words, no promise the title does
   not keep.
 
+## Article photos: OpenAI first, Gemini as fallback (decided 2 Nov 2026)
+
+New article photos ("gen_image") are made by OpenAI GPT Image 2.5 Flare (quality high) with 1-2 reference
+photos, following ops/visual-standard.md (TrendingTesla Visual Standard v1.0). Gemini checks each one on three
+separate points (visual >= 7, no critical technical error, journalistically sound); a rejected photo gets at
+most 2 more tries (the last with Sunburst), then Nano Banana makes it as before. References for OpenAI are only
+William's library photos ("lib/...") and CC0 / public-domain photos: give at least one such reference
+(`{"src": "lib/<file>"}` from ops/library.json) in "gen_image.refs", and optionally "profile": "editorial",
+"cinematic" or "technical" and "category": "A", "B" or "C". Budget: about $11 (EUR 10) a month and 25 images a
+day (ops/images-log.jsonl logs every image). Switch back to Gemini only: repository variable IMAGE_PROVIDER=gemini.
+
 ## Shorts first (decided 31 Oct 2026, read this before writing the "short" script)
 
 The numbers of the first days were clear: Shorts got 450-1,400 views each, long news videos 4-243 (mostly ~15),

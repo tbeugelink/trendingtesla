@@ -31,6 +31,8 @@ from pathlib import Path
 from PIL import Image, ImageOps
 
 ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT / "tools"))  # image_openai, image_check
+sys.path.insert(0, str(ROOT / "video"))
 IMG = ROOT / "static" / "img"
 API = "https://generativelanguage.googleapis.com/v1beta"
 UA = {"User-Agent": "TrendingTesla image bot (https://trendingtesla.com)"}
@@ -195,6 +197,13 @@ def make(g, label="photo", hero=False):
             print(f"::warning::{label}: reference {r.get('src') or r.get('commons')} skipped: {e}")
     if not refs:
         raise RuntimeError("no usable reference photo")
+    if os.environ.get("IMAGE_PROVIDER", "gemini") == "openai" and os.environ.get("OPENAI_API_KEY"):
+        try:
+            res = make_openai(g, refs, used, label, hero)
+            if res:
+                return res
+        except Exception as e:  # never lose the photo: fall back to Nano Banana
+            print(f"::warning::{label}: OpenAI failed, using Nano Banana: {str(e)[:200]}")
     mdl = model()
     prompt = STYLE + (HERO if hero else "") + g["prompt"].strip() + "\n\n" + RULES.format(subject=g.get("subject") or "the main subject")
     for attempt in range(3):
@@ -204,6 +213,64 @@ def make(g, label="photo", hero=False):
         print(f"::warning::{label}: result {attempt + 1} too close to a reference, trying again")
         prompt += "\nThe previous attempt looked too much like a reference photo: change the camera angle and the whole setting completely."
     raise RuntimeError("every result was too close to a reference photo")
+
+
+def mark_log(rel, mdl):
+    """Put the saved file name on the last approved OpenAI log line (so every image can be traced)."""
+    lf = ROOT / "ops/images-log.jsonl"
+    if "gpt-image" not in str(mdl) or not lf.exists():
+        return
+    lines = lf.read_text(encoding="utf-8").splitlines()
+    for i in range(len(lines) - 1, -1, -1):
+        r = json.loads(lines[i])
+        if r.get("file") == "pending" and r.get("approved_auto"):
+            r["file"] = rel
+            lines[i] = json.dumps(r, ensure_ascii=False)
+            break
+    lf.write_text("\n".join(lines) + "\n", encoding="utf-8")
+
+
+def ref_allowed(r):
+    """Only references whose rights allow derivative work: William's library and CC0 / public-domain photos."""
+    src = str(r.get("src", ""))
+    if src.startswith("lib/"):
+        return True
+    lic = str(r.get("license", "")).lower()
+    return any(x in lic for x in ("cc0", "public domain", "pdm", "cc-zero"))
+
+
+def make_openai(g, refs, used, label, hero):
+    """GPT Image 2.5 Flare (high) with the allowed references, judged by Gemini (visual, technical, journalistic
+    separately); at most 2 more tries (the last with Sunburst). Returns (image, refs used, model) or None."""
+    import image_openai as O
+    import image_check as C
+    ok_refs = [(im, r) for im, r in zip(refs, used) if ref_allowed(r)][:2]
+    if not ok_refs:
+        print(f"::notice::{label}: no reference with derivative rights; using Nano Banana")
+        return None
+    subject = g.get("subject") or "the main subject"
+    prompt = g["prompt"].strip() + f"\nIt must show exactly: {subject}."
+    profile = g.get("profile") or ("technical" if g.get("technical") else "editorial")
+    for attempt in range(3):
+        go, month, n_day = O.allowed_now()
+        if not go:
+            print(f"::warning::{label}: OpenAI budget or daily limit reached (${month:.2f} this month, {n_day} today)")
+            return None
+        mdl = O.os.environ.get("SUNBURST_MODEL", "gpt-image-2.5-sunburst") if attempt == 2 else \
+            O.os.environ.get("FLARE_MODEL", "gpt-image-2.5-flare")
+        im, info = O.generate(prompt, [x[0] for x in ok_refs], mdl, "high", "1536x1024", profile)
+        chk = C.check(im, subject, [x[0] for x in ok_refs], g.get("category", "A"))
+        O.log({"at": datetime.now(timezone.utc).replace(microsecond=0).isoformat(), "label": label, "file": "pending",
+               **info, "refs": [x[1].get("src") for x in ok_refs], "try": attempt, "check": chk,
+               "approved_auto": chk["ok"], "approved_william": None, "category": g.get("category", "A")})
+        print(f"{label}: {mdl} try {attempt}: visual {chk['visual']} tech {chk.get('technical_pass')} "
+              f"journ {chk.get('journalistic_pass')} ${info['cost_usd']} {chk.get('technical_errors')}")
+        if chk["ok"]:
+            return fit_16x9(im), [x[1] for x in ok_refs], mdl
+        prompt += "\nAvoid these errors of the previous attempt: " + "; ".join(
+            chk.get("technical_errors", []) + chk.get("journalistic_issues", []))
+    print(f"::warning::{label}: 3 OpenAI attempts rejected; using Nano Banana")
+    return None
 
 
 def run(slug):
@@ -234,6 +301,7 @@ def run(slug):
                     b["img"] = [rel if x == old else x for x in im]
     (IMG / "gen").mkdir(parents=True, exist_ok=True)
     out.save(IMG / rel, "JPEG", quality=88, optimize=True, progressive=True)
+    mark_log(rel, mdl)
     a["image"] = rel
     a["images"] = [rel] + [x for x in a.get("images", []) if x != rel]
     g["done"] = True
@@ -273,6 +341,7 @@ def extras(slug, f, src_file, cat):
             continue
         rel = f"gen/{slug}-x{i}-{datetime.now(timezone.utc).strftime('%m%d%H%M')}.jpg"
         out.save(IMG / rel, "JPEG", quality=88, optimize=True, progressive=True)
+        mark_log(rel, mdl)
         x["file"] = rel
         a["images"] = a.get("images", [])[:1] + [rel] + a.get("images", [])[1:]
         src = json.loads(src_file.read_text(encoding="utf-8"))

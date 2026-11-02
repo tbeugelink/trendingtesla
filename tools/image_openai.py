@@ -64,7 +64,7 @@ def _multipart(fields, files):
 
 
 def _png(path, maxside=1536):
-    im = Image.open(path).convert("RGB")
+    im = path.convert("RGB") if isinstance(path, Image.Image) else Image.open(path).convert("RGB")
     im.thumbnail((maxside, maxside))
     buf = io.BytesIO()
     im.save(buf, "PNG")
@@ -84,7 +84,7 @@ def generate(prompt, refs, model="gpt-image-2.5-flare", quality="high", size="15
     t0 = time.time()
     if refs:
         body, ctype = _multipart({"model": model, "prompt": full, "size": size, "quality": quality, "n": "1"},
-                                 [("image[]", (Path(r).name + ".png", _png(r))) for r in refs])
+                                 [("image[]", (f"ref{i}.png", _png(r))) for i, r in enumerate(refs)])
         req = urllib.request.Request(f"{API}/images/edits", data=body, method="POST",
                                      headers={"Authorization": f"Bearer {key()}", "Content-Type": ctype})
     else:
@@ -100,7 +100,7 @@ def generate(prompt, refs, model="gpt-image-2.5-flare", quality="high", size="15
     im = Image.open(io.BytesIO(base64.b64decode(d["data"][0]["b64_json"]))).convert("RGB")
     usage = d.get("usage") or {}
     return im, {"model": model, "quality": quality, "size": size, "profile": profile, "prompt_version": PROMPT_VERSION,
-                "refs": [str(Path(r).relative_to(ROOT)) if str(r).startswith(str(ROOT)) else str(r) for r in refs],
+                "refs": [("pil" if isinstance(r, Image.Image) else str(r).replace(str(ROOT) + "/", "")) for r in refs],
                 "usage": usage, "cost_usd": cost(usage), "seconds": round(time.time() - t0, 1)}
 
 
@@ -116,3 +116,37 @@ def allowed_ref(path):
         lic = (cr.get(p.name) or {}).get("credit", "")
         return any(x in lic for x in ("CC0", "Public domain", "PD"))
     return False
+
+
+# ---- production guard: budget and daily limit (ops/images-log.jsonl) ----
+LOG = ROOT / "ops/images-log.jsonl"
+MONTH_CAP = float(os.environ.get("OPENAI_MONTH_CAP_USD", "11"))  # ~EUR 10, William's budget
+DAY_CAP = int(os.environ.get("OPENAI_DAY_CAP", "25"))
+
+
+def usage_now():
+    from datetime import datetime, timezone
+    now = datetime.now(timezone.utc)
+    month = day = 0.0
+    n_day = 0
+    for line in (LOG.read_text().splitlines() if LOG.exists() else []):
+        try:
+            r = json.loads(line)
+        except ValueError:
+            continue
+        at = r.get("at", "")
+        if at[:7] == now.strftime("%Y-%m"):
+            month += r.get("cost_usd", 0)
+        if at[:10] == now.strftime("%Y-%m-%d") and r.get("file") is not None:
+            n_day += 1
+    return month, n_day
+
+
+def allowed_now(next_cost=0.12):
+    month, n_day = usage_now()
+    return month + next_cost <= MONTH_CAP and n_day < DAY_CAP, month, n_day
+
+
+def log(row):
+    with LOG.open("a", encoding="utf-8") as f:
+        f.write(json.dumps(row, ensure_ascii=False) + "\n")

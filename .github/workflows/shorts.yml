@@ -72,14 +72,16 @@ jobs:
         continue-on-error: true
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          IMAGE_PROVIDER: ${{ vars.IMAGE_PROVIDER || 'openai' }}
         run: |
           [ -z "$GEMINI_API_KEY" ] && exit 0
           python3 tools/gen_image.py ${{ steps.find.outputs.slugs }}
-          [ -z "$(git status --porcelain content static)" ] && exit 0
+          [ -z "$(git status --porcelain content static ops/images-log.jsonl)" ] && exit 0
           git config user.name "TrendingTesla bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           python3 build.py > /dev/null
-          git add -A content static PHOTOS.md public
+          git add -A content static PHOTOS.md public ops/images-log.jsonl
           git commit -qm "Photo: new image for ${{ steps.find.outputs.slugs }}"
           for i in 1 2 3; do git pull --rebase -q origin main && git push -q origin HEAD:main && exit 0; sleep 10; done
       - name: Add real, freely licensed news photos and publish them first

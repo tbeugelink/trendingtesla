@@ -49,7 +49,9 @@ Judge three things SEPARATELY:
 2. technical: separate CRITICAL errors from MINOR ones.
    CRITICAL (a Tesla owner would immediately call it wrong): wrong model, generation or variant; mixed
    generations; a charging port, door, door hinge, wheel or screen in the wrong place or of the wrong type;
-   a missing steering wheel where there must be one (or one where there must be none); clearly wrong
+   a missing steering wheel where there must be one (or one where there must be none); the steering wheel on
+   the wrong side for the traffic shown (a right-hand-drive car driving on the right of the road, or the
+   other way round; US and Europe drive on the right with the wheel on the left); clearly wrong
    proportions; readable or garbled text, invented logos or emblems, licence plates, watermarks; obvious AI
    artefacts (melted parts, extra limbs, impossible geometry).
    MINOR (only an expert with the reference side by side would notice): small differences in pin layout, light

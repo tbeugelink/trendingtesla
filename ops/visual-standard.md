@@ -32,6 +32,7 @@ When depicting identifiable vehicles, robots, spacecraft or other real products:
 - Maintain correct proportions and component placement.
 - Do not invent charging ports, door mechanisms, displays, cameras or other technical features.
 - Do not combine design elements from different generations.
+- Cars are left-hand drive on the right side of the road (US and continental Europe): steering wheel and driver on the left.
 - If an important detail cannot be established reliably, choose a composition that does not expose that detail.
 
 ### Text and branding

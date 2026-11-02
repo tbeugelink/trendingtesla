@@ -40,7 +40,8 @@ UA = {"User-Agent": "TrendingTesla image bot (https://trendingtesla.com)"}
 STYLE = ("Photorealistic editorial news photo, landscape 16:9, natural light, sharp focus, realistic proportions. "
          "Colourful but natural colour grading with yellow, red and blue accents in the scene (sky, surroundings, "
          "clothing, signs), never grey or washed out. Leave calm space in the lower-left third for a text label. ")
-RULES = ("Use the reference images ONLY to get the subject's real design right ({subject}): exact shape, "
+RULES = ("Cars are left-hand drive and drive on the right of the road (US and continental Europe): the steering wheel and the driver are on the LEFT side of the car. "
+         "Use the reference images ONLY to get the subject's real design right ({subject}): exact shape, "
          "proportions, lights, wheels and details; reproduce how the objects are really built and do not invent extra "
          "parts (no extra poles, cables, screens, doors or wheels). Create a NEW photo: different camera angle, different place and "
          "background, different composition and lighting than every reference. Do not copy any reference photo. "

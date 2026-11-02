@@ -138,6 +138,10 @@ Long videos only get views from search (Semi fire 338, Emergency Drive Away 157)
 
 ## Thumbnail label keeps the hook (decided 2 Nov 2026)
 
+Always two lines in two colours (types "a", "c" or "n"): that is the TrendingTesla look and fits the two-part
+hook. The one-block type "r" only for real bad news (a recall, a ban, a death, a cancellation), never for an
+explainer or a story.
+
 When the title is a catchy line (a rhyme, a pun, a slogan, e.g. "Grok does the mapping, you do the napping?"),
 the "label" uses exactly that line: type "c" with the first half as "sub" and the second half as "text" (up to
 about 22 characters each). Never replace a strong hook with a plain summary ("NO NAPPING YET" lost the rhyme).

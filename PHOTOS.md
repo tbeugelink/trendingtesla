@@ -246,3 +246,6 @@ Articles with a "models" key automatically use real-life photos of that model. Y
 - gen/tesla-roadster-origin-story-lotus-elise-first-tesla.jpg — A red first-generation Tesla Roadster driving along a California coastal road at golden hour
 - gen/tesla-roadster-origin-story-lotus-elise-first-tesla-x2-11012026.jpg — An early Tesla Roadster in a small workshop at night, with trays of battery cells on the bench
 - gen/tesla-roadster-origin-story-lotus-elise-first-tesla-x3-11012026.jpg — The original Tesla Roadster on display under spotlights in a museum hall
+- gen/grok-does-the-mapping-you-do-the-napping-tesla-fsd-sleep-explained.jpg — An awake driver talking to a new Model Y while it drives along a coastal road at dusk, route on the screen
+- gen/grok-does-the-mapping-you-do-the-napping-tesla-fsd-sleep-explained-x2-11020558.jpg — The Model Y screen with a planned route at night in the rain, hands on the wheel
+- gen/grok-does-the-mapping-you-do-the-napping-tesla-fsd-sleep-explained-x3-11020559.jpg — A new Model Y arriving at a house driveway on an autumn morning, driver alert

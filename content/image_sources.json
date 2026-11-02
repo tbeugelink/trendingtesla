@@ -172,5 +172,62 @@
         "commons": "Tesla Roadster 2008"
       }
     ]
+  },
+  "gen/grok-does-the-mapping-you-do-the-napping-tesla-fsd-sleep-explained.jpg": {
+    "article": "grok-does-the-mapping-you-do-the-napping-tesla-fsd-sleep-explained",
+    "model": "gemini-3.1-flash-image",
+    "made": "2026-11-02",
+    "references": [
+      {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Tesla_Model_Y_Juniper_Long_Range_AWD_White_%2B_Black_03.jpg/1280px-Tesla_Model_Y_Juniper_Long_Range_AWD_White_%2B_Black_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page": "https://commons.wikimedia.org/wiki/File:Tesla_Model_Y_Juniper_Long_Range_AWD_White_%2B_Black_03.jpg",
+        "license": "CC BY-SA 4.0",
+        "commons": "Tesla Model Y Juniper interior"
+      },
+      {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/Tesla_Model_Y_2025_interior.jpg/1280px-Tesla_Model_Y_2025_interior.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page": "https://commons.wikimedia.org/wiki/File:Tesla_Model_Y_2025_interior.jpg",
+        "license": "CC BY-SA 4.0",
+        "commons": "2025 Tesla Model Y interior dashboard"
+      }
+    ]
+  },
+  "gen/grok-does-the-mapping-you-do-the-napping-tesla-fsd-sleep-explained-x2-11020558.jpg": {
+    "article": "grok-does-the-mapping-you-do-the-napping-tesla-fsd-sleep-explained",
+    "model": "gemini-3.1-flash-image",
+    "made": "2026-11-02",
+    "references": [
+      {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Tesla_Model_Y_Juniper_Long_Range_AWD_White_%2B_Black_03.jpg/1280px-Tesla_Model_Y_Juniper_Long_Range_AWD_White_%2B_Black_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page": "https://commons.wikimedia.org/wiki/File:Tesla_Model_Y_Juniper_Long_Range_AWD_White_%2B_Black_03.jpg",
+        "license": "CC BY-SA 4.0",
+        "commons": "Tesla Model Y Juniper interior"
+      },
+      {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/Tesla_Model_Y_2025_interior.jpg/1280px-Tesla_Model_Y_2025_interior.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page": "https://commons.wikimedia.org/wiki/File:Tesla_Model_Y_2025_interior.jpg",
+        "license": "CC BY-SA 4.0",
+        "commons": "2025 Tesla Model Y interior dashboard"
+      }
+    ]
+  },
+  "gen/grok-does-the-mapping-you-do-the-napping-tesla-fsd-sleep-explained-x3-11020559.jpg": {
+    "article": "grok-does-the-mapping-you-do-the-napping-tesla-fsd-sleep-explained",
+    "model": "gemini-3.1-flash-image",
+    "made": "2026-11-02",
+    "references": [
+      {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Tesla_Model_Y_Juniper_Long_Range_AWD_White_%2B_Black_03.jpg/1280px-Tesla_Model_Y_Juniper_Long_Range_AWD_White_%2B_Black_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page": "https://commons.wikimedia.org/wiki/File:Tesla_Model_Y_Juniper_Long_Range_AWD_White_%2B_Black_03.jpg",
+        "license": "CC BY-SA 4.0",
+        "commons": "Tesla Model Y Juniper interior"
+      },
+      {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/Tesla_Model_Y_2025_interior.jpg/1280px-Tesla_Model_Y_2025_interior.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page": "https://commons.wikimedia.org/wiki/File:Tesla_Model_Y_2025_interior.jpg",
+        "license": "CC BY-SA 4.0",
+        "commons": "2025 Tesla Model Y interior dashboard"
+      }
+    ]
   }
 }

@@ -1,1557 +1,1564 @@
 {
- "slug": "grok-does-the-mapping-you-do-the-napping-tesla-fsd-sleep-explained",
- "date": "2026-11-02",
- "time": "06:53",
- "category": "fsd",
- "also": [
-  "xai",
-  "robotaxi"
- ],
- "sources": [
-  {
-   "title": "Tesla — Full Self-Driving (Supervised) support page",
-   "url": "https://www.tesla.com/support/fsd"
-  },
-  {
-   "title": "Not a Tesla App — First look at navigation commands with Grok in Tesla's Holiday Update",
-   "url": "https://www.notateslaapp.com/news/3410/first-look-at-grok-navigation-videos"
-  },
-  {
-   "title": "Not a Tesla App — Musk: Tesla FSD to get Grok voice controls this fall",
-   "url": "https://www.notateslaapp.com/news/4316/musk-tesla-fsd-to-get-grok-voice-controls-this-fall"
-  },
-  {
-   "title": "Not a Tesla App — Tesla to launch unsupervised FSD, let owners join Robotaxi network in Q2 2027",
-   "url": "https://notateslaapp.com/news/4879/tesla-to-launch-unsupervised-fsd-let-owners-join-robotaxi-network-in-q2-2027"
-  }
- ],
- "images": [
-  "gen/grok-does-the-mapping-you-do-the-napping-tesla-fsd-sleep-explained.jpg",
-  "grok-car-voice.jpg",
-  "fsd-night-rain.jpg",
-  "fsd-highway-sunset.jpg",
-  "robotaxi-my-1.jpg",
-  "grok-3.jpg"
- ],
- "gen_image": {
-  "prompt": "Close, dynamic shot from the passenger side of a driver in a new Tesla Model Y at dusk, wide awake, eyes on the road and hands on the steering wheel, speaking to the car; the centre touchscreen shows a navigation map with a route to the coast and a glowing voice assistant indicator; autumn coastal highway ahead through the windscreen; colourful but natural with yellow sunset light, red tail lights ahead and blue screen glow",
-  "subject": "interior of the new Tesla Model Y (2025 'Juniper' generation): one large landscape centre touchscreen floating above a minimal dashboard, a thin ambient light strip running across the full width of the dashboard, round two-spoke steering wheel, no instrument cluster behind the wheel; the driver is clearly awake and watching the road",
-  "refs": [
-   {
-    "commons": "Tesla Model Y Juniper interior"
-   },
-   {
-    "commons": "2025 Tesla Model Y interior dashboard"
-   }
+  "slug": "grok-does-the-mapping-you-do-the-napping-tesla-fsd-sleep-explained",
+  "date": "2026-11-02",
+  "time": "06:53",
+  "category": "fsd",
+  "also": [
+    "xai",
+    "robotaxi"
   ],
-  "describe": "An awake driver talking to a new Model Y while it drives along a coastal road at dusk, route on the screen",
-  "extra": [
-   {
-    "prompt": "Close-up over the driver's shoulder of the new Tesla Model Y centre touchscreen at night in a city, a map with a destination pin and a blue planned route, the driver's hands resting on the steering wheel, rain drops on the windscreen and red, yellow and blue city lights blurred beyond",
-    "describe": "The Model Y screen with a planned route at night in the rain, hands on the wheel"
-   },
-   {
-    "prompt": "Wide view from the back seat of a new Tesla Model Y arriving in a quiet suburban street on a sunny autumn morning, the driver alert with hands on the wheel, the screen showing the arrival at a house driveway, yellow leaves, a red front door and blue sky",
-    "describe": "A new Model Y arriving at a house driveway on an autumn morning, driver alert"
-   }
-  ]
- },
- "label": {
-  "style": "r",
+  "sources": [
+    {
+      "title": "Tesla — Full Self-Driving (Supervised) support page",
+      "url": "https://www.tesla.com/support/fsd"
+    },
+    {
+      "title": "Not a Tesla App — First look at navigation commands with Grok in Tesla's Holiday Update",
+      "url": "https://www.notateslaapp.com/news/3410/first-look-at-grok-navigation-videos"
+    },
+    {
+      "title": "Not a Tesla App — Musk: Tesla FSD to get Grok voice controls this fall",
+      "url": "https://www.notateslaapp.com/news/4316/musk-tesla-fsd-to-get-grok-voice-controls-this-fall"
+    },
+    {
+      "title": "Not a Tesla App — Tesla to launch unsupervised FSD, let owners join Robotaxi network in Q2 2027",
+      "url": "https://notateslaapp.com/news/4879/tesla-to-launch-unsupervised-fsd-let-owners-join-robotaxi-network-in-q2-2027"
+    }
+  ],
+  "images": [
+    "gen/grok-does-the-mapping-you-do-the-napping-tesla-fsd-sleep-explained.jpg",
+    "gen/grok-does-the-mapping-you-do-the-napping-tesla-fsd-sleep-explained-x3-11020559.jpg",
+    "gen/grok-does-the-mapping-you-do-the-napping-tesla-fsd-sleep-explained-x2-11020558.jpg",
+    "grok-car-voice.jpg",
+    "fsd-night-rain.jpg",
+    "fsd-highway-sunset.jpg",
+    "robotaxi-my-1.jpg",
+    "grok-3.jpg"
+  ],
+  "gen_image": {
+    "prompt": "Close, dynamic shot from the passenger side of a driver in a new Tesla Model Y at dusk, wide awake, eyes on the road and hands on the steering wheel, speaking to the car; the centre touchscreen shows a navigation map with a route to the coast and a glowing voice assistant indicator; autumn coastal highway ahead through the windscreen; colourful but natural with yellow sunset light, red tail lights ahead and blue screen glow",
+    "subject": "interior of the new Tesla Model Y (2025 'Juniper' generation): one large landscape centre touchscreen floating above a minimal dashboard, a thin ambient light strip running across the full width of the dashboard, round two-spoke steering wheel, no instrument cluster behind the wheel; the driver is clearly awake and watching the road",
+    "refs": [
+      {
+        "commons": "Tesla Model Y Juniper interior"
+      },
+      {
+        "commons": "2025 Tesla Model Y interior dashboard"
+      }
+    ],
+    "describe": "An awake driver talking to a new Model Y while it drives along a coastal road at dusk, route on the screen",
+    "extra": [
+      {
+        "prompt": "Close-up over the driver's shoulder of the new Tesla Model Y centre touchscreen at night in a city, a map with a destination pin and a blue planned route, the driver's hands resting on the steering wheel, rain drops on the windscreen and red, yellow and blue city lights blurred beyond",
+        "describe": "The Model Y screen with a planned route at night in the rain, hands on the wheel",
+        "file": "gen/grok-does-the-mapping-you-do-the-napping-tesla-fsd-sleep-explained-x2-11020558.jpg"
+      },
+      {
+        "prompt": "Wide view from the back seat of a new Tesla Model Y arriving in a quiet suburban street on a sunny autumn morning, the driver alert with hands on the wheel, the screen showing the arrival at a house driveway, yellow leaves, a red front door and blue sky",
+        "describe": "A new Model Y arriving at a house driveway on an autumn morning, driver alert",
+        "file": "gen/grok-does-the-mapping-you-do-the-napping-tesla-fsd-sleep-explained-x3-11020559.jpg"
+      }
+    ],
+    "done": true,
+    "model": "gemini-3.1-flash-image"
+  },
+  "label": {
+    "style": "r",
+    "en": {
+      "text": "NO NAPPING YET"
+    },
+    "nl": {
+      "text": "NOG NIET SLAPEN"
+    }
+  },
+  "short": {
+    "hook": "question",
+    "en": "Grok can plan your trip. FSD can drive it. So can you take a nap? NO. Not yet. Here's the catch. Grok, the AI in your Tesla, finds the place and the route. FSD Supervised steers, brakes and turns along that route. It feels like a chauffeur. But legally, YOU are still the driver. Tesla says it plainly: these features do not make the car autonomous. A camera watches your eyes. Look away too long, and FSD switches off. So when can you nap? Only when the car takes the blame. Today that only happens in Tesla's Robotaxi, with nobody at the wheel. Grok does the mapping. The napping? It still has to wait.",
+    "nl": "Grok kan je rit plannen. FSD kan hem rijden. Mag je dan een dutje doen? NEE. Nog niet. Hier zit het addertje. Grok, de AI in je Tesla, zoekt de plek en de route. FSD Supervised stuurt, remt en neemt de bochten op die route. Het voelt als een chauffeur. Maar juridisch ben JIJ nog steeds de bestuurder. Tesla zegt het zelf: deze functies maken de auto niet autonoom. Een camera let op je ogen. Kijk je te lang weg, dan schakelt FSD uit. Wanneer mag je dan wel slapen? Pas als de auto de verantwoordelijkheid draagt. Dat kan nu alleen in Tesla's Robotaxi, zonder iemand achter het stuur. Grok doet de mapping. Het napping? Dat moet nog even wachten.",
+    "yt_title_en": "Grok Does the Mapping, You Do the Napping?",
+    "yt_title_nl": "Grok Doet de Mapping, Jij Doet de Napping?",
+    "story": [
+      {
+        "part": "hook",
+        "text": "Grok can plan your trip. FSD can drive it.",
+        "lib": [
+          "grok-screen-drive.jpg",
+          "fsd-screen-highway.jpg"
+        ],
+        "pop": [
+          {
+            "say": "plan your trip",
+            "show": "GROK PLANS"
+          },
+          {
+            "say": "drive it",
+            "show": "FSD DRIVES"
+          }
+        ]
+      },
+      {
+        "part": "hook",
+        "text": "So can you take a nap? NO. Not yet.",
+        "img": "gen/grok-does-the-mapping-you-do-the-napping-tesla-fsd-sleep-explained.jpg",
+        "pop": [
+          {
+            "say": "take a nap",
+            "show": "A NAP?"
+          },
+          {
+            "say": "NO",
+            "show": "NO."
+          },
+          {
+            "say": "Not yet",
+            "show": "NOT YET"
+          }
+        ]
+      },
+      {
+        "part": "tension",
+        "text": "Here's the catch. Grok, the AI in your Tesla, finds the place and the route.",
+        "lib": [
+          "grok-screen-closeup.jpg"
+        ],
+        "pop": [
+          {
+            "say": "the catch",
+            "show": "THE CATCH"
+          },
+          {
+            "say": "the AI",
+            "show": "GROK = AI"
+          },
+          {
+            "say": "the place and the route",
+            "show": "PLACE + ROUTE"
+          }
+        ]
+      },
+      {
+        "part": "tension",
+        "text": "FSD Supervised steers, brakes and turns along that route. It feels like a chauffeur.",
+        "lib": [
+          "fsd-screen-city.jpg"
+        ],
+        "pop": [
+          {
+            "say": "steers",
+            "show": "STEERS"
+          },
+          {
+            "say": "brakes",
+            "show": "BRAKES"
+          },
+          {
+            "say": "turns",
+            "show": "TURNS"
+          },
+          {
+            "say": "chauffeur",
+            "show": "A CHAUFFEUR?"
+          }
+        ]
+      },
+      {
+        "part": "tension",
+        "text": "But legally, YOU are still the driver. Tesla says it plainly: these features do not make the car autonomous.",
+        "lib": [
+          "fsd-screen-highway.jpg"
+        ],
+        "pop": [
+          {
+            "say": "legally",
+            "show": "LEGALLY"
+          },
+          {
+            "say": "still the driver",
+            "show": "YOU DRIVE"
+          },
+          {
+            "say": "do not make",
+            "show": "NOT AUTONOMOUS"
+          }
+        ]
+      },
+      {
+        "part": "tension",
+        "text": "A camera watches your eyes. Look away too long, and FSD switches off.",
+        "lib": [
+          "screen-red-warning.jpg"
+        ],
+        "pop": [
+          {
+            "say": "camera",
+            "show": "CAMERA"
+          },
+          {
+            "say": "Look away",
+            "show": "LOOK AWAY?"
+          },
+          {
+            "say": "switches off",
+            "show": "FSD OFF"
+          }
+        ]
+      },
+      {
+        "part": "payoff",
+        "text": "So when can you nap? Only when the car takes the blame.",
+        "lib": [
+          "robotaxi-night-curb.jpg"
+        ],
+        "pop": [
+          {
+            "say": "when can you nap",
+            "show": "WHEN?"
+          },
+          {
+            "say": "the car takes the blame",
+            "show": "CAR TAKES BLAME"
+          }
+        ]
+      },
+      {
+        "part": "payoff",
+        "text": "Today that only happens in Tesla's Robotaxi, with nobody at the wheel.",
+        "lib": [
+          "robotaxi-rear-passenger.jpg",
+          "cybercab-nap-night.jpg"
+        ],
+        "pop": [
+          {
+            "say": "Robotaxi",
+            "show": "ROBOTAXI"
+          },
+          {
+            "say": "nobody at the wheel",
+            "show": "NOBODY AT WHEEL"
+          }
+        ]
+      },
+      {
+        "part": "payoff",
+        "text": "Grok does the mapping. The napping? It still has to wait.",
+        "lib": [
+          "grok-screen-drive.jpg",
+          "fsd-screen-highway.jpg"
+        ],
+        "pop": [
+          {
+            "say": "Grok does the mapping",
+            "show": "GROK MAPS"
+          },
+          {
+            "say": "The napping",
+            "show": "NAPPING?"
+          },
+          {
+            "say": "still has to wait",
+            "show": "NOT YET!"
+          }
+        ]
+      }
+    ]
+  },
+  "video": {
+    "en": [
+      {
+        "text": "Ask Grok for a quiet route to the coast, and your Tesla plans it. Tap Start Self-Driving, and FSD drives it. The turns, the lane changes, the roundabouts. Tesla is even working on letting you talk to FSD directly, with commands like turn right here.",
+        "img": [
+          "gen/grok-does-the-mapping-you-do-the-napping-tesla-fsd-sleep-explained.jpg",
+          "grok-car-voice.jpg",
+          "fsd-roundabout-eu.jpg"
+        ],
+        "pop": [
+          {
+            "say": "quiet route",
+            "show": "A QUIET ROUTE"
+          },
+          {
+            "say": "plans it",
+            "show": "GROK PLANS"
+          },
+          {
+            "say": "FSD drives it",
+            "show": "FSD DRIVES"
+          },
+          {
+            "say": "turn right here",
+            "show": "TURN RIGHT HERE"
+          }
+        ]
+      },
+      {
+        "text": "It starts to sound like a chauffeur. And some drivers already treat it that way. Last month, a driver in California told police he had been asleep with FSD on, when his Tesla hit a parked patrol car. Grok and FSD together feel like a self-driving car. But the two systems do very different jobs.",
+        "img": [
+          "fsd-night-rain.jpg",
+          "lib/fsd-screen-rain-night.jpg"
+        ],
+        "pop": [
+          {
+            "say": "chauffeur",
+            "show": "A CHAUFFEUR?"
+          },
+          {
+            "say": "asleep",
+            "show": "ASLEEP"
+          },
+          {
+            "say": "parked patrol car",
+            "show": "PATROL CAR HIT"
+          },
+          {
+            "say": "very different jobs",
+            "show": "DIFFERENT JOBS"
+          }
+        ]
+      },
+      {
+        "head": "What does Grok actually do in your Tesla?",
+        "img": [
+          "lib/grok-screen-closeup.jpg"
+        ],
+        "pop": [
+          {
+            "say": "",
+            "show": "WHAT DOES GROK DO?"
+          }
+        ]
+      },
+      {
+        "text": "It plans and it talks. It does not drive. Grok is the AI assistant from xAI. It has been part of Tesla's software in the US since the summer of 2025, and it now works across Europe too. Since the 2025 Holiday Update, it can handle navigation in plain language. Later updates gave it more control over the cabin.",
+        "img": [
+          "grok-1.jpg",
+          "grok-3.jpg",
+          "lib/grok-screen-drive.jpg"
+        ],
+        "pop": [
+          {
+            "say": "does not drive",
+            "show": "DOES NOT DRIVE"
+          },
+          {
+            "say": "xAI",
+            "show": "FROM xAI"
+          },
+          {
+            "say": "summer of 2025",
+            "show": "SINCE 2025"
+          },
+          {
+            "say": "plain language",
+            "show": "PLAIN LANGUAGE"
+          }
+        ]
+      },
+      {
+        "key": "Vague destinations",
+        "text": "First, vague destinations. Describe a place you barely remember, and Grok tries to find it.",
+        "img": [
+          "grok-2.jpg"
+        ]
+      },
+      {
+        "key": "Nearest stops",
+        "text": "Second, nearest stops. Ask for the nearest charger, or add a coffee stop before your destination.",
+        "img": [
+          "lib/charge-port-us-open.jpg"
+        ]
+      },
+      {
+        "key": "Route style",
+        "text": "Third, route style. Ask for a scenic, winding road, or a simple, low-stress one.",
+        "img": [
+          "fsd-highway-sunset.jpg"
+        ]
+      },
+      {
+        "key": "Car functions",
+        "text": "Fourth, car functions. Calls, music and climate. Since the summer 2026 update, owners also report mirrors, wipers, seat heating and the glovebox.",
+        "img": [
+          "interior-2.jpg"
+        ]
+      },
+      {
+        "key": "Reminders",
+        "text": "And fifth, reminders. Location-based reminders, and the hands-free Hey Grok wake word, came with the 2026 Spring Update.",
+        "img": [
+          "lib/screen-modely.jpg"
+        ]
+      },
+      {
+        "text": "But Grok never touches the steering wheel or the brakes. Turning its plan into an actual drive is the job of a completely separate system.",
+        "img": [
+          "fsd-2.jpg",
+          "fsd-3.jpg"
+        ],
+        "pop": [
+          {
+            "say": "never touches",
+            "show": "NEVER TOUCHES"
+          },
+          {
+            "say": "steering wheel",
+            "show": "NO STEERING"
+          },
+          {
+            "say": "separate system",
+            "show": "SEPARATE SYSTEM"
+          }
+        ]
+      },
+      {
+        "head": "So what does FSD do with Grok's plan?",
+        "img": [
+          "lib/fsd-screen-city.jpg"
+        ],
+        "pop": [
+          {
+            "say": "",
+            "show": "WHAT DOES FSD DO?"
+          }
+        ]
+      },
+      {
+        "text": "It drives the route, while you supervise. FSD Supervised follows whatever is in the navigation. It steers, brakes and changes lanes. It takes junctions and roundabouts, and it can park at the end. So in practice, Grok picks the where. And FSD handles the how.",
+        "img": [
+          "fsd.jpg",
+          "lib/eu-oldtown-fsd.jpg",
+          "fsd-4.jpg"
+        ],
+        "pop": [
+          {
+            "say": "while you supervise",
+            "show": "YOU SUPERVISE"
+          },
+          {
+            "say": "steers, brakes",
+            "show": "STEERS + BRAKES"
+          },
+          {
+            "say": "park at the end",
+            "show": "PARKS TOO"
+          },
+          {
+            "say": "picks the where",
+            "show": "GROK: WHERE"
+          },
+          {
+            "say": "handles the how",
+            "show": "FSD: HOW"
+          }
+        ]
+      },
+      {
+        "text": "The link between the two is meant to get much tighter. In June 2026, Elon Musk said voice control of FSD through Grok would arrive in about 3 months or so. In July, Tesla's AI chief Ashok Elluswamy replied, working on it, to an owner who wanted to send his car to a specific driveway by voice. The idea is that you could say, take the next left, or park away from other cars.",
+        "img": [
+          "lib/grok-screen-drive.jpg",
+          "grok-car-voice.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "suburban house driveway",
+              "residential driveway United States"
+            ],
+            "want": "a driveway in front of a suburban house"
+          }
+        ],
+        "pop": [
+          {
+            "say": "much tighter",
+            "show": "TIGHTER LINK"
+          },
+          {
+            "say": "3 months",
+            "show": "ABOUT 3 MONTHS"
+          },
+          {
+            "say": "working on it",
+            "show": "WORKING ON IT"
+          },
+          {
+            "say": "specific driveway",
+            "show": "THAT DRIVEWAY"
+          },
+          {
+            "say": "take the next left",
+            "show": "NEXT LEFT"
+          }
+        ]
+      },
+      {
+        "text": "On its October 2026 earnings call, Tesla also said it is building its own AI-based maps, starting with FSD version 15. Until features like these show up in the release notes in your own car, treat the timing as a statement, not a fact. And even a car that takes spoken orders and drives the whole route still needs someone awake behind the wheel.",
+        "img": [
+          "lib/software-update-screen.jpg",
+          "lib/ai-datacenter.jpg",
+          "fsd-highway-sunset.jpg"
+        ],
+        "pop": [
+          {
+            "say": "own AI-based maps",
+            "show": "OWN AI MAPS"
+          },
+          {
+            "say": "version 15",
+            "show": "FSD V15"
+          },
+          {
+            "say": "release notes",
+            "show": "RELEASE NOTES"
+          },
+          {
+            "say": "not a fact",
+            "show": "NOT A FACT"
+          },
+          {
+            "say": "someone awake",
+            "show": "STAY AWAKE"
+          }
+        ]
+      },
+      {
+        "head": "Why is napping not allowed yet?",
+        "img": [
+          "lib/fsd-screen-highway.jpg"
+        ],
+        "pop": [
+          {
+            "say": "",
+            "show": "WHY NO NAPPING?"
+          }
+        ]
+      },
+      {
+        "text": "Because you are still the driver, legally and technically. FSD Supervised is a level 2 driver-assistance system. Tesla's own support page says the current features do not make the car autonomous. And you are responsible for the speed and control of the car at all times.",
+        "img": [
+          "fsd-3.jpg",
+          "lib/fsd-screen-highway.jpg"
+        ],
+        "pop": [
+          {
+            "say": "still the driver",
+            "show": "YOU DRIVE"
+          },
+          {
+            "say": "level 2",
+            "show": "LEVEL 2"
+          },
+          {
+            "say": "do not make the car autonomous",
+            "show": "NOT AUTONOMOUS"
+          },
+          {
+            "say": "at all times",
+            "show": "AT ALL TIMES"
+          }
+        ]
+      },
+      {
+        "text": "A camera in the cabin checks that you watch the road. Ignore its warnings, and FSD switches off for the rest of the trip. Collect too many of these strikeouts, and the feature is suspended for a week.",
+        "img": [
+          "lib/screen-red-warning.jpg",
+          "camera-rain.jpg"
+        ],
+        "pop": [
+          {
+            "say": "camera in the cabin",
+            "show": "CABIN CAMERA"
+          },
+          {
+            "say": "switches off",
+            "show": "FSD OFF"
+          },
+          {
+            "say": "strikeouts",
+            "show": "STRIKEOUTS"
+          },
+          {
+            "say": "for a week",
+            "show": "1 WEEK BAN"
+          }
+        ]
+      },
+      {
+        "text": "The crash in Fairfield shows why. The driver's claim that he was asleep has not been confirmed by the car's data. But two officers were seriously hurt, and the California Highway Patrol held the driver responsible, not Tesla.",
+        "img": [
+          "fsd-night-rain.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Interstate 80 Fairfield California",
+              "Interstate 80 Solano County"
+            ],
+            "want": "Interstate 80 near Fairfield, California, a freeway with traffic"
+          }
+        ],
+        "pop": [
+          {
+            "say": "Fairfield",
+            "show": "FAIRFIELD"
+          },
+          {
+            "say": "not been confirmed",
+            "show": "NOT CONFIRMED"
+          },
+          {
+            "say": "seriously hurt",
+            "show": "2 OFFICERS HURT"
+          },
+          {
+            "say": "not Tesla",
+            "show": "NOT TESLA"
+          }
+        ]
+      },
+      {
+        "text": "In late 2025, Musk said FSD would allow texting, depending on the traffic around you. Even then, the liability stays with the person behind the wheel. Compare that with Mercedes-Benz Drive Pilot, a level 3 system. On certain California highways, below 40 miles per hour and in good conditions, Mercedes takes responsibility while it drives. Sleeping only becomes possible when the car, not the person, is the one responsible.",
+        "img": [
+          "fsd-4.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Mercedes-Benz Drive Pilot",
+              "Mercedes-Benz EQS 2023",
+              "Mercedes S-Class W223"
+            ],
+            "want": "a Mercedes-Benz EQS or S-Class, the cars that offer Drive Pilot"
+          }
+        ],
+        "pop": [
+          {
+            "say": "allow texting",
+            "show": "TEXTING?"
+          },
+          {
+            "say": "liability stays",
+            "show": "YOUR LIABILITY"
+          },
+          {
+            "say": "level 3",
+            "show": "LEVEL 3"
+          },
+          {
+            "say": "Mercedes takes responsibility",
+            "show": "MERCEDES LIABLE"
+          },
+          {
+            "say": "the car, not the person",
+            "show": "CAR RESPONSIBLE"
+          }
+        ]
+      },
+      {
+        "head": "So when could napping be allowed?",
+        "img": [
+          "lib/cybercab-nap-highway.jpg"
+        ],
+        "pop": [
+          {
+            "say": "",
+            "show": "WHEN CAN YOU NAP?"
+          }
+        ]
+      },
+      {
+        "text": "Only when FSD becomes unsupervised. And that is decided place by place. Several things have to happen first.",
+        "img": [
+          "fsd-snow.jpg",
+          "fsd-roundabout-eu.jpg"
+        ],
+        "pop": [
+          {
+            "say": "unsupervised",
+            "show": "UNSUPERVISED"
+          },
+          {
+            "say": "place by place",
+            "show": "PLACE BY PLACE"
+          }
+        ]
+      },
+      {
+        "key": "Proof",
+        "text": "First, proof. Enough data from enough miles to show the system is safer without a human backup. In rain, at night and at road works.",
+        "img": [
+          "fsd-night-rain.jpg",
+          "lib/fsd-screen-rain-night.jpg"
+        ]
+      },
+      {
+        "key": "Regulators",
+        "text": "Second, regulators. In the US the rules differ from state to state. In Europe, only the supervised version has been approved so far, country by country.",
+        "img": [
+          "lib/eu-brussels-tesla.jpg"
+        ]
+      },
+      {
+        "key": "Liability",
+        "text": "Third, liability. Tesla, not the driver, has to accept responsibility while the car drives.",
+        "img": [
+          "lib/robotaxi-fleet-dawn.jpg"
+        ]
+      },
+      {
+        "key": "Geofences",
+        "text": "And fourth, geofences. It will start in mapped zones, not everywhere at once.",
+        "img": [
+          "robotaxi-app.jpg"
+        ]
+      },
+      {
+        "text": "Tesla has said when it hopes to start. On the October 2026 call, Elluswamy said the first customer cars could drive unsupervised inside Tesla's Robotaxi zones somewhere around Q2 next year. That means around the spring of 2027. Tesla has missed many self-driving deadlines before, so this is a target, not a promise kept. But there is one place where people already ride with nobody at the wheel.",
+        "img": [
+          "lib/robotaxi-app-pickup.jpg",
+          "robotaxi-my-2.jpg"
+        ],
+        "pop": [
+          {
+            "say": "hopes to start",
+            "show": "THE TARGET"
+          },
+          {
+            "say": "customer cars",
+            "show": "YOUR CAR?"
+          },
+          {
+            "say": "spring of 2027",
+            "show": "SPRING 2027"
+          },
+          {
+            "say": "missed many",
+            "show": "MISSED DEADLINES"
+          },
+          {
+            "say": "nobody at the wheel",
+            "show": "NOBODY AT WHEEL"
+          }
+        ]
+      },
+      {
+        "head": "Where do Teslas already drive with nobody at the wheel?",
+        "img": [
+          "lib/robotaxi-rear-passenger.jpg"
+        ],
+        "pop": [
+          {
+            "say": "",
+            "show": "NOBODY AT THE WHEEL"
+          }
+        ]
+      },
+      {
+        "text": "In Tesla's own Robotaxi service. Since January 22, 2026, some Robotaxi rides in Austin have had no safety monitor in the car at all. Tesla says the service now runs in 6 US cities. In Austin, riders can also hail the Cybercab, a two-seater without a steering wheel or pedals.",
+        "img": [
+          "robotaxi-my-1.jpg",
+          "lib/cybercab-street-day.jpg",
+          "lib/cybercab-doors-open.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Austin Texas skyline",
+              "Congress Avenue Austin"
+            ],
+            "want": "the skyline or a downtown street of Austin, Texas"
+          }
+        ],
+        "pop": [
+          {
+            "say": "Robotaxi service",
+            "show": "ROBOTAXI"
+          },
+          {
+            "say": "no safety monitor",
+            "show": "NO SAFETY MONITOR"
+          },
+          {
+            "say": "6 US cities",
+            "show": "6 US CITIES"
+          },
+          {
+            "say": "Cybercab",
+            "show": "CYBERCAB"
+          },
+          {
+            "say": "without a steering wheel",
+            "show": "NO STEERING WHEEL"
+          }
+        ]
+      },
+      {
+        "text": "Here, the car is the driver, and Tesla is the operator. So a passenger can read, watch a film, or yes, doze off. Tesla even added a Calm Mode that dims the screen and the cabin lights.",
+        "img": [
+          "lib/cybercab-nap-two.jpg",
+          "lib/cybercab-nap-night.jpg",
+          "lib/cybercab-nap-arrival.jpg"
+        ],
+        "pop": [
+          {
+            "say": "car is the driver",
+            "show": "CAR = DRIVER"
+          },
+          {
+            "say": "doze off",
+            "show": "DOZE OFF"
+          },
+          {
+            "say": "Calm Mode",
+            "show": "CALM MODE"
+          },
+          {
+            "say": "dims",
+            "show": "LIGHTS DIMMED"
+          }
+        ]
+      },
+      {
+        "text": "That is the real difference. The software that drives a Robotaxi is closely related to the FSD in your own car. But the rules around it are not. In a Robotaxi, you are a passenger. In your own Tesla, you are the driver, until Tesla and the regulators say otherwise.",
+        "img": [
+          "robotaxi-vs-cybercab.jpg",
+          "lib/robotaxi-night-curb.jpg"
+        ],
+        "pop": [
+          {
+            "say": "real difference",
+            "show": "THE DIFFERENCE"
+          },
+          {
+            "say": "closely related",
+            "show": "SIMILAR SOFTWARE"
+          },
+          {
+            "say": "a passenger",
+            "show": "PASSENGER"
+          },
+          {
+            "say": "you are the driver",
+            "show": "DRIVER"
+          }
+        ]
+      },
+      {
+        "head": "What does this mean for you as a Tesla driver?",
+        "img": [
+          "grok-car-voice.jpg"
+        ],
+        "pop": [
+          {
+            "say": "",
+            "show": "WHAT IT MEANS FOR YOU"
+          }
+        ]
+      },
+      {
+        "text": "Let Grok plan, let FSD drive, and keep your own eyes on the road. Talking to the car is a safe way to set a destination or change a route, without fiddling with the screen. FSD can take much of the work out of the drive.",
+        "img": [
+          "lib/grok-screen-drive.jpg",
+          "fsd-highway-sunset.jpg"
+        ],
+        "pop": [
+          {
+            "say": "Let Grok plan",
+            "show": "GROK PLANS"
+          },
+          {
+            "say": "let FSD drive",
+            "show": "FSD DRIVES"
+          },
+          {
+            "say": "your own eyes",
+            "show": "EYES ON ROAD"
+          },
+          {
+            "say": "without fiddling",
+            "show": "HANDS OFF SCREEN"
+          }
+        ]
+      },
+      {
+        "text": "But the cabin camera, the strikeouts and the law all assume one thing. An awake driver, ready to take over at any moment. Grok can do the mapping. For now, the napping belongs in a car with no steering wheel.",
+        "img": [
+          "lib/fsd-screen-highway.jpg",
+          "lib/cybercab-nap-highway.jpg",
+          "gen/grok-does-the-mapping-you-do-the-napping-tesla-fsd-sleep-explained.jpg"
+        ],
+        "pop": [
+          {
+            "say": "one thing",
+            "show": "ONE THING"
+          },
+          {
+            "say": "awake driver",
+            "show": "AWAKE DRIVER"
+          },
+          {
+            "say": "do the mapping",
+            "show": "GROK MAPS"
+          },
+          {
+            "say": "no steering wheel",
+            "show": "NAP: NO WHEEL ONLY"
+          }
+        ]
+      }
+    ],
+    "nl": [
+      {
+        "text": "Vraag Grok om een rustige route naar de kust, en je Tesla plant hem. Tik op Start Self-Driving, en FSD rijdt hem. De bochten, het wisselen van rijstrook, de rotondes. Tesla werkt er zelfs aan dat je FSD straks rechtstreeks kunt aanspreken, met opdrachten als: hier rechtsaf.",
+        "img": [
+          "gen/grok-does-the-mapping-you-do-the-napping-tesla-fsd-sleep-explained.jpg",
+          "grok-car-voice.jpg",
+          "fsd-roundabout-eu.jpg"
+        ],
+        "pop": [
+          {
+            "say": "rustige route",
+            "show": "RUSTIGE ROUTE"
+          },
+          {
+            "say": "plant hem",
+            "show": "GROK PLANT"
+          },
+          {
+            "say": "FSD rijdt hem",
+            "show": "FSD RIJDT"
+          },
+          {
+            "say": "hier rechtsaf",
+            "show": "HIER RECHTSAF"
+          }
+        ]
+      },
+      {
+        "text": "Het klinkt als een eigen chauffeur. En sommige bestuurders behandelen het ook zo. Vorige maand vertelde een automobilist in Californië de politie dat hij sliep met FSD aan, toen zijn Tesla op een geparkeerde politieauto botste. Grok en FSD samen voelen als een zelfrijdende auto. Maar de twee systemen doen iets heel anders.",
+        "img": [
+          "fsd-night-rain.jpg",
+          "lib/fsd-screen-rain-night.jpg"
+        ],
+        "pop": [
+          {
+            "say": "chauffeur",
+            "show": "CHAUFFEUR?"
+          },
+          {
+            "say": "sliep",
+            "show": "SLIEP"
+          },
+          {
+            "say": "politieauto",
+            "show": "POLITIEAUTO GERAAKT"
+          },
+          {
+            "say": "heel anders",
+            "show": "HEEL ANDERS"
+          }
+        ]
+      },
+      {
+        "head": "Wat doet Grok eigenlijk in je Tesla?",
+        "img": [
+          "lib/grok-screen-closeup.jpg"
+        ],
+        "pop": [
+          {
+            "say": "",
+            "show": "WAT DOET GROK?"
+          }
+        ]
+      },
+      {
+        "text": "Plannen en praten. Rijden doet Grok niet. Grok is de AI-assistent van xAI. Hij zit sinds de zomer van 2025 in de Tesla-software in Amerika, en werkt nu ook in heel Europa, dus ook in Nederland en België. Sinds de Holiday Update van 2025 regelt hij navigatie in gewone taal. Latere updates gaven hem meer grip op het interieur.",
+        "img": [
+          "grok-1.jpg",
+          "grok-3.jpg",
+          "lib/grok-screen-drive.jpg"
+        ],
+        "pop": [
+          {
+            "say": "Rijden doet Grok niet",
+            "show": "RIJDT NIET"
+          },
+          {
+            "say": "xAI",
+            "show": "VAN xAI"
+          },
+          {
+            "say": "zomer van 2025",
+            "show": "SINDS 2025"
+          },
+          {
+            "say": "gewone taal",
+            "show": "GEWONE TAAL"
+          }
+        ]
+      },
+      {
+        "key": "Vage bestemmingen",
+        "text": "Eén: vage bestemmingen. Beschrijf een plek die je je maar half herinnert, en Grok probeert hem te vinden.",
+        "img": [
+          "grok-2.jpg"
+        ]
+      },
+      {
+        "key": "Dichtstbijzijnde stops",
+        "text": "Twee: dichtstbijzijnde stops. Vraag om de dichtstbijzijnde laadpaal, of voeg een koffiestop toe vóór je bestemming.",
+        "img": [
+          "lib/charge-port-us-open.jpg"
+        ]
+      },
+      {
+        "key": "Soort route",
+        "text": "Drie: het soort route. Vraag om een mooie, bochtige weg, of juist een simpele, rustige.",
+        "img": [
+          "fsd-highway-sunset.jpg"
+        ]
+      },
+      {
+        "key": "Autofuncties",
+        "text": "Vier: autofuncties. Bellen, muziek en klimaat. Sinds de zomerupdate van 2026 melden eigenaren ook spiegels, ruitenwissers, stoelverwarming en het dashboardkastje.",
+        "img": [
+          "interior-2.jpg"
+        ]
+      },
+      {
+        "key": "Herinneringen",
+        "text": "En vijf: herinneringen. Herinneringen op locatie, en het handsfree Hey Grok, kwamen met de Spring Update van 2026.",
+        "img": [
+          "lib/screen-modely.jpg"
+        ]
+      },
+      {
+        "text": "Maar Grok komt nooit aan het stuur of de rem. Zijn plan omzetten in een echte rit is het werk van een heel ander systeem.",
+        "img": [
+          "fsd-2.jpg",
+          "fsd-3.jpg"
+        ],
+        "pop": [
+          {
+            "say": "nooit aan het stuur",
+            "show": "NOOIT AAN STUUR"
+          },
+          {
+            "say": "de rem",
+            "show": "GEEN REM"
+          },
+          {
+            "say": "heel ander systeem",
+            "show": "ANDER SYSTEEM"
+          }
+        ]
+      },
+      {
+        "head": "Wat doet FSD dan met het plan van Grok?",
+        "img": [
+          "lib/fsd-screen-city.jpg"
+        ],
+        "pop": [
+          {
+            "say": "",
+            "show": "WAT DOET FSD?"
+          }
+        ]
+      },
+      {
+        "text": "Het rijdt de route, terwijl jij toezicht houdt. FSD Supervised volgt wat er in de navigatie staat. Het stuurt, remt en wisselt van rijstrook. Het neemt kruispunten en rotondes, en kan aan het eind parkeren. In de praktijk kiest Grok dus het waarheen. En FSD regelt het hoe.",
+        "img": [
+          "fsd.jpg",
+          "lib/eu-oldtown-fsd.jpg",
+          "fsd-4.jpg"
+        ],
+        "pop": [
+          {
+            "say": "toezicht houdt",
+            "show": "JIJ HOUDT TOEZICHT"
+          },
+          {
+            "say": "stuurt, remt",
+            "show": "STUURT + REMT"
+          },
+          {
+            "say": "parkeren",
+            "show": "PARKEERT OOK"
+          },
+          {
+            "say": "het waarheen",
+            "show": "GROK: WAARHEEN"
+          },
+          {
+            "say": "het hoe",
+            "show": "FSD: HOE"
+          }
+        ]
+      },
+      {
+        "text": "De band tussen die twee moet veel nauwer worden. In juni 2026 zei Elon Musk dat je FSD via Grok met je stem zou kunnen besturen, over ongeveer 3 maanden. In juli antwoordde Tesla's AI-baas Ashok Elluswamy: working on it, aan een eigenaar die zijn auto met zijn stem naar een bepaalde oprit wilde sturen. Het idee: je zegt, neem de volgende links, of parkeer ergens zonder auto's ernaast.",
+        "img": [
+          "lib/grok-screen-drive.jpg",
+          "grok-car-voice.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "suburban house driveway",
+              "residential driveway United States"
+            ],
+            "want": "a driveway in front of a suburban house"
+          }
+        ],
+        "pop": [
+          {
+            "say": "veel nauwer",
+            "show": "NAUWERE BAND"
+          },
+          {
+            "say": "3 maanden",
+            "show": "ONGEVEER 3 MAANDEN"
+          },
+          {
+            "say": "working on it",
+            "show": "WORKING ON IT"
+          },
+          {
+            "say": "bepaalde oprit",
+            "show": "DIE OPRIT"
+          },
+          {
+            "say": "volgende links",
+            "show": "VOLGENDE LINKS"
+          }
+        ]
+      },
+      {
+        "text": "Op de kwartaalcall van oktober 2026 zei Tesla ook dat het eigen kaarten op basis van AI bouwt, te beginnen met FSD versie 15. Zolang zulke functies niet in de release notes van je eigen auto staan, is de timing een uitspraak, en geen feit. En ook een auto die gesproken opdrachten opvolgt en de hele route rijdt, heeft iemand nodig die wakker achter het stuur zit.",
+        "img": [
+          "lib/software-update-screen.jpg",
+          "lib/ai-datacenter.jpg",
+          "fsd-highway-sunset.jpg"
+        ],
+        "pop": [
+          {
+            "say": "eigen kaarten",
+            "show": "EIGEN AI-KAARTEN"
+          },
+          {
+            "say": "versie 15",
+            "show": "FSD V15"
+          },
+          {
+            "say": "release notes",
+            "show": "RELEASE NOTES"
+          },
+          {
+            "say": "geen feit",
+            "show": "GEEN FEIT"
+          },
+          {
+            "say": "wakker",
+            "show": "BLIJF WAKKER"
+          }
+        ]
+      },
+      {
+        "head": "Waarom mag je nog niet slapen?",
+        "img": [
+          "lib/fsd-screen-highway.jpg"
+        ],
+        "pop": [
+          {
+            "say": "",
+            "show": "WAAROM NIET SLAPEN?"
+          }
+        ]
+      },
+      {
+        "text": "Omdat jij nog steeds de bestuurder bent, juridisch en technisch. FSD Supervised is een rijhulpsysteem van niveau 2. Op Tesla's eigen supportpagina staat dat de huidige functies de auto niet autonoom maken. En jij bent altijd verantwoordelijk voor de snelheid en de besturing.",
+        "img": [
+          "fsd-3.jpg",
+          "lib/fsd-screen-highway.jpg"
+        ],
+        "pop": [
+          {
+            "say": "de bestuurder",
+            "show": "JIJ RIJDT"
+          },
+          {
+            "say": "niveau 2",
+            "show": "NIVEAU 2"
+          },
+          {
+            "say": "niet autonoom",
+            "show": "NIET AUTONOOM"
+          },
+          {
+            "say": "altijd verantwoordelijk",
+            "show": "ALTIJD JIJ"
+          }
+        ]
+      },
+      {
+        "text": "Een camera in het interieur controleert of je op de weg let. Negeer je de waarschuwingen, dan schakelt FSD uit voor de rest van de rit. Verzamel je te veel van die strikeouts, dan wordt de functie een week geblokkeerd.",
+        "img": [
+          "lib/screen-red-warning.jpg",
+          "camera-rain.jpg"
+        ],
+        "pop": [
+          {
+            "say": "camera",
+            "show": "CAMERA BINNEN"
+          },
+          {
+            "say": "schakelt FSD uit",
+            "show": "FSD UIT"
+          },
+          {
+            "say": "strikeouts",
+            "show": "STRIKEOUTS"
+          },
+          {
+            "say": "een week",
+            "show": "1 WEEK GEBLOKKEERD"
+          }
+        ]
+      },
+      {
+        "text": "Het ongeluk in Fairfield laat zien waarom. Dat de bestuurder sliep, is nog niet bevestigd door de gegevens van de auto. Maar twee agenten raakten ernstig gewond, en de California Highway Patrol hield de bestuurder verantwoordelijk, niet Tesla.",
+        "img": [
+          "fsd-night-rain.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Interstate 80 Fairfield California",
+              "Interstate 80 Solano County"
+            ],
+            "want": "Interstate 80 near Fairfield, California, a freeway with traffic"
+          }
+        ],
+        "pop": [
+          {
+            "say": "Fairfield",
+            "show": "FAIRFIELD"
+          },
+          {
+            "say": "niet bevestigd",
+            "show": "NIET BEVESTIGD"
+          },
+          {
+            "say": "ernstig gewond",
+            "show": "2 AGENTEN GEWOND"
+          },
+          {
+            "say": "niet Tesla",
+            "show": "NIET TESLA"
+          }
+        ]
+      },
+      {
+        "text": "Eind 2025 zei Musk dat FSD appen zou toestaan, afhankelijk van het verkeer om je heen. Ook dan blijft de aansprakelijkheid bij wie achter het stuur zit. Vergelijk dat met Drive Pilot van Mercedes-Benz, een systeem van niveau 3. Op bepaalde snelwegen in Californië, onder de 64 kilometer per uur en bij goed weer, neemt Mercedes de verantwoordelijkheid over zolang het systeem rijdt. Slapen kan pas als de auto verantwoordelijk is, en niet de mens.",
+        "img": [
+          "fsd-4.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Mercedes-Benz Drive Pilot",
+              "Mercedes-Benz EQS 2023",
+              "Mercedes S-Class W223"
+            ],
+            "want": "a Mercedes-Benz EQS or S-Class, the cars that offer Drive Pilot"
+          }
+        ],
+        "pop": [
+          {
+            "say": "appen",
+            "show": "APPEN?"
+          },
+          {
+            "say": "aansprakelijkheid",
+            "show": "JIJ AANSPRAKELIJK"
+          },
+          {
+            "say": "niveau 3",
+            "show": "NIVEAU 3"
+          },
+          {
+            "say": "neemt Mercedes",
+            "show": "MERCEDES AANSPRAKELIJK"
+          },
+          {
+            "say": "de auto verantwoordelijk",
+            "show": "AUTO VERANTWOORDELIJK"
+          }
+        ]
+      },
+      {
+        "head": "Wanneer mag dutten dan wel?",
+        "img": [
+          "lib/cybercab-nap-highway.jpg"
+        ],
+        "pop": [
+          {
+            "say": "",
+            "show": "WANNEER WEL DUTTEN?"
+          }
+        ]
+      },
+      {
+        "text": "Pas als FSD zonder toezicht mag rijden. En dat wordt per plek beslist. Daarvoor moet eerst het nodige gebeuren.",
+        "img": [
+          "fsd-snow.jpg",
+          "fsd-roundabout-eu.jpg"
+        ],
+        "pop": [
+          {
+            "say": "zonder toezicht",
+            "show": "ZONDER TOEZICHT"
+          },
+          {
+            "say": "per plek",
+            "show": "PER PLEK"
+          }
+        ]
+      },
+      {
+        "key": "Bewijs",
+        "text": "Eén: bewijs. Genoeg gegevens over genoeg kilometers om te laten zien dat het systeem zonder menselijke back-up veiliger is. Ook in regen, 's nachts en bij wegwerkzaamheden.",
+        "img": [
+          "fsd-night-rain.jpg",
+          "lib/fsd-screen-rain-night.jpg"
+        ]
+      },
+      {
+        "key": "Toezichthouders",
+        "text": "Twee: toezichthouders. In Amerika verschillen de regels per staat. In Europa is tot nu toe alleen de versie met toezicht goedgekeurd, land voor land, te beginnen in Nederland.",
+        "img": [
+          "lib/eu-brussels-tesla.jpg"
+        ]
+      },
+      {
+        "key": "Aansprakelijkheid",
+        "text": "Drie: aansprakelijkheid. Tesla, en niet de bestuurder, moet de verantwoordelijkheid nemen zolang de auto rijdt.",
+        "img": [
+          "lib/robotaxi-fleet-dawn.jpg"
+        ]
+      },
+      {
+        "key": "Afgebakende zones",
+        "text": "En vier: afgebakende zones. Het begint in vastgelegde gebieden, niet overal tegelijk.",
+        "img": [
+          "robotaxi-app.jpg"
+        ]
+      },
+      {
+        "text": "Tesla heeft gezegd wanneer het hoopt te beginnen. Op de call van oktober 2026 zei Elluswamy dat de eerste auto's van klanten ergens rond het tweede kwartaal van volgend jaar zonder toezicht in Tesla's Robotaxi-zones zouden kunnen rijden. Dus rond het voorjaar van 2027. Tesla heeft al veel deadlines voor zelfrijden gemist, dus dit is een doel, en geen ingeloste belofte. Toch is er één plek waar mensen nu al rijden zonder iemand achter het stuur.",
+        "img": [
+          "lib/robotaxi-app-pickup.jpg",
+          "robotaxi-my-2.jpg"
+        ],
+        "pop": [
+          {
+            "say": "hoopt te beginnen",
+            "show": "HET DOEL"
+          },
+          {
+            "say": "auto's van klanten",
+            "show": "JOUW AUTO?"
+          },
+          {
+            "say": "voorjaar van 2027",
+            "show": "VOORJAAR 2027"
+          },
+          {
+            "say": "deadlines",
+            "show": "GEMISTE DEADLINES"
+          },
+          {
+            "say": "zonder iemand achter het stuur",
+            "show": "NIEMAND AAN STUUR"
+          }
+        ]
+      },
+      {
+        "head": "Waar rijden Tesla's nu al zonder iemand achter het stuur?",
+        "img": [
+          "lib/robotaxi-rear-passenger.jpg"
+        ],
+        "pop": [
+          {
+            "say": "",
+            "show": "NIEMAND AAN HET STUUR"
+          }
+        ]
+      },
+      {
+        "text": "In Tesla's eigen Robotaxi-dienst. Sinds 22 januari 2026 zit er bij een deel van de Robotaxi-ritten in Austin helemaal geen veiligheidsbegeleider meer in de auto. Volgens Tesla rijdt de dienst nu in 6 Amerikaanse steden. In Austin kun je ook de Cybercab bestellen, een tweezitter zonder stuur en pedalen.",
+        "img": [
+          "robotaxi-my-1.jpg",
+          "lib/cybercab-street-day.jpg",
+          "lib/cybercab-doors-open.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Austin Texas skyline",
+              "Congress Avenue Austin"
+            ],
+            "want": "the skyline or a downtown street of Austin, Texas"
+          }
+        ],
+        "pop": [
+          {
+            "say": "Robotaxi-dienst",
+            "show": "ROBOTAXI"
+          },
+          {
+            "say": "geen veiligheidsbegeleider",
+            "show": "GEEN BEGELEIDER"
+          },
+          {
+            "say": "6 Amerikaanse steden",
+            "show": "6 VS-STEDEN"
+          },
+          {
+            "say": "Cybercab",
+            "show": "CYBERCAB"
+          },
+          {
+            "say": "zonder stuur",
+            "show": "GEEN STUUR"
+          }
+        ]
+      },
+      {
+        "text": "Daar is de auto de bestuurder, en Tesla de vervoerder. Dus een passagier mag lezen, een film kijken, of ja, indutten. Tesla voegde zelfs een Calm Mode toe, die het scherm en de verlichting dimt.",
+        "img": [
+          "lib/cybercab-nap-two.jpg",
+          "lib/cybercab-nap-night.jpg",
+          "lib/cybercab-nap-arrival.jpg"
+        ],
+        "pop": [
+          {
+            "say": "de auto de bestuurder",
+            "show": "AUTO = BESTUURDER"
+          },
+          {
+            "say": "indutten",
+            "show": "INDUTTEN"
+          },
+          {
+            "say": "Calm Mode",
+            "show": "CALM MODE"
+          },
+          {
+            "say": "dimt",
+            "show": "LICHT GEDIMD"
+          }
+        ]
+      },
+      {
+        "text": "Dat is het echte verschil. De software die een Robotaxi bestuurt, is nauw verwant aan de FSD in je eigen auto. Maar de regels eromheen zijn dat niet. In een Robotaxi ben je passagier. In je eigen Tesla ben je de bestuurder, tot Tesla en de toezichthouders iets anders zeggen.",
+        "img": [
+          "robotaxi-vs-cybercab.jpg",
+          "lib/robotaxi-night-curb.jpg"
+        ],
+        "pop": [
+          {
+            "say": "echte verschil",
+            "show": "HET VERSCHIL"
+          },
+          {
+            "say": "nauw verwant",
+            "show": "VERWANTE SOFTWARE"
+          },
+          {
+            "say": "passagier",
+            "show": "PASSAGIER"
+          },
+          {
+            "say": "de bestuurder",
+            "show": "BESTUURDER"
+          }
+        ]
+      },
+      {
+        "head": "Wat betekent dit voor jou als Tesla-rijder?",
+        "img": [
+          "grok-car-voice.jpg"
+        ],
+        "pop": [
+          {
+            "say": "",
+            "show": "WAT BETEKENT DIT VOOR JOU?"
+          }
+        ]
+      },
+      {
+        "text": "Laat Grok plannen, laat FSD rijden, en houd zelf je ogen op de weg. Praten met de auto is een veilige manier om een bestemming in te stellen of een route te wijzigen, zonder op het scherm te prutsen. FSD kan je veel werk uit handen nemen.",
+        "img": [
+          "lib/grok-screen-drive.jpg",
+          "fsd-highway-sunset.jpg"
+        ],
+        "pop": [
+          {
+            "say": "Laat Grok plannen",
+            "show": "GROK PLANT"
+          },
+          {
+            "say": "laat FSD rijden",
+            "show": "FSD RIJDT"
+          },
+          {
+            "say": "ogen op de weg",
+            "show": "OGEN OP DE WEG"
+          },
+          {
+            "say": "prutsen",
+            "show": "NIET PRUTSEN"
+          }
+        ]
+      },
+      {
+        "text": "Maar de camera in de auto, de strikeouts en de wet gaan allemaal uit van één ding. Een wakkere bestuurder, die elk moment kan overnemen. Grok doet de mapping. Het napping is voorlopig voor een auto zonder stuur.",
+        "img": [
+          "lib/fsd-screen-highway.jpg",
+          "lib/cybercab-nap-highway.jpg",
+          "gen/grok-does-the-mapping-you-do-the-napping-tesla-fsd-sleep-explained.jpg"
+        ],
+        "pop": [
+          {
+            "say": "één ding",
+            "show": "ÉÉN DING"
+          },
+          {
+            "say": "wakkere bestuurder",
+            "show": "WAKKERE BESTUURDER"
+          },
+          {
+            "say": "doet de mapping",
+            "show": "GROK MAPT"
+          },
+          {
+            "say": "zonder stuur",
+            "show": "DUTTEN: ZONDER STUUR"
+          }
+        ]
+      }
+    ],
+    "yt_title_en": "Grok Does the Mapping, You Do the Napping? The Real Answer",
+    "yt_title_nl": "Grok Doet de Mapping, Jij Doet de Napping? Het Echte Antwoord"
+  },
   "en": {
-   "text": "NO NAPPING YET"
+    "title": "Grok does the mapping, you do the napping?",
+    "description": "Grok can plan your route and Tesla FSD can drive it, but you may not sleep at the wheel. What each system does, why napping is not allowed yet, and when it could be.",
+    "body": "<p>Ask Grok for a quiet route to the coast and your Tesla plans it. Tap Start Self-Driving and FSD (Supervised) drives it: the turns, the lane changes, the roundabouts. Tesla is also working on letting you talk to FSD directly, with commands like \"turn right here\". It starts to sound like having a chauffeur, and some drivers already treat it that way: last month a driver in California told police he had been asleep with FSD engaged when his Tesla hit a parked patrol car. The pairing of Grok and FSD feels like a self-driving car, but the two systems do very different jobs.</p>\n<h2>What does Grok actually do in your Tesla?</h2>\n<p><strong>It plans and talks; it does not drive.</strong> Grok is the AI assistant from xAI, built into Tesla's software since the summer of 2025 in the US and now available across Europe too. Since the 2025 Holiday Update it can handle navigation in plain language, and later updates gave it more control over the cabin. Things it can do today include:</p>\n<ul>\n<li><strong>Vague destinations:</strong> describe a place you barely remember, and it tries to find it.</li>\n<li><strong>Nearest stops:</strong> \"the nearest charger\" or a coffee stop as a waypoint before your destination.</li>\n<li><strong>Route style:</strong> ask for a scenic, winding route or a simple, low-stress one.</li>\n<li><strong>Car functions:</strong> calls, music, climate, and since the summer 2026 update owners report mirrors, wipers, seat heating and the glovebox.</li>\n<li><strong>Reminders:</strong> location-based reminders and the hands-free \"Hey Grok\" wake word, added in the 2026 Spring Update.</li>\n</ul>\n<p>Grok never touches the steering wheel or the brakes. Turning its plan into an actual drive is the job of a completely separate system.</p>\n<h2>So what does FSD do with Grok's plan?</h2>\n<p><strong>It drives the route, while you supervise.</strong> FSD (Supervised) follows whatever is in the navigation. It steers, brakes, changes lanes, takes junctions and roundabouts and can park at the end. So in practice Grok picks the where, and FSD handles the how.</p>\n<p>The link between the two is meant to get much tighter. In June 2026 Elon Musk said voice control of FSD through Grok would arrive \"in about 3 months or so\", and in July Tesla's AI chief Ashok Elluswamy replied \"Working on it\" to an owner who wanted to direct the car to a specific driveway by voice. On its October 2026 earnings call Tesla also said it is building its own AI-based maps, starting with FSD v15. Until such features appear in the release notes in your own car, treat the timing as a statement, not a fact. But even a car that takes spoken orders and drives the whole route still needs someone awake behind the wheel.</p>\n<h2>Why is napping not allowed yet?</h2>\n<p><strong>Because you are still the driver, legally and technically.</strong> FSD (Supervised) is a level 2 driver-assistance system. Tesla's own support page states that the current features \"do not make the vehicle autonomous\" and that you are responsible for the speed and control of the car at all times. A cabin camera checks that you watch the road. Ignore the warnings and FSD switches off for the rest of the trip; collect too many of these strikeouts and the feature is suspended for a week.</p>\n<p>The Fairfield crash shows why. The driver's account that he was asleep has not been confirmed by the car's data, but two officers were seriously hurt, and the California Highway Patrol held the driver responsible, not Tesla. Musk said in late 2025 that FSD would allow texting \"depending on context\" of the traffic around you. Even then, the liability stays with the person behind the wheel. Compare that with Mercedes-Benz Drive Pilot, a level 3 system: on certain California highways, below 40 mph and in good conditions, Mercedes takes responsibility while it drives. Sleeping only becomes possible when the car, not the person, is the one responsible.</p>\n<h2>So when could napping be allowed?</h2>\n<p><strong>Only when FSD becomes unsupervised, and that is decided place by place.</strong> Several things have to happen first:</p>\n<ul>\n<li><strong>Proof:</strong> enough data from enough miles to show the system is safer without a human backup, in rain, at night and at road works.</li>\n<li><strong>Regulators:</strong> in the US the rules differ by state; in Europe only the supervised version has been approved so far, country by country.</li>\n<li><strong>Liability:</strong> Tesla, not the driver, has to accept responsibility while the car drives.</li>\n<li><strong>Geofences:</strong> it will start in mapped zones, not everywhere at once.</li>\n</ul>\n<p>Tesla has said when it hopes to start. On the October 2026 call, Elluswamy said the first customer cars could drive unsupervised inside Tesla's Robotaxi zones \"somewhere around Q2 next year\", so around the spring of 2027. Tesla has missed many self-driving deadlines before, so this is a target, not a promise kept. There is, however, one place where people already ride with nobody at the wheel.</p>\n<h2>Where do Teslas already drive with nobody at the wheel?</h2>\n<p><strong>In Tesla's own Robotaxi service.</strong> Since January 22, 2026, some Robotaxi rides in Austin have had no safety monitor in the car at all, and Tesla says the service now runs in six US cities. In Austin riders can also hail the Cybercab, a two-seater without a steering wheel or pedals. Here the car is the driver, and Tesla is the operator, so a passenger can read, watch a film or, yes, doze off. Tesla even added a Calm Mode that dims the screen and cabin lights.</p>\n<p>That is the real difference: the software is closely related, the rules are not. In a Robotaxi you are a passenger. In your own Tesla, you are the driver until Tesla and the regulators say otherwise.</p>\n<h2>What does this mean for you as a Tesla driver?</h2>\n<p><strong>Let Grok plan, let FSD drive, and keep your own eyes on the road.</strong> Talking to the car is a safe way to set a destination or change a route without fiddling with the screen. But the cabin camera, the strikeouts and the law all assume one thing: an awake driver ready to take over at any moment. Grok can do the mapping. For now, the napping belongs in a car with no steering wheel.</p>"
   },
   "nl": {
-   "text": "NOG NIET SLAPEN"
-  }
- },
- "short": {
-  "hook": "question",
-  "en": "Grok can plan your trip. FSD can drive it. So can you take a nap? NO. Not yet. Here's the catch. Grok, the AI in your Tesla, finds the place and the route. FSD Supervised steers, brakes and turns along that route. It feels like a chauffeur. But legally, YOU are still the driver. Tesla says it plainly: these features do not make the car autonomous. A camera watches your eyes. Look away too long, and FSD switches off. So when can you nap? Only when the car takes the blame. Today that only happens in Tesla's Robotaxi, with nobody at the wheel. Grok does the mapping. The napping? It still has to wait.",
-  "nl": "Grok kan je rit plannen. FSD kan hem rijden. Mag je dan een dutje doen? NEE. Nog niet. Hier zit het addertje. Grok, de AI in je Tesla, zoekt de plek en de route. FSD Supervised stuurt, remt en neemt de bochten op die route. Het voelt als een chauffeur. Maar juridisch ben JIJ nog steeds de bestuurder. Tesla zegt het zelf: deze functies maken de auto niet autonoom. Een camera let op je ogen. Kijk je te lang weg, dan schakelt FSD uit. Wanneer mag je dan wel slapen? Pas als de auto de verantwoordelijkheid draagt. Dat kan nu alleen in Tesla's Robotaxi, zonder iemand achter het stuur. Grok doet de mapping. Het napping? Dat moet nog even wachten.",
-  "yt_title_en": "Grok Does the Mapping, You Do the Napping?",
-  "yt_title_nl": "Grok Doet de Mapping, Jij Doet de Napping?",
-  "story": [
-   {
-    "part": "hook",
-    "text": "Grok can plan your trip. FSD can drive it.",
-    "lib": [
-     "grok-screen-drive.jpg",
-     "fsd-screen-highway.jpg"
-    ],
-    "pop": [
-     {
-      "say": "plan your trip",
-      "show": "GROK PLANS"
-     },
-     {
-      "say": "drive it",
-      "show": "FSD DRIVES"
-     }
-    ]
-   },
-   {
-    "part": "hook",
-    "text": "So can you take a nap? NO. Not yet.",
-    "img": "gen/grok-does-the-mapping-you-do-the-napping-tesla-fsd-sleep-explained.jpg",
-    "pop": [
-     {
-      "say": "take a nap",
-      "show": "A NAP?"
-     },
-     {
-      "say": "NO",
-      "show": "NO."
-     },
-     {
-      "say": "Not yet",
-      "show": "NOT YET"
-     }
-    ]
-   },
-   {
-    "part": "tension",
-    "text": "Here's the catch. Grok, the AI in your Tesla, finds the place and the route.",
-    "lib": [
-     "grok-screen-closeup.jpg"
-    ],
-    "pop": [
-     {
-      "say": "the catch",
-      "show": "THE CATCH"
-     },
-     {
-      "say": "the AI",
-      "show": "GROK = AI"
-     },
-     {
-      "say": "the place and the route",
-      "show": "PLACE + ROUTE"
-     }
-    ]
-   },
-   {
-    "part": "tension",
-    "text": "FSD Supervised steers, brakes and turns along that route. It feels like a chauffeur.",
-    "lib": [
-     "fsd-screen-city.jpg"
-    ],
-    "pop": [
-     {
-      "say": "steers",
-      "show": "STEERS"
-     },
-     {
-      "say": "brakes",
-      "show": "BRAKES"
-     },
-     {
-      "say": "turns",
-      "show": "TURNS"
-     },
-     {
-      "say": "chauffeur",
-      "show": "A CHAUFFEUR?"
-     }
-    ]
-   },
-   {
-    "part": "tension",
-    "text": "But legally, YOU are still the driver. Tesla says it plainly: these features do not make the car autonomous.",
-    "lib": [
-     "fsd-screen-highway.jpg"
-    ],
-    "pop": [
-     {
-      "say": "legally",
-      "show": "LEGALLY"
-     },
-     {
-      "say": "still the driver",
-      "show": "YOU DRIVE"
-     },
-     {
-      "say": "do not make",
-      "show": "NOT AUTONOMOUS"
-     }
-    ]
-   },
-   {
-    "part": "tension",
-    "text": "A camera watches your eyes. Look away too long, and FSD switches off.",
-    "lib": [
-     "screen-red-warning.jpg"
-    ],
-    "pop": [
-     {
-      "say": "camera",
-      "show": "CAMERA"
-     },
-     {
-      "say": "Look away",
-      "show": "LOOK AWAY?"
-     },
-     {
-      "say": "switches off",
-      "show": "FSD OFF"
-     }
-    ]
-   },
-   {
-    "part": "payoff",
-    "text": "So when can you nap? Only when the car takes the blame.",
-    "lib": [
-     "robotaxi-night-curb.jpg"
-    ],
-    "pop": [
-     {
-      "say": "when can you nap",
-      "show": "WHEN?"
-     },
-     {
-      "say": "the car takes the blame",
-      "show": "CAR TAKES BLAME"
-     }
-    ]
-   },
-   {
-    "part": "payoff",
-    "text": "Today that only happens in Tesla's Robotaxi, with nobody at the wheel.",
-    "lib": [
-     "robotaxi-rear-passenger.jpg",
-     "cybercab-nap-night.jpg"
-    ],
-    "pop": [
-     {
-      "say": "Robotaxi",
-      "show": "ROBOTAXI"
-     },
-     {
-      "say": "nobody at the wheel",
-      "show": "NOBODY AT WHEEL"
-     }
-    ]
-   },
-   {
-    "part": "payoff",
-    "text": "Grok does the mapping. The napping? It still has to wait.",
-    "lib": [
-     "grok-screen-drive.jpg",
-     "fsd-screen-highway.jpg"
-    ],
-    "pop": [
-     {
-      "say": "Grok does the mapping",
-      "show": "GROK MAPS"
-     },
-     {
-      "say": "The napping",
-      "show": "NAPPING?"
-     },
-     {
-      "say": "still has to wait",
-      "show": "NOT YET!"
-     }
-    ]
-   }
-  ]
- },
- "video": {
-  "en": [
-   {
-    "text": "Ask Grok for a quiet route to the coast, and your Tesla plans it. Tap Start Self-Driving, and FSD drives it. The turns, the lane changes, the roundabouts. Tesla is even working on letting you talk to FSD directly, with commands like turn right here.",
-    "img": [
-     "gen/grok-does-the-mapping-you-do-the-napping-tesla-fsd-sleep-explained.jpg",
-     "grok-car-voice.jpg",
-     "fsd-roundabout-eu.jpg"
-    ],
-    "pop": [
-     {
-      "say": "quiet route",
-      "show": "A QUIET ROUTE"
-     },
-     {
-      "say": "plans it",
-      "show": "GROK PLANS"
-     },
-     {
-      "say": "FSD drives it",
-      "show": "FSD DRIVES"
-     },
-     {
-      "say": "turn right here",
-      "show": "TURN RIGHT HERE"
-     }
-    ]
-   },
-   {
-    "text": "It starts to sound like a chauffeur. And some drivers already treat it that way. Last month, a driver in California told police he had been asleep with FSD on, when his Tesla hit a parked patrol car. Grok and FSD together feel like a self-driving car. But the two systems do very different jobs.",
-    "img": [
-     "fsd-night-rain.jpg",
-     "lib/fsd-screen-rain-night.jpg"
-    ],
-    "pop": [
-     {
-      "say": "chauffeur",
-      "show": "A CHAUFFEUR?"
-     },
-     {
-      "say": "asleep",
-      "show": "ASLEEP"
-     },
-     {
-      "say": "parked patrol car",
-      "show": "PATROL CAR HIT"
-     },
-     {
-      "say": "very different jobs",
-      "show": "DIFFERENT JOBS"
-     }
-    ]
-   },
-   {
-    "head": "What does Grok actually do in your Tesla?",
-    "img": [
-     "lib/grok-screen-closeup.jpg"
-    ],
-    "pop": [
-     {
-      "say": "",
-      "show": "WHAT DOES GROK DO?"
-     }
-    ]
-   },
-   {
-    "text": "It plans and it talks. It does not drive. Grok is the AI assistant from xAI. It has been part of Tesla's software in the US since the summer of 2025, and it now works across Europe too. Since the 2025 Holiday Update, it can handle navigation in plain language. Later updates gave it more control over the cabin.",
-    "img": [
-     "grok-1.jpg",
-     "grok-3.jpg",
-     "lib/grok-screen-drive.jpg"
-    ],
-    "pop": [
-     {
-      "say": "does not drive",
-      "show": "DOES NOT DRIVE"
-     },
-     {
-      "say": "xAI",
-      "show": "FROM xAI"
-     },
-     {
-      "say": "summer of 2025",
-      "show": "SINCE 2025"
-     },
-     {
-      "say": "plain language",
-      "show": "PLAIN LANGUAGE"
-     }
-    ]
-   },
-   {
-    "key": "Vague destinations",
-    "text": "First, vague destinations. Describe a place you barely remember, and Grok tries to find it.",
-    "img": [
-     "grok-2.jpg"
-    ]
-   },
-   {
-    "key": "Nearest stops",
-    "text": "Second, nearest stops. Ask for the nearest charger, or add a coffee stop before your destination.",
-    "img": [
-     "lib/charge-port-us-open.jpg"
-    ]
-   },
-   {
-    "key": "Route style",
-    "text": "Third, route style. Ask for a scenic, winding road, or a simple, low-stress one.",
-    "img": [
-     "fsd-highway-sunset.jpg"
-    ]
-   },
-   {
-    "key": "Car functions",
-    "text": "Fourth, car functions. Calls, music and climate. Since the summer 2026 update, owners also report mirrors, wipers, seat heating and the glovebox.",
-    "img": [
-     "interior-2.jpg"
-    ]
-   },
-   {
-    "key": "Reminders",
-    "text": "And fifth, reminders. Location-based reminders, and the hands-free Hey Grok wake word, came with the 2026 Spring Update.",
-    "img": [
-     "lib/screen-modely.jpg"
-    ]
-   },
-   {
-    "text": "But Grok never touches the steering wheel or the brakes. Turning its plan into an actual drive is the job of a completely separate system.",
-    "img": [
-     "fsd-2.jpg",
-     "fsd-3.jpg"
-    ],
-    "pop": [
-     {
-      "say": "never touches",
-      "show": "NEVER TOUCHES"
-     },
-     {
-      "say": "steering wheel",
-      "show": "NO STEERING"
-     },
-     {
-      "say": "separate system",
-      "show": "SEPARATE SYSTEM"
-     }
-    ]
-   },
-   {
-    "head": "So what does FSD do with Grok's plan?",
-    "img": [
-     "lib/fsd-screen-city.jpg"
-    ],
-    "pop": [
-     {
-      "say": "",
-      "show": "WHAT DOES FSD DO?"
-     }
-    ]
-   },
-   {
-    "text": "It drives the route, while you supervise. FSD Supervised follows whatever is in the navigation. It steers, brakes and changes lanes. It takes junctions and roundabouts, and it can park at the end. So in practice, Grok picks the where. And FSD handles the how.",
-    "img": [
-     "fsd.jpg",
-     "lib/eu-oldtown-fsd.jpg",
-     "fsd-4.jpg"
-    ],
-    "pop": [
-     {
-      "say": "while you supervise",
-      "show": "YOU SUPERVISE"
-     },
-     {
-      "say": "steers, brakes",
-      "show": "STEERS + BRAKES"
-     },
-     {
-      "say": "park at the end",
-      "show": "PARKS TOO"
-     },
-     {
-      "say": "picks the where",
-      "show": "GROK: WHERE"
-     },
-     {
-      "say": "handles the how",
-      "show": "FSD: HOW"
-     }
-    ]
-   },
-   {
-    "text": "The link between the two is meant to get much tighter. In June 2026, Elon Musk said voice control of FSD through Grok would arrive in about 3 months or so. In July, Tesla's AI chief Ashok Elluswamy replied, working on it, to an owner who wanted to send his car to a specific driveway by voice. The idea is that you could say, take the next left, or park away from other cars.",
-    "img": [
-     "lib/grok-screen-drive.jpg",
-     "grok-car-voice.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "suburban house driveway",
-       "residential driveway United States"
-      ],
-      "want": "a driveway in front of a suburban house"
-     }
-    ],
-    "pop": [
-     {
-      "say": "much tighter",
-      "show": "TIGHTER LINK"
-     },
-     {
-      "say": "3 months",
-      "show": "ABOUT 3 MONTHS"
-     },
-     {
-      "say": "working on it",
-      "show": "WORKING ON IT"
-     },
-     {
-      "say": "specific driveway",
-      "show": "THAT DRIVEWAY"
-     },
-     {
-      "say": "take the next left",
-      "show": "NEXT LEFT"
-     }
-    ]
-   },
-   {
-    "text": "On its October 2026 earnings call, Tesla also said it is building its own AI-based maps, starting with FSD version 15. Until features like these show up in the release notes in your own car, treat the timing as a statement, not a fact. And even a car that takes spoken orders and drives the whole route still needs someone awake behind the wheel.",
-    "img": [
-     "lib/software-update-screen.jpg",
-     "lib/ai-datacenter.jpg",
-     "fsd-highway-sunset.jpg"
-    ],
-    "pop": [
-     {
-      "say": "own AI-based maps",
-      "show": "OWN AI MAPS"
-     },
-     {
-      "say": "version 15",
-      "show": "FSD V15"
-     },
-     {
-      "say": "release notes",
-      "show": "RELEASE NOTES"
-     },
-     {
-      "say": "not a fact",
-      "show": "NOT A FACT"
-     },
-     {
-      "say": "someone awake",
-      "show": "STAY AWAKE"
-     }
-    ]
-   },
-   {
-    "head": "Why is napping not allowed yet?",
-    "img": [
-     "lib/fsd-screen-highway.jpg"
-    ],
-    "pop": [
-     {
-      "say": "",
-      "show": "WHY NO NAPPING?"
-     }
-    ]
-   },
-   {
-    "text": "Because you are still the driver, legally and technically. FSD Supervised is a level 2 driver-assistance system. Tesla's own support page says the current features do not make the car autonomous. And you are responsible for the speed and control of the car at all times.",
-    "img": [
-     "fsd-3.jpg",
-     "lib/fsd-screen-highway.jpg"
-    ],
-    "pop": [
-     {
-      "say": "still the driver",
-      "show": "YOU DRIVE"
-     },
-     {
-      "say": "level 2",
-      "show": "LEVEL 2"
-     },
-     {
-      "say": "do not make the car autonomous",
-      "show": "NOT AUTONOMOUS"
-     },
-     {
-      "say": "at all times",
-      "show": "AT ALL TIMES"
-     }
-    ]
-   },
-   {
-    "text": "A camera in the cabin checks that you watch the road. Ignore its warnings, and FSD switches off for the rest of the trip. Collect too many of these strikeouts, and the feature is suspended for a week.",
-    "img": [
-     "lib/screen-red-warning.jpg",
-     "camera-rain.jpg"
-    ],
-    "pop": [
-     {
-      "say": "camera in the cabin",
-      "show": "CABIN CAMERA"
-     },
-     {
-      "say": "switches off",
-      "show": "FSD OFF"
-     },
-     {
-      "say": "strikeouts",
-      "show": "STRIKEOUTS"
-     },
-     {
-      "say": "for a week",
-      "show": "1 WEEK BAN"
-     }
-    ]
-   },
-   {
-    "text": "The crash in Fairfield shows why. The driver's claim that he was asleep has not been confirmed by the car's data. But two officers were seriously hurt, and the California Highway Patrol held the driver responsible, not Tesla.",
-    "img": [
-     "fsd-night-rain.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Interstate 80 Fairfield California",
-       "Interstate 80 Solano County"
-      ],
-      "want": "Interstate 80 near Fairfield, California, a freeway with traffic"
-     }
-    ],
-    "pop": [
-     {
-      "say": "Fairfield",
-      "show": "FAIRFIELD"
-     },
-     {
-      "say": "not been confirmed",
-      "show": "NOT CONFIRMED"
-     },
-     {
-      "say": "seriously hurt",
-      "show": "2 OFFICERS HURT"
-     },
-     {
-      "say": "not Tesla",
-      "show": "NOT TESLA"
-     }
-    ]
-   },
-   {
-    "text": "In late 2025, Musk said FSD would allow texting, depending on the traffic around you. Even then, the liability stays with the person behind the wheel. Compare that with Mercedes-Benz Drive Pilot, a level 3 system. On certain California highways, below 40 miles per hour and in good conditions, Mercedes takes responsibility while it drives. Sleeping only becomes possible when the car, not the person, is the one responsible.",
-    "img": [
-     "fsd-4.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Mercedes-Benz Drive Pilot",
-       "Mercedes-Benz EQS 2023",
-       "Mercedes S-Class W223"
-      ],
-      "want": "a Mercedes-Benz EQS or S-Class, the cars that offer Drive Pilot"
-     }
-    ],
-    "pop": [
-     {
-      "say": "allow texting",
-      "show": "TEXTING?"
-     },
-     {
-      "say": "liability stays",
-      "show": "YOUR LIABILITY"
-     },
-     {
-      "say": "level 3",
-      "show": "LEVEL 3"
-     },
-     {
-      "say": "Mercedes takes responsibility",
-      "show": "MERCEDES LIABLE"
-     },
-     {
-      "say": "the car, not the person",
-      "show": "CAR RESPONSIBLE"
-     }
-    ]
-   },
-   {
-    "head": "So when could napping be allowed?",
-    "img": [
-     "lib/cybercab-nap-highway.jpg"
-    ],
-    "pop": [
-     {
-      "say": "",
-      "show": "WHEN CAN YOU NAP?"
-     }
-    ]
-   },
-   {
-    "text": "Only when FSD becomes unsupervised. And that is decided place by place. Several things have to happen first.",
-    "img": [
-     "fsd-snow.jpg",
-     "fsd-roundabout-eu.jpg"
-    ],
-    "pop": [
-     {
-      "say": "unsupervised",
-      "show": "UNSUPERVISED"
-     },
-     {
-      "say": "place by place",
-      "show": "PLACE BY PLACE"
-     }
-    ]
-   },
-   {
-    "key": "Proof",
-    "text": "First, proof. Enough data from enough miles to show the system is safer without a human backup. In rain, at night and at road works.",
-    "img": [
-     "fsd-night-rain.jpg",
-     "lib/fsd-screen-rain-night.jpg"
-    ]
-   },
-   {
-    "key": "Regulators",
-    "text": "Second, regulators. In the US the rules differ from state to state. In Europe, only the supervised version has been approved so far, country by country.",
-    "img": [
-     "lib/eu-brussels-tesla.jpg"
-    ]
-   },
-   {
-    "key": "Liability",
-    "text": "Third, liability. Tesla, not the driver, has to accept responsibility while the car drives.",
-    "img": [
-     "lib/robotaxi-fleet-dawn.jpg"
-    ]
-   },
-   {
-    "key": "Geofences",
-    "text": "And fourth, geofences. It will start in mapped zones, not everywhere at once.",
-    "img": [
-     "robotaxi-app.jpg"
-    ]
-   },
-   {
-    "text": "Tesla has said when it hopes to start. On the October 2026 call, Elluswamy said the first customer cars could drive unsupervised inside Tesla's Robotaxi zones somewhere around Q2 next year. That means around the spring of 2027. Tesla has missed many self-driving deadlines before, so this is a target, not a promise kept. But there is one place where people already ride with nobody at the wheel.",
-    "img": [
-     "lib/robotaxi-app-pickup.jpg",
-     "robotaxi-my-2.jpg"
-    ],
-    "pop": [
-     {
-      "say": "hopes to start",
-      "show": "THE TARGET"
-     },
-     {
-      "say": "customer cars",
-      "show": "YOUR CAR?"
-     },
-     {
-      "say": "spring of 2027",
-      "show": "SPRING 2027"
-     },
-     {
-      "say": "missed many",
-      "show": "MISSED DEADLINES"
-     },
-     {
-      "say": "nobody at the wheel",
-      "show": "NOBODY AT WHEEL"
-     }
-    ]
-   },
-   {
-    "head": "Where do Teslas already drive with nobody at the wheel?",
-    "img": [
-     "lib/robotaxi-rear-passenger.jpg"
-    ],
-    "pop": [
-     {
-      "say": "",
-      "show": "NOBODY AT THE WHEEL"
-     }
-    ]
-   },
-   {
-    "text": "In Tesla's own Robotaxi service. Since January 22, 2026, some Robotaxi rides in Austin have had no safety monitor in the car at all. Tesla says the service now runs in 6 US cities. In Austin, riders can also hail the Cybercab, a two-seater without a steering wheel or pedals.",
-    "img": [
-     "robotaxi-my-1.jpg",
-     "lib/cybercab-street-day.jpg",
-     "lib/cybercab-doors-open.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Austin Texas skyline",
-       "Congress Avenue Austin"
-      ],
-      "want": "the skyline or a downtown street of Austin, Texas"
-     }
-    ],
-    "pop": [
-     {
-      "say": "Robotaxi service",
-      "show": "ROBOTAXI"
-     },
-     {
-      "say": "no safety monitor",
-      "show": "NO SAFETY MONITOR"
-     },
-     {
-      "say": "6 US cities",
-      "show": "6 US CITIES"
-     },
-     {
-      "say": "Cybercab",
-      "show": "CYBERCAB"
-     },
-     {
-      "say": "without a steering wheel",
-      "show": "NO STEERING WHEEL"
-     }
-    ]
-   },
-   {
-    "text": "Here, the car is the driver, and Tesla is the operator. So a passenger can read, watch a film, or yes, doze off. Tesla even added a Calm Mode that dims the screen and the cabin lights.",
-    "img": [
-     "lib/cybercab-nap-two.jpg",
-     "lib/cybercab-nap-night.jpg",
-     "lib/cybercab-nap-arrival.jpg"
-    ],
-    "pop": [
-     {
-      "say": "car is the driver",
-      "show": "CAR = DRIVER"
-     },
-     {
-      "say": "doze off",
-      "show": "DOZE OFF"
-     },
-     {
-      "say": "Calm Mode",
-      "show": "CALM MODE"
-     },
-     {
-      "say": "dims",
-      "show": "LIGHTS DIMMED"
-     }
-    ]
-   },
-   {
-    "text": "That is the real difference. The software that drives a Robotaxi is closely related to the FSD in your own car. But the rules around it are not. In a Robotaxi, you are a passenger. In your own Tesla, you are the driver, until Tesla and the regulators say otherwise.",
-    "img": [
-     "robotaxi-vs-cybercab.jpg",
-     "lib/robotaxi-night-curb.jpg"
-    ],
-    "pop": [
-     {
-      "say": "real difference",
-      "show": "THE DIFFERENCE"
-     },
-     {
-      "say": "closely related",
-      "show": "SIMILAR SOFTWARE"
-     },
-     {
-      "say": "a passenger",
-      "show": "PASSENGER"
-     },
-     {
-      "say": "you are the driver",
-      "show": "DRIVER"
-     }
-    ]
-   },
-   {
-    "head": "What does this mean for you as a Tesla driver?",
-    "img": [
-     "grok-car-voice.jpg"
-    ],
-    "pop": [
-     {
-      "say": "",
-      "show": "WHAT IT MEANS FOR YOU"
-     }
-    ]
-   },
-   {
-    "text": "Let Grok plan, let FSD drive, and keep your own eyes on the road. Talking to the car is a safe way to set a destination or change a route, without fiddling with the screen. FSD can take much of the work out of the drive.",
-    "img": [
-     "lib/grok-screen-drive.jpg",
-     "fsd-highway-sunset.jpg"
-    ],
-    "pop": [
-     {
-      "say": "Let Grok plan",
-      "show": "GROK PLANS"
-     },
-     {
-      "say": "let FSD drive",
-      "show": "FSD DRIVES"
-     },
-     {
-      "say": "your own eyes",
-      "show": "EYES ON ROAD"
-     },
-     {
-      "say": "without fiddling",
-      "show": "HANDS OFF SCREEN"
-     }
-    ]
-   },
-   {
-    "text": "But the cabin camera, the strikeouts and the law all assume one thing. An awake driver, ready to take over at any moment. Grok can do the mapping. For now, the napping belongs in a car with no steering wheel.",
-    "img": [
-     "lib/fsd-screen-highway.jpg",
-     "lib/cybercab-nap-highway.jpg",
-     "gen/grok-does-the-mapping-you-do-the-napping-tesla-fsd-sleep-explained.jpg"
-    ],
-    "pop": [
-     {
-      "say": "one thing",
-      "show": "ONE THING"
-     },
-     {
-      "say": "awake driver",
-      "show": "AWAKE DRIVER"
-     },
-     {
-      "say": "do the mapping",
-      "show": "GROK MAPS"
-     },
-     {
-      "say": "no steering wheel",
-      "show": "NAP: NO WHEEL ONLY"
-     }
-    ]
-   }
-  ],
-  "nl": [
-   {
-    "text": "Vraag Grok om een rustige route naar de kust, en je Tesla plant hem. Tik op Start Self-Driving, en FSD rijdt hem. De bochten, het wisselen van rijstrook, de rotondes. Tesla werkt er zelfs aan dat je FSD straks rechtstreeks kunt aanspreken, met opdrachten als: hier rechtsaf.",
-    "img": [
-     "gen/grok-does-the-mapping-you-do-the-napping-tesla-fsd-sleep-explained.jpg",
-     "grok-car-voice.jpg",
-     "fsd-roundabout-eu.jpg"
-    ],
-    "pop": [
-     {
-      "say": "rustige route",
-      "show": "RUSTIGE ROUTE"
-     },
-     {
-      "say": "plant hem",
-      "show": "GROK PLANT"
-     },
-     {
-      "say": "FSD rijdt hem",
-      "show": "FSD RIJDT"
-     },
-     {
-      "say": "hier rechtsaf",
-      "show": "HIER RECHTSAF"
-     }
-    ]
-   },
-   {
-    "text": "Het klinkt als een eigen chauffeur. En sommige bestuurders behandelen het ook zo. Vorige maand vertelde een automobilist in Californië de politie dat hij sliep met FSD aan, toen zijn Tesla op een geparkeerde politieauto botste. Grok en FSD samen voelen als een zelfrijdende auto. Maar de twee systemen doen iets heel anders.",
-    "img": [
-     "fsd-night-rain.jpg",
-     "lib/fsd-screen-rain-night.jpg"
-    ],
-    "pop": [
-     {
-      "say": "chauffeur",
-      "show": "CHAUFFEUR?"
-     },
-     {
-      "say": "sliep",
-      "show": "SLIEP"
-     },
-     {
-      "say": "politieauto",
-      "show": "POLITIEAUTO GERAAKT"
-     },
-     {
-      "say": "heel anders",
-      "show": "HEEL ANDERS"
-     }
-    ]
-   },
-   {
-    "head": "Wat doet Grok eigenlijk in je Tesla?",
-    "img": [
-     "lib/grok-screen-closeup.jpg"
-    ],
-    "pop": [
-     {
-      "say": "",
-      "show": "WAT DOET GROK?"
-     }
-    ]
-   },
-   {
-    "text": "Plannen en praten. Rijden doet Grok niet. Grok is de AI-assistent van xAI. Hij zit sinds de zomer van 2025 in de Tesla-software in Amerika, en werkt nu ook in heel Europa, dus ook in Nederland en België. Sinds de Holiday Update van 2025 regelt hij navigatie in gewone taal. Latere updates gaven hem meer grip op het interieur.",
-    "img": [
-     "grok-1.jpg",
-     "grok-3.jpg",
-     "lib/grok-screen-drive.jpg"
-    ],
-    "pop": [
-     {
-      "say": "Rijden doet Grok niet",
-      "show": "RIJDT NIET"
-     },
-     {
-      "say": "xAI",
-      "show": "VAN xAI"
-     },
-     {
-      "say": "zomer van 2025",
-      "show": "SINDS 2025"
-     },
-     {
-      "say": "gewone taal",
-      "show": "GEWONE TAAL"
-     }
-    ]
-   },
-   {
-    "key": "Vage bestemmingen",
-    "text": "Eén: vage bestemmingen. Beschrijf een plek die je je maar half herinnert, en Grok probeert hem te vinden.",
-    "img": [
-     "grok-2.jpg"
-    ]
-   },
-   {
-    "key": "Dichtstbijzijnde stops",
-    "text": "Twee: dichtstbijzijnde stops. Vraag om de dichtstbijzijnde laadpaal, of voeg een koffiestop toe vóór je bestemming.",
-    "img": [
-     "lib/charge-port-us-open.jpg"
-    ]
-   },
-   {
-    "key": "Soort route",
-    "text": "Drie: het soort route. Vraag om een mooie, bochtige weg, of juist een simpele, rustige.",
-    "img": [
-     "fsd-highway-sunset.jpg"
-    ]
-   },
-   {
-    "key": "Autofuncties",
-    "text": "Vier: autofuncties. Bellen, muziek en klimaat. Sinds de zomerupdate van 2026 melden eigenaren ook spiegels, ruitenwissers, stoelverwarming en het dashboardkastje.",
-    "img": [
-     "interior-2.jpg"
-    ]
-   },
-   {
-    "key": "Herinneringen",
-    "text": "En vijf: herinneringen. Herinneringen op locatie, en het handsfree Hey Grok, kwamen met de Spring Update van 2026.",
-    "img": [
-     "lib/screen-modely.jpg"
-    ]
-   },
-   {
-    "text": "Maar Grok komt nooit aan het stuur of de rem. Zijn plan omzetten in een echte rit is het werk van een heel ander systeem.",
-    "img": [
-     "fsd-2.jpg",
-     "fsd-3.jpg"
-    ],
-    "pop": [
-     {
-      "say": "nooit aan het stuur",
-      "show": "NOOIT AAN STUUR"
-     },
-     {
-      "say": "de rem",
-      "show": "GEEN REM"
-     },
-     {
-      "say": "heel ander systeem",
-      "show": "ANDER SYSTEEM"
-     }
-    ]
-   },
-   {
-    "head": "Wat doet FSD dan met het plan van Grok?",
-    "img": [
-     "lib/fsd-screen-city.jpg"
-    ],
-    "pop": [
-     {
-      "say": "",
-      "show": "WAT DOET FSD?"
-     }
-    ]
-   },
-   {
-    "text": "Het rijdt de route, terwijl jij toezicht houdt. FSD Supervised volgt wat er in de navigatie staat. Het stuurt, remt en wisselt van rijstrook. Het neemt kruispunten en rotondes, en kan aan het eind parkeren. In de praktijk kiest Grok dus het waarheen. En FSD regelt het hoe.",
-    "img": [
-     "fsd.jpg",
-     "lib/eu-oldtown-fsd.jpg",
-     "fsd-4.jpg"
-    ],
-    "pop": [
-     {
-      "say": "toezicht houdt",
-      "show": "JIJ HOUDT TOEZICHT"
-     },
-     {
-      "say": "stuurt, remt",
-      "show": "STUURT + REMT"
-     },
-     {
-      "say": "parkeren",
-      "show": "PARKEERT OOK"
-     },
-     {
-      "say": "het waarheen",
-      "show": "GROK: WAARHEEN"
-     },
-     {
-      "say": "het hoe",
-      "show": "FSD: HOE"
-     }
-    ]
-   },
-   {
-    "text": "De band tussen die twee moet veel nauwer worden. In juni 2026 zei Elon Musk dat je FSD via Grok met je stem zou kunnen besturen, over ongeveer 3 maanden. In juli antwoordde Tesla's AI-baas Ashok Elluswamy: working on it, aan een eigenaar die zijn auto met zijn stem naar een bepaalde oprit wilde sturen. Het idee: je zegt, neem de volgende links, of parkeer ergens zonder auto's ernaast.",
-    "img": [
-     "lib/grok-screen-drive.jpg",
-     "grok-car-voice.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "suburban house driveway",
-       "residential driveway United States"
-      ],
-      "want": "a driveway in front of a suburban house"
-     }
-    ],
-    "pop": [
-     {
-      "say": "veel nauwer",
-      "show": "NAUWERE BAND"
-     },
-     {
-      "say": "3 maanden",
-      "show": "ONGEVEER 3 MAANDEN"
-     },
-     {
-      "say": "working on it",
-      "show": "WORKING ON IT"
-     },
-     {
-      "say": "bepaalde oprit",
-      "show": "DIE OPRIT"
-     },
-     {
-      "say": "volgende links",
-      "show": "VOLGENDE LINKS"
-     }
-    ]
-   },
-   {
-    "text": "Op de kwartaalcall van oktober 2026 zei Tesla ook dat het eigen kaarten op basis van AI bouwt, te beginnen met FSD versie 15. Zolang zulke functies niet in de release notes van je eigen auto staan, is de timing een uitspraak, en geen feit. En ook een auto die gesproken opdrachten opvolgt en de hele route rijdt, heeft iemand nodig die wakker achter het stuur zit.",
-    "img": [
-     "lib/software-update-screen.jpg",
-     "lib/ai-datacenter.jpg",
-     "fsd-highway-sunset.jpg"
-    ],
-    "pop": [
-     {
-      "say": "eigen kaarten",
-      "show": "EIGEN AI-KAARTEN"
-     },
-     {
-      "say": "versie 15",
-      "show": "FSD V15"
-     },
-     {
-      "say": "release notes",
-      "show": "RELEASE NOTES"
-     },
-     {
-      "say": "geen feit",
-      "show": "GEEN FEIT"
-     },
-     {
-      "say": "wakker",
-      "show": "BLIJF WAKKER"
-     }
-    ]
-   },
-   {
-    "head": "Waarom mag je nog niet slapen?",
-    "img": [
-     "lib/fsd-screen-highway.jpg"
-    ],
-    "pop": [
-     {
-      "say": "",
-      "show": "WAAROM NIET SLAPEN?"
-     }
-    ]
-   },
-   {
-    "text": "Omdat jij nog steeds de bestuurder bent, juridisch en technisch. FSD Supervised is een rijhulpsysteem van niveau 2. Op Tesla's eigen supportpagina staat dat de huidige functies de auto niet autonoom maken. En jij bent altijd verantwoordelijk voor de snelheid en de besturing.",
-    "img": [
-     "fsd-3.jpg",
-     "lib/fsd-screen-highway.jpg"
-    ],
-    "pop": [
-     {
-      "say": "de bestuurder",
-      "show": "JIJ RIJDT"
-     },
-     {
-      "say": "niveau 2",
-      "show": "NIVEAU 2"
-     },
-     {
-      "say": "niet autonoom",
-      "show": "NIET AUTONOOM"
-     },
-     {
-      "say": "altijd verantwoordelijk",
-      "show": "ALTIJD JIJ"
-     }
-    ]
-   },
-   {
-    "text": "Een camera in het interieur controleert of je op de weg let. Negeer je de waarschuwingen, dan schakelt FSD uit voor de rest van de rit. Verzamel je te veel van die strikeouts, dan wordt de functie een week geblokkeerd.",
-    "img": [
-     "lib/screen-red-warning.jpg",
-     "camera-rain.jpg"
-    ],
-    "pop": [
-     {
-      "say": "camera",
-      "show": "CAMERA BINNEN"
-     },
-     {
-      "say": "schakelt FSD uit",
-      "show": "FSD UIT"
-     },
-     {
-      "say": "strikeouts",
-      "show": "STRIKEOUTS"
-     },
-     {
-      "say": "een week",
-      "show": "1 WEEK GEBLOKKEERD"
-     }
-    ]
-   },
-   {
-    "text": "Het ongeluk in Fairfield laat zien waarom. Dat de bestuurder sliep, is nog niet bevestigd door de gegevens van de auto. Maar twee agenten raakten ernstig gewond, en de California Highway Patrol hield de bestuurder verantwoordelijk, niet Tesla.",
-    "img": [
-     "fsd-night-rain.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Interstate 80 Fairfield California",
-       "Interstate 80 Solano County"
-      ],
-      "want": "Interstate 80 near Fairfield, California, a freeway with traffic"
-     }
-    ],
-    "pop": [
-     {
-      "say": "Fairfield",
-      "show": "FAIRFIELD"
-     },
-     {
-      "say": "niet bevestigd",
-      "show": "NIET BEVESTIGD"
-     },
-     {
-      "say": "ernstig gewond",
-      "show": "2 AGENTEN GEWOND"
-     },
-     {
-      "say": "niet Tesla",
-      "show": "NIET TESLA"
-     }
-    ]
-   },
-   {
-    "text": "Eind 2025 zei Musk dat FSD appen zou toestaan, afhankelijk van het verkeer om je heen. Ook dan blijft de aansprakelijkheid bij wie achter het stuur zit. Vergelijk dat met Drive Pilot van Mercedes-Benz, een systeem van niveau 3. Op bepaalde snelwegen in Californië, onder de 64 kilometer per uur en bij goed weer, neemt Mercedes de verantwoordelijkheid over zolang het systeem rijdt. Slapen kan pas als de auto verantwoordelijk is, en niet de mens.",
-    "img": [
-     "fsd-4.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Mercedes-Benz Drive Pilot",
-       "Mercedes-Benz EQS 2023",
-       "Mercedes S-Class W223"
-      ],
-      "want": "a Mercedes-Benz EQS or S-Class, the cars that offer Drive Pilot"
-     }
-    ],
-    "pop": [
-     {
-      "say": "appen",
-      "show": "APPEN?"
-     },
-     {
-      "say": "aansprakelijkheid",
-      "show": "JIJ AANSPRAKELIJK"
-     },
-     {
-      "say": "niveau 3",
-      "show": "NIVEAU 3"
-     },
-     {
-      "say": "neemt Mercedes",
-      "show": "MERCEDES AANSPRAKELIJK"
-     },
-     {
-      "say": "de auto verantwoordelijk",
-      "show": "AUTO VERANTWOORDELIJK"
-     }
-    ]
-   },
-   {
-    "head": "Wanneer mag dutten dan wel?",
-    "img": [
-     "lib/cybercab-nap-highway.jpg"
-    ],
-    "pop": [
-     {
-      "say": "",
-      "show": "WANNEER WEL DUTTEN?"
-     }
-    ]
-   },
-   {
-    "text": "Pas als FSD zonder toezicht mag rijden. En dat wordt per plek beslist. Daarvoor moet eerst het nodige gebeuren.",
-    "img": [
-     "fsd-snow.jpg",
-     "fsd-roundabout-eu.jpg"
-    ],
-    "pop": [
-     {
-      "say": "zonder toezicht",
-      "show": "ZONDER TOEZICHT"
-     },
-     {
-      "say": "per plek",
-      "show": "PER PLEK"
-     }
-    ]
-   },
-   {
-    "key": "Bewijs",
-    "text": "Eén: bewijs. Genoeg gegevens over genoeg kilometers om te laten zien dat het systeem zonder menselijke back-up veiliger is. Ook in regen, 's nachts en bij wegwerkzaamheden.",
-    "img": [
-     "fsd-night-rain.jpg",
-     "lib/fsd-screen-rain-night.jpg"
-    ]
-   },
-   {
-    "key": "Toezichthouders",
-    "text": "Twee: toezichthouders. In Amerika verschillen de regels per staat. In Europa is tot nu toe alleen de versie met toezicht goedgekeurd, land voor land, te beginnen in Nederland.",
-    "img": [
-     "lib/eu-brussels-tesla.jpg"
-    ]
-   },
-   {
-    "key": "Aansprakelijkheid",
-    "text": "Drie: aansprakelijkheid. Tesla, en niet de bestuurder, moet de verantwoordelijkheid nemen zolang de auto rijdt.",
-    "img": [
-     "lib/robotaxi-fleet-dawn.jpg"
-    ]
-   },
-   {
-    "key": "Afgebakende zones",
-    "text": "En vier: afgebakende zones. Het begint in vastgelegde gebieden, niet overal tegelijk.",
-    "img": [
-     "robotaxi-app.jpg"
-    ]
-   },
-   {
-    "text": "Tesla heeft gezegd wanneer het hoopt te beginnen. Op de call van oktober 2026 zei Elluswamy dat de eerste auto's van klanten ergens rond het tweede kwartaal van volgend jaar zonder toezicht in Tesla's Robotaxi-zones zouden kunnen rijden. Dus rond het voorjaar van 2027. Tesla heeft al veel deadlines voor zelfrijden gemist, dus dit is een doel, en geen ingeloste belofte. Toch is er één plek waar mensen nu al rijden zonder iemand achter het stuur.",
-    "img": [
-     "lib/robotaxi-app-pickup.jpg",
-     "robotaxi-my-2.jpg"
-    ],
-    "pop": [
-     {
-      "say": "hoopt te beginnen",
-      "show": "HET DOEL"
-     },
-     {
-      "say": "auto's van klanten",
-      "show": "JOUW AUTO?"
-     },
-     {
-      "say": "voorjaar van 2027",
-      "show": "VOORJAAR 2027"
-     },
-     {
-      "say": "deadlines",
-      "show": "GEMISTE DEADLINES"
-     },
-     {
-      "say": "zonder iemand achter het stuur",
-      "show": "NIEMAND AAN STUUR"
-     }
-    ]
-   },
-   {
-    "head": "Waar rijden Tesla's nu al zonder iemand achter het stuur?",
-    "img": [
-     "lib/robotaxi-rear-passenger.jpg"
-    ],
-    "pop": [
-     {
-      "say": "",
-      "show": "NIEMAND AAN HET STUUR"
-     }
-    ]
-   },
-   {
-    "text": "In Tesla's eigen Robotaxi-dienst. Sinds 22 januari 2026 zit er bij een deel van de Robotaxi-ritten in Austin helemaal geen veiligheidsbegeleider meer in de auto. Volgens Tesla rijdt de dienst nu in 6 Amerikaanse steden. In Austin kun je ook de Cybercab bestellen, een tweezitter zonder stuur en pedalen.",
-    "img": [
-     "robotaxi-my-1.jpg",
-     "lib/cybercab-street-day.jpg",
-     "lib/cybercab-doors-open.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Austin Texas skyline",
-       "Congress Avenue Austin"
-      ],
-      "want": "the skyline or a downtown street of Austin, Texas"
-     }
-    ],
-    "pop": [
-     {
-      "say": "Robotaxi-dienst",
-      "show": "ROBOTAXI"
-     },
-     {
-      "say": "geen veiligheidsbegeleider",
-      "show": "GEEN BEGELEIDER"
-     },
-     {
-      "say": "6 Amerikaanse steden",
-      "show": "6 VS-STEDEN"
-     },
-     {
-      "say": "Cybercab",
-      "show": "CYBERCAB"
-     },
-     {
-      "say": "zonder stuur",
-      "show": "GEEN STUUR"
-     }
-    ]
-   },
-   {
-    "text": "Daar is de auto de bestuurder, en Tesla de vervoerder. Dus een passagier mag lezen, een film kijken, of ja, indutten. Tesla voegde zelfs een Calm Mode toe, die het scherm en de verlichting dimt.",
-    "img": [
-     "lib/cybercab-nap-two.jpg",
-     "lib/cybercab-nap-night.jpg",
-     "lib/cybercab-nap-arrival.jpg"
-    ],
-    "pop": [
-     {
-      "say": "de auto de bestuurder",
-      "show": "AUTO = BESTUURDER"
-     },
-     {
-      "say": "indutten",
-      "show": "INDUTTEN"
-     },
-     {
-      "say": "Calm Mode",
-      "show": "CALM MODE"
-     },
-     {
-      "say": "dimt",
-      "show": "LICHT GEDIMD"
-     }
-    ]
-   },
-   {
-    "text": "Dat is het echte verschil. De software die een Robotaxi bestuurt, is nauw verwant aan de FSD in je eigen auto. Maar de regels eromheen zijn dat niet. In een Robotaxi ben je passagier. In je eigen Tesla ben je de bestuurder, tot Tesla en de toezichthouders iets anders zeggen.",
-    "img": [
-     "robotaxi-vs-cybercab.jpg",
-     "lib/robotaxi-night-curb.jpg"
-    ],
-    "pop": [
-     {
-      "say": "echte verschil",
-      "show": "HET VERSCHIL"
-     },
-     {
-      "say": "nauw verwant",
-      "show": "VERWANTE SOFTWARE"
-     },
-     {
-      "say": "passagier",
-      "show": "PASSAGIER"
-     },
-     {
-      "say": "de bestuurder",
-      "show": "BESTUURDER"
-     }
-    ]
-   },
-   {
-    "head": "Wat betekent dit voor jou als Tesla-rijder?",
-    "img": [
-     "grok-car-voice.jpg"
-    ],
-    "pop": [
-     {
-      "say": "",
-      "show": "WAT BETEKENT DIT VOOR JOU?"
-     }
-    ]
-   },
-   {
-    "text": "Laat Grok plannen, laat FSD rijden, en houd zelf je ogen op de weg. Praten met de auto is een veilige manier om een bestemming in te stellen of een route te wijzigen, zonder op het scherm te prutsen. FSD kan je veel werk uit handen nemen.",
-    "img": [
-     "lib/grok-screen-drive.jpg",
-     "fsd-highway-sunset.jpg"
-    ],
-    "pop": [
-     {
-      "say": "Laat Grok plannen",
-      "show": "GROK PLANT"
-     },
-     {
-      "say": "laat FSD rijden",
-      "show": "FSD RIJDT"
-     },
-     {
-      "say": "ogen op de weg",
-      "show": "OGEN OP DE WEG"
-     },
-     {
-      "say": "prutsen",
-      "show": "NIET PRUTSEN"
-     }
-    ]
-   },
-   {
-    "text": "Maar de camera in de auto, de strikeouts en de wet gaan allemaal uit van één ding. Een wakkere bestuurder, die elk moment kan overnemen. Grok doet de mapping. Het napping is voorlopig voor een auto zonder stuur.",
-    "img": [
-     "lib/fsd-screen-highway.jpg",
-     "lib/cybercab-nap-highway.jpg",
-     "gen/grok-does-the-mapping-you-do-the-napping-tesla-fsd-sleep-explained.jpg"
-    ],
-    "pop": [
-     {
-      "say": "één ding",
-      "show": "ÉÉN DING"
-     },
-     {
-      "say": "wakkere bestuurder",
-      "show": "WAKKERE BESTUURDER"
-     },
-     {
-      "say": "doet de mapping",
-      "show": "GROK MAPT"
-     },
-     {
-      "say": "zonder stuur",
-      "show": "DUTTEN: ZONDER STUUR"
-     }
-    ]
-   }
-  ],
-  "yt_title_en": "Grok Does the Mapping, You Do the Napping? The Real Answer",
-  "yt_title_nl": "Grok Doet de Mapping, Jij Doet de Napping? Het Echte Antwoord"
- },
- "en": {
-  "title": "Grok does the mapping, you do the napping?",
-  "description": "Grok can plan your route and Tesla FSD can drive it, but you may not sleep at the wheel. What each system does, why napping is not allowed yet, and when it could be.",
-  "body": "<p>Ask Grok for a quiet route to the coast and your Tesla plans it. Tap Start Self-Driving and FSD (Supervised) drives it: the turns, the lane changes, the roundabouts. Tesla is also working on letting you talk to FSD directly, with commands like \"turn right here\". It starts to sound like having a chauffeur, and some drivers already treat it that way: last month a driver in California told police he had been asleep with FSD engaged when his Tesla hit a parked patrol car. The pairing of Grok and FSD feels like a self-driving car, but the two systems do very different jobs.</p>\n<h2>What does Grok actually do in your Tesla?</h2>\n<p><strong>It plans and talks; it does not drive.</strong> Grok is the AI assistant from xAI, built into Tesla's software since the summer of 2025 in the US and now available across Europe too. Since the 2025 Holiday Update it can handle navigation in plain language, and later updates gave it more control over the cabin. Things it can do today include:</p>\n<ul>\n<li><strong>Vague destinations:</strong> describe a place you barely remember, and it tries to find it.</li>\n<li><strong>Nearest stops:</strong> \"the nearest charger\" or a coffee stop as a waypoint before your destination.</li>\n<li><strong>Route style:</strong> ask for a scenic, winding route or a simple, low-stress one.</li>\n<li><strong>Car functions:</strong> calls, music, climate, and since the summer 2026 update owners report mirrors, wipers, seat heating and the glovebox.</li>\n<li><strong>Reminders:</strong> location-based reminders and the hands-free \"Hey Grok\" wake word, added in the 2026 Spring Update.</li>\n</ul>\n<p>Grok never touches the steering wheel or the brakes. Turning its plan into an actual drive is the job of a completely separate system.</p>\n<h2>So what does FSD do with Grok's plan?</h2>\n<p><strong>It drives the route, while you supervise.</strong> FSD (Supervised) follows whatever is in the navigation. It steers, brakes, changes lanes, takes junctions and roundabouts and can park at the end. So in practice Grok picks the where, and FSD handles the how.</p>\n<p>The link between the two is meant to get much tighter. In June 2026 Elon Musk said voice control of FSD through Grok would arrive \"in about 3 months or so\", and in July Tesla's AI chief Ashok Elluswamy replied \"Working on it\" to an owner who wanted to direct the car to a specific driveway by voice. On its October 2026 earnings call Tesla also said it is building its own AI-based maps, starting with FSD v15. Until such features appear in the release notes in your own car, treat the timing as a statement, not a fact. But even a car that takes spoken orders and drives the whole route still needs someone awake behind the wheel.</p>\n<h2>Why is napping not allowed yet?</h2>\n<p><strong>Because you are still the driver, legally and technically.</strong> FSD (Supervised) is a level 2 driver-assistance system. Tesla's own support page states that the current features \"do not make the vehicle autonomous\" and that you are responsible for the speed and control of the car at all times. A cabin camera checks that you watch the road. Ignore the warnings and FSD switches off for the rest of the trip; collect too many of these strikeouts and the feature is suspended for a week.</p>\n<p>The Fairfield crash shows why. The driver's account that he was asleep has not been confirmed by the car's data, but two officers were seriously hurt, and the California Highway Patrol held the driver responsible, not Tesla. Musk said in late 2025 that FSD would allow texting \"depending on context\" of the traffic around you. Even then, the liability stays with the person behind the wheel. Compare that with Mercedes-Benz Drive Pilot, a level 3 system: on certain California highways, below 40 mph and in good conditions, Mercedes takes responsibility while it drives. Sleeping only becomes possible when the car, not the person, is the one responsible.</p>\n<h2>So when could napping be allowed?</h2>\n<p><strong>Only when FSD becomes unsupervised, and that is decided place by place.</strong> Several things have to happen first:</p>\n<ul>\n<li><strong>Proof:</strong> enough data from enough miles to show the system is safer without a human backup, in rain, at night and at road works.</li>\n<li><strong>Regulators:</strong> in the US the rules differ by state; in Europe only the supervised version has been approved so far, country by country.</li>\n<li><strong>Liability:</strong> Tesla, not the driver, has to accept responsibility while the car drives.</li>\n<li><strong>Geofences:</strong> it will start in mapped zones, not everywhere at once.</li>\n</ul>\n<p>Tesla has said when it hopes to start. On the October 2026 call, Elluswamy said the first customer cars could drive unsupervised inside Tesla's Robotaxi zones \"somewhere around Q2 next year\", so around the spring of 2027. Tesla has missed many self-driving deadlines before, so this is a target, not a promise kept. There is, however, one place where people already ride with nobody at the wheel.</p>\n<h2>Where do Teslas already drive with nobody at the wheel?</h2>\n<p><strong>In Tesla's own Robotaxi service.</strong> Since January 22, 2026, some Robotaxi rides in Austin have had no safety monitor in the car at all, and Tesla says the service now runs in six US cities. In Austin riders can also hail the Cybercab, a two-seater without a steering wheel or pedals. Here the car is the driver, and Tesla is the operator, so a passenger can read, watch a film or, yes, doze off. Tesla even added a Calm Mode that dims the screen and cabin lights.</p>\n<p>That is the real difference: the software is closely related, the rules are not. In a Robotaxi you are a passenger. In your own Tesla, you are the driver until Tesla and the regulators say otherwise.</p>\n<h2>What does this mean for you as a Tesla driver?</h2>\n<p><strong>Let Grok plan, let FSD drive, and keep your own eyes on the road.</strong> Talking to the car is a safe way to set a destination or change a route without fiddling with the screen. But the cabin camera, the strikeouts and the law all assume one thing: an awake driver ready to take over at any moment. Grok can do the mapping. For now, the napping belongs in a car with no steering wheel.</p>"
- },
- "nl": {
-  "title": "Grok does the mapping, you do the napping? Waarom slapen in je Tesla nog niet mag",
-  "description": "Grok plant je route en Tesla FSD rijdt hem, maar slapen achter het stuur mag niet. Wat beide systemen doen, waarom dutten nog verboden is en wanneer het wel kan.",
-  "body": "<p>Vraag Grok om een rustige route naar de kust en je Tesla plant hem. Tik op Start Self-Driving en FSD (Supervised) rijdt hem: de bochten, het wisselen van rijstrook, de rotondes. Tesla werkt er bovendien aan dat je FSD straks rechtstreeks kunt aanspreken, met opdrachten als \"hier rechtsaf\". Het klinkt als een eigen chauffeur, en sommige bestuurders behandelen het ook zo: vorige maand vertelde een automobilist in Californië de politie dat hij sliep met FSD aan, toen zijn Tesla op een geparkeerde politieauto botste. Grok en FSD samen voelen als een zelfrijdende auto, maar de twee systemen doen iets heel anders.</p>\n<h2>Wat doet Grok eigenlijk in je Tesla?</h2>\n<p><strong>Plannen en praten; rijden doet Grok niet.</strong> Grok is de AI-assistent van xAI. Hij zit sinds de zomer van 2025 in de Tesla-software in de VS en is inmiddels ook in heel Europa beschikbaar, dus ook in Nederland en België. Sinds de Holiday Update van 2025 regelt hij navigatie in gewone taal, en latere updates gaven hem meer grip op het interieur. Wat hij nu kan:</p>\n<ul>\n<li><strong>Vage bestemmingen:</strong> beschrijf een plek die je je maar half herinnert, en hij probeert hem te vinden.</li>\n<li><strong>Dichtstbijzijnde stops:</strong> \"de dichtstbijzijnde laadpaal\" of een koffiestop als tussenstop vóór je bestemming.</li>\n<li><strong>Soort route:</strong> vraag om een mooie, bochtige route of juist een simpele, rustige.</li>\n<li><strong>Autofuncties:</strong> bellen, muziek, klimaat, en sinds de zomerupdate van 2026 volgens eigenaren ook spiegels, ruitenwissers, stoelverwarming en het dashboardkastje.</li>\n<li><strong>Herinneringen:</strong> herinneringen op locatie en het handsfree \"Hey Grok\", sinds de Spring Update van 2026.</li>\n</ul>\n<p>Grok komt nooit aan het stuur of de rem. Zijn plan omzetten in een echte rit is het werk van een heel ander systeem.</p>\n<h2>Wat doet FSD dan met het plan van Grok?</h2>\n<p><strong>Het rijdt de route, terwijl jij toezicht houdt.</strong> FSD (Supervised) volgt wat er in de navigatie staat. Het stuurt, remt, wisselt van rijstrook, neemt kruispunten en rotondes en kan aan het eind parkeren. In de praktijk kiest Grok dus het waarheen, en FSD regelt het hoe.</p>\n<p>De band tussen die twee moet veel nauwer worden. In juni 2026 zei Elon Musk dat je FSD via Grok met je stem zou kunnen besturen \"over ongeveer 3 maanden\", en in juli antwoordde Tesla's AI-baas Ashok Elluswamy \"Working on it\" aan een eigenaar die zijn auto met zijn stem naar een bepaalde oprit wilde sturen. Op de kwartaalcall van oktober 2026 zei Tesla ook dat het eigen kaarten op basis van AI bouwt, te beginnen met FSD v15. Zolang zulke functies niet in de release notes van je eigen auto staan, is de timing een uitspraak en geen feit. Maar ook een auto die gesproken opdrachten opvolgt en de hele route rijdt, heeft iemand nodig die wakker achter het stuur zit.</p>\n<h2>Waarom mag je nog niet slapen?</h2>\n<p><strong>Omdat jij nog steeds de bestuurder bent, juridisch en technisch.</strong> FSD (Supervised) is een rijhulpsysteem van niveau 2. Op Tesla's eigen supportpagina staat dat de huidige functies de auto niet autonoom maken en dat jij altijd verantwoordelijk bent voor de snelheid en de besturing. Een camera in het interieur controleert of je op de weg let. Negeer je de waarschuwingen, dan schakelt FSD uit voor de rest van de rit; verzamel je te veel van die strikeouts, dan wordt de functie een week geblokkeerd.</p>\n<p>Het ongeluk in Fairfield laat zien waarom. Dat de bestuurder sliep, is nog niet bevestigd door de gegevens van de auto, maar twee agenten raakten ernstig gewond, en de California Highway Patrol hield de bestuurder verantwoordelijk, niet Tesla. Musk zei eind 2025 dat FSD appen zou toestaan, afhankelijk van het verkeer om je heen. Ook dan blijft de aansprakelijkheid bij wie achter het stuur zit. Vergelijk dat met Drive Pilot van Mercedes-Benz, een systeem van niveau 3: op bepaalde snelwegen in Californië, onder de 40 mijl per uur (zo'n 64 km/u) en bij goed weer neemt Mercedes de verantwoordelijkheid over zolang het systeem rijdt. Slapen kan pas als de auto verantwoordelijk is, en niet de mens.</p>\n<h2>Wanneer mag dutten dan wel?</h2>\n<p><strong>Pas als FSD zonder toezicht mag rijden, en dat wordt per plek beslist.</strong> Daarvoor moet eerst het nodige gebeuren:</p>\n<ul>\n<li><strong>Bewijs:</strong> genoeg gegevens over genoeg kilometers om te laten zien dat het systeem zonder menselijke back-up veiliger is, ook in regen, 's nachts en bij wegwerkzaamheden.</li>\n<li><strong>Toezichthouders:</strong> in de VS verschillen de regels per staat; in Europa is tot nu toe alleen de versie met toezicht goedgekeurd, land voor land, te beginnen in Nederland.</li>\n<li><strong>Aansprakelijkheid:</strong> Tesla, en niet de bestuurder, moet de verantwoordelijkheid nemen zolang de auto rijdt.</li>\n<li><strong>Afgebakende zones:</strong> het begint in vastgelegde gebieden, niet overal tegelijk.</li>\n</ul>\n<p>Tesla heeft gezegd wanneer het hoopt te beginnen. Op de call van oktober 2026 zei Elluswamy dat de eerste auto's van klanten \"ergens rond het tweede kwartaal van volgend jaar\" zonder toezicht in Tesla's Robotaxi-zones zouden kunnen rijden, dus rond het voorjaar van 2027. Tesla heeft al veel deadlines voor zelfrijden gemist, dus dit is een doel en geen ingeloste belofte. Toch is er één plek waar mensen nu al rijden zonder iemand achter het stuur.</p>\n<h2>Waar rijden Tesla's nu al zonder iemand achter het stuur?</h2>\n<p><strong>In Tesla's eigen Robotaxi-dienst.</strong> Sinds 22 januari 2026 zit er bij een deel van de Robotaxi-ritten in Austin helemaal geen veiligheidsbegeleider meer in de auto, en volgens Tesla rijdt de dienst nu in zes Amerikaanse steden. In Austin kun je ook de Cybercab bestellen, een tweezitter zonder stuur en pedalen. Daar is de auto de bestuurder en Tesla de vervoerder, dus een passagier mag lezen, een film kijken of, ja, indutten. Tesla voegde zelfs een Calm Mode toe die het scherm en de verlichting dimt.</p>\n<p>Dat is het echte verschil: de software is nauw verwant, de regels zijn dat niet. In een Robotaxi ben je passagier. In je eigen Tesla ben je de bestuurder, tot Tesla en de toezichthouders iets anders zeggen.</p>\n<h2>Wat betekent dit voor jou als Tesla-rijder?</h2>\n<p><strong>Laat Grok plannen, laat FSD rijden en houd zelf je ogen op de weg.</strong> Praten met de auto is een veilige manier om een bestemming in te stellen of een route te wijzigen zonder op het scherm te prutsen. Maar de camera in de auto, de strikeouts en de wet gaan allemaal uit van één ding: een wakkere bestuurder die elk moment kan overnemen. Grok doet de mapping. Het napping is voorlopig voor een auto zonder stuur.</p>"
- }
+    "title": "Grok does the mapping, you do the napping? Waarom slapen in je Tesla nog niet mag",
+    "description": "Grok plant je route en Tesla FSD rijdt hem, maar slapen achter het stuur mag niet. Wat beide systemen doen, waarom dutten nog verboden is en wanneer het wel kan.",
+    "body": "<p>Vraag Grok om een rustige route naar de kust en je Tesla plant hem. Tik op Start Self-Driving en FSD (Supervised) rijdt hem: de bochten, het wisselen van rijstrook, de rotondes. Tesla werkt er bovendien aan dat je FSD straks rechtstreeks kunt aanspreken, met opdrachten als \"hier rechtsaf\". Het klinkt als een eigen chauffeur, en sommige bestuurders behandelen het ook zo: vorige maand vertelde een automobilist in Californië de politie dat hij sliep met FSD aan, toen zijn Tesla op een geparkeerde politieauto botste. Grok en FSD samen voelen als een zelfrijdende auto, maar de twee systemen doen iets heel anders.</p>\n<h2>Wat doet Grok eigenlijk in je Tesla?</h2>\n<p><strong>Plannen en praten; rijden doet Grok niet.</strong> Grok is de AI-assistent van xAI. Hij zit sinds de zomer van 2025 in de Tesla-software in de VS en is inmiddels ook in heel Europa beschikbaar, dus ook in Nederland en België. Sinds de Holiday Update van 2025 regelt hij navigatie in gewone taal, en latere updates gaven hem meer grip op het interieur. Wat hij nu kan:</p>\n<ul>\n<li><strong>Vage bestemmingen:</strong> beschrijf een plek die je je maar half herinnert, en hij probeert hem te vinden.</li>\n<li><strong>Dichtstbijzijnde stops:</strong> \"de dichtstbijzijnde laadpaal\" of een koffiestop als tussenstop vóór je bestemming.</li>\n<li><strong>Soort route:</strong> vraag om een mooie, bochtige route of juist een simpele, rustige.</li>\n<li><strong>Autofuncties:</strong> bellen, muziek, klimaat, en sinds de zomerupdate van 2026 volgens eigenaren ook spiegels, ruitenwissers, stoelverwarming en het dashboardkastje.</li>\n<li><strong>Herinneringen:</strong> herinneringen op locatie en het handsfree \"Hey Grok\", sinds de Spring Update van 2026.</li>\n</ul>\n<p>Grok komt nooit aan het stuur of de rem. Zijn plan omzetten in een echte rit is het werk van een heel ander systeem.</p>\n<h2>Wat doet FSD dan met het plan van Grok?</h2>\n<p><strong>Het rijdt de route, terwijl jij toezicht houdt.</strong> FSD (Supervised) volgt wat er in de navigatie staat. Het stuurt, remt, wisselt van rijstrook, neemt kruispunten en rotondes en kan aan het eind parkeren. In de praktijk kiest Grok dus het waarheen, en FSD regelt het hoe.</p>\n<p>De band tussen die twee moet veel nauwer worden. In juni 2026 zei Elon Musk dat je FSD via Grok met je stem zou kunnen besturen \"over ongeveer 3 maanden\", en in juli antwoordde Tesla's AI-baas Ashok Elluswamy \"Working on it\" aan een eigenaar die zijn auto met zijn stem naar een bepaalde oprit wilde sturen. Op de kwartaalcall van oktober 2026 zei Tesla ook dat het eigen kaarten op basis van AI bouwt, te beginnen met FSD v15. Zolang zulke functies niet in de release notes van je eigen auto staan, is de timing een uitspraak en geen feit. Maar ook een auto die gesproken opdrachten opvolgt en de hele route rijdt, heeft iemand nodig die wakker achter het stuur zit.</p>\n<h2>Waarom mag je nog niet slapen?</h2>\n<p><strong>Omdat jij nog steeds de bestuurder bent, juridisch en technisch.</strong> FSD (Supervised) is een rijhulpsysteem van niveau 2. Op Tesla's eigen supportpagina staat dat de huidige functies de auto niet autonoom maken en dat jij altijd verantwoordelijk bent voor de snelheid en de besturing. Een camera in het interieur controleert of je op de weg let. Negeer je de waarschuwingen, dan schakelt FSD uit voor de rest van de rit; verzamel je te veel van die strikeouts, dan wordt de functie een week geblokkeerd.</p>\n<p>Het ongeluk in Fairfield laat zien waarom. Dat de bestuurder sliep, is nog niet bevestigd door de gegevens van de auto, maar twee agenten raakten ernstig gewond, en de California Highway Patrol hield de bestuurder verantwoordelijk, niet Tesla. Musk zei eind 2025 dat FSD appen zou toestaan, afhankelijk van het verkeer om je heen. Ook dan blijft de aansprakelijkheid bij wie achter het stuur zit. Vergelijk dat met Drive Pilot van Mercedes-Benz, een systeem van niveau 3: op bepaalde snelwegen in Californië, onder de 40 mijl per uur (zo'n 64 km/u) en bij goed weer neemt Mercedes de verantwoordelijkheid over zolang het systeem rijdt. Slapen kan pas als de auto verantwoordelijk is, en niet de mens.</p>\n<h2>Wanneer mag dutten dan wel?</h2>\n<p><strong>Pas als FSD zonder toezicht mag rijden, en dat wordt per plek beslist.</strong> Daarvoor moet eerst het nodige gebeuren:</p>\n<ul>\n<li><strong>Bewijs:</strong> genoeg gegevens over genoeg kilometers om te laten zien dat het systeem zonder menselijke back-up veiliger is, ook in regen, 's nachts en bij wegwerkzaamheden.</li>\n<li><strong>Toezichthouders:</strong> in de VS verschillen de regels per staat; in Europa is tot nu toe alleen de versie met toezicht goedgekeurd, land voor land, te beginnen in Nederland.</li>\n<li><strong>Aansprakelijkheid:</strong> Tesla, en niet de bestuurder, moet de verantwoordelijkheid nemen zolang de auto rijdt.</li>\n<li><strong>Afgebakende zones:</strong> het begint in vastgelegde gebieden, niet overal tegelijk.</li>\n</ul>\n<p>Tesla heeft gezegd wanneer het hoopt te beginnen. Op de call van oktober 2026 zei Elluswamy dat de eerste auto's van klanten \"ergens rond het tweede kwartaal van volgend jaar\" zonder toezicht in Tesla's Robotaxi-zones zouden kunnen rijden, dus rond het voorjaar van 2027. Tesla heeft al veel deadlines voor zelfrijden gemist, dus dit is een doel en geen ingeloste belofte. Toch is er één plek waar mensen nu al rijden zonder iemand achter het stuur.</p>\n<h2>Waar rijden Tesla's nu al zonder iemand achter het stuur?</h2>\n<p><strong>In Tesla's eigen Robotaxi-dienst.</strong> Sinds 22 januari 2026 zit er bij een deel van de Robotaxi-ritten in Austin helemaal geen veiligheidsbegeleider meer in de auto, en volgens Tesla rijdt de dienst nu in zes Amerikaanse steden. In Austin kun je ook de Cybercab bestellen, een tweezitter zonder stuur en pedalen. Daar is de auto de bestuurder en Tesla de vervoerder, dus een passagier mag lezen, een film kijken of, ja, indutten. Tesla voegde zelfs een Calm Mode toe die het scherm en de verlichting dimt.</p>\n<p>Dat is het echte verschil: de software is nauw verwant, de regels zijn dat niet. In een Robotaxi ben je passagier. In je eigen Tesla ben je de bestuurder, tot Tesla en de toezichthouders iets anders zeggen.</p>\n<h2>Wat betekent dit voor jou als Tesla-rijder?</h2>\n<p><strong>Laat Grok plannen, laat FSD rijden en houd zelf je ogen op de weg.</strong> Praten met de auto is een veilige manier om een bestemming in te stellen of een route te wijzigen zonder op het scherm te prutsen. Maar de camera in de auto, de strikeouts en de wet gaan allemaal uit van één ding: een wakkere bestuurder die elk moment kan overnemen. Grok doet de mapping. Het napping is voorlopig voor een auto zonder stuur.</p>"
+  },
+  "image": "gen/grok-does-the-mapping-you-do-the-napping-tesla-fsd-sleep-explained.jpg"
 }

@@ -46,13 +46,19 @@ features; C = incident or specific event, must not look like an authentic photo 
 
 Judge three things SEPARATELY:
 1. visual: 0-10 for photorealism, sharpness, composition, colour and light (7 = good enough to publish).
-2. technical_pass: false if ANY critical error: wrong model, generation or variant; mixed generations; invented,
-   missing or misplaced charging port, doors, door hinges, lights, wheels, screens, cameras or other parts;
-   wrong proportions; readable or garbled text, invented logos, licence plates, watermarks; obvious AI artefacts
-   (melted parts, extra limbs, impossible geometry). List every error found.
+2. technical: separate CRITICAL errors from MINOR ones.
+   CRITICAL (a Tesla owner would immediately call it wrong): wrong model, generation or variant; mixed
+   generations; a charging port, door, door hinge, wheel or screen in the wrong place or of the wrong type;
+   a missing steering wheel where there must be one (or one where there must be none); clearly wrong
+   proportions; readable or garbled text, invented logos or emblems, licence plates, watermarks; obvious AI
+   artefacts (melted parts, extra limbs, impossible geometry).
+   MINOR (only an expert with the reference side by side would notice): small differences in pin layout, light
+   guide pattern, trim, panel gaps, a missing small logo, slightly different screen size.
+   technical_pass = false only when there is at least one CRITICAL error.
 3. journalistic_pass: false if it could be mistaken for documentary evidence of a real event, shows a real
    recognisable person, or shows unconfirmed prototype features as fact. List the issues.
-Answer only JSON: {{"visual": n, "technical_pass": true/false, "technical_errors": [...],
+Answer only JSON: {{"visual": n, "technical_pass": true/false, "technical_errors": [critical only],
+"minor_issues": [...],
 "journalistic_pass": true/false, "journalistic_issues": [...], "notes": "one short line"}}"""
 
 

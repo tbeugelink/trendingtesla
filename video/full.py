@@ -165,7 +165,7 @@ STOP = set("so the a an of to in on for with such and or but its it is was were 
            "would could should did does do had has have get got really still actually".split())
 
 
-GENERIC = {"tesla", "tesla's", "motors", "company", "it", "its", "but", "and", "then", "there", "here", "back", "that", "this"}
+GENERIC = {"tesla", "tesla's", "motors", "company", "musk", "musk's", "elon", "what", "how", "why", "when", "who", "it", "its", "but", "and", "then", "there", "here", "back", "that", "this"}
 MONTHS = "january february march april may june july august september october november december".split()
 
 
@@ -173,9 +173,11 @@ def phrase(ws, k):
     """A clean key word from the spoken words around ws[k]: a number with its unit ("6,831 CELLS"), a year alone,
     a two-word name ("SANTA MONICA"), never joined across punctuation."""
     w = ws[k][0]
-    c = re.sub(r"[^\w$%,.']", "", w).strip(".,;'")
+    c = re.sub(r"'s$", "", re.sub(r"[^\w$%,.'-]", "", w).strip(".,;'-"))
     nxt = ws[k + 1][0] if k + 1 < len(ws) else ""
-    nc = re.sub(r"[^\w$%']", "", nxt)
+    nc = re.sub(r"[^\w$%'-]", "", nxt).strip("-")
+    if c.lower() == "model" and re.fullmatch(r"[3SXY]", nc):
+        return f"MODEL {nc}"
     ends = w[-1:] in ",.;:!?"
     if re.fullmatch(r"(19|20)\d\d", c):
         return c
@@ -188,14 +190,17 @@ def phrase(ws, k):
     return c.upper()
 
 
-def strength(w):
+def strength(w, prev=""):
     """How strong a spoken word is as a key word: numbers and names first, then long words; stop words 0."""
     c = re.sub(r"[^\w$%]", "", w)
     if not c or c.lower() in STOP or c.lower() in GENERIC or c.lower() in MONTHS or len(c) < 3 and not c[0].isdigit():
         return 0
     if re.fullmatch(r"\d{1,2}", c):  # a lone small number ("1", "3") says nothing on its own
         return 1
-    return 4 if re.search(r"\d", c) else 3 if c[0].isupper() else 1 + len(c) / 6
+    if c.lower() == "model":
+        return 3
+    sentence_start = not prev or prev[-1:] in ".!?"
+    return 4 if re.search(r"\d", c) else 3 if c[0].isupper() and not sentence_start else 1 + len(c) / 6
 
 
 def short_head(txt):
@@ -589,8 +594,9 @@ def render(a, lang, pieces, segs, place, words, total, end_start, audio):
                 cand = [k for k, w in enumerate(ws) if last + 0.8 <= w[1] - LEAD <= nxt - 0.8]
                 if not cand:
                     break
-                k = max(cand, key=lambda k: strength(ws[k][0]))
-                if strength(ws[k][0]) < 2.5:  # nothing strong enough: better the last key word a bit longer
+                sc = lambda k: strength(ws[k][0], ws[k - 1][0] if k else "")
+                k = max(cand, key=sc)
+                if sc(k) < 2.5:  # nothing strong enough: better the last key word a bit longer
                     break
                 show = phrase(ws, k)
                 extra.append((max(ws[k][1] - LEAD, label_end), None, pop_overlay(show)))

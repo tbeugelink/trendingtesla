@@ -1,0 +1,1696 @@
+{
+  "slug": "spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story",
+  "date": "2026-11-02",
+  "time": "21:23",
+  "category": "spacex",
+  "sources": [
+    {
+      "title": "Scientific American: SpaceX Catches a Falling Starship, a First in Spaceflight History",
+      "url": "https://www.scientificamerican.com/article/spacex-catches-a-falling-starship-a-first-in-spaceflight-history/"
+    },
+    {
+      "title": "Spaceflight Now: Live coverage, SpaceX to attempt first booster catch during Starship Flight 5",
+      "url": "https://spaceflightnow.com/2024/10/13/live-coverage-spacex-to-launch-5th-flight-test-of-starship-from-starbase-in-southern-texas/"
+    },
+    {
+      "title": "TechCrunch: Elon Musk says SpaceX will attempt to recover Super Heavy rocket by catching it with launch tower",
+      "url": "https://techcrunch.com/2020/12/30/elon-musk-says-spacex-will-attempt-to-recover-super-heavy-rocket-by-catching-it-with-launch-tower"
+    },
+    {
+      "title": "Interesting Engineering: Starship Flight 15, launch date, recovery goals and key tests",
+      "url": "https://interestingengineering.com/space/spacex-starship-flight-15-launch-date-objectives"
+    }
+  ],
+  "images": [
+    "lib/starship-booster-catch.jpg",
+    "lib/starship-pad.jpg",
+    "lib/starship-launch.jpg",
+    "spacex-4.jpg"
+  ],
+  "gen_image": {
+    "prompt": "Close, dramatic low-angle shot of a soot-streaked stainless steel Super Heavy rocket booster held high between the two giant catch arms of its launch tower at Starbase, Texas, moments after a catch, at sunrise on a clear autumn morning; wisps of vapour and steam drifting off the booster's base, warm golden light on the steel; colourful but natural with yellow sunlight, red-orange glow and a deep blue sky as accents",
+    "subject": "SpaceX Super Heavy booster (the first stage of Starship): a tall, plain cylindrical stainless steel rocket stage about 9 m wide and 71 m tall, four large grid fins near the top, a ring of many Raptor engines at the base, soot marks on its lower half; held by the launch tower's two horizontal catch arms ('chopsticks') that stick out from one side of a tall square steel lattice tower; the booster hangs beside the tower, never on legs (it has no landing legs)",
+    "refs": [
+      {
+        "src": "lib/starship-booster-catch.jpg"
+      },
+      {
+        "commons": "Super Heavy booster catch Starbase"
+      }
+    ],
+    "profile": "cinematic",
+    "describe": "a Super Heavy booster held by the launch tower's chopstick arms at sunrise, Starbase",
+    "extra": [
+      {
+        "prompt": "Wide view from the sandy beach at dusk across the water toward the floodlit launch tower at Starbase, its two catch arms open and empty, waiting; a full Starship rocket stands on the neighbouring pad in the distance; calm sea, dune grass in the foreground, blue hour sky with a band of orange",
+        "describe": "the launch tower's chopstick arms open and waiting at dusk, seen from the beach"
+      },
+      {
+        "prompt": "Side view from a distance of a Super Heavy booster descending on a few glowing engines beside the tall launch tower, just before the arms close, early morning haze, bright engine flame reflecting on the steel, a plume of exhaust below",
+        "describe": "a Super Heavy booster slowing on its engines beside the tower just before the catch"
+      }
+    ]
+  },
+  "label": {
+    "style": "c",
+    "en": {
+      "sub": "HOW DO YOU CATCH",
+      "text": "A 232-FT ROCKET?"
+    },
+    "nl": {
+      "sub": "HOE VANG JE",
+      "text": "EEN RAKET VAN 71 M?"
+    }
+  },
+  "en": {
+    "title": "How SpaceX caught a 232-foot rocket with 'chopsticks': the story of the first Super Heavy catch",
+    "description": "Super Heavy was built without landing legs, betting everything on a tower that could catch it in midair. How the idea was born, how the first catch in October 2024 worked, and why it matters for every Starship flight since.",
+    "body": "<p>On the morning of October 13, 2024, a rocket booster taller than a 20-storey building fell back toward the tower it had launched from only minutes earlier. It slowed on its engines, slid sideways between two giant steel arms and stopped. Nobody had ever caught a rocket like that. SpaceX had bet the design of its biggest booster on this moment: Super Heavy has no landing legs at all. If the arms could not catch it, the plan for a fully reusable Starship had a hole right in the middle.</p>\n<h2>Why would anyone build a rocket without legs?</h2>\n<p><strong>To save weight, money and time.</strong> The idea went public on December 30, 2020, when Elon Musk wrote that SpaceX would try to catch Super Heavy with the arm of its launch tower. Dropping the legs had three big advantages:</p>\n<ul><li><strong>Weight:</strong> every kilogram of landing gear is a kilogram that cannot carry cargo to orbit.</li><li><strong>Cost:</strong> legs are expensive hardware that has to be built, checked and repaired.</li><li><strong>Speed:</strong> a booster caught by the tower is already where it needs to be. Musk said it could go straight back onto the launch mount and be ready to fly again in under an hour.</li></ul>\n<p>Musk nicknamed the tower Mechazilla, and its two catch arms soon became known as the chopsticks. The idea was easy to draw and frightening to do. A booster about 71 metres (232 feet) tall, coming back from the edge of space, had to stop within reach of two arms, right next to the only pad that could launch the whole rocket. One mistake could destroy not just the booster, but the tower SpaceX needed for every future flight.</p>\n<h2>So how did SpaceX decide a catch was safe enough to try?</h2>\n<p><strong>With thousands of checks and one human decision.</strong> Before Flight 5, SpaceX said a catch needed thousands of separate vehicle and pad conditions to be met. The booster would only head for the tower after a manual command from the Flight Director, sent before the end of the boostback burn, the engine firing that turns the booster back toward Texas. Without that command, or if the automatic health checks found a problem, the booster would steer away and make a soft splashdown in the Gulf of Mexico instead.</p>\n<p>The rehearsals had already happened at sea. On Flight 4 in June 2024, the booster came down gently in the Gulf, right on target; SpaceX's Bill Gerstenmaier later said it hit its spot with about half a centimetre of accuracy. SpaceX said the rocket for Flight 5 was ready in early August. The Federal Aviation Administration still had to approve a changed launch licence, and it had warned this could take until late November. SpaceX called the extra environmental review \"superfluous\". The approval came weeks earlier than that, and the launch was set for a Sunday morning. Then the booster had a few minutes to prove that the whole idea worked.</p>\n<h2>What happened in those seven minutes?</h2>\n<p><strong>Exactly what the drawings promised.</strong> Starship lifted off from Starbase in South Texas at about 7:25 a.m. local time. After the two stages separated, the booster flipped around, fired its engines to head home, and the Flight Director gave the go. About seven minutes after liftoff, Booster 12 came down beside the tower on its engines, slowed almost to a stop and moved sideways into the open arms. The arms closed around it. The engines shut down, and the booster hung there, held by the tower, scorched but in one piece. On SpaceX's livestream, engineer Kate Tice called it a day for the engineering history books.</p>\n<p>The upper stage had its own job that morning. About 65 minutes after liftoff it came down over the Indian Ocean, fired three of its engines to hover just above the water, then tipped over and exploded. SpaceX had never planned to recover it. One catch could still be luck, and the next flights showed how thin the margins were.</p>\n<h2>Was the first catch just luck?</h2>\n<p><strong>No, but the next ones were not automatic either.</strong> On Flight 6 in November 2024, the booster flew back, but the catch was called off because of concerns about the tower's hardware, and the booster went into the Gulf. That was the checklist doing its job: it chose a safe splashdown over a risky catch. On Flight 7, on January 16, 2025, the chopsticks caught a booster for the second time, and on Flight 8 in March 2025 for the third. In a few months, a world first had turned into something SpaceX simply plans for. The booster is only half of the rocket, though, and the other half is much harder to catch.</p>\n<h2>So why does that first catch still matter?</h2>\n<p><strong>Because the next catch is the ship itself.</strong> For Flight 15, planned for November 2026, SpaceX wants to catch both stages: Booster 22 and, for the first time, the Starship upper stage, Ship 42. The ship returns from orbit through the full heat of re-entry, which makes it a far harder catch than the booster. Only when both stages come back to the tower can Starship become the fully and rapidly reusable rocket that SpaceX needs for cheap flights to the Moon and Mars.</p>\n<p>It matters for Tesla too. The two companies are studying a possible merger, so a successful double catch is also news for Tesla shareholders. But the lasting lesson is older than any deal. On that October morning in 2024, a rocket without legs proved that the strangest part of the plan could work. Everything SpaceX wants to do next starts with that catch.</p>"
+  },
+  "nl": {
+    "title": "Hoe SpaceX een raket van 71 meter met 'eetstokjes' opving: het verhaal van de eerste Super Heavy-vangst",
+    "description": "Super Heavy werd gebouwd zonder landingspoten, met alles ingezet op een toren die hem in de lucht kon vangen. Hoe het idee ontstond, hoe de eerste vangst in oktober 2024 lukte en waarom die nog steeds telt.",
+    "body": "<p>Op de ochtend van 13 oktober 2024 viel een raketbooster, hoger dan een flat van twintig verdiepingen, terug naar de toren waar hij een paar minuten eerder van was gelanceerd. Hij remde af op zijn motoren, schoof zijwaarts tussen twee enorme stalen armen en stond stil. Nog nooit had iemand een raket zo opgevangen. SpaceX had het ontwerp van zijn grootste booster op dit moment gebouwd: Super Heavy heeft helemaal geen landingspoten. Als de armen hem niet konden vangen, zat er een gat midden in het plan voor een volledig herbruikbare Starship.</p>\n<h2>Waarom zou je een raket zonder poten bouwen?</h2>\n<p><strong>Om gewicht, geld en tijd te sparen.</strong> Het idee werd op 30 december 2020 bekend, toen Elon Musk schreef dat SpaceX zou proberen Super Heavy op te vangen met de arm van de lanceertoren. Zonder poten had je drie grote voordelen:</p>\n<ul><li><strong>Gewicht:</strong> elke kilo aan landingsgestel is een kilo die geen lading naar de ruimte kan brengen.</li><li><strong>Kosten:</strong> poten zijn dure onderdelen die gebouwd, gecontroleerd en gerepareerd moeten worden.</li><li><strong>Snelheid:</strong> een booster die door de toren wordt gevangen, staat al op de goede plek. Volgens Musk kon hij zo terug op het lanceerplatform en binnen een uur weer klaar zijn om te vliegen.</li></ul>\n<p>Musk gaf de toren de bijnaam Mechazilla, en de twee vangarmen werden al snel de eetstokjes genoemd. Het idee was makkelijk te tekenen en doodeng om uit te voeren. Een booster van zo'n 71 meter hoog, terug van de rand van de ruimte, moest stoppen binnen bereik van twee armen, vlak naast het enige platform dat de hele raket kon lanceren. Eén fout kon niet alleen de booster vernielen, maar ook de toren die SpaceX voor elke volgende vlucht nodig had.</p>\n<h2>Hoe besloot SpaceX dan dat een vangpoging veilig genoeg was?</h2>\n<p><strong>Met duizenden controles en één menselijk besluit.</strong> Voor vlucht 5 liet SpaceX weten dat er voor een vangpoging duizenden aparte voorwaarden aan raket en lanceerplatform moesten kloppen. De booster zou pas naar de toren koersen na een handmatig commando van de Flight Director, verstuurd voor het einde van de boostback burn: de motorstoot die de booster terugstuurt naar Texas. Kwam dat commando niet, of vonden de automatische controles een probleem, dan zou de booster afbuigen en een zachte landing in de Golf van Mexico maken.</p>\n<p>De generale repetities waren al op zee gehouden. Op vlucht 4 in juni 2024 kwam de booster rustig en precies op het doel neer in de Golf; Bill Gerstenmaier van SpaceX zei later dat hij zijn plek op ongeveer een halve centimeter nauwkeurig raakte. Volgens SpaceX was de raket voor vlucht 5 begin augustus klaar. De Amerikaanse luchtvaartautoriteit FAA moest nog een aangepaste lanceervergunning goedkeuren en had gewaarschuwd dat dat tot eind november kon duren. SpaceX noemde het extra milieuonderzoek overbodig. De goedkeuring kwam weken eerder, en de lancering werd gepland op een zondagochtend. Daarna had de booster een paar minuten om te bewijzen dat het hele idee werkte.</p>\n<h2>Wat gebeurde er in die zeven minuten?</h2>\n<p><strong>Precies wat de tekeningen beloofden.</strong> Starship vertrok rond 7.25 uur plaatselijke tijd van Starbase in het zuiden van Texas (14.25 uur in Nederland). Na de scheiding van de twee trappen draaide de booster om, startte zijn motoren voor de terugweg, en de Flight Director gaf het startsein. Ongeveer zeven minuten na de lancering daalde Booster 12 naast de toren op zijn motoren, remde bijna tot stilstand af en schoof zijwaarts tussen de open armen. De armen sloten zich. De motoren gingen uit en de booster hing daar, vastgehouden door de toren, zwartgeblakerd maar heel. In de livestream van SpaceX noemde ingenieur Kate Tice het een dag voor de technische geschiedenisboeken.</p>\n<p>De bovenste trap had die ochtend een eigen taak. Zo'n 65 minuten na de lancering kwam hij boven de Indische Oceaan naar beneden, gebruikte drie van zijn motoren om net boven het water te zweven, kantelde en ontplofte. SpaceX was nooit van plan geweest hem te bergen. Eén geslaagde vangst kon nog geluk zijn, en de volgende vluchten lieten zien hoe klein de marges waren.</p>\n<h2>Was die eerste vangst gewoon geluk?</h2>\n<p><strong>Nee, maar vanzelf ging het daarna ook niet.</strong> Op vlucht 6 in november 2024 vloog de booster terug, maar de vangpoging werd afgeblazen door zorgen over de techniek van de toren, en de booster ging de Golf in. Zo hoort de controlelijst te werken: liever een veilige landing in zee dan een riskante vangst. Op vlucht 7, op 16 januari 2025, vingen de eetstokjes voor de tweede keer een booster, en op vlucht 8 in maart 2025 voor de derde keer. Binnen een paar maanden was een wereldprimeur iets geworden waar SpaceX gewoon op rekent. Maar de booster is maar de helft van de raket, en de andere helft is veel moeilijker te vangen.</p>\n<h2>Waarom doet die eerste vangst er nu dan nog toe?</h2>\n<p><strong>Omdat de volgende vangst het schip zelf is.</strong> Voor vlucht 15, gepland voor november 2026, wil SpaceX beide trappen vangen: Booster 22 en voor het eerst ook de bovenste trap, Ship 42. Het schip komt terug uit een baan om de aarde, door de volle hitte van de terugkeer in de atmosfeer, en is daardoor veel lastiger te vangen dan de booster. Pas als beide trappen terugkeren naar de toren, kan Starship de volledig en snel herbruikbare raket worden die SpaceX nodig heeft voor goedkope vluchten naar de maan en Mars.</p>\n<p>Ook voor Tesla telt het. De twee bedrijven onderzoeken een mogelijke fusie, dus een geslaagde dubbele vangst is ook nieuws voor Tesla-aandeelhouders. Maar de les die blijft, is ouder dan welke deal ook. Op die oktoberochtend in 2024 bewees een raket zonder poten dat het vreemdste deel van het plan kon werken. Alles wat SpaceX hierna wil, begint bij die ene vangst.</p>"
+  },
+  "short": {
+    "hook": "contrast",
+    "en": "SpaceX's biggest booster has NO landing legs. On purpose. It's seventy-one meters tall. And the plan was wild: fly it back to the tower, and catch it with two giant steel arms. The chopsticks. One mistake could wreck the booster AND the tower. So a catch needed thousands of checks, and a go from the flight director. October thirteenth, twenty twenty-four. Seven minutes after liftoff, the booster comes back. It slows. It hovers. It slides between the arms. And they close. Caught! A world first. No legs means less weight, and a booster that can fly again fast. Now SpaceX wants to catch the ship too. And it all started with ONE catch.",
+    "nl": "De grootste booster van SpaceX heeft GEEN landingspoten. Expres. Hij is eenenzeventig meter hoog. En het plan was wild: laat hem terugvliegen naar de toren, en vang hem met twee enorme stalen armen. De eetstokjes. Eén fout kon de booster EN de toren vernielen. Dus een vangpoging vroeg duizenden controles, en een go van de vluchtleider. Dertien oktober tweeduizend vierentwintig. Zeven minuten na de lancering komt de booster terug. Hij remt af. Hij zweeft. Hij schuift tussen de armen. En ze gaan dicht. Gevangen! Een wereldprimeur. Geen poten betekent minder gewicht, en een booster die snel weer kan vliegen. Nu wil SpaceX ook het schip vangen. En het begon allemaal met ÉÉN vangst.",
+    "yt_title_en": "SpaceX Built a Rocket With NO Legs",
+    "yt_title_nl": "SpaceX Bouwde een Raket ZONDER Poten",
+    "story": [
+      {
+        "part": "hook",
+        "text": "SpaceX's biggest booster has NO landing legs. On purpose.",
+        "lib": [
+          "starship-pad.jpg"
+        ],
+        "pop": [
+          {
+            "say": "biggest booster",
+            "show": "BIGGEST BOOSTER"
+          },
+          {
+            "say": "NO landing legs",
+            "show": "NO LEGS"
+          },
+          {
+            "say": "On purpose",
+            "show": "ON PURPOSE"
+          }
+        ]
+      },
+      {
+        "part": "tension",
+        "text": "It's seventy-one meters tall. And the plan was wild: fly it back to the tower, and catch it with two giant steel arms.",
+        "lib": [
+          "starship-pad.jpg",
+          "starship-booster-catch.jpg"
+        ],
+        "pop": [
+          {
+            "say": "seventy-one meters",
+            "show": "71 METRES"
+          },
+          {
+            "say": "plan was wild",
+            "show": "WILD PLAN"
+          },
+          {
+            "say": "back to the tower",
+            "show": "BACK TO THE TOWER"
+          },
+          {
+            "say": "two giant steel arms",
+            "show": "2 STEEL ARMS"
+          }
+        ]
+      },
+      {
+        "part": "tension",
+        "text": "The chopsticks. One mistake could wreck the booster AND the tower.",
+        "lib": [
+          "starship-booster-catch.jpg"
+        ],
+        "pop": [
+          {
+            "say": "chopsticks",
+            "show": "CHOPSTICKS"
+          },
+          {
+            "say": "One mistake",
+            "show": "ONE MISTAKE"
+          },
+          {
+            "say": "AND the tower",
+            "show": "TOWER TOO"
+          }
+        ]
+      },
+      {
+        "part": "tension",
+        "text": "So a catch needed thousands of checks, and a go from the flight director.",
+        "img": "spacex-7.jpg",
+        "pop": [
+          {
+            "say": "thousands of checks",
+            "show": "1000s OF CHECKS"
+          },
+          {
+            "say": "a go",
+            "show": "A HUMAN GO"
+          }
+        ]
+      },
+      {
+        "part": "payoff",
+        "text": "October thirteenth, twenty twenty-four. Seven minutes after liftoff, the booster comes back.",
+        "lib": [
+          "starship-launch.jpg"
+        ],
+        "pop": [
+          {
+            "say": "October thirteenth",
+            "show": "OCT 13, 2024"
+          },
+          {
+            "say": "Seven minutes",
+            "show": "7 MINUTES"
+          },
+          {
+            "say": "comes back",
+            "show": "COMING BACK"
+          }
+        ]
+      },
+      {
+        "part": "payoff",
+        "text": "It slows. It hovers. It slides between the arms. And they close.",
+        "lib": [
+          "starship-booster-catch.jpg"
+        ],
+        "pop": [
+          {
+            "say": "It slows",
+            "show": "SLOWS"
+          },
+          {
+            "say": "It hovers",
+            "show": "HOVERS"
+          },
+          {
+            "say": "slides between",
+            "show": "SLIDES IN"
+          },
+          {
+            "say": "they close",
+            "show": "ARMS CLOSE"
+          }
+        ]
+      },
+      {
+        "part": "payoff",
+        "text": "Caught! A world first.",
+        "lib": [
+          "starship-booster-catch.jpg"
+        ],
+        "pop": [
+          {
+            "say": "Caught",
+            "show": "CAUGHT!"
+          },
+          {
+            "say": "world first",
+            "show": "WORLD FIRST"
+          }
+        ]
+      },
+      {
+        "part": "payoff",
+        "text": "No legs means less weight, and a booster that can fly again fast.",
+        "lib": [
+          "starship-launch.jpg"
+        ],
+        "pop": [
+          {
+            "say": "No legs",
+            "show": "NO LEGS"
+          },
+          {
+            "say": "less weight",
+            "show": "LESS WEIGHT"
+          },
+          {
+            "say": "fly again fast",
+            "show": "FLY AGAIN FAST"
+          }
+        ]
+      },
+      {
+        "part": "payoff",
+        "text": "Now SpaceX wants to catch the ship too. And it all started with ONE catch.",
+        "img": "spacex-7.jpg",
+        "pop": [
+          {
+            "say": "catch the ship",
+            "show": "THE SHIP NEXT"
+          },
+          {
+            "say": "started with",
+            "show": "IT STARTED"
+          },
+          {
+            "say": "ONE catch",
+            "show": "WITH ONE CATCH"
+          }
+        ]
+      }
+    ]
+  },
+  "video": {
+    "en": [
+      {
+        "text": "On a Sunday morning in October 2024, a rocket booster taller than a 20 storey building fell back toward the tower that had launched it. It slowed on its engines. It slid sideways between two giant steel arms. And it stopped. Nobody had ever caught a rocket like that. SpaceX had bet the design of its biggest booster on this one moment, because Super Heavy has no landing legs at all. If the arms could not catch it, the plan for a fully reusable Starship had a hole right in the middle.",
+        "img": [
+          "gen/spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story.jpg",
+          "lib/starship-booster-catch.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Super Heavy booster catch",
+              "Starship booster caught launch tower",
+              "Mechazilla chopsticks Starbase"
+            ],
+            "want": "a Super Heavy booster held by or hovering beside the launch tower's catch arms"
+          }
+        ],
+        "pop": [
+          {
+            "say": "rocket booster",
+            "show": "A ROCKET BOOSTER"
+          },
+          {
+            "say": "20 storey building",
+            "show": "20 STOREYS TALL"
+          },
+          {
+            "say": "fell back",
+            "show": "FALLING BACK"
+          },
+          {
+            "say": "giant steel arms",
+            "show": "GIANT STEEL ARMS"
+          },
+          {
+            "say": "it stopped",
+            "show": "IT STOPPED"
+          },
+          {
+            "say": "Nobody had ever",
+            "show": "A WORLD FIRST"
+          },
+          {
+            "say": "no landing legs",
+            "show": "NO LANDING LEGS"
+          },
+          {
+            "say": "fully reusable",
+            "show": "FULLY REUSABLE?"
+          },
+          {
+            "say": "hole right in the middle",
+            "show": "A HOLE IN THE PLAN"
+          }
+        ]
+      },
+      {
+        "head": "Why would anyone build a rocket without legs?",
+        "img": [
+          "lib/starship-pad.jpg"
+        ],
+        "pop": [
+          {
+            "say": "",
+            "show": "WHY NO LEGS?"
+          }
+        ]
+      },
+      {
+        "text": "To save weight, money and time. The idea went public on December 30, 2020. Elon Musk wrote that SpaceX would try to catch Super Heavy with the arm of its launch tower. Dropping the legs had three big advantages.",
+        "img": [
+          "lib/starship-pad.jpg",
+          "spacex-7.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Starbase launch tower",
+              "Starship launch tower Boca Chica",
+              "Mechazilla tower"
+            ],
+            "want": "the tall steel Starship launch tower at Starbase, Texas"
+          }
+        ],
+        "pop": [
+          {
+            "say": "weight, money and time",
+            "show": "WEIGHT, MONEY, TIME"
+          },
+          {
+            "say": "December 30, 2020",
+            "show": "DECEMBER 2020"
+          },
+          {
+            "say": "catch Super Heavy",
+            "show": "CATCH THE BOOSTER"
+          },
+          {
+            "say": "launch tower",
+            "show": "WITH THE TOWER"
+          },
+          {
+            "say": "three big advantages",
+            "show": "3 ADVANTAGES"
+          }
+        ]
+      },
+      {
+        "key": "Weight",
+        "text": "First, weight. Every kilogram of landing gear is a kilogram that cannot carry cargo to orbit.",
+        "img": [
+          "lib/starship-launch.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Starship launch Starbase",
+              "Starship Super Heavy liftoff",
+              "SpaceX Starship flight test launch"
+            ],
+            "want": "a Starship rocket lifting off from Starbase"
+          }
+        ]
+      },
+      {
+        "key": "Cost",
+        "text": "Second, cost. Legs are expensive hardware that has to be built, checked and repaired.",
+        "img": [
+          "steel-tubes.jpg",
+          "spacex-8.jpg"
+        ]
+      },
+      {
+        "key": "Speed",
+        "text": "Third, speed. A booster caught by the tower is already where it needs to be. Musk said it could go straight back onto the launch mount, and be ready to fly again in under an hour.",
+        "img": [
+          "lib/starship-pad.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Starship full stack launch pad",
+              "Starship Super Heavy on orbital launch mount",
+              "Starbase Starship stacked"
+            ],
+            "want": "the full Starship rocket standing on its launch mount next to the tower"
+          }
+        ]
+      },
+      {
+        "text": "Musk nicknamed the tower Mechazilla, and its two catch arms soon became known as the chopsticks. The idea was easy to draw, and frightening to do. A booster about 71 metres, or 232 feet, tall, coming back from the edge of space, had to stop within reach of two arms. Right next to the only pad that could launch the whole rocket. One mistake could destroy not just the booster, but the tower SpaceX needed for every future flight.",
+        "img": [
+          "spacex-7.jpg",
+          "lib/starship-booster-catch.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Starbase launch tower",
+              "Starship launch tower Boca Chica",
+              "Mechazilla tower"
+            ],
+            "want": "the tall steel Starship launch tower at Starbase, Texas"
+          },
+          {
+            "q": [
+              "Super Heavy booster",
+              "Super Heavy booster Starbase",
+              "Starship booster rollout"
+            ],
+            "want": "a Super Heavy booster, the stainless steel first stage of Starship"
+          }
+        ],
+        "pop": [
+          {
+            "say": "Mechazilla",
+            "show": "MECHAZILLA"
+          },
+          {
+            "say": "the chopsticks",
+            "show": "THE CHOPSTICKS"
+          },
+          {
+            "say": "frightening to do",
+            "show": "FRIGHTENING TO DO"
+          },
+          {
+            "say": "232 feet",
+            "show": "232 FEET TALL"
+          },
+          {
+            "say": "edge of space",
+            "show": "FROM SPACE"
+          },
+          {
+            "say": "only pad",
+            "show": "THE ONLY PAD"
+          },
+          {
+            "say": "One mistake",
+            "show": "ONE MISTAKE"
+          },
+          {
+            "say": "every future flight",
+            "show": "TOWER AT RISK"
+          }
+        ]
+      },
+      {
+        "head": "So how did SpaceX decide a catch was safe enough to try?",
+        "img": [
+          "lib/starship-booster-catch.jpg"
+        ],
+        "pop": [
+          {
+            "say": "",
+            "show": "SAFE ENOUGH?"
+          }
+        ]
+      },
+      {
+        "text": "With thousands of checks, and one human decision. Before Flight 5, SpaceX said a catch needed thousands of separate conditions, on the rocket and on the pad. The booster would only head for the tower after a manual command from the Flight Director. That command had to come before the end of the boostback burn, the engine firing that turns the booster back toward Texas. Without it, or if the automatic checks found a problem, the booster would steer away and splash down softly in the Gulf of Mexico instead.",
+        "img": [
+          "lib/starship-launch.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Boca Chica beach",
+              "Gulf of Mexico Boca Chica",
+              "Starbase beach"
+            ],
+            "want": "the beach and sea of the Gulf of Mexico near Starbase, Texas"
+          },
+          {
+            "q": [
+              "Starship launch Starbase",
+              "Starship Super Heavy liftoff",
+              "SpaceX Starship flight test launch"
+            ],
+            "want": "a Starship rocket lifting off from Starbase"
+          }
+        ],
+        "pop": [
+          {
+            "say": "thousands of checks",
+            "show": "THOUSANDS OF CHECKS"
+          },
+          {
+            "say": "one human decision",
+            "show": "ONE HUMAN DECISION"
+          },
+          {
+            "say": "separate conditions",
+            "show": "ROCKET AND PAD"
+          },
+          {
+            "say": "manual command",
+            "show": "MANUAL COMMAND"
+          },
+          {
+            "say": "boostback burn",
+            "show": "BOOSTBACK BURN"
+          },
+          {
+            "say": "back toward Texas",
+            "show": "BACK TO TEXAS"
+          },
+          {
+            "say": "found a problem",
+            "show": "ANY PROBLEM?"
+          },
+          {
+            "say": "Gulf of Mexico",
+            "show": "INTO THE GULF"
+          }
+        ]
+      },
+      {
+        "text": "The rehearsals had already happened at sea. On Flight 4, in June 2024, the booster came down gently in the Gulf, right on target. SpaceX's Bill Gerstenmaier later said it hit its spot with about half a centimetre of accuracy. The rocket for Flight 5 was ready in early August, SpaceX said. But the FAA still had to approve a changed launch licence, and it warned this could take until late November. SpaceX called the extra environmental review superfluous. In the end, approval came weeks earlier. Then the booster had a few minutes to prove that the whole idea worked.",
+        "img": [
+          "spacex-1.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Boca Chica beach",
+              "Gulf of Mexico Boca Chica",
+              "Starbase beach"
+            ],
+            "want": "the beach and sea of the Gulf of Mexico near Starbase, Texas"
+          },
+          {
+            "q": [
+              "Starship full stack launch pad",
+              "Starship Super Heavy on orbital launch mount",
+              "Starbase Starship stacked"
+            ],
+            "want": "the full Starship rocket standing on its launch mount next to the tower"
+          }
+        ],
+        "pop": [
+          {
+            "say": "rehearsals",
+            "show": "REHEARSALS AT SEA"
+          },
+          {
+            "say": "June 2024",
+            "show": "FLIGHT 4"
+          },
+          {
+            "say": "right on target",
+            "show": "RIGHT ON TARGET"
+          },
+          {
+            "say": "half a centimetre",
+            "show": "HALF A CENTIMETRE"
+          },
+          {
+            "say": "early August",
+            "show": "READY IN AUGUST"
+          },
+          {
+            "say": "late November",
+            "show": "WAIT TILL NOVEMBER?"
+          },
+          {
+            "say": "superfluous",
+            "show": "SUPERFLUOUS"
+          },
+          {
+            "say": "weeks earlier",
+            "show": "APPROVED EARLY"
+          },
+          {
+            "say": "whole idea worked",
+            "show": "PROVE IT"
+          }
+        ]
+      },
+      {
+        "head": "What happened in those seven minutes?",
+        "img": [
+          "lib/starship-launch.jpg"
+        ],
+        "pop": [
+          {
+            "say": "",
+            "show": "SEVEN MINUTES"
+          }
+        ]
+      },
+      {
+        "text": "Exactly what the drawings promised. Starship lifted off from Starbase in South Texas at about 7:25 in the morning, local time. The two stages separated. The booster flipped around, fired its engines to head home, and the Flight Director gave the go.",
+        "img": [
+          "lib/starship-launch.jpg",
+          "spacex-3.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Starship launch Starbase",
+              "Starship Super Heavy liftoff",
+              "SpaceX Starship flight test launch"
+            ],
+            "want": "a Starship rocket lifting off from Starbase"
+          }
+        ],
+        "pop": [
+          {
+            "say": "drawings promised",
+            "show": "AS PROMISED"
+          },
+          {
+            "say": "lifted off",
+            "show": "LIFTOFF"
+          },
+          {
+            "say": "South Texas",
+            "show": "STARBASE, TEXAS"
+          },
+          {
+            "say": "stages separated",
+            "show": "STAGES SEPARATE"
+          },
+          {
+            "say": "flipped around",
+            "show": "FLIP AND HEAD HOME"
+          },
+          {
+            "say": "gave the go",
+            "show": "IT'S A GO"
+          }
+        ]
+      },
+      {
+        "text": "About 7 minutes after liftoff, Booster 12 came down beside the tower on its engines. It slowed almost to a stop, and moved sideways into the open arms. The arms closed around it. The engines shut down. And the booster just hung there, held by the tower, scorched but in one piece. On SpaceX's livestream, engineer Kate Tice called it a day for the engineering history books.",
+        "img": [
+          "lib/starship-booster-catch.jpg",
+          "gen/spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Super Heavy booster catch",
+              "Starship booster caught launch tower",
+              "Mechazilla chopsticks Starbase"
+            ],
+            "want": "a Super Heavy booster held by or hovering beside the launch tower's catch arms"
+          }
+        ],
+        "pop": [
+          {
+            "say": "7 minutes",
+            "show": "7 MINUTES IN"
+          },
+          {
+            "say": "Booster 12",
+            "show": "BOOSTER 12"
+          },
+          {
+            "say": "almost to a stop",
+            "show": "ALMOST STOPPED"
+          },
+          {
+            "say": "open arms",
+            "show": "INTO THE ARMS"
+          },
+          {
+            "say": "arms closed",
+            "show": "ARMS CLOSE"
+          },
+          {
+            "say": "engines shut down",
+            "show": "ENGINES OFF"
+          },
+          {
+            "say": "in one piece",
+            "show": "CAUGHT!"
+          },
+          {
+            "say": "history books",
+            "show": "HISTORY BOOKS"
+          }
+        ]
+      },
+      {
+        "text": "The upper stage had its own job that morning. About 65 minutes after liftoff, it came down over the Indian Ocean. It fired 3 of its engines to hover just above the water, then tipped over and exploded. SpaceX had never planned to recover it. One catch could still be luck, and the next flights showed how thin the margins were.",
+        "img": [
+          "spacex-5.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Starship upper stage",
+              "Starship ship splashdown",
+              "Starship S30"
+            ],
+            "want": "the Starship upper stage, the ship on top of the booster"
+          }
+        ],
+        "pop": [
+          {
+            "say": "upper stage",
+            "show": "THE UPPER STAGE"
+          },
+          {
+            "say": "Indian Ocean",
+            "show": "INDIAN OCEAN"
+          },
+          {
+            "say": "hover just above",
+            "show": "HOVER ABOVE WATER"
+          },
+          {
+            "say": "exploded",
+            "show": "THEN BOOM"
+          },
+          {
+            "say": "never planned to recover",
+            "show": "NO RECOVERY PLANNED"
+          },
+          {
+            "say": "could still be luck",
+            "show": "JUST LUCK?"
+          }
+        ]
+      },
+      {
+        "head": "Was the first catch just luck?",
+        "img": [
+          "spacex-7.jpg"
+        ],
+        "pop": [
+          {
+            "say": "",
+            "show": "JUST LUCK?"
+          }
+        ]
+      },
+      {
+        "text": "No, but the next ones were not automatic either. On Flight 6, in November 2024, the booster flew back, but the catch was called off because of concerns about the tower's hardware. The booster went into the Gulf instead. And that was the checklist doing its job. It chose a safe splashdown over a risky catch.",
+        "img": [
+          "spacex-2.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Boca Chica beach",
+              "Gulf of Mexico Boca Chica",
+              "Starbase beach"
+            ],
+            "want": "the beach and sea of the Gulf of Mexico near Starbase, Texas"
+          },
+          {
+            "q": [
+              "Starbase launch tower",
+              "Starship launch tower Boca Chica",
+              "Mechazilla tower"
+            ],
+            "want": "the tall steel Starship launch tower at Starbase, Texas"
+          }
+        ],
+        "pop": [
+          {
+            "say": "not automatic",
+            "show": "NOT AUTOMATIC"
+          },
+          {
+            "say": "November 2024",
+            "show": "FLIGHT 6"
+          },
+          {
+            "say": "called off",
+            "show": "CATCH CALLED OFF"
+          },
+          {
+            "say": "tower's hardware",
+            "show": "TOWER CONCERNS"
+          },
+          {
+            "say": "into the Gulf",
+            "show": "INTO THE GULF"
+          },
+          {
+            "say": "doing its job",
+            "show": "CHECKLIST WORKS"
+          },
+          {
+            "say": "safe splashdown",
+            "show": "SAFETY FIRST"
+          }
+        ]
+      },
+      {
+        "text": "On Flight 7, on January 16, 2025, the chopsticks caught a booster for the second time. On Flight 8, in March 2025, for the third. In a few months, a world first had turned into something SpaceX simply plans for. The booster is only half of the rocket, though, and the other half is much harder to catch.",
+        "img": [
+          "lib/starship-booster-catch.jpg",
+          "lib/starship-pad.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Super Heavy booster catch",
+              "Starship booster caught launch tower",
+              "Mechazilla chopsticks Starbase"
+            ],
+            "want": "a Super Heavy booster held by or hovering beside the launch tower's catch arms"
+          }
+        ],
+        "pop": [
+          {
+            "say": "January 16, 2025",
+            "show": "FLIGHT 7"
+          },
+          {
+            "say": "second time",
+            "show": "CATCH NUMBER 2"
+          },
+          {
+            "say": "March 2025",
+            "show": "FLIGHT 8"
+          },
+          {
+            "say": "for the third",
+            "show": "CATCH NUMBER 3"
+          },
+          {
+            "say": "simply plans for",
+            "show": "NOW THE PLAN"
+          },
+          {
+            "say": "only half",
+            "show": "ONLY HALF"
+          },
+          {
+            "say": "much harder",
+            "show": "MUCH HARDER"
+          }
+        ]
+      },
+      {
+        "head": "So why does that first catch still matter?",
+        "img": [
+          "lib/starship-pad.jpg"
+        ],
+        "pop": [
+          {
+            "say": "",
+            "show": "WHY IT MATTERS"
+          }
+        ]
+      },
+      {
+        "text": "Because the next catch is the ship itself. For Flight 15, planned for November 2026, SpaceX wants to catch both stages. Booster 22, and for the first time, the Starship upper stage, Ship 42. The ship returns from orbit, through the full heat of re-entry. That makes it a far harder catch than the booster. Only when both stages come back to the tower can Starship become the fully and rapidly reusable rocket SpaceX needs, for cheap flights to the Moon and Mars.",
+        "img": [
+          "spacex-4.jpg",
+          "starship-moon.jpg",
+          "starship-fleet-mars.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Starship full stack launch pad",
+              "Starship Super Heavy on orbital launch mount",
+              "Starbase Starship stacked"
+            ],
+            "want": "the full Starship rocket standing on its launch mount next to the tower"
+          }
+        ],
+        "pop": [
+          {
+            "say": "the ship itself",
+            "show": "CATCH THE SHIP"
+          },
+          {
+            "say": "Flight 15",
+            "show": "FLIGHT 15"
+          },
+          {
+            "say": "both stages",
+            "show": "BOTH STAGES"
+          },
+          {
+            "say": "Ship 42",
+            "show": "SHIP 42"
+          },
+          {
+            "say": "heat of re-entry",
+            "show": "RE-ENTRY HEAT"
+          },
+          {
+            "say": "far harder",
+            "show": "FAR HARDER"
+          },
+          {
+            "say": "rapidly reusable",
+            "show": "FULLY REUSABLE"
+          },
+          {
+            "say": "Moon and Mars",
+            "show": "MOON AND MARS"
+          }
+        ]
+      },
+      {
+        "text": "It matters for Tesla too. The two companies are studying a possible merger, so a successful double catch is also news for Tesla shareholders. But the lasting lesson is older than any deal. On that October morning in 2024, a rocket without legs proved that the strangest part of the plan could work. Everything SpaceX wants to do next starts with that catch.",
+        "img": [
+          "lib/starship-booster-catch.jpg",
+          "gen/spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Super Heavy booster catch",
+              "Starship booster caught launch tower",
+              "Mechazilla chopsticks Starbase"
+            ],
+            "want": "a Super Heavy booster held by or hovering beside the launch tower's catch arms"
+          }
+        ],
+        "pop": [
+          {
+            "say": "for Tesla too",
+            "show": "TESLA TOO"
+          },
+          {
+            "say": "possible merger",
+            "show": "POSSIBLE MERGER"
+          },
+          {
+            "say": "double catch",
+            "show": "DOUBLE CATCH?"
+          },
+          {
+            "say": "older than any deal",
+            "show": "THE REAL LESSON"
+          },
+          {
+            "say": "without legs",
+            "show": "NO LEGS"
+          },
+          {
+            "say": "could work",
+            "show": "IT WORKED"
+          },
+          {
+            "say": "starts with that catch",
+            "show": "IT STARTS WITH A CATCH"
+          }
+        ]
+      }
+    ],
+    "nl": [
+      {
+        "text": "Op een zondagochtend in oktober 2024 viel een raketbooster, hoger dan een flat van 20 verdiepingen, terug naar de toren die hem had gelanceerd. Hij remde af op zijn motoren. Hij schoof zijwaarts tussen twee enorme stalen armen. En hij stond stil. Nog nooit had iemand een raket zo opgevangen. SpaceX had het ontwerp van zijn grootste booster op dit ene moment gebouwd, want Super Heavy heeft helemaal geen landingspoten. Als de armen hem niet konden vangen, zat er een gat midden in het plan voor een volledig herbruikbare Starship.",
+        "img": [
+          "gen/spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story.jpg",
+          "lib/starship-booster-catch.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Super Heavy booster catch",
+              "Starship booster caught launch tower",
+              "Mechazilla chopsticks Starbase"
+            ],
+            "want": "a Super Heavy booster held by or hovering beside the launch tower's catch arms"
+          }
+        ],
+        "pop": [
+          {
+            "say": "raketbooster",
+            "show": "EEN RAKETBOOSTER"
+          },
+          {
+            "say": "20 verdiepingen",
+            "show": "20 VERDIEPINGEN"
+          },
+          {
+            "say": "viel",
+            "show": "HIJ VALT TERUG"
+          },
+          {
+            "say": "stalen armen",
+            "show": "STALEN ARMEN"
+          },
+          {
+            "say": "stond stil",
+            "show": "STIL!"
+          },
+          {
+            "say": "Nog nooit",
+            "show": "WERELDPRIMEUR"
+          },
+          {
+            "say": "geen landingspoten",
+            "show": "GEEN POTEN"
+          },
+          {
+            "say": "gat midden in het plan",
+            "show": "GAT IN HET PLAN"
+          }
+        ]
+      },
+      {
+        "head": "Waarom zou je een raket zonder poten bouwen?",
+        "img": [
+          "lib/starship-pad.jpg"
+        ],
+        "pop": [
+          {
+            "say": "",
+            "show": "WAAROM GEEN POTEN?"
+          }
+        ]
+      },
+      {
+        "text": "Om gewicht, geld en tijd te sparen. Het idee werd bekend op 30 december 2020. Elon Musk schreef dat SpaceX zou proberen Super Heavy op te vangen met de arm van de lanceertoren. Zonder poten had je drie grote voordelen.",
+        "img": [
+          "lib/starship-pad.jpg",
+          "spacex-7.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Starbase launch tower",
+              "Starship launch tower Boca Chica",
+              "Mechazilla tower"
+            ],
+            "want": "the tall steel Starship launch tower at Starbase, Texas"
+          }
+        ],
+        "pop": [
+          {
+            "say": "gewicht, geld en tijd",
+            "show": "GEWICHT, GELD, TIJD"
+          },
+          {
+            "say": "30 december 2020",
+            "show": "DECEMBER 2020"
+          },
+          {
+            "say": "op te vangen",
+            "show": "BOOSTER VANGEN"
+          },
+          {
+            "say": "lanceertoren",
+            "show": "MET DE TOREN"
+          },
+          {
+            "say": "drie grote voordelen",
+            "show": "3 VOORDELEN"
+          }
+        ]
+      },
+      {
+        "key": "Gewicht",
+        "text": "Ten eerste gewicht. Elke kilo aan landingsgestel is een kilo die geen lading naar de ruimte kan brengen.",
+        "img": [
+          "lib/starship-launch.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Starship launch Starbase",
+              "Starship Super Heavy liftoff",
+              "SpaceX Starship flight test launch"
+            ],
+            "want": "a Starship rocket lifting off from Starbase"
+          }
+        ]
+      },
+      {
+        "key": "Kosten",
+        "text": "Ten tweede kosten. Poten zijn dure onderdelen die gebouwd, gecontroleerd en gerepareerd moeten worden.",
+        "img": [
+          "steel-tubes.jpg",
+          "spacex-8.jpg"
+        ]
+      },
+      {
+        "key": "Snelheid",
+        "text": "Ten derde snelheid. Een booster die door de toren wordt gevangen, staat al op de goede plek. Volgens Musk kon hij zo terug op het lanceerplatform, en binnen een uur weer klaar zijn om te vliegen.",
+        "img": [
+          "lib/starship-pad.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Starship full stack launch pad",
+              "Starship Super Heavy on orbital launch mount",
+              "Starbase Starship stacked"
+            ],
+            "want": "the full Starship rocket standing on its launch mount next to the tower"
+          }
+        ]
+      },
+      {
+        "text": "Musk gaf de toren de bijnaam Mechazilla, en de twee vangarmen werden al snel de eetstokjes genoemd. Het idee was makkelijk te tekenen, en doodeng om uit te voeren. Een booster van zo'n 71 meter hoog, terug van de rand van de ruimte, moest stoppen binnen bereik van twee armen. Vlak naast het enige platform dat de hele raket kon lanceren. Eén fout kon niet alleen de booster vernielen, maar ook de toren die SpaceX voor elke volgende vlucht nodig had.",
+        "img": [
+          "spacex-7.jpg",
+          "lib/starship-booster-catch.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Starbase launch tower",
+              "Starship launch tower Boca Chica",
+              "Mechazilla tower"
+            ],
+            "want": "the tall steel Starship launch tower at Starbase, Texas"
+          },
+          {
+            "q": [
+              "Super Heavy booster",
+              "Super Heavy booster Starbase",
+              "Starship booster rollout"
+            ],
+            "want": "a Super Heavy booster, the stainless steel first stage of Starship"
+          }
+        ],
+        "pop": [
+          {
+            "say": "Mechazilla",
+            "show": "MECHAZILLA"
+          },
+          {
+            "say": "eetstokjes",
+            "show": "DE EETSTOKJES"
+          },
+          {
+            "say": "doodeng",
+            "show": "DOODENG"
+          },
+          {
+            "say": "71 meter",
+            "show": "71 METER HOOG"
+          },
+          {
+            "say": "rand van de ruimte",
+            "show": "UIT DE RUIMTE"
+          },
+          {
+            "say": "enige platform",
+            "show": "HET ENIGE PLATFORM"
+          },
+          {
+            "say": "Eén fout",
+            "show": "ÉÉN FOUT"
+          },
+          {
+            "say": "ook de toren",
+            "show": "TOREN IN GEVAAR"
+          }
+        ]
+      },
+      {
+        "head": "Hoe besloot SpaceX dan dat een vangpoging veilig genoeg was?",
+        "img": [
+          "lib/starship-booster-catch.jpg"
+        ],
+        "pop": [
+          {
+            "say": "",
+            "show": "VEILIG GENOEG?"
+          }
+        ]
+      },
+      {
+        "text": "Met duizenden controles, en één menselijk besluit. Voor vlucht 5 liet SpaceX weten dat er duizenden aparte voorwaarden moesten kloppen, aan de raket en aan het platform. De booster zou pas naar de toren koersen na een handmatig commando van de Flight Director. Dat commando moest komen voor het einde van de boostback burn, de motorstoot die de booster terugstuurt naar Texas. Kwam het niet, of vonden de automatische controles een probleem, dan boog de booster af en landde hij zacht in de Golf van Mexico.",
+        "img": [
+          "lib/starship-launch.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Boca Chica beach",
+              "Gulf of Mexico Boca Chica",
+              "Starbase beach"
+            ],
+            "want": "the beach and sea of the Gulf of Mexico near Starbase, Texas"
+          },
+          {
+            "q": [
+              "Starship launch Starbase",
+              "Starship Super Heavy liftoff",
+              "SpaceX Starship flight test launch"
+            ],
+            "want": "a Starship rocket lifting off from Starbase"
+          }
+        ],
+        "pop": [
+          {
+            "say": "duizenden controles",
+            "show": "DUIZENDEN CONTROLES"
+          },
+          {
+            "say": "menselijk besluit",
+            "show": "ÉÉN MENS BESLIST"
+          },
+          {
+            "say": "aparte voorwaarden",
+            "show": "RAKET EN PLATFORM"
+          },
+          {
+            "say": "handmatig commando",
+            "show": "HANDMATIG COMMANDO"
+          },
+          {
+            "say": "boostback burn",
+            "show": "BOOSTBACK BURN"
+          },
+          {
+            "say": "terugstuurt naar Texas",
+            "show": "TERUG NAAR TEXAS"
+          },
+          {
+            "say": "een probleem",
+            "show": "PROBLEEM?"
+          },
+          {
+            "say": "Golf van Mexico",
+            "show": "DE GOLF IN"
+          }
+        ]
+      },
+      {
+        "text": "De generale repetities waren al op zee gehouden. Op vlucht 4, in juni 2024, kwam de booster rustig en precies op het doel neer in de Golf. Bill Gerstenmaier van SpaceX zei later dat hij zijn plek op ongeveer een halve centimeter nauwkeurig raakte. Volgens SpaceX was de raket voor vlucht 5 begin augustus klaar. Maar de FAA moest nog een aangepaste vergunning goedkeuren, en waarschuwde dat dat tot eind november kon duren. SpaceX noemde het extra milieuonderzoek overbodig. Uiteindelijk kwam de goedkeuring weken eerder. Daarna had de booster een paar minuten om te bewijzen dat het hele idee werkte.",
+        "img": [
+          "spacex-1.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Boca Chica beach",
+              "Gulf of Mexico Boca Chica",
+              "Starbase beach"
+            ],
+            "want": "the beach and sea of the Gulf of Mexico near Starbase, Texas"
+          },
+          {
+            "q": [
+              "Starship full stack launch pad",
+              "Starship Super Heavy on orbital launch mount",
+              "Starbase Starship stacked"
+            ],
+            "want": "the full Starship rocket standing on its launch mount next to the tower"
+          }
+        ],
+        "pop": [
+          {
+            "say": "generale repetities",
+            "show": "REPETITIE OP ZEE"
+          },
+          {
+            "say": "juni 2024",
+            "show": "VLUCHT 4"
+          },
+          {
+            "say": "precies op het doel",
+            "show": "PRECIES RAAK"
+          },
+          {
+            "say": "halve centimeter",
+            "show": "HALVE CENTIMETER"
+          },
+          {
+            "say": "begin augustus",
+            "show": "KLAAR IN AUGUSTUS"
+          },
+          {
+            "say": "eind november",
+            "show": "WACHTEN TOT NOVEMBER?"
+          },
+          {
+            "say": "overbodig",
+            "show": "OVERBODIG"
+          },
+          {
+            "say": "weken eerder",
+            "show": "EERDER GOEDGEKEURD"
+          },
+          {
+            "say": "hele idee werkte",
+            "show": "BEWIJS HET"
+          }
+        ]
+      },
+      {
+        "head": "Wat gebeurde er in die zeven minuten?",
+        "img": [
+          "lib/starship-launch.jpg"
+        ],
+        "pop": [
+          {
+            "say": "",
+            "show": "ZEVEN MINUTEN"
+          }
+        ]
+      },
+      {
+        "text": "Precies wat de tekeningen beloofden. Starship vertrok rond 7.25 uur 's ochtends plaatselijke tijd van Starbase, in het zuiden van Texas. De twee trappen gingen uit elkaar. De booster draaide om, startte zijn motoren voor de terugweg, en de Flight Director gaf het startsein.",
+        "img": [
+          "lib/starship-launch.jpg",
+          "spacex-3.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Starship launch Starbase",
+              "Starship Super Heavy liftoff",
+              "SpaceX Starship flight test launch"
+            ],
+            "want": "a Starship rocket lifting off from Starbase"
+          }
+        ],
+        "pop": [
+          {
+            "say": "tekeningen beloofden",
+            "show": "ZOALS BELOOFD"
+          },
+          {
+            "say": "vertrok",
+            "show": "LANCERING"
+          },
+          {
+            "say": "zuiden van Texas",
+            "show": "STARBASE, TEXAS"
+          },
+          {
+            "say": "uit elkaar",
+            "show": "TRAPPEN SCHEIDEN"
+          },
+          {
+            "say": "draaide om",
+            "show": "OMDRAAIEN"
+          },
+          {
+            "say": "startsein",
+            "show": "HET IS EEN GO"
+          }
+        ]
+      },
+      {
+        "text": "Ongeveer 7 minuten na de lancering daalde Booster 12 naast de toren, op zijn motoren. Hij remde bijna tot stilstand af, en schoof zijwaarts tussen de open armen. De armen sloten zich. De motoren gingen uit. En de booster hing daar, vastgehouden door de toren, zwartgeblakerd maar heel. In de livestream van SpaceX noemde ingenieur Kate Tice het een dag voor de technische geschiedenisboeken.",
+        "img": [
+          "lib/starship-booster-catch.jpg",
+          "gen/spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Super Heavy booster catch",
+              "Starship booster caught launch tower",
+              "Mechazilla chopsticks Starbase"
+            ],
+            "want": "a Super Heavy booster held by or hovering beside the launch tower's catch arms"
+          }
+        ],
+        "pop": [
+          {
+            "say": "7 minuten",
+            "show": "7 MINUTEN LATER"
+          },
+          {
+            "say": "Booster 12",
+            "show": "BOOSTER 12"
+          },
+          {
+            "say": "bijna tot stilstand",
+            "show": "BIJNA STIL"
+          },
+          {
+            "say": "open armen",
+            "show": "TUSSEN DE ARMEN"
+          },
+          {
+            "say": "sloten zich",
+            "show": "ARMEN DICHT"
+          },
+          {
+            "say": "motoren gingen uit",
+            "show": "MOTOREN UIT"
+          },
+          {
+            "say": "zwartgeblakerd maar heel",
+            "show": "GEVANGEN!"
+          },
+          {
+            "say": "geschiedenisboeken",
+            "show": "GESCHIEDENIS"
+          }
+        ]
+      },
+      {
+        "text": "De bovenste trap had die ochtend een eigen taak. Zo'n 65 minuten na de lancering kwam hij boven de Indische Oceaan naar beneden. Hij gebruikte 3 van zijn motoren om net boven het water te zweven, kantelde en ontplofte. SpaceX was nooit van plan geweest hem te bergen. Eén vangst kon nog geluk zijn, en de volgende vluchten lieten zien hoe klein de marges waren.",
+        "img": [
+          "spacex-5.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Starship upper stage",
+              "Starship ship splashdown",
+              "Starship S30"
+            ],
+            "want": "the Starship upper stage, the ship on top of the booster"
+          }
+        ],
+        "pop": [
+          {
+            "say": "bovenste trap",
+            "show": "DE BOVENSTE TRAP"
+          },
+          {
+            "say": "Indische Oceaan",
+            "show": "INDISCHE OCEAAN"
+          },
+          {
+            "say": "zweven",
+            "show": "ZWEVEN BOVEN ZEE"
+          },
+          {
+            "say": "ontplofte",
+            "show": "EN DAN: BOEM"
+          },
+          {
+            "say": "nooit van plan",
+            "show": "GEEN BERGING"
+          },
+          {
+            "say": "geluk zijn",
+            "show": "GELUK?"
+          }
+        ]
+      },
+      {
+        "head": "Was die eerste vangst gewoon geluk?",
+        "img": [
+          "spacex-7.jpg"
+        ],
+        "pop": [
+          {
+            "say": "",
+            "show": "GEWOON GELUK?"
+          }
+        ]
+      },
+      {
+        "text": "Nee, maar vanzelf ging het daarna ook niet. Op vlucht 6, in november 2024, vloog de booster terug, maar de vangpoging werd afgeblazen door zorgen over de techniek van de toren. De booster ging de Golf in. En zo hoort de controlelijst te werken. Liever een veilige landing in zee dan een riskante vangst.",
+        "img": [
+          "spacex-2.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Boca Chica beach",
+              "Gulf of Mexico Boca Chica",
+              "Starbase beach"
+            ],
+            "want": "the beach and sea of the Gulf of Mexico near Starbase, Texas"
+          },
+          {
+            "q": [
+              "Starbase launch tower",
+              "Starship launch tower Boca Chica",
+              "Mechazilla tower"
+            ],
+            "want": "the tall steel Starship launch tower at Starbase, Texas"
+          }
+        ],
+        "pop": [
+          {
+            "say": "vanzelf",
+            "show": "NIET VANZELF"
+          },
+          {
+            "say": "november 2024",
+            "show": "VLUCHT 6"
+          },
+          {
+            "say": "afgeblazen",
+            "show": "AFGEBLAZEN"
+          },
+          {
+            "say": "techniek van de toren",
+            "show": "ZORGEN OM TOREN"
+          },
+          {
+            "say": "Golf in",
+            "show": "DE GOLF IN"
+          },
+          {
+            "say": "controlelijst",
+            "show": "LIJST WERKT"
+          },
+          {
+            "say": "veilige landing",
+            "show": "VEILIGHEID EERST"
+          }
+        ]
+      },
+      {
+        "text": "Op vlucht 7, op 16 januari 2025, vingen de eetstokjes voor de tweede keer een booster. Op vlucht 8, in maart 2025, voor de derde keer. Binnen een paar maanden was een wereldprimeur iets geworden waar SpaceX gewoon op rekent. Maar de booster is maar de helft van de raket, en de andere helft is veel moeilijker te vangen.",
+        "img": [
+          "lib/starship-booster-catch.jpg",
+          "lib/starship-pad.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Super Heavy booster catch",
+              "Starship booster caught launch tower",
+              "Mechazilla chopsticks Starbase"
+            ],
+            "want": "a Super Heavy booster held by or hovering beside the launch tower's catch arms"
+          }
+        ],
+        "pop": [
+          {
+            "say": "16 januari 2025",
+            "show": "VLUCHT 7"
+          },
+          {
+            "say": "tweede keer",
+            "show": "VANGST 2"
+          },
+          {
+            "say": "maart 2025",
+            "show": "VLUCHT 8"
+          },
+          {
+            "say": "derde keer",
+            "show": "VANGST 3"
+          },
+          {
+            "say": "gewoon op rekent",
+            "show": "NU HET PLAN"
+          },
+          {
+            "say": "maar de helft",
+            "show": "MAAR DE HELFT"
+          },
+          {
+            "say": "veel moeilijker",
+            "show": "VEEL MOEILIJKER"
+          }
+        ]
+      },
+      {
+        "head": "Waarom doet die eerste vangst er nu dan nog toe?",
+        "img": [
+          "lib/starship-pad.jpg"
+        ],
+        "pop": [
+          {
+            "say": "",
+            "show": "WAAROM BELANGRIJK?"
+          }
+        ]
+      },
+      {
+        "text": "Omdat de volgende vangst het schip zelf is. Voor vlucht 15, gepland voor november 2026, wil SpaceX beide trappen vangen. Booster 22, en voor het eerst ook de bovenste trap, Ship 42. Het schip komt terug uit een baan om de aarde, door de volle hitte van de terugkeer in de atmosfeer. Daardoor is het veel lastiger te vangen dan de booster. Pas als beide trappen terugkeren naar de toren, kan Starship de volledig en snel herbruikbare raket worden die SpaceX nodig heeft, voor goedkope vluchten naar de maan en Mars.",
+        "img": [
+          "spacex-4.jpg",
+          "starship-moon.jpg",
+          "starship-fleet-mars.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Starship full stack launch pad",
+              "Starship Super Heavy on orbital launch mount",
+              "Starbase Starship stacked"
+            ],
+            "want": "the full Starship rocket standing on its launch mount next to the tower"
+          }
+        ],
+        "pop": [
+          {
+            "say": "het schip zelf",
+            "show": "HET SCHIP VANGEN"
+          },
+          {
+            "say": "vlucht 15",
+            "show": "VLUCHT 15"
+          },
+          {
+            "say": "beide trappen",
+            "show": "BEIDE TRAPPEN"
+          },
+          {
+            "say": "Ship 42",
+            "show": "SHIP 42"
+          },
+          {
+            "say": "volle hitte",
+            "show": "HITTE VAN TERUGKEER"
+          },
+          {
+            "say": "veel lastiger",
+            "show": "VEEL LASTIGER"
+          },
+          {
+            "say": "snel herbruikbare",
+            "show": "HERBRUIKBAAR"
+          },
+          {
+            "say": "maan en Mars",
+            "show": "MAAN EN MARS"
+          }
+        ]
+      },
+      {
+        "text": "Ook voor Tesla telt het. De twee bedrijven onderzoeken een mogelijke fusie, dus een geslaagde dubbele vangst is ook nieuws voor Tesla-aandeelhouders. Maar de les die blijft, is ouder dan welke deal ook. Op die oktoberochtend in 2024 bewees een raket zonder poten dat het vreemdste deel van het plan kon werken. Alles wat SpaceX hierna wil, begint bij die ene vangst.",
+        "img": [
+          "lib/starship-booster-catch.jpg",
+          "gen/spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Super Heavy booster catch",
+              "Starship booster caught launch tower",
+              "Mechazilla chopsticks Starbase"
+            ],
+            "want": "a Super Heavy booster held by or hovering beside the launch tower's catch arms"
+          }
+        ],
+        "pop": [
+          {
+            "say": "voor Tesla",
+            "show": "OOK TESLA"
+          },
+          {
+            "say": "mogelijke fusie",
+            "show": "MOGELIJKE FUSIE"
+          },
+          {
+            "say": "dubbele vangst",
+            "show": "DUBBELE VANGST?"
+          },
+          {
+            "say": "les die blijft",
+            "show": "DE ECHTE LES"
+          },
+          {
+            "say": "zonder poten",
+            "show": "GEEN POTEN"
+          },
+          {
+            "say": "kon werken",
+            "show": "HET WERKTE"
+          },
+          {
+            "say": "die ene vangst",
+            "show": "HET BEGINT MET ÉÉN VANGST"
+          }
+        ]
+      }
+    ],
+    "yt_title_en": "How SpaceX Caught a Super Heavy Booster With Chopsticks: The First Catch",
+    "yt_title_nl": "Hoe SpaceX een Super Heavy-booster Ving met Eetstokjes: de Eerste Vangst"
+  }
+}

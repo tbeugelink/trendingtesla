@@ -44,6 +44,7 @@ Add new ideas at the bottom at any time.
 - [ ] Gigacasting explained: why Tesla casts a car's body in a few huge pieces
 - [ ] Why does Tesla build its batteries from thousands of small cells instead of a few big ones? From laptop cells to the 4680
 - [ ] Level 2 vs level 3 vs level 4: what the self-driving levels mean, and why Mercedes takes the blame in Drive Pilot while Tesla does not
+- [ ] Why does Starship need no landing legs? How a tower catch makes rockets reusable within hours (explainer angle on the catch)
 - [ ] Can you text while using Tesla FSD? What Musk said, what the car allows and what the law says in the US, UK and Europe
 
 ## Stories (evening task: entertaining and educational, timeless)
@@ -54,7 +55,7 @@ Add new ideas at the bottom at any time.
 - [ ] No more paint shop? Tesla's plan to build every car "unboxed", with coloured polyurethane panels: another revolution after the Cybercab (source: Munro Live interview with Lars Moravy and team)
 - [ ] The first base on the Moon: how Starship is meant to land astronauts there, and what a Moon station would need
 - [ ] From a dancer in a suit to walking robots: the story of Optimus, and why Musk calls it Tesla's biggest product ever
-- [ ] The first Starship catch: how SpaceX caught a 70-metre booster with "chopsticks"
+- [x] The first Starship catch: how SpaceX caught a 70-metre booster with "chopsticks" (spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story)
 
 - [x] The Roadster that started it all: how a small startup turned a Lotus into the first Tesla (tesla-roadster-origin-story-lotus-elise-first-tesla)
 - [ ] 2008: the year Tesla almost died, and the Christmas Eve deal that saved it
@@ -72,6 +73,8 @@ Add new ideas at the bottom at any time.
 - [ ] The Plaid that beat supercars: how Tesla made a family sedan the quickest car in the world
 - [ ] AC Propulsion's tzero: the hand-built electric car that inspired Tesla's founders, and why its makers would not build it
 - [ ] Starman: why SpaceX launched Musk's own Roadster on the first Falcon Heavy, and where that car is now
+- [ ] Flight 1, April 2023: the Starship that would not separate, and how SpaceX turned an explosion into data
+- [ ] Why SpaceX builds its rockets from stainless steel: the switch away from carbon fibre that shaped Starship (and the Cybertruck)
 - [ ] January 22, 2026: the first Tesla Robotaxi rides with nobody in the car, and the long road of missed self-driving deadlines before it
 
 ## Series: How did Elon Musk ...? (evening task; one per week at most, category "musk")

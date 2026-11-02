@@ -126,6 +126,16 @@ William's library photos ("lib/...") and CC0 / public-domain photos: give at lea
 "cinematic" or "technical" and "category": "A", "B" or "C". Budget: about $11 (EUR 10) a month and 25 images a
 day (ops/images-log.jsonl logs every image). Switch back to Gemini only: repository variable IMAGE_PROVIDER=gemini.
 
+## YouTube titles: Short = hook, long video = search (decided 2 Nov 2026)
+
+Long videos only get views from search (Semi fire 338, Emergency Drive Away 157), Shorts from the feed. So:
+- `short.yt_title_*`: the story hook, as before ("Tesla Broke Henry Ford's Assembly Line").
+- `video.yt_title_*`: the words people type into YouTube or Google: the subject named plainly (model, feature,
+  person) plus the question or the answer, 6-12 words, e.g. "How Tesla's First Roadster Was Built From a Lotus
+  Elise", "Can You Sleep While Tesla FSD Drives? What the Law Says", "How Long Does a Tesla Battery Last?
+  Real Data". No teaser without the subject. This replaces "a story or a sharp question" in the task prompts
+  for the long video's title.
+
 ## Thumbnail label keeps the hook (decided 2 Nov 2026)
 
 When the title is a catchy line (a rhyme, a pun, a slogan, e.g. "Grok does the mapping, you do the napping?"),

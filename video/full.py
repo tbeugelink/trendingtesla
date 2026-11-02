@@ -165,11 +165,36 @@ STOP = set("so the a an of to in on for with such and or but its it is was were 
            "would could should did does do had has have get got really still actually".split())
 
 
+GENERIC = {"tesla", "tesla's", "motors", "company", "it", "its", "but", "and", "then", "there", "here", "back", "that", "this"}
+MONTHS = "january february march april may june july august september october november december".split()
+
+
+def phrase(ws, k):
+    """A clean key word from the spoken words around ws[k]: a number with its unit ("6,831 CELLS"), a year alone,
+    a two-word name ("SANTA MONICA"), never joined across punctuation."""
+    w = ws[k][0]
+    c = re.sub(r"[^\w$%,.']", "", w).strip(".,;'")
+    nxt = ws[k + 1][0] if k + 1 < len(ws) else ""
+    nc = re.sub(r"[^\w$%']", "", nxt)
+    ends = w[-1:] in ",.;:!?"
+    if re.fullmatch(r"(19|20)\d\d", c):
+        return c
+    if re.search(r"\d", c) and not ends and nc and nc.lower() not in STOP and not re.search(r"\d", nc):
+        return f"{c} {nc}".upper()
+    if c.lower() in MONTHS and re.fullmatch(r"(19|20)\d\d", nc):
+        return f"{c} {nc}".upper()
+    if c[:1].isupper() and not ends and nc[:1].isupper() and nc.lower() not in GENERIC:
+        return f"{c} {nc}".upper()
+    return c.upper()
+
+
 def strength(w):
     """How strong a spoken word is as a key word: numbers and names first, then long words; stop words 0."""
     c = re.sub(r"[^\w$%]", "", w)
-    if not c or c.lower() in STOP or len(c) < 3 and not c[0].isdigit():
+    if not c or c.lower() in STOP or c.lower() in GENERIC or c.lower() in MONTHS or len(c) < 3 and not c[0].isdigit():
         return 0
+    if re.fullmatch(r"\d{1,2}", c):  # a lone small number ("1", "3") says nothing on its own
+        return 1
     return 4 if re.search(r"\d", c) else 3 if c[0].isupper() else 1 + len(c) / 6
 
 
@@ -565,8 +590,9 @@ def render(a, lang, pieces, segs, place, words, total, end_start, audio):
                 if not cand:
                     break
                 k = max(cand, key=lambda k: strength(ws[k][0]))
-                show = " ".join(w[0] for w in ws[k:k + 2] if strength(w[0]) > 1)
-                show = re.sub(r"[^\w$%,.' -]", "", show).strip(".,; ").upper() or ws[k][0].upper()
+                if strength(ws[k][0]) < 2.5:  # nothing strong enough: better the last key word a bit longer
+                    break
+                show = phrase(ws, k)
                 extra.append((max(ws[k][1] - LEAD, label_end), None, pop_overlay(show)))
                 last = ws[k][1] - LEAD
             last = max(last, nxt)

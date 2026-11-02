@@ -190,6 +190,25 @@ def phrase(ws, k):
     return c.upper()
 
 
+def key_phrase(ws, k):
+    """A short key phrase (1-4 words, one line) from the spoken words starting near ws[k]: the meaningful words
+    up to the end of that clause, small words left out ("ONLY 7% LOTUS PARTS", "STUCK IN SECOND GEAR")."""
+    out = []
+    j = k
+    while j > 0 and strength(ws[j - 1][0], ws[j - 2][0] if j > 1 else "") >= 1 and ws[j - 1][0][-1:] not in ",.;:!?" \
+            and k - j < 1:
+        j -= 1
+    for w, _, _ in ws[j:j + 9]:
+        c = re.sub(r"'s$", "", re.sub(r"[^\w$%,.'-]", "", w).strip(".,;'-"))
+        if c and (c.lower() not in STOP or (out and c.lower() in ("in", "on", "of", "to", "no", "not", "never"))):
+            out.append(c.upper())
+        if len(out) >= 4 or w[-1:] in ",.;:!?":
+            break
+    while out and out[-1].lower() in ("in", "on", "of", "to", "and", "the", "a", "not", "no", "never", "could", "would"):
+        out.pop()
+    return " ".join(out[:4])
+
+
 def strength(w, prev=""):
     """How strong a spoken word is as a key word: numbers and names first, then long words; stop words 0."""
     c = re.sub(r"[^\w$%]", "", re.sub(r"'s\W*$", "", w))
@@ -619,20 +638,22 @@ def render(a, lang, pieces, segs, place, words, total, end_start, audio):
         times = sorted([p[0] for p in pops if place[i] - 0.5 <= p[0] <= t1] + [t1])
         last = place[i] - LEAD
         for nxt in times:
-            while nxt - last > 2.2:
-                cand = [k for k, w in enumerate(ws) if last + 0.8 <= w[1] - LEAD <= nxt - 0.8]
+            while nxt - last > 2.4:  # never more than ~2.4 s without a new key phrase
+                cand = [k for k, w in enumerate(ws) if last + 1.0 <= w[1] - LEAD <= nxt - 0.8]
                 if not cand:
                     break
                 sc = lambda k: strength(ws[k][0], ws[k - 1][0] if k else "")
-                k = max(cand, key=sc)
-                if sc(k) < 2.5:  # nothing strong enough: better the last key word a bit longer
-                    break
-                show = phrase(ws, k)
+                near = [k for k in cand if ws[k][1] - LEAD <= last + 2.2] or cand[:1]
+                k = max(near, key=sc)  # the strongest word close to where the gap starts
+                show = key_phrase(ws, k)
+                if not show:
+                    last = ws[k][1] - LEAD
+                    continue
                 extra.append((max(ws[k][1] - LEAD, label_end), None, pop_overlay(show)))
                 last = ws[k][1] - LEAD
             last = max(last, nxt)
     pops = sorted(pops + extra, key=lambda x: x[0])
-    pops = [(p0, pops[k + 1][0] if k + 1 < len(pops) else end_start, o) for k, (p0, _, o) in enumerate(pops)]
+    pops = [(p0, min(pops[k + 1][0] if k + 1 < len(pops) else end_start, p0 + 2.8), o) for k, (p0, _, o) in enumerate(pops)]
     print(f"{len(pops)} key words")
     chunks, cur = [], []
     for w in words:

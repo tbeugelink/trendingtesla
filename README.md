@@ -186,6 +186,11 @@ Shorts (typically 741 views after 48 hours) by far. So:
   (Model 3 words -> Model 3 photo, never another model); key words only, 1-4 words, one line, in the centre,
   a fraction before the voice. Heads are shown as key words too: give every {"head": ...} block a
   `"pop": [{"say": "", "show": "WHY A LOTUS?"}]` with 1-4 words. The thumbnail stays the opening frame with the label.
+- **Key phrases, not single key words, in the long video** (decided 2 Nov 2026): the "pop" list of every text block
+  follows the voice like condensed captions: a new key phrase every 1.5-2.5 s for the WHOLE block, 1-4 words,
+  one line ("ONLY 7% LOTUS PARTS", "STUCK IN SECOND GEAR", "MUSK TAKES OVER", "NO NAPPING YET"). Strong single
+  words ("$539", "WHY?") are fine as one of them. Each phrase stays at most ~2.8 s; where the script gives none,
+  the renderer makes one from the spoken words. So give about one pop per 5-7 spoken words.
 - **Key words in the long video** (decided 1 Nov 2026): no captions in the picture any more (YouTube makes its own
   closed captions, CC, which viewers can translate into almost any language); instead big yellow key words in the centre, like the story Shorts. Give
   every "text" block of the "video" script a `"pop": [{"say": "...", "show": "..."}]` list of 4-6 headline-style

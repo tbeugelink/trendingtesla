@@ -1,0 +1,45 @@
+name: Image pilot (OpenAI vs ChatGPT library, nothing is published)
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry:
+        description: "Dry run: no paid OpenAI calls, only setup check and judging the ChatGPT images (yes/no)"
+        required: false
+        default: "yes"
+      cap:
+        description: "Hard budget for this pilot in USD"
+        required: false
+        default: "5"
+
+permissions:
+  contents: write
+
+jobs:
+  pilot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v5
+      - run: pip install --quiet pillow num2words
+      - name: Run the pilot
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          PILOT_CAP_USD: ${{ github.event.inputs.cap }}
+        run: |
+          [ -n "$OPENAI_API_KEY" ] && echo "OPENAI_API_KEY present" || echo "::warning::OPENAI_API_KEY missing"
+          if [ "${{ github.event.inputs.dry }}" = "yes" ]; then python3 tools/image_pilot.py --dry; else python3 tools/image_pilot.py; fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: image-pilot
+          path: ops/pilot/out/
+          retention-days: 30
+      - name: Keep the log and summary (no images in the repo)
+        if: always() && github.event.inputs.dry != 'yes'
+        run: |
+          git config user.name tbeugelink
+          git config user.email 345708345+tbeugelink@users.noreply.github.com
+          git add ops/images-log.jsonl ops/pilot/summary.md 2>/dev/null || true
+          git diff --cached --quiet || { git commit -m "Image pilot: log and summary"; git pull --rebase origin main; git push; }

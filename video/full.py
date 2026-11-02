@@ -223,7 +223,7 @@ def pop_overlay(txt):
     f = font(FB, POP_SIZE)
     txt = " ".join(txt.split()[:4])  # never more than 4 words, one line
     lines = [txt]  # landscape: always one line, there is room enough
-    while f.getlength(txt) > W - 200 and f.size > 60:
+    while f.getlength(txt) > W * 0.78 and f.size > 60:  # safe area: phones crop the edges
         f = font(FB, f.size - 6)
     lh = int(f.size * 1.04)
     im = Image.new("RGBA", (W, H), (0, 0, 0, 0))

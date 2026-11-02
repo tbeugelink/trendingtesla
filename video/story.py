@@ -417,12 +417,46 @@ def ease(x):
     return 0.5 - 0.5 * math.cos(math.pi * max(0.0, min(1.0, x)))
 
 
+LIBDESC = {}
+
+
+def anchor_of(im, b):
+    """Time the voice names what photo `im` shows (a meaningful word of its library description), or None."""
+    if not LIBDESC:
+        f = S.ROOT / "ops/library.json"
+        LIBDESC.update(json.loads(f.read_text()) if f.exists() else {})
+    d = set(re.findall(r"[a-z0-9]{4,}", (LIBDESC.get(Path(str(im)).name, "") + " " +
+                                          Path(str(im)).stem.replace("-", " ")).lower()))
+    d -= {"tesla", "white", "black", "with", "from", "night", "behind", "photo", "close", "front", "view"}
+    for w, st in b.get("_words") or []:
+        if re.sub(r"[^a-z0-9]", "", w.lower()) in d:
+            return st
+    return None
+
+
 def make_shots(beats, pool, rnd):
     """Cut every beat into shots of at most SHOT_MAX s; each shot gets its own photo or framing and its own move."""
     rot = [(im, f) for f in range(len(FRAMINGS)) for im in pool]  # every photo whole first, then close-ups
     k, shots, last = 0, [], None
     for bi, b in enumerate(beats):
         own = b.get("_imgs") or []
+        anc = [anchor_of(im, b) for im in own]
+        if len(own) > 1 and any(x is not None for x in anc[1:]):  # sync: cut to each named photo when it is said
+            cuts = [b["_t0"]] + [max(b["_t0"] + 0.6, x - 0.2) if x is not None else None for x in anc[1:]]
+            for q in range(1, len(cuts)):  # unnamed photos: halfway between their neighbours
+                if cuts[q] is None:
+                    nxt = next((c for c in cuts[q + 1:] if c is not None), b["_t0"] + b["_dur"])
+                    cuts[q] = (cuts[q - 1] + nxt) / 2
+            cuts = sorted(cuts) + [b["_t0"] + b["_dur"]]
+            for q, im in enumerate(own):
+                st, en = cuts[q], cuts[q + 1]
+                if en - st < 0.4:
+                    continue
+                mv = "punch" if bi == 0 and q == 0 else MOVES[(len(shots) + rnd.randrange(2)) % len(MOVES)]
+                shots.append({"img": im, "f": 0, "move": mv, "shake": bool(b.get("shake")), "fx": FOCUS.get(im, 0.5),
+                              "t0": st, "dur": en - st, "beat": bi})
+            last = own[-1]
+            continue
         n = max(len(own), 1, math.ceil(b["_dur"] / SHOT_MAX - 0.15))
         for j in range(n):
             if own:  # this beat's own scene photos; extra shots are close-ups of them (still on topic)
@@ -690,6 +724,7 @@ def main():
         if CAPTIONS:
             caps += groups(words, t)
         pops += [(p0, p1, txt, i) for p0, p1, txt in find_pops(b, words, t + (0.25 if i == 0 else 0))]
+        b["_words"] = [(w, t + (0.25 if i == 0 else 0) + s0) for w, s0, _ in words]
         nxt = beats[i + 1]["part"] if i + 1 < len(beats) else None
         gap = GAP["payoff"] if nxt == "payoff" and b["part"] != "payoff" else GAP[b["part"]]
         b["_dur"] = dur + gap + (0.25 if i == 0 else 0) + (END_HOLD if i == len(beats) - 1 else 0)

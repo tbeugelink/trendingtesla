@@ -414,6 +414,20 @@ SCENE_WORDS = ["space", "rocket", "launch", "falcon", "starship", "orbit", "boos
                "solar", "powerwall", "supercharger", "charging", "screen", "interior"]
 
 
+def photo_anchor(p, ws, tags):
+    """When does the voice name what photo p shows? The first spoken word (of ws) that matches its car model or a
+    meaningful word of its description; None when nothing matches (then it may show any time in its block)."""
+    d = set(re.findall(r"[a-z0-9]{4,}", DESC.get(p, "").lower())) - STOP - {"tesla", "photo", "white", "black",
+                                                                              "with", "from", "night", "behind"}
+    for k, (w, st, _) in enumerate(ws):
+        two = " ".join(x[0] for x in ws[k:k + 2])
+        if tags.get(p) and models_in(two) & tags[p]:
+            return st
+        if re.sub(r"[^a-z0-9]", "", w.lower()) in d:
+            return st
+    return None
+
+
 def photo_tags(a):
     """Which car model each photo shows: model galleries, library descriptions, real photo and gen descriptions."""
     import json as J
@@ -503,19 +517,34 @@ def render(a, lang, pieces, segs, place, words, total, end_start, audio):
             if tags.get(p):  # a car photo: only when the words (or the article) are about that very model
                 return bool(tags[p] & (want or main))
             return p in same  # a generic photo only within its own section
-        n = max(1, round((bounds[i + 1] - bounds[i]) / SCENE_MAX))
-        for j in range(n):
-            q = None
-            for gap in range(GAP, -1, -1):  # relax the gap only when there are not enough photos at all
-                recent = [x[1] for x in scenes[-gap:]] if gap else []
-                ok = [p for p in cand if p not in recent and fits(p)]
-                if ok:
-                    mine = [p for p in ok if p in own[i]]
-                    q = min(mine, key=lambda p: uses.get(p, 0)) if mine else ok[0]
-                    break
-            q = q or (own[i] or pool or [S.photos(a)[0]])[0]
+        # sync: a photo of something the voice names (a rocket, the Model S, a battery) starts when that word is
+        # spoken, never before; the other shots fill the time around it
+        t0b, t1b = bounds[i], bounds[i + 1]
+        ws = [w for w in words if t0b <= w[1] < t1b]
+        anchor = {p: photo_anchor(p, ws, tags) for p in own[i]}
+        fixed = sorted((max(t0b, anchor[p] - 0.2), p) for p in own[i] if anchor[p] is not None)
+        slots, t = [], t0b
+        for at, p in fixed + [(t1b, None)]:
+            n = max(0, round((at - t) / SCENE_MAX)) if at - t > 1.2 else 0
+            slots += [(t + (at - t) * j / n, None) for j in range(n)]
+            if p is not None:
+                slots.append((at, p))
+                t = at
+        if not slots:
+            slots = [(t0b, None)]
+        for st, q in slots:
+            if q is None:
+                for gap in range(GAP, -1, -1):  # relax the gap only when there are not enough photos at all
+                    recent = [x[1] for x in scenes[-gap:]] if gap else []
+                    early = {p for p in own[i] if anchor[p] is not None and anchor[p] - 0.2 > st + 0.5}
+                    ok = [p for p in cand if p not in recent and p not in early and fits(p)]
+                    if ok:
+                        mine = [p for p in ok if p in own[i]]
+                        q = min(mine, key=lambda p: uses.get(p, 0)) if mine else ok[0]
+                        break
+                q = q or (own[i] or pool or [S.photos(a)[0]])[0]
             uses[q] = uses.get(q, 0) + 1
-            scenes.append((bounds[i] + (bounds[i + 1] - bounds[i]) * j / n, q, uses[q] - 1))
+            scenes.append((st, q, uses[q] - 1))
     nsc = len(scenes)
     starts = [x[0] for x in scenes]
 

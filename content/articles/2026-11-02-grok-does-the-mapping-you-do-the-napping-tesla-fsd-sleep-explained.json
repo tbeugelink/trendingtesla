@@ -63,12 +63,14 @@
     "model": "gemini-3.1-flash-image"
   },
   "label": {
-    "style": "r",
+    "style": "c",
     "en": {
-      "text": "NO NAPPING YET"
+      "sub": "GROK DOES THE MAPPING",
+      "text": "YOU DO THE NAPPING?"
     },
     "nl": {
-      "text": "NOG NIET SLAPEN"
+      "sub": "GROK DOET DE ROUTE",
+      "text": "JIJ DOET EEN DUTJE?"
     }
   },
   "short": {

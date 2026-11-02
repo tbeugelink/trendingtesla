@@ -126,6 +126,18 @@ William's library photos ("lib/...") and CC0 / public-domain photos: give at lea
 "cinematic" or "technical" and "category": "A", "B" or "C". Budget: about $11 (EUR 10) a month and 25 images a
 day (ops/images-log.jsonl logs every image). Switch back to Gemini only: repository variable IMAGE_PROVIDER=gemini.
 
+## Thumbnail label keeps the hook (decided 2 Nov 2026)
+
+When the title is a catchy line (a rhyme, a pun, a slogan, e.g. "Grok does the mapping, you do the napping?"),
+the "label" uses exactly that line: type "c" with the first half as "sub" and the second half as "text" (up to
+about 22 characters each). Never replace a strong hook with a plain summary ("NO NAPPING YET" lost the rhyme).
+
+## Pictures in sync with the voice (decided 2 Nov 2026)
+
+A picture of something the voice names (the Roadster in space, the Falcon Heavy, the Model S) starts when that
+word is spoken, never before. The renderer does this from the picture's description, so describe library and
+real photos with the words the voice will use, and in a beat with two pictures put them in spoken order.
+
 ## Shorts first (decided 31 Oct 2026, read this before writing the "short" script)
 
 The numbers of the first days were clear: Shorts got 450-1,400 views each, long news videos 4-243 (mostly ~15),

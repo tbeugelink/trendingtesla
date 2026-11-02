@@ -621,9 +621,8 @@ def render(a, lang, pieces, segs, place, words, total, end_start, audio):
         if kind != "text":
             continue
         t1 = place[i] + (segs[i][1] - segs[i][0])
-        if b.get("key"):
+        if b.get("key"):  # list item: its keyword first, then key phrases for the rest of what is said
             pops.append((max(place[i] - LEAD, label_end), None, pop_overlay(b["key"].upper())))
-            continue
         ws = [w for w in words if place[i] - 0.05 <= w[1] < t1 + 0.05]
         found = find_pops(b, ws)
         for k, (st, show) in enumerate(found):
@@ -631,7 +630,7 @@ def render(a, lang, pieces, segs, place, words, total, end_start, audio):
     pops.sort(key=lambda x: x[0])
     extra = []
     for i, (kind, txt, b) in enumerate(pieces):  # fill every gap longer than 2.2 s with the strongest spoken words
-        if kind != "text" or b.get("key"):
+        if kind != "text":
             continue
         t1 = place[i] + (segs[i][1] - segs[i][0])
         ws = [w for w in words if place[i] - 0.05 <= w[1] < t1 + 0.05]

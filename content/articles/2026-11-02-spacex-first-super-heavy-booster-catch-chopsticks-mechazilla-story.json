@@ -22,6 +22,9 @@
     }
   ],
   "images": [
+    "gen/spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story.jpg",
+    "gen/spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story-x3-11022028.jpg",
+    "gen/spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story-x2-11022028.jpg",
     "lib/starship-booster-catch.jpg",
     "lib/starship-pad.jpg",
     "lib/starship-launch.jpg",
@@ -43,13 +46,17 @@
     "extra": [
       {
         "prompt": "Wide view from the sandy beach at dusk across the water toward the floodlit launch tower at Starbase, its two catch arms open and empty, waiting; a full Starship rocket stands on the neighbouring pad in the distance; calm sea, dune grass in the foreground, blue hour sky with a band of orange",
-        "describe": "the launch tower's chopstick arms open and waiting at dusk, seen from the beach"
+        "describe": "the launch tower's chopstick arms open and waiting at dusk, seen from the beach",
+        "file": "gen/spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story-x2-11022028.jpg"
       },
       {
         "prompt": "Side view from a distance of a Super Heavy booster descending on a few glowing engines beside the tall launch tower, just before the arms close, early morning haze, bright engine flame reflecting on the steel, a plume of exhaust below",
-        "describe": "a Super Heavy booster slowing on its engines beside the tower just before the catch"
+        "describe": "a Super Heavy booster slowing on its engines beside the tower just before the catch",
+        "file": "gen/spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story-x3-11022028.jpg"
       }
-    ]
+    ],
+    "done": true,
+    "model": "gemini-3.1-flash-image"
   },
   "label": {
     "style": "c",
@@ -1692,5 +1699,6 @@
     ],
     "yt_title_en": "How SpaceX Caught a Super Heavy Booster With Chopsticks: The First Catch",
     "yt_title_nl": "Hoe SpaceX een Super Heavy-booster Ving met Eetstokjes: de Eerste Vangst"
-  }
+  },
+  "image": "gen/spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story.jpg"
 }

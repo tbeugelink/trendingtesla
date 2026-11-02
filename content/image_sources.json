@@ -229,5 +229,53 @@
         "commons": "2025 Tesla Model Y interior dashboard"
       }
     ]
+  },
+  "gen/spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story.jpg": {
+    "article": "spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story",
+    "model": "gemini-3.1-flash-image",
+    "made": "2026-11-02",
+    "references": [
+      {
+        "src": "lib/starship-booster-catch.jpg"
+      },
+      {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Tower_and_Booster.jpg/1280px-Tower_and_Booster.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page": "https://commons.wikimedia.org/wiki/File:Tower_and_Booster.jpg",
+        "license": "CC BY-SA 4.0",
+        "commons": "Super Heavy booster catch Starbase"
+      }
+    ]
+  },
+  "gen/spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story-x2-11022028.jpg": {
+    "article": "spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story",
+    "model": "gemini-3.1-flash-image",
+    "made": "2026-11-02",
+    "references": [
+      {
+        "src": "lib/starship-booster-catch.jpg"
+      },
+      {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Tower_and_Booster.jpg/1280px-Tower_and_Booster.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page": "https://commons.wikimedia.org/wiki/File:Tower_and_Booster.jpg",
+        "license": "CC BY-SA 4.0",
+        "commons": "Super Heavy booster catch Starbase"
+      }
+    ]
+  },
+  "gen/spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story-x3-11022028.jpg": {
+    "article": "spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story",
+    "model": "gemini-3.1-flash-image",
+    "made": "2026-11-02",
+    "references": [
+      {
+        "src": "lib/starship-booster-catch.jpg"
+      },
+      {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Tower_and_Booster.jpg/1280px-Tower_and_Booster.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page": "https://commons.wikimedia.org/wiki/File:Tower_and_Booster.jpg",
+        "license": "CC BY-SA 4.0",
+        "commons": "Super Heavy booster catch Starbase"
+      }
+    ]
   }
 }

@@ -249,3 +249,6 @@ Articles with a "models" key automatically use real-life photos of that model. Y
 - gen/grok-does-the-mapping-you-do-the-napping-tesla-fsd-sleep-explained.jpg — An awake driver talking to a new Model Y while it drives along a coastal road at dusk, route on the screen
 - gen/grok-does-the-mapping-you-do-the-napping-tesla-fsd-sleep-explained-x2-11020558.jpg — The Model Y screen with a planned route at night in the rain, hands on the wheel
 - gen/grok-does-the-mapping-you-do-the-napping-tesla-fsd-sleep-explained-x3-11020559.jpg — A new Model Y arriving at a house driveway on an autumn morning, driver alert
+- gen/spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story.jpg — a Super Heavy booster held by the launch tower's chopstick arms at sunrise, Starbase
+- gen/spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story-x2-11022028.jpg — the launch tower's chopstick arms open and waiting at dusk, seen from the beach
+- gen/spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story-x3-11022028.jpg — a Super Heavy booster slowing on its engines beside the tower just before the catch

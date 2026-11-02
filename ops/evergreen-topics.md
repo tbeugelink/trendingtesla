@@ -9,10 +9,10 @@ Add new ideas at the bottom at any time.
 - [x] How much does it cost to charge a Tesla at a Supercharger (US, UK, Netherlands, Germany)? (already covered: tesla-supercharger-prices-us-october-2026-how-to-pay-less)
 - [x] Tesla Model 3 vs Model Y in 2026: which one should you buy? (already covered: tesla-model-3-vs-model-y-2026-which-to-buy-price-range-space)
 - [x] What is Tesla FSD (Supervised), what does it cost, and where can you use it? (what-is-tesla-fsd-supervised-cost-countries-explained)
-- [ ] Grok and FSD: what does it mean when Tesla's AI chatbot meets its self-driving software? (check carefully what is real and what is only announced)
+- [x] Grok and FSD: what does it mean when Tesla's AI chatbot meets its self-driving software? (check carefully what is real and what is only announced) (already covered: grok-does-the-mapping-you-do-the-napping-tesla-fsd-sleep-explained)
 - [ ] A Tesla phone: what is known, what is rumour, and how could it work with Starlink and your Tesla? (clearly separate facts, statements and speculation)
 - [ ] Step into my office: inside the Tesla Semi cabin, the centre seat, the two screens and what a driver's day looks like
-- [ ] "Grok does the mapping, you do the napping?" Keep this title (with the question mark) for the article, the Short and the long video. Explain what Grok and FSD each do, why napping is NOT allowed yet (FSD Supervised: the driver stays responsible and must watch the road; say this clearly and early), and when it could be: what Unsupervised FSD needs (data, regulators, country by country), where cars already drive without anyone at the wheel (Robotaxi), and what Tesla has said about timing (a statement, not a fact). Never suggest sleeping or looking away while driving today.
+- [x] "Grok does the mapping, you do the napping?" Keep this title (with the question mark) for the article, the Short and the long video. Explain what Grok and FSD each do, why napping is NOT allowed yet (FSD Supervised: the driver stays responsible and must watch the road; say this clearly and early), and when it could be: what Unsupervised FSD needs (data, regulators, country by country), where cars already drive without anyone at the wheel (Robotaxi), and what Tesla has said about timing (a statement, not a fact). Never suggest sleeping or looking away while driving today. (grok-does-the-mapping-you-do-the-napping-tesla-fsd-sleep-explained)
 - [ ] Cybernap in your Cybercab: why sleeping is fine in a car with no steering wheel, how a driverless ride works and where you can take one (follow-up to the napping article; use the cybercab-nap photos)
 - [ ] Why could Optimus become Tesla's biggest product ever, as Musk says? What it can do now, what it costs and what has to happen first
 - [ ] Tesla's giant solar panel factory: what is planned, where, how big, and why Tesla wants to make its own panels (check the latest official plans)
@@ -43,6 +43,8 @@ Add new ideas at the bottom at any time.
 - [ ] Why does Tesla have no dealers? How buying a Tesla works
 - [ ] Gigacasting explained: why Tesla casts a car's body in a few huge pieces
 - [ ] Why does Tesla build its batteries from thousands of small cells instead of a few big ones? From laptop cells to the 4680
+- [ ] Level 2 vs level 3 vs level 4: what the self-driving levels mean, and why Mercedes takes the blame in Drive Pilot while Tesla does not
+- [ ] Can you text while using Tesla FSD? What Musk said, what the car allows and what the law says in the US, UK and Europe
 
 ## Stories (evening task: entertaining and educational, timeless)
 
@@ -70,6 +72,7 @@ Add new ideas at the bottom at any time.
 - [ ] The Plaid that beat supercars: how Tesla made a family sedan the quickest car in the world
 - [ ] AC Propulsion's tzero: the hand-built electric car that inspired Tesla's founders, and why its makers would not build it
 - [ ] Starman: why SpaceX launched Musk's own Roadster on the first Falcon Heavy, and where that car is now
+- [ ] January 22, 2026: the first Tesla Robotaxi rides with nobody in the car, and the long road of missed self-driving deadlines before it
 
 ## Series: How did Elon Musk ...? (evening task; one per week at most, category "musk")
 

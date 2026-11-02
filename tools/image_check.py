@@ -65,7 +65,7 @@ Answer only JSON: {{"visual": n, "technical_pass": true/false, "technical_errors
 def check(im, subject, refs=(), category="A"):
     init()
     parts = [{"text": Q.format(subject=subject, category=category)}, _part(im)]
-    parts += [_part(Image.open(r).convert("RGB"), 768) for r in list(refs)[:3]]
+    parts += [_part(r if isinstance(r, Image.Image) else Image.open(r).convert("RGB"), 768) for r in list(refs)[:3]]
     last = None
     for mdl in CHECKER:
         try:

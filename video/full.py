@@ -192,7 +192,7 @@ def phrase(ws, k):
 
 def strength(w, prev=""):
     """How strong a spoken word is as a key word: numbers and names first, then long words; stop words 0."""
-    c = re.sub(r"[^\w$%]", "", w)
+    c = re.sub(r"[^\w$%]", "", re.sub(r"'s\W*$", "", w))
     if not c or c.lower() in STOP or c.lower() in GENERIC or c.lower() in MONTHS or len(c) < 3 and not c[0].isdigit():
         return 0
     if re.fullmatch(r"\d{1,2}", c):  # a lone small number ("1", "3") says nothing on its own

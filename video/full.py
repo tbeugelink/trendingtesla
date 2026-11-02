@@ -24,7 +24,7 @@ import short as S  # noqa: E402  (same folder; landscape layout)
 from short import W, H, FPS, font, FB, FX, YEL  # noqa: E402
 
 SPEED = {"en": "1.17", "nl": "1.17"}
-OUTRO_SAY = {"en": "Like and subscribe for more Tesla news, or go to TrendingTesla.com. I'll see you there!",
+OUTRO_SAY = {"en": "Like and subscribe for more Tesla news and join us on TrendingTesla.com. I'll see you there!",
              "nl": "Like en abonneer voor meer Tesla-nieuws, of ga naar TrendingTesla.com. Ik zie je daar!"}
 OUTRO_CARD = {"en": "LIKE & SUBSCRIBE", "nl": "LIKE & ABONNEER"}
 OUTRO_SEC = 10.0
@@ -163,6 +163,14 @@ def key_overlay(a, text):
 LEAD = 0.25  # key words appear this much before the spoken word
 STOP = set("so the a an of to in on for with such and or but its it is was were be been that this these those "
            "would could should did does do had has have get got really still actually".split())
+
+
+def strength(w):
+    """How strong a spoken word is as a key word: numbers and names first, then long words; stop words 0."""
+    c = re.sub(r"[^\w$%]", "", w)
+    if not c or c.lower() in STOP or len(c) < 3 and not c[0].isdigit():
+        return 0
+    return 4 if re.search(r"\d", c) else 3 if c[0].isupper() else 1 + len(c) / 6
 
 
 def short_head(txt):
@@ -370,10 +378,17 @@ def models_in(text):
     return out
 
 
+DESC = {}
+SCENE_WORDS = ["space", "rocket", "launch", "falcon", "starship", "orbit", "booster", "earth", "moon", "mars",
+               "factory", "office", "cheque", "chart", "phone", "robot", "optimus", "battery", "motor", "megapack",
+               "solar", "powerwall", "supercharger", "charging", "screen", "interior"]
+
+
 def photo_tags(a):
     """Which car model each photo shows: model galleries, library descriptions, real photo and gen descriptions."""
     import json as J
     tags = {}
+    DESC.clear()
     prefix = {}
     for key, m in S.build.MODELS.items():
         fam = "roadster-new" if key.startswith("roadster") else (m.get("parent") or key)
@@ -388,10 +403,12 @@ def photo_tags(a):
             tags[p] = {fam}
     lib = S.ROOT / "ops/library.json"
     for f, d in (J.loads(lib.read_text()) if lib.exists() else {}).items():
+        DESC[S.build.STATIC / "img/lib" / f] = d
         if models_in(d):
             tags[S.build.STATIC / "img/lib" / f] = models_in(d)
     cr = S.build.STATIC / "img/real/story/credits.json"
     for f, d in (J.loads(cr.read_text()) if cr.exists() else {}).items():
+        DESC[S.build.STATIC / "img/real/story" / f] = d.get("want", "")
         if models_in(d.get("want", "")):
             tags[S.build.STATIC / "img/real/story" / f] = models_in(d.get("want", ""))
     gi = a.get("gen_image") or {}
@@ -445,9 +462,14 @@ def render(a, lang, pieces, segs, place, words, total, end_start, audio):
         topic = want or main
         cand = list(dict.fromkeys(own[i] + [p for p in allp if tags.get(p, set()) & topic] + allp))
 
-        def fits(p, i=i, want=want, same=same):
+        words_i = txt.lower()
+
+        def fits(p, i=i, want=want, same=same, words_i=words_i):
             if p in own[i]:
-                return True
+                return not (want and tags.get(p) and not tags[p] & want)  # never another model than the words
+            d = DESC.get(p, "").lower()  # a rocket, a factory, a chart... only where the words are about that
+            if any(w in d and w not in words_i for w in SCENE_WORDS):
+                return False
             if tags.get(p):  # a car photo: only when the words (or the article) are about that very model
                 return bool(tags[p] & (want or main))
             return p in same  # a generic photo only within its own section
@@ -529,6 +551,26 @@ def render(a, lang, pieces, segs, place, words, total, end_start, audio):
         for k, (st, show) in enumerate(found):
             pops.append((max(st - LEAD, label_end), None, pop_overlay(show)))  # a fraction before the voice
     pops.sort(key=lambda x: x[0])
+    extra = []
+    for i, (kind, txt, b) in enumerate(pieces):  # fill every gap longer than 2.2 s with the strongest spoken words
+        if kind != "text" or b.get("key"):
+            continue
+        t1 = place[i] + (segs[i][1] - segs[i][0])
+        ws = [w for w in words if place[i] - 0.05 <= w[1] < t1 + 0.05]
+        times = sorted([p[0] for p in pops if place[i] - 0.5 <= p[0] <= t1] + [t1])
+        last = place[i] - LEAD
+        for nxt in times:
+            while nxt - last > 2.2:
+                cand = [k for k, w in enumerate(ws) if last + 0.8 <= w[1] - LEAD <= nxt - 0.8]
+                if not cand:
+                    break
+                k = max(cand, key=lambda k: strength(ws[k][0]))
+                show = " ".join(w[0] for w in ws[k:k + 2] if strength(w[0]) > 1)
+                show = re.sub(r"[^\w$%,.' -]", "", show).strip(".,; ").upper() or ws[k][0].upper()
+                extra.append((max(ws[k][1] - LEAD, label_end), None, pop_overlay(show)))
+                last = ws[k][1] - LEAD
+            last = max(last, nxt)
+    pops = sorted(pops + extra, key=lambda x: x[0])
     pops = [(p0, pops[k + 1][0] if k + 1 < len(pops) else end_start, o) for k, (p0, _, o) in enumerate(pops)]
     print(f"{len(pops)} key words")
     chunks, cur = [], []

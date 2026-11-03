@@ -47,6 +47,8 @@ Add new ideas at the bottom at any time.
 - [ ] Why does Starship need no landing legs? How a tower catch makes rockets reusable within hours (explainer angle on the catch)
 - [ ] Can you text while using Tesla FSD? What Musk said, what the car allows and what the law says in the US, UK and Europe
 - [ ] How does Starlink Mobile (Direct to Cell) reach an ordinary phone from space, and what can you do with it (texts, apps, video later)?
+- [ ] Camera mirrors on trucks: why the European Tesla Semi has no side mirrors, and how camera mirror systems work and are allowed in the EU
+- [ ] Megacharger vs MCS: how you charge a 40-tonne truck in 30 minutes, and what a truck charging stop needs
 - [ ] Will Teslas get Starlink built in? How a Tesla connects to the internet today (Standard vs Premium Connectivity, AT&T, 5G) and what satellite links would change
 
 ## Stories (evening task: entertaining and educational, timeless)
@@ -70,7 +72,7 @@ Add new ideas at the bottom at any time.
 - [ ] From Falcon 1 to Starship: SpaceX's road from three failures to catching rockets
 - [ ] The Model S that crushed the crash test machine: Tesla's safety story
 - [ ] Why Tesla removed the radar, and then the sensors: the "vision only" bet
-- [ ] Tesla Semi: the start of fully autonomous transport? From the 2017 reveal to trucks on the road, and how far self-driving trucks really are
+- [x] Tesla Semi: the start of fully autonomous transport? From the 2017 reveal to trucks on the road, and how far self-driving trucks really are (tesla-semi-story-2017-reveal-to-factory-europe-why-nine-years)
 - [ ] Boring Company: how a traffic joke became the Las Vegas Loop
 - [ ] The Plaid that beat supercars: how Tesla made a family sedan the quickest car in the world
 - [ ] AC Propulsion's tzero: the hand-built electric car that inspired Tesla's founders, and why its makers would not build it
@@ -79,6 +81,7 @@ Add new ideas at the bottom at any time.
 - [ ] Why SpaceX builds its rockets from stainless steel: the switch away from carbon fibre that shaped Starship (and the Cybertruck)
 - [ ] January 22, 2026: the first Tesla Robotaxi rides with nobody in the car, and the long road of missed self-driving deadlines before it
 - [ ] The EchoStar deal: how SpaceX bought its way into the phone business without building a phone
+- [ ] Run on Less 2023: the day a PepsiCo Tesla Semi drove 1,076 miles, and what the electric-truck trial showed about all the rivals
 
 ## Series: How did Elon Musk ...? (evening task; one per week at most, category "musk")
 

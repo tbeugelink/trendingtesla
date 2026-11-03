@@ -1,0 +1,2433 @@
+{
+ "slug": "tesla-semi-story-2017-reveal-to-factory-europe-why-nine-years",
+ "date": "2026-11-03",
+ "time": "21:25",
+ "category": "models",
+ "models": [
+  "semi"
+ ],
+ "sources": [
+  {
+   "title": "Overdrive: Tesla unveils all-electric, semi-autonomous big rig with re-imagined truck design",
+   "url": "https://www.overdriveonline.com/tesla-unveils-all-electric-big-rig-with-re-imagined-truck-design-production-slated-for-2019"
+  },
+  {
+   "title": "Engadget: Tesla finally delivers its first production Semi",
+   "url": "https://www.engadget.com/tesla-finally-delivers-its-first-production-semi-to-pepsi-014214184.html"
+  },
+  {
+   "title": "InsideEVs: Tesla Semi logs over 1,000 miles on a single day in independent test",
+   "url": "https://insideevs.com/news/689084/tesla-semi-1000-mile-drive-single-day/"
+  },
+  {
+   "title": "Drive Tesla Canada: Tesla unveils European Semi with cameras for side mirrors, deliveries start next year",
+   "url": "https://driveteslacanada.ca/news/tesla-semi-europe-550-km-range-2027-deliveries/"
+  },
+  {
+   "title": "Electrek: Musk says Tesla Semi self-driving within a year",
+   "url": "https://electrek.co/2026/07/27/musk-tesla-semi-self-driving-year-truckers-jobs-safe/"
+  }
+ ],
+ "real_photos": [
+  {
+   "page": "https://commons.wikimedia.org/wiki/File:Tesla_Semi_Ready_to_Ride_(47672278541).jpg",
+   "describe": "the Tesla Semi truck (real photo)"
+  },
+  {
+   "page": "https://commons.wikimedia.org/wiki/File:The_Tesla_Semi_Truck_(40705940423).jpg",
+   "describe": "the Tesla Semi truck (real photo)"
+  }
+ ],
+ "images": [
+  "lib/semi-highway.jpg",
+  "models/semi-6.jpg",
+  "lib/semi-megacharger.jpg",
+  "lib/semi-cab-interior.jpg",
+  "models/semi-7.jpg",
+  "models/semi-4.jpg"
+ ],
+ "label": {
+  "style": "c",
+  "en": {
+   "sub": "PROMISED FOR 2019",
+   "text": "WHAT TOOK SO LONG?"
+  },
+  "nl": {
+   "sub": "BELOOFD VOOR 2019",
+   "text": "WAAROM ZO LAAT?"
+  }
+ },
+ "en": {
+  "title": "Why the Tesla Semi took nine years: from a 2017 stage promise to its own factory and Europe's roads",
+  "description": "Promised for 2019 with 500 miles of range and sports-car acceleration, the Tesla Semi was delayed by battery shortages, proved its range in a 1,076-mile day and now heads for Europe. The story of the truck, and the one promise still open.",
+  "body": "<p>This week the Tesla Semi makes its first public appearance in France, at a trucking conference in the seaside town of Deauville. The European version has cameras instead of side mirrors, no light bar on the nose and an estimated 550 km of range with a full 40-tonne load. But it was first shown on a stage in Hawthorne, California, in November 2017, with production promised for 2019. Tesla needed about nine years to get from that promise to a dedicated truck factory, and European customers still wait until 2027.</p>\n<h2>What did Tesla promise on that night in 2017?</h2>\n<p><strong>A heavy truck that would sprint like a sports car and haul like a diesel.</strong> Tesla rolled the prototype onto a stage in Hawthorne, home of its design studio and the SpaceX rocket factory, and Elon Musk listed the claims: up to 500 miles (800 km) on one charge at a full 80,000 pounds, 0 to 60 mph in about 5 seconds empty and about 20 seconds fully loaded, and 65 mph up a 5 percent grade, where most diesel trucks slow to about 45. The driver sat in a single seat in the middle of the cab, \"like you're in a race car\", Musk said. A new Megacharger would add about 400 miles in 30 minutes, Enhanced Autopilot would be standard and Musk promised the truck would not break down for a million miles. Reservations cost $5,000, with planned prices of $150,000 and $180,000.</p>\n<p>Many people in trucking did not believe the range. A battery big enough for 500 miles with a full trailer would be enormous and heavy, and Tesla did not yet have the cells to spare.</p>\n<h2>So why did 2019 become 2022?</h2>\n<p><strong>Because Tesla did not have enough batteries for both its cars and its trucks.</strong> A long-range Semi carries a pack of about 822 kWh, roughly ten times the battery of a long-range Model 3. In April 2020 Tesla moved the start to 2021, citing production delays and the pandemic. In July 2021 it moved again, to 2022, blaming the global chip shortage and the limited supply of its new 4680 cells. In between, Musk wrote to staff in May 2020 that it was \"time to go all out\" on volume production. Customers waited.</p>\n<p>When the first trucks finally arrived, in December 2022, a few deliveries did not yet prove the claims from the stage.</p>\n<h2>Did the Semi really keep its 500-mile promise?</h2>\n<p><strong>In tests, yes.</strong> On November 27, 2022, Musk posted that the Tesla team had just completed a 500-mile drive with a Semi weighing 81,000 pounds. Four days later, at Giga Nevada, PepsiCo received the first production trucks out of an order of 100. The best test came in September 2023, in Run on Less, a public electric-truck trial by the North American Council for Freight Efficiency. A PepsiCo Semi from Sacramento drove 1,076 miles in a single day. It left just after midnight with a 95 percent charge, covered about 372 miles before its first stop and finished its last stretch seconds before midnight. Charging took only about one tenth of the day.</p>\n<p>The truck worked. The trouble was that a small fleet at a few customers is a showcase, not a business.</p>\n<h2>How did a pilot truck become a factory?</h2>\n<p><strong>Tesla built a separate Semi plant next to Gigafactory Nevada.</strong> Volume production started there in 2026, and in September Tesla celebrated the opening of the plant, which is <a href=\"/tesla-semi-factory-opening-first-deliveries/\">designed for up to 50,000 trucks a year</a>, with deliveries to its first series customers. Reported prices are well above the $150,000 of 2017. Tesla still has to show it can fill the factory, and Tesla has told investors the Semi will stay a very small share of its vehicles for now.</p>\n<p>The next test is Europe, where trucks are built to different rules and the rivals are already on the road.</p>\n<h2>What changes for the European Semi?</h2>\n<p><strong>Shorter range on paper, a different face and cameras instead of mirrors.</strong> Tesla showed the European version in September 2026, ahead of the IAA Transportation show in Hannover. Its estimated 550 km assumes a 40-tonne combination, heavier than the American test load. It charges at up to 800 kW and can add about 60 percent in 30 minutes, about 330 km during a typical rest stop. Demonstrations with fleets are planned for the first half of 2027, deliveries before the end of 2027. European truck makers such as Mercedes-Benz, MAN and Volvo already sell electric heavy trucks, so Tesla arrives as a challenger, not a pioneer.</p>\n<p>There is one more promise from 2017 that has not been kept: the self-driving truck.</p>\n<h2>So is the Semi the start of trucks that drive themselves?</h2>\n<p><strong>Not yet: today a person drives every Tesla Semi.</strong> The 2017 truck came with Enhanced Autopilot and talk of trucks driving in convoys, but at the 2022 delivery event Tesla did not mention Autopilot at all. On the earnings call in July 2026, Musk said Tesla expects to get self-driving working on the Semi \"probably around the end of this year or early next year\", while the cars and the Cybercab come first. That is a statement, not a fact; his self-driving deadlines have often slipped. Other companies, such as Aurora in Texas, already haul freight with no driver on board.</p>\n<p>That is why the Semi is such a good Tesla story. The date was wrong by years, but the hardest promise, 500 miles with a full load, turned out to be real. A truck that once looked like a stage show now rolls out of its own factory and heads for Europe. Whether it ever drives itself is the next chapter.</p>"
+ },
+ "nl": {
+  "title": "Waarom de Tesla Semi negen jaar duurde: van een podiumbelofte in 2017 naar een eigen fabriek en de Europese weg",
+  "description": "Beloofd voor 2019, met 800 km bereik en de acceleratie van een sportauto. De Tesla Semi liep jaren vertraging op door accutekorten, bewees zijn bereik met ruim 1.700 km op één dag en komt nu naar Europa. Het verhaal van de truck, en de belofte die nog openstaat.",
+  "body": "<p>Deze week staat de Tesla Semi voor het eerst in het openbaar in Frankrijk, op een transportcongres in de badplaats Deauville. De Europese versie heeft camera's in plaats van spiegels, geen lichtbalk op de neus en een geschatte actieradius van 550 km met een volle combinatie van 40 ton. Maar hij werd al in november 2017 op een podium in Hawthorne, Californië, gepresenteerd, met productie beloofd voor 2019. Tesla had zo'n negen jaar nodig om van die belofte naar een eigen vrachtwagenfabriek te komen, en Europese klanten wachten nog tot 2027.</p>\n<h2>Wat beloofde Tesla op die avond in 2017?</h2>\n<p><strong>Een zware truck die optrekt als een sportauto en trekt als een diesel.</strong> Tesla reed het prototype een podium op in Hawthorne, waar zijn designstudio en de raketfabriek van SpaceX staan, en Elon Musk somde de beloftes op: tot 800 km op één lading met een volle 36 ton, van 0 naar 100 km/u in ongeveer 5 seconden leeg en zo'n 20 seconden volgeladen, en 105 km/u op een helling van 5 procent, waar de meeste diesels terugzakken naar zo'n 70. De chauffeur zat op één stoel midden in de cabine, \"alsof je in een raceauto zit\", zei Musk. Een nieuwe Megacharger zou in 30 minuten zo'n 640 km bijladen, Enhanced Autopilot zou standaard zijn en Musk beloofde dat de truck een miljoen mijl (1,6 miljoen km) niet zou stukgaan. Een reservering kostte 5.000 dollar, de geplande prijzen waren 150.000 en 180.000 dollar.</p>\n<p>Veel mensen in de transportwereld geloofden die actieradius niet. Een accu die groot genoeg is voor 800 km met een volle oplegger is enorm en zwaar, en Tesla had de cellen daarvoor nog niet over.</p>\n<h2>Dus waarom werd 2019 uiteindelijk 2022?</h2>\n<p><strong>Omdat Tesla niet genoeg accu's had voor zowel zijn auto's als zijn trucks.</strong> Een Semi met grote actieradius heeft een accupakket van zo'n 822 kWh, ruwweg tien keer de accu van een Model 3 Long Range. In april 2020 schoof Tesla de start op naar 2021, door productievertraging en de pandemie. In juli 2021 schoof hij opnieuw, naar 2022, door het wereldwijde chiptekort en het beperkte aanbod van de nieuwe 4680-cellen. Tussendoor schreef Musk in mei 2020 aan zijn personeel dat het \"tijd was om alles te geven\" voor massaproductie. De klanten bleven wachten.</p>\n<p>Toen de eerste trucks in december 2022 eindelijk kwamen, bewezen een paar leveringen nog niet wat er op het podium was beloofd.</p>\n<h2>Maakte de Semi zijn belofte van 800 km echt waar?</h2>\n<p><strong>In tests wel.</strong> Op 27 november 2022 meldde Musk dat het Tesla-team net 500 mijl (800 km) had gereden met een Semi van ongeveer 37 ton. Vier dagen later kreeg PepsiCo in Giga Nevada de eerste productietrucks, uit een bestelling van 100. De mooiste test volgde in september 2023, tijdens Run on Less, een openbare proef met elektrische trucks van de North American Council for Freight Efficiency. Een Semi van PepsiCo uit Sacramento reed op één dag 1.076 mijl, ruim 1.700 km. Hij vertrok net na middernacht met 95 procent, reed zo'n 600 km tot de eerste stop en rondde zijn laatste stuk af seconden voor middernacht. Laden kostte maar ongeveer een tiende van de dag.</p>\n<p>De truck werkte dus. Alleen zijn een kleine vloot bij een paar klanten een etalage, geen bedrijf.</p>\n<h2>Hoe werd een proeftruck een fabriek?</h2>\n<p><strong>Tesla bouwde een aparte Semi-fabriek naast Gigafactory Nevada.</strong> Daar begon in 2026 de serieproductie, en in september vierde Tesla de opening van de fabriek, die is <a href=\"/nl/tesla-semi-factory-opening-first-deliveries/\">ontworpen voor maximaal 50.000 trucks per jaar</a>, met leveringen aan de eerste seriekklanten. De gemelde prijzen liggen ruim boven de 150.000 dollar van 2017. Tesla moet nog laten zien dat het die fabriek kan vullen, en Tesla vertelde beleggers dat de Semi voorlopig maar een heel klein deel van zijn voertuigen blijft.</p>\n<p>De volgende test is Europa, waar trucks aan andere regels moeten voldoen en de concurrenten al rijden.</p>\n<h2>Wat is er anders aan de Europese Semi?</h2>\n<p><strong>Op papier minder actieradius, een ander gezicht en camera's in plaats van spiegels.</strong> Tesla liet de Europese versie in september 2026 zien, vlak voor de IAA Transportation in Hannover. De geschatte 550 km geldt voor een combinatie van 40 ton, zwaarder dan de Amerikaanse testlading. Hij laadt met maximaal 800 kW en haalt in 30 minuten zo'n 60 procent terug, zo'n 330 km tijdens een gewone rustpauze. Demonstraties bij vervoerders staan gepland voor de eerste helft van 2027, leveringen voor eind 2027. Europese merken als Mercedes-Benz, MAN en Volvo verkopen al elektrische zware trucks, dus Tesla komt hier binnen als uitdager, niet als pionier.</p>\n<p>Er is nog één belofte uit 2017 die niet is ingelost: de truck die zichzelf rijdt.</p>\n<h2>Is de Semi dan het begin van trucks die zelf rijden?</h2>\n<p><strong>Nog niet: vandaag rijdt er in elke Tesla Semi een mens.</strong> De truck van 2017 kwam met Enhanced Autopilot en verhalen over trucks die in konvooi rijden, maar bij de leveringen in 2022 noemde Tesla Autopilot niet eens. Tijdens de kwartaalcall van juli 2026 zei Musk dat Tesla zelfrijden op de Semi \"waarschijnlijk rond het eind van dit jaar of begin volgend jaar\" werkend verwacht, terwijl de auto's en de Cybercab voorgaan. Dat is een uitspraak, geen feit; zijn deadlines voor zelfrijden schoven vaak op. Andere bedrijven, zoals Aurora in Texas, vervoeren al vracht zonder chauffeur aan boord.</p>\n<p>Daarom is de Semi zo'n typisch Tesla-verhaal. De datum klopte jaren niet, maar de moeilijkste belofte, 800 km met een volle lading, bleek echt. Een truck die ooit een podiumshow leek, rolt nu uit zijn eigen fabriek en zet koers naar Europa. Of hij ooit zelf gaat rijden, is het volgende hoofdstuk.</p>"
+ },
+ "short": {
+  "hook": "contrast",
+  "en": "Tesla promised this truck for twenty nineteen. It took until twenty twenty-six to get its own factory. The twenty seventeen claims were wild. Eight hundred kilometres fully loaded. Zero to sixty in five seconds. The driver sits in the MIDDLE, like a race car. Truckers doubted it. That battery would be HUGE, and Tesla didn't have the cells. One pack equals about ten Model 3 batteries. So twenty nineteen became twenty twenty-two. Then PepsiCo got the first trucks. And one of them answered the doubters. In a public test, it drove over seventeen hundred kilometres in ONE day. Now there's a factory for fifty thousand trucks a year. And Europe is next, with cameras instead of mirrors. Years late. But the hardest promise was REAL. For the full story go to TrendingTesla.com.",
+  "nl": "Tesla beloofde deze truck voor tweeduizend negentien. Pas in tweeduizend zesentwintig kreeg hij een eigen fabriek. De beloftes van tweeduizend zeventien waren wild. Achthonderd kilometer volgeladen. Van nul naar honderd in vijf seconden. De chauffeur zit in het MIDDEN, als in een raceauto. Truckers twijfelden. Die accu zou ENORM zijn, en Tesla had de cellen niet. Eén pakket is zo'n tien accu's van een Model 3. Dus tweeduizend negentien werd tweeduizend tweeëntwintig. Toen kreeg PepsiCo de eerste trucks. En één ervan gaf de twijfelaars antwoord. In een openbare test reed hij ruim zeventienhonderd kilometer op ÉÉN dag. Nu is er een fabriek voor vijftigduizend trucks per jaar. En Europa is de volgende, met camera's in plaats van spiegels. Jaren te laat. Maar de moeilijkste belofte was ECHT. Voor het hele verhaal ga je naar TrendingTesla.com.",
+  "yt_title_en": "Tesla Promised This Truck for 2019",
+  "yt_title_nl": "Tesla Beloofde Deze Truck voor 2019",
+  "story": [
+   {
+    "part": "hook",
+    "text": "Tesla promised this truck for twenty nineteen. It took until twenty twenty-six to get its own factory.",
+    "img": [
+     "models/semi-2.jpg",
+     "models/semi-6.jpg"
+    ],
+    "pop": [
+     {
+      "say": "twenty nineteen",
+      "show": "PROMISED: 2019"
+     },
+     {
+      "say": "twenty twenty-six",
+      "show": "FACTORY: 2026"
+     }
+    ]
+   },
+   {
+    "part": "tension",
+    "text": "The twenty seventeen claims were wild. Eight hundred kilometres fully loaded. Zero to sixty in five seconds.",
+    "lib": [
+     "semi-highway.jpg"
+    ],
+    "pop": [
+     {
+      "say": "claims",
+      "show": "WILD CLAIMS"
+     },
+     {
+      "say": "Eight hundred kilometres",
+      "show": "800 KM"
+     },
+     {
+      "say": "fully loaded",
+      "show": "FULLY LOADED"
+     },
+     {
+      "say": "five seconds",
+      "show": "0-60: 5 SEC"
+     }
+    ]
+   },
+   {
+    "part": "tension",
+    "text": "The driver sits in the MIDDLE, like a race car.",
+    "lib": [
+     "semi-cab-interior.jpg"
+    ],
+    "pop": [
+     {
+      "say": "MIDDLE",
+      "show": "CENTRE SEAT"
+     },
+     {
+      "say": "race car",
+      "show": "LIKE A RACE CAR"
+     }
+    ]
+   },
+   {
+    "part": "tension",
+    "text": "Truckers doubted it. That battery would be HUGE, and Tesla didn't have the cells.",
+    "img": "models/semi-5.jpg",
+    "pop": [
+     {
+      "say": "Truckers doubted",
+      "show": "DOUBTERS"
+     },
+     {
+      "say": "HUGE",
+      "show": "HUGE BATTERY"
+     },
+     {
+      "say": "didn't have the cells",
+      "show": "NO CELLS"
+     }
+    ]
+   },
+   {
+    "part": "tension",
+    "text": "One pack equals about ten Model 3 batteries. So twenty nineteen became twenty twenty-two.",
+    "img": "models/semi-3.jpg",
+    "pop": [
+     {
+      "say": "ten Model 3",
+      "show": "10 MODEL 3 PACKS"
+     },
+     {
+      "say": "became twenty twenty-two",
+      "show": "2019 BECAME 2022"
+     }
+    ]
+   },
+   {
+    "part": "payoff",
+    "text": "Then PepsiCo got the first trucks. And one of them answered the doubters.",
+    "img": "models/semi-6.jpg",
+    "pop": [
+     {
+      "say": "PepsiCo",
+      "show": "PEPSICO"
+     },
+     {
+      "say": "first trucks",
+      "show": "FIRST TRUCKS"
+     },
+     {
+      "say": "answered the doubters",
+      "show": "THE ANSWER"
+     }
+    ]
+   },
+   {
+    "part": "payoff",
+    "text": "In a public test, it drove over seventeen hundred kilometres in ONE day.",
+    "lib": [
+     "semi-highway.jpg",
+     "semi-megacharger.jpg"
+    ],
+    "pop": [
+     {
+      "say": "public test",
+      "show": "PUBLIC TEST"
+     },
+     {
+      "say": "seventeen hundred kilometres",
+      "show": "1,700+ KM"
+     },
+     {
+      "say": "ONE day",
+      "show": "IN ONE DAY"
+     }
+    ]
+   },
+   {
+    "part": "payoff",
+    "text": "Now there's a factory for fifty thousand trucks a year. And Europe is next, with cameras instead of mirrors.",
+    "img": [
+     "models/semi-6.jpg",
+     "models/semi-4.jpg"
+    ],
+    "pop": [
+     {
+      "say": "factory",
+      "show": "ITS OWN FACTORY"
+     },
+     {
+      "say": "fifty thousand",
+      "show": "50,000 A YEAR"
+     },
+     {
+      "say": "Europe is next",
+      "show": "EUROPE NEXT"
+     },
+     {
+      "say": "cameras instead of mirrors",
+      "show": "CAMERA MIRRORS"
+     }
+    ]
+   },
+   {
+    "part": "payoff",
+    "text": "Years late. But the hardest promise was REAL. For the full story go to TrendingTesla.com.",
+    "img": "models/semi-7.jpg",
+    "pop": [
+     {
+      "say": "Years late",
+      "show": "YEARS LATE"
+     },
+     {
+      "say": "hardest promise",
+      "show": "HARDEST PROMISE"
+     },
+     {
+      "say": "REAL",
+      "show": "WAS REAL!"
+     }
+    ]
+   }
+  ]
+ },
+ "video": {
+  "en": [
+   {
+    "text": "The Tesla Semi was promised for 2019. Its own factory opened in 2026. This week, a European version makes its first public appearance in France, at a trucking conference in Deauville. It has cameras instead of side mirrors, no light bar on the nose, and an estimated 550 kilometres of range with a full 40 tonne load. It looks ready for work. But the story started on a stage in California in November 2017. Getting from that promise to a real truck factory took Tesla about nine years, and European customers still have to wait until 2027.",
+    "img": [
+     "lib/semi-highway.jpg",
+     "models/semi-6.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Deauville",
+       "Deauville beach Normandy",
+       "Deauville France"
+      ],
+      "want": "the seaside town of Deauville in Normandy, France"
+     },
+     {
+      "q": [
+       "Tesla Semi Europe",
+       "Tesla Semi IAA Hannover",
+       "Tesla Semi Germany"
+      ],
+      "want": "a Tesla Semi shown in Europe"
+     }
+    ],
+    "pop": [
+     {
+      "say": "promised for 2019",
+      "show": "PROMISED FOR 2019"
+     },
+     {
+      "say": "factory opened in 2026",
+      "show": "FACTORY IN 2026"
+     },
+     {
+      "say": "first public appearance in France",
+      "show": "FIRST TIME IN FRANCE"
+     },
+     {
+      "say": "cameras instead of side mirrors",
+      "show": "CAMERAS, NO MIRRORS"
+     },
+     {
+      "say": "no light bar",
+      "show": "NO LIGHT BAR"
+     },
+     {
+      "say": "550 kilometres",
+      "show": "550 KM"
+     },
+     {
+      "say": "full 40 tonne load",
+      "show": "40 TONNES"
+     },
+     {
+      "say": "ready for work",
+      "show": "READY FOR WORK"
+     },
+     {
+      "say": "November 2017",
+      "show": "NOVEMBER 2017"
+     },
+     {
+      "say": "about nine years",
+      "show": "NINE YEARS"
+     },
+     {
+      "say": "until 2027",
+      "show": "EUROPE: 2027"
+     }
+    ]
+   },
+   {
+    "head": "What did Tesla promise on that night in 2017?",
+    "img": [
+     "models/semi-2.jpg"
+    ],
+    "pop": [
+     {
+      "say": "",
+      "show": "THE 2017 PROMISE"
+     }
+    ]
+   },
+   {
+    "text": "A heavy truck that would sprint like a sports car and haul like a diesel. Tesla rolled the prototype onto a stage in Hawthorne, next to the SpaceX rocket factory, and Elon Musk's claims came one after another.",
+    "img": [
+     "models/semi-3.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Tesla Semi unveiling 2017",
+       "Tesla Semi prototype 2017",
+       "Tesla Semi Hawthorne"
+      ],
+      "want": "the Tesla Semi prototype truck, white, seen at its 2017 unveiling or soon after"
+     },
+     {
+      "q": [
+       "SpaceX headquarters Hawthorne",
+       "SpaceX Hawthorne factory"
+      ],
+      "want": "the SpaceX headquarters and rocket factory in Hawthorne, California"
+     }
+    ],
+    "pop": [
+     {
+      "say": "sprint like a sports car",
+      "show": "SPRINTS LIKE A SPORTS CAR"
+     },
+     {
+      "say": "haul like a diesel",
+      "show": "HAULS LIKE A DIESEL"
+     },
+     {
+      "say": "prototype",
+      "show": "THE PROTOTYPE"
+     },
+     {
+      "say": "SpaceX rocket factory",
+      "show": "NEXT TO SPACEX"
+     },
+     {
+      "say": "one after another",
+      "show": "CLAIM AFTER CLAIM"
+     }
+    ]
+   },
+   {
+    "text": "Up to 500 miles, about 800 kilometres, on one charge, with a full 80,000 pounds. Zero to 60 miles an hour in about 5 seconds empty, and about 20 seconds fully loaded. And 65 miles an hour up a 5 percent grade, where most diesel trucks slow to about 45.",
+    "img": [
+     "models/semi-4.jpg",
+     "lib/semi-highway.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Tesla Semi highway",
+       "Tesla Semi driving",
+       "Tesla Semi trailer"
+      ],
+      "want": "a Tesla Semi driving on a road with a trailer"
+     }
+    ],
+    "pop": [
+     {
+      "say": "500 miles",
+      "show": "500 MILES"
+     },
+     {
+      "say": "800 kilometres",
+      "show": "800 KM"
+     },
+     {
+      "say": "full 80,000 pounds",
+      "show": "FULLY LOADED"
+     },
+     {
+      "say": "about 5 seconds empty",
+      "show": "0-60: 5 SEC EMPTY"
+     },
+     {
+      "say": "20 seconds fully loaded",
+      "show": "20 SEC LOADED"
+     },
+     {
+      "say": "5 percent grade",
+      "show": "5% UPHILL"
+     },
+     {
+      "say": "slow to about 45",
+      "show": "DIESEL: 45 MPH"
+     }
+    ]
+   },
+   {
+    "text": "The driver sat in a single seat in the middle of the cab. Musk said it felt like being in a race car. A new Megacharger would add about 400 miles in 30 minutes. Enhanced Autopilot would be standard. And Musk promised the truck would not break down for a million miles. A reservation cost 5,000 dollars, with planned prices of 150,000 and 180,000 dollars.",
+    "img": [
+     "lib/semi-cab-interior.jpg",
+     "models/semi-7.jpg",
+     "lib/semi-megacharger.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Tesla Semi interior",
+       "Tesla Semi cab center seat",
+       "Tesla Semi cockpit"
+      ],
+      "want": "the inside of a Tesla Semi cab with the central driver's seat"
+     },
+     {
+      "q": [
+       "Tesla Megacharger",
+       "Tesla Semi charging Megacharger"
+      ],
+      "want": "a Tesla Semi plugged into a Megacharger"
+     }
+    ],
+    "pop": [
+     {
+      "say": "single seat",
+      "show": "ONE SEAT"
+     },
+     {
+      "say": "middle of the cab",
+      "show": "IN THE MIDDLE"
+     },
+     {
+      "say": "race car",
+      "show": "LIKE A RACE CAR"
+     },
+     {
+      "say": "Megacharger",
+      "show": "MEGACHARGER"
+     },
+     {
+      "say": "400 miles in 30 minutes",
+      "show": "400 MILES, 30 MIN"
+     },
+     {
+      "say": "Enhanced Autopilot",
+      "show": "AUTOPILOT STANDARD"
+     },
+     {
+      "say": "a million miles",
+      "show": "1 MILLION MILES"
+     },
+     {
+      "say": "5,000 dollars",
+      "show": "$5,000 DEPOSIT"
+     },
+     {
+      "say": "150,000",
+      "show": "$150,000"
+     },
+     {
+      "say": "180,000 dollars",
+      "show": "$180,000"
+     }
+    ]
+   },
+   {
+    "text": "Many people in trucking did not believe the range. A battery big enough for 500 miles with a full trailer would be enormous and heavy. And Tesla did not yet have the cells to spare.",
+    "img": [
+     "models/semi-5.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Tesla 4680 battery cell",
+       "4680 cell",
+       "lithium-ion cylindrical battery cells"
+      ],
+      "want": "a cylindrical lithium-ion battery cell such as Tesla's 4680"
+     },
+     {
+      "q": [
+       "Tesla Semi",
+       "Tesla Semi truck",
+       "Tesla Semi tractor"
+      ],
+      "want": "a white Tesla Semi electric truck"
+     }
+    ],
+    "pop": [
+     {
+      "say": "did not believe",
+      "show": "DOUBTERS"
+     },
+     {
+      "say": "the range",
+      "show": "THE RANGE?"
+     },
+     {
+      "say": "enormous and heavy",
+      "show": "HUGE AND HEAVY"
+     },
+     {
+      "say": "cells to spare",
+      "show": "NO CELLS TO SPARE"
+     }
+    ]
+   },
+   {
+    "head": "So why did 2019 become 2022?",
+    "img": [
+     "models/semi-6.jpg"
+    ],
+    "pop": [
+     {
+      "say": "",
+      "show": "2019 BECAME 2022"
+     }
+    ]
+   },
+   {
+    "text": "Because Tesla did not have enough batteries for both its cars and its trucks. A long range Semi carries a pack of about 822 kilowatt hours. That is roughly ten times the battery of a long range Model 3. So every Semi pack was a stack of cars that could not be sold.",
+    "img": [
+     "models/semi-2.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Tesla 4680 battery cell",
+       "4680 cell",
+       "lithium-ion cylindrical battery cells"
+      ],
+      "want": "a cylindrical lithium-ion battery cell such as Tesla's 4680"
+     },
+     {
+      "q": [
+       "Gigafactory Nevada aerial",
+       "Tesla Gigafactory 1 Nevada",
+       "Giga Nevada Sparks"
+      ],
+      "want": "Tesla's Gigafactory in Nevada, a huge white factory in the desert"
+     }
+    ],
+    "pop": [
+     {
+      "say": "not have enough batteries",
+      "show": "NOT ENOUGH BATTERIES"
+     },
+     {
+      "say": "cars and its trucks",
+      "show": "CARS OR TRUCKS"
+     },
+     {
+      "say": "822 kilowatt hours",
+      "show": "822 kWh"
+     },
+     {
+      "say": "ten times",
+      "show": "10x A MODEL 3"
+     },
+     {
+      "say": "could not be sold",
+      "show": "CARS NOT SOLD"
+     }
+    ]
+   },
+   {
+    "text": "In April 2020, Tesla moved the start to 2021, citing production delays and the pandemic. In July 2021 it moved again, to 2022, blaming the global chip shortage and the limited supply of its new 4680 cells. In between, in May 2020, Musk wrote to staff that it was time to go all out on volume production. Customers kept waiting.",
+    "img": [
+     "models/semi-3.jpg",
+     "lib/semi-highway.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Tesla 4680 battery cell",
+       "4680 cell",
+       "lithium-ion cylindrical battery cells"
+      ],
+      "want": "a cylindrical lithium-ion battery cell such as Tesla's 4680"
+     },
+     {
+      "q": [
+       "Tesla Semi highway",
+       "Tesla Semi driving",
+       "Tesla Semi trailer"
+      ],
+      "want": "a Tesla Semi driving on a road with a trailer"
+     }
+    ],
+    "pop": [
+     {
+      "say": "April 2020",
+      "show": "APRIL 2020"
+     },
+     {
+      "say": "to 2021",
+      "show": "DELAY: 2021"
+     },
+     {
+      "say": "the pandemic",
+      "show": "THE PANDEMIC"
+     },
+     {
+      "say": "July 2021",
+      "show": "JULY 2021"
+     },
+     {
+      "say": "to 2022",
+      "show": "DELAY: 2022"
+     },
+     {
+      "say": "chip shortage",
+      "show": "CHIP SHORTAGE"
+     },
+     {
+      "say": "4680 cells",
+      "show": "4680 CELLS"
+     },
+     {
+      "say": "go all out",
+      "show": "GO ALL OUT"
+     },
+     {
+      "say": "kept waiting",
+      "show": "STILL WAITING"
+     }
+    ]
+   },
+   {
+    "text": "The first trucks finally arrived in December 2022. But a few deliveries did not yet prove what had been promised on that stage.",
+    "img": [
+     "models/semi-6.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Tesla Semi PepsiCo",
+       "PepsiCo Tesla Semi truck",
+       "Frito-Lay Tesla Semi"
+      ],
+      "want": "a Tesla Semi in PepsiCo or Frito-Lay colours"
+     }
+    ],
+    "pop": [
+     {
+      "say": "December 2022",
+      "show": "DECEMBER 2022"
+     },
+     {
+      "say": "a few deliveries",
+      "show": "A FEW TRUCKS"
+     },
+     {
+      "say": "did not yet prove",
+      "show": "PROOF?"
+     }
+    ]
+   },
+   {
+    "head": "Did the Semi really keep its 500-mile promise?",
+    "img": [
+     "lib/semi-highway.jpg"
+    ],
+    "pop": [
+     {
+      "say": "",
+      "show": "500 MILES: REAL?"
+     }
+    ]
+   },
+   {
+    "text": "In tests, yes. On November 27, 2022, Musk posted that the Tesla team had just completed a 500 mile drive with a Semi weighing 81,000 pounds. Four days later, at Giga Nevada, PepsiCo received the first production trucks, out of an order of 100.",
+    "img": [
+     "models/semi-4.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Tesla Semi PepsiCo",
+       "PepsiCo Tesla Semi truck",
+       "Frito-Lay Tesla Semi"
+      ],
+      "want": "a Tesla Semi in PepsiCo or Frito-Lay colours"
+     },
+     {
+      "q": [
+       "Gigafactory Nevada aerial",
+       "Tesla Gigafactory 1 Nevada",
+       "Giga Nevada Sparks"
+      ],
+      "want": "Tesla's Gigafactory in Nevada, a huge white factory in the desert"
+     }
+    ],
+    "pop": [
+     {
+      "say": "In tests, yes",
+      "show": "IN TESTS: YES"
+     },
+     {
+      "say": "November 27, 2022",
+      "show": "NOV 27, 2022"
+     },
+     {
+      "say": "500 mile drive",
+      "show": "500 MILES"
+     },
+     {
+      "say": "81,000 pounds",
+      "show": "81,000 LB"
+     },
+     {
+      "say": "Giga Nevada",
+      "show": "GIGA NEVADA"
+     },
+     {
+      "say": "PepsiCo",
+      "show": "PEPSICO FIRST"
+     },
+     {
+      "say": "order of 100",
+      "show": "100 ORDERED"
+     }
+    ]
+   },
+   {
+    "text": "The best test came in September 2023, in Run on Less, a public trial of electric trucks run by the North American Council for Freight Efficiency. A PepsiCo Semi from Sacramento drove 1,076 miles in a single day. It left just after midnight with a 95 percent charge, drove about 372 miles before its first stop, and finished its last stretch seconds before midnight. Charging took only about a tenth of the day.",
+    "img": [
+     "lib/semi-highway.jpg",
+     "lib/semi-megacharger.jpg",
+     "models/semi-5.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Tesla Semi Run on Less",
+       "Tesla Semi PepsiCo Sacramento"
+      ],
+      "want": "a Tesla Semi on the road during a freight run"
+     },
+     {
+      "q": [
+       "Tesla Megacharger",
+       "Tesla Semi charging Megacharger"
+      ],
+      "want": "a Tesla Semi plugged into a Megacharger"
+     }
+    ],
+    "pop": [
+     {
+      "say": "September 2023",
+      "show": "SEPTEMBER 2023"
+     },
+     {
+      "say": "Run on Less",
+      "show": "RUN ON LESS"
+     },
+     {
+      "say": "public trial",
+      "show": "PUBLIC TRIAL"
+     },
+     {
+      "say": "Sacramento",
+      "show": "SACRAMENTO"
+     },
+     {
+      "say": "1,076 miles",
+      "show": "1,076 MILES"
+     },
+     {
+      "say": "single day",
+      "show": "IN ONE DAY"
+     },
+     {
+      "say": "95 percent",
+      "show": "95% AT MIDNIGHT"
+     },
+     {
+      "say": "372 miles",
+      "show": "372 MILES, THEN STOP"
+     },
+     {
+      "say": "seconds before midnight",
+      "show": "DONE AT MIDNIGHT"
+     },
+     {
+      "say": "a tenth of the day",
+      "show": "CHARGING: 1/10"
+     }
+    ]
+   },
+   {
+    "text": "So the truck worked. The trouble was that a small fleet at a few customers is a showcase, not a business.",
+    "img": [
+     "models/semi-7.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Tesla Semi",
+       "Tesla Semi truck",
+       "Tesla Semi tractor"
+      ],
+      "want": "a white Tesla Semi electric truck"
+     }
+    ],
+    "pop": [
+     {
+      "say": "truck worked",
+      "show": "IT WORKED"
+     },
+     {
+      "say": "a small fleet",
+      "show": "A SMALL FLEET"
+     },
+     {
+      "say": "showcase",
+      "show": "A SHOWCASE"
+     },
+     {
+      "say": "not a business",
+      "show": "NOT A BUSINESS"
+     }
+    ]
+   },
+   {
+    "head": "How did a pilot truck become a factory?",
+    "img": [
+     "models/semi-6.jpg"
+    ],
+    "pop": [
+     {
+      "say": "",
+      "show": "PILOT TO FACTORY"
+     }
+    ]
+   },
+   {
+    "text": "Tesla built a separate Semi plant next to Gigafactory Nevada. Volume production started there in 2026. In September, Tesla celebrated the opening of the plant, which is designed for up to 50,000 trucks a year, with deliveries to its first series customers.",
+    "img": [
+     "models/semi-6.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Gigafactory Nevada aerial",
+       "Tesla Gigafactory 1 Nevada",
+       "Giga Nevada Sparks"
+      ],
+      "want": "Tesla's Gigafactory in Nevada, a huge white factory in the desert"
+     },
+     {
+      "q": [
+       "Tesla Semi",
+       "Tesla Semi truck",
+       "Tesla Semi tractor"
+      ],
+      "want": "a white Tesla Semi electric truck"
+     }
+    ],
+    "pop": [
+     {
+      "say": "separate Semi plant",
+      "show": "ITS OWN PLANT"
+     },
+     {
+      "say": "Gigafactory Nevada",
+      "show": "NEXT TO GIGA NEVADA"
+     },
+     {
+      "say": "Volume production",
+      "show": "VOLUME PRODUCTION"
+     },
+     {
+      "say": "in 2026",
+      "show": "2026"
+     },
+     {
+      "say": "opening of the plant",
+      "show": "GRAND OPENING"
+     },
+     {
+      "say": "50,000 trucks a year",
+      "show": "UP TO 50,000 A YEAR"
+     },
+     {
+      "say": "first series customers",
+      "show": "FIRST CUSTOMERS"
+     }
+    ]
+   },
+   {
+    "text": "The truck changed along the way. The planned 300 mile base version became a Standard Range with about 325 miles. And the prices that leaked out were well above the 150,000 dollars of 2017. Tesla still has to show it can fill the factory, and Tesla has told investors the Semi will stay a very small share of its vehicles for now.",
+    "img": [
+     "models/semi-2.jpg",
+     "lib/semi-cab-interior.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Tesla Semi highway",
+       "Tesla Semi driving",
+       "Tesla Semi trailer"
+      ],
+      "want": "a Tesla Semi driving on a road with a trailer"
+     }
+    ],
+    "pop": [
+     {
+      "say": "changed along the way",
+      "show": "IT CHANGED"
+     },
+     {
+      "say": "Standard Range",
+      "show": "STANDARD RANGE"
+     },
+     {
+      "say": "325 miles",
+      "show": "325 MILES"
+     },
+     {
+      "say": "well above",
+      "show": "PRICIER"
+     },
+     {
+      "say": "150,000 dollars of 2017",
+      "show": "NOT $150,000"
+     },
+     {
+      "say": "fill the factory",
+      "show": "FILL THE FACTORY?"
+     },
+     {
+      "say": "small share",
+      "show": "A SMALL SHARE"
+     }
+    ]
+   },
+   {
+    "text": "The next test is Europe, where trucks are built to different rules, and the rivals are already on the road.",
+    "img": [
+     "models/semi-3.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Tesla Semi Europe",
+       "Tesla Semi IAA Hannover",
+       "Tesla Semi Germany"
+      ],
+      "want": "a Tesla Semi shown in Europe"
+     }
+    ],
+    "pop": [
+     {
+      "say": "next test is Europe",
+      "show": "NEXT TEST: EUROPE"
+     },
+     {
+      "say": "different rules",
+      "show": "DIFFERENT RULES"
+     },
+     {
+      "say": "rivals",
+      "show": "RIVALS"
+     },
+     {
+      "say": "already on the road",
+      "show": "ALREADY ON THE ROAD"
+     }
+    ]
+   },
+   {
+    "head": "What changes for the European Semi?",
+    "img": [
+     "models/semi-5.jpg"
+    ],
+    "pop": [
+     {
+      "say": "",
+      "show": "THE EUROPEAN SEMI"
+     }
+    ]
+   },
+   {
+    "text": "Shorter range on paper, a different face, and cameras instead of mirrors. Tesla showed the European version in September 2026, ahead of the IAA Transportation show in Hannover. Its estimated 550 kilometres assume a 40 tonne combination, heavier than the American test load.",
+    "img": [
+     "models/semi-4.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Tesla Semi Europe",
+       "Tesla Semi IAA Hannover",
+       "Tesla Semi Germany"
+      ],
+      "want": "a Tesla Semi shown in Europe"
+     },
+     {
+      "q": [
+       "IAA Transportation Hannover",
+       "Hannover Messe exhibition grounds"
+      ],
+      "want": "the IAA Transportation trade fair grounds in Hannover"
+     }
+    ],
+    "pop": [
+     {
+      "say": "Shorter range on paper",
+      "show": "LESS RANGE ON PAPER"
+     },
+     {
+      "say": "different face",
+      "show": "A NEW FACE"
+     },
+     {
+      "say": "cameras instead of mirrors",
+      "show": "CAMERA MIRRORS"
+     },
+     {
+      "say": "September 2026",
+      "show": "SEPTEMBER 2026"
+     },
+     {
+      "say": "Hannover",
+      "show": "IAA HANNOVER"
+     },
+     {
+      "say": "550 kilometres",
+      "show": "550 KM"
+     },
+     {
+      "say": "40 tonne combination",
+      "show": "40 TONNES"
+     }
+    ]
+   },
+   {
+    "text": "It charges at up to 800 kilowatts, and can add about 60 percent in 30 minutes, about 330 kilometres during a typical rest stop. The camera mirrors cut drag and suit narrow European roads. Demonstrations with fleets are planned for the first half of 2027, and deliveries before the end of 2027.",
+    "img": [
+     "lib/semi-megacharger.jpg",
+     "models/semi-7.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Tesla Megacharger",
+       "Tesla Semi charging Megacharger"
+      ],
+      "want": "a Tesla Semi plugged into a Megacharger"
+     },
+     {
+      "q": [
+       "Deauville",
+       "Deauville beach Normandy",
+       "Deauville France"
+      ],
+      "want": "the seaside town of Deauville in Normandy, France"
+     }
+    ],
+    "pop": [
+     {
+      "say": "800 kilowatts",
+      "show": "800 kW"
+     },
+     {
+      "say": "60 percent in 30 minutes",
+      "show": "60% IN 30 MIN"
+     },
+     {
+      "say": "typical rest stop",
+      "show": "ONE REST STOP"
+     },
+     {
+      "say": "cut drag",
+      "show": "LESS DRAG"
+     },
+     {
+      "say": "narrow European roads",
+      "show": "NARROW ROADS"
+     },
+     {
+      "say": "first half of 2027",
+      "show": "DEMOS: EARLY 2027"
+     },
+     {
+      "say": "end of 2027",
+      "show": "DELIVERIES: 2027"
+     }
+    ]
+   },
+   {
+    "text": "European truck makers like Mercedes-Benz, MAN and Volvo already sell electric heavy trucks. So in Europe, Tesla arrives as a challenger, not a pioneer.",
+    "photo": [
+     {
+      "q": [
+       "Mercedes-Benz eActros 600",
+       "MAN eTGX",
+       "Volvo FH Electric"
+      ],
+      "want": "a European electric heavy truck (Mercedes eActros, MAN eTGX or Volvo FH Electric)"
+     },
+     {
+      "q": [
+       "IAA Transportation Hannover",
+       "Hannover Messe exhibition grounds"
+      ],
+      "want": "the IAA Transportation trade fair grounds in Hannover"
+     }
+    ],
+    "pop": [
+     {
+      "say": "Mercedes-Benz, MAN and Volvo",
+      "show": "MERCEDES, MAN, VOLVO"
+     },
+     {
+      "say": "already sell",
+      "show": "ALREADY SELLING"
+     },
+     {
+      "say": "challenger",
+      "show": "A CHALLENGER"
+     },
+     {
+      "say": "not a pioneer",
+      "show": "NOT A PIONEER"
+     }
+    ]
+   },
+   {
+    "text": "There is one more promise from 2017 that has not been kept. The truck that drives itself.",
+    "img": [
+     "lib/semi-cab-interior.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Tesla Semi interior",
+       "Tesla Semi cab center seat",
+       "Tesla Semi cockpit"
+      ],
+      "want": "the inside of a Tesla Semi cab with the central driver's seat"
+     }
+    ],
+    "pop": [
+     {
+      "say": "one more promise",
+      "show": "ONE MORE PROMISE"
+     },
+     {
+      "say": "not been kept",
+      "show": "NOT KEPT"
+     },
+     {
+      "say": "drives itself",
+      "show": "SELF-DRIVING?"
+     }
+    ]
+   },
+   {
+    "head": "So is the Semi the start of trucks that drive themselves?",
+    "img": [
+     "models/semi-7.jpg"
+    ],
+    "pop": [
+     {
+      "say": "",
+      "show": "DRIVERLESS TRUCKS?"
+     }
+    ]
+   },
+   {
+    "text": "Not yet. Today, a person drives every Tesla Semi. The 2017 truck came with Enhanced Autopilot and talk of trucks driving in convoys. But at the 2022 delivery event, Tesla did not mention Autopilot at all.",
+    "img": [
+     "lib/semi-cab-interior.jpg",
+     "models/semi-2.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Tesla Semi interior",
+       "Tesla Semi cab center seat",
+       "Tesla Semi cockpit"
+      ],
+      "want": "the inside of a Tesla Semi cab with the central driver's seat"
+     }
+    ],
+    "pop": [
+     {
+      "say": "Not yet",
+      "show": "NOT YET"
+     },
+     {
+      "say": "a person drives",
+      "show": "A HUMAN DRIVES"
+     },
+     {
+      "say": "Enhanced Autopilot",
+      "show": "AUTOPILOT 2017"
+     },
+     {
+      "say": "convoys",
+      "show": "CONVOYS"
+     },
+     {
+      "say": "did not mention Autopilot",
+      "show": "NOT MENTIONED"
+     }
+    ]
+   },
+   {
+    "text": "On the earnings call in July 2026, Musk said Tesla expects to get self driving working on the Semi probably around the end of this year or early next year, while the cars and the Cybercab come first. That is a statement, not a fact, and his self driving deadlines have often slipped. Other companies, like Aurora in Texas, already haul freight with no driver on board.",
+    "img": [
+     "lib/semi-highway.jpg",
+     "lib/cybercab-street-day.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Aurora autonomous truck",
+       "Aurora Innovation truck",
+       "self-driving truck Texas"
+      ],
+      "want": "an autonomous Aurora freight truck with sensors on the cab"
+     }
+    ],
+    "pop": [
+     {
+      "say": "July 2026",
+      "show": "JULY 2026"
+     },
+     {
+      "say": "self driving working on the Semi",
+      "show": "SELF-DRIVING SEMI"
+     },
+     {
+      "say": "end of this year or early next year",
+      "show": "LATE 2026 / EARLY 2027"
+     },
+     {
+      "say": "Cybercab come first",
+      "show": "CYBERCAB FIRST"
+     },
+     {
+      "say": "a statement, not a fact",
+      "show": "A STATEMENT"
+     },
+     {
+      "say": "often slipped",
+      "show": "DEADLINES SLIP"
+     },
+     {
+      "say": "Aurora in Texas",
+      "show": "AURORA, TEXAS"
+     },
+     {
+      "say": "no driver on board",
+      "show": "NO DRIVER"
+     }
+    ]
+   },
+   {
+    "text": "That is why the Semi is such a Tesla story. The date was wrong by years. But the hardest promise, 500 miles with a full load, turned out to be real. A truck that once looked like a stage show now rolls out of its own factory and heads for Europe. Whether it ever drives itself is the next chapter.",
+    "img": [
+     "models/semi-6.jpg",
+     "lib/semi-highway.jpg",
+     "models/semi-4.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Tesla Semi",
+       "Tesla Semi truck",
+       "Tesla Semi tractor"
+      ],
+      "want": "a white Tesla Semi electric truck"
+     }
+    ],
+    "pop": [
+     {
+      "say": "such a Tesla story",
+      "show": "A TESLA STORY"
+     },
+     {
+      "say": "wrong by years",
+      "show": "YEARS LATE"
+     },
+     {
+      "say": "hardest promise",
+      "show": "THE HARDEST PROMISE"
+     },
+     {
+      "say": "turned out to be real",
+      "show": "IT WAS REAL"
+     },
+     {
+      "say": "its own factory",
+      "show": "ITS OWN FACTORY"
+     },
+     {
+      "say": "heads for Europe",
+      "show": "NEXT: EUROPE"
+     },
+     {
+      "say": "next chapter",
+      "show": "THE NEXT CHAPTER"
+     }
+    ]
+   }
+  ],
+  "nl": [
+   {
+    "text": "De Tesla Semi werd beloofd voor 2019. Zijn eigen fabriek ging open in 2026. En deze week staat een Europese versie voor het eerst in Frankrijk, op een transportcongres in Deauville. Met camera's in plaats van spiegels, geen lichtbalk op de neus, en een geschatte actieradius van 550 kilometer met een volle combinatie van 40 ton. Hij lijkt klaar voor het echte werk. Maar het verhaal begon op een podium in Californië, in november 2017. Van die belofte naar een echte vrachtwagenfabriek kostte Tesla zo'n negen jaar, en Europese klanten moeten nog wachten tot 2027.",
+    "img": [
+     "lib/semi-highway.jpg",
+     "models/semi-6.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Deauville",
+       "Deauville beach Normandy",
+       "Deauville France"
+      ],
+      "want": "the seaside town of Deauville in Normandy, France"
+     },
+     {
+      "q": [
+       "Tesla Semi Europe",
+       "Tesla Semi IAA Hannover",
+       "Tesla Semi Germany"
+      ],
+      "want": "a Tesla Semi shown in Europe"
+     }
+    ],
+    "pop": [
+     {
+      "say": "beloofd voor 2019",
+      "show": "BELOOFD VOOR 2019"
+     },
+     {
+      "say": "fabriek ging open in 2026",
+      "show": "FABRIEK IN 2026"
+     },
+     {
+      "say": "voor het eerst in Frankrijk",
+      "show": "EERST IN FRANKRIJK"
+     },
+     {
+      "say": "camera's in plaats van spiegels",
+      "show": "CAMERA'S, GEEN SPIEGELS"
+     },
+     {
+      "say": "geen lichtbalk",
+      "show": "GEEN LICHTBALK"
+     },
+     {
+      "say": "550 kilometer",
+      "show": "550 KM"
+     },
+     {
+      "say": "40 ton",
+      "show": "40 TON"
+     },
+     {
+      "say": "klaar voor het echte werk",
+      "show": "KLAAR VOOR HET WERK"
+     },
+     {
+      "say": "november 2017",
+      "show": "NOVEMBER 2017"
+     },
+     {
+      "say": "negen jaar",
+      "show": "NEGEN JAAR"
+     },
+     {
+      "say": "tot 2027",
+      "show": "EUROPA: 2027"
+     }
+    ]
+   },
+   {
+    "head": "Wat beloofde Tesla op die avond in 2017?",
+    "img": [
+     "models/semi-2.jpg"
+    ],
+    "pop": [
+     {
+      "say": "",
+      "show": "DE BELOFTE VAN 2017"
+     }
+    ]
+   },
+   {
+    "text": "Een zware truck die optrekt als een sportauto en trekt als een diesel. Tesla reed het prototype een podium op in Hawthorne, naast de raketfabriek van SpaceX, en de beloftes van Elon Musk volgden elkaar snel op.",
+    "img": [
+     "models/semi-3.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Tesla Semi unveiling 2017",
+       "Tesla Semi prototype 2017",
+       "Tesla Semi Hawthorne"
+      ],
+      "want": "the Tesla Semi prototype truck, white, seen at its 2017 unveiling or soon after"
+     },
+     {
+      "q": [
+       "SpaceX headquarters Hawthorne",
+       "SpaceX Hawthorne factory"
+      ],
+      "want": "the SpaceX headquarters and rocket factory in Hawthorne, California"
+     }
+    ],
+    "pop": [
+     {
+      "say": "optrekt als een sportauto",
+      "show": "SPRINT ALS EEN SPORTAUTO"
+     },
+     {
+      "say": "trekt als een diesel",
+      "show": "TREKT ALS EEN DIESEL"
+     },
+     {
+      "say": "prototype",
+      "show": "HET PROTOTYPE"
+     },
+     {
+      "say": "raketfabriek van SpaceX",
+      "show": "NAAST SPACEX"
+     },
+     {
+      "say": "volgden elkaar snel op",
+      "show": "BELOFTE NA BELOFTE"
+     }
+    ]
+   },
+   {
+    "text": "Tot 800 kilometer op één lading, met een volle 36 ton. Van nul naar honderd in ongeveer 5 seconden leeg, en zo'n 20 seconden volgeladen. En 105 kilometer per uur op een helling van 5 procent, waar de meeste diesels terugzakken naar zo'n 70.",
+    "img": [
+     "models/semi-4.jpg",
+     "lib/semi-highway.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Tesla Semi highway",
+       "Tesla Semi driving",
+       "Tesla Semi trailer"
+      ],
+      "want": "a Tesla Semi driving on a road with a trailer"
+     }
+    ],
+    "pop": [
+     {
+      "say": "800 kilometer",
+      "show": "800 KM"
+     },
+     {
+      "say": "volle 36 ton",
+      "show": "VOLGELADEN"
+     },
+     {
+      "say": "5 seconden leeg",
+      "show": "0-100: 5 SEC LEEG"
+     },
+     {
+      "say": "20 seconden volgeladen",
+      "show": "20 SEC VOL"
+     },
+     {
+      "say": "helling van 5 procent",
+      "show": "5% BERGOP"
+     },
+     {
+      "say": "terugzakken naar zo'n 70",
+      "show": "DIESEL: 70 KM/U"
+     }
+    ]
+   },
+   {
+    "text": "De chauffeur zat op één stoel midden in de cabine. Volgens Musk voelde dat als een raceauto. Een nieuwe Megacharger zou in 30 minuten zo'n 640 kilometer bijladen. Enhanced Autopilot zou standaard zijn. En Musk beloofde dat de truck een miljoen mijl niet zou stukgaan, 1,6 miljoen kilometer. Een reservering kostte 5.000 dollar, de geplande prijzen waren 150.000 en 180.000 dollar.",
+    "img": [
+     "lib/semi-cab-interior.jpg",
+     "models/semi-7.jpg",
+     "lib/semi-megacharger.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Tesla Semi interior",
+       "Tesla Semi cab center seat",
+       "Tesla Semi cockpit"
+      ],
+      "want": "the inside of a Tesla Semi cab with the central driver's seat"
+     },
+     {
+      "q": [
+       "Tesla Megacharger",
+       "Tesla Semi charging Megacharger"
+      ],
+      "want": "a Tesla Semi plugged into a Megacharger"
+     }
+    ],
+    "pop": [
+     {
+      "say": "één stoel",
+      "show": "ÉÉN STOEL"
+     },
+     {
+      "say": "midden in de cabine",
+      "show": "IN HET MIDDEN"
+     },
+     {
+      "say": "raceauto",
+      "show": "ALS EEN RACEAUTO"
+     },
+     {
+      "say": "Megacharger",
+      "show": "MEGACHARGER"
+     },
+     {
+      "say": "640 kilometer",
+      "show": "640 KM IN 30 MIN"
+     },
+     {
+      "say": "Enhanced Autopilot",
+      "show": "AUTOPILOT STANDAARD"
+     },
+     {
+      "say": "1,6 miljoen kilometer",
+      "show": "1,6 MILJOEN KM"
+     },
+     {
+      "say": "5.000 dollar",
+      "show": "$5.000 AANBETALING"
+     },
+     {
+      "say": "150.000",
+      "show": "$150.000"
+     },
+     {
+      "say": "180.000 dollar",
+      "show": "$180.000"
+     }
+    ]
+   },
+   {
+    "text": "Veel mensen in de transportwereld geloofden die actieradius niet. Een accu die groot genoeg is voor 800 kilometer met een volle oplegger is enorm en zwaar. En Tesla had de cellen daarvoor nog niet over.",
+    "img": [
+     "models/semi-5.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Tesla 4680 battery cell",
+       "4680 cell",
+       "lithium-ion cylindrical battery cells"
+      ],
+      "want": "a cylindrical lithium-ion battery cell such as Tesla's 4680"
+     },
+     {
+      "q": [
+       "Tesla Semi",
+       "Tesla Semi truck",
+       "Tesla Semi tractor"
+      ],
+      "want": "a white Tesla Semi electric truck"
+     }
+    ],
+    "pop": [
+     {
+      "say": "geloofden",
+      "show": "TWIJFELAARS"
+     },
+     {
+      "say": "actieradius",
+      "show": "DE ACTIERADIUS?"
+     },
+     {
+      "say": "enorm en zwaar",
+      "show": "ENORM EN ZWAAR"
+     },
+     {
+      "say": "cellen",
+      "show": "GEEN CELLEN OVER"
+     }
+    ]
+   },
+   {
+    "head": "Dus waarom werd 2019 uiteindelijk 2022?",
+    "img": [
+     "models/semi-6.jpg"
+    ],
+    "pop": [
+     {
+      "say": "",
+      "show": "2019 WERD 2022"
+     }
+    ]
+   },
+   {
+    "text": "Omdat Tesla niet genoeg accu's had voor zowel zijn auto's als zijn trucks. Een Semi met grote actieradius heeft een accupakket van zo'n 822 kilowattuur. Dat is ruwweg tien keer de accu van een Model 3 Long Range. Elk Semi-pakket was dus een stapel auto's die niet verkocht kon worden.",
+    "img": [
+     "models/semi-2.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Tesla 4680 battery cell",
+       "4680 cell",
+       "lithium-ion cylindrical battery cells"
+      ],
+      "want": "a cylindrical lithium-ion battery cell such as Tesla's 4680"
+     },
+     {
+      "q": [
+       "Gigafactory Nevada aerial",
+       "Tesla Gigafactory 1 Nevada",
+       "Giga Nevada Sparks"
+      ],
+      "want": "Tesla's Gigafactory in Nevada, a huge white factory in the desert"
+     }
+    ],
+    "pop": [
+     {
+      "say": "niet genoeg accu's",
+      "show": "TE WEINIG ACCU'S"
+     },
+     {
+      "say": "auto's als zijn trucks",
+      "show": "AUTO'S OF TRUCKS"
+     },
+     {
+      "say": "822 kilowattuur",
+      "show": "822 kWh"
+     },
+     {
+      "say": "tien keer",
+      "show": "10x EEN MODEL 3"
+     },
+     {
+      "say": "niet verkocht",
+      "show": "AUTO'S NIET VERKOCHT"
+     }
+    ]
+   },
+   {
+    "text": "In april 2020 schoof Tesla de start op naar 2021, door productievertraging en de pandemie. In juli 2021 schoof hij opnieuw, naar 2022, door het wereldwijde chiptekort en het beperkte aanbod van de nieuwe 4680-cellen. Tussendoor, in mei 2020, schreef Musk aan zijn personeel dat het tijd was om alles te geven voor massaproductie. De klanten bleven wachten.",
+    "img": [
+     "models/semi-3.jpg",
+     "lib/semi-highway.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Tesla 4680 battery cell",
+       "4680 cell",
+       "lithium-ion cylindrical battery cells"
+      ],
+      "want": "a cylindrical lithium-ion battery cell such as Tesla's 4680"
+     },
+     {
+      "q": [
+       "Tesla Semi highway",
+       "Tesla Semi driving",
+       "Tesla Semi trailer"
+      ],
+      "want": "a Tesla Semi driving on a road with a trailer"
+     }
+    ],
+    "pop": [
+     {
+      "say": "april 2020",
+      "show": "APRIL 2020"
+     },
+     {
+      "say": "naar 2021",
+      "show": "UITSTEL: 2021"
+     },
+     {
+      "say": "pandemie",
+      "show": "DE PANDEMIE"
+     },
+     {
+      "say": "juli 2021",
+      "show": "JULI 2021"
+     },
+     {
+      "say": "naar 2022",
+      "show": "UITSTEL: 2022"
+     },
+     {
+      "say": "chiptekort",
+      "show": "CHIPTEKORT"
+     },
+     {
+      "say": "4680-cellen",
+      "show": "4680-CELLEN"
+     },
+     {
+      "say": "alles te geven",
+      "show": "ALLES GEVEN"
+     },
+     {
+      "say": "bleven wachten",
+      "show": "WACHTEN"
+     }
+    ]
+   },
+   {
+    "text": "In december 2022 kwamen eindelijk de eerste trucks. Maar een paar leveringen bewezen nog niet wat er op dat podium was beloofd.",
+    "img": [
+     "models/semi-6.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Tesla Semi PepsiCo",
+       "PepsiCo Tesla Semi truck",
+       "Frito-Lay Tesla Semi"
+      ],
+      "want": "a Tesla Semi in PepsiCo or Frito-Lay colours"
+     }
+    ],
+    "pop": [
+     {
+      "say": "december 2022",
+      "show": "DECEMBER 2022"
+     },
+     {
+      "say": "een paar leveringen",
+      "show": "EEN PAAR TRUCKS"
+     },
+     {
+      "say": "bewezen nog niet",
+      "show": "BEWIJS?"
+     }
+    ]
+   },
+   {
+    "head": "Maakte de Semi zijn belofte van 800 km echt waar?",
+    "img": [
+     "lib/semi-highway.jpg"
+    ],
+    "pop": [
+     {
+      "say": "",
+      "show": "800 KM: ECHT?"
+     }
+    ]
+   },
+   {
+    "text": "In tests wel. Op 27 november 2022 meldde Musk dat het Tesla-team net 800 kilometer had gereden met een Semi van ongeveer 37 ton. Vier dagen later kreeg PepsiCo in Giga Nevada de eerste productietrucks, uit een bestelling van 100.",
+    "img": [
+     "models/semi-4.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Tesla Semi PepsiCo",
+       "PepsiCo Tesla Semi truck",
+       "Frito-Lay Tesla Semi"
+      ],
+      "want": "a Tesla Semi in PepsiCo or Frito-Lay colours"
+     },
+     {
+      "q": [
+       "Gigafactory Nevada aerial",
+       "Tesla Gigafactory 1 Nevada",
+       "Giga Nevada Sparks"
+      ],
+      "want": "Tesla's Gigafactory in Nevada, a huge white factory in the desert"
+     }
+    ],
+    "pop": [
+     {
+      "say": "In tests wel",
+      "show": "IN TESTS: JA"
+     },
+     {
+      "say": "27 november 2022",
+      "show": "27 NOV 2022"
+     },
+     {
+      "say": "800 kilometer",
+      "show": "800 KM"
+     },
+     {
+      "say": "37 ton",
+      "show": "37 TON"
+     },
+     {
+      "say": "Giga Nevada",
+      "show": "GIGA NEVADA"
+     },
+     {
+      "say": "PepsiCo",
+      "show": "PEPSICO EERST"
+     },
+     {
+      "say": "bestelling van 100",
+      "show": "100 BESTELD"
+     }
+    ]
+   },
+   {
+    "text": "De mooiste test volgde in september 2023, tijdens Run on Less, een openbare proef met elektrische trucks. Een Semi van PepsiCo uit Sacramento reed op één dag 1.076 mijl, ruim 1.700 kilometer. Hij vertrok net na middernacht met 95 procent, reed zo'n 600 kilometer tot de eerste stop, en rondde zijn laatste stuk af seconden voor middernacht. Laden kostte maar ongeveer een tiende van de dag.",
+    "img": [
+     "lib/semi-highway.jpg",
+     "lib/semi-megacharger.jpg",
+     "models/semi-5.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Tesla Semi Run on Less",
+       "Tesla Semi PepsiCo Sacramento"
+      ],
+      "want": "a Tesla Semi on the road during a freight run"
+     },
+     {
+      "q": [
+       "Tesla Megacharger",
+       "Tesla Semi charging Megacharger"
+      ],
+      "want": "a Tesla Semi plugged into a Megacharger"
+     }
+    ],
+    "pop": [
+     {
+      "say": "september 2023",
+      "show": "SEPTEMBER 2023"
+     },
+     {
+      "say": "Run on Less",
+      "show": "RUN ON LESS"
+     },
+     {
+      "say": "openbare proef",
+      "show": "OPENBARE PROEF"
+     },
+     {
+      "say": "Sacramento",
+      "show": "SACRAMENTO"
+     },
+     {
+      "say": "1.700 kilometer",
+      "show": "1.700 KM"
+     },
+     {
+      "say": "op één dag",
+      "show": "OP ÉÉN DAG"
+     },
+     {
+      "say": "95 procent",
+      "show": "95% OM MIDDERNACHT"
+     },
+     {
+      "say": "600 kilometer",
+      "show": "600 KM, DAN STOP"
+     },
+     {
+      "say": "seconden voor middernacht",
+      "show": "KLAAR OM MIDDERNACHT"
+     },
+     {
+      "say": "een tiende van de dag",
+      "show": "LADEN: 1/10"
+     }
+    ]
+   },
+   {
+    "text": "De truck werkte dus. Alleen zijn een kleine vloot bij een paar klanten een etalage, geen bedrijf.",
+    "img": [
+     "models/semi-7.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Tesla Semi",
+       "Tesla Semi truck",
+       "Tesla Semi tractor"
+      ],
+      "want": "a white Tesla Semi electric truck"
+     }
+    ],
+    "pop": [
+     {
+      "say": "truck werkte",
+      "show": "HIJ WERKTE"
+     },
+     {
+      "say": "kleine vloot",
+      "show": "EEN KLEINE VLOOT"
+     },
+     {
+      "say": "etalage",
+      "show": "EEN ETALAGE"
+     },
+     {
+      "say": "geen bedrijf",
+      "show": "GEEN BEDRIJF"
+     }
+    ]
+   },
+   {
+    "head": "Hoe werd een proeftruck een fabriek?",
+    "img": [
+     "models/semi-6.jpg"
+    ],
+    "pop": [
+     {
+      "say": "",
+      "show": "VAN PROEF NAAR FABRIEK"
+     }
+    ]
+   },
+   {
+    "text": "Tesla bouwde een aparte Semi-fabriek naast Gigafactory Nevada. Daar begon in 2026 de serieproductie. In september vierde Tesla de opening van de fabriek, die is ontworpen voor maximaal 50.000 trucks per jaar, met leveringen aan de eerste klanten.",
+    "img": [
+     "models/semi-6.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Gigafactory Nevada aerial",
+       "Tesla Gigafactory 1 Nevada",
+       "Giga Nevada Sparks"
+      ],
+      "want": "Tesla's Gigafactory in Nevada, a huge white factory in the desert"
+     },
+     {
+      "q": [
+       "Tesla Semi",
+       "Tesla Semi truck",
+       "Tesla Semi tractor"
+      ],
+      "want": "a white Tesla Semi electric truck"
+     }
+    ],
+    "pop": [
+     {
+      "say": "aparte Semi-fabriek",
+      "show": "EEN EIGEN FABRIEK"
+     },
+     {
+      "say": "Gigafactory Nevada",
+      "show": "NAAST GIGA NEVADA"
+     },
+     {
+      "say": "serieproductie",
+      "show": "SERIEPRODUCTIE"
+     },
+     {
+      "say": "in 2026",
+      "show": "2026"
+     },
+     {
+      "say": "opening",
+      "show": "DE OPENING"
+     },
+     {
+      "say": "50.000 trucks per jaar",
+      "show": "50.000 PER JAAR"
+     },
+     {
+      "say": "eerste klanten",
+      "show": "EERSTE KLANTEN"
+     }
+    ]
+   },
+   {
+    "text": "De truck veranderde onderweg. De geplande basisversie werd een Standard Range met zo'n 520 kilometer. En de prijzen die uitlekten lagen ruim boven de 150.000 dollar van 2017. Tesla moet nog laten zien dat het die fabriek kan vullen, en Tesla vertelde beleggers dat de Semi voorlopig maar een heel klein deel van zijn voertuigen blijft.",
+    "img": [
+     "models/semi-2.jpg",
+     "lib/semi-cab-interior.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Tesla Semi highway",
+       "Tesla Semi driving",
+       "Tesla Semi trailer"
+      ],
+      "want": "a Tesla Semi driving on a road with a trailer"
+     }
+    ],
+    "pop": [
+     {
+      "say": "veranderde onderweg",
+      "show": "HIJ VERANDERDE"
+     },
+     {
+      "say": "Standard Range",
+      "show": "STANDARD RANGE"
+     },
+     {
+      "say": "520 kilometer",
+      "show": "520 KM"
+     },
+     {
+      "say": "ruim boven",
+      "show": "DUURDER"
+     },
+     {
+      "say": "150.000 dollar van 2017",
+      "show": "GEEN $150.000"
+     },
+     {
+      "say": "fabriek kan vullen",
+      "show": "FABRIEK VULLEN?"
+     },
+     {
+      "say": "klein deel",
+      "show": "EEN KLEIN DEEL"
+     }
+    ]
+   },
+   {
+    "text": "De volgende test is Europa, waar trucks aan andere regels moeten voldoen, en de concurrenten al rijden.",
+    "img": [
+     "models/semi-3.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Tesla Semi Europe",
+       "Tesla Semi IAA Hannover",
+       "Tesla Semi Germany"
+      ],
+      "want": "a Tesla Semi shown in Europe"
+     }
+    ],
+    "pop": [
+     {
+      "say": "volgende test is Europa",
+      "show": "VOLGENDE TEST: EUROPA"
+     },
+     {
+      "say": "andere regels",
+      "show": "ANDERE REGELS"
+     },
+     {
+      "say": "concurrenten",
+      "show": "CONCURRENTEN"
+     },
+     {
+      "say": "al rijden",
+      "show": "AL OP DE WEG"
+     }
+    ]
+   },
+   {
+    "head": "Wat is er anders aan de Europese Semi?",
+    "img": [
+     "models/semi-5.jpg"
+    ],
+    "pop": [
+     {
+      "say": "",
+      "show": "DE EUROPESE SEMI"
+     }
+    ]
+   },
+   {
+    "text": "Op papier minder actieradius, een ander gezicht, en camera's in plaats van spiegels. Tesla liet de Europese versie in september 2026 zien, vlak voor de IAA Transportation in Hannover. De geschatte 550 kilometer geldt voor een combinatie van 40 ton, zwaarder dan de Amerikaanse testlading.",
+    "img": [
+     "models/semi-4.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Tesla Semi Europe",
+       "Tesla Semi IAA Hannover",
+       "Tesla Semi Germany"
+      ],
+      "want": "a Tesla Semi shown in Europe"
+     },
+     {
+      "q": [
+       "IAA Transportation Hannover",
+       "Hannover Messe exhibition grounds"
+      ],
+      "want": "the IAA Transportation trade fair grounds in Hannover"
+     }
+    ],
+    "pop": [
+     {
+      "say": "minder actieradius",
+      "show": "MINDER BEREIK OP PAPIER"
+     },
+     {
+      "say": "ander gezicht",
+      "show": "EEN NIEUW GEZICHT"
+     },
+     {
+      "say": "camera's in plaats van spiegels",
+      "show": "CAMERASPIEGELS"
+     },
+     {
+      "say": "september 2026",
+      "show": "SEPTEMBER 2026"
+     },
+     {
+      "say": "Hannover",
+      "show": "IAA HANNOVER"
+     },
+     {
+      "say": "550 kilometer",
+      "show": "550 KM"
+     },
+     {
+      "say": "40 ton",
+      "show": "40 TON"
+     }
+    ]
+   },
+   {
+    "text": "Hij laadt met maximaal 800 kilowatt, en haalt in 30 minuten zo'n 60 procent terug, zo'n 330 kilometer tijdens een gewone rustpauze. De camera's verminderen de luchtweerstand en passen beter bij smalle Europese wegen. Demonstraties bij vervoerders staan gepland voor de eerste helft van 2027, en leveringen voor eind 2027.",
+    "img": [
+     "lib/semi-megacharger.jpg",
+     "models/semi-7.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Tesla Megacharger",
+       "Tesla Semi charging Megacharger"
+      ],
+      "want": "a Tesla Semi plugged into a Megacharger"
+     },
+     {
+      "q": [
+       "Deauville",
+       "Deauville beach Normandy",
+       "Deauville France"
+      ],
+      "want": "the seaside town of Deauville in Normandy, France"
+     }
+    ],
+    "pop": [
+     {
+      "say": "800 kilowatt",
+      "show": "800 kW"
+     },
+     {
+      "say": "60 procent",
+      "show": "60% IN 30 MIN"
+     },
+     {
+      "say": "gewone rustpauze",
+      "show": "ÉÉN RUSTPAUZE"
+     },
+     {
+      "say": "luchtweerstand",
+      "show": "MINDER WEERSTAND"
+     },
+     {
+      "say": "smalle Europese wegen",
+      "show": "SMALLE WEGEN"
+     },
+     {
+      "say": "eerste helft van 2027",
+      "show": "DEMO'S: BEGIN 2027"
+     },
+     {
+      "say": "eind 2027",
+      "show": "LEVERINGEN: 2027"
+     }
+    ]
+   },
+   {
+    "text": "Europese merken als Mercedes-Benz, MAN en Volvo verkopen al elektrische zware trucks. Dus in Europa komt Tesla binnen als uitdager, niet als pionier.",
+    "photo": [
+     {
+      "q": [
+       "Mercedes-Benz eActros 600",
+       "MAN eTGX",
+       "Volvo FH Electric"
+      ],
+      "want": "a European electric heavy truck (Mercedes eActros, MAN eTGX or Volvo FH Electric)"
+     },
+     {
+      "q": [
+       "IAA Transportation Hannover",
+       "Hannover Messe exhibition grounds"
+      ],
+      "want": "the IAA Transportation trade fair grounds in Hannover"
+     }
+    ],
+    "pop": [
+     {
+      "say": "Mercedes-Benz, MAN en Volvo",
+      "show": "MERCEDES, MAN, VOLVO"
+     },
+     {
+      "say": "verkopen al",
+      "show": "AL TE KOOP"
+     },
+     {
+      "say": "uitdager",
+      "show": "EEN UITDAGER"
+     },
+     {
+      "say": "niet als pionier",
+      "show": "GEEN PIONIER"
+     }
+    ]
+   },
+   {
+    "text": "Er is nog één belofte uit 2017 die niet is ingelost. De truck die zichzelf rijdt.",
+    "img": [
+     "lib/semi-cab-interior.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Tesla Semi interior",
+       "Tesla Semi cab center seat",
+       "Tesla Semi cockpit"
+      ],
+      "want": "the inside of a Tesla Semi cab with the central driver's seat"
+     }
+    ],
+    "pop": [
+     {
+      "say": "nog één belofte",
+      "show": "NOG ÉÉN BELOFTE"
+     },
+     {
+      "say": "niet is ingelost",
+      "show": "NIET INGELOST"
+     },
+     {
+      "say": "zichzelf rijdt",
+      "show": "ZELFRIJDEND?"
+     }
+    ]
+   },
+   {
+    "head": "Is de Semi dan het begin van trucks die zelf rijden?",
+    "img": [
+     "models/semi-7.jpg"
+    ],
+    "pop": [
+     {
+      "say": "",
+      "show": "ZELFRIJDENDE TRUCKS?"
+     }
+    ]
+   },
+   {
+    "text": "Nog niet. Vandaag rijdt er in elke Tesla Semi een mens. De truck van 2017 kwam met Enhanced Autopilot en verhalen over trucks die in konvooi rijden. Maar bij de leveringen in 2022 noemde Tesla Autopilot niet eens.",
+    "img": [
+     "lib/semi-cab-interior.jpg",
+     "models/semi-2.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Tesla Semi interior",
+       "Tesla Semi cab center seat",
+       "Tesla Semi cockpit"
+      ],
+      "want": "the inside of a Tesla Semi cab with the central driver's seat"
+     }
+    ],
+    "pop": [
+     {
+      "say": "Nog niet",
+      "show": "NOG NIET"
+     },
+     {
+      "say": "een mens",
+      "show": "EEN MENS RIJDT"
+     },
+     {
+      "say": "Enhanced Autopilot",
+      "show": "AUTOPILOT 2017"
+     },
+     {
+      "say": "konvooi",
+      "show": "KONVOOIEN"
+     },
+     {
+      "say": "niet eens",
+      "show": "NIET GENOEMD"
+     }
+    ]
+   },
+   {
+    "text": "Tijdens de kwartaalcall van juli 2026 zei Musk dat Tesla zelfrijden op de Semi waarschijnlijk rond het eind van dit jaar of begin volgend jaar werkend verwacht, terwijl de auto's en de Cybercab voorgaan. Dat is een uitspraak, geen feit, en zijn deadlines voor zelfrijden schoven vaak op. Andere bedrijven, zoals Aurora in Texas, vervoeren al vracht zonder chauffeur aan boord.",
+    "img": [
+     "lib/semi-highway.jpg",
+     "lib/cybercab-street-day.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Aurora autonomous truck",
+       "Aurora Innovation truck",
+       "self-driving truck Texas"
+      ],
+      "want": "an autonomous Aurora freight truck with sensors on the cab"
+     }
+    ],
+    "pop": [
+     {
+      "say": "juli 2026",
+      "show": "JULI 2026"
+     },
+     {
+      "say": "zelfrijden op de Semi",
+      "show": "ZELFRIJDENDE SEMI"
+     },
+     {
+      "say": "eind van dit jaar of begin volgend jaar",
+      "show": "EIND 2026 / BEGIN 2027"
+     },
+     {
+      "say": "Cybercab voorgaan",
+      "show": "CYBERCAB EERST"
+     },
+     {
+      "say": "een uitspraak, geen feit",
+      "show": "EEN UITSPRAAK"
+     },
+     {
+      "say": "vaak op",
+      "show": "DEADLINES SCHUIVEN"
+     },
+     {
+      "say": "Aurora in Texas",
+      "show": "AURORA, TEXAS"
+     },
+     {
+      "say": "zonder chauffeur",
+      "show": "GEEN CHAUFFEUR"
+     }
+    ]
+   },
+   {
+    "text": "Daarom is de Semi zo'n typisch Tesla-verhaal. De datum klopte jaren niet. Maar de moeilijkste belofte, 800 kilometer met een volle lading, bleek echt. Een truck die ooit een podiumshow leek, rolt nu uit zijn eigen fabriek en zet koers naar Europa. Of hij ooit zelf gaat rijden, is het volgende hoofdstuk.",
+    "img": [
+     "models/semi-6.jpg",
+     "lib/semi-highway.jpg",
+     "models/semi-4.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Tesla Semi",
+       "Tesla Semi truck",
+       "Tesla Semi tractor"
+      ],
+      "want": "a white Tesla Semi electric truck"
+     }
+    ],
+    "pop": [
+     {
+      "say": "typisch Tesla-verhaal",
+      "show": "EEN TESLA-VERHAAL"
+     },
+     {
+      "say": "jaren niet",
+      "show": "JAREN TE LAAT"
+     },
+     {
+      "say": "moeilijkste belofte",
+      "show": "DE MOEILIJKSTE BELOFTE"
+     },
+     {
+      "say": "bleek echt",
+      "show": "HET WAS ECHT"
+     },
+     {
+      "say": "eigen fabriek",
+      "show": "EIGEN FABRIEK"
+     },
+     {
+      "say": "koers naar Europa",
+      "show": "OP NAAR EUROPA"
+     },
+     {
+      "say": "volgende hoofdstuk",
+      "show": "HET VOLGENDE HOOFDSTUK"
+     }
+    ]
+   }
+  ],
+  "yt_title_en": "Tesla Semi Story: Why It Took 9 Years From Reveal to Factory",
+  "yt_title_nl": "Het Verhaal van de Tesla Semi: Waarom Duurde Het 9 Jaar?"
+ }
+}

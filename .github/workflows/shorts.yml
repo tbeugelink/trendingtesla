@@ -38,7 +38,15 @@ jobs:
       - name: Find articles
         id: find
         run: |
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ github.event.inputs.slug }}" = "queue" ]; then
+            # started by the watchdog: make what video/queue.txt asks for (same as a push of that file)
+            q=$(grep -v '^#' video/queue.txt | head -1)
+            echo "slugs=$(echo "$q" | awk '{print $1}')" >> "$GITHUB_OUTPUT"
+            echo "langs=en" >> "$GITHUB_OUTPUT"
+            echo "$q" | grep -q -- '--full' && echo "full=1" >> "$GITHUB_OUTPUT"
+            echo "$q" | grep -q -- '--upload' && echo "upload=1" >> "$GITHUB_OUTPUT"
+            echo "queue=1" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             echo "slugs=${{ github.event.inputs.slug }}" >> "$GITHUB_OUTPUT"
             echo "langs=${{ github.event.inputs.langs }}" >> "$GITHUB_OUTPUT"
           else

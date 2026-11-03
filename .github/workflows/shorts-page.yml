@@ -10,7 +10,7 @@ on:
 
 permissions:
   contents: write
-  actions: read
+  actions: write
 
 concurrency:
   group: shorts-page
@@ -62,3 +62,18 @@ jobs:
             sleep 10
           done
           exit 1
+      - name: Watchdog - every article gets its Short and long video (retry once, then report)
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          out=$(python3 tools/video_watchdog.py); echo "$out"
+          if echo "$out" | grep -qx changed; then
+            git config user.name "TrendingTesla bot"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add video/queue.txt ops/video-retries.json ops/video-problems.md 2>/dev/null
+            git commit -qm "Watchdog: request missing video" && \
+              (git pull --rebase -q origin main && git push -q origin HEAD:main) && \
+              gh workflow run shorts.yml -f slug=queue || true
+          fi
+          echo "$out" | grep -q "::error::" && exit 1 || true

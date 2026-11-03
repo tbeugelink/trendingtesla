@@ -564,6 +564,9 @@ def render(a, lang, pieces, segs, place, words, total, end_start, audio):
                 q = q or (own[i] or pool or [S.photos(a)[0]])[0]
             uses[q] = uses.get(q, 0) + 1
             scenes.append((st, q, uses[q] - 1))
+    scenes.sort(key=lambda x: x[0])
+    if scenes and scenes[0][0] > 0:  # the first picture always starts at 0
+        scenes[0] = (0.0,) + tuple(scenes[0][1:])
     nsc = len(scenes)
     starts = [x[0] for x in scenes]
 
@@ -706,7 +709,7 @@ def render(a, lang, pieces, segs, place, words, total, end_start, audio):
     black = Image.new("RGB", (W, H))
 
     def picture(t):
-        k = max(i for i, s0 in enumerate(starts) if s0 <= t)
+        k = max((i for i, s0 in enumerate(starts) if s0 <= t), default=0)
         fr = shot(k, t)
         if k > 0 and t - starts[k] < S.TR:
             fr = Image.blend(shot(k - 1, t), fr, S.ease((t - starts[k]) / S.TR))

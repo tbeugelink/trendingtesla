@@ -214,6 +214,9 @@ Shorts (typically 741 views after 48 hours) by far. So:
 - Explainers hold viewers best ("How Starlink works": 93% watched): a "why/how" angle on the news works well.
   Small routine items (a list of new Supercharger sites) do badly: only cover them when they are big.
 
+## Story Shorts are published straight away (decided 3 Nov 2026): no private review any more; they go public on
+upload and on to TikTok, Instagram and Facebook within ~15 minutes.
+
 ## Story Shorts (video/story.py, read this before writing "short.story")
 
 A story Short is a list of beats in `"short": {"story": [...]}`: one beat per sentence or two,

@@ -133,7 +133,7 @@ jobs:
             [ -f "$f" ] || continue
             if [ -f "${f%.mp4}.story" ]; then  # story Short: private for review, title as thumbnail, into the queue
               s=$(basename "$f" -en-short.mp4)
-              YT_PRIVACY=private THUMB_AT=0.2 python3 video/upload.py "$f" en | tee up.txt
+              YT_PRIVACY=public THUMB_AT=0.2 python3 video/upload.py "$f" en | tee up.txt
               id=$(grep -o 'youtu.be/[A-Za-z0-9_-]*' up.txt | head -1 | cut -d/ -f2)
               [ -n "$id" ] && echo "$id $s" >> "$RUNNER_TEMP/story-review"
             else

@@ -77,6 +77,20 @@ perform much better than illustrations. So for every new article:
    "describe": "..."}`: a different setting, angle or moment than the main scene, so the video can change
    pictures without repeating. Same rules as gen_image: illustrations, never a fake photo of the event.
 
+## Topic choice: what plays THIS week first, the lists only as reserve (decided 3 Nov 2026)
+
+The first purely historical topics (the 2008 Roadster, the first chopsticks catch, a phone rumour) got far fewer
+views than topics with a fresh angle. So every run starts from what Tesla fans talk about right now: search the
+news of the last 3-7 days and read ops/scout-tesla.md (outlier videos at other channels, viewers' questions).
+Pick the topic that is hot now AND can be told in a lasting way: the current event is the hook, the article
+explains or tells what stays true ("Starship is being caught again this week: how the chopsticks actually
+work", not "the story of the first catch"). Only when nothing fits, take a topic from ops/evergreen-topics.md,
+and then still open with a link to something current where one exists.
+
+Hooks (Short, label, titles): sharp but playful and intriguing. Make people curious with a surprising fact, a
+twist, a question they cannot leave unanswered, a wink or a rhyme ("Grok does the mapping, you do the napping?",
+"Tesla Broke Henry Ford's Assembly Line"). Never clickbait the video does not keep, never fake drama.
+
 ## Timeless content first (decided 1 Nov 2026, read this before choosing a topic)
 
 TrendingTesla is a trend site, not a news site: news channels exist plenty, and news is only relevant for a

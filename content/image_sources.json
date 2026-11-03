@@ -316,5 +316,23 @@
         "src": "lib/modely-front.jpg"
       }
     ]
+  },
+  "news/tesla-semi-story-2017-reveal-to-factory-europe-why-nine-years-1.jpg": {
+    "article": "tesla-semi-story-2017-reveal-to-factory-europe-why-nine-years",
+    "real": true,
+    "page": "https://commons.wikimedia.org/wiki/File:Tesla_Semi_Ready_to_Ride_(47672278541).jpg",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Tesla_Semi_Ready_to_Ride_%2847672278541%29.jpg/3840px-Tesla_Semi_Ready_to_Ride_%2847672278541%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY 2.0",
+    "credit": "Steve Jurvetson from Menlo Park, USA, CC BY 2.0, Wikimedia Commons",
+    "added": "2026-11-03"
+  },
+  "news/tesla-semi-story-2017-reveal-to-factory-europe-why-nine-years-2.jpg": {
+    "article": "tesla-semi-story-2017-reveal-to-factory-europe-why-nine-years",
+    "real": true,
+    "page": "https://commons.wikimedia.org/wiki/File:The_Tesla_Semi_Truck_(40705940423).jpg",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/The_Tesla_Semi_Truck_%2840705940423%29.jpg/3840px-The_Tesla_Semi_Truck_%2840705940423%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY 2.0",
+    "credit": "Steve Jurvetson from Menlo Park, USA, CC BY 2.0, Wikimedia Commons",
+    "added": "2026-11-03"
   }
 }

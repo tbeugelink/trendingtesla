@@ -255,3 +255,5 @@ Articles with a "models" key automatically use real-life photos of that model. Y
 - gen/tesla-phone-model-pi-rumor-starlink-facts-explained.jpg — A hand holding up a phone with a satellite signal icon on a remote mountain road at dusk, a Model Y behind
 - gen/tesla-phone-model-pi-rumor-starlink-facts-explained-x2-11031159.jpg — A driver beside a Model Y in the desert at night checking a phone under a sky with satellites
 - gen/tesla-phone-model-pi-rumor-starlink-facts-explained-x3-11031200.jpg — A phone with a car app used as a key in front of a Model Y in a sunny driveway
+- news/tesla-semi-story-2017-reveal-to-factory-europe-why-nine-years-1.jpg — the Tesla Semi truck (real photo) (Photo: Steve Jurvetson from Menlo Park, USA, CC BY 2.0, Wikimedia Commons)
+- news/tesla-semi-story-2017-reveal-to-factory-europe-why-nine-years-2.jpg — the Tesla Semi truck (real photo) (Photo: Steve Jurvetson from Menlo Park, USA, CC BY 2.0, Wikimedia Commons)

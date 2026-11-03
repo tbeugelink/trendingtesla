@@ -252,3 +252,6 @@ Articles with a "models" key automatically use real-life photos of that model. Y
 - gen/spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story.jpg — a Super Heavy booster held by the launch tower's chopstick arms at sunrise, Starbase
 - gen/spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story-x2-11022028.jpg — the launch tower's chopstick arms open and waiting at dusk, seen from the beach
 - gen/spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story-x3-11022028.jpg — a Super Heavy booster slowing on its engines beside the tower just before the catch
+- gen/tesla-phone-model-pi-rumor-starlink-facts-explained.jpg — A hand holding up a phone with a satellite signal icon on a remote mountain road at dusk, a Model Y behind
+- gen/tesla-phone-model-pi-rumor-starlink-facts-explained-x2-11031159.jpg — A driver beside a Model Y in the desert at night checking a phone under a sky with satellites
+- gen/tesla-phone-model-pi-rumor-starlink-facts-explained-x3-11031200.jpg — A phone with a car app used as a key in front of a Model Y in a sunny driveway

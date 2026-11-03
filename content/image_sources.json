@@ -277,5 +277,44 @@
         "commons": "Super Heavy booster catch Starbase"
       }
     ]
+  },
+  "gen/tesla-phone-model-pi-rumor-starlink-facts-explained.jpg": {
+    "article": "tesla-phone-model-pi-rumor-starlink-facts-explained",
+    "model": "gpt-image-2.5-flare",
+    "made": "2026-11-03",
+    "references": [
+      {
+        "src": "lib/tesla-app-phone.jpg"
+      },
+      {
+        "src": "lib/modely-front.jpg"
+      }
+    ]
+  },
+  "gen/tesla-phone-model-pi-rumor-starlink-facts-explained-x2-11031159.jpg": {
+    "article": "tesla-phone-model-pi-rumor-starlink-facts-explained",
+    "model": "gpt-image-2.5-flare",
+    "made": "2026-11-03",
+    "references": [
+      {
+        "src": "lib/tesla-app-phone.jpg"
+      },
+      {
+        "src": "lib/modely-front.jpg"
+      }
+    ]
+  },
+  "gen/tesla-phone-model-pi-rumor-starlink-facts-explained-x3-11031200.jpg": {
+    "article": "tesla-phone-model-pi-rumor-starlink-facts-explained",
+    "model": "gpt-image-2.5-flare",
+    "made": "2026-11-03",
+    "references": [
+      {
+        "src": "lib/tesla-app-phone.jpg"
+      },
+      {
+        "src": "lib/modely-front.jpg"
+      }
+    ]
   }
 }

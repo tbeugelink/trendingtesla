@@ -10,7 +10,7 @@ Add new ideas at the bottom at any time.
 - [x] Tesla Model 3 vs Model Y in 2026: which one should you buy? (already covered: tesla-model-3-vs-model-y-2026-which-to-buy-price-range-space)
 - [x] What is Tesla FSD (Supervised), what does it cost, and where can you use it? (what-is-tesla-fsd-supervised-cost-countries-explained)
 - [x] Grok and FSD: what does it mean when Tesla's AI chatbot meets its self-driving software? (check carefully what is real and what is only announced) (already covered: grok-does-the-mapping-you-do-the-napping-tesla-fsd-sleep-explained)
-- [ ] A Tesla phone: what is known, what is rumour, and how could it work with Starlink and your Tesla? (clearly separate facts, statements and speculation)
+- [x] A Tesla phone: what is known, what is rumour, and how could it work with Starlink and your Tesla? (clearly separate facts, statements and speculation) (tesla-phone-model-pi-rumor-starlink-facts-explained)
 - [ ] Step into my office: inside the Tesla Semi cabin, the centre seat, the two screens and what a driver's day looks like
 - [x] "Grok does the mapping, you do the napping?" Keep this title (with the question mark) for the article, the Short and the long video. Explain what Grok and FSD each do, why napping is NOT allowed yet (FSD Supervised: the driver stays responsible and must watch the road; say this clearly and early), and when it could be: what Unsupervised FSD needs (data, regulators, country by country), where cars already drive without anyone at the wheel (Robotaxi), and what Tesla has said about timing (a statement, not a fact). Never suggest sleeping or looking away while driving today. (grok-does-the-mapping-you-do-the-napping-tesla-fsd-sleep-explained)
 - [ ] Cybernap in your Cybercab: why sleeping is fine in a car with no steering wheel, how a driverless ride works and where you can take one (follow-up to the napping article; use the cybercab-nap photos)
@@ -46,6 +46,8 @@ Add new ideas at the bottom at any time.
 - [ ] Level 2 vs level 3 vs level 4: what the self-driving levels mean, and why Mercedes takes the blame in Drive Pilot while Tesla does not
 - [ ] Why does Starship need no landing legs? How a tower catch makes rockets reusable within hours (explainer angle on the catch)
 - [ ] Can you text while using Tesla FSD? What Musk said, what the car allows and what the law says in the US, UK and Europe
+- [ ] How does Starlink Mobile (Direct to Cell) reach an ordinary phone from space, and what can you do with it (texts, apps, video later)?
+- [ ] Will Teslas get Starlink built in? How a Tesla connects to the internet today (Standard vs Premium Connectivity, AT&T, 5G) and what satellite links would change
 
 ## Stories (evening task: entertaining and educational, timeless)
 
@@ -76,6 +78,7 @@ Add new ideas at the bottom at any time.
 - [ ] Flight 1, April 2023: the Starship that would not separate, and how SpaceX turned an explosion into data
 - [ ] Why SpaceX builds its rockets from stainless steel: the switch away from carbon fibre that shaped Starship (and the Cybertruck)
 - [ ] January 22, 2026: the first Tesla Robotaxi rides with nobody in the car, and the long road of missed self-driving deadlines before it
+- [ ] The EchoStar deal: how SpaceX bought its way into the phone business without building a phone
 
 ## Series: How did Elon Musk ...? (evening task; one per week at most, category "musk")
 

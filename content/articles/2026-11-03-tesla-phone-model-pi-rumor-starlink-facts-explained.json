@@ -1,0 +1,1824 @@
+{
+ "slug": "tesla-phone-model-pi-rumor-starlink-facts-explained",
+ "date": "2026-11-03",
+ "time": "12:48",
+ "category": "software",
+ "also": [
+  "starlink"
+ ],
+ "sources": [
+  {
+   "title": "Teslarati — Elon Musk confirms SpaceX is not developing a phone",
+   "url": "https://www.teslarati.com/elon-musk-confirms-spacex-not-developing-phone/"
+  },
+  {
+   "title": "Tech Advisor — Tesla Model Pi smartphone: everything you need to know",
+   "url": "https://www.techadvisor.com/article/746185/tesla-model-pi-smartphone-everything-you-need-to-know.html"
+  },
+  {
+   "title": "Tech Times — Elon Musk, Starlink target 'complete phone coverage in America' following recent acquisition",
+   "url": "https://www.techtimes.com/articles/328897/20261012/elon-musk-starlink-target-complete-phone-coverage-america-following-recent-acquisition.htm"
+  },
+  {
+   "title": "Advanced Television — Musk confirms Starlink phone plan",
+   "url": "https://www.advanced-television.com/2026/06/29/musk-confirms-starlink-phone-plan/"
+  },
+  {
+   "title": "Not a Tesla App — Musk hints Starlink is coming to future Teslas as Cybercab shows integrated dish",
+   "url": "https://www.notateslaapp.com/news/4580/musk-hints-starlink-is-coming-to-future-teslas-as-cybercab-shows-integrated-dish"
+  }
+ ],
+ "images": [
+  "starlink-phone-mountain.jpg",
+  "lib/tesla-app-phone.jpg",
+  "cell-tower.jpg",
+  "app-faceid.jpg",
+  "starlink-car-1.jpg",
+  "starlink-launch-stack.jpg",
+  "musk-3.jpg"
+ ],
+ "gen_image": {
+  "prompt": "Close, dynamic low-angle shot of a hand holding up a modern unbranded smartphone against a deep blue twilight sky over a remote mountain road, the screen glowing with a simple satellite signal icon and full signal bars, a faint line of satellites crossing the sky above; a white new Tesla Model Y parked on the empty road behind, slightly out of focus; colourful but natural with a yellow sunset glow on the horizon, red tail lights and blue sky",
+  "subject": "a modern unbranded smartphone (thin black bezels, no logo, no brand name, no readable text) held in a hand; when the car is visible it is a white new Tesla Model Y (2025 'Juniper' generation, thin full-width light bar across the front, smooth nose); no other phone brands or logos",
+  "refs": [
+   {
+    "src": "lib/tesla-app-phone.jpg"
+   },
+   {
+    "src": "lib/modely-front.jpg"
+   }
+  ],
+  "profile": "cinematic",
+  "describe": "A hand holding up a phone with a satellite signal icon on a remote mountain road at dusk, a Model Y behind",
+  "extra": [
+   {
+    "prompt": "Wide view from behind of a person standing next to a white new Tesla Model Y at a desert viewpoint at night, looking at a smartphone in their hand, the Milky Way and a line of moving satellites above, warm yellow light from the car's cabin, red tail lights, deep blue sky",
+    "describe": "A driver beside a Model Y in the desert at night checking a phone under a sky with satellites"
+   },
+   {
+    "prompt": "Close-up over the shoulder of a hand holding a smartphone with a car app showing a top view of a car and lock and climate buttons, standing in a sunny suburban driveway in autumn, a white new Tesla Model Y in focus behind, yellow leaves, a red front door and blue sky",
+    "describe": "A phone with a car app used as a key in front of a Model Y in a sunny driveway"
+   }
+  ]
+ },
+ "label": {
+  "style": "a",
+  "en": {
+   "sub": "IS THERE A",
+   "text": "TESLA PHONE?"
+  },
+  "nl": {
+   "sub": "BESTAAT DE",
+   "text": "TESLA-TELEFOON?"
+  }
+ },
+ "short": {
+  "hook": "number",
+  "en": "SpaceX spent about seventeen billion dollars on airwaves for phones. Yet Musk says: we are NOT building a phone. So what about the Tesla Model Pi? Millions watched the videos. Solar charging. Satellite internet. Even Mars. Tesla never announced ANY of it. It was all fan art and hoaxes. Musk only said he would build a phone if there was no other choice. So why the billions? Because SpaceX wants Starlink INSIDE the phone you already own. Satellites that work like cell towers in space. Phones from the big brands that can talk to them. And Musk says all cars will get Starlink too. The Tesla phone was never real. But the network it promised? That one is being built.",
+  "nl": "SpaceX gaf zo'n zeventien miljard dollar uit aan frequenties voor telefoons. En toch zegt Musk: we bouwen GEEN telefoon. En die Tesla Model Pi dan? Miljoenen mensen keken de filmpjes. Opladen met zonlicht. Satellietinternet. Zelfs bereik op Mars. Tesla heeft daar NOOIT iets van aangekondigd. Het was allemaal fankunst en nepnieuws. Musk zei alleen dat hij een telefoon zou maken als er geen andere keus was. Waarom dan die miljarden? Omdat SpaceX Starlink IN de telefoon wil die je al hebt. Satellieten die werken als zendmasten in de ruimte. Telefoons van de grote merken die daarmee kunnen praten. En volgens Musk krijgen alle auto's ook Starlink. De Tesla-telefoon was nooit echt. Maar het netwerk dat hij beloofde? Dat wordt nu gebouwd.",
+  "yt_title_en": "The Tesla Phone That Never Existed",
+  "yt_title_nl": "De Tesla-Telefoon Die Nooit Bestond",
+  "story": [
+   {
+    "part": "hook",
+    "text": "SpaceX spent about seventeen billion dollars on airwaves for phones.",
+    "img": "cell-tower.jpg",
+    "pop": [
+     {
+      "say": "SpaceX spent",
+      "show": "SPACEX SPENT"
+     },
+     {
+      "say": "seventeen billion dollars",
+      "show": "$17 BILLION"
+     },
+     {
+      "say": "airwaves for phones",
+      "show": "FOR PHONES"
+     }
+    ]
+   },
+   {
+    "part": "hook",
+    "text": "Yet Musk says: we are NOT building a phone.",
+    "lib": [
+     "musk-phone-feed.jpg"
+    ],
+    "pop": [
+     {
+      "say": "Musk says",
+      "show": "MUSK SAYS"
+     },
+     {
+      "say": "NOT building",
+      "show": "NO PHONE"
+     }
+    ]
+   },
+   {
+    "part": "tension",
+    "text": "So what about the Tesla Model Pi? Millions watched the videos.",
+    "lib": [
+     "musk-crowd-phones.jpg"
+    ],
+    "pop": [
+     {
+      "say": "Tesla Model Pi",
+      "show": "MODEL PI?"
+     },
+     {
+      "say": "Millions watched",
+      "show": "MILLIONS WATCHED"
+     }
+    ]
+   },
+   {
+    "part": "tension",
+    "text": "Solar charging. Satellite internet. Even Mars.",
+    "img": "starlink-phone-mountain.jpg",
+    "pop": [
+     {
+      "say": "Solar charging",
+      "show": "SOLAR CHARGING"
+     },
+     {
+      "say": "Satellite internet",
+      "show": "SATELLITE WEB"
+     },
+     {
+      "say": "Even Mars",
+      "show": "EVEN MARS?"
+     }
+    ]
+   },
+   {
+    "part": "tension",
+    "text": "Tesla never announced ANY of it. It was all fan art and hoaxes.",
+    "lib": [
+     "musk-empty-podium.jpg"
+    ],
+    "pop": [
+     {
+      "say": "never announced",
+      "show": "NEVER ANNOUNCED"
+     },
+     {
+      "say": "fan art",
+      "show": "FAN ART"
+     },
+     {
+      "say": "hoaxes",
+      "show": "HOAXES"
+     }
+    ]
+   },
+   {
+    "part": "tension",
+    "text": "Musk only said he would build a phone if there was no other choice.",
+    "img": "musk-3.jpg",
+    "pop": [
+     {
+      "say": "build a phone",
+      "show": "A PHONE?"
+     },
+     {
+      "say": "no other choice",
+      "show": "ONLY IF FORCED"
+     }
+    ]
+   },
+   {
+    "part": "payoff",
+    "text": "So why the billions? Because SpaceX wants Starlink INSIDE the phone you already own.",
+    "lib": [
+     "tesla-app-phone.jpg"
+    ],
+    "pop": [
+     {
+      "say": "why the billions",
+      "show": "WHY BILLIONS?"
+     },
+     {
+      "say": "Starlink INSIDE",
+      "show": "STARLINK INSIDE"
+     },
+     {
+      "say": "you already own",
+      "show": "YOUR PHONE"
+     }
+    ]
+   },
+   {
+    "part": "payoff",
+    "text": "Satellites that work like cell towers in space. Phones from the big brands that can talk to them.",
+    "lib": [
+     "starlink-satellites.jpg"
+    ],
+    "pop": [
+     {
+      "say": "cell towers in space",
+      "show": "TOWERS IN SPACE"
+     },
+     {
+      "say": "big brands",
+      "show": "BIG BRANDS"
+     },
+     {
+      "say": "talk to them",
+      "show": "DIRECT LINK"
+     }
+    ]
+   },
+   {
+    "part": "payoff",
+    "text": "And Musk says all cars will get Starlink too.",
+    "img": "starlink-car-1.jpg",
+    "pop": [
+     {
+      "say": "all cars",
+      "show": "ALL CARS"
+     },
+     {
+      "say": "Starlink too",
+      "show": "STARLINK TOO"
+     }
+    ]
+   },
+   {
+    "part": "payoff",
+    "text": "The Tesla phone was never real. But the network it promised? That one is being built.",
+    "img": "starlink-launch-stack.jpg",
+    "pop": [
+     {
+      "say": "never real",
+      "show": "NEVER REAL"
+     },
+     {
+      "say": "the network",
+      "show": "THE NETWORK?"
+     },
+     {
+      "say": "being built",
+      "show": "BEING BUILT"
+     }
+    ]
+   }
+  ]
+ },
+ "video": {
+  "en": [
+   {
+    "text": "Millions of people have watched videos of a phone called the Tesla Model Pi. It charges itself in the sun. It connects straight to Starlink satellites. It works on Mars, and it even talks to a brain chip. Some clips say Elon Musk has officially announced it. At the same time, SpaceX really is spending billions on airwaves for phones. About 17 billion dollars in 2025, and another nationwide band in October 2026, reportedly worth about 8 billion. Musk called it the final piece for complete phone coverage in America. The problem is that the real plans and the fan fiction have become almost impossible to tell apart.",
+    "img": [
+     "gen/tesla-phone-model-pi-rumor-starlink-facts-explained.jpg",
+     "lib/musk-crowd-phones.jpg",
+     "cell-tower.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "mobile phone mast",
+       "cell tower antennas",
+       "cellular base station"
+      ],
+      "want": "a mobile phone mast with antennas"
+     }
+    ],
+    "pop": [
+     {
+      "say": "Tesla Model Pi",
+      "show": "TESLA MODEL PI"
+     },
+     {
+      "say": "charges itself",
+      "show": "SUN CHARGING"
+     },
+     {
+      "say": "Starlink satellites",
+      "show": "STARLINK LINK"
+     },
+     {
+      "say": "works on Mars",
+      "show": "ON MARS?"
+     },
+     {
+      "say": "brain chip",
+      "show": "BRAIN CHIP?"
+     },
+     {
+      "say": "officially announced",
+      "show": "ANNOUNCED?"
+     },
+     {
+      "say": "spending billions",
+      "show": "REAL BILLIONS"
+     },
+     {
+      "say": "17 billion dollars",
+      "show": "$17 BILLION"
+     },
+     {
+      "say": "about 8 billion",
+      "show": "ANOTHER $8 BILLION"
+     },
+     {
+      "say": "final piece",
+      "show": "THE FINAL PIECE"
+     },
+     {
+      "say": "fan fiction",
+      "show": "FACT OR FICTION"
+     }
+    ]
+   },
+   {
+    "head": "Where did the Tesla phone story come from?",
+    "img": [
+     "musk-3.jpg"
+    ],
+    "pop": [
+     {
+      "say": "",
+      "show": "WHERE DID IT START?"
+     }
+    ]
+   },
+   {
+    "text": "From concept art and wishful thinking, not from Tesla. The name Model Pi fits neatly next to Model S, 3, X and Y. Designers such as Antonio De Rosa made polished renders of what a Tesla phone could look like. They were never based on real plans. Yet they keep being recycled as breaking news. A TikTok video in late 2025, for example, claimed to confirm the phone. It was a hoax, like the posts before it.",
+    "img": [
+     "musk-3.jpg",
+     "lib/musk-phone-feed.jpg",
+     "grok-phone-cafe.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "smartphone render",
+       "modern smartphone black",
+       "smartphone on table"
+      ],
+      "want": "a modern smartphone without a visible brand"
+     }
+    ],
+    "pop": [
+     {
+      "say": "concept art",
+      "show": "CONCEPT ART"
+     },
+     {
+      "say": "not from Tesla",
+      "show": "NOT FROM TESLA"
+     },
+     {
+      "say": "Model Pi fits",
+      "show": "MODEL PI?"
+     },
+     {
+      "say": "polished renders",
+      "show": "JUST RENDERS"
+     },
+     {
+      "say": "never based on real plans",
+      "show": "NO REAL PLANS"
+     },
+     {
+      "say": "recycled",
+      "show": "RECYCLED"
+     },
+     {
+      "say": "breaking news",
+      "show": "FAKE BREAKING NEWS"
+     },
+     {
+      "say": "TikTok video",
+      "show": "TIKTOK 2025"
+     },
+     {
+      "say": "hoax",
+      "show": "A HOAX"
+     }
+    ]
+   },
+   {
+    "text": "The feature lists keep growing. Solar charging, free satellite internet, a connection on Mars, control by thought. None of it comes from Tesla. Tesla has never shown a phone, and its Master Plan Part 4 is about robots, autonomy and energy, with no smartphone in it. Still, the rumour refuses to die, partly because Musk himself has talked about phones more than once.",
+    "img": [
+     "starlink-phone-mountain.jpg",
+     "lib/optimus-walking.jpg",
+     "lib/musk-empty-podium.jpg"
+    ],
+    "pop": [
+     {
+      "say": "Solar charging",
+      "show": "SOLAR CHARGING"
+     },
+     {
+      "say": "satellite internet",
+      "show": "FREE SATELLITE WEB"
+     },
+     {
+      "say": "on Mars",
+      "show": "MARS?"
+     },
+     {
+      "say": "control by thought",
+      "show": "MIND CONTROL?"
+     },
+     {
+      "say": "None of it",
+      "show": "NONE OF IT"
+     },
+     {
+      "say": "Master Plan Part 4",
+      "show": "MASTER PLAN 4"
+     },
+     {
+      "say": "no smartphone",
+      "show": "NO SMARTPHONE"
+     },
+     {
+      "say": "refuses to die",
+      "show": "RUMOUR LIVES ON"
+     }
+    ]
+   },
+   {
+    "head": "What has Musk actually said about making a phone?",
+    "img": [
+     "lib/musk-phone-feed.jpg"
+    ],
+    "pop": [
+     {
+      "say": "",
+      "show": "WHAT DID MUSK SAY?"
+     }
+    ]
+   },
+   {
+    "text": "That he would rather not, unless he has to. His comments follow a clear pattern.",
+    "img": [
+     "lib/musk-phone-feed.jpg",
+     "musk-1.jpg"
+    ],
+    "pop": [
+     {
+      "say": "rather not",
+      "show": "RATHER NOT"
+     },
+     {
+      "say": "unless he has to",
+      "show": "UNLESS HE HAS TO"
+     },
+     {
+      "say": "clear pattern",
+      "show": "A CLEAR PATTERN"
+     }
+    ]
+   },
+   {
+    "key": "November 2022",
+    "text": "First, November 2022. People worried that Apple and Google might remove Twitter from their app stores. Musk said he hoped it would not come to that, but that he would make an alternative phone if there was no other choice.",
+    "img": [
+     "musk-3.jpg"
+    ],
+    "pop": [
+     {
+      "say": "Apple and Google",
+      "show": "APPLE AND GOOGLE"
+     },
+     {
+      "say": "remove Twitter",
+      "show": "TWITTER REMOVED?"
+     },
+     {
+      "say": "no other choice",
+      "show": "ONLY IF NO CHOICE"
+     }
+    ]
+   },
+   {
+    "key": "January 2026",
+    "text": "Second, January 2026. Asked about a Starlink phone, he wrote that it was not ruled out at some point. It would be a very different device from today's phones, built to run AI neural networks efficiently.",
+    "img": [
+     "lib/ai-chip-closeup.jpg"
+    ],
+    "pop": [
+     {
+      "say": "not ruled out",
+      "show": "NOT RULED OUT"
+     },
+     {
+      "say": "very different device",
+      "show": "A DIFFERENT DEVICE"
+     },
+     {
+      "say": "AI neural networks",
+      "show": "BUILT FOR AI"
+     }
+    ]
+   },
+   {
+    "key": "February 2026",
+    "text": "Third, February 2026. Reuters reported that SpaceX executives were discussing a device that connects directly to Starlink. Musk disputed the report, and wrote: we are not developing a phone.",
+    "img": [
+     "lib/musk-empty-podium.jpg"
+    ],
+    "pop": [
+     {
+      "say": "Reuters reported",
+      "show": "REUTERS REPORT"
+     },
+     {
+      "say": "disputed",
+      "show": "MUSK DISPUTES"
+     },
+     {
+      "say": "not developing a phone",
+      "show": "NOT DEVELOPING A PHONE"
+     }
+    ]
+   },
+   {
+    "text": "So the only official word is a denial, with the door left slightly open. And yet SpaceX is spending billions on exactly what a phone of the future needs most. A way to reach it from space.",
+    "img": [
+     "lib/starlink-satellites.jpg",
+     "starlink-1.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Starlink satellites night sky",
+       "Starlink satellite train",
+       "Starlink train over observatory"
+      ],
+      "want": "a line of Starlink satellites crossing the night sky"
+     }
+    ],
+    "pop": [
+     {
+      "say": "a denial",
+      "show": "A DENIAL"
+     },
+     {
+      "say": "slightly open",
+      "show": "DOOR AJAR"
+     },
+     {
+      "say": "spending billions",
+      "show": "BILLIONS SPENT"
+     },
+     {
+      "say": "from space",
+      "show": "REACH FROM SPACE"
+     }
+    ]
+   },
+   {
+    "head": "So how could Starlink reach your phone without a Tesla phone?",
+    "img": [
+     "starlink-2.jpg"
+    ],
+    "pop": [
+     {
+      "say": "",
+      "show": "STARLINK IN YOUR PHONE?"
+     }
+    ]
+   },
+   {
+    "text": "By putting the cell tower in orbit. SpaceX's Starlink Mobile, the service formerly called Direct to Cell, already does this with ordinary phones. About 650 Starlink satellites carry a special radio that works like a mobile mast in space. In the US it runs on T-Mobile's airwaves. So a normal recent smartphone can send texts and use light apps where there is no regular signal. The catch is capacity. The current service uses only about 5 megahertz of spectrum. That is enough for messages, but far too little for video.",
+    "img": [
+     "starlink-2.jpg",
+     "starlink-phone-mountain.jpg",
+     "cell-tower.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Starlink satellite",
+       "Starlink satellites deployment",
+       "Starlink v2 mini satellite"
+      ],
+      "want": "a Starlink satellite in space"
+     }
+    ],
+    "pop": [
+     {
+      "say": "cell tower in orbit",
+      "show": "TOWER IN ORBIT"
+     },
+     {
+      "say": "Starlink Mobile",
+      "show": "STARLINK MOBILE"
+     },
+     {
+      "say": "ordinary phones",
+      "show": "ORDINARY PHONES"
+     },
+     {
+      "say": "650 Starlink satellites",
+      "show": "650 SATELLITES"
+     },
+     {
+      "say": "T-Mobile's airwaves",
+      "show": "T-MOBILE AIRWAVES"
+     },
+     {
+      "say": "send texts",
+      "show": "TEXTS AND LIGHT APPS"
+     },
+     {
+      "say": "capacity",
+      "show": "THE CATCH: CAPACITY"
+     },
+     {
+      "say": "5 megahertz",
+      "show": "ONLY 5 MHZ"
+     },
+     {
+      "say": "too little for video",
+      "show": "NO VIDEO YET"
+     }
+    ]
+   },
+   {
+    "text": "That is why SpaceX is building up its own spectrum and satellites.",
+    "img": [
+     "starlink-launch-stack.jpg"
+    ],
+    "pop": [
+     {
+      "say": "its own spectrum",
+      "show": "OWN SPECTRUM"
+     },
+     {
+      "say": "satellites",
+      "show": "NEW SATELLITES"
+     }
+    ]
+   },
+   {
+    "key": "2 GHz band",
+    "text": "First, the 2 gigahertz band. SpaceX bought it from EchoStar in 2025, for about 17 billion dollars. In June 2026 Musk said phones able to use it should start shipping in around 2 years. SpaceX plans to work with handset makers, so their phones support the new frequencies.",
+    "img": [
+     "grok-phone-cafe.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "smartphone circuit board",
+       "mobile phone mainboard",
+       "smartphone chip"
+      ],
+      "want": "the circuit board or chip inside a smartphone"
+     }
+    ],
+    "pop": [
+     {
+      "say": "EchoStar",
+      "show": "FROM ECHOSTAR"
+     },
+     {
+      "say": "17 billion dollars",
+      "show": "$17 BILLION"
+     },
+     {
+      "say": "around 2 years",
+      "show": "PHONES IN ~2 YEARS"
+     },
+     {
+      "say": "handset makers",
+      "show": "WITH PHONE MAKERS"
+     }
+    ]
+   },
+   {
+    "key": "800 MHz band",
+    "text": "Second, the 800 megahertz band. A nationwide low-band licence that SpaceX agreed to buy in October 2026. Low frequencies travel further and get through walls better, which helps indoors. The deal still needs approval from the FCC, the US regulator.",
+    "img": [
+     "cell-tower.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "radio mast countryside",
+       "telecommunication tower rural",
+       "antenna tower field"
+      ],
+      "want": "a radio or telecom tower in the countryside"
+     }
+    ],
+    "pop": [
+     {
+      "say": "nationwide",
+      "show": "NATIONWIDE"
+     },
+     {
+      "say": "through walls",
+      "show": "THROUGH WALLS"
+     },
+     {
+      "say": "indoors",
+      "show": "BETTER INDOORS"
+     },
+     {
+      "say": "approval from the FCC",
+      "show": "FCC MUST APPROVE"
+     }
+    ]
+   },
+   {
+    "key": "New satellites",
+    "text": "Third, new satellites. The FCC has approved a next-generation constellation of up to 15,000 satellites, planned to offer more than 100 times the bandwidth of today's direct-to-cell satellites. The first are expected to start launching around the end of 2027.",
+    "img": [
+     "starlink-launch-stack.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Falcon 9 launch Starlink",
+       "Falcon 9 Starlink mission liftoff",
+       "SpaceX Falcon 9 night launch"
+      ],
+      "want": "a Falcon 9 rocket launching"
+     }
+    ],
+    "pop": [
+     {
+      "say": "15,000 satellites",
+      "show": "15,000 SATELLITES"
+     },
+     {
+      "say": "100 times the bandwidth",
+      "show": "100X BANDWIDTH"
+     },
+     {
+      "say": "end of 2027",
+      "show": "FROM LATE 2027"
+     }
+    ]
+   },
+   {
+    "text": "Notice what is missing from that list. A SpaceX or Tesla handset. The plan is to put Starlink inside the phones people already buy from the big brands. That leaves the question of where Tesla fits in.",
+    "img": [
+     "lib/tesla-app-phone.jpg",
+     "app-faceid.jpg"
+    ],
+    "pop": [
+     {
+      "say": "missing",
+      "show": "WHAT'S MISSING?"
+     },
+     {
+      "say": "Tesla handset",
+      "show": "NO TESLA HANDSET"
+     },
+     {
+      "say": "phones people already buy",
+      "show": "PHONES YOU BUY"
+     },
+     {
+      "say": "where Tesla fits",
+      "show": "WHERE'S TESLA?"
+     }
+    ]
+   },
+   {
+    "head": "What does all this mean for your Tesla?",
+    "img": [
+     "lib/tesla-app-phone.jpg"
+    ],
+    "pop": [
+     {
+      "say": "",
+      "show": "WHAT ABOUT YOUR TESLA?"
+     }
+    ]
+   },
+   {
+    "text": "Your phone already is the Tesla phone, and the car may get Starlink first. The Tesla app turns any smartphone into a key. It unlocks the car, warms or cools the cabin, and shows how charging is going. Grok, the assistant from xAI, runs in the car and as an app on your phone.",
+    "img": [
+     "lib/tesla-app-phone.jpg",
+     "app-faceid.jpg",
+     "lib/grok-screen-closeup.jpg"
+    ],
+    "pop": [
+     {
+      "say": "already is the Tesla phone",
+      "show": "YOUR PHONE IS IT"
+     },
+     {
+      "say": "Starlink first",
+      "show": "CAR FIRST?"
+     },
+     {
+      "say": "into a key",
+      "show": "PHONE AS KEY"
+     },
+     {
+      "say": "unlocks the car",
+      "show": "UNLOCK"
+     },
+     {
+      "say": "cools the cabin",
+      "show": "CLIMATE"
+     },
+     {
+      "say": "Grok",
+      "show": "GROK APP"
+     }
+    ]
+   },
+   {
+    "text": "The car itself is a different story. Teslas today connect over ordinary mobile networks, AT&T in the US, and newer cars have 5G hardware. In August 2026 Tesla showed a Cybercab with a Starlink antenna built into the rear of the body. Musk wrote that all cars will have Starlink in the future, because it is the only way to give billions of vehicles very high bandwidth.",
+    "img": [
+     "lib/cybercab-street-day.jpg",
+     "lib/cybercab-silhouette-door.jpg",
+     "starlink-car-1.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Tesla Cybercab",
+       "Tesla Cybercab robotaxi",
+       "Cybercab Tesla Austin"
+      ],
+      "want": "the Tesla Cybercab, a two-seat gold robotaxi"
+     }
+    ],
+    "pop": [
+     {
+      "say": "different story",
+      "show": "THE CAR ITSELF"
+     },
+     {
+      "say": "mobile networks",
+      "show": "MOBILE NETWORKS"
+     },
+     {
+      "say": "5G hardware",
+      "show": "5G INSIDE"
+     },
+     {
+      "say": "Cybercab",
+      "show": "CYBERCAB"
+     },
+     {
+      "say": "Starlink antenna",
+      "show": "STARLINK BUILT IN"
+     },
+     {
+      "say": "all cars",
+      "show": "ALL CARS?"
+     },
+     {
+      "say": "billions of vehicles",
+      "show": "BILLIONS OF CARS"
+     }
+    ]
+   },
+   {
+    "text": "That is a statement, not a product plan. The Cybercab still carries a 5G modem, and Tesla has not said when, or whether, its regular models get Starlink. For a car that drives itself, a link that also works in the desert, on a mountain pass, or after a storm has knocked out the masts, would be worth a lot. Until then, the next viral video will keep mixing these real developments with pure fantasy.",
+    "img": [
+     "starlink-car-2.jpg",
+     "starlink-car-3.jpg",
+     "lib/starlink-dish-car.jpg"
+    ],
+    "pop": [
+     {
+      "say": "a statement",
+      "show": "A STATEMENT"
+     },
+     {
+      "say": "not a product plan",
+      "show": "NOT A PLAN"
+     },
+     {
+      "say": "5G modem",
+      "show": "STILL 5G"
+     },
+     {
+      "say": "when, or whether",
+      "show": "WHEN? IF?"
+     },
+     {
+      "say": "in the desert",
+      "show": "DESERT"
+     },
+     {
+      "say": "mountain pass",
+      "show": "MOUNTAIN PASS"
+     },
+     {
+      "say": "after a storm",
+      "show": "AFTER A STORM"
+     },
+     {
+      "say": "pure fantasy",
+      "show": "REAL VS FANTASY"
+     }
+    ]
+   },
+   {
+    "head": "How do you spot a fake Tesla phone story?",
+    "img": [
+     "lib/musk-phone-feed.jpg"
+    ],
+    "pop": [
+     {
+      "say": "",
+      "show": "SPOT THE FAKE"
+     }
+    ]
+   },
+   {
+    "text": "Check the source, the promises and the physics. Real Tesla products appear on Tesla's website, in Tesla's own posts on X, or in its quarterly reports. Not first on a meme page. A few quick checks catch almost every fake.",
+    "img": [
+     "musk-3.jpg",
+     "earnings-2.jpg"
+    ],
+    "pop": [
+     {
+      "say": "the source",
+      "show": "THE SOURCE"
+     },
+     {
+      "say": "the promises",
+      "show": "THE PROMISES"
+     },
+     {
+      "say": "the physics",
+      "show": "THE PHYSICS"
+     },
+     {
+      "say": "Tesla's website",
+      "show": "TESLA.COM"
+     },
+     {
+      "say": "meme page",
+      "show": "NOT A MEME PAGE"
+     },
+     {
+      "say": "quick checks",
+      "show": "QUICK CHECKS"
+     }
+    ]
+   },
+   {
+    "key": "No official source",
+    "text": "First, no official source. If a story only links to other videos, or to sites full of ads, there was no announcement.",
+    "img": [
+     "lib/musk-phone-feed.jpg"
+    ],
+    "pop": [
+     {
+      "say": "only links",
+      "show": "ONLY LINKS"
+     },
+     {
+      "say": "full of ads",
+      "show": "FULL OF ADS"
+     },
+     {
+      "say": "no announcement",
+      "show": "NO ANNOUNCEMENT"
+     }
+    ]
+   },
+   {
+    "key": "Exact price and date",
+    "text": "Second, an exact price and launch date. Hoaxes love a precise price, and a launch next month. Tesla has never announced either.",
+    "img": [
+     "grok-phone-cafe.jpg"
+    ],
+    "pop": [
+     {
+      "say": "precise price",
+      "show": "PRECISE PRICE"
+     },
+     {
+      "say": "next month",
+      "show": "NEXT MONTH?"
+     },
+     {
+      "say": "never announced",
+      "show": "NEVER ANNOUNCED"
+     }
+    ]
+   },
+   {
+    "key": "Impossible specs",
+    "text": "Third, impossible specs. A solar panel the size of a phone's back would need many hours of direct sun to refill a battery, and in a pocket it gets none. No phone can call Earth from Mars either.",
+    "img": [
+     "starlink-phone-mountain.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "small solar panel",
+       "solar cell close-up",
+       "portable solar panel"
+      ],
+      "want": "a small solar panel or solar cell up close"
+     }
+    ],
+    "pop": [
+     {
+      "say": "many hours of direct sun",
+      "show": "HOURS OF SUN"
+     },
+     {
+      "say": "in a pocket",
+      "show": "POCKET: ZERO"
+     },
+     {
+      "say": "from Mars",
+      "show": "NO MARS CALLS"
+     }
+    ]
+   },
+   {
+    "text": "The truth is less flashy, but more interesting. There is no Tesla phone, and Musk says SpaceX is not building one. What is being built is a network in space that could make every ordinary phone, and maybe every Tesla, reachable almost anywhere on Earth. If that works, the phone in your pocket will not need a Tesla logo to deliver what the Model Pi videos promised.",
+    "img": [
+     "gen/tesla-phone-model-pi-rumor-starlink-facts-explained.jpg",
+     "starlink-1.jpg",
+     "lib/starlink-satellites.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Starlink satellites over Earth",
+       "satellite constellation Earth orbit",
+       "Starlink satellite stack"
+      ],
+      "want": "satellites in orbit above the Earth"
+     }
+    ],
+    "pop": [
+     {
+      "say": "less flashy",
+      "show": "LESS FLASHY"
+     },
+     {
+      "say": "no Tesla phone",
+      "show": "NO TESLA PHONE"
+     },
+     {
+      "say": "not building one",
+      "show": "NOT BUILDING ONE"
+     },
+     {
+      "say": "network in space",
+      "show": "A NETWORK IN SPACE"
+     },
+     {
+      "say": "every ordinary phone",
+      "show": "EVERY PHONE"
+     },
+     {
+      "say": "maybe every Tesla",
+      "show": "MAYBE EVERY TESLA"
+     },
+     {
+      "say": "anywhere on Earth",
+      "show": "ANYWHERE ON EARTH"
+     },
+     {
+      "say": "Tesla logo",
+      "show": "NO LOGO NEEDED"
+     }
+    ]
+   }
+  ],
+  "nl": [
+   {
+    "text": "Miljoenen mensen keken filmpjes over een telefoon die de Tesla Model Pi heet. Hij laadt zichzelf op in de zon. Hij maakt rechtstreeks verbinding met Starlink-satellieten. Hij werkt op Mars, en hij praat zelfs met een hersenchip. Sommige video's zeggen dat Elon Musk hem officieel heeft aangekondigd. Tegelijk geeft SpaceX wel echt miljarden uit aan frequenties voor telefoons. Zo'n 17 miljard dollar in 2025, en in oktober 2026 nog een landelijke band, volgens Reuters goed voor ongeveer 8 miljard. Musk noemde het het ontbrekende stuk voor volledige telefoondekking in Amerika. Het probleem is dat echte plannen en fanfantasie bijna niet meer uit elkaar te houden zijn.",
+    "img": [
+     "gen/tesla-phone-model-pi-rumor-starlink-facts-explained.jpg",
+     "lib/musk-crowd-phones.jpg",
+     "cell-tower.jpg"
+    ],
+    "pop": [
+     {
+      "say": "Tesla Model Pi",
+      "show": "TESLA MODEL PI"
+     },
+     {
+      "say": "in de zon",
+      "show": "ZONNE-ENERGIE"
+     },
+     {
+      "say": "Starlink-satellieten",
+      "show": "STARLINK"
+     },
+     {
+      "say": "op Mars",
+      "show": "OP MARS?"
+     },
+     {
+      "say": "hersenchip",
+      "show": "HERSENCHIP?"
+     },
+     {
+      "say": "officieel",
+      "show": "AANGEKONDIGD?"
+     },
+     {
+      "say": "echt miljarden",
+      "show": "ECHTE MILJARDEN"
+     },
+     {
+      "say": "17 miljard dollar",
+      "show": "$17 MILJARD"
+     },
+     {
+      "say": "8 miljard",
+      "show": "NOG $8 MILJARD"
+     },
+     {
+      "say": "ontbrekende stuk",
+      "show": "HET LAATSTE STUK"
+     },
+     {
+      "say": "fanfantasie",
+      "show": "FEIT OF FANTASIE"
+     }
+    ]
+   },
+   {
+    "head": "Waar komt het verhaal over de Tesla-telefoon vandaan?",
+    "img": [
+     "musk-3.jpg"
+    ],
+    "pop": [
+     {
+      "say": "",
+      "show": "WAAR KOMT HET VANDAAN?"
+     }
+    ]
+   },
+   {
+    "text": "Uit conceptkunst en wensdenken, niet van Tesla. De naam Model Pi past mooi naast Model S, 3, X en Y. Ontwerpers zoals Antonio De Rosa maakten gelikte renders van hoe een Tesla-telefoon eruit zou kunnen zien. Ze waren nooit gebaseerd op echte plannen. Maar ze duiken steeds weer op als breaking news. Een TikTok-video eind 2025 beweerde bijvoorbeeld dat de telefoon bevestigd was. Het was nep, net als alle berichten daarvoor.",
+    "img": [
+     "musk-3.jpg",
+     "lib/musk-phone-feed.jpg",
+     "grok-phone-cafe.jpg"
+    ],
+    "pop": [
+     {
+      "say": "conceptkunst",
+      "show": "CONCEPTKUNST"
+     },
+     {
+      "say": "niet van Tesla",
+      "show": "NIET VAN TESLA"
+     },
+     {
+      "say": "Model Pi",
+      "show": "MODEL PI?"
+     },
+     {
+      "say": "gelikte renders",
+      "show": "ALLEEN RENDERS"
+     },
+     {
+      "say": "echte plannen",
+      "show": "GEEN ECHTE PLANNEN"
+     },
+     {
+      "say": "breaking news",
+      "show": "NEP-NIEUWS"
+     },
+     {
+      "say": "TikTok-video",
+      "show": "TIKTOK 2025"
+     },
+     {
+      "say": "nep",
+      "show": "NEP"
+     }
+    ]
+   },
+   {
+    "text": "De lijst met functies wordt steeds langer. Opladen met zonne-energie, gratis satellietinternet, bereik op Mars, bediening met je gedachten. Niets daarvan komt van Tesla. Tesla heeft nooit een telefoon laten zien, en in Master Plan Part 4 gaat het over robots, zelfrijden en energie, zonder smartphone. Toch blijft het gerucht hardnekkig, deels omdat Musk zelf meer dan eens over telefoons heeft gepraat.",
+    "img": [
+     "starlink-phone-mountain.jpg",
+     "lib/optimus-walking.jpg",
+     "lib/musk-empty-podium.jpg"
+    ],
+    "pop": [
+     {
+      "say": "zonne-energie",
+      "show": "ZONNE-ENERGIE"
+     },
+     {
+      "say": "satellietinternet",
+      "show": "GRATIS SATELLIET-WEB"
+     },
+     {
+      "say": "op Mars",
+      "show": "MARS?"
+     },
+     {
+      "say": "gedachten",
+      "show": "GEDACHTEN?"
+     },
+     {
+      "say": "Niets daarvan",
+      "show": "NIETS DAARVAN"
+     },
+     {
+      "say": "Master Plan",
+      "show": "MASTER PLAN 4"
+     },
+     {
+      "say": "zonder smartphone",
+      "show": "GEEN SMARTPHONE"
+     },
+     {
+      "say": "hardnekkig",
+      "show": "HARDNEKKIG GERUCHT"
+     }
+    ]
+   },
+   {
+    "head": "Wat heeft Musk echt gezegd over een eigen telefoon?",
+    "img": [
+     "lib/musk-phone-feed.jpg"
+    ],
+    "pop": [
+     {
+      "say": "",
+      "show": "WAT ZEI MUSK?"
+     }
+    ]
+   },
+   {
+    "text": "Dat hij het liever niet doet, tenzij het moet. Zijn uitspraken volgen een duidelijk patroon.",
+    "img": [
+     "lib/musk-phone-feed.jpg",
+     "musk-1.jpg"
+    ],
+    "pop": [
+     {
+      "say": "liever niet",
+      "show": "LIEVER NIET"
+     },
+     {
+      "say": "tenzij het moet",
+      "show": "TENZIJ HET MOET"
+     },
+     {
+      "say": "duidelijk patroon",
+      "show": "EEN PATROON"
+     }
+    ]
+   },
+   {
+    "key": "November 2022",
+    "text": "Eén: november 2022. Mensen vreesden dat Apple en Google Twitter uit hun appwinkels zouden halen. Musk zei dat hij hoopte dat het zover niet zou komen, maar dat hij een alternatieve telefoon zou maken als er geen andere keus was.",
+    "img": [
+     "musk-3.jpg"
+    ],
+    "pop": [
+     {
+      "say": "Apple en Google",
+      "show": "APPLE EN GOOGLE"
+     },
+     {
+      "say": "Twitter",
+      "show": "TWITTER ERUIT?"
+     },
+     {
+      "say": "geen andere keus",
+      "show": "ALLEEN ALS HET MOET"
+     }
+    ]
+   },
+   {
+    "key": "Januari 2026",
+    "text": "Twee: januari 2026. Op de vraag naar een Starlink-telefoon schreef hij dat die op termijn niet uitgesloten was. Het zou een heel ander apparaat worden dan de telefoons van nu, gebouwd om AI-netwerken zuinig te draaien.",
+    "img": [
+     "lib/ai-chip-closeup.jpg"
+    ],
+    "pop": [
+     {
+      "say": "niet uitgesloten",
+      "show": "NIET UITGESLOTEN"
+     },
+     {
+      "say": "heel ander apparaat",
+      "show": "HEEL ANDERS"
+     },
+     {
+      "say": "AI-netwerken",
+      "show": "GEBOUWD VOOR AI"
+     }
+    ]
+   },
+   {
+    "key": "Februari 2026",
+    "text": "Drie: februari 2026. Reuters meldde dat topmensen van SpaceX praatten over een apparaat dat direct met Starlink verbindt. Musk sprak dat tegen, en schreef: we ontwikkelen geen telefoon.",
+    "img": [
+     "lib/musk-empty-podium.jpg"
+    ],
+    "pop": [
+     {
+      "say": "Reuters meldde",
+      "show": "REUTERS MELDT"
+     },
+     {
+      "say": "sprak dat tegen",
+      "show": "MUSK SPREEKT TEGEN"
+     },
+     {
+      "say": "geen telefoon",
+      "show": "GEEN TELEFOON"
+     }
+    ]
+   },
+   {
+    "text": "Het enige officiële woord is dus een ontkenning, met de deur op een kier. En toch steekt SpaceX miljarden in precies wat een telefoon van de toekomst het hardst nodig heeft. Een manier om hem vanuit de ruimte te bereiken.",
+    "img": [
+     "lib/starlink-satellites.jpg",
+     "starlink-1.jpg"
+    ],
+    "pop": [
+     {
+      "say": "ontkenning",
+      "show": "EEN ONTKENNING"
+     },
+     {
+      "say": "op een kier",
+      "show": "DEUR OP EEN KIER"
+     },
+     {
+      "say": "miljarden",
+      "show": "MILJARDEN"
+     },
+     {
+      "say": "vanuit de ruimte",
+      "show": "VANUIT DE RUIMTE"
+     }
+    ]
+   },
+   {
+    "head": "Hoe bereikt Starlink je telefoon dan zonder Tesla-telefoon?",
+    "img": [
+     "starlink-2.jpg"
+    ],
+    "pop": [
+     {
+      "say": "",
+      "show": "STARLINK IN JE TELEFOON?"
+     }
+    ]
+   },
+   {
+    "text": "Door de zendmast in een baan om de aarde te zetten. Starlink Mobile van SpaceX, de dienst die eerst Direct to Cell heette, doet dat al met gewone telefoons. Zo'n 650 Starlink-satellieten hebben een speciale radio aan boord, die werkt als een zendmast in de ruimte. In de VS draait het op de frequenties van T-Mobile. Zo kan een gewone recente smartphone sms'jes sturen en lichte apps gebruiken, waar geen normaal bereik is. Het nadeel is de capaciteit. De huidige dienst gebruikt maar ongeveer 5 megahertz aan spectrum. Genoeg voor berichtjes, veel te weinig voor video.",
+    "img": [
+     "starlink-2.jpg",
+     "starlink-phone-mountain.jpg",
+     "cell-tower.jpg"
+    ],
+    "pop": [
+     {
+      "say": "zendmast",
+      "show": "ZENDMAST IN DE RUIMTE"
+     },
+     {
+      "say": "Starlink Mobile",
+      "show": "STARLINK MOBILE"
+     },
+     {
+      "say": "gewone telefoons",
+      "show": "GEWONE TELEFOONS"
+     },
+     {
+      "say": "650 Starlink-satellieten",
+      "show": "650 SATELLIETEN"
+     },
+     {
+      "say": "T-Mobile",
+      "show": "VIA T-MOBILE"
+     },
+     {
+      "say": "sms'jes",
+      "show": "SMS EN LICHTE APPS"
+     },
+     {
+      "say": "capaciteit",
+      "show": "NADEEL: CAPACITEIT"
+     },
+     {
+      "say": "5 megahertz",
+      "show": "MAAR 5 MHZ"
+     },
+     {
+      "say": "te weinig voor video",
+      "show": "NOG GEEN VIDEO"
+     }
+    ]
+   },
+   {
+    "text": "Daarom bouwt SpaceX een eigen spectrum en een nieuwe vloot satellieten op.",
+    "img": [
+     "starlink-launch-stack.jpg"
+    ],
+    "pop": [
+     {
+      "say": "eigen spectrum",
+      "show": "EIGEN SPECTRUM"
+     },
+     {
+      "say": "nieuwe vloot",
+      "show": "NIEUWE SATELLIETEN"
+     }
+    ]
+   },
+   {
+    "key": "2 GHz-band",
+    "text": "Eén: de 2 gigahertz-band. SpaceX kocht die in 2025 van EchoStar, voor ongeveer 17 miljard dollar. Musk zei in juni 2026 dat telefoons die deze band kunnen gebruiken over zo'n 2 jaar op de markt moeten komen. SpaceX wil met telefoonmakers samenwerken, zodat hun toestellen de nieuwe frequenties ondersteunen.",
+    "img": [
+     "grok-phone-cafe.jpg"
+    ],
+    "pop": [
+     {
+      "say": "EchoStar",
+      "show": "VAN ECHOSTAR"
+     },
+     {
+      "say": "17 miljard dollar",
+      "show": "$17 MILJARD"
+     },
+     {
+      "say": "2 jaar",
+      "show": "TELEFOONS OVER ~2 JAAR"
+     },
+     {
+      "say": "telefoonmakers",
+      "show": "MET TELEFOONMAKERS"
+     }
+    ]
+   },
+   {
+    "key": "800 MHz-band",
+    "text": "Twee: de 800 megahertz-band. Een landelijke licentie voor lage frequenties, die SpaceX in oktober 2026 kocht. Lage frequenties reiken verder en komen beter door muren, handig binnenshuis. De deal moet nog worden goedgekeurd door de FCC, de Amerikaanse toezichthouder.",
+    "img": [
+     "cell-tower.jpg"
+    ],
+    "pop": [
+     {
+      "say": "landelijke licentie",
+      "show": "LANDELIJK"
+     },
+     {
+      "say": "door muren",
+      "show": "DOOR MUREN"
+     },
+     {
+      "say": "binnenshuis",
+      "show": "BETER BINNEN"
+     },
+     {
+      "say": "FCC",
+      "show": "FCC MOET JA ZEGGEN"
+     }
+    ]
+   },
+   {
+    "key": "Nieuwe satellieten",
+    "text": "Drie: nieuwe satellieten. De FCC gaf groen licht voor een nieuwe generatie van maximaal 15.000 satellieten, die meer dan 100 keer zoveel bandbreedte moeten bieden als de huidige. De eerste lanceringen worden rond eind 2027 verwacht.",
+    "img": [
+     "starlink-launch-stack.jpg"
+    ],
+    "pop": [
+     {
+      "say": "15.000 satellieten",
+      "show": "15.000 SATELLIETEN"
+     },
+     {
+      "say": "100 keer",
+      "show": "100X BANDBREEDTE"
+     },
+     {
+      "say": "eind 2027",
+      "show": "VANAF EIND 2027"
+     }
+    ]
+   },
+   {
+    "text": "Zie je wat er in dat lijstje ontbreekt? Een telefoon van SpaceX of Tesla. Het plan is om Starlink in te bouwen in de telefoons die mensen nu al kopen van de grote merken. Dan blijft de vraag over waar Tesla in dit verhaal past.",
+    "img": [
+     "lib/tesla-app-phone.jpg",
+     "app-faceid.jpg"
+    ],
+    "pop": [
+     {
+      "say": "ontbreekt",
+      "show": "WAT ONTBREEKT?"
+     },
+     {
+      "say": "SpaceX of Tesla",
+      "show": "GEEN TESLA-TOESTEL"
+     },
+     {
+      "say": "nu al kopen",
+      "show": "JOUW TELEFOON"
+     },
+     {
+      "say": "waar Tesla",
+      "show": "EN TESLA?"
+     }
+    ]
+   },
+   {
+    "head": "Wat betekent dit allemaal voor je Tesla?",
+    "img": [
+     "lib/tesla-app-phone.jpg"
+    ],
+    "pop": [
+     {
+      "say": "",
+      "show": "EN JE TESLA?"
+     }
+    ]
+   },
+   {
+    "text": "Je telefoon ís al de Tesla-telefoon, en de auto krijgt Starlink misschien eerder. De Tesla-app maakt van elke smartphone een sleutel. Je opent de auto, verwarmt of koelt het interieur, en ziet hoe het laden gaat. Grok, de assistent van xAI, draait in de auto en als app op je telefoon.",
+    "img": [
+     "lib/tesla-app-phone.jpg",
+     "app-faceid.jpg",
+     "lib/grok-screen-closeup.jpg"
+    ],
+    "pop": [
+     {
+      "say": "al de Tesla-telefoon",
+      "show": "JOUW TELEFOON IS HET"
+     },
+     {
+      "say": "misschien eerder",
+      "show": "AUTO EERST?"
+     },
+     {
+      "say": "een sleutel",
+      "show": "TELEFOON = SLEUTEL"
+     },
+     {
+      "say": "opent de auto",
+      "show": "OPENEN"
+     },
+     {
+      "say": "koelt het interieur",
+      "show": "KLIMAAT"
+     },
+     {
+      "say": "Grok",
+      "show": "GROK-APP"
+     }
+    ]
+   },
+   {
+    "text": "Bij de auto zelf ligt het anders. Tesla's maken nu verbinding via gewone mobiele netwerken, in de VS via AT&T, en nieuwere auto's hebben 5G-hardware. In augustus 2026 liet Tesla een Cybercab zien met een Starlink-antenne ingebouwd in de achterkant van de carrosserie. Musk schreef dat alle auto's in de toekomst Starlink krijgen, omdat dat de enige manier is om miljarden voertuigen supersnel internet te geven.",
+    "img": [
+     "lib/cybercab-street-day.jpg",
+     "lib/cybercab-silhouette-door.jpg",
+     "starlink-car-1.jpg"
+    ],
+    "pop": [
+     {
+      "say": "auto zelf",
+      "show": "DE AUTO ZELF"
+     },
+     {
+      "say": "mobiele netwerken",
+      "show": "MOBIEL NETWERK"
+     },
+     {
+      "say": "5G-hardware",
+      "show": "5G AAN BOORD"
+     },
+     {
+      "say": "Cybercab",
+      "show": "CYBERCAB"
+     },
+     {
+      "say": "Starlink-antenne",
+      "show": "STARLINK INGEBOUWD"
+     },
+     {
+      "say": "alle auto's",
+      "show": "ALLE AUTO'S?"
+     },
+     {
+      "say": "miljarden voertuigen",
+      "show": "MILJARDEN AUTO'S"
+     }
+    ]
+   },
+   {
+    "text": "Dat is een uitspraak, geen productplan. De Cybercab heeft nog gewoon een 5G-modem, en Tesla heeft niet gezegd wanneer, of zelfs óf, de gewone modellen Starlink krijgen. Voor een auto die zelf rijdt, is een verbinding die ook werkt in de woestijn, op een Alpenpas, of na een storm die de masten heeft platgelegd, wel veel waard. Tot die tijd blijft elke nieuwe virale video echte ontwikkelingen en pure fantasie door elkaar husselen.",
+    "img": [
+     "starlink-car-2.jpg",
+     "starlink-car-3.jpg",
+     "lib/starlink-dish-car.jpg"
+    ],
+    "pop": [
+     {
+      "say": "uitspraak",
+      "show": "EEN UITSPRAAK"
+     },
+     {
+      "say": "geen productplan",
+      "show": "GEEN PLAN"
+     },
+     {
+      "say": "5G-modem",
+      "show": "NOG STEEDS 5G"
+     },
+     {
+      "say": "of zelfs óf",
+      "show": "WANNEER? ÓF?"
+     },
+     {
+      "say": "woestijn",
+      "show": "WOESTIJN"
+     },
+     {
+      "say": "Alpenpas",
+      "show": "ALPENPAS"
+     },
+     {
+      "say": "na een storm",
+      "show": "NA EEN STORM"
+     },
+     {
+      "say": "pure fantasie",
+      "show": "ECHT OF FANTASIE"
+     }
+    ]
+   },
+   {
+    "head": "Dus hoe herken je een nepverhaal over de Tesla-telefoon?",
+    "img": [
+     "lib/musk-phone-feed.jpg"
+    ],
+    "pop": [
+     {
+      "say": "",
+      "show": "HERKEN DE NEP"
+     }
+    ]
+   },
+   {
+    "text": "Kijk naar de bron, de beloftes en de natuurkunde. Echte Tesla-producten verschijnen op de website van Tesla, in Tesla's eigen berichten op X, of in de kwartaalcijfers. Niet als eerste op een memepagina. Met een paar snelle checks ontmasker je bijna elke nepversie.",
+    "img": [
+     "musk-3.jpg",
+     "earnings-2.jpg"
+    ],
+    "pop": [
+     {
+      "say": "de bron",
+      "show": "DE BRON"
+     },
+     {
+      "say": "de beloftes",
+      "show": "DE BELOFTES"
+     },
+     {
+      "say": "de natuurkunde",
+      "show": "DE NATUURKUNDE"
+     },
+     {
+      "say": "website van Tesla",
+      "show": "TESLA.COM"
+     },
+     {
+      "say": "memepagina",
+      "show": "GEEN MEMEPAGINA"
+     },
+     {
+      "say": "snelle checks",
+      "show": "SNELLE CHECKS"
+     }
+    ]
+   },
+   {
+    "key": "Geen officiële bron",
+    "text": "Eén: geen officiële bron. Linkt een verhaal alleen naar andere video's, of naar sites vol advertenties, dan is er niets aangekondigd.",
+    "img": [
+     "lib/musk-phone-feed.jpg"
+    ],
+    "pop": [
+     {
+      "say": "alleen naar andere video's",
+      "show": "ALLEEN LINKS"
+     },
+     {
+      "say": "advertenties",
+      "show": "VOL ADVERTENTIES"
+     },
+     {
+      "say": "niets aangekondigd",
+      "show": "NIETS AANGEKONDIGD"
+     }
+    ]
+   },
+   {
+    "key": "Exacte prijs en datum",
+    "text": "Twee: een exacte prijs en lanceerdatum. Nepberichten houden van een precieze prijs, en een lancering volgende maand. Tesla heeft geen van beide ooit genoemd.",
+    "img": [
+     "grok-phone-cafe.jpg"
+    ],
+    "pop": [
+     {
+      "say": "precieze prijs",
+      "show": "PRECIEZE PRIJS"
+     },
+     {
+      "say": "volgende maand",
+      "show": "VOLGENDE MAAND?"
+     },
+     {
+      "say": "geen van beide",
+      "show": "NOOIT GENOEMD"
+     }
+    ]
+   },
+   {
+    "key": "Onmogelijke specificaties",
+    "text": "Drie: onmogelijke specificaties. Een zonnepaneeltje zo groot als de achterkant van een telefoon heeft vele uren volle zon nodig om een accu te vullen, en in je broekzak krijgt het niets. En vanaf Mars bel je met geen enkele telefoon naar de aarde.",
+    "img": [
+     "starlink-phone-mountain.jpg"
+    ],
+    "pop": [
+     {
+      "say": "vele uren volle zon",
+      "show": "UREN ZON NODIG"
+     },
+     {
+      "say": "broekzak",
+      "show": "BROEKZAK: NUL"
+     },
+     {
+      "say": "vanaf Mars",
+      "show": "GEEN MARS-GESPREK"
+     }
+    ]
+   },
+   {
+    "text": "De waarheid is minder flitsend, maar wel interessanter. Er is geen Tesla-telefoon, en volgens Musk bouwt SpaceX er ook geen. Wat wel gebouwd wordt, is een netwerk in de ruimte dat elke gewone telefoon, en misschien elke Tesla, bijna overal op aarde bereikbaar kan maken. Als dat lukt, heeft de telefoon in je zak geen Tesla-logo nodig om waar te maken wat de Model Pi-filmpjes beloofden.",
+    "img": [
+     "gen/tesla-phone-model-pi-rumor-starlink-facts-explained.jpg",
+     "starlink-1.jpg",
+     "lib/starlink-satellites.jpg"
+    ],
+    "pop": [
+     {
+      "say": "minder flitsend",
+      "show": "MINDER FLITSEND"
+     },
+     {
+      "say": "geen Tesla-telefoon",
+      "show": "GEEN TESLA-TELEFOON"
+     },
+     {
+      "say": "bouwt SpaceX er ook geen",
+      "show": "OOK NIET VAN SPACEX"
+     },
+     {
+      "say": "netwerk in de ruimte",
+      "show": "NETWERK IN DE RUIMTE"
+     },
+     {
+      "say": "elke gewone telefoon",
+      "show": "ELKE TELEFOON"
+     },
+     {
+      "say": "misschien elke Tesla",
+      "show": "MISSCHIEN ELKE TESLA"
+     },
+     {
+      "say": "overal op aarde",
+      "show": "OVERAL OP AARDE"
+     },
+     {
+      "say": "Tesla-logo",
+      "show": "GEEN LOGO NODIG"
+     }
+    ]
+   }
+  ],
+  "yt_title_en": "Is There a Tesla Phone? The Model Pi Rumor vs Starlink Facts",
+  "yt_title_nl": "Komt Er een Tesla-Telefoon? Model Pi-Gerucht vs Starlink-Feiten"
+ },
+ "en": {
+  "title": "Is There a Tesla Phone? The Model Pi Rumor vs What Musk and Starlink Are Really Building",
+  "description": "Viral videos promise a solar-charged Tesla Model Pi with Starlink built in. Here is what Tesla and Musk have actually said, how Starlink is coming to ordinary phones instead, and how to spot a fake.",
+  "body": "<p>Videos of the \"Tesla Model Pi\" have been watched by millions: a sleek phone that charges itself in the sun, connects straight to Starlink satellites, works on Mars and even talks to a Neuralink brain chip. Some clips claim Elon Musk has officially announced it. At the same time, SpaceX really is spending billions on mobile airwaves: about 17 billion dollars for EchoStar's spectrum in 2025, and in October 2026 a deal for another nationwide band, reportedly worth about 8 billion. Musk called that one the final piece needed for complete phone coverage in America, and the Tesla phone was suddenly a hot topic again. The problem is that the real plans and the fan fiction have become almost impossible to tell apart.</p>\n<h2>Where did the Tesla phone story come from?</h2>\n<p><strong>From concept art and wishful thinking, not from Tesla.</strong> The name \"Model Pi\" fits neatly next to Model S, 3, X and Y, and designers such as Antonio De Rosa made polished renders of what a Tesla phone could look like. They were never based on real plans, yet they keep being recycled as \"breaking news\". A TikTok video in late 2025, for example, claimed to confirm the phone. It was a hoax, like the posts before it.</p>\n<p>The feature lists keep growing: solar charging, free satellite internet, a connection on Mars, control by thought. None of it comes from Tesla. Tesla has never shown a phone, and its Master Plan Part IV is about robots, autonomy and energy, with no smartphone in it. Still, the rumour refuses to die, partly because Musk himself has talked about phones more than once.</p>\n<h2>What has Musk actually said about making a phone?</h2>\n<p><strong>That he would rather not, unless he has to.</strong> His comments follow a clear pattern:</p>\n<ul>\n<li><strong>November 2022:</strong> when people worried that Apple and Google might remove Twitter from their app stores, Musk said he hoped it would not come to that, but that he would make an alternative phone \"if there is no other choice\".</li>\n<li><strong>January 2026:</strong> asked about a Starlink phone, he wrote that it was not ruled out at some point, and that it would be a very different device from today's phones, built to run AI neural networks efficiently.</li>\n<li><strong>February 2026:</strong> after Reuters reported that SpaceX executives were discussing a device that connects directly to Starlink, Musk disputed the report and wrote: \"We are not developing a phone.\"</li>\n</ul>\n<p>So the only official word is a denial, with the door left slightly open. And yet SpaceX is spending billions on exactly what a phone of the future needs most: a way to reach it from space.</p>\n<h2>So how could Starlink reach your phone without a Tesla phone?</h2>\n<p><strong>By putting the cell tower in orbit.</strong> SpaceX's Starlink Mobile, the service formerly called Direct to Cell, already does this with ordinary phones. About 650 Starlink satellites carry a special radio that works like a mobile mast seen from space. In the US it runs on T-Mobile's airwaves, so a normal recent smartphone can send texts and use light apps where there is no regular signal. The catch is capacity: the current service uses only about 5 MHz of spectrum. That is enough for messages, but far too little for video.</p>\n<p>That is why SpaceX is building up its own spectrum and satellites:</p>\n<ul>\n<li><strong>2 GHz band:</strong> bought from EchoStar in a 2025 deal of about 17 billion dollars. In June 2026 Musk said phones able to use it should start shipping in around two years; SpaceX plans to work with handset makers so their phones support the new frequencies.</li>\n<li><strong>800 MHz band:</strong> a nationwide low-band licence SpaceX agreed to buy in October 2026. Low frequencies travel further and get through walls better, which helps indoors. The deal still needs approval from the FCC, the US regulator.</li>\n<li><strong>New satellites:</strong> the FCC has approved a next-generation constellation of up to 15,000 satellites, planned to offer more than 100 times the bandwidth of today's direct-to-cell satellites. The first are expected to start launching around the end of 2027.</li>\n</ul>\n<p>Notice what is missing from that list: a SpaceX or Tesla handset. The plan is to put Starlink inside the phones people already buy from the big brands. That leaves the question of where Tesla fits in.</p>\n<h2>What does all this mean for your Tesla?</h2>\n<p><strong>Your phone already is the Tesla phone, and the car may get Starlink first.</strong> The Tesla app turns any smartphone into a key: it unlocks the car, warms or cools the cabin and shows how charging is going. Grok, the assistant from xAI, runs in the car and as an app on your phone.</p>\n<p>The car itself is a different story. Teslas today connect over ordinary mobile networks (AT&amp;T in the US), and newer cars have 5G hardware. In August 2026 Tesla showed a Cybercab with a Starlink antenna built into the rear of the body, and Musk wrote that all cars will have Starlink in the future, because it is the only way to give billions of vehicles very high bandwidth. That is a statement, not a product plan: the Cybercab still carries a 5G modem, and Tesla has not said when, or whether, its regular models get Starlink. For a car that drives itself, a link that also works in the desert, on a mountain pass or after a storm has knocked out the masts would be worth a lot. Until then, the next viral video will keep mixing these real developments with pure fantasy.</p>\n<h2>How do you spot a fake Tesla phone story?</h2>\n<p><strong>Check the source, the promises and the physics.</strong> Real Tesla products appear on tesla.com, in Tesla's own posts on X or in its quarterly reports, not first on a meme page. A few quick checks catch almost every fake:</p>\n<ul>\n<li><strong>No official source:</strong> if a story only links to other videos or to sites full of ads, there was no announcement.</li>\n<li><strong>An exact price and launch date:</strong> hoaxes love a precise price and a launch \"next month\". Tesla has never announced either.</li>\n<li><strong>Impossible specs:</strong> a solar panel the size of a phone's back would need many hours of direct sun to refill a battery, and in a pocket it gets none. No phone can call Earth from Mars either.</li>\n</ul>\n<p>The truth is less flashy, but more interesting. There is no Tesla phone, and Musk says SpaceX is not building one. What is being built is a network in space that could make every ordinary phone, and maybe every Tesla, reachable almost anywhere on Earth. If that works, the phone in your pocket will not need a Tesla logo to deliver what the Model Pi videos promised.</p>"
+ },
+ "nl": {
+  "title": "Komt er een Tesla-telefoon? Het Model Pi-gerucht naast wat Musk en Starlink echt bouwen",
+  "description": "Virale filmpjes beloven een Tesla Model Pi die oplaadt in de zon en Starlink aan boord heeft. Wat Tesla en Musk echt zeiden, hoe Starlink juist naar gewone telefoons komt, en hoe je nepnieuws herkent.",
+  "body": "<p>Filmpjes over de \"Tesla Model Pi\" zijn door miljoenen mensen bekeken: een strakke telefoon die zichzelf oplaadt in de zon, rechtstreeks verbinding maakt met Starlink-satellieten, werkt op Mars en zelfs praat met een Neuralink-hersenchip. Sommige video's beweren dat Elon Musk hem officieel heeft aangekondigd. Tegelijk geeft SpaceX wel echt miljarden uit aan mobiele frequenties: zo'n 17 miljard dollar voor het spectrum van EchoStar in 2025, en in oktober 2026 een deal voor nog een landelijke band, volgens Reuters goed voor ongeveer 8 miljard. Musk noemde die laatste het ontbrekende stuk voor volledige telefoondekking in Amerika, en ineens was de Tesla-telefoon weer overal. Het probleem is dat echte plannen en fanfantasie bijna niet meer uit elkaar te houden zijn.</p>\n<h2>Waar komt het verhaal over de Tesla-telefoon vandaan?</h2>\n<p><strong>Uit conceptkunst en wensdenken, niet van Tesla.</strong> De naam \"Model Pi\" past mooi naast Model S, 3, X en Y, en ontwerpers zoals Antonio De Rosa maakten gelikte renders van hoe een Tesla-telefoon eruit zou kunnen zien. Ze waren nooit gebaseerd op echte plannen, maar duiken steeds weer op als \"breaking news\". Een TikTok-video eind 2025 beweerde bijvoorbeeld dat de telefoon bevestigd was. Het was nep, net als alle berichten daarvoor.</p>\n<p>De lijst met functies wordt steeds langer: opladen met zonne-energie, gratis satellietinternet, bereik op Mars, bediening met je gedachten. Niets daarvan komt van Tesla. Tesla heeft nooit een telefoon laten zien, en in Master Plan Part IV gaat het over robots, zelfrijden en energie, zonder smartphone. Toch blijft het gerucht hardnekkig, deels omdat Musk zelf meer dan eens over telefoons heeft gepraat.</p>\n<h2>Wat heeft Musk echt gezegd over een eigen telefoon?</h2>\n<p><strong>Dat hij het liever niet doet, tenzij het moet.</strong> Zijn uitspraken volgen een duidelijk patroon:</p>\n<ul>\n<li><strong>November 2022:</strong> toen mensen vreesden dat Apple en Google Twitter uit hun appwinkels zouden halen, zei Musk dat hij hoopte dat het zover niet zou komen, maar dat hij een alternatieve telefoon zou maken als er geen andere keus was.</li>\n<li><strong>Januari 2026:</strong> op de vraag naar een Starlink-telefoon schreef hij dat die op termijn niet uitgesloten was, en dat het een heel ander apparaat zou worden dan de telefoons van nu, gebouwd om AI-netwerken zuinig te draaien.</li>\n<li><strong>Februari 2026:</strong> nadat Reuters meldde dat topmensen van SpaceX praatten over een apparaat dat direct met Starlink verbindt, sprak Musk dat tegen. Zijn woorden: \"We are not developing a phone\", oftewel: we ontwikkelen geen telefoon.</li>\n</ul>\n<p>Het enige officiële woord is dus een ontkenning, met de deur op een kier. En toch steekt SpaceX miljarden in precies wat een telefoon van de toekomst het hardst nodig heeft: een manier om hem vanuit de ruimte te bereiken.</p>\n<h2>Hoe bereikt Starlink je telefoon dan zonder Tesla-telefoon?</h2>\n<p><strong>Door de zendmast in een baan om de aarde te zetten.</strong> Starlink Mobile van SpaceX, de dienst die eerst Direct to Cell heette, doet dat al met gewone telefoons. Zo'n 650 Starlink-satellieten hebben een speciale radio aan boord die werkt als een zendmast in de ruimte. In de VS draait het op de frequenties van T-Mobile, zodat een gewone recente smartphone sms'jes kan sturen en lichte apps kan gebruiken waar geen normaal bereik is. Het nadeel is de capaciteit: de huidige dienst gebruikt maar ongeveer 5 MHz aan spectrum. Genoeg voor berichtjes, veel te weinig voor video.</p>\n<p>Daarom bouwt SpaceX een eigen spectrum en een nieuwe vloot satellieten op:</p>\n<ul>\n<li><strong>De 2 GHz-band:</strong> in 2025 gekocht van EchoStar voor ongeveer 17 miljard dollar. Musk zei in juni 2026 dat telefoons die deze band kunnen gebruiken over zo'n twee jaar op de markt moeten komen; SpaceX wil met telefoonmakers samenwerken zodat hun toestellen de nieuwe frequenties ondersteunen.</li>\n<li><strong>De 800 MHz-band:</strong> een landelijke licentie voor lage frequenties die SpaceX in oktober 2026 kocht. Lage frequenties reiken verder en komen beter door muren, handig binnenshuis. De deal moet nog worden goedgekeurd door de FCC, de Amerikaanse toezichthouder.</li>\n<li><strong>Nieuwe satellieten:</strong> de FCC gaf groen licht voor een nieuwe generatie van maximaal 15.000 satellieten, die meer dan 100 keer zoveel bandbreedte moeten bieden als de huidige direct-to-cell-satellieten. De eerste lanceringen worden rond eind 2027 verwacht.</li>\n</ul>\n<p>Zie je wat er in dat lijstje ontbreekt? Een telefoon van SpaceX of Tesla. Het plan is om Starlink in te bouwen in de telefoons die mensen nu al kopen van de grote merken. Dan blijft de vraag over waar Tesla in dit verhaal past.</p>\n<h2>Wat betekent dit allemaal voor je Tesla?</h2>\n<p><strong>Je telefoon ís al de Tesla-telefoon, en de auto krijgt Starlink misschien eerder.</strong> De Tesla-app maakt van elke smartphone een sleutel: je opent de auto, verwarmt of koelt het interieur en ziet hoe het laden gaat. Grok, de assistent van xAI, draait in de auto en als app op je telefoon.</p>\n<p>Bij de auto zelf ligt het anders. Tesla's maken nu verbinding via gewone mobiele netwerken (in de VS via AT&amp;T), en nieuwere auto's hebben 5G-hardware. In augustus 2026 liet Tesla een Cybercab zien met een Starlink-antenne ingebouwd in de achterkant van de carrosserie, en Musk schreef dat alle auto's in de toekomst Starlink krijgen, omdat dat de enige manier is om miljarden voertuigen supersnel internet te geven. Dat is een uitspraak, geen productplan: de Cybercab heeft nog gewoon een 5G-modem, en Tesla heeft niet gezegd wanneer, of zelfs óf, de gewone modellen Starlink krijgen. Voor een auto die zelf rijdt, is een verbinding die ook werkt in de woestijn, op een Alpenpas of na een storm die de masten heeft platgelegd, wel veel waard. Tot die tijd blijft elke nieuwe virale video echte ontwikkelingen en pure fantasie door elkaar husselen.</p>\n<h2>Dus hoe herken je een nepverhaal over de Tesla-telefoon?</h2>\n<p><strong>Kijk naar de bron, de beloftes en de natuurkunde.</strong> Echte Tesla-producten verschijnen op tesla.com, in Tesla's eigen berichten op X of in de kwartaalcijfers, niet als eerste op een memepagina. Met een paar snelle checks ontmasker je bijna elke nepversie:</p>\n<ul>\n<li><strong>Geen officiële bron:</strong> linkt een verhaal alleen naar andere video's of naar sites vol advertenties, dan is er niets aangekondigd.</li>\n<li><strong>Een exacte prijs en lanceerdatum:</strong> nepberichten houden van een precieze prijs en een lancering \"volgende maand\". Tesla heeft geen van beide ooit genoemd.</li>\n<li><strong>Onmogelijke specificaties:</strong> een zonnepaneeltje zo groot als de achterkant van een telefoon heeft vele uren volle zon nodig om een accu te vullen, en in je broekzak krijgt het niets. En vanaf Mars bel je ook met geen enkele telefoon naar de aarde.</li>\n</ul>\n<p>De waarheid is minder flitsend, maar wel interessanter. Er is geen Tesla-telefoon, en volgens Musk bouwt SpaceX er ook geen. Wat wel gebouwd wordt, is een netwerk in de ruimte dat elke gewone telefoon, en misschien elke Tesla, bijna overal op aarde bereikbaar kan maken. Als dat lukt, heeft de telefoon in je zak geen Tesla-logo nodig om waar te maken wat de Model Pi-filmpjes beloofden.</p>"
+ }
+}

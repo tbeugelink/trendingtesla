@@ -334,5 +334,44 @@
     "license": "CC BY 2.0",
     "credit": "Steve Jurvetson from Menlo Park, USA, CC BY 2.0, Wikimedia Commons",
     "added": "2026-11-03"
+  },
+  "gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute.jpg": {
+    "article": "how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute",
+    "model": "gemini-3.1-flash-image",
+    "made": "2026-11-04",
+    "references": [
+      {
+        "src": "lib/starship-pad.jpg"
+      },
+      {
+        "src": "lib/starship-booster-catch.jpg"
+      }
+    ]
+  },
+  "gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute-x2-11041157.jpg": {
+    "article": "how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute",
+    "model": "gemini-3.1-flash-image",
+    "made": "2026-11-04",
+    "references": [
+      {
+        "src": "lib/starship-pad.jpg"
+      },
+      {
+        "src": "lib/starship-booster-catch.jpg"
+      }
+    ]
+  },
+  "gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute-x3-11041200.jpg": {
+    "article": "how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute",
+    "model": "gemini-3.1-flash-image",
+    "made": "2026-11-04",
+    "references": [
+      {
+        "src": "lib/starship-pad.jpg"
+      },
+      {
+        "src": "lib/starship-booster-catch.jpg"
+      }
+    ]
   }
 }

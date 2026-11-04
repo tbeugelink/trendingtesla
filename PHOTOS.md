@@ -257,3 +257,6 @@ Articles with a "models" key automatically use real-life photos of that model. Y
 - gen/tesla-phone-model-pi-rumor-starlink-facts-explained-x3-11031200.jpg — A phone with a car app used as a key in front of a Model Y in a sunny driveway
 - news/tesla-semi-story-2017-reveal-to-factory-europe-why-nine-years-1.jpg — the Tesla Semi truck (real photo) (Photo: Steve Jurvetson from Menlo Park, USA, CC BY 2.0, Wikimedia Commons)
 - news/tesla-semi-story-2017-reveal-to-factory-europe-why-nine-years-2.jpg — the Tesla Semi truck (real photo) (Photo: Steve Jurvetson from Menlo Park, USA, CC BY 2.0, Wikimedia Commons)
+- gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute.jpg — a Starship upper stage held by the launch tower's chopstick arms at sunrise, Starbase
+- gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute-x2-11041157.jpg — Starship falling belly first like a skydiver, flaps out, after re-entry
+- gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute-x3-11041200.jpg — Starship flipping upright on its engines beside the tower just before the catch

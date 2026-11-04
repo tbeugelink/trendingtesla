@@ -1,2222 +1,2230 @@
 {
- "slug": "how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute",
- "date": "2026-11-04",
- "time": "12:51",
- "category": "spacex",
- "sources": [
-  {
-   "title": "Gizmodo: SpaceX Is Finally Going for the Starship Double Catch",
-   "url": "https://gizmodo.com/spacex-is-finally-going-for-the-starship-double-catch-2000828826"
-  },
-  {
-   "title": "Interesting Engineering: Starship Flight 15, launch date, recovery goals and key tests",
-   "url": "https://interestingengineering.com/space/spacex-starship-flight-15-launch-date-objectives"
-  },
-  {
-   "title": "Everyday Astronaut: Why does Starship belly flop?",
-   "url": "https://rosetta.to/u/everydayastronaut/why-does-starship-belly-flop"
-  },
-  {
-   "title": "Universe Today: How SpaceX is changing Starship to be able to land on the Moon",
-   "url": "https://www.universetoday.com/articles/how-spacex-is-changing-starship-to-be-able-to-land-on-the-moon"
-  }
- ],
- "images": [
-  "lib/starship-pad.jpg",
-  "spacex-7.jpg",
-  "lib/starship-booster-catch.jpg",
-  "lib/starship-launch.jpg",
-  "starship-moon.jpg",
-  "starship-fleet-mars.jpg"
- ],
- "gen_image": {
-  "prompt": "Close, dramatic low-angle shot of a gleaming stainless steel Starship upper stage hanging upright between the two giant catch arms of its launch tower at Starbase, Texas, seconds after being caught, at sunrise; heat-scorched black hexagonal tiles on one side of the ship, its small forward flaps near the nose just above the arms, wisps of vapour drifting off the hull, warm golden light on the steel, deep blue sky with a red-orange glow at the horizon",
-  "subject": "SpaceX Starship upper stage ('Ship'): a plain cylindrical stainless steel spacecraft about 9 m wide with a rounded pointed nose, black hexagonal heat-shield tiles covering ONE side (the belly) from nose to base, two small forward flaps near the nose and two larger aft flaps at the base on the tiled side, six Raptor engines at the base, NO wings, NO landing legs, NO windows; held by the launch tower's two horizontal catch arms ('chopsticks') that stick out from one side of a tall square steel lattice tower, the arms just below the forward flaps; the ship hangs beside the tower, never standing on the ground",
-  "refs": [
-   {
-    "src": "lib/starship-pad.jpg"
-   },
-   {
-    "src": "lib/starship-booster-catch.jpg"
-   }
+  "slug": "how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute",
+  "date": "2026-11-04",
+  "time": "12:51",
+  "category": "spacex",
+  "sources": [
+    {
+      "title": "Gizmodo: SpaceX Is Finally Going for the Starship Double Catch",
+      "url": "https://gizmodo.com/spacex-is-finally-going-for-the-starship-double-catch-2000828826"
+    },
+    {
+      "title": "Interesting Engineering: Starship Flight 15, launch date, recovery goals and key tests",
+      "url": "https://interestingengineering.com/space/spacex-starship-flight-15-launch-date-objectives"
+    },
+    {
+      "title": "Everyday Astronaut: Why does Starship belly flop?",
+      "url": "https://rosetta.to/u/everydayastronaut/why-does-starship-belly-flop"
+    },
+    {
+      "title": "Universe Today: How SpaceX is changing Starship to be able to land on the Moon",
+      "url": "https://www.universetoday.com/articles/how-spacex-is-changing-starship-to-be-able-to-land-on-the-moon"
+    }
   ],
-  "profile": "cinematic",
-  "category": "B",
-  "describe": "a Starship upper stage held by the launch tower's chopstick arms at sunrise, Starbase",
-  "extra": [
-   {
-    "prompt": "A stainless steel Starship upper stage falling horizontally, belly first, through high clouds over the Gulf coast, its black heat-shield side facing down and its four flaps angled like a skydiver's arms and legs, a faint orange glow fading from re-entry, deep blue sky, seen from slightly below and to the side",
-    "describe": "Starship falling belly first like a skydiver, flaps out, after re-entry"
-   },
-   {
-    "prompt": "Starship upper stage swinging from horizontal to vertical just above the coast, three engines lit with bright blue-white flames, beside the tall launch tower with its catch arms open and waiting, early morning haze, seen from a distance",
-    "describe": "Starship flipping upright on its engines beside the tower just before the catch"
-   }
-  ]
- },
- "label": {
-  "style": "c",
+  "images": [
+    "gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute.jpg",
+    "gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute-x3-11041200.jpg",
+    "gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute-x2-11041157.jpg",
+    "lib/starship-pad.jpg",
+    "spacex-7.jpg",
+    "lib/starship-booster-catch.jpg",
+    "lib/starship-launch.jpg",
+    "starship-moon.jpg",
+    "starship-fleet-mars.jpg"
+  ],
+  "gen_image": {
+    "prompt": "Close, dramatic low-angle shot of a gleaming stainless steel Starship upper stage hanging upright between the two giant catch arms of its launch tower at Starbase, Texas, seconds after being caught, at sunrise; heat-scorched black hexagonal tiles on one side of the ship, its small forward flaps near the nose just above the arms, wisps of vapour drifting off the hull, warm golden light on the steel, deep blue sky with a red-orange glow at the horizon",
+    "subject": "SpaceX Starship upper stage ('Ship'): a plain cylindrical stainless steel spacecraft about 9 m wide with a rounded pointed nose, black hexagonal heat-shield tiles covering ONE side (the belly) from nose to base, two small forward flaps near the nose and two larger aft flaps at the base on the tiled side, six Raptor engines at the base, NO wings, NO landing legs, NO windows; held by the launch tower's two horizontal catch arms ('chopsticks') that stick out from one side of a tall square steel lattice tower, the arms just below the forward flaps; the ship hangs beside the tower, never standing on the ground",
+    "refs": [
+      {
+        "src": "lib/starship-pad.jpg"
+      },
+      {
+        "src": "lib/starship-booster-catch.jpg"
+      }
+    ],
+    "profile": "cinematic",
+    "category": "B",
+    "describe": "a Starship upper stage held by the launch tower's chopstick arms at sunrise, Starbase",
+    "extra": [
+      {
+        "prompt": "A stainless steel Starship upper stage falling horizontally, belly first, through high clouds over the Gulf coast, its black heat-shield side facing down and its four flaps angled like a skydiver's arms and legs, a faint orange glow fading from re-entry, deep blue sky, seen from slightly below and to the side",
+        "describe": "Starship falling belly first like a skydiver, flaps out, after re-entry",
+        "file": "gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute-x2-11041157.jpg"
+      },
+      {
+        "prompt": "Starship upper stage swinging from horizontal to vertical just above the coast, three engines lit with bright blue-white flames, beside the tall launch tower with its catch arms open and waiting, early morning haze, seen from a distance",
+        "describe": "Starship flipping upright on its engines beside the tower just before the catch",
+        "file": "gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute-x3-11041200.jpg"
+      }
+    ],
+    "done": true,
+    "model": "gemini-3.1-flash-image"
+  },
+  "label": {
+    "style": "c",
+    "en": {
+      "sub": "NO WINGS, NO LEGS",
+      "text": "HOW DOES IT LAND?"
+    },
+    "nl": {
+      "sub": "GEEN VLEUGELS OF POTEN",
+      "text": "HOE LANDT HIJ DAN?"
+    }
+  },
   "en": {
-   "sub": "NO WINGS, NO LEGS",
-   "text": "HOW DOES IT LAND?"
+    "title": "How SpaceX catches Starship: why the ship has no wings, no legs and no parachutes",
+    "description": "SpaceX wants to catch both Starship stages with its launch tower. How a ship without wings falls belly first, flips upright and lands in the tower's arms, why that is harder than catching the booster, and how it lands on the Moon instead.",
+    "body": "<p>On Starship Flight 15, planned for November 2026, SpaceX wants to do something no rocket has ever done: bring both stages back to the launch site and catch them with the tower. The Super Heavy booster has already been caught three times. The upper stage, simply called Ship, never has. On SpaceX's third-quarter earnings call on October 20, Elon Musk said a success would be the first time an orbital launch vehicle is fully recovered, and he called it \"more likely than not\". Booster 22 and Ship 42 have both finished their engine tests. Yet the ship that is supposed to come home from orbit has no wings, no landing legs and no parachutes. It looks like a spacecraft that is missing every part you normally need to land.</p>\n<h2>Why does Starship have no wings like the Space Shuttle?</h2>\n<p><strong>Because wings are heavy, and Starship is built for places without runways.</strong> The Space Shuttle came home as a giant glider: it used its wings to fly through the atmosphere and rolled to a stop on wheels on a long runway. That worked, but the wings and the landing gear had to be carried all the way to orbit and back, and they only help where there is thick air and a strip of concrete. Starship is meant to land on Earth, the Moon and Mars. The Moon has no air at all, and Mars has very thin air and no runways. A ship that depends on wings would be stuck at home.</p>\n<p>Parachutes are no answer either. For a vehicle of this size they would have to be enormous, they open too slowly to help if an engine fails late, and they add a lot of mass. So SpaceX left out wings, wheels and parachutes. That leaves a steel ship falling out of the sky with nothing obvious to slow it down.</p>\n<h2>So how does a ship without wings slow down?</h2>\n<p><strong>It falls belly first, like a skydiver, and uses its whole body as an air brake.</strong> After re-entry, Starship drops through the atmosphere lying flat, with its side of black hexagonal heat shield tiles facing down. Four flaps, two near the nose and two at the base, work like a skydiver's arms and legs: they steer the ship and keep it stable.</p>\n<p>Lying flat makes a huge difference. An analysis by Everyday Astronaut puts the side of the ship at about 545 square metres facing the air, against roughly 70 for its base: almost eight times as much area to push against. In the flight plan of the early SN8 prototype, that slowed the ship to about 90 metres per second before its engines lit. A Falcon 9 booster, which falls engine first, is still doing around 310 metres per second when it starts its landing burn. The slower you fall, the less fuel the final braking costs. But falling flat is only half a landing, because the ship has to end up standing upright.</p>\n<h2>How does the tower catch the ship?</h2>\n<p><strong>The ship flips upright at the last moment and drops between the tower's arms.</strong> In the animation SpaceX showed on its earnings webcast, the ship comes in horizontally over Starbase in South Texas and steers with its flaps. Then a short engine burn swings it vertical and slows it down. It descends past the top of the tower, and the two arms, nicknamed the chopsticks, close around it.</p>\n<p>The arms do not squeeze the steel hull. The vehicles carry catch pins that come to rest on rails on the arms, which take the weight and absorb the shock. SpaceX has practised the flip for years: prototypes such as SN8 and SN15 did it after falling from around 10 kilometres up in 2020 and 2021, and on later test flights ships flipped and hovered over the Indian Ocean before tipping into the water. This time, though, the ship comes down next to land, buildings and the hardware SpaceX needs for every future flight.</p>\n<h2>Why is catching the ship harder than catching the booster?</h2>\n<p><strong>Because the ship comes back from orbit, not from the edge of space.</strong> The booster separates a few minutes after liftoff, turns around and is back at the tower within minutes. The ship first has to finish its orbital flight, survive re-entry at orbital speed, and only then line up with a tower in Texas. If anything cuts the mission short, it never comes back over Starbase at all.</p>\n<ul>\n<li><strong>Engines:</strong> the new Raptor 3 engines have had problems on each of their first flights, Gizmodo noted. On Flight 14, on September 28, an engine shut down early, although the ship still reached orbit and released 26 Starlink V3 satellites.</li>\n<li><strong>Heat:</strong> the tiles and flaps must come through the hottest part of the flight in good enough shape to steer precisely.</li>\n<li><strong>Location:</strong> a ship returning from orbit to a catch flies toward land instead of the open sea, so the FAA licence has to allow a return to the launch site and tower catches for both stages, which SpaceX president Gwynne Shotwell said she expects.</li>\n</ul>\n<p>The booster, by the way, does not get in the way: according to Gizmodo, it uses the other tower at Starbase. Catching one of each in a single flight would turn the whole rocket into hardware that can be used again. On the Moon and Mars, though, there is no tower at all.</p>\n<h2>So how will Starship land on the Moon and Mars without a tower?</h2>\n<p><strong>On its own legs.</strong> No tower waits on the Moon, so Starship HLS, the version NASA has hired as the lunar lander for its Artemis astronauts, gets landing legs. As early as 2020, Musk wrote that SpaceX was working on new legs with a wider stance that can level themselves on uneven ground, together with thrusters high on the hull to keep the ship steady during landing. Because that ship does not come back through Earth's atmosphere, it does not need a heat shield or flaps. The first ships on Mars will face the same problem: whatever SpaceX builds there later, the first landings happen on bare ground. The tower catch is an Earth trick, made for one thing: flying again fast.</p>\n<h2>What would a double catch change?</h2>\n<p><strong>It would make Starship the first orbital rocket that comes home in one piece.</strong> Falcon 9 already lands its booster, but its upper stage is thrown away on every flight. A caught ship could be inspected, refuelled and, in theory, flown again. That is the whole idea behind the design: much cheaper launches for Starlink, for NASA's Moon missions and for Musk's Mars plans, where Tesla's Optimus robot is meant to play a role. A possible merger of SpaceX and Tesla is being studied, so Tesla shareholders watch these flights too.</p>\n<p>A first attempt can still go wrong; even Musk only called success more likely than not. But the strange design makes sense once you see the whole plan. Starship has no wings, no legs and no parachutes because the tower is its landing gear.</p>"
   },
   "nl": {
-   "sub": "GEEN VLEUGELS OF POTEN",
-   "text": "HOE LANDT HIJ DAN?"
-  }
- },
- "en": {
-  "title": "How SpaceX catches Starship: why the ship has no wings, no legs and no parachutes",
-  "description": "SpaceX wants to catch both Starship stages with its launch tower. How a ship without wings falls belly first, flips upright and lands in the tower's arms, why that is harder than catching the booster, and how it lands on the Moon instead.",
-  "body": "<p>On Starship Flight 15, planned for November 2026, SpaceX wants to do something no rocket has ever done: bring both stages back to the launch site and catch them with the tower. The Super Heavy booster has already been caught three times. The upper stage, simply called Ship, never has. On SpaceX's third-quarter earnings call on October 20, Elon Musk said a success would be the first time an orbital launch vehicle is fully recovered, and he called it \"more likely than not\". Booster 22 and Ship 42 have both finished their engine tests. Yet the ship that is supposed to come home from orbit has no wings, no landing legs and no parachutes. It looks like a spacecraft that is missing every part you normally need to land.</p>\n<h2>Why does Starship have no wings like the Space Shuttle?</h2>\n<p><strong>Because wings are heavy, and Starship is built for places without runways.</strong> The Space Shuttle came home as a giant glider: it used its wings to fly through the atmosphere and rolled to a stop on wheels on a long runway. That worked, but the wings and the landing gear had to be carried all the way to orbit and back, and they only help where there is thick air and a strip of concrete. Starship is meant to land on Earth, the Moon and Mars. The Moon has no air at all, and Mars has very thin air and no runways. A ship that depends on wings would be stuck at home.</p>\n<p>Parachutes are no answer either. For a vehicle of this size they would have to be enormous, they open too slowly to help if an engine fails late, and they add a lot of mass. So SpaceX left out wings, wheels and parachutes. That leaves a steel ship falling out of the sky with nothing obvious to slow it down.</p>\n<h2>So how does a ship without wings slow down?</h2>\n<p><strong>It falls belly first, like a skydiver, and uses its whole body as an air brake.</strong> After re-entry, Starship drops through the atmosphere lying flat, with its side of black hexagonal heat shield tiles facing down. Four flaps, two near the nose and two at the base, work like a skydiver's arms and legs: they steer the ship and keep it stable.</p>\n<p>Lying flat makes a huge difference. An analysis by Everyday Astronaut puts the side of the ship at about 545 square metres facing the air, against roughly 70 for its base: almost eight times as much area to push against. In the flight plan of the early SN8 prototype, that slowed the ship to about 90 metres per second before its engines lit. A Falcon 9 booster, which falls engine first, is still doing around 310 metres per second when it starts its landing burn. The slower you fall, the less fuel the final braking costs. But falling flat is only half a landing, because the ship has to end up standing upright.</p>\n<h2>How does the tower catch the ship?</h2>\n<p><strong>The ship flips upright at the last moment and drops between the tower's arms.</strong> In the animation SpaceX showed on its earnings webcast, the ship comes in horizontally over Starbase in South Texas and steers with its flaps. Then a short engine burn swings it vertical and slows it down. It descends past the top of the tower, and the two arms, nicknamed the chopsticks, close around it.</p>\n<p>The arms do not squeeze the steel hull. The vehicles carry catch pins that come to rest on rails on the arms, which take the weight and absorb the shock. SpaceX has practised the flip for years: prototypes such as SN8 and SN15 did it after falling from around 10 kilometres up in 2020 and 2021, and on later test flights ships flipped and hovered over the Indian Ocean before tipping into the water. This time, though, the ship comes down next to land, buildings and the hardware SpaceX needs for every future flight.</p>\n<h2>Why is catching the ship harder than catching the booster?</h2>\n<p><strong>Because the ship comes back from orbit, not from the edge of space.</strong> The booster separates a few minutes after liftoff, turns around and is back at the tower within minutes. The ship first has to finish its orbital flight, survive re-entry at orbital speed, and only then line up with a tower in Texas. If anything cuts the mission short, it never comes back over Starbase at all.</p>\n<ul>\n<li><strong>Engines:</strong> the new Raptor 3 engines have had problems on each of their first flights, Gizmodo noted. On Flight 14, on September 28, an engine shut down early, although the ship still reached orbit and released 26 Starlink V3 satellites.</li>\n<li><strong>Heat:</strong> the tiles and flaps must come through the hottest part of the flight in good enough shape to steer precisely.</li>\n<li><strong>Location:</strong> a ship returning from orbit to a catch flies toward land instead of the open sea, so the FAA licence has to allow a return to the launch site and tower catches for both stages, which SpaceX president Gwynne Shotwell said she expects.</li>\n</ul>\n<p>The booster, by the way, does not get in the way: according to Gizmodo, it uses the other tower at Starbase. Catching one of each in a single flight would turn the whole rocket into hardware that can be used again. On the Moon and Mars, though, there is no tower at all.</p>\n<h2>So how will Starship land on the Moon and Mars without a tower?</h2>\n<p><strong>On its own legs.</strong> No tower waits on the Moon, so Starship HLS, the version NASA has hired as the lunar lander for its Artemis astronauts, gets landing legs. As early as 2020, Musk wrote that SpaceX was working on new legs with a wider stance that can level themselves on uneven ground, together with thrusters high on the hull to keep the ship steady during landing. Because that ship does not come back through Earth's atmosphere, it does not need a heat shield or flaps. The first ships on Mars will face the same problem: whatever SpaceX builds there later, the first landings happen on bare ground. The tower catch is an Earth trick, made for one thing: flying again fast.</p>\n<h2>What would a double catch change?</h2>\n<p><strong>It would make Starship the first orbital rocket that comes home in one piece.</strong> Falcon 9 already lands its booster, but its upper stage is thrown away on every flight. A caught ship could be inspected, refuelled and, in theory, flown again. That is the whole idea behind the design: much cheaper launches for Starlink, for NASA's Moon missions and for Musk's Mars plans, where Tesla's Optimus robot is meant to play a role. A possible merger of SpaceX and Tesla is being studied, so Tesla shareholders watch these flights too.</p>\n<p>A first attempt can still go wrong; even Musk only called success more likely than not. But the strange design makes sense once you see the whole plan. Starship has no wings, no legs and no parachutes because the tower is its landing gear.</p>"
- },
- "nl": {
-  "title": "Zo vangt SpaceX Starship: waarom het schip geen vleugels, poten of parachutes heeft",
-  "description": "SpaceX wil beide trappen van Starship opvangen met de lanceertoren. Hoe een schip zonder vleugels op zijn buik valt, rechtop kantelt en in de armen van de toren landt, waarom dat lastiger is dan de booster vangen, en hoe het op de maan landt.",
-  "body": "<p>Bij Starship-vlucht 15, gepland voor november 2026, wil SpaceX iets doen wat nog geen raket ooit deed: beide trappen terugbrengen naar de lanceerplek en ze opvangen met de toren. De Super Heavy-booster is al drie keer gevangen. De bovenste trap, kortweg Ship genoemd, nog nooit. Tijdens de kwartaalcall van SpaceX op 20 oktober zei Elon Musk dat het bij succes de eerste keer is dat een orbitale raket volledig wordt teruggewonnen. Hij noemde de kans \"eerder wel dan niet\". Booster 22 en Ship 42 hebben hun motortests allebei afgerond. Toch heeft het schip dat vanuit een baan om de aarde terug moet komen geen vleugels, geen landingspoten en geen parachutes. Het lijkt een ruimteschip waaraan alles ontbreekt wat je normaal nodig hebt om te landen.</p>\n<h2>Waarom heeft Starship geen vleugels zoals de spaceshuttle?</h2>\n<p><strong>Omdat vleugels zwaar zijn, en Starship gebouwd is voor plekken zonder landingsbaan.</strong> De spaceshuttle kwam terug als een reusachtig zweefvliegtuig: hij gleed op zijn vleugels door de dampkring en rolde op wielen uit over een lange landingsbaan. Dat werkte, maar de vleugels en het landingsgestel moesten helemaal mee naar de ruimte en terug, en ze helpen alleen waar dikke lucht en een strook beton is. Starship moet landen op de aarde, de maan en Mars. De maan heeft helemaal geen lucht, Mars heel dunne lucht en geen landingsbanen. Een schip dat op vleugels vertrouwt, zou thuis moeten blijven.</p>\n<p>Parachutes zijn ook geen oplossing. Voor een voertuig van dit formaat zouden ze gigantisch moeten zijn, ze gaan te langzaam open om te helpen als een motor laat uitvalt, en ze voegen veel gewicht toe. Dus liet SpaceX vleugels, wielen en parachutes weg. Dan blijft er een stalen schip over dat uit de lucht valt zonder iets wat het zichtbaar afremt.</p>\n<h2>Hoe remt een schip zonder vleugels dan af?</h2>\n<p><strong>Het valt plat op zijn buik, zoals een parachutist in vrije val, en gebruikt zijn hele romp als luchtrem.</strong> Na de terugkeer in de dampkring valt Starship liggend naar beneden, met de kant vol zwarte zeshoekige hitteschildtegels naar onder. Vier flappen, twee bij de neus en twee onderaan, werken als de armen en benen van een skydiver: ze sturen het schip en houden het stabiel.</p>\n<p>Plat liggen maakt een enorm verschil. Volgens een analyse van Everyday Astronaut biedt de zijkant van het schip zo'n 545 vierkante meter aan de lucht, tegen ongeveer 70 voor de onderkant: bijna acht keer zoveel oppervlak om tegenaan te duwen. In het vluchtplan van het vroege prototype SN8 remde het schip zo af tot ongeveer 90 meter per seconde voordat de motoren aangingen. Een Falcon 9-booster, die met de motoren vooruit valt, gaat nog zo'n 310 meter per seconde als hij aan zijn landingsbrand begint. Hoe langzamer je valt, hoe minder brandstof het laatste afremmen kost. Maar plat vallen is pas de helft van een landing, want het schip moet uiteindelijk rechtop staan.</p>\n<h2>Hoe vangt de toren het schip?</h2>\n<p><strong>Het schip kantelt op het laatste moment rechtop en zakt tussen de armen van de toren.</strong> In de animatie die SpaceX tijdens de webcast liet zien, komt het schip liggend aan boven Starbase in het zuiden van Texas en stuurt het met zijn flappen. Dan draait een korte motorstoot het verticaal en remt het af. Het zakt langs de top van de toren, en de twee armen, de 'eetstokjes', sluiten zich eromheen.</p>\n<p>De armen knijpen niet in de stalen romp. De raketdelen hebben vangpennen die op rails op de armen komen te rusten; die dragen het gewicht en vangen de klap op. SpaceX oefent de kanteling al jaren: prototypes als SN8 en SN15 deden het in 2020 en 2021 na een val van zo'n 10 kilometer hoogte, en bij latere testvluchten kantelden schepen en zweefden ze even boven de Indische Oceaan voordat ze in het water vielen. Deze keer komt het schip echter neer naast land, gebouwen en de installaties die SpaceX voor elke volgende vlucht nodig heeft.</p>\n<h2>Waarom is het schip vangen moeilijker dan de booster?</h2>\n<p><strong>Omdat het schip terugkomt uit een baan om de aarde, niet van de rand van de ruimte.</strong> De booster koppelt een paar minuten na de start los, keert om en is binnen enkele minuten terug bij de toren. Het schip moet eerst zijn hele vlucht in de ruimte afmaken, de terugkeer op orbitale snelheid overleven en zich pas daarna precies op een toren in Texas richten. Gaat er onderweg iets mis waardoor de missie korter wordt, dan komt het helemaal niet meer boven Starbase uit.</p>\n<ul>\n<li><strong>Motoren:</strong> de nieuwe Raptor 3-motoren hadden volgens Gizmodo bij elk van hun eerste vluchten problemen. Bij vlucht 14, op 28 september, viel een motor te vroeg uit, al bereikte het schip toch een baan om de aarde en zette het 26 Starlink V3-satellieten uit.</li>\n<li><strong>Hitte:</strong> tegels en flappen moeten het heetste deel van de vlucht zo goed doorstaan dat het schip daarna nog precies kan sturen.</li>\n<li><strong>Locatie:</strong> een schip dat uit de ruimte terugkomt voor een vangst, vliegt richting land in plaats van open zee. De vergunning van de Amerikaanse luchtvaartautoriteit FAA moet dus een terugkeer naar de lanceerplek en torenvangsten voor beide trappen toestaan. SpaceX-president Gwynne Shotwell verwacht dat dat gebeurt.</li>\n</ul>\n<p>De booster zit trouwens niet in de weg: volgens Gizmodo gebruikt die de andere toren op Starbase. Eén van elk vangen in één vlucht maakt van de hele raket materiaal dat opnieuw kan vliegen. Op de maan en Mars staat alleen geen toren.</p>\n<h2>Hoe landt Starship dan op de maan en Mars zonder toren?</h2>\n<p><strong>Op eigen poten.</strong> Op de maan wacht geen toren, dus Starship HLS, de versie die NASA heeft ingehuurd als maanlander voor zijn Artemis-astronauten, krijgt landingspoten. Al in 2020 schreef Musk dat SpaceX werkte aan nieuwe poten met een bredere stand die zichzelf waterpas zetten op oneffen grond, plus stuurraketjes hoog op de romp om het schip tijdens de landing stil te houden. Omdat dat schip niet terug door de aardse dampkring hoeft, heeft het geen hitteschild of flappen nodig. De eerste schepen op Mars hebben hetzelfde probleem: wat SpaceX daar later ook bouwt, de eerste landingen gebeuren op kale grond. Het vangen met een toren is een truc voor de aarde, bedoeld voor één ding: snel weer vliegen.</p>\n<h2>Wat zou een dubbele vangst veranderen?</h2>\n<p><strong>Starship zou de eerste orbitale raket worden die in zijn geheel terugkomt.</strong> Falcon 9 laat zijn booster al landen, maar de bovenste trap gaat bij elke vlucht verloren. Een gevangen schip kan worden nagekeken, bijgetankt en in theorie opnieuw vliegen. Dat is het hele idee achter het ontwerp: veel goedkopere lanceringen voor Starlink, voor NASA's maanmissies en voor Musks plannen met Mars, waar Tesla's robot Optimus een rol moet spelen. Er wordt gekeken naar een mogelijke fusie van SpaceX en Tesla, dus ook Tesla-aandeelhouders volgen deze vluchten.</p>\n<p>Een eerste poging kan nog misgaan; zelfs Musk noemde succes alleen 'eerder wel dan niet'. Maar het vreemde ontwerp klopt zodra je het hele plan ziet. Starship heeft geen vleugels, geen poten en geen parachutes, omdat de toren zijn landingsgestel is.</p>"
- },
- "short": {
-  "hook": "question",
-  "en": "Starship's upper stage has no wings, no legs and no parachute. So how does it land? It doesn't. SpaceX wants to CATCH it. The ship falls back from orbit belly first, like a skydiver. Its whole body works as an air brake. Four flaps steer it. Then, just above the ground, it lights its engines and flips upright. And the tower's giant arms have to grab a ship that just survived re-entry. The booster has been caught three times. The ship? Never. On Flight 15, SpaceX wants to catch BOTH. Musk calls it more likely than not. If it works, a whole orbital rocket comes home in one piece. For the full story go to TrendingTesla.com.",
-  "nl": "Het bovenste deel van Starship heeft geen vleugels, geen poten en geen parachute. Hoe landt het dan? Niet. SpaceX wil het VANGEN. Het schip valt vanuit de ruimte terug op zijn buik, als een parachutist in vrije val. Zijn hele romp werkt als luchtrem. Vier flappen sturen. Dan, vlak boven de grond, gaan de motoren aan en kantelt het rechtop. En de reuzenarmen van de toren moeten een schip grijpen dat net de terugkeer in de dampkring heeft overleefd. De booster is al drie keer gevangen. Het schip? Nog nooit. Bij vlucht vijftien wil SpaceX ze ALLEBEI vangen. Musk noemt de kans eerder wel dan niet. Als het lukt, komt een complete orbitale raket heel terug. Voor het hele verhaal ga je naar TrendingTesla.com.",
-  "yt_title_en": "No Wings, No Legs: How Starship Lands",
-  "yt_title_nl": "Geen Vleugels, Geen Poten: Zo Landt Starship",
-  "story": [
-   {
-    "part": "hook",
-    "text": "Starship's upper stage has no wings, no legs and no parachute.",
-    "lib": [
-     "starship-pad.jpg"
-    ],
-    "pop": [
-     {
-      "say": "no wings",
-      "show": "NO WINGS"
-     },
-     {
-      "say": "no legs",
-      "show": "NO LEGS"
-     },
-     {
-      "say": "no parachute",
-      "show": "NO PARACHUTE"
-     }
+    "title": "Zo vangt SpaceX Starship: waarom het schip geen vleugels, poten of parachutes heeft",
+    "description": "SpaceX wil beide trappen van Starship opvangen met de lanceertoren. Hoe een schip zonder vleugels op zijn buik valt, rechtop kantelt en in de armen van de toren landt, waarom dat lastiger is dan de booster vangen, en hoe het op de maan landt.",
+    "body": "<p>Bij Starship-vlucht 15, gepland voor november 2026, wil SpaceX iets doen wat nog geen raket ooit deed: beide trappen terugbrengen naar de lanceerplek en ze opvangen met de toren. De Super Heavy-booster is al drie keer gevangen. De bovenste trap, kortweg Ship genoemd, nog nooit. Tijdens de kwartaalcall van SpaceX op 20 oktober zei Elon Musk dat het bij succes de eerste keer is dat een orbitale raket volledig wordt teruggewonnen. Hij noemde de kans \"eerder wel dan niet\". Booster 22 en Ship 42 hebben hun motortests allebei afgerond. Toch heeft het schip dat vanuit een baan om de aarde terug moet komen geen vleugels, geen landingspoten en geen parachutes. Het lijkt een ruimteschip waaraan alles ontbreekt wat je normaal nodig hebt om te landen.</p>\n<h2>Waarom heeft Starship geen vleugels zoals de spaceshuttle?</h2>\n<p><strong>Omdat vleugels zwaar zijn, en Starship gebouwd is voor plekken zonder landingsbaan.</strong> De spaceshuttle kwam terug als een reusachtig zweefvliegtuig: hij gleed op zijn vleugels door de dampkring en rolde op wielen uit over een lange landingsbaan. Dat werkte, maar de vleugels en het landingsgestel moesten helemaal mee naar de ruimte en terug, en ze helpen alleen waar dikke lucht en een strook beton is. Starship moet landen op de aarde, de maan en Mars. De maan heeft helemaal geen lucht, Mars heel dunne lucht en geen landingsbanen. Een schip dat op vleugels vertrouwt, zou thuis moeten blijven.</p>\n<p>Parachutes zijn ook geen oplossing. Voor een voertuig van dit formaat zouden ze gigantisch moeten zijn, ze gaan te langzaam open om te helpen als een motor laat uitvalt, en ze voegen veel gewicht toe. Dus liet SpaceX vleugels, wielen en parachutes weg. Dan blijft er een stalen schip over dat uit de lucht valt zonder iets wat het zichtbaar afremt.</p>\n<h2>Hoe remt een schip zonder vleugels dan af?</h2>\n<p><strong>Het valt plat op zijn buik, zoals een parachutist in vrije val, en gebruikt zijn hele romp als luchtrem.</strong> Na de terugkeer in de dampkring valt Starship liggend naar beneden, met de kant vol zwarte zeshoekige hitteschildtegels naar onder. Vier flappen, twee bij de neus en twee onderaan, werken als de armen en benen van een skydiver: ze sturen het schip en houden het stabiel.</p>\n<p>Plat liggen maakt een enorm verschil. Volgens een analyse van Everyday Astronaut biedt de zijkant van het schip zo'n 545 vierkante meter aan de lucht, tegen ongeveer 70 voor de onderkant: bijna acht keer zoveel oppervlak om tegenaan te duwen. In het vluchtplan van het vroege prototype SN8 remde het schip zo af tot ongeveer 90 meter per seconde voordat de motoren aangingen. Een Falcon 9-booster, die met de motoren vooruit valt, gaat nog zo'n 310 meter per seconde als hij aan zijn landingsbrand begint. Hoe langzamer je valt, hoe minder brandstof het laatste afremmen kost. Maar plat vallen is pas de helft van een landing, want het schip moet uiteindelijk rechtop staan.</p>\n<h2>Hoe vangt de toren het schip?</h2>\n<p><strong>Het schip kantelt op het laatste moment rechtop en zakt tussen de armen van de toren.</strong> In de animatie die SpaceX tijdens de webcast liet zien, komt het schip liggend aan boven Starbase in het zuiden van Texas en stuurt het met zijn flappen. Dan draait een korte motorstoot het verticaal en remt het af. Het zakt langs de top van de toren, en de twee armen, de 'eetstokjes', sluiten zich eromheen.</p>\n<p>De armen knijpen niet in de stalen romp. De raketdelen hebben vangpennen die op rails op de armen komen te rusten; die dragen het gewicht en vangen de klap op. SpaceX oefent de kanteling al jaren: prototypes als SN8 en SN15 deden het in 2020 en 2021 na een val van zo'n 10 kilometer hoogte, en bij latere testvluchten kantelden schepen en zweefden ze even boven de Indische Oceaan voordat ze in het water vielen. Deze keer komt het schip echter neer naast land, gebouwen en de installaties die SpaceX voor elke volgende vlucht nodig heeft.</p>\n<h2>Waarom is het schip vangen moeilijker dan de booster?</h2>\n<p><strong>Omdat het schip terugkomt uit een baan om de aarde, niet van de rand van de ruimte.</strong> De booster koppelt een paar minuten na de start los, keert om en is binnen enkele minuten terug bij de toren. Het schip moet eerst zijn hele vlucht in de ruimte afmaken, de terugkeer op orbitale snelheid overleven en zich pas daarna precies op een toren in Texas richten. Gaat er onderweg iets mis waardoor de missie korter wordt, dan komt het helemaal niet meer boven Starbase uit.</p>\n<ul>\n<li><strong>Motoren:</strong> de nieuwe Raptor 3-motoren hadden volgens Gizmodo bij elk van hun eerste vluchten problemen. Bij vlucht 14, op 28 september, viel een motor te vroeg uit, al bereikte het schip toch een baan om de aarde en zette het 26 Starlink V3-satellieten uit.</li>\n<li><strong>Hitte:</strong> tegels en flappen moeten het heetste deel van de vlucht zo goed doorstaan dat het schip daarna nog precies kan sturen.</li>\n<li><strong>Locatie:</strong> een schip dat uit de ruimte terugkomt voor een vangst, vliegt richting land in plaats van open zee. De vergunning van de Amerikaanse luchtvaartautoriteit FAA moet dus een terugkeer naar de lanceerplek en torenvangsten voor beide trappen toestaan. SpaceX-president Gwynne Shotwell verwacht dat dat gebeurt.</li>\n</ul>\n<p>De booster zit trouwens niet in de weg: volgens Gizmodo gebruikt die de andere toren op Starbase. Eén van elk vangen in één vlucht maakt van de hele raket materiaal dat opnieuw kan vliegen. Op de maan en Mars staat alleen geen toren.</p>\n<h2>Hoe landt Starship dan op de maan en Mars zonder toren?</h2>\n<p><strong>Op eigen poten.</strong> Op de maan wacht geen toren, dus Starship HLS, de versie die NASA heeft ingehuurd als maanlander voor zijn Artemis-astronauten, krijgt landingspoten. Al in 2020 schreef Musk dat SpaceX werkte aan nieuwe poten met een bredere stand die zichzelf waterpas zetten op oneffen grond, plus stuurraketjes hoog op de romp om het schip tijdens de landing stil te houden. Omdat dat schip niet terug door de aardse dampkring hoeft, heeft het geen hitteschild of flappen nodig. De eerste schepen op Mars hebben hetzelfde probleem: wat SpaceX daar later ook bouwt, de eerste landingen gebeuren op kale grond. Het vangen met een toren is een truc voor de aarde, bedoeld voor één ding: snel weer vliegen.</p>\n<h2>Wat zou een dubbele vangst veranderen?</h2>\n<p><strong>Starship zou de eerste orbitale raket worden die in zijn geheel terugkomt.</strong> Falcon 9 laat zijn booster al landen, maar de bovenste trap gaat bij elke vlucht verloren. Een gevangen schip kan worden nagekeken, bijgetankt en in theorie opnieuw vliegen. Dat is het hele idee achter het ontwerp: veel goedkopere lanceringen voor Starlink, voor NASA's maanmissies en voor Musks plannen met Mars, waar Tesla's robot Optimus een rol moet spelen. Er wordt gekeken naar een mogelijke fusie van SpaceX en Tesla, dus ook Tesla-aandeelhouders volgen deze vluchten.</p>\n<p>Een eerste poging kan nog misgaan; zelfs Musk noemde succes alleen 'eerder wel dan niet'. Maar het vreemde ontwerp klopt zodra je het hele plan ziet. Starship heeft geen vleugels, geen poten en geen parachutes, omdat de toren zijn landingsgestel is.</p>"
+  },
+  "short": {
+    "hook": "question",
+    "en": "Starship's upper stage has no wings, no legs and no parachute. So how does it land? It doesn't. SpaceX wants to CATCH it. The ship falls back from orbit belly first, like a skydiver. Its whole body works as an air brake. Four flaps steer it. Then, just above the ground, it lights its engines and flips upright. And the tower's giant arms have to grab a ship that just survived re-entry. The booster has been caught three times. The ship? Never. On Flight 15, SpaceX wants to catch BOTH. Musk calls it more likely than not. If it works, a whole orbital rocket comes home in one piece. For the full story go to TrendingTesla.com.",
+    "nl": "Het bovenste deel van Starship heeft geen vleugels, geen poten en geen parachute. Hoe landt het dan? Niet. SpaceX wil het VANGEN. Het schip valt vanuit de ruimte terug op zijn buik, als een parachutist in vrije val. Zijn hele romp werkt als luchtrem. Vier flappen sturen. Dan, vlak boven de grond, gaan de motoren aan en kantelt het rechtop. En de reuzenarmen van de toren moeten een schip grijpen dat net de terugkeer in de dampkring heeft overleefd. De booster is al drie keer gevangen. Het schip? Nog nooit. Bij vlucht vijftien wil SpaceX ze ALLEBEI vangen. Musk noemt de kans eerder wel dan niet. Als het lukt, komt een complete orbitale raket heel terug. Voor het hele verhaal ga je naar TrendingTesla.com.",
+    "yt_title_en": "No Wings, No Legs: How Starship Lands",
+    "yt_title_nl": "Geen Vleugels, Geen Poten: Zo Landt Starship",
+    "story": [
+      {
+        "part": "hook",
+        "text": "Starship's upper stage has no wings, no legs and no parachute.",
+        "lib": [
+          "starship-pad.jpg"
+        ],
+        "pop": [
+          {
+            "say": "no wings",
+            "show": "NO WINGS"
+          },
+          {
+            "say": "no legs",
+            "show": "NO LEGS"
+          },
+          {
+            "say": "no parachute",
+            "show": "NO PARACHUTE"
+          }
+        ]
+      },
+      {
+        "part": "hook",
+        "text": "So how does it land? It doesn't. SpaceX wants to CATCH it.",
+        "img": "spacex-7.jpg",
+        "pop": [
+          {
+            "say": "how does it land",
+            "show": "HOW DOES IT LAND?"
+          },
+          {
+            "say": "It doesn't",
+            "show": "IT DOESN'T"
+          },
+          {
+            "say": "CATCH it",
+            "show": "CATCH IT!"
+          }
+        ]
+      },
+      {
+        "part": "tension",
+        "text": "The ship falls back from orbit belly first, like a skydiver.",
+        "scene": "a stainless steel Starship upper stage falling horizontally, belly first, through high clouds, its black heat-shield side facing down, four flaps spread like a skydiver's arms and legs, faint orange glow fading from re-entry, deep blue sky",
+        "pop": [
+          {
+            "say": "falls back from orbit",
+            "show": "FALLING FROM ORBIT"
+          },
+          {
+            "say": "belly first",
+            "show": "BELLY FIRST"
+          },
+          {
+            "say": "like a skydiver",
+            "show": "LIKE A SKYDIVER"
+          }
+        ]
+      },
+      {
+        "part": "tension",
+        "text": "Its whole body works as an air brake. Four flaps steer it.",
+        "img": "starship-moon.jpg",
+        "pop": [
+          {
+            "say": "whole body",
+            "show": "WHOLE BODY"
+          },
+          {
+            "say": "air brake",
+            "show": "AIR BRAKE"
+          },
+          {
+            "say": "Four flaps",
+            "show": "4 FLAPS"
+          }
+        ]
+      },
+      {
+        "part": "tension",
+        "text": "Then, just above the ground, it lights its engines and flips upright.",
+        "lib": [
+          "starship-launch.jpg"
+        ],
+        "pop": [
+          {
+            "say": "just above the ground",
+            "show": "JUST ABOVE GROUND"
+          },
+          {
+            "say": "lights its engines",
+            "show": "ENGINES ON"
+          },
+          {
+            "say": "flips upright",
+            "show": "FLIP!"
+          }
+        ]
+      },
+      {
+        "part": "tension",
+        "text": "And the tower's giant arms have to grab a ship that just survived re-entry.",
+        "lib": [
+          "starship-booster-catch.jpg"
+        ],
+        "pop": [
+          {
+            "say": "giant arms",
+            "show": "GIANT ARMS"
+          },
+          {
+            "say": "grab a ship",
+            "show": "GRAB THE SHIP"
+          },
+          {
+            "say": "survived re-entry",
+            "show": "AFTER RE-ENTRY"
+          }
+        ]
+      },
+      {
+        "part": "payoff",
+        "text": "The booster has been caught three times. The ship? Never.",
+        "lib": [
+          "starship-booster-catch.jpg"
+        ],
+        "pop": [
+          {
+            "say": "booster",
+            "show": "BOOSTER"
+          },
+          {
+            "say": "three times",
+            "show": "CAUGHT 3 TIMES"
+          },
+          {
+            "say": "Never",
+            "show": "SHIP: NEVER"
+          }
+        ]
+      },
+      {
+        "part": "payoff",
+        "text": "On Flight 15, SpaceX wants to catch BOTH. Musk calls it more likely than not.",
+        "lib": [
+          "starship-pad.jpg"
+        ],
+        "pop": [
+          {
+            "say": "Flight 15",
+            "show": "FLIGHT 15"
+          },
+          {
+            "say": "catch BOTH",
+            "show": "CATCH BOTH"
+          },
+          {
+            "say": "more likely than not",
+            "show": "MORE LIKELY THAN NOT"
+          }
+        ]
+      },
+      {
+        "part": "payoff",
+        "text": "If it works, a whole orbital rocket comes home in one piece. For the full story go to TrendingTesla.com.",
+        "img": "spacex-7.jpg",
+        "pop": [
+          {
+            "say": "If it works",
+            "show": "IF IT WORKS"
+          },
+          {
+            "say": "whole orbital rocket",
+            "show": "THE WHOLE ROCKET"
+          },
+          {
+            "say": "one piece",
+            "show": "HOME IN ONE PIECE"
+          }
+        ]
+      }
     ]
-   },
-   {
-    "part": "hook",
-    "text": "So how does it land? It doesn't. SpaceX wants to CATCH it.",
-    "img": "spacex-7.jpg",
-    "pop": [
-     {
-      "say": "how does it land",
-      "show": "HOW DOES IT LAND?"
-     },
-     {
-      "say": "It doesn't",
-      "show": "IT DOESN'T"
-     },
-     {
-      "say": "CATCH it",
-      "show": "CATCH IT!"
-     }
-    ]
-   },
-   {
-    "part": "tension",
-    "text": "The ship falls back from orbit belly first, like a skydiver.",
-    "scene": "a stainless steel Starship upper stage falling horizontally, belly first, through high clouds, its black heat-shield side facing down, four flaps spread like a skydiver's arms and legs, faint orange glow fading from re-entry, deep blue sky",
-    "pop": [
-     {
-      "say": "falls back from orbit",
-      "show": "FALLING FROM ORBIT"
-     },
-     {
-      "say": "belly first",
-      "show": "BELLY FIRST"
-     },
-     {
-      "say": "like a skydiver",
-      "show": "LIKE A SKYDIVER"
-     }
-    ]
-   },
-   {
-    "part": "tension",
-    "text": "Its whole body works as an air brake. Four flaps steer it.",
-    "img": "starship-moon.jpg",
-    "pop": [
-     {
-      "say": "whole body",
-      "show": "WHOLE BODY"
-     },
-     {
-      "say": "air brake",
-      "show": "AIR BRAKE"
-     },
-     {
-      "say": "Four flaps",
-      "show": "4 FLAPS"
-     }
-    ]
-   },
-   {
-    "part": "tension",
-    "text": "Then, just above the ground, it lights its engines and flips upright.",
-    "lib": [
-     "starship-launch.jpg"
-    ],
-    "pop": [
-     {
-      "say": "just above the ground",
-      "show": "JUST ABOVE GROUND"
-     },
-     {
-      "say": "lights its engines",
-      "show": "ENGINES ON"
-     },
-     {
-      "say": "flips upright",
-      "show": "FLIP!"
-     }
-    ]
-   },
-   {
-    "part": "tension",
-    "text": "And the tower's giant arms have to grab a ship that just survived re-entry.",
-    "lib": [
-     "starship-booster-catch.jpg"
-    ],
-    "pop": [
-     {
-      "say": "giant arms",
-      "show": "GIANT ARMS"
-     },
-     {
-      "say": "grab a ship",
-      "show": "GRAB THE SHIP"
-     },
-     {
-      "say": "survived re-entry",
-      "show": "AFTER RE-ENTRY"
-     }
-    ]
-   },
-   {
-    "part": "payoff",
-    "text": "The booster has been caught three times. The ship? Never.",
-    "lib": [
-     "starship-booster-catch.jpg"
-    ],
-    "pop": [
-     {
-      "say": "booster",
-      "show": "BOOSTER"
-     },
-     {
-      "say": "three times",
-      "show": "CAUGHT 3 TIMES"
-     },
-     {
-      "say": "Never",
-      "show": "SHIP: NEVER"
-     }
-    ]
-   },
-   {
-    "part": "payoff",
-    "text": "On Flight 15, SpaceX wants to catch BOTH. Musk calls it more likely than not.",
-    "lib": [
-     "starship-pad.jpg"
-    ],
-    "pop": [
-     {
-      "say": "Flight 15",
-      "show": "FLIGHT 15"
-     },
-     {
-      "say": "catch BOTH",
-      "show": "CATCH BOTH"
-     },
-     {
-      "say": "more likely than not",
-      "show": "MORE LIKELY THAN NOT"
-     }
-    ]
-   },
-   {
-    "part": "payoff",
-    "text": "If it works, a whole orbital rocket comes home in one piece. For the full story go to TrendingTesla.com.",
-    "img": "spacex-7.jpg",
-    "pop": [
-     {
-      "say": "If it works",
-      "show": "IF IT WORKS"
-     },
-     {
-      "say": "whole orbital rocket",
-      "show": "THE WHOLE ROCKET"
-     },
-     {
-      "say": "one piece",
-      "show": "HOME IN ONE PIECE"
-     }
-    ]
-   }
-  ]
- },
- "video": {
-  "en": [
-   {
-    "text": "No rocket that reaches orbit has ever come home completely in one piece. SpaceX wants to change that on Starship Flight 15, planned for November 2026: catch the booster and the ship with the tower, on the same flight. The booster has done it three times. The ship never has. Musk says success is more likely than not. And here is the strange part. The ship coming back from orbit has no wings, no landing legs and no parachutes. It looks like a spaceship missing every part you would need to land.",
-    "img": [
-     "lib/starship-pad.jpg",
-     "spacex-7.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Starship launch",
-       "Starship integrated flight test launch",
-       "Super Heavy liftoff"
-      ],
-      "want": "a Starship rocket lifting off from Starbase"
-     },
-     {
-      "q": [
-       "Starbase launch tower",
-       "Starship launch tower Boca Chica",
-       "Starbase orbital launch mount"
-      ],
-      "want": "the tall steel Starship launch tower at Starbase, Texas"
-     }
-    ],
-    "pop": [
-     {
-      "say": "in one piece",
-      "show": "IN ONE PIECE"
-     },
-     {
-      "say": "Flight 15",
-      "show": "FLIGHT 15"
-     },
-     {
-      "say": "catch the booster and the ship",
-      "show": "CATCH BOTH"
-     },
-     {
-      "say": "same flight",
-      "show": "ONE FLIGHT"
-     },
-     {
-      "say": "three times",
-      "show": "BOOSTER: 3 CATCHES"
-     },
-     {
-      "say": "ship never has",
-      "show": "SHIP: NEVER"
-     },
-     {
-      "say": "more likely than not",
-      "show": "MORE LIKELY THAN NOT"
-     },
-     {
-      "say": "no wings",
-      "show": "NO WINGS"
-     },
-     {
-      "say": "no landing legs",
-      "show": "NO LEGS"
-     },
-     {
-      "say": "no parachutes",
-      "show": "NO PARACHUTES"
-     },
-     {
-      "say": "missing every part",
-      "show": "HOW DOES IT LAND?"
-     }
-    ]
-   },
-   {
-    "head": "Why does Starship have no wings like the Space Shuttle?",
-    "img": [
-     "lib/starship-pad.jpg"
-    ],
-    "pop": [
-     {
-      "say": "",
-      "show": "WHY NO WINGS?"
-     }
-    ]
-   },
-   {
-    "text": "Because wings are heavy, and Starship is built for places without runways. The Space Shuttle came home as a giant glider. It flew through the air on its wings and rolled to a stop on wheels, on a long runway.",
-    "photo": [
-     {
-      "q": [
-       "Space Shuttle landing",
-       "Space Shuttle Discovery landing runway",
-       "Space Shuttle Atlantis landing"
-      ],
-      "want": "a Space Shuttle orbiter landing on a runway"
-     },
-     {
-      "q": [
-       "Space Shuttle orbiter wings",
-       "Space Shuttle Endeavour",
-       "Space Shuttle on runway"
-      ],
-      "want": "a Space Shuttle orbiter with its delta wings"
-     }
-    ],
-    "pop": [
-     {
-      "say": "wings are heavy",
-      "show": "WINGS ARE HEAVY"
-     },
-     {
-      "say": "without runways",
-      "show": "NO RUNWAYS"
-     },
-     {
-      "say": "Space Shuttle",
-      "show": "THE SHUTTLE"
-     },
-     {
-      "say": "giant glider",
-      "show": "A GIANT GLIDER"
-     },
-     {
-      "say": "on wheels",
-      "show": "ON WHEELS"
-     },
-     {
-      "say": "long runway",
-      "show": "LONG RUNWAY"
-     }
-    ]
-   },
-   {
-    "text": "That worked. But those wings and that landing gear had to be carried all the way to orbit and back. And they only help where there is thick air and a strip of concrete. Starship is meant for Earth, the Moon and Mars. The Moon has no air at all. Mars has very thin air, and no runways.",
-    "img": [
-     "starship-moon.jpg",
-     "starship-fleet-mars.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Moon surface Apollo",
-       "lunar surface",
-       "Moon craters"
-      ],
-      "want": "the grey cratered surface of the Moon"
-     },
-     {
-      "q": [
-       "Mars surface Curiosity",
-       "Mars landscape rover",
-       "Martian surface"
-      ],
-      "want": "the red rocky surface of Mars"
-     }
-    ],
-    "pop": [
-     {
-      "say": "carried all the way",
-      "show": "CARRIED TO ORBIT"
-     },
-     {
-      "say": "thick air",
-      "show": "THICK AIR"
-     },
-     {
-      "say": "strip of concrete",
-      "show": "CONCRETE NEEDED"
-     },
-     {
-      "say": "Earth, the Moon and Mars",
-      "show": "EARTH, MOON, MARS"
-     },
-     {
-      "say": "no air at all",
-      "show": "MOON: NO AIR"
-     },
-     {
-      "say": "very thin air",
-      "show": "MARS: THIN AIR"
-     },
-     {
-      "say": "no runways",
-      "show": "NO RUNWAYS"
-     }
-    ]
-   },
-   {
-    "text": "Parachutes? For a vehicle this size they would have to be enormous. They open too slowly to help if an engine fails late, and they add a lot of weight. So SpaceX left out wings, wheels and parachutes. Which leaves a steel ship falling out of the sky, with nothing obvious to slow it down.",
-    "img": [
-     "spacex-8.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Orion parachute test",
-       "large parachute drop test",
-       "Orion capsule parachutes"
-      ],
-      "want": "a test of large spacecraft parachutes"
-     },
-     {
-      "q": [
-       "Starship SN8",
-       "Starship SN15",
-       "Starship prototype Boca Chica"
-      ],
-      "want": "a stainless steel Starship prototype at Boca Chica, Texas"
-     }
-    ],
-    "pop": [
-     {
-      "say": "Parachutes",
-      "show": "PARACHUTES?"
-     },
-     {
-      "say": "enormous",
-      "show": "ENORMOUS"
-     },
-     {
-      "say": "open too slowly",
-      "show": "TOO SLOW"
-     },
-     {
-      "say": "a lot of weight",
-      "show": "TOO HEAVY"
-     },
-     {
-      "say": "wings, wheels and parachutes",
-      "show": "ALL LEFT OUT"
-     },
-     {
-      "say": "steel ship falling",
-      "show": "A FALLING STEEL SHIP"
-     },
-     {
-      "say": "nothing obvious",
-      "show": "NO BRAKES?"
-     }
-    ]
-   },
-   {
-    "head": "So how does a ship without wings slow down?",
-    "img": [
-     "starship-moon.jpg"
-    ],
-    "pop": [
-     {
-      "say": "",
-      "show": "HOW DOES IT BRAKE?"
-     }
-    ]
-   },
-   {
-    "text": "It falls belly first, like a skydiver, and uses its whole body as an air brake. After re-entry, Starship drops through the atmosphere lying flat, with its side of black hexagonal heat shield tiles facing down. Four flaps, two near the nose and two at the base, work like a skydiver's arms and legs. They steer, and they keep the ship stable.",
-    "photo": [
-     {
-      "q": [
-       "skydiving freefall",
-       "skydiver freefall",
-       "formation skydiving"
-      ],
-      "want": "a skydiver in freefall, belly to earth (not recognisable)"
-     },
-     {
-      "q": [
-       "Starship heat shield tiles",
-       "Starship hexagonal tiles",
-       "Starship heat shield"
-      ],
-      "want": "the black hexagonal heat shield tiles on a Starship"
-     },
-     {
-      "q": [
-       "Starship flaps",
-       "Starship forward flaps",
-       "Starship nose cone flaps"
-      ],
-      "want": "the flaps on a Starship upper stage"
-     }
-    ],
-    "pop": [
-     {
-      "say": "belly first",
-      "show": "BELLY FIRST"
-     },
-     {
-      "say": "like a skydiver",
-      "show": "LIKE A SKYDIVER"
-     },
-     {
-      "say": "air brake",
-      "show": "ONE BIG AIR BRAKE"
-     },
-     {
-      "say": "lying flat",
-      "show": "LYING FLAT"
-     },
-     {
-      "say": "heat shield tiles",
-      "show": "HEAT SHIELD TILES"
-     },
-     {
-      "say": "Four flaps",
-      "show": "4 FLAPS"
-     },
-     {
-      "say": "arms and legs",
-      "show": "ARMS AND LEGS"
-     },
-     {
-      "say": "keep the ship stable",
-      "show": "STABLE"
-     }
-    ]
-   },
-   {
-    "text": "Lying flat makes a huge difference. An analysis by Everyday Astronaut puts the side of the ship at about 545 square metres facing the air. Its base offers only about 70. That is almost eight times as much area to push against.",
-    "photo": [
-     {
-      "q": [
-       "Starship heat shield tiles",
-       "Starship hexagonal tiles",
-       "Starship heat shield"
-      ],
-      "want": "the black hexagonal heat shield tiles on a Starship"
-     },
-     {
-      "q": [
-       "Starship SN8",
-       "Starship SN15",
-       "Starship prototype Boca Chica"
-      ],
-      "want": "a stainless steel Starship prototype at Boca Chica, Texas"
-     }
-    ],
-    "pop": [
-     {
-      "say": "huge difference",
-      "show": "HUGE DIFFERENCE"
-     },
-     {
-      "say": "545 square metres",
-      "show": "545 M² SIDE"
-     },
-     {
-      "say": "only about 70",
-      "show": "70 M² BASE"
-     },
-     {
-      "say": "almost eight times",
-      "show": "ALMOST 8X"
-     },
-     {
-      "say": "push against",
-      "show": "MORE DRAG"
-     }
-    ]
-   },
-   {
-    "text": "In the flight plan of the early SN8 prototype, that slowed the ship to about 90 metres per second before its engines lit. A Falcon 9 booster falls engine first, and is still doing around 310 metres per second when its landing burn starts. The slower you fall, the less fuel the final braking costs. But falling flat is only half a landing. The ship still has to end up standing upright.",
-    "img": [
-     "spacex-6.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Starship SN8",
-       "Starship SN15",
-       "Starship prototype Boca Chica"
-      ],
-      "want": "a stainless steel Starship prototype at Boca Chica, Texas"
-     },
-     {
-      "q": [
-       "Falcon 9 landing",
-       "Falcon 9 booster landing",
-       "Falcon 9 first stage landing"
-      ],
-      "want": "a Falcon 9 booster landing on its engines"
-     }
-    ],
-    "pop": [
-     {
-      "say": "SN8 prototype",
-      "show": "SN8"
-     },
-     {
-      "say": "90 metres per second",
-      "show": "ABOUT 90 M/S"
-     },
-     {
-      "say": "Falcon 9 booster",
-      "show": "FALCON 9"
-     },
-     {
-      "say": "310 metres per second",
-      "show": "ABOUT 310 M/S"
-     },
-     {
-      "say": "less fuel",
-      "show": "LESS FUEL"
-     },
-     {
-      "say": "half a landing",
-      "show": "HALF A LANDING"
-     },
-     {
-      "say": "standing upright",
-      "show": "UPRIGHT?"
-     }
-    ]
-   },
-   {
-    "head": "How does the tower catch the ship?",
-    "img": [
-     "lib/starship-booster-catch.jpg"
-    ],
-    "pop": [
-     {
-      "say": "",
-      "show": "THE CATCH"
-     }
-    ]
-   },
-   {
-    "text": "The ship flips upright at the last moment, and drops between the tower's arms. In the animation SpaceX showed on its earnings webcast, the ship comes in flat over Starbase in South Texas, steering with its flaps. Then a short engine burn swings it vertical and slows it down. It sinks past the top of the tower, and the two arms, the chopsticks, close around it.",
-    "img": [
-     "lib/starship-booster-catch.jpg",
-     "lib/starship-launch.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Starbase launch tower",
-       "Starship launch tower Boca Chica",
-       "Starbase orbital launch mount"
-      ],
-      "want": "the tall steel Starship launch tower at Starbase, Texas"
-     }
-    ],
-    "pop": [
-     {
-      "say": "flips upright",
-      "show": "FLIP UPRIGHT"
-     },
-     {
-      "say": "last moment",
-      "show": "LAST MOMENT"
-     },
-     {
-      "say": "tower's arms",
-      "show": "INTO THE ARMS"
-     },
-     {
-      "say": "earnings webcast",
-      "show": "SPACEX ANIMATION"
-     },
-     {
-      "say": "Starbase",
-      "show": "STARBASE, TEXAS"
-     },
-     {
-      "say": "short engine burn",
-      "show": "SHORT BURN"
-     },
-     {
-      "say": "swings it vertical",
-      "show": "VERTICAL"
-     },
-     {
-      "say": "chopsticks",
-      "show": "CHOPSTICKS"
-     },
-     {
-      "say": "close around it",
-      "show": "ARMS CLOSE"
-     }
-    ]
-   },
-   {
-    "text": "The arms do not squeeze the steel hull. The vehicles carry catch pins that come to rest on rails on the arms. Those take the weight, and soak up the shock.",
-    "img": [
-     "lib/starship-booster-catch.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Mechazilla chopsticks",
-       "Starbase chopsticks arms",
-       "Starship tower catch arms"
-      ],
-      "want": "the catch arms (chopsticks) of the Starship launch tower"
-     }
-    ],
-    "pop": [
-     {
-      "say": "do not squeeze",
-      "show": "NO SQUEEZING"
-     },
-     {
-      "say": "catch pins",
-      "show": "CATCH PINS"
-     },
-     {
-      "say": "rails on the arms",
-      "show": "RAILS ON THE ARMS"
-     },
-     {
-      "say": "take the weight",
-      "show": "TAKE THE WEIGHT"
-     },
-     {
-      "say": "soak up the shock",
-      "show": "ABSORB THE SHOCK"
-     }
-    ]
-   },
-   {
-    "text": "SpaceX has practised the flip for years. Prototypes like SN8 and SN15 did it in 2020 and 2021, after falling from around 10 kilometres up. On later test flights, ships flipped and hovered over the Indian Ocean before tipping into the water. This time, though, the ship comes down next to land, buildings, and the hardware SpaceX needs for every future flight.",
-    "img": [
-     "lib/starship-pad.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Starship SN8",
-       "Starship SN15",
-       "Starship prototype Boca Chica"
-      ],
-      "want": "a stainless steel Starship prototype at Boca Chica, Texas"
-     },
-     {
-      "q": [
-       "Indian Ocean",
-       "Indian Ocean from space",
-       "open ocean aerial"
-      ],
-      "want": "the open Indian Ocean"
-     }
-    ],
-    "pop": [
-     {
-      "say": "practised the flip",
-      "show": "YEARS OF PRACTICE"
-     },
-     {
-      "say": "SN8 and SN15",
-      "show": "SN8 AND SN15"
-     },
-     {
-      "say": "10 kilometres",
-      "show": "FROM 10 KM"
-     },
-     {
-      "say": "Indian Ocean",
-      "show": "INDIAN OCEAN"
-     },
-     {
-      "say": "tipping into the water",
-      "show": "INTO THE WATER"
-     },
-     {
-      "say": "next to land",
-      "show": "THIS TIME: LAND"
-     },
-     {
-      "say": "every future flight",
-      "show": "THE TOWER AT STAKE"
-     }
-    ]
-   },
-   {
-    "head": "Why is catching the ship harder than catching the booster?",
-    "img": [
-     "lib/starship-launch.jpg"
-    ],
-    "pop": [
-     {
-      "say": "",
-      "show": "WHY HARDER?"
-     }
-    ]
-   },
-   {
-    "text": "Because the ship comes back from orbit, not from the edge of space. The booster separates a few minutes after liftoff, turns around, and is back at the tower within minutes. The ship first has to finish its flight around the Earth, survive re-entry at orbital speed, and only then line up with one tower in Texas. If anything cuts the mission short, it never comes back over Starbase at all.",
-    "img": [
-     "lib/starship-launch.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Earth from orbit",
-       "Earth from the International Space Station",
-       "Earth limb from space"
-      ],
-      "want": "planet Earth seen from orbit"
-     },
-     {
-      "q": [
-       "Starship launch",
-       "Starship integrated flight test launch",
-       "Super Heavy liftoff"
-      ],
-      "want": "a Starship rocket lifting off from Starbase"
-     }
-    ],
-    "pop": [
-     {
-      "say": "from orbit",
-      "show": "FROM ORBIT"
-     },
-     {
-      "say": "edge of space",
-      "show": "NOT THE EDGE OF SPACE"
-     },
-     {
-      "say": "few minutes",
-      "show": "BOOSTER: MINUTES"
-     },
-     {
-      "say": "around the Earth",
-      "show": "AROUND THE EARTH"
-     },
-     {
-      "say": "orbital speed",
-      "show": "ORBITAL SPEED"
-     },
-     {
-      "say": "one tower in Texas",
-      "show": "ONE TOWER"
-     },
-     {
-      "say": "cuts the mission short",
-      "show": "MISSION CUT SHORT?"
-     },
-     {
-      "say": "never comes back",
-      "show": "NO CATCH"
-     }
-    ]
-   },
-   {
-    "text": "There is more that can go wrong. The new Raptor 3 engines had problems on each of their first flights, Gizmodo noted. On Flight 14, an engine shut down early, although the ship still reached orbit and released 26 Starlink satellites. The tiles and flaps must come through the hottest part of the flight in good enough shape to steer precisely.",
-    "img": [
-     "starlink-launch-stack.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Raptor engine",
-       "SpaceX Raptor engine",
-       "Raptor rocket engine"
-      ],
-      "want": "a SpaceX Raptor rocket engine"
-     },
-     {
-      "q": [
-       "Starship heat shield tiles",
-       "Starship hexagonal tiles",
-       "Starship heat shield"
-      ],
-      "want": "the black hexagonal heat shield tiles on a Starship"
-     }
-    ],
-    "pop": [
-     {
-      "say": "more that can go wrong",
-      "show": "MORE RISKS"
-     },
-     {
-      "say": "Raptor 3",
-      "show": "RAPTOR 3"
-     },
-     {
-      "say": "problems",
-      "show": "ENGINE TROUBLE"
-     },
-     {
-      "say": "Flight 14",
-      "show": "FLIGHT 14"
-     },
-     {
-      "say": "shut down early",
-      "show": "ONE ENGINE OUT"
-     },
-     {
-      "say": "26 Starlink satellites",
-      "show": "26 STARLINKS"
-     },
-     {
-      "say": "hottest part",
-      "show": "THE HOTTEST PART"
-     },
-     {
-      "say": "steer precisely",
-      "show": "STEER PRECISELY"
-     }
-    ]
-   },
-   {
-    "text": "And a ship returning from orbit for a catch flies toward land instead of the open sea. So the FAA licence has to allow a return to the launch site, and tower catches for both stages. SpaceX president Gwynne Shotwell said she expects exactly that. The booster, by the way, does not get in the way. According to Gizmodo, it uses the other tower at Starbase.",
-    "img": [
-     "lib/starship-pad.jpg",
-     "spacex-7.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Starbase launch tower",
-       "Starship launch tower Boca Chica",
-       "Starbase orbital launch mount"
-      ],
-      "want": "the tall steel Starship launch tower at Starbase, Texas"
-     }
-    ],
-    "pop": [
-     {
-      "say": "toward land",
-      "show": "TOWARD LAND"
-     },
-     {
-      "say": "open sea",
-      "show": "NOT THE SEA"
-     },
-     {
-      "say": "FAA licence",
-      "show": "FAA LICENCE"
-     },
-     {
-      "say": "both stages",
-      "show": "BOTH STAGES"
-     },
-     {
-      "say": "expects exactly that",
-      "show": "EXPECTED"
-     },
-     {
-      "say": "does not get in the way",
-      "show": "NO TRAFFIC JAM"
-     },
-     {
-      "say": "other tower",
-      "show": "THE OTHER TOWER"
-     }
-    ]
-   },
-   {
-    "head": "So how will Starship land on the Moon and Mars without a tower?",
-    "img": [
-     "starship-moon.jpg"
-    ],
-    "pop": [
-     {
-      "say": "",
-      "show": "NO TOWER ON THE MOON"
-     }
-    ]
-   },
-   {
-    "text": "On its own legs. No tower waits on the Moon. So Starship HLS, the version NASA hired as the Moon lander for its Artemis astronauts, gets landing legs. Back in 2020, Musk wrote that SpaceX was working on new legs with a wider stance, that can level themselves on uneven ground. Plus thrusters high on the hull, to keep the ship steady as it lands.",
-    "img": [
-     "starship-moon.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Starship HLS",
-       "Starship Human Landing System",
-       "Starship lunar lander"
-      ],
-      "want": "the Starship Human Landing System lunar lander (illustration)"
-     },
-     {
-      "q": [
-       "Moon surface Apollo",
-       "lunar surface",
-       "Moon craters"
-      ],
-      "want": "the grey cratered surface of the Moon"
-     }
-    ],
-    "pop": [
-     {
-      "say": "own legs",
-      "show": "ITS OWN LEGS"
-     },
-     {
-      "say": "No tower",
-      "show": "NO TOWER"
-     },
-     {
-      "say": "Starship HLS",
-      "show": "STARSHIP HLS"
-     },
-     {
-      "say": "Artemis astronauts",
-      "show": "ARTEMIS"
-     },
-     {
-      "say": "landing legs",
-      "show": "LANDING LEGS"
-     },
-     {
-      "say": "wider stance",
-      "show": "WIDER STANCE"
-     },
-     {
-      "say": "level themselves",
-      "show": "SELF-LEVELLING"
-     },
-     {
-      "say": "thrusters high on the hull",
-      "show": "THRUSTERS UP HIGH"
-     }
-    ]
-   },
-   {
-    "text": "That Moon ship never comes back through Earth's air, so it needs no heat shield and no flaps. The first ships on Mars face the same problem. Whatever SpaceX builds there later, the first landings happen on bare ground. The tower catch is an Earth trick, made for one thing: flying again, fast.",
-    "img": [
-     "starship-fleet-mars.jpg",
-     "mars-keynote-rover.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Mars surface Curiosity",
-       "Mars landscape rover",
-       "Martian surface"
-      ],
-      "want": "the red rocky surface of Mars"
-     }
-    ],
-    "pop": [
-     {
-      "say": "no heat shield",
-      "show": "NO HEAT SHIELD"
-     },
-     {
-      "say": "no flaps",
-      "show": "NO FLAPS"
-     },
-     {
-      "say": "ships on Mars",
-      "show": "MARS"
-     },
-     {
-      "say": "bare ground",
-      "show": "BARE GROUND"
-     },
-     {
-      "say": "Earth trick",
-      "show": "AN EARTH TRICK"
-     },
-     {
-      "say": "flying again, fast",
-      "show": "FLY AGAIN, FAST"
-     }
-    ]
-   },
-   {
-    "head": "What would a double catch change?",
-    "img": [
-     "lib/starship-pad.jpg"
-    ],
-    "pop": [
-     {
-      "say": "",
-      "show": "A DOUBLE CATCH"
-     }
-    ]
-   },
-   {
-    "text": "It would make Starship the first orbital rocket that comes home in one piece. Falcon 9 already lands its booster, but its upper stage is thrown away on every flight. A caught ship could be checked, refuelled and, in theory, flown again. That is the whole idea behind the design. Much cheaper launches, for Starlink, for NASA's Moon missions, and for Musk's Mars plans, where Tesla's Optimus robot is meant to play a role.",
-    "img": [
-     "spacex-6.jpg",
-     "starship-optimus-door.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Falcon 9 second stage",
-       "Falcon 9 upper stage",
-       "Falcon 9 launch"
-      ],
-      "want": "a Falcon 9 rocket or its upper stage"
-     }
-    ],
-    "pop": [
-     {
-      "say": "first orbital rocket",
-      "show": "A WORLD FIRST"
-     },
-     {
-      "say": "Falcon 9",
-      "show": "FALCON 9"
-     },
-     {
-      "say": "thrown away",
-      "show": "UPPER STAGE LOST"
-     },
-     {
-      "say": "refuelled",
-      "show": "REFUEL"
-     },
-     {
-      "say": "flown again",
-      "show": "FLY AGAIN"
-     },
-     {
-      "say": "whole idea",
-      "show": "THE WHOLE IDEA"
-     },
-     {
-      "say": "cheaper launches",
-      "show": "CHEAPER LAUNCHES"
-     },
-     {
-      "say": "Mars plans",
-      "show": "MARS"
-     },
-     {
-      "say": "Optimus robot",
-      "show": "OPTIMUS"
-     }
-    ]
-   },
-   {
-    "text": "SpaceX and Tesla are studying a possible merger, so Tesla shareholders are watching these flights too. A first attempt can still go wrong. Even Musk only called success more likely than not. But the strange design makes sense once you see the whole plan. Starship has no wings, no legs and no parachutes, because the tower is its landing gear.",
-    "img": [
-     "lib/musk-chess-companies.jpg",
-     "lib/starship-booster-catch.jpg",
-     "lib/starship-pad.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Starbase launch tower",
-       "Starship launch tower Boca Chica",
-       "Starbase orbital launch mount"
-      ],
-      "want": "the tall steel Starship launch tower at Starbase, Texas"
-     }
-    ],
-    "pop": [
-     {
-      "say": "possible merger",
-      "show": "TESLA + SPACEX?"
-     },
-     {
-      "say": "shareholders",
-      "show": "SHAREHOLDERS WATCH"
-     },
-     {
-      "say": "still go wrong",
-      "show": "IT CAN FAIL"
-     },
-     {
-      "say": "more likely than not",
-      "show": "MORE LIKELY THAN NOT"
-     },
-     {
-      "say": "whole plan",
-      "show": "THE WHOLE PLAN"
-     },
-     {
-      "say": "no wings, no legs",
-      "show": "NO WINGS, NO LEGS"
-     },
-     {
-      "say": "landing gear",
-      "show": "THE TOWER IS THE LANDING GEAR"
-     }
-    ]
-   }
-  ],
-  "nl": [
-   {
-    "text": "Geen raket die een baan om de aarde bereikt, is ooit helemaal heel teruggekomen. SpaceX wil dat veranderen bij Starship-vlucht vijftien, gepland voor november 2026: de booster en het schip allebei vangen met de toren, in dezelfde vlucht. De booster deed het al drie keer. Het schip nog nooit. Musk noemt de kans op succes eerder wel dan niet. En nu het vreemde. Het schip dat uit de ruimte terugkomt, heeft geen vleugels, geen landingspoten en geen parachutes. Het lijkt een ruimteschip waaraan alles ontbreekt om te landen.",
-    "img": [
-     "lib/starship-pad.jpg",
-     "spacex-7.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Starship launch",
-       "Starship integrated flight test launch",
-       "Super Heavy liftoff"
-      ],
-      "want": "a Starship rocket lifting off from Starbase"
-     },
-     {
-      "q": [
-       "Starbase launch tower",
-       "Starship launch tower Boca Chica",
-       "Starbase orbital launch mount"
-      ],
-      "want": "the tall steel Starship launch tower at Starbase, Texas"
-     }
-    ],
-    "pop": [
-     {
-      "say": "helemaal heel",
-      "show": "IN ÉÉN STUK"
-     },
-     {
-      "say": "vlucht vijftien",
-      "show": "VLUCHT 15"
-     },
-     {
-      "say": "allebei vangen",
-      "show": "BEIDE VANGEN"
-     },
-     {
-      "say": "dezelfde vlucht",
-      "show": "ÉÉN VLUCHT"
-     },
-     {
-      "say": "drie keer",
-      "show": "BOOSTER: 3 KEER"
-     },
-     {
-      "say": "nog nooit",
-      "show": "SCHIP: NOOIT"
-     },
-     {
-      "say": "eerder wel dan niet",
-      "show": "EERDER WEL DAN NIET"
-     },
-     {
-      "say": "geen vleugels",
-      "show": "GEEN VLEUGELS"
-     },
-     {
-      "say": "geen landingspoten",
-      "show": "GEEN POTEN"
-     },
-     {
-      "say": "geen parachutes",
-      "show": "GEEN PARACHUTES"
-     },
-     {
-      "say": "alles ontbreekt",
-      "show": "HOE LAND JE DAN?"
-     }
-    ]
-   },
-   {
-    "head": "Waarom heeft Starship geen vleugels zoals de spaceshuttle?",
-    "img": [
-     "lib/starship-pad.jpg"
-    ],
-    "pop": [
-     {
-      "say": "",
-      "show": "WAAROM GEEN VLEUGELS?"
-     }
-    ]
-   },
-   {
-    "text": "Omdat vleugels zwaar zijn, en Starship gebouwd is voor plekken zonder landingsbaan. De spaceshuttle kwam terug als een reusachtig zweefvliegtuig. Hij gleed op zijn vleugels door de lucht en rolde op wielen uit, over een lange landingsbaan.",
-    "photo": [
-     {
-      "q": [
-       "Space Shuttle landing",
-       "Space Shuttle Discovery landing runway",
-       "Space Shuttle Atlantis landing"
-      ],
-      "want": "a Space Shuttle orbiter landing on a runway"
-     },
-     {
-      "q": [
-       "Space Shuttle orbiter wings",
-       "Space Shuttle Endeavour",
-       "Space Shuttle on runway"
-      ],
-      "want": "a Space Shuttle orbiter with its delta wings"
-     }
-    ],
-    "pop": [
-     {
-      "say": "vleugels zwaar",
-      "show": "VLEUGELS ZIJN ZWAAR"
-     },
-     {
-      "say": "zonder landingsbaan",
-      "show": "GEEN LANDINGSBAAN"
-     },
-     {
-      "say": "spaceshuttle",
-      "show": "DE SPACESHUTTLE"
-     },
-     {
-      "say": "zweefvliegtuig",
-      "show": "EEN ZWEEFVLIEGTUIG"
-     },
-     {
-      "say": "op wielen",
-      "show": "OP WIELEN"
-     },
-     {
-      "say": "lange landingsbaan",
-      "show": "LANGE BAAN"
-     }
-    ]
-   },
-   {
-    "text": "Dat werkte. Maar die vleugels en dat landingsgestel moesten helemaal mee naar de ruimte en terug. En ze helpen alleen waar dikke lucht en een strook beton is. Starship is bedoeld voor de aarde, de maan en Mars. De maan heeft helemaal geen lucht. Mars heeft heel dunne lucht, en geen landingsbanen.",
-    "img": [
-     "starship-moon.jpg",
-     "starship-fleet-mars.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Moon surface Apollo",
-       "lunar surface",
-       "Moon craters"
-      ],
-      "want": "the grey cratered surface of the Moon"
-     },
-     {
-      "q": [
-       "Mars surface Curiosity",
-       "Mars landscape rover",
-       "Martian surface"
-      ],
-      "want": "the red rocky surface of Mars"
-     }
-    ],
-    "pop": [
-     {
-      "say": "helemaal mee",
-      "show": "MEE NAAR DE RUIMTE"
-     },
-     {
-      "say": "dikke lucht",
-      "show": "DIKKE LUCHT"
-     },
-     {
-      "say": "strook beton",
-      "show": "BETON NODIG"
-     },
-     {
-      "say": "de aarde, de maan en Mars",
-      "show": "AARDE, MAAN, MARS"
-     },
-     {
-      "say": "helemaal geen lucht",
-      "show": "MAAN: GEEN LUCHT"
-     },
-     {
-      "say": "heel dunne lucht",
-      "show": "MARS: DUNNE LUCHT"
-     },
-     {
-      "say": "geen landingsbanen",
-      "show": "GEEN BANEN"
-     }
-    ]
-   },
-   {
-    "text": "Parachutes dan? Voor een voertuig van dit formaat zouden ze gigantisch moeten zijn. Ze gaan te langzaam open om te helpen als een motor laat uitvalt, en ze wegen veel. Dus liet SpaceX vleugels, wielen en parachutes weg. Dan blijft er een stalen schip over dat uit de lucht valt, zonder iets wat het zichtbaar afremt.",
-    "img": [
-     "spacex-8.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Orion parachute test",
-       "large parachute drop test",
-       "Orion capsule parachutes"
-      ],
-      "want": "a test of large spacecraft parachutes"
-     },
-     {
-      "q": [
-       "Starship SN8",
-       "Starship SN15",
-       "Starship prototype Boca Chica"
-      ],
-      "want": "a stainless steel Starship prototype at Boca Chica, Texas"
-     }
-    ],
-    "pop": [
-     {
-      "say": "Parachutes dan",
-      "show": "PARACHUTES?"
-     },
-     {
-      "say": "gigantisch",
-      "show": "GIGANTISCH"
-     },
-     {
-      "say": "te langzaam open",
-      "show": "TE TRAAG"
-     },
-     {
-      "say": "wegen veel",
-      "show": "TE ZWAAR"
-     },
-     {
-      "say": "vleugels, wielen en parachutes",
-      "show": "ALLES WEG"
-     },
-     {
-      "say": "stalen schip",
-      "show": "EEN VALLEND STALEN SCHIP"
-     },
-     {
-      "say": "zichtbaar afremt",
-      "show": "GEEN REMMEN?"
-     }
-    ]
-   },
-   {
-    "head": "Hoe remt een schip zonder vleugels dan af?",
-    "img": [
-     "starship-moon.jpg"
-    ],
-    "pop": [
-     {
-      "say": "",
-      "show": "HOE REMT HET AF?"
-     }
-    ]
-   },
-   {
-    "text": "Het valt plat op zijn buik, als een parachutist in vrije val, en gebruikt zijn hele romp als luchtrem. Na de terugkeer in de dampkring valt Starship liggend naar beneden, met de kant vol zwarte zeshoekige hitteschildtegels naar onder. Vier flappen, twee bij de neus en twee onderaan, werken als de armen en benen van een skydiver. Ze sturen, en ze houden het schip stabiel.",
-    "photo": [
-     {
-      "q": [
-       "skydiving freefall",
-       "skydiver freefall",
-       "formation skydiving"
-      ],
-      "want": "a skydiver in freefall, belly to earth (not recognisable)"
-     },
-     {
-      "q": [
-       "Starship heat shield tiles",
-       "Starship hexagonal tiles",
-       "Starship heat shield"
-      ],
-      "want": "the black hexagonal heat shield tiles on a Starship"
-     },
-     {
-      "q": [
-       "Starship flaps",
-       "Starship forward flaps",
-       "Starship nose cone flaps"
-      ],
-      "want": "the flaps on a Starship upper stage"
-     }
-    ],
-    "pop": [
-     {
-      "say": "plat op zijn buik",
-      "show": "OP ZIJN BUIK"
-     },
-     {
-      "say": "vrije val",
-      "show": "VRIJE VAL"
-     },
-     {
-      "say": "luchtrem",
-      "show": "ÉÉN GROTE LUCHTREM"
-     },
-     {
-      "say": "liggend",
-      "show": "LIGGEND"
-     },
-     {
-      "say": "hitteschildtegels",
-      "show": "HITTESCHILDTEGELS"
-     },
-     {
-      "say": "Vier flappen",
-      "show": "4 FLAPPEN"
-     },
-     {
-      "say": "armen en benen",
-      "show": "ARMEN EN BENEN"
-     },
-     {
-      "say": "stabiel",
-      "show": "STABIEL"
-     }
-    ]
-   },
-   {
-    "text": "Plat liggen maakt een enorm verschil. Volgens een analyse van Everyday Astronaut biedt de zijkant van het schip zo'n 545 vierkante meter aan de lucht. De onderkant maar ongeveer 70. Dat is bijna acht keer zoveel oppervlak om tegenaan te duwen.",
-    "photo": [
-     {
-      "q": [
-       "Starship heat shield tiles",
-       "Starship hexagonal tiles",
-       "Starship heat shield"
-      ],
-      "want": "the black hexagonal heat shield tiles on a Starship"
-     },
-     {
-      "q": [
-       "Starship SN8",
-       "Starship SN15",
-       "Starship prototype Boca Chica"
-      ],
-      "want": "a stainless steel Starship prototype at Boca Chica, Texas"
-     }
-    ],
-    "pop": [
-     {
-      "say": "enorm verschil",
-      "show": "ENORM VERSCHIL"
-     },
-     {
-      "say": "545 vierkante meter",
-      "show": "545 M² ZIJKANT"
-     },
-     {
-      "say": "ongeveer 70",
-      "show": "70 M² ONDERKANT"
-     },
-     {
-      "say": "bijna acht keer",
-      "show": "BIJNA 8X"
-     },
-     {
-      "say": "tegenaan te duwen",
-      "show": "MEER WEERSTAND"
-     }
-    ]
-   },
-   {
-    "text": "In het vluchtplan van het vroege prototype SN8 remde het schip zo af tot ongeveer 90 meter per seconde voordat de motoren aangingen. Een Falcon 9-booster valt met de motoren vooruit, en gaat nog zo'n 310 meter per seconde als zijn landingsbrand begint. Hoe langzamer je valt, hoe minder brandstof het afremmen kost. Maar plat vallen is pas de helft van een landing. Het schip moet uiteindelijk nog rechtop staan.",
-    "img": [
-     "spacex-6.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Starship SN8",
-       "Starship SN15",
-       "Starship prototype Boca Chica"
-      ],
-      "want": "a stainless steel Starship prototype at Boca Chica, Texas"
-     },
-     {
-      "q": [
-       "Falcon 9 landing",
-       "Falcon 9 booster landing",
-       "Falcon 9 first stage landing"
-      ],
-      "want": "a Falcon 9 booster landing on its engines"
-     }
-    ],
-    "pop": [
-     {
-      "say": "prototype SN8",
-      "show": "SN8"
-     },
-     {
-      "say": "90 meter per seconde",
-      "show": "ZO'N 90 M/S"
-     },
-     {
-      "say": "Falcon 9-booster",
-      "show": "FALCON 9"
-     },
-     {
-      "say": "310 meter per seconde",
-      "show": "ZO'N 310 M/S"
-     },
-     {
-      "say": "minder brandstof",
-      "show": "MINDER BRANDSTOF"
-     },
-     {
-      "say": "de helft van een landing",
-      "show": "HALVE LANDING"
-     },
-     {
-      "say": "rechtop staan",
-      "show": "RECHTOP?"
-     }
-    ]
-   },
-   {
-    "head": "Hoe vangt de toren het schip?",
-    "img": [
-     "lib/starship-booster-catch.jpg"
-    ],
-    "pop": [
-     {
-      "say": "",
-      "show": "DE VANGST"
-     }
-    ]
-   },
-   {
-    "text": "Het schip kantelt op het laatste moment rechtop, en zakt tussen de armen van de toren. In de animatie die SpaceX tijdens de webcast liet zien, komt het schip liggend aan boven Starbase in het zuiden van Texas, sturend met zijn flappen. Dan draait een korte motorstoot het verticaal en remt het af. Het zakt langs de top van de toren, en de twee armen, de eetstokjes, sluiten zich eromheen.",
-    "img": [
-     "lib/starship-booster-catch.jpg",
-     "lib/starship-launch.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Starbase launch tower",
-       "Starship launch tower Boca Chica",
-       "Starbase orbital launch mount"
-      ],
-      "want": "the tall steel Starship launch tower at Starbase, Texas"
-     }
-    ],
-    "pop": [
-     {
-      "say": "kantelt",
-      "show": "KANTELEN"
-     },
-     {
-      "say": "laatste moment",
-      "show": "LAATSTE MOMENT"
-     },
-     {
-      "say": "armen van de toren",
-      "show": "TUSSEN DE ARMEN"
-     },
-     {
-      "say": "webcast",
-      "show": "ANIMATIE SPACEX"
-     },
-     {
-      "say": "Starbase",
-      "show": "STARBASE, TEXAS"
-     },
-     {
-      "say": "korte motorstoot",
-      "show": "KORTE STOOT"
-     },
-     {
-      "say": "verticaal",
-      "show": "VERTICAAL"
-     },
-     {
-      "say": "eetstokjes",
-      "show": "EETSTOKJES"
-     },
-     {
-      "say": "sluiten zich",
-      "show": "ARMEN DICHT"
-     }
-    ]
-   },
-   {
-    "text": "De armen knijpen niet in de stalen romp. De raketdelen hebben vangpennen die op rails op de armen komen te rusten. Die dragen het gewicht, en vangen de klap op.",
-    "img": [
-     "lib/starship-booster-catch.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Mechazilla chopsticks",
-       "Starbase chopsticks arms",
-       "Starship tower catch arms"
-      ],
-      "want": "the catch arms (chopsticks) of the Starship launch tower"
-     }
-    ],
-    "pop": [
-     {
-      "say": "knijpen niet",
-      "show": "NIET KNIJPEN"
-     },
-     {
-      "say": "vangpennen",
-      "show": "VANGPENNEN"
-     },
-     {
-      "say": "rails op de armen",
-      "show": "RAILS OP DE ARMEN"
-     },
-     {
-      "say": "dragen het gewicht",
-      "show": "DRAGEN HET GEWICHT"
-     },
-     {
-      "say": "vangen de klap op",
-      "show": "VANGEN DE KLAP OP"
-     }
-    ]
-   },
-   {
-    "text": "SpaceX oefent de kanteling al jaren. Prototypes als SN8 en SN15 deden het in 2020 en 2021, na een val van zo'n 10 kilometer hoogte. Bij latere testvluchten kantelden schepen en zweefden ze even boven de Indische Oceaan, voordat ze in het water vielen. Deze keer komt het schip echter neer naast land, gebouwen, en de installaties die SpaceX voor elke volgende vlucht nodig heeft.",
-    "img": [
-     "lib/starship-pad.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Starship SN8",
-       "Starship SN15",
-       "Starship prototype Boca Chica"
-      ],
-      "want": "a stainless steel Starship prototype at Boca Chica, Texas"
-     },
-     {
-      "q": [
-       "Indian Ocean",
-       "Indian Ocean from space",
-       "open ocean aerial"
-      ],
-      "want": "the open Indian Ocean"
-     }
-    ],
-    "pop": [
-     {
-      "say": "oefent de kanteling",
-      "show": "JAREN OEFENEN"
-     },
-     {
-      "say": "SN8 en SN15",
-      "show": "SN8 EN SN15"
-     },
-     {
-      "say": "10 kilometer",
-      "show": "VANAF 10 KM"
-     },
-     {
-      "say": "Indische Oceaan",
-      "show": "INDISCHE OCEAAN"
-     },
-     {
-      "say": "in het water",
-      "show": "IN HET WATER"
-     },
-     {
-      "say": "naast land",
-      "show": "NU: BIJ LAND"
-     },
-     {
-      "say": "elke volgende vlucht",
-      "show": "DE TOREN OP HET SPEL"
-     }
-    ]
-   },
-   {
-    "head": "Waarom is het schip vangen moeilijker dan de booster?",
-    "img": [
-     "lib/starship-launch.jpg"
-    ],
-    "pop": [
-     {
-      "say": "",
-      "show": "WAAROM MOEILIJKER?"
-     }
-    ]
-   },
-   {
-    "text": "Omdat het schip terugkomt uit een baan om de aarde, niet van de rand van de ruimte. De booster koppelt een paar minuten na de start los, keert om, en is binnen enkele minuten terug bij de toren. Het schip moet eerst zijn vlucht rond de aarde afmaken, de terugkeer op orbitale snelheid overleven, en zich pas dan op één toren in Texas richten. Wordt de missie om wat voor reden ook ingekort, dan komt het helemaal niet meer boven Starbase.",
-    "img": [
-     "lib/starship-launch.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Earth from orbit",
-       "Earth from the International Space Station",
-       "Earth limb from space"
-      ],
-      "want": "planet Earth seen from orbit"
-     },
-     {
-      "q": [
-       "Starship launch",
-       "Starship integrated flight test launch",
-       "Super Heavy liftoff"
-      ],
-      "want": "a Starship rocket lifting off from Starbase"
-     }
-    ],
-    "pop": [
-     {
-      "say": "baan om de aarde",
-      "show": "UIT DE RUIMTE"
-     },
-     {
-      "say": "rand van de ruimte",
-      "show": "NIET VAN DE RAND"
-     },
-     {
-      "say": "enkele minuten",
-      "show": "BOOSTER: MINUTEN"
-     },
-     {
-      "say": "rond de aarde",
-      "show": "ROND DE AARDE"
-     },
-     {
-      "say": "orbitale snelheid",
-      "show": "ORBITALE SNELHEID"
-     },
-     {
-      "say": "één toren",
-      "show": "ÉÉN TOREN"
-     },
-     {
-      "say": "ingekort",
-      "show": "MISSIE INGEKORT?"
-     },
-     {
-      "say": "helemaal niet meer",
-      "show": "GEEN VANGST"
-     }
-    ]
-   },
-   {
-    "text": "Er kan meer misgaan. De nieuwe Raptor 3-motoren hadden volgens Gizmodo bij elk van hun eerste vluchten problemen. Bij vlucht veertien viel een motor te vroeg uit, al bereikte het schip toch een baan om de aarde en zette het 26 Starlink-satellieten uit. En tegels en flappen moeten het heetste deel van de vlucht zo goed doorstaan dat het schip daarna nog precies kan sturen.",
-    "img": [
-     "starlink-launch-stack.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Raptor engine",
-       "SpaceX Raptor engine",
-       "Raptor rocket engine"
-      ],
-      "want": "a SpaceX Raptor rocket engine"
-     },
-     {
-      "q": [
-       "Starship heat shield tiles",
-       "Starship hexagonal tiles",
-       "Starship heat shield"
-      ],
-      "want": "the black hexagonal heat shield tiles on a Starship"
-     }
-    ],
-    "pop": [
-     {
-      "say": "meer misgaan",
-      "show": "MEER RISICO'S"
-     },
-     {
-      "say": "Raptor 3",
-      "show": "RAPTOR 3"
-     },
-     {
-      "say": "problemen",
-      "show": "MOTORPROBLEMEN"
-     },
-     {
-      "say": "vlucht veertien",
-      "show": "VLUCHT 14"
-     },
-     {
-      "say": "te vroeg uit",
-      "show": "MOTOR UIT"
-     },
-     {
-      "say": "26 Starlink",
-      "show": "26 STARLINKS"
-     },
-     {
-      "say": "heetste deel",
-      "show": "HET HEETSTE DEEL"
-     },
-     {
-      "say": "precies kan sturen",
-      "show": "PRECIES STUREN"
-     }
-    ]
-   },
-   {
-    "text": "En een schip dat uit de ruimte terugkomt voor een vangst, vliegt richting land in plaats van open zee. De vergunning van de luchtvaartautoriteit FAA moet dus een terugkeer naar de lanceerplek toestaan, en torenvangsten voor beide trappen. SpaceX-president Gwynne Shotwell verwacht precies dat. De booster zit trouwens niet in de weg. Volgens Gizmodo gebruikt die de andere toren op Starbase.",
-    "img": [
-     "lib/starship-pad.jpg",
-     "spacex-7.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Starbase launch tower",
-       "Starship launch tower Boca Chica",
-       "Starbase orbital launch mount"
-      ],
-      "want": "the tall steel Starship launch tower at Starbase, Texas"
-     }
-    ],
-    "pop": [
-     {
-      "say": "richting land",
-      "show": "RICHTING LAND"
-     },
-     {
-      "say": "open zee",
-      "show": "NIET DE ZEE"
-     },
-     {
-      "say": "FAA",
-      "show": "FAA-VERGUNNING"
-     },
-     {
-      "say": "beide trappen",
-      "show": "BEIDE TRAPPEN"
-     },
-     {
-      "say": "verwacht precies dat",
-      "show": "VERWACHT"
-     },
-     {
-      "say": "niet in de weg",
-      "show": "GEEN FILE"
-     },
-     {
-      "say": "andere toren",
-      "show": "DE ANDERE TOREN"
-     }
-    ]
-   },
-   {
-    "head": "Hoe landt Starship dan op de maan en Mars zonder toren?",
-    "img": [
-     "starship-moon.jpg"
-    ],
-    "pop": [
-     {
-      "say": "",
-      "show": "GEEN TOREN OP DE MAAN"
-     }
-    ]
-   },
-   {
-    "text": "Op eigen poten. Op de maan wacht geen toren. Dus Starship HLS, de versie die NASA heeft ingehuurd als maanlander voor zijn Artemis-astronauten, krijgt landingspoten. Al in 2020 schreef Musk dat SpaceX werkte aan nieuwe poten met een bredere stand, die zichzelf waterpas zetten op oneffen grond. Plus stuurraketjes hoog op de romp, om het schip tijdens de landing stil te houden.",
-    "img": [
-     "starship-moon.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Starship HLS",
-       "Starship Human Landing System",
-       "Starship lunar lander"
-      ],
-      "want": "the Starship Human Landing System lunar lander (illustration)"
-     },
-     {
-      "q": [
-       "Moon surface Apollo",
-       "lunar surface",
-       "Moon craters"
-      ],
-      "want": "the grey cratered surface of the Moon"
-     }
-    ],
-    "pop": [
-     {
-      "say": "eigen poten",
-      "show": "EIGEN POTEN"
-     },
-     {
-      "say": "geen toren",
-      "show": "GEEN TOREN"
-     },
-     {
-      "say": "Starship HLS",
-      "show": "STARSHIP HLS"
-     },
-     {
-      "say": "Artemis",
-      "show": "ARTEMIS"
-     },
-     {
-      "say": "landingspoten",
-      "show": "LANDINGSPOTEN"
-     },
-     {
-      "say": "bredere stand",
-      "show": "BREDERE STAND"
-     },
-     {
-      "say": "waterpas",
-      "show": "ZELF WATERPAS"
-     },
-     {
-      "say": "stuurraketjes",
-      "show": "STUURRAKETJES"
-     }
-    ]
-   },
-   {
-    "text": "Dat maanschip komt nooit terug door de aardse dampkring, dus het heeft geen hitteschild en geen flappen nodig. De eerste schepen op Mars hebben hetzelfde probleem. Wat SpaceX daar later ook bouwt, de eerste landingen gebeuren op kale grond. Vangen met een toren is een truc voor de aarde, bedoeld voor één ding: snel weer vliegen.",
-    "img": [
-     "starship-fleet-mars.jpg",
-     "mars-keynote-rover.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Mars surface Curiosity",
-       "Mars landscape rover",
-       "Martian surface"
-      ],
-      "want": "the red rocky surface of Mars"
-     }
-    ],
-    "pop": [
-     {
-      "say": "geen hitteschild",
-      "show": "GEEN HITTESCHILD"
-     },
-     {
-      "say": "geen flappen",
-      "show": "GEEN FLAPPEN"
-     },
-     {
-      "say": "schepen op Mars",
-      "show": "MARS"
-     },
-     {
-      "say": "kale grond",
-      "show": "KALE GROND"
-     },
-     {
-      "say": "truc voor de aarde",
-      "show": "EEN AARDSE TRUC"
-     },
-     {
-      "say": "snel weer vliegen",
-      "show": "SNEL WEER VLIEGEN"
-     }
-    ]
-   },
-   {
-    "head": "Wat zou een dubbele vangst veranderen?",
-    "img": [
-     "lib/starship-pad.jpg"
-    ],
-    "pop": [
-     {
-      "say": "",
-      "show": "DUBBELE VANGST"
-     }
-    ]
-   },
-   {
-    "text": "Starship zou de eerste orbitale raket worden die in zijn geheel terugkomt. Falcon 9 laat zijn booster al landen, maar de bovenste trap gaat bij elke vlucht verloren. Een gevangen schip kan worden nagekeken, bijgetankt en in theorie opnieuw vliegen. Dat is het hele idee achter het ontwerp. Veel goedkopere lanceringen, voor Starlink, voor NASA's maanmissies, en voor Musks plannen met Mars, waar Tesla's robot Optimus een rol moet spelen.",
-    "img": [
-     "spacex-6.jpg",
-     "starship-optimus-door.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Falcon 9 second stage",
-       "Falcon 9 upper stage",
-       "Falcon 9 launch"
-      ],
-      "want": "a Falcon 9 rocket or its upper stage"
-     }
-    ],
-    "pop": [
-     {
-      "say": "eerste orbitale raket",
-      "show": "EEN WERELDPRIMEUR"
-     },
-     {
-      "say": "Falcon 9",
-      "show": "FALCON 9"
-     },
-     {
-      "say": "verloren",
-      "show": "BOVENTRAP WEG"
-     },
-     {
-      "say": "bijgetankt",
-      "show": "BIJTANKEN"
-     },
-     {
-      "say": "opnieuw vliegen",
-      "show": "OPNIEUW VLIEGEN"
-     },
-     {
-      "say": "hele idee",
-      "show": "HET HELE IDEE"
-     },
-     {
-      "say": "goedkopere lanceringen",
-      "show": "GOEDKOPER LANCEREN"
-     },
-     {
-      "say": "Mars",
-      "show": "MARS"
-     },
-     {
-      "say": "Optimus",
-      "show": "OPTIMUS"
-     }
-    ]
-   },
-   {
-    "text": "SpaceX en Tesla kijken naar een mogelijke fusie, dus ook Tesla-aandeelhouders volgen deze vluchten. Een eerste poging kan nog misgaan. Zelfs Musk noemde succes alleen eerder wel dan niet. Maar het vreemde ontwerp klopt zodra je het hele plan ziet. Starship heeft geen vleugels, geen poten en geen parachutes, omdat de toren zijn landingsgestel is.",
-    "img": [
-     "lib/musk-chess-companies.jpg",
-     "lib/starship-booster-catch.jpg",
-     "lib/starship-pad.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Starbase launch tower",
-       "Starship launch tower Boca Chica",
-       "Starbase orbital launch mount"
-      ],
-      "want": "the tall steel Starship launch tower at Starbase, Texas"
-     }
-    ],
-    "pop": [
-     {
-      "say": "mogelijke fusie",
-      "show": "TESLA + SPACEX?"
-     },
-     {
-      "say": "aandeelhouders",
-      "show": "AANDEELHOUDERS KIJKEN"
-     },
-     {
-      "say": "misgaan",
-      "show": "HET KAN MISGAAN"
-     },
-     {
-      "say": "eerder wel dan niet",
-      "show": "EERDER WEL DAN NIET"
-     },
-     {
-      "say": "hele plan",
-      "show": "HET HELE PLAN"
-     },
-     {
-      "say": "geen vleugels, geen poten",
-      "show": "GEEN VLEUGELS, GEEN POTEN"
-     },
-     {
-      "say": "landingsgestel",
-      "show": "DE TOREN IS HET LANDINGSGESTEL"
-     }
-    ]
-   }
-  ],
-  "yt_title_en": "How SpaceX Catches Starship: Why It Has No Wings or Landing Legs",
-  "yt_title_nl": "Hoe SpaceX Starship Vangt: Waarom Hij Geen Vleugels of Poten Heeft"
- }
+  },
+  "video": {
+    "en": [
+      {
+        "text": "No rocket that reaches orbit has ever come home completely in one piece. SpaceX wants to change that on Starship Flight 15, planned for November 2026: catch the booster and the ship with the tower, on the same flight. The booster has done it three times. The ship never has. Musk says success is more likely than not. And here is the strange part. The ship coming back from orbit has no wings, no landing legs and no parachutes. It looks like a spaceship missing every part you would need to land.",
+        "img": [
+          "lib/starship-pad.jpg",
+          "spacex-7.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Starship launch",
+              "Starship integrated flight test launch",
+              "Super Heavy liftoff"
+            ],
+            "want": "a Starship rocket lifting off from Starbase"
+          },
+          {
+            "q": [
+              "Starbase launch tower",
+              "Starship launch tower Boca Chica",
+              "Starbase orbital launch mount"
+            ],
+            "want": "the tall steel Starship launch tower at Starbase, Texas"
+          }
+        ],
+        "pop": [
+          {
+            "say": "in one piece",
+            "show": "IN ONE PIECE"
+          },
+          {
+            "say": "Flight 15",
+            "show": "FLIGHT 15"
+          },
+          {
+            "say": "catch the booster and the ship",
+            "show": "CATCH BOTH"
+          },
+          {
+            "say": "same flight",
+            "show": "ONE FLIGHT"
+          },
+          {
+            "say": "three times",
+            "show": "BOOSTER: 3 CATCHES"
+          },
+          {
+            "say": "ship never has",
+            "show": "SHIP: NEVER"
+          },
+          {
+            "say": "more likely than not",
+            "show": "MORE LIKELY THAN NOT"
+          },
+          {
+            "say": "no wings",
+            "show": "NO WINGS"
+          },
+          {
+            "say": "no landing legs",
+            "show": "NO LEGS"
+          },
+          {
+            "say": "no parachutes",
+            "show": "NO PARACHUTES"
+          },
+          {
+            "say": "missing every part",
+            "show": "HOW DOES IT LAND?"
+          }
+        ]
+      },
+      {
+        "head": "Why does Starship have no wings like the Space Shuttle?",
+        "img": [
+          "lib/starship-pad.jpg"
+        ],
+        "pop": [
+          {
+            "say": "",
+            "show": "WHY NO WINGS?"
+          }
+        ]
+      },
+      {
+        "text": "Because wings are heavy, and Starship is built for places without runways. The Space Shuttle came home as a giant glider. It flew through the air on its wings and rolled to a stop on wheels, on a long runway.",
+        "photo": [
+          {
+            "q": [
+              "Space Shuttle landing",
+              "Space Shuttle Discovery landing runway",
+              "Space Shuttle Atlantis landing"
+            ],
+            "want": "a Space Shuttle orbiter landing on a runway"
+          },
+          {
+            "q": [
+              "Space Shuttle orbiter wings",
+              "Space Shuttle Endeavour",
+              "Space Shuttle on runway"
+            ],
+            "want": "a Space Shuttle orbiter with its delta wings"
+          }
+        ],
+        "pop": [
+          {
+            "say": "wings are heavy",
+            "show": "WINGS ARE HEAVY"
+          },
+          {
+            "say": "without runways",
+            "show": "NO RUNWAYS"
+          },
+          {
+            "say": "Space Shuttle",
+            "show": "THE SHUTTLE"
+          },
+          {
+            "say": "giant glider",
+            "show": "A GIANT GLIDER"
+          },
+          {
+            "say": "on wheels",
+            "show": "ON WHEELS"
+          },
+          {
+            "say": "long runway",
+            "show": "LONG RUNWAY"
+          }
+        ]
+      },
+      {
+        "text": "That worked. But those wings and that landing gear had to be carried all the way to orbit and back. And they only help where there is thick air and a strip of concrete. Starship is meant for Earth, the Moon and Mars. The Moon has no air at all. Mars has very thin air, and no runways.",
+        "img": [
+          "starship-moon.jpg",
+          "starship-fleet-mars.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Moon surface Apollo",
+              "lunar surface",
+              "Moon craters"
+            ],
+            "want": "the grey cratered surface of the Moon"
+          },
+          {
+            "q": [
+              "Mars surface Curiosity",
+              "Mars landscape rover",
+              "Martian surface"
+            ],
+            "want": "the red rocky surface of Mars"
+          }
+        ],
+        "pop": [
+          {
+            "say": "carried all the way",
+            "show": "CARRIED TO ORBIT"
+          },
+          {
+            "say": "thick air",
+            "show": "THICK AIR"
+          },
+          {
+            "say": "strip of concrete",
+            "show": "CONCRETE NEEDED"
+          },
+          {
+            "say": "Earth, the Moon and Mars",
+            "show": "EARTH, MOON, MARS"
+          },
+          {
+            "say": "no air at all",
+            "show": "MOON: NO AIR"
+          },
+          {
+            "say": "very thin air",
+            "show": "MARS: THIN AIR"
+          },
+          {
+            "say": "no runways",
+            "show": "NO RUNWAYS"
+          }
+        ]
+      },
+      {
+        "text": "Parachutes? For a vehicle this size they would have to be enormous. They open too slowly to help if an engine fails late, and they add a lot of weight. So SpaceX left out wings, wheels and parachutes. Which leaves a steel ship falling out of the sky, with nothing obvious to slow it down.",
+        "img": [
+          "spacex-8.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Orion parachute test",
+              "large parachute drop test",
+              "Orion capsule parachutes"
+            ],
+            "want": "a test of large spacecraft parachutes"
+          },
+          {
+            "q": [
+              "Starship SN8",
+              "Starship SN15",
+              "Starship prototype Boca Chica"
+            ],
+            "want": "a stainless steel Starship prototype at Boca Chica, Texas"
+          }
+        ],
+        "pop": [
+          {
+            "say": "Parachutes",
+            "show": "PARACHUTES?"
+          },
+          {
+            "say": "enormous",
+            "show": "ENORMOUS"
+          },
+          {
+            "say": "open too slowly",
+            "show": "TOO SLOW"
+          },
+          {
+            "say": "a lot of weight",
+            "show": "TOO HEAVY"
+          },
+          {
+            "say": "wings, wheels and parachutes",
+            "show": "ALL LEFT OUT"
+          },
+          {
+            "say": "steel ship falling",
+            "show": "A FALLING STEEL SHIP"
+          },
+          {
+            "say": "nothing obvious",
+            "show": "NO BRAKES?"
+          }
+        ]
+      },
+      {
+        "head": "So how does a ship without wings slow down?",
+        "img": [
+          "starship-moon.jpg"
+        ],
+        "pop": [
+          {
+            "say": "",
+            "show": "HOW DOES IT BRAKE?"
+          }
+        ]
+      },
+      {
+        "text": "It falls belly first, like a skydiver, and uses its whole body as an air brake. After re-entry, Starship drops through the atmosphere lying flat, with its side of black hexagonal heat shield tiles facing down. Four flaps, two near the nose and two at the base, work like a skydiver's arms and legs. They steer, and they keep the ship stable.",
+        "photo": [
+          {
+            "q": [
+              "skydiving freefall",
+              "skydiver freefall",
+              "formation skydiving"
+            ],
+            "want": "a skydiver in freefall, belly to earth (not recognisable)"
+          },
+          {
+            "q": [
+              "Starship heat shield tiles",
+              "Starship hexagonal tiles",
+              "Starship heat shield"
+            ],
+            "want": "the black hexagonal heat shield tiles on a Starship"
+          },
+          {
+            "q": [
+              "Starship flaps",
+              "Starship forward flaps",
+              "Starship nose cone flaps"
+            ],
+            "want": "the flaps on a Starship upper stage"
+          }
+        ],
+        "pop": [
+          {
+            "say": "belly first",
+            "show": "BELLY FIRST"
+          },
+          {
+            "say": "like a skydiver",
+            "show": "LIKE A SKYDIVER"
+          },
+          {
+            "say": "air brake",
+            "show": "ONE BIG AIR BRAKE"
+          },
+          {
+            "say": "lying flat",
+            "show": "LYING FLAT"
+          },
+          {
+            "say": "heat shield tiles",
+            "show": "HEAT SHIELD TILES"
+          },
+          {
+            "say": "Four flaps",
+            "show": "4 FLAPS"
+          },
+          {
+            "say": "arms and legs",
+            "show": "ARMS AND LEGS"
+          },
+          {
+            "say": "keep the ship stable",
+            "show": "STABLE"
+          }
+        ]
+      },
+      {
+        "text": "Lying flat makes a huge difference. An analysis by Everyday Astronaut puts the side of the ship at about 545 square metres facing the air. Its base offers only about 70. That is almost eight times as much area to push against.",
+        "photo": [
+          {
+            "q": [
+              "Starship heat shield tiles",
+              "Starship hexagonal tiles",
+              "Starship heat shield"
+            ],
+            "want": "the black hexagonal heat shield tiles on a Starship"
+          },
+          {
+            "q": [
+              "Starship SN8",
+              "Starship SN15",
+              "Starship prototype Boca Chica"
+            ],
+            "want": "a stainless steel Starship prototype at Boca Chica, Texas"
+          }
+        ],
+        "pop": [
+          {
+            "say": "huge difference",
+            "show": "HUGE DIFFERENCE"
+          },
+          {
+            "say": "545 square metres",
+            "show": "545 M² SIDE"
+          },
+          {
+            "say": "only about 70",
+            "show": "70 M² BASE"
+          },
+          {
+            "say": "almost eight times",
+            "show": "ALMOST 8X"
+          },
+          {
+            "say": "push against",
+            "show": "MORE DRAG"
+          }
+        ]
+      },
+      {
+        "text": "In the flight plan of the early SN8 prototype, that slowed the ship to about 90 metres per second before its engines lit. A Falcon 9 booster falls engine first, and is still doing around 310 metres per second when its landing burn starts. The slower you fall, the less fuel the final braking costs. But falling flat is only half a landing. The ship still has to end up standing upright.",
+        "img": [
+          "spacex-6.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Starship SN8",
+              "Starship SN15",
+              "Starship prototype Boca Chica"
+            ],
+            "want": "a stainless steel Starship prototype at Boca Chica, Texas"
+          },
+          {
+            "q": [
+              "Falcon 9 landing",
+              "Falcon 9 booster landing",
+              "Falcon 9 first stage landing"
+            ],
+            "want": "a Falcon 9 booster landing on its engines"
+          }
+        ],
+        "pop": [
+          {
+            "say": "SN8 prototype",
+            "show": "SN8"
+          },
+          {
+            "say": "90 metres per second",
+            "show": "ABOUT 90 M/S"
+          },
+          {
+            "say": "Falcon 9 booster",
+            "show": "FALCON 9"
+          },
+          {
+            "say": "310 metres per second",
+            "show": "ABOUT 310 M/S"
+          },
+          {
+            "say": "less fuel",
+            "show": "LESS FUEL"
+          },
+          {
+            "say": "half a landing",
+            "show": "HALF A LANDING"
+          },
+          {
+            "say": "standing upright",
+            "show": "UPRIGHT?"
+          }
+        ]
+      },
+      {
+        "head": "How does the tower catch the ship?",
+        "img": [
+          "lib/starship-booster-catch.jpg"
+        ],
+        "pop": [
+          {
+            "say": "",
+            "show": "THE CATCH"
+          }
+        ]
+      },
+      {
+        "text": "The ship flips upright at the last moment, and drops between the tower's arms. In the animation SpaceX showed on its earnings webcast, the ship comes in flat over Starbase in South Texas, steering with its flaps. Then a short engine burn swings it vertical and slows it down. It sinks past the top of the tower, and the two arms, the chopsticks, close around it.",
+        "img": [
+          "lib/starship-booster-catch.jpg",
+          "lib/starship-launch.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Starbase launch tower",
+              "Starship launch tower Boca Chica",
+              "Starbase orbital launch mount"
+            ],
+            "want": "the tall steel Starship launch tower at Starbase, Texas"
+          }
+        ],
+        "pop": [
+          {
+            "say": "flips upright",
+            "show": "FLIP UPRIGHT"
+          },
+          {
+            "say": "last moment",
+            "show": "LAST MOMENT"
+          },
+          {
+            "say": "tower's arms",
+            "show": "INTO THE ARMS"
+          },
+          {
+            "say": "earnings webcast",
+            "show": "SPACEX ANIMATION"
+          },
+          {
+            "say": "Starbase",
+            "show": "STARBASE, TEXAS"
+          },
+          {
+            "say": "short engine burn",
+            "show": "SHORT BURN"
+          },
+          {
+            "say": "swings it vertical",
+            "show": "VERTICAL"
+          },
+          {
+            "say": "chopsticks",
+            "show": "CHOPSTICKS"
+          },
+          {
+            "say": "close around it",
+            "show": "ARMS CLOSE"
+          }
+        ]
+      },
+      {
+        "text": "The arms do not squeeze the steel hull. The vehicles carry catch pins that come to rest on rails on the arms. Those take the weight, and soak up the shock.",
+        "img": [
+          "lib/starship-booster-catch.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Mechazilla chopsticks",
+              "Starbase chopsticks arms",
+              "Starship tower catch arms"
+            ],
+            "want": "the catch arms (chopsticks) of the Starship launch tower"
+          }
+        ],
+        "pop": [
+          {
+            "say": "do not squeeze",
+            "show": "NO SQUEEZING"
+          },
+          {
+            "say": "catch pins",
+            "show": "CATCH PINS"
+          },
+          {
+            "say": "rails on the arms",
+            "show": "RAILS ON THE ARMS"
+          },
+          {
+            "say": "take the weight",
+            "show": "TAKE THE WEIGHT"
+          },
+          {
+            "say": "soak up the shock",
+            "show": "ABSORB THE SHOCK"
+          }
+        ]
+      },
+      {
+        "text": "SpaceX has practised the flip for years. Prototypes like SN8 and SN15 did it in 2020 and 2021, after falling from around 10 kilometres up. On later test flights, ships flipped and hovered over the Indian Ocean before tipping into the water. This time, though, the ship comes down next to land, buildings, and the hardware SpaceX needs for every future flight.",
+        "img": [
+          "lib/starship-pad.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Starship SN8",
+              "Starship SN15",
+              "Starship prototype Boca Chica"
+            ],
+            "want": "a stainless steel Starship prototype at Boca Chica, Texas"
+          },
+          {
+            "q": [
+              "Indian Ocean",
+              "Indian Ocean from space",
+              "open ocean aerial"
+            ],
+            "want": "the open Indian Ocean"
+          }
+        ],
+        "pop": [
+          {
+            "say": "practised the flip",
+            "show": "YEARS OF PRACTICE"
+          },
+          {
+            "say": "SN8 and SN15",
+            "show": "SN8 AND SN15"
+          },
+          {
+            "say": "10 kilometres",
+            "show": "FROM 10 KM"
+          },
+          {
+            "say": "Indian Ocean",
+            "show": "INDIAN OCEAN"
+          },
+          {
+            "say": "tipping into the water",
+            "show": "INTO THE WATER"
+          },
+          {
+            "say": "next to land",
+            "show": "THIS TIME: LAND"
+          },
+          {
+            "say": "every future flight",
+            "show": "THE TOWER AT STAKE"
+          }
+        ]
+      },
+      {
+        "head": "Why is catching the ship harder than catching the booster?",
+        "img": [
+          "lib/starship-launch.jpg"
+        ],
+        "pop": [
+          {
+            "say": "",
+            "show": "WHY HARDER?"
+          }
+        ]
+      },
+      {
+        "text": "Because the ship comes back from orbit, not from the edge of space. The booster separates a few minutes after liftoff, turns around, and is back at the tower within minutes. The ship first has to finish its flight around the Earth, survive re-entry at orbital speed, and only then line up with one tower in Texas. If anything cuts the mission short, it never comes back over Starbase at all.",
+        "img": [
+          "lib/starship-launch.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Earth from orbit",
+              "Earth from the International Space Station",
+              "Earth limb from space"
+            ],
+            "want": "planet Earth seen from orbit"
+          },
+          {
+            "q": [
+              "Starship launch",
+              "Starship integrated flight test launch",
+              "Super Heavy liftoff"
+            ],
+            "want": "a Starship rocket lifting off from Starbase"
+          }
+        ],
+        "pop": [
+          {
+            "say": "from orbit",
+            "show": "FROM ORBIT"
+          },
+          {
+            "say": "edge of space",
+            "show": "NOT THE EDGE OF SPACE"
+          },
+          {
+            "say": "few minutes",
+            "show": "BOOSTER: MINUTES"
+          },
+          {
+            "say": "around the Earth",
+            "show": "AROUND THE EARTH"
+          },
+          {
+            "say": "orbital speed",
+            "show": "ORBITAL SPEED"
+          },
+          {
+            "say": "one tower in Texas",
+            "show": "ONE TOWER"
+          },
+          {
+            "say": "cuts the mission short",
+            "show": "MISSION CUT SHORT?"
+          },
+          {
+            "say": "never comes back",
+            "show": "NO CATCH"
+          }
+        ]
+      },
+      {
+        "text": "There is more that can go wrong. The new Raptor 3 engines had problems on each of their first flights, Gizmodo noted. On Flight 14, an engine shut down early, although the ship still reached orbit and released 26 Starlink satellites. The tiles and flaps must come through the hottest part of the flight in good enough shape to steer precisely.",
+        "img": [
+          "starlink-launch-stack.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Raptor engine",
+              "SpaceX Raptor engine",
+              "Raptor rocket engine"
+            ],
+            "want": "a SpaceX Raptor rocket engine"
+          },
+          {
+            "q": [
+              "Starship heat shield tiles",
+              "Starship hexagonal tiles",
+              "Starship heat shield"
+            ],
+            "want": "the black hexagonal heat shield tiles on a Starship"
+          }
+        ],
+        "pop": [
+          {
+            "say": "more that can go wrong",
+            "show": "MORE RISKS"
+          },
+          {
+            "say": "Raptor 3",
+            "show": "RAPTOR 3"
+          },
+          {
+            "say": "problems",
+            "show": "ENGINE TROUBLE"
+          },
+          {
+            "say": "Flight 14",
+            "show": "FLIGHT 14"
+          },
+          {
+            "say": "shut down early",
+            "show": "ONE ENGINE OUT"
+          },
+          {
+            "say": "26 Starlink satellites",
+            "show": "26 STARLINKS"
+          },
+          {
+            "say": "hottest part",
+            "show": "THE HOTTEST PART"
+          },
+          {
+            "say": "steer precisely",
+            "show": "STEER PRECISELY"
+          }
+        ]
+      },
+      {
+        "text": "And a ship returning from orbit for a catch flies toward land instead of the open sea. So the FAA licence has to allow a return to the launch site, and tower catches for both stages. SpaceX president Gwynne Shotwell said she expects exactly that. The booster, by the way, does not get in the way. According to Gizmodo, it uses the other tower at Starbase.",
+        "img": [
+          "lib/starship-pad.jpg",
+          "spacex-7.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Starbase launch tower",
+              "Starship launch tower Boca Chica",
+              "Starbase orbital launch mount"
+            ],
+            "want": "the tall steel Starship launch tower at Starbase, Texas"
+          }
+        ],
+        "pop": [
+          {
+            "say": "toward land",
+            "show": "TOWARD LAND"
+          },
+          {
+            "say": "open sea",
+            "show": "NOT THE SEA"
+          },
+          {
+            "say": "FAA licence",
+            "show": "FAA LICENCE"
+          },
+          {
+            "say": "both stages",
+            "show": "BOTH STAGES"
+          },
+          {
+            "say": "expects exactly that",
+            "show": "EXPECTED"
+          },
+          {
+            "say": "does not get in the way",
+            "show": "NO TRAFFIC JAM"
+          },
+          {
+            "say": "other tower",
+            "show": "THE OTHER TOWER"
+          }
+        ]
+      },
+      {
+        "head": "So how will Starship land on the Moon and Mars without a tower?",
+        "img": [
+          "starship-moon.jpg"
+        ],
+        "pop": [
+          {
+            "say": "",
+            "show": "NO TOWER ON THE MOON"
+          }
+        ]
+      },
+      {
+        "text": "On its own legs. No tower waits on the Moon. So Starship HLS, the version NASA hired as the Moon lander for its Artemis astronauts, gets landing legs. Back in 2020, Musk wrote that SpaceX was working on new legs with a wider stance, that can level themselves on uneven ground. Plus thrusters high on the hull, to keep the ship steady as it lands.",
+        "img": [
+          "starship-moon.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Starship HLS",
+              "Starship Human Landing System",
+              "Starship lunar lander"
+            ],
+            "want": "the Starship Human Landing System lunar lander (illustration)"
+          },
+          {
+            "q": [
+              "Moon surface Apollo",
+              "lunar surface",
+              "Moon craters"
+            ],
+            "want": "the grey cratered surface of the Moon"
+          }
+        ],
+        "pop": [
+          {
+            "say": "own legs",
+            "show": "ITS OWN LEGS"
+          },
+          {
+            "say": "No tower",
+            "show": "NO TOWER"
+          },
+          {
+            "say": "Starship HLS",
+            "show": "STARSHIP HLS"
+          },
+          {
+            "say": "Artemis astronauts",
+            "show": "ARTEMIS"
+          },
+          {
+            "say": "landing legs",
+            "show": "LANDING LEGS"
+          },
+          {
+            "say": "wider stance",
+            "show": "WIDER STANCE"
+          },
+          {
+            "say": "level themselves",
+            "show": "SELF-LEVELLING"
+          },
+          {
+            "say": "thrusters high on the hull",
+            "show": "THRUSTERS UP HIGH"
+          }
+        ]
+      },
+      {
+        "text": "That Moon ship never comes back through Earth's air, so it needs no heat shield and no flaps. The first ships on Mars face the same problem. Whatever SpaceX builds there later, the first landings happen on bare ground. The tower catch is an Earth trick, made for one thing: flying again, fast.",
+        "img": [
+          "starship-fleet-mars.jpg",
+          "mars-keynote-rover.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Mars surface Curiosity",
+              "Mars landscape rover",
+              "Martian surface"
+            ],
+            "want": "the red rocky surface of Mars"
+          }
+        ],
+        "pop": [
+          {
+            "say": "no heat shield",
+            "show": "NO HEAT SHIELD"
+          },
+          {
+            "say": "no flaps",
+            "show": "NO FLAPS"
+          },
+          {
+            "say": "ships on Mars",
+            "show": "MARS"
+          },
+          {
+            "say": "bare ground",
+            "show": "BARE GROUND"
+          },
+          {
+            "say": "Earth trick",
+            "show": "AN EARTH TRICK"
+          },
+          {
+            "say": "flying again, fast",
+            "show": "FLY AGAIN, FAST"
+          }
+        ]
+      },
+      {
+        "head": "What would a double catch change?",
+        "img": [
+          "lib/starship-pad.jpg"
+        ],
+        "pop": [
+          {
+            "say": "",
+            "show": "A DOUBLE CATCH"
+          }
+        ]
+      },
+      {
+        "text": "It would make Starship the first orbital rocket that comes home in one piece. Falcon 9 already lands its booster, but its upper stage is thrown away on every flight. A caught ship could be checked, refuelled and, in theory, flown again. That is the whole idea behind the design. Much cheaper launches, for Starlink, for NASA's Moon missions, and for Musk's Mars plans, where Tesla's Optimus robot is meant to play a role.",
+        "img": [
+          "spacex-6.jpg",
+          "starship-optimus-door.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Falcon 9 second stage",
+              "Falcon 9 upper stage",
+              "Falcon 9 launch"
+            ],
+            "want": "a Falcon 9 rocket or its upper stage"
+          }
+        ],
+        "pop": [
+          {
+            "say": "first orbital rocket",
+            "show": "A WORLD FIRST"
+          },
+          {
+            "say": "Falcon 9",
+            "show": "FALCON 9"
+          },
+          {
+            "say": "thrown away",
+            "show": "UPPER STAGE LOST"
+          },
+          {
+            "say": "refuelled",
+            "show": "REFUEL"
+          },
+          {
+            "say": "flown again",
+            "show": "FLY AGAIN"
+          },
+          {
+            "say": "whole idea",
+            "show": "THE WHOLE IDEA"
+          },
+          {
+            "say": "cheaper launches",
+            "show": "CHEAPER LAUNCHES"
+          },
+          {
+            "say": "Mars plans",
+            "show": "MARS"
+          },
+          {
+            "say": "Optimus robot",
+            "show": "OPTIMUS"
+          }
+        ]
+      },
+      {
+        "text": "SpaceX and Tesla are studying a possible merger, so Tesla shareholders are watching these flights too. A first attempt can still go wrong. Even Musk only called success more likely than not. But the strange design makes sense once you see the whole plan. Starship has no wings, no legs and no parachutes, because the tower is its landing gear.",
+        "img": [
+          "lib/musk-chess-companies.jpg",
+          "lib/starship-booster-catch.jpg",
+          "lib/starship-pad.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Starbase launch tower",
+              "Starship launch tower Boca Chica",
+              "Starbase orbital launch mount"
+            ],
+            "want": "the tall steel Starship launch tower at Starbase, Texas"
+          }
+        ],
+        "pop": [
+          {
+            "say": "possible merger",
+            "show": "TESLA + SPACEX?"
+          },
+          {
+            "say": "shareholders",
+            "show": "SHAREHOLDERS WATCH"
+          },
+          {
+            "say": "still go wrong",
+            "show": "IT CAN FAIL"
+          },
+          {
+            "say": "more likely than not",
+            "show": "MORE LIKELY THAN NOT"
+          },
+          {
+            "say": "whole plan",
+            "show": "THE WHOLE PLAN"
+          },
+          {
+            "say": "no wings, no legs",
+            "show": "NO WINGS, NO LEGS"
+          },
+          {
+            "say": "landing gear",
+            "show": "THE TOWER IS THE LANDING GEAR"
+          }
+        ]
+      }
+    ],
+    "nl": [
+      {
+        "text": "Geen raket die een baan om de aarde bereikt, is ooit helemaal heel teruggekomen. SpaceX wil dat veranderen bij Starship-vlucht vijftien, gepland voor november 2026: de booster en het schip allebei vangen met de toren, in dezelfde vlucht. De booster deed het al drie keer. Het schip nog nooit. Musk noemt de kans op succes eerder wel dan niet. En nu het vreemde. Het schip dat uit de ruimte terugkomt, heeft geen vleugels, geen landingspoten en geen parachutes. Het lijkt een ruimteschip waaraan alles ontbreekt om te landen.",
+        "img": [
+          "lib/starship-pad.jpg",
+          "spacex-7.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Starship launch",
+              "Starship integrated flight test launch",
+              "Super Heavy liftoff"
+            ],
+            "want": "a Starship rocket lifting off from Starbase"
+          },
+          {
+            "q": [
+              "Starbase launch tower",
+              "Starship launch tower Boca Chica",
+              "Starbase orbital launch mount"
+            ],
+            "want": "the tall steel Starship launch tower at Starbase, Texas"
+          }
+        ],
+        "pop": [
+          {
+            "say": "helemaal heel",
+            "show": "IN ÉÉN STUK"
+          },
+          {
+            "say": "vlucht vijftien",
+            "show": "VLUCHT 15"
+          },
+          {
+            "say": "allebei vangen",
+            "show": "BEIDE VANGEN"
+          },
+          {
+            "say": "dezelfde vlucht",
+            "show": "ÉÉN VLUCHT"
+          },
+          {
+            "say": "drie keer",
+            "show": "BOOSTER: 3 KEER"
+          },
+          {
+            "say": "nog nooit",
+            "show": "SCHIP: NOOIT"
+          },
+          {
+            "say": "eerder wel dan niet",
+            "show": "EERDER WEL DAN NIET"
+          },
+          {
+            "say": "geen vleugels",
+            "show": "GEEN VLEUGELS"
+          },
+          {
+            "say": "geen landingspoten",
+            "show": "GEEN POTEN"
+          },
+          {
+            "say": "geen parachutes",
+            "show": "GEEN PARACHUTES"
+          },
+          {
+            "say": "alles ontbreekt",
+            "show": "HOE LAND JE DAN?"
+          }
+        ]
+      },
+      {
+        "head": "Waarom heeft Starship geen vleugels zoals de spaceshuttle?",
+        "img": [
+          "lib/starship-pad.jpg"
+        ],
+        "pop": [
+          {
+            "say": "",
+            "show": "WAAROM GEEN VLEUGELS?"
+          }
+        ]
+      },
+      {
+        "text": "Omdat vleugels zwaar zijn, en Starship gebouwd is voor plekken zonder landingsbaan. De spaceshuttle kwam terug als een reusachtig zweefvliegtuig. Hij gleed op zijn vleugels door de lucht en rolde op wielen uit, over een lange landingsbaan.",
+        "photo": [
+          {
+            "q": [
+              "Space Shuttle landing",
+              "Space Shuttle Discovery landing runway",
+              "Space Shuttle Atlantis landing"
+            ],
+            "want": "a Space Shuttle orbiter landing on a runway"
+          },
+          {
+            "q": [
+              "Space Shuttle orbiter wings",
+              "Space Shuttle Endeavour",
+              "Space Shuttle on runway"
+            ],
+            "want": "a Space Shuttle orbiter with its delta wings"
+          }
+        ],
+        "pop": [
+          {
+            "say": "vleugels zwaar",
+            "show": "VLEUGELS ZIJN ZWAAR"
+          },
+          {
+            "say": "zonder landingsbaan",
+            "show": "GEEN LANDINGSBAAN"
+          },
+          {
+            "say": "spaceshuttle",
+            "show": "DE SPACESHUTTLE"
+          },
+          {
+            "say": "zweefvliegtuig",
+            "show": "EEN ZWEEFVLIEGTUIG"
+          },
+          {
+            "say": "op wielen",
+            "show": "OP WIELEN"
+          },
+          {
+            "say": "lange landingsbaan",
+            "show": "LANGE BAAN"
+          }
+        ]
+      },
+      {
+        "text": "Dat werkte. Maar die vleugels en dat landingsgestel moesten helemaal mee naar de ruimte en terug. En ze helpen alleen waar dikke lucht en een strook beton is. Starship is bedoeld voor de aarde, de maan en Mars. De maan heeft helemaal geen lucht. Mars heeft heel dunne lucht, en geen landingsbanen.",
+        "img": [
+          "starship-moon.jpg",
+          "starship-fleet-mars.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Moon surface Apollo",
+              "lunar surface",
+              "Moon craters"
+            ],
+            "want": "the grey cratered surface of the Moon"
+          },
+          {
+            "q": [
+              "Mars surface Curiosity",
+              "Mars landscape rover",
+              "Martian surface"
+            ],
+            "want": "the red rocky surface of Mars"
+          }
+        ],
+        "pop": [
+          {
+            "say": "helemaal mee",
+            "show": "MEE NAAR DE RUIMTE"
+          },
+          {
+            "say": "dikke lucht",
+            "show": "DIKKE LUCHT"
+          },
+          {
+            "say": "strook beton",
+            "show": "BETON NODIG"
+          },
+          {
+            "say": "de aarde, de maan en Mars",
+            "show": "AARDE, MAAN, MARS"
+          },
+          {
+            "say": "helemaal geen lucht",
+            "show": "MAAN: GEEN LUCHT"
+          },
+          {
+            "say": "heel dunne lucht",
+            "show": "MARS: DUNNE LUCHT"
+          },
+          {
+            "say": "geen landingsbanen",
+            "show": "GEEN BANEN"
+          }
+        ]
+      },
+      {
+        "text": "Parachutes dan? Voor een voertuig van dit formaat zouden ze gigantisch moeten zijn. Ze gaan te langzaam open om te helpen als een motor laat uitvalt, en ze wegen veel. Dus liet SpaceX vleugels, wielen en parachutes weg. Dan blijft er een stalen schip over dat uit de lucht valt, zonder iets wat het zichtbaar afremt.",
+        "img": [
+          "spacex-8.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Orion parachute test",
+              "large parachute drop test",
+              "Orion capsule parachutes"
+            ],
+            "want": "a test of large spacecraft parachutes"
+          },
+          {
+            "q": [
+              "Starship SN8",
+              "Starship SN15",
+              "Starship prototype Boca Chica"
+            ],
+            "want": "a stainless steel Starship prototype at Boca Chica, Texas"
+          }
+        ],
+        "pop": [
+          {
+            "say": "Parachutes dan",
+            "show": "PARACHUTES?"
+          },
+          {
+            "say": "gigantisch",
+            "show": "GIGANTISCH"
+          },
+          {
+            "say": "te langzaam open",
+            "show": "TE TRAAG"
+          },
+          {
+            "say": "wegen veel",
+            "show": "TE ZWAAR"
+          },
+          {
+            "say": "vleugels, wielen en parachutes",
+            "show": "ALLES WEG"
+          },
+          {
+            "say": "stalen schip",
+            "show": "EEN VALLEND STALEN SCHIP"
+          },
+          {
+            "say": "zichtbaar afremt",
+            "show": "GEEN REMMEN?"
+          }
+        ]
+      },
+      {
+        "head": "Hoe remt een schip zonder vleugels dan af?",
+        "img": [
+          "starship-moon.jpg"
+        ],
+        "pop": [
+          {
+            "say": "",
+            "show": "HOE REMT HET AF?"
+          }
+        ]
+      },
+      {
+        "text": "Het valt plat op zijn buik, als een parachutist in vrije val, en gebruikt zijn hele romp als luchtrem. Na de terugkeer in de dampkring valt Starship liggend naar beneden, met de kant vol zwarte zeshoekige hitteschildtegels naar onder. Vier flappen, twee bij de neus en twee onderaan, werken als de armen en benen van een skydiver. Ze sturen, en ze houden het schip stabiel.",
+        "photo": [
+          {
+            "q": [
+              "skydiving freefall",
+              "skydiver freefall",
+              "formation skydiving"
+            ],
+            "want": "a skydiver in freefall, belly to earth (not recognisable)"
+          },
+          {
+            "q": [
+              "Starship heat shield tiles",
+              "Starship hexagonal tiles",
+              "Starship heat shield"
+            ],
+            "want": "the black hexagonal heat shield tiles on a Starship"
+          },
+          {
+            "q": [
+              "Starship flaps",
+              "Starship forward flaps",
+              "Starship nose cone flaps"
+            ],
+            "want": "the flaps on a Starship upper stage"
+          }
+        ],
+        "pop": [
+          {
+            "say": "plat op zijn buik",
+            "show": "OP ZIJN BUIK"
+          },
+          {
+            "say": "vrije val",
+            "show": "VRIJE VAL"
+          },
+          {
+            "say": "luchtrem",
+            "show": "ÉÉN GROTE LUCHTREM"
+          },
+          {
+            "say": "liggend",
+            "show": "LIGGEND"
+          },
+          {
+            "say": "hitteschildtegels",
+            "show": "HITTESCHILDTEGELS"
+          },
+          {
+            "say": "Vier flappen",
+            "show": "4 FLAPPEN"
+          },
+          {
+            "say": "armen en benen",
+            "show": "ARMEN EN BENEN"
+          },
+          {
+            "say": "stabiel",
+            "show": "STABIEL"
+          }
+        ]
+      },
+      {
+        "text": "Plat liggen maakt een enorm verschil. Volgens een analyse van Everyday Astronaut biedt de zijkant van het schip zo'n 545 vierkante meter aan de lucht. De onderkant maar ongeveer 70. Dat is bijna acht keer zoveel oppervlak om tegenaan te duwen.",
+        "photo": [
+          {
+            "q": [
+              "Starship heat shield tiles",
+              "Starship hexagonal tiles",
+              "Starship heat shield"
+            ],
+            "want": "the black hexagonal heat shield tiles on a Starship"
+          },
+          {
+            "q": [
+              "Starship SN8",
+              "Starship SN15",
+              "Starship prototype Boca Chica"
+            ],
+            "want": "a stainless steel Starship prototype at Boca Chica, Texas"
+          }
+        ],
+        "pop": [
+          {
+            "say": "enorm verschil",
+            "show": "ENORM VERSCHIL"
+          },
+          {
+            "say": "545 vierkante meter",
+            "show": "545 M² ZIJKANT"
+          },
+          {
+            "say": "ongeveer 70",
+            "show": "70 M² ONDERKANT"
+          },
+          {
+            "say": "bijna acht keer",
+            "show": "BIJNA 8X"
+          },
+          {
+            "say": "tegenaan te duwen",
+            "show": "MEER WEERSTAND"
+          }
+        ]
+      },
+      {
+        "text": "In het vluchtplan van het vroege prototype SN8 remde het schip zo af tot ongeveer 90 meter per seconde voordat de motoren aangingen. Een Falcon 9-booster valt met de motoren vooruit, en gaat nog zo'n 310 meter per seconde als zijn landingsbrand begint. Hoe langzamer je valt, hoe minder brandstof het afremmen kost. Maar plat vallen is pas de helft van een landing. Het schip moet uiteindelijk nog rechtop staan.",
+        "img": [
+          "spacex-6.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Starship SN8",
+              "Starship SN15",
+              "Starship prototype Boca Chica"
+            ],
+            "want": "a stainless steel Starship prototype at Boca Chica, Texas"
+          },
+          {
+            "q": [
+              "Falcon 9 landing",
+              "Falcon 9 booster landing",
+              "Falcon 9 first stage landing"
+            ],
+            "want": "a Falcon 9 booster landing on its engines"
+          }
+        ],
+        "pop": [
+          {
+            "say": "prototype SN8",
+            "show": "SN8"
+          },
+          {
+            "say": "90 meter per seconde",
+            "show": "ZO'N 90 M/S"
+          },
+          {
+            "say": "Falcon 9-booster",
+            "show": "FALCON 9"
+          },
+          {
+            "say": "310 meter per seconde",
+            "show": "ZO'N 310 M/S"
+          },
+          {
+            "say": "minder brandstof",
+            "show": "MINDER BRANDSTOF"
+          },
+          {
+            "say": "de helft van een landing",
+            "show": "HALVE LANDING"
+          },
+          {
+            "say": "rechtop staan",
+            "show": "RECHTOP?"
+          }
+        ]
+      },
+      {
+        "head": "Hoe vangt de toren het schip?",
+        "img": [
+          "lib/starship-booster-catch.jpg"
+        ],
+        "pop": [
+          {
+            "say": "",
+            "show": "DE VANGST"
+          }
+        ]
+      },
+      {
+        "text": "Het schip kantelt op het laatste moment rechtop, en zakt tussen de armen van de toren. In de animatie die SpaceX tijdens de webcast liet zien, komt het schip liggend aan boven Starbase in het zuiden van Texas, sturend met zijn flappen. Dan draait een korte motorstoot het verticaal en remt het af. Het zakt langs de top van de toren, en de twee armen, de eetstokjes, sluiten zich eromheen.",
+        "img": [
+          "lib/starship-booster-catch.jpg",
+          "lib/starship-launch.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Starbase launch tower",
+              "Starship launch tower Boca Chica",
+              "Starbase orbital launch mount"
+            ],
+            "want": "the tall steel Starship launch tower at Starbase, Texas"
+          }
+        ],
+        "pop": [
+          {
+            "say": "kantelt",
+            "show": "KANTELEN"
+          },
+          {
+            "say": "laatste moment",
+            "show": "LAATSTE MOMENT"
+          },
+          {
+            "say": "armen van de toren",
+            "show": "TUSSEN DE ARMEN"
+          },
+          {
+            "say": "webcast",
+            "show": "ANIMATIE SPACEX"
+          },
+          {
+            "say": "Starbase",
+            "show": "STARBASE, TEXAS"
+          },
+          {
+            "say": "korte motorstoot",
+            "show": "KORTE STOOT"
+          },
+          {
+            "say": "verticaal",
+            "show": "VERTICAAL"
+          },
+          {
+            "say": "eetstokjes",
+            "show": "EETSTOKJES"
+          },
+          {
+            "say": "sluiten zich",
+            "show": "ARMEN DICHT"
+          }
+        ]
+      },
+      {
+        "text": "De armen knijpen niet in de stalen romp. De raketdelen hebben vangpennen die op rails op de armen komen te rusten. Die dragen het gewicht, en vangen de klap op.",
+        "img": [
+          "lib/starship-booster-catch.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Mechazilla chopsticks",
+              "Starbase chopsticks arms",
+              "Starship tower catch arms"
+            ],
+            "want": "the catch arms (chopsticks) of the Starship launch tower"
+          }
+        ],
+        "pop": [
+          {
+            "say": "knijpen niet",
+            "show": "NIET KNIJPEN"
+          },
+          {
+            "say": "vangpennen",
+            "show": "VANGPENNEN"
+          },
+          {
+            "say": "rails op de armen",
+            "show": "RAILS OP DE ARMEN"
+          },
+          {
+            "say": "dragen het gewicht",
+            "show": "DRAGEN HET GEWICHT"
+          },
+          {
+            "say": "vangen de klap op",
+            "show": "VANGEN DE KLAP OP"
+          }
+        ]
+      },
+      {
+        "text": "SpaceX oefent de kanteling al jaren. Prototypes als SN8 en SN15 deden het in 2020 en 2021, na een val van zo'n 10 kilometer hoogte. Bij latere testvluchten kantelden schepen en zweefden ze even boven de Indische Oceaan, voordat ze in het water vielen. Deze keer komt het schip echter neer naast land, gebouwen, en de installaties die SpaceX voor elke volgende vlucht nodig heeft.",
+        "img": [
+          "lib/starship-pad.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Starship SN8",
+              "Starship SN15",
+              "Starship prototype Boca Chica"
+            ],
+            "want": "a stainless steel Starship prototype at Boca Chica, Texas"
+          },
+          {
+            "q": [
+              "Indian Ocean",
+              "Indian Ocean from space",
+              "open ocean aerial"
+            ],
+            "want": "the open Indian Ocean"
+          }
+        ],
+        "pop": [
+          {
+            "say": "oefent de kanteling",
+            "show": "JAREN OEFENEN"
+          },
+          {
+            "say": "SN8 en SN15",
+            "show": "SN8 EN SN15"
+          },
+          {
+            "say": "10 kilometer",
+            "show": "VANAF 10 KM"
+          },
+          {
+            "say": "Indische Oceaan",
+            "show": "INDISCHE OCEAAN"
+          },
+          {
+            "say": "in het water",
+            "show": "IN HET WATER"
+          },
+          {
+            "say": "naast land",
+            "show": "NU: BIJ LAND"
+          },
+          {
+            "say": "elke volgende vlucht",
+            "show": "DE TOREN OP HET SPEL"
+          }
+        ]
+      },
+      {
+        "head": "Waarom is het schip vangen moeilijker dan de booster?",
+        "img": [
+          "lib/starship-launch.jpg"
+        ],
+        "pop": [
+          {
+            "say": "",
+            "show": "WAAROM MOEILIJKER?"
+          }
+        ]
+      },
+      {
+        "text": "Omdat het schip terugkomt uit een baan om de aarde, niet van de rand van de ruimte. De booster koppelt een paar minuten na de start los, keert om, en is binnen enkele minuten terug bij de toren. Het schip moet eerst zijn vlucht rond de aarde afmaken, de terugkeer op orbitale snelheid overleven, en zich pas dan op één toren in Texas richten. Wordt de missie om wat voor reden ook ingekort, dan komt het helemaal niet meer boven Starbase.",
+        "img": [
+          "lib/starship-launch.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Earth from orbit",
+              "Earth from the International Space Station",
+              "Earth limb from space"
+            ],
+            "want": "planet Earth seen from orbit"
+          },
+          {
+            "q": [
+              "Starship launch",
+              "Starship integrated flight test launch",
+              "Super Heavy liftoff"
+            ],
+            "want": "a Starship rocket lifting off from Starbase"
+          }
+        ],
+        "pop": [
+          {
+            "say": "baan om de aarde",
+            "show": "UIT DE RUIMTE"
+          },
+          {
+            "say": "rand van de ruimte",
+            "show": "NIET VAN DE RAND"
+          },
+          {
+            "say": "enkele minuten",
+            "show": "BOOSTER: MINUTEN"
+          },
+          {
+            "say": "rond de aarde",
+            "show": "ROND DE AARDE"
+          },
+          {
+            "say": "orbitale snelheid",
+            "show": "ORBITALE SNELHEID"
+          },
+          {
+            "say": "één toren",
+            "show": "ÉÉN TOREN"
+          },
+          {
+            "say": "ingekort",
+            "show": "MISSIE INGEKORT?"
+          },
+          {
+            "say": "helemaal niet meer",
+            "show": "GEEN VANGST"
+          }
+        ]
+      },
+      {
+        "text": "Er kan meer misgaan. De nieuwe Raptor 3-motoren hadden volgens Gizmodo bij elk van hun eerste vluchten problemen. Bij vlucht veertien viel een motor te vroeg uit, al bereikte het schip toch een baan om de aarde en zette het 26 Starlink-satellieten uit. En tegels en flappen moeten het heetste deel van de vlucht zo goed doorstaan dat het schip daarna nog precies kan sturen.",
+        "img": [
+          "starlink-launch-stack.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Raptor engine",
+              "SpaceX Raptor engine",
+              "Raptor rocket engine"
+            ],
+            "want": "a SpaceX Raptor rocket engine"
+          },
+          {
+            "q": [
+              "Starship heat shield tiles",
+              "Starship hexagonal tiles",
+              "Starship heat shield"
+            ],
+            "want": "the black hexagonal heat shield tiles on a Starship"
+          }
+        ],
+        "pop": [
+          {
+            "say": "meer misgaan",
+            "show": "MEER RISICO'S"
+          },
+          {
+            "say": "Raptor 3",
+            "show": "RAPTOR 3"
+          },
+          {
+            "say": "problemen",
+            "show": "MOTORPROBLEMEN"
+          },
+          {
+            "say": "vlucht veertien",
+            "show": "VLUCHT 14"
+          },
+          {
+            "say": "te vroeg uit",
+            "show": "MOTOR UIT"
+          },
+          {
+            "say": "26 Starlink",
+            "show": "26 STARLINKS"
+          },
+          {
+            "say": "heetste deel",
+            "show": "HET HEETSTE DEEL"
+          },
+          {
+            "say": "precies kan sturen",
+            "show": "PRECIES STUREN"
+          }
+        ]
+      },
+      {
+        "text": "En een schip dat uit de ruimte terugkomt voor een vangst, vliegt richting land in plaats van open zee. De vergunning van de luchtvaartautoriteit FAA moet dus een terugkeer naar de lanceerplek toestaan, en torenvangsten voor beide trappen. SpaceX-president Gwynne Shotwell verwacht precies dat. De booster zit trouwens niet in de weg. Volgens Gizmodo gebruikt die de andere toren op Starbase.",
+        "img": [
+          "lib/starship-pad.jpg",
+          "spacex-7.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Starbase launch tower",
+              "Starship launch tower Boca Chica",
+              "Starbase orbital launch mount"
+            ],
+            "want": "the tall steel Starship launch tower at Starbase, Texas"
+          }
+        ],
+        "pop": [
+          {
+            "say": "richting land",
+            "show": "RICHTING LAND"
+          },
+          {
+            "say": "open zee",
+            "show": "NIET DE ZEE"
+          },
+          {
+            "say": "FAA",
+            "show": "FAA-VERGUNNING"
+          },
+          {
+            "say": "beide trappen",
+            "show": "BEIDE TRAPPEN"
+          },
+          {
+            "say": "verwacht precies dat",
+            "show": "VERWACHT"
+          },
+          {
+            "say": "niet in de weg",
+            "show": "GEEN FILE"
+          },
+          {
+            "say": "andere toren",
+            "show": "DE ANDERE TOREN"
+          }
+        ]
+      },
+      {
+        "head": "Hoe landt Starship dan op de maan en Mars zonder toren?",
+        "img": [
+          "starship-moon.jpg"
+        ],
+        "pop": [
+          {
+            "say": "",
+            "show": "GEEN TOREN OP DE MAAN"
+          }
+        ]
+      },
+      {
+        "text": "Op eigen poten. Op de maan wacht geen toren. Dus Starship HLS, de versie die NASA heeft ingehuurd als maanlander voor zijn Artemis-astronauten, krijgt landingspoten. Al in 2020 schreef Musk dat SpaceX werkte aan nieuwe poten met een bredere stand, die zichzelf waterpas zetten op oneffen grond. Plus stuurraketjes hoog op de romp, om het schip tijdens de landing stil te houden.",
+        "img": [
+          "starship-moon.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Starship HLS",
+              "Starship Human Landing System",
+              "Starship lunar lander"
+            ],
+            "want": "the Starship Human Landing System lunar lander (illustration)"
+          },
+          {
+            "q": [
+              "Moon surface Apollo",
+              "lunar surface",
+              "Moon craters"
+            ],
+            "want": "the grey cratered surface of the Moon"
+          }
+        ],
+        "pop": [
+          {
+            "say": "eigen poten",
+            "show": "EIGEN POTEN"
+          },
+          {
+            "say": "geen toren",
+            "show": "GEEN TOREN"
+          },
+          {
+            "say": "Starship HLS",
+            "show": "STARSHIP HLS"
+          },
+          {
+            "say": "Artemis",
+            "show": "ARTEMIS"
+          },
+          {
+            "say": "landingspoten",
+            "show": "LANDINGSPOTEN"
+          },
+          {
+            "say": "bredere stand",
+            "show": "BREDERE STAND"
+          },
+          {
+            "say": "waterpas",
+            "show": "ZELF WATERPAS"
+          },
+          {
+            "say": "stuurraketjes",
+            "show": "STUURRAKETJES"
+          }
+        ]
+      },
+      {
+        "text": "Dat maanschip komt nooit terug door de aardse dampkring, dus het heeft geen hitteschild en geen flappen nodig. De eerste schepen op Mars hebben hetzelfde probleem. Wat SpaceX daar later ook bouwt, de eerste landingen gebeuren op kale grond. Vangen met een toren is een truc voor de aarde, bedoeld voor één ding: snel weer vliegen.",
+        "img": [
+          "starship-fleet-mars.jpg",
+          "mars-keynote-rover.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Mars surface Curiosity",
+              "Mars landscape rover",
+              "Martian surface"
+            ],
+            "want": "the red rocky surface of Mars"
+          }
+        ],
+        "pop": [
+          {
+            "say": "geen hitteschild",
+            "show": "GEEN HITTESCHILD"
+          },
+          {
+            "say": "geen flappen",
+            "show": "GEEN FLAPPEN"
+          },
+          {
+            "say": "schepen op Mars",
+            "show": "MARS"
+          },
+          {
+            "say": "kale grond",
+            "show": "KALE GROND"
+          },
+          {
+            "say": "truc voor de aarde",
+            "show": "EEN AARDSE TRUC"
+          },
+          {
+            "say": "snel weer vliegen",
+            "show": "SNEL WEER VLIEGEN"
+          }
+        ]
+      },
+      {
+        "head": "Wat zou een dubbele vangst veranderen?",
+        "img": [
+          "lib/starship-pad.jpg"
+        ],
+        "pop": [
+          {
+            "say": "",
+            "show": "DUBBELE VANGST"
+          }
+        ]
+      },
+      {
+        "text": "Starship zou de eerste orbitale raket worden die in zijn geheel terugkomt. Falcon 9 laat zijn booster al landen, maar de bovenste trap gaat bij elke vlucht verloren. Een gevangen schip kan worden nagekeken, bijgetankt en in theorie opnieuw vliegen. Dat is het hele idee achter het ontwerp. Veel goedkopere lanceringen, voor Starlink, voor NASA's maanmissies, en voor Musks plannen met Mars, waar Tesla's robot Optimus een rol moet spelen.",
+        "img": [
+          "spacex-6.jpg",
+          "starship-optimus-door.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Falcon 9 second stage",
+              "Falcon 9 upper stage",
+              "Falcon 9 launch"
+            ],
+            "want": "a Falcon 9 rocket or its upper stage"
+          }
+        ],
+        "pop": [
+          {
+            "say": "eerste orbitale raket",
+            "show": "EEN WERELDPRIMEUR"
+          },
+          {
+            "say": "Falcon 9",
+            "show": "FALCON 9"
+          },
+          {
+            "say": "verloren",
+            "show": "BOVENTRAP WEG"
+          },
+          {
+            "say": "bijgetankt",
+            "show": "BIJTANKEN"
+          },
+          {
+            "say": "opnieuw vliegen",
+            "show": "OPNIEUW VLIEGEN"
+          },
+          {
+            "say": "hele idee",
+            "show": "HET HELE IDEE"
+          },
+          {
+            "say": "goedkopere lanceringen",
+            "show": "GOEDKOPER LANCEREN"
+          },
+          {
+            "say": "Mars",
+            "show": "MARS"
+          },
+          {
+            "say": "Optimus",
+            "show": "OPTIMUS"
+          }
+        ]
+      },
+      {
+        "text": "SpaceX en Tesla kijken naar een mogelijke fusie, dus ook Tesla-aandeelhouders volgen deze vluchten. Een eerste poging kan nog misgaan. Zelfs Musk noemde succes alleen eerder wel dan niet. Maar het vreemde ontwerp klopt zodra je het hele plan ziet. Starship heeft geen vleugels, geen poten en geen parachutes, omdat de toren zijn landingsgestel is.",
+        "img": [
+          "lib/musk-chess-companies.jpg",
+          "lib/starship-booster-catch.jpg",
+          "lib/starship-pad.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Starbase launch tower",
+              "Starship launch tower Boca Chica",
+              "Starbase orbital launch mount"
+            ],
+            "want": "the tall steel Starship launch tower at Starbase, Texas"
+          }
+        ],
+        "pop": [
+          {
+            "say": "mogelijke fusie",
+            "show": "TESLA + SPACEX?"
+          },
+          {
+            "say": "aandeelhouders",
+            "show": "AANDEELHOUDERS KIJKEN"
+          },
+          {
+            "say": "misgaan",
+            "show": "HET KAN MISGAAN"
+          },
+          {
+            "say": "eerder wel dan niet",
+            "show": "EERDER WEL DAN NIET"
+          },
+          {
+            "say": "hele plan",
+            "show": "HET HELE PLAN"
+          },
+          {
+            "say": "geen vleugels, geen poten",
+            "show": "GEEN VLEUGELS, GEEN POTEN"
+          },
+          {
+            "say": "landingsgestel",
+            "show": "DE TOREN IS HET LANDINGSGESTEL"
+          }
+        ]
+      }
+    ],
+    "yt_title_en": "How SpaceX Catches Starship: Why It Has No Wings or Landing Legs",
+    "yt_title_nl": "Hoe SpaceX Starship Vangt: Waarom Hij Geen Vleugels of Poten Heeft"
+  },
+  "image": "gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute.jpg"
 }

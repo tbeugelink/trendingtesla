@@ -44,11 +44,13 @@ Add new ideas at the bottom at any time.
 - [ ] Gigacasting explained: why Tesla casts a car's body in a few huge pieces
 - [ ] Why does Tesla build its batteries from thousands of small cells instead of a few big ones? From laptop cells to the 4680
 - [ ] Level 2 vs level 3 vs level 4: what the self-driving levels mean, and why Mercedes takes the blame in Drive Pilot while Tesla does not
-- [ ] Why does Starship need no landing legs? How a tower catch makes rockets reusable within hours (explainer angle on the catch)
+- [x] Why does Starship need no landing legs? How a tower catch makes rockets reusable within hours (explainer angle on the catch) (how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute)
 - [ ] Can you text while using Tesla FSD? What Musk said, what the car allows and what the law says in the US, UK and Europe
 - [ ] How does Starlink Mobile (Direct to Cell) reach an ordinary phone from space, and what can you do with it (texts, apps, video later)?
 - [ ] Camera mirrors on trucks: why the European Tesla Semi has no side mirrors, and how camera mirror systems work and are allowed in the EU
 - [ ] Megacharger vs MCS: how you charge a 40-tonne truck in 30 minutes, and what a truck charging stop needs
+- [ ] Starship's heat shield: why it uses thousands of hexagonal tiles, what happens when one falls off, and how it differs from the Space Shuttle's tiles
+- [ ] Why Starship Flight 14 was the first to reach orbit: what "orbital" really means, and why earlier flights stayed just short on purpose
 - [ ] Will Teslas get Starlink built in? How a Tesla connects to the internet today (Standard vs Premium Connectivity, AT&T, 5G) and what satellite links would change
 
 ## Stories (evening task: entertaining and educational, timeless)

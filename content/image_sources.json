@@ -373,5 +373,53 @@
         "src": "lib/starship-booster-catch.jpg"
       }
     ]
+  },
+  "gen/spacex-first-starlink-launch-2019-satellites-stacked-like-deck-of-cards.jpg": {
+    "article": "spacex-first-starlink-launch-2019-satellites-stacked-like-deck-of-cards",
+    "model": "gpt-image-2.5-flare",
+    "made": "2026-11-04",
+    "references": [
+      {
+        "src": "lib/starlink-satellites.jpg"
+      },
+      {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/9/91/Starlink_Mission_%2847926144123%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page": "https://commons.wikimedia.org/wiki/File:Starlink_Mission_(47926144123).jpg",
+        "license": "CC0",
+        "commons": "Starlink Mission satellites stacked 2019"
+      }
+    ]
+  },
+  "gen/spacex-first-starlink-launch-2019-satellites-stacked-like-deck-of-cards-x2-11042048.jpg": {
+    "article": "spacex-first-starlink-launch-2019-satellites-stacked-like-deck-of-cards",
+    "model": "gpt-image-2.5-flare",
+    "made": "2026-11-04",
+    "references": [
+      {
+        "src": "lib/starlink-satellites.jpg"
+      },
+      {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/9/91/Starlink_Mission_%2847926144123%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page": "https://commons.wikimedia.org/wiki/File:Starlink_Mission_(47926144123).jpg",
+        "license": "CC0",
+        "commons": "Starlink Mission satellites stacked 2019"
+      }
+    ]
+  },
+  "gen/spacex-first-starlink-launch-2019-satellites-stacked-like-deck-of-cards-x3-11042050.jpg": {
+    "article": "spacex-first-starlink-launch-2019-satellites-stacked-like-deck-of-cards",
+    "model": "gemini-3.1-flash-image",
+    "made": "2026-11-04",
+    "references": [
+      {
+        "src": "lib/starlink-satellites.jpg"
+      },
+      {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/9/91/Starlink_Mission_%2847926144123%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page": "https://commons.wikimedia.org/wiki/File:Starlink_Mission_(47926144123).jpg",
+        "license": "CC0",
+        "commons": "Starlink Mission satellites stacked 2019"
+      }
+    ]
   }
 }

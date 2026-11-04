@@ -260,3 +260,6 @@ Articles with a "models" key automatically use real-life photos of that model. Y
 - gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute.jpg — a Starship upper stage held by the launch tower's chopstick arms at sunrise, Starbase
 - gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute-x2-11041157.jpg — Starship falling belly first like a skydiver, flaps out, after re-entry
 - gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute-x3-11041200.jpg — Starship flipping upright on its engines beside the tower just before the catch
+- gen/spacex-first-starlink-launch-2019-satellites-stacked-like-deck-of-cards.jpg — a stack of flat Starlink satellites fanning out like a deck of cards from a Falcon 9 upper stage above Earth
+- gen/spacex-first-starlink-launch-2019-satellites-stacked-like-deck-of-cards-x2-11042048.jpg — the stack of 60 flat Starlink satellites in the clean room before the nose cone closes
+- gen/spacex-first-starlink-launch-2019-satellites-stacked-like-deck-of-cards-x3-11042050.jpg — a train of Starlink satellites crossing the night sky over the Netherlands

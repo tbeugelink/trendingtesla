@@ -51,6 +51,7 @@ Add new ideas at the bottom at any time.
 - [ ] Megacharger vs MCS: how you charge a 40-tonne truck in 30 minutes, and what a truck charging stop needs
 - [ ] Starship's heat shield: why it uses thousands of hexagonal tiles, what happens when one falls off, and how it differs from the Space Shuttle's tiles
 - [ ] Why Starship Flight 14 was the first to reach orbit: what "orbital" really means, and why earlier flights stayed just short on purpose
+- [ ] Starlink's laser links: how satellites pass your data to each other at the speed of light, and why the first 60 had none
 - [ ] Will Teslas get Starlink built in? How a Tesla connects to the internet today (Standard vs Premium Connectivity, AT&T, 5G) and what satellite links would change
 
 ## Stories (evening task: entertaining and educational, timeless)
@@ -84,6 +85,9 @@ Add new ideas at the bottom at any time.
 - [ ] January 22, 2026: the first Tesla Robotaxi rides with nobody in the car, and the long road of missed self-driving deadlines before it
 - [ ] The EchoStar deal: how SpaceX bought its way into the phone business without building a phone
 - [ ] Run on Less 2023: the day a PepsiCo Tesla Semi drove 1,076 miles, and what the electric-truck trial showed about all the rivals
+- [x] The first Starlink launch, May 2019: 60 flat satellites stacked like a deck of cards, released without springs, after Musk fired the Redmond managers (spacex-first-starlink-launch-2019-satellites-stacked-like-deck-of-cards)
+- [ ] December 2015, Orbcomm-2: the night a Falcon 9 booster first landed back on Earth, after a string of crashes on drone ships
+- [ ] DarkSat and VisorSat: how astronomers' alarm over the first 'Starlink train' changed how SpaceX builds its satellites
 
 ## Series: How did Elon Musk ...? (evening task; one per week at most, category "musk")
 

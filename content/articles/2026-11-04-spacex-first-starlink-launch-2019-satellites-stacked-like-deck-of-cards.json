@@ -1,0 +1,1982 @@
+{
+ "slug": "spacex-first-starlink-launch-2019-satellites-stacked-like-deck-of-cards",
+ "date": "2026-11-04",
+ "time": "21:20",
+ "category": "starlink",
+ "also": [
+  "spacex"
+ ],
+ "sources": [
+  {
+   "title": "Reuters via The Christian Science Monitor: Under pressure from Musk, SpaceX hustles to launch satellites",
+   "url": "https://www.csmonitor.com/Technology/2018/1031/Under-pressure-from-Musk-SpaceX-hustles-to-launch-satellites"
+  },
+  {
+   "title": "Spaceflight Now: SpaceX's first 60 Starlink broadband satellites deployed in orbit",
+   "url": "https://spaceflightnow.com/2019/05/24/spacexs-first-60-starlink-broadband-satellites-deployed-in-orbit/"
+  },
+  {
+   "title": "EarthSky: Wow! Photo and video of SpaceX Starlink satellite train",
+   "url": "https://earthsky.org/space/wow-photo-video-spacex-starlink-satellite-train"
+  },
+  {
+   "title": "Space.com: Contact lost with three Starlink satellites, other 57 healthy",
+   "url": "https://www.space.com/spacex-loses-contact-with-3-starlink-satellites.html"
+  }
+ ],
+ "images": [
+  "starlink-launch-stack.jpg",
+  "lib/starlink-satellites.jpg",
+  "starlink-2.jpg",
+  "starlink-1.jpg",
+  "spacex-6.jpg",
+  "lib/starlink-dish-car.jpg"
+ ],
+ "gen_image": {
+  "prompt": "Close, dramatic shot in low Earth orbit of a tall stack of flat rectangular Starlink satellites drifting away from the top of a white Falcon 9 upper stage as one block and just starting to fan out like a deck of cards spread on a table, each satellite a thin flat grey panel with its solar array still folded, bright sunlight glinting on the edges, the curved blue Earth with white clouds below, black space above",
+  "subject": "first-generation Starlink satellites (2019): thin flat rectangular panels roughly the size of an office desk, stowed with their single solar array folded flat on top, stacked one on top of another like a deck of cards with NO dispenser, frame or springs between them; released from the top of a plain white cylindrical Falcon 9 second stage with one engine nozzle; the satellites are NOT cubes, have NO dish antennas and NO deployed wings",
+  "refs": [
+   {
+    "src": "lib/starlink-satellites.jpg"
+   },
+   {
+    "commons": "Starlink Mission satellites stacked 2019"
+   }
+  ],
+  "profile": "cinematic",
+  "category": "B",
+  "describe": "a stack of flat Starlink satellites fanning out like a deck of cards from a Falcon 9 upper stage above Earth",
+  "extra": [
+   {
+    "prompt": "Inside a bright white clean room, a tall neat stack of sixty thin flat rectangular satellite panels standing on a rocket adapter, about to be enclosed by the two white halves of a rocket nose cone, technicians in white clean-room suits seen from behind and far away, soft even light",
+    "describe": "the stack of 60 flat Starlink satellites in the clean room before the nose cone closes"
+   },
+   {
+    "prompt": "Night sky over flat Dutch countryside with a canal, a windmill silhouette and a small town on the horizon, a straight line of about sixty evenly spaced bright dots crossing the starry sky like a train, long exposure feeling, deep blue sky",
+    "describe": "a train of Starlink satellites crossing the night sky over the Netherlands"
+   }
+  ]
+ },
+ "label": {
+  "style": "c",
+  "en": {
+   "sub": "NO SPRINGS, NO DISPENSER",
+   "text": "HOW DO THEY GET OUT?"
+  },
+  "nl": {
+   "sub": "GEEN VEREN, GEEN HOUDER",
+   "text": "HOE KOMEN ZE ERUIT?"
+  }
+ },
+ "en": {
+  "title": "Dealt like a deck of cards: how SpaceX launched its first 60 Starlink satellites without a single spring",
+  "description": "In 2019 SpaceX stacked 60 flat satellites in one rocket and simply let them drift apart. The story of the rushed bet that became the blueprint for every Starlink launch, and why it matters to Tesla.",
+  "body": "<p>Every few days a Falcon 9 climbs out of Florida or California with a tower of Starlink satellites in its nose, and Starship, which released its first 26 V3 Starlink satellites in September, is being readied for its next flight. None of those satellites is pushed out by a spring, the way satellites have left rockets for decades. The whole stack is simply let go, and it drifts apart in space. That odd trick was born in a hurry. In 2018 Starlink was running late, and Elon Musk had decided the team building it was far too slow.</p>\n<h2>Why did Musk fire Starlink's leaders in 2018?</h2>\n<p><strong>Because he wanted cheaper, simpler satellites sooner, and they wanted more time to test.</strong> In February 2018 SpaceX had launched two test satellites, Tintin A and B. They worked: engineers in California and in Redmond, near Seattle, used them to stream 4K video and play the shooter game Counter-Strike. But according to Reuters, the head of the satellite team wanted three more rounds of test satellites before building the real thing. Musk disagreed.</p>\n<p>In June 2018 he flew to Redmond and, within hours of landing, fired at least seven senior managers of the Starlink team, Reuters reported. New leaders came in from SpaceX headquarters in California with one clear target: launch the first batch of satellites by mid-2019. A simpler satellite was only half of the answer. SpaceX also needed a way to put dozens of them into orbit in one go, without the weight and cost of a separate launch mechanism for every single one.</p>\n<h2>So how do you fit 60 satellites into one rocket?</h2>\n<p><strong>You make them flat and stack them like a deck of cards.</strong> Each first-generation Starlink satellite was a flat panel about the size of an office desk, weighing about 227 kilograms. It carried four flat phased-array antennas, a single solar array that unfolds in space, and a small thruster that runs on krypton gas. Laid on top of each other, sixty of them filled the nose cone of a Falcon 9 from bottom to top.</p>\n<p>Together they weighed 13,620 kilograms, the heaviest payload SpaceX had ever launched. Musk called it a tight fit. What was missing mattered just as much: there were no deployment mechanisms between the satellites at all. That saved mass and parts, but it left an obvious problem. Without springs to push them away, sixty loose satellites could easily bump into each other.</p>\n<h2>How do satellites leave a rocket without springs?</h2>\n<p><strong>The rocket spins, lets go of the whole stack, and physics spreads the cards.</strong> After two delays, one for high winds and one for a software update, the Falcon 9 lifted off from Cape Canaveral on 23 May 2019 at 10:30 p.m. local time. The booster, already on its third flight, landed on a drone ship in the Atlantic. About an hour after liftoff, at an altitude of roughly 440 kilometres, the upper stage started a slow spin and released all 60 satellites as one clump.</p>\n<p>Because each satellite sat at a different place in the spinning stack, each one moved off at a slightly different speed and slowly drifted away from its neighbours. Before the launch, Musk described it as \"almost like spreading a deck of cards on a table.\" Then the satellites were meant to unfold their solar panels and use their krypton thrusters to climb to 550 kilometres. Nobody could be sure that sixty brand-new satellites would all wake up.</p>\n<h2>What happened to the first 60 satellites?</h2>\n<p><strong>Most of them worked, three failed, and the whole world saw them.</strong> The very next night, satellite tracker Marco Langbroek in Leiden, in the Netherlands, filmed a straight line of bright dots crossing the sky. He counted at least 56 of them and said he shouted out loud in surprise. Videos of the \"Starlink train\" went around the world, and astronomers began to worry about what thousands of such satellites would do to their view of the stars.</p>\n<p>By the end of June, SpaceX reported that 45 satellites had reached their working orbit and others were still climbing. Three had stopped responding and would fall back and burn up on their own. Two working ones were brought down on purpose, to prove that a Starlink satellite can steer itself out of orbit. Musk had warned that some might fail; these were test versions, without the laser links later satellites would get. The method itself, though, had worked, and it now had to work hundreds of times.</p>\n<h2>Why does a deck of cards in orbit still matter?</h2>\n<p><strong>Because the stack became the production line of the largest satellite network ever built.</strong> In November 2019 the first operational batch of 60 followed, and through 2020 and 2021 Falcon 9 launched one stack after another. A Falcon 9 now carries around two dozen of the larger V2 Mini satellites per flight, and Starlink passed 10,000 satellites in orbit at the same time in 2026. Starship takes the idea further: its 26 V3 satellites on Flight 14 added about ten times the capacity of a Falcon 9 load, according to SpaceX. Flight 15 is next.</p>\n<p>For Tesla, Starlink is no longer distant space news. Its dishes already connect remote Superchargers, the Cybercab has been shown with a built-in Starlink antenna, and Tesla and SpaceX are studying a possible merger. The lesson of 2019 is one Tesla fans will recognise from the factory floor: build it simpler, launch it sooner, and fix what breaks on the next batch. Sixty satellites, stacked like cards, are where that bet in space began.</p>"
+ },
+ "nl": {
+  "title": "Gedeeld als een stok kaarten: hoe SpaceX zijn eerste 60 Starlink-satellieten lanceerde zonder één veer",
+  "description": "In 2019 stapelde SpaceX 60 platte satellieten in één raket en liet ze gewoon uit elkaar drijven. Het verhaal van de gehaaste gok die de blauwdruk werd voor elke Starlink-lancering, en waarom Tesla er iets mee heeft.",
+  "body": "<p>Om de paar dagen stijgt er in Florida of Californië een Falcon 9 op met een toren Starlink-satellieten in de neus. En Starship, dat in september zijn eerste 26 V3-satellieten van Starlink losliet, wordt klaargemaakt voor de volgende vlucht. Geen van die satellieten wordt eruit geduwd door een veer, zoals satellieten al tientallen jaren een raket verlaten. De hele stapel wordt gewoon losgelaten en waaiert in de ruimte vanzelf uit. Die vreemde truc ontstond onder grote tijdsdruk. In 2018 liep Starlink achter, en Elon Musk vond het team dat eraan werkte veel te traag.</p>\n<h2>Waarom ontsloeg Musk in 2018 de leiding van Starlink?</h2>\n<p><strong>Omdat hij sneller goedkopere, eenvoudigere satellieten wilde, en zij meer tijd wilden om te testen.</strong> In februari 2018 had SpaceX twee testsatellieten gelanceerd, Tintin A en B. Die werkten: technici in Californië en in Redmond, vlak bij Seattle, streamden er 4K-video mee en speelden de schietgame Counter-Strike. Maar volgens persbureau Reuters wilde de baas van het satellietteam eerst nog drie rondes testsatellieten bouwen. Musk was het daar niet mee eens.</p>\n<p>In juni 2018 vloog hij naar Redmond en ontsloeg hij binnen een paar uur na de landing minstens zeven leidinggevenden van het Starlink-team, aldus Reuters. Nieuwe managers van het hoofdkantoor in Californië kregen één duidelijk doel: medio 2019 de eerste lading satellieten lanceren. Een eenvoudigere satelliet was maar de helft van de oplossing. SpaceX moest ook tientallen satellieten tegelijk in een baan kunnen brengen, zonder het gewicht en de kosten van een apart lanceermechanisme voor elke satelliet.</p>\n<h2>Hoe krijg je 60 satellieten in één raket?</h2>\n<p><strong>Je maakt ze plat en stapelt ze als een stok kaarten.</strong> Elke Starlink-satelliet van de eerste generatie was een plat paneel ter grootte van een bureau, van zo'n 227 kilo. Er zaten vier platte antennes op, één zonnepaneel dat zich in de ruimte uitvouwt en een kleine motor die op kryptongas werkt. Op elkaar gelegd vulden zestig van die platen de neuskegel van een Falcon 9 van onder tot boven.</p>\n<p>Samen wogen ze 13.620 kilo, de zwaarste lading die SpaceX ooit had gelanceerd. Musk noemde het krap passen. Wat ontbrak was net zo belangrijk: tussen de satellieten zat geen enkel ontkoppelmechanisme. Dat scheelde gewicht en onderdelen, maar het leverde ook een duidelijk probleem op. Zonder veren die ze wegduwen, kunnen zestig losse satellieten makkelijk tegen elkaar aan botsen.</p>\n<h2>Dus hoe verlaat een satelliet een raket zonder veren?</h2>\n<p><strong>De raket draait langzaam rond, laat de hele stapel los, en de natuurkunde verdeelt de kaarten.</strong> Na twee keer uitstel, één keer door harde wind op grote hoogte en één keer voor een software-update, steeg de Falcon 9 op 23 mei 2019 om 22.30 uur plaatselijke tijd op vanaf Cape Canaveral. In Nederland was het toen half vijf 's ochtends. De eerste trap, al aan zijn derde vlucht, landde op een droneschip in de Atlantische Oceaan. Ongeveer een uur na de start, op zo'n 440 kilometer hoogte, begon de bovenste trap langzaam te draaien en liet hij alle 60 satellieten in één klomp los.</p>\n<p>Omdat elke satelliet op een andere plek in de draaiende stapel zat, bewoog elke satelliet met een net iets andere snelheid weg en dreef hij langzaam van zijn buren af. Musk vergeleek het vooraf met een stok kaarten die je op tafel uitwaaiert. Daarna moesten de satellieten hun zonnepanelen uitklappen en met hun kryptonmotortjes naar 550 kilometer klimmen. Niemand wist zeker of zestig gloednieuwe satellieten allemaal wakker zouden worden.</p>\n<h2>Wat gebeurde er met de eerste 60 satellieten?</h2>\n<p><strong>De meeste werkten, drie vielen uit, en de hele wereld zag ze.</strong> Al de volgende nacht filmde satellietspotter Marco Langbroek in Leiden een rechte rij heldere stipjes die langs de hemel trok. Hij telde er minstens 56 en vertelde dat hij het uitschreeuwde van verbazing. Filmpjes van de 'Starlink-trein' gingen de wereld over, en sterrenkundigen begonnen zich zorgen te maken over wat duizenden van zulke satellieten met hun zicht op de sterren zouden doen.</p>\n<p>Eind juni meldde SpaceX dat 45 satellieten hun werkhoogte hadden bereikt en dat andere nog aan het klimmen waren. Drie reageerden niet meer en zouden vanzelf terugvallen en verbranden. Twee werkende satellieten werden expres naar beneden gestuurd, om te bewijzen dat een Starlink-satelliet zichzelf uit zijn baan kan sturen. Musk had al gewaarschuwd dat er een paar zouden falen; het waren testversies, nog zonder de laserverbindingen van latere satellieten. Maar de methode zelf werkte, en die moest nu honderden keren werken.</p>\n<h2>Waarom doet die stok kaarten in de ruimte er nog steeds toe?</h2>\n<p><strong>Omdat de stapel de lopende band werd van het grootste satellietnetwerk ooit.</strong> In november 2019 volgde de eerste echte lading van 60, en in 2020 en 2021 lanceerde de Falcon 9 de ene stapel na de andere. Een Falcon 9 neemt nu zo'n twee dozijn van de grotere V2 Mini-satellieten per vlucht mee, en in 2026 had Starlink voor het eerst meer dan 10.000 satellieten tegelijk in de ruimte. Starship gaat nog verder: volgens SpaceX voegden de 26 V3-satellieten van vlucht 14 ongeveer tien keer zoveel capaciteit toe als een lading van een Falcon 9. Vlucht 15 is de volgende.</p>\n<p>Voor Tesla is Starlink geen ver ruimtenieuws meer. De schotels verbinden nu al afgelegen Superchargers met internet, de Cybercab is getoond met een ingebouwde Starlink-antenne, en Tesla en SpaceX onderzoeken een mogelijke fusie. De les van 2019 kennen Tesla-fans van de fabrieksvloer: maak het eenvoudiger, lanceer het eerder en los op wat misgaat bij de volgende lading. Zestig satellieten, gestapeld als kaarten, zijn waar die gok in de ruimte begon.</p>"
+ },
+ "short": {
+  "hook": "first",
+  "en": "In 2019, SpaceX threw 60 satellites into space with NO springs. Normally, every satellite gets its own push from a spring-loaded mechanism. SpaceX skipped all of that. Its satellites were flat, stacked like a deck of cards. A year earlier, Musk had fired at least seven of the project's managers in a fight over speed. Now the whole stack had to work at once. An hour after launch, the rocket started to spin, slowly, and let go of everything. Musk compared it to spreading a deck of cards on a table. The next night, a train of lights crossed the Dutch sky. Three of the 60 failed. The rest worked. And that deck of cards grew into more than 10,000 satellites. For the full story go to TrendingTesla.com.",
+  "nl": "In 2019 gooide SpaceX 60 satellieten de ruimte in, ZONDER veren. Normaal krijgt elke satelliet een eigen duwtje van een veermechanisme. SpaceX sloeg dat allemaal over. De satellieten waren plat, gestapeld als een stok kaarten. Een jaar eerder had Musk minstens zeven managers van het project ontslagen, in een ruzie over snelheid. Nu moest de hele stapel in één keer werken. Een uur na de start begon de raket langzaam te draaien en liet hij alles los. Musk vergeleek het met een stok kaarten die je op tafel uitwaaiert. De nacht erna trok een trein van lichtjes over de Nederlandse hemel. Drie van de 60 vielen uit. De rest werkte. En uit die stok kaarten groeiden meer dan 10.000 satellieten. Voor het hele verhaal ga je naar TrendingTesla.com.",
+  "yt_title_en": "SpaceX Dealt 60 Satellites Like Cards",
+  "yt_title_nl": "SpaceX Deelde 60 Satellieten Als Kaarten",
+  "story": [
+   {
+    "part": "hook",
+    "text": "In 2019, SpaceX threw 60 satellites into space with NO springs.",
+    "img": "starlink-launch-stack.jpg",
+    "pop": [
+     {
+      "say": "In 2019",
+      "show": "2019"
+     },
+     {
+      "say": "60 satellites",
+      "show": "60 SATELLITES"
+     },
+     {
+      "say": "NO springs",
+      "show": "NO SPRINGS!"
+     }
+    ]
+   },
+   {
+    "part": "tension",
+    "text": "Normally, every satellite gets its own push from a spring-loaded mechanism.",
+    "img": "satellite-ai.jpg",
+    "pop": [
+     {
+      "say": "Normally",
+      "show": "NORMALLY"
+     },
+     {
+      "say": "its own push",
+      "show": "ITS OWN PUSH"
+     },
+     {
+      "say": "spring-loaded",
+      "show": "SPRING-LOADED"
+     }
+    ]
+   },
+   {
+    "part": "tension",
+    "text": "SpaceX skipped all of that. Its satellites were flat, stacked like a deck of cards.",
+    "scene": "a tall neat stack of flat rectangular satellite panels inside the open white nose cone of a rocket in a clean room, like a deck of cards, soft white light",
+    "pop": [
+     {
+      "say": "skipped all of that",
+      "show": "SKIPPED IT"
+     },
+     {
+      "say": "flat",
+      "show": "FLAT"
+     },
+     {
+      "say": "deck of cards",
+      "show": "A DECK OF CARDS"
+     }
+    ]
+   },
+   {
+    "part": "tension",
+    "text": "A year earlier, Musk had fired at least seven of the project's managers in a fight over speed.",
+    "scene": "an empty satellite clean room at night, a single flat satellite panel on a work stand under one bright lamp, white protective suits hanging on a rack",
+    "pop": [
+     {
+      "say": "A year earlier",
+      "show": "2018"
+     },
+     {
+      "say": "at least seven",
+      "show": "7 MANAGERS FIRED"
+     },
+     {
+      "say": "fight over speed",
+      "show": "TOO SLOW"
+     }
+    ]
+   },
+   {
+    "part": "tension",
+    "text": "Now the whole stack had to work at once.",
+    "img": "spacex-1.jpg",
+    "pop": [
+     {
+      "say": "whole stack",
+      "show": "THE WHOLE STACK"
+     },
+     {
+      "say": "at once",
+      "show": "AT ONCE"
+     }
+    ]
+   },
+   {
+    "part": "tension",
+    "text": "An hour after launch, the rocket started to spin, slowly, and let go of everything.",
+    "scene": "a rocket upper stage slowly spinning above Earth while a stack of flat satellites drifts off it as one block and starts to fan out, sunlight on the solar cells, black space",
+    "pop": [
+     {
+      "say": "An hour after launch",
+      "show": "1 HOUR LATER"
+     },
+     {
+      "say": "spin, slowly",
+      "show": "SLOW SPIN"
+     },
+     {
+      "say": "let go of everything",
+      "show": "LET GO!"
+     }
+    ]
+   },
+   {
+    "part": "tension",
+    "text": "Musk compared it to spreading a deck of cards on a table.",
+    "img": "starlink-1.jpg",
+    "pop": [
+     {
+      "say": "Musk compared it",
+      "show": "MUSK:"
+     },
+     {
+      "say": "spreading a deck of cards",
+      "show": "SPREADING CARDS"
+     }
+    ]
+   },
+   {
+    "part": "payoff",
+    "text": "The next night, a train of lights crossed the Dutch sky.",
+    "lib": [
+     "starlink-satellites.jpg"
+    ],
+    "pop": [
+     {
+      "say": "The next night",
+      "show": "NEXT NIGHT"
+     },
+     {
+      "say": "train of lights",
+      "show": "A TRAIN OF LIGHTS"
+     },
+     {
+      "say": "Dutch sky",
+      "show": "OVER LEIDEN"
+     }
+    ]
+   },
+   {
+    "part": "payoff",
+    "text": "Three of the 60 failed. The rest worked.",
+    "img": "starlink-2.jpg",
+    "pop": [
+     {
+      "say": "Three of the 60 failed",
+      "show": "3 FAILED"
+     },
+     {
+      "say": "The rest worked",
+      "show": "57 WORKED"
+     }
+    ]
+   },
+   {
+    "part": "payoff",
+    "text": "And that deck of cards grew into more than 10,000 satellites. For the full story go to TrendingTesla.com.",
+    "lib": [
+     "starlink-dish-car.jpg"
+    ],
+    "pop": [
+     {
+      "say": "that deck of cards",
+      "show": "ONE DECK"
+     },
+     {
+      "say": "more than 10,000 satellites",
+      "show": "10,000+ SATELLITES"
+     }
+    ]
+   }
+  ]
+ },
+ "video": {
+  "en": [
+   {
+    "text": "Sixty satellites, packed into one rocket like a deck of cards, and not a single spring to push them out. That is how Starlink began, in May 2019. Today a Falcon 9 still climbs into space every few days with a tower of Starlink satellites in its nose. Starship released its first 26 big V3 satellites in September and is getting ready to fly again. And none of those satellites is pushed out the way satellites have left rockets for decades.",
+    "img": [
+     "starlink-launch-stack.jpg",
+     "lib/starship-launch.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Falcon 9 Starlink launch",
+       "Falcon 9 launch night",
+       "Falcon 9 liftoff Cape Canaveral"
+      ],
+      "want": "a Falcon 9 rocket launching"
+     }
+    ],
+    "pop": [
+     {
+      "say": "Sixty satellites",
+      "show": "60 SATELLITES"
+     },
+     {
+      "say": "deck of cards",
+      "show": "A DECK OF CARDS"
+     },
+     {
+      "say": "not a single spring",
+      "show": "NO SPRINGS"
+     },
+     {
+      "say": "May 2019",
+      "show": "MAY 2019"
+     },
+     {
+      "say": "every few days",
+      "show": "EVERY FEW DAYS"
+     },
+     {
+      "say": "tower of Starlink satellites",
+      "show": "A TOWER OF SATELLITES"
+     },
+     {
+      "say": "26 big V3 satellites",
+      "show": "26 V3 SATELLITES"
+     },
+     {
+      "say": "fly again",
+      "show": "FLYING AGAIN"
+     },
+     {
+      "say": "none of those satellites",
+      "show": "NOT PUSHED OUT"
+     }
+    ]
+   },
+   {
+    "text": "The whole stack is simply let go, and it drifts apart in space. That odd trick was born in a hurry. In 2018 Starlink was running late. And Elon Musk had decided that the team building it was far too slow.",
+    "img": [
+     "starlink-1.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Starlink satellites",
+       "Starlink satellite orbit",
+       "Starlink constellation"
+      ],
+      "want": "Starlink satellites in orbit"
+     }
+    ],
+    "pop": [
+     {
+      "say": "simply let go",
+      "show": "SIMPLY LET GO"
+     },
+     {
+      "say": "drifts apart",
+      "show": "DRIFTING APART"
+     },
+     {
+      "say": "born in a hurry",
+      "show": "BORN IN A HURRY"
+     },
+     {
+      "say": "running late",
+      "show": "RUNNING LATE"
+     },
+     {
+      "say": "far too slow",
+      "show": "FAR TOO SLOW"
+     }
+    ]
+   },
+   {
+    "head": "Why did Musk fire Starlink's leaders in 2018?",
+    "img": [
+     "satellite-ai.jpg"
+    ],
+    "pop": [
+     {
+      "say": "",
+      "show": "WHY FIRE THEM?"
+     }
+    ]
+   },
+   {
+    "text": "Because he wanted cheaper, simpler satellites sooner, and they wanted more time to test. In February 2018 SpaceX had launched two test satellites, Tintin A and B. They worked. Engineers in California and in Redmond, near Seattle, used them to stream 4K video, and even to play the shooter game Counter-Strike.",
+    "img": [
+     "satellite-ai.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Falcon 9 PAZ launch 2018",
+       "Falcon 9 Vandenberg launch 2018",
+       "Falcon 9 Vandenberg"
+      ],
+      "want": "a Falcon 9 launch from Vandenberg, California"
+     },
+     {
+      "q": [
+       "Redmond Washington",
+       "Redmond Washington aerial",
+       "Redmond Town Center"
+      ],
+      "want": "the town of Redmond, Washington"
+     }
+    ],
+    "pop": [
+     {
+      "say": "cheaper, simpler",
+      "show": "CHEAPER, SIMPLER"
+     },
+     {
+      "say": "more time to test",
+      "show": "MORE TIME?"
+     },
+     {
+      "say": "Tintin A and B",
+      "show": "TINTIN A AND B"
+     },
+     {
+      "say": "They worked",
+      "show": "THEY WORKED"
+     },
+     {
+      "say": "Redmond",
+      "show": "REDMOND"
+     },
+     {
+      "say": "4K video",
+      "show": "4K VIDEO"
+     },
+     {
+      "say": "Counter-Strike",
+      "show": "COUNTER-STRIKE"
+     }
+    ]
+   },
+   {
+    "text": "But according to Reuters, the head of the satellite team wanted three more rounds of test satellites first. Musk disagreed. In June 2018 he flew to Redmond, and within hours of landing he fired at least seven senior managers of the Starlink team.",
+    "photo": [
+     {
+      "q": [
+       "Seattle skyline",
+       "Seattle aerial",
+       "Seattle Space Needle skyline"
+      ],
+      "want": "the Seattle skyline"
+     },
+     {
+      "q": [
+       "Satellite clean room",
+       "spacecraft clean room assembly",
+       "satellite assembly clean room"
+      ],
+      "want": "a satellite being assembled in a clean room"
+     }
+    ],
+    "pop": [
+     {
+      "say": "according to Reuters",
+      "show": "REUTERS:"
+     },
+     {
+      "say": "three more rounds",
+      "show": "3 MORE TEST ROUNDS"
+     },
+     {
+      "say": "Musk disagreed",
+      "show": "MUSK SAYS NO"
+     },
+     {
+      "say": "June 2018",
+      "show": "JUNE 2018"
+     },
+     {
+      "say": "within hours",
+      "show": "WITHIN HOURS"
+     },
+     {
+      "say": "at least seven",
+      "show": "7 MANAGERS FIRED"
+     }
+    ]
+   },
+   {
+    "text": "New leaders came in from SpaceX headquarters in California, with one clear target: launch the first batch by mid-2019. But a simpler satellite was only half of the answer. SpaceX also needed a way to put dozens of them into orbit at once, without a separate launch mechanism for every single one.",
+    "img": [
+     "spacex-8.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "SpaceX headquarters Hawthorne",
+       "SpaceX Hawthorne",
+       "SpaceX factory Hawthorne"
+      ],
+      "want": "SpaceX headquarters in Hawthorne, California"
+     }
+    ],
+    "pop": [
+     {
+      "say": "New leaders",
+      "show": "NEW LEADERS"
+     },
+     {
+      "say": "mid-2019",
+      "show": "DEADLINE: MID-2019"
+     },
+     {
+      "say": "only half of the answer",
+      "show": "HALF THE ANSWER"
+     },
+     {
+      "say": "dozens of them",
+      "show": "DOZENS AT ONCE"
+     },
+     {
+      "say": "every single one",
+      "show": "NO MECHANISM EACH"
+     }
+    ]
+   },
+   {
+    "head": "So how do you fit 60 satellites into one rocket?",
+    "img": [
+     "starlink-launch-stack.jpg"
+    ],
+    "pop": [
+     {
+      "say": "",
+      "show": "60 IN ONE ROCKET?"
+     }
+    ]
+   },
+   {
+    "text": "You make them flat, and you stack them like a deck of cards. Each first Starlink satellite was a flat panel about the size of an office desk, weighing about 227 kilograms. It had four flat antennas, one solar array that unfolds in space, and a tiny thruster that runs on krypton gas.",
+    "img": [
+     "starlink-2.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Starlink satellite",
+       "Starlink satellite model",
+       "Starlink v1.0 satellite"
+      ],
+      "want": "a single flat Starlink satellite"
+     },
+     {
+      "q": [
+       "Hall effect thruster",
+       "Hall thruster firing",
+       "ion thruster test"
+      ],
+      "want": "a small electric Hall thruster firing in a test chamber"
+     }
+    ],
+    "pop": [
+     {
+      "say": "make them flat",
+      "show": "MAKE THEM FLAT"
+     },
+     {
+      "say": "deck of cards",
+      "show": "STACK THEM"
+     },
+     {
+      "say": "office desk",
+      "show": "SIZE OF A DESK"
+     },
+     {
+      "say": "227 kilograms",
+      "show": "227 KG"
+     },
+     {
+      "say": "four flat antennas",
+      "show": "4 FLAT ANTENNAS"
+     },
+     {
+      "say": "one solar array",
+      "show": "1 SOLAR ARRAY"
+     },
+     {
+      "say": "krypton gas",
+      "show": "KRYPTON THRUSTER"
+     }
+    ]
+   },
+   {
+    "text": "Laid on top of each other, sixty of them filled the nose cone of a Falcon 9 from bottom to top. Together: 13,620 kilograms, the heaviest payload SpaceX had ever launched. Musk called it a tight fit.",
+    "img": [
+     "starlink-launch-stack.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Starlink Mission satellites fairing",
+       "Starlink satellites stacked",
+       "Starlink stack fairing 2019"
+      ],
+      "want": "the stack of 60 flat Starlink satellites inside the rocket's nose cone"
+     },
+     {
+      "q": [
+       "Falcon 9 fairing",
+       "Falcon 9 payload fairing",
+       "fairing half Falcon 9"
+      ],
+      "want": "the nose cone (fairing) of a Falcon 9"
+     }
+    ],
+    "pop": [
+     {
+      "say": "on top of each other",
+      "show": "ON TOP OF EACH OTHER"
+     },
+     {
+      "say": "nose cone",
+      "show": "THE NOSE CONE"
+     },
+     {
+      "say": "13,620 kilograms",
+      "show": "13,620 KG"
+     },
+     {
+      "say": "heaviest payload",
+      "show": "HEAVIEST EVER"
+     },
+     {
+      "say": "tight fit",
+      "show": "A TIGHT FIT"
+     }
+    ]
+   },
+   {
+    "text": "And what was missing mattered just as much. There were no deployment mechanisms between the satellites at all. That saved weight and parts. But it left an obvious problem. Without springs to push them away, sixty loose satellites could easily bump into each other.",
+    "img": [
+     "starlink-1.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "satellite deployment from upper stage",
+       "satellite separation",
+       "CubeSat deployment"
+      ],
+      "want": "a satellite separating from a rocket's upper stage in space"
+     }
+    ],
+    "pop": [
+     {
+      "say": "what was missing",
+      "show": "WHAT'S MISSING?"
+     },
+     {
+      "say": "no deployment mechanisms",
+      "show": "NO MECHANISMS"
+     },
+     {
+      "say": "saved weight",
+      "show": "LESS WEIGHT"
+     },
+     {
+      "say": "obvious problem",
+      "show": "THE PROBLEM"
+     },
+     {
+      "say": "Without springs",
+      "show": "NO SPRINGS"
+     },
+     {
+      "say": "bump into each other",
+      "show": "COLLISIONS?"
+     }
+    ]
+   },
+   {
+    "head": "How do satellites leave a rocket without springs?",
+    "img": [
+     "starlink-launch-stack.jpg"
+    ],
+    "pop": [
+     {
+      "say": "",
+      "show": "NO SPRINGS?"
+     }
+    ]
+   },
+   {
+    "text": "The rocket spins, lets go of the whole stack, and physics spreads the cards. After two delays, one for high winds and one for a software update, the Falcon 9 lifted off from Cape Canaveral on the 23rd of May 2019, at 10:30 at night. The booster, on its third flight, landed on a drone ship in the Atlantic.",
+    "img": [
+     "spacex-6.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Falcon 9 Starlink launch",
+       "Falcon 9 launch night",
+       "Falcon 9 liftoff Cape Canaveral"
+      ],
+      "want": "a Falcon 9 rocket launching"
+     },
+     {
+      "q": [
+       "Falcon 9 landing drone ship",
+       "Of Course I Still Love You landing",
+       "Falcon 9 first stage droneship"
+      ],
+      "want": "a Falcon 9 booster landing on a drone ship at sea"
+     }
+    ],
+    "pop": [
+     {
+      "say": "The rocket spins",
+      "show": "THE ROCKET SPINS"
+     },
+     {
+      "say": "physics spreads the cards",
+      "show": "PHYSICS DOES THE REST"
+     },
+     {
+      "say": "two delays",
+      "show": "2 DELAYS"
+     },
+     {
+      "say": "high winds",
+      "show": "HIGH WINDS"
+     },
+     {
+      "say": "software update",
+      "show": "SOFTWARE UPDATE"
+     },
+     {
+      "say": "23rd of May 2019",
+      "show": "23 MAY 2019"
+     },
+     {
+      "say": "third flight",
+      "show": "3RD FLIGHT"
+     },
+     {
+      "say": "drone ship",
+      "show": "LANDED AT SEA"
+     }
+    ]
+   },
+   {
+    "text": "About an hour after liftoff, around 440 kilometres up, the upper stage started a slow spin and released all 60 satellites as one clump. Each satellite sat at a different spot in the spinning stack, so each one moved off at a slightly different speed, and slowly drifted away from its neighbours.",
+    "img": [
+     "starlink-launch-stack.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Falcon 9 second stage",
+       "Falcon 9 upper stage orbit",
+       "Merlin Vacuum engine"
+      ],
+      "want": "a Falcon 9 upper stage"
+     }
+    ],
+    "pop": [
+     {
+      "say": "an hour after liftoff",
+      "show": "1 HOUR LATER"
+     },
+     {
+      "say": "440 kilometres",
+      "show": "440 KM UP"
+     },
+     {
+      "say": "slow spin",
+      "show": "A SLOW SPIN"
+     },
+     {
+      "say": "one clump",
+      "show": "ONE CLUMP"
+     },
+     {
+      "say": "different spot",
+      "show": "DIFFERENT SPOTS"
+     },
+     {
+      "say": "slightly different speed",
+      "show": "DIFFERENT SPEEDS"
+     },
+     {
+      "say": "drifted away",
+      "show": "DRIFTING APART"
+     }
+    ]
+   },
+   {
+    "text": "Before the launch, Musk described it as almost like spreading a deck of cards on a table. Then the satellites had to unfold their solar panels and use their krypton thrusters to climb to 550 kilometres. Nobody could be sure that sixty brand-new satellites would all wake up.",
+    "img": [
+     "starlink-2.jpg",
+     "starlink-1.jpg"
+    ],
+    "pop": [
+     {
+      "say": "spreading a deck of cards",
+      "show": "SPREADING THE CARDS"
+     },
+     {
+      "say": "unfold their solar panels",
+      "show": "PANELS OUT"
+     },
+     {
+      "say": "550 kilometres",
+      "show": "UP TO 550 KM"
+     },
+     {
+      "say": "Nobody could be sure",
+      "show": "NOBODY KNEW"
+     },
+     {
+      "say": "all wake up",
+      "show": "WILL THEY WAKE UP?"
+     }
+    ]
+   },
+   {
+    "head": "What happened to the first 60 satellites?",
+    "img": [
+     "lib/starlink-satellites.jpg"
+    ],
+    "pop": [
+     {
+      "say": "",
+      "show": "WHAT HAPPENED?"
+     }
+    ]
+   },
+   {
+    "text": "Most of them worked, three failed, and the whole world saw them. The very next night, satellite tracker Marco Langbroek in Leiden, in the Netherlands, filmed a straight line of bright dots crossing the sky. He counted at least 56 of them, and said he shouted out loud in surprise.",
+    "img": [
+     "lib/starlink-satellites.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Leiden",
+       "Leiden canal night",
+       "Leiden city"
+      ],
+      "want": "the Dutch city of Leiden"
+     },
+     {
+      "q": [
+       "Starlink satellite train",
+       "Starlink train night sky",
+       "Starlink satellites night sky"
+      ],
+      "want": "a line of Starlink satellites crossing the night sky"
+     }
+    ],
+    "pop": [
+     {
+      "say": "Most of them worked",
+      "show": "MOST WORKED"
+     },
+     {
+      "say": "three failed",
+      "show": "3 FAILED"
+     },
+     {
+      "say": "whole world saw them",
+      "show": "THE WORLD SAW THEM"
+     },
+     {
+      "say": "Leiden",
+      "show": "LEIDEN"
+     },
+     {
+      "say": "straight line of bright dots",
+      "show": "A LINE OF DOTS"
+     },
+     {
+      "say": "at least 56",
+      "show": "56 DOTS"
+     },
+     {
+      "say": "shouted out loud",
+      "show": "HE SHOUTED"
+     }
+    ]
+   },
+   {
+    "text": "Videos of the Starlink train went around the world. And astronomers began to worry about what thousands of these satellites would do to their view of the stars.",
+    "photo": [
+     {
+      "q": [
+       "Satellite trails astronomy image",
+       "Starlink satellite trails telescope",
+       "satellite streaks astrophotography"
+      ],
+      "want": "satellite trails streaking across an astronomical image"
+     },
+     {
+      "q": [
+       "Observatory telescope dome night",
+       "Very Large Telescope",
+       "observatory dome stars"
+      ],
+      "want": "an observatory telescope under the night sky"
+     }
+    ],
+    "pop": [
+     {
+      "say": "Starlink train",
+      "show": "THE STARLINK TRAIN"
+     },
+     {
+      "say": "around the world",
+      "show": "WENT VIRAL"
+     },
+     {
+      "say": "astronomers began to worry",
+      "show": "ASTRONOMERS WORRY"
+     },
+     {
+      "say": "view of the stars",
+      "show": "THE VIEW OF THE STARS"
+     }
+    ]
+   },
+   {
+    "text": "By the end of June, SpaceX said 45 satellites had reached their working orbit. Three had stopped responding, and would fall back and burn up on their own. Two working ones were brought down on purpose, to prove a Starlink satellite can steer itself out of orbit. These were test versions. But the method itself had worked, and now it had to work hundreds of times.",
+    "img": [
+     "starlink-2.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "satellite reentry",
+       "reentry fireball",
+       "spacecraft reentry trail"
+      ],
+      "want": "a spacecraft burning up on re-entry, a bright trail in the sky"
+     }
+    ],
+    "pop": [
+     {
+      "say": "45 satellites",
+      "show": "45 IN ORBIT"
+     },
+     {
+      "say": "stopped responding",
+      "show": "3 WENT SILENT"
+     },
+     {
+      "say": "burn up",
+      "show": "BURN UP"
+     },
+     {
+      "say": "on purpose",
+      "show": "2 BROUGHT DOWN"
+     },
+     {
+      "say": "steer itself out of orbit",
+      "show": "SELF-DEORBIT"
+     },
+     {
+      "say": "test versions",
+      "show": "TEST VERSIONS"
+     },
+     {
+      "say": "hundreds of times",
+      "show": "HUNDREDS OF TIMES"
+     }
+    ]
+   },
+   {
+    "head": "Why does a deck of cards in orbit still matter?",
+    "img": [
+     "starlink-1.jpg"
+    ],
+    "pop": [
+     {
+      "say": "",
+      "show": "WHY IT MATTERS"
+     }
+    ]
+   },
+   {
+    "text": "Because the stack became the production line of the largest satellite network ever built. In November 2019 the first real batch of 60 followed, and through 2020 and 2021 Falcon 9 launched one stack after another. Today a Falcon 9 carries around two dozen of the bigger V2 Mini satellites per flight. And in 2026 Starlink passed 10,000 satellites in orbit at the same time.",
+    "img": [
+     "spacex-2.jpg",
+     "starlink-1.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Falcon 9 Starlink launch",
+       "Falcon 9 launch night",
+       "Falcon 9 liftoff Cape Canaveral"
+      ],
+      "want": "a Falcon 9 rocket launching"
+     }
+    ],
+    "pop": [
+     {
+      "say": "production line",
+      "show": "A PRODUCTION LINE"
+     },
+     {
+      "say": "largest satellite network",
+      "show": "THE LARGEST NETWORK"
+     },
+     {
+      "say": "November 2019",
+      "show": "NOV 2019"
+     },
+     {
+      "say": "one stack after another",
+      "show": "STACK AFTER STACK"
+     },
+     {
+      "say": "two dozen",
+      "show": "~24 PER FLIGHT"
+     },
+     {
+      "say": "V2 Mini",
+      "show": "V2 MINI"
+     },
+     {
+      "say": "10,000 satellites",
+      "show": "10,000+ SATELLITES"
+     }
+    ]
+   },
+   {
+    "text": "Starship takes the idea further. Its 26 V3 satellites on Flight 14 added about ten times the capacity of a Falcon 9 load, according to SpaceX. And Flight 15 is next.",
+    "img": [
+     "lib/starship-launch.jpg",
+     "lib/starship-pad.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Starship launch",
+       "Starship flight test liftoff",
+       "Super Heavy liftoff"
+      ],
+      "want": "a Starship rocket lifting off from Starbase"
+     }
+    ],
+    "pop": [
+     {
+      "say": "Starship takes the idea further",
+      "show": "STARSHIP"
+     },
+     {
+      "say": "26 V3 satellites",
+      "show": "26 V3 SATELLITES"
+     },
+     {
+      "say": "ten times the capacity",
+      "show": "10X CAPACITY"
+     },
+     {
+      "say": "Flight 15 is next",
+      "show": "FLIGHT 15 NEXT"
+     }
+    ]
+   },
+   {
+    "text": "For Tesla, this is not distant space news. Starlink dishes already connect remote Superchargers. The Cybercab has been shown with a built-in Starlink antenna. And Tesla and SpaceX are studying a possible merger.",
+    "img": [
+     "lib/supercharger-v4.jpg",
+     "lib/cybercab.jpg",
+     "lib/musk-chess-companies.jpg"
+    ],
+    "pop": [
+     {
+      "say": "For Tesla",
+      "show": "WHY TESLA CARES"
+     },
+     {
+      "say": "remote Superchargers",
+      "show": "SUPERCHARGERS"
+     },
+     {
+      "say": "Cybercab",
+      "show": "CYBERCAB"
+     },
+     {
+      "say": "built-in Starlink antenna",
+      "show": "BUILT-IN STARLINK"
+     },
+     {
+      "say": "possible merger",
+      "show": "TESLA + SPACEX?"
+     }
+    ]
+   },
+   {
+    "text": "And the lesson of 2019 is one Tesla fans know from the factory floor. Build it simpler. Launch it sooner. Fix what breaks on the next batch. Sixty satellites, stacked like cards, are where that bet in space began.",
+    "img": [
+     "lib/starlink-dish-car.jpg",
+     "starlink-launch-stack.jpg"
+    ],
+    "pop": [
+     {
+      "say": "lesson of 2019",
+      "show": "THE LESSON"
+     },
+     {
+      "say": "Build it simpler",
+      "show": "BUILD IT SIMPLER"
+     },
+     {
+      "say": "Launch it sooner",
+      "show": "LAUNCH IT SOONER"
+     },
+     {
+      "say": "Fix what breaks",
+      "show": "FIX WHAT BREAKS"
+     },
+     {
+      "say": "Sixty satellites",
+      "show": "60 SATELLITES"
+     },
+     {
+      "say": "where that bet in space began",
+      "show": "WHERE THE BET BEGAN"
+     }
+    ]
+   }
+  ],
+  "nl": [
+   {
+    "text": "Zestig satellieten, in één raket gepakt als een stok kaarten, en geen enkele veer om ze eruit te duwen. Zo begon Starlink, in mei 2019. Nog steeds stijgt er om de paar dagen een Falcon 9 op met een toren Starlink-satellieten in de neus. Starship liet in september zijn eerste 26 grote V3-satellieten los en maakt zich klaar voor de volgende vlucht. En geen van die satellieten wordt eruit geduwd zoals satellieten al tientallen jaren een raket verlaten.",
+    "img": [
+     "starlink-launch-stack.jpg",
+     "lib/starship-launch.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Falcon 9 Starlink launch",
+       "Falcon 9 launch night",
+       "Falcon 9 liftoff Cape Canaveral"
+      ],
+      "want": "a Falcon 9 rocket launching"
+     }
+    ],
+    "pop": [
+     {
+      "say": "Zestig satellieten",
+      "show": "60 SATELLIETEN"
+     },
+     {
+      "say": "stok kaarten",
+      "show": "EEN STOK KAARTEN"
+     },
+     {
+      "say": "geen enkele veer",
+      "show": "GEEN VEREN"
+     },
+     {
+      "say": "mei 2019",
+      "show": "MEI 2019"
+     },
+     {
+      "say": "om de paar dagen",
+      "show": "OM DE PAAR DAGEN"
+     },
+     {
+      "say": "toren Starlink-satellieten",
+      "show": "EEN TOREN SATELLIETEN"
+     },
+     {
+      "say": "26 grote V3-satellieten",
+      "show": "26 V3-SATELLIETEN"
+     },
+     {
+      "say": "volgende vlucht",
+      "show": "VOLGENDE VLUCHT"
+     },
+     {
+      "say": "geen van die satellieten",
+      "show": "NIET ERUIT GEDUWD"
+     }
+    ]
+   },
+   {
+    "text": "De hele stapel wordt gewoon losgelaten en waaiert in de ruimte vanzelf uit. Die vreemde truc ontstond onder grote tijdsdruk. In 2018 liep Starlink achter. En Elon Musk vond het team dat eraan werkte veel te traag.",
+    "img": [
+     "starlink-1.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Starlink satellites",
+       "Starlink satellite orbit",
+       "Starlink constellation"
+      ],
+      "want": "Starlink satellites in orbit"
+     }
+    ],
+    "pop": [
+     {
+      "say": "gewoon losgelaten",
+      "show": "GEWOON LOSGELATEN"
+     },
+     {
+      "say": "waaiert",
+      "show": "UITWAAIEREN"
+     },
+     {
+      "say": "grote tijdsdruk",
+      "show": "ONDER TIJDSDRUK"
+     },
+     {
+      "say": "liep Starlink achter",
+      "show": "ACHTER OP SCHEMA"
+     },
+     {
+      "say": "veel te traag",
+      "show": "VEEL TE TRAAG"
+     }
+    ]
+   },
+   {
+    "head": "Waarom ontsloeg Musk in 2018 de leiding van Starlink?",
+    "img": [
+     "satellite-ai.jpg"
+    ],
+    "pop": [
+     {
+      "say": "",
+      "show": "WAAROM ONTSLAGEN?"
+     }
+    ]
+   },
+   {
+    "text": "Omdat hij sneller goedkopere, eenvoudigere satellieten wilde, en zij meer tijd wilden om te testen. In februari 2018 had SpaceX twee testsatellieten gelanceerd, Tintin A en B. Die werkten. Technici in Californië en in Redmond, vlak bij Seattle, streamden er 4K-video mee, en speelden er zelfs de schietgame Counter-Strike mee.",
+    "img": [
+     "satellite-ai.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Falcon 9 PAZ launch 2018",
+       "Falcon 9 Vandenberg launch 2018",
+       "Falcon 9 Vandenberg"
+      ],
+      "want": "a Falcon 9 launch from Vandenberg, California"
+     },
+     {
+      "q": [
+       "Redmond Washington",
+       "Redmond Washington aerial",
+       "Redmond Town Center"
+      ],
+      "want": "the town of Redmond, Washington"
+     }
+    ],
+    "pop": [
+     {
+      "say": "goedkopere, eenvoudigere",
+      "show": "GOEDKOPER, EENVOUDIGER"
+     },
+     {
+      "say": "meer tijd",
+      "show": "MEER TIJD?"
+     },
+     {
+      "say": "Tintin A en B",
+      "show": "TINTIN A EN B"
+     },
+     {
+      "say": "Die werkten",
+      "show": "ZE WERKTEN"
+     },
+     {
+      "say": "Redmond",
+      "show": "REDMOND"
+     },
+     {
+      "say": "4K-video",
+      "show": "4K-VIDEO"
+     },
+     {
+      "say": "Counter-Strike",
+      "show": "COUNTER-STRIKE"
+     }
+    ]
+   },
+   {
+    "text": "Maar volgens persbureau Reuters wilde de baas van het satellietteam eerst nog drie rondes testsatellieten. Musk was het daar niet mee eens. In juni 2018 vloog hij naar Redmond, en binnen een paar uur na de landing ontsloeg hij minstens zeven leidinggevenden van het Starlink-team.",
+    "photo": [
+     {
+      "q": [
+       "Seattle skyline",
+       "Seattle aerial",
+       "Seattle Space Needle skyline"
+      ],
+      "want": "the Seattle skyline"
+     },
+     {
+      "q": [
+       "Satellite clean room",
+       "spacecraft clean room assembly",
+       "satellite assembly clean room"
+      ],
+      "want": "a satellite being assembled in a clean room"
+     }
+    ],
+    "pop": [
+     {
+      "say": "volgens persbureau Reuters",
+      "show": "REUTERS:"
+     },
+     {
+      "say": "drie rondes",
+      "show": "3 TESTRONDES ERBIJ"
+     },
+     {
+      "say": "niet mee eens",
+      "show": "MUSK ZEGT NEE"
+     },
+     {
+      "say": "juni 2018",
+      "show": "JUNI 2018"
+     },
+     {
+      "say": "binnen een paar uur",
+      "show": "BINNEN UREN"
+     },
+     {
+      "say": "minstens zeven",
+      "show": "7 MANAGERS ONTSLAGEN"
+     }
+    ]
+   },
+   {
+    "text": "Nieuwe managers van het hoofdkantoor in Californië kregen één duidelijk doel: medio 2019 de eerste lading lanceren. Maar een eenvoudigere satelliet was maar de helft van de oplossing. SpaceX moest ook tientallen satellieten tegelijk in een baan kunnen brengen, zonder apart lanceermechanisme voor elke satelliet.",
+    "img": [
+     "spacex-8.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "SpaceX headquarters Hawthorne",
+       "SpaceX Hawthorne",
+       "SpaceX factory Hawthorne"
+      ],
+      "want": "SpaceX headquarters in Hawthorne, California"
+     }
+    ],
+    "pop": [
+     {
+      "say": "Nieuwe managers",
+      "show": "NIEUWE LEIDING"
+     },
+     {
+      "say": "medio 2019",
+      "show": "DEADLINE: MEDIO 2019"
+     },
+     {
+      "say": "helft van de oplossing",
+      "show": "DE HELFT VAN HET ANTWOORD"
+     },
+     {
+      "say": "tientallen satellieten tegelijk",
+      "show": "TIENTALLEN TEGELIJK"
+     },
+     {
+      "say": "voor elke satelliet",
+      "show": "GEEN MECHANISME PER STUK"
+     }
+    ]
+   },
+   {
+    "head": "Hoe krijg je 60 satellieten in één raket?",
+    "img": [
+     "starlink-launch-stack.jpg"
+    ],
+    "pop": [
+     {
+      "say": "",
+      "show": "60 IN ÉÉN RAKET?"
+     }
+    ]
+   },
+   {
+    "text": "Je maakt ze plat, en je stapelt ze als een stok kaarten. Elke eerste Starlink-satelliet was een plat paneel ter grootte van een bureau, van zo'n 227 kilo. Er zaten vier platte antennes op, één zonnepaneel dat zich in de ruimte uitvouwt, en een piepklein motortje dat op kryptongas werkt.",
+    "img": [
+     "starlink-2.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Starlink satellite",
+       "Starlink satellite model",
+       "Starlink v1.0 satellite"
+      ],
+      "want": "a single flat Starlink satellite"
+     },
+     {
+      "q": [
+       "Hall effect thruster",
+       "Hall thruster firing",
+       "ion thruster test"
+      ],
+      "want": "a small electric Hall thruster firing in a test chamber"
+     }
+    ],
+    "pop": [
+     {
+      "say": "maakt ze plat",
+      "show": "MAAK ZE PLAT"
+     },
+     {
+      "say": "stok kaarten",
+      "show": "STAPEL ZE"
+     },
+     {
+      "say": "bureau",
+      "show": "ZO GROOT ALS EEN BUREAU"
+     },
+     {
+      "say": "227 kilo",
+      "show": "227 KILO"
+     },
+     {
+      "say": "vier platte antennes",
+      "show": "4 PLATTE ANTENNES"
+     },
+     {
+      "say": "één zonnepaneel",
+      "show": "1 ZONNEPANEEL"
+     },
+     {
+      "say": "kryptongas",
+      "show": "KRYPTONMOTOR"
+     }
+    ]
+   },
+   {
+    "text": "Op elkaar gelegd vulden zestig van die platen de neuskegel van een Falcon 9 van onder tot boven. Samen: 13.620 kilo, de zwaarste lading die SpaceX ooit had gelanceerd. Musk noemde het krap passen.",
+    "img": [
+     "starlink-launch-stack.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Starlink Mission satellites fairing",
+       "Starlink satellites stacked",
+       "Starlink stack fairing 2019"
+      ],
+      "want": "the stack of 60 flat Starlink satellites inside the rocket's nose cone"
+     },
+     {
+      "q": [
+       "Falcon 9 fairing",
+       "Falcon 9 payload fairing",
+       "fairing half Falcon 9"
+      ],
+      "want": "the nose cone (fairing) of a Falcon 9"
+     }
+    ],
+    "pop": [
+     {
+      "say": "Op elkaar gelegd",
+      "show": "OP ELKAAR GELEGD"
+     },
+     {
+      "say": "neuskegel",
+      "show": "DE NEUSKEGEL"
+     },
+     {
+      "say": "13.620 kilo",
+      "show": "13.620 KILO"
+     },
+     {
+      "say": "zwaarste lading",
+      "show": "ZWAARSTE OOIT"
+     },
+     {
+      "say": "krap passen",
+      "show": "KRAP PASSEN"
+     }
+    ]
+   },
+   {
+    "text": "En wat ontbrak was net zo belangrijk. Tussen de satellieten zat geen enkel ontkoppelmechanisme. Dat scheelde gewicht en onderdelen. Maar het leverde ook een duidelijk probleem op. Zonder veren die ze wegduwen, kunnen zestig losse satellieten makkelijk tegen elkaar aan botsen.",
+    "img": [
+     "starlink-1.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "satellite deployment from upper stage",
+       "satellite separation",
+       "CubeSat deployment"
+      ],
+      "want": "a satellite separating from a rocket's upper stage in space"
+     }
+    ],
+    "pop": [
+     {
+      "say": "wat ontbrak",
+      "show": "WAT ONTBRAK?"
+     },
+     {
+      "say": "geen enkel ontkoppelmechanisme",
+      "show": "GEEN MECHANISME"
+     },
+     {
+      "say": "scheelde gewicht",
+      "show": "MINDER GEWICHT"
+     },
+     {
+      "say": "duidelijk probleem",
+      "show": "HET PROBLEEM"
+     },
+     {
+      "say": "Zonder veren",
+      "show": "GEEN VEREN"
+     },
+     {
+      "say": "tegen elkaar aan botsen",
+      "show": "BOTSINGEN?"
+     }
+    ]
+   },
+   {
+    "head": "Dus hoe verlaat een satelliet een raket zonder veren?",
+    "img": [
+     "starlink-launch-stack.jpg"
+    ],
+    "pop": [
+     {
+      "say": "",
+      "show": "ZONDER VEREN?"
+     }
+    ]
+   },
+   {
+    "text": "De raket draait langzaam rond, laat de hele stapel los, en de natuurkunde verdeelt de kaarten. Na twee keer uitstel, door harde wind en voor een software-update, steeg de Falcon 9 op 23 mei 2019 om half elf 's avonds op vanaf Cape Canaveral. In Nederland was het toen half vijf 's ochtends. De eerste trap, al aan zijn derde vlucht, landde op een droneschip in de Atlantische Oceaan.",
+    "img": [
+     "spacex-6.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Falcon 9 Starlink launch",
+       "Falcon 9 launch night",
+       "Falcon 9 liftoff Cape Canaveral"
+      ],
+      "want": "a Falcon 9 rocket launching"
+     },
+     {
+      "q": [
+       "Falcon 9 landing drone ship",
+       "Of Course I Still Love You landing",
+       "Falcon 9 first stage droneship"
+      ],
+      "want": "a Falcon 9 booster landing on a drone ship at sea"
+     }
+    ],
+    "pop": [
+     {
+      "say": "De raket draait",
+      "show": "DE RAKET DRAAIT"
+     },
+     {
+      "say": "de natuurkunde verdeelt",
+      "show": "NATUURKUNDE DOET DE REST"
+     },
+     {
+      "say": "twee keer uitstel",
+      "show": "2 KEER UITSTEL"
+     },
+     {
+      "say": "harde wind",
+      "show": "HARDE WIND"
+     },
+     {
+      "say": "software-update",
+      "show": "SOFTWARE-UPDATE"
+     },
+     {
+      "say": "23 mei 2019",
+      "show": "23 MEI 2019"
+     },
+     {
+      "say": "half vijf",
+      "show": "04.30 UUR IN NL"
+     },
+     {
+      "say": "derde vlucht",
+      "show": "3E VLUCHT"
+     },
+     {
+      "say": "droneschip",
+      "show": "GELAND OP ZEE"
+     }
+    ]
+   },
+   {
+    "text": "Ongeveer een uur na de start, op zo'n 440 kilometer hoogte, begon de bovenste trap langzaam te draaien en liet hij alle 60 satellieten in één klomp los. Elke satelliet zat op een andere plek in de draaiende stapel. Daardoor bewoog elke satelliet met een net iets andere snelheid weg, en dreef hij langzaam van zijn buren af.",
+    "img": [
+     "starlink-launch-stack.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Falcon 9 second stage",
+       "Falcon 9 upper stage orbit",
+       "Merlin Vacuum engine"
+      ],
+      "want": "a Falcon 9 upper stage"
+     }
+    ],
+    "pop": [
+     {
+      "say": "een uur na de start",
+      "show": "1 UUR LATER"
+     },
+     {
+      "say": "440 kilometer",
+      "show": "440 KM HOOG"
+     },
+     {
+      "say": "langzaam te draaien",
+      "show": "LANGZAAM DRAAIEN"
+     },
+     {
+      "say": "één klomp",
+      "show": "ÉÉN KLOMP"
+     },
+     {
+      "say": "andere plek",
+      "show": "ANDERE PLEKKEN"
+     },
+     {
+      "say": "andere snelheid",
+      "show": "ANDERE SNELHEDEN"
+     },
+     {
+      "say": "van zijn buren af",
+      "show": "UIT ELKAAR"
+     }
+    ]
+   },
+   {
+    "text": "Musk vergeleek het vooraf met een stok kaarten die je op tafel uitwaaiert. Daarna moesten de satellieten hun zonnepanelen uitklappen en met hun kryptonmotortjes naar 550 kilometer klimmen. Niemand wist zeker of zestig gloednieuwe satellieten allemaal wakker zouden worden.",
+    "img": [
+     "starlink-2.jpg",
+     "starlink-1.jpg"
+    ],
+    "pop": [
+     {
+      "say": "op tafel uitwaaiert",
+      "show": "KAARTEN UITWAAIEREN"
+     },
+     {
+      "say": "zonnepanelen uitklappen",
+      "show": "PANELEN UIT"
+     },
+     {
+      "say": "550 kilometer",
+      "show": "NAAR 550 KM"
+     },
+     {
+      "say": "Niemand wist zeker",
+      "show": "NIEMAND WIST HET"
+     },
+     {
+      "say": "wakker zouden worden",
+      "show": "WORDEN ZE WAKKER?"
+     }
+    ]
+   },
+   {
+    "head": "Wat gebeurde er met de eerste 60 satellieten?",
+    "img": [
+     "lib/starlink-satellites.jpg"
+    ],
+    "pop": [
+     {
+      "say": "",
+      "show": "WAT GEBEURDE ER?"
+     }
+    ]
+   },
+   {
+    "text": "De meeste werkten, drie vielen uit, en de hele wereld zag ze. Al de volgende nacht filmde satellietspotter Marco Langbroek in Leiden een rechte rij heldere stipjes die langs de hemel trok. Hij telde er minstens 56, en vertelde dat hij het uitschreeuwde van verbazing.",
+    "img": [
+     "lib/starlink-satellites.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Leiden",
+       "Leiden canal night",
+       "Leiden city"
+      ],
+      "want": "the Dutch city of Leiden"
+     },
+     {
+      "q": [
+       "Starlink satellite train",
+       "Starlink train night sky",
+       "Starlink satellites night sky"
+      ],
+      "want": "a line of Starlink satellites crossing the night sky"
+     }
+    ],
+    "pop": [
+     {
+      "say": "De meeste werkten",
+      "show": "DE MEESTE WERKTEN"
+     },
+     {
+      "say": "drie vielen uit",
+      "show": "3 VIELEN UIT"
+     },
+     {
+      "say": "de hele wereld zag ze",
+      "show": "DE WERELD ZAG ZE"
+     },
+     {
+      "say": "Leiden",
+      "show": "LEIDEN"
+     },
+     {
+      "say": "rechte rij heldere stipjes",
+      "show": "EEN RIJ STIPJES"
+     },
+     {
+      "say": "minstens 56",
+      "show": "56 STIPJES"
+     },
+     {
+      "say": "uitschreeuwde",
+      "show": "HIJ SCHREEUWDE"
+     }
+    ]
+   },
+   {
+    "text": "Filmpjes van de Starlink-trein gingen de wereld over. En sterrenkundigen begonnen zich zorgen te maken over wat duizenden van zulke satellieten met hun zicht op de sterren zouden doen.",
+    "photo": [
+     {
+      "q": [
+       "Satellite trails astronomy image",
+       "Starlink satellite trails telescope",
+       "satellite streaks astrophotography"
+      ],
+      "want": "satellite trails streaking across an astronomical image"
+     },
+     {
+      "q": [
+       "Observatory telescope dome night",
+       "Very Large Telescope",
+       "observatory dome stars"
+      ],
+      "want": "an observatory telescope under the night sky"
+     }
+    ],
+    "pop": [
+     {
+      "say": "Starlink-trein",
+      "show": "DE STARLINK-TREIN"
+     },
+     {
+      "say": "de wereld over",
+      "show": "VIRAAL"
+     },
+     {
+      "say": "sterrenkundigen",
+      "show": "STERRENKUNDIGEN BEZORGD"
+     },
+     {
+      "say": "zicht op de sterren",
+      "show": "ZICHT OP DE STERREN"
+     }
+    ]
+   },
+   {
+    "text": "Eind juni meldde SpaceX dat 45 satellieten hun werkhoogte hadden bereikt. Drie reageerden niet meer, en zouden vanzelf terugvallen en verbranden. Twee werkende satellieten werden expres naar beneden gestuurd, om te bewijzen dat een Starlink-satelliet zichzelf uit zijn baan kan sturen. Het waren testversies. Maar de methode zelf werkte, en die moest nu honderden keren werken.",
+    "img": [
+     "starlink-2.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "satellite reentry",
+       "reentry fireball",
+       "spacecraft reentry trail"
+      ],
+      "want": "a spacecraft burning up on re-entry, a bright trail in the sky"
+     }
+    ],
+    "pop": [
+     {
+      "say": "45 satellieten",
+      "show": "45 OP HOOGTE"
+     },
+     {
+      "say": "reageerden niet meer",
+      "show": "3 STIL"
+     },
+     {
+      "say": "verbranden",
+      "show": "VERBRANDEN"
+     },
+     {
+      "say": "expres naar beneden",
+      "show": "2 EXPRES OMLAAG"
+     },
+     {
+      "say": "uit zijn baan kan sturen",
+      "show": "ZELF UIT DE BAAN"
+     },
+     {
+      "say": "testversies",
+      "show": "TESTVERSIES"
+     },
+     {
+      "say": "honderden keren",
+      "show": "HONDERDEN KEREN"
+     }
+    ]
+   },
+   {
+    "head": "Waarom doet die stok kaarten in de ruimte er nog steeds toe?",
+    "img": [
+     "starlink-1.jpg"
+    ],
+    "pop": [
+     {
+      "say": "",
+      "show": "WAAROM HET ERTOE DOET"
+     }
+    ]
+   },
+   {
+    "text": "Omdat de stapel de lopende band werd van het grootste satellietnetwerk ooit. In november 2019 volgde de eerste echte lading van 60, en in 2020 en 2021 lanceerde de Falcon 9 de ene stapel na de andere. Nu neemt een Falcon 9 zo'n twee dozijn van de grotere V2 Mini-satellieten per vlucht mee. En in 2026 had Starlink voor het eerst meer dan 10.000 satellieten tegelijk in de ruimte.",
+    "img": [
+     "spacex-2.jpg",
+     "starlink-1.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Falcon 9 Starlink launch",
+       "Falcon 9 launch night",
+       "Falcon 9 liftoff Cape Canaveral"
+      ],
+      "want": "a Falcon 9 rocket launching"
+     }
+    ],
+    "pop": [
+     {
+      "say": "lopende band",
+      "show": "EEN LOPENDE BAND"
+     },
+     {
+      "say": "grootste satellietnetwerk",
+      "show": "HET GROOTSTE NETWERK"
+     },
+     {
+      "say": "november 2019",
+      "show": "NOV 2019"
+     },
+     {
+      "say": "de ene stapel na de andere",
+      "show": "STAPEL NA STAPEL"
+     },
+     {
+      "say": "twee dozijn",
+      "show": "~24 PER VLUCHT"
+     },
+     {
+      "say": "V2 Mini",
+      "show": "V2 MINI"
+     },
+     {
+      "say": "10.000 satellieten",
+      "show": "10.000+ SATELLIETEN"
+     }
+    ]
+   },
+   {
+    "text": "Starship gaat nog verder. Volgens SpaceX voegden de 26 V3-satellieten van vlucht 14 ongeveer tien keer zoveel capaciteit toe als een lading van een Falcon 9. En vlucht 15 is de volgende.",
+    "img": [
+     "lib/starship-launch.jpg",
+     "lib/starship-pad.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Starship launch",
+       "Starship flight test liftoff",
+       "Super Heavy liftoff"
+      ],
+      "want": "a Starship rocket lifting off from Starbase"
+     }
+    ],
+    "pop": [
+     {
+      "say": "Starship gaat nog verder",
+      "show": "STARSHIP"
+     },
+     {
+      "say": "26 V3-satellieten",
+      "show": "26 V3-SATELLIETEN"
+     },
+     {
+      "say": "tien keer zoveel capaciteit",
+      "show": "10X CAPACITEIT"
+     },
+     {
+      "say": "vlucht 15",
+      "show": "VLUCHT 15 IS DE VOLGENDE"
+     }
+    ]
+   },
+   {
+    "text": "Voor Tesla is dit geen ver ruimtenieuws. Starlink-schotels verbinden nu al afgelegen Superchargers met internet. De Cybercab is getoond met een ingebouwde Starlink-antenne. En Tesla en SpaceX onderzoeken een mogelijke fusie.",
+    "img": [
+     "lib/supercharger-v4.jpg",
+     "lib/cybercab.jpg",
+     "lib/musk-chess-companies.jpg"
+    ],
+    "pop": [
+     {
+      "say": "Voor Tesla",
+      "show": "WAAROM TESLA"
+     },
+     {
+      "say": "afgelegen Superchargers",
+      "show": "SUPERCHARGERS"
+     },
+     {
+      "say": "Cybercab",
+      "show": "CYBERCAB"
+     },
+     {
+      "say": "ingebouwde Starlink-antenne",
+      "show": "STARLINK INGEBOUWD"
+     },
+     {
+      "say": "mogelijke fusie",
+      "show": "TESLA + SPACEX?"
+     }
+    ]
+   },
+   {
+    "text": "En de les van 2019 kennen Tesla-fans van de fabrieksvloer. Maak het eenvoudiger. Lanceer het eerder. Los op wat misgaat bij de volgende lading. Zestig satellieten, gestapeld als kaarten, zijn waar die gok in de ruimte begon.",
+    "img": [
+     "lib/starlink-dish-car.jpg",
+     "starlink-launch-stack.jpg"
+    ],
+    "pop": [
+     {
+      "say": "de les van 2019",
+      "show": "DE LES"
+     },
+     {
+      "say": "Maak het eenvoudiger",
+      "show": "MAAK HET EENVOUDIGER"
+     },
+     {
+      "say": "Lanceer het eerder",
+      "show": "LANCEER EERDER"
+     },
+     {
+      "say": "Los op wat misgaat",
+      "show": "LOS OP WAT MISGAAT"
+     },
+     {
+      "say": "Zestig satellieten",
+      "show": "60 SATELLIETEN"
+     },
+     {
+      "say": "waar die gok in de ruimte begon",
+      "show": "WAAR DE GOK BEGON"
+     }
+    ]
+   }
+  ],
+  "yt_title_en": "How SpaceX Launches Starlink Satellites Stacked Like a Deck of Cards",
+  "yt_title_nl": "Hoe SpaceX Starlink-satellieten lanceert, gestapeld als een stok kaarten"
+ }
+}

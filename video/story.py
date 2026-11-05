@@ -711,6 +711,17 @@ def main():
     tmp = OUT / f"story-{slug}"
     tmp.mkdir(exist_ok=True)
     beats = beats_from(a, lang)
+    # the end card speaks the slogan; a script that ends with its own "for the full story..." / "like and
+    # subscribe" would say it twice (5 Nov 2026), so such closing sentences are taken out of the last beat
+    outro = re.compile(r"\s*(?:[^.!?]*\b(?:full story|like and subscribe|trending ?tesla(?:\.com| dot com)|"
+                       r"see you there)\b[^.!?]*[.!?]?)+\s*$", re.I)
+    last = beats[-1]
+    cut = outro.sub("", last["text"]).strip()
+    if cut and cut != last["text"].strip():
+        print(f"::notice::closing call to action dropped from the script (the end card says it): {last['text'][len(cut):].strip()}")
+        last["text"] = cut
+    elif not cut and len(beats) > 1:
+        beats.pop()
     plan_moves(beats)
     assign_images(a, beats)
 

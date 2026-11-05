@@ -212,6 +212,8 @@ Shorts (typically 741 views after 48 hours) by far. So:
   the Short (the background, the how and why, the numbers, the turns, what it means), never the same 60
   seconds again in longer words. Write the Short as the most gripping slice of the story; keep one or two
   strong details for the article and the long video. The Short's description always links to the article.
+  The end card speaks that line itself: never put "for the full story...", "like and subscribe" or
+  "TrendingTesla.com" in the Short's script (the renderer removes it from the last beat anyway, 5 Nov 2026).
 - **Write the Short as a story: hook -> tension -> payoff**, under 60 seconds. Hook: the most striking concrete
   fact or turn, in the first sentence. Tension: what was at stake, what stood in the way, what people expected.
   Payoff: what happened and why it matters, ending on the strongest line. Short sentences, a few words in

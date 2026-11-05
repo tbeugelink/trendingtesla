@@ -263,3 +263,6 @@ Articles with a "models" key automatically use real-life photos of that model. Y
 - gen/spacex-first-starlink-launch-2019-satellites-stacked-like-deck-of-cards.jpg — a stack of flat Starlink satellites fanning out like a deck of cards from a Falcon 9 upper stage above Earth
 - gen/spacex-first-starlink-launch-2019-satellites-stacked-like-deck-of-cards-x2-11042048.jpg — the stack of 60 flat Starlink satellites in the clean room before the nose cone closes
 - gen/spacex-first-starlink-launch-2019-satellites-stacked-like-deck-of-cards-x3-11042050.jpg — a train of Starlink satellites crossing the night sky over the Netherlands
+- gen/can-tesla-cybercab-drive-in-europe-no-steering-wheel-rules-explained.jpg — The gold Cybercab with its doors open on a cobblestone square in a European old town
+- gen/can-tesla-cybercab-drive-in-europe-no-steering-wheel-rules-explained-x2-11051148.jpg — The Cybercab parked beside a European canal at blue hour, rear light bar glowing
+- gen/can-tesla-cybercab-drive-in-europe-no-steering-wheel-rules-explained-x3-11051148.jpg — Visitors seen from behind looking at the Cybercab in a European showroom

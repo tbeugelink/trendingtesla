@@ -421,5 +421,44 @@
         "commons": "Starlink Mission satellites stacked 2019"
       }
     ]
+  },
+  "gen/can-tesla-cybercab-drive-in-europe-no-steering-wheel-rules-explained.jpg": {
+    "article": "can-tesla-cybercab-drive-in-europe-no-steering-wheel-rules-explained",
+    "model": "gpt-image-2.5-flare",
+    "made": "2026-11-05",
+    "references": [
+      {
+        "src": "lib/cybercab-doors-open.jpg"
+      },
+      {
+        "src": "lib/cybercab-street-day.jpg"
+      }
+    ]
+  },
+  "gen/can-tesla-cybercab-drive-in-europe-no-steering-wheel-rules-explained-x2-11051148.jpg": {
+    "article": "can-tesla-cybercab-drive-in-europe-no-steering-wheel-rules-explained",
+    "model": "gpt-image-2.5-flare",
+    "made": "2026-11-05",
+    "references": [
+      {
+        "src": "lib/cybercab-doors-open.jpg"
+      },
+      {
+        "src": "lib/cybercab-street-day.jpg"
+      }
+    ]
+  },
+  "gen/can-tesla-cybercab-drive-in-europe-no-steering-wheel-rules-explained-x3-11051148.jpg": {
+    "article": "can-tesla-cybercab-drive-in-europe-no-steering-wheel-rules-explained",
+    "model": "gpt-image-2.5-flare",
+    "made": "2026-11-05",
+    "references": [
+      {
+        "src": "lib/cybercab-doors-open.jpg"
+      },
+      {
+        "src": "lib/cybercab-street-day.jpg"
+      }
+    ]
   }
 }

@@ -1,1363 +1,1371 @@
 {
- "slug": "can-tesla-cybercab-drive-in-europe-no-steering-wheel-rules-explained",
- "date": "2026-11-05",
- "time": "12:44",
- "category": "robotaxi",
- "also": [
-  "fsd"
- ],
- "models": [
-  "cybercab"
- ],
- "sources": [
-  {
-   "title": "Not a Tesla App: Tesla Cybercab goes on tour in Europe, cities and dates",
-   "url": "https://notateslaapp.com/news/4933/tesla-cybercab-goes-on-tour-in-europe-cities-dates"
-  },
-  {
-   "title": "KBA: EU type approvals for motor vehicles with a fully automated driving function in small series",
-   "url": "https://www.kba.de/EN/Themen_en/Typgenehmigung_en/Autonomes_automatisiertes_Fahren_en/EU_Typgenehmigung_en/eu_typgenehmigung_node_en.html"
-  },
-  {
-   "title": "Connected Automated Driving: UNECE adopts first-ever global rules allowing fully autonomous vehicles",
-   "url": "https://www.connectedautomateddriving.eu/blog/unece-adopts-first-ever-global-rules-allowing-fully-autonomous-vehicles/"
-  },
-  {
-   "title": "CMS: Autonomous vehicles law and regulation in Germany",
-   "url": "https://cms.law/en/int/expert-guides/cms-expert-guide-to-autonomous-vehicles-avs/germany"
-  }
- ],
- "images": [
-  "lib/cybercab-doors-open.jpg",
-  "lib/cybercab-street-day.jpg",
-  "lib/cybercab-dash-line.jpg",
-  "models/cc-3.jpg",
-  "cybercab-fleet.jpg",
-  "lib/cybercab-line-closeup.jpg"
- ],
- "gen_image": {
-  "prompt": "Close, dynamic low three-quarter front shot of the gold Tesla Cybercab parked on a wet cobblestone square in a European old town at golden hour, both butterfly doors swung up, the two-seat cabin with one centre screen and no steering wheel visible inside; colourful gabled houses softly blurred behind, warm sunlight on the gold body, deep blue evening sky, a subtle red reflection from a café awning; subject large in the horizontal centre, calm lower-left area",
-  "subject": "the Tesla Cybercab: a low two-seat, two-door champagne-gold robotaxi coupe with a smooth teardrop shape, butterfly doors hinged at the front that swing up and forward, a full-width light bar at front and rear, aerodynamic wheel covers; inside only two seats and a single centre screen, NO steering wheel, NO pedals, NO side mirrors and NO rear window; parked, nobody inside, no people in front of it",
-  "refs": [
-   {
-    "src": "lib/cybercab-doors-open.jpg"
-   },
-   {
-    "src": "lib/cybercab-street-day.jpg"
-   }
+  "slug": "can-tesla-cybercab-drive-in-europe-no-steering-wheel-rules-explained",
+  "date": "2026-11-05",
+  "time": "12:44",
+  "category": "robotaxi",
+  "also": [
+    "fsd"
   ],
-  "profile": "editorial",
-  "category": "B",
-  "describe": "The gold Cybercab with its doors open on a cobblestone square in a European old town",
-  "extra": [
-   {
-    "prompt": "Wide calm shot of the gold Tesla Cybercab parked beside a European canal at blue hour, doors closed, rear light bar glowing red, old brick canal houses with lit windows and a bridge behind, reflections in the water, nobody in the car",
-    "describe": "The Cybercab parked beside a European canal at blue hour, rear light bar glowing"
-   },
-   {
-    "prompt": "Side view of the gold Tesla Cybercab on display under bright lights in a modern glass car showroom in a European city, a few visitors seen only from behind looking at it, rainy street and tram visible through the glass, nobody inside the car",
-    "describe": "Visitors seen from behind looking at the Cybercab in a European showroom"
-   }
-  ]
- },
- "label": {
-  "style": "a",
+  "models": [
+    "cybercab"
+  ],
+  "sources": [
+    {
+      "title": "Not a Tesla App: Tesla Cybercab goes on tour in Europe, cities and dates",
+      "url": "https://notateslaapp.com/news/4933/tesla-cybercab-goes-on-tour-in-europe-cities-dates"
+    },
+    {
+      "title": "KBA: EU type approvals for motor vehicles with a fully automated driving function in small series",
+      "url": "https://www.kba.de/EN/Themen_en/Typgenehmigung_en/Autonomes_automatisiertes_Fahren_en/EU_Typgenehmigung_en/eu_typgenehmigung_node_en.html"
+    },
+    {
+      "title": "Connected Automated Driving: UNECE adopts first-ever global rules allowing fully autonomous vehicles",
+      "url": "https://www.connectedautomateddriving.eu/blog/unece-adopts-first-ever-global-rules-allowing-fully-autonomous-vehicles/"
+    },
+    {
+      "title": "CMS: Autonomous vehicles law and regulation in Germany",
+      "url": "https://cms.law/en/int/expert-guides/cms-expert-guide-to-autonomous-vehicles-avs/germany"
+    }
+  ],
+  "images": [
+    "gen/can-tesla-cybercab-drive-in-europe-no-steering-wheel-rules-explained.jpg",
+    "gen/can-tesla-cybercab-drive-in-europe-no-steering-wheel-rules-explained-x3-11051148.jpg",
+    "gen/can-tesla-cybercab-drive-in-europe-no-steering-wheel-rules-explained-x2-11051148.jpg",
+    "lib/cybercab-doors-open.jpg",
+    "lib/cybercab-street-day.jpg",
+    "lib/cybercab-dash-line.jpg",
+    "models/cc-3.jpg",
+    "cybercab-fleet.jpg",
+    "lib/cybercab-line-closeup.jpg"
+  ],
+  "gen_image": {
+    "prompt": "Close, dynamic low three-quarter front shot of the gold Tesla Cybercab parked on a wet cobblestone square in a European old town at golden hour, both butterfly doors swung up, the two-seat cabin with one centre screen and no steering wheel visible inside; colourful gabled houses softly blurred behind, warm sunlight on the gold body, deep blue evening sky, a subtle red reflection from a café awning; subject large in the horizontal centre, calm lower-left area",
+    "subject": "the Tesla Cybercab: a low two-seat, two-door champagne-gold robotaxi coupe with a smooth teardrop shape, butterfly doors hinged at the front that swing up and forward, a full-width light bar at front and rear, aerodynamic wheel covers; inside only two seats and a single centre screen, NO steering wheel, NO pedals, NO side mirrors and NO rear window; parked, nobody inside, no people in front of it",
+    "refs": [
+      {
+        "src": "lib/cybercab-doors-open.jpg"
+      },
+      {
+        "src": "lib/cybercab-street-day.jpg"
+      }
+    ],
+    "profile": "editorial",
+    "category": "B",
+    "describe": "The gold Cybercab with its doors open on a cobblestone square in a European old town",
+    "extra": [
+      {
+        "prompt": "Wide calm shot of the gold Tesla Cybercab parked beside a European canal at blue hour, doors closed, rear light bar glowing red, old brick canal houses with lit windows and a bridge behind, reflections in the water, nobody in the car",
+        "describe": "The Cybercab parked beside a European canal at blue hour, rear light bar glowing",
+        "file": "gen/can-tesla-cybercab-drive-in-europe-no-steering-wheel-rules-explained-x2-11051148.jpg"
+      },
+      {
+        "prompt": "Side view of the gold Tesla Cybercab on display under bright lights in a modern glass car showroom in a European city, a few visitors seen only from behind looking at it, rainy street and tram visible through the glass, nobody inside the car",
+        "describe": "Visitors seen from behind looking at the Cybercab in a European showroom",
+        "file": "gen/can-tesla-cybercab-drive-in-europe-no-steering-wheel-rules-explained-x3-11051148.jpg"
+      }
+    ],
+    "done": true,
+    "model": "gpt-image-2.5-flare"
+  },
+  "label": {
+    "style": "a",
+    "en": {
+      "sub": "NO WHEEL, NO PEDALS",
+      "text": "LEGAL IN EUROPE?"
+    },
+    "nl": {
+      "sub": "GEEN STUUR, GEEN PEDALEN",
+      "text": "MAG DAT IN EUROPA?"
+    }
+  },
+  "short": {
+    "hook": "consequence",
+    "en": "This Tesla is touring Europe. And nobody is allowed to ride it. The Cybercab has two seats, a screen, and NO steering wheel. No pedals either. In Texas, people pay to ride one. In Europe, it stays parked. Why? Europe checks every car BEFORE it hits the road. And for decades, those rules assumed a driver, with a wheel and pedals. There is one way in for driverless cars. But only fifteen hundred per model, per year, in fixed areas. Far too few for a robotaxi fleet. Now the rules are changing. In 2026, the UN adopted the first global rules for cars with nobody driving. So the car on show could one day pick YOU up.",
+    "nl": "Deze Tesla toert door Europa. En niemand mag erin rijden. De Cybercab heeft twee stoelen, een scherm en GEEN stuur. Ook geen pedalen. In Texas betalen mensen voor een rit. In Europa blijft hij staan. Waarom? Europa keurt elke auto VOORDAT hij de weg op gaat. En tientallen jaren gingen die regels uit van een bestuurder, met stuur en pedalen. Er is één route voor auto's zonder bestuurder. Maar alleen voor vijftienhonderd per model, per jaar, in vaste gebieden. Veel te weinig voor een robotaxivloot. Nu veranderen de regels. In 2026 nam de VN de eerste wereldwijde regels aan voor auto's waarin niemand rijdt. Dus de auto op de tentoonstelling kan jou ooit komen ophalen.",
+    "yt_title_en": "The Tesla Europe Won't Let You Ride",
+    "yt_title_nl": "De Tesla Waar Je in Europa Niet in Mag",
+    "story": [
+      {
+        "part": "hook",
+        "text": "This Tesla is touring Europe. And nobody is allowed to ride it.",
+        "lib": [
+          "cybercab-doors-open.jpg"
+        ],
+        "pop": [
+          {
+            "say": "touring Europe",
+            "show": "EUROPE TOUR"
+          },
+          {
+            "say": "nobody",
+            "show": "NOBODY RIDES"
+          }
+        ]
+      },
+      {
+        "part": "hook",
+        "text": "The Cybercab has two seats, a screen, and NO steering wheel. No pedals either.",
+        "lib": [
+          "cybercab-dash-line.jpg"
+        ],
+        "pop": [
+          {
+            "say": "two seats",
+            "show": "TWO SEATS"
+          },
+          {
+            "say": "NO steering wheel",
+            "show": "NO WHEEL"
+          },
+          {
+            "say": "No pedals",
+            "show": "NO PEDALS"
+          }
+        ]
+      },
+      {
+        "part": "tension",
+        "text": "In Texas, people pay to ride one. In Europe, it stays parked.",
+        "lib": [
+          "cybercab-street-day.jpg",
+          "cybercab-silhouette-door.jpg"
+        ],
+        "pop": [
+          {
+            "say": "pay to ride",
+            "show": "TEXAS: RIDES"
+          },
+          {
+            "say": "stays parked",
+            "show": "EUROPE: PARKED"
+          }
+        ]
+      },
+      {
+        "part": "tension",
+        "text": "Why? Europe checks every car BEFORE it hits the road.",
+        "lib": [
+          "eu-brussels-tesla.jpg"
+        ],
+        "pop": [
+          {
+            "say": "Why",
+            "show": "WHY?"
+          },
+          {
+            "say": "BEFORE",
+            "show": "CHECKED FIRST"
+          }
+        ]
+      },
+      {
+        "part": "tension",
+        "text": "And for decades, those rules assumed a driver, with a wheel and pedals.",
+        "lib": [
+          "screen-modely.jpg"
+        ],
+        "pop": [
+          {
+            "say": "assumed a driver",
+            "show": "A DRIVER"
+          },
+          {
+            "say": "wheel and pedals",
+            "show": "WHEEL + PEDALS"
+          }
+        ]
+      },
+      {
+        "part": "tension",
+        "text": "There is one way in for driverless cars. But only fifteen hundred per model, per year, in fixed areas.",
+        "lib": [
+          "cybercab-line-robots.jpg"
+        ],
+        "pop": [
+          {
+            "say": "one way in",
+            "show": "ONE WAY IN"
+          },
+          {
+            "say": "fifteen hundred",
+            "show": "1,500 A YEAR"
+          },
+          {
+            "say": "fixed areas",
+            "show": "FIXED AREAS"
+          }
+        ]
+      },
+      {
+        "part": "tension",
+        "text": "Far too few for a robotaxi fleet.",
+        "img": "cybercab-fleet.jpg",
+        "pop": [
+          {
+            "say": "Far too few",
+            "show": "FAR TOO FEW"
+          }
+        ]
+      },
+      {
+        "part": "payoff",
+        "text": "Now the rules are changing. In 2026, the UN adopted the first global rules for cars with nobody driving.",
+        "lib": [
+          "cybercab-nap-highway.jpg"
+        ],
+        "pop": [
+          {
+            "say": "changing",
+            "show": "RULES CHANGE"
+          },
+          {
+            "say": "first global rules",
+            "show": "FIRST GLOBAL RULES"
+          },
+          {
+            "say": "nobody driving",
+            "show": "NOBODY DRIVING"
+          }
+        ]
+      },
+      {
+        "part": "payoff",
+        "text": "So the car on show could one day pick YOU up.",
+        "lib": [
+          "cybercab-doors-open.jpg"
+        ],
+        "pop": [
+          {
+            "say": "on show",
+            "show": "ON SHOW"
+          },
+          {
+            "say": "pick YOU up",
+            "show": "PICK YOU UP"
+          }
+        ]
+      }
+    ]
+  },
+  "video": {
+    "en": [
+      {
+        "text": "Hundreds of Cybercabs already carry paying passengers in Texas. In Europe, not a single one is allowed to give you a ride. In November 2026, Tesla put the gold two-seater on tour. It starts at Auto Zürich, then visits twelve stops in nine countries. Düsseldorf, Prague, Hamburg, Berlin, Munich, Brussels, Vienna. You can walk around it, take photos and look inside. But you cannot ride in it. The reason is not the car. It is the rulebook.",
+        "pop": [
+          {
+            "say": "Hundreds",
+            "show": "HUNDREDS IN TEXAS"
+          },
+          {
+            "say": "not a single one",
+            "show": "EUROPE: ZERO"
+          },
+          {
+            "say": "twelve stops",
+            "show": "12 STOPS"
+          },
+          {
+            "say": "cannot ride",
+            "show": "NO RIDES"
+          },
+          {
+            "say": "rulebook",
+            "show": "THE RULEBOOK"
+          }
+        ],
+        "img": [
+          "lib/cybercab-street-day.jpg",
+          "lib/cybercab-doors-open.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Zürich old town",
+              "Zurich Limmat skyline",
+              "Zürich Grossmünster"
+            ],
+            "want": "the city of Zürich, Switzerland"
+          },
+          {
+            "q": [
+              "Brandenburger Tor",
+              "Brandenburg Gate Berlin"
+            ],
+            "want": "the Brandenburg Gate in Berlin"
+          }
+        ]
+      },
+      {
+        "head": "Why can't the Cybercab simply drive on European roads?",
+        "img": [
+          "lib/cybercab-silhouette-door.jpg"
+        ],
+        "pop": [
+          {
+            "say": "",
+            "show": "WHY NOT?"
+          }
+        ]
+      },
+      {
+        "text": "Because no European authority has approved it. And in Europe, a car needs that approval before it touches a public road. The Cybercab was built for one job: driving itself. Two seats. One screen. Butterfly doors. And nothing to steer or brake with. No side mirrors, no rear window either.",
+        "pop": [
+          {
+            "say": "no European authority",
+            "show": "NOT APPROVED"
+          },
+          {
+            "say": "one job",
+            "show": "ONE JOB"
+          },
+          {
+            "say": "nothing to steer",
+            "show": "NO WHEEL"
+          },
+          {
+            "say": "No side mirrors",
+            "show": "NO MIRRORS"
+          }
+        ],
+        "img": [
+          "lib/cybercab-dash-line.jpg",
+          "lib/cybercab-dash-install.jpg",
+          "lib/cybercab-interior-roof.jpg"
+        ]
+      },
+      {
+        "text": "Tesla started building it at Gigafactory Texas in April 2026, and runs it in its paid Robotaxi service in Austin. For Europe, Tesla has announced no rides, no sales and no date for an application. The car on tour is a showpiece. The real difference is how the two sides of the Atlantic decide what may drive.",
+        "pop": [
+          {
+            "say": "April 2026",
+            "show": "APRIL 2026"
+          },
+          {
+            "say": "Austin",
+            "show": "ROBOTAXI AUSTIN"
+          },
+          {
+            "say": "showpiece",
+            "show": "A SHOWPIECE"
+          },
+          {
+            "say": "two sides of the Atlantic",
+            "show": "EU VS US"
+          }
+        ],
+        "img": [
+          "lib/giga-texas-aerial.jpg",
+          "lib/cybercab-line-front.jpg",
+          "lib/cybercab-line-closeup.jpg"
+        ]
+      },
+      {
+        "head": "How does Europe decide which cars may drive?",
+        "img": [
+          "lib/eu-brussels-tesla.jpg"
+        ],
+        "pop": [
+          {
+            "say": "",
+            "show": "WHO DECIDES?"
+          }
+        ]
+      },
+      {
+        "text": "In Europe, a car is approved before it is sold. It is called type approval. A national authority, like Germany's KBA or the Dutch RDW, tests a car type against a long list of technical rules. Only then can it be registered anywhere in the EU. Many of those rules are agreed at the UN vehicle forum in Geneva. And for decades they assumed one thing: a driver, with a steering wheel, pedals and mirrors.",
+        "pop": [
+          {
+            "say": "before it is sold",
+            "show": "APPROVED FIRST"
+          },
+          {
+            "say": "type approval",
+            "show": "TYPE APPROVAL"
+          },
+          {
+            "say": "Geneva",
+            "show": "UN, GENEVA"
+          },
+          {
+            "say": "a driver",
+            "show": "ASSUMES A DRIVER"
+          }
+        ],
+        "photo": [
+          {
+            "q": [
+              "Kraftfahrt-Bundesamt Flensburg",
+              "KBA Flensburg building"
+            ],
+            "want": "the building of the German motor transport authority KBA in Flensburg"
+          },
+          {
+            "q": [
+              "Palais des Nations Geneva",
+              "United Nations Office Geneva"
+            ],
+            "want": "the Palais des Nations, the UN building in Geneva"
+          },
+          {
+            "q": [
+              "car steering wheel",
+              "steering wheel dashboard"
+            ],
+            "want": "a car steering wheel seen from the driver's seat"
+          }
+        ]
+      },
+      {
+        "text": "America works the other way around. The maker declares that its car meets the federal safety standards, and the regulator checks afterwards. That is how the Cybercab got on the road: Tesla certified it itself. Even there it is not fully settled. In September 2026, the safety regulator NHTSA opened an investigation into that self-certification. Europe has no such shortcut. And its rulebook long had no page for a car without controls.",
+        "pop": [
+          {
+            "say": "other way around",
+            "show": "THE OTHER WAY"
+          },
+          {
+            "say": "certified it itself",
+            "show": "SELF-CERTIFIED"
+          },
+          {
+            "say": "investigation",
+            "show": "NHTSA PROBE"
+          },
+          {
+            "say": "no such shortcut",
+            "show": "NO SHORTCUT"
+          }
+        ],
+        "img": [
+          "lib/cybercab-street-day.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "United States Department of Transportation headquarters",
+              "US DOT building Washington"
+            ],
+            "want": "the US Department of Transportation headquarters building in Washington"
+          }
+        ]
+      },
+      {
+        "head": "So is there already a legal path for driverless cars in Europe?",
+        "img": [
+          "lib/cybercab-nap-highway.jpg"
+        ],
+        "pop": [
+          {
+            "say": "",
+            "show": "A LEGAL PATH?"
+          }
+        ]
+      },
+      {
+        "text": "Yes. But it is narrow. Since 2022, the EU has had a regulation for approving fully automated vehicles. It covers three cases. Vehicles that carry people or goods within a defined area. Shuttles on a fixed route. And cars that park themselves in a designated car park.",
+        "pop": [
+          {
+            "say": "narrow",
+            "show": "NARROW"
+          },
+          {
+            "say": "2022",
+            "show": "SINCE 2022"
+          },
+          {
+            "say": "defined area",
+            "show": "DEFINED AREA"
+          },
+          {
+            "say": "fixed route",
+            "show": "FIXED ROUTE"
+          },
+          {
+            "say": "park themselves",
+            "show": "SELF-PARKING"
+          }
+        ],
+        "photo": [
+          {
+            "q": [
+              "autonomous shuttle bus",
+              "driverless shuttle Europe",
+              "Navya autonomous shuttle"
+            ],
+            "want": "a small driverless electric shuttle bus on a European street"
+          },
+          {
+            "q": [
+              "multi-storey car park interior",
+              "parking garage"
+            ],
+            "want": "the inside of a parking garage"
+          }
+        ]
+      },
+      {
+        "text": "Here is the catch. It is meant for small series: at most fifteen hundred vehicles per type, per year, across the whole EU. And each country still decides where they may drive. Germany went first, with a 2021 law. It allows level 4 cars with nobody on board in approved areas, as long as a remote technical supervisor watches them and can switch them off. Driverless shuttles around Darmstadt and Volkswagen's MOIA trials in Hamburg show how it is being tested.",
+        "pop": [
+          {
+            "say": "the catch",
+            "show": "THE CATCH"
+          },
+          {
+            "say": "fifteen hundred",
+            "show": "1,500 PER YEAR"
+          },
+          {
+            "say": "2021 law",
+            "show": "GERMANY 2021"
+          },
+          {
+            "say": "technical supervisor",
+            "show": "REMOTE SUPERVISOR"
+          },
+          {
+            "say": "Hamburg",
+            "show": "TESTS: HAMBURG"
+          }
+        ],
+        "img": [
+          "lib/cybercab-line-robots.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Darmstadt Luisenplatz",
+              "Darmstadt city centre"
+            ],
+            "want": "the city centre of Darmstadt, Germany"
+          },
+          {
+            "q": [
+              "MOIA Hamburg",
+              "MOIA ID. Buzz AD",
+              "Volkswagen ID. Buzz AD"
+            ],
+            "want": "a MOIA or Volkswagen ID. Buzz AD self-driving van in Hamburg"
+          },
+          {
+            "q": [
+              "Hamburg Speicherstadt",
+              "Hamburg harbour skyline"
+            ],
+            "want": "the city of Hamburg"
+          }
+        ]
+      },
+      {
+        "text": "For a pilot, fifteen hundred cars a year is plenty. For the city-wide robotaxi fleets Tesla talks about, it is far too few. And many people mix this hurdle up with a much smaller one.",
+        "pop": [
+          {
+            "say": "plenty",
+            "show": "ENOUGH FOR A PILOT"
+          },
+          {
+            "say": "far too few",
+            "show": "TOO FEW FOR A FLEET"
+          },
+          {
+            "say": "much smaller one",
+            "show": "A SMALLER HURDLE"
+          }
+        ],
+        "img": [
+          "cybercab-fleet.jpg",
+          "wireless-hub-3.jpg"
+        ]
+      },
+      {
+        "head": "Doesn't EU approval for FSD open the door?",
+        "img": [
+          "lib/eu-oldtown-fsd.jpg"
+        ],
+        "pop": [
+          {
+            "say": "",
+            "show": "FSD = THE KEY?"
+          }
+        ]
+      },
+      {
+        "text": "No. Approving FSD and approving the Cybercab are two different things. FSD Supervised is now allowed in ten EU countries, Latvia most recently. And a vote on approval for the whole EU is expected in December 2026. But FSD Supervised is driver assistance. Someone sits behind the wheel, watches the road, and stays responsible.",
+        "pop": [
+          {
+            "say": "two different things",
+            "show": "TWO DIFFERENT THINGS"
+          },
+          {
+            "say": "ten EU countries",
+            "show": "10 EU COUNTRIES"
+          },
+          {
+            "say": "December 2026",
+            "show": "EU VOTE: DECEMBER"
+          },
+          {
+            "say": "driver assistance",
+            "show": "DRIVER ASSIST"
+          }
+        ],
+        "img": [
+          "lib/eu-oldtown-fsd.jpg",
+          "lib/fsd-screen-rain-night.jpg",
+          "fsd-roundabout-eu.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Riga old town",
+              "Riga skyline"
+            ],
+            "want": "the old town of Riga, Latvia"
+          }
+        ]
+      },
+      {
+        "text": "The Cybercab has no wheel and nobody to take over. So the system itself has to be the driver. That needs a different approval, of the car and its driving system, and then a permit to operate in a city. So the FSD vote is a step. But the bigger hurdle comes after it. And that hurdle has started to move too.",
+        "pop": [
+          {
+            "say": "nobody to take over",
+            "show": "NOBODY TAKES OVER"
+          },
+          {
+            "say": "the driver",
+            "show": "SYSTEM = DRIVER"
+          },
+          {
+            "say": "a permit",
+            "show": "CITY PERMIT"
+          },
+          {
+            "say": "bigger hurdle",
+            "show": "THE BIG HURDLE"
+          }
+        ],
+        "img": [
+          "lib/cybercab-nap-two.jpg",
+          "lib/cybercab-doors-open.jpg"
+        ]
+      },
+      {
+        "head": "What has to happen before you can ride a Cybercab in Europe?",
+        "img": [
+          "lib/cybercab-nap-arrival.jpg"
+        ],
+        "pop": [
+          {
+            "say": "",
+            "show": "WHAT HAS TO HAPPEN?"
+          }
+        ]
+      },
+      {
+        "text": "Three things: new global rules, an application from Tesla, and a city that says yes. The first one moved in June 2026. The UN vehicle forum, called WP point twenty-nine, adopted the first international rules for fully driverless systems. Such a system must be at least as safe as a competent human driver. The forum also updated about ninety older vehicle rules, so they still work for cars without traditional controls. The EU, the UK, the US, China, Japan and Canada backed it.",
+        "pop": [
+          {
+            "say": "Three things",
+            "show": "3 THINGS"
+          },
+          {
+            "say": "June 2026",
+            "show": "JUNE 2026"
+          },
+          {
+            "say": "first international rules",
+            "show": "FIRST GLOBAL RULES"
+          },
+          {
+            "say": "competent human driver",
+            "show": "AS SAFE AS A HUMAN"
+          },
+          {
+            "say": "ninety",
+            "show": "90 RULES UPDATED"
+          }
+        ],
+        "img": [
+          "lib/cybercab-nap-highway.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Palais des Nations Geneva flags",
+              "Allée des Drapeaux Geneva"
+            ],
+            "want": "the row of flags in front of the Palais des Nations in Geneva"
+          },
+          {
+            "q": [
+              "UNECE Geneva",
+              "Palais des Nations assembly hall"
+            ],
+            "want": "a UN conference building or hall in Geneva"
+          }
+        ]
+      },
+      {
+        "text": "How fast the EU turns that into approvals for robotaxis built in large numbers is still open. After that, Tesla would have to apply, prove the Cybercab is safe to an authority like the KBA or the RDW, and win permits city by city. Musk has called the Cybercab the most likely next major product for Gigafactory Berlin. But that is a statement, not a plan with dates.",
+        "pop": [
+          {
+            "say": "still open",
+            "show": "STILL OPEN"
+          },
+          {
+            "say": "apply",
+            "show": "TESLA MUST APPLY"
+          },
+          {
+            "say": "city by city",
+            "show": "CITY BY CITY"
+          },
+          {
+            "say": "Gigafactory Berlin",
+            "show": "GIGA BERLIN?"
+          },
+          {
+            "say": "a statement",
+            "show": "A STATEMENT"
+          }
+        ],
+        "img": [
+          "lib/giga-berlin-forest.jpg",
+          "lib/cybercab-line-closeup.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Tesla Gigafactory Berlin-Brandenburg",
+              "Gigafactory Grünheide"
+            ],
+            "want": "the Tesla Gigafactory Berlin-Brandenburg factory in Grünheide"
+          }
+        ]
+      },
+      {
+        "head": "What does this mean for you?",
+        "img": [
+          "lib/cybercab-doors-open.jpg"
+        ],
+        "pop": [
+          {
+            "say": "",
+            "show": "WHAT IT MEANS"
+          }
+        ]
+      },
+      {
+        "text": "For now, the Cybercab in Europe is something to look at, not to ride. Visit a stop on the tour, and you see a car built for a legal world that Europe is only starting to build. Watch three things. The EU vote on FSD. The first European approvals under the new driverless rules. And whether Tesla files an application for the Cybercab itself.",
+        "pop": [
+          {
+            "say": "look at",
+            "show": "LOOK, DON'T RIDE"
+          },
+          {
+            "say": "Watch three things",
+            "show": "WATCH 3 THINGS"
+          },
+          {
+            "say": "vote on FSD",
+            "show": "FSD VOTE"
+          },
+          {
+            "say": "application",
+            "show": "TESLA APPLIES?"
+          }
+        ],
+        "img": [
+          "lib/cybercab-street-day.jpg",
+          "lib/eu-brussels-tesla.jpg",
+          "models/cc-3.jpg"
+        ]
+      },
+      {
+        "text": "Until all three move, a Cybercab ride in Europe stays a promise. Once they do, the gold two-seater on display could leave the showroom, and come and pick you up.",
+        "pop": [
+          {
+            "say": "a promise",
+            "show": "A PROMISE"
+          },
+          {
+            "say": "leave the showroom",
+            "show": "OUT OF THE SHOWROOM"
+          },
+          {
+            "say": "pick you up",
+            "show": "PICKS YOU UP"
+          }
+        ],
+        "img": [
+          "lib/cybercab-nap-arrival.jpg",
+          "models/cc-1.jpg"
+        ]
+      }
+    ],
+    "nl": [
+      {
+        "text": "Honderden Cybercabs vervoeren in Texas al betalende passagiers. In Europa mag er niet één een rit geven. In november 2026 stuurde Tesla de gouden tweezitter op tournee. Hij begint op Auto Zürich en doet daarna twaalf steden in negen landen aan. Düsseldorf, Praag, Hamburg, Berlijn, München, Brussel, Wenen. Je mag eromheen lopen, foto's maken en naar binnen kijken. Maar instappen voor een rit mag niet. Dat komt niet door de auto. Het komt door het regelboek.",
+        "pop": [
+          {
+            "say": "Honderden",
+            "show": "HONDERDEN IN TEXAS"
+          },
+          {
+            "say": "niet één",
+            "show": "EUROPA: NUL"
+          },
+          {
+            "say": "twaalf steden",
+            "show": "12 STOPS"
+          },
+          {
+            "say": "mag niet",
+            "show": "GEEN RITTEN"
+          },
+          {
+            "say": "regelboek",
+            "show": "HET REGELBOEK"
+          }
+        ],
+        "img": [
+          "lib/cybercab-street-day.jpg",
+          "lib/cybercab-doors-open.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Zürich old town",
+              "Zurich Limmat skyline",
+              "Zürich Grossmünster"
+            ],
+            "want": "the city of Zürich, Switzerland"
+          },
+          {
+            "q": [
+              "Brandenburger Tor",
+              "Brandenburg Gate Berlin"
+            ],
+            "want": "the Brandenburg Gate in Berlin"
+          }
+        ]
+      },
+      {
+        "head": "Waarom mag de Cybercab niet gewoon de Europese weg op?",
+        "img": [
+          "lib/cybercab-silhouette-door.jpg"
+        ],
+        "pop": [
+          {
+            "say": "",
+            "show": "WAAROM NIET?"
+          }
+        ]
+      },
+      {
+        "text": "Omdat geen enkele Europese instantie hem heeft goedgekeurd. En in Europa heeft een auto die goedkeuring nodig voordat hij de openbare weg op mag. De Cybercab is gebouwd voor één taak: zelf rijden. Twee stoelen. Eén scherm. Vleugeldeuren. En niets om mee te sturen of te remmen. Ook geen buitenspiegels en geen achterruit.",
+        "pop": [
+          {
+            "say": "geen enkele Europese instantie",
+            "show": "NIET GOEDGEKEURD"
+          },
+          {
+            "say": "één taak",
+            "show": "ÉÉN TAAK"
+          },
+          {
+            "say": "niets om mee te sturen",
+            "show": "GEEN STUUR"
+          },
+          {
+            "say": "geen buitenspiegels",
+            "show": "GEEN SPIEGELS"
+          }
+        ],
+        "img": [
+          "lib/cybercab-dash-line.jpg",
+          "lib/cybercab-dash-install.jpg",
+          "lib/cybercab-interior-roof.jpg"
+        ]
+      },
+      {
+        "text": "Tesla begon in april 2026 met de bouw in Gigafactory Texas en zet hem in bij de betaalde Robotaxi-dienst in Austin. Voor Europa kondigde Tesla geen ritten, geen verkoop en geen datum voor een aanvraag aan. De auto op tournee is een showmodel. Het echte verschil zit in hoe Europa en Amerika bepalen wat er mag rijden.",
+        "pop": [
+          {
+            "say": "april 2026",
+            "show": "APRIL 2026"
+          },
+          {
+            "say": "Austin",
+            "show": "ROBOTAXI AUSTIN"
+          },
+          {
+            "say": "showmodel",
+            "show": "EEN SHOWMODEL"
+          },
+          {
+            "say": "Europa en Amerika",
+            "show": "EU VS VS"
+          }
+        ],
+        "img": [
+          "lib/giga-texas-aerial.jpg",
+          "lib/cybercab-line-front.jpg",
+          "lib/cybercab-line-closeup.jpg"
+        ]
+      },
+      {
+        "head": "Hoe bepaalt Europa welke auto's mogen rijden?",
+        "img": [
+          "lib/eu-brussels-tesla.jpg"
+        ],
+        "pop": [
+          {
+            "say": "",
+            "show": "WIE BESLIST?"
+          }
+        ]
+      },
+      {
+        "text": "In Europa wordt een auto goedgekeurd voordat hij verkocht wordt. Dat heet typegoedkeuring. Een nationale instantie, zoals de RDW of het Duitse KBA, toetst een autotype aan een lange lijst technische eisen. Pas daarna mag hij overal in de EU op kenteken. Veel van die eisen worden afgesproken in het VN-voertuigforum in Genève. En tientallen jaren gingen ze uit van één ding: een bestuurder, met stuur, pedalen en spiegels.",
+        "pop": [
+          {
+            "say": "voordat hij verkocht wordt",
+            "show": "EERST GOEDKEURING"
+          },
+          {
+            "say": "typegoedkeuring",
+            "show": "TYPEGOEDKEURING"
+          },
+          {
+            "say": "Genève",
+            "show": "VN, GENÈVE"
+          },
+          {
+            "say": "een bestuurder",
+            "show": "UITGAAN VAN BESTUURDER"
+          }
+        ],
+        "photo": [
+          {
+            "q": [
+              "Kraftfahrt-Bundesamt Flensburg",
+              "KBA Flensburg building"
+            ],
+            "want": "the building of the German motor transport authority KBA in Flensburg"
+          },
+          {
+            "q": [
+              "Palais des Nations Geneva",
+              "United Nations Office Geneva"
+            ],
+            "want": "the Palais des Nations, the UN building in Geneva"
+          },
+          {
+            "q": [
+              "car steering wheel",
+              "steering wheel dashboard"
+            ],
+            "want": "a car steering wheel seen from the driver's seat"
+          }
+        ]
+      },
+      {
+        "text": "Amerika werkt andersom. De fabrikant verklaart zelf dat zijn auto aan de federale veiligheidsnormen voldoet, en de toezichthouder controleert achteraf. Zo kwam de Cybercab op de weg: Tesla certificeerde hem zelf. Ook daar is het niet helemaal rond. In september 2026 begon verkeersveiligheidsdienst NHTSA een onderzoek naar die zelfcertificering. Europa kent zo'n kortere weg niet. En het regelboek had lang geen bladzijde voor een auto zonder bediening.",
+        "pop": [
+          {
+            "say": "andersom",
+            "show": "ANDERSOM"
+          },
+          {
+            "say": "certificeerde hem zelf",
+            "show": "ZELF GECERTIFICEERD"
+          },
+          {
+            "say": "onderzoek",
+            "show": "NHTSA-ONDERZOEK"
+          },
+          {
+            "say": "kortere weg",
+            "show": "GEEN KORTE WEG"
+          }
+        ],
+        "img": [
+          "lib/cybercab-street-day.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "United States Department of Transportation headquarters",
+              "US DOT building Washington"
+            ],
+            "want": "the US Department of Transportation headquarters building in Washington"
+          }
+        ]
+      },
+      {
+        "head": "Is er dan al een legale route voor auto's zonder bestuurder?",
+        "img": [
+          "lib/cybercab-nap-highway.jpg"
+        ],
+        "pop": [
+          {
+            "say": "",
+            "show": "EEN LEGALE ROUTE?"
+          }
+        ]
+      },
+      {
+        "text": "Ja. Maar hij is smal. Sinds 2022 heeft de EU een verordening voor het goedkeuren van volledig geautomatiseerde voertuigen. Die geldt voor drie gevallen. Voertuigen die mensen of goederen vervoeren binnen een afgebakend gebied. Shuttles op een vaste route. En auto's die zichzelf parkeren in een aangewezen garage.",
+        "pop": [
+          {
+            "say": "smal",
+            "show": "SMAL"
+          },
+          {
+            "say": "2022",
+            "show": "SINDS 2022"
+          },
+          {
+            "say": "afgebakend gebied",
+            "show": "VAST GEBIED"
+          },
+          {
+            "say": "vaste route",
+            "show": "VASTE ROUTE"
+          },
+          {
+            "say": "zichzelf parkeren",
+            "show": "ZELF PARKEREN"
+          }
+        ],
+        "photo": [
+          {
+            "q": [
+              "autonomous shuttle bus",
+              "driverless shuttle Europe",
+              "Navya autonomous shuttle"
+            ],
+            "want": "a small driverless electric shuttle bus on a European street"
+          },
+          {
+            "q": [
+              "multi-storey car park interior",
+              "parking garage"
+            ],
+            "want": "the inside of a parking garage"
+          }
+        ]
+      },
+      {
+        "text": "En nu het addertje. Hij is bedoeld voor kleine series: hooguit vijftienhonderd voertuigen per type, per jaar, in de hele EU. En elk land bepaalt nog zelf waar ze mogen rijden. Duitsland was de eerste, met een wet uit 2021. Die staat level 4-auto's zonder iemand aan boord toe in goedgekeurde gebieden, zolang een technisch toezichthouder op afstand meekijkt en ze kan uitschakelen. Zelfrijdende shuttles rond Darmstadt en de proeven van Volkswagen-dochter MOIA in Hamburg laten zien hoe dat getest wordt.",
+        "pop": [
+          {
+            "say": "addertje",
+            "show": "HET ADDERTJE"
+          },
+          {
+            "say": "vijftienhonderd",
+            "show": "1.500 PER JAAR"
+          },
+          {
+            "say": "wet uit 2021",
+            "show": "DUITSLAND 2021"
+          },
+          {
+            "say": "technisch toezichthouder",
+            "show": "TOEZICHT OP AFSTAND"
+          },
+          {
+            "say": "Hamburg",
+            "show": "PROEF: HAMBURG"
+          }
+        ],
+        "img": [
+          "lib/cybercab-line-robots.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Darmstadt Luisenplatz",
+              "Darmstadt city centre"
+            ],
+            "want": "the city centre of Darmstadt, Germany"
+          },
+          {
+            "q": [
+              "MOIA Hamburg",
+              "MOIA ID. Buzz AD",
+              "Volkswagen ID. Buzz AD"
+            ],
+            "want": "a MOIA or Volkswagen ID. Buzz AD self-driving van in Hamburg"
+          },
+          {
+            "q": [
+              "Hamburg Speicherstadt",
+              "Hamburg harbour skyline"
+            ],
+            "want": "the city of Hamburg"
+          }
+        ]
+      },
+      {
+        "text": "Voor een proef zijn vijftienhonderd auto's per jaar ruim genoeg. Voor de stadsbrede robotaxivloten waar Tesla over praat, is het veel te weinig. En veel mensen halen deze horde door elkaar met een veel kleinere.",
+        "pop": [
+          {
+            "say": "ruim genoeg",
+            "show": "GENOEG VOOR PROEF"
+          },
+          {
+            "say": "veel te weinig",
+            "show": "TE WEINIG VOOR VLOOT"
+          },
+          {
+            "say": "veel kleinere",
+            "show": "KLEINERE HORDE"
+          }
+        ],
+        "img": [
+          "cybercab-fleet.jpg",
+          "wireless-hub-3.jpg"
+        ]
+      },
+      {
+        "head": "Opent de Europese goedkeuring van FSD dan niet de deur?",
+        "img": [
+          "lib/eu-oldtown-fsd.jpg"
+        ],
+        "pop": [
+          {
+            "say": "",
+            "show": "FSD = DE SLEUTEL?"
+          }
+        ]
+      },
+      {
+        "text": "Nee. FSD goedkeuren en de Cybercab goedkeuren zijn twee verschillende dingen. FSD Supervised is inmiddels toegestaan in tien EU-landen, Letland als laatste. En in december 2026 wordt een stemming over goedkeuring voor de hele EU verwacht. Maar FSD Supervised is rijhulp. Er zit iemand achter het stuur, die op de weg let en verantwoordelijk blijft.",
+        "pop": [
+          {
+            "say": "twee verschillende dingen",
+            "show": "TWEE VERSCHILLENDE DINGEN"
+          },
+          {
+            "say": "tien EU-landen",
+            "show": "10 EU-LANDEN"
+          },
+          {
+            "say": "december 2026",
+            "show": "EU-STEMMING: DECEMBER"
+          },
+          {
+            "say": "rijhulp",
+            "show": "RIJHULP"
+          }
+        ],
+        "img": [
+          "lib/eu-oldtown-fsd.jpg",
+          "lib/fsd-screen-rain-night.jpg",
+          "fsd-roundabout-eu.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Riga old town",
+              "Riga skyline"
+            ],
+            "want": "the old town of Riga, Latvia"
+          }
+        ]
+      },
+      {
+        "text": "De Cybercab heeft geen stuur en niemand die het kan overnemen. Dus moet het systeem zelf de bestuurder zijn. Daarvoor is een andere goedkeuring nodig, van de auto en zijn rijsysteem, en daarna een vergunning om in een stad te rijden. De FSD-stemming is dus een stap. Maar de grootste horde komt daarna. En ook die horde is in beweging gekomen.",
+        "pop": [
+          {
+            "say": "niemand die het kan overnemen",
+            "show": "NIEMAND NEEMT OVER"
+          },
+          {
+            "say": "de bestuurder",
+            "show": "SYSTEEM = BESTUURDER"
+          },
+          {
+            "say": "vergunning",
+            "show": "STADSVERGUNNING"
+          },
+          {
+            "say": "grootste horde",
+            "show": "DE GROTE HORDE"
+          }
+        ],
+        "img": [
+          "lib/cybercab-nap-two.jpg",
+          "lib/cybercab-doors-open.jpg"
+        ]
+      },
+      {
+        "head": "Wat moet er gebeuren voordat je in Europa met een Cybercab kunt rijden?",
+        "img": [
+          "lib/cybercab-nap-arrival.jpg"
+        ],
+        "pop": [
+          {
+            "say": "",
+            "show": "WAT MOET ER GEBEUREN?"
+          }
+        ]
+      },
+      {
+        "text": "Drie dingen: nieuwe wereldwijde regels, een aanvraag van Tesla en een stad die ja zegt. Het eerste kwam in juni 2026 in beweging. Het VN-voertuigforum, WP negenentwintig, nam de eerste internationale regels aan voor volledig zelfrijdende systemen zonder bestuurder. Zo'n systeem moet minstens zo veilig zijn als een bekwame menselijke bestuurder. Het forum paste ook zo'n negentig oudere voertuigregels aan, zodat die blijven werken voor auto's zonder traditionele bediening. De EU, het Verenigd Koninkrijk, de VS, China, Japan en Canada steunden het.",
+        "pop": [
+          {
+            "say": "Drie dingen",
+            "show": "3 DINGEN"
+          },
+          {
+            "say": "juni 2026",
+            "show": "JUNI 2026"
+          },
+          {
+            "say": "eerste internationale regels",
+            "show": "EERSTE WERELDREGELS"
+          },
+          {
+            "say": "bekwame menselijke bestuurder",
+            "show": "ZO VEILIG ALS MENS"
+          },
+          {
+            "say": "negentig",
+            "show": "90 REGELS AANGEPAST"
+          }
+        ],
+        "img": [
+          "lib/cybercab-nap-highway.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Palais des Nations Geneva flags",
+              "Allée des Drapeaux Geneva"
+            ],
+            "want": "the row of flags in front of the Palais des Nations in Geneva"
+          },
+          {
+            "q": [
+              "UNECE Geneva",
+              "Palais des Nations assembly hall"
+            ],
+            "want": "a UN conference building or hall in Geneva"
+          }
+        ]
+      },
+      {
+        "text": "Hoe snel de EU daar goedkeuringen voor robotaxi's in grote aantallen van maakt, is nog open. Daarna zou Tesla een aanvraag moeten doen, bij een instantie als de RDW of het KBA moeten bewijzen dat de Cybercab veilig is, en per stad vergunningen moeten winnen. Musk noemde de Cybercab het meest waarschijnlijke volgende grote product voor Gigafactory Berlin. Maar dat is een uitspraak, geen plan met data.",
+        "pop": [
+          {
+            "say": "nog open",
+            "show": "NOG OPEN"
+          },
+          {
+            "say": "aanvraag",
+            "show": "TESLA MOET AANVRAGEN"
+          },
+          {
+            "say": "per stad",
+            "show": "PER STAD"
+          },
+          {
+            "say": "Gigafactory Berlin",
+            "show": "GIGA BERLIN?"
+          },
+          {
+            "say": "een uitspraak",
+            "show": "EEN UITSPRAAK"
+          }
+        ],
+        "img": [
+          "lib/giga-berlin-forest.jpg",
+          "lib/cybercab-line-closeup.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Tesla Gigafactory Berlin-Brandenburg",
+              "Gigafactory Grünheide"
+            ],
+            "want": "the Tesla Gigafactory Berlin-Brandenburg factory in Grünheide"
+          }
+        ]
+      },
+      {
+        "head": "Wat betekent dit voor jou?",
+        "img": [
+          "lib/cybercab-doors-open.jpg"
+        ],
+        "pop": [
+          {
+            "say": "",
+            "show": "WAT HET BETEKENT"
+          }
+        ]
+      },
+      {
+        "text": "Voorlopig is de Cybercab in Europa iets om te bekijken, niet om in te rijden. Bezoek een tourstop, en je ziet een auto gebouwd voor een juridische wereld die Europa nog maar net aan het bouwen is. Let op drie dingen. De EU-stemming over FSD. De eerste Europese goedkeuringen onder de nieuwe regels zonder bestuurder. En of Tesla zelf een aanvraag voor de Cybercab indient.",
+        "pop": [
+          {
+            "say": "bekijken",
+            "show": "KIJKEN, NIET RIJDEN"
+          },
+          {
+            "say": "drie dingen",
+            "show": "LET OP 3 DINGEN"
+          },
+          {
+            "say": "stemming over FSD",
+            "show": "FSD-STEMMING"
+          },
+          {
+            "say": "aanvraag",
+            "show": "TESLA VRAAGT AAN?"
+          }
+        ],
+        "img": [
+          "lib/cybercab-street-day.jpg",
+          "lib/eu-brussels-tesla.jpg",
+          "models/cc-3.jpg"
+        ]
+      },
+      {
+        "text": "Zolang die drie niet bewegen, blijft een rit in een Cybercab in Europa een belofte. Gebeurt het wel, dan kan de gouden tweezitter uit de showroom rijden, en jou komen ophalen.",
+        "pop": [
+          {
+            "say": "belofte",
+            "show": "EEN BELOFTE"
+          },
+          {
+            "say": "uit de showroom",
+            "show": "UIT DE SHOWROOM"
+          },
+          {
+            "say": "ophalen",
+            "show": "HAALT JOU OP"
+          }
+        ],
+        "img": [
+          "lib/cybercab-nap-arrival.jpg",
+          "models/cc-1.jpg"
+        ]
+      }
+    ],
+    "yt_title_en": "Can the Tesla Cybercab Drive in Europe? The Rules for Cars With No Steering Wheel",
+    "yt_title_nl": "Mag de Tesla Cybercab Rijden in Europa? De Regels voor Auto's Zonder Stuur"
+  },
   "en": {
-   "sub": "NO WHEEL, NO PEDALS",
-   "text": "LEGAL IN EUROPE?"
+    "title": "Can the Tesla Cybercab Drive in Europe? Why a Car With No Steering Wheel Needs New Rules",
+    "description": "Tesla's Cybercab is touring Europe, but nobody can ride it. How European type approval works, why driverless cars are capped at 1,500 a year, and what has to change first.",
+    "body": "<p>In November 2026 Tesla sent the Cybercab on a tour of Europe. The gold two-seater opens at Auto Zürich and then visits 12 stops in nine countries, from Düsseldorf and Prague to Berlin, Brussels and Vienna, until mid-January. Visitors can walk around it, take photos and look inside. What they cannot do is ride in it. In Austin, Texas, paying passengers have been riding Cybercabs since September 2026. In Europe the same car stays parked, because a car with no steering wheel and no pedals runs into a rulebook that was written for human drivers.</p>\n<h2>Why can't the Cybercab simply drive on European roads?</h2>\n<p><strong>Because no European authority has approved it, and Europe does not let a car onto public roads without approval first.</strong> The Cybercab was built for one job: driving itself. It has two seats, a screen, butterfly doors and nothing to steer or brake with. There are no side mirrors and no rear window either. Tesla started production at Gigafactory Texas in April 2026 and uses the car in its paid Robotaxi service in Austin. In Europe, Tesla has not announced Cybercab rides, sales or a date for an application. The car on tour is a showpiece. The real difference lies in how the two sides of the Atlantic decide what is allowed on the road.</p>\n<h2>How does Europe decide which cars may drive?</h2>\n<p><strong>In Europe a car must be approved before it is sold; in the US the maker certifies its own car.</strong> The European system is called type approval. A national authority, such as Germany's KBA or the Dutch RDW, checks a car type against a long list of technical rules before it may be registered anywhere in the EU. Many of those rules are harmonised through the UN vehicle forum in Geneva, and for decades they assumed a driver with a steering wheel, pedals and mirrors. In the US the maker declares that its car meets the federal safety standards, and the regulator checks afterwards. That is how the Cybercab reached American roads: Tesla certified it itself. Even there it is not fully settled, because the US safety regulator NHTSA opened an investigation into that self-certification in September 2026. Europe has no such shortcut, and its rulebook long had no page for a car without controls.</p>\n<h2>So is there already a legal path for driverless cars in Europe?</h2>\n<p><strong>Yes, but it is narrow: small numbers in fixed areas.</strong> Since 2022 the EU has had a regulation, numbered 2022/1426, for approving the driving system of fully automated vehicles. It covers three cases:</p>\n<ul>\n<li>vehicles that carry passengers or goods within a defined area;</li>\n<li>vehicles on a fixed route between fixed start and end points, like a shuttle;</li>\n<li>cars that park themselves in designated car parks.</li>\n</ul>\n<p>The catch is volume. The approval is meant for small series, capped at <strong>1,500 vehicles per type per year</strong> across the whole EU. On top of that, each country decides where such vehicles may operate. Germany moved first, with a 2021 law that allows level 4 vehicles to drive with nobody on board in approved areas, as long as a remote \"technical supervisor\" monitors them and can switch them off. Driverless shuttle projects around Darmstadt and Volkswagen's MOIA ride-pooling trials in Hamburg show how this is being tested. For a pilot, 1,500 cars a year is plenty. For the city-wide robotaxi fleets Tesla talks about, it is far too few. Many people also mix up this hurdle with a much smaller one.</p>\n<h2>Doesn't EU approval for FSD open the door?</h2>\n<p><strong>No. Approving FSD and approving the Cybercab are two different things.</strong> FSD (Supervised) is now approved in ten EU countries, with Latvia the latest, and a vote on EU-wide approval is expected in December 2026. But FSD Supervised is driver assistance: a person sits behind the wheel, watches the road and stays responsible. The Cybercab has no wheel and nobody to take over, so the system itself has to be the driver. That calls for a different kind of approval, of the car and its driving system, followed by permission to operate in a city. A common mistake is to read the FSD vote as the start of robotaxis in Europe. It is a step, but the bigger hurdle comes after it. That bigger hurdle has started to move as well.</p>\n<h2>What has to happen before you can ride a Cybercab in Europe?</h2>\n<p><strong>New global rules, an application from Tesla and a city that says yes.</strong> In June 2026 the UN vehicle forum WP.29 adopted the first international regulation for fully driverless automated driving systems. It demands that such a system is at least as safe as a competent human driver. The forum also updated about ninety existing vehicle rules so they still work for cars without traditional driver controls. The EU, the UK, the US, China, Japan and Canada endorsed it. How quickly the EU turns this into approvals for robotaxis built in large numbers is still open. After that, Tesla would have to apply, prove the Cybercab's safety to an authority such as the KBA or RDW, and win operating permits city by city. Musk has called the Cybercab the most likely next major product for Gigafactory Berlin, but that is a statement, not a plan with dates. Until then, what the tour offers is limited.</p>\n<h2>What does this mean for you?</h2>\n<p><strong>For now, the Cybercab in Europe is something to look at, not to ride.</strong> If you visit a stop on the tour, you will see a car designed for a legal world that Europe is only starting to build. Three things are worth watching: the EU-wide vote on FSD, the first European approvals under the new driverless rules, and whether Tesla files an application for the Cybercab itself. Until all three move, a Cybercab ride in Europe remains a promise. Once they do, the gold two-seater on display could leave the showroom and pick you up.</p>"
   },
   "nl": {
-   "sub": "GEEN STUUR, GEEN PEDALEN",
-   "text": "MAG DAT IN EUROPA?"
-  }
- },
- "short": {
-  "hook": "consequence",
-  "en": "This Tesla is touring Europe. And nobody is allowed to ride it. The Cybercab has two seats, a screen, and NO steering wheel. No pedals either. In Texas, people pay to ride one. In Europe, it stays parked. Why? Europe checks every car BEFORE it hits the road. And for decades, those rules assumed a driver, with a wheel and pedals. There is one way in for driverless cars. But only fifteen hundred per model, per year, in fixed areas. Far too few for a robotaxi fleet. Now the rules are changing. In 2026, the UN adopted the first global rules for cars with nobody driving. So the car on show could one day pick YOU up.",
-  "nl": "Deze Tesla toert door Europa. En niemand mag erin rijden. De Cybercab heeft twee stoelen, een scherm en GEEN stuur. Ook geen pedalen. In Texas betalen mensen voor een rit. In Europa blijft hij staan. Waarom? Europa keurt elke auto VOORDAT hij de weg op gaat. En tientallen jaren gingen die regels uit van een bestuurder, met stuur en pedalen. Er is één route voor auto's zonder bestuurder. Maar alleen voor vijftienhonderd per model, per jaar, in vaste gebieden. Veel te weinig voor een robotaxivloot. Nu veranderen de regels. In 2026 nam de VN de eerste wereldwijde regels aan voor auto's waarin niemand rijdt. Dus de auto op de tentoonstelling kan jou ooit komen ophalen.",
-  "yt_title_en": "The Tesla Europe Won't Let You Ride",
-  "yt_title_nl": "De Tesla Waar Je in Europa Niet in Mag",
-  "story": [
-   {
-    "part": "hook",
-    "text": "This Tesla is touring Europe. And nobody is allowed to ride it.",
-    "lib": [
-     "cybercab-doors-open.jpg"
-    ],
-    "pop": [
-     {
-      "say": "touring Europe",
-      "show": "EUROPE TOUR"
-     },
-     {
-      "say": "nobody",
-      "show": "NOBODY RIDES"
-     }
-    ]
-   },
-   {
-    "part": "hook",
-    "text": "The Cybercab has two seats, a screen, and NO steering wheel. No pedals either.",
-    "lib": [
-     "cybercab-dash-line.jpg"
-    ],
-    "pop": [
-     {
-      "say": "two seats",
-      "show": "TWO SEATS"
-     },
-     {
-      "say": "NO steering wheel",
-      "show": "NO WHEEL"
-     },
-     {
-      "say": "No pedals",
-      "show": "NO PEDALS"
-     }
-    ]
-   },
-   {
-    "part": "tension",
-    "text": "In Texas, people pay to ride one. In Europe, it stays parked.",
-    "lib": [
-     "cybercab-street-day.jpg",
-     "cybercab-silhouette-door.jpg"
-    ],
-    "pop": [
-     {
-      "say": "pay to ride",
-      "show": "TEXAS: RIDES"
-     },
-     {
-      "say": "stays parked",
-      "show": "EUROPE: PARKED"
-     }
-    ]
-   },
-   {
-    "part": "tension",
-    "text": "Why? Europe checks every car BEFORE it hits the road.",
-    "lib": [
-     "eu-brussels-tesla.jpg"
-    ],
-    "pop": [
-     {
-      "say": "Why",
-      "show": "WHY?"
-     },
-     {
-      "say": "BEFORE",
-      "show": "CHECKED FIRST"
-     }
-    ]
-   },
-   {
-    "part": "tension",
-    "text": "And for decades, those rules assumed a driver, with a wheel and pedals.",
-    "lib": [
-     "screen-modely.jpg"
-    ],
-    "pop": [
-     {
-      "say": "assumed a driver",
-      "show": "A DRIVER"
-     },
-     {
-      "say": "wheel and pedals",
-      "show": "WHEEL + PEDALS"
-     }
-    ]
-   },
-   {
-    "part": "tension",
-    "text": "There is one way in for driverless cars. But only fifteen hundred per model, per year, in fixed areas.",
-    "lib": [
-     "cybercab-line-robots.jpg"
-    ],
-    "pop": [
-     {
-      "say": "one way in",
-      "show": "ONE WAY IN"
-     },
-     {
-      "say": "fifteen hundred",
-      "show": "1,500 A YEAR"
-     },
-     {
-      "say": "fixed areas",
-      "show": "FIXED AREAS"
-     }
-    ]
-   },
-   {
-    "part": "tension",
-    "text": "Far too few for a robotaxi fleet.",
-    "img": "cybercab-fleet.jpg",
-    "pop": [
-     {
-      "say": "Far too few",
-      "show": "FAR TOO FEW"
-     }
-    ]
-   },
-   {
-    "part": "payoff",
-    "text": "Now the rules are changing. In 2026, the UN adopted the first global rules for cars with nobody driving.",
-    "lib": [
-     "cybercab-nap-highway.jpg"
-    ],
-    "pop": [
-     {
-      "say": "changing",
-      "show": "RULES CHANGE"
-     },
-     {
-      "say": "first global rules",
-      "show": "FIRST GLOBAL RULES"
-     },
-     {
-      "say": "nobody driving",
-      "show": "NOBODY DRIVING"
-     }
-    ]
-   },
-   {
-    "part": "payoff",
-    "text": "So the car on show could one day pick YOU up.",
-    "lib": [
-     "cybercab-doors-open.jpg"
-    ],
-    "pop": [
-     {
-      "say": "on show",
-      "show": "ON SHOW"
-     },
-     {
-      "say": "pick YOU up",
-      "show": "PICK YOU UP"
-     }
-    ]
-   }
-  ]
- },
- "video": {
-  "en": [
-   {
-    "text": "Hundreds of Cybercabs already carry paying passengers in Texas. In Europe, not a single one is allowed to give you a ride. In November 2026, Tesla put the gold two-seater on tour. It starts at Auto Zürich, then visits twelve stops in nine countries. Düsseldorf, Prague, Hamburg, Berlin, Munich, Brussels, Vienna. You can walk around it, take photos and look inside. But you cannot ride in it. The reason is not the car. It is the rulebook.",
-    "pop": [
-     {
-      "say": "Hundreds",
-      "show": "HUNDREDS IN TEXAS"
-     },
-     {
-      "say": "not a single one",
-      "show": "EUROPE: ZERO"
-     },
-     {
-      "say": "twelve stops",
-      "show": "12 STOPS"
-     },
-     {
-      "say": "cannot ride",
-      "show": "NO RIDES"
-     },
-     {
-      "say": "rulebook",
-      "show": "THE RULEBOOK"
-     }
-    ],
-    "img": [
-     "lib/cybercab-street-day.jpg",
-     "lib/cybercab-doors-open.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Zürich old town",
-       "Zurich Limmat skyline",
-       "Zürich Grossmünster"
-      ],
-      "want": "the city of Zürich, Switzerland"
-     },
-     {
-      "q": [
-       "Brandenburger Tor",
-       "Brandenburg Gate Berlin"
-      ],
-      "want": "the Brandenburg Gate in Berlin"
-     }
-    ]
-   },
-   {
-    "head": "Why can't the Cybercab simply drive on European roads?",
-    "img": [
-     "lib/cybercab-silhouette-door.jpg"
-    ],
-    "pop": [
-     {
-      "say": "",
-      "show": "WHY NOT?"
-     }
-    ]
-   },
-   {
-    "text": "Because no European authority has approved it. And in Europe, a car needs that approval before it touches a public road. The Cybercab was built for one job: driving itself. Two seats. One screen. Butterfly doors. And nothing to steer or brake with. No side mirrors, no rear window either.",
-    "pop": [
-     {
-      "say": "no European authority",
-      "show": "NOT APPROVED"
-     },
-     {
-      "say": "one job",
-      "show": "ONE JOB"
-     },
-     {
-      "say": "nothing to steer",
-      "show": "NO WHEEL"
-     },
-     {
-      "say": "No side mirrors",
-      "show": "NO MIRRORS"
-     }
-    ],
-    "img": [
-     "lib/cybercab-dash-line.jpg",
-     "lib/cybercab-dash-install.jpg",
-     "lib/cybercab-interior-roof.jpg"
-    ]
-   },
-   {
-    "text": "Tesla started building it at Gigafactory Texas in April 2026, and runs it in its paid Robotaxi service in Austin. For Europe, Tesla has announced no rides, no sales and no date for an application. The car on tour is a showpiece. The real difference is how the two sides of the Atlantic decide what may drive.",
-    "pop": [
-     {
-      "say": "April 2026",
-      "show": "APRIL 2026"
-     },
-     {
-      "say": "Austin",
-      "show": "ROBOTAXI AUSTIN"
-     },
-     {
-      "say": "showpiece",
-      "show": "A SHOWPIECE"
-     },
-     {
-      "say": "two sides of the Atlantic",
-      "show": "EU VS US"
-     }
-    ],
-    "img": [
-     "lib/giga-texas-aerial.jpg",
-     "lib/cybercab-line-front.jpg",
-     "lib/cybercab-line-closeup.jpg"
-    ]
-   },
-   {
-    "head": "How does Europe decide which cars may drive?",
-    "img": [
-     "lib/eu-brussels-tesla.jpg"
-    ],
-    "pop": [
-     {
-      "say": "",
-      "show": "WHO DECIDES?"
-     }
-    ]
-   },
-   {
-    "text": "In Europe, a car is approved before it is sold. It is called type approval. A national authority, like Germany's KBA or the Dutch RDW, tests a car type against a long list of technical rules. Only then can it be registered anywhere in the EU. Many of those rules are agreed at the UN vehicle forum in Geneva. And for decades they assumed one thing: a driver, with a steering wheel, pedals and mirrors.",
-    "pop": [
-     {
-      "say": "before it is sold",
-      "show": "APPROVED FIRST"
-     },
-     {
-      "say": "type approval",
-      "show": "TYPE APPROVAL"
-     },
-     {
-      "say": "Geneva",
-      "show": "UN, GENEVA"
-     },
-     {
-      "say": "a driver",
-      "show": "ASSUMES A DRIVER"
-     }
-    ],
-    "photo": [
-     {
-      "q": [
-       "Kraftfahrt-Bundesamt Flensburg",
-       "KBA Flensburg building"
-      ],
-      "want": "the building of the German motor transport authority KBA in Flensburg"
-     },
-     {
-      "q": [
-       "Palais des Nations Geneva",
-       "United Nations Office Geneva"
-      ],
-      "want": "the Palais des Nations, the UN building in Geneva"
-     },
-     {
-      "q": [
-       "car steering wheel",
-       "steering wheel dashboard"
-      ],
-      "want": "a car steering wheel seen from the driver's seat"
-     }
-    ]
-   },
-   {
-    "text": "America works the other way around. The maker declares that its car meets the federal safety standards, and the regulator checks afterwards. That is how the Cybercab got on the road: Tesla certified it itself. Even there it is not fully settled. In September 2026, the safety regulator NHTSA opened an investigation into that self-certification. Europe has no such shortcut. And its rulebook long had no page for a car without controls.",
-    "pop": [
-     {
-      "say": "other way around",
-      "show": "THE OTHER WAY"
-     },
-     {
-      "say": "certified it itself",
-      "show": "SELF-CERTIFIED"
-     },
-     {
-      "say": "investigation",
-      "show": "NHTSA PROBE"
-     },
-     {
-      "say": "no such shortcut",
-      "show": "NO SHORTCUT"
-     }
-    ],
-    "img": [
-     "lib/cybercab-street-day.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "United States Department of Transportation headquarters",
-       "US DOT building Washington"
-      ],
-      "want": "the US Department of Transportation headquarters building in Washington"
-     }
-    ]
-   },
-   {
-    "head": "So is there already a legal path for driverless cars in Europe?",
-    "img": [
-     "lib/cybercab-nap-highway.jpg"
-    ],
-    "pop": [
-     {
-      "say": "",
-      "show": "A LEGAL PATH?"
-     }
-    ]
-   },
-   {
-    "text": "Yes. But it is narrow. Since 2022, the EU has had a regulation for approving fully automated vehicles. It covers three cases. Vehicles that carry people or goods within a defined area. Shuttles on a fixed route. And cars that park themselves in a designated car park.",
-    "pop": [
-     {
-      "say": "narrow",
-      "show": "NARROW"
-     },
-     {
-      "say": "2022",
-      "show": "SINCE 2022"
-     },
-     {
-      "say": "defined area",
-      "show": "DEFINED AREA"
-     },
-     {
-      "say": "fixed route",
-      "show": "FIXED ROUTE"
-     },
-     {
-      "say": "park themselves",
-      "show": "SELF-PARKING"
-     }
-    ],
-    "photo": [
-     {
-      "q": [
-       "autonomous shuttle bus",
-       "driverless shuttle Europe",
-       "Navya autonomous shuttle"
-      ],
-      "want": "a small driverless electric shuttle bus on a European street"
-     },
-     {
-      "q": [
-       "multi-storey car park interior",
-       "parking garage"
-      ],
-      "want": "the inside of a parking garage"
-     }
-    ]
-   },
-   {
-    "text": "Here is the catch. It is meant for small series: at most fifteen hundred vehicles per type, per year, across the whole EU. And each country still decides where they may drive. Germany went first, with a 2021 law. It allows level 4 cars with nobody on board in approved areas, as long as a remote technical supervisor watches them and can switch them off. Driverless shuttles around Darmstadt and Volkswagen's MOIA trials in Hamburg show how it is being tested.",
-    "pop": [
-     {
-      "say": "the catch",
-      "show": "THE CATCH"
-     },
-     {
-      "say": "fifteen hundred",
-      "show": "1,500 PER YEAR"
-     },
-     {
-      "say": "2021 law",
-      "show": "GERMANY 2021"
-     },
-     {
-      "say": "technical supervisor",
-      "show": "REMOTE SUPERVISOR"
-     },
-     {
-      "say": "Hamburg",
-      "show": "TESTS: HAMBURG"
-     }
-    ],
-    "img": [
-     "lib/cybercab-line-robots.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Darmstadt Luisenplatz",
-       "Darmstadt city centre"
-      ],
-      "want": "the city centre of Darmstadt, Germany"
-     },
-     {
-      "q": [
-       "MOIA Hamburg",
-       "MOIA ID. Buzz AD",
-       "Volkswagen ID. Buzz AD"
-      ],
-      "want": "a MOIA or Volkswagen ID. Buzz AD self-driving van in Hamburg"
-     },
-     {
-      "q": [
-       "Hamburg Speicherstadt",
-       "Hamburg harbour skyline"
-      ],
-      "want": "the city of Hamburg"
-     }
-    ]
-   },
-   {
-    "text": "For a pilot, fifteen hundred cars a year is plenty. For the city-wide robotaxi fleets Tesla talks about, it is far too few. And many people mix this hurdle up with a much smaller one.",
-    "pop": [
-     {
-      "say": "plenty",
-      "show": "ENOUGH FOR A PILOT"
-     },
-     {
-      "say": "far too few",
-      "show": "TOO FEW FOR A FLEET"
-     },
-     {
-      "say": "much smaller one",
-      "show": "A SMALLER HURDLE"
-     }
-    ],
-    "img": [
-     "cybercab-fleet.jpg",
-     "wireless-hub-3.jpg"
-    ]
-   },
-   {
-    "head": "Doesn't EU approval for FSD open the door?",
-    "img": [
-     "lib/eu-oldtown-fsd.jpg"
-    ],
-    "pop": [
-     {
-      "say": "",
-      "show": "FSD = THE KEY?"
-     }
-    ]
-   },
-   {
-    "text": "No. Approving FSD and approving the Cybercab are two different things. FSD Supervised is now allowed in ten EU countries, Latvia most recently. And a vote on approval for the whole EU is expected in December 2026. But FSD Supervised is driver assistance. Someone sits behind the wheel, watches the road, and stays responsible.",
-    "pop": [
-     {
-      "say": "two different things",
-      "show": "TWO DIFFERENT THINGS"
-     },
-     {
-      "say": "ten EU countries",
-      "show": "10 EU COUNTRIES"
-     },
-     {
-      "say": "December 2026",
-      "show": "EU VOTE: DECEMBER"
-     },
-     {
-      "say": "driver assistance",
-      "show": "DRIVER ASSIST"
-     }
-    ],
-    "img": [
-     "lib/eu-oldtown-fsd.jpg",
-     "lib/fsd-screen-rain-night.jpg",
-     "fsd-roundabout-eu.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Riga old town",
-       "Riga skyline"
-      ],
-      "want": "the old town of Riga, Latvia"
-     }
-    ]
-   },
-   {
-    "text": "The Cybercab has no wheel and nobody to take over. So the system itself has to be the driver. That needs a different approval, of the car and its driving system, and then a permit to operate in a city. So the FSD vote is a step. But the bigger hurdle comes after it. And that hurdle has started to move too.",
-    "pop": [
-     {
-      "say": "nobody to take over",
-      "show": "NOBODY TAKES OVER"
-     },
-     {
-      "say": "the driver",
-      "show": "SYSTEM = DRIVER"
-     },
-     {
-      "say": "a permit",
-      "show": "CITY PERMIT"
-     },
-     {
-      "say": "bigger hurdle",
-      "show": "THE BIG HURDLE"
-     }
-    ],
-    "img": [
-     "lib/cybercab-nap-two.jpg",
-     "lib/cybercab-doors-open.jpg"
-    ]
-   },
-   {
-    "head": "What has to happen before you can ride a Cybercab in Europe?",
-    "img": [
-     "lib/cybercab-nap-arrival.jpg"
-    ],
-    "pop": [
-     {
-      "say": "",
-      "show": "WHAT HAS TO HAPPEN?"
-     }
-    ]
-   },
-   {
-    "text": "Three things: new global rules, an application from Tesla, and a city that says yes. The first one moved in June 2026. The UN vehicle forum, called WP point twenty-nine, adopted the first international rules for fully driverless systems. Such a system must be at least as safe as a competent human driver. The forum also updated about ninety older vehicle rules, so they still work for cars without traditional controls. The EU, the UK, the US, China, Japan and Canada backed it.",
-    "pop": [
-     {
-      "say": "Three things",
-      "show": "3 THINGS"
-     },
-     {
-      "say": "June 2026",
-      "show": "JUNE 2026"
-     },
-     {
-      "say": "first international rules",
-      "show": "FIRST GLOBAL RULES"
-     },
-     {
-      "say": "competent human driver",
-      "show": "AS SAFE AS A HUMAN"
-     },
-     {
-      "say": "ninety",
-      "show": "90 RULES UPDATED"
-     }
-    ],
-    "img": [
-     "lib/cybercab-nap-highway.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Palais des Nations Geneva flags",
-       "Allée des Drapeaux Geneva"
-      ],
-      "want": "the row of flags in front of the Palais des Nations in Geneva"
-     },
-     {
-      "q": [
-       "UNECE Geneva",
-       "Palais des Nations assembly hall"
-      ],
-      "want": "a UN conference building or hall in Geneva"
-     }
-    ]
-   },
-   {
-    "text": "How fast the EU turns that into approvals for robotaxis built in large numbers is still open. After that, Tesla would have to apply, prove the Cybercab is safe to an authority like the KBA or the RDW, and win permits city by city. Musk has called the Cybercab the most likely next major product for Gigafactory Berlin. But that is a statement, not a plan with dates.",
-    "pop": [
-     {
-      "say": "still open",
-      "show": "STILL OPEN"
-     },
-     {
-      "say": "apply",
-      "show": "TESLA MUST APPLY"
-     },
-     {
-      "say": "city by city",
-      "show": "CITY BY CITY"
-     },
-     {
-      "say": "Gigafactory Berlin",
-      "show": "GIGA BERLIN?"
-     },
-     {
-      "say": "a statement",
-      "show": "A STATEMENT"
-     }
-    ],
-    "img": [
-     "lib/giga-berlin-forest.jpg",
-     "lib/cybercab-line-closeup.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Tesla Gigafactory Berlin-Brandenburg",
-       "Gigafactory Grünheide"
-      ],
-      "want": "the Tesla Gigafactory Berlin-Brandenburg factory in Grünheide"
-     }
-    ]
-   },
-   {
-    "head": "What does this mean for you?",
-    "img": [
-     "lib/cybercab-doors-open.jpg"
-    ],
-    "pop": [
-     {
-      "say": "",
-      "show": "WHAT IT MEANS"
-     }
-    ]
-   },
-   {
-    "text": "For now, the Cybercab in Europe is something to look at, not to ride. Visit a stop on the tour, and you see a car built for a legal world that Europe is only starting to build. Watch three things. The EU vote on FSD. The first European approvals under the new driverless rules. And whether Tesla files an application for the Cybercab itself.",
-    "pop": [
-     {
-      "say": "look at",
-      "show": "LOOK, DON'T RIDE"
-     },
-     {
-      "say": "Watch three things",
-      "show": "WATCH 3 THINGS"
-     },
-     {
-      "say": "vote on FSD",
-      "show": "FSD VOTE"
-     },
-     {
-      "say": "application",
-      "show": "TESLA APPLIES?"
-     }
-    ],
-    "img": [
-     "lib/cybercab-street-day.jpg",
-     "lib/eu-brussels-tesla.jpg",
-     "models/cc-3.jpg"
-    ]
-   },
-   {
-    "text": "Until all three move, a Cybercab ride in Europe stays a promise. Once they do, the gold two-seater on display could leave the showroom, and come and pick you up.",
-    "pop": [
-     {
-      "say": "a promise",
-      "show": "A PROMISE"
-     },
-     {
-      "say": "leave the showroom",
-      "show": "OUT OF THE SHOWROOM"
-     },
-     {
-      "say": "pick you up",
-      "show": "PICKS YOU UP"
-     }
-    ],
-    "img": [
-     "lib/cybercab-nap-arrival.jpg",
-     "models/cc-1.jpg"
-    ]
-   }
-  ],
-  "nl": [
-   {
-    "text": "Honderden Cybercabs vervoeren in Texas al betalende passagiers. In Europa mag er niet één een rit geven. In november 2026 stuurde Tesla de gouden tweezitter op tournee. Hij begint op Auto Zürich en doet daarna twaalf steden in negen landen aan. Düsseldorf, Praag, Hamburg, Berlijn, München, Brussel, Wenen. Je mag eromheen lopen, foto's maken en naar binnen kijken. Maar instappen voor een rit mag niet. Dat komt niet door de auto. Het komt door het regelboek.",
-    "pop": [
-     {
-      "say": "Honderden",
-      "show": "HONDERDEN IN TEXAS"
-     },
-     {
-      "say": "niet één",
-      "show": "EUROPA: NUL"
-     },
-     {
-      "say": "twaalf steden",
-      "show": "12 STOPS"
-     },
-     {
-      "say": "mag niet",
-      "show": "GEEN RITTEN"
-     },
-     {
-      "say": "regelboek",
-      "show": "HET REGELBOEK"
-     }
-    ],
-    "img": [
-     "lib/cybercab-street-day.jpg",
-     "lib/cybercab-doors-open.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Zürich old town",
-       "Zurich Limmat skyline",
-       "Zürich Grossmünster"
-      ],
-      "want": "the city of Zürich, Switzerland"
-     },
-     {
-      "q": [
-       "Brandenburger Tor",
-       "Brandenburg Gate Berlin"
-      ],
-      "want": "the Brandenburg Gate in Berlin"
-     }
-    ]
-   },
-   {
-    "head": "Waarom mag de Cybercab niet gewoon de Europese weg op?",
-    "img": [
-     "lib/cybercab-silhouette-door.jpg"
-    ],
-    "pop": [
-     {
-      "say": "",
-      "show": "WAAROM NIET?"
-     }
-    ]
-   },
-   {
-    "text": "Omdat geen enkele Europese instantie hem heeft goedgekeurd. En in Europa heeft een auto die goedkeuring nodig voordat hij de openbare weg op mag. De Cybercab is gebouwd voor één taak: zelf rijden. Twee stoelen. Eén scherm. Vleugeldeuren. En niets om mee te sturen of te remmen. Ook geen buitenspiegels en geen achterruit.",
-    "pop": [
-     {
-      "say": "geen enkele Europese instantie",
-      "show": "NIET GOEDGEKEURD"
-     },
-     {
-      "say": "één taak",
-      "show": "ÉÉN TAAK"
-     },
-     {
-      "say": "niets om mee te sturen",
-      "show": "GEEN STUUR"
-     },
-     {
-      "say": "geen buitenspiegels",
-      "show": "GEEN SPIEGELS"
-     }
-    ],
-    "img": [
-     "lib/cybercab-dash-line.jpg",
-     "lib/cybercab-dash-install.jpg",
-     "lib/cybercab-interior-roof.jpg"
-    ]
-   },
-   {
-    "text": "Tesla begon in april 2026 met de bouw in Gigafactory Texas en zet hem in bij de betaalde Robotaxi-dienst in Austin. Voor Europa kondigde Tesla geen ritten, geen verkoop en geen datum voor een aanvraag aan. De auto op tournee is een showmodel. Het echte verschil zit in hoe Europa en Amerika bepalen wat er mag rijden.",
-    "pop": [
-     {
-      "say": "april 2026",
-      "show": "APRIL 2026"
-     },
-     {
-      "say": "Austin",
-      "show": "ROBOTAXI AUSTIN"
-     },
-     {
-      "say": "showmodel",
-      "show": "EEN SHOWMODEL"
-     },
-     {
-      "say": "Europa en Amerika",
-      "show": "EU VS VS"
-     }
-    ],
-    "img": [
-     "lib/giga-texas-aerial.jpg",
-     "lib/cybercab-line-front.jpg",
-     "lib/cybercab-line-closeup.jpg"
-    ]
-   },
-   {
-    "head": "Hoe bepaalt Europa welke auto's mogen rijden?",
-    "img": [
-     "lib/eu-brussels-tesla.jpg"
-    ],
-    "pop": [
-     {
-      "say": "",
-      "show": "WIE BESLIST?"
-     }
-    ]
-   },
-   {
-    "text": "In Europa wordt een auto goedgekeurd voordat hij verkocht wordt. Dat heet typegoedkeuring. Een nationale instantie, zoals de RDW of het Duitse KBA, toetst een autotype aan een lange lijst technische eisen. Pas daarna mag hij overal in de EU op kenteken. Veel van die eisen worden afgesproken in het VN-voertuigforum in Genève. En tientallen jaren gingen ze uit van één ding: een bestuurder, met stuur, pedalen en spiegels.",
-    "pop": [
-     {
-      "say": "voordat hij verkocht wordt",
-      "show": "EERST GOEDKEURING"
-     },
-     {
-      "say": "typegoedkeuring",
-      "show": "TYPEGOEDKEURING"
-     },
-     {
-      "say": "Genève",
-      "show": "VN, GENÈVE"
-     },
-     {
-      "say": "een bestuurder",
-      "show": "UITGAAN VAN BESTUURDER"
-     }
-    ],
-    "photo": [
-     {
-      "q": [
-       "Kraftfahrt-Bundesamt Flensburg",
-       "KBA Flensburg building"
-      ],
-      "want": "the building of the German motor transport authority KBA in Flensburg"
-     },
-     {
-      "q": [
-       "Palais des Nations Geneva",
-       "United Nations Office Geneva"
-      ],
-      "want": "the Palais des Nations, the UN building in Geneva"
-     },
-     {
-      "q": [
-       "car steering wheel",
-       "steering wheel dashboard"
-      ],
-      "want": "a car steering wheel seen from the driver's seat"
-     }
-    ]
-   },
-   {
-    "text": "Amerika werkt andersom. De fabrikant verklaart zelf dat zijn auto aan de federale veiligheidsnormen voldoet, en de toezichthouder controleert achteraf. Zo kwam de Cybercab op de weg: Tesla certificeerde hem zelf. Ook daar is het niet helemaal rond. In september 2026 begon verkeersveiligheidsdienst NHTSA een onderzoek naar die zelfcertificering. Europa kent zo'n kortere weg niet. En het regelboek had lang geen bladzijde voor een auto zonder bediening.",
-    "pop": [
-     {
-      "say": "andersom",
-      "show": "ANDERSOM"
-     },
-     {
-      "say": "certificeerde hem zelf",
-      "show": "ZELF GECERTIFICEERD"
-     },
-     {
-      "say": "onderzoek",
-      "show": "NHTSA-ONDERZOEK"
-     },
-     {
-      "say": "kortere weg",
-      "show": "GEEN KORTE WEG"
-     }
-    ],
-    "img": [
-     "lib/cybercab-street-day.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "United States Department of Transportation headquarters",
-       "US DOT building Washington"
-      ],
-      "want": "the US Department of Transportation headquarters building in Washington"
-     }
-    ]
-   },
-   {
-    "head": "Is er dan al een legale route voor auto's zonder bestuurder?",
-    "img": [
-     "lib/cybercab-nap-highway.jpg"
-    ],
-    "pop": [
-     {
-      "say": "",
-      "show": "EEN LEGALE ROUTE?"
-     }
-    ]
-   },
-   {
-    "text": "Ja. Maar hij is smal. Sinds 2022 heeft de EU een verordening voor het goedkeuren van volledig geautomatiseerde voertuigen. Die geldt voor drie gevallen. Voertuigen die mensen of goederen vervoeren binnen een afgebakend gebied. Shuttles op een vaste route. En auto's die zichzelf parkeren in een aangewezen garage.",
-    "pop": [
-     {
-      "say": "smal",
-      "show": "SMAL"
-     },
-     {
-      "say": "2022",
-      "show": "SINDS 2022"
-     },
-     {
-      "say": "afgebakend gebied",
-      "show": "VAST GEBIED"
-     },
-     {
-      "say": "vaste route",
-      "show": "VASTE ROUTE"
-     },
-     {
-      "say": "zichzelf parkeren",
-      "show": "ZELF PARKEREN"
-     }
-    ],
-    "photo": [
-     {
-      "q": [
-       "autonomous shuttle bus",
-       "driverless shuttle Europe",
-       "Navya autonomous shuttle"
-      ],
-      "want": "a small driverless electric shuttle bus on a European street"
-     },
-     {
-      "q": [
-       "multi-storey car park interior",
-       "parking garage"
-      ],
-      "want": "the inside of a parking garage"
-     }
-    ]
-   },
-   {
-    "text": "En nu het addertje. Hij is bedoeld voor kleine series: hooguit vijftienhonderd voertuigen per type, per jaar, in de hele EU. En elk land bepaalt nog zelf waar ze mogen rijden. Duitsland was de eerste, met een wet uit 2021. Die staat level 4-auto's zonder iemand aan boord toe in goedgekeurde gebieden, zolang een technisch toezichthouder op afstand meekijkt en ze kan uitschakelen. Zelfrijdende shuttles rond Darmstadt en de proeven van Volkswagen-dochter MOIA in Hamburg laten zien hoe dat getest wordt.",
-    "pop": [
-     {
-      "say": "addertje",
-      "show": "HET ADDERTJE"
-     },
-     {
-      "say": "vijftienhonderd",
-      "show": "1.500 PER JAAR"
-     },
-     {
-      "say": "wet uit 2021",
-      "show": "DUITSLAND 2021"
-     },
-     {
-      "say": "technisch toezichthouder",
-      "show": "TOEZICHT OP AFSTAND"
-     },
-     {
-      "say": "Hamburg",
-      "show": "PROEF: HAMBURG"
-     }
-    ],
-    "img": [
-     "lib/cybercab-line-robots.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Darmstadt Luisenplatz",
-       "Darmstadt city centre"
-      ],
-      "want": "the city centre of Darmstadt, Germany"
-     },
-     {
-      "q": [
-       "MOIA Hamburg",
-       "MOIA ID. Buzz AD",
-       "Volkswagen ID. Buzz AD"
-      ],
-      "want": "a MOIA or Volkswagen ID. Buzz AD self-driving van in Hamburg"
-     },
-     {
-      "q": [
-       "Hamburg Speicherstadt",
-       "Hamburg harbour skyline"
-      ],
-      "want": "the city of Hamburg"
-     }
-    ]
-   },
-   {
-    "text": "Voor een proef zijn vijftienhonderd auto's per jaar ruim genoeg. Voor de stadsbrede robotaxivloten waar Tesla over praat, is het veel te weinig. En veel mensen halen deze horde door elkaar met een veel kleinere.",
-    "pop": [
-     {
-      "say": "ruim genoeg",
-      "show": "GENOEG VOOR PROEF"
-     },
-     {
-      "say": "veel te weinig",
-      "show": "TE WEINIG VOOR VLOOT"
-     },
-     {
-      "say": "veel kleinere",
-      "show": "KLEINERE HORDE"
-     }
-    ],
-    "img": [
-     "cybercab-fleet.jpg",
-     "wireless-hub-3.jpg"
-    ]
-   },
-   {
-    "head": "Opent de Europese goedkeuring van FSD dan niet de deur?",
-    "img": [
-     "lib/eu-oldtown-fsd.jpg"
-    ],
-    "pop": [
-     {
-      "say": "",
-      "show": "FSD = DE SLEUTEL?"
-     }
-    ]
-   },
-   {
-    "text": "Nee. FSD goedkeuren en de Cybercab goedkeuren zijn twee verschillende dingen. FSD Supervised is inmiddels toegestaan in tien EU-landen, Letland als laatste. En in december 2026 wordt een stemming over goedkeuring voor de hele EU verwacht. Maar FSD Supervised is rijhulp. Er zit iemand achter het stuur, die op de weg let en verantwoordelijk blijft.",
-    "pop": [
-     {
-      "say": "twee verschillende dingen",
-      "show": "TWEE VERSCHILLENDE DINGEN"
-     },
-     {
-      "say": "tien EU-landen",
-      "show": "10 EU-LANDEN"
-     },
-     {
-      "say": "december 2026",
-      "show": "EU-STEMMING: DECEMBER"
-     },
-     {
-      "say": "rijhulp",
-      "show": "RIJHULP"
-     }
-    ],
-    "img": [
-     "lib/eu-oldtown-fsd.jpg",
-     "lib/fsd-screen-rain-night.jpg",
-     "fsd-roundabout-eu.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Riga old town",
-       "Riga skyline"
-      ],
-      "want": "the old town of Riga, Latvia"
-     }
-    ]
-   },
-   {
-    "text": "De Cybercab heeft geen stuur en niemand die het kan overnemen. Dus moet het systeem zelf de bestuurder zijn. Daarvoor is een andere goedkeuring nodig, van de auto en zijn rijsysteem, en daarna een vergunning om in een stad te rijden. De FSD-stemming is dus een stap. Maar de grootste horde komt daarna. En ook die horde is in beweging gekomen.",
-    "pop": [
-     {
-      "say": "niemand die het kan overnemen",
-      "show": "NIEMAND NEEMT OVER"
-     },
-     {
-      "say": "de bestuurder",
-      "show": "SYSTEEM = BESTUURDER"
-     },
-     {
-      "say": "vergunning",
-      "show": "STADSVERGUNNING"
-     },
-     {
-      "say": "grootste horde",
-      "show": "DE GROTE HORDE"
-     }
-    ],
-    "img": [
-     "lib/cybercab-nap-two.jpg",
-     "lib/cybercab-doors-open.jpg"
-    ]
-   },
-   {
-    "head": "Wat moet er gebeuren voordat je in Europa met een Cybercab kunt rijden?",
-    "img": [
-     "lib/cybercab-nap-arrival.jpg"
-    ],
-    "pop": [
-     {
-      "say": "",
-      "show": "WAT MOET ER GEBEUREN?"
-     }
-    ]
-   },
-   {
-    "text": "Drie dingen: nieuwe wereldwijde regels, een aanvraag van Tesla en een stad die ja zegt. Het eerste kwam in juni 2026 in beweging. Het VN-voertuigforum, WP negenentwintig, nam de eerste internationale regels aan voor volledig zelfrijdende systemen zonder bestuurder. Zo'n systeem moet minstens zo veilig zijn als een bekwame menselijke bestuurder. Het forum paste ook zo'n negentig oudere voertuigregels aan, zodat die blijven werken voor auto's zonder traditionele bediening. De EU, het Verenigd Koninkrijk, de VS, China, Japan en Canada steunden het.",
-    "pop": [
-     {
-      "say": "Drie dingen",
-      "show": "3 DINGEN"
-     },
-     {
-      "say": "juni 2026",
-      "show": "JUNI 2026"
-     },
-     {
-      "say": "eerste internationale regels",
-      "show": "EERSTE WERELDREGELS"
-     },
-     {
-      "say": "bekwame menselijke bestuurder",
-      "show": "ZO VEILIG ALS MENS"
-     },
-     {
-      "say": "negentig",
-      "show": "90 REGELS AANGEPAST"
-     }
-    ],
-    "img": [
-     "lib/cybercab-nap-highway.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Palais des Nations Geneva flags",
-       "Allée des Drapeaux Geneva"
-      ],
-      "want": "the row of flags in front of the Palais des Nations in Geneva"
-     },
-     {
-      "q": [
-       "UNECE Geneva",
-       "Palais des Nations assembly hall"
-      ],
-      "want": "a UN conference building or hall in Geneva"
-     }
-    ]
-   },
-   {
-    "text": "Hoe snel de EU daar goedkeuringen voor robotaxi's in grote aantallen van maakt, is nog open. Daarna zou Tesla een aanvraag moeten doen, bij een instantie als de RDW of het KBA moeten bewijzen dat de Cybercab veilig is, en per stad vergunningen moeten winnen. Musk noemde de Cybercab het meest waarschijnlijke volgende grote product voor Gigafactory Berlin. Maar dat is een uitspraak, geen plan met data.",
-    "pop": [
-     {
-      "say": "nog open",
-      "show": "NOG OPEN"
-     },
-     {
-      "say": "aanvraag",
-      "show": "TESLA MOET AANVRAGEN"
-     },
-     {
-      "say": "per stad",
-      "show": "PER STAD"
-     },
-     {
-      "say": "Gigafactory Berlin",
-      "show": "GIGA BERLIN?"
-     },
-     {
-      "say": "een uitspraak",
-      "show": "EEN UITSPRAAK"
-     }
-    ],
-    "img": [
-     "lib/giga-berlin-forest.jpg",
-     "lib/cybercab-line-closeup.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Tesla Gigafactory Berlin-Brandenburg",
-       "Gigafactory Grünheide"
-      ],
-      "want": "the Tesla Gigafactory Berlin-Brandenburg factory in Grünheide"
-     }
-    ]
-   },
-   {
-    "head": "Wat betekent dit voor jou?",
-    "img": [
-     "lib/cybercab-doors-open.jpg"
-    ],
-    "pop": [
-     {
-      "say": "",
-      "show": "WAT HET BETEKENT"
-     }
-    ]
-   },
-   {
-    "text": "Voorlopig is de Cybercab in Europa iets om te bekijken, niet om in te rijden. Bezoek een tourstop, en je ziet een auto gebouwd voor een juridische wereld die Europa nog maar net aan het bouwen is. Let op drie dingen. De EU-stemming over FSD. De eerste Europese goedkeuringen onder de nieuwe regels zonder bestuurder. En of Tesla zelf een aanvraag voor de Cybercab indient.",
-    "pop": [
-     {
-      "say": "bekijken",
-      "show": "KIJKEN, NIET RIJDEN"
-     },
-     {
-      "say": "drie dingen",
-      "show": "LET OP 3 DINGEN"
-     },
-     {
-      "say": "stemming over FSD",
-      "show": "FSD-STEMMING"
-     },
-     {
-      "say": "aanvraag",
-      "show": "TESLA VRAAGT AAN?"
-     }
-    ],
-    "img": [
-     "lib/cybercab-street-day.jpg",
-     "lib/eu-brussels-tesla.jpg",
-     "models/cc-3.jpg"
-    ]
-   },
-   {
-    "text": "Zolang die drie niet bewegen, blijft een rit in een Cybercab in Europa een belofte. Gebeurt het wel, dan kan de gouden tweezitter uit de showroom rijden, en jou komen ophalen.",
-    "pop": [
-     {
-      "say": "belofte",
-      "show": "EEN BELOFTE"
-     },
-     {
-      "say": "uit de showroom",
-      "show": "UIT DE SHOWROOM"
-     },
-     {
-      "say": "ophalen",
-      "show": "HAALT JOU OP"
-     }
-    ],
-    "img": [
-     "lib/cybercab-nap-arrival.jpg",
-     "models/cc-1.jpg"
-    ]
-   }
-  ],
-  "yt_title_en": "Can the Tesla Cybercab Drive in Europe? The Rules for Cars With No Steering Wheel",
-  "yt_title_nl": "Mag de Tesla Cybercab Rijden in Europa? De Regels voor Auto's Zonder Stuur"
- },
- "en": {
-  "title": "Can the Tesla Cybercab Drive in Europe? Why a Car With No Steering Wheel Needs New Rules",
-  "description": "Tesla's Cybercab is touring Europe, but nobody can ride it. How European type approval works, why driverless cars are capped at 1,500 a year, and what has to change first.",
-  "body": "<p>In November 2026 Tesla sent the Cybercab on a tour of Europe. The gold two-seater opens at Auto Zürich and then visits 12 stops in nine countries, from Düsseldorf and Prague to Berlin, Brussels and Vienna, until mid-January. Visitors can walk around it, take photos and look inside. What they cannot do is ride in it. In Austin, Texas, paying passengers have been riding Cybercabs since September 2026. In Europe the same car stays parked, because a car with no steering wheel and no pedals runs into a rulebook that was written for human drivers.</p>\n<h2>Why can't the Cybercab simply drive on European roads?</h2>\n<p><strong>Because no European authority has approved it, and Europe does not let a car onto public roads without approval first.</strong> The Cybercab was built for one job: driving itself. It has two seats, a screen, butterfly doors and nothing to steer or brake with. There are no side mirrors and no rear window either. Tesla started production at Gigafactory Texas in April 2026 and uses the car in its paid Robotaxi service in Austin. In Europe, Tesla has not announced Cybercab rides, sales or a date for an application. The car on tour is a showpiece. The real difference lies in how the two sides of the Atlantic decide what is allowed on the road.</p>\n<h2>How does Europe decide which cars may drive?</h2>\n<p><strong>In Europe a car must be approved before it is sold; in the US the maker certifies its own car.</strong> The European system is called type approval. A national authority, such as Germany's KBA or the Dutch RDW, checks a car type against a long list of technical rules before it may be registered anywhere in the EU. Many of those rules are harmonised through the UN vehicle forum in Geneva, and for decades they assumed a driver with a steering wheel, pedals and mirrors. In the US the maker declares that its car meets the federal safety standards, and the regulator checks afterwards. That is how the Cybercab reached American roads: Tesla certified it itself. Even there it is not fully settled, because the US safety regulator NHTSA opened an investigation into that self-certification in September 2026. Europe has no such shortcut, and its rulebook long had no page for a car without controls.</p>\n<h2>So is there already a legal path for driverless cars in Europe?</h2>\n<p><strong>Yes, but it is narrow: small numbers in fixed areas.</strong> Since 2022 the EU has had a regulation, numbered 2022/1426, for approving the driving system of fully automated vehicles. It covers three cases:</p>\n<ul>\n<li>vehicles that carry passengers or goods within a defined area;</li>\n<li>vehicles on a fixed route between fixed start and end points, like a shuttle;</li>\n<li>cars that park themselves in designated car parks.</li>\n</ul>\n<p>The catch is volume. The approval is meant for small series, capped at <strong>1,500 vehicles per type per year</strong> across the whole EU. On top of that, each country decides where such vehicles may operate. Germany moved first, with a 2021 law that allows level 4 vehicles to drive with nobody on board in approved areas, as long as a remote \"technical supervisor\" monitors them and can switch them off. Driverless shuttle projects around Darmstadt and Volkswagen's MOIA ride-pooling trials in Hamburg show how this is being tested. For a pilot, 1,500 cars a year is plenty. For the city-wide robotaxi fleets Tesla talks about, it is far too few. Many people also mix up this hurdle with a much smaller one.</p>\n<h2>Doesn't EU approval for FSD open the door?</h2>\n<p><strong>No. Approving FSD and approving the Cybercab are two different things.</strong> FSD (Supervised) is now approved in ten EU countries, with Latvia the latest, and a vote on EU-wide approval is expected in December 2026. But FSD Supervised is driver assistance: a person sits behind the wheel, watches the road and stays responsible. The Cybercab has no wheel and nobody to take over, so the system itself has to be the driver. That calls for a different kind of approval, of the car and its driving system, followed by permission to operate in a city. A common mistake is to read the FSD vote as the start of robotaxis in Europe. It is a step, but the bigger hurdle comes after it. That bigger hurdle has started to move as well.</p>\n<h2>What has to happen before you can ride a Cybercab in Europe?</h2>\n<p><strong>New global rules, an application from Tesla and a city that says yes.</strong> In June 2026 the UN vehicle forum WP.29 adopted the first international regulation for fully driverless automated driving systems. It demands that such a system is at least as safe as a competent human driver. The forum also updated about ninety existing vehicle rules so they still work for cars without traditional driver controls. The EU, the UK, the US, China, Japan and Canada endorsed it. How quickly the EU turns this into approvals for robotaxis built in large numbers is still open. After that, Tesla would have to apply, prove the Cybercab's safety to an authority such as the KBA or RDW, and win operating permits city by city. Musk has called the Cybercab the most likely next major product for Gigafactory Berlin, but that is a statement, not a plan with dates. Until then, what the tour offers is limited.</p>\n<h2>What does this mean for you?</h2>\n<p><strong>For now, the Cybercab in Europe is something to look at, not to ride.</strong> If you visit a stop on the tour, you will see a car designed for a legal world that Europe is only starting to build. Three things are worth watching: the EU-wide vote on FSD, the first European approvals under the new driverless rules, and whether Tesla files an application for the Cybercab itself. Until all three move, a Cybercab ride in Europe remains a promise. Once they do, the gold two-seater on display could leave the showroom and pick you up.</p>"
- },
- "nl": {
-  "title": "Mag de Tesla Cybercab rijden in Europa? Waarom een auto zonder stuur nieuwe regels nodig heeft",
-  "description": "Tesla's Cybercab toert door Europa, maar niemand mag erin rijden. Hoe Europese typegoedkeuring werkt, waarom auto's zonder bestuurder op 1.500 per jaar zitten en wat er eerst moet veranderen.",
-  "body": "<p>In november 2026 stuurde Tesla de Cybercab op tournee door Europa. De gouden tweezitter opent op Auto Zürich en doet daarna tot half januari 12 steden in negen landen aan, van Düsseldorf en Praag tot Berlijn, Brussel en Wenen. Bezoekers mogen eromheen lopen, foto's maken en naar binnen kijken. Instappen voor een ritje mag niet. In Austin, Texas, rijden betalende passagiers sinds september 2026 in Cybercabs. In Europa blijft dezelfde auto staan, want een auto zonder stuur en zonder pedalen loopt hier vast op regels die voor menselijke bestuurders zijn geschreven.</p>\n<h2>Waarom mag de Cybercab niet gewoon de Europese weg op?</h2>\n<p><strong>Omdat geen enkele Europese instantie hem heeft goedgekeurd, en Europa geen auto de openbare weg op laat zonder die goedkeuring vooraf.</strong> De Cybercab is gebouwd voor één taak: zelf rijden. Hij heeft twee stoelen, een scherm, vleugeldeuren en niets om mee te sturen of te remmen. Buitenspiegels en een achterruit ontbreken ook. Tesla begon in april 2026 met de productie in Gigafactory Texas en zet de auto in bij zijn betaalde Robotaxi-dienst in Austin. Voor Europa heeft Tesla geen ritten, verkoop of datum voor een aanvraag aangekondigd. De auto op tournee is een showmodel. Het echte verschil zit in de manier waarop Europa en Amerika bepalen wat de weg op mag.</p>\n<h2>Hoe bepaalt Europa welke auto's mogen rijden?</h2>\n<p><strong>In Europa moet een auto worden goedgekeurd voordat hij verkocht wordt; in de VS keurt de fabrikant zijn eigen auto.</strong> Het Europese systeem heet typegoedkeuring. Een nationale instantie, zoals de RDW in Nederland of het KBA in Duitsland, toetst een autotype aan een lange lijst technische eisen voordat het ergens in de EU op kenteken mag. Veel van die eisen worden afgestemd via het VN-voertuigforum in Genève, en tientallen jaren gingen ze uit van een bestuurder met stuur, pedalen en spiegels. In de VS verklaart de fabrikant zelf dat zijn auto aan de federale veiligheidsnormen voldoet, en controleert de toezichthouder achteraf. Zo kwam de Cybercab op de Amerikaanse weg: Tesla certificeerde hem zelf. Helemaal rond is dat ook daar niet, want de Amerikaanse verkeersveiligheidsdienst NHTSA begon in september 2026 een onderzoek naar die zelfcertificering. Europa kent zo'n kortere weg niet, en het Europese regelboek had lang geen bladzijde voor een auto zonder bediening.</p>\n<h2>Is er dan al een legale route voor auto's zonder bestuurder?</h2>\n<p><strong>Ja, maar die route is smal: kleine aantallen in vaste gebieden.</strong> Sinds 2022 heeft de EU een verordening, nummer 2022/1426, voor de goedkeuring van het rijsysteem van volledig geautomatiseerde voertuigen. Die geldt voor drie gevallen:</p>\n<ul>\n<li>voertuigen die mensen of goederen vervoeren binnen een afgebakend gebied;</li>\n<li>voertuigen op een vaste route tussen een vast begin- en eindpunt, zoals een shuttle;</li>\n<li>auto's die zichzelf parkeren in aangewezen parkeergarages.</li>\n</ul>\n<p>Het addertje zit in de aantallen. De goedkeuring is bedoeld voor kleine series, met een plafond van <strong>1.500 voertuigen per type per jaar</strong> in de hele EU. Daarnaast bepaalt elk land zelf waar zulke voertuigen mogen rijden. Duitsland was de eerste, met een wet uit 2021 die level 4-voertuigen zonder iemand aan boord toestaat in goedgekeurde gebieden, zolang een 'technisch toezichthouder' op afstand meekijkt en ze kan uitschakelen. Projecten met zelfrijdende shuttles rond Darmstadt en de proeven van Volkswagen-dochter MOIA in Hamburg laten zien hoe dat getest wordt. Voor een proef zijn 1.500 auto's per jaar ruim voldoende. Voor de stadsbrede robotaxivloten waar Tesla over praat, is het veel te weinig. Veel mensen halen deze horde bovendien door elkaar met een veel kleinere.</p>\n<h2>Opent de Europese goedkeuring van FSD dan niet de deur?</h2>\n<p><strong>Nee. FSD goedkeuren en de Cybercab goedkeuren zijn twee verschillende dingen.</strong> FSD (Supervised) is inmiddels toegestaan in tien EU-landen, met Letland als laatste, en in december 2026 wordt een stemming over goedkeuring voor de hele EU verwacht. Maar FSD Supervised is rijhulp: er zit iemand achter het stuur die op de weg let en verantwoordelijk blijft. De Cybercab heeft geen stuur en niemand die het kan overnemen, dus moet het systeem zelf de bestuurder zijn. Daarvoor is een ander soort goedkeuring nodig, van de auto en zijn rijsysteem, en daarna nog een vergunning om in een stad te rijden. Een veelgemaakte fout is de FSD-stemming te zien als het begin van robotaxi's in Europa. Het is een stap, maar de grootste horde komt daarna. Ook die horde is inmiddels in beweging gekomen.</p>\n<h2>Wat moet er gebeuren voordat je in Europa met een Cybercab kunt rijden?</h2>\n<p><strong>Nieuwe wereldwijde regels, een aanvraag van Tesla en een stad die ja zegt.</strong> In juni 2026 nam het VN-voertuigforum WP.29 de eerste internationale regels aan voor volledig zelfrijdende systemen zonder bestuurder. Zo'n systeem moet minstens zo veilig zijn als een bekwame menselijke bestuurder. Het forum paste ook zo'n negentig bestaande voertuigregels aan, zodat die blijven werken voor auto's zonder traditionele bediening. De EU, het Verenigd Koninkrijk, de VS, China, Japan en Canada steunden de regels. Hoe snel de EU daar goedkeuringen voor robotaxi's in grote aantallen van maakt, is nog open. Daarna zou Tesla een aanvraag moeten indienen, de veiligheid van de Cybercab moeten bewijzen bij een instantie als de RDW of het KBA, en per stad een vergunning moeten krijgen. Musk noemde de Cybercab het meest waarschijnlijke volgende grote product voor Gigafactory Berlin, maar dat is een uitspraak, geen plan met data. Tot die tijd biedt de tournee dus maar weinig.</p>\n<h2>Wat betekent dit voor jou?</h2>\n<p><strong>Voorlopig is de Cybercab in Europa iets om te bekijken, niet om in te rijden.</strong> Wie een van de tourstops bezoekt, ziet een auto die ontworpen is voor een juridische wereld die Europa nog maar net aan het bouwen is. Drie dingen zijn het volgen waard: de EU-brede stemming over FSD, de eerste Europese goedkeuringen onder de nieuwe regels voor auto's zonder bestuurder, en of Tesla zelf een aanvraag voor de Cybercab indient. Zolang die drie niet bewegen, blijft een rit in een Cybercab in Europa een belofte. Gebeurt het wel, dan kan de gouden tweezitter uit de showroom rijden en jou komen ophalen.</p>"
- }
+    "title": "Mag de Tesla Cybercab rijden in Europa? Waarom een auto zonder stuur nieuwe regels nodig heeft",
+    "description": "Tesla's Cybercab toert door Europa, maar niemand mag erin rijden. Hoe Europese typegoedkeuring werkt, waarom auto's zonder bestuurder op 1.500 per jaar zitten en wat er eerst moet veranderen.",
+    "body": "<p>In november 2026 stuurde Tesla de Cybercab op tournee door Europa. De gouden tweezitter opent op Auto Zürich en doet daarna tot half januari 12 steden in negen landen aan, van Düsseldorf en Praag tot Berlijn, Brussel en Wenen. Bezoekers mogen eromheen lopen, foto's maken en naar binnen kijken. Instappen voor een ritje mag niet. In Austin, Texas, rijden betalende passagiers sinds september 2026 in Cybercabs. In Europa blijft dezelfde auto staan, want een auto zonder stuur en zonder pedalen loopt hier vast op regels die voor menselijke bestuurders zijn geschreven.</p>\n<h2>Waarom mag de Cybercab niet gewoon de Europese weg op?</h2>\n<p><strong>Omdat geen enkele Europese instantie hem heeft goedgekeurd, en Europa geen auto de openbare weg op laat zonder die goedkeuring vooraf.</strong> De Cybercab is gebouwd voor één taak: zelf rijden. Hij heeft twee stoelen, een scherm, vleugeldeuren en niets om mee te sturen of te remmen. Buitenspiegels en een achterruit ontbreken ook. Tesla begon in april 2026 met de productie in Gigafactory Texas en zet de auto in bij zijn betaalde Robotaxi-dienst in Austin. Voor Europa heeft Tesla geen ritten, verkoop of datum voor een aanvraag aangekondigd. De auto op tournee is een showmodel. Het echte verschil zit in de manier waarop Europa en Amerika bepalen wat de weg op mag.</p>\n<h2>Hoe bepaalt Europa welke auto's mogen rijden?</h2>\n<p><strong>In Europa moet een auto worden goedgekeurd voordat hij verkocht wordt; in de VS keurt de fabrikant zijn eigen auto.</strong> Het Europese systeem heet typegoedkeuring. Een nationale instantie, zoals de RDW in Nederland of het KBA in Duitsland, toetst een autotype aan een lange lijst technische eisen voordat het ergens in de EU op kenteken mag. Veel van die eisen worden afgestemd via het VN-voertuigforum in Genève, en tientallen jaren gingen ze uit van een bestuurder met stuur, pedalen en spiegels. In de VS verklaart de fabrikant zelf dat zijn auto aan de federale veiligheidsnormen voldoet, en controleert de toezichthouder achteraf. Zo kwam de Cybercab op de Amerikaanse weg: Tesla certificeerde hem zelf. Helemaal rond is dat ook daar niet, want de Amerikaanse verkeersveiligheidsdienst NHTSA begon in september 2026 een onderzoek naar die zelfcertificering. Europa kent zo'n kortere weg niet, en het Europese regelboek had lang geen bladzijde voor een auto zonder bediening.</p>\n<h2>Is er dan al een legale route voor auto's zonder bestuurder?</h2>\n<p><strong>Ja, maar die route is smal: kleine aantallen in vaste gebieden.</strong> Sinds 2022 heeft de EU een verordening, nummer 2022/1426, voor de goedkeuring van het rijsysteem van volledig geautomatiseerde voertuigen. Die geldt voor drie gevallen:</p>\n<ul>\n<li>voertuigen die mensen of goederen vervoeren binnen een afgebakend gebied;</li>\n<li>voertuigen op een vaste route tussen een vast begin- en eindpunt, zoals een shuttle;</li>\n<li>auto's die zichzelf parkeren in aangewezen parkeergarages.</li>\n</ul>\n<p>Het addertje zit in de aantallen. De goedkeuring is bedoeld voor kleine series, met een plafond van <strong>1.500 voertuigen per type per jaar</strong> in de hele EU. Daarnaast bepaalt elk land zelf waar zulke voertuigen mogen rijden. Duitsland was de eerste, met een wet uit 2021 die level 4-voertuigen zonder iemand aan boord toestaat in goedgekeurde gebieden, zolang een 'technisch toezichthouder' op afstand meekijkt en ze kan uitschakelen. Projecten met zelfrijdende shuttles rond Darmstadt en de proeven van Volkswagen-dochter MOIA in Hamburg laten zien hoe dat getest wordt. Voor een proef zijn 1.500 auto's per jaar ruim voldoende. Voor de stadsbrede robotaxivloten waar Tesla over praat, is het veel te weinig. Veel mensen halen deze horde bovendien door elkaar met een veel kleinere.</p>\n<h2>Opent de Europese goedkeuring van FSD dan niet de deur?</h2>\n<p><strong>Nee. FSD goedkeuren en de Cybercab goedkeuren zijn twee verschillende dingen.</strong> FSD (Supervised) is inmiddels toegestaan in tien EU-landen, met Letland als laatste, en in december 2026 wordt een stemming over goedkeuring voor de hele EU verwacht. Maar FSD Supervised is rijhulp: er zit iemand achter het stuur die op de weg let en verantwoordelijk blijft. De Cybercab heeft geen stuur en niemand die het kan overnemen, dus moet het systeem zelf de bestuurder zijn. Daarvoor is een ander soort goedkeuring nodig, van de auto en zijn rijsysteem, en daarna nog een vergunning om in een stad te rijden. Een veelgemaakte fout is de FSD-stemming te zien als het begin van robotaxi's in Europa. Het is een stap, maar de grootste horde komt daarna. Ook die horde is inmiddels in beweging gekomen.</p>\n<h2>Wat moet er gebeuren voordat je in Europa met een Cybercab kunt rijden?</h2>\n<p><strong>Nieuwe wereldwijde regels, een aanvraag van Tesla en een stad die ja zegt.</strong> In juni 2026 nam het VN-voertuigforum WP.29 de eerste internationale regels aan voor volledig zelfrijdende systemen zonder bestuurder. Zo'n systeem moet minstens zo veilig zijn als een bekwame menselijke bestuurder. Het forum paste ook zo'n negentig bestaande voertuigregels aan, zodat die blijven werken voor auto's zonder traditionele bediening. De EU, het Verenigd Koninkrijk, de VS, China, Japan en Canada steunden de regels. Hoe snel de EU daar goedkeuringen voor robotaxi's in grote aantallen van maakt, is nog open. Daarna zou Tesla een aanvraag moeten indienen, de veiligheid van de Cybercab moeten bewijzen bij een instantie als de RDW of het KBA, en per stad een vergunning moeten krijgen. Musk noemde de Cybercab het meest waarschijnlijke volgende grote product voor Gigafactory Berlin, maar dat is een uitspraak, geen plan met data. Tot die tijd biedt de tournee dus maar weinig.</p>\n<h2>Wat betekent dit voor jou?</h2>\n<p><strong>Voorlopig is de Cybercab in Europa iets om te bekijken, niet om in te rijden.</strong> Wie een van de tourstops bezoekt, ziet een auto die ontworpen is voor een juridische wereld die Europa nog maar net aan het bouwen is. Drie dingen zijn het volgen waard: de EU-brede stemming over FSD, de eerste Europese goedkeuringen onder de nieuwe regels voor auto's zonder bestuurder, en of Tesla zelf een aanvraag voor de Cybercab indient. Zolang die drie niet bewegen, blijft een rit in een Cybercab in Europa een belofte. Gebeurt het wel, dan kan de gouden tweezitter uit de showroom rijden en jou komen ophalen.</p>"
+  },
+  "image": "gen/can-tesla-cybercab-drive-in-europe-no-steering-wheel-rules-explained.jpg"
 }

@@ -55,6 +55,7 @@ Add new ideas at the bottom at any time.
 - [ ] Will Teslas get Starlink built in? How a Tesla connects to the internet today (Standard vs Premium Connectivity, AT&T, 5G) and what satellite links would change
 - [ ] Who watches a driverless car? What a remote "technical supervisor" does (Germany's level 4 law, Tesla Robotaxi, Waymo) and what they can and cannot do
 - [ ] How does the Cybercab charge without a home-charging port? DC-only inlet, wireless charging pads and what a robotaxi depot needs
+- [ ] Why do car factories shut down for the holidays, and what does running a plant 24/7 really take (shifts, maintenance windows, Giga Texas)?
 
 ## Stories (evening task: entertaining and educational, timeless)
 
@@ -68,7 +69,7 @@ Add new ideas at the bottom at any time.
 
 - [x] The Roadster that started it all: how a small startup turned a Lotus into the first Tesla (tesla-roadster-origin-story-lotus-elise-first-tesla)
 - [ ] 2008: the year Tesla almost died, and the Christmas Eve deal that saved it
-- [ ] Model 3 "production hell": sleeping in the factory and the tent on the parking lot
+- [x] Model 3 "production hell": sleeping in the factory and the tent on the parking lot (tesla-model-3-production-hell-tent-assembly-line-2018-story)
 - [ ] Why the Cybertruck looks like that: stainless steel, the broken window and the design bet
 - [ ] How Tesla opened all its patents in 2014, and what happened next
 - [ ] The first Supercharger: why Tesla built its own charging network when nobody else would
@@ -91,6 +92,8 @@ Add new ideas at the bottom at any time.
 - [ ] December 2015, Orbcomm-2: the night a Falcon 9 booster first landed back on Earth, after a string of crashes on drone ships
 - [ ] DarkSat and VisorSat: how astronomers' alarm over the first 'Starlink train' changed how SpaceX builds its satellites
 - [ ] 2021: how Germany became the first country to allow cars with nobody on board, and why so few have used it since
+- [ ] March 31, 2016: the night people queued outside Tesla stores to reserve a car they had never seen, and how the Model 3 reservations shaped the company
+- [ ] Fremont before Tesla: how a GM plant became NUMMI with Toyota, closed in 2010, and was bought by Tesla for a fraction of its value
 
 ## Series: How did Elon Musk ...? (evening task; one per week at most, category "musk")
 

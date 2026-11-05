@@ -200,18 +200,13 @@ Shorts (typically 741 views after 48 hours) by far. So:
   (Model 3 words -> Model 3 photo, never another model); key words only, 1-4 words, one line, in the centre,
   a fraction before the voice. Heads are shown as key words too: give every {"head": ...} block a
   `"pop": [{"say": "", "show": "WHY A LOTUS?"}]` with 1-4 words. The thumbnail stays the opening frame with the label.
-- **Key phrases, not single key words, in the long video** (decided 2 Nov 2026): the "pop" list of every text block
-  follows the voice like condensed captions: a new key phrase every 1.5-2.5 s for the WHOLE block, 1-4 words,
-  one line ("ONLY 7% LOTUS PARTS", "STUCK IN SECOND GEAR", "MUSK TAKES OVER", "NO NAPPING YET"). Strong single
-  words ("$539", "WHY?") are fine as one of them. Each phrase stays at most ~2.8 s; where the script gives none,
-  the renderer makes one from the spoken words. So give about one pop per 5-7 spoken words.
-- **Key words in the long video** (decided 1 Nov 2026): no captions in the picture any more (YouTube makes its own
-  closed captions, CC, which viewers can translate into almost any language); instead big yellow key words in the centre, like the story Shorts. Give
-  every "text" block of the "video" script a `"pop": [{"say": "...", "show": "..."}]` list of 4-6 headline-style
-  key words in the rhythm of the voice (same rules as "Story Shorts": "say" = the exact words as spoken in that
-  block, "show" = 1-4 capitalised words, shown on one line; e.g. NEVER MOVED, BILL $539, WHY?).
-  Each shows for up to 3 s. The last block's last key word is the core message. Without a "pop" list only
-  numbers and words in capitals pop up, which is too little. "key" blocks keep their keyword bar.
+- **Subtitles in the long video** (decided 5 Nov 2026, replaces the key words and key phrases): the whole spoken
+  script, heads included, is shown as subtitles: at most 3 words at a time, bold capitals, white with a black edge,
+  one word in yellow (a number, else a name, else the longest word), low in the picture (about 85% down),
+  horizontally centred, the same size every time, a fraction before the voice. Small linking words (a, an, the,
+  in, into, if, because, want, so, that, just) are left out for calm; everything else stays so the sense is kept.
+  A new subtitle starts at every comma or full stop; a number stays with the word after it ("40 TONNE LOAD").
+  "pop" lists in the script are no longer shown (FULL_KEYPHRASES=1 brings the old key phrases back).
 - **Keep the Short's promise** (decided 1 Nov 2026): every Short ends with "for the full story go to
   TrendingTesla.com", so the article and the long video must really give the full story: clearly more than
   the Short (the background, the how and why, the numbers, the turns, what it means), never the same 60

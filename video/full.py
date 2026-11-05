@@ -237,6 +237,70 @@ def norm(w):
     return re.sub(r"[^\w$%]", "", w.lower())
 
 
+FILLER = set("a an the in into if because want so that just".split())  # only small linking words; the sense stays
+SUB_SIZE, SUB_Y = 72, 0.855  # like the reference: bold caps, white with black edge, one key word yellow, low centre
+
+
+def subtitle_pops(words, start, stop):
+    """Subtitles of the full script: at most 3 words at a time, small linking words left out, a new group at every
+    pause or punctuation; each group shows a fraction before it is spoken and stays until the next one."""
+    groups, cur = [], []
+    for w, st, en in words:
+        if st < start - 0.2:
+            continue
+        clean = re.sub(r"[^\w$%,.'?!-]", "", w)
+        if clean and re.sub(r"[^a-z]", "", clean.lower()) not in FILLER:
+            cur.append((clean.strip(",.;:"), st, en))
+        if cur and (len(cur) >= 3 or w[-1:] in ",.;:!?"):
+            if len(cur) == 3 and w[-1:] not in ",.;:!?" and re.search(r"\d", cur[-1][0]):
+                groups.append(cur[:2])  # keep a number with the word after it ("40 TONNE")
+                cur = cur[2:]
+            else:
+                groups.append(cur)
+                cur = []
+    if cur:
+        groups.append(cur)
+    calm = []  # a lone word joins the group before it when that has room, so nothing flashes by on its own
+    for g in groups:
+        if calm and (len(g) == 1 or len(calm[-1]) == 1) and len(calm[-1]) + len(g) <= 3 \
+                and g[0][1] - calm[-1][-1][2] < 0.6:
+            calm[-1] = calm[-1] + g
+        else:
+            calm.append(g)
+    groups = calm
+    out = []
+    for k, g in enumerate(groups):
+        t0 = max(start, g[0][1] - LEAD)
+        t1 = min(groups[k + 1][0][1] - LEAD if k + 1 < len(groups) else g[-1][2] + 0.4, g[-1][2] + 1.2, stop)
+        if t1 - t0 > 0.15:
+            out.append((t0, t1, subtitle_overlay([x[0] for x in g])))
+    return out
+
+
+def subtitle_overlay(ws):
+    """One subtitle line: bold capitals, white with a black edge, the strongest word in yellow, centred low."""
+    f = font(FB, SUB_SIZE)
+    up = [w.upper() for w in ws]
+    hi = max(range(len(up)), key=lambda i: (bool(re.search(r"\d", ws[i])),  # numbers first, then names, then
+                                            ws[i][:1].isupper() and i > 0,   # the longest word
+                                            len(ws[i])))
+    gap = f.getlength(" ")
+    total = sum(f.getlength(w) for w in up) + gap * (len(up) - 1)
+    while total > W * 0.84 and f.size > 40:
+        f = font(FB, f.size - 4)
+        gap = f.getlength(" ")
+        total = sum(f.getlength(w) for w in up) + gap * (len(up) - 1)
+    im = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    d = ImageDraw.Draw(im)
+    x, y = (W - total) / 2, H * SUB_Y - f.size * 0.6
+    for i, w in enumerate(up):
+        d.text((x + 3, y + 5), w, font=f, fill=(0, 0, 0, 140))
+        d.text((x, y), w, font=f, fill=(255, 221, 0) if i == hi else (255, 255, 255), stroke_width=6,
+               stroke_fill=(0, 0, 0))
+        x += f.getlength(w) + gap
+    return im
+
+
 def pop_overlay(txt):
     """A key word or short phrase, big and yellow in the centre (like the story Shorts), always on one line."""
     f = font(FB, POP_SIZE)
@@ -376,7 +440,7 @@ def main():
     # words of text pieces on the video timeline (captions)
     words = []
     for (kind, _, _), (a0, a1), t0, (i0, i1), orig, (_, counts) in zip(pieces, segs, place, spans, base, conv):
-        if kind != "text":
+        if kind not in ("text", "head"):
             continue
         # words by character position, so a head never leaks into the captions
         sw = [(w, s0 - a0 + t0, e0 - a0 + t0) for w, s0, e0 in S.words_timed(chars[i0:i1 + 1], cs[i0:i1 + 1], ce[i0:i1 + 1])]
@@ -656,7 +720,9 @@ def render(a, lang, pieces, segs, place, words, total, end_start, audio):
             last = max(last, nxt)
     pops = sorted(pops + extra, key=lambda x: x[0])
     pops = [(p0, min(pops[k + 1][0] if k + 1 < len(pops) else end_start, p0 + 2.8), o) for k, (p0, _, o) in enumerate(pops)]
-    print(f"{len(pops)} key words")
+    if os.environ.get("FULL_KEYPHRASES") != "1":  # default: subtitles of the whole script (William, 5 Nov 2026)
+        pops = subtitle_pops(words, label_end, end_start)
+    print(f"{len(pops)} subtitles")
     chunks, cur = [], []
     for w in words:
         cur.append(w)

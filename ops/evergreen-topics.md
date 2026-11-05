@@ -53,6 +53,8 @@ Add new ideas at the bottom at any time.
 - [ ] Why Starship Flight 14 was the first to reach orbit: what "orbital" really means, and why earlier flights stayed just short on purpose
 - [ ] Starlink's laser links: how satellites pass your data to each other at the speed of light, and why the first 60 had none
 - [ ] Will Teslas get Starlink built in? How a Tesla connects to the internet today (Standard vs Premium Connectivity, AT&T, 5G) and what satellite links would change
+- [ ] Who watches a driverless car? What a remote "technical supervisor" does (Germany's level 4 law, Tesla Robotaxi, Waymo) and what they can and cannot do
+- [ ] How does the Cybercab charge without a home-charging port? DC-only inlet, wireless charging pads and what a robotaxi depot needs
 
 ## Stories (evening task: entertaining and educational, timeless)
 
@@ -88,6 +90,7 @@ Add new ideas at the bottom at any time.
 - [x] The first Starlink launch, May 2019: 60 flat satellites stacked like a deck of cards, released without springs, after Musk fired the Redmond managers (spacex-first-starlink-launch-2019-satellites-stacked-like-deck-of-cards)
 - [ ] December 2015, Orbcomm-2: the night a Falcon 9 booster first landed back on Earth, after a string of crashes on drone ships
 - [ ] DarkSat and VisorSat: how astronomers' alarm over the first 'Starlink train' changed how SpaceX builds its satellites
+- [ ] 2021: how Germany became the first country to allow cars with nobody on board, and why so few have used it since
 
 ## Series: How did Elon Musk ...? (evening task; one per week at most, category "musk")
 

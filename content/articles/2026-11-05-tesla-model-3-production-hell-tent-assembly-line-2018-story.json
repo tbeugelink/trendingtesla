@@ -1,0 +1,1964 @@
+{
+ "slug": "tesla-model-3-production-hell-tent-assembly-line-2018-story",
+ "date": "2026-11-05",
+ "time": "21:13",
+ "category": "factories",
+ "models": [
+  "model-3-classic"
+ ],
+ "sources": [
+  {
+   "title": "Teslarati: Tesla Giga Texas reportedly moves to 24/7 production",
+   "url": "https://www.teslarati.com/tesla-giga-texas-reportedly-moves-24-7-production/"
+  },
+  {
+   "title": "Fortune: Elon Musk's Tesla is building Model 3s in a tent (June 2018)",
+   "url": "https://fortune.com/2018/06/25/elon-musk-tesla-tent-factory-model-3"
+  },
+  {
+   "title": "TechCrunch: Tesla built 20% of last week's Model 3s in its fancy new tent",
+   "url": "https://techcrunch.com/2018/07/02/elon-musk-model-3-tent-tesla"
+  },
+  {
+   "title": "Fortune: Elon Musk says 'humans are underrated' after Model 3 automation problems",
+   "url": "https://www.fortune.com/2018/04/13/tesla-elon-musk-robot-human-model-3"
+  },
+  {
+   "title": "Axios: Elon Musk says Tesla came within single-digit weeks of death",
+   "url": "https://www.axios.com/2018/11/26/elon-musk-tesla-death-bleeding-cash"
+  }
+ ],
+ "images": [
+  "models/m3c-10.jpg",
+  "gigafactory-fremont.jpg",
+  "gigafactory-2.jpg",
+  "models/m3c-11.jpg",
+  "lib/musk-silhouette-factory.jpg",
+  "lib/giga-texas-aerial.jpg"
+ ],
+ "label": {
+  "style": "a",
+  "en": {
+   "sub": "5,000 CARS A WEEK",
+   "text": "BUILT IN A TENT?"
+  },
+  "nl": {
+   "sub": "5.000 AUTO'S PER WEEK",
+   "text": "GEBOUWD IN EEN TENT?"
+  }
+ },
+ "en": {
+  "title": "5,000 Model 3s in a Week: The Tent That Saved Tesla From Production Hell",
+  "description": "In June 2018, close to running out of money, Tesla built a whole Model 3 assembly line in a tent on its parking lot. How it happened, whether it worked, and why it still shapes how Tesla builds cars.",
+  "body": "<p>In November 2026, drone footage of Giga Texas suggested that Tesla is moving the plant to round-the-clock production: two 12-hour shifts instead of one day shift, and no long shutdowns around Thanksgiving and Christmas. Tesla has not confirmed it. But Tesla has pushed a factory to its limit before, and that time the company itself was on the line. In June 2018, with money running out, Tesla built a complete car assembly line inside a giant tent on the parking lot of its Fremont factory. The car it had to save was the Model 3, the affordable Tesla that was supposed to turn a niche brand into a mass-market carmaker. A year after its launch, the factory could barely build it.</p>\n<h2>Why was the Model 3 so hard to build?</h2>\n<p><strong>Because Tesla tried to automate almost everything at once, on a brand-new car.</strong> The first 30 Model 3s were handed over to employees in Fremont in July 2017, and at that event Elon Musk warned of \"at least six months of manufacturing hell\". He had tweeted that Tesla would build more than 1,500 Model 3s in September and reach 20,000 a month by December. Reality was harsher: from July to the end of September 2017, Tesla built just 260 of them. Tesla blamed \"production bottlenecks\", and much of the trouble sat in the highly automated assembly in Fremont.</p>\n<p>In April 2018 Musk told CBS that Tesla had built a \"crazy complex network of conveyor belts\" that did not work, and that the company had thrown it out. A few hours later he went further on Twitter: \"Yes, excessive automation at Tesla was a mistake. To be precise, my mistake. Humans are underrated.\" In the first quarter of 2018 Tesla made 9,766 Model 3s, roughly 750 a week on average, while hundreds of thousands of reservation holders were waiting. Every slow week cost money Tesla did not have.</p>\n<h2>How close did Tesla come to running out of money?</h2>\n<p><strong>Within \"single-digit weeks\", according to Musk himself.</strong> In an interview with Axios on HBO in November 2018, he said the company had been \"bleeding money like crazy\" during the ramp, and that it would have died if the problems were not solved in a very short time. He described weeks of up to 120 hours of work, and said he sometimes slept at the factory.</p>\n<p>The fix was not only fewer robots. Tesla stopped lines to rework them, added people and pulled every trick to get more cars out of the same building. Musk had set a clear target: 5,000 Model 3s in one week by the end of June 2018. The trouble was that the Fremont factory, a former GM and Toyota plant, had no room left for another assembly line.</p>\n<h2>So where do you put a new assembly line in a few weeks?</h2>\n<p><strong>Outside, under canvas.</strong> On 7 June 2018 Tesla applied for a building permit for a large tent next to the factory's paint shop; the city issued it on 13 June. On 16 June Musk announced on Twitter that Tesla had a new general assembly line, called GA4. According to Musk, the team built it in about three weeks, with minimal resources, partly from parts that were lying around the plant. The structure, made by the tent company Sprung, covered 137,250 square feet, roughly two football fields. It had no air conditioning, and the permits called it \"temporary\".</p>\n<p>Car-industry veterans were stunned. \"Words fail me. It's insanity,\" Bernstein analyst Max Warburton told Fortune. The new line started almost entirely manual: people instead of robots. Within days, it would have to prove itself.</p>\n<h2>Did the tent actually work?</h2>\n<p><strong>Yes: Tesla hit 5,031 Model 3s in the last seven days of June, and about one in five came from the tent.</strong> On 1 July 2018 Musk tweeted \"7000 cars, 7 days\", counting the 1,913 Model S and Model X built in the same stretch. In its official report Tesla said the quality from GA4 was \"as good as our regular GA3 line\". Over the whole second quarter, Tesla built 28,578 Model 3s, more than all its Model S and Model X combined, for the first time.</p>\n<p>It was a sprint, not yet a steady pace. Critics pointed out that one record week is not the same as a factory that runs smoothly, and Tesla immediately set a new goal of 6,000 a week. But the deadline that seemed impossible had been met, with a production line that most carmakers would never have dared to build. And the lesson of that summer outlasted the tent itself.</p>\n<h2>Why does the tent still matter for Tesla today?</h2>\n<p><strong>Because it taught Tesla that a factory is a product you keep redesigning, not a building you finish.</strong> This is our reading of the story: since 2018, Tesla's biggest bets have been about how cars are made as much as about the cars themselves. Giant one-piece castings replaced dozens of stamped parts in the Model Y, and the Cybercab is built with the \"unboxed\" process, in which big sections are assembled separately and joined at the end. Each of those ideas, like GA4, came from asking which steps can simply be removed.</p>\n<p>The tent also shows the other side of Tesla. Its deadlines slip, the pressure on workers was real, and a near-death experience is not a business model. Musk's own lesson from 2018, that humans are underrated, sounds different now that Tesla also builds Optimus, a humanoid robot meant to do factory work itself. If Giga Texas really runs day and night, it is the same idea at a far bigger scale: the factory is the machine. In 2018, that machine started in a tent.</p>"
+ },
+ "nl": {
+  "title": "5.000 Model 3's in een week: de tent die Tesla uit de productiehel haalde",
+  "description": "In juni 2018, bijna door zijn geld heen, bouwde Tesla een complete Model 3-lijn in een tent op de parkeerplaats. Hoe dat ging, of het werkte en waarom het nog steeds bepaalt hoe Tesla auto's bouwt.",
+  "body": "<p>In november 2026 lieten dronebeelden van Giga Texas zien dat Tesla de fabriek dag en nacht laat draaien: twee ploegen van twaalf uur in plaats van één dagdienst, en geen lange stilstand rond Thanksgiving en Kerst. Tesla heeft dat niet bevestigd. Maar Tesla heeft een fabriek al eens tot het uiterste gedreven, en toen stond het voortbestaan van het hele bedrijf op het spel. In juni 2018, met de kas bijna leeg, bouwde Tesla een complete autolijn in een reusachtige tent op de parkeerplaats van de fabriek in Fremont. De auto die het bedrijf moest redden was de Model 3, de betaalbare Tesla die van een nichemerk een echte volumefabrikant moest maken. Een jaar na de start kon de fabriek hem nauwelijks bouwen.</p>\n<h2>Waarom was de Model 3 zo moeilijk te bouwen?</h2>\n<p><strong>Omdat Tesla bijna alles tegelijk wilde automatiseren, bij een gloednieuwe auto.</strong> In juli 2017 kregen de eerste 30 kopers, allemaal medewerkers, hun Model 3 in Fremont. Elon Musk waarschuwde daar al voor \"minstens zes maanden productiehel\". Eerder had hij getweet dat Tesla in september meer dan 1.500 Model 3's zou bouwen en in december 20.000 per maand. De werkelijkheid was harder: van juli tot eind september 2017 rolden er maar 260 van de band. Tesla sprak van \"knelpunten in de productie\", en veel van de problemen zaten in de sterk geautomatiseerde assemblage in Fremont.</p>\n<p>In april 2018 vertelde Musk aan de Amerikaanse zender CBS dat Tesla een waanzinnig ingewikkeld netwerk van transportbanden had gebouwd dat niet werkte, en dat het hele systeem eruit was gegaan. Een paar uur later ging hij op Twitter nog verder: \"Ja, overdreven automatisering bij Tesla was een fout. Om precies te zijn: mijn fout. Mensen worden onderschat.\" In het eerste kwartaal van 2018 maakte Tesla 9.766 Model 3's, gemiddeld zo'n 750 per week, terwijl honderdduizenden mensen met een reservering zaten te wachten. Elke trage week kostte geld dat Tesla niet had.</p>\n<h2>Hoe dicht stond Tesla bij het einde?</h2>\n<p><strong>Op \"een paar weken\", volgens Musk zelf.</strong> In een interview met Axios on HBO in november 2018 zei hij dat het bedrijf tijdens de opstart \"als een gek geld verloor\", en dat Tesla failliet was gegaan als de problemen niet heel snel waren opgelost. Hij vertelde over werkweken tot 120 uur en zei dat hij soms in de fabriek sliep.</p>\n<p>Minder robots alleen was niet genoeg. Tesla legde lijnen stil om ze om te bouwen, zette meer mensen in en haalde alles uit de kast om meer auto's uit hetzelfde gebouw te krijgen. Musk had een helder doel gesteld: 5.000 Model 3's in één week, uiterlijk eind juni 2018. Het probleem was dat de fabriek in Fremont, ooit van GM en Toyota, geen ruimte meer had voor nog een assemblagelijn.</p>\n<h2>Waar zet je in een paar weken een nieuwe lopende band neer?</h2>\n<p><strong>Buiten, onder zeildoek.</strong> Op 7 juni 2018 vroeg Tesla een bouwvergunning aan voor een grote tent naast de lakstraat van de fabriek; de stad gaf die op 13 juni af. Op 16 juni meldde Musk op Twitter dat Tesla een nieuwe assemblagelijn had, GA4. Volgens Musk bouwde het team die in ongeveer drie weken, met minimale middelen en deels van onderdelen die nog in de fabriek rondslingerden. De tent, van de fabrikant Sprung, besloeg zo'n 12.750 vierkante meter, ongeveer twee voetbalvelden. Er was geen airconditioning en in de vergunning heette het bouwwerk \"tijdelijk\".</p>\n<p>Kenners uit de auto-industrie stonden perplex. \"Ik heb er geen woorden voor. Het is waanzin,\" zei analist Max Warburton van Bernstein tegen Fortune. De nieuwe lijn draaide bijna helemaal met de hand: mensen in plaats van robots. Binnen een paar dagen moest hij zich bewijzen.</p>\n<h2>Werkte die tent ook echt?</h2>\n<p><strong>Ja: in de laatste zeven dagen van juni bouwde Tesla 5.031 Model 3's, en ongeveer één op de vijf kwam uit de tent.</strong> Op 1 juli 2018 tweette Musk \"7000 auto's, 7 dagen\", inclusief de 1.913 Model S en Model X uit dezelfde periode. In het officiële rapport schreef Tesla dat de kwaliteit van GA4 \"net zo goed als die van onze gewone GA3-lijn\" was. Over het hele tweede kwartaal bouwde Tesla 28.578 Model 3's: voor het eerst meer dan alle Model S en Model X bij elkaar.</p>\n<p>Het was een sprint, nog geen vast tempo. Critici wezen erop dat één recordweek nog geen soepel draaiende fabriek is, en Tesla legde de lat meteen hoger: 6.000 per week. Maar de deadline die onhaalbaar leek, was gehaald, met een productielijn die de meeste autofabrikanten nooit hadden durven bouwen. En de les van die zomer bleef langer staan dan de tent zelf.</p>\n<h2>Waarom doet die tent er nu nog toe?</h2>\n<p><strong>Omdat Tesla er leerde dat een fabriek een product is dat je blijft herontwerpen, geen gebouw dat ooit af is.</strong> Dat is onze lezing van het verhaal: sinds 2018 gaan de grootste gokken van Tesla net zo goed over hóé auto's gemaakt worden als over de auto's zelf. Reusachtige gietstukken uit één geheel vervingen in de Model Y tientallen geperste onderdelen, en de Cybercab wordt gebouwd volgens het \"unboxed\"-proces, waarbij grote delen apart worden opgebouwd en pas aan het eind samenkomen. Net als bij GA4 begon elk van die ideeën met de vraag welke stappen gewoon weg kunnen.</p>\n<p>De tent laat ook de andere kant van Tesla zien. Deadlines schuiven, de druk op de medewerkers was echt, en bijna failliet gaan is geen verdienmodel. Musks eigen les uit 2018, dat mensen worden onderschat, klinkt anders nu Tesla ook Optimus bouwt, een humanoïde robot die zelf fabriekswerk moet gaan doen. Als Giga Texas echt dag en nacht draait, is dat hetzelfde idee op veel grotere schaal: de fabriek is de machine. In 2018 begon die machine in een tent.</p>"
+ },
+ "short": {
+  "hook": "number",
+  "en": "Tesla needed five thousand Model 3s in one week. One in five came out of a TENT. The plan said over fifteen hundred in one month. The whole quarter made two hundred sixty. The problem? Too many robots, and a maze of conveyor belts that failed. Elon Musk admitted it. Excessive automation was a mistake. HIS mistake. Tesla was bleeding money. Musk later said it was weeks from dying. And the factory had no room for another line. So Tesla put up a giant tent in the parking lot. Two football fields. No air conditioning. Musk said it took about three weeks. One analyst called it insanity. Last week of June: five thousand thirty one Model 3s. About a thousand from the tent. Musk's lesson? Humans are underrated.",
+  "nl": "Tesla moest vijfduizend Model 3's bouwen in één week. Eén op de vijf kwam uit een TENT. Het plan: ruim vijftienhonderd in één maand. Het hele kwartaal leverde er tweehonderdzestig op. Het probleem? Te veel robots, en een doolhof van lopende banden dat vastliep. Elon Musk gaf het toe. Overdreven automatisering was een fout. ZIJN fout. Tesla verloor bakken met geld. Volgens Musk was het weken van de ondergang. En in de fabriek was geen plek meer voor nog een lijn. Dus zette Tesla een reusachtige tent op de parkeerplaats. Twee voetbalvelden groot. Zonder airco. Volgens Musk duurde het ongeveer drie weken. Een analist noemde het waanzin. Laatste week van juni: vijfduizend eenendertig Model 3's. Zo'n duizend uit de tent. Musks les? Mensen worden onderschat.",
+  "yt_title_en": "Tesla Built Its Cars in a TENT",
+  "yt_title_nl": "Tesla Bouwde Zijn Auto's in een TENT",
+  "story": [
+   {
+    "part": "hook",
+    "text": "Tesla needed five thousand Model 3s in one week. One in five came out of a TENT.",
+    "img": [
+     "models/m3c-10.jpg",
+     "gigafactory-fremont.jpg"
+    ],
+    "pop": [
+     {
+      "say": "five thousand",
+      "show": "5,000 CARS"
+     },
+     {
+      "say": "one week",
+      "show": "IN ONE WEEK"
+     },
+     {
+      "say": "One in five",
+      "show": "1 IN 5"
+     },
+     {
+      "say": "TENT",
+      "show": "FROM A TENT"
+     }
+    ]
+   },
+   {
+    "part": "tension",
+    "text": "The plan said over fifteen hundred in one month. The whole quarter made two hundred sixty.",
+    "img": [
+     "models/m3c-3.jpg"
+    ],
+    "pop": [
+     {
+      "say": "fifteen hundred",
+      "show": "PLAN: 1,500"
+     },
+     {
+      "say": "one month",
+      "show": "IN ONE MONTH"
+     },
+     {
+      "say": "two hundred sixty",
+      "show": "REALITY: 260"
+     }
+    ]
+   },
+   {
+    "part": "tension",
+    "text": "The problem? Too many robots, and a maze of conveyor belts that failed.",
+    "img": [
+     "gigafactory-2.jpg"
+    ],
+    "pop": [
+     {
+      "say": "problem",
+      "show": "THE PROBLEM?"
+     },
+     {
+      "say": "Too many robots",
+      "show": "TOO MANY ROBOTS"
+     },
+     {
+      "say": "conveyor belts",
+      "show": "CONVEYOR MAZE"
+     }
+    ]
+   },
+   {
+    "part": "tension",
+    "text": "Elon Musk admitted it. Excessive automation was a mistake. HIS mistake.",
+    "lib": [
+     "musk-silhouette-factory.jpg"
+    ],
+    "pop": [
+     {
+      "say": "admitted",
+      "show": "ADMITTED"
+     },
+     {
+      "say": "Excessive automation",
+      "show": "TOO MUCH AUTOMATION"
+     },
+     {
+      "say": "HIS mistake",
+      "show": "HIS MISTAKE"
+     }
+    ]
+   },
+   {
+    "part": "tension",
+    "text": "Tesla was bleeding money. Musk later said it was weeks from dying.",
+    "lib": [
+     "stock-phone-down.jpg"
+    ],
+    "pop": [
+     {
+      "say": "bleeding money",
+      "show": "BLEEDING MONEY"
+     },
+     {
+      "say": "weeks from dying",
+      "show": "WEEKS FROM DEATH"
+     }
+    ]
+   },
+   {
+    "part": "tension",
+    "text": "And the factory had no room for another line.",
+    "img": [
+     "gigafactory-fremont.jpg"
+    ],
+    "pop": [
+     {
+      "say": "factory",
+      "show": "FULL FACTORY"
+     },
+     {
+      "say": "no room",
+      "show": "NO ROOM LEFT"
+     }
+    ]
+   },
+   {
+    "part": "payoff",
+    "text": "So Tesla put up a giant tent in the parking lot. Two football fields. No air conditioning.",
+    "img": [
+     "gigafactory-fremont.jpg",
+     "gigafactory.jpg"
+    ],
+    "pop": [
+     {
+      "say": "giant tent",
+      "show": "A GIANT TENT"
+     },
+     {
+      "say": "two football fields",
+      "show": "2 FOOTBALL FIELDS"
+     },
+     {
+      "say": "No air conditioning",
+      "show": "NO AIRCO"
+     }
+    ]
+   },
+   {
+    "part": "payoff",
+    "text": "Musk said it took about three weeks. One analyst called it insanity.",
+    "lib": [
+     "musk-silhouette-factory.jpg"
+    ],
+    "pop": [
+     {
+      "say": "three weeks",
+      "show": "3 WEEKS"
+     },
+     {
+      "say": "insanity",
+      "show": "INSANITY?"
+     }
+    ]
+   },
+   {
+    "part": "payoff",
+    "text": "Last week of June: five thousand thirty one Model 3s. About a thousand from the tent.",
+    "img": [
+     "models/m3c-11.jpg",
+     "models/m3c-7.jpg"
+    ],
+    "pop": [
+     {
+      "say": "Last week of June",
+      "show": "LAST WEEK OF JUNE"
+     },
+     {
+      "say": "five thousand thirty one",
+      "show": "5,031 BUILT"
+     },
+     {
+      "say": "from the tent",
+      "show": "1,000 FROM THE TENT"
+     }
+    ]
+   },
+   {
+    "part": "payoff",
+    "text": "Musk's lesson? Humans are underrated.",
+    "img": [
+     "models/m3c-1.jpg"
+    ],
+    "pop": [
+     {
+      "say": "lesson",
+      "show": "MUSK'S LESSON"
+     },
+     {
+      "say": "Humans are underrated",
+      "show": "HUMANS ARE UNDERRATED"
+     }
+    ]
+   }
+  ]
+ },
+ "video": {
+  "en": [
+   {
+    "text": "One in five Model 3s that Tesla built in its record week came out of a tent on the parking lot. That was June 2018. In November 2026, drone footage of Giga Texas suggested Tesla is moving that plant to round the clock production, with two 12 hour shifts and no long holiday shutdowns. Tesla has not confirmed it. But Tesla has pushed a factory to its limit before, and back then the company itself was at stake. The car it had to save was the Model 3, the affordable Tesla for everyone. A year after its launch, the factory could barely build it.",
+    "img": [
+     "models/m3c-10.jpg",
+     "lib/giga-texas-aerial.jpg",
+     "gigafactory-fremont.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Gigafactory Texas",
+       "Giga Texas Austin",
+       "Tesla Gigafactory Texas aerial"
+      ],
+      "want": "the Tesla Gigafactory Texas building near Austin"
+     },
+     {
+      "q": [
+       "Tesla Factory Fremont",
+       "Tesla Fremont factory",
+       "NUMMI plant Fremont"
+      ],
+      "want": "the Tesla car factory in Fremont, California, seen from outside"
+     }
+    ],
+    "pop": [
+     {
+      "say": "One in five",
+      "show": "1 IN 5"
+     },
+     {
+      "say": "a tent",
+      "show": "A TENT"
+     },
+     {
+      "say": "June 2018",
+      "show": "JUNE 2018"
+     },
+     {
+      "say": "Giga Texas",
+      "show": "GIGA TEXAS"
+     },
+     {
+      "say": "round the clock",
+      "show": "ROUND THE CLOCK"
+     },
+     {
+      "say": "two 12 hour shifts",
+      "show": "2 × 12 HOURS"
+     },
+     {
+      "say": "not confirmed",
+      "show": "NOT CONFIRMED"
+     },
+     {
+      "say": "company itself",
+      "show": "TESLA AT STAKE"
+     },
+     {
+      "say": "Model 3",
+      "show": "MODEL 3"
+     },
+     {
+      "say": "barely build it",
+      "show": "BARELY BUILT"
+     }
+    ]
+   },
+   {
+    "head": "Why was the Model 3 so hard to build?",
+    "img": [
+     "gigafactory-2.jpg"
+    ],
+    "pop": [
+     {
+      "say": "",
+      "show": "WHY SO HARD?"
+     }
+    ]
+   },
+   {
+    "text": "Because Tesla tried to automate almost everything at once, on a brand new car. The first 30 Model 3s went to employees in Fremont in July 2017. At that event, Elon Musk warned of at least six months of manufacturing hell.",
+    "img": [
+     "models/m3c-11.jpg",
+     "gigafactory-2.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Tesla Model 3 2017",
+       "Tesla Model 3 first deliveries",
+       "Tesla Model 3 red"
+      ],
+      "want": "a first-generation Tesla Model 3 sedan (2017-2023 design)"
+     },
+     {
+      "q": [
+       "car factory welding robots",
+       "automotive assembly line robots",
+       "industrial robots car body"
+      ],
+      "want": "industrial robots working on car bodies on an assembly line"
+     }
+    ],
+    "pop": [
+     {
+      "say": "automate almost everything",
+      "show": "AUTOMATE EVERYTHING"
+     },
+     {
+      "say": "brand new car",
+      "show": "BRAND NEW CAR"
+     },
+     {
+      "say": "first 30",
+      "show": "FIRST 30"
+     },
+     {
+      "say": "July 2017",
+      "show": "JULY 2017"
+     },
+     {
+      "say": "six months",
+      "show": "6 MONTHS"
+     },
+     {
+      "say": "manufacturing hell",
+      "show": "MANUFACTURING HELL"
+     }
+    ]
+   },
+   {
+    "text": "He had tweeted that Tesla would build more than 1,500 Model 3s in September, and 20,000 a month by December. From July to the end of September, Tesla built just 260. The company blamed production bottlenecks. And much of the trouble sat in the highly automated assembly in Fremont.",
+    "img": [
+     "models/m3c-3.jpg",
+     "gigafactory.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Tesla Model 3 2017",
+       "Tesla Model 3 first deliveries",
+       "Tesla Model 3 red"
+      ],
+      "want": "a first-generation Tesla Model 3 sedan (2017-2023 design)"
+     },
+     {
+      "q": [
+       "car assembly line conveyor",
+       "automotive overhead conveyor",
+       "car final assembly line"
+      ],
+      "want": "a car final assembly line with an overhead conveyor carrying car bodies"
+     }
+    ],
+    "pop": [
+     {
+      "say": "1,500",
+      "show": "PLAN: 1,500"
+     },
+     {
+      "say": "20,000 a month",
+      "show": "20,000 A MONTH"
+     },
+     {
+      "say": "just 260",
+      "show": "REALITY: 260"
+     },
+     {
+      "say": "bottlenecks",
+      "show": "BOTTLENECKS"
+     },
+     {
+      "say": "automated assembly",
+      "show": "AUTOMATED ASSEMBLY"
+     }
+    ]
+   },
+   {
+    "text": "In April 2018, Musk told CBS that Tesla had built a crazy complex network of conveyor belts that did not work, and that the whole thing was gone. Hours later he wrote on Twitter that excessive automation at Tesla was a mistake. His mistake. Humans are underrated.",
+    "img": [
+     "lib/musk-silhouette-factory.jpg",
+     "gigafactory-2.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "car assembly line conveyor",
+       "automotive overhead conveyor",
+       "car final assembly line"
+      ],
+      "want": "a car final assembly line with an overhead conveyor carrying car bodies"
+     },
+     {
+      "q": [
+       "car factory welding robots",
+       "automotive assembly line robots",
+       "industrial robots car body"
+      ],
+      "want": "industrial robots working on car bodies on an assembly line"
+     }
+    ],
+    "pop": [
+     {
+      "say": "April 2018",
+      "show": "APRIL 2018"
+     },
+     {
+      "say": "conveyor belts",
+      "show": "CONVEYOR BELTS"
+     },
+     {
+      "say": "did not work",
+      "show": "DID NOT WORK"
+     },
+     {
+      "say": "excessive automation",
+      "show": "TOO MUCH AUTOMATION"
+     },
+     {
+      "say": "His mistake",
+      "show": "HIS MISTAKE"
+     },
+     {
+      "say": "Humans are underrated",
+      "show": "HUMANS UNDERRATED"
+     }
+    ]
+   },
+   {
+    "text": "In the first quarter of 2018 Tesla made 9,766 Model 3s, about 750 a week on average, while hundreds of thousands of reservation holders waited. Every slow week cost money Tesla did not have.",
+    "img": [
+     "models/m3c-7.jpg",
+     "lib/stock-phone-down.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Tesla store line Model 3 reservation",
+       "Tesla Model 3 reservation queue",
+       "Tesla store 2016"
+      ],
+      "want": "a Tesla store with people queueing to reserve a Model 3 in 2016"
+     },
+     {
+      "q": [
+       "Tesla Model 3 2017",
+       "Tesla Model 3 first deliveries",
+       "Tesla Model 3 red"
+      ],
+      "want": "a first-generation Tesla Model 3 sedan (2017-2023 design)"
+     }
+    ],
+    "pop": [
+     {
+      "say": "9,766",
+      "show": "9,766 CARS"
+     },
+     {
+      "say": "750 a week",
+      "show": "750 A WEEK"
+     },
+     {
+      "say": "hundreds of thousands",
+      "show": "WAITING BUYERS"
+     },
+     {
+      "say": "money Tesla did not have",
+      "show": "NO MONEY"
+     }
+    ]
+   },
+   {
+    "head": "How close did Tesla come to running out of money?",
+    "img": [
+     "lib/stock-phone-down.jpg"
+    ],
+    "pop": [
+     {
+      "say": "",
+      "show": "HOW CLOSE?"
+     }
+    ]
+   },
+   {
+    "text": "Within single digit weeks, Musk said later. In an interview with Axios on HBO in November 2018, he said Tesla had been bleeding money like crazy during the ramp, and that it would have died if the problems were not solved very quickly. He described weeks of up to 120 hours of work, and said he sometimes slept at the factory.",
+    "img": [
+     "lib/stock-phone-down.jpg",
+     "lib/musk-silhouette-factory.jpg",
+     "gigafactory-fremont.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Tesla Factory Fremont",
+       "Tesla Fremont factory",
+       "NUMMI plant Fremont"
+      ],
+      "want": "the Tesla car factory in Fremont, California, seen from outside"
+     }
+    ],
+    "pop": [
+     {
+      "say": "single digit weeks",
+      "show": "WEEKS FROM DEATH"
+     },
+     {
+      "say": "November 2018",
+      "show": "NOVEMBER 2018"
+     },
+     {
+      "say": "bleeding money",
+      "show": "BLEEDING MONEY"
+     },
+     {
+      "say": "would have died",
+      "show": "IT WOULD HAVE DIED"
+     },
+     {
+      "say": "120 hours",
+      "show": "120 HOURS"
+     },
+     {
+      "say": "slept at the factory",
+      "show": "SLEPT AT THE FACTORY"
+     }
+    ]
+   },
+   {
+    "text": "Fewer robots alone was not enough. Tesla stopped lines to rework them, added people, and squeezed more cars out of the same building. Musk set a clear target: 5,000 Model 3s in one week by the end of June 2018. The trouble was the building itself. The Fremont factory, a former GM and Toyota plant, had no room for another assembly line.",
+    "img": [
+     "gigafactory-2.jpg",
+     "gigafactory-fremont.jpg",
+     "models/m3c-5.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "NUMMI Fremont",
+       "New United Motor Manufacturing",
+       "NUMMI factory"
+      ],
+      "want": "the NUMMI car factory in Fremont, the former GM and Toyota plant"
+     },
+     {
+      "q": [
+       "Tesla Factory Fremont",
+       "Tesla Fremont factory",
+       "NUMMI plant Fremont"
+      ],
+      "want": "the Tesla car factory in Fremont, California, seen from outside"
+     }
+    ],
+    "pop": [
+     {
+      "say": "Fewer robots",
+      "show": "FEWER ROBOTS"
+     },
+     {
+      "say": "added people",
+      "show": "MORE PEOPLE"
+     },
+     {
+      "say": "5,000 Model 3s",
+      "show": "5,000 A WEEK"
+     },
+     {
+      "say": "end of June",
+      "show": "END OF JUNE"
+     },
+     {
+      "say": "GM and Toyota",
+      "show": "EX GM AND TOYOTA"
+     },
+     {
+      "say": "no room",
+      "show": "NO ROOM"
+     }
+    ]
+   },
+   {
+    "head": "So where do you put a new assembly line in a few weeks?",
+    "img": [
+     "gigafactory-fremont.jpg"
+    ],
+    "pop": [
+     {
+      "say": "",
+      "show": "WHERE?"
+     }
+    ]
+   },
+   {
+    "text": "Outside, under canvas. On June 7, 2018, Tesla applied for a permit for a large tent next to the factory's paint shop. The city issued it on June 13. Three days later, Musk announced a new general assembly line on Twitter, called GA4.",
+    "img": [
+     "gigafactory-fremont.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Sprung structure",
+       "Sprung tensioned membrane building",
+       "large fabric structure building"
+      ],
+      "want": "a large white tensioned-fabric building (Sprung-type structure), seen from outside"
+     },
+     {
+      "q": [
+       "car paint shop robots",
+       "automotive paint shop",
+       "car body paint booth"
+      ],
+      "want": "a car paint shop with car bodies and painting robots"
+     }
+    ],
+    "pop": [
+     {
+      "say": "under canvas",
+      "show": "UNDER CANVAS"
+     },
+     {
+      "say": "June 7",
+      "show": "JUNE 7"
+     },
+     {
+      "say": "paint shop",
+      "show": "NEXT TO PAINT SHOP"
+     },
+     {
+      "say": "June 13",
+      "show": "PERMIT: JUNE 13"
+     },
+     {
+      "say": "GA4",
+      "show": "GA4"
+     }
+    ]
+   },
+   {
+    "text": "According to Musk, the team built it in about three weeks, with minimal resources, partly from parts lying around the plant. The tent was made by a company called Sprung and covered 137,250 square feet, roughly two football fields. It had no air conditioning, and the permits called it temporary.",
+    "img": [
+     "lib/musk-silhouette-factory.jpg",
+     "gigafactory.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Sprung structure",
+       "Sprung tensioned membrane building",
+       "large fabric structure building"
+      ],
+      "want": "a large white tensioned-fabric building (Sprung-type structure), seen from outside"
+     },
+     {
+      "q": [
+       "American football field aerial",
+       "football field from above",
+       "stadium field aerial"
+      ],
+      "want": "an American football field seen from above"
+     }
+    ],
+    "pop": [
+     {
+      "say": "three weeks",
+      "show": "3 WEEKS"
+     },
+     {
+      "say": "minimal resources",
+      "show": "MINIMAL RESOURCES"
+     },
+     {
+      "say": "parts lying around",
+      "show": "SPARE PARTS"
+     },
+     {
+      "say": "Sprung",
+      "show": "SPRUNG"
+     },
+     {
+      "say": "two football fields",
+      "show": "2 FOOTBALL FIELDS"
+     },
+     {
+      "say": "no air conditioning",
+      "show": "NO AIRCO"
+     },
+     {
+      "say": "temporary",
+      "show": "TEMPORARY"
+     }
+    ]
+   },
+   {
+    "text": "Industry veterans were stunned. Words fail me, it's insanity, a Bernstein analyst told Fortune. A lean manufacturing expert joked that Tesla would need a second tent for repairs. The new line started almost entirely by hand, with people instead of robots. And within days, it had to prove itself.",
+    "img": [
+     "gigafactory-2.jpg",
+     "models/m3c-9.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "car assembly line conveyor",
+       "automotive overhead conveyor",
+       "car final assembly line"
+      ],
+      "want": "a car final assembly line with an overhead conveyor carrying car bodies"
+     }
+    ],
+    "pop": [
+     {
+      "say": "stunned",
+      "show": "STUNNED"
+     },
+     {
+      "say": "insanity",
+      "show": "INSANITY"
+     },
+     {
+      "say": "second tent",
+      "show": "A SECOND TENT?"
+     },
+     {
+      "say": "by hand",
+      "show": "BY HAND"
+     },
+     {
+      "say": "people instead of robots",
+      "show": "PEOPLE, NOT ROBOTS"
+     },
+     {
+      "say": "prove itself",
+      "show": "PROVE IT"
+     }
+    ]
+   },
+   {
+    "head": "Did the tent actually work?",
+    "img": [
+     "models/m3c-11.jpg"
+    ],
+    "pop": [
+     {
+      "say": "",
+      "show": "DID IT WORK?"
+     }
+    ]
+   },
+   {
+    "text": "Yes. In the last seven days of June, Tesla built 5,031 Model 3s, and about one in five came from the tent. On July 1, Musk tweeted: 7000 cars, 7 days, counting the 1,913 Model S and Model X built in the same stretch.",
+    "img": [
+     "models/m3c-11.jpg",
+     "models/m3c-2.jpg",
+     "models/msc-2.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Tesla Model 3 2017",
+       "Tesla Model 3 first deliveries",
+       "Tesla Model 3 red"
+      ],
+      "want": "a first-generation Tesla Model 3 sedan (2017-2023 design)"
+     }
+    ],
+    "pop": [
+     {
+      "say": "Yes",
+      "show": "YES"
+     },
+     {
+      "say": "5,031",
+      "show": "5,031 MODEL 3s"
+     },
+     {
+      "say": "one in five",
+      "show": "1 IN 5 FROM THE TENT"
+     },
+     {
+      "say": "7000 cars",
+      "show": "7,000 CARS"
+     },
+     {
+      "say": "7 days",
+      "show": "7 DAYS"
+     },
+     {
+      "say": "1,913",
+      "show": "1,913 S AND X"
+     }
+    ]
+   },
+   {
+    "text": "Tesla's official report said quality from GA4 was as good as its regular line. Over the whole quarter, Tesla built 28,578 Model 3s. For the first time, that was more than all its Model S and Model X combined.",
+    "img": [
+     "models/m3c-6.jpg",
+     "models/m3c-4.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Tesla Model 3 2017",
+       "Tesla Model 3 first deliveries",
+       "Tesla Model 3 red"
+      ],
+      "want": "a first-generation Tesla Model 3 sedan (2017-2023 design)"
+     }
+    ],
+    "pop": [
+     {
+      "say": "as good as",
+      "show": "AS GOOD AS GA3"
+     },
+     {
+      "say": "28,578",
+      "show": "28,578 IN Q2"
+     },
+     {
+      "say": "more than all",
+      "show": "MORE THAN S + X"
+     }
+    ]
+   },
+   {
+    "text": "It was a sprint, not a steady pace. Critics said one record week is not a smoothly running factory, and Tesla immediately set a new goal of 6,000 a week. But the impossible deadline was met, with a line most carmakers would never have dared to build. And its lesson outlasted the tent.",
+    "img": [
+     "models/m3c-8.jpg",
+     "gigafactory-fremont.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Tesla Factory Fremont",
+       "Tesla Fremont factory",
+       "NUMMI plant Fremont"
+      ],
+      "want": "the Tesla car factory in Fremont, California, seen from outside"
+     }
+    ],
+    "pop": [
+     {
+      "say": "sprint",
+      "show": "A SPRINT"
+     },
+     {
+      "say": "one record week",
+      "show": "ONE RECORD WEEK"
+     },
+     {
+      "say": "6,000 a week",
+      "show": "NEXT: 6,000"
+     },
+     {
+      "say": "deadline was met",
+      "show": "DEADLINE MET"
+     },
+     {
+      "say": "never have dared",
+      "show": "NOBODY DARED"
+     }
+    ]
+   },
+   {
+    "head": "Why does the tent still matter for Tesla today?",
+    "img": [
+     "gigafactory-texas.jpg"
+    ],
+    "pop": [
+     {
+      "say": "",
+      "show": "WHY IT MATTERS"
+     }
+    ]
+   },
+   {
+    "text": "Because it taught Tesla that a factory is a product you keep redesigning, not a building you finish. That is our reading. Since 2018, Tesla's biggest bets have been about how cars are made, as much as the cars themselves.",
+    "img": [
+     "gigafactory-texas.jpg",
+     "lib/giga-texas-aerial.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Gigafactory Texas",
+       "Giga Texas Austin",
+       "Tesla Gigafactory Texas aerial"
+      ],
+      "want": "the Tesla Gigafactory Texas building near Austin"
+     }
+    ],
+    "pop": [
+     {
+      "say": "a product",
+      "show": "FACTORY = PRODUCT"
+     },
+     {
+      "say": "keep redesigning",
+      "show": "KEEP REDESIGNING"
+     },
+     {
+      "say": "our reading",
+      "show": "OUR VIEW"
+     },
+     {
+      "say": "how cars are made",
+      "show": "HOW CARS ARE MADE"
+     }
+    ]
+   },
+   {
+    "text": "Giant one piece castings replaced dozens of stamped parts in the Model Y. The Cybercab is built with the unboxed process, where big sections are assembled separately and joined at the end. Like GA4, each idea started with one question: which steps can simply go?",
+    "img": [
+     "lib/gigacasting-press.jpg",
+     "lib/cybercab-front-modules.jpg",
+     "lib/cybercab-line-front.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Giga Press",
+       "Tesla Giga Press",
+       "IDRA Giga Press"
+      ],
+      "want": "a Giga Press casting machine"
+     },
+     {
+      "q": [
+       "Tesla Model Y",
+       "Tesla Model Y 2020",
+       "Tesla Model Y white"
+      ],
+      "want": "a Tesla Model Y electric SUV"
+     },
+     {
+      "q": [
+       "Tesla Cybercab",
+       "Tesla Cybercab robotaxi",
+       "Tesla Robotaxi Cybercab"
+      ],
+      "want": "the gold two-seat Tesla Cybercab"
+     }
+    ],
+    "pop": [
+     {
+      "say": "one piece castings",
+      "show": "GIANT CASTINGS"
+     },
+     {
+      "say": "Model Y",
+      "show": "MODEL Y"
+     },
+     {
+      "say": "unboxed",
+      "show": "UNBOXED"
+     },
+     {
+      "say": "joined at the end",
+      "show": "JOINED AT THE END"
+     },
+     {
+      "say": "which steps",
+      "show": "WHICH STEPS CAN GO?"
+     }
+    ]
+   },
+   {
+    "text": "The tent shows the other side of Tesla too. Deadlines slip, the pressure on workers was real, and nearly dying is not a business model. And Musk's lesson, humans are underrated, sounds different now that Tesla builds Optimus, a humanoid robot meant to do factory work itself.",
+    "img": [
+     "lib/optimus-walking.jpg",
+     "lib/optimus-pick-part.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Tesla Optimus",
+       "Optimus robot Tesla",
+       "Tesla Bot"
+      ],
+      "want": "the Tesla Optimus humanoid robot"
+     }
+    ],
+    "pop": [
+     {
+      "say": "other side",
+      "show": "THE OTHER SIDE"
+     },
+     {
+      "say": "Deadlines slip",
+      "show": "DEADLINES SLIP"
+     },
+     {
+      "say": "pressure on workers",
+      "show": "PRESSURE ON WORKERS"
+     },
+     {
+      "say": "humans are underrated",
+      "show": "HUMANS UNDERRATED"
+     },
+     {
+      "say": "Optimus",
+      "show": "OPTIMUS"
+     },
+     {
+      "say": "factory work",
+      "show": "ROBOT WORKERS"
+     }
+    ]
+   },
+   {
+    "text": "If Giga Texas really runs day and night, it is the same idea at a far bigger scale. The factory is the machine. And in 2018, that machine started in a tent.",
+    "img": [
+     "lib/giga-texas-aerial.jpg",
+     "models/m3c-10.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Gigafactory Texas",
+       "Giga Texas Austin",
+       "Tesla Gigafactory Texas aerial"
+      ],
+      "want": "the Tesla Gigafactory Texas building near Austin"
+     }
+    ],
+    "pop": [
+     {
+      "say": "day and night",
+      "show": "DAY AND NIGHT"
+     },
+     {
+      "say": "bigger scale",
+      "show": "BIGGER SCALE"
+     },
+     {
+      "say": "factory is the machine",
+      "show": "THE FACTORY IS THE MACHINE"
+     },
+     {
+      "say": "started in a tent",
+      "show": "IT STARTED IN A TENT"
+     }
+    ]
+   }
+  ],
+  "nl": [
+   {
+    "text": "Eén op de vijf Model 3's uit Tesla's recordweek kwam uit een tent op de parkeerplaats. Dat was juni 2018. In november 2026 lieten dronebeelden van Giga Texas zien dat Tesla die fabriek dag en nacht laat draaien, met twee ploegen van twaalf uur en zonder lange stilstand in de feestdagen. Tesla heeft dat niet bevestigd. Maar Tesla heeft een fabriek al eens tot het uiterste gedreven, en toen stond het hele bedrijf op het spel. De auto die het moest redden was de Model 3, de betaalbare Tesla voor iedereen. Een jaar na de start kon de fabriek hem nauwelijks bouwen.",
+    "img": [
+     "models/m3c-10.jpg",
+     "lib/giga-texas-aerial.jpg",
+     "gigafactory-fremont.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Gigafactory Texas",
+       "Giga Texas Austin",
+       "Tesla Gigafactory Texas aerial"
+      ],
+      "want": "the Tesla Gigafactory Texas building near Austin"
+     },
+     {
+      "q": [
+       "Tesla Factory Fremont",
+       "Tesla Fremont factory",
+       "NUMMI plant Fremont"
+      ],
+      "want": "the Tesla car factory in Fremont, California, seen from outside"
+     }
+    ],
+    "pop": [
+     {
+      "say": "Eén op de vijf",
+      "show": "1 OP DE 5"
+     },
+     {
+      "say": "een tent",
+      "show": "EEN TENT"
+     },
+     {
+      "say": "juni 2018",
+      "show": "JUNI 2018"
+     },
+     {
+      "say": "Giga Texas",
+      "show": "GIGA TEXAS"
+     },
+     {
+      "say": "dag en nacht",
+      "show": "DAG EN NACHT"
+     },
+     {
+      "say": "twee ploegen",
+      "show": "2 × 12 UUR"
+     },
+     {
+      "say": "niet bevestigd",
+      "show": "NIET BEVESTIGD"
+     },
+     {
+      "say": "hele bedrijf",
+      "show": "TESLA OP HET SPEL"
+     },
+     {
+      "say": "Model 3",
+      "show": "MODEL 3"
+     },
+     {
+      "say": "nauwelijks bouwen",
+      "show": "NAUWELIJKS GEBOUWD"
+     }
+    ]
+   },
+   {
+    "head": "Waarom was de Model 3 zo moeilijk te bouwen?",
+    "img": [
+     "gigafactory-2.jpg"
+    ],
+    "pop": [
+     {
+      "say": "",
+      "show": "ZO MOEILIJK?"
+     }
+    ]
+   },
+   {
+    "text": "Omdat Tesla bijna alles tegelijk wilde automatiseren, bij een gloednieuwe auto. De eerste 30 Model 3's gingen in juli 2017 naar medewerkers in Fremont. Elon Musk waarschuwde daar al voor minstens zes maanden productiehel.",
+    "img": [
+     "models/m3c-11.jpg",
+     "gigafactory-2.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Tesla Model 3 2017",
+       "Tesla Model 3 first deliveries",
+       "Tesla Model 3 red"
+      ],
+      "want": "a first-generation Tesla Model 3 sedan (2017-2023 design)"
+     },
+     {
+      "q": [
+       "car factory welding robots",
+       "automotive assembly line robots",
+       "industrial robots car body"
+      ],
+      "want": "industrial robots working on car bodies on an assembly line"
+     }
+    ],
+    "pop": [
+     {
+      "say": "alles tegelijk",
+      "show": "ALLES AUTOMATISCH"
+     },
+     {
+      "say": "gloednieuwe auto",
+      "show": "GLOEDNIEUWE AUTO"
+     },
+     {
+      "say": "eerste 30",
+      "show": "EERSTE 30"
+     },
+     {
+      "say": "juli 2017",
+      "show": "JULI 2017"
+     },
+     {
+      "say": "zes maanden",
+      "show": "6 MAANDEN"
+     },
+     {
+      "say": "productiehel",
+      "show": "PRODUCTIEHEL"
+     }
+    ]
+   },
+   {
+    "text": "Hij had getweet dat Tesla in september meer dan 1.500 Model 3's zou bouwen, en in december 20.000 per maand. Van juli tot eind september bouwde Tesla er maar 260. Het bedrijf sprak van knelpunten in de productie. En veel van de problemen zaten in de sterk geautomatiseerde assemblage in Fremont.",
+    "img": [
+     "models/m3c-3.jpg",
+     "gigafactory.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Tesla Model 3 2017",
+       "Tesla Model 3 first deliveries",
+       "Tesla Model 3 red"
+      ],
+      "want": "a first-generation Tesla Model 3 sedan (2017-2023 design)"
+     },
+     {
+      "q": [
+       "car assembly line conveyor",
+       "automotive overhead conveyor",
+       "car final assembly line"
+      ],
+      "want": "a car final assembly line with an overhead conveyor carrying car bodies"
+     }
+    ],
+    "pop": [
+     {
+      "say": "1.500",
+      "show": "PLAN: 1.500"
+     },
+     {
+      "say": "20.000 per maand",
+      "show": "20.000 PER MAAND"
+     },
+     {
+      "say": "maar 260",
+      "show": "WERKELIJK: 260"
+     },
+     {
+      "say": "knelpunten",
+      "show": "KNELPUNTEN"
+     },
+     {
+      "say": "geautomatiseerde assemblage",
+      "show": "AUTOMATISCHE ASSEMBLAGE"
+     }
+    ]
+   },
+   {
+    "text": "In april 2018 vertelde Musk aan de zender CBS dat Tesla een waanzinnig ingewikkeld netwerk van transportbanden had gebouwd dat niet werkte, en dat het er helemaal uit was. Een paar uur later schreef hij op Twitter dat overdreven automatisering bij Tesla een fout was. Zijn fout. Mensen worden onderschat.",
+    "img": [
+     "lib/musk-silhouette-factory.jpg",
+     "gigafactory-2.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "car assembly line conveyor",
+       "automotive overhead conveyor",
+       "car final assembly line"
+      ],
+      "want": "a car final assembly line with an overhead conveyor carrying car bodies"
+     },
+     {
+      "q": [
+       "car factory welding robots",
+       "automotive assembly line robots",
+       "industrial robots car body"
+      ],
+      "want": "industrial robots working on car bodies on an assembly line"
+     }
+    ],
+    "pop": [
+     {
+      "say": "april 2018",
+      "show": "APRIL 2018"
+     },
+     {
+      "say": "transportbanden",
+      "show": "TRANSPORTBANDEN"
+     },
+     {
+      "say": "niet werkte",
+      "show": "WERKTE NIET"
+     },
+     {
+      "say": "overdreven automatisering",
+      "show": "TE VEEL AUTOMATISERING"
+     },
+     {
+      "say": "Zijn fout",
+      "show": "ZIJN FOUT"
+     },
+     {
+      "say": "Mensen worden onderschat",
+      "show": "MENSEN ONDERSCHAT"
+     }
+    ]
+   },
+   {
+    "text": "In het eerste kwartaal van 2018 maakte Tesla 9.766 Model 3's, gemiddeld zo'n 750 per week, terwijl honderdduizenden mensen met een reservering wachtten. Elke trage week kostte geld dat Tesla niet had.",
+    "img": [
+     "models/m3c-7.jpg",
+     "lib/stock-phone-down.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Tesla store line Model 3 reservation",
+       "Tesla Model 3 reservation queue",
+       "Tesla store 2016"
+      ],
+      "want": "a Tesla store with people queueing to reserve a Model 3 in 2016"
+     },
+     {
+      "q": [
+       "Tesla Model 3 2017",
+       "Tesla Model 3 first deliveries",
+       "Tesla Model 3 red"
+      ],
+      "want": "a first-generation Tesla Model 3 sedan (2017-2023 design)"
+     }
+    ],
+    "pop": [
+     {
+      "say": "9.766",
+      "show": "9.766 AUTO'S"
+     },
+     {
+      "say": "750 per week",
+      "show": "750 PER WEEK"
+     },
+     {
+      "say": "honderdduizenden",
+      "show": "WACHTENDE KOPERS"
+     },
+     {
+      "say": "geld dat Tesla niet had",
+      "show": "GEEN GELD"
+     }
+    ]
+   },
+   {
+    "head": "Hoe dicht stond Tesla bij het einde?",
+    "img": [
+     "lib/stock-phone-down.jpg"
+    ],
+    "pop": [
+     {
+      "say": "",
+      "show": "HOE DICHTBIJ?"
+     }
+    ]
+   },
+   {
+    "text": "Op een paar weken, zei Musk later. In een interview met Axios on HBO in november 2018 vertelde hij dat Tesla tijdens de opstart als een gek geld verloor, en dat het bedrijf failliet was gegaan als de problemen niet heel snel waren opgelost. Hij sprak over werkweken tot 120 uur, en zei dat hij soms in de fabriek sliep.",
+    "img": [
+     "lib/stock-phone-down.jpg",
+     "lib/musk-silhouette-factory.jpg",
+     "gigafactory-fremont.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Tesla Factory Fremont",
+       "Tesla Fremont factory",
+       "NUMMI plant Fremont"
+      ],
+      "want": "the Tesla car factory in Fremont, California, seen from outside"
+     }
+    ],
+    "pop": [
+     {
+      "say": "een paar weken",
+      "show": "WEKEN VAN HET EINDE"
+     },
+     {
+      "say": "november 2018",
+      "show": "NOVEMBER 2018"
+     },
+     {
+      "say": "als een gek geld",
+      "show": "GELD VERLIEZEN"
+     },
+     {
+      "say": "failliet",
+      "show": "FAILLIET"
+     },
+     {
+      "say": "120 uur",
+      "show": "120 UUR"
+     },
+     {
+      "say": "in de fabriek sliep",
+      "show": "SLAPEN IN DE FABRIEK"
+     }
+    ]
+   },
+   {
+    "text": "Minder robots alleen was niet genoeg. Tesla legde lijnen stil om ze om te bouwen, zette meer mensen in, en perste meer auto's uit hetzelfde gebouw. Musk stelde een helder doel: 5.000 Model 3's in één week, uiterlijk eind juni 2018. Het probleem was het gebouw zelf. De fabriek in Fremont, ooit van GM en Toyota, had geen ruimte voor nog een assemblagelijn.",
+    "img": [
+     "gigafactory-2.jpg",
+     "gigafactory-fremont.jpg",
+     "models/m3c-5.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "NUMMI Fremont",
+       "New United Motor Manufacturing",
+       "NUMMI factory"
+      ],
+      "want": "the NUMMI car factory in Fremont, the former GM and Toyota plant"
+     },
+     {
+      "q": [
+       "Tesla Factory Fremont",
+       "Tesla Fremont factory",
+       "NUMMI plant Fremont"
+      ],
+      "want": "the Tesla car factory in Fremont, California, seen from outside"
+     }
+    ],
+    "pop": [
+     {
+      "say": "Minder robots",
+      "show": "MINDER ROBOTS"
+     },
+     {
+      "say": "meer mensen",
+      "show": "MEER MENSEN"
+     },
+     {
+      "say": "5.000 Model 3's",
+      "show": "5.000 PER WEEK"
+     },
+     {
+      "say": "eind juni",
+      "show": "EIND JUNI"
+     },
+     {
+      "say": "GM en Toyota",
+      "show": "EX GM EN TOYOTA"
+     },
+     {
+      "say": "geen ruimte",
+      "show": "GEEN RUIMTE"
+     }
+    ]
+   },
+   {
+    "head": "Waar zet je in een paar weken een nieuwe lopende band neer?",
+    "img": [
+     "gigafactory-fremont.jpg"
+    ],
+    "pop": [
+     {
+      "say": "",
+      "show": "WAAR DAN?"
+     }
+    ]
+   },
+   {
+    "text": "Buiten, onder zeildoek. Op 7 juni 2018 vroeg Tesla een vergunning aan voor een grote tent naast de lakstraat van de fabriek. De stad gaf die op 13 juni af. Drie dagen later meldde Musk op Twitter een nieuwe assemblagelijn: GA4.",
+    "img": [
+     "gigafactory-fremont.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Sprung structure",
+       "Sprung tensioned membrane building",
+       "large fabric structure building"
+      ],
+      "want": "a large white tensioned-fabric building (Sprung-type structure), seen from outside"
+     },
+     {
+      "q": [
+       "car paint shop robots",
+       "automotive paint shop",
+       "car body paint booth"
+      ],
+      "want": "a car paint shop with car bodies and painting robots"
+     }
+    ],
+    "pop": [
+     {
+      "say": "onder zeildoek",
+      "show": "ONDER ZEILDOEK"
+     },
+     {
+      "say": "7 juni",
+      "show": "7 JUNI"
+     },
+     {
+      "say": "lakstraat",
+      "show": "NAAST DE LAKSTRAAT"
+     },
+     {
+      "say": "13 juni",
+      "show": "VERGUNNING: 13 JUNI"
+     },
+     {
+      "say": "GA4",
+      "show": "GA4"
+     }
+    ]
+   },
+   {
+    "text": "Volgens Musk bouwde het team die in ongeveer drie weken, met minimale middelen en deels van onderdelen die nog rondslingerden. De tent kwam van het bedrijf Sprung en besloeg zo'n 12.750 vierkante meter, ongeveer twee voetbalvelden. Er was geen airco, en in de vergunning heette het bouwwerk tijdelijk.",
+    "img": [
+     "lib/musk-silhouette-factory.jpg",
+     "gigafactory.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Sprung structure",
+       "Sprung tensioned membrane building",
+       "large fabric structure building"
+      ],
+      "want": "a large white tensioned-fabric building (Sprung-type structure), seen from outside"
+     },
+     {
+      "q": [
+       "American football field aerial",
+       "football field from above",
+       "stadium field aerial"
+      ],
+      "want": "an American football field seen from above"
+     }
+    ],
+    "pop": [
+     {
+      "say": "drie weken",
+      "show": "3 WEKEN"
+     },
+     {
+      "say": "minimale middelen",
+      "show": "MINIMALE MIDDELEN"
+     },
+     {
+      "say": "rondslingerden",
+      "show": "RESTONDERDELEN"
+     },
+     {
+      "say": "Sprung",
+      "show": "SPRUNG"
+     },
+     {
+      "say": "twee voetbalvelden",
+      "show": "2 VOETBALVELDEN"
+     },
+     {
+      "say": "geen airco",
+      "show": "GEEN AIRCO"
+     },
+     {
+      "say": "tijdelijk",
+      "show": "TIJDELIJK"
+     }
+    ]
+   },
+   {
+    "text": "Kenners uit de auto-industrie stonden perplex. Ik heb er geen woorden voor, het is waanzin, zei een analist van Bernstein tegen Fortune. Een expert in lean productie grapte dat Tesla nog een tweede tent nodig had voor reparaties. De nieuwe lijn draaide bijna helemaal met de hand, met mensen in plaats van robots. En binnen een paar dagen moest hij zich bewijzen.",
+    "img": [
+     "gigafactory-2.jpg",
+     "models/m3c-9.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "car assembly line conveyor",
+       "automotive overhead conveyor",
+       "car final assembly line"
+      ],
+      "want": "a car final assembly line with an overhead conveyor carrying car bodies"
+     }
+    ],
+    "pop": [
+     {
+      "say": "perplex",
+      "show": "PERPLEX"
+     },
+     {
+      "say": "waanzin",
+      "show": "WAANZIN"
+     },
+     {
+      "say": "tweede tent",
+      "show": "EEN TWEEDE TENT?"
+     },
+     {
+      "say": "met de hand",
+      "show": "MET DE HAND"
+     },
+     {
+      "say": "mensen in plaats van robots",
+      "show": "MENSEN, GEEN ROBOTS"
+     },
+     {
+      "say": "bewijzen",
+      "show": "BEWIJZEN"
+     }
+    ]
+   },
+   {
+    "head": "Werkte die tent ook echt?",
+    "img": [
+     "models/m3c-11.jpg"
+    ],
+    "pop": [
+     {
+      "say": "",
+      "show": "WERKTE HET?"
+     }
+    ]
+   },
+   {
+    "text": "Ja. In de laatste zeven dagen van juni bouwde Tesla 5.031 Model 3's, en ongeveer één op de vijf kwam uit de tent. Op 1 juli tweette Musk: 7000 auto's, 7 dagen. Daarbij telde hij de 1.913 Model S en Model X uit dezelfde periode mee.",
+    "img": [
+     "models/m3c-11.jpg",
+     "models/m3c-2.jpg",
+     "models/msc-2.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Tesla Model 3 2017",
+       "Tesla Model 3 first deliveries",
+       "Tesla Model 3 red"
+      ],
+      "want": "a first-generation Tesla Model 3 sedan (2017-2023 design)"
+     }
+    ],
+    "pop": [
+     {
+      "say": "Ja",
+      "show": "JA"
+     },
+     {
+      "say": "5.031",
+      "show": "5.031 MODEL 3'S"
+     },
+     {
+      "say": "één op de vijf",
+      "show": "1 OP 5 UIT DE TENT"
+     },
+     {
+      "say": "7000 auto's",
+      "show": "7.000 AUTO'S"
+     },
+     {
+      "say": "7 dagen",
+      "show": "7 DAGEN"
+     },
+     {
+      "say": "1.913",
+      "show": "1.913 S EN X"
+     }
+    ]
+   },
+   {
+    "text": "In het officiële rapport schreef Tesla dat de kwaliteit van GA4 net zo goed was als die van de gewone lijn. Over het hele kwartaal bouwde Tesla 28.578 Model 3's. Voor het eerst was dat meer dan alle Model S en Model X bij elkaar.",
+    "img": [
+     "models/m3c-6.jpg",
+     "models/m3c-4.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Tesla Model 3 2017",
+       "Tesla Model 3 first deliveries",
+       "Tesla Model 3 red"
+      ],
+      "want": "a first-generation Tesla Model 3 sedan (2017-2023 design)"
+     }
+    ],
+    "pop": [
+     {
+      "say": "net zo goed",
+      "show": "NET ZO GOED"
+     },
+     {
+      "say": "28.578",
+      "show": "28.578 IN Q2"
+     },
+     {
+      "say": "meer dan alle",
+      "show": "MEER DAN S + X"
+     }
+    ]
+   },
+   {
+    "text": "Het was een sprint, nog geen vast tempo. Critici zeiden dat één recordweek nog geen soepel draaiende fabriek is, en Tesla legde de lat meteen op 6.000 per week. Maar de onhaalbare deadline was gehaald, met een lijn die de meeste autofabrikanten nooit hadden durven bouwen. En de les ervan bleef langer staan dan de tent.",
+    "img": [
+     "models/m3c-8.jpg",
+     "gigafactory-fremont.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Tesla Factory Fremont",
+       "Tesla Fremont factory",
+       "NUMMI plant Fremont"
+      ],
+      "want": "the Tesla car factory in Fremont, California, seen from outside"
+     }
+    ],
+    "pop": [
+     {
+      "say": "sprint",
+      "show": "EEN SPRINT"
+     },
+     {
+      "say": "één recordweek",
+      "show": "ÉÉN RECORDWEEK"
+     },
+     {
+      "say": "6.000 per week",
+      "show": "VOLGENDE: 6.000"
+     },
+     {
+      "say": "deadline was gehaald",
+      "show": "DEADLINE GEHAALD"
+     },
+     {
+      "say": "nooit hadden durven",
+      "show": "NIEMAND DURFDE"
+     }
+    ]
+   },
+   {
+    "head": "Waarom doet die tent er nu nog toe?",
+    "img": [
+     "gigafactory-texas.jpg"
+    ],
+    "pop": [
+     {
+      "say": "",
+      "show": "WAAROM HET TELT"
+     }
+    ]
+   },
+   {
+    "text": "Omdat Tesla er leerde dat een fabriek een product is dat je blijft herontwerpen, geen gebouw dat ooit af is. Dat is onze lezing. Sinds 2018 gaan de grootste gokken van Tesla net zo goed over hoe auto's gemaakt worden als over de auto's zelf.",
+    "img": [
+     "gigafactory-texas.jpg",
+     "lib/giga-texas-aerial.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Gigafactory Texas",
+       "Giga Texas Austin",
+       "Tesla Gigafactory Texas aerial"
+      ],
+      "want": "the Tesla Gigafactory Texas building near Austin"
+     }
+    ],
+    "pop": [
+     {
+      "say": "een product",
+      "show": "FABRIEK = PRODUCT"
+     },
+     {
+      "say": "blijft herontwerpen",
+      "show": "BLIJVEN HERONTWERPEN"
+     },
+     {
+      "say": "onze lezing",
+      "show": "ONZE KIJK"
+     },
+     {
+      "say": "hoe auto's gemaakt",
+      "show": "HOE AUTO'S GEMAAKT WORDEN"
+     }
+    ]
+   },
+   {
+    "text": "Reusachtige gietstukken uit één geheel vervingen in de Model Y tientallen geperste onderdelen. De Cybercab wordt gebouwd volgens het unboxed-proces, waarbij grote delen apart worden opgebouwd en pas aan het eind samenkomen. Net als bij GA4 begon elk idee met één vraag: welke stappen kunnen gewoon weg?",
+    "img": [
+     "lib/gigacasting-press.jpg",
+     "lib/cybercab-front-modules.jpg",
+     "lib/cybercab-line-front.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Giga Press",
+       "Tesla Giga Press",
+       "IDRA Giga Press"
+      ],
+      "want": "a Giga Press casting machine"
+     },
+     {
+      "q": [
+       "Tesla Model Y",
+       "Tesla Model Y 2020",
+       "Tesla Model Y white"
+      ],
+      "want": "a Tesla Model Y electric SUV"
+     },
+     {
+      "q": [
+       "Tesla Cybercab",
+       "Tesla Cybercab robotaxi",
+       "Tesla Robotaxi Cybercab"
+      ],
+      "want": "the gold two-seat Tesla Cybercab"
+     }
+    ],
+    "pop": [
+     {
+      "say": "gietstukken",
+      "show": "REUZE-GIETSTUKKEN"
+     },
+     {
+      "say": "Model Y",
+      "show": "MODEL Y"
+     },
+     {
+      "say": "unboxed",
+      "show": "UNBOXED"
+     },
+     {
+      "say": "aan het eind",
+      "show": "SAMEN AAN HET EIND"
+     },
+     {
+      "say": "welke stappen",
+      "show": "WELKE STAPPEN KUNNEN WEG?"
+     }
+    ]
+   },
+   {
+    "text": "De tent laat ook de andere kant van Tesla zien. Deadlines schuiven, de druk op medewerkers was echt, en bijna failliet gaan is geen verdienmodel. En Musks les, mensen worden onderschat, klinkt anders nu Tesla Optimus bouwt, een humanoïde robot die zelf fabriekswerk moet gaan doen.",
+    "img": [
+     "lib/optimus-walking.jpg",
+     "lib/optimus-pick-part.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Tesla Optimus",
+       "Optimus robot Tesla",
+       "Tesla Bot"
+      ],
+      "want": "the Tesla Optimus humanoid robot"
+     }
+    ],
+    "pop": [
+     {
+      "say": "andere kant",
+      "show": "DE ANDERE KANT"
+     },
+     {
+      "say": "Deadlines schuiven",
+      "show": "DEADLINES SCHUIVEN"
+     },
+     {
+      "say": "druk op medewerkers",
+      "show": "DRUK OP MEDEWERKERS"
+     },
+     {
+      "say": "mensen worden onderschat",
+      "show": "MENSEN ONDERSCHAT"
+     },
+     {
+      "say": "Optimus",
+      "show": "OPTIMUS"
+     },
+     {
+      "say": "fabriekswerk",
+      "show": "ROBOTWERKERS"
+     }
+    ]
+   },
+   {
+    "text": "Als Giga Texas echt dag en nacht draait, is dat hetzelfde idee op veel grotere schaal. De fabriek is de machine. En in 2018 begon die machine in een tent.",
+    "img": [
+     "lib/giga-texas-aerial.jpg",
+     "models/m3c-10.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Gigafactory Texas",
+       "Giga Texas Austin",
+       "Tesla Gigafactory Texas aerial"
+      ],
+      "want": "the Tesla Gigafactory Texas building near Austin"
+     }
+    ],
+    "pop": [
+     {
+      "say": "dag en nacht",
+      "show": "DAG EN NACHT"
+     },
+     {
+      "say": "grotere schaal",
+      "show": "GROTERE SCHAAL"
+     },
+     {
+      "say": "De fabriek is de machine",
+      "show": "DE FABRIEK IS DE MACHINE"
+     },
+     {
+      "say": "begon die machine in een tent",
+      "show": "HET BEGON IN EEN TENT"
+     }
+    ]
+   }
+  ],
+  "yt_title_en": "Tesla Model 3 Production Hell: How a Tent Saved Tesla in 2018",
+  "yt_title_nl": "Tesla Model 3-productiehel: hoe een tent Tesla in 2018 redde"
+ }
+}

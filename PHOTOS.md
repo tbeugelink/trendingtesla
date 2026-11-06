@@ -266,3 +266,6 @@ Articles with a "models" key automatically use real-life photos of that model. Y
 - gen/can-tesla-cybercab-drive-in-europe-no-steering-wheel-rules-explained.jpg — The gold Cybercab with its doors open on a cobblestone square in a European old town
 - gen/can-tesla-cybercab-drive-in-europe-no-steering-wheel-rules-explained-x2-11051148.jpg — The Cybercab parked beside a European canal at blue hour, rear light bar glowing
 - gen/can-tesla-cybercab-drive-in-europe-no-steering-wheel-rules-explained-x3-11051148.jpg — Visitors seen from behind looking at the Cybercab in a European showroom
+- gen/why-starship-fires-engines-at-own-booster-hot-staging-explained.jpg — Starship firing its engines through the vented ring on top of its own booster at stage separation, high above the Gulf
+- gen/why-starship-fires-engines-at-own-booster-hot-staging-explained-x2-11061154.jpg — the booster flipping around after hot staging, its vented ring glowing, the ship flying away
+- gen/why-starship-fires-engines-at-own-booster-hot-staging-explained-x3-11061155.jpg — the vented hot stage ring on top of a Super Heavy booster at the launch tower

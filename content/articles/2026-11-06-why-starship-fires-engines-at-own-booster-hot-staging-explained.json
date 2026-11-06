@@ -1,1727 +1,1735 @@
 {
- "slug": "why-starship-fires-engines-at-own-booster-hot-staging-explained",
- "date": "2026-11-06",
- "time": "12:50",
- "category": "spacex",
- "sources": [
-  {
-   "title": "Space.com: Epic 33-engine burn among successes of Starship's 2nd test flight, SpaceX says",
-   "url": "https://space.com/spacex-starship-second-test-flight-milestones"
-  },
-  {
-   "title": "Space.com: How SpaceX's new Starship 'V3' differs from its predecessors",
-   "url": "https://www.space.com/space-exploration/launches-spacecraft/the-worlds-biggest-rocket-how-spacexs-new-starship-v3-differs-from-its-predecessors"
-  },
-  {
-   "title": "Popular Science: Why were there holes in the Titan rocket that launched NASA's Gemini missions?",
-   "url": "https://popsci.com/why-were-there-holes-in-titan-rocket-that-launched-nasas-gemini-missions"
-  },
-  {
-   "title": "Space.com: SpaceX's Starship design changes ahead of its second test flight",
-   "url": "https://www.space.com/spacex-starship-design-changes-second-test-flight"
-  }
- ],
- "images": [
-  "lib/starship-launch.jpg",
-  "lib/starship-pad.jpg",
-  "spacex-7.jpg",
-  "lib/starship-booster-catch.jpg",
-  "gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute-x3-11041200.jpg"
- ],
- "gen_image": {
-  "prompt": "Close, dramatic shot high above the Gulf of Mexico at the moment of stage separation: the gleaming stainless steel Starship upper stage lifting off the top of its Super Heavy booster, its engines firing bright blue-white flames that burst sideways in glowing jets out of the vented ring between the two stages, the booster's three central engines still glowing faintly below, deep dark-blue sky near the edge of space, thin curve of the Earth and wisps of cloud far below, strong sunlight on the steel",
-  "subject": "SpaceX Starship on ascent at hot staging: a plain cylindrical stainless steel rocket about 9 m wide in two parts stacked vertically; the upper part (the ship) has a rounded pointed nose, black hexagonal heat-shield tiles on ONE side, two small forward flaps near the nose and two aft flaps at its base, no wings, no legs, no windows; it sits directly on top of the much taller Super Heavy booster (same 9 m width, plain steel, small grid fins near its top, 33 engines at its base); between them a short ring with many rectangular vent openings around its circumference, through which the ship's exhaust flames escape sideways; the two parts are just starting to separate, flying upward high in the atmosphere, nothing else in the sky",
-  "refs": [
-   {
-    "src": "lib/starship-launch.jpg"
-   },
-   {
-    "src": "lib/starship-pad.jpg"
-   }
+  "slug": "why-starship-fires-engines-at-own-booster-hot-staging-explained",
+  "date": "2026-11-06",
+  "time": "12:50",
+  "category": "spacex",
+  "sources": [
+    {
+      "title": "Space.com: Epic 33-engine burn among successes of Starship's 2nd test flight, SpaceX says",
+      "url": "https://space.com/spacex-starship-second-test-flight-milestones"
+    },
+    {
+      "title": "Space.com: How SpaceX's new Starship 'V3' differs from its predecessors",
+      "url": "https://www.space.com/space-exploration/launches-spacecraft/the-worlds-biggest-rocket-how-spacexs-new-starship-v3-differs-from-its-predecessors"
+    },
+    {
+      "title": "Popular Science: Why were there holes in the Titan rocket that launched NASA's Gemini missions?",
+      "url": "https://popsci.com/why-were-there-holes-in-titan-rocket-that-launched-nasas-gemini-missions"
+    },
+    {
+      "title": "Space.com: SpaceX's Starship design changes ahead of its second test flight",
+      "url": "https://www.space.com/spacex-starship-design-changes-second-test-flight"
+    }
   ],
-  "profile": "cinematic",
-  "category": "B",
-  "describe": "Starship firing its engines through the vented ring on top of its own booster at stage separation, high above the Gulf",
-  "extra": [
-   {
-    "prompt": "The separated stainless steel Super Heavy booster high above white clouds over the Gulf of Mexico, tilted sideways as it begins to flip around, the vented ring at its top glowing orange-hot from the ship's exhaust, small grid fins out, while the ship's bright engine plume streaks away upward in the distance against a dark blue sky",
-    "describe": "the booster flipping around after hot staging, its vented ring glowing, the ship flying away"
-   },
-   {
-    "prompt": "Close-up of the top of a stainless steel Super Heavy booster on the launch mount at blue hour: a short ring with rows of rectangular vent openings all around its circumference, scorch marks around the vents, floodlights, the steel launch tower and its catch arms behind",
-    "describe": "the vented hot stage ring on top of a Super Heavy booster at the launch tower"
-   }
-  ]
- },
- "label": {
-  "style": "c",
+  "images": [
+    "gen/why-starship-fires-engines-at-own-booster-hot-staging-explained.jpg",
+    "gen/why-starship-fires-engines-at-own-booster-hot-staging-explained-x3-11061155.jpg",
+    "gen/why-starship-fires-engines-at-own-booster-hot-staging-explained-x2-11061154.jpg",
+    "lib/starship-launch.jpg",
+    "lib/starship-pad.jpg",
+    "spacex-7.jpg",
+    "lib/starship-booster-catch.jpg",
+    "gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute-x3-11041200.jpg"
+  ],
+  "gen_image": {
+    "prompt": "Close, dramatic shot high above the Gulf of Mexico at the moment of stage separation: the gleaming stainless steel Starship upper stage lifting off the top of its Super Heavy booster, its engines firing bright blue-white flames that burst sideways in glowing jets out of the vented ring between the two stages, the booster's three central engines still glowing faintly below, deep dark-blue sky near the edge of space, thin curve of the Earth and wisps of cloud far below, strong sunlight on the steel",
+    "subject": "SpaceX Starship on ascent at hot staging: a plain cylindrical stainless steel rocket about 9 m wide in two parts stacked vertically; the upper part (the ship) has a rounded pointed nose, black hexagonal heat-shield tiles on ONE side, two small forward flaps near the nose and two aft flaps at its base, no wings, no legs, no windows; it sits directly on top of the much taller Super Heavy booster (same 9 m width, plain steel, small grid fins near its top, 33 engines at its base); between them a short ring with many rectangular vent openings around its circumference, through which the ship's exhaust flames escape sideways; the two parts are just starting to separate, flying upward high in the atmosphere, nothing else in the sky",
+    "refs": [
+      {
+        "src": "lib/starship-launch.jpg"
+      },
+      {
+        "src": "lib/starship-pad.jpg"
+      }
+    ],
+    "profile": "cinematic",
+    "category": "B",
+    "describe": "Starship firing its engines through the vented ring on top of its own booster at stage separation, high above the Gulf",
+    "extra": [
+      {
+        "prompt": "The separated stainless steel Super Heavy booster high above white clouds over the Gulf of Mexico, tilted sideways as it begins to flip around, the vented ring at its top glowing orange-hot from the ship's exhaust, small grid fins out, while the ship's bright engine plume streaks away upward in the distance against a dark blue sky",
+        "describe": "the booster flipping around after hot staging, its vented ring glowing, the ship flying away",
+        "file": "gen/why-starship-fires-engines-at-own-booster-hot-staging-explained-x2-11061154.jpg"
+      },
+      {
+        "prompt": "Close-up of the top of a stainless steel Super Heavy booster on the launch mount at blue hour: a short ring with rows of rectangular vent openings all around its circumference, scorch marks around the vents, floodlights, the steel launch tower and its catch arms behind",
+        "describe": "the vented hot stage ring on top of a Super Heavy booster at the launch tower",
+        "file": "gen/why-starship-fires-engines-at-own-booster-hot-staging-explained-x3-11061155.jpg"
+      }
+    ],
+    "done": true,
+    "model": "gpt-image-2.5-sunburst"
+  },
+  "label": {
+    "style": "c",
+    "en": {
+      "sub": "WHY DOES STARSHIP",
+      "text": "FIRE AT ITS BOOSTER?"
+    },
+    "nl": {
+      "sub": "WAAROM VUURT STARSHIP",
+      "text": "OP ZIJN BOOSTER?"
+    }
+  },
+  "short": {
+    "hook": "contrast",
+    "en": "Starship fires its engines straight into its own booster. On purpose. Most rockets let go first, and only then light the next stage. Starship does it backwards. The booster throttles down to just THREE of its 33 engines. And while it is still attached, the ship lights all six of its own. So where does all that fire go? Out through a ring full of vents, built to take the blast. Why take the risk? Because a rocket that stops pushing starts losing speed to gravity. Hot staging never stops pushing. Musk's estimate: about ten percent more payload to orbit. And it is not even new. NASA's Gemini astronauts rode a rocket that did it in the sixties. Starship just does it on the biggest rocket ever built.",
+    "nl": "Starship vuurt zijn motoren recht in zijn eigen booster. Expres. De meeste raketten laten eerst los, en starten pas daarna de volgende trap. Starship doet het andersom. De booster schakelt terug naar maar DRIE van zijn drieëndertig motoren. En terwijl het nog vastzit, ontsteekt het schip alle zes de zijne. Waar blijft al dat vuur? Het ontsnapt via een ring vol gaten, gebouwd om de klap op te vangen. Waarom dat risico? Omdat een raket die stopt met duwen, snelheid verliest aan de zwaartekracht. Bij hot staging stopt het duwen nooit. Musk schat de winst op zo'n tien procent meer lading naar de ruimte. En nieuw is het niet eens. De Gemini-astronauten van NASA vlogen in de jaren zestig al op een raket die het deed. Starship doet het alleen op de grootste raket ooit gebouwd.",
+    "yt_title_en": "Starship Fires Up Before It Lets Go",
+    "yt_title_nl": "Starship Start Al Voordat Hij Loslaat",
+    "story": [
+      {
+        "part": "hook",
+        "text": "Starship fires its engines straight into its own booster. On purpose.",
+        "scene": "the stainless steel Starship upper stage lifting off the top of its Super Heavy booster high above the Gulf of Mexico, its engines firing bright flames that burst sideways out of a vented ring between the two stages, dark blue sky near space, curve of the Earth below",
+        "pop": [
+          {
+            "say": "fires its engines",
+            "show": "FIRE!"
+          },
+          {
+            "say": "its own booster",
+            "show": "AT ITS OWN BOOSTER"
+          },
+          {
+            "say": "On purpose",
+            "show": "ON PURPOSE"
+          }
+        ]
+      },
+      {
+        "part": "hook",
+        "text": "Most rockets let go first, and only then light the next stage.",
+        "img": "spacex-6.jpg",
+        "pop": [
+          {
+            "say": "let go first",
+            "show": "LET GO FIRST"
+          },
+          {
+            "say": "only then",
+            "show": "THEN FIRE"
+          }
+        ]
+      },
+      {
+        "part": "tension",
+        "text": "Starship does it backwards. The booster throttles down to just THREE of its 33 engines.",
+        "lib": [
+          "starship-launch.jpg"
+        ],
+        "pop": [
+          {
+            "say": "backwards",
+            "show": "BACKWARDS"
+          },
+          {
+            "say": "THREE",
+            "show": "33 ENGINES"
+          },
+          {
+            "say": "33 engines",
+            "show": "DOWN TO 3"
+          }
+        ]
+      },
+      {
+        "part": "tension",
+        "text": "And while it is still attached, the ship lights all six of its own.",
+        "scene": "close view of the join between the Starship upper stage and its Super Heavy booster in flight, the ship's engines just igniting, bright flames bursting out sideways through rectangular vents in the ring between the stages, dark blue sky",
+        "pop": [
+          {
+            "say": "still attached",
+            "show": "STILL ATTACHED"
+          },
+          {
+            "say": "all six",
+            "show": "6 ENGINES LIT"
+          }
+        ]
+      },
+      {
+        "part": "tension",
+        "text": "So where does all that fire go? Out through a ring full of vents, built to take the blast.",
+        "scene": "the top of a stainless steel Super Heavy booster with a short ring of rectangular vent openings all around it, glowing orange-hot as flames pour out sideways, the ship's engine plume rising away above, high altitude, dark sky",
+        "pop": [
+          {
+            "say": "where does all that fire go",
+            "show": "WHERE DOES IT GO?"
+          },
+          {
+            "say": "ring full of vents",
+            "show": "A RING OF VENTS"
+          },
+          {
+            "say": "take the blast",
+            "show": "TAKES THE BLAST"
+          }
+        ]
+      },
+      {
+        "part": "tension",
+        "text": "Why take the risk? Because a rocket that stops pushing starts losing speed to gravity.",
+        "lib": [
+          "starship-pad.jpg"
+        ],
+        "pop": [
+          {
+            "say": "Why take the risk",
+            "show": "WHY RISK IT?"
+          },
+          {
+            "say": "stops pushing",
+            "show": "STOP PUSHING"
+          },
+          {
+            "say": "losing speed",
+            "show": "LOSE SPEED"
+          }
+        ]
+      },
+      {
+        "part": "payoff",
+        "text": "Hot staging never stops pushing. Musk's estimate: about ten percent more payload to orbit.",
+        "lib": [
+          "starship-launch.jpg"
+        ],
+        "pop": [
+          {
+            "say": "never stops",
+            "show": "NEVER STOPS"
+          },
+          {
+            "say": "Musk's estimate",
+            "show": "MUSK'S ESTIMATE"
+          },
+          {
+            "say": "ten percent",
+            "show": "+10% PAYLOAD"
+          }
+        ]
+      },
+      {
+        "part": "payoff",
+        "text": "And it is not even new. NASA's Gemini astronauts rode a rocket that did it in the sixties.",
+        "img": "spacex-7.jpg",
+        "pop": [
+          {
+            "say": "not even new",
+            "show": "NOT NEW"
+          },
+          {
+            "say": "Gemini astronauts",
+            "show": "GEMINI"
+          },
+          {
+            "say": "sixties",
+            "show": "THE 1960s"
+          }
+        ]
+      },
+      {
+        "part": "payoff",
+        "text": "Starship just does it on the biggest rocket ever built.",
+        "lib": [
+          "starship-booster-catch.jpg"
+        ],
+        "pop": [
+          {
+            "say": "biggest rocket",
+            "show": "BIGGEST ROCKET"
+          },
+          {
+            "say": "ever built",
+            "show": "EVER BUILT"
+          }
+        ]
+      }
+    ]
+  },
+  "video": {
+    "en": [
+      {
+        "text": "About two and a half minutes after liftoff, Starship fires its engines straight into its own booster. On purpose. And it has to get that moment right before SpaceX can try the boldest thing on Flight 15: catching both halves of the rocket with the tower. The booster below has 33 engines and tanks that were full of fuel only minutes earlier. Firing rocket flames into another rocket sounds like the fastest way to blow both of them up.",
+        "img": [
+          "gen/why-starship-fires-engines-at-own-booster-hot-staging-explained.jpg",
+          "lib/starship-launch.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Starship launch",
+              "Starship integrated flight test launch",
+              "Super Heavy liftoff"
+            ],
+            "want": "a Starship rocket lifting off from Starbase"
+          }
+        ],
+        "pop": [
+          {
+            "say": "two and a half minutes",
+            "show": "2.5 MINUTES IN"
+          },
+          {
+            "say": "into its own booster",
+            "show": "INTO ITS OWN BOOSTER"
+          },
+          {
+            "say": "On purpose",
+            "show": "ON PURPOSE"
+          },
+          {
+            "say": "Flight 15",
+            "show": "FLIGHT 15"
+          },
+          {
+            "say": "both halves",
+            "show": "CATCH BOTH"
+          },
+          {
+            "say": "33 engines",
+            "show": "33 ENGINES"
+          },
+          {
+            "say": "blow both of them up",
+            "show": "BLOW BOTH UP?"
+          }
+        ]
+      },
+      {
+        "head": "What is hot staging, and how does Starship do it?",
+        "img": [
+          "lib/starship-pad.jpg"
+        ],
+        "pop": [
+          {
+            "say": "",
+            "show": "HOT STAGING?"
+          }
+        ]
+      },
+      {
+        "text": "Hot staging means the upper stage starts its engines before it lets go of the stage below. Most rockets do the opposite. The first stage shuts down, the stages are pushed apart, there is a short coast, and only then does the next engine light. Engineers call that cold staging.",
+        "img": [
+          "spacex-6.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Soyuz rocket launch",
+              "Soyuz-FG launch Baikonur",
+              "Soyuz-2 launch"
+            ],
+            "want": "a Russian Soyuz rocket launching"
+          },
+          {
+            "q": [
+              "Titan II GLV on pad",
+              "Gemini Titan launch vehicle pad 19",
+              "Titan II rocket"
+            ],
+            "want": "a Titan II Gemini launch vehicle standing on its pad"
+          }
+        ],
+        "pop": [
+          {
+            "say": "before it lets go",
+            "show": "FIRE BEFORE LETTING GO"
+          },
+          {
+            "say": "the opposite",
+            "show": "MOST DO THE OPPOSITE"
+          },
+          {
+            "say": "short coast",
+            "show": "A SHORT COAST"
+          },
+          {
+            "say": "cold staging",
+            "show": "COLD STAGING"
+          }
+        ]
+      },
+      {
+        "text": "Starship turns that around. Near the end of its burn, Super Heavy powers down all but three of its 33 Raptor engines. The ship lights its six Raptors while it is still attached, and their thrust shoves it off the booster.",
+        "img": [
+          "lib/starship-launch.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "SpaceX Raptor engine",
+              "Raptor rocket engine",
+              "Raptor 2 engine"
+            ],
+            "want": "a SpaceX Raptor rocket engine"
+          },
+          {
+            "q": [
+              "Super Heavy booster",
+              "SpaceX Super Heavy booster Starbase",
+              "Super Heavy Booster 7"
+            ],
+            "want": "a Super Heavy booster, the tall stainless steel first stage of Starship"
+          }
+        ],
+        "pop": [
+          {
+            "say": "turns that around",
+            "show": "THE OTHER WAY ROUND"
+          },
+          {
+            "say": "all but three",
+            "show": "33 DOWN TO 3"
+          },
+          {
+            "say": "six Raptors",
+            "show": "SHIP: 6 ENGINES"
+          },
+          {
+            "say": "still attached",
+            "show": "STILL ATTACHED"
+          },
+          {
+            "say": "shoves it off",
+            "show": "PUSHES OFF"
+          }
+        ]
+      },
+      {
+        "text": "All that fire needs a way out. So on top of the booster sits a short section full of openings: the hot stage ring. It lets the flames escape sideways, and it shields the top of the booster's tank. But an armoured ring full of holes adds weight. And weight is the one thing rocket engineers fight hardest.",
+        "img": [
+          "lib/starship-pad.jpg",
+          "spacex-7.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Super Heavy booster",
+              "SpaceX Super Heavy booster Starbase",
+              "Super Heavy Booster 7"
+            ],
+            "want": "a Super Heavy booster, the tall stainless steel first stage of Starship"
+          },
+          {
+            "q": [
+              "Starbase launch tower",
+              "Starship launch tower Boca Chica",
+              "Starbase orbital launch mount"
+            ],
+            "want": "the tall steel Starship launch tower at Starbase, Texas"
+          }
+        ],
+        "pop": [
+          {
+            "say": "a way out",
+            "show": "A WAY OUT"
+          },
+          {
+            "say": "full of openings",
+            "show": "FULL OF VENTS"
+          },
+          {
+            "say": "hot stage ring",
+            "show": "HOT STAGE RING"
+          },
+          {
+            "say": "escape sideways",
+            "show": "FLAMES OUT SIDEWAYS"
+          },
+          {
+            "say": "adds weight",
+            "show": "ADDS WEIGHT"
+          }
+        ]
+      },
+      {
+        "head": "So why would SpaceX choose the harder way?",
+        "img": [
+          "lib/starship-launch.jpg"
+        ],
+        "pop": [
+          {
+            "say": "",
+            "show": "WHY THE HARD WAY?"
+          }
+        ]
+      },
+      {
+        "text": "Because a rocket that stops pushing, even for a few seconds, starts losing speed to gravity. In cold staging there is a gap with no engine firing. The rocket is still climbing, but gravity keeps pulling it back. Every bit of speed lost there has to be won back later, with extra fuel.",
+        "img": [
+          "spacex-7.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Earth from the International Space Station",
+              "Earth limb from orbit",
+              "Gulf of Mexico from space"
+            ],
+            "want": "the curve of the Earth seen from space"
+          },
+          {
+            "q": [
+              "Starship launch",
+              "Starship integrated flight test launch",
+              "Super Heavy liftoff"
+            ],
+            "want": "a Starship rocket lifting off from Starbase"
+          }
+        ],
+        "pop": [
+          {
+            "say": "stops pushing",
+            "show": "STOPS PUSHING"
+          },
+          {
+            "say": "few seconds",
+            "show": "A FEW SECONDS"
+          },
+          {
+            "say": "losing speed",
+            "show": "LOSING SPEED"
+          },
+          {
+            "say": "no engine firing",
+            "show": "NO ENGINE"
+          },
+          {
+            "say": "pulling it back",
+            "show": "GRAVITY PULLS"
+          },
+          {
+            "say": "extra fuel",
+            "show": "EXTRA FUEL"
+          }
+        ]
+      },
+      {
+        "text": "There is a sneakier problem too. Without thrust, the liquid fuel in the upper stage starts to float away from the drains at the bottom of the tanks. Engines need liquid when they start, not gas bubbles. So many rockets fire small extra thrusters first, just to settle the fuel. With hot staging, the rocket never stops accelerating, so the fuel stays right where the engines need it.",
+        "img": [
+          "spacex-8.jpg",
+          "steel-tubes.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "SpaceX Raptor engine",
+              "Raptor rocket engine",
+              "Raptor 2 engine"
+            ],
+            "want": "a SpaceX Raptor rocket engine"
+          }
+        ],
+        "pop": [
+          {
+            "say": "sneakier problem",
+            "show": "SNEAKIER PROBLEM"
+          },
+          {
+            "say": "float away",
+            "show": "FUEL FLOATS"
+          },
+          {
+            "say": "not gas bubbles",
+            "show": "NO BUBBLES"
+          },
+          {
+            "say": "small extra thrusters",
+            "show": "EXTRA THRUSTERS"
+          },
+          {
+            "say": "never stops accelerating",
+            "show": "NEVER STOPS"
+          },
+          {
+            "say": "where the engines need it",
+            "show": "FUEL IN PLACE"
+          }
+        ]
+      },
+      {
+        "text": "Musk estimated the gain at about ten percent more payload to orbit. That is his estimate, not a published measurement. And there is a bonus: the push from the ship's exhaust helps start the booster's flip for its trip home. The idea sounds daring. But SpaceX did not invent it.",
+        "img": [
+          "lib/starship-booster-catch.jpg",
+          "gen/spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story-x3-11022028.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Starship Integrated Flight Test 2",
+              "Starship flight test 2 launch November 2023",
+              "Starship IFT-2"
+            ],
+            "want": "Starship and Super Heavy on its second test flight in November 2023"
+          }
+        ],
+        "pop": [
+          {
+            "say": "ten percent",
+            "show": "+10% PAYLOAD"
+          },
+          {
+            "say": "his estimate",
+            "show": "MUSK'S ESTIMATE"
+          },
+          {
+            "say": "a bonus",
+            "show": "A BONUS"
+          },
+          {
+            "say": "booster's flip",
+            "show": "BOOSTER FLIPS"
+          },
+          {
+            "say": "did not invent it",
+            "show": "NOT NEW"
+          }
+        ]
+      },
+      {
+        "head": "Who used hot staging before Starship?",
+        "photo": [
+          {
+            "q": [
+              "Gemini Titan II launch",
+              "Titan II GLV launch",
+              "Gemini 3 launch Titan"
+            ],
+            "want": "a Titan II rocket launching a Gemini capsule in the 1960s"
+          }
+        ],
+        "pop": [
+          {
+            "say": "",
+            "show": "WHO DID IT FIRST?"
+          }
+        ]
+      },
+      {
+        "text": "Rocket builders have been doing it since the 1960s. The best-known American example is the Titan two, the rocket NASA used to launch its two-person Gemini capsules between 1964 and 1966. Its second stage fired while the stages were still joined. The hot gas escaped through sixteen rectangular ports near the joint. From a distance, it looked as if a slice of the rocket was missing.",
+        "photo": [
+          {
+            "q": [
+              "Gemini Titan II launch",
+              "Titan II GLV launch",
+              "Gemini 3 launch Titan"
+            ],
+            "want": "a Titan II rocket launching a Gemini capsule in the 1960s"
+          },
+          {
+            "q": [
+              "Titan II GLV on pad",
+              "Gemini Titan launch vehicle pad 19",
+              "Titan II rocket"
+            ],
+            "want": "a Titan II Gemini launch vehicle standing on its pad"
+          },
+          {
+            "q": [
+              "Gemini spacecraft",
+              "Gemini capsule orbit",
+              "Gemini 7 from Gemini 6"
+            ],
+            "want": "a two-person Gemini spacecraft"
+          }
+        ],
+        "pop": [
+          {
+            "say": "since the 1960s",
+            "show": "SINCE THE 1960s"
+          },
+          {
+            "say": "Titan two",
+            "show": "TITAN II"
+          },
+          {
+            "say": "Gemini capsules",
+            "show": "GEMINI"
+          },
+          {
+            "say": "still joined",
+            "show": "STILL JOINED"
+          },
+          {
+            "say": "sixteen rectangular ports",
+            "show": "16 EXHAUST PORTS"
+          },
+          {
+            "say": "slice of the rocket",
+            "show": "A MISSING SLICE?"
+          }
+        ]
+      },
+      {
+        "text": "Russian rockets have hot staged for decades as well. You can often spot them by the open lattice frame between two stages, which leaves room for the upper engine's flames. So what is new with Starship? The size. When it first worked, SpaceX called it the first successful hot staging of a vehicle this large.",
+        "photo": [
+          {
+            "q": [
+              "Soyuz rocket launch",
+              "Soyuz-FG launch Baikonur",
+              "Soyuz-2 launch"
+            ],
+            "want": "a Russian Soyuz rocket launching"
+          },
+          {
+            "q": [
+              "Soyuz rocket on launch pad Baikonur",
+              "Soyuz rocket rollout",
+              "Soyuz TMA rocket pad"
+            ],
+            "want": "a Russian Soyuz rocket on its launch pad"
+          }
+        ],
+        "img": [
+          "lib/starship-pad.jpg"
+        ],
+        "pop": [
+          {
+            "say": "Russian rockets",
+            "show": "RUSSIAN ROCKETS"
+          },
+          {
+            "say": "for decades",
+            "show": "FOR DECADES"
+          },
+          {
+            "say": "open lattice frame",
+            "show": "OPEN LATTICE"
+          },
+          {
+            "say": "The size",
+            "show": "THE SIZE"
+          },
+          {
+            "say": "this large",
+            "show": "NEVER THIS BIG"
+          }
+        ]
+      },
+      {
+        "head": "How did Starship learn to hot stage?",
+        "photo": [
+          {
+            "q": [
+              "Starship Integrated Flight Test 1",
+              "Starship flight test April 2023",
+              "Starship IFT-1 launch"
+            ],
+            "want": "the first Starship test flight in April 2023"
+          }
+        ],
+        "pop": [
+          {
+            "say": "",
+            "show": "HOW IT LEARNED"
+          }
+        ]
+      },
+      {
+        "text": "It was a late change, after the first flight went wrong. On Flight 1, in April 2023, the booster and the ship never separated as planned. SpaceX redesigned the whole separation. Musk described the new booster extension as almost entirely vents.",
+        "photo": [
+          {
+            "q": [
+              "Starship Integrated Flight Test 1",
+              "Starship flight test April 2023",
+              "Starship IFT-1 launch"
+            ],
+            "want": "the first Starship test flight in April 2023"
+          },
+          {
+            "q": [
+              "Super Heavy booster",
+              "SpaceX Super Heavy booster Starbase",
+              "Super Heavy Booster 7"
+            ],
+            "want": "a Super Heavy booster, the tall stainless steel first stage of Starship"
+          }
+        ],
+        "pop": [
+          {
+            "say": "late change",
+            "show": "A LATE CHANGE"
+          },
+          {
+            "say": "Flight 1",
+            "show": "FLIGHT 1"
+          },
+          {
+            "say": "April 2023",
+            "show": "APRIL 2023"
+          },
+          {
+            "say": "never separated",
+            "show": "NEVER SEPARATED"
+          },
+          {
+            "say": "almost entirely vents",
+            "show": "ALMOST ALL VENTS"
+          }
+        ]
+      },
+      {
+        "text": "On Flight 2, on November 18, 2023, it worked. The booster throttled down, all six ship engines lit, and the ship flew on to space. The booster broke apart shortly afterwards, on its way back. But the staging itself had done its job, and it has been part of every flight since.",
+        "photo": [
+          {
+            "q": [
+              "Starship Integrated Flight Test 2",
+              "Starship flight test 2 launch November 2023",
+              "Starship IFT-2"
+            ],
+            "want": "Starship and Super Heavy on its second test flight in November 2023"
+          },
+          {
+            "q": [
+              "Starship launch",
+              "Starship integrated flight test launch",
+              "Super Heavy liftoff"
+            ],
+            "want": "a Starship rocket lifting off from Starbase"
+          }
+        ],
+        "img": [
+          "gen/why-starship-fires-engines-at-own-booster-hot-staging-explained.jpg"
+        ],
+        "pop": [
+          {
+            "say": "Flight 2",
+            "show": "FLIGHT 2"
+          },
+          {
+            "say": "November 18, 2023",
+            "show": "NOV 18, 2023"
+          },
+          {
+            "say": "it worked",
+            "show": "IT WORKED"
+          },
+          {
+            "say": "all six",
+            "show": "6 ENGINES LIT"
+          },
+          {
+            "say": "broke apart",
+            "show": "BOOSTER LOST"
+          },
+          {
+            "say": "every flight since",
+            "show": "EVERY FLIGHT SINCE"
+          }
+        ]
+      },
+      {
+        "text": "And the ring kept changing. On the second-generation Starship, it was a separate piece that dropped away into the sea after every launch. On the third generation, the one flying Flight 15, the ring is fixed to the top of the booster and stays there. The new booster also has three grid fins instead of four, each about half as large again, and mounted lower, out of the staging heat.",
+        "img": [
+          "lib/starship-booster-catch.jpg",
+          "spacex-7.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Super Heavy booster",
+              "SpaceX Super Heavy booster Starbase",
+              "Super Heavy Booster 7"
+            ],
+            "want": "a Super Heavy booster, the tall stainless steel first stage of Starship"
+          }
+        ],
+        "pop": [
+          {
+            "say": "kept changing",
+            "show": "KEPT CHANGING"
+          },
+          {
+            "say": "into the sea",
+            "show": "INTO THE SEA"
+          },
+          {
+            "say": "third generation",
+            "show": "VERSION 3"
+          },
+          {
+            "say": "stays there",
+            "show": "RING STAYS ON"
+          },
+          {
+            "say": "three grid fins",
+            "show": "3 GRID FINS"
+          },
+          {
+            "say": "out of the staging heat",
+            "show": "OUT OF THE HEAT"
+          }
+        ]
+      },
+      {
+        "head": "What does hot staging mean for catching both stages?",
+        "img": [
+          "lib/starship-booster-catch.jpg"
+        ],
+        "pop": [
+          {
+            "say": "",
+            "show": "CATCHING BOTH"
+          }
+        ]
+      },
+      {
+        "text": "Every catch starts with a clean separation. After staging, the booster flips, fires its engines to head back, and is meant to be caught by the tower within minutes of liftoff. So by the time the ship comes home, its booster is already back at the tower. A ring that stays on the booster is also one less part thrown away on every flight.",
+        "img": [
+          "lib/starship-booster-catch.jpg",
+          "gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Starbase launch tower",
+              "Starship launch tower Boca Chica",
+              "Starbase orbital launch mount"
+            ],
+            "want": "the tall steel Starship launch tower at Starbase, Texas"
+          }
+        ],
+        "pop": [
+          {
+            "say": "clean separation",
+            "show": "CLEAN SEPARATION"
+          },
+          {
+            "say": "booster flips",
+            "show": "FLIP"
+          },
+          {
+            "say": "within minutes",
+            "show": "CAUGHT IN MINUTES"
+          },
+          {
+            "say": "already back",
+            "show": "ALREADY HOME"
+          },
+          {
+            "say": "one less part",
+            "show": "ONE LESS PART"
+          }
+        ]
+      },
+      {
+        "text": "The ship has the harder job. It carries on to orbit and has to survive re-entry before its own catch attempt, which no Starship has done yet. Musk has put the chance of catching it on the first try at around fifty to sixty percent.",
+        "img": [
+          "gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute-x2-11041157.jpg",
+          "gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute-x3-11041200.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Earth from the International Space Station",
+              "Earth limb from orbit",
+              "Gulf of Mexico from space"
+            ],
+            "want": "the curve of the Earth seen from space"
+          }
+        ],
+        "pop": [
+          {
+            "say": "harder job",
+            "show": "THE HARDER JOB"
+          },
+          {
+            "say": "survive re-entry",
+            "show": "SURVIVE RE-ENTRY"
+          },
+          {
+            "say": "no Starship has done yet",
+            "show": "NEVER DONE"
+          },
+          {
+            "say": "fifty to sixty percent",
+            "show": "50-60% CHANCE"
+          }
+        ]
+      },
+      {
+        "text": "For Tesla fans, this is more than a space story. Tesla and SpaceX have set up special committees to study a possible merger, and a fully reusable Starship is one of the biggest drivers of SpaceX's value. So next time you watch a launch, look at the moment about two and a half minutes in. That flash between the stages is not an explosion. It is the ship pushing off.",
+        "img": [
+          "lib/musk-chess-companies.jpg",
+          "lib/musk-silhouette-rocket.jpg",
+          "gen/why-starship-fires-engines-at-own-booster-hot-staging-explained.jpg"
+        ],
+        "pop": [
+          {
+            "say": "Tesla fans",
+            "show": "TESLA FANS"
+          },
+          {
+            "say": "possible merger",
+            "show": "TESLA + SPACEX?"
+          },
+          {
+            "say": "fully reusable",
+            "show": "FULLY REUSABLE"
+          },
+          {
+            "say": "two and a half minutes in",
+            "show": "WATCH 2.5 MIN IN"
+          },
+          {
+            "say": "not an explosion",
+            "show": "NOT AN EXPLOSION"
+          },
+          {
+            "say": "pushing off",
+            "show": "PUSHING OFF"
+          }
+        ]
+      }
+    ],
+    "nl": [
+      {
+        "img": [
+          "gen/why-starship-fires-engines-at-own-booster-hot-staging-explained.jpg",
+          "lib/starship-launch.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Starship launch",
+              "Starship integrated flight test launch",
+              "Super Heavy liftoff"
+            ],
+            "want": "a Starship rocket lifting off from Starbase"
+          }
+        ],
+        "text": "Zo'n tweeënhalve minuut na de start vuurt Starship zijn motoren recht in zijn eigen booster. Expres. En dat moment moet goed gaan voordat SpaceX het meest gedurfde van vlucht vijftien kan proberen: allebei de helften van de raket vangen met de toren. De booster eronder heeft drieëndertig motoren en tanks die een paar minuten eerder nog vol brandstof zaten. Raketvlammen afvuren op een andere raket klinkt als de snelste manier om ze allebei op te blazen.",
+        "pop": [
+          {
+            "say": "tweeënhalve minuut",
+            "show": "NA 2,5 MINUUT"
+          },
+          {
+            "say": "eigen booster",
+            "show": "IN EIGEN BOOSTER"
+          },
+          {
+            "say": "Expres",
+            "show": "EXPRES"
+          },
+          {
+            "say": "vlucht vijftien",
+            "show": "VLUCHT 15"
+          },
+          {
+            "say": "allebei de helften",
+            "show": "BEIDE VANGEN"
+          },
+          {
+            "say": "drieëndertig motoren",
+            "show": "33 MOTOREN"
+          },
+          {
+            "say": "allebei op te blazen",
+            "show": "ALLEBEI KAPOT?"
+          }
+        ]
+      },
+      {
+        "img": [
+          "lib/starship-pad.jpg"
+        ],
+        "head": "Wat is hot staging, en hoe doet Starship dat?",
+        "pop": [
+          {
+            "say": "",
+            "show": "HOT STAGING?"
+          }
+        ]
+      },
+      {
+        "img": [
+          "spacex-6.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Soyuz rocket launch",
+              "Soyuz-FG launch Baikonur",
+              "Soyuz-2 launch"
+            ],
+            "want": "a Russian Soyuz rocket launching"
+          },
+          {
+            "q": [
+              "Titan II GLV on pad",
+              "Gemini Titan launch vehicle pad 19",
+              "Titan II rocket"
+            ],
+            "want": "a Titan II Gemini launch vehicle standing on its pad"
+          }
+        ],
+        "text": "Bij hot staging start de bovenste trap zijn motoren al voordat hij de onderste loslaat. De meeste raketten doen het andersom. De eerste trap gaat uit, de trappen worden uit elkaar geduwd, er volgt een korte vrije vlucht en pas dan gaat de volgende motor aan. Dat heet cold staging.",
+        "pop": [
+          {
+            "say": "voordat hij de onderste loslaat",
+            "show": "VUREN VÓÓR LOSLATEN"
+          },
+          {
+            "say": "andersom",
+            "show": "MEESTAL ANDERSOM"
+          },
+          {
+            "say": "korte vrije vlucht",
+            "show": "KORTE VRIJE VLUCHT"
+          },
+          {
+            "say": "cold staging",
+            "show": "COLD STAGING"
+          }
+        ]
+      },
+      {
+        "img": [
+          "lib/starship-launch.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "SpaceX Raptor engine",
+              "Raptor rocket engine",
+              "Raptor 2 engine"
+            ],
+            "want": "a SpaceX Raptor rocket engine"
+          },
+          {
+            "q": [
+              "Super Heavy booster",
+              "SpaceX Super Heavy booster Starbase",
+              "Super Heavy Booster 7"
+            ],
+            "want": "a Super Heavy booster, the tall stainless steel first stage of Starship"
+          }
+        ],
+        "text": "Starship draait dat om. Tegen het einde van zijn brandtijd zet Super Heavy al zijn drieëndertig Raptor-motoren uit, op drie na. Het schip ontsteekt zijn zes Raptors terwijl het nog vastzit, en de stuwkracht duwt het van de booster af.",
+        "pop": [
+          {
+            "say": "draait dat om",
+            "show": "ANDERSOM"
+          },
+          {
+            "say": "op drie na",
+            "show": "VAN 33 NAAR 3"
+          },
+          {
+            "say": "zes Raptors",
+            "show": "SCHIP: 6 MOTOREN"
+          },
+          {
+            "say": "nog vastzit",
+            "show": "NOG VAST"
+          },
+          {
+            "say": "duwt het",
+            "show": "AFZETTEN"
+          }
+        ]
+      },
+      {
+        "img": [
+          "lib/starship-pad.jpg",
+          "spacex-7.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Super Heavy booster",
+              "SpaceX Super Heavy booster Starbase",
+              "Super Heavy Booster 7"
+            ],
+            "want": "a Super Heavy booster, the tall stainless steel first stage of Starship"
+          },
+          {
+            "q": [
+              "Starbase launch tower",
+              "Starship launch tower Boca Chica",
+              "Starbase orbital launch mount"
+            ],
+            "want": "the tall steel Starship launch tower at Starbase, Texas"
+          }
+        ],
+        "text": "Al dat vuur moet ergens heen. Daarom zit bovenop de booster een kort stuk vol openingen: de hot stage ring. Daardoor ontsnappen de vlammen zijwaarts, en de ring beschermt de bovenkant van de tank. Maar een gepantserde ring vol gaten kost gewicht. En gewicht is precies waar raketbouwers het hardst tegen vechten.",
+        "pop": [
+          {
+            "say": "ergens heen",
+            "show": "WAAR NAARTOE?"
+          },
+          {
+            "say": "vol openingen",
+            "show": "VOL GATEN"
+          },
+          {
+            "say": "hot stage ring",
+            "show": "HOT STAGE RING"
+          },
+          {
+            "say": "zijwaarts",
+            "show": "VLAMMEN OPZIJ"
+          },
+          {
+            "say": "kost gewicht",
+            "show": "KOST GEWICHT"
+          }
+        ]
+      },
+      {
+        "img": [
+          "lib/starship-launch.jpg"
+        ],
+        "head": "Dus waarom kiest SpaceX voor de moeilijke weg?",
+        "pop": [
+          {
+            "say": "",
+            "show": "WAAROM MOEILIJK?"
+          }
+        ]
+      },
+      {
+        "img": [
+          "spacex-7.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Earth from the International Space Station",
+              "Earth limb from orbit",
+              "Gulf of Mexico from space"
+            ],
+            "want": "the curve of the Earth seen from space"
+          },
+          {
+            "q": [
+              "Starship launch",
+              "Starship integrated flight test launch",
+              "Super Heavy liftoff"
+            ],
+            "want": "a Starship rocket lifting off from Starbase"
+          }
+        ],
+        "text": "Omdat een raket die even niet duwt, al is het maar een paar seconden, snelheid verliest aan de zwaartekracht. Bij cold staging is er een gat waarin geen motor brandt. De raket stijgt nog, maar de zwaartekracht trekt hem terug. Elk beetje snelheid dat je daar verliest, moet je later terugwinnen, met extra brandstof.",
+        "pop": [
+          {
+            "say": "niet duwt",
+            "show": "NIET DUWEN"
+          },
+          {
+            "say": "paar seconden",
+            "show": "PAAR SECONDEN"
+          },
+          {
+            "say": "snelheid verliest",
+            "show": "SNELHEID KWIJT"
+          },
+          {
+            "say": "geen motor brandt",
+            "show": "GEEN MOTOR"
+          },
+          {
+            "say": "trekt hem terug",
+            "show": "ZWAARTEKRACHT"
+          },
+          {
+            "say": "extra brandstof",
+            "show": "EXTRA BRANDSTOF"
+          }
+        ]
+      },
+      {
+        "img": [
+          "spacex-8.jpg",
+          "steel-tubes.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "SpaceX Raptor engine",
+              "Raptor rocket engine",
+              "Raptor 2 engine"
+            ],
+            "want": "a SpaceX Raptor rocket engine"
+          }
+        ],
+        "text": "Er is ook een stiekemer probleem. Zonder stuwkracht gaat de vloeibare brandstof in de bovenste trap zweven, weg van de afvoer onderin de tanks. Een motor heeft bij de start vloeistof nodig, geen gasbellen. Veel raketten gebruiken daarom eerst kleine extra stuwraketjes, alleen om de brandstof naar beneden te drukken. Bij hot staging blijft de raket versnellen, dus de brandstof blijft precies waar de motoren hem nodig hebben.",
+        "pop": [
+          {
+            "say": "stiekemer probleem",
+            "show": "STIEKEM PROBLEEM"
+          },
+          {
+            "say": "zweven",
+            "show": "BRANDSTOF ZWEEFT"
+          },
+          {
+            "say": "geen gasbellen",
+            "show": "GEEN BELLEN"
+          },
+          {
+            "say": "extra stuwraketjes",
+            "show": "EXTRA RAKETJES"
+          },
+          {
+            "say": "blijft de raket versnellen",
+            "show": "ALTIJD VERSNELLEN"
+          },
+          {
+            "say": "nodig hebben",
+            "show": "BRANDSTOF OP ZIJN PLEK"
+          }
+        ]
+      },
+      {
+        "img": [
+          "lib/starship-booster-catch.jpg",
+          "gen/spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story-x3-11022028.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Starship Integrated Flight Test 2",
+              "Starship flight test 2 launch November 2023",
+              "Starship IFT-2"
+            ],
+            "want": "Starship and Super Heavy on its second test flight in November 2023"
+          }
+        ],
+        "text": "Musk schatte de winst op ongeveer tien procent meer lading naar een baan om de aarde. Dat is zijn schatting, geen gepubliceerde meting. En er is een bonus: de duw van de uitlaatgassen van het schip helpt de booster om te keren voor de terugweg. Het klinkt gewaagd. Maar SpaceX heeft het niet zelf bedacht.",
+        "pop": [
+          {
+            "say": "tien procent",
+            "show": "+10% LADING"
+          },
+          {
+            "say": "zijn schatting",
+            "show": "SCHATTING VAN MUSK"
+          },
+          {
+            "say": "een bonus",
+            "show": "EEN BONUS"
+          },
+          {
+            "say": "om te keren",
+            "show": "BOOSTER KEERT OM"
+          },
+          {
+            "say": "niet zelf bedacht",
+            "show": "NIET NIEUW"
+          }
+        ]
+      },
+      {
+        "photo": [
+          {
+            "q": [
+              "Gemini Titan II launch",
+              "Titan II GLV launch",
+              "Gemini 3 launch Titan"
+            ],
+            "want": "a Titan II rocket launching a Gemini capsule in the 1960s"
+          }
+        ],
+        "head": "Wie gebruikte hot staging al vóór Starship?",
+        "pop": [
+          {
+            "say": "",
+            "show": "WIE WAS EERST?"
+          }
+        ]
+      },
+      {
+        "photo": [
+          {
+            "q": [
+              "Gemini Titan II launch",
+              "Titan II GLV launch",
+              "Gemini 3 launch Titan"
+            ],
+            "want": "a Titan II rocket launching a Gemini capsule in the 1960s"
+          },
+          {
+            "q": [
+              "Titan II GLV on pad",
+              "Gemini Titan launch vehicle pad 19",
+              "Titan II rocket"
+            ],
+            "want": "a Titan II Gemini launch vehicle standing on its pad"
+          },
+          {
+            "q": [
+              "Gemini spacecraft",
+              "Gemini capsule orbit",
+              "Gemini 7 from Gemini 6"
+            ],
+            "want": "a two-person Gemini spacecraft"
+          }
+        ],
+        "text": "Raketbouwers doen het al sinds de jaren zestig. Het bekendste Amerikaanse voorbeeld is de Titan twee, de raket waarmee NASA tussen 1964 en 1966 zijn Gemini-capsules voor twee astronauten lanceerde. De tweede trap ging aan terwijl de trappen nog aan elkaar vastzaten. Het hete gas ontsnapte via zestien rechthoekige openingen bij de verbinding. Van een afstand leek het alsof er een plak uit de raket ontbrak.",
+        "pop": [
+          {
+            "say": "jaren zestig",
+            "show": "SINDS DE JAREN 60"
+          },
+          {
+            "say": "Titan twee",
+            "show": "TITAN II"
+          },
+          {
+            "say": "Gemini-capsules",
+            "show": "GEMINI"
+          },
+          {
+            "say": "nog aan elkaar vastzaten",
+            "show": "NOG VAST"
+          },
+          {
+            "say": "zestien rechthoekige openingen",
+            "show": "16 OPENINGEN"
+          },
+          {
+            "say": "plak uit de raket",
+            "show": "STUK KWIJT?"
+          }
+        ]
+      },
+      {
+        "photo": [
+          {
+            "q": [
+              "Soyuz rocket launch",
+              "Soyuz-FG launch Baikonur",
+              "Soyuz-2 launch"
+            ],
+            "want": "a Russian Soyuz rocket launching"
+          },
+          {
+            "q": [
+              "Soyuz rocket on launch pad Baikonur",
+              "Soyuz rocket rollout",
+              "Soyuz TMA rocket pad"
+            ],
+            "want": "a Russian Soyuz rocket on its launch pad"
+          }
+        ],
+        "img": [
+          "lib/starship-pad.jpg"
+        ],
+        "text": "Ook Russische raketten doen het al tientallen jaren. Je herkent ze vaak aan het open vakwerk tussen twee trappen, dat ruimte laat voor de vlammen van de bovenste motor. Wat is er dan nieuw aan Starship? De schaal. Toen het voor het eerst lukte, noemde SpaceX het de eerste geslaagde hot staging van een voertuig van dit formaat.",
+        "pop": [
+          {
+            "say": "Russische raketten",
+            "show": "RUSSISCHE RAKETTEN"
+          },
+          {
+            "say": "tientallen jaren",
+            "show": "AL DECENNIA"
+          },
+          {
+            "say": "open vakwerk",
+            "show": "OPEN VAKWERK"
+          },
+          {
+            "say": "De schaal",
+            "show": "DE SCHAAL"
+          },
+          {
+            "say": "dit formaat",
+            "show": "NOG NOOIT ZO GROOT"
+          }
+        ]
+      },
+      {
+        "photo": [
+          {
+            "q": [
+              "Starship Integrated Flight Test 1",
+              "Starship flight test April 2023",
+              "Starship IFT-1 launch"
+            ],
+            "want": "the first Starship test flight in April 2023"
+          }
+        ],
+        "head": "Hoe leerde Starship hot staging?",
+        "pop": [
+          {
+            "say": "",
+            "show": "HOE HET BEGON"
+          }
+        ]
+      },
+      {
+        "photo": [
+          {
+            "q": [
+              "Starship Integrated Flight Test 1",
+              "Starship flight test April 2023",
+              "Starship IFT-1 launch"
+            ],
+            "want": "the first Starship test flight in April 2023"
+          },
+          {
+            "q": [
+              "Super Heavy booster",
+              "SpaceX Super Heavy booster Starbase",
+              "Super Heavy Booster 7"
+            ],
+            "want": "a Super Heavy booster, the tall stainless steel first stage of Starship"
+          }
+        ],
+        "text": "Het was een late wijziging, nadat de eerste vlucht misging. Bij vlucht één, in april 2023, gingen booster en schip niet uit elkaar zoals gepland. SpaceX ontwierp de hele scheiding opnieuw. Musk beschreef het nieuwe verlengstuk op de booster als bijna helemaal ventilatieopeningen.",
+        "pop": [
+          {
+            "say": "late wijziging",
+            "show": "LATE WIJZIGING"
+          },
+          {
+            "say": "vlucht één",
+            "show": "VLUCHT 1"
+          },
+          {
+            "say": "april 2023",
+            "show": "APRIL 2023"
+          },
+          {
+            "say": "niet uit elkaar",
+            "show": "NIET LOSGEKOMEN"
+          },
+          {
+            "say": "ventilatieopeningen",
+            "show": "BIJNA ALLEEN GATEN"
+          }
+        ]
+      },
+      {
+        "photo": [
+          {
+            "q": [
+              "Starship Integrated Flight Test 2",
+              "Starship flight test 2 launch November 2023",
+              "Starship IFT-2"
+            ],
+            "want": "Starship and Super Heavy on its second test flight in November 2023"
+          },
+          {
+            "q": [
+              "Starship launch",
+              "Starship integrated flight test launch",
+              "Super Heavy liftoff"
+            ],
+            "want": "a Starship rocket lifting off from Starbase"
+          }
+        ],
+        "img": [
+          "gen/why-starship-fires-engines-at-own-booster-hot-staging-explained.jpg"
+        ],
+        "text": "Bij vlucht twee, op 18 november 2023, werkte het. De booster schakelde terug, alle zes motoren van het schip gingen aan, en het schip vloog door naar de ruimte. De booster brak kort daarna uit elkaar, op weg terug. Maar de scheiding zelf had gewerkt, en sindsdien hoort hot staging bij elke vlucht.",
+        "pop": [
+          {
+            "say": "vlucht twee",
+            "show": "VLUCHT 2"
+          },
+          {
+            "say": "18 november 2023",
+            "show": "18 NOV 2023"
+          },
+          {
+            "say": "werkte het",
+            "show": "HET WERKTE"
+          },
+          {
+            "say": "alle zes",
+            "show": "6 MOTOREN AAN"
+          },
+          {
+            "say": "brak kort daarna",
+            "show": "BOOSTER VERLOREN"
+          },
+          {
+            "say": "elke vlucht",
+            "show": "ELKE VLUCHT"
+          }
+        ]
+      },
+      {
+        "img": [
+          "lib/starship-booster-catch.jpg",
+          "spacex-7.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Super Heavy booster",
+              "SpaceX Super Heavy booster Starbase",
+              "Super Heavy Booster 7"
+            ],
+            "want": "a Super Heavy booster, the tall stainless steel first stage of Starship"
+          }
+        ],
+        "text": "En de ring bleef veranderen. Bij de tweede generatie Starship was het een los onderdeel dat na elke lancering in zee viel. Bij de derde generatie, die vlucht vijftien vliegt, zit de ring vast op de booster en blijft hij erop. De nieuwe booster heeft ook drie roostervinnen in plaats van vier, elk zo'n anderhalf keer zo groot, en lager geplaatst, buiten de hitte van de scheiding.",
+        "pop": [
+          {
+            "say": "bleef veranderen",
+            "show": "STEEDS ANDERS"
+          },
+          {
+            "say": "in zee viel",
+            "show": "IN ZEE"
+          },
+          {
+            "say": "derde generatie",
+            "show": "VERSIE 3"
+          },
+          {
+            "say": "blijft hij erop",
+            "show": "RING BLIJFT OP"
+          },
+          {
+            "say": "drie roostervinnen",
+            "show": "3 ROOSTERVINNEN"
+          },
+          {
+            "say": "buiten de hitte",
+            "show": "UIT DE HITTE"
+          }
+        ]
+      },
+      {
+        "img": [
+          "lib/starship-booster-catch.jpg"
+        ],
+        "head": "Wat betekent hot staging voor het vangen van beide trappen?",
+        "pop": [
+          {
+            "say": "",
+            "show": "BEIDE VANGEN"
+          }
+        ]
+      },
+      {
+        "img": [
+          "lib/starship-booster-catch.jpg",
+          "gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Starbase launch tower",
+              "Starship launch tower Boca Chica",
+              "Starbase orbital launch mount"
+            ],
+            "want": "the tall steel Starship launch tower at Starbase, Texas"
+          }
+        ],
+        "text": "Elke vangst begint met een schone scheiding. Na de scheiding keert de booster om, vuurt zijn motoren af om terug te vliegen, en moet binnen enkele minuten na de start door de toren worden gevangen. Als het schip thuiskomt, staat zijn booster dus allang weer bij de toren. En een ring die op de booster blijft, is weer een onderdeel minder dat bij elke vlucht wordt weggegooid.",
+        "pop": [
+          {
+            "say": "schone scheiding",
+            "show": "SCHONE SCHEIDING"
+          },
+          {
+            "say": "keert de booster om",
+            "show": "OMKEREN"
+          },
+          {
+            "say": "binnen enkele minuten",
+            "show": "BINNEN MINUTEN"
+          },
+          {
+            "say": "allang weer",
+            "show": "AL THUIS"
+          },
+          {
+            "say": "onderdeel minder",
+            "show": "ÉÉN ONDERDEEL MINDER"
+          }
+        ]
+      },
+      {
+        "img": [
+          "gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute-x2-11041157.jpg",
+          "gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute-x3-11041200.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Earth from the International Space Station",
+              "Earth limb from orbit",
+              "Gulf of Mexico from space"
+            ],
+            "want": "the curve of the Earth seen from space"
+          }
+        ],
+        "text": "Het schip heeft de zwaardere taak. Het vliegt door naar een baan om de aarde en moet de terugkeer in de dampkring overleven voor zijn eigen vangpoging, iets wat nog geen enkele Starship heeft gedaan. Musk schat de kans dat het bij de eerste poging lukt op zo'n vijftig tot zestig procent.",
+        "pop": [
+          {
+            "say": "zwaardere taak",
+            "show": "ZWAARDERE TAAK"
+          },
+          {
+            "say": "terugkeer in de dampkring",
+            "show": "TERUGKEER OVERLEVEN"
+          },
+          {
+            "say": "nog geen enkele",
+            "show": "NOG NOOIT GEDAAN"
+          },
+          {
+            "say": "vijftig tot zestig procent",
+            "show": "50-60% KANS"
+          }
+        ]
+      },
+      {
+        "img": [
+          "lib/musk-chess-companies.jpg",
+          "lib/musk-silhouette-rocket.jpg",
+          "gen/why-starship-fires-engines-at-own-booster-hot-staging-explained.jpg"
+        ],
+        "text": "Voor Tesla-fans is dit meer dan een ruimtevaartverhaal. Tesla en SpaceX hebben speciale commissies ingesteld om een mogelijke fusie te onderzoeken, en een volledig herbruikbare Starship is een van de grootste drijfveren achter de waarde van SpaceX. Kijk dus bij de volgende lancering eens naar het moment na zo'n tweeënhalve minuut. Die flits tussen de trappen is geen explosie. Het is het schip dat zich afzet.",
+        "pop": [
+          {
+            "say": "Tesla-fans",
+            "show": "TESLA-FANS"
+          },
+          {
+            "say": "mogelijke fusie",
+            "show": "TESLA + SPACEX?"
+          },
+          {
+            "say": "volledig herbruikbare",
+            "show": "VOLLEDIG HERBRUIKBAAR"
+          },
+          {
+            "say": "tweeënhalve minuut",
+            "show": "LET OP NA 2,5 MIN"
+          },
+          {
+            "say": "geen explosie",
+            "show": "GEEN EXPLOSIE"
+          },
+          {
+            "say": "zich afzet",
+            "show": "HET SCHIP ZET AF"
+          }
+        ]
+      }
+    ],
+    "yt_title_en": "Starship Hot Staging Explained: Why It Fires Into Its Own Booster",
+    "yt_title_nl": "Starship Hot Staging Uitgelegd: Waarom Hij in Zijn Eigen Booster Vuurt"
+  },
   "en": {
-   "sub": "WHY DOES STARSHIP",
-   "text": "FIRE AT ITS BOOSTER?"
+    "title": "Why Does Starship Fire Its Engines at Its Own Booster? Hot Staging Explained",
+    "description": "Starship lights its six engines while it is still attached to the Super Heavy booster. Here is how hot staging works, why it adds payload, who did it first and what it means for catching both stages.",
+    "body": "<p>On Starship Flight 15, planned for November 2026, SpaceX wants to catch both halves of its giant rocket with the launch tower for the first time: the Super Heavy booster and the ship on top. Before either catch can happen, the two halves have to part ways, roughly two and a half minutes after liftoff and high above the Gulf of Mexico. The way they do that looks like a mistake. The ship lights its own engines while it is still sitting on the booster, so its flames blast straight down onto the stage below. That booster has 33 engines and tanks that held thousands of tonnes of methane and liquid oxygen a moment earlier. Firing rocket engines into another rocket sounds like the quickest way to destroy both.</p>\n<h2>What is hot staging, and how does Starship do it?</h2>\n<p><strong>Hot staging means the upper stage starts its engines before it lets go of the stage below.</strong> Most rockets do it the other way round, which engineers call cold staging: the first stage shuts down, the stages are pushed apart, there is a short coast, and only then does the upper engine light.</p>\n<p>Starship reverses that order. Near the end of its burn, Super Heavy powers down all but three of its 33 Raptor engines. The ship then ignites its six Raptors while it is still attached, and their thrust pushes it off the booster. All that fire needs a way out, so a short section on top of the booster, the hot stage ring, is full of openings that let the exhaust escape sideways. The ring also works as a shield for the top of the booster's tank.</p>\n<p>Building an armoured, vented ring into a rocket adds weight, and weight is the one thing rocket engineers fight hardest.</p>\n<h2>So why would SpaceX choose the harder way?</h2>\n<p><strong>Because a rocket that stops pushing, even for a few seconds, starts losing speed to gravity.</strong> In cold staging there is a gap where no engine is firing. The rocket is still climbing, but gravity keeps pulling it back, and every metre per second lost has to be won back later with extra fuel.</p>\n<p>There is a second, less obvious problem. Without thrust, the liquid propellant in the upper stage's tanks starts to float away from the drains at the bottom. Engines need liquid, not gas bubbles, at the moment they start. Many cold-staged rockets fire small extra thrusters first, just to settle the propellant. In hot staging the vehicle never stops accelerating, so the propellant stays where the engines need it.</p>\n<ul>\n<li><strong>No coast:</strong> no unpowered seconds, so less speed lost to gravity.</li>\n<li><strong>Settled propellant:</strong> the ship's engines start with fuel already pressed against the drains.</li>\n<li><strong>More payload:</strong> Musk estimated the gain at about 10% more mass to orbit. That is his estimate, not a published measurement.</li>\n<li><strong>A head start home:</strong> the push from the ship's exhaust helps start the booster's flip for its return.</li>\n</ul>\n<p>The idea sounds daring, yet SpaceX did not invent it.</p>\n<h2>Who used hot staging before Starship?</h2>\n<p><strong>Rocket builders have been doing it since the 1960s.</strong> The best-known American example is the Titan II, the missile NASA used to launch its two-person Gemini capsules between 1964 and 1966. Its second-stage engine fired while the stages were still joined, and the gases escaped through sixteen rectangular ports near the joint. From a distance it looked as if a slice of the rocket was missing.</p>\n<p>Russian rockets have hot staged for decades too. You can often spot them by the open lattice frame between two stages, which leaves room for the upper engine's flames.</p>\n<p>What is new is the size. When it worked on Starship for the first time, SpaceX called it the first successful hot staging of a vehicle this large. Getting there was anything but smooth.</p>\n<h2>How did Starship learn to hot stage?</h2>\n<p><strong>It was a late change, made after the stages on the first flight refused to come apart.</strong> On Flight 1 in April 2023, the booster and ship never separated as planned. SpaceX redesigned the separation, and Musk described the new booster extension as almost entirely vents.</p>\n<p>On Flight 2, on November 18, 2023, it worked: the booster throttled down, all six ship engines lit, and the ship flew on to space. The booster broke apart shortly afterwards during its return burn, but the staging itself had done its job, and it has been part of every flight since.</p>\n<p>The ring kept evolving. On the second-generation Starship it was a separate piece that dropped away and fell into the sea. On the third generation, which flies Flight 15, the ring is fixed to the top of the booster and stays with it. The new booster also has three grid fins instead of four, each about half as large again, mounted lower to keep them out of the staging heat.</p>\n<p>That last change matters for the boldest part of Flight 15.</p>\n<h2>What does hot staging mean for catching both stages?</h2>\n<p><strong>Every catch starts with a clean separation, and a ring that stays on the booster is one less part thrown away.</strong> After staging, the booster flips, fires its engines to head back, and is meant to be caught by the tower within minutes of liftoff. So by the time the ship comes home, its booster is already back at the tower. The ship carries on to orbit and still has to survive re-entry before its own catch attempt, a first for any Starship.</p>\n<p>Musk has put the chance of catching the ship on the first try at around 50 to 60 percent. For Tesla fans, it is more than a space story: Tesla and SpaceX have set up special committees to study a possible merger, and a fully reusable Starship is one of the biggest drivers of SpaceX's value.</p>\n<p>So the next time you watch a Starship launch, keep an eye on the moment about two and a half minutes in. The flash between the two stages is not an explosion. It is the ship pushing off.</p>"
   },
   "nl": {
-   "sub": "WAAROM VUURT STARSHIP",
-   "text": "OP ZIJN BOOSTER?"
-  }
- },
- "short": {
-  "hook": "contrast",
-  "en": "Starship fires its engines straight into its own booster. On purpose. Most rockets let go first, and only then light the next stage. Starship does it backwards. The booster throttles down to just THREE of its 33 engines. And while it is still attached, the ship lights all six of its own. So where does all that fire go? Out through a ring full of vents, built to take the blast. Why take the risk? Because a rocket that stops pushing starts losing speed to gravity. Hot staging never stops pushing. Musk's estimate: about ten percent more payload to orbit. And it is not even new. NASA's Gemini astronauts rode a rocket that did it in the sixties. Starship just does it on the biggest rocket ever built.",
-  "nl": "Starship vuurt zijn motoren recht in zijn eigen booster. Expres. De meeste raketten laten eerst los, en starten pas daarna de volgende trap. Starship doet het andersom. De booster schakelt terug naar maar DRIE van zijn drieëndertig motoren. En terwijl het nog vastzit, ontsteekt het schip alle zes de zijne. Waar blijft al dat vuur? Het ontsnapt via een ring vol gaten, gebouwd om de klap op te vangen. Waarom dat risico? Omdat een raket die stopt met duwen, snelheid verliest aan de zwaartekracht. Bij hot staging stopt het duwen nooit. Musk schat de winst op zo'n tien procent meer lading naar de ruimte. En nieuw is het niet eens. De Gemini-astronauten van NASA vlogen in de jaren zestig al op een raket die het deed. Starship doet het alleen op de grootste raket ooit gebouwd.",
-  "yt_title_en": "Starship Fires Up Before It Lets Go",
-  "yt_title_nl": "Starship Start Al Voordat Hij Loslaat",
-  "story": [
-   {
-    "part": "hook",
-    "text": "Starship fires its engines straight into its own booster. On purpose.",
-    "scene": "the stainless steel Starship upper stage lifting off the top of its Super Heavy booster high above the Gulf of Mexico, its engines firing bright flames that burst sideways out of a vented ring between the two stages, dark blue sky near space, curve of the Earth below",
-    "pop": [
-     {
-      "say": "fires its engines",
-      "show": "FIRE!"
-     },
-     {
-      "say": "its own booster",
-      "show": "AT ITS OWN BOOSTER"
-     },
-     {
-      "say": "On purpose",
-      "show": "ON PURPOSE"
-     }
-    ]
-   },
-   {
-    "part": "hook",
-    "text": "Most rockets let go first, and only then light the next stage.",
-    "img": "spacex-6.jpg",
-    "pop": [
-     {
-      "say": "let go first",
-      "show": "LET GO FIRST"
-     },
-     {
-      "say": "only then",
-      "show": "THEN FIRE"
-     }
-    ]
-   },
-   {
-    "part": "tension",
-    "text": "Starship does it backwards. The booster throttles down to just THREE of its 33 engines.",
-    "lib": [
-     "starship-launch.jpg"
-    ],
-    "pop": [
-     {
-      "say": "backwards",
-      "show": "BACKWARDS"
-     },
-     {
-      "say": "THREE",
-      "show": "33 ENGINES"
-     },
-     {
-      "say": "33 engines",
-      "show": "DOWN TO 3"
-     }
-    ]
-   },
-   {
-    "part": "tension",
-    "text": "And while it is still attached, the ship lights all six of its own.",
-    "scene": "close view of the join between the Starship upper stage and its Super Heavy booster in flight, the ship's engines just igniting, bright flames bursting out sideways through rectangular vents in the ring between the stages, dark blue sky",
-    "pop": [
-     {
-      "say": "still attached",
-      "show": "STILL ATTACHED"
-     },
-     {
-      "say": "all six",
-      "show": "6 ENGINES LIT"
-     }
-    ]
-   },
-   {
-    "part": "tension",
-    "text": "So where does all that fire go? Out through a ring full of vents, built to take the blast.",
-    "scene": "the top of a stainless steel Super Heavy booster with a short ring of rectangular vent openings all around it, glowing orange-hot as flames pour out sideways, the ship's engine plume rising away above, high altitude, dark sky",
-    "pop": [
-     {
-      "say": "where does all that fire go",
-      "show": "WHERE DOES IT GO?"
-     },
-     {
-      "say": "ring full of vents",
-      "show": "A RING OF VENTS"
-     },
-     {
-      "say": "take the blast",
-      "show": "TAKES THE BLAST"
-     }
-    ]
-   },
-   {
-    "part": "tension",
-    "text": "Why take the risk? Because a rocket that stops pushing starts losing speed to gravity.",
-    "lib": [
-     "starship-pad.jpg"
-    ],
-    "pop": [
-     {
-      "say": "Why take the risk",
-      "show": "WHY RISK IT?"
-     },
-     {
-      "say": "stops pushing",
-      "show": "STOP PUSHING"
-     },
-     {
-      "say": "losing speed",
-      "show": "LOSE SPEED"
-     }
-    ]
-   },
-   {
-    "part": "payoff",
-    "text": "Hot staging never stops pushing. Musk's estimate: about ten percent more payload to orbit.",
-    "lib": [
-     "starship-launch.jpg"
-    ],
-    "pop": [
-     {
-      "say": "never stops",
-      "show": "NEVER STOPS"
-     },
-     {
-      "say": "Musk's estimate",
-      "show": "MUSK'S ESTIMATE"
-     },
-     {
-      "say": "ten percent",
-      "show": "+10% PAYLOAD"
-     }
-    ]
-   },
-   {
-    "part": "payoff",
-    "text": "And it is not even new. NASA's Gemini astronauts rode a rocket that did it in the sixties.",
-    "img": "spacex-7.jpg",
-    "pop": [
-     {
-      "say": "not even new",
-      "show": "NOT NEW"
-     },
-     {
-      "say": "Gemini astronauts",
-      "show": "GEMINI"
-     },
-     {
-      "say": "sixties",
-      "show": "THE 1960s"
-     }
-    ]
-   },
-   {
-    "part": "payoff",
-    "text": "Starship just does it on the biggest rocket ever built.",
-    "lib": [
-     "starship-booster-catch.jpg"
-    ],
-    "pop": [
-     {
-      "say": "biggest rocket",
-      "show": "BIGGEST ROCKET"
-     },
-     {
-      "say": "ever built",
-      "show": "EVER BUILT"
-     }
-    ]
-   }
-  ]
- },
- "video": {
-  "en": [
-   {
-    "text": "About two and a half minutes after liftoff, Starship fires its engines straight into its own booster. On purpose. And it has to get that moment right before SpaceX can try the boldest thing on Flight 15: catching both halves of the rocket with the tower. The booster below has 33 engines and tanks that were full of fuel only minutes earlier. Firing rocket flames into another rocket sounds like the fastest way to blow both of them up.",
-    "img": [
-     "gen/why-starship-fires-engines-at-own-booster-hot-staging-explained.jpg",
-     "lib/starship-launch.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Starship launch",
-       "Starship integrated flight test launch",
-       "Super Heavy liftoff"
-      ],
-      "want": "a Starship rocket lifting off from Starbase"
-     }
-    ],
-    "pop": [
-     {
-      "say": "two and a half minutes",
-      "show": "2.5 MINUTES IN"
-     },
-     {
-      "say": "into its own booster",
-      "show": "INTO ITS OWN BOOSTER"
-     },
-     {
-      "say": "On purpose",
-      "show": "ON PURPOSE"
-     },
-     {
-      "say": "Flight 15",
-      "show": "FLIGHT 15"
-     },
-     {
-      "say": "both halves",
-      "show": "CATCH BOTH"
-     },
-     {
-      "say": "33 engines",
-      "show": "33 ENGINES"
-     },
-     {
-      "say": "blow both of them up",
-      "show": "BLOW BOTH UP?"
-     }
-    ]
-   },
-   {
-    "head": "What is hot staging, and how does Starship do it?",
-    "img": [
-     "lib/starship-pad.jpg"
-    ],
-    "pop": [
-     {
-      "say": "",
-      "show": "HOT STAGING?"
-     }
-    ]
-   },
-   {
-    "text": "Hot staging means the upper stage starts its engines before it lets go of the stage below. Most rockets do the opposite. The first stage shuts down, the stages are pushed apart, there is a short coast, and only then does the next engine light. Engineers call that cold staging.",
-    "img": [
-     "spacex-6.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Soyuz rocket launch",
-       "Soyuz-FG launch Baikonur",
-       "Soyuz-2 launch"
-      ],
-      "want": "a Russian Soyuz rocket launching"
-     },
-     {
-      "q": [
-       "Titan II GLV on pad",
-       "Gemini Titan launch vehicle pad 19",
-       "Titan II rocket"
-      ],
-      "want": "a Titan II Gemini launch vehicle standing on its pad"
-     }
-    ],
-    "pop": [
-     {
-      "say": "before it lets go",
-      "show": "FIRE BEFORE LETTING GO"
-     },
-     {
-      "say": "the opposite",
-      "show": "MOST DO THE OPPOSITE"
-     },
-     {
-      "say": "short coast",
-      "show": "A SHORT COAST"
-     },
-     {
-      "say": "cold staging",
-      "show": "COLD STAGING"
-     }
-    ]
-   },
-   {
-    "text": "Starship turns that around. Near the end of its burn, Super Heavy powers down all but three of its 33 Raptor engines. The ship lights its six Raptors while it is still attached, and their thrust shoves it off the booster.",
-    "img": [
-     "lib/starship-launch.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "SpaceX Raptor engine",
-       "Raptor rocket engine",
-       "Raptor 2 engine"
-      ],
-      "want": "a SpaceX Raptor rocket engine"
-     },
-     {
-      "q": [
-       "Super Heavy booster",
-       "SpaceX Super Heavy booster Starbase",
-       "Super Heavy Booster 7"
-      ],
-      "want": "a Super Heavy booster, the tall stainless steel first stage of Starship"
-     }
-    ],
-    "pop": [
-     {
-      "say": "turns that around",
-      "show": "THE OTHER WAY ROUND"
-     },
-     {
-      "say": "all but three",
-      "show": "33 DOWN TO 3"
-     },
-     {
-      "say": "six Raptors",
-      "show": "SHIP: 6 ENGINES"
-     },
-     {
-      "say": "still attached",
-      "show": "STILL ATTACHED"
-     },
-     {
-      "say": "shoves it off",
-      "show": "PUSHES OFF"
-     }
-    ]
-   },
-   {
-    "text": "All that fire needs a way out. So on top of the booster sits a short section full of openings: the hot stage ring. It lets the flames escape sideways, and it shields the top of the booster's tank. But an armoured ring full of holes adds weight. And weight is the one thing rocket engineers fight hardest.",
-    "img": [
-     "lib/starship-pad.jpg",
-     "spacex-7.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Super Heavy booster",
-       "SpaceX Super Heavy booster Starbase",
-       "Super Heavy Booster 7"
-      ],
-      "want": "a Super Heavy booster, the tall stainless steel first stage of Starship"
-     },
-     {
-      "q": [
-       "Starbase launch tower",
-       "Starship launch tower Boca Chica",
-       "Starbase orbital launch mount"
-      ],
-      "want": "the tall steel Starship launch tower at Starbase, Texas"
-     }
-    ],
-    "pop": [
-     {
-      "say": "a way out",
-      "show": "A WAY OUT"
-     },
-     {
-      "say": "full of openings",
-      "show": "FULL OF VENTS"
-     },
-     {
-      "say": "hot stage ring",
-      "show": "HOT STAGE RING"
-     },
-     {
-      "say": "escape sideways",
-      "show": "FLAMES OUT SIDEWAYS"
-     },
-     {
-      "say": "adds weight",
-      "show": "ADDS WEIGHT"
-     }
-    ]
-   },
-   {
-    "head": "So why would SpaceX choose the harder way?",
-    "img": [
-     "lib/starship-launch.jpg"
-    ],
-    "pop": [
-     {
-      "say": "",
-      "show": "WHY THE HARD WAY?"
-     }
-    ]
-   },
-   {
-    "text": "Because a rocket that stops pushing, even for a few seconds, starts losing speed to gravity. In cold staging there is a gap with no engine firing. The rocket is still climbing, but gravity keeps pulling it back. Every bit of speed lost there has to be won back later, with extra fuel.",
-    "img": [
-     "spacex-7.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Earth from the International Space Station",
-       "Earth limb from orbit",
-       "Gulf of Mexico from space"
-      ],
-      "want": "the curve of the Earth seen from space"
-     },
-     {
-      "q": [
-       "Starship launch",
-       "Starship integrated flight test launch",
-       "Super Heavy liftoff"
-      ],
-      "want": "a Starship rocket lifting off from Starbase"
-     }
-    ],
-    "pop": [
-     {
-      "say": "stops pushing",
-      "show": "STOPS PUSHING"
-     },
-     {
-      "say": "few seconds",
-      "show": "A FEW SECONDS"
-     },
-     {
-      "say": "losing speed",
-      "show": "LOSING SPEED"
-     },
-     {
-      "say": "no engine firing",
-      "show": "NO ENGINE"
-     },
-     {
-      "say": "pulling it back",
-      "show": "GRAVITY PULLS"
-     },
-     {
-      "say": "extra fuel",
-      "show": "EXTRA FUEL"
-     }
-    ]
-   },
-   {
-    "text": "There is a sneakier problem too. Without thrust, the liquid fuel in the upper stage starts to float away from the drains at the bottom of the tanks. Engines need liquid when they start, not gas bubbles. So many rockets fire small extra thrusters first, just to settle the fuel. With hot staging, the rocket never stops accelerating, so the fuel stays right where the engines need it.",
-    "img": [
-     "spacex-8.jpg",
-     "steel-tubes.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "SpaceX Raptor engine",
-       "Raptor rocket engine",
-       "Raptor 2 engine"
-      ],
-      "want": "a SpaceX Raptor rocket engine"
-     }
-    ],
-    "pop": [
-     {
-      "say": "sneakier problem",
-      "show": "SNEAKIER PROBLEM"
-     },
-     {
-      "say": "float away",
-      "show": "FUEL FLOATS"
-     },
-     {
-      "say": "not gas bubbles",
-      "show": "NO BUBBLES"
-     },
-     {
-      "say": "small extra thrusters",
-      "show": "EXTRA THRUSTERS"
-     },
-     {
-      "say": "never stops accelerating",
-      "show": "NEVER STOPS"
-     },
-     {
-      "say": "where the engines need it",
-      "show": "FUEL IN PLACE"
-     }
-    ]
-   },
-   {
-    "text": "Musk estimated the gain at about ten percent more payload to orbit. That is his estimate, not a published measurement. And there is a bonus: the push from the ship's exhaust helps start the booster's flip for its trip home. The idea sounds daring. But SpaceX did not invent it.",
-    "img": [
-     "lib/starship-booster-catch.jpg",
-     "gen/spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story-x3-11022028.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Starship Integrated Flight Test 2",
-       "Starship flight test 2 launch November 2023",
-       "Starship IFT-2"
-      ],
-      "want": "Starship and Super Heavy on its second test flight in November 2023"
-     }
-    ],
-    "pop": [
-     {
-      "say": "ten percent",
-      "show": "+10% PAYLOAD"
-     },
-     {
-      "say": "his estimate",
-      "show": "MUSK'S ESTIMATE"
-     },
-     {
-      "say": "a bonus",
-      "show": "A BONUS"
-     },
-     {
-      "say": "booster's flip",
-      "show": "BOOSTER FLIPS"
-     },
-     {
-      "say": "did not invent it",
-      "show": "NOT NEW"
-     }
-    ]
-   },
-   {
-    "head": "Who used hot staging before Starship?",
-    "photo": [
-     {
-      "q": [
-       "Gemini Titan II launch",
-       "Titan II GLV launch",
-       "Gemini 3 launch Titan"
-      ],
-      "want": "a Titan II rocket launching a Gemini capsule in the 1960s"
-     }
-    ],
-    "pop": [
-     {
-      "say": "",
-      "show": "WHO DID IT FIRST?"
-     }
-    ]
-   },
-   {
-    "text": "Rocket builders have been doing it since the 1960s. The best-known American example is the Titan two, the rocket NASA used to launch its two-person Gemini capsules between 1964 and 1966. Its second stage fired while the stages were still joined. The hot gas escaped through sixteen rectangular ports near the joint. From a distance, it looked as if a slice of the rocket was missing.",
-    "photo": [
-     {
-      "q": [
-       "Gemini Titan II launch",
-       "Titan II GLV launch",
-       "Gemini 3 launch Titan"
-      ],
-      "want": "a Titan II rocket launching a Gemini capsule in the 1960s"
-     },
-     {
-      "q": [
-       "Titan II GLV on pad",
-       "Gemini Titan launch vehicle pad 19",
-       "Titan II rocket"
-      ],
-      "want": "a Titan II Gemini launch vehicle standing on its pad"
-     },
-     {
-      "q": [
-       "Gemini spacecraft",
-       "Gemini capsule orbit",
-       "Gemini 7 from Gemini 6"
-      ],
-      "want": "a two-person Gemini spacecraft"
-     }
-    ],
-    "pop": [
-     {
-      "say": "since the 1960s",
-      "show": "SINCE THE 1960s"
-     },
-     {
-      "say": "Titan two",
-      "show": "TITAN II"
-     },
-     {
-      "say": "Gemini capsules",
-      "show": "GEMINI"
-     },
-     {
-      "say": "still joined",
-      "show": "STILL JOINED"
-     },
-     {
-      "say": "sixteen rectangular ports",
-      "show": "16 EXHAUST PORTS"
-     },
-     {
-      "say": "slice of the rocket",
-      "show": "A MISSING SLICE?"
-     }
-    ]
-   },
-   {
-    "text": "Russian rockets have hot staged for decades as well. You can often spot them by the open lattice frame between two stages, which leaves room for the upper engine's flames. So what is new with Starship? The size. When it first worked, SpaceX called it the first successful hot staging of a vehicle this large.",
-    "photo": [
-     {
-      "q": [
-       "Soyuz rocket launch",
-       "Soyuz-FG launch Baikonur",
-       "Soyuz-2 launch"
-      ],
-      "want": "a Russian Soyuz rocket launching"
-     },
-     {
-      "q": [
-       "Soyuz rocket on launch pad Baikonur",
-       "Soyuz rocket rollout",
-       "Soyuz TMA rocket pad"
-      ],
-      "want": "a Russian Soyuz rocket on its launch pad"
-     }
-    ],
-    "img": [
-     "lib/starship-pad.jpg"
-    ],
-    "pop": [
-     {
-      "say": "Russian rockets",
-      "show": "RUSSIAN ROCKETS"
-     },
-     {
-      "say": "for decades",
-      "show": "FOR DECADES"
-     },
-     {
-      "say": "open lattice frame",
-      "show": "OPEN LATTICE"
-     },
-     {
-      "say": "The size",
-      "show": "THE SIZE"
-     },
-     {
-      "say": "this large",
-      "show": "NEVER THIS BIG"
-     }
-    ]
-   },
-   {
-    "head": "How did Starship learn to hot stage?",
-    "photo": [
-     {
-      "q": [
-       "Starship Integrated Flight Test 1",
-       "Starship flight test April 2023",
-       "Starship IFT-1 launch"
-      ],
-      "want": "the first Starship test flight in April 2023"
-     }
-    ],
-    "pop": [
-     {
-      "say": "",
-      "show": "HOW IT LEARNED"
-     }
-    ]
-   },
-   {
-    "text": "It was a late change, after the first flight went wrong. On Flight 1, in April 2023, the booster and the ship never separated as planned. SpaceX redesigned the whole separation. Musk described the new booster extension as almost entirely vents.",
-    "photo": [
-     {
-      "q": [
-       "Starship Integrated Flight Test 1",
-       "Starship flight test April 2023",
-       "Starship IFT-1 launch"
-      ],
-      "want": "the first Starship test flight in April 2023"
-     },
-     {
-      "q": [
-       "Super Heavy booster",
-       "SpaceX Super Heavy booster Starbase",
-       "Super Heavy Booster 7"
-      ],
-      "want": "a Super Heavy booster, the tall stainless steel first stage of Starship"
-     }
-    ],
-    "pop": [
-     {
-      "say": "late change",
-      "show": "A LATE CHANGE"
-     },
-     {
-      "say": "Flight 1",
-      "show": "FLIGHT 1"
-     },
-     {
-      "say": "April 2023",
-      "show": "APRIL 2023"
-     },
-     {
-      "say": "never separated",
-      "show": "NEVER SEPARATED"
-     },
-     {
-      "say": "almost entirely vents",
-      "show": "ALMOST ALL VENTS"
-     }
-    ]
-   },
-   {
-    "text": "On Flight 2, on November 18, 2023, it worked. The booster throttled down, all six ship engines lit, and the ship flew on to space. The booster broke apart shortly afterwards, on its way back. But the staging itself had done its job, and it has been part of every flight since.",
-    "photo": [
-     {
-      "q": [
-       "Starship Integrated Flight Test 2",
-       "Starship flight test 2 launch November 2023",
-       "Starship IFT-2"
-      ],
-      "want": "Starship and Super Heavy on its second test flight in November 2023"
-     },
-     {
-      "q": [
-       "Starship launch",
-       "Starship integrated flight test launch",
-       "Super Heavy liftoff"
-      ],
-      "want": "a Starship rocket lifting off from Starbase"
-     }
-    ],
-    "img": [
-     "gen/why-starship-fires-engines-at-own-booster-hot-staging-explained.jpg"
-    ],
-    "pop": [
-     {
-      "say": "Flight 2",
-      "show": "FLIGHT 2"
-     },
-     {
-      "say": "November 18, 2023",
-      "show": "NOV 18, 2023"
-     },
-     {
-      "say": "it worked",
-      "show": "IT WORKED"
-     },
-     {
-      "say": "all six",
-      "show": "6 ENGINES LIT"
-     },
-     {
-      "say": "broke apart",
-      "show": "BOOSTER LOST"
-     },
-     {
-      "say": "every flight since",
-      "show": "EVERY FLIGHT SINCE"
-     }
-    ]
-   },
-   {
-    "text": "And the ring kept changing. On the second-generation Starship, it was a separate piece that dropped away into the sea after every launch. On the third generation, the one flying Flight 15, the ring is fixed to the top of the booster and stays there. The new booster also has three grid fins instead of four, each about half as large again, and mounted lower, out of the staging heat.",
-    "img": [
-     "lib/starship-booster-catch.jpg",
-     "spacex-7.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Super Heavy booster",
-       "SpaceX Super Heavy booster Starbase",
-       "Super Heavy Booster 7"
-      ],
-      "want": "a Super Heavy booster, the tall stainless steel first stage of Starship"
-     }
-    ],
-    "pop": [
-     {
-      "say": "kept changing",
-      "show": "KEPT CHANGING"
-     },
-     {
-      "say": "into the sea",
-      "show": "INTO THE SEA"
-     },
-     {
-      "say": "third generation",
-      "show": "VERSION 3"
-     },
-     {
-      "say": "stays there",
-      "show": "RING STAYS ON"
-     },
-     {
-      "say": "three grid fins",
-      "show": "3 GRID FINS"
-     },
-     {
-      "say": "out of the staging heat",
-      "show": "OUT OF THE HEAT"
-     }
-    ]
-   },
-   {
-    "head": "What does hot staging mean for catching both stages?",
-    "img": [
-     "lib/starship-booster-catch.jpg"
-    ],
-    "pop": [
-     {
-      "say": "",
-      "show": "CATCHING BOTH"
-     }
-    ]
-   },
-   {
-    "text": "Every catch starts with a clean separation. After staging, the booster flips, fires its engines to head back, and is meant to be caught by the tower within minutes of liftoff. So by the time the ship comes home, its booster is already back at the tower. A ring that stays on the booster is also one less part thrown away on every flight.",
-    "img": [
-     "lib/starship-booster-catch.jpg",
-     "gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Starbase launch tower",
-       "Starship launch tower Boca Chica",
-       "Starbase orbital launch mount"
-      ],
-      "want": "the tall steel Starship launch tower at Starbase, Texas"
-     }
-    ],
-    "pop": [
-     {
-      "say": "clean separation",
-      "show": "CLEAN SEPARATION"
-     },
-     {
-      "say": "booster flips",
-      "show": "FLIP"
-     },
-     {
-      "say": "within minutes",
-      "show": "CAUGHT IN MINUTES"
-     },
-     {
-      "say": "already back",
-      "show": "ALREADY HOME"
-     },
-     {
-      "say": "one less part",
-      "show": "ONE LESS PART"
-     }
-    ]
-   },
-   {
-    "text": "The ship has the harder job. It carries on to orbit and has to survive re-entry before its own catch attempt, which no Starship has done yet. Musk has put the chance of catching it on the first try at around fifty to sixty percent.",
-    "img": [
-     "gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute-x2-11041157.jpg",
-     "gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute-x3-11041200.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Earth from the International Space Station",
-       "Earth limb from orbit",
-       "Gulf of Mexico from space"
-      ],
-      "want": "the curve of the Earth seen from space"
-     }
-    ],
-    "pop": [
-     {
-      "say": "harder job",
-      "show": "THE HARDER JOB"
-     },
-     {
-      "say": "survive re-entry",
-      "show": "SURVIVE RE-ENTRY"
-     },
-     {
-      "say": "no Starship has done yet",
-      "show": "NEVER DONE"
-     },
-     {
-      "say": "fifty to sixty percent",
-      "show": "50-60% CHANCE"
-     }
-    ]
-   },
-   {
-    "text": "For Tesla fans, this is more than a space story. Tesla and SpaceX have set up special committees to study a possible merger, and a fully reusable Starship is one of the biggest drivers of SpaceX's value. So next time you watch a launch, look at the moment about two and a half minutes in. That flash between the stages is not an explosion. It is the ship pushing off.",
-    "img": [
-     "lib/musk-chess-companies.jpg",
-     "lib/musk-silhouette-rocket.jpg",
-     "gen/why-starship-fires-engines-at-own-booster-hot-staging-explained.jpg"
-    ],
-    "pop": [
-     {
-      "say": "Tesla fans",
-      "show": "TESLA FANS"
-     },
-     {
-      "say": "possible merger",
-      "show": "TESLA + SPACEX?"
-     },
-     {
-      "say": "fully reusable",
-      "show": "FULLY REUSABLE"
-     },
-     {
-      "say": "two and a half minutes in",
-      "show": "WATCH 2.5 MIN IN"
-     },
-     {
-      "say": "not an explosion",
-      "show": "NOT AN EXPLOSION"
-     },
-     {
-      "say": "pushing off",
-      "show": "PUSHING OFF"
-     }
-    ]
-   }
-  ],
-  "nl": [
-   {
-    "img": [
-     "gen/why-starship-fires-engines-at-own-booster-hot-staging-explained.jpg",
-     "lib/starship-launch.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Starship launch",
-       "Starship integrated flight test launch",
-       "Super Heavy liftoff"
-      ],
-      "want": "a Starship rocket lifting off from Starbase"
-     }
-    ],
-    "text": "Zo'n tweeënhalve minuut na de start vuurt Starship zijn motoren recht in zijn eigen booster. Expres. En dat moment moet goed gaan voordat SpaceX het meest gedurfde van vlucht vijftien kan proberen: allebei de helften van de raket vangen met de toren. De booster eronder heeft drieëndertig motoren en tanks die een paar minuten eerder nog vol brandstof zaten. Raketvlammen afvuren op een andere raket klinkt als de snelste manier om ze allebei op te blazen.",
-    "pop": [
-     {
-      "say": "tweeënhalve minuut",
-      "show": "NA 2,5 MINUUT"
-     },
-     {
-      "say": "eigen booster",
-      "show": "IN EIGEN BOOSTER"
-     },
-     {
-      "say": "Expres",
-      "show": "EXPRES"
-     },
-     {
-      "say": "vlucht vijftien",
-      "show": "VLUCHT 15"
-     },
-     {
-      "say": "allebei de helften",
-      "show": "BEIDE VANGEN"
-     },
-     {
-      "say": "drieëndertig motoren",
-      "show": "33 MOTOREN"
-     },
-     {
-      "say": "allebei op te blazen",
-      "show": "ALLEBEI KAPOT?"
-     }
-    ]
-   },
-   {
-    "img": [
-     "lib/starship-pad.jpg"
-    ],
-    "head": "Wat is hot staging, en hoe doet Starship dat?",
-    "pop": [
-     {
-      "say": "",
-      "show": "HOT STAGING?"
-     }
-    ]
-   },
-   {
-    "img": [
-     "spacex-6.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Soyuz rocket launch",
-       "Soyuz-FG launch Baikonur",
-       "Soyuz-2 launch"
-      ],
-      "want": "a Russian Soyuz rocket launching"
-     },
-     {
-      "q": [
-       "Titan II GLV on pad",
-       "Gemini Titan launch vehicle pad 19",
-       "Titan II rocket"
-      ],
-      "want": "a Titan II Gemini launch vehicle standing on its pad"
-     }
-    ],
-    "text": "Bij hot staging start de bovenste trap zijn motoren al voordat hij de onderste loslaat. De meeste raketten doen het andersom. De eerste trap gaat uit, de trappen worden uit elkaar geduwd, er volgt een korte vrije vlucht en pas dan gaat de volgende motor aan. Dat heet cold staging.",
-    "pop": [
-     {
-      "say": "voordat hij de onderste loslaat",
-      "show": "VUREN VÓÓR LOSLATEN"
-     },
-     {
-      "say": "andersom",
-      "show": "MEESTAL ANDERSOM"
-     },
-     {
-      "say": "korte vrije vlucht",
-      "show": "KORTE VRIJE VLUCHT"
-     },
-     {
-      "say": "cold staging",
-      "show": "COLD STAGING"
-     }
-    ]
-   },
-   {
-    "img": [
-     "lib/starship-launch.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "SpaceX Raptor engine",
-       "Raptor rocket engine",
-       "Raptor 2 engine"
-      ],
-      "want": "a SpaceX Raptor rocket engine"
-     },
-     {
-      "q": [
-       "Super Heavy booster",
-       "SpaceX Super Heavy booster Starbase",
-       "Super Heavy Booster 7"
-      ],
-      "want": "a Super Heavy booster, the tall stainless steel first stage of Starship"
-     }
-    ],
-    "text": "Starship draait dat om. Tegen het einde van zijn brandtijd zet Super Heavy al zijn drieëndertig Raptor-motoren uit, op drie na. Het schip ontsteekt zijn zes Raptors terwijl het nog vastzit, en de stuwkracht duwt het van de booster af.",
-    "pop": [
-     {
-      "say": "draait dat om",
-      "show": "ANDERSOM"
-     },
-     {
-      "say": "op drie na",
-      "show": "VAN 33 NAAR 3"
-     },
-     {
-      "say": "zes Raptors",
-      "show": "SCHIP: 6 MOTOREN"
-     },
-     {
-      "say": "nog vastzit",
-      "show": "NOG VAST"
-     },
-     {
-      "say": "duwt het",
-      "show": "AFZETTEN"
-     }
-    ]
-   },
-   {
-    "img": [
-     "lib/starship-pad.jpg",
-     "spacex-7.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Super Heavy booster",
-       "SpaceX Super Heavy booster Starbase",
-       "Super Heavy Booster 7"
-      ],
-      "want": "a Super Heavy booster, the tall stainless steel first stage of Starship"
-     },
-     {
-      "q": [
-       "Starbase launch tower",
-       "Starship launch tower Boca Chica",
-       "Starbase orbital launch mount"
-      ],
-      "want": "the tall steel Starship launch tower at Starbase, Texas"
-     }
-    ],
-    "text": "Al dat vuur moet ergens heen. Daarom zit bovenop de booster een kort stuk vol openingen: de hot stage ring. Daardoor ontsnappen de vlammen zijwaarts, en de ring beschermt de bovenkant van de tank. Maar een gepantserde ring vol gaten kost gewicht. En gewicht is precies waar raketbouwers het hardst tegen vechten.",
-    "pop": [
-     {
-      "say": "ergens heen",
-      "show": "WAAR NAARTOE?"
-     },
-     {
-      "say": "vol openingen",
-      "show": "VOL GATEN"
-     },
-     {
-      "say": "hot stage ring",
-      "show": "HOT STAGE RING"
-     },
-     {
-      "say": "zijwaarts",
-      "show": "VLAMMEN OPZIJ"
-     },
-     {
-      "say": "kost gewicht",
-      "show": "KOST GEWICHT"
-     }
-    ]
-   },
-   {
-    "img": [
-     "lib/starship-launch.jpg"
-    ],
-    "head": "Dus waarom kiest SpaceX voor de moeilijke weg?",
-    "pop": [
-     {
-      "say": "",
-      "show": "WAAROM MOEILIJK?"
-     }
-    ]
-   },
-   {
-    "img": [
-     "spacex-7.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Earth from the International Space Station",
-       "Earth limb from orbit",
-       "Gulf of Mexico from space"
-      ],
-      "want": "the curve of the Earth seen from space"
-     },
-     {
-      "q": [
-       "Starship launch",
-       "Starship integrated flight test launch",
-       "Super Heavy liftoff"
-      ],
-      "want": "a Starship rocket lifting off from Starbase"
-     }
-    ],
-    "text": "Omdat een raket die even niet duwt, al is het maar een paar seconden, snelheid verliest aan de zwaartekracht. Bij cold staging is er een gat waarin geen motor brandt. De raket stijgt nog, maar de zwaartekracht trekt hem terug. Elk beetje snelheid dat je daar verliest, moet je later terugwinnen, met extra brandstof.",
-    "pop": [
-     {
-      "say": "niet duwt",
-      "show": "NIET DUWEN"
-     },
-     {
-      "say": "paar seconden",
-      "show": "PAAR SECONDEN"
-     },
-     {
-      "say": "snelheid verliest",
-      "show": "SNELHEID KWIJT"
-     },
-     {
-      "say": "geen motor brandt",
-      "show": "GEEN MOTOR"
-     },
-     {
-      "say": "trekt hem terug",
-      "show": "ZWAARTEKRACHT"
-     },
-     {
-      "say": "extra brandstof",
-      "show": "EXTRA BRANDSTOF"
-     }
-    ]
-   },
-   {
-    "img": [
-     "spacex-8.jpg",
-     "steel-tubes.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "SpaceX Raptor engine",
-       "Raptor rocket engine",
-       "Raptor 2 engine"
-      ],
-      "want": "a SpaceX Raptor rocket engine"
-     }
-    ],
-    "text": "Er is ook een stiekemer probleem. Zonder stuwkracht gaat de vloeibare brandstof in de bovenste trap zweven, weg van de afvoer onderin de tanks. Een motor heeft bij de start vloeistof nodig, geen gasbellen. Veel raketten gebruiken daarom eerst kleine extra stuwraketjes, alleen om de brandstof naar beneden te drukken. Bij hot staging blijft de raket versnellen, dus de brandstof blijft precies waar de motoren hem nodig hebben.",
-    "pop": [
-     {
-      "say": "stiekemer probleem",
-      "show": "STIEKEM PROBLEEM"
-     },
-     {
-      "say": "zweven",
-      "show": "BRANDSTOF ZWEEFT"
-     },
-     {
-      "say": "geen gasbellen",
-      "show": "GEEN BELLEN"
-     },
-     {
-      "say": "extra stuwraketjes",
-      "show": "EXTRA RAKETJES"
-     },
-     {
-      "say": "blijft de raket versnellen",
-      "show": "ALTIJD VERSNELLEN"
-     },
-     {
-      "say": "nodig hebben",
-      "show": "BRANDSTOF OP ZIJN PLEK"
-     }
-    ]
-   },
-   {
-    "img": [
-     "lib/starship-booster-catch.jpg",
-     "gen/spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story-x3-11022028.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Starship Integrated Flight Test 2",
-       "Starship flight test 2 launch November 2023",
-       "Starship IFT-2"
-      ],
-      "want": "Starship and Super Heavy on its second test flight in November 2023"
-     }
-    ],
-    "text": "Musk schatte de winst op ongeveer tien procent meer lading naar een baan om de aarde. Dat is zijn schatting, geen gepubliceerde meting. En er is een bonus: de duw van de uitlaatgassen van het schip helpt de booster om te keren voor de terugweg. Het klinkt gewaagd. Maar SpaceX heeft het niet zelf bedacht.",
-    "pop": [
-     {
-      "say": "tien procent",
-      "show": "+10% LADING"
-     },
-     {
-      "say": "zijn schatting",
-      "show": "SCHATTING VAN MUSK"
-     },
-     {
-      "say": "een bonus",
-      "show": "EEN BONUS"
-     },
-     {
-      "say": "om te keren",
-      "show": "BOOSTER KEERT OM"
-     },
-     {
-      "say": "niet zelf bedacht",
-      "show": "NIET NIEUW"
-     }
-    ]
-   },
-   {
-    "photo": [
-     {
-      "q": [
-       "Gemini Titan II launch",
-       "Titan II GLV launch",
-       "Gemini 3 launch Titan"
-      ],
-      "want": "a Titan II rocket launching a Gemini capsule in the 1960s"
-     }
-    ],
-    "head": "Wie gebruikte hot staging al vóór Starship?",
-    "pop": [
-     {
-      "say": "",
-      "show": "WIE WAS EERST?"
-     }
-    ]
-   },
-   {
-    "photo": [
-     {
-      "q": [
-       "Gemini Titan II launch",
-       "Titan II GLV launch",
-       "Gemini 3 launch Titan"
-      ],
-      "want": "a Titan II rocket launching a Gemini capsule in the 1960s"
-     },
-     {
-      "q": [
-       "Titan II GLV on pad",
-       "Gemini Titan launch vehicle pad 19",
-       "Titan II rocket"
-      ],
-      "want": "a Titan II Gemini launch vehicle standing on its pad"
-     },
-     {
-      "q": [
-       "Gemini spacecraft",
-       "Gemini capsule orbit",
-       "Gemini 7 from Gemini 6"
-      ],
-      "want": "a two-person Gemini spacecraft"
-     }
-    ],
-    "text": "Raketbouwers doen het al sinds de jaren zestig. Het bekendste Amerikaanse voorbeeld is de Titan twee, de raket waarmee NASA tussen 1964 en 1966 zijn Gemini-capsules voor twee astronauten lanceerde. De tweede trap ging aan terwijl de trappen nog aan elkaar vastzaten. Het hete gas ontsnapte via zestien rechthoekige openingen bij de verbinding. Van een afstand leek het alsof er een plak uit de raket ontbrak.",
-    "pop": [
-     {
-      "say": "jaren zestig",
-      "show": "SINDS DE JAREN 60"
-     },
-     {
-      "say": "Titan twee",
-      "show": "TITAN II"
-     },
-     {
-      "say": "Gemini-capsules",
-      "show": "GEMINI"
-     },
-     {
-      "say": "nog aan elkaar vastzaten",
-      "show": "NOG VAST"
-     },
-     {
-      "say": "zestien rechthoekige openingen",
-      "show": "16 OPENINGEN"
-     },
-     {
-      "say": "plak uit de raket",
-      "show": "STUK KWIJT?"
-     }
-    ]
-   },
-   {
-    "photo": [
-     {
-      "q": [
-       "Soyuz rocket launch",
-       "Soyuz-FG launch Baikonur",
-       "Soyuz-2 launch"
-      ],
-      "want": "a Russian Soyuz rocket launching"
-     },
-     {
-      "q": [
-       "Soyuz rocket on launch pad Baikonur",
-       "Soyuz rocket rollout",
-       "Soyuz TMA rocket pad"
-      ],
-      "want": "a Russian Soyuz rocket on its launch pad"
-     }
-    ],
-    "img": [
-     "lib/starship-pad.jpg"
-    ],
-    "text": "Ook Russische raketten doen het al tientallen jaren. Je herkent ze vaak aan het open vakwerk tussen twee trappen, dat ruimte laat voor de vlammen van de bovenste motor. Wat is er dan nieuw aan Starship? De schaal. Toen het voor het eerst lukte, noemde SpaceX het de eerste geslaagde hot staging van een voertuig van dit formaat.",
-    "pop": [
-     {
-      "say": "Russische raketten",
-      "show": "RUSSISCHE RAKETTEN"
-     },
-     {
-      "say": "tientallen jaren",
-      "show": "AL DECENNIA"
-     },
-     {
-      "say": "open vakwerk",
-      "show": "OPEN VAKWERK"
-     },
-     {
-      "say": "De schaal",
-      "show": "DE SCHAAL"
-     },
-     {
-      "say": "dit formaat",
-      "show": "NOG NOOIT ZO GROOT"
-     }
-    ]
-   },
-   {
-    "photo": [
-     {
-      "q": [
-       "Starship Integrated Flight Test 1",
-       "Starship flight test April 2023",
-       "Starship IFT-1 launch"
-      ],
-      "want": "the first Starship test flight in April 2023"
-     }
-    ],
-    "head": "Hoe leerde Starship hot staging?",
-    "pop": [
-     {
-      "say": "",
-      "show": "HOE HET BEGON"
-     }
-    ]
-   },
-   {
-    "photo": [
-     {
-      "q": [
-       "Starship Integrated Flight Test 1",
-       "Starship flight test April 2023",
-       "Starship IFT-1 launch"
-      ],
-      "want": "the first Starship test flight in April 2023"
-     },
-     {
-      "q": [
-       "Super Heavy booster",
-       "SpaceX Super Heavy booster Starbase",
-       "Super Heavy Booster 7"
-      ],
-      "want": "a Super Heavy booster, the tall stainless steel first stage of Starship"
-     }
-    ],
-    "text": "Het was een late wijziging, nadat de eerste vlucht misging. Bij vlucht één, in april 2023, gingen booster en schip niet uit elkaar zoals gepland. SpaceX ontwierp de hele scheiding opnieuw. Musk beschreef het nieuwe verlengstuk op de booster als bijna helemaal ventilatieopeningen.",
-    "pop": [
-     {
-      "say": "late wijziging",
-      "show": "LATE WIJZIGING"
-     },
-     {
-      "say": "vlucht één",
-      "show": "VLUCHT 1"
-     },
-     {
-      "say": "april 2023",
-      "show": "APRIL 2023"
-     },
-     {
-      "say": "niet uit elkaar",
-      "show": "NIET LOSGEKOMEN"
-     },
-     {
-      "say": "ventilatieopeningen",
-      "show": "BIJNA ALLEEN GATEN"
-     }
-    ]
-   },
-   {
-    "photo": [
-     {
-      "q": [
-       "Starship Integrated Flight Test 2",
-       "Starship flight test 2 launch November 2023",
-       "Starship IFT-2"
-      ],
-      "want": "Starship and Super Heavy on its second test flight in November 2023"
-     },
-     {
-      "q": [
-       "Starship launch",
-       "Starship integrated flight test launch",
-       "Super Heavy liftoff"
-      ],
-      "want": "a Starship rocket lifting off from Starbase"
-     }
-    ],
-    "img": [
-     "gen/why-starship-fires-engines-at-own-booster-hot-staging-explained.jpg"
-    ],
-    "text": "Bij vlucht twee, op 18 november 2023, werkte het. De booster schakelde terug, alle zes motoren van het schip gingen aan, en het schip vloog door naar de ruimte. De booster brak kort daarna uit elkaar, op weg terug. Maar de scheiding zelf had gewerkt, en sindsdien hoort hot staging bij elke vlucht.",
-    "pop": [
-     {
-      "say": "vlucht twee",
-      "show": "VLUCHT 2"
-     },
-     {
-      "say": "18 november 2023",
-      "show": "18 NOV 2023"
-     },
-     {
-      "say": "werkte het",
-      "show": "HET WERKTE"
-     },
-     {
-      "say": "alle zes",
-      "show": "6 MOTOREN AAN"
-     },
-     {
-      "say": "brak kort daarna",
-      "show": "BOOSTER VERLOREN"
-     },
-     {
-      "say": "elke vlucht",
-      "show": "ELKE VLUCHT"
-     }
-    ]
-   },
-   {
-    "img": [
-     "lib/starship-booster-catch.jpg",
-     "spacex-7.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Super Heavy booster",
-       "SpaceX Super Heavy booster Starbase",
-       "Super Heavy Booster 7"
-      ],
-      "want": "a Super Heavy booster, the tall stainless steel first stage of Starship"
-     }
-    ],
-    "text": "En de ring bleef veranderen. Bij de tweede generatie Starship was het een los onderdeel dat na elke lancering in zee viel. Bij de derde generatie, die vlucht vijftien vliegt, zit de ring vast op de booster en blijft hij erop. De nieuwe booster heeft ook drie roostervinnen in plaats van vier, elk zo'n anderhalf keer zo groot, en lager geplaatst, buiten de hitte van de scheiding.",
-    "pop": [
-     {
-      "say": "bleef veranderen",
-      "show": "STEEDS ANDERS"
-     },
-     {
-      "say": "in zee viel",
-      "show": "IN ZEE"
-     },
-     {
-      "say": "derde generatie",
-      "show": "VERSIE 3"
-     },
-     {
-      "say": "blijft hij erop",
-      "show": "RING BLIJFT OP"
-     },
-     {
-      "say": "drie roostervinnen",
-      "show": "3 ROOSTERVINNEN"
-     },
-     {
-      "say": "buiten de hitte",
-      "show": "UIT DE HITTE"
-     }
-    ]
-   },
-   {
-    "img": [
-     "lib/starship-booster-catch.jpg"
-    ],
-    "head": "Wat betekent hot staging voor het vangen van beide trappen?",
-    "pop": [
-     {
-      "say": "",
-      "show": "BEIDE VANGEN"
-     }
-    ]
-   },
-   {
-    "img": [
-     "lib/starship-booster-catch.jpg",
-     "gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Starbase launch tower",
-       "Starship launch tower Boca Chica",
-       "Starbase orbital launch mount"
-      ],
-      "want": "the tall steel Starship launch tower at Starbase, Texas"
-     }
-    ],
-    "text": "Elke vangst begint met een schone scheiding. Na de scheiding keert de booster om, vuurt zijn motoren af om terug te vliegen, en moet binnen enkele minuten na de start door de toren worden gevangen. Als het schip thuiskomt, staat zijn booster dus allang weer bij de toren. En een ring die op de booster blijft, is weer een onderdeel minder dat bij elke vlucht wordt weggegooid.",
-    "pop": [
-     {
-      "say": "schone scheiding",
-      "show": "SCHONE SCHEIDING"
-     },
-     {
-      "say": "keert de booster om",
-      "show": "OMKEREN"
-     },
-     {
-      "say": "binnen enkele minuten",
-      "show": "BINNEN MINUTEN"
-     },
-     {
-      "say": "allang weer",
-      "show": "AL THUIS"
-     },
-     {
-      "say": "onderdeel minder",
-      "show": "ÉÉN ONDERDEEL MINDER"
-     }
-    ]
-   },
-   {
-    "img": [
-     "gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute-x2-11041157.jpg",
-     "gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute-x3-11041200.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Earth from the International Space Station",
-       "Earth limb from orbit",
-       "Gulf of Mexico from space"
-      ],
-      "want": "the curve of the Earth seen from space"
-     }
-    ],
-    "text": "Het schip heeft de zwaardere taak. Het vliegt door naar een baan om de aarde en moet de terugkeer in de dampkring overleven voor zijn eigen vangpoging, iets wat nog geen enkele Starship heeft gedaan. Musk schat de kans dat het bij de eerste poging lukt op zo'n vijftig tot zestig procent.",
-    "pop": [
-     {
-      "say": "zwaardere taak",
-      "show": "ZWAARDERE TAAK"
-     },
-     {
-      "say": "terugkeer in de dampkring",
-      "show": "TERUGKEER OVERLEVEN"
-     },
-     {
-      "say": "nog geen enkele",
-      "show": "NOG NOOIT GEDAAN"
-     },
-     {
-      "say": "vijftig tot zestig procent",
-      "show": "50-60% KANS"
-     }
-    ]
-   },
-   {
-    "img": [
-     "lib/musk-chess-companies.jpg",
-     "lib/musk-silhouette-rocket.jpg",
-     "gen/why-starship-fires-engines-at-own-booster-hot-staging-explained.jpg"
-    ],
-    "text": "Voor Tesla-fans is dit meer dan een ruimtevaartverhaal. Tesla en SpaceX hebben speciale commissies ingesteld om een mogelijke fusie te onderzoeken, en een volledig herbruikbare Starship is een van de grootste drijfveren achter de waarde van SpaceX. Kijk dus bij de volgende lancering eens naar het moment na zo'n tweeënhalve minuut. Die flits tussen de trappen is geen explosie. Het is het schip dat zich afzet.",
-    "pop": [
-     {
-      "say": "Tesla-fans",
-      "show": "TESLA-FANS"
-     },
-     {
-      "say": "mogelijke fusie",
-      "show": "TESLA + SPACEX?"
-     },
-     {
-      "say": "volledig herbruikbare",
-      "show": "VOLLEDIG HERBRUIKBAAR"
-     },
-     {
-      "say": "tweeënhalve minuut",
-      "show": "LET OP NA 2,5 MIN"
-     },
-     {
-      "say": "geen explosie",
-      "show": "GEEN EXPLOSIE"
-     },
-     {
-      "say": "zich afzet",
-      "show": "HET SCHIP ZET AF"
-     }
-    ]
-   }
-  ],
-  "yt_title_en": "Starship Hot Staging Explained: Why It Fires Into Its Own Booster",
-  "yt_title_nl": "Starship Hot Staging Uitgelegd: Waarom Hij in Zijn Eigen Booster Vuurt"
- },
- "en": {
-  "title": "Why Does Starship Fire Its Engines at Its Own Booster? Hot Staging Explained",
-  "description": "Starship lights its six engines while it is still attached to the Super Heavy booster. Here is how hot staging works, why it adds payload, who did it first and what it means for catching both stages.",
-  "body": "<p>On Starship Flight 15, planned for November 2026, SpaceX wants to catch both halves of its giant rocket with the launch tower for the first time: the Super Heavy booster and the ship on top. Before either catch can happen, the two halves have to part ways, roughly two and a half minutes after liftoff and high above the Gulf of Mexico. The way they do that looks like a mistake. The ship lights its own engines while it is still sitting on the booster, so its flames blast straight down onto the stage below. That booster has 33 engines and tanks that held thousands of tonnes of methane and liquid oxygen a moment earlier. Firing rocket engines into another rocket sounds like the quickest way to destroy both.</p>\n<h2>What is hot staging, and how does Starship do it?</h2>\n<p><strong>Hot staging means the upper stage starts its engines before it lets go of the stage below.</strong> Most rockets do it the other way round, which engineers call cold staging: the first stage shuts down, the stages are pushed apart, there is a short coast, and only then does the upper engine light.</p>\n<p>Starship reverses that order. Near the end of its burn, Super Heavy powers down all but three of its 33 Raptor engines. The ship then ignites its six Raptors while it is still attached, and their thrust pushes it off the booster. All that fire needs a way out, so a short section on top of the booster, the hot stage ring, is full of openings that let the exhaust escape sideways. The ring also works as a shield for the top of the booster's tank.</p>\n<p>Building an armoured, vented ring into a rocket adds weight, and weight is the one thing rocket engineers fight hardest.</p>\n<h2>So why would SpaceX choose the harder way?</h2>\n<p><strong>Because a rocket that stops pushing, even for a few seconds, starts losing speed to gravity.</strong> In cold staging there is a gap where no engine is firing. The rocket is still climbing, but gravity keeps pulling it back, and every metre per second lost has to be won back later with extra fuel.</p>\n<p>There is a second, less obvious problem. Without thrust, the liquid propellant in the upper stage's tanks starts to float away from the drains at the bottom. Engines need liquid, not gas bubbles, at the moment they start. Many cold-staged rockets fire small extra thrusters first, just to settle the propellant. In hot staging the vehicle never stops accelerating, so the propellant stays where the engines need it.</p>\n<ul>\n<li><strong>No coast:</strong> no unpowered seconds, so less speed lost to gravity.</li>\n<li><strong>Settled propellant:</strong> the ship's engines start with fuel already pressed against the drains.</li>\n<li><strong>More payload:</strong> Musk estimated the gain at about 10% more mass to orbit. That is his estimate, not a published measurement.</li>\n<li><strong>A head start home:</strong> the push from the ship's exhaust helps start the booster's flip for its return.</li>\n</ul>\n<p>The idea sounds daring, yet SpaceX did not invent it.</p>\n<h2>Who used hot staging before Starship?</h2>\n<p><strong>Rocket builders have been doing it since the 1960s.</strong> The best-known American example is the Titan II, the missile NASA used to launch its two-person Gemini capsules between 1964 and 1966. Its second-stage engine fired while the stages were still joined, and the gases escaped through sixteen rectangular ports near the joint. From a distance it looked as if a slice of the rocket was missing.</p>\n<p>Russian rockets have hot staged for decades too. You can often spot them by the open lattice frame between two stages, which leaves room for the upper engine's flames.</p>\n<p>What is new is the size. When it worked on Starship for the first time, SpaceX called it the first successful hot staging of a vehicle this large. Getting there was anything but smooth.</p>\n<h2>How did Starship learn to hot stage?</h2>\n<p><strong>It was a late change, made after the stages on the first flight refused to come apart.</strong> On Flight 1 in April 2023, the booster and ship never separated as planned. SpaceX redesigned the separation, and Musk described the new booster extension as almost entirely vents.</p>\n<p>On Flight 2, on November 18, 2023, it worked: the booster throttled down, all six ship engines lit, and the ship flew on to space. The booster broke apart shortly afterwards during its return burn, but the staging itself had done its job, and it has been part of every flight since.</p>\n<p>The ring kept evolving. On the second-generation Starship it was a separate piece that dropped away and fell into the sea. On the third generation, which flies Flight 15, the ring is fixed to the top of the booster and stays with it. The new booster also has three grid fins instead of four, each about half as large again, mounted lower to keep them out of the staging heat.</p>\n<p>That last change matters for the boldest part of Flight 15.</p>\n<h2>What does hot staging mean for catching both stages?</h2>\n<p><strong>Every catch starts with a clean separation, and a ring that stays on the booster is one less part thrown away.</strong> After staging, the booster flips, fires its engines to head back, and is meant to be caught by the tower within minutes of liftoff. So by the time the ship comes home, its booster is already back at the tower. The ship carries on to orbit and still has to survive re-entry before its own catch attempt, a first for any Starship.</p>\n<p>Musk has put the chance of catching the ship on the first try at around 50 to 60 percent. For Tesla fans, it is more than a space story: Tesla and SpaceX have set up special committees to study a possible merger, and a fully reusable Starship is one of the biggest drivers of SpaceX's value.</p>\n<p>So the next time you watch a Starship launch, keep an eye on the moment about two and a half minutes in. The flash between the two stages is not an explosion. It is the ship pushing off.</p>"
- },
- "nl": {
-  "title": "Waarom vuurt Starship zijn motoren af op zijn eigen booster? Hot staging uitgelegd",
-  "description": "Starship ontsteekt zijn zes motoren terwijl hij nog op de Super Heavy-booster vastzit. Zo werkt hot staging, daarom levert het meer lading op, dit waren de voorgangers en dit betekent het voor het vangen van beide trappen.",
-  "body": "<p>Bij Starship-vlucht 15, gepland voor november 2026, wil SpaceX voor het eerst allebei de helften van zijn reuzenraket opvangen met de lanceertoren: de Super Heavy-booster én het schip erbovenop. Maar voordat er iets gevangen kan worden, moeten die twee helften uit elkaar, zo'n tweeënhalve minuut na de start en hoog boven de Golf van Mexico. Hoe ze dat doen, lijkt op een vergissing. Het schip ontsteekt zijn eigen motoren terwijl het nog op de booster staat, zodat de vlammen recht naar beneden op de onderste trap slaan. Die booster heeft 33 motoren en tanks waar even daarvoor nog duizenden tonnen methaan en vloeibare zuurstof in zaten. Raketmotoren afvuren op een andere raket klinkt als de snelste manier om ze allebei op te blazen.</p>\n<h2>Wat is hot staging, en hoe doet Starship dat?</h2>\n<p><strong>Bij hot staging start de bovenste trap zijn motoren al voordat hij de onderste trap loslaat.</strong> De meeste raketten doen het andersom, en dat heet cold staging: de eerste trap gaat uit, de trappen worden uit elkaar geduwd, er volgt een korte vrije vlucht en pas dan gaat de motor van de bovenste trap aan.</p>\n<p>Starship draait die volgorde om. Tegen het einde van zijn brandtijd zet Super Heavy al zijn 33 Raptor-motoren uit, op drie na. Het schip ontsteekt dan zijn zes Raptors terwijl het nog vastzit, en de stuwkracht duwt het van de booster af. Al dat vuur moet ergens heen. Daarom zit er bovenop de booster een kort stuk vol openingen, de hot stage ring, waardoor de uitlaatgassen zijwaarts kunnen ontsnappen. Die ring beschermt ook de bovenkant van de tank van de booster.</p>\n<p>Een gepantserde ring vol gaten in een raket bouwen kost gewicht, en gewicht is precies waar raketbouwers het hardst tegen vechten.</p>\n<h2>Dus waarom kiest SpaceX voor de moeilijke weg?</h2>\n<p><strong>Omdat een raket die even niet duwt, al is het maar een paar seconden, snelheid verliest aan de zwaartekracht.</strong> Bij cold staging is er een gat waarin geen enkele motor brandt. De raket stijgt nog, maar de zwaartekracht trekt hem terug, en elke verloren meter per seconde moet later met extra brandstof worden teruggewonnen.</p>\n<p>Er is nog een minder bekend probleem. Zonder stuwkracht gaat de vloeibare brandstof in de tanks van de bovenste trap zweven, weg van de afvoer onderin. Een motor heeft bij het starten vloeistof nodig, geen gasbellen. Veel raketten met cold staging gebruiken daarom eerst kleine extra stuwraketjes, alleen om de brandstof weer naar beneden te drukken. Bij hot staging blijft het voertuig de hele tijd versnellen, dus de brandstof blijft waar de motoren hem nodig hebben.</p>\n<ul>\n<li><strong>Geen vrije vlucht:</strong> geen seconden zonder motor, dus minder snelheidsverlies door de zwaartekracht.</li>\n<li><strong>Brandstof op zijn plek:</strong> de motoren van het schip starten met de brandstof al tegen de afvoer gedrukt.</li>\n<li><strong>Meer lading:</strong> Musk schatte de winst op ongeveer 10 procent meer massa naar een baan om de aarde. Dat is zijn schatting, geen gepubliceerde meting.</li>\n<li><strong>Een vliegende start terug:</strong> de duw van de uitlaatgassen van het schip helpt de booster om te keren voor de terugweg.</li>\n</ul>\n<p>Het klinkt gewaagd, maar SpaceX heeft het niet zelf bedacht.</p>\n<h2>Wie gebruikte hot staging al vóór Starship?</h2>\n<p><strong>Raketbouwers doen het al sinds de jaren zestig.</strong> Het bekendste Amerikaanse voorbeeld is de Titan II, de raket waarmee NASA tussen 1964 en 1966 zijn Gemini-capsules voor twee astronauten lanceerde. De motor van de tweede trap ging aan terwijl de trappen nog aan elkaar vastzaten, en de gassen ontsnapten via zestien rechthoekige openingen bij de verbinding. Van een afstand leek het alsof er een plak uit de raket ontbrak.</p>\n<p>Ook Russische raketten gebruiken hot staging al tientallen jaren. Je herkent ze vaak aan het open vakwerk tussen twee trappen, dat ruimte laat voor de vlammen van de bovenste motor.</p>\n<p>Nieuw is de schaal. Toen het voor het eerst lukte bij Starship, noemde SpaceX het de eerste geslaagde hot staging van een voertuig van dit formaat. De weg daarnaartoe ging allesbehalve vlekkeloos.</p>\n<h2>Hoe leerde Starship hot staging?</h2>\n<p><strong>Het was een late wijziging, nadat de trappen bij de eerste vlucht weigerden los te laten.</strong> Bij vlucht 1, in april 2023, scheidden booster en schip niet zoals gepland. SpaceX ontwierp de scheiding opnieuw, en Musk beschreef het nieuwe verlengstuk op de booster als bijna helemaal ventilatieopeningen.</p>\n<p>Bij vlucht 2, op 18 november 2023, werkte het: de booster schakelde terug, alle zes motoren van het schip gingen aan en het schip vloog door naar de ruimte. De booster brak kort daarna uit elkaar tijdens zijn terugkeerbrand, maar de scheiding zelf had gewerkt, en sindsdien hoort hot staging bij elke vlucht.</p>\n<p>De ring bleef veranderen. Bij de tweede generatie Starship was het een los onderdeel dat afviel en in zee verdween. Bij de derde generatie, die vlucht 15 vliegt, zit de ring vast op de booster en blijft hij erop. De nieuwe booster heeft ook drie roostervinnen in plaats van vier, elk zo'n anderhalf keer zo groot en lager geplaatst, zodat ze buiten de hitte van de scheiding blijven.</p>\n<p>Die laatste wijziging is belangrijk voor het meest gedurfde deel van vlucht 15.</p>\n<h2>Wat betekent hot staging voor het vangen van beide trappen?</h2>\n<p><strong>Elke vangst begint met een schone scheiding, en een ring die op de booster blijft, is weer een onderdeel minder dat wordt weggegooid.</strong> Na de scheiding keert de booster om, vuurt zijn motoren af om terug te vliegen en moet binnen enkele minuten na de start door de toren worden gevangen. Als het schip thuiskomt, staat zijn booster dus allang weer bij de toren. Het schip vliegt door naar een baan om de aarde en moet nog de terugkeer in de dampkring overleven voor zijn eigen vangpoging, een primeur voor Starship.</p>\n<p>Musk schat de kans dat het schip bij de eerste poging wordt gevangen op zo'n 50 tot 60 procent. Voor Tesla-fans is het meer dan een ruimtevaartverhaal: Tesla en SpaceX hebben speciale commissies ingesteld om een mogelijke fusie te onderzoeken, en een volledig herbruikbare Starship is een van de grootste drijfveren achter de waarde van SpaceX.</p>\n<p>Kijk dus bij de volgende Starship-lancering eens naar het moment na zo'n tweeënhalve minuut. Die lichtflits tussen de twee trappen is geen explosie. Het is het schip dat zich afzet.</p>"
- }
+    "title": "Waarom vuurt Starship zijn motoren af op zijn eigen booster? Hot staging uitgelegd",
+    "description": "Starship ontsteekt zijn zes motoren terwijl hij nog op de Super Heavy-booster vastzit. Zo werkt hot staging, daarom levert het meer lading op, dit waren de voorgangers en dit betekent het voor het vangen van beide trappen.",
+    "body": "<p>Bij Starship-vlucht 15, gepland voor november 2026, wil SpaceX voor het eerst allebei de helften van zijn reuzenraket opvangen met de lanceertoren: de Super Heavy-booster én het schip erbovenop. Maar voordat er iets gevangen kan worden, moeten die twee helften uit elkaar, zo'n tweeënhalve minuut na de start en hoog boven de Golf van Mexico. Hoe ze dat doen, lijkt op een vergissing. Het schip ontsteekt zijn eigen motoren terwijl het nog op de booster staat, zodat de vlammen recht naar beneden op de onderste trap slaan. Die booster heeft 33 motoren en tanks waar even daarvoor nog duizenden tonnen methaan en vloeibare zuurstof in zaten. Raketmotoren afvuren op een andere raket klinkt als de snelste manier om ze allebei op te blazen.</p>\n<h2>Wat is hot staging, en hoe doet Starship dat?</h2>\n<p><strong>Bij hot staging start de bovenste trap zijn motoren al voordat hij de onderste trap loslaat.</strong> De meeste raketten doen het andersom, en dat heet cold staging: de eerste trap gaat uit, de trappen worden uit elkaar geduwd, er volgt een korte vrije vlucht en pas dan gaat de motor van de bovenste trap aan.</p>\n<p>Starship draait die volgorde om. Tegen het einde van zijn brandtijd zet Super Heavy al zijn 33 Raptor-motoren uit, op drie na. Het schip ontsteekt dan zijn zes Raptors terwijl het nog vastzit, en de stuwkracht duwt het van de booster af. Al dat vuur moet ergens heen. Daarom zit er bovenop de booster een kort stuk vol openingen, de hot stage ring, waardoor de uitlaatgassen zijwaarts kunnen ontsnappen. Die ring beschermt ook de bovenkant van de tank van de booster.</p>\n<p>Een gepantserde ring vol gaten in een raket bouwen kost gewicht, en gewicht is precies waar raketbouwers het hardst tegen vechten.</p>\n<h2>Dus waarom kiest SpaceX voor de moeilijke weg?</h2>\n<p><strong>Omdat een raket die even niet duwt, al is het maar een paar seconden, snelheid verliest aan de zwaartekracht.</strong> Bij cold staging is er een gat waarin geen enkele motor brandt. De raket stijgt nog, maar de zwaartekracht trekt hem terug, en elke verloren meter per seconde moet later met extra brandstof worden teruggewonnen.</p>\n<p>Er is nog een minder bekend probleem. Zonder stuwkracht gaat de vloeibare brandstof in de tanks van de bovenste trap zweven, weg van de afvoer onderin. Een motor heeft bij het starten vloeistof nodig, geen gasbellen. Veel raketten met cold staging gebruiken daarom eerst kleine extra stuwraketjes, alleen om de brandstof weer naar beneden te drukken. Bij hot staging blijft het voertuig de hele tijd versnellen, dus de brandstof blijft waar de motoren hem nodig hebben.</p>\n<ul>\n<li><strong>Geen vrije vlucht:</strong> geen seconden zonder motor, dus minder snelheidsverlies door de zwaartekracht.</li>\n<li><strong>Brandstof op zijn plek:</strong> de motoren van het schip starten met de brandstof al tegen de afvoer gedrukt.</li>\n<li><strong>Meer lading:</strong> Musk schatte de winst op ongeveer 10 procent meer massa naar een baan om de aarde. Dat is zijn schatting, geen gepubliceerde meting.</li>\n<li><strong>Een vliegende start terug:</strong> de duw van de uitlaatgassen van het schip helpt de booster om te keren voor de terugweg.</li>\n</ul>\n<p>Het klinkt gewaagd, maar SpaceX heeft het niet zelf bedacht.</p>\n<h2>Wie gebruikte hot staging al vóór Starship?</h2>\n<p><strong>Raketbouwers doen het al sinds de jaren zestig.</strong> Het bekendste Amerikaanse voorbeeld is de Titan II, de raket waarmee NASA tussen 1964 en 1966 zijn Gemini-capsules voor twee astronauten lanceerde. De motor van de tweede trap ging aan terwijl de trappen nog aan elkaar vastzaten, en de gassen ontsnapten via zestien rechthoekige openingen bij de verbinding. Van een afstand leek het alsof er een plak uit de raket ontbrak.</p>\n<p>Ook Russische raketten gebruiken hot staging al tientallen jaren. Je herkent ze vaak aan het open vakwerk tussen twee trappen, dat ruimte laat voor de vlammen van de bovenste motor.</p>\n<p>Nieuw is de schaal. Toen het voor het eerst lukte bij Starship, noemde SpaceX het de eerste geslaagde hot staging van een voertuig van dit formaat. De weg daarnaartoe ging allesbehalve vlekkeloos.</p>\n<h2>Hoe leerde Starship hot staging?</h2>\n<p><strong>Het was een late wijziging, nadat de trappen bij de eerste vlucht weigerden los te laten.</strong> Bij vlucht 1, in april 2023, scheidden booster en schip niet zoals gepland. SpaceX ontwierp de scheiding opnieuw, en Musk beschreef het nieuwe verlengstuk op de booster als bijna helemaal ventilatieopeningen.</p>\n<p>Bij vlucht 2, op 18 november 2023, werkte het: de booster schakelde terug, alle zes motoren van het schip gingen aan en het schip vloog door naar de ruimte. De booster brak kort daarna uit elkaar tijdens zijn terugkeerbrand, maar de scheiding zelf had gewerkt, en sindsdien hoort hot staging bij elke vlucht.</p>\n<p>De ring bleef veranderen. Bij de tweede generatie Starship was het een los onderdeel dat afviel en in zee verdween. Bij de derde generatie, die vlucht 15 vliegt, zit de ring vast op de booster en blijft hij erop. De nieuwe booster heeft ook drie roostervinnen in plaats van vier, elk zo'n anderhalf keer zo groot en lager geplaatst, zodat ze buiten de hitte van de scheiding blijven.</p>\n<p>Die laatste wijziging is belangrijk voor het meest gedurfde deel van vlucht 15.</p>\n<h2>Wat betekent hot staging voor het vangen van beide trappen?</h2>\n<p><strong>Elke vangst begint met een schone scheiding, en een ring die op de booster blijft, is weer een onderdeel minder dat wordt weggegooid.</strong> Na de scheiding keert de booster om, vuurt zijn motoren af om terug te vliegen en moet binnen enkele minuten na de start door de toren worden gevangen. Als het schip thuiskomt, staat zijn booster dus allang weer bij de toren. Het schip vliegt door naar een baan om de aarde en moet nog de terugkeer in de dampkring overleven voor zijn eigen vangpoging, een primeur voor Starship.</p>\n<p>Musk schat de kans dat het schip bij de eerste poging wordt gevangen op zo'n 50 tot 60 procent. Voor Tesla-fans is het meer dan een ruimtevaartverhaal: Tesla en SpaceX hebben speciale commissies ingesteld om een mogelijke fusie te onderzoeken, en een volledig herbruikbare Starship is een van de grootste drijfveren achter de waarde van SpaceX.</p>\n<p>Kijk dus bij de volgende Starship-lancering eens naar het moment na zo'n tweeënhalve minuut. Die lichtflits tussen de twee trappen is geen explosie. Het is het schip dat zich afzet.</p>"
+  },
+  "image": "gen/why-starship-fires-engines-at-own-booster-hot-staging-explained.jpg"
 }

@@ -59,6 +59,7 @@ Add new ideas at the bottom at any time.
 - [ ] Who watches a driverless car? What a remote "technical supervisor" does (Germany's level 4 law, Tesla Robotaxi, Waymo) and what they can and cannot do
 - [ ] How does the Cybercab charge without a home-charging port? DC-only inlet, wireless charging pads and what a robotaxi depot needs
 - [ ] Why do car factories shut down for the holidays, and what does running a plant 24/7 really take (shifts, maintenance windows, Giga Texas)?
+- [ ] 48-volt cars and steer-by-wire: what the Cybertruck changed under the skin, and which Teslas use it now
 
 ## Stories (evening task: entertaining and educational, timeless)
 
@@ -73,7 +74,7 @@ Add new ideas at the bottom at any time.
 - [x] The Roadster that started it all: how a small startup turned a Lotus into the first Tesla (tesla-roadster-origin-story-lotus-elise-first-tesla)
 - [ ] 2008: the year Tesla almost died, and the Christmas Eve deal that saved it
 - [x] Model 3 "production hell": sleeping in the factory and the tent on the parking lot (tesla-model-3-production-hell-tent-assembly-line-2018-story)
-- [ ] Why the Cybertruck looks like that: stainless steel, the broken window and the design bet
+- [x] Why the Cybertruck looks like that: stainless steel, the broken window and the design bet (why-tesla-cybertruck-looks-like-that-stainless-steel-broken-window-story)
 - [ ] How Tesla opened all its patents in 2014, and what happened next
 - [ ] The first Supercharger: why Tesla built its own charging network when nobody else would
 - [ ] Giga Shanghai: how Tesla built a car factory in under a year
@@ -98,6 +99,8 @@ Add new ideas at the bottom at any time.
 - [ ] March 31, 2016: the night people queued outside Tesla stores to reserve a car they had never seen, and how the Model 3 reservations shaped the company
 - [ ] Gemini and the Titan II: how a nuclear missile with holes in its side became NASA's astronaut rocket
 - [ ] Fremont before Tesla: how a GM plant became NUMMI with Toyota, closed in 2010, and was bought by Tesla for a fraction of its value
+- [ ] Wet Nellie: the James Bond submarine Lotus that sat forgotten in a storage unit, was sold for about $100, and ended up with Elon Musk (check the auction details)
+- [ ] The end of the Model S and Model X: how the car that made Tesla (2012) gave its factory space to Optimus
 
 ## Series: How did Elon Musk ...? (evening task; one per week at most, category "musk")
 

@@ -50,6 +50,9 @@ Add new ideas at the bottom at any time.
 - [ ] Camera mirrors on trucks: why the European Tesla Semi has no side mirrors, and how camera mirror systems work and are allowed in the EU
 - [ ] Megacharger vs MCS: how you charge a 40-tonne truck in 30 minutes, and what a truck charging stop needs
 - [ ] Starship's heat shield: why it uses thousands of hexagonal tiles, what happens when one falls off, and how it differs from the Space Shuttle's tiles
+- [x] Why does Starship fire its engines at its own booster? Hot staging explained: how it works, why it adds payload, Titan II and Russian predecessors (why-starship-fires-engines-at-own-booster-hot-staging-explained)
+- [ ] Ullage: why rocket fuel floats in space, and the tricks rockets use to restart their engines (settling burns, small thrusters, hot staging)
+- [ ] Grid fins: why Falcon 9 and Super Heavy steer with "waffle irons", and why Starship V3 has three bigger ones instead of four
 - [ ] Why Starship Flight 14 was the first to reach orbit: what "orbital" really means, and why earlier flights stayed just short on purpose
 - [ ] Starlink's laser links: how satellites pass your data to each other at the speed of light, and why the first 60 had none
 - [ ] Will Teslas get Starlink built in? How a Tesla connects to the internet today (Standard vs Premium Connectivity, AT&T, 5G) and what satellite links would change
@@ -93,6 +96,7 @@ Add new ideas at the bottom at any time.
 - [ ] DarkSat and VisorSat: how astronomers' alarm over the first 'Starlink train' changed how SpaceX builds its satellites
 - [ ] 2021: how Germany became the first country to allow cars with nobody on board, and why so few have used it since
 - [ ] March 31, 2016: the night people queued outside Tesla stores to reserve a car they had never seen, and how the Model 3 reservations shaped the company
+- [ ] Gemini and the Titan II: how a nuclear missile with holes in its side became NASA's astronaut rocket
 - [ ] Fremont before Tesla: how a GM plant became NUMMI with Toyota, closed in 2010, and was bought by Tesla for a fraction of its value
 
 ## Series: How did Elon Musk ...? (evening task; one per week at most, category "musk")

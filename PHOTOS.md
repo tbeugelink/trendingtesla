@@ -269,3 +269,6 @@ Articles with a "models" key automatically use real-life photos of that model. Y
 - gen/why-starship-fires-engines-at-own-booster-hot-staging-explained.jpg — Starship firing its engines through the vented ring on top of its own booster at stage separation, high above the Gulf
 - gen/why-starship-fires-engines-at-own-booster-hot-staging-explained-x2-11061154.jpg — the booster flipping around after hot staging, its vented ring glowing, the ship flying away
 - gen/why-starship-fires-engines-at-own-booster-hot-staging-explained-x3-11061155.jpg — the vented hot stage ring on top of a Super Heavy booster at the launch tower
+- gen/what-happens-to-your-tesla-when-tesla-stops-making-it-cybertruck-model-s-x.jpg — a Cybertruck in a Tesla service bay with spare parts beside it
+- gen/what-happens-to-your-tesla-when-tesla-stops-making-it-cybertruck-model-s-x-x2-11071148.jpg — a Cybertruck in a driveway at dusk getting a software update
+- gen/what-happens-to-your-tesla-when-tesla-stops-making-it-cybertruck-model-s-x-x3-11071150.jpg — a Cybertruck in a factory hall with a Cybercab line behind it

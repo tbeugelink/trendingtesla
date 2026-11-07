@@ -499,5 +499,44 @@
         "src": "lib/starship-pad.jpg"
       }
     ]
+  },
+  "gen/what-happens-to-your-tesla-when-tesla-stops-making-it-cybertruck-model-s-x.jpg": {
+    "article": "what-happens-to-your-tesla-when-tesla-stops-making-it-cybertruck-model-s-x",
+    "model": "gpt-image-2.5-flare",
+    "made": "2026-11-07",
+    "references": [
+      {
+        "src": "lib/cybertruck-front-city.jpg"
+      },
+      {
+        "src": "lib/cybertruck-rear-light.jpg"
+      }
+    ]
+  },
+  "gen/what-happens-to-your-tesla-when-tesla-stops-making-it-cybertruck-model-s-x-x2-11071148.jpg": {
+    "article": "what-happens-to-your-tesla-when-tesla-stops-making-it-cybertruck-model-s-x",
+    "model": "gpt-image-2.5-flare",
+    "made": "2026-11-07",
+    "references": [
+      {
+        "src": "lib/cybertruck-front-city.jpg"
+      },
+      {
+        "src": "lib/cybertruck-rear-light.jpg"
+      }
+    ]
+  },
+  "gen/what-happens-to-your-tesla-when-tesla-stops-making-it-cybertruck-model-s-x-x3-11071150.jpg": {
+    "article": "what-happens-to-your-tesla-when-tesla-stops-making-it-cybertruck-model-s-x",
+    "model": "gemini-3.1-flash-image",
+    "made": "2026-11-07",
+    "references": [
+      {
+        "src": "lib/cybertruck-front-city.jpg"
+      },
+      {
+        "src": "lib/cybertruck-rear-light.jpg"
+      }
+    ]
   }
 }

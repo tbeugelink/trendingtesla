@@ -272,3 +272,6 @@ Articles with a "models" key automatically use real-life photos of that model. Y
 - gen/what-happens-to-your-tesla-when-tesla-stops-making-it-cybertruck-model-s-x.jpg — a Cybertruck in a Tesla service bay with spare parts beside it
 - gen/what-happens-to-your-tesla-when-tesla-stops-making-it-cybertruck-model-s-x-x2-11071148.jpg — a Cybertruck in a driveway at dusk getting a software update
 - gen/what-happens-to-your-tesla-when-tesla-stops-making-it-cybertruck-model-s-x-x3-11071150.jpg — a Cybertruck in a factory hall with a Cybercab line behind it
+- gen/tesla-semi-interior-explained-center-seat-two-screens-drivers-day.jpg — inside the Tesla Semi cab at dawn: the center driver's seat between two lit touchscreens, a loading yard ahead
+- gen/tesla-semi-interior-explained-center-seat-two-screens-drivers-day-x2-11072022.jpg — the empty Tesla Semi cab at a rest area, seen from behind the center seat, standing room visible
+- gen/tesla-semi-interior-explained-center-seat-two-screens-drivers-day-x3-11072023.jpg — the Tesla Semi cab at dusk during a charging stop, Megacharger posts seen through the windshield

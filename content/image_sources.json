@@ -538,5 +538,35 @@
         "src": "lib/cybertruck-rear-light.jpg"
       }
     ]
+  },
+  "gen/tesla-semi-interior-explained-center-seat-two-screens-drivers-day.jpg": {
+    "article": "tesla-semi-interior-explained-center-seat-two-screens-drivers-day",
+    "model": "gpt-image-2.5-flare",
+    "made": "2026-11-07",
+    "references": [
+      {
+        "src": "lib/semi-cab-interior.jpg"
+      }
+    ]
+  },
+  "gen/tesla-semi-interior-explained-center-seat-two-screens-drivers-day-x2-11072022.jpg": {
+    "article": "tesla-semi-interior-explained-center-seat-two-screens-drivers-day",
+    "model": "gpt-image-2.5-flare",
+    "made": "2026-11-07",
+    "references": [
+      {
+        "src": "lib/semi-cab-interior.jpg"
+      }
+    ]
+  },
+  "gen/tesla-semi-interior-explained-center-seat-two-screens-drivers-day-x3-11072023.jpg": {
+    "article": "tesla-semi-interior-explained-center-seat-two-screens-drivers-day",
+    "model": "gpt-image-2.5-flare",
+    "made": "2026-11-07",
+    "references": [
+      {
+        "src": "lib/semi-cab-interior.jpg"
+      }
+    ]
   }
 }

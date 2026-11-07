@@ -26,6 +26,9 @@
     }
   ],
   "images": [
+    "gen/tesla-semi-interior-explained-center-seat-two-screens-drivers-day.jpg",
+    "gen/tesla-semi-interior-explained-center-seat-two-screens-drivers-day-x3-11072023.jpg",
+    "gen/tesla-semi-interior-explained-center-seat-two-screens-drivers-day-x2-11072022.jpg",
     "lib/semi-cab-interior.jpg",
     "models/semi-7.jpg",
     "lib/semi-megacharger.jpg",
@@ -49,13 +52,17 @@
     "extra": [
       {
         "prompt": "Inside the empty, parked Tesla Semi cab at a highway rest area at midday, seen from the jump seat area behind and to the right of the center driver's seat, nobody in the cab, both touchscreens dimmed, bright sun and blue sky, green farmland and a red-and-yellow truck stop canopy visible through the wide windshield; the high roof and standing room clearly visible",
-        "describe": "the empty Tesla Semi cab at a rest area, seen from behind the center seat, standing room visible"
+        "describe": "the empty Tesla Semi cab at a rest area, seen from behind the center seat, standing room visible",
+        "file": "gen/tesla-semi-interior-explained-center-seat-two-screens-drivers-day-x2-11072022.jpg"
       },
       {
         "prompt": "Through the wide windshield of the Tesla Semi cab at dusk, looking out from the center driver's seat at tall white Megacharger posts under a lit canopy where the truck is plugged in, both touchscreens showing a simple blue charging graphic, wet concrete with yellow bollards, deep blue evening sky; nobody visible, calm mood",
-        "describe": "the Tesla Semi cab at dusk during a charging stop, Megacharger posts seen through the windshield"
+        "describe": "the Tesla Semi cab at dusk during a charging stop, Megacharger posts seen through the windshield",
+        "file": "gen/tesla-semi-interior-explained-center-seat-two-screens-drivers-day-x3-11072023.jpg"
       }
-    ]
+    ],
+    "done": true,
+    "model": "gpt-image-2.5-flare"
   },
   "label": {
     "style": "c",
@@ -1674,5 +1681,6 @@
     ],
     "yt_title_en": "Tesla Semi Interior Explained: Center Seat, Two Screens and a Driver's Day",
     "yt_title_nl": "Tesla Semi Interieur Uitgelegd: Middenstoel, Twee Schermen en een Werkdag"
-  }
+  },
+  "image": "gen/tesla-semi-interior-explained-center-seat-two-screens-drivers-day.jpg"
 }

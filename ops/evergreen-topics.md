@@ -60,6 +60,8 @@ Add new ideas at the bottom at any time.
 - [ ] How does the Cybercab charge without a home-charging port? DC-only inlet, wireless charging pads and what a robotaxi depot needs
 - [ ] Why do car factories shut down for the holidays, and what does running a plant 24/7 really take (shifts, maintenance windows, Giga Texas)?
 - [ ] 48-volt cars and steer-by-wire: what the Cybertruck changed under the skin, and which Teslas use it now
+- [ ] Etherloop explained: how Tesla cut a car's wiring by two-thirds, and why fewer wires make cars cheaper and easier to repair
+- [ ] Right to repair and Tesla: which service manuals, diagnostics and parts an owner (or independent garage) can really get, US vs EU
 
 ## Stories (evening task: entertaining and educational, timeless)
 
@@ -100,6 +102,7 @@ Add new ideas at the bottom at any time.
 - [ ] Gemini and the Titan II: how a nuclear missile with holes in its side became NASA's astronaut rocket
 - [ ] Fremont before Tesla: how a GM plant became NUMMI with Toyota, closed in 2010, and was bought by Tesla for a fraction of its value
 - [ ] Wet Nellie: the James Bond submarine Lotus that sat forgotten in a storage unit, was sold for about $100, and ended up with Elon Musk (check the auction details)
+- [ ] Roadster 3.0: how Tesla gave 2008 sports cars a new hand-built battery in 2015, three years after the last one left the line
 - [ ] The end of the Model S and Model X: how the car that made Tesla (2012) gave its factory space to Optimus
 
 ## Series: How did Elon Musk ...? (evening task; one per week at most, category "musk")

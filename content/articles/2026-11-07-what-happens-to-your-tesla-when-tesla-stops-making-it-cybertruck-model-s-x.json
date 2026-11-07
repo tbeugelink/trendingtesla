@@ -1,0 +1,1466 @@
+{
+ "slug": "what-happens-to-your-tesla-when-tesla-stops-making-it-cybertruck-model-s-x",
+ "date": "2026-11-07",
+ "time": "12:43",
+ "category": "models",
+ "models": [
+  "cybertruck",
+  "model-s",
+  "model-x"
+ ],
+ "sources": [
+  {
+   "title": "Tesla North: Musk says Cybertruck production winds down mid-2027 for Cybercab",
+   "url": "https://teslanorth.com/2026/11/06/tesla-cybertruck-wind-down-cybercab-2027/"
+  },
+  {
+   "title": "Kelley Blue Book: Tesla Cybertruck to be canceled in 2027",
+   "url": "https://www.kbb.com/car-news/tesla-cybertruck-to-be-canceled-in-2027/"
+  },
+  {
+   "title": "Tesla: Cybertruck New Vehicle Limited Warranty (US)",
+   "url": "https://digitalassets.tesla.com/tesla-contents/image/upload/tesla-cybertruck-new-vehicle-limited-warranty-en-us.pdf"
+  },
+  {
+   "title": "Tesla Support: 3G cellular network retirement",
+   "url": "https://www.tesla.com/support/update-3g-services"
+  },
+  {
+   "title": "Green Car Reports: Tesla Roadster 3.0's $29,000 battery upgrade",
+   "url": "https://www.greencarreports.com/news/1099868_tesla-roadster-3-0s-29000-battery-upgrade-330-miles-or-more-of-range"
+  }
+ ],
+ "images": [
+  "cybertruck-fleet.jpg",
+  "lib/cybertruck-bed-open.jpg",
+  "lib/service-center.jpg",
+  "lib/software-update-screen.jpg",
+  "models/ct-3.jpg",
+  "models/ms-1.jpg"
+ ],
+ "gen_image": {
+  "prompt": "Close, dramatic front three-quarter shot of a stainless steel Tesla Cybertruck standing in a bright, clean Tesla service bay, its thin white front light bar glowing, the hood slightly raised, a red tool cart and neatly stacked grey spare-part boxes beside it, a technician in dark work clothes seen from behind at the edge of the frame, strong overhead light making the brushed steel shine, the truck filling half of the frame in the horizontal centre, calm floor area in the lower left",
+  "subject": "Tesla Cybertruck: a full-size pickup with an angular, unpainted brushed stainless steel body made of flat panels, a single sharp roofline peak above the front seats sloping straight down to the tailgate, a full-width thin white LED light bar across the front and a full-width red light bar across the rear, a huge raked windshield with one long wiper, large square-ish wheel arches with black plastic cladding, no visible door handles, left-hand drive; nothing else may look like a different truck",
+  "refs": [
+   {
+    "src": "lib/cybertruck-front-city.jpg"
+   },
+   {
+    "src": "lib/cybertruck-rear-light.jpg"
+   }
+  ],
+  "profile": "editorial",
+  "category": "B",
+  "describe": "a Cybertruck in a Tesla service bay with spare parts beside it",
+  "extra": [
+   {
+    "prompt": "A stainless steel Tesla Cybertruck parked in a suburban driveway at dusk, seen from the side and slightly behind, red rear light bar on, warm light from the house, the large centre touchscreen inside glowing with a blue progress bar of a software update (no readable text), quiet street",
+    "describe": "a Cybertruck in a driveway at dusk getting a software update"
+   },
+   {
+    "prompt": "Wide view of a quiet factory hall at night: on the left a single stainless steel Tesla Cybertruck on a stand under a work light, on the right, further back, a row of small gold two-seat Cybercab robotaxis on an assembly line with yellow robots, the two vehicles clearly separate, cool blue and warm orange light",
+    "describe": "a Cybertruck in a factory hall with a Cybercab line behind it"
+   }
+  ]
+ },
+ "label": {
+  "style": "a",
+  "en": {
+   "sub": "TESLA STOPS BUILDING IT",
+   "text": "NOW WHAT?"
+  },
+  "nl": {
+   "sub": "TESLA STOPT ERMEE",
+   "text": "EN NU?"
+  }
+ },
+ "en": {
+  "title": "What Happens to Your Tesla When Tesla Stops Making It? Cybertruck, Model S and X Explained",
+  "description": "Tesla is ending the Cybertruck after the Model S and X. What that means for warranty, parts, service, software updates and resale value, with lessons from the original Roadster.",
+  "body": "<p>On 6 November 2026, Elon Musk posted on X that Tesla will wind down Cybertruck production at Giga Texas around the middle of 2027, to make room for more Cybercab robotaxis. It is the third Tesla to leave the line in about a year: the Model S and Model X stopped in April 2026, when their space in Fremont went to Optimus robots. Tesla does not report Cybertruck sales separately, but Cox Automotive estimates about 3,500 to 3,700 were sold in the US per quarter in early 2026, far below the 250,000 a year Tesla once aimed for. That still leaves tens of thousands of stainless steel trucks, and many more Model S and X cars, in driveways. For their owners, the end of production raises a very practical problem: what happens to a car its maker no longer builds.</p>\n<h2>Does your warranty still count when Tesla stops building your car?</h2>\n<p><strong>Yes. A warranty is a written promise tied to the car, not to the production line.</strong> For the Cybertruck in the US, Tesla's own warranty booklet gives 4 years or 50,000 miles of basic cover, and 8 years or 150,000 miles for the battery and drive unit, with at least 70% of battery capacity kept over that period. Those terms do not shrink because the factory stops. They also transfer at no cost to the next owner, which matters if you plan to sell. Tesla advises handing over the maintenance records with the car, so keep them. The same logic applies to a Model S or X still under warranty. The catch is that every warranty ends one day, and after that the real question is whether anyone can still fix the car.</p>\n<h2>So who fixes the car, and where do the parts come from?</h2>\n<p><strong>Tesla says service and spare parts will continue, but it has not said for how long.</strong> When owners asked on X, Cybertruck lead engineer Wes Morrill replied that Tesla will maintain spare parts and keep supporting the truck with service. That is a clear statement, but not a number of years, and Kelley Blue Book points out that Tesla has given no timeline. Two things work in owners' favour. First, the Cybertruck's 48-volt electrics, steer-by-wire and Etherloop wiring live on in the Cybercab, so some of that technology stays in production. Second, Tesla has a track record. About 2,500 original Roadsters were built from 2008 to 2012. In 2015, three years after the last one, Tesla offered those owners a new $29,000 battery pack that lifted the range from 245 to more than 330 miles. Later it made the Roadster's service manuals and diagnostic software public. Parts unique to one model, like the Cybertruck's steel body panels, are the weak spot: they depend on stock, not on a running line. Hardware is only half of a Tesla, though. The other half is software.</p>\n<h2>Will a discontinued Tesla still get software updates?</h2>\n<p><strong>Usually yes, because updates arrive over the air and do not depend on the factory, but old hardware sets limits.</strong> Teslas built years ago still receive new software versions. The limit is the computer and modem inside the car. The clearest example came in February 2022, when AT&amp;T switched off its 3G network in the US. Model S cars built before June 2015 without an LTE modem lost live maps, remote app functions and over-the-air updates unless they were on Wi-Fi. Tesla offered a $200 modem upgrade, including fitting. In other words, the car kept working, but staying connected cost money. The newest features often need the newest chips, so a car that is no longer built will slowly fall behind the current lineup. That brings up the question many owners care about most: what the car is worth.</p>\n<h2>What happens to the value of a car that is no longer made?</h2>\n<p><strong>Nobody can say for sure, because two forces pull in opposite directions.</strong> On one side, some buyers avoid a model they fear will become hard to repair, and that can push used prices down. On the other side, a car that is rare and unusual can turn into a collector's item. Early Roadsters now show up at classic car auction houses such as RM Sotheby's. The Cybertruck has both traits: a small fleet and a design unlike anything else on the road. Anyone who claims to know which force wins is guessing. What you can control is the condition, the records and the remaining warranty, and those matter whether the model is in production or not. A few myths make the decision harder than it needs to be.</p>\n<h2>What should owners and buyers do now?</h2>\n<p><strong>Keep the paperwork, check the warranty dates and ignore the myths.</strong> The most common misunderstandings:</p>\n<ul>\n<li><strong>\"The warranty is void.\"</strong> No. It runs its full term and moves with the car to the next owner.</li>\n<li><strong>\"Tesla will stop fixing it.\"</strong> Tesla says the opposite. What is missing is a promise of how many years.</li>\n<li><strong>\"No more updates.\"</strong> Not automatically. Old hardware is a bigger limit than the end of production.</li>\n<li><strong>\"It is open source, so you can make your own parts.\"</strong> Musk said in July 2026 that Tesla plans to do for the Model S and X what it did for the Roadster. An Electrek review found the Roadster release was mostly manuals and diagnostics, not full design files.</li>\n</ul>\n<p>If you want a new Cybertruck, the window is roughly until mid-2027, although Musk gave no exact end date. If you own one, book recall work and warranty repairs while the cover lasts, and store every invoice. A car does not stop working when its factory moves on. It simply relies more on the people who look after it.</p>"
+ },
+ "nl": {
+  "title": "Wat gebeurt er met je Tesla als Tesla hem niet meer maakt? Cybertruck, Model S en X uitgelegd",
+  "description": "Na de Model S en X stopt Tesla ook met de Cybertruck. Wat dat betekent voor garantie, onderdelen, service, software-updates en restwaarde, met lessen van de eerste Roadster.",
+  "body": "<p>Op 6 november 2026 meldde Elon Musk op X dat Tesla de productie van de Cybertruck in Giga Texas rond medio 2027 afbouwt, om plaats te maken voor meer Cybercab-robotaxi's. Het is de derde Tesla die in ongeveer een jaar van de band verdwijnt: de Model S en Model X stopten in april 2026, toen hun plek in Fremont naar de Optimus-robots ging. Tesla meldt geen aparte Cybertruck-cijfers, maar Cox Automotive schat dat er begin 2026 in de VS zo'n 3.500 tot 3.700 per kwartaal zijn verkocht, ver onder de 250.000 per jaar waar Tesla ooit op mikte. Toch rijden er tienduizenden roestvrijstalen trucks rond, en nog veel meer Model S'en en X'en, ook in Nederland en België. Voor hun eigenaren roept het einde van de productie een heel praktisch probleem op: wat er gebeurt met een auto die de fabrikant niet meer bouwt.</p>\n<h2>Geldt je garantie nog als Tesla je auto niet meer bouwt?</h2>\n<p><strong>Ja. Garantie is een schriftelijke belofte die aan de auto vastzit, niet aan de productielijn.</strong> Voor de Cybertruck in de VS geeft Tesla's eigen garantieboekje 4 jaar of 80.000 km basisgarantie, en 8 jaar of 240.000 km op de accu en aandrijving, met minstens 70% van de accucapaciteit over die periode. Die voorwaarden worden niet korter omdat de fabriek stopt. Ze gaan bovendien kosteloos over op de volgende eigenaar, handig als je wilt verkopen. Tesla raadt aan de onderhoudshistorie mee te geven, dus bewaar die goed. Voor een Model S of X die nog garantie heeft, geldt hetzelfde. Het addertje: elke garantie houdt een keer op, en daarna draait alles om de vraag of iemand de auto nog kan repareren.</p>\n<h2>Dus wie repareert de auto, en waar komen de onderdelen vandaan?</h2>\n<p><strong>Tesla zegt dat service en reserveonderdelen blijven, maar niet hoe lang.</strong> Toen eigenaren het op X vroegen, antwoordde hoofdingenieur Wes Morrill van de Cybertruck dat Tesla reserveonderdelen op voorraad houdt en de truck met service blijft ondersteunen. Een duidelijke uitspraak, maar zonder aantal jaren, en Kelley Blue Book wijst erop dat Tesla geen termijn heeft genoemd. Twee dingen pleiten voor de eigenaren. Ten eerste leven de 48-voltelektronica, de steer-by-wire en de Etherloop-bekabeling van de Cybertruck voort in de Cybercab, dus een deel van die techniek blijft in productie. Ten tweede heeft Tesla een geschiedenis. Van de eerste Roadster zijn tussen 2008 en 2012 ongeveer 2.500 exemplaren gebouwd. In 2015, drie jaar na de laatste, bood Tesla die eigenaren een nieuw accupakket van 29.000 dollar aan, waarmee de actieradius steeg van zo'n 395 naar ruim 530 kilometer. Later maakte Tesla de werkplaatshandboeken en de diagnosesoftware van de Roadster openbaar. Onderdelen die maar op één model zitten, zoals de stalen carrosseriepanelen van de Cybertruck, zijn het zwakke punt: die hangen af van de voorraad, niet van een draaiende band. Maar hardware is maar de helft van een Tesla. De andere helft is software.</p>\n<h2>Krijgt een Tesla die niet meer gebouwd wordt nog software-updates?</h2>\n<p><strong>Meestal wel, want updates komen draadloos binnen en hebben de fabriek niet nodig, maar oude hardware stelt grenzen.</strong> Tesla's van jaren geleden krijgen nog steeds nieuwe softwareversies. De grens ligt bij de computer en de modem in de auto. Het duidelijkste voorbeeld kwam in februari 2022, toen AT&amp;T in de VS zijn 3G-netwerk uitzette. Model S'en van vóór juni 2015 zonder LTE-modem verloren live kaarten, functies in de app en draadloze updates, tenzij ze via wifi verbonden waren. Tesla bood een modemupgrade aan voor 200 dollar, inclusief montage. De auto bleef dus gewoon rijden, maar verbonden blijven kostte geld. De nieuwste functies vragen vaak om de nieuwste chips, dus een auto die niet meer gebouwd wordt, raakt langzaam achter bij de rest van het aanbod. Daarmee komt de vraag die veel eigenaren het meest bezighoudt: wat is de auto nog waard.</p>\n<h2>Wat gebeurt er met de waarde van een auto die niet meer gemaakt wordt?</h2>\n<p><strong>Niemand weet het zeker, want er trekken twee krachten in tegengestelde richting.</strong> Aan de ene kant mijden sommige kopers een model waarvan ze vrezen dat het lastig te repareren wordt, en dat kan de occasionprijzen drukken. Aan de andere kant kan een zeldzame, opvallende auto een verzamelobject worden. Vroege Roadsters duiken inmiddels op bij klassiekerveilinghuizen zoals RM Sotheby's. De Cybertruck heeft allebei: een kleine vloot en een ontwerp dat op niets anders lijkt. Wie beweert te weten welke kracht wint, gokt. Waar je wél invloed op hebt: de staat van de auto, de papieren en de resterende garantie, en die tellen of het model nu in productie is of niet. Een paar hardnekkige misverstanden maken de keuze lastiger dan nodig.</p>\n<h2>Wat moeten eigenaren en kopers nu doen?</h2>\n<p><strong>Bewaar de papieren, check de garantiedata en trap niet in de mythes.</strong> De meest gehoorde misverstanden:</p>\n<ul>\n<li><strong>\"De garantie vervalt.\"</strong> Nee. Die loopt de volledige termijn door en gaat mee naar de volgende eigenaar.</li>\n<li><strong>\"Tesla repareert hem straks niet meer.\"</strong> Tesla zegt het tegendeel. Wat ontbreekt, is een toezegging voor hoeveel jaar.</li>\n<li><strong>\"Geen updates meer.\"</strong> Niet vanzelf. Verouderde hardware is een grotere beperking dan het einde van de productie.</li>\n<li><strong>\"Het wordt open source, dus je maakt zelf onderdelen.\"</strong> Musk zei in juli 2026 dat Tesla voor de Model S en X wil doen wat het voor de Roadster deed. Uit een analyse van Electrek bleek dat de Roadster-release vooral handboeken en diagnosesoftware bevatte, geen complete ontwerpbestanden.</li>\n</ul>\n<p>Wil je een nieuwe Cybertruck, dan heb je ongeveer tot medio 2027, al noemde Musk geen exacte einddatum. In Europa wordt de truck overigens niet officieel verkocht. Heb je er een, laat terugroepacties en garantiereparaties dan uitvoeren zolang de dekking loopt, en bewaar elke factuur. Een auto stopt niet met werken als zijn fabriek verdergaat. Hij leunt alleen meer op de mensen die voor hem zorgen.</p>"
+ },
+ "short": {
+  "hook": "consequence",
+  "en": "Tesla will stop building the Cybertruck. What happens to the ones already on the road? Production winds down around mid-2027, to make room for the Cybercab. The third Tesla to go in about a year, after the Model S and X. So who fixes these trucks now? The lead engineer says Tesla will keep spare parts and service. But not for how many years. The warranty does NOT vanish. Eight years on the battery, and it moves to the next owner. Tesla has done this before. The first Roadster ended in 2012. Three years later, owners could buy a brand new battery with over 330 miles of range. A car does not die when its factory moves on.",
+  "nl": "Tesla stopt met de Cybertruck. Wat gebeurt er met de trucks die al rondrijden? De productie wordt rond medio 2027 afgebouwd, om plaats te maken voor de Cybercab. De derde Tesla die in ongeveer een jaar verdwijnt, na de Model S en X. Dus wie repareert die trucks nu? De hoofdingenieur zegt dat Tesla reserveonderdelen en service houdt. Maar niet voor hoeveel jaar. De garantie verdwijnt NIET. Acht jaar op de accu, en die gaat mee naar de volgende eigenaar. Tesla heeft dit eerder gedaan. De eerste Roadster stopte in 2012. Drie jaar later konden eigenaren een gloednieuwe accu kopen, goed voor ruim 530 kilometer. Een auto gaat niet dood als zijn fabriek verdergaat.",
+  "yt_title_en": "Tesla Is Ending the Cybertruck. Now What?",
+  "yt_title_nl": "Tesla Stopt met de Cybertruck. En Nu?",
+  "story": [
+   {
+    "part": "hook",
+    "text": "Tesla will stop building the Cybertruck. What happens to the ones already on the road?",
+    "lib": [
+     "cybertruck-front-city.jpg"
+    ],
+    "pop": [
+     {
+      "say": "stop building",
+      "show": "STOP BUILDING"
+     },
+     {
+      "say": "already on the road",
+      "show": "ALREADY ON THE ROAD"
+     },
+     {
+      "say": "What happens",
+      "show": "NOW WHAT?"
+     }
+    ]
+   },
+   {
+    "part": "hook",
+    "text": "Production winds down around mid-2027, to make room for the Cybercab.",
+    "lib": [
+     "cybercab-line-front.jpg"
+    ],
+    "pop": [
+     {
+      "say": "mid-2027",
+      "show": "MID-2027"
+     },
+     {
+      "say": "make room",
+      "show": "MAKE ROOM"
+     },
+     {
+      "say": "Cybercab",
+      "show": "FOR CYBERCAB"
+     }
+    ]
+   },
+   {
+    "part": "tension",
+    "text": "The third Tesla to go in about a year, after the Model S and X.",
+    "img": "models/ms-1.jpg",
+    "photo": [
+     {
+      "q": [
+       "Tesla Model X",
+       "Tesla Model X falcon wing doors",
+       "Tesla Model X 2016"
+      ],
+      "want": "a Tesla Model X SUV"
+     }
+    ],
+    "pop": [
+     {
+      "say": "third Tesla",
+      "show": "THIRD TESLA"
+     },
+     {
+      "say": "Model S",
+      "show": "MODEL S"
+     },
+     {
+      "say": "and X",
+      "show": "MODEL X"
+     }
+    ]
+   },
+   {
+    "part": "tension",
+    "text": "So who fixes these trucks now?",
+    "lib": [
+     "service-center.jpg"
+    ],
+    "pop": [
+     {
+      "say": "who fixes",
+      "show": "WHO FIXES IT?"
+     }
+    ]
+   },
+   {
+    "part": "tension",
+    "text": "The lead engineer says Tesla will keep spare parts and service. But not for how many years.",
+    "lib": [
+     "service-center.jpg",
+     "cybertruck-bed-open.jpg"
+    ],
+    "pop": [
+     {
+      "say": "lead engineer",
+      "show": "LEAD ENGINEER"
+     },
+     {
+      "say": "spare parts",
+      "show": "SPARE PARTS"
+     },
+     {
+      "say": "how many years",
+      "show": "HOW LONG?"
+     }
+    ]
+   },
+   {
+    "part": "payoff",
+    "text": "The warranty does NOT vanish. Eight years on the battery, and it moves to the next owner.",
+    "lib": [
+     "cybertruck-rear-light.jpg"
+    ],
+    "pop": [
+     {
+      "say": "does NOT vanish",
+      "show": "NOT GONE"
+     },
+     {
+      "say": "Eight years",
+      "show": "8 YEARS BATTERY"
+     },
+     {
+      "say": "next owner",
+      "show": "NEXT OWNER"
+     }
+    ]
+   },
+   {
+    "part": "payoff",
+    "text": "Tesla has done this before. The first Roadster ended in 2012.",
+    "photo": [
+     {
+      "q": [
+       "Tesla Roadster 2008",
+       "Tesla Roadster first generation",
+       "Tesla Roadster 2.5"
+      ],
+      "want": "a first-generation Tesla Roadster, the small 2008-2012 two-seat sports car"
+     }
+    ],
+    "pop": [
+     {
+      "say": "done this before",
+      "show": "DONE IT BEFORE"
+     },
+     {
+      "say": "first Roadster",
+      "show": "FIRST ROADSTER"
+     },
+     {
+      "say": "2012",
+      "show": "ENDED 2012"
+     }
+    ]
+   },
+   {
+    "part": "payoff",
+    "text": "Three years later, owners could buy a brand new battery with over 330 miles of range.",
+    "photo": [
+     {
+      "q": [
+       "Tesla Roadster Sport",
+       "Tesla Roadster 2010",
+       "Tesla Roadster red"
+      ],
+      "want": "a first-generation Tesla Roadster sports car"
+     }
+    ],
+    "pop": [
+     {
+      "say": "Three years later",
+      "show": "3 YEARS LATER"
+     },
+     {
+      "say": "brand new battery",
+      "show": "NEW BATTERY"
+     },
+     {
+      "say": "330 miles",
+      "show": "330+ MILES"
+     }
+    ]
+   },
+   {
+    "part": "payoff",
+    "text": "A car does not die when its factory moves on.",
+    "lib": [
+     "cybertruck-bed-open.jpg"
+    ],
+    "pop": [
+     {
+      "say": "does not die",
+      "show": "IT DOESN'T DIE"
+     },
+     {
+      "say": "factory moves on",
+      "show": "FACTORY MOVES ON"
+     }
+    ]
+   }
+  ]
+ },
+ "video": {
+  "en": [
+   {
+    "text": "Tesla is about to stop building the Cybertruck, and tens of thousands of owners want to know one thing: what happens to my truck? Musk says production at Giga Texas winds down around the middle of 2027, to make room for the Cybercab. It is the third Tesla to go in about a year, after the Model S and the Model X. And nobody has said how long the parts will last.",
+    "img": [
+     "lib/cybertruck-front-city.jpg",
+     "lib/cybercab-line-front.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Gigafactory Texas",
+       "Giga Texas Austin",
+       "Tesla Gigafactory Texas aerial"
+      ],
+      "want": "the Tesla Gigafactory Texas building near Austin"
+     },
+     {
+      "q": [
+       "Tesla Model S",
+       "Tesla Model S 2016",
+       "Tesla Model S red"
+      ],
+      "want": "a Tesla Model S sedan"
+     }
+    ],
+    "pop": [
+     {
+      "say": "stop building",
+      "show": "STOP BUILDING"
+     },
+     {
+      "say": "what happens to my truck",
+      "show": "MY TRUCK?"
+     },
+     {
+      "say": "middle of 2027",
+      "show": "MID-2027"
+     },
+     {
+      "say": "Cybercab",
+      "show": "FOR THE CYBERCAB"
+     },
+     {
+      "say": "third Tesla",
+      "show": "THIRD IN A YEAR"
+     },
+     {
+      "say": "how long the parts",
+      "show": "PARTS?"
+     }
+    ]
+   },
+   {
+    "text": "Tesla never publishes Cybertruck sales on their own. Cox Automotive estimates about three and a half thousand a quarter in the US in early 2026. Tesla once aimed for 250,000 a year. Small numbers, but still a big fleet of owners with one practical problem: living with a car its maker no longer builds.",
+    "img": [
+     "cybertruck-fleet.jpg",
+     "lib/cybertruck-bed-open.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Tesla Cybertruck",
+       "Cybertruck stainless steel",
+       "Tesla Cybertruck street"
+      ],
+      "want": "a stainless steel Tesla Cybertruck pickup"
+     }
+    ],
+    "pop": [
+     {
+      "say": "Cox Automotive",
+      "show": "ESTIMATE"
+     },
+     {
+      "say": "three and a half thousand",
+      "show": "~3,500 A QUARTER"
+     },
+     {
+      "say": "250,000 a year",
+      "show": "GOAL: 250,000"
+     },
+     {
+      "say": "no longer builds",
+      "show": "NO LONGER BUILT"
+     }
+    ]
+   },
+   {
+    "head": "Does your warranty still count when Tesla stops building your car?",
+    "img": [
+     "lib/cybertruck-rear-light.jpg"
+    ],
+    "pop": [
+     {
+      "say": "",
+      "show": "WARRANTY?"
+     }
+    ]
+   },
+   {
+    "text": "Yes. A warranty is a written promise tied to the car, not to the production line. For the Cybertruck in the US, Tesla's booklet gives four years or 50,000 miles of basic cover, and eight years or 150,000 miles for the battery and the drive unit, with at least 70 percent of the battery capacity kept.",
+    "img": [
+     "models/ct-3.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Tesla Cybertruck",
+       "Cybertruck stainless steel",
+       "Tesla Cybertruck street"
+      ],
+      "want": "a stainless steel Tesla Cybertruck pickup"
+     }
+    ],
+    "pop": [
+     {
+      "say": "Yes",
+      "show": "YES"
+     },
+     {
+      "say": "tied to the car",
+      "show": "TIED TO THE CAR"
+     },
+     {
+      "say": "four years",
+      "show": "4 YEARS BASIC"
+     },
+     {
+      "say": "eight years",
+      "show": "8 YEARS BATTERY"
+     },
+     {
+      "say": "70 percent",
+      "show": "70% CAPACITY"
+     }
+    ]
+   },
+   {
+    "text": "Those terms do not shrink when the factory stops. And they move to the next owner for free, which matters when you sell. Tesla asks owners to hand over the service records too, so keep every invoice. The same goes for a Model S or Model X that is still under warranty. But every warranty ends one day.",
+    "img": [
+     "lib/tesla-app-phone.jpg",
+     "models/mx-1.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Tesla Model X",
+       "Tesla Model X falcon wing doors",
+       "Tesla Model X 2016"
+      ],
+      "want": "a Tesla Model X SUV"
+     }
+    ],
+    "pop": [
+     {
+      "say": "do not shrink",
+      "show": "NO SHRINKING"
+     },
+     {
+      "say": "next owner",
+      "show": "NEXT OWNER"
+     },
+     {
+      "say": "every invoice",
+      "show": "KEEP INVOICES"
+     },
+     {
+      "say": "ends one day",
+      "show": "IT ENDS"
+     }
+    ]
+   },
+   {
+    "head": "So who fixes the car, and where do the parts come from?",
+    "img": [
+     "lib/service-center.jpg"
+    ],
+    "pop": [
+     {
+      "say": "",
+      "show": "WHO FIXES IT?"
+     }
+    ]
+   },
+   {
+    "text": "When owners asked on X, Cybertruck lead engineer Wes Morrill answered that Tesla will keep spare parts and keep supporting the truck with service. A clear statement. But not a number of years. Kelley Blue Book points out that Tesla has given no timeline at all.",
+    "img": [
+     "lib/service-center.jpg",
+     "guide-service.jpg"
+    ],
+    "pop": [
+     {
+      "say": "Wes Morrill",
+      "show": "LEAD ENGINEER"
+     },
+     {
+      "say": "spare parts",
+      "show": "SPARE PARTS"
+     },
+     {
+      "say": "not a number of years",
+      "show": "HOW MANY YEARS?"
+     },
+     {
+      "say": "no timeline",
+      "show": "NO TIMELINE"
+     }
+    ]
+   },
+   {
+    "text": "Two things help owners. The Cybertruck's 48-volt electrics, its steer-by-wire and its Etherloop wiring live on in the Cybercab. So part of that technology stays in production for years.",
+    "img": [
+     "lib/cybercab-line-front.jpg",
+     "lib/cybercab-dash-line.jpg"
+    ],
+    "pop": [
+     {
+      "say": "48-volt",
+      "show": "48 VOLT"
+     },
+     {
+      "say": "steer-by-wire",
+      "show": "STEER-BY-WIRE"
+     },
+     {
+      "say": "live on",
+      "show": "LIVES ON"
+     },
+     {
+      "say": "stays in production",
+      "show": "STILL BUILT"
+     }
+    ]
+   },
+   {
+    "text": "And Tesla has done this before. About 2,500 original Roadsters were built between 2008 and 2012. In 2015, three years after the last one, Tesla sold those owners a brand new 29,000 dollar battery pack. Range went from 245 to more than 330 miles. Later it even published the Roadster's service manuals and diagnostic software.",
+    "photo": [
+     {
+      "q": [
+       "Tesla Roadster 2008",
+       "Tesla Roadster first generation",
+       "Tesla Roadster 2.5"
+      ],
+      "want": "a first-generation Tesla Roadster, the small 2008-2012 two-seat sports car"
+     },
+     {
+      "q": [
+       "Tesla Roadster Sport",
+       "Tesla Roadster 2010",
+       "Tesla Roadster red"
+      ],
+      "want": "a first-generation Tesla Roadster sports car"
+     }
+    ],
+    "pop": [
+     {
+      "say": "2,500",
+      "show": "2,500 ROADSTERS"
+     },
+     {
+      "say": "2015",
+      "show": "3 YEARS LATER"
+     },
+     {
+      "say": "29,000 dollar",
+      "show": "$29,000 BATTERY"
+     },
+     {
+      "say": "330 miles",
+      "show": "330+ MILES"
+     },
+     {
+      "say": "service manuals",
+      "show": "MANUALS PUBLIC"
+     }
+    ]
+   },
+   {
+    "text": "The weak spot is parts that exist on one model only, like the Cybertruck's stainless steel body panels. Those depend on what is in stock, not on a running line. Still, hardware is only half of a Tesla. The other half is software.",
+    "img": [
+     "models/ct-1.jpg",
+     "lib/software-update-screen.jpg"
+    ],
+    "pop": [
+     {
+      "say": "one model only",
+      "show": "ONE MODEL ONLY"
+     },
+     {
+      "say": "stainless steel",
+      "show": "STEEL PANELS"
+     },
+     {
+      "say": "in stock",
+      "show": "IN STOCK?"
+     },
+     {
+      "say": "software",
+      "show": "SOFTWARE"
+     }
+    ]
+   },
+   {
+    "head": "Will a discontinued Tesla still get software updates?",
+    "img": [
+     "lib/software-update-screen.jpg"
+    ],
+    "pop": [
+     {
+      "say": "",
+      "show": "UPDATES?"
+     }
+    ]
+   },
+   {
+    "text": "Usually yes. Updates arrive over the air, so they do not need a factory. Teslas built many years ago still get new software versions. The limit is the hardware inside: the computer and the modem.",
+    "img": [
+     "lib/software-update-screen.jpg",
+     "models/msc-1.jpg"
+    ],
+    "pop": [
+     {
+      "say": "Usually yes",
+      "show": "USUALLY YES"
+     },
+     {
+      "say": "over the air",
+      "show": "OVER THE AIR"
+     },
+     {
+      "say": "many years ago",
+      "show": "OLD CARS TOO"
+     },
+     {
+      "say": "the modem",
+      "show": "THE HARDWARE"
+     }
+    ]
+   },
+   {
+    "text": "The clearest example came in February 2022, when AT&T switched off its 3G network in the US. Early Model S cars without an LTE modem lost live maps, remote app functions and over-the-air updates, unless they sat on Wi-Fi. Tesla's fix was a 200 dollar modem upgrade. The car kept driving. Staying connected cost money.",
+    "img": [
+     "models/msc-2.jpg",
+     "lib/tesla-app-phone.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "cell tower",
+       "mobile phone mast",
+       "cellular antenna tower"
+      ],
+      "want": "a mobile phone mast / cell tower"
+     }
+    ],
+    "pop": [
+     {
+      "say": "February 2022",
+      "show": "FEBRUARY 2022"
+     },
+     {
+      "say": "3G network",
+      "show": "3G SWITCHED OFF"
+     },
+     {
+      "say": "lost live maps",
+      "show": "NO LIVE MAPS"
+     },
+     {
+      "say": "200 dollar",
+      "show": "$200 MODEM"
+     },
+     {
+      "say": "cost money",
+      "show": "COST MONEY"
+     }
+    ]
+   },
+   {
+    "text": "New features often need new chips. So a car that is no longer built slowly falls behind the current lineup. Which brings us to the question owners care about most.",
+    "img": [
+     "lib/ai-chip-closeup.jpg",
+     "models/ms-1.jpg"
+    ],
+    "pop": [
+     {
+      "say": "new chips",
+      "show": "NEW CHIPS"
+     },
+     {
+      "say": "falls behind",
+      "show": "FALLS BEHIND"
+     },
+     {
+      "say": "care about most",
+      "show": "THE BIG ONE"
+     }
+    ]
+   },
+   {
+    "head": "What happens to the value of a car that is no longer made?",
+    "img": [
+     "cybertruck-fleet.jpg"
+    ],
+    "pop": [
+     {
+      "say": "",
+      "show": "WHAT'S IT WORTH?"
+     }
+    ]
+   },
+   {
+    "text": "Nobody knows for sure, because two forces pull in opposite directions. Some buyers avoid a model they fear will be hard to repair, and that can push used prices down. But a rare and unusual car can also become a collector's item.",
+    "img": [
+     "lib/stock-phone-down.jpg",
+     "lib/cybertruck-rear-light.jpg"
+    ],
+    "pop": [
+     {
+      "say": "Nobody knows",
+      "show": "NOBODY KNOWS"
+     },
+     {
+      "say": "opposite directions",
+      "show": "TWO FORCES"
+     },
+     {
+      "say": "push used prices down",
+      "show": "PRICES DOWN?"
+     },
+     {
+      "say": "collector's item",
+      "show": "COLLECTOR'S ITEM?"
+     }
+    ]
+   },
+   {
+    "text": "Early Roadsters now turn up at classic car auction houses like RM Sotheby's. The Cybertruck has both traits: a small fleet, and a design unlike anything else on the road. Anyone who says they know which force wins is guessing. What you do control is the condition, the records and the warranty left.",
+    "photo": [
+     {
+      "q": [
+       "Tesla Roadster 2008",
+       "Tesla Roadster first generation",
+       "Tesla Roadster 2.5"
+      ],
+      "want": "a first-generation Tesla Roadster, the small 2008-2012 two-seat sports car"
+     },
+     {
+      "q": [
+       "classic car auction",
+       "car auction hall",
+       "Pebble Beach Concours"
+      ],
+      "want": "classic cars at an auction or concours, no recognisable people"
+     }
+    ],
+    "img": [
+     "models/ct-4.jpg"
+    ],
+    "pop": [
+     {
+      "say": "auction houses",
+      "show": "AT AUCTION"
+     },
+     {
+      "say": "small fleet",
+      "show": "SMALL FLEET"
+     },
+     {
+      "say": "guessing",
+      "show": "GUESSING"
+     },
+     {
+      "say": "condition, the records",
+      "show": "CONDITION + RECORDS"
+     }
+    ]
+   },
+   {
+    "head": "What should owners and buyers do now?",
+    "img": [
+     "lib/cybertruck-front-city.jpg"
+    ],
+    "pop": [
+     {
+      "say": "",
+      "show": "WHAT NOW?"
+     }
+    ]
+   },
+   {
+    "text": "First, the myths. The warranty is not void: it runs its full term and moves with the car. Tesla has not said it will stop repairs; it says the opposite, just without a number of years. And the end of production does not switch off updates. Old hardware is the bigger limit.",
+    "img": [
+     "lib/service-center.jpg",
+     "lib/software-update-screen.jpg"
+    ],
+    "pop": [
+     {
+      "say": "the myths",
+      "show": "MYTHS"
+     },
+     {
+      "say": "not void",
+      "show": "NOT VOID"
+     },
+     {
+      "say": "says the opposite",
+      "show": "REPAIRS GO ON"
+     },
+     {
+      "say": "Old hardware",
+      "show": "OLD HARDWARE"
+     }
+    ]
+   },
+   {
+    "text": "One more: open source. In July 2026 Musk said Tesla plans to do for the Model S and X what it did for the Roadster. A review by Electrek found the Roadster release was mostly manuals and diagnostics, not full design files. So do not count on printing your own parts.",
+    "img": [
+     "models/mx-2.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Tesla Model X",
+       "Tesla Model X falcon wing doors",
+       "Tesla Model X 2016"
+      ],
+      "want": "a Tesla Model X SUV"
+     },
+     {
+      "q": [
+       "Tesla Roadster 2008",
+       "Tesla Roadster first generation",
+       "Tesla Roadster 2.5"
+      ],
+      "want": "a first-generation Tesla Roadster, the small 2008-2012 two-seat sports car"
+     }
+    ],
+    "pop": [
+     {
+      "say": "open source",
+      "show": "OPEN SOURCE?"
+     },
+     {
+      "say": "July 2026",
+      "show": "JULY 2026"
+     },
+     {
+      "say": "mostly manuals",
+      "show": "MOSTLY MANUALS"
+     },
+     {
+      "say": "printing your own parts",
+      "show": "DIY PARTS? NO"
+     }
+    ]
+   },
+   {
+    "text": "If you want a new Cybertruck, the window runs roughly until mid-2027, though Musk gave no exact end date. If you own one, get recall work and warranty repairs done while the cover lasts, and keep every invoice. A car does not stop working when its factory moves on. It just depends more on the people who look after it.",
+    "img": [
+     "lib/cybertruck-bed-open.jpg",
+     "lib/cybertruck-rear-light.jpg"
+    ],
+    "pop": [
+     {
+      "say": "mid-2027",
+      "show": "ORDER BY MID-2027"
+     },
+     {
+      "say": "recall work",
+      "show": "DO THE RECALLS"
+     },
+     {
+      "say": "every invoice",
+      "show": "KEEP INVOICES"
+     },
+     {
+      "say": "look after it",
+      "show": "LOOK AFTER IT"
+     }
+    ]
+   }
+  ],
+  "nl": [
+   {
+    "text": "Tesla stopt binnenkort met de Cybertruck, en tienduizenden eigenaren willen één ding weten: wat gebeurt er met mijn truck? Volgens Musk wordt de productie in Giga Texas rond medio 2027 afgebouwd, om plaats te maken voor de Cybercab. Het is de derde Tesla die in ongeveer een jaar verdwijnt, na de Model S en de Model X. En niemand heeft gezegd hoe lang de onderdelen er nog zijn.",
+    "img": [
+     "lib/cybertruck-front-city.jpg",
+     "lib/cybercab-line-front.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Gigafactory Texas",
+       "Giga Texas Austin",
+       "Tesla Gigafactory Texas aerial"
+      ],
+      "want": "the Tesla Gigafactory Texas building near Austin"
+     },
+     {
+      "q": [
+       "Tesla Model S",
+       "Tesla Model S 2016",
+       "Tesla Model S red"
+      ],
+      "want": "a Tesla Model S sedan"
+     }
+    ],
+    "pop": [
+     {
+      "say": "stopt",
+      "show": "STOPT"
+     },
+     {
+      "say": "mijn truck",
+      "show": "MIJN TRUCK?"
+     },
+     {
+      "say": "medio 2027",
+      "show": "MEDIO 2027"
+     },
+     {
+      "say": "Cybercab",
+      "show": "VOOR DE CYBERCAB"
+     },
+     {
+      "say": "derde Tesla",
+      "show": "DERDE IN EEN JAAR"
+     },
+     {
+      "say": "onderdelen",
+      "show": "ONDERDELEN?"
+     }
+    ]
+   },
+   {
+    "text": "Tesla publiceert nooit aparte Cybertruck-cijfers. Cox Automotive schat dat er begin 2026 in de VS zo'n drieënhalfduizend per kwartaal werden verkocht. Tesla mikte ooit op 250.000 per jaar. Kleine aantallen, maar wel een flinke groep eigenaren met één praktisch probleem: leven met een auto die de fabrikant niet meer bouwt.",
+    "img": [
+     "cybertruck-fleet.jpg",
+     "lib/cybertruck-bed-open.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Tesla Cybertruck",
+       "Cybertruck stainless steel",
+       "Tesla Cybertruck street"
+      ],
+      "want": "a stainless steel Tesla Cybertruck pickup"
+     }
+    ],
+    "pop": [
+     {
+      "say": "Cox Automotive",
+      "show": "SCHATTING"
+     },
+     {
+      "say": "drieënhalfduizend",
+      "show": "~3.500 PER KWARTAAL"
+     },
+     {
+      "say": "250.000 per jaar",
+      "show": "DOEL: 250.000"
+     },
+     {
+      "say": "niet meer bouwt",
+      "show": "NIET MEER GEBOUWD"
+     }
+    ]
+   },
+   {
+    "head": "Geldt je garantie nog als Tesla je auto niet meer bouwt?",
+    "img": [
+     "lib/cybertruck-rear-light.jpg"
+    ],
+    "pop": [
+     {
+      "say": "",
+      "show": "GARANTIE?"
+     }
+    ]
+   },
+   {
+    "text": "Ja. Garantie is een schriftelijke belofte die aan de auto vastzit, niet aan de productielijn. Voor de Cybertruck in de VS geeft Tesla vier jaar of 80.000 kilometer basisgarantie, en acht jaar of 240.000 kilometer op de accu en de aandrijving, met minstens 70 procent van de accucapaciteit.",
+    "img": [
+     "models/ct-3.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Tesla Cybertruck",
+       "Cybertruck stainless steel",
+       "Tesla Cybertruck street"
+      ],
+      "want": "a stainless steel Tesla Cybertruck pickup"
+     }
+    ],
+    "pop": [
+     {
+      "say": "Ja",
+      "show": "JA"
+     },
+     {
+      "say": "aan de auto",
+      "show": "ZIT AAN DE AUTO"
+     },
+     {
+      "say": "vier jaar",
+      "show": "4 JAAR BASIS"
+     },
+     {
+      "say": "acht jaar",
+      "show": "8 JAAR ACCU"
+     },
+     {
+      "say": "70 procent",
+      "show": "70% CAPACITEIT"
+     }
+    ]
+   },
+   {
+    "text": "Die voorwaarden worden niet korter als de fabriek stopt. En ze gaan gratis over op de volgende eigenaar, handig als je verkoopt. Tesla vraagt om ook de onderhoudshistorie mee te geven, dus bewaar elke factuur. Voor een Model S of Model X met garantie geldt hetzelfde. Maar elke garantie houdt een keer op.",
+    "img": [
+     "lib/tesla-app-phone.jpg",
+     "models/mx-1.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Tesla Model X",
+       "Tesla Model X falcon wing doors",
+       "Tesla Model X 2016"
+      ],
+      "want": "a Tesla Model X SUV"
+     }
+    ],
+    "pop": [
+     {
+      "say": "niet korter",
+      "show": "NIET KORTER"
+     },
+     {
+      "say": "volgende eigenaar",
+      "show": "VOLGENDE EIGENAAR"
+     },
+     {
+      "say": "elke factuur",
+      "show": "BEWAAR FACTUREN"
+     },
+     {
+      "say": "houdt een keer op",
+      "show": "HET STOPT OOIT"
+     }
+    ]
+   },
+   {
+    "head": "Dus wie repareert de auto, en waar komen de onderdelen vandaan?",
+    "img": [
+     "lib/service-center.jpg"
+    ],
+    "pop": [
+     {
+      "say": "",
+      "show": "WIE REPAREERT?"
+     }
+    ]
+   },
+   {
+    "text": "Toen eigenaren het op X vroegen, antwoordde Cybertruck-hoofdingenieur Wes Morrill dat Tesla reserveonderdelen op voorraad houdt en de truck met service blijft ondersteunen. Een duidelijke uitspraak. Maar geen aantal jaren. Kelley Blue Book wijst erop dat Tesla helemaal geen termijn heeft genoemd.",
+    "img": [
+     "lib/service-center.jpg",
+     "guide-service.jpg"
+    ],
+    "pop": [
+     {
+      "say": "Wes Morrill",
+      "show": "HOOFDINGENIEUR"
+     },
+     {
+      "say": "reserveonderdelen",
+      "show": "RESERVEONDERDELEN"
+     },
+     {
+      "say": "geen aantal jaren",
+      "show": "HOE LANG?"
+     },
+     {
+      "say": "geen termijn",
+      "show": "GEEN TERMIJN"
+     }
+    ]
+   },
+   {
+    "text": "Twee dingen helpen eigenaren. De 48-voltelektronica, de steer-by-wire en de Etherloop-bekabeling van de Cybertruck leven voort in de Cybercab. Een deel van die techniek blijft dus nog jaren in productie.",
+    "img": [
+     "lib/cybercab-line-front.jpg",
+     "lib/cybercab-dash-line.jpg"
+    ],
+    "pop": [
+     {
+      "say": "48-volt",
+      "show": "48 VOLT"
+     },
+     {
+      "say": "steer-by-wire",
+      "show": "STEER-BY-WIRE"
+     },
+     {
+      "say": "leven voort",
+      "show": "LEEFT VOORT"
+     },
+     {
+      "say": "in productie",
+      "show": "NOG GEBOUWD"
+     }
+    ]
+   },
+   {
+    "text": "En Tesla heeft dit eerder gedaan. Van de eerste Roadster zijn tussen 2008 en 2012 ongeveer 2.500 exemplaren gebouwd. In 2015, drie jaar na de laatste, verkocht Tesla die eigenaren een gloednieuw accupakket van 29.000 dollar. De actieradius ging van zo'n 395 naar ruim 530 kilometer. Later publiceerde Tesla zelfs de werkplaatshandboeken en de diagnosesoftware.",
+    "photo": [
+     {
+      "q": [
+       "Tesla Roadster 2008",
+       "Tesla Roadster first generation",
+       "Tesla Roadster 2.5"
+      ],
+      "want": "a first-generation Tesla Roadster, the small 2008-2012 two-seat sports car"
+     },
+     {
+      "q": [
+       "Tesla Roadster Sport",
+       "Tesla Roadster 2010",
+       "Tesla Roadster red"
+      ],
+      "want": "a first-generation Tesla Roadster sports car"
+     }
+    ],
+    "pop": [
+     {
+      "say": "2.500",
+      "show": "2.500 ROADSTERS"
+     },
+     {
+      "say": "2015",
+      "show": "3 JAAR LATER"
+     },
+     {
+      "say": "29.000 dollar",
+      "show": "$29.000 ACCU"
+     },
+     {
+      "say": "530 kilometer",
+      "show": "530+ KM"
+     },
+     {
+      "say": "werkplaatshandboeken",
+      "show": "HANDBOEKEN OPENBAAR"
+     }
+    ]
+   },
+   {
+    "text": "Het zwakke punt zijn onderdelen die maar op één model zitten, zoals de stalen carrosseriepanelen van de Cybertruck. Die hangen af van de voorraad, niet van een draaiende band. Maar hardware is maar de helft van een Tesla. De andere helft is software.",
+    "img": [
+     "models/ct-1.jpg",
+     "lib/software-update-screen.jpg"
+    ],
+    "pop": [
+     {
+      "say": "één model",
+      "show": "MAAR ÉÉN MODEL"
+     },
+     {
+      "say": "stalen",
+      "show": "STALEN PANELEN"
+     },
+     {
+      "say": "voorraad",
+      "show": "OP VOORRAAD?"
+     },
+     {
+      "say": "software",
+      "show": "SOFTWARE"
+     }
+    ]
+   },
+   {
+    "head": "Krijgt een Tesla die niet meer gebouwd wordt nog software-updates?",
+    "img": [
+     "lib/software-update-screen.jpg"
+    ],
+    "pop": [
+     {
+      "say": "",
+      "show": "UPDATES?"
+     }
+    ]
+   },
+   {
+    "text": "Meestal wel. Updates komen draadloos binnen, daar is geen fabriek voor nodig. Tesla's van jaren geleden krijgen nog steeds nieuwe softwareversies. De grens ligt bij de hardware: de computer en de modem.",
+    "img": [
+     "lib/software-update-screen.jpg",
+     "models/msc-1.jpg"
+    ],
+    "pop": [
+     {
+      "say": "Meestal wel",
+      "show": "MEESTAL WEL"
+     },
+     {
+      "say": "draadloos",
+      "show": "DRAADLOOS"
+     },
+     {
+      "say": "jaren geleden",
+      "show": "OOK OUDE AUTO'S"
+     },
+     {
+      "say": "de modem",
+      "show": "DE HARDWARE"
+     }
+    ]
+   },
+   {
+    "text": "Het duidelijkste voorbeeld kwam in februari 2022, toen AT&T in de VS zijn 3G-netwerk uitzette. Vroege Model S'en zonder LTE-modem verloren live kaarten, functies in de app en draadloze updates, tenzij ze op wifi stonden. Tesla's oplossing: een modemupgrade van 200 dollar. De auto bleef rijden. Verbonden blijven kostte geld.",
+    "img": [
+     "models/msc-2.jpg",
+     "lib/tesla-app-phone.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "cell tower",
+       "mobile phone mast",
+       "cellular antenna tower"
+      ],
+      "want": "a mobile phone mast / cell tower"
+     }
+    ],
+    "pop": [
+     {
+      "say": "februari 2022",
+      "show": "FEBRUARI 2022"
+     },
+     {
+      "say": "3G-netwerk",
+      "show": "3G UIT"
+     },
+     {
+      "say": "live kaarten",
+      "show": "GEEN LIVE KAARTEN"
+     },
+     {
+      "say": "200 dollar",
+      "show": "$200 MODEM"
+     },
+     {
+      "say": "kostte geld",
+      "show": "KOSTTE GELD"
+     }
+    ]
+   },
+   {
+    "text": "Nieuwe functies vragen vaak om nieuwe chips. Een auto die niet meer gebouwd wordt, raakt dus langzaam achter bij de rest van het aanbod. En dan komt de vraag die eigenaren het meest bezighoudt.",
+    "img": [
+     "lib/ai-chip-closeup.jpg",
+     "models/ms-1.jpg"
+    ],
+    "pop": [
+     {
+      "say": "nieuwe chips",
+      "show": "NIEUWE CHIPS"
+     },
+     {
+      "say": "raakt dus langzaam achter",
+      "show": "RAAKT ACHTER"
+     },
+     {
+      "say": "meest bezighoudt",
+      "show": "DE GROTE VRAAG"
+     }
+    ]
+   },
+   {
+    "head": "Wat gebeurt er met de waarde van een auto die niet meer gemaakt wordt?",
+    "img": [
+     "cybertruck-fleet.jpg"
+    ],
+    "pop": [
+     {
+      "say": "",
+      "show": "WAT IS HIJ WAARD?"
+     }
+    ]
+   },
+   {
+    "text": "Niemand weet het zeker, want twee krachten trekken in tegengestelde richting. Sommige kopers mijden een model waarvan ze vrezen dat het lastig te repareren wordt, en dat kan de occasionprijzen drukken. Maar een zeldzame, opvallende auto kan ook een verzamelobject worden.",
+    "img": [
+     "lib/stock-phone-down.jpg",
+     "lib/cybertruck-rear-light.jpg"
+    ],
+    "pop": [
+     {
+      "say": "Niemand weet",
+      "show": "NIEMAND WEET HET"
+     },
+     {
+      "say": "tegengestelde richting",
+      "show": "TWEE KRACHTEN"
+     },
+     {
+      "say": "occasionprijzen drukken",
+      "show": "PRIJZEN OMLAAG?"
+     },
+     {
+      "say": "verzamelobject",
+      "show": "VERZAMELOBJECT?"
+     }
+    ]
+   },
+   {
+    "text": "Vroege Roadsters duiken inmiddels op bij klassiekerveilinghuizen zoals RM Sotheby's. De Cybertruck heeft allebei: een kleine vloot en een ontwerp dat op niets anders lijkt. Wie zegt te weten welke kracht wint, gokt. Waar je wél invloed op hebt: de staat, de papieren en de resterende garantie.",
+    "photo": [
+     {
+      "q": [
+       "Tesla Roadster 2008",
+       "Tesla Roadster first generation",
+       "Tesla Roadster 2.5"
+      ],
+      "want": "a first-generation Tesla Roadster, the small 2008-2012 two-seat sports car"
+     },
+     {
+      "q": [
+       "classic car auction",
+       "car auction hall",
+       "Pebble Beach Concours"
+      ],
+      "want": "classic cars at an auction or concours, no recognisable people"
+     }
+    ],
+    "img": [
+     "models/ct-4.jpg"
+    ],
+    "pop": [
+     {
+      "say": "veilinghuizen",
+      "show": "OP DE VEILING"
+     },
+     {
+      "say": "kleine vloot",
+      "show": "KLEINE VLOOT"
+     },
+     {
+      "say": "gokt",
+      "show": "GOKWERK"
+     },
+     {
+      "say": "de staat, de papieren",
+      "show": "STAAT + PAPIEREN"
+     }
+    ]
+   },
+   {
+    "head": "Wat moeten eigenaren en kopers nu doen?",
+    "img": [
+     "lib/cybertruck-front-city.jpg"
+    ],
+    "pop": [
+     {
+      "say": "",
+      "show": "WAT NU?"
+     }
+    ]
+   },
+   {
+    "text": "Eerst de mythes. De garantie vervalt niet: die loopt de volle termijn en gaat mee met de auto. Tesla heeft niet gezegd te stoppen met reparaties, het zegt juist het tegendeel, alleen zonder aantal jaren. En het einde van de productie zet updates niet uit. Oude hardware is de grotere beperking.",
+    "img": [
+     "lib/service-center.jpg",
+     "lib/software-update-screen.jpg"
+    ],
+    "pop": [
+     {
+      "say": "mythes",
+      "show": "MYTHES"
+     },
+     {
+      "say": "vervalt niet",
+      "show": "VERVALT NIET"
+     },
+     {
+      "say": "het tegendeel",
+      "show": "REPARATIES GAAN DOOR"
+     },
+     {
+      "say": "Oude hardware",
+      "show": "OUDE HARDWARE"
+     }
+    ]
+   },
+   {
+    "text": "Nog één: open source. In juli 2026 zei Musk dat Tesla voor de Model S en X wil doen wat het voor de Roadster deed. Uit een analyse van Electrek bleek dat de Roadster-release vooral handboeken en diagnosesoftware bevatte, geen complete ontwerpbestanden. Reken er dus niet op dat je zelf onderdelen kunt laten maken.",
+    "img": [
+     "models/mx-2.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Tesla Model X",
+       "Tesla Model X falcon wing doors",
+       "Tesla Model X 2016"
+      ],
+      "want": "a Tesla Model X SUV"
+     },
+     {
+      "q": [
+       "Tesla Roadster 2008",
+       "Tesla Roadster first generation",
+       "Tesla Roadster 2.5"
+      ],
+      "want": "a first-generation Tesla Roadster, the small 2008-2012 two-seat sports car"
+     }
+    ],
+    "pop": [
+     {
+      "say": "open source",
+      "show": "OPEN SOURCE?"
+     },
+     {
+      "say": "juli 2026",
+      "show": "JULI 2026"
+     },
+     {
+      "say": "vooral handboeken",
+      "show": "VOORAL HANDBOEKEN"
+     },
+     {
+      "say": "zelf onderdelen",
+      "show": "ZELF MAKEN? NEE"
+     }
+    ]
+   },
+   {
+    "text": "Wil je een nieuwe Cybertruck, dan heb je ongeveer tot medio 2027, al noemde Musk geen exacte einddatum. In Europa wordt hij overigens niet officieel verkocht. Heb je er een, laat terugroepacties en garantiereparaties uitvoeren zolang de dekking loopt, en bewaar elke factuur. Een auto stopt niet met werken als zijn fabriek verdergaat. Hij leunt alleen meer op de mensen die voor hem zorgen.",
+    "img": [
+     "lib/cybertruck-bed-open.jpg",
+     "lib/cybertruck-rear-light.jpg"
+    ],
+    "pop": [
+     {
+      "say": "medio 2027",
+      "show": "BESTEL VOOR MEDIO 2027"
+     },
+     {
+      "say": "terugroepacties",
+      "show": "TERUGROEPACTIES"
+     },
+     {
+      "say": "elke factuur",
+      "show": "BEWAAR FACTUREN"
+     },
+     {
+      "say": "voor hem zorgen",
+      "show": "ZORG ERVOOR"
+     }
+    ]
+   }
+  ],
+  "yt_title_en": "What Happens to Your Tesla When It's Discontinued? Cybertruck, Model S, X",
+  "yt_title_nl": "Wat Gebeurt Er met Je Tesla als Hij Niet Meer Gemaakt Wordt?"
+ }
+}

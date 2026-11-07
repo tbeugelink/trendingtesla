@@ -1,23 +1,23 @@
 # What works at other Tesla / SpaceX / xAI channels
 
-Updated 2026-11-06 05:02 UTC by tools/scout.py (videos from the last 7 days, 33 judged, 467 API units). Do not edit by hand.
+Updated 2026-11-07 04:56 UTC by tools/scout.py (videos from the last 7 days, 32 judged, 461 API units). Do not edit by hand.
 
 Outlier = views divided by what that channel normally gets for the same kind of video. A 5x video shows a topic or angle that pulls viewers, regardless of channel size.
 
 ## Outliers
 
-- **182.3x** (359K views vs 2K usual, short, By 2050, 55K subs) - [Elon Musk $20K Optimus Robot](https://youtu.be/5YElyNaq31Y)
-- **107.8x** (286K views vs 3K usual, short, WhyLab 3D, 2K subs) - [Why Does America's Starship, the Largest Rocket Ever Built, Fire at Its Own Booster? #Shorts](https://youtu.be/5xeF1wJYd6E)
-- **103.2x** (81K views vs 786 usual, long, Ai_Mobility_News, 2K subs) - [Tesla Optimus Just Changed Everything! New AI Robot Abilities Revealed](https://youtu.be/WoXCF-9ju_Y)
-- **77.0x** (204K views vs 3K usual, short, WhyLab 3D, 2K subs) - [Starship Double Catch: Over 122 m of Rocket, No Landing Legs, Two Steel Arms #Shorts](https://youtu.be/wFHfD9SzQbI)
-- **76.5x** (203K views vs 3K usual, short, WhyLab 3D, 2K subs) - [Why Did SpaceX Spray Water UP at the World's Most Powerful Rocket? #Shorts](https://youtu.be/VRmNPUw9Scc)
-- **12.2x** (99K views vs 8K usual, long, Ryan Shaw Clips, 14K subs) - [Tesla Gives HUGE Update To FSD | It Finally Happened](https://youtu.be/nyy4LysmaUc)
-- **10.1x** (468K views vs 46K usual, short, The Space Race, 926K subs) - [This changes everything for SpaceX](https://youtu.be/A-l58A4GFQY)
-- **9.1x** (69K views vs 8K usual, long, Fresh Discovery, 159K subs) - [Chery's new 1,500 KM Range Solid-State Battery Could SHAKE BYD, Tesla & Toyota!](https://youtu.be/94bbKtjKPYQ)
-- **6.5x** (71K views vs 11K usual, long, Auto Aspect, 16K subs) - [Tesla Cybercab Successfully Clears A Critical New Milestone](https://youtu.be/HczIVwhTWmw)
-- **6.3x** (162K views vs 26K usual, long, TECH MAP, 134K subs) - [SpaceX's New Starship Welding Upgrade JUST ERASED 75% of Production Time!](https://youtu.be/ZEXW9LOloWY)
-- **5.6x** (127K views vs 23K usual, short, ejunky66, 1.0M subs) - [AI Humanoid Robots Are Rising… 1 BILLION by 2036 – Will Humans Lose Control? 🤖](https://youtu.be/0EdTclB5nOw)
-- **4.5x** (96K views vs 22K usual, short, Fourth Eclipse, 2K subs) - [33 ROCKET ENGINES. 72 METERS TALL. CAUGHT BY TWO GIANT CHOPSTICKS!](https://youtu.be/IzB69S1h6LA)
+- **201.4x** (379K views vs 2K usual, short, By 2050, 55K subs) - [Elon Musk $20K Optimus Robot](https://youtu.be/5YElyNaq31Y)
+- **173.0x** (176K views vs 1K usual, long, Launch Heaven, 29K subs) - [SpaceX - “STARSHIP GO FOR ORBIT” Documentary 4K](https://youtu.be/wlWF7kJokvk)
+- **141.8x** (471K views vs 3K usual, short, WhyLab 3D, 3K subs) - [Why Does America's Starship, the Largest Rocket Ever Built, Fire at Its Own Booster? #Shorts](https://youtu.be/5xeF1wJYd6E)
+- **89.8x** (84K views vs 931 usual, long, Ai_Mobility_News, 2K subs) - [Tesla Optimus Just Changed Everything! New AI Robot Abilities Revealed](https://youtu.be/WoXCF-9ju_Y)
+- **75.3x** (250K views vs 3K usual, short, WhyLab 3D, 3K subs) - [Why Did SpaceX Spray Water UP at the World's Most Powerful Rocket? #Shorts](https://youtu.be/VRmNPUw9Scc)
+- **65.7x** (218K views vs 3K usual, short, WhyLab 3D, 3K subs) - [Starship Double Catch: Over 122 m of Rocket, No Landing Legs, Two Steel Arms #Shorts](https://youtu.be/wFHfD9SzQbI)
+- **17.3x** (70K views vs 4K usual, long, Ryan Shaw, 348K subs) - [Elon Admitted It Costs Too Much | Tesla Owners Feel The Limits](https://youtu.be/Si8vgqtVAXw)
+- **16.4x** (759K views vs 46K usual, short, The Space Race, 927K subs) - [This changes everything for SpaceX](https://youtu.be/A-l58A4GFQY)
+- **15.6x** (63K views vs 4K usual, long, Ryan Shaw, 348K subs) - [The $30,000 Tesla Is Back On The Table | They Want It Kept Secret](https://youtu.be/bepqkTNU69E)
+- **15.5x** (63K views vs 4K usual, long, Ryan Shaw, 348K subs) - [Tesla Is Officially Canceling The Cybertruck | This Is Not A Drill](https://youtu.be/BmiQJ41bsCo)
+- **8.8x** (106K views vs 12K usual, short, 𝕽𝖆𝖘𝖚 𝕸𝖔𝖙𝖎𝖛𝖆𝖙𝖎𝖔𝖓 , 56K subs) - [Elon Musk's $100 BILLION SpaceX Starbase Louisiana! 🚀😱 #shorts](https://youtu.be/87Y_Dy9AQK0)
+- **7.2x** (182K views vs 25K usual, long, TECH MAP, 134K subs) - [SpaceX's New Starship Welding Upgrade JUST ERASED 75% of Production Time!](https://youtu.be/ZEXW9LOloWY)
 
 ## Questions viewers asked that the creator did not answer
 
@@ -25,16 +25,16 @@ Each is a possible article or video with proven interest (check first that it is
 
 - "If a robot learns something bad, like hurting someone, they will all know how to do it?" (5 likes, under [Tesla Optimus Just Changed Everything! New AI Robot Abilities Revealed](https://youtu.be/WoXCF-9ju_Y))
 - "I wonder who will buy them? I know I won’t buy one" (4 likes, under [Elon Musk $20K Optimus Robot](https://youtu.be/5YElyNaq31Y))
+- "Watching that live gave me "Daniel LaRusso is gonna fight? Daniel LaRusso is gonna fight!" vibes." (3 likes, under [SpaceX - “STARSHIP GO FOR ORBIT” Documentary 4K](https://youtu.be/wlWF7kJokvk))
 - "Imagine jobs are taken by robots!! What a great future ELON HAS PLANNED!! NO JOBS FOR US NO PURPOSE NO GOALS OR SENSE OF ACCOMPLISHMENTS!! Is that what you want??" (3 likes, under [Tesla Optimus Just Changed Everything! New AI Robot Abilities Revealed](https://youtu.be/WoXCF-9ju_Y))
+- "why do you send this video before the official channel? Is it a leak?" (2 likes, under [SpaceX - “STARSHIP GO FOR ORBIT” Documentary 4K](https://youtu.be/wlWF7kJokvk))
 - "How is the hand-finger thing going? 😮" (2 likes, under [Tesla Optimus Just Changed Everything! New AI Robot Abilities Revealed](https://youtu.be/WoXCF-9ju_Y))
-- "Where is the booster while Ship is being caught?" (2 likes, under [Starship Double Catch: Over 122 m of Rocket, No Landing Legs, Two Steel Arms #Shorts](https://youtu.be/wFHfD9SzQbI))
-- "What about wings so it can glide back like the space shuttle? It's a proven method. Why reinvent the wheel?" (2 likes, under [Starship Double Catch: Over 122 m of Rocket, No Landing Legs, Two Steel Arms #Shorts](https://youtu.be/wFHfD9SzQbI))
-- "What if Elon Musk built a time machine in the future and came back here to save human consciousness and intelligence with AI on Mars - and what if Mars is only as far as he can go until he gets there?" (1 likes, under [Elon Musk $20K Optimus Robot](https://youtu.be/5YElyNaq31Y))
-- "Legs! How can they build chopsticks in Mars? 😢😢😢😢😢😢😢" (1 likes, under [Starship Double Catch: Over 122 m of Rocket, No Landing Legs, Two Steel Arms #Shorts](https://youtu.be/wFHfD9SzQbI))
+- "Why don't I see this on SpaceX channel tho?" (1 likes, under [SpaceX - “STARSHIP GO FOR ORBIT” Documentary 4K](https://youtu.be/wlWF7kJokvk))
+- "You just now figured this out ? Nasa's moon base has been in works for over a decade" (0 likes, under [Elon Musk $20K Optimus Robot](https://youtu.be/5YElyNaq31Y))
+- "Let me guess, another pointless flight that doesn’t do anything, how long can Musk keep this scam going?" (0 likes, under [SpaceX - “STARSHIP GO FOR ORBIT” Documentary 4K](https://youtu.be/wlWF7kJokvk))
+- "Why isn't this on the official spacex channel?" (0 likes, under [SpaceX - “STARSHIP GO FOR ORBIT” Documentary 4K](https://youtu.be/wlWF7kJokvk))
+- "5:22 is that a alien space ship underneath starship? was watching this live when it launched and noticed that but no one said anything..." (0 likes, under [SpaceX - “STARSHIP GO FOR ORBIT” Documentary 4K](https://youtu.be/wlWF7kJokvk))
 - "Starship ain't America's, its a private company based in the US. Why did you choose not to call it "SpaceX's Starship" ?" (0 likes, under [Why Does America's Starship, the Largest Rocket Ever Built, Fire at Its Own Booster? #Shorts](https://youtu.be/5xeF1wJYd6E))
-- "It does it, for the purpose?!?!" (0 likes, under [Why Does America's Starship, the Largest Rocket Ever Built, Fire at Its Own Booster? #Shorts](https://youtu.be/5xeF1wJYd6E))
-- "CATCH WHAT THE F YOU WANT --- BUT CAN YOU KEEP YOUR "ENGINES RUNNING"???" (0 likes, under [Starship Double Catch: Over 122 m of Rocket, No Landing Legs, Two Steel Arms #Shorts](https://youtu.be/wFHfD9SzQbI))
-- "And you know we have Anti-gravity solved right? Stop with the ridiculous 250 year old technology it’s embarrassing." (0 likes, under [Starship Double Catch: Over 122 m of Rocket, No Landing Legs, Two Steel Arms #Shorts](https://youtu.be/wFHfD9SzQbI))
 
 ## How to use this
 

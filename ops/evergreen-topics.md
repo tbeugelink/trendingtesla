@@ -11,7 +11,7 @@ Add new ideas at the bottom at any time.
 - [x] What is Tesla FSD (Supervised), what does it cost, and where can you use it? (what-is-tesla-fsd-supervised-cost-countries-explained)
 - [x] Grok and FSD: what does it mean when Tesla's AI chatbot meets its self-driving software? (check carefully what is real and what is only announced) (already covered: grok-does-the-mapping-you-do-the-napping-tesla-fsd-sleep-explained)
 - [x] A Tesla phone: what is known, what is rumour, and how could it work with Starlink and your Tesla? (clearly separate facts, statements and speculation) (tesla-phone-model-pi-rumor-starlink-facts-explained)
-- [ ] Step into my office: inside the Tesla Semi cabin, the centre seat, the two screens and what a driver's day looks like
+- [x] Step into my office: inside the Tesla Semi cabin, the centre seat, the two screens and what a driver's day looks like (tesla-semi-interior-explained-center-seat-two-screens-drivers-day)
 - [x] "Grok does the mapping, you do the napping?" Keep this title (with the question mark) for the article, the Short and the long video. Explain what Grok and FSD each do, why napping is NOT allowed yet (FSD Supervised: the driver stays responsible and must watch the road; say this clearly and early), and when it could be: what Unsupervised FSD needs (data, regulators, country by country), where cars already drive without anyone at the wheel (Robotaxi), and what Tesla has said about timing (a statement, not a fact). Never suggest sleeping or looking away while driving today. (grok-does-the-mapping-you-do-the-napping-tesla-fsd-sleep-explained)
 - [ ] Cybernap in your Cybercab: why sleeping is fine in a car with no steering wheel, how a driverless ride works and where you can take one (follow-up to the napping article; use the cybercab-nap photos)
 - [ ] Why could Optimus become Tesla's biggest product ever, as Musk says? What it can do now, what it costs and what has to happen first
@@ -62,6 +62,7 @@ Add new ideas at the bottom at any time.
 - [ ] 48-volt cars and steer-by-wire: what the Cybertruck changed under the skin, and which Teslas use it now
 - [ ] Etherloop explained: how Tesla cut a car's wiring by two-thirds, and why fewer wires make cars cheaper and easier to repair
 - [ ] Right to repair and Tesla: which service manuals, diagnostics and parts an owner (or independent garage) can really get, US vs EU
+- [ ] Tesla Semi vs a diesel truck: what does it really cost per mile to run (energy, maintenance, tolls and incentives), US vs Europe?
 
 ## Stories (evening task: entertaining and educational, timeless)
 

@@ -8,6 +8,62 @@ Static, bilingual (EN at `/`, NL at `/nl/`) Tesla news site.
 
 `public/` is generated — never edit it by hand, always rebuild.
 
+## ALGORITHM RULES (William, 8 Nov 2026) - read first; they override every older rule below where they differ
+
+Goal: Shorts and videos that maximise the algorithm signals: **viewed vs swiped away over 70% in the first 3 s,
+high completion plus loops, shares**. Organic distribution, not just a neat explanation. Apply without exception.
+Where we stood on 8 Nov 2026 (`ops/short-signals.md`, updated every morning): stayed ~55% (goal 70%+), watched
+~70% (goal 90%+ with loops), Shorts ~57 s long. Most Shorts stalled around 1,000 views.
+
+**General (Shorts and long videos)**
+- Factually correct, based on the article it belongs to. Never invented drama, never a claim the video does not keep.
+- No soft intro: the first words are the strongest claim or the most surprising fact. No "In 2019...", no "Tesla is...",
+  no scene setting before the claim.
+- Big readable text from frame 1 (sound-off proof): the label shows from the first frame, the key words follow.
+- A new beat every 2.5-4 seconds: a new picture, a new key word or a new piece of information.
+- End with a payoff that rewards the opening, and let the end run into the beginning (loopable): the last line
+  is written so that the hook makes sense right after it (it answers the hook's question with a twist, or it
+  ends on a half sentence the hook completes). The Short has NO end card and NO spoken slogan any more; a small
+  silent "FULL STORY: TrendingTesla.com" line shows on the last beat (`video/story.py`).
+- After every publication, analyse why the previous one stalled around ~1,000 views and name the concrete change
+  in the next one (see "Self-learning" below).
+
+**Shorts (2 per day: midday and evening, 15-35 seconds)**
+- 15-35 s = about 40-80 spoken words (the voice runs at 1.17). The renderer warns above 35 s.
+- Structure: 1. **Hook (0-3 s)**: pattern interrupt + curiosity gap or a specific claim, at most ~8 words.
+  2. **Retain**: dense information with open loops (raise a question, answer it a beat later, raise the next).
+  3. **Reward**: a clear payoff + the loop back to the hook.
+- Always write 3 hook variants and choose the strongest (the one that makes it hardest to swipe away and that
+  the Short fully keeps).
+- `"story"`: 6-11 beats, each 2.5-4 s spoken (about 7-11 words), each with its own picture and 1-3 key words.
+- Output per Short, in `"short"` (all required):
+  - `"yt_title_en"` / `"yt_title_nl"`: the title (= the hook, 4-8 words).
+  - `"hooks"`: `[{"text": "...", "type": "number|consequence|contrast|question|first"}, x3]`, and
+    `"hook_pick": {"index": 0, "why": "one line"}`; the chosen hook is the first beat's text.
+  - `"story"`: the full script with timing: every beat gets `"t": "0-3s"` (estimated at ~2.6 words per second),
+    `"text"`, `"pop"` (the text overlays), `"lib"`/`"img"` and `"visual"` (one line: what is seen and how it moves).
+  - `"signals"`: which signals this Short serves better than the previous one, and how (one or two lines).
+  - `"learning"`: `{"prev": "<slug of the previous Short>", "prev_stats": "views / stayed / watched from
+    ops/short-signals.md", "weakest_hook": "...", "why_stalled": "...", "change": "the concrete change now, e.g.
+    hook is now a contrarian claim instead of a factual announcement"}`.
+  - `"en"` / `"nl"`: the same spoken text as one paragraph (for the description and the Dutch version).
+
+**Long videos (1 per day: only the midday explainer)**
+- Only the midday article gets a `"video"` script; the evening story and the Saturday explainer get no long video
+  (they get their Short). The watchdog only checks a long video when there is a `"video"` script.
+- The same hook principle in the first 15-20 s: the strongest claim first, an open loop the video pays off later.
+- Keep the density high: no long monologue without a visual or informative interrupt (a number, a question, a
+  turn, a comparison) at least every 20-30 s; pictures change every ~3 s and the subtitles run along.
+- End with a strong payoff; the renderer adds the referral to the article ("...join us on TrendingTesla.com").
+- At most 6-8 minutes (about 900-1,300 spoken words) unless the subject really needs more.
+
+**Self-learning (required after every Short and long video)**
+- Before writing, read `ops/short-signals.md` and `ops/hook-log.md`.
+- Add one entry at the top of `ops/hook-log.md` (newest first): date, slug, the 3 hook variants with the pick,
+  the previous Short's stats, which hook was weakest in the previous one and why it stalled, and the concrete
+  change made now. Fill the same in `"short.learning"`. For the long video add one line: what changed in its
+  first 20 s compared with the previous long video.
+
 ## Learning from YouTube (read this before choosing and writing an article)
 
 Every morning a GitHub Action (`.github/workflows/yt-learn.yml`) saves the views and likes of every video

@@ -44,6 +44,9 @@ jobs:
         run: python3 tools/site_stats.py --history >> "$GITHUB_STEP_SUMMARY"
       - name: Update the guidance
         run: python3 tools/learn.py >> "$GITHUB_STEP_SUMMARY"
+      - name: Short signals (stayed / watched / loops per Short)
+        continue-on-error: true
+        run: python3 tools/short_signals.py >> "$GITHUB_STEP_SUMMARY"
       - name: Commit
         run: |
           git config user.name "TrendingTesla bot"
@@ -58,7 +61,7 @@ jobs:
             sort -u ops/stats/history.jsonl "$RUNNER_TEMP/h" 2>/dev/null | sort -t'"' -k4 > "$RUNNER_TEMP/m" || cp "$RUNNER_TEMP/h" "$RUNNER_TEMP/m"
             mkdir -p ops/stats && cp "$RUNNER_TEMP/m" ops/stats/history.jsonl && cp "$RUNNER_TEMP/p" ops/performance.md
             cp -r "$RUNNER_TEMP/s/." ops/ 2>/dev/null || true
-            git add ops/stats/history.jsonl ops/performance.md
+            git add ops/stats/history.jsonl ops/performance.md ops/short-signals.md
             [ -f "$RUNNER_TEMP/c" ] && cp "$RUNNER_TEMP/c" ops/stats/channel.jsonl && git add ops/stats/channel.jsonl
             [ -f "$RUNNER_TEMP/v" ] && cp "$RUNNER_TEMP/v" ops/stats/site.jsonl && git add ops/stats/site.jsonl
             git add ops/scout-tesla.md 2>/dev/null || true; git add ops/scout 2>/dev/null || true

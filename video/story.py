@@ -43,7 +43,12 @@ DEFAULT_SFX = {  # natural cinematic sounds only (no whistles, coins, spins)
     "bed": "Low tense cinematic ambient drone, dark and subtle, slowly building, no melody",
 }
 END_SEC = 2.2
-END_HOLD = 1.0  # the closing key word (the core message) stays 1 s longer after the voice ends
+END_HOLD = 0.5  # the closing key word (the core message) stays a moment after the voice ends
+# Loopable Shorts (William, 8 Nov 2026): no end card and no spoken slogan any more; the last line flows straight
+# back into the hook. A small silent line on the last beat keeps the promise of the full story on the site.
+# STORY_ENDCARD=1 brings the old "Like and subscribe" end card back.
+ENDCARD = os.environ.get("STORY_ENDCARD") == "1"
+MAX_SEC = 35
 
 
 def post(url, body):
@@ -669,6 +674,20 @@ def check_brand(out, logo):
         sys.exit("::error::the TrendingTesla logo is missing in the story Short")
 
 
+def promise_img(lang):
+    """Small silent line on the last beat: where the full story is (the Short itself loops, so nothing is spoken)."""
+    t = {"en": "FULL STORY: ", "nl": "HELE VERHAAL: "}[lang]
+    f = S.font(S.FB, 46)
+    im = Image.new("RGBA", (W, 90), (0, 0, 0, 0))
+    d = ImageDraw.Draw(im)
+    parts = [(t, (255, 255, 255)), ("Trending", (255, 255, 255)), ("Tesla", RED), (".com", (255, 255, 255))]
+    x = (W - sum(f.getlength(p) for p, _ in parts)) / 2
+    for p, c in parts:
+        d.text((x, 20), p, font=f, fill=c, stroke_width=5, stroke_fill=(0, 0, 0))
+        x += f.getlength(p)
+    return im
+
+
 def end_card(lang, bg=None):
     """The closing card: blurred last photo, a dark band, red LIKE & SUBSCRIBE pill, TrendingTesla.com."""
     from PIL import ImageFilter, ImageOps
@@ -743,16 +762,20 @@ def main():
         print(f"beat {i} {b['part']:7s} {b['move']:5s} {dur:5.2f}s {b['_img'].name}: {b['text'][:60]}")
     body_end = t
     slog = tmp / "slogan.mp3"
-    tts(SLOGAN[lang], 1.05, slog)
-    end_sec = max(END_SEC, S.duration(slog) + 0.8)
+    if ENDCARD:
+        tts(SLOGAN[lang], 1.05, slog)
+        end_sec = max(END_SEC, S.duration(slog) + 0.8)
+    else:
+        end_sec = 0.0
     total = body_end + end_sec
-    if total > 60:
-        print(f"::warning::story Short is {total:.1f}s (over 60 s): shorten the script")
+    if total > MAX_SEC:
+        print(f"::warning::story Short is {total:.1f}s (over {MAX_SEC} s): write a shorter script (15-35 s)")
 
     # 2. sound: voice on the timeline, impact at the hook, a low bed under the tension, a drop at the payoff
     pay = next((b["_t0"] for b in beats if b["part"] == "payoff"), None)
     layers = [(b["_voice"], b["_t0"] + (0.25 if i == 0 else 0), 1.0) for i, b in enumerate(beats)]
-    layers.append((slog, body_end + 0.2, 1.0))
+    if ENDCARD:
+        layers.append((slog, body_end + 0.2, 1.0))
     try:
         layers.append((sfx(beats[0].get("sfx") or DEFAULT_SFX["hook"], 2.5, tmp), 0.0, SFX_VOL))
         bed_len = (pay or body_end) - beats[0]["_dur"]
@@ -790,10 +813,12 @@ def main():
     shots = make_shots(beats, a["_pool"], rnd)
     print(f"{len(shots)} shots, {len(set(x['img'] for x in shots))} photos")
     try:
-        endimg = end_card(lang, load_src(shots[-1]["img"]))
+        endimg = end_card(lang, load_src(shots[-1]["img"])) if ENDCARD else None
     except Exception as e:
         print(f"::warning::end card background skipped: {e}")
         endimg = end_card(lang)
+    promise = promise_img(lang)
+    last_t0 = beats[-1]["_t0"]
     srcs = {}
     n = int(round(total * FPS))
     si = 0
@@ -860,6 +885,8 @@ def main():
                 capimgs[key] = caption_img(cg[2])
             # opening shot: captions above the label; afterwards in the usual place
             fr.alpha_composite(capimgs[key], (0, int(ltop - 300) if bi == 0 else int(H * 0.60)))
+        if not ENDCARD and tt >= last_t0:
+            fr.alpha_composite(promise, (0, int(H * 0.83)))
         fr.alpha_composite(logo, (0, 0))
         enc.stdin.write(fr.convert("RGB").tobytes())
     enc.stdin.close()

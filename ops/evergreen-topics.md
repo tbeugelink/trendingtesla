@@ -64,6 +64,9 @@ Add new ideas at the bottom at any time.
 - [ ] Right to repair and Tesla: which service manuals, diagnostics and parts an owner (or independent garage) can really get, US vs EU
 - [ ] Tesla Semi vs a diesel truck: what does it really cost per mile to run (energy, maintenance, tolls and incentives), US vs Europe?
 
+- [ ] What fuels Starship? Methane and liquid oxygen explained: why SpaceX chose them, what a full load costs and how it could be made on Mars
+- [ ] Rideshare to space: how a small satellite hitches a ride on a Falcon 9 Transporter mission, what it costs and how they avoid hitting each other
+
 ## Stories (evening task: entertaining and educational, timeless)
 
 - [ ] Is the Cybertruck the best truck ever made? What it does better, and worse, than any pickup before it
@@ -119,3 +122,4 @@ opinion, no hero worship and no bashing. Check every claim (titles are questions
 - [ ] Is Elon Musk the most successful entrepreneur of all time? Tesla, SpaceX, PayPal and the rest, compared with history
 - [ ] Why did Elon Musk buy Twitter, and what did it become?
 - [ ] Which other companies and media did Musk buy, try to buy, or only joke about buying? (check what is real; only report what really happened)
+- [ ] The first Falcon 9 landing: how SpaceX brought an orbital booster back in one piece, and why the industry had said it made no sense

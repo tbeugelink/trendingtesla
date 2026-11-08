@@ -1,0 +1,1044 @@
+{
+  "slug": "how-much-does-it-cost-to-send-1-kg-into-space-shuttle-falcon-9-starship",
+  "date": "2026-11-08",
+  "time": "12:42",
+  "category": "spacex",
+  "sources": [
+    {
+      "title": "NASA Ames (Harry W. Jones): The Recent Large Reduction in Space Launch Cost",
+      "url": "https://ntrs.nasa.gov/api/citations/20200001093/downloads/20200001093.pdf"
+    },
+    {
+      "title": "New Space Economy: How Accurate Were Elon Musk's Falcon 9 and Starship $/kg Claims?",
+      "url": "https://newspaceeconomy.ca/2026/06/21/how-accurate-were-elon-musks-falcon-9-and-starship-kg-claims/"
+    },
+    {
+      "title": "TeslaNorth: Elon Musk Ron Baron Interview 2026, full transcript",
+      "url": "https://teslanorth.com/2026/11/07/elon-musks-full-ron-baron-interview-2026-tesla-spacex-starship-ai-and-more/"
+    },
+    {
+      "title": "AIAA: Starship Reaches Orbit for First Time on Flight 14",
+      "url": "https://aiaa.org/2026/09/28/starship-reaches-orbit-for-first-time-on-flight-14/"
+    }
+  ],
+  "images": [
+    "lib/starship-launch.jpg",
+    "lib/starship-pad.jpg",
+    "spacex-6.jpg",
+    "lib/starship-booster-catch.jpg",
+    "spacex-7.jpg",
+    "falcon-heavy.jpg"
+  ],
+  "gen_image": {
+    "prompt": "Close, dramatic low-angle shot of a full SpaceX Starship stack lifting off from Starbase at sunrise: the gleaming stainless steel rocket filling the middle of the frame, a blinding wall of orange-white flame and billowing steam clouds below it, the steel launch tower with its catch arms beside it, strong warm side light on the steel, deep blue sky, calm empty foreground in the lower left",
+    "subject": "SpaceX Starship full stack: a plain cylindrical stainless steel rocket about 9 m wide in two parts stacked vertically; the upper part (the ship) has a rounded pointed nose, black hexagonal heat-shield tiles on ONE side, two small forward flaps near the nose and two aft flaps at its base, no wings, no legs, no windows; it sits on the much taller Super Heavy booster (same width, plain steel, small grid fins near its top, many engines at its base); next to it a tall square steel lattice launch tower with two large catch arms",
+    "refs": [
+      {
+        "src": "lib/starship-launch.jpg"
+      },
+      {
+        "src": "lib/starship-pad.jpg"
+      }
+    ],
+    "profile": "cinematic",
+    "category": "B",
+    "describe": "Starship lifting off from Starbase at sunrise in a huge flame, launch tower beside it",
+    "extra": [
+      {
+        "prompt": "A stainless steel Starship upper stage in low Earth orbit with a long slot-shaped payload door open in its side, a row of flat Starlink satellites gliding out one after another, the blue curve of the Earth and thin clouds far below, black sky, sunlight glinting on the steel and the black heat-shield tiles on its belly",
+        "describe": "Starship in orbit releasing a row of flat Starlink satellites from its payload door"
+      },
+      {
+        "prompt": "Wide calm dusk shot at Starbase: a stainless steel Super Heavy booster held high by the launch tower's two catch arms after landing, faint wisps of vapour around its engines, floodlights, the beach and grass in front, pink and blue sky, a second Starship stack standing on the launch mount nearby ready for the next flight",
+        "describe": "a caught Super Heavy booster held by the tower arms at dusk, ready to fly again"
+      }
+    ]
+  },
+  "label": {
+    "style": "c",
+    "en": {
+      "sub": "ROCKET FUEL IS",
+      "text": "THE CHEAP PART"
+    },
+    "nl": {
+      "sub": "RAKETBRANDSTOF IS",
+      "text": "HET GOEDKOPE DEEL"
+    }
+  },
+  "en": {
+    "title": "How Much Does It Cost to Send 1 kg Into Space? From the Space Shuttle to Starship",
+    "description": "The fuel for a Starship flight works out to about 9 dollars a kilo, yet the Space Shuttle cost about 54,500. Here is why, how Falcon 9 cut the price, and what Starship needs to get under 100 dollars a kilo.",
+    "body": "<p><strong>Rocket fuel is the cheap part of going to space.</strong> By Elon Musk's own estimate, the propellant for one full Starship flight costs about 900,000 dollars. Spread over the 100 tonnes of cargo Starship is designed to carry, that is roughly 9 dollars per kilo. Yet a NASA study put the Space Shuttle at about 54,500 dollars per kilo, and a dedicated Falcon 9 flight still works out to around 3,000 dollars per kilo at best. In a November 2026 interview with investor Ron Baron, Musk said Starship can bring the price \"under a hundred dollars a kilogram to orbit\". The gap between 9 dollars of fuel and thousands of dollars of price has almost nothing to do with fuel, and it explains why space has been so expensive for so long.</p>\n\n<h2>Why does one kilo in orbit cost so much?</h2>\n<p><strong>Because for most of the space age, the rocket was thrown away after a single flight.</strong> To stay in orbit, a payload has to reach about 28,000 kilometres per hour. Getting there takes a machine that is mostly propellant, with only a few percent of its launch mass left over for the actual cargo. The engines, tanks and electronics are built to tight tolerances, work for a few minutes and then fall into the ocean. Musk compares it to scrapping a passenger jet after every single flight: hardly anyone could afford to fly.</p>\n<p>The Space Shuttle tried to fix this and partly failed. Its orbiter flew again, but the big orange tank was lost every time and the orbiter needed long, expensive repairs between missions. NASA researcher Harry Jones calculated about 1.7 billion dollars per Shuttle launch in 2018 money, for 27,500 kilos of capacity. Reuse only saves money when flying an old rocket again is cheaper than building a new one.</p>\n\n<h2>How did Falcon 9 cut the price by about 20 times?</h2>\n<p><strong>By landing its first stage and flying it again and again.</strong> The booster is the biggest and most expensive part of the rocket. Falcon 9 brings it back to a landing pad or a drone ship, and the two halves of the nose cone come down under parachutes. In the same NASA study, a 62-million-dollar Falcon 9 flight with a maximum of 22,800 kilos to low orbit came to about 2,720 dollars per kilo: roughly 20 times cheaper than the Shuttle.</p>\n<p>Musk calls Falcon 9 \"around 80 percent\" reusable. The missing 20 percent is the upper stage, which still burns up or is left in space after every flight. According to Musk, that stage alone costs about as much as a medium-sized business jet. On paper Falcon 9 is cheap per kilo, but the paper price is not what most customers pay.</p>\n\n<h2>So why do real customers often pay much more per kilo?</h2>\n<p><strong>Because the famous per-kilo figure assumes a completely full rocket going to the easiest possible orbit.</strong> Analysts divide the launch price by the maximum payload to a low circular orbit, a few hundred kilometres up. Real satellites are usually lighter than that maximum, or they need a higher orbit, which lowers how much the rocket can lift.</p>\n<p>The trade publication New Space Economy works out the 2026 numbers: a dedicated Falcon 9 flight costs about 74 million dollars, so a 4,000-kilo satellite effectively pays about 18,500 dollars per kilo. Small satellites can share a ride instead, at about 7,000 dollars per extra kilo after a 50-kilo minimum. The lesson is that cheap kilos need two things at once: nothing thrown away, and a rocket that flies full.</p>\n\n<h2>What would Starship need to get under 100 dollars a kilo?</h2>\n<p><strong>Both stages caught and reused, fast turnarounds and full cargo bays.</strong> The maths is simple. At 100 tonnes per flight, 100 dollars a kilo means a flight may cost no more than 10 million dollars in total. At 10 dollars a kilo, the whole flight would have to cost about 1 million dollars, barely more than the fuel itself.</p>\n<p>SpaceX has already caught Super Heavy boosters with the launch tower's \"chopstick\" arms, and on Flight 14 in September 2026 Starship reached orbit for the first time and released 26 Starlink satellites, its first real cargo. Catching and reflying the ship itself is the next big step. Musk has also said a booster could one day fly again within an hour. That is a statement of intent, not something SpaceX has shown, and the number that circulates most online needs a reality check.</p>\n\n<h2>So is 10 dollars a kilo a fact or a target?</h2>\n<p><strong>A target, and an optimistic one.</strong> The 10-dollar figure comes from Musk's earlier comments that a Starship flight might one day cost around a million dollars. Starship has no public price list yet, so every Starship price per kilo is a goal or an estimate, not a quote you can book. Musk's most recent number, under 100 dollars, is ten times higher than the figure that goes viral.</p>\n<p>A common myth is that SpaceX already launches for 10 dollars a kilo. It does not: Falcon 9 is still in the thousands, and its list price has risen over the years with inflation. Musk's timelines have also slipped before. Even so, going from about 3,000 to under 100 dollars would be a drop of more than 30 times, and that alone would change a lot.</p>\n\n<h2>What would cheap kilos change, for SpaceX and for Tesla?</h2>\n<p><strong>Launch would stop being the bottleneck and start acting like freight.</strong> At 54,500 dollars a kilo, the launch capacity for a 70-kilo person costs about 3.8 million dollars. At 100 dollars a kilo, the same 70 kilos of capacity costs 7,000 dollars, before seats, life support and safety are added. Bigger Starlink satellites, Moon landers that need several tanker flights for refuelling, and Musk's stated plan to send Optimus robots to Mars all depend on cheap kilos.</p>\n<p>That is also why Tesla fans should care. SpaceX's own filings mention a possible combination with Tesla, and fully reusable Starship is one of the biggest drivers of SpaceX's value. The cheapest part of a rocket was always the fuel. The expensive part was throwing the rocket away, and Starship is the first serious attempt to bring the whole vehicle back.</p>"
+  },
+  "nl": {
+    "title": "Wat kost het om 1 kilo de ruimte in te sturen? Van de spaceshuttle tot Starship",
+    "description": "De brandstof voor een Starship-vlucht komt neer op zo'n 9 dollar per kilo, maar de spaceshuttle kostte ongeveer 54.500. Waarom dat zo is, hoe Falcon 9 de prijs omlaag kreeg en wat Starship nodig heeft om onder de 100 dollar per kilo te komen.",
+    "body": "<p><strong>Brandstof is het goedkoopste deel van een ruimtereis.</strong> Volgens Elon Musk zelf kost de stuwstof voor één volle Starship-vlucht zo'n 900.000 dollar. Verdeeld over de 100 ton lading waarvoor Starship ontworpen is, is dat ongeveer 9 dollar per kilo. Toch kwam een NASA-studie voor de spaceshuttle uit op ongeveer 54.500 dollar per kilo, en ook een eigen Falcon 9-vlucht kost in het gunstigste geval nog zo'n 3.000 dollar per kilo. In een interview met belegger Ron Baron in november 2026 zei Musk dat Starship de prijs naar \"onder de honderd dollar per kilo naar een baan om de aarde\" kan brengen. Het gat tussen 9 dollar brandstof en duizenden dollars aan prijs heeft bijna niets met brandstof te maken, en het verklaart waarom de ruimte zo lang zo duur was.</p>\n\n<h2>Waarom kost één kilo in een baan om de aarde zoveel?</h2>\n<p><strong>Omdat de raket het grootste deel van het ruimtetijdperk na één vlucht werd weggegooid.</strong> Om in een baan te blijven moet een lading zo'n 28.000 kilometer per uur halen. Daarvoor heb je een machine nodig die vooral uit stuwstof bestaat: maar een paar procent van het startgewicht is echte lading. Motoren, tanks en elektronica worden op de tiende millimeter gebouwd, werken een paar minuten en vallen dan in zee. Musk vergelijkt het met een passagiersvliegtuig dat je na elke vlucht sloopt: bijna niemand zou nog kunnen vliegen.</p>\n<p>De spaceshuttle probeerde dat op te lossen, en dat lukte maar half. De orbiter vloog opnieuw, maar de grote oranje tank ging elke keer verloren en de orbiter had tussen de missies lange, dure reparaties nodig. NASA-onderzoeker Harry Jones rekende uit dat een shuttlelancering omgerekend naar 2018 zo'n 1,7 miljard dollar kostte, voor 27.500 kilo laadvermogen. Hergebruik bespaart alleen geld als een oude raket opnieuw laten vliegen goedkoper is dan een nieuwe bouwen.</p>\n\n<h2>Hoe maakte Falcon 9 de prijs zo'n 20 keer lager?</h2>\n<p><strong>Door de eerste trap te laten landen en hem steeds opnieuw te gebruiken.</strong> De booster is het grootste en duurste deel van de raket. Falcon 9 zet hem terug op een landingsplaats of op een onbemand schip op zee, en de twee helften van de neuskegel komen aan parachutes naar beneden. In dezelfde NASA-studie kwam een Falcon 9-vlucht van 62 miljoen dollar, met maximaal 22.800 kilo naar een lage baan, uit op zo'n 2.720 dollar per kilo: ongeveer 20 keer goedkoper dan de shuttle.</p>\n<p>Musk noemt Falcon 9 \"ongeveer 80 procent\" herbruikbaar. De ontbrekende 20 procent is de bovenste trap, die na elke vlucht verbrandt of in de ruimte achterblijft. Volgens Musk kost alleen die trap al ongeveer evenveel als een middelgroot zakenvliegtuig. Op papier is Falcon 9 goedkoop per kilo, maar die papieren prijs betalen de meeste klanten niet.</p>\n\n<h2>Waarom betalen echte klanten dan vaak veel meer per kilo?</h2>\n<p><strong>Omdat het bekende kilobedrag uitgaat van een helemaal volle raket naar de makkelijkst bereikbare baan.</strong> Analisten delen de lanceerprijs door het maximale gewicht naar een lage, ronde baan op een paar honderd kilometer hoogte. Echte satellieten zijn meestal lichter dan dat maximum, of ze moeten hoger, waardoor de raket minder kan meenemen.</p>\n<p>Vakblad New Space Economy zette de cijfers van 2026 op een rij: een eigen Falcon 9-vlucht kost zo'n 74 miljoen dollar, dus een satelliet van 4.000 kilo betaalt in feite ongeveer 18.500 dollar per kilo. Kleine satellieten kunnen ook meeliften, voor zo'n 7.000 dollar per extra kilo boven een minimum van 50 kilo. De les: goedkope kilo's vragen twee dingen tegelijk. Niets weggooien, en een raket die vol vliegt.</p>\n\n<h2>Wat moet Starship doen om onder de 100 dollar per kilo te komen?</h2>\n<p><strong>Beide trappen opvangen en opnieuw gebruiken, snel weer klaar zijn en vol vliegen.</strong> De rekensom is eenvoudig. Bij 100 ton per vlucht betekent 100 dollar per kilo dat een complete vlucht hooguit 10 miljoen dollar mag kosten. Bij 10 dollar per kilo zou de hele vlucht zo'n 1 miljoen dollar moeten kosten, nauwelijks meer dan de brandstof zelf.</p>\n<p>SpaceX heeft al Super Heavy-boosters opgevangen met de \"eetstokjes\" van de lanceertoren, en op vlucht 14 in september 2026 bereikte Starship voor het eerst een baan om de aarde en zette 26 Starlink-satellieten uit, zijn eerste echte lading. Het schip zelf opvangen en opnieuw laten vliegen is de volgende grote stap. Musk zei ook dat een booster ooit binnen een uur weer kan vliegen. Dat is een voornemen, nog niet iets wat SpaceX heeft laten zien, en het bedrag dat online het vaakst rondgaat verdient een realiteitscheck.</p>\n\n<h2>Is 10 dollar per kilo dan een feit of een doel?</h2>\n<p><strong>Een doel, en een optimistisch doel.</strong> Het bedrag van 10 dollar komt uit eerdere uitspraken van Musk dat een Starship-vlucht ooit zo'n miljoen dollar zou kunnen kosten. Starship heeft nog geen openbare prijslijst, dus elk kilobedrag voor Starship is een doel of een schatting, geen offerte die je kunt boeken. Musks meest recente getal, onder de 100 dollar, is tien keer zo hoog als het bedrag dat viraal gaat.</p>\n<p>Een hardnekkige mythe is dat SpaceX nu al voor 10 dollar per kilo lanceert. Dat klopt niet: Falcon 9 zit nog in de duizenden, en de catalogusprijs is door de jaren heen met de inflatie meegestegen. Ook Musks tijdlijnen zijn vaker opgeschoven. Toch zou de stap van zo'n 3.000 naar onder de 100 dollar een daling van meer dan 30 keer zijn, en alleen dat al verandert veel.</p>\n\n<h2>Wat veranderen goedkope kilo's, voor SpaceX en voor Tesla?</h2>\n<p><strong>Lanceren wordt dan geen knelpunt meer, maar iets wat lijkt op vrachtvervoer.</strong> Bij 54.500 dollar per kilo kost het laadvermogen voor een persoon van 70 kilo zo'n 3,8 miljoen dollar. Bij 100 dollar per kilo kost diezelfde 70 kilo 7.000 dollar, nog zonder stoel, levensondersteuning en veiligheid. Grotere Starlink-satellieten, maanlanders die meerdere tankvluchten nodig hebben, en Musks aangekondigde plan om Optimus-robots naar Mars te sturen: ze hangen allemaal af van goedkope kilo's.</p>\n<p>Daarom is dit ook voor Tesla-fans interessant. SpaceX noemt in zijn eigen stukken een mogelijke samenvoeging met Tesla, en een volledig herbruikbare Starship is een van de grootste drijfveren achter de waarde van SpaceX. Het goedkoopste deel van een raket was altijd de brandstof. Het dure deel was de raket weggooien, en Starship is de eerste serieuze poging om het hele voertuig terug te halen.</p>"
+  },
+  "short": {
+    "hook": "contrast",
+    "en": "Rocket fuel is the CHEAP part. A full Starship load: about 900 thousand dollars, Musk says. Over 100 tonnes, that's 9 dollars a kilo. The Space Shuttle cost about 54 thousand a kilo. Falcon 9 lands its booster: about 3 thousand. But its upper stage burns up. Every flight. A stage priced like a mid-size jet. Starship brings BOTH halves back. Target: under 100 a kilo. Because the expensive part was never the fuel.",
+    "nl": "Raketbrandstof is het GOEDKOPE deel. Een volle Starship-tank: zo'n 900 duizend dollar, zegt Musk. Over 100 ton is dat 9 dollar per kilo. De spaceshuttle kostte zo'n 54 duizend per kilo. Falcon 9 laat zijn booster landen: zo'n 3 duizend. Maar de bovenste trap verbrandt. Elke vlucht. Een trap die kost als een zakenvliegtuig. Starship haalt BEIDE helften terug. Doel: onder de 100 per kilo. Want het dure deel was nooit de brandstof.",
+    "yt_title_en": "Rocket Fuel Is the CHEAP Part",
+    "yt_title_nl": "Raketbrandstof Is Het GOEDKOPE Deel",
+    "hooks": [
+      {
+        "text": "Rocket fuel is the CHEAP part.",
+        "type": "contrast"
+      },
+      {
+        "text": "One kilo to space once cost 54,500 dollars.",
+        "type": "number"
+      },
+      {
+        "text": "Why do rockets get thrown away after one flight?",
+        "type": "question"
+      }
+    ],
+    "hook_pick": {
+      "index": 0,
+      "why": "5 words, a contrarian claim everyone thinks is wrong, readable from frame 1, and the last line ('never the fuel') loops straight back into it"
+    },
+    "story": [
+      {
+        "part": "hook",
+        "t": "0-2.5s",
+        "text": "Rocket fuel is the CHEAP part.",
+        "img": "gen/how-much-does-it-cost-to-send-1-kg-into-space-shuttle-falcon-9-starship.jpg",
+        "lib": [
+          "starship-launch.jpg"
+        ],
+        "pop": [
+          {
+            "say": "Rocket fuel",
+            "show": "ROCKET FUEL"
+          },
+          {
+            "say": "CHEAP part",
+            "show": "THE CHEAP PART"
+          }
+        ],
+        "visual": "Starship lifting off in a huge flame, slow push-in; label on screen from frame 1"
+      },
+      {
+        "part": "tension",
+        "t": "2.5-6.5s",
+        "text": "A full Starship load: about 900 thousand dollars, Musk says.",
+        "lib": [
+          "starship-pad.jpg"
+        ],
+        "pop": [
+          {
+            "say": "full Starship load",
+            "show": "FULL TANK"
+          },
+          {
+            "say": "900 thousand dollars",
+            "show": "$900,000"
+          }
+        ],
+        "visual": "full Starship stack floodlit on the pad, slow pan up the steel"
+      },
+      {
+        "part": "tension",
+        "t": "6.5-9.5s",
+        "text": "Over 100 tonnes, that's 9 dollars a kilo.",
+        "img": "spacex-7.jpg",
+        "pop": [
+          {
+            "say": "100 tonnes",
+            "show": "100 TONNES"
+          },
+          {
+            "say": "9 dollars a kilo",
+            "show": "$9 / KG"
+          }
+        ],
+        "visual": "Starship stacked at the tower at dawn, slow zoom out"
+      },
+      {
+        "part": "tension",
+        "t": "9.5-13s",
+        "text": "The Space Shuttle cost about 54 thousand a kilo.",
+        "photo": [
+          {
+            "q": [
+              "Space Shuttle launch",
+              "Space Shuttle Atlantis liftoff",
+              "STS launch Kennedy Space Center"
+            ],
+            "want": "a NASA Space Shuttle lifting off with its orange external tank and white boosters"
+          }
+        ],
+        "pop": [
+          {
+            "say": "Space Shuttle",
+            "show": "SPACE SHUTTLE"
+          },
+          {
+            "say": "54 thousand a kilo",
+            "show": "$54,500 / KG"
+          }
+        ],
+        "visual": "real NASA photo of a Space Shuttle lifting off, orange tank visible"
+      },
+      {
+        "part": "tension",
+        "t": "13-16s",
+        "text": "Falcon 9 lands its booster: about 3 thousand.",
+        "img": "spacex-6.jpg",
+        "pop": [
+          {
+            "say": "lands its booster",
+            "show": "IT LANDS"
+          },
+          {
+            "say": "about 3 thousand",
+            "show": "~$3,000 / KG"
+          }
+        ],
+        "visual": "Falcon 9 booster touching down on a drone ship at sunset"
+      },
+      {
+        "part": "tension",
+        "t": "16-19s",
+        "text": "But its upper stage burns up. Every flight.",
+        "photo": [
+          {
+            "q": [
+              "Falcon 9 second stage",
+              "Falcon 9 upper stage Merlin Vacuum",
+              "Merlin 1D Vacuum engine"
+            ],
+            "want": "a Falcon 9 second stage or its Merlin Vacuum engine"
+          }
+        ],
+        "img": "spacex-4.jpg",
+        "pop": [
+          {
+            "say": "upper stage",
+            "show": "UPPER STAGE"
+          },
+          {
+            "say": "Every flight",
+            "show": "LOST. EVERY FLIGHT"
+          }
+        ],
+        "visual": "Falcon 9 second stage / Merlin Vacuum engine, slow drift"
+      },
+      {
+        "part": "tension",
+        "t": "19-22s",
+        "text": "A stage priced like a mid-size jet.",
+        "img": "spacex-2.jpg",
+        "pop": [
+          {
+            "say": "priced like",
+            "show": "PRICED LIKE"
+          },
+          {
+            "say": "mid-size jet",
+            "show": "A BUSINESS JET"
+          }
+        ],
+        "visual": "Falcon rocket on the pad with steam, slow push-in"
+      },
+      {
+        "part": "payoff",
+        "t": "22-26s",
+        "text": "Starship brings BOTH halves back. Target: under 100 a kilo.",
+        "lib": [
+          "starship-booster-catch.jpg"
+        ],
+        "img": "gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute.jpg",
+        "pop": [
+          {
+            "say": "BOTH halves back",
+            "show": "BOTH COME BACK"
+          },
+          {
+            "say": "under 100 a kilo",
+            "show": "TARGET: < $100 / KG"
+          }
+        ],
+        "visual": "booster beside the tower's chopstick arms, then the ship held by the arms"
+      },
+      {
+        "part": "payoff",
+        "t": "26-29s",
+        "text": "Because the expensive part was never the fuel.",
+        "lib": [
+          "starship-launch.jpg"
+        ],
+        "img": "gen/how-much-does-it-cost-to-send-1-kg-into-space-shuttle-falcon-9-starship.jpg",
+        "pop": [
+          {
+            "say": "expensive part",
+            "show": "THE EXPENSIVE PART"
+          },
+          {
+            "say": "never the fuel",
+            "show": "NEVER THE FUEL"
+          }
+        ],
+        "visual": "back to the opening launch shot, so the loop into the hook is seamless"
+      }
+    ],
+    "signals": "Stayed %: the first line is a 5-word contrarian claim instead of a news announcement; watched %/loops: 74 words (~29 s) instead of ~55 s, a new number every 3 s, and the last line completes the hook so the replay feels seamless.",
+    "learning": {
+      "prev": "why-tesla-cybertruck-looks-like-that-stainless-steel-broken-window-story",
+      "prev_stats": "946 views, 11.6 likes/1000, stayed/watched not reported yet (midday before it, hot staging: 670 views, 28.4 likes/1000)",
+      "weakest_hook": "\"Tesla is winding down the Cybertruck.\" - a news announcement first; the real curiosity (the broken window) only came in sentence two, followed by 'November 2019' scene setting",
+      "why_stalled": "announcement openers lose the 3-second swipe test (the FSD announcement hook had 20% stayed) and at ~55 s the watched % cannot reach 90% or loop",
+      "change": "hook is now a 5-word contrarian claim (fuel is the cheap part), the Short is ~29 s / 74 words with a number on every beat, and the last line ('never the fuel') runs back into the hook"
+    }
+  },
+  "video": {
+    "en": [
+      {
+        "text": "Rocket fuel is the cheap part of going to space. A full Starship load of propellant costs about 900 thousand dollars, by Elon Musk's own estimate. Spread over 100 tonnes of cargo, that is 9 dollars a kilo. So why did the Space Shuttle cost about 54 thousand dollars for every kilo it lifted? And why does Musk now say Starship can get below 100? The answer is not in the fuel tank at all.",
+        "img": [
+          "gen/how-much-does-it-cost-to-send-1-kg-into-space-shuttle-falcon-9-starship.jpg",
+          "lib/starship-pad.jpg",
+          "lib/starship-launch.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Space Shuttle launch",
+              "Space Shuttle Atlantis liftoff",
+              "STS launch Kennedy Space Center"
+            ],
+            "want": "a NASA Space Shuttle lifting off with its orange external tank and white boosters"
+          }
+        ]
+      },
+      {
+        "head": "Why does one kilo in orbit cost so much?",
+        "pop": [
+          {
+            "say": "",
+            "show": "WHY SO EXPENSIVE?"
+          }
+        ],
+        "img": [
+          "spacex-7.jpg"
+        ]
+      },
+      {
+        "text": "Because for most of the space age, the rocket was thrown away after one flight. To stay in orbit, a payload has to reach about 28 thousand kilometres per hour. The machine that gets it there is mostly propellant. Only a few percent of its launch weight is actual cargo.",
+        "img": [
+          "spacex-1.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Earth from the International Space Station",
+              "Earth limb from orbit",
+              "low Earth orbit view"
+            ],
+            "want": "the curve of the Earth seen from orbit"
+          },
+          {
+            "q": [
+              "Falcon 9 launch",
+              "Falcon 9 liftoff Cape Canaveral",
+              "SpaceX Falcon 9 rocket launch"
+            ],
+            "want": "a SpaceX Falcon 9 rocket lifting off"
+          }
+        ]
+      },
+      {
+        "text": "Think about what that means. Engines, tanks and electronics, built to tight tolerances, work for a few minutes and then fall into the ocean. Musk compares it to scrapping a passenger jet after every single flight. Hardly anyone could afford to fly.",
+        "img": [
+          "spacex-2.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "rocket engine assembly",
+              "rocket stage factory",
+              "Raptor engine SpaceX"
+            ],
+            "want": "rocket engines or stages being built"
+          },
+          {
+            "q": [
+              "air cargo containers airport",
+              "cargo plane loading",
+              "Boeing 747 freighter loading"
+            ],
+            "want": "air freight being loaded into a cargo plane"
+          }
+        ]
+      },
+      {
+        "text": "The Space Shuttle tried to fix that, and only half succeeded. The orbiter flew again, but the big orange tank was lost on every flight, and the orbiter needed long, expensive repairs between missions. A NASA study put one Shuttle launch at about 1.7 billion dollars in 2018 money, for 27 and a half tonnes of capacity. Reuse only saves money when flying an old rocket again is cheaper than building a new one.",
+        "photo": [
+          {
+            "q": [
+              "Space Shuttle launch",
+              "Space Shuttle Atlantis liftoff",
+              "STS launch Kennedy Space Center"
+            ],
+            "want": "a NASA Space Shuttle lifting off with its orange external tank and white boosters"
+          },
+          {
+            "q": [
+              "Space Shuttle external tank separation",
+              "Shuttle external tank in orbit",
+              "STS external tank jettison"
+            ],
+            "want": "the orange Space Shuttle external tank seen after separation, or a Shuttle with its orange tank"
+          },
+          {
+            "q": [
+              "Space Shuttle orbiter processing facility",
+              "Space Shuttle heat shield tiles",
+              "Space Shuttle Discovery orbiter hangar"
+            ],
+            "want": "a Space Shuttle orbiter being worked on in a hangar"
+          }
+        ]
+      },
+      {
+        "head": "How did Falcon 9 cut the price by about 20 times?",
+        "pop": [
+          {
+            "say": "",
+            "show": "20 TIMES CHEAPER?"
+          }
+        ],
+        "img": [
+          "spacex-6.jpg"
+        ]
+      },
+      {
+        "text": "By landing its first stage and flying it again and again. The booster is the biggest and most expensive part of the rocket. Falcon 9 brings it back to a landing pad or a drone ship at sea. Even the two halves of the nose cone come down under parachutes.",
+        "img": [
+          "spacex-6.jpg",
+          "falcon-boosters.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Falcon 9 first stage landing",
+              "Falcon 9 booster landing Landing Zone 1",
+              "Falcon 9 landing drone ship"
+            ],
+            "want": "a Falcon 9 first stage landing on its legs"
+          },
+          {
+            "q": [
+              "Falcon 9 fairing recovery",
+              "SpaceX fairing parachute",
+              "Falcon 9 payload fairing"
+            ],
+            "want": "a Falcon 9 nose cone fairing half"
+          }
+        ]
+      },
+      {
+        "text": "The result shows up in that same NASA study. A 62 million dollar Falcon 9 flight, lifting at most 22 thousand 800 kilos to low orbit, comes to about 2 thousand 720 dollars a kilo. That is roughly 20 times cheaper than the Shuttle.",
+        "img": [
+          "spacex-3.jpg",
+          "falcon-heavy.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Falcon 9 launch",
+              "Falcon 9 liftoff Cape Canaveral",
+              "SpaceX Falcon 9 rocket launch"
+            ],
+            "want": "a SpaceX Falcon 9 rocket lifting off"
+          }
+        ]
+      },
+      {
+        "text": "But there is a catch. Musk calls Falcon 9 about 80 percent reusable. The missing 20 percent is the upper stage, and it is lost on every flight. According to Musk, that stage alone costs about as much as a medium-sized business jet. Imagine throwing away a jet every time you send a package.",
+        "img": [
+          "spacex-4.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Falcon 9 second stage",
+              "Falcon 9 upper stage Merlin Vacuum",
+              "Merlin 1D Vacuum engine"
+            ],
+            "want": "a Falcon 9 second stage or its Merlin Vacuum engine"
+          }
+        ]
+      },
+      {
+        "head": "So why do real customers often pay much more per kilo?",
+        "pop": [
+          {
+            "say": "",
+            "show": "WHAT YOU REALLY PAY"
+          }
+        ],
+        "img": [
+          "spacex-5.jpg"
+        ]
+      },
+      {
+        "text": "Because the famous per kilo number assumes a completely full rocket, flying to the easiest orbit there is. Analysts take the launch price and divide it by the maximum payload to a low, circular orbit a few hundred kilometres up. Real satellites are usually lighter than that, or they need to go higher, and then the rocket can lift less.",
+        "img": [
+          "lib/starlink-satellites.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "satellite clean room",
+              "communications satellite before launch",
+              "satellite encapsulation"
+            ],
+            "want": "a satellite in a clean room before launch"
+          },
+          {
+            "q": [
+              "Earth from the International Space Station",
+              "Earth limb from orbit",
+              "low Earth orbit view"
+            ],
+            "want": "the curve of the Earth seen from orbit"
+          }
+        ]
+      },
+      {
+        "text": "Here is what that looks like in 2026. A dedicated Falcon 9 flight costs about 74 million dollars. Put a 4 thousand kilo satellite on it, and you are paying about 18 thousand 500 dollars per kilo. Small satellites can share a ride instead, at about 7 thousand dollars per extra kilo. So cheap kilos need two things at the same time. Throw nothing away, and fly full.",
+        "img": [
+          "spacex-1.jpg",
+          "gen/spacex-first-starlink-launch-2019-satellites-stacked-like-deck-of-cards-x2-11042048.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Falcon 9 fairing recovery",
+              "SpaceX fairing parachute",
+              "Falcon 9 payload fairing"
+            ],
+            "want": "a Falcon 9 nose cone fairing half"
+          }
+        ]
+      },
+      {
+        "head": "What would Starship need to get under 100 dollars a kilo?",
+        "pop": [
+          {
+            "say": "",
+            "show": "UNDER $100?"
+          }
+        ],
+        "img": [
+          "lib/starship-pad.jpg"
+        ]
+      },
+      {
+        "text": "Both stages caught and reused, fast turnarounds, and full cargo bays. The maths is simple. At 100 tonnes per flight, 100 dollars a kilo means the whole flight can cost no more than 10 million dollars. At 10 dollars a kilo, it would have to cost about 1 million. That is barely more than the fuel.",
+        "img": [
+          "lib/starship-launch.jpg",
+          "gen/how-much-does-it-cost-to-send-1-kg-into-space-shuttle-falcon-9-starship.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "rocket engine assembly",
+              "rocket stage factory",
+              "Raptor engine SpaceX"
+            ],
+            "want": "rocket engines or stages being built"
+          }
+        ]
+      },
+      {
+        "text": "Part of that is already working. SpaceX has caught Super Heavy boosters with the tower's chopstick arms. On Flight 14, in September 2026, Starship reached orbit for the first time and released 26 Starlink satellites, its first real cargo.",
+        "img": [
+          "lib/starship-booster-catch.jpg",
+          "gen/spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story.jpg",
+          "lib/starlink-satellites.jpg"
+        ]
+      },
+      {
+        "text": "The next big step is catching the ship itself and flying it again. Musk has even said a booster could one day fly again within an hour. That is a goal, not something SpaceX has shown yet.",
+        "img": [
+          "gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute.jpg",
+          "gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute-x3-11041200.jpg",
+          "spacex-7.jpg"
+        ]
+      },
+      {
+        "head": "So is 10 dollars a kilo a fact or a target?",
+        "pop": [
+          {
+            "say": "",
+            "show": "FACT OR TARGET?"
+          }
+        ],
+        "img": [
+          "lib/musk-silhouette-rocket.jpg"
+        ]
+      },
+      {
+        "text": "A target, and an optimistic one. The 10 dollar number goes back to earlier comments by Musk that a Starship flight might one day cost around a million dollars. Starship has no public price list yet. Every Starship price per kilo you see is a goal or an estimate, not a quote you can book.",
+        "img": [
+          "lib/musk-silhouette-rocket.jpg",
+          "lib/musk-empty-podium.jpg"
+        ]
+      },
+      {
+        "text": "And here is the twist. Musk's most recent number is under 100 dollars. That is 10 times higher than the figure that goes viral. SpaceX does not launch for 10 dollars a kilo today. Falcon 9 is still in the thousands, and its list price has gone up over the years with inflation. Musk's timelines have slipped before, too.",
+        "img": [
+          "spacex-2.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Falcon 9 launch",
+              "Falcon 9 liftoff Cape Canaveral",
+              "SpaceX Falcon 9 rocket launch"
+            ],
+            "want": "a SpaceX Falcon 9 rocket lifting off"
+          }
+        ]
+      },
+      {
+        "text": "Still, going from about 3 thousand dollars to under 100 would be a drop of more than 30 times. Falcon 9 already did a 20 times drop. Another one like that changes what is worth sending to space.",
+        "img": [
+          "spacex-3.jpg",
+          "lib/starship-launch.jpg"
+        ]
+      },
+      {
+        "head": "What would cheap kilos change, for SpaceX and for Tesla?",
+        "pop": [
+          {
+            "say": "",
+            "show": "WHAT IT CHANGES"
+          }
+        ],
+        "img": [
+          "lib/musk-chess-companies.jpg"
+        ]
+      },
+      {
+        "text": "Launch would stop being the bottleneck and start to look like freight. At 54 thousand 500 dollars a kilo, the launch capacity for a 70 kilo person costs about 3.8 million dollars. At 100 dollars a kilo, the same 70 kilos costs 7 thousand dollars. That is before seats, life support and safety, but it shows the scale.",
+        "img": [
+          "lib/starlink-dish-car.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "air cargo containers airport",
+              "cargo plane loading",
+              "Boeing 747 freighter loading"
+            ],
+            "want": "air freight being loaded into a cargo plane"
+          },
+          {
+            "q": [
+              "Space Shuttle launch",
+              "Space Shuttle Atlantis liftoff",
+              "STS launch Kennedy Space Center"
+            ],
+            "want": "a NASA Space Shuttle lifting off with its orange external tank and white boosters"
+          }
+        ]
+      },
+      {
+        "text": "Bigger Starlink satellites. Moon landers that need several tanker flights to refuel. Musk's stated plan to send Optimus robots to Mars. All of it depends on cheap kilos.",
+        "img": [
+          "lib/starlink-satellites.jpg",
+          "starship-moon.jpg",
+          "starship-optimus-door.jpg",
+          "starship-fleet-mars.jpg"
+        ]
+      },
+      {
+        "text": "And that is why Tesla fans should care. SpaceX's own filings mention a possible combination with Tesla, and a fully reusable Starship is one of the biggest drivers of SpaceX's value. So remember the opening number. The cheapest part of a rocket was always the fuel. The expensive part was throwing the rocket away, and Starship is the first serious attempt to bring the whole thing back.",
+        "img": [
+          "lib/musk-chess-companies.jpg",
+          "lib/starship-booster-catch.jpg",
+          "gen/how-much-does-it-cost-to-send-1-kg-into-space-shuttle-falcon-9-starship.jpg"
+        ]
+      }
+    ],
+    "nl": [
+      {
+        "text": "Brandstof is het goedkoopste deel van een ruimtereis. Een volle tank stuwstof voor Starship kost zo'n 900 duizend dollar, volgens Elon Musk zelf. Verdeeld over 100 ton lading is dat 9 dollar per kilo. Waarom kostte de spaceshuttle dan zo'n 54 duizend dollar voor elke kilo die hij omhoog bracht? En waarom zegt Musk nu dat Starship onder de 100 kan komen? Het antwoord zit helemaal niet in de brandstoftank.",
+        "img": [
+          "gen/how-much-does-it-cost-to-send-1-kg-into-space-shuttle-falcon-9-starship.jpg",
+          "lib/starship-pad.jpg",
+          "lib/starship-launch.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Space Shuttle launch",
+              "Space Shuttle Atlantis liftoff",
+              "STS launch Kennedy Space Center"
+            ],
+            "want": "a NASA Space Shuttle lifting off with its orange external tank and white boosters"
+          }
+        ]
+      },
+      {
+        "head": "Waarom kost één kilo in een baan om de aarde zoveel?",
+        "pop": [
+          {
+            "say": "",
+            "show": "WAAROM ZO DUUR?"
+          }
+        ],
+        "img": [
+          "spacex-7.jpg"
+        ]
+      },
+      {
+        "text": "Omdat de raket het grootste deel van het ruimtetijdperk na één vlucht werd weggegooid. Om in een baan te blijven moet een lading zo'n 28 duizend kilometer per uur halen. De machine die dat doet bestaat vooral uit stuwstof. Maar een paar procent van het startgewicht is echte lading.",
+        "img": [
+          "spacex-1.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Earth from the International Space Station",
+              "Earth limb from orbit",
+              "low Earth orbit view"
+            ],
+            "want": "the curve of the Earth seen from orbit"
+          },
+          {
+            "q": [
+              "Falcon 9 launch",
+              "Falcon 9 liftoff Cape Canaveral",
+              "SpaceX Falcon 9 rocket launch"
+            ],
+            "want": "a SpaceX Falcon 9 rocket lifting off"
+          }
+        ]
+      },
+      {
+        "text": "Denk daar even over na. Motoren, tanks en elektronica, heel precies gebouwd, werken een paar minuten en vallen dan in zee. Musk vergelijkt het met een passagiersvliegtuig dat je na elke vlucht sloopt. Bijna niemand zou nog kunnen vliegen.",
+        "img": [
+          "spacex-2.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "rocket engine assembly",
+              "rocket stage factory",
+              "Raptor engine SpaceX"
+            ],
+            "want": "rocket engines or stages being built"
+          },
+          {
+            "q": [
+              "air cargo containers airport",
+              "cargo plane loading",
+              "Boeing 747 freighter loading"
+            ],
+            "want": "air freight being loaded into a cargo plane"
+          }
+        ]
+      },
+      {
+        "text": "De spaceshuttle probeerde dat op te lossen, en dat lukte maar half. De orbiter vloog opnieuw, maar de grote oranje tank ging bij elke vlucht verloren, en de orbiter had tussen de missies lange, dure reparaties nodig. Een NASA-studie kwam uit op zo'n 1,7 miljard dollar per shuttlelancering, omgerekend naar 2018, voor 27 en een halve ton laadvermogen. Hergebruik bespaart alleen geld als een oude raket opnieuw laten vliegen goedkoper is dan een nieuwe bouwen.",
+        "photo": [
+          {
+            "q": [
+              "Space Shuttle launch",
+              "Space Shuttle Atlantis liftoff",
+              "STS launch Kennedy Space Center"
+            ],
+            "want": "a NASA Space Shuttle lifting off with its orange external tank and white boosters"
+          },
+          {
+            "q": [
+              "Space Shuttle external tank separation",
+              "Shuttle external tank in orbit",
+              "STS external tank jettison"
+            ],
+            "want": "the orange Space Shuttle external tank seen after separation, or a Shuttle with its orange tank"
+          },
+          {
+            "q": [
+              "Space Shuttle orbiter processing facility",
+              "Space Shuttle heat shield tiles",
+              "Space Shuttle Discovery orbiter hangar"
+            ],
+            "want": "a Space Shuttle orbiter being worked on in a hangar"
+          }
+        ]
+      },
+      {
+        "head": "Hoe maakte Falcon 9 de prijs zo'n 20 keer lager?",
+        "pop": [
+          {
+            "say": "",
+            "show": "20 KEER GOEDKOPER?"
+          }
+        ],
+        "img": [
+          "spacex-6.jpg"
+        ]
+      },
+      {
+        "text": "Door de eerste trap te laten landen en steeds opnieuw te gebruiken. De booster is het grootste en duurste deel van de raket. Falcon 9 zet hem terug op een landingsplaats of op een onbemand schip op zee. Zelfs de twee helften van de neuskegel komen aan parachutes naar beneden.",
+        "img": [
+          "spacex-6.jpg",
+          "falcon-boosters.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Falcon 9 first stage landing",
+              "Falcon 9 booster landing Landing Zone 1",
+              "Falcon 9 landing drone ship"
+            ],
+            "want": "a Falcon 9 first stage landing on its legs"
+          },
+          {
+            "q": [
+              "Falcon 9 fairing recovery",
+              "SpaceX fairing parachute",
+              "Falcon 9 payload fairing"
+            ],
+            "want": "a Falcon 9 nose cone fairing half"
+          }
+        ]
+      },
+      {
+        "text": "Het resultaat staat in diezelfde NASA-studie. Een Falcon 9-vlucht van 62 miljoen dollar, met maximaal 22 duizend 800 kilo naar een lage baan, komt uit op zo'n 2 duizend 720 dollar per kilo. Dat is ongeveer 20 keer goedkoper dan de shuttle.",
+        "img": [
+          "spacex-3.jpg",
+          "falcon-heavy.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Falcon 9 launch",
+              "Falcon 9 liftoff Cape Canaveral",
+              "SpaceX Falcon 9 rocket launch"
+            ],
+            "want": "a SpaceX Falcon 9 rocket lifting off"
+          }
+        ]
+      },
+      {
+        "text": "Maar er zit een addertje onder het gras. Musk noemt Falcon 9 ongeveer 80 procent herbruikbaar. De ontbrekende 20 procent is de bovenste trap, en die gaat bij elke vlucht verloren. Volgens Musk kost alleen die trap al ongeveer evenveel als een middelgroot zakenvliegtuig. Stel je voor dat je bij elk pakketje een vliegtuig weggooit.",
+        "img": [
+          "spacex-4.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Falcon 9 second stage",
+              "Falcon 9 upper stage Merlin Vacuum",
+              "Merlin 1D Vacuum engine"
+            ],
+            "want": "a Falcon 9 second stage or its Merlin Vacuum engine"
+          }
+        ]
+      },
+      {
+        "head": "Waarom betalen echte klanten dan vaak veel meer per kilo?",
+        "pop": [
+          {
+            "say": "",
+            "show": "WAT JE ECHT BETAALT"
+          }
+        ],
+        "img": [
+          "spacex-5.jpg"
+        ]
+      },
+      {
+        "text": "Omdat het bekende kilobedrag uitgaat van een helemaal volle raket, naar de makkelijkste baan die er is. Analisten delen de lanceerprijs door het maximale gewicht naar een lage, ronde baan op een paar honderd kilometer hoogte. Echte satellieten zijn meestal lichter, of ze moeten hoger, en dan kan de raket minder meenemen.",
+        "img": [
+          "lib/starlink-satellites.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "satellite clean room",
+              "communications satellite before launch",
+              "satellite encapsulation"
+            ],
+            "want": "a satellite in a clean room before launch"
+          },
+          {
+            "q": [
+              "Earth from the International Space Station",
+              "Earth limb from orbit",
+              "low Earth orbit view"
+            ],
+            "want": "the curve of the Earth seen from orbit"
+          }
+        ]
+      },
+      {
+        "text": "Zo ziet dat er in 2026 uit. Een eigen Falcon 9-vlucht kost zo'n 74 miljoen dollar. Zet je er een satelliet van 4 duizend kilo op, dan betaal je ongeveer 18 duizend 500 dollar per kilo. Kleine satellieten kunnen ook meeliften, voor zo'n 7 duizend dollar per extra kilo. Goedkope kilo's vragen dus twee dingen tegelijk. Niets weggooien, en vol vliegen.",
+        "img": [
+          "spacex-1.jpg",
+          "gen/spacex-first-starlink-launch-2019-satellites-stacked-like-deck-of-cards-x2-11042048.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Falcon 9 fairing recovery",
+              "SpaceX fairing parachute",
+              "Falcon 9 payload fairing"
+            ],
+            "want": "a Falcon 9 nose cone fairing half"
+          }
+        ]
+      },
+      {
+        "head": "Wat moet Starship doen om onder de 100 dollar per kilo te komen?",
+        "pop": [
+          {
+            "say": "",
+            "show": "ONDER $100?"
+          }
+        ],
+        "img": [
+          "lib/starship-pad.jpg"
+        ]
+      },
+      {
+        "text": "Beide trappen opvangen en opnieuw gebruiken, snel weer klaar zijn, en vol vliegen. De rekensom is eenvoudig. Bij 100 ton per vlucht betekent 100 dollar per kilo dat de hele vlucht hooguit 10 miljoen dollar mag kosten. Bij 10 dollar per kilo moet het zo'n 1 miljoen zijn. Dat is nauwelijks meer dan de brandstof.",
+        "img": [
+          "lib/starship-launch.jpg",
+          "gen/how-much-does-it-cost-to-send-1-kg-into-space-shuttle-falcon-9-starship.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "rocket engine assembly",
+              "rocket stage factory",
+              "Raptor engine SpaceX"
+            ],
+            "want": "rocket engines or stages being built"
+          }
+        ]
+      },
+      {
+        "text": "Een deel daarvan werkt al. SpaceX heeft Super Heavy-boosters opgevangen met de eetstokjes van de toren. Op vlucht 14, in september 2026, bereikte Starship voor het eerst een baan om de aarde en zette hij 26 Starlink-satellieten uit, zijn eerste echte lading.",
+        "img": [
+          "lib/starship-booster-catch.jpg",
+          "gen/spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story.jpg",
+          "lib/starlink-satellites.jpg"
+        ]
+      },
+      {
+        "text": "De volgende grote stap is het schip zelf opvangen en opnieuw laten vliegen. Musk zei zelfs dat een booster ooit binnen een uur weer kan vliegen. Dat is een doel, nog niet iets wat SpaceX heeft laten zien.",
+        "img": [
+          "gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute.jpg",
+          "gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute-x3-11041200.jpg",
+          "spacex-7.jpg"
+        ]
+      },
+      {
+        "head": "Is 10 dollar per kilo dan een feit of een doel?",
+        "pop": [
+          {
+            "say": "",
+            "show": "FEIT OF DOEL?"
+          }
+        ],
+        "img": [
+          "lib/musk-silhouette-rocket.jpg"
+        ]
+      },
+      {
+        "text": "Een doel, en een optimistisch doel. Het bedrag van 10 dollar gaat terug op eerdere uitspraken van Musk dat een Starship-vlucht ooit zo'n miljoen dollar zou kunnen kosten. Starship heeft nog geen openbare prijslijst. Elk kilobedrag voor Starship dat je ziet is een doel of een schatting, geen offerte die je kunt boeken.",
+        "img": [
+          "lib/musk-silhouette-rocket.jpg",
+          "lib/musk-empty-podium.jpg"
+        ]
+      },
+      {
+        "text": "En nu de draai. Musks meest recente getal is onder de 100 dollar. Dat is 10 keer zo hoog als het bedrag dat viraal gaat. SpaceX lanceert vandaag niet voor 10 dollar per kilo. Falcon 9 zit nog in de duizenden, en de catalogusprijs is door de jaren heen met de inflatie meegestegen. Ook Musks tijdlijnen zijn al vaker opgeschoven.",
+        "img": [
+          "spacex-2.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Falcon 9 launch",
+              "Falcon 9 liftoff Cape Canaveral",
+              "SpaceX Falcon 9 rocket launch"
+            ],
+            "want": "a SpaceX Falcon 9 rocket lifting off"
+          }
+        ]
+      },
+      {
+        "text": "Toch zou de stap van zo'n 3 duizend dollar naar onder de 100 een daling van meer dan 30 keer zijn. Falcon 9 deed al een daling van 20 keer. Nog zo'n sprong verandert wat het waard is om de ruimte in te sturen.",
+        "img": [
+          "spacex-3.jpg",
+          "lib/starship-launch.jpg"
+        ]
+      },
+      {
+        "head": "Wat veranderen goedkope kilo's, voor SpaceX en voor Tesla?",
+        "pop": [
+          {
+            "say": "",
+            "show": "WAT HET VERANDERT"
+          }
+        ],
+        "img": [
+          "lib/musk-chess-companies.jpg"
+        ]
+      },
+      {
+        "text": "Lanceren wordt dan geen knelpunt meer, maar iets wat op vrachtvervoer lijkt. Bij 54 duizend 500 dollar per kilo kost het laadvermogen voor een persoon van 70 kilo zo'n 3,8 miljoen dollar. Bij 100 dollar per kilo kost diezelfde 70 kilo 7 duizend dollar. Dat is nog zonder stoel, levensondersteuning en veiligheid, maar het laat de schaal zien.",
+        "img": [
+          "lib/starlink-dish-car.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "air cargo containers airport",
+              "cargo plane loading",
+              "Boeing 747 freighter loading"
+            ],
+            "want": "air freight being loaded into a cargo plane"
+          },
+          {
+            "q": [
+              "Space Shuttle launch",
+              "Space Shuttle Atlantis liftoff",
+              "STS launch Kennedy Space Center"
+            ],
+            "want": "a NASA Space Shuttle lifting off with its orange external tank and white boosters"
+          }
+        ]
+      },
+      {
+        "text": "Grotere Starlink-satellieten. Maanlanders die meerdere tankvluchten nodig hebben. Musks aangekondigde plan om Optimus-robots naar Mars te sturen. Het hangt allemaal af van goedkope kilo's.",
+        "img": [
+          "lib/starlink-satellites.jpg",
+          "starship-moon.jpg",
+          "starship-optimus-door.jpg",
+          "starship-fleet-mars.jpg"
+        ]
+      },
+      {
+        "text": "En daarom is dit ook voor Tesla-fans interessant. SpaceX noemt in zijn eigen stukken een mogelijke samenvoeging met Tesla, en een volledig herbruikbare Starship is een van de grootste drijfveren achter de waarde van SpaceX. Denk dus terug aan het getal van het begin. Het goedkoopste deel van een raket was altijd de brandstof. Het dure deel was de raket weggooien, en Starship is de eerste serieuze poging om het hele ding terug te halen.",
+        "img": [
+          "lib/musk-chess-companies.jpg",
+          "lib/starship-booster-catch.jpg",
+          "gen/how-much-does-it-cost-to-send-1-kg-into-space-shuttle-falcon-9-starship.jpg"
+        ]
+      }
+    ],
+    "yt_title_en": "How Much Does It Cost to Launch 1 kg Into Space? Shuttle vs Falcon 9 vs Starship",
+    "yt_title_nl": "Wat Kost 1 Kilo de Ruimte In? Spaceshuttle vs Falcon 9 vs Starship"
+  }
+}

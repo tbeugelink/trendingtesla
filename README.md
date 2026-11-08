@@ -8,6 +8,37 @@ Static, bilingual (EN at `/`, NL at `/nl/`) Tesla news site.
 
 `public/` is generated — never edit it by hand, always rebuild.
 
+## HARD RULES (William, 8 Nov 2026, afternoon) - sharpen the ALGORITHM RULES below; no exceptions
+
+The previous versions stalled because the hook came too late, text overlays were missing and the density was too
+low. That must not happen again.
+1. **The hook is literally in the first 2 seconds.** No build-up, no "In the Tesla Semi...", no "Rocket fuel is...".
+   Start with the sharpest claim or the most surprising number: "$9 a kilo vs $54,000. Here's why." or "Why Tesla
+   put the driver in the MIDDLE." At most ~5 spoken words before the claim lands. Always 3 hook variants; say why
+   the chosen one wins.
+2. **Big, permanent text from frame 1.** Fully understandable without sound; at least 70% of the seconds carry big
+   readable text that holds the claim or the fact. Shorts: `"short.hook_text"` (max 5 words, exact text, e.g.
+   "$9 A KILO VS $54,000") is shown big from the very first frame until the hook beat ends; after that every beat
+   has 1-3 "pop" overlays that each carry a fact on their own ("$54,500 / KG", "LOST. EVERY FLIGHT"), never a
+   fragment like "PRICED LIKE". The renderer reports the % of seconds with text and warns under 70%.
+   Long videos: the subtitles run the whole time; the label carries the hook in the first seconds.
+3. **Pattern interrupt every 2.5-4 seconds**: new information, a new number, a new picture or new text. No long
+   voice-over block without an interrupt.
+4. **The end is loopable**: the last sentence or text links seamlessly back to the opening claim. No "like and
+   subscribe" and no "full story on the site" as the last beat: only in the description. (The Short's
+   "FULL STORY" line and the long video's spoken outro and end card are switched off.)
+5. **Self-learning is required and visible**: after every Short and video write down explicitly what was weak in
+   the previous one (e.g. "hook started too late") and which concrete change is made now; in `"short.learning"`,
+   in ops/hook-log.md and in the task's summary to William.
+
+Short output (all required): title, 3 hook variants + chosen hook + why, `hook_text`, the full script with timing
+per beat (`"t"`: "0-2s", "2-6s", ...), the exact text overlays per beat (`"pop"` "show"), visual cues
+(`"visual"`), which signals it serves better than the previous one (`"signals"`), the self-learning note
+(`"learning"`).
+Long videos: the same hard hook in the first 15-20 s (the first sentence is the claim itself), high density,
+6-8 minutes at most unless the subject really needs more, and they end on a loopable payoff, never a call to action.
+Stay factually correct; the article is the source. No soft explainer videos any more.
+
 ## ALGORITHM RULES (William, 8 Nov 2026) - read first; they override every older rule below where they differ
 
 Goal: Shorts and videos that maximise the algorithm signals: **viewed vs swiped away over 70% in the first 3 s,
@@ -24,7 +55,7 @@ Where we stood on 8 Nov 2026 (`ops/short-signals.md`, updated every morning): st
 - End with a payoff that rewards the opening, and let the end run into the beginning (loopable): the last line
   is written so that the hook makes sense right after it (it answers the hook's question with a twist, or it
   ends on a half sentence the hook completes). The Short has NO end card and NO spoken slogan any more; a small
-  silent "FULL STORY: TrendingTesla.com" line shows on the last beat (`video/story.py`).
+  silent "FULL STORY" line was tried and is switched off again (HARD RULES, rule 4).
 - After every publication, analyse why the previous one stalled around ~1,000 views and name the concrete change
   in the next one (see "Self-learning" below).
 
@@ -54,7 +85,7 @@ Where we stood on 8 Nov 2026 (`ops/short-signals.md`, updated every morning): st
 - The same hook principle in the first 15-20 s: the strongest claim first, an open loop the video pays off later.
 - Keep the density high: no long monologue without a visual or informative interrupt (a number, a question, a
   turn, a comparison) at least every 20-30 s; pictures change every ~3 s and the subtitles run along.
-- End with a strong payoff; the renderer adds the referral to the article ("...join us on TrendingTesla.com").
+- End with a strong, loopable payoff; no call to action at the end (the referral is in the description).
 - At most 6-8 minutes (about 900-1,300 spoken words) unless the subject really needs more.
 
 **Self-learning (required after every Short and long video)**

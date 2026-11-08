@@ -28,6 +28,7 @@ OUTRO_SAY = {"en": "Like and subscribe for more Tesla news and join us on Trendi
              "nl": "Like en abonneer voor meer Tesla-nieuws, of ga naar TrendingTesla.com. Ik zie je daar!"}
 OUTRO_CARD = {"en": "LIKE & SUBSCRIBE", "nl": "LIKE & ABONNEER"}
 OUTRO_SEC = 10.0
+OUTRO = os.environ.get("FULL_OUTRO") == "1"  # spoken "Like and subscribe" + end card (off since 8 Nov 2026)
 GAP = 8  # at least 8 other photos before one comes back
 SCENE_MAX, ZOOM_IN = 3.0, 0.07  # the story-Short rhythm: a new shot every 3 s, 2 s crossfades  # calm like the story Shorts: slow steady zoom, a new photo every ~5 s
 NUM = re.compile(r"^([(\"'“]?)(\$?)(\d[\d.,]*\d|\d)(%?)([)\"'”.,:;!?]*)$")
@@ -371,9 +372,10 @@ def build_timeline(a, lang):
     if not S.SPOKEN_TITLE and pieces and not pieces[0][2].get("img"):  # opening photo = the article's first photo
         pieces[0] = (pieces[0][0], pieces[0][1], {**pieces[0][2], "img": (a.get("images") or [])[:1]})
     # the last sentence gets its own short pause, so "I'll see you there!" is not swallowed after ".com"
-    o1, _, o2 = OUTRO_SAY[lang].rpartition(". ")
-    pieces.append(("outro", o1 + ".", {}))
-    pieces.append(("outro2", o2, {}))
+    if OUTRO:  # off since 8 Nov 2026: the video ends on its loopable payoff, the call to action is in the description
+        o1, _, o2 = OUTRO_SAY[lang].rpartition(". ")
+        pieces.append(("outro", o1 + ".", {}))
+        pieces.append(("outro2", o2, {}))
     return pieces
 
 
@@ -434,9 +436,13 @@ def main():
             t += gap
         place.append(t)
         t += a1 - a0
-    oi = next(i for i, p in enumerate(pieces) if p[0] == "outro")
-    end_start = place[oi] - 0.3
-    total = place[oi] + max(OUTRO_SEC, place[-1] - place[oi] + segs[-1][1] - segs[-1][0] + 1.5)
+    oi = next((i for i, p in enumerate(pieces) if p[0] == "outro"), None)
+    if oi is not None:
+        end_start = place[oi] - 0.3
+        total = place[oi] + max(OUTRO_SEC, place[-1] - place[oi] + segs[-1][1] - segs[-1][0] + 1.5)
+    else:  # no closing card: the last subtitle stays a moment and the video ends on the payoff
+        total = place[-1] + segs[-1][1] - segs[-1][0] + 1.2
+        end_start = total + 1
     # words of text pieces on the video timeline (captions)
     words = []
     for (kind, _, _), (a0, a1), t0, (i0, i1), orig, (_, counts) in zip(pieces, segs, place, spans, base, conv):

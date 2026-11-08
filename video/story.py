@@ -835,6 +835,15 @@ def main():
         nxt = pops[k + 1][0] if k + 1 < len(pops) and pops[k + 1][3] == bi else bend
         held.append((min(p0, bstart) if first else p0, max(p1, nxt), txt))
     pops = held
+    # the hook as big text from the very first frame to the end of the hook beat (William, 8 Nov 2026)
+    hook_text = ((a.get("short") or {}).get("hook_text") or "").strip().upper()
+    if hook_text:
+        pops = [(0.0, hook_end, hook_text)] + [p for p in pops if p[0] >= hook_end - 0.05]
+        label_end = 0.0
+    covered = sum(min(p1, body_end) - max(p0, 0) for p0, p1, _ in pops if p1 > p0) / max(body_end, 0.1)
+    print(f"text on screen {covered * 100:.0f}% of the Short")
+    if covered < 0.7:
+        print(f"::warning::big text only {covered * 100:.0f}% of the time (rule: at least 70%): give every beat key words")
     for k in range(n):
         tt = k / FPS
         if tt >= body_end:
@@ -873,7 +882,7 @@ def main():
             if key not in capimgs:
                 capimgs[key] = pop_img(pg[2])
             pi = capimgs[key]
-            sc = 1 + 0.35 * max(0.0, 1 - (tt - pg[0]) / 0.15)
+            sc = 1 + 0.35 * max(0.0, 1 - (tt - pg[0]) / 0.15) if pg[0] > 0 else 1  # frame 1 readable at once
             if sc > 1.001:
                 pi = pi.resize((int(W * sc), int(POP_H * sc)), Image.BILINEAR)
                 ox, oy = (pi.width - W) // 2, (pi.height - POP_H) // 2
@@ -885,8 +894,6 @@ def main():
                 capimgs[key] = caption_img(cg[2])
             # opening shot: captions above the label; afterwards in the usual place
             fr.alpha_composite(capimgs[key], (0, int(ltop - 300) if bi == 0 else int(H * 0.60)))
-        if not ENDCARD and tt >= last_t0:
-            fr.alpha_composite(promise, (0, int(H * 0.83)))
         fr.alpha_composite(logo, (0, 0))
         enc.stdin.write(fr.convert("RGB").tobytes())
     enc.stdin.close()

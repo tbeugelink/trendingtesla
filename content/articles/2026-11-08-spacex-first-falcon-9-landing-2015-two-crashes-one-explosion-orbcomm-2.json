@@ -1,0 +1,341 @@
+{
+  "slug": "spacex-first-falcon-9-landing-2015-two-crashes-one-explosion-orbcomm-2",
+  "date": "2026-11-08",
+  "time": "21:16",
+  "category": "spacex",
+  "sources": [
+    {
+      "title": "Space.com: Wow! SpaceX lands orbital rocket successfully in historic first",
+      "url": "https://news.yahoo.com/wow-spacex-lands-orbital-rocket-successfully-historic-first-020159974.html"
+    },
+    {
+      "title": "Space.com: SpaceX rocket landing failed after grid fins ran out of hydraulic fluid",
+      "url": "https://www.space.com/28236-spacex-rocket-landing-hydraulic-fluid.html"
+    },
+    {
+      "title": "Wikipedia: Falcon 9 flight 20 (Orbcomm OG2 M2)",
+      "url": "https://www.wikiwand.com/en/articles/Orbcomm_OG2_M2"
+    },
+    {
+      "title": "SpaceNews: SpaceX lands Falcon 9 first stage after Orbcomm launch",
+      "url": "https://spacenews.com/?p=55991"
+    },
+    {
+      "title": "NBC News: Jeff Bezos welcomes Elon Musk 'to the club' after rocket landing",
+      "url": "https://www.nbcnews.com/tech/innovation/amazon-s-jeff-bezos-welcomes-elon-musk-club-after-rocket-n484461"
+    },
+    {
+      "title": "BGR: SpaceX Falcon 9 booster flies for the 37th time",
+      "url": "https://www.bgr.com/2273946/spacex-falcon-9-rocket-booster-reuse-37th-time/"
+    },
+    {
+      "title": "Teslarati: SpaceX's next Starship flight set to make history on Friday the 13th",
+      "url": "https://www.teslarati.com/spacex-starship-catch-nov-13/"
+    }
+  ],
+  "images": [
+    "spacex-6.jpg",
+    "falcon-boosters.jpg",
+    "spacex-1.jpg"
+  ],
+  "gen_image": {
+    "prompt": "Close, dramatic low-angle night shot of a SpaceX Falcon 9 first stage settling upright onto a round floodlit concrete landing pad in Florida: the tall slim white booster filling the middle of the frame, its single centre engine firing a bright orange-white flame into billowing steam and dust, four black landing legs unfolded at its base, four small lattice grid fins near its top, soot streaks on the white body, deep blue night sky, palm trees and the flat coastline faintly lit in the distance, calm dark foreground in the lower left",
+    "subject": "SpaceX Falcon 9 first stage (booster): a tall, slim white cylinder about 3.7 m wide and roughly 40 m tall, with a black band (the interstage) at its top end, four small square lattice grid fins just below the top, four black carbon landing legs folded out like a tripod at the base, nine engines in the base of which only the centre one fires during landing; no wings, no upper stage, no nose cone, no crew capsule on top; the landing pad is a flat round concrete pad with a large painted circle marking, no tower",
+    "refs": [
+      {
+        "commons": "ORBCOMM-2 Falcon 9 first stage Landing Zone 1"
+      },
+      {
+        "src": "topics/spacex-6.jpg"
+      }
+    ],
+    "profile": "cinematic",
+    "category": "B",
+    "describe": "a Falcon 9 first stage landing upright on a floodlit concrete pad in Florida at night",
+    "extra": [
+      {
+        "prompt": "Long-exposure style night illustration over the Florida coast: the arc of a Falcon 9 booster flying back towards land after stage separation, a glowing engine plume high in a dark blue sky, a thin bright streak curving down towards a lit landing pad near the shore, the ocean in the foreground, no people",
+        "describe": "a Falcon 9 booster flying back towards the Florida coast at night, its engine glowing"
+      },
+      {
+        "prompt": "Daytime shot of a retired, soot-streaked white Falcon 9 first stage standing upright on display in front of a modern low office building in sunny Southern California, its four black landing legs extended, grid fins at the top, palm trees and a blue sky, a wide lawn in front, no people, no readable signs or logos",
+        "describe": "a retired Falcon 9 first stage standing upright on display outside an office building, a monument"
+      }
+    ]
+  },
+  "label": {
+    "style": "c",
+    "en": {
+      "sub": "2 CRASHES, 1 EXPLOSION",
+      "text": "THEN IT LANDED"
+    },
+    "nl": {
+      "sub": "2 CRASHES, 1 EXPLOSIE",
+      "text": "TOEN LANDDE HIJ"
+    }
+  },
+  "en": {
+    "title": "Two Crashes, One Explosion, Then It Landed: How SpaceX Brought Back Its First Orbital Rocket in 2015",
+    "description": "In 2015 SpaceX crashed two boosters on its landing ship and lost a whole rocket before a Falcon 9 first stage finally flew back and landed upright in Florida. The story of that first landing, and why it still matters for Starship.",
+    "body": "<p>On the evening of 21 December 2015, a SpaceX engineer spoke the line the company had been chasing for years: \"The Falcon has landed.\" Minutes earlier, a Falcon 9 had lifted off from Cape Canaveral with 11 Orbcomm satellites. Its first stage separated high above the Atlantic, turned around, fired its engines to fly back towards Florida and settled upright on a concrete pad called Landing Zone 1. For the first time, the main stage of a rocket that sends cargo into orbit had come home in one piece. Getting there took two crashed landings, a lost rocket and six months on the ground, and in mid-2015 nobody could say whether SpaceX would ever pull it off.</p>\n<h2>Why did SpaceX want its rockets back at all?</h2>\n<p><strong>Because every launch threw away the most expensive part of the rocket.</strong> The first stage holds most of the engines and most of the tanks, and until 2015 no first stage of an orbital rocket had ever flown itself back to a landing: almost all of them fell into the ocean and were lost. Elon Musk had argued for years that fully reusable rockets could cut the cost of spaceflight by a factor of 100, a claim he tied directly to his goal of making a city on Mars affordable. That was an ambition, not a result. First SpaceX had to prove a booster could survive the trip back: falling from far above the thickest air, slowing on its own engines and touching down gently on a small target. Its first try, on a ship at sea, ended badly.</p>\n<h2>So what went wrong on the first attempts?</h2>\n<p><strong>The boosters found the target, but they hit it too hard.</strong> On 10 January 2015, after launching a Dragon cargo capsule to the International Space Station, a Falcon 9 stage reached SpaceX's floating drone ship in the Atlantic and slammed into the deck. Musk explained the next day that the grid fins, the four small lattice \"waffle irons\" that steer the stage as it falls, had run out of hydraulic fluid just before touchdown. His verdict on Twitter: \"Close, but no cigar this time.\" The next rocket carried 50 percent more fluid.</p>\n<p>In April 2015 it went wrong in a different way. The next booster touched down on the ship but with too much sideways speed, tipped over and was destroyed. Musk blamed a valve in the engine that had stuck, so the control system could not react fast enough. Then SpaceX lost a whole rocket.</p>\n<h2>What did the June 2015 explosion change?</h2>\n<p><strong>It grounded Falcon 9 for six months and forced SpaceX to come back with a better rocket.</strong> On 28 June 2015, a Falcon 9 carrying supplies to the space station broke apart on its way up. The investigation pointed to a faulty steel strut in the upper stage. It was the first Falcon 9 that SpaceX lost on the way to orbit.</p>\n<p>SpaceX came back with an upgraded version, later called Falcon 9 Full Thrust: its propellant chilled far below normal temperatures so more fits in the tanks, a stronger structure, and better landing legs and grid fins. Musk called it \"a significantly improved rocket\". Its first mission carried Orbcomm's satellites to a low orbit, which left spare propellant in the booster, enough to try something new: landing on solid ground.</p>\n<h2>How did a booster fly itself back to Florida?</h2>\n<p><strong>By turning around in space and running a series of engine burns back to the coast.</strong> After separating at an altitude of about 75 kilometres, the first stage flipped, relit engines to head back towards the Cape, steered through the air with its grid fins and fired once more to land as its four legs unfolded. Meanwhile the upper stage carried on and released all 11 satellites about 14 minutes after launch.</p>\n<p>Musk greeted the stage with \"Welcome back, baby!\" A month earlier, Blue Origin's New Shepard had landed after a suborbital hop to just over 100 kilometres, and Jeff Bezos now tweeted \"Welcome to the club!\" But New Shepard went straight up and down, while the Falcon booster had just helped push a payload towards orbital speed, a much harder trip back. Then SpaceX did something few expected with the rocket that made history.</p>\n<h2>So what happened to the first booster that came back?</h2>\n<p><strong>It never flew again.</strong> SpaceX found no damage on the stage, known as B1019, and test-fired it on its pad in January 2016. One of the outer engines showed fluctuations in thrust, possibly from swallowed debris, Musk said. SpaceX decided to keep it on the ground, and since August 2016 it has stood upright outside the company's headquarters in Hawthorne, California, as a monument.</p>\n<p>The boosters after it did the real work. SpaceX first flew a used booster again in 2017, and by August 2026 one booster, B1067, had lifted off for the 37th time. The same idea is now being pushed one step further.</p>\n<h2>Why does that night still matter for Starship and for Tesla?</h2>\n<p><strong>Because Starship is trying to finish what Falcon 9 started: bringing back the whole rocket, not just the bottom half.</strong> SpaceX has already caught several Super Heavy boosters with the arms of its launch tower, and for Starship Flight 15, scheduled for mid-November 2026, it plans to catch both the booster and the ship. Musk has called a successful ship catch \"the first time that there's been full recovery of an orbital class rocket\". Until it works, that remains a goal, not a fact.</p>\n<p>For Tesla fans the pattern is familiar: build, fail, fix and try again, the same approach Musk has used in Tesla's factories, and SpaceX's own filings mention a possible combination with Tesla. The booster in Hawthorne is a reminder that the first landing was not a lucky shot. It cost two crashes, one explosion and a rebuilt rocket.</p>"
+  },
+  "nl": {
+    "title": "Twee crashes, één explosie, en toen landde hij: hoe SpaceX in 2015 voor het eerst een orbitale raket terughaalde",
+    "description": "In 2015 crashte SpaceX twee boosters op zijn landingsschip en verloor het een hele raket, voordat een Falcon 9-trap eindelijk terugvloog en rechtop landde in Florida. Het verhaal van die eerste landing, en waarom het er voor Starship nog steeds toe doet.",
+    "body": "<p>Op de avond van 21 december 2015 sprak een SpaceX-ingenieur in het livecommentaar de zin uit waar het bedrijf jaren op had gejaagd: \"The Falcon has landed.\" Een paar minuten eerder was een Falcon 9 met 11 Orbcomm-satellieten opgestegen vanaf Cape Canaveral. De eerste trap koppelde hoog boven de Atlantische Oceaan los, draaide om, vuurde zijn motoren af om terug te vliegen naar Florida en kwam rechtop tot stilstand op een betonnen platform met de naam Landing Zone 1. Voor het eerst was de hoofdtrap van een raket die vracht in een baan om de aarde brengt heelhuids thuisgekomen. De weg ernaartoe kostte twee mislukte landingen, een verloren raket en een half jaar aan de grond, en halverwege 2015 kon niemand zeggen of het SpaceX ooit zou lukken.</p>\n<h2>Waarom wilde SpaceX zijn raketten eigenlijk terug?</h2>\n<p><strong>Omdat bij elke lancering het duurste deel van de raket werd weggegooid.</strong> In de eerste trap zitten de meeste motoren en de grootste tanks, en tot 2015 had nog nooit een eerste trap van een orbitale raket zichzelf teruggevlogen naar een landing: bijna allemaal vielen ze in zee en gingen ze verloren. Elon Musk zei al jaren dat volledig herbruikbare raketten ruimtevaart tot honderd keer goedkoper kunnen maken, en koppelde dat direct aan zijn doel om een stad op Mars betaalbaar te maken. Dat was een ambitie, geen resultaat. Eerst moest SpaceX bewijzen dat een booster de terugreis kon overleven: vallen van ver boven de dikste lucht, op eigen motoren afremmen en zacht neerkomen op een klein doel. De eerste poging, op een schip op zee, liep slecht af.</p>\n<h2>Dus wat ging er mis bij de eerste pogingen?</h2>\n<p><strong>De boosters vonden het doel wel, maar raakten het veel te hard.</strong> Op 10 januari 2015, na de lancering van een Dragon-vrachtcapsule naar het internationale ruimtestation ISS, bereikte een Falcon 9-trap het drijvende droneschip van SpaceX op de Atlantische Oceaan en knalde op het dek. Musk legde een dag later uit dat de grid fins, de vier kleine roostervormige \"wafelijzers\" die de trap tijdens de val sturen, vlak voor de landing zonder hydraulische vloeistof waren komen te zitten. Zijn oordeel op Twitter: \"Close, but no cigar this time.\" Net mis dus. De volgende raket kreeg 50 procent meer vloeistof mee.</p>\n<p>In april 2015 ging het op een andere manier mis. De volgende booster landde wel op het schip, maar met te veel zijwaartse snelheid, viel om en ging verloren. Volgens Musk zat er een klep in de motor vast, waardoor het besturingssysteem niet snel genoeg kon reageren. Daarna verloor SpaceX een hele raket.</p>\n<h2>Wat veranderde er door de explosie van juni 2015?</h2>\n<p><strong>De Falcon 9 bleef een half jaar aan de grond, en SpaceX kwam terug met een betere raket.</strong> Op 28 juni 2015 brak een Falcon 9 met voorraden voor het ruimtestation tijdens de klim in stukken. Het onderzoek wees naar een defecte stalen stut in de bovenste trap. Het was de eerste Falcon 9 die SpaceX op weg naar de ruimte verloor.</p>\n<p>SpaceX kwam terug met een verbeterde versie, later Falcon 9 Full Thrust genoemd: de brandstof ver onder de normale temperatuur gekoeld zodat er meer in de tanks past, een stevigere constructie en betere landingspoten en grid fins. Musk noemde het \"a significantly improved rocket\". De eerste vlucht bracht de satellieten van Orbcomm naar een lage baan, waardoor er brandstof over bleef in de booster, genoeg voor iets nieuws: landen op vaste grond.</p>\n<h2>Hoe vloog een booster in zijn eentje terug naar Florida?</h2>\n<p><strong>Door in de ruimte om te draaien en met een reeks motorstoten terug te koersen naar de kust.</strong> Na het loskoppelen op zo'n 75 kilometer hoogte kantelde de eerste trap, ontstak opnieuw motoren om terug te koersen naar de Cape, stuurde met zijn grid fins door de lucht en vuurde nog één keer om te landen, terwijl zijn vier poten uitklapten. Ondertussen vloog de bovenste trap door en zette zo'n 14 minuten na de start alle 11 satellieten af.</p>\n<p>Musk begroette de trap met \"Welcome back, baby!\" Een maand eerder was de New Shepard van Blue Origin geland na een suborbitaal sprongetje tot iets boven de 100 kilometer, en Jeff Bezos twitterde nu \"Welcome to the club!\" Maar New Shepard ging recht omhoog en weer omlaag, terwijl de Falcon-booster net had geholpen een lading richting baansnelheid te duwen, met een veel zwaardere terugreis. Daarna deed SpaceX iets wat weinigen verwachtten met de raket die geschiedenis schreef.</p>\n<h2>En wat gebeurde er met de eerste booster die terugkwam?</h2>\n<p><strong>Hij heeft nooit meer gevlogen.</strong> SpaceX vond geen schade aan de trap, bekend als B1019, en liet hem in januari 2016 op het platform proefdraaien. Een van de buitenste motoren gaf schommelingen in stuwkracht, volgens Musk mogelijk door ingezogen vuil. SpaceX besloot hem aan de grond te houden, en sinds augustus 2016 staat hij rechtop voor het hoofdkantoor in Hawthorne, Californië, als monument.</p>\n<p>De boosters na hem deden het echte werk. In 2017 vloog SpaceX voor het eerst met een gebruikte booster, en in augustus 2026 steeg booster B1067 voor de 37e keer op. Hetzelfde idee wordt nu nog een stap verder getrokken.</p>\n<h2>Waarom doet die avond er nog steeds toe, voor Starship en voor Tesla?</h2>\n<p><strong>Omdat Starship wil afmaken waar Falcon 9 mee begon: de hele raket terughalen, niet alleen de onderste helft.</strong> SpaceX heeft al meerdere Super Heavy-boosters opgevangen met de armen van zijn lanceertoren, en bij Starship-vlucht 15, gepland voor half november 2026, wil het zowel de booster als het schip vangen. Musk noemde een geslaagde vangst van het schip \"the first time that there's been full recovery of an orbital class rocket\", de eerste keer dat een orbitale raket volledig wordt teruggehaald. Tot dat lukt is het een doel, geen feit.</p>\n<p>Voor Tesla-fans klinkt het patroon bekend: bouwen, falen, repareren en opnieuw proberen, dezelfde aanpak die Musk in Tesla's fabrieken gebruikt, en in de eigen stukken van SpaceX wordt een mogelijke samenvoeging met Tesla genoemd. De booster in Hawthorne herinnert eraan dat die eerste landing geen geluksschot was. Ze kostte twee crashes, één explosie en een omgebouwde raket.</p>"
+  },
+  "short": {
+    "hook": "number",
+    "en": "Two crashes. One explosion. Then it LANDED. January 2015: the first booster slams into the ship. Its steering fins ran out of fluid. April: the next one lands... and tips over. June: the whole rocket breaks apart. December 21st: a booster flies back to Florida. Lands upright. A first for an orbital rocket. Musk: 'Welcome back, baby!' Bezos: 'Welcome to the club!' Today one booster has flown 37 times. The first one never flew again. It's a monument now. Its price?",
+    "nl": "Twee crashes. Eén explosie. Toen LANDDE hij. Januari 2015: de eerste booster knalt op het schip. Zijn stuurvinnen hebben geen vloeistof meer. April: de volgende landt... en valt om. Juni: de hele raket breekt in stukken. 21 december: een booster vliegt terug naar Florida. Landt rechtop. Een primeur voor een orbitale raket. Musk: 'Welcome back, baby!' Bezos: 'Welcome to the club!' Nu heeft één booster 37 keer gevlogen. De eerste vloog nooit meer. Hij is nu een monument. De prijs?",
+    "yt_title_en": "Two Crashes, One Explosion, Then It LANDED",
+    "yt_title_nl": "Twee Crashes, Eén Explosie, Toen LANDDE Hij",
+    "hooks": [
+      {
+        "text": "Two crashes. One explosion. Then it LANDED.",
+        "type": "number"
+      },
+      {
+        "text": "No orbital rocket had ever landed. Until this one.",
+        "type": "first"
+      },
+      {
+        "text": "Why is this rocket parked outside SpaceX's office?",
+        "type": "question"
+      }
+    ],
+    "hook_pick": {
+      "index": 0,
+      "why": "Three numbers land in the first 2 seconds with zero build-up, it is a mini story in 7 words (failure, failure, success) that begs 'how?', hook_text shows it from frame 1, and the last line 'Its price?' loops straight back into 'Two crashes. One explosion.'"
+    },
+    "hook_text": "2 CRASHES. 1 EXPLOSION.",
+    "story": [
+      {
+        "part": "hook",
+        "t": "0-2.5s",
+        "text": "Two crashes. One explosion. Then it LANDED.",
+        "img": "gen/spacex-first-falcon-9-landing-2015-two-crashes-one-explosion-orbcomm-2.jpg",
+        "pop": [
+          {
+            "say": "Two crashes",
+            "show": "2 CRASHES"
+          },
+          {
+            "say": "One explosion",
+            "show": "1 EXPLOSION"
+          },
+          {
+            "say": "LANDED",
+            "show": "THEN IT LANDED"
+          }
+        ],
+        "visual": "Falcon 9 booster settling upright on a floodlit landing pad on its engine flame, slow push-in; hook_text big from frame 1"
+      },
+      {
+        "part": "tension",
+        "t": "2.5-6s",
+        "text": "January 2015: the first booster slams into the ship.",
+        "img": "spacex-6.jpg",
+        "pop": [
+          {
+            "say": "January 2015",
+            "show": "JAN 2015"
+          },
+          {
+            "say": "slams into the ship",
+            "show": "SLAMS INTO THE SHIP"
+          }
+        ],
+        "visual": "Falcon 9 booster coming down on the drone ship at sea, fast zoom in on the deck"
+      },
+      {
+        "part": "tension",
+        "t": "6-8.5s",
+        "text": "Its steering fins ran out of fluid.",
+        "photo": [
+          {
+            "q": [
+              "Falcon 9 grid fins",
+              "Falcon 9 grid fin close up",
+              "SpaceX grid fins"
+            ],
+            "want": "close-up of the lattice grid fins on top of a Falcon 9 first stage"
+          }
+        ],
+        "img": "spacex-1.jpg",
+        "pop": [
+          {
+            "say": "steering fins",
+            "show": "STEERING FINS"
+          },
+          {
+            "say": "ran out of fluid",
+            "show": "OUT OF HYDRAULIC FLUID"
+          }
+        ],
+        "visual": "close-up of the waffle-shaped grid fins, slow drift up"
+      },
+      {
+        "part": "tension",
+        "t": "8.5-11.5s",
+        "text": "April: the next one lands... and tips over.",
+        "img": "spacex-6.jpg",
+        "pop": [
+          {
+            "say": "April",
+            "show": "APRIL 2015"
+          },
+          {
+            "say": "tips over",
+            "show": "LANDS... TIPS OVER"
+          }
+        ],
+        "visual": "drone ship landing shot tilted and zoomed tight on the legs, quick tilt"
+      },
+      {
+        "part": "tension",
+        "t": "11.5-14s",
+        "text": "June: the whole rocket breaks apart.",
+        "photo": [
+          {
+            "q": [
+              "Falcon 9 CRS-7 launch",
+              "SpaceX CRS-7 liftoff",
+              "Falcon 9 v1.1 launch 2015"
+            ],
+            "want": "a Falcon 9 v1.1 rocket lifting off from Cape Canaveral in 2015"
+          }
+        ],
+        "img": "spacex-1.jpg",
+        "pop": [
+          {
+            "say": "June",
+            "show": "JUNE 2015"
+          },
+          {
+            "say": "breaks apart",
+            "show": "ROCKET LOST"
+          }
+        ],
+        "visual": "Falcon 9 launch climbing, hard cut to white flash"
+      },
+      {
+        "part": "tension",
+        "t": "14-17s",
+        "text": "December 21st: a booster flies back to Florida.",
+        "photo": [
+          {
+            "q": [
+              "Falcon 9 ORBCOMM-2 long exposure",
+              "Falcon 9 first stage return long exposure",
+              "Falcon 9 boostback night long exposure"
+            ],
+            "want": "a long-exposure night photo of a Falcon 9 launch and its first stage flying back to land at Cape Canaveral"
+          }
+        ],
+        "img": "falcon-boosters.jpg",
+        "pop": [
+          {
+            "say": "December 21st",
+            "show": "DEC 21, 2015"
+          },
+          {
+            "say": "flies back",
+            "show": "FLIES BACK TO FLORIDA"
+          }
+        ],
+        "visual": "booster arcing back over the Florida coast at night with a glowing engine plume, slow pan"
+      },
+      {
+        "part": "payoff",
+        "t": "17-20s",
+        "text": "Lands upright. A first for an orbital rocket.",
+        "img": "falcon-boosters.jpg",
+        "pop": [
+          {
+            "say": "Lands upright",
+            "show": "LANDS UPRIGHT"
+          },
+          {
+            "say": "A first",
+            "show": "WORLD FIRST"
+          }
+        ],
+        "visual": "Falcon boosters touching down on land pads at Cape Canaveral at dusk, slow zoom"
+      },
+      {
+        "part": "payoff",
+        "t": "20-23.5s",
+        "text": "Musk: 'Welcome back, baby!' Bezos: 'Welcome to the club!'",
+        "img": "gen/spacex-first-falcon-9-landing-2015-two-crashes-one-explosion-orbcomm-2.jpg",
+        "pop": [
+          {
+            "say": "Welcome back, baby",
+            "show": "MUSK: WELCOME BACK, BABY!"
+          },
+          {
+            "say": "Welcome to the club",
+            "show": "BEZOS: WELCOME TO THE CLUB"
+          }
+        ],
+        "visual": "the landed booster steaming on the pad under floodlights, quick push-in on each quote"
+      },
+      {
+        "part": "payoff",
+        "t": "23.5-26.5s",
+        "text": "Today one booster has flown 37 times.",
+        "img": "spacex-1.jpg",
+        "pop": [
+          {
+            "say": "one booster",
+            "show": "ONE BOOSTER"
+          },
+          {
+            "say": "37 times",
+            "show": "37 FLIGHTS"
+          }
+        ],
+        "visual": "Falcon 9 on the pad at dusk with steam, sooty first stage, slow tilt up"
+      },
+      {
+        "part": "payoff",
+        "t": "26.5-31s",
+        "text": "The first one never flew again. It's a monument now. Its price?",
+        "photo": [
+          {
+            "q": [
+              "Falcon 9 B1019 Hawthorne",
+              "SpaceX headquarters Hawthorne Falcon 9 display",
+              "Falcon 9 first stage display SpaceX headquarters"
+            ],
+            "want": "the retired Falcon 9 first stage standing upright on display outside SpaceX headquarters in Hawthorne"
+          }
+        ],
+        "img": "spacex-6.jpg",
+        "pop": [
+          {
+            "say": "never flew again",
+            "show": "NEVER FLEW AGAIN"
+          },
+          {
+            "say": "monument",
+            "show": "NOW A MONUMENT"
+          },
+          {
+            "say": "Its price",
+            "show": "ITS PRICE?"
+          }
+        ],
+        "visual": "a sooty retired Falcon 9 first stage standing upright on display in front of an office building, slow zoom out, cut straight back to the hook"
+      }
+    ],
+    "signals": "Stayed %: the first word is already a number and the hook_text is on screen from frame 1 (previous Short opened with 3 words of build-up, 'Rocket fuel is...'). Watched %/loops: 78 words (~30 s), a new date or number every 2.5-3.5 s (JAN 2015, APRIL, JUNE, DEC 21, 37 FLIGHTS), every overlay a stand-alone fact, and the closing question 'Its price?' is answered by the hook on replay.",
+    "learning": {
+      "prev": "how-much-does-it-cost-to-send-1-kg-into-space-shuttle-falcon-9-starship",
+      "prev_stats": "not in ops/short-signals.md yet (published 8 Nov midday); the evening Short before it (Cybertruck) 946 views, 11.6 likes/1000, stayed/watched not reported; channel average stayed 55% (weakest signal vs the 70% goal), watched 70%",
+      "weakest_hook": "\"Rocket fuel is the CHEAP part.\" - three words of build-up ('Rocket fuel is') before the claim lands, and William's review found overlays that were fragments ('PRICED LIKE') and too few text seconds",
+      "why_stalled": "the claim landed after ~1.5 s instead of at frame 1, so sound-off viewers saw no reason to stay; fragment overlays carried no fact on their own, so beats 6-7 felt empty",
+      "change": "the hook now opens on a number in word one ('Two crashes. One explosion. Then it LANDED.') with hook_text '2 CRASHES. 1 EXPLOSION.' from frame 1; every pop is a full fact (OUT OF HYDRAULIC FLUID, LANDS... TIPS OVER, 37 FLIGHTS), 2-3 pops on every beat so ~90% of seconds carry text; a dated beat every ~3 s (timeline as the pattern interrupt); ending on a question the hook answers"
+    }
+  }
+}

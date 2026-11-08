@@ -11,6 +11,13 @@ Every article task adds an entry here (README, "ALGORITHM RULES", Self-learning)
 - Change now: contrarian claim hook, ~29 s / 74 words, a dollar number on every beat (open loop: 9 -> 54,500 -> 3,000 -> <100), loop ending.
 - Long video, first 20 s: opens on the same contrarian claim plus two numbers that clash ($9/kg fuel vs $54,000/kg Shuttle) and an open question ("not in the fuel tank") paid off in the last line; the previous long video opened with a time stamp ("About two and a half minutes after liftoff...").
 
+## 2026-11-08 (afternoon) - William's review of "Rocket Fuel Is the CHEAP Part" (Short + long video)
+- Weak: the hook came too late ("Rocket fuel is..." builds up before the claim lands), text overlays were missing
+  or were fragments ("PRICED LIKE"), the density was too low; the long video ended on a call to action.
+- Change from now on: the claim or number lands within 2 s ("$9 a kilo vs $54,000. Here's why."), `hook_text` is
+  shown big from frame 1, every overlay carries a fact on its own, text on 70%+ of the seconds (renderer checks),
+  no CTA at the end of Shorts or long videos (loopable payoff instead).
+
 ## 2026-11-08 - starting point (rules of 8 Nov 2026)
 - Previous Shorts: ~45-60 s, stayed 44-65% (goal 70%+), watched 56-76% (goal 90%+ with loops), most stalled near 1,000 views.
 - Weakest hooks: scene-setting openings ("In 2019, SpaceX threw 60 satellites...", "The very first Tesla was meant to be...")

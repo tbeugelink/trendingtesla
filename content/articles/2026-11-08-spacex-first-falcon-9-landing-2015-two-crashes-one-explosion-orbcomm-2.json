@@ -34,6 +34,9 @@
     }
   ],
   "images": [
+    "gen/spacex-first-falcon-9-landing-2015-two-crashes-one-explosion-orbcomm-2.jpg",
+    "gen/spacex-first-falcon-9-landing-2015-two-crashes-one-explosion-orbcomm-2-x3-11082023.jpg",
+    "gen/spacex-first-falcon-9-landing-2015-two-crashes-one-explosion-orbcomm-2-x2-11082022.jpg",
     "spacex-6.jpg",
     "falcon-boosters.jpg",
     "spacex-1.jpg"
@@ -55,13 +58,17 @@
     "extra": [
       {
         "prompt": "Long-exposure style night illustration over the Florida coast: the arc of a Falcon 9 booster flying back towards land after stage separation, a glowing engine plume high in a dark blue sky, a thin bright streak curving down towards a lit landing pad near the shore, the ocean in the foreground, no people",
-        "describe": "a Falcon 9 booster flying back towards the Florida coast at night, its engine glowing"
+        "describe": "a Falcon 9 booster flying back towards the Florida coast at night, its engine glowing",
+        "file": "gen/spacex-first-falcon-9-landing-2015-two-crashes-one-explosion-orbcomm-2-x2-11082022.jpg"
       },
       {
         "prompt": "Daytime shot of a retired, soot-streaked white Falcon 9 first stage standing upright on display in front of a modern low office building in sunny Southern California, its four black landing legs extended, grid fins at the top, palm trees and a blue sky, a wide lawn in front, no people, no readable signs or logos",
-        "describe": "a retired Falcon 9 first stage standing upright on display outside an office building, a monument"
+        "describe": "a retired Falcon 9 first stage standing upright on display outside an office building, a monument",
+        "file": "gen/spacex-first-falcon-9-landing-2015-two-crashes-one-explosion-orbcomm-2-x3-11082023.jpg"
       }
-    ]
+    ],
+    "done": true,
+    "model": "gpt-image-2.5-flare"
   },
   "label": {
     "style": "c",
@@ -337,5 +344,6 @@
       "why_stalled": "the claim landed after ~1.5 s instead of at frame 1, so sound-off viewers saw no reason to stay; fragment overlays carried no fact on their own, so beats 6-7 felt empty",
       "change": "the hook now opens on a number in word one ('Two crashes. One explosion. Then it LANDED.') with hook_text '2 CRASHES. 1 EXPLOSION.' from frame 1; every pop is a full fact (OUT OF HYDRAULIC FLUID, LANDS... TIPS OVER, 37 FLIGHTS), 2-3 pops on every beat so ~90% of seconds carry text; a dated beat every ~3 s (timeline as the pattern interrupt); ending on a question the hook answers"
     }
-  }
+  },
+  "image": "gen/spacex-first-falcon-9-landing-2015-two-crashes-one-explosion-orbcomm-2.jpg"
 }

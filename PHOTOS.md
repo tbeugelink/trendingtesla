@@ -278,3 +278,6 @@ Articles with a "models" key automatically use real-life photos of that model. Y
 - gen/how-much-does-it-cost-to-send-1-kg-into-space-shuttle-falcon-9-starship.jpg — Starship lifting off from Starbase at sunrise in a huge flame, launch tower beside it
 - gen/how-much-does-it-cost-to-send-1-kg-into-space-shuttle-falcon-9-starship-x2-11081151.jpg — Starship in orbit releasing a row of flat Starlink satellites from its payload door
 - gen/how-much-does-it-cost-to-send-1-kg-into-space-shuttle-falcon-9-starship-x3-11081152.jpg — a caught Super Heavy booster held by the tower arms at dusk, ready to fly again
+- gen/spacex-first-falcon-9-landing-2015-two-crashes-one-explosion-orbcomm-2.jpg — a Falcon 9 first stage landing upright on a floodlit concrete pad in Florida at night
+- gen/spacex-first-falcon-9-landing-2015-two-crashes-one-explosion-orbcomm-2-x2-11082022.jpg — a Falcon 9 booster flying back towards the Florida coast at night, its engine glowing
+- gen/spacex-first-falcon-9-landing-2015-two-crashes-one-explosion-orbcomm-2-x3-11082023.jpg — a retired Falcon 9 first stage standing upright on display outside an office building, a monument

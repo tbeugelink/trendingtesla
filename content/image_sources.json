@@ -607,5 +607,44 @@
         "src": "lib/starship-pad.jpg"
       }
     ]
+  },
+  "gen/spacex-first-falcon-9-landing-2015-two-crashes-one-explosion-orbcomm-2.jpg": {
+    "article": "spacex-first-falcon-9-landing-2015-two-crashes-one-explosion-orbcomm-2",
+    "model": "gpt-image-2.5-flare",
+    "made": "2026-11-08",
+    "references": [
+      {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Falcon_9_first_stage_at_LZ-1%28two%29.jpg/1280px-Falcon_9_first_stage_at_LZ-1%28two%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page": "https://commons.wikimedia.org/wiki/File:Falcon_9_first_stage_at_LZ-1(two).jpg",
+        "license": "CC0",
+        "commons": "ORBCOMM-2 Falcon 9 first stage Landing Zone 1"
+      }
+    ]
+  },
+  "gen/spacex-first-falcon-9-landing-2015-two-crashes-one-explosion-orbcomm-2-x2-11082022.jpg": {
+    "article": "spacex-first-falcon-9-landing-2015-two-crashes-one-explosion-orbcomm-2",
+    "model": "gpt-image-2.5-flare",
+    "made": "2026-11-08",
+    "references": [
+      {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Falcon_9_first_stage_at_LZ-1%28two%29.jpg/1280px-Falcon_9_first_stage_at_LZ-1%28two%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page": "https://commons.wikimedia.org/wiki/File:Falcon_9_first_stage_at_LZ-1(two).jpg",
+        "license": "CC0",
+        "commons": "ORBCOMM-2 Falcon 9 first stage Landing Zone 1"
+      }
+    ]
+  },
+  "gen/spacex-first-falcon-9-landing-2015-two-crashes-one-explosion-orbcomm-2-x3-11082023.jpg": {
+    "article": "spacex-first-falcon-9-landing-2015-two-crashes-one-explosion-orbcomm-2",
+    "model": "gpt-image-2.5-flare",
+    "made": "2026-11-08",
+    "references": [
+      {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Falcon_9_first_stage_at_LZ-1%28two%29.jpg/1280px-Falcon_9_first_stage_at_LZ-1%28two%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page": "https://commons.wikimedia.org/wiki/File:Falcon_9_first_stage_at_LZ-1(two).jpg",
+        "license": "CC0",
+        "commons": "ORBCOMM-2 Falcon 9 first stage Landing Zone 1"
+      }
+    ]
   }
 }

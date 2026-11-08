@@ -22,6 +22,9 @@
     }
   ],
   "images": [
+    "gen/how-much-does-it-cost-to-send-1-kg-into-space-shuttle-falcon-9-starship.jpg",
+    "gen/how-much-does-it-cost-to-send-1-kg-into-space-shuttle-falcon-9-starship-x3-11081152.jpg",
+    "gen/how-much-does-it-cost-to-send-1-kg-into-space-shuttle-falcon-9-starship-x2-11081151.jpg",
     "lib/starship-launch.jpg",
     "lib/starship-pad.jpg",
     "spacex-6.jpg",
@@ -46,13 +49,17 @@
     "extra": [
       {
         "prompt": "A stainless steel Starship upper stage in low Earth orbit with a long slot-shaped payload door open in its side, a row of flat Starlink satellites gliding out one after another, the blue curve of the Earth and thin clouds far below, black sky, sunlight glinting on the steel and the black heat-shield tiles on its belly",
-        "describe": "Starship in orbit releasing a row of flat Starlink satellites from its payload door"
+        "describe": "Starship in orbit releasing a row of flat Starlink satellites from its payload door",
+        "file": "gen/how-much-does-it-cost-to-send-1-kg-into-space-shuttle-falcon-9-starship-x2-11081151.jpg"
       },
       {
         "prompt": "Wide calm dusk shot at Starbase: a stainless steel Super Heavy booster held high by the launch tower's two catch arms after landing, faint wisps of vapour around its engines, floodlights, the beach and grass in front, pink and blue sky, a second Starship stack standing on the launch mount nearby ready for the next flight",
-        "describe": "a caught Super Heavy booster held by the tower arms at dusk, ready to fly again"
+        "describe": "a caught Super Heavy booster held by the tower arms at dusk, ready to fly again",
+        "file": "gen/how-much-does-it-cost-to-send-1-kg-into-space-shuttle-falcon-9-starship-x3-11081152.jpg"
       }
-    ]
+    ],
+    "done": true,
+    "model": "gemini-3.1-flash-image"
   },
   "label": {
     "style": "c",
@@ -1040,5 +1047,6 @@
     ],
     "yt_title_en": "How Much Does It Cost to Launch 1 kg Into Space? Shuttle vs Falcon 9 vs Starship",
     "yt_title_nl": "Wat Kost 1 Kilo de Ruimte In? Spaceshuttle vs Falcon 9 vs Starship"
-  }
+  },
+  "image": "gen/how-much-does-it-cost-to-send-1-kg-into-space-shuttle-falcon-9-starship.jpg"
 }

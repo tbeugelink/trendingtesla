@@ -275,3 +275,6 @@ Articles with a "models" key automatically use real-life photos of that model. Y
 - gen/tesla-semi-interior-explained-center-seat-two-screens-drivers-day.jpg — inside the Tesla Semi cab at dawn: the center driver's seat between two lit touchscreens, a loading yard ahead
 - gen/tesla-semi-interior-explained-center-seat-two-screens-drivers-day-x2-11072022.jpg — the empty Tesla Semi cab at a rest area, seen from behind the center seat, standing room visible
 - gen/tesla-semi-interior-explained-center-seat-two-screens-drivers-day-x3-11072023.jpg — the Tesla Semi cab at dusk during a charging stop, Megacharger posts seen through the windshield
+- gen/how-much-does-it-cost-to-send-1-kg-into-space-shuttle-falcon-9-starship.jpg — Starship lifting off from Starbase at sunrise in a huge flame, launch tower beside it
+- gen/how-much-does-it-cost-to-send-1-kg-into-space-shuttle-falcon-9-starship-x2-11081151.jpg — Starship in orbit releasing a row of flat Starlink satellites from its payload door
+- gen/how-much-does-it-cost-to-send-1-kg-into-space-shuttle-falcon-9-starship-x3-11081152.jpg — a caught Super Heavy booster held by the tower arms at dusk, ready to fly again

@@ -2,6 +2,14 @@
 
 Every article task adds an entry here (README, "ALGORITHM RULES", Self-learning). Stats: `ops/short-signals.md`.
 
+## 2026-11-08 - spacex-first-falcon-9-landing-2015-two-crashes-one-explosion-orbcomm-2 (evening story)
+- Hooks: 0 "Two crashes. One explosion. Then it LANDED." (number) **picked** | 1 "No orbital rocket had ever landed. Until this one." (first) | 2 "Why is this rocket parked outside SpaceX's office?" (question)
+- Why 0: three numbers in the first 2 s with zero build-up, a 7-word mini story (fail, fail, success) that begs "how?"; hook_text "2 CRASHES. 1 EXPLOSION." from frame 1; the last line "Its price?" loops back into the hook.
+- Previous Short: how-much-does-it-cost-to-send-1-kg-into-space-shuttle-falcon-9-starship - no stats yet; evening before (Cybertruck) 946 views, 11.6 likes/1000; channel average stayed 55% = weakest signal vs 70% goal.
+- Weakest hook there: "Rocket fuel is the CHEAP part." - 3 words of build-up before the claim; overlays with fragments ("PRICED LIKE"), too few text seconds (William's review).
+- Why it stalled: the claim did not land at frame 1, so sound-off viewers swiped; fragment overlays left beats without a fact.
+- Change now: a number is word one, hook_text from frame 1, 2-3 full-fact pops on every beat (~90% of seconds with text), a dated beat every ~3 s as pattern interrupt (JAN 2015 / APRIL / JUNE / DEC 21 / 37 FLIGHTS), 81 words ~30 s, ending on a question the hook answers.
+
 ## 2026-11-08 - how-much-does-it-cost-to-send-1-kg-into-space-shuttle-falcon-9-starship (midday explainer)
 - Hooks: 0 "Rocket fuel is the CHEAP part." (contrast) **picked** | 1 "One kilo to space once cost 54,500 dollars." (number) | 2 "Why do rockets get thrown away after one flight?" (question)
 - Why 0: 5-word contrarian claim that sounds wrong, readable from frame 1 (label = same line), and the last line "the expensive part was never the fuel" loops back into it.

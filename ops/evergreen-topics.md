@@ -99,7 +99,7 @@ Add new ideas at the bottom at any time.
 - [ ] The EchoStar deal: how SpaceX bought its way into the phone business without building a phone
 - [ ] Run on Less 2023: the day a PepsiCo Tesla Semi drove 1,076 miles, and what the electric-truck trial showed about all the rivals
 - [x] The first Starlink launch, May 2019: 60 flat satellites stacked like a deck of cards, released without springs, after Musk fired the Redmond managers (spacex-first-starlink-launch-2019-satellites-stacked-like-deck-of-cards)
-- [ ] December 2015, Orbcomm-2: the night a Falcon 9 booster first landed back on Earth, after a string of crashes on drone ships
+- [x] December 2015, Orbcomm-2: the night a Falcon 9 booster first landed back on Earth, after a string of crashes on drone ships (spacex-first-falcon-9-landing-2015-two-crashes-one-explosion-orbcomm-2)
 - [ ] DarkSat and VisorSat: how astronomers' alarm over the first 'Starlink train' changed how SpaceX builds its satellites
 - [ ] 2021: how Germany became the first country to allow cars with nobody on board, and why so few have used it since
 - [ ] March 31, 2016: the night people queued outside Tesla stores to reserve a car they had never seen, and how the Model 3 reservations shaped the company
@@ -108,6 +108,8 @@ Add new ideas at the bottom at any time.
 - [ ] Wet Nellie: the James Bond submarine Lotus that sat forgotten in a storage unit, was sold for about $100, and ended up with Elon Musk (check the auction details)
 - [ ] Roadster 3.0: how Tesla gave 2008 sports cars a new hand-built battery in 2015, three years after the last one left the line
 - [ ] The end of the Model S and Model X: how the car that made Tesla (2012) gave its factory space to Optimus
+- [ ] CRS-7, June 2015: the steel strut that destroyed a Falcon 9, and how one cheap part grounded SpaceX for six months
+- [ ] Grasshopper: the 10-storey test rocket that hopped and hovered in Texas, and taught SpaceX how to land a booster
 
 ## Series: How did Elon Musk ...? (evening task; one per week at most, category "musk")
 
@@ -122,4 +124,4 @@ opinion, no hero worship and no bashing. Check every claim (titles are questions
 - [ ] Is Elon Musk the most successful entrepreneur of all time? Tesla, SpaceX, PayPal and the rest, compared with history
 - [ ] Why did Elon Musk buy Twitter, and what did it become?
 - [ ] Which other companies and media did Musk buy, try to buy, or only joke about buying? (check what is real; only report what really happened)
-- [ ] The first Falcon 9 landing: how SpaceX brought an orbital booster back in one piece, and why the industry had said it made no sense
+- [x] The first Falcon 9 landing: how SpaceX brought an orbital booster back in one piece, and why the industry had said it made no sense (already covered: spacex-first-falcon-9-landing-2015-two-crashes-one-explosion-orbcomm-2)

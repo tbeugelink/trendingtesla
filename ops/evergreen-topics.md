@@ -114,6 +114,9 @@ Add new ideas at the bottom at any time.
 - [ ] The end of the Model S and Model X: how the car that made Tesla (2012) gave its factory space to Optimus
 - [ ] CRS-7, June 2015: the steel strut that destroyed a Falcon 9, and how one cheap part grounded SpaceX for six months
 - [ ] Grasshopper: the 10-storey test rocket that hopped and hovered in Texas, and taught SpaceX how to land a booster
+- [x] Mr. Steven and the $6 million nose cones: how SpaceX tried to catch Falcon 9 fairings in a net, finally did in 2019, and gave the nets up in 2021 (spacex-fairing-catch-net-boat-mr-steven-6-million-nose-cone-story)
+- [ ] Bob and Doug: the drone ships and recovery fleet behind every Falcon 9 landing, from 'Of Course I Still Love You' to fairing fishing boats
+- [ ] SES-10, March 2017: the first time an orbital booster flew twice, and the fairing that came home as 'its own little spacecraft'
 
 ## Series: How did Elon Musk ...? (evening task; one per week at most, category "musk")
 

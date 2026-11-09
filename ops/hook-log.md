@@ -2,6 +2,14 @@
 
 Every article task adds an entry here (README, "ALGORITHM RULES", Self-learning). Stats: `ops/short-signals.md`.
 
+## 2026-11-09 - spacex-fairing-catch-net-boat-mr-steven-6-million-nose-cone-story (evening story)
+- Hooks: 0 "Catch six million dollars falling from space." (number) **picked** | 1 "SpaceX built a net boat. Then it threw the idea away." (contrast) | 2 "Why did SpaceX park a giant net in the ocean?" (question)
+- Why 0: one 7-word sentence (~2.3 s, no full stop pause), a dollar number plus an impossible dare on frame 1; overlay "Catch $6M falling from space." (29 chars); hook 1 gives the twist away, hook 2 starts slower. Current hook: Starship Flight 15 tries the first ship catch.
+- Previous Short: why-starship-has-33-engines-not-one-giant-engine-n1-saturn-v-explained (midday) - no stats yet; evening before 319 views, 25.1 likes/1000; channel stayed 57% remains the weakest signal.
+- Weak in previous (render report): hook beat ran 5.2 s (two sentences with spoken numbers), beats 4/5/7 only 1.9-2.2 s, repeated-hook end beat 5.3 s, beat 2 one photo for 3.4 s, contrast bands in 6 of 10 beats (flame/explosion photos), loop repeated the hook word for word.
+- Change now: hook = one 7-word sentence; every beat one sentence of 7-10 words (est. 2.7-3.8 s); 2 pictures in every beat over 3 s; sea/boat/fairing pictures instead of flames (fewer bands); v4 smart loop.
+- Loop: last line "Next: a whole Starship. And it all began with this:" ends on a colon that the restart completes -> "...it all began with this: Catch six million dollars falling from space."
+
 ## 2026-11-09 - why-starship-has-33-engines-not-one-giant-engine-n1-saturn-v-explained (midday explainer)
 - Hooks: 0 "30 engines doomed the Soviet Moon rocket. SpaceX uses 33." (contrast) **picked** | 1 "Why does Starship need 33 engines and not one?" (question) | 2 "One engine fails, and the rocket is gone." (consequence)
 - Why 0: two rivals and two numbers in the first 7 words; overlay "30 engines failed. SpaceX uses 33." (34 chars) stands whole from frame 1; the Short pays it off (never test-fired together vs all 33 fired on the pad); topic answers a viewer question from ops/scout-tesla.md ("one massive engine instead of 33?") with Flight 15 as the current hook.

@@ -47,7 +47,7 @@ export class Likes extends DurableObject {
 }
 
 const json = (data, status = 200) =>
-  new Response(JSON.stringify(data), { status, headers: { "content-type": "application/json", "cache-control": "no-store" } });
+  new Response(JSON.stringify(data), { status, headers: { "content-type": "application/json", "cache-control": "no-store", "x-robots-tag": "noindex" } });
 
 const clean = (s, n) => String(s || "").replace(/\r/g, "").slice(0, n).trim();
 const oneLine = (s) => s.replace(/[\n\t]+/g, " ");

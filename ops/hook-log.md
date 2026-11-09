@@ -2,6 +2,15 @@
 
 Every article task adds an entry here (README, "ALGORITHM RULES", Self-learning). Stats: `ops/short-signals.md`.
 
+## 2026-11-09 - why-starship-has-33-engines-not-one-giant-engine-n1-saturn-v-explained (midday explainer)
+- Hooks: 0 "30 engines doomed the Soviet Moon rocket. SpaceX uses 33." (contrast) **picked** | 1 "Why does Starship need 33 engines and not one?" (question) | 2 "One engine fails, and the rocket is gone." (consequence)
+- Why 0: two rivals and two numbers in the first 7 words; overlay "30 engines failed. SpaceX uses 33." (34 chars) stands whole from frame 1; the Short pays it off (never test-fired together vs all 33 fired on the pad); topic answers a viewer question from ops/scout-tesla.md ("one massive engine instead of 33?") with Flight 15 as the current hook.
+- Previous Short: spacex-first-falcon-9-landing-2015-two-crashes-one-explosion-orbcomm-2 - 319 views, 25.1 likes/1000, stayed/watched not reported yet; midday before (rocket fuel) 1,023 views. Channel average stayed 57% = weakest signal vs 70% goal. No short report in ops/short-reports/ yet.
+- Weakest hook there: "Two crashes. One explosion. Then it LANDED." - numbers but no subject named, and 2-3 flashing key-word pops per beat instead of one stable sentence (pre-v3 format).
+- Why it stalled: sound-off viewers saw fragments without knowing the story's subject, so the 3 s swipe test was lost.
+- Change now: first Short fully in SHORT FORMAT v3.1: one overlay sentence per beat (all <= 35 chars, max 2 lines), hook names both subjects, contrast type (rotating from number), 10 beats of 2.7-3.8 s (85 words, ~33 s), 2 pictures in every beat over 3 s, last beat repeats hook text and overlay exactly.
+- Long video, first 20 s: opens on the same contrast claim plus an explicit open loop ("it is not the number of engines... the answer is a test the Soviets never did"), paid off in the last block; the previous long video opened with a contrarian claim but its loop was only implied.
+
 ## 2026-11-08 - spacex-first-falcon-9-landing-2015-two-crashes-one-explosion-orbcomm-2 (evening story)
 - Hooks: 0 "Two crashes. One explosion. Then it LANDED." (number) **picked** | 1 "No orbital rocket had ever landed. Until this one." (first) | 2 "Why is this rocket parked outside SpaceX's office?" (question)
 - Why 0: three numbers in the first 2 s with zero build-up, a 7-word mini story (fail, fail, success) that begs "how?"; hook_text "2 CRASHES. 1 EXPLOSION." from frame 1; the last line "Its price?" loops back into the hook.

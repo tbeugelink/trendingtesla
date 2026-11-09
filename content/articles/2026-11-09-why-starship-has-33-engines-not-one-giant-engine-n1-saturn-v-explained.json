@@ -1,0 +1,1352 @@
+{
+  "slug": "why-starship-has-33-engines-not-one-giant-engine-n1-saturn-v-explained",
+  "date": "2026-11-09",
+  "time": "12:46",
+  "category": "spacex",
+  "sources": [
+    {
+      "title": "Wikipedia — SpaceX Super Heavy",
+      "url": "https://en.wikipedia.org/wiki/SpaceX_Super_Heavy"
+    },
+    {
+      "title": "Wikipedia — N1 (rocket)",
+      "url": "https://en.wikipedia.org/wiki/N1_(rocket)"
+    },
+    {
+      "title": "NASA — Solving Combustion Instability and Saving America's First Trips to the Moon",
+      "url": "https://www.nasa.gov/history/solving-combustion-instability-and-saving-americas-first-trips-to-the-moon"
+    },
+    {
+      "title": "Space.com — Starship met 'every major objective' on Flight 10, SpaceX says",
+      "url": "https://www.space.com/space-exploration/launches-spacecraft/starship-mars-rocket-met-every-major-objective-on-epic-flight-10-launch-spacex-says"
+    }
+  ],
+  "images": [
+    "lib/starship-booster-catch.jpg",
+    "lib/starship-launch.jpg",
+    "lib/starship-pad.jpg",
+    "spacex-7.jpg",
+    "spacex-3.jpg"
+  ],
+  "gen_image": {
+    "prompt": "Dramatic close low-angle shot looking up at the base of a SpaceX Super Heavy booster just after ignition on the launch mount at Starbase: the round stainless steel underside filling the middle of the frame, 33 bright engine flames in three rings (3 in the centre, 10 around them, 20 in the outer ring) blasting downward into billowing white steam, the soot-streaked steel skirt above them lit orange by the fire, the steel launch tower edge at one side, calm darker area in the lower left",
+    "subject": "SpaceX Super Heavy booster: a plain cylindrical stainless steel rocket stage about 9 m wide; at its base 33 Raptor engines in three concentric groups (3 centre, 10 inner ring, 20 outer ring), compact engines with bell nozzles close together; no landing legs; small grid fins near its top; it stands on a circular launch mount next to a tall square steel lattice launch tower with two big catch arms",
+    "refs": [
+      {
+        "src": "lib/starship-booster-catch.jpg"
+      },
+      {
+        "src": "lib/starship-launch.jpg"
+      }
+    ],
+    "profile": "cinematic",
+    "category": "B",
+    "describe": "the base of a Super Heavy booster with its 33 engines firing into steam at Starbase",
+    "extra": [
+      {
+        "prompt": "A clean rocket engine factory hall with a long row of identical compact SpaceX Raptor engines on stands, shiny metal pipes and bell nozzles, bright even light, a worker in the far background for scale, production-line feel",
+        "describe": "a row of identical Raptor rocket engines on a production line"
+      },
+      {
+        "prompt": "Night static fire at Starbase seen from the beach: a stainless steel Super Heavy booster held down on the launch mount with all its engines firing, a huge wall of glowing steam rolling sideways, floodlit launch tower beside it, stars above",
+        "describe": "a Super Heavy booster firing all 33 engines on the pad in a static fire at night"
+      }
+    ]
+  },
+  "label": {
+    "style": "c",
+    "en": {
+      "sub": "30 ENGINES FAILED.",
+      "text": "SPACEX USES 33"
+    },
+    "nl": {
+      "sub": "30 MOTOREN FAALDEN.",
+      "text": "SPACEX: 33"
+    }
+  },
+  "en": {
+    "title": "Why Does Starship Have 33 Engines Instead of One Giant One?",
+    "description": "The Soviet N1 failed with 30 engines and Apollo's giant F-1 took years to tame. Here is why SpaceX's Super Heavy uses 33 Raptors, and why it works where the N1 did not.",
+    "body": "<p>The Soviet Union put 30 engines under its Moon rocket, and all four launches failed. SpaceX puts 33 under Starship's Super Heavy booster, and its 15th test flight is even meant to end with both stages caught by the launch tower. Same idea on paper, a very different result. Super Heavy's 33 Raptor 3 engines can push with about 80.8 meganewtons, almost twice the N1's 45.4. More engines also mean more pumps, valves and pipes that can break, and that is exactly the trap that brought the N1 down.</p>\n<h2>Why not build one giant engine instead?</h2>\n<p><strong>Because a single giant engine is slow to develop, cannot throttle down far enough to land, and turns any failure into the end of the flight.</strong> The best example is Apollo's Rocketdyne F-1, built to push with about 1.5 million pounds of force when typical engines of the era managed around 160,000. Its bigger problem was combustion instability: pressure waves inside the chamber that could, as one NASA engineer put it, burn through the hardware in milliseconds. Engineers spent more than three years on it, even setting off small bombs inside running engines to provoke the shaking, until copper baffles on the injector plate tamed it. From 1967 to 1973, 65 F-1s flew on 13 Saturn V rockets without that problem returning.</p>\n<p>Landing adds a second reason. A booster coming home is almost empty and very light, so it needs only a small fraction of its launch thrust. A rocket with one huge engine cannot gently hover; a rocket with 33 small ones simply lights fewer of them. Super Heavy ends its flight on just the three centre engines.</p>\n<p>Many engines are clearly not a guarantee of success either. The Soviets showed how badly a big cluster can go wrong.</p>\n<h2>So why did the Soviet N1 fail with 30 engines?</h2>\n<p><strong>Not because 30 is too many, but because the cluster was never fired as a whole on the ground and one failure could cascade through the rest.</strong> The N1's first stage had 30 NK-15 engines, 24 in an outer ring and 6 in the middle. A control system called KORD steered it by throttling engines and shut down the opposite engine whenever one failed, to keep the thrust balanced.</p>\n<ul>\n<li><strong>February 1969:</strong> a fire was misread as a pump problem, and KORD shut down the whole first stage after 68 seconds.</li>\n<li><strong>July 1969:</strong> a turbopump exploded just after liftoff; the blast cut propellant lines and the rocket fell back onto its pad.</li>\n<li><strong>June 1971:</strong> an uncontrolled roll grew beyond what the steering could correct, and the rocket broke apart after 48 seconds.</li>\n<li><strong>November 1972:</strong> after the six centre engines were switched off at 90 seconds, a pressure shock burst feed lines, a fire started and one engine exploded.</li>\n</ul>\n<p>Every one of those problems could have shown up in a full-stage test firing, which the 30-engine stage never got. SpaceX had to solve the same problems, just in a different order.</p>\n<h2>How does Super Heavy keep 33 engines under control?</h2>\n<p><strong>By testing the whole cluster on the ground, isolating each engine and letting software decide which engines to use when.</strong> Before a booster flies, SpaceX normally lights all 33 engines at once on the launch mount in a static fire, the step the N1 skipped. The engines sit in two groups: 20 fixed engines in an outer ring and 13 in the middle that can swivel to steer. Shielding between engines is meant to stop one engine's failure from spreading to its neighbours.</p>\n<p>With the Raptor 3, every engine can be relit in flight, and all of them restart for the boostback burn that sends the booster home. For landing, the inner 13 light up and then all but the centre three shut down again. In August 2025, during Flight 10, SpaceX switched off one of those three centre engines on purpose; a spare from the middle ring took its place and the booster still made its planned hover over the Gulf of Mexico.</p>\n<p>Redundancy only counts if the rocket can actually lose an engine in a real flight and keep going.</p>\n<h2>What happens when a Raptor fails in flight?</h2>\n<p><strong>Often the rocket carries on, as long as the failure stays contained and enough engines are left for the job.</strong> On Flight 14 in September 2026, one of the six engines on the upper stage shut down during the climb. Flight controllers checked that enough hardware was left for the later deorbit burn, approved a short extra burn, and Starship reached orbit for the first time with 26 Starlink V3 satellites on board. A single-engine stage would simply have fallen short.</p>\n<p>It is not magic, though. Super Heavy boosters have been lost during test flights, including one where a blocked oxygen filter led to an engine failure. Redundancy buys margin; it does not replace good engines. The real argument for 33 small engines turns out to be about building them, not just about surviving with them.</p>\n<h2>Why do small engines suit a reusable rocket?</h2>\n<p><strong>Because an engine you build by the hundreds gets cheaper, better and easier to replace with every unit.</strong> Each Starship stack needs more than 30 engines, so SpaceX builds Raptors like a production line, not like museum pieces. The improvement shows: the first Raptor pushed about 185 tonnes of force at 2,080 kg, the Raptor 3 about 280 tonnes at 1,525 kg. A faulty engine can be swapped on its own, and the same engine family, in a sea-level and a vacuum version, powers both the booster and the ship.</p>\n<p>Tesla fans will recognise the logic. Tesla builds its battery packs from thousands of small cylindrical cells rather than a few giant ones, for much the same reasons: mass production, consistent quality and a pack that tolerates one weak cell. With the Tesla-SpaceX merger talks, the two companies' habit of solving big problems with many small, identical parts is more than a coincidence of style.</p>\n<p>Those principles are now being tested on the hardest goal yet, catching both halves of the rocket.</p>\n<h2>What does this mean for the next Starship flights?</h2>\n<p><strong>The engine count is no longer the open question; reliability over many reuses is.</strong> Flight 15 was planned for no earlier than 13 November 2026 with Booster 22 and Ship 42, and both stages were meant to be caught by the tower, a first. For a catch, the booster has to restart its engines twice and the ship has to relight its engines after hours in orbit. Every restart is another chance for one engine to misbehave, and another chance for the other engines to cover for it.</p>\n<p>The lesson from half a century of big rockets is simple. The N1 did not fail because it had 30 engines. It failed because those 30 engines had never been tested together. Super Heavy fires all 33 on the ground before it flies, and that, more than the number itself, is the difference.</p>"
+  },
+  "nl": {
+    "title": "Waarom heeft Starship 33 motoren in plaats van één gigantische?",
+    "description": "De Sovjet-N1 faalde met 30 motoren en Apollo's reuzenmotor F-1 was jarenlang onhandelbaar. Zo zit het met de 33 Raptors van Super Heavy, en waarom het nu wel werkt.",
+    "body": "<p>De Sovjet-Unie zette 30 motoren onder haar maanraket, en alle vier de lanceringen mislukten. SpaceX zet er 33 onder de Super Heavy-booster van Starship, en de vijftiende testvlucht moet zelfs eindigen met beide trappen gevangen door de lanceertoren. Op papier hetzelfde idee, in de praktijk een heel ander resultaat. De 33 Raptor 3-motoren van Super Heavy duwen samen met zo'n 80,8 meganewton, bijna twee keer de 45,4 van de N1. Maar meer motoren betekent ook meer pompen, kleppen en leidingen die kapot kunnen gaan, en precies in die val trapte de N1.</p>\n<h2>Waarom bouw je niet gewoon één gigantische motor?</h2>\n<p><strong>Omdat één reuzenmotor traag te ontwikkelen is, niet ver genoeg kan terugschakelen om te landen, en elke storing meteen het einde van de vlucht betekent.</strong> Het beste voorbeeld is de F-1 van Rocketdyne uit het Apollo-programma, gebouwd voor zo'n 1,5 miljoen pond stuwkracht, terwijl gewone motoren uit die tijd rond de 160.000 bleven steken. Het grootste probleem was verbrandingsinstabiliteit: drukgolven in de verbrandingskamer die volgens een NASA-ingenieur de motor binnen milliseconden konden doorbranden. Ingenieurs zochten er meer dan drie jaar op, en lieten zelfs kleine bommetjes ontploffen in draaiende motoren om het trillen uit te lokken, tot koperen schotten op de injectorplaat het oplosten. Van 1967 tot 1973 vlogen 65 F-1's op 13 Saturnus V-raketten zonder dat het probleem terugkwam.</p>\n<p>Landen is de tweede reden. Een booster die terugkomt is bijna leeg en heel licht, dus heeft hij maar een klein deel van zijn startkracht nodig. Een raket met één enorme motor kan niet rustig zweven; een raket met 33 kleine motoren steekt er gewoon minder aan. Super Heavy landt uiteindelijk op alleen de drie middelste motoren.</p>\n<p>Veel motoren zijn natuurlijk ook geen garantie op succes. De Sovjets lieten zien hoe erg een grote bundel motoren mis kan gaan.</p>\n<h2>Dus waarom faalde de Sovjet-N1 met 30 motoren?</h2>\n<p><strong>Niet omdat 30 te veel is, maar omdat de bundel nooit als geheel op de grond is getest en één storing door de rest kon razen.</strong> De eerste trap van de N1 had 30 NK-15-motoren: 24 in een buitenring en 6 in het midden. Een besturingssysteem met de naam KORD stuurde door motoren harder of zachter te zetten, en schakelde bij een storing de tegenoverliggende motor uit om de stuwkracht in balans te houden.</p>\n<ul>\n<li><strong>Februari 1969:</strong> een brand werd aangezien voor een pompprobleem, en KORD zette na 68 seconden de hele eerste trap uit.</li>\n<li><strong>Juli 1969:</strong> vlak na de start ontplofte een turbopomp; de klap sneed brandstofleidingen door en de raket viel terug op het platform.</li>\n<li><strong>Juni 1971:</strong> een ongecontroleerde rolbeweging werd groter dan de besturing aankon, en na 48 seconden brak de raket in stukken.</li>\n<li><strong>November 1972:</strong> nadat de zes middelste motoren na 90 seconden waren uitgezet, liet een drukgolf toevoerleidingen barsten, ontstond er brand en ontplofte een motor.</li>\n</ul>\n<p>Al die problemen hadden kunnen opduiken bij een testvuring van de complete trap, maar die heeft de trap met 30 motoren nooit gehad. SpaceX moest dezelfde problemen oplossen, alleen in een andere volgorde.</p>\n<h2>Hoe houdt Super Heavy 33 motoren onder controle?</h2>\n<p><strong>Door de hele bundel op de grond te testen, elke motor af te schermen en software te laten bepalen welke motoren wanneer branden.</strong> Voordat een booster vliegt, laat SpaceX normaal gesproken alle 33 motoren tegelijk branden op het lanceerplatform, een zogeheten static fire: precies de stap die de N1 oversloeg. De motoren zitten in twee groepen: 20 vaste motoren in een buitenring en 13 in het midden die kunnen kantelen om te sturen. Schermen tussen de motoren moeten voorkomen dat een kapotte motor zijn buren meesleurt.</p>\n<p>Met de Raptor 3 kan elke motor in de vlucht opnieuw ontsteken, en ze starten allemaal opnieuw voor de boostback-burn die de booster terugstuurt. Voor de landing gaan de binnenste 13 aan, waarna alle motoren behalve de middelste drie weer uitgaan. In augustus 2025, tijdens vlucht 10, zette SpaceX met opzet een van die drie middelste motoren uit; een reservemotor uit de middelste ring nam het over en de booster bleef gewoon zweven boven de Golf van Mexico, zoals gepland.</p>\n<p>Reserve telt alleen als een raket in een echte vlucht ook echt een motor kan verliezen en doorvliegen.</p>\n<h2>Wat gebeurt er als een Raptor uitvalt tijdens de vlucht?</h2>\n<p><strong>Vaak vliegt de raket gewoon door, zolang de storing beperkt blijft en er genoeg motoren over zijn voor de klus.</strong> Bij vlucht 14 in september 2026 viel tijdens de klim een van de zes motoren van de bovenste trap uit. De vluchtleiding controleerde of er genoeg over was voor de latere remstoot, gaf toestemming voor een korte extra brandperiode, en Starship bereikte voor het eerst een baan om de aarde, met 26 Starlink V3-satellieten aan boord. Een trap met één motor was gewoon tekortgekomen.</p>\n<p>Toverkunst is het niet. Super Heavy-boosters zijn tijdens testvluchten verloren gegaan, onder meer één keer doordat een verstopt zuurstoffilter een motor liet uitvallen. Reserve geeft marge, maar vervangt geen goede motoren. Het echte argument voor 33 kleine motoren gaat dan ook over het bouwen ervan, niet alleen over het overleven.</p>\n<h2>Waarom passen kleine motoren zo goed bij een herbruikbare raket?</h2>\n<p><strong>Omdat een motor die je bij honderden bouwt met elk exemplaar goedkoper, beter en makkelijker te vervangen wordt.</strong> Elke Starship heeft meer dan 30 motoren nodig, dus bouwt SpaceX Raptors aan de lopende band in plaats van als museumstukken. Dat zie je terug: de eerste Raptor leverde zo'n 185 ton stuwkracht bij 2080 kilo, de Raptor 3 zo'n 280 ton bij 1525 kilo. Een slechte motor kun je los vervangen, en dezelfde motorfamilie, in een versie voor op zeeniveau en een voor het vacuüm, drijft zowel de booster als het schip aan.</p>\n<p>Tesla-fans herkennen die logica. Tesla bouwt zijn accupakketten uit duizenden kleine cilindervormige cellen in plaats van een paar enorme, om ongeveer dezelfde redenen: massaproductie, constante kwaliteit en een pakket dat tegen één zwakke cel kan. Met de fusiegesprekken tussen Tesla en SpaceX is die gewoonte om grote problemen op te lossen met veel kleine, identieke onderdelen meer dan toeval.</p>\n<p>Die principes worden nu getest op het moeilijkste doel tot nu toe: beide helften van de raket opvangen.</p>\n<h2>Wat betekent dit voor de volgende Starship-vluchten?</h2>\n<p><strong>Het aantal motoren is geen open vraag meer; de betrouwbaarheid na vele keren hergebruik wel.</strong> Vlucht 15 stond gepland voor op zijn vroegst 13 november 2026, met Booster 22 en Ship 42, en voor het eerst moesten beide trappen door de toren worden gevangen. Voor zo'n vangst moet de booster zijn motoren twee keer opnieuw starten en moet het schip na uren in de ruimte opnieuw ontsteken. Elke herstart is een nieuwe kans dat één motor gaat haperen, en een nieuwe kans voor de andere motoren om dat op te vangen.</p>\n<p>De les van een halve eeuw grote raketten is eenvoudig. De N1 faalde niet omdat hij 30 motoren had. Hij faalde omdat die 30 motoren nooit samen waren getest. Super Heavy laat alle 33 eerst op de grond branden voordat hij vliegt, en dat is, meer dan het aantal zelf, het verschil.</p>"
+  },
+  "short": {
+    "hook": "contrast",
+    "yt_title_en": "30 Engines Failed. SpaceX Uses 33.",
+    "yt_title_nl": "30 Motoren Faalden. SpaceX Gebruikt Er 33.",
+    "hooks": [
+      {
+        "text": "30 engines doomed the Soviet Moon rocket. SpaceX uses 33.",
+        "type": "contrast"
+      },
+      {
+        "text": "Why does Starship need 33 engines and not one?",
+        "type": "question"
+      },
+      {
+        "text": "One engine fails, and the rocket is gone.",
+        "type": "consequence"
+      }
+    ],
+    "hook_pick": {
+      "index": 0,
+      "why": "two numbers and two rivals in the first 7 words (Soviet 30 vs SpaceX 33), a clash nobody can leave unresolved; the overlay (34 characters) stands whole from frame 1, and it is the only hook the Short fully pays off (untested cluster vs fired-on-the-pad)"
+    },
+    "story": [
+      {
+        "part": "hook",
+        "t": "0-3.8s",
+        "text": "30 engines doomed the Soviet Moon rocket. SpaceX uses 33.",
+        "overlay": "30 engines failed. SpaceX uses 33.",
+        "lib": [
+          "starship-booster-catch.jpg",
+          "starship-launch.jpg"
+        ],
+        "visual": "Super Heavy hovering on its engine flames, hard punch-in; cut to Starship lifting off on '33'. Only the hook sentence on screen"
+      },
+      {
+        "part": "tension",
+        "t": "3.8-7.3s",
+        "text": "The N1 flew four times. It failed four times.",
+        "overlay": "N1: 4 launches, 4 failures",
+        "photo": [
+          {
+            "q": [
+              "N1 rocket",
+              "Soviet N1 moon rocket",
+              "N1 rocket launch pad Baikonur"
+            ],
+            "want": "the Soviet N1 Moon rocket, a tall cone-shaped rocket"
+          },
+          {
+            "q": [
+              "N1 rocket first stage engines",
+              "N1 L3 rocket",
+              "N1 rocket rollout"
+            ],
+            "want": "the Soviet N1 rocket or its engine-packed first stage"
+          }
+        ],
+        "visual": "the Soviet N1 on its pad, then its engine-packed base; fast cut on 'failed'"
+      },
+      {
+        "part": "tension",
+        "t": "7.3-10.8s",
+        "text": "Its 30 engines never fired together on the ground.",
+        "overlay": "Never test-fired all 30 together",
+        "photo": [
+          {
+            "q": [
+              "NK-33 rocket engine",
+              "NK-15 engine",
+              "Kuznetsov NK-33"
+            ],
+            "want": "a Soviet NK-series rocket engine of the N1"
+          },
+          {
+            "q": [
+              "N1 rocket first stage engines",
+              "N1 L3 rocket",
+              "N1 rocket rollout"
+            ],
+            "want": "the Soviet N1 rocket or its engine-packed first stage"
+          }
+        ],
+        "visual": "close-up of a Soviet NK engine, then the N1 first stage; slow push-in"
+      },
+      {
+        "part": "tension",
+        "t": "10.8-13.9s",
+        "text": "One engine failed, the rest went with it.",
+        "overlay": "One failed, the rest went with it",
+        "photo": [
+          {
+            "q": [
+              "N1 rocket",
+              "Soviet N1 moon rocket",
+              "N1 rocket launch pad Baikonur"
+            ],
+            "want": "the Soviet N1 Moon rocket, a tall cone-shaped rocket"
+          },
+          {
+            "q": [
+              "NK-33 rocket engine",
+              "NK-15 engine",
+              "Kuznetsov NK-33"
+            ],
+            "want": "a Soviet NK-series rocket engine of the N1"
+          }
+        ],
+        "visual": "N1 rocket wide, then engine detail; quick zoom out as a pattern interrupt"
+      },
+      {
+        "part": "tension",
+        "t": "13.9-16.6s",
+        "text": "So why not just one giant engine?",
+        "overlay": "So why not ONE giant engine?",
+        "photo": [
+          {
+            "q": [
+              "Rocketdyne F-1 engine",
+              "F-1 rocket engine display",
+              "Saturn V F-1 engine"
+            ],
+            "want": "the giant Rocketdyne F-1 engine of the Saturn V"
+          }
+        ],
+        "visual": "a giant F-1 engine bell filling the frame, a person-sized scale; push-in"
+      },
+      {
+        "part": "tension",
+        "t": "16.6-19.7s",
+        "text": "Apollo's F-1 took over 3 years to tame.",
+        "overlay": "F-1: 3+ years to stop shaking apart",
+        "photo": [
+          {
+            "q": [
+              "F-1 engine test firing",
+              "Rocketdyne F-1 static test",
+              "F-1 engine test stand Edwards"
+            ],
+            "want": "an F-1 rocket engine firing on a test stand"
+          },
+          {
+            "q": [
+              "Saturn V launch",
+              "Apollo 11 Saturn V liftoff",
+              "Saturn V rocket launch"
+            ],
+            "want": "a Saturn V rocket lifting off"
+          }
+        ],
+        "visual": "F-1 firing on a test stand, then a Saturn V lifting off; shake on the firing"
+      },
+      {
+        "part": "tension",
+        "t": "19.7-22.4s",
+        "text": "One engine fails? The flight is over.",
+        "overlay": "One engine fails? Flight over.",
+        "photo": [
+          {
+            "q": [
+              "Saturn V first stage engines",
+              "Saturn V S-IC stage engines",
+              "S-IC stage F-1 engines"
+            ],
+            "want": "the five F-1 engines at the base of a Saturn V first stage"
+          },
+          {
+            "q": [
+              "Rocketdyne F-1 engine",
+              "F-1 rocket engine display",
+              "Saturn V F-1 engine"
+            ],
+            "want": "the giant Rocketdyne F-1 engine of the Saturn V"
+          }
+        ],
+        "visual": "the base of a Saturn V first stage, then a single engine bell; slow tilt"
+      },
+      {
+        "part": "payoff",
+        "t": "22.4-25.5s",
+        "text": "Starship fires all 33 on the pad first.",
+        "overlay": "All 33 fired on the pad first",
+        "lib": [
+          "starship-pad.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Super Heavy static fire",
+              "Starship booster static fire Starbase",
+              "SpaceX Super Heavy booster test"
+            ],
+            "want": "a Super Heavy booster firing its engines at Starbase"
+          }
+        ],
+        "visual": "the full stack floodlit on the pad, then a booster static fire in a wall of steam"
+      },
+      {
+        "part": "payoff",
+        "t": "25.5-29s",
+        "text": "Flight 14 lost an engine. It made orbit anyway.",
+        "overlay": "Lost an engine. Made orbit anyway.",
+        "lib": [
+          "starship-launch.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Starship flight test",
+              "Starship ship in flight",
+              "SpaceX Starship launch"
+            ],
+            "want": "SpaceX Starship flying"
+          }
+        ],
+        "visual": "Starship climbing on its flame, then the ship high in flight; push-in"
+      },
+      {
+        "part": "payoff",
+        "t": "29-32.8s",
+        "text": "30 engines doomed the Soviet Moon rocket. SpaceX uses 33.",
+        "overlay": "30 engines failed. SpaceX uses 33.",
+        "lib": [
+          "starship-booster-catch.jpg",
+          "starship-launch.jpg"
+        ],
+        "visual": "the same opening shots as beat 1, so the Short loops seamlessly"
+      }
+    ],
+    "signals": "Stayed %: the subject (Moon rocket vs SpaceX) and two numbers land in the first 2 s, as ONE permanent 34-character sentence instead of the flashing hook_text+pops of the previous Short. Watched %/loops: 85 words (~33 s), 10 beats of 2.5-4 s, every beat a full-sentence overlay (100% of seconds with text), a 2-picture cut in every beat over 3 s, and the last beat repeats the hook exactly so the replay is seamless.",
+    "learning": {
+      "prev": "spacex-first-falcon-9-landing-2015-two-crashes-one-explosion-orbcomm-2",
+      "prev_stats": "319 views, 25.1 likes/1000, stayed/watched not reported yet (IdMtFvim8Gw, 8 Nov evening); midday before it (Rocket fuel is the CHEAP part): 1,023 views, 13.7 likes/1000. Channel average stayed 57% (weakest signal vs the 70% goal), watched 71%, length 56 s",
+      "weakest_hook": "\"Two crashes. One explosion. Then it LANDED.\" - strong numbers but no subject named (which rocket? whose crashes?), and the text came as 2-3 flashing key-word pops per beat instead of one stable sentence; no short report exists yet",
+      "why_stalled": "lowest early views of the week: sound-off viewers saw changing fragments without knowing what the story was about, so the 3 s swipe test was lost; William rewrote it into the v3 model (one sentence per beat, hook repeated at the end)",
+      "change": "first Short fully in SHORT FORMAT v3.1: the hook names both subjects plus two numbers (contrast type, rotating from number), one permanent overlay sentence of max 35 characters per beat, every beat 2.5-4 s with 2 pictures when over 3 s, and the last beat repeats the hook word for word for the loop"
+    },
+    "en": "30 engines doomed the Soviet Moon rocket. SpaceX uses 33. The N1 flew four times. It failed four times. Its 30 engines never fired together on the ground. One engine failed, the rest went with it. So why not just one giant engine? Apollo's F-1 took over 3 years to tame. One engine fails? The flight is over. Starship fires all 33 on the pad first. Flight 14 lost an engine. It made orbit anyway. 30 engines doomed the Soviet Moon rocket. SpaceX uses 33.",
+    "nl": "30 motoren lieten de Sovjet-maanraket falen. SpaceX gebruikt er 33. De N1 vloog vier keer. Hij faalde vier keer. Die 30 motoren hebben nooit samen op de grond gebrand. Eén motor viel uit, de rest ging mee. Waarom dan niet één gigantische motor? Apollo's F-1 had ruim 3 jaar nodig om te temmen. Eén motor faalt? Dan is de vlucht voorbij. Starship laat alle 33 eerst op het platform branden. Vlucht 14 verloor een motor. En haalde toch een baan om de aarde. 30 motoren lieten de Sovjet-maanraket falen. SpaceX gebruikt er 33."
+  },
+  "video": {
+    "en": [
+      {
+        "text": "30 engines doomed the Soviet Moon rocket. Four launches, four failures. SpaceX now puts 33 engines under one booster, and it flies. Same idea on paper. So what is the difference? It is not the number of engines. Hold on to that, because the real answer comes from a test the Soviets never did.",
+        "img": [
+          "lib/starship-booster-catch.jpg",
+          "lib/starship-launch.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "N1 rocket",
+              "Soviet N1 moon rocket",
+              "N1 rocket launch pad Baikonur"
+            ],
+            "want": "the Soviet N1 Moon rocket, a tall cone-shaped rocket"
+          },
+          {
+            "q": [
+              "N1 rocket first stage engines",
+              "N1 L3 rocket",
+              "N1 rocket rollout"
+            ],
+            "want": "the Soviet N1 rocket or its engine-packed first stage"
+          }
+        ]
+      },
+      {
+        "text": "Super Heavy, the booster under Starship, carries 33 Raptor 3 engines. Together they push with about 80.8 meganewtons. The Soviet N1 managed 45.4. So SpaceX has almost twice the power, from just three more engines. But every engine is a pump, a set of valves and a nest of pipes that can break. More engines, more things to go wrong.",
+        "img": [
+          "lib/starship-pad.jpg",
+          "spacex-7.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "SpaceX Raptor engine",
+              "Raptor rocket engine",
+              "Raptor 2 engine"
+            ],
+            "want": "a SpaceX Raptor rocket engine"
+          },
+          {
+            "q": [
+              "Super Heavy static fire",
+              "Starship booster static fire Starbase",
+              "SpaceX Super Heavy booster test"
+            ],
+            "want": "a Super Heavy booster firing its engines at Starbase"
+          }
+        ]
+      },
+      {
+        "head": "Why not build one giant engine instead?",
+        "pop": [
+          {
+            "say": "",
+            "show": "WHY NOT ONE?"
+          }
+        ],
+        "img": [
+          "gen/why-starship-has-33-engines-not-one-giant-engine-n1-saturn-v-explained.jpg"
+        ]
+      },
+      {
+        "text": "Because a giant engine is slow to build, hard to land with, and one failure ends the flight. Look at Apollo. The Saturn V's F-1 engine was built for 1.5 million pounds of force. Typical engines back then did around 160 thousand. Ten times bigger. And ten times bigger brought a nasty problem.",
+        "photo": [
+          {
+            "q": [
+              "Rocketdyne F-1 engine",
+              "F-1 rocket engine display",
+              "Saturn V F-1 engine"
+            ],
+            "want": "the giant Rocketdyne F-1 engine of the Saturn V"
+          },
+          {
+            "q": [
+              "Saturn V launch",
+              "Apollo 11 Saturn V liftoff",
+              "Saturn V rocket launch"
+            ],
+            "want": "a Saturn V rocket lifting off"
+          },
+          {
+            "q": [
+              "Saturn V first stage engines",
+              "Saturn V S-IC stage engines",
+              "S-IC stage F-1 engines"
+            ],
+            "want": "the five F-1 engines at the base of a Saturn V first stage"
+          }
+        ]
+      },
+      {
+        "text": "It was called combustion instability. Pressure waves inside the chamber made the engine shake, and a NASA engineer said it could burn through the hardware in milliseconds. The fix took more than 3 years. Engineers even set off small bombs inside running engines, on purpose, to see if the shaking would die down. Copper baffles on the injector plate finally tamed it. After that, 65 F-1 engines flew on 13 Saturn Vs without the problem coming back.",
+        "photo": [
+          {
+            "q": [
+              "F-1 engine test firing",
+              "Rocketdyne F-1 static test",
+              "F-1 engine test stand Edwards"
+            ],
+            "want": "an F-1 rocket engine firing on a test stand"
+          },
+          {
+            "q": [
+              "Rocketdyne F-1 engine",
+              "F-1 rocket engine display",
+              "Saturn V F-1 engine"
+            ],
+            "want": "the giant Rocketdyne F-1 engine of the Saturn V"
+          },
+          {
+            "q": [
+              "Saturn V launch",
+              "Apollo 11 Saturn V liftoff",
+              "Saturn V rocket launch"
+            ],
+            "want": "a Saturn V rocket lifting off"
+          }
+        ]
+      },
+      {
+        "text": "Then there is landing. A booster coming home is almost empty. It needs only a tiny part of its launch thrust. One huge engine cannot throttle down that far. 33 small ones can simply switch most of themselves off. Super Heavy lands on just its 3 centre engines.",
+        "img": [
+          "lib/starship-booster-catch.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Super Heavy static fire",
+              "Starship booster static fire Starbase",
+              "SpaceX Super Heavy booster test"
+            ],
+            "want": "a Super Heavy booster firing its engines at Starbase"
+          }
+        ]
+      },
+      {
+        "text": "So small engines win. Except the Soviets used 30 of them, and it went badly wrong.",
+        "photo": [
+          {
+            "q": [
+              "N1 rocket",
+              "Soviet N1 moon rocket",
+              "N1 rocket launch pad Baikonur"
+            ],
+            "want": "the Soviet N1 Moon rocket, a tall cone-shaped rocket"
+          }
+        ]
+      },
+      {
+        "head": "So why did the Soviet N1 fail with 30 engines?",
+        "pop": [
+          {
+            "say": "",
+            "show": "WHY THE N1 FAILED"
+          }
+        ],
+        "photo": [
+          {
+            "q": [
+              "N1 rocket first stage engines",
+              "N1 L3 rocket",
+              "N1 rocket rollout"
+            ],
+            "want": "the Soviet N1 rocket or its engine-packed first stage"
+          }
+        ]
+      },
+      {
+        "text": "Not because 30 is too many. The N1 had 24 engines in an outer ring and 6 in the middle. A control system called KORD steered by throttling them, and when one engine failed, it shut down the opposite one to keep the thrust balanced. Smart on paper. In practice, one problem kept dragging others down with it.",
+        "photo": [
+          {
+            "q": [
+              "NK-33 rocket engine",
+              "NK-15 engine",
+              "Kuznetsov NK-33"
+            ],
+            "want": "a Soviet NK-series rocket engine of the N1"
+          },
+          {
+            "q": [
+              "N1 rocket",
+              "Soviet N1 moon rocket",
+              "N1 rocket launch pad Baikonur"
+            ],
+            "want": "the Soviet N1 Moon rocket, a tall cone-shaped rocket"
+          },
+          {
+            "q": [
+              "N1 rocket first stage engines",
+              "N1 L3 rocket",
+              "N1 rocket rollout"
+            ],
+            "want": "the Soviet N1 rocket or its engine-packed first stage"
+          }
+        ]
+      },
+      {
+        "text": "February 1969. A fire is misread as a pump failure, and KORD shuts down the whole first stage after 68 seconds. July 1969. A turbopump explodes just after liftoff, the blast cuts the fuel lines, and the rocket falls back onto its own pad. June 1971. The rocket starts to roll, the steering cannot stop it, and it breaks apart after 48 seconds. November 1972. Six engines shut down at 90 seconds, a pressure shock bursts the feed lines, and an engine explodes.",
+        "photo": [
+          {
+            "q": [
+              "N1 rocket",
+              "Soviet N1 moon rocket",
+              "N1 rocket launch pad Baikonur"
+            ],
+            "want": "the Soviet N1 Moon rocket, a tall cone-shaped rocket"
+          },
+          {
+            "q": [
+              "N1 rocket first stage engines",
+              "N1 L3 rocket",
+              "N1 rocket rollout"
+            ],
+            "want": "the Soviet N1 rocket or its engine-packed first stage"
+          },
+          {
+            "q": [
+              "NK-33 rocket engine",
+              "NK-15 engine",
+              "Kuznetsov NK-33"
+            ],
+            "want": "a Soviet NK-series rocket engine of the N1"
+          }
+        ]
+      },
+      {
+        "text": "Here is the detail that matters. The N1's 30-engine first stage was never fired as a whole on the ground. Engines were tested one by one. The first time all 30 ran together was on a real launch. Every flight was the test.",
+        "photo": [
+          {
+            "q": [
+              "SpaceX McGregor test site",
+              "McGregor rocket test stand",
+              "rocket engine test stand firing"
+            ],
+            "want": "a rocket engine test stand"
+          },
+          {
+            "q": [
+              "NK-33 rocket engine",
+              "NK-15 engine",
+              "Kuznetsov NK-33"
+            ],
+            "want": "a Soviet NK-series rocket engine of the N1"
+          }
+        ]
+      },
+      {
+        "head": "How does Super Heavy keep 33 engines under control?",
+        "pop": [
+          {
+            "say": "",
+            "show": "33 UNDER CONTROL"
+          }
+        ],
+        "img": [
+          "lib/starship-pad.jpg"
+        ]
+      },
+      {
+        "text": "First, SpaceX does the test the N1 skipped. Before a booster flies, all 33 engines normally fire together on the launch mount. A static fire. Problems show up on the ground, not in the sky.",
+        "photo": [
+          {
+            "q": [
+              "Super Heavy static fire",
+              "Starship booster static fire Starbase",
+              "SpaceX Super Heavy booster test"
+            ],
+            "want": "a Super Heavy booster firing its engines at Starbase"
+          },
+          {
+            "q": [
+              "SpaceX Raptor engine",
+              "Raptor rocket engine",
+              "Raptor 2 engine"
+            ],
+            "want": "a SpaceX Raptor rocket engine"
+          }
+        ],
+        "img": [
+          "spacex-7.jpg"
+        ]
+      },
+      {
+        "text": "Second, the layout. 20 engines sit fixed in an outer ring. 13 in the middle can swivel to steer. Shielding between them is meant to stop one failing engine from taking out its neighbours. And with the Raptor 3, every engine can restart in flight.",
+        "photo": [
+          {
+            "q": [
+              "SpaceX Raptor engine",
+              "Raptor rocket engine",
+              "Raptor 2 engine"
+            ],
+            "want": "a SpaceX Raptor rocket engine"
+          }
+        ],
+        "img": [
+          "gen/why-starship-has-33-engines-not-one-giant-engine-n1-saturn-v-explained.jpg",
+          "lib/starship-booster-catch.jpg"
+        ]
+      },
+      {
+        "text": "Third, they test failure on purpose. In August 2025, on Flight 10, SpaceX switched off one of the 3 centre landing engines during the landing burn. A spare from the middle ring took over, and the booster still made its planned hover over the Gulf of Mexico.",
+        "img": [
+          "lib/starship-booster-catch.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Super Heavy static fire",
+              "Starship booster static fire Starbase",
+              "SpaceX Super Heavy booster test"
+            ],
+            "want": "a Super Heavy booster firing its engines at Starbase"
+          },
+          {
+            "q": [
+              "Starship flight test",
+              "Starship ship in flight",
+              "SpaceX Starship launch"
+            ],
+            "want": "SpaceX Starship flying"
+          }
+        ]
+      },
+      {
+        "text": "A planned test is one thing. A real failure, mid-climb, is another.",
+        "img": [
+          "lib/starship-launch.jpg"
+        ]
+      },
+      {
+        "head": "What happens when a Raptor fails in flight?",
+        "pop": [
+          {
+            "say": "",
+            "show": "ENGINE OUT"
+          }
+        ],
+        "photo": [
+          {
+            "q": [
+              "Starship flight test",
+              "Starship ship in flight",
+              "SpaceX Starship launch"
+            ],
+            "want": "SpaceX Starship flying"
+          }
+        ]
+      },
+      {
+        "text": "Often, the rocket carries on. On Flight 14 in September 2026, one of the 6 engines on the upper stage shut down during the climb. Flight controllers checked there was enough left for the later deorbit burn, approved a short extra burn, and Starship reached orbit for the first time. With 26 Starlink V3 satellites on board. A ship with one engine would simply have fallen short.",
+        "img": [
+          "lib/starship-launch.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Starship flight test",
+              "Starship ship in flight",
+              "SpaceX Starship launch"
+            ],
+            "want": "SpaceX Starship flying"
+          },
+          {
+            "q": [
+              "SpaceX Raptor engine",
+              "Raptor rocket engine",
+              "Raptor 2 engine"
+            ],
+            "want": "a SpaceX Raptor rocket engine"
+          }
+        ]
+      },
+      {
+        "text": "But it is not magic. Super Heavy boosters have been lost on test flights, including one where a blocked oxygen filter caused an engine failure. Redundancy buys margin. It does not replace good engines. And the strongest argument for 33 engines is not about surviving at all. It is about building them.",
+        "photo": [
+          {
+            "q": [
+              "Super Heavy static fire",
+              "Starship booster static fire Starbase",
+              "SpaceX Super Heavy booster test"
+            ],
+            "want": "a Super Heavy booster firing its engines at Starbase"
+          },
+          {
+            "q": [
+              "SpaceX McGregor test site",
+              "McGregor rocket test stand",
+              "rocket engine test stand firing"
+            ],
+            "want": "a rocket engine test stand"
+          }
+        ]
+      },
+      {
+        "head": "Why do small engines suit a reusable rocket?",
+        "pop": [
+          {
+            "say": "",
+            "show": "BUILT BY THE HUNDREDS"
+          }
+        ],
+        "photo": [
+          {
+            "q": [
+              "SpaceX Raptor engine",
+              "Raptor rocket engine",
+              "Raptor 2 engine"
+            ],
+            "want": "a SpaceX Raptor rocket engine"
+          }
+        ]
+      },
+      {
+        "text": "Every Starship stack needs more than 30 engines. So SpaceX builds Raptors on a production line, not as museum pieces. And the numbers moved fast. The first Raptor pushed about 185 tonnes at 2,080 kilos. The Raptor 3 pushes about 280 tonnes at 1,525 kilos. More power, less weight. A bad engine is swapped on its own, and the same engine family powers both the booster and the ship.",
+        "photo": [
+          {
+            "q": [
+              "SpaceX Raptor engine",
+              "Raptor rocket engine",
+              "Raptor 2 engine"
+            ],
+            "want": "a SpaceX Raptor rocket engine"
+          },
+          {
+            "q": [
+              "SpaceX McGregor test site",
+              "McGregor rocket test stand",
+              "rocket engine test stand firing"
+            ],
+            "want": "a rocket engine test stand"
+          }
+        ],
+        "img": [
+          "spacex-8.jpg"
+        ]
+      },
+      {
+        "text": "Tesla fans know this logic. Tesla builds its battery packs from thousands of small cylindrical cells, not a few giant ones. Mass production, steady quality, and a pack that survives one weak cell. With Tesla and SpaceX talking about a merger, that shared habit of many small identical parts is more than a style.",
+        "photo": [
+          {
+            "q": [
+              "4680 battery cell",
+              "Tesla 4680 cell",
+              "cylindrical lithium-ion cells"
+            ],
+            "want": "small cylindrical battery cells like Tesla's"
+          }
+        ],
+        "img": [
+          "lib/musk-chess-companies.jpg",
+          "spacex-7.jpg"
+        ]
+      },
+      {
+        "text": "And now those principles face the hardest test yet. Catching both halves of the rocket.",
+        "img": [
+          "lib/starship-booster-catch.jpg"
+        ]
+      },
+      {
+        "head": "What does this mean for the next Starship flights?",
+        "pop": [
+          {
+            "say": "",
+            "show": "WHAT'S NEXT"
+          }
+        ],
+        "img": [
+          "lib/starship-pad.jpg"
+        ]
+      },
+      {
+        "text": "The engine count is no longer the open question. Reliability over many reuses is. Flight 15 was planned for no earlier than 13 November 2026, with Booster 22 and Ship 42, and both stages were meant to be caught by the tower. A first. For that, the booster restarts its engines twice, and the ship has to relight after hours in orbit. Every restart is a new chance for one engine to fail, and a new chance for the others to cover for it.",
+        "img": [
+          "lib/starship-booster-catch.jpg",
+          "lib/starship-launch.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Starship flight test",
+              "Starship ship in flight",
+              "SpaceX Starship launch"
+            ],
+            "want": "SpaceX Starship flying"
+          },
+          {
+            "q": [
+              "Super Heavy static fire",
+              "Starship booster static fire Starbase",
+              "SpaceX Super Heavy booster test"
+            ],
+            "want": "a Super Heavy booster firing its engines at Starbase"
+          }
+        ]
+      },
+      {
+        "text": "So remember the opening. 30 engines doomed the Soviet Moon rocket. Not because there were 30. Because those 30 had never fired together until the day it mattered. Super Heavy fires all 33 on the ground before it ever flies. That is the difference. And it is why 33 engines beat one.",
+        "img": [
+          "gen/why-starship-has-33-engines-not-one-giant-engine-n1-saturn-v-explained.jpg",
+          "lib/starship-pad.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "N1 rocket",
+              "Soviet N1 moon rocket",
+              "N1 rocket launch pad Baikonur"
+            ],
+            "want": "the Soviet N1 Moon rocket, a tall cone-shaped rocket"
+          }
+        ]
+      }
+    ],
+    "nl": [
+      {
+        "text": "30 motoren lieten de Sovjet-maanraket falen. Vier lanceringen, vier mislukkingen. SpaceX zet nu 33 motoren onder één booster, en die vliegt. Op papier hetzelfde idee. Wat is dan het verschil? Het zit niet in het aantal motoren. Onthoud dat, want het echte antwoord zit in een test die de Sovjets nooit deden.",
+        "img": [
+          "lib/starship-booster-catch.jpg",
+          "lib/starship-launch.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "N1 rocket",
+              "Soviet N1 moon rocket",
+              "N1 rocket launch pad Baikonur"
+            ],
+            "want": "the Soviet N1 Moon rocket, a tall cone-shaped rocket"
+          },
+          {
+            "q": [
+              "N1 rocket first stage engines",
+              "N1 L3 rocket",
+              "N1 rocket rollout"
+            ],
+            "want": "the Soviet N1 rocket or its engine-packed first stage"
+          }
+        ]
+      },
+      {
+        "text": "Super Heavy, de booster onder Starship, heeft 33 Raptor 3-motoren. Samen duwen ze met zo'n 80,8 meganewton. De Sovjet-N1 haalde 45,4. SpaceX heeft dus bijna twee keer zoveel kracht, met maar drie motoren meer. Maar elke motor is een pomp, een rij kleppen en een kluwen leidingen die kapot kunnen. Meer motoren, meer dat mis kan gaan.",
+        "img": [
+          "lib/starship-pad.jpg",
+          "spacex-7.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "SpaceX Raptor engine",
+              "Raptor rocket engine",
+              "Raptor 2 engine"
+            ],
+            "want": "a SpaceX Raptor rocket engine"
+          },
+          {
+            "q": [
+              "Super Heavy static fire",
+              "Starship booster static fire Starbase",
+              "SpaceX Super Heavy booster test"
+            ],
+            "want": "a Super Heavy booster firing its engines at Starbase"
+          }
+        ]
+      },
+      {
+        "head": "Waarom bouw je niet gewoon één gigantische motor?",
+        "img": [
+          "gen/why-starship-has-33-engines-not-one-giant-engine-n1-saturn-v-explained.jpg"
+        ],
+        "pop": [
+          {
+            "say": "",
+            "show": "WHY NOT ONE?"
+          }
+        ]
+      },
+      {
+        "text": "Omdat een reuzenmotor traag te bouwen is, lastig om mee te landen, en één storing de vlucht beëindigt. Kijk naar Apollo. De F-1 van de Saturnus V was gebouwd voor 1,5 miljoen pond stuwkracht. Gewone motoren deden toen zo'n 160 duizend. Tien keer groter. En tien keer groter bracht een gemeen probleem mee.",
+        "photo": [
+          {
+            "q": [
+              "Rocketdyne F-1 engine",
+              "F-1 rocket engine display",
+              "Saturn V F-1 engine"
+            ],
+            "want": "the giant Rocketdyne F-1 engine of the Saturn V"
+          },
+          {
+            "q": [
+              "Saturn V launch",
+              "Apollo 11 Saturn V liftoff",
+              "Saturn V rocket launch"
+            ],
+            "want": "a Saturn V rocket lifting off"
+          },
+          {
+            "q": [
+              "Saturn V first stage engines",
+              "Saturn V S-IC stage engines",
+              "S-IC stage F-1 engines"
+            ],
+            "want": "the five F-1 engines at the base of a Saturn V first stage"
+          }
+        ]
+      },
+      {
+        "text": "Het heette verbrandingsinstabiliteit. Drukgolven in de verbrandingskamer lieten de motor trillen, en volgens een NASA-ingenieur kon dat de motor in milliseconden doorbranden. De oplossing kostte meer dan 3 jaar. Ingenieurs lieten zelfs met opzet kleine bommetjes ontploffen in draaiende motoren, om te zien of het trillen uitdoofde. Koperen schotten op de injectorplaat losten het uiteindelijk op. Daarna vlogen 65 F-1's op 13 Saturnus V's zonder dat het probleem terugkwam.",
+        "photo": [
+          {
+            "q": [
+              "F-1 engine test firing",
+              "Rocketdyne F-1 static test",
+              "F-1 engine test stand Edwards"
+            ],
+            "want": "an F-1 rocket engine firing on a test stand"
+          },
+          {
+            "q": [
+              "Rocketdyne F-1 engine",
+              "F-1 rocket engine display",
+              "Saturn V F-1 engine"
+            ],
+            "want": "the giant Rocketdyne F-1 engine of the Saturn V"
+          },
+          {
+            "q": [
+              "Saturn V launch",
+              "Apollo 11 Saturn V liftoff",
+              "Saturn V rocket launch"
+            ],
+            "want": "a Saturn V rocket lifting off"
+          }
+        ]
+      },
+      {
+        "text": "Dan het landen. Een booster die terugkomt is bijna leeg. Hij heeft maar een klein deel van zijn startkracht nodig. Eén enorme motor kan niet zo ver terugschakelen. 33 kleine motoren zetten gewoon het grootste deel uit. Super Heavy landt op alleen zijn 3 middelste motoren.",
+        "img": [
+          "lib/starship-booster-catch.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Super Heavy static fire",
+              "Starship booster static fire Starbase",
+              "SpaceX Super Heavy booster test"
+            ],
+            "want": "a Super Heavy booster firing its engines at Starbase"
+          }
+        ]
+      },
+      {
+        "text": "Kleine motoren winnen dus. Alleen gebruikten de Sovjets er 30, en dat ging flink mis.",
+        "photo": [
+          {
+            "q": [
+              "N1 rocket",
+              "Soviet N1 moon rocket",
+              "N1 rocket launch pad Baikonur"
+            ],
+            "want": "the Soviet N1 Moon rocket, a tall cone-shaped rocket"
+          }
+        ]
+      },
+      {
+        "head": "Dus waarom faalde de Sovjet-N1 met 30 motoren?",
+        "photo": [
+          {
+            "q": [
+              "N1 rocket first stage engines",
+              "N1 L3 rocket",
+              "N1 rocket rollout"
+            ],
+            "want": "the Soviet N1 rocket or its engine-packed first stage"
+          }
+        ],
+        "pop": [
+          {
+            "say": "",
+            "show": "WHY THE N1 FAILED"
+          }
+        ]
+      },
+      {
+        "text": "Niet omdat 30 te veel is. De N1 had 24 motoren in een buitenring en 6 in het midden. Een besturingssysteem met de naam KORD stuurde door ze harder of zachter te zetten, en als er één uitviel, zette het de tegenoverliggende uit om de stuwkracht in balans te houden. Slim op papier. In de praktijk sleurde één probleem steeds andere mee.",
+        "photo": [
+          {
+            "q": [
+              "NK-33 rocket engine",
+              "NK-15 engine",
+              "Kuznetsov NK-33"
+            ],
+            "want": "a Soviet NK-series rocket engine of the N1"
+          },
+          {
+            "q": [
+              "N1 rocket",
+              "Soviet N1 moon rocket",
+              "N1 rocket launch pad Baikonur"
+            ],
+            "want": "the Soviet N1 Moon rocket, a tall cone-shaped rocket"
+          },
+          {
+            "q": [
+              "N1 rocket first stage engines",
+              "N1 L3 rocket",
+              "N1 rocket rollout"
+            ],
+            "want": "the Soviet N1 rocket or its engine-packed first stage"
+          }
+        ]
+      },
+      {
+        "text": "Februari 1969. Een brand wordt aangezien voor een pompstoring, en KORD zet na 68 seconden de hele eerste trap uit. Juli 1969. Vlak na de start ontploft een turbopomp, de klap snijdt de brandstofleidingen door en de raket valt terug op zijn eigen platform. Juni 1971. De raket begint te rollen, de besturing kan het niet stoppen, en na 48 seconden breekt hij in stukken. November 1972. Zes motoren gaan na 90 seconden uit, een drukgolf laat de toevoerleidingen barsten, en een motor ontploft.",
+        "photo": [
+          {
+            "q": [
+              "N1 rocket",
+              "Soviet N1 moon rocket",
+              "N1 rocket launch pad Baikonur"
+            ],
+            "want": "the Soviet N1 Moon rocket, a tall cone-shaped rocket"
+          },
+          {
+            "q": [
+              "N1 rocket first stage engines",
+              "N1 L3 rocket",
+              "N1 rocket rollout"
+            ],
+            "want": "the Soviet N1 rocket or its engine-packed first stage"
+          },
+          {
+            "q": [
+              "NK-33 rocket engine",
+              "NK-15 engine",
+              "Kuznetsov NK-33"
+            ],
+            "want": "a Soviet NK-series rocket engine of the N1"
+          }
+        ]
+      },
+      {
+        "text": "Dit is het detail dat ertoe doet. De eerste trap van de N1, met 30 motoren, is nooit als geheel op de grond getest. Motoren werden één voor één getest. De eerste keer dat alle 30 samen brandden, was bij een echte lancering. Elke vlucht was de test.",
+        "photo": [
+          {
+            "q": [
+              "SpaceX McGregor test site",
+              "McGregor rocket test stand",
+              "rocket engine test stand firing"
+            ],
+            "want": "a rocket engine test stand"
+          },
+          {
+            "q": [
+              "NK-33 rocket engine",
+              "NK-15 engine",
+              "Kuznetsov NK-33"
+            ],
+            "want": "a Soviet NK-series rocket engine of the N1"
+          }
+        ]
+      },
+      {
+        "head": "Hoe houdt Super Heavy 33 motoren onder controle?",
+        "img": [
+          "lib/starship-pad.jpg"
+        ],
+        "pop": [
+          {
+            "say": "",
+            "show": "33 UNDER CONTROL"
+          }
+        ]
+      },
+      {
+        "text": "Ten eerste doet SpaceX de test die de N1 oversloeg. Voordat een booster vliegt, branden normaal gesproken alle 33 motoren samen op het lanceerplatform. Een static fire. Problemen komen boven op de grond, niet in de lucht.",
+        "img": [
+          "spacex-7.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Super Heavy static fire",
+              "Starship booster static fire Starbase",
+              "SpaceX Super Heavy booster test"
+            ],
+            "want": "a Super Heavy booster firing its engines at Starbase"
+          },
+          {
+            "q": [
+              "SpaceX Raptor engine",
+              "Raptor rocket engine",
+              "Raptor 2 engine"
+            ],
+            "want": "a SpaceX Raptor rocket engine"
+          }
+        ]
+      },
+      {
+        "text": "Ten tweede de indeling. 20 motoren zitten vast in een buitenring. 13 in het midden kunnen kantelen om te sturen. Schermen ertussen moeten voorkomen dat één kapotte motor zijn buren meesleurt. En met de Raptor 3 kan elke motor in de vlucht opnieuw starten.",
+        "img": [
+          "gen/why-starship-has-33-engines-not-one-giant-engine-n1-saturn-v-explained.jpg",
+          "lib/starship-booster-catch.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "SpaceX Raptor engine",
+              "Raptor rocket engine",
+              "Raptor 2 engine"
+            ],
+            "want": "a SpaceX Raptor rocket engine"
+          }
+        ]
+      },
+      {
+        "text": "Ten derde testen ze falen met opzet. In augustus 2025, bij vlucht 10, zette SpaceX tijdens de landingsburn een van de 3 middelste landingsmotoren uit. Een reservemotor uit de middelste ring nam het over, en de booster bleef gewoon zweven boven de Golf van Mexico, zoals gepland.",
+        "img": [
+          "lib/starship-booster-catch.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Super Heavy static fire",
+              "Starship booster static fire Starbase",
+              "SpaceX Super Heavy booster test"
+            ],
+            "want": "a Super Heavy booster firing its engines at Starbase"
+          },
+          {
+            "q": [
+              "Starship flight test",
+              "Starship ship in flight",
+              "SpaceX Starship launch"
+            ],
+            "want": "SpaceX Starship flying"
+          }
+        ]
+      },
+      {
+        "text": "Een geplande test is één ding. Een echte storing, midden in de klim, is iets anders.",
+        "img": [
+          "lib/starship-launch.jpg"
+        ]
+      },
+      {
+        "head": "Wat gebeurt er als een Raptor uitvalt tijdens de vlucht?",
+        "photo": [
+          {
+            "q": [
+              "Starship flight test",
+              "Starship ship in flight",
+              "SpaceX Starship launch"
+            ],
+            "want": "SpaceX Starship flying"
+          }
+        ],
+        "pop": [
+          {
+            "say": "",
+            "show": "ENGINE OUT"
+          }
+        ]
+      },
+      {
+        "text": "Vaak vliegt de raket gewoon door. Bij vlucht 14 in september 2026 viel tijdens de klim een van de 6 motoren van de bovenste trap uit. De vluchtleiding controleerde of er genoeg over was voor de latere remstoot, gaf groen licht voor een korte extra brandperiode, en Starship bereikte voor het eerst een baan om de aarde. Met 26 Starlink V3-satellieten aan boord. Een schip met één motor was gewoon tekortgekomen.",
+        "img": [
+          "lib/starship-launch.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Starship flight test",
+              "Starship ship in flight",
+              "SpaceX Starship launch"
+            ],
+            "want": "SpaceX Starship flying"
+          },
+          {
+            "q": [
+              "SpaceX Raptor engine",
+              "Raptor rocket engine",
+              "Raptor 2 engine"
+            ],
+            "want": "a SpaceX Raptor rocket engine"
+          }
+        ]
+      },
+      {
+        "text": "Maar toverkunst is het niet. Super Heavy-boosters zijn bij testvluchten verloren gegaan, onder meer één keer doordat een verstopt zuurstoffilter een motor liet uitvallen. Reserve geeft marge. Het vervangt geen goede motoren. En het sterkste argument voor 33 motoren gaat helemaal niet over overleven. Het gaat over bouwen.",
+        "photo": [
+          {
+            "q": [
+              "Super Heavy static fire",
+              "Starship booster static fire Starbase",
+              "SpaceX Super Heavy booster test"
+            ],
+            "want": "a Super Heavy booster firing its engines at Starbase"
+          },
+          {
+            "q": [
+              "SpaceX McGregor test site",
+              "McGregor rocket test stand",
+              "rocket engine test stand firing"
+            ],
+            "want": "a rocket engine test stand"
+          }
+        ]
+      },
+      {
+        "head": "Waarom passen kleine motoren zo goed bij een herbruikbare raket?",
+        "photo": [
+          {
+            "q": [
+              "SpaceX Raptor engine",
+              "Raptor rocket engine",
+              "Raptor 2 engine"
+            ],
+            "want": "a SpaceX Raptor rocket engine"
+          }
+        ],
+        "pop": [
+          {
+            "say": "",
+            "show": "BUILT BY THE HUNDREDS"
+          }
+        ]
+      },
+      {
+        "text": "Elke Starship heeft meer dan 30 motoren nodig. Dus bouwt SpaceX Raptors aan de lopende band, niet als museumstukken. En de cijfers gingen snel. De eerste Raptor duwde zo'n 185 ton bij 2080 kilo. De Raptor 3 duwt zo'n 280 ton bij 1525 kilo. Meer kracht, minder gewicht. Een slechte motor vervang je los, en dezelfde motorfamilie drijft zowel de booster als het schip aan.",
+        "img": [
+          "spacex-8.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "SpaceX Raptor engine",
+              "Raptor rocket engine",
+              "Raptor 2 engine"
+            ],
+            "want": "a SpaceX Raptor rocket engine"
+          },
+          {
+            "q": [
+              "SpaceX McGregor test site",
+              "McGregor rocket test stand",
+              "rocket engine test stand firing"
+            ],
+            "want": "a rocket engine test stand"
+          }
+        ]
+      },
+      {
+        "text": "Tesla-fans kennen die logica. Tesla bouwt zijn accupakketten uit duizenden kleine cilindervormige cellen, niet uit een paar enorme. Massaproductie, constante kwaliteit, en een pakket dat één zwakke cel overleeft. Nu Tesla en SpaceX over een fusie praten, is die gedeelde gewoonte van veel kleine, identieke onderdelen meer dan stijl.",
+        "img": [
+          "lib/musk-chess-companies.jpg",
+          "spacex-7.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "4680 battery cell",
+              "Tesla 4680 cell",
+              "cylindrical lithium-ion cells"
+            ],
+            "want": "small cylindrical battery cells like Tesla's"
+          }
+        ]
+      },
+      {
+        "text": "En nu staan die principes voor de zwaarste test tot nu toe. Beide helften van de raket opvangen.",
+        "img": [
+          "lib/starship-booster-catch.jpg"
+        ]
+      },
+      {
+        "head": "Wat betekent dit voor de volgende Starship-vluchten?",
+        "img": [
+          "lib/starship-pad.jpg"
+        ],
+        "pop": [
+          {
+            "say": "",
+            "show": "WHAT'S NEXT"
+          }
+        ]
+      },
+      {
+        "text": "Het aantal motoren is geen open vraag meer. Betrouwbaarheid na vaak hergebruik wel. Vlucht 15 stond gepland voor op zijn vroegst 13 november 2026, met Booster 22 en Ship 42, en voor het eerst moesten beide trappen door de toren worden gevangen. Daarvoor start de booster zijn motoren twee keer opnieuw, en moet het schip na uren in de ruimte opnieuw ontsteken. Elke herstart is een nieuwe kans dat één motor faalt, en een nieuwe kans voor de rest om dat op te vangen.",
+        "img": [
+          "lib/starship-booster-catch.jpg",
+          "lib/starship-launch.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Starship flight test",
+              "Starship ship in flight",
+              "SpaceX Starship launch"
+            ],
+            "want": "SpaceX Starship flying"
+          },
+          {
+            "q": [
+              "Super Heavy static fire",
+              "Starship booster static fire Starbase",
+              "SpaceX Super Heavy booster test"
+            ],
+            "want": "a Super Heavy booster firing its engines at Starbase"
+          }
+        ]
+      },
+      {
+        "text": "Denk dus terug aan het begin. 30 motoren lieten de Sovjet-maanraket falen. Niet omdat het er 30 waren. Maar omdat die 30 nooit samen hadden gebrand tot de dag dat het erop aankwam. Super Heavy laat alle 33 eerst op de grond branden voordat hij ooit vliegt. Dat is het verschil. En daarom winnen 33 motoren van één.",
+        "img": [
+          "gen/why-starship-has-33-engines-not-one-giant-engine-n1-saturn-v-explained.jpg",
+          "lib/starship-pad.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "N1 rocket",
+              "Soviet N1 moon rocket",
+              "N1 rocket launch pad Baikonur"
+            ],
+            "want": "the Soviet N1 Moon rocket, a tall cone-shaped rocket"
+          }
+        ]
+      }
+    ],
+    "yt_title_en": "Why Does Starship Have 33 Engines? Soviet N1 vs Saturn V vs Super Heavy",
+    "yt_title_nl": "Waarom Heeft Starship 33 Motoren? N1 vs Saturnus V vs Super Heavy"
+  }
+}

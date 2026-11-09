@@ -66,6 +66,10 @@ Add new ideas at the bottom at any time.
 
 - [ ] What fuels Starship? Methane and liquid oxygen explained: why SpaceX chose them, what a full load costs and how it could be made on Mars
 - [ ] Rideshare to space: how a small satellite hitches a ride on a Falcon 9 Transporter mission, what it costs and how they avoid hitting each other
+- [x] Why does Starship have 33 engines instead of one giant one? N1's 30 engines vs Saturn V's F-1 vs Super Heavy (why-starship-has-33-engines-not-one-giant-engine-n1-saturn-v-explained)
+- [ ] Combustion instability: why big rocket engines try to shake themselves apart, and how the F-1 and Raptor deal with it
+- [ ] Static fire explained: why SpaceX fires a rocket on the pad before every flight, and what the test can and cannot catch
+- [ ] Sea-level vs vacuum engines: why Starship carries two kinds of Raptor and what the big bell nozzle does in space
 
 ## Stories (evening task: entertaining and educational, timeless)
 

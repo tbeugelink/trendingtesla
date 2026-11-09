@@ -106,6 +106,11 @@ function b64name(n) {
 export default {
   async fetch(request, env) {
     const u = new URL(request.url);
+    // old WordPress addresses from the domain's previous site (?p=1, ?feed=rss2, ?s=..., ?author=1) showed the
+    // home page and were reported as duplicates by Search Console: tell crawlers they are gone for good
+    if ((u.pathname === "/" || u.pathname === "/nl/") &&
+        ["p", "s", "feed", "author", "cat", "replytocom", "page_id", "attachment_id", "m", "tag"].some((k) => u.searchParams.has(k)))
+      return new Response("Gone", { status: 410, headers: { "content-type": "text/plain", "x-robots-tag": "noindex" } });
     if (u.pathname === "/api/contact") return contact(request, env);
     if (u.pathname === "/api/likes") {
       const stub = env.LIKES.get(env.LIKES.idFromName("all"));

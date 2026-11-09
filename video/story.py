@@ -942,9 +942,12 @@ def main():
                 d = t1 - t0
                 if not 2.4 <= d <= 4.1:
                     report.append(f"beat {i + 1}: {d:.1f} s (rule 2.5-4 s)")
-        if (beats[0].get("overlay") or "").strip() != (beats[-1].get("overlay") or "").strip() or \
-                S.spoken(beats[0]["text"], lang).strip() != S.spoken(beats[-1]["text"], lang).strip():
-            report.append("loop: the last beat does not repeat the hook exactly (text and overlay)")
+        # v4 (9 Nov 2026): a smart loop - the last line must NOT repeat the hook, it must run on into it
+        if S.spoken(beats[0]["text"], lang).strip().lower() == S.spoken(beats[-1]["text"], lang).strip().lower() or \
+                (beats[0].get("overlay") or "").strip().lower() == (beats[-1].get("overlay") or "").strip().lower():
+            report.append("loop: the last beat repeats the hook word for word (rule v4: a different line that runs on into it)")
+        else:
+            report.append(f"loop: \"{beats[-1]['text'].strip()}\" -> \"{beats[0]['text'].strip()}\"")
         label_end = 0.0
     covered = sum(min(p1, body_end) - max(p0, 0) for p0, p1, _ in pops if p1 > p0) / max(body_end, 0.1)
     print(f"text on screen {covered * 100:.0f}% of the Short")

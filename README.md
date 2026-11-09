@@ -8,6 +8,35 @@ Static, bilingual (EN at `/`, NL at `/nl/`) Tesla news site.
 
 `public/` is generated — never edit it by hand, always rebuild.
 
+## SHORT FORMAT v4 (William, 9 Nov 2026, afternoon) - replaces the loop rule of v3/v3.1; everything else stays
+
+Earlier versions failed because the hook came too late, the text density was too low, or the loop felt
+mechanical. That is forbidden from now on.
+- **Smart loop, never an exact repeat**: the last line must NOT be the same as the opening line. Write it so that,
+  when the Short starts again, it runs on logically and smoothly into the first sentence: an unnoticeable
+  transition. Model: last line "That's why SpaceX uses 33." -> restart "30 engines failed. SpaceX uses 33." =
+  "...That's why SpaceX uses 33. 30 engines failed. SpaceX uses 33." (Overrides "the last beat repeats the hook".)
+- Add `"loop": {"last": "<last line>", "how": "<how it runs on into the opening line>"}` to `"short"`; the summary
+  to William states the last line and how it runs on into the opening line.
+- Self-learning also names how the loop line connects. The renderer reports the loop pair and warns when the last
+  line repeats the hook word for word.
+- All other rules stay: hook in 0-2 s (3 variants + why), big text from frame 1 on 70%+ of the seconds (in practice
+  100% with an overlay per beat), max 2 lines and ~36 characters per overlay (hook included), numbers and years
+  yellow, a dark band on bright photos, a beat every 2.5-4 s, a second photo for beats over 3 s.
+
+Model Short ("30 Engines Failed. SpaceX Uses 33"):
+```
+0-2s   overlay "30 engines failed. SpaceX uses 33."        voice: "30 engines failed. SpaceX uses 33."
+2-6s   overlay "N1 flew 4 times. Failed 4 times."          voice: "The N1 flew four times. It failed four times."
+6-10s  overlay "Its 30 engines never fired together."      voice: "Its 30 engines never fired together on the ground."
+10-14s overlay "One engine failed, the rest went with it." voice: the same
+14-18s overlay "Apollo's F-1 took over 3 years to tame."   voice: the same
+18-22s overlay "Starship fires all 33 on the pad first."   voice: the same
+22-26s overlay "Flight 14 lost an engine. Made orbit anyway." voice: "Flight 14 lost an engine. It made orbit anyway."
+26-30s overlay "That's why SpaceX uses 33."                voice: the same (runs on into the hook)
+```
+Visuals: fast cuts between N1 crash pictures, the Saturn V F-1 and Starship Super Heavy; no logo in the first 2 s.
+
 ## SHORT FORMAT v3.1 (William, 9 Nov 2026) - additions to v3 below; no exceptions
 
 Text overlays
@@ -26,7 +55,7 @@ Timing and density
 - The hook sentence stands alone for the full first 2 seconds: no logo, no date, no extra label.
 
 Loop
-- The very last beat repeats EXACTLY the same hook sentence (voice "text" and "overlay") as beat 1. No other wording.
+- (Replaced by v4: the last line runs on into the hook instead of repeating it.)
 
 Self-learning output (required in every summary to William)
 - Which text rules were applied (e.g. "sentence shortened to 2 lines", "overlay of beat 5 shortened to 34 characters").
@@ -47,7 +76,7 @@ forbidden from now on. Rules 1-5 of "HARD RULES" below stay, with this format:
   without sound. The old "pop" key words and `hook_text` are not used when beats have overlays.
 - **A beat lasts 2.5-4 s** (8-12 spoken words); a beat that runs longer gets 2 pictures (`"lib"` with 2 files) so
   something changes every 2.5-4 s.
-- **The last beat repeats the hook**: the same spoken line and the same overlay as beat 1, so the Short loops.
+- (Replaced by v4: smart loop.) ~~The last beat repeats the hook~~.
 - No logo and no label in the first 2 seconds: only the hook (the renderer does this).
 - Description only: "like and subscribe", "full story on TrendingTesla.com".
 

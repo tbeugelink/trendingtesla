@@ -61,6 +61,7 @@ jobs:
             sort -u ops/stats/history.jsonl "$RUNNER_TEMP/h" 2>/dev/null | sort -t'"' -k4 > "$RUNNER_TEMP/m" || cp "$RUNNER_TEMP/h" "$RUNNER_TEMP/m"
             mkdir -p ops/stats && cp "$RUNNER_TEMP/m" ops/stats/history.jsonl && cp "$RUNNER_TEMP/p" ops/performance.md
             cp -r "$RUNNER_TEMP/s/." ops/ 2>/dev/null || true
+            python3 tools/short_signals.py > /dev/null || true  # rebuilt after the reset, from the merged history
             git add ops/stats/history.jsonl ops/performance.md ops/short-signals.md
             [ -f "$RUNNER_TEMP/c" ] && cp "$RUNNER_TEMP/c" ops/stats/channel.jsonl && git add ops/stats/channel.jsonl
             [ -f "$RUNNER_TEMP/v" ] && cp "$RUNNER_TEMP/v" ops/stats/site.jsonl && git add ops/stats/site.jsonl

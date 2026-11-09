@@ -284,3 +284,6 @@ Articles with a "models" key automatically use real-life photos of that model. Y
 - gen/why-starship-has-33-engines-not-one-giant-engine-n1-saturn-v-explained.jpg — the base of a Super Heavy booster with its 33 engines firing into steam at Starbase
 - gen/why-starship-has-33-engines-not-one-giant-engine-n1-saturn-v-explained-x2-11091157.jpg — a row of identical Raptor rocket engines on a production line
 - gen/why-starship-has-33-engines-not-one-giant-engine-n1-saturn-v-explained-x3-11091159.jpg — a Super Heavy booster firing all 33 engines on the pad in a static fire at night
+- gen/spacex-fairing-catch-net-boat-mr-steven-6-million-nose-cone-story.jpg — a white Falcon 9 fairing half gliding under a parafoil towards the net of a catcher boat at sea
+- gen/spacex-fairing-catch-net-boat-mr-steven-6-million-nose-cone-story-x2-11092028.jpg — the net catcher boat with its four tall arms and giant net waiting at sea
+- gen/spacex-fairing-catch-net-boat-mr-steven-6-million-nose-cone-story-x3-11092029.jpg — a wet fairing half being lifted out of the sea by a recovery ship's crane

@@ -1,303 +1,310 @@
 {
- "slug": "spacex-fairing-catch-net-boat-mr-steven-6-million-nose-cone-story",
- "date": "2026-11-09",
- "time": "21:20",
- "category": "spacex",
- "sources": [
-  {
-   "title": "Space.com — SpaceX Boat Snags Falling Payload Fairing in Historic First",
-   "url": "https://www.space.com/spacex-boat-falcon-heavy-payload-fairing.html"
-  },
-  {
-   "title": "Space.com — SpaceX retires giant net boats that caught rocket nose cones",
-   "url": "https://www.space.com/spacex-retires-rocket-payload-fairing-net-boats"
-  },
-  {
-   "title": "The Motley Fool (via Mitrade) — Here's How SpaceX Saved $120 Million With (and Without) a Really Big Fishnet",
-   "url": "https://www.mitrade.com/insights/news/live-news/article-8-2135060-20261003"
-  },
-  {
-   "title": "Teslarati — SpaceX's next Starship flight set to make history on Friday the 13th",
-   "url": "https://www.teslarati.com/spacex-starship-catch-nov-13/"
-  }
- ],
- "images": [
-  "gen/spacex-fairing-catch-net-boat-mr-steven-6-million-nose-cone-story.jpg",
-  "falcon-heavy.jpg",
-  "spacex-6.jpg",
-  "spacex-1.jpg",
-  "lib/starship-booster-catch.jpg"
- ],
- "gen_image": {
-  "prompt": "Dramatic close shot at sea at dawn: one white half of a Falcon 9 payload fairing (a curved half-cylinder shell with a pointed rounded nose, about 13 m long) gliding down nose-first under a large rectangular steerable parafoil, just above a big black net stretched between four tall yellow steel arms on the stern of a fast blue offshore supply vessel cutting through the waves; spray, strong low sunlight from the side, the fairing half in the horizontal centre filling about half the frame, calm darker sea in the lower left",
-  "subject": "a SpaceX Falcon 9 payload fairing half: a white composite half-shell (half of a 5.2 m wide, 13 m tall nose cone, split lengthwise), with a smooth curved outer skin and an open inner side, hanging horizontally under a rectangular ram-air parafoil; the catcher boat is a fast offshore supply vessel with four tall arms on its deck holding a large horizontal net above the stern",
-  "refs": [
-   {
-    "commons": "Falcon 9 fairing"
-   },
-   {
-    "commons": "SpaceX fairing recovery Mr Steven"
-   }
+  "slug": "spacex-fairing-catch-net-boat-mr-steven-6-million-nose-cone-story",
+  "date": "2026-11-09",
+  "time": "21:20",
+  "category": "spacex",
+  "sources": [
+    {
+      "title": "Space.com — SpaceX Boat Snags Falling Payload Fairing in Historic First",
+      "url": "https://www.space.com/spacex-boat-falcon-heavy-payload-fairing.html"
+    },
+    {
+      "title": "Space.com — SpaceX retires giant net boats that caught rocket nose cones",
+      "url": "https://www.space.com/spacex-retires-rocket-payload-fairing-net-boats"
+    },
+    {
+      "title": "The Motley Fool (via Mitrade) — Here's How SpaceX Saved $120 Million With (and Without) a Really Big Fishnet",
+      "url": "https://www.mitrade.com/insights/news/live-news/article-8-2135060-20261003"
+    },
+    {
+      "title": "Teslarati — SpaceX's next Starship flight set to make history on Friday the 13th",
+      "url": "https://www.teslarati.com/spacex-starship-catch-nov-13/"
+    }
   ],
-  "profile": "cinematic",
-  "category": "B",
-  "describe": "a white Falcon 9 fairing half gliding under a parafoil towards the net of a catcher boat at sea",
-  "extra": [
-   {
-    "prompt": "Wide aerial view of a fast offshore supply vessel at sea with four tall arms holding a huge horizontal black net over its deck, wake behind it, deep blue ocean, bright midday light, no fairing yet: the boat waiting",
-    "describe": "the net catcher boat with its four tall arms and giant net waiting at sea"
-   },
-   {
-    "prompt": "A white Falcon 9 payload fairing half floating on calm blue water next to a recovery ship whose deck crane lifts it with straps, crew in hard hats and life vests on deck, soft afternoon light",
-    "describe": "a wet fairing half being lifted out of the sea by a recovery ship's crane"
-   }
-  ]
- },
- "label": {
-  "style": "c",
+  "images": [
+    "gen/spacex-fairing-catch-net-boat-mr-steven-6-million-nose-cone-story.jpg",
+    "gen/spacex-fairing-catch-net-boat-mr-steven-6-million-nose-cone-story-x3-11092029.jpg",
+    "gen/spacex-fairing-catch-net-boat-mr-steven-6-million-nose-cone-story-x2-11092028.jpg",
+    "falcon-heavy.jpg",
+    "spacex-6.jpg",
+    "spacex-1.jpg",
+    "lib/starship-booster-catch.jpg"
+  ],
+  "gen_image": {
+    "prompt": "Dramatic close shot at sea at dawn: one white half of a Falcon 9 payload fairing (a curved half-cylinder shell with a pointed rounded nose, about 13 m long) gliding down nose-first under a large rectangular steerable parafoil, just above a big black net stretched between four tall yellow steel arms on the stern of a fast blue offshore supply vessel cutting through the waves; spray, strong low sunlight from the side, the fairing half in the horizontal centre filling about half the frame, calm darker sea in the lower left",
+    "subject": "a SpaceX Falcon 9 payload fairing half: a white composite half-shell (half of a 5.2 m wide, 13 m tall nose cone, split lengthwise), with a smooth curved outer skin and an open inner side, hanging horizontally under a rectangular ram-air parafoil; the catcher boat is a fast offshore supply vessel with four tall arms on its deck holding a large horizontal net above the stern",
+    "refs": [
+      {
+        "commons": "Falcon 9 fairing"
+      },
+      {
+        "commons": "SpaceX fairing recovery Mr Steven"
+      }
+    ],
+    "profile": "cinematic",
+    "category": "B",
+    "describe": "a white Falcon 9 fairing half gliding under a parafoil towards the net of a catcher boat at sea",
+    "extra": [
+      {
+        "prompt": "Wide aerial view of a fast offshore supply vessel at sea with four tall arms holding a huge horizontal black net over its deck, wake behind it, deep blue ocean, bright midday light, no fairing yet: the boat waiting",
+        "describe": "the net catcher boat with its four tall arms and giant net waiting at sea",
+        "file": "gen/spacex-fairing-catch-net-boat-mr-steven-6-million-nose-cone-story-x2-11092028.jpg"
+      },
+      {
+        "prompt": "A white Falcon 9 payload fairing half floating on calm blue water next to a recovery ship whose deck crane lifts it with straps, crew in hard hats and life vests on deck, soft afternoon light",
+        "describe": "a wet fairing half being lifted out of the sea by a recovery ship's crane",
+        "file": "gen/spacex-fairing-catch-net-boat-mr-steven-6-million-nose-cone-story-x3-11092029.jpg"
+      }
+    ],
+    "done": true,
+    "model": "gemini-3.1-flash-image"
+  },
+  "label": {
+    "style": "c",
+    "en": {
+      "sub": "$6M FROM SPACE.",
+      "text": "CATCH IT"
+    },
+    "nl": {
+      "sub": "$6 MILJOEN UIT DE RUIMTE.",
+      "text": "VANG HEM"
+    }
+  },
+  "short": {
+    "hook": "number",
+    "yt_title_en": "SpaceX Tried to Catch $6M With a Net",
+    "yt_title_nl": "SpaceX Wilde $6 Miljoen Vangen Met een Net",
+    "hooks": [
+      {
+        "text": "Catch six million dollars falling from space.",
+        "type": "number"
+      },
+      {
+        "text": "SpaceX built a net boat. Then it threw the idea away.",
+        "type": "contrast"
+      },
+      {
+        "text": "Why did SpaceX park a giant net in the ocean?",
+        "type": "question"
+      }
+    ],
+    "hook_pick": {
+      "index": 0,
+      "why": "a dollar number and an impossible task in 7 words, one sentence (no pause, ~2.3 s), framed as a dare to the viewer; overlay 'Catch $6M falling from space.' (29 characters) stands whole from frame 1; the contrast hook gives away the twist, the question hook starts slower"
+    },
+    "story": [
+      {
+        "part": "hook",
+        "t": "0-2.7s",
+        "text": "Catch six million dollars falling from space.",
+        "overlay": "Catch $6M falling from space.",
+        "img": "gen/spacex-fairing-catch-net-boat-mr-steven-6-million-nose-cone-story.jpg",
+        "photo": [
+          {
+            "q": [
+              "Falcon 9 payload fairing",
+              "SpaceX fairing half",
+              "Falcon 9 fairing recovery"
+            ],
+            "want": "a SpaceX Falcon 9 payload fairing half (white nose cone shell)"
+          }
+        ],
+        "visual": "hard open on a white fairing half under a parafoil above a net boat at sea; cut to a real fairing half on '$6M'. Only the hook sentence on screen, no logo"
+      },
+      {
+        "part": "tension",
+        "t": "2.7-6.2s",
+        "text": "That's a rocket's nose cone. SpaceX wanted it back.",
+        "overlay": "The nose cone: $6M a launch",
+        "photo": [
+          {
+            "q": [
+              "Falcon 9 payload fairing",
+              "SpaceX fairing half",
+              "Falcon 9 fairing recovery"
+            ],
+            "want": "a SpaceX Falcon 9 payload fairing half (white nose cone shell)"
+          }
+        ],
+        "img": "falcon-heavy.jpg",
+        "visual": "fairing half close-up, then a Falcon launch at sunset; push-in"
+      },
+      {
+        "part": "tension",
+        "t": "6.2-9.3s",
+        "text": "So it hired a boat named Mister Steven.",
+        "overlay": "So: a boat named Mr. Steven",
+        "photo": [
+          {
+            "q": [
+              "Mr. Steven ship SpaceX",
+              "GO Ms. Tree",
+              "SpaceX fairing recovery ship net"
+            ],
+            "want": "SpaceX's fairing catcher boat Mr. Steven / GO Ms. Tree with tall arms holding a net"
+          },
+          {
+            "q": [
+              "Falcon 9 payload fairing",
+              "SpaceX fairing half",
+              "Falcon 9 fairing recovery"
+            ],
+            "want": "a SpaceX Falcon 9 payload fairing half (white nose cone shell)"
+          }
+        ],
+        "visual": "the net boat with its four tall arms in port, then the fairing; quick zoom"
+      },
+      {
+        "part": "tension",
+        "t": "9.3-13.1s",
+        "text": "And hung a net half a soccer field in size.",
+        "overlay": "Net: 40,000 square feet",
+        "photo": [
+          {
+            "q": [
+              "Mr. Steven ship SpaceX",
+              "GO Ms. Tree",
+              "SpaceX fairing recovery ship net"
+            ],
+            "want": "SpaceX's fairing catcher boat Mr. Steven / GO Ms. Tree with tall arms holding a net"
+          }
+        ],
+        "img": "gen/spacex-fairing-catch-net-boat-mr-steven-6-million-nose-cone-story.jpg",
+        "visual": "wide of the stretched net from above, then the illustrated catch scene; slow pan across the net"
+      },
+      {
+        "part": "tension",
+        "t": "13.1-15.8s",
+        "text": "In 2018, every single catch attempt missed.",
+        "overlay": "2018: every catch attempt missed",
+        "img": "spacex-6.jpg",
+        "photo": [
+          {
+            "q": [
+              "Falcon 9 payload fairing",
+              "SpaceX fairing half",
+              "Falcon 9 fairing recovery"
+            ],
+            "want": "a SpaceX Falcon 9 payload fairing half (white nose cone shell)"
+          }
+        ],
+        "visual": "open sea near a recovery ship, then a fairing floating; fast cut on 'missed'"
+      },
+      {
+        "part": "tension",
+        "t": "15.8-19.3s",
+        "text": "June 2019: one half finally drops into the net.",
+        "overlay": "June 2019: finally in the net",
+        "img": "falcon-heavy.jpg",
+        "photo": [
+          {
+            "q": [
+              "Mr. Steven ship SpaceX",
+              "GO Ms. Tree",
+              "SpaceX fairing recovery ship net"
+            ],
+            "want": "SpaceX's fairing catcher boat Mr. Steven / GO Ms. Tree with tall arms holding a net"
+          }
+        ],
+        "visual": "Falcon Heavy liftoff, then the net boat at sea; punch-in on 'net'"
+      },
+      {
+        "part": "tension",
+        "t": "19.3-23.1s",
+        "text": "In 2020, two boats caught both halves of one launch.",
+        "overlay": "2020: both halves caught",
+        "photo": [
+          {
+            "q": [
+              "Mr. Steven ship SpaceX",
+              "GO Ms. Tree",
+              "SpaceX fairing recovery ship net"
+            ],
+            "want": "SpaceX's fairing catcher boat Mr. Steven / GO Ms. Tree with tall arms holding a net"
+          },
+          {
+            "q": [
+              "Falcon 9 payload fairing",
+              "SpaceX fairing half",
+              "Falcon 9 fairing recovery"
+            ],
+            "want": "a SpaceX Falcon 9 payload fairing half (white nose cone shell)"
+          }
+        ],
+        "visual": "net boat, then a fairing half; two quick cuts for 'two boats'"
+      },
+      {
+        "part": "tension",
+        "t": "23.1-26.2s",
+        "text": "Then in 2021, SpaceX retired both net boats.",
+        "overlay": "2021: the net boats retire",
+        "photo": [
+          {
+            "q": [
+              "Mr. Steven ship SpaceX",
+              "GO Ms. Tree",
+              "SpaceX fairing recovery ship net"
+            ],
+            "want": "SpaceX's fairing catcher boat Mr. Steven / GO Ms. Tree with tall arms holding a net"
+          }
+        ],
+        "img": "spacex-6.jpg",
+        "visual": "the net boat without arms in port, then a recovery ship at sea; slow zoom out"
+      },
+      {
+        "part": "payoff",
+        "t": "26.2-30s",
+        "text": "Fished from the sea, one half has flown 40 times.",
+        "overlay": "Fished from sea. Flown 40 times",
+        "photo": [
+          {
+            "q": [
+              "Falcon 9 payload fairing",
+              "SpaceX fairing half",
+              "Falcon 9 fairing recovery"
+            ],
+            "want": "a SpaceX Falcon 9 payload fairing half (white nose cone shell)"
+          }
+        ],
+        "img": "spacex-1.jpg",
+        "visual": "a wet fairing half being lifted, then a Falcon on the pad ready to fly again"
+      },
+      {
+        "part": "payoff",
+        "t": "30-33.8s",
+        "text": "Next: a whole Starship. And it all began with this:",
+        "overlay": "Next: catch a whole Starship",
+        "lib": [
+          "starship-booster-catch.jpg",
+          "starship-pad.jpg"
+        ],
+        "visual": "Super Heavy hovering beside the tower's chopstick arms, then the full stack at the tower; ends mid-motion so the replay's 'Catch $6M' lands as the answer"
+      }
+    ],
+    "loop": {
+      "last": "Next: a whole Starship. And it all began with this:",
+      "how": "the last line ends on a colon that the restart completes: '...And it all began with this: Catch six million dollars falling from space.' A different line from the hook, so no word-for-word repeat, and the Starship-tower picture cuts straight to the fairing-and-net picture"
+    },
+    "signals": "Stayed %: the hook is ONE 7-word sentence (~2.3 s; the previous hook was two sentences and ran 5.2 s), a dollar number on frame 1. Watched %/loops: beats of 7-10 single-sentence words (none of the 1.9 s fragments or 5 s blocks the renderer flagged), a picture change inside every beat over 3 s, a smart loop that completes the last line instead of repeating the hook, fewer bright explosion shots so fewer contrast bands.",
+    "learning": {
+      "prev": "why-starship-has-33-engines-not-one-giant-engine-n1-saturn-v-explained",
+      "prev_stats": "published 9 Nov midday; no views/stayed/watched in ops/short-signals.md yet (last update 09:23 UTC). Evening before (first Falcon 9 landing): 319 views, 25.1 likes/1000. Channel average stayed 57% stays the weakest signal vs the 70% goal (watched 71%, length 56 s)",
+      "weakest_hook": "\"30 engines doomed the Soviet Moon rocket. SpaceX uses 33.\" - two sentences with spoken numbers; the render report shows the hook beat ran 5.2 s instead of 0-2 s, so the claim did not land inside the swipe window",
+      "why_stalled": "render report: hook beat 5.2 s, beats 4/5/7 only 1.9-2.2 s (short questions), the final repeated hook 5.3 s, beat 2 had one photo for 3.4 s, contrast bands in 6 of 10 beats (bright explosion/flame photos), and the loop repeated the hook word for word (now forbidden by v4)",
+      "change": "hook cut to one 7-word sentence; every beat one sentence of 7-10 words (~2.7-3.8 s by estimate, nothing under 7 words); 2 pictures in every beat over 3 s; mostly sea/boat/fairing shots instead of flames; smart loop: the last line ends on 'And it all began with this:' which the hook completes"
+    },
+    "en": "Catch six million dollars falling from space. That's a rocket's nose cone. SpaceX wanted it back. So it hired a boat named Mister Steven. And hung a net half a soccer field in size. In 2018, every single catch attempt missed. June 2019: one half finally drops into the net. In 2020, two boats caught both halves of one launch. Then in 2021, SpaceX retired both net boats. Fished from the sea, one half has flown 40 times. Next: a whole Starship. And it all began with this:",
+    "nl": "Vang zes miljoen dollar die uit de ruimte valt. Dat is de neuskegel van een raket. SpaceX wilde hem terug. Dus huurde het een schip, Mister Steven. En hing er een net van een half voetbalveld boven. In 2018 mislukte elke vangpoging. Juni 2019: eindelijk valt een helft in het net. In 2020 vangen twee schepen beide helften van één lancering. Dan, in 2021, gaan beide netschepen met pensioen. Opgevist uit zee heeft één helft al 40 keer gevlogen. Nu: een complete Starship. En het begon allemaal hiermee:"
+  },
   "en": {
-   "sub": "$6M FROM SPACE.",
-   "text": "CATCH IT"
+    "title": "Catching $6 million falling from space: how SpaceX's net boat Mr. Steven chased rocket nose cones, and why it quit",
+    "description": "For almost three years SpaceX tried to catch falling Falcon 9 nose cones in a giant net on a boat. It finally worked in 2019, then the company gave it up. The story explains why, and what it means for catching Starship.",
+    "body": "<p>Somewhere in the Atlantic, in the dark hours of June 25, 2019, half of a rocket's nose cone drifted down under a parachute and dropped into a giant net stretched above the deck of a boat called Ms. Tree. It had taken SpaceX well over a year of misses to get there. Less than two years later, the company sailed its net boats out of port for the last time and never caught a nose cone again. With SpaceX now trying to catch an entire Starship at its launch tower, that strange episode is worth telling, because it shows what a catch is really for.</p>\n<h2>Why would anyone try to catch a nose cone?</h2>\n<p><strong>Because it cost about $6 million, roughly a tenth of a Falcon 9.</strong> The nose cone, or payload fairing, is the clamshell that protects satellites during the climb through the atmosphere. On a Falcon 9 it is about 13 metres tall and 5.2 metres wide, and once the rocket is high enough it splits in two and falls away. Musk framed it as a simple picture: <em>\"Imagine you had $6 million in cash on a pallet flying through the air.\"</em></p>\n<p>SpaceX first brought a fairing half back in March 2017, after the SES-10 launch. The half steered itself with small thrusters and a steerable parachute and settled gently on the water, where a ship picked it up. But the team worried about salt water: it corrodes, and the inside of a fairing has to be clean enough to sit around a customer's satellite. Ideally, the fairing would never touch the sea at all.</p>\n<h2>So how do you catch something that falls from space?</h2>\n<p><strong>With a fast boat, a huge net and a parachute that can be steered.</strong> SpaceX chartered an offshore supply vessel called Mr. Steven, named after the father of its owner's chief executive, and fitted it with tall arms that held a net above the deck, so a fairing half gliding under its parafoil could land in it.</p>\n<p>The first real test, in February 2018, ended with the fairing half intact in the water a few hundred metres from the boat. Musk wrote that slightly bigger parachutes should do the trick. They did not, at least not straight away: the attempts in the first half of 2018 all ended with the fairing in the water. In July 2018 it got stronger arms and a net of about 3,700 square metres, roughly 40,000 square feet or about half a football pitch, four times the original. The hardware was ready. The catch still was not coming.</p>\n<h2>What finally went right?</h2>\n<p><strong>The third Falcon Heavy launch, and a boat with a new name.</strong> In 2019 the vessel was sold to Guice Offshore and renamed GO Ms. Tree. On its first trip with the new owner it caught one half of the fairing from the STP-2 mission, a Falcon Heavy flight that carried 24 satellites. Musk was less formal: <em>\"Ms. Tree caught the Falcon fairing!!\"</em></p>\n<p>A second catch followed in August 2019. SpaceX then added a sister ship, GO Ms. Chief, so both halves of one fairing could be caught. In December 2019 both boats narrowly missed, and in January 2020 one caught its half while the other missed. Only on July 20, 2020, after the ANASIS-II launch, did both boats catch both halves of the same fairing. The last fairing ever caught in a net came down in October 2020.</p>\n<h2>So why did SpaceX give up the nets?</h2>\n<p><strong>Because fishing the halves out of the water turned out to be good enough, and simpler.</strong> The clue had been there since April 2019, when two of SpaceX's other ships pulled both fairing halves of an Arabsat launch out of the sea and the company later flew them again. The catcher boats' arms, meanwhile, were easily damaged in rough seas. SpaceX moved the fairing's vents closer to the seam so less water gets in, made the halves more resistant to salt water, and switched to ordinary ships with cranes that lift the floating halves aboard.</p>\n<p>In February 2021 the arms came off both boats, and on April 6, 2021, Ms. Tree and Ms. Chief left Port Canaveral for the last time. What came next made the decision look obvious.</p>\n<h2>How far did fairing reuse go?</h2>\n<p><strong>Further than almost anyone expected: one fairing half has flown 40 times.</strong> SpaceX marked that milestone in September 2026, according to The Motley Fool, which estimated that this single half saved the company about $120 million by not being rebuilt each time. The lesson was blunt: the expensive part was never the splash, it was building a new fairing for every flight.</p>\n<h2>What does the net boat teach us about Starship's tower catch?</h2>\n<p><strong>A catch is only worth it when it beats the simpler option, and for Starship it does.</strong> A fairing half is a light shell blowing around under a parachute, and a wet one can still fly again. A Super Heavy booster or a Starship upper stage is a full rocket with its own engines that steers itself to the tower to the metre. Catching it means it needs no landing legs, and it lands right where it can be checked, refuelled and stacked again. By late 2026 SpaceX had caught Super Heavy boosters with the tower arms three times, and for Flight 15, aimed at November 2026, it planned to try catching the ship as well. Musk said that if both catches work, it will be the first time all parts of an orbital rocket come back intact. That is a goal, not yet a fact.</p>\n<p>For Tesla fans, who follow SpaceX more closely as Musk's companies draw nearer to each other, the net boat is a familiar kind of story: try the bold idea quickly, measure it honestly, and drop it the moment a simpler one wins. Mr. Steven caught the headlines. The bucket of seawater won the argument.</p>"
   },
   "nl": {
-   "sub": "$6 MILJOEN UIT DE RUIMTE.",
-   "text": "VANG HEM"
-  }
- },
- "short": {
-  "hook": "number",
-  "yt_title_en": "SpaceX Tried to Catch $6M With a Net",
-  "yt_title_nl": "SpaceX Wilde $6 Miljoen Vangen Met een Net",
-  "hooks": [
-   {
-    "text": "Catch six million dollars falling from space.",
-    "type": "number"
-   },
-   {
-    "text": "SpaceX built a net boat. Then it threw the idea away.",
-    "type": "contrast"
-   },
-   {
-    "text": "Why did SpaceX park a giant net in the ocean?",
-    "type": "question"
-   }
-  ],
-  "hook_pick": {
-   "index": 0,
-   "why": "a dollar number and an impossible task in 7 words, one sentence (no pause, ~2.3 s), framed as a dare to the viewer; overlay 'Catch $6M falling from space.' (29 characters) stands whole from frame 1; the contrast hook gives away the twist, the question hook starts slower"
+    "title": "Zes miljoen dollar uit de ruimte vangen: hoe SpaceX met netschip Mr. Steven neuskegels najoeg, en waarom het stopte",
+    "description": "Jarenlang probeerde SpaceX vallende neuskegels van de Falcon 9 te vangen in een reuzennet op een schip. In 2019 lukte het eindelijk, daarna stopte het bedrijf ermee. Waarom, en wat het betekent voor het vangen van Starship.",
+    "body": "<p>Ergens op de Atlantische Oceaan, in de nacht van 25 juni 2019, zakte een halve neuskegel van een raket aan een parachute omlaag en viel recht in een reusachtig net boven het dek van een schip met de naam Ms. Tree. SpaceX had er ruim een jaar aan missers voor nodig gehad. Nog geen twee jaar later voeren de netschepen voor het laatst de haven uit, en er werd nooit meer een neuskegel gevangen. Nu SpaceX probeert een complete Starship met de lanceertoren te vangen, is dat vreemde hoofdstuk het vertellen waard: het laat zien waar vangen eigenlijk voor dient.</p>\n<h2>Waarom zou je een neuskegel willen vangen?</h2>\n<p><strong>Omdat hij zo'n $6 miljoen kostte, ongeveer een tiende van een Falcon 9.</strong> De neuskegel, of 'fairing', is de schelp die satellieten beschermt tijdens de klim door de dampkring. Bij een Falcon 9 is hij zo'n 13 meter hoog en 5,2 meter breed, en zodra de raket hoog genoeg is, splijt hij in tweeën en valt weg. Musk vatte het samen in één beeld: <em>\"Imagine you had $6 million in cash on a pallet flying through the air.\"</em></p>\n<p>In maart 2017, na de lancering van SES-10, haalde SpaceX voor het eerst een fairinghelft terug. Die stuurde zichzelf met kleine stuwraketjes en een bestuurbare parachute en landde zacht op het water, waarna een schip hem oppikte. Maar het team was bang voor zout water: dat tast materiaal aan, en de binnenkant van een fairing moet schoon genoeg zijn om om de satelliet van een klant heen te zitten. Het liefst raakte de fairing de zee dus helemaal niet.</p>\n<h2>Dus hoe vang je iets dat uit de ruimte valt?</h2>\n<p><strong>Met een snel schip, een enorm net en een parachute die je kunt sturen.</strong> SpaceX huurde een bevoorradingsschip, Mr. Steven, vernoemd naar de vader van de topman van de eigenaar. Het kreeg hoge armen die een net boven het dek hielden, waarin een fairinghelft aan zijn glijparachute moest landen.</p>\n<p>De eerste echte test, in februari 2018, eindigde met de fairinghelft heel in het water, een paar honderd meter naast het schip. Musk schreef dat iets grotere parachutes het moesten oplossen. Zo snel ging het niet: alle pogingen in de eerste helft van 2018 eindigden in het water. In juli 2018 kreeg het stevigere armen en een net van ongeveer 3.700 vierkante meter, ruwweg een half voetbalveld en vier keer zo groot als het eerste. De techniek stond klaar. De vangst bleef uit.</p>\n<h2>Wat ging er uiteindelijk wel goed?</h2>\n<p><strong>De derde lancering van de Falcon Heavy, en een schip met een nieuwe naam.</strong> In 2019 werd het schip verkocht aan Guice Offshore en omgedoopt tot GO Ms. Tree. Op de eerste tocht onder de nieuwe eigenaar ving het één helft van de fairing van de STP-2-missie, een Falcon Heavy-vlucht met 24 satellieten aan boord. Musk hield het minder formeel: <em>\"Ms. Tree caught the Falcon fairing!!\"</em></p>\n<p>In augustus 2019 volgde een tweede vangst. Daarna kwam er een zusterschip bij, GO Ms. Chief, zodat beide helften van één fairing gevangen konden worden. In december 2019 misten beide schepen net, en in januari 2020 ving het ene schip zijn helft terwijl het andere misgreep. Pas op 20 juli 2020, na de lancering van ANASIS-II, vingen beide schepen allebei hun helft van dezelfde fairing. De laatste fairing die ooit in een net belandde, kwam in oktober 2020 naar beneden.</p>\n<h2>Dus waarom stopte SpaceX met de netten?</h2>\n<p><strong>Omdat de helften uit het water vissen goed genoeg bleek, en eenvoudiger.</strong> De aanwijzing lag er al sinds april 2019, toen twee andere schepen van SpaceX beide fairinghelften van een Arabsat-lancering uit zee haalden en het bedrijf ze later opnieuw liet vliegen. De armen van de vangschepen raakten bovendien makkelijk beschadigd bij ruwe zee. SpaceX verplaatste de ventilatieopeningen van de fairing naar de naad, zodat er minder water binnenkomt, maakte de helften beter bestand tegen zout water en stapte over op gewone schepen met een kraan die de drijvende helften aan boord tilt.</p>\n<p>In februari 2021 gingen de armen van beide schepen af, en op 6 april 2021 verlieten Ms. Tree en Ms. Chief voor het laatst Port Canaveral. Wat daarna kwam, maakte de keuze achteraf vanzelfsprekend.</p>\n<h2>Hoe ver ging het hergebruik van fairings?</h2>\n<p><strong>Verder dan bijna iemand had verwacht: één fairinghelft heeft 40 keer gevlogen.</strong> SpaceX vierde die mijlpaal in september 2026, schrijft The Motley Fool, dat schat dat deze ene helft het bedrijf zo'n $120 miljoen bespaarde doordat hij niet steeds opnieuw gebouwd hoefde te worden. De les was helder: het dure deel was nooit de plons, maar bij elke vlucht een nieuwe fairing bouwen.</p>\n<h2>Wat leert het netschip ons over de torenvangst van Starship?</h2>\n<p><strong>Vangen loont alleen als het beter is dan de simpele oplossing, en bij Starship is dat zo.</strong> Een fairinghelft is een lichte schelp die aan een parachute door de wind wordt meegenomen, en een natte helft kan gewoon weer vliegen. Een Super Heavy-booster of een Starship-boventrap is een complete raket met eigen motoren die zichzelf op de meter nauwkeurig naar de toren stuurt. Wie hem vangt, heeft geen landingspoten nodig, en de raket staat meteen waar hij gecontroleerd, getankt en weer gestapeld kan worden. Eind 2026 had SpaceX al drie keer een Super Heavy-booster met de torenarmen gevangen, en voor vlucht 15, gepland voor november 2026, wilde het ook het schip zelf vangen. Musk zei dat het, als beide vangsten lukken, de eerste keer is dat alle delen van een orbitale raket heel terugkomen. Dat is een doel, nog geen feit.</p>\n<p>Voor Tesla-fans, die SpaceX steeds nauwer volgen nu de bedrijven van Musk naar elkaar toe groeien, is het netschip een bekend soort verhaal: probeer het gedurfde idee snel, meet eerlijk, en laat het los zodra iets eenvoudigers wint. Mr. Steven haalde de krantenkoppen. Een emmer zeewater won de discussie.</p>"
   },
-  "story": [
-   {
-    "part": "hook",
-    "t": "0-2.7s",
-    "text": "Catch six million dollars falling from space.",
-    "overlay": "Catch $6M falling from space.",
-    "img": "gen/spacex-fairing-catch-net-boat-mr-steven-6-million-nose-cone-story.jpg",
-    "photo": [
-     {
-      "q": [
-       "Falcon 9 payload fairing",
-       "SpaceX fairing half",
-       "Falcon 9 fairing recovery"
-      ],
-      "want": "a SpaceX Falcon 9 payload fairing half (white nose cone shell)"
-     }
-    ],
-    "visual": "hard open on a white fairing half under a parafoil above a net boat at sea; cut to a real fairing half on '$6M'. Only the hook sentence on screen, no logo"
-   },
-   {
-    "part": "tension",
-    "t": "2.7-6.2s",
-    "text": "That's a rocket's nose cone. SpaceX wanted it back.",
-    "overlay": "The nose cone: $6M a launch",
-    "photo": [
-     {
-      "q": [
-       "Falcon 9 payload fairing",
-       "SpaceX fairing half",
-       "Falcon 9 fairing recovery"
-      ],
-      "want": "a SpaceX Falcon 9 payload fairing half (white nose cone shell)"
-     }
-    ],
-    "img": "falcon-heavy.jpg",
-    "visual": "fairing half close-up, then a Falcon launch at sunset; push-in"
-   },
-   {
-    "part": "tension",
-    "t": "6.2-9.3s",
-    "text": "So it hired a boat named Mister Steven.",
-    "overlay": "So: a boat named Mr. Steven",
-    "photo": [
-     {
-      "q": [
-       "Mr. Steven ship SpaceX",
-       "GO Ms. Tree",
-       "SpaceX fairing recovery ship net"
-      ],
-      "want": "SpaceX's fairing catcher boat Mr. Steven / GO Ms. Tree with tall arms holding a net"
-     },
-     {
-      "q": [
-       "Falcon 9 payload fairing",
-       "SpaceX fairing half",
-       "Falcon 9 fairing recovery"
-      ],
-      "want": "a SpaceX Falcon 9 payload fairing half (white nose cone shell)"
-     }
-    ],
-    "visual": "the net boat with its four tall arms in port, then the fairing; quick zoom"
-   },
-   {
-    "part": "tension",
-    "t": "9.3-13.1s",
-    "text": "And hung a net half a soccer field in size.",
-    "overlay": "Net: 40,000 square feet",
-    "photo": [
-     {
-      "q": [
-       "Mr. Steven ship SpaceX",
-       "GO Ms. Tree",
-       "SpaceX fairing recovery ship net"
-      ],
-      "want": "SpaceX's fairing catcher boat Mr. Steven / GO Ms. Tree with tall arms holding a net"
-     }
-    ],
-    "img": "gen/spacex-fairing-catch-net-boat-mr-steven-6-million-nose-cone-story.jpg",
-    "visual": "wide of the stretched net from above, then the illustrated catch scene; slow pan across the net"
-   },
-   {
-    "part": "tension",
-    "t": "13.1-15.8s",
-    "text": "In 2018, every single catch attempt missed.",
-    "overlay": "2018: every catch attempt missed",
-    "img": "spacex-6.jpg",
-    "photo": [
-     {
-      "q": [
-       "Falcon 9 payload fairing",
-       "SpaceX fairing half",
-       "Falcon 9 fairing recovery"
-      ],
-      "want": "a SpaceX Falcon 9 payload fairing half (white nose cone shell)"
-     }
-    ],
-    "visual": "open sea near a recovery ship, then a fairing floating; fast cut on 'missed'"
-   },
-   {
-    "part": "tension",
-    "t": "15.8-19.3s",
-    "text": "June 2019: one half finally drops into the net.",
-    "overlay": "June 2019: finally in the net",
-    "img": "falcon-heavy.jpg",
-    "photo": [
-     {
-      "q": [
-       "Mr. Steven ship SpaceX",
-       "GO Ms. Tree",
-       "SpaceX fairing recovery ship net"
-      ],
-      "want": "SpaceX's fairing catcher boat Mr. Steven / GO Ms. Tree with tall arms holding a net"
-     }
-    ],
-    "visual": "Falcon Heavy liftoff, then the net boat at sea; punch-in on 'net'"
-   },
-   {
-    "part": "tension",
-    "t": "19.3-23.1s",
-    "text": "In 2020, two boats caught both halves of one launch.",
-    "overlay": "2020: both halves caught",
-    "photo": [
-     {
-      "q": [
-       "Mr. Steven ship SpaceX",
-       "GO Ms. Tree",
-       "SpaceX fairing recovery ship net"
-      ],
-      "want": "SpaceX's fairing catcher boat Mr. Steven / GO Ms. Tree with tall arms holding a net"
-     },
-     {
-      "q": [
-       "Falcon 9 payload fairing",
-       "SpaceX fairing half",
-       "Falcon 9 fairing recovery"
-      ],
-      "want": "a SpaceX Falcon 9 payload fairing half (white nose cone shell)"
-     }
-    ],
-    "visual": "net boat, then a fairing half; two quick cuts for 'two boats'"
-   },
-   {
-    "part": "tension",
-    "t": "23.1-26.2s",
-    "text": "Then in 2021, SpaceX retired both net boats.",
-    "overlay": "2021: the net boats retire",
-    "photo": [
-     {
-      "q": [
-       "Mr. Steven ship SpaceX",
-       "GO Ms. Tree",
-       "SpaceX fairing recovery ship net"
-      ],
-      "want": "SpaceX's fairing catcher boat Mr. Steven / GO Ms. Tree with tall arms holding a net"
-     }
-    ],
-    "img": "spacex-6.jpg",
-    "visual": "the net boat without arms in port, then a recovery ship at sea; slow zoom out"
-   },
-   {
-    "part": "payoff",
-    "t": "26.2-30s",
-    "text": "Fished from the sea, one half has flown 40 times.",
-    "overlay": "Fished from sea. Flown 40 times",
-    "photo": [
-     {
-      "q": [
-       "Falcon 9 payload fairing",
-       "SpaceX fairing half",
-       "Falcon 9 fairing recovery"
-      ],
-      "want": "a SpaceX Falcon 9 payload fairing half (white nose cone shell)"
-     }
-    ],
-    "img": "spacex-1.jpg",
-    "visual": "a wet fairing half being lifted, then a Falcon on the pad ready to fly again"
-   },
-   {
-    "part": "payoff",
-    "t": "30-33.8s",
-    "text": "Next: a whole Starship. And it all began with this:",
-    "overlay": "Next: catch a whole Starship",
-    "lib": [
-     "starship-booster-catch.jpg",
-     "starship-pad.jpg"
-    ],
-    "visual": "Super Heavy hovering beside the tower's chopstick arms, then the full stack at the tower; ends mid-motion so the replay's 'Catch $6M' lands as the answer"
-   }
-  ],
-  "loop": {
-   "last": "Next: a whole Starship. And it all began with this:",
-   "how": "the last line ends on a colon that the restart completes: '...And it all began with this: Catch six million dollars falling from space.' A different line from the hook, so no word-for-word repeat, and the Starship-tower picture cuts straight to the fairing-and-net picture"
-  },
-  "signals": "Stayed %: the hook is ONE 7-word sentence (~2.3 s; the previous hook was two sentences and ran 5.2 s), a dollar number on frame 1. Watched %/loops: beats of 7-10 single-sentence words (none of the 1.9 s fragments or 5 s blocks the renderer flagged), a picture change inside every beat over 3 s, a smart loop that completes the last line instead of repeating the hook, fewer bright explosion shots so fewer contrast bands.",
-  "learning": {
-   "prev": "why-starship-has-33-engines-not-one-giant-engine-n1-saturn-v-explained",
-   "prev_stats": "published 9 Nov midday; no views/stayed/watched in ops/short-signals.md yet (last update 09:23 UTC). Evening before (first Falcon 9 landing): 319 views, 25.1 likes/1000. Channel average stayed 57% stays the weakest signal vs the 70% goal (watched 71%, length 56 s)",
-   "weakest_hook": "\"30 engines doomed the Soviet Moon rocket. SpaceX uses 33.\" - two sentences with spoken numbers; the render report shows the hook beat ran 5.2 s instead of 0-2 s, so the claim did not land inside the swipe window",
-   "why_stalled": "render report: hook beat 5.2 s, beats 4/5/7 only 1.9-2.2 s (short questions), the final repeated hook 5.3 s, beat 2 had one photo for 3.4 s, contrast bands in 6 of 10 beats (bright explosion/flame photos), and the loop repeated the hook word for word (now forbidden by v4)",
-   "change": "hook cut to one 7-word sentence; every beat one sentence of 7-10 words (~2.7-3.8 s by estimate, nothing under 7 words); 2 pictures in every beat over 3 s; mostly sea/boat/fairing shots instead of flames; smart loop: the last line ends on 'And it all began with this:' which the hook completes"
-  },
-  "en": "Catch six million dollars falling from space. That's a rocket's nose cone. SpaceX wanted it back. So it hired a boat named Mister Steven. And hung a net half a soccer field in size. In 2018, every single catch attempt missed. June 2019: one half finally drops into the net. In 2020, two boats caught both halves of one launch. Then in 2021, SpaceX retired both net boats. Fished from the sea, one half has flown 40 times. Next: a whole Starship. And it all began with this:",
-  "nl": "Vang zes miljoen dollar die uit de ruimte valt. Dat is de neuskegel van een raket. SpaceX wilde hem terug. Dus huurde het een schip, Mister Steven. En hing er een net van een half voetbalveld boven. In 2018 mislukte elke vangpoging. Juni 2019: eindelijk valt een helft in het net. In 2020 vangen twee schepen beide helften van één lancering. Dan, in 2021, gaan beide netschepen met pensioen. Opgevist uit zee heeft één helft al 40 keer gevlogen. Nu: een complete Starship. En het begon allemaal hiermee:"
- },
- "en": {
-  "title": "Catching $6 million falling from space: how SpaceX's net boat Mr. Steven chased rocket nose cones, and why it quit",
-  "description": "For almost three years SpaceX tried to catch falling Falcon 9 nose cones in a giant net on a boat. It finally worked in 2019, then the company gave it up. The story explains why, and what it means for catching Starship.",
-  "body": "<p>Somewhere in the Atlantic, in the dark hours of June 25, 2019, half of a rocket's nose cone drifted down under a parachute and dropped into a giant net stretched above the deck of a boat called Ms. Tree. It had taken SpaceX well over a year of misses to get there. Less than two years later, the company sailed its net boats out of port for the last time and never caught a nose cone again. With SpaceX now trying to catch an entire Starship at its launch tower, that strange episode is worth telling, because it shows what a catch is really for.</p>\n<h2>Why would anyone try to catch a nose cone?</h2>\n<p><strong>Because it cost about $6 million, roughly a tenth of a Falcon 9.</strong> The nose cone, or payload fairing, is the clamshell that protects satellites during the climb through the atmosphere. On a Falcon 9 it is about 13 metres tall and 5.2 metres wide, and once the rocket is high enough it splits in two and falls away. Musk framed it as a simple picture: <em>\"Imagine you had $6 million in cash on a pallet flying through the air.\"</em></p>\n<p>SpaceX first brought a fairing half back in March 2017, after the SES-10 launch. The half steered itself with small thrusters and a steerable parachute and settled gently on the water, where a ship picked it up. But the team worried about salt water: it corrodes, and the inside of a fairing has to be clean enough to sit around a customer's satellite. Ideally, the fairing would never touch the sea at all.</p>\n<h2>So how do you catch something that falls from space?</h2>\n<p><strong>With a fast boat, a huge net and a parachute that can be steered.</strong> SpaceX chartered an offshore supply vessel called Mr. Steven, named after the father of its owner's chief executive, and fitted it with tall arms that held a net above the deck, so a fairing half gliding under its parafoil could land in it.</p>\n<p>The first real test, in February 2018, ended with the fairing half intact in the water a few hundred metres from the boat. Musk wrote that slightly bigger parachutes should do the trick. They did not, at least not straight away: the attempts in the first half of 2018 all ended with the fairing in the water. In July 2018 it got stronger arms and a net of about 3,700 square metres, roughly 40,000 square feet or about half a football pitch, four times the original. The hardware was ready. The catch still was not coming.</p>\n<h2>What finally went right?</h2>\n<p><strong>The third Falcon Heavy launch, and a boat with a new name.</strong> In 2019 the vessel was sold to Guice Offshore and renamed GO Ms. Tree. On its first trip with the new owner it caught one half of the fairing from the STP-2 mission, a Falcon Heavy flight that carried 24 satellites. Musk was less formal: <em>\"Ms. Tree caught the Falcon fairing!!\"</em></p>\n<p>A second catch followed in August 2019. SpaceX then added a sister ship, GO Ms. Chief, so both halves of one fairing could be caught. In December 2019 both boats narrowly missed, and in January 2020 one caught its half while the other missed. Only on July 20, 2020, after the ANASIS-II launch, did both boats catch both halves of the same fairing. The last fairing ever caught in a net came down in October 2020.</p>\n<h2>So why did SpaceX give up the nets?</h2>\n<p><strong>Because fishing the halves out of the water turned out to be good enough, and simpler.</strong> The clue had been there since April 2019, when two of SpaceX's other ships pulled both fairing halves of an Arabsat launch out of the sea and the company later flew them again. The catcher boats' arms, meanwhile, were easily damaged in rough seas. SpaceX moved the fairing's vents closer to the seam so less water gets in, made the halves more resistant to salt water, and switched to ordinary ships with cranes that lift the floating halves aboard.</p>\n<p>In February 2021 the arms came off both boats, and on April 6, 2021, Ms. Tree and Ms. Chief left Port Canaveral for the last time. What came next made the decision look obvious.</p>\n<h2>How far did fairing reuse go?</h2>\n<p><strong>Further than almost anyone expected: one fairing half has flown 40 times.</strong> SpaceX marked that milestone in September 2026, according to The Motley Fool, which estimated that this single half saved the company about $120 million by not being rebuilt each time. The lesson was blunt: the expensive part was never the splash, it was building a new fairing for every flight.</p>\n<h2>What does the net boat teach us about Starship's tower catch?</h2>\n<p><strong>A catch is only worth it when it beats the simpler option, and for Starship it does.</strong> A fairing half is a light shell blowing around under a parachute, and a wet one can still fly again. A Super Heavy booster or a Starship upper stage is a full rocket with its own engines that steers itself to the tower to the metre. Catching it means it needs no landing legs, and it lands right where it can be checked, refuelled and stacked again. By late 2026 SpaceX had caught Super Heavy boosters with the tower arms three times, and for Flight 15, aimed at November 2026, it planned to try catching the ship as well. Musk said that if both catches work, it will be the first time all parts of an orbital rocket come back intact. That is a goal, not yet a fact.</p>\n<p>For Tesla fans, who follow SpaceX more closely as Musk's companies draw nearer to each other, the net boat is a familiar kind of story: try the bold idea quickly, measure it honestly, and drop it the moment a simpler one wins. Mr. Steven caught the headlines. The bucket of seawater won the argument.</p>"
- },
- "nl": {
-  "title": "Zes miljoen dollar uit de ruimte vangen: hoe SpaceX met netschip Mr. Steven neuskegels najoeg, en waarom het stopte",
-  "description": "Jarenlang probeerde SpaceX vallende neuskegels van de Falcon 9 te vangen in een reuzennet op een schip. In 2019 lukte het eindelijk, daarna stopte het bedrijf ermee. Waarom, en wat het betekent voor het vangen van Starship.",
-  "body": "<p>Ergens op de Atlantische Oceaan, in de nacht van 25 juni 2019, zakte een halve neuskegel van een raket aan een parachute omlaag en viel recht in een reusachtig net boven het dek van een schip met de naam Ms. Tree. SpaceX had er ruim een jaar aan missers voor nodig gehad. Nog geen twee jaar later voeren de netschepen voor het laatst de haven uit, en er werd nooit meer een neuskegel gevangen. Nu SpaceX probeert een complete Starship met de lanceertoren te vangen, is dat vreemde hoofdstuk het vertellen waard: het laat zien waar vangen eigenlijk voor dient.</p>\n<h2>Waarom zou je een neuskegel willen vangen?</h2>\n<p><strong>Omdat hij zo'n $6 miljoen kostte, ongeveer een tiende van een Falcon 9.</strong> De neuskegel, of 'fairing', is de schelp die satellieten beschermt tijdens de klim door de dampkring. Bij een Falcon 9 is hij zo'n 13 meter hoog en 5,2 meter breed, en zodra de raket hoog genoeg is, splijt hij in tweeën en valt weg. Musk vatte het samen in één beeld: <em>\"Imagine you had $6 million in cash on a pallet flying through the air.\"</em></p>\n<p>In maart 2017, na de lancering van SES-10, haalde SpaceX voor het eerst een fairinghelft terug. Die stuurde zichzelf met kleine stuwraketjes en een bestuurbare parachute en landde zacht op het water, waarna een schip hem oppikte. Maar het team was bang voor zout water: dat tast materiaal aan, en de binnenkant van een fairing moet schoon genoeg zijn om om de satelliet van een klant heen te zitten. Het liefst raakte de fairing de zee dus helemaal niet.</p>\n<h2>Dus hoe vang je iets dat uit de ruimte valt?</h2>\n<p><strong>Met een snel schip, een enorm net en een parachute die je kunt sturen.</strong> SpaceX huurde een bevoorradingsschip, Mr. Steven, vernoemd naar de vader van de topman van de eigenaar. Het kreeg hoge armen die een net boven het dek hielden, waarin een fairinghelft aan zijn glijparachute moest landen.</p>\n<p>De eerste echte test, in februari 2018, eindigde met de fairinghelft heel in het water, een paar honderd meter naast het schip. Musk schreef dat iets grotere parachutes het moesten oplossen. Zo snel ging het niet: alle pogingen in de eerste helft van 2018 eindigden in het water. In juli 2018 kreeg het stevigere armen en een net van ongeveer 3.700 vierkante meter, ruwweg een half voetbalveld en vier keer zo groot als het eerste. De techniek stond klaar. De vangst bleef uit.</p>\n<h2>Wat ging er uiteindelijk wel goed?</h2>\n<p><strong>De derde lancering van de Falcon Heavy, en een schip met een nieuwe naam.</strong> In 2019 werd het schip verkocht aan Guice Offshore en omgedoopt tot GO Ms. Tree. Op de eerste tocht onder de nieuwe eigenaar ving het één helft van de fairing van de STP-2-missie, een Falcon Heavy-vlucht met 24 satellieten aan boord. Musk hield het minder formeel: <em>\"Ms. Tree caught the Falcon fairing!!\"</em></p>\n<p>In augustus 2019 volgde een tweede vangst. Daarna kwam er een zusterschip bij, GO Ms. Chief, zodat beide helften van één fairing gevangen konden worden. In december 2019 misten beide schepen net, en in januari 2020 ving het ene schip zijn helft terwijl het andere misgreep. Pas op 20 juli 2020, na de lancering van ANASIS-II, vingen beide schepen allebei hun helft van dezelfde fairing. De laatste fairing die ooit in een net belandde, kwam in oktober 2020 naar beneden.</p>\n<h2>Dus waarom stopte SpaceX met de netten?</h2>\n<p><strong>Omdat de helften uit het water vissen goed genoeg bleek, en eenvoudiger.</strong> De aanwijzing lag er al sinds april 2019, toen twee andere schepen van SpaceX beide fairinghelften van een Arabsat-lancering uit zee haalden en het bedrijf ze later opnieuw liet vliegen. De armen van de vangschepen raakten bovendien makkelijk beschadigd bij ruwe zee. SpaceX verplaatste de ventilatieopeningen van de fairing naar de naad, zodat er minder water binnenkomt, maakte de helften beter bestand tegen zout water en stapte over op gewone schepen met een kraan die de drijvende helften aan boord tilt.</p>\n<p>In februari 2021 gingen de armen van beide schepen af, en op 6 april 2021 verlieten Ms. Tree en Ms. Chief voor het laatst Port Canaveral. Wat daarna kwam, maakte de keuze achteraf vanzelfsprekend.</p>\n<h2>Hoe ver ging het hergebruik van fairings?</h2>\n<p><strong>Verder dan bijna iemand had verwacht: één fairinghelft heeft 40 keer gevlogen.</strong> SpaceX vierde die mijlpaal in september 2026, schrijft The Motley Fool, dat schat dat deze ene helft het bedrijf zo'n $120 miljoen bespaarde doordat hij niet steeds opnieuw gebouwd hoefde te worden. De les was helder: het dure deel was nooit de plons, maar bij elke vlucht een nieuwe fairing bouwen.</p>\n<h2>Wat leert het netschip ons over de torenvangst van Starship?</h2>\n<p><strong>Vangen loont alleen als het beter is dan de simpele oplossing, en bij Starship is dat zo.</strong> Een fairinghelft is een lichte schelp die aan een parachute door de wind wordt meegenomen, en een natte helft kan gewoon weer vliegen. Een Super Heavy-booster of een Starship-boventrap is een complete raket met eigen motoren die zichzelf op de meter nauwkeurig naar de toren stuurt. Wie hem vangt, heeft geen landingspoten nodig, en de raket staat meteen waar hij gecontroleerd, getankt en weer gestapeld kan worden. Eind 2026 had SpaceX al drie keer een Super Heavy-booster met de torenarmen gevangen, en voor vlucht 15, gepland voor november 2026, wilde het ook het schip zelf vangen. Musk zei dat het, als beide vangsten lukken, de eerste keer is dat alle delen van een orbitale raket heel terugkomen. Dat is een doel, nog geen feit.</p>\n<p>Voor Tesla-fans, die SpaceX steeds nauwer volgen nu de bedrijven van Musk naar elkaar toe groeien, is het netschip een bekend soort verhaal: probeer het gedurfde idee snel, meet eerlijk, en laat het los zodra iets eenvoudigers wint. Mr. Steven haalde de krantenkoppen. Een emmer zeewater won de discussie.</p>"
- }
+  "image": "gen/spacex-fairing-catch-net-boat-mr-steven-6-million-nose-cone-story.jpg"
 }

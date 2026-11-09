@@ -685,5 +685,50 @@
         "src": "lib/starship-launch.jpg"
       }
     ]
+  },
+  "gen/spacex-fairing-catch-net-boat-mr-steven-6-million-nose-cone-story.jpg": {
+    "article": "spacex-fairing-catch-net-boat-mr-steven-6-million-nose-cone-story",
+    "model": "gemini-3.1-flash-image",
+    "made": "2026-11-09",
+    "references": [
+      {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Falcon_9_Payload_Fairing_with_SAOCOM_1B_01.jpg/1280px-Falcon_9_Payload_Fairing_with_SAOCOM_1B_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page": "https://commons.wikimedia.org/wiki/File:Falcon_9_Payload_Fairing_with_SAOCOM_1B_01.jpg",
+        "license": "CC BY 4.0",
+        "commons": "Falcon 9 fairing"
+      },
+      {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/SpaceX_Fairing_test.jpg/1280px-SpaceX_Fairing_test.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page": "https://commons.wikimedia.org/wiki/File:SpaceX_Fairing_test.jpg",
+        "license": "CC0",
+        "commons": "SpaceX fairing recovery Mr Steven"
+      }
+    ]
+  },
+  "gen/spacex-fairing-catch-net-boat-mr-steven-6-million-nose-cone-story-x2-11092028.jpg": {
+    "article": "spacex-fairing-catch-net-boat-mr-steven-6-million-nose-cone-story",
+    "model": "gpt-image-2.5-flare",
+    "made": "2026-11-09",
+    "references": [
+      {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/SpaceX_Fairing_test.jpg/1280px-SpaceX_Fairing_test.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page": "https://commons.wikimedia.org/wiki/File:SpaceX_Fairing_test.jpg",
+        "license": "CC0",
+        "commons": "SpaceX fairing recovery Mr Steven"
+      }
+    ]
+  },
+  "gen/spacex-fairing-catch-net-boat-mr-steven-6-million-nose-cone-story-x3-11092029.jpg": {
+    "article": "spacex-fairing-catch-net-boat-mr-steven-6-million-nose-cone-story",
+    "model": "gpt-image-2.5-sunburst",
+    "made": "2026-11-09",
+    "references": [
+      {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/SpaceX_Fairing_test.jpg/1280px-SpaceX_Fairing_test.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page": "https://commons.wikimedia.org/wiki/File:SpaceX_Fairing_test.jpg",
+        "license": "CC0",
+        "commons": "SpaceX fairing recovery Mr Steven"
+      }
+    ]
   }
 }

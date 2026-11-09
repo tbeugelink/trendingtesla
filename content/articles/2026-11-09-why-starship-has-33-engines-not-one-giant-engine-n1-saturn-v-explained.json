@@ -22,6 +22,9 @@
     }
   ],
   "images": [
+    "gen/why-starship-has-33-engines-not-one-giant-engine-n1-saturn-v-explained.jpg",
+    "gen/why-starship-has-33-engines-not-one-giant-engine-n1-saturn-v-explained-x3-11091159.jpg",
+    "gen/why-starship-has-33-engines-not-one-giant-engine-n1-saturn-v-explained-x2-11091157.jpg",
     "lib/starship-booster-catch.jpg",
     "lib/starship-launch.jpg",
     "lib/starship-pad.jpg",
@@ -45,13 +48,17 @@
     "extra": [
       {
         "prompt": "A clean rocket engine factory hall with a long row of identical compact SpaceX Raptor engines on stands, shiny metal pipes and bell nozzles, bright even light, a worker in the far background for scale, production-line feel",
-        "describe": "a row of identical Raptor rocket engines on a production line"
+        "describe": "a row of identical Raptor rocket engines on a production line",
+        "file": "gen/why-starship-has-33-engines-not-one-giant-engine-n1-saturn-v-explained-x2-11091157.jpg"
       },
       {
         "prompt": "Night static fire at Starbase seen from the beach: a stainless steel Super Heavy booster held down on the launch mount with all its engines firing, a huge wall of glowing steam rolling sideways, floodlit launch tower beside it, stars above",
-        "describe": "a Super Heavy booster firing all 33 engines on the pad in a static fire at night"
+        "describe": "a Super Heavy booster firing all 33 engines on the pad in a static fire at night",
+        "file": "gen/why-starship-has-33-engines-not-one-giant-engine-n1-saturn-v-explained-x3-11091159.jpg"
       }
-    ]
+    ],
+    "done": true,
+    "model": "gemini-3.1-flash-image"
   },
   "label": {
     "style": "c",
@@ -1348,5 +1355,6 @@
     ],
     "yt_title_en": "Why Does Starship Have 33 Engines? Soviet N1 vs Saturn V vs Super Heavy",
     "yt_title_nl": "Waarom Heeft Starship 33 Motoren? N1 vs Saturnus V vs Super Heavy"
-  }
+  },
+  "image": "gen/why-starship-has-33-engines-not-one-giant-engine-n1-saturn-v-explained.jpg"
 }

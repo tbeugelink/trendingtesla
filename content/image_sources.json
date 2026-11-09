@@ -646,5 +646,44 @@
         "commons": "ORBCOMM-2 Falcon 9 first stage Landing Zone 1"
       }
     ]
+  },
+  "gen/why-starship-has-33-engines-not-one-giant-engine-n1-saturn-v-explained.jpg": {
+    "article": "why-starship-has-33-engines-not-one-giant-engine-n1-saturn-v-explained",
+    "model": "gemini-3.1-flash-image",
+    "made": "2026-11-09",
+    "references": [
+      {
+        "src": "lib/starship-booster-catch.jpg"
+      },
+      {
+        "src": "lib/starship-launch.jpg"
+      }
+    ]
+  },
+  "gen/why-starship-has-33-engines-not-one-giant-engine-n1-saturn-v-explained-x2-11091157.jpg": {
+    "article": "why-starship-has-33-engines-not-one-giant-engine-n1-saturn-v-explained",
+    "model": "gemini-3.1-flash-image",
+    "made": "2026-11-09",
+    "references": [
+      {
+        "src": "lib/starship-booster-catch.jpg"
+      },
+      {
+        "src": "lib/starship-launch.jpg"
+      }
+    ]
+  },
+  "gen/why-starship-has-33-engines-not-one-giant-engine-n1-saturn-v-explained-x3-11091159.jpg": {
+    "article": "why-starship-has-33-engines-not-one-giant-engine-n1-saturn-v-explained",
+    "model": "gemini-3.1-flash-image",
+    "made": "2026-11-09",
+    "references": [
+      {
+        "src": "lib/starship-booster-catch.jpg"
+      },
+      {
+        "src": "lib/starship-launch.jpg"
+      }
+    ]
   }
 }

@@ -556,6 +556,43 @@ def pop_img(txt):
     return im
 
 
+OV = "\x00"  # marks a beat overlay (the full statement of the beat), not a key word
+
+
+def overlay_img(txt):
+    """William's sound-off text (9 Nov 2026): the beat's full statement, big white letters with a thick black edge,
+    numbers in yellow, centred, up to 4 lines; stays on screen for the whole beat."""
+    words = txt.split()
+    f = S.font(S.FB, 104)
+    while True:
+        lines, cur = [], ""
+        for w in words:
+            t = (cur + " " + w).strip()
+            if f.getlength(t) <= W * 0.88 or not cur:
+                cur = t
+            else:
+                lines.append(cur)
+                cur = w
+        lines.append(cur)
+        if len(lines) <= 4 or f.size <= 64:
+            break
+        f = S.font(S.FB, f.size - 8)
+    lh = int(f.size * 1.08)
+    im = Image.new("RGBA", (W, POP_H), (0, 0, 0, 0))
+    d = ImageDraw.Draw(im)
+    y = (POP_H - lh * len(lines)) / 2 - f.size * 0.1
+    sp = f.getlength(" ")
+    for ln in lines:
+        x = (W - f.getlength(ln)) / 2
+        for w in ln.split():
+            col = (255, 214, 0) if re.search(r"\d|\$|%", w) else (255, 255, 255)
+            d.text((x + 6, y + 8), w, font=f, fill=(0, 0, 0, 140))
+            d.text((x, y), w, font=f, fill=col, stroke_width=10, stroke_fill=(0, 0, 0))
+            x += f.getlength(w) + sp
+        y += lh
+    return im
+
+
 def find_pops(b, words, t0):
     """Pop words of a beat: its "pop" list (words or phrases as spoken, shown as written in "pop") or, without
     one, words in capitals and numbers. Returns (start, end, text) on the video timeline."""
@@ -665,7 +702,7 @@ def brand_img():
 
 def check_brand(out, logo):
     """Stop when the logo is missing in the finished video (it must never silently disappear again)."""
-    fr = subprocess.run(["ffmpeg", "-loglevel", "error", "-ss", "1.0", "-i", str(out), "-frames:v", "1", "-f", "rawvideo",
+    fr = subprocess.run(["ffmpeg", "-loglevel", "error", "-ss", "3.0", "-i", str(out), "-frames:v", "1", "-f", "rawvideo",
                          "-pix_fmt", "rgb24", "-"], capture_output=True, check=True).stdout
     img = Image.frombytes("RGB", (W, H), fr[:W * H * 3])
     pts = [(x, y) for x in range(0, W, 2) for y in range(0, 200, 2)
@@ -840,6 +877,14 @@ def main():
     if hook_text:
         pops = [(0.0, hook_end, hook_text)] + [p for p in pops if p[0] >= hook_end - 0.05]
         label_end = 0.0
+    if any(b.get("overlay") for b in beats):  # one permanent statement per beat, from frame 1 to the end
+        pops = []
+        for i, b in enumerate(beats):
+            if b.get("overlay"):
+                t0 = 0.0 if i == 0 else b["_t0"]
+                t1 = beats[i + 1]["_t0"] if i + 1 < len(beats) else body_end
+                pops.append((t0, t1, OV + b["overlay"].strip()))
+        label_end = 0.0
     covered = sum(min(p1, body_end) - max(p0, 0) for p0, p1, _ in pops if p1 > p0) / max(body_end, 0.1)
     print(f"text on screen {covered * 100:.0f}% of the Short")
     if covered < 0.7:
@@ -877,7 +922,11 @@ def main():
         if tt < label_end:  # the label alone for a moment: what the story is about
             fr.alpha_composite(label)
         cg = None if pg else next((c for c in caps if c[0] <= tt < c[1] + 0.15), None)
-        if pg:  # a key word pops in big (scale 1.35 -> 1 in 0.15 s) and replaces the caption while it is spoken
+        if pg and pg[2].startswith(OV):  # the beat's statement: no pop-in, readable from its first frame
+            if pg[2] not in capimgs:
+                capimgs[pg[2]] = overlay_img(pg[2][1:])
+            fr.alpha_composite(capimgs[pg[2]], (0, int(H * 0.30)))
+        elif pg:  # a key word pops in big (scale 1.35 -> 1 in 0.15 s) and replaces the caption while it is spoken
             key = "POP " + pg[2]
             if key not in capimgs:
                 capimgs[key] = pop_img(pg[2])
@@ -894,7 +943,8 @@ def main():
                 capimgs[key] = caption_img(cg[2])
             # opening shot: captions above the label; afterwards in the usual place
             fr.alpha_composite(capimgs[key], (0, int(ltop - 300) if bi == 0 else int(H * 0.60)))
-        fr.alpha_composite(logo, (0, 0))
+        if tt >= 2.0:  # no logo in the first 2 seconds: only the hook (William, 9 Nov 2026)
+            fr.alpha_composite(logo, (0, 0))
         enc.stdin.write(fr.convert("RGB").tobytes())
     enc.stdin.close()
     if enc.wait():

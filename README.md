@@ -8,6 +8,39 @@ Static, bilingual (EN at `/`, NL at `/nl/`) Tesla news site.
 
 `public/` is generated — never edit it by hand, always rebuild.
 
+## SHORT FORMAT v3 (William, 9 Nov 2026) - the model for every Short; no exceptions, no interpretation
+
+Earlier versions failed because the hook came too late and there was too little (or no) big text on screen. That is
+forbidden from now on. Rules 1-5 of "HARD RULES" below stay, with this format:
+- **Hook in 0-2 s**: the first spoken words ARE the sharpest claim or the most surprising fact; no "In 2015...".
+- **Every beat has an `"overlay"`**: the exact on-screen sentence for that beat (5-12 words, it may be the spoken
+  line itself or a condensed version). The renderer shows it big (white with a black edge, numbers in yellow,
+  centred) for the WHOLE beat, from frame 1 to the next beat: 100% of the seconds carry text, fully understandable
+  without sound. The old "pop" key words and `hook_text` are not used when beats have overlays.
+- **A beat lasts 2.5-4 s** (8-12 spoken words); a beat that runs longer gets 2 pictures (`"lib"` with 2 files) so
+  something changes every 2.5-4 s.
+- **The last beat repeats the hook**: the same spoken line and the same overlay as beat 1, so the Short loops.
+- No logo and no label in the first 2 seconds: only the hook (the renderer does this).
+- Description only: "like and subscribe", "full story on TrendingTesla.com".
+
+Required in `"short"`: `yt_title_en`/`yt_title_nl` (the title), `hooks` (3 variants) + `hook_pick` {index, why},
+`story` beats {"part", "t": "0-2s", "text" (voice), "overlay" (exact text), "lib"/"img"/"photo", "visual"},
+`signals`, `learning` {"prev", "prev_stats", "weakest_hook", "why_stalled", "change"}, `en`/`nl` (spoken text).
+
+Model (William's rewrite of the first Falcon 9 landing Short):
+```
+0-2s   overlay "Two crashes. One explosion. Then it landed."            voice: the same line
+2-6s   overlay "January 2015: steering fins ran out of fluid"           voice: "January 2015. The first booster
+                                                                        slams into the ship. Its steering fins ran out of fluid."
+6-10s  overlay "April: lands and tips over"                             voice: "April. The next one lands and tips over."
+10-14s overlay "June: the whole rocket breaks apart"                    voice: "June. The whole rocket breaks apart."
+14-20s overlay "December 21: first upright landing of an orbital rocket" voice: "December 21st. A booster flies back to
+                                                                        Florida and lands upright. A first for an orbital rocket."
+20-26s overlay "Today one booster has flown 37 times. The first one is a monument."
+26-30s overlay "Two crashes. One explosion. Then it landed."            voice: the same line (loop)
+```
+Visuals: fast cuts between photos of the crashes and the landing; nothing else in the first 2 seconds.
+
 ## HARD RULES (William, 8 Nov 2026, afternoon) - sharpen the ALGORITHM RULES below; no exceptions
 
 The previous versions stalled because the hook came too late, text overlays were missing and the density was too

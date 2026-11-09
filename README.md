@@ -8,6 +8,34 @@ Static, bilingual (EN at `/`, NL at `/nl/`) Tesla news site.
 
 `public/` is generated — never edit it by hand, always rebuild.
 
+## SHORT FORMAT v3.1 (William, 9 Nov 2026) - additions to v3 below; no exceptions
+
+Text overlays
+- At most 2 lines per beat; a sentence never runs over 3 lines. Write overlays of at most ~36 characters
+  ("December 21: first upright orbital landing" is the limit; better shorter). The renderer never shrinks text
+  below 72 px: a longer overlay is split into two halves of the beat and reported.
+- The hook overlay must fit on 2 lines too (max ~36 characters), so it stands WHOLE for the first 2 seconds.
+- Numbers and years are always yellow (the renderer does this for every word with a digit, $, %, EUR or GBP sign).
+- Readable on every background: on bright photos (explosions, sunsets) the renderer adds a soft semi-transparent
+  dark band behind the text and reports in which beats.
+
+Timing and density
+- Every beat lasts at least 2.5 and at most 4 seconds (about 7-11 spoken words).
+- A beat longer than 3 seconds MUST change photo: give it 2 pictures (`"lib"` with 2 files, or "img" + "lib").
+  Never 4+ seconds of the same still.
+- The hook sentence stands alone for the full first 2 seconds: no logo, no date, no extra label.
+
+Loop
+- The very last beat repeats EXACTLY the same hook sentence (voice "text" and "overlay") as beat 1. No other wording.
+
+Self-learning output (required in every summary to William)
+- Which text rules were applied (e.g. "sentence shortened to 2 lines", "overlay of beat 5 shortened to 34 characters").
+- Whether contrast adjustments are expected (bright photos: explosion, sunset) and in which beats.
+- Whether all beats stay within 2.5-4 seconds (estimate at ~2.6 spoken words per second).
+After rendering, the renderer writes what it actually did to `ops/short-reports/<slug>.txt` (splits, contrast
+bands, beats outside 2.5-4 s, beats with one photo over 3 s, loop check); the next task reads the previous report
+in its self-learning step.
+
 ## SHORT FORMAT v3 (William, 9 Nov 2026) - the model for every Short; no exceptions, no interpretation
 
 Earlier versions failed because the hook came too late and there was too little (or no) big text on screen. That is

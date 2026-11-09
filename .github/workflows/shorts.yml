@@ -211,7 +211,7 @@ jobs:
       - name: Put the new videos on the site
         if: always() && steps.find.outputs.slugs != '' && steps.find.outputs.paused != '1'
         run: |
-          [ -z "$(git status --porcelain content)" ] && exit 0
+          ls video/out/*-short-report.txt >/dev/null 2>&1 || { [ -z "$(git status --porcelain content)" ] && exit 0; }
           git config user.name "TrendingTesla bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           # other video runs may have pushed meanwhile: merge our new videos into the newest lists
@@ -220,10 +220,13 @@ jobs:
           for i in 1 2 3 4 5 6; do
             git fetch -q origin main && git reset -q --hard origin/main
             python3 tools/merge_video_lists.py apply "$RUNNER_TEMP/vl"
-            [ -z "$(git status --porcelain content)" ] && exit 0
+            # what the Short renderer actually did (overlay splits, contrast bands, timing, loop): read by the next task
+            mkdir -p ops/short-reports
+            for f in video/out/*-en-short-report.txt; do [ -f "$f" ] && cp "$f" "ops/short-reports/$(basename "$f" -en-short-report.txt).txt"; done
+            [ -z "$(git status --porcelain content ops/short-reports)" ] && exit 0
             python3 build.py > /dev/null
             git checkout -- $(git diff --name-only -- public | grep -E '\.(jpg|jpeg|png|webp)$') 2>/dev/null || true
-            git add content public && git commit -qm "Site: new YouTube videos" && git push -q origin HEAD:main && exit 0
+            git add content public ops/short-reports && git commit -qm "Site: new YouTube videos" && git push -q origin HEAD:main && exit 0
             sleep $((10 + RANDOM % 20))
           done
           exit 1

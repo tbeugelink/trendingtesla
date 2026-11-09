@@ -559,33 +559,74 @@ def pop_img(txt):
 OV = "\x00"  # marks a beat overlay (the full statement of the beat), not a key word
 
 
-def overlay_img(txt):
-    """William's sound-off text (9 Nov 2026): the beat's full statement, big white letters with a thick black edge,
-    numbers in yellow, centred, up to 4 lines; stays on screen for the whole beat."""
+OV_MIN = 72  # smallest overlay font: below this it gets too small, so the sentence is split instead
+
+
+def ov_lines(txt, size):
+    f = S.font(S.FB, size)
+    lines, cur = [], ""
+    for w in txt.split():
+        t = (cur + " " + w).strip()
+        if f.getlength(t) <= W * 0.92 or not cur:
+            cur = t
+        else:
+            lines.append(cur)
+            cur = w
+    lines.append(cur)
+    return lines
+
+
+def ov_fits(txt):
+    return len(ov_lines(txt, OV_MIN)) <= 2
+
+
+def ov_split(txt):
+    """Split a sentence that needs 3+ lines into two parts that each fit on 2 lines (at a colon or full stop if
+    possible, otherwise in the middle)."""
+    words = txt.split()
+    best = None
+    for k in range(1, len(words)):
+        a, b = " ".join(words[:k]), " ".join(words[k:])
+        if not (ov_fits(a) and ov_fits(b)):
+            continue
+        score = abs(len(a) - len(b)) - (40 if words[k - 1][-1:] in ":.;,!?" else 0)
+        if best is None or score < best[0]:
+            best = (score, a, b)
+    return [best[1], best[2]] if best else [txt]
+
+
+def overlay_img(txt, dark=False):
+    """William's sound-off text (9 Nov 2026, v3.1): the beat's statement, big white letters with a thick black edge,
+    numbers and years in yellow, centred, at most 2 lines; stays on screen for the whole beat. dark=True puts a soft
+    semi-transparent band behind it (bright backgrounds: explosions, sunsets)."""
     words = txt.split()
     f = S.font(S.FB, 104)
     while True:
         lines, cur = [], ""
         for w in words:
             t = (cur + " " + w).strip()
-            if f.getlength(t) <= W * 0.88 or not cur:
+            if f.getlength(t) <= W * 0.92 or not cur:
                 cur = t
             else:
                 lines.append(cur)
                 cur = w
         lines.append(cur)
-        if len(lines) <= 4 or f.size <= 64:
+        if len(lines) <= 2 or f.size <= OV_MIN:
             break
-        f = S.font(S.FB, f.size - 8)
+        f = S.font(S.FB, f.size - 4)
     lh = int(f.size * 1.08)
     im = Image.new("RGBA", (W, POP_H), (0, 0, 0, 0))
     d = ImageDraw.Draw(im)
     y = (POP_H - lh * len(lines)) / 2 - f.size * 0.1
+    if dark:
+        pad = 34
+        d.rounded_rectangle((W * 0.03, y - pad + f.size * 0.1, W * 0.97, y + lh * len(lines) + pad * 0.6), radius=28,
+                            fill=(0, 0, 0, 120))
     sp = f.getlength(" ")
     for ln in lines:
         x = (W - f.getlength(ln)) / 2
         for w in ln.split():
-            col = (255, 214, 0) if re.search(r"\d|\$|%", w) else (255, 255, 255)
+            col = (255, 214, 0) if re.search(r"\d|\$|%|€|£", w) else (255, 255, 255)
             d.text((x + 6, y + 8), w, font=f, fill=(0, 0, 0, 140))
             d.text((x, y), w, font=f, fill=col, stroke_width=10, stroke_fill=(0, 0, 0))
             x += f.getlength(w) + sp
@@ -847,7 +888,11 @@ def main():
                             "-c:a", "copy", "-t", f"{total:.2f}", "-movflags", "+faststart", str(out)], stdin=subprocess.PIPE)
     logo = brand_img()
     rnd = random.Random(slug)
+    report = []  # what the overlay/timing/loop checks found (video/out/<slug>-en-short-report.txt)
     shots = make_shots(beats, a["_pool"], rnd)
+    for i, b in enumerate(beats):
+        if b["_dur"] > 3.0 and len({x["img"] for x in shots if x["beat"] == i}) < 2:
+            report.append(f"beat {i + 1}: {b['_dur']:.1f} s with only 1 photo (rule: switch photo after 3 s)")
     print(f"{len(shots)} shots, {len(set(x['img'] for x in shots))} photos")
     try:
         endimg = end_card(lang, load_src(shots[-1]["img"])) if ENDCARD else None
@@ -855,6 +900,7 @@ def main():
         print(f"::warning::end card background skipped: {e}")
         endimg = end_card(lang)
     promise = promise_img(lang)
+    bright, banded = {}, set()
     last_t0 = beats[-1]["_t0"]
     srcs = {}
     n = int(round(total * FPS))
@@ -883,7 +929,22 @@ def main():
             if b.get("overlay"):
                 t0 = 0.0 if i == 0 else b["_t0"]
                 t1 = beats[i + 1]["_t0"] if i + 1 < len(beats) else body_end
-                pops.append((t0, t1, OV + b["overlay"].strip()))
+                txt = b["overlay"].strip()
+                parts = [txt] if ov_fits(txt) else ov_split(txt)
+                if len(parts) == 2:
+                    mid = t0 + (t1 - t0) / 2
+                    pops += [(t0, mid, OV + parts[0]), (mid, t1, OV + parts[1])]
+                    report.append(f"beat {i + 1}: overlay too long for 2 lines, split into \"{parts[0]}\" / \"{parts[1]}\"")
+                else:
+                    pops.append((t0, t1, OV + txt))
+                    if not ov_fits(txt):
+                        report.append(f"beat {i + 1}: overlay needs 3 lines even when split: shorten it")
+                d = t1 - t0
+                if not 2.4 <= d <= 4.1:
+                    report.append(f"beat {i + 1}: {d:.1f} s (rule 2.5-4 s)")
+        if (beats[0].get("overlay") or "").strip() != (beats[-1].get("overlay") or "").strip() or \
+                S.spoken(beats[0]["text"], lang).strip() != S.spoken(beats[-1]["text"], lang).strip():
+            report.append("loop: the last beat does not repeat the hook exactly (text and overlay)")
         label_end = 0.0
     covered = sum(min(p1, body_end) - max(p0, 0) for p0, p1, _ in pops if p1 > p0) / max(body_end, 0.1)
     print(f"text on screen {covered * 100:.0f}% of the Short")
@@ -923,9 +984,18 @@ def main():
             fr.alpha_composite(label)
         cg = None if pg else next((c for c in caps if c[0] <= tt < c[1] + 0.15), None)
         if pg and pg[2].startswith(OV):  # the beat's statement: no pop-in, readable from its first frame
-            if pg[2] not in capimgs:
-                capimgs[pg[2]] = overlay_img(pg[2][1:])
-            fr.alpha_composite(capimgs[pg[2]], (0, int(H * 0.30)))
+            # bright background behind the text (explosion, sunset): add the soft dark band; decided once per shot
+            key = (si, pg[2])
+            if key not in bright:
+                zone = fr.crop((0, int(H * 0.36), W, int(H * 0.58))).convert("L").resize((40, 10))
+                bright[key] = sum(zone.getdata()) / 400 > 150
+                if bright[key]:
+                    banded.add(next(k for k, b in enumerate(beats) if b["_t0"] <= max(tt, beats[0]["_t0"])
+                                    and (k + 1 == len(beats) or beats[k + 1]["_t0"] > tt)) + 1)
+            ck = pg[2] + ("#dark" if bright[key] else "")
+            if ck not in capimgs:
+                capimgs[ck] = overlay_img(pg[2][1:], dark=bright[key])
+            fr.alpha_composite(capimgs[ck], (0, int(H * 0.30)))
         elif pg:  # a key word pops in big (scale 1.35 -> 1 in 0.15 s) and replaces the caption while it is spoken
             key = "POP " + pg[2]
             if key not in capimgs:
@@ -958,6 +1028,12 @@ def main():
         lab = {"en": "Photos", "nl": "Foto's"}[lang]
         t.write_text(t.read_text(encoding="utf-8").replace("\n\nTAGS:", f"\n\n{lab}: " + "; ".join(dict.fromkeys(used)) + "\n\nTAGS:", 1),
                      encoding="utf-8")
+    if banded:
+        report.append("contrast band added behind the text on bright photos in beat(s) " + ", ".join(map(str, sorted(banded))))
+    rep = OUT / f"{slug}-{lang}-short-report.txt"
+    rep.write_text("\n".join(report or ["all overlay, timing and loop rules met"]) + "\n", encoding="utf-8")
+    for line in report:
+        print(f"::warning::{line}" if "rule" in line or "loop" in line or "shorten" in line else f"::notice::{line}")
     print(f"::notice::Story Short {out.name} ready ({total:.1f}s, {len(beats)} shots)")
 
 

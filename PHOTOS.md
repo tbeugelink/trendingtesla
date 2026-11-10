@@ -287,3 +287,6 @@ Articles with a "models" key automatically use real-life photos of that model. Y
 - gen/spacex-fairing-catch-net-boat-mr-steven-6-million-nose-cone-story.jpg — a white Falcon 9 fairing half gliding under a parafoil towards the net of a catcher boat at sea
 - gen/spacex-fairing-catch-net-boat-mr-steven-6-million-nose-cone-story-x2-11092028.jpg — the net catcher boat with its four tall arms and giant net waiting at sea
 - gen/spacex-fairing-catch-net-boat-mr-steven-6-million-nose-cone-story-x3-11092029.jpg — a wet fairing half being lifted out of the sea by a recovery ship's crane
+- gen/how-tesla-robotaxi-keeps-cameras-clean-washers-wipers-laser-explained.jpg — the gold Cybercab at a wet kerb at night in the rain, raindrops on its windshield
+- gen/how-tesla-robotaxi-keeps-cameras-clean-washers-wipers-laser-explained-x2-11101148.jpg — the gold Cybercab driving through rain on a city street at dusk
+- gen/how-tesla-robotaxi-keeps-cameras-clean-washers-wipers-laser-explained-x3-11101149.jpg — a laser beam cleaning a small patch of dusty glass in a lab (illustration of laser cleaning)

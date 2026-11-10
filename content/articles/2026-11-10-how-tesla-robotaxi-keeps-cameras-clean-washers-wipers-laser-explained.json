@@ -1,1004 +1,1011 @@
 {
- "slug": "how-tesla-robotaxi-keeps-cameras-clean-washers-wipers-laser-explained",
- "date": "2026-11-10",
- "time": "12:41",
- "category": "robotaxi",
- "also": [
-  "fsd"
- ],
- "sources": [
-  {
-   "title": "Teslarati — Tesla exec hints at a wild fix for Robotaxi's biggest weather problem",
-   "url": "https://teslarati.com/tesla-lars-moravy-robotaxi-laser-windshield"
-  },
-  {
-   "title": "Not a Tesla App — Model Y Robotaxis now include camera washers, Cybercab adds them to all cameras",
-   "url": "https://www.notateslaapp.com/news/3536/all-tesla-robotaxi-cameras-now-include-camera-washers-repeater-and-b-pillar-cameras-added-video"
-  },
-  {
-   "title": "Electrek — NHTSA upgrades Tesla FSD visibility investigation to 3.2 million vehicles",
-   "url": "https://electrek.co/2026/03/19/nhtsa-upgrades-tesla-fsd-visibility-investigation-3-2-million-vehicles/"
-  },
-  {
-   "title": "Drive Tesla Canada — Tesla adds in-car popup for obstructed front cameras and offers free cleaning",
-   "url": "https://driveteslacanada.ca/news/tesla-adds-new-in-car-popup-for-obstructed-front-cameras-and-offers-free-cleaning/"
-  }
- ],
- "images": [
-  "gen/how-tesla-robotaxi-keeps-cameras-clean-washers-wipers-laser-explained.jpg",
-  "lib/fsd-screen-rain-night.jpg",
-  "lib/robotaxi-night-curb.jpg",
-  "camera-rain.jpg",
-  "fsd-camera-view.jpg",
-  "lib/cybercab-street-day.jpg"
- ],
- "gen_image": {
-  "prompt": "Close, low three-quarter front shot of the gold Tesla Cybercab parked at a wet city kerb at night in light rain: the smooth gold two-door body and the sloping windshield fill the middle of the frame, raindrops beading on the glass and the gold paint, a thin full-width white light bar across the nose, reflections of red and blue city lights on the wet street, a fine mist of water droplets catching the light near the top of the windshield, calm dark area in the lower left",
-  "subject": "Tesla Cybercab: a small gold two-seat robotaxi with a smooth rounded body, a large sloping windshield flowing into a glass roof, butterfly doors, no side mirrors, no steering wheel, a full-width light bar at front and rear, covered aero wheels; nothing added to it (no visible lasers, no extra cameras or sensors on the body)",
-  "refs": [
-   {
-    "src": "lib/cybercab-street-day.jpg"
-   },
-   {
-    "src": "lib/cybercab-doors-open.jpg"
-   }
+  "slug": "how-tesla-robotaxi-keeps-cameras-clean-washers-wipers-laser-explained",
+  "date": "2026-11-10",
+  "time": "12:41",
+  "category": "robotaxi",
+  "also": [
+    "fsd"
   ],
-  "profile": "cinematic",
-  "category": "B",
-  "describe": "the gold Cybercab at a wet kerb at night in the rain, raindrops on its windshield",
-  "extra": [
-   {
-    "prompt": "The gold Tesla Cybercab driving on a rainy city street at dusk, side three-quarter view, spray coming off the wheels, wet asphalt reflecting street lights, the car sharp and the background softly blurred",
-    "describe": "the gold Cybercab driving through rain on a city street at dusk"
-   },
-   {
-    "prompt": "A clean optics laboratory bench: a thin green laser beam passes through lenses and hits a small square of dusty glass on a stand, a bright clean spot where the beam lands, dark lab background with soft blue light, no people, no logos",
-    "describe": "a laser beam cleaning a small patch of dusty glass in a lab (illustration of laser cleaning)"
-   }
-  ]
- },
- "label": {
-  "style": "c",
+  "sources": [
+    {
+      "title": "Teslarati — Tesla exec hints at a wild fix for Robotaxi's biggest weather problem",
+      "url": "https://teslarati.com/tesla-lars-moravy-robotaxi-laser-windshield"
+    },
+    {
+      "title": "Not a Tesla App — Model Y Robotaxis now include camera washers, Cybercab adds them to all cameras",
+      "url": "https://www.notateslaapp.com/news/3536/all-tesla-robotaxi-cameras-now-include-camera-washers-repeater-and-b-pillar-cameras-added-video"
+    },
+    {
+      "title": "Electrek — NHTSA upgrades Tesla FSD visibility investigation to 3.2 million vehicles",
+      "url": "https://electrek.co/2026/03/19/nhtsa-upgrades-tesla-fsd-visibility-investigation-3-2-million-vehicles/"
+    },
+    {
+      "title": "Drive Tesla Canada — Tesla adds in-car popup for obstructed front cameras and offers free cleaning",
+      "url": "https://driveteslacanada.ca/news/tesla-adds-new-in-car-popup-for-obstructed-front-cameras-and-offers-free-cleaning/"
+    }
+  ],
+  "images": [
+    "gen/how-tesla-robotaxi-keeps-cameras-clean-washers-wipers-laser-explained.jpg",
+    "gen/how-tesla-robotaxi-keeps-cameras-clean-washers-wipers-laser-explained-x3-11101149.jpg",
+    "gen/how-tesla-robotaxi-keeps-cameras-clean-washers-wipers-laser-explained-x2-11101148.jpg",
+    "lib/fsd-screen-rain-night.jpg",
+    "lib/robotaxi-night-curb.jpg",
+    "camera-rain.jpg",
+    "fsd-camera-view.jpg",
+    "lib/cybercab-street-day.jpg"
+  ],
+  "gen_image": {
+    "prompt": "Close, low three-quarter front shot of the gold Tesla Cybercab parked at a wet city kerb at night in light rain: the smooth gold two-door body and the sloping windshield fill the middle of the frame, raindrops beading on the glass and the gold paint, a thin full-width white light bar across the nose, reflections of red and blue city lights on the wet street, a fine mist of water droplets catching the light near the top of the windshield, calm dark area in the lower left",
+    "subject": "Tesla Cybercab: a small gold two-seat robotaxi with a smooth rounded body, a large sloping windshield flowing into a glass roof, butterfly doors, no side mirrors, no steering wheel, a full-width light bar at front and rear, covered aero wheels; nothing added to it (no visible lasers, no extra cameras or sensors on the body)",
+    "refs": [
+      {
+        "src": "lib/cybercab-street-day.jpg"
+      },
+      {
+        "src": "lib/cybercab-doors-open.jpg"
+      }
+    ],
+    "profile": "cinematic",
+    "category": "B",
+    "describe": "the gold Cybercab at a wet kerb at night in the rain, raindrops on its windshield",
+    "extra": [
+      {
+        "prompt": "The gold Tesla Cybercab driving on a rainy city street at dusk, side three-quarter view, spray coming off the wheels, wet asphalt reflecting street lights, the car sharp and the background softly blurred",
+        "describe": "the gold Cybercab driving through rain on a city street at dusk",
+        "file": "gen/how-tesla-robotaxi-keeps-cameras-clean-washers-wipers-laser-explained-x2-11101148.jpg"
+      },
+      {
+        "prompt": "A clean optics laboratory bench: a thin green laser beam passes through lenses and hits a small square of dusty glass on a stand, a bright clean spot where the beam lands, dark lab background with soft blue light, no people, no logos",
+        "describe": "a laser beam cleaning a small patch of dusty glass in a lab (illustration of laser cleaning)",
+        "file": "gen/how-tesla-robotaxi-keeps-cameras-clean-washers-wipers-laser-explained-x3-11101149.jpg"
+      }
+    ],
+    "done": true,
+    "model": "gpt-image-2.5-flare"
+  },
+  "label": {
+    "style": "c",
+    "en": {
+      "sub": "TESLA'S NEXT WIPER:",
+      "text": "A LASER?"
+    },
+    "nl": {
+      "sub": "TESLA'S NIEUWE WISSER:",
+      "text": "EEN LASER?"
+    }
+  },
   "en": {
-   "sub": "TESLA'S NEXT WIPER:",
-   "text": "A LASER?"
+    "title": "How Does a Tesla Robotaxi Keep Its Cameras Clean? Washers, Wipers and Lasers Explained",
+    "description": "A Robotaxi has no driver to wipe a dirty lens. Here is how Tesla keeps its cameras clean today, what its 'eyelid' and laser patents describe, and what it means for owners.",
+    "body": "<p>Tesla's next windshield wiper might be a laser. On Jay Leno's Garage, Tesla's vice president of vehicle engineering, Lars Moravy, said that firing lasers at a focused spot can clear a sheet of water off the glass, and that for autonomy it \"might be a good solution to only clean the area where the camera is.\" He gave no timeline. The idea is not new: Tesla first filed a patent for it in 2019. What is new is the pressure behind it. Tesla's Robotaxi service keeps adding cities, including rainy ones such as Houston, Miami and Tampa, and a Robotaxi has nobody on board whose job it is to keep its eyes clean. A car that drives on cameras alone is only as good as its dirtiest lens.</p>\n\n<h2>Why does a dirty camera matter so much to a Tesla?</h2>\n<p><strong>Because cameras are the only way a Tesla sees the road.</strong> Since 2021 Tesla has dropped radar from its cars and never used lidar, so FSD and the Robotaxi software work from camera images alone. Rain, mud, salt, glare and fog all reach the same few square centimetres of glass in front of each lens.</p>\n<p>US regulators take this seriously. In October 2024 the road safety agency NHTSA opened a probe after four crashes in poor visibility, one of which killed a pedestrian. In March 2026 it upgraded the probe to an engineering analysis covering about 3.2 million vehicles and nine incidents. Its main question is whether FSD notices in time when its cameras are blinded by sun glare, fog or dust. NHTSA found the warnings often came only just before a crash.</p>\n<p>In a privately owned Tesla, the fallback is the driver: a warning asks you to clean the camera or take over. A Robotaxi has no such fallback, so it has to clean itself.</p>\n\n<h2>So how does a Robotaxi clean its own cameras?</h2>\n<p><strong>With small washer jets that spray fluid onto the lenses under pressure.</strong> Model Y Robotaxis were spotted in Austin in January 2026 with washers on the rear camera and on the fender cameras; Tesla even removed the turn signal from the redesigned fender camera housing to make room for the jet. The purpose-built Cybercab goes further: every outside camera has an active cleaner, from the front bumper and the cameras behind the windshield to the side pillars and the rear, and the rear camera above the licence plate gets its own spray nozzle. Only the cabin camera inside goes without.</p>\n<p>That handles mud and raindrops on the outside. Some dirt, however, sits where no jet can reach.</p>\n\n<h2>What can a washer not fix?</h2>\n<p><strong>A film on the inside of the windshield, right in front of the main cameras.</strong> Haze left over from production, or gases released by new interior materials, can slowly cloud the glass from within. In late 2025 Tesla added a pop-up that tells owners their forward-facing camera \"is experiencing obstructed visibility\", together with a free 15-minute cleaning of the windshield camera area that can be booked in the Tesla app. Owners are better off not trying it themselves: the camera housing has to come off, and its clips break easily.</p>\n<p>Glare and fog are a second blind spot. No washer can clean light. That part is a software problem, and exactly what NHTSA is investigating. Even the best washer also has limits of its own: fluid runs out and moving parts wear.</p>\n\n<h2>How would a camera with an \"eyelid\" work?</h2>\n<p><strong>By building a tiny wiper into each camera module.</strong> In May 2026 Tesla was granted US patent 12,636,684 for a sealed unit that holds a fluid reservoir, a nozzle aimed at the lens and a miniature wiper with its own motor. The blade follows the curve of the lens, much like an eyelid sweeping over an eye. The patent names the Cybercab and Optimus, Tesla's humanoid robot, as the first platforms. Tesla has not announced a car that uses it.</p>\n<p>An eyelid is still a blade and a tank, though. Across a fleet of thousands of cars, that means thousands of blades to replace and tanks to refill.</p>\n\n<h2>So could a laser really replace the wiper?</h2>\n<p><strong>In theory yes, but only for a small patch of glass, and it is not on any car yet.</strong> Tesla's patent \"Pulsed Laser Cleaning of Debris Accumulated on Glass Articles in Vehicles and Photovoltaic Assemblies\" was filed in May 2019 and granted in September 2021; an updated version followed on 31 March 2026. It describes a system that detects dirt on the glass, works out what kind it is, and fires short laser pulses at a calibrated rate, so the energy never reaches deeper than the thickness of the glass. The patent lists windshields, side windows, camera lenses and solar panels.</p>\n<p>Moravy's comment adds the practical limit: cleaning a whole windshield would take too many lasers. Clearing only the small window in front of a camera is a far smaller job. The Cybertruck shows how long such ideas can take. It was unveiled in 2019 without wipers, lasers were rumoured, and it went into production with one oversized blade instead.</p>\n\n<h2>What does this mean for owners and riders?</h2>\n<p><strong>For now, clean cameras are still partly your job.</strong> Two myths are worth clearing up. First, a patent is not a product: Tesla patents many ideas that never ship, and nobody at Tesla has given a date for laser cleaning. Second, a dirty camera does not mean the car drives blind without warning; FSD (Supervised) warns you and asks you to take over, though NHTSA's probe shows those warnings have not always come early enough.</p>\n<p>If you own a Tesla, wipe the outside camera lenses when you wash the car, and book the free service if the forward-camera warning appears. If you ride in a Robotaxi, the cleaning happens for you, with jets today and maybe, one day, with a beam of light. The race to driverless cars is not only about smarter software. It is also about keeping a handful of small windows clean in every kind of weather.</p>"
   },
   "nl": {
-   "sub": "TESLA'S NIEUWE WISSER:",
-   "text": "EEN LASER?"
-  }
- },
- "en": {
-  "title": "How Does a Tesla Robotaxi Keep Its Cameras Clean? Washers, Wipers and Lasers Explained",
-  "description": "A Robotaxi has no driver to wipe a dirty lens. Here is how Tesla keeps its cameras clean today, what its 'eyelid' and laser patents describe, and what it means for owners.",
-  "body": "<p>Tesla's next windshield wiper might be a laser. On Jay Leno's Garage, Tesla's vice president of vehicle engineering, Lars Moravy, said that firing lasers at a focused spot can clear a sheet of water off the glass, and that for autonomy it \"might be a good solution to only clean the area where the camera is.\" He gave no timeline. The idea is not new: Tesla first filed a patent for it in 2019. What is new is the pressure behind it. Tesla's Robotaxi service keeps adding cities, including rainy ones such as Houston, Miami and Tampa, and a Robotaxi has nobody on board whose job it is to keep its eyes clean. A car that drives on cameras alone is only as good as its dirtiest lens.</p>\n\n<h2>Why does a dirty camera matter so much to a Tesla?</h2>\n<p><strong>Because cameras are the only way a Tesla sees the road.</strong> Since 2021 Tesla has dropped radar from its cars and never used lidar, so FSD and the Robotaxi software work from camera images alone. Rain, mud, salt, glare and fog all reach the same few square centimetres of glass in front of each lens.</p>\n<p>US regulators take this seriously. In October 2024 the road safety agency NHTSA opened a probe after four crashes in poor visibility, one of which killed a pedestrian. In March 2026 it upgraded the probe to an engineering analysis covering about 3.2 million vehicles and nine incidents. Its main question is whether FSD notices in time when its cameras are blinded by sun glare, fog or dust. NHTSA found the warnings often came only just before a crash.</p>\n<p>In a privately owned Tesla, the fallback is the driver: a warning asks you to clean the camera or take over. A Robotaxi has no such fallback, so it has to clean itself.</p>\n\n<h2>So how does a Robotaxi clean its own cameras?</h2>\n<p><strong>With small washer jets that spray fluid onto the lenses under pressure.</strong> Model Y Robotaxis were spotted in Austin in January 2026 with washers on the rear camera and on the fender cameras; Tesla even removed the turn signal from the redesigned fender camera housing to make room for the jet. The purpose-built Cybercab goes further: every outside camera has an active cleaner, from the front bumper and the cameras behind the windshield to the side pillars and the rear, and the rear camera above the licence plate gets its own spray nozzle. Only the cabin camera inside goes without.</p>\n<p>That handles mud and raindrops on the outside. Some dirt, however, sits where no jet can reach.</p>\n\n<h2>What can a washer not fix?</h2>\n<p><strong>A film on the inside of the windshield, right in front of the main cameras.</strong> Haze left over from production, or gases released by new interior materials, can slowly cloud the glass from within. In late 2025 Tesla added a pop-up that tells owners their forward-facing camera \"is experiencing obstructed visibility\", together with a free 15-minute cleaning of the windshield camera area that can be booked in the Tesla app. Owners are better off not trying it themselves: the camera housing has to come off, and its clips break easily.</p>\n<p>Glare and fog are a second blind spot. No washer can clean light. That part is a software problem, and exactly what NHTSA is investigating. Even the best washer also has limits of its own: fluid runs out and moving parts wear.</p>\n\n<h2>How would a camera with an \"eyelid\" work?</h2>\n<p><strong>By building a tiny wiper into each camera module.</strong> In May 2026 Tesla was granted US patent 12,636,684 for a sealed unit that holds a fluid reservoir, a nozzle aimed at the lens and a miniature wiper with its own motor. The blade follows the curve of the lens, much like an eyelid sweeping over an eye. The patent names the Cybercab and Optimus, Tesla's humanoid robot, as the first platforms. Tesla has not announced a car that uses it.</p>\n<p>An eyelid is still a blade and a tank, though. Across a fleet of thousands of cars, that means thousands of blades to replace and tanks to refill.</p>\n\n<h2>So could a laser really replace the wiper?</h2>\n<p><strong>In theory yes, but only for a small patch of glass, and it is not on any car yet.</strong> Tesla's patent \"Pulsed Laser Cleaning of Debris Accumulated on Glass Articles in Vehicles and Photovoltaic Assemblies\" was filed in May 2019 and granted in September 2021; an updated version followed on 31 March 2026. It describes a system that detects dirt on the glass, works out what kind it is, and fires short laser pulses at a calibrated rate, so the energy never reaches deeper than the thickness of the glass. The patent lists windshields, side windows, camera lenses and solar panels.</p>\n<p>Moravy's comment adds the practical limit: cleaning a whole windshield would take too many lasers. Clearing only the small window in front of a camera is a far smaller job. The Cybertruck shows how long such ideas can take. It was unveiled in 2019 without wipers, lasers were rumoured, and it went into production with one oversized blade instead.</p>\n\n<h2>What does this mean for owners and riders?</h2>\n<p><strong>For now, clean cameras are still partly your job.</strong> Two myths are worth clearing up. First, a patent is not a product: Tesla patents many ideas that never ship, and nobody at Tesla has given a date for laser cleaning. Second, a dirty camera does not mean the car drives blind without warning; FSD (Supervised) warns you and asks you to take over, though NHTSA's probe shows those warnings have not always come early enough.</p>\n<p>If you own a Tesla, wipe the outside camera lenses when you wash the car, and book the free service if the forward-camera warning appears. If you ride in a Robotaxi, the cleaning happens for you, with jets today and maybe, one day, with a beam of light. The race to driverless cars is not only about smarter software. It is also about keeping a handful of small windows clean in every kind of weather.</p>"
- },
- "nl": {
-  "title": "Hoe houdt een Tesla Robotaxi zijn camera's schoon? Sproeiers, wissers en lasers uitgelegd",
-  "description": "Een Robotaxi heeft geen chauffeur die een vieze lens afveegt. Zo houdt Tesla de camera's nu schoon, dit staat in de patenten op een 'ooglid' en een laser, en dit betekent het voor eigenaren.",
-  "body": "<p>De volgende ruitenwisser van Tesla is misschien een laser. In Jay Leno's Garage vertelde Lars Moravy, bij Tesla vicepresident voor voertuigtechniek, dat je met lasers op een klein vlak een laagje water van het glas kunt schieten. Voor zelfrijdende auto's \"zou het een goede oplossing kunnen zijn om alleen het stukje voor de camera schoon te maken.\" Een datum noemde hij niet. Nieuw is het idee niet: Tesla vroeg er in 2019 al patent op aan. Nieuw is wel de druk erachter. De Robotaxi-dienst komt in steeds meer steden, ook in regenachtige zoals Houston, Miami en Tampa, en in een Robotaxi zit niemand die de camera's even schoonveegt. Een auto die alleen met camera's rijdt, is zo goed als zijn smerigste lens.</p>\n\n<h2>Waarom is een vieze camera zo'n probleem voor een Tesla?</h2>\n<p><strong>Omdat camera's de enige ogen van een Tesla zijn.</strong> Sinds 2021 laat Tesla de radar weg en lidar heeft het nooit gebruikt. FSD en de Robotaxi-software werken dus alleen met camerabeelden. Regen, modder, strooizout, tegenlicht en mist komen allemaal op hetzelfde paar vierkante centimeter glas voor elke lens terecht.</p>\n<p>De Amerikaanse verkeersveiligheidsdienst NHTSA neemt dat serieus. In oktober 2024 begon die een onderzoek na vier ongelukken bij slecht zicht, waarvan één met een dodelijk slachtoffer: een voetganger. In maart 2026 werd het opgeschaald naar een technische analyse van zo'n 3,2 miljoen auto's en negen incidenten. De hamvraag: merkt FSD op tijd dat de camera's verblind zijn door laagstaande zon, mist of stof? Volgens NHTSA kwam de waarschuwing vaak pas vlak voor de botsing.</p>\n<p>In je eigen Tesla ben jij het vangnet: een melding vraagt je de camera schoon te maken of het stuur over te nemen. Een Robotaxi heeft dat vangnet niet, dus die moet zichzelf schoonhouden.</p>\n\n<h2>Hoe maakt een Robotaxi zijn camera's dan zelf schoon?</h2>\n<p><strong>Met kleine sproeiers die ruitenvloeistof onder druk op de lenzen spuiten.</strong> In januari 2026 werden in Austin Model Y Robotaxi's gespot met sproeiers bij de achteruitrijcamera en de camera's in de voorschermen. Tesla haalde voor die sproeier zelfs het knipperlicht uit de nieuwe camerabehuizing. De Cybercab gaat verder: elke buitencamera heeft een eigen reiniger, van de voorbumper en de camera's achter de voorruit tot de stijlen en de achterkant. De camera boven het kenteken krijgt een eigen sproeikop. Alleen de camera in de cabine heeft er geen.</p>\n<p>Daarmee zijn modder en regendruppels aan de buitenkant geregeld. Maar sommig vuil zit waar geen sproeier bij kan.</p>\n\n<h2>Wat kan een sproeier niet oplossen?</h2>\n<p><strong>Een waas aan de binnenkant van de voorruit, precies voor de belangrijkste camera's.</strong> Resten uit de fabriek of dampen uit nieuwe interieurmaterialen kunnen het glas langzaam van binnenuit laten beslaan. Eind 2025 voegde Tesla een melding toe die zegt dat het zicht van de voorwaartse camera belemmerd is, plus een gratis reiniging van een kwartier die je in de Tesla-app kunt boeken. Zelf doen is geen goed idee: de camerabehuizing moet eraf en de klipsen breken snel.</p>\n<p>Tegenlicht en mist zijn een tweede blinde vlek. Licht kun je niet wegspoelen; dat moet de software oplossen, en precies dat onderzoekt NHTSA. En zelfs de beste sproeier heeft zijn grenzen: de vloeistof raakt op en bewegende onderdelen slijten.</p>\n\n<h2>Hoe werkt een camera met een 'ooglid'?</h2>\n<p><strong>Met een minuscule wisser in elke cameramodule.</strong> In mei 2026 kreeg Tesla Amerikaans patent 12.636.684 op een afgesloten unit met een vloeistofreservoir, een sproeier gericht op de lens en een mini-wisser met een eigen motortje. Het wissertje volgt de bolling van de lens, zoals een ooglid over een oog. Het patent noemt de Cybercab en Optimus, Teslas humanoïde robot, als eerste toepassingen. Een auto die het gebruikt, heeft Tesla nog niet aangekondigd.</p>\n<p>Ook een ooglid is uiteindelijk een rubbertje en een tankje. Bij een vloot van duizenden auto's zijn dat duizenden wissers om te vervangen en tanks om bij te vullen.</p>\n\n<h2>Dus kan een laser de ruitenwisser echt vervangen?</h2>\n<p><strong>In theorie wel, maar alleen voor een klein stukje glas, en het zit nog op geen enkele auto.</strong> Teslas patent op het reinigen van glas in auto's en zonnepanelen met een gepulseerde laser werd in mei 2019 aangevraagd en in september 2021 toegekend; op 31 maart 2026 volgde een bijgewerkte versie. Het systeem ziet vuil op het glas, bepaalt wat voor vuil het is en vuurt korte laserpulsen af in een afgesteld ritme, zodat de energie nooit dieper komt dan de dikte van het glas. Het patent noemt voorruiten, zijruiten, cameralenzen en zonnepanelen.</p>\n<p>Moravy noemde meteen de praktische grens: voor een hele voorruit heb je te veel lasers nodig. Alleen het kleine venster voor een camera vrijhouden is een veel kleinere klus. De Cybertruck laat zien hoe lang zulke ideeën kunnen duren: hij werd in 2019 zonder ruitenwissers getoond, er gingen geruchten over lasers, en hij ging in productie met één extra grote wisser.</p>\n\n<h2>Wat betekent dit voor eigenaren en passagiers?</h2>\n<p><strong>Voorlopig zijn schone camera's deels nog jouw werk.</strong> Twee misverstanden. Eén: een patent is geen product. Tesla patenteert veel ideeën die nooit in een auto komen, en niemand bij Tesla heeft een datum voor laserreiniging genoemd. Twee: een vieze camera betekent niet dat de auto zonder waarschuwing blind doorrijdt. FSD (Supervised) waarschuwt en vraagt je het over te nemen, al laat het NHTSA-onderzoek zien dat die waarschuwing niet altijd vroeg genoeg kwam.</p>\n<p>Heb je een Tesla? Veeg de cameralenzen buiten mee als je de auto wast, en boek de gratis reiniging als de melding over de voorcamera verschijnt. Rijd je mee in een Robotaxi, dan gebeurt het schoonmaken voor je: vandaag met sproeiers, en misschien ooit met een lichtstraal. De race naar de zelfrijdende auto gaat niet alleen over slimmere software, maar ook over een handvol kleine raampjes die bij elk weer schoon moeten blijven.</p>"
- },
- "short": {
-  "hook": "first",
-  "yt_title_en": "Tesla's Next Wiper Might Be a Laser",
-  "yt_title_nl": "Teslas Volgende Ruitenwisser Is Misschien een Laser",
-  "hooks": [
-   {
-    "text": "Tesla's next wiper might be a laser.",
-    "type": "first"
-   },
-   {
-    "text": "No driver. So who cleans the cameras?",
-    "type": "question"
-   },
-   {
-    "text": "One dirty lens. 3.2 million Teslas under investigation.",
-    "type": "number"
-   }
-  ],
-  "hook_pick": {
-   "index": 0,
-   "why": "7 words, one sentence (~2.5 s), a sci-fi image (a laser for a wiper) that sounds impossible but is a real patent plus a fresh on-camera comment by Tesla's engineering VP; overlay 36 characters stands whole from frame 1; the question hook is slower and the number hook is the third 'number' style in a row and mixes two ideas"
+    "title": "Hoe houdt een Tesla Robotaxi zijn camera's schoon? Sproeiers, wissers en lasers uitgelegd",
+    "description": "Een Robotaxi heeft geen chauffeur die een vieze lens afveegt. Zo houdt Tesla de camera's nu schoon, dit staat in de patenten op een 'ooglid' en een laser, en dit betekent het voor eigenaren.",
+    "body": "<p>De volgende ruitenwisser van Tesla is misschien een laser. In Jay Leno's Garage vertelde Lars Moravy, bij Tesla vicepresident voor voertuigtechniek, dat je met lasers op een klein vlak een laagje water van het glas kunt schieten. Voor zelfrijdende auto's \"zou het een goede oplossing kunnen zijn om alleen het stukje voor de camera schoon te maken.\" Een datum noemde hij niet. Nieuw is het idee niet: Tesla vroeg er in 2019 al patent op aan. Nieuw is wel de druk erachter. De Robotaxi-dienst komt in steeds meer steden, ook in regenachtige zoals Houston, Miami en Tampa, en in een Robotaxi zit niemand die de camera's even schoonveegt. Een auto die alleen met camera's rijdt, is zo goed als zijn smerigste lens.</p>\n\n<h2>Waarom is een vieze camera zo'n probleem voor een Tesla?</h2>\n<p><strong>Omdat camera's de enige ogen van een Tesla zijn.</strong> Sinds 2021 laat Tesla de radar weg en lidar heeft het nooit gebruikt. FSD en de Robotaxi-software werken dus alleen met camerabeelden. Regen, modder, strooizout, tegenlicht en mist komen allemaal op hetzelfde paar vierkante centimeter glas voor elke lens terecht.</p>\n<p>De Amerikaanse verkeersveiligheidsdienst NHTSA neemt dat serieus. In oktober 2024 begon die een onderzoek na vier ongelukken bij slecht zicht, waarvan één met een dodelijk slachtoffer: een voetganger. In maart 2026 werd het opgeschaald naar een technische analyse van zo'n 3,2 miljoen auto's en negen incidenten. De hamvraag: merkt FSD op tijd dat de camera's verblind zijn door laagstaande zon, mist of stof? Volgens NHTSA kwam de waarschuwing vaak pas vlak voor de botsing.</p>\n<p>In je eigen Tesla ben jij het vangnet: een melding vraagt je de camera schoon te maken of het stuur over te nemen. Een Robotaxi heeft dat vangnet niet, dus die moet zichzelf schoonhouden.</p>\n\n<h2>Hoe maakt een Robotaxi zijn camera's dan zelf schoon?</h2>\n<p><strong>Met kleine sproeiers die ruitenvloeistof onder druk op de lenzen spuiten.</strong> In januari 2026 werden in Austin Model Y Robotaxi's gespot met sproeiers bij de achteruitrijcamera en de camera's in de voorschermen. Tesla haalde voor die sproeier zelfs het knipperlicht uit de nieuwe camerabehuizing. De Cybercab gaat verder: elke buitencamera heeft een eigen reiniger, van de voorbumper en de camera's achter de voorruit tot de stijlen en de achterkant. De camera boven het kenteken krijgt een eigen sproeikop. Alleen de camera in de cabine heeft er geen.</p>\n<p>Daarmee zijn modder en regendruppels aan de buitenkant geregeld. Maar sommig vuil zit waar geen sproeier bij kan.</p>\n\n<h2>Wat kan een sproeier niet oplossen?</h2>\n<p><strong>Een waas aan de binnenkant van de voorruit, precies voor de belangrijkste camera's.</strong> Resten uit de fabriek of dampen uit nieuwe interieurmaterialen kunnen het glas langzaam van binnenuit laten beslaan. Eind 2025 voegde Tesla een melding toe die zegt dat het zicht van de voorwaartse camera belemmerd is, plus een gratis reiniging van een kwartier die je in de Tesla-app kunt boeken. Zelf doen is geen goed idee: de camerabehuizing moet eraf en de klipsen breken snel.</p>\n<p>Tegenlicht en mist zijn een tweede blinde vlek. Licht kun je niet wegspoelen; dat moet de software oplossen, en precies dat onderzoekt NHTSA. En zelfs de beste sproeier heeft zijn grenzen: de vloeistof raakt op en bewegende onderdelen slijten.</p>\n\n<h2>Hoe werkt een camera met een 'ooglid'?</h2>\n<p><strong>Met een minuscule wisser in elke cameramodule.</strong> In mei 2026 kreeg Tesla Amerikaans patent 12.636.684 op een afgesloten unit met een vloeistofreservoir, een sproeier gericht op de lens en een mini-wisser met een eigen motortje. Het wissertje volgt de bolling van de lens, zoals een ooglid over een oog. Het patent noemt de Cybercab en Optimus, Teslas humanoïde robot, als eerste toepassingen. Een auto die het gebruikt, heeft Tesla nog niet aangekondigd.</p>\n<p>Ook een ooglid is uiteindelijk een rubbertje en een tankje. Bij een vloot van duizenden auto's zijn dat duizenden wissers om te vervangen en tanks om bij te vullen.</p>\n\n<h2>Dus kan een laser de ruitenwisser echt vervangen?</h2>\n<p><strong>In theorie wel, maar alleen voor een klein stukje glas, en het zit nog op geen enkele auto.</strong> Teslas patent op het reinigen van glas in auto's en zonnepanelen met een gepulseerde laser werd in mei 2019 aangevraagd en in september 2021 toegekend; op 31 maart 2026 volgde een bijgewerkte versie. Het systeem ziet vuil op het glas, bepaalt wat voor vuil het is en vuurt korte laserpulsen af in een afgesteld ritme, zodat de energie nooit dieper komt dan de dikte van het glas. Het patent noemt voorruiten, zijruiten, cameralenzen en zonnepanelen.</p>\n<p>Moravy noemde meteen de praktische grens: voor een hele voorruit heb je te veel lasers nodig. Alleen het kleine venster voor een camera vrijhouden is een veel kleinere klus. De Cybertruck laat zien hoe lang zulke ideeën kunnen duren: hij werd in 2019 zonder ruitenwissers getoond, er gingen geruchten over lasers, en hij ging in productie met één extra grote wisser.</p>\n\n<h2>Wat betekent dit voor eigenaren en passagiers?</h2>\n<p><strong>Voorlopig zijn schone camera's deels nog jouw werk.</strong> Twee misverstanden. Eén: een patent is geen product. Tesla patenteert veel ideeën die nooit in een auto komen, en niemand bij Tesla heeft een datum voor laserreiniging genoemd. Twee: een vieze camera betekent niet dat de auto zonder waarschuwing blind doorrijdt. FSD (Supervised) waarschuwt en vraagt je het over te nemen, al laat het NHTSA-onderzoek zien dat die waarschuwing niet altijd vroeg genoeg kwam.</p>\n<p>Heb je een Tesla? Veeg de cameralenzen buiten mee als je de auto wast, en boek de gratis reiniging als de melding over de voorcamera verschijnt. Rijd je mee in een Robotaxi, dan gebeurt het schoonmaken voor je: vandaag met sproeiers, en misschien ooit met een lichtstraal. De race naar de zelfrijdende auto gaat niet alleen over slimmere software, maar ook over een handvol kleine raampjes die bij elk weer schoon moeten blijven.</p>"
   },
-  "story": [
-   {
-    "part": "hook",
-    "text": "Tesla's next wiper might be a laser.",
-    "overlay": "Tesla's next wiper might be a laser.",
-    "lib": [
-     "fsd-screen-rain-night.jpg",
-     "robotaxi-app-wait.jpg"
+  "short": {
+    "hook": "first",
+    "yt_title_en": "Tesla's Next Wiper Might Be a Laser",
+    "yt_title_nl": "Teslas Volgende Ruitenwisser Is Misschien een Laser",
+    "hooks": [
+      {
+        "text": "Tesla's next wiper might be a laser.",
+        "type": "first"
+      },
+      {
+        "text": "No driver. So who cleans the cameras?",
+        "type": "question"
+      },
+      {
+        "text": "One dirty lens. 3.2 million Teslas under investigation.",
+        "type": "number"
+      }
     ],
-    "visual": "hard open on a rain-streaked windscreen at night with the FSD screen glowing; cut on 'laser' to a white Robotaxi arriving on a wet street. Only the hook sentence on screen, no logo",
-    "t": "0-2.7s"
-   },
-   {
-    "part": "tension",
-    "text": "A Robotaxi has no driver to wipe its cameras.",
-    "overlay": "No driver to wipe the cameras",
-    "lib": [
-     "robotaxi-night-curb.jpg",
-     "robotaxi-rear-passenger.jpg"
+    "hook_pick": {
+      "index": 0,
+      "why": "7 words, one sentence (~2.5 s), a sci-fi image (a laser for a wiper) that sounds impossible but is a real patent plus a fresh on-camera comment by Tesla's engineering VP; overlay 36 characters stands whole from frame 1; the question hook is slower and the number hook is the third 'number' style in a row and mixes two ideas"
+    },
+    "story": [
+      {
+        "part": "hook",
+        "text": "Tesla's next wiper might be a laser.",
+        "overlay": "Tesla's next wiper might be a laser.",
+        "lib": [
+          "fsd-screen-rain-night.jpg",
+          "robotaxi-app-wait.jpg"
+        ],
+        "visual": "hard open on a rain-streaked windscreen at night with the FSD screen glowing; cut on 'laser' to a white Robotaxi arriving on a wet street. Only the hook sentence on screen, no logo",
+        "t": "0-2.7s"
+      },
+      {
+        "part": "tension",
+        "text": "A Robotaxi has no driver to wipe its cameras.",
+        "overlay": "No driver to wipe the cameras",
+        "lib": [
+          "robotaxi-night-curb.jpg",
+          "robotaxi-rear-passenger.jpg"
+        ],
+        "visual": "black Robotaxi at a wet kerb at night, then from the back seat: the EMPTY driver's seat; slow push-in",
+        "t": "2.7-6.2s"
+      },
+      {
+        "part": "tension",
+        "text": "And it sees the road through cameras alone.",
+        "overlay": "It sees through cameras alone",
+        "lib": [
+          "robotaxi-fleet-dawn.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Tesla Autopilot camera",
+              "Tesla side camera fender",
+              "Tesla Model 3 camera"
+            ],
+            "want": "a small camera built into the body of a Tesla car"
+          }
+        ],
+        "visual": "three Robotaxis driving at sunrise, then a close-up of a small camera in a Tesla body",
+        "t": "6.2-9.2s"
+      },
+      {
+        "part": "tension",
+        "text": "Regulators are probing 3.2 million Teslas over it.",
+        "overlay": "Probe: 3.2M Teslas, blinded cameras",
+        "photo": [
+          {
+            "q": [
+              "United States Department of Transportation headquarters",
+              "US DOT headquarters Washington",
+              "NHTSA"
+            ],
+            "want": "the US Department of Transportation headquarters building in Washington"
+          },
+          {
+            "q": [
+              "car headlights fog road",
+              "traffic in fog",
+              "highway fog cars"
+            ],
+            "want": "cars driving on a road in thick fog"
+          }
+        ],
+        "visual": "the US transport department building, then cars in thick fog; quick zoom as a pattern interrupt",
+        "t": "9.2-13.1s"
+      },
+      {
+        "part": "tension",
+        "text": "So the Cybercab sprays every outside camera clean.",
+        "overlay": "Cybercab: a washer on every camera",
+        "lib": [
+          "cybercab-street-day.jpg",
+          "cybercab-rear-fixture.jpg"
+        ],
+        "visual": "gold Cybercab driving in Austin, then its rear in the factory fixture (rear camera area); punch-in",
+        "t": "13.1-16.2s"
+      },
+      {
+        "part": "tension",
+        "text": "Tesla even patented a camera with its own eyelid.",
+        "overlay": "Patent: a camera with an eyelid",
+        "lib": [
+          "cybercab-line-closeup.jpg",
+          "optimus-walking.jpg"
+        ],
+        "visual": "close-up of a Cybercab front on the line, then Optimus walking toward the camera (the patent also covers its eyes)",
+        "t": "16.2-19.6s"
+      },
+      {
+        "part": "tension",
+        "text": "But blades wear out, and fluid runs dry.",
+        "overlay": "Blades wear out. Fluid runs dry.",
+        "photo": [
+          {
+            "q": [
+              "windshield wiper",
+              "car wiper blade",
+              "windscreen wiper rain"
+            ],
+            "want": "a car windshield wiper blade on glass"
+          }
+        ],
+        "lib": [
+          "service-center.jpg"
+        ],
+        "visual": "a wiper blade on wet glass, then a service bay with cars on lifts; slow pan",
+        "t": "19.6-22.7s"
+      },
+      {
+        "part": "payoff",
+        "text": "A pulsed laser hits the dirt, never through the glass.",
+        "overlay": "Laser hits the dirt, not the glass",
+        "photo": [
+          {
+            "q": [
+              "laser cleaning",
+              "laser ablation cleaning",
+              "laser rust removal"
+            ],
+            "want": "a laser cleaning a surface, a bright laser spot on metal or stone"
+          },
+          {
+            "q": [
+              "pulsed laser beam",
+              "laser beam laboratory",
+              "green laser beam optics"
+            ],
+            "want": "a visible laser beam in a lab with optics"
+          }
+        ],
+        "visual": "a laser spot cleaning a surface, then a laser beam through optics; bright, short cuts",
+        "t": "22.7-26.5s"
+      },
+      {
+        "part": "payoff",
+        "text": "Patented in 2019. Even Cybertruck got a wiper instead.",
+        "overlay": "2019 patent. Cybertruck got a wiper.",
+        "lib": [
+          "cybertruck-front-city.jpg",
+          "cybertruck-rear-light.jpg"
+        ],
+        "visual": "stainless Cybertruck on a wet city street, then from behind on a desert road at night",
+        "t": "26.5-30.4s"
+      },
+      {
+        "part": "payoff",
+        "text": "Now Tesla's engineering chief is saying it out loud:",
+        "overlay": "Now Tesla's engineering boss says:",
+        "lib": [
+          "cybercab-doors-open.jpg",
+          "fsd-screen-rain-night.jpg"
+        ],
+        "visual": "gold Cybercab with doors open on a wet night kerb, then the same rainy windscreen the Short opens on, so the replay cut is invisible",
+        "t": "30.4-33.8s"
+      }
     ],
-    "visual": "black Robotaxi at a wet kerb at night, then from the back seat: the EMPTY driver's seat; slow push-in",
-    "t": "2.7-6.2s"
-   },
-   {
-    "part": "tension",
-    "text": "And it sees the road through cameras alone.",
-    "overlay": "It sees through cameras alone",
-    "lib": [
-     "robotaxi-fleet-dawn.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Tesla Autopilot camera",
-       "Tesla side camera fender",
-       "Tesla Model 3 camera"
-      ],
-      "want": "a small camera built into the body of a Tesla car"
-     }
-    ],
-    "visual": "three Robotaxis driving at sunrise, then a close-up of a small camera in a Tesla body",
-    "t": "6.2-9.2s"
-   },
-   {
-    "part": "tension",
-    "text": "Regulators are probing 3.2 million Teslas over it.",
-    "overlay": "Probe: 3.2M Teslas, blinded cameras",
-    "photo": [
-     {
-      "q": [
-       "United States Department of Transportation headquarters",
-       "US DOT headquarters Washington",
-       "NHTSA"
-      ],
-      "want": "the US Department of Transportation headquarters building in Washington"
-     },
-     {
-      "q": [
-       "car headlights fog road",
-       "traffic in fog",
-       "highway fog cars"
-      ],
-      "want": "cars driving on a road in thick fog"
-     }
-    ],
-    "visual": "the US transport department building, then cars in thick fog; quick zoom as a pattern interrupt",
-    "t": "9.2-13.1s"
-   },
-   {
-    "part": "tension",
-    "text": "So the Cybercab sprays every outside camera clean.",
-    "overlay": "Cybercab: a washer on every camera",
-    "lib": [
-     "cybercab-street-day.jpg",
-     "cybercab-rear-fixture.jpg"
-    ],
-    "visual": "gold Cybercab driving in Austin, then its rear in the factory fixture (rear camera area); punch-in",
-    "t": "13.1-16.2s"
-   },
-   {
-    "part": "tension",
-    "text": "Tesla even patented a camera with its own eyelid.",
-    "overlay": "Patent: a camera with an eyelid",
-    "lib": [
-     "cybercab-line-closeup.jpg",
-     "optimus-walking.jpg"
-    ],
-    "visual": "close-up of a Cybercab front on the line, then Optimus walking toward the camera (the patent also covers its eyes)",
-    "t": "16.2-19.6s"
-   },
-   {
-    "part": "tension",
-    "text": "But blades wear out, and fluid runs dry.",
-    "overlay": "Blades wear out. Fluid runs dry.",
-    "photo": [
-     {
-      "q": [
-       "windshield wiper",
-       "car wiper blade",
-       "windscreen wiper rain"
-      ],
-      "want": "a car windshield wiper blade on glass"
-     }
-    ],
-    "lib": [
-     "service-center.jpg"
-    ],
-    "visual": "a wiper blade on wet glass, then a service bay with cars on lifts; slow pan",
-    "t": "19.6-22.7s"
-   },
-   {
-    "part": "payoff",
-    "text": "A pulsed laser hits the dirt, never through the glass.",
-    "overlay": "Laser hits the dirt, not the glass",
-    "photo": [
-     {
-      "q": [
-       "laser cleaning",
-       "laser ablation cleaning",
-       "laser rust removal"
-      ],
-      "want": "a laser cleaning a surface, a bright laser spot on metal or stone"
-     },
-     {
-      "q": [
-       "pulsed laser beam",
-       "laser beam laboratory",
-       "green laser beam optics"
-      ],
-      "want": "a visible laser beam in a lab with optics"
-     }
-    ],
-    "visual": "a laser spot cleaning a surface, then a laser beam through optics; bright, short cuts",
-    "t": "22.7-26.5s"
-   },
-   {
-    "part": "payoff",
-    "text": "Patented in 2019. Even Cybertruck got a wiper instead.",
-    "overlay": "2019 patent. Cybertruck got a wiper.",
-    "lib": [
-     "cybertruck-front-city.jpg",
-     "cybertruck-rear-light.jpg"
-    ],
-    "visual": "stainless Cybertruck on a wet city street, then from behind on a desert road at night",
-    "t": "26.5-30.4s"
-   },
-   {
-    "part": "payoff",
-    "text": "Now Tesla's engineering chief is saying it out loud:",
-    "overlay": "Now Tesla's engineering boss says:",
-    "lib": [
-     "cybercab-doors-open.jpg",
-     "fsd-screen-rain-night.jpg"
-    ],
-    "visual": "gold Cybercab with doors open on a wet night kerb, then the same rainy windscreen the Short opens on, so the replay cut is invisible",
-    "t": "30.4-33.8s"
-   }
-  ],
-  "loop": {
-   "last": "Now Tesla's engineering chief is saying it out loud:",
-   "how": "the last line ends on a colon that the restarted hook completes: '...Now Tesla's engineering chief is saying it out loud: Tesla's next wiper might be a laser.' Different words from the hook (no repeat), and the last picture is the same rainy windscreen the Short opens on, so the cut back is invisible"
+    "loop": {
+      "last": "Now Tesla's engineering chief is saying it out loud:",
+      "how": "the last line ends on a colon that the restarted hook completes: '...Now Tesla's engineering chief is saying it out loud: Tesla's next wiper might be a laser.' Different words from the hook (no repeat), and the last picture is the same rainy windscreen the Short opens on, so the cut back is invisible"
+    },
+    "signals": "Stayed %: a 7-word claim on frame 1 that sounds like science fiction (no number build-up, no two-sentence hook; the previous hook beat ran 3.3 s on ONE photo). Watched %/loops: every one of the 10 beats has 2 pictures, beats are 8-10 spoken words (est. 2.7-3.8 s, nothing like the 2.1 s and 4.6 s beats flagged last time), mostly dark rain/night photos (fewer contrast bands), and a colon loop that the hook completes. Likes: a tangible gadget plus a 'patent is not a product' twist viewers can argue about, instead of a pure history fact (fairing Short: 9.3 likes/1000, lowest of the week).",
+    "learning": {
+      "prev": "spacex-fairing-catch-net-boat-mr-steven-6-million-nose-cone-story",
+      "prev_stats": "1,287 views (best of the last 5 Shorts) but only 9.3 likes/1000, the lowest of the week; stayed/watched not reported yet for 9 Nov. Midday before (33 engines): 1,140 views, 18.4 likes/1000. Channel average stayed 57% (goal 70%) stays the weakest signal, then watched 70% (goal 90%)",
+      "weakest_hook": "\"Catch six million dollars falling from space.\" - pulled views, but the render report shows the hook beat ran 3.3 s on a single photo, so the frame did not change inside the swipe window, and the dollar dare did not earn likes",
+      "why_stalled": "render report (fairing): beats 1, 2 and 7 over 3 s with one photo, beat 3 only 2.1 s, beats 6 and 10 at 4.6 and 4.3 s, contrast bands in 5 of 10 beats; the colon loop worked (no repeat warning). Previous long video (33 engines) had no stats yet; its weakness by design was a history-heavy middle with few owner-relevant turns",
+      "change": "every beat gets 2 pictures (incl. the hook: rainy windscreen -> Robotaxi), every beat 8-10 spoken words with numbers counted as spoken words (est. 2.7-3.8 s), the hook is a single 7-word 'first' claim (rotating from number), mostly dark night/rain photos, and the last picture equals the first so the loop cut is invisible"
+    },
+    "en": "Tesla's next wiper might be a laser. A Robotaxi has no driver to wipe its cameras. And it sees the road through cameras alone. Regulators are probing 3.2 million Teslas over it. So the Cybercab sprays every outside camera clean. Tesla even patented a camera with its own eyelid. But blades wear out, and fluid runs dry. A pulsed laser hits the dirt, never through the glass. Patented in 2019. Even Cybertruck got a wiper instead. Now Tesla's engineering chief is saying it out loud:",
+    "nl": "Teslas volgende ruitenwisser is misschien een laser. Een Robotaxi heeft geen chauffeur die de camera's schoonveegt. En hij ziet de weg alleen met camera's. Toezichthouders onderzoeken er 3,2 miljoen Tesla's om. Dus spuit de Cybercab elke buitencamera schoon. Tesla patenteerde zelfs een camera met een eigen ooglid. Maar wissers slijten, en de vloeistof raakt op. Een gepulste laser raakt het vuil, nooit door het glas heen. Gepatenteerd in 2019. Zelfs de Cybertruck kreeg gewoon een wisser. En nu zegt Teslas techniekbaas het hardop:"
   },
-  "signals": "Stayed %: a 7-word claim on frame 1 that sounds like science fiction (no number build-up, no two-sentence hook; the previous hook beat ran 3.3 s on ONE photo). Watched %/loops: every one of the 10 beats has 2 pictures, beats are 8-10 spoken words (est. 2.7-3.8 s, nothing like the 2.1 s and 4.6 s beats flagged last time), mostly dark rain/night photos (fewer contrast bands), and a colon loop that the hook completes. Likes: a tangible gadget plus a 'patent is not a product' twist viewers can argue about, instead of a pure history fact (fairing Short: 9.3 likes/1000, lowest of the week).",
-  "learning": {
-   "prev": "spacex-fairing-catch-net-boat-mr-steven-6-million-nose-cone-story",
-   "prev_stats": "1,287 views (best of the last 5 Shorts) but only 9.3 likes/1000, the lowest of the week; stayed/watched not reported yet for 9 Nov. Midday before (33 engines): 1,140 views, 18.4 likes/1000. Channel average stayed 57% (goal 70%) stays the weakest signal, then watched 70% (goal 90%)",
-   "weakest_hook": "\"Catch six million dollars falling from space.\" - pulled views, but the render report shows the hook beat ran 3.3 s on a single photo, so the frame did not change inside the swipe window, and the dollar dare did not earn likes",
-   "why_stalled": "render report (fairing): beats 1, 2 and 7 over 3 s with one photo, beat 3 only 2.1 s, beats 6 and 10 at 4.6 and 4.3 s, contrast bands in 5 of 10 beats; the colon loop worked (no repeat warning). Previous long video (33 engines) had no stats yet; its weakness by design was a history-heavy middle with few owner-relevant turns",
-   "change": "every beat gets 2 pictures (incl. the hook: rainy windscreen -> Robotaxi), every beat 8-10 spoken words with numbers counted as spoken words (est. 2.7-3.8 s), the hook is a single 7-word 'first' claim (rotating from number), mostly dark night/rain photos, and the last picture equals the first so the loop cut is invisible"
+  "video": {
+    "en": [
+      {
+        "text": "Tesla's next windshield wiper might be a laser. That is not a joke from a sci-fi movie. It is a Tesla patent from 2019, and Tesla's head of vehicle engineering has now talked about it on camera. But here is the strange part. The idea dates from 2019, and not one Tesla uses it. By the end of this video, you will know exactly why, and why the answer matters for every Robotaxi on the road.",
+        "img": [
+          "gen/how-tesla-robotaxi-keeps-cameras-clean-washers-wipers-laser-explained.jpg",
+          "lib/fsd-screen-rain-night.jpg",
+          "lib/robotaxi-night-curb.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "laser cleaning",
+              "laser ablation cleaning",
+              "laser rust removal"
+            ],
+            "want": "a laser cleaning a surface, a bright laser spot on metal or stone"
+          }
+        ]
+      },
+      {
+        "text": "It started on Jay Leno's Garage. Lars Moravy, Tesla's vice president of vehicle engineering, was showing off the long six-seat Model Y. Then the talk turned to wipers. His point: fire lasers at one focused spot, and you can blast away a sheet of water. For a self-driving car, he said, it might be enough to clean only the area where the camera is. No date. No promise. Just an engineer thinking out loud.",
+        "photo": [
+          {
+            "q": [
+              "Model Y L Tesla",
+              "Tesla Model Y L",
+              "Tesla Model Y six seat"
+            ],
+            "want": "a Tesla Model Y L, the long six-seat Model Y"
+          },
+          {
+            "q": [
+              "pulsed laser beam",
+              "laser beam laboratory",
+              "green laser beam optics"
+            ],
+            "want": "a visible laser beam in a lab with optics"
+          }
+        ],
+        "img": [
+          "lib/robotaxi-fleet-dawn.jpg"
+        ]
+      },
+      {
+        "text": "So why would Tesla even need this? Because its Robotaxi service keeps moving into new cities. Some of them get serious rain. Houston. Miami. Tampa. And a Robotaxi has nobody on board whose job it is to keep its eyes clean. A car that drives on cameras alone is only as good as its dirtiest lens.",
+        "photo": [
+          {
+            "q": [
+              "Houston skyline rain",
+              "Houston flooding street",
+              "Houston downtown storm"
+            ],
+            "want": "Houston city streets or skyline in rain"
+          },
+          {
+            "q": [
+              "Miami rain storm street",
+              "Miami skyline storm"
+            ],
+            "want": "Miami in a rain storm"
+          }
+        ],
+        "img": [
+          "lib/robotaxi-app-wait.jpg"
+        ]
+      },
+      {
+        "head": "Why does a dirty camera matter so much to a Tesla?",
+        "pop": [
+          {
+            "say": "",
+            "show": "WHY DIRT MATTERS"
+          }
+        ],
+        "img": [
+          "camera-rain.jpg"
+        ]
+      },
+      {
+        "text": "Because cameras are the only way a Tesla sees the road. Since 2021 Tesla has dropped radar from its cars. It never used lidar. So FSD and the Robotaxi software work from camera images alone. Rain, mud, road salt, glare and fog all land on the same few square centimetres of glass in front of each lens.",
+        "photo": [
+          {
+            "q": [
+              "Tesla Autopilot camera",
+              "Tesla side camera fender",
+              "Tesla Model 3 camera"
+            ],
+            "want": "a small camera built into the body of a Tesla car"
+          },
+          {
+            "q": [
+              "Tesla Model 3 front",
+              "Tesla Model 3 2018",
+              "Tesla Model 3 red"
+            ],
+            "want": "a Tesla Model 3 seen from the front"
+          }
+        ],
+        "img": [
+          "fsd-camera-view.jpg"
+        ]
+      },
+      {
+        "text": "And regulators are watching. In October 2024 the US road safety agency NHTSA opened a probe after four crashes in poor visibility. One of them killed a pedestrian. In March 2026 the probe was upgraded. It now covers about 3.2 million vehicles and nine incidents. The key question: does FSD notice in time when its cameras are blinded by sun glare, fog or dust? NHTSA found the warnings often came only just before the crash.",
+        "photo": [
+          {
+            "q": [
+              "United States Department of Transportation headquarters",
+              "US DOT headquarters Washington",
+              "NHTSA"
+            ],
+            "want": "the US Department of Transportation headquarters building in Washington"
+          },
+          {
+            "q": [
+              "car headlights fog road",
+              "traffic in fog",
+              "highway fog cars"
+            ],
+            "want": "cars driving on a road in thick fog"
+          },
+          {
+            "q": [
+              "sun glare windshield",
+              "low sun glare road",
+              "driving into the sun"
+            ],
+            "want": "a road seen through a windshield with strong low sun glare"
+          }
+        ]
+      },
+      {
+        "text": "In your own Tesla, you are the backup. A warning asks you to clean the camera or take over. A Robotaxi has no backup. So it has to clean itself.",
+        "img": [
+          "lib/robotaxi-rear-passenger.jpg",
+          "lib/robotaxi-app-share.jpg"
+        ]
+      },
+      {
+        "head": "So how does a Robotaxi clean its own cameras?",
+        "pop": [
+          {
+            "say": "",
+            "show": "SELF-CLEANING"
+          }
+        ],
+        "img": [
+          "robotaxi-my-1.jpg"
+        ]
+      },
+      {
+        "text": "With small washer jets that spray fluid onto the lenses under pressure. In January 2026, Model Y Robotaxis in Austin were spotted with washers on the rear camera and on the fender cameras. Tesla even took the turn signal out of the new fender camera housing to make room for the jet.",
+        "img": [
+          "robotaxi-my-2.jpg",
+          "lib/robotaxi-night-curb.jpg",
+          "lib/robotaxi-fleet-dawn.jpg"
+        ]
+      },
+      {
+        "text": "The Cybercab goes further. Every outside camera has its own cleaner. The front bumper camera. The cameras behind the windshield. The side pillars. The rear. The camera above the licence plate even gets its own spray nozzle. Only the cabin camera inside goes without. That handles mud and raindrops on the outside. But some dirt sits where no jet can reach.",
+        "img": [
+          "lib/cybercab-street-day.jpg",
+          "lib/cybercab-line-front.jpg",
+          "lib/cybercab-rear-fixture.jpg"
+        ]
+      },
+      {
+        "head": "What can a washer not fix?",
+        "pop": [
+          {
+            "say": "",
+            "show": "NO JET REACHES"
+          }
+        ],
+        "img": [
+          "lib/cybercab-dash-line.jpg"
+        ]
+      },
+      {
+        "text": "A film on the inside of the windshield, right in front of the main cameras. Haze left over from production, or gases from new interior materials, can slowly cloud the glass from within. In late 2025 Tesla added a pop-up for exactly this. It tells owners the forward-facing camera has obstructed visibility, and it offers a free 15-minute cleaning you can book in the Tesla app.",
+        "img": [
+          "camera-rain.jpg",
+          "lib/tesla-app-phone.jpg",
+          "lib/service-center.jpg"
+        ]
+      },
+      {
+        "text": "Do not try it yourself. The camera housing has to come off, and its clips break easily. Then there are glare and fog. No washer can clean light. That part is a software problem, and exactly what NHTSA is looking at. And even the best washer has limits. Fluid runs out. Moving parts wear.",
+        "photo": [
+          {
+            "q": [
+              "sun glare windshield",
+              "low sun glare road",
+              "driving into the sun"
+            ],
+            "want": "a road seen through a windshield with strong low sun glare"
+          },
+          {
+            "q": [
+              "car headlights fog road",
+              "traffic in fog",
+              "highway fog cars"
+            ],
+            "want": "cars driving on a road in thick fog"
+          }
+        ],
+        "img": [
+          "lib/fsd-screen-rain-night.jpg"
+        ]
+      },
+      {
+        "head": "How would a camera with an eyelid work?",
+        "pop": [
+          {
+            "say": "",
+            "show": "CAMERA EYELID"
+          }
+        ],
+        "photo": [
+          {
+            "q": [
+              "human eye close up",
+              "eye macro eyelid",
+              "eyelid close-up"
+            ],
+            "want": "a close-up of a human eye and eyelid (no recognisable face)"
+          }
+        ]
+      },
+      {
+        "text": "By building a tiny wiper into each camera. In May 2026 Tesla was granted US patent number 12,636,684. It describes one sealed unit with a fluid tank, a nozzle aimed at the lens, and a miniature wiper with its own motor. The blade follows the curve of the lens, much like an eyelid sweeping over an eye.",
+        "photo": [
+          {
+            "q": [
+              "United States Patent and Trademark Office",
+              "USPTO headquarters Alexandria"
+            ],
+            "want": "the US Patent and Trademark Office building"
+          },
+          {
+            "q": [
+              "human eye close up",
+              "eye macro eyelid",
+              "eyelid close-up"
+            ],
+            "want": "a close-up of a human eye and eyelid (no recognisable face)"
+          }
+        ],
+        "img": [
+          "lib/cybercab-line-closeup.jpg"
+        ]
+      },
+      {
+        "text": "The patent names two first users: the Cybercab and Optimus, Tesla's humanoid robot. Yes, the robot may get eyelids too. But no car with this system has been announced. And an eyelid is still a blade and a tank. Across a fleet of thousands of cars, that means thousands of blades to replace and tanks to refill.",
+        "img": [
+          "cybercab-fleet.jpg",
+          "lib/optimus-walking.jpg",
+          "lib/cybercab-doors-open.jpg"
+        ]
+      },
+      {
+        "head": "So could a laser really replace the wiper?",
+        "pop": [
+          {
+            "say": "",
+            "show": "LASER WIPER?"
+          }
+        ],
+        "img": [
+          "gen/how-tesla-robotaxi-keeps-cameras-clean-washers-wipers-laser-explained.jpg"
+        ]
+      },
+      {
+        "text": "In theory, yes. But only for a small patch of glass, and it is not on any car yet. Tesla filed the laser patent in May 2019. It was granted in September 2021, and an updated version followed on March 31, 2026. The system spots dirt on the glass, works out what kind of dirt it is, and fires short laser pulses at a calibrated rate. The energy never goes deeper than the thickness of the glass.",
+        "photo": [
+          {
+            "q": [
+              "laser cleaning",
+              "laser ablation cleaning",
+              "laser rust removal"
+            ],
+            "want": "a laser cleaning a surface, a bright laser spot on metal or stone"
+          },
+          {
+            "q": [
+              "pulsed laser beam",
+              "laser beam laboratory",
+              "green laser beam optics"
+            ],
+            "want": "a visible laser beam in a lab with optics"
+          },
+          {
+            "q": [
+              "United States Patent and Trademark Office",
+              "USPTO headquarters Alexandria"
+            ],
+            "want": "the US Patent and Trademark Office building"
+          }
+        ]
+      },
+      {
+        "text": "The patent lists windshields, side windows, camera lenses and solar panels. Moravy added the practical limit. A whole windshield would need too many lasers. Clearing only the small window in front of a camera is a much smaller job.",
+        "photo": [
+          {
+            "q": [
+              "solar panels dust cleaning",
+              "solar panel field",
+              "photovoltaic panels"
+            ],
+            "want": "a field of solar panels"
+          }
+        ],
+        "img": [
+          "lib/solar-roof-house.jpg",
+          "lib/fsd-screen-rain-night.jpg"
+        ]
+      },
+      {
+        "text": "And the Cybertruck shows how long these ideas can take. It was unveiled in 2019 without wipers. Lasers were rumoured. It went into production with one giant blade instead.",
+        "img": [
+          "lib/cybertruck-front-city.jpg",
+          "lib/cybertruck-rear-light.jpg",
+          "lib/cybertruck-bed-open.jpg"
+        ]
+      },
+      {
+        "head": "What does this mean for owners and riders?",
+        "pop": [
+          {
+            "say": "",
+            "show": "FOR YOU"
+          }
+        ],
+        "img": [
+          "lib/tesla-delivery-center.jpg"
+        ]
+      },
+      {
+        "text": "For now, clean cameras are still partly your job. Two myths. One: a patent is not a product. Tesla patents plenty of ideas that never ship, and nobody at Tesla has given a date for laser cleaning. Two: a dirty camera does not mean the car drives blind without warning. FSD Supervised warns you and asks you to take over. Although NHTSA's probe shows those warnings have not always come early enough.",
+        "img": [
+          "fsd-camera-view.jpg",
+          "lib/tesla-app-phone.jpg",
+          "lib/robotaxi-rear-passenger.jpg"
+        ]
+      },
+      {
+        "text": "If you own a Tesla, wipe the outside camera lenses whenever you wash the car. And book the free service if the forward camera warning pops up. If you ride in a Robotaxi, the cleaning happens for you. Today with jets.",
+        "img": [
+          "robotaxi-app.jpg",
+          "lib/modely-front.jpg",
+          "lib/robotaxi-app-pickup.jpg"
+        ]
+      },
+      {
+        "text": "So remember that 2019 patent nobody uses. It was never just about lasers. It is about a car that has to see in every kind of weather, with nobody there to wipe its eyes. Jets today. An eyelid next, maybe. And one day, perhaps, a pulse of light. Which is why Tesla's next wiper might still be a laser.",
+        "img": [
+          "gen/how-tesla-robotaxi-keeps-cameras-clean-washers-wipers-laser-explained.jpg",
+          "lib/cybercab-doors-open.jpg",
+          "lib/robotaxi-night-curb.jpg"
+        ]
+      }
+    ],
+    "nl": [
+      {
+        "text": "De volgende ruitenwisser van Tesla is misschien een laser. Dat is geen grap uit een sciencefictionfilm. Het is een patent van Tesla uit 2019, en Teslas baas voertuigtechniek heeft het er nu voor de camera over gehad. Maar nu het rare. Het idee stamt uit 2019, en geen enkele Tesla gebruikt het. Aan het eind van deze video weet je precies waarom, en waarom dat antwoord telt voor elke Robotaxi op de weg.",
+        "img": [
+          "gen/how-tesla-robotaxi-keeps-cameras-clean-washers-wipers-laser-explained.jpg",
+          "lib/fsd-screen-rain-night.jpg",
+          "lib/robotaxi-night-curb.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "laser cleaning",
+              "laser ablation cleaning",
+              "laser rust removal"
+            ],
+            "want": "a laser cleaning a surface, a bright laser spot on metal or stone"
+          }
+        ]
+      },
+      {
+        "text": "Het begon in Jay Leno's Garage. Lars Moravy, Teslas vicepresident voertuigtechniek, liet de lange zespersoons Model Y zien. Toen ging het over ruitenwissers. Zijn punt: schiet met lasers op één klein vlak en je blaast een laagje water weg. Voor een zelfrijdende auto is het misschien genoeg om alleen het stukje voor de camera schoon te maken, zei hij. Geen datum. Geen belofte. Een ingenieur die hardop nadenkt.",
+        "photo": [
+          {
+            "q": [
+              "Model Y L Tesla",
+              "Tesla Model Y L",
+              "Tesla Model Y six seat"
+            ],
+            "want": "a Tesla Model Y L, the long six-seat Model Y"
+          },
+          {
+            "q": [
+              "pulsed laser beam",
+              "laser beam laboratory",
+              "green laser beam optics"
+            ],
+            "want": "a visible laser beam in a lab with optics"
+          }
+        ],
+        "img": [
+          "lib/robotaxi-fleet-dawn.jpg"
+        ]
+      },
+      {
+        "text": "Waarom zou Tesla dit nodig hebben? Omdat de Robotaxi-dienst steeds meer steden in gaat. Sommige krijgen flink wat regen. Houston. Miami. Tampa. En in een Robotaxi zit niemand die de camera's even schoonveegt. Een auto die alleen met camera's rijdt, is zo goed als zijn smerigste lens.",
+        "photo": [
+          {
+            "q": [
+              "Houston skyline rain",
+              "Houston flooding street",
+              "Houston downtown storm"
+            ],
+            "want": "Houston city streets or skyline in rain"
+          },
+          {
+            "q": [
+              "Miami rain storm street",
+              "Miami skyline storm"
+            ],
+            "want": "Miami in a rain storm"
+          }
+        ],
+        "img": [
+          "lib/robotaxi-app-wait.jpg"
+        ]
+      },
+      {
+        "head": "Waarom is een vieze camera zo'n probleem voor een Tesla?",
+        "pop": [
+          {
+            "say": "",
+            "show": "WAAROM VUIL TELT"
+          }
+        ],
+        "img": [
+          "camera-rain.jpg"
+        ]
+      },
+      {
+        "text": "Omdat camera's de enige ogen van een Tesla zijn. Sinds 2021 laat Tesla de radar weg. Lidar gebruikte het nooit. FSD en de Robotaxi-software werken dus alleen met camerabeelden. Regen, modder, strooizout, tegenlicht en mist komen allemaal op hetzelfde paar vierkante centimeter glas voor elke lens.",
+        "photo": [
+          {
+            "q": [
+              "Tesla Autopilot camera",
+              "Tesla side camera fender",
+              "Tesla Model 3 camera"
+            ],
+            "want": "a small camera built into the body of a Tesla car"
+          },
+          {
+            "q": [
+              "Tesla Model 3 front",
+              "Tesla Model 3 2018",
+              "Tesla Model 3 red"
+            ],
+            "want": "a Tesla Model 3 seen from the front"
+          }
+        ],
+        "img": [
+          "fsd-camera-view.jpg"
+        ]
+      },
+      {
+        "text": "En de toezichthouder kijkt mee. In oktober 2024 begon de Amerikaanse verkeersveiligheidsdienst NHTSA een onderzoek na vier ongelukken bij slecht zicht. Bij één ervan kwam een voetganger om. In maart 2026 werd het onderzoek opgeschaald. Het gaat nu over zo'n 3,2 miljoen auto's en negen incidenten. De hamvraag: merkt FSD op tijd dat de camera's verblind zijn door laagstaande zon, mist of stof? Volgens NHTSA kwam de waarschuwing vaak pas vlak voor de botsing.",
+        "photo": [
+          {
+            "q": [
+              "United States Department of Transportation headquarters",
+              "US DOT headquarters Washington",
+              "NHTSA"
+            ],
+            "want": "the US Department of Transportation headquarters building in Washington"
+          },
+          {
+            "q": [
+              "car headlights fog road",
+              "traffic in fog",
+              "highway fog cars"
+            ],
+            "want": "cars driving on a road in thick fog"
+          },
+          {
+            "q": [
+              "sun glare windshield",
+              "low sun glare road",
+              "driving into the sun"
+            ],
+            "want": "a road seen through a windshield with strong low sun glare"
+          }
+        ]
+      },
+      {
+        "text": "In je eigen Tesla ben jij het vangnet. Een melding vraagt je de camera schoon te maken of het over te nemen. Een Robotaxi heeft geen vangnet. Dus moet hij zichzelf schoonmaken.",
+        "img": [
+          "lib/robotaxi-rear-passenger.jpg",
+          "lib/robotaxi-app-share.jpg"
+        ]
+      },
+      {
+        "head": "Hoe maakt een Robotaxi zijn camera's dan zelf schoon?",
+        "pop": [
+          {
+            "say": "",
+            "show": "ZELFREINIGEND"
+          }
+        ],
+        "img": [
+          "robotaxi-my-1.jpg"
+        ]
+      },
+      {
+        "text": "Met kleine sproeiers die vloeistof onder druk op de lenzen spuiten. In januari 2026 werden in Austin Model Y Robotaxi's gespot met sproeiers bij de achteruitrijcamera en de camera's in de voorschermen. Tesla haalde zelfs het knipperlicht uit de nieuwe camerabehuizing om ruimte te maken voor de sproeier.",
+        "img": [
+          "robotaxi-my-2.jpg",
+          "lib/robotaxi-night-curb.jpg",
+          "lib/robotaxi-fleet-dawn.jpg"
+        ]
+      },
+      {
+        "text": "De Cybercab gaat verder. Elke buitencamera heeft een eigen reiniger. De camera in de voorbumper. De camera's achter de voorruit. De stijlen. De achterkant. De camera boven het kenteken krijgt zelfs een eigen sproeikop. Alleen de camera in de cabine heeft er geen. Daarmee zijn modder en regendruppels aan de buitenkant geregeld. Maar sommig vuil zit waar geen sproeier bij kan.",
+        "img": [
+          "lib/cybercab-street-day.jpg",
+          "lib/cybercab-line-front.jpg",
+          "lib/cybercab-rear-fixture.jpg"
+        ]
+      },
+      {
+        "head": "Wat kan een sproeier niet oplossen?",
+        "pop": [
+          {
+            "say": "",
+            "show": "ONBEREIKBAAR"
+          }
+        ],
+        "img": [
+          "lib/cybercab-dash-line.jpg"
+        ]
+      },
+      {
+        "text": "Een waas aan de binnenkant van de voorruit, precies voor de belangrijkste camera's. Resten uit de fabriek of dampen uit nieuwe interieurmaterialen laten het glas langzaam van binnen beslaan. Eind 2025 voegde Tesla daar een melding voor toe. Die zegt dat het zicht van de voorcamera belemmerd is, en biedt een gratis reiniging van een kwartier aan, te boeken in de Tesla-app.",
+        "img": [
+          "camera-rain.jpg",
+          "lib/tesla-app-phone.jpg",
+          "lib/service-center.jpg"
+        ]
+      },
+      {
+        "text": "Probeer het niet zelf. De camerabehuizing moet eraf, en de klipsen breken snel. Dan zijn er nog tegenlicht en mist. Licht kun je niet wegspoelen. Dat moet de software oplossen, en precies dat onderzoekt NHTSA. En zelfs de beste sproeier heeft grenzen. De vloeistof raakt op. Bewegende delen slijten.",
+        "photo": [
+          {
+            "q": [
+              "sun glare windshield",
+              "low sun glare road",
+              "driving into the sun"
+            ],
+            "want": "a road seen through a windshield with strong low sun glare"
+          },
+          {
+            "q": [
+              "car headlights fog road",
+              "traffic in fog",
+              "highway fog cars"
+            ],
+            "want": "cars driving on a road in thick fog"
+          }
+        ],
+        "img": [
+          "lib/fsd-screen-rain-night.jpg"
+        ]
+      },
+      {
+        "head": "Hoe werkt een camera met een ooglid?",
+        "pop": [
+          {
+            "say": "",
+            "show": "CAMERA-OOGLID"
+          }
+        ],
+        "photo": [
+          {
+            "q": [
+              "human eye close up",
+              "eye macro eyelid",
+              "eyelid close-up"
+            ],
+            "want": "a close-up of a human eye and eyelid (no recognisable face)"
+          }
+        ]
+      },
+      {
+        "text": "Met een minuscule wisser in elke camera. In mei 2026 kreeg Tesla Amerikaans patent nummer 12.636.684. Het beschrijft één afgesloten unit met een vloeistoftankje, een sproeier gericht op de lens en een mini-wisser met een eigen motortje. Het wissertje volgt de bolling van de lens, zoals een ooglid over een oog.",
+        "photo": [
+          {
+            "q": [
+              "United States Patent and Trademark Office",
+              "USPTO headquarters Alexandria"
+            ],
+            "want": "the US Patent and Trademark Office building"
+          },
+          {
+            "q": [
+              "human eye close up",
+              "eye macro eyelid",
+              "eyelid close-up"
+            ],
+            "want": "a close-up of a human eye and eyelid (no recognisable face)"
+          }
+        ],
+        "img": [
+          "lib/cybercab-line-closeup.jpg"
+        ]
+      },
+      {
+        "text": "Het patent noemt twee eerste gebruikers: de Cybercab en Optimus, Teslas humanoïde robot. Ja, ook de robot krijgt misschien oogleden. Maar een auto met dit systeem is nog niet aangekondigd. En ook een ooglid is een wissertje en een tankje. Bij een vloot van duizenden auto's zijn dat duizenden wissers om te vervangen en tanks om bij te vullen.",
+        "img": [
+          "cybercab-fleet.jpg",
+          "lib/optimus-walking.jpg",
+          "lib/cybercab-doors-open.jpg"
+        ]
+      },
+      {
+        "head": "Dus kan een laser de ruitenwisser echt vervangen?",
+        "pop": [
+          {
+            "say": "",
+            "show": "LASERWISSER?"
+          }
+        ],
+        "img": [
+          "gen/how-tesla-robotaxi-keeps-cameras-clean-washers-wipers-laser-explained.jpg"
+        ]
+      },
+      {
+        "text": "In theorie wel. Maar alleen voor een klein stukje glas, en het zit nog op geen enkele auto. Tesla vroeg het laserpatent aan in mei 2019. Het werd toegekend in september 2021, en op 31 maart 2026 volgde een bijgewerkte versie. Het systeem ziet vuil op het glas, bepaalt wat voor vuil het is en vuurt korte laserpulsen af in een afgesteld ritme. De energie komt nooit dieper dan de dikte van het glas.",
+        "photo": [
+          {
+            "q": [
+              "laser cleaning",
+              "laser ablation cleaning",
+              "laser rust removal"
+            ],
+            "want": "a laser cleaning a surface, a bright laser spot on metal or stone"
+          },
+          {
+            "q": [
+              "pulsed laser beam",
+              "laser beam laboratory",
+              "green laser beam optics"
+            ],
+            "want": "a visible laser beam in a lab with optics"
+          },
+          {
+            "q": [
+              "United States Patent and Trademark Office",
+              "USPTO headquarters Alexandria"
+            ],
+            "want": "the US Patent and Trademark Office building"
+          }
+        ]
+      },
+      {
+        "text": "Het patent noemt voorruiten, zijruiten, cameralenzen en zonnepanelen. Moravy noemde meteen de praktische grens. Voor een hele voorruit heb je te veel lasers nodig. Alleen het kleine venster voor een camera vrijhouden is een veel kleinere klus.",
+        "photo": [
+          {
+            "q": [
+              "solar panels dust cleaning",
+              "solar panel field",
+              "photovoltaic panels"
+            ],
+            "want": "a field of solar panels"
+          }
+        ],
+        "img": [
+          "lib/solar-roof-house.jpg",
+          "lib/fsd-screen-rain-night.jpg"
+        ]
+      },
+      {
+        "text": "En de Cybertruck laat zien hoe lang zulke ideeën duren. Hij werd in 2019 getoond zonder ruitenwissers. Er gingen geruchten over lasers. Hij ging in productie met één enorme wisser.",
+        "img": [
+          "lib/cybertruck-front-city.jpg",
+          "lib/cybertruck-rear-light.jpg",
+          "lib/cybertruck-bed-open.jpg"
+        ]
+      },
+      {
+        "head": "Wat betekent dit voor eigenaren en passagiers?",
+        "pop": [
+          {
+            "say": "",
+            "show": "VOOR JOU"
+          }
+        ],
+        "img": [
+          "lib/tesla-delivery-center.jpg"
+        ]
+      },
+      {
+        "text": "Voorlopig zijn schone camera's deels nog jouw werk. Twee misverstanden. Eén: een patent is geen product. Tesla patenteert genoeg ideeën die nooit in een auto komen, en niemand bij Tesla heeft een datum genoemd voor laserreiniging. Twee: een vieze camera betekent niet dat de auto zonder waarschuwing blind doorrijdt. FSD Supervised waarschuwt en vraagt je het over te nemen. Al laat het onderzoek van NHTSA zien dat die waarschuwing niet altijd vroeg genoeg kwam.",
+        "img": [
+          "fsd-camera-view.jpg",
+          "lib/tesla-app-phone.jpg",
+          "lib/robotaxi-rear-passenger.jpg"
+        ]
+      },
+      {
+        "text": "Heb je een Tesla? Veeg de cameralenzen buiten mee als je de auto wast. En boek de gratis reiniging als de melding over de voorcamera verschijnt. Rijd je mee in een Robotaxi, dan gebeurt het schoonmaken voor je. Vandaag met sproeiers.",
+        "img": [
+          "robotaxi-app.jpg",
+          "lib/modely-front.jpg",
+          "lib/robotaxi-app-pickup.jpg"
+        ]
+      },
+      {
+        "text": "Denk nog even aan dat patent uit 2019 dat niemand gebruikt. Het ging nooit alleen over lasers. Het gaat over een auto die bij elk weer moet kunnen zien, zonder iemand die zijn ogen afveegt. Vandaag sproeiers. Straks misschien een ooglid. En ooit, wie weet, een lichtpuls. Daarom is Teslas volgende ruitenwisser misschien toch een laser.",
+        "img": [
+          "gen/how-tesla-robotaxi-keeps-cameras-clean-washers-wipers-laser-explained.jpg",
+          "lib/cybercab-doors-open.jpg",
+          "lib/robotaxi-night-curb.jpg"
+        ]
+      }
+    ],
+    "yt_title_en": "How Tesla Robotaxis Keep Their Cameras Clean: Washers, Wipers and Lasers",
+    "yt_title_nl": "Hoe Tesla Robotaxi's Hun Camera's Schoonhouden: Sproeiers, Wissers en Lasers"
   },
-  "en": "Tesla's next wiper might be a laser. A Robotaxi has no driver to wipe its cameras. And it sees the road through cameras alone. Regulators are probing 3.2 million Teslas over it. So the Cybercab sprays every outside camera clean. Tesla even patented a camera with its own eyelid. But blades wear out, and fluid runs dry. A pulsed laser hits the dirt, never through the glass. Patented in 2019. Even Cybertruck got a wiper instead. Now Tesla's engineering chief is saying it out loud:",
-  "nl": "Teslas volgende ruitenwisser is misschien een laser. Een Robotaxi heeft geen chauffeur die de camera's schoonveegt. En hij ziet de weg alleen met camera's. Toezichthouders onderzoeken er 3,2 miljoen Tesla's om. Dus spuit de Cybercab elke buitencamera schoon. Tesla patenteerde zelfs een camera met een eigen ooglid. Maar wissers slijten, en de vloeistof raakt op. Een gepulste laser raakt het vuil, nooit door het glas heen. Gepatenteerd in 2019. Zelfs de Cybertruck kreeg gewoon een wisser. En nu zegt Teslas techniekbaas het hardop:"
- },
- "video": {
-  "en": [
-   {
-    "text": "Tesla's next windshield wiper might be a laser. That is not a joke from a sci-fi movie. It is a Tesla patent from 2019, and Tesla's head of vehicle engineering has now talked about it on camera. But here is the strange part. The idea dates from 2019, and not one Tesla uses it. By the end of this video, you will know exactly why, and why the answer matters for every Robotaxi on the road.",
-    "img": [
-     "gen/how-tesla-robotaxi-keeps-cameras-clean-washers-wipers-laser-explained.jpg",
-     "lib/fsd-screen-rain-night.jpg",
-     "lib/robotaxi-night-curb.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "laser cleaning",
-       "laser ablation cleaning",
-       "laser rust removal"
-      ],
-      "want": "a laser cleaning a surface, a bright laser spot on metal or stone"
-     }
-    ]
-   },
-   {
-    "text": "It started on Jay Leno's Garage. Lars Moravy, Tesla's vice president of vehicle engineering, was showing off the long six-seat Model Y. Then the talk turned to wipers. His point: fire lasers at one focused spot, and you can blast away a sheet of water. For a self-driving car, he said, it might be enough to clean only the area where the camera is. No date. No promise. Just an engineer thinking out loud.",
-    "photo": [
-     {
-      "q": [
-       "Model Y L Tesla",
-       "Tesla Model Y L",
-       "Tesla Model Y six seat"
-      ],
-      "want": "a Tesla Model Y L, the long six-seat Model Y"
-     },
-     {
-      "q": [
-       "pulsed laser beam",
-       "laser beam laboratory",
-       "green laser beam optics"
-      ],
-      "want": "a visible laser beam in a lab with optics"
-     }
-    ],
-    "img": [
-     "lib/robotaxi-fleet-dawn.jpg"
-    ]
-   },
-   {
-    "text": "So why would Tesla even need this? Because its Robotaxi service keeps moving into new cities. Some of them get serious rain. Houston. Miami. Tampa. And a Robotaxi has nobody on board whose job it is to keep its eyes clean. A car that drives on cameras alone is only as good as its dirtiest lens.",
-    "photo": [
-     {
-      "q": [
-       "Houston skyline rain",
-       "Houston flooding street",
-       "Houston downtown storm"
-      ],
-      "want": "Houston city streets or skyline in rain"
-     },
-     {
-      "q": [
-       "Miami rain storm street",
-       "Miami skyline storm"
-      ],
-      "want": "Miami in a rain storm"
-     }
-    ],
-    "img": [
-     "lib/robotaxi-app-wait.jpg"
-    ]
-   },
-   {
-    "head": "Why does a dirty camera matter so much to a Tesla?",
-    "pop": [
-     {
-      "say": "",
-      "show": "WHY DIRT MATTERS"
-     }
-    ],
-    "img": [
-     "camera-rain.jpg"
-    ]
-   },
-   {
-    "text": "Because cameras are the only way a Tesla sees the road. Since 2021 Tesla has dropped radar from its cars. It never used lidar. So FSD and the Robotaxi software work from camera images alone. Rain, mud, road salt, glare and fog all land on the same few square centimetres of glass in front of each lens.",
-    "photo": [
-     {
-      "q": [
-       "Tesla Autopilot camera",
-       "Tesla side camera fender",
-       "Tesla Model 3 camera"
-      ],
-      "want": "a small camera built into the body of a Tesla car"
-     },
-     {
-      "q": [
-       "Tesla Model 3 front",
-       "Tesla Model 3 2018",
-       "Tesla Model 3 red"
-      ],
-      "want": "a Tesla Model 3 seen from the front"
-     }
-    ],
-    "img": [
-     "fsd-camera-view.jpg"
-    ]
-   },
-   {
-    "text": "And regulators are watching. In October 2024 the US road safety agency NHTSA opened a probe after four crashes in poor visibility. One of them killed a pedestrian. In March 2026 the probe was upgraded. It now covers about 3.2 million vehicles and nine incidents. The key question: does FSD notice in time when its cameras are blinded by sun glare, fog or dust? NHTSA found the warnings often came only just before the crash.",
-    "photo": [
-     {
-      "q": [
-       "United States Department of Transportation headquarters",
-       "US DOT headquarters Washington",
-       "NHTSA"
-      ],
-      "want": "the US Department of Transportation headquarters building in Washington"
-     },
-     {
-      "q": [
-       "car headlights fog road",
-       "traffic in fog",
-       "highway fog cars"
-      ],
-      "want": "cars driving on a road in thick fog"
-     },
-     {
-      "q": [
-       "sun glare windshield",
-       "low sun glare road",
-       "driving into the sun"
-      ],
-      "want": "a road seen through a windshield with strong low sun glare"
-     }
-    ]
-   },
-   {
-    "text": "In your own Tesla, you are the backup. A warning asks you to clean the camera or take over. A Robotaxi has no backup. So it has to clean itself.",
-    "img": [
-     "lib/robotaxi-rear-passenger.jpg",
-     "lib/robotaxi-app-share.jpg"
-    ]
-   },
-   {
-    "head": "So how does a Robotaxi clean its own cameras?",
-    "pop": [
-     {
-      "say": "",
-      "show": "SELF-CLEANING"
-     }
-    ],
-    "img": [
-     "robotaxi-my-1.jpg"
-    ]
-   },
-   {
-    "text": "With small washer jets that spray fluid onto the lenses under pressure. In January 2026, Model Y Robotaxis in Austin were spotted with washers on the rear camera and on the fender cameras. Tesla even took the turn signal out of the new fender camera housing to make room for the jet.",
-    "img": [
-     "robotaxi-my-2.jpg",
-     "lib/robotaxi-night-curb.jpg",
-     "lib/robotaxi-fleet-dawn.jpg"
-    ]
-   },
-   {
-    "text": "The Cybercab goes further. Every outside camera has its own cleaner. The front bumper camera. The cameras behind the windshield. The side pillars. The rear. The camera above the licence plate even gets its own spray nozzle. Only the cabin camera inside goes without. That handles mud and raindrops on the outside. But some dirt sits where no jet can reach.",
-    "img": [
-     "lib/cybercab-street-day.jpg",
-     "lib/cybercab-line-front.jpg",
-     "lib/cybercab-rear-fixture.jpg"
-    ]
-   },
-   {
-    "head": "What can a washer not fix?",
-    "pop": [
-     {
-      "say": "",
-      "show": "NO JET REACHES"
-     }
-    ],
-    "img": [
-     "lib/cybercab-dash-line.jpg"
-    ]
-   },
-   {
-    "text": "A film on the inside of the windshield, right in front of the main cameras. Haze left over from production, or gases from new interior materials, can slowly cloud the glass from within. In late 2025 Tesla added a pop-up for exactly this. It tells owners the forward-facing camera has obstructed visibility, and it offers a free 15-minute cleaning you can book in the Tesla app.",
-    "img": [
-     "camera-rain.jpg",
-     "lib/tesla-app-phone.jpg",
-     "lib/service-center.jpg"
-    ]
-   },
-   {
-    "text": "Do not try it yourself. The camera housing has to come off, and its clips break easily. Then there are glare and fog. No washer can clean light. That part is a software problem, and exactly what NHTSA is looking at. And even the best washer has limits. Fluid runs out. Moving parts wear.",
-    "photo": [
-     {
-      "q": [
-       "sun glare windshield",
-       "low sun glare road",
-       "driving into the sun"
-      ],
-      "want": "a road seen through a windshield with strong low sun glare"
-     },
-     {
-      "q": [
-       "car headlights fog road",
-       "traffic in fog",
-       "highway fog cars"
-      ],
-      "want": "cars driving on a road in thick fog"
-     }
-    ],
-    "img": [
-     "lib/fsd-screen-rain-night.jpg"
-    ]
-   },
-   {
-    "head": "How would a camera with an eyelid work?",
-    "pop": [
-     {
-      "say": "",
-      "show": "CAMERA EYELID"
-     }
-    ],
-    "photo": [
-     {
-      "q": [
-       "human eye close up",
-       "eye macro eyelid",
-       "eyelid close-up"
-      ],
-      "want": "a close-up of a human eye and eyelid (no recognisable face)"
-     }
-    ]
-   },
-   {
-    "text": "By building a tiny wiper into each camera. In May 2026 Tesla was granted US patent number 12,636,684. It describes one sealed unit with a fluid tank, a nozzle aimed at the lens, and a miniature wiper with its own motor. The blade follows the curve of the lens, much like an eyelid sweeping over an eye.",
-    "photo": [
-     {
-      "q": [
-       "United States Patent and Trademark Office",
-       "USPTO headquarters Alexandria"
-      ],
-      "want": "the US Patent and Trademark Office building"
-     },
-     {
-      "q": [
-       "human eye close up",
-       "eye macro eyelid",
-       "eyelid close-up"
-      ],
-      "want": "a close-up of a human eye and eyelid (no recognisable face)"
-     }
-    ],
-    "img": [
-     "lib/cybercab-line-closeup.jpg"
-    ]
-   },
-   {
-    "text": "The patent names two first users: the Cybercab and Optimus, Tesla's humanoid robot. Yes, the robot may get eyelids too. But no car with this system has been announced. And an eyelid is still a blade and a tank. Across a fleet of thousands of cars, that means thousands of blades to replace and tanks to refill.",
-    "img": [
-     "cybercab-fleet.jpg",
-     "lib/optimus-walking.jpg",
-     "lib/cybercab-doors-open.jpg"
-    ]
-   },
-   {
-    "head": "So could a laser really replace the wiper?",
-    "pop": [
-     {
-      "say": "",
-      "show": "LASER WIPER?"
-     }
-    ],
-    "img": [
-     "gen/how-tesla-robotaxi-keeps-cameras-clean-washers-wipers-laser-explained.jpg"
-    ]
-   },
-   {
-    "text": "In theory, yes. But only for a small patch of glass, and it is not on any car yet. Tesla filed the laser patent in May 2019. It was granted in September 2021, and an updated version followed on March 31, 2026. The system spots dirt on the glass, works out what kind of dirt it is, and fires short laser pulses at a calibrated rate. The energy never goes deeper than the thickness of the glass.",
-    "photo": [
-     {
-      "q": [
-       "laser cleaning",
-       "laser ablation cleaning",
-       "laser rust removal"
-      ],
-      "want": "a laser cleaning a surface, a bright laser spot on metal or stone"
-     },
-     {
-      "q": [
-       "pulsed laser beam",
-       "laser beam laboratory",
-       "green laser beam optics"
-      ],
-      "want": "a visible laser beam in a lab with optics"
-     },
-     {
-      "q": [
-       "United States Patent and Trademark Office",
-       "USPTO headquarters Alexandria"
-      ],
-      "want": "the US Patent and Trademark Office building"
-     }
-    ]
-   },
-   {
-    "text": "The patent lists windshields, side windows, camera lenses and solar panels. Moravy added the practical limit. A whole windshield would need too many lasers. Clearing only the small window in front of a camera is a much smaller job.",
-    "photo": [
-     {
-      "q": [
-       "solar panels dust cleaning",
-       "solar panel field",
-       "photovoltaic panels"
-      ],
-      "want": "a field of solar panels"
-     }
-    ],
-    "img": [
-     "lib/solar-roof-house.jpg",
-     "lib/fsd-screen-rain-night.jpg"
-    ]
-   },
-   {
-    "text": "And the Cybertruck shows how long these ideas can take. It was unveiled in 2019 without wipers. Lasers were rumoured. It went into production with one giant blade instead.",
-    "img": [
-     "lib/cybertruck-front-city.jpg",
-     "lib/cybertruck-rear-light.jpg",
-     "lib/cybertruck-bed-open.jpg"
-    ]
-   },
-   {
-    "head": "What does this mean for owners and riders?",
-    "pop": [
-     {
-      "say": "",
-      "show": "FOR YOU"
-     }
-    ],
-    "img": [
-     "lib/tesla-delivery-center.jpg"
-    ]
-   },
-   {
-    "text": "For now, clean cameras are still partly your job. Two myths. One: a patent is not a product. Tesla patents plenty of ideas that never ship, and nobody at Tesla has given a date for laser cleaning. Two: a dirty camera does not mean the car drives blind without warning. FSD Supervised warns you and asks you to take over. Although NHTSA's probe shows those warnings have not always come early enough.",
-    "img": [
-     "fsd-camera-view.jpg",
-     "lib/tesla-app-phone.jpg",
-     "lib/robotaxi-rear-passenger.jpg"
-    ]
-   },
-   {
-    "text": "If you own a Tesla, wipe the outside camera lenses whenever you wash the car. And book the free service if the forward camera warning pops up. If you ride in a Robotaxi, the cleaning happens for you. Today with jets.",
-    "img": [
-     "robotaxi-app.jpg",
-     "lib/modely-front.jpg",
-     "lib/robotaxi-app-pickup.jpg"
-    ]
-   },
-   {
-    "text": "So remember that 2019 patent nobody uses. It was never just about lasers. It is about a car that has to see in every kind of weather, with nobody there to wipe its eyes. Jets today. An eyelid next, maybe. And one day, perhaps, a pulse of light. Which is why Tesla's next wiper might still be a laser.",
-    "img": [
-     "gen/how-tesla-robotaxi-keeps-cameras-clean-washers-wipers-laser-explained.jpg",
-     "lib/cybercab-doors-open.jpg",
-     "lib/robotaxi-night-curb.jpg"
-    ]
-   }
-  ],
-  "nl": [
-   {
-    "text": "De volgende ruitenwisser van Tesla is misschien een laser. Dat is geen grap uit een sciencefictionfilm. Het is een patent van Tesla uit 2019, en Teslas baas voertuigtechniek heeft het er nu voor de camera over gehad. Maar nu het rare. Het idee stamt uit 2019, en geen enkele Tesla gebruikt het. Aan het eind van deze video weet je precies waarom, en waarom dat antwoord telt voor elke Robotaxi op de weg.",
-    "img": [
-     "gen/how-tesla-robotaxi-keeps-cameras-clean-washers-wipers-laser-explained.jpg",
-     "lib/fsd-screen-rain-night.jpg",
-     "lib/robotaxi-night-curb.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "laser cleaning",
-       "laser ablation cleaning",
-       "laser rust removal"
-      ],
-      "want": "a laser cleaning a surface, a bright laser spot on metal or stone"
-     }
-    ]
-   },
-   {
-    "text": "Het begon in Jay Leno's Garage. Lars Moravy, Teslas vicepresident voertuigtechniek, liet de lange zespersoons Model Y zien. Toen ging het over ruitenwissers. Zijn punt: schiet met lasers op één klein vlak en je blaast een laagje water weg. Voor een zelfrijdende auto is het misschien genoeg om alleen het stukje voor de camera schoon te maken, zei hij. Geen datum. Geen belofte. Een ingenieur die hardop nadenkt.",
-    "photo": [
-     {
-      "q": [
-       "Model Y L Tesla",
-       "Tesla Model Y L",
-       "Tesla Model Y six seat"
-      ],
-      "want": "a Tesla Model Y L, the long six-seat Model Y"
-     },
-     {
-      "q": [
-       "pulsed laser beam",
-       "laser beam laboratory",
-       "green laser beam optics"
-      ],
-      "want": "a visible laser beam in a lab with optics"
-     }
-    ],
-    "img": [
-     "lib/robotaxi-fleet-dawn.jpg"
-    ]
-   },
-   {
-    "text": "Waarom zou Tesla dit nodig hebben? Omdat de Robotaxi-dienst steeds meer steden in gaat. Sommige krijgen flink wat regen. Houston. Miami. Tampa. En in een Robotaxi zit niemand die de camera's even schoonveegt. Een auto die alleen met camera's rijdt, is zo goed als zijn smerigste lens.",
-    "photo": [
-     {
-      "q": [
-       "Houston skyline rain",
-       "Houston flooding street",
-       "Houston downtown storm"
-      ],
-      "want": "Houston city streets or skyline in rain"
-     },
-     {
-      "q": [
-       "Miami rain storm street",
-       "Miami skyline storm"
-      ],
-      "want": "Miami in a rain storm"
-     }
-    ],
-    "img": [
-     "lib/robotaxi-app-wait.jpg"
-    ]
-   },
-   {
-    "head": "Waarom is een vieze camera zo'n probleem voor een Tesla?",
-    "pop": [
-     {
-      "say": "",
-      "show": "WAAROM VUIL TELT"
-     }
-    ],
-    "img": [
-     "camera-rain.jpg"
-    ]
-   },
-   {
-    "text": "Omdat camera's de enige ogen van een Tesla zijn. Sinds 2021 laat Tesla de radar weg. Lidar gebruikte het nooit. FSD en de Robotaxi-software werken dus alleen met camerabeelden. Regen, modder, strooizout, tegenlicht en mist komen allemaal op hetzelfde paar vierkante centimeter glas voor elke lens.",
-    "photo": [
-     {
-      "q": [
-       "Tesla Autopilot camera",
-       "Tesla side camera fender",
-       "Tesla Model 3 camera"
-      ],
-      "want": "a small camera built into the body of a Tesla car"
-     },
-     {
-      "q": [
-       "Tesla Model 3 front",
-       "Tesla Model 3 2018",
-       "Tesla Model 3 red"
-      ],
-      "want": "a Tesla Model 3 seen from the front"
-     }
-    ],
-    "img": [
-     "fsd-camera-view.jpg"
-    ]
-   },
-   {
-    "text": "En de toezichthouder kijkt mee. In oktober 2024 begon de Amerikaanse verkeersveiligheidsdienst NHTSA een onderzoek na vier ongelukken bij slecht zicht. Bij één ervan kwam een voetganger om. In maart 2026 werd het onderzoek opgeschaald. Het gaat nu over zo'n 3,2 miljoen auto's en negen incidenten. De hamvraag: merkt FSD op tijd dat de camera's verblind zijn door laagstaande zon, mist of stof? Volgens NHTSA kwam de waarschuwing vaak pas vlak voor de botsing.",
-    "photo": [
-     {
-      "q": [
-       "United States Department of Transportation headquarters",
-       "US DOT headquarters Washington",
-       "NHTSA"
-      ],
-      "want": "the US Department of Transportation headquarters building in Washington"
-     },
-     {
-      "q": [
-       "car headlights fog road",
-       "traffic in fog",
-       "highway fog cars"
-      ],
-      "want": "cars driving on a road in thick fog"
-     },
-     {
-      "q": [
-       "sun glare windshield",
-       "low sun glare road",
-       "driving into the sun"
-      ],
-      "want": "a road seen through a windshield with strong low sun glare"
-     }
-    ]
-   },
-   {
-    "text": "In je eigen Tesla ben jij het vangnet. Een melding vraagt je de camera schoon te maken of het over te nemen. Een Robotaxi heeft geen vangnet. Dus moet hij zichzelf schoonmaken.",
-    "img": [
-     "lib/robotaxi-rear-passenger.jpg",
-     "lib/robotaxi-app-share.jpg"
-    ]
-   },
-   {
-    "head": "Hoe maakt een Robotaxi zijn camera's dan zelf schoon?",
-    "pop": [
-     {
-      "say": "",
-      "show": "ZELFREINIGEND"
-     }
-    ],
-    "img": [
-     "robotaxi-my-1.jpg"
-    ]
-   },
-   {
-    "text": "Met kleine sproeiers die vloeistof onder druk op de lenzen spuiten. In januari 2026 werden in Austin Model Y Robotaxi's gespot met sproeiers bij de achteruitrijcamera en de camera's in de voorschermen. Tesla haalde zelfs het knipperlicht uit de nieuwe camerabehuizing om ruimte te maken voor de sproeier.",
-    "img": [
-     "robotaxi-my-2.jpg",
-     "lib/robotaxi-night-curb.jpg",
-     "lib/robotaxi-fleet-dawn.jpg"
-    ]
-   },
-   {
-    "text": "De Cybercab gaat verder. Elke buitencamera heeft een eigen reiniger. De camera in de voorbumper. De camera's achter de voorruit. De stijlen. De achterkant. De camera boven het kenteken krijgt zelfs een eigen sproeikop. Alleen de camera in de cabine heeft er geen. Daarmee zijn modder en regendruppels aan de buitenkant geregeld. Maar sommig vuil zit waar geen sproeier bij kan.",
-    "img": [
-     "lib/cybercab-street-day.jpg",
-     "lib/cybercab-line-front.jpg",
-     "lib/cybercab-rear-fixture.jpg"
-    ]
-   },
-   {
-    "head": "Wat kan een sproeier niet oplossen?",
-    "pop": [
-     {
-      "say": "",
-      "show": "ONBEREIKBAAR"
-     }
-    ],
-    "img": [
-     "lib/cybercab-dash-line.jpg"
-    ]
-   },
-   {
-    "text": "Een waas aan de binnenkant van de voorruit, precies voor de belangrijkste camera's. Resten uit de fabriek of dampen uit nieuwe interieurmaterialen laten het glas langzaam van binnen beslaan. Eind 2025 voegde Tesla daar een melding voor toe. Die zegt dat het zicht van de voorcamera belemmerd is, en biedt een gratis reiniging van een kwartier aan, te boeken in de Tesla-app.",
-    "img": [
-     "camera-rain.jpg",
-     "lib/tesla-app-phone.jpg",
-     "lib/service-center.jpg"
-    ]
-   },
-   {
-    "text": "Probeer het niet zelf. De camerabehuizing moet eraf, en de klipsen breken snel. Dan zijn er nog tegenlicht en mist. Licht kun je niet wegspoelen. Dat moet de software oplossen, en precies dat onderzoekt NHTSA. En zelfs de beste sproeier heeft grenzen. De vloeistof raakt op. Bewegende delen slijten.",
-    "photo": [
-     {
-      "q": [
-       "sun glare windshield",
-       "low sun glare road",
-       "driving into the sun"
-      ],
-      "want": "a road seen through a windshield with strong low sun glare"
-     },
-     {
-      "q": [
-       "car headlights fog road",
-       "traffic in fog",
-       "highway fog cars"
-      ],
-      "want": "cars driving on a road in thick fog"
-     }
-    ],
-    "img": [
-     "lib/fsd-screen-rain-night.jpg"
-    ]
-   },
-   {
-    "head": "Hoe werkt een camera met een ooglid?",
-    "pop": [
-     {
-      "say": "",
-      "show": "CAMERA-OOGLID"
-     }
-    ],
-    "photo": [
-     {
-      "q": [
-       "human eye close up",
-       "eye macro eyelid",
-       "eyelid close-up"
-      ],
-      "want": "a close-up of a human eye and eyelid (no recognisable face)"
-     }
-    ]
-   },
-   {
-    "text": "Met een minuscule wisser in elke camera. In mei 2026 kreeg Tesla Amerikaans patent nummer 12.636.684. Het beschrijft één afgesloten unit met een vloeistoftankje, een sproeier gericht op de lens en een mini-wisser met een eigen motortje. Het wissertje volgt de bolling van de lens, zoals een ooglid over een oog.",
-    "photo": [
-     {
-      "q": [
-       "United States Patent and Trademark Office",
-       "USPTO headquarters Alexandria"
-      ],
-      "want": "the US Patent and Trademark Office building"
-     },
-     {
-      "q": [
-       "human eye close up",
-       "eye macro eyelid",
-       "eyelid close-up"
-      ],
-      "want": "a close-up of a human eye and eyelid (no recognisable face)"
-     }
-    ],
-    "img": [
-     "lib/cybercab-line-closeup.jpg"
-    ]
-   },
-   {
-    "text": "Het patent noemt twee eerste gebruikers: de Cybercab en Optimus, Teslas humanoïde robot. Ja, ook de robot krijgt misschien oogleden. Maar een auto met dit systeem is nog niet aangekondigd. En ook een ooglid is een wissertje en een tankje. Bij een vloot van duizenden auto's zijn dat duizenden wissers om te vervangen en tanks om bij te vullen.",
-    "img": [
-     "cybercab-fleet.jpg",
-     "lib/optimus-walking.jpg",
-     "lib/cybercab-doors-open.jpg"
-    ]
-   },
-   {
-    "head": "Dus kan een laser de ruitenwisser echt vervangen?",
-    "pop": [
-     {
-      "say": "",
-      "show": "LASERWISSER?"
-     }
-    ],
-    "img": [
-     "gen/how-tesla-robotaxi-keeps-cameras-clean-washers-wipers-laser-explained.jpg"
-    ]
-   },
-   {
-    "text": "In theorie wel. Maar alleen voor een klein stukje glas, en het zit nog op geen enkele auto. Tesla vroeg het laserpatent aan in mei 2019. Het werd toegekend in september 2021, en op 31 maart 2026 volgde een bijgewerkte versie. Het systeem ziet vuil op het glas, bepaalt wat voor vuil het is en vuurt korte laserpulsen af in een afgesteld ritme. De energie komt nooit dieper dan de dikte van het glas.",
-    "photo": [
-     {
-      "q": [
-       "laser cleaning",
-       "laser ablation cleaning",
-       "laser rust removal"
-      ],
-      "want": "a laser cleaning a surface, a bright laser spot on metal or stone"
-     },
-     {
-      "q": [
-       "pulsed laser beam",
-       "laser beam laboratory",
-       "green laser beam optics"
-      ],
-      "want": "a visible laser beam in a lab with optics"
-     },
-     {
-      "q": [
-       "United States Patent and Trademark Office",
-       "USPTO headquarters Alexandria"
-      ],
-      "want": "the US Patent and Trademark Office building"
-     }
-    ]
-   },
-   {
-    "text": "Het patent noemt voorruiten, zijruiten, cameralenzen en zonnepanelen. Moravy noemde meteen de praktische grens. Voor een hele voorruit heb je te veel lasers nodig. Alleen het kleine venster voor een camera vrijhouden is een veel kleinere klus.",
-    "photo": [
-     {
-      "q": [
-       "solar panels dust cleaning",
-       "solar panel field",
-       "photovoltaic panels"
-      ],
-      "want": "a field of solar panels"
-     }
-    ],
-    "img": [
-     "lib/solar-roof-house.jpg",
-     "lib/fsd-screen-rain-night.jpg"
-    ]
-   },
-   {
-    "text": "En de Cybertruck laat zien hoe lang zulke ideeën duren. Hij werd in 2019 getoond zonder ruitenwissers. Er gingen geruchten over lasers. Hij ging in productie met één enorme wisser.",
-    "img": [
-     "lib/cybertruck-front-city.jpg",
-     "lib/cybertruck-rear-light.jpg",
-     "lib/cybertruck-bed-open.jpg"
-    ]
-   },
-   {
-    "head": "Wat betekent dit voor eigenaren en passagiers?",
-    "pop": [
-     {
-      "say": "",
-      "show": "VOOR JOU"
-     }
-    ],
-    "img": [
-     "lib/tesla-delivery-center.jpg"
-    ]
-   },
-   {
-    "text": "Voorlopig zijn schone camera's deels nog jouw werk. Twee misverstanden. Eén: een patent is geen product. Tesla patenteert genoeg ideeën die nooit in een auto komen, en niemand bij Tesla heeft een datum genoemd voor laserreiniging. Twee: een vieze camera betekent niet dat de auto zonder waarschuwing blind doorrijdt. FSD Supervised waarschuwt en vraagt je het over te nemen. Al laat het onderzoek van NHTSA zien dat die waarschuwing niet altijd vroeg genoeg kwam.",
-    "img": [
-     "fsd-camera-view.jpg",
-     "lib/tesla-app-phone.jpg",
-     "lib/robotaxi-rear-passenger.jpg"
-    ]
-   },
-   {
-    "text": "Heb je een Tesla? Veeg de cameralenzen buiten mee als je de auto wast. En boek de gratis reiniging als de melding over de voorcamera verschijnt. Rijd je mee in een Robotaxi, dan gebeurt het schoonmaken voor je. Vandaag met sproeiers.",
-    "img": [
-     "robotaxi-app.jpg",
-     "lib/modely-front.jpg",
-     "lib/robotaxi-app-pickup.jpg"
-    ]
-   },
-   {
-    "text": "Denk nog even aan dat patent uit 2019 dat niemand gebruikt. Het ging nooit alleen over lasers. Het gaat over een auto die bij elk weer moet kunnen zien, zonder iemand die zijn ogen afveegt. Vandaag sproeiers. Straks misschien een ooglid. En ooit, wie weet, een lichtpuls. Daarom is Teslas volgende ruitenwisser misschien toch een laser.",
-    "img": [
-     "gen/how-tesla-robotaxi-keeps-cameras-clean-washers-wipers-laser-explained.jpg",
-     "lib/cybercab-doors-open.jpg",
-     "lib/robotaxi-night-curb.jpg"
-    ]
-   }
-  ],
-  "yt_title_en": "How Tesla Robotaxis Keep Their Cameras Clean: Washers, Wipers and Lasers",
-  "yt_title_nl": "Hoe Tesla Robotaxi's Hun Camera's Schoonhouden: Sproeiers, Wissers en Lasers"
- }
+  "image": "gen/how-tesla-robotaxi-keeps-cameras-clean-washers-wipers-laser-explained.jpg"
 }

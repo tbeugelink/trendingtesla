@@ -730,5 +730,44 @@
         "commons": "SpaceX fairing recovery Mr Steven"
       }
     ]
+  },
+  "gen/how-tesla-robotaxi-keeps-cameras-clean-washers-wipers-laser-explained.jpg": {
+    "article": "how-tesla-robotaxi-keeps-cameras-clean-washers-wipers-laser-explained",
+    "model": "gpt-image-2.5-flare",
+    "made": "2026-11-10",
+    "references": [
+      {
+        "src": "lib/cybercab-street-day.jpg"
+      },
+      {
+        "src": "lib/cybercab-doors-open.jpg"
+      }
+    ]
+  },
+  "gen/how-tesla-robotaxi-keeps-cameras-clean-washers-wipers-laser-explained-x2-11101148.jpg": {
+    "article": "how-tesla-robotaxi-keeps-cameras-clean-washers-wipers-laser-explained",
+    "model": "gpt-image-2.5-flare",
+    "made": "2026-11-10",
+    "references": [
+      {
+        "src": "lib/cybercab-street-day.jpg"
+      },
+      {
+        "src": "lib/cybercab-doors-open.jpg"
+      }
+    ]
+  },
+  "gen/how-tesla-robotaxi-keeps-cameras-clean-washers-wipers-laser-explained-x3-11101149.jpg": {
+    "article": "how-tesla-robotaxi-keeps-cameras-clean-washers-wipers-laser-explained",
+    "model": "gpt-image-2.5-flare",
+    "made": "2026-11-10",
+    "references": [
+      {
+        "src": "lib/cybercab-street-day.jpg"
+      },
+      {
+        "src": "lib/cybercab-doors-open.jpg"
+      }
+    ]
   }
 }

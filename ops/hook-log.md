@@ -2,6 +2,14 @@
 
 Every article task adds an entry here (README, "ALGORITHM RULES", Self-learning). Stats: `ops/short-signals.md`.
 
+## 2026-11-10 - starship-first-flight-2023-four-minutes-crater-launch-pad-story (evening story)
+- Hooks: 0 "Starship's very first flight lasted just four minutes." (number) **picked** | 1 "Musk's only goal: don't blow up the launch pad." (contrast) | 2 "This rocket dug a crater in its own launch pad." (consequence)
+- Why 0: subject in word 1, a hard number by word 7 (~2.5 s), a plain fact instead of a hedged "might"; sets up the payoff contrast (4 minutes -> catching both halves). Current hook: Starship Flight 15 tries to catch both stages for the first time.
+- Previous Short: how-tesla-robotaxi-keeps-cameras-clean-washers-wipers-laser-explained - no stats yet (signals updated 04:58 UTC). Latest with numbers: fairing 1,287 views / 9.3 likes per 1000 (lowest of the week), 33 engines 1,140 / 18.4. Channel stayed 57% stays the weakest signal.
+- Weak in previous (render report): beats 4 (3.5 s) and 7 (3.0 s) on ONE photo; cause found in video/story.py: "img" is ignored once a beat has "lib"/"photo", and the Wikimedia "photo" searches failed, so img+photo / lib+photo combos collapse to one picture. Beat 2 only 2.3 s (9 words but 13 syllables). Hook was hedged ("might be a laser").
+- Change now: every beat gets exactly 2 pictures via "lib" only (library files plus published gen/ and topics/ photos through lib-relative paths like "../gen/<file>.jpg", which story.py resolves); no "photo" searches, no "img". Beats sized by syllables (15-19 each, ~5.6 syllables/s -> est. 2.7-3.4 s, total ~31 s). Contrast bands expected in beat 4 (launch flame) and maybe beats 5/6 (orange sunset skies).
+- Loop: last line "Now SpaceX wants to catch both halves from one launch. Not bad, considering" is a half sentence the hook completes -> "...Not bad, considering / Starship's very first flight lasted just four minutes." No colon trick (used twice in a row already); the last picture is the same floodlit pad as the first.
+
 ## 2026-11-10 - how-tesla-robotaxi-keeps-cameras-clean-washers-wipers-laser-explained (midday explainer)
 - Hooks: 0 "Tesla's next wiper might be a laser." (first) **picked** | 1 "No driver. So who cleans the cameras?" (question) | 2 "One dirty lens. 3.2 million Teslas under investigation." (number)
 - Why 0: one 7-word sentence (~2.5 s) with a sci-fi image that is a real patent plus a fresh on-camera comment by Tesla's VP of vehicle engineering (Jay Leno's Garage); overlay 36 chars stands whole from frame 1; rotates the hook type away from number. Current hook: Moravy's laser comment and the Robotaxi launch in San Antonio.

@@ -72,6 +72,7 @@ Add new ideas at the bottom at any time.
 - [ ] Combustion instability: why big rocket engines try to shake themselves apart, and how the F-1 and Raptor deal with it
 - [ ] Static fire explained: why SpaceX fires a rocket on the pad before every flight, and what the test can and cannot catch
 - [ ] Sea-level vs vacuum engines: why Starship carries two kinds of Raptor and what the big bell nozzle does in space
+- [ ] Flight termination systems: how a rocket's self-destruct works, who presses the button, and why Starship's first one took 40 seconds
 
 ## Stories (evening task: entertaining and educational, timeless)
 
@@ -100,7 +101,7 @@ Add new ideas at the bottom at any time.
 - [ ] The Plaid that beat supercars: how Tesla made a family sedan the quickest car in the world
 - [ ] AC Propulsion's tzero: the hand-built electric car that inspired Tesla's founders, and why its makers would not build it
 - [ ] Starman: why SpaceX launched Musk's own Roadster on the first Falcon Heavy, and where that car is now
-- [ ] Flight 1, April 2023: the Starship that would not separate, and how SpaceX turned an explosion into data
+- [x] Flight 1, April 2023: the Starship that would not separate, and how SpaceX turned an explosion into data (starship-first-flight-2023-four-minutes-crater-launch-pad-story)
 - [ ] Why SpaceX builds its rockets from stainless steel: the switch away from carbon fibre that shaped Starship (and the Cybertruck)
 - [ ] January 22, 2026: the first Tesla Robotaxi rides with nobody in the car, and the long road of missed self-driving deadlines before it
 - [ ] The EchoStar deal: how SpaceX bought its way into the phone business without building a phone
@@ -120,6 +121,8 @@ Add new ideas at the bottom at any time.
 - [x] Mr. Steven and the $6 million nose cones: how SpaceX tried to catch Falcon 9 fairings in a net, finally did in 2019, and gave the nets up in 2021 (spacex-fairing-catch-net-boat-mr-steven-6-million-nose-cone-story)
 - [ ] Bob and Doug: the drone ships and recovery fleet behind every Falcon 9 landing, from 'Of Course I Still Love You' to fairing fishing boats
 - [ ] SES-10, March 2017: the first time an orbital booster flew twice, and the fairing that came home as 'its own little spacecraft'
+- [ ] Flight 2, November 2023: the first hot-staging separation, and why both stages were still lost minutes later
+- [ ] The flame trench Starbase never had: from Fondag concrete to a water-cooled steel plate, and how other pads (Saturn V, Shuttle) handled the blast
 
 ## Series: How did Elon Musk ...? (evening task; one per week at most, category "musk")
 

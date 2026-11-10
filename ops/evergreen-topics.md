@@ -15,9 +15,11 @@ Add new ideas at the bottom at any time.
 - [x] "Grok does the mapping, you do the napping?" Keep this title (with the question mark) for the article, the Short and the long video. Explain what Grok and FSD each do, why napping is NOT allowed yet (FSD Supervised: the driver stays responsible and must watch the road; say this clearly and early), and when it could be: what Unsupervised FSD needs (data, regulators, country by country), where cars already drive without anyone at the wheel (Robotaxi), and what Tesla has said about timing (a statement, not a fact). Never suggest sleeping or looking away while driving today. (grok-does-the-mapping-you-do-the-napping-tesla-fsd-sleep-explained)
 - [ ] Cybernap in your Cybercab: why sleeping is fine in a car with no steering wheel, how a driverless ride works and where you can take one (follow-up to the napping article; use the cybercab-nap photos)
 - [ ] Why could Optimus become Tesla's biggest product ever, as Musk says? What it can do now, what it costs and what has to happen first
-- [ ] Tesla's giant solar panel factory: what is planned, where, how big, and why Tesla wants to make its own panels (check the latest official plans)
+- [x] Tesla's giant solar panel factory: what is planned, where, how big, and why Tesla wants to make its own panels (check the latest official plans) (already covered: tesla-solar-factory-project-crystal-sun-texas-100-gw-explained)
 - [ ] When the power goes out: why every home should have a backup. We depend on power and internet for almost everything; how a Powerwall keeps the lights, fridge and internet (router or Starlink) on, how long it lasts, what you need for it (backup switch/gateway), and what it costs with and without solar panels (factual: real outage examples, no sales talk)
 - [ ] Is FSD really 8 times safer than human drivers? What Tesla's safety data says, how it is measured and what critics point out
+- [ ] Why did Tesla drop radar and ultrasonic sensors? Tesla Vision explained: what changed, what got worse (park assist, phantom braking) and what got better (follow-up to how-tesla-robotaxi-keeps-cameras-clean-washers-wipers-laser-explained)
+- [ ] How many cameras does a Tesla have, where are they and what does each one see? (Model 3/Y, Cybertruck, Cybercab compared; check the latest hardware)
 - [ ] Starship and Starlink: how one launch can put a whole batch of satellites into a very low orbit, and why so low (check the real numbers per launch and the orbit height)
 - [ ] When are we going to Mars? The real timeline, what Starship still has to prove, and the launch windows
 - [ ] Optimus vs other humanoid robots: what makes Tesla's robot different
@@ -73,6 +75,7 @@ Add new ideas at the bottom at any time.
 
 ## Stories (evening task: entertaining and educational, timeless)
 
+- [ ] The Cybertruck's missing wiper: from no wipers at the 2019 reveal, through laser rumours, to one giant blade - how Tesla's strangest part got designed
 - [ ] Is the Cybertruck the best truck ever made? What it does better, and worse, than any pickup before it
 - [ ] Tesla and SpaceX: one company in the making? How the two are already linked, and what a fusion would change
 - [ ] The new Roadster: a prelude to "suction" downforce and rocket tech in a road car? What is promised, and what is real

@@ -2,6 +2,16 @@
 
 Every article task adds an entry here (README, "ALGORITHM RULES", Self-learning). Stats: `ops/short-signals.md`.
 
+## 2026-11-10 - how-tesla-robotaxi-keeps-cameras-clean-washers-wipers-laser-explained (midday explainer)
+- Hooks: 0 "Tesla's next wiper might be a laser." (first) **picked** | 1 "No driver. So who cleans the cameras?" (question) | 2 "One dirty lens. 3.2 million Teslas under investigation." (number)
+- Why 0: one 7-word sentence (~2.5 s) with a sci-fi image that is a real patent plus a fresh on-camera comment by Tesla's VP of vehicle engineering (Jay Leno's Garage); overlay 36 chars stands whole from frame 1; rotates the hook type away from number. Current hook: Moravy's laser comment and the Robotaxi launch in San Antonio.
+- Previous Short: spacex-fairing-catch-net-boat-mr-steven-6-million-nose-cone-story - 1,287 views (best of the last 5) but 9.3 likes/1000 (lowest of the week); stayed/watched not reported yet. Channel stayed 57% remains the weakest signal.
+- Weak in previous (render report): hook beat 3.3 s on ONE photo, beats 2 and 7 also >3 s with one photo, beat 3 only 2.1 s, beats 6/10 at 4.6/4.3 s, contrast bands in 5 of 10 beats. Loop worked (no repeat warning).
+- Weak in previous long video (33 engines): history-heavy middle with few owner-relevant turns; this one has a practical payoff (free camera cleaning, myths) and a turn or number every ~20 s.
+- Change now: 2 pictures in EVERY beat incl. the hook (rainy windscreen -> Robotaxi); every beat 8-10 spoken words with numbers counted as spoken words (est. 2.7-3.8 s, total ~34 s); mostly dark night/rain photos (bands expected only in beat 8, laser, and maybe beat 5, daylight Cybercab); the last picture equals the first picture.
+- Loop: last line "Now Tesla's engineering chief is saying it out loud:" ends on a colon the restart completes -> "...saying it out loud: Tesla's next wiper might be a laser."
+- Long video, first 20 s: the claim itself first, then an explicit open loop ("the idea dates from 2019 and not one Tesla uses it; by the end you will know why"), paid off in the last block ("it was never just about lasers... which is why Tesla's next wiper might still be a laser").
+
 ## 2026-11-09 - spacex-fairing-catch-net-boat-mr-steven-6-million-nose-cone-story (evening story)
 - Hooks: 0 "Catch six million dollars falling from space." (number) **picked** | 1 "SpaceX built a net boat. Then it threw the idea away." (contrast) | 2 "Why did SpaceX park a giant net in the ocean?" (question)
 - Why 0: one 7-word sentence (~2.3 s, no full stop pause), a dollar number plus an impossible dare on frame 1; overlay "Catch $6M falling from space." (29 chars); hook 1 gives the twist away, hook 2 starts slower. Current hook: Starship Flight 15 tries the first ship catch.

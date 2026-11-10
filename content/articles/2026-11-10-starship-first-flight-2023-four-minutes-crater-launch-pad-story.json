@@ -1,0 +1,227 @@
+{
+ "slug": "starship-first-flight-2023-four-minutes-crater-launch-pad-story",
+ "date": "2026-11-10",
+ "time": "21:16",
+ "category": "spacex",
+ "sources": [
+  {
+   "title": "Wikipedia — Starship flight test 1",
+   "url": "https://en.wikipedia.org/wiki/Starship_flight_test_1"
+  },
+  {
+   "title": "Payload — A Look at SpaceX's Starship Upgrades as It Inches Toward Its Second Orbital Attempt",
+   "url": "https://payloadspace.com/a-look-at-spacexs-starship-upgrades-as-it-inches-toward-its-second-orbital-attempt"
+  },
+  {
+   "title": "Space.com — SpaceX will launch epic double-catch Starship Flight 15 test mission on Nov. 13",
+   "url": "https://www.space.com/space-exploration/launches-spacecraft/spacex-will-launch-epic-double-catch-starship-flight-15-test-mission-on-nov-13"
+  },
+  {
+   "title": "Teslarati — SpaceX's next Starship flight set to make history on Friday the 13th",
+   "url": "https://www.teslarati.com/spacex-starship-catch-nov-13/"
+  }
+ ],
+ "images": [
+  "lib/starship-launch.jpg",
+  "spacex-3.jpg",
+  "lib/starship-pad.jpg",
+  "spacex-5.jpg",
+  "lib/starship-booster-catch.jpg",
+  "spacex-7.jpg"
+ ],
+ "gen_image": {
+  "prompt": "Dramatic low close shot of a SpaceX Starship lifting off from its launch tower at Starbase at sunrise: the stainless steel Super Heavy booster and ship rising just above the launch mount, a bright column of engine flame and huge billowing white clouds of water spray and steam erupting from the steel plate under the mount, the tall steel launch tower with its two chopstick arms beside the rocket, strong warm low sunlight glinting on the steel, the rocket in the horizontal centre filling about half the frame, calmer darker steam in the lower left",
+  "subject": "SpaceX Starship: a very tall shiny stainless steel two-stage rocket (Super Heavy booster with a ring of many engines at the base, ship on top with two small black forward flaps near the nose and two larger aft flaps), launched from a ring-shaped launch mount next to a tall square steel lattice tower with two large horizontal 'chopstick' arms; no logos or text besides a small SpaceX lettering",
+  "refs": [
+   {
+    "src": "lib/starship-launch.jpg"
+   },
+   {
+    "src": "lib/starship-pad.jpg"
+   }
+  ],
+  "profile": "cinematic",
+  "category": "B",
+  "describe": "Starship lifting off from its tower at sunrise in flame and a huge cloud of water spray and steam",
+  "extra": [
+   {
+    "prompt": "View from below and to the side of the launch mount at Starbase during a ground test at night: the base of a stainless steel Super Heavy booster standing on its ring-shaped mount, white water jets spraying up from a perforated steel plate on the ground beneath the engines, floodlights, wet concrete, steam drifting, no flames, no people",
+    "describe": "water spraying up from the steel plate under Starship's launch mount at night"
+   },
+   {
+    "prompt": "Wide calm view from the beach at dusk of the full stainless steel Starship stack standing on its launch mount beside the tall launch tower with its chopstick arms, floodlit, a little vapour venting, purple and orange sky, dunes and grass in the foreground",
+    "describe": "the full Starship stack on its launch mount beside the tower at dusk, seen from the beach"
+   }
+  ]
+ },
+ "label": {
+  "style": "c",
+  "en": {
+   "sub": "STARSHIP'S 1ST FLIGHT:",
+   "text": "4 MINUTES"
+  },
+  "nl": {
+   "sub": "1E VLUCHT STARSHIP:",
+   "text": "4 MINUTEN"
+  }
+ },
+ "short": {
+  "hook": "number",
+  "yt_title_en": "Starship's First Flight Lasted 4 Minutes",
+  "yt_title_nl": "De Eerste Vlucht van Starship Duurde 4 Minuten",
+  "hooks": [
+   {
+    "text": "Starship's very first flight lasted just four minutes.",
+    "type": "number"
+   },
+   {
+    "text": "Musk's only goal: don't blow up the launch pad.",
+    "type": "contrast"
+   },
+   {
+    "text": "This rocket dug a crater in its own launch pad.",
+    "type": "consequence"
+   }
+  ],
+  "hook_pick": {
+   "index": 0,
+   "why": "names the subject in word 1 and lands a hard number by word 7 (~2.5 s), a plain fact instead of the previous Short's hedged 'might be'; it sets up the payoff contrast (4 minutes -> catching both halves) and lets the last line flow into it; the quote hook needs context to read as a quote, the crater hook does not say which rocket"
+  },
+  "story": [
+   {
+    "part": "hook",
+    "t": "0-2.6s",
+    "text": "Starship's very first flight lasted just four minutes.",
+    "overlay": "Starship's 1st flight: 4 minutes.",
+    "lib": [
+     "starship-pad.jpg",
+     "../gen/how-much-does-it-cost-to-send-1-kg-into-space-shuttle-falcon-9-starship.jpg"
+    ],
+    "visual": "hard open on the full Starship stack floodlit on its pad at blue hour; cut to Starship lifting off in a huge flame. Only the hook sentence on screen, no logo"
+   },
+   {
+    "part": "tension",
+    "t": "2.6-5.5s",
+    "text": "Elon Musk had set a low bar: just don't blow up the launch pad.",
+    "overlay": "Musk's goal: don't blow up the pad.",
+    "lib": [
+     "musk-silhouette-rocket.jpg",
+     "../gen/why-starship-has-33-engines-not-one-giant-engine-n1-saturn-v-explained-x3-11091159.jpg"
+    ],
+    "visual": "silhouette of a man looking at a floodlit Starship at dusk, then a booster firing on the pad at night; slow push-in"
+   },
+   {
+    "part": "tension",
+    "t": "5.5-8.7s",
+    "text": "Three of its thirty-three engines shut down before it even left the ground.",
+    "overlay": "3 of 33 engines quit before liftoff.",
+    "lib": [
+     "../gen/why-starship-has-33-engines-not-one-giant-engine-n1-saturn-v-explained.jpg",
+     "../gen/why-starship-has-33-engines-not-one-giant-engine-n1-saturn-v-explained-x2-11091157.jpg"
+    ],
+    "visual": "the base of Super Heavy with its 33 engines firing into steam, then a row of identical Raptor engines; punch-in"
+   },
+   {
+    "part": "tension",
+    "t": "8.7-11.7s",
+    "text": "With nothing to soak up the blast, it dug a crater under the pad.",
+    "overlay": "The blast dug a crater under the pad",
+    "lib": [
+     "starship-launch.jpg",
+     "../topics/spacex-4.jpg"
+    ],
+    "visual": "Starship lifting off at sunrise in flame and steam, then the launch mount wrapped in steam at the tower; shake on 'blast'"
+   },
+   {
+    "part": "tension",
+    "t": "11.7-15.1s",
+    "text": "Then the stages never separated, and the whole rocket started tumbling.",
+    "overlay": "Stages never separated. It tumbled.",
+    "lib": [
+     "../topics/spacex-3.jpg",
+     "../gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute-x2-11041157.jpg"
+    ],
+    "visual": "the full stainless stack on the pad under an orange sky, then Starship falling sideways through the sky; tilt move"
+   },
+   {
+    "part": "tension",
+    "t": "15.1-18.1s",
+    "text": "The self-destruct then took forty seconds to finally break it up.",
+    "overlay": "Self-destruct took 40 seconds.",
+    "lib": [
+     "../gen/how-much-does-it-cost-to-send-1-kg-into-space-shuttle-falcon-9-starship-x3-11081152.jpg",
+     "../topics/spacex-2.jpg"
+    ],
+    "visual": "a soot-stained booster at the tower at dusk, then the stack venting at sunset; slow zoom, a ticking sound under '40 seconds'"
+   },
+   {
+    "part": "tension",
+    "t": "18.1-21.1s",
+    "text": "SpaceX's answer: a water-cooled steel plate that sprays under the pad.",
+    "overlay": "Fix 1: a water-cooled steel plate",
+    "lib": [
+     "../topics/spacex-5.jpg",
+     "../topics/spacex-7.jpg"
+    ],
+    "visual": "steam and spray rolling around the base of the launch mount, then the tower and stack at sunrise on a wet pad; pan"
+   },
+   {
+    "part": "payoff",
+    "t": "21.1-23.8s",
+    "text": "And hot staging: the ship lights its engines before letting go.",
+    "overlay": "Fix 2: ship fires before letting go",
+    "lib": [
+     "../gen/why-starship-fires-engines-at-own-booster-hot-staging-explained.jpg",
+     "../gen/why-starship-fires-engines-at-own-booster-hot-staging-explained-x2-11061154.jpg"
+    ],
+    "visual": "Starship firing its engines through the vented ring on top of the booster, then the booster flipping away; fast cut"
+   },
+   {
+    "part": "payoff",
+    "t": "23.8-26.8s",
+    "text": "Since then: three booster catches, and Flight 14 finally reached orbit.",
+    "overlay": "3 booster catches. Flight 14: orbit.",
+    "lib": [
+     "starship-booster-catch.jpg",
+     "../gen/how-much-does-it-cost-to-send-1-kg-into-space-shuttle-falcon-9-starship-x2-11081151.jpg"
+    ],
+    "visual": "Super Heavy hovering next to the chopstick arms at sunset, then Starship in orbit releasing flat Starlink satellites"
+   },
+   {
+    "part": "payoff",
+    "t": "26.8-30.2s",
+    "text": "Now SpaceX wants to catch both halves from one launch. Not bad, considering",
+    "overlay": "Now: catch both halves. Considering…",
+    "lib": [
+     "../gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute.jpg",
+     "starship-pad.jpg"
+    ],
+    "visual": "Starship held by the tower's chopstick arms at sunrise, then the same floodlit pad picture the Short opens on, so the replay cut is invisible"
+   }
+  ],
+  "loop": {
+   "last": "Now SpaceX wants to catch both halves from one launch. Not bad, considering",
+   "how": "the last line is a half sentence that the restart completes: '...Not bad, considering / Starship's very first flight lasted just four minutes.' It is a different line from the hook (no repeat, no colon trick for the third Short in a row), and the last picture is the same floodlit pad the Short opens on"
+  },
+  "signals": "Stayed %: the hook is a hard fact with the subject named in word 1 (no 'might'), the overlay 'Starship's 1st flight: 4 minutes.' stands whole from frame 1. Watched %/loops: every beat has 2 guaranteed library pictures (no Wikimedia searches and no img+photo combos, which collapsed to one photo in beats 4 and 7 last time), beats sized by syllables (15-19, est. 2.7-3.4 s) so none drops under 2.5 s, and a half-sentence loop that reads as one sentence across the restart.",
+  "learning": {
+   "prev": "how-tesla-robotaxi-keeps-cameras-clean-washers-wipers-laser-explained",
+   "prev_stats": "published 10 Nov midday; no views/stayed/watched in ops/short-signals.md yet (last update 04:58 UTC). Latest with numbers: fairing net boat 1,287 views but 9.3 likes/1000 (lowest of the week), 33 engines 1,140 views and 18.4 likes/1000. Channel average stayed 57% (goal 70%) stays the weakest signal, then watched 70%",
+   "weakest_hook": "\"Tesla's next wiper might be a laser.\" - a hedged possibility ('might'), not a fact, so the claim promises less than it seems to",
+   "why_stalled": "render report: beats 4 (3.5 s) and 7 (3.0 s) ran on ONE photo, because the renderer ignores 'img' as soon as a beat has 'lib' or 'photo', and the Wikimedia 'photo' searches failed; beat 2 lasted only 2.3 s (9 words but only 13 syllables); contrast band in beat 4",
+   "change": "2 pictures per beat via 'lib' only (library files plus already published gen/ and topics/ photos through lib-relative paths), no 'photo' searches and no 'img'; each beat 15-19 syllables (~5.6 syllables/s) instead of counting words; hook is a hard fact; v4 loop as a half sentence ('Not bad, considering') instead of a colon"
+  },
+  "en": "Starship's very first flight lasted just four minutes. Elon Musk had set a low bar: just don't blow up the launch pad. Three of its thirty-three engines shut down before it even left the ground. With nothing to soak up the blast, it dug a crater under the pad. Then the stages never separated, and the whole rocket started tumbling. The self-destruct then took forty seconds to finally break it up. SpaceX's answer: a water-cooled steel plate that sprays under the pad. And hot staging: the ship lights its engines before letting go. Since then: three booster catches, and Flight 14 finally reached orbit. Now SpaceX wants to catch both halves from one launch. Not bad, considering",
+  "nl": "De allereerste vlucht van Starship duurde maar vier minuten. Elon Musk had de lat laag gelegd: blaas het lanceerplatform niet op. Drie van de drieëndertig motoren gingen uit nog voor hij van de grond kwam. Niets ving de klap op, dus groef hij een krater onder het platform. Daarna kwamen de trappen nooit los en begon de hele raket te tuimelen. De zelfvernietiging deed er vervolgens veertig seconden over om hem op te blazen. Het antwoord van SpaceX: een watergekoelde stalen plaat die onder het platform spuit. En hot staging: het schip ontsteekt zijn motoren voordat het loslaat. Sindsdien: drie boosters gevangen, en vlucht 14 haalde eindelijk een baan om de aarde. Nu wil SpaceX beide helften van één lancering vangen. Niet slecht, want"
+ },
+ "en": {
+  "title": "Four minutes and a crater: how Starship's disastrous first flight taught SpaceX to catch rockets",
+  "description": "In April 2023 Starship's first flight lasted four minutes, wrecked its own launch pad and had to be blown up. This is how that failure set up the attempt to catch both halves of the rocket.",
+  "body": "<p>At 8:33 in the morning on April 20, 2023, the tallest rocket ever built lifted off from Starbase in South Texas, and it was in trouble before it cleared the tower. Three of its 33 engines had already been switched off by the flight computer because they did not look healthy. Four minutes later the whole thing had been blown apart over the Gulf of Mexico. Elon Musk had set the bar low beforehand, putting the odds of success at about 50% and asking for one thing: \"Just don't blow up the launchpad.\" When the dust settled, there was a crater under the launch mount. The rocket that was supposed to land back in the arms of its own tower one day had just damaged the ground it stood on.</p>\n<h2>What actually went wrong in those four minutes?</h2>\n<p><strong>Fires in the tail of the Super Heavy booster cut most of its engines off from the flight computer.</strong> According to SpaceX's own findings, propellant leaked in the aft end of the booster and caught fire during the climb. About 27 seconds in, the team lost contact with another engine after a sudden, violent event in the engine bay. Around 85 seconds, steering was lost for the 13 central engines. The rocket peaked at roughly 39 km and started to loop instead of climbing. Separating the ship from the booster was planned at about two minutes and fifty seconds, but with too little thrust and no control, it was never even attempted. The stack simply tumbled. At about three minutes and ten seconds the self-destruct system was triggered, yet the booster's engines kept firing for another 40 seconds before the vehicle finally broke up. Musk later admitted the system had been far too slow. Losing the rocket was half of the damage. The other half was waiting back on the ground.</p>\n<h2>Why did the launch pad break?</h2>\n<p><strong>The pad had no flame trench and no water system to soak up the blast of 33 engines.</strong> That was a deliberate choice. In 2020 Musk had written that he hoped to do without a flame diverter at Starbase, while admitting that this might turn out to be a mistake. Static fire tests had convinced the team that the heat-resistant concrete under the mount would survive at least one launch. It did not. Partly because the engines took almost 10 seconds to push the rocket clear, the exhaust gouged a crater under the mount and threw chunks of concrete hundreds of metres. Debris was found across some 385 acres, a small fire burned in the neighbouring state park, and a cloud of dust drifted over nearby towns (it turned out to be harmless beach sand). The FAA grounded Starship while it investigated. SpaceX now had to rebuild both its rocket and its pad before it could fly again.</p>\n<h2>So what did SpaceX change?</h2>\n<p><strong>More than a thousand things, and four of them mattered most.</strong> By July 2023 the company counted over 1,000 changes. Under the launch mount it installed a thick steel plate full of holes that blasts water upward at liftoff, absorbing the energy of the engines instead of letting it hit concrete. On the booster, the hydraulic system that steers the engines was replaced with electric actuators, which keep the engines better isolated from each other. The self-destruct system was reworked after its 40-second delay. And the way the stages separate changed completely: with \"hot staging\", the ship lights its own engines while still sitting on the booster and pushes itself away, which SpaceX expected to add about 10% payload. On September 8, 2023, the FAA closed its investigation with a list of 63 corrective actions. Fixes on paper, however, only count once they fly.</p>\n<h2>Did the fixes actually work?</h2>\n<p><strong>Yes: the exact things that broke on the first flight were the first things to work on the next ones.</strong> On Flight 2, in November 2023, the ship separated from its booster with the new hot-staging method, even though both stages were lost later in that flight. From there the programme kept repeating the same loop of flying, breaking and fixing. On Flights 5, 7 and 8, a returning Super Heavy booster was caught by the tower's \"chopstick\" arms, something no rocket had ever done. On September 28, 2026, Flight 14 became the first Starship to reach orbit and released 26 Starlink V3 satellites before splashing down in the Pacific. One half of the rocket, though, has still never come home in one piece.</p>\n<h2>Why does that first flight still matter?</h2>\n<p><strong>Because it showed how SpaceX builds: fly early, break things in public and fix them fast.</strong> Most rocket makers test for years before a first launch; SpaceX launched a vehicle it expected to lose and treated the explosion as data. That same approach shows up at Tesla, Musk's other company, from rapid factory changes to the stainless steel that Starship and the Cybertruck share. In November 2026 it was pointed at the boldest test yet: Flight 15 was planned to catch both halves for the first time, the booster about six and a half minutes after liftoff and the ship after more than 22 hours and 14 orbits. Musk called a successful ship catch \"more likely than not\", a prediction rather than a fact. SpaceX itself described it as the first full recovery of an orbital launch system. Whatever happens on any single flight, the arc is hard to miss. The rocket that once dug a hole in its own launch pad is now trying to land back in the arms of its tower.</p>"
+ },
+ "nl": {
+  "title": "Vier minuten en een krater: hoe de rampzalige eerste vlucht van Starship SpaceX leerde raketten te vangen",
+  "description": "In april 2023 duurde de eerste vlucht van Starship vier minuten, raakte het eigen lanceerplatform zwaar beschadigd en moest de raket worden opgeblazen. Zo legde die mislukking de basis voor het vangen van beide helften.",
+  "body": "<p>Om 8.33 uur 's ochtends op 20 april 2023 kwam de grootste raket ooit gebouwd los van het platform in Starbase, in het zuiden van Texas. Nog voordat hij de toren voorbij was, ging het al mis. De boordcomputer had drie van de 33 motoren al uitgezet, omdat ze er niet gezond uitzagen. Vier minuten later was het hele ding boven de Golf van Mexico opgeblazen. Elon Musk had de lat vooraf laag gelegd: hij schatte de kans op succes op zo'n 50% en vroeg maar één ding: \"Blaas gewoon het lanceerplatform niet op.\" Toen het stof was gaan liggen, zat er een krater onder de lanceertafel. De raket die ooit weer in de armen van zijn eigen toren moest landen, had net de grond beschadigd waar hij op stond.</p>\n<h2>Wat ging er precies mis in die vier minuten?</h2>\n<p><strong>Brand in de staart van de Super Heavy-booster sneed de meeste motoren af van de boordcomputer.</strong> Volgens SpaceX' eigen onderzoek lekte er brandstof achter in de booster, die tijdens de klim vlam vatte. Na ongeveer 27 seconden verloor het team contact met nog een motor, na een plotselinge, heftige gebeurtenis in het motorcompartiment. Rond 85 seconden viel de besturing van de 13 middelste motoren weg. De raket haalde ongeveer 39 kilometer hoogte en begon toen rondjes te draaien in plaats van te klimmen. Het loskoppelen van schip en booster stond gepland op ongeveer twee minuten en vijftig seconden, maar met te weinig stuwkracht en geen controle werd het niet eens geprobeerd. Het geheel tuimelde gewoon. Na ongeveer drie minuten en tien seconden ging het zelfvernietigingssysteem af, maar de motoren van de booster bleven nog 40 seconden branden voordat het toestel eindelijk uiteenviel. Musk gaf later toe dat het systeem veel te traag was geweest. Het verlies van de raket was maar de helft van de schade. De andere helft lag op de grond.</p>\n<h2>Waarom ging het lanceerplatform kapot?</h2>\n<p><strong>Het platform had geen vlammengoot en geen watersysteem om de klap van 33 motoren op te vangen.</strong> Dat was een bewuste keuze. In 2020 schreef Musk nog dat hij het in Starbase zonder vlammenafleider wilde doen, al gaf hij toe dat dat een vergissing kon blijken. Proefdraaien op het platform had het team ervan overtuigd dat het hittebestendige beton onder de tafel minstens één lancering zou overleven. Dat gebeurde niet. Mede doordat de motoren bijna 10 seconden nodig hadden om de raket los te krijgen, groef de uitlaatstraal een krater onder de tafel en slingerde brokken beton honderden meters ver. Er lag puin op zo'n 155 hectare, er brandde een klein stuk van het naastgelegen natuurpark af en een stofwolk dreef over nabije dorpen (het bleek onschuldig strandzand). De Amerikaanse luchtvaartautoriteit FAA zette Starship aan de grond zolang het onderzoek liep. SpaceX moest nu zowel de raket als het platform opnieuw opbouwen voordat er weer gevlogen kon worden.</p>\n<h2>Dus wat veranderde SpaceX?</h2>\n<p><strong>Meer dan duizend dingen, en vier daarvan deden er het meest toe.</strong> In juli 2023 telde het bedrijf al ruim 1.000 aanpassingen. Onder de lanceertafel kwam een dikke stalen plaat vol gaatjes die bij de start water omhoog spuit, zodat de energie van de motoren wordt opgevangen in plaats van het beton te raken. In de booster werd het hydraulische systeem dat de motoren stuurt vervangen door elektrische actuatoren: die houden de motoren beter van elkaar gescheiden. Het zelfvernietigingssysteem werd na die vertraging van 40 seconden flink aangepast. En het loskoppelen van de trappen ging volledig op de schop: bij \"hot staging\" ontsteekt het schip zijn eigen motoren terwijl het nog op de booster staat en duwt het zich los, wat volgens SpaceX zo'n 10% extra lading zou opleveren. Op 8 september 2023 sloot de FAA het onderzoek af met een lijst van 63 verbeterpunten. Maar verbeteringen op papier tellen pas als ze vliegen.</p>\n<h2>Werkten de verbeteringen echt?</h2>\n<p><strong>Ja: precies wat bij de eerste vlucht kapotging, werkte bij de volgende vluchten als eerste.</strong> Bij vlucht 2, in november 2023, kwam het schip met de nieuwe hot-staging-methode los van de booster, al gingen beide trappen later in die vlucht alsnog verloren. Daarna bleef het programma dezelfde cirkel draaien: vliegen, breken, repareren. Bij vlucht 5, 7 en 8 werd een terugkerende Super Heavy-booster opgevangen door de \"eetstokjes\" van de toren, iets wat nog nooit met een raket was gelukt. Op 28 september 2026 werd vlucht 14 de eerste Starship die een baan om de aarde bereikte. Hij zette 26 Starlink V3-satellieten uit en landde daarna in de Stille Oceaan. Eén helft van de raket is alleen nog nooit heel thuisgekomen.</p>\n<h2>Waarom doet die eerste vlucht er nog steeds toe?</h2>\n<p><strong>Omdat hij liet zien hoe SpaceX bouwt: vroeg vliegen, in het openbaar dingen kapotmaken en ze snel repareren.</strong> De meeste raketbouwers testen jarenlang voor een eerste lancering; SpaceX lanceerde een toestel dat het verwachtte te verliezen en behandelde de explosie als meetgegevens. Diezelfde aanpak zie je bij Tesla, Musks andere bedrijf, van snelle aanpassingen in de fabriek tot het roestvrij staal dat Starship en de Cybertruck delen. In november 2026 werd die aanpak op de gewaagdste test tot nu toe gericht: vlucht 15 moest voor het eerst beide helften vangen, de booster zo'n zes en een halve minuut na de start en het schip na meer dan 22 uur en 14 rondjes om de aarde. Musk noemde een geslaagde vangst van het schip \"eerder wel dan niet\" waarschijnlijk, een voorspelling en geen feit. SpaceX zelf sprak van de eerste volledige berging van een orbitale raket. Wat er ook gebeurt bij één vlucht, de lijn is duidelijk. De raket die ooit een gat groef in zijn eigen lanceerplatform, probeert nu te landen in de armen van zijn toren.</p>"
+ }
+}

@@ -769,5 +769,44 @@
         "src": "lib/cybercab-doors-open.jpg"
       }
     ]
+  },
+  "gen/starship-first-flight-2023-four-minutes-crater-launch-pad-story.jpg": {
+    "article": "starship-first-flight-2023-four-minutes-crater-launch-pad-story",
+    "model": "gemini-3.1-flash-image",
+    "made": "2026-11-10",
+    "references": [
+      {
+        "src": "lib/starship-launch.jpg"
+      },
+      {
+        "src": "lib/starship-pad.jpg"
+      }
+    ]
+  },
+  "gen/starship-first-flight-2023-four-minutes-crater-launch-pad-story-x2-11102025.jpg": {
+    "article": "starship-first-flight-2023-four-minutes-crater-launch-pad-story",
+    "model": "gpt-image-2.5-sunburst",
+    "made": "2026-11-10",
+    "references": [
+      {
+        "src": "lib/starship-launch.jpg"
+      },
+      {
+        "src": "lib/starship-pad.jpg"
+      }
+    ]
+  },
+  "gen/starship-first-flight-2023-four-minutes-crater-launch-pad-story-x3-11102026.jpg": {
+    "article": "starship-first-flight-2023-four-minutes-crater-launch-pad-story",
+    "model": "gpt-image-2.5-flare",
+    "made": "2026-11-10",
+    "references": [
+      {
+        "src": "lib/starship-launch.jpg"
+      },
+      {
+        "src": "lib/starship-pad.jpg"
+      }
+    ]
   }
 }

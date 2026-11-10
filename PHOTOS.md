@@ -290,3 +290,6 @@ Articles with a "models" key automatically use real-life photos of that model. Y
 - gen/how-tesla-robotaxi-keeps-cameras-clean-washers-wipers-laser-explained.jpg — the gold Cybercab at a wet kerb at night in the rain, raindrops on its windshield
 - gen/how-tesla-robotaxi-keeps-cameras-clean-washers-wipers-laser-explained-x2-11101148.jpg — the gold Cybercab driving through rain on a city street at dusk
 - gen/how-tesla-robotaxi-keeps-cameras-clean-washers-wipers-laser-explained-x3-11101149.jpg — a laser beam cleaning a small patch of dusty glass in a lab (illustration of laser cleaning)
+- gen/starship-first-flight-2023-four-minutes-crater-launch-pad-story.jpg — Starship lifting off from its tower at sunrise in flame and a huge cloud of water spray and steam
+- gen/starship-first-flight-2023-four-minutes-crater-launch-pad-story-x2-11102025.jpg — water spraying up from the steel plate under Starship's launch mount at night
+- gen/starship-first-flight-2023-four-minutes-crater-launch-pad-story-x3-11102026.jpg — the full Starship stack on its launch mount beside the tower at dusk, seen from the beach

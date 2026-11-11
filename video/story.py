@@ -819,6 +819,9 @@ def main():
         last["text"] = cut
     elif not cut and len(beats) > 1:
         beats.pop()
+    for b in beats:  # an unknown part name (a script once used "loop" for the last beat) must never stop the video
+        if b.get("part") not in SPEED:
+            b["part"] = "payoff" if b is not beats[0] else "hook"
     plan_moves(beats)
     assign_images(a, beats)
 

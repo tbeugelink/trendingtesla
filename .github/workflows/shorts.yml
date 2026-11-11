@@ -46,6 +46,7 @@ jobs:
             echo "$q" | grep -q -- '--full' && echo "full=1" >> "$GITHUB_OUTPUT"
             echo "$q" | grep -q -- '--upload' && echo "upload=1" >> "$GITHUB_OUTPUT"
             echo "queue=1" >> "$GITHUB_OUTPUT"
+            python3 tools/queue_story.py "$q" >> "$GITHUB_OUTPUT"
           elif [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             echo "slugs=${{ github.event.inputs.slug }}" >> "$GITHUB_OUTPUT"
             echo "langs=${{ github.event.inputs.langs }}" >> "$GITHUB_OUTPUT"
@@ -69,6 +70,7 @@ jobs:
               echo "$q" | grep -q -- '--full' && echo "full=1" >> "$GITHUB_OUTPUT"
               echo "$q" | grep -q -- '--upload' && echo "upload=1" >> "$GITHUB_OUTPUT"
               echo "queue=1" >> "$GITHUB_OUTPUT"
+              python3 tools/queue_story.py "$q" >> "$GITHUB_OUTPUT"
             fi
             echo "slugs=$slugs" >> "$GITHUB_OUTPUT"
             echo "langs=$langs" >> "$GITHUB_OUTPUT"
@@ -128,7 +130,7 @@ jobs:
           done
           exit $fail
       - name: Upload Shorts to YouTube
-        if: steps.find.outputs.slugs != '' && steps.find.outputs.full != '1' && steps.find.outputs.queue != '1' && (github.event_name != 'workflow_dispatch' || github.event.inputs.upload == 'yes') && steps.find.outputs.paused != '1'
+        if: steps.find.outputs.slugs != '' && steps.find.outputs.full != '1' && (steps.find.outputs.queue != '1' || steps.find.outputs.qstory == '1') && (github.event_name != 'workflow_dispatch' || github.event.inputs.upload == 'yes' || steps.find.outputs.qstory == '1') && steps.find.outputs.paused != '1'
         continue-on-error: true
         env:
           YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
@@ -200,7 +202,7 @@ jobs:
           done
           exit $fail
       - name: Upload requested queue video to YouTube
-        if: steps.find.outputs.queue == '1' && steps.find.outputs.upload == '1'
+        if: steps.find.outputs.queue == '1' && steps.find.outputs.upload == '1' && steps.find.outputs.qstory != '1'
         env:
           YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
           YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}

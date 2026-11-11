@@ -74,6 +74,6 @@ jobs:
             git add video/queue.txt ops/video-retries.json ops/video-problems.md 2>/dev/null
             git commit -qm "Watchdog: request missing video" && \
               (git pull --rebase -q origin main && git push -q origin HEAD:main) && \
-              gh workflow run shorts.yml -f slug=queue || true
+              { echo "$out" | grep -qx queued && gh workflow run shorts.yml -f slug=queue; } || true
           fi
           echo "$out" | grep -q "::error::" && exit 1 || true

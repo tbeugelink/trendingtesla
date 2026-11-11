@@ -45,8 +45,12 @@ for p in pending:
         ok = mp4.exists() or subprocess.run(["gh", "run", "download", str(p["run"]), "-n", f"story-{p['slug']}",
                                              "-D", str(mp4.parent)]).returncode == 0
         if ok and mp4.exists():
-            subprocess.run(["bash", str(ROOT / "tools/tiktok_publish.sh"), str(mp4)])
-            print(f"::notice::Approved story Short {p['slug']} (https://youtu.be/{p['id']}): posted via Buffer")
+            r = subprocess.run(["bash", str(ROOT / "tools/tiktok_publish.sh"), str(mp4)], capture_output=True, text=True)
+            print(r.stdout + r.stderr)
+            if "::warning::" in r.stdout + r.stderr:  # say it loudly: for 11 days this failed with a false "posted"
+                print(f"::error::Story Short {p['slug']} was NOT posted to TikTok/Instagram/Facebook (see the warning above)")
+            else:
+                print(f"::notice::Approved story Short {p['slug']} (https://youtu.be/{p['id']}): posted via Buffer")
         else:
             print(f"::warning::Approved story Short {p['slug']}: video file not found (run {p['run']}), not posted via Buffer")
         changed = True

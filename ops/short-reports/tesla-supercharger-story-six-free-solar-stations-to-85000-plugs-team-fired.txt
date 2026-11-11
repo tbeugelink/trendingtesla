@@ -1,0 +1,3 @@
+beat 4: 4.4 s (rule 2.5-4 s)
+loop: "Tesla's chargers outlived the very team that built them." -> "Musk fired almost his entire Supercharger team."
+contrast band added behind the text on bright photos in beat(s) 9

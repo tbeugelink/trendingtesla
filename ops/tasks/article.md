@@ -67,6 +67,10 @@ at a time, otherwise the morning review cannot tell what worked.
 - Beat 1 = the hook: the first spoken words ARE the sharpest claim or the most surprising number (max ~8 words). No
   date, no scene setting, no announcement. Its first picture is the most dramatic picture of the story.
 - The last beat is NOT the hook again: a different line that runs on smoothly into the hook when the Short restarts.
+- Optional `hook_motion`: one line saying what moves in the hook picture ("the rocket lifts off, smoke billows, the
+  camera tilts up"). The first ~4 seconds are made into a moving clip from the FIRST picture of beat 1 (test from
+  12 Nov 2026), so choose a first picture in which something can really move and that is sharp and upright-friendly
+  (the subject in the middle); the clip is checked and falls back to the still photo when it distorts anything.
 - Also required: `yt_title_en`, `yt_title_nl` (max 45 characters, the hook's contrast or number), `hooks` (3 variants
   {"text", "type"}), `hook_pick` {"index", "why"}, `loop` {"last", "how"}, `signals`, `learning` {"prev",
   "prev_stats", "weakest_hook", "why_stalled", "change", "test"}, `proof` (see 2), `en`, `nl` (spoken text as one paragraph).

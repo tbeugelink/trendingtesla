@@ -10,12 +10,13 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 q = (sys.argv[1] if len(sys.argv) > 1 else "").split()
-if q and "--full" not in q and "--upload" in q:
+if q and "--full" not in q:
     for f in (ROOT / "content/articles").glob(f"*-{q[0]}.json"):
         try:
             a = json.loads(f.read_text(encoding="utf-8"))
         except ValueError:
             continue
         if a.get("slug") == q[0] and (a.get("short") or {}).get("story"):
-            print(f"story={q[0]}")
-            print("qstory=1")
+            print(f"story={q[0]}")  # rendered with video/story.py; without --upload it is only a test render
+            if "--upload" in q:
+                print("qstory=1")

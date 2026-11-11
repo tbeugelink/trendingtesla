@@ -225,10 +225,11 @@ jobs:
             # what the Short renderer actually did (overlay splits, contrast bands, timing, loop): read by the next task
             mkdir -p ops/short-reports
             for f in video/out/*-en-short-report.txt; do [ -f "$f" ] && cp "$f" "ops/short-reports/$(basename "$f" -en-short-report.txt).txt"; done
-            [ -z "$(git status --porcelain content ops/short-reports)" ] && exit 0
+            cat video/out/*-clip.jsonl >> ops/clips-log.jsonl 2>/dev/null || true  # what the hook clips cost (budget guard)
+            [ -z "$(git status --porcelain content ops/short-reports ops/clips-log.jsonl)" ] && exit 0
             python3 build.py > /dev/null
             git checkout -- $(git diff --name-only -- public | grep -E '\.(jpg|jpeg|png|webp)$') 2>/dev/null || true
-            git add content public ops/short-reports && git commit -qm "Site: new YouTube videos" && git push -q origin HEAD:main && exit 0
+            git add content public ops/short-reports ops/clips-log.jsonl && git commit -qm "Site: new YouTube videos" && git push -q origin HEAD:main && exit 0
             sleep $((10 + RANDOM % 20))
           done
           exit 1

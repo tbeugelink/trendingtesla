@@ -354,6 +354,95 @@ def rate_photo(G, im, want, b):
     return 0.0, 0.5
 
 
+CLIP_SEC = 4  # seconds of moving picture at the start of the Short (the hook)
+DEFAULT_MOTION = ("Subtle, natural motion that fits the scene (flames, smoke, steam, dust, water, light or the "
+                  "vehicle moving the way it would); the camera pushes in slowly.")
+
+
+class ClipReader:
+    """Frames of the hook clip, one after the other, scaled to the Short's size (never the whole clip in memory)."""
+
+    def __init__(self, path):
+        self.p = subprocess.Popen(["ffmpeg", "-loglevel", "error", "-i", str(path), "-vf",
+                                   f"fps={FPS},scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H}",
+                                   "-f", "rawvideo", "-pix_fmt", "rgb24", "-"], stdout=subprocess.PIPE)
+        self.last = None
+
+    def next(self):
+        raw = self.p.stdout.read(W * H * 3)
+        if len(raw) == W * H * 3:
+            self.last = Image.frombytes("RGB", (W, H), raw)
+        return self.last
+
+
+def clip_ok(G, clip, first):
+    """Gemini compares two frames of the clip with the photo it started from: same subject, nothing distorted or
+    added? Returns (ok, note). A check that cannot run counts as not ok: then the still photo is used."""
+    import io
+    init_checker(G)
+    parts = [{"text": "The FIRST image is a photo. The other two are frames of a short AI video that started from "
+              "that photo, for a Tesla/SpaceX publication whose viewers know every detail. Judge the frames: is the "
+              "main subject (vehicle, rocket, robot, charger, building) still the same object with the same shape and "
+              "details, not melted, bent, doubled or morphed? Was any text, logo, watermark or a person added that is "
+              'not in the photo? Answer only JSON: {"same_subject": true/false, "distorted": true/false, '
+              '"added_text_or_person": true/false, "note": "one short line"}'},
+             {"inline_data": {"mime_type": "image/jpeg", "data": base64.b64encode(first).decode()}}]
+    for at in (CLIP_SEC * 0.5, CLIP_SEC - 0.25):
+        fr = subprocess.run(["ffmpeg", "-loglevel", "error", "-ss", f"{at:.2f}", "-i", str(clip), "-frames:v", "1",
+                             "-vf", "scale=576:-1", "-f", "image2pipe", "-vcodec", "mjpeg", "-"], capture_output=True).stdout
+        if not fr:
+            return False, "could not read a frame of the clip"
+        parts.append({"inline_data": {"mime_type": "image/jpeg", "data": base64.b64encode(fr).decode()}})
+    for mdl in CHECKER:
+        try:
+            d = G.api(f"models/{mdl}:generateContent", {"contents": [{"role": "user", "parts": parts}],
+                                                       "generationConfig": {"responseMimeType": "application/json", "temperature": 0}})
+            txt = d["candidates"][0]["content"]["parts"][0]["text"]
+            j = json.loads(txt[txt.find("{"):txt.rfind("}") + 1])
+            ok = bool(j.get("same_subject")) and not j.get("distorted") and not j.get("added_text_or_person")
+            return ok, str(j.get("note", ""))[:160]
+        except Exception as e:
+            print(f"::warning::clip check with {mdl} failed: {str(e)[:120]}")
+    return False, "the clip check could not run"
+
+
+def hook_clip(a, beats, shots, tmp, slug, report):
+    """The first seconds of the Short as a moving picture made from the hook photo (test from 12 Nov 2026: does a
+    moving hook keep more viewers from swiping away?). Returns (ClipReader, end time) or None; every failure, a
+    rejected clip or a spent budget simply falls back to the still photo. STORY_CLIP=0 switches it off."""
+    if os.environ.get("STORY_CLIP", "1") == "0" or not os.environ.get("GEMINI_API_KEY"):
+        return None
+    try:
+        sys.path.insert(0, str(S.ROOT / "tools"))
+        import gen_image as G
+        import video_clip as VC
+        ok, spent = VC.allowed_now(0.45)
+        if not ok:
+            report.append(f"hook clip skipped: clip budget reached (${spent:.2f} of ${VC.MONTH_CAP:.0f} this month)")
+            return None
+        photo, fx = shots[0]["img"], shots[0].get("fx", 0.5)
+        motion = ((a.get("short") or {}).get("hook_motion") or DEFAULT_MOTION).strip()
+        out = tmp / "hook-clip.mp4"
+        for attempt in (1, 2):
+            info = VC.make(photo, f"A {CLIP_SEC}-second clip. {motion}", out, "720p", fx, note=slug)
+            (OUT / f"{slug}-clip.jsonl").open("a", encoding="utf-8").write(json.dumps(
+                {k: v for k, v in info.items() if k != "response"}) + "\n")
+            dur = S.duration(out)
+            good, note = clip_ok(G, out, VC.first_frame(photo, fx))
+            if good and dur >= 2.0:
+                hook_end = beats[1]["_t0"] if len(beats) > 1 else dur
+                # the clip runs for the hook beat; a hook slightly longer than the clip holds the last frame
+                end = hook_end if hook_end <= dur + 1.5 else dur
+                report.append(f"hook clip used: first {end:.1f} s move (${info['cost_usd']:.2f}, try {attempt}): {note}")
+                return ClipReader(out), end
+            report.append(f"hook clip try {attempt} rejected (${info['cost_usd']:.2f}): {note}")
+            if not VC.allowed_now(0.45)[0]:
+                break
+    except Exception as e:
+        report.append(f"hook clip skipped: {str(e)[:160]}")
+    return None
+
+
 def assign_images(a, beats):
     # only photos chosen for this article (its new gen/ photos first, then its own images and car galleries):
     # better to repeat a fitting photo than to show an unrelated topic photo
@@ -896,6 +985,7 @@ def main():
     rnd = random.Random(slug)
     report = []  # what the overlay/timing/loop checks found (video/out/<slug>-en-short-report.txt)
     shots = make_shots(beats, a["_pool"], rnd)
+    clip = hook_clip(a, beats, shots, tmp, slug, report)
     for i, b in enumerate(beats):
         if b["_dur"] > 3.0 and len({x["img"] for x in shots if x["beat"] == i}) < 2:
             report.append(f"beat {i + 1}: {b['_dur']:.1f} s with only 1 photo (rule: switch photo after 3 s)")
@@ -978,8 +1068,11 @@ def main():
         st = tt - shot["t0"]
         pg = next((p for p in pops if p[0] <= tt < p[1]), None)
         box = frame(src, shot, st, (tt - pg[0]) if pg else None)
-        fr = src.resize((W, H), Image.BILINEAR, box=box)
+        moving = clip[0].next() if clip and tt < clip[1] else None  # the hook as a moving picture
+        fr = moving.copy() if moving is not None else src.resize((W, H), Image.BILINEAR, box=box)
         xf = min(XFADE, 0.6 * shot["dur"], 0.6 * shots[si - 1]["dur"]) if si > 0 else 0
+        if clip and tt < clip[1] + 0.2:
+            xf = 0  # straight cut out of the clip
         if xf > 0.01 and st < xf:  # smooth crossfade from the previous shot, which keeps moving meanwhile
             pv = shots[si - 1]
             if pv["img"] not in srcs:
@@ -1026,6 +1119,8 @@ def main():
             fr.alpha_composite(logo, (0, 0))
         enc.stdin.write(fr.convert("RGB").tobytes())
     enc.stdin.close()
+    if clip:
+        clip[0].p.kill()
     if enc.wait():
         sys.exit("ffmpeg failed")
     check_brand(out, logo)

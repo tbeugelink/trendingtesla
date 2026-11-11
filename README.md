@@ -44,6 +44,13 @@ into `short.proof` {"source", "views", "why"}. Take the topic and the kind of an
   the previous Short of its slot. The format itself stays fixed for at least 7 days (until 19 Nov 2026) so the
   morning review can tell what works; the watch-time numbers arrive 2-3 days late.
 
+**MOVING HOOK (test from 12 Nov 2026, William's budget: $15 a month)** - the first ~4 seconds of every Short are a
+moving clip made from the hook photo (tools/video_clip.py, Google gemini-omni-1.1-flash, 720p, about $0.41 per
+clip; measured 11 Nov). Gemini compares the clip with the photo; a distorted subject, added text or a person means
+the still photo is used. Costs are logged in ops/clips-log.jsonl and stop at the month's cap. The render report
+says whether the clip was used. `short.hook_motion` (optional) says what should move. Illustration only: never a
+fake documentary shot of a real event. STORY_CLIP=0 switches it off.
+
 **CHECK BEFORE COMMIT** - `python3 tools/check_article.py <article file>` must report 0 errors (parts, overlays,
 beat length, pictures, loop, proof, required fields). A beat's `"part"` is only "hook", "tension" or "payoff".
 

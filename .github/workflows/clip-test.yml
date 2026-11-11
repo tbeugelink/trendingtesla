@@ -1,0 +1,52 @@
+name: Clip test (moving picture from a photo)
+
+# By hand only: makes one short moving clip from one of our photos (tools/video_clip.py) and keeps it as an
+# artifact, so quality and real cost can be judged before clips are used in Shorts. Nothing is published.
+on:
+  workflow_dispatch:
+    inputs:
+      photo:
+        description: "Photo path, e.g. static/img/lib/starship-launch.jpg"
+        required: true
+      prompt:
+        description: "What moves"
+        required: true
+      resolution:
+        description: "360p or 720p"
+        required: false
+        default: "720p"
+
+permissions:
+  contents: write
+
+jobs:
+  clip:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v5
+      - name: Make the clip
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          PHOTO: ${{ github.event.inputs.photo }}
+          PROMPT: ${{ github.event.inputs.prompt }}
+          RES: ${{ github.event.inputs.resolution }}
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg > /dev/null
+          pip install --quiet pillow
+          mkdir -p video/out
+          python3 tools/video_clip.py "$PHOTO" "$PROMPT" video/out/clip-test.mp4 "$RES" | tee video/out/clip-test.json
+          ffprobe -v error -show_entries stream=codec_type,width,height,duration,r_frame_rate -of compact video/out/clip-test.mp4 | tee -a video/out/clip-test.json
+      - name: Keep the cost log
+        if: always()
+        run: |
+          [ -z "$(git status --porcelain ops/clips-log.jsonl)" ] && exit 0
+          git config user.name "TrendingTesla bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add ops/clips-log.jsonl && git commit -qm "Clip test: cost logged" && (git pull --rebase -q origin main && git push -q origin HEAD:main) || true
+      - uses: actions/upload-artifact@v5
+        if: always()
+        with:
+          name: clip-test-${{ github.run_number }}
+          path: video/out/clip-test.*
+          retention-days: 7

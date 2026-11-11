@@ -1,0 +1,224 @@
+{
+  "slug": "tesla-supercharger-story-six-free-solar-stations-to-85000-plugs-team-fired",
+  "date": "2026-11-11",
+  "time": "21:20",
+  "category": "charging",
+  "sources": [
+    {
+      "title": "Tesla — Tesla Motors Launches Revolutionary Supercharger Enabling Convenient Long Distance Driving (2012)",
+      "url": "https://ir.tesla.com/press-release/tesla-motors-launches-revolutionary-supercharger-enabling"
+    },
+    {
+      "title": "Wikipedia — Tesla Supercharger",
+      "url": "https://en.wikipedia.org/wiki/Tesla_Supercharger"
+    },
+    {
+      "title": "Manufacturing Business Technology — Former Tesla Supercharger Staffers Reveal Details of Department Fallout, Aftermath (citing Reuters)",
+      "url": "https://www.mbtmag.com/operations/news/22910077/former-tesla-supercharger-staffers-reveal-details-of-department-fallout-aftermath"
+    },
+    {
+      "title": "electrive — Tesla opens charging for third parties in the Netherlands",
+      "url": "https://electrive.com/2021/11/01/tesla-opens-charging-for-third-parties-in-the-netherlands"
+    }
+  ],
+  "images": [
+    "lib/supercharger-v4.jpg",
+    "supercharger.jpg",
+    "lib/supercharger-row-night.jpg",
+    "supercharger-2.jpg",
+    "lib/supercharger-v3.jpg",
+    "lib/semi-megacharger.jpg"
+  ],
+  "gen_image": {
+    "prompt": "Close, dynamic low-angle shot of a white Tesla V3 Supercharger post with its red accent and black charging cable plugged into a white Tesla Model Y at blue hour, a row of identical V3 posts under a solar-panel canopy stretching behind it, soft warm canopy lights reflecting on wet asphalt, the charger post in the horizontal centre filling about half of the frame, calm dark asphalt in the lower left",
+    "subject": "Tesla V3 Supercharger: a slim white post about 1.5 m tall with a red stripe on the side and a single black cable with a compact Tesla connector, one post at the head of each parking bay, cars reversed in so the cable reaches the rear left charge port; no text or logos besides a small Tesla emblem",
+    "refs": [
+      {
+        "src": "lib/supercharger-v3.jpg"
+      }
+    ],
+    "profile": "cinematic",
+    "category": "B",
+    "describe": "a V3 Supercharger post charging a white Model Y under a solar canopy at blue hour",
+    "extra": [
+      {
+        "prompt": "Wide calm view of a small highway Supercharger site at dusk in a dry Californian landscape: six white V3 Supercharger posts with red accents under a simple solar-panel carport roof, two Teslas charging, a quiet two-lane highway and low hills behind, warm orange sky, no people",
+        "describe": "a small Supercharger site with six posts under a solar carport beside a California highway at dusk"
+      },
+      {
+        "prompt": "Night view along a long row of white V3 Supercharger posts with red accents, every bay filled with a different modern Tesla, cars reversed in, the cables reaching the rear left charge ports, wet asphalt reflecting the canopy lights, slight rain, no people",
+        "describe": "a long row of busy V3 Superchargers at night, every bay taken"
+      }
+    ]
+  },
+  "label": {
+    "style": "c",
+    "en": {
+      "sub": "MUSK FIRED THE",
+      "text": "SUPERCHARGER TEAM"
+    },
+    "nl": {
+      "sub": "MUSK ONTSLOEG HET",
+      "text": "SUPERCHARGER-TEAM"
+    }
+  },
+  "short": {
+    "hook": "consequence",
+    "yt_title_en": "Musk Fired Tesla's Supercharger Team",
+    "yt_title_nl": "Musk Ontsloeg Tesla's Supercharger-Team",
+    "hooks": [
+      {
+        "text": "Musk fired almost his entire Supercharger team.",
+        "type": "consequence"
+      },
+      {
+        "text": "Tesla promised free charging. Forever.",
+        "type": "contrast"
+      },
+      {
+        "text": "Six stations in 2012. Over 85,000 plugs now.",
+        "type": "number"
+      }
+    ],
+    "hook_pick": {
+      "index": 0,
+      "why": "a shock consequence with the subject (Musk, Supercharger) in the first 6 words and ~2.4 s spoken; rotates away from the contrast (midday) and number (evening before) hooks; the 'free forever' and '6 -> 85,000' turns become the open loops in beats 3-9 instead of being spent in the hook, and the overlay (33 chars) stands whole from frame 1"
+    },
+    "story": [
+      {
+        "part": "hook",
+        "t": "0-2.5s",
+        "text": "Musk fired almost his entire Supercharger team.",
+        "overlay": "Musk fired the Supercharger team.",
+        "lib": [
+          "supercharger-v4.jpg",
+          "supercharger-row-night.jpg"
+        ],
+        "visual": "hard open on a row of V4 Supercharger posts at blue hour, cut to a canopy row of charging Teslas at night; only the hook sentence on screen, no logo"
+      },
+      {
+        "part": "tension",
+        "t": "2.5-5.3s",
+        "text": "About five hundred people, in April 2024.",
+        "overlay": "About 500 people. April 2024.",
+        "lib": [
+          "supercharger-damaged.jpg",
+          "../topics/supercharger-3.jpg"
+        ],
+        "visual": "a damaged Supercharger post behind orange cones, then an empty Supercharger site at night in the rain; slow push-in"
+      },
+      {
+        "part": "tension",
+        "t": "5.3-8.3s",
+        "text": "It began in 2012, with just six solar stations.",
+        "overlay": "2012: just 6 solar stations.",
+        "lib": [
+          "../topics/supercharger-4.jpg",
+          "../topics/supercharger-2.jpg"
+        ],
+        "visual": "a covered Supercharger station at night, then a short row of white/red stalls at dusk; gentle pan"
+      },
+      {
+        "part": "tension",
+        "t": "8.3-11.3s",
+        "text": "And every Model S charged there for free. Forever.",
+        "overlay": "Model S charged for free. Forever.",
+        "lib": [
+          "../models/msc-2.jpg",
+          "../models/msc-1.jpg"
+        ],
+        "visual": "a dark grey Model S on a mountain road, then a red Model S on cobblestones; Model S appears on the words 'Model S'"
+      },
+      {
+        "part": "tension",
+        "t": "11.3-14.5s",
+        "text": "Forever ended in 2017, for new buyers.",
+        "overlay": "Free forever ended in 2017.",
+        "lib": [
+          "charge-port-us-plugged.jpg",
+          "tesla-app-phone.jpg"
+        ],
+        "visual": "close-up of a Supercharger plug in a Tesla tail light, then a hand holding the Tesla app; quick cut"
+      },
+      {
+        "part": "tension",
+        "t": "14.5-17.7s",
+        "text": "In 2021, rivals could plug in. First in the Netherlands.",
+        "overlay": "2021: rivals plug in. Dutch first.",
+        "lib": [
+          "connector-handle.jpg",
+          "../topics/supercharger-5.jpg"
+        ],
+        "visual": "a hand lifting a Supercharger connector, then a large covered Supercharger at night with wet ground"
+      },
+      {
+        "part": "tension",
+        "t": "17.7-20.8s",
+        "text": "Then almost every US carmaker took Tesla's plug.",
+        "overlay": "Then US carmakers took Tesla's plug.",
+        "lib": [
+          "charge-port-us-open.jpg",
+          "../gen/tesla-emergency-drive-away-539-service-bill-accidental-tap-first-real-use-x2-11010557.jpg"
+        ],
+        "visual": "open NACS charge port glowing blue, then a Supercharger handle in a charge port in the rain; punch-in"
+      },
+      {
+        "part": "tension",
+        "t": "20.8-23.9s",
+        "text": "The firing slowed the network. It didn't stop it.",
+        "overlay": "Firing slowed it. Didn't stop it.",
+        "lib": [
+          "supercharger-v3.jpg",
+          "../gen/tesla-emergency-drive-away-539-service-bill-accidental-tap-first-real-use.jpg"
+        ],
+        "visual": "a V3 Supercharger post with a Model Y charging at sunset, then a quiet V3 site at night"
+      },
+      {
+        "part": "payoff",
+        "t": "23.9-26.9s",
+        "text": "Now over 85,000 plugs. Even trucks get their own.",
+        "overlay": "85,000+ plugs. Even for trucks.",
+        "lib": [
+          "../gen/tesla-emergency-drive-away-539-service-bill-accidental-tap-first-real-use-x3-11010557.jpg",
+          "semi-megacharger.jpg"
+        ],
+        "visual": "a long row of V3 stalls with Teslas charging, then two Tesla Semis at Megacharger posts at dusk; the trucks appear on 'trucks'"
+      },
+      {
+        "part": "payoff",
+        "t": "26.9-30s",
+        "text": "Tesla's chargers outlived the very team that built them.",
+        "overlay": "The chargers outlived their team.",
+        "lib": [
+          "supercharger-row-night.jpg",
+          "supercharger-v4.jpg"
+        ],
+        "visual": "the canopy row at night again, then the same blue-hour V4 posts the Short opens on, so the replay cut is invisible"
+      }
+    ],
+    "loop": {
+      "last": "Tesla's chargers outlived the very team that built them.",
+      "how": "a plain payoff statement that the restart explains: '...Tesla's chargers outlived the very team that built them. / Musk fired almost his entire Supercharger team.' The two lines share no words, there is no colon or half sentence (both used recently), and the last picture is the same blue-hour V4 row the Short opens on"
+    },
+    "signals": "Stayed %: a consequence hook with a named person and product in 2.4 s, dark night/blue-hour pictures behind the hook (no contrast band needed), overlay whole from frame 1. Watched %/loops: 10 beats of 13-17 syllables (est. 2.5-3.2 s, total ~30 s, under the 31 s of the previous two Shorts), two pictures in every beat that literally show what the overlay says (Superchargers, Model S, plug, Semi), and a statement loop that the hook explains. Likes/shares: an underdog-survival payoff ('outlived the team') that invites comments.",
+    "learning": {
+      "prev": "why-tesla-batteries-use-thousands-of-small-cells-18650-2170-4680-explained",
+      "prev_stats": "published 11 Nov midday; no stats in ops/short-signals.md yet (updated 05:05 UTC). Latest evening Short with numbers: Starship first flight 1,041 views, 19.2 likes/1000; laser wiper 631 views (fewest of the week). Stayed % not reported since 8 Nov (34-37% then) and remains the weakest signal vs the 70% goal",
+      "weakest_hook": "battery Short: 'The first Tesla ran on laptop batteries.' is solid, but several beats paired overlays with pictures that did not show the words (an Optimus picking a part over 'cheap, proven and easy to cool', a Cybercab battery over '1 bad cell'); Starship first flight: 6 of 10 beats ran 4.1-5.4 s (render report)",
+      "why_stalled": "sound-off viewers read a claim but see an unrelated picture, which breaks the sense of a tight story and invites a swipe in beats 3-4; overlong beats (Starship) drop the pattern interrupt below one every 4 s and pull watched % down",
+      "change": "every picture now shows exactly the thing the overlay names (Supercharger posts, Model S on 'Model S', plug on 'plug', Semi on 'trucks'); beats capped at 13-17 syllables (est. 2.5-3.2 s, none above 3.3 s); consequence hook type for rotation; mostly night/blue-hour photos so contrast bands are expected at most in beats 4 and 8 (daylight Model S, sunset V3)"
+    },
+    "en": "Musk fired almost his entire Supercharger team. About five hundred people, in April 2024. It began in 2012, with just six solar stations. And every Model S charged there for free. Forever. Forever ended in 2017, for new buyers. In 2021, rivals could plug in. First in the Netherlands. Then almost every US carmaker took Tesla's plug. The firing slowed the network. It didn't stop it. Now over 85,000 plugs. Even trucks get their own. Tesla's chargers outlived the very team that built them.",
+    "nl": "Musk ontsloeg bijna zijn hele Supercharger-team. Zo'n vijfhonderd mensen, in april 2024. Het begon in 2012, met maar zes stations op zonne-energie. En elke Model S laadde er gratis. Voor altijd. Dat 'voor altijd' stopte in 2017, voor nieuwe kopers. In 2021 mochten andere merken aan de stekker. Nederland was de eerste. Daarna nam bijna elke Amerikaanse autobouwer de stekker van Tesla over. De ontslagen remden het netwerk af. Stoppen deed het niet. Nu ruim 85.000 laadpunten. Zelfs vrachtwagens krijgen hun eigen. Tesla's laadpalen overleefden precies het team dat ze bouwde."
+  },
+  "en": {
+    "title": "From six free solar stations to 85,000 plugs: how Tesla's Superchargers outlived the team that built them",
+    "description": "In 2012 Tesla opened six solar-powered chargers and promised Model S owners free charging forever. Here is how that network crossed a continent, opened to rivals, survived the firing of almost its entire team, and became the hardest part of Tesla to copy.",
+    "body": "<p>In April 2024, Elon Musk let go of almost the entire team behind Tesla's Supercharger network: roughly 500 people, including its head, Rebecca Tinucci. According to Reuters, which spoke to eight former staff members, she had already cut 15 to 20 percent of her department and argued that deeper cuts would hurt the business. Suppliers were told to hold off on breaking ground for new sites. For a few weeks it looked as if the part of Tesla that even rival drivers envied could simply grind to a halt. That network had started twelve years earlier with six stations and a promise no other carmaker was willing to make.</p>\n<h2>Why did Tesla build its own chargers in the first place?</h2>\n<p><strong>Because without fast charging along the highway, an electric car was a city car, and nobody else was going to build it.</strong> On September 24, 2012, three months after the first Model S deliveries, Tesla unveiled the Supercharger at its design studio in Hawthorne, California. There were six stations, all in California, enough to link Los Angeles, San Francisco, Lake Tahoe and Las Vegas. Each delivered close to 100 kW, and half an hour gave a Model S about three hours of driving at 60 mph. The roofs were solar carports from SolarCity, another company in Musk's orbit, designed to produce more energy over a year than the cars took. And the charging was free, with no end date. \"We are giving Model S the ability to drive almost anywhere for free on pure sunlight,\" Musk said. Supercharging came standard on the 85 kWh Model S and was an option on the 60 kWh version.</p>\n<p>Six stations in one state, though, did not make a car you could take anywhere.</p>\n<h2>So how did six stations become a coast-to-coast network?</h2>\n<p><strong>By following the highways people actually drive, one corridor at a time.</strong> Tesla's plan named the routes: Vancouver to San Diego, Miami to Montreal, Los Angeles to New York, with Europe and Asia to start in the second half of 2013. Late in 2012 the first stations opened on the East Coast, along I-95 in Connecticut and Delaware. By mid-July 2013 there were 15 in the United States, and by October the West Coast route along I-5 and US-101 was open. In January 2014 the first coast-to-coast corridor was complete: Los Angeles to New York City, by way of Chicago. A Model S owner could now cross the country without paying for a single kilowatt-hour.</p>\n<p>The more cars Tesla sold, the harder that word \"free\" became to keep.</p>\n<h2>What happened to \"free, forever\"?</h2>\n<p><strong>It ended for new buyers in 2017, briefly came back, and then became a paid service.</strong> Model S and Model X cars ordered after January 15, 2017 no longer got unlimited free Supercharging. Cars that already had it kept it, and between August 2019 and May 2020 Tesla offered unlimited free Supercharging again for a while. Meanwhile the hardware kept getting faster: smaller 72 kW urban posts arrived in 2017, and the V3 Supercharger of 2019 delivered up to 250 kW. Busy stations full of paying drivers turned a sales argument into a business of its own.</p>\n<p>A business that only serves your own cars, however, has a ceiling.</p>\n<h2>Why would Tesla let rival cars plug in?</h2>\n<p><strong>Because more cars at the plug meant more use of stations that were already built, and because Tesla's plug could become everyone's plug.</strong> In Europe the first step came from regulators: under their pressure, Tesla switched its new cars to the common CCS2 connector in 2018 and added CCS2 cables to its Superchargers. On November 1, 2021, the Netherlands became the test country, with ten Supercharger locations opened to other electric cars through the Tesla app. Norway, France, Germany, Italy, Spain, Sweden and the UK followed in 2022. In North America Tesla went further: in November 2022 it published its own plug design as the North American Charging Standard, and between May 2023 and February 2024 almost every major carmaker there signed up. In 2024 the plug became an official standard, SAE J3400.</p>\n<p>Just as the network became the industry's standard, the team behind it was shown the door.</p>\n<h2>So how did the network survive losing its own team?</h2>\n<p><strong>It slowed down for a while, but it never stopped growing.</strong> After the April 2024 firings Musk wrote that Tesla would still grow the network, but at a \"slower pace\" for new locations, and later that it would spend well over $500 million on expansion that year. Two Reuters sources said that was less than the original plan. Bloomberg reported that Tesla started rehiring some of the people it had let go, and the energy division took over the work. The numbers since then tell the rest. On April 3, 2026, Tesla announced its 80,000th Supercharger stall, at a 48-stall site in Saint-Saturnin near Le Mans, France. By October 1, 2026, the network had 9,007 stations with more than 85,000 connectors, and the newest V4 cabinets can deliver up to 500 kW, five times the power of the 2012 posts.</p>\n<p>Numbers like that change what the network is really for.</p>\n<h2>Why does this story still matter?</h2>\n<p><strong>Because the charging network is the part of Tesla that is hardest to copy.</strong> A rival can match a car's range or price in a few years. Thousands of sites with grid connections, permits and a decade of data on where drivers actually stop take far longer, which is exactly why other carmakers ended up adopting Tesla's plug instead of fighting it. Tesla is now repeating the idea for heavy trucks, with its own Megachargers for the Semi. The lesson of the Supercharger is a strange one: the \"forever\" in free charging did not last, and the team that built most of the network did not either. The network itself outlived both.</p>"
+  },
+  "nl": {
+    "title": "Van zes gratis zonnestations naar 85.000 laadpunten: hoe Tesla's Superchargers het team overleefden dat ze bouwde",
+    "description": "In 2012 opende Tesla zes laadstations op zonne-energie en beloofde Model S-rijders voor altijd gratis laden. Zo groeide dat netwerk over een heel continent, ging het open voor andere merken, overleefde het het ontslag van bijna het hele team en werd het het moeilijkst te kopiëren deel van Tesla.",
+    "body": "<p>In april 2024 ontsloeg Elon Musk bijna het hele team achter het Supercharger-netwerk van Tesla: zo'n 500 mensen, inclusief de baas, Rebecca Tinucci. Volgens Reuters, dat met acht oud-medewerkers sprak, had zij haar afdeling al met 15 tot 20 procent ingekrompen en gewaarschuwd dat verder snijden het bedrijf zou schaden. Leveranciers kregen te horen dat ze voorlopig niet aan nieuwe locaties moesten beginnen. Een paar weken leek het alsof het onderdeel van Tesla waar zelfs rijders van andere merken jaloers op waren, gewoon tot stilstand kon komen. Dat netwerk was twaalf jaar eerder begonnen met zes stations en een belofte die geen enkele andere autofabrikant durfde te doen.</p>\n<h2>Waarom bouwde Tesla eigenlijk zelf laadpalen?</h2>\n<p><strong>Omdat een elektrische auto zonder snelladen langs de snelweg een stadsauto bleef, en niemand anders dat netwerk ging bouwen.</strong> Op 24 september 2012, drie maanden na de eerste leveringen van de Model S, presenteerde Tesla de Supercharger in zijn ontwerpstudio in Hawthorne, Californië. Er waren zes stations, allemaal in Californië, genoeg om Los Angeles, San Francisco, Lake Tahoe en Las Vegas met elkaar te verbinden. Elk station leverde bijna 100 kW: een half uur laden was goed voor zo'n drie uur rijden met 100 km/u. De overkappingen waren zonnedaken van SolarCity, een ander bedrijf uit de kring van Musk, ontworpen om over een jaar meer stroom op te wekken dan de auto's verbruikten. En het laden was gratis, zonder einddatum. Musk noemde het rijden \"op puur zonlicht\", vrijwel overal naartoe. Supercharging zat standaard op de Model S met 85 kWh en was een optie op de versie met 60 kWh.</p>\n<p>Zes stations in één staat maakten van de Model S alleen nog geen auto waarmee je overal kon komen.</p>\n<h2>Dus hoe werden zes stations een netwerk van kust tot kust?</h2>\n<p><strong>Door de snelwegen te volgen waar mensen echt rijden, route voor route.</strong> Tesla noemde de routes meteen: Vancouver naar San Diego, Miami naar Montreal, Los Angeles naar New York, en vanaf de tweede helft van 2013 ook Europa en Azië. Eind 2012 openden de eerste stations aan de oostkust, langs de I-95 in Connecticut en Delaware. Half juli 2013 stonden er 15 in de Verenigde Staten, en in oktober was de westkustroute langs de I-5 en US-101 klaar. In januari 2014 lag de eerste route van kust tot kust er: van Los Angeles via Chicago naar New York. Een Model S-rijder kon het hele land doorkruisen zonder één kilowattuur te betalen.</p>\n<p>Hoe meer auto's Tesla verkocht, hoe moeilijker dat woordje \"gratis\" vol te houden was.</p>\n<h2>Wat gebeurde er met \"gratis, voor altijd\"?</h2>\n<p><strong>Het stopte in 2017 voor nieuwe kopers, kwam nog even terug en werd daarna een betaalde dienst.</strong> Model S- en Model X-auto's die na 15 januari 2017 werden besteld, kregen geen onbeperkt gratis Supercharging meer. Auto's die het al hadden, hielden het, en tussen augustus 2019 en mei 2020 bood Tesla het nog een tijdje opnieuw aan. Ondertussen werd de techniek steeds sneller: in 2017 kwamen er kleinere stadspalen van 72 kW, en de V3-Supercharger van 2019 leverde tot 250 kW. Volle stations met betalende rijders maakten van een verkoopargument een bedrijf op zich.</p>\n<p>Maar een bedrijf dat alleen je eigen auto's bedient, loopt vroeg of laat tegen een plafond aan.</p>\n<h2>Waarom liet Tesla auto's van concurrenten aan zijn palen?</h2>\n<p><strong>Omdat meer auto's aan de stekker meer gebruik betekenden van stations die er toch al stonden, en omdat de stekker van Tesla de stekker van iedereen kon worden.</strong> In Europa kwam de eerste stap van toezichthouders: onder hun druk stapte Tesla in 2018 bij nieuwe auto's over op de gangbare CCS2-stekker en kregen de Superchargers CCS2-kabels. Op 1 november 2021 werd Nederland het testland: tien Supercharger-locaties gingen via de Tesla-app open voor andere elektrische auto's. Noorwegen, Frankrijk, Duitsland, Italië, Spanje, Zweden en het Verenigd Koninkrijk volgden in 2022. In Noord-Amerika ging Tesla nog verder: in november 2022 publiceerde het zijn eigen stekker als North American Charging Standard, en tussen mei 2023 en februari 2024 sloot bijna elke grote autofabrikant daar zich aan. In 2024 werd de stekker een officiële norm: SAE J3400.</p>\n<p>Net toen het netwerk de norm van de hele sector werd, kreeg het team erachter de deur gewezen.</p>\n<h2>Dus hoe overleefde het netwerk het verlies van zijn eigen team?</h2>\n<p><strong>Het ging een tijd langzamer, maar het stopte nooit met groeien.</strong> Na de ontslagen van april 2024 schreef Musk dat Tesla het netwerk bleef uitbreiden, maar in een lager tempo voor nieuwe locaties, en later dat er dat jaar ruim 500 miljoen dollar in uitbreiding zou gaan. Twee bronnen van Reuters zeiden dat dit minder was dan het oorspronkelijke plan. Volgens Bloomberg nam Tesla een deel van de ontslagen mensen weer aan, en de energiedivisie nam het werk over. De cijfers sindsdien vertellen de rest. Op 3 april 2026 meldde Tesla zijn 80.000e Supercharger-paal, op een locatie met 48 palen in Saint-Saturnin bij Le Mans, Frankrijk. Op 1 oktober 2026 telde het netwerk 9.007 stations met ruim 85.000 laadpunten, en de nieuwste V4-kasten leveren tot 500 kW: vijf keer het vermogen van de palen uit 2012.</p>\n<p>Zulke aantallen veranderen waar het netwerk eigenlijk voor is.</p>\n<h2>Waarom doet dit verhaal er nog steeds toe?</h2>\n<p><strong>Omdat het laadnetwerk het deel van Tesla is dat het moeilijkst te kopiëren valt.</strong> Een concurrent kan de actieradius of de prijs van een auto binnen een paar jaar evenaren. Duizenden locaties met netaansluitingen, vergunningen en tien jaar aan gegevens over waar rijders echt stoppen, kosten veel meer tijd. Precies daarom namen andere fabrikanten uiteindelijk de stekker van Tesla over in plaats van ertegen te vechten. Tesla herhaalt het idee nu voor zware vrachtwagens, met eigen Megachargers voor de Semi. De les van de Supercharger is een vreemde: het \"voor altijd\" van gratis laden hield geen stand, en het team dat het grootste deel van het netwerk bouwde ook niet. Het netwerk zelf overleefde ze allebei.</p>"
+  }
+}

@@ -2,6 +2,14 @@
 
 Every article task adds an entry here (README, "ALGORITHM RULES", Self-learning). Stats: `ops/short-signals.md`.
 
+## 2026-11-11 - tesla-supercharger-story-six-free-solar-stations-to-85000-plugs-team-fired (evening story)
+- Hooks: 0 "Musk fired almost his entire Supercharger team." (consequence) **picked** | 1 "Tesla promised free charging. Forever." (contrast) | 2 "Six stations in 2012. Over 85,000 plugs now." (number)
+- Why 0: a shock consequence with person + product in 6 words (~2.4 s), overlay "Musk fired the Supercharger team." (33 chars) whole from frame 1; rotates away from contrast (midday) and number (evening before); "free forever" and 6 -> 85,000 are kept as open loops for beats 3-9. Current hook: Tesla's Megachargers and "Chicago's first 50 Semis en route" (11 Nov), Supercharger network past 85,000 connectors.
+- Previous Short: why-tesla-batteries-use-thousands-of-small-cells-18650-2170-4680-explained - no stats or render report yet. Latest evening with numbers: Starship first flight 1,041 views, 19.2 likes/1000; laser wiper 631 views (fewest). Stayed % (34-37% when last reported) stays the weakest signal.
+- Weak in previous: battery Short paired overlays with pictures that did not show the words (Optimus over "cheap, proven", Cybercab battery over "1 bad cell"); Starship render report: 6 of 10 beats ran 4.1-5.4 s, bands in beats 3, 4, 7.
+- Change now: every picture literally shows what the overlay names (Supercharger posts, Model S on "Model S", plug on "plug", Semi on "trucks"); 10 beats of 13-17 syllables (est. 2.5-3.2 s, ~30 s, 84 words), 2 library pictures per beat, mostly night/blue-hour photos (bands possible only in beats 4 and 8).
+- Loop: last line "Tesla's chargers outlived the very team that built them." is a payoff statement the restart explains -> "...outlived the very team that built them. Musk fired almost his entire Supercharger team." No shared words, no colon or half sentence; last picture = first picture (blue-hour V4 row).
+
 ## 2026-11-11 - why-tesla-batteries-use-thousands-of-small-cells-18650-2170-4680-explained (midday explainer)
 - Hooks: 0 "The first Tesla ran on laptop batteries." (contrast) **picked** | 1 "Twice the energy. Five times fewer cells." (number) | 2 "Why does a Tesla have thousands of batteries?" (question)
 - Why 0: 7 plain words (~2.5 s), no hedge, no spoken number; a car plus an object everyone owns; subject in word 2; overlay 36 chars whole from frame 1. Current hook: Tesla's cell director announces a "massive expansion" of the Giga Texas 4680 plant (9 Nov). Evergreen topic from the list, Tesla-car side after five SpaceX-heavy articles.

@@ -90,7 +90,9 @@ Add new ideas at the bottom at any time.
 - [x] Model 3 "production hell": sleeping in the factory and the tent on the parking lot (tesla-model-3-production-hell-tent-assembly-line-2018-story)
 - [x] Why the Cybertruck looks like that: stainless steel, the broken window and the design bet (why-tesla-cybertruck-looks-like-that-stainless-steel-broken-window-story)
 - [ ] How Tesla opened all its patents in 2014, and what happened next
-- [ ] The first Supercharger: why Tesla built its own charging network when nobody else would
+- [x] The first Supercharger: why Tesla built its own charging network when nobody else would (tesla-supercharger-story-six-free-solar-stations-to-85000-plugs-team-fired)
+- [ ] Magic Dock: how Tesla hid a CCS adapter inside its Superchargers so other EVs could plug in, and why V4 posts got longer cables
+- [ ] SolarCity: the solar company Tesla bought in 2016, the lawsuit that followed, and what became of its solar roofs and carports
 - [ ] Giga Shanghai: how Tesla built a car factory in under a year
 - [ ] The Hornsdale "Tesla Big Battery": the 100-day bet that changed Australia's grid
 - [ ] From Falcon 1 to Starship: SpaceX's road from three failures to catching rockets
@@ -139,4 +141,5 @@ opinion, no hero worship and no bashing. Check every claim (titles are questions
 - [ ] Which other companies and media did Musk buy, try to buy, or only joke about buying? (check what is real; only report what really happened)
 - [x] The first Falcon 9 landing: how SpaceX brought an orbital booster back in one piece, and why the industry had said it made no sense (already covered: spacex-first-falcon-9-landing-2015-two-crashes-one-explosion-orbcomm-2)
 - [ ] Dry electrode explained: why making battery electrodes without a liquid solvent is so hard, and why it matters for cheaper cars
+- [ ] Supercharger etiquette and pricing explained: idle fees, congestion fees, peak/off-peak prices and why some stalls charge slower when the stall next to you is busy
 - [ ] Pouch vs prismatic vs cylindrical cells: which carmakers use which, and what it means for safety, cost and repairs

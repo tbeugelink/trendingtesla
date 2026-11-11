@@ -1,4 +1,4 @@
-# Health 2026-11-11 23:28 (Europe/Amsterdam)
+# Health 2026-11-11 23:36 (Europe/Amsterdam)
 
 PROBLEMS: none
 
@@ -10,5 +10,9 @@ PROBLEMS: none
 - note: Render report of 'Why Does a Tesla Battery Have Thousands of Small Cells? From Laptop Ce': beat 2: 2.3 s (rule 2.5-4 s); beat 9: 2.2 s (rule 2.5-4 s)
 - note: Watchdog today: 2026-11-11 13:43 UTC: short video for why-tesla-batteries-use-thousands-of-small-cells-18650-2170-4680-explained still missing after a retry
 - note: Watchdog today: 2026-11-11 22:03 UTC: full video for why-tesla-batteries-use-thousands-of-small-cells-18650-2170-4680-explained missing while a video run has been waiting or running for hours: if it stays queued, cancel it on GitHub (Actions); the watchdog then makes the video again
+- note: GitHub run 'Make YouTube videos' has been waiting in the queue for 133 min: https://github.com/tbeugelink/trendingtesla/actions/runs/43095744965
+- note: GitHub run 'IndexNow' has been waiting in the queue for 133 min: https://github.com/tbeugelink/trendingtesla/actions/runs/43095744879
+- note: Video run failed 10 h ago: https://github.com/tbeugelink/trendingtesla/actions/runs/43015658438
 - ok: Long video of 'How Does a Tesla Robotaxi Keep Its Cameras Clean? Washers, Wipers and '
+- ok: Short of 'From six free solar stations to 85,000 plugs: how Tesla's Supercharger': YouTube + TikTok + Instagram + Facebook
 - ok: Long video of 'Why Does a Tesla Battery Have Thousands of Small Cells? From Laptop Ce'

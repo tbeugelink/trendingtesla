@@ -1,0 +1,1 @@
+- 2026-11-11: overlay-format Shorts of ~29 s are watched 99-122%, but views stay ~1,000-1,400; we skipped the month's biggest proven topic (flying Roadster); same topics as breakout small channels got us 1/1000 of their views -> test proven topic + question title.

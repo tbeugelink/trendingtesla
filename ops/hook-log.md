@@ -2,6 +2,16 @@
 
 Every article task adds an entry here (README, "ALGORITHM RULES", Self-learning). Stats: `ops/short-signals.md`.
 
+## 2026-11-11 - why-tesla-batteries-use-thousands-of-small-cells-18650-2170-4680-explained (midday explainer)
+- Hooks: 0 "The first Tesla ran on laptop batteries." (contrast) **picked** | 1 "Twice the energy. Five times fewer cells." (number) | 2 "Why does a Tesla have thousands of batteries?" (question)
+- Why 0: 7 plain words (~2.5 s), no hedge, no spoken number; a car plus an object everyone owns; subject in word 2; overlay 36 chars whole from frame 1. Current hook: Tesla's cell director announces a "massive expansion" of the Giga Texas 4680 plant (9 Nov). Evergreen topic from the list, Tesla-car side after five SpaceX-heavy articles.
+- Previous Short: starship-first-flight-2023-four-minutes-crater-launch-pad-story - 1,041 views, 19.2 likes/1000. Midday before (laser wiper): 631 views, 14.3 likes/1000 = fewest views of the last six. Stayed/watched not reported since 8 Nov (34-37% stayed there): stayed % remains the weakest signal.
+- Weak in previous (render report): 6 of 10 beats ran 4.1-5.4 s (11-14 spoken words per beat), contrast bands in beats 3, 4, 7. Laser Short: hedged hook ("might"), beats 4/7 on one photo, beat 2 at 2.3 s.
+- Weak in previous long video (laser): patents and future tech dominated, owner value only at the end; this one has a then-vs-now number every ~20 s and a buyer/myth section.
+- Change now: beats capped at 7-9 spoken words with numbers counted as spoken (est. 2.5-3.3 s, total ~31 s, 10 beats), a certain-fact hook, numbers moved to beats 2 and 9, 2 library pictures in every beat, mostly dusk/night/indoor photos (bands possible only in beat 1 coastal golden hour and beat 6 Giga Texas aerial).
+- Loop: last line "Five times fewer than where it all began." is a plain statement that the restart explains -> "...where it all began. The first Tesla ran on laptop batteries." No colon, no half sentence, no repeated hook words; last picture = first picture (coastal Roadster).
+- Long video, first 20 s: claim first, then the then-vs-now numbers and an explicit open loop ("it comes down to one tiny metal strip"), paid off in the tabless section and the last block ("So remember that tiny metal strip...").
+
 ## 2026-11-10 - starship-first-flight-2023-four-minutes-crater-launch-pad-story (evening story)
 - Hooks: 0 "Starship's very first flight lasted just four minutes." (number) **picked** | 1 "Musk's only goal: don't blow up the launch pad." (contrast) | 2 "This rocket dug a crater in its own launch pad." (consequence)
 - Why 0: subject in word 1, a hard number by word 7 (~2.5 s), a plain fact instead of a hedged "might"; sets up the payoff contrast (4 minutes -> catching both halves). Current hook: Starship Flight 15 tries to catch both stages for the first time.

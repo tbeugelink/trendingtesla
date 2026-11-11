@@ -44,7 +44,7 @@ Add new ideas at the bottom at any time.
 - [ ] What happens if your Tesla runs out of charge on the road?
 - [ ] Why does Tesla have no dealers? How buying a Tesla works
 - [ ] Gigacasting explained: why Tesla casts a car's body in a few huge pieces
-- [ ] Why does Tesla build its batteries from thousands of small cells instead of a few big ones? From laptop cells to the 4680
+- [x] Why does Tesla build its batteries from thousands of small cells instead of a few big ones? From laptop cells to the 4680 (why-tesla-batteries-use-thousands-of-small-cells-18650-2170-4680-explained)
 - [ ] Level 2 vs level 3 vs level 4: what the self-driving levels mean, and why Mercedes takes the blame in Drive Pilot while Tesla does not
 - [x] Why does Starship need no landing legs? How a tower catch makes rockets reusable within hours (explainer angle on the catch) (how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute)
 - [ ] Can you text while using Tesla FSD? What Musk said, what the car allows and what the law says in the US, UK and Europe
@@ -138,3 +138,5 @@ opinion, no hero worship and no bashing. Check every claim (titles are questions
 - [ ] Why did Elon Musk buy Twitter, and what did it become?
 - [ ] Which other companies and media did Musk buy, try to buy, or only joke about buying? (check what is real; only report what really happened)
 - [x] The first Falcon 9 landing: how SpaceX brought an orbital booster back in one piece, and why the industry had said it made no sense (already covered: spacex-first-falcon-9-landing-2015-two-crashes-one-explosion-orbcomm-2)
+- [ ] Dry electrode explained: why making battery electrodes without a liquid solvent is so hard, and why it matters for cheaper cars
+- [ ] Pouch vs prismatic vs cylindrical cells: which carmakers use which, and what it means for safety, cost and repairs

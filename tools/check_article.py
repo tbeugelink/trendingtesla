@@ -98,6 +98,8 @@ def check(path):
                    "pulls viewers (README, PROVEN TOPICS)")
     if not (sh.get("learning") or {}).get("test"):
         warn.append("short.learning.test is missing: the ONE thing this Short changes compared with the previous one")
+    if story and not story[0].get("sfx"):
+        warn.append("beat 1 has no sfx: describe the natural sound of what moves in the hook picture")
     if len(sh.get("yt_title_en") or "") > 48:
         warn.append(f"yt_title_en has {len(sh['yt_title_en'])} characters (aim for 45 or fewer)")
     v = (a.get("video") or {}).get("en")

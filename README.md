@@ -48,7 +48,8 @@ into `short.proof` {"source", "views", "why"}. Take the topic and the kind of an
 moving clip made from the hook photo (tools/video_clip.py, Google gemini-omni-1.1-flash, 720p, about $0.41 per
 clip; measured 11 Nov). Gemini compares the clip with the photo; a distorted subject, added text or a person means
 the still photo is used. Costs are logged in ops/clips-log.jsonl and stop at the month's cap. The render report
-says whether the clip was used. `short.hook_motion` (optional) says what should move. Illustration only: never a
+says whether the clip was used. `short.hook_motion` (optional) says what should move, and beat 1's `"sfx"` gives the
+matching natural sound (ElevenLabs sound effect, 4 s) so the moving hook is also heard. Illustration only: never a
 fake documentary shot of a real event. STORY_CLIP=0 switches it off.
 
 **CHECK BEFORE COMMIT** - `python3 tools/check_article.py <article file>` must report 0 errors (parts, overlays,

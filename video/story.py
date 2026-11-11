@@ -950,7 +950,8 @@ def main():
     if ENDCARD:
         layers.append((slog, body_end + 0.2, 1.0))
     try:
-        layers.append((sfx(beats[0].get("sfx") or DEFAULT_SFX["hook"], 2.5, tmp), 0.0, SFX_VOL))
+        # the hook's own sound (what is seen moving: a rocket's roar, a hiss of gas) runs as long as the moving clip
+        layers.append((sfx(beats[0].get("sfx") or DEFAULT_SFX["hook"], 4.0 if beats[0].get("sfx") else 2.5, tmp), 0.0, SFX_VOL))
         bed_len = (pay or body_end) - beats[0]["_dur"]
         if bed_len > 3:
             layers.append((sfx(DEFAULT_SFX["bed"], min(22.0, bed_len), tmp), beats[0]["_dur"], BED_VOL))

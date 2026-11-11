@@ -6,6 +6,7 @@ or no long video (content/videos.json) yet, it requests the missing video once t
 failed run, so it never goes unnoticed. Prints "changed" when it wrote something and "queued" when it asked for a video.
 """
 import json
+import os
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
@@ -35,7 +36,10 @@ def main():
                 busy = (now - datetime.fromisoformat(line[11:].strip())).total_seconds() < 3600
             except ValueError:
                 pass
-    missing, problems = [], []
+    # a video run that is still waiting or working (GitHub sometimes leaves one queued for hours): do not ask for the
+    # same video again meanwhile, that would publish it twice once the waiting run starts after all
+    active = int(os.environ.get("VIDEO_RUNS_ACTIVE") or 0) > 0
+    missing, problems, ages = [], [], {}
     for f in sorted((ROOT / "content/articles").glob("*.json"))[-12:]:
         a = load(f, {})
         try:
@@ -47,6 +51,7 @@ def main():
         if not (timedelta(hours=1.5) < age < timedelta(hours=36)):
             continue
         s = a["slug"]
+        ages[s] = age
         if (a.get("video") or {}).get("en") and s not in longs:
             missing.append((s, "full"))
         if a.get("short") and s not in shorts:
@@ -54,6 +59,11 @@ def main():
     changed = queued = False
     for s, kind in missing:
         key = f"{s}:{kind}"
+        if active:
+            if ages[s] > timedelta(hours=4):
+                problems.append(f"- {now:%Y-%m-%d %H:%M} UTC: {kind} video for {s} missing while a video run has been waiting or running "
+                                f"for hours: if it stays queued, cancel it on GitHub (Actions); the watchdog then makes the video again")
+            continue
         if tried.get(key, 0) >= 1:
             problems.append(f"- {now:%Y-%m-%d %H:%M} UTC: {kind} video for {s} still missing after a retry")
             tried[key] = 2

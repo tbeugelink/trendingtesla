@@ -1039,7 +1039,7 @@ def main():
     rep = OUT / f"{slug}-{lang}-short-report.txt"
     rep.write_text("\n".join(report or ["all overlay, timing and loop rules met"]) + "\n", encoding="utf-8")
     for line in report:
-        print(f"::warning::{line}" if "rule" in line or "loop" in line or "shorten" in line else f"::notice::{line}")
+        print(f"::warning::{line}" if "rule" in line or "shorten" in line else f"::notice::{line}")
     print(f"::notice::Story Short {out.name} ready ({total:.1f}s, {len(beats)} shots)")
 
 

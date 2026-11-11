@@ -157,6 +157,17 @@ def main():
                         f"GitHub run '{nm}' has been waiting in the queue for {int(age.total_seconds() // 60)} min: {url}")
                 if con == "failure" and age < timedelta(hours=13) and nm == "Make YouTube videos":
                     (problems if missing else notes).append(f"Video run failed {int(age.total_seconds() // 3600)} h ago: {url}")
+            # an empty API balance shows only in the logs: the videos are still made, but without checks or clips
+            ids = subprocess.run(["gh", "api", f"repos/{REPO}/actions/workflows/shorts.yml/runs?per_page=2&status=completed",
+                                  "--jq", ".workflow_runs[].id"], capture_output=True, text=True, timeout=60).stdout.split()
+            log = "".join(subprocess.run(["gh", "run", "view", i, "-R", REPO, "--log"], capture_output=True, text=True,
+                                         timeout=180).stdout for i in ids[:1])
+            for pat, what in (("prepayment credits are depleted", "The Google Gemini credit is EMPTY (photo checks, new "
+                               "photos and the moving hook do not work): top it up at https://ai.studio/projects"),
+                              ("insufficient_quota", "The OpenAI credit or limit is used up (no new article photos)"),
+                              ("quota_exceeded", "The ElevenLabs voice credit is used up (no voice for the videos)")):
+                if pat in log:
+                    problems.append(what + ".")
         except Exception as e:
             notes.append(f"GitHub runs not checked ({e})")
 

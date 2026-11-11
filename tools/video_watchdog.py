@@ -24,6 +24,7 @@ def load(p, default):
 def main():
     now = datetime.now(timezone.utc)
     shorts = {x.get("slug") for x in load(ROOT / "content/shorts.json", [])}
+    shorts |= {x.get("slug") for x in load(ROOT / "ops/story-pending.json", [])}  # uploaded, not yet on the site
     longs = {x.get("slug") for x in load(ROOT / "content/videos.json", [])}
     tried = load(LOG, {})
     queue = ROOT / "video/queue.txt"

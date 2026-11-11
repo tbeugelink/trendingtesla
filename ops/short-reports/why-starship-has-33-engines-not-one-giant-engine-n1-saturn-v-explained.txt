@@ -1,7 +1,9 @@
-beat 2: 3.4 s with only 1 photo (rule: switch photo after 3 s)
-beat 1: 5.2 s (rule 2.5-4 s)
+hook clip used: first 4.0 s move ($0.41, try 1): The booster and launch tower retain consistent geometry and details without distortion.
+beat 2: 3.9 s with only 1 photo (rule: switch photo after 3 s)
+beat 1: 5.6 s (rule 2.5-4 s)
 beat 4: 1.9 s (rule 2.5-4 s)
 beat 5: 1.9 s (rule 2.5-4 s)
-beat 7: 2.2 s (rule 2.5-4 s)
-beat 10: 5.3 s (rule 2.5-4 s)
-contrast band added behind the text on bright photos in beat(s) 2, 4, 5, 7, 9, 10
+beat 7: 2.4 s (rule 2.5-4 s)
+beat 10: 4.9 s (rule 2.5-4 s)
+loop: the last beat repeats the hook word for word (rule v4: a different line that runs on into it)
+contrast band added behind the text on bright photos in beat(s) 2, 3, 4, 5, 6, 7, 9, 10

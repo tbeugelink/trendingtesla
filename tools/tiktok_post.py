@@ -115,12 +115,22 @@ def post(mp4, url):
             if res.get("post"):
                 print(f"::notice::{svc} via Buffer ({ch['name']}): post {res['post']['id']} for {slug} ({inp['mode']})")
                 ok = True
+                log(slug, svc, True, res["post"]["id"])
                 break
             last = RuntimeError(res.get("message"))
         if not ok:
             print(f"::warning::{svc} post for {slug} failed: {last}")
             failed.append(svc)
+            log(slug, svc, False, str(last)[:200])
     return failed
+
+
+def log(slug, service, ok, detail):
+    """One line per attempt in ops/social-log.jsonl: the health check reads it (a post that silently failed went
+    unnoticed for 11 days in November 2026)."""
+    with (ROOT / "ops/social-log.jsonl").open("a", encoding="utf-8") as f:
+        f.write(json.dumps({"at": datetime.now(timezone.utc).isoformat(timespec="seconds"), "slug": slug,
+                            "service": service, "ok": ok, "detail": detail}) + "\n")
 
 
 def introspect():
@@ -157,3 +167,4 @@ if __name__ == "__main__":
         post(sys.argv[1], sys.argv[2])
     except Exception as e:
         print(f"::warning::social post for {sys.argv[1]} failed: {e}")
+        log(re.sub(r"-(en|nl)-short\.mp4$", "", Path(sys.argv[1]).name), "all", False, str(e)[:200])

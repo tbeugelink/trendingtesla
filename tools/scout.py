@@ -31,7 +31,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "video"))
 
 CFG = json.loads((ROOT / "ops/scout.json").read_text(encoding="utf-8"))
-BUDGET = {"tesla": 700, "niches": 1800}  # 4 uploads a day (1,600 each) also need quota  # API units per run (uploads need the rest of the daily 10,000)
+BUDGET = {"tesla": 1500, "niches": 1800}  # 4 uploads a day (1,600 each) also need quota  # API units per run (uploads need the rest of the daily 10,000)
 units = 0
 at = None
 
@@ -119,10 +119,11 @@ def ts(s):
     return datetime.fromisoformat(s.replace("Z", "+00:00"))
 
 
-def search(query, days, n=25):
+def search(query, days, n=25, short=False):
     after = (datetime.now(timezone.utc) - timedelta(days=days)).strftime("%Y-%m-%dT%H:%M:%SZ")
+    extra = {"videoDuration": "short"} if short else {}
     d = get("search?" + q(part="id", type="video", q=query, order="viewCount", publishedAfter=after,
-                          maxResults=n, relevanceLanguage="en"), cost=100)
+                          maxResults=n, relevanceLanguage="en", **extra), cost=100)
     return [i["id"]["videoId"] for i in d.get("items", []) if i["id"].get("videoId")]
 
 
@@ -295,6 +296,50 @@ def run_tesla(own):
     print("\n".join(L))
 
 
+def run_proven(own):
+    """ops/proven-topics.md: Shorts of the last 30 days in our niche that already proved they pull viewers
+    (William, 11 Nov 2026: choose topics whose popularity is proven). Every article task picks from this list."""
+    cfg = CFG.get("proven") or {}
+    ids, notes = [], []
+    for query in cfg.get("queries", []):
+        try:
+            ids += search(query, cfg.get("days", 30), n=30, short=True)
+        except OutOfBudget:
+            notes.append(f"stopped searching at '{query}' (API budget)")
+            break
+    rows = []
+    try:
+        rows = [r for r in judge(ids, own, top=45) if r["kind"] == "short"]
+    except OutOfBudget:
+        notes.append("not all channels judged (API budget)")
+    save_raw("proven", {"rows": rows, "units": units, "notes": notes})
+    now = datetime.now(timezone.utc)
+    floor = cfg.get("min_views", 100000)
+    top = sorted((r for r in rows if r["views"] >= floor and r["factor"] >= 2), key=lambda r: r["views"], reverse=True)[:25]
+    small = sorted((r for r in rows if r["subs"] < 20000 and r["factor"] >= 5 and r not in top),
+                   key=lambda r: r["factor"], reverse=True)[:8]
+    L = ["# Proven topics: Shorts that already pulled viewers", "",
+         f"Updated {now:%Y-%m-%d %H:%M} UTC by tools/scout.py (Shorts of the last {cfg.get('days', 30)} days, "
+         f"{len(rows)} judged). Do not edit by hand.", "",
+         "Rule (README, PROVEN TOPICS): every article and Short is about a topic from this list, from the outliers in "
+         "ops/scout-tesla.md or from our own best Shorts (ops/short-signals.md), unless a real news event of the last "
+         "48 hours is clearly bigger. Take the TOPIC and the kind of ANGLE, never the script, title or pictures; check "
+         "the facts yourself. Put the proof in `short.proof`.", "",
+         f"## Biggest Shorts ({fmt(floor)}+ views)", ""]
+    for r in top:
+        age = (now - ts(r["published"])).days
+        L.append(f"- **{fmt(r['views'])} views** ({r['factor']}x that channel's usual, {r['channel']}, {fmt(r['subs'])} subs, "
+                 f"{age} d old) - {link(r)}")
+    if small:
+        L += ["", "## Small channels that broke out (proof that the topic carries a small channel like ours)", ""]
+        for r in small:
+            L.append(f"- **{r['factor']}x** ({fmt(r['views'])} views, {r['channel']}, {fmt(r['subs'])} subs) - {link(r)}")
+    if notes:
+        L += ["", f"Note: {'; '.join(notes)}."]
+    (ROOT / "ops/proven-topics.md").write_text("\n".join(L) + "\n", encoding="utf-8")
+    print("\n".join(L[:12]))
+
+
 def run_niches(own):
     cfg = CFG["candidates"]
     result, notes = {}, []
@@ -370,5 +415,12 @@ if __name__ == "__main__":
     import upload  # noqa: E402
     at = upload.token()
     own = own_channel()
-    (run_tesla if mode == "tesla" else run_niches)(own)
+    if mode == "tesla":
+        run_tesla(own)
+        try:
+            run_proven(own)
+        except Exception as e:  # the daily outlier list must never be lost because the proven list failed
+            print(f"::warning::proven topics failed: {e}")
+    else:
+        run_niches(own)
     print(f"::notice::scout {mode}: {units} API units used")

@@ -9,6 +9,17 @@
       "Elon Musk xAI Grok Starlink"
     ]
   },
+  "proven": {
+    "days": 30,
+    "min_views": 100000,
+    "queries": [
+      "Tesla shorts",
+      "SpaceX Starship shorts",
+      "Tesla Cybertruck Cybercab Optimus",
+      "Elon Musk rocket explained",
+      "why Tesla explained"
+    ]
+  },
   "candidates": {
     "days": 30,
     "niches": {

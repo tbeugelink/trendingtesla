@@ -819,6 +819,9 @@ def main():
         last["text"] = cut
     elif not cut and len(beats) > 1:
         beats.pop()
+    global XFADE, SHOT_MAX
+    if any(b.get("overlay") for b in beats):  # overlay format: a new picture at least every 2 s and quick cuts
+        XFADE, SHOT_MAX = 0.18, 2.0           # (pattern interrupts; the slow 2 s crossfades were for the calm style)
     for b in beats:  # an unknown part name (a script once used "loop" for the last beat) must never stop the video
         if b.get("part") not in SPEED:
             b["part"] = "payoff" if b is not beats[0] else "hook"

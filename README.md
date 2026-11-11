@@ -8,6 +8,50 @@ Static, bilingual (EN at `/`, NL at `/nl/`) Tesla news site.
 
 `public/` is generated — never edit it by hand, always rebuild.
 
+## RELIABILITY AND QUALITY (William, 11 Nov 2026) - read first; no more lost days, and the numbers must go up
+
+The task instructions live in the repo: **ops/tasks/article.md** (midday, evening, Saturday), **ops/tasks/monitor.md**
+(twice a day) and **ops/tasks/daily-review.md** (every morning). The scheduled tasks only say which one to follow.
+
+**The daily loop**
+- ~06:00 statistics and scouting (yt-learn.yml): ops/short-signals.md, ops/performance.md, ops/scout-tesla.md and
+  **ops/proven-topics.md** (Shorts of the last 30 days that already pulled 100K+ views).
+- ~07:10 daily review task: analyses yesterday and writes **ops/daily-review.md** with at most 3 instructions and the
+  one test for today. Every article task reads it and follows it.
+- ~12:40 midday article + Short + long video; ~14:35 monitor. ~21:10 evening article + Short; ~22:35 monitor.
+- The monitor runs `tools/health.py` (article there? Short and long video public on YouTube? reached TikTok,
+  Instagram and Facebook? page live? script and render rules kept? a run failed or stuck?), repairs what is safe
+  and tells William the same day. `ops/health.md` holds the last report.
+
+**PROVEN TOPICS** - only topics whose popularity is already proven: from ops/proven-topics.md, the outliers in
+ops/scout-tesla.md or our own best Shorts; a news event of the last 48 hours only when clearly bigger. The proof goes
+into `short.proof` {"source", "views", "why"}. Take the topic and the kind of angle, never the script or the title.
+
+**PROVEN TACTICS** (what demonstrably keeps viewers on Shorts; all are checkable)
+- One idea per Short. The hook raises ONE question; the answer comes in the last two beats, not earlier.
+- Hook = a contradiction ("... On purpose."), a clash of two numbers ("30 engines failed. SpaceX uses 33.") or
+  concrete stakes ("Catch $6 million falling from space."). Never an announcement, a date, a definition or a name
+  the viewer does not know yet.
+- The first picture is the most dramatic one of the story and shows what the hook claims (fire, a crash, a strange
+  object, hands doing something); never a parked car or a wide empty shot.
+- Every middle beat adds one new, concrete fact and pulls toward the answer ("but", "so", "then"). Numbers beat
+  adjectives. Cut every beat the payoff does not need.
+- A new picture at least every 2 seconds (the renderer cuts quickly in the overlay format; give every beat 2 pictures).
+- 20-30 seconds is the target: our 29-second Short was watched 122% (it loops), the 45-55 second ones 60-87%.
+- The payoff is a real answer with a small surprise; then the loop line.
+- Title: at most 45 characters, the hook's contrast or number, no extra words.
+- Test ONE thing at a time: every Short names in `short.learning.test` the single variable it changes compared with
+  the previous Short of its slot. The format itself stays fixed for at least 7 days (until 19 Nov 2026) so the
+  morning review can tell what works; the watch-time numbers arrive 2-3 days late.
+
+**CHECK BEFORE COMMIT** - `python3 tools/check_article.py <article file>` must report 0 errors (parts, overlays,
+beat length, pictures, loop, proof, required fields). A beat's `"part"` is only "hook", "tension" or "payoff".
+
+**Guards in the pipeline** (do not remove): the renderer tolerates an unknown part; the watchdog (hourly) asks once for
+a missing Short or long video, never while a video run is waiting or working, and never re-runs an old request;
+every post to Buffer is logged in ops/social-log.jsonl and a failed post turns the run red; ops/social-queue.json
+posts Shorts that were missed, one at a time.
+
 ## SHORT FORMAT v4 (William, 9 Nov 2026, afternoon) - replaces the loop rule of v3/v3.1; everything else stays
 
 Earlier versions failed because the hook came too late, the text density was too low, or the loop felt

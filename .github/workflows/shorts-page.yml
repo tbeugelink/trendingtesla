@@ -38,7 +38,23 @@ jobs:
           if echo "$out" | grep -qx changed; then
             git config user.name "TrendingTesla bot"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add ops/story-pending.json && git commit -qm "Story Shorts: approved ones posted" && \
+            git add ops/story-pending.json ops/social-log.jsonl 2>/dev/null; git commit -qm "Story Shorts: approved ones posted" && \
+              (git pull --rebase -q origin main && git push -q origin HEAD:main) || true
+          fi
+          echo "$out" | grep -q "::error::" && exit 1 || true
+      - name: Catch up - Shorts that never reached TikTok, Instagram, Facebook (one per run)
+        if: hashFiles('ops/social-queue.json') != ''
+        continue-on-error: true
+        env:
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+        run: |
+          grep -q '"slug"' ops/social-queue.json || exit 0
+          pip install --quiet pillow
+          out=$(python3 tools/social_backfill.py); echo "$out"
+          if echo "$out" | grep -qx changed; then
+            git config user.name "TrendingTesla bot"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add ops/social-queue.json ops/social-log.jsonl 2>/dev/null; git commit -qm "Social catch-up: one Short posted" && \
               (git pull --rebase -q origin main && git push -q origin HEAD:main) || true
           fi
       - name: Read YouTube feed

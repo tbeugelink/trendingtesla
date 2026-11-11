@@ -1,7 +1,10 @@
-beat 2: 3.4 s with only 1 photo (rule: switch photo after 3 s)
-beat 1: 5.2 s (rule 2.5-4 s)
+hook clip skipped: clip HTTP 402: [{ "error": { "code": 402, "message": "Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your 
+beat 2: 3.3 s with only 1 photo (rule: switch photo after 3 s)
+beat 9: 3.2 s with only 1 photo (rule: switch photo after 3 s)
+beat 1: 4.8 s (rule 2.5-4 s)
 beat 4: 1.9 s (rule 2.5-4 s)
-beat 5: 1.9 s (rule 2.5-4 s)
-beat 7: 2.2 s (rule 2.5-4 s)
-beat 10: 5.3 s (rule 2.5-4 s)
-contrast band added behind the text on bright photos in beat(s) 2, 4, 5, 7, 9, 10
+beat 5: 2.0 s (rule 2.5-4 s)
+beat 7: 2.3 s (rule 2.5-4 s)
+beat 10: 5.1 s (rule 2.5-4 s)
+loop: the last beat repeats the hook word for word (rule v4: a different line that runs on into it)
+contrast band added behind the text on bright photos in beat(s) 2, 3, 4, 5, 7, 9, 10

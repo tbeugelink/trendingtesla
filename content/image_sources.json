@@ -808,5 +808,35 @@
         "src": "lib/starship-pad.jpg"
       }
     ]
+  },
+  "gen/why-tesla-batteries-use-thousands-of-small-cells-18650-2170-4680-explained.jpg": {
+    "article": "why-tesla-batteries-use-thousands-of-small-cells-18650-2170-4680-explained",
+    "model": "gemini-3.1-flash-image",
+    "made": "2026-11-11",
+    "references": [
+      {
+        "src": "lib/optimus-pick-part.jpg"
+      }
+    ]
+  },
+  "gen/why-tesla-batteries-use-thousands-of-small-cells-18650-2170-4680-explained-x2-11111158.jpg": {
+    "article": "why-tesla-batteries-use-thousands-of-small-cells-18650-2170-4680-explained",
+    "model": "gemini-3.1-flash-image",
+    "made": "2026-11-11",
+    "references": [
+      {
+        "src": "lib/optimus-pick-part.jpg"
+      }
+    ]
+  },
+  "gen/why-tesla-batteries-use-thousands-of-small-cells-18650-2170-4680-explained-x3-11111200.jpg": {
+    "article": "why-tesla-batteries-use-thousands-of-small-cells-18650-2170-4680-explained",
+    "model": "gemini-3.1-flash-image",
+    "made": "2026-11-11",
+    "references": [
+      {
+        "src": "lib/optimus-pick-part.jpg"
+      }
+    ]
   }
 }

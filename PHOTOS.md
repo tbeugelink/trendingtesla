@@ -293,3 +293,6 @@ Articles with a "models" key automatically use real-life photos of that model. Y
 - gen/starship-first-flight-2023-four-minutes-crater-launch-pad-story.jpg — Starship lifting off from its tower at sunrise in flame and a huge cloud of water spray and steam
 - gen/starship-first-flight-2023-four-minutes-crater-launch-pad-story-x2-11102025.jpg — water spraying up from the steel plate under Starship's launch mount at night
 - gen/starship-first-flight-2023-four-minutes-crater-launch-pad-story-x3-11102026.jpg — the full Starship stack on its launch mount beside the tower at dusk, seen from the beach
+- gen/why-tesla-batteries-use-thousands-of-small-cells-18650-2170-4680-explained.jpg — a tray of large cylindrical 4680-type battery cells, one lifted above the rest (illustration)
+- gen/why-tesla-batteries-use-thousands-of-small-cells-18650-2170-4680-explained-x2-11111158.jpg — a small laptop-type battery cell next to a much fatter 4680-type cell on a workbench (illustration)
+- gen/why-tesla-batteries-use-thousands-of-small-cells-18650-2170-4680-explained-x3-11111200.jpg — rows of cylindrical battery cells moving along a conveyor in a cell factory (illustration)

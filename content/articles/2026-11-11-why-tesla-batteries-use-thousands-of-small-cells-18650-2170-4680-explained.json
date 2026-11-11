@@ -1,900 +1,908 @@
 {
- "slug": "why-tesla-batteries-use-thousands-of-small-cells-18650-2170-4680-explained",
- "date": "2026-11-11",
- "time": "12:52",
- "category": "factories",
- "also": [
-  "energy"
- ],
- "sources": [
-  {
-   "title": "Tesla North — Tesla Giga Texas plans major 4680 battery expansion",
-   "url": "https://teslanorth.com/2026/11/10/tesla-giga-texas-4680-largest-cell-plant/"
-  },
-  {
-   "title": "electrive — Tesla Battery Day: 'tabless' 4680 cell and in-house production",
-   "url": "https://www.electrive.com/2020/09/23/tesla-battery-day-tabless-4680-cell-and-in-house-production"
-  },
-  {
-   "title": "IEEE Spectrum — Is Elon Musk back in 'production hell' with Tesla's 4680 battery?",
-   "url": "https://spectrum.ieee.org/tesla-4680-battery"
-  },
-  {
-   "title": "InsideEVs — Here's what the Tesla Cybertruck's battery passport reveals",
-   "url": "https://insideevs.com/news/724981/tesla-cybertruck-battery-passport-4680cell/"
-  },
-  {
-   "title": "Charged EVs — Plug In America research: Tesla Roadster battery longevity exceeds projections",
-   "url": "https://chargedevs.com/features/plug-in-america-research-tesla-roadster-battery-longevity-exceeds-projections/"
-  }
- ],
- "images": [
-  "gen/tesla-roadster-origin-story-lotus-elise-first-tesla-x2-11012026.jpg",
-  "lib/giga-texas-aerial.jpg",
-  "lib/cybertruck-front-city.jpg",
-  "models/rd-24.jpg",
-  "gigafactory-texas.jpg"
- ],
- "gen_image": {
-  "prompt": "Close, low-angle macro shot of dozens of large cylindrical lithium-ion battery cells standing upright, packed tightly in a honeycomb pattern in a black tray: plain brushed-steel cans with flat tops and a small round terminal in the centre of each top, one cell lifted a few centimetres above the others in the middle of the frame, crisp side light from the right glinting on the steel, dark softly blurred battery factory hall behind with a few warm lights, calm dark area in the lower left, no people, no robots, no logos, no text",
-  "subject": "large cylindrical lithium-ion battery cells in the 4680 format: plain silver steel cans 46 mm wide and 80 mm tall (a short, wide cylinder, height about 1.7 times the width), flat top with a small central terminal, no labels, no wrapping, no brand marks",
-  "refs": [
-   {
-    "src": "lib/optimus-pick-part.jpg"
-   }
+  "slug": "why-tesla-batteries-use-thousands-of-small-cells-18650-2170-4680-explained",
+  "date": "2026-11-11",
+  "time": "12:52",
+  "category": "factories",
+  "also": [
+    "energy"
   ],
-  "profile": "technical",
-  "category": "C",
-  "describe": "a tray of large cylindrical 4680-type battery cells, one lifted above the rest (illustration)",
-  "extra": [
-   {
-    "prompt": "Size comparison on a dark workbench under a soft spotlight: a slim, small cylindrical laptop-type battery cell (18 mm wide, 65 mm tall) standing next to a much wider cylindrical 4680-type cell (46 mm wide, 80 mm tall), both plain steel cans with no labels, a ruler lying in front, shallow depth of field, no people, no robots, no logos",
-    "describe": "a small laptop-type battery cell next to a much fatter 4680-type cell on a workbench (illustration)"
-   },
-   {
-    "prompt": "Inside a clean, bright battery cell factory: a long conveyor line carrying neat rows of upright cylindrical steel battery cells towards the camera, stainless machines on both sides, blue-grey floor, soft overhead light, no people, no robots, no logos, no text",
-    "describe": "rows of cylindrical battery cells moving along a conveyor in a cell factory (illustration)"
-   }
-  ]
- },
- "label": {
-  "style": "c",
+  "sources": [
+    {
+      "title": "Tesla North — Tesla Giga Texas plans major 4680 battery expansion",
+      "url": "https://teslanorth.com/2026/11/10/tesla-giga-texas-4680-largest-cell-plant/"
+    },
+    {
+      "title": "electrive — Tesla Battery Day: 'tabless' 4680 cell and in-house production",
+      "url": "https://www.electrive.com/2020/09/23/tesla-battery-day-tabless-4680-cell-and-in-house-production"
+    },
+    {
+      "title": "IEEE Spectrum — Is Elon Musk back in 'production hell' with Tesla's 4680 battery?",
+      "url": "https://spectrum.ieee.org/tesla-4680-battery"
+    },
+    {
+      "title": "InsideEVs — Here's what the Tesla Cybertruck's battery passport reveals",
+      "url": "https://insideevs.com/news/724981/tesla-cybertruck-battery-passport-4680cell/"
+    },
+    {
+      "title": "Charged EVs — Plug In America research: Tesla Roadster battery longevity exceeds projections",
+      "url": "https://chargedevs.com/features/plug-in-america-research-tesla-roadster-battery-longevity-exceeds-projections/"
+    }
+  ],
+  "images": [
+    "gen/why-tesla-batteries-use-thousands-of-small-cells-18650-2170-4680-explained.jpg",
+    "gen/why-tesla-batteries-use-thousands-of-small-cells-18650-2170-4680-explained-x3-11111200.jpg",
+    "gen/why-tesla-batteries-use-thousands-of-small-cells-18650-2170-4680-explained-x2-11111158.jpg",
+    "gen/tesla-roadster-origin-story-lotus-elise-first-tesla-x2-11012026.jpg",
+    "lib/giga-texas-aerial.jpg",
+    "lib/cybertruck-front-city.jpg",
+    "models/rd-24.jpg",
+    "gigafactory-texas.jpg"
+  ],
+  "gen_image": {
+    "prompt": "Close, low-angle macro shot of dozens of large cylindrical lithium-ion battery cells standing upright, packed tightly in a honeycomb pattern in a black tray: plain brushed-steel cans with flat tops and a small round terminal in the centre of each top, one cell lifted a few centimetres above the others in the middle of the frame, crisp side light from the right glinting on the steel, dark softly blurred battery factory hall behind with a few warm lights, calm dark area in the lower left, no people, no robots, no logos, no text",
+    "subject": "large cylindrical lithium-ion battery cells in the 4680 format: plain silver steel cans 46 mm wide and 80 mm tall (a short, wide cylinder, height about 1.7 times the width), flat top with a small central terminal, no labels, no wrapping, no brand marks",
+    "refs": [
+      {
+        "src": "lib/optimus-pick-part.jpg"
+      }
+    ],
+    "profile": "technical",
+    "category": "C",
+    "describe": "a tray of large cylindrical 4680-type battery cells, one lifted above the rest (illustration)",
+    "extra": [
+      {
+        "prompt": "Size comparison on a dark workbench under a soft spotlight: a slim, small cylindrical laptop-type battery cell (18 mm wide, 65 mm tall) standing next to a much wider cylindrical 4680-type cell (46 mm wide, 80 mm tall), both plain steel cans with no labels, a ruler lying in front, shallow depth of field, no people, no robots, no logos",
+        "describe": "a small laptop-type battery cell next to a much fatter 4680-type cell on a workbench (illustration)",
+        "file": "gen/why-tesla-batteries-use-thousands-of-small-cells-18650-2170-4680-explained-x2-11111158.jpg"
+      },
+      {
+        "prompt": "Inside a clean, bright battery cell factory: a long conveyor line carrying neat rows of upright cylindrical steel battery cells towards the camera, stainless machines on both sides, blue-grey floor, soft overhead light, no people, no robots, no logos, no text",
+        "describe": "rows of cylindrical battery cells moving along a conveyor in a cell factory (illustration)",
+        "file": "gen/why-tesla-batteries-use-thousands-of-small-cells-18650-2170-4680-explained-x3-11111200.jpg"
+      }
+    ],
+    "done": true,
+    "model": "gemini-3.1-flash-image"
+  },
+  "label": {
+    "style": "c",
+    "en": {
+      "sub": "THE FIRST TESLA RAN ON",
+      "text": "LAPTOP BATTERIES"
+    },
+    "nl": {
+      "sub": "EERSTE TESLA REED OP",
+      "text": "LAPTOPBATTERIJEN"
+    }
+  },
   "en": {
-   "sub": "THE FIRST TESLA RAN ON",
-   "text": "LAPTOP BATTERIES"
+    "title": "Why Does a Tesla Battery Have Thousands of Small Cells? From Laptop Cells to the 4680",
+    "description": "The first Tesla ran on 6,831 laptop cells; a Cybertruck stores twice the energy in 1,344. Why Tesla builds packs from small cylinders, what makes the 4680 different, and whether it matters when you buy.",
+    "body": "<p><strong>The first Tesla ran on 6,831 laptop-style battery cells</strong>, each roughly the size of a finger. Eighteen years later, a Cybertruck stores more than twice as much energy in just 1,344 cells. In November 2026, Tesla's cell manufacturing director Michael Guilfoy announced a \"massive expansion\" of the 4680 cell plant at Giga Texas, which he expects to become the largest battery cell factory in North America. Yet even the newest Tesla packs are built from more than a thousand small steel cylinders, not from a few big blocks. That choice looks odd, and it goes back to a shortcut the very first Roadster took.</p>\n<h2>Why did the first Tesla use laptop cells?</h2>\n<p><strong>Because in the mid-2000s, laptop cells were the cheapest and best-tested lithium-ion cells you could buy in huge numbers.</strong> The Roadster's pack held 6,831 cylindrical cells of the kind used in laptop computers, 18 mm wide and 65 mm long: the format known as 18650. Together they stored about 55 kWh. Factories in Asia were already turning out enormous numbers of them, so quality was predictable and prices kept falling. Tesla did not have to invent a cell, only a way to make thousands of them work as one battery.</p>\n<p>Critics expected those packs to wear out fast. They did better than that: a Plug In America study of Roadster owners projected that the average pack would keep 80 to 85% of its capacity after 100,000 miles, more than Tesla's own early guidance of about 70% after roughly 50,000 miles. The Model 3 later moved to a slightly larger cell, the 2170 (21 by 70 mm). Even then, a Model 3 Long Range pack holds about 4,400 of them, according to a comparison by teardown expert Sandy Munro. Every step up in size still left thousands of cells in each car, and that has a reason beyond price.</p>\n<h2>So why not build one giant battery cell?</h2>\n<p><strong>Because a big cell is harder to cool and releases far more energy when it fails.</strong> Every cell turns part of its energy into heat when it charges and discharges. A thin cylinder has plenty of surface for that heat to escape, and in a Tesla pack the coolant runs right past the cells. In one huge cell, the heat in the middle has a long way to travel. Safety is the other half of the story: when one small cell overheats and fails, it releases only the energy of that one cell, and its steel can helps stop the problem from spreading to its neighbours.</p>\n<p>Many other carmakers choose large flat pouch cells or box-shaped prismatic cells instead, because fewer, bigger cells need fewer parts and connections. It is a trade-off, not a law of nature. Thousands of small cells come with a cost of their own: each one needs its own steel can, its own electrical connections and its own spot in the pack, and all of that adds weight, factory steps and money. The ideal cell is as big as possible without overheating, and finding that sweet spot is what Tesla went after next.</p>\n<h2>What makes the 4680 cell different?</h2>\n<p><strong>It is a much fatter cylinder, 46 mm wide and 80 mm tall, designed so that its size does not turn into a heat problem.</strong> Tesla presented it at its Battery Day in September 2020. The cell has about 5.5 times the volume of a 2170, and Tesla claimed five times the energy and six times the power. The trick is the missing tab. In a normal cell, the current leaves the rolled-up electrode through a small metal strip, so electrons travel a long way along the foil to reach it. In the \"tabless\" 4680, the whole edge of the foil is connected, which makes the path much shorter. Musk said a large tabless cell has a shorter electron path than a smaller cell with tabs. A shorter path means less heat, and that lets the cell grow.</p>\n<p>Bigger cells also mean fewer cans and connections. The Cybertruck shows the result: its 123 kWh pack holds 1,344 cells, about 91 Wh each. That is roughly eleven times the energy of one Roadster cell, partly from size and partly from fifteen years of better chemistry. Tesla also planned to make the pack part of the car's structure and to coat its electrodes with a dry powder process that skips the liquid solvent and the drying ovens. On paper it all added up to much cheaper batteries. Building it at scale turned out to be the hard part.</p>\n<h2>Why did the 4680 take so long?</h2>\n<p><strong>Because a new cell is easy to design and very hard to mass-produce.</strong> At Battery Day, Tesla targeted a 56% lower cost per kWh, mainly through the dry electrode process. Musk admitted the machine for it was \"close to working, but not with a good yield.\" That warning proved accurate. In August 2021, Tesla said battery supply was one reason the Cybertruck would slip to 2022. By October 2023, Tesla had built 20 million 4680 cells in Texas in total; IEEE Spectrum calculated that the pace at the time was enough for only about 2,000 Cybertrucks a month. Dry-coating the cathode proved the most stubborn step.</p>\n<p>The picture has changed since. Tesla's Q3 2026 update lists more than 40 GWh a year of installed 4680 capacity in Texas, for the Cybertruck, the Cybercab, the Semi and some Model Y versions. Guilfoy's claim that the plant will soon lead North America is a forecast, not yet a fact, and installed capacity is not the same as cells actually built. For buyers, the cell inside the car is a different question altogether.</p>\n<h2>Does the cell size matter when you buy a Tesla?</h2>\n<p><strong>Not directly: what you notice is range, charging speed, weight and price, and the cell format is only one ingredient of those.</strong> At Battery Day, Tesla said the 4680's design alone would add about 16% range; the bigger gains it promised, up to 54% in total, depended on new materials and on building the pack into the car. A Tesla with 2170 cells is not worse by definition, and a big vehicle still needs a heavy battery whatever the cell: the Cybertruck's pack weighs about 721 kg.</p>\n<ul>\n<li><strong>Myth: more cells means a weaker battery.</strong> The number of cells mostly tells you which format is inside, not how good the pack is.</li>\n<li><strong>Myth: a bigger cell means more range.</strong> Range comes from the total energy in the pack and how efficiently the car uses it.</li>\n<li><strong>What really protects you</strong> is the battery warranty and how you charge, not the shape of the can.</li>\n</ul>\n<p>From the Roadster's laptop cells to the Cybertruck's 4680s, Tesla has followed one rule: use as many small cans as safety needs, and as few as cost allows. That is why, eighteen years on, the answer is still a cylinder. It just got a lot fatter.</p>"
   },
   "nl": {
-   "sub": "EERSTE TESLA REED OP",
-   "text": "LAPTOPBATTERIJEN"
-  }
- },
- "en": {
-  "title": "Why Does a Tesla Battery Have Thousands of Small Cells? From Laptop Cells to the 4680",
-  "description": "The first Tesla ran on 6,831 laptop cells; a Cybertruck stores twice the energy in 1,344. Why Tesla builds packs from small cylinders, what makes the 4680 different, and whether it matters when you buy.",
-  "body": "<p><strong>The first Tesla ran on 6,831 laptop-style battery cells</strong>, each roughly the size of a finger. Eighteen years later, a Cybertruck stores more than twice as much energy in just 1,344 cells. In November 2026, Tesla's cell manufacturing director Michael Guilfoy announced a \"massive expansion\" of the 4680 cell plant at Giga Texas, which he expects to become the largest battery cell factory in North America. Yet even the newest Tesla packs are built from more than a thousand small steel cylinders, not from a few big blocks. That choice looks odd, and it goes back to a shortcut the very first Roadster took.</p>\n<h2>Why did the first Tesla use laptop cells?</h2>\n<p><strong>Because in the mid-2000s, laptop cells were the cheapest and best-tested lithium-ion cells you could buy in huge numbers.</strong> The Roadster's pack held 6,831 cylindrical cells of the kind used in laptop computers, 18 mm wide and 65 mm long: the format known as 18650. Together they stored about 55 kWh. Factories in Asia were already turning out enormous numbers of them, so quality was predictable and prices kept falling. Tesla did not have to invent a cell, only a way to make thousands of them work as one battery.</p>\n<p>Critics expected those packs to wear out fast. They did better than that: a Plug In America study of Roadster owners projected that the average pack would keep 80 to 85% of its capacity after 100,000 miles, more than Tesla's own early guidance of about 70% after roughly 50,000 miles. The Model 3 later moved to a slightly larger cell, the 2170 (21 by 70 mm). Even then, a Model 3 Long Range pack holds about 4,400 of them, according to a comparison by teardown expert Sandy Munro. Every step up in size still left thousands of cells in each car, and that has a reason beyond price.</p>\n<h2>So why not build one giant battery cell?</h2>\n<p><strong>Because a big cell is harder to cool and releases far more energy when it fails.</strong> Every cell turns part of its energy into heat when it charges and discharges. A thin cylinder has plenty of surface for that heat to escape, and in a Tesla pack the coolant runs right past the cells. In one huge cell, the heat in the middle has a long way to travel. Safety is the other half of the story: when one small cell overheats and fails, it releases only the energy of that one cell, and its steel can helps stop the problem from spreading to its neighbours.</p>\n<p>Many other carmakers choose large flat pouch cells or box-shaped prismatic cells instead, because fewer, bigger cells need fewer parts and connections. It is a trade-off, not a law of nature. Thousands of small cells come with a cost of their own: each one needs its own steel can, its own electrical connections and its own spot in the pack, and all of that adds weight, factory steps and money. The ideal cell is as big as possible without overheating, and finding that sweet spot is what Tesla went after next.</p>\n<h2>What makes the 4680 cell different?</h2>\n<p><strong>It is a much fatter cylinder, 46 mm wide and 80 mm tall, designed so that its size does not turn into a heat problem.</strong> Tesla presented it at its Battery Day in September 2020. The cell has about 5.5 times the volume of a 2170, and Tesla claimed five times the energy and six times the power. The trick is the missing tab. In a normal cell, the current leaves the rolled-up electrode through a small metal strip, so electrons travel a long way along the foil to reach it. In the \"tabless\" 4680, the whole edge of the foil is connected, which makes the path much shorter. Musk said a large tabless cell has a shorter electron path than a smaller cell with tabs. A shorter path means less heat, and that lets the cell grow.</p>\n<p>Bigger cells also mean fewer cans and connections. The Cybertruck shows the result: its 123 kWh pack holds 1,344 cells, about 91 Wh each. That is roughly eleven times the energy of one Roadster cell, partly from size and partly from fifteen years of better chemistry. Tesla also planned to make the pack part of the car's structure and to coat its electrodes with a dry powder process that skips the liquid solvent and the drying ovens. On paper it all added up to much cheaper batteries. Building it at scale turned out to be the hard part.</p>\n<h2>Why did the 4680 take so long?</h2>\n<p><strong>Because a new cell is easy to design and very hard to mass-produce.</strong> At Battery Day, Tesla targeted a 56% lower cost per kWh, mainly through the dry electrode process. Musk admitted the machine for it was \"close to working, but not with a good yield.\" That warning proved accurate. In August 2021, Tesla said battery supply was one reason the Cybertruck would slip to 2022. By October 2023, Tesla had built 20 million 4680 cells in Texas in total; IEEE Spectrum calculated that the pace at the time was enough for only about 2,000 Cybertrucks a month. Dry-coating the cathode proved the most stubborn step.</p>\n<p>The picture has changed since. Tesla's Q3 2026 update lists more than 40 GWh a year of installed 4680 capacity in Texas, for the Cybertruck, the Cybercab, the Semi and some Model Y versions. Guilfoy's claim that the plant will soon lead North America is a forecast, not yet a fact, and installed capacity is not the same as cells actually built. For buyers, the cell inside the car is a different question altogether.</p>\n<h2>Does the cell size matter when you buy a Tesla?</h2>\n<p><strong>Not directly: what you notice is range, charging speed, weight and price, and the cell format is only one ingredient of those.</strong> At Battery Day, Tesla said the 4680's design alone would add about 16% range; the bigger gains it promised, up to 54% in total, depended on new materials and on building the pack into the car. A Tesla with 2170 cells is not worse by definition, and a big vehicle still needs a heavy battery whatever the cell: the Cybertruck's pack weighs about 721 kg.</p>\n<ul>\n<li><strong>Myth: more cells means a weaker battery.</strong> The number of cells mostly tells you which format is inside, not how good the pack is.</li>\n<li><strong>Myth: a bigger cell means more range.</strong> Range comes from the total energy in the pack and how efficiently the car uses it.</li>\n<li><strong>What really protects you</strong> is the battery warranty and how you charge, not the shape of the can.</li>\n</ul>\n<p>From the Roadster's laptop cells to the Cybertruck's 4680s, Tesla has followed one rule: use as many small cans as safety needs, and as few as cost allows. That is why, eighteen years on, the answer is still a cylinder. It just got a lot fatter.</p>"
- },
- "nl": {
-  "title": "Waarom zit een Tesla-accu vol kleine cellen? Van laptopcellen tot de 4680",
-  "description": "De eerste Tesla reed op 6.831 laptopcellen; een Cybertruck bergt twee keer zoveel energie op in 1.344 cellen. Waarom Tesla accu's uit kleine cilinders bouwt, wat de 4680 anders maakt en of het uitmaakt als je koopt.",
-  "body": "<p><strong>De eerste Tesla reed op 6.831 batterijcellen uit de laptopwereld</strong>, elk ongeveer zo groot als een vinger. Achttien jaar later stopt een Cybertruck er meer dan twee keer zoveel energie in, met maar 1.344 cellen. In november 2026 kondigde Michael Guilfoy, bij Tesla directeur celproductie, een \"massive expansion\" aan van de 4680-celfabriek in Giga Texas, die volgens hem de grootste batterijcelfabriek van Noord-Amerika wordt. Toch bestaan ook de nieuwste Tesla-accu's uit meer dan duizend kleine stalen cilinders, en niet uit een paar grote blokken. Dat lijkt vreemd, en het begint bij een slimme kortere weg die de allereerste Roadster nam.</p>\n<h2>Waarom gebruikte de eerste Tesla laptopcellen?</h2>\n<p><strong>Omdat laptopcellen rond 2005 de goedkoopste en best geteste lithium-ioncellen waren die je in enorme aantallen kon kopen.</strong> In de accu van de Roadster zaten 6.831 cilindervormige cellen van het type dat ook in laptops ging, 18 mm breed en 65 mm lang: het formaat 18650. Samen sloegen ze ongeveer 55 kWh op. Fabrieken in Azië maakten er al gigantische aantallen van, dus de kwaliteit was voorspelbaar en de prijs daalde steeds verder. Tesla hoefde geen cel uit te vinden, alleen een manier om duizenden cellen samen als één accu te laten werken.</p>\n<p>Critici verwachtten dat die accu's snel zouden slijten. Het viel mee: een onderzoek van Plug In America onder Roadster-rijders kwam uit op gemiddeld 80 tot 85% capaciteit na 100.000 mijl (zo'n 160.000 km), meer dan Tesla zelf vroeger voorspelde: ongeveer 70% na zo'n 50.000 mijl. De Model 3 stapte later over op een iets grotere cel, de 2170 (21 bij 70 mm). Ook dan zitten er in een Model 3 Long Range nog ongeveer 4.400, volgens een vergelijking van demontage-expert Sandy Munro. Elke stap naar groter liet nog steeds duizenden cellen in elke auto over, en daar zit meer achter dan alleen de prijs.</p>\n<h2>Waarom dan niet één reusachtige accucel?</h2>\n<p><strong>Omdat een grote cel lastiger te koelen is en veel meer energie vrijgeeft als hij kapotgaat.</strong> Elke cel zet een deel van zijn energie om in warmte bij laden en ontladen. Een dunne cilinder heeft veel oppervlak waar die warmte weg kan, en in een Tesla-accu stroomt de koelvloeistof vlak langs de cellen. In één enorme cel moet de warmte uit het midden een lange weg afleggen. De andere helft is veiligheid: als één kleine cel oververhit raakt en bezwijkt, komt alleen de energie van die ene cel vrij, en het stalen omhulsel helpt voorkomen dat het probleem overslaat naar de buren.</p>\n<p>Veel andere autofabrikanten kiezen juist voor grote platte pouchcellen of doosvormige prismatische cellen, omdat minder en grotere cellen minder onderdelen en verbindingen nodig hebben. Het is een afweging, geen natuurwet. Duizenden kleine cellen hebben ook een prijs: elke cel heeft een eigen stalen huls, eigen verbindingen en een eigen plek in de accu nodig, en dat kost gewicht, productiestappen en geld. De ideale cel is dus zo groot mogelijk zonder te oververhitten, en naar dat punt ging Tesla op zoek.</p>\n<h2>Wat maakt de 4680-cel anders?</h2>\n<p><strong>Het is een veel dikkere cilinder, 46 mm breed en 80 mm hoog, zo ontworpen dat zijn formaat geen warmteprobleem wordt.</strong> Tesla presenteerde hem op Battery Day in september 2020. De cel heeft ongeveer 5,5 keer het volume van een 2170, en Tesla claimde vijf keer de energie en zes keer het vermogen. Het geheim is het ontbrekende lipje, de 'tab'. In een gewone cel verlaat de stroom de opgerolde elektrode via een smal metalen strookje, dus elektronen moeten een lange weg over de folie afleggen. In de 'tabless' 4680 is de hele rand van de folie aangesloten, waardoor die weg veel korter is. Musk zei dat een grote cel zonder tab een kortere route voor elektronen heeft dan een kleinere cel met tab. Een kortere route betekent minder warmte, en daardoor mag de cel groeien.</p>\n<p>Grotere cellen betekenen ook minder hulzen en verbindingen. De Cybertruck laat het resultaat zien: in de accu van 123 kWh zitten 1.344 cellen, elk zo'n 91 Wh. Dat is ruwweg elf keer de energie van één Roadster-cel, deels door het formaat en deels door vijftien jaar betere chemie. Tesla wilde de accu bovendien deel laten uitmaken van de carrosserie, en de elektroden droog coaten met poeder, zonder vloeibaar oplosmiddel en zonder droogovens. Op papier leverde dat veel goedkopere accu's op. Het op grote schaal bouwen bleek het moeilijke deel.</p>\n<h2>Waarom duurde het zo lang met de 4680?</h2>\n<p><strong>Omdat een nieuwe cel makkelijk te ontwerpen is en heel moeilijk in massa te maken.</strong> Op Battery Day mikte Tesla op 56% lagere kosten per kWh, vooral dankzij het droge elektrodeproces. Musk gaf toe dat de machine daarvoor bijna werkte, maar nog niet met een goede opbrengst. Die waarschuwing klopte. In augustus 2021 noemde Tesla de aanvoer van accu's een van de redenen dat de Cybertruck naar 2022 schoof. In oktober 2023 had Tesla in Texas in totaal 20 miljoen 4680-cellen gebouwd; IEEE Spectrum rekende uit dat het tempo van toen genoeg was voor maar zo'n 2.000 Cybertrucks per maand. Het droog coaten van de kathode bleek de taaiste stap.</p>\n<p>Sindsdien is het beeld veranderd. Tesla's kwartaalupdate over Q3 2026 noemt meer dan 40 GWh per jaar aan geïnstalleerde 4680-capaciteit in Texas, voor de Cybertruck, de Cybercab, de Semi en sommige versies van de Model Y. Guilfoys verwachting dat de fabriek straks de grootste van Noord-Amerika is, blijft een voorspelling, en geïnstalleerde capaciteit is niet hetzelfde als echt gebouwde cellen. Voor kopers is de cel in de auto een heel andere kwestie.</p>\n<h2>Maakt het formaat van de cel uit als je een Tesla koopt?</h2>\n<p><strong>Niet direct: wat je merkt is actieradius, laadsnelheid, gewicht en prijs, en het celformaat is maar één ingrediënt daarvan.</strong> Op Battery Day zei Tesla dat het ontwerp van de 4680 alleen al zo'n 16% extra actieradius zou geven; de grotere winst die het beloofde, tot 54% in totaal, hing af van nieuwe materialen en van een accu die deel is van de auto. Een Tesla met 2170-cellen is dus niet per definitie slechter, en een groot voertuig heeft hoe dan ook een zware accu nodig: die van de Cybertruck weegt zo'n 721 kg.</p>\n<ul>\n<li><strong>Fabel: meer cellen betekent een zwakkere accu.</strong> Het aantal cellen zegt vooral welk formaat erin zit, niet hoe goed de accu is.</li>\n<li><strong>Fabel: een grotere cel geeft meer actieradius.</strong> De actieradius hangt af van de totale energie in de accu en hoe zuinig de auto ermee omgaat.</li>\n<li><strong>Wat je echt beschermt</strong> is de accugarantie en hoe je laadt, niet de vorm van het blikje.</li>\n</ul>\n<p>Van de laptopcellen van de Roadster tot de 4680's van de Cybertruck volgt Tesla één regel: zoveel kleine blikjes als de veiligheid vraagt, en zo weinig als de kosten toelaten. Daarom is het antwoord achttien jaar later nog steeds een cilinder. Alleen wel een stuk dikker.</p>"
- },
- "short": {
-  "hook": "contrast",
-  "yt_title_en": "The First Tesla Ran on Laptop Batteries",
-  "yt_title_nl": "De Eerste Tesla Reed op Laptopbatterijen",
-  "hooks": [
-   {
-    "text": "The first Tesla ran on laptop batteries.",
-    "type": "contrast"
-   },
-   {
-    "text": "Twice the energy. Five times fewer cells.",
-    "type": "number"
-   },
-   {
-    "text": "Why does a Tesla have thousands of batteries?",
-    "type": "question"
-   }
-  ],
-  "hook_pick": {
-   "index": 0,
-   "why": "7 plain words (~2.5 s), no hedge and no spoken number: a car you know plus an object everyone owns (a laptop battery) is an instant 'wait, what?'; the subject is named in word 2 and the overlay (36 characters) stands whole from frame 1. Hook 1 hides the subject and is the third number hook in four Shorts; hook 2 is a slower question with no surprise"
+    "title": "Waarom zit een Tesla-accu vol kleine cellen? Van laptopcellen tot de 4680",
+    "description": "De eerste Tesla reed op 6.831 laptopcellen; een Cybertruck bergt twee keer zoveel energie op in 1.344 cellen. Waarom Tesla accu's uit kleine cilinders bouwt, wat de 4680 anders maakt en of het uitmaakt als je koopt.",
+    "body": "<p><strong>De eerste Tesla reed op 6.831 batterijcellen uit de laptopwereld</strong>, elk ongeveer zo groot als een vinger. Achttien jaar later stopt een Cybertruck er meer dan twee keer zoveel energie in, met maar 1.344 cellen. In november 2026 kondigde Michael Guilfoy, bij Tesla directeur celproductie, een \"massive expansion\" aan van de 4680-celfabriek in Giga Texas, die volgens hem de grootste batterijcelfabriek van Noord-Amerika wordt. Toch bestaan ook de nieuwste Tesla-accu's uit meer dan duizend kleine stalen cilinders, en niet uit een paar grote blokken. Dat lijkt vreemd, en het begint bij een slimme kortere weg die de allereerste Roadster nam.</p>\n<h2>Waarom gebruikte de eerste Tesla laptopcellen?</h2>\n<p><strong>Omdat laptopcellen rond 2005 de goedkoopste en best geteste lithium-ioncellen waren die je in enorme aantallen kon kopen.</strong> In de accu van de Roadster zaten 6.831 cilindervormige cellen van het type dat ook in laptops ging, 18 mm breed en 65 mm lang: het formaat 18650. Samen sloegen ze ongeveer 55 kWh op. Fabrieken in Azië maakten er al gigantische aantallen van, dus de kwaliteit was voorspelbaar en de prijs daalde steeds verder. Tesla hoefde geen cel uit te vinden, alleen een manier om duizenden cellen samen als één accu te laten werken.</p>\n<p>Critici verwachtten dat die accu's snel zouden slijten. Het viel mee: een onderzoek van Plug In America onder Roadster-rijders kwam uit op gemiddeld 80 tot 85% capaciteit na 100.000 mijl (zo'n 160.000 km), meer dan Tesla zelf vroeger voorspelde: ongeveer 70% na zo'n 50.000 mijl. De Model 3 stapte later over op een iets grotere cel, de 2170 (21 bij 70 mm). Ook dan zitten er in een Model 3 Long Range nog ongeveer 4.400, volgens een vergelijking van demontage-expert Sandy Munro. Elke stap naar groter liet nog steeds duizenden cellen in elke auto over, en daar zit meer achter dan alleen de prijs.</p>\n<h2>Waarom dan niet één reusachtige accucel?</h2>\n<p><strong>Omdat een grote cel lastiger te koelen is en veel meer energie vrijgeeft als hij kapotgaat.</strong> Elke cel zet een deel van zijn energie om in warmte bij laden en ontladen. Een dunne cilinder heeft veel oppervlak waar die warmte weg kan, en in een Tesla-accu stroomt de koelvloeistof vlak langs de cellen. In één enorme cel moet de warmte uit het midden een lange weg afleggen. De andere helft is veiligheid: als één kleine cel oververhit raakt en bezwijkt, komt alleen de energie van die ene cel vrij, en het stalen omhulsel helpt voorkomen dat het probleem overslaat naar de buren.</p>\n<p>Veel andere autofabrikanten kiezen juist voor grote platte pouchcellen of doosvormige prismatische cellen, omdat minder en grotere cellen minder onderdelen en verbindingen nodig hebben. Het is een afweging, geen natuurwet. Duizenden kleine cellen hebben ook een prijs: elke cel heeft een eigen stalen huls, eigen verbindingen en een eigen plek in de accu nodig, en dat kost gewicht, productiestappen en geld. De ideale cel is dus zo groot mogelijk zonder te oververhitten, en naar dat punt ging Tesla op zoek.</p>\n<h2>Wat maakt de 4680-cel anders?</h2>\n<p><strong>Het is een veel dikkere cilinder, 46 mm breed en 80 mm hoog, zo ontworpen dat zijn formaat geen warmteprobleem wordt.</strong> Tesla presenteerde hem op Battery Day in september 2020. De cel heeft ongeveer 5,5 keer het volume van een 2170, en Tesla claimde vijf keer de energie en zes keer het vermogen. Het geheim is het ontbrekende lipje, de 'tab'. In een gewone cel verlaat de stroom de opgerolde elektrode via een smal metalen strookje, dus elektronen moeten een lange weg over de folie afleggen. In de 'tabless' 4680 is de hele rand van de folie aangesloten, waardoor die weg veel korter is. Musk zei dat een grote cel zonder tab een kortere route voor elektronen heeft dan een kleinere cel met tab. Een kortere route betekent minder warmte, en daardoor mag de cel groeien.</p>\n<p>Grotere cellen betekenen ook minder hulzen en verbindingen. De Cybertruck laat het resultaat zien: in de accu van 123 kWh zitten 1.344 cellen, elk zo'n 91 Wh. Dat is ruwweg elf keer de energie van één Roadster-cel, deels door het formaat en deels door vijftien jaar betere chemie. Tesla wilde de accu bovendien deel laten uitmaken van de carrosserie, en de elektroden droog coaten met poeder, zonder vloeibaar oplosmiddel en zonder droogovens. Op papier leverde dat veel goedkopere accu's op. Het op grote schaal bouwen bleek het moeilijke deel.</p>\n<h2>Waarom duurde het zo lang met de 4680?</h2>\n<p><strong>Omdat een nieuwe cel makkelijk te ontwerpen is en heel moeilijk in massa te maken.</strong> Op Battery Day mikte Tesla op 56% lagere kosten per kWh, vooral dankzij het droge elektrodeproces. Musk gaf toe dat de machine daarvoor bijna werkte, maar nog niet met een goede opbrengst. Die waarschuwing klopte. In augustus 2021 noemde Tesla de aanvoer van accu's een van de redenen dat de Cybertruck naar 2022 schoof. In oktober 2023 had Tesla in Texas in totaal 20 miljoen 4680-cellen gebouwd; IEEE Spectrum rekende uit dat het tempo van toen genoeg was voor maar zo'n 2.000 Cybertrucks per maand. Het droog coaten van de kathode bleek de taaiste stap.</p>\n<p>Sindsdien is het beeld veranderd. Tesla's kwartaalupdate over Q3 2026 noemt meer dan 40 GWh per jaar aan geïnstalleerde 4680-capaciteit in Texas, voor de Cybertruck, de Cybercab, de Semi en sommige versies van de Model Y. Guilfoys verwachting dat de fabriek straks de grootste van Noord-Amerika is, blijft een voorspelling, en geïnstalleerde capaciteit is niet hetzelfde als echt gebouwde cellen. Voor kopers is de cel in de auto een heel andere kwestie.</p>\n<h2>Maakt het formaat van de cel uit als je een Tesla koopt?</h2>\n<p><strong>Niet direct: wat je merkt is actieradius, laadsnelheid, gewicht en prijs, en het celformaat is maar één ingrediënt daarvan.</strong> Op Battery Day zei Tesla dat het ontwerp van de 4680 alleen al zo'n 16% extra actieradius zou geven; de grotere winst die het beloofde, tot 54% in totaal, hing af van nieuwe materialen en van een accu die deel is van de auto. Een Tesla met 2170-cellen is dus niet per definitie slechter, en een groot voertuig heeft hoe dan ook een zware accu nodig: die van de Cybertruck weegt zo'n 721 kg.</p>\n<ul>\n<li><strong>Fabel: meer cellen betekent een zwakkere accu.</strong> Het aantal cellen zegt vooral welk formaat erin zit, niet hoe goed de accu is.</li>\n<li><strong>Fabel: een grotere cel geeft meer actieradius.</strong> De actieradius hangt af van de totale energie in de accu en hoe zuinig de auto ermee omgaat.</li>\n<li><strong>Wat je echt beschermt</strong> is de accugarantie en hoe je laadt, niet de vorm van het blikje.</li>\n</ul>\n<p>Van de laptopcellen van de Roadster tot de 4680's van de Cybertruck volgt Tesla één regel: zoveel kleine blikjes als de veiligheid vraagt, en zo weinig als de kosten toelaten. Daarom is het antwoord achttien jaar later nog steeds een cilinder. Alleen wel een stuk dikker.</p>"
   },
-  "story": [
-   {
-    "part": "hook",
-    "t": "0-2.5s",
-    "text": "The first Tesla ran on laptop batteries.",
-    "overlay": "First Tesla ran on laptop batteries.",
-    "lib": [
-     "../gen/tesla-roadster-origin-story-lotus-elise-first-tesla.jpg",
-     "../gen/tesla-roadster-origin-story-lotus-elise-first-tesla-x2-11012026.jpg"
+  "short": {
+    "hook": "contrast",
+    "yt_title_en": "The First Tesla Ran on Laptop Batteries",
+    "yt_title_nl": "De Eerste Tesla Reed op Laptopbatterijen",
+    "hooks": [
+      {
+        "text": "The first Tesla ran on laptop batteries.",
+        "type": "contrast"
+      },
+      {
+        "text": "Twice the energy. Five times fewer cells.",
+        "type": "number"
+      },
+      {
+        "text": "Why does a Tesla have thousands of batteries?",
+        "type": "question"
+      }
     ],
-    "visual": "hard open on the red first Roadster on a coastal road; cut on 'laptop batteries' to trays of small cells on a workshop bench next to the car. Only the hook sentence on screen, no logo"
-   },
-   {
-    "part": "tension",
-    "t": "2.5-6s",
-    "text": "6,831 of them, in one Roadster.",
-    "overlay": "6,831 laptop cells in one Roadster",
-    "lib": [
-     "../gen/tesla-roadster-origin-story-lotus-elise-first-tesla-x3-11012026.jpg",
-     "../topics/humanoids-cells.jpg"
+    "hook_pick": {
+      "index": 0,
+      "why": "7 plain words (~2.5 s), no hedge and no spoken number: a car you know plus an object everyone owns (a laptop battery) is an instant 'wait, what?'; the subject is named in word 2 and the overlay (36 characters) stands whole from frame 1. Hook 1 hides the subject and is the third number hook in four Shorts; hook 2 is a slower question with no surprise"
+    },
+    "story": [
+      {
+        "part": "hook",
+        "t": "0-2.5s",
+        "text": "The first Tesla ran on laptop batteries.",
+        "overlay": "First Tesla ran on laptop batteries.",
+        "lib": [
+          "../gen/tesla-roadster-origin-story-lotus-elise-first-tesla.jpg",
+          "../gen/tesla-roadster-origin-story-lotus-elise-first-tesla-x2-11012026.jpg"
+        ],
+        "visual": "hard open on the red first Roadster on a coastal road; cut on 'laptop batteries' to trays of small cells on a workshop bench next to the car. Only the hook sentence on screen, no logo"
+      },
+      {
+        "part": "tension",
+        "t": "2.5-6s",
+        "text": "6,831 of them, in one Roadster.",
+        "overlay": "6,831 laptop cells in one Roadster",
+        "lib": [
+          "../gen/tesla-roadster-origin-story-lotus-elise-first-tesla-x3-11012026.jpg",
+          "../topics/humanoids-cells.jpg"
+        ],
+        "visual": "the Roadster under museum spotlights, then blue trays full of small cylindrical cells; slow push-in"
+      },
+      {
+        "part": "tension",
+        "t": "6-9.3s",
+        "text": "Small cells were cheap, proven and easy to cool.",
+        "overlay": "Cheap, proven and easy to cool",
+        "lib": [
+          "optimus-pick-part.jpg",
+          "../topics/guide-battery.jpg"
+        ],
+        "visual": "close-up of a tray of steel cylinder cells, then a car screen with a battery icon"
+      },
+      {
+        "part": "tension",
+        "t": "9.3-12.3s",
+        "text": "And one failing cell holds very little energy.",
+        "overlay": "1 bad cell holds very little energy",
+        "lib": [
+          "cybercab-rear-battery.jpg",
+          "../topics/megafactory.jpg"
+        ],
+        "visual": "a flat battery pack fitted under a car, then a long bright battery factory hall"
+      },
+      {
+        "part": "tension",
+        "t": "12.3-15.6s",
+        "text": "But every cell needs its own can and connections.",
+        "overlay": "But every cell needs its own can",
+        "lib": [
+          "../models/rd-24.jpg",
+          "../topics/gigafactory-nevada.jpg"
+        ],
+        "visual": "an opened pack showing rows of cylinders and cables, then the Nevada Gigafactory in the desert"
+      },
+      {
+        "part": "payoff",
+        "t": "15.6-18.6s",
+        "text": "So Tesla made the cell fatter: the 4680.",
+        "overlay": "So Tesla made it fatter: the 4680",
+        "lib": [
+          "giga-texas-aerial.jpg",
+          "../topics/gigafactory-texas.jpg"
+        ],
+        "visual": "aerial of Giga Texas where the 4680 is made, two angles, slow drift"
+      },
+      {
+        "part": "payoff",
+        "t": "18.6-21.9s",
+        "text": "Five times the energy of a Model 3 cell.",
+        "overlay": "5x the energy of a Model 3 cell",
+        "lib": [
+          "../models/m3c-1.jpg",
+          "../models/m3h-1.jpg"
+        ],
+        "visual": "an older Model 3, then the current Model 3"
+      },
+      {
+        "part": "payoff",
+        "t": "21.9-25.2s",
+        "text": "The Cybertruck holds more than twice the Roadster's energy.",
+        "overlay": "Cybertruck: 2x the Roadster's energy",
+        "lib": [
+          "cybertruck-front-city.jpg",
+          "cybertruck-rear-light.jpg"
+        ],
+        "visual": "stainless Cybertruck on a wet city street at dusk, then from behind at night with the red light bar"
+      },
+      {
+        "part": "payoff",
+        "t": "25.2-28.2s",
+        "text": "With just 1,344 cells.",
+        "overlay": "With just 1,344 cells",
+        "lib": [
+          "cybertruck-bed-open.jpg",
+          "../models/ct-1.jpg"
+        ],
+        "visual": "Cybertruck by a lake with the bed open, then a second Cybertruck shot"
+      },
+      {
+        "part": "loop",
+        "t": "28.2-31s",
+        "text": "Five times fewer than where it all began.",
+        "overlay": "5x fewer cells than where it began",
+        "lib": [
+          "../gen/tesla-roadster-origin-story-lotus-elise-first-tesla-x2-11012026.jpg",
+          "../gen/tesla-roadster-origin-story-lotus-elise-first-tesla.jpg"
+        ],
+        "visual": "back to the workshop with trays of cells beside the red Roadster, ending on the same coastal Roadster frame the Short opens on, so the restart cut is invisible"
+      }
     ],
-    "visual": "the Roadster under museum spotlights, then blue trays full of small cylindrical cells; slow push-in"
-   },
-   {
-    "part": "tension",
-    "t": "6-9.3s",
-    "text": "Small cells were cheap, proven and easy to cool.",
-    "overlay": "Cheap, proven and easy to cool",
-    "lib": [
-     "optimus-pick-part.jpg",
-     "../topics/guide-battery.jpg"
-    ],
-    "visual": "close-up of a tray of steel cylinder cells, then a car screen with a battery icon"
-   },
-   {
-    "part": "tension",
-    "t": "9.3-12.3s",
-    "text": "And one failing cell holds very little energy.",
-    "overlay": "1 bad cell holds very little energy",
-    "lib": [
-     "cybercab-rear-battery.jpg",
-     "../topics/megafactory.jpg"
-    ],
-    "visual": "a flat battery pack fitted under a car, then a long bright battery factory hall"
-   },
-   {
-    "part": "tension",
-    "t": "12.3-15.6s",
-    "text": "But every cell needs its own can and connections.",
-    "overlay": "But every cell needs its own can",
-    "lib": [
-     "../models/rd-24.jpg",
-     "../topics/gigafactory-nevada.jpg"
-    ],
-    "visual": "an opened pack showing rows of cylinders and cables, then the Nevada Gigafactory in the desert"
-   },
-   {
-    "part": "payoff",
-    "t": "15.6-18.6s",
-    "text": "So Tesla made the cell fatter: the 4680.",
-    "overlay": "So Tesla made it fatter: the 4680",
-    "lib": [
-     "giga-texas-aerial.jpg",
-     "../topics/gigafactory-texas.jpg"
-    ],
-    "visual": "aerial of Giga Texas where the 4680 is made, two angles, slow drift"
-   },
-   {
-    "part": "payoff",
-    "t": "18.6-21.9s",
-    "text": "Five times the energy of a Model 3 cell.",
-    "overlay": "5x the energy of a Model 3 cell",
-    "lib": [
-     "../models/m3c-1.jpg",
-     "../models/m3h-1.jpg"
-    ],
-    "visual": "an older Model 3, then the current Model 3"
-   },
-   {
-    "part": "payoff",
-    "t": "21.9-25.2s",
-    "text": "The Cybertruck holds more than twice the Roadster's energy.",
-    "overlay": "Cybertruck: 2x the Roadster's energy",
-    "lib": [
-     "cybertruck-front-city.jpg",
-     "cybertruck-rear-light.jpg"
-    ],
-    "visual": "stainless Cybertruck on a wet city street at dusk, then from behind at night with the red light bar"
-   },
-   {
-    "part": "payoff",
-    "t": "25.2-28.2s",
-    "text": "With just 1,344 cells.",
-    "overlay": "With just 1,344 cells",
-    "lib": [
-     "cybertruck-bed-open.jpg",
-     "../models/ct-1.jpg"
-    ],
-    "visual": "Cybertruck by a lake with the bed open, then a second Cybertruck shot"
-   },
-   {
-    "part": "loop",
-    "t": "28.2-31s",
-    "text": "Five times fewer than where it all began.",
-    "overlay": "5x fewer cells than where it began",
-    "lib": [
-     "../gen/tesla-roadster-origin-story-lotus-elise-first-tesla-x2-11012026.jpg",
-     "../gen/tesla-roadster-origin-story-lotus-elise-first-tesla.jpg"
-    ],
-    "visual": "back to the workshop with trays of cells beside the red Roadster, ending on the same coastal Roadster frame the Short opens on, so the restart cut is invisible"
-   }
-  ],
-  "loop": {
-   "last": "Five times fewer than where it all began.",
-   "how": "a plain statement that points back to the start, so the restart reads as its explanation: '...Five times fewer than where it all began. The first Tesla ran on laptop batteries.' No colon and no half sentence (both used in the last three Shorts), no repeated words from the hook, and the last picture is the same coastal Roadster the Short opens on"
+    "loop": {
+      "last": "Five times fewer than where it all began.",
+      "how": "a plain statement that points back to the start, so the restart reads as its explanation: '...Five times fewer than where it all began. The first Tesla ran on laptop batteries.' No colon and no half sentence (both used in the last three Shorts), no repeated words from the hook, and the last picture is the same coastal Roadster the Short opens on"
+    },
+    "signals": "Stayed %: a hard, unhedged claim about a familiar object with the subject named in word 2 (the laser hook 'might be' drew the fewest views of the week, 631). Watched %/loops: 10 beats of 7-9 spoken words with spoken-out numbers counted (est. 2.5-3.3 s each, total ~31 s) instead of the 11-14 word beats that ran 4.1-5.4 s in the evening Short; 2 pictures in every beat. Likes/shares: a then-vs-now comparison (6,831 vs 1,344 cells) people like to quote.",
+    "learning": {
+      "prev": "starship-first-flight-2023-four-minutes-crater-launch-pad-story",
+      "prev_stats": "1,041 views, 19.2 likes/1000 (evening 10 Nov); midday before (laser wiper) 631 views, 14.3 likes/1000, the lowest views of the last six Shorts; stayed/watched not reported since 8 Nov, when stayed was 34-37% (goal 70%): stayed % stays the weakest signal",
+      "weakest_hook": "\"Tesla's next wiper might be a laser.\" - hedged ('might'), about a gadget that does not exist yet; fewest views of the week",
+      "why_stalled": "render report (Starship first flight): 6 of 10 beats ran 4.1-5.4 s because they held 11-14 spoken words, so the pace sagged mid-Short; contrast bands in beats 3, 4 and 7 (flames). Laser Short: beats 4 and 7 on one photo (3.5 and 3.0 s), beat 2 only 2.3 s. Previous long video (laser): heavy on patents and future tech, little for owners until the end",
+      "change": "beats capped at 7-9 spoken words with numbers counted as spoken ('6,831' = 6 words), so every beat lands at ~2.5-3.3 s; the hook is a certain fact, not a 'might'; numbers moved out of the hook into beats 2 and 9; 2 library pictures per beat, mostly dusk/night/indoor photos (fewer bands); loop by plain run-on statement instead of a colon or half sentence"
+    },
+    "en": "The first Tesla ran on laptop batteries. 6,831 of them, in one Roadster. Small cells were cheap, proven and easy to cool. And one failing cell holds very little energy. But every cell needs its own can and connections. So Tesla made the cell fatter: the 4680. Five times the energy of a Model 3 cell. The Cybertruck holds more than twice the Roadster's energy. With just 1,344 cells. Five times fewer than where it all began.",
+    "nl": "De eerste Tesla reed op laptopbatterijen. 6.831 stuks, in één Roadster. Kleine cellen waren goedkoop, beproefd en makkelijk te koelen. En één kapotte cel bevat maar weinig energie. Maar elke cel heeft een eigen huls en verbindingen nodig. Dus maakte Tesla de cel dikker: de 4680. Vijf keer de energie van een Model 3-cel. De Cybertruck heeft ruim twee keer de energie van de Roadster. Met maar 1.344 cellen. Vijf keer minder dan waar het allemaal begon."
   },
-  "signals": "Stayed %: a hard, unhedged claim about a familiar object with the subject named in word 2 (the laser hook 'might be' drew the fewest views of the week, 631). Watched %/loops: 10 beats of 7-9 spoken words with spoken-out numbers counted (est. 2.5-3.3 s each, total ~31 s) instead of the 11-14 word beats that ran 4.1-5.4 s in the evening Short; 2 pictures in every beat. Likes/shares: a then-vs-now comparison (6,831 vs 1,344 cells) people like to quote.",
-  "learning": {
-   "prev": "starship-first-flight-2023-four-minutes-crater-launch-pad-story",
-   "prev_stats": "1,041 views, 19.2 likes/1000 (evening 10 Nov); midday before (laser wiper) 631 views, 14.3 likes/1000, the lowest views of the last six Shorts; stayed/watched not reported since 8 Nov, when stayed was 34-37% (goal 70%): stayed % stays the weakest signal",
-   "weakest_hook": "\"Tesla's next wiper might be a laser.\" - hedged ('might'), about a gadget that does not exist yet; fewest views of the week",
-   "why_stalled": "render report (Starship first flight): 6 of 10 beats ran 4.1-5.4 s because they held 11-14 spoken words, so the pace sagged mid-Short; contrast bands in beats 3, 4 and 7 (flames). Laser Short: beats 4 and 7 on one photo (3.5 and 3.0 s), beat 2 only 2.3 s. Previous long video (laser): heavy on patents and future tech, little for owners until the end",
-   "change": "beats capped at 7-9 spoken words with numbers counted as spoken ('6,831' = 6 words), so every beat lands at ~2.5-3.3 s; the hook is a certain fact, not a 'might'; numbers moved out of the hook into beats 2 and 9; 2 library pictures per beat, mostly dusk/night/indoor photos (fewer bands); loop by plain run-on statement instead of a colon or half sentence"
+  "video": {
+    "en": [
+      {
+        "text": "The first Tesla ran on laptop batteries. 6,831 of them, packed into one small sports car. Today a Cybertruck holds more than twice the energy, in just 1,344 cells. And here is the strange part. Tesla still builds every pack from more than a thousand small steel cans, not from a few big blocks. By the end of this video you will know why. It comes down to one tiny metal strip.",
+        "img": [
+          "gen/tesla-roadster-origin-story-lotus-elise-first-tesla.jpg",
+          "lib/cybertruck-front-city.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "18650 lithium ion cell",
+              "18650 battery cells",
+              "lithium-ion cylindrical cell 18650"
+            ],
+            "want": "small cylindrical 18650 lithium-ion battery cells"
+          }
+        ]
+      },
+      {
+        "text": "This matters right now. Tesla's cell manufacturing director says the 4680 plant at Giga Texas is heading for a massive expansion. He expects it to become the biggest battery cell factory in North America. That is his forecast. But it shows where Tesla is placing its bet. On a cylinder.",
+        "img": [
+          "lib/giga-texas-aerial.jpg",
+          "gigafactory-texas.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Gigafactory Texas",
+              "Giga Texas Austin",
+              "Tesla Gigafactory Texas aerial"
+            ],
+            "want": "Tesla's Gigafactory Texas near Austin"
+          }
+        ]
+      },
+      {
+        "head": "Why did the first Tesla use laptop cells?",
+        "pop": [
+          {
+            "say": "",
+            "show": "WHY LAPTOP CELLS?"
+          }
+        ],
+        "img": [
+          "gen/tesla-roadster-origin-story-lotus-elise-first-tesla-x2-11012026.jpg"
+        ]
+      },
+      {
+        "text": "Picture the mid-2000s. Nobody sold a battery cell made for cars. But laptop makers bought cells by the billions. Small cylinders, 18 millimetres wide and 65 long. The 18650. They were cheap, they were tested, and the price kept falling. So Tesla did not invent a cell. It invented a way to make 6,831 of them act as one battery. Together they stored about 55 kilowatt hours.",
+        "img": [
+          "gen/tesla-roadster-origin-story-lotus-elise-first-tesla-x3-11012026.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Tesla Roadster 2008",
+              "Tesla Roadster first generation",
+              "Tesla Roadster red"
+            ],
+            "want": "a first-generation Tesla Roadster, the 2008 sports car"
+          },
+          {
+            "q": [
+              "laptop battery pack opened",
+              "laptop battery cells",
+              "notebook battery 18650"
+            ],
+            "want": "an opened laptop battery showing cylindrical cells"
+          }
+        ]
+      },
+      {
+        "text": "People expected those packs to die young. They did not. A Plug In America study of Roadster owners projected about 80 to 85 percent capacity after 100,000 miles. Tesla itself had guessed 70 percent after 50,000. Then came the Model 3, with a slightly bigger cell. The 2170. 21 millimetres by 70. Still, a Model 3 Long Range carries about 4,400 of them. Bigger cells, yes. But still thousands.",
+        "img": [
+          "models/m3c-1.jpg",
+          "models/m3h-1.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Panasonic 2170 cell",
+              "2170 lithium ion cell",
+              "21700 battery cell"
+            ],
+            "want": "a 21700 / 2170 cylindrical lithium-ion cell"
+          }
+        ]
+      },
+      {
+        "head": "So why not build one giant battery cell?",
+        "pop": [
+          {
+            "say": "",
+            "show": "ONE GIANT CELL?"
+          }
+        ],
+        "img": [
+          "lib/cybercab-rear-battery.jpg"
+        ]
+      },
+      {
+        "text": "Two reasons. Heat, and safety. Every cell warms up when it charges and discharges. A thin cylinder has lots of skin for that heat to escape, and in a Tesla pack the coolant flows right past it. In one huge cell, the heat in the middle is trapped. It has nowhere to go.",
+        "img": [
+          "guide-battery.jpg",
+          "lib/supercharger-row-night.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "battery cooling plate",
+              "electric vehicle battery cooling",
+              "battery thermal management"
+            ],
+            "want": "a battery module with a cooling plate or coolant pipes"
+          }
+        ]
+      },
+      {
+        "text": "Now safety. If one small cell overheats and fails, it releases the energy of one small cell. Its steel can helps keep the trouble from spreading to its neighbours. A giant cell has no neighbours to protect. All its energy is in one place.",
+        "img": [
+          "models/rd-24.jpg",
+          "humanoids-cells.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "lithium ion battery cells",
+              "cylindrical battery cells rows",
+              "battery cells module"
+            ],
+            "want": "rows of cylindrical lithium-ion cells in a battery module"
+          }
+        ]
+      },
+      {
+        "text": "But small cells have a price too. Every single one needs its own can, its own connections and its own place in the pack. That is weight, factory steps and money. So many other carmakers go the other way. Big flat pouch cells, or box-shaped prismatic cells. Fewer parts. It is a trade-off, not a law of nature. The perfect cell is as big as possible, without cooking itself.",
+        "img": [
+          "megafactory.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "pouch cell lithium polymer",
+              "lithium pouch battery cell",
+              "pouch battery"
+            ],
+            "want": "a flat lithium-ion pouch cell"
+          },
+          {
+            "q": [
+              "prismatic battery cell",
+              "prismatic lithium ion cell",
+              "prismatic cell CATL"
+            ],
+            "want": "a box-shaped prismatic lithium-ion battery cell"
+          }
+        ]
+      },
+      {
+        "head": "What makes the 4680 cell different?",
+        "pop": [
+          {
+            "say": "",
+            "show": "WHY THE 4680?"
+          }
+        ],
+        "img": [
+          "lib/optimus-pick-part.jpg"
+        ]
+      },
+      {
+        "text": "September 2020. Battery Day. Tesla shows a much fatter cylinder. 46 millimetres wide, 80 tall. Hence the name, 4680. It has about five and a half times the volume of a 2170. Tesla claimed five times the energy, and six times the power. But a bigger cell should run hotter. So how did Tesla get away with it?",
+        "img": [
+          "lib/giga-texas-aerial.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Tesla 4680",
+              "4680 battery cell",
+              "Tesla 4680 cell"
+            ],
+            "want": "a large cylindrical Tesla 4680 battery cell"
+          },
+          {
+            "q": [
+              "Tesla Battery Day",
+              "Tesla Battery Day 2020"
+            ],
+            "want": "the Tesla Battery Day 2020 event stage, no recognisable people"
+          }
+        ]
+      },
+      {
+        "text": "Here is that tiny metal strip. In a normal cell, the current leaves the rolled-up foil through one small tab. So electrons travel a long way along the foil to reach it. The 4680 has no tab. The whole edge of the foil is connected. Musk said a big tabless cell has a shorter path for electrons than a small cell with a tab. Shorter path, less heat. And less heat means the cell can grow.",
+        "img": [
+          "lib/optimus-hand-closeup.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "jelly roll battery",
+              "lithium ion cell cross section",
+              "cylindrical cell cutaway"
+            ],
+            "want": "a cutaway or cross-section of a cylindrical battery cell showing the rolled electrode"
+          },
+          {
+            "q": [
+              "battery electrode foil",
+              "copper foil electrode",
+              "electrode coating foil"
+            ],
+            "want": "thin metal battery electrode foil on a roll"
+          }
+        ]
+      },
+      {
+        "text": "And the numbers show it. The Cybertruck's pack stores 123 kilowatt hours in 1,344 cells. About 91 watt hours each. That is roughly eleven times what one Roadster cell held. Part of that is size. Part is fifteen years of better chemistry. Tesla also planned a dry electrode process. No liquid solvent. No giant drying ovens. On paper, it made batteries far cheaper.",
+        "img": [
+          "lib/cybertruck-bed-open.jpg",
+          "lib/cybertruck-rear-light.jpg",
+          "models/ct-1.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Tesla Cybertruck",
+              "Cybertruck stainless steel",
+              "Tesla Cybertruck 2024"
+            ],
+            "want": "a stainless steel Tesla Cybertruck"
+          }
+        ]
+      },
+      {
+        "head": "Why did the 4680 take so long?",
+        "pop": [
+          {
+            "say": "",
+            "show": "WHY SO SLOW?"
+          }
+        ],
+        "img": [
+          "gigafactory-nevada.jpg"
+        ]
+      },
+      {
+        "text": "Because designing a cell is the easy part. Making millions is not. At Battery Day, Tesla aimed for 56 percent lower cost per kilowatt hour. Musk admitted the dry electrode machine was close to working, but not with a good yield. He was right to worry. In 2021, Tesla said battery supply was one reason the Cybertruck would slip to 2022.",
+        "img": [
+          "lib/cybertruck-front-city.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "battery factory production line",
+              "lithium ion battery production",
+              "battery cell manufacturing"
+            ],
+            "want": "a battery cell production line in a factory"
+          },
+          {
+            "q": [
+              "electrode coating machine",
+              "battery electrode coating",
+              "roll to roll coating"
+            ],
+            "want": "a battery electrode coating machine"
+          }
+        ]
+      },
+      {
+        "text": "By October 2023, Tesla had built 20 million 4680 cells in Texas. Sounds like a lot. But IEEE Spectrum worked out that the pace back then covered only about 2,000 Cybertrucks a month. The stubborn step was dry coating the cathode. Today, Tesla lists more than 40 gigawatt hours a year of installed 4680 capacity in Texas. For the Cybertruck, the Cybercab, the Semi and some Model Y versions. Installed capacity is not the same as cells built. But the curve has turned.",
+        "img": [
+          "gigafactory-texas.jpg",
+          "lib/cybercab-line-front.jpg",
+          "lib/semi-highway.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Tesla Semi",
+              "Tesla Semi truck"
+            ],
+            "want": "a Tesla Semi electric truck"
+          }
+        ]
+      },
+      {
+        "head": "Does the cell size matter when you buy a Tesla?",
+        "pop": [
+          {
+            "say": "",
+            "show": "DOES IT MATTER?"
+          }
+        ],
+        "img": [
+          "lib/modely-front.jpg"
+        ]
+      },
+      {
+        "text": "Not directly. What you feel is range, charging speed, weight and price. The cell is one ingredient. Tesla said the 4680 design alone would add about 16 percent range. The bigger promise, up to 54 percent, needed new materials and a pack built into the car. So a Tesla with 2170 cells is not worse by definition. And a big truck still needs a heavy battery. The Cybertruck's pack weighs about 721 kilograms.",
+        "img": [
+          "lib/screen-modely.jpg",
+          "lib/supercharger-v4.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Tesla Model Y",
+              "Tesla Model Y 2025"
+            ],
+            "want": "a Tesla Model Y"
+          }
+        ]
+      },
+      {
+        "text": "Two myths to drop. More cells does not mean a weaker battery. It mostly tells you which format is inside. And a bigger cell does not mean more range. Range comes from the total energy in the pack, and how efficiently the car uses it. What really protects you is the battery warranty, and how you charge.",
+        "img": [
+          "guide-battery.jpg",
+          "lib/charge-port-us-plugged.jpg",
+          "lib/tesla-app-phone.jpg"
+        ]
+      },
+      {
+        "text": "So remember that tiny metal strip. Removing it let Tesla make the cell fatter without cooking it. That is the whole story, from the Roadster to the Cybertruck. Use as many small cans as safety needs, and as few as cost allows. 6,831 laptop cells became 1,344 fat ones. Eighteen years later the answer is still a cylinder. Just a much fatter one.",
+        "img": [
+          "gen/tesla-roadster-origin-story-lotus-elise-first-tesla-x2-11012026.jpg",
+          "lib/cybertruck-rear-light.jpg",
+          "gen/tesla-roadster-origin-story-lotus-elise-first-tesla.jpg"
+        ]
+      }
+    ],
+    "nl": [
+      {
+        "img": [
+          "gen/tesla-roadster-origin-story-lotus-elise-first-tesla.jpg",
+          "lib/cybertruck-front-city.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "18650 lithium ion cell",
+              "18650 battery cells",
+              "lithium-ion cylindrical cell 18650"
+            ],
+            "want": "small cylindrical 18650 lithium-ion battery cells"
+          }
+        ],
+        "text": "De eerste Tesla reed op laptopbatterijen. 6.831 stuks, in één kleine sportauto. Nu heeft een Cybertruck ruim twee keer zoveel energie, in maar 1.344 cellen. En nu het rare. Tesla bouwt elke accu nog steeds uit meer dan duizend kleine stalen blikjes, niet uit een paar grote blokken. Aan het eind van deze video weet je waarom. Het draait om één klein metalen strookje."
+      },
+      {
+        "img": [
+          "lib/giga-texas-aerial.jpg",
+          "gigafactory-texas.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Gigafactory Texas",
+              "Giga Texas Austin",
+              "Tesla Gigafactory Texas aerial"
+            ],
+            "want": "Tesla's Gigafactory Texas near Austin"
+          }
+        ],
+        "text": "Dit speelt nu. De directeur celproductie van Tesla zegt dat de 4680-fabriek in Giga Texas een enorme uitbreiding krijgt. Hij verwacht dat het de grootste batterijcelfabriek van Noord-Amerika wordt. Dat is zijn voorspelling. Maar het laat zien waar Tesla op inzet. Op een cilinder."
+      },
+      {
+        "img": [
+          "gen/tesla-roadster-origin-story-lotus-elise-first-tesla-x2-11012026.jpg"
+        ],
+        "head": "Waarom gebruikte de eerste Tesla laptopcellen?",
+        "pop": [
+          {
+            "say": "",
+            "show": "WAAROM LAPTOPCELLEN?"
+          }
+        ]
+      },
+      {
+        "img": [
+          "gen/tesla-roadster-origin-story-lotus-elise-first-tesla-x3-11012026.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Tesla Roadster 2008",
+              "Tesla Roadster first generation",
+              "Tesla Roadster red"
+            ],
+            "want": "a first-generation Tesla Roadster, the 2008 sports car"
+          },
+          {
+            "q": [
+              "laptop battery pack opened",
+              "laptop battery cells",
+              "notebook battery 18650"
+            ],
+            "want": "an opened laptop battery showing cylindrical cells"
+          }
+        ],
+        "text": "Ga terug naar rond 2005. Niemand verkocht een accucel die voor auto's was gemaakt. Maar laptopfabrikanten kochten cellen bij miljarden. Kleine cilinders, 18 millimeter breed en 65 lang. De 18650. Ze waren goedkoop, beproefd, en de prijs bleef dalen. Tesla vond dus geen cel uit. Het vond een manier om er 6.831 samen te laten werken als één accu. Samen goed voor ongeveer 55 kilowattuur."
+      },
+      {
+        "img": [
+          "models/m3c-1.jpg",
+          "models/m3h-1.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Panasonic 2170 cell",
+              "2170 lithium ion cell",
+              "21700 battery cell"
+            ],
+            "want": "a 21700 / 2170 cylindrical lithium-ion cell"
+          }
+        ],
+        "text": "Iedereen dacht dat die accu's snel zouden slijten. Dat viel mee. Een onderzoek van Plug In America onder Roadster-rijders kwam uit op zo'n 80 tot 85 procent capaciteit na 160.000 kilometer. Tesla zelf had 70 procent voorspeld na zo'n 80.000 kilometer. Toen kwam de Model 3, met een iets grotere cel. De 2170. 21 bij 70 millimeter. Toch zitten er in een Model 3 Long Range nog ongeveer 4.400. Grotere cellen dus. Maar nog steeds duizenden."
+      },
+      {
+        "img": [
+          "lib/cybercab-rear-battery.jpg"
+        ],
+        "head": "Waarom dan niet één reusachtige accucel?",
+        "pop": [
+          {
+            "say": "",
+            "show": "EEN REUZENCEL?"
+          }
+        ]
+      },
+      {
+        "img": [
+          "guide-battery.jpg",
+          "lib/supercharger-row-night.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "battery cooling plate",
+              "electric vehicle battery cooling",
+              "battery thermal management"
+            ],
+            "want": "a battery module with a cooling plate or coolant pipes"
+          }
+        ],
+        "text": "Twee redenen. Warmte, en veiligheid. Elke cel wordt warm bij laden en ontladen. Een dunne cilinder heeft veel oppervlak waar die warmte weg kan, en in een Tesla-accu stroomt de koelvloeistof er vlak langs. In één enorme cel zit de warmte in het midden opgesloten. Die kan nergens heen."
+      },
+      {
+        "img": [
+          "models/rd-24.jpg",
+          "humanoids-cells.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "lithium ion battery cells",
+              "cylindrical battery cells rows",
+              "battery cells module"
+            ],
+            "want": "rows of cylindrical lithium-ion cells in a battery module"
+          }
+        ],
+        "text": "Dan de veiligheid. Als één kleine cel oververhit raakt en bezwijkt, komt de energie van één kleine cel vrij. Het stalen blikje helpt voorkomen dat het overslaat naar de buren. Een reuzencel heeft geen buren om te beschermen. Al zijn energie zit op één plek."
+      },
+      {
+        "img": [
+          "megafactory.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "pouch cell lithium polymer",
+              "lithium pouch battery cell",
+              "pouch battery"
+            ],
+            "want": "a flat lithium-ion pouch cell"
+          },
+          {
+            "q": [
+              "prismatic battery cell",
+              "prismatic lithium ion cell",
+              "prismatic cell CATL"
+            ],
+            "want": "a box-shaped prismatic lithium-ion battery cell"
+          }
+        ],
+        "text": "Maar kleine cellen hebben ook een prijs. Elke cel heeft een eigen blikje, eigen verbindingen en een eigen plek in de accu nodig. Dat kost gewicht, productiestappen en geld. Veel andere autofabrikanten kiezen daarom de andere kant. Grote platte pouchcellen, of doosvormige prismatische cellen. Minder onderdelen. Het is een afweging, geen natuurwet. De perfecte cel is zo groot mogelijk, zonder zichzelf te koken."
+      },
+      {
+        "img": [
+          "lib/optimus-pick-part.jpg"
+        ],
+        "head": "Wat maakt de 4680-cel anders?",
+        "pop": [
+          {
+            "say": "",
+            "show": "WAAROM DE 4680?"
+          }
+        ]
+      },
+      {
+        "img": [
+          "lib/giga-texas-aerial.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Tesla 4680",
+              "4680 battery cell",
+              "Tesla 4680 cell"
+            ],
+            "want": "a large cylindrical Tesla 4680 battery cell"
+          },
+          {
+            "q": [
+              "Tesla Battery Day",
+              "Tesla Battery Day 2020"
+            ],
+            "want": "the Tesla Battery Day 2020 event stage, no recognisable people"
+          }
+        ],
+        "text": "September 2020. Battery Day. Tesla laat een veel dikkere cilinder zien. 46 millimeter breed, 80 hoog. Vandaar de naam, 4680. Hij heeft zo'n vijfenhalf keer het volume van een 2170. Tesla claimde vijf keer de energie, en zes keer het vermogen. Maar een grotere cel zou heter moeten worden. Hoe kwam Tesla daarmee weg?"
+      },
+      {
+        "img": [
+          "lib/optimus-hand-closeup.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "jelly roll battery",
+              "lithium ion cell cross section",
+              "cylindrical cell cutaway"
+            ],
+            "want": "a cutaway or cross-section of a cylindrical battery cell showing the rolled electrode"
+          },
+          {
+            "q": [
+              "battery electrode foil",
+              "copper foil electrode",
+              "electrode coating foil"
+            ],
+            "want": "thin metal battery electrode foil on a roll"
+          }
+        ],
+        "text": "Daar is dat kleine metalen strookje. In een gewone cel verlaat de stroom de opgerolde folie via één smal lipje, de tab. Elektronen moeten dus een lange weg over de folie afleggen. De 4680 heeft geen tab. De hele rand van de folie is aangesloten. Musk zei dat een grote cel zonder tab een kortere weg voor elektronen heeft dan een kleine cel met tab. Kortere weg, minder warmte. En minder warmte betekent dat de cel mag groeien."
+      },
+      {
+        "img": [
+          "lib/cybertruck-bed-open.jpg",
+          "lib/cybertruck-rear-light.jpg",
+          "models/ct-1.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Tesla Cybertruck",
+              "Cybertruck stainless steel",
+              "Tesla Cybertruck 2024"
+            ],
+            "want": "a stainless steel Tesla Cybertruck"
+          }
+        ],
+        "text": "En de cijfers laten het zien. De accu van de Cybertruck slaat 123 kilowattuur op in 1.344 cellen. Zo'n 91 wattuur per stuk. Dat is ruwweg elf keer wat één Roadster-cel kon bevatten. Deels door het formaat. Deels door vijftien jaar betere chemie. Tesla wilde ook droge elektroden maken. Geen vloeibaar oplosmiddel. Geen enorme droogovens. Op papier werden accu's daardoor veel goedkoper."
+      },
+      {
+        "img": [
+          "gigafactory-nevada.jpg"
+        ],
+        "head": "Waarom duurde het zo lang met de 4680?",
+        "pop": [
+          {
+            "say": "",
+            "show": "WAAROM ZO TRAAG?"
+          }
+        ]
+      },
+      {
+        "img": [
+          "lib/cybertruck-front-city.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "battery factory production line",
+              "lithium ion battery production",
+              "battery cell manufacturing"
+            ],
+            "want": "a battery cell production line in a factory"
+          },
+          {
+            "q": [
+              "electrode coating machine",
+              "battery electrode coating",
+              "roll to roll coating"
+            ],
+            "want": "a battery electrode coating machine"
+          }
+        ],
+        "text": "Omdat een cel ontwerpen het makkelijke deel is. Er miljoenen van maken niet. Op Battery Day mikte Tesla op 56 procent lagere kosten per kilowattuur. Musk gaf toe dat de machine voor droge elektroden bijna werkte, maar nog niet met een goede opbrengst. Die zorg was terecht. In 2021 zei Tesla dat de aanvoer van accu's een van de redenen was dat de Cybertruck naar 2022 schoof."
+      },
+      {
+        "img": [
+          "gigafactory-texas.jpg",
+          "lib/cybercab-line-front.jpg",
+          "lib/semi-highway.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Tesla Semi",
+              "Tesla Semi truck"
+            ],
+            "want": "a Tesla Semi electric truck"
+          }
+        ],
+        "text": "In oktober 2023 had Tesla in Texas 20 miljoen 4680-cellen gebouwd. Klinkt veel. Maar IEEE Spectrum rekende uit dat het tempo van toen genoeg was voor maar zo'n 2.000 Cybertrucks per maand. De taaiste stap was het droog coaten van de kathode. Nu noemt Tesla meer dan 40 gigawattuur per jaar aan geïnstalleerde 4680-capaciteit in Texas. Voor de Cybertruck, de Cybercab, de Semi en sommige Model Y's. Geïnstalleerde capaciteit is niet hetzelfde als gebouwde cellen. Maar de curve is gedraaid."
+      },
+      {
+        "img": [
+          "lib/modely-front.jpg"
+        ],
+        "head": "Maakt het formaat van de cel uit als je een Tesla koopt?",
+        "pop": [
+          {
+            "say": "",
+            "show": "MAAKT HET UIT?"
+          }
+        ]
+      },
+      {
+        "img": [
+          "lib/screen-modely.jpg",
+          "lib/supercharger-v4.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Tesla Model Y",
+              "Tesla Model Y 2025"
+            ],
+            "want": "a Tesla Model Y"
+          }
+        ],
+        "text": "Niet direct. Wat je merkt is actieradius, laadsnelheid, gewicht en prijs. De cel is één ingrediënt. Tesla zei dat het ontwerp van de 4680 alleen al zo'n 16 procent extra actieradius zou geven. De grotere belofte, tot 54 procent, vroeg om nieuwe materialen en een accu die deel is van de auto. Een Tesla met 2170-cellen is dus niet per definitie slechter. En een grote truck heeft hoe dan ook een zware accu nodig. Die van de Cybertruck weegt zo'n 721 kilo."
+      },
+      {
+        "img": [
+          "guide-battery.jpg",
+          "lib/charge-port-us-plugged.jpg",
+          "lib/tesla-app-phone.jpg"
+        ],
+        "text": "Twee fabels om te vergeten. Meer cellen betekent geen zwakkere accu. Het zegt vooral welk formaat erin zit. En een grotere cel geeft niet meer actieradius. Die hangt af van de totale energie in de accu, en hoe zuinig de auto ermee omgaat. Wat je echt beschermt is de accugarantie, en hoe je laadt."
+      },
+      {
+        "img": [
+          "gen/tesla-roadster-origin-story-lotus-elise-first-tesla-x2-11012026.jpg",
+          "lib/cybertruck-rear-light.jpg",
+          "gen/tesla-roadster-origin-story-lotus-elise-first-tesla.jpg"
+        ],
+        "text": "Denk dus terug aan dat kleine metalen strookje. Door het weg te halen kon Tesla de cel dikker maken zonder hem te koken. Dat is het hele verhaal, van de Roadster tot de Cybertruck. Zoveel kleine blikjes als de veiligheid vraagt, en zo weinig als de kosten toelaten. 6.831 laptopcellen werden 1.344 dikke cellen. Achttien jaar later is het antwoord nog steeds een cilinder. Alleen een stuk dikker."
+      }
+    ],
+    "yt_title_en": "Why Tesla Batteries Use Thousands of Small Cells: 18650, 2170 and 4680 Explained",
+    "yt_title_nl": "Waarom Tesla-accu's duizenden kleine cellen hebben: 18650, 2170 en 4680 uitgelegd"
   },
-  "en": "The first Tesla ran on laptop batteries. 6,831 of them, in one Roadster. Small cells were cheap, proven and easy to cool. And one failing cell holds very little energy. But every cell needs its own can and connections. So Tesla made the cell fatter: the 4680. Five times the energy of a Model 3 cell. The Cybertruck holds more than twice the Roadster's energy. With just 1,344 cells. Five times fewer than where it all began.",
-  "nl": "De eerste Tesla reed op laptopbatterijen. 6.831 stuks, in één Roadster. Kleine cellen waren goedkoop, beproefd en makkelijk te koelen. En één kapotte cel bevat maar weinig energie. Maar elke cel heeft een eigen huls en verbindingen nodig. Dus maakte Tesla de cel dikker: de 4680. Vijf keer de energie van een Model 3-cel. De Cybertruck heeft ruim twee keer de energie van de Roadster. Met maar 1.344 cellen. Vijf keer minder dan waar het allemaal begon."
- },
- "video": {
-  "en": [
-   {
-    "text": "The first Tesla ran on laptop batteries. 6,831 of them, packed into one small sports car. Today a Cybertruck holds more than twice the energy, in just 1,344 cells. And here is the strange part. Tesla still builds every pack from more than a thousand small steel cans, not from a few big blocks. By the end of this video you will know why. It comes down to one tiny metal strip.",
-    "img": [
-     "gen/tesla-roadster-origin-story-lotus-elise-first-tesla.jpg",
-     "lib/cybertruck-front-city.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "18650 lithium ion cell",
-       "18650 battery cells",
-       "lithium-ion cylindrical cell 18650"
-      ],
-      "want": "small cylindrical 18650 lithium-ion battery cells"
-     }
-    ]
-   },
-   {
-    "text": "This matters right now. Tesla's cell manufacturing director says the 4680 plant at Giga Texas is heading for a massive expansion. He expects it to become the biggest battery cell factory in North America. That is his forecast. But it shows where Tesla is placing its bet. On a cylinder.",
-    "img": [
-     "lib/giga-texas-aerial.jpg",
-     "gigafactory-texas.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Gigafactory Texas",
-       "Giga Texas Austin",
-       "Tesla Gigafactory Texas aerial"
-      ],
-      "want": "Tesla's Gigafactory Texas near Austin"
-     }
-    ]
-   },
-   {
-    "head": "Why did the first Tesla use laptop cells?",
-    "pop": [
-     {
-      "say": "",
-      "show": "WHY LAPTOP CELLS?"
-     }
-    ],
-    "img": [
-     "gen/tesla-roadster-origin-story-lotus-elise-first-tesla-x2-11012026.jpg"
-    ]
-   },
-   {
-    "text": "Picture the mid-2000s. Nobody sold a battery cell made for cars. But laptop makers bought cells by the billions. Small cylinders, 18 millimetres wide and 65 long. The 18650. They were cheap, they were tested, and the price kept falling. So Tesla did not invent a cell. It invented a way to make 6,831 of them act as one battery. Together they stored about 55 kilowatt hours.",
-    "img": [
-     "gen/tesla-roadster-origin-story-lotus-elise-first-tesla-x3-11012026.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Tesla Roadster 2008",
-       "Tesla Roadster first generation",
-       "Tesla Roadster red"
-      ],
-      "want": "a first-generation Tesla Roadster, the 2008 sports car"
-     },
-     {
-      "q": [
-       "laptop battery pack opened",
-       "laptop battery cells",
-       "notebook battery 18650"
-      ],
-      "want": "an opened laptop battery showing cylindrical cells"
-     }
-    ]
-   },
-   {
-    "text": "People expected those packs to die young. They did not. A Plug In America study of Roadster owners projected about 80 to 85 percent capacity after 100,000 miles. Tesla itself had guessed 70 percent after 50,000. Then came the Model 3, with a slightly bigger cell. The 2170. 21 millimetres by 70. Still, a Model 3 Long Range carries about 4,400 of them. Bigger cells, yes. But still thousands.",
-    "img": [
-     "models/m3c-1.jpg",
-     "models/m3h-1.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Panasonic 2170 cell",
-       "2170 lithium ion cell",
-       "21700 battery cell"
-      ],
-      "want": "a 21700 / 2170 cylindrical lithium-ion cell"
-     }
-    ]
-   },
-   {
-    "head": "So why not build one giant battery cell?",
-    "pop": [
-     {
-      "say": "",
-      "show": "ONE GIANT CELL?"
-     }
-    ],
-    "img": [
-     "lib/cybercab-rear-battery.jpg"
-    ]
-   },
-   {
-    "text": "Two reasons. Heat, and safety. Every cell warms up when it charges and discharges. A thin cylinder has lots of skin for that heat to escape, and in a Tesla pack the coolant flows right past it. In one huge cell, the heat in the middle is trapped. It has nowhere to go.",
-    "img": [
-     "guide-battery.jpg",
-     "lib/supercharger-row-night.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "battery cooling plate",
-       "electric vehicle battery cooling",
-       "battery thermal management"
-      ],
-      "want": "a battery module with a cooling plate or coolant pipes"
-     }
-    ]
-   },
-   {
-    "text": "Now safety. If one small cell overheats and fails, it releases the energy of one small cell. Its steel can helps keep the trouble from spreading to its neighbours. A giant cell has no neighbours to protect. All its energy is in one place.",
-    "img": [
-     "models/rd-24.jpg",
-     "humanoids-cells.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "lithium ion battery cells",
-       "cylindrical battery cells rows",
-       "battery cells module"
-      ],
-      "want": "rows of cylindrical lithium-ion cells in a battery module"
-     }
-    ]
-   },
-   {
-    "text": "But small cells have a price too. Every single one needs its own can, its own connections and its own place in the pack. That is weight, factory steps and money. So many other carmakers go the other way. Big flat pouch cells, or box-shaped prismatic cells. Fewer parts. It is a trade-off, not a law of nature. The perfect cell is as big as possible, without cooking itself.",
-    "img": [
-     "megafactory.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "pouch cell lithium polymer",
-       "lithium pouch battery cell",
-       "pouch battery"
-      ],
-      "want": "a flat lithium-ion pouch cell"
-     },
-     {
-      "q": [
-       "prismatic battery cell",
-       "prismatic lithium ion cell",
-       "prismatic cell CATL"
-      ],
-      "want": "a box-shaped prismatic lithium-ion battery cell"
-     }
-    ]
-   },
-   {
-    "head": "What makes the 4680 cell different?",
-    "pop": [
-     {
-      "say": "",
-      "show": "WHY THE 4680?"
-     }
-    ],
-    "img": [
-     "lib/optimus-pick-part.jpg"
-    ]
-   },
-   {
-    "text": "September 2020. Battery Day. Tesla shows a much fatter cylinder. 46 millimetres wide, 80 tall. Hence the name, 4680. It has about five and a half times the volume of a 2170. Tesla claimed five times the energy, and six times the power. But a bigger cell should run hotter. So how did Tesla get away with it?",
-    "img": [
-     "lib/giga-texas-aerial.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Tesla 4680",
-       "4680 battery cell",
-       "Tesla 4680 cell"
-      ],
-      "want": "a large cylindrical Tesla 4680 battery cell"
-     },
-     {
-      "q": [
-       "Tesla Battery Day",
-       "Tesla Battery Day 2020"
-      ],
-      "want": "the Tesla Battery Day 2020 event stage, no recognisable people"
-     }
-    ]
-   },
-   {
-    "text": "Here is that tiny metal strip. In a normal cell, the current leaves the rolled-up foil through one small tab. So electrons travel a long way along the foil to reach it. The 4680 has no tab. The whole edge of the foil is connected. Musk said a big tabless cell has a shorter path for electrons than a small cell with a tab. Shorter path, less heat. And less heat means the cell can grow.",
-    "img": [
-     "lib/optimus-hand-closeup.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "jelly roll battery",
-       "lithium ion cell cross section",
-       "cylindrical cell cutaway"
-      ],
-      "want": "a cutaway or cross-section of a cylindrical battery cell showing the rolled electrode"
-     },
-     {
-      "q": [
-       "battery electrode foil",
-       "copper foil electrode",
-       "electrode coating foil"
-      ],
-      "want": "thin metal battery electrode foil on a roll"
-     }
-    ]
-   },
-   {
-    "text": "And the numbers show it. The Cybertruck's pack stores 123 kilowatt hours in 1,344 cells. About 91 watt hours each. That is roughly eleven times what one Roadster cell held. Part of that is size. Part is fifteen years of better chemistry. Tesla also planned a dry electrode process. No liquid solvent. No giant drying ovens. On paper, it made batteries far cheaper.",
-    "img": [
-     "lib/cybertruck-bed-open.jpg",
-     "lib/cybertruck-rear-light.jpg",
-     "models/ct-1.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Tesla Cybertruck",
-       "Cybertruck stainless steel",
-       "Tesla Cybertruck 2024"
-      ],
-      "want": "a stainless steel Tesla Cybertruck"
-     }
-    ]
-   },
-   {
-    "head": "Why did the 4680 take so long?",
-    "pop": [
-     {
-      "say": "",
-      "show": "WHY SO SLOW?"
-     }
-    ],
-    "img": [
-     "gigafactory-nevada.jpg"
-    ]
-   },
-   {
-    "text": "Because designing a cell is the easy part. Making millions is not. At Battery Day, Tesla aimed for 56 percent lower cost per kilowatt hour. Musk admitted the dry electrode machine was close to working, but not with a good yield. He was right to worry. In 2021, Tesla said battery supply was one reason the Cybertruck would slip to 2022.",
-    "img": [
-     "lib/cybertruck-front-city.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "battery factory production line",
-       "lithium ion battery production",
-       "battery cell manufacturing"
-      ],
-      "want": "a battery cell production line in a factory"
-     },
-     {
-      "q": [
-       "electrode coating machine",
-       "battery electrode coating",
-       "roll to roll coating"
-      ],
-      "want": "a battery electrode coating machine"
-     }
-    ]
-   },
-   {
-    "text": "By October 2023, Tesla had built 20 million 4680 cells in Texas. Sounds like a lot. But IEEE Spectrum worked out that the pace back then covered only about 2,000 Cybertrucks a month. The stubborn step was dry coating the cathode. Today, Tesla lists more than 40 gigawatt hours a year of installed 4680 capacity in Texas. For the Cybertruck, the Cybercab, the Semi and some Model Y versions. Installed capacity is not the same as cells built. But the curve has turned.",
-    "img": [
-     "gigafactory-texas.jpg",
-     "lib/cybercab-line-front.jpg",
-     "lib/semi-highway.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Tesla Semi",
-       "Tesla Semi truck"
-      ],
-      "want": "a Tesla Semi electric truck"
-     }
-    ]
-   },
-   {
-    "head": "Does the cell size matter when you buy a Tesla?",
-    "pop": [
-     {
-      "say": "",
-      "show": "DOES IT MATTER?"
-     }
-    ],
-    "img": [
-     "lib/modely-front.jpg"
-    ]
-   },
-   {
-    "text": "Not directly. What you feel is range, charging speed, weight and price. The cell is one ingredient. Tesla said the 4680 design alone would add about 16 percent range. The bigger promise, up to 54 percent, needed new materials and a pack built into the car. So a Tesla with 2170 cells is not worse by definition. And a big truck still needs a heavy battery. The Cybertruck's pack weighs about 721 kilograms.",
-    "img": [
-     "lib/screen-modely.jpg",
-     "lib/supercharger-v4.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Tesla Model Y",
-       "Tesla Model Y 2025"
-      ],
-      "want": "a Tesla Model Y"
-     }
-    ]
-   },
-   {
-    "text": "Two myths to drop. More cells does not mean a weaker battery. It mostly tells you which format is inside. And a bigger cell does not mean more range. Range comes from the total energy in the pack, and how efficiently the car uses it. What really protects you is the battery warranty, and how you charge.",
-    "img": [
-     "guide-battery.jpg",
-     "lib/charge-port-us-plugged.jpg",
-     "lib/tesla-app-phone.jpg"
-    ]
-   },
-   {
-    "text": "So remember that tiny metal strip. Removing it let Tesla make the cell fatter without cooking it. That is the whole story, from the Roadster to the Cybertruck. Use as many small cans as safety needs, and as few as cost allows. 6,831 laptop cells became 1,344 fat ones. Eighteen years later the answer is still a cylinder. Just a much fatter one.",
-    "img": [
-     "gen/tesla-roadster-origin-story-lotus-elise-first-tesla-x2-11012026.jpg",
-     "lib/cybertruck-rear-light.jpg",
-     "gen/tesla-roadster-origin-story-lotus-elise-first-tesla.jpg"
-    ]
-   }
-  ],
-  "nl": [
-   {
-    "img": [
-     "gen/tesla-roadster-origin-story-lotus-elise-first-tesla.jpg",
-     "lib/cybertruck-front-city.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "18650 lithium ion cell",
-       "18650 battery cells",
-       "lithium-ion cylindrical cell 18650"
-      ],
-      "want": "small cylindrical 18650 lithium-ion battery cells"
-     }
-    ],
-    "text": "De eerste Tesla reed op laptopbatterijen. 6.831 stuks, in één kleine sportauto. Nu heeft een Cybertruck ruim twee keer zoveel energie, in maar 1.344 cellen. En nu het rare. Tesla bouwt elke accu nog steeds uit meer dan duizend kleine stalen blikjes, niet uit een paar grote blokken. Aan het eind van deze video weet je waarom. Het draait om één klein metalen strookje."
-   },
-   {
-    "img": [
-     "lib/giga-texas-aerial.jpg",
-     "gigafactory-texas.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Gigafactory Texas",
-       "Giga Texas Austin",
-       "Tesla Gigafactory Texas aerial"
-      ],
-      "want": "Tesla's Gigafactory Texas near Austin"
-     }
-    ],
-    "text": "Dit speelt nu. De directeur celproductie van Tesla zegt dat de 4680-fabriek in Giga Texas een enorme uitbreiding krijgt. Hij verwacht dat het de grootste batterijcelfabriek van Noord-Amerika wordt. Dat is zijn voorspelling. Maar het laat zien waar Tesla op inzet. Op een cilinder."
-   },
-   {
-    "img": [
-     "gen/tesla-roadster-origin-story-lotus-elise-first-tesla-x2-11012026.jpg"
-    ],
-    "head": "Waarom gebruikte de eerste Tesla laptopcellen?",
-    "pop": [
-     {
-      "say": "",
-      "show": "WAAROM LAPTOPCELLEN?"
-     }
-    ]
-   },
-   {
-    "img": [
-     "gen/tesla-roadster-origin-story-lotus-elise-first-tesla-x3-11012026.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Tesla Roadster 2008",
-       "Tesla Roadster first generation",
-       "Tesla Roadster red"
-      ],
-      "want": "a first-generation Tesla Roadster, the 2008 sports car"
-     },
-     {
-      "q": [
-       "laptop battery pack opened",
-       "laptop battery cells",
-       "notebook battery 18650"
-      ],
-      "want": "an opened laptop battery showing cylindrical cells"
-     }
-    ],
-    "text": "Ga terug naar rond 2005. Niemand verkocht een accucel die voor auto's was gemaakt. Maar laptopfabrikanten kochten cellen bij miljarden. Kleine cilinders, 18 millimeter breed en 65 lang. De 18650. Ze waren goedkoop, beproefd, en de prijs bleef dalen. Tesla vond dus geen cel uit. Het vond een manier om er 6.831 samen te laten werken als één accu. Samen goed voor ongeveer 55 kilowattuur."
-   },
-   {
-    "img": [
-     "models/m3c-1.jpg",
-     "models/m3h-1.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Panasonic 2170 cell",
-       "2170 lithium ion cell",
-       "21700 battery cell"
-      ],
-      "want": "a 21700 / 2170 cylindrical lithium-ion cell"
-     }
-    ],
-    "text": "Iedereen dacht dat die accu's snel zouden slijten. Dat viel mee. Een onderzoek van Plug In America onder Roadster-rijders kwam uit op zo'n 80 tot 85 procent capaciteit na 160.000 kilometer. Tesla zelf had 70 procent voorspeld na zo'n 80.000 kilometer. Toen kwam de Model 3, met een iets grotere cel. De 2170. 21 bij 70 millimeter. Toch zitten er in een Model 3 Long Range nog ongeveer 4.400. Grotere cellen dus. Maar nog steeds duizenden."
-   },
-   {
-    "img": [
-     "lib/cybercab-rear-battery.jpg"
-    ],
-    "head": "Waarom dan niet één reusachtige accucel?",
-    "pop": [
-     {
-      "say": "",
-      "show": "EEN REUZENCEL?"
-     }
-    ]
-   },
-   {
-    "img": [
-     "guide-battery.jpg",
-     "lib/supercharger-row-night.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "battery cooling plate",
-       "electric vehicle battery cooling",
-       "battery thermal management"
-      ],
-      "want": "a battery module with a cooling plate or coolant pipes"
-     }
-    ],
-    "text": "Twee redenen. Warmte, en veiligheid. Elke cel wordt warm bij laden en ontladen. Een dunne cilinder heeft veel oppervlak waar die warmte weg kan, en in een Tesla-accu stroomt de koelvloeistof er vlak langs. In één enorme cel zit de warmte in het midden opgesloten. Die kan nergens heen."
-   },
-   {
-    "img": [
-     "models/rd-24.jpg",
-     "humanoids-cells.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "lithium ion battery cells",
-       "cylindrical battery cells rows",
-       "battery cells module"
-      ],
-      "want": "rows of cylindrical lithium-ion cells in a battery module"
-     }
-    ],
-    "text": "Dan de veiligheid. Als één kleine cel oververhit raakt en bezwijkt, komt de energie van één kleine cel vrij. Het stalen blikje helpt voorkomen dat het overslaat naar de buren. Een reuzencel heeft geen buren om te beschermen. Al zijn energie zit op één plek."
-   },
-   {
-    "img": [
-     "megafactory.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "pouch cell lithium polymer",
-       "lithium pouch battery cell",
-       "pouch battery"
-      ],
-      "want": "a flat lithium-ion pouch cell"
-     },
-     {
-      "q": [
-       "prismatic battery cell",
-       "prismatic lithium ion cell",
-       "prismatic cell CATL"
-      ],
-      "want": "a box-shaped prismatic lithium-ion battery cell"
-     }
-    ],
-    "text": "Maar kleine cellen hebben ook een prijs. Elke cel heeft een eigen blikje, eigen verbindingen en een eigen plek in de accu nodig. Dat kost gewicht, productiestappen en geld. Veel andere autofabrikanten kiezen daarom de andere kant. Grote platte pouchcellen, of doosvormige prismatische cellen. Minder onderdelen. Het is een afweging, geen natuurwet. De perfecte cel is zo groot mogelijk, zonder zichzelf te koken."
-   },
-   {
-    "img": [
-     "lib/optimus-pick-part.jpg"
-    ],
-    "head": "Wat maakt de 4680-cel anders?",
-    "pop": [
-     {
-      "say": "",
-      "show": "WAAROM DE 4680?"
-     }
-    ]
-   },
-   {
-    "img": [
-     "lib/giga-texas-aerial.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Tesla 4680",
-       "4680 battery cell",
-       "Tesla 4680 cell"
-      ],
-      "want": "a large cylindrical Tesla 4680 battery cell"
-     },
-     {
-      "q": [
-       "Tesla Battery Day",
-       "Tesla Battery Day 2020"
-      ],
-      "want": "the Tesla Battery Day 2020 event stage, no recognisable people"
-     }
-    ],
-    "text": "September 2020. Battery Day. Tesla laat een veel dikkere cilinder zien. 46 millimeter breed, 80 hoog. Vandaar de naam, 4680. Hij heeft zo'n vijfenhalf keer het volume van een 2170. Tesla claimde vijf keer de energie, en zes keer het vermogen. Maar een grotere cel zou heter moeten worden. Hoe kwam Tesla daarmee weg?"
-   },
-   {
-    "img": [
-     "lib/optimus-hand-closeup.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "jelly roll battery",
-       "lithium ion cell cross section",
-       "cylindrical cell cutaway"
-      ],
-      "want": "a cutaway or cross-section of a cylindrical battery cell showing the rolled electrode"
-     },
-     {
-      "q": [
-       "battery electrode foil",
-       "copper foil electrode",
-       "electrode coating foil"
-      ],
-      "want": "thin metal battery electrode foil on a roll"
-     }
-    ],
-    "text": "Daar is dat kleine metalen strookje. In een gewone cel verlaat de stroom de opgerolde folie via één smal lipje, de tab. Elektronen moeten dus een lange weg over de folie afleggen. De 4680 heeft geen tab. De hele rand van de folie is aangesloten. Musk zei dat een grote cel zonder tab een kortere weg voor elektronen heeft dan een kleine cel met tab. Kortere weg, minder warmte. En minder warmte betekent dat de cel mag groeien."
-   },
-   {
-    "img": [
-     "lib/cybertruck-bed-open.jpg",
-     "lib/cybertruck-rear-light.jpg",
-     "models/ct-1.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Tesla Cybertruck",
-       "Cybertruck stainless steel",
-       "Tesla Cybertruck 2024"
-      ],
-      "want": "a stainless steel Tesla Cybertruck"
-     }
-    ],
-    "text": "En de cijfers laten het zien. De accu van de Cybertruck slaat 123 kilowattuur op in 1.344 cellen. Zo'n 91 wattuur per stuk. Dat is ruwweg elf keer wat één Roadster-cel kon bevatten. Deels door het formaat. Deels door vijftien jaar betere chemie. Tesla wilde ook droge elektroden maken. Geen vloeibaar oplosmiddel. Geen enorme droogovens. Op papier werden accu's daardoor veel goedkoper."
-   },
-   {
-    "img": [
-     "gigafactory-nevada.jpg"
-    ],
-    "head": "Waarom duurde het zo lang met de 4680?",
-    "pop": [
-     {
-      "say": "",
-      "show": "WAAROM ZO TRAAG?"
-     }
-    ]
-   },
-   {
-    "img": [
-     "lib/cybertruck-front-city.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "battery factory production line",
-       "lithium ion battery production",
-       "battery cell manufacturing"
-      ],
-      "want": "a battery cell production line in a factory"
-     },
-     {
-      "q": [
-       "electrode coating machine",
-       "battery electrode coating",
-       "roll to roll coating"
-      ],
-      "want": "a battery electrode coating machine"
-     }
-    ],
-    "text": "Omdat een cel ontwerpen het makkelijke deel is. Er miljoenen van maken niet. Op Battery Day mikte Tesla op 56 procent lagere kosten per kilowattuur. Musk gaf toe dat de machine voor droge elektroden bijna werkte, maar nog niet met een goede opbrengst. Die zorg was terecht. In 2021 zei Tesla dat de aanvoer van accu's een van de redenen was dat de Cybertruck naar 2022 schoof."
-   },
-   {
-    "img": [
-     "gigafactory-texas.jpg",
-     "lib/cybercab-line-front.jpg",
-     "lib/semi-highway.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Tesla Semi",
-       "Tesla Semi truck"
-      ],
-      "want": "a Tesla Semi electric truck"
-     }
-    ],
-    "text": "In oktober 2023 had Tesla in Texas 20 miljoen 4680-cellen gebouwd. Klinkt veel. Maar IEEE Spectrum rekende uit dat het tempo van toen genoeg was voor maar zo'n 2.000 Cybertrucks per maand. De taaiste stap was het droog coaten van de kathode. Nu noemt Tesla meer dan 40 gigawattuur per jaar aan geïnstalleerde 4680-capaciteit in Texas. Voor de Cybertruck, de Cybercab, de Semi en sommige Model Y's. Geïnstalleerde capaciteit is niet hetzelfde als gebouwde cellen. Maar de curve is gedraaid."
-   },
-   {
-    "img": [
-     "lib/modely-front.jpg"
-    ],
-    "head": "Maakt het formaat van de cel uit als je een Tesla koopt?",
-    "pop": [
-     {
-      "say": "",
-      "show": "MAAKT HET UIT?"
-     }
-    ]
-   },
-   {
-    "img": [
-     "lib/screen-modely.jpg",
-     "lib/supercharger-v4.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Tesla Model Y",
-       "Tesla Model Y 2025"
-      ],
-      "want": "a Tesla Model Y"
-     }
-    ],
-    "text": "Niet direct. Wat je merkt is actieradius, laadsnelheid, gewicht en prijs. De cel is één ingrediënt. Tesla zei dat het ontwerp van de 4680 alleen al zo'n 16 procent extra actieradius zou geven. De grotere belofte, tot 54 procent, vroeg om nieuwe materialen en een accu die deel is van de auto. Een Tesla met 2170-cellen is dus niet per definitie slechter. En een grote truck heeft hoe dan ook een zware accu nodig. Die van de Cybertruck weegt zo'n 721 kilo."
-   },
-   {
-    "img": [
-     "guide-battery.jpg",
-     "lib/charge-port-us-plugged.jpg",
-     "lib/tesla-app-phone.jpg"
-    ],
-    "text": "Twee fabels om te vergeten. Meer cellen betekent geen zwakkere accu. Het zegt vooral welk formaat erin zit. En een grotere cel geeft niet meer actieradius. Die hangt af van de totale energie in de accu, en hoe zuinig de auto ermee omgaat. Wat je echt beschermt is de accugarantie, en hoe je laadt."
-   },
-   {
-    "img": [
-     "gen/tesla-roadster-origin-story-lotus-elise-first-tesla-x2-11012026.jpg",
-     "lib/cybertruck-rear-light.jpg",
-     "gen/tesla-roadster-origin-story-lotus-elise-first-tesla.jpg"
-    ],
-    "text": "Denk dus terug aan dat kleine metalen strookje. Door het weg te halen kon Tesla de cel dikker maken zonder hem te koken. Dat is het hele verhaal, van de Roadster tot de Cybertruck. Zoveel kleine blikjes als de veiligheid vraagt, en zo weinig als de kosten toelaten. 6.831 laptopcellen werden 1.344 dikke cellen. Achttien jaar later is het antwoord nog steeds een cilinder. Alleen een stuk dikker."
-   }
-  ],
-  "yt_title_en": "Why Tesla Batteries Use Thousands of Small Cells: 18650, 2170 and 4680 Explained",
-  "yt_title_nl": "Waarom Tesla-accu's duizenden kleine cellen hebben: 18650, 2170 en 4680 uitgelegd"
- }
+  "image": "gen/why-tesla-batteries-use-thousands-of-small-cells-18650-2170-4680-explained.jpg"
 }

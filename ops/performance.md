@@ -1,77 +1,77 @@
 # What works on the TrendingTesla YouTube channel
 
-Updated 2026-11-11 05:05 UTC by tools/learn.py from daily YouTube statistics (51 videos at least 48 hours old). Do not edit by hand.
+Updated 2026-11-11 22:31 UTC by tools/learn.py from daily YouTube statistics (54 videos at least 48 hours old). Do not edit by hand.
 
-- Shorts: 26 videos, typical 773 views after 48 hours.
-- Long videos: 25 videos, typical 25 views after 48 hours.
+- Shorts: 28 videos, typical 884 views after 48 hours.
+- Long videos: 26 videos, typical 26 views after 48 hours.
 
 ## By feature
 
 Views after 48 hours compared with a typical video of the same kind (1.0x = typical); with YouTube Analytics also how much of the video people watch, in percentage points vs typical. n = number of videos; below 3 it is only a hint.
 
 **Short hook type**
-- consequence: 1.8x views, watched +1 pts vs typical (n=6)
-- question: 1.2x views, watched -6 pts vs typical (n=4)
-- first: 1.2x views, watched +3 pts vs typical (n=6)
-- contrast: 1.1x views, watched +6 pts vs typical (n=12)
-- not tagged: 0.8x views, watched +1 pts vs typical (n=18)
-- number: 0.5x views, watched +9 pts vs typical (n=5)
+- consequence: 1.6x views, watched +1 pts vs typical (n=6)
+- contrast: 1.1x views, watched +7 pts vs typical (n=14)
+- question: 1.1x views, watched -6 pts vs typical (n=4)
+- first: 1.1x views, watched +2 pts vs typical (n=6)
+- not tagged: 0.7x views, watched +1 pts vs typical (n=18)
+- number: 0.5x views, watched +2 pts vs typical (n=6)
 
 **about a specific car**
-- cybertruck, model-s, model-x: 2.6x views, watched -4 pts vs typical (n=2)
-- semi: 1.9x views, watched +3 pts vs typical (n=6)
-- model-3, model-y, model-y-l: 1.6x views, watched -5 pts vs typical (n=2)
-- cybertruck: 1.3x views, watched -7 pts vs typical (n=2)
-- no (company-wide): 0.8x views, watched +4 pts vs typical (n=33)
+- cybertruck, model-s, model-x: 2.4x views, watched -5 pts vs typical (n=2)
+- semi: 1.8x views, watched +4 pts vs typical (n=6)
+- model-3, model-y, model-y-l: 1.5x views, watched -5 pts vs typical (n=2)
+- cybertruck: 1.2x views, watched -7 pts vs typical (n=2)
+- no (company-wide): 0.8x views, watched +4 pts vs typical (n=36)
 - cybercab: 0.7x views, watched +1 pts vs typical (n=4)
-- model-3-classic: 0.5x views, watched -1 pts vs typical (n=2)
+- model-3-classic: 0.5x views, watched -2 pts vs typical (n=2)
 
 **explainer or news**
-- explainer: 1.0x views, watched +6 pts vs typical (n=29)
-- news: 0.9x views, watched -2 pts vs typical (n=22)
+- explainer: 1.0x views, watched +6 pts vs typical (n=32)
+- news: 0.8x views, watched -2 pts vs typical (n=22)
 
 **label has a question**
-- yes: 1.0x views, watched +3 pts vs typical (n=34)
-- no: 0.8x views, watched +3 pts vs typical (n=17)
+- yes: 1.0x views, watched +2 pts vs typical (n=34)
+- no: 0.9x views, watched +3 pts vs typical (n=20)
 
 **label starts with a number**
-- no: 1.0x views, watched +2 pts vs typical (n=43)
-- yes: 0.7x views, watched +5 pts vs typical (n=8)
+- no: 1.0x views, watched +2 pts vs typical (n=46)
+- yes: 0.6x views, watched +5 pts vs typical (n=8)
 
 **label type**
-- c (yellow + red block): 1.1x views, watched +1 pts vs typical (n=27)
-- n (number): 1.0x views, watched -1 pts vs typical (n=4)
-- a (red kicker + yellow line): 0.7x views, watched +5 pts vs typical (n=20)
+- c (yellow + red block): 1.1x views, watched +2 pts vs typical (n=30)
+- n (number): 0.9x views, watched -2 pts vs typical (n=4)
+- a (red kicker + yellow line): 0.7x views, watched +4 pts vs typical (n=20)
 
 **published**
-- evening: 1.1x views, watched -1 pts vs typical (n=23)
-- morning: 0.9x views, watched +6 pts vs typical (n=28)
+- evening: 1.0x views, watched -2 pts vs typical (n=24)
+- morning: 0.9x views, watched +6 pts vs typical (n=30)
 
 **title has a number**
-- no: 1.1x views, watched +2 pts vs typical (n=24)
-- yes: 0.8x views, watched +3 pts vs typical (n=27)
+- no: 1.0x views, watched +1 pts vs typical (n=24)
+- yes: 0.8x views, watched +3 pts vs typical (n=30)
 
 **title length**
-- short (<= 10 words): 1.6x views, watched -10 pts vs typical (n=2)
-- long (> 10 words): 0.9x views, watched +3 pts vs typical (n=49)
+- short (<= 10 words): 1.5x views, watched -9 pts vs typical (n=2)
+- long (> 10 words): 0.9x views, watched +3 pts vs typical (n=52)
 
 **topic**
-- models: 1.8x views, watched -2 pts vs typical (n=16)
-- software: 1.2x views, watched +12 pts vs typical (n=4)
-- fsd: 0.9x views, watched -11 pts vs typical (n=8)
-- spacex: 0.8x views, watched +8 pts vs typical (n=9)
-- starlink: 0.8x views, watched +20 pts vs typical (n=4)
-- robotaxi: 0.6x views, watched +2 pts vs typical (n=6)
-- factories: 0.5x views, watched -1 pts vs typical (n=2)
+- models: 1.6x views, watched -2 pts vs typical (n=16)
+- software: 1.1x views, watched +6 pts vs typical (n=4)
+- spacex: 0.9x views, watched +8 pts vs typical (n=12)
+- fsd: 0.8x views, watched -12 pts vs typical (n=8)
+- starlink: 0.7x views, watched +20 pts vs typical (n=4)
+- robotaxi: 0.5x views, watched +2 pts vs typical (n=6)
+- factories: 0.5x views, watched -2 pts vs typical (n=2)
 - charging: 0.1x views, watched +23 pts vs typical (n=2)
 
 ## Best performers
 
-- long: 342 views at 48h (13.2x) - Tesla's Emergency Drive Away gets its first real use, and an accidental tap reportedly brings a $539 service bill [label: ONE WRONG TAP $539 BILL?]
-- long: 152 views at 48h (5.9x) - Tesla Semi catches fire on I-880 in Hayward with no crash, closing the freeway for 10 hours [label: WHY DID THIS TESLA SEMI BURN?]
-- long: 125 views at 48h (4.8x) - The Lotus that became the first Tesla: how the original Roadster nearly broke the company [label: HOW A LOTUS BECAME A TESLA?]
-- long: 123 views at 48h (4.8x) - What Happens to Your Tesla When Tesla Stops Making It? Cybertruck, Model S and X Explained [label: TESLA STOPS BUILDING IT NOW WHAT?]
-- long: 102 views at 48h (3.9x) - Grok does the mapping, you do the napping? [label: GROK DOES THE MAPPING YOU DO THE NAPPING?]
+- long: 342 views at 48h (12.7x) - Tesla's Emergency Drive Away gets its first real use, and an accidental tap reportedly brings a $539 service bill [label: ONE WRONG TAP $539 BILL?]
+- long: 152 views at 48h (5.6x) - Tesla Semi catches fire on I-880 in Hayward with no crash, closing the freeway for 10 hours [label: WHY DID THIS TESLA SEMI BURN?]
+- long: 125 views at 48h (4.6x) - The Lotus that became the first Tesla: how the original Roadster nearly broke the company [label: HOW A LOTUS BECAME A TESLA?]
+- long: 123 views at 48h (4.6x) - What Happens to Your Tesla When Tesla Stops Making It? Cybertruck, Model S and X Explained [label: TESLA STOPS BUILDING IT NOW WHAT?]
+- long: 102 views at 48h (3.8x) - Grok does the mapping, you do the napping? [label: GROK DOES THE MAPPING YOU DO THE NAPPING?]
 
 ## Weakest
 
@@ -82,18 +82,19 @@ Views after 48 hours compared with a typical video of the same kind (1.0x = typi
 ## Guidance for the next articles
 
 Does well (prefer this when two stories are about equally newsworthy, and use these styles):
-- about a specific car: semi (1.9x, n=6)
-- Short hook type: consequence (1.8x, n=6)
-- topic: models (1.8x, n=16)
+- about a specific car: semi (1.8x, n=6)
 - topic: starlink (people keep watching longer: +20 pts, n=4)
-- topic: software (people keep watching longer: +12 pts, n=4)
-- Short hook type: number (people keep watching longer: +9 pts, n=5)
+- Short hook type: consequence (1.6x, n=6)
+- topic: models (1.6x, n=16)
+- topic: spacex (people keep watching longer: +8 pts, n=12)
+- Short hook type: contrast (people keep watching longer: +7 pts, n=14)
 Does less well (still cover it when it is the important news, but give it a sharper hook):
-- Short hook type: number (0.5x, n=5)
-- topic: robotaxi (0.6x, n=6)
-- topic: fsd (people stop watching sooner: -11 pts, n=8)
+- Short hook type: number (0.5x, n=6)
+- topic: robotaxi (0.5x, n=6)
+- topic: fsd (people stop watching sooner: -12 pts, n=8)
+- label starts with a number: yes (0.6x, n=8)
+- about a specific car: cybercab (0.7x, n=4)
 - Short hook type: question (people stop watching sooner: -6 pts, n=4)
-- label starts with a number: yes (0.7x, n=8)
 
 ## Rules for using this
 
@@ -103,41 +104,41 @@ Does less well (still cover it when it is the important news, but give it a shar
 
 ## What works at other Tesla / SpaceX / xAI channels
 
-Updated 2026-11-11 05:05 UTC by tools/scout.py (videos from the last 7 days, 27 judged, 477 API units). Do not edit by hand.
+Updated 2026-11-11 22:30 UTC by tools/scout.py (videos from the last 7 days, 28 judged, 475 API units). Do not edit by hand.
 
 Outlier = views divided by what that channel normally gets for the same kind of video. A 5x video shows a topic or angle that pulls viewers, regardless of channel size.
 
 ### Outliers
 
-- **366.3x** (368K views vs 1K usual, long, Launch Heaven, 30K subs) - [SpaceX - “STARSHIP GO FOR ORBIT” Documentary 4K](https://youtu.be/wlWF7kJokvk)
-- **129.8x** (3.6M views vs 28K usual, short, ZEHAN, 4K subs) - [SpaceX Caught an Entire Rocket Booster With Giant Mechanical Arms! 🚀🤯](https://youtu.be/w9dAtutWOx8)
-- **125.3x** (1.0M views vs 8K usual, short, Case Curiosity, 2K subs) - [Tesla Flying Roadster Is Fake..😲 #shorts #tesla](https://youtu.be/FCvGTaQJJVo)
-- **102.2x** (167K views vs 2K usual, short, Matt Wallace Tech, 11K subs) - [Tesla is cancelling the Cybertruck](https://youtu.be/8Ad17C7IKNY)
-- **94.5x** (186K views vs 2K usual, short, Visplained., 918 subs) - [Tesla Cybertruck Phased Out. Will the bet on Cybercabs Payoff?](https://youtu.be/tibGce4qssc)
-- **54.2x** (182K views vs 3K usual, short, mechatomy, 374 subs) - [SpaceX Is About to Catch a Spaceship](https://youtu.be/dSej7kXgUDk)
-- **40.3x** (402K views vs 10K usual, short, 𝕽𝖆𝖘𝖚 𝕸𝖔𝖙𝖎𝖛𝖆𝖙𝖎𝖔𝖓 , 57K subs) - [Elon Musk's $100 BILLION SpaceX Starbase Louisiana! 🚀😱 #shorts](https://youtu.be/87Y_Dy9AQK0)
-- **30.3x** (1.9M views vs 63K usual, short, Beyond Earth, 32K subs) - [SpaceX Caught an Entire Rocket Booster With Giant Mechanical Arms! 🚀🤯](https://youtu.be/CrXy7OIL3sg)
-- **16.9x** (175K views vs 10K usual, short, VideoFromSpace, 2.2M subs) - [Starship Flight 15: Double Catch Planned! 🚀🔥 #SpaceX #Starship #Flight15](https://youtu.be/7edpTtXPk9Y)
-- **15.7x** (201K views vs 13K usual, long, Farzad, 472K subs) - [Elon Just Made A Huge Announcement](https://youtu.be/K9rhZumUHyg)
-- **9.4x** (221K views vs 23K usual, long, Project America | News, 106K subs) - [Elon Musk Panics: Bernie Sanders Reveals What’ll Happen To Tesla Boss Now…| Midterm| Democrats](https://youtu.be/hnjxUaqiKmA)
-- **9.0x** (207K views vs 23K usual, long, TECH MAP, 134K subs) - [SpaceX's New Starship Welding Upgrade JUST ERASED 75% of Production Time!](https://youtu.be/ZEXW9LOloWY)
+- **372.1x** (374K views vs 1K usual, long, Launch Heaven, 30K subs) - [SpaceX - “STARSHIP GO FOR ORBIT” Documentary 4K](https://youtu.be/wlWF7kJokvk)
+- **130.8x** (3.7M views vs 28K usual, short, ZEHAN, 4K subs) - [SpaceX Caught an Entire Rocket Booster With Giant Mechanical Arms! 🚀🤯](https://youtu.be/w9dAtutWOx8)
+- **101.1x** (170K views vs 2K usual, short, Matt Wallace Tech, 11K subs) - [Tesla is cancelling the Cybertruck](https://youtu.be/8Ad17C7IKNY)
+- **91.6x** (197K views vs 2K usual, short, Visplained., 952 subs) - [Tesla Cybertruck Phased Out. Will the bet on Cybercabs Payoff?](https://youtu.be/tibGce4qssc)
+- **56.6x** (193K views vs 3K usual, short, mechatomy, 463 subs) - [SpaceX Is About to Catch a Spaceship](https://youtu.be/dSej7kXgUDk)
+- **47.9x** (168K views vs 4K usual, short, RAGECAR365, 112 subs) - [Elon Musk Should Be Worried About This! #supercars #tesla](https://youtu.be/OvYN4_yh_U4)
+- **36.6x** (2.3M views vs 62K usual, short, Beyond Earth, 32K subs) - [SpaceX Caught an Entire Rocket Booster With Giant Mechanical Arms! 🚀🤯](https://youtu.be/CrXy7OIL3sg)
+- **22.9x** (212K views vs 9K usual, short, VideoFromSpace, 2.2M subs) - [Starship Flight 15: Double Catch Planned! 🚀🔥 #SpaceX #Starship #Flight15](https://youtu.be/7edpTtXPk9Y)
+- **19.6x** (578K views vs 29K usual, long, Matt Pocius on Tesla Stock & Money, 78K subs) - [Elon Musk Just Predicted the Next 3 Years (Ron Baron Full Interview)](https://youtu.be/IjWbvz95w08)
+- **18.4x** (222K views vs 12K usual, long, Project America | News, 106K subs) - [Elon Musk Panics: Bernie Sanders Reveals What’ll Happen To Tesla Boss Now…| Midterm| Democrats](https://youtu.be/hnjxUaqiKmA)
+- **16.5x** (1.4M views vs 83K usual, short, AstroSpidy, 5K subs) - [SpaceX Just Made Rocket History! 🚀#shorts #viral #trending](https://youtu.be/EMbc5euL9Jg)
+- **15.8x** (103K views vs 7K usual, long, cfuentescerda, 31K subs) - [TESLA DROPS A BOMBSHELL: NEW BATTERY 1,500-MILE RANGE AND 5-MINUTE CHARGE WILL SHAKES EV INDUSTRY](https://youtu.be/5p4jM_mFxFU)
 
 ### Questions viewers asked that the creator did not answer
 
 Each is a possible article or video with proven interest (check first that it is still open and that the answer is factual and current).
 
-- "Thrusters seem to work fine on star ship but cant move a Tesla hu? yeah what ever" (11 likes, under [Tesla Flying Roadster Is Fake..😲 #shorts #tesla](https://youtu.be/FCvGTaQJJVo))
+- "Thanks to young Sheldon's notebook i guess? 😂" (13 likes, under [SpaceX Is About to Catch a Spaceship](https://youtu.be/dSej7kXgUDk))
 - "Watching that live gave me "Daniel LaRusso is gonna fight? Daniel LaRusso is gonna fight!" vibes." (4 likes, under [SpaceX - “STARSHIP GO FOR ORBIT” Documentary 4K](https://youtu.be/wlWF7kJokvk))
-- "Did he just say that the weight of the air makes the car heavier?? Genious" (4 likes, under [Tesla Flying Roadster Is Fake..😲 #shorts #tesla](https://youtu.be/FCvGTaQJJVo))
-- "Is this guy that says Tesla Roadster is fake, also beleave the earth is flat?" (3 likes, under [Tesla Flying Roadster Is Fake..😲 #shorts #tesla](https://youtu.be/FCvGTaQJJVo))
 - "Why isn't this on the official spacex channel?" (1 likes, under [SpaceX - “STARSHIP GO FOR ORBIT” Documentary 4K](https://youtu.be/wlWF7kJokvk))
 - "Why don't I see this on SpaceX channel tho?" (1 likes, under [SpaceX - “STARSHIP GO FOR ORBIT” Documentary 4K](https://youtu.be/wlWF7kJokvk))
-- "What causes the explosions at the end ?" (1 likes, under [SpaceX Caught an Entire Rocket Booster With Giant Mechanical Arms! 🚀🤯](https://youtu.be/w9dAtutWOx8))
 - "The shocking build quality had nothing to do with it then?" (1 likes, under [Tesla is cancelling the Cybertruck](https://youtu.be/8Ad17C7IKNY))
 - "Could a giant raptor be made and just have one massive engine for the booster instead of 33?" (0 likes, under [SpaceX - “STARSHIP GO FOR ORBIT” Documentary 4K](https://youtu.be/wlWF7kJokvk))
 - "5:22 is that a alien space ship underneath starship? was watching this live when it launched and noticed that but no one said anything..." (0 likes, under [SpaceX - “STARSHIP GO FOR ORBIT” Documentary 4K](https://youtu.be/wlWF7kJokvk))
-- "17:51 Is it just me or does this look like an edited clip?" (0 likes, under [SpaceX - “STARSHIP GO FOR ORBIT” Documentary 4K](https://youtu.be/wlWF7kJokvk))
-- "Awesome! But what was that large boom at the end When it was already landed?" (0 likes, under [SpaceX Caught an Entire Rocket Booster With Giant Mechanical Arms! 🚀🤯](https://youtu.be/w9dAtutWOx8))
+- "You guys got a 5.1 surround sound version of this? I reckon you should do it next time, go to town… oh and awesome work on the space stuff! Totally inspirational 👍 crack on" (0 likes, under [SpaceX - “STARSHIP GO FOR ORBIT” Documentary 4K](https://youtu.be/wlWF7kJokvk))
+- "How can you not love a vehicle that looks like a refrigerator laying on its side?" (0 likes, under [Tesla is cancelling the Cybertruck](https://youtu.be/8Ad17C7IKNY))
+- "Could we talk about metal finish??? My dishwasher looks better.. so does my refrigerator... and it has a small dent. At least they're flat and not all wavy." (0 likes, under [Tesla is cancelling the Cybertruck](https://youtu.be/8Ad17C7IKNY))
+- "Shouldn’t Tesla be getting charged with false advertising over that fake flying car? I wouldn’t go near that dishonest company." (0 likes, under [Tesla is cancelling the Cybertruck](https://youtu.be/8Ad17C7IKNY))
+- "The new Roadster is pretty. I wouldn’t want it to actually fly. When or where would anyone use that capability?" (0 likes, under [Tesla is cancelling the Cybertruck](https://youtu.be/8Ad17C7IKNY))
 
 ### How to use this
 

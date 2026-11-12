@@ -1,40 +1,66 @@
-# Daily review 2026-11-12 (seed written on the evening of 11 Nov; the morning review replaces it)
+# Daily review 2026-11-12
 
 ## Numbers
-- Channel on 11 Nov: 64 subscribers, 28,656 views (+2,240 in a day). Typical Short: about 1,000-1,400 views in 48 hours.
-- Shorts in the overlay format (since 9 Nov): "30 engines ... SpaceX uses 33" 1,220 views, watched 99%; "Catch $6 million
-  falling from space" 1,443 views, watched 68%; "Rocket fuel is the CHEAP part" (29 s) watched 122%. The older 45-55 s
-  Shorts were watched 60-87%. "Stayed" (not swiped away) is still far below the 70% goal for all of them.
-- Long videos: 8-155 views each. Site: about 10 visits a day.
+- Channel (12 Nov 05:06 UTC): 68 subscribers, 30,213 views. Last 24 h: +1,557 views, +4 subscribers.
+- Yesterday's Shorts, both uploaded around 23:00 Amsterdam time (only 7 hours of numbers, so a first indication):
+  - "Musk fired almost his entire Supercharger team." (consequence hook): 686 views, 8 likes (11.7 per 1,000).
+  - "The first Tesla ran on laptop batteries." (contrast hook): 283 views, 1 like.
+- Yesterday's long video (batteries, uploaded 23:23): 0 views after 7 hours. Typical long video: 26 views in 48 h.
+- Shorts of 10 Nov: Starship first flight 1,241 views (17.7 likes per 1,000); laser wiper 860 (14.0).
+- Our typical Short (29 Shorts, last 14 days): 971 views after 48 hours. Last ten: between 486 and 1,443.
+
+| day | channel views | new subscribers | site visits |
+|---|---|---|---|
+| 5 Nov | +1,567 | +3 | 19 |
+| 6 Nov | +650 | +2 | 12 |
+| 7 Nov | +3,151 | +4 | 9 |
+| 8 Nov | +1,144 | +4 | 9 |
+| 9 Nov | +3,267 | +2 | 8 |
+| 10 Nov | +2,240 | +2 | 13 |
+| 11 Nov | +1,557 | +4 | 14 |
 
 ## What works
-- Short and dense: the 29-second Shorts are watched (almost) to the end or looped. Indication, 3 Shorts only.
-- A clash of two numbers or a contradiction as hook (33 vs 30 engines; "the cheap part").
+- A hook that names a person and a product plus a hard event: at the same age (7 h, same upload hour) the
+  Supercharger Short has 2.4 times the views of the battery Short. One pair only: an indication. It matches
+  ops/performance.md: consequence hooks 1.6x views (6 Shorts).
+- Short Shorts are watched further: the four Shorts of 8-9 Nov (29-35 s) were watched 60-121% (two of them
+  99% and 121%), the twelve of 2-7 Nov (48-59 s) 60-90%. Part of this is plain arithmetic: a shorter video
+  reaches a high percentage sooner. People watched 21-35 seconds, against 30-48 seconds before.
 
 ## What does not
-- Our versions of topics that made small channels big stayed at 200-1,100 views: "Why Starlink satellites launch
-  stacked like a deck of cards" got 1.0M views on a channel with 2K subscribers (ours: 1,078) and "Why the biggest
-  rocket ever built has no landing legs" 879K on a 10K channel (ours: 199). So the topic alone is not enough: those
-  Shorts open on moving pictures, and their TITLE is the question itself ("Why ...", "How does ...", "What if ...").
-- We ignored the biggest proven topic of the month: the new "flying" Tesla Roadster. ops/proven-topics.md lists dozens
-  of Shorts with 2-27 million views, and small channels with explainers: "Tesla's Flying Roadster Isn't Really
-  Flying. Here's the Trick" (2.4M, 1K subscribers), "How Does Tesla's Roadster Hang Upside Down?" (2.4M, 4K),
-  "What If Tesla's Flying Roadster Runs Out of Air?" (531K, 3K), "How Did Tesla's New Roadster Flip in Mid-Air?"
-  (2.1M, 13K). We have 22 photos of the new Roadster (models/rd-4 ... rd-25, see PHOTOS.md) and our own articles of
-  21-25 October with the checked facts, but no Short in the new format about it.
+- Stayed (not swiped away) got WORSE, not better: 39-53% for the four Shorts of 8-9 Nov (middle value 50%),
+  against 45-69% for the twelve of 2-7 Nov (middle value 63%). Goal: over 70%. Four Shorts, of which only two
+  in the overlay format (51% and 53%), so not a conclusion, but the first seconds are our weakest point and the
+  new format has not fixed it yet. The numbers do not show whether the format, the topic or the hook causes it.
+- Views do not move: every Short since 6 Nov ends between about 490 and 1,450. No format change since 8 Nov
+  has lifted a Short above 1,500.
+- Proven topics have not helped us so far: Cybertruck phase-out (172-201K elsewhere) gave us 1,109 and 1,141;
+  Starlink stacking (1.0M elsewhere) 1,078; no landing legs (880K elsewhere) 199. That is our normal range.
+  The biggest proven topic, the flying Roadster, is still untested: yesterday's review was written at 23:36,
+  after both Shorts were already out, so yesterday says nothing about that instruction.
+- "Number" hooks: ops/performance.md says 0.5x views (6 Shorts), yet the two best recent Shorts open with a
+  number (1,451 and 1,241). Too few to choose between them: no rule on this today.
 
 ## Instructions for today
-1. Midday AND evening: a topic from the Roadster cluster in ops/proven-topics.md, two different questions (midday:
-   how the hovering/thrusters really work, checked against sources; evening: a story angle from the list). Verify
-   every claim against sources; use the rd-* photos, the most dramatic one (rd-14 hovering, rd-5 flying) first.
-2. Title of the Short = the question itself, starting with Why / How / What if, at most 45 characters.
-3. 20-30 seconds, 55-80 spoken words, every beat 2 pictures; run tools/check_article.py until 0 errors.
+1. Midday AND evening: a topic from the Roadster cluster in ops/proven-topics.md, two different questions
+   (midday: how the hovering really works; evening: a story angle from the list). Check every claim against
+   sources. Title of the Short = the question itself (Why / How / What if), at most 45 characters.
+2. Hook: at most 7 spoken words that name the car and one hard, certain event or consequence, with no build-up
+   and no "might". First picture: the most dramatic Roadster photo (rd-14 hovering or rd-5 flying).
+3. 20-30 seconds, 55-80 spoken words, every beat 2.5-4.0 s with 2 pictures (yesterday: beats of 2.2, 2.3 and
+   4.4 s); run tools/check_article.py until 0 errors.
 
 ## Test of the day
-A proven topic (Roadster) with a question title, compared with the Shorts of 9-11 Nov (own topic choice, statement
-titles). Judge on views after 24 and 48 hours; stayed/watched arrive 2-3 days later.
+The topic: flying Roadster instead of our own topic choice. Judge on views after 24 and 48 hours against our
+typical 971 (last ten: 486-1,443). Above 2,000 after 48 hours = the topic carries us; between 500 and 1,450 =
+no difference. Warning: the moving hook and quick cuts also start today, so a jump cannot be credited to the
+topic alone; both Roadster Shorts must agree before we call it a result. Stayed/watched follow in 2-3 days.
 
 ## Open problems
-- From 1 to 11 Nov no Short reached TikTok, Instagram or Facebook (a missing software part; repaired 11 Nov 23:35,
-  first three posts accepted by Buffer). Five missed Shorts are being posted one at a time (ops/social-queue.json).
-- A GitHub video run of 11 Nov 21:23 never started and cannot be cancelled; the evening Short was made by hand.
+- The midday Short of 11 Nov came out at 23:00 instead of midday (the video run failed, then waited): both
+  Shorts went up within 15 minutes of each other and the channel got fewer views that day.
+- GitHub run 43095744965 ("Make YouTube videos") and an IndexNow run have been stuck in the queue since
+  11 Nov 21:23 UTC. Later video runs did finish, so nothing is blocked; they can be cancelled by hand.
+- Empty Gemini credit: not reported any more in the latest video run (23:08 UTC). Not confirmed as topped up.
+- The channel view counter stood still between 22:30 and 05:06 UTC (30,213 both times): probably YouTube's
+  own delay, so the +1,557 of 11 Nov may be slightly too low.

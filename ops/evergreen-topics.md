@@ -81,7 +81,9 @@ Add new ideas at the bottom at any time.
 - [ ] The Cybertruck's missing wiper: from no wipers at the 2019 reveal, through laser rumours, to one giant blade - how Tesla's strangest part got designed
 - [ ] Is the Cybertruck the best truck ever made? What it does better, and worse, than any pickup before it
 - [ ] Tesla and SpaceX: one company in the making? How the two are already linked, and what a fusion would change
-- [ ] The new Roadster: a prelude to "suction" downforce and rocket tech in a road car? What is promised, and what is real
+- [x] The new Roadster: a prelude to "suction" downforce and rocket tech in a road car? What is promised, and what is real (musk-mocked-flying-cars-tesla-roadster-nine-year-story-2017-to-flight)
+- [ ] The day the Roadster rolled out of a Semi trailer: how Tesla hid a supercar inside its truck launch in November 2017
+- [ ] Founders Series: what $250,000 Roadster buyers were promised, and what nine years of waiting meant for deposit holders (check refunds and terms)
 - [ ] No more paint shop? Tesla's plan to build every car "unboxed", with coloured polyurethane panels: another revolution after the Cybercab (source: Munro Live interview with Lars Moravy and team)
 - [ ] The first base on the Moon: how Starship is meant to land astronauts there, and what a Moon station would need
 - [ ] From a dancer in a suit to walking robots: the story of Optimus, and why Musk calls it Tesla's biggest product ever

@@ -2,6 +2,15 @@
 
 Every article task adds an entry here (README, "ALGORITHM RULES", Self-learning). Stats: `ops/short-signals.md`.
 
+## 2026-11-12 - musk-mocked-flying-cars-tesla-roadster-nine-year-story-2017-to-flight (evening story)
+- Proof: "Elon Musk got laughed at explaining flying cars in 2018" (Hyperbolic AI, 10K subs) 2.8M views, 75x its usual; "This Flying Car Mocks Elon Musk's New Tesla Roadster" 27.5M (ops/proven-topics.md). Daily review instruction 1: evening = a story angle from the Roadster cluster.
+- Hooks: 0 "Musk mocked flying cars. His Roadster flew." (contrast) **picked** | 1 "Promised for 2020. It flew in 2026." (number) | 2 "Nine years of delays. Then it flipped." (consequence)
+- Why 0: 7 words (~2.7 s), person + car + one hard, certain event (daily review rule 2), a contradiction in Musk's own words (TED 2017: noise, downwash, the hubcap that could "guillotine me"); the flight is held back to beats 7-8. First picture rd-5 (lift-off on blue jets at night) for the moving hook + sfx gas-jet roar; sfx 2 = landing thud in beat 8.
+- Previous Short (evening): tesla-supercharger-story - 686 views, 11.7 likes/1000 after ~7 h (2.4x the battery Short). Render report: beat 4 ran 4.4 s; band in beat 9. Midday Roadster Short: beat 8 at 2.3 s.
+- Weak in previous: own topic without proof; one overlong middle beat (4.4 s).
+- Change now (test): topic = proven flying-Roadster cluster, story angle (second half of today's paired test, so both Roadster Shorts are judged together); format kept: 9 beats of 7-11 spoken words (~30 s, 79 words), 2 library pictures per beat, closing beat 9 words so it does not fall under 2.5 s. Title as a question ("Musk Hated Flying Cars. Why Does His Fly?", daily review rule 1).
+- Loop: last line "Now Tesla's own engineer says flying cars are real." -> restart "Musk mocked flying cars. His Roadster flew." A then-vs-now contrast across the cut ("...are real. / Musk mocked..."); last picture = first picture (rd-5).
+
 ## 2026-11-12 - how-does-tesla-flying-roadster-fly-fans-nitrogen-thrusters-explained (midday explainer)
 - Proof: "Tesla's Flying Roadster Isn't Really Flying. Here's the Trick" (Oddity Jar, 1K subs) 2.4M views, 1,097x its usual; "How Does Tesla's Roadster Hang Upside Down?" 2.4M at a 4K channel (ops/proven-topics.md). Daily review instruction 1: midday = how the hovering really works.
 - Hooks: 0 "Tesla's Roadster did a flip over a Semi." (consequence) **picked** | 1 "This Roadster drives upside down. On purpose." (contrast) | 2 "How does Tesla's Roadster fly?" (question)

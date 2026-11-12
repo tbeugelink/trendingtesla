@@ -1,0 +1,571 @@
+{
+ "slug": "how-does-tesla-flying-roadster-fly-fans-nitrogen-thrusters-explained",
+ "date": "2026-11-12",
+ "time": "12:46",
+ "category": "models",
+ "models": [
+  "roadster"
+ ],
+ "also": [
+  "spacex"
+ ],
+ "sources": [
+  {
+   "title": "TeslaNorth — Can the Tesla Roadster really fly? Lars Moravy says it's simple math",
+   "url": "https://teslanorth.com/2026/10/22/tesla-roadster-flying-moravy-simple-math/"
+  },
+  {
+   "title": "Motor1 (via Yahoo Autos) — Tesla Roadster thrusters need up to 6 hours to refill",
+   "url": "https://autos.yahoo.com/new-vehicles-and-reviews/articles/tesla-roadster-thrusters-6-hours-092004004.html"
+  },
+  {
+   "title": "Not a Tesla App — Tesla Roadster event recap: it flies, flips and hits 0-60 in 0.81s",
+   "url": "https://www.notateslaapp.com/news/4837/tesla-roadster-event-recap-it-flies-flips-and-hits-0-60-in-081s"
+  },
+  {
+   "title": "Wikipedia — Cold gas thruster",
+   "url": "https://en.wikipedia.org/wiki/Cold_gas_thruster"
+  }
+ ],
+ "images": [
+  "models/rd-14.jpg",
+  "models/rd-8.jpg",
+  "models/rd-7.jpg",
+  "models/rd-22.jpg",
+  "models/rd-23.jpg",
+  "models/rd-5.jpg"
+ ],
+ "image": "models/rd-14.jpg",
+ "label": {
+  "style": "c",
+  "en": {
+   "sub": "ROADSTER DID A FLIP",
+   "text": "OVER A SEMI"
+  },
+  "nl": {
+   "sub": "ROADSTER MAAKTE SALTO",
+   "text": "BOVEN EEN SEMI"
+  }
+ },
+ "en": {
+  "title": "How Does Tesla's 'Flying' Roadster Actually Fly? Fans, Nitrogen Thrusters and the Math",
+  "description": "The new Tesla Roadster drove upside down and flipped over a Semi. Here is how its suction fans and SpaceX-style nitrogen thrusters do it, and why it can only stay up for seconds.",
+  "body": "<p>Tesla's new Roadster drove up a curved ramp until it hung upside down, let go, rolled upright in midair and landed on its wheels. Minutes later it jumped a row of Tesla vehicles, a Semi among them, and did a flip on the way. Tesla's verdict afterwards: \"So…yes, it can fly.\" The demo took place at a SpaceX test site near Waco, Texas, in October 2026. The car has no rotors, no jet engine and no fuel tank, so what held it up is not obvious at all.</p>\n<h2>How does a car stay on a ramp upside down?</h2>\n<p><strong>With suction, not with rockets.</strong> At the back of the Roadster sit four fans of about 20 kW each, according to Tesla's vice president of vehicle engineering, Lars Moravy. They pull air from under the car while skirts drop down to seal the gaps, so the pressure under the floor is lower than the pressure on top. That difference presses the car onto the surface. Moravy says the system can pull up to 2 g.</p>\n<p>Turn the car upside down and the sum is simple. Gravity pulls it away from the ramp with 1 g; the fans press it towards the ramp with up to 2 g. What remains is roughly 1 g pressing the tyres onto the surface, enough to keep driving. Wings could not do this at low speed: below about 50 mph they make almost no downforce, while fans work even when the car stands still. Holding on is one thing, though. Lifting a car of close to two tonnes off the ground takes far more force.</p>\n<h2>So what actually lifts the Roadster into the air?</h2>\n<p><strong>Compressed nitrogen, blown out through nozzles.</strong> Behind the seats sits a 200-litre carbon-overwrapped pressure tank. The version that flies adds another 400 litres, 600 litres in total, filled with nitrogen at up to 10,000 psi, roughly 680 times normal air pressure. Open a valve and the gas rushes out of a nozzle; the gas goes one way and the car goes the other. Nothing burns. Moravy says Tesla chose nitrogen because it did not want to put fuel in a car.</p>\n<p>This is a cold gas thruster, an old piece of space technology. Satellites use it for small corrections, NASA's Manned Maneuvering Unit let astronauts fly free on nitrogen jets, and SpaceX uses cold gas thrusters to help steer Falcon 9 boosters back to Earth. On the Roadster, nozzles sit at the rear, in each corner and at the front for turning; reports put the total at about ten. A satellite thruster pushes with a few newtons, however, and a car needs vastly more.</p>\n<h2>How much push does it take to lift a car?</h2>\n<p><strong>Moravy says the system makes more than 80 kN, over three times the car's weight.</strong> He expects the Roadster to weigh just under 1,700 kg, but for his math he used a deliberately high 2,500 kg, gas and thrusters included. To hover, the thrusters must push up as hard as gravity pulls down: about 24.5 kN for 2,500 kg. Over 80 kN is more than three times that.</p>\n<p>That spare force is the point. It lets the car climb, slow its own fall and, in Moravy's words, still have \"spare air to flip\". British motoring journalist Tom Ford had written that \"the physics are off\" and that a car could not brake and rotate in the air like that. Moravy's reply on X was \"simple math really\". The force adds up. The real limit sits in the tank.</p>\n<h2>So how long can the Roadster stay in the air?</h2>\n<p><strong>Seconds, not minutes.</strong> Tesla has not published a flight time, so here is our own rough estimate. The flying version reportedly carries about 250 kg of gas, and a nitrogen cold gas thruster blows it out at roughly 700 metres per second. Multiply the two and you get the total push the tank can deliver. Spent at full power, 80 kN, that is gone in about two seconds; just hovering a 2,500 kg car would last about seven. In reality it is less, because the pressure and the push drop as the tank empties. Motor1 describes the system as good for a blast of about five seconds.</p>\n<p>Then comes the wait. \"Current fill times are like two to six hours,\" Moravy said; Tesla hopes to get that under half an hour. So the Roadster does not fly like a plane or a drone. It jumps: a short, controlled burst, a landing and hours at a filling station most owners will not have. That makes the question of what buyers actually get a fair one.</p>\n<h2>What will Roadster buyers really get?</h2>\n<p><strong>Three versions, and only the top one is built to fly.</strong></p>\n<ul>\n<li><strong>Performance:</strong> the road car, with the suction fans but no thrusters. Target: 0 to 60 mph in under 1.6 seconds.</li>\n<li><strong>Thrust:</strong> adds rear thrusters that push the car forward, not up. A live run at the event did 0 to 60 mph in 0.81 seconds.</li>\n<li><strong>Rocket:</strong> a single-seater with thrusters all around, invite only and not approved for public roads.</li>\n</ul>\n<p>Reservations cost $50,000 for Performance and $250,000 for Thrust, and Musk says production starts in 2028. None of the flying has been tested independently, and Tesla's own Q3 update still lists the Roadster as \"design development\". Moravy's answer to the doubters: \"we don't show things that we can't do in production.\" The Roadster does not defy gravity; it spends a tank of nitrogen in a few seconds to beat it, and then it has to wait.</p>"
+ },
+ "nl": {
+  "title": "Hoe vliegt Tesla's 'vliegende' Roadster echt? Ventilatoren, stikstofstuwers en de rekensom",
+  "description": "De nieuwe Tesla Roadster reed ondersteboven en maakte een salto boven een Semi. Zo doen zijn zuigventilatoren en stikstofstuwers in SpaceX-stijl dat, en daarom blijft hij maar seconden in de lucht.",
+  "body": "<p>Tesla's nieuwe Roadster reed een gebogen helling op tot hij ondersteboven hing, liet los, draaide zich in de lucht weer recht en landde op zijn wielen. Een paar minuten later sprong hij over een rij Tesla's, met een Semi erbij, en maakte onderweg een salto. Tesla's oordeel achteraf: \"So…yes, it can fly.\" De demonstratie was in oktober 2026 op een testterrein van SpaceX bij Waco in Texas. De auto heeft geen rotors, geen straalmotor en geen brandstoftank, dus wat hem in de lucht hield is helemaal niet vanzelfsprekend.</p>\n<h2>Hoe blijft een auto ondersteboven op een helling?</h2>\n<p><strong>Met zuigkracht, niet met raketten.</strong> Achterin de Roadster zitten vier ventilatoren van elk zo'n 20 kW, volgens Lars Moravy, Tesla's vicepresident voertuigtechniek. Ze zuigen lucht onder de auto weg terwijl schorten omlaag zakken om de kieren af te sluiten. Onder de bodem is de druk dan lager dan erboven, en dat verschil drukt de auto op het wegdek. Volgens Moravy haalt het systeem tot 2 g.</p>\n<p>Draai de auto om en de som is eenvoudig. De zwaartekracht trekt hem met 1 g van de helling af, de ventilatoren drukken hem er met tot 2 g tegenaan. Er blijft ongeveer 1 g over die de banden tegen het wegdek drukt: genoeg om door te rijden. Vleugels kunnen dat bij lage snelheid niet: onder zo'n 80 km/u leveren ze bijna geen neerwaartse druk, terwijl ventilatoren ook werken als de auto stilstaat. Blijven hangen is één ding. Een auto van bijna twee ton van de grond tillen vraagt veel meer kracht.</p>\n<h2>Wat tilt de Roadster dan de lucht in?</h2>\n<p><strong>Samengeperste stikstof, die door mondstukken naar buiten blaast.</strong> Achter de stoelen zit een drukvat van 200 liter, omwikkeld met koolstofvezel. De versie die vliegt krijgt er nog 400 liter bij, 600 liter in totaal, gevuld met stikstof tot 10.000 psi: zo'n 680 keer de gewone luchtdruk. Open een klep en het gas schiet uit een mondstuk; het gas gaat de ene kant op, de auto de andere. Er verbrandt niets. Volgens Moravy koos Tesla voor stikstof omdat het geen brandstof in een auto wilde stoppen.</p>\n<p>Dit heet een koudgasstuwer, een oud stuk ruimtevaarttechniek. Satellieten gebruiken het voor kleine correcties, met de Manned Maneuvering Unit van NASA zweefden astronauten vrij rond op stikstofstralen, en SpaceX gebruikt koudgasstuwers om Falcon 9-boosters mee terug naar de aarde te sturen. Op de Roadster zitten mondstukken achterop, op elke hoek en voorin om te draaien; volgens berichten zijn het er zo'n tien. Maar een stuwer van een satelliet duwt met een paar newton, en een auto heeft er enorm veel meer nodig.</p>\n<h2>Hoeveel duwkracht is nodig om een auto op te tillen?</h2>\n<p><strong>Volgens Moravy levert het systeem meer dan 80 kN, ruim drie keer het gewicht van de auto.</strong> Hij verwacht dat de Roadster net onder de 1.700 kilo weegt, maar rekende bewust met een veel te hoge 2.500 kilo, gas en stuwers inbegrepen. Om te zweven moeten de stuwers net zo hard omhoog duwen als de zwaartekracht omlaag trekt: zo'n 24,5 kN bij 2.500 kilo. Ruim 80 kN is meer dan drie keer zoveel.</p>\n<p>Die extra kracht is precies de bedoeling. Daarmee kan de auto stijgen, zijn eigen val afremmen en houdt hij, in Moravy's woorden, nog \"spare air to flip\" over. De Britse autojournalist Tom Ford had geschreven dat \"the physics are off\" en dat een auto in de lucht niet zo kan remmen en draaien. Moravy's antwoord op X: \"simple math really\". De kracht klopt dus. De echte grens zit in de tank.</p>\n<h2>Hoelang kan de Roadster dan in de lucht blijven?</h2>\n<p><strong>Seconden, geen minuten.</strong> Tesla heeft geen vliegtijd bekendgemaakt, dus dit is onze eigen ruwe schatting. De vliegende versie heeft naar verluidt zo'n 250 kilo gas aan boord, en een koudgasstuwer op stikstof blaast dat met ongeveer 700 meter per seconde naar buiten. Vermenigvuldig die twee en je hebt de totale duw die de tank kan leveren. Op vol vermogen, 80 kN, is dat in ongeveer twee seconden op; alleen zweven met een auto van 2.500 kilo houdt hij zo'n zeven seconden vol. In werkelijkheid is het minder, omdat de druk en de duwkracht afnemen naarmate de tank leegloopt. Motor1 beschrijft het systeem als goed voor een stoot van zo'n vijf seconden.</p>\n<p>Daarna is het wachten. \"Current fill times are like two to six hours,\" zei Moravy; Tesla hoopt dat terug te brengen tot onder een half uur. De Roadster vliegt dus niet zoals een vliegtuig of een drone. Hij springt: een korte, gecontroleerde stoot, een landing en daarna uren aan een vulstation dat de meeste eigenaren niet hebben. Dan is het een terechte vraag wat kopers eigenlijk krijgen.</p>\n<h2>Wat krijgen Roadster-kopers dan echt?</h2>\n<p><strong>Drie versies, en alleen de duurste is gebouwd om te vliegen.</strong></p>\n<ul>\n<li><strong>Performance:</strong> de auto voor de openbare weg, met de zuigventilatoren maar zonder stuwers. Doel: van 0 naar 100 km/u (0-60 mph) in minder dan 1,6 seconde.</li>\n<li><strong>Thrust:</strong> krijgt stuwers achterop die de auto vooruit duwen, niet omhoog. Een live run tijdens het evenement haalde 0-60 mph in 0,81 seconde.</li>\n<li><strong>Rocket:</strong> een eenzitter met stuwers rondom, alleen op uitnodiging en niet toegelaten op de openbare weg.</li>\n</ul>\n<p>Een reservering kost $50.000 voor de Performance en $250.000 voor de Thrust, en volgens Musk begint de productie in 2028. Niets van het vliegen is onafhankelijk getest, en Tesla's eigen kwartaalupdate over Q3 noemt de Roadster nog steeds \"design development\". Moravy's antwoord aan de twijfelaars: \"we don't show things that we can't do in production.\" De Roadster tart de zwaartekracht niet; hij verbruikt een tank stikstof in een paar seconden om haar te verslaan, en moet daarna wachten.</p>"
+ },
+ "short": {
+  "hook": "consequence",
+  "yt_title_en": "How Does Tesla's Roadster Fly?",
+  "yt_title_nl": "Hoe Vliegt Tesla's Roadster?",
+  "hooks": [
+   {
+    "text": "Tesla's Roadster did a flip over a Semi.",
+    "type": "consequence"
+   },
+   {
+    "text": "This Roadster drives upside down. On purpose.",
+    "type": "contrast"
+   },
+   {
+    "text": "How does Tesla's Roadster fly?",
+    "type": "question"
+   }
+  ],
+  "hook_pick": {
+   "index": 0,
+   "why": "8 short words (~2.3 s) that name the car and one hard, certain event with no 'might' and no build-up, as the daily review asks; a Semi is a size everyone can picture, so the stakes land without sound; the 'how?' it raises is answered only in beats 7-9 (seconds of gas). Hook 1 gives away the fan trick early, hook 2 is a bare question with no event"
+  },
+  "hook_motion": "the white Roadster rises slowly on its four blue gas jets, the jets flicker and dust swirls on the ground below, the camera tilts up a little",
+  "story": [
+   {
+    "part": "hook",
+    "t": "0-2.6s",
+    "text": "Tesla's Roadster did a flip over a Semi.",
+    "overlay": "Roadster did a flip over a Semi.",
+    "lib": [
+     "../models/rd-14.jpg",
+     "../models/rd-7.jpg"
+    ],
+    "sfx": "sharp roaring hiss of high-pressure gas jets blasting down, dust swirling",
+    "visual": "hard open on the white Roadster hovering on four blue gas jets under a blue sky (moving clip: it rises, jets flicker), cut on 'flip' to the car airborne in a cloud of smoke; only the hook sentence on screen, no logo"
+   },
+   {
+    "part": "tension",
+    "t": "2.6-5.4s",
+    "text": "No propellers. No fuel. Just bottled gas.",
+    "overlay": "No propellers. No fuel. Just gas.",
+    "lib": [
+     "../models/rd-23.jpg",
+     "../models/rd-18.jpg"
+    ],
+    "visual": "macro of the polished thruster nozzles, then the rear of the Roadster with its wing and four nozzles"
+   },
+   {
+    "part": "tension",
+    "t": "5.4-8.6s",
+    "text": "Nitrogen, squeezed into tanks at 10,000 psi.",
+    "overlay": "Nitrogen squeezed to 10,000 psi",
+    "lib": [
+     "../models/rd-22.jpg",
+     "../models/rd-21.jpg"
+    ],
+    "sfx": "short sharp hiss of a high-pressure gas valve opening",
+    "visual": "the carbon pressure tank inside the car, then the tank with its nozzle pipes on display; slow push-in"
+   },
+   {
+    "part": "tension",
+    "t": "8.6-11.6s",
+    "text": "The same trick steers SpaceX's Falcon 9 boosters.",
+    "overlay": "Same trick steers Falcon 9 boosters",
+    "lib": [
+     "../topics/spacex-6.jpg",
+     "../topics/falcon-boosters.jpg"
+    ],
+    "visual": "a Falcon 9 booster landing on a drone ship at sunset, then two boosters landing side by side at dusk"
+   },
+   {
+    "part": "tension",
+    "t": "11.6-15s",
+    "text": "Its push is more than three times the car's weight.",
+    "overlay": "Push: over 3x the car's weight",
+    "lib": [
+     "../models/rd-5.jpg",
+     "../topics/roadster-flying.jpg"
+    ],
+    "visual": "the Roadster lifting on blue jets at night, then hovering over a dark track"
+   },
+   {
+    "part": "tension",
+    "t": "15-18.6s",
+    "text": "Upside down, fans pull it onto the ramp with 2 g.",
+    "overlay": "Upside down, fans pull with 2 g",
+    "lib": [
+     "../models/rd-8.jpg",
+     "../models/rd-9.jpg"
+    ],
+    "visual": "the Roadster's underside with its round fans, driving upside down on the red-edged ramp, then the loop track from above"
+   },
+   {
+    "part": "payoff",
+    "t": "18.6-21.6s",
+    "text": "But 600 litres of gas lasts only seconds.",
+    "overlay": "600 litres of gas = a few seconds",
+    "lib": [
+     "../models/rd-20.jpg",
+     "../models/rd-4.jpg"
+    ],
+    "visual": "the red Track Mode screen with the thruster pressure readout, then the Roadster from behind on a dusty road"
+   },
+   {
+    "part": "payoff",
+    "t": "21.6-24.4s",
+    "text": "Refilling the tanks takes hours, not minutes.",
+    "overlay": "Refill: hours, not minutes",
+    "lib": [
+     "../models/rd-16.jpg",
+     "../models/rd-11.jpg"
+    ],
+    "visual": "the Roadster parked in a car park, then with its scissor door open, waiting"
+   },
+   {
+    "part": "payoff",
+    "t": "24.4-27.8s",
+    "text": "So it doesn't fly for long. It jumps. Hard.",
+    "overlay": "It doesn't fly long. It jumps. Hard.",
+    "lib": [
+     "../models/rd-7.jpg",
+     "../models/rd-14.jpg"
+    ],
+    "visual": "the car airborne in smoke, ending on the same hovering blue-sky frame the Short opens on, so the restart cut is invisible"
+   }
+  ],
+  "loop": {
+   "last": "So it doesn't fly for long. It jumps. Hard.",
+   "how": "a plain verdict that the restart proves: '...It jumps. Hard. Tesla's Roadster did a flip over a Semi.' The hook becomes the example of that hard jump; no shared words with the hook, no colon or half sentence, and the last picture is the same hovering frame the Short opens on"
+  },
+  "signals": "Stayed %: a proven topic (the flying Roadster pulled millions of views at small channels) with a hook that names the car and a hard event in 8 words, over a moving first picture with a gas-jet sound. Watched %/loops: 9 beats of 7-11 spoken words (est. 2.7-3.6 s, ~28 s) and the answer held back until beat 7. Likes/shares: a myth check ('it doesn't really fly long') people like to argue about.",
+  "learning": {
+   "prev": "why-tesla-batteries-use-thousands-of-small-cells-18650-2170-4680-explained",
+   "prev_stats": "283 views and 3.5 likes per 1,000 after ~7 h (the evening Supercharger Short had 686 at the same age, 11.7 likes per 1,000); stayed/watched not reported yet; our typical Short 971 views after 48 h",
+   "weakest_hook": "\"The first Tesla ran on laptop batteries.\" - a trivia contrast with no event and no stakes; the 2.4x gap with the Supercharger hook (person + product + hard event) at the same age points that way",
+   "why_stalled": "own topic choice with no proven pull, a hook without an event; render report: beats 2 (2.3 s) and 9 (2.2 s) were too short because they were 5-6 word lines, and contrast bands in beats 3, 6 and 7",
+   "change": "topic taken from the proven flying-Roadster cluster (the daily review's test of the day) with a car + hard-event hook; every beat now 7-11 spoken words so none drops under 2.5 s; the hook picture is chosen to move (moving-hook test, renderer side)",
+   "test": "topic: the proven flying-Roadster topic instead of our own choice (test of the day in ops/daily-review.md); format, length (~28 s), beat sizing and 2 pictures per beat stay as before"
+  },
+  "proof": {
+   "source": "Tesla's Flying Roadster Isn't Really Flying. Here's the Trick - https://youtu.be/741vnnsr9XI",
+   "views": 2400000,
+   "why": "a 1K-subscriber channel got 2.4M views (1,097x its usual) with exactly this question, and 'How Does Tesla's Roadster Hang Upside Down?' did 2.4M at a 4K channel; our angle adds what those skip: the real numbers (2 g of fan suction, 80 kN vs 24.5 kN to hover) and how many seconds 600 litres of nitrogen lasts"
+  },
+  "en": "Tesla's Roadster did a flip over a Semi. No propellers. No fuel. Just bottled gas. Nitrogen, squeezed into tanks at 10,000 psi. The same trick steers SpaceX's Falcon 9 boosters. Its push is more than three times the car's weight. Upside down, fans pull it onto the ramp with 2 g. But 600 litres of gas lasts only seconds. Refilling the tanks takes hours, not minutes. So it doesn't fly for long. It jumps. Hard.",
+  "nl": "Tesla's Roadster maakte een salto boven een Semi. Geen propellers. Geen brandstof. Alleen gas uit een fles. Stikstof, in tanks geperst tot 10.000 psi. Met hetzelfde trucje stuurt SpaceX zijn Falcon 9-boosters. De duwkracht is meer dan drie keer het gewicht van de auto. Ondersteboven zuigen ventilatoren hem met 2 g tegen de helling. Maar 600 liter gas is in een paar seconden op. Bijvullen duurt uren, geen minuten. Dus lang vliegen doet hij niet. Hij springt. Hard."
+ },
+ "video": {
+  "en": [
+   {
+    "text": "Tesla's Roadster did a flip over a Semi. First it drove up a curved ramp until it hung upside down. Then it let go, rolled upright in midair and landed on its wheels. No wings did that. No propellers. No jet fuel. By the end of this video you will know exactly what lifted it. And the one number that decides how long it can stay up.",
+    "img": [
+     "models/rd-14.jpg",
+     "models/rd-8.jpg",
+     "models/rd-7.jpg"
+    ]
+   },
+   {
+    "text": "This was not a movie trick. It happened at a SpaceX test site near Waco, Texas, in October 2026, in front of a live audience. Tesla's verdict afterwards was short. Yes, it can fly. A British car journalist was not convinced. He wrote that the physics were off. A car could not brake and rotate in the air like that. So let's do the physics.",
+    "img": [
+     "models/rd-25.jpg",
+     "models/rd-5.jpg"
+    ]
+   },
+   {
+    "head": "How does a car stay on a ramp upside down?",
+    "pop": [
+     {
+      "say": "",
+      "show": "UPSIDE DOWN?"
+     }
+    ],
+    "img": [
+     "models/rd-8.jpg"
+    ]
+   },
+   {
+    "text": "The first trick has nothing to do with rockets. It is suction. At the back of the Roadster sit 4 fans. Tesla's vehicle engineering chief, Lars Moravy, says each one has about 20 kilowatts. They pull air out from under the car, while skirts drop down to seal the gaps. Now the pressure under the floor is lower than on top. That difference presses the car down. Moravy says it can pull up to 2 g.",
+    "img": [
+     "models/rd-18.jpg",
+     "models/rd-4.jpg",
+     "models/rd-6.jpg"
+    ]
+   },
+   {
+    "text": "Now turn the car over. Gravity pulls it away from the ramp with 1 g. The fans press it onto the ramp with up to 2 g. What is left is about 1 g, pushing the tyres onto the surface. Enough to keep driving. And here is the clever part. Wings only make downforce at speed. Below about 50 miles per hour they do almost nothing. Fans work even when the car stands still. But holding on is one thing. Lifting a car of almost 2 tonnes takes far more force.",
+    "img": [
+     "models/rd-9.jpg",
+     "models/rd-8.jpg",
+     "models/rd-10.jpg"
+    ]
+   },
+   {
+    "head": "So what actually lifts the Roadster into the air?",
+    "pop": [
+     {
+      "say": "",
+      "show": "WHAT LIFTS IT?"
+     }
+    ],
+    "img": [
+     "models/rd-5.jpg"
+    ]
+   },
+   {
+    "text": "Compressed nitrogen. Behind the seats sits a carbon wrapped pressure tank of 200 litres. The version that flies adds another 400 litres. 600 litres in total. The gas is stored at up to 10,000 psi. That is about 680 times normal air pressure. Open a valve, and the gas rushes out of a nozzle. The gas goes one way. The car goes the other. Nothing burns. Moravy says Tesla chose nitrogen because it did not want to put fuel in a car.",
+    "img": [
+     "models/rd-22.jpg",
+     "models/rd-21.jpg",
+     "models/rd-23.jpg"
+    ]
+   },
+   {
+    "text": "This is called a cold gas thruster. It is old space technology. Satellites use it for small corrections. In 1984, NASA astronauts flew free in space with a backpack full of nitrogen thrusters. SpaceX uses cold gas thrusters to help steer Falcon 9 boosters back to Earth. The Roadster has nozzles at the rear, in each corner and at the front. Reports say about 10. Software decides which ones fire, and for how long.",
+    "img": [
+     "spacex-6.jpg",
+     "falcon-boosters.jpg",
+     "models/rd-18.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Manned Maneuvering Unit",
+       "MMU spacewalk",
+       "Manned Maneuvering Unit astronaut"
+      ],
+      "want": "an astronaut flying free in space with NASA's Manned Maneuvering Unit backpack"
+     }
+    ]
+   },
+   {
+    "head": "How much push does it take to lift a car?",
+    "pop": [
+     {
+      "say": "",
+      "show": "HOW MUCH PUSH?"
+     }
+    ],
+    "img": [
+     "models/rd-23.jpg"
+    ]
+   },
+   {
+    "text": "Start with the weight. Moravy expects the Roadster to weigh just under 1,700 kilos. For his math he used a deliberately high number. 2,500 kilos, gas and thrusters included. To hover, the thrusters must push up as hard as gravity pulls down. For 2,500 kilos, that is about 24.5 kilonewtons. Moravy says the system can produce more than 80 kilonewtons. More than 3 times what it takes to float.",
+    "img": [
+     "models/rd-17.jpg",
+     "models/rd-14.jpg",
+     "models/rd-15.jpg"
+    ]
+   },
+   {
+    "text": "Compare that with the astronaut backpack. Each of its thrusters pushed with about 6 newtons. The Roadster pushes more than 10,000 times harder. And that spare force is the whole point. The car can climb, slow its own fall, and still have, in Moravy's words, spare air to flip. His summary. Simple math, really. So the critic was wrong about the force. But the force was never the real limit.",
+    "img": [
+     "models/rd-7.jpg",
+     "models/rd-5.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Manned Maneuvering Unit",
+       "MMU NASA"
+      ],
+      "want": "NASA's Manned Maneuvering Unit nitrogen backpack"
+     }
+    ]
+   },
+   {
+    "head": "So how long can the Roadster stay in the air?",
+    "pop": [
+     {
+      "say": "",
+      "show": "HOW LONG?"
+     }
+    ],
+    "img": [
+     "models/rd-20.jpg"
+    ]
+   },
+   {
+    "text": "Seconds. Not minutes. Tesla has not published a flight time, so here is our own rough math. The flying version reportedly carries about 250 kilos of gas. A nitrogen thruster blows it out at roughly 700 metres per second. Multiply the two, and you get the total push in the tank. Spend it at full power, 80 kilonewtons, and it is gone in about 2 seconds. Just hovering a 2,500 kilo car, you get about 7. In reality it is less, because the push drops as the tank empties.",
+    "img": [
+     "models/rd-20.jpg",
+     "models/rd-22.jpg",
+     "models/rd-14.jpg"
+    ]
+   },
+   {
+    "text": "And then you wait. Moravy says filling the tanks takes 2 to 6 hours today. Tesla hopes to get that under half an hour. So the Roadster does not fly like a plane. Not even like a drone. It jumps. A short, controlled burst. A landing. Then hours at a filling station most owners will never have.",
+    "img": [
+     "models/rd-16.jpg",
+     "models/rd-11.jpg"
+    ]
+   },
+   {
+    "head": "What will Roadster buyers really get?",
+    "pop": [
+     {
+      "say": "",
+      "show": "WHAT DO BUYERS GET?"
+     }
+    ],
+    "img": [
+     "models/rd-15.jpg"
+    ]
+   },
+   {
+    "text": "3 versions. Performance is the road car. It gets the fans, but no thrusters. Tesla targets 0 to 60 miles per hour in under 1.6 seconds. Thrust adds rear thrusters that push the car forward, not up. At the event, a live run did 0 to 60 in 0.81 seconds. Rocket is the one that flies. One seat, thrusters all around, invite only, and not approved for public roads.",
+    "img": [
+     "models/rd-6.jpg",
+     "models/rd-13.jpg",
+     "models/rd-18.jpg"
+    ]
+   },
+   {
+    "text": "Reservations cost 50,000 dollars for Performance and 250,000 for Thrust. Musk says production starts in 2028. None of the flying has been tested independently. Tesla's own quarterly update still lists the Roadster as design development. Moravy's answer to the doubters. We don't show things that we can't do in production.",
+    "img": [
+     "models/rd-25.jpg",
+     "models/rd-12.jpg"
+    ]
+   },
+   {
+    "text": "So think back to that flip over the Semi. It was not wings, and it was not magic. 4 fans to hold on. 600 litres of nitrogen to push. More than 3 times the force it needs to float. And the one number that decides it all. Seconds. Just enough seconds for Tesla's Roadster to do a flip over a Semi.",
+    "img": [
+     "models/rd-7.jpg",
+     "models/rd-14.jpg"
+    ]
+   }
+  ],
+  "nl": [
+   {
+    "img": [
+     "models/rd-14.jpg",
+     "models/rd-8.jpg",
+     "models/rd-7.jpg"
+    ],
+    "text": "Tesla's Roadster maakte een salto boven een Semi. Eerst reed hij een gebogen helling op tot hij ondersteboven hing. Toen liet hij los, draaide zich in de lucht recht en landde op zijn wielen. Geen vleugels. Geen propellers. Geen kerosine. Aan het eind van deze video weet je precies wat hem optilde. En welk ene getal bepaalt hoelang hij in de lucht kan blijven."
+   },
+   {
+    "img": [
+     "models/rd-25.jpg",
+     "models/rd-5.jpg"
+    ],
+    "text": "Dit was geen filmtruc. Het gebeurde op een testterrein van SpaceX bij Waco in Texas, in oktober 2026, met publiek erbij. Tesla's oordeel achteraf was kort. Ja, hij kan vliegen. Een Britse autojournalist was niet overtuigd. Hij schreef dat de natuurkunde niet klopte. Een auto kan in de lucht niet zo remmen en draaien. Laten we de natuurkunde dus maar doen."
+   },
+   {
+    "img": [
+     "models/rd-8.jpg"
+    ],
+    "head": "Hoe blijft een auto ondersteboven op een helling?",
+    "pop": [
+     {
+      "say": "",
+      "show": "ONDERSTEBOVEN?"
+     }
+    ]
+   },
+   {
+    "img": [
+     "models/rd-18.jpg",
+     "models/rd-4.jpg",
+     "models/rd-6.jpg"
+    ],
+    "text": "De eerste truc heeft niets met raketten te maken. Het is zuigkracht. Achterin de Roadster zitten 4 ventilatoren. Tesla's hoofd voertuigtechniek, Lars Moravy, zegt dat elk zo'n 20 kilowatt heeft. Ze zuigen lucht onder de auto weg, terwijl schorten omlaag zakken om de kieren te dichten. Onder de bodem is de druk dan lager dan erboven. Dat verschil drukt de auto omlaag. Volgens Moravy haalt het tot 2 g."
+   },
+   {
+    "img": [
+     "models/rd-9.jpg",
+     "models/rd-8.jpg",
+     "models/rd-10.jpg"
+    ],
+    "text": "Draai de auto nu om. De zwaartekracht trekt hem met 1 g van de helling af. De ventilatoren drukken hem er met tot 2 g tegenaan. Er blijft ongeveer 1 g over, die de banden tegen het wegdek drukt. Genoeg om door te rijden. En nu het slimme deel. Vleugels maken alleen neerwaartse druk bij snelheid. Onder zo'n 80 kilometer per uur doen ze bijna niets. Ventilatoren werken ook als de auto stilstaat. Maar blijven hangen is één ding. Een auto van bijna 2 ton optillen vraagt veel meer kracht."
+   },
+   {
+    "img": [
+     "models/rd-5.jpg"
+    ],
+    "head": "Wat tilt de Roadster dan de lucht in?",
+    "pop": [
+     {
+      "say": "",
+      "show": "WAT TILT HEM OP?"
+     }
+    ]
+   },
+   {
+    "img": [
+     "models/rd-22.jpg",
+     "models/rd-21.jpg",
+     "models/rd-23.jpg"
+    ],
+    "text": "Samengeperste stikstof. Achter de stoelen zit een drukvat van 200 liter, omwikkeld met koolstofvezel. De versie die vliegt krijgt er 400 liter bij. 600 liter in totaal. Het gas zit erin tot 10.000 psi. Dat is zo'n 680 keer de gewone luchtdruk. Open een klep, en het gas schiet uit een mondstuk. Het gas gaat de ene kant op. De auto de andere. Er verbrandt niets. Volgens Moravy koos Tesla stikstof omdat het geen brandstof in een auto wilde."
+   },
+   {
+    "img": [
+     "spacex-6.jpg",
+     "falcon-boosters.jpg",
+     "models/rd-18.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Manned Maneuvering Unit",
+       "MMU spacewalk",
+       "Manned Maneuvering Unit astronaut"
+      ],
+      "want": "an astronaut flying free in space with NASA's Manned Maneuvering Unit backpack"
+     }
+    ],
+    "text": "Dit heet een koudgasstuwer. Het is oude ruimtevaarttechniek. Satellieten gebruiken het voor kleine correcties. In 1984 zweefden NASA-astronauten vrij in de ruimte met een rugzak vol stikstofstuwers. SpaceX gebruikt koudgasstuwers om Falcon 9-boosters mee terug naar de aarde te sturen. De Roadster heeft mondstukken achterop, op elke hoek en voorin. Volgens berichten zo'n 10. Software bepaalt welke er vuren, en hoelang."
+   },
+   {
+    "img": [
+     "models/rd-23.jpg"
+    ],
+    "head": "Hoeveel duwkracht is nodig om een auto op te tillen?",
+    "pop": [
+     {
+      "say": "",
+      "show": "HOEVEEL DUWKRACHT?"
+     }
+    ]
+   },
+   {
+    "img": [
+     "models/rd-17.jpg",
+     "models/rd-14.jpg",
+     "models/rd-15.jpg"
+    ],
+    "text": "Begin bij het gewicht. Moravy verwacht dat de Roadster net onder de 1.700 kilo weegt. Voor zijn som nam hij bewust een veel te hoog getal. 2.500 kilo, gas en stuwers inbegrepen. Om te zweven moeten de stuwers net zo hard omhoog duwen als de zwaartekracht omlaag trekt. Bij 2.500 kilo is dat zo'n 24,5 kilonewton. Volgens Moravy levert het systeem meer dan 80 kilonewton. Meer dan 3 keer wat nodig is om te zweven."
+   },
+   {
+    "img": [
+     "models/rd-7.jpg",
+     "models/rd-5.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Manned Maneuvering Unit",
+       "MMU NASA"
+      ],
+      "want": "NASA's Manned Maneuvering Unit nitrogen backpack"
+     }
+    ],
+    "text": "Vergelijk dat met de astronautenrugzak. Elke stuwer daarvan duwde met zo'n 6 newton. De Roadster duwt meer dan 10.000 keer zo hard. En die extra kracht is precies de bedoeling. De auto kan stijgen, zijn eigen val afremmen en heeft dan nog, in Moravy's woorden, lucht over voor een salto. Zijn samenvatting. Gewoon simpele rekensom. De criticus had het dus mis over de kracht. Maar de kracht was nooit de echte grens."
+   },
+   {
+    "img": [
+     "models/rd-20.jpg"
+    ],
+    "head": "Hoelang kan de Roadster dan in de lucht blijven?",
+    "pop": [
+     {
+      "say": "",
+      "show": "HOELANG?"
+     }
+    ]
+   },
+   {
+    "img": [
+     "models/rd-20.jpg",
+     "models/rd-22.jpg",
+     "models/rd-14.jpg"
+    ],
+    "text": "Seconden. Geen minuten. Tesla heeft geen vliegtijd bekendgemaakt, dus dit is onze eigen ruwe som. De vliegende versie heeft naar verluidt zo'n 250 kilo gas aan boord. Een stikstofstuwer blaast dat met ongeveer 700 meter per seconde naar buiten. Vermenigvuldig die twee, en je hebt de totale duw in de tank. Op vol vermogen, 80 kilonewton, is dat in ongeveer 2 seconden op. Alleen zweven met een auto van 2.500 kilo: zo'n 7. In werkelijkheid is het minder, want de duw neemt af als de tank leegloopt."
+   },
+   {
+    "img": [
+     "models/rd-16.jpg",
+     "models/rd-11.jpg"
+    ],
+    "text": "En dan is het wachten. Volgens Moravy duurt het vullen van de tanks nu 2 tot 6 uur. Tesla hoopt dat onder een half uur te krijgen. De Roadster vliegt dus niet zoals een vliegtuig. Zelfs niet zoals een drone. Hij springt. Een korte, gecontroleerde stoot. Een landing. Dan uren aan een vulstation dat de meeste eigenaren nooit zullen hebben."
+   },
+   {
+    "img": [
+     "models/rd-15.jpg"
+    ],
+    "head": "Wat krijgen Roadster-kopers dan echt?",
+    "pop": [
+     {
+      "say": "",
+      "show": "WAT KRIJGEN KOPERS?"
+     }
+    ]
+   },
+   {
+    "img": [
+     "models/rd-6.jpg",
+     "models/rd-13.jpg",
+     "models/rd-18.jpg"
+    ],
+    "text": "3 versies. Performance is de auto voor de openbare weg. Met de ventilatoren, maar zonder stuwers. Tesla mikt op 0 tot 60 mijl per uur in minder dan 1,6 seconde. Thrust krijgt stuwers achterop die de auto vooruit duwen, niet omhoog. Tijdens het evenement haalde een live run 0 tot 60 in 0,81 seconde. Rocket is de versie die vliegt. 1 stoel, stuwers rondom, alleen op uitnodiging, en niet toegelaten op de openbare weg."
+   },
+   {
+    "img": [
+     "models/rd-25.jpg",
+     "models/rd-12.jpg"
+    ],
+    "text": "Een reservering kost 50.000 dollar voor de Performance en 250.000 voor de Thrust. Volgens Musk begint de productie in 2028. Niets van het vliegen is onafhankelijk getest. Tesla's eigen kwartaalupdate noemt de Roadster nog steeds in ontwerpfase. Moravy's antwoord aan de twijfelaars. We laten niets zien wat we in productie niet kunnen."
+   },
+   {
+    "img": [
+     "models/rd-7.jpg",
+     "models/rd-14.jpg"
+    ],
+    "text": "Denk dus terug aan die salto boven de Semi. Het waren geen vleugels, en het was geen magie. 4 ventilatoren om vast te houden. 600 liter stikstof om te duwen. Meer dan 3 keer de kracht die nodig is om te zweven. En het ene getal dat alles bepaalt. Seconden. Net genoeg seconden voor Tesla's Roadster om een salto te maken boven een Semi."
+   }
+  ],
+  "yt_title_en": "How Does the Tesla Roadster Fly? Fans, Thrusters and Flight Time Explained",
+  "yt_title_nl": "Hoe Vliegt de Tesla Roadster? Ventilatoren, Stuwers en Vliegtijd Uitgelegd"
+ }
+}

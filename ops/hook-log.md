@@ -2,6 +2,16 @@
 
 Every article task adds an entry here (README, "ALGORITHM RULES", Self-learning). Stats: `ops/short-signals.md`.
 
+## 2026-11-12 - how-does-tesla-flying-roadster-fly-fans-nitrogen-thrusters-explained (midday explainer)
+- Proof: "Tesla's Flying Roadster Isn't Really Flying. Here's the Trick" (Oddity Jar, 1K subs) 2.4M views, 1,097x its usual; "How Does Tesla's Roadster Hang Upside Down?" 2.4M at a 4K channel (ops/proven-topics.md). Daily review instruction 1: midday = how the hovering really works.
+- Hooks: 0 "Tesla's Roadster did a flip over a Semi." (consequence) **picked** | 1 "This Roadster drives upside down. On purpose." (contrast) | 2 "How does Tesla's Roadster fly?" (question)
+- Why 0: 8 short words (~2.3 s) naming the car and one hard, certain event (daily review rule 2), a Semi is a size everyone pictures; the "how?" is paid off only in beats 7-9. First picture rd-14 (hovering on four jets, blue sky) for the moving hook + sfx "roaring hiss of high-pressure gas jets".
+- Previous Short (midday): why-tesla-batteries-use-thousands-of-small-cells - 283 views, 3.5 likes/1000 after ~7 h (Supercharger Short 686 at the same age). Render report: beats 2 (2.3 s) and 9 (2.2 s) too short (5-6 word lines), bands in beats 3, 6, 7.
+- Weak in previous: trivia contrast hook with no event and no stakes; own topic choice without proof.
+- Change now (test): topic = proven flying-Roadster cluster (test of the day); format kept: 9 beats of 7-11 spoken words (est. 2.7-3.6 s, ~28 s, 75 words), 2 pictures per beat, every beat >= 7 words so none falls under 2.5 s. Moving hook is also new today (renderer side).
+- Loop: last line "So it doesn't fly for long. It jumps. Hard." is a verdict the restart illustrates -> "...It jumps. Hard. Tesla's Roadster did a flip over a Semi." No shared words, last picture = first picture (rd-14).
+- Long video, first 20 s: the hook claim first, then the upside-down ramp and an explicit open loop ("the one number that decides how long it can stay up"), paid off in the flight-time section and the last block ("Seconds."). Previous long video opened on a then-vs-now pair; this one adds a named critic ("the physics are off") as a second loop.
+
 ## 2026-11-11 - tesla-supercharger-story-six-free-solar-stations-to-85000-plugs-team-fired (evening story)
 - Hooks: 0 "Musk fired almost his entire Supercharger team." (consequence) **picked** | 1 "Tesla promised free charging. Forever." (contrast) | 2 "Six stations in 2012. Over 85,000 plugs now." (number)
 - Why 0: a shock consequence with person + product in 6 words (~2.4 s), overlay "Musk fired the Supercharger team." (33 chars) whole from frame 1; rotates away from contrast (midday) and number (evening before); "free forever" and 6 -> 85,000 are kept as open loops for beats 3-9. Current hook: Tesla's Megachargers and "Chicago's first 50 Semis en route" (11 Nov), Supercharger network past 85,000 connectors.

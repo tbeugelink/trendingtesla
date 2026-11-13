@@ -2,6 +2,16 @@
 
 Every article task adds an entry here (README, "ALGORITHM RULES", Self-learning). Stats: `ops/short-signals.md`.
 
+## 2026-11-13 - how-spacex-catches-both-starship-stages-why-ship-takes-22-hours-booster-7-minutes (midday explainer)
+- Proof: "SpaceX Caught an Entire Rocket Booster With Giant Mechanical Arms!" (ZEHAN, 4K subs) 3.7M views, 154x its usual, 5 days old; same topic 2.8M at Beyond Earth (7 d); "SpaceX Is About to Catch a Spaceship" 211K at a 599-sub channel (ops/proven-topics.md, ops/scout-tesla.md). Daily review instruction 1: fresh tower-catch topic, new angle (not the 2 Nov / 4 Nov angles). Flight 15 double catch planned 13-14 Nov.
+- Hooks: 0 "Starship's booster: 7 minutes. Its ship: 22 hours." (number) **picked** | 1 "Same tower. Same arms. 22 hours apart." (contrast) | 2 "Why does Starship's ship wait a whole day to land?" (question)
+- Why 0: 7 spoken words, name + two hard numbers from SpaceX's own timeline, no "might"; ONE question (why 22 hours?) answered only in beats 8-9 (Earth turns Starbase away under the orbit). Rotates away from consequence (previous midday). First picture lib/starship-booster-catch.jpg (booster hovering at the arms) for the moving hook + sfx engine roar; sfx 2 = metal clank of the arms in beat 4.
+- Previous Short (midday): how-does-tesla-flying-roadster-fly - 669 views, 16.4 likes/1000 after 17 h (midday middle value 670: normal). Render report: beat 8 ran 2.3 s; bands in beats 3, 4; hook clip used (2.9 s).
+- Weak in previous: proven but stale topic (Roadster wave 3-4 weeks old); one too-short beat (2.3 s).
+- Change now (test): topic AGE - proven topic under 7 days old instead of 3-4 weeks (daily review test of the day). Format kept: 10 beats of 7-11 spoken words (est. 2.6-3.8 s, ~31 s, 87 words), max two numbers per beat, 2 pictures per beat (gen pictures via lib "../gen/..."), moving hook, smart loop.
+- Loop: last line "That's how one rocket comes home twice." -> restart "Starship's booster: 7 minutes. Its ship: 22 hours." The restart lists the two homecomings the last line announces; no shared words; last picture = first picture (booster at the arms).
+- Long video, first 20 s: the 7-minutes-vs-22-hours claim first, then an explicit promise ("by the end you will know why") and an open loop ("not about the rocket at all... something much bigger moving under it"), paid off in the Earth-rotation section and the last block ("wait for the planet to bring the neighbourhood back"). Previous long video opened on a hard event; this one opens on a number clash.
+
 ## 2026-11-12 - musk-mocked-flying-cars-tesla-roadster-nine-year-story-2017-to-flight (evening story)
 - Proof: "Elon Musk got laughed at explaining flying cars in 2018" (Hyperbolic AI, 10K subs) 2.8M views, 75x its usual; "This Flying Car Mocks Elon Musk's New Tesla Roadster" 27.5M (ops/proven-topics.md). Daily review instruction 1: evening = a story angle from the Roadster cluster.
 - Hooks: 0 "Musk mocked flying cars. His Roadster flew." (contrast) **picked** | 1 "Promised for 2020. It flew in 2026." (number) | 2 "Nine years of delays. Then it flipped." (consequence)

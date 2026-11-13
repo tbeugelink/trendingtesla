@@ -57,6 +57,9 @@ Add new ideas at the bottom at any time.
 - [x] Why does Starship fire its engines at its own booster? Hot staging explained: how it works, why it adds payload, Titan II and Russian predecessors (why-starship-fires-engines-at-own-booster-hot-staging-explained)
 - [ ] Ullage: why rocket fuel floats in space, and the tricks rockets use to restart their engines (settling burns, small thrusters, hot staging)
 - [ ] Grid fins: why Falcon 9 and Super Heavy steer with "waffle irons", and why Starship V3 has three bigger ones instead of four
+- [x] Why does Starship's ship need 22 hours to come home when the booster needs 7 minutes? Orbits, ground tracks and the double catch (how-spacex-catches-both-starship-stages-why-ship-takes-22-hours-booster-7-minutes)
+- [ ] What causes the fireballs and flashes around a booster catch? (viewer question under a 3.7M-view catch Short; check sources: leftover propellant venting, engine shutdown)
+- [ ] Why does a returning Starship fly over Mexico and Texas, and what are the sonic booms people hear? (check the FAA documents and real flight paths)
 - [ ] Why Starship Flight 14 was the first to reach orbit: what "orbital" really means, and why earlier flights stayed just short on purpose
 - [ ] Starlink's laser links: how satellites pass your data to each other at the speed of light, and why the first 60 had none
 - [ ] Will Teslas get Starlink built in? How a Tesla connects to the internet today (Standard vs Premium Connectivity, AT&T, 5G) and what satellite links would change

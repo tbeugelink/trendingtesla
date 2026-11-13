@@ -2,6 +2,15 @@
 
 Every article task adds an entry here (README, "ALGORITHM RULES", Self-learning). Stats: `ops/short-signals.md`.
 
+## 2026-11-13 - spacex-flight-6-booster-catch-called-off-tower-damaged-at-liftoff-story (evening story)
+- Proof: "SpaceX Caught an Entire Rocket Booster With Giant Mechanical Arms!" (ZEHAN, 4K subs) 3.7M views, 154x its usual, 5 days old; same topic 2.8M at Beyond Earth (7 d) (ops/proven-topics.md, ops/scout-tesla.md). Daily review instruction 1: evening = a tower-catch story angle not used on 2 or 4 Nov (and not today's midday). Angle: the Flight 6 catch that was called off because the liftoff damaged the tower; also answers that video's viewer question "what causes the explosions at the end?".
+- Hooks: 0 "SpaceX's launch blinded its own catch tower." (consequence) **picked** | 1 "Booster 13 was coming home. SpaceX said no." (contrast) | 2 "Musk said it would have worked. They ditched it." (contrast)
+- Why 0: 7 spoken words, name + one hard, certain event, no number (two-number hook ran 4.2 s at midday), one question (what happened to the catch?) paid off in beats 8-9. Rotates away from contrast (previous evening) and number (midday). First picture lib/starship-launch.jpg (liftoff beside the tower) for the moving hook + sfx engine roar; sfx 2 = splash in beat 6.
+- Previous Short (evening): musk-mocked-flying-cars - 462 views, 21.6 likes/1000 after 9 h (evening middle value 920: lower half). Render report: beat 5 4.9 s, beat 7 4.4 s (years), band in beat 7.
+- Weak in previous: 3-4-week-old proven topic; beats listing years ran far over 4 s.
+- Change now (test): topic AGE - proven topic under 7 days old (same test as today's midday). Format kept: 9 beats of 7-10 spoken words (est. 2.7-3.8 s, ~32 s, 82 words), no spoken years, at most two numbers in one beat (only beat 2), overlay words match the voice, 2 pictures per beat, moving hook, smart loop.
+- Loop: last line "Lose a booster, build another. Lose the tower, lose everything." -> restart "SpaceX's launch blinded its own catch tower." The stake, then the moment it was hit; no shared words; last picture = first picture (liftoff beside the tower).
+
 ## 2026-11-13 - how-spacex-catches-both-starship-stages-why-ship-takes-22-hours-booster-7-minutes (midday explainer)
 - Proof: "SpaceX Caught an Entire Rocket Booster With Giant Mechanical Arms!" (ZEHAN, 4K subs) 3.7M views, 154x its usual, 5 days old; same topic 2.8M at Beyond Earth (7 d); "SpaceX Is About to Catch a Spaceship" 211K at a 599-sub channel (ops/proven-topics.md, ops/scout-tesla.md). Daily review instruction 1: fresh tower-catch topic, new angle (not the 2 Nov / 4 Nov angles). Flight 15 double catch planned 13-14 Nov.
 - Hooks: 0 "Starship's booster: 7 minutes. Its ship: 22 hours." (number) **picked** | 1 "Same tower. Same arms. 22 hours apart." (contrast) | 2 "Why does Starship's ship wait a whole day to land?" (question)

@@ -132,6 +132,9 @@ Add new ideas at the bottom at any time.
 - [ ] SES-10, March 2017: the first time an orbital booster flew twice, and the fairing that came home as 'its own little spacecraft'
 - [ ] Flight 2, November 2023: the first hot-staging separation, and why both stages were still lost minutes later
 - [ ] The flame trench Starbase never had: from Fondag concrete to a water-cooled steel plate, and how other pads (Saturn V, Shuttle) handled the blast
+- [x] Flight 6, November 2024: the booster catch SpaceX called off because the launch damaged the tower's sensors, and why a tower is worth more than a booster (spacex-flight-6-booster-catch-called-off-tower-damaged-at-liftoff-story)
+- [ ] Booster 14: the first Super Heavy to be caught and then fly again (Flight 7 to Flight 9), and what 29 reused engines taught SpaceX
+- [ ] Flight 7, January 2025: the first Block 2 ship that broke up over the Turks and Caicos minutes after its booster was caught
 
 ## Series: How did Elon Musk ...? (evening task; one per week at most, category "musk")
 

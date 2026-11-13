@@ -1,0 +1,225 @@
+{
+ "slug": "spacex-flight-6-booster-catch-called-off-tower-damaged-at-liftoff-story",
+ "date": "2026-11-13",
+ "time": "21:30",
+ "category": "spacex",
+ "sources": [
+  {
+   "title": "Universe Today — Starship's Booster (and Donald Trump) Make a Splash With Sixth Flight Test",
+   "url": "https://www.universetoday.com/169736/starships-booster-and-donald-trump-make-a-splash-at-sixth-flight-test"
+  },
+  {
+   "title": "SpacePolicyOnline — No Catch This Time, But IFT-6 Advances Starship Development",
+   "url": "https://spacepolicyonline.com/?p=75999"
+  },
+  {
+   "title": "Tesla Oracle — Elon Musk tells the reason behind the Flight 6 Starship booster catch abort",
+   "url": "https://www.teslaoracle.com/2024/11/21/elon-musk-tells-the-reason-behind-the-flight-6-starship-booster-catch-abort/"
+  },
+  {
+   "title": "Spaceflight Now — SpaceX launches first flight-proven Super Heavy booster",
+   "url": "https://spaceflightnow.com/2025/05/28/spacex-launches-first-flight-proven-super-heavy-booster-loses-control-of-starship-mid-flight/"
+  }
+ ],
+ "images": [
+  "gen/spacex-flight-6-booster-catch-called-off-tower-damaged-at-liftoff-story.jpg",
+  "lib/starship-launch.jpg",
+  "gen/starship-first-flight-2023-four-minutes-crater-launch-pad-story.jpg",
+  "lib/starship-booster-catch.jpg",
+  "gen/spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story-x2-11022028.jpg",
+  "lib/starship-pad.jpg"
+ ],
+ "gen_image": {
+  "prompt": "Dramatic close shot of the top of the steel launch and catch tower at Starbase, Texas, just after a rocket launch: the two giant catch arms (chopsticks) open in the middle of the frame, their steel streaked with fresh soot, thin smoke and steam still drifting past, a slim antenna mast on the tower bent sideways, golden late-afternoon light, deep blue sky, calm darker area in the lower left",
+  "subject": "the SpaceX launch and catch tower at Starbase: a tall square steel lattice tower with two huge horizontal steel catch arms (the chopsticks) on a carriage, rails on top of the arms, cable trays and pipes along the tower, the launch mount beside it; no rocket on the arms",
+  "refs": [
+   {
+    "src": "lib/starship-booster-catch.jpg"
+   },
+   {
+    "src": "lib/starship-pad.jpg"
+   }
+  ],
+  "profile": "cinematic",
+  "category": "B",
+  "describe": "the soot-streaked catch arms at the top of the Starbase tower after a launch, smoke drifting past",
+  "extra": [
+   {
+    "prompt": "A Super Heavy rocket booster descending tail first on three glowing engine flames over the open sea far from shore at sunset, spray and steam rising from the water below it, grid fins at the top, no land or structures in sight",
+    "describe": "a Super Heavy booster coming down on its engines over the open sea at sunset"
+   },
+   {
+    "prompt": "A dark rocket mission control room with rows of consoles and screens, one large wall screen showing a launch tower with its catch arms open, red warning lights on several screens, no people visible",
+    "describe": "a mission control room with the tower on the big screen and red warnings"
+   }
+  ]
+ },
+ "label": {
+  "style": "c",
+  "en": {
+   "sub": "SPACEX'S LAUNCH",
+   "text": "BLINDED ITS TOWER"
+  },
+  "nl": {
+   "sub": "LANCERING VERBLINDT",
+   "text": "EIGEN VANGTOREN"
+  }
+ },
+ "en": {
+  "title": "The Booster Catch SpaceX Called Off: How Starship's Own Launch Blinded Its Tower",
+  "description": "On Flight 6 a Super Heavy booster was minutes from the second tower catch ever when the launch itself damaged the tower. Why SpaceX sent the booster into the sea instead, and how that caution paid off.",
+  "body": "<p>On November 19, 2024, a Super Heavy booster was minutes away from the second tower catch in history, and the tower it was flying back to could no longer be trusted. The launch itself had damaged it. Booster 13 was on its way, the arms were open, and the whole world was watching. SpaceX now had a few seconds to choose between a spectacular catch and a 70-metre rocket that might hit the one tower its whole programme depended on.</p>\n<h2>Why did this second catch matter so much?</h2>\n<p><strong>Because one catch can be luck, and two would start to look like a method.</strong> Five weeks earlier, on October 13, 2024, Booster 12 had come home on Flight 5 and slid into the tower's two giant arms, nicknamed the chopsticks. Nobody had ever caught a rocket like that before. Super Heavy has no landing legs at all, so the plan for a fully reusable Starship only works if those arms can catch it again and again.</p>\n<p>Flight 6 was supposed to show exactly that. It drew a crowd: Donald Trump, then president-elect, watched the launch at Starbase together with Elon Musk. Booster 13 and Ship 31 lifted off at about 4 p.m. local time. The booster burned for about two and a half minutes, let the ship go and turned back towards Texas. Then the problem on the ground came to light.</p>\n<h2>So what went wrong at the tower?</h2>\n<p><strong>The rocket's own liftoff had damaged the tower that was supposed to catch it.</strong> SpaceX's flight summary said that \"automated health checks of critical hardware on the launch and catch tower triggered an abort of the catch attempt.\" In January 2025, before the next flight, SpaceX added that sensors on the chopsticks had been damaged at launch. Musk gave the short version a day after the flight: the team had \"lost comms to the launch tower computer.\"</p>\n<p>Observers on the Everyday Astronaut webcast also spotted a damaged communications and lightning mast on the tower, most likely hit during liftoff. That is the price of launching the world's most powerful rocket right next to the structure that has to catch it: 33 engines blast that tower every time. The booster was on course. The tower could no longer tell anyone whether it was safe to catch it.</p>\n<h2>Why not just try the catch anyway?</h2>\n<p><strong>Because a failed catch could destroy far more than one booster.</strong> Musk wrote that the catch \"would probably still have worked, but we weren't sure, so erred on the side of caution.\" The reasoning is simple once you look at what stands at the pad. A booster that hits the tower could wreck the arms, the launch mount and the tank farm next to it, the only place where SpaceX could launch a full Starship at the time. A lost booster costs one rocket. A lost tower stops every flight for months.</p>\n<p>SpaceX's commentator Kate Tice had said it before launch: a catch is never guaranteed, and the safety of the teams, the public and the pad comes first. \"We are accepting no compromises in any of those areas,\" she said. So the computers made the call that the arms could not, and Booster 13 needed somewhere else to go.</p>\n<h2>What happened to Booster 13?</h2>\n<p><strong>It flew a pre-planned escape route into the Gulf of Mexico.</strong> Instead of heading for the tower, the booster steered offshore, lit its engines for a landing burn and came down softly on the water, as Flight 4's booster had done that June. It did not survive long: after it tipped over, its tanks broke up in the water. Those are the explosions viewers still ask about when they watch replays.</p>\n<p>The rest of the flight went well. Ship 31 relit one of its Raptor engines in space for the first time, survived re-entry and made a controlled splashdown in the Indian Ocean in daylight. It even carried Starship's first payload: a toy banana. Still, the headline of the day was the catch that did not happen, and the open question was whether the arms would get another chance.</p>\n<h2>So did the caution pay off?</h2>\n<p><strong>Yes: the tower that was spared caught the next booster.</strong> On January 16, 2025, Flight 7's Booster 14 flew back and was caught by the same arms. Four months later, on May 27, 2025, that same booster launched again on Flight 9, with 29 of its 33 engines flying for the second time. It was the first Super Heavy ever to be reused, which is the whole point of catching it.</p>\n<p>The lesson of Flight 6 is now built into every catch. A booster is hardware that can be replaced; the tower is the bottleneck for everything that follows. SpaceX's latest attempt, Flight 15 on November 13, 2026, goes further still and aims to catch both halves of Starship with the tower arms. Every one of those attempts depends on the same rule that sent Booster 13 into the sea: when the tower is not sure, the rocket goes somewhere else.</p>"
+ },
+ "nl": {
+  "title": "De boostervangst die SpaceX afblies: hoe de eigen lancering van Starship de toren verblindde",
+  "description": "Tijdens Flight 6 was een Super Heavy-booster minuten verwijderd van de tweede torenvangst ooit, toen de lancering zelf de toren beschadigde. Waarom SpaceX de booster de zee in stuurde, en hoe die voorzichtigheid zich uitbetaalde.",
+  "body": "<p>Op 19 november 2024 was een Super Heavy-booster nog maar enkele minuten verwijderd van de tweede torenvangst ooit, en op de toren waar hij naartoe vloog kon niemand meer vertrouwen. De lancering zelf had hem beschadigd. Booster 13 was onderweg, de armen stonden open en de hele wereld keek mee. SpaceX had nu een paar seconden om te kiezen tussen een spectaculaire vangst en een raket van 70 meter die de enige toren kon raken waar het hele programma van afhing.</p>\n<h2>Waarom was deze tweede vangst zo belangrijk?</h2>\n<p><strong>Omdat één vangst geluk kan zijn, en twee op een methode gaan lijken.</strong> Vijf weken eerder, op 13 oktober 2024, was Booster 12 tijdens Flight 5 teruggekomen en tussen de twee reusachtige armen van de toren geschoven, de 'chopsticks'. Niemand had ooit zo een raket gevangen. Super Heavy heeft helemaal geen landingspoten, dus het plan voor een volledig herbruikbare Starship werkt alleen als die armen hem keer op keer kunnen vangen.</p>\n<p>Flight 6 moest precies dat laten zien. Er kwam publiek op af: Donald Trump, toen gekozen president, keek samen met Elon Musk naar de lancering in Starbase. Booster 13 en Ship 31 stegen rond 16.00 uur plaatselijke tijd op. De booster brandde ongeveer tweeënhalve minuut, liet het schip los en keerde terug richting Texas. Toen kwam het probleem op de grond aan het licht.</p>\n<h2>Wat ging er dan mis bij de toren?</h2>\n<p><strong>De lancering van de raket had juist de toren beschadigd die hem moest vangen.</strong> In de vluchtsamenvatting van SpaceX stond dat automatische controles van kritieke onderdelen van de lanceer- en vangtoren de vangpoging hadden afgebroken. In januari 2025, vóór de volgende vlucht, voegde SpaceX eraan toe dat sensoren op de vangarmen bij de lancering beschadigd waren. Musk gaf een dag na de vlucht de korte versie: het team had het contact met de computer van de toren verloren.</p>\n<p>Kijkers van de webcast van Everyday Astronaut zagen ook een beschadigde communicatie- en bliksemmast op de toren, vermoedelijk geraakt bij de lancering. Dat is de prijs van de krachtigste raket ter wereld lanceren vlak naast het bouwwerk dat hem moet vangen: 33 motoren blazen elke keer tegen die toren. De booster lag op koers. Alleen kon de toren niemand meer vertellen of hij hem veilig kon vangen.</p>\n<h2>Waarom dan niet toch proberen?</h2>\n<p><strong>Omdat een mislukte vangst veel meer kapot kon maken dan één booster.</strong> Musk schreef dat de vangst \"waarschijnlijk toch gelukt was\", maar dat ze het niet zeker wisten en daarom voor de veilige kant kozen. Dat is logisch als je ziet wat er bij het lanceerplatform staat. Een booster die de toren raakt, kan de armen, de lanceertafel en de tankopslag ernaast vernielen: toen de enige plek waar SpaceX een complete Starship kon lanceren. Een verloren booster kost één raket. Een verloren toren legt alle vluchten maandenlang stil.</p>\n<p>Commentator Kate Tice van SpaceX had het vóór de lancering al gezegd: een vangst is nooit zeker, en de veiligheid van de teams, het publiek en het platform gaat voor. Ze accepteerden daarin \"geen enkel compromis\". Dus namen de computers de beslissing die de armen niet konden nemen, en Booster 13 moest ergens anders heen.</p>\n<h2>Wat gebeurde er met Booster 13?</h2>\n<p><strong>Hij vloog een vooraf geplande uitwijkroute naar de Golf van Mexico.</strong> In plaats van naar de toren stuurde de booster de zee op, ontstak zijn motoren voor een landingsbrandstoot en kwam zacht neer op het water, zoals de booster van Flight 4 dat in juni had gedaan. Lang hield hij het niet vol: nadat hij omviel, braken zijn tanks in het water. Dat zijn de explosies waar kijkers bij herhalingen nog steeds naar vragen.</p>\n<p>De rest van de vlucht ging goed. Ship 31 startte voor het eerst een van zijn Raptor-motoren in de ruimte opnieuw, overleefde de terugkeer in de dampkring en landde gecontroleerd bij daglicht in de Indische Oceaan. Het had zelfs de eerste lading van Starship aan boord: een speelgoedbanaan. Toch was het nieuws van de dag de vangst die niet doorging, en de open vraag was of de armen nog een kans zouden krijgen.</p>\n<h2>Heeft de voorzichtigheid zich dan uitbetaald?</h2>\n<p><strong>Ja: de toren die gespaard bleef, ving de volgende booster.</strong> Op 16 januari 2025 vloog Booster 14 van Flight 7 terug en werd door dezelfde armen gevangen. Vier maanden later, op 27 mei 2025, ging diezelfde booster opnieuw de lucht in tijdens Flight 9, met 29 van zijn 33 motoren voor de tweede keer aan boord. Het was de eerste Super Heavy die ooit werd hergebruikt, en daar draait het vangen nu juist om.</p>\n<p>De les van Flight 6 zit nu in elke vangst. Een booster is hardware die je kunt vervangen; de toren is de bottleneck voor alles wat volgt. De nieuwste poging van SpaceX, Flight 15 op 13 november 2026, gaat nog verder en wil beide helften van Starship met de torenarmen vangen. Elke poging leunt op dezelfde regel die Booster 13 de zee in stuurde: als de toren het niet zeker weet, gaat de raket ergens anders heen.</p>"
+ },
+ "short": {
+  "hook": "consequence",
+  "yt_title_en": "SpaceX Blinded Its Own Catch Tower",
+  "yt_title_nl": "SpaceX Verblindde Zijn Eigen Vangtoren",
+  "hooks": [
+   {
+    "text": "SpaceX's launch blinded its own catch tower.",
+    "type": "consequence"
+   },
+   {
+    "text": "Booster 13 was coming home. SpaceX said no.",
+    "type": "contrast"
+   },
+   {
+    "text": "Musk said it would have worked. They ditched it.",
+    "type": "contrast"
+   }
+  ],
+  "hook_pick": {
+   "index": 0,
+   "why": "7 spoken words with the name (SpaceX) and one hard, certain event (the liftoff damaged the tower), no 'might', no number to slow it down (quality note: two-number hooks ran 4.2 s); it raises ONE question (so what happened to the catch?) that is only paid off in beats 8-9. Hook 1 gives the answer away, hook 2 needs Musk's quote before the viewer knows the story"
+  },
+  "hook_motion": "Starship rises off the pad beside the steel tower, the engine flame flickers and huge clouds of steam and smoke billow outward, the camera tilts up slightly",
+  "story": [
+   {
+    "part": "hook",
+    "t": "0-2.7s",
+    "text": "SpaceX's launch blinded its own catch tower.",
+    "overlay": "SpaceX blinded its own catch tower.",
+    "lib": [
+     "starship-launch.jpg",
+     "../gen/starship-first-flight-2023-four-minutes-crater-launch-pad-story.jpg"
+    ],
+    "sfx": "rocket engines igniting, deep thunderous roar and crackle, billowing exhaust",
+    "visual": "hard open on Starship lifting off beside the tower in a huge flame and steam cloud (moving clip: it rises, smoke billows), cut on 'tower' to the liftoff in a wall of spray; only the hook sentence on screen, no logo"
+   },
+   {
+    "part": "tension",
+    "t": "2.7-6.5s",
+    "text": "Flight 6. Booster 13 was flying back to be caught.",
+    "overlay": "Booster 13 flew back to be caught.",
+    "lib": [
+     "../gen/why-starship-fires-engines-at-own-booster-hot-staging-explained-x2-11061154.jpg",
+     "../gen/spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story-x3-11022028.jpg"
+    ],
+    "visual": "the booster flipping around high above the Gulf after separation, then a booster slowing on its engines beside the tower"
+   },
+   {
+    "part": "tension",
+    "t": "6.5-10.3s",
+    "text": "But the liftoff blast had damaged sensors on the arms.",
+    "overlay": "The blast hit the arms' sensors.",
+    "lib": [
+     "../gen/how-much-does-it-cost-to-send-1-kg-into-space-shuttle-falcon-9-starship.jpg",
+     "../gen/spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story-x2-11022028.jpg"
+    ],
+    "visual": "liftoff flame washing over the tower, then the open chopstick arms at dusk; slow push-in on the arms"
+   },
+   {
+    "part": "tension",
+    "t": "10.3-13.8s",
+    "text": "Then the team lost contact with the tower's computer.",
+    "overlay": "Contact with the tower: lost.",
+    "lib": [
+     "../topics/spacex-7.jpg",
+     "../gen/how-spacex-catches-both-starship-stages-why-ship-takes-22-hours-booster-7-minutes-x3-11131200.jpg"
+    ],
+    "visual": "Starship stacked at the tower at dawn, then the tower at night with its arms open and silent"
+   },
+   {
+    "part": "tension",
+    "t": "13.8-17.3s",
+    "text": "Automatic checks said no. The catch was called off.",
+    "overlay": "Checks said no. Catch called off.",
+    "lib": [
+     "starship-pad.jpg",
+     "../gen/starship-first-flight-2023-four-minutes-crater-launch-pad-story-x3-11102026.jpg"
+    ],
+    "visual": "the floodlit stack beside the tower at blue hour, then the tower and stack at dusk from the beach"
+   },
+   {
+    "part": "tension",
+    "t": "17.3-20.8s",
+    "text": "The booster swerved away and splashed into the Gulf.",
+    "overlay": "It splashed into the Gulf instead.",
+    "lib": [
+     "../gen/spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story-x3-11022028.jpg",
+     "../gen/why-starship-has-33-engines-not-one-giant-engine-n1-saturn-v-explained.jpg"
+    ],
+    "sfx": "heavy splash of a huge object hitting the sea, water crashing, low rumble",
+    "visual": "a booster coming down on its engine flames, then 33 engines firing into steam; quick cut on 'Gulf'"
+   },
+   {
+    "part": "tension",
+    "t": "20.8-24.3s",
+    "text": "Musk said the catch would probably have worked.",
+    "overlay": "Musk: it would probably have worked.",
+    "lib": [
+     "starship-booster-catch.jpg",
+     "../gen/spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story.jpg"
+    ],
+    "visual": "a booster hovering at the open arms, then a booster held by the arms at sunrise: the catch that could have been"
+   },
+   {
+    "part": "payoff",
+    "t": "24.3-28.1s",
+    "text": "But they weren't sure, so they gave up the booster.",
+    "overlay": "Not sure? Then lose the booster.",
+    "lib": [
+     "../gen/why-starship-fires-engines-at-own-booster-hot-staging-explained-x3-11061155.jpg",
+     "../gen/how-much-does-it-cost-to-send-1-kg-into-space-shuttle-falcon-9-starship-x3-11081152.jpg"
+    ],
+    "visual": "a booster at the tower, then a caught booster at dusk; slow pull-back"
+   },
+   {
+    "part": "payoff",
+    "t": "28.1-31.9s",
+    "text": "Lose a booster, build another. Lose the tower, lose everything.",
+    "overlay": "Lose the tower, lose everything.",
+    "lib": [
+     "../gen/how-spacex-catches-both-starship-stages-why-ship-takes-22-hours-booster-7-minutes-x3-11131200.jpg",
+     "starship-launch.jpg"
+    ],
+    "visual": "the lone tower at night with open arms, then back to the liftoff beside the tower (same as the first picture) so the loop is seamless"
+   }
+  ],
+  "loop": {
+   "last": "Lose a booster, build another. Lose the tower, lose everything.",
+   "how": "the last line states the stake, the restart names the moment that stake was hit: '...Lose the tower, lose everything. SpaceX's launch blinded its own catch tower.' No shared opening words; the last picture is the same liftoff beside the tower the Short opens on"
+  },
+  "signals": "Stayed %: a fresh proven topic (tower catch, 3.7M views at a 4K channel, 5 days old) with a 7-word consequence hook over a moving liftoff picture with an engine roar. Watched %/loops: 9 beats of 7-10 spoken words (~32 s), the answer held back to beats 8-9, a stake line that runs straight into the hook. Comments: 'should they have tried anyway?' invites a debate, and the splash answers the viewer question 'what causes the explosions at the end?'",
+  "learning": {
+   "prev": "musk-mocked-flying-cars-tesla-roadster-nine-year-story-2017-to-flight",
+   "prev_stats": "462 views and 21.6 likes per 1,000 after 9 h (evening middle value at that age 920: lower half); stayed/watched not reported yet; our typical Short 900 views after 48 h",
+   "weakest_hook": "the hook itself was fine (person + product + hard event); the weak spots were a 3-4-week-old proven topic and two overlong beats with years (beat 5 4.9 s, beat 7 4.4 s)",
+   "why_stalled": "the Roadster wave was already 3-4 weeks old; beats listing years ran far over 4 s where viewers drop",
+   "change": "fresh proven topic under 7 days old (tower catch) with a story angle not used on 2, 4 or 13 Nov (the aborted Flight 6 catch); no years spoken at all, at most two numbers per beat (only beat 2), every beat 7-10 words, the overlay matches the spoken words",
+   "test": "topic age: a proven topic under 7 days old instead of 3-4 weeks (daily review test of the day, same as today's midday Short); format, ~30 s length, 9 beats, 2 pictures per beat, moving hook and smart loop unchanged"
+  },
+  "proof": {
+   "source": "SpaceX Caught an Entire Rocket Booster With Giant Mechanical Arms! - https://youtu.be/w9dAtutWOx8",
+   "views": 3700000,
+   "why": "a 4K-subscriber channel got 3.7M views (154x its usual) on the tower catch in the last 5 days, and the same topic did 2.8M at Beyond Earth; our angle is the catch SpaceX called off on Flight 6 because the launch damaged the tower, which also answers that video's viewer question about the explosions at the end"
+  },
+  "en": "SpaceX's launch blinded its own catch tower. Flight 6. Booster 13 was flying back to be caught. But the liftoff blast had damaged sensors on the arms. Then the team lost contact with the tower's computer. Automatic checks said no. The catch was called off. The booster swerved away and splashed into the Gulf. Musk said the catch would probably have worked. But they weren't sure, so they gave up the booster. Lose a booster, build another. Lose the tower, lose everything.",
+  "nl": "De lancering van SpaceX verblindde zijn eigen vangtoren. Flight 6. Booster 13 vloog terug om gevangen te worden. Maar de lanceerstraal had sensoren op de armen beschadigd. Toen verloor het team contact met de computer van de toren. Automatische controles zeiden nee. De vangst ging niet door. De booster week uit en plonsde in de Golf. Musk zei dat de vangst waarschijnlijk was gelukt. Maar ze wisten het niet zeker, dus gaven ze de booster op. Verlies een booster, bouw een nieuwe. Verlies de toren, verlies alles."
+ }
+}

@@ -38,16 +38,18 @@
   the ten of 3-7 Nov. Goal: over 70%. The two newest are the lowest (35% and 45%). It fell when we went from
   ~50 s to ~30 s with the overlay format; the numbers cannot tell which of the two did it. In people: 538 stayed
   per Short now against 576 before, so the loss is small in heads but the trend is the wrong way.
-- Proven topics do not beat our own topics yet (5 Shorts): Cybertruck 1,109 and 1,141, Starlink stacking 1,078,
-  no landing legs 607, Roadster 669 and 462 so far. All inside or below our normal 500-1,500.
+- Proven topics do not beat our own topics yet (7 Shorts): Cybertruck 1,109 and 1,141, Starlink stacking 1,078,
+  booster catch 199 (2 Nov), ship catch 607 (4 Nov), Roadster 669 and 462 so far. All inside or below our
+  normal 500-1,500.
 - Views stay flat: no Short since 31 Oct has passed 1,500, whatever the topic, hook or format.
 
 ## Instructions for today
 1. Topic, midday AND evening: a FRESH proven topic, at most 7 days old in ops/proven-topics.md or
    ops/scout-tesla.md: the tower catch ("SpaceX Caught an Entire Rocket Booster With Giant Mechanical Arms", 3.7M and
    2.8M at small channels, 5-7 days old; "SpaceX Is About to Catch a Spaceship", 211K at a 599-subscriber channel).
-   Midday: how the arms catch a booster. Evening: a story angle from the same cluster. Check every claim against
-   sources and put the proof and its age in `short.proof`. No Roadster today.
+   We covered the catch on 2 Nov (199 views) and 4 Nov (607), before those videos broke out, so take a NEW
+   angle: midday what is new in the latest catch / the planned double catch, evening a story angle not used on
+   2 or 4 Nov. Check every claim against sources; put the proof and its age in `short.proof`. No Roadster today.
 2. Hook: at most 7 spoken words with the name (SpaceX / Starship / booster) and one hard, certain event; no
    "might", no build-up. Beats 2.5-4.0 s: at most two years or numbers in one beat (yesterday "2022. 2023. 2024."
    ran 4.9 s) and a beat with two commas stays under nine words.
@@ -59,6 +61,7 @@ The age of the proven topic: under 7 days old (tower catch) against 3-4 weeks ol
 on views at the same age: midday after 17 h against 669, evening after 9 h against 462, then both after 48 h
 against our typical 900. Both above 1,500 after 48 h = fresh proven topics carry us; inside 500-1,500 = topic age
 makes no difference and the problem is the first seconds, not the topic. Two Shorts per side: an indication only.
+Our two earlier catch Shorts (199, 607) were in the old ~50 s format, so they are not a fair comparison.
 
 ## Open problems
 - Stayed is at 35-55% and falling (goal 70%). Stayed for the moving hook (since 12 Nov) arrives 14-15 Nov; if
@@ -67,5 +70,5 @@ makes no difference and the problem is the first seconds, not the topic. Two Sho
   11 Nov 20:23 UTC (over 33 hours). Nothing is blocked; they need cancelling by hand. tools/health.py no longer
   lists them.
 - Long video of 11 Nov (batteries): 4 views after 31 hours, far below the typical 25 at 48 h.
-- Running tools/health.py replaced ops/health.md and with it the monitor's "Quality notes for the next run" of
-  12 Nov evening; the one note that matters (spoken years) is carried over in instruction 2.
+- tools/health.py replaced ops/health.md, including the monitor's quality notes of 12 Nov evening; the one
+  that matters (spoken years) is carried over in instruction 2.

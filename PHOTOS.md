@@ -296,3 +296,6 @@ Articles with a "models" key automatically use real-life photos of that model. Y
 - gen/why-tesla-batteries-use-thousands-of-small-cells-18650-2170-4680-explained.jpg — a tray of large cylindrical 4680-type battery cells, one lifted above the rest (illustration)
 - gen/why-tesla-batteries-use-thousands-of-small-cells-18650-2170-4680-explained-x2-11111158.jpg — a small laptop-type battery cell next to a much fatter 4680-type cell on a workbench (illustration)
 - gen/why-tesla-batteries-use-thousands-of-small-cells-18650-2170-4680-explained-x3-11111200.jpg — rows of cylindrical battery cells moving along a conveyor in a cell factory (illustration)
+- gen/how-spacex-catches-both-starship-stages-why-ship-takes-22-hours-booster-7-minutes.jpg — the Starship upper stage in orbit above the Earth at sunrise
+- gen/how-spacex-catches-both-starship-stages-why-ship-takes-22-hours-booster-7-minutes-x2-11131158.jpg — Starship falling belly first through the atmosphere, its heat shield glowing during re-entry
+- gen/how-spacex-catches-both-starship-stages-why-ship-takes-22-hours-booster-7-minutes-x3-11131200.jpg — the Starbase launch tower at night, catch arms open and waiting for the ship

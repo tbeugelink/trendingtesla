@@ -838,5 +838,44 @@
         "src": "lib/optimus-pick-part.jpg"
       }
     ]
+  },
+  "gen/how-spacex-catches-both-starship-stages-why-ship-takes-22-hours-booster-7-minutes.jpg": {
+    "article": "how-spacex-catches-both-starship-stages-why-ship-takes-22-hours-booster-7-minutes",
+    "model": "gpt-image-2.5-flare",
+    "made": "2026-11-13",
+    "references": [
+      {
+        "src": "lib/starship-pad.jpg"
+      },
+      {
+        "src": "lib/starship-booster-catch.jpg"
+      }
+    ]
+  },
+  "gen/how-spacex-catches-both-starship-stages-why-ship-takes-22-hours-booster-7-minutes-x2-11131158.jpg": {
+    "article": "how-spacex-catches-both-starship-stages-why-ship-takes-22-hours-booster-7-minutes",
+    "model": "gpt-image-2.5-flare",
+    "made": "2026-11-13",
+    "references": [
+      {
+        "src": "lib/starship-pad.jpg"
+      },
+      {
+        "src": "lib/starship-booster-catch.jpg"
+      }
+    ]
+  },
+  "gen/how-spacex-catches-both-starship-stages-why-ship-takes-22-hours-booster-7-minutes-x3-11131200.jpg": {
+    "article": "how-spacex-catches-both-starship-stages-why-ship-takes-22-hours-booster-7-minutes",
+    "model": "gemini-3.1-flash-image",
+    "made": "2026-11-13",
+    "references": [
+      {
+        "src": "lib/starship-pad.jpg"
+      },
+      {
+        "src": "lib/starship-booster-catch.jpg"
+      }
+    ]
   }
 }

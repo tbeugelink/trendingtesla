@@ -1,979 +1,987 @@
 {
- "slug": "how-spacex-catches-both-starship-stages-why-ship-takes-22-hours-booster-7-minutes",
- "date": "2026-11-13",
- "time": "12:58",
- "category": "spacex",
- "sources": [
-  {
-   "title": "Space.com — What time will SpaceX launch Starship Flight 15? (Full mission timeline)",
-   "url": "https://www.space.com/space-exploration/launches-spacecraft/spacex-starship-flight-15-1st-booster-ship-double-catch-full-recovery-what-time"
-  },
-  {
-   "title": "Teslarati — SpaceX will perform Starship double catch attempt with Flight 15",
-   "url": "https://www.teslarati.com/spacex-perform-starship-double-catch-attempt-flight-15/"
-  },
-  {
-   "title": "Leonard David — Starship Flight 15: A Breakthrough Moment in Reusable Rocketry?",
-   "url": "https://www.leonarddavid.com/starship-flight-15-a-breakthrough-moment-in-reusable-rocketry/"
-  },
-  {
-   "title": "NASA — Space Station Orbit Tutorial",
-   "url": "https://eol.jsc.nasa.gov/Tools/orbitTutorial.htm"
-  }
- ],
- "images": [
-  "lib/starship-booster-catch.jpg",
-  "gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute.jpg",
-  "gen/spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story.jpg",
-  "lib/starship-pad.jpg",
-  "gen/how-much-does-it-cost-to-send-1-kg-into-space-shuttle-falcon-9-starship-x2-11081151.jpg",
-  "starlink-1.jpg"
- ],
- "gen_image": {
-  "prompt": "Dramatic close shot of a SpaceX Starship upper stage in low Earth orbit at orbital sunrise: the shiny stainless steel ship filling the middle of the frame, its black hexagonal heat shield tiles on the side facing the Earth, its two small forward flaps near the nose and two larger aft flaps, the blue curve of the Earth and the thin glowing atmosphere below, the Gulf of Mexico coastline faintly visible far beneath, deep black space above, calm darker area in the lower left",
-  "subject": "SpaceX Starship upper stage (Ship): a plain cylindrical stainless steel spacecraft about 9 m wide and about 50 m tall with a rounded pointed nose; one side covered with black hexagonal heat shield tiles; two small flaps near the nose and two larger flaps at the base; six Raptor engine bells at the bottom; no wings, no landing legs, no windows",
-  "refs": [
-   {
-    "src": "lib/starship-pad.jpg"
-   },
-   {
-    "src": "lib/starship-booster-catch.jpg"
-   }
+  "slug": "how-spacex-catches-both-starship-stages-why-ship-takes-22-hours-booster-7-minutes",
+  "date": "2026-11-13",
+  "time": "12:58",
+  "category": "spacex",
+  "sources": [
+    {
+      "title": "Space.com — What time will SpaceX launch Starship Flight 15? (Full mission timeline)",
+      "url": "https://www.space.com/space-exploration/launches-spacecraft/spacex-starship-flight-15-1st-booster-ship-double-catch-full-recovery-what-time"
+    },
+    {
+      "title": "Teslarati — SpaceX will perform Starship double catch attempt with Flight 15",
+      "url": "https://www.teslarati.com/spacex-perform-starship-double-catch-attempt-flight-15/"
+    },
+    {
+      "title": "Leonard David — Starship Flight 15: A Breakthrough Moment in Reusable Rocketry?",
+      "url": "https://www.leonarddavid.com/starship-flight-15-a-breakthrough-moment-in-reusable-rocketry/"
+    },
+    {
+      "title": "NASA — Space Station Orbit Tutorial",
+      "url": "https://eol.jsc.nasa.gov/Tools/orbitTutorial.htm"
+    }
   ],
-  "profile": "cinematic",
-  "category": "B",
-  "describe": "the Starship upper stage in orbit above the Earth at sunrise",
-  "extra": [
-   {
-    "prompt": "A SpaceX Starship upper stage falling belly first through the upper atmosphere at dawn over the ocean, its black heat shield tiles facing down and glowing with a pink-orange plasma sheath, flaps spread like a skydiver's arms and legs, clouds far below",
-    "describe": "Starship falling belly first through the atmosphere, its heat shield glowing during re-entry"
-   },
-   {
-    "prompt": "The steel launch tower at Starbase, Texas at night with its two giant catch arms open and floodlit, an empty launch mount beside it, a clear starry sky above with one bright streak of a spacecraft high overhead, the beach and calm Gulf water in front",
-    "describe": "the Starbase launch tower at night, catch arms open and waiting for the ship"
-   }
-  ]
- },
- "label": {
-  "style": "c",
+  "images": [
+    "gen/how-spacex-catches-both-starship-stages-why-ship-takes-22-hours-booster-7-minutes.jpg",
+    "gen/how-spacex-catches-both-starship-stages-why-ship-takes-22-hours-booster-7-minutes-x3-11131200.jpg",
+    "gen/how-spacex-catches-both-starship-stages-why-ship-takes-22-hours-booster-7-minutes-x2-11131158.jpg",
+    "lib/starship-booster-catch.jpg",
+    "gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute.jpg",
+    "gen/spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story.jpg",
+    "lib/starship-pad.jpg",
+    "gen/how-much-does-it-cost-to-send-1-kg-into-space-shuttle-falcon-9-starship-x2-11081151.jpg",
+    "starlink-1.jpg"
+  ],
+  "gen_image": {
+    "prompt": "Dramatic close shot of a SpaceX Starship upper stage in low Earth orbit at orbital sunrise: the shiny stainless steel ship filling the middle of the frame, its black hexagonal heat shield tiles on the side facing the Earth, its two small forward flaps near the nose and two larger aft flaps, the blue curve of the Earth and the thin glowing atmosphere below, the Gulf of Mexico coastline faintly visible far beneath, deep black space above, calm darker area in the lower left",
+    "subject": "SpaceX Starship upper stage (Ship): a plain cylindrical stainless steel spacecraft about 9 m wide and about 50 m tall with a rounded pointed nose; one side covered with black hexagonal heat shield tiles; two small flaps near the nose and two larger flaps at the base; six Raptor engine bells at the bottom; no wings, no landing legs, no windows",
+    "refs": [
+      {
+        "src": "lib/starship-pad.jpg"
+      },
+      {
+        "src": "lib/starship-booster-catch.jpg"
+      }
+    ],
+    "profile": "cinematic",
+    "category": "B",
+    "describe": "the Starship upper stage in orbit above the Earth at sunrise",
+    "extra": [
+      {
+        "prompt": "A SpaceX Starship upper stage falling belly first through the upper atmosphere at dawn over the ocean, its black heat shield tiles facing down and glowing with a pink-orange plasma sheath, flaps spread like a skydiver's arms and legs, clouds far below",
+        "describe": "Starship falling belly first through the atmosphere, its heat shield glowing during re-entry",
+        "file": "gen/how-spacex-catches-both-starship-stages-why-ship-takes-22-hours-booster-7-minutes-x2-11131158.jpg"
+      },
+      {
+        "prompt": "The steel launch tower at Starbase, Texas at night with its two giant catch arms open and floodlit, an empty launch mount beside it, a clear starry sky above with one bright streak of a spacecraft high overhead, the beach and calm Gulf water in front",
+        "describe": "the Starbase launch tower at night, catch arms open and waiting for the ship",
+        "file": "gen/how-spacex-catches-both-starship-stages-why-ship-takes-22-hours-booster-7-minutes-x3-11131200.jpg"
+      }
+    ],
+    "done": true,
+    "model": "gpt-image-2.5-flare"
+  },
+  "label": {
+    "style": "c",
+    "en": {
+      "sub": "BOOSTER: 7 MINUTES.",
+      "text": "SHIP: 22 HOURS"
+    },
+    "nl": {
+      "sub": "BOOSTER: 7 MINUTEN.",
+      "text": "SCHIP: 22 UUR"
+    }
+  },
   "en": {
-   "sub": "BOOSTER: 7 MINUTES.",
-   "text": "SHIP: 22 HOURS"
+    "title": "How SpaceX Catches Both Halves of Starship: Why the Ship Takes 22 Hours and the Booster 7 Minutes",
+    "description": "On Flight 15 SpaceX plans to catch the Super Heavy booster after about 6.5 minutes and the ship about 22.5 hours later, at the same tower. Here is why the ship has to wait almost a whole day.",
+    "body": "<p>On Starship Flight 15, SpaceX plans to catch both halves of the world's biggest rocket with the same tower arms. The Super Heavy booster is due back about six and a half minutes after liftoff. The upper stage, called Ship, is due back at the same tower about 22 and a half hours later. Same pad, same arms, yet one half comes home almost a full day after the other. That gap has nothing to do with caution, and everything to do with something the ship cannot control.</p>\n<h2>Why can the booster come straight back?</h2>\n<p><strong>Because it never reaches orbit.</strong> Super Heavy burns for about two minutes and 19 seconds, then the ship lights its own engines and pulls away in a hot-staging separation. Just five seconds later the booster starts its boostback burn: its engines fire for about 36 seconds and turn its path from heading out over the Gulf of Mexico to heading back towards Texas. It then falls, steers with its grid fins and lights its engines once more to slow into the reach of the tower arms, about six minutes and 35 seconds after liftoff.</p>\n<p>This part has been done before. SpaceX has caught a first-generation Super Heavy three times, on Flights 5, 7 and 8, and two of those boosters flew again. Flight 15's Booster 22 is the first of the bigger third-generation boosters to try. The booster can make this U-turn because it is still well below orbital speed. The ship does not have that luxury.</p>\n<h2>So what makes the ship so different?</h2>\n<p><strong>It is in orbit, and an orbit cannot simply be reversed.</strong> After about eight minutes the ship is circling the Earth at roughly 275 kilometres up. At that height, basic orbital physics gives a speed of about 7.7 kilometres per second, close to 28,000 km/h, and one lap of the planet takes about 90 minutes. NASA gives the same 90 to 93 minutes for the International Space Station.</p>\n<p>At that speed there is no turning around. The only way down is to fire the engines against the direction of travel, so the lowest point of the orbit dips into the atmosphere, and then let the air do most of the braking. That fall takes the better part of an hour, so the ship has to start its way home far from Texas, on a path that ends exactly at the tower. And Texas does not stay where the ship left it.</p>\n<h2>Why does Starbase drift away from the ship's path?</h2>\n<p><strong>Because the Earth turns under the orbit.</strong> An orbit stays roughly fixed in space, while the planet rotates once a day beneath it. NASA's orbit tutorial puts it plainly: each lap of the space station shifts its track over the ground about 22.9 degrees of longitude to the west. For Starship's orbit the shift is about the same. At Starbase's latitude, around 26 degrees north, that is more than 2,000 kilometres per lap.</p>\n<p>So after every lap the ship's path passes further west of Texas. The ship can only aim for the tower once the Earth has turned Starbase back under a path that ends there. In SpaceX's published timeline that moment comes after about 14 orbits, which at 90 minutes a lap is roughly 21 hours. That leaves almost a whole day to fill.</p>\n<h2>So how does SpaceX use the 22 hours?</h2>\n<p><strong>For work, and for checking that a landing is safe.</strong> Starting about 35 minutes after liftoff, the ship releases 26 Starlink V3 satellites. Three of them carry cameras to photograph the ship's heat shield and send the images down, one of several sources SpaceX uses to decide whether the ship is fit to come home.</p>\n<p>The timeline also has three return checks, with splashdown zones off Hawaii and Chile as the way out. If the team is not sure that the systems needed for re-entry, the landing burn and the tower approach are healthy, the ship does not head for Texas. It comes down in the ocean instead. And even a healthy ship still has one hard hour ahead.</p>\n<h2>What happens in the last hour?</h2>\n<p><strong>One short burn, a long fall and a few busy seconds.</strong> At about 21 hours and 36 minutes the ship fires its engines for only about ten seconds. That is enough to bend its path into the atmosphere. Some 35 minutes later it hits the thick air, belly first, with its heat shield facing down, and falls for another 20 minutes.</p>\n<p>Near the ground the landing burn starts. The ship swings upright, its engines throttle from three to two to one, and at about 22 hours and 32 minutes it should come to a stop between the arms. From the ten-second burn to the catch: about 57 minutes. The burn happens almost half a world away because the ship needs that long to fall home. Getting it back in one piece would change what a rocket is.</p>\n<h2>Why does catching both halves matter?</h2>\n<p><strong>Because it would mean the whole rocket comes back to be flown again.</strong> Elon Musk wrote that a double success would \"mark the first time that all parts of an orbital rocket return to Earth intact\". He called the odds \"more likely than not\", a forecast, not a result. Falcon 9 already lands its booster, but its upper stage burns up after every flight.</p>\n<p>A ship caught at the tower would be back where it started, ready to fly again, like an aircraft. That is the whole point of Starship. It also explains the odd timetable. The booster is home in minutes because it never leaves the neighbourhood. The ship has to wait for the planet to bring the neighbourhood back.</p>"
   },
   "nl": {
-   "sub": "BOOSTER: 7 MINUTEN.",
-   "text": "SCHIP: 22 UUR"
-  }
- },
- "en": {
-  "title": "How SpaceX Catches Both Halves of Starship: Why the Ship Takes 22 Hours and the Booster 7 Minutes",
-  "description": "On Flight 15 SpaceX plans to catch the Super Heavy booster after about 6.5 minutes and the ship about 22.5 hours later, at the same tower. Here is why the ship has to wait almost a whole day.",
-  "body": "<p>On Starship Flight 15, SpaceX plans to catch both halves of the world's biggest rocket with the same tower arms. The Super Heavy booster is due back about six and a half minutes after liftoff. The upper stage, called Ship, is due back at the same tower about 22 and a half hours later. Same pad, same arms, yet one half comes home almost a full day after the other. That gap has nothing to do with caution, and everything to do with something the ship cannot control.</p>\n<h2>Why can the booster come straight back?</h2>\n<p><strong>Because it never reaches orbit.</strong> Super Heavy burns for about two minutes and 19 seconds, then the ship lights its own engines and pulls away in a hot-staging separation. Just five seconds later the booster starts its boostback burn: its engines fire for about 36 seconds and turn its path from heading out over the Gulf of Mexico to heading back towards Texas. It then falls, steers with its grid fins and lights its engines once more to slow into the reach of the tower arms, about six minutes and 35 seconds after liftoff.</p>\n<p>This part has been done before. SpaceX has caught a first-generation Super Heavy three times, on Flights 5, 7 and 8, and two of those boosters flew again. Flight 15's Booster 22 is the first of the bigger third-generation boosters to try. The booster can make this U-turn because it is still well below orbital speed. The ship does not have that luxury.</p>\n<h2>So what makes the ship so different?</h2>\n<p><strong>It is in orbit, and an orbit cannot simply be reversed.</strong> After about eight minutes the ship is circling the Earth at roughly 275 kilometres up. At that height, basic orbital physics gives a speed of about 7.7 kilometres per second, close to 28,000 km/h, and one lap of the planet takes about 90 minutes. NASA gives the same 90 to 93 minutes for the International Space Station.</p>\n<p>At that speed there is no turning around. The only way down is to fire the engines against the direction of travel, so the lowest point of the orbit dips into the atmosphere, and then let the air do most of the braking. That fall takes the better part of an hour, so the ship has to start its way home far from Texas, on a path that ends exactly at the tower. And Texas does not stay where the ship left it.</p>\n<h2>Why does Starbase drift away from the ship's path?</h2>\n<p><strong>Because the Earth turns under the orbit.</strong> An orbit stays roughly fixed in space, while the planet rotates once a day beneath it. NASA's orbit tutorial puts it plainly: each lap of the space station shifts its track over the ground about 22.9 degrees of longitude to the west. For Starship's orbit the shift is about the same. At Starbase's latitude, around 26 degrees north, that is more than 2,000 kilometres per lap.</p>\n<p>So after every lap the ship's path passes further west of Texas. The ship can only aim for the tower once the Earth has turned Starbase back under a path that ends there. In SpaceX's published timeline that moment comes after about 14 orbits, which at 90 minutes a lap is roughly 21 hours. That leaves almost a whole day to fill.</p>\n<h2>So how does SpaceX use the 22 hours?</h2>\n<p><strong>For work, and for checking that a landing is safe.</strong> Starting about 35 minutes after liftoff, the ship releases 26 Starlink V3 satellites. Three of them carry cameras to photograph the ship's heat shield and send the images down, one of several sources SpaceX uses to decide whether the ship is fit to come home.</p>\n<p>The timeline also has three return checks, with splashdown zones off Hawaii and Chile as the way out. If the team is not sure that the systems needed for re-entry, the landing burn and the tower approach are healthy, the ship does not head for Texas. It comes down in the ocean instead. And even a healthy ship still has one hard hour ahead.</p>\n<h2>What happens in the last hour?</h2>\n<p><strong>One short burn, a long fall and a few busy seconds.</strong> At about 21 hours and 36 minutes the ship fires its engines for only about ten seconds. That is enough to bend its path into the atmosphere. Some 35 minutes later it hits the thick air, belly first, with its heat shield facing down, and falls for another 20 minutes.</p>\n<p>Near the ground the landing burn starts. The ship swings upright, its engines throttle from three to two to one, and at about 22 hours and 32 minutes it should come to a stop between the arms. From the ten-second burn to the catch: about 57 minutes. The burn happens almost half a world away because the ship needs that long to fall home. Getting it back in one piece would change what a rocket is.</p>\n<h2>Why does catching both halves matter?</h2>\n<p><strong>Because it would mean the whole rocket comes back to be flown again.</strong> Elon Musk wrote that a double success would \"mark the first time that all parts of an orbital rocket return to Earth intact\". He called the odds \"more likely than not\", a forecast, not a result. Falcon 9 already lands its booster, but its upper stage burns up after every flight.</p>\n<p>A ship caught at the tower would be back where it started, ready to fly again, like an aircraft. That is the whole point of Starship. It also explains the odd timetable. The booster is home in minutes because it never leaves the neighbourhood. The ship has to wait for the planet to bring the neighbourhood back.</p>"
- },
- "nl": {
-  "title": "Hoe SpaceX beide helften van Starship vangt: waarom het schip 22 uur nodig heeft en de booster 7 minuten",
-  "description": "Op vlucht 15 wil SpaceX de Super Heavy-booster na zo'n 6,5 minuut vangen en het schip ongeveer 22,5 uur later, bij dezelfde toren. Zo zit het met die bijna hele dag wachten.",
-  "body": "<p>Op Starship-vlucht 15 wil SpaceX beide helften van 's werelds grootste raket vangen met dezelfde torenarmen. De Super Heavy-booster moet ongeveer zesenhalve minuut na de lancering terug zijn. De bovenste trap, Ship genoemd, moet zo'n 22,5 uur later bij dezelfde toren terugkomen. Zelfde platform, zelfde armen, en toch komt de ene helft bijna een hele dag later thuis dan de andere. Dat verschil heeft niets met voorzichtigheid te maken, en alles met iets waar het schip geen invloed op heeft.</p>\n<h2>Waarom kan de booster meteen terugkomen?</h2>\n<p><strong>Omdat hij nooit in een baan om de aarde komt.</strong> Super Heavy brandt ongeveer twee minuten en 19 seconden. Dan ontsteekt het schip zijn eigen motoren en trekt zich los, met hot staging. Vijf seconden later begint de booster aan zijn boostback-burn: de motoren branden zo'n 36 seconden en buigen de koers van de Golf van Mexico terug naar Texas. Daarna valt hij, stuurt hij met zijn grid fins en ontsteekt hij nog één keer zijn motoren om af te remmen tot binnen bereik van de torenarmen, zo'n zes minuten en 35 seconden na de lancering.</p>\n<p>Dat is al eerder gelukt. SpaceX ving een Super Heavy van de eerste generatie drie keer, op vlucht 5, 7 en 8, en twee van die boosters vlogen opnieuw. Booster 22 van vlucht 15 is de eerste van de grotere derde generatie die het probeert. De booster kan zo omkeren omdat hij nog ver onder de baansnelheid zit. Het schip heeft die luxe niet.</p>\n<h2>Wat maakt het schip dan zo anders?</h2>\n<p><strong>Het zit in een baan om de aarde, en een baan draai je niet zomaar om.</strong> Na ongeveer acht minuten cirkelt het schip op zo'n 275 kilometer hoogte rond de aarde. Op die hoogte geeft de natuurkunde een snelheid van ongeveer 7,7 kilometer per seconde, bijna 28.000 km/u, en één rondje om de planeet duurt zo'n 90 minuten. NASA noemt dezelfde 90 tot 93 minuten voor het internationale ruimtestation ISS.</p>\n<p>Bij die snelheid keer je niet om. De enige weg naar beneden is de motoren tegen de vliegrichting in laten branden, zodat het laagste punt van de baan de dampkring raakt, en dan de lucht het meeste remwerk laten doen. Die val duurt bijna een uur, dus het schip moet zijn terugweg ver van Texas beginnen, op een koers die precies bij de toren eindigt. En Texas blijft niet liggen waar het schip het achterliet.</p>\n<h2>Waarom schuift Starbase onder de baan van het schip uit?</h2>\n<p><strong>Omdat de aarde onder de baan doordraait.</strong> Een baan ligt ruwweg vast in de ruimte, terwijl de planeet er eens per dag onder ronddraait. De baanuitleg van NASA zegt het simpel: bij elk rondje van het ruimtestation schuift het spoor over de grond ongeveer 22,9 lengtegraden naar het westen. Voor de baan van Starship is dat ongeveer hetzelfde. Op de breedte van Starbase, rond 26 graden noord, is dat meer dan 2.000 kilometer per rondje.</p>\n<p>Na elk rondje loopt de koers van het schip dus verder ten westen van Texas. Het schip kan pas op de toren mikken als de aarde Starbase weer onder een koers heeft gedraaid die daar eindigt. In de tijdlijn die SpaceX publiceerde komt dat moment na ongeveer 14 rondjes, en met 90 minuten per rondje is dat zo'n 21 uur. Er valt dus bijna een hele dag te vullen.</p>\n<h2>Dus wat doet SpaceX met die 22 uur?</h2>\n<p><strong>Werken, en controleren of een landing veilig is.</strong> Vanaf ongeveer 35 minuten na de lancering zet het schip 26 Starlink V3-satellieten uit. Drie daarvan hebben camera's die het hitteschild van het schip fotograferen en de beelden doorsturen, een van de bronnen waarmee SpaceX beslist of het schip thuis mag komen.</p>\n<p>De tijdlijn heeft ook drie terugkeermomenten, met landingszones in zee bij Hawaï en Chili als uitweg. Is het team er niet zeker van dat de systemen voor terugkeer, landingsburn en nadering van de toren gezond zijn, dan gaat het schip niet naar Texas. Dan komt het in de oceaan neer. En zelfs een gezond schip heeft dan nog één zwaar uur voor de boeg.</p>\n<h2>Wat gebeurt er in het laatste uur?</h2>\n<p><strong>Eén korte burn, een lange val en een paar drukke seconden.</strong> Na ongeveer 21 uur en 36 minuten laat het schip zijn motoren slechts zo'n tien seconden branden. Dat is genoeg om de koers de dampkring in te buigen. Zo'n 35 minuten later raakt het de dikke lucht, buik naar voren, het hitteschild naar beneden, en valt het nog 20 minuten.</p>\n<p>Vlak boven de grond begint de landingsburn. Het schip zwaait rechtop, de motoren gaan van drie naar twee naar één, en rond 22 uur en 32 minuten moet het tussen de armen stilhangen. Van de burn van tien seconden tot de vangst: ongeveer 57 minuten. Die burn gebeurt bijna aan de andere kant van de wereld, omdat het schip zo lang nodig heeft om naar huis te vallen. Het heel terugkrijgen zou veranderen wat een raket is.</p>\n<h2>Waarom is het vangen van beide helften zo belangrijk?</h2>\n<p><strong>Omdat dan de hele raket terugkomt om opnieuw te vliegen.</strong> Elon Musk schreef dat een dubbel succes de eerste keer zou zijn dat alle delen van een orbitale raket heel terugkomen op aarde. Hij noemde de kans \"more likely than not\", groter dan niet: een verwachting, geen resultaat. Falcon 9 laat zijn booster al landen, maar de bovenste trap verbrandt na elke vlucht.</p>\n<p>Een schip dat bij de toren wordt gevangen, staat weer waar het begon, klaar om opnieuw te vliegen, net als een vliegtuig. Dat is het hele idee achter Starship. Het verklaart ook de vreemde dienstregeling. De booster is binnen minuten thuis omdat hij de buurt nooit verlaat. Het schip moet wachten tot de planeet de buurt terugbrengt.</p>"
- },
- "short": {
-  "hook": "number",
-  "yt_title_en": "Booster: 7 Minutes. Ship: 22 Hours.",
-  "yt_title_nl": "Booster: 7 Minuten. Schip: 22 Uur.",
-  "hooks": [
-   {
-    "text": "Starship's booster: 7 minutes. Its ship: 22 hours.",
-    "type": "number"
-   },
-   {
-    "text": "Same tower. Same arms. 22 hours apart.",
-    "type": "contrast"
-   },
-   {
-    "text": "Why does Starship's ship wait a whole day to land?",
-    "type": "question"
-   }
-  ],
-  "hook_pick": {
-   "index": 0,
-   "why": "7 spoken words with the name (Starship) and two hard numbers from SpaceX's own timeline, no 'might', no build-up (daily review rule 2); the clash 7 minutes vs 22 hours raises ONE question (why so long?) that is only answered in beats 8-9 (Earth turns Texas away). Hook 1 has no subject name, hook 2 is a bare question with no number"
+    "title": "Hoe SpaceX beide helften van Starship vangt: waarom het schip 22 uur nodig heeft en de booster 7 minuten",
+    "description": "Op vlucht 15 wil SpaceX de Super Heavy-booster na zo'n 6,5 minuut vangen en het schip ongeveer 22,5 uur later, bij dezelfde toren. Zo zit het met die bijna hele dag wachten.",
+    "body": "<p>Op Starship-vlucht 15 wil SpaceX beide helften van 's werelds grootste raket vangen met dezelfde torenarmen. De Super Heavy-booster moet ongeveer zesenhalve minuut na de lancering terug zijn. De bovenste trap, Ship genoemd, moet zo'n 22,5 uur later bij dezelfde toren terugkomen. Zelfde platform, zelfde armen, en toch komt de ene helft bijna een hele dag later thuis dan de andere. Dat verschil heeft niets met voorzichtigheid te maken, en alles met iets waar het schip geen invloed op heeft.</p>\n<h2>Waarom kan de booster meteen terugkomen?</h2>\n<p><strong>Omdat hij nooit in een baan om de aarde komt.</strong> Super Heavy brandt ongeveer twee minuten en 19 seconden. Dan ontsteekt het schip zijn eigen motoren en trekt zich los, met hot staging. Vijf seconden later begint de booster aan zijn boostback-burn: de motoren branden zo'n 36 seconden en buigen de koers van de Golf van Mexico terug naar Texas. Daarna valt hij, stuurt hij met zijn grid fins en ontsteekt hij nog één keer zijn motoren om af te remmen tot binnen bereik van de torenarmen, zo'n zes minuten en 35 seconden na de lancering.</p>\n<p>Dat is al eerder gelukt. SpaceX ving een Super Heavy van de eerste generatie drie keer, op vlucht 5, 7 en 8, en twee van die boosters vlogen opnieuw. Booster 22 van vlucht 15 is de eerste van de grotere derde generatie die het probeert. De booster kan zo omkeren omdat hij nog ver onder de baansnelheid zit. Het schip heeft die luxe niet.</p>\n<h2>Wat maakt het schip dan zo anders?</h2>\n<p><strong>Het zit in een baan om de aarde, en een baan draai je niet zomaar om.</strong> Na ongeveer acht minuten cirkelt het schip op zo'n 275 kilometer hoogte rond de aarde. Op die hoogte geeft de natuurkunde een snelheid van ongeveer 7,7 kilometer per seconde, bijna 28.000 km/u, en één rondje om de planeet duurt zo'n 90 minuten. NASA noemt dezelfde 90 tot 93 minuten voor het internationale ruimtestation ISS.</p>\n<p>Bij die snelheid keer je niet om. De enige weg naar beneden is de motoren tegen de vliegrichting in laten branden, zodat het laagste punt van de baan de dampkring raakt, en dan de lucht het meeste remwerk laten doen. Die val duurt bijna een uur, dus het schip moet zijn terugweg ver van Texas beginnen, op een koers die precies bij de toren eindigt. En Texas blijft niet liggen waar het schip het achterliet.</p>\n<h2>Waarom schuift Starbase onder de baan van het schip uit?</h2>\n<p><strong>Omdat de aarde onder de baan doordraait.</strong> Een baan ligt ruwweg vast in de ruimte, terwijl de planeet er eens per dag onder ronddraait. De baanuitleg van NASA zegt het simpel: bij elk rondje van het ruimtestation schuift het spoor over de grond ongeveer 22,9 lengtegraden naar het westen. Voor de baan van Starship is dat ongeveer hetzelfde. Op de breedte van Starbase, rond 26 graden noord, is dat meer dan 2.000 kilometer per rondje.</p>\n<p>Na elk rondje loopt de koers van het schip dus verder ten westen van Texas. Het schip kan pas op de toren mikken als de aarde Starbase weer onder een koers heeft gedraaid die daar eindigt. In de tijdlijn die SpaceX publiceerde komt dat moment na ongeveer 14 rondjes, en met 90 minuten per rondje is dat zo'n 21 uur. Er valt dus bijna een hele dag te vullen.</p>\n<h2>Dus wat doet SpaceX met die 22 uur?</h2>\n<p><strong>Werken, en controleren of een landing veilig is.</strong> Vanaf ongeveer 35 minuten na de lancering zet het schip 26 Starlink V3-satellieten uit. Drie daarvan hebben camera's die het hitteschild van het schip fotograferen en de beelden doorsturen, een van de bronnen waarmee SpaceX beslist of het schip thuis mag komen.</p>\n<p>De tijdlijn heeft ook drie terugkeermomenten, met landingszones in zee bij Hawaï en Chili als uitweg. Is het team er niet zeker van dat de systemen voor terugkeer, landingsburn en nadering van de toren gezond zijn, dan gaat het schip niet naar Texas. Dan komt het in de oceaan neer. En zelfs een gezond schip heeft dan nog één zwaar uur voor de boeg.</p>\n<h2>Wat gebeurt er in het laatste uur?</h2>\n<p><strong>Eén korte burn, een lange val en een paar drukke seconden.</strong> Na ongeveer 21 uur en 36 minuten laat het schip zijn motoren slechts zo'n tien seconden branden. Dat is genoeg om de koers de dampkring in te buigen. Zo'n 35 minuten later raakt het de dikke lucht, buik naar voren, het hitteschild naar beneden, en valt het nog 20 minuten.</p>\n<p>Vlak boven de grond begint de landingsburn. Het schip zwaait rechtop, de motoren gaan van drie naar twee naar één, en rond 22 uur en 32 minuten moet het tussen de armen stilhangen. Van de burn van tien seconden tot de vangst: ongeveer 57 minuten. Die burn gebeurt bijna aan de andere kant van de wereld, omdat het schip zo lang nodig heeft om naar huis te vallen. Het heel terugkrijgen zou veranderen wat een raket is.</p>\n<h2>Waarom is het vangen van beide helften zo belangrijk?</h2>\n<p><strong>Omdat dan de hele raket terugkomt om opnieuw te vliegen.</strong> Elon Musk schreef dat een dubbel succes de eerste keer zou zijn dat alle delen van een orbitale raket heel terugkomen op aarde. Hij noemde de kans \"more likely than not\", groter dan niet: een verwachting, geen resultaat. Falcon 9 laat zijn booster al landen, maar de bovenste trap verbrandt na elke vlucht.</p>\n<p>Een schip dat bij de toren wordt gevangen, staat weer waar het begon, klaar om opnieuw te vliegen, net als een vliegtuig. Dat is het hele idee achter Starship. Het verklaart ook de vreemde dienstregeling. De booster is binnen minuten thuis omdat hij de buurt nooit verlaat. Het schip moet wachten tot de planeet de buurt terugbrengt.</p>"
   },
-  "hook_motion": "the soot-marked booster sinks slowly on its glowing engine flames towards the open tower arms, exhaust flickers and smoke billows below, the camera holds steady",
-  "story": [
-   {
-    "part": "hook",
-    "t": "0-3s",
-    "text": "Starship's booster: 7 minutes. Its ship: 22 hours.",
-    "overlay": "Booster: 7 minutes. Ship: 22 hours.",
-    "lib": [
-     "starship-booster-catch.jpg",
-     "../gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute.jpg"
+  "short": {
+    "hook": "number",
+    "yt_title_en": "Booster: 7 Minutes. Ship: 22 Hours.",
+    "yt_title_nl": "Booster: 7 Minuten. Schip: 22 Uur.",
+    "hooks": [
+      {
+        "text": "Starship's booster: 7 minutes. Its ship: 22 hours.",
+        "type": "number"
+      },
+      {
+        "text": "Same tower. Same arms. 22 hours apart.",
+        "type": "contrast"
+      },
+      {
+        "text": "Why does Starship's ship wait a whole day to land?",
+        "type": "question"
+      }
     ],
-    "sfx": "deep rumbling roar of rocket engines on a landing burn, crackling exhaust and billowing smoke",
-    "visual": "hard open on the Super Heavy booster hovering on its engine flames beside the open tower arms at sunset (moving clip: it sinks slowly, flames flicker, smoke billows), cut on 'ship' to the ship held by the arms; only the hook sentence on screen, no logo"
-   },
-   {
-    "part": "tension",
-    "t": "3-6.2s",
-    "text": "Flight 15 is SpaceX's first try to catch both.",
-    "overlay": "First try to catch BOTH halves",
-    "lib": [
-     "starship-pad.jpg",
-     "../gen/spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story-x2-11022028.jpg"
+    "hook_pick": {
+      "index": 0,
+      "why": "7 spoken words with the name (Starship) and two hard numbers from SpaceX's own timeline, no 'might', no build-up (daily review rule 2); the clash 7 minutes vs 22 hours raises ONE question (why so long?) that is only answered in beats 8-9 (Earth turns Texas away). Hook 1 has no subject name, hook 2 is a bare question with no number"
+    },
+    "hook_motion": "the soot-marked booster sinks slowly on its glowing engine flames towards the open tower arms, exhaust flickers and smoke billows below, the camera holds steady",
+    "story": [
+      {
+        "part": "hook",
+        "t": "0-3s",
+        "text": "Starship's booster: 7 minutes. Its ship: 22 hours.",
+        "overlay": "Booster: 7 minutes. Ship: 22 hours.",
+        "lib": [
+          "starship-booster-catch.jpg",
+          "../gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute.jpg"
+        ],
+        "sfx": "deep rumbling roar of rocket engines on a landing burn, crackling exhaust and billowing smoke",
+        "visual": "hard open on the Super Heavy booster hovering on its engine flames beside the open tower arms at sunset (moving clip: it sinks slowly, flames flicker, smoke billows), cut on 'ship' to the ship held by the arms; only the hook sentence on screen, no logo"
+      },
+      {
+        "part": "tension",
+        "t": "3-6.2s",
+        "text": "Flight 15 is SpaceX's first try to catch both.",
+        "overlay": "First try to catch BOTH halves",
+        "lib": [
+          "starship-pad.jpg",
+          "../gen/spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story-x2-11022028.jpg"
+        ],
+        "visual": "the full Starship stack floodlit on the pad at blue hour, then the empty tower arms waiting at dusk"
+      },
+      {
+        "part": "tension",
+        "t": "6.2-9.2s",
+        "text": "The booster turns around and flies straight back.",
+        "overlay": "Booster turns and flies right back",
+        "lib": [
+          "../gen/why-starship-fires-engines-at-own-booster-hot-staging-explained-x2-11061154.jpg",
+          "../gen/spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story-x3-11022028.jpg"
+        ],
+        "visual": "the booster flipping around after stage separation, then the booster slowing on its engines beside the tower"
+      },
+      {
+        "part": "tension",
+        "t": "9.2-12.4s",
+        "text": "The tower's arms have caught it three times already.",
+        "overlay": "Tower arms: 3 catches so far",
+        "lib": [
+          "../gen/spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story.jpg",
+          "../gen/how-much-does-it-cost-to-send-1-kg-into-space-shuttle-falcon-9-starship-x3-11081152.jpg"
+        ],
+        "sfx": "deep heavy metallic clank of huge steel arms closing on a rocket",
+        "visual": "the booster held by the chopstick arms at sunrise, then a caught booster at dusk; slow push-in"
+      },
+      {
+        "part": "tension",
+        "t": "12.4-16.2s",
+        "text": "But the ship goes to orbit, at 17,000 miles an hour.",
+        "overlay": "Ship in orbit: 17,000 mph",
+        "lib": [
+          "../gen/why-starship-fires-engines-at-own-booster-hot-staging-explained.jpg",
+          "../gen/how-much-does-it-cost-to-send-1-kg-into-space-shuttle-falcon-9-starship-x2-11081151.jpg"
+        ],
+        "visual": "the ship firing its engines away from the booster high above the Gulf, then the ship in orbit releasing flat Starlink satellites"
+      },
+      {
+        "part": "tension",
+        "t": "16.2-19.1s",
+        "text": "It circles the whole planet every 90 minutes.",
+        "overlay": "1 lap of Earth: 90 minutes",
+        "lib": [
+          "../topics/starlink-1.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Earth from the International Space Station",
+              "ISS view of Earth limb",
+              "Earth seen from orbit ISS"
+            ],
+            "want": "Earth seen from orbit, the curved horizon and the thin blue atmosphere"
+          }
+        ],
+        "visual": "satellites above the curve of the Earth, then the blue limb of the Earth seen from orbit; slow pan"
+      },
+      {
+        "part": "tension",
+        "t": "19.1-22.3s",
+        "text": "And with every lap, Earth turns Texas further away.",
+        "overlay": "Each lap, Earth turns Texas away",
+        "photo": [
+          {
+            "q": [
+              "Texas from the International Space Station",
+              "Gulf of Mexico from ISS",
+              "Texas Gulf coast from space"
+            ],
+            "want": "Texas and the Gulf of Mexico coast seen from orbit"
+          },
+          {
+            "q": [
+              "Earth at night from the International Space Station",
+              "city lights from ISS night",
+              "Gulf coast at night from space"
+            ],
+            "want": "Earth at night seen from orbit, city lights below"
+          }
+        ],
+        "visual": "Texas and the Gulf coast seen from orbit sliding sideways, then the night side with city lights; pan left as the Earth turns"
+      },
+      {
+        "part": "payoff",
+        "t": "22.3-25.8s",
+        "text": "So it waits 14 laps for Starbase to swing back.",
+        "overlay": "14 laps until Starbase swings back",
+        "lib": [
+          "../gen/starship-first-flight-2023-four-minutes-crater-launch-pad-story-x3-11102026.jpg",
+          "../topics/starlink-2.jpg"
+        ],
+        "visual": "Starbase: the stack beside the tower seen from the beach, then a satellite over the Earth; calm push-in"
+      },
+      {
+        "part": "payoff",
+        "t": "25.8-29s",
+        "text": "Then one 10-second burn, and an hour of falling.",
+        "overlay": "10-second burn. 1 hour of falling.",
+        "lib": [
+          "../gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute-x2-11041157.jpg",
+          "../gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute-x3-11041200.jpg"
+        ],
+        "visual": "the ship falling belly first with flaps out, then flipping upright on its engines beside the tower"
+      },
+      {
+        "part": "payoff",
+        "t": "29-31.6s",
+        "text": "That's how one rocket comes home twice.",
+        "overlay": "That's how a rocket comes home twice",
+        "lib": [
+          "../gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute.jpg",
+          "starship-booster-catch.jpg"
+        ],
+        "visual": "the ship held by the tower arms at sunrise, then the opening frame: the booster hovering beside the arms, so the restart is seamless"
+      }
     ],
-    "visual": "the full Starship stack floodlit on the pad at blue hour, then the empty tower arms waiting at dusk"
-   },
-   {
-    "part": "tension",
-    "t": "6.2-9.2s",
-    "text": "The booster turns around and flies straight back.",
-    "overlay": "Booster turns and flies right back",
-    "lib": [
-     "../gen/why-starship-fires-engines-at-own-booster-hot-staging-explained-x2-11061154.jpg",
-     "../gen/spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story-x3-11022028.jpg"
-    ],
-    "visual": "the booster flipping around after stage separation, then the booster slowing on its engines beside the tower"
-   },
-   {
-    "part": "tension",
-    "t": "9.2-12.4s",
-    "text": "The tower's arms have caught it three times already.",
-    "overlay": "Tower arms: 3 catches so far",
-    "lib": [
-     "../gen/spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story.jpg",
-     "../gen/how-much-does-it-cost-to-send-1-kg-into-space-shuttle-falcon-9-starship-x3-11081152.jpg"
-    ],
-    "sfx": "deep heavy metallic clank of huge steel arms closing on a rocket",
-    "visual": "the booster held by the chopstick arms at sunrise, then a caught booster at dusk; slow push-in"
-   },
-   {
-    "part": "tension",
-    "t": "12.4-16.2s",
-    "text": "But the ship goes to orbit, at 17,000 miles an hour.",
-    "overlay": "Ship in orbit: 17,000 mph",
-    "lib": [
-     "../gen/why-starship-fires-engines-at-own-booster-hot-staging-explained.jpg",
-     "../gen/how-much-does-it-cost-to-send-1-kg-into-space-shuttle-falcon-9-starship-x2-11081151.jpg"
-    ],
-    "visual": "the ship firing its engines away from the booster high above the Gulf, then the ship in orbit releasing flat Starlink satellites"
-   },
-   {
-    "part": "tension",
-    "t": "16.2-19.1s",
-    "text": "It circles the whole planet every 90 minutes.",
-    "overlay": "1 lap of Earth: 90 minutes",
-    "lib": [
-     "../topics/starlink-1.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Earth from the International Space Station",
-       "ISS view of Earth limb",
-       "Earth seen from orbit ISS"
-      ],
-      "want": "Earth seen from orbit, the curved horizon and the thin blue atmosphere"
-     }
-    ],
-    "visual": "satellites above the curve of the Earth, then the blue limb of the Earth seen from orbit; slow pan"
-   },
-   {
-    "part": "tension",
-    "t": "19.1-22.3s",
-    "text": "And with every lap, Earth turns Texas further away.",
-    "overlay": "Each lap, Earth turns Texas away",
-    "photo": [
-     {
-      "q": [
-       "Texas from the International Space Station",
-       "Gulf of Mexico from ISS",
-       "Texas Gulf coast from space"
-      ],
-      "want": "Texas and the Gulf of Mexico coast seen from orbit"
-     },
-     {
-      "q": [
-       "Earth at night from the International Space Station",
-       "city lights from ISS night",
-       "Gulf coast at night from space"
-      ],
-      "want": "Earth at night seen from orbit, city lights below"
-     }
-    ],
-    "visual": "Texas and the Gulf coast seen from orbit sliding sideways, then the night side with city lights; pan left as the Earth turns"
-   },
-   {
-    "part": "payoff",
-    "t": "22.3-25.8s",
-    "text": "So it waits 14 laps for Starbase to swing back.",
-    "overlay": "14 laps until Starbase swings back",
-    "lib": [
-     "../gen/starship-first-flight-2023-four-minutes-crater-launch-pad-story-x3-11102026.jpg",
-     "../topics/starlink-2.jpg"
-    ],
-    "visual": "Starbase: the stack beside the tower seen from the beach, then a satellite over the Earth; calm push-in"
-   },
-   {
-    "part": "payoff",
-    "t": "25.8-29s",
-    "text": "Then one 10-second burn, and an hour of falling.",
-    "overlay": "10-second burn. 1 hour of falling.",
-    "lib": [
-     "../gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute-x2-11041157.jpg",
-     "../gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute-x3-11041200.jpg"
-    ],
-    "visual": "the ship falling belly first with flaps out, then flipping upright on its engines beside the tower"
-   },
-   {
-    "part": "payoff",
-    "t": "29-31.6s",
-    "text": "That's how one rocket comes home twice.",
-    "overlay": "That's how a rocket comes home twice",
-    "lib": [
-     "../gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute.jpg",
-     "starship-booster-catch.jpg"
-    ],
-    "visual": "the ship held by the tower arms at sunrise, then the opening frame: the booster hovering beside the arms, so the restart is seamless"
-   }
-  ],
-  "loop": {
-   "last": "That's how one rocket comes home twice.",
-   "how": "the last line names the two homecomings and the restart lists them: '...comes home twice. Starship's booster: 7 minutes. Its ship: 22 hours.' No shared words with the hook, no colon or half sentence; the last picture is the same booster-at-the-arms frame the Short opens on"
+    "loop": {
+      "last": "That's how one rocket comes home twice.",
+      "how": "the last line names the two homecomings and the restart lists them: '...comes home twice. Starship's booster: 7 minutes. Its ship: 22 hours.' No shared words with the hook, no colon or half sentence; the last picture is the same booster-at-the-arms frame the Short opens on"
+    },
+    "signals": "Views/stayed: a FRESH proven topic (tower catches, 3.7M views at 5 days old) instead of a 3-4 week old one, with the subject and two hard numbers in the first 3 s over a moving hook with engine roar. Watched/loops: 10 beats of 7-11 spoken words (est. 2.6-3.8 s, ~31 s), the answer held back to beats 8-9, a loop line that hands over to the hook. Shares: a surprising 'the Earth moves the landing pad' fact people like to pass on.",
+    "learning": {
+      "prev": "how-does-tesla-flying-roadster-fly-fans-nitrogen-thrusters-explained",
+      "prev_stats": "669 views and 16.4 likes per 1,000 after 17 h (our midday middle value at that age: 670, so exactly normal); stayed/watched not reported yet; typical Short 900 views after 48 h",
+      "weakest_hook": "\"Tesla's Roadster did a flip over a Semi.\" - a clear event, but on a proven topic whose wave was already 3-4 weeks old",
+      "why_stalled": "inside our normal range despite the proven topic, likely because the Roadster videos that broke out were 22-28 days old; render report: beat 8 ran 2.3 s (short line), contrast bands in beats 3 and 4, hook clip used (2.9 s)",
+      "change": "topic from the FRESH tower-catch cluster (under 7 days old) with a new angle not used on 2 or 4 Nov (why the ship needs 22 hours); every beat 7-11 spoken words so none drops under 2.5 s, at most two numbers per beat, the closing line 7 words",
+      "test": "topic age: a proven topic under 7 days old (tower catch) instead of a 3-4 week old one (Roadster), as the daily review's test of the day; format, length (~31 s), 10 beats, 2 pictures per beat, moving hook and smart loop stay the same"
+    },
+    "proof": {
+      "source": "SpaceX Caught an Entire Rocket Booster With Giant Mechanical Arms! - https://youtu.be/w9dAtutWOx8",
+      "views": 3700000,
+      "why": "a 4K-subscriber channel got 3.7M views (154x its usual) at 5 days old, the same topic did 2.8M at 7 days (Beyond Earth, 33K subs), and 'SpaceX Is About to Catch a Spaceship' did 211K at a 599-subscriber channel; Flight 15's double catch is planned for 13-14 Nov. Our angle adds what those skip: why the ship needs 22 hours and the booster 7 minutes (the Earth turns Starbase away under the orbit)"
+    },
+    "en": "Starship's booster: 7 minutes. Its ship: 22 hours. Flight 15 is SpaceX's first try to catch both. The booster turns around and flies straight back. The tower's arms have caught it three times already. But the ship goes to orbit, at 17,000 miles an hour. It circles the whole planet every 90 minutes. And with every lap, Earth turns Texas further away. So it waits 14 laps for Starbase to swing back. Then one 10-second burn, and an hour of falling. That's how one rocket comes home twice.",
+    "nl": "De booster van Starship: 7 minuten. Het schip: 22 uur. Vlucht 15 is de eerste poging van SpaceX om ze allebei te vangen. De booster keert om en vliegt meteen terug. De armen van de toren vingen hem al drie keer. Maar het schip gaat in een baan om de aarde, met 28.000 kilometer per uur. Het draait elke 90 minuten een rondje om de planeet. En bij elk rondje draait de aarde Texas verder weg. Dus wacht het 14 rondjes tot Starbase terugdraait. Dan één burn van 10 seconden, en een uur vallen. Zo komt één raket twee keer thuis."
   },
-  "signals": "Views/stayed: a FRESH proven topic (tower catches, 3.7M views at 5 days old) instead of a 3-4 week old one, with the subject and two hard numbers in the first 3 s over a moving hook with engine roar. Watched/loops: 10 beats of 7-11 spoken words (est. 2.6-3.8 s, ~31 s), the answer held back to beats 8-9, a loop line that hands over to the hook. Shares: a surprising 'the Earth moves the landing pad' fact people like to pass on.",
-  "learning": {
-   "prev": "how-does-tesla-flying-roadster-fly-fans-nitrogen-thrusters-explained",
-   "prev_stats": "669 views and 16.4 likes per 1,000 after 17 h (our midday middle value at that age: 670, so exactly normal); stayed/watched not reported yet; typical Short 900 views after 48 h",
-   "weakest_hook": "\"Tesla's Roadster did a flip over a Semi.\" - a clear event, but on a proven topic whose wave was already 3-4 weeks old",
-   "why_stalled": "inside our normal range despite the proven topic, likely because the Roadster videos that broke out were 22-28 days old; render report: beat 8 ran 2.3 s (short line), contrast bands in beats 3 and 4, hook clip used (2.9 s)",
-   "change": "topic from the FRESH tower-catch cluster (under 7 days old) with a new angle not used on 2 or 4 Nov (why the ship needs 22 hours); every beat 7-11 spoken words so none drops under 2.5 s, at most two numbers per beat, the closing line 7 words",
-   "test": "topic age: a proven topic under 7 days old (tower catch) instead of a 3-4 week old one (Roadster), as the daily review's test of the day; format, length (~31 s), 10 beats, 2 pictures per beat, moving hook and smart loop stay the same"
+  "video": {
+    "yt_title_en": "Starship Double Catch Explained: Why the Ship Waits 22 Hours to Land",
+    "yt_title_nl": "Starship dubbele vangst uitgelegd: waarom het schip 22 uur wacht",
+    "en": [
+      {
+        "text": "Starship's booster comes home in 7 minutes. Its ship takes 22 hours. Same rocket, same launch, same tower arms waiting for both. By the end of this video you will know why the second catch takes almost a whole day. And the answer is not about the rocket at all. It is about something much bigger, moving under it the whole time.",
+        "img": [
+          "lib/starship-booster-catch.jpg",
+          "gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Starbase Texas",
+              "SpaceX Starbase launch tower",
+              "Boca Chica SpaceX launch site"
+            ],
+            "want": "the SpaceX Starbase launch site in Texas with its launch tower"
+          }
+        ]
+      },
+      {
+        "text": "On Flight 15, SpaceX plans something no one has done with an orbital rocket. Catch the booster. Then, the next day, catch the ship. Both with the same steel arms on the same tower in South Texas. Elon Musk called the odds more likely than not. That is a forecast, not a result. So let's look at what each half has to do.",
+        "img": [
+          "lib/starship-pad.jpg",
+          "gen/spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story-x2-11022028.jpg",
+          "gen/starship-first-flight-2023-four-minutes-crater-launch-pad-story-x3-11102026.jpg"
+        ]
+      },
+      {
+        "head": "Why can the booster come straight back?",
+        "pop": [
+          {
+            "say": "",
+            "show": "STRAIGHT BACK"
+          }
+        ],
+        "img": [
+          "gen/why-starship-fires-engines-at-own-booster-hot-staging-explained-x2-11061154.jpg"
+        ]
+      },
+      {
+        "text": "Because it never reaches orbit. Super Heavy burns for 2 minutes and 19 seconds. Then the ship lights its own engines and pulls away. 5 seconds later the booster fires again, for about 36 seconds. That boostback burn turns it around, from heading out over the Gulf of Mexico to heading back to Texas.",
+        "img": [
+          "gen/why-starship-fires-engines-at-own-booster-hot-staging-explained.jpg",
+          "gen/why-starship-fires-engines-at-own-booster-hot-staging-explained-x2-11061154.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Super Heavy booster",
+              "SpaceX Super Heavy",
+              "Starship booster Starbase"
+            ],
+            "want": "the SpaceX Super Heavy booster, a giant stainless steel rocket stage"
+          }
+        ]
+      },
+      {
+        "text": "Then it falls, steering with its grid fins. At 6 minutes and 10 seconds it lights its engines one last time. At 6 minutes and 35 seconds it should hang between the arms. This part has been done before. 3 first-generation boosters were caught, on Flights 5, 7 and 8, and 2 of them flew again. Flight 15's booster is the first of the bigger third generation to try.",
+        "img": [
+          "gen/spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story-x3-11022028.jpg",
+          "gen/spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story.jpg",
+          "gen/how-much-does-it-cost-to-send-1-kg-into-space-shuttle-falcon-9-starship-x3-11081152.jpg"
+        ]
+      },
+      {
+        "text": "The booster can make that U-turn because it is still far below orbital speed when it lets go. The ship does not get that luxury.",
+        "img": [
+          "lib/starship-launch.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Falcon 9 first stage landing",
+              "Falcon 9 booster landing",
+              "Falcon 9 landing zone"
+            ],
+            "want": "a Falcon 9 first stage landing upright"
+          }
+        ]
+      },
+      {
+        "head": "So what makes the ship so different?",
+        "pop": [
+          {
+            "say": "",
+            "show": "WHY THE SHIP WAITS"
+          }
+        ],
+        "img": [
+          "gen/how-much-does-it-cost-to-send-1-kg-into-space-shuttle-falcon-9-starship-x2-11081151.jpg"
+        ]
+      },
+      {
+        "text": "It is in orbit. And an orbit cannot simply be reversed. About 8 minutes after launch the ship circles the Earth at roughly 275 kilometres up. At that height the physics gives a speed of about 7.7 kilometres per second. That is close to 28,000 kilometres an hour. One lap of the whole planet takes about 90 minutes. NASA gives the same 90 to 93 minutes for the space station.",
+        "img": [
+          "gen/how-much-does-it-cost-to-send-1-kg-into-space-shuttle-falcon-9-starship-x2-11081151.jpg",
+          "starlink-1.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "International Space Station in orbit",
+              "ISS over Earth",
+              "International Space Station photographed from Space Shuttle"
+            ],
+            "want": "the International Space Station orbiting above the Earth"
+          },
+          {
+            "q": [
+              "Earth from the International Space Station",
+              "ISS view of Earth limb",
+              "Earth seen from orbit ISS"
+            ],
+            "want": "Earth seen from orbit, the curved horizon and the thin blue atmosphere"
+          }
+        ]
+      },
+      {
+        "text": "At that speed there is no turning around. The only way down is to fire the engines against the direction of travel. That dips the orbit into the air, and the air does most of the braking. But that fall takes the better part of an hour and covers a big part of the globe. So the ship has to start home far from Texas, on a path that ends exactly at the tower. And here is the catch. Texas does not stay where the ship left it.",
+        "img": [
+          "starlink-2.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Earth from the International Space Station",
+              "ISS view of Earth limb",
+              "Earth seen from orbit ISS"
+            ],
+            "want": "Earth seen from orbit, the curved horizon and the thin blue atmosphere"
+          },
+          {
+            "q": [
+              "Texas from the International Space Station",
+              "Gulf of Mexico from ISS",
+              "Texas Gulf coast from space"
+            ],
+            "want": "Texas and the Gulf of Mexico coast seen from orbit"
+          }
+        ]
+      },
+      {
+        "head": "Why does Starbase drift away from the ship's path?",
+        "pop": [
+          {
+            "say": "",
+            "show": "EARTH TURNS"
+          }
+        ],
+        "img": [
+          "starlink-1.jpg"
+        ]
+      },
+      {
+        "text": "Because the Earth turns under the orbit. The orbit stays roughly fixed in space. The planet spins once a day beneath it. NASA's orbit tutorial puts a number on it. Every lap, the space station's track over the ground shifts about 22.9 degrees west. For Starship's orbit it is about the same.",
+        "photo": [
+          {
+            "q": [
+              "International Space Station in orbit",
+              "ISS over Earth",
+              "International Space Station photographed from Space Shuttle"
+            ],
+            "want": "the International Space Station orbiting above the Earth"
+          },
+          {
+            "q": [
+              "Earth from the International Space Station",
+              "ISS view of Earth limb",
+              "Earth seen from orbit ISS"
+            ],
+            "want": "Earth seen from orbit, the curved horizon and the thin blue atmosphere"
+          },
+          {
+            "q": [
+              "Earth at night from the International Space Station",
+              "city lights from ISS night",
+              "Gulf coast at night from space"
+            ],
+            "want": "Earth at night seen from orbit, city lights below"
+          }
+        ]
+      },
+      {
+        "text": "At Starbase's latitude, about 26 degrees north, that is more than 2,000 kilometres per lap. After one lap the ship passes far west of Texas. After two laps, further still. The ship can only aim for the tower once the Earth has turned Starbase back under a path that ends there. In SpaceX's timeline that comes after about 14 orbits. At 90 minutes a lap, that is roughly 21 hours. So the ship has almost a whole day to fill.",
+        "img": [
+          "lib/starship-pad.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Texas from the International Space Station",
+              "Gulf of Mexico from ISS",
+              "Texas Gulf coast from space"
+            ],
+            "want": "Texas and the Gulf of Mexico coast seen from orbit"
+          },
+          {
+            "q": [
+              "Earth at night from the International Space Station",
+              "city lights from ISS night",
+              "Gulf coast at night from space"
+            ],
+            "want": "Earth at night seen from orbit, city lights below"
+          },
+          {
+            "q": [
+              "Starbase Texas",
+              "SpaceX Starbase launch tower",
+              "Boca Chica SpaceX launch site"
+            ],
+            "want": "the SpaceX Starbase launch site in Texas with its launch tower"
+          }
+        ]
+      },
+      {
+        "head": "So how does SpaceX use the 22 hours?",
+        "pop": [
+          {
+            "say": "",
+            "show": "22 HOURS"
+          }
+        ],
+        "img": [
+          "gen/how-much-does-it-cost-to-send-1-kg-into-space-shuttle-falcon-9-starship-x2-11081151.jpg"
+        ]
+      },
+      {
+        "text": "It works. About 35 minutes after liftoff the ship starts releasing 26 Starlink V3 satellites, the bigger version built for Starship. Each one adds about 1 terabit per second of capacity. Together, roughly what 10 Falcon 9 launches of the smaller satellites carry. And 3 of them have a second job. They carry cameras to photograph the ship's heat shield and send the images down.",
+        "img": [
+          "gen/how-much-does-it-cost-to-send-1-kg-into-space-shuttle-falcon-9-starship-x2-11081151.jpg",
+          "starlink-launch-stack.jpg",
+          "starlink-2.jpg"
+        ]
+      },
+      {
+        "text": "Those pictures help answer the only question that matters. Is this ship fit to come home? The timeline has 3 return checks. One after about an hour and a half, with a splashdown off Hawaii as the way out. One after about 7 hours, over a zone off Chile. And a last Hawaii check after about 21 hours. If anything needed for re-entry, the landing burn or the tower approach looks wrong, the ship goes into the ocean instead. No catch.",
+        "img": [
+          "gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute-x2-11041157.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Earth from the International Space Station",
+              "ISS view of Earth limb",
+              "Earth seen from orbit ISS"
+            ],
+            "want": "Earth seen from orbit, the curved horizon and the thin blue atmosphere"
+          },
+          {
+            "q": [
+              "spacecraft reentry plasma",
+              "Space Shuttle reentry",
+              "reentry from ISS photograph"
+            ],
+            "want": "a spacecraft glowing during re-entry into the atmosphere"
+          }
+        ]
+      },
+      {
+        "head": "What happens in the last hour?",
+        "pop": [
+          {
+            "say": "",
+            "show": "THE LAST HOUR"
+          }
+        ],
+        "img": [
+          "gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute-x2-11041157.jpg"
+        ]
+      },
+      {
+        "text": "At about 21 hours and 36 minutes the ship fires its engines. For only 10 seconds. That is enough to bend its path into the atmosphere. 35 minutes later it hits the thick air, belly first, heat shield down, falling like a skydiver. It drops below the speed of sound at about 22 hours and 30 minutes.",
+        "img": [
+          "gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute-x2-11041157.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "spacecraft reentry plasma",
+              "Space Shuttle reentry",
+              "reentry from ISS photograph"
+            ],
+            "want": "a spacecraft glowing during re-entry into the atmosphere"
+          },
+          {
+            "q": [
+              "Texas from the International Space Station",
+              "Gulf of Mexico from ISS",
+              "Texas Gulf coast from space"
+            ],
+            "want": "Texas and the Gulf of Mexico coast seen from orbit"
+          }
+        ]
+      },
+      {
+        "text": "2 minutes later the landing burn starts. The ship swings upright. Its engines step down from 3 to 2 to 1. And at about 22 hours and 32 minutes it should stop between the arms. From the 10-second burn to the catch, about 57 minutes. That is why the burn happens almost half a world away. The ship needs that long to fall home.",
+        "img": [
+          "gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute-x3-11041200.jpg",
+          "gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Starbase Texas",
+              "SpaceX Starbase launch tower",
+              "Boca Chica SpaceX launch site"
+            ],
+            "want": "the SpaceX Starbase launch site in Texas with its launch tower"
+          }
+        ]
+      },
+      {
+        "head": "Why does catching both halves matter?",
+        "pop": [
+          {
+            "say": "",
+            "show": "BOTH HALVES"
+          }
+        ],
+        "img": [
+          "gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute.jpg"
+        ]
+      },
+      {
+        "text": "Because then the whole rocket comes back to fly again. Musk wrote that a double success would be the first time all parts of an orbital rocket return to Earth intact. Falcon 9 already lands its booster. But its upper stage burns up after every single flight. A ship caught at the tower is back where it started, ready to be checked and stacked again. A rocket used like an aircraft. That is the whole point of Starship.",
+        "img": [
+          "gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute.jpg",
+          "gen/spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story.jpg",
+          "lib/starship-pad.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Falcon 9 first stage landing",
+              "Falcon 9 booster landing",
+              "Falcon 9 landing zone"
+            ],
+            "want": "a Falcon 9 first stage landing upright"
+          }
+        ]
+      },
+      {
+        "text": "So remember the 2 numbers. 7 minutes for the booster, because it never leaves the neighbourhood. 22 hours for the ship, because it has to wait for the planet to bring the neighbourhood back.",
+        "img": [
+          "lib/starship-booster-catch.jpg",
+          "gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Earth from the International Space Station",
+              "ISS view of Earth limb",
+              "Earth seen from orbit ISS"
+            ],
+            "want": "Earth seen from orbit, the curved horizon and the thin blue atmosphere"
+          }
+        ]
+      }
+    ],
+    "nl": [
+      {
+        "text": "De booster van Starship is in 7 minuten thuis. Het schip doet er 22 uur over. Zelfde raket, zelfde lancering, dezelfde torenarmen die op allebei wachten. Aan het eind van deze video weet je waarom de tweede vangst bijna een hele dag duurt. En het antwoord gaat helemaal niet over de raket. Het gaat over iets veel groters, dat er de hele tijd onder beweegt.",
+        "img": [
+          "lib/starship-booster-catch.jpg",
+          "gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Starbase Texas",
+              "SpaceX Starbase launch tower",
+              "Boca Chica SpaceX launch site"
+            ],
+            "want": "the SpaceX Starbase launch site in Texas with its launch tower"
+          }
+        ]
+      },
+      {
+        "text": "Op vlucht 15 wil SpaceX iets doen wat nog nooit met een orbitale raket is gedaan. De booster vangen. En dan, de volgende dag, het schip vangen. Allebei met dezelfde stalen armen aan dezelfde toren in het zuiden van Texas. Elon Musk noemde de kans groter dan niet. Dat is een verwachting, geen resultaat. Dus kijken we wat elke helft moet doen.",
+        "img": [
+          "lib/starship-pad.jpg",
+          "gen/spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story-x2-11022028.jpg",
+          "gen/starship-first-flight-2023-four-minutes-crater-launch-pad-story-x3-11102026.jpg"
+        ]
+      },
+      {
+        "head": "Waarom kan de booster meteen terugkomen?",
+        "pop": [
+          {
+            "say": "",
+            "show": "METEEN TERUG"
+          }
+        ],
+        "img": [
+          "gen/why-starship-fires-engines-at-own-booster-hot-staging-explained-x2-11061154.jpg"
+        ]
+      },
+      {
+        "text": "Omdat hij nooit in een baan om de aarde komt. Super Heavy brandt 2 minuten en 19 seconden. Dan ontsteekt het schip zijn eigen motoren en trekt zich los. 5 seconden later vuurt de booster opnieuw, zo'n 36 seconden. Die boostback-burn keert hem om, van de Golf van Mexico terug richting Texas.",
+        "img": [
+          "gen/why-starship-fires-engines-at-own-booster-hot-staging-explained.jpg",
+          "gen/why-starship-fires-engines-at-own-booster-hot-staging-explained-x2-11061154.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Super Heavy booster",
+              "SpaceX Super Heavy",
+              "Starship booster Starbase"
+            ],
+            "want": "the SpaceX Super Heavy booster, a giant stainless steel rocket stage"
+          }
+        ]
+      },
+      {
+        "text": "Daarna valt hij, sturend met zijn grid fins. Na 6 minuten en 10 seconden ontsteekt hij nog één keer zijn motoren. Na 6 minuten en 35 seconden moet hij tussen de armen hangen. Dit is al eerder gelukt. 3 boosters van de eerste generatie werden gevangen, op vlucht 5, 7 en 8, en 2 daarvan vlogen opnieuw. De booster van vlucht 15 is de eerste van de grotere derde generatie die het probeert.",
+        "img": [
+          "gen/spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story-x3-11022028.jpg",
+          "gen/spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story.jpg",
+          "gen/how-much-does-it-cost-to-send-1-kg-into-space-shuttle-falcon-9-starship-x3-11081152.jpg"
+        ]
+      },
+      {
+        "text": "De booster kan zo omkeren omdat hij nog ver onder de baansnelheid zit als hij loslaat. Die luxe heeft het schip niet.",
+        "img": [
+          "lib/starship-launch.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Falcon 9 first stage landing",
+              "Falcon 9 booster landing",
+              "Falcon 9 landing zone"
+            ],
+            "want": "a Falcon 9 first stage landing upright"
+          }
+        ]
+      },
+      {
+        "head": "Wat maakt het schip dan zo anders?",
+        "pop": [
+          {
+            "say": "",
+            "show": "WAAROM HET SCHIP WACHT"
+          }
+        ],
+        "img": [
+          "gen/how-much-does-it-cost-to-send-1-kg-into-space-shuttle-falcon-9-starship-x2-11081151.jpg"
+        ]
+      },
+      {
+        "text": "Het zit in een baan om de aarde. En een baan draai je niet zomaar om. Zo'n 8 minuten na de lancering cirkelt het schip op ongeveer 275 kilometer hoogte rond de aarde. Op die hoogte geeft de natuurkunde een snelheid van zo'n 7,7 kilometer per seconde. Dat is bijna 28.000 kilometer per uur. Eén rondje om de hele planeet duurt ongeveer 90 minuten. NASA noemt dezelfde 90 tot 93 minuten voor het ruimtestation.",
+        "img": [
+          "gen/how-much-does-it-cost-to-send-1-kg-into-space-shuttle-falcon-9-starship-x2-11081151.jpg",
+          "starlink-1.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "International Space Station in orbit",
+              "ISS over Earth",
+              "International Space Station photographed from Space Shuttle"
+            ],
+            "want": "the International Space Station orbiting above the Earth"
+          },
+          {
+            "q": [
+              "Earth from the International Space Station",
+              "ISS view of Earth limb",
+              "Earth seen from orbit ISS"
+            ],
+            "want": "Earth seen from orbit, the curved horizon and the thin blue atmosphere"
+          }
+        ]
+      },
+      {
+        "text": "Bij die snelheid keer je niet om. De enige weg naar beneden is de motoren tegen de vliegrichting in laten branden. Dan duikt de baan de lucht in, en de lucht doet het meeste remwerk. Maar die val duurt bijna een uur en beslaat een groot deel van de aardbol. Het schip moet dus ver van Texas aan de terugweg beginnen, op een koers die precies bij de toren eindigt. En daar zit het probleem. Texas blijft niet liggen waar het schip het achterliet.",
+        "img": [
+          "starlink-2.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Earth from the International Space Station",
+              "ISS view of Earth limb",
+              "Earth seen from orbit ISS"
+            ],
+            "want": "Earth seen from orbit, the curved horizon and the thin blue atmosphere"
+          },
+          {
+            "q": [
+              "Texas from the International Space Station",
+              "Gulf of Mexico from ISS",
+              "Texas Gulf coast from space"
+            ],
+            "want": "Texas and the Gulf of Mexico coast seen from orbit"
+          }
+        ]
+      },
+      {
+        "head": "Waarom schuift Starbase onder de baan van het schip uit?",
+        "pop": [
+          {
+            "say": "",
+            "show": "DE AARDE DRAAIT"
+          }
+        ],
+        "img": [
+          "starlink-1.jpg"
+        ]
+      },
+      {
+        "text": "Omdat de aarde onder de baan doordraait. De baan ligt ruwweg vast in de ruimte. De planeet draait er eens per dag onder rond. De baanuitleg van NASA geeft er een getal bij. Bij elk rondje schuift het spoor van het ruimtestation over de grond zo'n 22,9 graden naar het westen. Voor de baan van Starship is dat ongeveer hetzelfde.",
+        "photo": [
+          {
+            "q": [
+              "International Space Station in orbit",
+              "ISS over Earth",
+              "International Space Station photographed from Space Shuttle"
+            ],
+            "want": "the International Space Station orbiting above the Earth"
+          },
+          {
+            "q": [
+              "Earth from the International Space Station",
+              "ISS view of Earth limb",
+              "Earth seen from orbit ISS"
+            ],
+            "want": "Earth seen from orbit, the curved horizon and the thin blue atmosphere"
+          },
+          {
+            "q": [
+              "Earth at night from the International Space Station",
+              "city lights from ISS night",
+              "Gulf coast at night from space"
+            ],
+            "want": "Earth at night seen from orbit, city lights below"
+          }
+        ]
+      },
+      {
+        "text": "Op de breedte van Starbase, ongeveer 26 graden noord, is dat meer dan 2.000 kilometer per rondje. Na één rondje komt het schip ver ten westen van Texas langs. Na twee rondjes nog verder. Het schip kan pas op de toren mikken als de aarde Starbase weer onder een koers heeft gedraaid die daar eindigt. In de tijdlijn van SpaceX is dat na ongeveer 14 rondjes. Met 90 minuten per rondje is dat zo'n 21 uur. Het schip heeft dus bijna een hele dag te vullen.",
+        "img": [
+          "lib/starship-pad.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Texas from the International Space Station",
+              "Gulf of Mexico from ISS",
+              "Texas Gulf coast from space"
+            ],
+            "want": "Texas and the Gulf of Mexico coast seen from orbit"
+          },
+          {
+            "q": [
+              "Earth at night from the International Space Station",
+              "city lights from ISS night",
+              "Gulf coast at night from space"
+            ],
+            "want": "Earth at night seen from orbit, city lights below"
+          },
+          {
+            "q": [
+              "Starbase Texas",
+              "SpaceX Starbase launch tower",
+              "Boca Chica SpaceX launch site"
+            ],
+            "want": "the SpaceX Starbase launch site in Texas with its launch tower"
+          }
+        ]
+      },
+      {
+        "head": "Dus wat doet SpaceX met die 22 uur?",
+        "pop": [
+          {
+            "say": "",
+            "show": "22 UUR"
+          }
+        ],
+        "img": [
+          "gen/how-much-does-it-cost-to-send-1-kg-into-space-shuttle-falcon-9-starship-x2-11081151.jpg"
+        ]
+      },
+      {
+        "text": "Werken. Zo'n 35 minuten na de lancering begint het schip 26 Starlink V3-satellieten uit te zetten, de grotere versie die voor Starship is gebouwd. Elk voegt ongeveer 1 terabit per seconde aan capaciteit toe. Samen ongeveer wat 10 Falcon 9-lanceringen met de kleinere satellieten meenemen. En 3 ervan hebben een tweede taak. Ze dragen camera's die het hitteschild van het schip fotograferen en de beelden doorsturen.",
+        "img": [
+          "gen/how-much-does-it-cost-to-send-1-kg-into-space-shuttle-falcon-9-starship-x2-11081151.jpg",
+          "starlink-launch-stack.jpg",
+          "starlink-2.jpg"
+        ]
+      },
+      {
+        "text": "Die foto's helpen de enige vraag te beantwoorden die telt. Mag dit schip naar huis? De tijdlijn heeft 3 terugkeermomenten. Eén na ongeveer anderhalf uur, met een landing in zee bij Hawaï als uitweg. Eén na ongeveer 7 uur, boven een zone voor de kust van Chili. En een laatste Hawaï-check na ongeveer 21 uur. Lijkt er iets mis met wat nodig is voor de terugkeer, de landingsburn of de nadering van de toren, dan gaat het schip de oceaan in. Geen vangst.",
+        "img": [
+          "gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute-x2-11041157.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Earth from the International Space Station",
+              "ISS view of Earth limb",
+              "Earth seen from orbit ISS"
+            ],
+            "want": "Earth seen from orbit, the curved horizon and the thin blue atmosphere"
+          },
+          {
+            "q": [
+              "spacecraft reentry plasma",
+              "Space Shuttle reentry",
+              "reentry from ISS photograph"
+            ],
+            "want": "a spacecraft glowing during re-entry into the atmosphere"
+          }
+        ]
+      },
+      {
+        "head": "Wat gebeurt er in het laatste uur?",
+        "pop": [
+          {
+            "say": "",
+            "show": "HET LAATSTE UUR"
+          }
+        ],
+        "img": [
+          "gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute-x2-11041157.jpg"
+        ]
+      },
+      {
+        "text": "Na ongeveer 21 uur en 36 minuten laat het schip zijn motoren branden. Slechts 10 seconden. Dat is genoeg om de koers de dampkring in te buigen. 35 minuten later raakt het de dikke lucht, buik naar voren, hitteschild naar beneden, vallend als een parachutist. Rond 22 uur en 30 minuten zakt het onder de geluidssnelheid.",
+        "img": [
+          "gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute-x2-11041157.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "spacecraft reentry plasma",
+              "Space Shuttle reentry",
+              "reentry from ISS photograph"
+            ],
+            "want": "a spacecraft glowing during re-entry into the atmosphere"
+          },
+          {
+            "q": [
+              "Texas from the International Space Station",
+              "Gulf of Mexico from ISS",
+              "Texas Gulf coast from space"
+            ],
+            "want": "Texas and the Gulf of Mexico coast seen from orbit"
+          }
+        ]
+      },
+      {
+        "text": "2 minuten later begint de landingsburn. Het schip zwaait rechtop. De motoren gaan van 3 naar 2 naar 1. En rond 22 uur en 32 minuten moet het tussen de armen stilhangen. Van de burn van 10 seconden tot de vangst: ongeveer 57 minuten. Daarom gebeurt die burn bijna aan de andere kant van de wereld. Het schip heeft zo lang nodig om naar huis te vallen.",
+        "img": [
+          "gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute-x3-11041200.jpg",
+          "gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Starbase Texas",
+              "SpaceX Starbase launch tower",
+              "Boca Chica SpaceX launch site"
+            ],
+            "want": "the SpaceX Starbase launch site in Texas with its launch tower"
+          }
+        ]
+      },
+      {
+        "head": "Waarom is het vangen van beide helften zo belangrijk?",
+        "pop": [
+          {
+            "say": "",
+            "show": "BEIDE HELFTEN"
+          }
+        ],
+        "img": [
+          "gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute.jpg"
+        ]
+      },
+      {
+        "text": "Omdat dan de hele raket terugkomt om opnieuw te vliegen. Musk schreef dat een dubbel succes de eerste keer zou zijn dat alle delen van een orbitale raket heel terugkomen op aarde. Falcon 9 laat zijn booster al landen. Maar de bovenste trap verbrandt na elke vlucht. Een schip dat bij de toren wordt gevangen, staat weer waar het begon, klaar om te worden gecontroleerd en opnieuw gestapeld. Een raket die je gebruikt als een vliegtuig. Dat is het hele idee achter Starship.",
+        "img": [
+          "gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute.jpg",
+          "gen/spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story.jpg",
+          "lib/starship-pad.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Falcon 9 first stage landing",
+              "Falcon 9 booster landing",
+              "Falcon 9 landing zone"
+            ],
+            "want": "a Falcon 9 first stage landing upright"
+          }
+        ]
+      },
+      {
+        "text": "Onthoud dus de 2 getallen. 7 minuten voor de booster, omdat hij de buurt nooit verlaat. 22 uur voor het schip, omdat het moet wachten tot de planeet de buurt terugbrengt.",
+        "img": [
+          "lib/starship-booster-catch.jpg",
+          "gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Earth from the International Space Station",
+              "ISS view of Earth limb",
+              "Earth seen from orbit ISS"
+            ],
+            "want": "Earth seen from orbit, the curved horizon and the thin blue atmosphere"
+          }
+        ]
+      }
+    ]
   },
-  "proof": {
-   "source": "SpaceX Caught an Entire Rocket Booster With Giant Mechanical Arms! - https://youtu.be/w9dAtutWOx8",
-   "views": 3700000,
-   "why": "a 4K-subscriber channel got 3.7M views (154x its usual) at 5 days old, the same topic did 2.8M at 7 days (Beyond Earth, 33K subs), and 'SpaceX Is About to Catch a Spaceship' did 211K at a 599-subscriber channel; Flight 15's double catch is planned for 13-14 Nov. Our angle adds what those skip: why the ship needs 22 hours and the booster 7 minutes (the Earth turns Starbase away under the orbit)"
-  },
-  "en": "Starship's booster: 7 minutes. Its ship: 22 hours. Flight 15 is SpaceX's first try to catch both. The booster turns around and flies straight back. The tower's arms have caught it three times already. But the ship goes to orbit, at 17,000 miles an hour. It circles the whole planet every 90 minutes. And with every lap, Earth turns Texas further away. So it waits 14 laps for Starbase to swing back. Then one 10-second burn, and an hour of falling. That's how one rocket comes home twice.",
-  "nl": "De booster van Starship: 7 minuten. Het schip: 22 uur. Vlucht 15 is de eerste poging van SpaceX om ze allebei te vangen. De booster keert om en vliegt meteen terug. De armen van de toren vingen hem al drie keer. Maar het schip gaat in een baan om de aarde, met 28.000 kilometer per uur. Het draait elke 90 minuten een rondje om de planeet. En bij elk rondje draait de aarde Texas verder weg. Dus wacht het 14 rondjes tot Starbase terugdraait. Dan één burn van 10 seconden, en een uur vallen. Zo komt één raket twee keer thuis."
- },
- "video": {
-  "yt_title_en": "Starship Double Catch Explained: Why the Ship Waits 22 Hours to Land",
-  "yt_title_nl": "Starship dubbele vangst uitgelegd: waarom het schip 22 uur wacht",
-  "en": [
-   {
-    "text": "Starship's booster comes home in 7 minutes. Its ship takes 22 hours. Same rocket, same launch, same tower arms waiting for both. By the end of this video you will know why the second catch takes almost a whole day. And the answer is not about the rocket at all. It is about something much bigger, moving under it the whole time.",
-    "img": [
-     "lib/starship-booster-catch.jpg",
-     "gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Starbase Texas",
-       "SpaceX Starbase launch tower",
-       "Boca Chica SpaceX launch site"
-      ],
-      "want": "the SpaceX Starbase launch site in Texas with its launch tower"
-     }
-    ]
-   },
-   {
-    "text": "On Flight 15, SpaceX plans something no one has done with an orbital rocket. Catch the booster. Then, the next day, catch the ship. Both with the same steel arms on the same tower in South Texas. Elon Musk called the odds more likely than not. That is a forecast, not a result. So let's look at what each half has to do.",
-    "img": [
-     "lib/starship-pad.jpg",
-     "gen/spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story-x2-11022028.jpg",
-     "gen/starship-first-flight-2023-four-minutes-crater-launch-pad-story-x3-11102026.jpg"
-    ]
-   },
-   {
-    "head": "Why can the booster come straight back?",
-    "pop": [
-     {
-      "say": "",
-      "show": "STRAIGHT BACK"
-     }
-    ],
-    "img": [
-     "gen/why-starship-fires-engines-at-own-booster-hot-staging-explained-x2-11061154.jpg"
-    ]
-   },
-   {
-    "text": "Because it never reaches orbit. Super Heavy burns for 2 minutes and 19 seconds. Then the ship lights its own engines and pulls away. 5 seconds later the booster fires again, for about 36 seconds. That boostback burn turns it around, from heading out over the Gulf of Mexico to heading back to Texas.",
-    "img": [
-     "gen/why-starship-fires-engines-at-own-booster-hot-staging-explained.jpg",
-     "gen/why-starship-fires-engines-at-own-booster-hot-staging-explained-x2-11061154.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Super Heavy booster",
-       "SpaceX Super Heavy",
-       "Starship booster Starbase"
-      ],
-      "want": "the SpaceX Super Heavy booster, a giant stainless steel rocket stage"
-     }
-    ]
-   },
-   {
-    "text": "Then it falls, steering with its grid fins. At 6 minutes and 10 seconds it lights its engines one last time. At 6 minutes and 35 seconds it should hang between the arms. This part has been done before. 3 first-generation boosters were caught, on Flights 5, 7 and 8, and 2 of them flew again. Flight 15's booster is the first of the bigger third generation to try.",
-    "img": [
-     "gen/spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story-x3-11022028.jpg",
-     "gen/spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story.jpg",
-     "gen/how-much-does-it-cost-to-send-1-kg-into-space-shuttle-falcon-9-starship-x3-11081152.jpg"
-    ]
-   },
-   {
-    "text": "The booster can make that U-turn because it is still far below orbital speed when it lets go. The ship does not get that luxury.",
-    "img": [
-     "lib/starship-launch.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Falcon 9 first stage landing",
-       "Falcon 9 booster landing",
-       "Falcon 9 landing zone"
-      ],
-      "want": "a Falcon 9 first stage landing upright"
-     }
-    ]
-   },
-   {
-    "head": "So what makes the ship so different?",
-    "pop": [
-     {
-      "say": "",
-      "show": "WHY THE SHIP WAITS"
-     }
-    ],
-    "img": [
-     "gen/how-much-does-it-cost-to-send-1-kg-into-space-shuttle-falcon-9-starship-x2-11081151.jpg"
-    ]
-   },
-   {
-    "text": "It is in orbit. And an orbit cannot simply be reversed. About 8 minutes after launch the ship circles the Earth at roughly 275 kilometres up. At that height the physics gives a speed of about 7.7 kilometres per second. That is close to 28,000 kilometres an hour. One lap of the whole planet takes about 90 minutes. NASA gives the same 90 to 93 minutes for the space station.",
-    "img": [
-     "gen/how-much-does-it-cost-to-send-1-kg-into-space-shuttle-falcon-9-starship-x2-11081151.jpg",
-     "starlink-1.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "International Space Station in orbit",
-       "ISS over Earth",
-       "International Space Station photographed from Space Shuttle"
-      ],
-      "want": "the International Space Station orbiting above the Earth"
-     },
-     {
-      "q": [
-       "Earth from the International Space Station",
-       "ISS view of Earth limb",
-       "Earth seen from orbit ISS"
-      ],
-      "want": "Earth seen from orbit, the curved horizon and the thin blue atmosphere"
-     }
-    ]
-   },
-   {
-    "text": "At that speed there is no turning around. The only way down is to fire the engines against the direction of travel. That dips the orbit into the air, and the air does most of the braking. But that fall takes the better part of an hour and covers a big part of the globe. So the ship has to start home far from Texas, on a path that ends exactly at the tower. And here is the catch. Texas does not stay where the ship left it.",
-    "img": [
-     "starlink-2.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Earth from the International Space Station",
-       "ISS view of Earth limb",
-       "Earth seen from orbit ISS"
-      ],
-      "want": "Earth seen from orbit, the curved horizon and the thin blue atmosphere"
-     },
-     {
-      "q": [
-       "Texas from the International Space Station",
-       "Gulf of Mexico from ISS",
-       "Texas Gulf coast from space"
-      ],
-      "want": "Texas and the Gulf of Mexico coast seen from orbit"
-     }
-    ]
-   },
-   {
-    "head": "Why does Starbase drift away from the ship's path?",
-    "pop": [
-     {
-      "say": "",
-      "show": "EARTH TURNS"
-     }
-    ],
-    "img": [
-     "starlink-1.jpg"
-    ]
-   },
-   {
-    "text": "Because the Earth turns under the orbit. The orbit stays roughly fixed in space. The planet spins once a day beneath it. NASA's orbit tutorial puts a number on it. Every lap, the space station's track over the ground shifts about 22.9 degrees west. For Starship's orbit it is about the same.",
-    "photo": [
-     {
-      "q": [
-       "International Space Station in orbit",
-       "ISS over Earth",
-       "International Space Station photographed from Space Shuttle"
-      ],
-      "want": "the International Space Station orbiting above the Earth"
-     },
-     {
-      "q": [
-       "Earth from the International Space Station",
-       "ISS view of Earth limb",
-       "Earth seen from orbit ISS"
-      ],
-      "want": "Earth seen from orbit, the curved horizon and the thin blue atmosphere"
-     },
-     {
-      "q": [
-       "Earth at night from the International Space Station",
-       "city lights from ISS night",
-       "Gulf coast at night from space"
-      ],
-      "want": "Earth at night seen from orbit, city lights below"
-     }
-    ]
-   },
-   {
-    "text": "At Starbase's latitude, about 26 degrees north, that is more than 2,000 kilometres per lap. After one lap the ship passes far west of Texas. After two laps, further still. The ship can only aim for the tower once the Earth has turned Starbase back under a path that ends there. In SpaceX's timeline that comes after about 14 orbits. At 90 minutes a lap, that is roughly 21 hours. So the ship has almost a whole day to fill.",
-    "img": [
-     "lib/starship-pad.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Texas from the International Space Station",
-       "Gulf of Mexico from ISS",
-       "Texas Gulf coast from space"
-      ],
-      "want": "Texas and the Gulf of Mexico coast seen from orbit"
-     },
-     {
-      "q": [
-       "Earth at night from the International Space Station",
-       "city lights from ISS night",
-       "Gulf coast at night from space"
-      ],
-      "want": "Earth at night seen from orbit, city lights below"
-     },
-     {
-      "q": [
-       "Starbase Texas",
-       "SpaceX Starbase launch tower",
-       "Boca Chica SpaceX launch site"
-      ],
-      "want": "the SpaceX Starbase launch site in Texas with its launch tower"
-     }
-    ]
-   },
-   {
-    "head": "So how does SpaceX use the 22 hours?",
-    "pop": [
-     {
-      "say": "",
-      "show": "22 HOURS"
-     }
-    ],
-    "img": [
-     "gen/how-much-does-it-cost-to-send-1-kg-into-space-shuttle-falcon-9-starship-x2-11081151.jpg"
-    ]
-   },
-   {
-    "text": "It works. About 35 minutes after liftoff the ship starts releasing 26 Starlink V3 satellites, the bigger version built for Starship. Each one adds about 1 terabit per second of capacity. Together, roughly what 10 Falcon 9 launches of the smaller satellites carry. And 3 of them have a second job. They carry cameras to photograph the ship's heat shield and send the images down.",
-    "img": [
-     "gen/how-much-does-it-cost-to-send-1-kg-into-space-shuttle-falcon-9-starship-x2-11081151.jpg",
-     "starlink-launch-stack.jpg",
-     "starlink-2.jpg"
-    ]
-   },
-   {
-    "text": "Those pictures help answer the only question that matters. Is this ship fit to come home? The timeline has 3 return checks. One after about an hour and a half, with a splashdown off Hawaii as the way out. One after about 7 hours, over a zone off Chile. And a last Hawaii check after about 21 hours. If anything needed for re-entry, the landing burn or the tower approach looks wrong, the ship goes into the ocean instead. No catch.",
-    "img": [
-     "gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute-x2-11041157.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Earth from the International Space Station",
-       "ISS view of Earth limb",
-       "Earth seen from orbit ISS"
-      ],
-      "want": "Earth seen from orbit, the curved horizon and the thin blue atmosphere"
-     },
-     {
-      "q": [
-       "spacecraft reentry plasma",
-       "Space Shuttle reentry",
-       "reentry from ISS photograph"
-      ],
-      "want": "a spacecraft glowing during re-entry into the atmosphere"
-     }
-    ]
-   },
-   {
-    "head": "What happens in the last hour?",
-    "pop": [
-     {
-      "say": "",
-      "show": "THE LAST HOUR"
-     }
-    ],
-    "img": [
-     "gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute-x2-11041157.jpg"
-    ]
-   },
-   {
-    "text": "At about 21 hours and 36 minutes the ship fires its engines. For only 10 seconds. That is enough to bend its path into the atmosphere. 35 minutes later it hits the thick air, belly first, heat shield down, falling like a skydiver. It drops below the speed of sound at about 22 hours and 30 minutes.",
-    "img": [
-     "gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute-x2-11041157.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "spacecraft reentry plasma",
-       "Space Shuttle reentry",
-       "reentry from ISS photograph"
-      ],
-      "want": "a spacecraft glowing during re-entry into the atmosphere"
-     },
-     {
-      "q": [
-       "Texas from the International Space Station",
-       "Gulf of Mexico from ISS",
-       "Texas Gulf coast from space"
-      ],
-      "want": "Texas and the Gulf of Mexico coast seen from orbit"
-     }
-    ]
-   },
-   {
-    "text": "2 minutes later the landing burn starts. The ship swings upright. Its engines step down from 3 to 2 to 1. And at about 22 hours and 32 minutes it should stop between the arms. From the 10-second burn to the catch, about 57 minutes. That is why the burn happens almost half a world away. The ship needs that long to fall home.",
-    "img": [
-     "gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute-x3-11041200.jpg",
-     "gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Starbase Texas",
-       "SpaceX Starbase launch tower",
-       "Boca Chica SpaceX launch site"
-      ],
-      "want": "the SpaceX Starbase launch site in Texas with its launch tower"
-     }
-    ]
-   },
-   {
-    "head": "Why does catching both halves matter?",
-    "pop": [
-     {
-      "say": "",
-      "show": "BOTH HALVES"
-     }
-    ],
-    "img": [
-     "gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute.jpg"
-    ]
-   },
-   {
-    "text": "Because then the whole rocket comes back to fly again. Musk wrote that a double success would be the first time all parts of an orbital rocket return to Earth intact. Falcon 9 already lands its booster. But its upper stage burns up after every single flight. A ship caught at the tower is back where it started, ready to be checked and stacked again. A rocket used like an aircraft. That is the whole point of Starship.",
-    "img": [
-     "gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute.jpg",
-     "gen/spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story.jpg",
-     "lib/starship-pad.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Falcon 9 first stage landing",
-       "Falcon 9 booster landing",
-       "Falcon 9 landing zone"
-      ],
-      "want": "a Falcon 9 first stage landing upright"
-     }
-    ]
-   },
-   {
-    "text": "So remember the 2 numbers. 7 minutes for the booster, because it never leaves the neighbourhood. 22 hours for the ship, because it has to wait for the planet to bring the neighbourhood back.",
-    "img": [
-     "lib/starship-booster-catch.jpg",
-     "gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Earth from the International Space Station",
-       "ISS view of Earth limb",
-       "Earth seen from orbit ISS"
-      ],
-      "want": "Earth seen from orbit, the curved horizon and the thin blue atmosphere"
-     }
-    ]
-   }
-  ],
-  "nl": [
-   {
-    "text": "De booster van Starship is in 7 minuten thuis. Het schip doet er 22 uur over. Zelfde raket, zelfde lancering, dezelfde torenarmen die op allebei wachten. Aan het eind van deze video weet je waarom de tweede vangst bijna een hele dag duurt. En het antwoord gaat helemaal niet over de raket. Het gaat over iets veel groters, dat er de hele tijd onder beweegt.",
-    "img": [
-     "lib/starship-booster-catch.jpg",
-     "gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Starbase Texas",
-       "SpaceX Starbase launch tower",
-       "Boca Chica SpaceX launch site"
-      ],
-      "want": "the SpaceX Starbase launch site in Texas with its launch tower"
-     }
-    ]
-   },
-   {
-    "text": "Op vlucht 15 wil SpaceX iets doen wat nog nooit met een orbitale raket is gedaan. De booster vangen. En dan, de volgende dag, het schip vangen. Allebei met dezelfde stalen armen aan dezelfde toren in het zuiden van Texas. Elon Musk noemde de kans groter dan niet. Dat is een verwachting, geen resultaat. Dus kijken we wat elke helft moet doen.",
-    "img": [
-     "lib/starship-pad.jpg",
-     "gen/spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story-x2-11022028.jpg",
-     "gen/starship-first-flight-2023-four-minutes-crater-launch-pad-story-x3-11102026.jpg"
-    ]
-   },
-   {
-    "head": "Waarom kan de booster meteen terugkomen?",
-    "pop": [
-     {
-      "say": "",
-      "show": "METEEN TERUG"
-     }
-    ],
-    "img": [
-     "gen/why-starship-fires-engines-at-own-booster-hot-staging-explained-x2-11061154.jpg"
-    ]
-   },
-   {
-    "text": "Omdat hij nooit in een baan om de aarde komt. Super Heavy brandt 2 minuten en 19 seconden. Dan ontsteekt het schip zijn eigen motoren en trekt zich los. 5 seconden later vuurt de booster opnieuw, zo'n 36 seconden. Die boostback-burn keert hem om, van de Golf van Mexico terug richting Texas.",
-    "img": [
-     "gen/why-starship-fires-engines-at-own-booster-hot-staging-explained.jpg",
-     "gen/why-starship-fires-engines-at-own-booster-hot-staging-explained-x2-11061154.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Super Heavy booster",
-       "SpaceX Super Heavy",
-       "Starship booster Starbase"
-      ],
-      "want": "the SpaceX Super Heavy booster, a giant stainless steel rocket stage"
-     }
-    ]
-   },
-   {
-    "text": "Daarna valt hij, sturend met zijn grid fins. Na 6 minuten en 10 seconden ontsteekt hij nog één keer zijn motoren. Na 6 minuten en 35 seconden moet hij tussen de armen hangen. Dit is al eerder gelukt. 3 boosters van de eerste generatie werden gevangen, op vlucht 5, 7 en 8, en 2 daarvan vlogen opnieuw. De booster van vlucht 15 is de eerste van de grotere derde generatie die het probeert.",
-    "img": [
-     "gen/spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story-x3-11022028.jpg",
-     "gen/spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story.jpg",
-     "gen/how-much-does-it-cost-to-send-1-kg-into-space-shuttle-falcon-9-starship-x3-11081152.jpg"
-    ]
-   },
-   {
-    "text": "De booster kan zo omkeren omdat hij nog ver onder de baansnelheid zit als hij loslaat. Die luxe heeft het schip niet.",
-    "img": [
-     "lib/starship-launch.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Falcon 9 first stage landing",
-       "Falcon 9 booster landing",
-       "Falcon 9 landing zone"
-      ],
-      "want": "a Falcon 9 first stage landing upright"
-     }
-    ]
-   },
-   {
-    "head": "Wat maakt het schip dan zo anders?",
-    "pop": [
-     {
-      "say": "",
-      "show": "WAAROM HET SCHIP WACHT"
-     }
-    ],
-    "img": [
-     "gen/how-much-does-it-cost-to-send-1-kg-into-space-shuttle-falcon-9-starship-x2-11081151.jpg"
-    ]
-   },
-   {
-    "text": "Het zit in een baan om de aarde. En een baan draai je niet zomaar om. Zo'n 8 minuten na de lancering cirkelt het schip op ongeveer 275 kilometer hoogte rond de aarde. Op die hoogte geeft de natuurkunde een snelheid van zo'n 7,7 kilometer per seconde. Dat is bijna 28.000 kilometer per uur. Eén rondje om de hele planeet duurt ongeveer 90 minuten. NASA noemt dezelfde 90 tot 93 minuten voor het ruimtestation.",
-    "img": [
-     "gen/how-much-does-it-cost-to-send-1-kg-into-space-shuttle-falcon-9-starship-x2-11081151.jpg",
-     "starlink-1.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "International Space Station in orbit",
-       "ISS over Earth",
-       "International Space Station photographed from Space Shuttle"
-      ],
-      "want": "the International Space Station orbiting above the Earth"
-     },
-     {
-      "q": [
-       "Earth from the International Space Station",
-       "ISS view of Earth limb",
-       "Earth seen from orbit ISS"
-      ],
-      "want": "Earth seen from orbit, the curved horizon and the thin blue atmosphere"
-     }
-    ]
-   },
-   {
-    "text": "Bij die snelheid keer je niet om. De enige weg naar beneden is de motoren tegen de vliegrichting in laten branden. Dan duikt de baan de lucht in, en de lucht doet het meeste remwerk. Maar die val duurt bijna een uur en beslaat een groot deel van de aardbol. Het schip moet dus ver van Texas aan de terugweg beginnen, op een koers die precies bij de toren eindigt. En daar zit het probleem. Texas blijft niet liggen waar het schip het achterliet.",
-    "img": [
-     "starlink-2.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Earth from the International Space Station",
-       "ISS view of Earth limb",
-       "Earth seen from orbit ISS"
-      ],
-      "want": "Earth seen from orbit, the curved horizon and the thin blue atmosphere"
-     },
-     {
-      "q": [
-       "Texas from the International Space Station",
-       "Gulf of Mexico from ISS",
-       "Texas Gulf coast from space"
-      ],
-      "want": "Texas and the Gulf of Mexico coast seen from orbit"
-     }
-    ]
-   },
-   {
-    "head": "Waarom schuift Starbase onder de baan van het schip uit?",
-    "pop": [
-     {
-      "say": "",
-      "show": "DE AARDE DRAAIT"
-     }
-    ],
-    "img": [
-     "starlink-1.jpg"
-    ]
-   },
-   {
-    "text": "Omdat de aarde onder de baan doordraait. De baan ligt ruwweg vast in de ruimte. De planeet draait er eens per dag onder rond. De baanuitleg van NASA geeft er een getal bij. Bij elk rondje schuift het spoor van het ruimtestation over de grond zo'n 22,9 graden naar het westen. Voor de baan van Starship is dat ongeveer hetzelfde.",
-    "photo": [
-     {
-      "q": [
-       "International Space Station in orbit",
-       "ISS over Earth",
-       "International Space Station photographed from Space Shuttle"
-      ],
-      "want": "the International Space Station orbiting above the Earth"
-     },
-     {
-      "q": [
-       "Earth from the International Space Station",
-       "ISS view of Earth limb",
-       "Earth seen from orbit ISS"
-      ],
-      "want": "Earth seen from orbit, the curved horizon and the thin blue atmosphere"
-     },
-     {
-      "q": [
-       "Earth at night from the International Space Station",
-       "city lights from ISS night",
-       "Gulf coast at night from space"
-      ],
-      "want": "Earth at night seen from orbit, city lights below"
-     }
-    ]
-   },
-   {
-    "text": "Op de breedte van Starbase, ongeveer 26 graden noord, is dat meer dan 2.000 kilometer per rondje. Na één rondje komt het schip ver ten westen van Texas langs. Na twee rondjes nog verder. Het schip kan pas op de toren mikken als de aarde Starbase weer onder een koers heeft gedraaid die daar eindigt. In de tijdlijn van SpaceX is dat na ongeveer 14 rondjes. Met 90 minuten per rondje is dat zo'n 21 uur. Het schip heeft dus bijna een hele dag te vullen.",
-    "img": [
-     "lib/starship-pad.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Texas from the International Space Station",
-       "Gulf of Mexico from ISS",
-       "Texas Gulf coast from space"
-      ],
-      "want": "Texas and the Gulf of Mexico coast seen from orbit"
-     },
-     {
-      "q": [
-       "Earth at night from the International Space Station",
-       "city lights from ISS night",
-       "Gulf coast at night from space"
-      ],
-      "want": "Earth at night seen from orbit, city lights below"
-     },
-     {
-      "q": [
-       "Starbase Texas",
-       "SpaceX Starbase launch tower",
-       "Boca Chica SpaceX launch site"
-      ],
-      "want": "the SpaceX Starbase launch site in Texas with its launch tower"
-     }
-    ]
-   },
-   {
-    "head": "Dus wat doet SpaceX met die 22 uur?",
-    "pop": [
-     {
-      "say": "",
-      "show": "22 UUR"
-     }
-    ],
-    "img": [
-     "gen/how-much-does-it-cost-to-send-1-kg-into-space-shuttle-falcon-9-starship-x2-11081151.jpg"
-    ]
-   },
-   {
-    "text": "Werken. Zo'n 35 minuten na de lancering begint het schip 26 Starlink V3-satellieten uit te zetten, de grotere versie die voor Starship is gebouwd. Elk voegt ongeveer 1 terabit per seconde aan capaciteit toe. Samen ongeveer wat 10 Falcon 9-lanceringen met de kleinere satellieten meenemen. En 3 ervan hebben een tweede taak. Ze dragen camera's die het hitteschild van het schip fotograferen en de beelden doorsturen.",
-    "img": [
-     "gen/how-much-does-it-cost-to-send-1-kg-into-space-shuttle-falcon-9-starship-x2-11081151.jpg",
-     "starlink-launch-stack.jpg",
-     "starlink-2.jpg"
-    ]
-   },
-   {
-    "text": "Die foto's helpen de enige vraag te beantwoorden die telt. Mag dit schip naar huis? De tijdlijn heeft 3 terugkeermomenten. Eén na ongeveer anderhalf uur, met een landing in zee bij Hawaï als uitweg. Eén na ongeveer 7 uur, boven een zone voor de kust van Chili. En een laatste Hawaï-check na ongeveer 21 uur. Lijkt er iets mis met wat nodig is voor de terugkeer, de landingsburn of de nadering van de toren, dan gaat het schip de oceaan in. Geen vangst.",
-    "img": [
-     "gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute-x2-11041157.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Earth from the International Space Station",
-       "ISS view of Earth limb",
-       "Earth seen from orbit ISS"
-      ],
-      "want": "Earth seen from orbit, the curved horizon and the thin blue atmosphere"
-     },
-     {
-      "q": [
-       "spacecraft reentry plasma",
-       "Space Shuttle reentry",
-       "reentry from ISS photograph"
-      ],
-      "want": "a spacecraft glowing during re-entry into the atmosphere"
-     }
-    ]
-   },
-   {
-    "head": "Wat gebeurt er in het laatste uur?",
-    "pop": [
-     {
-      "say": "",
-      "show": "HET LAATSTE UUR"
-     }
-    ],
-    "img": [
-     "gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute-x2-11041157.jpg"
-    ]
-   },
-   {
-    "text": "Na ongeveer 21 uur en 36 minuten laat het schip zijn motoren branden. Slechts 10 seconden. Dat is genoeg om de koers de dampkring in te buigen. 35 minuten later raakt het de dikke lucht, buik naar voren, hitteschild naar beneden, vallend als een parachutist. Rond 22 uur en 30 minuten zakt het onder de geluidssnelheid.",
-    "img": [
-     "gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute-x2-11041157.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "spacecraft reentry plasma",
-       "Space Shuttle reentry",
-       "reentry from ISS photograph"
-      ],
-      "want": "a spacecraft glowing during re-entry into the atmosphere"
-     },
-     {
-      "q": [
-       "Texas from the International Space Station",
-       "Gulf of Mexico from ISS",
-       "Texas Gulf coast from space"
-      ],
-      "want": "Texas and the Gulf of Mexico coast seen from orbit"
-     }
-    ]
-   },
-   {
-    "text": "2 minuten later begint de landingsburn. Het schip zwaait rechtop. De motoren gaan van 3 naar 2 naar 1. En rond 22 uur en 32 minuten moet het tussen de armen stilhangen. Van de burn van 10 seconden tot de vangst: ongeveer 57 minuten. Daarom gebeurt die burn bijna aan de andere kant van de wereld. Het schip heeft zo lang nodig om naar huis te vallen.",
-    "img": [
-     "gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute-x3-11041200.jpg",
-     "gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Starbase Texas",
-       "SpaceX Starbase launch tower",
-       "Boca Chica SpaceX launch site"
-      ],
-      "want": "the SpaceX Starbase launch site in Texas with its launch tower"
-     }
-    ]
-   },
-   {
-    "head": "Waarom is het vangen van beide helften zo belangrijk?",
-    "pop": [
-     {
-      "say": "",
-      "show": "BEIDE HELFTEN"
-     }
-    ],
-    "img": [
-     "gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute.jpg"
-    ]
-   },
-   {
-    "text": "Omdat dan de hele raket terugkomt om opnieuw te vliegen. Musk schreef dat een dubbel succes de eerste keer zou zijn dat alle delen van een orbitale raket heel terugkomen op aarde. Falcon 9 laat zijn booster al landen. Maar de bovenste trap verbrandt na elke vlucht. Een schip dat bij de toren wordt gevangen, staat weer waar het begon, klaar om te worden gecontroleerd en opnieuw gestapeld. Een raket die je gebruikt als een vliegtuig. Dat is het hele idee achter Starship.",
-    "img": [
-     "gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute.jpg",
-     "gen/spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story.jpg",
-     "lib/starship-pad.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Falcon 9 first stage landing",
-       "Falcon 9 booster landing",
-       "Falcon 9 landing zone"
-      ],
-      "want": "a Falcon 9 first stage landing upright"
-     }
-    ]
-   },
-   {
-    "text": "Onthoud dus de 2 getallen. 7 minuten voor de booster, omdat hij de buurt nooit verlaat. 22 uur voor het schip, omdat het moet wachten tot de planeet de buurt terugbrengt.",
-    "img": [
-     "lib/starship-booster-catch.jpg",
-     "gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute.jpg"
-    ],
-    "photo": [
-     {
-      "q": [
-       "Earth from the International Space Station",
-       "ISS view of Earth limb",
-       "Earth seen from orbit ISS"
-      ],
-      "want": "Earth seen from orbit, the curved horizon and the thin blue atmosphere"
-     }
-    ]
-   }
-  ]
- }
+  "image": "gen/how-spacex-catches-both-starship-stages-why-ship-takes-22-hours-booster-7-minutes.jpg"
 }

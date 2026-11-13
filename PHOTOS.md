@@ -299,3 +299,6 @@ Articles with a "models" key automatically use real-life photos of that model. Y
 - gen/how-spacex-catches-both-starship-stages-why-ship-takes-22-hours-booster-7-minutes.jpg — the Starship upper stage in orbit above the Earth at sunrise
 - gen/how-spacex-catches-both-starship-stages-why-ship-takes-22-hours-booster-7-minutes-x2-11131158.jpg — Starship falling belly first through the atmosphere, its heat shield glowing during re-entry
 - gen/how-spacex-catches-both-starship-stages-why-ship-takes-22-hours-booster-7-minutes-x3-11131200.jpg — the Starbase launch tower at night, catch arms open and waiting for the ship
+- gen/spacex-flight-6-booster-catch-called-off-tower-damaged-at-liftoff-story.jpg — the soot-streaked catch arms at the top of the Starbase tower after a launch, smoke drifting past
+- gen/spacex-flight-6-booster-catch-called-off-tower-damaged-at-liftoff-story-x2-11132027.jpg — a Super Heavy booster coming down on its engines over the open sea at sunset
+- gen/spacex-flight-6-booster-catch-called-off-tower-damaged-at-liftoff-story-x3-11132029.jpg — a mission control room with the tower on the big screen and red warnings

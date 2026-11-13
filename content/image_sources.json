@@ -877,5 +877,44 @@
         "src": "lib/starship-booster-catch.jpg"
       }
     ]
+  },
+  "gen/spacex-flight-6-booster-catch-called-off-tower-damaged-at-liftoff-story.jpg": {
+    "article": "spacex-flight-6-booster-catch-called-off-tower-damaged-at-liftoff-story",
+    "model": "gemini-3.1-flash-image",
+    "made": "2026-11-13",
+    "references": [
+      {
+        "src": "lib/starship-booster-catch.jpg"
+      },
+      {
+        "src": "lib/starship-pad.jpg"
+      }
+    ]
+  },
+  "gen/spacex-flight-6-booster-catch-called-off-tower-damaged-at-liftoff-story-x2-11132027.jpg": {
+    "article": "spacex-flight-6-booster-catch-called-off-tower-damaged-at-liftoff-story",
+    "model": "gemini-3.1-flash-image",
+    "made": "2026-11-13",
+    "references": [
+      {
+        "src": "lib/starship-booster-catch.jpg"
+      },
+      {
+        "src": "lib/starship-pad.jpg"
+      }
+    ]
+  },
+  "gen/spacex-flight-6-booster-catch-called-off-tower-damaged-at-liftoff-story-x3-11132029.jpg": {
+    "article": "spacex-flight-6-booster-catch-called-off-tower-damaged-at-liftoff-story",
+    "model": "gemini-3.1-flash-image",
+    "made": "2026-11-13",
+    "references": [
+      {
+        "src": "lib/starship-booster-catch.jpg"
+      },
+      {
+        "src": "lib/starship-pad.jpg"
+      }
+    ]
   }
 }

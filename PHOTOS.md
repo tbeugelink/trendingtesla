@@ -305,3 +305,6 @@ Articles with a "models" key automatically use real-life photos of that model. Y
 - gen/why-spacex-called-off-starship-flight-15-booster-catch-go-no-go-explained.jpg — a Super Heavy booster coming down on its engines over the sea at dusk, far from the tower
 - gen/why-spacex-called-off-starship-flight-15-booster-catch-go-no-go-explained-x2-11141151.jpg — a launch control room with a go/no-go status panel and the booster's flight path on the big screen
 - gen/why-spacex-called-off-starship-flight-15-booster-catch-go-no-go-explained-x3-11141153.jpg — the Starbase tower's catch arms open and empty at dusk, the booster's exhaust trail far out over the sea
+- gen/what-happens-to-starship-super-heavy-booster-after-splashdown-gulf-explained.jpg — a Super Heavy booster standing upright in the sea after a soft splashdown, just starting to lean
+- gen/what-happens-to-starship-super-heavy-booster-after-splashdown-gulf-explained-x2-11142021.jpg — a recovery ship's crane lifting a twisted ring of rocket engines out of the sea
+- gen/what-happens-to-starship-super-heavy-booster-after-splashdown-gulf-explained-x3-11142023.jpg — a broken booster section lying on the seafloor under water

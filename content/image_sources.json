@@ -955,5 +955,44 @@
         "src": "lib/starship-pad.jpg"
       }
     ]
+  },
+  "gen/what-happens-to-starship-super-heavy-booster-after-splashdown-gulf-explained.jpg": {
+    "article": "what-happens-to-starship-super-heavy-booster-after-splashdown-gulf-explained",
+    "model": "gpt-image-2.5-flare",
+    "made": "2026-11-14",
+    "references": [
+      {
+        "src": "lib/starship-booster-catch.jpg"
+      },
+      {
+        "src": "lib/starship-pad.jpg"
+      }
+    ]
+  },
+  "gen/what-happens-to-starship-super-heavy-booster-after-splashdown-gulf-explained-x2-11142021.jpg": {
+    "article": "what-happens-to-starship-super-heavy-booster-after-splashdown-gulf-explained",
+    "model": "gemini-3.1-flash-image",
+    "made": "2026-11-14",
+    "references": [
+      {
+        "src": "lib/starship-booster-catch.jpg"
+      },
+      {
+        "src": "lib/starship-pad.jpg"
+      }
+    ]
+  },
+  "gen/what-happens-to-starship-super-heavy-booster-after-splashdown-gulf-explained-x3-11142023.jpg": {
+    "article": "what-happens-to-starship-super-heavy-booster-after-splashdown-gulf-explained",
+    "model": "gemini-3.1-flash-image",
+    "made": "2026-11-14",
+    "references": [
+      {
+        "src": "lib/starship-booster-catch.jpg"
+      },
+      {
+        "src": "lib/starship-pad.jpg"
+      }
+    ]
   }
 }

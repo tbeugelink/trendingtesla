@@ -412,6 +412,9 @@ def hook_clip(a, beats, shots, tmp, slug, report):
     rejected clip or a spent budget simply falls back to the still photo. STORY_CLIP=0 switches it off."""
     if os.environ.get("STORY_CLIP", "1") == "0" or not os.environ.get("GEMINI_API_KEY"):
         return None
+    if (a.get("short") or {}).get("hook_clip") is False:  # news about a real event of today: no AI footage of it
+        report.append("hook clip not used: switched off for this article (short.hook_clip = false)")
+        return None
     try:
         sys.path.insert(0, str(S.ROOT / "tools"))
         import gen_image as G

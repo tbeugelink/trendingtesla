@@ -1,0 +1,807 @@
+{
+  "slug": "why-spacex-called-off-starship-flight-15-booster-catch-go-no-go-explained",
+  "date": "2026-11-14",
+  "time": "12:58",
+  "category": "spacex",
+  "sources": [
+    {
+      "title": "Space.com — SpaceX launches Starship on ambitious 22-hour Flight 15 test, but aborts booster 'chopsticks' catch",
+      "url": "https://www.space.com/space-exploration/launches-spacecraft/spacex-starship-flight-15-chopsticks-double-catch-super-heavy-ship"
+    },
+    {
+      "title": "Aerospace Global News — SpaceX aborts Starship booster catch as Flight 15 reaches orbit",
+      "url": "https://aerospaceglobalnews.com/news/spacex-aborts-super-heavy-catch-starship-flight-15/"
+    },
+    {
+      "title": "Interesting Engineering — SpaceX skips Starship booster catch for Gulf of Mexico splashdown",
+      "url": "https://interestingengineering.com/space/spacex-starship-15th-flight-booster-catch-skipped"
+    },
+    {
+      "title": "Spaceflight Now — SpaceX to attempt first booster catch during the Starship Flight 5 mission",
+      "url": "https://spaceflightnow.com/?p=67541"
+    }
+  ],
+  "images": [
+    "gen/why-spacex-called-off-starship-flight-15-booster-catch-go-no-go-explained.jpg",
+    "gen/spacex-flight-6-booster-catch-called-off-tower-damaged-at-liftoff-story-x2-11132027.jpg",
+    "lib/starship-booster-catch.jpg",
+    "gen/spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story-x2-11022028.jpg",
+    "gen/spacex-flight-6-booster-catch-called-off-tower-damaged-at-liftoff-story-x3-11132029.jpg",
+    "lib/starship-pad.jpg"
+  ],
+  "gen_image": {
+    "prompt": "Dramatic close shot of a SpaceX Super Heavy booster descending tail first on its glowing engine flames over the open sea at dusk, the soot-streaked stainless steel booster filling the middle of the frame, four grid fins near its top, white spray and steam whipped up from the water below, orange sky on the horizon with a faint distant launch tower silhouette on the coast far away, calm darker area in the lower left",
+    "subject": "SpaceX Super Heavy booster: a plain cylindrical stainless steel rocket stage about 9 m wide and about 71 m tall, four grid fins near the top, a vented ring on top, 33 Raptor engines at the base; no landing legs, no wings, no windows",
+    "refs": [
+      {
+        "src": "lib/starship-booster-catch.jpg"
+      },
+      {
+        "src": "lib/starship-pad.jpg"
+      }
+    ],
+    "profile": "cinematic",
+    "category": "B",
+    "describe": "a Super Heavy booster coming down on its engines over the sea at dusk, far from the tower",
+    "extra": [
+      {
+        "prompt": "A dark rocket launch control room with rows of consoles, a large wall screen showing a stainless steel rocket booster's flight path curving out over the sea and a big green GO and red NO-GO status panel, people seen only from behind as dark silhouettes, no readable text",
+        "describe": "a launch control room with a go/no-go status panel and the booster's flight path on the big screen"
+      },
+      {
+        "prompt": "The steel launch tower at Starbase, Texas at dusk with its two giant catch arms open and empty, floodlit, the launch mount beside it, a thin trail of a rocket's exhaust drifting far out over the calm Gulf water behind it",
+        "describe": "the Starbase tower's catch arms open and empty at dusk, the booster's exhaust trail far out over the sea"
+      }
+    ]
+  },
+  "label": {
+    "style": "c",
+    "en": {
+      "sub": "ORBIT: YES.",
+      "text": "TOWER CATCH: NO"
+    },
+    "nl": {
+      "sub": "BAAN: JA.",
+      "text": "TORENVANGST: NEE"
+    }
+  },
+  "en": {
+    "title": "Why Did SpaceX Call Off Starship's Booster Catch? How the Go/No-Go Decision Works",
+    "description": "On Flight 15 Starship reached orbit, but Super Heavy skipped the tower and splashed into the Gulf. Here is how SpaceX decides whether a booster gets caught, and why the sea is the default.",
+    "body": "<p>On Starship Flight 15, the upper stage made it to orbit, and the giant booster that launched it did not make it to the tower. About six and a half minutes after liftoff on 13 November 2026, Super Heavy Booster 22 turned away from the catch arms at Starbase and splashed down in the Gulf of Mexico. It was meant to be the first half of SpaceX's first double catch. SpaceX has not said what tripped the abort, but the way a catch is decided explains why the sea won.</p>\n<h2>What actually happened on Flight 15?</h2>\n<p><strong>The ship reached orbit and delivered its satellites, while the booster was sent to the sea instead of the tower.</strong> Booster 22 and Ship 42, both of the new Version 3 design, lifted off from the second launch pad at Starbase at 4:47 p.m. local time. The 33 Raptor 3 engines pushed with more than 18 million pounds of thrust. About two and a half minutes in, the ship lit its own engines and separated. Then SpaceX posted the line nobody wanted: \"Super Heavy has diverted to an offshore splashdown in the Gulf.\" On the webcast, SpaceX's Kate Tice said it \"certainly isn't the news that we had hoped to hear.\"</p>\n<p>The rest of the flight went to plan. A short second burn put the ship into an orbit about 275 kilometres up, only the second time a Starship has reached orbit. It then released 26 Starlink V3 satellites over about 42 minutes, three of them carrying cameras to look back at its heat shield. The ship's own catch was planned for about 22 and a half hours after launch. The booster's diversion still needs explaining.</p>\n<h2>Why doesn't the booster simply fly to the tower?</h2>\n<p><strong>Because the tower is never the default: every Super Heavy is set up to end in the sea unless the catch is actively approved.</strong> SpaceX spelled the rule out before its first catch in 2024. Thousands of separate criteria for the booster and the pad must be met. The systems on the booster and on the tower must be healthy. And the flight director must send a manual command. If that command is not sent before the boostback burn ends, or if automated health checks find unacceptable conditions on the booster or the tower, the booster \"will default to a trajectory\" that ends in a soft splashdown in the Gulf.</p>\n<p>On Flight 15 the boostback burn was planned to end just over three minutes after liftoff, and the catch itself at six minutes and 35 seconds. So the most important decision about a catch falls minutes before anyone sees the arms close. That raises the question of who, or what, makes that call.</p>\n<h2>So who decides whether a booster gets caught?</h2>\n<p><strong>Two layers: the computers can always say no, and a human has to say yes.</strong> The automated checks watch the booster's speed, position and engines, and the state of the tower, and can send the booster to the sea at any point. The flight director's \"go\" is the human check on top. Neither can force a catch on its own. A catch needs both: no red flag from the machines and a clear yes from the person in charge.</p>\n<p>SpaceX has not said which layer stopped Booster 22. Some reports mention an onboard problem that triggered an automatic abort, but that is not confirmed. What is certain is that the booster did exactly what it was built to do when the conditions were not right. The harder question is why SpaceX accepts losing a booster rather than taking the risk.</p>\n<h2>Why throw away a booster instead of trying anyway?</h2>\n<p><strong>Because a lost booster is one rocket, and a wrecked tower is the whole launch site.</strong> Super Heavy has no landing legs. Every booster SpaceX wants back has to come home to a tower, and that same tower also launches the rockets. A 71-metre booster that hits it can damage the arms and the launch mount together.</p>\n<p>It has happened before. On Flight 6 in November 2024, automated health checks on the tower triggered an abort because the launch had damaged sensors on the arms. Elon Musk wrote that the catch \"would probably still have worked, but we weren't sure.\" Booster catches have worked three times, on Flights 5, 7 and 8, but none since March 2025. A first catch of the new, bigger Version 3 booster is exactly where caution pays off. That leaves the real question of what this miss changes.</p>\n<h2>So what does a missed catch change?</h2>\n<p><strong>Less than it looks: the booster's job was to launch the ship, and it did that.</strong> A splashdown loses the hardware, but it still gives SpaceX data from the boostback, the flip and the landing burn over open water. Before the next try, the team will want to know exactly which check said no, and why.</p>\n<p>What to watch for is SpaceX's own explanation of the abort, and the first Version 3 booster that the computers and the flight director both let through. Until then, every Starship booster flies with the same rule built in. The sea is automatic. The tower has to be earned.</p>"
+  },
+  "nl": {
+    "title": "Waarom blies SpaceX de boostervangst van Starship af? Zo werkt de go/no-go-beslissing",
+    "description": "Op vlucht 15 haalde Starship de baan om de aarde, maar Super Heavy sloeg de toren over en landde in de Golf. Zo beslist SpaceX of een booster gevangen wordt, en waarom de zee de standaard is.",
+    "body": "<p>Op Starship-vlucht 15 haalde de bovenste trap de baan om de aarde, maar de enorme booster die hem lanceerde haalde de toren niet. Zo'n zesenhalve minuut na de start op 13 november 2026 draaide Super Heavy Booster 22 weg van de vangarmen in Starbase en plonsde in de Golf van Mexico. Het had de eerste helft moeten worden van de eerste dubbele vangst van SpaceX. SpaceX heeft niet gezegd wat de vangst afblies, maar de manier waarop een vangst wordt besloten laat zien waarom de zee won.</p>\n<h2>Wat gebeurde er precies op vlucht 15?</h2>\n<p><strong>Het schip haalde de baan en zette zijn satellieten uit, terwijl de booster naar zee werd gestuurd in plaats van naar de toren.</strong> Booster 22 en Ship 42, allebei van het nieuwe Version 3-ontwerp, stegen om 16:47 uur lokale tijd op vanaf het tweede lanceerplatform in Starbase. De 33 Raptor 3-motoren duwden met meer dan 8.000 ton stuwkracht. Na ongeveer tweeënhalve minuut ontstak het schip zijn eigen motoren en maakte zich los. Toen kwam het bericht dat niemand wilde zien: \"Super Heavy has diverted to an offshore splashdown in the Gulf.\" Presentator Kate Tice van SpaceX zei in de uitzending dat dit \"zeker niet het nieuws\" was waarop ze hadden gehoopt.</p>\n<p>De rest van de vlucht ging volgens plan. Een korte tweede brandstoot bracht het schip in een baan op zo'n 275 kilometer hoogte, pas de tweede keer dat een Starship de baan om de aarde haalde. Daarna zette het in ongeveer 42 minuten 26 Starlink V3-satellieten uit, waarvan drie met camera's om het hitteschild te fotograferen. De vangst van het schip zelf stond gepland voor zo'n 22,5 uur na de lancering. Het uitwijken van de booster moet nog verklaard worden.</p>\n<h2>Waarom vliegt de booster niet gewoon naar de toren?</h2>\n<p><strong>Omdat de toren nooit de standaard is: elke Super Heavy eindigt in zee, tenzij de vangst actief wordt goedgekeurd.</strong> SpaceX legde die regel al uit voor de eerste vangst in 2024. Duizenden afzonderlijke voorwaarden voor de booster en het platform moeten kloppen. De systemen van booster en toren moeten gezond zijn. En de vluchtleider moet met de hand een commando geven. Komt dat commando niet voor het einde van de terugkeerbrandstoot, of vinden automatische controles een probleem met de booster of de toren, dan valt de booster terug op een baan die eindigt in een zachte landing in de Golf.</p>\n<p>Op vlucht 15 zou de terugkeerbrandstoot net iets meer dan drie minuten na de start eindigen, en de vangst zelf op zes minuten en 35 seconden. De belangrijkste beslissing over een vangst valt dus minuten voordat iemand de armen ziet sluiten. Dan blijft de vraag wie of wat die beslissing neemt.</p>\n<h2>Dus wie beslist of een booster gevangen wordt?</h2>\n<p><strong>Twee lagen: de computers kunnen altijd nee zeggen, en een mens moet ja zeggen.</strong> De automatische controles bewaken de snelheid, positie en motoren van de booster en de toestand van de toren, en kunnen de booster op elk moment naar zee sturen. De 'go' van de vluchtleider is de menselijke controle daarbovenop. Geen van beide kan in zijn eentje een vangst afdwingen. Er is allebei nodig: geen rode vlag van de machines en een duidelijk ja van de verantwoordelijke.</p>\n<p>SpaceX heeft niet gezegd welke laag Booster 22 tegenhield. Sommige berichten noemen een probleem aan boord dat automatisch de vangst afbrak, maar dat is niet bevestigd. Zeker is dat de booster precies deed waarvoor hij gebouwd is toen de omstandigheden niet goed waren. De lastigere vraag is waarom SpaceX liever een booster verliest dan het risico neemt.</p>\n<h2>Waarom een booster opgeven in plaats van het toch te proberen?</h2>\n<p><strong>Omdat een verloren booster één raket is, en een vernielde toren het hele lanceerterrein.</strong> Super Heavy heeft geen landingspoten. Elke booster die SpaceX terug wil, moet naar een toren, en diezelfde toren lanceert ook de raketten. Een booster van 71 meter die ertegenaan vliegt, kan de armen en het lanceerplatform tegelijk beschadigen.</p>\n<p>Het gebeurde eerder. Op vlucht 6 in november 2024 brachen automatische controles van de toren de vangst af, omdat de lancering sensoren op de armen had beschadigd. Elon Musk schreef dat de vangst \"waarschijnlijk toch gelukt\" was, \"maar we wisten het niet zeker\". Boostervangsten lukten drie keer, op vlucht 5, 7 en 8, maar niet meer sinds maart 2025. Een eerste vangst van de nieuwe, grotere Version 3-booster is precies het moment waarop voorzichtigheid loont. Dan blijft de echte vraag over wat deze misser verandert.</p>\n<h2>Wat verandert een gemiste vangst dan?</h2>\n<p><strong>Minder dan het lijkt: de taak van de booster was het schip lanceren, en dat deed hij.</strong> Bij een landing in zee gaat de hardware verloren, maar SpaceX krijgt wel gegevens van de terugkeerbrandstoot, de draai en de landingsbrandstoot boven open water. Voor de volgende poging wil het team precies weten welke controle nee zei, en waarom.</p>\n<p>Let vooral op de eigen verklaring van SpaceX over het afbreken, en op de eerste Version 3-booster die de computers en de vluchtleider allebei doorlaten. Tot die tijd vliegt elke Starship-booster met dezelfde ingebouwde regel. De zee gaat vanzelf. De toren moet je verdienen.</p>"
+  },
+  "short": {
+    "hook": "contrast",
+    "yt_title_en": "Starship: Orbit Yes, Tower Catch No",
+    "yt_title_nl": "Starship: baan ja, torenvangst nee",
+    "hooks": [
+      {
+        "text": "Starship hit orbit. Booster skipped the tower.",
+        "type": "contrast"
+      },
+      {
+        "text": "SpaceX waved off its own booster catch.",
+        "type": "consequence"
+      },
+      {
+        "text": "Why did Starship's booster skip the tower?",
+        "type": "question"
+      }
+    ],
+    "hook_pick": {
+      "index": 0,
+      "why": "7 spoken words with the name (Starship) and two hard, certain events from Flight 15, no number and no 'might' (daily review rule 2; the two-number hook ran 4.2 s yesterday); success vs miss in one breath raises ONE question (why skip the tower?) that is answered only in beats 8-9 (the sea is the default). Hook 1 sounds like old news, hook 2 is a bare question. Rotates away from number (yesterday midday) and consequence (yesterday evening)."
+    },
+    "hook_motion": "the soot-streaked booster sinks slowly on its glowing engine flames toward the sea, spray and steam swirl up from the water, the camera holds steady",
+    "story": [
+      {
+        "part": "hook",
+        "t": "0-3s",
+        "text": "Starship hit orbit. Booster skipped the tower.",
+        "overlay": "Orbit: yes. Tower catch: no.",
+        "lib": [
+          "../gen/spacex-flight-6-booster-catch-called-off-tower-damaged-at-liftoff-story-x2-11132027.jpg",
+          "../gen/spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story-x2-11022028.jpg"
+        ],
+        "sfx": "deep rumbling roar of rocket engines on a landing burn over open water, crackling exhaust and hissing spray",
+        "visual": "hard open on a Super Heavy booster coming down on its engine flames over the open sea at sunset (moving clip: it sinks, spray and steam swirl), cut on 'tower' to the empty catch arms waiting at dusk; only the hook on screen, no logo"
+      },
+      {
+        "part": "tension",
+        "t": "3-6s",
+        "text": "The arms were ready for a double catch.",
+        "overlay": "Arms ready for a double catch.",
+        "lib": [
+          "../gen/how-spacex-catches-both-starship-stages-why-ship-takes-22-hours-booster-7-minutes-x3-11131200.jpg",
+          "starship-booster-catch.jpg"
+        ],
+        "visual": "the floodlit tower at night with both arms open, then a booster hovering beside the arms at sunset (what a catch looks like)"
+      },
+      {
+        "part": "tension",
+        "t": "6-10s",
+        "text": "Then SpaceX posted: Super Heavy has diverted to the Gulf.",
+        "overlay": "\"Super Heavy has diverted.\"",
+        "lib": [
+          "../gen/spacex-flight-6-booster-catch-called-off-tower-damaged-at-liftoff-story-x3-11132029.jpg",
+          "../gen/why-starship-fires-engines-at-own-booster-hot-staging-explained-x2-11061154.jpg"
+        ],
+        "visual": "a mission control room with red warnings on the big screen, then the booster flipping around high above the Gulf"
+      },
+      {
+        "part": "tension",
+        "t": "10-13s",
+        "text": "Splashdown came six and a half minutes in.",
+        "overlay": "Splashdown: 6.5 minutes in.",
+        "lib": [
+          "../gen/why-starship-has-33-engines-not-one-giant-engine-n1-saturn-v-explained.jpg",
+          "../gen/spacex-flight-6-booster-catch-called-off-tower-damaged-at-liftoff-story.jpg"
+        ],
+        "sfx": "heavy splash of a huge object hitting the sea, water crashing",
+        "visual": "engine flames blasting into a white cloud of steam, then the empty soot-streaked catch arms with smoke drifting past"
+      },
+      {
+        "part": "tension",
+        "t": "13-16s",
+        "text": "Thousands of booster and tower checks must all pass.",
+        "overlay": "Thousands of checks must all pass.",
+        "lib": [
+          "starship-pad.jpg",
+          "../gen/spacex-flight-6-booster-catch-called-off-tower-damaged-at-liftoff-story-x3-11132029.jpg"
+        ],
+        "visual": "the full Starship stack floodlit on the pad at blue hour, then the control room screens"
+      },
+      {
+        "part": "tension",
+        "t": "16-20s",
+        "text": "Then one flight director must send a manual go.",
+        "overlay": "Then 1 human must say: go.",
+        "lib": [
+          "musk-silhouette-rocket.jpg",
+          "../gen/how-spacex-catches-both-starship-stages-why-ship-takes-22-hours-booster-7-minutes-x3-11131200.jpg"
+        ],
+        "visual": "a silhouette looking up at the floodlit rocket at dusk, then the open arms waiting at night"
+      },
+      {
+        "part": "tension",
+        "t": "20-23s",
+        "text": "That go must come within about 3 minutes.",
+        "overlay": "Deadline: about 3 minutes in.",
+        "lib": [
+          "../gen/why-starship-fires-engines-at-own-booster-hot-staging-explained.jpg",
+          "../gen/why-starship-fires-engines-at-own-booster-hot-staging-explained-x2-11061154.jpg"
+        ],
+        "visual": "the ship's engines firing through the hot-staging ring high above the Gulf, then the booster flipping back toward Texas"
+      },
+      {
+        "part": "payoff",
+        "t": "23-26s",
+        "text": "No go, or one failed check: it's the sea.",
+        "overlay": "No go? It defaults to the sea.",
+        "lib": [
+          "../gen/spacex-flight-6-booster-catch-called-off-tower-damaged-at-liftoff-story-x2-11132027.jpg",
+          "../gen/why-starship-has-33-engines-not-one-giant-engine-n1-saturn-v-explained.jpg"
+        ],
+        "visual": "the booster coming down on its engines over the open sea, then engine flames in steam"
+      },
+      {
+        "part": "payoff",
+        "t": "26-30s",
+        "text": "The sea is automatic. The tower must be earned.",
+        "overlay": "Sea: automatic. Tower: earned.",
+        "lib": [
+          "../gen/spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story-x3-11022028.jpg",
+          "../gen/spacex-flight-6-booster-catch-called-off-tower-damaged-at-liftoff-story-x2-11132027.jpg"
+        ],
+        "visual": "a booster slowing beside the tower just before a catch, then back to the booster over the sea, the same frame the Short opens on"
+      }
+    ],
+    "loop": {
+      "last": "The sea is automatic. The tower must be earned.",
+      "how": "the rule, then the case that proves it: '...The tower must be earned. Starship hit orbit. Booster skipped the tower.' The restart reads as the example of a tower that was not earned; no shared opening words, no colon or half sentence; the last picture cuts back to the booster-over-the-sea frame the Short opens on"
+    },
+    "signals": "Views: news of the last 24 hours on the topic that pulls the most right now (Flight 15: 658K and 354K-view Shorts, 32x replay), name + two certain events in the first 2.7 s over a moving hook with engine roar. Stayed/watched: 9 beats of 7-10 spoken words (est. 2.7-3.8 s, ~29 s), the 'why' held back to beats 8-9, a rule-like loop line that hands over to the hook. Shares: a small surprise most fans do not know (silence means sea; a human must actively say go).",
+    "learning": {
+      "prev": "how-spacex-catches-both-starship-stages-why-ship-takes-22-hours-booster-7-minutes",
+      "prev_stats": "1,000 views and 23 likes per 1,000 after 17 h (midday middle value at that age 670: 1.5x, second best midday start); stayed/watched not reported yet",
+      "weakest_hook": "\"Starship's booster: 7 minutes. Its ship: 22 hours.\" - strong numbers, but two numbers took 4.2 s to say (render report beat 1), so the claim landed late; beat 6 ran only 2.3 s",
+      "why_stalled": "not stalled yet, but inside our normal range (no Short over 1,500 since 31 Oct); a proven topic 5-7 days old helped a little, the slow hook may have cost stayed %",
+      "change": "topic age one step further: Flight 15 itself, news under 24 hours old, with a 7-word hook without numbers; every beat 7-10 spoken words so none falls under 2.5 s or over 4 s",
+      "test": "TOPIC AGE: news of the last 48 hours (Flight 15) vs yesterday's 5-7-day-old proven topic; format unchanged (moving hook, 2 pictures per beat, smart loop, 9 beats, ~29 s)"
+    },
+    "proof": {
+      "source": "Starship Flight 15: SpaceX Double Catch Attempt! (What about it!?) - https://youtu.be/sfky54VSchE",
+      "views": 658000,
+      "why": "Flight 15 dominates ops/scout-tesla.md (14 Nov): this Short 658K at 17x its channel's usual, 'Double Catch Planned!' 354K (52x), 'booster catch aborted' replay 153K (32x), all under 48 h old; viewers ask what happened to the catch. Our angle adds what none of them explain: the sea is the default and a catch must be approved by both the computers and the flight director."
+    },
+    "en": "Starship hit orbit. Booster skipped the tower. The arms were ready for a double catch. Then SpaceX posted: Super Heavy has diverted to the Gulf. Splashdown came six and a half minutes in. Thousands of booster and tower checks must all pass. Then one flight director must send a manual go. That go must come within about 3 minutes. No go, or one failed check: it's the sea. The sea is automatic. The tower must be earned.",
+    "nl": "Starship haalde de baan om de aarde. De booster sloeg de toren over. De armen stonden klaar voor een dubbele vangst. Toen meldde SpaceX: Super Heavy wijkt uit naar de Golf. Zesenhalve minuut na de start lag hij in zee. Duizenden controles van booster en toren moeten allemaal slagen. Daarna moet één vluchtleider met de hand 'go' geven. Dat moet binnen ongeveer 3 minuten. Geen go, of één controle fout: dan wordt het de zee. De zee gaat vanzelf. De toren moet je verdienen."
+  },
+  "video": {
+    "yt_title_en": "Why SpaceX Called Off the Starship Booster Catch on Flight 15",
+    "yt_title_nl": "Waarom SpaceX de boostervangst van Starship-vlucht 15 afblies",
+    "en": [
+      {
+        "text": "Starship reached orbit. Its booster skipped the tower. On Flight 15, SpaceX was set up for its first ever double catch, and the first half never happened. By the end of this video you will know why the booster went to the sea instead. And the surprising part is not what went wrong. It is what the booster does when nobody says anything at all.",
+        "img": [
+          "gen/spacex-flight-6-booster-catch-called-off-tower-damaged-at-liftoff-story-x2-11132027.jpg",
+          "gen/spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story-x2-11022028.jpg",
+          "lib/starship-booster-catch.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Starbase Texas launch tower",
+              "SpaceX Starbase",
+              "Boca Chica SpaceX launch site"
+            ],
+            "want": "the SpaceX Starbase launch site in Texas with its launch tower"
+          }
+        ]
+      },
+      {
+        "text": "Booster 22 and Ship 42 lifted off from the second pad at Starbase, Texas, at 4:47 in the afternoon. Both were the new Version 3 design. 33 Raptor 3 engines, more than 18 million pounds of thrust. Six and a half minutes later the booster was in the Gulf of Mexico. Not in the arms. So let's start with what happened, minute by minute.",
+        "img": [
+          "lib/starship-launch.jpg",
+          "gen/why-starship-has-33-engines-not-one-giant-engine-n1-saturn-v-explained.jpg",
+          "gen/spacex-flight-6-booster-catch-called-off-tower-damaged-at-liftoff-story-x2-11132027.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Super Heavy booster",
+              "SpaceX Super Heavy",
+              "Starship booster Starbase"
+            ],
+            "want": "the SpaceX Super Heavy booster, a giant stainless steel rocket stage"
+          }
+        ]
+      },
+      {
+        "head": "What actually happened on Flight 15?",
+        "pop": [
+          {
+            "say": "",
+            "show": "FLIGHT 15"
+          }
+        ],
+        "img": [
+          "lib/starship-pad.jpg"
+        ]
+      },
+      {
+        "text": "The ship reached orbit. The booster was sent to the sea. About two and a half minutes in, the ship lit its six engines and pulled away. That is hot staging. The booster flipped and fired again to head home. Then SpaceX posted one short line. Super Heavy has diverted to an offshore splashdown in the Gulf. On the webcast, host Kate Tice said it certainly was not the news they had hoped for.",
+        "img": [
+          "gen/why-starship-fires-engines-at-own-booster-hot-staging-explained.jpg",
+          "gen/why-starship-fires-engines-at-own-booster-hot-staging-explained-x2-11061154.jpg",
+          "gen/spacex-flight-6-booster-catch-called-off-tower-damaged-at-liftoff-story-x3-11132029.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Gulf of Mexico from space",
+              "Gulf of Mexico coast Texas",
+              "Gulf of Mexico sea"
+            ],
+            "want": "the open water of the Gulf of Mexico"
+          }
+        ]
+      },
+      {
+        "text": "The rest went to plan. A 20 second burn put the ship into orbit, about 275 kilometres up. Only the second time a Starship has done that. Then it released 26 Starlink V3 satellites in about 42 minutes. 3 of them carried cameras to look back at the heat shield. The ship's own catch was planned about 22 and a half hours after launch. But that still leaves the booster. Why did it go to the sea?",
+        "img": [
+          "gen/how-spacex-catches-both-starship-stages-why-ship-takes-22-hours-booster-7-minutes.jpg",
+          "gen/how-spacex-catches-both-starship-stages-why-ship-takes-22-hours-booster-7-minutes-x2-11131158.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Starlink satellites",
+              "Starlink satellite train",
+              "Starlink satellites stacked"
+            ],
+            "want": "Starlink satellites or a Starlink satellite train"
+          }
+        ]
+      },
+      {
+        "head": "Why doesn't the booster simply fly to the tower?",
+        "pop": [
+          {
+            "say": "",
+            "show": "WHY THE SEA?"
+          }
+        ],
+        "img": [
+          "gen/spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story-x2-11022028.jpg"
+        ]
+      },
+      {
+        "text": "Because the tower is never the default. Here is the rule SpaceX set out before its very first catch, in 2024. Thousands of separate criteria for the booster and the pad must be met. The booster must be healthy. The tower must be healthy. And the flight director must send a manual command. If that command does not arrive before the boostback burn ends, the booster defaults to a path that ends in a soft splashdown in the Gulf.",
+        "img": [
+          "lib/starship-pad.jpg",
+          "gen/spacex-flight-6-booster-catch-called-off-tower-damaged-at-liftoff-story-x3-11132029.jpg",
+          "gen/how-spacex-catches-both-starship-stages-why-ship-takes-22-hours-booster-7-minutes-x3-11131200.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "SpaceX mission control",
+              "launch control room",
+              "mission control room"
+            ],
+            "want": "a launch or mission control room with screens"
+          }
+        ]
+      },
+      {
+        "text": "Look at the clock on Flight 15. The boostback burn was due to end just after 3 minutes. The catch itself was due at 6 minutes and 35 seconds. So the biggest decision is made more than 3 minutes before anyone sees the arms close. Silence means sea. That is the answer to the question from the start. If nobody says anything, the booster does not come home to the tower. It goes to the water.",
+        "img": [
+          "gen/why-starship-fires-engines-at-own-booster-hot-staging-explained-x2-11061154.jpg",
+          "gen/spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story-x3-11022028.jpg",
+          "gen/spacex-flight-6-booster-catch-called-off-tower-damaged-at-liftoff-story-x2-11132027.jpg"
+        ]
+      },
+      {
+        "head": "So who decides whether a booster gets caught?",
+        "pop": [
+          {
+            "say": "",
+            "show": "WHO DECIDES?"
+          }
+        ],
+        "img": [
+          "gen/spacex-flight-6-booster-catch-called-off-tower-damaged-at-liftoff-story-x3-11132029.jpg"
+        ]
+      },
+      {
+        "text": "Two layers. The computers can always say no. A human has to say yes. Automated checks watch the booster's speed, its position and its engines, and the state of the tower. They can send the booster to the sea at any moment. The flight director's go is the check on top. Neither one can force a catch alone. You need both. No red flag from the machines, and a clear yes from the person in charge.",
+        "img": [
+          "gen/spacex-flight-6-booster-catch-called-off-tower-damaged-at-liftoff-story-x3-11132029.jpg",
+          "lib/musk-silhouette-rocket.jpg",
+          "lib/starship-booster-catch.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "SpaceX mission control",
+              "launch control room",
+              "mission control room"
+            ],
+            "want": "a launch or mission control room with screens"
+          }
+        ]
+      },
+      {
+        "text": "So which layer stopped Booster 22? SpaceX has not said. Some reports point to a problem on board that triggered an automatic abort. That is not confirmed. What is certain is simpler. When the conditions were not right, the booster did exactly what it was built to do. Which raises a fair question. Why does SpaceX accept losing a whole booster, instead of just trying?",
+        "img": [
+          "gen/spacex-flight-6-booster-catch-called-off-tower-damaged-at-liftoff-story-x2-11132027.jpg",
+          "gen/why-starship-has-33-engines-not-one-giant-engine-n1-saturn-v-explained.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Super Heavy booster",
+              "SpaceX Super Heavy",
+              "Starship booster Starbase"
+            ],
+            "want": "the SpaceX Super Heavy booster, a giant stainless steel rocket stage"
+          }
+        ]
+      },
+      {
+        "head": "Why throw away a booster instead of trying anyway?",
+        "pop": [
+          {
+            "say": "",
+            "show": "WHY NOT TRY?"
+          }
+        ],
+        "img": [
+          "gen/spacex-flight-6-booster-catch-called-off-tower-damaged-at-liftoff-story.jpg"
+        ]
+      },
+      {
+        "text": "Because a lost booster is one rocket. A wrecked tower is the whole launch site. Super Heavy has no landing legs. Every booster SpaceX wants back has to come home to a tower. And that same tower also launches the rockets. A 71 metre booster that hits it could damage the arms and the launch mount in one go. That is not a risk worth taking on a guess.",
+        "img": [
+          "gen/spacex-flight-6-booster-catch-called-off-tower-damaged-at-liftoff-story.jpg",
+          "lib/starship-launch.jpg",
+          "gen/spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Starbase Texas launch tower",
+              "SpaceX Starbase",
+              "Boca Chica SpaceX launch site"
+            ],
+            "want": "the SpaceX Starbase launch site in Texas with its launch tower"
+          }
+        ]
+      },
+      {
+        "text": "It has happened before. On Flight 6, in November 2024, the tower's own health checks called off a catch. The launch had damaged sensors on the arms. Elon Musk wrote that the catch would probably still have worked, but they were not sure. Since then, catches worked on Flights 7 and 8. 3 in total, counting Flight 5. But none since March 2025. And never a Version 3 booster.",
+        "img": [
+          "gen/spacex-flight-6-booster-catch-called-off-tower-damaged-at-liftoff-story.jpg",
+          "gen/spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story.jpg",
+          "gen/spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story-x3-11022028.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Super Heavy booster",
+              "SpaceX Super Heavy",
+              "Starship booster Starbase"
+            ],
+            "want": "the SpaceX Super Heavy booster, a giant stainless steel rocket stage"
+          }
+        ]
+      },
+      {
+        "head": "So what does a missed catch change?",
+        "pop": [
+          {
+            "say": "",
+            "show": "WHAT CHANGES?"
+          }
+        ],
+        "img": [
+          "gen/spacex-flight-6-booster-catch-called-off-tower-damaged-at-liftoff-story-x2-11132027.jpg"
+        ]
+      },
+      {
+        "text": "Less than it looks. The booster's job was to launch the ship, and it did. A splashdown loses the hardware. But SpaceX still gets the data from the boostback, the flip and the landing burn over open water. Before the next try the team will want to know exactly which check said no. And why.",
+        "img": [
+          "gen/why-starship-has-33-engines-not-one-giant-engine-n1-saturn-v-explained-x3-11091159.jpg",
+          "gen/why-starship-fires-engines-at-own-booster-hot-staging-explained-x2-11061154.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Gulf of Mexico from space",
+              "Gulf of Mexico coast Texas",
+              "Gulf of Mexico sea"
+            ],
+            "want": "the open water of the Gulf of Mexico"
+          }
+        ]
+      },
+      {
+        "text": "And the ship lives by the same rule. It began on a path that would bring it down safely by itself. It only stayed in orbit because it was healthy. On the way home it passes checkpoints near Hawaii and off Chile, where SpaceX can bring it down early. And even after re-entry, the catch can still be swapped for a splashdown in the Gulf. Heat shield, engines, power, computers. Every one has a vote.",
+        "img": [
+          "gen/how-spacex-catches-both-starship-stages-why-ship-takes-22-hours-booster-7-minutes-x2-11131158.jpg",
+          "gen/how-spacex-catches-both-starship-stages-why-ship-takes-22-hours-booster-7-minutes.jpg",
+          "gen/how-spacex-catches-both-starship-stages-why-ship-takes-22-hours-booster-7-minutes-x3-11131200.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Hawaii from space",
+              "Hawaiian Islands satellite image",
+              "Pacific Ocean from orbit"
+            ],
+            "want": "the Hawaiian Islands or the Pacific Ocean seen from space"
+          }
+        ]
+      },
+      {
+        "text": "Falcon 9 went through the same thing. Its first landings ended in the sea or in pieces, until it started coming back upright almost every time. Super Heavy has 3 catches. It needs hundreds. What to watch for next is SpaceX's own explanation, and the first Version 3 booster that both the computers and the flight director let through.",
+        "img": [
+          "gen/spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story-x2-11022028.jpg",
+          "lib/starship-booster-catch.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Falcon 9 first stage landing",
+              "Falcon 9 booster landing",
+              "Falcon 9 landing zone"
+            ],
+            "want": "a Falcon 9 first stage landing upright"
+          }
+        ]
+      },
+      {
+        "text": "So remember what happens when nobody says yes. The booster does not hesitate. It does not hover and wait. It simply goes to the sea. The sea is automatic. The tower has to be earned.",
+        "img": [
+          "gen/spacex-flight-6-booster-catch-called-off-tower-damaged-at-liftoff-story-x2-11132027.jpg",
+          "gen/spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story-x3-11022028.jpg"
+        ]
+      }
+    ],
+    "nl": [
+      {
+        "text": "Starship haalde de baan om de aarde. De booster sloeg de toren over. Op vlucht 15 stond SpaceX klaar voor de allereerste dubbele vangst, en de eerste helft ging niet door. Aan het eind van deze video weet je waarom de booster naar zee ging. En het verrassende is niet wat er misging. Het is wat de booster doet als niemand iets zegt.",
+        "img": [
+          "gen/spacex-flight-6-booster-catch-called-off-tower-damaged-at-liftoff-story-x2-11132027.jpg",
+          "gen/spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story-x2-11022028.jpg",
+          "lib/starship-booster-catch.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Starbase Texas launch tower",
+              "SpaceX Starbase",
+              "Boca Chica SpaceX launch site"
+            ],
+            "want": "the SpaceX Starbase launch site in Texas with its launch tower"
+          }
+        ]
+      },
+      {
+        "text": "Booster 22 en Ship 42 stegen om 16:47 uur op vanaf het tweede platform in Starbase, Texas. Allebei het nieuwe Version 3-ontwerp. 33 Raptor 3-motoren, meer dan 8.000 ton stuwkracht. Zesenhalve minuut later lag de booster in de Golf van Mexico. Niet in de armen. Dus eerst wat er gebeurde, minuut voor minuut.",
+        "img": [
+          "lib/starship-launch.jpg",
+          "gen/why-starship-has-33-engines-not-one-giant-engine-n1-saturn-v-explained.jpg",
+          "gen/spacex-flight-6-booster-catch-called-off-tower-damaged-at-liftoff-story-x2-11132027.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Super Heavy booster",
+              "SpaceX Super Heavy",
+              "Starship booster Starbase"
+            ],
+            "want": "the SpaceX Super Heavy booster, a giant stainless steel rocket stage"
+          }
+        ]
+      },
+      {
+        "head": "Wat gebeurde er precies op vlucht 15?",
+        "pop": [
+          {
+            "say": "",
+            "show": "VLUCHT 15"
+          }
+        ],
+        "img": [
+          "lib/starship-pad.jpg"
+        ]
+      },
+      {
+        "text": "Het schip haalde de baan. De booster werd naar zee gestuurd. Na ongeveer tweeënhalve minuut ontstak het schip zijn zes motoren en trok zich los. Dat heet hot staging. De booster draaide om en vuurde opnieuw om terug te vliegen. Toen plaatste SpaceX één kort bericht. Super Heavy wijkt uit naar een landing in zee, in de Golf. Presentator Kate Tice zei in de uitzending dat dit zeker niet het nieuws was waarop ze hadden gehoopt.",
+        "img": [
+          "gen/why-starship-fires-engines-at-own-booster-hot-staging-explained.jpg",
+          "gen/why-starship-fires-engines-at-own-booster-hot-staging-explained-x2-11061154.jpg",
+          "gen/spacex-flight-6-booster-catch-called-off-tower-damaged-at-liftoff-story-x3-11132029.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Gulf of Mexico from space",
+              "Gulf of Mexico coast Texas",
+              "Gulf of Mexico sea"
+            ],
+            "want": "the open water of the Gulf of Mexico"
+          }
+        ]
+      },
+      {
+        "text": "De rest ging volgens plan. Een brandstoot van 20 seconden bracht het schip in een baan op zo'n 275 kilometer hoogte. Pas de tweede keer dat een Starship dat deed. Daarna zette het in ongeveer 42 minuten 26 Starlink V3-satellieten uit. 3 daarvan hadden camera's om het hitteschild te bekijken. De vangst van het schip zelf stond gepland zo'n 22,5 uur na de start. Maar dan blijft de booster over. Waarom ging die naar zee?",
+        "img": [
+          "gen/how-spacex-catches-both-starship-stages-why-ship-takes-22-hours-booster-7-minutes.jpg",
+          "gen/how-spacex-catches-both-starship-stages-why-ship-takes-22-hours-booster-7-minutes-x2-11131158.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Starlink satellites",
+              "Starlink satellite train",
+              "Starlink satellites stacked"
+            ],
+            "want": "Starlink satellites or a Starlink satellite train"
+          }
+        ]
+      },
+      {
+        "head": "Waarom vliegt de booster niet gewoon naar de toren?",
+        "pop": [
+          {
+            "say": "",
+            "show": "WAAROM DE ZEE?"
+          }
+        ],
+        "img": [
+          "gen/spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story-x2-11022028.jpg"
+        ]
+      },
+      {
+        "text": "Omdat de toren nooit de standaard is. Dit is de regel die SpaceX uitlegde voor de allereerste vangst, in 2024. Duizenden afzonderlijke voorwaarden voor de booster en het platform moeten kloppen. De booster moet gezond zijn. De toren moet gezond zijn. En de vluchtleider moet met de hand een commando sturen. Komt dat commando niet voor het einde van de terugkeerbrandstoot, dan valt de booster terug op een baan die eindigt met een zachte landing in de Golf.",
+        "img": [
+          "lib/starship-pad.jpg",
+          "gen/spacex-flight-6-booster-catch-called-off-tower-damaged-at-liftoff-story-x3-11132029.jpg",
+          "gen/how-spacex-catches-both-starship-stages-why-ship-takes-22-hours-booster-7-minutes-x3-11131200.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "SpaceX mission control",
+              "launch control room",
+              "mission control room"
+            ],
+            "want": "a launch or mission control room with screens"
+          }
+        ]
+      },
+      {
+        "text": "Kijk naar de klok van vlucht 15. De terugkeerbrandstoot zou net na 3 minuten eindigen. De vangst zelf stond op 6 minuten en 35 seconden. De grootste beslissing valt dus meer dan 3 minuten voordat iemand de armen ziet sluiten. Stilte betekent zee. Dat is het antwoord op de vraag van het begin. Zegt niemand iets, dan komt de booster niet naar de toren. Dan gaat hij het water in.",
+        "img": [
+          "gen/why-starship-fires-engines-at-own-booster-hot-staging-explained-x2-11061154.jpg",
+          "gen/spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story-x3-11022028.jpg",
+          "gen/spacex-flight-6-booster-catch-called-off-tower-damaged-at-liftoff-story-x2-11132027.jpg"
+        ]
+      },
+      {
+        "head": "Dus wie beslist of een booster gevangen wordt?",
+        "pop": [
+          {
+            "say": "",
+            "show": "WIE BESLIST?"
+          }
+        ],
+        "img": [
+          "gen/spacex-flight-6-booster-catch-called-off-tower-damaged-at-liftoff-story-x3-11132029.jpg"
+        ]
+      },
+      {
+        "text": "Twee lagen. De computers kunnen altijd nee zeggen. Een mens moet ja zeggen. Automatische controles bewaken de snelheid, de positie en de motoren van de booster, en de toestand van de toren. Ze kunnen de booster op elk moment naar zee sturen. De go van de vluchtleider is de controle daarbovenop. Geen van beide kan in zijn eentje een vangst afdwingen. Je hebt ze allebei nodig. Geen rode vlag van de machines, en een duidelijk ja van de verantwoordelijke.",
+        "img": [
+          "gen/spacex-flight-6-booster-catch-called-off-tower-damaged-at-liftoff-story-x3-11132029.jpg",
+          "lib/musk-silhouette-rocket.jpg",
+          "lib/starship-booster-catch.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "SpaceX mission control",
+              "launch control room",
+              "mission control room"
+            ],
+            "want": "a launch or mission control room with screens"
+          }
+        ]
+      },
+      {
+        "text": "Welke laag hield Booster 22 dan tegen? SpaceX heeft het niet gezegd. Sommige berichten wijzen op een probleem aan boord dat automatisch de vangst afbrak. Dat is niet bevestigd. Wat zeker is, is eenvoudiger. Toen de omstandigheden niet goed waren, deed de booster precies waarvoor hij gebouwd is. Dan is er een terechte vraag. Waarom verliest SpaceX liever een hele booster dan het gewoon te proberen?",
+        "img": [
+          "gen/spacex-flight-6-booster-catch-called-off-tower-damaged-at-liftoff-story-x2-11132027.jpg",
+          "gen/why-starship-has-33-engines-not-one-giant-engine-n1-saturn-v-explained.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Super Heavy booster",
+              "SpaceX Super Heavy",
+              "Starship booster Starbase"
+            ],
+            "want": "the SpaceX Super Heavy booster, a giant stainless steel rocket stage"
+          }
+        ]
+      },
+      {
+        "head": "Waarom een booster opgeven in plaats van het toch te proberen?",
+        "pop": [
+          {
+            "say": "",
+            "show": "WAAROM NIET?"
+          }
+        ],
+        "img": [
+          "gen/spacex-flight-6-booster-catch-called-off-tower-damaged-at-liftoff-story.jpg"
+        ]
+      },
+      {
+        "text": "Omdat een verloren booster één raket is. Een vernielde toren is het hele lanceerterrein. Super Heavy heeft geen landingspoten. Elke booster die SpaceX terug wil, moet naar een toren. En diezelfde toren lanceert ook de raketten. Een booster van 71 meter die ertegenaan vliegt, kan de armen en het lanceerplatform in één klap beschadigen. Dat risico neem je niet op de gok.",
+        "img": [
+          "gen/spacex-flight-6-booster-catch-called-off-tower-damaged-at-liftoff-story.jpg",
+          "lib/starship-launch.jpg",
+          "gen/spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Starbase Texas launch tower",
+              "SpaceX Starbase",
+              "Boca Chica SpaceX launch site"
+            ],
+            "want": "the SpaceX Starbase launch site in Texas with its launch tower"
+          }
+        ]
+      },
+      {
+        "text": "Het gebeurde eerder. Op vlucht 6, in november 2024, bliezen de eigen controles van de toren een vangst af. De lancering had sensoren op de armen beschadigd. Elon Musk schreef dat de vangst waarschijnlijk toch gelukt was, maar dat ze het niet zeker wisten. Daarna lukten vangsten op vlucht 7 en 8. 3 in totaal, met vlucht 5 erbij. Maar geen enkele meer sinds maart 2025. En nog nooit een Version 3-booster.",
+        "img": [
+          "gen/spacex-flight-6-booster-catch-called-off-tower-damaged-at-liftoff-story.jpg",
+          "gen/spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story.jpg",
+          "gen/spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story-x3-11022028.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Super Heavy booster",
+              "SpaceX Super Heavy",
+              "Starship booster Starbase"
+            ],
+            "want": "the SpaceX Super Heavy booster, a giant stainless steel rocket stage"
+          }
+        ]
+      },
+      {
+        "head": "Wat verandert een gemiste vangst dan?",
+        "pop": [
+          {
+            "say": "",
+            "show": "WAT VERANDERT?"
+          }
+        ],
+        "img": [
+          "gen/spacex-flight-6-booster-catch-called-off-tower-damaged-at-liftoff-story-x2-11132027.jpg"
+        ]
+      },
+      {
+        "text": "Minder dan het lijkt. De taak van de booster was het schip lanceren, en dat deed hij. Bij een landing in zee gaat de hardware verloren. Maar SpaceX krijgt wel de gegevens van de terugkeerbrandstoot, de draai en de landingsbrandstoot boven open water. Voor de volgende poging wil het team precies weten welke controle nee zei. En waarom.",
+        "img": [
+          "gen/why-starship-has-33-engines-not-one-giant-engine-n1-saturn-v-explained-x3-11091159.jpg",
+          "gen/why-starship-fires-engines-at-own-booster-hot-staging-explained-x2-11061154.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Gulf of Mexico from space",
+              "Gulf of Mexico coast Texas",
+              "Gulf of Mexico sea"
+            ],
+            "want": "the open water of the Gulf of Mexico"
+          }
+        ]
+      },
+      {
+        "text": "En het schip leeft volgens dezelfde regel. Het begon op een baan die het vanzelf veilig zou laten neerkomen. Het bleef alleen in een baan om de aarde omdat het gezond was. Op weg naar huis passeert het controlepunten bij Hawaii en voor de kust van Chili, waar SpaceX het eerder kan laten landen. En zelfs na de terugkeer in de dampkring kan de vangst nog worden ingeruild voor een landing in de Golf. Hitteschild, motoren, stroom, computers. Ze hebben allemaal een stem.",
+        "img": [
+          "gen/how-spacex-catches-both-starship-stages-why-ship-takes-22-hours-booster-7-minutes-x2-11131158.jpg",
+          "gen/how-spacex-catches-both-starship-stages-why-ship-takes-22-hours-booster-7-minutes.jpg",
+          "gen/how-spacex-catches-both-starship-stages-why-ship-takes-22-hours-booster-7-minutes-x3-11131200.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Hawaii from space",
+              "Hawaiian Islands satellite image",
+              "Pacific Ocean from orbit"
+            ],
+            "want": "the Hawaiian Islands or the Pacific Ocean seen from space"
+          }
+        ]
+      },
+      {
+        "text": "Falcon 9 maakte hetzelfde door. De eerste landingen eindigden in zee of in brokstukken, tot hij bijna elke keer rechtop terugkwam. Super Heavy heeft 3 vangsten. Hij heeft er honderden nodig. Let vooral op de eigen verklaring van SpaceX, en op de eerste Version 3-booster die de computers en de vluchtleider allebei doorlaten.",
+        "img": [
+          "gen/spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story-x2-11022028.jpg",
+          "lib/starship-booster-catch.jpg"
+        ],
+        "photo": [
+          {
+            "q": [
+              "Falcon 9 first stage landing",
+              "Falcon 9 booster landing",
+              "Falcon 9 landing zone"
+            ],
+            "want": "a Falcon 9 first stage landing upright"
+          }
+        ]
+      },
+      {
+        "text": "Onthoud dus wat er gebeurt als niemand ja zegt. De booster aarzelt niet. Hij blijft niet hangen om te wachten. Hij gaat gewoon naar zee. De zee gaat vanzelf. De toren moet je verdienen.",
+        "img": [
+          "gen/spacex-flight-6-booster-catch-called-off-tower-damaged-at-liftoff-story-x2-11132027.jpg",
+          "gen/spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story-x3-11022028.jpg"
+        ]
+      }
+    ]
+  }
+}

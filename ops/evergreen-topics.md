@@ -78,6 +78,8 @@ Add new ideas at the bottom at any time.
 - [ ] Static fire explained: why SpaceX fires a rocket on the pad before every flight, and what the test can and cannot catch
 - [ ] Sea-level vs vacuum engines: why Starship carries two kinds of Raptor and what the big bell nozzle does in space
 - [ ] Flight termination systems: how a rocket's self-destruct works, who presses the button, and why Starship's first one took 40 seconds
+- [ ] Abort modes: what happens to Starship's ship when a return checkpoint says no (early deorbit near Hawaii or Chile, Gulf splashdown), and how often SpaceX has used them
+- [ ] What happens to a Super Heavy booster after a splashdown in the Gulf? Does it sink, break up or get recovered, and what SpaceX learns from it
 
 ## Stories (evening task: entertaining and educational, timeless)
 

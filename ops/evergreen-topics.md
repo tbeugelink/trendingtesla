@@ -79,7 +79,10 @@ Add new ideas at the bottom at any time.
 - [ ] Sea-level vs vacuum engines: why Starship carries two kinds of Raptor and what the big bell nozzle does in space
 - [ ] Flight termination systems: how a rocket's self-destruct works, who presses the button, and why Starship's first one took 40 seconds
 - [ ] Abort modes: what happens to Starship's ship when a return checkpoint says no (early deorbit near Hawaii or Chile, Gulf splashdown), and how often SpaceX has used them
-- [ ] What happens to a Super Heavy booster after a splashdown in the Gulf? Does it sink, break up or get recovered, and what SpaceX learns from it
+- [x] What happens to a Super Heavy booster after a splashdown in the Gulf? Does it sink, break up or get recovered, and what SpaceX learns from it (what-happens-to-starship-super-heavy-booster-after-splashdown-gulf-explained)
+- [ ] Flight termination systems on landing: why SpaceX blows up a booster that has already hovered safely over the sea (check SpaceX/FAA statements first; Flight 15 Booster 22)
+- [ ] Why can't Super Heavy float? Tank pressure, leftover propellant and what happens to a 70 m steel tube in waves (check sources; Flights 4 and 6)
+- [ ] Rocket wrecks on the seafloor: how SpaceX and NASA salvage engines from the ocean (HOS Ridgewind 2024, Apollo F-1 engines raised in 2013)
 
 ## Stories (evening task: entertaining and educational, timeless)
 

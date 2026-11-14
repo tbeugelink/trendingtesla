@@ -1,0 +1,235 @@
+{
+ "slug": "what-happens-to-starship-super-heavy-booster-after-splashdown-gulf-explained",
+ "date": "2026-11-14",
+ "time": "21:17",
+ "category": "spacex",
+ "evergreen": true,
+ "sources": [
+  {
+   "title": "Space.com — SpaceX still investigating why Starship Flight 15 booster aborted 'chopsticks' catch",
+   "url": "https://www.space.com/space-exploration/launches-spacecraft/spacex-says-starship-flight-15-booster-aborted-chopsticks-landing-catch-after-launch-due-to-guidance-issue-video"
+  },
+  {
+   "title": "Spaceflight Now — Starship in orbit ahead of catch attempt, booster diverts to explosive splashdown",
+   "url": "https://spaceflightnow.com/2026/11/13/live-coverage-starship-flight-15-attempts-to-recover-full-vehicle-in-double-launch-pad-catch/"
+  },
+  {
+   "title": "Spaceflight Now — Super Heavy-Starship launches on sixth test flight, skips tower catch",
+   "url": "https://spaceflightnow.com/2024/11/20/super-heavy-starship-launches-on-sixth-test-flight/"
+  },
+  {
+   "title": "Space Explored — SpaceX recovers the Super Heavy booster from Flight 4",
+   "url": "https://spaceexplored.com/?p=41495"
+  }
+ ],
+ "images": [
+  "gen/spacex-flight-6-booster-catch-called-off-tower-damaged-at-liftoff-story-x2-11132027.jpg",
+  "gen/why-starship-has-33-engines-not-one-giant-engine-n1-saturn-v-explained.jpg",
+  "lib/starship-booster-catch.jpg",
+  "gen/how-much-does-it-cost-to-send-1-kg-into-space-shuttle-falcon-9-starship-x3-11081152.jpg",
+  "lib/starship-launch.jpg"
+ ],
+ "gen_image": {
+  "prompt": "Dramatic close shot of a soot-streaked SpaceX Super Heavy booster standing upright in the open sea at dusk a moment after a soft splashdown, its base in churning white water and drifting steam, the tall stainless steel cylinder filling the middle of the frame and just starting to lean, four grid fins near its top, no launch tower anywhere, orange sky on the horizon, calm darker water in the lower left",
+  "subject": "SpaceX Super Heavy booster: a plain cylindrical stainless steel rocket stage about 9 m wide and about 70 m tall, four grid fins near the top, a vented ring on top, many Raptor engines at the base; no landing legs, no wings, no windows",
+  "refs": [
+   {
+    "src": "lib/starship-booster-catch.jpg"
+   },
+   {
+    "src": "lib/starship-pad.jpg"
+   }
+  ],
+  "profile": "cinematic",
+  "category": "B",
+  "describe": "a Super Heavy booster standing upright in the sea after a soft splashdown, just starting to lean",
+  "extra": [
+   {
+    "prompt": "A large offshore subsea service vessel with a heavy crane on a grey sea, lifting a dripping, twisted ring of rocket engine nozzles out of the water, crew seen only from behind as small silhouettes on deck, no logos, no readable text",
+    "describe": "a recovery ship's crane lifting a twisted ring of rocket engines out of the sea"
+   },
+   {
+    "prompt": "Underwater view of a dim sandy seafloor with a broken section of a huge stainless steel rocket stage lying on its side, grid fin bent, small fish swimming past, faint light rays from the surface far above",
+    "describe": "a broken booster section lying on the seafloor under water"
+   }
+  ]
+ },
+ "label": {
+  "style": "c",
+  "en": {
+   "sub": "IT HOVERED.",
+   "text": "THEN IT EXPLODED"
+  },
+  "nl": {
+   "sub": "HIJ ZWEEFDE.",
+   "text": "TOEN ONTPLOFTE HIJ"
+  }
+ },
+ "en": {
+  "title": "What Happens to Starship's Booster After a Splashdown? Why Super Heavy Never Comes Back",
+  "description": "Starship's Super Heavy booster can hover gently over the Gulf, yet every one that went into the sea was lost. Here is what happens after splashdown, and why only a tower catch brings a booster back.",
+  "body": "<p>On Starship Flight 15, Super Heavy Booster 22 did almost everything right at the very end. It fired its landing burn, slowed to a hover a few feet above the Gulf of Mexico, and shut down its engines. Then its flight termination system went off and the booster blew apart just above the water, about six and a half minutes after liftoff on 13 November 2026. As it resurfaced, its leftover propellant burned on the sea. It looked like a failure, but every Super Heavy that has gone into the sea has ended the same way. No booster that splashed down has ever flown again, and the reason lies in what the sea does to a rocket built to be caught.</p>\n<h2>What happened to Booster 22 on Flight 15?</h2>\n<p><strong>It was sent to the sea by its own guidance system, then destroyed itself just above the water after a controlled hover.</strong> The plan was to bring Booster 22 back to the tower at Starbase for the first catch of the new, bigger Version 3 booster. After separation it lit 32 of its 33 engines for the boostback burn. Then the guidance system \"detected that the booster was not in the place that it was supposed to be to proceed with a catch,\" SpaceX's Dan Huot said, and triggered an automated abort. He added that the system \"was doing what it was supposed to do.\" SpaceX is still looking for the root cause.</p>\n<p>Over the Gulf, the booster lit 13 engines for its landing burn, hovered and cut its engines. Then the flight termination system fired, and the booster exploded a few feet above the sea. A gentle landing on water does not save a booster either.</p>\n<h2>Why doesn't a soft splashdown save the booster?</h2>\n<p><strong>Because Super Heavy has no legs: it can stand on its engines while they burn, but once they stop, nothing holds a 70-metre steel tube upright.</strong> SpaceX proved it could put a booster down gently long before Flight 15. On Flight 4, on 6 June 2024, Booster 11 made the first soft, vertical splashdown in the Gulf. Elon Musk wrote that the next landing would be \"caught by the tower arms.\" The landing itself worked. Afterwards the booster went over into the water, and a photo of the engine section that Musk later posted showed it badly mangled.</p>\n<p>Flight 6, in November 2024, went the same way. Its booster was meant to be caught, was diverted to the Gulf, and settled into a vertical, low-speed splashdown just off the shore at Boca Chica. Soon after, a fireball rose from it. A booster arrives with fuel left in its tanks and very hot engines, and a tall, nearly empty tank that falls into the waves does not stay in one piece. The wreck then disappears from view.</p>\n<h2>So where does a booster go after it breaks up?</h2>\n<p><strong>Mostly to the bottom of the Gulf, and only rarely does a piece come back up.</strong> Booster 11 sank to the seafloor about 55 metres down. Months later SpaceX hired the HOS Ridgewind, a subsea service vessel from the offshore industry, to bring the wreck up. In September 2024 Musk posted a photo captioned \"Starship Super Heavy Booster Flight 4\": the engine section, twisted and torn. The rest of the giant booster, too big to lift, stayed below.</p>\n<p>That is an expensive way to get back a set of broken engines. The engines cannot fly again, but they show how the booster came apart. It explains why SpaceX keeps sending boosters to the sea.</p>\n<h2>Why does SpaceX still send boosters to the sea?</h2>\n<p><strong>Because the sea is the safe fallback: a lost booster costs one rocket, a booster that hits the tower can cost the whole launch site.</strong> Every Super Heavy is set up to end in the Gulf unless its catch is approved by both the automated checks and the flight director. The same tower that catches the booster also launches the rockets, so when anything looks wrong, the booster goes to the water. Flight 15 showed that rule working: the guidance system did not like what it saw, and the booster turned away.</p>\n<p>A splashdown is still a test. The boostback, the flip and the landing burn all happen over open water, so SpaceX gets the data without risking the pad. What it does not get back is the booster itself. That leaves one route home.</p>\n<h2>So what does it take for a booster to fly again?</h2>\n<p><strong>A catch: only boosters the tower has caught have ever flown a second time.</strong> The tower's arms caught Super Heavy on Flights 5, 7 and 8, the first time in October 2024. Booster 14, caught on Flight 7 in January 2025, became the first Super Heavy to fly again, on Flight 9. That is the whole point of the arms. A booster that is caught goes back to the hangar, gets checked and flies again. A booster that goes to the sea ends as a fireball, a wreck on the seafloor or a few engines on the deck of a hired ship.</p>\n<p>Version 3 has not yet made a successful return to the tower. Until it does, every splashdown in the Gulf ends the same way. The sea can test a booster. Only the tower can give it back.</p>"
+ },
+ "nl": {
+  "title": "Wat gebeurt er met de Starship-booster na een landing op zee? Waarom Super Heavy nooit terugkomt",
+  "description": "De Super Heavy-booster van Starship kan zacht boven de Golf zweven, maar elke booster die in zee belandde, ging verloren. Wat er na de landing gebeurt, en waarom alleen een vangst door de toren een booster terugbrengt.",
+  "body": "<p>Op Starship-vlucht 15 deed Super Heavy Booster 22 helemaal aan het eind bijna alles goed. Hij ontstak zijn landingsmotoren, remde af tot hij een paar meter boven de Golf van Mexico zweefde en zette zijn motoren uit. Toen ging zijn zelfvernietigingssysteem af en spatte de booster vlak boven het water uiteen, zo'n zesenhalve minuut na de start op 13 november 2026. Toen hij weer bovenkwam, brandde de resterende brandstof op zee. Het leek op een mislukking, maar elke Super Heavy die in zee belandde, eindigde zo. Geen enkele booster die in zee landde heeft ooit nog gevlogen, en de reden zit in wat de zee doet met een raket die gebouwd is om gevangen te worden.</p>\n<h2>Wat gebeurde er met Booster 22 op vlucht 15?</h2>\n<p><strong>Zijn eigen navigatiesysteem stuurde hem naar zee, en na een gecontroleerde zweefvlucht vernietigde hij zichzelf vlak boven het water.</strong> Het plan was om Booster 22 terug te brengen naar de toren in Starbase, voor de eerste vangst van de nieuwe, grotere Version 3-booster. Na de scheiding ontstak hij 32 van zijn 33 motoren voor de terugkeerbrandstoot. Daarna stelde het navigatiesysteem vast dat de booster niet was waar hij moest zijn om gevangen te worden, zei Dan Huot van SpaceX, en het blies de vangst automatisch af. Het systeem deed volgens hem precies wat het moest doen. SpaceX zoekt nog naar de oorzaak.</p>\n<p>Boven de Golf ontstak de booster 13 motoren voor de landing, bleef even zweven en zette de motoren uit. Toen ging het zelfvernietigingssysteem af en explodeerde de booster een paar meter boven zee. Ook een zachte landing op het water redt een booster niet.</p>\n<h2>Waarom redt een zachte landing op zee de booster niet?</h2>\n<p><strong>Omdat Super Heavy geen landingspoten heeft: hij kan op zijn motoren staan zolang die branden, maar daarna houdt niets een stalen buis van 70 meter overeind.</strong> SpaceX liet al lang voor vlucht 15 zien dat het een booster zacht kan neerzetten. Op vlucht 4, op 6 juni 2024, maakte Booster 11 de eerste zachte, rechtopstaande landing in de Golf. Elon Musk schreef dat de volgende landing door de armen van de toren gevangen zou worden. De landing zelf lukte. Daarna viel de booster om in het water, en een foto van de motorsectie die Musk later deelde, liet zien dat die zwaar verwrongen was.</p>\n<p>Vlucht 6, in november 2024, liep net zo. Die booster zou gevangen worden, werd naar de Golf gestuurd en kwam rechtop en langzaam in zee terecht, vlak voor de kust bij Boca Chica. Kort daarna steeg er een vuurbal uit op. Een booster komt aan met brandstof in zijn tanks en gloeiend hete motoren, en een hoge, bijna lege tank die in de golven valt, blijft niet heel. Daarna verdwijnt het wrak uit beeld.</p>\n<h2>Waar blijft een booster dan, als hij uit elkaar valt?</h2>\n<p><strong>Vooral op de bodem van de Golf, en maar zelden komt er een stuk weer boven.</strong> Booster 11 zonk naar de zeebodem, zo'n 55 meter diep. Maanden later huurde SpaceX de HOS Ridgewind in, een schip voor werk onder water uit de offshore-industrie, om het wrak op te halen. In september 2024 deelde Musk een foto met als onderschrift \"Starship Super Heavy Booster Flight 4\": de motorsectie, verwrongen en gescheurd. De rest van de reusachtige booster, te groot om op te tillen, bleef liggen.</p>\n<p>Dat is een dure manier om een set kapotte motoren terug te krijgen. Die motoren vliegen nooit meer, maar ze laten wel zien hoe de booster uit elkaar viel. Het verklaart waarom SpaceX boosters toch naar zee blijft sturen.</p>\n<h2>Waarom stuurt SpaceX boosters nog steeds naar zee?</h2>\n<p><strong>Omdat de zee de veilige uitweg is: een verloren booster kost één raket, een booster die de toren raakt kan het hele lanceerterrein kosten.</strong> Elke Super Heavy is zo ingesteld dat hij in de Golf eindigt, tenzij zowel de automatische controles als de vluchtleider de vangst goedkeuren. Dezelfde toren die de booster vangt, lanceert ook de raketten, dus zodra er iets niet klopt, gaat de booster het water in. Vlucht 15 liet die regel werken: het navigatiesysteem vertrouwde het niet, en de booster draaide af.</p>\n<p>Een landing op zee is nog steeds een test. De terugkeerbrandstoot, de draai en de landingsbrandstoot gebeuren allemaal boven open water, dus SpaceX krijgt de gegevens zonder het lanceerplatform te riskeren. Wat het niet terugkrijgt, is de booster zelf. Dan blijft er één weg naar huis over.</p>\n<h2>Wat is er dan nodig om een booster opnieuw te laten vliegen?</h2>\n<p><strong>Een vangst: alleen boosters die de toren heeft gevangen, hebben ooit een tweede keer gevlogen.</strong> De armen van de toren vingen Super Heavy op vlucht 5, 7 en 8, voor het eerst in oktober 2024. Booster 14, gevangen op vlucht 7 in januari 2025, werd de eerste Super Heavy die opnieuw vloog, op vlucht 9. Daar zijn de armen voor. Een gevangen booster gaat terug naar de hal, wordt gecontroleerd en vliegt weer. Een booster die naar zee gaat, eindigt als vuurbal, als wrak op de zeebodem of als een paar motoren op het dek van een gehuurd schip.</p>\n<p>Version 3 is nog niet met succes teruggekeerd naar de toren. Tot dat gebeurt, eindigt elke landing in de Golf op dezelfde manier. De zee kan een booster testen. Alleen de toren geeft hem terug.</p>"
+ },
+ "short": {
+  "hook": "consequence",
+  "yt_title_en": "Starship's Booster Hovered. Then It Exploded",
+  "yt_title_nl": "Starship-booster zweefde. Toen ontplofte hij",
+  "hooks": [
+   {
+    "text": "Starship's booster hovered at sea. Then exploded.",
+    "type": "consequence"
+   },
+   {
+    "text": "A perfect hover. Then a fireball.",
+    "type": "contrast"
+   },
+   {
+    "text": "Why can't Starship's booster survive the sea?",
+    "type": "question"
+   }
+  ],
+  "hook_pick": {
+   "index": 0,
+   "why": "7 spoken words with the name (Starship) and one hard, certain Flight 15 event, no number and no 'might' (daily review rule 2); the calm-then-boom turn raises ONE question (why would a booster that hovered perfectly blow up?) that is answered only in beats 8-9 (no legs: on water it topples; only caught boosters fly again). Hook 1 has no name, hook 2 is a bare question. Rotates away from contrast (today's midday)."
+  },
+  "hook_motion": "the soot-streaked booster sinks slowly on its glowing engine flames toward the sea, spray and steam swirl up from the water, the camera holds steady",
+  "story": [
+   {
+    "part": "hook",
+    "t": "0-3s",
+    "text": "Starship's booster hovered at sea. Then exploded.",
+    "overlay": "Booster hovered. Then it exploded.",
+    "lib": [
+     "../gen/why-spacex-called-off-starship-flight-15-booster-catch-go-no-go-explained.jpg",
+     "../gen/why-starship-has-33-engines-not-one-giant-engine-n1-saturn-v-explained.jpg"
+    ],
+    "sfx": "deep rumbling roar of rocket engines hovering low over open water, hissing spray and steam",
+    "visual": "hard open on a Super Heavy booster coming down on its engine flames over the sea at dusk (moving clip: it sinks slowly, spray and steam swirl), cut on 'exploded' to engine flames bursting into a white cloud; only the hook on screen, no logo"
+   },
+   {
+    "part": "tension",
+    "t": "3-6s",
+    "text": "13 engines had slowed it to a hover above the Gulf.",
+    "overlay": "13 engines slowed it to a hover.",
+    "lib": [
+     "../gen/spacex-flight-6-booster-catch-called-off-tower-damaged-at-liftoff-story-x2-11132027.jpg",
+     "../gen/why-starship-has-33-engines-not-one-giant-engine-n1-saturn-v-explained-x3-11091159.jpg"
+    ],
+    "visual": "the booster coming down on its engines over the open sea at sunset, then a booster's engines firing at night"
+   },
+   {
+    "part": "tension",
+    "t": "6-9s",
+    "text": "Then the engines cut, and it blew apart above the water.",
+    "overlay": "Engines cut. Then it blew apart.",
+    "lib": [
+     "../gen/why-starship-has-33-engines-not-one-giant-engine-n1-saturn-v-explained.jpg",
+     "../gen/spacex-flight-6-booster-catch-called-off-tower-damaged-at-liftoff-story-x3-11132029.jpg"
+    ],
+    "sfx": "a huge explosion over the sea, deep boom, crackling fire and water spray",
+    "visual": "engine flames and a burst of white steam and fire, then a mission control room with red warnings on the big screen"
+   },
+   {
+    "part": "tension",
+    "t": "9-12s",
+    "text": "An earlier booster did land softly, standing upright in the waves.",
+    "overlay": "Another one landed softly. Upright.",
+    "img": "gen/what-happens-to-starship-super-heavy-booster-after-splashdown-gulf-explained.jpg",
+    "lib": [
+     "../gen/spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story-x3-11022028.jpg"
+    ],
+    "visual": "a soot-streaked booster standing upright in the sea in white water after a soft splashdown, then a booster slowing on its engines just above the surface"
+   },
+   {
+    "part": "tension",
+    "t": "12-15s",
+    "text": "Then the 70-metre tank of steel tipped over and broke.",
+    "overlay": "Then it tipped over and broke.",
+    "img": "gen/what-happens-to-starship-super-heavy-booster-after-splashdown-gulf-explained.jpg",
+    "lib": [
+     "../gen/why-spacex-called-off-starship-flight-15-booster-catch-go-no-go-explained-x3-11141153.jpg"
+    ],
+    "sfx": "a giant steel structure groaning and crashing into the sea, heavy splash",
+    "visual": "the upright booster in the waves starting to lean, then the empty catch arms at dusk with an exhaust trail far out over the sea"
+   },
+   {
+    "part": "tension",
+    "t": "15-18s",
+    "text": "Its wreck sank about 55 metres, down to the seafloor.",
+    "overlay": "The wreck sank about 55 m down.",
+    "lib": [
+     "../gen/why-starship-has-33-engines-not-one-giant-engine-n1-saturn-v-explained-x2-11091157.jpg",
+     "../gen/why-spacex-called-off-starship-flight-15-booster-catch-go-no-go-explained.jpg"
+    ],
+    "photo": [
+     {
+      "q": [
+       "Gulf of Mexico underwater seafloor",
+       "sandy seafloor underwater light rays"
+      ],
+      "want": "a dim sandy seafloor seen underwater, light rays from above, no people"
+     }
+    ],
+    "visual": "a dim seafloor under water with light rays, then a row of Raptor engines (what lies down there)"
+   },
+   {
+    "part": "tension",
+    "t": "18-21s",
+    "text": "Months later, a hired ship fished up its engine section.",
+    "overlay": "A ship fished up the engines.",
+    "lib": [
+     "../gen/spacex-fairing-catch-net-boat-mr-steven-6-million-nose-cone-story-x3-11092029.jpg",
+     "../gen/why-starship-has-33-engines-not-one-giant-engine-n1-saturn-v-explained-x2-11091157.jpg"
+    ],
+    "visual": "a recovery ship's crane lifting wet hardware out of the sea, then a row of Raptor engines"
+   },
+   {
+    "part": "payoff",
+    "t": "21-24s",
+    "text": "Super Heavy has no legs, so on water it topples.",
+    "overlay": "No legs. On water, it topples.",
+    "lib": [
+     "starship-booster-catch.jpg",
+     "../gen/spacex-flight-6-booster-catch-called-off-tower-damaged-at-liftoff-story-x2-11132027.jpg"
+    ],
+    "visual": "a booster hovering on its engines beside the tower's arms (no legs at the base), then the booster over the open sea"
+   },
+   {
+    "part": "payoff",
+    "t": "24-28s",
+    "text": "So far, only boosters the tower caught have flown again.",
+    "overlay": "Only caught boosters fly again.",
+    "lib": [
+     "../gen/how-much-does-it-cost-to-send-1-kg-into-space-shuttle-falcon-9-starship-x3-11081152.jpg",
+     "../gen/why-spacex-called-off-starship-flight-15-booster-catch-go-no-go-explained.jpg"
+    ],
+    "visual": "a caught booster held by the tower arms at dusk, ready to fly again, then back to the booster over the sea, the frame the Short opens on"
+   }
+  ],
+  "loop": {
+   "last": "So far, only boosters the tower caught have flown again.",
+   "how": "the rule, then the counter-example: '...only boosters the tower caught have flown again. Starship's booster hovered at sea. Then exploded.' The restart is the booster that was NOT caught; no shared opening words; the last picture cuts back to the booster-over-the-sea frame the Short opens on"
+  },
+  "signals": "Views: Flight 15 news under 48 hours old (booster splashdown replay 259K at 54x, 'booster catch aborted' 153K at 32x), name + one certain, visual event in the first 2.5 s over a moving hook with engine roar. Stayed/watched: 9 beats of 10-11 spoken words after a 7-word hook (est. 2.5-3.5 s each, ~26 s), the 'why' held back to beats 8-9, a rule-like loop line that hands over to the hook. Shares: a surprise most fans do not know (no splashed booster has ever flown again; SpaceX fished the engines off the seafloor).",
+  "learning": {
+   "prev": "tesla-semi-interior-explained-center-seat-two-screens-drivers-day (previous Saturday); reference: today's midday why-spacex-called-off-starship-flight-15-booster-catch-go-no-go-explained",
+   "prev_stats": "Saturday 7 Nov: 1,012 views, stayed 54%, watched 90.1%, ~49 s (ops/short-signals.md). Today's midday: render report shows beats 2, 4 and 7 at 1.9-2.3 s; views not in yet",
+   "weakest_hook": "\"In the Tesla Semi, the driver sits right in the middle.\" (7 Nov) - opened with a scene ('In the...'), 10 words, and the Short ran ~49 s; today's midday hook was fine, but three 8-word beats of short words were spoken in about 2 s",
+   "why_stalled": "Saturday 7 Nov: old long format (49 s, soft scene-setting hook) and a topic without proof; it stayed inside our range (~1,000). Midday: too-short beats make the cuts feel rushed",
+   "change": "fresh proven topic (Flight 15, under 48 h) in the fixed v4 format; every middle beat now 10-11 spoken words so none falls under 2.5 s (quality note of 14 Nov); overlay words follow the voice",
+   "test": "TOPIC AGE (daily review test of the day): news of the last 48 hours (Flight 15, what happens to the booster after the sea) with the same format as today's midday; only execution fix: 10-11-word beats"
+  },
+  "proof": {
+   "source": "Replay! SpaceX launches Starship Flight 15, booster splashes down (VideoFromSpace) - https://youtu.be/F0ltKM5qc7A",
+   "views": 259000,
+   "why": "54.5x that channel's usual and under 48 h old; with 'Blastoff! ... booster catch aborted' (153K, 32x) and the 658K 'Double Catch Attempt' Short it tops ops/scout-tesla.md (14 Nov). Evergreen list item 'What happens to a Super Heavy booster after a splashdown in the Gulf?'. Our angle adds what none of them explain: why a soft splashdown still destroys the booster, the seafloor salvage of Booster 11, and why only caught boosters fly again (not a repeat of today's midday, which explained the go/no-go decision)."
+  },
+  "en": "Starship's booster hovered at sea. Then exploded. 13 engines had slowed it to a hover above the Gulf. Then the engines cut, and it blew apart above the water. An earlier booster did land softly, standing upright in the waves. Then the 70-metre tank of steel tipped over and broke. Its wreck sank about 55 metres, down to the seafloor. Months later, a hired ship fished up its engine section. Super Heavy has no legs, so on water it topples. So far, only boosters the tower caught have flown again.",
+  "nl": "De booster van Starship zweefde boven zee. Toen ontplofte hij. 13 motoren hadden hem afgeremd tot hij boven de Golf zweefde. Toen gingen de motoren uit, en spatte hij boven het water uiteen. Een eerdere booster landde wel zacht, rechtop in de golven. Daarna viel die stalen tank van 70 meter om en brak. Het wrak zonk zo'n 55 meter, naar de zeebodem. Maanden later viste een gehuurd schip de motorsectie op. Super Heavy heeft geen poten, dus op het water valt hij om. Tot nu toe vlogen alleen boosters die de toren ving opnieuw."
+ }
+}

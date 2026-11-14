@@ -1245,9 +1245,16 @@ def feed(lead, lead_html, rest, lang, active=None, side_title="", left_first=(),
         # followed without a heading by the general news
         # topic, model and article pages: the right column holds only articles of this topic
         right_items = [x for x in left_items if x is not lead]
+    home_more = False
     if no_left:
-        # home / news: newest news on the right, the same news continues as a grid under the tip bar
-        right_items, left_items = list(rest), list(rest)[:MAX_HOME_GRID + XTRA]
+        # Home: the open story is `lead`. The rail takes the next articles and the grid
+        # continues after the rail, so each article appears once.
+        pool = [x for x in rest if x is not lead]
+        right_items = pool[:MAX_RIGHT]
+        rail_ids = {id(x) for x in right_items}
+        grid_pool = [x for x in pool if id(x) not in rail_ids]
+        left_items = grid_pool[:MAX_HOME_GRID + XTRA]
+        home_more = len(grid_pool) > MAX_HOME_GRID
     more_link = ""
     topic = (left_exact is not None and (active != "news" or article)) or no_left
     if len(left_items) > MAX_LEFT and not topic:
@@ -1267,7 +1274,7 @@ def feed(lead, lead_html, rest, lang, active=None, side_title="", left_first=(),
         side += f'<h2 class="sideh">{CATEGORIES["news"][lang]}</h2>' + "".join(mini(a, lang) for a in right_items[n_own:])
     grid = (f'<div class="grid2 gall wide">{g}</div>' if topic else f'<div class=grid2>{g}</div>') if g else ""
     rubh = f'<h2 class="rubh" id="meer">{esc(CATEGORIES[active][lang])} info</h2>' if g and topic and active in CATEGORIES else ""
-    if no_left and len(rest) > MAX_HOME_GRID:
+    if no_left and home_more:
         L = LANGS[lang]
         more_link = (f'<nav class="pager"><span></span><span>{L["page"]} 1 / {1 + max(1, -(-(len(rest) + 1 - PER_PAGE) // PER_PAGE))}</span>'
                      f'<a href="{url(lang, "archive/2/")}">{L["older"]} ›</a></nav>')
@@ -1586,7 +1593,6 @@ def build():
                                  "sameAs": ["https://www.youtube.com/@TrendingTesla"]}}
         write(url(lang), page(lang, "", NAME, L["tagline"], body,
                               extra_head=f'<script type="application/ld+json">{json.dumps(site_ld, ensure_ascii=False)}</script>'))
-        home_body = body
 
         # ---------- Category pages ----------
         for key, c in CATEGORIES.items():
@@ -1595,7 +1601,7 @@ def build():
                 items = news
             intro = L["eco_intro"] if key in ECO else L["cat_intro"].format(c[lang])
             head = f'<h1 class="sr">{c[lang]}</h1>'
-            content = home_body.split("</h1>", 1)[1] if key == "news" else listing(items, lang, key)
+            content = listing(items, lang, key)
             write(url(lang, f"category/{key}/"),
                   page(lang, f"category/{key}/", c[lang], intro, head + content, active=key))
 

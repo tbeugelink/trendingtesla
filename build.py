@@ -805,11 +805,24 @@ def read_time(a, lang):
     return max(1, round(len(html.unescape(a[lang]["body"]).split()) / 220))
 
 
-def page(lang, path, title, description, body, og_type="website", extra_head="", image=None, active=None):
+def page(lang, path, title, description, body, og_type="website", extra_head="", image=None, active=None, robots=None, canonical=True):
     L = LANGS[lang]
     alt = other(lang)
     full_title = f"{title} | {NAME}" if title != NAME else f"{NAME} — {L['tagline']}"
-    canonical = SITE + url(lang, path)
+    canon_url = SITE + url(lang, path)
+    robots_meta = robots or "max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    if canonical:
+        canon_links = (
+            f'<link rel="canonical" href="{canon_url}">\n'
+            f'<link rel="alternate" hreflang="en" href="{SITE + url("en", path)}">\n'
+            f'<link rel="alternate" hreflang="nl" href="{SITE + url("nl", path)}">\n'
+            f'<link rel="alternate" hreflang="x-default" href="{SITE + url("en", path)}">'
+        )
+        og_url_meta = f'<meta property="og:url" content="{canon_url}">'
+    else:
+        # A page with no URL of its own (the 404 template) must not claim the homepage.
+        canon_links = ""
+        og_url_meta = ""
     img = SITE + (image or f"/img/default-{lang}.jpg")
     menu = "".join(
         f'<a href="{url(lang, "category/" + k + "/")}"{" class=\"on\"" if k == active else ""}>{c[lang]}</a>'
@@ -823,20 +836,17 @@ def page(lang, path, title, description, body, og_type="website", extra_head="",
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="robots" content="{robots_meta}">
 <title>{esc(full_title)}</title>
 <meta name="description" content="{esc(description)}">
-<link rel="canonical" href="{canonical}">
-<link rel="alternate" hreflang="en" href="{SITE + url('en', path)}">
-<link rel="alternate" hreflang="nl" href="{SITE + url('nl', path)}">
-<link rel="alternate" hreflang="x-default" href="{SITE + url('en', path)}">
+{canon_links}
 <link rel="alternate" type="application/rss+xml" title="{NAME}" href="{url(lang, 'feed.xml')}">
 <link rel="preload" href="/fonts/manrope-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
 <meta property="og:site_name" content="{NAME}">
 <meta property="og:title" content="{esc(title)}">
 <meta property="og:description" content="{esc(description)}">
 <meta property="og:type" content="{og_type}">
-<meta property="og:url" content="{canonical}">
+{og_url_meta}
 <meta property="og:image" content="{img}">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -1670,11 +1680,13 @@ def build():
               f"<title>{NAME}</title><link>{SITE + url(lang)}</link>"
               f"<description>{esc(L['tagline'])}</description><language>{lang}</language>{items}</channel></rss>")
 
-    # 404
-    L = LANGS["en"]
+    # 404 (served for missing URLs, so it has no canonical of its own and must not be indexed)
+    L, N = LANGS["en"], LANGS["nl"]
     write("/404.html", page("en", "", L["notfound"], L["notfound_text"],
           f'<article class="narrow"><h1>{L["notfound"]}</h1><p class="lead">{L["notfound_text"]}</p>'
-          f'<p><a href="/">{L["back"]}</a> · <a href="/nl/">{LANGS["nl"]["back"]}</a></p></article>'))
+          f'<p lang="nl"><strong>{N["notfound"]}.</strong> {N["notfound_text"]}</p>'
+          f'<p><a href="/">{L["back"]}</a> · <a href="/nl/" hreflang="nl" lang="nl">{N["back"]}</a></p></article>',
+          robots="noindex", canonical=False))
 
     # Sitemap
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")

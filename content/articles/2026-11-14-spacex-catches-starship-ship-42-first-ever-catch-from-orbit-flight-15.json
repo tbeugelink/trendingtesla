@@ -1,0 +1,197 @@
+{
+ "slug": "spacex-catches-starship-ship-42-first-ever-catch-from-orbit-flight-15",
+ "date": "2026-11-14",
+ "time": "23:14",
+ "category": "spacex",
+ "sources": [
+  {
+   "title": "Teslarati — SpaceX makes history, catching Starship from orbit for the first time",
+   "url": "https://www.teslarati.com/spacex-catches-starship-first/"
+  },
+  {
+   "title": "Starlust — SpaceX scripts history by catching Starship's upper stage using launch tower for the first time",
+   "url": "https://starlust.org/spacex-scripts-history-by-catching-starships-upper-stage-using-launch-tower-for-the-first-time/"
+  },
+  {
+   "title": "Space.com — SpaceX launches Starship on ambitious 22-hour Flight 15 test, but aborts booster 'chopsticks' catch",
+   "url": "https://www.space.com/space-exploration/launches-spacecraft/spacex-starship-flight-15-chopsticks-double-catch-super-heavy-ship"
+  },
+  {
+   "title": "Drive Tesla — SpaceX Catches Starship After Historic Return From Orbit on Flight 15",
+   "url": "https://driveteslacanada.ca/news/spacex-catches-starship-flight-15/"
+  }
+ ],
+ "images": [
+  "gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute.jpg",
+  "gen/how-spacex-catches-both-starship-stages-why-ship-takes-22-hours-booster-7-minutes-x3-11131200.jpg",
+  "gen/how-spacex-catches-both-starship-stages-why-ship-takes-22-hours-booster-7-minutes-x2-11131158.jpg",
+  "lib/starship-pad.jpg"
+ ],
+ "label": {
+  "style": "c",
+  "en": {
+   "sub": "FIRST EVER",
+   "text": "STARSHIP CAUGHT!"
+  },
+  "nl": {
+   "sub": "VOOR HET EERST",
+   "text": "STARSHIP GEVANGEN!"
+  }
+ },
+ "en": {
+  "title": "First Ever Starship Caught: SpaceX Catches Ship 42 After 22 Hours in Orbit",
+  "description": "SpaceX has caught a Starship upper stage returning from orbit for the first time. Ship 42 flew for 22.5 hours on Flight 15 before the Starbase tower's arms closed around it; the booster's catch was called off.",
+  "body": "<p>SpaceX has caught a Starship coming back from orbit. On Saturday 14 November 2026, at about 3:20 p.m. Texas time, the two arms of the launch tower at Starbase closed around Ship 42, the upper stage of Starship Flight 15. \"Mechazilla catches Starship!\" SpaceX wrote on X. No spacecraft had ever returned from orbit to be caught by the tower it left from. The other half of the rocket did not make it back, which makes the question of what exactly happened worth a closer look.</p><h2>What exactly did SpaceX catch?</h2><p><strong>The ship: the upper stage that goes all the way to orbit.</strong> Flight 15 lifted off from Starbase on Friday 13 November at 4:47 p.m. Texas time. Ship 42 reached an orbit about 275 kilometres up and released 26 Starlink V3 satellites. It then stayed in space for more than 21 hours, about 14 trips around the Earth, until its path once again passed over Texas. The catch came 22 hours and 32 minutes after liftoff. Coming home from orbit is far harder than coming home from the edge of space, and that is the part that was new.</p><h2>So how do you catch a ship that comes back from orbit?</h2><p><strong>Without legs, wings or a parachute.</strong> The ship falls through the atmosphere belly first, so its heat shield takes the heat and the air slows it down. Close to the ground it relights its engines, swings upright and settles between the tower's two arms, nicknamed chopsticks, where catch pins on the ship come to rest on the arms. SpaceX had done this three times with the Super Heavy booster, most recently in March 2025, but a booster only comes back from the edge of space, minutes after launch. The ship returns at orbital speed after a day in space. That leaves the half of the rocket that was supposed to be the routine part.</p><h2>Why was the booster not caught?</h2><p><strong>Its catch was called off on Friday, minutes after launch.</strong> SpaceX wanted to catch both halves on this flight. According to SpaceX's Dan Huot the booster, Booster 22, aborted its own return after detecting a guidance and navigation problem. Elon Musk wrote that the booster was \"slightly low on fuel\" because its engines had slightly underperformed. It came down in the Gulf instead and was lost. So the double catch did not happen, and the first reused ship is still to come.</p><h2>So why does this catch matter?</h2><p><strong>Because the upper stage is the part every other rocket throws away.</strong> Falcon 9 lands its booster, but its upper stage burns up on every flight. A ship that lands back in the tower's arms can, in principle, be checked, refuelled and flown again, and that is what SpaceX needs for its Starlink V3 launches and for the tanker flights of NASA's Moon lander. Musk says he expects weekly Starship launches in the first half of 2027. That is his forecast, not a fact: Ship 42 still has to be inspected, and no ship has flown twice yet.</p><p>How the booster and the ship return in such different ways is explained in <a href=\"/how-spacex-catches-both-starship-stages-why-ship-takes-22-hours-booster-7-minutes/\">our explainer on the double catch</a>.</p>"
+ },
+ "nl": {
+  "title": "Voor het eerst een Starship gevangen: SpaceX vangt Ship 42 na 22 uur in een baan om de aarde",
+  "description": "SpaceX heeft voor het eerst een Starship-bovenste trap gevangen die terugkwam uit een baan om de aarde. Ship 42 vloog 22,5 uur op vlucht 15 voordat de armen van de toren op Starbase zich eromheen sloten; de vangst van de booster werd afgeblazen.",
+  "body": "<p>SpaceX heeft een Starship gevangen die terugkwam uit een baan om de aarde. Op zaterdag 14 november 2026, rond 15.20 uur Texaanse tijd (22.20 uur bij ons), sloten de twee armen van de lanceertoren op Starbase zich om Ship 42, de bovenste trap van Starship-vlucht 15. \"Mechazilla catches Starship!\" schreef SpaceX op X. Nog nooit was een ruimtevaartuig uit een baan om de aarde teruggekeerd en gevangen door de toren waar het vertrok. De andere helft van de raket haalde het niet, en juist daarom is het goed om precies te kijken wat er gebeurd is.</p><h2>Wat heeft SpaceX precies gevangen?</h2><p><strong>Het schip: de bovenste trap, die helemaal naar een baan om de aarde gaat.</strong> Vlucht 15 vertrok vrijdag 13 november om 16.47 uur Texaanse tijd van Starbase. Ship 42 bereikte een baan op ongeveer 275 kilometer hoogte en zette 26 Starlink V3-satellieten uit. Daarna bleef het meer dan 21 uur in de ruimte, ongeveer 14 rondjes om de aarde, tot zijn baan weer over Texas liep. De vangst kwam 22 uur en 32 minuten na de start. Terugkomen uit een baan om de aarde is veel zwaarder dan terugkomen van de rand van de ruimte, en dat was het nieuwe.</p><h2>Hoe vang je dan een schip dat uit de ruimte terugkomt?</h2><p><strong>Zonder poten, vleugels of parachute.</strong> Het schip valt met de buik naar voren door de atmosfeer, zodat het hitteschild de hitte opvangt en de lucht het afremt. Vlak boven de grond start het zijn motoren opnieuw, draait het rechtop en zakt het tussen de twee armen van de toren, bijgenaamd de eetstokjes, waar vangpennen op het schip op de armen komen te rusten. Met de Super Heavy-booster had SpaceX dit al drie keer gedaan, voor het laatst in maart 2025, maar een booster komt maar van de rand van de ruimte terug, minuten na de start. Het schip keert terug met de snelheid van een baan om de aarde, na een dag in de ruimte. Blijft over de helft van de raket die juist routine had moeten zijn.</p><h2>Waarom is de booster niet gevangen?</h2><p><strong>Die vangst werd vrijdag al afgeblazen, minuten na de start.</strong> SpaceX wilde op deze vlucht beide helften vangen. Volgens Dan Huot van SpaceX brak de booster, Booster 22, zijn terugkeer zelf af na een probleem met de besturing en navigatie. Elon Musk schreef dat de booster \"slightly low on fuel\" was, net te weinig brandstof, omdat de motoren iets minder presteerden. Hij kwam in de Golf neer en ging verloren. De dubbele vangst is er dus niet gekomen, en het eerste hergebruikte schip moet nog komen.</p><h2>Waarom is deze vangst dan zo belangrijk?</h2><p><strong>Omdat de bovenste trap het deel is dat elke andere raket weggooit.</strong> Falcon 9 landt zijn booster, maar de bovenste trap verbrandt bij elke vlucht. Een schip dat terug in de armen van de toren landt, kan in principe worden nagekeken, bijgetankt en opnieuw gelanceerd. Dat heeft SpaceX nodig voor de Starlink V3-lanceringen en voor de tankvluchten van NASA's maanlander. Musk zegt wekelijkse Starship-lanceringen te verwachten in de eerste helft van 2027. Dat is zijn voorspelling, geen feit: Ship 42 moet nog worden geïnspecteerd en nog geen enkel schip heeft twee keer gevlogen.</p><p>Waarom de booster en het schip zo verschillend terugkomen, lees je in <a href=\"/nl/how-spacex-catches-both-starship-stages-why-ship-takes-22-hours-booster-7-minutes/\">onze uitleg over de dubbele vangst</a>.</p>"
+ },
+ "short": {
+  "hook": "first",
+  "hook_clip": false,
+  "yt_title_en": "First Ever Starship Caught!",
+  "yt_title_nl": "Voor het eerst een Starship gevangen!",
+  "hooks": [
+   {
+    "text": "SpaceX just caught a Starship from orbit.",
+    "type": "first"
+   },
+   {
+    "text": "A spaceship came back from orbit. A tower caught it.",
+    "type": "contrast"
+   },
+   {
+    "text": "22 hours in orbit. Then two steel arms.",
+    "type": "number"
+   }
+  ],
+  "hook_pick": {
+   "index": 0,
+   "why": "7 words, the name and one hard, certain event that happened an hour ago; anyone who follows SpaceX knows at once what it is, and the last line (the ship came home) runs straight back into it"
+  },
+  "story": [
+   {
+    "part": "hook",
+    "t": "0-3s",
+    "text": "SpaceX just caught a Starship from orbit.",
+    "overlay": "SpaceX caught a Starship from orbit",
+    "lib": [
+     "../gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute.jpg",
+     "../gen/how-spacex-catches-both-starship-stages-why-ship-takes-22-hours-booster-7-minutes-x3-11131200.jpg"
+    ],
+    "visual": "the ship held by the tower's two arms at sunrise, hard open; then the tower with its arms at night; only the hook sentence on screen",
+    "sfx": "deep rumbling roar of rocket engines on a landing burn close by, crackling exhaust, then a heavy metal clunk"
+   },
+   {
+    "part": "tension",
+    "t": "3-7s",
+    "text": "Ship 42 circled the Earth for 22 and a half hours.",
+    "overlay": "Ship 42: 22.5 hours in orbit",
+    "lib": [
+     "../gen/how-spacex-catches-both-starship-stages-why-ship-takes-22-hours-booster-7-minutes.jpg",
+     "starship-launch.jpg"
+    ],
+    "visual": "the ship in orbit above the Earth, then the liftoff of the day before"
+   },
+   {
+    "part": "tension",
+    "t": "7-10s",
+    "text": "On the way it dropped off 26 Starlink satellites.",
+    "overlay": "26 Starlink satellites delivered",
+    "lib": [
+     "starlink-satellites.jpg",
+     "../gen/how-spacex-catches-both-starship-stages-why-ship-takes-22-hours-booster-7-minutes.jpg"
+    ],
+    "visual": "a line of Starlink satellites across the night sky"
+   },
+   {
+    "part": "tension",
+    "t": "10-14s",
+    "text": "Then it fell back through the atmosphere, belly first.",
+    "overlay": "Re-entry: belly first",
+    "lib": [
+     "../gen/how-spacex-catches-both-starship-stages-why-ship-takes-22-hours-booster-7-minutes-x2-11131158.jpg",
+     "../gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute-x2-11041157.jpg"
+    ],
+    "visual": "the glowing heat shield during re-entry, then the ship falling flat like a skydiver"
+   },
+   {
+    "part": "tension",
+    "t": "14-18s",
+    "text": "Above the pad it flipped upright and lit its engines.",
+    "overlay": "It flips upright. Engines on.",
+    "lib": [
+     "../gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute-x3-11041200.jpg",
+     "starship-pad.jpg"
+    ],
+    "visual": "the ship turning upright on its engines beside the tower"
+   },
+   {
+    "part": "payoff",
+    "t": "18-21s",
+    "text": "Two steel arms on the launch tower closed around it.",
+    "overlay": "The tower's arms caught it",
+    "lib": [
+     "../gen/how-spacex-catches-both-starship-stages-why-ship-takes-22-hours-booster-7-minutes-x3-11131200.jpg",
+     "../gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute.jpg"
+    ],
+    "visual": "the open arms waiting, then the ship hanging in them"
+   },
+   {
+    "part": "payoff",
+    "t": "21-24s",
+    "text": "No legs. No parachute. No landing in the ocean.",
+    "overlay": "No legs. No parachute. No ocean.",
+    "lib": [
+     "../gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute.jpg",
+     "starship-pad.jpg"
+    ],
+    "visual": "close on the ship in the arms, then the whole tower"
+   },
+   {
+    "part": "payoff",
+    "t": "24-28s",
+    "text": "The booster's own catch was called off. It was low on fuel.",
+    "overlay": "Booster catch: called off",
+    "lib": [
+     "../gen/why-spacex-called-off-starship-flight-15-booster-catch-go-no-go-explained.jpg",
+     "../gen/why-spacex-called-off-starship-flight-15-booster-catch-go-no-go-explained-x3-11141153.jpg"
+    ],
+    "visual": "the booster coming down over the sea, far from the tower; the empty arms"
+   },
+   {
+    "part": "payoff",
+    "t": "28-32s",
+    "text": "But for the first time ever, the spaceship itself came home.",
+    "overlay": "First time ever: the ship came home",
+    "lib": [
+     "../gen/how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute.jpg",
+     "starship-booster-catch.jpg"
+    ],
+    "visual": "back to the ship in the arms, the same picture the Short opens on"
+   }
+  ],
+  "loop": {
+   "last": "But for the first time ever, the spaceship itself came home.",
+   "how": "the restart names what 'came home' means: '...the spaceship itself came home. SpaceX just caught a Starship from orbit.' The last picture is the ship in the arms, the picture the Short opens on"
+  },
+  "signals": "Speed: published within about an hour of the event, on the topic that pulled 3.7M views for small channels this week; a 7-word hook with the name and a certain event; 9 beats of about 3 s, 2 pictures per beat, text on screen the whole time.",
+  "learning": {
+   "prev": "what-happens-to-starship-super-heavy-booster-after-splashdown-gulf-explained",
+   "prev_stats": "not in yet (published this evening)",
+   "weakest_hook": "hooks about an old or expected event; no Short passed 1,500 views since 31 Oct",
+   "why_stalled": "topics were weeks old or told before the event; none rode a live event",
+   "change": "an extra Short on a historic event within about an hour, at William's request",
+   "test": "breaking news within an hour of the event, same format (no moving hook: no AI footage of a real event of today)"
+  },
+  "proof": {
+   "source": "Teslarati — SpaceX makes history, catching Starship from orbit for the first time - https://www.teslarati.com/spacex-catches-starship-first/ ; ops/proven-topics.md: 'SpaceX Caught an Entire Rocket Booster With Giant Mechanical Arms' 3.7M views on a 4K-subscriber channel",
+   "views": 3700000,
+   "why": "the first ship catch ever, one hour old, on the topic that already carried small channels this week; our explainers of 4 and 13 Nov give the background"
+  },
+  "en": "SpaceX just caught a Starship from orbit. Ship 42 circled the Earth for 22 and a half hours. On the way it dropped off 26 Starlink satellites. Then it fell back through the atmosphere, belly first. Above the pad it flipped upright and lit its engines. Two steel arms on the launch tower closed around it. No legs. No parachute. No landing in the ocean. The booster's own catch was called off. It was low on fuel. But for the first time ever, the spaceship itself came home.",
+  "nl": "SpaceX heeft zojuist een Starship uit een baan om de aarde gevangen. Ship 42 draaide 22 en een half uur om de aarde. Onderweg zette het 26 Starlink-satellieten af. Daarna viel het terug door de atmosfeer, met de buik naar voren. Boven het platform draaide het rechtop en startte het zijn motoren. Twee stalen armen aan de lanceertoren sloten zich eromheen. Geen poten. Geen parachute. Geen landing in zee. De vangst van de booster zelf werd afgeblazen: te weinig brandstof. Maar voor het eerst ooit kwam het ruimteschip zelf thuis."
+ }
+}

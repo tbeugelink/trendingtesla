@@ -10,8 +10,9 @@ language for social sharing.
 Article JSON format:
 {
   "slug": "tesla-q3-2026-earnings-preview",      # URL part, same for both languages
-  "date": "2026-10-21",                            # publication date (YYYY-MM-DD, Europe/Amsterdam)
-  "time": "07:00",                                 # publication time (HH:MM, Europe/Amsterdam); optional
+  "date": "2026-10-21",                            # real publication date (YYYY-MM-DD, Europe/Amsterdam); never backdate
+  "time": "07:00",                                 # real publication time (HH:MM, Europe/Amsterdam); optional
+  "updated": "2026-10-22T09:30:00+01:00",          # optional; only after a real edit of the body, not for a video or a rebuild
   "category": "earnings",                          # key from CATEGORIES below
   "models": ["model-y"],                           # optional: keys from MODELS below the article is about
   "also": ["optimus"],                             # optional: extra categories where the article also appears
@@ -1507,12 +1508,8 @@ def load_articles():
     for v in (json.loads(vf.read_text(encoding="utf-8")) if vf.exists() else []):
         if v.get("slug") and (v["slug"], v.get("lang", "en")) not in VIDEOS:
             VIDEOS[(v["slug"], v.get("lang", "en"))] = v
-    for a in arts:
-        vids = [v for (sl, _), v in VIDEOS.items() if sl == a["slug"]]
-        if vids:  # adding a video updates the article (dateModified), the publication date stays
-            last = max(v["published"] for v in vids)
-            if last > a.get("updated", published(a).isoformat()):
-                a["updated"] = last
+    # `updated` is taken only from the article JSON. Attaching a YouTube video, or rebuilding
+    # the site, must not change dateModified or the article's sitemap lastmod.
     arts.sort(key=published, reverse=True)
     slugs = [a["slug"] for a in arts]
     if len(slugs) != len(set(slugs)):

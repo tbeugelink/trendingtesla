@@ -57,7 +57,7 @@ at a time, otherwise the morning review cannot tell what worked.
   "describe", "extra": [two more scenes]}. Left-hand drive, right side of the road. Illustrations only, never a fake
   documentary photo of a real event or a real person.
 - "label": two lines in two colours (types "a", "c" or "n"; one-block "r" only for real bad news): the hook claim.
-- "date"/"time": now in Europe/Amsterdam (`TZ=Europe/Amsterdam date`). File: content/articles/YYYY-MM-DD-slug.json.
+- "date"/"time": the actual publication moment, now in Europe/Amsterdam (`TZ=Europe/Amsterdam date`). Never an earlier date. Set "updated" only when the body really changes after publication, to that edit's moment (`YYYY-MM-DD` or a full timestamp). Do not set it when a video is attached, the page is rebuilt, or anything else that is not an edit of the text. File: content/articles/YYYY-MM-DD-slug.json.
 
 ## 5. Write the Short ("short") - README "SHORT FORMAT v4" (+ v3.1, v3) and "PROVEN TACTICS" are binding
 - 20-30 seconds is the target (15-35 allowed): 55-80 spoken words.

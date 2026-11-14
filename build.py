@@ -419,6 +419,7 @@ article .st{font-size:clamp(1.05rem,2vw,1.3rem);line-height:1.22;letter-spacing:
 .st a{color:inherit;text-decoration:none}
 .smeta{margin:0 0 14px;font-size:.88rem}.smeta a.tag{color:var(--blue)}.smeta a.tag:hover{color:var(--blue2)}
 .byline{margin:2px 0 12px;font-size:.82rem;line-height:1.3;color:var(--dim)}.byline a{color:inherit;text-decoration:none}.byline a:hover{text-decoration:underline}
+.nextread{margin:8px 0 12px;padding:18px 3vw 0;border-top:1px solid var(--border2)}.nextread h2{font-size:1.2rem;margin:0 0 12px}.nextread .grid2{margin-top:0;gap:14px}@media (max-width:600.98px){.nextread{padding-left:0;padding-right:0}}
 .sideh{font-size:.7rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--blue);margin:11px 0 -2px;padding-top:9px;border-top:1px solid var(--border2)}
 .hi,.th,.im{position:relative}.hi{margin:0 0 8px}.hi .hero-img{margin:0}
 .dur{display:inline-flex;align-items:center;gap:4px;position:absolute;right:8px;bottom:8px;background:rgba(0,0,0,.8);color:#fff;font-size:.74rem;font-weight:700;line-height:1;padding:4px 6px;border-radius:10px;cursor:help}.agotip{position:fixed;z-index:60;pointer-events:none;background:rgba(0,0,0,.88);color:#fff;font-size:.74rem;font-weight:700;line-height:1;padding:5px 7px;border-radius:10px;white-space:nowrap}time.ago{cursor:help}.im,.th,.hi{container-type:inline-size}.kk{position:absolute;left:2.6cqw;bottom:2.6cqw;z-index:2;pointer-events:none;font-family:Inter,Manrope,system-ui,sans-serif;font-weight:900;letter-spacing:-.01em;text-transform:uppercase;line-height:1}.kk b{display:table;font-weight:900;white-space:nowrap}.kk b+b{margin-top:.1em}.kk i{font-style:normal;display:inline-block}.kk .yo{color:#ffd400;text-shadow:-.16cqw -.16cqw 0 #666666,.16cqw -.16cqw 0 #666666,-.16cqw .16cqw 0 #666666,.16cqw .16cqw 0 #666666,0 .2cqw 0 #666666,0 -.2cqw 0 #666666,.2cqw 0 0 #666666,-.2cqw 0 0 #666666,0 .5cqw 1.2cqw rgba(0,0,0,.45)}.kk .bk i{background:#d61a1a;color:#fff;padding:.13em .24em .12em;box-shadow:0 .4cqw 1.2cqw rgba(0,0,0,.35)}.kk.p-bw .bk i,.kk.p-by .bk i{background:#1d5cff}.kk.p-gy .bk i{background:#0c8a40}.kk.p-yk .bk i{background:#ffd400;color:#111}.kk.p-gy .yo{color:#ffd400;text-shadow:0.16cqw 0.16cqw 0 #666666,-0.16cqw 0.16cqw 0 #666666,0.16cqw -0.16cqw 0 #666666,-0.16cqw -0.16cqw 0 #666666,0cqw 0.2cqw 0 #666666,0cqw -0.2cqw 0 #666666,0.2cqw 0cqw 0 #666666,-0.2cqw 0cqw 0 #666666,0 .5cqw 1.4cqw rgba(0,0,0,.5)}.kk.p-wb .bk i{background:#fff;color:#1d5cff}.kk.p-bw .yo{color:#fff;text-shadow:0.16cqw 0.16cqw 0 #0b2f8f,-0.16cqw 0.16cqw 0 #0b2f8f,0.16cqw -0.16cqw 0 #0b2f8f,-0.16cqw -0.16cqw 0 #0b2f8f,0 .2cqw 0 #0b2f8f,0 -.2cqw 0 #0b2f8f,.2cqw 0 0 #0b2f8f,-.2cqw 0 0 #0b2f8f,0 .5cqw 1.4cqw rgba(0,0,0,.6)}.kk.p-wb .yo{color:#3d7bff;text-shadow:0.16cqw 0.16cqw 0 #fff,-0.16cqw 0.16cqw 0 #fff,0.16cqw -0.16cqw 0 #fff,-0.16cqw -0.16cqw 0 #fff,0 .2cqw 0 #fff,0 -.2cqw 0 #fff,.2cqw 0 0 #fff,-.2cqw 0 0 #fff,0 .5cqw 1.4cqw rgba(0,0,0,.5)}.kk.p-by .yo{color:#ffd400;text-shadow:0.16cqw 0.16cqw 0 #666666,-0.16cqw 0.16cqw 0 #666666,0.16cqw -0.16cqw 0 #666666,-0.16cqw -0.16cqw 0 #666666,0 .2cqw 0 #666666,0 -.2cqw 0 #666666,.2cqw 0 0 #666666,-.2cqw 0 0 #666666,0 .5cqw 1.4cqw rgba(0,0,0,.5)}.kk .nb{font-size:1.32em}.kk .bk .nb{font-size:1.22em}.kk .l1{font-size:6.4cqw}.kk .l2{font-size:8cqw}.th .dur{right:6px;bottom:6px;font-size:.68rem;padding:3px 5px}.th .dur svg{width:12px;height:12px}
@@ -1536,15 +1537,34 @@ def _terms(x):
             if len(w) > 2 and w not in STOP}
 
 
-def related(a, arts, n=3):
-    """Most relevant other articles: shared models (incl. model family), same topic, shared title words."""
+def related(a, arts, n=4):
+    """Up to n other articles that share a category or a model (including the model family)."""
     fam = lambda x: {MODELS[k].get("parent") or k for k in x.get("models", [])}
     ms, mf, ta = set(a.get("models", [])), fam(a), _terms(a)
+    cats = {a["category"]} | set(a.get("also", []))
+
+    def shares(x):
+        xc = {x["category"]} | set(x.get("also", []))
+        return bool(cats & xc or ms & set(x.get("models", [])) or mf & fam(x))
+
     def score(x):
-        sc = 4 * len(ms & set(x.get("models", []))) + 2 * len(mf & fam(x)) + 3 * (x["category"] == a["category"])
+        sc = 4 * len(ms & set(x.get("models", []))) + 2 * len(mf & fam(x))
+        sc += 3 * (x["category"] == a["category"] or a["category"] in x.get("also", []) or x["category"] in a.get("also", []))
         sc += min(len(ta & _terms(x)), 5)
         return (sc, published(x))
-    return sorted((x for x in arts if x is not a), key=score, reverse=True)[:n]
+
+    pool = [x for x in arts if x is not a and shares(x)]
+    return sorted(pool, key=score, reverse=True)[:n]
+
+
+def related_block(a, arts, lang):
+    """'Read next' / 'Lees ook' under an article. Up to four items; hidden when none qualify."""
+    items = related(a, arts, 4)
+    if not items:
+        return ""
+    title = LANGS[lang]["related"]
+    return (f'<section class="nextread" aria-label="{esc(title)}"><h2>{esc(title)}</h2><div class="grid2">'
+            + "".join(card(x, lang) for x in items) + "</div></section>")
 
 
 def build():
@@ -1656,7 +1676,7 @@ def build():
             head = f'<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>'
             same = sorted((x for x in arts if (x["category"] == a["category"] or a["category"] in x.get("also", [])) and x is not a), key=published, reverse=True)
             others = [x for x in arts if x is not a]
-            body = feed(a, story(a, lang), others, lang, a["category"], L["latest"], left_exact=same, left_pad=pad_grid(a, same), article=True)
+            body = feed(a, story(a, lang) + related_block(a, arts, lang), others, lang, a["category"], L["latest"], left_exact=same, left_pad=pad_grid(a, same), article=True)
             write(url(lang, a["slug"] + "/"),
                   page(lang, a["slug"] + "/", t["title"], t["description"], body, "article", head,
                        image=social_img(a, lang), active=a["category"]))

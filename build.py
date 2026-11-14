@@ -10,8 +10,9 @@ language for social sharing.
 Article JSON format:
 {
   "slug": "tesla-q3-2026-earnings-preview",      # URL part, same for both languages
-  "date": "2026-10-21",                            # publication date (YYYY-MM-DD, Europe/Amsterdam)
-  "time": "07:00",                                 # publication time (HH:MM, Europe/Amsterdam); optional
+  "date": "2026-10-21",                            # real publication date (YYYY-MM-DD, Europe/Amsterdam); never backdate
+  "time": "07:00",                                 # real publication time (HH:MM, Europe/Amsterdam); optional
+  "updated": "2026-10-22T09:30:00+01:00",          # optional; only after a real edit of the body, not for a video or a rebuild
   "category": "earnings",                          # key from CATEGORIES below
   "models": ["model-y"],                           # optional: keys from MODELS below the article is about
   "also": ["optimus"],                             # optional: extra categories where the article also appears
@@ -58,6 +59,8 @@ STATIC = ROOT / "static"
 OUT = ROOT / "public"
 SITE = "https://trendingtesla.com"
 NAME = "TrendingTesla"
+# Author shown on articles and in NewsArticle JSON-LD. An organization, never a named person.
+EDITORIAL_ORG = {"en": "TrendingTesla Editorial Team", "nl": "Redactie TrendingTesla"}
 TZ = ZoneInfo("Europe/Amsterdam")
 
 LANGS = {
@@ -71,7 +74,8 @@ LANGS = {
         "latest": "Latest news", "more": "More news", "top": "Top story",
         "models_h": "News and advice for your model", "guides_h": "Best picks for your Tesla",
         "guides_sub": "Researched per model and year, with pros and cons.",
-        "related": "Read next", "sources": "Sources", "about": "About", "privacy": "Privacy",
+        "related": "Read next", "sources": "Sources", "about": "About", "editorial": "Editorial policy",
+        "byline": "By the TrendingTesla editorial team", "privacy": "Privacy",
         "switch": "NL", "switch_full": "Nederlands", "i_specs": "Specifications", "i_watch": "Points to watch", "i_special": "What makes it special", "i_acc": "Accessories", "i_acc_soon": "Coming soon: accessories that fit this version, tested and explained.", "slogan": "Daily Tesla news &amp; trends", "search": "Search Tesla news", "none": "Nothing found", "home": "Home", "collapse": "Close menu", "like": "Like", "save": "Save", "saved_btn": "Saved", "saved": "Saved articles", "saved_empty": "You have not saved any articles yet. Tap Save under an article title to keep it here. Saved articles stay in this browser on this device.", "archive": "All news", "newer": "Newer", "older": "Older", "page": "Page", "d_topics": "Topics", "d_models": "Models", "d_more": "More", "menu": "Menu", "tip_h": "A 22 kW charger won't charge your Tesla any faster", "tip_p": "Most Tesla models charge at home at up to 11 kW AC.", "tip_btn": "Read why", "tips": [("HW4", "Buying a used Model 3? Check the hardware first", "The Highland has HW4, older cars HW3. It decides what FSD can do.", "How to check", "used-model-3-highland-vs-classic-hw3-hw4-buying-guide"), ("−20%", "Losing range in winter? It doesn't have to be", "Preconditioning and the right settings save you kilometers.", "9 winter tips", "tesla-winter-range-tips-cold-weather")],
         "empty": "No articles here yet. New stories are published several times a day.",
         "cat_intro": "All TrendingTesla articles about {}.",
@@ -101,7 +105,8 @@ LANGS = {
         "latest": "Laatste nieuws", "more": "Meer nieuws", "top": "Hoofdverhaal",
         "models_h": "Nieuws en advies voor jouw model", "guides_h": "De beste keuzes voor je Tesla",
         "guides_sub": "Uitgezocht per model en bouwjaar, met plus- en minpunten.",
-        "related": "Lees ook", "sources": "Bronnen", "imgnote": "Afbeeldingen zijn illustraties, deels gemaakt met AI.", "photocredit": "Foto's", "imgnote_other": "Overige afbeeldingen zijn illustraties, deels gemaakt met AI.", "about": "Over ons", "privacy": "Privacy",
+        "related": "Lees ook", "sources": "Bronnen", "imgnote": "Afbeeldingen zijn illustraties, deels gemaakt met AI.", "photocredit": "Foto's", "imgnote_other": "Overige afbeeldingen zijn illustraties, deels gemaakt met AI.", "about": "Over ons", "editorial": "Redactiebeleid",
+        "byline": "Door de redactie van TrendingTesla", "privacy": "Privacy",
         "switch": "EN", "switch_full": "English", "i_specs": "Specificaties", "i_watch": "Aandachtspunten", "i_special": "Bijzonderheden", "i_acc": "Accessoires", "i_acc_soon": "Binnenkort: accessoires die op deze uitvoering passen, getest en uitgelegd.", "slogan": "Iedere dag het laatste nieuws &amp; trends", "search": "Zoek in Tesla-nieuws", "none": "Niets gevonden", "home": "Home", "collapse": "Inklappen", "like": "Vind ik leuk", "save": "Bewaren", "saved_btn": "Bewaard", "saved": "Bewaarde artikelen", "saved_empty": "Je hebt nog geen artikelen bewaard. Tik op Bewaren onder de titel van een artikel om het hier terug te vinden. Bewaarde artikelen blijven in deze browser op dit apparaat.", "archive": "Alle nieuws", "newer": "Nieuwer", "older": "Ouder", "page": "Pagina", "d_topics": "Onderwerpen", "d_models": "Modellen", "d_more": "Meer", "menu": "Menu", "tip_h": "Een 22 kW-laadpaal laadt je Tesla niet sneller", "tip_p": "Veel Tesla-modellen laden thuis met maximaal 11 kW AC.", "tip_btn": "Lees waarom", "tips": [("HW4", "Tweedehands Model 3 kopen? Check eerst de hardware", "De Highland heeft HW4, oudere Model 3's HW3. Dat bepaalt wat FSD kan.", "Zo check je het", "used-model-3-highland-vs-classic-hw3-hw4-buying-guide"), ("−20%", "Minder bereik in de winter? Dat hoeft niet", "Met voorverwarmen en de juiste instellingen houd je meer kilometers over.", "9 wintertips", "tesla-winter-range-tips-cold-weather")],
         "empty": "Hier staan nog geen artikelen. Er verschijnen meerdere keren per dag nieuwe verhalen.",
         "cat_intro": "Alle artikelen van TrendingTesla over {}.",
@@ -195,7 +200,8 @@ PAGES = {
                "<p>Most images on this site are illustrations made for TrendingTesla. Where we use real photos, they are freely licensed (public domain or Creative Commons) and credited under the article. "
                "They show the subject of an article, not the exact event, place or vehicle.</p>"
                "<p>Articles are researched and written with the help of AI and published "
-               "under editorial supervision. Spotted a mistake? We correct it as soon as we "
+               "under editorial supervision. How we edit and correct articles is described in our "
+               '<a href="/editorial/">editorial policy</a>. Spotted a mistake? We correct it as soon as we '
                "know about it.</p>"
                "<p>Some links on this site may be affiliate links: if you buy through them we may "
                "earn a small commission, at no extra cost to you. This never affects our opinion.</p>"
@@ -212,7 +218,8 @@ PAGES = {
                "<p>De meeste afbeeldingen op deze site zijn illustraties die voor TrendingTesla zijn gemaakt. Echte foto's gebruiken we alleen met een vrije licentie (publiek domein of Creative Commons), met bronvermelding onder het artikel. "
                "Ze tonen het onderwerp van een artikel, niet de precieze gebeurtenis, plek of auto.</p>"
                "<p>Artikelen worden met hulp van AI onderzocht en geschreven en onder "
-               "redactioneel toezicht gepubliceerd. Een fout gezien? We verbeteren hem zodra "
+               "redactioneel toezicht gepubliceerd. Hoe we redigeren en corrigeren staat in ons "
+               '<a href="/nl/editorial/">redactiebeleid</a>. Een fout gezien? We verbeteren hem zodra '
                "we ervan weten.</p>"
                "<p>Sommige links op deze site kunnen affiliate-links zijn: koop je via zo'n link, "
                "dan krijgen wij mogelijk een kleine commissie. Jij betaalt niets extra en het "
@@ -221,11 +228,58 @@ PAGES = {
                "gesponsord door of goedgekeurd door Tesla, Inc. Niets op deze site is "
                "financieel advies.</p>"),
     },
+    "editorial": {
+        "en": ("Editorial policy", "How TrendingTesla researches, reviews and corrects its articles.",
+               "<p>TrendingTesla publishes independent articles about Tesla, SpaceX and the companies "
+               "around them, in English and Dutch. This page says how those articles are made and who "
+               "stands behind them.</p>"
+               "<h2>Research and drafting</h2>"
+               "<p>Articles are researched and drafted with AI assistance. Before publication the draft "
+               "is checked against the sources the article cites. We do not invent quotes, numbers or events.</p>"
+               "<h2>Sources</h2>"
+               "<p>Every article cites the sources it used. They are listed at the bottom of the article, "
+               "each with a link, so you can read the underlying reporting yourself.</p>"
+               "<h2>Who is responsible</h2>"
+               "<p>A human editorial team reviews every article before publication and is responsible for "
+               "what appears on the site. The team checks the facts, the sources and the wording in both languages.</p>"
+               "<h2>Corrections</h2>"
+               "<p>If an article is wrong, incomplete or unclear, write to us through the "
+               '<a href="/contact/">contact form</a>. We correct mistakes as soon as we know about them. '
+               "When the text of an article changes, we set its updated date. That is the date search engines "
+               "read as the modification date. The original publication date stays as it was.</p>"
+               "<h2>Independence</h2>"
+               "<p>TrendingTesla is not affiliated with, sponsored by or endorsed by Tesla, Inc., SpaceX, "
+               "xAI or The Boring Company. Nothing on this site is financial, legal or investment advice.</p>"),
+        "nl": ("Redactiebeleid", "Hoe TrendingTesla artikelen onderzoekt, nakijkt en verbetert.",
+               "<p>TrendingTesla publiceert onafhankelijke artikelen over Tesla, SpaceX en de bedrijven "
+               "eromheen, in het Nederlands en het Engels. Op deze pagina staat hoe die artikelen worden "
+               "gemaakt en wie er verantwoordelijk voor is.</p>"
+               "<h2>Onderzoek en tekst</h2>"
+               "<p>Artikelen worden met hulp van AI onderzocht en opgesteld. Voor publicatie wordt de tekst "
+               "gecontroleerd aan de hand van de bronnen die in het artikel staan. We verzinnen geen citaten, "
+               "cijfers of gebeurtenissen.</p>"
+               "<h2>Bronnen</h2>"
+               "<p>Elk artikel noemt de bronnen die we gebruikten. Ze staan onderaan het artikel, elk met een "
+               "link, zodat je de onderliggende berichtgeving zelf kunt nalezen.</p>"
+               "<h2>Wie is verantwoordelijk</h2>"
+               "<p>Een menselijke redactie kijkt elk artikel na vóór publicatie en is verantwoordelijk voor "
+               "wat er op de site staat. De redactie controleert de feiten, de bronnen en de formulering in "
+               "beide talen.</p>"
+               "<h2>Correcties</h2>"
+               "<p>Klopt een artikel niet, is het onvolledig of onduidelijk, schrijf ons via het "
+               '<a href="/nl/contact/">contactformulier</a>. We verbeteren fouten zodra we ervan weten. '
+               "Als de tekst van een artikel verandert, zetten we de bijwerkdatum. Dat is de datum die "
+               "zoekmachines als wijzigingsdatum lezen. De oorspronkelijke publicatiedatum blijft staan.</p>"
+               "<h2>Onafhankelijkheid</h2>"
+               "<p>TrendingTesla is niet verbonden aan, gesponsord door of goedgekeurd door Tesla, Inc., "
+               "SpaceX, xAI of The Boring Company. Niets op deze site is financieel, juridisch of "
+               "beleggingsadvies.</p>"),
+    },
     "privacy": {
         "en": ("Privacy policy", "How trendingtesla.com handles your data and what your rights are.",
-               '<p>This policy explains what personal data trendingtesla.com processes, why, and what your rights are. We keep it to the minimum: you can read the whole site without an account and without tracking cookies.</p><h2>Who is responsible?</h2><p>The controller for this site is trendingtesla.com. You can reach us through the <a href="/contact/">contact form</a>.</p><h2>Contact form</h2><p>If you use the contact form, your name, email address and message are forwarded to our mailbox by email (via Cloudflare Email Routing, and our email provider). We use them only to answer you; the legal basis is our legitimate interest in answering questions, or steps you ask us to take. They are not stored on the website. We delete your message once it has been handled, and in any case within 12 months.</p><p>To stop spam and abuse, the form keeps a scrambled (hashed) version of your IP address for at most two hours to count how many messages are sent. The original IP address is not stored.</p><h2>Hosting and statistics</h2><p>The site is served through Cloudflare, which processes technical data such as IP addresses to deliver and protect the site. Cloudflare may process data outside the EU; it uses the EU Standard Contractual Clauses and is certified under the EU-US Data Privacy Framework. We count visits with Cloudflare Web Analytics, which uses no cookies, does not track you across sites and only gives us totals. Fonts are served from our own domain, not from third parties.</p><h2>YouTube</h2><p>We publish short videos on our YouTube channel @TrendingTesla. To upload our own videos we use YouTube API Services; this does not involve any data from you. Videos on YouTube are subject to the <a href="https://www.youtube.com/t/terms" rel="nofollow noopener" target="_blank">YouTube Terms of Service</a>, and YouTube processes data under the <a href="https://policies.google.com/privacy" rel="nofollow noopener" target="_blank">Google Privacy Policy</a>. We do not embed YouTube videos on this site.</p><h2>Your browser</h2><p>Saved articles and the articles you liked are stored only in your own browser (local storage), not on our servers. You can delete them by clearing your browser data. The like counter only keeps a total number per article, without any information about who liked it.</p><h2>Your rights</h2><p>You have the right to access, correct or delete your personal data, to object to its use, and to ask for it to be restricted or transferred. Send your request through the contact form; we answer within one month. You can also file a complaint with the Dutch Data Protection Authority (Autoriteit Persoonsgegevens) or the authority in your own country.</p><h2>Changes</h2><p>If we add advertising, embedded videos or other analytics, we will update this page first and ask for your consent where the law requires it.</p><p><em>Last updated: 28 October 2026.</em></p>'),
+               '<p>This policy explains what personal data trendingtesla.com processes, why, and what your rights are. We keep it to the minimum: you can read the whole site without an account and without tracking cookies.</p><h2>Who is responsible?</h2><p>The controller for this site is trendingtesla.com. You can reach us through the <a href="/contact/">contact form</a>.</p><h2>Contact form</h2><p>If you use the contact form, your name, email address and message are forwarded to our mailbox by email (via Cloudflare Email Routing, and our email provider). We use them only to answer you; the legal basis is our legitimate interest in answering questions, or steps you ask us to take. The form is handled by this site\'s Cloudflare worker, which checks the message, applies the spam limit below and emails it on. The message is not stored on the website. We delete your message once it has been handled, and in any case within 12 months.</p><p>To stop spam and abuse, the form keeps a scrambled (hashed) version of your IP address for at most two hours to count how many messages are sent. The original IP address is not stored.</p><h2>Hosting and statistics</h2><p>The site is served through Cloudflare, which processes technical data such as IP addresses to deliver and protect the site. Cloudflare may process data outside the EU; it uses the EU Standard Contractual Clauses and is certified under the EU-US Data Privacy Framework. We count visits with Cloudflare Web Analytics, which uses no cookies, does not track you across sites and only gives us totals. Fonts are served from our own domain, not from third parties.</p><h2>YouTube</h2><p>We publish short videos on our YouTube channel @TrendingTesla. To upload our own videos we use YouTube API Services; this does not involve any data from you. Videos on YouTube are subject to the <a href="https://www.youtube.com/t/terms" rel="nofollow noopener" target="_blank">YouTube Terms of Service</a>, and YouTube processes data under the <a href="https://policies.google.com/privacy" rel="nofollow noopener" target="_blank">Google Privacy Policy</a>.</p><p>On an article that has a video, and on the <a href="/shorts/">Shorts</a> page, you can play that video here. Nothing is loaded from YouTube when the page opens: you see the article photo or a thumbnail. Only after you click, or press Enter, do we load a player from youtube-nocookie.com, YouTube\'s privacy-enhanced domain. Until that click your browser does not contact YouTube. After it, YouTube can receive technical data such as your IP address and, once playback starts, may set cookies and process data as described in Google\'s privacy policy. We do not load a YouTube player in the background.</p><h2>Your browser</h2><p>Saved articles, and the list of articles you liked, are stored only in your own browser (local storage), not on our servers. You can delete them by clearing your browser data.</p><h2>Likes</h2><p>The like button talks to a small program on our host (a Cloudflare worker). It sends only the article id and whether you added or removed a like. The worker stores one total per article and nothing else: no account, no cookie and no IP address. It cannot tell who liked an article.</p><h2>Your rights</h2><p>You have the right to access, correct or delete your personal data, to object to its use, and to ask for it to be restricted or transferred. Send your request through the contact form; we answer within one month. You can also file a complaint with the Dutch Data Protection Authority (Autoriteit Persoonsgegevens) or the authority in your own country.</p><h2>Changes</h2><p>If we add advertising or other analytics, we will update this page first and ask for your consent where the law requires it.</p><p><em>Last updated: 14 November 2026.</em></p>'),
         "nl": ("Privacybeleid", "Hoe trendingtesla.com met je gegevens omgaat en welke rechten je hebt.",
-               '<p>Hier lees je welke persoonsgegevens trendingtesla.com verwerkt, waarom, en welke rechten je hebt. We houden het zo klein mogelijk: je kunt de hele site lezen zonder account en zonder trackingcookies.</p><h2>Wie is verantwoordelijk?</h2><p>Verantwoordelijk voor deze site is trendingtesla.com. Je bereikt ons via het <a href="/nl/contact/">contactformulier</a>.</p><h2>Contactformulier</h2><p>Gebruik je het contactformulier, dan worden je naam, e-mailadres en bericht per e-mail doorgestuurd naar onze mailbox (via Cloudflare Email Routing en onze e-mailprovider). We gebruiken ze alleen om je te antwoorden; de grondslag is ons gerechtvaardigd belang om vragen te beantwoorden, of stappen die je ons zelf vraagt te zetten. Ze worden niet op de website bewaard. We verwijderen je bericht zodra het is afgehandeld, en in elk geval binnen 12 maanden.</p><p>Om spam en misbruik te voorkomen, bewaart het formulier hoogstens twee uur een onherkenbaar gemaakte (gehashte) versie van je IP-adres om te tellen hoeveel berichten er worden verstuurd. Het echte IP-adres wordt niet opgeslagen.</p><h2>Hosting en statistieken</h2><p>De site wordt geleverd via Cloudflare, dat technische gegevens zoals IP-adressen verwerkt om de site te leveren en te beveiligen. Cloudflare kan gegevens buiten de EU verwerken; het gebruikt daarvoor de EU-modelcontractbepalingen en is gecertificeerd onder het EU-VS Data Privacy Framework. We tellen bezoeken met Cloudflare Web Analytics; dat gebruikt geen cookies, volgt je niet over andere sites en geeft ons alleen totalen. Lettertypen komen van ons eigen domein, niet van derden.</p><h2>YouTube</h2><p>We publiceren korte video\'s op ons YouTube-kanaal @TrendingTesla. Om onze eigen video\'s te uploaden gebruiken we YouTube API Services; daarbij worden geen gegevens van jou gebruikt. Op video\'s op YouTube zijn de <a href="https://www.youtube.com/t/terms" rel="nofollow noopener" target="_blank">Servicevoorwaarden van YouTube</a> van toepassing, en YouTube verwerkt gegevens volgens het <a href="https://policies.google.com/privacy" rel="nofollow noopener" target="_blank">Privacybeleid van Google</a>. We sluiten geen YouTube-video\'s in op deze site.</p><h2>Je browser</h2><p>Bewaarde artikelen en de artikelen die je leuk vond, staan alleen in je eigen browser (local storage), niet op onze servers. Je verwijdert ze door je browsergegevens te wissen. De teller van de vind-ik-leuks houdt alleen een totaal per artikel bij, zonder gegevens over wie het leuk vond.</p><h2>Je rechten</h2><p>Je hebt het recht om je persoonsgegevens in te zien, te laten corrigeren of verwijderen, bezwaar te maken tegen het gebruik ervan, en te vragen het gebruik te beperken of de gegevens over te dragen. Stuur je verzoek via het contactformulier; we antwoorden binnen een maand. Je kunt ook een klacht indienen bij de Autoriteit Persoonsgegevens.</p><h2>Wijzigingen</h2><p>Voegen we advertenties, ingesloten video\'s of andere statistieken toe, dan passen we deze pagina eerst aan en vragen we waar de wet dat vereist om je toestemming.</p><p><em>Laatst bijgewerkt: 28 oktober 2026.</em></p>'),
+               '<p>Hier lees je welke persoonsgegevens trendingtesla.com verwerkt, waarom, en welke rechten je hebt. We houden het zo klein mogelijk: je kunt de hele site lezen zonder account en zonder trackingcookies.</p><h2>Wie is verantwoordelijk?</h2><p>Verantwoordelijk voor deze site is trendingtesla.com. Je bereikt ons via het <a href="/nl/contact/">contactformulier</a>.</p><h2>Contactformulier</h2><p>Gebruik je het contactformulier, dan worden je naam, e-mailadres en bericht per e-mail doorgestuurd naar onze mailbox (via Cloudflare Email Routing en onze e-mailprovider). We gebruiken ze alleen om je te antwoorden; de grondslag is ons gerechtvaardigd belang om vragen te beantwoorden, of stappen die je ons zelf vraagt te zetten. Het formulier wordt afgehandeld door de Cloudflare-worker van deze site: die controleert het bericht, past de spamlimiet hieronder toe en mailt het door. Het bericht wordt niet op de website bewaard. We verwijderen je bericht zodra het is afgehandeld, en in elk geval binnen 12 maanden.</p><p>Om spam en misbruik te voorkomen, bewaart het formulier hoogstens twee uur een onherkenbaar gemaakte (gehashte) versie van je IP-adres om te tellen hoeveel berichten er worden verstuurd. Het echte IP-adres wordt niet opgeslagen.</p><h2>Hosting en statistieken</h2><p>De site wordt geleverd via Cloudflare, dat technische gegevens zoals IP-adressen verwerkt om de site te leveren en te beveiligen. Cloudflare kan gegevens buiten de EU verwerken; het gebruikt daarvoor de EU-modelcontractbepalingen en is gecertificeerd onder het EU-VS Data Privacy Framework. We tellen bezoeken met Cloudflare Web Analytics; dat gebruikt geen cookies, volgt je niet over andere sites en geeft ons alleen totalen. Lettertypen komen van ons eigen domein, niet van derden.</p><h2>YouTube</h2><p>We publiceren korte video\'s op ons YouTube-kanaal @TrendingTesla. Om onze eigen video\'s te uploaden gebruiken we YouTube API Services; daarbij worden geen gegevens van jou gebruikt. Op video\'s op YouTube zijn de <a href="https://www.youtube.com/t/terms" rel="nofollow noopener" target="_blank">Servicevoorwaarden van YouTube</a> van toepassing, en YouTube verwerkt gegevens volgens het <a href="https://policies.google.com/privacy" rel="nofollow noopener" target="_blank">Privacybeleid van Google</a>.</p><p>Bij een artikel met een video, en op de <a href="/nl/shorts/">Shorts</a>-pagina, kun je die video hier afspelen. Er wordt niets van YouTube geladen als de pagina opent: je ziet de artikelfoto of een miniatuur. Pas als je klikt, of op Enter drukt, laden we een speler van youtube-nocookie.com, het privacyvriendelijkere domein van YouTube. Tot die klik neemt je browser geen contact op met YouTube. Daarna kan YouTube technische gegevens ontvangen, zoals je IP-adres, en zodra het afspelen start cookies plaatsen en gegevens verwerken zoals beschreven in het privacybeleid van Google. We laden geen YouTube-speler op de achtergrond.</p><h2>Je browser</h2><p>Bewaarde artikelen, en de lijst van artikelen die je leuk vond, staan alleen in je eigen browser (local storage), niet op onze servers. Je verwijdert ze door je browsergegevens te wissen.</p><h2>Vind-ik-leuks</h2><p>De vind-ik-leukknop praat met een klein programma op onze host (een Cloudflare-worker). Die krijgt alleen het artikel-id en of je een like toevoegt of weghaalt. De worker bewaart één totaal per artikel en verder niets: geen account, geen cookie en geen IP-adres. Hij kan niet zien wie een artikel leuk vond.</p><h2>Je rechten</h2><p>Je hebt het recht om je persoonsgegevens in te zien, te laten corrigeren of verwijderen, bezwaar te maken tegen het gebruik ervan, en te vragen het gebruik te beperken of de gegevens over te dragen. Stuur je verzoek via het contactformulier; we antwoorden binnen een maand. Je kunt ook een klacht indienen bij de Autoriteit Persoonsgegevens.</p><h2>Wijzigingen</h2><p>Voegen we advertenties of andere statistieken toe, dan passen we deze pagina eerst aan en vragen we waar de wet dat vereist om je toestemming.</p><p><em>Laatst bijgewerkt: 14 november 2026.</em></p>'),
     },
     "contact": {
         "en": ("Contact", "Get in touch with TrendingTesla: tips, corrections and questions.",
@@ -365,6 +419,8 @@ h1,h2,h3{color:#ebebeb;font-weight:800}
 article .st{font-size:clamp(1.05rem,2vw,1.3rem);line-height:1.22;letter-spacing:-.015em;margin:0 0 6px}
 .st a{color:inherit;text-decoration:none}
 .smeta{margin:0 0 14px;font-size:.88rem}.smeta a.tag{color:var(--blue)}.smeta a.tag:hover{color:var(--blue2)}
+.byline{margin:2px 0 12px;font-size:.82rem;line-height:1.3;color:var(--dim)}.byline a{color:inherit;text-decoration:none}.byline a:hover{text-decoration:underline}
+.nextread{margin:8px 0 12px;padding:18px 3vw 0;border-top:1px solid var(--border2)}.nextread h2{font-size:1.2rem;margin:0 0 12px}.nextread .grid2{margin-top:0;gap:14px}@media (max-width:600.98px){.nextread{padding-left:0;padding-right:0}}
 .sideh{font-size:.7rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--blue);margin:11px 0 -2px;padding-top:9px;border-top:1px solid var(--border2)}
 .hi,.th,.im{position:relative}.hi{margin:0 0 8px}.hi .hero-img{margin:0}
 .dur{display:inline-flex;align-items:center;gap:4px;position:absolute;right:8px;bottom:8px;background:rgba(0,0,0,.8);color:#fff;font-size:.74rem;font-weight:700;line-height:1;padding:4px 6px;border-radius:10px;cursor:help}.agotip{position:fixed;z-index:60;pointer-events:none;background:rgba(0,0,0,.88);color:#fff;font-size:.74rem;font-weight:700;line-height:1;padding:5px 7px;border-radius:10px;white-space:nowrap}time.ago{cursor:help}.im,.th,.hi{container-type:inline-size}.kk{position:absolute;left:2.6cqw;bottom:2.6cqw;z-index:2;pointer-events:none;font-family:Inter,Manrope,system-ui,sans-serif;font-weight:900;letter-spacing:-.01em;text-transform:uppercase;line-height:1}.kk b{display:table;font-weight:900;white-space:nowrap}.kk b+b{margin-top:.1em}.kk i{font-style:normal;display:inline-block}.kk .yo{color:#ffd400;text-shadow:-.16cqw -.16cqw 0 #666666,.16cqw -.16cqw 0 #666666,-.16cqw .16cqw 0 #666666,.16cqw .16cqw 0 #666666,0 .2cqw 0 #666666,0 -.2cqw 0 #666666,.2cqw 0 0 #666666,-.2cqw 0 0 #666666,0 .5cqw 1.2cqw rgba(0,0,0,.45)}.kk .bk i{background:#d61a1a;color:#fff;padding:.13em .24em .12em;box-shadow:0 .4cqw 1.2cqw rgba(0,0,0,.35)}.kk.p-bw .bk i,.kk.p-by .bk i{background:#1d5cff}.kk.p-gy .bk i{background:#0c8a40}.kk.p-yk .bk i{background:#ffd400;color:#111}.kk.p-gy .yo{color:#ffd400;text-shadow:0.16cqw 0.16cqw 0 #666666,-0.16cqw 0.16cqw 0 #666666,0.16cqw -0.16cqw 0 #666666,-0.16cqw -0.16cqw 0 #666666,0cqw 0.2cqw 0 #666666,0cqw -0.2cqw 0 #666666,0.2cqw 0cqw 0 #666666,-0.2cqw 0cqw 0 #666666,0 .5cqw 1.4cqw rgba(0,0,0,.5)}.kk.p-wb .bk i{background:#fff;color:#1d5cff}.kk.p-bw .yo{color:#fff;text-shadow:0.16cqw 0.16cqw 0 #0b2f8f,-0.16cqw 0.16cqw 0 #0b2f8f,0.16cqw -0.16cqw 0 #0b2f8f,-0.16cqw -0.16cqw 0 #0b2f8f,0 .2cqw 0 #0b2f8f,0 -.2cqw 0 #0b2f8f,.2cqw 0 0 #0b2f8f,-.2cqw 0 0 #0b2f8f,0 .5cqw 1.4cqw rgba(0,0,0,.6)}.kk.p-wb .yo{color:#3d7bff;text-shadow:0.16cqw 0.16cqw 0 #fff,-0.16cqw 0.16cqw 0 #fff,0.16cqw -0.16cqw 0 #fff,-0.16cqw -0.16cqw 0 #fff,0 .2cqw 0 #fff,0 -.2cqw 0 #fff,.2cqw 0 0 #fff,-.2cqw 0 0 #fff,0 .5cqw 1.4cqw rgba(0,0,0,.5)}.kk.p-by .yo{color:#ffd400;text-shadow:0.16cqw 0.16cqw 0 #666666,-0.16cqw 0.16cqw 0 #666666,0.16cqw -0.16cqw 0 #666666,-0.16cqw -0.16cqw 0 #666666,0 .2cqw 0 #666666,0 -.2cqw 0 #666666,.2cqw 0 0 #666666,-.2cqw 0 0 #666666,0 .5cqw 1.4cqw rgba(0,0,0,.5)}.kk .nb{font-size:1.32em}.kk .bk .nb{font-size:1.22em}.kk .l1{font-size:6.4cqw}.kk .l2{font-size:8cqw}.th .dur{right:6px;bottom:6px;font-size:.68rem;padding:3px 5px}.th .dur svg{width:12px;height:12px}
@@ -805,11 +861,24 @@ def read_time(a, lang):
     return max(1, round(len(html.unescape(a[lang]["body"]).split()) / 220))
 
 
-def page(lang, path, title, description, body, og_type="website", extra_head="", image=None, active=None):
+def page(lang, path, title, description, body, og_type="website", extra_head="", image=None, active=None, robots=None, canonical=True):
     L = LANGS[lang]
     alt = other(lang)
     full_title = f"{title} | {NAME}" if title != NAME else f"{NAME} — {L['tagline']}"
-    canonical = SITE + url(lang, path)
+    canon_url = SITE + url(lang, path)
+    robots_meta = robots or "max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    if canonical:
+        canon_links = (
+            f'<link rel="canonical" href="{canon_url}">\n'
+            f'<link rel="alternate" hreflang="en" href="{SITE + url("en", path)}">\n'
+            f'<link rel="alternate" hreflang="nl" href="{SITE + url("nl", path)}">\n'
+            f'<link rel="alternate" hreflang="x-default" href="{SITE + url("en", path)}">'
+        )
+        og_url_meta = f'<meta property="og:url" content="{canon_url}">'
+    else:
+        # A page with no URL of its own (the 404 template) must not claim the homepage.
+        canon_links = ""
+        og_url_meta = ""
     img = SITE + (image or f"/img/default-{lang}.jpg")
     menu = "".join(
         f'<a href="{url(lang, "category/" + k + "/")}"{" class=\"on\"" if k == active else ""}>{c[lang]}</a>'
@@ -823,20 +892,17 @@ def page(lang, path, title, description, body, og_type="website", extra_head="",
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="robots" content="{robots_meta}">
 <title>{esc(full_title)}</title>
 <meta name="description" content="{esc(description)}">
-<link rel="canonical" href="{canonical}">
-<link rel="alternate" hreflang="en" href="{SITE + url('en', path)}">
-<link rel="alternate" hreflang="nl" href="{SITE + url('nl', path)}">
-<link rel="alternate" hreflang="x-default" href="{SITE + url('en', path)}">
+{canon_links}
 <link rel="alternate" type="application/rss+xml" title="{NAME}" href="{url(lang, 'feed.xml')}">
 <link rel="preload" href="/fonts/manrope-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
 <meta property="og:site_name" content="{NAME}">
 <meta property="og:title" content="{esc(title)}">
 <meta property="og:description" content="{esc(description)}">
 <meta property="og:type" content="{og_type}">
-<meta property="og:url" content="{canonical}">
+{og_url_meta}
 <meta property="og:image" content="{img}">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -870,7 +936,7 @@ def page(lang, path, title, description, body, og_type="website", extra_head="",
 <div class="fbrand"><a class="logo" href="{url(lang)}">Trending<span>Tesla</span></a><p>{L['tagline']} {L['disclaimer']}</p></div>
 <div><h4>{L['d_topics']}</h4><div class="flist two">{fcats}</div></div>
 <div><h4>{L['d_models']}</h4><div class="flist">{fmods}</div></div>
-<div><h4>{L['d_more']}</h4><div class="flist"><a href="{url(lang, 'archive/')}">{L['archive']}</a><a href="{url(lang, 'about/')}">{L['about']}</a><a href="{url(lang, 'privacy/')}">{L['privacy']}</a><a href="{url(lang, 'contact/')}">Contact</a><a href="{url(lang, 'terms/')}">{'Terms' if lang == 'en' else 'Voorwaarden'}</a><a href="{url(lang, 'shorts/')}">Shorts</a><a href="https://www.youtube.com/@TrendingTesla" rel="noopener" target="_blank">YouTube</a><a href="{url(lang, 'feed.xml')}">RSS</a><a href="{url(alt, path)}">{L['switch_full']}</a></div></div>
+<div><h4>{L['d_more']}</h4><div class="flist"><a href="{url(lang, 'archive/')}">{L['archive']}</a><a href="{url(lang, 'about/')}">{L['about']}</a><a href="{url(lang, 'editorial/')}">{L['editorial']}</a><a href="{url(lang, 'privacy/')}">{L['privacy']}</a><a href="{url(lang, 'contact/')}">Contact</a><a href="{url(lang, 'terms/')}">{'Terms' if lang == 'en' else 'Voorwaarden'}</a><a href="{url(lang, 'shorts/')}">Shorts</a><a href="https://www.youtube.com/@TrendingTesla" rel="noopener" target="_blank">YouTube</a><a href="{url(lang, 'feed.xml')}">RSS</a><a href="{url(alt, path)}">{L['switch_full']}</a></div></div>
 </div><p class="fcopy">&copy; {datetime.now().year} {NAME}</p></div></footer>
 <script>{JS}</script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{{"token": "5c536a7c183844ccb97e1ac151b5d018"}}'></script>
@@ -960,10 +1026,11 @@ def story(a, lang, tag="h1"):
         chips = '<div class="chips">' + "".join(
             f'<a href="{url(lang, "model/" + k + "/")}">Tesla {MODELS[k]["name"]}</a>' for k in a["models"]) + "</div>"
     title = esc(t["title"]) if tag == "h1" else f'<a href="{url(lang, a["slug"] + "/")}">{esc(t["title"])}</a>'
+    byline = (f'<p class="byline"><a href="{url(lang, "editorial/")}">{L["byline"]}</a></p>' if tag == "h1" else "")
     toc, body = enrich(a, lang)
     return (f'<article>'
             f'<div class="hi"{vhero(a, lang)}><img class="hero-img" src="{site_img(a)}" alt="{esc(t["title"])}" width="1200" height="630" fetchpriority="high">{dur(a, lang)}{ovl(a, lang)}</div>{vscript(a, lang)}'
-            f'<{tag} class="st">{title}</{tag}>'
+            f'<{tag} class="st">{title}</{tag}>{byline}'
             f'<div class="srow"><p class="meta smeta"><a class="tag" href="{url(lang, "category/" + a["category"] + "/")}">{c.get("tag", c[lang])}</a> · {when(a, lang)}</p>'
             f'<div class="acts"><button class="act like" type="button" data-like="{a["slug"]}" aria-pressed="false" title="{L["like"]}">{HEART_SVG}<span>0</span></button>'
             f'<button class="act save" type="button" data-save="{a["slug"]}" aria-pressed="false" title="{L["save"]}" aria-label="{L["save"]}">{BOOK_SVG}</button></div></div>'
@@ -1180,9 +1247,16 @@ def feed(lead, lead_html, rest, lang, active=None, side_title="", left_first=(),
         # followed without a heading by the general news
         # topic, model and article pages: the right column holds only articles of this topic
         right_items = [x for x in left_items if x is not lead]
+    home_more = False
     if no_left:
-        # home / news: newest news on the right, the same news continues as a grid under the tip bar
-        right_items, left_items = list(rest), list(rest)[:MAX_HOME_GRID + XTRA]
+        # Home: the open story is `lead`. The rail takes the next articles and the grid
+        # continues after the rail, so each article appears once.
+        pool = [x for x in rest if x is not lead]
+        right_items = pool[:MAX_RIGHT]
+        rail_ids = {id(x) for x in right_items}
+        grid_pool = [x for x in pool if id(x) not in rail_ids]
+        left_items = grid_pool[:MAX_HOME_GRID + XTRA]
+        home_more = len(grid_pool) > MAX_HOME_GRID
     more_link = ""
     topic = (left_exact is not None and (active != "news" or article)) or no_left
     if len(left_items) > MAX_LEFT and not topic:
@@ -1202,7 +1276,7 @@ def feed(lead, lead_html, rest, lang, active=None, side_title="", left_first=(),
         side += f'<h2 class="sideh">{CATEGORIES["news"][lang]}</h2>' + "".join(mini(a, lang) for a in right_items[n_own:])
     grid = (f'<div class="grid2 gall wide">{g}</div>' if topic else f'<div class=grid2>{g}</div>') if g else ""
     rubh = f'<h2 class="rubh" id="meer">{esc(CATEGORIES[active][lang])} info</h2>' if g and topic and active in CATEGORIES else ""
-    if no_left and len(rest) > MAX_HOME_GRID:
+    if no_left and home_more:
         L = LANGS[lang]
         more_link = (f'<nav class="pager"><span></span><span>{L["page"]} 1 / {1 + max(1, -(-(len(rest) + 1 - PER_PAGE) // PER_PAGE))}</span>'
                      f'<a href="{url(lang, "archive/2/")}">{L["older"]} ›</a></nav>')
@@ -1434,12 +1508,8 @@ def load_articles():
     for v in (json.loads(vf.read_text(encoding="utf-8")) if vf.exists() else []):
         if v.get("slug") and (v["slug"], v.get("lang", "en")) not in VIDEOS:
             VIDEOS[(v["slug"], v.get("lang", "en"))] = v
-    for a in arts:
-        vids = [v for (sl, _), v in VIDEOS.items() if sl == a["slug"]]
-        if vids:  # adding a video updates the article (dateModified), the publication date stays
-            last = max(v["published"] for v in vids)
-            if last > a.get("updated", published(a).isoformat()):
-                a["updated"] = last
+    # `updated` is taken only from the article JSON. Attaching a YouTube video, or rebuilding
+    # the site, must not change dateModified or the article's sitemap lastmod.
     arts.sort(key=published, reverse=True)
     slugs = [a["slug"] for a in arts]
     if len(slugs) != len(set(slugs)):
@@ -1464,15 +1534,34 @@ def _terms(x):
             if len(w) > 2 and w not in STOP}
 
 
-def related(a, arts, n=3):
-    """Most relevant other articles: shared models (incl. model family), same topic, shared title words."""
+def related(a, arts, n=4):
+    """Up to n other articles that share a category or a model (including the model family)."""
     fam = lambda x: {MODELS[k].get("parent") or k for k in x.get("models", [])}
     ms, mf, ta = set(a.get("models", [])), fam(a), _terms(a)
+    cats = {a["category"]} | set(a.get("also", []))
+
+    def shares(x):
+        xc = {x["category"]} | set(x.get("also", []))
+        return bool(cats & xc or ms & set(x.get("models", [])) or mf & fam(x))
+
     def score(x):
-        sc = 4 * len(ms & set(x.get("models", []))) + 2 * len(mf & fam(x)) + 3 * (x["category"] == a["category"])
+        sc = 4 * len(ms & set(x.get("models", []))) + 2 * len(mf & fam(x))
+        sc += 3 * (x["category"] == a["category"] or a["category"] in x.get("also", []) or x["category"] in a.get("also", []))
         sc += min(len(ta & _terms(x)), 5)
         return (sc, published(x))
-    return sorted((x for x in arts if x is not a), key=score, reverse=True)[:n]
+
+    pool = [x for x in arts if x is not a and shares(x)]
+    return sorted(pool, key=score, reverse=True)[:n]
+
+
+def related_block(a, arts, lang):
+    """'Read next' / 'Lees ook' under an article. Up to four items; hidden when none qualify."""
+    items = related(a, arts, 4)
+    if not items:
+        return ""
+    title = LANGS[lang]["related"]
+    return (f'<section class="nextread" aria-label="{esc(title)}"><h2>{esc(title)}</h2><div class="grid2">'
+            + "".join(card(x, lang) for x in items) + "</div></section>")
 
 
 def build():
@@ -1521,7 +1610,6 @@ def build():
                                  "sameAs": ["https://www.youtube.com/@TrendingTesla"]}}
         write(url(lang), page(lang, "", NAME, L["tagline"], body,
                               extra_head=f'<script type="application/ld+json">{json.dumps(site_ld, ensure_ascii=False)}</script>'))
-        home_body = body
 
         # ---------- Category pages ----------
         for key, c in CATEGORIES.items():
@@ -1530,7 +1618,7 @@ def build():
                 items = news
             intro = L["eco_intro"] if key in ECO else L["cat_intro"].format(c[lang])
             head = f'<h1 class="sr">{c[lang]}</h1>'
-            content = home_body.split("</h1>", 1)[1] if key == "news" else listing(items, lang, key)
+            content = listing(items, lang, key)
             write(url(lang, f"category/{key}/"),
                   page(lang, f"category/{key}/", c[lang], intro, head + content, active=key))
 
@@ -1570,7 +1658,7 @@ def build():
                 "mainEntityOfPage": SITE + url(lang, a["slug"] + "/"),
                 "publisher": {"@type": "Organization", "name": NAME, "url": SITE,
                               "logo": {"@type": "ImageObject", "url": SITE + "/favicon-512.png", "width": 512, "height": 512}},
-                "author": {"@type": "Organization", "name": NAME, "url": SITE},
+                "author": {"@type": "Organization", "name": EDITORIAL_ORG[lang], "url": SITE + url(lang, "editorial/")},
             }
             v = VIDEOS.get((a["slug"], lang))
             if v:  # video rich result in Google (video thumbnail + length in search)
@@ -1585,7 +1673,7 @@ def build():
             head = f'<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>'
             same = sorted((x for x in arts if (x["category"] == a["category"] or a["category"] in x.get("also", [])) and x is not a), key=published, reverse=True)
             others = [x for x in arts if x is not a]
-            body = feed(a, story(a, lang), others, lang, a["category"], L["latest"], left_exact=same, left_pad=pad_grid(a, same), article=True)
+            body = feed(a, story(a, lang) + related_block(a, arts, lang), others, lang, a["category"], L["latest"], left_exact=same, left_pad=pad_grid(a, same), article=True)
             write(url(lang, a["slug"] + "/"),
                   page(lang, a["slug"] + "/", t["title"], t["description"], body, "article", head,
                        image=social_img(a, lang), active=a["category"]))
@@ -1670,11 +1758,13 @@ def build():
               f"<title>{NAME}</title><link>{SITE + url(lang)}</link>"
               f"<description>{esc(L['tagline'])}</description><language>{lang}</language>{items}</channel></rss>")
 
-    # 404
-    L = LANGS["en"]
+    # 404 (served for missing URLs, so it has no canonical of its own and must not be indexed)
+    L, N = LANGS["en"], LANGS["nl"]
     write("/404.html", page("en", "", L["notfound"], L["notfound_text"],
           f'<article class="narrow"><h1>{L["notfound"]}</h1><p class="lead">{L["notfound_text"]}</p>'
-          f'<p><a href="/">{L["back"]}</a> · <a href="/nl/">{LANGS["nl"]["back"]}</a></p></article>'))
+          f'<p lang="nl"><strong>{N["notfound"]}.</strong> {N["notfound_text"]}</p>'
+          f'<p><a href="/">{L["back"]}</a> · <a href="/nl/" hreflang="nl" lang="nl">{N["back"]}</a></p></article>',
+          robots="noindex", canonical=False))
 
     # Sitemap
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")

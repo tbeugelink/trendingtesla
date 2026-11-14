@@ -7,7 +7,8 @@
     "binding": "ASSETS",
     "not_found_handling": "404-page",
     "html_handling": "auto-trailing-slash",
-    "run_worker_first": ["/api/*", "/", "/nl/"]
+    // true so the worker sees every host, including www, and can 301 to the https apex
+    "run_worker_first": true
   },
   "keep_vars": true,
   "send_email": [{ "name": "MAIL" }],

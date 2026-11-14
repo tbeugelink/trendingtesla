@@ -106,6 +106,15 @@ function b64name(n) {
 export default {
   async fetch(request, env) {
     const u = new URL(request.url);
+    // www and plain http on the public host belong on the https apex. Local wrangler
+    // (localhost) is left alone. Cloudflare "Always Use HTTPS" is what stops a browser
+    // http request from failing before it reaches this worker.
+    const host = u.hostname.toLowerCase();
+    const onSite = host === "trendingtesla.com" || host === "www.trendingtesla.com";
+    if (onSite && (host === "www.trendingtesla.com" || u.protocol === "http:")) {
+      const dest = new URL(u.pathname + u.search, "https://trendingtesla.com");
+      return Response.redirect(dest.toString(), 301);
+    }
     // old WordPress addresses from the domain's previous site (?p=1, ?feed=rss2, ?s=..., ?author=1) showed the
     // home page and were reported as duplicates by Search Console: tell crawlers they are gone for good
     if ((u.pathname === "/" || u.pathname === "/nl/") &&

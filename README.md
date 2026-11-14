@@ -8,6 +8,10 @@ Static, bilingual (EN at `/`, NL at `/nl/`) Tesla news site.
 
 `public/` is generated — never edit it by hand, always rebuild.
 
+## House rule: publication dates
+
+`date` and `time` on an article are the actual moment it is published, in Europe/Amsterdam (`TZ=Europe/Amsterdam date`). Never backdate an article. Set `updated` only when the article body really changes, to the moment of that edit. Attaching a YouTube video, rebuilding the site, or any other change that is not an edit of the text must not change `updated`, the article's `dateModified`, or that article's sitemap `lastmod`.
+
 ## RELIABILITY AND QUALITY (William, 11 Nov 2026) - read first; no more lost days, and the numbers must go up
 
 The task instructions live in the repo: **ops/tasks/article.md** (midday, evening, Saturday), **ops/tasks/monitor.md**

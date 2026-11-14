@@ -2,3 +2,5 @@ video/out/
 __pycache__/
 video/__pycache__/
 ops/pilot/out/
+.wrangler/
+*.pyc

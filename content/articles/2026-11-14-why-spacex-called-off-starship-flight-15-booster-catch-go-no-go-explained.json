@@ -23,6 +23,8 @@
   ],
   "images": [
     "gen/why-spacex-called-off-starship-flight-15-booster-catch-go-no-go-explained.jpg",
+    "gen/why-spacex-called-off-starship-flight-15-booster-catch-go-no-go-explained-x3-11141153.jpg",
+    "gen/why-spacex-called-off-starship-flight-15-booster-catch-go-no-go-explained-x2-11141151.jpg",
     "gen/spacex-flight-6-booster-catch-called-off-tower-damaged-at-liftoff-story-x2-11132027.jpg",
     "lib/starship-booster-catch.jpg",
     "gen/spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story-x2-11022028.jpg",
@@ -46,13 +48,17 @@
     "extra": [
       {
         "prompt": "A dark rocket launch control room with rows of consoles, a large wall screen showing a stainless steel rocket booster's flight path curving out over the sea and a big green GO and red NO-GO status panel, people seen only from behind as dark silhouettes, no readable text",
-        "describe": "a launch control room with a go/no-go status panel and the booster's flight path on the big screen"
+        "describe": "a launch control room with a go/no-go status panel and the booster's flight path on the big screen",
+        "file": "gen/why-spacex-called-off-starship-flight-15-booster-catch-go-no-go-explained-x2-11141151.jpg"
       },
       {
         "prompt": "The steel launch tower at Starbase, Texas at dusk with its two giant catch arms open and empty, floodlit, the launch mount beside it, a thin trail of a rocket's exhaust drifting far out over the calm Gulf water behind it",
-        "describe": "the Starbase tower's catch arms open and empty at dusk, the booster's exhaust trail far out over the sea"
+        "describe": "the Starbase tower's catch arms open and empty at dusk, the booster's exhaust trail far out over the sea",
+        "file": "gen/why-spacex-called-off-starship-flight-15-booster-catch-go-no-go-explained-x3-11141153.jpg"
       }
-    ]
+    ],
+    "done": true,
+    "model": "gemini-3.1-flash-image"
   },
   "label": {
     "style": "c",
@@ -803,5 +809,6 @@
         ]
       }
     ]
-  }
+  },
+  "image": "gen/why-spacex-called-off-starship-flight-15-booster-catch-go-no-go-explained.jpg"
 }

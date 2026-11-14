@@ -916,5 +916,44 @@
         "src": "lib/starship-pad.jpg"
       }
     ]
+  },
+  "gen/why-spacex-called-off-starship-flight-15-booster-catch-go-no-go-explained.jpg": {
+    "article": "why-spacex-called-off-starship-flight-15-booster-catch-go-no-go-explained",
+    "model": "gemini-3.1-flash-image",
+    "made": "2026-11-14",
+    "references": [
+      {
+        "src": "lib/starship-booster-catch.jpg"
+      },
+      {
+        "src": "lib/starship-pad.jpg"
+      }
+    ]
+  },
+  "gen/why-spacex-called-off-starship-flight-15-booster-catch-go-no-go-explained-x2-11141151.jpg": {
+    "article": "why-spacex-called-off-starship-flight-15-booster-catch-go-no-go-explained",
+    "model": "gemini-3.1-flash-image",
+    "made": "2026-11-14",
+    "references": [
+      {
+        "src": "lib/starship-booster-catch.jpg"
+      },
+      {
+        "src": "lib/starship-pad.jpg"
+      }
+    ]
+  },
+  "gen/why-spacex-called-off-starship-flight-15-booster-catch-go-no-go-explained-x3-11141153.jpg": {
+    "article": "why-spacex-called-off-starship-flight-15-booster-catch-go-no-go-explained",
+    "model": "gemini-3.1-flash-image",
+    "made": "2026-11-14",
+    "references": [
+      {
+        "src": "lib/starship-booster-catch.jpg"
+      },
+      {
+        "src": "lib/starship-pad.jpg"
+      }
+    ]
   }
 }

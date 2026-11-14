@@ -302,3 +302,6 @@ Articles with a "models" key automatically use real-life photos of that model. Y
 - gen/spacex-flight-6-booster-catch-called-off-tower-damaged-at-liftoff-story.jpg — the soot-streaked catch arms at the top of the Starbase tower after a launch, smoke drifting past
 - gen/spacex-flight-6-booster-catch-called-off-tower-damaged-at-liftoff-story-x2-11132027.jpg — a Super Heavy booster coming down on its engines over the open sea at sunset
 - gen/spacex-flight-6-booster-catch-called-off-tower-damaged-at-liftoff-story-x3-11132029.jpg — a mission control room with the tower on the big screen and red warnings
+- gen/why-spacex-called-off-starship-flight-15-booster-catch-go-no-go-explained.jpg — a Super Heavy booster coming down on its engines over the sea at dusk, far from the tower
+- gen/why-spacex-called-off-starship-flight-15-booster-catch-go-no-go-explained-x2-11141151.jpg — a launch control room with a go/no-go status panel and the booster's flight path on the big screen
+- gen/why-spacex-called-off-starship-flight-15-booster-catch-go-no-go-explained-x3-11141153.jpg — the Starbase tower's catch arms open and empty at dusk, the booster's exhaust trail far out over the sea

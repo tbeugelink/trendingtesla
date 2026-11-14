@@ -58,6 +58,8 @@ STATIC = ROOT / "static"
 OUT = ROOT / "public"
 SITE = "https://trendingtesla.com"
 NAME = "TrendingTesla"
+# Author shown on articles and in NewsArticle JSON-LD. An organization, never a named person.
+EDITORIAL_ORG = {"en": "TrendingTesla Editorial Team", "nl": "Redactie TrendingTesla"}
 TZ = ZoneInfo("Europe/Amsterdam")
 
 LANGS = {
@@ -71,7 +73,8 @@ LANGS = {
         "latest": "Latest news", "more": "More news", "top": "Top story",
         "models_h": "News and advice for your model", "guides_h": "Best picks for your Tesla",
         "guides_sub": "Researched per model and year, with pros and cons.",
-        "related": "Read next", "sources": "Sources", "about": "About", "privacy": "Privacy",
+        "related": "Read next", "sources": "Sources", "about": "About", "editorial": "Editorial policy",
+        "byline": "By the TrendingTesla editorial team", "privacy": "Privacy",
         "switch": "NL", "switch_full": "Nederlands", "i_specs": "Specifications", "i_watch": "Points to watch", "i_special": "What makes it special", "i_acc": "Accessories", "i_acc_soon": "Coming soon: accessories that fit this version, tested and explained.", "slogan": "Daily Tesla news &amp; trends", "search": "Search Tesla news", "none": "Nothing found", "home": "Home", "collapse": "Close menu", "like": "Like", "save": "Save", "saved_btn": "Saved", "saved": "Saved articles", "saved_empty": "You have not saved any articles yet. Tap Save under an article title to keep it here. Saved articles stay in this browser on this device.", "archive": "All news", "newer": "Newer", "older": "Older", "page": "Page", "d_topics": "Topics", "d_models": "Models", "d_more": "More", "menu": "Menu", "tip_h": "A 22 kW charger won't charge your Tesla any faster", "tip_p": "Most Tesla models charge at home at up to 11 kW AC.", "tip_btn": "Read why", "tips": [("HW4", "Buying a used Model 3? Check the hardware first", "The Highland has HW4, older cars HW3. It decides what FSD can do.", "How to check", "used-model-3-highland-vs-classic-hw3-hw4-buying-guide"), ("−20%", "Losing range in winter? It doesn't have to be", "Preconditioning and the right settings save you kilometers.", "9 winter tips", "tesla-winter-range-tips-cold-weather")],
         "empty": "No articles here yet. New stories are published several times a day.",
         "cat_intro": "All TrendingTesla articles about {}.",
@@ -101,7 +104,8 @@ LANGS = {
         "latest": "Laatste nieuws", "more": "Meer nieuws", "top": "Hoofdverhaal",
         "models_h": "Nieuws en advies voor jouw model", "guides_h": "De beste keuzes voor je Tesla",
         "guides_sub": "Uitgezocht per model en bouwjaar, met plus- en minpunten.",
-        "related": "Lees ook", "sources": "Bronnen", "imgnote": "Afbeeldingen zijn illustraties, deels gemaakt met AI.", "photocredit": "Foto's", "imgnote_other": "Overige afbeeldingen zijn illustraties, deels gemaakt met AI.", "about": "Over ons", "privacy": "Privacy",
+        "related": "Lees ook", "sources": "Bronnen", "imgnote": "Afbeeldingen zijn illustraties, deels gemaakt met AI.", "photocredit": "Foto's", "imgnote_other": "Overige afbeeldingen zijn illustraties, deels gemaakt met AI.", "about": "Over ons", "editorial": "Redactiebeleid",
+        "byline": "Door de redactie van TrendingTesla", "privacy": "Privacy",
         "switch": "EN", "switch_full": "English", "i_specs": "Specificaties", "i_watch": "Aandachtspunten", "i_special": "Bijzonderheden", "i_acc": "Accessoires", "i_acc_soon": "Binnenkort: accessoires die op deze uitvoering passen, getest en uitgelegd.", "slogan": "Iedere dag het laatste nieuws &amp; trends", "search": "Zoek in Tesla-nieuws", "none": "Niets gevonden", "home": "Home", "collapse": "Inklappen", "like": "Vind ik leuk", "save": "Bewaren", "saved_btn": "Bewaard", "saved": "Bewaarde artikelen", "saved_empty": "Je hebt nog geen artikelen bewaard. Tik op Bewaren onder de titel van een artikel om het hier terug te vinden. Bewaarde artikelen blijven in deze browser op dit apparaat.", "archive": "Alle nieuws", "newer": "Nieuwer", "older": "Ouder", "page": "Pagina", "d_topics": "Onderwerpen", "d_models": "Modellen", "d_more": "Meer", "menu": "Menu", "tip_h": "Een 22 kW-laadpaal laadt je Tesla niet sneller", "tip_p": "Veel Tesla-modellen laden thuis met maximaal 11 kW AC.", "tip_btn": "Lees waarom", "tips": [("HW4", "Tweedehands Model 3 kopen? Check eerst de hardware", "De Highland heeft HW4, oudere Model 3's HW3. Dat bepaalt wat FSD kan.", "Zo check je het", "used-model-3-highland-vs-classic-hw3-hw4-buying-guide"), ("−20%", "Minder bereik in de winter? Dat hoeft niet", "Met voorverwarmen en de juiste instellingen houd je meer kilometers over.", "9 wintertips", "tesla-winter-range-tips-cold-weather")],
         "empty": "Hier staan nog geen artikelen. Er verschijnen meerdere keren per dag nieuwe verhalen.",
         "cat_intro": "Alle artikelen van TrendingTesla over {}.",
@@ -195,7 +199,8 @@ PAGES = {
                "<p>Most images on this site are illustrations made for TrendingTesla. Where we use real photos, they are freely licensed (public domain or Creative Commons) and credited under the article. "
                "They show the subject of an article, not the exact event, place or vehicle.</p>"
                "<p>Articles are researched and written with the help of AI and published "
-               "under editorial supervision. Spotted a mistake? We correct it as soon as we "
+               "under editorial supervision. How we edit and correct articles is described in our "
+               '<a href="/editorial/">editorial policy</a>. Spotted a mistake? We correct it as soon as we '
                "know about it.</p>"
                "<p>Some links on this site may be affiliate links: if you buy through them we may "
                "earn a small commission, at no extra cost to you. This never affects our opinion.</p>"
@@ -212,7 +217,8 @@ PAGES = {
                "<p>De meeste afbeeldingen op deze site zijn illustraties die voor TrendingTesla zijn gemaakt. Echte foto's gebruiken we alleen met een vrije licentie (publiek domein of Creative Commons), met bronvermelding onder het artikel. "
                "Ze tonen het onderwerp van een artikel, niet de precieze gebeurtenis, plek of auto.</p>"
                "<p>Artikelen worden met hulp van AI onderzocht en geschreven en onder "
-               "redactioneel toezicht gepubliceerd. Een fout gezien? We verbeteren hem zodra "
+               "redactioneel toezicht gepubliceerd. Hoe we redigeren en corrigeren staat in ons "
+               '<a href="/nl/editorial/">redactiebeleid</a>. Een fout gezien? We verbeteren hem zodra '
                "we ervan weten.</p>"
                "<p>Sommige links op deze site kunnen affiliate-links zijn: koop je via zo'n link, "
                "dan krijgen wij mogelijk een kleine commissie. Jij betaalt niets extra en het "
@@ -220,6 +226,53 @@ PAGES = {
                "<p>TrendingTesla is een onafhankelijke site. We zijn niet verbonden aan, "
                "gesponsord door of goedgekeurd door Tesla, Inc. Niets op deze site is "
                "financieel advies.</p>"),
+    },
+    "editorial": {
+        "en": ("Editorial policy", "How TrendingTesla researches, reviews and corrects its articles.",
+               "<p>TrendingTesla publishes independent articles about Tesla, SpaceX and the companies "
+               "around them, in English and Dutch. This page says how those articles are made and who "
+               "stands behind them.</p>"
+               "<h2>Research and drafting</h2>"
+               "<p>Articles are researched and drafted with AI assistance. Before publication the draft "
+               "is checked against the sources the article cites. We do not invent quotes, numbers or events.</p>"
+               "<h2>Sources</h2>"
+               "<p>Every article cites the sources it used. They are listed at the bottom of the article, "
+               "each with a link, so you can read the underlying reporting yourself.</p>"
+               "<h2>Who is responsible</h2>"
+               "<p>A human editorial team reviews every article before publication and is responsible for "
+               "what appears on the site. The team checks the facts, the sources and the wording in both languages.</p>"
+               "<h2>Corrections</h2>"
+               "<p>If an article is wrong, incomplete or unclear, write to us through the "
+               '<a href="/contact/">contact form</a>. We correct mistakes as soon as we know about them. '
+               "When the text of an article changes, we set its updated date. That is the date search engines "
+               "read as the modification date. The original publication date stays as it was.</p>"
+               "<h2>Independence</h2>"
+               "<p>TrendingTesla is not affiliated with, sponsored by or endorsed by Tesla, Inc., SpaceX, "
+               "xAI or The Boring Company. Nothing on this site is financial, legal or investment advice.</p>"),
+        "nl": ("Redactiebeleid", "Hoe TrendingTesla artikelen onderzoekt, nakijkt en verbetert.",
+               "<p>TrendingTesla publiceert onafhankelijke artikelen over Tesla, SpaceX en de bedrijven "
+               "eromheen, in het Nederlands en het Engels. Op deze pagina staat hoe die artikelen worden "
+               "gemaakt en wie er verantwoordelijk voor is.</p>"
+               "<h2>Onderzoek en tekst</h2>"
+               "<p>Artikelen worden met hulp van AI onderzocht en opgesteld. Voor publicatie wordt de tekst "
+               "gecontroleerd aan de hand van de bronnen die in het artikel staan. We verzinnen geen citaten, "
+               "cijfers of gebeurtenissen.</p>"
+               "<h2>Bronnen</h2>"
+               "<p>Elk artikel noemt de bronnen die we gebruikten. Ze staan onderaan het artikel, elk met een "
+               "link, zodat je de onderliggende berichtgeving zelf kunt nalezen.</p>"
+               "<h2>Wie is verantwoordelijk</h2>"
+               "<p>Een menselijke redactie kijkt elk artikel na vóór publicatie en is verantwoordelijk voor "
+               "wat er op de site staat. De redactie controleert de feiten, de bronnen en de formulering in "
+               "beide talen.</p>"
+               "<h2>Correcties</h2>"
+               "<p>Klopt een artikel niet, is het onvolledig of onduidelijk, schrijf ons via het "
+               '<a href="/nl/contact/">contactformulier</a>. We verbeteren fouten zodra we ervan weten. '
+               "Als de tekst van een artikel verandert, zetten we de bijwerkdatum. Dat is de datum die "
+               "zoekmachines als wijzigingsdatum lezen. De oorspronkelijke publicatiedatum blijft staan.</p>"
+               "<h2>Onafhankelijkheid</h2>"
+               "<p>TrendingTesla is niet verbonden aan, gesponsord door of goedgekeurd door Tesla, Inc., "
+               "SpaceX, xAI of The Boring Company. Niets op deze site is financieel, juridisch of "
+               "beleggingsadvies.</p>"),
     },
     "privacy": {
         "en": ("Privacy policy", "How trendingtesla.com handles your data and what your rights are.",
@@ -365,6 +418,7 @@ h1,h2,h3{color:#ebebeb;font-weight:800}
 article .st{font-size:clamp(1.05rem,2vw,1.3rem);line-height:1.22;letter-spacing:-.015em;margin:0 0 6px}
 .st a{color:inherit;text-decoration:none}
 .smeta{margin:0 0 14px;font-size:.88rem}.smeta a.tag{color:var(--blue)}.smeta a.tag:hover{color:var(--blue2)}
+.byline{margin:2px 0 12px;font-size:.82rem;line-height:1.3;color:var(--dim)}.byline a{color:inherit;text-decoration:none}.byline a:hover{text-decoration:underline}
 .sideh{font-size:.7rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--blue);margin:11px 0 -2px;padding-top:9px;border-top:1px solid var(--border2)}
 .hi,.th,.im{position:relative}.hi{margin:0 0 8px}.hi .hero-img{margin:0}
 .dur{display:inline-flex;align-items:center;gap:4px;position:absolute;right:8px;bottom:8px;background:rgba(0,0,0,.8);color:#fff;font-size:.74rem;font-weight:700;line-height:1;padding:4px 6px;border-radius:10px;cursor:help}.agotip{position:fixed;z-index:60;pointer-events:none;background:rgba(0,0,0,.88);color:#fff;font-size:.74rem;font-weight:700;line-height:1;padding:5px 7px;border-radius:10px;white-space:nowrap}time.ago{cursor:help}.im,.th,.hi{container-type:inline-size}.kk{position:absolute;left:2.6cqw;bottom:2.6cqw;z-index:2;pointer-events:none;font-family:Inter,Manrope,system-ui,sans-serif;font-weight:900;letter-spacing:-.01em;text-transform:uppercase;line-height:1}.kk b{display:table;font-weight:900;white-space:nowrap}.kk b+b{margin-top:.1em}.kk i{font-style:normal;display:inline-block}.kk .yo{color:#ffd400;text-shadow:-.16cqw -.16cqw 0 #666666,.16cqw -.16cqw 0 #666666,-.16cqw .16cqw 0 #666666,.16cqw .16cqw 0 #666666,0 .2cqw 0 #666666,0 -.2cqw 0 #666666,.2cqw 0 0 #666666,-.2cqw 0 0 #666666,0 .5cqw 1.2cqw rgba(0,0,0,.45)}.kk .bk i{background:#d61a1a;color:#fff;padding:.13em .24em .12em;box-shadow:0 .4cqw 1.2cqw rgba(0,0,0,.35)}.kk.p-bw .bk i,.kk.p-by .bk i{background:#1d5cff}.kk.p-gy .bk i{background:#0c8a40}.kk.p-yk .bk i{background:#ffd400;color:#111}.kk.p-gy .yo{color:#ffd400;text-shadow:0.16cqw 0.16cqw 0 #666666,-0.16cqw 0.16cqw 0 #666666,0.16cqw -0.16cqw 0 #666666,-0.16cqw -0.16cqw 0 #666666,0cqw 0.2cqw 0 #666666,0cqw -0.2cqw 0 #666666,0.2cqw 0cqw 0 #666666,-0.2cqw 0cqw 0 #666666,0 .5cqw 1.4cqw rgba(0,0,0,.5)}.kk.p-wb .bk i{background:#fff;color:#1d5cff}.kk.p-bw .yo{color:#fff;text-shadow:0.16cqw 0.16cqw 0 #0b2f8f,-0.16cqw 0.16cqw 0 #0b2f8f,0.16cqw -0.16cqw 0 #0b2f8f,-0.16cqw -0.16cqw 0 #0b2f8f,0 .2cqw 0 #0b2f8f,0 -.2cqw 0 #0b2f8f,.2cqw 0 0 #0b2f8f,-.2cqw 0 0 #0b2f8f,0 .5cqw 1.4cqw rgba(0,0,0,.6)}.kk.p-wb .yo{color:#3d7bff;text-shadow:0.16cqw 0.16cqw 0 #fff,-0.16cqw 0.16cqw 0 #fff,0.16cqw -0.16cqw 0 #fff,-0.16cqw -0.16cqw 0 #fff,0 .2cqw 0 #fff,0 -.2cqw 0 #fff,.2cqw 0 0 #fff,-.2cqw 0 0 #fff,0 .5cqw 1.4cqw rgba(0,0,0,.5)}.kk.p-by .yo{color:#ffd400;text-shadow:0.16cqw 0.16cqw 0 #666666,-0.16cqw 0.16cqw 0 #666666,0.16cqw -0.16cqw 0 #666666,-0.16cqw -0.16cqw 0 #666666,0 .2cqw 0 #666666,0 -.2cqw 0 #666666,.2cqw 0 0 #666666,-.2cqw 0 0 #666666,0 .5cqw 1.4cqw rgba(0,0,0,.5)}.kk .nb{font-size:1.32em}.kk .bk .nb{font-size:1.22em}.kk .l1{font-size:6.4cqw}.kk .l2{font-size:8cqw}.th .dur{right:6px;bottom:6px;font-size:.68rem;padding:3px 5px}.th .dur svg{width:12px;height:12px}
@@ -880,7 +934,7 @@ def page(lang, path, title, description, body, og_type="website", extra_head="",
 <div class="fbrand"><a class="logo" href="{url(lang)}">Trending<span>Tesla</span></a><p>{L['tagline']} {L['disclaimer']}</p></div>
 <div><h4>{L['d_topics']}</h4><div class="flist two">{fcats}</div></div>
 <div><h4>{L['d_models']}</h4><div class="flist">{fmods}</div></div>
-<div><h4>{L['d_more']}</h4><div class="flist"><a href="{url(lang, 'archive/')}">{L['archive']}</a><a href="{url(lang, 'about/')}">{L['about']}</a><a href="{url(lang, 'privacy/')}">{L['privacy']}</a><a href="{url(lang, 'contact/')}">Contact</a><a href="{url(lang, 'terms/')}">{'Terms' if lang == 'en' else 'Voorwaarden'}</a><a href="{url(lang, 'shorts/')}">Shorts</a><a href="https://www.youtube.com/@TrendingTesla" rel="noopener" target="_blank">YouTube</a><a href="{url(lang, 'feed.xml')}">RSS</a><a href="{url(alt, path)}">{L['switch_full']}</a></div></div>
+<div><h4>{L['d_more']}</h4><div class="flist"><a href="{url(lang, 'archive/')}">{L['archive']}</a><a href="{url(lang, 'about/')}">{L['about']}</a><a href="{url(lang, 'editorial/')}">{L['editorial']}</a><a href="{url(lang, 'privacy/')}">{L['privacy']}</a><a href="{url(lang, 'contact/')}">Contact</a><a href="{url(lang, 'terms/')}">{'Terms' if lang == 'en' else 'Voorwaarden'}</a><a href="{url(lang, 'shorts/')}">Shorts</a><a href="https://www.youtube.com/@TrendingTesla" rel="noopener" target="_blank">YouTube</a><a href="{url(lang, 'feed.xml')}">RSS</a><a href="{url(alt, path)}">{L['switch_full']}</a></div></div>
 </div><p class="fcopy">&copy; {datetime.now().year} {NAME}</p></div></footer>
 <script>{JS}</script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{{"token": "5c536a7c183844ccb97e1ac151b5d018"}}'></script>
@@ -970,10 +1024,11 @@ def story(a, lang, tag="h1"):
         chips = '<div class="chips">' + "".join(
             f'<a href="{url(lang, "model/" + k + "/")}">Tesla {MODELS[k]["name"]}</a>' for k in a["models"]) + "</div>"
     title = esc(t["title"]) if tag == "h1" else f'<a href="{url(lang, a["slug"] + "/")}">{esc(t["title"])}</a>'
+    byline = (f'<p class="byline"><a href="{url(lang, "editorial/")}">{L["byline"]}</a></p>' if tag == "h1" else "")
     toc, body = enrich(a, lang)
     return (f'<article>'
             f'<div class="hi"{vhero(a, lang)}><img class="hero-img" src="{site_img(a)}" alt="{esc(t["title"])}" width="1200" height="630" fetchpriority="high">{dur(a, lang)}{ovl(a, lang)}</div>{vscript(a, lang)}'
-            f'<{tag} class="st">{title}</{tag}>'
+            f'<{tag} class="st">{title}</{tag}>{byline}'
             f'<div class="srow"><p class="meta smeta"><a class="tag" href="{url(lang, "category/" + a["category"] + "/")}">{c.get("tag", c[lang])}</a> · {when(a, lang)}</p>'
             f'<div class="acts"><button class="act like" type="button" data-like="{a["slug"]}" aria-pressed="false" title="{L["like"]}">{HEART_SVG}<span>0</span></button>'
             f'<button class="act save" type="button" data-save="{a["slug"]}" aria-pressed="false" title="{L["save"]}" aria-label="{L["save"]}">{BOOK_SVG}</button></div></div>'
@@ -1580,7 +1635,7 @@ def build():
                 "mainEntityOfPage": SITE + url(lang, a["slug"] + "/"),
                 "publisher": {"@type": "Organization", "name": NAME, "url": SITE,
                               "logo": {"@type": "ImageObject", "url": SITE + "/favicon-512.png", "width": 512, "height": 512}},
-                "author": {"@type": "Organization", "name": NAME, "url": SITE},
+                "author": {"@type": "Organization", "name": EDITORIAL_ORG[lang], "url": SITE + url(lang, "editorial/")},
             }
             v = VIDEOS.get((a["slug"], lang))
             if v:  # video rich result in Google (video thumbnail + length in search)

@@ -707,6 +707,19 @@ article.narrow > h1{margin-left:14px}article.narrow .cform{margin-left:14px}
 .hubhead{padding:18px 0 6px}
 .hubhead h1{font-size:clamp(1.8rem,4vw,2.7rem);letter-spacing:-.03em;line-height:1.08;margin:0 0 10px}
 .hubhead .lead{font-size:1.08rem;line-height:1.55;color:var(--muted);max-width:none;margin:0 0 16px 1px}
+.mgrid{display:grid;grid-template-columns:1fr;gap:22px 16px;margin:0 0 28px}
+@media (min-width:700px){.mgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (min-width:1100px){.mgrid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.mcard{display:flex;flex-direction:column;align-items:flex-start;gap:10px;min-width:0;text-decoration:none;color:inherit}
+.mcard .mim{display:block;width:100%;border-radius:12px;overflow:hidden;border:1px solid var(--edge);background:#000;aspect-ratio:16/9}
+.mcard .mim img{width:100%;height:100%;object-fit:cover}
+.mcard .mname{font-weight:800;font-size:1.08rem;line-height:1.2}
+.mcard .btn{pointer-events:none}
+.mhero{margin:0 0 16px;border-radius:12px;overflow:hidden;border:1px solid var(--edge);background:#000}
+.mhero img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
+.mintro{font-size:1.08rem;line-height:1.55;color:var(--muted);margin:0 0 18px;max-width:none}
+.mfacts{margin:0 0 4px}
+.mfacts h2{font-size:1.15rem;margin:0 0 8px}
 .starthere{margin:6px 0 26px;padding:16px 16px 18px;border:1px solid rgba(0,212,255,.35);border-radius:12px;background:rgba(0,212,255,.06)}
 .starthere>h2{margin:0 0 4px;font-size:1.25rem}
 .starthere>.sub{margin:0 0 12px}
@@ -2276,7 +2289,36 @@ def version_bar(key, lang):
         for k, lbl in btns) + "</div>"
 
 
+MODEL_ORDER = ["model-s", "model-3", "model-x", "model-y", "cybertruck", "roadster", "semi", "cybercab"]
+
+
+def models_overview(lang):
+    """Grid of the models the site covers. Not an article feed."""
+    L = LANGS[lang]
+    nav, ld = crumbs(lang, [(L["nav_models"], "category/models/")])
+    more = "Read more" if lang == "en" else "Lees meer"
+    intro = ({
+        "en": "Every Tesla the site covers. Open a model for the facts and the articles about it.",
+        "nl": "Elke Tesla die de site volgt. Open een model voor de feiten en de artikelen erover.",
+    })[lang]
+    cards = []
+    for i, key in enumerate(MODEL_ORDER):
+        m = MODELS[key]
+        ph = model_photo(key) or ""
+        lazy = "" if i == 0 else ' loading="lazy"'
+        pri = ' fetchpriority="high"' if i == 0 else ""
+        img = (f'<img src="{esc(ph)}" alt="" width="800" height="450"{pri}{lazy} decoding="async">' if ph else "")
+        cards.append(
+            f'<a class="mcard" href="{url(lang, "model/" + key + "/")}">'
+            f'<span class="mim">{img}</span><span class="mname">{esc(m["name"])}</span>'
+            f'<span class="btn">{more}</span></a>')
+    body = (f'{nav}<header class="hubhead"><h1>{esc(L["nav_models"])}</h1>'
+            f'<p class="lead">{esc(intro)}</p></header><div class="mgrid">{"".join(cards)}</div>')
+    return body, ld, intro
+
+
 def model_hub(key, items, lang):
+    """Model page: photo, sourced facts and the articles. Not a news lead."""
     m = MODELS[key]
     L = LANGS[lang]
     inf = INFO.get(key)
@@ -2287,21 +2329,21 @@ def model_hub(key, items, lang):
         parts.append((MODELS[parent]["name"], f"model/{parent}/"))
     parts.append((m["name"], f"model/{key}/"))
     nav, ld = crumbs(lang, parts)
+    ph = model_photo(key)
+    hero = (f'<figure class="mhero">{resp_img(ph, "Tesla " + m["name"], "(max-width: 900px) 100vw, 820px", high=True, lazy=False, width=1600, height=900)}</figure>'
+            if ph else "")
+    specs = ""
+    rows = (inf or {}).get(lang, {}).get("specs") or []
+    if rows:
+        label = "Key facts" if lang == "en" else "Kernfeiten"
+        body_rows = "".join(f"<tr><th>{esc(k)}</th><td>{esc(v)}</td></tr>" for k, v in rows)
+        specs = f'<section class="mfacts"><h2>{label}</h2><table class="specs">{body_rows}</table></section>'
     ordered = sorted(items, key=published, reverse=True)
-    feature = home_lead(ordered[0], lang, title_tag="h2") if ordered else ""
-    shown = ordered[0] if ordered else None
-    guides = [a for a in items if a["category"] == "guides" and a is not shown]
-    rest = [a for a in items if a["category"] != "guides" and a is not shown]
-    if guides:
-        blocks = (f'<h2 class="rubh">{esc(L["model_guides"].format(m["name"]))}</h2>{hub_cards(guides, lang)}'
-                  f'<h2 class="rubh">{esc(L["model_news"].format(m["name"]))}</h2>{hub_cards(rest, lang)}' if rest else
-                  f'<h2 class="rubh">{esc(L["model_guides"].format(m["name"]))}</h2>{hub_cards(guides, lang)}')
-    elif rest:
-        blocks = f'<h2 class="rubh">{esc(L["articles"])}</h2>{hub_cards(rest, lang)}'
-    else:
-        blocks = ""
-    body = (f'{nav}<header class="hubhead"><h1>Tesla {esc(m["name"])}</h1><p class="lead">{esc(intro)}</p></header>'
-            f'{feature}{version_bar(key, lang)}{modelinfo(key, lang, heading=False)}{blocks}')
+    heading = ("Articles about " if lang == "en" else "Artikelen over ") + m["name"]
+    listing = (f'<h2 class="rubh">{esc(heading)}</h2>'
+               + (hub_cards(ordered, lang) if ordered else f'<p class="empty">{esc(L["empty"])}</p>'))
+    body = (f'{nav}<header class="hubhead"><h1>Tesla {esc(m["name"])}</h1></header>'
+            f'{hero}<p class="mintro">{esc(intro)}</p>{specs}{version_bar(key, lang)}{listing}')
     desc = re.sub(r"\s+", " ", intro).strip()
     if len(desc) > 180:
         desc = desc[:179].rsplit(" ", 1)[0] + "…"
@@ -2870,6 +2912,25 @@ def build():
 
         # ---------- Category pages ----------
         for key, c in CATEGORIES.items():
+            if key == "models":
+                content, crumb_ld, intro = models_overview(lang)
+                listed = [{
+                    "@type": "ListItem", "position": i + 1,
+                    "name": "Tesla " + MODELS[k]["name"],
+                    "url": SITE + url(lang, f"model/{k}/"),
+                } for i, k in enumerate(MODEL_ORDER)]
+                overview_ld = {
+                    "@context": "https://schema.org", "@type": "CollectionPage",
+                    "name": L["nav_models"], "description": intro,
+                    "url": SITE + url(lang, "category/models/"), "inLanguage": lang,
+                    "publisher": {"@type": "Organization", "name": NAME, "url": SITE},
+                    "mainEntity": {"@type": "ItemList", "itemListElement": listed},
+                }
+                write(url(lang, "category/models/"),
+                      page(lang, "category/models/", L["nav_models"], intro,
+                           shell(content, page_side(arts, lang, "hub", "models")),
+                           extra_head=ld_script(crumb_ld) + ld_script(overview_ld), active="models"))
+                continue
             items = arts if key == "news" else [a for a in arts if a["category"] == key or key in a.get("also", []) or (key == "ecosystem" and a["category"] in ECO)]
             if key == "news":
                 items = news
@@ -2882,15 +2943,31 @@ def build():
 
         # ---------- Model pages ----------
         for key, m in MODELS.items():
-            family = {key} | ({m["parent"]} if m.get("parent") else set()) \
-                | {k for k, v in MODELS.items() if v.get("parent") == key}
-            items = [a for a in arts if family & set(a.get("models", []))]
+            if m.get("parent"):
+                items = [a for a in arts if key in a.get("models", [])]
+            else:
+                family = {key} | {k for k, v in MODELS.items() if v.get("parent") == key}
+                items = [a for a in arts if family & set(a.get("models", []))]
             ph = model_photo(key)
             content, crumb_ld, desc = model_hub(key, items, lang)
+            facts = (INFO.get(key) or {}).get(lang, {}).get("specs") or []
+            vehicle_ld = {
+                "@context": "https://schema.org", "@type": "Vehicle",
+                "name": f"Tesla {m['name']}", "description": desc,
+                "url": SITE + url(lang, f"model/{key}/"), "inLanguage": lang,
+                "brand": {"@type": "Brand", "name": "Tesla"},
+                "manufacturer": {"@type": "Organization", "name": "Tesla, Inc."},
+                "publisher": {"@type": "Organization", "name": NAME, "url": SITE},
+            }
+            if ph:
+                vehicle_ld["image"] = SITE + ph
+            if facts:
+                vehicle_ld["additionalProperty"] = [
+                    {"@type": "PropertyValue", "name": k, "value": v} for k, v in facts]
             write(url(lang, f"model/{key}/"),
                   page(lang, f"model/{key}/", f"Tesla {m['name']}", desc,
                        shell(content, page_side(arts, lang, "model", key, skip=items)),
-                       extra_head=ld_script(crumb_ld), image=ph, active="models"))
+                       extra_head=ld_script(crumb_ld) + ld_script(vehicle_ld), image=ph, active="models"))
 
         # ---------- Articles ----------
         for a in arts:

@@ -2430,8 +2430,9 @@ def home_videos(arts, lang, n=8):
         seen.add(slug)
         rows.append((by[slug], 0, True))
     rows.sort(key=lambda row: published(row[0]), reverse=True)
+    rows = rows[:n]
     cards = []
-    for a, seconds, is_short in rows[:n]:
+    for a, seconds, is_short in rows:
         t = a[lang]
         href = url(lang, a["slug"] + "/")
         if is_short:
@@ -2446,7 +2447,7 @@ def home_videos(arts, lang, n=8):
             f'<span class="vpl" aria-hidden="true"></span>'
             f'<span class="dur dvo">{esc(badge)}</span></span>'
             f'<strong>{esc(t["title"])}</strong></a>')
-    return "".join(cards)
+    return "".join(cards), [a for a, _, _ in rows]
 
 
 def home_topics(arts, shown, lang):
@@ -2476,41 +2477,61 @@ def _side_links(items):
     return "".join(f'<li><a href="{href}">{esc(name)}</a></li>' for name, href in items)
 
 
-def page_side(arts, lang, kind="home", current=None):
-    """Right column. A section is omitted when it would be empty."""
+def _side_ol(lang, items):
+    return "<ol>" + _side_links([(x[lang]["title"], url(lang, x["slug"] + "/")) for x in items]) + "</ol>"
+
+
+def _side_ul(lang, items):
+    return "<ul>" + _side_links([(x[lang]["title"], url(lang, x["slug"] + "/")) for x in items]) + "</ul>"
+
+
+def page_side(arts, lang, kind="home", current=None, skip=None):
+    """Right column. Sections with nothing to show are left out, and no article is listed twice."""
     L = LANGS[lang]
     C = pv_copy(lang)
-    guides = sorted((x for x in arts if x["category"] == "guides"), key=lambda x: words(x, "en"), reverse=True)
-    parts = []
+    # skip: articles already visible in the main column.
+    main_ids = {id(x) for x in (skip or [])}
     if kind == "article" and current is not None:
-        items = related(current, arts, 5)
-        if items:
-            parts.append(_side_section(C["related"], "<ol>" + _side_links(
-                [(x[lang]["title"], url(lang, x["slug"] + "/")) for x in items]) + "</ol>"))
-    # The homepage leads with Guides so its red rule lines up with the lead photo.
-    if kind == "home" and guides:
-        thumbs = "".join(
-            f'<a class="pv-guide" href="{url(lang, x["slug"] + "/")}">'
-            f'{resp_img(site_img(x), "", "72px", width=144, height=81)}<span>{esc(x[lang]["title"])}</span></a>'
-            for x in guides[:3])
-        parts.append(_side_section(C["guides"], thumbs))
-    if kind != "guides" and guides:
-        parts.append(_side_section(C["start"], "<ol>" + _side_links(
-            [(x[lang]["title"], url(lang, x["slug"] + "/")) for x in guides[:6]]) + "</ol>"))
-    if kind in ("static", "videos", "model", "saved", "hub", "guides"):
-        if kind == "hub" and current == "news":
-            latest = []
-        elif kind == "hub":
-            latest = [x for x in arts if x["category"] != current][:5]
-        elif kind == "model":
-            latest = [x for x in arts if current not in (x.get("models") or [])][:5]
-        elif kind == "guides":
-            latest = [x for x in arts if x["category"] != "guides"][:5]
-        else:
-            latest = arts[:5]
+        main_ids.add(id(current))
+    lead_id = id(arts[0]) if arts else None
+    start = []
+    if kind != "guides":
+        guides = sorted(
+            (x for x in arts if x["category"] == "guides" and id(x) not in main_ids),
+            key=lambda x: words(x, "en"), reverse=True)
+        start = guides[:6]
+    start_ids = {id(x) for x in start}
+    # The news list is not the guide list, not the homepage lead, and not the main column.
+    show_latest = kind in ("home", "static", "videos", "model", "saved", "hub", "guides")
+    if kind == "hub" and current == "news":
+        show_latest = False
+    latest = []
+    if show_latest:
+        ban = set(main_ids) | start_ids
+        if lead_id is not None:
+            ban.add(lead_id)
+        for x in arts:
+            if x["category"] == "guides" or id(x) in ban:
+                continue
+            latest.append(x)
+            if len(latest) == 5:
+                break
+    related_items = []
+    if kind == "article" and current is not None:
+        ban = main_ids | start_ids
+        related_items = [x for x in related(current, arts, 12) if id(x) not in ban][:5]
+    parts = []
+    # Homepage: Latest is the first block, so its red rule lines up with the lead photo.
+    if kind == "article":
+        if related_items:
+            parts.append(_side_section(C["related"], _side_ol(lang, related_items)))
+        if start:
+            parts.append(_side_section(C["start"], _side_ol(lang, start)))
+    else:
         if latest:
-            parts.append(_side_section(L["latest"], "<ul>" + _side_links(
-                [(x[lang]["title"], url(lang, x["slug"] + "/")) for x in latest]) + "</ul>"))
+            parts.append(_side_section(L["latest"], _side_ul(lang, latest)))
+        if start:
+            parts.append(_side_section(C["start"], _side_ol(lang, start)))
     hubs = [
         (L["nav_models"], "category/models/"),
         (L["nav_energy"], "category/energy/"),
@@ -2549,10 +2570,11 @@ def homepage(arts, lang):
     if not arts:
         return shell(f'<h1>{esc(NAME)}</h1><p class="empty">{L["empty"]}</p>', page_side(arts, lang, "home"))
     lead = arts[0]
-    videos = home_videos(arts, lang, 8)
+    videos, strip_arts = home_videos(arts, lang, 8)
     strip = f'<div class="vstrip">{videos}</div>' if videos else ""
-    main = home_lead(lead, lang) + strip + pv_feed([x for x in arts if x is not lead][:14], lang, thumbs=2)
-    return shell(main, page_side(arts, lang, "home"))
+    feed = [x for x in arts if x is not lead][:14]
+    main = home_lead(lead, lang) + strip + pv_feed(feed, lang, thumbs=2)
+    return shell(main, page_side(arts, lang, "home", skip=[lead, *strip_arts, *feed]))
 
 
 def pv_copy(lang):
@@ -2676,7 +2698,7 @@ def pv_home(variant, arts, lang):
     if variant == "a":
         main += pv_lead(lead, lang, sample) + pv_feed([x for x in arts if x is not lead][:24], lang, thumbs=4)
     elif variant == "b":
-        videos = home_videos(arts, lang, 8)
+        videos, _strip_arts = home_videos(arts, lang, 8)
         strip = f'<div class="vstrip">{videos}</div>' if videos else ""
         main += home_lead(lead, lang) + strip + pv_feed([x for x in arts if x is not lead][:14], lang, thumbs=2)
     else:
@@ -2831,7 +2853,7 @@ def build():
             kind = "guides" if key == "guides" else "hub"
             write(url(lang, f"category/{key}/"),
                   page(lang, f"category/{key}/", c[lang], intro,
-                       shell(content, page_side(arts, lang, kind, key)),
+                       shell(content, page_side(arts, lang, kind, key, skip=items)),
                        extra_head=ld_script(crumb_ld), active=key))
 
         # ---------- Model pages ----------
@@ -2843,7 +2865,7 @@ def build():
             content, crumb_ld, desc = model_hub(key, items, lang)
             write(url(lang, f"model/{key}/"),
                   page(lang, f"model/{key}/", f"Tesla {m['name']}", desc,
-                       shell(content, page_side(arts, lang, "model", key)),
+                       shell(content, page_side(arts, lang, "model", key, skip=items)),
                        extra_head=ld_script(crumb_ld), image=ph, active="models"))
 
         # ---------- Articles ----------
@@ -2905,7 +2927,8 @@ def build():
                                for a in (rest_arch[pi * PER_PAGE:pi * PER_PAGE + XTRA] if nxt else [])))
                     + f'</div>{pager}</section>')
             write(url(lang, path), page(lang, path, title, L["tagline"],
-                                         shell(body, page_side(arts, lang, "archive")), active="news"))
+                                         shell(body, page_side(arts, lang, "archive", skip=list(chunk) + (
+                                             rest_arch[pi * PER_PAGE:pi * PER_PAGE + XTRA] if nxt else []))), active="news"))
         ARCH_PAGES[0] = pages
 
         # ---------- Saved articles (filled in the browser from localStorage) ----------
@@ -2920,8 +2943,11 @@ def build():
         by_slug = {a["slug"]: a for a in arts}
         en = lang == "en"
         cards = ""
+        shown = []
         for sh in shorts:
             a = by_slug.get(sh.get("slug"))
+            if a:
+                shown.append(a)
             t = a[lang]["title"] if a else sh["title"]
             dt = sh["published"]
             cap = (f'<a class="sht" href="{url(lang, a["slug"] + "/")}">{esc(t)}</a>' if a else f'<span class="sht">{esc(t)}</span>')
@@ -2944,7 +2970,7 @@ def build():
                 "document.body.appendChild(m);document.documentElement.style.overflow='hidden';m.querySelector('.shx').focus()});"
                 "document.addEventListener('keydown',function(e){if(e.key==='Escape')close()})})()</script>")
         write(url(lang, "shorts/"), page(lang, "shorts/", "Shorts", intro,
-                                          shell(body, page_side(arts, lang, "videos")), active="videos"))
+                                          shell(body, page_side(arts, lang, "videos", skip=shown)), active="videos"))
 
         # ---------- Static pages ----------
         for key, p in PAGES.items():

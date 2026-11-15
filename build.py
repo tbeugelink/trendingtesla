@@ -697,7 +697,7 @@ article.narrow > h1{margin-left:14px}article.narrow .cform{margin-left:14px}
 .pdrop:last-child .pmenu{left:auto;right:0}
 .pmenu a{padding:8px 12px;border-radius:8px;color:#ebebeb;text-decoration:none;font-size:.86rem;font-weight:700;white-space:nowrap}
 .pmenu a:hover{background:#272727}
-.crumbs{margin:14px 0 4px;font-size:.82rem;color:var(--dim)}
+.crumbs{margin:-2px 0 4px;font-size:.82rem;color:var(--dim)}
 .crumbs ol{display:flex;flex-wrap:wrap;gap:6px 0;list-style:none;padding:0;margin:0}
 .crumbs li{display:flex;align-items:center;gap:6px;min-width:0}
 .crumbs li:not(:last-child)::after{content:"/";color:var(--dim);margin-left:6px}
@@ -706,7 +706,7 @@ article.narrow > h1{margin-left:14px}article.narrow .cform{margin-left:14px}
 .crumbs [aria-current]{color:var(--fg)}
 .hubhead{padding:18px 0 6px}
 .hubhead h1{font-size:clamp(1.8rem,4vw,2.7rem);letter-spacing:-.03em;line-height:1.08;margin:0 0 10px}
-.hubhead .lead{font-size:1.08rem;line-height:1.55;color:var(--muted);max-width:46rem;margin:0 0 16px}
+.hubhead .lead{font-size:1.08rem;line-height:1.55;color:var(--muted);max-width:46rem;margin:0 0 16px 1px}
 .starthere{margin:6px 0 26px;padding:16px 16px 18px;border:1px solid rgba(0,212,255,.35);border-radius:12px;background:rgba(0,212,255,.06)}
 .starthere>h2{margin:0 0 4px;font-size:1.25rem}
 .starthere>.sub{margin:0 0 12px}
@@ -726,8 +726,8 @@ article.money .prose h2{scroll-margin-top:130px}
 .leadstory .lead{padding:0;max-width:65ch}
 .leadstory .leadim{display:block;border-radius:12px;overflow:hidden;border:1px solid var(--edge);background:#000}
 .leadstory img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
-.leadstory .ltitle{font-size:clamp(1.35rem,2vw,1.7rem);line-height:1.2;letter-spacing:-.02em;margin:8px 0 12px;font-weight:800}
-.leadstory .btn{margin-bottom:22px}
+.leadstory .ltitle{font-size:clamp(1.35rem,2vw,1.7rem);line-height:1.2;letter-spacing:-.02em;margin:8px 0 12px 1px;font-weight:800}
+.leadstory .btn{margin-bottom:22px;padding-left:0}
 .leadstory .ltitle a{color:inherit;text-decoration:none}
 .leadstory .ltitle a:hover{text-decoration:underline;text-underline-offset:3px}
 .leadstory .lead{font-size:1.08rem;line-height:1.55;color:var(--muted);margin:0 0 18px}
@@ -859,6 +859,8 @@ header.hb .pnav>.is-parked{display:none}
 .pv-side ol li::before{content:counter(pv);color:var(--red);font-weight:800}
 .pv-side ul{list-style:none;margin:0;padding:0}
 .pv-side ul li{padding:7px 0;border-bottom:1px solid #242424;font-size:.88rem;line-height:1.3;font-weight:700}
+.pv-side ul.latest li{display:grid;grid-template-columns:1.3rem minmax(0,1fr);gap:6px;align-items:start}
+.pv-side ul.latest li::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--red);justify-self:start;align-self:start;margin-top:calc(0.65em - 2.5px);margin-left:1px}
 .pv-side .nform{max-width:none;margin:0 0 18px;padding:0;border:0;background:transparent}
 .pv-side .pv-guide{display:grid;grid-template-columns:72px minmax(0,1fr);gap:8px;align-items:center;padding:7px 0;border-bottom:1px solid #242424}
 .pv-side .pv-guide img{width:72px;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:6px}
@@ -876,8 +878,9 @@ header.hb .pnav>.is-parked{display:none}
 /* One centered frame for every page: reading column plus a right sidebar. */
 .sheet{display:grid;grid-template-columns:minmax(0,1fr) 292px;gap:26px;align-items:start}
 .sheet-main{min-width:0}
-.sheet .leadstory{margin-top:0;align-items:start}
-.sheet:has(.leadstory)>.pv-side{margin-top:2px}
+.sheet .leadstory{margin-top:1px;align-items:start}
+.pv-side{margin-top:1px}
+.sheet:has(.leadstory)>.pv-side{margin-top:3px}
 .sheet-main article.narrow,.sheet-main>.narrow{max-width:none;margin:0}
 .sheet-main article.narrow>h1,.sheet-main article.narrow .cform,.sheet-main article.narrow .lead,.sheet-main article.narrow .prose{margin-left:0;margin-right:0}
 .sheet-main .prose{max-width:68ch}
@@ -2492,8 +2495,9 @@ def _side_ol(lang, items):
     return "<ol>" + _side_links([(x[lang]["title"], url(lang, x["slug"] + "/")) for x in items]) + "</ol>"
 
 
-def _side_ul(lang, items):
-    return "<ul>" + _side_links([(x[lang]["title"], url(lang, x["slug"] + "/")) for x in items]) + "</ul>"
+def _side_ul(lang, items, cls=""):
+    klass = f' class="{cls}"' if cls else ""
+    return f"<ul{klass}>" + _side_links([(x[lang]["title"], url(lang, x["slug"] + "/")) for x in items]) + "</ul>"
 
 
 def page_side(arts, lang, kind="home", current=None, skip=None):
@@ -2540,7 +2544,7 @@ def page_side(arts, lang, kind="home", current=None, skip=None):
             parts.append(_side_section(C["start"], _side_ol(lang, start)))
     else:
         if latest:
-            parts.append(_side_section(L["latest"], _side_ul(lang, latest)))
+            parts.append(_side_section(L["latest"], _side_ul(lang, latest, "latest")))
         if start:
             parts.append(_side_section(C["start"], _side_ol(lang, start)))
     hubs = [

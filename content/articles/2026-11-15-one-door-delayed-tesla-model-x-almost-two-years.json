@@ -1,0 +1,263 @@
+{
+  "slug": "one-door-delayed-tesla-model-x-almost-two-years",
+  "date": "2026-11-15",
+  "time": "20:06",
+  "category": "models",
+  "models": [
+    "model-x",
+    "model-x-classic"
+  ],
+  "sources": [
+    {
+      "title": "Fortune: Tesla Model X: Not a model launch",
+      "url": "https://fortune.com/2015/03/19/tesla-model-x/"
+    },
+    {
+      "title": "Wikipedia: Tesla Model X",
+      "url": "https://en.wikipedia.org/wiki/Tesla_Model_X"
+    },
+    {
+      "title": "Business Insider: Elon Musk Just Revealed the Biggest Problem With the Model X",
+      "url": "https://www.businessinsider.com/elon-musk-model-x-2016-2"
+    },
+    {
+      "title": "Reuters: Tesla delivers Model X electric SUV to take on luxury carmakers",
+      "url": "https://www.reuters.com/article/lifestyle/tesla-delivers-model-x-electric-suv-to-take-on-luxury-carmakers-idUSKCN0RU09I/"
+    },
+    {
+      "title": "Bloomberg: Elon Musk delivers Tesla's first Model X SUVs in California",
+      "url": "https://www.bloomberg.com/news/articles/2015-09-30/elon-musk-delivers-tesla-s-first-model-x-suvs-in-california"
+    },
+    {
+      "title": "TechCrunch: Tesla's Model X SUV hits the road",
+      "url": "https://techcrunch.com/2015/09/29/teslas-140000-model-x-suv-does-0-60-in-3-2-seconds-hits-the-road-starting-tonight/"
+    },
+    {
+      "title": "Electrek: Falcon wing doors",
+      "url": "https://electrek.co/guides/falcon-wing-doors/"
+    },
+    {
+      "title": "The Verge: Tesla's lawsuit against Hoerbiger over the Model X falcon-wing door",
+      "url": "https://www.theverge.com/2016/1/20/10800140/tesla-lawsuit-hoerbiger-model-x-falcon-wing-door"
+    },
+    {
+      "title": "Justia: Tesla Motors v. Hoerbiger, complaint, case 5:16-cv-00288",
+      "url": "https://docs.justia.com/cases/federal/district-courts/california/candce/5:2016cv00288/294943/1"
+    },
+    {
+      "title": "Bloomberg: Tesla sues German parts maker over sagging door on Model X",
+      "url": "https://www.bloomberg.com/news/articles/2016-01-21/tesla-sues-german-parts-maker-over-sagging-door-on-model-x"
+    },
+    {
+      "title": "Dr. Docket: Tesla Motors, Inc. v. Hoerbiger Automotive Comfort Systems, LLC",
+      "url": "https://www.drdocket.com/case/tesla-motors-inc-v-hoerbiger-automotive-comfort-systems-llc-cand-2016"
+    },
+    {
+      "title": "Reuters: Tesla and supplier Hoerbiger settle in court over falcon wing doors",
+      "url": "https://www.reuters.com/article/technology/tesla-and-supplier-hoerbiger-settle-in-court-over-falcon-wing-doors-idUSKCN11W2IC/"
+    },
+    {
+      "title": "USA Today: Tesla blames its hubris for delays in Model X deliveries",
+      "url": "https://www.usatoday.com/story/money/cars/2016/04/04/tesla-blames-its-hubris-delays-model-x-deliveries/82630800/"
+    },
+    {
+      "title": "Drive: Tesla Model X production hampered by hubris, admits company",
+      "url": "https://www.drive.com.au/news/tesla-model-x-production-hampered-by-hubris-admits-company/"
+    },
+    {
+      "title": "Forbes: Elon Musk candidly details Tesla Model X issues",
+      "url": "https://www.forbes.com/sites/brookecrothers/2016/06/01/elon-musk-candidly-details-tesla-model-x-issues-and-explains-migration-of-model-3-technology/"
+    },
+    {
+      "title": "Reuters: Tesla to recall 2,700 Model X SUVs over seat issue",
+      "url": "https://www.reuters.com/article/us-tesla-recall/tesla-to-recall-2700-model-x-suvs-over-seat-issue-idUSKCN0X8235/"
+    },
+    {
+      "title": "TechCrunch: Tesla recalls 2,700 Model X vehicles over potentially dangerous seat flaw",
+      "url": "https://techcrunch.com/2016/04/11/tesla-recalls-2700-model-x-vehicles-over-potentially-dangerous-seat-flaw/"
+    }
+  ],
+  "real_photos": [
+    {
+      "page": "https://commons.wikimedia.org/wiki/File:Tesla_Model_X_(36008619486).jpg",
+      "describe": "a white Model X on a display floor with both falcon-wing doors raised, a Model X sign in front, people standing beside the car"
+    },
+    {
+      "page": "https://commons.wikimedia.org/wiki/File:Tesla_Model_X_at_DFJ,_under_the_wing_of_the_Falcon-wing_doors._(21980407905).jpg",
+      "describe": "a white Model X seen from the rear three-quarter, one falcon-wing door raised, four people standing next to the open doorway"
+    },
+    {
+      "page": "https://commons.wikimedia.org/wiki/File:Tesla_Store_with_Electric_Cars,_Model_X_-_Waikiki,_Honolulu_(49539445881).jpg",
+      "describe": "a white Model X inside a Tesla store, seen through the glass front, with one falcon-wing door raised"
+    }
+  ],
+  "images": [
+    "models/mx-1.jpg",
+    "models/mxc-1.jpg",
+    "models/mx-4.jpg",
+    "models/mxc-2.jpg",
+    "gigafactory-fremont.jpg",
+    "models/mx-2.jpg"
+  ],
+  "label": {
+    "style": "c",
+    "en": {
+      "sub": "ONE DOOR",
+      "text": "TWO YEARS BEHIND"
+    },
+    "nl": {
+      "sub": "ÉÉN DEUR",
+      "text": "TWEE JAAR TE LAAT"
+    }
+  },
+  "en": {
+    "title": "One Door Delayed the Tesla Model X by Almost Two Years",
+    "description": "The falcon wing door was supposed to be better than any other door. It helped push the Model X almost two years late, sent Tesla to court against its supplier, and led the company to blame its own hubris.",
+    "body": "<p>One door delayed Tesla's SUV by almost two years. On the evening of February 9, 2012, at Tesla's design studio in Hawthorne, California, Elon Musk unveiled the Model X prototype. According to Fortune, he said: \"With the Model X, we wanted to create a door that was better than any other door.\" The falcon wing doors were the part that was supposed to set the SUV apart. They were also the part Tesla could not finish on the schedule it had set.</p>\n<h2>What were those doors supposed to do?</h2>\n<p><strong>Rise clear of the car, and decide for themselves how far they could open.</strong> The rear doors swing up over the roof, which is why Tesla calls them falcon wing doors. They use sonar, ultrasonic sensors, to work out how far they can open without hitting things around the car. At the unveil, according to Fortune, Musk promised deliveries by the end of 2013. A door that senses its surroundings is a lot of new machinery to finish before the first customer can drive away.</p>\n<h2>So why did the first customers wait almost two years?</h2>\n<p><strong>Because the start of deliveries slipped several times, and the doors were one of the reasons.</strong> Wikipedia records the moves: early 2014, then late 2014, then high-volume production in the second quarter of 2015, then the third quarter of 2015. Business Insider later wrote that the Model X was \"originally promised to launch sometime in 2014, but production delays pushed deliveries back by almost two years.\" Reuters, on handover day, said Tesla was nearly two years behind the original schedule. Problems with the falcon wing doors were among the reasons.</p>\n<p>The first cars changed hands on September 29, 2015, at an event in Fremont, California. Musk handed over the first six Model X SUVs. Before the event, Musk told Reuters: \"I think we got a little carried away with the X.\" Six cars in customers' hands did not mean the doors, or the factory behind them, were finished.</p>\n<h2>What did Tesla say was wrong with the supplier's doors?</h2>\n<p><strong>They overheated, leaked oil, opened unevenly and sagged, and they never reached production.</strong> In February 2014 Tesla and hydraulics supplier Hoerbiger signed an agreement to develop a hydraulic system for the falcon wing doors. It never reached production. The relationship was terminated in May 2015. Tesla switched to a different supplier and an electromechanical design.</p>\n<p>On January 19, 2016, Tesla sued Hoerbiger in federal court in California, case 5:16-cv-00288. Tesla said the hydraulic doors overheated, which made them inoperable, leaked oil, did not open with speed or symmetry, and sagged beyond tolerance. Tesla asked the court to declare that it owed Hoerbiger nothing.</p>\n<p>The parties settled in 2016. A joint notice of settlement was filed in July 2016, Reuters reported the settlement in September 2016, and the case was dismissed with prejudice on October 6, 2016. The terms were not disclosed. A closed case still left the factory short of Model X SUVs.</p>\n<h2>So what did Tesla blame when so few Model X SUVs were built?</h2>\n<p><strong>Its own hubris, in a sentence the company wrote down.</strong> In its update for the first quarter of 2016, published on April 4, Tesla said it had delivered 12,420 Model S sedans and only 2,400 Model X SUVs. It blamed \"severe Model X supplier parts shortages in January and February.\" Then it named the cause: \"the root causes of the parts shortages were: Tesla's hubris in adding far too much new technology to the Model X in version 1, insufficient supplier capability validation, and Tesla not having broad enough internal capability to manufacture the parts in-house.\" The shortage involved about six of the roughly 8,000 unique parts in the Model X. By the last full week of March 2016 the build rate had reached 750 Model X vehicles a week. In the last four months of 2015, Tesla had delivered only 208.</p>\n<p>The same early cars had a separate fault. In 2016 Tesla recalled about 2,700 Model X SUVs, all built before March 26, 2016, over a faulty locking hinge in the third-row seats that could let the seatback fold forward in a crash. It was the first Model X recall. The company had put the word hubris in its own update. Musk used that word about himself.</p>\n<h2>What did Musk say he should have done instead?</h2>\n<p><strong>Put fewer new things in the first version, and add the rest in later years.</strong> On the February 2016 earnings call he said: \"In retrospect, it would have been a better decision to do fewer things with the first version of the Model X and then roll in capabilities, and features, and new technologies over time, in subsequent years.\" At the shareholder meeting on May 31, 2016, he went further: \"I particularly need to fault myself for a fair bit of hubris for putting too much technology all at once into a product.\"</p>\n<p>The door that was meant to be better than any other door is the clearest piece of that account. It was among the reasons the SUV ran almost two years late, it took Tesla to court against its own supplier, and it left the company using the word hubris about the car it had just launched.</p>"
+  },
+  "nl": {
+    "title": "Eén deur zette de Tesla Model X bijna twee jaar terug",
+    "description": "De valkvleugeldeur moest beter zijn dan elke andere deur. Hij hielp de Model X bijna twee jaar te vertragen, bracht Tesla voor de rechter tegen zijn leverancier, en liet het bedrijf zijn eigen hubris de schuld geven.",
+    "body": "<p>Eén deur zette Tesla's SUV bijna twee jaar terug. Op de avond van 9 februari 2012 onthulde Elon Musk in de designstudio van Tesla in Hawthorne, Californië, het prototype van de Model X. Volgens Fortune zei hij: \"With the Model X, we wanted to create a door that was better than any other door.\" Een deur die beter moest zijn dan elke andere. De valkvleugeldeuren moesten de SUV bijzonder maken. Het was ook het onderdeel dat Tesla niet af kreeg op het schema dat het zelf had gezet.</p>\n<h2>Wat moesten die deuren kunnen?</h2>\n<p><strong>Omhoog klappen, en zelf bepalen hoe ver dat kon.</strong> De achterdeuren zwaaien over het dak. Daarom noemt Tesla ze valkvleugeldeuren. Met sonar, ultrasone sensoren, rekenen ze uit hoe ver ze open kunnen zonder iets naast de auto te raken. Bij de onthulling beloofde Musk volgens Fortune de eerste leveringen eind 2013. Een deur die zijn omgeving zelf aanvoelt, is een hoop nieuwe techniek. Die moest af zijn voordat de eerste klant weg kon rijden.</p>\n<h2>Dus waarom wachtten de eerste klanten bijna twee jaar?</h2>\n<p><strong>Omdat de start van de leveringen meerdere keren opschoof, en de deuren een van de oorzaken waren.</strong> Wikipedia houdt de verschuivingen bij: begin 2014, daarna eind 2014, toen serieproductie in het tweede kwartaal van 2015, en daarna pas het derde kwartaal van 2015. Business Insider schreef later dat de Model X oorspronkelijk beloofd was voor ergens in 2014, maar dat productievertraging de leveringen bijna twee jaar opschoof. Reuters schreef op de dag van de overdracht dat Tesla bijna twee jaar achterliep op het oorspronkelijke schema. Problemen met de valkvleugeldeuren hoorden bij de oorzaken.</p>\n<p>De eerste auto's wisselden van eigenaar op 29 september 2015, bij een bijeenkomst in Fremont, Californië. Musk gaf de eerste zes Model X-SUV's af. Vóór het evenement zei hij tegen Reuters: \"I think we got a little carried away with the X.\" Ze hadden zich een beetje laten meeslepen door de X. Zes auto's bij klanten betekende niet dat de deuren, of de fabriek erachter, af waren.</p>\n<h2>Wat zei Tesla dat er mis was met de deuren van de leverancier?</h2>\n<p><strong>Ze werden te heet, lekten olie, gingen ongelijk open en zakten door, en ze haalden de productie nooit.</strong> In februari 2014 tekenden Tesla en hydrauliekleverancier Hoerbiger een overeenkomst voor een hydraulisch systeem voor de valkvleugeldeuren. Het kwam nooit in productie. De samenwerking stopte in mei 2015. Tesla stapte over op een andere leverancier en een elektromechanisch ontwerp.</p>\n<p>Op 19 januari 2016 daagde Tesla Hoerbiger voor de federale rechtbank in Californië, zaak 5:16-cv-00288. Tesla zei dat de hydraulische deuren oververhit raakten, waardoor ze niet meer werkten, dat ze olie lekten, niet snel en niet gelijk opengingen, en verder doorzakten dan de marge toeliet. Tesla vroeg de rechtbank uit te spreken dat het Hoerbiger niets schuldig was.</p>\n<p>De partijen schikten in 2016. In juli 2016 werd een gezamenlijke schikkingsmelding ingediend, Reuters berichtte in september 2016 over de schikking, en op 6 oktober 2016 werd de zaak dismissed with prejudice, definitief gesloten. De voorwaarden zijn niet bekendgemaakt. Een gesloten rechtszaak zette nog geen Model X-SUV's op de weg.</p>\n<h2>Dus wat gaf Tesla de schuld toen er zo weinig Model X-SUV's werden gebouwd?</h2>\n<p><strong>Zijn eigen hubris, in een zin die het bedrijf zelf opschreef.</strong> In de update over het eerste kwartaal van 2016, gepubliceerd op 4 april, meldde Tesla 12.420 geleverde Model S-sedans en maar 2.400 Model X-SUV's. De schuld lag bij ernstige tekorten aan Model X-onderdelen in januari en februari. Tesla noemde daarna de oorzaak zelf: hubris, doordat het in versie 1 veel te veel nieuwe techniek in de Model X had gestopt, te weinig had gecontroleerd of leveranciers het aankonden, en zelf niet breed genoeg was om de onderdelen te maken. Hubris is hier het woord van Tesla: overmoed. Het tekort ging om ongeveer zes van de ruwweg 8.000 unieke onderdelen. In de laatste volle week van maart 2016 lag het tempo op 750 Model X per week. In de laatste vier maanden van 2015 waren er 208 afgeleverd.</p>\n<p>Diezelfde vroege auto's hadden een apart mankement. In 2016 haalde Tesla ongeveer 2.700 Model X terug, allemaal gebouwd vóór 26 maart 2016, vanwege een defect vergrendelscharnier in de derde zitrij. Bij een botsing kon de rugleuning naar voren klappen. Het was de eerste terugroepactie van de Model X. Het bedrijf had het woord hubris in zijn eigen update gezet. Musk gebruikte dat woord over zichzelf.</p>\n<h2>Wat zei Musk dat hij anders had moeten doen?</h2>\n<p><strong>Minder nieuwe dingen in de eerste versie, en de rest in latere jaren.</strong> Op de cijfercall van februari 2016 zei hij dat het achteraf beter was geweest om in de eerste Model X minder tegelijk te doen, en capaciteiten, functies en nieuwe techniek pas in latere jaren toe te voegen. Op de aandeelhoudersvergadering van 31 mei 2016 ging hij verder: hij rekende zichzelf een flink deel van die hubris aan, omdat er in één keer te veel techniek in het product was gestopt.</p>\n<p>De deur die beter moest zijn dan elke andere deur is het duidelijkste stuk van dat verslag. Hij hoorde bij de redenen dat de SUV bijna twee jaar te laat was, hij bracht Tesla voor de rechter tegen zijn eigen leverancier, en hij liet het bedrijf het woord hubris gebruiken voor de auto die het net had gelanceerd.</p>"
+  },
+  "short": {
+    "hook": "consequence",
+    "hook_motion": "the raised falcon-wing doors ease a little higher and the warm light shifts across the glass; the car stays still",
+    "yt_title_en": "One Door Delayed This SUV Two Years",
+    "yt_title_nl": "Eén deur zette deze SUV twee jaar terug",
+    "hooks": [
+      {
+        "text": "One door delayed this SUV by two years.",
+        "type": "consequence"
+      },
+      {
+        "text": "Tesla blamed its own hubris for this SUV.",
+        "type": "consequence"
+      },
+      {
+        "text": "The door had to beat every other door.",
+        "type": "contrast"
+      }
+    ],
+    "hook_pick": {
+      "index": 0,
+      "why": "Consequence hooks are the ones people keep watching, and this one is a single claim about one Model X part. The last line, a door that had to be better than any other, runs straight back into the delay."
+    },
+    "story": [
+      {
+        "part": "hook",
+        "t": "0-3s",
+        "text": "One door delayed this SUV by two years.",
+        "overlay": "One door delayed this SUV by 2 years",
+        "img": [
+          "models/mx-1.jpg",
+          "models/mxc-1.jpg"
+        ],
+        "visual": "a Model X with both falcon-wing doors raised against a sunset, then an early dark-blue Model X by a lake",
+        "sfx": "a soft electric whir of a car door lifting, then a firm latch click"
+      },
+      {
+        "part": "tension",
+        "t": "3-6s",
+        "text": "Sonar had to judge how far it could open.",
+        "overlay": "Sonar judged how far it could open",
+        "img": [
+          "models/mx-1.jpg",
+          "models/mx-4.jpg"
+        ],
+        "visual": "close on the raised falcon-wing doors, then a red Model X on a quiet road"
+      },
+      {
+        "part": "tension",
+        "t": "6-10s",
+        "text": "Customers waited nearly two years past the plan.",
+        "overlay": "Nearly 2 years past the plan",
+        "img": [
+          "models/mxc-1.jpg",
+          "gigafactory-fremont.jpg"
+        ],
+        "visual": "the early Model X, then the Fremont factory and the cars parked outside"
+      },
+      {
+        "part": "tension",
+        "t": "10-13s",
+        "text": "Musk told Reuters they got carried away.",
+        "overlay": "Told Reuters: they got carried away",
+        "img": [
+          "gigafactory-fremont.jpg",
+          "models/mx-1.jpg"
+        ],
+        "visual": "the factory where the first cars were handed over, then the SUV with its doors up"
+      },
+      {
+        "part": "tension",
+        "t": "13-16s",
+        "text": "Those doors overheated, leaked oil and sagged.",
+        "overlay": "Overheated, leaked oil and sagged",
+        "img": [
+          "models/mx-1.jpg",
+          "models/mxc-2.jpg"
+        ],
+        "visual": "the open falcon-wing doors, then a Model X parked beside a wooden house"
+      },
+      {
+        "part": "tension",
+        "t": "16-20s",
+        "text": "Tesla sued the supplier, then changed the design.",
+        "overlay": "Tesla sued, then changed the design",
+        "img": [
+          "models/mx-4.jpg",
+          "models/mxc-1.jpg"
+        ],
+        "visual": "a red Model X, then the early blue Model X with its doors shut"
+      },
+      {
+        "part": "tension",
+        "t": "20-23s",
+        "text": "Later Tesla blamed its own hubris.",
+        "overlay": "Tesla blamed its own hubris",
+        "img": [
+          "models/mx-2.jpg",
+          "models/mx-5.jpg"
+        ],
+        "visual": "Model X SUVs on the road at dusk, the cars that were slow to leave the factory"
+      },
+      {
+        "part": "payoff",
+        "t": "23-27s",
+        "text": "Twelve thousand S, and only twenty four hundred X.",
+        "overlay": "12,420 Model S. Only 2,400 X",
+        "img": [
+          "models/mx-2.jpg",
+          "models/mxc-1.jpg"
+        ],
+        "visual": "a Model X driving at sunset, then the early Model X standing still"
+      },
+      {
+        "part": "payoff",
+        "t": "27-31s",
+        "text": "It had to be better than any other door.",
+        "overlay": "Better than any other door",
+        "img": [
+          "models/mx-1.jpg",
+          "models/mxc-1.jpg"
+        ],
+        "visual": "back to the raised falcon-wing doors, the same picture the Short opens on"
+      }
+    ],
+    "loop": {
+      "last": "It had to be better than any other door.",
+      "how": "the restart names the cost of that ambition: a door that had to be better than any other is the door that delayed this SUV by two years. The last picture is the raised falcon-wing doors, and that is the picture the Short opens on."
+    },
+    "signals": "Consequence hook on one Model X part, label type c without a leading number, model-specific story. The delay and the hubris line are both sourced; the door is among the reasons, which the article says in full.",
+    "learning": {
+      "test": "a consequence hook about a single Model X part, on a Sunday company-history story"
+    },
+    "proof": {
+      "source": "Business Insider, February 2016, and Reuters, 29 September 2015",
+      "why": "Business Insider says production delays pushed Model X deliveries back by almost two years; Reuters, on handover day, says the SUV was nearly two years behind the original schedule. Door trouble is among the reasons in Wikipedia, The Verge and Fortune."
+    },
+    "en": "One door delayed this SUV by two years. Sonar had to judge how far it could open. Customers waited nearly two years past the plan. Musk told Reuters they got carried away. Those doors overheated, leaked oil and sagged. Tesla sued the supplier, then changed the design. Later Tesla blamed its own hubris. Twelve thousand S, and only twenty four hundred X. It had to be better than any other door.",
+    "nl": "Eén deur zette deze SUV twee jaar terug. Sonar moest bepalen hoe ver hij open kon. Klanten wachtten bijna twee jaar langer dan het plan. Musk zei tegen Reuters dat ze zich hadden laten meeslepen. Die deuren werden te heet, lekten olie en zakten door. Tesla daagde de leverancier en veranderde toen het ontwerp. Later gaf Tesla zijn eigen hubris de schuld. Twaalfduizend S, en maar vierentwintighonderd X. Hij moest beter zijn dan elke andere deur."
+  }
+}

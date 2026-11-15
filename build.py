@@ -797,6 +797,18 @@ article.money h1.atitle{font-size:1.7rem;line-height:1.18}
 nav.seq{grid-template-columns:1fr}
 nav.seq a.next{text-align:left;align-items:flex-start}
 }
+/* Preview B header only: nav in the top bar, search centered underneath. */
+header.hb .brand,header.hb .savedlink{transform:none}
+header.hb .bar{gap:8px}
+header.hb .pnav{display:none;flex:1 1 auto;min-width:0;height:auto;margin:0;overflow-x:auto;scrollbar-width:none}
+header.hb .pn{height:34px;padding:0 8px;font-size:.8rem}
+header.hb .savedlink{margin-left:auto}
+header.hb .sbtn{display:none}
+header.hb .hb-search{display:flex;position:relative;width:min(640px,calc(100% - 8px));max-width:640px;margin:2px auto 10px;height:42px;left:auto;right:auto;top:auto;background:transparent;padding:0}
+header.hb .hb-search input,header.hb .hb-search>button{height:42px}
+header.hb ~ .drawer,header.hb ~ .scrim{top:118px}
+@media (min-width:1100px){header.hb .pnav{display:flex}header.hb .bar .burger{display:none}}
+@media (max-width:1099.98px){header.hb .bar .burger{display:flex}header.hb .pnav{display:none}header.hb ~ .drawer,header.hb ~ .scrim{top:108px}}
 /* Layout previews. Scoped so the live pages are unchanged. */
 .pv-note{font-size:.82rem;line-height:1.45;color:var(--muted);background:#161616;border:1px solid var(--border2);border-radius:10px;padding:10px 12px;margin:8px 0 12px}
 .pv-note a{color:var(--blue2)}
@@ -1183,7 +1195,7 @@ def read_time(a, lang):
     return max(1, round(len(html.unescape(a[lang]["body"]).split()) / 220))
 
 
-def page(lang, path, title, description, body, og_type="website", extra_head="", image=None, active=None, robots=None, canonical=True):
+def page(lang, path, title, description, body, og_type="website", extra_head="", image=None, active=None, robots=None, canonical=True, bar=None):
     L = LANGS[lang]
     alt = other(lang)
     full_title = f"{title} | {NAME}" if title != NAME else f"{NAME} — {L['tagline']}"
@@ -1209,6 +1221,24 @@ def page(lang, path, title, description, body, og_type="website", extra_head="",
     fmods = "".join(f'<a href="{url(lang, "model/" + k + "/")}">{MODELS[k]["name"]}</a>' for k in MODEL_ROOTS)
     cats = " · ".join(f'<a href="{url(lang, "category/" + k + "/")}">{c[lang]}</a>' for k, c in CATEGORIES.items() if c["menu"])
     mods = " · ".join(f'<a href="{url(lang, "model/" + k + "/")}">{m["name"]}</a>' for k, m in MODELS.items() if not m.get("parent") or k in MODEL_STRIP)
+    search = (f'<form class="search{" hb-search" if bar == "inline" else ""}" role="search" action="{url(lang)}" '
+              f'data-idx="/search-{lang}.json" data-none="{L["none"]}"><input type="search" name="q" '
+              f'placeholder="{L["search"]}" aria-label="{L["search"]}" autocomplete="off">'
+              f'<button type="submit" aria-label="{L["search"]}">{SEARCH_SVG}</button><div class="res" hidden></div></form>')
+    tools = (f'<a class="savedlink" href="{url(lang, "saved/")}" title="{L["saved"]}" aria-label="{L["saved"]}">{BOOK_SVG}<i hidden></i></a>'
+             f'<a class="lang" href="{url(alt, path)}" hreflang="{alt}" lang="{alt}" title="{L["switch_full"]}">{L["switch"]}</a>')
+    burger = f'<button class="burger" type="button" aria-label="{L["menu"]}" aria-expanded="false" aria-controls="drawer"><span></span><span></span><span></span></button>'
+    brand = f'<div class="brand"><a class="logo" href="{url(lang)}">Trending<span>Tesla</span></a></div>'
+    if bar == "inline":
+        # Preview B only. The live header below is unchanged.
+        header = (f'<header class="top hb"><div class="wrap"><div class="bar">{burger}{brand}'
+                  f'{primary_nav(lang, active)}'
+                  f'<button class="sbtn" type="button" aria-label="{L["search"]}">{SEARCH_SVG}</button>'
+                  f'{tools}</div>{search}</div></header>')
+    else:
+        header = (f'<header class="top"><div class="wrap"><div class="bar">{burger}{brand}{search}'
+                  f'<button class="sbtn" type="button" aria-label="{L["search"]}">{SEARCH_SVG}</button>'
+                  f'{tools}</div>{primary_nav(lang, active)}</div></header>')
     return f"""<!doctype html>
 <html lang="{lang}">
 <head>
@@ -1240,15 +1270,7 @@ def page(lang, path, title, description, body, og_type="website", extra_head="",
 {extra_head}
 </head>
 <body>
-<header class="top"><div class="wrap">
-<div class="bar"><button class="burger" type="button" aria-label="{L['menu']}" aria-expanded="false" aria-controls="drawer"><span></span><span></span><span></span></button>
-<div class="brand"><a class="logo" href="{url(lang)}">Trending<span>Tesla</span></a></div>
-<form class="search" role="search" action="{url(lang)}" data-idx="/search-{lang}.json" data-none="{L['none']}"><input type="search" name="q" placeholder="{L['search']}" aria-label="{L['search']}" autocomplete="off"><button type="submit" aria-label="{L['search']}">{SEARCH_SVG}</button><div class="res" hidden></div></form>
-<button class="sbtn" type="button" aria-label="{L['search']}">{SEARCH_SVG}</button>
-<a class="savedlink" href="{url(lang, 'saved/')}" title="{L['saved']}" aria-label="{L['saved']}">{BOOK_SVG}<i hidden></i></a>
-<a class="lang" href="{url(alt, path)}" hreflang="{alt}" lang="{alt}" title="{L['switch_full']}">{L['switch']}</a></div>
-{primary_nav(lang, active)}
-</div></header>
+{header}
 <div class="scrim"></div>
 <nav id="drawer" class="drawer" aria-label="{L['menu']}">{drawer(lang, active, path.strip("/").split("/")[1] if path.strip("/").startswith("model/") else None)}</nav>
 <main class="wrap">
@@ -2598,15 +2620,14 @@ def pv_article(variant, a, arts, lang):
             f'<div class="pv-art pv-{variant}">{rail}<div>{article}</div>{pv_side(arts, lang, a)}</div></div>')
 
 
-def preview_page(lang, path, title, desc, body, real):
-    alt = "nl" if lang == "en" else "en"
+def preview_page(lang, path, title, desc, body, real, bar=None):
     extra = (
         f'<link rel="canonical" href="{SITE + url(lang, real)}">'
         f'<link rel="alternate" hreflang="en" href="{SITE + url("en", path)}">'
         f'<link rel="alternate" hreflang="nl" href="{SITE + url("nl", path)}">'
         f'<link rel="alternate" hreflang="x-default" href="{SITE + url("en", path)}">'
     )
-    return page(lang, path, title, desc, body, robots="noindex, follow", canonical=False, extra_head=extra)
+    return page(lang, path, title, desc, body, robots="noindex, follow", canonical=False, extra_head=extra, bar=bar)
 
 
 def write_previews(arts, lang):
@@ -2632,10 +2653,12 @@ def write_previews(arts, lang):
     for key in ("a", "b", "c"):
         title = blurbs[key][0 if en else 1]
         write(url(lang, f"preview/{key}/"), preview_page(
-            lang, f"preview/{key}/", title, title, pv_home(key, arts, lang), ""))
+            lang, f"preview/{key}/", title, title, pv_home(key, arts, lang), "",
+            bar="inline" if key == "b" else None))
         write(url(lang, f"preview/{key}/article/"), preview_page(
             lang, f"preview/{key}/article/", sample[lang]["title"], sample[lang]["description"],
-            pv_article(key, sample, arts, lang), sample["slug"] + "/"))
+            pv_article(key, sample, arts, lang), sample["slug"] + "/",
+            bar="inline" if key == "b" else None))
 
 
 def build():

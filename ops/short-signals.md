@@ -1,6 +1,6 @@
 # Short signals (updated 2026-11-14 04:58 UTC)
 
-Goals (William, 8 Nov 2026): stayed > 70% (viewed vs swiped), watched >= 90% with loops (over 100%),
+Goals (8 Nov 2026): stayed > 70% (viewed vs swiped), watched >= 90% with loops (over 100%),
 likes and shares up. 'stayed' = engaged views / views. Length in seconds is estimated from the stats.
 
 Average of Shorts with 300+ views: stayed 55%, watched 78%, length 49 s.

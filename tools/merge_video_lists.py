@@ -15,6 +15,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 FILES = ["videos.json", "shorts.json", "video_lengths.json"]
+UPLOADS = ROOT / "ops" / "short-uploads.json"
 
 
 def load(p, empty):
@@ -22,6 +23,22 @@ def load(p, empty):
         return json.loads(p.read_text(encoding="utf-8"))
     except (OSError, ValueError):
         return empty
+
+
+def merge_uploads(cur, mine):
+    """Short upload ledger: a slug or id already recorded is not added again."""
+    ids = {x.get("id") for x in cur}
+    slugs = {x.get("slug") for x in cur if x.get("slug")}
+    add = []
+    for x in mine:
+        if x.get("id") in ids or (x.get("slug") and x.get("slug") in slugs):
+            continue
+        add.append(x)
+        if x.get("id"):
+            ids.add(x["id"])
+        if x.get("slug"):
+            slugs.add(x["slug"])
+    return add + cur
 
 
 def merge_list(cur, mine, long):
@@ -44,6 +61,12 @@ def merge_list(cur, mine, long):
 def main():
     mode, d = sys.argv[1], Path(sys.argv[2])
     d.mkdir(parents=True, exist_ok=True)
+    if mode == "save" and UPLOADS.exists():
+        shutil.copy(UPLOADS, d / "short-uploads.json")
+    elif mode == "apply" and (d / "short-uploads.json").exists():
+        merged = merge_uploads(load(UPLOADS, []), load(d / "short-uploads.json", []))
+        UPLOADS.parent.mkdir(parents=True, exist_ok=True)
+        UPLOADS.write_text(json.dumps(merged, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     for name in FILES:
         src = ROOT / "content" / name
         if mode == "save":

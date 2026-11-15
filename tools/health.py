@@ -4,11 +4,11 @@ Usage: python3 tools/health.py            prints the report, writes ops/health.m
        python3 tools/health.py --no-net   only what the repository itself shows (no YouTube/site/GitHub requests)
 
 Written after 11 Nov 2026: a Short that crashed, a video run GitHub never started and social posts that failed for
-11 days all went unnoticed. The monitor task (ops/tasks/monitor.md) runs this twice a day and reports to William.
+11 days all went unnoticed. Run it by hand, or after publication. It writes ops/health.md.
 Checks, for every article of the last 36 hours (times in Europe/Amsterdam):
-  - today's midday article exists after 13:30 and the evening article after 22:00;
-  - the Short exists and is public on YouTube (after 45 minutes); the midday article also has its long video
-    (after 100 minutes);
+  - today's article exists after 19:00 (one a day, around 18:00);
+  - the Short exists and is public on YouTube (after 45 minutes); an article with a "video" script also has
+    its long video (after 100 minutes);
   - the Short reached TikTok, Instagram and Facebook (ops/social-log.jsonl, after 150 minutes);
   - the article page is live in English and Dutch;
   - the script passes tools/check_article.py and the render report has no rule warnings;
@@ -87,10 +87,8 @@ def main():
             arts.append((at, a, f))
     today = [x for x in arts if x[0].date() == now.date()]
     hm = now.hour * 60 + now.minute
-    if hm >= 13 * 60 + 30 and not any(at.hour < 17 for at, _, _ in today):
-        problems.append("No midday article today (expected around 12:45): the midday task did not publish.")
-    if hm >= 22 * 60 and not any(at.hour >= 17 for at, _, _ in today):
-        problems.append("No evening article today (expected around 21:20): the evening task did not publish.")
+    if hm >= 19 * 60 and not today:
+        problems.append("No article today (expected around 18:00 Europe/Amsterdam).")
 
     for at, a, f in arts:
         s, age = a["slug"], now - at

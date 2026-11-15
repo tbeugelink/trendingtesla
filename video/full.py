@@ -23,14 +23,15 @@ sys.argv = [x for x in sys.argv if x != "--portrait"]
 import short as S  # noqa: E402  (same folder; landscape layout)
 from short import W, H, FPS, font, FB, FX, YEL  # noqa: E402
 
-SPEED = {"en": "1.17", "nl": "1.17"}
+SPEED = {"en": "1.07", "nl": "1.07"}  # same pace as the story Shorts; override with ELEVENLABS_SPEED after this is applied
+FULL_STABILITY, FULL_STYLE = "0.45", "0.3"  # more natural than the old 0.2 / 0.8; env vars still override
 OUTRO_SAY = {"en": "Like and subscribe for more Tesla news and join us on TrendingTesla.com. I'll see you there!",
              "nl": "Like en abonneer voor meer Tesla-nieuws, of ga naar TrendingTesla.com. Ik zie je daar!"}
 OUTRO_CARD = {"en": "LIKE & SUBSCRIBE", "nl": "LIKE & ABONNEER"}
 OUTRO_SEC = 10.0
 OUTRO = os.environ.get("FULL_OUTRO") == "1"  # spoken "Like and subscribe" + end card (off since 8 Nov 2026)
 GAP = 8  # at least 8 other photos before one comes back
-SCENE_MAX, ZOOM_IN = 3.0, 0.07  # the story-Short rhythm: a new shot every 3 s, 2 s crossfades  # calm like the story Shorts: slow steady zoom, a new photo every ~5 s
+SCENE_MAX, SCENE_XFADE, ZOOM_IN = 2.0, 0.15, 0.07  # a new shot about every 2 s, with a short flash instead of a 2 s dissolve
 NUM = re.compile(r"^([(\"'“]?)(\$?)(\d[\d.,]*\d|\d)(%?)([)\"'”.,:;!?]*)$")
 
 
@@ -386,9 +387,9 @@ def main():
     a = S.load(slug)
     S.OUT.mkdir(parents=True, exist_ok=True)
     pieces = build_timeline(a, lang)
-    os.environ["ELEVENLABS_SPEED"] = SPEED.get(lang, "1.1")
-    os.environ.setdefault("ELEVENLABS_STABILITY", "0.2")  # same lively delivery as the story Shorts
-    os.environ.setdefault("ELEVENLABS_STYLE", "0.8")
+    os.environ["ELEVENLABS_SPEED"] = SPEED.get(lang, "1.07")
+    os.environ.setdefault("ELEVENLABS_STABILITY", FULL_STABILITY)
+    os.environ.setdefault("ELEVENLABS_STYLE", FULL_STYLE)
     S.LANG[0] = lang
     base = [S.spoken(t, lang) for _, t, _ in pieces]
     conv = [say_numbers(t, lang) for t in base]
@@ -726,7 +727,7 @@ def render(a, lang, pieces, segs, place, words, total, end_start, audio):
             last = max(last, nxt)
     pops = sorted(pops + extra, key=lambda x: x[0])
     pops = [(p0, min(pops[k + 1][0] if k + 1 < len(pops) else end_start, p0 + 2.8), o) for k, (p0, _, o) in enumerate(pops)]
-    if os.environ.get("FULL_KEYPHRASES") != "1":  # default: subtitles of the whole script (William, 5 Nov 2026)
+    if os.environ.get("FULL_KEYPHRASES") != "1":  # default: subtitles of the whole script (5 Nov 2026)
         pops = subtitle_pops(words, label_end, end_start)
     print(f"{len(pops)} subtitles")
     chunks, cur = [], []
@@ -770,7 +771,7 @@ def render(a, lang, pieces, segs, place, words, total, end_start, audio):
     def shot(k, t):
         im = pic(scenes[k][1])
         fz, fcx, fcy = FRAMES[scenes[k][2] % len(FRAMES)]
-        span = (starts[k + 1] if k + 1 < nsc else total) - starts[k] + S.TR
+        span = (starts[k + 1] if k + 1 < nsc else total) - starts[k] + SCENE_XFADE
         p = max(0.0, min(1.0, (t - starts[k]) / span))  # linear: no stop-start stutter
         cx, cy = fcx, fcy
         z = fz * (1.0 + ZOOM_IN * p)
@@ -783,8 +784,8 @@ def render(a, lang, pieces, segs, place, words, total, end_start, audio):
     def picture(t):
         k = max((i for i, s0 in enumerate(starts) if s0 <= t), default=0)
         fr = shot(k, t)
-        if k > 0 and t - starts[k] < S.TR:
-            fr = Image.blend(shot(k - 1, t), fr, S.ease((t - starts[k]) / S.TR))
+        if k > 0 and t - starts[k] < SCENE_XFADE:
+            fr = Image.blend(shot(k - 1, t), fr, S.ease((t - starts[k]) / SCENE_XFADE))
         return Image.composite(black, fr, shade)
 
     out = S.OUT / f"{a['slug']}-{lang}-full.mp4"

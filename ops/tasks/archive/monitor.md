@@ -1,6 +1,12 @@
-# Monitor task (twice a day, after each publication) - find problems, repair what is safe, tell William
+# Archived — not a live task
 
-William's rule (11 Nov 2026): no more lost days. A Short that crashed, a video run GitHub never started and social
+Retired 15 November 2026. The check after publication is the owner's, outside this repo. `tools/health.py` remains. Repairs that need a commit follow `README.md`: nothing is deleted from here, and code changes go through a pull request. Do not follow this file.
+
+---
+
+# Monitor task (twice a day, after each publication) - find problems, repair what is safe, tell the owner
+
+The owner's rule (11 Nov 2026): no more lost days. A Short that crashed, a video run GitHub never started and social
 posts that failed for 11 days all went unnoticed. You are the check that this never happens again. Work unattended.
 
 1. Run `python3 tools/health.py` in the repo (it writes ops/health.md and prints the report). Read every PROBLEM and
@@ -20,8 +26,8 @@ posts that failed for 11 days all went unnoticed. You are the check that this ne
 3. Quality check of today's Short and video (the notes in the report): script rule breaks, beats outside 2.5-4 s,
    overlays that were split, a loop that repeats the hook. Write these as one line each in ops/health.md under
    "## Quality notes for the next run" (the morning review and the article tasks read it), commit and push ops/health.md.
-4. Finish with a message for William in Dutch, plain language, no jargon:
+4. Finish with a message for the owner in Dutch, plain language, no jargon:
    - Nothing wrong: exactly one line, e.g. "Alles in orde: <titel> - Short, video en TikTok/Instagram/Facebook staan online."
    - Something wrong: start with "PROBLEEM:" and say per problem what happened, what you repaired, whether it is solved
-     now, and what William must do himself (only if needed). Never write that something is solved without having
+     now, and what the owner must do (only if needed). Never write that something is solved without having
      checked it (YouTube link opens, the run succeeded).

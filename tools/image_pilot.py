@@ -1,4 +1,4 @@
-"""Image pilot: 5 topics, OpenAI GPT Image 2.5 vs William's ChatGPT library images. Nothing is published.
+"""Image pilot: 5 topics, OpenAI GPT Image 2.5 vs the checked library images. Nothing is published.
 
 python3 tools/image_pilot.py [--dry]   (--dry: no paid calls; only checks the setup and judges the ChatGPT images)
 
@@ -95,7 +95,7 @@ def one(t, model, quality, nref, start_cost):
         name = f"{t['id']}-{m.split('-')[-1]}-{q}-r{len(refs)}-t{tries}.jpg"
         im.save(OUT / name, "JPEG", quality=90)
         row = {"at": now(), "topic": t["id"], "file": name, **info, "refs": [r.name for r in refs], "try": tries,
-               "check": chk, "approved_auto": chk["ok"], "approved_william": None, "category": t["cat"]}
+               "check": chk, "approved_auto": chk["ok"], "approved_editor": None, "category": t["cat"]}
         log(row)
         print(f"{name}: visual {chk['visual']} tech {chk.get('technical_pass')} journ {chk.get('journalistic_pass')} "
               f"${info['cost_usd']} {info['seconds']}s {chk.get('technical_errors')}")

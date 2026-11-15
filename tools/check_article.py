@@ -2,9 +2,9 @@
 
 Usage: python3 tools/check_article.py content/articles/<file>.json [...]      (exit code 1 when there are errors)
 
-ERRORS must be fixed before the commit; WARNINGS should be fixed where possible. The rules are the Short format in
-README.md (v4 with v3.1/v3). The article task runs this before `git commit`; the video workflow runs it too and shows
-the result, and the health check (tools/health.py) repeats it for the last articles.
+ERRORS must be fixed before the commit; WARNINGS should be fixed where possible. The rules are the Short section of
+README.md. `short.proof`, `short.learning` and `short.signals` are optional (a warning, not an error). The beat,
+hook, overlay and no-call-to-action checks stay errors. The article task runs this before `git commit`.
 """
 import json
 import re
@@ -89,15 +89,18 @@ def check(path):
             f"Short has {total} spoken words, about {total / 2.6:.0f} s (rule 15-35 s = 40-90 words)")
     if len(sh.get("hooks") or []) != 3:
         err.append("short.hooks must hold exactly 3 hook variants")
-    for k in ("hook_pick", "loop", "signals", "learning", "yt_title_en", "yt_title_nl", "en", "nl"):
+    for k in ("hook_pick", "loop", "yt_title_en", "yt_title_nl", "en", "nl"):
         if not sh.get(k):
             err.append(f"short.{k} is missing")
+    if not sh.get("signals"):
+        warn.append("short.signals is missing (optional)")
+    if not sh.get("learning"):
+        warn.append("short.learning is missing (optional)")
+    elif not (sh.get("learning") or {}).get("test"):
+        warn.append("short.learning.test is missing (optional): the one thing this Short changes")
     pr = sh.get("proof")
     if not (isinstance(pr, dict) and pr.get("source") and pr.get("why")):
-        err.append("short.proof is missing or incomplete ({source, views, why}): the proof that this topic already "
-                   "pulls viewers (README, PROVEN TOPICS)")
-    if not (sh.get("learning") or {}).get("test"):
-        warn.append("short.learning.test is missing: the ONE thing this Short changes compared with the previous one")
+        warn.append("short.proof is missing or incomplete (optional): {source, views, why}")
     if story and not story[0].get("sfx"):
         warn.append("beat 1 has no sfx: describe the natural sound of what moves in the hook picture")
     if len(sh.get("yt_title_en") or "") > 48:

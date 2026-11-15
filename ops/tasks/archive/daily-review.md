@@ -1,6 +1,12 @@
+# Archived — not a live task
+
+Retired 15 November 2026. The morning look at yesterday's numbers is the owner's own routine, outside this repo. It is not a daily test with a sample of one, and it does not write instructions for the article task. Do not follow this file. The publishing spec is `README.md`.
+
+---
+
 # Daily review task (every morning) - analyse yesterday, steer today
 
-Work unattended. Goal (William, 11 Nov 2026): the numbers lag behind; analyse the results every day and use them to
+Work unattended. Goal (11 Nov 2026): the numbers lag behind; analyse the results every day and use them to
 improve the next run. Be honest and exact: say what the numbers show, how sure that is, and what they do not show.
 
 1. Read: ops/short-signals.md (per Short: views, stayed = engaged views / views, watched %, likes per 1,000, length),
@@ -26,5 +32,5 @@ improve the next run. Be honest and exact: say what the numbers show, how sure t
 4. Commit and push (ops/daily-review.md, ops/review-log.md, ops/health.md) with
    `git -c user.name="tbeugelink" -c user.email="345708345+tbeugelink@users.noreply.github.com"`, message "Daily review <date>".
    Do not change code, workflows, tools, README.md or articles.
-5. Finish with a short message for William in Dutch (max 8 lines, plain language): yesterday's numbers, the main
+5. Finish with a short message for the owner in Dutch (max 8 lines, plain language): yesterday's numbers, the main
    finding, today's instructions and test, and any problem (start that line with "PROBLEEM:").

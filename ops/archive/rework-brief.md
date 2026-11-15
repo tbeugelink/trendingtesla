@@ -1,3 +1,9 @@
+# Archived — not a live brief
+
+Retired 15 November 2026. This brief still describes Shorts of 45–60 seconds and a label that is read aloud. Do not follow it. The publishing spec is `README.md`.
+
+---
+
 # Rework brief: video storyline + fact check for trendingtesla.com articles
 
 Work in the repo checkout you were given (do NOT run git, do NOT run build.py, do NOT touch any file other than the article JSON files assigned to you and your report file).

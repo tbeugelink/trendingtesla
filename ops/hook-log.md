@@ -116,7 +116,7 @@ Every article task adds an entry here (README, "ALGORITHM RULES", Self-learning)
 - Hooks: 0 "Two crashes. One explosion. Then it LANDED." (number) **picked** | 1 "No orbital rocket had ever landed. Until this one." (first) | 2 "Why is this rocket parked outside SpaceX's office?" (question)
 - Why 0: three numbers in the first 2 s with zero build-up, a 7-word mini story (fail, fail, success) that begs "how?"; hook_text "2 CRASHES. 1 EXPLOSION." from frame 1; the last line "Its price?" loops back into the hook.
 - Previous Short: how-much-does-it-cost-to-send-1-kg-into-space-shuttle-falcon-9-starship - no stats yet; evening before (Cybertruck) 946 views, 11.6 likes/1000; channel average stayed 55% = weakest signal vs 70% goal.
-- Weakest hook there: "Rocket fuel is the CHEAP part." - 3 words of build-up before the claim; overlays with fragments ("PRICED LIKE"), too few text seconds (William's review).
+- Weakest hook there: "Rocket fuel is the CHEAP part." - 3 words of build-up before the claim; overlays with fragments ("PRICED LIKE"), too few text seconds (the editor's review).
 - Why it stalled: the claim did not land at frame 1, so sound-off viewers swiped; fragment overlays left beats without a fact.
 - Change now: a number is word one, hook_text from frame 1, 2-3 full-fact pops on every beat (~90% of seconds with text), a dated beat every ~3 s as pattern interrupt (JAN 2015 / APRIL / JUNE / DEC 21 / 37 FLIGHTS), 81 words ~30 s, ending on a question the hook answers.
 
@@ -129,7 +129,7 @@ Every article task adds an entry here (README, "ALGORITHM RULES", Self-learning)
 - Change now: contrarian claim hook, ~29 s / 74 words, a dollar number on every beat (open loop: 9 -> 54,500 -> 3,000 -> <100), loop ending.
 - Long video, first 20 s: opens on the same contrarian claim plus two numbers that clash ($9/kg fuel vs $54,000/kg Shuttle) and an open question ("not in the fuel tank") paid off in the last line; the previous long video opened with a time stamp ("About two and a half minutes after liftoff...").
 
-## 2026-11-08 (afternoon) - William's review of "Rocket Fuel Is the CHEAP Part" (Short + long video)
+## 2026-11-08 (afternoon) - Review of "Rocket Fuel Is the CHEAP Part" (Short + long video)
 - Weak: the hook came too late ("Rocket fuel is..." builds up before the claim lands), text overlays were missing
   or were fragments ("PRICED LIKE"), the density was too low; the long video ended on a call to action.
 - Change from now on: the claim or number lands within 2 s ("$9 a kilo vs $54,000. Here's why."), `hook_text` is

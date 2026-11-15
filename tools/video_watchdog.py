@@ -25,6 +25,12 @@ def main():
     now = datetime.now(timezone.utc)
     shorts = {x.get("slug") for x in load(ROOT / "content/shorts.json", [])}
     shorts |= {x.get("slug") for x in load(ROOT / "ops/story-pending.json", [])}  # uploaded, not yet on the site
+    uploads = load(ROOT / "ops/short-uploads.json", [])  # still listed after pending is cleared, even if the feed is down
+    shorts |= {x.get("slug") for x in uploads if isinstance(x, dict)}
+    titles = set()
+    for row in load(ROOT / "content/shorts.json", []) + uploads:
+        if isinstance(row, dict) and row.get("title"):
+            titles.add(" ".join(row["title"].lower().split()))
     longs = {x.get("slug") for x in load(ROOT / "content/videos.json", [])}
     tried = load(LOG, {})
     queue = ROOT / "video/queue.txt"
@@ -55,7 +61,8 @@ def main():
         ages[s] = age
         if (a.get("video") or {}).get("en") and s not in longs:
             missing.append((s, "full"))
-        if a.get("short") and s not in shorts:
+        yt = " ".join(((a.get("short") or {}).get("yt_title_en") or "").lower().split())
+        if a.get("short") and s not in shorts and yt not in titles:
             missing.append((s, "short"))
     changed = queued = False
     for s, kind in missing:

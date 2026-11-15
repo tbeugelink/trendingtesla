@@ -1,118 +1,96 @@
-# Article task (midday, evening, Saturday) - the full instruction
+# Article task — one article and one Short a day
 
-The scheduled task tells you which SLOT you are: `midday`, `evening` or `saturday`. Work fully unattended: nobody is
-watching, do not ask questions, publish directly. Never skip the run. README.md holds the rules; where README.md and
-this file differ, the sections at the top of README.md win (newest first).
+Work unattended. Publish directly. Do not ask for approval. The spec is `README.md`. Where this file and `README.md` differ, `README.md` wins. Photo and pipeline detail is in `docs/production.md`. The builder's JSON fields are at the top of `build.py`.
 
-| slot | what | long video | topic source |
+| when | article | Short | long video |
 |---|---|---|---|
-| midday (~12:40) | a timeless EXPLAINER (how/why/what/which, a myth checked, a comparison) | YES: "video" script required | proven topic |
-| evening (~21:10, Sun-Fri) | a true STORY (history, people, a turning point, a near failure, a bold bet) | no "video" key | proven topic |
-| saturday (~21:10) | the weekly evergreen explainer, `"evergreen": true` | no "video" key | first unchecked topic in ops/evergreen-topics.md that also has proof |
+| every day, publish around 18:00 Europe/Amsterdam | one article from the fact sheet you were given | yes | no |
+| Saturday | the weekly evergreen guide, `"evergreen": true`, about 1,200–1,800 words | yes | yes: a `video` script |
 
-Right after the push a GitHub Action turns the article into a YouTube Short (public at once, then TikTok, Instagram
-and Facebook) and, for midday, a long video. The Short is where the growth comes from.
+There is no midday slot and no evening slot. Do not write a second article the same day.
 
-## 1. Read first
-Clone is done by the task prompt. Read completely: README.md; **ops/daily-review.md** (this morning's analysis and the
-instructions for today - follow them); **ops/proven-topics.md** and ops/scout-tesla.md (topics that already pull
-viewers); ops/short-signals.md (our own numbers per Short); ops/hook-log.md (what earlier Shorts tried); the newest
-files in ops/short-reports/ (what the renderer really did); ops/health.md if present; ops/library.json (William's
-checked photos); ops/evergreen-topics.md; the docstring at the top of build.py (article format).
+## 1. Input
 
-## 2. Choose a PROVEN topic (William, 11 Nov 2026: only topics whose popularity is already proven)
-- List the titles of the last ~40 articles in content/articles/ so you never repeat a topic (a clearly new angle is fine).
-- Pick from, in this order: (a) ops/proven-topics.md: a Short of the last 30 days with 100K+ views, or a small channel
-  that broke out; (b) an outlier in ops/scout-tesla.md; (c) a topic or angle of our own best Shorts
-  (ops/short-signals.md: most views AND most watched). A real news event of the last 48 hours may win only when it is
-  clearly bigger (several large outlets, and Tesla/SpaceX fans are visibly talking about it).
-- Take the TOPIC and the kind of ANGLE, never the script, the title or the pictures. Make it better and more accurate.
-- Write down the proof in `short.proof`: `{"source": "<title> - <url>", "views": 471000, "why": "one line: why this
-  topic fits our viewers and what our angle adds"}`. No proof, no topic.
-- Topics: Tesla's cars, FSD/Robotaxi/Cybercab, Optimus, energy, charging, software, factories; SpaceX, Starlink, The
-  Boring Company, xAI/Grok when there is a clear link (categories "spacex", "starlink", "xai", "boring"; never
-  "ecosystem"); "musk" strictly factual and balanced, at most one Musk-series episode per week.
-- Research properly: WebSearch + WebFetch the key pages, prefer primary and reputable sources, verify every number,
-  date and quote against a source you fetched. What Musk says will happen is a statement, not a fact.
+You are given a fact sheet: the topic, the angle, the hook to consider, and every core fact with two source URLs. Write only from that sheet. Do not search for a different topic and do not add facts that are not on the sheet.
 
-## 3. Self-learning before writing
-From ops/daily-review.md, ops/short-signals.md, ops/hook-log.md and the previous render report: name what was weak in
-the previous Short of your slot and decide the ONE thing you change now (`short.learning.test`). Change one variable
-at a time, otherwise the morning review cannot tell what worked.
+Read, as far as you need them: `README.md`; the fact sheet; the docstring at the top of `build.py`; `docs/production.md`; `PHOTOS.md`; `ops/library.json` (checked detail photos). `ops/performance.md` is a hint for the angle, not a list of topics you must copy.
 
-## 4. Write the article (English leads; natural, fluent Dutch, not word for word; Dutch number formats)
-- Title: specific and timeless (no "today", "this week"); explainers phrased the way people search. Description 1-2 sentences.
-- Body: simple HTML (<p>, <h2>, <ul>/<li>, <strong>, <em>), 600-900 words (Saturday 700-1,000). An intro that opens
-  with the strongest claim or moment and ends with a clear problem as a plain statement (never a question); then 4-6
-  <h2> headings phrased as the question that problem raises (one or two start with "So"); each section starts with
-  the direct answer in bold and ends with the next problem as a plain statement. Never a question right before a heading.
-- Your own words only; at most one short quote per source; no invented facts, quotes, scenes or numbers.
-- Stock/earnings topics end with: <p><em>This article is for information only and is not financial advice.</em></p>
-  (Dutch: <p><em>Dit artikel is alleen bedoeld als informatie en is geen financieel advies.</em></p>).
-- "sources": the 2-4 sources really used (title prefixed with the outlet, and URL). "category" from CATEGORIES in
-  build.py; "models" from MODELS when mainly about specific vehicles.
-- "images": 3 photo files (at least 2) from PHOTOS.md or "lib/<file>" from ops/library.json that really show the subject.
-- "gen_image" (skip only when mainly about one car model): {"prompt", "subject", "refs": [at least one {"src":
-  "lib/<file>"} of exactly the same product], "profile": "editorial|cinematic|technical", "category": "A|B|C",
-  "describe", "extra": [two more scenes]}. Left-hand drive, right side of the road. Illustrations only, never a fake
-  documentary photo of a real event or a real person.
-- "label": two lines in two colours (types "a", "c" or "n"; one-block "r" only for real bad news): the hook claim.
-- "date"/"time": the actual publication moment, now in Europe/Amsterdam (`TZ=Europe/Amsterdam date`). Never an earlier date. Set "updated" only when the body really changes after publication, to that edit's moment (`YYYY-MM-DD` or a full timestamp). Do not set it when a video is attached, the page is rebuilt, or anything else that is not an edit of the text. File: content/articles/YYYY-MM-DD-slug.json.
+List the titles of the last ~40 articles in `content/articles/` and do not repeat one of those topics.
 
-## 5. Write the Short ("short") - README "SHORT FORMAT v4" (+ v3.1, v3) and "PROVEN TACTICS" are binding
-- 20-30 seconds is the target (15-35 allowed): 55-80 spoken words.
-- `story`: 6-10 beats. Every beat: `"part"` (ONLY "hook", "tension" or "payoff"; nothing else, the last beat is
-  "payoff"), `"t"` ("0-2s", "2-6s", ...), `"text"` (the voice, 7-11 words, 2.5-4 s), `"overlay"` (the exact sentence
-  on screen, at most 36 characters, numbers as digits), two pictures (`"lib"` with 2 files, or "img"/"photo"), `"visual"`.
-- Beat 1 = the hook: the first spoken words ARE the sharpest claim or the most surprising number (max ~8 words). No
-  date, no scene setting, no announcement. Its first picture is the most dramatic picture of the story.
-- The last beat is NOT the hook again: a different line that runs on smoothly into the hook when the Short restarts.
-- Optional `hook_motion`: one line saying what moves in the hook picture ("the rocket lifts off, smoke billows, the
-  camera tilts up"). The first ~4 seconds are made into a moving clip from the FIRST picture of beat 1 (test from
-  12 Nov 2026), so choose a first picture in which something can really move and that is sharp and upright-friendly
-  (the subject in the middle); the clip is checked and falls back to the still photo when it distorts anything.
-- Sound (ElevenLabs sound effects, made automatically from a one-line description): give beat 1 an `"sfx"` that is
-  the natural sound of what moves in the hook picture ("rocket engines igniting, deep roar and crackle", "sharp hiss
-  of gas jets and blowing dust", "electric motor whine accelerating"). At most two other beats may get an `"sfx"`
-  where a real sound adds something (a crash, a heavy door, a charger clicking in). Natural sounds only: no music,
-  no voices, no whistles or game sounds. Without it the Short gets the standard deep impact.
-- Also required: `yt_title_en`, `yt_title_nl` (max 45 characters, the hook's contrast or number), `hooks` (3 variants
-  {"text", "type"}), `hook_pick` {"index", "why"}, `loop` {"last", "how"}, `signals`, `learning` {"prev",
-  "prev_stats", "weakest_hook", "why_stalled", "change", "test"}, `proof` (see 2), `en`, `nl` (spoken text as one paragraph).
-- Never "like and subscribe", "full story" or "TrendingTesla.com" in the script.
+## 2. Topic
 
-## 6. Midday only: write the long video ("video")
-{"en": [...], "nl": [...], "yt_title_en", "yt_title_nl"}: at most 6-8 minutes (900-1,300 words), the article's
-headings. The very first sentence is the hook claim itself; the first 15-20 s promise what the viewer will know at the
-end and open a loop that is paid off late; a new number, question, turn or comparison at least every 20-30 s; every
-text block has its own fitting "img" and/or "photo" (2-4 pictures per block); the last block is a payoff that links
-back to the opening (no call to action). Short sentences, no brackets, no URLs, numbers as digits.
-"yt_title_*": the words people search for (subject plainly + the question or answer, 6-12 words).
+The fact sheet has already chosen the topic. It should be either a surprising company-history story or practical news for an owner (cost, risk, or a feature they need to know). Do not copy a viral topic. If the sheet is a saturated mega-story, use only the angle on the sheet. Skip the sheet and say so in the report only when it repeats one of the last ~40 articles or a core fact has fewer than two sources.
 
-## 7. CHECK before you commit (required - a slip here once cost a day)
-`python3 tools/check_article.py content/articles/<your file>.json` must report **0 errors**. Fix every ERROR and as
-many warnings as you can, then run it again. Never commit with errors.
+## 3. Facts
 
-## 8. Log, build, publish
-- Add the entry at the top of ops/hook-log.md: date, slug, the proof, the 3 hooks and the pick, what was weak in the
-  previous Short, the one change (test) now, how the loop line connects.
-- If you used a topic from ops/evergreen-topics.md, tick it with "(<slug>)"; add 1-3 new ideas you came across.
-- `python3 build.py` must succeed (if Pillow is missing: pip install --break-system-packages pillow); check that
-  public/<slug>/index.html and public/nl/<slug>/index.html exist.
-- `git add -A`, commit with `git -c user.name="tbeugelink" -c user.email="345708345+tbeugelink@users.noreply.github.com"`
-  (never any other email address: the repository is public), message "Article: <english title>". The new article file
-  must be in this one commit (the video workflow looks at the last commit). `git pull --rebase origin main` (if
-  public/ conflicts: rerun build.py, git add -A, continue), then `git push origin main`.
-- After ~2 minutes check the Cloudflare build: `gh api repos/tbeugelink/trendingtesla/commits/$(git rev-parse HEAD)/check-runs
-  --jq '.check_runs[] | .name+" "+.status+" "+(.conclusion//"")'`; no run or failed: push an empty commit "Trigger
-  deploy" (same name and email) and check again. With curl (not WebFetch) verify that
-  https://trendingtesla.com/<slug>/ shows the new title and https://trendingtesla.com/nl/<slug>/ returns 200.
-- Then check that the video run really STARTED: `gh run list -R tbeugelink/trendingtesla -w shorts.yml -L 3`. If the
-  run for your commit is still "queued" after 5 minutes, say so clearly in your summary (the monitor task repairs it).
-- Do not change build.py, covers.py, static/, the workflows, the tools or other articles.
+- Every number, date, name and quote you use is on the fact sheet, with two independent sources.
+- Do not invent a number, a scene or a quote. Do not go and find a new fact to fill a gap. Leave the gap out.
+- What Musk says will happen is written as a statement ("Musk says…"), not as a fact.
+- Uncertain → "according to …" or omit.
 
-## 9. Summary for William (Dutch, short)
-Title; the proof for the topic (source + views); the 3 hooks, the pick and why; the script with timing and the exact
-overlay per beat; the last line and how it runs on into the opening; visual cues in one line; which signals it serves;
-the self-learning note (what was weak, the one change now, text rules applied, whether all beats stay within 2.5-4 s);
-the result of check_article.py; midday: the long video's YouTube title; any problem.
+## 4. Write the article
+
+English leads. Dutch is natural and fluent, not word for word, with Dutch number formats.
+
+- Title: specific, still readable in a year. No "today" or "this week". Description: 1–2 sentences.
+- Body: simple HTML (`<p>`, `<h2>`, `<ul>/<li>`, `<strong>`, `<em>`). Weekdays and Sunday: about 600–900 words. Saturday: about 1,200–1,800 words.
+- The intro opens on the strongest claim and ends on a problem stated as a plain sentence, never a question. Then 4–6 `<h2>` headings (Saturday may need a few more) phrased as the question that problem raises. One or two may start with "So". Each section starts with the direct answer in bold and ends on the next problem as a statement. Never a question immediately before a heading.
+- `sources`: the sources you actually used (outlet prefixed to the title, and the URL). Two to four is normal.
+- `category` from `CATEGORIES` in `build.py`. `models` from `MODELS` when the piece is mainly about specific vehicles.
+- Stock or earnings pieces end with `<p><em>This article is for information only and is not financial advice.</em></p>` and, in Dutch, `<p><em>Dit artikel is alleen bedoeld als informatie en is geen financieel advies.</em></p>`.
+- `images`: 4–6 photos from `PHOTOS.md` or `lib/<file>` from `ops/library.json` that really show the subject. Different from the photos the latest articles in the same category open with.
+- `real_photos` when a freely licensed photo of the subject exists. Rules are in `docs/production.md`. Public domain, CC0 or CC BY only.
+- `gen_image` (skip when the piece is mainly about one car model): `prompt`, `subject`, `refs` (at least one `{"src": "lib/<file>"}` of the same product), `profile` (`editorial`, `cinematic` or `technical`), `category` (`A`, `B` or `C`), `describe`, and `extra` (one or two more scenes). Left-hand drive, right side of the road. Illustrations only.
+- `label`: two lines in two colours (`a`, `c` or `n`). Type `r` only for real bad news. The label carries the hook.
+- `date` and `time`: the real moment of publication in Europe/Amsterdam, set in the last step before the commit (`TZ=Europe/Amsterdam date`). Never backdate. File name: `content/articles/YYYY-MM-DD-slug.json`.
+- The author is the organization. Do not add a byline name.
+
+## 5. Write the Short (`short`)
+
+- About 25–35 seconds, roughly 65–90 spoken words.
+- `story`: 6–10 beats. Every beat has `part` (only `hook`, `tension` or `payoff`; the last beat is `payoff`), `t` (`0-2s`, `2-5s`, …), `text` (the voice), `overlay` (the same words, at most ~36 characters, numbers as digits), at least one picture (`lib`, `img` or `photo`), and `visual` (one line on what is seen).
+- Beat 1 is the hook: the sharpest claim or the most surprising number, at most ~8 words. No date, no scene setting, no announcement. Its first picture is the most dramatic picture of the story and shows the claim.
+- The last beat is not the hook again. It is a different line that runs on into the hook when the Short restarts.
+- Optional `hook_motion`: one line on what moves in the hook picture. The first ~4 seconds can become a clip from that picture, inside the $15 monthly cap. Pick a first picture where something can really move. The clip falls back to the still if it distorts anything.
+- A beat may set `sfx` to a natural sound of what is on screen (a roar, a hiss, a click). Do not describe a cinematic impact, a boom or a drone. Those defaults are off.
+- Required: `yt_title_en` and `yt_title_nl` (at most ~45 characters: the hook's contrast or consequence), `hooks` (exactly 3 variants, `{"text", "type"}`), `hook_pick` (`index`, `why`), `loop` (`last`, `how`), `en` and `nl` (the spoken text as one paragraph).
+- Optional, and fine to omit: `proof`, `learning`, `signals`. Do not chase a "proven topic".
+- Never "like and subscribe", "full story" or the site name in the script.
+
+## 6. Saturday only: the long video (`video`)
+
+On Saturday, and only then, add:
+
+`{"en": [...], "nl": [...], "yt_title_en", "yt_title_nl"}`
+
+About 1,100–1,400 spoken words (about 8–10 minutes), following the article's headings. The first sentence is the hook claim. The first 15–20 seconds say what the viewer will know at the end. A new number, turn or comparison at least every 20–30 seconds. Every text block has its own `img` and/or `photo` (2–4 pictures). The last block pays off the opening. No call to action. Short sentences, no brackets, no URLs, numbers as digits.
+
+`yt_title_*`: the words people search for (the subject in plain words, plus the question or the answer, 6–12 words).
+
+On every other day, omit the `video` key. The pipeline builds a long video only when that key has an English script.
+
+## 7. Check
+
+`python3 tools/check_article.py content/articles/<file>.json` must report **0 errors**. Fix every error, then run it again. Do not commit with errors. Fix warnings when the fix is real. A missing `proof`, `learning` or `signals` is a warning, not an error.
+
+## 8. Build and publish
+
+- If the fact sheet used an idea from `ops/evergreen-topics.md`, tick it with the slug. You may add 1–3 new ideas you actually used.
+- `python3 build.py` must succeed. If Pillow is missing: `pip install --break-system-packages pillow`. Confirm `public/<slug>/index.html` and `public/nl/<slug>/index.html` exist.
+- Set `date` and `time` to now in Europe/Amsterdam, then commit. The identity is the repository account:
+
+```bash
+git add -A
+git -c user.name="tbeugelink" -c user.email="345708345+tbeugelink@users.noreply.github.com" commit -m "Article: <english title>"
+git pull --rebase origin main
+git push origin main
+```
+
+  If `public/` conflicts on rebase, run `build.py` again, add, and continue. Do not use any other commit email. The commit message is the English title only, with no person's name.
+- The new article file must be in the push. The video workflow diffs that whole push, so other commits in the same push do not hide the article.
+- With curl, confirm `https://trendingtesla.com/<slug>/` shows the new title and `https://trendingtesla.com/nl/<slug>/` returns 200. Give the deploy a couple of minutes first.
+- Do not change `build.py`, `covers.py`, `static/`, the workflows, the tools, this file, or other articles. Do not delete or redate anything.
+
+## 9. Report
+
+A short note back, in Dutch: the title; the hook you used and why; the last line and how it runs on into the opening; the `check_article.py` result; on Saturday, the long video's YouTube title; any problem, starting that line with `PROBLEEM:`.

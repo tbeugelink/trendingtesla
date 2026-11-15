@@ -535,11 +535,14 @@ header.hb .pnav>.is-parked{display:none}
 .sheet-main article.money h1{font-size:clamp(1.55rem,2.6vw,2.1rem);line-height:1.16;margin:6px 0 8px}
 .sheet-main article.money .lead{font-size:1.08rem;line-height:1.5;color:var(--muted);max-width:66ch}
 .sheet-main article.money .prose{font-size:1.05rem;line-height:1.7;max-width:66ch}
-.sheet-main article.money .toc{float:none;width:auto;max-width:none;margin:0 0 16px}
+.sheet-main article.money .toc{float:none;width:auto;max-width:none;margin:0 calc(3vw + 14px) 16px}
 .sheet-main article.money .avid{max-width:none}
-.sheet-main article.money .avid.short,.pv-art .avid.short{width:50%;max-width:100%;margin-left:auto;margin-right:auto}
+.sheet-main article.money .avid.short,.pv-art .avid.short{width:auto;max-width:none;margin-left:0;margin-right:0}
+.sheet-main article.money .avid.short .avb,.pv-art .avid.short .avb{display:block;width:50%;max-width:100%;margin-left:auto;margin-right:auto}
+.sheet-main article.money .sources,.sheet-main article.money .imgnote,.sheet-main article.money nav.seq,.sheet-main article.money .pbox,.sheet-main article.money .nform,.sheet-main article.money .avid figcaption{margin-left:calc(3vw + 14px);margin-right:calc(3vw + 14px)}
+@media (max-width:640px){.sheet-main article.money .avid.short .avb,.pv-art .avid.short .avb{width:100%}}
 .sheet-main article.narrow>h1,.sheet-main article.money>h1,.sheet-main article.money>.meta,.sheet-main article.money>.byline{margin-left:calc(3vw + 14px);margin-right:calc(3vw + 14px)}
-@media (max-width:600.98px){.sheet-main article.narrow>h1,.sheet-main article.money>h1,.sheet-main article.money>.meta,.sheet-main article.money>.byline{margin-left:14px;margin-right:14px}}
+@media (max-width:600.98px){.sheet-main article.narrow>h1,.sheet-main article.money>h1,.sheet-main article.money>.meta,.sheet-main article.money>.byline,.sheet-main article.money .toc,.sheet-main article.money .sources,.sheet-main article.money .imgnote,.sheet-main article.money nav.seq,.sheet-main article.money .pbox,.sheet-main article.money .nform,.sheet-main article.money .avid figcaption{margin-left:14px;margin-right:14px}}
 @media (max-width:900px){
 .pv-grid,.pv-art,.pv-art.pv-c,.sheet{grid-template-columns:1fr}
 .pv-lead{grid-template-columns:1fr}

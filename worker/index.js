@@ -149,6 +149,27 @@ export default {
       }
       return json({ error: "method" }, 405);
     }
-    return env.ASSETS.fetch(request);
+    return withCache(u.pathname, await env.ASSETS.fetch(request));
   },
 };
+
+// Hashed and static files (the /img/opt/ name is a content hash; fonts and other
+// images, plus any CSS or JS file) can sit in the browser for a year.
+// HTML, feeds, sitemaps and the search index stay revalidated so a publish shows up.
+const LONG_CACHE = "public, max-age=31536000, immutable";
+const SHORT_CACHE = "public, max-age=0, must-revalidate";
+const LONG_FILE = /\.(?:avif|webp|jpe?g|png|gif|svg|ico|woff2?|ttf|otf|css|js|mjs)$/i;
+
+function cacheControl(pathname) {
+  return LONG_FILE.test(pathname) ? LONG_CACHE : SHORT_CACHE;
+}
+
+function withCache(pathname, response) {
+  const headers = new Headers(response.headers);
+  headers.set("Cache-Control", cacheControl(pathname));
+  return new Response(response.body, {
+    status: response.status,
+    statusText: response.statusText,
+    headers,
+  });
+}

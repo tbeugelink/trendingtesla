@@ -233,7 +233,7 @@ def mark_log(rel, mdl):
 
 
 def ref_allowed(r):
-    """Only references whose rights allow derivative work: William's library and CC0 / public-domain photos."""
+    """Only references whose rights allow derivative work: the checked library and CC0 / public-domain photos."""
     src = str(r.get("src", ""))
     if src.startswith("lib/"):
         return True
@@ -273,7 +273,7 @@ def make_openai(g, refs, used, label, hero):
         chk = C.check(im, subject, [x[0] for x in ok_refs], g.get("category", "A"))
         O.log({"at": datetime.now(timezone.utc).replace(microsecond=0).isoformat(), "label": label, "file": "pending",
                **info, "refs": [x[1].get("src") for x in ok_refs], "try": attempt, "check": chk,
-               "approved_auto": chk["ok"], "approved_william": None, "category": g.get("category", "A")})
+               "approved_auto": chk["ok"], "approved_editor": None, "category": g.get("category", "A")})
         print(f"{label}: {mdl} try {attempt}: visual {chk['visual']} tech {chk.get('technical_pass')} "
               f"journ {chk.get('journalistic_pass')} ${info['cost_usd']} {chk.get('technical_errors')}")
         if chk["ok"]:

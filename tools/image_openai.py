@@ -106,7 +106,7 @@ def generate(prompt, refs, model="gpt-image-2.5-flare", quality="high", size="15
 
 # references: only images we may use for derivative work
 def allowed_ref(path):
-    """True for William's own library images (made by him with ChatGPT) and CC0 / public-domain real photos.
+    """True for the checked library images and CC0 / public-domain real photos.
     CC BY / BY-SA, press images and anything ND or NC are not used as AI references (see the implementation plan)."""
     p = Path(path)
     if "img/lib/" in str(p):
@@ -120,7 +120,7 @@ def allowed_ref(path):
 
 # ---- production guard: budget and daily limit (ops/images-log.jsonl) ----
 LOG = ROOT / "ops/images-log.jsonl"
-MONTH_CAP = float(os.environ.get("OPENAI_MONTH_CAP_USD", "11"))  # ~EUR 10, William's budget
+MONTH_CAP = float(os.environ.get("OPENAI_MONTH_CAP_USD", "11"))  # ~EUR 10 a month
 DAY_CAP = int(os.environ.get("OPENAI_DAY_CAP", "25"))
 
 

@@ -34,9 +34,15 @@ KEY = os.environ.get("ELEVENLABS_API_KEY", "")
 VOICE = (os.environ.get(f"ELEVENLABS_VOICE_ID_{os.environ.get('STORY_VOICE', '1')}") or
          os.environ.get("ELEVENLABS_VOICE_ID", ""))  # STORY_VOICE=1 (default) uses ELEVENLABS_VOICE_ID
 CAPTIONS = os.environ.get("STORY_CAPTIONS", "0") == "1"  # running subtitles off: only key words pop in
-SPEED = {"hook": 1.17, "tension": 1.17, "payoff": 1.17}  # same pace as the long videos
+# Voice and picture pace. Estimates, easy to retune; the voice id is chosen by STORY_VOICE, not here.
+SPEED = {"hook": 1.07, "tension": 1.07, "payoff": 1.07}  # same pace as the long videos
+STORY_STABILITY = float(os.environ.get("STORY_STABILITY", "0.45"))
+STORY_STYLE = float(os.environ.get("STORY_STYLE", "0.3"))
 GAP = {"hook": 0.35, "tension": 0.12, "payoff": 0.3}
 SFX_VOL, BED_VOL = 0.45, 0.14
+# Generic impact hit, bass drop and ambient drone are off. A beat's own "sfx" still plays.
+# Set USE_DEFAULT_SFX = True to bring the three defaults below back.
+USE_DEFAULT_SFX = False
 DEFAULT_SFX = {  # natural cinematic sounds only (no whistles, coins, spins)
     "hook": "Deep cinematic impact hit with a low boom and short rumble tail",
     "payoff": "Deep cinematic bass drop with a soft sub boom, then silence",
@@ -44,7 +50,7 @@ DEFAULT_SFX = {  # natural cinematic sounds only (no whistles, coins, spins)
 }
 END_SEC = 2.2
 END_HOLD = 0.5  # the closing key word (the core message) stays a moment after the voice ends
-# Loopable Shorts (William, 8 Nov 2026): no end card and no spoken slogan any more; the last line flows straight
+# Loopable Shorts (8 Nov 2026): no end card and no spoken slogan any more; the last line flows straight
 # back into the hook. A small silent line on the last beat keeps the promise of the full story on the site.
 # STORY_ENDCARD=1 brings the old "Like and subscribe" end card back.
 ENDCARD = os.environ.get("STORY_ENDCARD") == "1"
@@ -61,8 +67,8 @@ def post(url, body):
 def tts(text, speed, out):
     d = json.loads(post(f"https://api.elevenlabs.io/v1/text-to-speech/{VOICE}/with-timestamps?output_format=mp3_44100_192",
                         {"text": text, "model_id": os.environ.get("ELEVENLABS_MODEL", "eleven_multilingual_v2"),
-                         "voice_settings": {"stability": float(os.environ.get("STORY_STABILITY", "0.2")), "similarity_boost": 0.8,
-                                            "style": float(os.environ.get("STORY_STYLE", "0.8")),
+                         "voice_settings": {"stability": STORY_STABILITY, "similarity_boost": 0.8,
+                                            "style": STORY_STYLE,
                                             "use_speaker_boost": True, "speed": speed}}))
     out.write_bytes(base64.b64decode(d["audio_base64"]))
     al = d.get("alignment") or d["normalized_alignment"]
@@ -470,7 +476,7 @@ def assign_images(a, beats):
         b["_img"] = p
         b["_imgs"] = []
         for lb in ([b["lib"]] if isinstance(b.get("lib"), str) else b.get("lib") or []):
-            q = S.build.STATIC / "img/lib" / lb  # William's own checked detail photos come first
+            q = S.build.STATIC / "img/lib" / lb  # checked detail photos come first
             if q.exists():
                 b["_imgs"].append(q)
             else:
@@ -493,8 +499,8 @@ def assign_images(a, beats):
         used[p] = b["_use"] + 1
 
 
-XFADE = 2.0  # seconds of crossfade between shots (at most 60% of the shorter of the two shots)
-SHOT_MAX = 3.0  # seconds: longer sentences are cut into several shots
+XFADE = 0.15  # seconds of crossfade between shots: a short flash, not a long dissolve
+SHOT_MAX = 2.0  # seconds: longer sentences are cut into several shots
 FRAMINGS = [(1.0, 0.0, 0.0), (1.45, -0.28, -0.05), (1.45, 0.28, -0.05), (1.6, 0.0, -0.12), (1.35, -0.15, 0.05),
             (1.35, 0.15, 0.05)]  # (zoom, x, y offset as share of the free room): whole photo, then close-ups that
 #                                  stay near the middle height, where the subject is (not the sky or the ground)
@@ -688,7 +694,7 @@ def ov_split(txt):
 
 
 def overlay_img(txt, dark=False):
-    """William's sound-off text (9 Nov 2026, v3.1): the beat's statement, big white letters with a thick black edge,
+    """Sound-off text (9 Nov 2026, v3.1): the beat's statement, big white letters with a thick black edge,
     numbers and years in yellow, centred, at most 2 lines; stays on screen for the whole beat. dark=True puts a soft
     semi-transparent band behind it (bright backgrounds: explosions, sunsets)."""
     words = txt.split()
@@ -911,9 +917,7 @@ def main():
         last["text"] = cut
     elif not cut and len(beats) > 1:
         beats.pop()
-    global XFADE, SHOT_MAX
-    if any(b.get("overlay") for b in beats):  # overlay format: a new picture at least every 2 s and quick cuts
-        XFADE, SHOT_MAX = 0.18, 2.0           # (pattern interrupts; the slow 2 s crossfades were for the calm style)
+    # XFADE and SHOT_MAX apply to every format. Overlay beats used to force 0.18 / 2.0; they follow the constants now.
     for b in beats:  # an unknown part name (a script once used "loop" for the last beat) must never stop the video
         if b.get("part") not in SPEED:
             b["part"] = "payoff" if b is not beats[0] else "hook"
@@ -947,19 +951,22 @@ def main():
     if total > MAX_SEC:
         print(f"::warning::story Short is {total:.1f}s (over {MAX_SEC} s): write a shorter script (15-35 s)")
 
-    # 2. sound: voice on the timeline, impact at the hook, a low bed under the tension, a drop at the payoff
+    # 2. sound: voice on the timeline, plus a beat's own natural sfx when the script names one
     pay = next((b["_t0"] for b in beats if b["part"] == "payoff"), None)
     layers = [(b["_voice"], b["_t0"] + (0.25 if i == 0 else 0), 1.0) for i, b in enumerate(beats)]
     if ENDCARD:
         layers.append((slog, body_end + 0.2, 1.0))
     try:
-        # the hook's own sound (what is seen moving: a rocket's roar, a hiss of gas) runs as long as the moving clip
-        layers.append((sfx(beats[0].get("sfx") or DEFAULT_SFX["hook"], 4.0 if beats[0].get("sfx") else 2.5, tmp), 0.0, SFX_VOL))
-        bed_len = (pay or body_end) - beats[0]["_dur"]
-        if bed_len > 3:
-            layers.append((sfx(DEFAULT_SFX["bed"], min(22.0, bed_len), tmp), beats[0]["_dur"], BED_VOL))
-        if pay:
-            layers.append((sfx(DEFAULT_SFX["payoff"], 2.5, tmp), pay, SFX_VOL * 0.8))
+        # a beat's own natural sound still plays; the generic impact hit and the drone do not, unless USE_DEFAULT_SFX
+        hook_sfx = beats[0].get("sfx")
+        if hook_sfx or USE_DEFAULT_SFX:
+            layers.append((sfx(hook_sfx or DEFAULT_SFX["hook"], 4.0 if hook_sfx else 2.5, tmp), 0.0, SFX_VOL))
+        if USE_DEFAULT_SFX:
+            bed_len = (pay or body_end) - beats[0]["_dur"]
+            if bed_len > 3:
+                layers.append((sfx(DEFAULT_SFX["bed"], min(22.0, bed_len), tmp), beats[0]["_dur"], BED_VOL))
+            if pay:
+                layers.append((sfx(DEFAULT_SFX["payoff"], 2.5, tmp), pay, SFX_VOL * 0.8))
         for b in beats[1:]:
             if b.get("sfx"):
                 layers.append((sfx(b["sfx"], min(6.0, b["_dur"]), tmp), b["_t0"], SFX_VOL))
@@ -1018,7 +1025,7 @@ def main():
         nxt = pops[k + 1][0] if k + 1 < len(pops) and pops[k + 1][3] == bi else bend
         held.append((min(p0, bstart) if first else p0, max(p1, nxt), txt))
     pops = held
-    # the hook as big text from the very first frame to the end of the hook beat (William, 8 Nov 2026)
+    # the hook as big text from the very first frame to the end of the hook beat (8 Nov 2026)
     hook_text = ((a.get("short") or {}).get("hook_text") or "").strip().upper()
     if hook_text:
         pops = [(0.0, hook_end, hook_text)] + [p for p in pops if p[0] >= hook_end - 0.05]
@@ -1119,7 +1126,7 @@ def main():
                 capimgs[key] = caption_img(cg[2])
             # opening shot: captions above the label; afterwards in the usual place
             fr.alpha_composite(capimgs[key], (0, int(ltop - 300) if bi == 0 else int(H * 0.60)))
-        if tt >= 2.0:  # no logo in the first 2 seconds: only the hook (William, 9 Nov 2026)
+        if tt >= 2.0:  # no logo in the first 2 seconds: only the hook (9 Nov 2026)
             fr.alpha_composite(logo, (0, 0))
         enc.stdin.write(fr.convert("RGB").tobytes())
     enc.stdin.close()

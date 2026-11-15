@@ -49,7 +49,7 @@ def main():
     good = [x for x in rows if x[2] >= 300 and x[4]]  # analytics arrive 2-3 days after publishing
     avg = lambda k: round(sum(x[k] for x in good) / len(good)) if good else 0  # noqa: E731
     out = [f"# Short signals (updated {datetime.now(timezone.utc):%Y-%m-%d %H:%M} UTC)", "",
-           "Goals (William, 8 Nov 2026): stayed > 70% (viewed vs swiped), watched >= 90% with loops (over 100%),",
+           "Goals (8 Nov 2026): stayed > 70% (viewed vs swiped), watched >= 90% with loops (over 100%),",
            "likes and shares up. 'stayed' = engaged views / views. Length in seconds is estimated from the stats.", "",
            f"Average of Shorts with 300+ views: stayed {avg(3)}%, watched {avg(4)}%, length {avg(6)} s.", "",
            "| published | views | stayed | watched | likes/1000 | length | hook type | hook (first line) |",

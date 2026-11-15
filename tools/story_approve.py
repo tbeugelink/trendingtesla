@@ -1,7 +1,9 @@
-"""Story Shorts wait for William's review: they are uploaded as PRIVATE videos and listed in ops/story-pending.json.
-He checks them in YouTube Studio and DELETES the ones that are not good. This script (every 15 minutes, in
-shorts-page.yml) makes a Short that is still private after REVIEW_HOURS public (with its title as thumbnail), and
-posts every public one to TikTok, Instagram and Facebook via Buffer; the site picks it up from the public feed.
+"""Story Shorts are listed in ops/story-pending.json until they are public and posted to the other networks.
+
+Daily Shorts are uploaded public. This script (every 15 minutes, in shorts-page.yml) makes a Short that is
+still private after REVIEW_HOURS public, posts every public one to TikTok, Instagram and Facebook via Buffer,
+and writes it into content/shorts.json before it leaves the pending list. That way a YouTube-feed outage
+cannot make the watchdog upload a second copy.
 
 Usage (GitHub Actions, with the YT_* secrets, BUFFER_API_KEY and GH_TOKEN):  python3 tools/story_approve.py
 Prints "changed" when ops/story-pending.json was updated.
@@ -30,6 +32,28 @@ with urllib.request.urlopen(req, timeout=60) as r:
 REVIEW_HOURS = 2
 keep, changed = [], False
 now = datetime.now(timezone.utc)
+
+
+def ensure_listed(p):
+    """The slug stays visible to the watchdog after it leaves ops/story-pending.json."""
+    title = p.get("title") or ""
+    led = ROOT / "ops/short-uploads.json"
+    rows = json.loads(led.read_text(encoding="utf-8")) if led.exists() else []
+    known = next((x for x in rows if x.get("id") == p["id"] or x.get("slug") == p.get("slug")), None)
+    if known and not title:
+        title = known.get("title") or ""
+    if not known:
+        rows.insert(0, {"id": p["id"], "slug": p.get("slug") or "", "title": title, "published": p.get("made") or now.isoformat()})
+        led.write_text(json.dumps(rows, indent=2) + "\n", encoding="utf-8")
+    sf = ROOT / "content/shorts.json"
+    items = json.loads(sf.read_text(encoding="utf-8")) if sf.exists() else []
+    if any(x.get("id") == p["id"] or (p.get("slug") and x.get("slug") == p["slug"]) for x in items):
+        return
+    items.insert(0, {"id": p["id"], "slug": p.get("slug") or "", "title": title,
+                     "published": p.get("made") or now.replace(microsecond=0).isoformat()})
+    sf.write_text(json.dumps(items, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+
+
 for p in pending:
     st = status.get(p["id"])
     if st == "private" and now - datetime.fromisoformat(p["made"]) > timedelta(hours=REVIEW_HOURS):
@@ -40,6 +64,7 @@ for p in pending:
         if mp4.exists() and subprocess.run([sys.executable, str(ROOT / "tools/story_publish.py"), p["id"], str(mp4)]).returncode == 0:
             st = "public"
     if st == "public":
+        ensure_listed(p)
         mp4 = ROOT / "video/out" / f"{p['slug']}-en-short.mp4"
         mp4.parent.mkdir(parents=True, exist_ok=True)
         ok = mp4.exists() or subprocess.run(["gh", "run", "download", str(p["run"]), "-n", f"story-{p['slug']}",

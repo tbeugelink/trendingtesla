@@ -8,12 +8,18 @@ channel). Privacy comes from YT_PRIVACY (default "private": Google keeps uploads
 projects private anyway until the project passes its audit).
 """
 import json
+import re
 import urllib.error
 import os
 import sys
 import urllib.parse
 import urllib.request
+from datetime import datetime, timezone
 from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+CHANNEL = "UCwbxx3sGDHFtX035A7eFYXQ"
+SHORT_LISTS = ("content/shorts.json", "ops/story-pending.json", "ops/short-uploads.json")
 
 
 def token():
@@ -25,6 +31,116 @@ def token():
     }).encode()
     with urllib.request.urlopen("https://oauth2.googleapis.com/token", data=data, timeout=60) as r:
         return json.load(r)["access_token"]
+
+
+def norm_title(title):
+    return " ".join(re.sub(r"\s*#shorts\s*$", "", (title or ""), flags=re.I).split()).lower()
+
+
+def load_json(path, default):
+    try:
+        return json.loads(Path(path).read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return default
+
+
+def known_short_rows():
+    rows = []
+    for rel in SHORT_LISTS:
+        data = load_json(ROOT / rel, [])
+        if isinstance(data, list):
+            rows.extend(x for x in data if isinstance(x, dict))
+    return rows
+
+
+def local_duplicate(slug, title):
+    """A Short already recorded for this article or this YouTube title, or None."""
+    nt = norm_title(title)
+    for row in known_short_rows():
+        if slug and row.get("slug") == slug:
+            return row.get("id") or "listed"
+        if nt and norm_title(row.get("title")) == nt:
+            return row.get("id") or "listed"
+    return None
+
+
+def remember_short(vid, slug, title):
+    """Durable record, kept after story-pending is cleared and before the YouTube feed catches up."""
+    p = ROOT / "ops" / "short-uploads.json"
+    rows = load_json(p, [])
+    if not isinstance(rows, list):
+        rows = []
+    title = re.sub(r"\s*#Shorts\s*$", "", title or "").strip()
+    if any(x.get("id") == vid or (slug and x.get("slug") == slug) for x in rows):
+        return
+    rows.insert(0, {"id": vid, "slug": slug, "title": title,
+                    "published": datetime.now(timezone.utc).replace(microsecond=0).isoformat()})
+    p.write_text(json.dumps(rows, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+
+
+def remote_duplicate(title, at):
+    """Best-effort: the public feed, then a channel search. A failure here must not block a first upload."""
+    nt = norm_title(title)
+    if not nt:
+        return None
+    try:
+        req = urllib.request.Request(
+            f"https://www.youtube.com/feeds/videos.xml?channel_id={CHANNEL}",
+            headers={"User-Agent": "trendingtesla.com"})
+        with urllib.request.urlopen(req, timeout=20) as r:
+            xml = r.read().decode("utf-8", "replace")
+        for block in xml.split("<entry>")[1:]:
+            vid = re.search(r"<yt:videoId>([^<]+)</yt:videoId>", block)
+            shown = re.search(r"<media:title>([^<]+)</media:title>", block) or re.search(r"<title>([^<]+)</title>", block)
+            if vid and shown and norm_title(shown.group(1)) == nt:
+                return vid.group(1)
+    except Exception as e:
+        print(f"::warning::YouTube feed not checked for an existing Short ({e})")
+    if not at:
+        return None
+    try:
+        q = urllib.parse.urlencode({"part": "snippet", "channelId": CHANNEL, "type": "video",
+                                    "maxResults": "5", "q": title[:80]})
+        req = urllib.request.Request("https://www.googleapis.com/youtube/v3/search?" + q,
+                                     headers={"Authorization": f"Bearer {at}"})
+        with urllib.request.urlopen(req, timeout=30) as r:
+            data = json.load(r)
+        for it in data.get("items") or []:
+            sn = it.get("snippet") or {}
+            if norm_title(sn.get("title")) == nt:
+                vid = (it.get("id") or {}).get("videoId")
+                if vid:
+                    return vid
+    except Exception as e:
+        print(f"::warning::YouTube title search skipped ({e})")
+    return None
+
+
+def merge_saved(src):
+    """After a hard reset, put this run's new Short rows back (upload ledger and shorts.json)."""
+    src = Path(src)
+
+    def merge(path, mine):
+        cur = load_json(path, [])
+        if not isinstance(cur, list):
+            cur = []
+        ids = {x.get("id") for x in cur}
+        slugs = {x.get("slug") for x in cur if x.get("slug")}
+        add = []
+        for x in mine:
+            if x.get("id") in ids or (x.get("slug") and x.get("slug") in slugs):
+                continue
+            add.append(x)
+            if x.get("id"):
+                ids.add(x["id"])
+            if x.get("slug"):
+                slugs.add(x["slug"])
+        if add:
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text(json.dumps(add + cur, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+
+    merge(ROOT / "content" / "shorts.json", load_json(src / "shorts.json", []))
+    merge(ROOT / "ops" / "short-uploads.json", load_json(src / "short-uploads.json", []))
 
 
 def read_meta(txt):
@@ -110,9 +226,18 @@ def add_captions(vid, path, lang, at):
 
 
 def main():
+    if len(sys.argv) > 2 and sys.argv[1] == "--merge-lists":
+        merge_saved(sys.argv[2])
+        return
     mp4 = Path(sys.argv[1])
     lang = sys.argv[2] if len(sys.argv) > 2 else "en"
     title, desc, tags = read_meta(mp4.with_suffix(".txt"))
+    slug = re.sub(r"-(en|nl)-(full|short)\.mp4$", "", mp4.name)
+    if mp4.name.endswith("-short.mp4"):
+        hit = local_duplicate(slug, title)
+        if hit:
+            print(f"::notice::Skip upload of {mp4.name}: a Short already exists ({hit}). Not uploading a second copy.")
+            return
     if "#Shorts" in title and "#Shorts" not in desc:
         desc += "\n\n#Shorts #Tesla"
     body = {
@@ -122,6 +247,12 @@ def main():
                    "selfDeclaredMadeForKids": False, "containsSyntheticMedia": True},
     }
     at = token()
+    if mp4.name.endswith("-short.mp4"):
+        hit = remote_duplicate(title, at)
+        if hit:
+            print(f"::notice::Skip upload of {mp4.name}: YouTube already has this title ({hit}). Not uploading a second copy.")
+            remember_short(hit, slug, title)
+            return
     size = mp4.stat().st_size
     req = urllib.request.Request(
         "https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status",
@@ -137,6 +268,7 @@ def main():
         vid = json.load(r)["id"]
     register(vid, mp4, lang, title)
     if mp4.name.endswith("-short.mp4"):
+        remember_short(vid, slug, title)
         set_thumbnail(vid, mp4, at)
     # remember the length of long videos; the site shows it ("▶ 4:15") and YouTube's feed has none
     if mp4.name.endswith("-full.mp4"):

@@ -69,7 +69,7 @@ LANGS = {
         "tagline": "Tesla news, explained. Every day.",
         "eyebrow": "Tesla news & honest advice",
         "hero_h": "Everything about your Tesla", "hero_span": "Without the hype",
-        "hero_p": "The most important Tesla news several times a day, explained in plain language. Plus honest buying advice for your model.",
+        "hero_p": "The most important Tesla news, once a day, explained in plain language. Plus honest buying advice for your model.",
         "btn_news": "Latest news", "btn_model": "Choose your model",
         "latest": "Latest news", "more": "More news", "top": "Top story",
         "models_h": "News and advice for your model", "guides_h": "Best picks for your Tesla",
@@ -77,7 +77,7 @@ LANGS = {
         "related": "Read next", "sources": "Sources", "about": "About", "editorial": "Editorial policy",
         "byline": "By the TrendingTesla editorial team", "privacy": "Privacy",
         "switch": "NL", "switch_full": "Nederlands", "i_specs": "Specifications", "i_watch": "Points to watch", "i_special": "What makes it special", "i_acc": "Accessories", "i_acc_soon": "Coming soon: accessories that fit this version, tested and explained.", "slogan": "Daily Tesla news &amp; trends", "search": "Search Tesla news", "none": "Nothing found", "home": "Home", "collapse": "Close menu", "like": "Like", "save": "Save", "saved_btn": "Saved", "saved": "Saved articles", "saved_empty": "You have not saved any articles yet. Tap Save under an article title to keep it here. Saved articles stay in this browser on this device.", "archive": "All news", "newer": "Newer", "older": "Older", "page": "Page", "d_topics": "Topics", "d_models": "Models", "d_more": "More", "menu": "Menu", "tip_h": "A 22 kW charger won't charge your Tesla any faster", "tip_p": "Most Tesla models charge at home at up to 11 kW AC.", "tip_btn": "Read why", "tips": [("HW4", "Buying a used Model 3? Check the hardware first", "The Highland has HW4, older cars HW3. It decides what FSD can do.", "How to check", "used-model-3-highland-vs-classic-hw3-hw4-buying-guide"), ("−20%", "Losing range in winter? It doesn't have to be", "Preconditioning and the right settings save you kilometers.", "9 winter tips", "tesla-winter-range-tips-cold-weather")],
-        "empty": "No articles here yet. New stories are published several times a day.",
+        "empty": "No articles here yet. A new story is published once a day.",
         "cat_intro": "All TrendingTesla articles about {}.",
         "eco_intro": "SpaceX, Starlink, The Boring Company and xAI/Grok: the companies around Tesla, and how they connect.",
         "model_intro": "News, updates and advice for the Tesla {}.",
@@ -86,7 +86,7 @@ LANGS = {
         "notfound": "Page not found", "notfound_text": "This page does not exist (anymore).",
         "back": "Back to the homepage", "min": "min read", "all": "All news",
         "why_h": "Honest news, no sales talk",
-        "why": [("Several times a day", "We follow Tesla news around the clock and publish when something really happens."),
+        "why": [("Once a day", "We follow Tesla news around the clock and publish one story a day."),
                 ("Explained, not copied", "Our own articles: what happened, why it matters and what to watch."),
                 ("Sources included", "Every article links to the sources we used, so you can check them."),
                 ("Always free", "If you buy through our links we may earn a small commission, at no extra cost to you.")],
@@ -100,7 +100,7 @@ LANGS = {
         "tagline": "Tesla-nieuws, helder uitgelegd. Elke dag.",
         "eyebrow": "Tesla-nieuws & eerlijk advies",
         "hero_h": "Alles over jouw Tesla", "hero_span": "Zonder de hype",
-        "hero_p": "Het belangrijkste Tesla-nieuws, meerdere keren per dag helder uitgelegd. Plus eerlijk koopadvies voor jouw model.",
+        "hero_p": "Het belangrijkste Tesla-nieuws, één keer per dag helder uitgelegd. Plus eerlijk koopadvies voor jouw model.",
         "btn_news": "Laatste nieuws", "btn_model": "Kies je model",
         "latest": "Laatste nieuws", "more": "Meer nieuws", "top": "Hoofdverhaal",
         "models_h": "Nieuws en advies voor jouw model", "guides_h": "De beste keuzes voor je Tesla",
@@ -108,7 +108,7 @@ LANGS = {
         "related": "Lees ook", "sources": "Bronnen", "imgnote": "Afbeeldingen zijn illustraties, deels gemaakt met AI.", "photocredit": "Foto's", "imgnote_other": "Overige afbeeldingen zijn illustraties, deels gemaakt met AI.", "about": "Over ons", "editorial": "Redactiebeleid",
         "byline": "Door de redactie van TrendingTesla", "privacy": "Privacy",
         "switch": "EN", "switch_full": "English", "i_specs": "Specificaties", "i_watch": "Aandachtspunten", "i_special": "Bijzonderheden", "i_acc": "Accessoires", "i_acc_soon": "Binnenkort: accessoires die op deze uitvoering passen, getest en uitgelegd.", "slogan": "Iedere dag het laatste nieuws &amp; trends", "search": "Zoek in Tesla-nieuws", "none": "Niets gevonden", "home": "Home", "collapse": "Inklappen", "like": "Vind ik leuk", "save": "Bewaren", "saved_btn": "Bewaard", "saved": "Bewaarde artikelen", "saved_empty": "Je hebt nog geen artikelen bewaard. Tik op Bewaren onder de titel van een artikel om het hier terug te vinden. Bewaarde artikelen blijven in deze browser op dit apparaat.", "archive": "Alle nieuws", "newer": "Nieuwer", "older": "Ouder", "page": "Pagina", "d_topics": "Onderwerpen", "d_models": "Modellen", "d_more": "Meer", "menu": "Menu", "tip_h": "Een 22 kW-laadpaal laadt je Tesla niet sneller", "tip_p": "Veel Tesla-modellen laden thuis met maximaal 11 kW AC.", "tip_btn": "Lees waarom", "tips": [("HW4", "Tweedehands Model 3 kopen? Check eerst de hardware", "De Highland heeft HW4, oudere Model 3's HW3. Dat bepaalt wat FSD kan.", "Zo check je het", "used-model-3-highland-vs-classic-hw3-hw4-buying-guide"), ("−20%", "Minder bereik in de winter? Dat hoeft niet", "Met voorverwarmen en de juiste instellingen houd je meer kilometers over.", "9 wintertips", "tesla-winter-range-tips-cold-weather")],
-        "empty": "Hier staan nog geen artikelen. Er verschijnen meerdere keren per dag nieuwe verhalen.",
+        "empty": "Hier staan nog geen artikelen. Er verschijnt één keer per dag een nieuw verhaal.",
         "cat_intro": "Alle artikelen van TrendingTesla over {}.",
         "eco_intro": "SpaceX, Starlink, The Boring Company en xAI/Grok: de bedrijven rond Tesla, en hoe ze met elkaar verbonden zijn.",
         "model_intro": "Nieuws, updates en advies voor de Tesla {}.",
@@ -117,7 +117,7 @@ LANGS = {
         "notfound": "Pagina niet gevonden", "notfound_text": "Deze pagina bestaat niet (meer).",
         "back": "Terug naar de homepagina", "min": "min lezen", "all": "Al het nieuws",
         "why_h": "Eerlijk nieuws, geen verkooppraatjes",
-        "why": [("Meerdere keren per dag", "We volgen het Tesla-nieuws de klok rond en publiceren als er echt iets gebeurt."),
+        "why": [("Eén keer per dag", "We volgen het Tesla-nieuws de klok rond en publiceren één verhaal per dag."),
                 ("Uitgelegd, niet overgeschreven", "Eigen artikelen: wat er gebeurde, waarom het ertoe doet en waar je op moet letten."),
                 ("Met bronnen", "Elk artikel linkt naar de bronnen die we gebruikten, zodat je ze kunt controleren."),
                 ("Altijd gratis", "Koop je via onze links, dan krijgen wij mogelijk een kleine commissie. Jij betaalt niets extra.")],
@@ -194,7 +194,7 @@ PAGES = {
                "<p>TrendingTesla follows everything that moves at Tesla: vehicles, software, "
                "self-driving, robotaxi, Optimus, energy and the company's results, the wider ecosystem of SpaceX, Starlink, The Boring Company and xAI where it touches Tesla, plus honest "
                "buying advice for Tesla owners.</p>"
-               "<p>Several times a day we pick the stories that matter most and explain them in "
+               "<p>Once a day we pick the story that matters most and explain it in "
                "plain language: what happened, why it matters and what to watch next. We write "
                "our own articles and always link to the sources we used, so you can check them.</p>"
                "<p>Most images on this site are illustrations made for TrendingTesla. Where we use real photos, they are freely licensed (public domain or Creative Commons) and credited under the article. "
@@ -211,7 +211,7 @@ PAGES = {
                "<p>TrendingTesla volgt alles wat er bij Tesla in beweging is: auto's, software, "
                "zelfrijden, robotaxi, Optimus, energie en de bedrijfscijfers, het bredere ecosysteem van SpaceX, Starlink, The Boring Company en xAI waar het Tesla raakt, plus eerlijk "
                "koopadvies voor Tesla-rijders.</p>"
-               "<p>Meerdere keren per dag kiezen we de belangrijkste verhalen en leggen we ze "
+               "<p>Eén keer per dag kiezen we het belangrijkste verhaal en leggen we het "
                "helder uit: wat er gebeurde, waarom het ertoe doet en waar je op moet letten. We "
                "schrijven onze eigen artikelen en linken altijd naar de bronnen die we gebruikten, "
                "zodat je ze kunt controleren.</p>"
@@ -240,8 +240,9 @@ PAGES = {
                "<p>Every article cites the sources it used. They are listed at the bottom of the article, "
                "each with a link, so you can read the underlying reporting yourself.</p>"
                "<h2>Who is responsible</h2>"
-               "<p>A human editorial team reviews every article before publication and is responsible for "
-               "what appears on the site. The team checks the facts, the sources and the wording in both languages.</p>"
+               "<p>The TrendingTesla editorial team is responsible for what appears on the site. Articles are "
+               "published from a fact sheet in which every core fact has two sources. There is no separate "
+               "approval step after the draft is written. Mistakes are corrected as soon as they are known.</p>"
                "<h2>Corrections</h2>"
                "<p>If an article is wrong, incomplete or unclear, write to us through the "
                '<a href="/contact/">contact form</a>. We correct mistakes as soon as we know about them. '
@@ -262,9 +263,9 @@ PAGES = {
                "<p>Elk artikel noemt de bronnen die we gebruikten. Ze staan onderaan het artikel, elk met een "
                "link, zodat je de onderliggende berichtgeving zelf kunt nalezen.</p>"
                "<h2>Wie is verantwoordelijk</h2>"
-               "<p>Een menselijke redactie kijkt elk artikel na vóór publicatie en is verantwoordelijk voor "
-               "wat er op de site staat. De redactie controleert de feiten, de bronnen en de formulering in "
-               "beide talen.</p>"
+               "<p>De redactie van TrendingTesla is verantwoordelijk voor wat er op de site staat. Artikelen "
+               "worden gepubliceerd vanuit een feitenlijst waarin elk kernfeit twee bronnen heeft. Na het "
+               "schrijven is er geen aparte goedkeuringsstap. Fouten verbeteren we zodra we ervan weten.</p>"
                "<h2>Correcties</h2>"
                "<p>Klopt een artikel niet, is het onvolledig of onduidelijk, schrijf ons via het "
                '<a href="/nl/contact/">contactformulier</a>. We verbeteren fouten zodra we ervan weten. '

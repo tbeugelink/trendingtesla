@@ -340,7 +340,7 @@
     "learning": {
       "prev": "how-much-does-it-cost-to-send-1-kg-into-space-shuttle-falcon-9-starship",
       "prev_stats": "not in ops/short-signals.md yet (published 8 Nov midday); the evening Short before it (Cybertruck) 946 views, 11.6 likes/1000, stayed/watched not reported; channel average stayed 55% (weakest signal vs the 70% goal), watched 70%",
-      "weakest_hook": "\"Rocket fuel is the CHEAP part.\" - three words of build-up ('Rocket fuel is') before the claim lands, and William's review found overlays that were fragments ('PRICED LIKE') and too few text seconds",
+      "weakest_hook": "\"Rocket fuel is the CHEAP part.\" - three words of build-up ('Rocket fuel is') before the claim lands, and the editor's review found overlays that were fragments ('PRICED LIKE') and too few text seconds",
       "why_stalled": "the claim landed after ~1.5 s instead of at frame 1, so sound-off viewers saw no reason to stay; fragment overlays carried no fact on their own, so beats 6-7 felt empty",
       "change": "the hook now opens on a number in word one ('Two crashes. One explosion. Then it LANDED.') with hook_text '2 CRASHES. 1 EXPLOSION.' from frame 1; every pop is a full fact (OUT OF HYDRAULIC FLUID, LANDS... TIPS OVER, 37 FLIGHTS), 2-3 pops on every beat so ~90% of seconds carry text; a dated beat every ~3 s (timeline as the pattern interrupt); ending on a question the hook answers"
     }

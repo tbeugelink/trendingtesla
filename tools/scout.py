@@ -298,7 +298,7 @@ def run_tesla(own):
 
 def run_proven(own):
     """ops/proven-topics.md: Shorts of the last 30 days in our niche that already proved they pull viewers
-    (William, 11 Nov 2026: choose topics whose popularity is proven). Every article task picks from this list."""
+    (a hint only: topics that already drew views elsewhere). The article task does not have to pick from this list."""
     cfg = CFG.get("proven") or {}
     ids, notes = [], []
     for query in cfg.get("queries", []):

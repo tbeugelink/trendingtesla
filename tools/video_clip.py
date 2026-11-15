@@ -6,7 +6,7 @@ CLI: python3 tools/video_clip.py <photo> "<what moves>" <out.mp4> [resolution]
 Model: Google's gemini-omni-1.1-flash through the Gemini API (the same GEMINI_API_KEY as the photos; Veo 3.1 was
 switched off on that API on 22 Oct 2026). The photo is cropped to 9:16 and sent as the first frame. Billing is per
 output token ($17.50 per million; about $0.10 per second at 720p): the real usage from the response is logged in
-ops/clips-log.jsonl, and allowed_now() keeps the month under CLIP_MONTH_CAP_USD (default 15, William's budget).
+ops/clips-log.jsonl, and allowed_now() keeps the month under CLIP_MONTH_CAP_USD (default 15).
 Rules (ops/visual-standard.md): an illustration that moves, never a fake documentary shot of a real event, never
 a real person; the subject must stay exactly as in the photo.
 """

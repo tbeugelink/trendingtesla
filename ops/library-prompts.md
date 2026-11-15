@@ -1,6 +1,6 @@
-# Detail library: prompts for ChatGPT (images by William)
+# Detail library: prompts for ChatGPT (images for the checked library)
 
-Vertical photos (9:16) of the details Tesla owners know by heart. Made once, checked by William, then used
+Vertical photos (9:16) of the details Tesla owners know by heart. Made once, checked by the editor, then used
 automatically in Shorts and long videos (`video/story.py`, story beats with `"lib": ["<name>.jpg"]`).
 
 **How to deliver:** save each image as JPG with exactly the file name in the heading, and upload them on GitHub:

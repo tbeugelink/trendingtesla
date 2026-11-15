@@ -8,7 +8,7 @@ Authorship is the organization: the TrendingTesla editorial team (`Redactie Tren
 
 ## Cadence
 
-One article and one Short every day, published around **18:00 Europe/Amsterdam**. On Saturday the article is the weekly evergreen guide and it also gets one long video. No other day gets a long video. A second article on the same day is not part of this cadence.
+One article and one Short every day, published around **21:00 Europe/Amsterdam**. On Saturday the article is the weekly evergreen guide and it also gets one long video. No other day gets a long video. A second article on the same day is not part of this cadence.
 
 Everything publishes automatically. There is no approval step after the draft is written.
 

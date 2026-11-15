@@ -89,7 +89,7 @@ These are not publishing tasks. They only write reports.
 
 - `.github/workflows/yt-learn.yml` — channel and site stats (`ops/stats/`), `ops/performance.md`, `ops/short-signals.md`, `ops/scout-tesla.md`, `ops/proven-topics.md`. Proven topics are a hint, not a rule.
 - `.github/workflows/shorts-page.yml` — YouTube feed into `content/shorts.json` and `content/videos.json`, social catch-up, the watchdog.
-- `tools/health.py` — the chain check. Run it when something looks wrong. It expects one article a day around 18:00 Europe/Amsterdam, and a long video only when that article has a `video` script.
+- `tools/health.py` — the chain check. Run it when something looks wrong. It expects one article a day around 21:00 Europe/Amsterdam, and a long video only when that article has a `video` script.
 
 ## Retired
 

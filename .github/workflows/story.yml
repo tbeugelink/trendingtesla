@@ -33,6 +33,7 @@ jobs:
           ELEVENLABS_VOICE_ID: ${{ vars.ELEVENLABS_VOICE_ID }}
           ELEVENLABS_VOICE_ID_3: ${{ vars.ELEVENLABS_VOICE_ID_3 }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
           STORY_VOICE: "1"
         run: python3 video/story.py "${{ github.event.inputs.slug }}" en
       - name: Keep the generated scene photos (so a re-render does not pay for them again)

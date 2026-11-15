@@ -1,7 +1,7 @@
 {
-  "note": "Video bytes are fetched into video/clips/cache at render time and are not stored in git. Licences are public domain or CC0 only in this seed. CC BY is allowed by the loader when attribution is recorded. No YouTube rips and no news-broadcaster footage.",
+  "note": "Video bytes are fetched into video/clips/cache at render time and are not stored in git. The seed is public domain and CC0. CC BY is allowed when attribution is recorded. Pixabay stock is searched at render time when PIXABAY_API_KEY is set; those files are downloaded, not hotlinked. No YouTube rips and no news-broadcaster footage. NASA and U.S. Space Force clips are preferred for launches.",
   "gaps": [
-    "No public-domain, CC0 or CC BY moving footage was found for the eight Tesla models, Superchargers, factories, Optimus or FSD driving. Those shots keep the existing stills until a clip with an allowed licence is added here."
+    "The committed seed has no moving footage of the eight Tesla models, Superchargers, factories, Optimus or FSD. Those beats use Pixabay when the key is set, and stills only when that search also finds nothing."
   ],
   "clips": [
     {

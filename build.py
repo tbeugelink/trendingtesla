@@ -803,11 +803,17 @@ header.hb .bar{gap:8px}
 header.hb .pnav{display:none;flex:1 1 auto;min-width:0;height:auto;margin:0;overflow-x:auto;scrollbar-width:none}
 header.hb .pn{height:34px;padding:0 8px;font-size:.8rem}
 header.hb .savedlink{margin-left:auto}
-header.hb .sbtn{display:none}
+header.hb .mdrop{position:relative;flex:none}
+header.hb .mdrop>button.pn{border:0;background:transparent;cursor:pointer;font:inherit}
+header.hb .mdrop>button.pn[aria-expanded=true]{background:#272727;color:#fff}
+header.hb .mdrop .pmenu{display:none;left:auto;right:0;top:calc(100% + 4px)}
+header.hb .mdrop.is-open .pmenu{display:grid}
 header.hb .hb-search{display:flex;position:relative;width:min(640px,calc(100% - 8px));max-width:640px;margin:2px auto 10px;height:42px;left:auto;right:auto;top:auto;background:transparent;padding:0}
 header.hb .hb-search input,header.hb .hb-search>button{height:42px}
 header.hb ~ .drawer,header.hb ~ .scrim{top:118px}
-@media (min-width:1100px){header.hb .pnav{display:flex}header.hb .bar .burger{display:none}}
+@media (min-width:1100px){header.hb .pnav{display:flex;overflow:visible}header.hb .bar{position:relative;z-index:3}header.hb .bar .burger{display:none}}
+header.hb .hb-search{z-index:1}
+header.hb .mdrop .pmenu{z-index:6}
 @media (max-width:1099.98px){header.hb .bar .burger{display:flex}header.hb .pnav{display:none}header.hb ~ .drawer,header.hb ~ .scrim{top:108px}}
 /* Layout previews. Scoped so the live pages are unchanged. */
 .pv-note{font-size:.82rem;line-height:1.45;color:var(--muted);background:#161616;border:1px solid var(--border2);border-radius:10px;padding:10px 12px;margin:8px 0 12px}
@@ -1221,7 +1227,7 @@ def page(lang, path, title, description, body, og_type="website", extra_head="",
     fmods = "".join(f'<a href="{url(lang, "model/" + k + "/")}">{MODELS[k]["name"]}</a>' for k in MODEL_ROOTS)
     cats = " · ".join(f'<a href="{url(lang, "category/" + k + "/")}">{c[lang]}</a>' for k, c in CATEGORIES.items() if c["menu"])
     mods = " · ".join(f'<a href="{url(lang, "model/" + k + "/")}">{m["name"]}</a>' for k, m in MODELS.items() if not m.get("parent") or k in MODEL_STRIP)
-    search = (f'<form class="search{" hb-search" if bar == "inline" else ""}" role="search" action="{url(lang)}" '
+    search = (f'<form class="search hb-search" role="search" action="{url(lang)}" '
               f'data-idx="/search-{lang}.json" data-none="{L["none"]}"><input type="search" name="q" '
               f'placeholder="{L["search"]}" aria-label="{L["search"]}" autocomplete="off">'
               f'<button type="submit" aria-label="{L["search"]}">{SEARCH_SVG}</button><div class="res" hidden></div></form>')
@@ -1229,16 +1235,10 @@ def page(lang, path, title, description, body, og_type="website", extra_head="",
              f'<a class="lang" href="{url(alt, path)}" hreflang="{alt}" lang="{alt}" title="{L["switch_full"]}">{L["switch"]}</a>')
     burger = f'<button class="burger" type="button" aria-label="{L["menu"]}" aria-expanded="false" aria-controls="drawer"><span></span><span></span><span></span></button>'
     brand = f'<div class="brand"><a class="logo" href="{url(lang)}">Trending<span>Tesla</span></a></div>'
-    if bar == "inline":
-        # Preview B only. The live header below is unchanged.
-        header = (f'<header class="top hb"><div class="wrap"><div class="bar">{burger}{brand}'
-                  f'{primary_nav(lang, active)}'
-                  f'<button class="sbtn" type="button" aria-label="{L["search"]}">{SEARCH_SVG}</button>'
-                  f'{tools}</div>{search}</div></header>')
-    else:
-        header = (f'<header class="top"><div class="wrap"><div class="bar">{burger}{brand}{search}'
-                  f'<button class="sbtn" type="button" aria-label="{L["search"]}">{SEARCH_SVG}</button>'
-                  f'{tools}</div>{primary_nav(lang, active)}</div></header>')
+    header = (f'<header class="top hb"><div class="wrap"><div class="bar">{burger}{brand}'
+              f'{primary_nav(lang, active)}'
+              f'<button class="sbtn" type="button" aria-label="{L["search"]}">{SEARCH_SVG}</button>'
+              f'{tools}</div>{search}</div></header>')
     return f"""<!doctype html>
 <html lang="{lang}">
 <head>
@@ -1306,6 +1306,11 @@ def drawer(lang, active=None, model=None):
     out += "".join(f'<a class="{"on" if k == active else ""}" href="{url(lang, "category/" + k + "/")}">{btn_label(c, lang)}</a>'
                    for k, c in CATEGORIES.items() if c["menu"] and k not in PRIMARY_CATS)
     out += '</div><hr class="dsep"></div>'
+    L = LANGS[lang]
+    pages = [(L["about"], "about/"), (L["editorial"], "editorial/"), (L["privacy"], "privacy/"),
+             ("Contact", "contact/"), ("Terms" if lang == "en" else "Voorwaarden", "terms/")]
+    out += '<div class="dpri">' + "".join(
+        f'<a class="di" href="{url(lang, path)}">{esc(name)}</a>' for name, path in pages) + '</div>'
     show = cur == "models" or model in MODELS
     out += f'<div class="dmodels{" show" if show else ""}">' + modelnav(lang, model if model in MODELS else None) + '</div>'
     return out
@@ -1691,6 +1696,9 @@ document.querySelectorAll(".avb[data-vid]").forEach(function(b){b.addEventListen
 """
 
 
+JS += r"""
+(function(){var b=document.getElementById("more-btn"),m=document.getElementById("more-menu");if(!b||!m)return;function set(o){b.setAttribute("aria-expanded",o?"true":"false");m.hidden=!o;b.parentNode.classList.toggle("is-open",o)}b.addEventListener("click",function(e){e.stopPropagation();set(m.hidden)});b.addEventListener("keydown",function(e){if(e.key==="ArrowDown"){e.preventDefault();set(true);var a=m.querySelector("a");if(a)a.focus()}});document.addEventListener("click",function(e){if(!b.parentNode.contains(e.target))set(false)});document.addEventListener("keydown",function(e){if(e.key==="Escape"){set(false);if(b.parentNode.contains(document.activeElement))b.focus()}})})();
+"""
 
 def label(a, lang):
     return f'<span class="tag">{CATEGORIES[a["category"]].get("tag", CATEGORIES[a["category"]][lang])}</span>'
@@ -2117,13 +2125,34 @@ def _nav_rows(lang):
     ]
 
 
+def more_links(lang):
+    """Hubs that are not in the top nav, then the site pages."""
+    L = LANGS[lang]
+    rows = [(CATEGORIES[k][lang], f"category/{k}/")
+            for k, c in CATEGORIES.items() if c.get("menu") and k not in PRIMARY_CATS]
+    rows += [
+        (L["archive"], "archive/"),
+        (L["about"], "about/"),
+        (L["editorial"], "editorial/"),
+        (L["privacy"], "privacy/"),
+        ("Contact", "contact/"),
+        ("Terms" if lang == "en" else "Voorwaarden", "terms/"),
+    ]
+    return "".join(f'<a role="menuitem" href="{url(lang, path)}">{esc(name)}</a>' for name, path in rows)
+
+
 def primary_nav(lang, active=None):
     cur = nav_current(active)
     parts = []
     for key, href, label, kids in _nav_rows(lang):
+        if key == "more":
+            on = " on" if cur == "more" else ""
+            parts.append(
+                f'<div class="mdrop"><button type="button" class="pn{on}" id="more-btn" aria-expanded="false" aria-haspopup="true" aria-controls="more-menu">{esc(label)}</button>'
+                f'<div class="pmenu" id="more-menu" role="menu" hidden>{more_links(lang)}</div></div>')
+            continue
         on = " on" if cur == key else ""
-        named = f' aria-label="{esc(LANGS[lang]["all"])}"' if key == "more" else ""
-        link = f'<a class="pn{on}" href="{url(lang, href)}"{named}>{esc(label)}</a>'
+        link = f'<a class="pn{on}" href="{url(lang, href)}">{esc(label)}</a>'
         if kids:
             menu = "".join(f'<a href="{url(lang, path)}">{esc(name)}</a>' for name, path in kids)
             parts.append(f'<div class="pdrop{on}">{link}<div class="pmenu">{menu}</div></div>')
@@ -2421,24 +2450,15 @@ def home_topics(arts, shown, lang):
 
 
 def homepage(arts, lang):
-    """Lead story, a short latest list, topic hubs, and a video strip. Not a full-page video grid."""
+    """Preview B, now the live homepage: lead story, video strip, clock-time list, guides sidebar."""
     L = LANGS[lang]
     if not arts:
         return f'<h1>{esc(NAME)}</h1><p class="empty">{L["empty"]}</p>'
     lead = arts[0]
-    latest = [a for a in arts if a is not lead][:6]
-    shown = {id(lead)} | {id(a) for a in latest}
-    videos = home_videos(arts, lang)
-    video_block = ""
-    if videos:
-        videos_label = {"en": "All videos", "nl": "Alle video's"}[lang]
-        video_block = (f'<section class="hsec" id="videos"><div class="h2"><h2>{esc(L["videos"])}</h2>'
-                       f'<a href="{url(lang, "shorts/")}" aria-label="{esc(videos_label)}">{esc(L["see_all"])}</a></div>'
-                       f'<div class="vstrip">{videos}</div></section>')
-    latest_block = (f'<section class="hsec" id="latest"><div class="h2"><h2>{esc(L["latest"])}</h2>'
-                    f'<a href="{url(lang, "archive/")}" aria-label="{esc(L["all"])}">{esc(L["see_all"])}</a></div>'
-                    f'<div class="grid2">{"".join(card(a, lang) for a in latest)}</div></section>')
-    return home_lead(lead, lang) + latest_block + video_block + home_topics(arts, shown, lang)
+    videos = home_videos(arts, lang, 8)
+    strip = f'<div class="vstrip">{videos}</div>' if videos else ""
+    main = home_lead(lead, lang) + strip + pv_feed([x for x in arts if x is not lead][:14], lang, thumbs=2)
+    return f'<div class="pv pv-b"><div class="pv-grid"><div>{main}</div>{pv_side(arts, lang)}</div></div>'
 
 
 def pv_copy(lang):
@@ -2585,7 +2605,7 @@ def pv_home(variant, arts, lang):
     return f'<div class="pv pv-{variant}"><div class="pv-grid"><div>{main}</div>{pv_side(arts, lang)}</div></div>'
 
 
-def pv_article(variant, a, arts, lang):
+def pv_article(variant, a, arts, lang, live=False):
     en = lang == "en"
     blurb = {
         "a": "Narrow column, related and guides on the right." if en else "Smalle kolom, gerelateerd en gidsen rechts.",
@@ -2616,8 +2636,10 @@ def pv_article(variant, a, arts, lang):
         f'{ad_html("after_intro", lang)}{media}{toc_here}'
         f'<div class="prose">{body}</div>{product_boxes(a, lang)}{ad_html("end", lang)}'
         f'{article_sources(a, lang)}{prev_next(a, arts, lang)}</article>')
-    return (f'<div class="pv">{pv_banner(lang, variant, blurb)}'
-            f'<div class="pv-art pv-{variant}">{rail}<div>{article}</div>{pv_side(arts, lang, a)}</div></div>')
+    inner = f'<div class="pv-art pv-{variant}">{rail}<div>{article}</div>{pv_side(arts, lang, a)}</div>'
+    if live:
+        return f'<div class="pv">{inner}</div>'
+    return (f'<div class="pv">{pv_banner(lang, variant, blurb)}{inner}</div>')
 
 
 def preview_page(lang, path, title, desc, body, real, bar=None):
@@ -2705,7 +2727,6 @@ def build():
                                  "sameAs": ["https://www.youtube.com/@TrendingTesla"]}}
         write(url(lang), page(lang, "", NAME, L["tagline"], body,
                               extra_head=f'<script type="application/ld+json">{json.dumps(site_ld, ensure_ascii=False)}</script>'))
-        write_previews(arts, lang)
 
         # ---------- Category pages ----------
         for key, c in CATEGORIES.items():
@@ -2754,7 +2775,11 @@ def build():
                                "embedUrl": f"https://www.youtube-nocookie.com/embed/{v['id']}",
                                "contentUrl": f"https://www.youtube.com/watch?v={v['id']}"}
                 ld["video"] = {k: x for k, x in ld["video"].items() if x}
-            body, crumb_ld = money_article(a, arts, lang)
+            body = pv_article("b", a, arts, lang, live=True)
+            _, crumb_ld = crumbs(lang, [
+                (c.get("tag", c[lang]), f"category/{a['category']}/"),
+                (t["title"], a["slug"] + "/"),
+            ])
             head = ld_script(ld) + ld_script(crumb_ld)
             write(url(lang, a["slug"] + "/"),
                   page(lang, a["slug"] + "/", t["title"], t["description"], body, "article", head,
@@ -2882,7 +2907,7 @@ def build():
           '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">'
           f"{news}</urlset>")
     write("/898140fa5384efdf934027b6d7051b19.txt", "898140fa5384efdf934027b6d7051b19")
-    write("/robots.txt", f"User-agent: *\nAllow: /\nDisallow: /api/\nDisallow: /preview/\nDisallow: /nl/preview/\n\nSitemap: {SITE}/sitemap.xml\nSitemap: {SITE}/news-sitemap.xml\n")
+    write("/robots.txt", f"User-agent: *\nAllow: /\nDisallow: /api/\n\nSitemap: {SITE}/sitemap.xml\nSitemap: {SITE}/news-sitemap.xml\n")
     write("/favicon.svg",
           '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#e22822"/>'
           '<text x="32" y="45" font-family="system-ui,sans-serif" font-size="38" font-weight="800" fill="#fff" text-anchor="middle">T</text></svg>')

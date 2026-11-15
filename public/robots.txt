@@ -1,8 +1,6 @@
 User-agent: *
 Allow: /
 Disallow: /api/
-Disallow: /preview/
-Disallow: /nl/preview/
 
 Sitemap: https://trendingtesla.com/sitemap.xml
 Sitemap: https://trendingtesla.com/news-sitemap.xml

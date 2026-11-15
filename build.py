@@ -51,6 +51,7 @@ and on the model pages they are tagged with.
 
 Run: python3 build.py   (needs Pillow: pip install --break-system-packages pillow)
 """
+import hashlib
 import html
 import json
 import re
@@ -392,7 +393,7 @@ html,body{overflow-x:clip;max-width:100%}
 body{background:linear-gradient(180deg,rgba(15,15,15,0) 0,rgba(15,15,15,0) 35%,#0f0f0f 100%) top left/100% 900px no-repeat,linear-gradient(160deg,#2b2b2b 0%,#1d1d1d 35%,#141414 70%,#0f0f0f 100%) top left/100% 900px no-repeat,#0f0f0f;min-height:100vh;color:var(--fg);font:17px/1.42 Manrope,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
 main,footer{position:relative;z-index:1}
 a{color:var(--head)}
-img{display:block;max-width:100%;height:auto}
+img{display:block;max-width:100%;height:auto}picture{display:contents}
 h1,h2,h3{color:#ebebeb;font-weight:800}
 .wrap{max-width:var(--max);margin:0 auto;padding:0 12px}
 .narrow{max-width:740px;margin:0 auto}
@@ -1053,6 +1054,78 @@ def site_img(a):
     return CHOSEN.get(a["slug"]) or candidates(a)[0]
 
 
+# Responsive derivatives written under public/img/opt/. The original file stays the img src.
+OPT_WIDTHS = (480, 800, 1200)
+_OPT = {}
+SIZES_LEAD = "(max-width: 800px) 100vw, 58vw"
+SIZES_CARD = "(max-width: 700px) 100vw, 280px"
+SIZES_GRID = "(max-width: 600px) 100vw, (max-width: 1000px) 33vw, 280px"
+SIZES_VIDEO = "(max-width: 800px) 78vw, 240px"
+SIZES_HERO = "(max-width: 760px) 100vw, 720px"
+
+
+def _opt_variants(src):
+    """Build AVIF and WebP widths for one site image. Cached for this build."""
+    if src in _OPT:
+        return _OPT[src]
+    path = OUT / str(src).lstrip("/")
+    if not path.is_file() or path.suffix.lower() not in {".jpg", ".jpeg", ".png", ".webp"}:
+        _OPT[src] = None
+        return None
+    try:
+        from PIL import Image as PILImage
+        im = PILImage.open(path)
+        im.load()
+        if im.mode == "RGBA":
+            bg = PILImage.new("RGB", im.size, (8, 8, 8))
+            bg.paste(im, mask=im.split()[-1])
+            im = bg
+        elif im.mode != "RGB":
+            im = im.convert("RGB")
+    except Exception:
+        _OPT[src] = None
+        return None
+    ow, oh = im.size
+    key = hashlib.sha1(src.encode()).hexdigest()[:12]
+    folder = OUT / "img" / "opt" / key
+    folder.mkdir(parents=True, exist_ok=True)
+    widths = []
+    for want in OPT_WIDTHS:
+        w = ow if want >= ow else want
+        if w in widths:
+            continue
+        h = max(1, round(oh * w / ow))
+        frame = im if (w, h) == (ow, oh) else im.resize((w, h), PILImage.Resampling.LANCZOS)
+        frame.save(folder / f"{w}.webp", "WEBP", quality=62, method=4)
+        frame.save(folder / f"{w}.avif", "AVIF", quality=40, speed=8)
+        widths.append(w)
+        if w == ow:
+            break
+    _OPT[src] = (key, widths)
+    return _OPT[src]
+
+
+def resp_img(src, alt, sizes, *, high=False, lazy=True, width=1200, height=630, cls=""):
+    """AVIF and WebP srcset, with the original file as the fallback src."""
+    cls_attr = f' class="{cls}"' if cls else ""
+    flags = ['decoding="async"']
+    if high:
+        flags.insert(0, 'fetchpriority="high"')
+    elif lazy:
+        flags.insert(0, 'loading="lazy"')
+    img = (f'<img{cls_attr} src="{esc(src)}" alt="{esc(alt)}" width="{width}" height="{height}" '
+           f'{" ".join(flags)}>')
+    info = _opt_variants(src) if isinstance(src, str) and src.startswith("/") else None
+    if not info:
+        return img
+    key, widths = info
+    def srcset(ext):
+        return ", ".join(f"/img/opt/{key}/{w}.{ext} {w}w" for w in widths)
+    sized = esc(sizes)
+    return (f'<picture><source type="image/avif" sizes="{sized}" srcset="{srcset("avif")}">'
+            f'<source type="image/webp" sizes="{sized}" srcset="{srcset("webp")}">{img}</picture>')
+
+
 def read_time(a, lang):
     return max(1, round(len(html.unescape(a[lang]["body"]).split()) / 220))
 
@@ -1231,7 +1304,7 @@ def story(a, lang, tag="h1"):
     byline = (f'<p class="byline"><a href="{url(lang, "editorial/")}">{L["byline"]}</a></p>' if tag == "h1" else "")
     toc, body = enrich(a, lang)
     return (f'<article>'
-            f'<div class="hi"{vhero(a, lang)}><img class="hero-img" src="{site_img(a)}" alt="{esc(t["title"])}" width="1200" height="630" fetchpriority="high">{dur(a, lang)}{ovl(a, lang)}</div>{vscript(a, lang)}'
+            f'<div class="hi"{vhero(a, lang)}>{resp_img(site_img(a), t["title"], SIZES_HERO, lazy=False, cls="hero-img")}{dur(a, lang)}{ovl(a, lang)}</div>{vscript(a, lang)}'
             f'<{tag} class="st">{title}</{tag}>{byline}'
             f'<div class="srow"><p class="meta smeta"><a class="tag" href="{url(lang, "category/" + a["category"] + "/")}">{c.get("tag", c[lang])}</a> · {when(a, lang)}</p>'
             f'<div class="acts"><button class="act like" type="button" data-like="{a["slug"]}" aria-pressed="false" title="{L["like"]}">{HEART_SVG}<span>0</span></button>'
@@ -1278,7 +1351,7 @@ def modelinfo(key, lang, heading=True):
         return ""
     t = inf[lang]
     ph = model_photo(key)
-    img = f'<div class="hi"><img class="hero-img" src="{ph}" alt="Tesla {MODELS[key]["name"]}" width="1200" height="630" fetchpriority="high" decoding="async"></div>' if ph else ""
+    img = f'<div class="hi">{resp_img(ph, "Tesla " + MODELS[key]["name"], SIZES_HERO, lazy=False, cls="hero-img")}</div>' if ph else ""
     rows = "".join(f"<tr><th>{esc(k)}</th><td>{esc(v)}</td></tr>" for k, v in t["specs"])
     li = lambda xs: "<ul>" + "".join(f"<li>{esc(x)}</li>" for x in xs) + "</ul>"
     src = "".join(f'<li><a href="{esc(u)}"{"" if u.startswith("/") else " rel=nofollow target=_blank"}>{esc(ti)}</a></li>'
@@ -1552,16 +1625,16 @@ def card(a, lang, lead=False):
     t = a[lang]
     cls = "card lead" if lead else "card"
     return (f'<a class="{cls}" href="{url(lang, a["slug"] + "/")}">'
-            f'<div class="im"><img src="{site_img(a)}" alt="" width="1200" height="630" loading="lazy" decoding="async">{dur(a, lang)}{ovl(a, lang)}</div>'
+            f'<div class="im">{resp_img(site_img(a), "", SIZES_CARD)}{dur(a, lang)}{ovl(a, lang)}</div>'
             f'<div class="body">{label(a, lang)} <span class="meta">· {when(a, lang)}</span>'
             f'<h3>{esc(t["title"])}</h3><p>{esc(t["description"])}</p></div></a>')
 
 
-def gcard(a, lang):
+def gcard(a, lang, eager=False):
     """Topic list under the lead: photo on top, then title, summary and date."""
     t = a[lang]
     return (f'<a class="card" href="{url(lang, a["slug"] + "/")}">'
-            f'<div class="im"><img src="{site_img(a)}" alt="" width="1200" height="630" loading="lazy" decoding="async">{dur(a, lang)}{ovl(a, lang)}</div>'
+            f'<div class="im">{resp_img(site_img(a), "", SIZES_GRID, lazy=not eager)}{dur(a, lang)}{ovl(a, lang)}</div>'
             f'<div class="body"><h3>{esc(t["title"])}</h3><p>{esc(t["description"])}</p>'
             f'<span class="meta">{when(a, lang)}</span></div></a>')
 
@@ -1661,7 +1734,7 @@ def vscript(a, lang):
 def mini(a, lang):
     t = a[lang]
     return (f'<a class="mini" href="{url(lang, a["slug"] + "/")}">'
-            f'<div class="th"><img src="{site_img(a)}" alt="" width="1200" height="630" loading="lazy" decoding="async">{dur(a, lang)}{ovl(a, lang)}</div>'
+            f'<div class="th">{resp_img(site_img(a), "", SIZES_CARD)}{dur(a, lang)}{ovl(a, lang)}</div>'
             f'<div><h3>{esc(t["title"])}</h3><p class="mdesc">{esc(t["description"])}</p><span class="meta">{when(a, lang)}</span></div></a>')
 
 
@@ -2024,10 +2097,11 @@ def ld_script(obj):
     return f'<script type="application/ld+json">{raw}</script>'
 
 
-def hub_cards(items, lang):
+def hub_cards(items, lang, eager_first=False):
     if not items:
         return f'<p class="empty">{LANGS[lang]["empty"]}</p>'
-    return f'<div class="grid2 gall wide">{"".join(gcard(a, lang) for a in items)}</div>'
+    cards = "".join(gcard(a, lang, eager=eager_first and i == 0) for i, a in enumerate(items))
+    return f'<div class="grid2 gall wide">{cards}</div>'
 
 
 def category_hub(key, items, lang):
@@ -2040,12 +2114,12 @@ def category_hub(key, items, lang):
     if key == "guides" and items:
         featured = sorted(items, key=lambda a: words(a, "en"), reverse=True)[:6]
         extra = (f'<section class="starthere"><h2>{esc(L["start_here"])}</h2>'
-                 f'<p class="sub">{esc(L["start_p"])}</p>{hub_cards(featured, lang)}</section>')
+                 f'<p class="sub">{esc(L["start_p"])}</p>{hub_cards(featured, lang, eager_first=True)}</section>')
         if len(items) > len(featured):
             extra += f'<h2 class="rubh">{esc(L["all_guides"])}</h2>'
         else:
             show = []
-    grid = hub_cards(show, lang) if show or not extra else ""
+    grid = hub_cards(show, lang, eager_first=not extra) if show or not extra else ""
     body = (f'{nav}<header class="hubhead"><h1>{esc(c[lang])}</h1><p class="lead">{esc(intro)}</p></header>'
             f'{extra}{grid}')
     return body, ld, intro
@@ -2098,10 +2172,11 @@ def video_for(a, lang):
 
 def player(vid, kind, label, poster, priority):
     w, h = (1200, 630) if kind == "long" else (360, 640)
-    extra = ' fetchpriority="high"' if priority else ' loading="lazy"'
+    sizes = SIZES_HERO if kind == "long" else "(max-width: 800px) 70vw, 280px"
+    # The article's main picture loads immediately. fetchpriority=high is reserved for the homepage lead.
+    photo = resp_img(poster, "", sizes, lazy=not priority, width=w, height=h)
     return (f'<figure class="avid {kind}"><button class="avb" type="button" data-vid="{esc(vid)}" aria-label="{esc(label)}">'
-            f'<img src="{esc(poster)}" alt="" width="{w}" height="{h}" decoding="async"{extra}>'
-            f'<span class="shp" aria-hidden="true"></span></button><figcaption>{esc(label)}</figcaption></figure>')
+            f'{photo}<span class="shp" aria-hidden="true"></span></button><figcaption>{esc(label)}</figcaption></figure>')
 
 
 def article_media(a, lang):
@@ -2115,8 +2190,7 @@ def article_media(a, lang):
         blocks.append(player(short["id"], "short", LANGS[lang]["watch_short"], poster, not bool(video)))
     if blocks:
         return "".join(blocks)
-    return (f'<div class="hi"><img class="hero-img" src="{esc(poster)}" alt="{esc(a[lang]["title"])}" '
-            f'width="1200" height="630" fetchpriority="high" decoding="async"></div>')
+    return f'<div class="hi">{resp_img(poster, a[lang]["title"], SIZES_HERO, lazy=False, cls="hero-img")}</div>'
 
 
 def article_sources(a, lang):
@@ -2211,7 +2285,7 @@ def home_lead(a, lang):
     c = CATEGORIES[a["category"]]
     href = url(lang, a["slug"] + "/")
     return (f'<article class="leadstory"><a class="leadim" href="{href}">'
-            f'<img src="{site_img(a)}" alt="{esc(t["title"])}" width="1200" height="630" fetchpriority="high" decoding="async"></a>'
+            f'{resp_img(site_img(a), t["title"], SIZES_LEAD, high=True, lazy=False)}</a>'
             f'<div><p class="meta smeta"><a class="tag" href="{url(lang, "category/" + a["category"] + "/")}">{esc(c.get("tag", c[lang]))}</a>'
             f' · {when(a, lang)} · {read_time(a, lang)} {L["min"]}</p>'
             f'<h1><a href="{href}">{esc(t["title"])}</a></h1>'
@@ -2247,7 +2321,7 @@ def home_videos(arts, lang, n=8):
             badge = LANGS[lang]["videos"]
         cards.append(
             f'<a class="vcard" href="{href}"><span class="vim">'
-            f'<img src="{site_img(a)}" alt="" width="480" height="270" loading="lazy" decoding="async">'
+            f'{resp_img(site_img(a), "", SIZES_VIDEO, width=480, height=270)}'
             f'<span class="vpl" aria-hidden="true"></span>'
             f'<span class="dur dvo">{esc(badge)}</span></span>'
             f'<strong>{esc(t["title"])}</strong></a>')
@@ -2295,6 +2369,7 @@ def homepage(arts, lang):
 def build():
     load_money()
     load_shorts()
+    _OPT.clear()
     arts = load_articles()
     ALL_ARTS[:] = arts
     seen = {}

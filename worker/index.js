@@ -3,6 +3,7 @@
 // Likes are stored in one SQLite-backed Durable Object (no accounts, no personal data).
 import { DurableObject } from "cloudflare:workers";
 import { EmailMessage } from "cloudflare:email";
+import { REDIRECTS } from "./redirects.js";
 
 const SLUG = /^[a-z0-9-]{3,120}$/;
 
@@ -114,6 +115,17 @@ export default {
     if (onSite && (host === "www.trendingtesla.com" || u.protocol === "http:")) {
       const dest = new URL(u.pathname + u.search, "https://trendingtesla.com");
       return Response.redirect(dest.toString(), 301);
+    }
+    // Removed articles: 301 to the closest kept article, or to a model/category page.
+    // Map lives in worker/redirects.js (same pairs as content/redirects.json).
+    {
+      const path = u.pathname.length > 1 && !u.pathname.endsWith("/") ? u.pathname + "/" : u.pathname;
+      const destPath = REDIRECTS[path];
+      if (destPath) {
+        const dest = new URL(destPath, u.origin);
+        dest.search = u.search;
+        return Response.redirect(dest.toString(), 301);
+      }
     }
     // old WordPress addresses from the domain's previous site (?p=1, ?feed=rss2, ?s=..., ?author=1) showed the
     // home page and were reported as duplicates by Search Console: tell crawlers they are gone for good

@@ -1805,7 +1805,24 @@ def build():
     write("/favicon.svg",
           '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#e22822"/>'
           '<text x="32" y="45" font-family="system-ui,sans-serif" font-size="38" font-weight="800" fill="#fff" text-anchor="middle">T</text></svg>')
+    write_redirects()
     print(f"Built {len(arts)} article(s) in {len(LANGS)} languages -> {OUT}")
+
+
+def write_redirects():
+    """301 map for removed articles. Cloudflare static assets read public/_redirects;
+    the worker applies the same pairs from worker/redirects.js before that."""
+    src = ROOT / "content" / "redirects.json"
+    if not src.exists():
+        return
+    rows = json.loads(src.read_text(encoding="utf-8"))
+    lines = ["# Removed articles. Source of truth: content/redirects.json"]
+    for row in rows:
+        frm, to = row["from"], row["to"]
+        lines.append(f"{frm} {to} 301")
+        if frm.endswith("/") and frm != "/":
+            lines.append(f"{frm[:-1]} {to} 301")
+    (OUT / "_redirects").write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
 if __name__ == "__main__":

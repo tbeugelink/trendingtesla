@@ -1357,8 +1357,8 @@ def drawer(lang, active=None, model=None):
            f'<button class="di dclose" type="button">‹ {L["collapse"]}</button>'
            f'<div class="dpri">{drawer_links(lang, active)}</div><hr class="dsep">'
            f'<div class="mobonly"><div class="dtopics">')
-    out += "".join(f'<a class="{"on" if k == active else ""}" href="{url(lang, "category/" + k + "/")}">{btn_label(c, lang)}</a>'
-                   for k, c in CATEGORIES.items() if c["menu"] and k not in PRIMARY_CATS)
+    out += "".join(f'<a class="{"on" if path == f"category/{active}/" else ""}" href="{url(lang, path)}">{esc(name)}</a>'
+                   for name, path in more_category_rows(lang))
     out += '</div><hr class="dsep"></div>'
     L = LANGS[lang]
     pages = [(L["about"], "about/"), (L["editorial"], "editorial/"), (L["privacy"], "privacy/"),
@@ -2166,8 +2166,7 @@ def nav_current(active):
 
 def _nav_rows(lang):
     L = LANGS[lang]
-    more = [(CATEGORIES[k][lang], f"category/{k}/")
-            for k, c in CATEGORIES.items() if c.get("menu") and k not in PRIMARY_CATS]
+    more = more_category_rows(lang)
     return [
         ("models", "category/models/", L["nav_models"], [(MODELS[k]["name"], f"model/{k}/") for k in MODEL_ROOTS]),
         ("energy", "category/energy/", L["nav_energy"], ()),
@@ -2180,11 +2179,32 @@ def _nav_rows(lang):
     ]
 
 
+def more_category_rows(lang):
+    """Category hubs that live in the More menu. The sidebar uses the same list."""
+    return [(CATEGORIES[k][lang], f"category/{k}/")
+            for k, c in CATEGORIES.items() if c.get("menu") and k not in PRIMARY_CATS]
+
+
+def sidebar_topics(lang):
+    """Every topic in the header, then the More hubs, then All news once."""
+    L = LANGS[lang]
+    return [
+        (L["nav_models"], "category/models/"),
+        (L["nav_energy"], "category/energy/"),
+        (L["nav_fsd"], "category/fsd/"),
+        (L["nav_space"], "category/spacex/"),
+        (L["nav_xai"], "category/xai/"),
+        (CATEGORIES["guides"][lang], "category/guides/"),
+        (L["videos"], "shorts/"),
+        *more_category_rows(lang),
+        (L["archive"], "archive/"),
+    ]
+
+
 def more_links(lang):
     """Hubs that are not in the top nav, then the site pages."""
     L = LANGS[lang]
-    rows = [(CATEGORIES[k][lang], f"category/{k}/")
-            for k, c in CATEGORIES.items() if c.get("menu") and k not in PRIMARY_CATS]
+    rows = more_category_rows(lang)
     rows += [
         (L["archive"], "archive/"),
         (L["about"], "about/"),
@@ -2601,16 +2621,7 @@ def page_side(arts, lang, kind="home", current=None, skip=None):
             parts.append(_side_section(L["latest"], _side_ul(lang, latest, "latest")))
         if start:
             parts.append(_side_section(C["start"], _side_ol(lang, start)))
-    hubs = [
-        (L["nav_models"], "category/models/"),
-        (L["nav_energy"], "category/energy/"),
-        (L["nav_fsd"], "category/fsd/"),
-        (L["nav_space"], "category/spacex/"),
-        (L["nav_xai"], "category/xai/"),
-        (CATEGORIES["guides"][lang], "category/guides/"),
-        (L["videos"], "shorts/"),
-        (L["archive"], "archive/"),
-    ]
+    hubs = sidebar_topics(lang)
     here = None
     if kind == "model":
         here = "category/models/"
@@ -2622,17 +2633,12 @@ def page_side(arts, lang, kind="home", current=None, skip=None):
         key = current if isinstance(current, str) else None
         if kind == "article" and not isinstance(current, str) and current is not None:
             key = current.get("category")
-        here = {
-            "models": "category/models/",
-            "energy": "category/energy/",
-            "fsd": "category/fsd/",
-            "robotaxi": "category/fsd/",
-            "spacex": "category/spacex/",
-            "starlink": "category/spacex/",
-            "xai": "category/xai/",
-            "guides": "category/guides/",
-            "news": "archive/",
-        }.get(key)
+        if key == "robotaxi":
+            here = "category/fsd/"
+        elif key == "starlink":
+            here = "category/spacex/"
+        elif key:
+            here = f"category/{key}/"
     label = "Topics" if lang == "en" else "Onderwerpen"
     items = "".join(
         f'<li><a{" class=\"on\"" if path == here else ""} href="{url(lang, path)}">{esc(name)}</a></li>'

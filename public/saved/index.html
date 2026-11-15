@@ -345,7 +345,7 @@ article.narrow > h1{margin-left:14px}article.narrow .cform{margin-left:14px}
 .pdrop:last-child .pmenu{left:auto;right:0}
 .pmenu a{padding:8px 12px;border-radius:8px;color:#ebebeb;text-decoration:none;font-size:.86rem;font-weight:700;white-space:nowrap}
 .pmenu a:hover{background:#272727}
-.crumbs{margin:14px 0 4px;font-size:.82rem;color:var(--dim)}
+.crumbs{margin:-2px 0 4px;font-size:.82rem;color:var(--dim)}
 .crumbs ol{display:flex;flex-wrap:wrap;gap:6px 0;list-style:none;padding:0;margin:0}
 .crumbs li{display:flex;align-items:center;gap:6px;min-width:0}
 .crumbs li:not(:last-child)::after{content:"/";color:var(--dim);margin-left:6px}
@@ -524,8 +524,9 @@ header.hb .pnav>.is-parked{display:none}
 /* One centered frame for every page: reading column plus a right sidebar. */
 .sheet{display:grid;grid-template-columns:minmax(0,1fr) 292px;gap:26px;align-items:start}
 .sheet-main{min-width:0}
-.sheet .leadstory{margin-top:0;align-items:start}
-.sheet:has(.leadstory)>.pv-side{margin-top:2px}
+.sheet .leadstory{margin-top:1px;align-items:start}
+.pv-side{margin-top:1px}
+.sheet:has(.leadstory)>.pv-side{margin-top:3px}
 .sheet-main article.narrow,.sheet-main>.narrow{max-width:none;margin:0}
 .sheet-main article.narrow>h1,.sheet-main article.narrow .cform,.sheet-main article.narrow .lead,.sheet-main article.narrow .prose{margin-left:0;margin-right:0}
 .sheet-main .prose{max-width:68ch}

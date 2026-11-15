@@ -473,8 +473,10 @@ header.hb .mdrop .pmenu{display:none;left:auto;right:0;top:calc(100% + 4px)}
 header.hb .mdrop.is-open .pmenu{display:grid}
 header.hb{padding-bottom:0}
 .hb-find{padding:8px 0 18px}
-.hb-find .hb-search{display:flex;position:relative;width:min(640px,calc(100% - 8px));max-width:640px;margin:0 auto;height:42px;background:transparent;padding:0}
+.hb-find .hb-search{display:flex;position:relative;width:min(640px,calc(100% - 8px));max-width:640px;margin:0 auto;height:42px;background:transparent;padding:0;border-radius:10px}
 .hb-find .hb-search input,.hb-find .hb-search>button{height:42px}
+.hb-find .hb-search input:focus,.hb-find .hb-search input:focus-visible,.hb-find .hb-search>button:focus,.hb-find .hb-search>button:focus-visible{outline:none}
+.hb-find .hb-search:hover,.hb-find .hb-search:focus-within{outline:2px solid var(--blue2);outline-offset:2px}
 header.hb .sbtn{display:grid;width:36px;height:36px;margin-left:auto;border:0;background:transparent;color:#ebebeb}
 header.hb .sbtn:focus-visible{outline:2px solid var(--blue2);outline-offset:2px}
 header.hb .savedlink{margin-left:6px}

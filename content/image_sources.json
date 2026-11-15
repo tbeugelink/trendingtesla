@@ -994,5 +994,32 @@
         "src": "lib/starship-pad.jpg"
       }
     ]
+  },
+  "news/one-door-delayed-tesla-model-x-almost-two-years-1.jpg": {
+    "article": "one-door-delayed-tesla-model-x-almost-two-years",
+    "real": true,
+    "page": "https://commons.wikimedia.org/wiki/File:Tesla_Model_X_(36008619486).jpg",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/Tesla_Model_X_%2836008619486%29.jpg/3840px-Tesla_Model_X_%2836008619486%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY 2.0",
+    "credit": "David Merrett from Daventry, England, CC BY 2.0, Wikimedia Commons",
+    "added": "2026-11-15"
+  },
+  "news/one-door-delayed-tesla-model-x-almost-two-years-2.jpg": {
+    "article": "one-door-delayed-tesla-model-x-almost-two-years",
+    "real": true,
+    "page": "https://commons.wikimedia.org/wiki/File:Tesla_Model_X_at_DFJ,_under_the_wing_of_the_Falcon-wing_doors._(21980407905).jpg",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Tesla_Model_X_at_DFJ%2C_under_the_wing_of_the_Falcon-wing_doors._%2821980407905%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "license": "CC BY 2.0",
+    "credit": "Steve Jurvetson from Los Altos, USA, CC BY 2.0, Wikimedia Commons",
+    "added": "2026-11-15"
+  },
+  "news/one-door-delayed-tesla-model-x-almost-two-years-3.jpg": {
+    "article": "one-door-delayed-tesla-model-x-almost-two-years",
+    "real": true,
+    "page": "https://commons.wikimedia.org/wiki/File:Tesla_Store_with_Electric_Cars,_Model_X_-_Waikiki,_Honolulu_(49539445881).jpg",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Tesla_Store_with_Electric_Cars%2C_Model_X_-_Waikiki%2C_Honolulu_%2849539445881%29.jpg/3840px-Tesla_Store_with_Electric_Cars%2C_Model_X_-_Waikiki%2C_Honolulu_%2849539445881%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY 2.0",
+    "credit": "Tony Webster from Minneapolis, Minnesota, United States, CC BY 2.0, Wikimedia Commons",
+    "added": "2026-11-15"
   }
 }

@@ -80,18 +80,27 @@
   "real_photos": [
     {
       "page": "https://commons.wikimedia.org/wiki/File:Tesla_Model_X_(36008619486).jpg",
-      "describe": "a white Model X on a display floor with both falcon-wing doors raised, a Model X sign in front, people standing beside the car"
+      "describe": "a white Model X on a display floor with both falcon-wing doors raised, a Model X sign in front, people standing beside the car",
+      "file": "news/one-door-delayed-tesla-model-x-almost-two-years-1.jpg",
+      "credit": "David Merrett from Daventry, England, CC BY 2.0, Wikimedia Commons"
     },
     {
       "page": "https://commons.wikimedia.org/wiki/File:Tesla_Model_X_at_DFJ,_under_the_wing_of_the_Falcon-wing_doors._(21980407905).jpg",
-      "describe": "a white Model X seen from the rear three-quarter, one falcon-wing door raised, four people standing next to the open doorway"
+      "describe": "a white Model X seen from the rear three-quarter, one falcon-wing door raised, four people standing next to the open doorway",
+      "file": "news/one-door-delayed-tesla-model-x-almost-two-years-2.jpg",
+      "credit": "Steve Jurvetson from Los Altos, USA, CC BY 2.0, Wikimedia Commons"
     },
     {
       "page": "https://commons.wikimedia.org/wiki/File:Tesla_Store_with_Electric_Cars,_Model_X_-_Waikiki,_Honolulu_(49539445881).jpg",
-      "describe": "a white Model X inside a Tesla store, seen through the glass front, with one falcon-wing door raised"
+      "describe": "a white Model X inside a Tesla store, seen through the glass front, with one falcon-wing door raised",
+      "file": "news/one-door-delayed-tesla-model-x-almost-two-years-3.jpg",
+      "credit": "Tony Webster from Minneapolis, Minnesota, United States, CC BY 2.0, Wikimedia Commons"
     }
   ],
   "images": [
+    "news/one-door-delayed-tesla-model-x-almost-two-years-1.jpg",
+    "news/one-door-delayed-tesla-model-x-almost-two-years-2.jpg",
+    "news/one-door-delayed-tesla-model-x-almost-two-years-3.jpg",
     "models/mx-1.jpg",
     "models/mxc-1.jpg",
     "models/mx-4.jpg",
@@ -259,5 +268,22 @@
     },
     "en": "One door delayed this SUV by two years. Sonar had to judge how far it could open. Customers waited nearly two years past the plan. Musk told Reuters they got carried away. Those doors overheated, leaked oil and sagged. Tesla sued the supplier, then changed the design. Later Tesla blamed its own hubris. Twelve thousand S, and only twenty four hundred X. It had to be better than any other door.",
     "nl": "Eén deur zette deze SUV twee jaar terug. Sonar moest bepalen hoe ver hij open kon. Klanten wachtten bijna twee jaar langer dan het plan. Musk zei tegen Reuters dat ze zich hadden laten meeslepen. Die deuren werden te heet, lekten olie en zakten door. Tesla daagde de leverancier en veranderde toen het ontwerp. Later gaf Tesla zijn eigen hubris de schuld. Twaalfduizend S, en maar vierentwintighonderd X. Hij moest beter zijn dan elke andere deur."
-  }
+  },
+  "credits": [
+    {
+      "file": "news/one-door-delayed-tesla-model-x-almost-two-years-1.jpg",
+      "credit": "David Merrett from Daventry, England, CC BY 2.0, Wikimedia Commons",
+      "page": "https://commons.wikimedia.org/wiki/File:Tesla_Model_X_(36008619486).jpg"
+    },
+    {
+      "file": "news/one-door-delayed-tesla-model-x-almost-two-years-2.jpg",
+      "credit": "Steve Jurvetson from Los Altos, USA, CC BY 2.0, Wikimedia Commons",
+      "page": "https://commons.wikimedia.org/wiki/File:Tesla_Model_X_at_DFJ,_under_the_wing_of_the_Falcon-wing_doors._(21980407905).jpg"
+    },
+    {
+      "file": "news/one-door-delayed-tesla-model-x-almost-two-years-3.jpg",
+      "credit": "Tony Webster from Minneapolis, Minnesota, United States, CC BY 2.0, Wikimedia Commons",
+      "page": "https://commons.wikimedia.org/wiki/File:Tesla_Store_with_Electric_Cars,_Model_X_-_Waikiki,_Honolulu_(49539445881).jpg"
+    }
+  ]
 }

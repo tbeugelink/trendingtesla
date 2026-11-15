@@ -51,71 +51,14 @@ jobs:
             echo "slugs=${{ github.event.inputs.slug }}" >> "$GITHUB_OUTPUT"
             echo "langs=${{ github.event.inputs.langs }}" >> "$GITHUB_OUTPUT"
           else
-            # Diff the whole push (before..HEAD), not only HEAD~1, so an article committed
-            # together with other commits still gets its video. Added files only, so a later
-            # photo commit that edits the article does not upload a second Short.
-            before="${{ github.event.before }}"
-            zero="0000000000000000000000000000000000000000"
-            if [ -n "$before" ] && [ "$before" != "$zero" ] && git cat-file -e "${before}^{commit}" 2>/dev/null; then
-              base="$before"
-            else
-              echo "::warning::Push base '${before}' is not in this checkout; diffing HEAD~1 only"
-              base="HEAD~1"
-            fi
-            DIFF_BASE="$base" python3 - << 'PY'
-import json, os, subprocess, sys
-from pathlib import Path
-base = os.environ["DIFF_BASE"]
-out = subprocess.check_output(
-    ["git", "diff", "--name-only", "--diff-filter=A", base, "HEAD", "--", "content/articles"], text=True)
-files = [f for f in out.splitlines() if f.endswith(".json")]
-
-def load(p):
-    try:
-        return json.loads(Path(p).read_text(encoding="utf-8"))
-    except (OSError, ValueError):
-        return []
-
-have_short, titles = set(), set()
-for rel in ("content/shorts.json", "ops/story-pending.json", "ops/short-uploads.json"):
-    for row in load(rel):
-        if not isinstance(row, dict):
-            continue
-        if row.get("slug"):
-            have_short.add(row["slug"])
-        if row.get("title"):
-            titles.add(" ".join(str(row["title"]).lower().split()))
-have_long = {row.get("slug") for row in load("content/videos.json") if isinstance(row, dict) and row.get("slug")}
-slugs, longs, story = [], [], []
-for f in files:
-    try:
-        d = json.loads(Path(f).read_text(encoding="utf-8"))
-    except ValueError:
-        print(f"::warning::skip {f}: not valid JSON", file=sys.stderr)
-        continue
-    slug = d.get("slug") or ""
-    sh = d.get("short") or {}
-    if sh:
-        title = " ".join((sh.get("yt_title_en") or "").lower().split())
-        if slug in have_short or (title and title in titles):
-            print(f"::notice::skip Short for {slug}: already uploaded", file=sys.stderr)
-        else:
-            slugs.append(slug)
-            if sh.get("story"):
-                story.append(slug)
-    video = d.get("video") or {}
-    # a long video only when the article has an English video script
-    if video.get("en"):
-        if slug in have_long:
-            print(f"::notice::skip long video for {slug}: already uploaded", file=sys.stderr)
-        else:
-            longs.append(slug)
-with Path(os.environ["GITHUB_OUTPUT"]).open("a", encoding="utf-8") as h:
-    h.write(f"slugs={' '.join(slugs)}\nlongs={' '.join(longs)}\nstory={' '.join(story)}\n")
-PY
+            # tools/find_push_articles.py diffs the whole push (before..HEAD), not only
+            # HEAD~1. It lives in its own file: a script at column 0 here ends the YAML
+            # block and the workflow fails before any job starts.
+            found=$(python3 tools/find_push_articles.py)
+            printf '%s\n' "$found" >> "$GITHUB_OUTPUT"
             langs=en
             # video/queue.txt: first line "slug [langs]" requests a video on demand
-            if git diff --name-only "$base" HEAD | grep -qx video/queue.txt; then
+            if printf '%s\n' "$found" | grep -qx 'queue_in_push=1'; then
               q=$(grep -v '^#' video/queue.txt | head -1)
               slugs=$(echo "$q" | awk '{print $1}')
               l=$(echo "$q" | cut -s -d' ' -f2- | tr ' ' '\n' | grep -v '^--' | xargs); [ -n "$l" ] && langs="$l"
@@ -127,7 +70,7 @@ PY
             fi
             echo "langs=$langs" >> "$GITHUB_OUTPUT"
             # ops/videos-paused: articles still get their photos, but no Shorts or long videos are made or posted
-            if [ -f ops/videos-paused ] && [ -z "$(git diff --name-only "$base" HEAD | grep -x video/queue.txt)" ]; then echo "paused=1" >> "$GITHUB_OUTPUT"; fi
+            if [ -f ops/videos-paused ] && ! printf '%s\n' "$found" | grep -qx 'queue_in_push=1'; then echo "paused=1" >> "$GITHUB_OUTPUT"; fi
           fi
       - name: Generate article photos (Nano Banana) and publish them first
         if: steps.find.outputs.slugs != '' && steps.find.outputs.queue != '1' && github.event_name != 'workflow_dispatch'

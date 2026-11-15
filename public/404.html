@@ -368,7 +368,7 @@ article.money .toc{float:none;width:auto;max-width:68ch;margin:4px 0 20px}
 article.money .prose h2{scroll-margin-top:130px}
 .leadstory{display:flex;flex-direction:column;gap:14px;margin:10px 0 8px;padding:0}
 .leadstory .lead{padding:0;max-width:65ch}
-.leadstory .leadim{display:block;border-radius:12px;overflow:hidden;border:1px solid var(--edge);background:#000}
+.leadstory .leadim{display:block;border-radius:12px;overflow:hidden;border:1px solid var(--edge);border-top-width:0;background:#000}
 .leadstory img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
 .leadstory h1{font-size:clamp(1.35rem,2vw,1.7rem);line-height:1.2;letter-spacing:-.02em;margin:8px 0 12px}
 .leadstory .btn{margin-bottom:22px}
@@ -446,7 +446,7 @@ nav.seq a.next{text-align:left;align-items:flex-start}
 header.hb .brand,header.hb .savedlink{transform:none}
 header.hb .bar{gap:8px}
 header.hb .id{display:flex;align-items:center;gap:28px;min-width:0;flex:1 1 auto}
-header.hb .pnav{display:none;flex:1 1 auto;min-width:0;height:auto;margin:0;overflow-x:auto;scrollbar-width:none}
+header.hb .pnav{display:none;flex:1 1 auto;min-width:0;height:auto;margin:0;overflow-x:auto;scrollbar-width:none;transform:translateY(-1px)}
 header.hb .pn{height:auto;padding:6px 10px;font-family:Manrope,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:16px;font-weight:700;line-height:1;letter-spacing:0}
 header.hb .savedlink{margin-left:auto}
 header.hb .mdrop{position:relative;flex:none;display:flex;align-items:baseline}
@@ -455,11 +455,13 @@ header.hb .mdrop>button.pn .chev{display:block;flex:none}
 header.hb .mdrop>button.pn[aria-expanded=true]{background:#272727;color:#fff}
 header.hb .mdrop .pmenu{display:none;left:auto;right:0;top:calc(100% + 4px)}
 header.hb .mdrop.is-open .pmenu{display:grid}
-header.hb .hb-search{display:flex;position:relative;width:min(640px,calc(100% - 8px));max-width:640px;margin:-6px auto 18px;height:42px;left:auto;right:auto;top:auto;background:transparent;padding:0}
+header.hb{padding-bottom:18px}
+header.hb .hb-search{display:flex;position:relative;width:min(640px,calc(100% - 8px));max-width:640px;margin:-6px auto 0;height:42px;left:auto;right:auto;top:auto;background:transparent;padding:0}
 header.hb .hb-search input,header.hb .hb-search>button{height:42px}
 header.hb .sbtn{display:none}
 header.hb ~ .drawer,header.hb ~ .scrim{top:118px}
 @media (min-width:900px){header.hb .pnav{display:flex;overflow:visible;align-items:baseline}header.hb .id{align-items:baseline;gap:16px}header.hb .bar{position:relative;z-index:3;align-items:center}header.hb .logo{line-height:1}header.hb .logo span{top:0}header.hb .bar .burger{display:none}}
+@media (min-width:901px){header.hb .hb-search{width:min(640px,calc(100% - 292px - 26px));max-width:none;margin:-6px calc(292px + 26px) 0 auto}}
 @media (min-width:900px) and (max-width:1099.98px){header.hb .id{gap:10px}header.hb .pn,header.hb .mdrop>button.pn{font-size:14.5px;padding:5px 7px}}
 header.hb .hb-search{z-index:1}
 header.hb .mdrop .pmenu{z-index:6}
@@ -518,7 +520,7 @@ header.hb .pnav>.is-parked{display:none}
 /* One centered frame for every page: reading column plus a right sidebar. */
 .sheet{display:grid;grid-template-columns:minmax(0,1fr) 292px;gap:26px;align-items:start}
 .sheet-main{min-width:0}
-.sheet .leadstory{margin-top:0;align-items:start}
+.sheet .leadstory{margin-top:-1px;align-items:start}
 .sheet-main article.narrow,.sheet-main>.narrow{max-width:none;margin:0}
 .sheet-main article.narrow>h1,.sheet-main article.narrow .cform,.sheet-main article.narrow .lead,.sheet-main article.narrow .prose{margin-left:0;margin-right:0}
 .sheet-main .prose{max-width:68ch}

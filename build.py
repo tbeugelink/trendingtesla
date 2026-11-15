@@ -797,6 +797,59 @@ article.money h1.atitle{font-size:1.7rem;line-height:1.18}
 nav.seq{grid-template-columns:1fr}
 nav.seq a.next{text-align:left;align-items:flex-start}
 }
+/* Layout previews. Scoped so the live pages are unchanged. */
+.pv-note{font-size:.82rem;line-height:1.45;color:var(--muted);background:#161616;border:1px solid var(--border2);border-radius:10px;padding:10px 12px;margin:8px 0 12px}
+.pv-note a{color:var(--blue2)}
+.pv-note b{color:var(--red)}
+.pv-tabs{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;border-bottom:1px solid var(--border);margin:0 0 12px}
+.pv-tabs a{flex:none;padding:9px 12px 7px;text-decoration:none;font-weight:800;font-size:.84rem;color:var(--muted);border-bottom:2px solid transparent}
+.pv-tabs a.on,.pv-tabs a:hover{color:#fff;border-bottom-color:var(--red)}
+.pv-grid{display:grid;grid-template-columns:minmax(0,1fr) 292px;gap:26px;align-items:start}
+.pv-lead{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:14px;align-items:center;margin:0 0 6px;text-decoration:none;color:inherit}
+.pv-lead .im{position:relative;border-radius:10px;overflow:hidden;border:1px solid var(--edge);background:#000}
+.pv-lead img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
+.pv-kicker{font-size:.72rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--blue)}
+.pv-lead h1,.pv-lead h2{font-size:clamp(1.25rem,2.2vw,1.7rem);line-height:1.18;margin:4px 0 8px}
+.pv-lead p{color:var(--muted);font-size:.92rem;line-height:1.45;margin:0}
+.pv-day{font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);margin:14px 0 4px;padding-top:8px;border-top:1px solid var(--border)}
+.pv-row{display:grid;grid-template-columns:52px minmax(0,1fr) 46px;gap:8px;align-items:center;padding:7px 0;border-bottom:1px solid #242424;text-decoration:none;color:inherit}
+.pv-row.hasth{grid-template-columns:52px 96px minmax(0,1fr) 46px}
+.pv-row time{font-variant-numeric:tabular-nums;font-size:.8rem;font-weight:800;color:var(--dim)}
+.pv-th{position:relative;container-type:inline-size;border-radius:6px;overflow:hidden;border:1px solid var(--edge);background:#000}
+.pv-th img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
+.pv-hl{min-width:0}
+.pv-hl b{display:block;font-size:.95rem;line-height:1.28;font-weight:700}
+.pv-hl i{display:block;margin-top:2px;font-style:normal;font-size:.72rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:var(--blue)}
+.pv-min{justify-self:end;min-width:42px;text-align:center;border:1px solid var(--border2);border-radius:8px;padding:3px 0 2px;line-height:1}
+.pv-min b{display:block;color:var(--red);font-size:.95rem}
+.pv-min small{color:var(--dim);font-size:.62rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase}
+.pv-row:hover .pv-hl b{text-decoration:underline;text-underline-offset:2px}
+.pv-side h2{font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#fff;border-top:3px solid var(--red);padding-top:8px;margin:0 0 8px}
+.pv-side section{margin:0 0 18px}
+.pv-side a{text-decoration:none;color:inherit}
+.pv-side li{display:grid;grid-template-columns:1.3rem minmax(0,1fr);gap:6px;padding:7px 0;border-bottom:1px solid #242424;font-size:.88rem;line-height:1.3;font-weight:700}
+.pv-side ol{list-style:none;counter-reset:pv;margin:0;padding:0}
+.pv-side ol li{counter-increment:pv}
+.pv-side ol li::before{content:counter(pv);color:var(--red);font-weight:800}
+.pv-side .pv-guide{display:grid;grid-template-columns:72px minmax(0,1fr);gap:8px;align-items:center;padding:7px 0;border-bottom:1px solid #242424}
+.pv-side .pv-guide img{width:72px;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:6px}
+.pv-off{color:var(--dim);font-size:.8rem;line-height:1.4;margin:0}
+.pv-block{margin:0 0 18px}
+.pv-block h2{font-size:1.05rem;margin:0 0 8px}
+.pv-art{display:grid;grid-template-columns:minmax(0,68ch) 280px;gap:28px;align-items:start}
+.pv-art.pv-c{grid-template-columns:190px minmax(0,66ch) 260px}
+.pv-art h1{font-size:clamp(1.55rem,2.6vw,2.1rem);line-height:1.16;margin:6px 0 8px}
+.pv-art .lead{font-size:1.08rem;line-height:1.5;color:var(--muted)}
+.pv-art .prose{font-size:1.05rem;line-height:1.7;max-width:66ch}
+.pv-art .toc{float:none;width:auto;max-width:none;margin:0 0 16px}
+.pv-c .toc{position:sticky;top:118px}
+.pv-art .avid{max-width:none}
+@media (max-width:900px){
+.pv-grid,.pv-art,.pv-art.pv-c{grid-template-columns:1fr}
+.pv-lead{grid-template-columns:1fr}
+.pv-c .toc{position:static}
+.pv-row.hasth{grid-template-columns:46px 72px minmax(0,1fr) 40px}
+}
 """
 
 
@@ -2366,6 +2419,225 @@ def homepage(arts, lang):
     return home_lead(lead, lang) + latest_block + video_block + home_topics(arts, shown, lang)
 
 
+def pv_copy(lang):
+    en = lang == "en"
+    return {
+        "all": "All" if en else "Alles",
+        "note": "Layout preview. Not indexed. The live site is unchanged." if en else "Voorbeeld van de indeling. Niet geïndexeerd. De live site blijft zoals hij is.",
+        "open": "Sample article" if en else "Voorbeeldartikel",
+        "live": "Live homepage" if en else "Live homepagina",
+        "guides": "Guides" if en else "Gidsen",
+        "start": "Start here" if en else "Begin hier",
+        "gear": "Gear" if en else "Spullen",
+        "gear_off": "Product boxes show up here when an article opts in. No prices, and nothing until a tag is set." if en else "Productblokken verschijnen hier als een artikel ervoor kiest. Geen prijzen, en niets tot er een tag is ingevuld.",
+        "related": "Related" if en else "Gerelateerd",
+        "more": "Compare" if en else "Vergelijk",
+    }
+
+
+PV_TABS = (
+    ("models", "nav_models", "category/models/"),
+    ("energy", "nav_energy", "category/energy/"),
+    ("fsd", "nav_fsd", "category/fsd/"),
+    ("spacex", "nav_space", "category/spacex/"),
+    ("xai", "nav_xai", "category/xai/"),
+    ("guides", None, "category/guides/"),
+    ("videos", "videos", "shorts/"),
+)
+
+
+def pv_tabs(lang, variant):
+    L = LANGS[lang]
+    C = pv_copy(lang)
+    here = url(lang, f"preview/{variant}/")
+    links = f'<a class="on" href="{here}">{C["all"]}</a>'
+    for _key, label_key, path in PV_TABS:
+        label = L[label_key] if label_key else CATEGORIES["guides"][lang]
+        links += f'<a href="{url(lang, path)}">{esc(label)}</a>'
+    return f'<nav class="pv-tabs" aria-label="{esc(L["menu"])}">{links}</nav>'
+
+
+def pv_banner(lang, variant, blurb):
+    C = pv_copy(lang)
+    bits = [f'<b>{variant.upper()}</b> {esc(blurb)} {esc(C["note"])}']
+    bits.append(f'<a href="{url(lang, "preview/")}">{C["more"]}</a>')
+    bits.append(f'<a href="{url(lang, f"preview/{variant}/article/")}">{C["open"]}</a>')
+    bits.append(f'<a href="{url(lang)}">{C["live"]}</a>')
+    return f'<p class="pv-note">{" · ".join(bits)}</p>'
+
+
+def pv_row(a, lang, thumb=False):
+    t = a[lang]
+    c = CATEGORIES[a["category"]]
+    href = url(lang, a["slug"] + "/")
+    im = ""
+    if thumb:
+        im = (f'<span class="pv-th">{resp_img(site_img(a), "", "(max-width: 700px) 28vw, 96px", width=320, height=180)}'
+              f'{ovl(a, lang)}</span>')
+    mins = read_time(a, lang)
+    label = f'{mins} {LANGS[lang]["min"]}'
+    return (f'<a class="pv-row{" hasth" if thumb else ""}" href="{href}">'
+            f'<time datetime="{published(a).isoformat()}">{published(a).strftime("%H:%M")}</time>{im}'
+            f'<span class="pv-hl"><b>{esc(t["title"])}</b><i>{esc(c.get("tag", c[lang]))}</i></span>'
+            f'<span class="pv-min" title="{esc(label)}"><b>{mins}</b><small>min</small></span></a>')
+
+
+def pv_feed(items, lang, thumbs=0):
+    out, last = [], None
+    for i, a in enumerate(items):
+        if a["date"] != last:
+            out.append(f'<h2 class="pv-day">{fmt_date(a["date"], lang)}</h2>')
+            last = a["date"]
+        out.append(pv_row(a, lang, thumb=i < thumbs))
+    return "".join(out)
+
+
+def pv_side(arts, lang, a=None):
+    C = pv_copy(lang)
+    start = sorted((x for x in arts if x["category"] == "guides"), key=lambda x: words(x, "en"), reverse=True)[:6]
+    guides = "".join(
+        f'<a class="pv-guide" href="{url(lang, x["slug"] + "/")}">'
+        f'{resp_img(site_img(x), "", "72px", width=144, height=81)}<span>{esc(x[lang]["title"])}</span></a>'
+        for x in start[:3])
+    numbered = "".join(
+        f'<li><a href="{url(lang, x["slug"] + "/")}">{esc(x[lang]["title"])}</a></li>' for x in start)
+    rel = ""
+    if a is not None:
+        items = related(a, arts, 5)
+        if items:
+            rel = (f'<section><h2>{esc(C["related"])}</h2><ol>'
+                   + "".join(f'<li><a href="{url(lang, x["slug"] + "/")}">{esc(x[lang]["title"])}</a></li>' for x in items)
+                   + "</ol></section>")
+    gear = product_boxes(a, lang) if a is not None else ""
+    if not gear:
+        gear = f'<p class="pv-off">{esc(C["gear_off"])}</p>'
+    slot = ad_html("sidebar", lang)
+    return (f'<aside class="pv-side">{rel}'
+            f'<section><h2>{esc(C["guides"])}</h2>{guides}</section>'
+            f'<section><h2>{esc(C["start"])}</h2><ol>{numbered}</ol></section>'
+            f'<section><h2>{esc(C["gear"])}</h2>{gear}</section>{slot}</aside>')
+
+
+def pv_lead(a, lang, href):
+    t = a[lang]
+    c = CATEGORIES[a["category"]]
+    return (f'<a class="pv-lead" href="{href}">'
+            f'<span class="im">{resp_img(site_img(a), t["title"], SIZES_LEAD, high=True, lazy=False)}{ovl(a, lang)}</span>'
+            f'<span><span class="pv-kicker">{esc(c.get("tag", c[lang]))} · {published(a).strftime("%H:%M")}</span>'
+            f'<h1>{esc(t["title"])}</h1><p>{esc(t["description"])}</p></span></a>')
+
+
+def pv_home(variant, arts, lang):
+    en = lang == "en"
+    blurbs = {
+        "a": "Newsfeed first. Clock times, a compact lead, guides in the side column." if en else "Nieuwslijst voorop. Kloktijden, een compacte hoofdfoto, gidsen in de zijbalk.",
+        "b": "Hybrid. The lead story and the video strip stay, then a dense news list." if en else "Hybride. Het hoofdartikel en de videostrip blijven, daarna een dichte nieuwslijst.",
+        "c": "Sections. Each topic is its own block, with the same side column." if en else "Rubrieken. Elk onderwerp is een eigen blok, met dezelfde zijbalk.",
+    }
+    lead = arts[0]
+    sample = url(lang, f"preview/{variant}/article/")
+    main = pv_banner(lang, variant, blurbs[variant]) + pv_tabs(lang, variant)
+    if variant == "a":
+        main += pv_lead(lead, lang, sample) + pv_feed([x for x in arts if x is not lead][:24], lang, thumbs=4)
+    elif variant == "b":
+        videos = home_videos(arts, lang, 8)
+        strip = f'<div class="vstrip">{videos}</div>' if videos else ""
+        main += home_lead(lead, lang) + strip + pv_feed([x for x in arts if x is not lead][:14], lang, thumbs=2)
+    else:
+        blocks = []
+        for _key, label_key, path, keys in HOME_TOPICS:
+            pool = [x for x in arts if _in_topics(x, keys)][:5]
+            if not pool:
+                continue
+            title = LANGS[lang][label_key] if label_key else CATEGORIES["guides"][lang]
+            head = pool[0]
+            rows = pv_feed(pool[1:], lang, thumbs=0)
+            blocks.append(
+                f'<section class="pv-block"><div class="h2"><h2>{esc(title)}</h2>'
+                f'<a href="{url(lang, path)}">{esc(LANGS[lang]["see_all"])}</a></div>'
+                f'<a class="pv-lead" href="{url(lang, head["slug"] + "/")}"><span class="im">'
+                f'{resp_img(site_img(head), "", SIZES_CARD)}{ovl(head, lang)}</span>'
+                f'<span><span class="pv-kicker">{published(head).strftime("%H:%M")}</span>'
+                f'<h2>{esc(head[lang]["title"])}</h2></span></a>{rows}</section>')
+        main += f'<h1 class="sr">{esc(NAME)}</h1>' + "".join(blocks)
+    return f'<div class="pv pv-{variant}"><div class="pv-grid"><div>{main}</div>{pv_side(arts, lang)}</div></div>'
+
+
+def pv_article(variant, a, arts, lang):
+    en = lang == "en"
+    blurb = {
+        "a": "Narrow column, related and guides on the right." if en else "Smalle kolom, gerelateerd en gidsen rechts.",
+        "b": "Same sidebar, with the video and the table of contents in the column." if en else "Dezelfde zijbalk, met de video en de inhoudsopgave in de kolom.",
+        "c": "Contents on the left, the story in the middle, the sidebar on the right." if en else "Inhoud links, het verhaal in het midden, de zijbalk rechts.",
+    }[variant]
+    L = LANGS[lang]
+    t = a[lang]
+    c = CATEGORIES[a["category"]]
+    toc, body = enrich(a, lang, with_toc=True)
+    body = insert_mid(body, ad_html("mid_article", lang))
+    media = article_media(a, lang) if variant != "a" else (
+        f'<div class="hi">{resp_img(site_img(a), t["title"], SIZES_HERO, lazy=False, cls="hero-img")}</div>')
+    # Variant A keeps a still photo. B and C use the player when a video exists.
+    if variant == "a":
+        toc_here, rail = toc, ""
+    elif variant == "c":
+        toc_here, rail = "", toc
+    else:
+        toc_here, rail = toc, ""
+    article = (
+        f'<article class="money"><p class="meta smeta"><a class="tag" href="{url(lang, "category/" + a["category"] + "/")}">{esc(c.get("tag", c[lang]))}</a>'
+        f' · <time datetime="{published(a).isoformat()}">{published(a).strftime("%H:%M")}</time>'
+        f' · {read_time(a, lang)} {L["min"]}</p>'
+        f'<h1>{esc(t["title"])}</h1>'
+        f'<p class="byline"><a href="{url(lang, "editorial/")}">{L["byline"]}</a></p>'
+        f'<p class="lead">{esc(t["description"])}</p>'
+        f'{ad_html("after_intro", lang)}{media}{toc_here}'
+        f'<div class="prose">{body}</div>{product_boxes(a, lang)}{ad_html("end", lang)}'
+        f'{article_sources(a, lang)}{prev_next(a, arts, lang)}</article>')
+    return (f'<div class="pv">{pv_banner(lang, variant, blurb)}'
+            f'<div class="pv-art pv-{variant}">{rail}<div>{article}</div>{pv_side(arts, lang, a)}</div></div>')
+
+
+def preview_page(lang, path, title, desc, body, real):
+    alt = "nl" if lang == "en" else "en"
+    extra = (
+        f'<link rel="canonical" href="{SITE + url(lang, real)}">'
+        f'<link rel="alternate" hreflang="en" href="{SITE + url("en", path)}">'
+        f'<link rel="alternate" hreflang="nl" href="{SITE + url("nl", path)}">'
+        f'<link rel="alternate" hreflang="x-default" href="{SITE + url("en", path)}">'
+    )
+    return page(lang, path, title, desc, body, robots="noindex, follow", canonical=False, extra_head=extra)
+
+
+def write_previews(arts, lang):
+    if not arts:
+        return
+    en = lang == "en"
+    cards = []
+    blurbs = {
+        "a": ("A · Newsfeed", "A · Nieuwslijst"),
+        "b": ("B · Hybrid", "B · Hybride"),
+        "c": ("C · Sections", "C · Rubrieken"),
+    }
+    for key, names in blurbs.items():
+        cards.append(
+            f'<a class="card" href="{url(lang, f"preview/{key}/")}"><div class="body"><h3>{names[0] if en else names[1]}</h3>'
+            f'<p>{esc(pv_copy(lang)["open"])}: <span>{esc(arts[0][lang]["title"])}</span></p></div></a>')
+    intro = ("Three layouts to compare. None of these pages is indexed." if en else "Drie indelingen om te vergelijken. Geen van deze pagina's wordt geïndexeerd.")
+    write(url(lang, "preview/"), preview_page(
+        lang, "preview/", "Layout previews" if en else "Voorbeelden van de indeling", intro,
+        f'<h1>{esc("Layout previews" if en else "Voorbeelden van de indeling")}</h1><p class="lead">{esc(intro)}</p><div class="grid2">{"".join(cards)}</div>',
+        ""))
+    sample = arts[0]
+    for key in ("a", "b", "c"):
+        title = blurbs[key][0 if en else 1]
+        write(url(lang, f"preview/{key}/"), preview_page(
+            lang, f"preview/{key}/", title, title, pv_home(key, arts, lang), ""))
+        write(url(lang, f"preview/{key}/article/"), preview_page(
+            lang, f"preview/{key}/article/", sample[lang]["title"], sample[lang]["description"],
+            pv_article(key, sample, arts, lang), sample["slug"] + "/"))
+
+
 def build():
     load_money()
     load_shorts()
@@ -2410,6 +2682,7 @@ def build():
                                  "sameAs": ["https://www.youtube.com/@TrendingTesla"]}}
         write(url(lang), page(lang, "", NAME, L["tagline"], body,
                               extra_head=f'<script type="application/ld+json">{json.dumps(site_ld, ensure_ascii=False)}</script>'))
+        write_previews(arts, lang)
 
         # ---------- Category pages ----------
         for key, c in CATEGORIES.items():
@@ -2586,7 +2859,7 @@ def build():
           '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">'
           f"{news}</urlset>")
     write("/898140fa5384efdf934027b6d7051b19.txt", "898140fa5384efdf934027b6d7051b19")
-    write("/robots.txt", f"User-agent: *\nAllow: /\nDisallow: /api/\n\nSitemap: {SITE}/sitemap.xml\nSitemap: {SITE}/news-sitemap.xml\n")
+    write("/robots.txt", f"User-agent: *\nAllow: /\nDisallow: /api/\nDisallow: /preview/\nDisallow: /nl/preview/\n\nSitemap: {SITE}/sitemap.xml\nSitemap: {SITE}/news-sitemap.xml\n")
     write("/favicon.svg",
           '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#e22822"/>'
           '<text x="32" y="45" font-family="system-ui,sans-serif" font-size="38" font-weight="800" fill="#fff" text-anchor="middle">T</text></svg>')

@@ -87,7 +87,7 @@ LANGS = {
         "guides_sub": "Researched per model and year, with pros and cons.",
         "related": "Read next", "sources": "Sources", "about": "About", "editorial": "Editorial policy",
         "byline": "By the TrendingTesla editorial team", "privacy": "Privacy",
-        "switch": "NL", "switch_full": "Nederlands", "i_specs": "Specifications", "i_watch": "Points to watch", "i_special": "What makes it special", "i_acc": "Accessories", "i_acc_soon": "Coming soon: accessories that fit this version, tested and explained.", "slogan": "Daily Tesla news &amp; trends", "search": "Search Tesla news", "none": "Nothing found", "home": "Home", "toc": "On this page", "prev": "Previous", "next": "Next", "ad": "Advertisement", "videos": "Videos", "see_all": "See all", "read_story": "Read the story", "nav_models": "Tesla models", "nav_energy": "Energy", "nav_fsd": "FSD / Robotaxi", "nav_space": "SpaceX / Starlink", "nav_xai": "xAI", "nav_more": "More", "start_here": "Start here", "start_p": "Guides that stay useful: practical explainers for owning and buying a Tesla.", "all_guides": "All guides", "articles": "Articles", "cookie": "Cookie settings", "news_h": "The daily story by email", "news_p": "One email when a new article is published. Unsubscribe any time.", "news_btn": "Subscribe", "news_email": "Email address", "aff": "Affiliate disclosure: if you buy through this link, TrendingTesla may earn a commission, at no extra cost to you.", "aff_btn": "View product", "watch": "Watch the video", "watch_short": "Watch the Short", "consent_p": "Optional advertising and anonymous visit counts stay off until you accept. Refusing leaves every article readable. YouTube loads only after you press play.", "consent_yes": "Accept", "consent_no": "Refuse", "consent_more": "Privacy policy", "collapse": "Close menu", "like": "Like", "save": "Save", "saved_btn": "Saved", "saved": "Saved articles", "saved_empty": "You have not saved any articles yet. Tap Save under an article title to keep it here. Saved articles stay in this browser on this device.", "archive": "All news", "newer": "Newer", "older": "Older", "page": "Page", "d_topics": "Topics", "d_models": "Models", "d_more": "More", "menu": "Menu", "tip_h": "A 22 kW charger won't charge your Tesla any faster", "tip_p": "Most Tesla models charge at home at up to 11 kW AC.", "tip_btn": "Read why", "tips": [("HW4", "Buying a used Model 3? Check the hardware first", "The Highland has HW4, older cars HW3. It decides what FSD can do.", "How to check", "used-model-3-highland-vs-classic-hw3-hw4-buying-guide"), ("−20%", "Losing range in winter? It doesn't have to be", "Preconditioning and the right settings save you kilometers.", "9 winter tips", "tesla-winter-range-tips-cold-weather")],
+        "switch": "NL", "switch_full": "Nederlands", "i_specs": "Specifications", "i_watch": "Points to watch", "i_special": "What makes it special", "i_acc": "Accessories", "i_acc_soon": "Coming soon: accessories that fit this version, tested and explained.", "slogan": "Daily Tesla news &amp; trends", "search": "Search Tesla news", "none": "Nothing found", "home": "Home", "toc": "On this page", "prev": "Previous", "next": "Next", "ad": "Advertisement", "videos": "Shorts", "see_all": "See all", "read_story": "Read the story", "nav_models": "Tesla models", "nav_energy": "Energy", "nav_fsd": "FSD / Robotaxi", "nav_space": "SpaceX / Starlink", "nav_xai": "xAI", "nav_more": "More", "start_here": "Start here", "start_p": "Guides that stay useful: practical explainers for owning and buying a Tesla.", "all_guides": "All guides", "articles": "Articles", "cookie": "Cookie settings", "news_h": "The daily story by email", "news_p": "One email when a new article is published. Unsubscribe any time.", "news_btn": "Subscribe", "news_email": "Email address", "aff": "Affiliate disclosure: if you buy through this link, TrendingTesla may earn a commission, at no extra cost to you.", "aff_btn": "View product", "watch": "Watch the video", "watch_short": "Watch the Short", "consent_p": "Optional advertising and anonymous visit counts stay off until you accept. Refusing leaves every article readable. YouTube loads only after you press play.", "consent_yes": "Accept", "consent_no": "Refuse", "consent_more": "Privacy policy", "collapse": "Close menu", "like": "Like", "save": "Save", "saved_btn": "Saved", "saved": "Saved articles", "saved_empty": "You have not saved any articles yet. Tap Save under an article title to keep it here. Saved articles stay in this browser on this device.", "archive": "All news", "newer": "Newer", "older": "Older", "page": "Page", "d_topics": "Topics", "d_models": "Models", "d_more": "More", "menu": "Menu", "tip_h": "A 22 kW charger won't charge your Tesla any faster", "tip_p": "Most Tesla models charge at home at up to 11 kW AC.", "tip_btn": "Read why", "tips": [("HW4", "Buying a used Model 3? Check the hardware first", "The Highland has HW4, older cars HW3. It decides what FSD can do.", "How to check", "used-model-3-highland-vs-classic-hw3-hw4-buying-guide"), ("−20%", "Losing range in winter? It doesn't have to be", "Preconditioning and the right settings save you kilometers.", "9 winter tips", "tesla-winter-range-tips-cold-weather")],
         "empty": "No articles here yet. A new story is published once a day.",
         "cat_intro": "All TrendingTesla articles about {}.",
         "eco_intro": "SpaceX, Starlink, The Boring Company and xAI/Grok: the companies around Tesla, and how they connect.",
@@ -118,7 +118,7 @@ LANGS = {
         "guides_sub": "Uitgezocht per model en bouwjaar, met plus- en minpunten.",
         "related": "Lees ook", "sources": "Bronnen", "imgnote": "Afbeeldingen zijn illustraties, deels gemaakt met AI.", "photocredit": "Foto's", "imgnote_other": "Overige afbeeldingen zijn illustraties, deels gemaakt met AI.", "about": "Over ons", "editorial": "Redactiebeleid",
         "byline": "Door de redactie van TrendingTesla", "privacy": "Privacy",
-        "switch": "EN", "switch_full": "English", "i_specs": "Specificaties", "i_watch": "Aandachtspunten", "i_special": "Bijzonderheden", "i_acc": "Accessoires", "i_acc_soon": "Binnenkort: accessoires die op deze uitvoering passen, getest en uitgelegd.", "slogan": "Iedere dag het laatste nieuws &amp; trends", "search": "Zoek in Tesla-nieuws", "none": "Niets gevonden", "home": "Home", "toc": "Op deze pagina", "prev": "Vorig", "next": "Volgend", "ad": "Advertentie", "videos": "Video's", "see_all": "Alles bekijken", "read_story": "Lees het verhaal", "nav_models": "Tesla-modellen", "nav_energy": "Energie", "nav_fsd": "FSD / Robotaxi", "nav_space": "SpaceX / Starlink", "nav_xai": "xAI", "nav_more": "Meer", "start_here": "Begin hier", "start_p": "Gidsen die bruikbaar blijven: praktische uitleg voor wie een Tesla heeft of er een wil kopen.", "all_guides": "Alle gidsen", "articles": "Artikelen", "cookie": "Cookie-instellingen", "news_h": "Het dagelijkse verhaal per e-mail", "news_p": "Eén e-mail zodra er een nieuw artikel is. Afmelden kan altijd.", "news_btn": "Aanmelden", "news_email": "E-mailadres", "aff": "Affiliate-melding: koop je via deze link, dan kan TrendingTesla een commissie ontvangen. Voor jou kost het niets extra.", "aff_btn": "Bekijk het product", "watch": "Bekijk de video", "watch_short": "Bekijk de Short", "consent_p": "Optionele advertenties en anonieme bezoekcijfers blijven uit tot je accepteert. Weigeren laat elk artikel leesbaar. YouTube laadt pas nadat je op afspelen drukt.", "consent_yes": "Accepteren", "consent_no": "Weigeren", "consent_more": "Privacybeleid", "collapse": "Inklappen", "like": "Vind ik leuk", "save": "Bewaren", "saved_btn": "Bewaard", "saved": "Bewaarde artikelen", "saved_empty": "Je hebt nog geen artikelen bewaard. Tik op Bewaren onder de titel van een artikel om het hier terug te vinden. Bewaarde artikelen blijven in deze browser op dit apparaat.", "archive": "Alle nieuws", "newer": "Nieuwer", "older": "Ouder", "page": "Pagina", "d_topics": "Onderwerpen", "d_models": "Modellen", "d_more": "Meer", "menu": "Menu", "tip_h": "Een 22 kW-laadpaal laadt je Tesla niet sneller", "tip_p": "Veel Tesla-modellen laden thuis met maximaal 11 kW AC.", "tip_btn": "Lees waarom", "tips": [("HW4", "Tweedehands Model 3 kopen? Check eerst de hardware", "De Highland heeft HW4, oudere Model 3's HW3. Dat bepaalt wat FSD kan.", "Zo check je het", "used-model-3-highland-vs-classic-hw3-hw4-buying-guide"), ("−20%", "Minder bereik in de winter? Dat hoeft niet", "Met voorverwarmen en de juiste instellingen houd je meer kilometers over.", "9 wintertips", "tesla-winter-range-tips-cold-weather")],
+        "switch": "EN", "switch_full": "English", "i_specs": "Specificaties", "i_watch": "Aandachtspunten", "i_special": "Bijzonderheden", "i_acc": "Accessoires", "i_acc_soon": "Binnenkort: accessoires die op deze uitvoering passen, getest en uitgelegd.", "slogan": "Iedere dag het laatste nieuws &amp; trends", "search": "Zoek in Tesla-nieuws", "none": "Niets gevonden", "home": "Home", "toc": "Op deze pagina", "prev": "Vorig", "next": "Volgend", "ad": "Advertentie", "videos": "Shorts", "see_all": "Alles bekijken", "read_story": "Lees het verhaal", "nav_models": "Tesla-modellen", "nav_energy": "Energie", "nav_fsd": "FSD / Robotaxi", "nav_space": "SpaceX / Starlink", "nav_xai": "xAI", "nav_more": "Meer", "start_here": "Begin hier", "start_p": "Gidsen die bruikbaar blijven: praktische uitleg voor wie een Tesla heeft of er een wil kopen.", "all_guides": "Alle gidsen", "articles": "Artikelen", "cookie": "Cookie-instellingen", "news_h": "Het dagelijkse verhaal per e-mail", "news_p": "Eén e-mail zodra er een nieuw artikel is. Afmelden kan altijd.", "news_btn": "Aanmelden", "news_email": "E-mailadres", "aff": "Affiliate-melding: koop je via deze link, dan kan TrendingTesla een commissie ontvangen. Voor jou kost het niets extra.", "aff_btn": "Bekijk het product", "watch": "Bekijk de video", "watch_short": "Bekijk de Short", "consent_p": "Optionele advertenties en anonieme bezoekcijfers blijven uit tot je accepteert. Weigeren laat elk artikel leesbaar. YouTube laadt pas nadat je op afspelen drukt.", "consent_yes": "Accepteren", "consent_no": "Weigeren", "consent_more": "Privacybeleid", "collapse": "Inklappen", "like": "Vind ik leuk", "save": "Bewaren", "saved_btn": "Bewaard", "saved": "Bewaarde artikelen", "saved_empty": "Je hebt nog geen artikelen bewaard. Tik op Bewaren onder de titel van een artikel om het hier terug te vinden. Bewaarde artikelen blijven in deze browser op dit apparaat.", "archive": "Alle nieuws", "newer": "Nieuwer", "older": "Ouder", "page": "Pagina", "d_topics": "Onderwerpen", "d_models": "Modellen", "d_more": "Meer", "menu": "Menu", "tip_h": "Een 22 kW-laadpaal laadt je Tesla niet sneller", "tip_p": "Veel Tesla-modellen laden thuis met maximaal 11 kW AC.", "tip_btn": "Lees waarom", "tips": [("HW4", "Tweedehands Model 3 kopen? Check eerst de hardware", "De Highland heeft HW4, oudere Model 3's HW3. Dat bepaalt wat FSD kan.", "Zo check je het", "used-model-3-highland-vs-classic-hw3-hw4-buying-guide"), ("−20%", "Minder bereik in de winter? Dat hoeft niet", "Met voorverwarmen en de juiste instellingen houd je meer kilometers over.", "9 wintertips", "tesla-winter-range-tips-cold-weather")],
         "empty": "Hier staan nog geen artikelen. Er verschijnt één keer per dag een nieuw verhaal.",
         "cat_intro": "Alle artikelen van TrendingTesla over {}.",
         "eco_intro": "SpaceX, Starlink, The Boring Company en xAI/Grok: de bedrijven rond Tesla, en hoe ze met elkaar verbonden zijn.",
@@ -724,12 +724,12 @@ article.money .toc{float:none;width:auto;max-width:68ch;margin:4px 0 20px}
 article.money .prose h2{scroll-margin-top:130px}
 .leadstory{display:flex;flex-direction:column;gap:14px;margin:10px 0 8px;padding:0}
 .leadstory .lead{padding:0;max-width:65ch}
-.leadstory .leadim{display:block;border-radius:12px;overflow:hidden;border:1px solid var(--edge);border-top-width:0;background:#000}
+.leadstory .leadim{display:block;border-radius:12px;overflow:hidden;border:1px solid var(--edge);background:#000}
 .leadstory img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
-.leadstory h1{font-size:clamp(1.35rem,2vw,1.7rem);line-height:1.2;letter-spacing:-.02em;margin:8px 0 12px}
+.leadstory .ltitle{font-size:clamp(1.35rem,2vw,1.7rem);line-height:1.2;letter-spacing:-.02em;margin:8px 0 12px;font-weight:800}
 .leadstory .btn{margin-bottom:22px}
-.leadstory h1 a{color:inherit;text-decoration:none}
-.leadstory h1 a:hover{text-decoration:underline;text-underline-offset:3px}
+.leadstory .ltitle a{color:inherit;text-decoration:none}
+.leadstory .ltitle a:hover{text-decoration:underline;text-underline-offset:3px}
 .leadstory .lead{font-size:1.08rem;line-height:1.55;color:var(--muted);margin:0 0 18px}
 .hsec{margin:34px 0 8px}
 .topics3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px 14px}
@@ -876,7 +876,8 @@ header.hb .pnav>.is-parked{display:none}
 /* One centered frame for every page: reading column plus a right sidebar. */
 .sheet{display:grid;grid-template-columns:minmax(0,1fr) 292px;gap:26px;align-items:start}
 .sheet-main{min-width:0}
-.sheet .leadstory{margin-top:-1px;align-items:start}
+.sheet .leadstory{margin-top:0;align-items:start}
+.sheet:has(.leadstory)>.pv-side{margin-top:2px}
 .sheet-main article.narrow,.sheet-main>.narrow{max-width:none;margin:0}
 .sheet-main article.narrow>h1,.sheet-main article.narrow .cform,.sheet-main article.narrow .lead,.sheet-main article.narrow .prose{margin-left:0;margin-right:0}
 .sheet-main .prose{max-width:68ch}
@@ -885,6 +886,8 @@ header.hb .pnav>.is-parked{display:none}
 .sheet-main article.money .prose{font-size:1.05rem;line-height:1.7;max-width:66ch}
 .sheet-main article.money .toc{float:none;width:auto;max-width:none;margin:0 0 16px}
 .sheet-main article.money .avid{max-width:none}
+.sheet-main article.narrow>h1,.sheet-main article.money>h1,.sheet-main article.money>.meta,.sheet-main article.money>.byline{margin-left:calc(3vw + 14px);margin-right:calc(3vw + 14px)}
+@media (max-width:600.98px){.sheet-main article.narrow>h1,.sheet-main article.money>h1,.sheet-main article.money>.meta,.sheet-main article.money>.byline{margin-left:14px;margin-right:14px}}
 @media (max-width:900px){
 .pv-grid,.pv-art,.pv-art.pv-c,.sheet{grid-template-columns:1fr}
 .pv-lead{grid-template-columns:1fr}
@@ -2238,19 +2241,12 @@ def category_hub(key, items, lang):
     L = LANGS[lang]
     intro = (CAT_INTRO.get(key) or {}).get(lang) or L["cat_intro"].format(c[lang])
     nav, ld = crumbs(lang, [(c[lang], f"category/{key}/")])
-    extra = ""
-    show = items
-    if key == "guides" and items:
-        featured = sorted(items, key=lambda a: words(a, "en"), reverse=True)[:6]
-        extra = (f'<section class="starthere"><h2>{esc(L["start_here"])}</h2>'
-                 f'<p class="sub">{esc(L["start_p"])}</p>{hub_cards(featured, lang, eager_first=True)}</section>')
-        if len(items) > len(featured):
-            extra += f'<h2 class="rubh">{esc(L["all_guides"])}</h2>'
-        else:
-            show = []
-    grid = hub_cards(show, lang, eager_first=not extra) if show or not extra else ""
+    ordered = sorted(items, key=published, reverse=True)
+    feature = home_lead(ordered[0], lang, title_tag="h2") if ordered else ""
+    rest = ordered[1:]
+    grid = hub_cards(rest, lang) if rest else ""
     body = (f'{nav}<header class="hubhead"><h1>{esc(c[lang])}</h1><p class="lead">{esc(intro)}</p></header>'
-            f'{extra}{grid}')
+            f'{feature}{grid}')
     return body, ld, intro
 
 
@@ -2280,15 +2276,21 @@ def model_hub(key, items, lang):
         parts.append((MODELS[parent]["name"], f"model/{parent}/"))
     parts.append((m["name"], f"model/{key}/"))
     nav, ld = crumbs(lang, parts)
-    guides = [a for a in items if a["category"] == "guides"]
-    rest = [a for a in items if a["category"] != "guides"]
+    ordered = sorted(items, key=published, reverse=True)
+    feature = home_lead(ordered[0], lang, title_tag="h2") if ordered else ""
+    shown = ordered[0] if ordered else None
+    guides = [a for a in items if a["category"] == "guides" and a is not shown]
+    rest = [a for a in items if a["category"] != "guides" and a is not shown]
     if guides:
-        blocks = (f'<h2 class="rubh">{esc(L["model_guides"].format(m["name"]))}</h2>{hub_cards(guides, lang, eager_first=True)}'
-                  f'<h2 class="rubh">{esc(L["model_news"].format(m["name"]))}</h2>{hub_cards(rest, lang)}')
+        blocks = (f'<h2 class="rubh">{esc(L["model_guides"].format(m["name"]))}</h2>{hub_cards(guides, lang)}'
+                  f'<h2 class="rubh">{esc(L["model_news"].format(m["name"]))}</h2>{hub_cards(rest, lang)}' if rest else
+                  f'<h2 class="rubh">{esc(L["model_guides"].format(m["name"]))}</h2>{hub_cards(guides, lang)}')
+    elif rest:
+        blocks = f'<h2 class="rubh">{esc(L["articles"])}</h2>{hub_cards(rest, lang)}'
     else:
-        blocks = f'<h2 class="rubh">{esc(L["articles"])}</h2>{hub_cards(items, lang, eager_first=True)}'
+        blocks = ""
     body = (f'{nav}<header class="hubhead"><h1>Tesla {esc(m["name"])}</h1><p class="lead">{esc(intro)}</p></header>'
-            f'{version_bar(key, lang)}{modelinfo(key, lang, heading=False)}{blocks}')
+            f'{feature}{version_bar(key, lang)}{modelinfo(key, lang, heading=False)}{blocks}')
     desc = re.sub(r"\s+", " ", intro).strip()
     if len(desc) > 180:
         desc = desc[:179].rsplit(" ", 1)[0] + "…"
@@ -2407,17 +2409,18 @@ def _in_topics(a, keys):
     return bool(cats & set(keys))
 
 
-def home_lead(a, lang):
+def home_lead(a, lang, title_tag="h1"):
     """Featured story: photo, headline, excerpt. The full article stays on its own page."""
     L = LANGS[lang]
     t = a[lang]
     c = CATEGORIES[a["category"]]
     href = url(lang, a["slug"] + "/")
+    tag = "h1" if title_tag == "h1" else "h2"
     return (f'<article class="leadstory"><a class="leadim" href="{href}">'
             f'{resp_img(site_img(a), t["title"], SIZES_LEAD, high=True, lazy=False, width=1600, height=900)}</a>'
             f'<div><p class="meta smeta"><a class="tag" href="{url(lang, "category/" + a["category"] + "/")}">{esc(c.get("tag", c[lang]))}</a>'
             f' · {when(a, lang)} · {read_time(a, lang)} {L["min"]}</p>'
-            f'<h1><a href="{href}">{esc(t["title"])}</a></h1>'
+            f'<{tag} class="ltitle"><a href="{href}">{esc(t["title"])}</a></{tag}>'
             f'<p class="lead">{esc(t["description"])}</p>'
             f'<a class="btn" href="{href}">{esc(L["read_story"])}</a></div></article>')
 

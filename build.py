@@ -386,7 +386,7 @@ CSS = """
 @font-face{font-family:Manrope;font-weight:600;font-display:swap;src:url(/fonts/manrope-latin-600-normal.woff2) format("woff2")}
 @font-face{font-family:Manrope;font-weight:700;font-display:swap;src:url(/fonts/manrope-latin-700-normal.woff2) format("woff2")}
 @font-face{font-family:Manrope;font-weight:800;font-display:swap;src:url(/fonts/manrope-latin-800-normal.woff2) format("woff2")}
-:root{--bg:#04060a;--surface:#212121;--surface2:#272727;--border:#272727;--border2:#3f3f3f;--fg:#e8eef5;--head:#fff;--muted:#b9c4d2;--dim:#8f9db0;--red:#e22822;--red2:#b81e19;--blue:#00d4ff;--edge:#3a4a60;--blue2:#5fe3ff;--max:1920px;color-scheme:dark}
+:root{--bg:#04060a;--surface:#212121;--surface2:#272727;--border:#272727;--border2:#3f3f3f;--fg:#e8eef5;--head:#fff;--muted:#b9c4d2;--dim:#8f9db0;--red:#e22822;--red2:#b81e19;--blue:#00d4ff;--edge:#3a4a60;--blue2:#5fe3ff;--max:1240px;color-scheme:dark}
 *{box-sizing:border-box;margin:0;padding:0}
 html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:150px;background:#04060a}
 html,body{overflow-x:clip;max-width:100%}
@@ -721,10 +721,10 @@ article.money .prose{font-size:1.075rem;line-height:1.75;max-width:68ch}
 article.money .prose p{margin-bottom:1.15em}
 article.money .toc{float:none;width:auto;max-width:68ch;margin:4px 0 20px}
 article.money .prose h2{scroll-margin-top:130px}
-.leadstory{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(280px,1fr);gap:28px;align-items:center;margin:10px 0 8px;padding:0}
-.leadstory .lead{padding:0;max-width:40em}
+.leadstory{display:flex;flex-direction:column;gap:14px;margin:10px 0 8px;padding:0}
+.leadstory .lead{padding:0;max-width:65ch}
 .leadstory .leadim{display:block;border-radius:12px;overflow:hidden;border:1px solid var(--edge);background:#000}
-.leadstory img{width:100%;height:auto;aspect-ratio:1200/630;object-fit:cover}
+.leadstory img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
 .leadstory h1{font-size:clamp(1.7rem,3vw,2.4rem);line-height:1.15;letter-spacing:-.025em;margin:8px 0 12px}
 .leadstory h1 a{color:inherit;text-decoration:none}
 .leadstory h1 a:hover{text-decoration:underline;text-underline-offset:3px}
@@ -742,7 +742,6 @@ article.money .prose h2{scroll-margin-top:130px}
 .vcard img{width:100%;height:100%;object-fit:cover}
 .vcard strong{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:.9rem;line-height:1.3;margin-top:8px;font-weight:700}
 @media (max-width:800.98px){
-.leadstory{grid-template-columns:1fr;gap:14px}
 .topics3{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;padding-bottom:8px}
 .topics3>.card{flex:0 0 82%;scroll-snap-align:start}
 .vcard{flex-basis:78vw}
@@ -802,10 +801,10 @@ header.hb .brand,header.hb .savedlink{transform:none}
 header.hb .bar{gap:8px}
 header.hb .id{display:flex;align-items:center;gap:28px;min-width:0;flex:1 1 auto}
 header.hb .pnav{display:none;flex:1 1 auto;min-width:0;height:auto;margin:0;overflow-x:auto;scrollbar-width:none}
-header.hb .pn{height:auto;padding:5px 8px;font-family:Manrope,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:.8rem;font-weight:700;line-height:1;letter-spacing:0}
+header.hb .pn{height:auto;padding:6px 10px;font-family:Manrope,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:16px;font-weight:700;line-height:1;letter-spacing:0}
 header.hb .savedlink{margin-left:auto}
 header.hb .mdrop{position:relative;flex:none;display:flex;align-items:baseline}
-header.hb .mdrop>button.pn{border:0;background:transparent;cursor:pointer;appearance:none;font-family:Manrope,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:.8rem;font-weight:700;line-height:1;letter-spacing:0;color:var(--fg);gap:5px}
+header.hb .mdrop>button.pn{border:0;background:transparent;cursor:pointer;appearance:none;font-family:Manrope,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:16px;font-weight:700;line-height:1;letter-spacing:0;color:var(--fg);gap:6px}
 header.hb .mdrop>button.pn .chev{display:block;flex:none}
 header.hb .mdrop>button.pn[aria-expanded=true]{background:#272727;color:#fff}
 header.hb .mdrop .pmenu{display:none;left:auto;right:0;top:calc(100% + 4px)}
@@ -1145,7 +1144,7 @@ def site_img(a):
 # Responsive derivatives written under public/img/opt/. The original file stays the img src.
 OPT_WIDTHS = (480, 800, 1200)
 _OPT = {}
-SIZES_LEAD = "(max-width: 800px) 100vw, 58vw"
+SIZES_LEAD = "(max-width: 900px) 100vw, 900px"
 SIZES_CARD = "(max-width: 700px) 100vw, 280px"
 SIZES_GRID = "(max-width: 600px) 100vw, (max-width: 1000px) 33vw, 280px"
 SIZES_VIDEO = "(max-width: 800px) 78vw, 240px"
@@ -1307,7 +1306,7 @@ def page(lang, path, title, description, body, og_type="website", extra_head="",
 
 
 SEARCH_SVG = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.6-3.6"/></svg>'
-CHEV_SVG = '<svg class="chev" width="9" height="9" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2.1 4.2 6 8.1 9.9 4.2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+CHEV_SVG = '<svg class="chev" width="11" height="11" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2.1 4.2 6 8.1 9.9 4.2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>'
 HEART_SVG = '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linejoin="round"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 8 3.4 4.5 7 4.5c2 0 3.6 1.1 5 2.9 1.4-1.8 3-2.9 5-2.9 3.6 0 5.6 3.5 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg>'
 BOOK_SVG = '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linejoin="round"><path d="M6 3.5h12v17l-6-4.2-6 4.2z"/></svg>'
 DRAWER_MODELS = MODEL_STRIP + ["cybercab", "semi", "roadster"]
@@ -2407,7 +2406,7 @@ def home_lead(a, lang):
     c = CATEGORIES[a["category"]]
     href = url(lang, a["slug"] + "/")
     return (f'<article class="leadstory"><a class="leadim" href="{href}">'
-            f'{resp_img(site_img(a), t["title"], SIZES_LEAD, high=True, lazy=False)}</a>'
+            f'{resp_img(site_img(a), t["title"], SIZES_LEAD, high=True, lazy=False, width=1600, height=900)}</a>'
             f'<div><p class="meta smeta"><a class="tag" href="{url(lang, "category/" + a["category"] + "/")}">{esc(c.get("tag", c[lang]))}</a>'
             f' · {when(a, lang)} · {read_time(a, lang)} {L["min"]}</p>'
             f'<h1><a href="{href}">{esc(t["title"])}</a></h1>'
@@ -2431,8 +2430,9 @@ def home_videos(arts, lang, n=8):
         seen.add(slug)
         rows.append((by[slug], 0, True))
     rows.sort(key=lambda row: published(row[0]), reverse=True)
+    rows = rows[:n]
     cards = []
-    for a, seconds, is_short in rows[:n]:
+    for a, seconds, is_short in rows:
         t = a[lang]
         href = url(lang, a["slug"] + "/")
         if is_short:
@@ -2447,7 +2447,7 @@ def home_videos(arts, lang, n=8):
             f'<span class="vpl" aria-hidden="true"></span>'
             f'<span class="dur dvo">{esc(badge)}</span></span>'
             f'<strong>{esc(t["title"])}</strong></a>')
-    return "".join(cards)
+    return "".join(cards), [a for a, _, _ in rows]
 
 
 def home_topics(arts, shown, lang):
@@ -2477,41 +2477,61 @@ def _side_links(items):
     return "".join(f'<li><a href="{href}">{esc(name)}</a></li>' for name, href in items)
 
 
-def page_side(arts, lang, kind="home", current=None):
-    """Right column. A section is omitted when it would be empty."""
+def _side_ol(lang, items):
+    return "<ol>" + _side_links([(x[lang]["title"], url(lang, x["slug"] + "/")) for x in items]) + "</ol>"
+
+
+def _side_ul(lang, items):
+    return "<ul>" + _side_links([(x[lang]["title"], url(lang, x["slug"] + "/")) for x in items]) + "</ul>"
+
+
+def page_side(arts, lang, kind="home", current=None, skip=None):
+    """Right column. Sections with nothing to show are left out, and no article is listed twice."""
     L = LANGS[lang]
     C = pv_copy(lang)
-    guides = sorted((x for x in arts if x["category"] == "guides"), key=lambda x: words(x, "en"), reverse=True)
-    parts = []
+    # skip: articles already visible in the main column.
+    main_ids = {id(x) for x in (skip or [])}
     if kind == "article" and current is not None:
-        items = related(current, arts, 5)
-        if items:
-            parts.append(_side_section(C["related"], "<ol>" + _side_links(
-                [(x[lang]["title"], url(lang, x["slug"] + "/")) for x in items]) + "</ol>"))
-    # The homepage leads with Guides so its red rule lines up with the lead photo.
-    if kind == "home" and guides:
-        thumbs = "".join(
-            f'<a class="pv-guide" href="{url(lang, x["slug"] + "/")}">'
-            f'{resp_img(site_img(x), "", "72px", width=144, height=81)}<span>{esc(x[lang]["title"])}</span></a>'
-            for x in guides[:3])
-        parts.append(_side_section(C["guides"], thumbs))
-    if kind != "guides" and guides:
-        parts.append(_side_section(C["start"], "<ol>" + _side_links(
-            [(x[lang]["title"], url(lang, x["slug"] + "/")) for x in guides[:6]]) + "</ol>"))
-    if kind in ("static", "videos", "model", "saved", "hub", "guides"):
-        if kind == "hub" and current == "news":
-            latest = []
-        elif kind == "hub":
-            latest = [x for x in arts if x["category"] != current][:5]
-        elif kind == "model":
-            latest = [x for x in arts if current not in (x.get("models") or [])][:5]
-        elif kind == "guides":
-            latest = [x for x in arts if x["category"] != "guides"][:5]
-        else:
-            latest = arts[:5]
+        main_ids.add(id(current))
+    lead_id = id(arts[0]) if arts else None
+    start = []
+    if kind != "guides":
+        guides = sorted(
+            (x for x in arts if x["category"] == "guides" and id(x) not in main_ids),
+            key=lambda x: words(x, "en"), reverse=True)
+        start = guides[:6]
+    start_ids = {id(x) for x in start}
+    # The news list is not the guide list, not the homepage lead, and not the main column.
+    show_latest = kind in ("home", "static", "videos", "model", "saved", "hub", "guides")
+    if kind == "hub" and current == "news":
+        show_latest = False
+    latest = []
+    if show_latest:
+        ban = set(main_ids) | start_ids
+        if lead_id is not None:
+            ban.add(lead_id)
+        for x in arts:
+            if x["category"] == "guides" or id(x) in ban:
+                continue
+            latest.append(x)
+            if len(latest) == 5:
+                break
+    related_items = []
+    if kind == "article" and current is not None:
+        ban = main_ids | start_ids
+        related_items = [x for x in related(current, arts, 12) if id(x) not in ban][:5]
+    parts = []
+    # Homepage: Latest is the first block, so its red rule lines up with the lead photo.
+    if kind == "article":
+        if related_items:
+            parts.append(_side_section(C["related"], _side_ol(lang, related_items)))
+        if start:
+            parts.append(_side_section(C["start"], _side_ol(lang, start)))
+    else:
         if latest:
-            parts.append(_side_section(L["latest"], "<ul>" + _side_links(
-                [(x[lang]["title"], url(lang, x["slug"] + "/")) for x in latest]) + "</ul>"))
+            parts.append(_side_section(L["latest"], _side_ul(lang, latest)))
+        if start:
+            parts.append(_side_section(C["start"], _side_ol(lang, start)))
     hubs = [
         (L["nav_models"], "category/models/"),
         (L["nav_energy"], "category/energy/"),
@@ -2550,10 +2570,11 @@ def homepage(arts, lang):
     if not arts:
         return shell(f'<h1>{esc(NAME)}</h1><p class="empty">{L["empty"]}</p>', page_side(arts, lang, "home"))
     lead = arts[0]
-    videos = home_videos(arts, lang, 8)
+    videos, strip_arts = home_videos(arts, lang, 8)
     strip = f'<div class="vstrip">{videos}</div>' if videos else ""
-    main = home_lead(lead, lang) + strip + pv_feed([x for x in arts if x is not lead][:14], lang, thumbs=2)
-    return shell(main, page_side(arts, lang, "home"))
+    feed = [x for x in arts if x is not lead][:14]
+    main = home_lead(lead, lang) + strip + pv_feed(feed, lang, thumbs=2)
+    return shell(main, page_side(arts, lang, "home", skip=[lead, *strip_arts, *feed]))
 
 
 def pv_copy(lang):
@@ -2677,7 +2698,7 @@ def pv_home(variant, arts, lang):
     if variant == "a":
         main += pv_lead(lead, lang, sample) + pv_feed([x for x in arts if x is not lead][:24], lang, thumbs=4)
     elif variant == "b":
-        videos = home_videos(arts, lang, 8)
+        videos, _strip_arts = home_videos(arts, lang, 8)
         strip = f'<div class="vstrip">{videos}</div>' if videos else ""
         main += home_lead(lead, lang) + strip + pv_feed([x for x in arts if x is not lead][:14], lang, thumbs=2)
     else:
@@ -2832,7 +2853,7 @@ def build():
             kind = "guides" if key == "guides" else "hub"
             write(url(lang, f"category/{key}/"),
                   page(lang, f"category/{key}/", c[lang], intro,
-                       shell(content, page_side(arts, lang, kind, key)),
+                       shell(content, page_side(arts, lang, kind, key, skip=items)),
                        extra_head=ld_script(crumb_ld), active=key))
 
         # ---------- Model pages ----------
@@ -2844,7 +2865,7 @@ def build():
             content, crumb_ld, desc = model_hub(key, items, lang)
             write(url(lang, f"model/{key}/"),
                   page(lang, f"model/{key}/", f"Tesla {m['name']}", desc,
-                       shell(content, page_side(arts, lang, "model", key)),
+                       shell(content, page_side(arts, lang, "model", key, skip=items)),
                        extra_head=ld_script(crumb_ld), image=ph, active="models"))
 
         # ---------- Articles ----------
@@ -2906,7 +2927,8 @@ def build():
                                for a in (rest_arch[pi * PER_PAGE:pi * PER_PAGE + XTRA] if nxt else [])))
                     + f'</div>{pager}</section>')
             write(url(lang, path), page(lang, path, title, L["tagline"],
-                                         shell(body, page_side(arts, lang, "archive")), active="news"))
+                                         shell(body, page_side(arts, lang, "archive", skip=list(chunk) + (
+                                             rest_arch[pi * PER_PAGE:pi * PER_PAGE + XTRA] if nxt else []))), active="news"))
         ARCH_PAGES[0] = pages
 
         # ---------- Saved articles (filled in the browser from localStorage) ----------
@@ -2921,8 +2943,11 @@ def build():
         by_slug = {a["slug"]: a for a in arts}
         en = lang == "en"
         cards = ""
+        shown = []
         for sh in shorts:
             a = by_slug.get(sh.get("slug"))
+            if a:
+                shown.append(a)
             t = a[lang]["title"] if a else sh["title"]
             dt = sh["published"]
             cap = (f'<a class="sht" href="{url(lang, a["slug"] + "/")}">{esc(t)}</a>' if a else f'<span class="sht">{esc(t)}</span>')
@@ -2945,7 +2970,7 @@ def build():
                 "document.body.appendChild(m);document.documentElement.style.overflow='hidden';m.querySelector('.shx').focus()});"
                 "document.addEventListener('keydown',function(e){if(e.key==='Escape')close()})})()</script>")
         write(url(lang, "shorts/"), page(lang, "shorts/", "Shorts", intro,
-                                          shell(body, page_side(arts, lang, "videos")), active="videos"))
+                                          shell(body, page_side(arts, lang, "videos", skip=shown)), active="videos"))
 
         # ---------- Static pages ----------
         for key, p in PAGES.items():

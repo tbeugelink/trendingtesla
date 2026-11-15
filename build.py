@@ -895,6 +895,8 @@ header.hb .pnav>.is-parked{display:none}
 .sheet-main article.money .sources,.sheet-main article.money .imgnote,.sheet-main article.money nav.seq,.sheet-main article.money .pbox,.sheet-main article.money .nform,.sheet-main article.money .avid figcaption{margin-left:calc(3vw + 14px);margin-right:calc(3vw + 14px)}
 .sheet-main article.money .pbox,.sheet-main article.money .nform,.sheet-main article.money .adslot{max-width:none}
 @media (max-width:640px){.sheet-main article.money .avid.short .avb,.pv-art .avid.short .avb{width:100%}}
+.sheet-main article.money .avid.long .avb,.pv-art .avid.long .avb{display:block;width:calc(100% - 2 * (3vw + 14px));margin-left:calc(3vw + 14px);margin-right:calc(3vw + 14px)}
+@media (max-width:600.98px){.sheet-main article.money .avid.long .avb,.pv-art .avid.long .avb{width:calc(100% - 28px);margin-left:14px;margin-right:14px}}
 .sheet-main article.narrow>h1,.sheet-main article.money>h1,.sheet-main article.money>.meta,.sheet-main article.money>.byline{margin-left:calc(3vw + 14px);margin-right:calc(3vw + 14px)}
 @media (max-width:600.98px){.sheet-main article.narrow>h1,.sheet-main article.money>h1,.sheet-main article.money>.meta,.sheet-main article.money>.byline,.sheet-main article.money .toc,.sheet-main article.money .sources,.sheet-main article.money .imgnote,.sheet-main article.money nav.seq,.sheet-main article.money .pbox,.sheet-main article.money .nform,.sheet-main article.money .avid figcaption{margin-left:14px;margin-right:14px}}
 @media (max-width:900px){
@@ -2322,12 +2324,13 @@ def player(vid, kind, label, poster, priority):
 def article_media(a, lang):
     poster = site_img(a)
     video = video_for(a, lang)
-    short = SHORTS.get(a["slug"])
+    # A long video stands in for the Short on the article. The Short stays on /shorts/.
+    short = None if video else SHORTS.get(a["slug"])
     blocks = []
     if video:
         blocks.append(player(video["id"], "long", LANGS[lang]["watch"], poster, True))
     if short:
-        blocks.append(player(short["id"], "short", LANGS[lang]["watch_short"], poster, not bool(video)))
+        blocks.append(player(short["id"], "short", LANGS[lang]["watch_short"], poster, True))
     if blocks:
         return "".join(blocks)
     return f'<div class="hi">{resp_img(poster, a[lang]["title"], SIZES_HERO, high=True, lazy=False, cls="hero-img")}</div>'

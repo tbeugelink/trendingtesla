@@ -19,8 +19,17 @@ Article JSON format:
   "image": "topics/optimus.jpg",                   # optional: specific photo (path inside static/img/)
   "sources": [{"title": "...", "url": "https://..."}],
   "en": {"title": "...", "description": "...", "body": "<p>...</p>"},
-  "nl": {"title": "...", "description": "...", "body": "<p>...</p>"}
+  "nl": {"title": "...", "description": "...", "body": "<p>...</p>"},
+  "products": [                                # optional; omit the key when there is nothing to link. No prices.
+    {"name": {"en": "...", "nl": "..."}, "image": "/img/topics/example.jpg",
+     "specs": {"en": ["..."], "nl": ["..."]},
+     "button": {"en": "View on Amazon", "nl": "Bekijk bij Amazon"},
+     "url": {"en": "https://www.amazon.com/dp/...", "nl": "https://www.amazon.nl/dp/..."}}
+  ]
 }
+A string may be used instead of {"en", "nl"} when the text is the same in both languages.
+tools/check_article.py ignores "products". Ads, affiliate tags and the newsletter form come from
+content/monetization.json and stay hidden while those values are empty.
 Writing rule (articles and video scripts): the paragraph or spoken text right before a heading
 states the next problem as a plain statement and never ends with a question; the <h2>/"head"
 itself is the question. (The build also drops such a duplicate question automatically.)
@@ -42,12 +51,14 @@ and on the model pages they are tagged with.
 
 Run: python3 build.py   (needs Pillow: pip install --break-system-packages pillow)
 """
+import hashlib
 import html
 import json
 import re
 import shutil
 from datetime import datetime, timezone
 from pathlib import Path
+from urllib.parse import quote
 from zoneinfo import ZoneInfo
 
 from covers import make_cover
@@ -76,7 +87,7 @@ LANGS = {
         "guides_sub": "Researched per model and year, with pros and cons.",
         "related": "Read next", "sources": "Sources", "about": "About", "editorial": "Editorial policy",
         "byline": "By the TrendingTesla editorial team", "privacy": "Privacy",
-        "switch": "NL", "switch_full": "Nederlands", "i_specs": "Specifications", "i_watch": "Points to watch", "i_special": "What makes it special", "i_acc": "Accessories", "i_acc_soon": "Coming soon: accessories that fit this version, tested and explained.", "slogan": "Daily Tesla news &amp; trends", "search": "Search Tesla news", "none": "Nothing found", "home": "Home", "collapse": "Close menu", "like": "Like", "save": "Save", "saved_btn": "Saved", "saved": "Saved articles", "saved_empty": "You have not saved any articles yet. Tap Save under an article title to keep it here. Saved articles stay in this browser on this device.", "archive": "All news", "newer": "Newer", "older": "Older", "page": "Page", "d_topics": "Topics", "d_models": "Models", "d_more": "More", "menu": "Menu", "tip_h": "A 22 kW charger won't charge your Tesla any faster", "tip_p": "Most Tesla models charge at home at up to 11 kW AC.", "tip_btn": "Read why", "tips": [("HW4", "Buying a used Model 3? Check the hardware first", "The Highland has HW4, older cars HW3. It decides what FSD can do.", "How to check", "used-model-3-highland-vs-classic-hw3-hw4-buying-guide"), ("−20%", "Losing range in winter? It doesn't have to be", "Preconditioning and the right settings save you kilometers.", "9 winter tips", "tesla-winter-range-tips-cold-weather")],
+        "switch": "NL", "switch_full": "Nederlands", "i_specs": "Specifications", "i_watch": "Points to watch", "i_special": "What makes it special", "i_acc": "Accessories", "i_acc_soon": "Coming soon: accessories that fit this version, tested and explained.", "slogan": "Daily Tesla news &amp; trends", "search": "Search Tesla news", "none": "Nothing found", "home": "Home", "toc": "On this page", "prev": "Previous", "next": "Next", "ad": "Advertisement", "videos": "Videos", "see_all": "See all", "read_story": "Read the story", "nav_models": "Tesla models", "nav_energy": "Energy", "nav_fsd": "FSD / Robotaxi", "nav_space": "SpaceX / Starlink", "nav_xai": "xAI", "nav_more": "More", "start_here": "Start here", "start_p": "Guides that stay useful: practical explainers for owning and buying a Tesla.", "all_guides": "All guides", "articles": "Articles", "cookie": "Cookie settings", "news_h": "The daily story by email", "news_p": "One email when a new article is published. Unsubscribe any time.", "news_btn": "Subscribe", "news_email": "Email address", "aff": "Affiliate disclosure: if you buy through this link, TrendingTesla may earn a commission, at no extra cost to you.", "aff_btn": "View product", "watch": "Watch the video", "watch_short": "Watch the Short", "consent_p": "Optional advertising and anonymous visit counts stay off until you accept. Refusing leaves every article readable. YouTube loads only after you press play.", "consent_yes": "Accept", "consent_no": "Refuse", "consent_more": "Privacy policy", "collapse": "Close menu", "like": "Like", "save": "Save", "saved_btn": "Saved", "saved": "Saved articles", "saved_empty": "You have not saved any articles yet. Tap Save under an article title to keep it here. Saved articles stay in this browser on this device.", "archive": "All news", "newer": "Newer", "older": "Older", "page": "Page", "d_topics": "Topics", "d_models": "Models", "d_more": "More", "menu": "Menu", "tip_h": "A 22 kW charger won't charge your Tesla any faster", "tip_p": "Most Tesla models charge at home at up to 11 kW AC.", "tip_btn": "Read why", "tips": [("HW4", "Buying a used Model 3? Check the hardware first", "The Highland has HW4, older cars HW3. It decides what FSD can do.", "How to check", "used-model-3-highland-vs-classic-hw3-hw4-buying-guide"), ("−20%", "Losing range in winter? It doesn't have to be", "Preconditioning and the right settings save you kilometers.", "9 winter tips", "tesla-winter-range-tips-cold-weather")],
         "empty": "No articles here yet. A new story is published once a day.",
         "cat_intro": "All TrendingTesla articles about {}.",
         "eco_intro": "SpaceX, Starlink, The Boring Company and xAI/Grok: the companies around Tesla, and how they connect.",
@@ -107,7 +118,7 @@ LANGS = {
         "guides_sub": "Uitgezocht per model en bouwjaar, met plus- en minpunten.",
         "related": "Lees ook", "sources": "Bronnen", "imgnote": "Afbeeldingen zijn illustraties, deels gemaakt met AI.", "photocredit": "Foto's", "imgnote_other": "Overige afbeeldingen zijn illustraties, deels gemaakt met AI.", "about": "Over ons", "editorial": "Redactiebeleid",
         "byline": "Door de redactie van TrendingTesla", "privacy": "Privacy",
-        "switch": "EN", "switch_full": "English", "i_specs": "Specificaties", "i_watch": "Aandachtspunten", "i_special": "Bijzonderheden", "i_acc": "Accessoires", "i_acc_soon": "Binnenkort: accessoires die op deze uitvoering passen, getest en uitgelegd.", "slogan": "Iedere dag het laatste nieuws &amp; trends", "search": "Zoek in Tesla-nieuws", "none": "Niets gevonden", "home": "Home", "collapse": "Inklappen", "like": "Vind ik leuk", "save": "Bewaren", "saved_btn": "Bewaard", "saved": "Bewaarde artikelen", "saved_empty": "Je hebt nog geen artikelen bewaard. Tik op Bewaren onder de titel van een artikel om het hier terug te vinden. Bewaarde artikelen blijven in deze browser op dit apparaat.", "archive": "Alle nieuws", "newer": "Nieuwer", "older": "Ouder", "page": "Pagina", "d_topics": "Onderwerpen", "d_models": "Modellen", "d_more": "Meer", "menu": "Menu", "tip_h": "Een 22 kW-laadpaal laadt je Tesla niet sneller", "tip_p": "Veel Tesla-modellen laden thuis met maximaal 11 kW AC.", "tip_btn": "Lees waarom", "tips": [("HW4", "Tweedehands Model 3 kopen? Check eerst de hardware", "De Highland heeft HW4, oudere Model 3's HW3. Dat bepaalt wat FSD kan.", "Zo check je het", "used-model-3-highland-vs-classic-hw3-hw4-buying-guide"), ("−20%", "Minder bereik in de winter? Dat hoeft niet", "Met voorverwarmen en de juiste instellingen houd je meer kilometers over.", "9 wintertips", "tesla-winter-range-tips-cold-weather")],
+        "switch": "EN", "switch_full": "English", "i_specs": "Specificaties", "i_watch": "Aandachtspunten", "i_special": "Bijzonderheden", "i_acc": "Accessoires", "i_acc_soon": "Binnenkort: accessoires die op deze uitvoering passen, getest en uitgelegd.", "slogan": "Iedere dag het laatste nieuws &amp; trends", "search": "Zoek in Tesla-nieuws", "none": "Niets gevonden", "home": "Home", "toc": "Op deze pagina", "prev": "Vorig", "next": "Volgend", "ad": "Advertentie", "videos": "Video's", "see_all": "Alles bekijken", "read_story": "Lees het verhaal", "nav_models": "Tesla-modellen", "nav_energy": "Energie", "nav_fsd": "FSD / Robotaxi", "nav_space": "SpaceX / Starlink", "nav_xai": "xAI", "nav_more": "Meer", "start_here": "Begin hier", "start_p": "Gidsen die bruikbaar blijven: praktische uitleg voor wie een Tesla heeft of er een wil kopen.", "all_guides": "Alle gidsen", "articles": "Artikelen", "cookie": "Cookie-instellingen", "news_h": "Het dagelijkse verhaal per e-mail", "news_p": "Eén e-mail zodra er een nieuw artikel is. Afmelden kan altijd.", "news_btn": "Aanmelden", "news_email": "E-mailadres", "aff": "Affiliate-melding: koop je via deze link, dan kan TrendingTesla een commissie ontvangen. Voor jou kost het niets extra.", "aff_btn": "Bekijk het product", "watch": "Bekijk de video", "watch_short": "Bekijk de Short", "consent_p": "Optionele advertenties en anonieme bezoekcijfers blijven uit tot je accepteert. Weigeren laat elk artikel leesbaar. YouTube laadt pas nadat je op afspelen drukt.", "consent_yes": "Accepteren", "consent_no": "Weigeren", "consent_more": "Privacybeleid", "collapse": "Inklappen", "like": "Vind ik leuk", "save": "Bewaren", "saved_btn": "Bewaard", "saved": "Bewaarde artikelen", "saved_empty": "Je hebt nog geen artikelen bewaard. Tik op Bewaren onder de titel van een artikel om het hier terug te vinden. Bewaarde artikelen blijven in deze browser op dit apparaat.", "archive": "Alle nieuws", "newer": "Nieuwer", "older": "Ouder", "page": "Pagina", "d_topics": "Onderwerpen", "d_models": "Modellen", "d_more": "Meer", "menu": "Menu", "tip_h": "Een 22 kW-laadpaal laadt je Tesla niet sneller", "tip_p": "Veel Tesla-modellen laden thuis met maximaal 11 kW AC.", "tip_btn": "Lees waarom", "tips": [("HW4", "Tweedehands Model 3 kopen? Check eerst de hardware", "De Highland heeft HW4, oudere Model 3's HW3. Dat bepaalt wat FSD kan.", "Zo check je het", "used-model-3-highland-vs-classic-hw3-hw4-buying-guide"), ("−20%", "Minder bereik in de winter? Dat hoeft niet", "Met voorverwarmen en de juiste instellingen houd je meer kilometers over.", "9 wintertips", "tesla-winter-range-tips-cold-weather")],
         "empty": "Hier staan nog geen artikelen. Er verschijnt één keer per dag een nieuw verhaal.",
         "cat_intro": "Alle artikelen van TrendingTesla over {}.",
         "eco_intro": "SpaceX, Starlink, The Boring Company en xAI/Grok: de bedrijven rond Tesla, en hoe ze met elkaar verbonden zijn.",
@@ -143,8 +154,80 @@ CATEGORIES = {
     "boring":   {"en": "Boring Co.", "nl": "Boring Co.", "menu": True},
     "musk":     {"en": "Elon Musk", "nl": "Elon Musk", "menu": True},
     "earnings": {"en": "Earnings", "nl": "Cijfers",  "menu": True},
-    "guides":   {"en": "Tips",     "nl": "Tips",     "menu": True, "btn": "Tips!"},
+    "guides":   {"en": "Guides",  "nl": "Gidsen",   "menu": True},
     "ecosystem": {"en": "Ecosystem", "nl": "Ecosysteem", "menu": False},
+}
+
+# Visible intro on each category hub. One or two sentences, no prices, no personal names.
+CAT_INTRO = {
+    "news": {
+        "en": "The daily Tesla story in plain language: what changed, why it matters, and what to watch next.",
+        "nl": "Het dagelijkse Tesla-verhaal in gewone taal: wat er veranderde, waarom het ertoe doet en waar je op moet letten.",
+    },
+    "models": {
+        "en": "News and practical advice for every Tesla on the road, from Model S and Model 3 to Cybertruck, Cybercab, Semi and Roadster.",
+        "nl": "Nieuws en praktisch advies voor elke Tesla op de weg, van Model S en Model 3 tot Cybertruck, Cybercab, Semi en Roadster.",
+    },
+    "charging": {
+        "en": "Home charging, Superchargers and what it costs to keep a Tesla topped up.",
+        "nl": "Thuis laden, Superchargers en wat het kost om een Tesla bij te laden.",
+    },
+    "software": {
+        "en": "Tesla software updates explained: what is in them, and which cars get them.",
+        "nl": "Tesla-software-updates uitgelegd: wat erin zit en welke auto's ze krijgen.",
+    },
+    "fsd": {
+        "en": "What Tesla's supervised driver assistance can and cannot do, what it costs, and where it is allowed.",
+        "nl": "Wat de begeleide rijhulp van Tesla wel en niet kan, wat het kost en waar het mag.",
+    },
+    "robotaxi": {
+        "en": "Where Tesla's robotaxi service runs, how the cars are supervised, and what the rules say.",
+        "nl": "Waar de robotaxidienst van Tesla rijdt, hoe de auto's worden begeleid en wat de regels zeggen.",
+    },
+    "optimus": {
+        "en": "Tesla's humanoid robot: what has been shown, what is still a plan, and how it connects to the car business.",
+        "nl": "De humanoïde robot van Tesla: wat er is getoond, wat nog een plan is en hoe het samenhangt met de autotak.",
+    },
+    "factories": {
+        "en": "Gigafactories and production lines: where Teslas are built and what the plants are adding.",
+        "nl": "Gigafactories en productielijnen: waar Tesla's worden gebouwd en wat de fabrieken erbij krijgen.",
+    },
+    "xai": {
+        "en": "xAI and Grok, and where that software shows up in Tesla vehicles and energy sites.",
+        "nl": "xAI en Grok, en waar die software opduikt in Tesla-auto's en op energielocaties.",
+    },
+    "energy": {
+        "en": "Powerwall, Megapack, solar and the electricity business around Tesla vehicles.",
+        "nl": "Powerwall, Megapack, zonne-energie en de stroomtak rond Tesla-auto's.",
+    },
+    "spacex": {
+        "en": "Starship, Falcon and the launch business, explained where it touches Tesla.",
+        "nl": "Starship, Falcon en de lanceeractiviteiten, uitgelegd waar ze Tesla raken.",
+    },
+    "starlink": {
+        "en": "Starlink satellites and dishes, and where the network meets Tesla cars and energy sites.",
+        "nl": "Starlink-satellieten en schotels, en waar het netwerk Tesla-auto's en energielocaties raakt.",
+    },
+    "boring": {
+        "en": "Tunnels and Loop stations from The Boring Company, and the Tesla vehicles that drive in them.",
+        "nl": "Tunnels en Loop-stations van The Boring Company, en de Tesla's die erin rijden.",
+    },
+    "musk": {
+        "en": "Pay awards, board votes and public statements that move Tesla and the companies around it.",
+        "nl": "Beloningen, stemmingen en publieke uitspraken die Tesla en de bedrijven eromheen bewegen.",
+    },
+    "earnings": {
+        "en": "Tesla quarterly results in plain language: revenue, margins, cash and what the figures do not say. Not financial advice.",
+        "nl": "De kwartaalcijfers van Tesla in gewone taal: omzet, marges, kas en wat de cijfers niet zeggen. Geen beleggingsadvies.",
+    },
+    "guides": {
+        "en": "Evergreen guides for owners and buyers: charging, tyres, warranties, used cars and what to check before you pay.",
+        "nl": "Blijvende gidsen voor rijders en kopers: laden, banden, garantie, occasions en wat je controleert voor je betaalt.",
+    },
+    "ecosystem": {
+        "en": "SpaceX, Starlink, The Boring Company and xAI: the companies around Tesla, and how they connect.",
+        "nl": "SpaceX, Starlink, The Boring Company en xAI: de bedrijven rond Tesla, en hoe ze met elkaar verbonden zijn.",
+    },
 }
 
 # Model pages. "photo" is a file in static/img/models/ (optional until uploaded).
@@ -278,9 +361,9 @@ PAGES = {
     },
     "privacy": {
         "en": ("Privacy policy", "How trendingtesla.com handles your data and what your rights are.",
-               '<p>This policy explains what personal data trendingtesla.com processes, why, and what your rights are. We keep it to the minimum: you can read the whole site without an account and without tracking cookies.</p><h2>Who is responsible?</h2><p>The controller for this site is trendingtesla.com. You can reach us through the <a href="/contact/">contact form</a>.</p><h2>Contact form</h2><p>If you use the contact form, your name, email address and message are forwarded to our mailbox by email (via Cloudflare Email Routing, and our email provider). We use them only to answer you; the legal basis is our legitimate interest in answering questions, or steps you ask us to take. The form is handled by this site\'s Cloudflare worker, which checks the message, applies the spam limit below and emails it on. The message is not stored on the website. We delete your message once it has been handled, and in any case within 12 months.</p><p>To stop spam and abuse, the form keeps a scrambled (hashed) version of your IP address for at most two hours to count how many messages are sent. The original IP address is not stored.</p><h2>Hosting and statistics</h2><p>The site is served through Cloudflare, which processes technical data such as IP addresses to deliver and protect the site. Cloudflare may process data outside the EU; it uses the EU Standard Contractual Clauses and is certified under the EU-US Data Privacy Framework. We count visits with Cloudflare Web Analytics, which uses no cookies, does not track you across sites and only gives us totals. Fonts are served from our own domain, not from third parties.</p><h2>YouTube</h2><p>We publish short videos on our YouTube channel @TrendingTesla. To upload our own videos we use YouTube API Services; this does not involve any data from you. Videos on YouTube are subject to the <a href="https://www.youtube.com/t/terms" rel="nofollow noopener" target="_blank">YouTube Terms of Service</a>, and YouTube processes data under the <a href="https://policies.google.com/privacy" rel="nofollow noopener" target="_blank">Google Privacy Policy</a>.</p><p>On an article that has a video, and on the <a href="/shorts/">Shorts</a> page, you can play that video here. Nothing is loaded from YouTube when the page opens: you see the article photo or a thumbnail. Only after you click, or press Enter, do we load a player from youtube-nocookie.com, YouTube\'s privacy-enhanced domain. Until that click your browser does not contact YouTube. After it, YouTube can receive technical data such as your IP address and, once playback starts, may set cookies and process data as described in Google\'s privacy policy. We do not load a YouTube player in the background.</p><h2>Your browser</h2><p>Saved articles, and the list of articles you liked, are stored only in your own browser (local storage), not on our servers. You can delete them by clearing your browser data.</p><h2>Likes</h2><p>The like button talks to a small program on our host (a Cloudflare worker). It sends only the article id and whether you added or removed a like. The worker stores one total per article and nothing else: no account, no cookie and no IP address. It cannot tell who liked an article.</p><h2>Your rights</h2><p>You have the right to access, correct or delete your personal data, to object to its use, and to ask for it to be restricted or transferred. Send your request through the contact form; we answer within one month. You can also file a complaint with the Dutch Data Protection Authority (Autoriteit Persoonsgegevens) or the authority in your own country.</p><h2>Changes</h2><p>If we add advertising or other analytics, we will update this page first and ask for your consent where the law requires it.</p><p><em>Last updated: 14 November 2026.</em></p>'),
+               '<p>This policy explains what personal data trendingtesla.com processes, why, and what your rights are. We keep it to the minimum: you can read the whole site without an account and without tracking cookies.</p><h2>Who is responsible?</h2><p>The controller for this site is trendingtesla.com. You can reach us through the <a href="/contact/">contact form</a>.</p><h2>Contact form</h2><p>If you use the contact form, your name, email address and message are forwarded to our mailbox by email (via Cloudflare Email Routing, and our email provider). We use them only to answer you; the legal basis is our legitimate interest in answering questions, or steps you ask us to take. The form is handled by this site\'s Cloudflare worker, which checks the message, applies the spam limit below and emails it on. The message is not stored on the website. We delete your message once it has been handled, and in any case within 12 months.</p><p>To stop spam and abuse, the form keeps a scrambled (hashed) version of your IP address for at most two hours to count how many messages are sent. The original IP address is not stored.</p><h2>Hosting and statistics</h2><p>The site is served through Cloudflare, which processes technical data such as IP addresses to deliver and protect the site. Cloudflare may process data outside the EU; it uses the EU Standard Contractual Clauses and is certified under the EU-US Data Privacy Framework. Anonymous visit counts use Cloudflare Web Analytics. That script loads only after you accept on the cookie banner. It uses no cookies of its own, does not track you across sites and only gives us totals. If you refuse, it is not loaded. Fonts are served from our own domain, not from third parties.</p><h2>YouTube</h2><p>We publish short videos on our YouTube channel @TrendingTesla. To upload our own videos we use YouTube API Services; this does not involve any data from you. Videos on YouTube are subject to the <a href="https://www.youtube.com/t/terms" rel="nofollow noopener" target="_blank">YouTube Terms of Service</a>, and YouTube processes data under the <a href="https://policies.google.com/privacy" rel="nofollow noopener" target="_blank">Google Privacy Policy</a>.</p><p>On an article that has a video, and on the <a href="/shorts/">Shorts</a> page, you can play that video here. Nothing is loaded from YouTube when the page opens: you see the article photo or a thumbnail. Only after you click, or press Enter, do we load a player from youtube-nocookie.com, YouTube\'s privacy-enhanced domain. Until that click your browser does not contact YouTube. After it, YouTube can receive technical data such as your IP address and, once playback starts, may set cookies and process data as described in Google\'s privacy policy. We do not load a YouTube player in the background.</p><h2>Your browser</h2><p>Saved articles, and the list of articles you liked, are stored only in your own browser (local storage), not on our servers. You can delete them by clearing your browser data.</p><h2>Likes</h2><p>The like button talks to a small program on our host (a Cloudflare worker). It sends only the article id and whether you added or removed a like. The worker stores one total per article and nothing else: no account, no cookie and no IP address. It cannot tell who liked an article.</p><h2>Your rights</h2><p>You have the right to access, correct or delete your personal data, to object to its use, and to ask for it to be restricted or transferred. Send your request through the contact form; we answer within one month. You can also file a complaint with the Dutch Data Protection Authority (Autoriteit Persoonsgegevens) or the authority in your own country.</p><h2>Cookies and consent</h2><p>A banner asks whether optional advertising and anonymous visit counts may run. Your choice is stored in this browser (local storage) so we can remember it. That storage is not a tracking cookie. Saved articles, and the articles you mark as liked, use the same kind of browser storage and stay on this device. Until you accept, no advertising script and no analytics script is loaded. You can change the choice at any time with Cookie settings in the footer. Refusing leaves every article readable.</p><h2>Advertising</h2><p>Advertising space on an article stays empty until an ad network is connected. When it is, the ad script (Google AdSense) loads only after you accept. The script can set cookies and receive technical data such as your IP address, as described in the <a href="https://policies.google.com/privacy" rel="nofollow noopener" target="_blank">Google Privacy Policy</a>. If you refuse, the script is not loaded and no ad request is made. The space for an ad is reserved only while ads are switched on, so the page does not jump when they are off.</p><h2>Newsletter</h2><p>If a newsletter form is shown, it sends the email address you type to the provider that hosts the form. This site does not store that address. The form stays hidden until a provider is connected. Sending the form is your consent. Unsubscribe with the link in the email.</p><h2>Affiliate links</h2><p>Some articles may show a product box. If you buy through that link we may earn a commission, at no extra cost to you. The link is marked as sponsored. The box does not show a price.</p><h2>Changes</h2><p>When the way this site handles data changes, this page is updated first.</p><p><em>Last updated: 15 November 2026.</em></p>'),
         "nl": ("Privacybeleid", "Hoe trendingtesla.com met je gegevens omgaat en welke rechten je hebt.",
-               '<p>Hier lees je welke persoonsgegevens trendingtesla.com verwerkt, waarom, en welke rechten je hebt. We houden het zo klein mogelijk: je kunt de hele site lezen zonder account en zonder trackingcookies.</p><h2>Wie is verantwoordelijk?</h2><p>Verantwoordelijk voor deze site is trendingtesla.com. Je bereikt ons via het <a href="/nl/contact/">contactformulier</a>.</p><h2>Contactformulier</h2><p>Gebruik je het contactformulier, dan worden je naam, e-mailadres en bericht per e-mail doorgestuurd naar onze mailbox (via Cloudflare Email Routing en onze e-mailprovider). We gebruiken ze alleen om je te antwoorden; de grondslag is ons gerechtvaardigd belang om vragen te beantwoorden, of stappen die je ons zelf vraagt te zetten. Het formulier wordt afgehandeld door de Cloudflare-worker van deze site: die controleert het bericht, past de spamlimiet hieronder toe en mailt het door. Het bericht wordt niet op de website bewaard. We verwijderen je bericht zodra het is afgehandeld, en in elk geval binnen 12 maanden.</p><p>Om spam en misbruik te voorkomen, bewaart het formulier hoogstens twee uur een onherkenbaar gemaakte (gehashte) versie van je IP-adres om te tellen hoeveel berichten er worden verstuurd. Het echte IP-adres wordt niet opgeslagen.</p><h2>Hosting en statistieken</h2><p>De site wordt geleverd via Cloudflare, dat technische gegevens zoals IP-adressen verwerkt om de site te leveren en te beveiligen. Cloudflare kan gegevens buiten de EU verwerken; het gebruikt daarvoor de EU-modelcontractbepalingen en is gecertificeerd onder het EU-VS Data Privacy Framework. We tellen bezoeken met Cloudflare Web Analytics; dat gebruikt geen cookies, volgt je niet over andere sites en geeft ons alleen totalen. Lettertypen komen van ons eigen domein, niet van derden.</p><h2>YouTube</h2><p>We publiceren korte video\'s op ons YouTube-kanaal @TrendingTesla. Om onze eigen video\'s te uploaden gebruiken we YouTube API Services; daarbij worden geen gegevens van jou gebruikt. Op video\'s op YouTube zijn de <a href="https://www.youtube.com/t/terms" rel="nofollow noopener" target="_blank">Servicevoorwaarden van YouTube</a> van toepassing, en YouTube verwerkt gegevens volgens het <a href="https://policies.google.com/privacy" rel="nofollow noopener" target="_blank">Privacybeleid van Google</a>.</p><p>Bij een artikel met een video, en op de <a href="/nl/shorts/">Shorts</a>-pagina, kun je die video hier afspelen. Er wordt niets van YouTube geladen als de pagina opent: je ziet de artikelfoto of een miniatuur. Pas als je klikt, of op Enter drukt, laden we een speler van youtube-nocookie.com, het privacyvriendelijkere domein van YouTube. Tot die klik neemt je browser geen contact op met YouTube. Daarna kan YouTube technische gegevens ontvangen, zoals je IP-adres, en zodra het afspelen start cookies plaatsen en gegevens verwerken zoals beschreven in het privacybeleid van Google. We laden geen YouTube-speler op de achtergrond.</p><h2>Je browser</h2><p>Bewaarde artikelen, en de lijst van artikelen die je leuk vond, staan alleen in je eigen browser (local storage), niet op onze servers. Je verwijdert ze door je browsergegevens te wissen.</p><h2>Vind-ik-leuks</h2><p>De vind-ik-leukknop praat met een klein programma op onze host (een Cloudflare-worker). Die krijgt alleen het artikel-id en of je een like toevoegt of weghaalt. De worker bewaart één totaal per artikel en verder niets: geen account, geen cookie en geen IP-adres. Hij kan niet zien wie een artikel leuk vond.</p><h2>Je rechten</h2><p>Je hebt het recht om je persoonsgegevens in te zien, te laten corrigeren of verwijderen, bezwaar te maken tegen het gebruik ervan, en te vragen het gebruik te beperken of de gegevens over te dragen. Stuur je verzoek via het contactformulier; we antwoorden binnen een maand. Je kunt ook een klacht indienen bij de Autoriteit Persoonsgegevens.</p><h2>Wijzigingen</h2><p>Voegen we advertenties of andere statistieken toe, dan passen we deze pagina eerst aan en vragen we waar de wet dat vereist om je toestemming.</p><p><em>Laatst bijgewerkt: 14 november 2026.</em></p>'),
+               '<p>Hier lees je welke persoonsgegevens trendingtesla.com verwerkt, waarom, en welke rechten je hebt. We houden het zo klein mogelijk: je kunt de hele site lezen zonder account en zonder trackingcookies.</p><h2>Wie is verantwoordelijk?</h2><p>Verantwoordelijk voor deze site is trendingtesla.com. Je bereikt ons via het <a href="/nl/contact/">contactformulier</a>.</p><h2>Contactformulier</h2><p>Gebruik je het contactformulier, dan worden je naam, e-mailadres en bericht per e-mail doorgestuurd naar onze mailbox (via Cloudflare Email Routing en onze e-mailprovider). We gebruiken ze alleen om je te antwoorden; de grondslag is ons gerechtvaardigd belang om vragen te beantwoorden, of stappen die je ons zelf vraagt te zetten. Het formulier wordt afgehandeld door de Cloudflare-worker van deze site: die controleert het bericht, past de spamlimiet hieronder toe en mailt het door. Het bericht wordt niet op de website bewaard. We verwijderen je bericht zodra het is afgehandeld, en in elk geval binnen 12 maanden.</p><p>Om spam en misbruik te voorkomen, bewaart het formulier hoogstens twee uur een onherkenbaar gemaakte (gehashte) versie van je IP-adres om te tellen hoeveel berichten er worden verstuurd. Het echte IP-adres wordt niet opgeslagen.</p><h2>Hosting en statistieken</h2><p>De site wordt geleverd via Cloudflare, dat technische gegevens zoals IP-adressen verwerkt om de site te leveren en te beveiligen. Cloudflare kan gegevens buiten de EU verwerken; het gebruikt daarvoor de EU-modelcontractbepalingen en is gecertificeerd onder het EU-VS Data Privacy Framework. Anonieme bezoekcijfers lopen via Cloudflare Web Analytics. Dat script laadt pas nadat je op de cookiebanner accepteert. Het gebruikt zelf geen cookies, volgt je niet over andere sites en geeft ons alleen totalen. Weiger je, dan wordt het niet geladen. Lettertypen komen van ons eigen domein, niet van derden.</p><h2>YouTube</h2><p>We publiceren korte video\'s op ons YouTube-kanaal @TrendingTesla. Om onze eigen video\'s te uploaden gebruiken we YouTube API Services; daarbij worden geen gegevens van jou gebruikt. Op video\'s op YouTube zijn de <a href="https://www.youtube.com/t/terms" rel="nofollow noopener" target="_blank">Servicevoorwaarden van YouTube</a> van toepassing, en YouTube verwerkt gegevens volgens het <a href="https://policies.google.com/privacy" rel="nofollow noopener" target="_blank">Privacybeleid van Google</a>.</p><p>Bij een artikel met een video, en op de <a href="/nl/shorts/">Shorts</a>-pagina, kun je die video hier afspelen. Er wordt niets van YouTube geladen als de pagina opent: je ziet de artikelfoto of een miniatuur. Pas als je klikt, of op Enter drukt, laden we een speler van youtube-nocookie.com, het privacyvriendelijkere domein van YouTube. Tot die klik neemt je browser geen contact op met YouTube. Daarna kan YouTube technische gegevens ontvangen, zoals je IP-adres, en zodra het afspelen start cookies plaatsen en gegevens verwerken zoals beschreven in het privacybeleid van Google. We laden geen YouTube-speler op de achtergrond.</p><h2>Je browser</h2><p>Bewaarde artikelen, en de lijst van artikelen die je leuk vond, staan alleen in je eigen browser (local storage), niet op onze servers. Je verwijdert ze door je browsergegevens te wissen.</p><h2>Vind-ik-leuks</h2><p>De vind-ik-leukknop praat met een klein programma op onze host (een Cloudflare-worker). Die krijgt alleen het artikel-id en of je een like toevoegt of weghaalt. De worker bewaart één totaal per artikel en verder niets: geen account, geen cookie en geen IP-adres. Hij kan niet zien wie een artikel leuk vond.</p><h2>Je rechten</h2><p>Je hebt het recht om je persoonsgegevens in te zien, te laten corrigeren of verwijderen, bezwaar te maken tegen het gebruik ervan, en te vragen het gebruik te beperken of de gegevens over te dragen. Stuur je verzoek via het contactformulier; we antwoorden binnen een maand. Je kunt ook een klacht indienen bij de Autoriteit Persoonsgegevens.</p><h2>Cookies en toestemming</h2><p>Een banner vraagt of optionele advertenties en anonieme bezoekcijfers aan mogen. Je keuze wordt in deze browser bewaard (local storage), zodat we die kunnen onthouden. Dat is geen trackingcookie. Bewaarde artikelen, en de artikelen die je leuk vindt, gebruiken dezelfde opslag in de browser en blijven op dit apparaat. Tot je accepteert, wordt geen advertentiescript en geen statistiekscript geladen. Je wijzigt de keuze wanneer je wilt via Cookie-instellingen in de voettekst. Weigeren laat elk artikel leesbaar.</p><h2>Advertenties</h2><p>Ruimte voor advertenties in een artikel blijft leeg tot er een advertentienetwerk is gekoppeld. Daarna laadt het advertentiescript (Google AdSense) pas nadat je accepteert. Het script kan cookies plaatsen en technische gegevens ontvangen, zoals je IP-adres, zoals beschreven in het <a href="https://policies.google.com/privacy" rel="nofollow noopener" target="_blank">privacybeleid van Google</a>. Weiger je, dan wordt het script niet geladen en gaat er geen advertentieverzoek uit. De ruimte voor een advertentie wordt alleen gereserveerd als advertenties aan staan, zodat de pagina niet verspringt zolang ze uit staan.</p><h2>Nieuwsbrief</h2><p>Staat er een aanmeldformulier, dan gaat het e-mailadres dat je invult naar de aanbieder die het formulier host. Deze site bewaart dat adres niet. Het formulier blijft verborgen tot er een aanbieder is gekoppeld. Het versturen is je toestemming. Afmelden doe je via de link in de e-mail.</p><h2>Affiliate-links</h2><p>Sommige artikelen kunnen een productblok tonen. Koop je via die link, dan kunnen wij een commissie ontvangen, zonder extra kosten voor jou. De link is gemarkeerd als gesponsord. In het blok staat geen prijs.</p><h2>Wijzigingen</h2><p>Verandert de manier waarop deze site met gegevens omgaat, dan werken we deze pagina eerst bij.</p><p><em>Laatst bijgewerkt: 15 november 2026.</em></p>'),
     },
     "contact": {
         "en": ("Contact", "Get in touch with TrendingTesla: tips, corrections and questions.",
@@ -310,7 +393,7 @@ html,body{overflow-x:clip;max-width:100%}
 body{background:linear-gradient(180deg,rgba(15,15,15,0) 0,rgba(15,15,15,0) 35%,#0f0f0f 100%) top left/100% 900px no-repeat,linear-gradient(160deg,#2b2b2b 0%,#1d1d1d 35%,#141414 70%,#0f0f0f 100%) top left/100% 900px no-repeat,#0f0f0f;min-height:100vh;color:var(--fg);font:17px/1.42 Manrope,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
 main,footer{position:relative;z-index:1}
 a{color:var(--head)}
-img{display:block;max-width:100%;height:auto}
+img{display:block;max-width:100%;height:auto}picture{display:contents}
 h1,h2,h3{color:#ebebeb;font-weight:800}
 .wrap{max-width:var(--max);margin:0 auto;padding:0 12px}
 .narrow{max-width:740px;margin:0 auto}
@@ -601,6 +684,190 @@ article.narrow > h1{margin-left:14px}article.narrow .cform{margin-left:14px}
 .res a,.sopen .search .res a{display:flex!important;gap:12px;align-items:center}.res img,.sopen .search .res img{margin:0;flex:none;max-width:none;aspect-ratio:auto}.res a>span{flex:1;min-width:0}
 .res small{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .drawer .dmodels{display:none}.drawer .dmodels.show{display:block}
+.dpri{display:flex;flex-direction:column;gap:2px;padding:0 4px 4px}
+.pnav{display:none}
+@media (min-width:700px){.pnav{display:flex;align-items:center;gap:2px;height:44px;margin:0 0 8px;overflow-x:auto;scrollbar-width:none}.pnav::-webkit-scrollbar{display:none}}
+.pn{display:flex;align-items:center;height:36px;padding:0 10px;border-radius:10px;color:var(--fg);text-decoration:none;font-size:.84rem;font-weight:700;white-space:nowrap}
+.pn:hover{background:#272727;color:#fff}
+.pn.on,.pdrop.on>.pn{background:#ebebeb;color:#111}
+.pdrop{position:relative;display:flex;align-items:center}
+.pmenu{display:none;position:absolute;top:calc(100% - 4px);left:0;min-width:210px;z-index:50;background:#161616;border:1px solid #3a4a60;border-radius:10px;padding:6px;box-shadow:0 12px 32px rgba(0,0,0,.55)}
+.pdrop:hover .pmenu,.pdrop:focus-within .pmenu{display:grid}
+.pdrop:last-child .pmenu{left:auto;right:0}
+.pmenu a{padding:8px 12px;border-radius:8px;color:#ebebeb;text-decoration:none;font-size:.86rem;font-weight:700;white-space:nowrap}
+.pmenu a:hover{background:#272727}
+.crumbs{margin:14px 0 4px;font-size:.82rem;color:var(--dim)}
+.crumbs ol{display:flex;flex-wrap:wrap;gap:6px 0;list-style:none;padding:0;margin:0}
+.crumbs li{display:flex;align-items:center;gap:6px;min-width:0}
+.crumbs li:not(:last-child)::after{content:"/";color:var(--dim);margin-left:6px}
+.crumbs a{color:var(--muted);text-decoration:none}
+.crumbs a:hover{color:var(--head)}
+.crumbs [aria-current]{color:var(--fg)}
+.hubhead{padding:18px 0 6px}
+.hubhead h1{font-size:clamp(1.8rem,4vw,2.7rem);letter-spacing:-.03em;line-height:1.08;margin:0 0 10px}
+.hubhead .lead{font-size:1.08rem;line-height:1.55;color:var(--muted);max-width:46rem;margin:0 0 16px}
+.starthere{margin:6px 0 26px;padding:16px 16px 18px;border:1px solid rgba(0,212,255,.35);border-radius:12px;background:rgba(0,212,255,.06)}
+.starthere>h2{margin:0 0 4px;font-size:1.25rem}
+.starthere>.sub{margin:0 0 12px}
+.aread{max-width:760px;margin:0 auto}
+.aread.with-side{max-width:760px}
+@media (min-width:960px){.aread.with-side{max-width:1100px;display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:28px;align-items:start}}
+.ad-side-wrap{display:none}
+@media (min-width:960px){.ad-side-wrap{display:block;position:sticky;top:120px}}
+article.money{padding-top:6px}
+article.money h1.atitle{font-size:clamp(1.85rem,4.5vw,2.7rem);line-height:1.14;letter-spacing:-.025em;margin:8px 0 10px;max-width:18em}
+article.money .lead{font-size:1.16rem;line-height:1.55;max-width:40em}
+article.money .prose{font-size:1.075rem;line-height:1.75;max-width:68ch}
+article.money .prose p{margin-bottom:1.15em}
+article.money .toc{float:none;width:auto;max-width:68ch;margin:4px 0 20px}
+article.money .prose h2{scroll-margin-top:130px}
+.leadstory{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(280px,1fr);gap:28px;align-items:center;margin:10px 0 8px;padding:0}
+.leadstory .lead{padding:0;max-width:40em}
+.leadstory .leadim{display:block;border-radius:12px;overflow:hidden;border:1px solid var(--edge);background:#000}
+.leadstory img{width:100%;height:auto;aspect-ratio:1200/630;object-fit:cover}
+.leadstory h1{font-size:clamp(1.7rem,3vw,2.4rem);line-height:1.15;letter-spacing:-.025em;margin:8px 0 12px}
+.leadstory h1 a{color:inherit;text-decoration:none}
+.leadstory h1 a:hover{text-decoration:underline;text-underline-offset:3px}
+.leadstory .lead{font-size:1.08rem;line-height:1.55;color:var(--muted);margin:0 0 18px}
+.hsec{margin:34px 0 8px}
+.topics3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px 14px}
+.topics3>.card{display:flex;flex-direction:column;min-width:0}
+.topics3 .im{border-radius:10px;overflow:hidden;border:1px solid var(--edge)}
+.topics3 .im img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
+.topics3 h3{font-size:1.02rem;line-height:1.3;margin:8px 0 4px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.topics3 p{font-size:.88rem;-webkit-line-clamp:2}
+.vstrip{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:2px 0 12px;scrollbar-width:thin}
+.vcard{flex:0 0 240px;scroll-snap-align:start;text-decoration:none;color:inherit;min-width:0}
+.vcard .vim{position:relative;display:block;aspect-ratio:16/9;border-radius:10px;overflow:hidden;border:1px solid var(--edge);background:#000;container-type:inline-size}
+.vcard img{width:100%;height:100%;object-fit:cover}
+.vcard strong{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:.9rem;line-height:1.3;margin-top:8px;font-weight:700}
+@media (max-width:800.98px){
+.leadstory{grid-template-columns:1fr;gap:14px}
+.topics3{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;padding-bottom:8px}
+.topics3>.card{flex:0 0 82%;scroll-snap-align:start}
+.vcard{flex-basis:78vw}
+}
+article.money .avid{max-width:68ch}
+.avid.short{max-width:280px}
+.avid.short .avb{aspect-ratio:9/16}
+.adslot{margin:20px 0;max-width:68ch;display:flex;flex-direction:column;align-items:stretch;background:rgba(255,255,255,.03);border:1px dashed var(--border2);border-radius:12px;overflow:hidden}
+.adlab{font-size:.65rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);padding:8px 12px 0}
+.adslot ins{display:block;width:100%}
+.pbox{margin:22px 0;max-width:68ch}
+.pbox-in{display:grid;grid-template-columns:168px minmax(0,1fr);gap:16px;align-items:start;padding:14px;border:1px solid var(--border2);border-radius:12px;background:#161616}
+.pbox img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:8px}
+.pbox h3{font-size:1.05rem;line-height:1.3;margin:0 0 8px}
+.pbox ul{margin:0 0 12px;padding-left:18px}
+.pbox li{margin:0 0 4px;color:var(--muted);font-size:.92rem}
+.affnote{margin:8px 0 0;font-size:.75rem;line-height:1.45;color:var(--dim)}
+.nform{margin:26px 0;padding:16px 16px 14px;border:1px solid var(--border2);border-radius:12px;background:rgba(255,255,255,.03);max-width:68ch}
+.nform h2{font-size:1.15rem;margin:0 0 6px}
+.nform p{color:var(--muted);font-size:.9rem;line-height:1.45;margin:0 0 12px}
+.nrow{display:flex;gap:8px}
+.nrow input{flex:1;min-width:0;background:#121212;border:1px solid #3a4a60;border-radius:10px;color:var(--head);font:inherit;font-size:1rem;padding:10px 12px}
+.nrow button{background:var(--red);color:#fff;border:0;border-radius:10px;font:inherit;font-weight:800;padding:10px 16px;cursor:pointer;white-space:nowrap}
+.nrow button:hover{background:var(--red2)}
+footer .nform{margin:14px 0 0;padding:0;border:0;background:transparent;max-width:340px}
+footer .nform h2{font-size:.7rem;letter-spacing:.09em;text-transform:uppercase;color:var(--blue)}
+footer .nrow{flex-direction:column}
+nav.seq{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:26px 0 8px}
+nav.seq a{display:flex;flex-direction:column;gap:4px;text-decoration:none;border:1px solid var(--border2);border-radius:12px;padding:12px 14px;min-height:88px;color:inherit;font-weight:400;white-space:normal}
+nav.seq a.next{text-align:right;align-items:flex-end}
+nav.seq a small{color:var(--dim);font-weight:800;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase}
+nav.seq a strong{color:var(--head);font-size:.95rem;line-height:1.35;font-weight:800}
+nav.seq a:hover{border-color:#6b7d95}
+button.flink{background:none;border:0;padding:0;color:var(--muted);font:inherit;cursor:pointer;text-align:left}
+button.flink:hover{color:var(--head)}
+.consent{position:fixed;z-index:80;left:12px;right:12px;bottom:12px;display:flex;gap:16px;align-items:center;justify-content:space-between;max-width:920px;margin:0 auto;background:#161616;color:var(--fg);border:1px solid #3a4a60;border-radius:14px;padding:14px 16px;box-shadow:0 16px 40px rgba(0,0,0,.55)}
+.consent[hidden]{display:none}
+.consent p{margin:0;font-size:.92rem;line-height:1.45}
+.consent a{color:var(--blue2)}
+.consent-btns{display:flex;gap:8px;flex:none}
+.consent button{font:inherit;font-weight:800;font-size:.9rem;border-radius:10px;padding:11px 16px;cursor:pointer;min-width:112px}
+.consent [data-consent="necessary"]{background:transparent;color:#fff;border:1px solid #8f9db0}
+.consent [data-consent="all"]{background:var(--red);color:#fff;border:1px solid var(--red)}
+.consent [data-consent="necessary"]:hover{border-color:#fff}
+.consent [data-consent="all"]:hover{background:var(--red2)}
+@media (max-width:600.98px){
+article.money h1.atitle{font-size:1.7rem;line-height:1.18}
+.pbox-in{grid-template-columns:1fr}
+.consent{flex-direction:column;align-items:stretch;left:8px;right:8px}
+.consent-btns{display:grid;grid-template-columns:1fr 1fr}
+.consent button{min-width:0}
+nav.seq{grid-template-columns:1fr}
+nav.seq a.next{text-align:left;align-items:flex-start}
+}
+/* Preview B header only: nav in the top bar, search centered underneath. */
+header.hb .brand,header.hb .savedlink{transform:none}
+header.hb .bar{gap:8px}
+header.hb .pnav{display:none;flex:1 1 auto;min-width:0;height:auto;margin:0;overflow-x:auto;scrollbar-width:none}
+header.hb .pn{height:34px;padding:0 8px;font-size:.8rem}
+header.hb .savedlink{margin-left:auto}
+header.hb .mdrop{position:relative;flex:none}
+header.hb .mdrop>button.pn{border:0;background:transparent;cursor:pointer;font:inherit}
+header.hb .mdrop>button.pn[aria-expanded=true]{background:#272727;color:#fff}
+header.hb .mdrop .pmenu{display:none;left:auto;right:0;top:calc(100% + 4px)}
+header.hb .mdrop.is-open .pmenu{display:grid}
+header.hb .hb-search{display:flex;position:relative;width:min(640px,calc(100% - 8px));max-width:640px;margin:2px auto 10px;height:42px;left:auto;right:auto;top:auto;background:transparent;padding:0}
+header.hb .hb-search input,header.hb .hb-search>button{height:42px}
+header.hb ~ .drawer,header.hb ~ .scrim{top:118px}
+@media (min-width:1100px){header.hb .pnav{display:flex;overflow:visible}header.hb .bar{position:relative;z-index:3}header.hb .bar .burger{display:none}}
+header.hb .hb-search{z-index:1}
+header.hb .mdrop .pmenu{z-index:6}
+@media (max-width:1099.98px){header.hb .bar .burger{display:flex}header.hb .pnav{display:none}header.hb ~ .drawer,header.hb ~ .scrim{top:108px}}
+/* Layout previews. Scoped so the live pages are unchanged. */
+.pv-note{font-size:.82rem;line-height:1.45;color:var(--muted);background:#161616;border:1px solid var(--border2);border-radius:10px;padding:10px 12px;margin:8px 0 12px}
+.pv-note a{color:var(--blue2)}
+.pv-note b{color:var(--red)}
+.pv-tabs{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;border-bottom:1px solid var(--border);margin:0 0 12px}
+.pv-tabs a{flex:none;padding:9px 12px 7px;text-decoration:none;font-weight:800;font-size:.84rem;color:var(--muted);border-bottom:2px solid transparent}
+.pv-tabs a.on,.pv-tabs a:hover{color:#fff;border-bottom-color:var(--red)}
+.pv-grid{display:grid;grid-template-columns:minmax(0,1fr) 292px;gap:26px;align-items:start}
+.pv-lead{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:14px;align-items:center;margin:0 0 6px;text-decoration:none;color:inherit}
+.pv-lead .im{position:relative;border-radius:10px;overflow:hidden;border:1px solid var(--edge);background:#000}
+.pv-lead img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
+.pv-kicker{font-size:.72rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--blue)}
+.pv-lead h1,.pv-lead h2{font-size:clamp(1.25rem,2.2vw,1.7rem);line-height:1.18;margin:4px 0 8px}
+.pv-lead p{color:var(--muted);font-size:.92rem;line-height:1.45;margin:0}
+.pv-day{font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);margin:14px 0 4px;padding-top:8px;border-top:1px solid var(--border)}
+.pv-row{display:grid;grid-template-columns:52px minmax(0,1fr) 46px;gap:8px;align-items:center;padding:7px 0;border-bottom:1px solid #242424;text-decoration:none;color:inherit}
+.pv-row.hasth{grid-template-columns:52px 96px minmax(0,1fr) 46px}
+.pv-row time{font-variant-numeric:tabular-nums;font-size:.8rem;font-weight:800;color:var(--dim)}
+.pv-th{position:relative;container-type:inline-size;border-radius:6px;overflow:hidden;border:1px solid var(--edge);background:#000}
+.pv-th img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
+.pv-hl{min-width:0}
+.pv-hl b{display:block;font-size:.95rem;line-height:1.28;font-weight:700}
+.pv-hl i{display:block;margin-top:2px;font-style:normal;font-size:.72rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:var(--blue)}
+.pv-min{justify-self:end;min-width:42px;text-align:center;border:1px solid var(--border2);border-radius:8px;padding:3px 0 2px;line-height:1}
+.pv-min b{display:block;color:var(--red);font-size:.95rem}
+.pv-min small{color:var(--dim);font-size:.62rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase}
+.pv-row:hover .pv-hl b{text-decoration:underline;text-underline-offset:2px}
+.pv-side h2{font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#fff;border-top:3px solid var(--red);padding-top:8px;margin:0 0 8px}
+.pv-side section{margin:0 0 18px}
+.pv-side a{text-decoration:none;color:inherit}
+.pv-side li{display:grid;grid-template-columns:1.3rem minmax(0,1fr);gap:6px;padding:7px 0;border-bottom:1px solid #242424;font-size:.88rem;line-height:1.3;font-weight:700}
+.pv-side ol{list-style:none;counter-reset:pv;margin:0;padding:0}
+.pv-side ol li{counter-increment:pv}
+.pv-side ol li::before{content:counter(pv);color:var(--red);font-weight:800}
+.pv-side .pv-guide{display:grid;grid-template-columns:72px minmax(0,1fr);gap:8px;align-items:center;padding:7px 0;border-bottom:1px solid #242424}
+.pv-side .pv-guide img{width:72px;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:6px}
+.pv-off{color:var(--dim);font-size:.8rem;line-height:1.4;margin:0}
+.pv-block{margin:0 0 18px}
+.pv-block h2{font-size:1.05rem;margin:0 0 8px}
+.pv-art{display:grid;grid-template-columns:minmax(0,68ch) 280px;gap:28px;align-items:start}
+.pv-art.pv-c{grid-template-columns:190px minmax(0,66ch) 260px}
+.pv-art h1{font-size:clamp(1.55rem,2.6vw,2.1rem);line-height:1.16;margin:6px 0 8px}
+.pv-art .lead{font-size:1.08rem;line-height:1.5;color:var(--muted)}
+.pv-art .prose{font-size:1.05rem;line-height:1.7;max-width:66ch}
+.pv-art .toc{float:none;width:auto;max-width:none;margin:0 0 16px}
+.pv-c .toc{position:sticky;top:118px}
+.pv-art .avid{max-width:none}
+@media (max-width:900px){
+.pv-grid,.pv-art,.pv-art.pv-c{grid-template-columns:1fr}
+.pv-lead{grid-template-columns:1fr}
+.pv-c .toc{position:static}
+.pv-row.hasth{grid-template-columns:46px 72px minmax(0,1fr) 40px}
+}
 """
 
 
@@ -858,11 +1125,83 @@ def site_img(a):
     return CHOSEN.get(a["slug"]) or candidates(a)[0]
 
 
+# Responsive derivatives written under public/img/opt/. The original file stays the img src.
+OPT_WIDTHS = (480, 800, 1200)
+_OPT = {}
+SIZES_LEAD = "(max-width: 800px) 100vw, 58vw"
+SIZES_CARD = "(max-width: 700px) 100vw, 280px"
+SIZES_GRID = "(max-width: 600px) 100vw, (max-width: 1000px) 33vw, 280px"
+SIZES_VIDEO = "(max-width: 800px) 78vw, 240px"
+SIZES_HERO = "(max-width: 760px) 100vw, 720px"
+
+
+def _opt_variants(src):
+    """Build AVIF and WebP widths for one site image. Cached for this build."""
+    if src in _OPT:
+        return _OPT[src]
+    path = OUT / str(src).lstrip("/")
+    if not path.is_file() or path.suffix.lower() not in {".jpg", ".jpeg", ".png", ".webp"}:
+        _OPT[src] = None
+        return None
+    try:
+        from PIL import Image as PILImage
+        im = PILImage.open(path)
+        im.load()
+        if im.mode == "RGBA":
+            bg = PILImage.new("RGB", im.size, (8, 8, 8))
+            bg.paste(im, mask=im.split()[-1])
+            im = bg
+        elif im.mode != "RGB":
+            im = im.convert("RGB")
+    except Exception:
+        _OPT[src] = None
+        return None
+    ow, oh = im.size
+    key = hashlib.sha1(src.encode()).hexdigest()[:12]
+    folder = OUT / "img" / "opt" / key
+    folder.mkdir(parents=True, exist_ok=True)
+    widths = []
+    for want in OPT_WIDTHS:
+        w = ow if want >= ow else want
+        if w in widths:
+            continue
+        h = max(1, round(oh * w / ow))
+        frame = im if (w, h) == (ow, oh) else im.resize((w, h), PILImage.Resampling.LANCZOS)
+        frame.save(folder / f"{w}.webp", "WEBP", quality=62, method=4)
+        frame.save(folder / f"{w}.avif", "AVIF", quality=40, speed=8)
+        widths.append(w)
+        if w == ow:
+            break
+    _OPT[src] = (key, widths)
+    return _OPT[src]
+
+
+def resp_img(src, alt, sizes, *, high=False, lazy=True, width=1200, height=630, cls=""):
+    """AVIF and WebP srcset, with the original file as the fallback src."""
+    cls_attr = f' class="{cls}"' if cls else ""
+    flags = ['decoding="async"']
+    if high:
+        flags.insert(0, 'fetchpriority="high"')
+    elif lazy:
+        flags.insert(0, 'loading="lazy"')
+    img = (f'<img{cls_attr} src="{esc(src)}" alt="{esc(alt)}" width="{width}" height="{height}" '
+           f'{" ".join(flags)}>')
+    info = _opt_variants(src) if isinstance(src, str) and src.startswith("/") else None
+    if not info:
+        return img
+    key, widths = info
+    def srcset(ext):
+        return ", ".join(f"/img/opt/{key}/{w}.{ext} {w}w" for w in widths)
+    sized = esc(sizes)
+    return (f'<picture><source type="image/avif" sizes="{sized}" srcset="{srcset("avif")}">'
+            f'<source type="image/webp" sizes="{sized}" srcset="{srcset("webp")}">{img}</picture>')
+
+
 def read_time(a, lang):
     return max(1, round(len(html.unescape(a[lang]["body"]).split()) / 220))
 
 
-def page(lang, path, title, description, body, og_type="website", extra_head="", image=None, active=None, robots=None, canonical=True):
+def page(lang, path, title, description, body, og_type="website", extra_head="", image=None, active=None, robots=None, canonical=True, bar=None):
     L = LANGS[lang]
     alt = other(lang)
     full_title = f"{title} | {NAME}" if title != NAME else f"{NAME} — {L['tagline']}"
@@ -888,6 +1227,18 @@ def page(lang, path, title, description, body, og_type="website", extra_head="",
     fmods = "".join(f'<a href="{url(lang, "model/" + k + "/")}">{MODELS[k]["name"]}</a>' for k in MODEL_ROOTS)
     cats = " · ".join(f'<a href="{url(lang, "category/" + k + "/")}">{c[lang]}</a>' for k, c in CATEGORIES.items() if c["menu"])
     mods = " · ".join(f'<a href="{url(lang, "model/" + k + "/")}">{m["name"]}</a>' for k, m in MODELS.items() if not m.get("parent") or k in MODEL_STRIP)
+    search = (f'<form class="search hb-search" role="search" action="{url(lang)}" '
+              f'data-idx="/search-{lang}.json" data-none="{L["none"]}"><input type="search" name="q" '
+              f'placeholder="{L["search"]}" aria-label="{L["search"]}" autocomplete="off">'
+              f'<button type="submit" aria-label="{L["search"]}">{SEARCH_SVG}</button><div class="res" hidden></div></form>')
+    tools = (f'<a class="savedlink" href="{url(lang, "saved/")}" title="{L["saved"]}" aria-label="{L["saved"]}">{BOOK_SVG}<i hidden></i></a>'
+             f'<a class="lang" href="{url(alt, path)}" hreflang="{alt}" lang="{alt}" title="{L["switch_full"]}">{L["switch"]}</a>')
+    burger = f'<button class="burger" type="button" aria-label="{L["menu"]}" aria-expanded="false" aria-controls="drawer"><span></span><span></span><span></span></button>'
+    brand = f'<div class="brand"><a class="logo" href="{url(lang)}">Trending<span>Tesla</span></a></div>'
+    header = (f'<header class="top hb"><div class="wrap"><div class="bar">{burger}{brand}'
+              f'{primary_nav(lang, active)}'
+              f'<button class="sbtn" type="button" aria-label="{L["search"]}">{SEARCH_SVG}</button>'
+              f'{tools}</div>{search}</div></header>')
     return f"""<!doctype html>
 <html lang="{lang}">
 <head>
@@ -919,28 +1270,20 @@ def page(lang, path, title, description, body, og_type="website", extra_head="",
 {extra_head}
 </head>
 <body>
-<header class="top"><div class="wrap">
-<div class="bar"><button class="burger" type="button" aria-label="{L['menu']}" aria-expanded="false" aria-controls="drawer"><span></span><span></span><span></span></button>
-<div class="brand"><a class="logo" href="{url(lang)}">Trending<span>Tesla</span></a></div>
-<form class="search" role="search" action="{url(lang)}" data-idx="/search-{lang}.json" data-none="{L['none']}"><input type="search" name="q" placeholder="{L['search']}" aria-label="{L['search']}" autocomplete="off"><button type="submit" aria-label="{L['search']}">{SEARCH_SVG}</button><div class="res" hidden></div></form>
-{topicdd(lang, active)}
-<button class="sbtn" type="button" aria-label="{L['search']}">{SEARCH_SVG}</button>
-<a class="savedlink" href="{url(lang, 'saved/')}" title="{L['saved']}" aria-label="{L['saved']}">{BOOK_SVG}<i hidden></i></a>
-<a class="lang" href="{url(alt, path)}" hreflang="{alt}" lang="{alt}" title="{L['switch_full']}">{L['switch']}</a></div>
-</div></header>
+{header}
 <div class="scrim"></div>
 <nav id="drawer" class="drawer" aria-label="{L['menu']}">{drawer(lang, active, path.strip("/").split("/")[1] if path.strip("/").startswith("model/") else None)}</nav>
 <main class="wrap">
 {body}
 </main>
 <footer><div class="wrap"><div class="fgrid">
-<div class="fbrand"><a class="logo" href="{url(lang)}">Trending<span>Tesla</span></a><p>{L['tagline']} {L['disclaimer']}</p></div>
+<div class="fbrand"><a class="logo" href="{url(lang)}">Trending<span>Tesla</span></a><p>{L['tagline']} {L['disclaimer']}</p>{newsletter(lang, "foot")}</div>
 <div><h4>{L['d_topics']}</h4><div class="flist two">{fcats}</div></div>
 <div><h4>{L['d_models']}</h4><div class="flist">{fmods}</div></div>
-<div><h4>{L['d_more']}</h4><div class="flist"><a href="{url(lang, 'archive/')}">{L['archive']}</a><a href="{url(lang, 'about/')}">{L['about']}</a><a href="{url(lang, 'editorial/')}">{L['editorial']}</a><a href="{url(lang, 'privacy/')}">{L['privacy']}</a><a href="{url(lang, 'contact/')}">Contact</a><a href="{url(lang, 'terms/')}">{'Terms' if lang == 'en' else 'Voorwaarden'}</a><a href="{url(lang, 'shorts/')}">Shorts</a><a href="https://www.youtube.com/@TrendingTesla" rel="noopener" target="_blank">YouTube</a><a href="{url(lang, 'feed.xml')}">RSS</a><a href="{url(alt, path)}">{L['switch_full']}</a></div></div>
+<div><h4>{L['d_more']}</h4><div class="flist"><a href="{url(lang, 'archive/')}">{L['archive']}</a><a href="{url(lang, 'about/')}">{L['about']}</a><a href="{url(lang, 'editorial/')}">{L['editorial']}</a><a href="{url(lang, 'privacy/')}">{L['privacy']}</a><a href="{url(lang, 'contact/')}">Contact</a><a href="{url(lang, 'terms/')}">{'Terms' if lang == 'en' else 'Voorwaarden'}</a><a href="{url(lang, 'shorts/')}">{L['videos']}</a><a href="https://www.youtube.com/@TrendingTesla" rel="noopener" target="_blank">YouTube</a><button type="button" class="flink" data-consent-open>{L['cookie']}</button><a href="{url(lang, 'feed.xml')}">RSS</a><a href="{url(alt, path)}">{L['switch_full']}</a></div></div>
 </div><p class="fcopy">&copy; {datetime.now().year} {NAME}</p></div></footer>
+{consent_bar(lang)}
 <script>{JS}</script>
-<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{{"token": "5c536a7c183844ccb97e1ac151b5d018"}}'></script>
 </body>
 </html>
 """
@@ -953,15 +1296,22 @@ DRAWER_MODELS = MODEL_STRIP + ["cybercab", "semi", "roadster"]
 
 
 def drawer(lang, active=None, model=None):
-    active = menu_key(active)
     L = LANGS[lang]
+    cur = nav_current(active)
     out = (f'<div class="dh"><button class="burger" type="button" aria-label="{L["menu"]}"><span></span><span></span><span></span></button>'
            f'<a class="logo" href="{url(lang)}">Trending<span>Tesla</span></a></div>'
-           f'<button class="di dclose" type="button">‹ {L["collapse"]}</button><div class="mobonly"><div class="dtopics">')
+           f'<button class="di dclose" type="button">‹ {L["collapse"]}</button>'
+           f'<div class="dpri">{drawer_links(lang, active)}</div><hr class="dsep">'
+           f'<div class="mobonly"><div class="dtopics">')
     out += "".join(f'<a class="{"on" if k == active else ""}" href="{url(lang, "category/" + k + "/")}">{btn_label(c, lang)}</a>'
-                   for k, c in CATEGORIES.items() if c["menu"])
-    out += f'</div><hr class="dsep"></div>'
-    show = active == "models" or model in MODELS
+                   for k, c in CATEGORIES.items() if c["menu"] and k not in PRIMARY_CATS)
+    out += '</div><hr class="dsep"></div>'
+    L = LANGS[lang]
+    pages = [(L["about"], "about/"), (L["editorial"], "editorial/"), (L["privacy"], "privacy/"),
+             ("Contact", "contact/"), ("Terms" if lang == "en" else "Voorwaarden", "terms/")]
+    out += '<div class="dpri">' + "".join(
+        f'<a class="di" href="{url(lang, path)}">{esc(name)}</a>' for name, path in pages) + '</div>'
+    show = cur == "models" or model in MODELS
     out += f'<div class="dmodels{" show" if show else ""}">' + modelnav(lang, model if model in MODELS else None) + '</div>'
     return out
 
@@ -993,8 +1343,8 @@ def drop_q_before_h2(body):
                   lambda m: f"<p>{strip_q(m.group(1))}</p>{m.group(2)}", body, flags=re.S)
 
 
-def enrich(a, lang):
-    """Article body extras: anchors + table of contents from the subheadings, and a second photo halfway."""
+def enrich(a, lang, with_toc=False):
+    """Anchors on subheadings. Longer articles (4 or more headings) get a table of contents."""
     body = drop_q_before_h2(a[lang]["body"])
     heads = []
 
@@ -1002,7 +1352,11 @@ def enrich(a, lang):
         heads.append(re.sub(r"<[^>]+>", "", m.group(1)))
         return f'<h2 id="s{len(heads)}">{m.group(1)}</h2>'
     body = re.sub(r"<h2>(.*?)</h2>", anchor, body)
-    toc = ""  # TOC box and mid-article photo removed on request (2026-10-23)
+    toc = ""
+    if with_toc and len(heads) >= 4:
+        label = LANGS[lang]["toc"]
+        items = "".join(f'<li><a href="#s{i}">{esc(text)}</a></li>' for i, text in enumerate(heads, 1))
+        toc = f'<nav class="toc" aria-label="{esc(label)}"><b>{esc(label)}</b><ol>{items}</ol></nav>'
     return toc, body
 
 
@@ -1030,7 +1384,7 @@ def story(a, lang, tag="h1"):
     byline = (f'<p class="byline"><a href="{url(lang, "editorial/")}">{L["byline"]}</a></p>' if tag == "h1" else "")
     toc, body = enrich(a, lang)
     return (f'<article>'
-            f'<div class="hi"{vhero(a, lang)}><img class="hero-img" src="{site_img(a)}" alt="{esc(t["title"])}" width="1200" height="630" fetchpriority="high">{dur(a, lang)}{ovl(a, lang)}</div>{vscript(a, lang)}'
+            f'<div class="hi"{vhero(a, lang)}>{resp_img(site_img(a), t["title"], SIZES_HERO, lazy=False, cls="hero-img")}{dur(a, lang)}{ovl(a, lang)}</div>{vscript(a, lang)}'
             f'<{tag} class="st">{title}</{tag}>{byline}'
             f'<div class="srow"><p class="meta smeta"><a class="tag" href="{url(lang, "category/" + a["category"] + "/")}">{c.get("tag", c[lang])}</a> · {when(a, lang)}</p>'
             f'<div class="acts"><button class="act like" type="button" data-like="{a["slug"]}" aria-pressed="false" title="{L["like"]}">{HEART_SVG}<span>0</span></button>'
@@ -1062,7 +1416,7 @@ def modelnav(lang, current=None):
             items = [(r, ov, MODELS[r].get("menu"))]
         bars = ""
         for k, lbl, img in items:
-            th = f'<img src="/img/models/{img}" alt="" loading="lazy">' if img else ""
+            th = f'<img src="/img/models/{img}" alt="" width="148" height="100" loading="lazy" decoding="async">' if img else ""
             bars += f'<a href="{url(lang, "model/" + k + "/")}" class="vt{" on" if k == current else ""}"><b>{th}</b><span>{esc(lbl)}</span></a>'
         st = " on" if current == r else (" in" if cur_root == r else "")
         rows += (f'<div class="mgrp"><a class="mh{st}" href="{url(lang, "model/" + r + "/")}">{MODELS[r]["name"]}</a>'
@@ -1070,19 +1424,20 @@ def modelnav(lang, current=None):
     return f'<nav class="mnav" aria-label="Models">{rows}</nav>'
 
 
-def modelinfo(key, lang):
+def modelinfo(key, lang, heading=True):
     L = LANGS[lang]
     inf = INFO.get(key)
     if not inf:
         return ""
     t = inf[lang]
     ph = model_photo(key)
-    img = f'<div class="hi"><img class="hero-img" src="{ph}" alt="Tesla {MODELS[key]["name"]}" width="1200" height="630" fetchpriority="high"></div>' if ph else ""
+    img = f'<div class="hi">{resp_img(ph, "Tesla " + MODELS[key]["name"], SIZES_HERO, lazy=False, cls="hero-img")}</div>' if ph else ""
     rows = "".join(f"<tr><th>{esc(k)}</th><td>{esc(v)}</td></tr>" for k, v in t["specs"])
     li = lambda xs: "<ul>" + "".join(f"<li>{esc(x)}</li>" for x in xs) + "</ul>"
     src = "".join(f'<li><a href="{esc(u)}"{"" if u.startswith("/") else " rel=nofollow target=_blank"}>{esc(ti)}</a></li>'
                   for ti, u in inf["sources"])
-    return (f'<article class="minfo">{img}<h1 class="st">Tesla {MODELS[key]["name"]}</h1><p class="lead">{esc(t["intro"])}</p>'
+    title = f'<h1 class="st">Tesla {MODELS[key]["name"]}</h1><p class="lead">{esc(t["intro"])}</p>' if heading else ""
+    return (f'<article class="minfo">{img}{title}'
             f'<div class="prose"><h2>{L["i_specs"]}</h2><table class="specs">{rows}</table>'
             f'<h2>{L["i_watch"]}</h2>{li(t["watch"])}<h2>{L["i_special"]}</h2>{li(t["special"])}'
             f'<h2>{L["i_acc"]}</h2><p class="soon">{L["i_acc_soon"]}</p></div>'
@@ -1298,7 +1653,7 @@ o.onclick=function(){t(false)};(function(){var dr=document.querySelector('.drawe
 dr.addEventListener('touchstart',function(e){x0=e.touches[0].clientX;y0=e.touches[0].clientY},{passive:true});
 dr.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0,dy=e.changedTouches[0].clientY-y0;x0=null;
 if(dx<-60&&Math.abs(dx)>Math.abs(dy)*1.5)t(false)},{passive:true})})();document.querySelectorAll('.dclose').forEach(function(b){b.onclick=function(){t(false)}});
-document.querySelectorAll('.drawer .dtopics a[href$="/category/models/"]').forEach(function(a){a.addEventListener('click',function(){var m=document.querySelector('.drawer .dmodels');if(m)m.classList.add('show');a.classList.add('on');try{sessionStorage.setItem('tt_dm','1')}catch(_){}})});
+document.querySelectorAll('.drawer a[href$="/category/models/"]').forEach(function(a){a.addEventListener('click',function(){var m=document.querySelector('.drawer .dmodels');if(m)m.classList.add('show');a.classList.add('on');try{sessionStorage.setItem('tt_dm','1')}catch(_){}})});
 (function(){var k=null;try{k=sessionStorage.getItem('tt_dm');sessionStorage.removeItem('tt_dm')}catch(_){}
 if(k&&window.matchMedia('(max-width:860px)').matches){d.classList.add('dnoanim');t(true);
 requestAnimationFrame(function(){requestAnimationFrame(function(){d.classList.remove('dnoanim')})})}})();
@@ -1309,7 +1664,7 @@ function load(){return idx?Promise.resolve(idx):fetch(f.dataset.idx).then(functi
 i.addEventListener('focus',load);
 i.addEventListener('input',function(){var q=i.value.trim().toLowerCase();if(q.length<2){r.hidden=true;return}
 load().then(function(){var w=q.split(/\s+/),h=idx.filter(function(a){var s=(a.t+' '+a.d+' '+a.c).toLowerCase();return w.every(function(x){return s.indexOf(x)>-1})}).slice(0,8);
-r.innerHTML=h.length?h.map(function(a){return '<a href="'+a.u+'"><img src="'+a.i+'" alt=""><span><b>'+e(a.t)+'</b><small>'+e(a.c)+' · '+e(a.dt)+'</small></span></a>'}).join(''):'<p>'+e(f.dataset.none)+'</p>';r.hidden=false;window.ttFit=function(){[].forEach.call(document.querySelectorAll('.res a'),function(x){var im=x.querySelector('img'),t=x.querySelector('span');if(!im||!t)return;var m=(x.clientWidth-12)/2;im.style.width=m+'px';var h=t.offsetHeight,w=h*1200/630;if(w>m){w=m;h=w*630/1200}im.style.width=w+'px';im.style.height=h+'px'})};ttFit();if(!window.ttR){window.ttR=1;addEventListener('resize',function(){window.ttFit()})}})});
+r.innerHTML=h.length?h.map(function(a){return '<a href="'+a.u+'"><img src="'+a.i+'" alt="" width="160" height="84" decoding="async"><span><b>'+e(a.t)+'</b><small>'+e(a.c)+' · '+e(a.dt)+'</small></span></a>'}).join(''):'<p>'+e(f.dataset.none)+'</p>';r.hidden=false;window.ttFit=function(){[].forEach.call(document.querySelectorAll('.res a'),function(x){var im=x.querySelector('img'),t=x.querySelector('span');if(!im||!t)return;var m=(x.clientWidth-12)/2;im.style.width=m+'px';var h=t.offsetHeight,w=h*1200/630;if(w>m){w=m;h=w*630/1200}im.style.width=w+'px';im.style.height=h+'px'})};ttFit();if(!window.ttR){window.ttR=1;addEventListener('resize',function(){window.ttFit()})}})});
 f.addEventListener('submit',function(x){x.preventDefault();var a=r.querySelector('a');if(a)location.href=a.href});
 document.addEventListener('click',function(x){if(!f.contains(x.target)&&!x.target.closest('.sbtn')){r.hidden=true;d.classList.remove('sopen')}});
 document.querySelector('.sbtn').onclick=function(){d.classList.add('sopen');i.focus()};
@@ -1333,9 +1688,17 @@ fetch('/api/likes?s='+lb.map(function(b){return b.dataset.like}).join(',')).then
 lb.forEach(function(b){var s=b.dataset.like;b.setAttribute('aria-pressed',liked.indexOf(s)>-1);b.onclick=function(){var l=LS.get('tt_liked'),i=l.indexOf(s),d=i>-1?-1:1;if(d>0)l.push(s);else l.splice(i,1);LS.set('tt_liked',l);b.setAttribute('aria-pressed',d>0);
 var sp=b.querySelector('span');sp.textContent=Math.max(0,(+sp.textContent||0)+d);fetch('/api/likes',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({slug:s,d:d})}).then(function(r){return r.json()}).then(function(j){if(j.n!=null)sp.textContent=j.n}).catch(function(){})}})}
 var sl=document.querySelector('.savedlist');if(sl){var keep=LS.get('tt_saved');if(!keep.length){sl.innerHTML='<p class="empty">'+e(sl.dataset.empty)+'</p>'}else{load().then(function(){var m={};idx.forEach(function(a){var k=a.u.replace(/\/$/,'').split('/').pop();m[k]=a});
-sl.innerHTML=keep.filter(function(k){return m[k]}).map(function(k){var a=m[k];return '<a class="card" href="'+a.u+'"><div class="im"><img src="'+a.i+'" alt=""></div><div class="body"><h3>'+e(a.t)+'</h3><p>'+e(a.d)+'</p><span class="meta">'+'<time class="ago" datetime="'+a.ts+'">'+e(a.dt)+'</time></span></div></a>'}).join('');ttAgo()})}}window.addEventListener('resize',bal);bal();
+sl.innerHTML=keep.filter(function(k){return m[k]}).map(function(k){var a=m[k];return '<a class="card" href="'+a.u+'"><div class="im"><img src="'+a.i+'" alt="" width="1200" height="630" decoding="async"></div><div class="body"><h3>'+e(a.t)+'</h3><p>'+e(a.d)+'</p><span class="meta">'+'<time class="ago" datetime="'+a.ts+'">'+e(a.dt)+'</time></span></div></a>'}).join('');ttAgo()})}}window.addEventListener('resize',bal);bal();
 })();"""
+JS += r"""
+document.querySelectorAll(".avb[data-vid]").forEach(function(b){b.addEventListener("click",function(){if(b.classList.contains("on"))return;b.classList.add("on");var f=document.createElement("iframe");f.src="https://www.youtube-nocookie.com/embed/"+b.dataset.vid+"?autoplay=1"+(matchMedia("(pointer:coarse)").matches?"":"&playsinline=1")+"&rel=0";f.title=b.getAttribute("aria-label")||"YouTube";f.setAttribute("allow","autoplay; encrypted-media; picture-in-picture; fullscreen");f.allowFullscreen=true;b.appendChild(f)})});
+(function(){var box=document.getElementById("consent");if(!box)return;var KEY="tt-consent";function get(){try{return localStorage.getItem(KEY)}catch(e){return null}}function loadAnalytics(){if(!box.dataset.beacon||document.querySelector('script[src*="cloudflareinsights"]'))return;var s=document.createElement("script");s.defer=true;s.src="https://static.cloudflareinsights.com/beacon.min.js";s.setAttribute("data-cf-beacon",JSON.stringify({token:box.dataset.beacon}));document.body.appendChild(s)}function loadAds(){var client=box.dataset.ads;if(!client||document.getElementById("adsense-js"))return;var s=document.createElement("script");s.id="adsense-js";s.async=true;s.crossOrigin="anonymous";s.src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client="+encodeURIComponent(client);s.onload=function(){document.querySelectorAll("ins.adsbygoogle").forEach(function(){try{(window.adsbygoogle=window.adsbygoogle||[]).push({})}catch(e){}})};document.head.appendChild(s)}function apply(v,store){if(store){try{localStorage.setItem(KEY,v)}catch(e){}}box.hidden=true;if(v==="all"){loadAnalytics();loadAds()}}var cur=get();if(cur==="all"||cur==="necessary")apply(cur,false);else box.hidden=false;box.addEventListener("click",function(e){var t=e.target.closest&&e.target.closest("[data-consent]");if(!t)return;apply(t.getAttribute("data-consent"),true)});document.addEventListener("click",function(e){var t=e.target.closest&&e.target.closest("[data-consent-open]");if(!t)return;e.preventDefault();box.hidden=false})})();
+"""
 
+
+JS += r"""
+(function(){var b=document.getElementById("more-btn"),m=document.getElementById("more-menu");if(!b||!m)return;function set(o){b.setAttribute("aria-expanded",o?"true":"false");m.hidden=!o;b.parentNode.classList.toggle("is-open",o)}b.addEventListener("click",function(e){e.stopPropagation();set(m.hidden)});b.addEventListener("keydown",function(e){if(e.key==="ArrowDown"){e.preventDefault();set(true);var a=m.querySelector("a");if(a)a.focus()}});document.addEventListener("click",function(e){if(!b.parentNode.contains(e.target))set(false)});document.addEventListener("keydown",function(e){if(e.key==="Escape"){set(false);if(b.parentNode.contains(document.activeElement))b.focus()}})})();
+"""
 
 def label(a, lang):
     return f'<span class="tag">{CATEGORIES[a["category"]].get("tag", CATEGORIES[a["category"]][lang])}</span>'
@@ -1345,16 +1708,16 @@ def card(a, lang, lead=False):
     t = a[lang]
     cls = "card lead" if lead else "card"
     return (f'<a class="{cls}" href="{url(lang, a["slug"] + "/")}">'
-            f'<div class="im"><img src="{site_img(a)}" alt="" width="1200" height="630" loading="lazy" decoding="async">{dur(a, lang)}{ovl(a, lang)}</div>'
+            f'<div class="im">{resp_img(site_img(a), "", SIZES_CARD)}{dur(a, lang)}{ovl(a, lang)}</div>'
             f'<div class="body">{label(a, lang)} <span class="meta">· {when(a, lang)}</span>'
             f'<h3>{esc(t["title"])}</h3><p>{esc(t["description"])}</p></div></a>')
 
 
-def gcard(a, lang):
+def gcard(a, lang, eager=False):
     """Topic list under the lead: photo on top, then title, summary and date."""
     t = a[lang]
     return (f'<a class="card" href="{url(lang, a["slug"] + "/")}">'
-            f'<div class="im"><img src="{site_img(a)}" alt="" width="1200" height="630" loading="lazy" decoding="async">{dur(a, lang)}{ovl(a, lang)}</div>'
+            f'<div class="im">{resp_img(site_img(a), "", SIZES_GRID, lazy=not eager)}{dur(a, lang)}{ovl(a, lang)}</div>'
             f'<div class="body"><h3>{esc(t["title"])}</h3><p>{esc(t["description"])}</p>'
             f'<span class="meta">{when(a, lang)}</span></div></a>')
 
@@ -1454,7 +1817,7 @@ def vscript(a, lang):
 def mini(a, lang):
     t = a[lang]
     return (f'<a class="mini" href="{url(lang, a["slug"] + "/")}">'
-            f'<div class="th"><img src="{site_img(a)}" alt="" width="1200" height="630" loading="lazy" decoding="async">{dur(a, lang)}{ovl(a, lang)}</div>'
+            f'<div class="th">{resp_img(site_img(a), "", SIZES_CARD)}{dur(a, lang)}{ovl(a, lang)}</div>'
             f'<div><h3>{esc(t["title"])}</h3><p class="mdesc">{esc(t["description"])}</p><span class="meta">{when(a, lang)}</span></div></a>')
 
 
@@ -1481,7 +1844,7 @@ def model_tiles(lang):
     for k in MODEL_STRIP:
         m = MODELS[k]
         ph = model_photo(k)
-        inner = f'<img src="{ph}" alt="Tesla {m["name"]}" loading="lazy">' if ph else f'<b>{m["name"].replace("Model ", "")}</b>'
+        inner = f'<img src="{ph}" alt="Tesla {m["name"]}" width="480" height="320" loading="lazy" decoding="async">' if ph else f'<b>{m["name"].replace("Model ", "")}</b>'
         tiles += f'<a class="model" href="{url(lang, "model/" + k + "/")}"><div class="ph">{inner}</div><span>{m["name"]}</span></a>'
     return f'<div class="models">{tiles}</div>'
 
@@ -1565,7 +1928,765 @@ def related_block(a, arts, lang):
             + "".join(card(x, lang) for x in items) + "</div></section>")
 
 
+MONEY = {}
+SHORTS = {}
+PRIMARY_CATS = {"models", "energy", "fsd", "robotaxi", "spacex", "starlink", "xai", "guides"}
+AD_HEIGHT = {"after_intro": 280, "mid_article": 280, "end": 280, "sidebar": 600}
+
+
+def load_money():
+    """Ads, Amazon tags and the newsletter endpoint. Empty values render nothing."""
+    global MONEY
+    MONEY = {}
+    path = ROOT / "content" / "monetization.json"
+    if not path.exists():
+        return
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except ValueError:
+        return
+    if isinstance(data, dict):
+        MONEY = data
+
+
+def load_shorts():
+    SHORTS.clear()
+    path = ROOT / "content" / "shorts.json"
+    if not path.exists():
+        return
+    for sh in json.loads(path.read_text(encoding="utf-8")):
+        slug, vid = sh.get("slug"), sh.get("id")
+        if slug and vid and slug not in SHORTS:
+            SHORTS[slug] = sh
+
+
+def _ads():
+    block = MONEY.get("adsense")
+    return block if isinstance(block, dict) else {}
+
+
+def publisher_client():
+    raw = str(_ads().get("publisher_id") or "").strip()
+    if raw.startswith("pub-"):
+        raw = "ca-" + raw
+    return raw if re.fullmatch(r"ca-pub-\d+", raw) else ""
+
+
+def slot_id(place):
+    slots = _ads().get("slots") if isinstance(_ads().get("slots"), dict) else {}
+    raw = str(slots.get(place) or "").strip()
+    return raw if re.fullmatch(r"\d{6,20}", raw) else ""
+
+
+def ad_html(place, lang):
+    """Reserved ad slot. Nothing at all until both the publisher id and this slot id are set."""
+    client, slot = publisher_client(), slot_id(place)
+    if not client or not slot:
+        return ""
+    height = AD_HEIGHT.get(place, 280)
+    label = LANGS[lang]["ad"]
+    return (f'<aside class="adslot ad-{place}" aria-label="{esc(label)}">'
+            f'<span class="adlab">{esc(label)}</span>'
+            f'<ins class="adsbygoogle" style="display:block;min-height:{height}px" '
+            f'data-ad-client="{esc(client)}" data-ad-slot="{esc(slot)}" '
+            f'data-ad-format="auto" data-full-width-responsive="true"></ins></aside>')
+
+
+def insert_mid(body, snippet):
+    if not snippet:
+        return body
+    marks = [m.start() for m in re.finditer(r"<h2\b", body)]
+    at = marks[2] if len(marks) >= 3 else marks[1] if len(marks) == 2 else None
+    if at is None:
+        return body + snippet
+    return body[:at] + snippet + body[at:]
+
+
+def _loc(val, lang):
+    if isinstance(val, dict):
+        return val.get(lang) or val.get("en") or ""
+    return "" if val is None else val
+
+
+def amazon_tag(lang):
+    block = MONEY.get("amazon") if isinstance(MONEY.get("amazon"), dict) else {}
+    raw = str(block.get(lang) or "").strip()
+    return raw if re.fullmatch(r"[A-Za-z0-9\-]{2,40}", raw) else ""
+
+
+def with_amazon_tag(href, lang):
+    tag = amazon_tag(lang)
+    if not tag or re.search(r"[?&]tag=", href):
+        return href
+    host = href.split("/")[2].lower() if href.startswith("https://") and href.count("/") >= 2 else ""
+    if "amazon." not in host and not host.startswith("amzn."):
+        return href
+    sep = "&" if "?" in href else "?"
+    return f"{href}{sep}tag={quote(tag, safe='')}"
+
+
+def product_boxes(a, lang):
+    """Optional affiliate box. Articles opt in with a products list. Prices are never shown."""
+    products = a.get("products") or []
+    if not isinstance(products, list):
+        return ""
+    L = LANGS[lang]
+    blocks = []
+    for product in products:
+        if not isinstance(product, dict):
+            continue
+        name = str(_loc(product.get("name"), lang)).strip()
+        href = str(_loc(product.get("url"), lang)).strip()
+        if not name or not href.startswith("https://"):
+            continue
+        specs = _loc(product.get("specs"), lang)
+        if isinstance(specs, str):
+            specs = [specs]
+        if not isinstance(specs, list):
+            specs = []
+        specs = [str(item).strip() for item in specs if str(item).strip()][:6]
+        button = str(_loc(product.get("button"), lang)).strip() or L["aff_btn"]
+        image = str(product.get("image") or "").strip()
+        img = ""
+        if image.startswith("/img/") and ".." not in image:
+            img = f'<img src="{esc(image)}" alt="" width="640" height="480" loading="lazy" decoding="async">'
+        lis = "".join(f"<li>{esc(item)}</li>" for item in specs)
+        ul = f"<ul>{lis}</ul>" if lis else ""
+        blocks.append(
+            f'<aside class="pbox"><div class="pbox-in">{img}<div><h3>{esc(name)}</h3>{ul}'
+            f'<a class="btn" href="{esc(with_amazon_tag(href, lang))}" rel="sponsored nofollow noopener" target="_blank">{esc(button)}</a>'
+            f'<p class="affnote">{esc(L["aff"])}</p></div></div></aside>')
+    return "".join(blocks)
+
+
+def newsletter(lang, where):
+    cfg = MONEY.get("newsletter") if isinstance(MONEY.get("newsletter"), dict) else {}
+    action = str(cfg.get("action") or "").strip()
+    if not action.startswith("https://"):
+        return ""
+    method = str(cfg.get("method") or "post").lower()
+    if method not in ("get", "post"):
+        method = "post"
+    field = str(cfg.get("email_field") or "email").strip()
+    if not re.fullmatch(r"[A-Za-z][A-Za-z0-9_\-]{0,40}", field):
+        field = "email"
+    L = LANGS[lang]
+    fid = f"nf-{where}-{lang}"
+    return (f'<form class="nform" method="{method}" action="{esc(action)}">'
+            f'<h2>{esc(L["news_h"])}</h2><p>{esc(L["news_p"])}</p>'
+            f'<label class="sr" for="{fid}">{esc(L["news_email"])}</label>'
+            f'<div class="nrow"><input id="{fid}" type="email" name="{esc(field)}" required maxlength="200" '
+            f'autocomplete="email" placeholder="{esc(L["news_email"])}">'
+            f'<button type="submit">{esc(L["news_btn"])}</button></div>'
+            f'<input type="hidden" name="lang" value="{lang}"></form>')
+
+
+def consent_bar(lang):
+    L = LANGS[lang]
+    show = ('<script>(function(){try{if(!localStorage.getItem("tt-consent"))'
+            'document.getElementById("consent").hidden=false}catch(e){'
+            'document.getElementById("consent").hidden=false}})();</script>')
+    return (f'<div id="consent" class="consent" hidden data-ads="{esc(publisher_client())}" '
+            f'data-beacon="5c536a7c183844ccb97e1ac151b5d018">'
+            f'<p>{esc(L["consent_p"])} <a href="{url(lang, "privacy/")}">{esc(L["consent_more"])}</a></p>'
+            f'<div class="consent-btns">'
+            f'<button type="button" data-consent="necessary">{esc(L["consent_no"])}</button>'
+            f'<button type="button" data-consent="all">{esc(L["consent_yes"])}</button>'
+            f'</div></div>{show}')
+
+
+def nav_current(active):
+    if active in ("fsd", "robotaxi"):
+        return "fsd"
+    if active in ("spacex", "starlink"):
+        return "spacex"
+    if active in ("videos", "shorts"):
+        return "videos"
+    if active in ("models", "energy", "xai", "guides"):
+        return active
+    if active in CATEGORIES:
+        return "more"
+    return ""
+
+
+def _nav_rows(lang):
+    L = LANGS[lang]
+    more = [(CATEGORIES[k][lang], f"category/{k}/")
+            for k, c in CATEGORIES.items() if c.get("menu") and k not in PRIMARY_CATS]
+    return [
+        ("models", "category/models/", L["nav_models"], [(MODELS[k]["name"], f"model/{k}/") for k in MODEL_ROOTS]),
+        ("energy", "category/energy/", L["nav_energy"], ()),
+        ("fsd", "category/fsd/", L["nav_fsd"], [("FSD", "category/fsd/"), ("Robotaxi", "category/robotaxi/")]),
+        ("spacex", "category/spacex/", L["nav_space"], [("SpaceX", "category/spacex/"), ("Starlink", "category/starlink/")]),
+        ("xai", "category/xai/", L["nav_xai"], ()),
+        ("guides", "category/guides/", CATEGORIES["guides"][lang], ()),
+        ("videos", "shorts/", L["videos"], ()),
+        ("more", "archive/", L["nav_more"], more),
+    ]
+
+
+def more_links(lang):
+    """Hubs that are not in the top nav, then the site pages."""
+    L = LANGS[lang]
+    rows = [(CATEGORIES[k][lang], f"category/{k}/")
+            for k, c in CATEGORIES.items() if c.get("menu") and k not in PRIMARY_CATS]
+    rows += [
+        (L["archive"], "archive/"),
+        (L["about"], "about/"),
+        (L["editorial"], "editorial/"),
+        (L["privacy"], "privacy/"),
+        ("Contact", "contact/"),
+        ("Terms" if lang == "en" else "Voorwaarden", "terms/"),
+    ]
+    return "".join(f'<a role="menuitem" href="{url(lang, path)}">{esc(name)}</a>' for name, path in rows)
+
+
+def primary_nav(lang, active=None):
+    cur = nav_current(active)
+    parts = []
+    for key, href, label, kids in _nav_rows(lang):
+        if key == "more":
+            on = " on" if cur == "more" else ""
+            parts.append(
+                f'<div class="mdrop"><button type="button" class="pn{on}" id="more-btn" aria-expanded="false" aria-haspopup="true" aria-controls="more-menu">{esc(label)}</button>'
+                f'<div class="pmenu" id="more-menu" role="menu" hidden>{more_links(lang)}</div></div>')
+            continue
+        on = " on" if cur == key else ""
+        link = f'<a class="pn{on}" href="{url(lang, href)}">{esc(label)}</a>'
+        if kids:
+            menu = "".join(f'<a href="{url(lang, path)}">{esc(name)}</a>' for name, path in kids)
+            parts.append(f'<div class="pdrop{on}">{link}<div class="pmenu">{menu}</div></div>')
+        else:
+            parts.append(link)
+    return f'<nav class="pnav" aria-label="{esc(LANGS[lang]["menu"])}">{"".join(parts)}</nav>'
+
+
+def drawer_links(lang, active):
+    L = LANGS[lang]
+    rows = [
+        ("models", "category/models/", L["nav_models"]),
+        ("energy", "category/energy/", L["nav_energy"]),
+        ("fsd", "category/fsd/", "FSD"),
+        ("robotaxi", "category/robotaxi/", "Robotaxi"),
+        ("spacex", "category/spacex/", "SpaceX"),
+        ("starlink", "category/starlink/", "Starlink"),
+        ("xai", "category/xai/", L["nav_xai"]),
+        ("guides", "category/guides/", CATEGORIES["guides"][lang]),
+        ("videos", "shorts/", L["videos"]),
+    ]
+    out = []
+    for key, href, label in rows:
+        on = " on" if active == key else ""
+        out.append(f'<a class="di{on}" href="{url(lang, href)}">{esc(label)}</a>')
+    return "".join(out)
+
+
+def crumbs(lang, parts):
+    chain = [(LANGS[lang]["home"], "")] + list(parts)
+    lis, ld_items = [], []
+    for i, (name, path) in enumerate(chain, 1):
+        href = url(lang, path)
+        if i == len(chain):
+            lis.append(f'<li><span aria-current="page">{esc(name)}</span></li>')
+        else:
+            lis.append(f'<li><a href="{href}">{esc(name)}</a></li>')
+        ld_items.append({"@type": "ListItem", "position": i, "name": name, "item": SITE + href})
+    nav = f'<nav class="crumbs" aria-label="Breadcrumb"><ol>{"".join(lis)}</ol></nav>'
+    ld = {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": ld_items}
+    return nav, ld
+
+
+def ld_script(obj):
+    raw = json.dumps(obj, ensure_ascii=False).replace("<", "\\u003c")
+    return f'<script type="application/ld+json">{raw}</script>'
+
+
+def hub_cards(items, lang, eager_first=False):
+    if not items:
+        return f'<p class="empty">{LANGS[lang]["empty"]}</p>'
+    cards = "".join(gcard(a, lang, eager=eager_first and i == 0) for i, a in enumerate(items))
+    return f'<div class="grid2 gall wide">{cards}</div>'
+
+
+def category_hub(key, items, lang):
+    c = CATEGORIES[key]
+    L = LANGS[lang]
+    intro = (CAT_INTRO.get(key) or {}).get(lang) or L["cat_intro"].format(c[lang])
+    nav, ld = crumbs(lang, [(c[lang], f"category/{key}/")])
+    extra = ""
+    show = items
+    if key == "guides" and items:
+        featured = sorted(items, key=lambda a: words(a, "en"), reverse=True)[:6]
+        extra = (f'<section class="starthere"><h2>{esc(L["start_here"])}</h2>'
+                 f'<p class="sub">{esc(L["start_p"])}</p>{hub_cards(featured, lang, eager_first=True)}</section>')
+        if len(items) > len(featured):
+            extra += f'<h2 class="rubh">{esc(L["all_guides"])}</h2>'
+        else:
+            show = []
+    grid = hub_cards(show, lang, eager_first=not extra) if show or not extra else ""
+    body = (f'{nav}<header class="hubhead"><h1>{esc(c[lang])}</h1><p class="lead">{esc(intro)}</p></header>'
+            f'{extra}{grid}')
+    return body, ld, intro
+
+
+def version_bar(key, lang):
+    L = LANGS[lang]
+    m = MODELS[key]
+    root = m.get("parent", key)
+    versions = [k for k, v in MODELS.items() if v.get("parent") == root]
+    if not versions:
+        return ""
+    btns = [(root, L["all_versions"])] + [
+        (k, MODELS[k]["label"][lang] if isinstance(MODELS[k]["label"], dict) else MODELS[k]["label"])
+        for k in versions]
+    return '<div class="versions"><span>' + esc(L["your_version"]) + "</span>" + "".join(
+        f'<a href="{url(lang, "model/" + k + "/")}"{" class=\"on\"" if k == key else ""}>{esc(lbl)}</a>'
+        for k, lbl in btns) + "</div>"
+
+
+def model_hub(key, items, lang):
+    m = MODELS[key]
+    L = LANGS[lang]
+    inf = INFO.get(key)
+    intro = inf[lang]["intro"] if inf and inf.get(lang, {}).get("intro") else L["model_intro"].format(m["name"])
+    parts = [(L["nav_models"], "category/models/")]
+    parent = m.get("parent")
+    if parent:
+        parts.append((MODELS[parent]["name"], f"model/{parent}/"))
+    parts.append((m["name"], f"model/{key}/"))
+    nav, ld = crumbs(lang, parts)
+    guides = [a for a in items if a["category"] == "guides"]
+    rest = [a for a in items if a["category"] != "guides"]
+    if guides:
+        blocks = (f'<h2 class="rubh">{esc(L["model_guides"].format(m["name"]))}</h2>{hub_cards(guides, lang)}'
+                  f'<h2 class="rubh">{esc(L["model_news"].format(m["name"]))}</h2>{hub_cards(rest, lang)}')
+    else:
+        blocks = f'<h2 class="rubh">{esc(L["articles"])}</h2>{hub_cards(items, lang)}'
+    body = (f'{nav}<header class="hubhead"><h1>Tesla {esc(m["name"])}</h1><p class="lead">{esc(intro)}</p></header>'
+            f'{version_bar(key, lang)}{modelinfo(key, lang, heading=False)}{blocks}')
+    desc = re.sub(r"\s+", " ", intro).strip()
+    if len(desc) > 180:
+        desc = desc[:179].rsplit(" ", 1)[0] + "…"
+    return body, ld, desc
+
+
+def video_for(a, lang):
+    return VIDEOS.get((a["slug"], lang)) or VIDEOS.get((a["slug"], "en"))
+
+
+def player(vid, kind, label, poster, priority):
+    w, h = (1200, 630) if kind == "long" else (360, 640)
+    sizes = SIZES_HERO if kind == "long" else "(max-width: 800px) 70vw, 280px"
+    # The article's main picture loads immediately. fetchpriority=high is reserved for the homepage lead.
+    photo = resp_img(poster, "", sizes, lazy=not priority, width=w, height=h)
+    return (f'<figure class="avid {kind}"><button class="avb" type="button" data-vid="{esc(vid)}" aria-label="{esc(label)}">'
+            f'{photo}<span class="shp" aria-hidden="true"></span></button><figcaption>{esc(label)}</figcaption></figure>')
+
+
+def article_media(a, lang):
+    poster = site_img(a)
+    video = video_for(a, lang)
+    short = SHORTS.get(a["slug"])
+    blocks = []
+    if video:
+        blocks.append(player(video["id"], "long", LANGS[lang]["watch"], poster, True))
+    if short:
+        blocks.append(player(short["id"], "short", LANGS[lang]["watch_short"], poster, not bool(video)))
+    if blocks:
+        return "".join(blocks)
+    return f'<div class="hi">{resp_img(poster, a[lang]["title"], SIZES_HERO, lazy=False, cls="hero-img")}</div>'
+
+
+def article_sources(a, lang):
+    L = LANGS[lang]
+    src = ""
+    if a.get("sources"):
+        items = "".join(
+            f'<li><a href="{esc(s["url"])}" rel="nofollow noopener" target="_blank">{esc(s["title"])}</a></li>'
+            for s in a["sources"])
+        src = f'<details class="sources"><summary>{L["sources"]} ({len(a["sources"])})</summary><ul>{items}</ul></details>'
+    if a.get("credits"):
+        credit = "; ".join(
+            f'<a href="{esc(item["page"])}" rel="nofollow noopener" target="_blank">{esc(item["credit"])}</a>'
+            for item in a["credits"] if item.get("page"))
+        src += f'<p class="imgnote">{L["photocredit"]}: {credit}. {L["imgnote_other"]}</p>'
+    else:
+        src += f'<p class="imgnote">{L["imgnote"]}</p>'
+    return src
+
+
+def prev_next(a, arts, lang):
+    ordered = sorted(arts, key=published)
+    index = next(i for i, item in enumerate(ordered) if item is a)
+    older = ordered[index - 1] if index else None
+    newer = ordered[index + 1] if index + 1 < len(ordered) else None
+    L = LANGS[lang]
+
+    def cell(item, kind):
+        if not item:
+            return "<span></span>"
+        label = L["prev"] if kind == "prev" else L["next"]
+        small = f"← {label}" if kind == "prev" else f"{label} →"
+        return (f'<a class="{kind}" href="{url(lang, item["slug"] + "/")}">'
+                f"<small>{small}</small><strong>{esc(item[lang]['title'])}</strong></a>")
+
+    return (f'<nav class="seq" aria-label="{esc(L["prev"])} / {esc(L["next"])}">'
+            f'{cell(older, "prev")}{cell(newer, "next")}</nav>')
+
+
+def money_article(a, arts, lang):
+    L = LANGS[lang]
+    t = a[lang]
+    c = CATEGORIES[a["category"]]
+    nav, ld = crumbs(lang, [
+        (c.get("tag", c[lang]), f"category/{a['category']}/"),
+        (t["title"], a["slug"] + "/"),
+    ])
+    toc, body = enrich(a, lang, with_toc=True)
+    body = insert_mid(body, ad_html("mid_article", lang))
+    chips = ""
+    if a.get("models"):
+        chips = '<div class="chips">' + "".join(
+            f'<a href="{url(lang, "model/" + k + "/")}">Tesla {MODELS[k]["name"]}</a>' for k in a["models"]) + "</div>"
+    side = ad_html("sidebar", lang)
+    article = (
+        f'<article class="money">'
+        f'<h1 class="atitle">{esc(t["title"])}</h1>'
+        f'<p class="byline"><a href="{url(lang, "editorial/")}">{L["byline"]}</a></p>'
+        f'<div class="srow"><p class="meta smeta"><a class="tag" href="{url(lang, "category/" + a["category"] + "/")}">{esc(c.get("tag", c[lang]))}</a>'
+        f' · {when(a, lang)} · {read_time(a, lang)} {L["min"]}</p>'
+        f'<div class="acts"><button class="act like" type="button" data-like="{a["slug"]}" aria-pressed="false" title="{esc(L["like"])}">{HEART_SVG}<span>0</span></button>'
+        f'<button class="act save" type="button" data-save="{a["slug"]}" aria-pressed="false" title="{esc(L["save"])}" aria-label="{esc(L["save"])}">{BOOK_SVG}</button></div></div>'
+        f'{chips}<p class="lead">{esc(t["description"])}</p>'
+        f'{ad_html("after_intro", lang)}{article_media(a, lang)}{toc}'
+        f'<div class="prose">{body}</div>{product_boxes(a, lang)}{ad_html("end", lang)}'
+        f'{article_sources(a, lang)}{newsletter(lang, "article")}</article>')
+    col = f'{nav}{article}{prev_next(a, arts, lang)}{related_block(a, arts, lang)}'
+    wrap = "aread with-side" if side else "aread"
+    aside = f'<div class="ad-side-wrap">{side}</div>' if side else ""
+    return f'<div class="{wrap}"><div class="acol">{col}</div>{aside}</div>', ld
+
+
+HOME_TOPICS = (
+    ("models", "nav_models", "category/models/", ("models",)),
+    ("energy", "nav_energy", "category/energy/", ("energy",)),
+    ("fsd", "nav_fsd", "category/fsd/", ("fsd", "robotaxi")),
+    ("spacex", "nav_space", "category/spacex/", ("spacex", "starlink")),
+    ("xai", "nav_xai", "category/xai/", ("xai",)),
+    ("guides", None, "category/guides/", ("guides",)),
+)
+
+
+def _in_topics(a, keys):
+    cats = {a["category"]} | set(a.get("also") or [])
+    return bool(cats & set(keys))
+
+
+def home_lead(a, lang):
+    """Featured story: photo, headline, excerpt. The full article stays on its own page."""
+    L = LANGS[lang]
+    t = a[lang]
+    c = CATEGORIES[a["category"]]
+    href = url(lang, a["slug"] + "/")
+    return (f'<article class="leadstory"><a class="leadim" href="{href}">'
+            f'{resp_img(site_img(a), t["title"], SIZES_LEAD, high=True, lazy=False)}</a>'
+            f'<div><p class="meta smeta"><a class="tag" href="{url(lang, "category/" + a["category"] + "/")}">{esc(c.get("tag", c[lang]))}</a>'
+            f' · {when(a, lang)} · {read_time(a, lang)} {L["min"]}</p>'
+            f'<h1><a href="{href}">{esc(t["title"])}</a></h1>'
+            f'<p class="lead">{esc(t["description"])}</p>'
+            f'<a class="btn" href="{href}">{esc(L["read_story"])}</a></div></article>')
+
+
+def home_videos(arts, lang, n=8):
+    """Compact strip of the newest stories that have a long video or a Short. Links to the article."""
+    by = {a["slug"]: a for a in arts}
+    rows = []
+    seen = set()
+    for (slug, vlang), video in VIDEOS.items():
+        if vlang not in ("en", lang) or slug not in by or slug in seen:
+            continue
+        seen.add(slug)
+        rows.append((by[slug], video.get("seconds") or 0, False))
+    for slug, short in SHORTS.items():
+        if slug not in by or slug in seen:
+            continue
+        seen.add(slug)
+        rows.append((by[slug], 0, True))
+    rows.sort(key=lambda row: published(row[0]), reverse=True)
+    cards = []
+    for a, seconds, is_short in rows[:n]:
+        t = a[lang]
+        href = url(lang, a["slug"] + "/")
+        if is_short:
+            badge = "Short"
+        elif seconds:
+            badge = f"{int(seconds) // 60}:{int(seconds) % 60:02d}"
+        else:
+            badge = LANGS[lang]["videos"]
+        cards.append(
+            f'<a class="vcard" href="{href}"><span class="vim">'
+            f'{resp_img(site_img(a), "", SIZES_VIDEO, width=480, height=270)}'
+            f'<span class="vpl" aria-hidden="true"></span>'
+            f'<span class="dur dvo">{esc(badge)}</span></span>'
+            f'<strong>{esc(t["title"])}</strong></a>')
+    return "".join(cards)
+
+
+def home_topics(arts, shown, lang):
+    L = LANGS[lang]
+    out = []
+    for _key, label_key, path, keys in HOME_TOPICS:
+        pool = [a for a in arts if _in_topics(a, keys)]
+        if not pool:
+            continue
+        fresh = [a for a in pool if id(a) not in shown]
+        pick = (fresh + [a for a in pool if id(a) in shown])[:3]
+        title = L[label_key] if label_key else CATEGORIES["guides"][lang]
+        cards = f'<div class="topics3">{"".join(gcard(a, lang) for a in pick)}</div>'
+        label = {"en": f"All {title} articles", "nl": f"Alle artikelen over {title}"}[lang]
+        out.append(f'<section class="hsec"><div class="h2"><h2>{esc(title)}</h2>'
+                   f'<a href="{url(lang, path)}" aria-label="{esc(label)}">{esc(L["see_all"])}</a></div>{cards}</section>')
+    return "".join(out)
+
+
+def homepage(arts, lang):
+    """Preview B, now the live homepage: lead story, video strip, clock-time list, guides sidebar."""
+    L = LANGS[lang]
+    if not arts:
+        return f'<h1>{esc(NAME)}</h1><p class="empty">{L["empty"]}</p>'
+    lead = arts[0]
+    videos = home_videos(arts, lang, 8)
+    strip = f'<div class="vstrip">{videos}</div>' if videos else ""
+    main = home_lead(lead, lang) + strip + pv_feed([x for x in arts if x is not lead][:14], lang, thumbs=2)
+    return f'<div class="pv pv-b"><div class="pv-grid"><div>{main}</div>{pv_side(arts, lang)}</div></div>'
+
+
+def pv_copy(lang):
+    en = lang == "en"
+    return {
+        "all": "All" if en else "Alles",
+        "note": "Layout preview. Not indexed. The live site is unchanged." if en else "Voorbeeld van de indeling. Niet geïndexeerd. De live site blijft zoals hij is.",
+        "open": "Sample article" if en else "Voorbeeldartikel",
+        "live": "Live homepage" if en else "Live homepagina",
+        "guides": "Guides" if en else "Gidsen",
+        "start": "Start here" if en else "Begin hier",
+        "gear": "Gear" if en else "Spullen",
+        "gear_off": "Product boxes show up here when an article opts in. No prices, and nothing until a tag is set." if en else "Productblokken verschijnen hier als een artikel ervoor kiest. Geen prijzen, en niets tot er een tag is ingevuld.",
+        "related": "Related" if en else "Gerelateerd",
+        "more": "Compare" if en else "Vergelijk",
+    }
+
+
+PV_TABS = (
+    ("models", "nav_models", "category/models/"),
+    ("energy", "nav_energy", "category/energy/"),
+    ("fsd", "nav_fsd", "category/fsd/"),
+    ("spacex", "nav_space", "category/spacex/"),
+    ("xai", "nav_xai", "category/xai/"),
+    ("guides", None, "category/guides/"),
+    ("videos", "videos", "shorts/"),
+)
+
+
+def pv_tabs(lang, variant):
+    L = LANGS[lang]
+    C = pv_copy(lang)
+    here = url(lang, f"preview/{variant}/")
+    links = f'<a class="on" href="{here}">{C["all"]}</a>'
+    for _key, label_key, path in PV_TABS:
+        label = L[label_key] if label_key else CATEGORIES["guides"][lang]
+        links += f'<a href="{url(lang, path)}">{esc(label)}</a>'
+    return f'<nav class="pv-tabs" aria-label="{esc(L["menu"])}">{links}</nav>'
+
+
+def pv_banner(lang, variant, blurb):
+    C = pv_copy(lang)
+    bits = [f'<b>{variant.upper()}</b> {esc(blurb)} {esc(C["note"])}']
+    bits.append(f'<a href="{url(lang, "preview/")}">{C["more"]}</a>')
+    bits.append(f'<a href="{url(lang, f"preview/{variant}/article/")}">{C["open"]}</a>')
+    bits.append(f'<a href="{url(lang)}">{C["live"]}</a>')
+    return f'<p class="pv-note">{" · ".join(bits)}</p>'
+
+
+def pv_row(a, lang, thumb=False):
+    t = a[lang]
+    c = CATEGORIES[a["category"]]
+    href = url(lang, a["slug"] + "/")
+    im = ""
+    if thumb:
+        im = (f'<span class="pv-th">{resp_img(site_img(a), "", "(max-width: 700px) 28vw, 96px", width=320, height=180)}'
+              f'{ovl(a, lang)}</span>')
+    mins = read_time(a, lang)
+    label = f'{mins} {LANGS[lang]["min"]}'
+    return (f'<a class="pv-row{" hasth" if thumb else ""}" href="{href}">'
+            f'<time datetime="{published(a).isoformat()}">{published(a).strftime("%H:%M")}</time>{im}'
+            f'<span class="pv-hl"><b>{esc(t["title"])}</b><i>{esc(c.get("tag", c[lang]))}</i></span>'
+            f'<span class="pv-min" title="{esc(label)}"><b>{mins}</b><small>min</small></span></a>')
+
+
+def pv_feed(items, lang, thumbs=0):
+    out, last = [], None
+    for i, a in enumerate(items):
+        if a["date"] != last:
+            out.append(f'<h2 class="pv-day">{fmt_date(a["date"], lang)}</h2>')
+            last = a["date"]
+        out.append(pv_row(a, lang, thumb=i < thumbs))
+    return "".join(out)
+
+
+def pv_side(arts, lang, a=None):
+    C = pv_copy(lang)
+    start = sorted((x for x in arts if x["category"] == "guides"), key=lambda x: words(x, "en"), reverse=True)[:6]
+    guides = "".join(
+        f'<a class="pv-guide" href="{url(lang, x["slug"] + "/")}">'
+        f'{resp_img(site_img(x), "", "72px", width=144, height=81)}<span>{esc(x[lang]["title"])}</span></a>'
+        for x in start[:3])
+    numbered = "".join(
+        f'<li><a href="{url(lang, x["slug"] + "/")}">{esc(x[lang]["title"])}</a></li>' for x in start)
+    rel = ""
+    if a is not None:
+        items = related(a, arts, 5)
+        if items:
+            rel = (f'<section><h2>{esc(C["related"])}</h2><ol>'
+                   + "".join(f'<li><a href="{url(lang, x["slug"] + "/")}">{esc(x[lang]["title"])}</a></li>' for x in items)
+                   + "</ol></section>")
+    gear = product_boxes(a, lang) if a is not None else ""
+    if not gear:
+        gear = f'<p class="pv-off">{esc(C["gear_off"])}</p>'
+    slot = ad_html("sidebar", lang)
+    return (f'<aside class="pv-side">{rel}'
+            f'<section><h2>{esc(C["guides"])}</h2>{guides}</section>'
+            f'<section><h2>{esc(C["start"])}</h2><ol>{numbered}</ol></section>'
+            f'<section><h2>{esc(C["gear"])}</h2>{gear}</section>{slot}</aside>')
+
+
+def pv_lead(a, lang, href):
+    t = a[lang]
+    c = CATEGORIES[a["category"]]
+    return (f'<a class="pv-lead" href="{href}">'
+            f'<span class="im">{resp_img(site_img(a), t["title"], SIZES_LEAD, high=True, lazy=False)}{ovl(a, lang)}</span>'
+            f'<span><span class="pv-kicker">{esc(c.get("tag", c[lang]))} · {published(a).strftime("%H:%M")}</span>'
+            f'<h1>{esc(t["title"])}</h1><p>{esc(t["description"])}</p></span></a>')
+
+
+def pv_home(variant, arts, lang):
+    en = lang == "en"
+    blurbs = {
+        "a": "Newsfeed first. Clock times, a compact lead, guides in the side column." if en else "Nieuwslijst voorop. Kloktijden, een compacte hoofdfoto, gidsen in de zijbalk.",
+        "b": "Hybrid. The lead story and the video strip stay, then a dense news list." if en else "Hybride. Het hoofdartikel en de videostrip blijven, daarna een dichte nieuwslijst.",
+        "c": "Sections. Each topic is its own block, with the same side column." if en else "Rubrieken. Elk onderwerp is een eigen blok, met dezelfde zijbalk.",
+    }
+    lead = arts[0]
+    sample = url(lang, f"preview/{variant}/article/")
+    main = pv_banner(lang, variant, blurbs[variant]) + pv_tabs(lang, variant)
+    if variant == "a":
+        main += pv_lead(lead, lang, sample) + pv_feed([x for x in arts if x is not lead][:24], lang, thumbs=4)
+    elif variant == "b":
+        videos = home_videos(arts, lang, 8)
+        strip = f'<div class="vstrip">{videos}</div>' if videos else ""
+        main += home_lead(lead, lang) + strip + pv_feed([x for x in arts if x is not lead][:14], lang, thumbs=2)
+    else:
+        blocks = []
+        for _key, label_key, path, keys in HOME_TOPICS:
+            pool = [x for x in arts if _in_topics(x, keys)][:5]
+            if not pool:
+                continue
+            title = LANGS[lang][label_key] if label_key else CATEGORIES["guides"][lang]
+            head = pool[0]
+            rows = pv_feed(pool[1:], lang, thumbs=0)
+            blocks.append(
+                f'<section class="pv-block"><div class="h2"><h2>{esc(title)}</h2>'
+                f'<a href="{url(lang, path)}">{esc(LANGS[lang]["see_all"])}</a></div>'
+                f'<a class="pv-lead" href="{url(lang, head["slug"] + "/")}"><span class="im">'
+                f'{resp_img(site_img(head), "", SIZES_CARD)}{ovl(head, lang)}</span>'
+                f'<span><span class="pv-kicker">{published(head).strftime("%H:%M")}</span>'
+                f'<h2>{esc(head[lang]["title"])}</h2></span></a>{rows}</section>')
+        main += f'<h1 class="sr">{esc(NAME)}</h1>' + "".join(blocks)
+    return f'<div class="pv pv-{variant}"><div class="pv-grid"><div>{main}</div>{pv_side(arts, lang)}</div></div>'
+
+
+def pv_article(variant, a, arts, lang, live=False):
+    en = lang == "en"
+    blurb = {
+        "a": "Narrow column, related and guides on the right." if en else "Smalle kolom, gerelateerd en gidsen rechts.",
+        "b": "Same sidebar, with the video and the table of contents in the column." if en else "Dezelfde zijbalk, met de video en de inhoudsopgave in de kolom.",
+        "c": "Contents on the left, the story in the middle, the sidebar on the right." if en else "Inhoud links, het verhaal in het midden, de zijbalk rechts.",
+    }[variant]
+    L = LANGS[lang]
+    t = a[lang]
+    c = CATEGORIES[a["category"]]
+    toc, body = enrich(a, lang, with_toc=True)
+    body = insert_mid(body, ad_html("mid_article", lang))
+    media = article_media(a, lang) if variant != "a" else (
+        f'<div class="hi">{resp_img(site_img(a), t["title"], SIZES_HERO, lazy=False, cls="hero-img")}</div>')
+    # Variant A keeps a still photo. B and C use the player when a video exists.
+    if variant == "a":
+        toc_here, rail = toc, ""
+    elif variant == "c":
+        toc_here, rail = "", toc
+    else:
+        toc_here, rail = toc, ""
+    article = (
+        f'<article class="money"><p class="meta smeta"><a class="tag" href="{url(lang, "category/" + a["category"] + "/")}">{esc(c.get("tag", c[lang]))}</a>'
+        f' · <time datetime="{published(a).isoformat()}">{published(a).strftime("%H:%M")}</time>'
+        f' · {read_time(a, lang)} {L["min"]}</p>'
+        f'<h1>{esc(t["title"])}</h1>'
+        f'<p class="byline"><a href="{url(lang, "editorial/")}">{L["byline"]}</a></p>'
+        f'<p class="lead">{esc(t["description"])}</p>'
+        f'{ad_html("after_intro", lang)}{media}{toc_here}'
+        f'<div class="prose">{body}</div>{product_boxes(a, lang)}{ad_html("end", lang)}'
+        f'{article_sources(a, lang)}{prev_next(a, arts, lang)}</article>')
+    inner = f'<div class="pv-art pv-{variant}">{rail}<div>{article}</div>{pv_side(arts, lang, a)}</div>'
+    if live:
+        return f'<div class="pv">{inner}</div>'
+    return (f'<div class="pv">{pv_banner(lang, variant, blurb)}{inner}</div>')
+
+
+def preview_page(lang, path, title, desc, body, real, bar=None):
+    extra = (
+        f'<link rel="canonical" href="{SITE + url(lang, real)}">'
+        f'<link rel="alternate" hreflang="en" href="{SITE + url("en", path)}">'
+        f'<link rel="alternate" hreflang="nl" href="{SITE + url("nl", path)}">'
+        f'<link rel="alternate" hreflang="x-default" href="{SITE + url("en", path)}">'
+    )
+    return page(lang, path, title, desc, body, robots="noindex, follow", canonical=False, extra_head=extra, bar=bar)
+
+
+def write_previews(arts, lang):
+    if not arts:
+        return
+    en = lang == "en"
+    cards = []
+    blurbs = {
+        "a": ("A · Newsfeed", "A · Nieuwslijst"),
+        "b": ("B · Hybrid", "B · Hybride"),
+        "c": ("C · Sections", "C · Rubrieken"),
+    }
+    for key, names in blurbs.items():
+        cards.append(
+            f'<a class="card" href="{url(lang, f"preview/{key}/")}"><div class="body"><h3>{names[0] if en else names[1]}</h3>'
+            f'<p>{esc(pv_copy(lang)["open"])}: <span>{esc(arts[0][lang]["title"])}</span></p></div></a>')
+    intro = ("Three layouts to compare. None of these pages is indexed." if en else "Drie indelingen om te vergelijken. Geen van deze pagina's wordt geïndexeerd.")
+    write(url(lang, "preview/"), preview_page(
+        lang, "preview/", "Layout previews" if en else "Voorbeelden van de indeling", intro,
+        f'<h1>{esc("Layout previews" if en else "Voorbeelden van de indeling")}</h1><p class="lead">{esc(intro)}</p><div class="grid2">{"".join(cards)}</div>',
+        ""))
+    sample = arts[0]
+    for key in ("a", "b", "c"):
+        title = blurbs[key][0 if en else 1]
+        write(url(lang, f"preview/{key}/"), preview_page(
+            lang, f"preview/{key}/", title, title, pv_home(key, arts, lang), "",
+            bar="inline" if key == "b" else None))
+        write(url(lang, f"preview/{key}/article/"), preview_page(
+            lang, f"preview/{key}/article/", sample[lang]["title"], sample[lang]["description"],
+            pv_article(key, sample, arts, lang), sample["slug"] + "/",
+            bar="inline" if key == "b" else None))
+
+
 def build():
+    load_money()
+    load_shorts()
+    _OPT.clear()
     arts = load_articles()
     ALL_ARTS[:] = arts
     seen = {}
@@ -1598,12 +2719,7 @@ def build():
         L = LANGS[lang]
 
         # ---------- Home ----------
-        body = f'<h1 class="sr">{NAME} — {L["tagline"]}</h1>'
-        if news:
-            top = news[0]
-            body += feed(top, story(top, lang, "h2"), [a for a in arts if a is not top], lang, "news", L["latest"], no_left=True)
-        else:
-            body += section(L["latest"], f'<p class="empty">{L["empty"]}</p>', anchor="news")
+        body = homepage(arts, lang)
         site_ld = {"@context": "https://schema.org", "@type": "WebSite", "name": NAME, "alternateName": ["Trending Tesla", "trendingtesla.com"],
                    "url": SITE + url(lang), "inLanguage": lang,
                    "publisher": {"@type": "Organization", "name": NAME, "url": SITE,
@@ -1617,33 +2733,21 @@ def build():
             items = arts if key == "news" else [a for a in arts if a["category"] == key or key in a.get("also", []) or (key == "ecosystem" and a["category"] in ECO)]
             if key == "news":
                 items = news
-            intro = L["eco_intro"] if key in ECO else L["cat_intro"].format(c[lang])
-            head = f'<h1 class="sr">{c[lang]}</h1>'
-            content = listing(items, lang, key)
+            content, crumb_ld, intro = category_hub(key, items, lang)
             write(url(lang, f"category/{key}/"),
-                  page(lang, f"category/{key}/", c[lang], intro, head + content, active=key))
+                  page(lang, f"category/{key}/", c[lang], intro, content,
+                       extra_head=ld_script(crumb_ld), active=key))
 
         # ---------- Model pages ----------
         for key, m in MODELS.items():
             family = {key} | ({m["parent"]} if m.get("parent") else set()) \
                 | {k for k, v in MODELS.items() if v.get("parent") == key}
             items = [a for a in arts if family & set(a.get("models", []))]
-            mg = [a for a in items if a["category"] == "guides"]
-            mn = [a for a in items if a["category"] != "guides"]
             ph = model_photo(key)
-            root = m.get("parent", key)
-            versions = [k for k, v in MODELS.items() if v.get("parent") == root]
-            chips_v = ""
-            if versions:
-                btns = [(root, L["all_versions"])] + [(k, MODELS[k]["label"][lang] if isinstance(MODELS[k]["label"], dict) else MODELS[k]["label"]) for k in versions]
-                chips_v = '<div class="versions"><span>' + L["your_version"] + '</span>' + "".join(
-                    f'<a href="{url(lang, "model/" + k + "/")}"{" class=\"on\"" if k == key else ""}>{esc(lbl)}</a>'
-                    for k, lbl in btns) + '</div>'
-            head = f'<h1 class="sr">Tesla {m["name"]}</h1>'
-            content = listing(items, lang, model=key)
+            content, crumb_ld, desc = model_hub(key, items, lang)
             write(url(lang, f"model/{key}/"),
-                  page(lang, f"model/{key}/", f"Tesla {m['name']}", L["model_intro"].format(m["name"]), head + content,
-                       image=ph, active="models"))
+                  page(lang, f"model/{key}/", f"Tesla {m['name']}", desc, content,
+                       extra_head=ld_script(crumb_ld), image=ph, active="models"))
 
         # ---------- Articles ----------
         for a in arts:
@@ -1659,9 +2763,9 @@ def build():
                 "mainEntityOfPage": SITE + url(lang, a["slug"] + "/"),
                 "publisher": {"@type": "Organization", "name": NAME, "url": SITE,
                               "logo": {"@type": "ImageObject", "url": SITE + "/favicon-512.png", "width": 512, "height": 512}},
-                "author": {"@type": "Organization", "name": EDITORIAL_ORG[lang], "url": SITE + url(lang, "editorial/")},
+                "author": {"@type": "Organization", "name": NAME, "url": SITE},
             }
-            v = VIDEOS.get((a["slug"], lang))
+            v = video_for(a, lang)
             if v:  # video rich result in Google (video thumbnail + length in search)
                 sec = int(v.get("seconds") or 0)
                 ld["video"] = {"@type": "VideoObject", "name": t["title"], "description": t["description"],
@@ -1671,10 +2775,12 @@ def build():
                                "embedUrl": f"https://www.youtube-nocookie.com/embed/{v['id']}",
                                "contentUrl": f"https://www.youtube.com/watch?v={v['id']}"}
                 ld["video"] = {k: x for k, x in ld["video"].items() if x}
-            head = f'<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>'
-            same = sorted((x for x in arts if (x["category"] == a["category"] or a["category"] in x.get("also", [])) and x is not a), key=published, reverse=True)
-            others = [x for x in arts if x is not a]
-            body = feed(a, story(a, lang) + related_block(a, arts, lang), others, lang, a["category"], L["latest"], left_exact=same, left_pad=pad_grid(a, same), article=True)
+            body = pv_article("b", a, arts, lang, live=True)
+            _, crumb_ld = crumbs(lang, [
+                (c.get("tag", c[lang]), f"category/{a['category']}/"),
+                (t["title"], a["slug"] + "/"),
+            ])
+            head = ld_script(ld) + ld_script(crumb_ld)
             write(url(lang, a["slug"] + "/"),
                   page(lang, a["slug"] + "/", t["title"], t["description"], body, "article", head,
                        image=social_img(a, lang), active=a["category"]))
@@ -1738,7 +2844,7 @@ def build():
                 "m.addEventListener('click',function(ev){if(ev.target===m||ev.target.classList.contains('shx'))close()});"
                 "document.body.appendChild(m);document.documentElement.style.overflow='hidden';m.querySelector('.shx').focus()});"
                 "document.addEventListener('keydown',function(e){if(e.key==='Escape')close()})})()</script>")
-        write(url(lang, "shorts/"), page(lang, "shorts/", "Shorts", intro, body))
+        write(url(lang, "shorts/"), page(lang, "shorts/", "Shorts", intro, body, active="videos"))
 
         # ---------- Static pages ----------
         for key, p in PAGES.items():
@@ -1805,6 +2911,9 @@ def build():
     write("/favicon.svg",
           '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#e22822"/>'
           '<text x="32" y="45" font-family="system-ui,sans-serif" font-size="38" font-weight="800" fill="#fff" text-anchor="middle">T</text></svg>')
+    client = publisher_client()
+    if client:
+        (OUT / "ads.txt").write_text(f"google.com, {client[3:]}, DIRECT, f08c47fec0942fa0\n", encoding="utf-8")
     write_redirects()
     print(f"Built {len(arts)} article(s) in {len(LANGS)} languages -> {OUT}")
 

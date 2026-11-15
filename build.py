@@ -386,7 +386,7 @@ CSS = """
 @font-face{font-family:Manrope;font-weight:600;font-display:swap;src:url(/fonts/manrope-latin-600-normal.woff2) format("woff2")}
 @font-face{font-family:Manrope;font-weight:700;font-display:swap;src:url(/fonts/manrope-latin-700-normal.woff2) format("woff2")}
 @font-face{font-family:Manrope;font-weight:800;font-display:swap;src:url(/fonts/manrope-latin-800-normal.woff2) format("woff2")}
-:root{--bg:#04060a;--surface:#212121;--surface2:#272727;--border:#272727;--border2:#3f3f3f;--fg:#e8eef5;--head:#fff;--muted:#b9c4d2;--dim:#8f9db0;--red:#e22822;--red2:#b81e19;--blue:#00d4ff;--edge:#3a4a60;--blue2:#5fe3ff;--max:1240px;color-scheme:dark}
+:root{--bg:#04060a;--surface:#212121;--surface2:#272727;--border:#272727;--border2:#3f3f3f;--fg:#e8eef5;--head:#fff;--muted:#b9c4d2;--dim:#8f9db0;--red:#e22822;--red2:#b81e19;--blue:#00d4ff;--edge:#3a4a60;--blue2:#5fe3ff;--max:1160px;color-scheme:dark}
 *{box-sizing:border-box;margin:0;padding:0}
 html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:150px;background:#04060a}
 html,body{overflow-x:clip;max-width:100%}
@@ -616,7 +616,7 @@ footer{border-top:1px solid var(--border);margin-top:14px;padding:15px 0 40px;fo
 footer .fgrid{display:grid;grid-template-columns:1.4fr 1.3fr 1.3fr .8fr;gap:40px}
 footer a{color:var(--muted);text-decoration:none}
 footer a:hover{color:var(--head)}
-footer h4{font-size:.7rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:var(--blue);margin:6px 0 12px}
+footer .flabel{font-size:.7rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:var(--blue);margin:6px 0 12px}
 footer .flist{display:grid;gap:7px 18px}footer .flist.two{grid-template-columns:1fr 1fr}
 footer .fbrand p{margin-top:12px;max-width:340px;line-height:1.5}
 footer .fcopy{margin-top:32px;padding-top:18px;border-top:1px solid var(--border)}
@@ -725,7 +725,8 @@ article.money .prose h2{scroll-margin-top:130px}
 .leadstory .lead{padding:0;max-width:65ch}
 .leadstory .leadim{display:block;border-radius:12px;overflow:hidden;border:1px solid var(--edge);background:#000}
 .leadstory img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
-.leadstory h1{font-size:clamp(1.7rem,3vw,2.4rem);line-height:1.15;letter-spacing:-.025em;margin:8px 0 12px}
+.leadstory h1{font-size:clamp(1.35rem,2vw,1.7rem);line-height:1.2;letter-spacing:-.02em;margin:8px 0 12px}
+.leadstory .btn{margin-bottom:22px}
 .leadstory h1 a{color:inherit;text-decoration:none}
 .leadstory h1 a:hover{text-decoration:underline;text-underline-offset:3px}
 .leadstory .lead{font-size:1.08rem;line-height:1.55;color:var(--muted);margin:0 0 18px}
@@ -809,13 +810,16 @@ header.hb .mdrop>button.pn .chev{display:block;flex:none}
 header.hb .mdrop>button.pn[aria-expanded=true]{background:#272727;color:#fff}
 header.hb .mdrop .pmenu{display:none;left:auto;right:0;top:calc(100% + 4px)}
 header.hb .mdrop.is-open .pmenu{display:grid}
-header.hb .hb-search{display:flex;position:relative;width:min(640px,calc(100% - 8px));max-width:640px;margin:2px auto 10px;height:42px;left:auto;right:auto;top:auto;background:transparent;padding:0}
+header.hb .hb-search{display:flex;position:relative;width:min(640px,calc(100% - 8px));max-width:640px;margin:-6px auto 18px;height:42px;left:auto;right:auto;top:auto;background:transparent;padding:0}
 header.hb .hb-search input,header.hb .hb-search>button{height:42px}
+header.hb .sbtn{display:none}
 header.hb ~ .drawer,header.hb ~ .scrim{top:118px}
-@media (min-width:1100px){header.hb .pnav{display:flex;overflow:visible;align-items:baseline}header.hb .id{align-items:baseline}header.hb .bar{position:relative;z-index:3;align-items:center}header.hb .logo{line-height:1}header.hb .logo span{top:0}header.hb .bar .burger{display:none}}
+@media (min-width:900px){header.hb .pnav{display:flex;overflow:visible;align-items:baseline}header.hb .id{align-items:baseline;gap:16px}header.hb .bar{position:relative;z-index:3;align-items:center}header.hb .logo{line-height:1}header.hb .logo span{top:0}header.hb .bar .burger{display:none}}
+@media (min-width:900px) and (max-width:1099.98px){header.hb .id{gap:10px}header.hb .pn,header.hb .mdrop>button.pn{font-size:14.5px;padding:5px 7px}}
 header.hb .hb-search{z-index:1}
 header.hb .mdrop .pmenu{z-index:6}
-@media (max-width:1099.98px){header.hb .bar .burger{display:flex}header.hb .pnav{display:none}header.hb ~ .drawer,header.hb ~ .scrim{top:108px}}
+header.hb .pnav>.is-parked{display:none}
+@media (max-width:899.98px){header.hb .bar .burger{display:flex}header.hb .pnav{display:none}header.hb ~ .drawer,header.hb ~ .scrim{display:block;top:108px}}
 /* Layout previews. Scoped so the live pages are unchanged. */
 .pv-note{font-size:.82rem;line-height:1.45;color:var(--muted);background:#161616;border:1px solid var(--border2);border-radius:10px;padding:10px 12px;margin:8px 0 12px}
 .pv-note a{color:var(--blue2)}
@@ -1294,9 +1298,9 @@ def page(lang, path, title, description, body, og_type="website", extra_head="",
 </main>
 <footer><div class="wrap"><div class="fgrid">
 <div class="fbrand"><a class="logo" href="{url(lang)}">Trending<span>Tesla</span></a><p>{L['tagline']} {L['disclaimer']}</p>{newsletter(lang, "foot")}</div>
-<div><h4>{L['d_topics']}</h4><div class="flist two">{fcats}</div></div>
-<div><h4>{L['d_models']}</h4><div class="flist">{fmods}</div></div>
-<div><h4>{L['d_more']}</h4><div class="flist"><a href="{url(lang, 'archive/')}">{L['archive']}</a><a href="{url(lang, 'about/')}">{L['about']}</a><a href="{url(lang, 'editorial/')}">{L['editorial']}</a><a href="{url(lang, 'privacy/')}">{L['privacy']}</a><a href="{url(lang, 'contact/')}">Contact</a><a href="{url(lang, 'terms/')}">{'Terms' if lang == 'en' else 'Voorwaarden'}</a><a href="{url(lang, 'shorts/')}">{L['videos']}</a><a href="https://www.youtube.com/@TrendingTesla" rel="noopener" target="_blank">YouTube</a><button type="button" class="flink" data-consent-open>{L['cookie']}</button><a href="{url(lang, 'feed.xml')}">RSS</a><a href="{url(alt, path)}">{L['switch_full']}</a></div></div>
+<div><p class="flabel">{L['d_topics']}</p><div class="flist two">{fcats}</div></div>
+<div><p class="flabel">{L['d_models']}</p><div class="flist">{fmods}</div></div>
+<div><p class="flabel">{L['d_more']}</p><div class="flist"><a href="{url(lang, 'archive/')}">{L['archive']}</a><a href="{url(lang, 'about/')}">{L['about']}</a><a href="{url(lang, 'editorial/')}">{L['editorial']}</a><a href="{url(lang, 'privacy/')}">{L['privacy']}</a><a href="{url(lang, 'contact/')}">Contact</a><a href="{url(lang, 'terms/')}">{'Terms' if lang == 'en' else 'Voorwaarden'}</a><a href="{url(lang, 'shorts/')}">{L['videos']}</a><a href="https://www.youtube.com/@TrendingTesla" rel="noopener" target="_blank">YouTube</a><button type="button" class="flink" data-consent-open>{L['cookie']}</button><a href="{url(lang, 'feed.xml')}">RSS</a><a href="{url(alt, path)}">{L['switch_full']}</a></div></div>
 </div><p class="fcopy">&copy; {datetime.now().year} {NAME}</p></div></footer>
 {consent_bar(lang)}
 <script>{JS}</script>
@@ -1714,6 +1718,7 @@ document.querySelectorAll(".avb[data-vid]").forEach(function(b){b.addEventListen
 
 
 JS += r"""
+(function(){var nav=document.querySelector("header.hb .pnav"),menu=document.getElementById("more-menu"),more=document.querySelector("header.hb .mdrop");if(!nav||!menu||!more)return;var items=[].filter.call(nav.children,function(el){return el!==more}),base=menu.innerHTML,parked=[];function restore(){items.forEach(function(el){el.classList.remove("is-parked");nav.insertBefore(el,more)});parked=[];menu.innerHTML=base}function tight(){var tools=document.querySelector("header.hb .savedlink");if(!tools)return false;return more.getBoundingClientRect().right>tools.getBoundingClientRect().left-8}function fit(){restore();if(getComputedStyle(nav).display==="none")return;var guard=0;while(tight()&&guard++<8){var el=null;for(var i=items.length-1;i>=0;i--){if(!items[i].classList.contains("is-parked")){el=items[i];break}}if(!el)break;el.classList.add("is-parked");parked.push(el);var a=el.matches("a")?el:el.querySelector("a.pn");if(!a)continue;var link=document.createElement("a");link.href=a.getAttribute("href");link.textContent=a.textContent.trim();link.setAttribute("role","menuitem");menu.insertBefore(link,menu.firstChild)}}fit();var wait;addEventListener("resize",function(){clearTimeout(wait);wait=setTimeout(fit,80)})})();
 (function(){var b=document.getElementById("more-btn"),m=document.getElementById("more-menu");if(!b||!m)return;function set(o){b.setAttribute("aria-expanded",o?"true":"false");m.hidden=!o;b.parentNode.classList.toggle("is-open",o)}b.addEventListener("click",function(e){e.stopPropagation();set(m.hidden)});b.addEventListener("keydown",function(e){if(e.key==="ArrowDown"){e.preventDefault();set(true);var a=m.querySelector("a");if(a)a.focus()}});document.addEventListener("click",function(e){if(!b.parentNode.contains(e.target))set(false)});document.addEventListener("keydown",function(e){if(e.key==="Escape"){set(false);if(b.parentNode.contains(document.activeElement))b.focus()}})})();
 """
 

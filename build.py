@@ -874,6 +874,9 @@ header.hb .pnav>.is-parked{display:none}
 .pv-side ul li{padding:7px 0;border-bottom:1px solid #242424;font-size:.88rem;line-height:1.3;font-weight:700}
 .pv-side ul.latest li{display:grid;grid-template-columns:1.3rem minmax(0,1fr);gap:6px;align-items:start}
 .pv-side ul.latest li::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--red);justify-self:start;align-self:start;margin-top:calc(0.65em - 2.5px);margin-left:1px}
+.pv-side ul.topics li{display:grid;grid-template-columns:1.3rem minmax(0,1fr);gap:6px;align-items:start}
+.pv-side ul.topics li::before{content:""}
+.pv-side ul.topics a.on{color:#fff}
 .pv-side .nform{max-width:none;margin:0 0 18px;padding:0;border:0;background:transparent}
 .pv-side .pv-guide{display:grid;grid-template-columns:72px minmax(0,1fr);gap:8px;align-items:center;padding:7px 0;border-bottom:1px solid #242424}
 .pv-side .pv-guide img{width:72px;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:6px}
@@ -2608,12 +2611,33 @@ def page_side(arts, lang, kind="home", current=None, skip=None):
         (L["videos"], "shorts/"),
         (L["archive"], "archive/"),
     ]
-    if isinstance(current, str):
-        hubs = [(name, path) for name, path in hubs if f"/{current}/" not in f"/{path}"]
-    if hubs:
-        label = "Topics" if lang == "en" else "Onderwerpen"
-        parts.append(_side_section(label, "<ul>" + _side_links(
-            [(name, url(lang, path)) for name, path in hubs]) + "</ul>"))
+    here = None
+    if kind == "model":
+        here = "category/models/"
+    elif kind == "videos":
+        here = "shorts/"
+    elif kind == "archive":
+        here = "archive/"
+    else:
+        key = current if isinstance(current, str) else None
+        if kind == "article" and not isinstance(current, str) and current is not None:
+            key = current.get("category")
+        here = {
+            "models": "category/models/",
+            "energy": "category/energy/",
+            "fsd": "category/fsd/",
+            "robotaxi": "category/fsd/",
+            "spacex": "category/spacex/",
+            "starlink": "category/spacex/",
+            "xai": "category/xai/",
+            "guides": "category/guides/",
+            "news": "archive/",
+        }.get(key)
+    label = "Topics" if lang == "en" else "Onderwerpen"
+    items = "".join(
+        f'<li><a{" class=\"on\"" if path == here else ""} href="{url(lang, path)}">{esc(name)}</a></li>'
+        for name, path in hubs)
+    parts.append(_side_section(label, f'<ul class="topics">{items}</ul>'))
     news = newsletter(lang, "side")
     if news:
         parts.append(news)

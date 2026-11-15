@@ -368,7 +368,7 @@ article.money .toc{float:none;width:auto;max-width:68ch;margin:4px 0 20px}
 article.money .prose h2{scroll-margin-top:130px}
 .leadstory{display:flex;flex-direction:column;gap:14px;margin:10px 0 8px;padding:0}
 .leadstory .lead{padding:0;max-width:65ch}
-.leadstory .leadim{display:block;border-radius:12px;overflow:hidden;border:1px solid var(--edge);background:#000}
+.leadstory .leadim{display:block;border-radius:12px;overflow:hidden;border:1px solid var(--edge);border-top-width:0;background:#000}
 .leadstory img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
 .leadstory h1{font-size:clamp(1.35rem,2vw,1.7rem);line-height:1.2;letter-spacing:-.02em;margin:8px 0 12px}
 .leadstory .btn{margin-bottom:22px}
@@ -446,7 +446,7 @@ nav.seq a.next{text-align:left;align-items:flex-start}
 header.hb .brand,header.hb .savedlink{transform:none}
 header.hb .bar{gap:8px}
 header.hb .id{display:flex;align-items:center;gap:28px;min-width:0;flex:1 1 auto}
-header.hb .pnav{display:none;flex:1 1 auto;min-width:0;height:auto;margin:0;overflow-x:auto;scrollbar-width:none}
+header.hb .pnav{display:none;flex:1 1 auto;min-width:0;height:auto;margin:0;overflow-x:auto;scrollbar-width:none;transform:translateY(-1px)}
 header.hb .pn{height:auto;padding:6px 10px;font-family:Manrope,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:16px;font-weight:700;line-height:1;letter-spacing:0}
 header.hb .savedlink{margin-left:auto}
 header.hb .mdrop{position:relative;flex:none;display:flex;align-items:baseline}
@@ -455,7 +455,8 @@ header.hb .mdrop>button.pn .chev{display:block;flex:none}
 header.hb .mdrop>button.pn[aria-expanded=true]{background:#272727;color:#fff}
 header.hb .mdrop .pmenu{display:none;left:auto;right:0;top:calc(100% + 4px)}
 header.hb .mdrop.is-open .pmenu{display:grid}
-header.hb .hb-search{display:flex;position:relative;width:min(640px,calc(100% - 8px));max-width:640px;margin:-6px auto 18px;height:42px;left:auto;right:auto;top:auto;background:transparent;padding:0}
+header.hb{padding-bottom:18px}
+header.hb .hb-search{display:flex;position:relative;width:min(640px,calc(100% - 8px));max-width:640px;margin:-6px auto 0;height:42px;left:auto;right:auto;top:auto;background:transparent;padding:0}
 header.hb .hb-search input,header.hb .hb-search>button{height:42px}
 header.hb .sbtn{display:none}
 header.hb ~ .drawer,header.hb ~ .scrim{top:118px}

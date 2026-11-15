@@ -354,7 +354,7 @@ article.narrow > h1{margin-left:14px}article.narrow .cform{margin-left:14px}
 .crumbs [aria-current]{color:var(--fg)}
 .hubhead{padding:18px 0 6px}
 .hubhead h1{font-size:clamp(1.8rem,4vw,2.7rem);letter-spacing:-.03em;line-height:1.08;margin:0 0 10px}
-.hubhead .lead{font-size:1.08rem;line-height:1.55;color:var(--muted);max-width:46rem;margin:0 0 16px 1px}
+.hubhead .lead{font-size:1.08rem;line-height:1.55;color:var(--muted);max-width:none;margin:0 0 16px 1px}
 .starthere{margin:6px 0 26px;padding:16px 16px 18px;border:1px solid rgba(0,212,255,.35);border-radius:12px;background:rgba(0,212,255,.06)}
 .starthere>h2{margin:0 0 4px;font-size:1.25rem}
 .starthere>.sub{margin:0 0 12px}
@@ -375,10 +375,10 @@ article.money .prose h2{scroll-margin-top:130px}
 .leadstory .leadim{display:block;border-radius:12px;overflow:hidden;border:1px solid var(--edge);background:#000}
 .leadstory img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
 .leadstory .ltitle{font-size:clamp(1.35rem,2vw,1.7rem);line-height:1.2;letter-spacing:-.02em;margin:8px 0 12px 1px;font-weight:800}
-.leadstory .btn{margin-bottom:22px;padding-left:0}
+.leadstory .btn{margin-bottom:22px}
 .leadstory .ltitle a{color:inherit;text-decoration:none}
 .leadstory .ltitle a:hover{text-decoration:underline;text-underline-offset:3px}
-.leadstory .lead{font-size:1.08rem;line-height:1.55;color:var(--muted);margin:0 0 18px}
+.leadstory .lead{font-size:1.08rem;line-height:1.55;color:var(--muted);max-width:none;margin:0 0 18px}
 .hsec{margin:34px 0 8px}
 .topics3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px 14px}
 .topics3>.card{display:flex;flex-direction:column;min-width:0}
@@ -531,14 +531,20 @@ header.hb .pnav>.is-parked{display:none}
 .sheet:has(.leadstory)>.pv-side{margin-top:3px}
 .sheet-main article.narrow,.sheet-main>.narrow{max-width:none;margin:0}
 .sheet-main article.narrow>h1,.sheet-main article.narrow .cform,.sheet-main article.narrow .lead,.sheet-main article.narrow .prose{margin-left:0;margin-right:0}
-.sheet-main .prose{max-width:68ch}
+.sheet-main .prose{max-width:none}
 .sheet-main article.money h1{font-size:clamp(1.55rem,2.6vw,2.1rem);line-height:1.16;margin:6px 0 8px}
-.sheet-main article.money .lead{font-size:1.08rem;line-height:1.5;color:var(--muted);max-width:66ch}
-.sheet-main article.money .prose{font-size:1.05rem;line-height:1.7;max-width:66ch}
-.sheet-main article.money .toc{float:none;width:auto;max-width:none;margin:0 0 16px}
+.sheet-main article.money .lead{font-size:1.08rem;line-height:1.5;color:var(--muted);max-width:none}
+.sheet-main article.money .prose{font-size:1.05rem;line-height:1.7;max-width:none}
+.sheet-main article .prose h2{margin-right:14px}
+.sheet-main article.money .toc{float:none;width:auto;max-width:none;margin:0 calc(3vw + 14px) 16px}
 .sheet-main article.money .avid{max-width:none}
+.sheet-main article.money .avid.short,.pv-art .avid.short{width:auto;max-width:none;margin-left:0;margin-right:0}
+.sheet-main article.money .avid.short .avb,.pv-art .avid.short .avb{display:block;width:50%;max-width:100%;margin-left:auto;margin-right:auto}
+.sheet-main article.money .sources,.sheet-main article.money .imgnote,.sheet-main article.money nav.seq,.sheet-main article.money .pbox,.sheet-main article.money .nform,.sheet-main article.money .avid figcaption{margin-left:calc(3vw + 14px);margin-right:calc(3vw + 14px)}
+.sheet-main article.money .pbox,.sheet-main article.money .nform,.sheet-main article.money .adslot{max-width:none}
+@media (max-width:640px){.sheet-main article.money .avid.short .avb,.pv-art .avid.short .avb{width:100%}}
 .sheet-main article.narrow>h1,.sheet-main article.money>h1,.sheet-main article.money>.meta,.sheet-main article.money>.byline{margin-left:calc(3vw + 14px);margin-right:calc(3vw + 14px)}
-@media (max-width:600.98px){.sheet-main article.narrow>h1,.sheet-main article.money>h1,.sheet-main article.money>.meta,.sheet-main article.money>.byline{margin-left:14px;margin-right:14px}}
+@media (max-width:600.98px){.sheet-main article.narrow>h1,.sheet-main article.money>h1,.sheet-main article.money>.meta,.sheet-main article.money>.byline,.sheet-main article.money .toc,.sheet-main article.money .sources,.sheet-main article.money .imgnote,.sheet-main article.money nav.seq,.sheet-main article.money .pbox,.sheet-main article.money .nform,.sheet-main article.money .avid figcaption{margin-left:14px;margin-right:14px}}
 @media (max-width:900px){
 .pv-grid,.pv-art,.pv-art.pv-c,.sheet{grid-template-columns:1fr}
 .pv-lead{grid-template-columns:1fr}

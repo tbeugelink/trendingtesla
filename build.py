@@ -817,6 +817,7 @@ header.hb .hb-search input,header.hb .hb-search>button{height:42px}
 header.hb .sbtn{display:none}
 header.hb ~ .drawer,header.hb ~ .scrim{top:118px}
 @media (min-width:900px){header.hb .pnav{display:flex;overflow:visible;align-items:baseline}header.hb .id{align-items:baseline;gap:16px}header.hb .bar{position:relative;z-index:3;align-items:center}header.hb .logo{line-height:1}header.hb .logo span{top:0}header.hb .bar .burger{display:none}}
+@media (min-width:901px){header.hb .hb-search{width:min(640px,calc(100% - 292px - 26px));max-width:none;margin:-6px calc(292px + 26px) 0 auto}}
 @media (min-width:900px) and (max-width:1099.98px){header.hb .id{gap:10px}header.hb .pn,header.hb .mdrop>button.pn{font-size:14.5px;padding:5px 7px}}
 header.hb .hb-search{z-index:1}
 header.hb .mdrop .pmenu{z-index:6}
@@ -875,7 +876,7 @@ header.hb .pnav>.is-parked{display:none}
 /* One centered frame for every page: reading column plus a right sidebar. */
 .sheet{display:grid;grid-template-columns:minmax(0,1fr) 292px;gap:26px;align-items:start}
 .sheet-main{min-width:0}
-.sheet .leadstory{margin-top:0;align-items:start}
+.sheet .leadstory{margin-top:-1px;align-items:start}
 .sheet-main article.narrow,.sheet-main>.narrow{max-width:none;margin:0}
 .sheet-main article.narrow>h1,.sheet-main article.narrow .cform,.sheet-main article.narrow .lead,.sheet-main article.narrow .prose{margin-left:0;margin-right:0}
 .sheet-main .prose{max-width:68ch}

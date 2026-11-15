@@ -4,7 +4,7 @@ Work unattended. Publish directly. Do not ask for approval. The spec is `README.
 
 | when | article | Short | long video |
 |---|---|---|---|
-| every day, publish around 18:00 Europe/Amsterdam | one article from the fact sheet you were given | yes | no |
+| every day, publish around 21:00 Europe/Amsterdam | one article from the fact sheet you were given | yes | no |
 | Saturday | the weekly evergreen guide, `"evergreen": true`, about 1,200–1,800 words | yes | yes: a `video` script |
 
 There is no midday slot and no evening slot. Do not write a second article the same day.

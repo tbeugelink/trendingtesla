@@ -6,7 +6,7 @@ Usage: python3 tools/health.py            prints the report, writes ops/health.m
 Written after 11 Nov 2026: a Short that crashed, a video run GitHub never started and social posts that failed for
 11 days all went unnoticed. Run it by hand, or after publication. It writes ops/health.md.
 Checks, for every article of the last 36 hours (times in Europe/Amsterdam):
-  - today's article exists after 19:00 (one a day, around 18:00);
+  - today's article exists after 22:00 (one a day, around 21:00);
   - the Short exists and is public on YouTube (after 45 minutes); an article with a "video" script also has
     its long video (after 100 minutes);
   - the Short reached TikTok, Instagram and Facebook (ops/social-log.jsonl, after 150 minutes);
@@ -87,8 +87,8 @@ def main():
             arts.append((at, a, f))
     today = [x for x in arts if x[0].date() == now.date()]
     hm = now.hour * 60 + now.minute
-    if hm >= 19 * 60 and not today:
-        problems.append("No article today (expected around 18:00 Europe/Amsterdam).")
+    if hm >= 22 * 60 and not today:
+        problems.append("No article today (expected around 21:00 Europe/Amsterdam).")
 
     for at, a, f in arts:
         s, age = a["slug"], now - at

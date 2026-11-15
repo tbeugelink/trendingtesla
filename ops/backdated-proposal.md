@@ -1,6 +1,6 @@
-# Backdated articles: proposal only
+# Backdated articles
 
-Nothing in this file has been applied. No article was deleted, redated, or rewritten for this proposal.
+Applied on 15 November 2026. The tables below are the approved proposal and were not rewritten. Counts and the redirect note are at the bottom.
 
 Source: `ops/date-audit.md` (generated 14 November 2026). It lists 181 articles whose `date` is earlier than the calendar day of the file's first commit. The proposed new date is that first-commit day in Europe/Amsterdam, already converted in the audit. Many articles share a date because they were imported in one commit. The owner can spread the times later. The original `time` is left as it is.
 
@@ -211,4 +211,26 @@ Proposed new `date` is the first-commit day. Do not change `time` unless the own
 | `2026-10-23-tesla-supercharger-q3-2026-utilization-69-million-sessions-robotaxi-energy.json` | 2026-10-23 23:53 | 2026-10-24 | 620 | Keep. 620 English words, above the thin cutoff. Proposed date is the first-commit calendar day in Europe/Amsterdam. No per-article page views exist in ops/stats. |
 | `2026-10-23-tesla-tyres-guide-t-marking-foam-rotation-winter-rules.json` | 2026-10-23 23:59 | 2026-10-24 | 658 | Keep. 658 English words, above the thin cutoff. Proposed date is the first-commit calendar day in Europe/Amsterdam. No per-article page views exist in ops/stats. |
 | `2026-10-23-vegas-loop-self-driving-teslas-safety-drivers-timeline.json` | 2026-10-23 23:54 | 2026-10-24 | 629 | Keep. 629 English words, above the thin cutoff. Proposed date is the first-commit calendar day in Europe/Amsterdam. No per-article page views exist in ops/stats. |
+
+## Applied
+
+Applied on 15 November 2026, as approved. Nothing in the tables above was reclassified.
+
+- **Deleted: 43** article files. English and Dutch live in one file, so both languages go together. Filenames were removed from `content/articles/`.
+- **Redated: 138.** `date` is the first-commit day in Europe/Amsterdam from the table. `time` stayed as it was on **66** articles. On **72** articles that clock time on the new day would have been later than the commit, so `time` was set to the commit's Europe/Amsterdam clock time. No article file sets `updated`, so `dateModified` follows the publication date and time and is not earlier than publication. Slugs and filenames were not changed, so live URLs stay the same.
+- **Redirects: 86** (43 URLs, English and Dutch). The list is `content/redirects.json`. The worker answers them with a 301 (`worker/redirects.js`, checked in `worker/index.js` before static assets). `build.py` also writes `public/_redirects`, which Cloudflare Workers static assets honor. Each removed URL points at the closest kept article on the same subject, or at a model or category page when no article fits:
+  - Model S/X order close, last car off the line, and the legacy-Intel FSD Lite flash → the Model S/X history look-back.
+  - Cybertruck 2025 sales drop → the Q3 2026 Cybertruck sales article. UAE launch and the base-price cut → `/model/cybertruck/`.
+  - Q2 earnings flash → the Q2 deliveries article. Q3 deliveries flash → the Q3 earnings article. Energy-storage gigawatt-hour flash → the Tesla Energy explainer. Credit-line flash → the capex explainer.
+  - Megapack 3 production start in Texas → the Megafactories explainer. Italy Megapack deal → the NatPower Megapack deal.
+  - Starlink-in-every-car flash → the Starlink-and-Tesla article. US and Europe Megacharger flashes → the Semi Megacharger-for-business article. Semi factory-opening flash → the Semi history article (the history article's own link to that flash was removed; the text stays).
+  - Cybercab Austin launch → the Dallas and Houston Robotaxi expansion. Fleet-interest form and the Japan tour → the Cybercab specs explainer. NHTSA's answer deadline → the NHTSA Cybercab probe.
+  - FSD country flashes (Slovenia, Czechia, Croatia, Slovakia, Japan) → the FSD Supervised explainer. The v14.3.11 rollout flash → the FSD v14 Lite explainer.
+  - US Model 3/Y delivery-wait flash → the article on Model 3 orders paused into 2027. Model Y L US slip → the Model Y L sales article.
+  - Europe, UK, Nordic and Germany September registration flashes → the Europe record-September article. China September sales → the Giga Shanghai Q3 export article.
+  - Roadster date shift → the Roadster unveil explainer. Spring Update and the 2026.38 feature list → the software-updates guide.
+  - Optimus Texas factory plan → the Q3 call on Optimus production. Fremont ramp flash → the Fremont Optimus production article. Humanoid-race flash → the IRON comparison. AI5/AI6 chip flash → the Terafab explainer.
+  - Robotaxi city list → the Robotaxi safety report. Merger-scenario flash → the later upgrade article on the same theme. Shareholder-meeting date → `/category/musk/`.
+- **Shorts.** `tools/find_push_articles.py` already selects only article files **added** in the push (`git diff --diff-filter=A`) and then skips a Short whose slug or English title is already uploaded. This change only modifies and deletes existing article files, so a merge onto `main` can start `shorts.yml` but the finder returns no new slug and no video is made or uploaded. `content/shorts.json` did not link to any removed article. YouTube and Buffer uploads were not touched.
+- The site was rebuilt with `python3 build.py`. Sitemap, RSS, the search index and related-article lists are generated only from the articles that remain.
 

@@ -351,7 +351,7 @@ INFO = {
             ("Gewicht", "1.412 kg"), ("Laden", "alleen DC (NACS), draadloos gepland"), ("Software", "FSD zonder toezicht op aangepaste HW4")],
   "watch": ["Niet te koop voor particulieren; alleen interesse voor vloten.", "De NHTSA onderzoekt hoe de auto is gecertificeerd."],
   "special": ["Ontworpen voor de laagst mogelijke kosten per kilometer.", "Vlinderdeuren en geen bedieningselementen voor een bestuurder."]}},
-"semi": {"sources": [("TrendingTesla — Semi factory opens", "/tesla-semi-factory-opening-first-deliveries/")], "en": {
+"semi": {"sources": [("TrendingTesla — Why the Semi took nine years", "/tesla-semi-story-2017-reveal-to-factory-europe-why-nine-years/")], "en": {
   "intro": "Tesla's electric heavy truck, in series production in Nevada since 2026.",
   "specs": [("Long Range", "up to 500 miles (800 km), about $290,000"), ("Standard Range", "325 miles (520 km), about $260,000"),
             ("Charging", "Megacharger up to 1.2 MW"), ("Factory", "Nevada, up to 50,000 trucks a year"), ("Europe", "deliveries planned for 2027")],

@@ -1974,7 +1974,8 @@ def primary_nav(lang, active=None):
     parts = []
     for key, href, label, kids in _nav_rows(lang):
         on = " on" if cur == key else ""
-        link = f'<a class="pn{on}" href="{url(lang, href)}">{esc(label)}</a>'
+        named = f' aria-label="{esc(LANGS[lang]["all"])}"' if key == "more" else ""
+        link = f'<a class="pn{on}" href="{url(lang, href)}"{named}>{esc(label)}</a>'
         if kids:
             menu = "".join(f'<a href="{url(lang, path)}">{esc(name)}</a>' for name, path in kids)
             parts.append(f'<div class="pdrop{on}">{link}<div class="pmenu">{menu}</div></div>')
@@ -2264,8 +2265,9 @@ def home_topics(arts, shown, lang):
         pick = (fresh + [a for a in pool if id(a) in shown])[:3]
         title = L[label_key] if label_key else CATEGORIES["guides"][lang]
         cards = f'<div class="topics3">{"".join(gcard(a, lang) for a in pick)}</div>'
+        label = {"en": f"All {title} articles", "nl": f"Alle artikelen over {title}"}[lang]
         out.append(f'<section class="hsec"><div class="h2"><h2>{esc(title)}</h2>'
-                   f'<a href="{url(lang, path)}">{esc(L["see_all"])}</a></div>{cards}</section>')
+                   f'<a href="{url(lang, path)}" aria-label="{esc(label)}">{esc(L["see_all"])}</a></div>{cards}</section>')
     return "".join(out)
 
 
@@ -2280,11 +2282,12 @@ def homepage(arts, lang):
     videos = home_videos(arts, lang)
     video_block = ""
     if videos:
+        videos_label = {"en": "All videos", "nl": "Alle video's"}[lang]
         video_block = (f'<section class="hsec" id="videos"><div class="h2"><h2>{esc(L["videos"])}</h2>'
-                       f'<a href="{url(lang, "shorts/")}">{esc(L["see_all"])}</a></div>'
+                       f'<a href="{url(lang, "shorts/")}" aria-label="{esc(videos_label)}">{esc(L["see_all"])}</a></div>'
                        f'<div class="vstrip">{videos}</div></section>')
     latest_block = (f'<section class="hsec" id="latest"><div class="h2"><h2>{esc(L["latest"])}</h2>'
-                    f'<a href="{url(lang, "archive/")}">{esc(L["see_all"])}</a></div>'
+                    f'<a href="{url(lang, "archive/")}" aria-label="{esc(L["all"])}">{esc(L["see_all"])}</a></div>'
                     f'<div class="grid2">{"".join(card(a, lang) for a in latest)}</div></section>')
     return home_lead(lead, lang) + latest_block + video_block + home_topics(arts, shown, lang)
 

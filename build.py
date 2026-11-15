@@ -1437,9 +1437,9 @@ def story(a, lang, tag="h1"):
     if a.get("credits"):  # real, freely licensed photos: the licence requires the credit
         cr = "; ".join(f'<a href="{esc(c["page"])}" rel="nofollow noopener" target="_blank">{esc(c["credit"])}</a>'
                        for c in a["credits"] if c.get("page"))
-        src += f'<p class="imgnote">{L["photocredit"]}: {cr}. {L["imgnote_other"]}</p>'
+        src += f'<p class="imgnote">{L["photocredit"]}: {cr}. {L["imgnote_other"]}{footage_note(a["slug"], lang)}</p>'
     else:
-        src += f'<p class="imgnote">{L["imgnote"]}</p>'
+        src += f'<p class="imgnote">{L["imgnote"]}{footage_note(a["slug"], lang)}</p>'
     chips = ""
     if a.get("models"):
         chips = '<div class="chips">' + "".join(
@@ -2409,6 +2409,24 @@ def article_media(a, lang):
     return f'<div class="hi">{resp_img(poster, a[lang]["title"], SIZES_HERO, high=True, lazy=False, cls="hero-img")}</div>'
 
 
+def footage_note(slug, lang):
+    """Credits for real clips a render actually used. Empty when this article has none yet."""
+    path = ROOT / "content" / "footage-used.json"
+    if not path.exists():
+        return ""
+    try:
+        row = json.loads(path.read_text(encoding="utf-8")).get(slug) or {}
+    except (OSError, json.JSONDecodeError):
+        return ""
+    items = [c for c in row.get("credits") or [] if c.get("page") and c.get("credit")]
+    if not items:
+        return ""
+    links = "; ".join(
+        f'<a href="{esc(c["page"])}" rel="nofollow noopener" target="_blank">{esc(c["credit"])}</a>' for c in items)
+    lab = "Footage" if lang == "en" else "Beeld"
+    return f" {lab}: {links}."
+
+
 def article_sources(a, lang):
     L = LANGS[lang]
     src = ""
@@ -2421,9 +2439,9 @@ def article_sources(a, lang):
         credit = "; ".join(
             f'<a href="{esc(item["page"])}" rel="nofollow noopener" target="_blank">{esc(item["credit"])}</a>'
             for item in a["credits"] if item.get("page"))
-        src += f'<p class="imgnote">{L["photocredit"]}: {credit}. {L["imgnote_other"]}</p>'
+        src += f'<p class="imgnote">{L["photocredit"]}: {credit}. {L["imgnote_other"]}{footage_note(a["slug"], lang)}</p>'
     else:
-        src += f'<p class="imgnote">{L["imgnote"]}</p>'
+        src += f'<p class="imgnote">{L["imgnote"]}{footage_note(a["slug"], lang)}</p>'
     return src
 
 

@@ -924,20 +924,30 @@ def main():
     plan_moves(beats)
     assign_images(a, beats)
 
-    # 1. voice per beat, timeline
+    # 1. voice per beat, timeline. STORY_PREVIEW=1 skips the paid voice and uses the script's own timings,
+    # so a picture cut can be checked without uploading anything.
+    preview = os.environ.get("STORY_PREVIEW") == "1"
     t, caps, pops = 0.25, [], []
     for i, b in enumerate(beats):
-        f = tmp / f"v{i:02d}.mp3"
-        words = tts(S.spoken(b["text"], lang), float(b.get("speed") or SPEED[b["part"]]), f)
-        dur = S.duration(f)
-        b["_voice"], b["_t0"] = f, t
-        if CAPTIONS:
+        if preview:
+            span = re.match(r"\s*(\d+(?:\.\d+)?)\s*-\s*(\d+(?:\.\d+)?)", str(b.get("t") or ""))
+            dur = max(0.8, float(span.group(2)) - float(span.group(1))) if span else max(1.6, len(b["text"].split()) * 0.42)
+            words = []
+            b["_voice"] = None
+        else:
+            f = tmp / f"v{i:02d}.mp3"
+            words = tts(S.spoken(b["text"], lang), float(b.get("speed") or SPEED[b["part"]]), f)
+            dur = S.duration(f)
+            b["_voice"] = f
+        b["_t0"] = t
+        if CAPTIONS and words:
             caps += groups(words, t)
-        pops += [(p0, p1, txt, i) for p0, p1, txt in find_pops(b, words, t + (0.25 if i == 0 else 0))]
+        if words:
+            pops += [(p0, p1, txt, i) for p0, p1, txt in find_pops(b, words, t + (0.25 if i == 0 else 0))]
         b["_words"] = [(w, t + (0.25 if i == 0 else 0) + s0) for w, s0, _ in words]
         nxt = beats[i + 1]["part"] if i + 1 < len(beats) else None
-        gap = GAP["payoff"] if nxt == "payoff" and b["part"] != "payoff" else GAP[b["part"]]
-        b["_dur"] = dur + gap + (0.25 if i == 0 else 0) + (END_HOLD if i == len(beats) - 1 else 0)
+        gap = 0.0 if preview else (GAP["payoff"] if nxt == "payoff" and b["part"] != "payoff" else GAP[b["part"]])
+        b["_dur"] = dur + gap + (0 if preview else (0.25 if i == 0 else 0)) + (END_HOLD if i == len(beats) - 1 else 0)
         t += b["_dur"]
         print(f"beat {i} {b['part']:7s} {b['move']:5s} {dur:5.2f}s {b['_img'].name}: {b['text'][:60]}")
     body_end = t
@@ -953,11 +963,13 @@ def main():
 
     # 2. sound: voice on the timeline, plus a beat's own natural sfx when the script names one
     pay = next((b["_t0"] for b in beats if b["part"] == "payoff"), None)
-    layers = [(b["_voice"], b["_t0"] + (0.25 if i == 0 else 0), 1.0) for i, b in enumerate(beats)]
+    layers = [(b["_voice"], b["_t0"] + (0.25 if i == 0 else 0), 1.0) for i, b in enumerate(beats) if b.get("_voice")]
     if ENDCARD:
         layers.append((slog, body_end + 0.2, 1.0))
     try:
         # a beat's own natural sound still plays; the generic impact hit and the drone do not, unless USE_DEFAULT_SFX
+        if preview:
+            raise RuntimeError("preview")
         hook_sfx = beats[0].get("sfx")
         if hook_sfx or USE_DEFAULT_SFX:
             layers.append((sfx(hook_sfx or DEFAULT_SFX["hook"], 4.0 if hook_sfx else 2.5, tmp), 0.0, SFX_VOL))
@@ -973,21 +985,26 @@ def main():
     except Exception as e:  # sound effects are a bonus: never fail the video on them
         print(f"::warning::sound effects skipped: {e}")
     audio = tmp / "mix.m4a"
-    cmd = ["ffmpeg", "-y", "-loglevel", "error"]
-    for f, _, _ in layers:
-        cmd += ["-i", str(f)]
-    # every layer fades in over 30 ms and the whole mix over 80 ms: no click or crackle where a sound starts
-    fl = [f"[{k}:a]aresample=44100,aformat=channel_layouts=stereo,afade=t=in:d=0.03,adelay={int(st * 1000)}|{int(st * 1000)},"
-          f"volume={v}[a{k}]" for k, (_, st, v) in enumerate(layers)]
-    fl.append("".join(f"[a{k}]" for k in range(len(layers))) +
-              f"amix=inputs={len(layers)}:normalize=0,alimiter=limit=0.95,apad,atrim=0:{total:.2f},afade=t=in:d=0.08,afade=t=out:st={total - 0.3:.2f}:d=0.3[out]")
-    subprocess.run(cmd + ["-filter_complex", ";".join(fl), "-map", "[out]", "-c:a", "aac", "-b:a", "192k",
-                          "-ar", "44100", str(audio)], check=True)
+    if not layers:  # picture-only preview: silent track, same length as the shots
+        subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-f", "lavfi", "-i", "anullsrc=r=44100:cl=stereo",
+                        "-t", f"{total:.2f}", "-c:a", "aac", "-b:a", "128k", str(audio)], check=True)
+        cmd = None
+    else:
+        cmd = ["ffmpeg", "-y", "-loglevel", "error"]
+        for f, _, _ in layers:
+            cmd += ["-i", str(f)]
+        # every layer fades in over 30 ms and the whole mix over 80 ms: no click or crackle where a sound starts
+        fl = [f"[{k}:a]aresample=44100,aformat=channel_layouts=stereo,afade=t=in:d=0.03,adelay={int(st * 1000)}|{int(st * 1000)},"
+              f"volume={v}[a{k}]" for k, (_, st, v) in enumerate(layers)]
+        fl.append("".join(f"[a{k}]" for k in range(len(layers))) +
+                  f"amix=inputs={len(layers)}:normalize=0,alimiter=limit=0.95,apad,atrim=0:{total:.2f},afade=t=in:d=0.08,afade=t=out:st={total - 0.3:.2f}:d=0.3[out]")
+        subprocess.run(cmd + ["-filter_complex", ";".join(fl), "-map", "[out]", "-c:a", "aac", "-b:a", "192k",
+                              "-ar", "44100", str(audio)], check=True)
 
     # 3. picture: every frame moves; label on the opening shot; captions; end card
     label, ltop = title_card(a, lang), H * 0.60
     capimgs = {}
-    out = OUT / f"{slug}-{lang}-short.mp4"
+    out = OUT / (f"{slug}-{lang}-short-preview.mp4" if preview else f"{slug}-{lang}-short.mp4")
     enc = subprocess.Popen(["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24",
                             "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-", "-i", str(audio), "-map", "0:v", "-map", "1:a",
                             "-c:v", "libx264", "-preset", "veryfast", "-crf", "20", "-pix_fmt", "yuv420p",
@@ -996,7 +1013,10 @@ def main():
     rnd = random.Random(slug)
     report = []  # what the overlay/timing/loop checks found (video/out/<slug>-en-short-report.txt)
     shots = make_shots(beats, a["_pool"], rnd)
-    clip = hook_clip(a, beats, shots, tmp, slug, report)
+    import clips as CL
+    footage = CL.bind_shots(shots, beats, a, W, H, FPS, SHOT_MAX)
+    report.append(CL.describe(footage))
+    clip = None if preview else hook_clip(a, beats, shots, tmp, slug, report)
     for i, b in enumerate(beats):
         if b["_dur"] > 3.0 and len({x["img"] for x in shots if x["beat"] == i}) < 2:
             report.append(f"beat {i + 1}: {b['_dur']:.1f} s with only 1 photo (rule: switch photo after 3 s)")
@@ -1079,11 +1099,13 @@ def main():
         st = tt - shot["t0"]
         pg = next((p for p in pops if p[0] <= tt < p[1]), None)
         box = frame(src, shot, st, (tt - pg[0]) if pg else None)
-        moving = clip[0].next() if clip and tt < clip[1] else None  # the hook as a moving picture
+        real = shot["footage_reader"].next() if shot.get("footage_reader") else None
+        moving = real if real is not None else (clip[0].next() if clip and tt < clip[1] else None)
         fr = moving.copy() if moving is not None else src.resize((W, H), Image.BILINEAR, box=box)
         xf = min(XFADE, 0.6 * shot["dur"], 0.6 * shots[si - 1]["dur"]) if si > 0 else 0
-        if clip and tt < clip[1] + 0.2:
-            xf = 0  # straight cut out of the clip
+        prev_real = bool(shots[si - 1].get("footage")) if si else False
+        if shot.get("footage") or prev_real or (clip and tt < clip[1] + 0.2):
+            xf = 0  # hard cut around real footage, and out of the AI hook clip
         if xf > 0.01 and st < xf:  # smooth crossfade from the previous shot, which keeps moving meanwhile
             pv = shots[si - 1]
             if pv["img"] not in srcs:
@@ -1132,17 +1154,27 @@ def main():
     enc.stdin.close()
     if clip:
         clip[0].p.kill()
+    CL.close_readers(footage["readers"])
     if enc.wait():
         sys.exit("ffmpeg failed")
     check_brand(out, logo)
     S.PORTRAIT = True
     S.meta(a, lang, out)
     used = [CREDITS[x] for x in dict.fromkeys(sh["img"] for sh in shots) if x in CREDITS]
-    if used:
-        t = out.with_suffix(".txt")
-        lab = {"en": "Photos", "nl": "Foto's"}[lang]
-        t.write_text(t.read_text(encoding="utf-8").replace("\n\nTAGS:", f"\n\n{lab}: " + "; ".join(dict.fromkeys(used)) + "\n\nTAGS:", 1),
-                     encoding="utf-8")
+    lines = CL.credit_lines(footage["clips"])
+    t = out.with_suffix(".txt")
+    if t.exists():
+        extra = ""
+        if used:
+            lab = {"en": "Photos", "nl": "Foto's"}[lang]
+            extra += f"\n\n{lab}: " + "; ".join(dict.fromkeys(used))
+        if lines:
+            lab = {"en": "Footage", "nl": "Beeld"}[lang]
+            extra += f"\n\n{lab}: " + "; ".join(f"{c['credit']} ({c['page']})" for c in lines)
+        extra += f"\n\nReal footage: {footage['share'] * 100:.0f}% of screen time."
+        if extra:
+            t.write_text(t.read_text(encoding="utf-8").replace("\n\nTAGS:", extra + "\n\nTAGS:", 1), encoding="utf-8")
+    CL.record(a["slug"], footage, S.ROOT)
     if banded:
         report.append("contrast band added behind the text on bright photos in beat(s) " + ", ".join(map(str, sorted(banded))))
     rep = OUT / f"{slug}-{lang}-short-report.txt"

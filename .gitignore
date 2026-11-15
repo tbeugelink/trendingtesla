@@ -1,4 +1,5 @@
 video/out/
+video/clips/cache/
 __pycache__/
 video/__pycache__/
 ops/pilot/out/

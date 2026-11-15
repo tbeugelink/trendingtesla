@@ -1,0 +1,282 @@
+{
+  "note": "Video bytes are fetched into video/clips/cache at render time and are not stored in git. Licences are public domain or CC0 only in this seed. CC BY is allowed by the loader when attribution is recorded. No YouTube rips and no news-broadcaster footage.",
+  "gaps": [
+    "No public-domain, CC0 or CC BY moving footage was found for the eight Tesla models, Superchargers, factories, Optimus or FSD driving. Those shots keep the existing stills until a clip with an allowed licence is added here."
+  ],
+  "clips": [
+    {
+      "id": "falcon-starlink-10-58",
+      "file": "falcon-starlink-10-58.webm",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/33/Falcon_9_-_Starlink_10-58_Launch_%281001797%29.webm",
+      "page": "https://commons.wikimedia.org/wiki/File%3AFalcon_9_-_Starlink_10-58_Launch_%281001797%29.webm",
+      "licence": "public-domain",
+      "licence_name": "Public domain",
+      "attribution": "U.S. Space Force, public domain",
+      "tags": [
+        "falcon",
+        "falcon-9",
+        "launch",
+        "liftoff",
+        "rocket",
+        "booster",
+        "starlink"
+      ],
+      "models": [],
+      "topics": [
+        "spacex",
+        "falcon"
+      ],
+      "bytes": 1677533
+    },
+    {
+      "id": "falcon-starlink-6-90",
+      "file": "falcon-starlink-6-90.webm",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/28/Falcon_9_-_Starlink_6-90_%28989967%29.webm",
+      "page": "https://commons.wikimedia.org/wiki/File%3AFalcon_9_-_Starlink_6-90_%28989967%29.webm",
+      "licence": "public-domain",
+      "licence_name": "Public domain",
+      "attribution": "U.S. Space Force, public domain",
+      "tags": [
+        "falcon",
+        "falcon-9",
+        "launch",
+        "liftoff",
+        "rocket",
+        "booster",
+        "starlink"
+      ],
+      "models": [],
+      "topics": [
+        "spacex",
+        "falcon"
+      ],
+      "bytes": 5443637
+    },
+    {
+      "id": "falcon-starlink-6-98",
+      "file": "falcon-starlink-6-98.webm",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/db/Falcon_9_-_Starlink_6-98_%28993230%29.webm",
+      "page": "https://commons.wikimedia.org/wiki/File%3AFalcon_9_-_Starlink_6-98_%28993230%29.webm",
+      "licence": "public-domain",
+      "licence_name": "Public domain",
+      "attribution": "U.S. Space Force, public domain",
+      "tags": [
+        "falcon",
+        "falcon-9",
+        "launch",
+        "liftoff",
+        "rocket",
+        "booster",
+        "starlink"
+      ],
+      "models": [],
+      "topics": [
+        "spacex",
+        "falcon"
+      ],
+      "bytes": 4827042
+    },
+    {
+      "id": "falcon-starlink-10-31",
+      "file": "falcon-starlink-10-31.webm",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Falcon_9_-_Starlink_10-31_Launch_%281007898%29.webm",
+      "page": "https://commons.wikimedia.org/wiki/File%3AFalcon_9_-_Starlink_10-31_Launch_%281007898%29.webm",
+      "licence": "public-domain",
+      "licence_name": "Public domain",
+      "attribution": "U.S. Space Force, public domain",
+      "tags": [
+        "falcon",
+        "falcon-9",
+        "launch",
+        "liftoff",
+        "rocket",
+        "booster",
+        "starlink"
+      ],
+      "models": [],
+      "topics": [
+        "spacex",
+        "falcon"
+      ],
+      "bytes": 5447264
+    },
+    {
+      "id": "falcon-starlink-6-110",
+      "file": "falcon-starlink-6-110.webm",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/46/Falcon_9_-_Starlink_6-110_Launch_%28998195%29.webm",
+      "page": "https://commons.wikimedia.org/wiki/File%3AFalcon_9_-_Starlink_6-110_Launch_%28998195%29.webm",
+      "licence": "public-domain",
+      "licence_name": "Public domain",
+      "attribution": "U.S. Space Force, public domain",
+      "tags": [
+        "falcon",
+        "falcon-9",
+        "launch",
+        "liftoff",
+        "rocket",
+        "booster",
+        "starlink"
+      ],
+      "models": [],
+      "topics": [
+        "spacex",
+        "falcon"
+      ],
+      "bytes": 3133913
+    },
+    {
+      "id": "falcon-bandwagon-3",
+      "file": "falcon-bandwagon-3.webm",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/89/Falcon_9_Bandwagon-3_Launch_%28960015%29.webm",
+      "page": "https://commons.wikimedia.org/wiki/File%3AFalcon_9_Bandwagon-3_Launch_%28960015%29.webm",
+      "licence": "public-domain",
+      "licence_name": "Public domain",
+      "attribution": "U.S. Space Force, public domain",
+      "tags": [
+        "falcon",
+        "falcon-9",
+        "launch",
+        "liftoff",
+        "rocket",
+        "booster"
+      ],
+      "models": [],
+      "topics": [
+        "spacex",
+        "falcon"
+      ],
+      "bytes": 4654447
+    },
+    {
+      "id": "falcon-saocom",
+      "file": "falcon-saocom.webm",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/61/Falcon_9_Flight_62_SAOCOM_1A.webm",
+      "page": "https://commons.wikimedia.org/wiki/File%3AFalcon_9_Flight_62_SAOCOM_1A.webm",
+      "licence": "public-domain",
+      "licence_name": "Public domain",
+      "attribution": "U.S. government, public domain",
+      "tags": [
+        "falcon",
+        "falcon-9",
+        "launch",
+        "liftoff",
+        "rocket",
+        "landing",
+        "booster"
+      ],
+      "models": [],
+      "topics": [
+        "spacex",
+        "falcon"
+      ],
+      "bytes": 13362357
+    },
+    {
+      "id": "falcon-formosat",
+      "file": "falcon-formosat.webm",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/86/SpaceX_Falcon_9_Formosat-5_Launch.webm",
+      "page": "https://commons.wikimedia.org/wiki/File%3ASpaceX_Falcon_9_Formosat-5_Launch.webm",
+      "licence": "public-domain",
+      "licence_name": "Public domain",
+      "attribution": "U.S. government, public domain",
+      "tags": [
+        "falcon",
+        "falcon-9",
+        "launch",
+        "liftoff",
+        "rocket",
+        "booster"
+      ],
+      "models": [],
+      "topics": [
+        "spacex",
+        "falcon"
+      ],
+      "bytes": 10879832
+    },
+    {
+      "id": "starship-ift4-goes",
+      "file": "starship-ift4-goes.webm",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Fourth_Launch_for_SpaceX%E2%80%99s_Starship_%28CIRA_2024-06-06_-_nolabels%29.webm",
+      "page": "https://commons.wikimedia.org/wiki/File%3AFourth_Launch_for_SpaceX%E2%80%99s_Starship_%28CIRA_2024-06-06_-_nolabels%29.webm",
+      "licence": "public-domain",
+      "licence_name": "Public domain",
+      "attribution": "CSU/CIRA and NOAA, public domain",
+      "tags": [
+        "starship",
+        "launch",
+        "liftoff",
+        "rocket"
+      ],
+      "models": [],
+      "topics": [
+        "spacex",
+        "starship"
+      ],
+      "bytes": 821431
+    },
+    {
+      "id": "starship-ift1-nasa",
+      "file": "starship-ift1-nasa.webm",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e9/SpaceX_Starship_IFT-1_NASA_WB-57_Cam_0.webm",
+      "page": "https://commons.wikimedia.org/wiki/File%3ASpaceX_Starship_IFT-1_NASA_WB-57_Cam_0.webm",
+      "licence": "public-domain",
+      "licence_name": "Public domain",
+      "attribution": "NASA, public domain",
+      "tags": [
+        "starship",
+        "launch",
+        "liftoff",
+        "rocket"
+      ],
+      "models": [],
+      "topics": [
+        "spacex",
+        "starship"
+      ],
+      "bytes": 22047067
+    },
+    {
+      "id": "starship-reentry",
+      "file": "starship-reentry.webm",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/1a/SpaceX_Starship_Ship_25_debris_re-entering_the_atmosphere.webm",
+      "page": "https://commons.wikimedia.org/wiki/File%3ASpaceX_Starship_Ship_25_debris_re-entering_the_atmosphere.webm",
+      "licence": "public-domain",
+      "licence_name": "Public domain",
+      "attribution": "NOAA, public domain",
+      "tags": [
+        "starship",
+        "reentry",
+        "rocket"
+      ],
+      "models": [],
+      "topics": [
+        "spacex",
+        "starship"
+      ],
+      "bytes": 7793749
+    },
+    {
+      "id": "starship-booster-landing",
+      "file": "starship-booster-landing.webm",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/12/Space_X_Starship_Flight_5_Booster_Landing.webm",
+      "page": "https://commons.wikimedia.org/wiki/File%3ASpace_X_Starship_Flight_5_Booster_Landing.webm",
+      "licence": "cc0",
+      "licence_name": "CC0",
+      "attribution": "CC0, Wikimedia Commons",
+      "tags": [
+        "starship",
+        "landing",
+        "booster",
+        "catch",
+        "rocket"
+      ],
+      "models": [],
+      "topics": [
+        "spacex",
+        "starship"
+      ],
+      "bytes": 3427328
+    }
+  ]
+}

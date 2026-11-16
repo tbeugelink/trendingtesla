@@ -711,10 +711,12 @@ article.narrow > h1{margin-left:14px}article.narrow .cform{margin-left:14px}
 @media (min-width:700px){.mgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (min-width:1100px){.mgrid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 .mcard{display:flex;flex-direction:column;align-items:flex-start;gap:10px;min-width:0;text-decoration:none;color:inherit}
+.mcard:focus,.mcard:focus-visible{outline:none}
 .mcard .mim{display:block;width:100%;border-radius:12px;overflow:hidden;border:1px solid var(--edge);background:#000;aspect-ratio:16/9}
 .mcard .mim img{width:100%;height:100%;object-fit:cover}
 .mcard .mname{font-weight:800;font-size:1.08rem;line-height:1.2}
-.mcard .btn{pointer-events:none}
+.mcard:hover .mim,.mcard:focus .mim,.mcard:focus-visible .mim{border-color:var(--blue);box-shadow:0 0 0 2px var(--blue)}
+.mcard:hover .mname,.mcard:focus .mname,.mcard:focus-visible .mname{text-decoration:underline;text-underline-offset:3px}
 .mhero{margin:0 0 16px;border-radius:12px;overflow:hidden;border:1px solid var(--edge);background:#000}
 .mhero img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
 .mintro{font-size:1.08rem;line-height:1.55;color:var(--muted);margin:0 0 18px;max-width:none}
@@ -2327,7 +2329,6 @@ def models_overview(lang):
     """Grid of the models the site covers. Not an article feed."""
     L = LANGS[lang]
     nav, ld = crumbs(lang, [(L["nav_models"], "category/models/")])
-    more = "Read more" if lang == "en" else "Lees meer"
     intro = ({
         "en": "Every Tesla the site covers. Open a model for the facts and the articles about it.",
         "nl": "Elke Tesla die de site volgt. Open een model voor de feiten en de artikelen erover.",
@@ -2341,8 +2342,7 @@ def models_overview(lang):
         img = (f'<img src="{esc(ph)}" alt="" width="800" height="450"{pri}{lazy} decoding="async">' if ph else "")
         cards.append(
             f'<a class="mcard" href="{url(lang, "model/" + key + "/")}">'
-            f'<span class="mim">{img}</span><span class="mname">{esc(m["name"])}</span>'
-            f'<span class="btn">{more}</span></a>')
+            f'<span class="mim">{img}</span><span class="mname">{esc(m["name"])}</span></a>')
     body = (f'{nav}<header class="hubhead"><h1>{esc(L["nav_models"])}</h1>'
             f'<p class="lead">{esc(intro)}</p></header><div class="mgrid">{"".join(cards)}</div>')
     return body, ld, intro

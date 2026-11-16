@@ -171,3 +171,8 @@
 /tesla-uk-september-registrations-nearly-double /tesla-europe-record-september-2026-acea-registrations-model-y-model-3/ 301
 /us-model-3-model-y-delivery-waits-slip-into-2027/ /tesla-pauses-model-3-premium-orders-canada-china-import-quota/ 301
 /us-model-3-model-y-delivery-waits-slip-into-2027 /tesla-pauses-model-3-premium-orders-canada-china-import-quota/ 301
+
+# One hop onto the https apex. Path redirects above keep winning first.
+http://trendingtesla.com/* https://trendingtesla.com/:splat 301
+http://www.trendingtesla.com/* https://trendingtesla.com/:splat 301
+https://www.trendingtesla.com/* https://trendingtesla.com/:splat 301

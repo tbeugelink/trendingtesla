@@ -361,8 +361,8 @@ def rate_photo(G, im, want, b):
 
 
 CLIP_SEC = 4  # seconds of one own-photo clip. About $0.10 a second at 720p.
-AI_CAP = 2  # own-photo clips per Short, so a month of Shorts stays inside the $15 cap
-AI_RESERVE = 0.45  # held back before each clip; a 4-second clip is about $0.40
+AI_CAP = 1  # the hook only. ~$0.40 a Short, about $12 of the $15 month cap at one Short a day
+AI_RESERVE = 0.45  # held back before the clip; a 4-second clip is about $0.40
 DEFAULT_MOTION = ("Subtle, natural motion that fits the scene (flames, smoke, steam, dust, water, light or the "
                   "vehicle moving the way it would); the camera pushes in slowly.")
 
@@ -461,14 +461,7 @@ def beat_blob(b):
 def footage_plan(beats):
     """How each beat is pictured: stock exterior, a moving clip of our own photo, or that photo held still."""
     import clips as CL
-    ai, blobs = [], [beat_blob(b) for b in beats]
-    for i, blob in enumerate(blobs):
-        if not CL.specific_tesla(blob):
-            continue
-        if i == 0 or re.search(r"door|falcon", blob, re.I):
-            ai.append(i)
-        if len(ai) >= AI_CAP:
-            break
+    ai = [0] if beats else []  # one clip: the hook. Every later beat stays a still or stock.
     lines = []
     for i, b in enumerate(beats):
         names = []
@@ -489,14 +482,13 @@ def footage_plan(beats):
 
 
 def own_photo_clips(beats, shots, tmp, slug, report, ai_beats):
-    """Turn up to AI_CAP of our own photos into short clips. A preview does not call the paid model."""
+    """Turn the hook photo into one short clip. STORY_CLIP=0 or a local silent preview skips the paid call.
+    A preview_slug render does call it, so the preview matches the real Short."""
     if not ai_beats:
         return
-    cheap = (os.environ.get("STORY_CLIP", "1") == "0" or os.environ.get("STORY_PREVIEW") == "1"
-             or not os.environ.get("GEMINI_API_KEY"))
-    if cheap:
-        report.append(f"own-photo clips not generated on this run. A full render makes {len(ai_beats)} "
-                      f"({CLIP_SEC}s each, about ${AI_RESERVE * len(ai_beats):.2f}, month cap $15).")
+    if os.environ.get("STORY_CLIP", "1") == "0" or os.environ.get("STORY_PREVIEW") == "1" or not os.environ.get("GEMINI_API_KEY"):
+        report.append(f"own-photo clip not generated (switch off or no key). A render with the key makes the hook "
+                      f"({CLIP_SEC}s, about ${AI_RESERVE:.2f}, month cap $15).")
         return
     import clips as CL
     sys.path.insert(0, str(S.ROOT / "tools"))
@@ -1108,8 +1100,8 @@ def main():
     plan, ai_beats = footage_plan(beats)
     report.extend(plan)
     own_photo_clips(beats, shots, tmp, slug, report, ai_beats)
-    # the old single hook clip is only for a story that did not already put our own moving photo on the opening shot
-    clip = None if preview or shots[0].get("footage") else hook_clip(a, beats, shots, tmp, slug, report)
+    # one paid clip only: the own-photo hook above. Do not also build the older hook clip.
+    clip = None if (preview or shots[0].get("footage") or 0 in ai_beats) else hook_clip(a, beats, shots, tmp, slug, report)
     for i, b in enumerate(beats):
         if b["_dur"] > 3.0 and len({x["img"] for x in shots if x["beat"] == i}) < 2:
             report.append(f"beat {i + 1}: {b['_dur']:.1f} s with only 1 photo (rule: switch photo after 3 s)")

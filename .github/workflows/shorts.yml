@@ -124,8 +124,7 @@ jobs:
         run: |
           if [ -z "$ELEVENLABS_API_KEY" ]; then echo "::error::Secret ELEVENLABS_API_KEY is empty or missing"; fi
           if [ -z "$ELEVENLABS_VOICE_ID" ]; then echo "::error::Variable ELEVENLABS_VOICE_ID is empty or missing"; fi
-          # A preview measures real footage. Skip the paid AI hook clip so the job finishes inside the limit.
-          if [ "${{ steps.find.outputs.preview }}" = "1" ]; then export STORY_CLIP=0; fi
+          # A preview renders the same one hook clip as a real Short (about $0.40). Upload stays off.
           fail=0
           for s in ${{ steps.find.outputs.slugs }}; do
             for l in ${{ steps.find.outputs.langs }}; do

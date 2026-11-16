@@ -33,8 +33,9 @@ content/monetization.json and stay hidden while those values are empty. The opti
 footer newsletter form uses that file too and stays hidden while its action
 URL is empty. Article pages show a compact bar that posts to the MailerLite form
 (double opt-in). The right rail uses that same form in place of the topic list.
-/newsletter/ (Dutch: /nl/nieuwsbrief/) keeps the full embed and leaves that rail
-slot empty. Dutch pages keep Dutch headings around both.
+That rail form is hidden while the rail stacks under the story (max-width 900px),
+so a phone keeps only the bar. /newsletter/ (Dutch: /nl/nieuwsbrief/) keeps the
+full embed and leaves that rail slot empty. Dutch pages keep Dutch headings.
 The "Handy for your Tesla" box is separate: content/affiliate.json holds amazon_nl_tag,
 amazon_com_tag and a search-link catalog. The live account is an amazon.nl Associates tag,
 so both English and Dutch pages link to amazon.nl and use amazon_nl_tag. A .com tag would
@@ -989,7 +990,7 @@ header.hb .pnav>.is-parked{display:none}
 .sheet:has(.arel)>.sheet-rail{display:contents}
 .sheet:has(.arel) .arel{grid-area:side}
 .sheet:has(.arel) .pv-side:not(.arel){grid-area:rest}
-.nlside-mhide{display:none}
+.nlside{display:none}
 }
 """
 
@@ -2605,16 +2606,15 @@ def ml_bar(lang):
     )
 
 
-def rail_signup(lang, hide_mobile=False, script=False):
+def rail_signup(lang, script=False):
     """Rail block that posts with the same handler as the article bar.
-    hide_mobile drops it where a phone would stack it against that bar."""
+    CSS hides it while the rail stacks under the story."""
     L = LANGS[lang]
     fid = f"nlside-email-{lang}"
-    hide = " nlside-mhide" if hide_mobile else ""
     note = (f'<p class="nlnote">{esc(L["bar_fine"])} '
             f'<a href="{url(lang, "privacy/")}">{esc(L["privacy"])}</a>.</p>')
     block = (
-        f'<section class="nlside{hide}">'
+        f'<section class="nlside">'
         f'<h2>{esc(L["signup"])}</h2>'
         f'<form class="nlbar-form nlside-form" {ml_form_attrs(lang)}>'
         f'<label class="nlside-lead" for="{fid}">{esc(L["bar_h"])}</label>'
@@ -3149,18 +3149,9 @@ def page_side(arts, lang, kind="home", current=None, skip=None, tail="", signup=
     news = newsletter(lang, "side")
     slot = ad_html("sidebar", lang)
     if signup:
-        # On a phone the rail stacks under the story. Hide this form only when
-        # it would sit directly against the article bar, with nothing between them.
-        has_bar = bool(tail)
-        before = any(parts)
-        after = bool(news or slot)
-        if has_bar and related_html and not before:
-            hide_mobile = True
-        elif has_bar and not related_html and not after:
-            hide_mobile = True
-        else:
-            hide_mobile = False
-        parts.append(rail_signup(lang, hide_mobile, script=not has_bar))
+        # The rail form is in the HTML for desktop. At the stack breakpoint
+        # CSS hides .nlside, so a phone keeps only the article bar.
+        parts.append(rail_signup(lang, script=not tail))
     if news:
         parts.append(news)
     if slot:

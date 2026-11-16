@@ -1,7 +1,7 @@
 {
-  "_help": "Leave every value empty until the account exists. Empty values hide the feature: no ad markup, no ads.txt, no newsletter form, and no affiliate tag on product links. When a publisher id and a slot id are both set, that slot is reserved (no layout shift) and the AdSense script loads only after the visitor accepts cookies. Amazon tags: en is the amazon.com associate tag, nl is the amazon.nl associate tag. Newsletter action is the full https URL of the form endpoint; email_field is the input name the provider expects.",
+  "_help": "Empty values hide that feature: no ad markup, no ads.txt, no newsletter form, and no affiliate tag on product links. A publisher id puts the AdSense script in the head of every page and writes public/ads.txt. Leave slot ids empty so no manual ad unit is reserved and the layout does not change. Auto ads are switched on in the AdSense account, not here. The site cookie banner only gates anonymous visit counts; it does not load or block the AdSense script. In the EEA, advertising consent is Google's Privacy & messaging European regulations message, enabled in the AdSense account. Amazon tags: en is the amazon.com associate tag, nl is the amazon.nl associate tag. Newsletter action is the full https URL of the form endpoint; email_field is the input name the provider expects.",
   "adsense": {
-    "publisher_id": "",
+    "publisher_id": "ca-pub-2747285610074619",
     "slots": {
       "after_intro": "",
       "mid_article": "",

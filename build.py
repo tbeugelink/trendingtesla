@@ -3570,14 +3570,9 @@ def write_redirects():
         lines.append(f"{frm} {to} 301")
         if frm.endswith("/") and frm != "/":
             lines.append(f"{frm[:-1]} {to} 301")
-    # Host and scheme. The worker applies the same hop before static assets run.
-    lines += [
-        "",
-        "# One hop onto the https apex. Path redirects above keep winning first.",
-        "http://trendingtesla.com/* https://trendingtesla.com/:splat 301",
-        "http://www.trendingtesla.com/* https://trendingtesla.com/:splat 301",
-        "https://www.trendingtesla.com/* https://trendingtesla.com/:splat 301",
-    ]
+    # Host and scheme redirects are not allowed here. Workers static assets only
+    # accept a path as the source (2,000 static rules, 100 dynamic). www, http,
+    # and the trailing slash are 301s in worker/index.js.
     (OUT / "_redirects").write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 

@@ -1,0 +1,98 @@
+{
+  "_help": "Amazon Associates infrastructure. amazon_nl_tag is the amazon.nl Associates tag. Both English and Dutch pages link to amazon.nl with that tag, because the account is registered on amazon.nl and the tag is not credited on amazon.com. amazon_com_tag stays empty until a separate amazon.com account exists; it is not added to links. An empty amazon_nl_tag hides the accessory box and the Amazon section on About and Privacy. Every href is an Amazon.nl search URL (the k parameter). Do not put an ASIN, a /dp/ link, a price or a rating here. topics decide which articles show the row: charging (charging articles, plus a model article that is about a charge adapter), owner (buying and owning a passenger Tesla), dashcam (Sentry Mode), tyres (tyres, winter, maintenance).",
+  "amazon_com_tag": "",
+  "amazon_nl_tag": "trendingtesla-21",
+  "catalog": [
+    {
+      "id": "charging-cable",
+      "topics": ["charging"],
+      "name": {"en": "Type 2 charging cable", "nl": "Type 2-laadkabel"},
+      "note": {
+        "en": "For home and public AC charging.",
+        "nl": "Voor thuis en voor publieke AC-laders."
+      },
+      "search": {
+        "en": "Tesla Type 2 charging cable",
+        "nl": "Tesla Type 2 laadkabel"
+      }
+    },
+    {
+      "id": "wall-adapter",
+      "topics": ["charging"],
+      "name": {"en": "Wall charger adapter", "nl": "Laadadapter"},
+      "note": {
+        "en": "A plug adapter for the mobile connector.",
+        "nl": "Voor een ander stopcontact dan de stekker van je kabel."
+      },
+      "search": {
+        "en": "Tesla mobile connector adapter",
+        "nl": "Tesla mobiele connector adapter"
+      }
+    },
+    {
+      "id": "floor-mats",
+      "topics": ["owner"],
+      "name": {"en": "Floor mats", "nl": "Vloermatten"},
+      "note": {
+        "en": "Mats cut for a Tesla cabin.",
+        "nl": "Matten die in een Tesla-interieur passen."
+      },
+      "search": {
+        "en": "Tesla floor mats",
+        "nl": "Tesla vloermatten"
+      }
+    },
+    {
+      "id": "screen-protector",
+      "topics": ["owner"],
+      "name": {"en": "Screen protector", "nl": "Screenprotector"},
+      "note": {
+        "en": "A glass cover for the center screen.",
+        "nl": "Gehard glas voor het middenscherm."
+      },
+      "search": {
+        "en": "Tesla screen protector",
+        "nl": "Tesla screenprotector"
+      }
+    },
+    {
+      "id": "console-organizer",
+      "topics": ["owner"],
+      "name": {"en": "Center console organizer", "nl": "Middenconsole-organizer"},
+      "note": {
+        "en": "A tray that fits the center console.",
+        "nl": "Een bakje voor de middenconsole."
+      },
+      "search": {
+        "en": "Tesla center console organizer",
+        "nl": "Tesla middenconsole organizer"
+      }
+    },
+    {
+      "id": "dashcam",
+      "topics": ["owner", "dashcam"],
+      "name": {"en": "Dashcam", "nl": "Dashcam"},
+      "note": {
+        "en": "An extra camera for the windshield.",
+        "nl": "Een extra camera voor de voorruit."
+      },
+      "search": {
+        "en": "Tesla dashcam",
+        "nl": "Tesla dashcam"
+      }
+    },
+    {
+      "id": "tire-inflator",
+      "topics": ["tyres"],
+      "name": {"en": "Tire inflator", "nl": "Bandenpomp"},
+      "note": {
+        "en": "A compact pump for the tyres.",
+        "nl": "Een compacte pomp voor de banden."
+      },
+      "search": {
+        "en": "Tesla tire inflator",
+        "nl": "Tesla bandenpomp"
+      }
+    }
+  ]
+}

@@ -968,14 +968,19 @@ header.hb .pnav>.is-parked{display:none}
 .pv-c .toc{position:static}
 .pv-row.hasth{grid-template-columns:46px 52px minmax(0,1fr) 40px}
 }
-.sheet:has(.arel){grid-template-areas:"main side" "main rest" "bar bar"}
+/* Related and the rest of the sidebar share one rail. The article must not
+   span two rows of that rail: auto rows then grow with the story and open a gap
+   between Related and Start here. The bar stays a full-width row underneath. */
+.sheet:has(.arel){grid-template-areas:"main rail" "bar bar";align-items:start}
 .sheet:has(.arel)>.sheet-main{grid-area:main}
-.sheet:has(.arel)>.arel{grid-area:side}
-.sheet:has(.arel)>.pv-side:not(.arel){grid-area:rest}
+.sheet:has(.arel)>.sheet-rail{grid-area:rail;display:flex;flex-direction:column;justify-content:flex-start;align-items:stretch;align-self:start;min-width:0;gap:0}
 .sheet:has(.arel)>.nlbar{grid-area:bar}
 .sheet>.nlbar{grid-column:1 / -1}
 @media (max-width:900px){
 .sheet:has(.arel){grid-template-columns:1fr;grid-template-areas:"main" "side" "bar" "rest"}
+.sheet:has(.arel)>.sheet-rail{display:contents}
+.sheet:has(.arel) .arel{grid-area:side}
+.sheet:has(.arel) .pv-side:not(.arel){grid-area:rest}
 }
 """
 
@@ -3095,8 +3100,8 @@ def page_side(arts, lang, kind="home", current=None, skip=None, tail=""):
     if kind == "article":
         if related_items:
             block = _side_section(C["related"], _side_ol(lang, related_items))
-            # With a signup bar, related is its own column piece so the bar can sit
-            # under it on a phone and across the full row on a desktop.
+            # Related stays its own piece so the bar can sit under it on a phone.
+            # Desktop wraps both sidebar pieces in one rail so they stack.
             if tail:
                 related_html = f'<aside class="pv-side arel">{block}</aside>'
             else:
@@ -3140,7 +3145,7 @@ def page_side(arts, lang, kind="home", current=None, skip=None, tail=""):
     aside = f'<aside class="pv-side">{"".join(parts)}</aside>' if parts else ""
     if tail and kind == "article":
         if related_html:
-            return f"{related_html}{tail}{aside}"
+            return f'<div class="sheet-rail">{related_html}{aside}</div>{tail}'
         return f"{aside}{tail}"
     return aside
 

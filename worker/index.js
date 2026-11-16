@@ -127,11 +127,8 @@ function withSlash(pathname) {
   return needsSlash(pathname) ? pathname + "/" : pathname;
 }
 
-const HSTS = "max-age=31536000; includeSubDomains";
-
-function redirect301(url, hsts) {
+function redirect301(url) {
   const headers = { Location: url, "Cache-Control": "public, max-age=3600" };
-  if (hsts) headers["Strict-Transport-Security"] = HSTS;
   return new Response(null, { status: 301, headers });
 }
 
@@ -146,7 +143,7 @@ function slashTo301(response, request) {
   const from = new URL(request.url);
   const bare = (p) => (p.length > 1 && p.endsWith("/") ? p.slice(0, -1) : p);
   if (target.origin === from.origin && bare(target.pathname) === bare(from.pathname) && target.pathname !== from.pathname) {
-    return redirect301(target.toString(), false);
+    return redirect301(target.toString());
   }
   return response;
 }
@@ -168,10 +165,10 @@ export default {
       const dest = new URL(moved || slashed, origin);
       dest.search = u.search;
       const visitor = onSite ? `${scheme}://${host}${u.pathname}${u.search}` : `${u.origin}${u.pathname}${u.search}`;
-      if (visitor !== dest.toString()) return redirect301(dest.toString(), onSite);
+      if (visitor !== dest.toString()) return redirect301(dest.toString());
     } else if (onSite && (host !== "trendingtesla.com" || scheme !== "https")) {
       const dest = new URL(u.pathname + u.search, "https://trendingtesla.com");
-      return redirect301(dest.toString(), true);
+      return redirect301(dest.toString());
     }
     // old WordPress addresses from the domain's previous site (?p=1, ?feed=rss2, ?s=..., ?author=1) showed the
     // home page and were reported as duplicates by Search Console: tell crawlers they are gone for good
@@ -196,7 +193,7 @@ export default {
       return json({ error: "method" }, 405);
     }
     const assets = slashTo301(await env.ASSETS.fetch(request), request);
-    return withCache(u.pathname, assets, onSite);
+    return withCache(u.pathname, assets);
   },
 };
 
@@ -211,10 +208,9 @@ function cacheControl(pathname) {
   return LONG_FILE.test(pathname) ? LONG_CACHE : SHORT_CACHE;
 }
 
-function withCache(pathname, response, hsts) {
+function withCache(pathname, response) {
   const headers = new Headers(response.headers);
   headers.set("Cache-Control", cacheControl(pathname));
-  if (hsts) headers.set("Strict-Transport-Security", HSTS);
   return new Response(response.body, {
     status: response.status,
     statusText: response.statusText,

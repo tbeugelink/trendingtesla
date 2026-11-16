@@ -856,18 +856,17 @@ header.hb .pnav>.is-parked{display:none}
 .pv-kicker{font-size:.72rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--blue)}
 .pv-lead h1,.pv-lead h2{font-size:clamp(1.25rem,2.2vw,1.7rem);line-height:1.18;margin:4px 0 8px}
 .pv-lead p{color:var(--muted);font-size:.92rem;line-height:1.45;margin:0}
-.pv-day{font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);margin:14px 0 4px;padding-top:8px;border-top:1px solid var(--border)}
-.pv-row{display:grid;grid-template-columns:52px minmax(0,1fr) auto 46px;gap:8px;align-items:center;padding:7px 0;border-bottom:1px solid #242424;text-decoration:none;color:inherit}
-.pv-row.hasth{grid-template-columns:52px 96px minmax(0,1fr) auto 46px}
+.pv-day{font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);margin:8px 0 2px;padding-top:6px;border-top:1px solid var(--border)}
+.pv-row{display:grid;grid-template-columns:52px minmax(0,1fr) 46px;gap:8px;align-items:center;padding:3px 0;border-bottom:1px solid #242424;text-decoration:none;color:inherit}
+.pv-row.hasth{grid-template-columns:52px 64px minmax(0,1fr) 46px}
 .pv-row time{font-variant-numeric:tabular-nums;font-size:.8rem;font-weight:800;color:var(--dim)}
 .pv-th{position:relative;container-type:inline-size;border-radius:6px;overflow:hidden;border:1px solid var(--edge);background:#000}
 .pv-th img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
 .pv-hl{min-width:0}
-.pv-hl b{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:.95rem;line-height:1.28;font-weight:700;color:var(--blue)}
-.pv-cat{font-style:normal;font-size:.72rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:var(--blue);white-space:nowrap}
-.pv-min{justify-self:end;min-width:42px;text-align:center;border:1px solid var(--border2);border-radius:8px;padding:3px 0 2px;line-height:1}
-.pv-min b{display:block;color:var(--red);font-size:.95rem}
-.pv-min small{color:var(--dim);font-size:.62rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase}
+.pv-hl b{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:.95rem;line-height:1.2;font-weight:400;color:var(--blue)}
+.pv-min{justify-self:end;min-width:42px;text-align:center;border:1px solid var(--border2);border-radius:8px;padding:1px 0;line-height:1}
+.pv-min b{display:block;color:var(--red);font-size:.85rem;line-height:1}
+.pv-min small{display:block;color:var(--dim);font-size:.58rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;line-height:1}
 .pv-row:hover .pv-hl b,.pv-row:focus-visible .pv-hl b{color:#fff;text-decoration:underline;text-underline-offset:2px}
 .pv-side h2{font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#fff;border-top:3px solid var(--red);padding-top:8px;margin:0 0 8px}
 .pv-side section{margin:0 0 18px}
@@ -926,7 +925,7 @@ header.hb .pnav>.is-parked{display:none}
 .pv-grid,.pv-art,.pv-art.pv-c,.sheet{grid-template-columns:1fr}
 .pv-lead{grid-template-columns:1fr}
 .pv-c .toc{position:static}
-.pv-row.hasth{grid-template-columns:46px 72px minmax(0,1fr) auto 40px}
+.pv-row.hasth{grid-template-columns:46px 52px minmax(0,1fr) 40px}
 }
 """
 
@@ -2731,18 +2730,16 @@ def pv_banner(lang, variant, blurb):
 
 def pv_row(a, lang, thumb=False):
     t = a[lang]
-    c = CATEGORIES[a["category"]]
     href = url(lang, a["slug"] + "/")
     im = ""
     if thumb:
-        im = (f'<span class="pv-th">{resp_img(site_img(a), "", "(max-width: 700px) 28vw, 96px", width=320, height=180)}'
+        im = (f'<span class="pv-th">{resp_img(site_img(a), "", "(max-width: 700px) 22vw, 64px", width=256, height=144)}'
               f'{ovl(a, lang)}</span>')
     mins = read_time(a, lang)
     label = f'{mins} {LANGS[lang]["min"]}'
     return (f'<a class="pv-row{" hasth" if thumb else ""}" href="{href}" title="{esc(t["title"])}">'
             f'<time datetime="{published(a).isoformat()}">{published(a).strftime("%H:%M")}</time>{im}'
             f'<span class="pv-hl"><b>{esc(t["title"])}</b></span>'
-            f'<i class="pv-cat">{esc(c.get("tag", c[lang]))}</i>'
             f'<span class="pv-min" title="{esc(label)}"><b>{mins}</b><small>min</small></span></a>')
 
 

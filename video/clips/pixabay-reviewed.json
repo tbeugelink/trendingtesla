@@ -1,0 +1,63 @@
+{
+  "note": "Stock search is only for a generic beat (charging, factory, highway, rocket, solar, robot), and only an exterior. A beat about a particular Tesla uses the site's own photos instead. Reviewed ids are tried first and skip the vision check. deny lists clips already watched and rejected.",
+  "deny": [199545, 218440, 1651, 122, 133699, 133694, 133703],
+  "block": ["food", "grill", "meat", "barbecue", "bbq", "steak", "burger", "kitchen", "cooking", "wind", "turbine", "office", "desk", "laptop", "animal", "dog", "cat", "bird", "nikola", "plasma", "coil", "lightning", "thunder", "dashboard", "steering", "interior", "cockpit", "cabin", "driver"],
+  "topics": [
+    {
+      "id": "rocket",
+      "queries": ["rocket launch"],
+      "need": ["rocket", "launch", "spacecraft", "liftoff"],
+      "subject": "a rocket lifting off or flying, large in the frame",
+      "when": {"regex": "starship|\\bfalcon\\b|rocket|liftoff|\\blaunch\\b", "not_regex": "wing"},
+      "ids": []
+    },
+    {
+      "id": "charging",
+      "queries": ["car charging", "ev charging"],
+      "need": ["charging", "charger", "car", "vehicle"],
+      "subject": "the outside of a car plugged into a charger, or a charging station beside a car. Not a view from inside a car",
+      "when": {"regex": "supercharg|charger|charging"},
+      "ids": []
+    },
+    {
+      "id": "factory",
+      "queries": ["car factory"],
+      "need": ["factory", "assembly", "manufacturing", "car"],
+      "subject": "the outside of a car factory or assembly plant, the building large in the frame. Not a car interior and not another company's badge",
+      "when": {"regex": "factory|gigafactory|assembly"},
+      "ids": []
+    },
+    {
+      "id": "robot",
+      "queries": ["humanoid robot"],
+      "need": ["robot", "humanoid"],
+      "subject": "a humanoid robot with a head, torso and legs",
+      "when": {"regex": "optimus|humanoid"},
+      "ids": []
+    },
+    {
+      "id": "fsd",
+      "queries": ["self driving car"],
+      "need": ["car", "vehicle", "driving", "autonomous"],
+      "subject": "a car seen from outside, driving on a road. Not a dashboard or a view from the driver seat",
+      "when": {"regex": "\\bfsd\\b|self[- ]driv|autopilot|robotaxi", "not_regex": "model [sx3y]|cybertruck|cybercab"},
+      "ids": []
+    },
+    {
+      "id": "highway",
+      "queries": ["car driving road", "highway traffic aerial"],
+      "need": ["car", "vehicle", "road", "highway", "traffic"],
+      "subject": "a road or highway seen from outside, with cars large enough to recognise. Not a view from the driver seat",
+      "when": {"regex": "\\bhighway\\b|\\bon the road\\b", "not_regex": "model [sx3y]|\\bsuv\\b|\\bdoor\\b|cybertruck"},
+      "ids": []
+    },
+    {
+      "id": "solar",
+      "queries": ["solar panels"],
+      "need": ["solar", "panel", "energy"],
+      "subject": "solar panels, large in the frame, outdoors",
+      "when": {"regex": "solar|megapack|powerwall"},
+      "ids": []
+    }
+  ]
+}

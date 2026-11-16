@@ -19,6 +19,10 @@ on:
         description: "Upload the Short to YouTube (yes/no)"
         required: false
         default: "no"
+      preview_slug:
+        description: "Render this Short as a preview artifact only. Does not upload or edit content/shorts.json."
+        required: false
+        default: ""
 
 permissions:
   contents: write
@@ -38,7 +42,12 @@ jobs:
       - name: Find articles
         id: find
         run: |
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ github.event.inputs.slug }}" = "queue" ]; then
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ -n "${{ github.event.inputs.preview_slug }}" ]; then
+            echo "slugs=${{ github.event.inputs.preview_slug }}" >> "$GITHUB_OUTPUT"
+            echo "langs=en" >> "$GITHUB_OUTPUT"
+            echo "preview=1" >> "$GITHUB_OUTPUT"
+            echo "story=${{ github.event.inputs.preview_slug }}" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ github.event.inputs.slug }}" = "queue" ]; then
             # started by the watchdog: make what video/queue.txt asks for (same as a push of that file)
             q=$(grep -v '^#' video/queue.txt | head -1)
             echo "slugs=$(echo "$q" | awk '{print $1}')" >> "$GITHUB_OUTPUT"
@@ -109,10 +118,13 @@ jobs:
           ELEVENLABS_VOICE_ID_NL: ${{ vars.ELEVENLABS_VOICE_ID_NL }}
           ELEVENLABS_VOICE_ID_3: ${{ vars.ELEVENLABS_VOICE_ID_3 }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
           STORY_VOICE: "1"
+          PYTHONUNBUFFERED: "1"
         run: |
           if [ -z "$ELEVENLABS_API_KEY" ]; then echo "::error::Secret ELEVENLABS_API_KEY is empty or missing"; fi
           if [ -z "$ELEVENLABS_VOICE_ID" ]; then echo "::error::Variable ELEVENLABS_VOICE_ID is empty or missing"; fi
+          # A preview renders the same one hook clip as a real Short (about $0.40). Upload stays off.
           fail=0
           for s in ${{ steps.find.outputs.slugs }}; do
             for l in ${{ steps.find.outputs.langs }}; do
@@ -120,12 +132,12 @@ jobs:
               if [ "$l" = "en" ] && [ "${{ steps.find.outputs.full }}" != "1" ] && echo " ${{ steps.find.outputs.story }} " | grep -q " $s "; then
                 script=video/story.py; fmt=""; touch "video/out/$s-en-short.story" 2>/dev/null || { mkdir -p video/out; touch "video/out/$s-en-short.story"; }
               fi
-              python3 $script "$s" "$l" $fmt 2> err.txt || { fail=1; echo "::error::$script $s $l failed: $(tail -c 600 err.txt | tr '\n' ' ')"; }
+              python3 -u $script "$s" "$l" $fmt 2> err.txt || { fail=1; echo "::error::$script $s $l failed: $(tail -c 600 err.txt | tr '\n' ' ')"; }
             done
           done
           exit $fail
       - name: Upload Shorts to YouTube
-        if: steps.find.outputs.slugs != '' && steps.find.outputs.full != '1' && (steps.find.outputs.queue != '1' || steps.find.outputs.qstory == '1') && (github.event_name != 'workflow_dispatch' || github.event.inputs.upload == 'yes' || steps.find.outputs.qstory == '1') && steps.find.outputs.paused != '1'
+        if: steps.find.outputs.slugs != '' && steps.find.outputs.preview != '1' && steps.find.outputs.full != '1' && (steps.find.outputs.queue != '1' || steps.find.outputs.qstory == '1') && (github.event_name != 'workflow_dispatch' || github.event.inputs.upload == 'yes' || steps.find.outputs.qstory == '1') && steps.find.outputs.paused != '1'
         continue-on-error: true
         env:
           YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
@@ -170,14 +182,14 @@ jobs:
           done
           echo "### Story Short(s) published: $(cat $RUNNER_TEMP/sr)." >> "$GITHUB_STEP_SUMMARY"
       - name: Keep story Shorts for the post after review
-        if: steps.find.outputs.story != '' && steps.find.outputs.paused != '1'
+        if: steps.find.outputs.story != '' && steps.find.outputs.preview != '1' && steps.find.outputs.paused != '1'
         uses: actions/upload-artifact@v4
         with:
           name: story-${{ steps.find.outputs.story }}
           path: video/out/*-en-short.mp4
           retention-days: 14
       - name: Post Shorts to TikTok, Instagram and Facebook (via Buffer)
-        if: steps.find.outputs.slugs != '' && steps.find.outputs.full != '1' && steps.find.outputs.queue != '1' && github.event_name != 'workflow_dispatch' && steps.find.outputs.paused != '1'
+        if: steps.find.outputs.slugs != '' && steps.find.outputs.preview != '1' && steps.find.outputs.full != '1' && steps.find.outputs.queue != '1' && github.event_name != 'workflow_dispatch' && steps.find.outputs.paused != '1'
         continue-on-error: true
         env:
           GH_TOKEN: ${{ github.token }}
@@ -196,6 +208,7 @@ jobs:
           YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
           YT_PRIVACY: ${{ vars.YT_PRIVACY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
         run: |
           fail=0
           for s in ${{ steps.find.outputs.longs }}; do
@@ -204,7 +217,7 @@ jobs:
           done
           exit $fail
       - name: Upload requested queue video to YouTube
-        if: steps.find.outputs.queue == '1' && steps.find.outputs.upload == '1' && steps.find.outputs.qstory != '1'
+        if: steps.find.outputs.queue == '1' && steps.find.outputs.preview != '1' && steps.find.outputs.upload == '1' && steps.find.outputs.qstory != '1'
         env:
           YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
           YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
@@ -213,7 +226,7 @@ jobs:
         run: |
           for f in video/out/*.mp4; do [ -f "$f" ] && python3 video/upload.py "$f" "$(basename "$f" | sed -E 's/.*-(en|nl)-(full|short)\.mp4/\1/')"; done
       - name: Put the new videos on the site
-        if: always() && steps.find.outputs.slugs != '' && steps.find.outputs.paused != '1'
+        if: always() && steps.find.outputs.slugs != '' && steps.find.outputs.preview != '1' && steps.find.outputs.paused != '1'
         run: |
           ls video/out/*-short-report.txt >/dev/null 2>&1 || { [ -z "$(git status --porcelain content ops/short-uploads.json)" ] && exit 0; }
           git config user.name "TrendingTesla bot"
@@ -237,8 +250,17 @@ jobs:
             sleep $((10 + RANDOM % 20))
           done
           exit 1
+      - name: Upload preview Short
+        if: always() && steps.find.outputs.preview == '1'
+        uses: actions/upload-artifact@v5
+        with:
+          name: preview-${{ steps.find.outputs.slugs }}
+          path: |
+            video/out/*.mp4
+            video/out/*.txt
+          retention-days: 14
       - name: Upload videos
-        if: always() && steps.find.outputs.slugs != '' && steps.find.outputs.paused != '1'
+        if: always() && steps.find.outputs.slugs != '' && steps.find.outputs.preview != '1' && steps.find.outputs.paused != '1'
         uses: actions/upload-artifact@v5
         with:
           name: shorts-${{ github.run_number }}

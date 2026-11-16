@@ -473,9 +473,18 @@ def main():
     else:
         audio = None
     credits = add_real_photos(a, pieces) if os.environ.get("GEMINI_API_KEY") else {}
-    out = render(a, lang, pieces, segs, place, words, total, end_start, audio)
+    out, footage = render(a, lang, pieces, segs, place, words, total, end_start, audio)
     print(f"::notice::Video {out.name} ready after {time.time() - T0:.0f}s ({total / 60:.1f} min)")
     meta(a, lang, pieces, place, out)
+    import clips as CL
+    CL.record(a["slug"], footage, S.ROOT)
+    txt = out.with_suffix(".txt")
+    if txt.exists():
+        lines = CL.credit_lines(footage["clips"])
+        extra = f"\n\nReal footage: {footage['share'] * 100:.0f}% of screen time."
+        if lines:
+            extra += "\n\nFootage: " + "; ".join(f"{c['credit']} ({c['page']})" for c in lines)
+        txt.write_text(txt.read_text(encoding="utf-8").rstrip() + extra + "\n", encoding="utf-8")
     if credits:  # credit the real photos in the YouTube description
         txt = out.with_suffix(".txt")
         if txt.exists():
@@ -640,6 +649,30 @@ def render(a, lang, pieces, segs, place, words, total, end_start, audio):
         scenes[0] = (0.0,) + tuple(scenes[0][1:])
     nsc = len(scenes)
     starts = [x[0] for x in scenes]
+    import clips as CL
+    clip_models = list(a.get("models") or [])
+    clip_used = {}
+    clip_held = []
+    scene_clip = {}
+    for i, (st, _path, _fr) in enumerate(scenes):
+        end = starts[i + 1] if i + 1 < nsc else total
+        said = " ".join(txt for j, (kind, txt, _b) in enumerate(pieces) if bounds[j] <= st < bounds[j + 1])
+        chosen = CL.choose(said, clip_models, a.get("category") or "", clip_used, H > W, clip_held)
+        if not chosen:
+            continue
+        try:
+            path = CL.ensure(chosen)
+            dur = CL.duration(path)
+        except Exception as e:
+            print(f"::warning::real clip {chosen['id']} skipped: {e}")
+            continue
+        n = clip_used.get(chosen["id"], 0)
+        clip_used[chosen["id"]] = n + 1
+        span = min(end - st, SCENE_MAX, max(0.4, dur - 0.2))
+        start = (n * span) % max(0.1, dur - span)
+        scene_clip[i] = {"id": chosen["id"], "path": str(path), "start": start,
+                         "credit": chosen["attribution"], "page": chosen["page"], "licence": chosen["licence"]}
+    print(f"::notice::{CL.gate_line()}")
 
     shade = Image.new("L", (1, H))
     for y in range(H):
@@ -781,10 +814,25 @@ def render(a, lang, pieces, segs, place, words, total, end_start, audio):
 
     black = Image.new("RGB", (W, H))
 
+    live = {"k": None, "reader": None}
+
     def picture(t):
         k = max((i for i, s0 in enumerate(starts) if s0 <= t), default=0)
+        info = scene_clip.get(k)
+        if info:
+            if live["k"] != k:
+                if live["reader"]:
+                    live["reader"].close()
+                live["reader"] = CL.Reader(info["path"], W, H, FPS, info["start"])
+                live["k"] = k
+            fr = live["reader"].next() or shot(k, t)
+            return Image.composite(black, fr, shade)  # hard cut: no dissolve on real footage
+        if live["reader"]:
+            live["reader"].close()
+            live["reader"] = None
+            live["k"] = None
         fr = shot(k, t)
-        if k > 0 and t - starts[k] < SCENE_XFADE:
+        if k > 0 and t - starts[k] < SCENE_XFADE and not scene_clip.get(k - 1):
             fr = Image.blend(shot(k - 1, t), fr, S.ease((t - starts[k]) / SCENE_XFADE))
         return Image.composite(black, fr, shade)
 
@@ -832,10 +880,20 @@ def render(a, lang, pieces, segs, place, words, total, end_start, audio):
         proc.stdin.close()
     except BrokenPipeError:
         pass
+    if live["reader"]:
+        live["reader"].close()
     if proc.wait() != 0:
         raise SystemExit(f"ffmpeg failed with code {proc.returncode}")
     check_brand(out, o_brand)
-    return out
+    real = 0.0
+    chosen = []
+    for i, info in scene_clip.items():
+        if not info:
+            continue
+        end = starts[i + 1] if i + 1 < nsc else total
+        real += max(0.0, end - starts[i])
+        chosen.append(info)
+    return out, {"share": real / total if total else 0.0, "real": real, "total": total, "clips": chosen, "readers": []}
 
 
 def check_brand(out, logo):

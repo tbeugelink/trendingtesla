@@ -387,15 +387,20 @@ PAGES = {
 }
 
 CSS = """
-@font-face{font-family:Manrope;font-weight:400;font-display:swap;src:url(/fonts/manrope-latin-400-normal.woff2) format("woff2")}
-@font-face{font-family:Manrope;font-weight:600;font-display:swap;src:url(/fonts/manrope-latin-600-normal.woff2) format("woff2")}
-@font-face{font-family:Manrope;font-weight:700;font-display:swap;src:url(/fonts/manrope-latin-700-normal.woff2) format("woff2")}
-@font-face{font-family:Manrope;font-weight:800;font-display:swap;src:url(/fonts/manrope-latin-800-normal.woff2) format("woff2")}
+@font-face{font-family:Manrope;font-weight:400;font-display:optional;src:url(/fonts/manrope-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:Manrope;font-weight:600;font-display:optional;src:url(/fonts/manrope-latin-600-normal.woff2) format("woff2")}
+@font-face{font-family:Manrope;font-weight:700;font-display:optional;src:url(/fonts/manrope-latin-700-normal.woff2) format("woff2")}
+@font-face{font-family:Manrope;font-weight:800;font-display:optional;src:url(/fonts/manrope-latin-800-normal.woff2) format("woff2")}
+/* Arial-metric fallback. size-adjust is the Manrope advance width over Arial, so a late font does not move the lead story. */
+@font-face{font-family:"Manrope Fallback";font-weight:400;src:local("Arial"),local("Arimo"),local("Liberation Sans");size-adjust:111.65%;ascent-override:95.48%;descent-override:26.87%;line-gap-override:0%}
+@font-face{font-family:"Manrope Fallback";font-weight:600;src:local("Arial"),local("Arimo"),local("Liberation Sans");size-adjust:115.76%;ascent-override:92.08%;descent-override:25.91%;line-gap-override:0%}
+@font-face{font-family:"Manrope Fallback";font-weight:700;src:local("Arial"),local("Arimo"),local("Liberation Sans");size-adjust:117.80%;ascent-override:90.49%;descent-override:25.47%;line-gap-override:0%}
+@font-face{font-family:"Manrope Fallback";font-weight:800;src:local("Arial"),local("Arimo"),local("Liberation Sans");size-adjust:119.86%;ascent-override:88.94%;descent-override:25.03%;line-gap-override:0%}
 :root{--bg:#04060a;--surface:#212121;--surface2:#272727;--border:#272727;--border2:#3f3f3f;--fg:#e8eef5;--head:#fff;--muted:#b9c4d2;--dim:#8f9db0;--red:#e22822;--red2:#b81e19;--blue:#00d4ff;--edge:#3a4a60;--blue2:#5fe3ff;--max:1160px;color-scheme:dark}
 *{box-sizing:border-box;margin:0;padding:0}
 html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:150px;background:#04060a}
 html,body{overflow-x:clip;max-width:100%}
-body{background:linear-gradient(180deg,rgba(15,15,15,0) 0,rgba(15,15,15,0) 35%,#0f0f0f 100%) top left/100% 900px no-repeat,linear-gradient(160deg,#2b2b2b 0%,#1d1d1d 35%,#141414 70%,#0f0f0f 100%) top left/100% 900px no-repeat,#0f0f0f;min-height:100vh;color:var(--fg);font:17px/1.42 Manrope,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+body{background:linear-gradient(180deg,rgba(15,15,15,0) 0,rgba(15,15,15,0) 35%,#0f0f0f 100%) top left/100% 900px no-repeat,linear-gradient(160deg,#2b2b2b 0%,#1d1d1d 35%,#141414 70%,#0f0f0f 100%) top left/100% 900px no-repeat,#0f0f0f;min-height:100vh;color:var(--fg);font:17px/1.42 Manrope,"Manrope Fallback",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
 main,footer{position:relative;z-index:1}
 a{color:var(--head)}
 img{display:block;max-width:100%;height:auto}picture{display:contents}
@@ -462,7 +467,7 @@ h1,h2,h3{color:#ebebeb;font-weight:800}
 .savedlink:hover{background:#272727}
 @media (min-width:601px){.brand{transform:translateX(4px)}.savedlink{transform:translateX(16px)}}
 @media (max-width:600.98px){.brand{transform:translateX(-8px)}.savedlink{transform:translateX(8px)}.bar .savedlink i{line-height:13px}.sbtn{transform:translateX(16px)}}
-.savedlink i{position:absolute;top:3px;right:2px;min-width:14px;height:14px;border-radius:10px;background:var(--red);color:#fff;font:800 .58rem/14px Manrope,sans-serif;font-style:normal;text-align:center;padding:0 3px}
+.savedlink i{position:absolute;top:3px;right:2px;min-width:14px;height:14px;border-radius:10px;background:var(--red);color:#fff;font:800 .58rem/14px Manrope,"Manrope Fallback",sans-serif;font-style:normal;text-align:center;padding:0 3px}
 .dtopics{display:grid;grid-template-columns:1fr 1fr;gap:5px;padding:0 4px}
 .dtopics a{text-align:center;font-size:.84rem;font-weight:700;color:var(--fg);text-decoration:none;background:#272727;border:1px solid #272727;border-radius:10px;padding:6px 6px 5px;line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .dtopics a:hover{background:#3f3f3f;border-color:#3f3f3f;color:var(--head)}
@@ -513,7 +518,7 @@ article .st{font-size:clamp(1.05rem,2vw,1.3rem);line-height:1.22;letter-spacing:
 .nextread{margin:8px 0 12px;padding:18px 3vw 0;border-top:1px solid var(--border2)}.nextread h2{font-size:1.2rem;margin:0 0 12px}.nextread .grid2{margin-top:0;gap:14px}@media (max-width:600.98px){.nextread{padding-left:0;padding-right:0}}
 .sideh{font-size:.7rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--blue);margin:11px 0 -2px;padding-top:9px;border-top:1px solid var(--border2)}
 .hi,.th,.im{position:relative}.hi{margin:0 0 8px}.hi .hero-img{margin:0}
-.dur{display:inline-flex;align-items:center;gap:4px;position:absolute;right:8px;bottom:8px;background:rgba(0,0,0,.8);color:#fff;font-size:.74rem;font-weight:700;line-height:1;padding:4px 6px;border-radius:10px;cursor:help}.agotip{position:fixed;z-index:60;pointer-events:none;background:rgba(0,0,0,.88);color:#fff;font-size:.74rem;font-weight:700;line-height:1;padding:5px 7px;border-radius:10px;white-space:nowrap}time.ago{cursor:help}.im,.th,.hi{container-type:inline-size}.kk{position:absolute;left:2.6cqw;bottom:2.6cqw;z-index:2;pointer-events:none;font-family:Inter,Manrope,system-ui,sans-serif;font-weight:900;letter-spacing:-.01em;text-transform:uppercase;line-height:1}.kk b{display:table;font-weight:900;white-space:nowrap}.kk b+b{margin-top:.1em}.kk i{font-style:normal;display:inline-block}.kk .yo{color:#ffd400;text-shadow:-.16cqw -.16cqw 0 #666666,.16cqw -.16cqw 0 #666666,-.16cqw .16cqw 0 #666666,.16cqw .16cqw 0 #666666,0 .2cqw 0 #666666,0 -.2cqw 0 #666666,.2cqw 0 0 #666666,-.2cqw 0 0 #666666,0 .5cqw 1.2cqw rgba(0,0,0,.45)}.kk .bk i{background:#d61a1a;color:#fff;padding:.13em .24em .12em;box-shadow:0 .4cqw 1.2cqw rgba(0,0,0,.35)}.kk.p-bw .bk i,.kk.p-by .bk i{background:#1d5cff}.kk.p-gy .bk i{background:#0a7737}.kk.p-yk .bk i{background:#ffd400;color:#111}.kk.p-gy .yo{color:#ffd400;text-shadow:0.16cqw 0.16cqw 0 #666666,-0.16cqw 0.16cqw 0 #666666,0.16cqw -0.16cqw 0 #666666,-0.16cqw -0.16cqw 0 #666666,0cqw 0.2cqw 0 #666666,0cqw -0.2cqw 0 #666666,0.2cqw 0cqw 0 #666666,-0.2cqw 0cqw 0 #666666,0 .5cqw 1.4cqw rgba(0,0,0,.5)}.kk.p-wb .bk i{background:#fff;color:#1d5cff}.kk.p-bw .yo{color:#fff;text-shadow:0.16cqw 0.16cqw 0 #0b2f8f,-0.16cqw 0.16cqw 0 #0b2f8f,0.16cqw -0.16cqw 0 #0b2f8f,-0.16cqw -0.16cqw 0 #0b2f8f,0 .2cqw 0 #0b2f8f,0 -.2cqw 0 #0b2f8f,.2cqw 0 0 #0b2f8f,-.2cqw 0 0 #0b2f8f,0 .5cqw 1.4cqw rgba(0,0,0,.6)}.kk.p-wb .yo{color:#3d7bff;text-shadow:0.16cqw 0.16cqw 0 #fff,-0.16cqw 0.16cqw 0 #fff,0.16cqw -0.16cqw 0 #fff,-0.16cqw -0.16cqw 0 #fff,0 .2cqw 0 #fff,0 -.2cqw 0 #fff,.2cqw 0 0 #fff,-.2cqw 0 0 #fff,0 .5cqw 1.4cqw rgba(0,0,0,.5)}.kk.p-by .yo{color:#ffd400;text-shadow:0.16cqw 0.16cqw 0 #666666,-0.16cqw 0.16cqw 0 #666666,0.16cqw -0.16cqw 0 #666666,-0.16cqw -0.16cqw 0 #666666,0 .2cqw 0 #666666,0 -.2cqw 0 #666666,.2cqw 0 0 #666666,-.2cqw 0 0 #666666,0 .5cqw 1.4cqw rgba(0,0,0,.5)}.kk .nb{font-size:1.32em}.kk .bk .nb{font-size:1.22em}.kk .l1{font-size:6.4cqw}.kk .l2{font-size:8cqw}.th .dur{right:6px;bottom:6px;font-size:.68rem;padding:3px 5px}.th .dur svg{width:12px;height:12px}
+.dur{display:inline-flex;align-items:center;gap:4px;position:absolute;right:8px;bottom:8px;background:rgba(0,0,0,.8);color:#fff;font-size:.74rem;font-weight:700;line-height:1;padding:4px 6px;border-radius:10px;cursor:help}.agotip{position:fixed;z-index:60;pointer-events:none;background:rgba(0,0,0,.88);color:#fff;font-size:.74rem;font-weight:700;line-height:1;padding:5px 7px;border-radius:10px;white-space:nowrap}time.ago{cursor:help}.im,.th,.hi{container-type:inline-size}.kk{position:absolute;left:2.6cqw;bottom:2.6cqw;z-index:2;pointer-events:none;font-family:Inter,Manrope,"Manrope Fallback",system-ui,sans-serif;font-weight:900;letter-spacing:-.01em;text-transform:uppercase;line-height:1}.kk b{display:table;font-weight:900;white-space:nowrap}.kk b+b{margin-top:.1em}.kk i{font-style:normal;display:inline-block}.kk .yo{color:#ffd400;text-shadow:-.16cqw -.16cqw 0 #666666,.16cqw -.16cqw 0 #666666,-.16cqw .16cqw 0 #666666,.16cqw .16cqw 0 #666666,0 .2cqw 0 #666666,0 -.2cqw 0 #666666,.2cqw 0 0 #666666,-.2cqw 0 0 #666666,0 .5cqw 1.2cqw rgba(0,0,0,.45)}.kk .bk i{background:#d61a1a;color:#fff;padding:.13em .24em .12em;box-shadow:0 .4cqw 1.2cqw rgba(0,0,0,.35)}.kk.p-bw .bk i,.kk.p-by .bk i{background:#1d5cff}.kk.p-gy .bk i{background:#0a7737}.kk.p-yk .bk i{background:#ffd400;color:#111}.kk.p-gy .yo{color:#ffd400;text-shadow:0.16cqw 0.16cqw 0 #666666,-0.16cqw 0.16cqw 0 #666666,0.16cqw -0.16cqw 0 #666666,-0.16cqw -0.16cqw 0 #666666,0cqw 0.2cqw 0 #666666,0cqw -0.2cqw 0 #666666,0.2cqw 0cqw 0 #666666,-0.2cqw 0cqw 0 #666666,0 .5cqw 1.4cqw rgba(0,0,0,.5)}.kk.p-wb .bk i{background:#fff;color:#1d5cff}.kk.p-bw .yo{color:#fff;text-shadow:0.16cqw 0.16cqw 0 #0b2f8f,-0.16cqw 0.16cqw 0 #0b2f8f,0.16cqw -0.16cqw 0 #0b2f8f,-0.16cqw -0.16cqw 0 #0b2f8f,0 .2cqw 0 #0b2f8f,0 -.2cqw 0 #0b2f8f,.2cqw 0 0 #0b2f8f,-.2cqw 0 0 #0b2f8f,0 .5cqw 1.4cqw rgba(0,0,0,.6)}.kk.p-wb .yo{color:#3d7bff;text-shadow:0.16cqw 0.16cqw 0 #fff,-0.16cqw 0.16cqw 0 #fff,0.16cqw -0.16cqw 0 #fff,-0.16cqw -0.16cqw 0 #fff,0 .2cqw 0 #fff,0 -.2cqw 0 #fff,.2cqw 0 0 #fff,-.2cqw 0 0 #fff,0 .5cqw 1.4cqw rgba(0,0,0,.5)}.kk.p-by .yo{color:#ffd400;text-shadow:0.16cqw 0.16cqw 0 #666666,-0.16cqw 0.16cqw 0 #666666,0.16cqw -0.16cqw 0 #666666,-0.16cqw -0.16cqw 0 #666666,0 .2cqw 0 #666666,0 -.2cqw 0 #666666,.2cqw 0 0 #666666,-.2cqw 0 0 #666666,0 .5cqw 1.4cqw rgba(0,0,0,.5)}.kk .nb{font-size:1.32em}.kk .bk .nb{font-size:1.22em}.kk .l1{font-size:6.4cqw}.kk .l2{font-size:8cqw}.th .dur{right:6px;bottom:6px;font-size:.68rem;padding:3px 5px}.th .dur svg{width:12px;height:12px}
 /* buttons, labels */
 .btn{display:inline-flex;align-items:center;justify-content:center;background:var(--red);color:#fff;font-weight:800;font-size:.9rem;padding:11px 20px;border-radius:10px;text-decoration:none;transition:background .2s}
 .btn:hover{background:var(--red2)}
@@ -823,10 +828,10 @@ header.hb .brand,header.hb .savedlink{transform:none}
 header.hb .bar{gap:8px}
 header.hb .id{display:flex;align-items:center;gap:28px;min-width:0;flex:1 1 auto}
 header.hb .pnav{display:none;flex:1 1 auto;min-width:0;height:auto;margin:0;overflow-x:auto;scrollbar-width:none;transform:translateY(-1px)}
-header.hb .pn{height:auto;padding:6px 10px;font-family:Manrope,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:16px;font-weight:700;line-height:1;letter-spacing:0}
+header.hb .pn{height:auto;padding:6px 10px;font-family:Manrope,"Manrope Fallback",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:16px;font-weight:700;line-height:1;letter-spacing:0}
 header.hb .savedlink{margin-left:auto}
 header.hb .mdrop{position:relative;flex:none;display:flex;align-items:baseline}
-header.hb .mdrop>button.pn{border:0;background:transparent;cursor:pointer;appearance:none;font-family:Manrope,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:16px;font-weight:700;line-height:1;letter-spacing:0;color:var(--fg);gap:6px}
+header.hb .mdrop>button.pn{border:0;background:transparent;cursor:pointer;appearance:none;font-family:Manrope,"Manrope Fallback",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:16px;font-weight:700;line-height:1;letter-spacing:0;color:var(--fg);gap:6px}
 header.hb .mdrop>button.pn .chev{display:block;flex:none}
 header.hb .mdrop>button.pn[aria-expanded=true]{background:#272727;color:#fff}
 header.hb .mdrop .pmenu{display:none;left:auto;right:0;top:calc(100% + 4px)}
@@ -938,6 +943,76 @@ header.hb .pnav>.is-parked{display:none}
 .pv-row.hasth{grid-template-columns:46px 52px minmax(0,1fr) 40px}
 }
 """
+
+# Classes left over from retired layouts. They are not emitted by the pages build() writes.
+# Ads, the newsletter form, product boxes and the Shorts player stay: those render when configured.
+_DEAD_CSS = frozenset("""
+act acts arch aread below beside big btns cats9 chips dm eyebrow feature grid h2 hero home
+hsec leadside mcell mdesc mini model models morelink nextread pblock ph phead pimg ptop ptxt
+pv-art pv-block pv-c pv-grid pv-guide pv-kicker pv-lead pv-note pv-off pv-tabs read rh rside
+side sideh slogan soon span2 sr srow starthere sub tdb tdc tdd tdl th tip topic topics3 tops why
+""".split())
+_PAGE_CSS = None
+
+
+def _slim_css(css):
+    """Drop selectors that only exist for layouts the build no longer emits."""
+    def class_names(sel):
+        return re.findall(r"\.([a-zA-Z_][\w-]*)", sel)
+
+    def keep_selector(sel):
+        return not any(name in _DEAD_CSS for name in class_names(sel))
+
+    def filter_block(block):
+        out = []
+        i, n = 0, len(block)
+        while i < n:
+            if block[i].isspace():
+                i += 1
+                continue
+            if block.startswith("/*", i):
+                j = block.find("*/", i + 2)
+                j = n if j < 0 else j + 2
+                out.append(block[i:j])
+                i = j
+                continue
+            j = block.find("{", i)
+            if j < 0:
+                break
+            head = block[i:j].strip()
+            depth = 0
+            k = j
+            while k < n:
+                if block[k] == "{":
+                    depth += 1
+                elif block[k] == "}":
+                    depth -= 1
+                    if depth == 0:
+                        k += 1
+                        break
+                k += 1
+            body = block[j:k]
+            if head.startswith(("@media", "@container", "@supports")):
+                inner = filter_block(body[1:-1])
+                if inner.strip():
+                    out.append(head + "{" + inner + "}")
+            elif head.startswith("@"):
+                out.append(head + body)
+            else:
+                kept = [s.strip() for s in head.split(",") if s.strip() and keep_selector(s)]
+                if kept:
+                    out.append(",".join(kept) + body)
+            i = k
+        return "".join(out)
+
+    return filter_block(css)
+
+
+def page_css():
+    global _PAGE_CSS
+    if _PAGE_CSS is None:
+        _PAGE_CSS = _slim_css(CSS)
+    return _PAGE_CSS
 
 
 def esc(s):
@@ -1202,6 +1277,9 @@ SIZES_CARD = "(max-width: 700px) 100vw, 280px"
 SIZES_GRID = "(max-width: 600px) 100vw, (max-width: 1000px) 33vw, 280px"
 SIZES_VIDEO = "(max-width: 800px) 78vw, 240px"
 SIZES_HERO = "(max-width: 760px) 100vw, 720px"
+# Model grid: one column on a phone, two from 700px, three from 1100px beside the sidebar.
+SIZES_MODEL = "(max-width: 699px) calc(100vw - 24px), (max-width: 899px) calc(50vw - 20px), (max-width: 1099px) calc(100vw - 40px), 260px"
+_DIM = {}
 
 
 def _opt_variants(src):
@@ -1243,6 +1321,24 @@ def _opt_variants(src):
             break
     _OPT[src] = (key, widths)
     return _OPT[src]
+
+
+def img_size(src, default=(1200, 630)):
+    """Pixel size of a site image, for width/height on the tag."""
+    if not isinstance(src, str) or not src.startswith("/"):
+        return default
+    if src in _DIM:
+        return _DIM[src]
+    path = OUT / src.lstrip("/")
+    if not path.is_file():
+        path = STATIC / src.lstrip("/")
+    try:
+        from PIL import Image
+        with Image.open(path) as im:
+            _DIM[src] = im.size
+    except Exception:
+        _DIM[src] = default
+    return _DIM[src]
 
 
 def resp_img(src, alt, sizes, *, high=False, lazy=True, width=1200, height=630, cls=""):
@@ -1320,6 +1416,8 @@ def page(lang, path, title, description, body, og_type="website", extra_head="",
 <meta name="description" content="{esc(description)}">
 {canon_links}
 <link rel="alternate" type="application/rss+xml" title="{NAME}" href="{url(lang, 'feed.xml')}">
+<link rel="preload" href="/fonts/manrope-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/manrope-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/manrope-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
 <meta property="og:site_name" content="{NAME}">
 <meta property="og:title" content="{esc(title)}">
@@ -1331,13 +1429,15 @@ def page(lang, path, title, description, body, og_type="website", extra_head="",
 <meta property="og:image:height" content="630">
 <meta property="og:locale" content="{L['locale']}">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{esc(title)}">
+<meta name="twitter:description" content="{esc(description)}">
 <meta name="twitter:image" content="{img}">
 <meta name="theme-color" content="#03050a">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon-48.png" sizes="48x48" type="image/png">
 <link rel="icon" href="/favicon-192.png" sizes="192x192" type="image/png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<style>{CSS}</style>
+<style>{page_css()}</style>
 {extra_head}
 </head>
 <body>
@@ -1488,7 +1588,9 @@ def modelnav(lang, current=None):
             items = [(r, ov, MODELS[r].get("menu"))]
         bars = ""
         for k, lbl, img in items:
-            th = f'<img src="/img/models/{img}" alt="" width="148" height="100" loading="lazy" decoding="async">' if img else ""
+            src = f"/img/models/{img}" if img and (STATIC / "img" / "models" / img).exists() else ""
+            w, h = img_size(src, (148, 100)) if src else (148, 100)
+            th = resp_img(src, lbl, "74px", width=w, height=h) if src else ""
             bars += f'<a href="{url(lang, "model/" + k + "/")}" class="vt{" on" if k == current else ""}"><b>{th}</b><span>{esc(lbl)}</span></a>'
         st = " on" if current == r else (" in" if cur_root == r else "")
         rows += (f'<div class="mgrp"><a class="mh{st}" href="{url(lang, "model/" + r + "/")}">{MODELS[r]["name"]}</a>'
@@ -1736,7 +1838,7 @@ function load(){return idx?Promise.resolve(idx):fetch(f.dataset.idx).then(functi
 i.addEventListener('focus',load);
 i.addEventListener('input',function(){var q=i.value.trim().toLowerCase();if(q.length<2){r.hidden=true;return}
 load().then(function(){var w=q.split(/\s+/),h=idx.filter(function(a){var s=(a.t+' '+a.d+' '+a.c).toLowerCase();return w.every(function(x){return s.indexOf(x)>-1})}).slice(0,8);
-r.innerHTML=h.length?h.map(function(a){return '<a href="'+a.u+'"><img src="'+a.i+'" alt="" width="160" height="84" decoding="async"><span><b>'+e(a.t)+'</b><small>'+e(a.c)+' · '+e(a.dt)+'</small></span></a>'}).join(''):'<p>'+e(f.dataset.none)+'</p>';r.hidden=false;window.ttFit=function(){[].forEach.call(document.querySelectorAll('.res a'),function(x){var im=x.querySelector('img'),t=x.querySelector('span');if(!im||!t)return;var m=(x.clientWidth-12)/2;im.style.width=m+'px';var h=t.offsetHeight,w=h*1200/630;if(w>m){w=m;h=w*630/1200}im.style.width=w+'px';im.style.height=h+'px'})};ttFit();if(!window.ttR){window.ttR=1;addEventListener('resize',function(){window.ttFit()})}})});
+r.innerHTML=h.length?h.map(function(a){return '<a href="'+a.u+'"><img src="'+a.i+'" alt="'+e(a.t)+'" width="160" height="84" decoding="async"><span><b>'+e(a.t)+'</b><small>'+e(a.c)+' · '+e(a.dt)+'</small></span></a>'}).join(''):'<p>'+e(f.dataset.none)+'</p>';r.hidden=false;window.ttFit=function(){[].forEach.call(document.querySelectorAll('.res a'),function(x){var im=x.querySelector('img'),t=x.querySelector('span');if(!im||!t)return;var m=(x.clientWidth-12)/2;im.style.width=m+'px';var h=t.offsetHeight,w=h*1200/630;if(w>m){w=m;h=w*630/1200}im.style.width=w+'px';im.style.height=h+'px'})};ttFit();if(!window.ttR){window.ttR=1;addEventListener('resize',function(){window.ttFit()})}})});
 f.addEventListener('submit',function(x){x.preventDefault();var a=r.querySelector('a');if(a)location.href=a.href});
 document.addEventListener('click',function(x){if(!f.contains(x.target)&&!x.target.closest('.sbtn')){r.hidden=true;d.classList.remove('sopen')}});
 document.querySelector('.sbtn').onclick=function(){var input=document.querySelector('.hb-search input');function focus(){if(input)input.focus({preventScroll:true})}if(scrollY<2){focus();return}var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;scrollTo({top:0,behavior:reduce?'auto':'smooth'});var done=false;function end(){if(done)return;done=true;removeEventListener('scrollend',end);focus()}addEventListener('scrollend',end);setTimeout(end,800)};
@@ -1760,7 +1862,7 @@ fetch('/api/likes?s='+lb.map(function(b){return b.dataset.like}).join(',')).then
 lb.forEach(function(b){var s=b.dataset.like;b.setAttribute('aria-pressed',liked.indexOf(s)>-1);b.onclick=function(){var l=LS.get('tt_liked'),i=l.indexOf(s),d=i>-1?-1:1;if(d>0)l.push(s);else l.splice(i,1);LS.set('tt_liked',l);b.setAttribute('aria-pressed',d>0);
 var sp=b.querySelector('span');sp.textContent=Math.max(0,(+sp.textContent||0)+d);fetch('/api/likes',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({slug:s,d:d})}).then(function(r){return r.json()}).then(function(j){if(j.n!=null)sp.textContent=j.n}).catch(function(){})}})}
 var sl=document.querySelector('.savedlist');if(sl){var keep=LS.get('tt_saved');if(!keep.length){sl.innerHTML='<p class="empty">'+e(sl.dataset.empty)+'</p>'}else{load().then(function(){var m={};idx.forEach(function(a){var k=a.u.replace(/\/$/,'').split('/').pop();m[k]=a});
-sl.innerHTML=keep.filter(function(k){return m[k]}).map(function(k){var a=m[k];return '<a class="card" href="'+a.u+'"><div class="im"><img src="'+a.i+'" alt="" width="1200" height="630" decoding="async"></div><div class="body"><h3>'+e(a.t)+'</h3><p>'+e(a.d)+'</p><span class="meta">'+'<time class="ago" datetime="'+a.ts+'">'+e(a.dt)+'</time></span></div></a>'}).join('');ttAgo()})}}window.addEventListener('resize',bal);bal();
+sl.innerHTML=keep.filter(function(k){return m[k]}).map(function(k){var a=m[k];return '<a class="card" href="'+a.u+'"><div class="im"><img src="'+a.i+'" alt="'+e(a.t)+'" width="1200" height="630" decoding="async"></div><div class="body"><h3>'+e(a.t)+'</h3><p>'+e(a.d)+'</p><span class="meta">'+'<time class="ago" datetime="'+a.ts+'">'+e(a.dt)+'</time></span></div></a>'}).join('');ttAgo()})}}window.addEventListener('resize',bal);bal();
 })();"""
 JS += r"""
 document.querySelectorAll(".avb[data-vid]").forEach(function(b){b.addEventListener("click",function(){if(b.classList.contains("on"))return;b.classList.add("on");var f=document.createElement("iframe");f.src="https://www.youtube-nocookie.com/embed/"+b.dataset.vid+"?autoplay=1"+(matchMedia("(pointer:coarse)").matches?"":"&playsinline=1")+"&rel=0";f.title=b.getAttribute("aria-label")||"YouTube";f.setAttribute("allow","autoplay; encrypted-media; picture-in-picture; fullscreen");f.allowFullscreen=true;b.appendChild(f)})});
@@ -1769,7 +1871,7 @@ document.querySelectorAll(".avb[data-vid]").forEach(function(b){b.addEventListen
 
 
 JS += r"""
-(function(){var nav=document.querySelector("header.hb .pnav"),menu=document.getElementById("more-menu"),more=document.querySelector("header.hb .mdrop");if(!nav||!menu||!more)return;var items=[].filter.call(nav.children,function(el){return el!==more}),base=menu.innerHTML,parked=[];function restore(){items.forEach(function(el){el.classList.remove("is-parked");nav.insertBefore(el,more)});parked=[];menu.innerHTML=base}function tight(){var tools=document.querySelector("header.hb .sbtn")||document.querySelector("header.hb .savedlink");if(!tools)return false;return more.getBoundingClientRect().right>tools.getBoundingClientRect().left-8}function fit(){restore();if(getComputedStyle(nav).display==="none")return;var guard=0;while(tight()&&guard++<8){var el=null;for(var i=items.length-1;i>=0;i--){if(!items[i].classList.contains("is-parked")){el=items[i];break}}if(!el)break;el.classList.add("is-parked");parked.push(el);var a=el.matches("a")?el:el.querySelector("a.pn");if(!a)continue;var link=document.createElement("a");link.href=a.getAttribute("href");link.textContent=a.textContent.trim();link.setAttribute("role","menuitem");menu.insertBefore(link,menu.firstChild)}}fit();var wait;addEventListener("resize",function(){clearTimeout(wait);wait=setTimeout(fit,80)})})();
+(function(){var nav=document.querySelector("header.hb .pnav"),menu=document.getElementById("more-menu"),more=document.querySelector("header.hb .mdrop");if(!nav||!menu||!more)return;var items=[].filter.call(nav.children,function(el){return el!==more}),base=menu.innerHTML,parked=[];function restore(){items.forEach(function(el){el.classList.remove("is-parked");nav.insertBefore(el,more)});parked=[];menu.innerHTML=base}function tight(){var tools=document.querySelector("header.hb .sbtn")||document.querySelector("header.hb .savedlink");if(!tools)return false;return more.getBoundingClientRect().right>tools.getBoundingClientRect().left-8}function fit(){restore();if(getComputedStyle(nav).display==="none")return;var guard=0;while(tight()&&guard++<8){var el=null;for(var i=items.length-1;i>=0;i--){if(!items[i].classList.contains("is-parked")){el=items[i];break}}if(!el)break;el.classList.add("is-parked");parked.push(el);var a=el.matches("a")?el:el.querySelector("a.pn");if(!a)continue;var link=document.createElement("a");link.href=a.getAttribute("href");link.textContent=a.textContent.trim();link.setAttribute("role","menuitem");menu.insertBefore(link,menu.firstChild)}}fit();var wait;addEventListener("resize",function(){clearTimeout(wait);wait=setTimeout(fit,80)});if(document.fonts)document.fonts.ready.then(fit)})();
 (function(){var b=document.getElementById("more-btn"),m=document.getElementById("more-menu");if(!b||!m)return;function set(o){b.setAttribute("aria-expanded",o?"true":"false");m.hidden=!o;b.parentNode.classList.toggle("is-open",o)}b.addEventListener("click",function(e){e.stopPropagation();set(m.hidden)});b.addEventListener("keydown",function(e){if(e.key==="ArrowDown"){e.preventDefault();set(true);var a=m.querySelector("a");if(a)a.focus()}});document.addEventListener("click",function(e){if(!b.parentNode.contains(e.target))set(false)});document.addEventListener("keydown",function(e){if(e.key==="Escape"){set(false);if(b.parentNode.contains(document.activeElement))b.focus()}})})();
 """
 
@@ -1781,7 +1883,7 @@ def card(a, lang, lead=False):
     t = a[lang]
     cls = "card lead" if lead else "card"
     return (f'<a class="{cls}" href="{url(lang, a["slug"] + "/")}">'
-            f'<div class="im">{resp_img(site_img(a), "", SIZES_CARD)}{dur(a, lang)}{ovl(a, lang)}</div>'
+            f'<div class="im">{resp_img(site_img(a), t["title"], SIZES_CARD)}{dur(a, lang)}{ovl(a, lang)}</div>'
             f'<div class="body">{label(a, lang)} <span class="meta">· {when(a, lang)}</span>'
             f'<h3>{esc(t["title"])}</h3><p>{esc(t["description"])}</p></div></a>')
 
@@ -1790,7 +1892,7 @@ def gcard(a, lang, eager=False):
     """Topic list under the lead: photo on top, then title, summary and date."""
     t = a[lang]
     return (f'<a class="card" href="{url(lang, a["slug"] + "/")}">'
-            f'<div class="im">{resp_img(site_img(a), "", SIZES_GRID, high=eager, lazy=not eager)}{dur(a, lang)}{ovl(a, lang)}</div>'
+            f'<div class="im">{resp_img(site_img(a), t["title"], SIZES_GRID, high=eager, lazy=not eager)}{dur(a, lang)}{ovl(a, lang)}</div>'
             f'<div class="body"><h2>{esc(t["title"])}</h2><p>{esc(t["description"])}</p>'
             f'<span class="meta">{when(a, lang)}</span></div></a>')
 
@@ -1890,7 +1992,7 @@ def vscript(a, lang):
 def mini(a, lang):
     t = a[lang]
     return (f'<a class="mini" href="{url(lang, a["slug"] + "/")}">'
-            f'<div class="th">{resp_img(site_img(a), "", SIZES_CARD)}{dur(a, lang)}{ovl(a, lang)}</div>'
+            f'<div class="th">{resp_img(site_img(a), t["title"], SIZES_CARD)}{dur(a, lang)}{ovl(a, lang)}</div>'
             f'<div><h3>{esc(t["title"])}</h3><p class="mdesc">{esc(t["description"])}</p><span class="meta">{when(a, lang)}</span></div></a>')
 
 
@@ -2046,16 +2148,28 @@ def publisher_client():
 
 
 def adsense_tag():
-    """AdSense loader in <head> of every page. No ad units; Auto ads are an account switch.
+    """AdSense loader. It starts on the first tap or key, or eight seconds after load.
 
-    The tag is not gated on the site cookie banner. In the EEA, ad consent belongs to
-    Google's Privacy & messaging message, which needs this script on the page.
+    That keeps the ~230 KB script off the LCP path. It is not gated on the site cookie
+    banner: in the EEA, Google's Privacy & messaging message comes from this same script,
+    so a quiet visitor still gets it. Slot pushes made earlier stay queued on
+    window.adsbygoogle.
     """
     client = publisher_client()
     if not client:
         return ""
-    return (f'<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'
-            f'?client={client}" crossorigin="anonymous"></script>\n')
+    return (
+        "<script>(function(){var id=" + json.dumps(client) + ",done=false;"
+        "function load(){if(done)return;done=true;var s=document.createElement('script');"
+        "s.async=true;s.crossOrigin='anonymous';"
+        "s.src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client='+encodeURIComponent(id);"
+        "document.head.appendChild(s)}"
+        "['pointerdown','keydown','touchstart'].forEach(function(ev){addEventListener(ev,load,{capture:true,once:true,passive:true})});"
+        "addEventListener('load',function(){setTimeout(function(){"
+        "if(window.requestIdleCallback)requestIdleCallback(load,{timeout:2000});else load();"
+        "},8000)});"
+        "})()</script>\n"
+    )
 
 
 def slot_id(place):
@@ -2136,7 +2250,7 @@ def product_boxes(a, lang):
         image = str(product.get("image") or "").strip()
         img = ""
         if image.startswith("/img/") and ".." not in image:
-            img = f'<img src="{esc(image)}" alt="" width="640" height="480" loading="lazy" decoding="async">'
+            img = f'<img src="{esc(image)}" alt="{esc(name)}" width="640" height="480" loading="lazy" decoding="async">'
         lis = "".join(f"<li>{esc(item)}</li>" for item in specs)
         ul = f"<ul>{lis}</ul>" if lis else ""
         blocks.append(
@@ -2556,9 +2670,12 @@ def models_overview(lang):
     for i, key in enumerate(MODEL_ORDER):
         m = MODELS[key]
         ph = model_photo(key) or ""
-        lazy = "" if i == 0 else ' loading="lazy"'
-        pri = ' fetchpriority="high"' if i == 0 else ""
-        img = (f'<img src="{esc(ph)}" alt="" width="800" height="450"{pri}{lazy} decoding="async">' if ph else "")
+        # First row is on screen at desktop widths; the first card is the phone LCP image.
+        eager = i < 4
+        img = ""
+        if ph:
+            w, h = img_size(ph)
+            img = resp_img(ph, "Tesla " + m["name"], SIZES_MODEL, high=(i == 0), lazy=not eager, width=w, height=h)
         cards.append(
             f'<a class="mcard" href="{url(lang, "model/" + key + "/")}">'
             f'<span class="mim">{img}</span><span class="mname">{esc(m["name"])}</span></a>')
@@ -2604,11 +2721,11 @@ def video_for(a, lang):
     return VIDEOS.get((a["slug"], lang)) or VIDEOS.get((a["slug"], "en"))
 
 
-def player(vid, kind, label, poster, priority):
+def player(vid, kind, label, poster, priority, title=""):
     w, h = (1200, 630) if kind == "long" else (360, 640)
     sizes = SIZES_HERO if kind == "long" else "(max-width: 800px) 70vw, 280px"
     # The first picture on the page is the LCP image: eager and high priority.
-    photo = resp_img(poster, "", sizes, high=priority, lazy=not priority, width=w, height=h)
+    photo = resp_img(poster, title or label, sizes, high=priority, lazy=not priority, width=w, height=h)
     return (f'<figure class="avid {kind}"><button class="avb" type="button" data-vid="{esc(vid)}" aria-label="{esc(label)}">'
             f'{photo}<span class="shp" aria-hidden="true"></span></button><figcaption>{esc(label)}</figcaption></figure>')
 
@@ -2620,9 +2737,9 @@ def article_media(a, lang):
     short = None if video else SHORTS.get(a["slug"])
     blocks = []
     if video:
-        blocks.append(player(video["id"], "long", LANGS[lang]["watch"], poster, True))
+        blocks.append(player(video["id"], "long", LANGS[lang]["watch"], poster, True, a[lang]["title"]))
     if short:
-        blocks.append(player(short["id"], "short", LANGS[lang]["watch_short"], poster, True))
+        blocks.append(player(short["id"], "short", LANGS[lang]["watch_short"], poster, True, a[lang]["title"]))
     if blocks:
         return "".join(blocks)
     return f'<div class="hi">{resp_img(poster, a[lang]["title"], SIZES_HERO, high=True, lazy=False, cls="hero-img")}</div>'
@@ -2776,7 +2893,7 @@ def home_videos(arts, lang, n=8):
             badge = LANGS[lang]["videos"]
         cards.append(
             f'<a class="vcard" href="{href}"><span class="vim">'
-            f'{resp_img(site_img(a), "", SIZES_VIDEO, width=480, height=270)}'
+            f'{resp_img(site_img(a), t["title"], SIZES_VIDEO, width=480, height=270)}'
             f'<span class="vpl" aria-hidden="true"></span>'
             f'<span class="dur dvo">{esc(badge)}</span></span>'
             f'<strong>{esc(t["title"])}</strong></a>')
@@ -2970,7 +3087,7 @@ def pv_row(a, lang, thumb=False):
     href = url(lang, a["slug"] + "/")
     im = ""
     if thumb:
-        im = (f'<span class="pv-th">{resp_img(site_img(a), "", "(max-width: 700px) 22vw, 64px", width=256, height=144)}'
+        im = (f'<span class="pv-th">{resp_img(site_img(a), t["title"], "(max-width: 700px) 22vw, 64px", width=256, height=144)}'
               f'{ovl(a, lang)}</span>')
     mins = read_time(a, lang)
     label = f'{mins} {LANGS[lang]["min"]}'
@@ -3328,7 +3445,7 @@ def build():
             dt = sh["published"]
             cap = (f'<a class="sht" href="{url(lang, a["slug"] + "/")}">{esc(t)}</a>' if a else f'<span class="sht">{esc(t)}</span>')
             cards += (f'<div class="shc"><button class="shv" type="button" data-id="{esc(sh["id"])}" aria-label="{"Play" if en else "Afspelen"}: {esc(t)}">'
-                      f'<img src="https://i.ytimg.com/vi/{esc(sh["id"])}/hqdefault.jpg" alt="" loading="lazy" width="480" height="360">'
+                      f'<img src="https://i.ytimg.com/vi/{esc(sh["id"])}/hqdefault.jpg" alt="{esc(t)}" loading="lazy" width="480" height="360">'
                       f'<span class="shp" aria-hidden="true"></span></button>{cap}'
                       f'<span class="meta"><time class="ago" datetime="{esc(dt)}">{fmt_date(dt[:10], lang)}</time></span></div>')
         intro = ("Tesla news in under a minute. New Shorts appear here as soon as they are live on YouTube."
@@ -3389,6 +3506,7 @@ def build():
     for path, mod in entries:
         for lang in LANGS:
             alts = "".join(f'<xhtml:link rel="alternate" hreflang="{l}" href="{SITE + url(l, path)}"/>' for l in LANGS)
+            alts += f'<xhtml:link rel="alternate" hreflang="x-default" href="{SITE + url("en", path)}"/>'
             urls += f"<url><loc>{SITE + url(lang, path)}</loc><lastmod>{mod}</lastmod>{alts}</url>"
     write("/sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>'
           '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">'
@@ -3452,6 +3570,14 @@ def write_redirects():
         lines.append(f"{frm} {to} 301")
         if frm.endswith("/") and frm != "/":
             lines.append(f"{frm[:-1]} {to} 301")
+    # Host and scheme. The worker applies the same hop before static assets run.
+    lines += [
+        "",
+        "# One hop onto the https apex. Path redirects above keep winning first.",
+        "http://trendingtesla.com/* https://trendingtesla.com/:splat 301",
+        "http://www.trendingtesla.com/* https://trendingtesla.com/:splat 301",
+        "https://www.trendingtesla.com/* https://trendingtesla.com/:splat 301",
+    ]
     (OUT / "_redirects").write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 

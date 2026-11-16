@@ -104,28 +104,74 @@ function b64name(n) {
   return `=?UTF-8?B?${b64(n)}?=`;
 }
 
+// Original scheme. Cloudflare terminates TLS, so request.url is often https even when
+// the browser asked for http. CF-Visitor still has the scheme the visitor used.
+function originalScheme(request, url) {
+  const raw = request.headers.get("CF-Visitor");
+  if (raw) {
+    try {
+      const scheme = JSON.parse(raw).scheme;
+      if (scheme === "http" || scheme === "https") return scheme;
+    } catch (e) {}
+  }
+  return url.protocol === "http:" ? "http" : "https";
+}
+
+// Pretty URLs are directories. Files (a dot in the last segment) and /api/ stay as they are.
+function needsSlash(pathname) {
+  if (pathname === "/" || pathname.endsWith("/") || pathname.startsWith("/api/")) return false;
+  return !/\.[A-Za-z0-9]{1,8}$/.test(pathname);
+}
+
+function withSlash(pathname) {
+  return needsSlash(pathname) ? pathname + "/" : pathname;
+}
+
+const HSTS = "max-age=31536000; includeSubDomains";
+
+function redirect301(url, hsts) {
+  const headers = { Location: url, "Cache-Control": "public, max-age=3600" };
+  if (hsts) headers["Strict-Transport-Security"] = HSTS;
+  return new Response(null, { status: 301, headers });
+}
+
+// Static assets answer a missing trailing slash with 307. Crawlers should see 301.
+function slashTo301(response, request) {
+  if (request.method !== "GET" && request.method !== "HEAD") return response;
+  if (response.status !== 307 && response.status !== 308) return response;
+  const loc = response.headers.get("Location");
+  if (!loc) return response;
+  let target;
+  try { target = new URL(loc, request.url); } catch (e) { return response; }
+  const from = new URL(request.url);
+  const bare = (p) => (p.length > 1 && p.endsWith("/") ? p.slice(0, -1) : p);
+  if (target.origin === from.origin && bare(target.pathname) === bare(from.pathname) && target.pathname !== from.pathname) {
+    return redirect301(target.toString(), false);
+  }
+  return response;
+}
+
 export default {
   async fetch(request, env) {
     const u = new URL(request.url);
-    // www and plain http on the public host belong on the https apex. Local wrangler
-    // (localhost) is left alone. Cloudflare "Always Use HTTPS" is what stops a browser
-    // http request from failing before it reaches this worker.
     const host = u.hostname.toLowerCase();
     const onSite = host === "trendingtesla.com" || host === "www.trendingtesla.com";
-    if (onSite && (host === "www.trendingtesla.com" || u.protocol === "http:")) {
-      const dest = new URL(u.pathname + u.search, "https://trendingtesla.com");
-      return Response.redirect(dest.toString(), 301);
-    }
+    const scheme = originalScheme(request, u);
+    const slashed = withSlash(u.pathname);
     // Removed articles: 301 to the closest kept article, or to a model/category page.
     // Map lives in worker/redirects.js (same pairs as content/redirects.json).
-    {
-      const path = u.pathname.length > 1 && !u.pathname.endsWith("/") ? u.pathname + "/" : u.pathname;
-      const destPath = REDIRECTS[path];
-      if (destPath) {
-        const dest = new URL(destPath, u.origin);
-        dest.search = u.search;
-        return Response.redirect(dest.toString(), 301);
-      }
+    const moved = REDIRECTS[slashed];
+    const getLike = request.method === "GET" || request.method === "HEAD";
+    if (getLike) {
+      // www, http and a missing slash fold into one 301, including a removed-article target.
+      const origin = onSite ? "https://trendingtesla.com" : u.origin;
+      const dest = new URL(moved || slashed, origin);
+      dest.search = u.search;
+      const visitor = onSite ? `${scheme}://${host}${u.pathname}${u.search}` : `${u.origin}${u.pathname}${u.search}`;
+      if (visitor !== dest.toString()) return redirect301(dest.toString(), onSite);
+    } else if (onSite && (host !== "trendingtesla.com" || scheme !== "https")) {
+      const dest = new URL(u.pathname + u.search, "https://trendingtesla.com");
+      return redirect301(dest.toString(), true);
     }
     // old WordPress addresses from the domain's previous site (?p=1, ?feed=rss2, ?s=..., ?author=1) showed the
     // home page and were reported as duplicates by Search Console: tell crawlers they are gone for good
@@ -149,7 +195,8 @@ export default {
       }
       return json({ error: "method" }, 405);
     }
-    return withCache(u.pathname, await env.ASSETS.fetch(request));
+    const assets = slashTo301(await env.ASSETS.fetch(request), request);
+    return withCache(u.pathname, assets, onSite);
   },
 };
 
@@ -164,9 +211,10 @@ function cacheControl(pathname) {
   return LONG_FILE.test(pathname) ? LONG_CACHE : SHORT_CACHE;
 }
 
-function withCache(pathname, response) {
+function withCache(pathname, response, hsts) {
   const headers = new Headers(response.headers);
   headers.set("Cache-Control", cacheControl(pathname));
+  if (hsts) headers.set("Strict-Transport-Security", HSTS);
   return new Response(response.body, {
     status: response.status,
     statusText: response.statusText,

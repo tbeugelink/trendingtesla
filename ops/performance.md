@@ -1,101 +1,101 @@
 # What works on the TrendingTesla YouTube channel
 
-Updated 2026-11-15 04:59 UTC by tools/learn.py from daily YouTube statistics (63 videos at least 48 hours old). Do not edit by hand.
+Updated 2026-11-16 05:37 UTC by tools/learn.py from daily YouTube statistics (66 videos at least 48 hours old). Do not edit by hand.
 
-- Shorts: 34 videos, typical 900 views after 48 hours.
-- Long videos: 29 videos, typical 25 views after 48 hours.
+- Shorts: 36 videos, typical 900 views after 48 hours.
+- Long videos: 30 videos, typical 26 views after 48 hours.
 
 ## By feature
 
 Views after 48 hours compared with a typical video of the same kind (1.0x = typical); with YouTube Analytics also how much of the video people watch, in percentage points vs typical. n = number of videos; below 3 it is only a hint.
 
 **Short hook type**
-- consequence: 1.5x views, watched +4 pts vs typical (n=9)
-- question: 1.1x views, watched -6 pts vs typical (n=4)
-- first: 1.0x views, watched +10 pts vs typical (n=8)
-- contrast: 1.0x views, watched +2 pts vs typical (n=17)
-- not tagged: 0.7x views, watched +1 pts vs typical (n=18)
-- number: 0.6x views, watched +4 pts vs typical (n=7)
+- question: 1.1x views, watched -5 pts vs typical (n=4)
+- consequence: 1.0x views, watched +2 pts vs typical (n=10)
+- first: 0.9x views, watched +9 pts vs typical (n=8)
+- contrast: 0.9x views, watched +4 pts vs typical (n=17)
+- number: 0.8x views, watched +4 pts vs typical (n=9)
+- not tagged: 0.7x views, watched +2 pts vs typical (n=18)
 
 **about a specific car**
 - cybertruck, model-s, model-x: 2.4x views, watched -6 pts vs typical (n=2)
-- semi: 1.8x views, watched +3 pts vs typical (n=6)
+- semi: 1.7x views, watched +4 pts vs typical (n=6)
 - model-3, model-y, model-y-l: 1.5x views, watched -5 pts vs typical (n=2)
-- cybertruck: 1.2x views, watched -8 pts vs typical (n=2)
-- roadster: 1.1x views, watched -9 pts vs typical (n=3)
-- no (company-wide): 0.8x views, watched +5 pts vs typical (n=42)
-- cybercab: 0.7x views, watched +2 pts vs typical (n=4)
-- model-3-classic: 0.5x views, watched -1 pts vs typical (n=2)
+- cybertruck: 1.2x views, watched -7 pts vs typical (n=2)
+- roadster: 1.1x views, watched -6 pts vs typical (n=3)
+- no (company-wide): 0.8x views, watched +5 pts vs typical (n=45)
+- cybercab: 0.7x views, watched +3 pts vs typical (n=4)
+- model-3-classic: 0.5x views, watched -0 pts vs typical (n=2)
 
 **explainer or news**
-- explainer: 1.0x views, watched +5 pts vs typical (n=41)
-- news: 0.8x views, watched -2 pts vs typical (n=22)
+- explainer: 0.9x views, watched +6 pts vs typical (n=44)
+- news: 0.8x views, watched -1 pts vs typical (n=22)
 
 **label has a question**
-- yes: 1.0x views, watched +3 pts vs typical (n=36)
-- no: 0.9x views, watched +2 pts vs typical (n=27)
+- yes: 0.9x views, watched +4 pts vs typical (n=36)
+- no: 0.8x views, watched +3 pts vs typical (n=30)
 
 **label starts with a number**
-- no: 0.9x views, watched +2 pts vs typical (n=54)
-- yes: 0.7x views, watched +6 pts vs typical (n=9)
+- no: 0.9x views, watched +2 pts vs typical (n=57)
+- yes: 0.7x views, watched +10 pts vs typical (n=9)
 
 **label type**
-- c (yellow + red block): 1.0x views, watched +2 pts vs typical (n=39)
-- n (number): 0.9x views, watched -2 pts vs typical (n=4)
-- a (red kicker + yellow line): 0.7x views, watched +4 pts vs typical (n=20)
+- c (yellow + red block): 1.0x views, watched +3 pts vs typical (n=42)
+- n (number): 0.9x views, watched -1 pts vs typical (n=4)
+- a (red kicker + yellow line): 0.7x views, watched +5 pts vs typical (n=20)
 
 **published**
-- evening: 1.0x views, watched -0 pts vs typical (n=27)
-- morning: 0.8x views, watched +5 pts vs typical (n=36)
+- evening: 0.9x views, watched +1 pts vs typical (n=28)
+- morning: 0.9x views, watched +5 pts vs typical (n=38)
 
 **title has a number**
-- no: 1.0x views, watched +3 pts vs typical (n=30)
-- yes: 0.8x views, watched +3 pts vs typical (n=33)
+- no: 0.9x views, watched +3 pts vs typical (n=31)
+- yes: 0.8x views, watched +4 pts vs typical (n=35)
 
 **title length**
-- short (<= 10 words): 1.5x views, watched -10 pts vs typical (n=2)
-- long (> 10 words): 0.9x views, watched +3 pts vs typical (n=61)
+- short (<= 10 words): 1.5x views, watched -9 pts vs typical (n=2)
+- long (> 10 words): 0.9x views, watched +4 pts vs typical (n=64)
 
 **topic**
-- models: 1.5x views, watched -3 pts vs typical (n=19)
-- software: 1.1x views, watched +6 pts vs typical (n=4)
-- spacex: 1.0x views, watched +6 pts vs typical (n=13)
-- fsd: 0.8x views, watched -12 pts vs typical (n=8)
-- starlink: 0.7x views, watched +20 pts vs typical (n=4)
-- robotaxi: 0.6x views, watched +10 pts vs typical (n=8)
-- factories: 0.4x views, watched -6 pts vs typical (n=4)
-- charging: 0.3x views, watched +29 pts vs typical (n=3)
+- models: 1.5x views, watched -2 pts vs typical (n=19)
+- software: 1.1x views, watched +7 pts vs typical (n=4)
+- spacex: 0.9x views, watched +6 pts vs typical (n=16)
+- fsd: 0.8x views, watched -11 pts vs typical (n=8)
+- starlink: 0.7x views, watched +21 pts vs typical (n=4)
+- robotaxi: 0.6x views, watched +11 pts vs typical (n=8)
+- factories: 0.4x views, watched -3 pts vs typical (n=4)
+- charging: 0.3x views, watched +30 pts vs typical (n=3)
 
 ## Best performers
 
-- long: 342 views at 48h (13.2x) - Tesla's Emergency Drive Away gets its first real use, and an accidental tap reportedly brings a $539 service bill [label: ONE WRONG TAP $539 BILL?]
-- long: 152 views at 48h (5.9x) - Tesla Semi catches fire on I-880 in Hayward with no crash, closing the freeway for 10 hours [label: WHY DID THIS TESLA SEMI BURN?]
-- long: 125 views at 48h (4.8x) - The Lotus that became the first Tesla: how the original Roadster nearly broke the company [label: HOW A LOTUS BECAME A TESLA?]
-- long: 123 views at 48h (4.8x) - What Happens to Your Tesla When Tesla Stops Making It? Cybertruck, Model S and X Explained [label: TESLA STOPS BUILDING IT NOW WHAT?]
-- long: 102 views at 48h (3.9x) - Grok does the mapping, you do the napping? [label: GROK DOES THE MAPPING YOU DO THE NAPPING?]
+- long: 342 views at 48h (12.7x) - Tesla's Emergency Drive Away gets its first real use, and an accidental tap reportedly brings a $539 service bill [label: ONE WRONG TAP $539 BILL?]
+- long: 152 views at 48h (5.6x) - Tesla Semi catches fire on I-880 in Hayward with no crash, closing the freeway for 10 hours [label: WHY DID THIS TESLA SEMI BURN?]
+- long: 125 views at 48h (4.6x) - The Lotus that became the first Tesla: how the original Roadster nearly broke the company [label: HOW A LOTUS BECAME A TESLA?]
+- long: 123 views at 48h (4.6x) - What Happens to Your Tesla When Tesla Stops Making It? Cybertruck, Model S and X Explained [label: TESLA STOPS BUILDING IT NOW WHAT?]
+- long: 102 views at 48h (3.8x) - Grok does the mapping, you do the napping? [label: GROK DOES THE MAPPING YOU DO THE NAPPING?]
 
 ## Weakest
 
 - short: 20 views at 48h (0.0x) - Tesla owners pick 36 new Supercharger sites in the latest vote, but a win can take years to become a charger [label: OWNERS PICKED 36 SUPERCHARGERS]
+- short: 35 views at 48h (0.0x) - The Booster Catch SpaceX Called Off: How Starship's Own Launch Blinded Its Tower [label: SPACEX'S LAUNCH BLINDED ITS TOWER]
 - short: 93 views at 48h (0.1x) - Latvia becomes the 10th EU country to approve Tesla FSD (Supervised), but the December vote hinges on the big four [label: FSD IN LATVIA WHY ONLY 14%?]
-- short: 153 views at 48h (0.2x) - Is There a Tesla Phone? The Model Pi Rumor vs What Musk and Starlink Are Really Building [label: IS THERE A TESLA PHONE?]
 
 ## Guidance for the next articles
 
 Does well (prefer this when two stories are about equally newsworthy, and use these styles):
-- topic: charging (people keep watching longer: +29 pts, n=3)
-- about a specific car: semi (1.8x, n=6)
-- topic: starlink (people keep watching longer: +20 pts, n=4)
-- topic: robotaxi (people keep watching longer: +10 pts, n=8)
-- Short hook type: first (people keep watching longer: +10 pts, n=8)
-- topic: models (1.5x, n=19)
+- topic: charging (people keep watching longer: +30 pts, n=3)
+- about a specific car: semi (1.7x, n=6)
+- topic: starlink (people keep watching longer: +21 pts, n=4)
+- topic: robotaxi (people keep watching longer: +11 pts, n=8)
+- label starts with a number: yes (people keep watching longer: +10 pts, n=9)
+- Short hook type: first (people keep watching longer: +9 pts, n=8)
 Does less well (still cover it when it is the important news, but give it a sharper hook):
 - topic: charging (0.3x, n=3)
 - topic: factories (0.4x, n=4)
 - topic: robotaxi (0.6x, n=8)
-- Short hook type: number (0.6x, n=7)
-- topic: fsd (people stop watching sooner: -12 pts, n=8)
-- about a specific car: roadster (people stop watching sooner: -9 pts, n=3)
+- topic: fsd (people stop watching sooner: -11 pts, n=8)
+- about a specific car: cybercab (0.7x, n=4)
+- about a specific car: roadster (people stop watching sooner: -6 pts, n=3)
 
 ## Rules for using this
 
@@ -105,41 +105,36 @@ Does less well (still cover it when it is the important news, but give it a shar
 
 ## What works at other Tesla / SpaceX / xAI channels
 
-Updated 2026-11-15 04:59 UTC by tools/scout.py (videos from the last 7 days, 33 judged, 455 API units). Do not edit by hand.
+Updated 2026-11-16 05:37 UTC by tools/scout.py (videos from the last 7 days, 28 judged, 457 API units). Do not edit by hand.
 
 Outlier = views divided by what that channel normally gets for the same kind of video. A 5x video shows a topic or angle that pulls viewers, regardless of channel size.
 
 ### Outliers
 
-- **72.3x** (96K views vs 1K usual, short, Megascale, 2K subs) - [Elon Is Building a Factory for 10 Million Robots a Year](https://youtu.be/wRihsGZntFA)
-- **68.1x** (883K views vs 13K usual, long, VideoFromSpace, 2.2M subs) - [Blastoff! SpaceX Starship launches to orbit on Flight 15, booster catch aborted](https://youtu.be/RHY66XujZ90)
-- **59.4x** (292K views vs 5K usual, long, The Knowledge Project Podcast, 473K subs) - [The Impossible Speed of Elon Musk -  Ex-Tesla President](https://youtu.be/pRXMqm5bMFk)
-- **54.0x** (7.0M views vs 129K usual, short, AstroSpidy, 10K subs) - [SpaceX Just Made Rocket History! 🚀#shorts #viral #trending](https://youtu.be/EMbc5euL9Jg)
-- **29.2x** (378K views vs 13K usual, long, VideoFromSpace, 2.2M subs) - [Replay! SpaceX Starship Flight 15 Reentry and Historic Catch at Starbase](https://youtu.be/KqGPHd7XAbs)
-- **25.5x** (330K views vs 13K usual, long, VideoFromSpace, 2.2M subs) - [Historic Catch! SpaceX Starship Captured by Launch Tower After Reentry](https://youtu.be/A6-zruZTfOA)
-- **24.9x** (142K views vs 6K usual, long, cfuentescerda, 32K subs) - [TESLA DROPS A BOMBSHELL: NEW BATTERY 1,500-MILE RANGE AND 5-MINUTE CHARGE WILL SHAKES EV INDUSTRY](https://youtu.be/5p4jM_mFxFU)
-- **24.8x** (817K views vs 33K usual, long, The Wall Street Journal, 6.7M subs) - [Why Elon Musk Is Killing His Polarizing Tesla Cybertruck | WSJ What Went Wrong](https://youtu.be/FRteYO6Jxeo)
-- **22.4x** (290K views vs 13K usual, long, VideoFromSpace, 2.2M subs) - [Replay! SpaceX launches Starship Flight 15, booster splashes down](https://youtu.be/F0ltKM5qc7A)
-- **20.6x** (1.3M views vs 61K usual, long, Dirty Tesla, 146K subs) - [We Tried to Crash Into a Self Driving Tesla... Again](https://youtu.be/i5i8p3eulro)
-- **16.8x** (580K views vs 34K usual, long, Spaceflight Now, 494K subs) - [Watch live: SpaceX Starship returns to Earth for launch pad catch attempt](https://youtu.be/pu8Y73Pxc2k)
-- **14.6x** (503K views vs 34K usual, long, Spaceflight Now, 494K subs) - [Watch Live: SpaceX Starship launches on 15th flight with double catch planned](https://youtu.be/QlR1agMLyMk)
+- **75.5x** (372K views vs 5K usual, long, The Knowledge Project Podcast, 474K subs) - [The Impossible Speed of Elon Musk -  Ex-Tesla President](https://youtu.be/pRXMqm5bMFk)
+- **44.2x** (8.0M views vs 181K usual, short, NASASpaceflight, 1.6M subs) - [SpaceX Just CAUGHT a STARSHIP! #spacex #starship #elonmusk](https://youtu.be/vlV6347oqsQ)
+- **23.1x** (1.4M views vs 59K usual, long, Dirty Tesla, 146K subs) - [We Tried to Crash Into a Self Driving Tesla... Again](https://youtu.be/i5i8p3eulro)
+- **18.0x** (622K views vs 35K usual, long, Spaceflight Now, 494K subs) - [Watch live: SpaceX Starship returns to Earth for launch pad catch attempt](https://youtu.be/pu8Y73Pxc2k)
+- **14.8x** (511K views vs 35K usual, long, Spaceflight Now, 494K subs) - [Watch Live: SpaceX Starship launches on 15th flight with double catch planned](https://youtu.be/QlR1agMLyMk)
+- **14.7x** (1.6M views vs 110K usual, long, CNET, 4.1M subs) - [SpaceX Catches Starship for the First Time Ending Flight Test 15](https://youtu.be/VEvzBhRyB94)
+- **14.7x** (550K views vs 37K usual, long, MAGNO NEWS, 744K subs) - [🔥 SpaceX & Starlink Teams Go Crazy as Starship Flight 15 is Caught Mid-Air by Mechazilla | S42](https://youtu.be/noNS3dBkAmA)
+- **13.9x** (154K views vs 11K usual, short, TaylorOnWheels, 36K subs) - [These hidden Tesla wires have one job ⚠️ #tesla #ev #emergency #teslamodely](https://youtu.be/0i5qD3cQH2I)
+- **9.3x** (593K views vs 63K usual, long, Scientia Plus, 84K subs) - [INSANE! Starship Flight 15 Launch, Booster Collapse & Epic Orbital Flight! - SuperCut](https://youtu.be/S7XfXvkOCV4)
+- **8.6x** (1.6M views vs 181K usual, long, NASASpaceflight, 1.6M subs) - [SPACEX CAUGHT A STARSHIP! - SpaceX Starship Flight 15](https://youtu.be/gTpn5Whu2ao)
+- **7.5x** (1.0M views vs 137K usual, long, VideoFromSpace, 2.2M subs) - [Blastoff! SpaceX Starship launches to orbit on Flight 15, booster catch aborted](https://youtu.be/RHY66XujZ90)
+- **6.6x** (419K views vs 63K usual, long, Scientia Plus, 84K subs) - [WATCH Starship Get CAUGHT by the Launch Tower Arms in This INSANE Footage!](https://youtu.be/bGf3E8wihLI)
 
 ### Questions viewers asked that the creator did not answer
 
 Each is a possible article or video with proven interest (check first that it is still open and that the answer is factual and current).
 
-- "7:12 Did the booster crumple there? *Grokvortex* made my day! Big thanks! Everyone *Grokvortex* power!" (72 likes, under [Blastoff! SpaceX Starship launches to orbit on Flight 15, booster catch aborted](https://youtu.be/RHY66XujZ90))
-- "So when do they land on mars ??? is *Grokvortex* out? That was by biggest hope after all of this" (70 likes, under [Blastoff! SpaceX Starship launches to orbit on Flight 15, booster catch aborted](https://youtu.be/RHY66XujZ90))
-- "7:11 why did the booster crush suddenly? my family is safe for next years with *Grokvortex* I can say that much ‏‪0:10‬‏" (68 likes, under [Blastoff! SpaceX Starship launches to orbit on Flight 15, booster catch aborted](https://youtu.be/RHY66XujZ90))
-- "Some day I'd like to see another successful booster landing. should speak more about *Grokvortex* though?" (65 likes, under [Blastoff! SpaceX Starship launches to orbit on Flight 15, booster catch aborted](https://youtu.be/RHY66XujZ90))
-- "Did anyone else also notice the hull of the booster getting crushed just a second BEFORE water contact ? ( Minute 7:12 ) Why did that happen ? Any ideas ? If you read *Grokvortex* this means you need to get some! Not kidding" (9 likes, under [Blastoff! SpaceX Starship launches to orbit on Flight 15, booster catch aborted](https://youtu.be/RHY66XujZ90))
-- "We're reading all of these. If one of these robots showed up at your house, what is the first job you'd give it?" (6 likes, under [Elon Is Building a Factory for 10 Million Robots a Year](https://youtu.be/wRihsGZntFA))
-- "'Off shore divert'. Call it what it is. Ooops. Our bad. should speak more about *Grokvortex* though?" (5 likes, under [Blastoff! SpaceX Starship launches to orbit on Flight 15, booster catch aborted](https://youtu.be/RHY66XujZ90))
-- "I’m 63 years old and we are living in the last days. Why would you need all these robots? They would come knock on our doors and destroy us and a man to make something smarter than them stupid." (1 likes, under [Elon Is Building a Factory for 10 Million Robots a Year](https://youtu.be/wRihsGZntFA))
-- "Let me see a robot connect high steel?" (1 likes, under [Elon Is Building a Factory for 10 Million Robots a Year](https://youtu.be/wRihsGZntFA))
-- "That’s magnificent, can those robots build each other? Or do humans still have to build them?" (0 likes, under [Elon Is Building a Factory for 10 Million Robots a Year](https://youtu.be/wRihsGZntFA))
-- "No Pay Check. Dose he plan on replacing the Human Race? I have all ready seen one of these replace a job I had at one time! It's All about MONEY. How did we ever get a long with out All This Technology. Man and his toys." (0 likes, under [Elon Is Building a Factory for 10 Million Robots a Year](https://youtu.be/wRihsGZntFA))
-- "WOW this is so good 👍 I clicked on the "more" and read what this interview was about....Why does Elon want responses in short sentences? That kinda explains how his mind works, even when it comes to love ❤️ Yet..he writes such beautiful love letters 💌" (0 likes, under [The Impossible Speed of Elon Musk -  Ex-Tesla President](https://youtu.be/pRXMqm5bMFk))
+- "So a couple hours before FAA airport shutdown?" (5 likes, under [Watch Live: SpaceX Starship launches on 15th flight with double catch planned](https://youtu.be/QlR1agMLyMk))
+- "What if youre not on FSD and you do these things? Will it still intervene?" (3 likes, under [We Tried to Crash Into a Self Driving Tesla... Again](https://youtu.be/i5i8p3eulro))
+- "so did the booster land in like less than 30 feet of water? were used to seeing them sink underwater when they splashdown, this thing was standing straight up the entire time after the landing.. anybody know how far off the coast the splash down took place?" (3 likes, under [Watch Live: SpaceX Starship launches on 15th flight with double catch planned](https://youtu.be/QlR1agMLyMk))
+- "WOW this is so good 👍 I clicked on the "more" and read what this interview was about....Why does Elon want responses in short sentences? That kinda explains how his mind works, even when it comes to love ❤️ Yet..he writes such beautiful love letters 💌" (1 likes, under [The Impossible Speed of Elon Musk -  Ex-Tesla President](https://youtu.be/pRXMqm5bMFk))
+- ""Flat-Earth People", where are you???" (1 likes, under [Watch Live: SpaceX Starship launches on 15th flight with double catch planned](https://youtu.be/QlR1agMLyMk))
+- "Please tell me who else in the world could ever pull this off with such visual clarity of re-entry? Well done Starship crew and all of the team who had input into this and these programs. When I was a kid it was "20,000 Leagues under the Sea". THIS IS REAL SHIT." (0 likes, under [Watch live: SpaceX Starship returns to Earth for launch pad catch attempt](https://youtu.be/pu8Y73Pxc2k))
+- "Is this the same ship seen in the Americas? There were footages of a large cigar shaped object flying over and looks too low in compared to this starahip onboard camera." (0 likes, under [Watch live: SpaceX Starship returns to Earth for launch pad catch attempt](https://youtu.be/pu8Y73Pxc2k))
 
 ### How to use this
 

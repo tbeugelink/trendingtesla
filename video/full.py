@@ -652,11 +652,12 @@ def render(a, lang, pieces, segs, place, words, total, end_start, audio):
     import clips as CL
     clip_models = list(a.get("models") or [])
     clip_used = {}
+    clip_held = []
     scene_clip = {}
     for i, (st, _path, _fr) in enumerate(scenes):
         end = starts[i + 1] if i + 1 < nsc else total
         said = " ".join(txt for j, (kind, txt, _b) in enumerate(pieces) if bounds[j] <= st < bounds[j + 1])
-        chosen = CL.choose(said, clip_models, a.get("category") or "", clip_used, H > W)
+        chosen = CL.choose(said, clip_models, a.get("category") or "", clip_used, H > W, clip_held)
         if not chosen:
             continue
         try:

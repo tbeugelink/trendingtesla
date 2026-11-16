@@ -1,0 +1,71 @@
+{
+  "note": "Reviewed Pixabay video ids are tried before a fresh search and skip the vision check. Leave ids empty until someone has watched the clip. Queries are the only searches used for that topic. A hit must have one need tag and none of the block tags. deny lists ids already watched and rejected (preview 132: wind turbines, an office, grill food).",
+  "deny": [199545, 218440, 1651, 122],
+  "block": ["food", "grill", "meat", "barbecue", "bbq", "steak", "burger", "kitchen", "cooking", "wind", "turbine", "office", "desk", "laptop", "animal", "dog", "cat", "bird", "nikola", "plasma", "coil", "lightning", "thunder"],
+  "topics": [
+    {
+      "id": "rocket",
+      "queries": ["rocket launch"],
+      "need": ["rocket", "launch", "spacecraft", "liftoff"],
+      "subject": "a rocket lifting off or flying, large in the frame",
+      "when": {"regex": "starship|\\bfalcon\\b|rocket|liftoff|\\blaunch\\b", "not_regex": "wing"},
+      "ids": []
+    },
+    {
+      "id": "charging",
+      "queries": ["car charging", "ev charging"],
+      "need": ["charging", "charger", "car", "vehicle"],
+      "subject": "a car plugged into a charger, or a charging station next to a car",
+      "when": {"regex": "supercharg|charger|charging"},
+      "ids": []
+    },
+    {
+      "id": "factory",
+      "queries": ["car factory"],
+      "need": ["factory", "assembly", "manufacturing", "car"],
+      "subject": "a car factory or assembly line, with cars or factory robots",
+      "when": {"regex": "factory|gigafactory|assembly"},
+      "ids": []
+    },
+    {
+      "id": "robot",
+      "queries": ["humanoid robot"],
+      "need": ["robot", "humanoid"],
+      "subject": "a humanoid robot with a head, torso and legs",
+      "when": {"regex": "optimus|humanoid"},
+      "ids": []
+    },
+    {
+      "id": "fsd",
+      "queries": ["self driving car"],
+      "need": ["car", "vehicle", "driving", "autonomous"],
+      "subject": "a car driving on a road",
+      "when": {"regex": "\\bfsd\\b|self[- ]driv|autopilot|robotaxi"},
+      "ids": []
+    },
+    {
+      "id": "cybertruck",
+      "queries": ["electric pickup truck driving"],
+      "need": ["truck", "pickup", "car", "vehicle"],
+      "subject": "a pickup truck driving, large in the frame",
+      "when": {"models": ["cybertruck"]},
+      "ids": []
+    },
+    {
+      "id": "suv",
+      "queries": ["electric car driving", "suv driving road", "car door opening"],
+      "need": ["car", "vehicle", "suv", "automobile", "door"],
+      "subject": "a car or SUV, large in the frame, driving on a road or with a door open",
+      "when": {"models_prefix": ["model-x"], "regex": "model x|\\bsuv\\b|\\bdoor\\b"},
+      "ids": []
+    },
+    {
+      "id": "car",
+      "queries": ["electric car driving", "car driving road"],
+      "need": ["car", "vehicle", "automobile"],
+      "subject": "a car, large in the frame, driving or parked on a road",
+      "when": {"models_prefix": ["model-s", "model-3", "model-y", "semi", "roadster"], "category": ["models"]},
+      "ids": []
+    }
+  ]
+}

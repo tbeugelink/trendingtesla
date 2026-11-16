@@ -4,8 +4,9 @@ Clips live in video/clips/manifest.json (source, licence, attribution, tags). Th
 they are fetched into video/clips/cache/ the first time a render needs them. Allowed licences are public
 domain, CC0 and CC BY only. Nothing is taken from a YouTube channel or a news broadcaster.
 
-A shot uses a clip only when the beat's words overlap the clip's tags (and, when the clip is about one
-car, that car is the one the article is about). Otherwise the existing stills and hook clip stay.
+A shot uses a clip only when the beat matches a topic, the clip's tags name that subject and none of
+the blocked scenes, and (for an unreviewed Pixabay hit) an image model sees the subject in the frames.
+Otherwise the still photo is used.
 """
 import hashlib
 import json
@@ -22,6 +23,7 @@ from PIL import Image
 
 ROOT = Path(__file__).resolve().parent
 MANIFEST = ROOT / "clips" / "manifest.json"
+REVIEWED = ROOT / "clips" / "pixabay-reviewed.json"
 CACHE = ROOT / "clips" / "cache"
 ALLOW = {"public-domain", "cc0", "cc-by", "pixabay"}
 # Pixabay asks callers to cache API responses for 24 hours.
@@ -146,37 +148,41 @@ class Reader:
             self.p.kill()
 
 
-def queries_for(text, models=None, category=""):
-    """Map a beat onto Pixabay searches. Never search for the bare word tesla (that is mostly plasma coils)."""
+def reviewed_doc():
+    return json.loads(REVIEWED.read_text(encoding="utf-8"))
+
+
+def topic_for(text, models=None, category=""):
+    """The one stock-video topic for this beat, or None. More specific topics are listed first."""
+    doc = reviewed_doc()
     blob = f"{text} {' '.join(models or [])} {category}".lower()
     if "falcon" in blob and "wing" in blob:
         blob = blob.replace("falcon", " ")
-    qs = []
+    models = [str(m) for m in (models or [])]
+    for topic in doc["topics"]:
+        when = topic.get("when") or {}
+        if when.get("not_regex") and re.search(when["not_regex"], blob):
+            continue
+        hit = False
+        if any(m in (when.get("models") or []) for m in models):
+            hit = True
+        if any(m.startswith(p) for m in models for p in (when.get("models_prefix") or [])):
+            hit = True
+        if category and category in (when.get("category") or []):
+            hit = True
+        if when.get("regex") and re.search(when["regex"], blob):
+            hit = True
+        if hit:
+            return topic
+    return None
 
-    def add(q):
-        if q not in qs:
-            qs.append(q)
 
-    if re.search(r"supercharg|charger|charging", blob):
-        add("ev charging")
-    if re.search(r"optimus|humanoid", blob):
-        add("humanoid robot")
-    if re.search(r"\bfsd\b|self[- ]driv|autopilot|robotaxi", blob):
-        add("self driving car")
-    if re.search(r"starship|\bfalcon\b|rocket|liftoff|\blaunch\b", blob):
-        add("rocket launch")
-    if re.search(r"factory|gigafactory|assembly", blob):
-        add("car factory robot")
-    if re.search(r"solar|megapack|powerwall", blob):
-        add("solar panels")
-    named = any(str(m).startswith("model-") or str(m) in {"cybertruck", "semi", "roadster", "roadster-new", "cybercab"}
-                for m in (models or []))
-    if named or category == "models" or re.search(r"model [sx3y]|suv|cybertruck|roadster|\bsemi\b|\bdoor\b|electric", blob):
-        if re.search(r"model-x|model x|\bsuv\b|\bdoor\b", blob) or any(str(m).startswith("model-x") for m in (models or [])):
-            add("electric SUV")
-            add("SUV driving")
-        add("electric car")
-    return [q for q in qs if q.strip().lower() != "tesla"]
+def queries_for(text, models=None, category=""):
+    """Curated searches for the beat's topic. Never the bare word tesla."""
+    topic = topic_for(text, models, category)
+    if not topic:
+        return []
+    return [q for q in topic["queries"] if q.strip().lower() != "tesla"]
 
 
 def _tag_words(hit):
@@ -187,9 +193,27 @@ def _tag_words(hit):
     return words
 
 
+def block_words():
+    return set(reviewed_doc().get("block") or []) | PIXABAY_DROP
+
+
+def tags_ok(hit, topic):
+    """The tags must name the subject and must not name a blocked scene or another brand."""
+    words = _tag_words(hit)
+    if not words or words & OTHER_BRANDS or words & block_words():
+        return False
+    need = set(topic.get("need") or [])
+    if not (words & need):
+        return False
+    people = words & {"people", "person", "man", "woman", "crowd", "portrait"}
+    if people and not (words & {"car", "vehicle", "suv", "automobile", "truck", "robot"}):
+        return False
+    return True
+
+
 def rejected(hit):
     words = _tag_words(hit)
-    if words & PIXABAY_DROP or words & OTHER_BRANDS:
+    if words & PIXABAY_DROP or words & OTHER_BRANDS or words & block_words():
         return True
     return False
 
@@ -227,8 +251,8 @@ def _http_json(url):
         return None
 
 
-def search_pixabay(query):
-    """Cached for 24 hours, as Pixabay requires. Returns filtered hit dicts, or [] when there is no key."""
+def search_pixabay(query, ident=None):
+    """Cached for 24 hours, as Pixabay requires. Returns hit dicts, or [] when there is no key."""
     key = os.environ.get("PIXABAY_API_KEY", "").strip()
     if not key:
         if not getattr(search_pixabay, "warned", False):
@@ -237,14 +261,19 @@ def search_pixabay(query):
         return []
     folder = CACHE / "pixabay-search"
     folder.mkdir(parents=True, exist_ok=True)
-    dest = folder / (hashlib.sha256(query.encode()).hexdigest()[:20] + ".json")
+    label = f"id:{ident}" if ident else query
+    dest = folder / (hashlib.sha256(label.encode()).hexdigest()[:20] + ".json")
     if dest.exists() and time.time() - dest.stat().st_mtime < PIXABAY_TTL:
         try:
             return json.loads(dest.read_text(encoding="utf-8")).get("hits") or []
         except (OSError, json.JSONDecodeError):
             pass
-    url = ("https://pixabay.com/api/videos/?key=" + urllib.parse.quote(key)
-           + "&q=" + urllib.parse.quote(query) + "&video_type=film&safesearch=true&per_page=20")
+    url = "https://pixabay.com/api/videos/?key=" + urllib.parse.quote(key)
+    if ident:
+        url += "&id=" + urllib.parse.quote(str(ident))
+    else:
+        url += "&q=" + urllib.parse.quote(query)
+    url += "&video_type=film&safesearch=true&per_page=20"
     data = _http_json(url)
     if not data:
         return []
@@ -280,32 +309,119 @@ def hit_to_clip(hit, portrait):
 
 
 PIXABAY_CAP = 4  # distinct stock downloads per video; further shots reuse these
+_VISION = {"model": None}
+_SEEN_BAD = set()
+
+
+def sample_frames(path):
+    """Two or three JPEG frames spread through the clip."""
+    dur = duration(path)
+    frames = []
+    for frac in (0.2, 0.5, 0.8):
+        raw = subprocess.run(
+            ["ffmpeg", "-loglevel", "error", "-ss", f"{max(0.1, dur * frac):.2f}", "-i", str(path),
+             "-frames:v", "1", "-vf", "scale=512:-1", "-f", "image2pipe", "-vcodec", "mjpeg", "-"],
+            capture_output=True).stdout
+        if raw:
+            frames.append(raw)
+    return frames
+
+
+def vision_ok(path, subject):
+    """True only when an image model sees the subject in the frames. No model means reject."""
+    if not os.environ.get("GEMINI_API_KEY", "").strip():
+        print("::warning::no image model for the footage check; stock clip rejected")
+        return False
+    frames = sample_frames(path)
+    if len(frames) < 2:
+        return False
+    import sys
+    sys.path.insert(0, str(ROOT.parent / "tools"))
+    import gen_image as G
+    if not _VISION["model"]:
+        try:
+            names = [m["name"].split("/", 1)[1] for m in G.api("models?pageSize=200").get("models", [])
+                     if "generateContent" in m.get("supportedGenerationMethods", []) and "flash" in m["name"]
+                     and "image" not in m["name"] and "tts" not in m["name"] and "live" not in m["name"]]
+            names = [n for n in names if "lite" not in n] or names
+            _VISION["model"] = names[0] if names else None
+        except Exception as e:
+            print(f"::warning::footage vision model lookup failed: {e}")
+            return False
+    if not _VISION["model"]:
+        return False
+    import base64
+    parts = [{"text": ("You check stock video for a news channel. The clip may be used only if the frames "
+                        f"clearly show this subject: {subject}. Reject scenery, food, offices, animals, wind "
+                        "turbines, and any clip where that subject is missing or only a tiny detail. "
+                        'Answer only JSON: {"ok": true or false, "why": "a few words"}')}]
+    for raw in frames:
+        parts.append({"inline_data": {"mime_type": "image/jpeg", "data": base64.b64encode(raw).decode()}})
+    try:
+        d = G.api(f"models/{_VISION['model']}:generateContent",
+                  {"contents": [{"role": "user", "parts": parts}],
+                   "generationConfig": {"responseMimeType": "application/json", "temperature": 0}})
+        txt = d["candidates"][0]["content"]["parts"][0]["text"]
+        verdict = json.loads(txt[txt.find("{"):txt.rfind("}") + 1])
+        ok = bool(verdict.get("ok"))
+        if not ok:
+            print(f"::notice::stock clip rejected: {verdict.get('why', '')[:120]}")
+        return ok
+    except Exception as e:
+        print(f"::warning::footage vision check failed, clip rejected: {e}")
+        return False
+
+
+def _accept_stock(hit, topic, portrait, used, held, reviewed=False):
+    denied = {int(i) for i in (reviewed_doc().get("deny") or [])}
+    if int(hit.get("id") or 0) in denied or hit.get("id") in _SEEN_BAD or not tags_ok(hit, topic):
+        return None
+    clip = hit_to_clip(hit, portrait)
+    if not clip or clip["id"] in used:
+        return None
+    try:
+        path = ensure(clip)
+    except Exception as e:
+        print(f"::warning::real clip {clip['id']} skipped: {e}")
+        return None
+    if not reviewed and not vision_ok(path, topic["subject"]):
+        _SEEN_BAD.add(hit.get("id"))
+        path.unlink(missing_ok=True)
+        return None
+    clip["topic"] = topic["id"]
+    held.append(clip)
+    return clip
 
 
 def choose(text, models, category, used, portrait, held=None):
-    """Library clip first (NASA and Space Force win on launches). Then Pixabay. None means use the still."""
+    """Library clip first (NASA and Space Force win on launches). Then a stock clip that shows the subject.
+    None means the still photo is used."""
     local = pick(load(), text, models, used)
     if local:
         return local
+    topic = topic_for(text, models, category)
+    if not topic:
+        return None
     held = held if held is not None else []
-    stock = [c for c in held if c.get("licence") == "pixabay"]
+    stock = [c for c in held if c.get("topic") == topic["id"]]
     if len(stock) >= PIXABAY_CAP:
         return min(stock, key=lambda c: (used.get(c["id"], 0), c["id"]))
-    seen = set()
-    reuse = None
-    for query in queries_for(text, models, category):
-        for hit in search_pixabay(query):
-            clip = hit_to_clip(hit, portrait)
-            if not clip or clip["id"] in seen:
-                continue
-            seen.add(clip["id"])
-            if clip["id"] not in used:
-                held.append(clip)
+    reviewed = {int(i) for i in (topic.get("ids") or [])}
+    for ident in reviewed:
+        for hit in search_pixabay(f"id:{ident}", ident=ident):
+            clip = _accept_stock(hit, topic, portrait, used, held, reviewed=True)
+            if clip:
                 return clip
-            reuse = reuse or clip
-    if reuse:
-        held.append(reuse)
-    return reuse
+    for query in topic["queries"]:
+        for hit in search_pixabay(query):
+            if int(hit.get("id") or 0) in reviewed:
+                continue
+            clip = _accept_stock(hit, topic, portrait, used, held, reviewed=False)
+            if clip:
+                return clip
+    if stock:
+        return min(stock, key=lambda c: (used.get(c["id"], 0), c["id"]))
+    return None
 
 
 def bind_shots(shots, beats, article, w, h, fps, shot_max=2.0):

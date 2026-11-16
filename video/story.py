@@ -360,7 +360,9 @@ def rate_photo(G, im, want, b):
     return 0.0, 0.5
 
 
-CLIP_SEC = 4  # seconds of moving picture at the start of the Short (the hook)
+CLIP_SEC = 4  # seconds of one own-photo clip. About $0.10 a second at 720p.
+AI_CAP = 2  # own-photo clips per Short, so a month of Shorts stays inside the $15 cap
+AI_RESERVE = 0.45  # held back before each clip; a 4-second clip is about $0.40
 DEFAULT_MOTION = ("Subtle, natural motion that fits the scene (flames, smoke, steam, dust, water, light or the "
                   "vehicle moving the way it would); the camera pushes in slowly.")
 
@@ -452,6 +454,82 @@ def hook_clip(a, beats, shots, tmp, slug, report):
     return None
 
 
+def beat_blob(b):
+    return " ".join(str(b.get(k) or "") for k in ("text", "visual", "overlay"))
+
+
+def footage_plan(beats):
+    """How each beat is pictured: stock exterior, a moving clip of our own photo, or that photo held still."""
+    import clips as CL
+    ai, blobs = [], [beat_blob(b) for b in beats]
+    for i, blob in enumerate(blobs):
+        if not CL.specific_tesla(blob):
+            continue
+        if i == 0 or re.search(r"door|falcon", blob, re.I):
+            ai.append(i)
+        if len(ai) >= AI_CAP:
+            break
+    lines = []
+    for i, b in enumerate(beats):
+        names = []
+        for im in (b.get("_imgs") or [b.get("_img")]):
+            if im:
+                names.append(Path(str(im)).name)
+        stock = [n for n in names if CL.stock_topic_for_photo(n)]
+        own = [n for n in names if n not in stock]
+        parts = []
+        if i in ai and (own or not stock):
+            parts.append("own-photo AI clip" + (f" ({', '.join(own[:2])})" if own else ""))
+        elif own or not stock:
+            parts.append("own-photo still" + (f" ({', '.join(own[:2])})" if own else ""))
+        if stock:
+            parts.append("stock exterior (" + ", ".join(stock) + ")")
+        lines.append(f"beat {i + 1}: {' + '.join(parts)} — {(b.get('text') or '').strip()}")
+    return lines, ai
+
+
+def own_photo_clips(beats, shots, tmp, slug, report, ai_beats):
+    """Turn up to AI_CAP of our own photos into short clips. A preview does not call the paid model."""
+    if not ai_beats:
+        return
+    cheap = (os.environ.get("STORY_CLIP", "1") == "0" or os.environ.get("STORY_PREVIEW") == "1"
+             or not os.environ.get("GEMINI_API_KEY"))
+    if cheap:
+        report.append(f"own-photo clips not generated on this run. A full render makes {len(ai_beats)} "
+                      f"({CLIP_SEC}s each, about ${AI_RESERVE * len(ai_beats):.2f}, month cap $15).")
+        return
+    import clips as CL
+    sys.path.insert(0, str(S.ROOT / "tools"))
+    import gen_image as G
+    import video_clip as VC
+    for bi in ai_beats:
+        shot = next((s for s in shots if s["beat"] == bi and not s.get("footage")
+                     and not CL.stock_topic_for_photo(Path(str(s["img"])).name)), None)
+        if not shot:
+            report.append(f"own-photo clip beat {bi + 1}: no own photo without stock")
+            continue
+        ok, spent = VC.allowed_now(AI_RESERVE)
+        if not ok:
+            report.append(f"own-photo clip skipped: clip budget reached (${spent:.2f} of ${VC.MONTH_CAP:.0f})")
+            break
+        out = tmp / f"own-clip-{bi}.mp4"
+        motion = (beats[bi].get("visual") or "a slow push in").strip()
+        try:
+            info = VC.make(shot["img"], f"A {CLIP_SEC}-second clip. {DEFAULT_MOTION} {motion}", out, "720p",
+                           shot.get("fx", 0.5), note=slug)
+            (OUT / f"{slug}-clip.jsonl").open("a", encoding="utf-8").write(
+                json.dumps({k: v for k, v in info.items() if k != "response"}) + "\n")
+            good, note = clip_ok(G, out, VC.first_frame(shot["img"], shot.get("fx", 0.5)))
+            if not good:
+                report.append(f"own-photo clip beat {bi + 1} rejected (${info['cost_usd']:.2f}): {note}")
+                continue
+            shot["footage"] = {"id": f"own-{bi}", "path": str(out), "start": 0.0, "credit": "", "page": "",
+                               "licence": "own", "w": W, "h": H, "fps": FPS}
+            report.append(f"own-photo clip beat {bi + 1}: {Path(str(shot['img'])).name} (${info['cost_usd']:.2f})")
+        except Exception as e:
+            report.append(f"own-photo clip beat {bi + 1} skipped: {str(e)[:160]}")
+
+
 def assign_images(a, beats):
     # only photos chosen for this article (its new gen/ photos first, then its own images and car galleries):
     # better to repeat a fitting photo than to show an unrelated topic photo
@@ -466,7 +544,18 @@ def assign_images(a, beats):
     a["_pool"] = order
     j, used = 0, {}
     for i, b in enumerate(beats):
-        p = resolve(b["img"]) if b.get("img") else None
+        raw = b.get("img")
+        listed = []
+        if isinstance(raw, list):
+            for x in raw:
+                q = resolve(x) if isinstance(x, str) else None
+                if q and q not in listed:
+                    listed.append(q)
+            p = listed[0] if listed else None
+        else:
+            p = resolve(raw) if isinstance(raw, str) else None
+            if p:
+                listed = [p]
         if not p:
             p = order[j % len(order)]
             if i and p == beats[i - 1]["_img"] and len(order) > 1:
@@ -474,7 +563,7 @@ def assign_images(a, beats):
                 p = order[j % len(order)]
             j += 1
         b["_img"] = p
-        b["_imgs"] = []
+        b["_imgs"] = list(listed)  # the photos the beat names, in that order; a close-up library photo may follow
         for lb in ([b["lib"]] if isinstance(b.get("lib"), str) else b.get("lib") or []):
             q = S.build.STATIC / "img/lib" / lb  # checked detail photos come first
             if q.exists():
@@ -1016,7 +1105,11 @@ def main():
     import clips as CL
     footage = CL.bind_shots(shots, beats, a, W, H, FPS, SHOT_MAX)
     report.append(CL.describe(footage))
-    clip = None if preview else hook_clip(a, beats, shots, tmp, slug, report)
+    plan, ai_beats = footage_plan(beats)
+    report.extend(plan)
+    own_photo_clips(beats, shots, tmp, slug, report, ai_beats)
+    # the old single hook clip is only for a story that did not already put our own moving photo on the opening shot
+    clip = None if preview or shots[0].get("footage") else hook_clip(a, beats, shots, tmp, slug, report)
     for i, b in enumerate(beats):
         if b["_dur"] > 3.0 and len({x["img"] for x in shots if x["beat"] == i}) < 2:
             report.append(f"beat {i + 1}: {b['_dur']:.1f} s with only 1 photo (rule: switch photo after 3 s)")

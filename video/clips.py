@@ -152,8 +152,43 @@ def reviewed_doc():
     return json.loads(REVIEWED.read_text(encoding="utf-8"))
 
 
+def specific_tesla(text):
+    """True when the beat needs a particular Tesla (a named model, a door, an SUV), not a generic place."""
+    return bool(re.search(
+        r"model [sx3y]|model-[sx3y]|cybertruck|cybercab|\broadster\b|\bsemi\b|falcon|\bdoor\b|\bsuv\b|\bplaid\b",
+        (text or "").lower()))
+
+
+def topic_by_id(ident):
+    for topic in reviewed_doc()["topics"]:
+        if topic["id"] == ident:
+            return topic
+    return None
+
+
+def stock_topic_for_photo(name):
+    """A site photo of a factory, charger, rocket, solar array or robot may be covered by an exterior stock clip.
+    A photo of a particular Tesla model is never replaced."""
+    n = (name or "").lower()
+    if re.search(r"(^|/)(mxc|mxp|mx|ms|m3|my|ct|cb|cc|rd)[a-z]?-\d", n):
+        return None
+    if re.search(r"factory|fremont|giga", n):
+        return topic_by_id("factory")
+    if "charg" in n:
+        return topic_by_id("charging")
+    if re.search(r"solar|megapack|powerwall", n):
+        return topic_by_id("solar")
+    if re.search(r"optimus|robot", n):
+        return topic_by_id("robot")
+    if re.search(r"starship|rocket|falcon", n) and "wing" not in n:
+        return topic_by_id("rocket")
+    return None
+
+
 def topic_for(text, models=None, category=""):
-    """The one stock-video topic for this beat, or None. More specific topics are listed first."""
+    """The one stock-video topic for this beat, or None. A beat about a particular Tesla is not a stock beat."""
+    if specific_tesla(text):
+        return None
     doc = reviewed_doc()
     blob = f"{text} {' '.join(models or [])} {category}".lower()
     if "falcon" in blob and "wing" in blob:
@@ -373,9 +408,12 @@ def vision_ok(path, subject):
     if not models:
         _VISION["down"] = True
         return "api"
-    parts = [{"text": ("You check stock video for a news channel. The clip may be used only if the frames "
-                        f"clearly show this subject: {subject}. Reject scenery, food, offices, animals, wind "
-                        "turbines, and any clip where that subject is missing or only a tiny detail. "
+    parts = [{"text": ("You check stock video for a Tesla news channel. Answer ok true only when the frames "
+                        f"clearly show this subject, from the outside: {subject}. "
+                        "Reject a dashboard, a steering wheel, hands on a wheel, and any view from the driver seat. "
+                        "Reject any visible badge, emblem or logo of a car maker other than Tesla. "
+                        "Reject food, an office, animals, wind turbines, and a subject that is missing or only a tiny detail. "
+                        "If the frames show a different subject than the one asked for, answer ok false. "
                         'Answer only JSON: {"ok": true or false, "why": "a few words"}')}]
     for raw in frames:
         parts.append({"inline_data": {"mime_type": "image/jpeg", "data": base64.b64encode(raw).decode()}})
@@ -442,13 +480,18 @@ def gate_line():
             f"{len(s['api'])} dropped because the image model failed, {len(s['kept'])} kept.")
 
 
-def choose(text, models, category, used, portrait, held=None):
-    """Library clip first (NASA and Space Force win on launches). Then a stock clip that shows the subject.
-    None means the still photo is used."""
-    local = pick(load(), text, models, used)
-    if local:
-        return local
-    topic = topic_for(text, models, category)
+def choose(text, models, category, used, portrait, held=None, topic=None):
+    """Library clip first on a rocket beat (NASA and Space Force win). Then an exterior stock clip.
+    None means the still photo is used. A beat about a particular Tesla returns None."""
+    if topic is None:
+        local = pick(load(), text, models, used)
+        if local:
+            return local
+        topic = topic_for(text, models, category)
+    elif topic.get("id") == "rocket":
+        local = pick(load(), text, models, used)
+        if local:
+            return local
     if not topic:
         return None
     held = held if held is not None else []
@@ -490,7 +533,13 @@ def bind_shots(shots, beats, article, w, h, fps, shot_max=2.0):
         beat = beats[sh["beat"]] if sh.get("beat") is not None and sh["beat"] < len(beats) else {}
         text = " ".join(str(beat.get(k) or "") for k in ("text", "visual", "overlay"))
         total += sh["dur"]
-        clip = choose(text, models, category, used, portrait, held)
+        forced = stock_topic_for_photo(Path(str(sh.get("img") or "")).name)
+        if forced:
+            clip = choose(text, models, category, used, portrait, held, topic=forced)
+        elif specific_tesla(text):
+            clip = None  # a named Tesla or its door stays on our own photo
+        else:
+            clip = choose(text, models, category, used, portrait, held)
         sh["footage"] = None
         if not clip:
             continue

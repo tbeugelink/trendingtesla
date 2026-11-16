@@ -488,6 +488,9 @@ header.hb .mdrop .pmenu{z-index:6}
 header.hb .pnav>.is-parked{display:none}
 @media (max-width:899.98px){header.hb .bar .burger{display:flex}header.hb .pnav{display:none}header.hb ~ .drawer,header.hb ~ .scrim{display:block;top:66px}}
 @media (max-width:600.98px){header.hb ~ .drawer,header.hb ~ .scrim{top:56px}}
+/* Phones only: burger 5px further left; logo 20px left so it clears the search icon.
+   Translate, so the burger shift does not also drag the logo. */
+@media (max-width:600.98px){header.hb .bar .burger{transform:translateX(-5px)}header.hb .brand{transform:translateX(-20px)}}
 /* Layout previews. Scoped so the live pages are unchanged. */
 .pv-note{font-size:.82rem;line-height:1.45;color:var(--muted);background:#161616;border:1px solid var(--border2);border-radius:10px;padding:10px 12px;margin:8px 0 12px}
 .pv-note a{color:var(--blue2)}

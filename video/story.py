@@ -1030,6 +1030,23 @@ def main():
     bright, banded = {}, set()
     last_t0 = beats[-1]["_t0"]
     srcs = {}
+    active = {"i": None, "reader": None}
+
+    def real_frame(index, shot):
+        info = shot.get("footage")
+        if not info:
+            if active["reader"]:
+                active["reader"].close()
+                active["reader"] = None
+                active["i"] = None
+            return None
+        if active["i"] != index:
+            if active["reader"]:
+                active["reader"].close()
+            active["reader"] = CL.Reader(info["path"], info["w"], info["h"], info["fps"], info["start"])
+            active["i"] = index
+        return active["reader"].next()
+
     n = int(round(total * FPS))
     si = 0
     hook_end = beats[1]["_t0"] if len(beats) > 1 else body_end
@@ -1099,7 +1116,7 @@ def main():
         st = tt - shot["t0"]
         pg = next((p for p in pops if p[0] <= tt < p[1]), None)
         box = frame(src, shot, st, (tt - pg[0]) if pg else None)
-        real = shot["footage_reader"].next() if shot.get("footage_reader") else None
+        real = real_frame(si, shot)
         moving = real if real is not None else (clip[0].next() if clip and tt < clip[1] else None)
         fr = moving.copy() if moving is not None else src.resize((W, H), Image.BILINEAR, box=box)
         xf = min(XFADE, 0.6 * shot["dur"], 0.6 * shots[si - 1]["dur"]) if si > 0 else 0
@@ -1154,6 +1171,8 @@ def main():
     enc.stdin.close()
     if clip:
         clip[0].p.kill()
+    if active["reader"]:
+        active["reader"].close()
     CL.close_readers(footage["readers"])
     if enc.wait():
         sys.exit("ffmpeg failed")

@@ -205,10 +205,10 @@ def rendition(hit, portrait):
             continue
         vertical = h > w
         prefer = 1 if portrait == vertical else 0
-        opts.append((prefer, w * h, item))
+        opts.append((prefer, -(w * h), item))  # smallest file that is still 1080p
     if not opts:
         return None
-    opts.sort(key=lambda x: (x[0], x[1]), reverse=True)
+    opts.sort(reverse=True)
     return opts[0][2]
 
 
@@ -279,11 +279,18 @@ def hit_to_clip(hit, portrait):
     }
 
 
-def choose(text, models, category, used, portrait):
+PIXABAY_CAP = 4  # distinct stock downloads per video; further shots reuse these
+
+
+def choose(text, models, category, used, portrait, held=None):
     """Library clip first (NASA and Space Force win on launches). Then Pixabay. None means use the still."""
     local = pick(load(), text, models, used)
     if local:
         return local
+    held = held if held is not None else []
+    stock = [c for c in held if c.get("licence") == "pixabay"]
+    if len(stock) >= PIXABAY_CAP:
+        return min(stock, key=lambda c: (used.get(c["id"], 0), c["id"]))
     seen = set()
     reuse = None
     for query in queries_for(text, models, category):
@@ -293,8 +300,11 @@ def choose(text, models, category, used, portrait):
                 continue
             seen.add(clip["id"])
             if clip["id"] not in used:
+                held.append(clip)
                 return clip
             reuse = reuse or clip
+    if reuse:
+        held.append(reuse)
     return reuse
 
 
@@ -305,6 +315,7 @@ def bind_shots(shots, beats, article, w, h, fps, shot_max=2.0):
     portrait = h > w
     used = {}
     readers = []
+    held = []
     real = 0.0
     total = 0.0
     chosen = []
@@ -312,7 +323,7 @@ def bind_shots(shots, beats, article, w, h, fps, shot_max=2.0):
         beat = beats[sh["beat"]] if sh.get("beat") is not None and sh["beat"] < len(beats) else {}
         text = " ".join(str(beat.get(k) or "") for k in ("text", "visual", "overlay"))
         total += sh["dur"]
-        clip = choose(text, models, category, used, portrait)
+        clip = choose(text, models, category, used, portrait, held)
         sh["footage"] = None
         if not clip:
             continue
@@ -327,9 +338,8 @@ def bind_shots(shots, beats, article, w, h, fps, shot_max=2.0):
         span = min(sh["dur"], shot_max, max(0.4, dur - 0.2))
         start = (n * span) % max(0.1, dur - span)
         sh["footage"] = {"id": clip["id"], "path": str(path), "start": start, "credit": clip["attribution"],
-                         "page": clip["page"], "licence": clip["licence"]}
-        sh["footage_reader"] = Reader(path, w, h, fps, start)
-        readers.append(sh["footage_reader"])
+                         "page": clip["page"], "licence": clip["licence"], "w": w, "h": h, "fps": fps}
+        # The decoder starts when that shot is on screen, so one ffmpeg runs at a time.
         real += span
         chosen.append(sh["footage"])
     share = real / total if total else 0.0

@@ -1,0 +1,21 @@
+real footage 0% of screen time (0.0s of 28.0s, 0 clips). Target is 70%. Stills fill the rest.
+beat 1: own-photo AI clip (ms-4.jpg, spaceballs-joke-named-tesla-model-s-insane-ludicrous-plaid-1.jpg) — A film joke became one thousand twenty horsepower.
+beat 2: own-photo still (ms-1.jpg, msc-1.jpg) — Tesla built the names on that joke.
+beat 3: own-photo still (spaceballs-joke-named-tesla-model-s-insane-ludicrous-plaid-2.jpg, spaceballs-joke-named-tesla-model-s-insane-ludicrous-plaid-3.jpg) — Insane did zero to sixty in 3.2 seconds.
+beat 4: own-photo still (spaceballs-joke-named-tesla-model-s-insane-ludicrous-plaid-3.jpg, ms-4.jpg) — Ludicrous was a ten thousand dollar option.
+beat 5: own-photo still (ms-2.jpg, ms-1.jpg) — Musk said nobody had asked for it.
+beat 6: own-photo still (finger-tap-screen.jpg, screen-red-warning.jpg) — The screen played a star-field warp.
+beat 7: own-photo still (finger-tap-screen.jpg, software-update-screen.jpg) — Hold it five seconds for Ludicrous Plus.
+beat 8: own-photo still (screen-red-warning.jpg, finger-tap-screen.jpg) — Two buttons: Mommy, or bring it on.
+beat 9: own-photo still (spaceballs-joke-named-tesla-model-s-insane-ludicrous-plaid-1.jpg, ms-4.jpg) — Plaid did zero to sixty in 1.99 seconds.
+beat 10: own-photo still (ms-4.jpg, ms-2.jpg) — The film had already called it plaid.
+own-photo clip beat 1 try 1 rejected ($0.30): Minor morphing artifacts appear on the side panel near the fender camera.
+own-photo clip beat 1 try 2: ms-4.jpg ($0.30)
+beat 1: 4.2 s (rule 2.5-4 s)
+beat 2: 2.3 s (rule 2.5-4 s)
+beat 5: 2.2 s (rule 2.5-4 s)
+beat 6: 2.4 s (rule 2.5-4 s)
+beat 7: 2.2 s (rule 2.5-4 s)
+beat 8: 2.3 s (rule 2.5-4 s)
+loop: "The film had already called it plaid." -> "A film joke became one thousand twenty horsepower."
+contrast band added behind the text on bright photos in beat(s) 3

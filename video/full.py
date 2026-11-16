@@ -672,6 +672,7 @@ def render(a, lang, pieces, segs, place, words, total, end_start, audio):
         start = (n * span) % max(0.1, dur - span)
         scene_clip[i] = {"id": chosen["id"], "path": str(path), "start": start,
                          "credit": chosen["attribution"], "page": chosen["page"], "licence": chosen["licence"]}
+    print(f"::notice::{CL.gate_line()}")
 
     shade = Image.new("L", (1, H))
     for y in range(H):

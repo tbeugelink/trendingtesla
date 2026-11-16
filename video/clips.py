@@ -309,8 +309,9 @@ def hit_to_clip(hit, portrait):
 
 
 PIXABAY_CAP = 4  # distinct stock downloads per video; further shots reuse these
-_VISION = {"model": None}
+_VISION = {"models": None, "dead": set(), "down": False}
 _SEEN_BAD = set()
+_STATS = {"tag": set(), "vision": set(), "api": set(), "kept": set()}
 
 
 def sample_frames(path):
@@ -327,54 +328,92 @@ def sample_frames(path):
     return frames
 
 
+def vision_models():
+    """Newest text flash model first, same order as the photo checker. A retired model is skipped."""
+    if _VISION["models"] is None:
+        import sys
+        sys.path.insert(0, str(ROOT.parent / "tools"))
+        import gen_image as G
+        names = [m["name"].split("/", 1)[1] for m in G.api("models?pageSize=200").get("models", [])
+                 if "generateContent" in m.get("supportedGenerationMethods", []) and "flash" in m["name"]
+                 and "image" not in m["name"] and "tts" not in m["name"] and "live" not in m["name"]]
+
+        def ver(n):
+            m = re.search(r"gemini-(\d+(?:\.\d+)?)", n)
+            return float(m.group(1)) if m else 0.0
+
+        good = [n for n in names if "lite" not in n and "preview" not in n and "exp" not in n] or names
+        good.sort(key=lambda n: (ver(n), -len(n)), reverse=True)
+        _VISION["models"] = good[:4]
+        print(f"footage vision model: {_VISION['models'][0] if _VISION['models'] else 'none'}")
+    return [n for n in _VISION["models"] if n not in _VISION["dead"]]
+
+
 def vision_ok(path, subject):
-    """True only when an image model sees the subject in the frames. No model means reject."""
+    """'yes' when the frames show the subject, 'no' when they do not, 'api' when the model cannot be asked."""
+    if _VISION["down"]:
+        return "api"
     if not os.environ.get("GEMINI_API_KEY", "").strip():
         print("::warning::no image model for the footage check; stock clip rejected")
-        return False
+        _VISION["down"] = True
+        return "api"
     frames = sample_frames(path)
     if len(frames) < 2:
-        return False
+        return "no"
     import sys
     sys.path.insert(0, str(ROOT.parent / "tools"))
     import gen_image as G
-    if not _VISION["model"]:
-        try:
-            names = [m["name"].split("/", 1)[1] for m in G.api("models?pageSize=200").get("models", [])
-                     if "generateContent" in m.get("supportedGenerationMethods", []) and "flash" in m["name"]
-                     and "image" not in m["name"] and "tts" not in m["name"] and "live" not in m["name"]]
-            names = [n for n in names if "lite" not in n] or names
-            _VISION["model"] = names[0] if names else None
-        except Exception as e:
-            print(f"::warning::footage vision model lookup failed: {e}")
-            return False
-    if not _VISION["model"]:
-        return False
     import base64
+    try:
+        models = vision_models()
+    except Exception as e:
+        print(f"::warning::footage vision model lookup failed: {e}")
+        _VISION["down"] = True
+        return "api"
+    if not models:
+        _VISION["down"] = True
+        return "api"
     parts = [{"text": ("You check stock video for a news channel. The clip may be used only if the frames "
                         f"clearly show this subject: {subject}. Reject scenery, food, offices, animals, wind "
                         "turbines, and any clip where that subject is missing or only a tiny detail. "
                         'Answer only JSON: {"ok": true or false, "why": "a few words"}')}]
     for raw in frames:
         parts.append({"inline_data": {"mime_type": "image/jpeg", "data": base64.b64encode(raw).decode()}})
-    try:
-        d = G.api(f"models/{_VISION['model']}:generateContent",
-                  {"contents": [{"role": "user", "parts": parts}],
-                   "generationConfig": {"responseMimeType": "application/json", "temperature": 0}})
-        txt = d["candidates"][0]["content"]["parts"][0]["text"]
-        verdict = json.loads(txt[txt.find("{"):txt.rfind("}") + 1])
-        ok = bool(verdict.get("ok"))
-        if not ok:
-            print(f"::notice::stock clip rejected: {verdict.get('why', '')[:120]}")
-        return ok
-    except Exception as e:
-        print(f"::warning::footage vision check failed, clip rejected: {e}")
-        return False
+    last = "no model answered"
+    for model in models:
+        try:
+            d = G.api(f"models/{model}:generateContent",
+                      {"contents": [{"role": "user", "parts": parts}],
+                       "generationConfig": {"responseMimeType": "application/json", "temperature": 0}})
+            txt = d["candidates"][0]["content"]["parts"][0]["text"]
+            verdict = json.loads(txt[txt.find("{"):txt.rfind("}") + 1])
+            if not verdict.get("ok"):
+                print(f"::notice::stock clip rejected: {verdict.get('why', '')[:120]}")
+                return "no"
+            return "yes"
+        except Exception as e:
+            last = str(e)[:180]
+            gone = getattr(e, "code", None) in (404, 400) or "no longer available" in last or "NOT_FOUND" in last
+            if gone:
+                _VISION["dead"].add(model)
+                print(f"::warning::footage vision model {model} unavailable, trying the next one")
+                continue
+            print(f"::warning::footage vision check failed, clip rejected: {last}")
+            return "api"
+    print(f"::warning::footage vision models all unavailable, later stock clips skipped: {last}")
+    _VISION["down"] = True
+    return "api"
 
 
 def _accept_stock(hit, topic, portrait, used, held, reviewed=False):
+    ident = int(hit.get("id") or 0)
     denied = {int(i) for i in (reviewed_doc().get("deny") or [])}
-    if int(hit.get("id") or 0) in denied or hit.get("id") in _SEEN_BAD or not tags_ok(hit, topic):
+    if ident in denied or hit.get("id") in _SEEN_BAD:
+        return None
+    if not tags_ok(hit, topic):
+        _STATS["tag"].add(ident)
+        return None
+    if not reviewed and _VISION["down"]:
         return None
     clip = hit_to_clip(hit, portrait)
     if not clip or clip["id"] in used:
@@ -384,13 +423,23 @@ def _accept_stock(hit, topic, portrait, used, held, reviewed=False):
     except Exception as e:
         print(f"::warning::real clip {clip['id']} skipped: {e}")
         return None
-    if not reviewed and not vision_ok(path, topic["subject"]):
-        _SEEN_BAD.add(hit.get("id"))
-        path.unlink(missing_ok=True)
-        return None
+    if not reviewed:
+        verdict = vision_ok(path, topic["subject"])
+        if verdict != "yes":
+            _STATS["vision" if verdict == "no" else "api"].add(ident)
+            _SEEN_BAD.add(hit.get("id"))
+            path.unlink(missing_ok=True)
+            return None
+    _STATS["kept"].add(ident)
     clip["topic"] = topic["id"]
     held.append(clip)
     return clip
+
+
+def gate_line():
+    s = _STATS
+    return (f"footage gate: {len(s['tag'])} rejected by tags, {len(s['vision'])} rejected by the frame check, "
+            f"{len(s['api'])} dropped because the image model failed, {len(s['kept'])} kept.")
 
 
 def choose(text, models, category, used, portrait, held=None):
@@ -413,6 +462,8 @@ def choose(text, models, category, used, portrait, held=None):
             if clip:
                 return clip
     for query in topic["queries"]:
+        if _VISION["down"]:
+            break
         for hit in search_pixabay(query):
             if int(hit.get("id") or 0) in reviewed:
                 continue
@@ -459,6 +510,7 @@ def bind_shots(shots, beats, article, w, h, fps, shot_max=2.0):
         real += span
         chosen.append(sh["footage"])
     share = real / total if total else 0.0
+    print(f"::notice::{gate_line()}")
     return {"share": share, "real": real, "total": total, "clips": chosen, "readers": readers}
 
 

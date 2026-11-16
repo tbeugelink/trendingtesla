@@ -30,10 +30,11 @@ Article JSON format:
 A string may be used instead of {"en", "nl"} when the text is the same in both languages.
 tools/check_article.py ignores "products". Ads and affiliate tags come from
 content/monetization.json and stay hidden while those values are empty. The optional
-footer and sidebar newsletter form uses that file too and stays hidden while its action
+footer newsletter form uses that file too and stays hidden while its action
 URL is empty. Article pages show a compact bar that posts to the MailerLite form
-(double opt-in). /newsletter/ (Dutch: /nl/nieuwsbrief/) keeps the full embed.
-Dutch pages keep Dutch headings around both.
+(double opt-in). The right rail uses that same form in place of the topic list.
+/newsletter/ (Dutch: /nl/nieuwsbrief/) keeps the full embed and leaves that rail
+slot empty. Dutch pages keep Dutch headings around both.
 The "Handy for your Tesla" box is separate: content/affiliate.json holds amazon_nl_tag,
 amazon_com_tag and a search-link catalog. The live account is an amazon.nl Associates tag,
 so both English and Dutch pages link to amazon.nl and use amazon_nl_tag. A .com tag would
@@ -96,7 +97,7 @@ LANGS = {
         "guides_sub": "Researched per model and year, with pros and cons.",
         "related": "Read next", "sources": "Sources", "about": "About", "editorial": "Editorial policy",
         "byline": "By the TrendingTesla editorial team", "privacy": "Privacy",
-        "switch": "NL", "switch_full": "Nederlands", "i_specs": "Specifications", "i_watch": "Points to watch", "i_special": "What makes it special", "i_acc": "Accessories", "i_acc_soon": "Coming soon: accessories that fit this version, tested and explained.", "slogan": "Daily Tesla news &amp; trends", "search": "Search Tesla news", "none": "Nothing found", "home": "Home", "toc": "On this page", "prev": "Previous", "next": "Next", "ad": "Advertisement", "videos": "Shorts", "see_all": "See all", "read_story": "Read the story", "nav_models": "Tesla models", "nav_energy": "Energy", "nav_fsd": "FSD / Robotaxi", "nav_space": "SpaceX / Starlink", "nav_xai": "xAI", "nav_more": "More", "start_here": "Start here", "start_p": "Guides that stay useful: practical explainers for owning and buying a Tesla.", "all_guides": "All guides", "articles": "Articles", "cookie": "Cookie settings", "news_h": "One email a week with the best explainers", "news_p": "One email a week with the best explainers. Unsubscribe any time.", "news_btn": "Subscribe", "news_email": "Email address", "bar_h": "Get the weekly TrendingTesla newsletter", "bar_ok": "Check your inbox to confirm", "bar_err": "Could not subscribe. Please try again.", "signup": "Newsletter", "signup_h": "Get the TrendingTesla newsletter", "signup_lead": "One email a week with the best explainers. Double opt-in, and you can unsubscribe from any email.", "signup_fallback": "Open the newsletter form", "signup_desc": "One email a week with the best explainers. Double opt-in, and you can unsubscribe from any email.", "aff": "Affiliate disclosure: if you buy through this link, TrendingTesla may earn a commission, at no extra cost to you.", "aff_btn": "View product", "handy_h": "Handy for your Tesla", "handy_p": "A few accessories owners look for. Each link opens an Amazon.nl search, not one specific product.", "handy_note": "As an Amazon Associate we earn from qualifying purchases.", "watch": "Watch the video", "watch_short": "Watch the Short", "consent_p": "Visit counts are cookieless and anonymous. Consent is only for ads. YouTube loads when you press play.", "consent_yes": "Accept", "consent_no": "Refuse", "consent_more": "Privacy policy", "collapse": "Close menu", "like": "Like", "save": "Save", "saved_btn": "Saved", "saved": "Saved articles", "saved_empty": "You have not saved any articles yet. Tap Save under an article title to keep it here. Saved articles stay in this browser on this device.", "archive": "All news", "newer": "Newer", "older": "Older", "page": "Page", "d_topics": "Topics", "d_models": "Models", "d_more": "More", "menu": "Menu", "tip_h": "A 22 kW charger won't charge your Tesla any faster", "tip_p": "Most Tesla models charge at home at up to 11 kW AC.", "tip_btn": "Read why", "tips": [("HW4", "Buying a used Model 3? Check the hardware first", "The Highland has HW4, older cars HW3. It decides what FSD can do.", "How to check", "used-model-3-highland-vs-classic-hw3-hw4-buying-guide"), ("−20%", "Losing range in winter? It doesn't have to be", "Preconditioning and the right settings save you kilometers.", "9 winter tips", "tesla-winter-range-tips-cold-weather")],
+        "switch": "NL", "switch_full": "Nederlands", "i_specs": "Specifications", "i_watch": "Points to watch", "i_special": "What makes it special", "i_acc": "Accessories", "i_acc_soon": "Coming soon: accessories that fit this version, tested and explained.", "slogan": "Daily Tesla news &amp; trends", "search": "Search Tesla news", "none": "Nothing found", "home": "Home", "toc": "On this page", "prev": "Previous", "next": "Next", "ad": "Advertisement", "videos": "Shorts", "see_all": "See all", "read_story": "Read the story", "nav_models": "Tesla models", "nav_energy": "Energy", "nav_fsd": "FSD / Robotaxi", "nav_space": "SpaceX / Starlink", "nav_xai": "xAI", "nav_more": "More", "start_here": "Start here", "start_p": "Guides that stay useful: practical explainers for owning and buying a Tesla.", "all_guides": "All guides", "articles": "Articles", "cookie": "Cookie settings", "news_h": "One email a week with the best explainers", "news_p": "One email a week with the best explainers. Unsubscribe any time.", "news_btn": "Subscribe", "news_email": "Email address", "bar_h": "Get the weekly TrendingTesla newsletter", "bar_ok": "Check your inbox to confirm", "bar_err": "Could not subscribe. Please try again.", "bar_fine": "Unsubscribe any time.", "signup": "Newsletter", "signup_h": "Get the TrendingTesla newsletter", "signup_lead": "One email a week with the best explainers. Double opt-in, and you can unsubscribe from any email.", "signup_fallback": "Open the newsletter form", "signup_desc": "One email a week with the best explainers. Double opt-in, and you can unsubscribe from any email.", "aff": "Affiliate disclosure: if you buy through this link, TrendingTesla may earn a commission, at no extra cost to you.", "aff_btn": "View product", "handy_h": "Handy for your Tesla", "handy_p": "A few accessories owners look for. Each link opens an Amazon.nl search, not one specific product.", "handy_note": "As an Amazon Associate we earn from qualifying purchases.", "watch": "Watch the video", "watch_short": "Watch the Short", "consent_p": "Visit counts are cookieless and anonymous. Consent is only for ads. YouTube loads when you press play.", "consent_yes": "Accept", "consent_no": "Refuse", "consent_more": "Privacy policy", "collapse": "Close menu", "like": "Like", "save": "Save", "saved_btn": "Saved", "saved": "Saved articles", "saved_empty": "You have not saved any articles yet. Tap Save under an article title to keep it here. Saved articles stay in this browser on this device.", "archive": "All news", "newer": "Newer", "older": "Older", "page": "Page", "d_topics": "Topics", "d_models": "Models", "d_more": "More", "menu": "Menu", "tip_h": "A 22 kW charger won't charge your Tesla any faster", "tip_p": "Most Tesla models charge at home at up to 11 kW AC.", "tip_btn": "Read why", "tips": [("HW4", "Buying a used Model 3? Check the hardware first", "The Highland has HW4, older cars HW3. It decides what FSD can do.", "How to check", "used-model-3-highland-vs-classic-hw3-hw4-buying-guide"), ("−20%", "Losing range in winter? It doesn't have to be", "Preconditioning and the right settings save you kilometers.", "9 winter tips", "tesla-winter-range-tips-cold-weather")],
         "empty": "No articles here yet. A new story is published once a day.",
         "cat_intro": "All TrendingTesla articles about {}.",
         "eco_intro": "SpaceX, Starlink, The Boring Company and xAI/Grok: the companies around Tesla, and how they connect.",
@@ -127,7 +128,7 @@ LANGS = {
         "guides_sub": "Uitgezocht per model en bouwjaar, met plus- en minpunten.",
         "related": "Lees ook", "sources": "Bronnen", "imgnote": "Afbeeldingen zijn illustraties, deels gemaakt met AI.", "photocredit": "Foto's", "imgnote_other": "Overige afbeeldingen zijn illustraties, deels gemaakt met AI.", "about": "Over ons", "editorial": "Redactiebeleid",
         "byline": "Door de redactie van TrendingTesla", "privacy": "Privacy",
-        "switch": "EN", "switch_full": "English", "i_specs": "Specificaties", "i_watch": "Aandachtspunten", "i_special": "Bijzonderheden", "i_acc": "Accessoires", "i_acc_soon": "Binnenkort: accessoires die op deze uitvoering passen, getest en uitgelegd.", "slogan": "Iedere dag het laatste nieuws &amp; trends", "search": "Zoek in Tesla-nieuws", "none": "Niets gevonden", "home": "Home", "toc": "Op deze pagina", "prev": "Vorig", "next": "Volgend", "ad": "Advertentie", "videos": "Shorts", "see_all": "Alles bekijken", "read_story": "Lees het verhaal", "nav_models": "Tesla-modellen", "nav_energy": "Energie", "nav_fsd": "FSD / Robotaxi", "nav_space": "SpaceX / Starlink", "nav_xai": "xAI", "nav_more": "Meer", "start_here": "Begin hier", "start_p": "Gidsen die bruikbaar blijven: praktische uitleg voor wie een Tesla heeft of er een wil kopen.", "all_guides": "Alle gidsen", "articles": "Artikelen", "cookie": "Cookie-instellingen", "news_h": "Eén mail per week met de beste uitleg", "news_p": "Eén mail per week met de beste uitleg. Afmelden kan altijd.", "news_btn": "Aanmelden", "news_email": "E-mailadres", "bar_h": "Ontvang wekelijks TrendingTesla nieuws", "bar_ok": "Check je inbox om te bevestigen", "bar_err": "Aanmelden is niet gelukt. Probeer het opnieuw.", "signup": "Nieuwsbrief", "signup_h": "Ontvang de TrendingTesla-nieuwsbrief", "signup_lead": "Eén mail per week met de beste uitleg. Dubbele bevestiging, en afmelden kan vanuit elke e-mail.", "signup_fallback": "Open het nieuwsbriefformulier", "signup_desc": "Eén mail per week met de beste uitleg. Dubbele bevestiging, en afmelden kan vanuit elke e-mail.", "aff": "Affiliate-melding: koop je via deze link, dan kan TrendingTesla een commissie ontvangen. Voor jou kost het niets extra.", "aff_btn": "Bekijk het product", "handy_h": "Handig voor je Tesla", "handy_p": "Een paar accessoires waar rijders naar zoeken. Elke link opent een zoekopdracht bij Amazon.nl, niet één specifiek product.", "handy_note": "Als Amazon-partner verdienen wij aan in aanmerking komende aankopen.", "watch": "Bekijk de video", "watch_short": "Bekijk de Short", "consent_p": "Bezoekcijfers zijn anoniem en zonder cookies. Toestemming is alleen voor advertenties. YouTube laadt pas als je op afspelen drukt.", "consent_yes": "Accepteren", "consent_no": "Weigeren", "consent_more": "Privacybeleid", "collapse": "Inklappen", "like": "Vind ik leuk", "save": "Bewaren", "saved_btn": "Bewaard", "saved": "Bewaarde artikelen", "saved_empty": "Je hebt nog geen artikelen bewaard. Tik op Bewaren onder de titel van een artikel om het hier terug te vinden. Bewaarde artikelen blijven in deze browser op dit apparaat.", "archive": "Alle nieuws", "newer": "Nieuwer", "older": "Ouder", "page": "Pagina", "d_topics": "Onderwerpen", "d_models": "Modellen", "d_more": "Meer", "menu": "Menu", "tip_h": "Een 22 kW-laadpaal laadt je Tesla niet sneller", "tip_p": "Veel Tesla-modellen laden thuis met maximaal 11 kW AC.", "tip_btn": "Lees waarom", "tips": [("HW4", "Tweedehands Model 3 kopen? Check eerst de hardware", "De Highland heeft HW4, oudere Model 3's HW3. Dat bepaalt wat FSD kan.", "Zo check je het", "used-model-3-highland-vs-classic-hw3-hw4-buying-guide"), ("−20%", "Minder bereik in de winter? Dat hoeft niet", "Met voorverwarmen en de juiste instellingen houd je meer kilometers over.", "9 wintertips", "tesla-winter-range-tips-cold-weather")],
+        "switch": "EN", "switch_full": "English", "i_specs": "Specificaties", "i_watch": "Aandachtspunten", "i_special": "Bijzonderheden", "i_acc": "Accessoires", "i_acc_soon": "Binnenkort: accessoires die op deze uitvoering passen, getest en uitgelegd.", "slogan": "Iedere dag het laatste nieuws &amp; trends", "search": "Zoek in Tesla-nieuws", "none": "Niets gevonden", "home": "Home", "toc": "Op deze pagina", "prev": "Vorig", "next": "Volgend", "ad": "Advertentie", "videos": "Shorts", "see_all": "Alles bekijken", "read_story": "Lees het verhaal", "nav_models": "Tesla-modellen", "nav_energy": "Energie", "nav_fsd": "FSD / Robotaxi", "nav_space": "SpaceX / Starlink", "nav_xai": "xAI", "nav_more": "Meer", "start_here": "Begin hier", "start_p": "Gidsen die bruikbaar blijven: praktische uitleg voor wie een Tesla heeft of er een wil kopen.", "all_guides": "Alle gidsen", "articles": "Artikelen", "cookie": "Cookie-instellingen", "news_h": "Eén mail per week met de beste uitleg", "news_p": "Eén mail per week met de beste uitleg. Afmelden kan altijd.", "news_btn": "Aanmelden", "news_email": "E-mailadres", "bar_h": "Ontvang wekelijks TrendingTesla nieuws", "bar_ok": "Check je inbox om te bevestigen", "bar_err": "Aanmelden is niet gelukt. Probeer het opnieuw.", "bar_fine": "Afmelden kan altijd.", "signup": "Nieuwsbrief", "signup_h": "Ontvang de TrendingTesla-nieuwsbrief", "signup_lead": "Eén mail per week met de beste uitleg. Dubbele bevestiging, en afmelden kan vanuit elke e-mail.", "signup_fallback": "Open het nieuwsbriefformulier", "signup_desc": "Eén mail per week met de beste uitleg. Dubbele bevestiging, en afmelden kan vanuit elke e-mail.", "aff": "Affiliate-melding: koop je via deze link, dan kan TrendingTesla een commissie ontvangen. Voor jou kost het niets extra.", "aff_btn": "Bekijk het product", "handy_h": "Handig voor je Tesla", "handy_p": "Een paar accessoires waar rijders naar zoeken. Elke link opent een zoekopdracht bij Amazon.nl, niet één specifiek product.", "handy_note": "Als Amazon-partner verdienen wij aan in aanmerking komende aankopen.", "watch": "Bekijk de video", "watch_short": "Bekijk de Short", "consent_p": "Bezoekcijfers zijn anoniem en zonder cookies. Toestemming is alleen voor advertenties. YouTube laadt pas als je op afspelen drukt.", "consent_yes": "Accepteren", "consent_no": "Weigeren", "consent_more": "Privacybeleid", "collapse": "Inklappen", "like": "Vind ik leuk", "save": "Bewaren", "saved_btn": "Bewaard", "saved": "Bewaarde artikelen", "saved_empty": "Je hebt nog geen artikelen bewaard. Tik op Bewaren onder de titel van een artikel om het hier terug te vinden. Bewaarde artikelen blijven in deze browser op dit apparaat.", "archive": "Alle nieuws", "newer": "Nieuwer", "older": "Ouder", "page": "Pagina", "d_topics": "Onderwerpen", "d_models": "Modellen", "d_more": "Meer", "menu": "Menu", "tip_h": "Een 22 kW-laadpaal laadt je Tesla niet sneller", "tip_p": "Veel Tesla-modellen laden thuis met maximaal 11 kW AC.", "tip_btn": "Lees waarom", "tips": [("HW4", "Tweedehands Model 3 kopen? Check eerst de hardware", "De Highland heeft HW4, oudere Model 3's HW3. Dat bepaalt wat FSD kan.", "Zo check je het", "used-model-3-highland-vs-classic-hw3-hw4-buying-guide"), ("−20%", "Minder bereik in de winter? Dat hoeft niet", "Met voorverwarmen en de juiste instellingen houd je meer kilometers over.", "9 wintertips", "tesla-winter-range-tips-cold-weather")],
         "empty": "Hier staan nog geen artikelen. Er verschijnt één keer per dag een nieuw verhaal.",
         "cat_intro": "Alle artikelen van TrendingTesla over {}.",
         "eco_intro": "SpaceX, Starlink, The Boring Company en xAI/Grok: de bedrijven rond Tesla, en hoe ze met elkaar verbonden zijn.",
@@ -918,10 +919,17 @@ header.hb .pnav>.is-parked{display:none}
 .pv-side ul li{padding:7px 0;border-bottom:1px solid #242424;font-size:.88rem;line-height:1.3;font-weight:700}
 .pv-side ul.latest li{display:grid;grid-template-columns:1.3rem minmax(0,1fr);gap:6px;align-items:start}
 .pv-side ul.latest li::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--red);justify-self:start;align-self:start;margin-top:calc(0.65em - 2.5px);margin-left:1px}
-.pv-side ul.topics li{display:grid;grid-template-columns:1.3rem minmax(0,1fr);gap:6px;align-items:start}
-.pv-side ul.topics li::before{content:""}
-.pv-side ul.topics a.on{color:#fff}
-.pv-side a:hover,.pv-side a:focus-visible,.pv-side ul.topics a.on:hover,.pv-side ul.topics a.on:focus-visible{color:var(--blue)}
+.pv-side a:hover,.pv-side a:focus-visible{color:var(--blue)}
+.pv-side .nlside-form{display:flex;flex-direction:column;align-items:stretch;gap:8px;max-height:none;padding:0;border:0;border-radius:0;background:transparent}
+.pv-side .nlside-lead{margin:0;font-size:.88rem;line-height:1.35;font-weight:600;color:var(--muted)}
+.pv-side .nlside-form input[type=email]{flex:none;width:100%;height:42px}
+.pv-side .nlside-form button{flex:none;width:100%;height:42px}
+.pv-side .nlnote{margin:2px 0 0;font-size:.72rem;line-height:1.35;font-weight:400;color:var(--dim)}
+.pv-side .nlnote a{color:var(--blue2);text-decoration:underline;text-underline-offset:2px}
+.pv-side .nlnote a:hover,.pv-side .nlnote a:focus-visible{color:var(--blue)}
+.nlside-form.is-ok .nlside-lead,.nlside-form.is-ok .nlnote{display:none}
+.nlside .mlfallback{margin:8px 0 0;font-size:.82rem;line-height:1.4}
+.nlside .mlfallback a{color:var(--blue2);text-decoration:underline;text-underline-offset:2px}
 .pv-side .nform{max-width:none;margin:0 0 18px;padding:0;border:0;background:transparent}
 .pv-side .pv-guide{display:grid;grid-template-columns:72px minmax(0,1fr);gap:8px;align-items:center;padding:7px 0;border-bottom:1px solid #242424}
 .pv-side .pv-guide img{width:72px;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:6px}
@@ -981,6 +989,7 @@ header.hb .pnav>.is-parked{display:none}
 .sheet:has(.arel)>.sheet-rail{display:contents}
 .sheet:has(.arel) .arel{grid-area:side}
 .sheet:has(.arel) .pv-side:not(.arel){grid-area:rest}
+.nlside-mhide{display:none}
 }
 """
 
@@ -2528,9 +2537,11 @@ def ml_endpoint():
     return f"https://assets.mailerlite.com/jsonp/{ML_ACCOUNT}/forms/{ML_FORM['id']}/subscribe"
 
 
+# One handler for every compact signup (the bar under an article and the rail block).
+# The script is emitted once per page, after every form it should bind.
 ML_BAR_JS = (
-    "<script>(function(){var f=document.querySelector('.nlbar-form');if(!f)return;"
-    "var msg=f.querySelector('.nlbar-msg'),btn=f.querySelector('button');"
+    "<script>(function(){document.querySelectorAll('.nlbar-form').forEach(function(f){"
+    "var msg=f.querySelector('.nlbar-msg'),btn=f.querySelector('button');if(!msg||!btn)return;"
     "f.addEventListener('submit',function(e){e.preventDefault();if(f.dataset.busy)return;"
     "f.dataset.busy='1';btn.disabled=true;msg.hidden=true;f.classList.remove('is-err','is-ok');"
     "var body=new URLSearchParams(new FormData(f));body.set('ajax','1');"
@@ -2541,9 +2552,26 @@ ML_BAR_JS = (
     "msg.textContent=f.getAttribute('data-err')}})"
     ".catch(function(){f.classList.add('is-err');msg.hidden=false;"
     "msg.textContent=f.getAttribute('data-err')})"
-    ".then(function(){delete f.dataset.busy;if(!f.classList.contains('is-ok'))btn.disabled=false})})})();"
+    ".then(function(){delete f.dataset.busy;if(!f.classList.contains('is-ok'))btn.disabled=false})})})})();"
     "</script>"
 )
+
+
+def ml_form_attrs(lang):
+    L = LANGS[lang]
+    return (f'method="post" action="{ml_endpoint()}" '
+            f'data-ok="{esc(L["bar_ok"])}" data-err="{esc(L["bar_err"])}"')
+
+
+def ml_hidden():
+    return ('<input type="hidden" name="ml-submit" value="1">'
+            '<input type="hidden" name="anticsrf" value="true">')
+
+
+def ml_noscript(lang):
+    L = LANGS[lang]
+    return (f'<noscript><p class="mlfallback"><a href="{ml_share()}" rel="nofollow noopener" target="_blank">'
+            f'{esc(L["signup_fallback"])}</a></p></noscript>')
 
 
 def ml_signup(lang, heading=True):
@@ -2560,23 +2588,44 @@ def ml_signup(lang, heading=True):
 
 
 def ml_bar(lang):
-    """One-row signup under an article. Posts to the same form, so double opt-in stays."""
+    """One-row signup under an article. Posts to the same form, so double opt-in stays.
+    The shared handler is included here because this bar is the last signup on the page."""
     L = LANGS[lang]
     fid = f"nlbar-email-{lang}"
     return (
         f'<aside class="nlbar" aria-label="{esc(L["signup"])}">'
-        f'<form class="nlbar-form" method="post" action="{ml_endpoint()}" '
-        f'data-ok="{esc(L["bar_ok"])}" data-err="{esc(L["bar_err"])}">'
+        f'<form class="nlbar-form" {ml_form_attrs(lang)}>'
         f'<label class="nlbar-h" for="{fid}">{esc(L["bar_h"])}</label>'
         f'<input id="{fid}" type="email" name="fields[email]" required maxlength="200" '
         f'autocomplete="email" inputmode="email" placeholder="{esc(L["news_email"])}">'
         f'<button type="submit">{esc(L["news_btn"])}</button>'
-        f'<input type="hidden" name="ml-submit" value="1">'
-        f'<input type="hidden" name="anticsrf" value="true">'
+        f'{ml_hidden()}'
         f'<p class="nlbar-msg" role="status" hidden></p></form>'
-        f'<noscript><p class="nlfallback"><a href="{ml_share()}" rel="nofollow noopener" target="_blank">'
-        f'{esc(L["signup_fallback"])}</a></p></noscript>{ML_BAR_JS}</aside>'
+        f'{ml_noscript(lang)}{ML_BAR_JS}</aside>'
     )
+
+
+def rail_signup(lang, hide_mobile=False, script=False):
+    """Rail block that posts with the same handler as the article bar.
+    hide_mobile drops it where a phone would stack it against that bar."""
+    L = LANGS[lang]
+    fid = f"nlside-email-{lang}"
+    hide = " nlside-mhide" if hide_mobile else ""
+    note = (f'<p class="nlnote">{esc(L["bar_fine"])} '
+            f'<a href="{url(lang, "privacy/")}">{esc(L["privacy"])}</a>.</p>')
+    block = (
+        f'<section class="nlside{hide}">'
+        f'<h2>{esc(L["signup"])}</h2>'
+        f'<form class="nlbar-form nlside-form" {ml_form_attrs(lang)}>'
+        f'<label class="nlside-lead" for="{fid}">{esc(L["bar_h"])}</label>'
+        f'<input id="{fid}" type="email" name="fields[email]" required maxlength="200" '
+        f'autocomplete="email" inputmode="email" placeholder="{esc(L["news_email"])}">'
+        f'<button type="submit">{esc(L["news_btn"])}</button>'
+        f'{ml_hidden()}'
+        f'<p class="nlbar-msg" role="status" hidden></p>{note}</form>'
+        f'{ml_noscript(lang)}</section>'
+    )
+    return block + (ML_BAR_JS if script else "")
 
 
 def newsletter(lang, where):
@@ -2645,25 +2694,9 @@ def _nav_rows(lang):
 
 
 def more_category_rows(lang):
-    """Category hubs that live in the More menu. The sidebar uses the same list."""
+    """Category hubs that live in the More menu."""
     return [(CATEGORIES[k][lang], f"category/{k}/")
             for k, c in CATEGORIES.items() if c.get("menu") and k not in PRIMARY_CATS]
-
-
-def sidebar_topics(lang):
-    """Every topic in the header, then the More hubs, then All news once."""
-    L = LANGS[lang]
-    return [
-        (L["nav_models"], "category/models/"),
-        (L["nav_energy"], "category/energy/"),
-        (L["nav_fsd"], "category/fsd/"),
-        (L["nav_space"], "category/spacex/"),
-        (L["nav_xai"], "category/xai/"),
-        (CATEGORIES["guides"][lang], "category/guides/"),
-        (L["videos"], "shorts/"),
-        *more_category_rows(lang),
-        (L["archive"], "archive/"),
-    ]
 
 
 def more_links(lang):
@@ -3059,7 +3092,7 @@ def _side_ul(lang, items, cls=""):
     return f"<ul{klass}>" + _side_links([(x[lang]["title"], url(lang, x["slug"] + "/")) for x in items]) + "</ul>"
 
 
-def page_side(arts, lang, kind="home", current=None, skip=None, tail=""):
+def page_side(arts, lang, kind="home", current=None, skip=None, tail="", signup=True):
     """Right column. Sections with nothing to show are left out, and no article is listed twice."""
     L = LANGS[lang]
     C = pv_copy(lang)
@@ -3113,33 +3146,23 @@ def page_side(arts, lang, kind="home", current=None, skip=None, tail=""):
             parts.append(_side_section(L["latest"], _side_ul(lang, latest, "latest")))
         if start:
             parts.append(_side_section(C["start"], _side_ol(lang, start)))
-    hubs = sidebar_topics(lang)
-    here = None
-    if kind == "model":
-        here = "category/models/"
-    elif kind == "videos":
-        here = "shorts/"
-    elif kind == "archive":
-        here = "archive/"
-    else:
-        key = current if isinstance(current, str) else None
-        if kind == "article" and not isinstance(current, str) and current is not None:
-            key = current.get("category")
-        if key == "robotaxi":
-            here = "category/fsd/"
-        elif key == "starlink":
-            here = "category/spacex/"
-        elif key:
-            here = f"category/{key}/"
-    label = "Topics" if lang == "en" else "Onderwerpen"
-    items = "".join(
-        f'<li><a{" class=\"on\"" if path == here else ""} href="{url(lang, path)}">{esc(name)}</a></li>'
-        for name, path in hubs)
-    parts.append(_side_section(label, f'<ul class="topics">{items}</ul>'))
     news = newsletter(lang, "side")
+    slot = ad_html("sidebar", lang)
+    if signup:
+        # On a phone the rail stacks under the story. Hide this form only when
+        # it would sit directly against the article bar, with nothing between them.
+        has_bar = bool(tail)
+        before = any(parts)
+        after = bool(news or slot)
+        if has_bar and related_html and not before:
+            hide_mobile = True
+        elif has_bar and not related_html and not after:
+            hide_mobile = True
+        else:
+            hide_mobile = False
+        parts.append(rail_signup(lang, hide_mobile, script=not has_bar))
     if news:
         parts.append(news)
-    slot = ad_html("sidebar", lang)
     if slot:
         parts.append(slot)
     aside = f'<aside class="pv-side">{"".join(parts)}</aside>' if parts else ""
@@ -3616,7 +3639,7 @@ def build():
             f'{ml_signup(lang, heading=False)}</article>')
         write(url(lang, npath), page(
             lang, npath, L["signup"], L["signup_desc"],
-            shell(nbody, page_side(arts, lang, "static")), alt_path=signup_path(other(lang))))
+            shell(nbody, page_side(arts, lang, "static", signup=False)), alt_path=signup_path(other(lang))))
 
         # ---------- RSS ----------
         items = "".join(

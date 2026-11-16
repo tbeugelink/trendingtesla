@@ -360,11 +360,15 @@ def rate_photo(G, im, want, b):
     return 0.0, 0.5
 
 
-CLIP_SEC = 4  # seconds of one own-photo clip. About $0.10 a second at 720p.
-AI_CAP = 1  # the hook only. ~$0.40 a Short, about $12 of the $15 month cap at one Short a day
-AI_RESERVE = 0.45  # held back before the clip; a 4-second clip is about $0.40
-DEFAULT_MOTION = ("Subtle, natural motion that fits the scene (flames, smoke, steam, dust, water, light or the "
-                  "vehicle moving the way it would); the camera pushes in slowly.")
+CLIP_SEC = 3  # shortest clip this model makes. About $0.10 a second at 720p.
+AI_CAP = 1  # the hook only. One try is about $0.30; one retry makes the Short at most about $0.80
+AI_RESERVE = 0.45  # held back before each try. The $15 month cap is checked again before a retry.
+HOOK_MOTION = ("Motion amount is minimal. The camera does one very slow push-in, with a little parallax. "
+               "The raised doors may shift a few degrees. The car stays the exact vehicle in the photo.")
+HOOK_STILL = ("Motion amount is almost zero. The camera does one barely visible push-in and then holds. "
+              "The car, its colour, its doors and the background do not change.")
+HOOK_NEGATIVE = ("a different car, a different colour, a lake, a new background, a new building, a second vehicle, "
+                 "people, text, a logo, a cut, morphing, melting, extra parts")
 
 
 class ClipReader:
@@ -389,13 +393,14 @@ def clip_ok(G, clip, first):
     import io
     init_checker(G)
     parts = [{"text": "The FIRST image is a photo. The other two are frames of a short AI video that started from "
-              "that photo, for a Tesla/SpaceX publication whose viewers know every detail. Judge the frames: is the "
-              "main subject (vehicle, rocket, robot, charger, building) still the same object with the same shape and "
-              "details, not melted, bent, doubled or morphed? Was any text, logo, watermark or a person added that is "
-              'not in the photo? Answer only JSON: {"same_subject": true/false, "distorted": true/false, '
+              "that photo. The frames must show the exact same vehicle: the same colour, the same shape, and the same "
+              "background. A different car, a different place, or a new object means same_subject is false. "
+              "Reject melting, bending, doubling or morphing, and any text, logo, watermark or person that is not in "
+              'the photo. Answer only JSON: {"same_subject": true/false, "distorted": true/false, '
               '"added_text_or_person": true/false, "note": "one short line"}'},
              {"inline_data": {"mime_type": "image/jpeg", "data": base64.b64encode(first).decode()}}]
-    for at in (CLIP_SEC * 0.5, CLIP_SEC - 0.25):
+    span = S.duration(clip) if Path(str(clip)).exists() else CLIP_SEC
+    for at in (max(0.2, span * 0.45), max(0.4, span - 0.25)):
         fr = subprocess.run(["ffmpeg", "-loglevel", "error", "-ss", f"{at:.2f}", "-i", str(clip), "-frames:v", "1",
                              "-vf", "scale=576:-1", "-f", "image2pipe", "-vcodec", "mjpeg", "-"], capture_output=True).stdout
         if not fr:
@@ -432,10 +437,10 @@ def hook_clip(a, beats, shots, tmp, slug, report):
             report.append(f"hook clip skipped: clip budget reached (${spent:.2f} of ${VC.MONTH_CAP:.0f} this month)")
             return None
         photo, fx = shots[0]["img"], shots[0].get("fx", 0.5)
-        motion = ((a.get("short") or {}).get("hook_motion") or DEFAULT_MOTION).strip()
         out = tmp / "hook-clip.mp4"
-        for attempt in (1, 2):
-            info = VC.make(photo, f"A {CLIP_SEC}-second clip. {motion}", out, "720p", fx, note=slug)
+        for attempt, motion in ((1, HOOK_MOTION), (2, HOOK_STILL)):
+            info = VC.make(photo, f"A {CLIP_SEC}-second clip. {motion}", out, "720p", fx, note=slug,
+                           duration=f"{CLIP_SEC}s", negative=HOOK_NEGATIVE)
             (OUT / f"{slug}-clip.jsonl").open("a", encoding="utf-8").write(json.dumps(
                 {k: v for k, v in info.items() if k != "response"}) + "\n")
             dur = S.duration(out)
@@ -500,26 +505,32 @@ def own_photo_clips(beats, shots, tmp, slug, report, ai_beats):
         if not shot:
             report.append(f"own-photo clip beat {bi + 1}: no own photo without stock")
             continue
-        ok, spent = VC.allowed_now(AI_RESERVE)
-        if not ok:
-            report.append(f"own-photo clip skipped: clip budget reached (${spent:.2f} of ${VC.MONTH_CAP:.0f})")
-            break
         out = tmp / f"own-clip-{bi}.mp4"
-        motion = (beats[bi].get("visual") or "a slow push in").strip()
-        try:
-            info = VC.make(shot["img"], f"A {CLIP_SEC}-second clip. {DEFAULT_MOTION} {motion}", out, "720p",
-                           shot.get("fx", 0.5), note=slug)
+        used = False
+        for attempt, motion in ((1, HOOK_MOTION), (2, HOOK_STILL)):
+            ok, spent = VC.allowed_now(AI_RESERVE)
+            if not ok:
+                report.append(f"own-photo clip skipped: clip budget reached (${spent:.2f} of ${VC.MONTH_CAP:.0f})")
+                break
+            try:
+                info = VC.make(shot["img"], f"A {CLIP_SEC}-second clip. {motion}", out, "720p",
+                               shot.get("fx", 0.5), note=slug, duration=f"{CLIP_SEC}s", negative=HOOK_NEGATIVE)
+            except Exception as e:
+                report.append(f"own-photo clip beat {bi + 1} try {attempt} skipped: {str(e)[:160]}")
+                break
             (OUT / f"{slug}-clip.jsonl").open("a", encoding="utf-8").write(
                 json.dumps({k: v for k, v in info.items() if k != "response"}) + "\n")
             good, note = clip_ok(G, out, VC.first_frame(shot["img"], shot.get("fx", 0.5)))
-            if not good:
-                report.append(f"own-photo clip beat {bi + 1} rejected (${info['cost_usd']:.2f}): {note}")
-                continue
-            shot["footage"] = {"id": f"own-{bi}", "path": str(out), "start": 0.0, "credit": "", "page": "",
-                               "licence": "own", "w": W, "h": H, "fps": FPS}
-            report.append(f"own-photo clip beat {bi + 1}: {Path(str(shot['img'])).name} (${info['cost_usd']:.2f})")
-        except Exception as e:
-            report.append(f"own-photo clip beat {bi + 1} skipped: {str(e)[:160]}")
+            if good:
+                shot["footage"] = {"id": f"own-{bi}", "path": str(out), "start": 0.0, "credit": "", "page": "",
+                                   "licence": "own", "w": W, "h": H, "fps": FPS}
+                report.append(f"own-photo clip beat {bi + 1} try {attempt}: {Path(str(shot['img'])).name} "
+                              f"(${info['cost_usd']:.2f})")
+                used = True
+                break
+            report.append(f"own-photo clip beat {bi + 1} try {attempt} rejected (${info['cost_usd']:.2f}): {note}")
+        if not used and not shot.get("footage"):
+            report.append(f"own-photo clip beat {bi + 1}: still photo")
 
 
 def assign_images(a, beats):

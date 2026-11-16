@@ -29,10 +29,9 @@ MODEL = os.environ.get("CLIP_MODEL", "gemini-omni-1.1-flash")
 RATE_OUT = float(os.environ.get("CLIP_USD_PER_M_TOKENS", "17.5"))
 MONTH_CAP = float(os.environ.get("CLIP_MONTH_CAP_USD", "15"))
 LOG = ROOT / "ops/clips-log.jsonl"
-STYLE = ("Use this image as the first frame and keep everything in it exactly as it is: the same vehicle or object, "
-         "the same shape, colours, proportions and details; nothing is added or removed. Photorealistic, natural "
-         "motion, steady camera. No people appear. No text, captions, logos or watermarks appear. No dialogue, no "
-         "voice, no music. Motion: ")
+STYLE = ("Use this image as the first frame. Keep the exact same vehicle: the same colour, the same shape, "
+         "the same doors, the same wheels, and the same background and light. Nothing is added or removed. "
+         "Photorealistic. No people. No text, captions, logos or watermarks. No dialogue, no voice, no music. ")
 
 
 def key():
@@ -97,11 +96,16 @@ def strip(node):
     return node
 
 
-def make(photo, prompt, out, resolution="720p", focus=0.5, note=""):
+def make(photo, prompt, out, resolution="720p", focus=0.5, note="", duration="3s", negative=""):
+    """duration is '3s' to '10s' on this model (3s is the shortest). There is no motion-strength field; the prompt sets that.
+    A negative prompt is written into the text, which is the only place this API accepts one."""
+    text = STYLE + prompt.strip()
+    if negative:
+        text += " Do not show: " + negative.strip()
     body = {"model": MODEL,
             "input": [{"type": "image", "data": base64.b64encode(first_frame(photo, focus)).decode(), "mime_type": "image/jpeg"},
-                      {"type": "text", "text": STYLE + prompt.strip()}],
-            "response_format": {"type": "video", "aspect_ratio": "9:16", "resolution": resolution},
+                      {"type": "text", "text": text}],
+            "response_format": {"type": "video", "aspect_ratio": "9:16", "resolution": resolution, "duration": duration},
             "generation_config": {"video_config": {"task": "image_to_video"}},
             "store": False, "background": False, "stream": False}
     t0 = time.time()

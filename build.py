@@ -30,6 +30,11 @@ Article JSON format:
 A string may be used instead of {"en", "nl"} when the text is the same in both languages.
 tools/check_article.py ignores "products". Ads, affiliate tags and the newsletter form come from
 content/monetization.json and stay hidden while those values are empty.
+The "Handy for your Tesla" box is separate: content/affiliate.json holds amazon_nl_tag,
+amazon_com_tag and a search-link catalog. The live account is an amazon.nl Associates tag,
+so both English and Dutch pages link to amazon.nl and use amazon_nl_tag. A .com tag would
+not be credited on amazon.nl, and amazon_com_tag stays empty until that store has its own
+account. An empty amazon_nl_tag omits the box and the Amazon section on About and Privacy.
 Writing rule (articles and video scripts): the paragraph or spoken text right before a heading
 states the next problem as a plain statement and never ends with a question; the <h2>/"head"
 itself is the question. (The build also drops such a duplicate question automatically.)
@@ -58,7 +63,7 @@ import re
 import shutil
 from datetime import datetime, timezone
 from pathlib import Path
-from urllib.parse import quote
+from urllib.parse import quote, urlencode
 from zoneinfo import ZoneInfo
 
 from covers import make_cover
@@ -87,7 +92,7 @@ LANGS = {
         "guides_sub": "Researched per model and year, with pros and cons.",
         "related": "Read next", "sources": "Sources", "about": "About", "editorial": "Editorial policy",
         "byline": "By the TrendingTesla editorial team", "privacy": "Privacy",
-        "switch": "NL", "switch_full": "Nederlands", "i_specs": "Specifications", "i_watch": "Points to watch", "i_special": "What makes it special", "i_acc": "Accessories", "i_acc_soon": "Coming soon: accessories that fit this version, tested and explained.", "slogan": "Daily Tesla news &amp; trends", "search": "Search Tesla news", "none": "Nothing found", "home": "Home", "toc": "On this page", "prev": "Previous", "next": "Next", "ad": "Advertisement", "videos": "Shorts", "see_all": "See all", "read_story": "Read the story", "nav_models": "Tesla models", "nav_energy": "Energy", "nav_fsd": "FSD / Robotaxi", "nav_space": "SpaceX / Starlink", "nav_xai": "xAI", "nav_more": "More", "start_here": "Start here", "start_p": "Guides that stay useful: practical explainers for owning and buying a Tesla.", "all_guides": "All guides", "articles": "Articles", "cookie": "Cookie settings", "news_h": "The daily story by email", "news_p": "One email when a new article is published. Unsubscribe any time.", "news_btn": "Subscribe", "news_email": "Email address", "aff": "Affiliate disclosure: if you buy through this link, TrendingTesla may earn a commission, at no extra cost to you.", "aff_btn": "View product", "watch": "Watch the video", "watch_short": "Watch the Short", "consent_p": "Optional advertising and anonymous visit counts stay off until you accept. Refusing leaves every article readable. YouTube loads only after you press play.", "consent_yes": "Accept", "consent_no": "Refuse", "consent_more": "Privacy policy", "collapse": "Close menu", "like": "Like", "save": "Save", "saved_btn": "Saved", "saved": "Saved articles", "saved_empty": "You have not saved any articles yet. Tap Save under an article title to keep it here. Saved articles stay in this browser on this device.", "archive": "All news", "newer": "Newer", "older": "Older", "page": "Page", "d_topics": "Topics", "d_models": "Models", "d_more": "More", "menu": "Menu", "tip_h": "A 22 kW charger won't charge your Tesla any faster", "tip_p": "Most Tesla models charge at home at up to 11 kW AC.", "tip_btn": "Read why", "tips": [("HW4", "Buying a used Model 3? Check the hardware first", "The Highland has HW4, older cars HW3. It decides what FSD can do.", "How to check", "used-model-3-highland-vs-classic-hw3-hw4-buying-guide"), ("−20%", "Losing range in winter? It doesn't have to be", "Preconditioning and the right settings save you kilometers.", "9 winter tips", "tesla-winter-range-tips-cold-weather")],
+        "switch": "NL", "switch_full": "Nederlands", "i_specs": "Specifications", "i_watch": "Points to watch", "i_special": "What makes it special", "i_acc": "Accessories", "i_acc_soon": "Coming soon: accessories that fit this version, tested and explained.", "slogan": "Daily Tesla news &amp; trends", "search": "Search Tesla news", "none": "Nothing found", "home": "Home", "toc": "On this page", "prev": "Previous", "next": "Next", "ad": "Advertisement", "videos": "Shorts", "see_all": "See all", "read_story": "Read the story", "nav_models": "Tesla models", "nav_energy": "Energy", "nav_fsd": "FSD / Robotaxi", "nav_space": "SpaceX / Starlink", "nav_xai": "xAI", "nav_more": "More", "start_here": "Start here", "start_p": "Guides that stay useful: practical explainers for owning and buying a Tesla.", "all_guides": "All guides", "articles": "Articles", "cookie": "Cookie settings", "news_h": "The daily story by email", "news_p": "One email when a new article is published. Unsubscribe any time.", "news_btn": "Subscribe", "news_email": "Email address", "aff": "Affiliate disclosure: if you buy through this link, TrendingTesla may earn a commission, at no extra cost to you.", "aff_btn": "View product", "handy_h": "Handy for your Tesla", "handy_p": "A few accessories owners look for. Each link opens an Amazon.nl search, not one specific product.", "handy_note": "As an Amazon Associate we earn from qualifying purchases.", "watch": "Watch the video", "watch_short": "Watch the Short", "consent_p": "Optional advertising and anonymous visit counts stay off until you accept. Refusing leaves every article readable. YouTube loads only after you press play.", "consent_yes": "Accept", "consent_no": "Refuse", "consent_more": "Privacy policy", "collapse": "Close menu", "like": "Like", "save": "Save", "saved_btn": "Saved", "saved": "Saved articles", "saved_empty": "You have not saved any articles yet. Tap Save under an article title to keep it here. Saved articles stay in this browser on this device.", "archive": "All news", "newer": "Newer", "older": "Older", "page": "Page", "d_topics": "Topics", "d_models": "Models", "d_more": "More", "menu": "Menu", "tip_h": "A 22 kW charger won't charge your Tesla any faster", "tip_p": "Most Tesla models charge at home at up to 11 kW AC.", "tip_btn": "Read why", "tips": [("HW4", "Buying a used Model 3? Check the hardware first", "The Highland has HW4, older cars HW3. It decides what FSD can do.", "How to check", "used-model-3-highland-vs-classic-hw3-hw4-buying-guide"), ("−20%", "Losing range in winter? It doesn't have to be", "Preconditioning and the right settings save you kilometers.", "9 winter tips", "tesla-winter-range-tips-cold-weather")],
         "empty": "No articles here yet. A new story is published once a day.",
         "cat_intro": "All TrendingTesla articles about {}.",
         "eco_intro": "SpaceX, Starlink, The Boring Company and xAI/Grok: the companies around Tesla, and how they connect.",
@@ -118,7 +123,7 @@ LANGS = {
         "guides_sub": "Uitgezocht per model en bouwjaar, met plus- en minpunten.",
         "related": "Lees ook", "sources": "Bronnen", "imgnote": "Afbeeldingen zijn illustraties, deels gemaakt met AI.", "photocredit": "Foto's", "imgnote_other": "Overige afbeeldingen zijn illustraties, deels gemaakt met AI.", "about": "Over ons", "editorial": "Redactiebeleid",
         "byline": "Door de redactie van TrendingTesla", "privacy": "Privacy",
-        "switch": "EN", "switch_full": "English", "i_specs": "Specificaties", "i_watch": "Aandachtspunten", "i_special": "Bijzonderheden", "i_acc": "Accessoires", "i_acc_soon": "Binnenkort: accessoires die op deze uitvoering passen, getest en uitgelegd.", "slogan": "Iedere dag het laatste nieuws &amp; trends", "search": "Zoek in Tesla-nieuws", "none": "Niets gevonden", "home": "Home", "toc": "Op deze pagina", "prev": "Vorig", "next": "Volgend", "ad": "Advertentie", "videos": "Shorts", "see_all": "Alles bekijken", "read_story": "Lees het verhaal", "nav_models": "Tesla-modellen", "nav_energy": "Energie", "nav_fsd": "FSD / Robotaxi", "nav_space": "SpaceX / Starlink", "nav_xai": "xAI", "nav_more": "Meer", "start_here": "Begin hier", "start_p": "Gidsen die bruikbaar blijven: praktische uitleg voor wie een Tesla heeft of er een wil kopen.", "all_guides": "Alle gidsen", "articles": "Artikelen", "cookie": "Cookie-instellingen", "news_h": "Het dagelijkse verhaal per e-mail", "news_p": "Eén e-mail zodra er een nieuw artikel is. Afmelden kan altijd.", "news_btn": "Aanmelden", "news_email": "E-mailadres", "aff": "Affiliate-melding: koop je via deze link, dan kan TrendingTesla een commissie ontvangen. Voor jou kost het niets extra.", "aff_btn": "Bekijk het product", "watch": "Bekijk de video", "watch_short": "Bekijk de Short", "consent_p": "Optionele advertenties en anonieme bezoekcijfers blijven uit tot je accepteert. Weigeren laat elk artikel leesbaar. YouTube laadt pas nadat je op afspelen drukt.", "consent_yes": "Accepteren", "consent_no": "Weigeren", "consent_more": "Privacybeleid", "collapse": "Inklappen", "like": "Vind ik leuk", "save": "Bewaren", "saved_btn": "Bewaard", "saved": "Bewaarde artikelen", "saved_empty": "Je hebt nog geen artikelen bewaard. Tik op Bewaren onder de titel van een artikel om het hier terug te vinden. Bewaarde artikelen blijven in deze browser op dit apparaat.", "archive": "Alle nieuws", "newer": "Nieuwer", "older": "Ouder", "page": "Pagina", "d_topics": "Onderwerpen", "d_models": "Modellen", "d_more": "Meer", "menu": "Menu", "tip_h": "Een 22 kW-laadpaal laadt je Tesla niet sneller", "tip_p": "Veel Tesla-modellen laden thuis met maximaal 11 kW AC.", "tip_btn": "Lees waarom", "tips": [("HW4", "Tweedehands Model 3 kopen? Check eerst de hardware", "De Highland heeft HW4, oudere Model 3's HW3. Dat bepaalt wat FSD kan.", "Zo check je het", "used-model-3-highland-vs-classic-hw3-hw4-buying-guide"), ("−20%", "Minder bereik in de winter? Dat hoeft niet", "Met voorverwarmen en de juiste instellingen houd je meer kilometers over.", "9 wintertips", "tesla-winter-range-tips-cold-weather")],
+        "switch": "EN", "switch_full": "English", "i_specs": "Specificaties", "i_watch": "Aandachtspunten", "i_special": "Bijzonderheden", "i_acc": "Accessoires", "i_acc_soon": "Binnenkort: accessoires die op deze uitvoering passen, getest en uitgelegd.", "slogan": "Iedere dag het laatste nieuws &amp; trends", "search": "Zoek in Tesla-nieuws", "none": "Niets gevonden", "home": "Home", "toc": "Op deze pagina", "prev": "Vorig", "next": "Volgend", "ad": "Advertentie", "videos": "Shorts", "see_all": "Alles bekijken", "read_story": "Lees het verhaal", "nav_models": "Tesla-modellen", "nav_energy": "Energie", "nav_fsd": "FSD / Robotaxi", "nav_space": "SpaceX / Starlink", "nav_xai": "xAI", "nav_more": "Meer", "start_here": "Begin hier", "start_p": "Gidsen die bruikbaar blijven: praktische uitleg voor wie een Tesla heeft of er een wil kopen.", "all_guides": "Alle gidsen", "articles": "Artikelen", "cookie": "Cookie-instellingen", "news_h": "Het dagelijkse verhaal per e-mail", "news_p": "Eén e-mail zodra er een nieuw artikel is. Afmelden kan altijd.", "news_btn": "Aanmelden", "news_email": "E-mailadres", "aff": "Affiliate-melding: koop je via deze link, dan kan TrendingTesla een commissie ontvangen. Voor jou kost het niets extra.", "aff_btn": "Bekijk het product", "handy_h": "Handig voor je Tesla", "handy_p": "Een paar accessoires waar rijders naar zoeken. Elke link opent een zoekopdracht bij Amazon.nl, niet één specifiek product.", "handy_note": "Als Amazon-partner verdienen wij aan in aanmerking komende aankopen.", "watch": "Bekijk de video", "watch_short": "Bekijk de Short", "consent_p": "Optionele advertenties en anonieme bezoekcijfers blijven uit tot je accepteert. Weigeren laat elk artikel leesbaar. YouTube laadt pas nadat je op afspelen drukt.", "consent_yes": "Accepteren", "consent_no": "Weigeren", "consent_more": "Privacybeleid", "collapse": "Inklappen", "like": "Vind ik leuk", "save": "Bewaren", "saved_btn": "Bewaard", "saved": "Bewaarde artikelen", "saved_empty": "Je hebt nog geen artikelen bewaard. Tik op Bewaren onder de titel van een artikel om het hier terug te vinden. Bewaarde artikelen blijven in deze browser op dit apparaat.", "archive": "Alle nieuws", "newer": "Nieuwer", "older": "Ouder", "page": "Pagina", "d_topics": "Onderwerpen", "d_models": "Modellen", "d_more": "Meer", "menu": "Menu", "tip_h": "Een 22 kW-laadpaal laadt je Tesla niet sneller", "tip_p": "Veel Tesla-modellen laden thuis met maximaal 11 kW AC.", "tip_btn": "Lees waarom", "tips": [("HW4", "Tweedehands Model 3 kopen? Check eerst de hardware", "De Highland heeft HW4, oudere Model 3's HW3. Dat bepaalt wat FSD kan.", "Zo check je het", "used-model-3-highland-vs-classic-hw3-hw4-buying-guide"), ("−20%", "Minder bereik in de winter? Dat hoeft niet", "Met voorverwarmen en de juiste instellingen houd je meer kilometers over.", "9 wintertips", "tesla-winter-range-tips-cold-weather")],
         "empty": "Hier staan nog geen artikelen. Er verschijnt één keer per dag een nieuw verhaal.",
         "cat_intro": "Alle artikelen van TrendingTesla over {}.",
         "eco_intro": "SpaceX, Starlink, The Boring Company en xAI/Grok: de bedrijven rond Tesla, en hoe ze met elkaar verbonden zijn.",
@@ -2127,6 +2132,203 @@ def product_boxes(a, lang):
     return "".join(blocks)
 
 
+AFFILIATE = {}
+# Passenger cars an owner can put mats, a screen cover or a console tray in.
+# Semi, Cybercab and Roadster are not that shopping moment.
+_PASSENGER_PREFIXES = ("model-3", "model-y", "model-s", "model-x", "cybertruck")
+HANDY_CSS = (
+    ".handy{margin:26px 0 8px;padding:16px 16px 14px;border:1px solid rgba(0,212,255,.35);"
+    "border-radius:12px;background:rgba(0,212,255,.06);max-width:68ch}"
+    ".handy h2{margin:0 0 6px;font-size:1.15rem;line-height:1.25;letter-spacing:-.01em;"
+    "color:var(--blue);font-weight:800;border:0;padding:0;text-transform:none}"
+    ".handy .handy-lead{margin:0 0 12px;color:var(--muted);font-size:.92rem;line-height:1.45}"
+    ".handy ul{list-style:none;margin:0;padding:0}"
+    ".handy li{display:flex;flex-direction:column;gap:2px;margin:0;padding:10px 0;"
+    "border-top:1px solid rgba(0,212,255,.18)}"
+    ".handy li:first-child{border-top:0;padding-top:2px}"
+    ".handy a{color:var(--blue2);font-weight:800;text-decoration:none;font-size:1.02rem;line-height:1.35}"
+    ".handy a:hover,.handy a:focus-visible{text-decoration:underline;text-underline-offset:3px}"
+    ".handy li span{color:var(--muted);font-size:.9rem;line-height:1.4}"
+    ".handy .handy-note{margin:4px 0 0;font-size:.75rem;line-height:1.45;color:var(--dim)}"
+    ".sheet-main article.money .handy{margin-left:calc(3vw + 14px);margin-right:calc(3vw + 14px);max-width:none}"
+    "@media (max-width:600.98px){.sheet-main article.money .handy{margin-left:14px;margin-right:14px}"
+    ".handy{padding:14px 12px 12px}}"
+)
+
+
+def load_affiliate():
+    """Search-link catalog and the two Associates tags. Empty tags render nothing."""
+    global AFFILIATE
+    AFFILIATE = {}
+    path = ROOT / "content" / "affiliate.json"
+    if not path.exists():
+        return
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except ValueError:
+        return
+    if isinstance(data, dict):
+        AFFILIATE = data
+
+
+def affiliate_tag(lang):
+    """Tag actually placed on links. Both languages use the amazon.nl tag.
+
+    The account is registered on amazon.nl, and that tag is not credited on amazon.com,
+    so every accessory link goes to amazon.nl. amazon_com_tag is kept for a future .com
+    account and is not applied while it is empty. lang is accepted so callers stay the same.
+    """
+    if lang not in ("en", "nl"):
+        return ""
+    raw = str(AFFILIATE.get("amazon_nl_tag") or "").strip()
+    return raw if re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9\-]{1,39}", raw) else ""
+
+
+def _passenger_models(models):
+    return any(str(m).startswith(_PASSENGER_PREFIXES) for m in models)
+
+
+def article_affiliate_topics(a):
+    """Which catalog groups fit this article. News that merely mentions a car stays out.
+
+    charging: the charging section, plus a model or guide piece that is itself about a cable,
+    adapter or wall connector. owner: buying or living with a passenger Tesla (Model 3, Y, S, X
+    or Cybertruck), not a sales figure, a Semi, a Cybercab or the Roadster. dashcam: Sentry Mode.
+    tyres: the tyre guide, the winter guide and the maintenance schedule.
+    """
+    slug = str(a.get("slug") or "")
+    cat = str(a.get("category") or "")
+    models = a.get("models") or []
+    topics = set()
+    if cat == "charging":
+        topics.add("charging")
+    elif cat in ("models", "guides") and any(bit in slug for bit in (
+            "wall-connector", "chademo", "home-charging", "type-2", "nacs", "charging-cable")):
+        topics.add("charging")
+    owner_bits = ("buying-used", "delivery-day", "which-to-buy", "16-inch-screen",
+                  "standard-europe", "what-happens-to-your-tesla")
+    if any(bit in slug for bit in owner_bits) and (
+            "delivery-day" in slug or "what-happens-to-your-tesla" in slug or _passenger_models(models)):
+        topics.add("owner")
+    if cat == "guides" and _passenger_models(models) and any(
+            bit in slug for bit in ("-vs-", "buying-used", "checklist", "used-")):
+        topics.add("owner")
+    if cat == "models" and _passenger_models(models) and any(bit in slug for bit in ("explained", "-screen")):
+        topics.add("owner")
+    if "sentry" in slug or "dashcam" in slug:
+        topics.add("dashcam")
+    if any(bit in slug for bit in ("tyre", "tire", "winter-range", "maintenance-schedule")):
+        topics.add("tyres")
+    return topics
+
+
+def amazon_search_url(query, lang, tag):
+    """Amazon.nl search. lang only selects the query words already chosen by the caller."""
+    if lang not in ("en", "nl"):
+        return ""
+    return "https://www.amazon.nl/s?" + urlencode({"k": query, "tag": tag})
+
+
+def handy_picks(a, lang):
+    """Catalog rows for this article, in catalog order, at most four. No tag required."""
+    topics = article_affiliate_topics(a)
+    if not topics:
+        return []
+    catalog = AFFILIATE.get("catalog")
+    if not isinstance(catalog, list):
+        return []
+    picks = []
+    for item in catalog:
+        if not isinstance(item, dict):
+            continue
+        item_topics = item.get("topics") or []
+        if not isinstance(item_topics, list) or topics.isdisjoint(item_topics):
+            continue
+        name = str(_loc(item.get("name"), lang)).strip()
+        note = str(_loc(item.get("note"), lang)).strip()
+        query = str(_loc(item.get("search"), lang)).strip()
+        # A search phrase only. A bare ASIN or a product URL is refused.
+        if not name or " " not in query or "/" in query or re.search(r"\bB0[A-Z0-9]{8}\b", query):
+            continue
+        picks.append({"id": str(item.get("id") or ""), "name": name, "note": note, "query": query})
+        if len(picks) == 4:
+            break
+    return picks
+
+
+def handy_box(a, lang):
+    """Accessory box. Nothing at all until this language's Associates tag is set."""
+    tag = affiliate_tag(lang)
+    if not tag:
+        return ""
+    picks = handy_picks(a, lang)
+    if not picks:
+        return ""
+    L = LANGS[lang]
+    rows = []
+    for pick in picks:
+        href = amazon_search_url(pick["query"], lang, tag)
+        note = f"<span>{esc(pick['note'])}</span>" if pick["note"] else ""
+        rows.append(
+            f'<li><a href="{esc(href)}" rel="sponsored nofollow noopener" target="_blank">{esc(pick["name"])}</a>{note}</li>')
+    return (
+        f'<aside class="handy" aria-label="{esc(L["handy_h"])}"><style>{HANDY_CSS}</style>'
+        f'<h2>{esc(L["handy_h"])}</h2><p class="handy-lead">{esc(L["handy_p"])}</p>'
+        f'<ul>{"".join(rows)}</ul><p class="handy-note">{esc(L["handy_note"])}</p></aside>')
+
+
+def affiliate_disclosure(page_key, lang):
+    """Amazon section for About and Privacy. Omitted entirely while this language's tag is empty."""
+    if page_key not in ("about", "privacy") or not affiliate_tag(lang):
+        return ""
+    if lang == "nl":
+        if page_key == "about":
+            return (
+                "<h2>Amazon-partner</h2><p>Staat er een Amazon-partnertag, dan tonen sommige artikelen "
+                "over laden, Tesla-modellen en accessoires een korte lijst onder het kopje "
+                "‘Handig voor je Tesla’. De links openen een zoekopdracht bij Amazon.nl. Als Amazon-partner "
+                "verdienen wij aan in aanmerking komende aankopen. Dat verandert nooit wat we schrijven. "
+                "Zonder tag blijft de lijst helemaal weg.</p>")
+        return (
+            "<h2>Amazon-partner</h2><p>Staat er een Amazon-partnertag, dan tonen sommige artikelen een "
+            "korte lijst met Tesla-accessoires. De links gaan naar een zoekopdracht op Amazon.nl en zijn "
+            "gemarkeerd als gesponsord. Als Amazon-partner verdienen wij aan in aanmerking komende "
+            "aankopen. Wie een link volgt, gaat naar Amazon. Amazon kan dan eigen cookies plaatsen en "
+            "technische gegevens ontvangen, zoals je IP-adres, volgens de "
+            '<a href="https://www.amazon.nl/privacy" rel="nofollow noopener" target="_blank">'
+            "privacyverklaring van Amazon</a>. We sturen Amazon geen naam door, en we tonen geen prijzen "
+            "of beoordelingen. Zonder tag blijft de lijst verborgen.</p>")
+    if page_key == "about":
+        return (
+            "<h2>Amazon Associates</h2><p>When an Amazon Associates tag is set, some articles about "
+            "charging, Tesla models and accessories show a short list under the heading "
+            "“Handy for your Tesla”. The links open a search on Amazon.nl. As an Amazon Associate we earn "
+            "from qualifying purchases. That never changes what we write. The list is left out entirely "
+            "while the tag is empty.</p>")
+    return (
+        "<h2>Amazon Associates</h2><p>When an Amazon Associates tag is set, some articles show a short "
+        "list of Tesla accessories. The links go to a search on Amazon.nl and are marked as sponsored. "
+        "As an Amazon Associate we earn from qualifying purchases. Following a link takes you to Amazon.nl, "
+        "which can set its own cookies and receive technical data such as your IP address under the "
+        '<a href="https://www.amazon.nl/privacy" rel="nofollow noopener" target="_blank">Amazon.nl privacy notice</a>. '
+        "We do not send Amazon a name, and we do not show prices or ratings. The list stays hidden "
+        "while the tag is empty.</p>")
+
+
+def with_affiliate_disclosure(page_key, lang, content):
+    extra = affiliate_disclosure(page_key, lang)
+    if not extra:
+        return content
+    if page_key == "privacy":
+        needle = "<h2>Changes</h2>" if lang == "en" else "<h2>Wijzigingen</h2>"
+    else:
+        needle = ("<p>TrendingTesla is an independent site." if lang == "en"
+                  else "<p>TrendingTesla is een onafhankelijke site.")
+    if needle in content:
+        return content.replace(needle, extra + needle, 1)
+    return content + extra
+
+
 def newsletter(lang, where):
     cfg = MONEY.get("newsletter") if isinstance(MONEY.get("newsletter"), dict) else {}
     action = str(cfg.get("action") or "").strip()
@@ -2492,7 +2694,7 @@ def money_article(a, arts, lang):
         f'<button class="act save" type="button" data-save="{a["slug"]}" aria-pressed="false" title="{esc(L["save"])}" aria-label="{esc(L["save"])}">{BOOK_SVG}</button></div></div>'
         f'{chips}<p class="lead">{esc(t["description"])}</p>'
         f'{ad_html("after_intro", lang)}{article_media(a, lang)}{toc}'
-        f'<div class="prose">{body}</div>{product_boxes(a, lang)}{ad_html("end", lang)}'
+        f'<div class="prose">{body}</div>{product_boxes(a, lang)}{handy_box(a, lang)}{ad_html("end", lang)}'
         f'{article_sources(a, lang)}{newsletter(lang, "article")}</article>')
     col = f'{nav}{article}{prev_next(a, arts, lang)}{related_block(a, arts, lang)}'
     wrap = "aread with-side" if side else "aread"
@@ -2874,7 +3076,7 @@ def pv_article(variant, a, arts, lang, live=False):
         f'<p class="byline"><a href="{url(lang, "editorial/")}">{L["byline"]}</a></p>'
         f'<p class="lead">{esc(t["description"])}</p>'
         f'{ad_html("after_intro", lang)}{media}{toc_here}'
-        f'<div class="prose">{body}</div>{product_boxes(a, lang)}{ad_html("end", lang)}'
+        f'<div class="prose">{body}</div>{product_boxes(a, lang)}{handy_box(a, lang)}{ad_html("end", lang)}'
         f'{article_sources(a, lang)}{prev_next(a, arts, lang)}</article>')
     if live:
         return article
@@ -2925,6 +3127,7 @@ def write_previews(arts, lang):
 
 def build():
     load_money()
+    load_affiliate()
     load_shorts()
     _OPT.clear()
     arts = load_articles()
@@ -3134,6 +3337,7 @@ def build():
         # ---------- Static pages ----------
         for key, p in PAGES.items():
             title, desc, content = p[lang]
+            content = with_affiliate_disclosure(key, lang, content)
             write(url(lang, key + "/"), page(lang, key + "/", title, desc,
                   shell(f'<article class="narrow"><h1>{esc(title)}</h1><div class="prose">{content}</div></article>',
                         page_side(arts, lang, "static"))))

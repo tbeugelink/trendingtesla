@@ -6,24 +6,28 @@
   },
   "stats": [
     {
+      "id": "starlink",
       "value": {"en": "13.6 million", "nl": "13,6 miljoen"},
       "label": {"en": "Starlink subscribers", "nl": "Starlink-abonnees"},
       "detail": {"en": "Consumer, 30 September 2026. More than 11,100 satellites.", "nl": "Consumenten, 30 september 2026. Meer dan 11.100 satellieten."},
       "sources": [{"title": "SpaceX 10-Q", "url": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026066880/R10.htm"}]
     },
     {
+      "id": "compute",
       "value": {"en": "1.7 GW", "nl": "1,7 GW"},
       "label": {"en": "Nameplate compute", "nl": "Nameplate compute"},
       "detail": {"en": "SpaceXSI cluster, 30 September 2026. 0.6 GW a year earlier.", "nl": "SpaceXSI-cluster, 30 september 2026. Een jaar eerder 0,6 GW."},
       "sources": [{"title": "SpaceX 10-Q", "url": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026066880/R10.htm"}]
     },
     {
+      "id": "deliveries",
       "value": {"en": "486,532", "nl": "486.532"},
       "label": {"en": "Tesla deliveries, Q3", "nl": "Tesla-leveringen, Q3"},
       "detail": {"en": "Official figure, via CNBC on 21 October 2026.", "nl": "Officieel cijfer, via CNBC op 21 oktober 2026."},
       "sources": [{"title": "CNBC, 21 October 2026", "url": "https://www.cnbc.com/2026/10/21/tesla-tsla-q3-2026-earnings-report.html"}]
     },
     {
+      "id": "flight15",
       "value": {"en": "Flight 15", "nl": "Vlucht 15"},
       "label": {"en": "First Starship catch", "nl": "Eerste Starship-vangst"},
       "detail": {"en": "The ship, after 22.5 hours, 13–14 November 2026. The booster was not caught.", "nl": "Het schip, na 22,5 uur, 13–14 november 2026. De booster is niet gevangen."},
@@ -31,6 +35,7 @@
       "sources": [{"title": "SpaceX, Flight 15", "url": "https://www.spacex.com/launches/starship-flight-15/"}]
     },
     {
+      "id": "neuralink",
       "value": "21",
       "label": {"en": "Neuralink participants", "nl": "Neuralink-deelnemers"},
       "detail": {"en": "Worldwide, 28 January 2026.", "nl": "Wereldwijd, 28 januari 2026."},
@@ -41,7 +46,7 @@
   "layers": [
     {
       "tone": "energy",
-      "href": "tesla/",
+      "href": "tesla-energy/",
       "kicker": {"en": "1 · Energy", "nl": "1 · Energie"},
       "title": {"en": "Tesla Energy", "nl": "Tesla Energy"},
       "fact": {
@@ -55,7 +60,7 @@
     },
     {
       "tone": "compute",
-      "href": "spacexsi/",
+      "href": "compute/",
       "kicker": {"en": "2 · Compute", "nl": "2 · Rekenkracht"},
       "title": {"en": "SpaceXSI clusters", "nl": "SpaceXSI-clusters"},
       "fact": {
@@ -82,7 +87,7 @@
     },
     {
       "tone": "bodies",
-      "href": "robotaxi/",
+      "href": "cars-robots/",
       "kicker": {"en": "4 · Cars and robots", "nl": "4 · Auto's en robots"},
       "title": {"en": "FSD, Robotaxi, Optimus", "nl": "FSD, Robotaxi, Optimus"},
       "fact": {
@@ -116,7 +121,7 @@
     },
     {
       "tone": "mars",
-      "href": "spacex/",
+      "href": "starship-falcon/",
       "kicker": {"en": "6 · Space and Mars", "nl": "6 · Ruimte en Mars"},
       "title": {"en": "Starship and Falcon", "nl": "Starship en Falcon"},
       "fact": {

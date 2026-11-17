@@ -1022,14 +1022,14 @@ header.hb .pnav>.is-parked{display:none}
 .eco-links{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
 .eco-links a,.eco-src{display:inline-block;font-size:.75rem;font-weight:800;text-decoration:none;border-radius:999px;padding:3px 8px;border:1px solid currentColor}
 .eco-src{margin:8px 8px 0 0;color:#9ad7ff}
-.eco-card.energy{background:#2a1a06;border-color:#ffb020;color:#ffd27a}
-.eco-card.compute{background:#1a1033;border-color:#a78bfa;color:#d4c4ff}
-.eco-card.ai{background:#062833;border-color:#00d4ff;color:#8eecff}
-.eco-card.bodies{background:#2a0c0c;border-color:#ff5a4f;color:#ffc2bc}
-.eco-card.link{background:#06281f;border-color:#3dffb0;color:#b8ffe2}
-.eco-card.mars{background:#2a120c;border-color:#ff7a45;color:#ffd0bc}
-.eco-card.neural,.eco-co.neural{background:#2a1020;border-color:#ff4fa3;color:#ffc0dd}
-.eco-card.boring,.eco-co.boring{background:#241c10;border-color:#e0b15a;color:#ffe3ad}
+.eco-card.energy{background:#3a2204;border-color:#ffb020;color:#ffc14d}
+.eco-card.compute{background:#24124a;border-color:#b388ff;color:#d7c4ff}
+.eco-card.ai{background:#04303c;border-color:#19e3ff;color:#8eecff}
+.eco-card.bodies{background:#3a0c12;border-color:#ff3b4e;color:#ff9aa6}
+.eco-card.link{background:#043024;border-color:#1dff9a;color:#9dffd0}
+.eco-card.mars{background:#3a1608;border-color:#ff7a2f;color:#ffc099}
+.eco-card.neural,.eco-co.neural{background:#3a0e28;border-color:#ff4fa3;color:#ffb3d4}
+.eco-card.boring,.eco-co.boring{background:#2c2208;border-color:#e2b126;color:#ffe08a}
 .eco-stats{display:grid;grid-template-columns:1fr;gap:8px;margin:0 0 16px}
 .eco-stat{display:block;text-decoration:none;color:inherit;background:#12161e;border:1px solid #3a4a60;border-radius:14px;padding:10px 12px}
 .eco-stat b{display:block;font-size:1.25rem;letter-spacing:-.02em}
@@ -1076,21 +1076,28 @@ header.hb .pnav>.is-parked{display:none}
 .eco-flow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
 .eco-join{display:none}
 }
-.eco-orbit{position:relative;overflow:hidden;min-height:640px;margin:0 0 28px;isolation:isolate}
-.eco-sun{position:absolute;z-index:0;top:50%;left:-1180px;width:1800px;height:1800px;transform:translateY(-50%);border-radius:50%;pointer-events:none;background:radial-gradient(circle at 73% 50%, #f7feff 0 1.2%, #8af3ff 4%, #00b4e0 11%, #07506e 26%, #08131c 46%, transparent 62%);box-shadow:inset -40px 0 90px rgba(120,230,255,.3), 0 0 80px rgba(0,180,230,.18);border:1px solid rgba(170,240,255,.45)}
-.eco-sun::after{content:"";position:absolute;inset:11%;border-radius:50%;border:1px solid rgba(160,235,255,.28)}
-.eco-core{position:absolute;z-index:3;left:1.5%;top:50%;transform:translateY(-50%);width:24%;margin:0;text-align:center;font-weight:800;font-size:clamp(1.15rem,2.1vw,1.7rem);line-height:1.12;letter-spacing:-.03em;color:#fff;text-shadow:0 0 10px #d8fbff, 0 0 22px #00c2ea, 0 0 42px rgba(0,160,220,.85);pointer-events:none}
-.eco-arc{position:relative;z-index:2;display:flex;flex-direction:column;gap:12px;margin-left:27%;padding:10px 0}
-.eco-node{position:relative;margin-left:calc(var(--bend) * 1%);width:calc(100% - var(--bend) * 1%)}
-.eco-node::before{content:"";position:absolute;z-index:-1;top:50%;right:calc(100% - 6px);width:calc(28px + var(--bend) * 5.2px);border-top:1px solid rgba(170,230,255,.7);transform:translateY(-50%)}
-.eco-node .eco-cardlink p{font-size:.8rem;line-height:1.35}
+.eco-orbit{position:relative;overflow:hidden;height:700px;margin:0 0 22px;isolation:isolate}
+.eco-sun{position:absolute;z-index:0;top:50%;left:-900px;width:1280px;height:1280px;transform:translateY(-50%);border-radius:50%;pointer-events:none;background:radial-gradient(circle at 81% 50%, #f7feff 0 .8%, #8af3ff 3.2%, #00b4e0 9%, #07506e 22%, #08131c 40%, transparent 54%);box-shadow:inset -30px 0 70px rgba(120,230,255,.28);border:1px solid rgba(170,240,255,.4)}
+.eco-sun::after{content:"";position:absolute;inset:12%;border-radius:50%;border:1px solid rgba(160,235,255,.25)}
+.eco-core{position:absolute;z-index:3;left:10px;top:50%;transform:translateY(-50%);width:132px;margin:0;text-align:center;font-weight:800;font-size:1.15rem;line-height:1.12;letter-spacing:-.03em;color:#fff;text-shadow:0 0 8px #d8fbff, 0 0 18px #00c2ea;pointer-events:none}
+.eco-rays{position:absolute;inset:0;z-index:1;width:100%;height:100%;pointer-events:none}
+.eco-rays-m{display:none}
+.eco-arc{position:absolute;inset:0;z-index:2;margin:0}
+.eco-node{position:absolute;left:var(--dl);top:var(--dt);width:33%;transform:translateY(-50%);margin:0;padding:4px 8px 3px}
+.eco-node .eco-k{display:block;font-size:.56rem;line-height:1.1;margin:0;letter-spacing:.06em}
+.eco-node strong{display:block;color:#fff;font-size:.8rem;line-height:1.15;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.eco-node .eco-chiprow{margin-top:1px;white-space:nowrap;overflow:hidden}
+.eco-node .eco-cardlink p{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;font-size:.68rem;line-height:1.2;margin:1px 0 0;max-height:3.6em}
+.eco-node .eco-links{margin-top:3px;gap:4px}
+.eco-node .eco-links a,.eco-node .eco-src{font-size:.58rem;padding:0 5px;margin:3px 3px 0 0;line-height:1.55}
+.eco-node::before{content:"";position:absolute;z-index:-1;top:50%;right:100%;width:28px;border-top:1px solid rgba(170,230,255,.65)}
 @media (max-width:899.98px){
-.eco-orbit{min-height:0}
-.eco-sun{width:270px;height:270px;left:-176px;top:0;transform:none}
-.eco-core{left:4px;top:92px;width:108px;transform:none;font-size:.98rem}
-.eco-arc{margin:214px 0 0;gap:10px}
-.eco-node{margin-left:calc(4px + var(--bend) * 1.15px);width:auto;margin-right:2px}
-.eco-node::before{display:none}
+.eco-orbit{height:980px}
+.eco-sun{width:860px;height:860px;left:-580px;top:50%;transform:translateY(-50%)}
+.eco-core{left:6px;top:50%;width:92px;transform:translateY(-50%);font-size:.92rem}
+.eco-rays-d{display:none}
+.eco-rays-m{display:block}
+.eco-node{left:var(--ml);top:var(--mt);width:50%}
 }
 @media (min-width:900px){
 header.hb .id{gap:10px}
@@ -3679,10 +3686,23 @@ def hub_articles(spec, arts):
     return out
 
 
-def _src_links(sources):
-    return "".join(
-        f'<a class="eco-src" href="{esc(s["url"])}" rel="noopener noreferrer" target="_blank">{esc(s["title"])}</a>'
-        for s in sources or [])
+def _src_links(sources, compact=False):
+    parts = []
+    for s in sources or []:
+        title = s["title"]
+        if compact and "," in title:
+            head, tail = [part.strip() for part in title.split(",", 1)]
+            months = ("january", "february", "march", "april", "may", "june", "july", "august",
+                      "september", "october", "november", "december", "januari", "februari",
+                      "maart", "mei", "juni", "augustus", "oktober")
+            title = head if any(month in tail.lower() for month in months) else tail
+        parts.append(
+            f'<a class="eco-src" href="{esc(s["url"])}" rel="noopener noreferrer" target="_blank">{esc(title)}</a>')
+    if not parts:
+        return ""
+    if compact:
+        return f'<div class="eco-chiprow">{"".join(parts)}</div>'
+    return "".join(parts)
 
 
 def load_data(name):
@@ -3731,7 +3751,7 @@ JOIN_SVG = ('<svg class="eco-join" viewBox="0 0 24 24" aria-hidden="true" focusa
             'stroke-linecap="round" stroke-linejoin="round"/></svg>')
 
 
-def _eco_piece(block, lang, kind, extra_cls="", style=""):
+def _eco_piece(block, lang, kind, extra_cls="", style="", links=True):
     title = _bi(block.get("title"), lang)
     fact = _bi(block.get("fact"), lang)
     kicker = _bi(block.get("kicker"), lang)
@@ -3743,27 +3763,47 @@ def _eco_piece(block, lang, kind, extra_cls="", style=""):
         inner = f'<a class="eco-cardlink" href="{url(lang, href)}">{inner}</a>'
     extra = "".join(
         f'<a href="{url(lang, link["href"])}">{esc(_bi(link.get("label") or link.get("title"), lang))}</a>'
-        for link in block.get("links") or [])
+        for link in (block.get("links") or []) if links)
     extra = f'<div class="eco-links">{extra}</div>' if extra else ""
     cls = {"layer": "eco-card", "branch": "eco-card", "company": "eco-co",
            "stream": "eco-stream", "callout": "eco-call"}[kind]
     style_attr = f' style="{style}"' if style else ""
-    return f'<div class="{cls} {tone}{extra_cls}"{style_attr}>{inner}{extra}{_src_links(block.get("sources"))}</div>'
+    chips = _src_links(block.get("sources"), compact=not links)
+    return f'<div class="{cls} {tone}{extra_cls}"{style_attr}>{inner}{extra}{chips}</div>'
+
+
+def _arc_points(n, cx, cy, radius, y0, y1):
+    """Left edges on a circle, evenly spaced from y0 to y1. The middle bows right."""
+    pts = []
+    for i in range(n):
+        y = y0 + (y1 - y0) * i / (n - 1)
+        dy = y - cy
+        dx = math.sqrt(max(radius * radius - dy * dy, 0))
+        pts.append((cx + dx, y))
+    return pts
 
 
 def _orbit_blocks(blocks, lang):
-    """Layers and side companies on one arc around a circle clipped on the left."""
+    """Eight boxes on an arc around a circle that is mostly off the left edge."""
     n = len(blocks)
-    parts = []
+    # Desktop design box 820×710. Sun center is off the left; this arc shares that idea.
+    desktop = _arc_points(n, cx=15, cy=350, radius=385, y0=50, y1=650)
+    mobile = _arc_points(n, cx=-760, cy=490, radius=930, y0=70, y1=910)
+    parts, lines_d, lines_m = [], [], []
     for i, block in enumerate(blocks):
-        # -90° to +90°: ends sit against the core, the middle bows out to the right.
-        theta = -math.pi / 2 + math.pi * i / (n - 1)
-        bend = 38 * math.cos(theta)
-        parts.append(_eco_piece(block, lang, "layer", extra_cls=" eco-node", style=f"--bend:{bend:.2f}"))
+        dx, dy = desktop[i]
+        mx, my = mobile[i]
+        style = f"--dl:{dx / 820 * 100:.2f}%;--dt:{dy / 700 * 100:.2f}%;--ml:{mx / 366 * 100:.2f}%;--mt:{my / 980 * 100:.2f}%"
+        parts.append(_eco_piece(block, lang, "layer", extra_cls=" eco-node", style=style, links=False))
+        lines_d.append(f'<line x1="130" y1="350" x2="{dx:.1f}" y2="{dy:.1f}"/>')
+        lines_m.append(f'<line x1="70" y1="490" x2="{mx:.1f}" y2="{my:.1f}"/>')
     label = "Elon ecosystem" if lang == "en" else "Elon-ecosysteem"
+    stroke = 'fill="none" stroke="rgba(170,230,255,.55)" stroke-width="1"'
     return (
         f'<div class="eco-orbit">'
         f'<div class="eco-sun" aria-hidden="true"></div>'
+        f'<svg class="eco-rays eco-rays-d" viewBox="0 0 820 700" preserveAspectRatio="none" aria-hidden="true"><g {stroke}>{"".join(lines_d)}</g></svg>'
+        f'<svg class="eco-rays eco-rays-m" viewBox="0 0 366 980" preserveAspectRatio="none" aria-hidden="true"><g {stroke}>{"".join(lines_m)}</g></svg>'
         f'<p class="eco-core">{esc(label)}</p>'
         f'<div class="eco-arc">{"".join(parts)}</div>'
         f'</div>'

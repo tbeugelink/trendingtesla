@@ -45,8 +45,8 @@
       "kicker": {"en": "1 · Energy", "nl": "1 · Energie"},
       "title": {"en": "Tesla Energy", "nl": "Tesla Energy"},
       "fact": {
-        "en": "Power for cars, factories and AI datacenters. Megafactory Texas has a planned capacity of 50 GWh, and production started in Q3. In 2025 Tesla booked $430.1 million of revenue with xAI, mostly Megapacks, and another $78.1 million through February 2026. Tesla calls storage essential for datacenter uptime.",
-        "nl": "Stroom voor auto's, fabrieken en AI-datacenters. Megafactory Texas heeft een geplande capaciteit van 50 GWh, en de productie startte in Q3. In 2025 boekte Tesla $430,1 miljoen omzet op xAI, vooral Megapacks, en tot februari 2026 nog eens $78,1 miljoen. Tesla noemt opslag cruciaal voor de uptime van datacenters."
+        "en": "Megafactory Texas started in Q3, planned 50 GWh. Megapacks for xAI: $430.1 million in 2025.",
+        "nl": "Megafactory Texas startte in Q3, gepland 50 GWh. Megapacks voor xAI: $430,1 miljoen in 2025."
       },
       "sources": [
         {"title": "Electrek, 1 May 2026", "url": "https://electrek.co/2026/05/01/tesla-tsla-web-transactions-musk-companies-spacex-xai-10ka-2025/"},
@@ -59,8 +59,8 @@
       "kicker": {"en": "2 · Compute", "nl": "2 · Rekenkracht"},
       "title": {"en": "SpaceXSI clusters", "nl": "SpaceXSI-clusters"},
       "fact": {
-        "en": "Chips and clusters that train and run models. Nameplate compute was 1.7 GW on 30 September 2026, against 0.6 GW a year earlier. GPU counts posted on X are claims, not figures from a filing. Terafab is a plan, not a factory that is running.",
-        "nl": "Chips en clusters die modellen trainen en laten draaien. Nameplate compute was 1,7 GW op 30 september 2026, tegen 0,6 GW een jaar eerder. GPU-aantallen op X zijn claims, geen cijfers uit een filing. Terafab is een plan, geen fabriek die draait."
+        "en": "Nameplate compute was 1.7 GW on 30 September 2026, up from 0.6 GW. Terafab is still a plan.",
+        "nl": "Nameplate compute was 1,7 GW op 30 september 2026, eerder 0,6 GW. Terafab is nog een plan."
       },
       "sources": [
         {"title": "SpaceX 10-Q", "url": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026066880/R10.htm"},
@@ -73,8 +73,8 @@
       "kicker": {"en": "3 · Superintelligence", "nl": "3 · Superintelligentie"},
       "title": {"en": "Grok, Cursor and X", "nl": "Grok, Cursor en X"},
       "fact": {
-        "en": "The Super Intelligence segment is a full pillar next to rockets and Starlink. In Q3 2026 its revenue rose $6.747 billion year on year, mostly from infrastructure contracts. Cursor, after the deal closed on 14 August, added $608 million through 30 September.",
-        "nl": "Het Super Intelligence-segment is een volwaardige pijler naast raketten en Starlink. In Q3 2026 steeg de omzet met $6,747 miljard jaar op jaar, vooral door infrastructuurcontracten. Cursor voegde na de afronding op 14 augustus $608 miljoen toe tot 30 september."
+        "en": "SI revenue rose $6.747 billion in Q3 2026. Cursor added $608 million after 14 August.",
+        "nl": "SI-omzet +$6,747 miljard in Q3 2026. Cursor +$608 miljoen na 14 augustus."
       },
       "sources": [
         {"title": "SpaceX 10-Q", "url": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026066880/R10.htm"}
@@ -86,8 +86,8 @@
       "kicker": {"en": "4 · Cars and robots", "nl": "4 · Auto's en robots"},
       "title": {"en": "FSD, Robotaxi, Optimus", "nl": "FSD, Robotaxi, Optimus"},
       "fact": {
-        "en": "Cybercab has run in the Austin robotaxi fleet since 3 September. Active FSD subscriptions were 1.74 million at the end of Q3, up 67% year on year. Personal Cybercab pre-orders are $29,990 plus $299 a month, and only inside geofences. Berlin: a €3 billion expansion, with Cybercabs from 2029.",
-        "nl": "Cybercab rijdt sinds 3 september in de robotaxivloot in Austin. Eind Q3 waren er 1,74 miljoen actieve FSD-abonnementen, 67% meer dan een jaar eerder. Persoonlijke Cybercab-pre-orders kosten $29.990 plus $299 per maand, en alleen binnen geofences. Berlijn: een uitbreiding van €3 miljard, met Cybercabs vanaf 2029."
+        "en": "1.74 million FSD subscriptions at the end of Q3. Cybercab: $29,990 plus $299 a month.",
+        "nl": "1,74 miljoen FSD-abonnementen eind Q3. Cybercab: $29.990 plus $299 per maand."
       },
       "links": [
         {"label": "FSD", "href": "fsd/"},
@@ -106,8 +106,8 @@
       "kicker": {"en": "5 · Connection", "nl": "5 · Verbinding"},
       "title": {"en": "Starlink", "nl": "Starlink"},
       "fact": {
-        "en": "More than 11,100 satellites. 13.6 million consumer subscribers on 30 September, against 7.2 million a year earlier. ARPU was $69 in Q3. Service in 174 countries and territories. Flight 15 deployed 26 Starlink V3 satellites.",
-        "nl": "Meer dan 11.100 satellieten. 13,6 miljoen consumentenabonnees op 30 september, tegen 7,2 miljoen een jaar eerder. De ARPU was $69 in Q3. Dienst in 174 landen en gebieden. Vlucht 15 zette 26 Starlink V3-satellieten uit."
+        "en": "13.6 million consumer subscribers on 30 September. More than 11,100 satellites.",
+        "nl": "13,6 miljoen consumentenabonnees op 30 september. Meer dan 11.100 satellieten."
       },
       "sources": [
         {"title": "SpaceX 10-Q", "url": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026066880/R10.htm"},
@@ -120,8 +120,8 @@
       "kicker": {"en": "6 · Space and Mars", "nl": "6 · Ruimte en Mars"},
       "title": {"en": "Starship and Falcon", "nl": "Starship en Falcon"},
       "fact": {
-        "en": "In Q3, 33 Falcon flights (12 for customers, 21 internal) and 2 Starship flights. On 13–14 November the tower caught Starship for the first time, after 22.5 hours in orbit. The booster was not caught on that flight. Full reuse and Mars remain goals, not finished facts.",
-        "nl": "In Q3 33 Falcon-vluchten (12 voor klanten, 21 intern) en 2 Starship-vluchten. Op 13–14 november ving de toren Starship voor het eerst, na 22,5 uur in een baan. De booster is die vlucht niet gevangen. Volledige herbruikbaarheid en Mars blijven doelen, geen voltooide feiten."
+        "en": "The tower caught Starship on 13–14 November after 22.5 hours. The booster was not caught.",
+        "nl": "De toren ving Starship op 13–14 november na 22,5 uur. De booster is niet gevangen."
       },
       "links": [
         {"label": "SpaceX", "href": "spacex/"}
@@ -139,8 +139,8 @@
       "kicker": {"en": "Human–AI bridge", "nl": "Brug mens–AI"},
       "title": "Neuralink",
       "fact": {
-        "en": "Independent. On 28 January 2026 there were 21 trial participants worldwide, and no serious device-related adverse event had been reported then. Telepathy drives a cursor and a robot arm. Typing reached 40 words a minute in a trial. VOICE was aimed at conversation speed. Blindsight did not yet have an open human trial.",
-        "nl": "Zelfstandig. Op 28 januari 2026 waren er 21 deelnemers aan trials wereldwijd, en toen was er geen ernstige apparaat-gerelateerde bijwerking gemeld. Telepathy stuurt een cursor en een robotarm. Typen haalde 40 woorden per minuut in een trial. VOICE mikte op conversatiesnelheid. Blindsight had toen nog geen open menselijke trial."
+        "en": "21 participants on 28 January 2026. Blindsight had no open human trial then.",
+        "nl": "21 deelnemers op 28 januari 2026. Blindsight had toen nog geen open trial."
       },
       "sources": [
         {"title": "Neuralink, 28 January 2026", "url": "https://neuralink.com/updates/two-years-of-telepathy/"},
@@ -153,8 +153,8 @@
       "kicker": {"en": "Tunnels", "nl": "Tunnels"},
       "title": {"en": "The Boring Company", "nl": "The Boring Company"},
       "fact": {
-        "en": "Independent. Vegas Loop: more than 4 million passengers and 14 stations, with approval for 68 miles and 123 stations. Also Music City Loop in Nashville, Dubai Loop under a contract with the RTA, and the Cybertunnel at Gigafactory Texas.",
-        "nl": "Zelfstandig. Vegas Loop: meer dan 4 miljoen passagiers en 14 stations, met goedkeuring voor 68 mijl en 123 stations. Daarnaast Music City Loop in Nashville, Dubai Loop met een contract met de RTA, en de Cybertunnel bij Gigafactory Texas."
+        "en": "Vegas Loop: more than 4 million passengers and 14 stations. Approval for 68 miles and 123 stations.",
+        "nl": "Vegas Loop: meer dan 4 miljoen passagiers en 14 stations. Goedkeuring voor 68 mijl en 123 stations."
       },
       "sources": [
         {"title": "The Boring Company", "url": "https://boringcompany.com/tunnels"}

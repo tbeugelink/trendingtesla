@@ -1023,13 +1023,13 @@ header.hb .pnav>.is-parked{display:none}
 .eco-links a,.eco-src{display:inline-block;font-size:.75rem;font-weight:800;text-decoration:none;border-radius:999px;padding:3px 8px;border:1px solid currentColor}
 .eco-src{margin:8px 8px 0 0;color:#9ad7ff}
 .eco-card.energy{background:#3a2204;border-color:#ffb020;color:#ffc14d}
-.eco-card.compute{background:#24124a;border-color:#b388ff;color:#d7c4ff}
+.eco-card.compute{background:#0c1c3d;border-color:#3d7eff;color:#9cbcff}
 .eco-card.ai{background:#04303c;border-color:#19e3ff;color:#8eecff}
-.eco-card.bodies{background:#3a0c12;border-color:#ff3b4e;color:#ff9aa6}
-.eco-card.link{background:#043024;border-color:#1dff9a;color:#9dffd0}
-.eco-card.mars{background:#3a1608;border-color:#ff7a2f;color:#ffc099}
-.eco-card.neural,.eco-co.neural{background:#3a0e28;border-color:#ff4fa3;color:#ffb3d4}
-.eco-card.boring,.eco-co.boring{background:#2c2208;border-color:#e2b126;color:#ffe08a}
+.eco-card.bodies{background:#3a0810;border-color:#ff2d4a;color:#ff9aa8}
+.eco-card.link{background:#043018;border-color:#1dff6a;color:#9dffc4}
+.eco-card.mars{background:#3a1404;border-color:#ff7a1a;color:#ffc08a}
+.eco-card.neural,.eco-co.neural{background:#3a0830;border-color:#ff2bd6;color:#ffb0ea}
+.eco-card.boring,.eco-co.boring{background:#04302c;border-color:#14e0c0;color:#8dffef}
 .eco-stats{display:grid;grid-template-columns:1fr;gap:8px;margin:0 0 16px}
 .eco-stat{display:block;text-decoration:none;color:inherit;background:#12161e;border:1px solid #3a4a60;border-radius:14px;padding:10px 12px}
 .eco-stat b{display:block;font-size:1.25rem;letter-spacing:-.02em}
@@ -1086,11 +1086,9 @@ header.hb .pnav>.is-parked{display:none}
 .eco-node{position:absolute;left:var(--dl);top:var(--dt);width:33%;transform:translateY(-50%);margin:0;padding:4px 8px 3px}
 .eco-node .eco-k{display:block;font-size:.56rem;line-height:1.1;margin:0;letter-spacing:.06em}
 .eco-node strong{display:block;color:#fff;font-size:.8rem;line-height:1.15}
-.eco-node .eco-chiprow{display:flex;flex-wrap:wrap;gap:3px;margin-top:3px}
-.eco-node .eco-cardlink p{font-size:.68rem;line-height:1.25;margin:1px 0 0}
-.eco-node .eco-links{margin-top:3px;gap:4px}
-.eco-node .eco-links a,.eco-node .eco-src{font-size:.58rem;padding:0 5px;margin:0;line-height:1.55;white-space:nowrap}
-.eco-node::before{content:"";position:absolute;z-index:-1;top:50%;right:100%;width:28px;border-top:1px solid rgba(170,230,255,.65)}
+a.eco-node{display:block;text-decoration:none;color:inherit}
+a.eco-node:hover,a.eco-node:focus-visible{border-color:var(--blue);box-shadow:0 0 0 2px var(--blue);outline:none}
+.eco-node p{font-size:.68rem;line-height:1.25;margin:2px 0 0;color:#d5deea}
 @media (max-width:899.98px){
 .eco-orbit{height:980px}
 .eco-sun{width:860px;height:860px;left:-580px;top:50%;transform:translateY(-50%)}
@@ -3744,7 +3742,11 @@ def topic_hub(spec, items, lang):
            "Opgebouwd uit onderwerptags en uit trefwoorden in de kop.")
     link = (f'<p class="hubcount"><a href="{url(lang, ecosystem_path(lang))}">'
             + ("See the ecosystem map" if lang == "en" else "Zie de kaart van het ecosysteem")
-            + "</a></p>")
+            + "</a>")
+    if spec.get("key") == "spacex":
+        link += (' · <a href="' + url(lang, "starship/") + '">'
+                 + ("Starship tracker" if lang == "en" else "Starship-tracker") + "</a>")
+    link += "</p>"
     head = (f'{nav}<header class="hubhead"><h1>{esc(title)}</h1>'
             f'<p class="byline">{esc(L["byline"])}</p>'
             f'<p class="lead">{esc(intro)}</p>{link}</header>')
@@ -3800,22 +3802,39 @@ def _arc_points(n, cx, cy, radius, y0, y1):
     return pts
 
 
+def _orbit_box(block, lang, style):
+    """One arc box: a role in two lines, and the whole box links to that hub."""
+    title = _bi(block.get("title"), lang)
+    fact = _bi(block.get("fact"), lang)
+    kicker = _bi(block.get("kicker"), lang)
+    tone = block.get("tone") or ""
+    kick = f'<span class="eco-k">{esc(kicker)}</span>' if kicker else ""
+    return (
+        f'<a class="eco-card eco-node {tone}" href="{url(lang, block.get("href") or "")}" style="{style}">'
+        f'{kick}<strong>{esc(title)}</strong><p>{esc(fact)}</p></a>'
+    )
+
+
 def _orbit_blocks(blocks, lang):
     """Eight boxes on an arc around a circle that is mostly off the left edge."""
     n = len(blocks)
     # Desktop design box 820×710. Sun center is off the left; this arc shares that idea.
     desktop = _arc_points(n, cx=15, cy=350, radius=385, y0=50, y1=650)
-    mobile = _arc_points(n, cx=-760, cy=490, radius=930, y0=70, y1=910)
+    # Mobile column is 366 wide. The core's right edge is x=98, then a 28px
+    # stub, so every box starts at x>=126 and still fits a half-width card.
+    mobile = _arc_points(n, cx=-2185, cy=490, radius=2353, y0=86, y1=894)
     parts, lines_d, lines_m = [], [], []
     for i, block in enumerate(blocks):
         dx, dy = desktop[i]
         mx, my = mobile[i]
         style = f"--dl:{dx / 820 * 100:.2f}%;--dt:{dy / 700 * 100:.2f}%;--ml:{mx / 366 * 100:.2f}%;--mt:{my / 980 * 100:.2f}%"
-        parts.append(_eco_piece(block, lang, "layer", extra_cls=" eco-node", style=style, links=False))
-        lines_d.append(f'<line x1="130" y1="350" x2="{dx:.1f}" y2="{dy:.1f}"/>')
-        lines_m.append(f'<line x1="70" y1="490" x2="{mx:.1f}" y2="{my:.1f}"/>')
+        parts.append(_orbit_box(block, lang, style))
+        # Core label's right edge, then the left end of the 28px stub, then the box.
+        # End a hair inside the box so the stub visibly meets the border.
+        lines_d.append(f'<path d="M142 350 L{dx - 28:.1f} {dy:.1f} L{dx + 1.4:.1f} {dy:.1f}"/>')
+        lines_m.append(f'<path d="M98 490 L{mx - 28:.1f} {my:.1f} L{mx + 1.4:.1f} {my:.1f}"/>')
     label = "Elon ecosystem" if lang == "en" else "Elon-ecosysteem"
-    stroke = 'fill="none" stroke="rgba(170,230,255,.55)" stroke-width="1"'
+    stroke = 'fill="none" stroke="rgba(198,240,255,.9)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="round"'
     return (
         f'<div class="eco-orbit">'
         f'<div class="eco-sun" aria-hidden="true"></div>'

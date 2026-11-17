@@ -8,7 +8,7 @@
     {
       "value": {"en": "13.6 million", "nl": "13,6 miljoen"},
       "label": {"en": "Starlink subscribers", "nl": "Starlink-abonnees"},
-      "detail": {"en": "Consumer, 30 September 2026.", "nl": "Consumenten, 30 september 2026."},
+      "detail": {"en": "Consumer, 30 September 2026. More than 11,100 satellites.", "nl": "Consumenten, 30 september 2026. Meer dan 11.100 satellieten."},
       "sources": [{"title": "SpaceX 10-Q", "url": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026066880/R10.htm"}]
     },
     {
@@ -26,7 +26,7 @@
     {
       "value": {"en": "Flight 15", "nl": "Vlucht 15"},
       "label": {"en": "First Starship catch", "nl": "Eerste Starship-vangst"},
-      "detail": {"en": "The ship, 13–14 November 2026. The booster was not caught.", "nl": "Het schip, 13–14 november 2026. De booster is niet gevangen."},
+      "detail": {"en": "The ship, after 22.5 hours, 13–14 November 2026. The booster was not caught.", "nl": "Het schip, na 22,5 uur, 13–14 november 2026. De booster is niet gevangen."},
       "href": "starship/",
       "sources": [{"title": "SpaceX, Flight 15", "url": "https://www.spacex.com/launches/starship-flight-15/"}]
     },
@@ -45,8 +45,8 @@
       "kicker": {"en": "1 · Energy", "nl": "1 · Energie"},
       "title": {"en": "Tesla Energy", "nl": "Tesla Energy"},
       "fact": {
-        "en": "Megafactory Texas started in Q3, planned 50 GWh. Megapacks for xAI: $430.1 million in 2025.",
-        "nl": "Megafactory Texas startte in Q3, gepland 50 GWh. Megapacks voor xAI: $430,1 miljoen in 2025."
+        "en": "Stores power for the cars, the factories and the AI datacenters.",
+        "nl": "Slaat stroom op voor auto's, fabrieken en AI-datacenters."
       },
       "sources": [
         {"title": "Electrek, 1 May 2026", "url": "https://electrek.co/2026/05/01/tesla-tsla-web-transactions-musk-companies-spacex-xai-10ka-2025/"},
@@ -59,8 +59,8 @@
       "kicker": {"en": "2 · Compute", "nl": "2 · Rekenkracht"},
       "title": {"en": "SpaceXSI clusters", "nl": "SpaceXSI-clusters"},
       "fact": {
-        "en": "Nameplate compute was 1.7 GW on 30 September 2026, up from 0.6 GW. Terafab is still a plan.",
-        "nl": "Nameplate compute was 1,7 GW op 30 september 2026, eerder 0,6 GW. Terafab is nog een plan."
+        "en": "Chips and clusters that train the models and keep them running.",
+        "nl": "Chips en clusters die de modellen trainen en draaien."
       },
       "sources": [
         {"title": "SpaceX 10-Q", "url": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026066880/R10.htm"},
@@ -73,8 +73,8 @@
       "kicker": {"en": "3 · Superintelligence", "nl": "3 · Superintelligentie"},
       "title": {"en": "Grok, Cursor and X", "nl": "Grok, Cursor en X"},
       "fact": {
-        "en": "SI revenue rose $6.747 billion in Q3 2026. Cursor added $608 million after 14 August.",
-        "nl": "SI-omzet +$6,747 miljard in Q3 2026. Cursor +$608 miljoen na 14 augustus."
+        "en": "Grok, Cursor and X: the models, the tools and the live network.",
+        "nl": "Grok, Cursor en X: modellen, tools en het live netwerk."
       },
       "sources": [
         {"title": "SpaceX 10-Q", "url": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026066880/R10.htm"}
@@ -82,12 +82,12 @@
     },
     {
       "tone": "bodies",
-      "href": "tesla/",
+      "href": "robotaxi/",
       "kicker": {"en": "4 · Cars and robots", "nl": "4 · Auto's en robots"},
       "title": {"en": "FSD, Robotaxi, Optimus", "nl": "FSD, Robotaxi, Optimus"},
       "fact": {
-        "en": "1.74 million FSD subscriptions at the end of Q3. Cybercab: $29,990 plus $299 a month.",
-        "nl": "1,74 miljoen FSD-abonnementen eind Q3. Cybercab: $29.990 plus $299 per maand."
+        "en": "Cars, robotaxis and robots that carry the AI into the real world.",
+        "nl": "Auto's, robotaxi's en robots die de AI de echte wereld in brengen."
       },
       "links": [
         {"label": "FSD", "href": "fsd/"},
@@ -106,8 +106,8 @@
       "kicker": {"en": "5 · Connection", "nl": "5 · Verbinding"},
       "title": {"en": "Starlink", "nl": "Starlink"},
       "fact": {
-        "en": "13.6 million subscribers. More than 11,100 satellites.",
-        "nl": "13,6 miljoen abonnees. Ruim 11.100 satellieten."
+        "en": "Satellite internet across Earth, and later on the way to Mars.",
+        "nl": "Satellietinternet over de aarde, en later op de weg naar Mars."
       },
       "sources": [
         {"title": "SpaceX 10-Q", "url": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026066880/R10.htm"},
@@ -116,12 +116,12 @@
     },
     {
       "tone": "mars",
-      "href": "starship/",
+      "href": "spacex/",
       "kicker": {"en": "6 · Space and Mars", "nl": "6 · Ruimte en Mars"},
       "title": {"en": "Starship and Falcon", "nl": "Starship en Falcon"},
       "fact": {
-        "en": "The tower caught Starship on 13–14 November after 22.5 hours. The booster was not caught.",
-        "nl": "De toren ving Starship op 13–14 november na 22,5 uur. De booster is niet gevangen."
+        "en": "Rockets that reach orbit, with Mars still the long-term aim.",
+        "nl": "Raketten naar een baan om de aarde, met Mars als einddoel."
       },
       "links": [
         {"label": "SpaceX", "href": "spacex/"}
@@ -139,8 +139,8 @@
       "kicker": {"en": "Human–AI bridge", "nl": "Brug mens–AI"},
       "title": "Neuralink",
       "fact": {
-        "en": "21 participants on 28 January 2026. Blindsight had no open human trial then.",
-        "nl": "21 deelnemers op 28 januari 2026. Blindsight had toen nog geen open trial."
+        "en": "A bridge from thought to a cursor, to speech and to sight.",
+        "nl": "Een brug van gedachte naar een cursor, naar spraak en naar zicht."
       },
       "sources": [
         {"title": "Neuralink, 28 January 2026", "url": "https://neuralink.com/updates/two-years-of-telepathy/"},
@@ -153,8 +153,8 @@
       "kicker": {"en": "Tunnels", "nl": "Tunnels"},
       "title": {"en": "The Boring Company", "nl": "The Boring Company"},
       "fact": {
-        "en": "Vegas Loop: over 4 million passengers and 14 stations.",
-        "nl": "Vegas Loop: ruim 4 miljoen passagiers en 14 stations."
+        "en": "Tunnels and Loop transit, often driven by Tesla vehicles.",
+        "nl": "Tunnels en Loop-vervoer, vaak gereden met Tesla-voertuigen."
       },
       "sources": [
         {"title": "The Boring Company", "url": "https://boringcompany.com/tunnels"}
@@ -177,8 +177,8 @@
       "tone": "money",
       "title": {"en": "Money already in filings", "nl": "Geld dat al in filings staat"},
       "fact": {
-        "en": "Besides the Megapacks, Tesla booked $143.3 million of revenue with SpaceX in 2025, mostly vehicles. Tesla invested $2 billion in the xAI Series E round. After the acquisition that became SpaceX shares. Tesla bought $3.3 million of advertising on X and paid The Boring Company $0.9 million.",
-        "nl": "Naast de Megapacks boekte Tesla in 2025 $143,3 miljoen omzet op SpaceX, vooral voertuigen. Tesla investeerde $2 miljard in de xAI Series E-ronde. Na de overname werd dat SpaceX-aandelen. Tesla kocht voor $3,3 miljoen advertenties op X en betaalde The Boring Company $0,9 miljoen."
+        "en": "In 2025 Tesla booked $430.1 million with xAI, mostly Megapacks, and another $78.1 million through February 2026. Besides that, $143.3 million of revenue with SpaceX, mostly vehicles. Tesla invested $2 billion in the xAI Series E round. After the acquisition that became SpaceX shares. Tesla bought $3.3 million of advertising on X and paid The Boring Company $0.9 million.",
+        "nl": "In 2025 boekte Tesla $430,1 miljoen op xAI, vooral Megapacks, en tot februari 2026 nog eens $78,1 miljoen. Daarnaast $143,3 miljoen omzet op SpaceX, vooral voertuigen. Tesla investeerde $2 miljard in de xAI Series E-ronde. Na de overname werd dat SpaceX-aandelen. Tesla kocht voor $3,3 miljoen advertenties op X en betaalde The Boring Company $0,9 miljoen."
       },
       "sources": [
         {"title": "Electrek, 1 May 2026", "url": "https://electrek.co/2026/05/01/tesla-tsla-web-transactions-musk-companies-spacex-xai-10ka-2025/"}
@@ -190,17 +190,23 @@
       "href": "tesla/",
       "title": "Tesla",
       "fact": {
-        "en": "Public and independent. Q3 revenue was $28.05 billion. Special committees at Tesla and SpaceX are looking at a possible merger. That is not a decision.",
-        "nl": "Beursgenoteerd en zelfstandig. De Q3-omzet was $28,05 miljard. Speciale comités bij Tesla en SpaceX bekijken een mogelijke fusie. Dat is geen besluit."
+        "en": "Public and independent. Q3 revenue was $28.05 billion. Megafactory Texas started production in Q3, planned capacity 50 GWh. Active FSD subscriptions were 1.74 million at the end of Q3. Personal Cybercab pre-orders are $29,990 plus $299 a month, only inside geofences. Berlin: a €3 billion expansion, with Cybercabs from 2029. Special committees at Tesla and SpaceX are looking at a possible merger. That is not a decision.",
+        "nl": "Beursgenoteerd en zelfstandig. De Q3-omzet was $28,05 miljard. Megafactory Texas startte de productie in Q3, geplande capaciteit 50 GWh. Eind Q3 waren er 1,74 miljoen actieve FSD-abonnementen. Persoonlijke Cybercab-pre-orders kosten $29.990 plus $299 per maand, alleen binnen geofences. Berlijn: een uitbreiding van €3 miljard, met Cybercabs vanaf 2029. Speciale comités bij Tesla en SpaceX bekijken een mogelijke fusie. Dat is geen besluit."
       },
-      "sources": [{"title": "CNBC, 21 October 2026", "url": "https://www.cnbc.com/2026/10/21/tesla-tsla-q3-2026-earnings-report.html"}]
+      "sources": [
+        {"title": "CNBC, 21 October 2026", "url": "https://www.cnbc.com/2026/10/21/tesla-tsla-q3-2026-earnings-report.html"},
+        {"title": "Electrek, 1 May 2026", "url": "https://electrek.co/2026/05/01/tesla-tsla-web-transactions-musk-companies-spacex-xai-10ka-2025/"},
+        {"title": "Tesla Q3 2026 update", "url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026066738/exhibit9914.htm"},
+        {"title": "TechCrunch, 14 November 2026", "url": "https://techcrunch.com/2026/11/14/tesla-opens-cybercab-pre-orders-for-personal-use-with-geo-restrictions-and-a-299-monthly-fee/"},
+        {"title": "TechCrunch, 16 November 2026", "url": "https://techcrunch.com/2026/11/16/tesla-goes-all-in-on-the-cybercab-with-upcoming-e3b-berlin-gigafactory-expansion/"}
+      ]
     },
     {
       "href": "spacex/",
       "title": "SpaceX",
       "fact": {
-        "en": "Falcon, Starship, Starlink, Starshield, and since February the whole SI business. The June 2026 listing sold 638.9 million Class A shares at $135, for net proceeds of $85.675 billion. Three segments: Space, Connectivity and Super Intelligence.",
-        "nl": "Falcon, Starship, Starlink, Starshield, en sinds februari de hele SI-tak. De beursgang van juni 2026: 638,9 miljoen Class A-aandelen tegen $135, netto-opbrengst $85,675 miljard. Drie segmenten: Space, Connectivity en Super Intelligence."
+        "en": "Falcon, Starship, Starlink, Starshield, and since February the whole SI business. In Q3, 33 Falcon flights (12 for customers, 21 internal) and 2 Starship flights. The June 2026 listing sold 638.9 million Class A shares at $135, for net proceeds of $85.675 billion. Three segments: Space, Connectivity and Super Intelligence.",
+        "nl": "Falcon, Starship, Starlink, Starshield, en sinds februari de hele SI-tak. In Q3 33 Falcon-vluchten (12 voor klanten, 21 intern) en 2 Starship-vluchten. De beursgang van juni 2026: 638,9 miljoen Class A-aandelen tegen $135, netto-opbrengst $85,675 miljard. Drie segmenten: Space, Connectivity en Super Intelligence."
       },
       "sources": [{"title": "SpaceX 10-Q", "url": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026066880/R10.htm"}]
     },
@@ -208,13 +214,14 @@
       "href": "spacexsi/",
       "title": "SpaceXSI",
       "fact": {
-        "en": "Formerly xAI, then SpaceXAI. xAI was acquired on 2 February 2026. Reuters put xAI at $250 billion and SpaceX at $1 billion in that deal. The July rebrand was SpaceXAI. In October the name SpaceXSI, for Super Intelligence, was confirmed. The 10-Q already calls the segment SI.",
-        "nl": "Eerder xAI, daarna SpaceXAI. xAI is op 2 februari 2026 overgenomen. Reuters noemde xAI op $250 miljard en SpaceX op $1 miljard in die deal. De rebrand van juli was SpaceXAI. In oktober is de naam SpaceXSI, voor Super Intelligence, bevestigd. In de 10-Q heet het segment al SI."
+        "en": "Formerly xAI, then SpaceXAI. xAI was acquired on 2 February 2026. Reuters put xAI at $250 billion and SpaceX at $1 billion in that deal. The July rebrand was SpaceXAI. In October the name SpaceXSI, for Super Intelligence, was confirmed. In Q3 2026 SI revenue rose $6.747 billion year on year. The 10-Q already calls the segment SI.",
+        "nl": "Eerder xAI, daarna SpaceXAI. xAI is op 2 februari 2026 overgenomen. Reuters noemde xAI op $250 miljard en SpaceX op $1 miljard in die deal. De rebrand van juli was SpaceXAI. In oktober is de naam SpaceXSI, voor Super Intelligence, bevestigd. In Q3 2026 steeg de SI-omzet met $6,747 miljard jaar op jaar. In de 10-Q heet het segment al SI."
       },
       "sources": [
         {"title": "Reuters, 2 February 2026", "url": "https://www.reuters.com/business/musks-spacex-merge-with-xai-combined-valuation-125-trillion-bloomberg-news-2026-02-02/"},
         {"title": "Business Insider, July 2026", "url": "https://www.businessinsider.com/xai-rebrand-spacexai-new-logo-x-handle-spacex-2026-7"},
-        {"title": "Indian Express, October 2026", "url": "https://indianexpress.com/article/technology/artificial-intelligence/elon-musk-spacexai-superintelligence-rebrand-what-it-means-10907186/"}
+        {"title": "Indian Express, October 2026", "url": "https://indianexpress.com/article/technology/artificial-intelligence/elon-musk-spacexai-superintelligence-rebrand-what-it-means-10907186/"},
+        {"title": "SpaceX 10-Q", "url": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026066880/R10.htm"}
       ]
     },
     {
@@ -242,8 +249,8 @@
       "href": "neuralink/",
       "title": "Neuralink",
       "fact": {
-        "en": "Independent. Brain-computer interfaces: Telepathy, the VOICE speech study and the Blindsight vision study. The participant count above is the 28 January 2026 update.",
-        "nl": "Zelfstandig. Hersen-computerinterfaces: Telepathy, de spraakstudie VOICE en de visieproef Blindsight. Het deelnemersaantal hierboven is de update van 28 januari 2026."
+        "en": "Independent. Brain-computer interfaces: Telepathy, the VOICE speech study and the Blindsight vision study. On 28 January 2026 there were 21 participants, and Blindsight had no open human trial then.",
+        "nl": "Zelfstandig. Hersen-computerinterfaces: Telepathy, de spraakstudie VOICE en de visieproef Blindsight. Op 28 januari 2026 waren er 21 deelnemers, en Blindsight had toen nog geen open menselijke trial."
       },
       "sources": [{"title": "Neuralink, 28 January 2026", "url": "https://neuralink.com/updates/two-years-of-telepathy/"}]
     },
@@ -251,8 +258,8 @@
       "href": "boring/",
       "title": {"en": "The Boring Company", "nl": "The Boring Company"},
       "fact": {
-        "en": "Independent. Tunnels and Loop transit, often with Tesla vehicles. The Vegas, Nashville, Dubai and Cybertunnel figures are the company's own project page.",
-        "nl": "Zelfstandig. Tunnels en Loop-vervoer, vaak met Tesla-voertuigen. De cijfers over Vegas, Nashville, Dubai en de Cybertunnel staan op de projectpagina van het bedrijf."
+        "en": "Independent. Vegas Loop: more than 4 million passengers and 14 stations, with approval for 68 miles and 123 stations. Also Music City Loop in Nashville, Dubai Loop and the Cybertunnel at Gigafactory Texas.",
+        "nl": "Zelfstandig. Vegas Loop: meer dan 4 miljoen passagiers en 14 stations, met goedkeuring voor 68 mijl en 123 stations. Daarnaast Music City Loop in Nashville, Dubai Loop en de Cybertunnel bij Gigafactory Texas."
       },
       "sources": [{"title": "The Boring Company", "url": "https://boringcompany.com/tunnels"}]
     },

@@ -88,7 +88,9 @@ TZ = ZoneInfo("Europe/Amsterdam")
 LANGS = {
     "en": {
         "prefix": "", "locale": "en_US",
-        "tagline": "Tesla news, explained. Every day.",
+        "tagline": "The Tesla ecosystem and the AI race, explained.",
+        "home_desc": "TrendingTesla follows Tesla, FSD, Robotaxi, Optimus, SpaceX, Starship, Starlink, SpaceXSI, Neuralink, The Boring Company and the global AI race.",
+        "scope": "Tesla, FSD, Robotaxi, Optimus, SpaceX, Starlink, SpaceXSI, Neuralink and the AI race.",
         "eyebrow": "Tesla news & honest advice",
         "hero_h": "Everything about your Tesla", "hero_span": "Without the hype",
         "hero_p": "The most important Tesla news, once a day, explained in plain language. Plus honest buying advice for your model.",
@@ -98,10 +100,10 @@ LANGS = {
         "guides_sub": "Researched per model and year, with pros and cons.",
         "related": "Read next", "sources": "Sources", "about": "About", "editorial": "Editorial policy",
         "byline": "By the TrendingTesla editorial team", "privacy": "Privacy",
-        "switch": "NL", "switch_full": "Nederlands", "i_specs": "Specifications", "i_watch": "Points to watch", "i_special": "What makes it special", "i_acc": "Accessories", "i_acc_soon": "Coming soon: accessories that fit this version, tested and explained.", "slogan": "Daily Tesla news &amp; trends", "search": "Search Tesla news", "none": "Nothing found", "home": "Home", "toc": "On this page", "prev": "Previous", "next": "Next", "ad": "Advertisement", "videos": "Shorts", "see_all": "See all", "read_story": "Read the story", "nav_models": "Tesla models", "nav_energy": "Energy", "nav_fsd": "FSD / Robotaxi", "nav_space": "SpaceX / Starlink", "nav_xai": "xAI", "nav_more": "More", "start_here": "Start here", "start_p": "Guides that stay useful: practical explainers for owning and buying a Tesla.", "all_guides": "All guides", "articles": "Articles", "cookie": "Cookie settings", "news_h": "One email a week with the best explainers", "news_p": "One email a week with the best explainers. Unsubscribe any time.", "news_btn": "Subscribe", "news_email": "Email address", "bar_h": "Get the weekly TrendingTesla newsletter", "bar_ok": "Check your inbox to confirm", "bar_err": "Could not subscribe. Please try again.", "bar_fine": "Unsubscribe any time.", "signup": "Newsletter", "signup_h": "Get the TrendingTesla newsletter", "signup_lead": "One email a week with the best explainers. Double opt-in, and you can unsubscribe from any email.", "signup_fallback": "Open the newsletter form", "signup_desc": "One email a week with the best explainers. Double opt-in, and you can unsubscribe from any email.", "aff": "Affiliate disclosure: if you buy through this link, TrendingTesla may earn a commission, at no extra cost to you.", "aff_btn": "View product", "handy_h": "Handy for your Tesla", "handy_p": "A few accessories owners look for. Each link opens an Amazon.nl search, not one specific product.", "handy_note": "As an Amazon Associate we earn from qualifying purchases.", "watch": "Watch the video", "watch_short": "Watch the Short", "consent_p": "Visit counts are cookieless and anonymous. Consent is only for ads. YouTube loads when you press play.", "consent_yes": "Accept", "consent_no": "Refuse", "consent_more": "Privacy policy", "collapse": "Close menu", "like": "Like", "save": "Save", "saved_btn": "Saved", "saved": "Saved articles", "saved_empty": "You have not saved any articles yet. Tap Save under an article title to keep it here. Saved articles stay in this browser on this device.", "archive": "All news", "newer": "Newer", "older": "Older", "page": "Page", "d_topics": "Topics", "d_models": "Models", "d_more": "More", "menu": "Menu", "tip_h": "A 22 kW charger won't charge your Tesla any faster", "tip_p": "Most Tesla models charge at home at up to 11 kW AC.", "tip_btn": "Read why", "tips": [("HW4", "Buying a used Model 3? Check the hardware first", "The Highland has HW4, older cars HW3. It decides what FSD can do.", "How to check", "used-model-3-highland-vs-classic-hw3-hw4-buying-guide"), ("−20%", "Losing range in winter? It doesn't have to be", "Preconditioning and the right settings save you kilometers.", "9 winter tips", "tesla-winter-range-tips-cold-weather")],
+        "switch": "NL", "switch_full": "Nederlands", "i_specs": "Specifications", "i_watch": "Points to watch", "i_special": "What makes it special", "i_acc": "Accessories", "i_acc_soon": "Coming soon: accessories that fit this version, tested and explained.", "slogan": "Daily Tesla news &amp; trends", "nav_eco": "Ecosystem", "nav_tesla": "Tesla", "search": "Search the ecosystem", "none": "Nothing found", "home": "Home", "toc": "On this page", "prev": "Previous", "next": "Next", "ad": "Advertisement", "videos": "Shorts", "see_all": "See all", "read_story": "Read the story", "nav_models": "Tesla models", "nav_energy": "Energy", "nav_fsd": "FSD / Robotaxi", "nav_space": "SpaceX / Starlink", "nav_xai": "xAI", "nav_more": "More", "start_here": "Start here", "start_p": "Guides that stay useful: practical explainers for owning and buying a Tesla.", "all_guides": "All guides", "articles": "Articles", "cookie": "Cookie settings", "news_h": "One email a week with the best explainers", "news_p": "One email a week with the best explainers. Unsubscribe any time.", "news_btn": "Subscribe", "news_email": "Email address", "bar_h": "Get the weekly TrendingTesla newsletter", "bar_ok": "Check your inbox to confirm", "bar_err": "Could not subscribe. Please try again.", "bar_fine": "Unsubscribe any time.", "signup": "Newsletter", "signup_h": "Get the TrendingTesla newsletter", "signup_lead": "One email a week with the best explainers. Double opt-in, and you can unsubscribe from any email.", "signup_fallback": "Open the newsletter form", "signup_desc": "One email a week with the best explainers. Double opt-in, and you can unsubscribe from any email.", "aff": "Affiliate disclosure: if you buy through this link, TrendingTesla may earn a commission, at no extra cost to you.", "aff_btn": "View product", "handy_h": "Handy for your Tesla", "handy_p": "A few accessories owners look for. Each link opens an Amazon.nl search, not one specific product.", "handy_note": "As an Amazon Associate we earn from qualifying purchases.", "watch": "Watch the video", "watch_short": "Watch the Short", "consent_p": "Visit counts are cookieless and anonymous. Consent is only for ads. YouTube loads when you press play.", "consent_yes": "Accept", "consent_no": "Refuse", "consent_more": "Privacy policy", "collapse": "Close menu", "like": "Like", "save": "Save", "saved_btn": "Saved", "saved": "Saved articles", "saved_empty": "You have not saved any articles yet. Tap Save under an article title to keep it here. Saved articles stay in this browser on this device.", "archive": "All news", "newer": "Newer", "older": "Older", "page": "Page", "d_topics": "Topics", "d_models": "Models", "d_more": "More", "menu": "Menu", "tip_h": "A 22 kW charger won't charge your Tesla any faster", "tip_p": "Most Tesla models charge at home at up to 11 kW AC.", "tip_btn": "Read why", "tips": [("HW4", "Buying a used Model 3? Check the hardware first", "The Highland has HW4, older cars HW3. It decides what FSD can do.", "How to check", "used-model-3-highland-vs-classic-hw3-hw4-buying-guide"), ("−20%", "Losing range in winter? It doesn't have to be", "Preconditioning and the right settings save you kilometers.", "9 winter tips", "tesla-winter-range-tips-cold-weather")],
         "empty": "No articles here yet. A new story is published once a day.",
         "cat_intro": "All TrendingTesla articles about {}.",
-        "eco_intro": "SpaceX, Starlink, The Boring Company and xAI/Grok: the companies around Tesla, and how they connect.",
+        "eco_intro": "Tesla, SpaceX, Starlink, SpaceXSI, Neuralink, The Boring Company and the global AI race, on one map.",
         "model_intro": "News, updates and advice for the Tesla {}.",
         "model_guides": "Advice for the {}", "model_news": "{} news",
         "all_versions": "All versions", "your_version": "Your version:",
@@ -113,13 +115,15 @@ LANGS = {
                 ("Sources included", "Every article links to the sources we used, so you can check them."),
                 ("Always free", "If you buy through our links we may earn a small commission, at no extra cost to you.")],
         "imgnote": "Images are illustrations; some are made with AI.", "photocredit": "Photos", "imgnote_other": "Other images are illustrations; some are made with AI.",
-        "disclaimer": "TrendingTesla is an independent site and is not affiliated with Tesla, Inc. Nothing on this site is financial advice.",
+        "disclaimer": "TrendingTesla is an independent site and is not affiliated with Tesla, SpaceX, SpaceXSI, Neuralink or The Boring Company. Nothing on this site is financial advice.",
         "months": ["January", "February", "March", "April", "May", "June", "July",
                    "August", "September", "October", "November", "December"],
     },
     "nl": {
         "prefix": "/nl", "locale": "nl_NL",
-        "tagline": "Tesla-nieuws, helder uitgelegd. Elke dag.",
+        "tagline": "Het Tesla-ecosysteem en de AI-race, helder uitgelegd.",
+        "home_desc": "TrendingTesla volgt Tesla, FSD, Robotaxi, Optimus, SpaceX, Starship, Starlink, SpaceXSI, Neuralink, The Boring Company en de wereldwijde AI-race.",
+        "scope": "Tesla, FSD, Robotaxi, Optimus, SpaceX, Starlink, SpaceXSI, Neuralink en de AI-race.",
         "eyebrow": "Tesla-nieuws & eerlijk advies",
         "hero_h": "Alles over jouw Tesla", "hero_span": "Zonder de hype",
         "hero_p": "Het belangrijkste Tesla-nieuws, één keer per dag helder uitgelegd. Plus eerlijk koopadvies voor jouw model.",
@@ -129,10 +133,10 @@ LANGS = {
         "guides_sub": "Uitgezocht per model en bouwjaar, met plus- en minpunten.",
         "related": "Lees ook", "sources": "Bronnen", "imgnote": "Afbeeldingen zijn illustraties, deels gemaakt met AI.", "photocredit": "Foto's", "imgnote_other": "Overige afbeeldingen zijn illustraties, deels gemaakt met AI.", "about": "Over ons", "editorial": "Redactiebeleid",
         "byline": "Door de redactie van TrendingTesla", "privacy": "Privacy",
-        "switch": "EN", "switch_full": "English", "i_specs": "Specificaties", "i_watch": "Aandachtspunten", "i_special": "Bijzonderheden", "i_acc": "Accessoires", "i_acc_soon": "Binnenkort: accessoires die op deze uitvoering passen, getest en uitgelegd.", "slogan": "Iedere dag het laatste nieuws &amp; trends", "search": "Zoek in Tesla-nieuws", "none": "Niets gevonden", "home": "Home", "toc": "Op deze pagina", "prev": "Vorig", "next": "Volgend", "ad": "Advertentie", "videos": "Shorts", "see_all": "Alles bekijken", "read_story": "Lees het verhaal", "nav_models": "Tesla-modellen", "nav_energy": "Energie", "nav_fsd": "FSD / Robotaxi", "nav_space": "SpaceX / Starlink", "nav_xai": "xAI", "nav_more": "Meer", "start_here": "Begin hier", "start_p": "Gidsen die bruikbaar blijven: praktische uitleg voor wie een Tesla heeft of er een wil kopen.", "all_guides": "Alle gidsen", "articles": "Artikelen", "cookie": "Cookie-instellingen", "news_h": "Eén mail per week met de beste uitleg", "news_p": "Eén mail per week met de beste uitleg. Afmelden kan altijd.", "news_btn": "Aanmelden", "news_email": "E-mailadres", "bar_h": "Ontvang wekelijks TrendingTesla nieuws", "bar_ok": "Check je inbox om te bevestigen", "bar_err": "Aanmelden is niet gelukt. Probeer het opnieuw.", "bar_fine": "Afmelden kan altijd.", "signup": "Nieuwsbrief", "signup_h": "Ontvang de TrendingTesla-nieuwsbrief", "signup_lead": "Eén mail per week met de beste uitleg. Dubbele bevestiging, en afmelden kan vanuit elke e-mail.", "signup_fallback": "Open het nieuwsbriefformulier", "signup_desc": "Eén mail per week met de beste uitleg. Dubbele bevestiging, en afmelden kan vanuit elke e-mail.", "aff": "Affiliate-melding: koop je via deze link, dan kan TrendingTesla een commissie ontvangen. Voor jou kost het niets extra.", "aff_btn": "Bekijk het product", "handy_h": "Handig voor je Tesla", "handy_p": "Een paar accessoires waar rijders naar zoeken. Elke link opent een zoekopdracht bij Amazon.nl, niet één specifiek product.", "handy_note": "Als Amazon-partner verdienen wij aan in aanmerking komende aankopen.", "watch": "Bekijk de video", "watch_short": "Bekijk de Short", "consent_p": "Bezoekcijfers zijn anoniem en zonder cookies. Toestemming is alleen voor advertenties. YouTube laadt pas als je op afspelen drukt.", "consent_yes": "Accepteren", "consent_no": "Weigeren", "consent_more": "Privacybeleid", "collapse": "Inklappen", "like": "Vind ik leuk", "save": "Bewaren", "saved_btn": "Bewaard", "saved": "Bewaarde artikelen", "saved_empty": "Je hebt nog geen artikelen bewaard. Tik op Bewaren onder de titel van een artikel om het hier terug te vinden. Bewaarde artikelen blijven in deze browser op dit apparaat.", "archive": "Alle nieuws", "newer": "Nieuwer", "older": "Ouder", "page": "Pagina", "d_topics": "Onderwerpen", "d_models": "Modellen", "d_more": "Meer", "menu": "Menu", "tip_h": "Een 22 kW-laadpaal laadt je Tesla niet sneller", "tip_p": "Veel Tesla-modellen laden thuis met maximaal 11 kW AC.", "tip_btn": "Lees waarom", "tips": [("HW4", "Tweedehands Model 3 kopen? Check eerst de hardware", "De Highland heeft HW4, oudere Model 3's HW3. Dat bepaalt wat FSD kan.", "Zo check je het", "used-model-3-highland-vs-classic-hw3-hw4-buying-guide"), ("−20%", "Minder bereik in de winter? Dat hoeft niet", "Met voorverwarmen en de juiste instellingen houd je meer kilometers over.", "9 wintertips", "tesla-winter-range-tips-cold-weather")],
+        "switch": "EN", "switch_full": "English", "i_specs": "Specificaties", "i_watch": "Aandachtspunten", "i_special": "Bijzonderheden", "i_acc": "Accessoires", "i_acc_soon": "Binnenkort: accessoires die op deze uitvoering passen, getest en uitgelegd.", "slogan": "Iedere dag het laatste nieuws &amp; trends", "nav_eco": "Ecosysteem", "nav_tesla": "Tesla", "search": "Zoek in het ecosysteem", "none": "Niets gevonden", "home": "Home", "toc": "Op deze pagina", "prev": "Vorig", "next": "Volgend", "ad": "Advertentie", "videos": "Shorts", "see_all": "Alles bekijken", "read_story": "Lees het verhaal", "nav_models": "Tesla-modellen", "nav_energy": "Energie", "nav_fsd": "FSD / Robotaxi", "nav_space": "SpaceX / Starlink", "nav_xai": "xAI", "nav_more": "Meer", "start_here": "Begin hier", "start_p": "Gidsen die bruikbaar blijven: praktische uitleg voor wie een Tesla heeft of er een wil kopen.", "all_guides": "Alle gidsen", "articles": "Artikelen", "cookie": "Cookie-instellingen", "news_h": "Eén mail per week met de beste uitleg", "news_p": "Eén mail per week met de beste uitleg. Afmelden kan altijd.", "news_btn": "Aanmelden", "news_email": "E-mailadres", "bar_h": "Ontvang wekelijks TrendingTesla nieuws", "bar_ok": "Check je inbox om te bevestigen", "bar_err": "Aanmelden is niet gelukt. Probeer het opnieuw.", "bar_fine": "Afmelden kan altijd.", "signup": "Nieuwsbrief", "signup_h": "Ontvang de TrendingTesla-nieuwsbrief", "signup_lead": "Eén mail per week met de beste uitleg. Dubbele bevestiging, en afmelden kan vanuit elke e-mail.", "signup_fallback": "Open het nieuwsbriefformulier", "signup_desc": "Eén mail per week met de beste uitleg. Dubbele bevestiging, en afmelden kan vanuit elke e-mail.", "aff": "Affiliate-melding: koop je via deze link, dan kan TrendingTesla een commissie ontvangen. Voor jou kost het niets extra.", "aff_btn": "Bekijk het product", "handy_h": "Handig voor je Tesla", "handy_p": "Een paar accessoires waar rijders naar zoeken. Elke link opent een zoekopdracht bij Amazon.nl, niet één specifiek product.", "handy_note": "Als Amazon-partner verdienen wij aan in aanmerking komende aankopen.", "watch": "Bekijk de video", "watch_short": "Bekijk de Short", "consent_p": "Bezoekcijfers zijn anoniem en zonder cookies. Toestemming is alleen voor advertenties. YouTube laadt pas als je op afspelen drukt.", "consent_yes": "Accepteren", "consent_no": "Weigeren", "consent_more": "Privacybeleid", "collapse": "Inklappen", "like": "Vind ik leuk", "save": "Bewaren", "saved_btn": "Bewaard", "saved": "Bewaarde artikelen", "saved_empty": "Je hebt nog geen artikelen bewaard. Tik op Bewaren onder de titel van een artikel om het hier terug te vinden. Bewaarde artikelen blijven in deze browser op dit apparaat.", "archive": "Alle nieuws", "newer": "Nieuwer", "older": "Ouder", "page": "Pagina", "d_topics": "Onderwerpen", "d_models": "Modellen", "d_more": "Meer", "menu": "Menu", "tip_h": "Een 22 kW-laadpaal laadt je Tesla niet sneller", "tip_p": "Veel Tesla-modellen laden thuis met maximaal 11 kW AC.", "tip_btn": "Lees waarom", "tips": [("HW4", "Tweedehands Model 3 kopen? Check eerst de hardware", "De Highland heeft HW4, oudere Model 3's HW3. Dat bepaalt wat FSD kan.", "Zo check je het", "used-model-3-highland-vs-classic-hw3-hw4-buying-guide"), ("−20%", "Minder bereik in de winter? Dat hoeft niet", "Met voorverwarmen en de juiste instellingen houd je meer kilometers over.", "9 wintertips", "tesla-winter-range-tips-cold-weather")],
         "empty": "Hier staan nog geen artikelen. Er verschijnt één keer per dag een nieuw verhaal.",
         "cat_intro": "Alle artikelen van TrendingTesla over {}.",
-        "eco_intro": "SpaceX, Starlink, The Boring Company en xAI/Grok: de bedrijven rond Tesla, en hoe ze met elkaar verbonden zijn.",
+        "eco_intro": "Tesla, SpaceX, Starlink, SpaceXSI, Neuralink, The Boring Company en de wereldwijde AI-race, op één kaart.",
         "model_intro": "Nieuws, updates en advies voor de Tesla {}.",
         "model_guides": "Advies voor de {}", "model_news": "Nieuws over de {}",
         "all_versions": "Alle versies", "your_version": "Jouw versie:",
@@ -143,7 +147,7 @@ LANGS = {
                 ("Uitgelegd, niet overgeschreven", "Eigen artikelen: wat er gebeurde, waarom het ertoe doet en waar je op moet letten."),
                 ("Met bronnen", "Elk artikel linkt naar de bronnen die we gebruikten, zodat je ze kunt controleren."),
                 ("Altijd gratis", "Koop je via onze links, dan krijgen wij mogelijk een kleine commissie. Jij betaalt niets extra.")],
-        "disclaimer": "TrendingTesla is een onafhankelijke site en is niet verbonden aan Tesla, Inc. Niets op deze site is financieel advies.",
+        "disclaimer": "TrendingTesla is een onafhankelijke site en is niet verbonden aan Tesla, SpaceX, SpaceXSI, Neuralink of The Boring Company. Niets op deze site is financieel advies.",
         "months": ["januari", "februari", "maart", "april", "mei", "juni", "juli",
                    "augustus", "september", "oktober", "november", "december"],
     },
@@ -236,8 +240,8 @@ CAT_INTRO = {
         "nl": "Blijvende gidsen voor rijders en kopers: laden, banden, garantie, occasions en wat je controleert voor je betaalt.",
     },
     "ecosystem": {
-        "en": "SpaceX, Starlink, The Boring Company and xAI: the companies around Tesla, and how they connect.",
-        "nl": "SpaceX, Starlink, The Boring Company en xAI: de bedrijven rond Tesla, en hoe ze met elkaar verbonden zijn.",
+        "en": "Tesla, SpaceX, Starlink, SpaceXSI, Neuralink, The Boring Company and the global AI race. The map itself lives on the ecosystem page.",
+        "nl": "Tesla, SpaceX, Starlink, SpaceXSI, Neuralink, The Boring Company en de wereldwijde AI-race. De kaart zelf staat op de ecosysteempagina.",
     },
 }
 
@@ -285,9 +289,10 @@ MODEL_STRIP = ["model-s", "model-3", "model-3-highland", "model-x", "model-y", "
 PAGES = {
     "about": {
         "en": ("About TrendingTesla", "What TrendingTesla is and how we write.",
-               "<p>TrendingTesla follows everything that moves at Tesla: vehicles, software, "
-               "self-driving, robotaxi, Optimus, energy and the company's results, the wider ecosystem of SpaceX, Starlink, The Boring Company and xAI where it touches Tesla, plus honest "
-               "buying advice for Tesla owners.</p>"
+               "<p>TrendingTesla follows the whole system around its name: Tesla vehicles, FSD, "
+               "Robotaxi and Cybercab, Optimus, energy and chips; SpaceX, Starship and Starlink; "
+               "SpaceXSI, Grok, X and Cursor; Neuralink and The Boring Company; and the global race "
+               "in AI, AGI and superintelligence. Honest buying advice for Tesla owners stays part of the site.</p>"
                "<p>Once a day we pick the story that matters most and explain it in "
                "plain language: what happened, why it matters and what to watch next. We write "
                "our own articles and always link to the sources we used, so you can check them.</p>"
@@ -302,9 +307,10 @@ PAGES = {
                "<p>TrendingTesla is an independent site. We are not affiliated with, "
                "sponsored by or endorsed by Tesla, Inc. Nothing on this site is financial advice.</p>"),
         "nl": ("Over TrendingTesla", "Wat TrendingTesla is en hoe we schrijven.",
-               "<p>TrendingTesla volgt alles wat er bij Tesla in beweging is: auto's, software, "
-               "zelfrijden, robotaxi, Optimus, energie en de bedrijfscijfers, het bredere ecosysteem van SpaceX, Starlink, The Boring Company en xAI waar het Tesla raakt, plus eerlijk "
-               "koopadvies voor Tesla-rijders.</p>"
+               "<p>TrendingTesla volgt het hele stelsel rond de naam: Tesla-auto's, FSD, "
+               "Robotaxi en Cybercab, Optimus, energie en chips; SpaceX, Starship en Starlink; "
+               "SpaceXSI, Grok, X en Cursor; Neuralink en The Boring Company; en de wereldwijde race "
+               "in AI, AGI en superintelligentie. Eerlijk koopadvies voor Tesla-rijders blijft onderdeel van de site.</p>"
                "<p>Eén keer per dag kiezen we het belangrijkste verhaal en leggen we het "
                "helder uit: wat er gebeurde, waarom het ertoe doet en waar je op moet letten. We "
                "schrijven onze eigen artikelen en linken altijd naar de bronnen die we gebruikten, "
@@ -324,8 +330,8 @@ PAGES = {
     },
     "editorial": {
         "en": ("Editorial policy", "How TrendingTesla researches, reviews and corrects its articles.",
-               "<p>TrendingTesla publishes independent articles about Tesla, SpaceX and the companies "
-               "around them, in English and Dutch. This page says how those articles are made and who "
+               "<p>TrendingTesla publishes independent articles about Tesla, SpaceX, Starlink, SpaceXSI, "
+               "Neuralink, The Boring Company and the global AI race, in English and Dutch. This page says how those articles are made and who "
                "stands behind them.</p>"
                "<h2>Research and drafting</h2>"
                "<p>Articles are researched and drafted with AI assistance. Before publication the draft "
@@ -344,10 +350,10 @@ PAGES = {
                "read as the modification date. The original publication date stays as it was.</p>"
                "<h2>Independence</h2>"
                "<p>TrendingTesla is not affiliated with, sponsored by or endorsed by Tesla, Inc., SpaceX, "
-               "xAI or The Boring Company. Nothing on this site is financial, legal or investment advice.</p>"),
+               "SpaceXSI, Neuralink or The Boring Company. Nothing on this site is financial, legal or investment advice.</p>"),
         "nl": ("Redactiebeleid", "Hoe TrendingTesla artikelen onderzoekt, nakijkt en verbetert.",
-               "<p>TrendingTesla publiceert onafhankelijke artikelen over Tesla, SpaceX en de bedrijven "
-               "eromheen, in het Nederlands en het Engels. Op deze pagina staat hoe die artikelen worden "
+               "<p>TrendingTesla publiceert onafhankelijke artikelen over Tesla, SpaceX, Starlink, SpaceXSI, "
+               "Neuralink, The Boring Company en de wereldwijde AI-race, in het Nederlands en het Engels. Op deze pagina staat hoe die artikelen worden "
                "gemaakt en wie er verantwoordelijk voor is.</p>"
                "<h2>Onderzoek en tekst</h2>"
                "<p>Artikelen worden met hulp van AI onderzocht en opgesteld. Voor publicatie wordt de tekst "
@@ -367,7 +373,7 @@ PAGES = {
                "zoekmachines als wijzigingsdatum lezen. De oorspronkelijke publicatiedatum blijft staan.</p>"
                "<h2>Onafhankelijkheid</h2>"
                "<p>TrendingTesla is niet verbonden aan, gesponsord door of goedgekeurd door Tesla, Inc., "
-               "SpaceX, xAI of The Boring Company. Niets op deze site is financieel, juridisch of "
+               "SpaceX, SpaceXSI, Neuralink of The Boring Company. Niets op deze site is financieel, juridisch of "
                "beleggingsadvies.</p>"),
     },
     "privacy": {
@@ -386,9 +392,9 @@ PAGES = {
     },
     "terms": {
         "en": ("Terms of use", "The terms for using trendingtesla.com and the TrendingTesla YouTube channel.",
-               '<p>These terms apply to the use of trendingtesla.com and our YouTube channel @TrendingTesla. By using the site or watching our videos you accept them.</p><h2>What we offer</h2><p>TrendingTesla publishes independent news and explanations about Tesla and related companies, in English and Dutch, as articles and short videos. The site is free to use and has no accounts.</p><h2>Accuracy</h2><p>We check our articles against the sources we cite and correct mistakes as soon as we know about them. Even so, information can be incomplete or outdated. Nothing on this site or channel is financial, legal or investment advice. Images are illustrations or credited, freely licensed photos.</p><h2>Independence and trademarks</h2><p>TrendingTesla is not affiliated with, sponsored by or endorsed by Tesla, Inc., SpaceX, xAI or The Boring Company. Product and company names are trademarks of their owners and are used only to identify the subject of our reporting.</p><h2>Copyright</h2><p>Our texts, videos and illustrations are our own work. You may link to and quote short parts with a link to the source; please do not copy whole articles or videos. Quotes and facts from other sources belong to their owners and are credited.</p><h2>YouTube</h2><p>Our videos are published on YouTube. Watching them is subject to the <a href="https://www.youtube.com/t/terms" rel="nofollow noopener" target="_blank">YouTube Terms of Service</a> and the <a href="https://policies.google.com/privacy" rel="nofollow noopener" target="_blank">Google Privacy Policy</a>. We use YouTube API Services only to upload our own videos to our own channel.</p><h2>Links to other sites</h2><p>We link to the sources we used and sometimes to shops (affiliate links, which may earn us a small commission at no extra cost to you). We are not responsible for the content of other sites.</p><h2>Liability</h2><p>We provide the site and videos as they are. To the extent the law allows, we are not liable for damage resulting from the use of information on this site or channel.</p><h2>Privacy and contact</h2><p>How we handle personal data is described in our <a href="/privacy/">privacy policy</a>. Questions about these terms can be sent through the <a href="/contact/">contact form</a>. Dutch law applies.</p><p><em>Last updated: 28 October 2026.</em></p>'),
+               '<p>These terms apply to the use of trendingtesla.com and our YouTube channel @TrendingTesla. By using the site or watching our videos you accept them.</p><h2>What we offer</h2><p>TrendingTesla publishes independent news and explanations about Tesla and related companies, in English and Dutch, as articles and short videos. The site is free to use and has no accounts.</p><h2>Accuracy</h2><p>We check our articles against the sources we cite and correct mistakes as soon as we know about them. Even so, information can be incomplete or outdated. Nothing on this site or channel is financial, legal or investment advice. Images are illustrations or credited, freely licensed photos.</p><h2>Independence and trademarks</h2><p>TrendingTesla is not affiliated with, sponsored by or endorsed by Tesla, Inc., SpaceX, SpaceXSI, Neuralink or The Boring Company. Product and company names are trademarks of their owners and are used only to identify the subject of our reporting.</p><h2>Copyright</h2><p>Our texts, videos and illustrations are our own work. You may link to and quote short parts with a link to the source; please do not copy whole articles or videos. Quotes and facts from other sources belong to their owners and are credited.</p><h2>YouTube</h2><p>Our videos are published on YouTube. Watching them is subject to the <a href="https://www.youtube.com/t/terms" rel="nofollow noopener" target="_blank">YouTube Terms of Service</a> and the <a href="https://policies.google.com/privacy" rel="nofollow noopener" target="_blank">Google Privacy Policy</a>. We use YouTube API Services only to upload our own videos to our own channel.</p><h2>Links to other sites</h2><p>We link to the sources we used and sometimes to shops (affiliate links, which may earn us a small commission at no extra cost to you). We are not responsible for the content of other sites.</p><h2>Liability</h2><p>We provide the site and videos as they are. To the extent the law allows, we are not liable for damage resulting from the use of information on this site or channel.</p><h2>Privacy and contact</h2><p>How we handle personal data is described in our <a href="/privacy/">privacy policy</a>. Questions about these terms can be sent through the <a href="/contact/">contact form</a>. Dutch law applies.</p><p><em>Last updated: 28 October 2026.</em></p>'),
         "nl": ("Gebruiksvoorwaarden", "De voorwaarden voor het gebruik van trendingtesla.com en het YouTube-kanaal van TrendingTesla.",
-               '<p>Deze voorwaarden gelden voor het gebruik van trendingtesla.com en ons YouTube-kanaal @TrendingTesla. Door de site te gebruiken of onze video\'s te bekijken, ga je ermee akkoord.</p><h2>Wat we bieden</h2><p>TrendingTesla publiceert onafhankelijk nieuws en uitleg over Tesla en verwante bedrijven, in het Nederlands en Engels, als artikelen en korte video\'s. De site is gratis en heeft geen accounts.</p><h2>Juistheid</h2><p>We controleren onze artikelen aan de hand van de bronnen die we noemen en verbeteren fouten zodra we ze kennen. Toch kan informatie onvolledig of verouderd zijn. Niets op deze site of dit kanaal is financieel, juridisch of beleggingsadvies. Afbeeldingen zijn illustraties of vrij gelicentieerde foto\'s met bronvermelding.</p><h2>Onafhankelijkheid en merken</h2><p>TrendingTesla is niet verbonden aan, gesponsord door of goedgekeurd door Tesla, Inc., SpaceX, xAI of The Boring Company. Product- en bedrijfsnamen zijn merken van hun eigenaren en worden alleen gebruikt om het onderwerp van onze berichtgeving aan te duiden.</p><h2>Auteursrecht</h2><p>Onze teksten, video\'s en illustraties zijn eigen werk. Je mag ernaar linken en korte stukken citeren met een link naar de bron; neem geen hele artikelen of video\'s over. Citaten en feiten uit andere bronnen zijn van hun eigenaren en worden vermeld.</p><h2>YouTube</h2><p>Onze video\'s staan op YouTube. Op het bekijken ervan zijn de <a href="https://www.youtube.com/t/terms" rel="nofollow noopener" target="_blank">Servicevoorwaarden van YouTube</a> en het <a href="https://policies.google.com/privacy" rel="nofollow noopener" target="_blank">Privacybeleid van Google</a> van toepassing. We gebruiken YouTube API Services alleen om onze eigen video\'s naar ons eigen kanaal te uploaden.</p><h2>Links naar andere sites</h2><p>We linken naar de bronnen die we gebruikten en soms naar winkels (affiliate-links, waarmee we een kleine commissie kunnen verdienen zonder extra kosten voor jou). We zijn niet verantwoordelijk voor de inhoud van andere sites.</p><h2>Aansprakelijkheid</h2><p>We bieden de site en video\'s aan zoals ze zijn. Voor zover de wet dat toestaat, zijn we niet aansprakelijk voor schade door het gebruik van informatie op deze site of dit kanaal.</p><h2>Privacy en contact</h2><p>Hoe we met persoonsgegevens omgaan, staat in ons <a href="/nl/privacy/">privacybeleid</a>. Vragen over deze voorwaarden kun je sturen via het <a href="/nl/contact/">contactformulier</a>. Op deze voorwaarden is Nederlands recht van toepassing.</p><p><em>Laatst bijgewerkt: 28 oktober 2026.</em></p>'),
+               '<p>Deze voorwaarden gelden voor het gebruik van trendingtesla.com en ons YouTube-kanaal @TrendingTesla. Door de site te gebruiken of onze video\'s te bekijken, ga je ermee akkoord.</p><h2>Wat we bieden</h2><p>TrendingTesla publiceert onafhankelijk nieuws en uitleg over Tesla en verwante bedrijven, in het Nederlands en Engels, als artikelen en korte video\'s. De site is gratis en heeft geen accounts.</p><h2>Juistheid</h2><p>We controleren onze artikelen aan de hand van de bronnen die we noemen en verbeteren fouten zodra we ze kennen. Toch kan informatie onvolledig of verouderd zijn. Niets op deze site of dit kanaal is financieel, juridisch of beleggingsadvies. Afbeeldingen zijn illustraties of vrij gelicentieerde foto\'s met bronvermelding.</p><h2>Onafhankelijkheid en merken</h2><p>TrendingTesla is niet verbonden aan, gesponsord door of goedgekeurd door Tesla, Inc., SpaceX, SpaceXSI, Neuralink of The Boring Company. Product- en bedrijfsnamen zijn merken van hun eigenaren en worden alleen gebruikt om het onderwerp van onze berichtgeving aan te duiden.</p><h2>Auteursrecht</h2><p>Onze teksten, video\'s en illustraties zijn eigen werk. Je mag ernaar linken en korte stukken citeren met een link naar de bron; neem geen hele artikelen of video\'s over. Citaten en feiten uit andere bronnen zijn van hun eigenaren en worden vermeld.</p><h2>YouTube</h2><p>Onze video\'s staan op YouTube. Op het bekijken ervan zijn de <a href="https://www.youtube.com/t/terms" rel="nofollow noopener" target="_blank">Servicevoorwaarden van YouTube</a> en het <a href="https://policies.google.com/privacy" rel="nofollow noopener" target="_blank">Privacybeleid van Google</a> van toepassing. We gebruiken YouTube API Services alleen om onze eigen video\'s naar ons eigen kanaal te uploaden.</p><h2>Links naar andere sites</h2><p>We linken naar de bronnen die we gebruikten en soms naar winkels (affiliate-links, waarmee we een kleine commissie kunnen verdienen zonder extra kosten voor jou). We zijn niet verantwoordelijk voor de inhoud van andere sites.</p><h2>Aansprakelijkheid</h2><p>We bieden de site en video\'s aan zoals ze zijn. Voor zover de wet dat toestaat, zijn we niet aansprakelijk voor schade door het gebruik van informatie op deze site of dit kanaal.</p><h2>Privacy en contact</h2><p>Hoe we met persoonsgegevens omgaan, staat in ons <a href="/nl/privacy/">privacybeleid</a>. Vragen over deze voorwaarden kun je sturen via het <a href="/nl/contact/">contactformulier</a>. Op deze voorwaarden is Nederlands recht van toepassing.</p><p><em>Laatst bijgewerkt: 28 oktober 2026.</em></p>'),
     },
 }
 
@@ -992,6 +998,87 @@ header.hb .pnav>.is-parked{display:none}
 .sheet:has(.arel) .pv-side:not(.arel){grid-area:rest}
 .nlside{display:none}
 }
+.scopeline{margin:2px 0 12px;font-size:.92rem;line-height:1.35;font-weight:700;color:#7ee7ff}
+.eco-bit{min-width:0}
+.eco-sources{margin:0 0 12px;padding-left:1.1rem}
+.eco-sources li{margin:0 0 6px}
+.eco-sources a{color:#9ad7ff}
+.ss-wrap{overflow-x:auto}
+.byline{margin:0 0 12px;color:var(--dim);font-size:.86rem}
+.hubh{font-size:1.15rem;margin:8px 0 4px}
+.hubcount{margin:0 0 12px;color:var(--dim);font-size:.84rem}
+.hubnote{margin:8px 0 18px;padding:16px 16px 14px;border:1px dashed #3a4a60;border-radius:14px;background:#141820;color:var(--muted);line-height:1.45}
+.eco-map{margin:6px 0 22px}
+.eco-flow{display:flex;flex-direction:column;align-items:stretch;gap:0}
+.eco-join{width:22px;height:16px;margin:1px auto;color:#8f9db0;flex:none}
+.eco-card,.eco-co,.eco-stream,.eco-call{border:1px solid;border-radius:14px;padding:12px 14px 11px;min-width:0}
+.eco-cardlink{display:block;text-decoration:none;color:inherit}
+.eco-card{display:block}
+.eco-card:hover,.eco-co:hover{filter:brightness(1.08)}
+.eco-k{display:block;font-size:.68rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin-bottom:3px}
+.eco-card strong,.eco-co strong,.eco-stream strong,.eco-call strong,.eco-stat b{color:#fff}
+.eco-card p,.eco-co p,.eco-stream p,.eco-call p,.eco-stat small{margin:4px 0 0;font-size:.84rem;line-height:1.4;color:#d5deea}
+.eco-links{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.eco-links a,.eco-src{display:inline-block;font-size:.75rem;font-weight:800;text-decoration:none;border-radius:999px;padding:3px 8px;border:1px solid currentColor}
+.eco-src{margin:8px 8px 0 0;color:#9ad7ff}
+.eco-card.energy{background:#2a1a06;border-color:#ffb020;color:#ffd27a}
+.eco-card.compute{background:#1a1033;border-color:#a78bfa;color:#d4c4ff}
+.eco-card.ai{background:#062833;border-color:#00d4ff;color:#8eecff}
+.eco-card.bodies{background:#2a0c0c;border-color:#ff5a4f;color:#ffc2bc}
+.eco-card.link{background:#06281f;border-color:#3dffb0;color:#b8ffe2}
+.eco-card.mars{background:#2a120c;border-color:#ff7a45;color:#ffd0bc}
+.eco-card.neural,.eco-co.neural{background:#2a1020;border-color:#ff4fa3;color:#ffc0dd}
+.eco-card.boring,.eco-co.boring{background:#241c10;border-color:#e0b15a;color:#ffe3ad}
+.eco-stats{display:grid;grid-template-columns:1fr;gap:8px;margin:0 0 16px}
+.eco-stat{display:block;text-decoration:none;color:inherit;background:#12161e;border:1px solid #3a4a60;border-radius:14px;padding:10px 12px}
+.eco-stat b{display:block;font-size:1.25rem;letter-spacing:-.02em}
+.eco-stat span{display:block;font-size:.78rem;font-weight:800;color:#9ad7ff;margin-top:2px}
+.eco-split{display:grid;grid-template-columns:1fr;gap:8px;margin:14px 0}
+.eco-stream.data{background:#101820;border-color:#5aa7ff;color:#c5e2ff}
+.eco-stream.money{background:#1c1608;border-color:#f0c14a;color:#ffe7a8}
+.eco-cos{display:grid;grid-template-columns:1fr;gap:8px;margin:8px 0 14px}
+.eco-co{background:#141820;border-color:#3a4a60;color:#d5deea}
+.eco-call.plan{background:#1a1408;border-color:#e0b15a;color:#ffe3ad;margin:0 0 10px}
+.eco-call.promise{background:#2a120c;border-color:#ff7a45;color:#ffd0bc;margin:0 0 10px}
+.eco-h{font-size:1.15rem;margin:18px 0 8px}
+.ss-board{display:grid;grid-template-columns:1fr;gap:10px;margin:0 0 16px}
+.ss-card{border-radius:14px;padding:14px 14px 12px;border:1px solid #3a4a60;background:#12161e}
+.ss-card.latest{background:linear-gradient(160deg,#2a120c,#12161e 55%);border-color:#ff7a45}
+.ss-card.next{background:linear-gradient(160deg,#062833,#12161e 60%);border-color:#00d4ff}
+.ss-card .k{font-size:.68rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#ffb199}
+.ss-card.next .k{color:#8eecff}
+.ss-card h2{font-size:1.35rem;margin:2px 0 6px}
+.ss-card p{margin:0;color:#d5deea;font-size:.92rem;line-height:1.4}
+.ss-pills{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.ss-pills span{font-size:.75rem;font-weight:800;border-radius:999px;padding:3px 8px;border:1px solid #3a4a60}
+.ss-yes{color:#b8ffe2;border-color:#3dffb0!important}
+.ss-no{color:#ffc2bc;border-color:#ff5a4f!important}
+.ss-table{width:100%;border-collapse:collapse;font-size:.84rem}
+.ss-table th{text-align:left;font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;color:#8f9db0;padding:6px 6px;border-bottom:1px solid #3a4a60}
+.ss-table td{padding:8px 6px;border-bottom:1px solid #242a33;vertical-align:top}
+.ss-table tr.is-latest td{background:#2a160f}
+.ss-table a{color:#9ad7ff}
+@media (min-width:700px){
+.eco-stats{grid-template-columns:repeat(3,minmax(0,1fr))}
+.eco-split,.eco-cos{grid-template-columns:1fr 1fr}
+.ss-board{grid-template-columns:1.3fr .7fr}
+}
+@media (max-width:699.98px){
+.ss-table thead{display:none}
+.ss-table,.ss-table tbody,.ss-table tr,.ss-table td{display:block;width:100%}
+.ss-table tr{margin:0 0 10px;border:1px solid #3a4a60;border-radius:12px;padding:8px 10px;background:#12161e}
+.ss-table tr.is-latest{border-color:#ff7a45}
+.ss-table td{display:block;border:0;padding:4px 0}
+.ss-table td::before{content:attr(data-label);display:block;color:#8f9db0;font-weight:800;font-size:.68rem;letter-spacing:.04em;text-transform:uppercase}
+}
+@media (min-width:1100px){
+.eco-flow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.eco-join{display:none}
+}
+@media (min-width:900px){
+header.hb .id{gap:10px}
+header.hb .pn,header.hb .mdrop>button.pn{font-size:14px;padding:6px 8px}
+}
 """
 
 # Classes left over from retired layouts. They are not emitted by the pages build() writes.
@@ -1096,6 +1183,11 @@ def other(lang):
 def signup_path(lang):
     """Newsletter page slug. English and Dutch use different paths."""
     return "newsletter/" if lang == "en" else "nieuwsbrief/"
+
+
+def ecosystem_path(lang):
+    """Ecosystem map. English and Dutch use different slugs, like the newsletter."""
+    return "ecosystem/" if lang == "en" else "ecosysteem/"
 
 
 def model_photo(key, for_article=False):
@@ -1447,7 +1539,14 @@ def page(lang, path, title, description, body, og_type="website", extra_head="",
     menu = "".join(
         f'<a href="{url(lang, "category/" + k + "/")}"{" class=\"on\"" if k == active else ""}>{c[lang]}</a>'
         for k, c in CATEGORIES.items() if c["menu"])
-    fcats = "".join(f'<a href="{url(lang, "category/" + k + "/")}">{c[lang]}</a>' for k, c in CATEGORIES.items() if c["menu"])
+    fcats = "".join(
+        f'<a href="{url(lang, path)}">{esc(name)}</a>'
+        for name, path in (
+            (L["nav_eco"], ecosystem_path(lang)),
+            ("Starship", "starship/"),
+            ("Neuralink", "neuralink/"),
+            ("AGI-race", "agi/"),
+        )) + "".join(f'<a href="{url(lang, "category/" + k + "/")}">{c[lang]}</a>' for k, c in CATEGORIES.items() if c["menu"])
     fmods = "".join(f'<a href="{url(lang, "model/" + k + "/")}">{MODELS[k]["name"]}</a>' for k in MODEL_ROOTS)
     cats = " · ".join(f'<a href="{url(lang, "category/" + k + "/")}">{c[lang]}</a>' for k, c in CATEGORIES.items() if c["menu"])
     mods = " · ".join(f'<a href="{url(lang, "model/" + k + "/")}">{m["name"]}</a>' for k, m in MODELS.items() if not m.get("parent") or k in MODEL_STRIP)
@@ -2166,7 +2265,7 @@ def related_block(a, arts, lang):
 
 MONEY = {}
 SHORTS = {}
-PRIMARY_CATS = {"models", "energy", "fsd", "robotaxi", "spacex", "starlink", "xai", "guides"}
+PRIMARY_CATS = {"models", "fsd", "robotaxi", "optimus", "spacex", "starlink", "xai", "boring"}
 AD_HEIGHT = {"after_intro": 280, "mid_article": 280, "end": 280, "sidebar": 600}
 
 
@@ -2665,31 +2764,41 @@ def consent_bar(lang):
 
 
 def nav_current(active):
-    if active in ("fsd", "robotaxi"):
-        return "fsd"
-    if active in ("spacex", "starlink"):
+    if active in ("tesla", "models", "fsd", "optimus"):
+        return "tesla"
+    if active in ("spacex", "starship"):
         return "spacex"
-    if active in ("videos", "shorts"):
-        return "videos"
-    if active in ("models", "energy", "xai", "guides"):
+    if active == "starlink":
+        return "starlink"
+    if active in ("spacexsi", "xai"):
+        return "spacexsi"
+    if active in ("neuralink", "robotaxi", "agi", "ecosystem"):
         return active
-    if active in CATEGORIES:
+    if active in ("videos", "shorts") or active in CATEGORIES or active in ("boring", "energy", "guides"):
         return "more"
     return ""
 
 
 def _nav_rows(lang):
     L = LANGS[lang]
-    more = more_category_rows(lang)
     return [
-        ("models", "category/models/", L["nav_models"], [(MODELS[k]["name"], f"model/{k}/") for k in MODEL_ROOTS]),
-        ("energy", "category/energy/", L["nav_energy"], ()),
-        ("fsd", "category/fsd/", L["nav_fsd"], [("FSD", "category/fsd/"), ("Robotaxi", "category/robotaxi/")]),
-        ("spacex", "category/spacex/", L["nav_space"], [("SpaceX", "category/spacex/"), ("Starlink", "category/starlink/")]),
-        ("xai", "category/xai/", L["nav_xai"], ()),
-        ("guides", "category/guides/", CATEGORIES["guides"][lang], ()),
-        ("videos", "shorts/", L["videos"], ()),
-        ("more", "archive/", L["nav_more"], more),
+        ("ecosystem", ecosystem_path(lang), L["nav_eco"], ()),
+        ("tesla", "tesla/", L["nav_tesla"], [
+            (L["nav_tesla"], "tesla/"),
+            ("FSD", "fsd/"),
+            ("Optimus", "optimus/"),
+            (L["nav_models"], "category/models/"),
+        ]),
+        ("spacex", "spacex/", "SpaceX", [
+            ("SpaceX", "spacex/"),
+            ("Starship", "starship/"),
+        ]),
+        ("starlink", "starlink/", "Starlink", ()),
+        ("spacexsi", "spacexsi/", "SpaceXSI/Grok", ()),
+        ("neuralink", "neuralink/", "Neuralink", ()),
+        ("robotaxi", "robotaxi/", "Robotaxi", ()),
+        ("agi", "agi/", "AGI-race", ()),
+        ("more", "archive/", L["nav_more"], ()),
     ]
 
 
@@ -2702,7 +2811,11 @@ def more_category_rows(lang):
 def more_links(lang):
     """Hubs that are not in the top nav, then the site pages."""
     L = LANGS[lang]
-    rows = more_category_rows(lang)
+    rows = [
+        (CATEGORIES["boring"][lang], "boring/"),
+        (L["videos"], "shorts/"),
+    ]
+    rows += more_category_rows(lang)
     rows += [
         (L["archive"], "archive/"),
         (L["about"], "about/"),
@@ -2738,14 +2851,19 @@ def primary_nav(lang, active=None):
 def drawer_links(lang, active):
     L = LANGS[lang]
     rows = [
+        ("ecosystem", ecosystem_path(lang), L["nav_eco"]),
+        ("tesla", "tesla/", L["nav_tesla"]),
         ("models", "category/models/", L["nav_models"]),
-        ("energy", "category/energy/", L["nav_energy"]),
-        ("fsd", "category/fsd/", "FSD"),
-        ("robotaxi", "category/robotaxi/", "Robotaxi"),
-        ("spacex", "category/spacex/", "SpaceX"),
-        ("starlink", "category/starlink/", "Starlink"),
-        ("xai", "category/xai/", L["nav_xai"]),
-        ("guides", "category/guides/", CATEGORIES["guides"][lang]),
+        ("fsd", "fsd/", "FSD"),
+        ("optimus", "optimus/", "Optimus"),
+        ("spacex", "spacex/", "SpaceX"),
+        ("starship", "starship/", "Starship"),
+        ("starlink", "starlink/", "Starlink"),
+        ("spacexsi", "spacexsi/", "SpaceXSI/Grok"),
+        ("neuralink", "neuralink/", "Neuralink"),
+        ("robotaxi", "robotaxi/", "Robotaxi"),
+        ("boring", "boring/", CATEGORIES["boring"][lang]),
+        ("agi", "agi/", "AGI-race"),
         ("videos", "shorts/", L["videos"]),
     ]
     out = []
@@ -3178,7 +3296,8 @@ def homepage(arts, lang):
     videos, strip_arts = home_videos(arts, lang, 8)
     strip = f'<div class="vstrip">{videos}</div>' if videos else ""
     feed = [x for x in arts if x is not lead][:14]
-    main = home_lead(lead, lang) + strip + pv_feed(feed, lang, thumbs=2)
+    main = (f'<p class="scopeline">{esc(L["scope"])}</p>'
+            + home_lead(lead, lang) + strip + pv_feed(feed, lang, thumbs=2))
     return shell(main, page_side(arts, lang, "home", skip=[lead, *strip_arts, *feed]))
 
 
@@ -3403,6 +3522,370 @@ def write_previews(arts, lang):
             bar="inline" if key == "b" else None))
 
 
+HUBS = [
+    {
+        "key": "tesla", "path": "tesla/",
+        "title": {"en": "Tesla", "nl": "Tesla"},
+        "categories": ["news", "models", "charging", "software", "factories", "earnings", "energy", "guides", "musk"],
+        "keywords": [],
+        "intro": {
+            "en": "Cars, factories, deliveries and energy. The list below is filled from topic tags already on the site.",
+            "nl": "Auto's, fabrieken, leveringen en energie. De lijst hieronder komt uit de onderwerptags die al op de site staan.",
+        },
+    },
+    {
+        "key": "fsd", "path": "fsd/",
+        "title": {"en": "FSD", "nl": "FSD"},
+        "categories": ["fsd"],
+        "keywords": ["fsd", "full self-driving", "full self driving"],
+        "intro": {
+            "en": "Supervised driver assistance: versions, where it is allowed, and what regulators do.",
+            "nl": "Begeleide rijhulp: versies, waar het mag en wat toezichthouders doen.",
+        },
+    },
+    {
+        "key": "robotaxi", "path": "robotaxi/",
+        "title": {"en": "Robotaxi", "nl": "Robotaxi"},
+        "categories": ["robotaxi"],
+        "keywords": ["robotaxi", "cybercab"],
+        "intro": {
+            "en": "Robotaxi and Cybercab: where the service runs, and the sale terms when they are public.",
+            "nl": "Robotaxi en Cybercab: waar de dienst rijdt, en de verkoopvoorwaarden als ze openbaar zijn.",
+        },
+    },
+    {
+        "key": "optimus", "path": "optimus/",
+        "title": {"en": "Optimus", "nl": "Optimus"},
+        "categories": ["optimus"],
+        "keywords": ["optimus"],
+        "intro": {
+            "en": "Tesla's humanoid robot: demos, factory work and plans. A promise stays a promise.",
+            "nl": "De humanoïde robot van Tesla: demo's, fabriekswerk en plannen. Een belofte blijft een belofte.",
+        },
+    },
+    {
+        "key": "spacex", "path": "spacex/",
+        "title": {"en": "SpaceX", "nl": "SpaceX"},
+        "categories": ["spacex"],
+        "keywords": ["falcon 9", "falcon heavy"],
+        "intro": {
+            "en": "Falcon, Starship and SpaceX as a company, including launches and the stock listing.",
+            "nl": "Falcon, Starship en SpaceX als bedrijf, inclusief lanceringen en de beursgang.",
+        },
+    },
+    {
+        "key": "starlink", "path": "starlink/",
+        "title": {"en": "Starlink", "nl": "Starlink"},
+        "categories": ["starlink"],
+        "keywords": ["starlink", "starshield"],
+        "intro": {
+            "en": "Starlink for homes and businesses, and Starshield only where a public record exists.",
+            "nl": "Starlink voor thuis en bedrijven, en Starshield alleen waar een openbaar stuk bestaat.",
+        },
+    },
+    {
+        "key": "spacexsi", "path": "spacexsi/",
+        "title": {"en": "SpaceXSI / Grok", "nl": "SpaceXSI / Grok"},
+        "categories": ["xai"],
+        "keywords": ["xai", "grok", "spacexsi", "spacexai", "colossus"],
+        "intro": {
+            "en": "SpaceXSI, formerly xAI and then SpaceXAI: Grok, compute, Cursor and X.",
+            "nl": "SpaceXSI, eerder xAI en daarna SpaceXAI: Grok, rekenkracht, Cursor en X.",
+        },
+    },
+    {
+        "key": "neuralink", "path": "neuralink/",
+        "title": {"en": "Neuralink", "nl": "Neuralink"},
+        "categories": [],
+        "keywords": ["neuralink", "telepathy", "blindsight"],
+        "intro": {
+            "en": "Neuralink's brain-computer work: Telepathy, the VOICE speech study and the Blindsight vision study.",
+            "nl": "Het hersen-computerwerk van Neuralink: Telepathy, de spraakstudie VOICE en de visieproef Blindsight.",
+        },
+    },
+    {
+        "key": "boring", "path": "boring/",
+        "title": {"en": "The Boring Company", "nl": "The Boring Company"},
+        "categories": ["boring"],
+        "keywords": ["boring company", "vegas loop", "cybertunnel"],
+        "intro": {
+            "en": "Tunnels and Loop projects. Passenger figures only when the company or a local authority publishes them.",
+            "nl": "Tunnels en Loop-projecten. Reizigerscijfers alleen als het bedrijf of een lokale overheid ze publiceert.",
+        },
+    },
+    {
+        "key": "agi", "path": "agi/",
+        "title": {"en": "AGI race", "nl": "AGI-race"},
+        "categories": [],
+        "keywords": ["agi", "superintelligence", "superintelligentie", "openai", "anthropic", "deepmind", "deepseek", "ai race"],
+        "intro": {
+            "en": "The global race in AI, AGI and superintelligence, and where Tesla and SpaceXSI do and do not take part. Not a fixed ranking.",
+            "nl": "De wereldwijde race in AI, AGI en superintelligentie, en waar Tesla en SpaceXSI wel en niet meedoen. Geen vaste ranglijst.",
+        },
+    },
+]
+
+
+def _bi(value, lang):
+    if isinstance(value, dict):
+        return value.get(lang) or value.get("en") or ""
+    return value or ""
+
+
+def _kw_pattern(words):
+    if not words:
+        return None
+    parts = sorted((re.escape(w) for w in words), key=len, reverse=True)
+    return re.compile(r"\b(?:" + "|".join(parts) + r")\b", re.I)
+
+
+def hub_articles(spec, arts):
+    """Articles whose category, extra tag or headline keywords match a hub."""
+    cats = set(spec.get("categories") or [])
+    pat = _kw_pattern(spec.get("keywords") or [])
+    out = []
+    for a in arts:
+        own = {a["category"]} | set(a.get("also") or [])
+        if own & cats:
+            out.append(a)
+            continue
+        if not pat:
+            continue
+        blob = " ".join([
+            a["slug"].replace("-", " "),
+            a["en"]["title"], a["en"]["description"],
+            a["nl"]["title"], a["nl"]["description"],
+        ])
+        if pat.search(blob):
+            out.append(a)
+    out.sort(key=published, reverse=True)
+    return out
+
+
+def _src_links(sources):
+    return "".join(
+        f'<a class="eco-src" href="{esc(s["url"])}" rel="noopener noreferrer" target="_blank">{esc(s["title"])}</a>'
+        for s in sources or [])
+
+
+def load_data(name):
+    path = ROOT / "content" / "data" / name
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def _count_label(n, lang):
+    if lang == "nl":
+        return "1 artikel" if n == 1 else f"{n} artikelen"
+    return "1 article" if n == 1 else f"{n} articles"
+
+
+def topic_hub(spec, items, lang):
+    """Intro plus the articles that match. An empty hub says coverage is starting."""
+    L = LANGS[lang]
+    title = _bi(spec["title"], lang)
+    intro = _bi(spec["intro"], lang)
+    nav, ld = crumbs(lang, [(title, spec["path"])])
+    how = ("Listed from topic tags and from keywords in the headline."
+           if lang == "en" else
+           "Opgebouwd uit onderwerptags en uit trefwoorden in de kop.")
+    link = (f'<p class="hubcount"><a href="{url(lang, ecosystem_path(lang))}">'
+            + ("See the ecosystem map" if lang == "en" else "Zie de kaart van het ecosysteem")
+            + "</a></p>")
+    head = (f'{nav}<header class="hubhead"><h1>{esc(title)}</h1>'
+            f'<p class="byline">{esc(L["byline"])}</p>'
+            f'<p class="lead">{esc(intro)}</p>{link}</header>')
+    if not items:
+        note = ("Coverage is starting. Articles will show up here as they are published. "
+                "Nothing is filled in ahead of that."
+                if lang == "en" else
+                "De berichtgeving begint. Artikelen verschijnen hier zodra ze zijn gepubliceerd. "
+                "Er wordt niets vooraf ingevuld.")
+        return head + f'<p class="hubnote">{esc(note)}</p>', ld, intro
+    feature = home_lead(items[0], lang, title_tag="h2")
+    rest = hub_cards(items[1:], lang) if len(items) > 1 else ""
+    body = (head + f'<h2 class="hubh">{esc(L["articles"])}</h2>'
+            f'<p class="hubcount">{esc(_count_label(len(items), lang))}. {esc(how)}</p>'
+            + feature + rest)
+    return body, ld, intro
+
+
+JOIN_SVG = ('<svg class="eco-join" viewBox="0 0 24 24" aria-hidden="true" focusable="false">'
+            '<path d="M12 3v12M7 12l5 7 5-7" fill="none" stroke="currentColor" stroke-width="1.8" '
+            'stroke-linecap="round" stroke-linejoin="round"/></svg>')
+
+
+def _eco_piece(block, lang, kind):
+    title = _bi(block.get("title"), lang)
+    fact = _bi(block.get("fact"), lang)
+    kicker = _bi(block.get("kicker"), lang)
+    href = block.get("href") or ""
+    tone = block.get("tone") or ""
+    kick = f'<span class="eco-k">{esc(kicker)}</span>' if kicker else ""
+    inner = f'{kick}<strong>{esc(title)}</strong><p>{esc(fact)}</p>'
+    if href:
+        inner = f'<a class="eco-cardlink" href="{url(lang, href)}">{inner}</a>'
+    extra = "".join(
+        f'<a href="{url(lang, link["href"])}">{esc(_bi(link.get("label") or link.get("title"), lang))}</a>'
+        for link in block.get("links") or [])
+    extra = f'<div class="eco-links">{extra}</div>' if extra else ""
+    cls = {"layer": "eco-card", "branch": "eco-card", "company": "eco-co",
+           "stream": "eco-stream", "callout": "eco-call"}[kind]
+    return f'<div class="{cls} {tone}">{inner}{extra}{_src_links(block.get("sources"))}</div>'
+
+
+def ecosystem_page(lang):
+    data = load_data("ecosystem.json")
+    L = LANGS[lang]
+    title = L["nav_eco"]
+    intro = _bi(data["intro"], lang)
+    updated = fmt_date(data["updated"], lang)
+    when = ("Last updated" if lang == "en" else "Laatst bijgewerkt") + " " + updated + "."
+    nav, ld = crumbs(lang, [(title, ecosystem_path(lang))])
+    stats = []
+    for block in data["stats"]:
+        href = block.get("href") or ""
+        value = esc(_bi(block["value"], lang))
+        label = esc(_bi(block["label"], lang))
+        detail = esc(_bi(block["detail"], lang))
+        inner = f'<b>{value}</b><span>{label}</span><small>{detail}</small>'
+        if href:
+            inner = f'<a class="eco-stat" href="{url(lang, href)}">{inner}</a>'
+        else:
+            inner = f'<div class="eco-stat">{inner}</div>'
+        stats.append(f'<div class="eco-bit">{inner}{_src_links(block.get("sources"))}</div>')
+    layers = []
+    for i, block in enumerate(data["layers"]):
+        if i:
+            layers.append(JOIN_SVG)
+        layers.append(_eco_piece(block, lang, "layer"))
+    branches = "".join(_eco_piece(b, lang, "branch") for b in data["branches"])
+    streams = "".join(_eco_piece(b, lang, "stream") for b in data["streams"])
+    companies = "".join(_eco_piece(b, lang, "company") for b in data["companies"])
+    calls = "".join(_eco_piece(b, lang, "callout") for b in data["callouts"])
+    seen, sources = set(), []
+    for group in ("stats", "layers", "branches", "streams", "companies", "callouts"):
+        for block in data[group]:
+            for src in block.get("sources") or []:
+                if src["url"] in seen:
+                    continue
+                seen.add(src["url"])
+                sources.append(src)
+    src_list = "".join(
+        f'<li><a href="{esc(s["url"])}" rel="noopener noreferrer" target="_blank">{esc(s["title"])}</a></li>'
+        for s in sources)
+    heads = {
+        "en": ("The layers", "Beside the chain", "What moves through it", "The companies", "Plans and promises", "Sources"),
+        "nl": ("De lagen", "Naast de keten", "Wat erdoorheen gaat", "De bedrijven", "Plannen en beloftes", "Bronnen"),
+    }[lang]
+    body = (
+        f'{nav}<header class="hubhead"><h1>{esc(title)}</h1>'
+        f'<p class="byline">{esc(L["byline"])}</p>'
+        f'<p class="lead">{esc(intro)}</p>'
+        f'<p class="hubcount">{esc(when)}</p></header>'
+        f'<div class="eco-stats">{"".join(stats)}</div>'
+        f'<h2 class="eco-h">{esc(heads[0])}</h2>'
+        f'<div class="eco-map"><div class="eco-flow">{"".join(layers)}</div></div>'
+        f'<h2 class="eco-h">{esc(heads[1])}</h2><div class="eco-split">{branches}</div>'
+        f'<h2 class="eco-h">{esc(heads[2])}</h2><div class="eco-split">{streams}</div>'
+        f'<h2 class="eco-h">{esc(heads[3])}</h2><div class="eco-cos">{companies}</div>'
+        f'<h2 class="eco-h">{esc(heads[4])}</h2>{calls}'
+        f'<h2 class="eco-h">{esc(heads[5])}</h2><ul class="eco-sources">{src_list}</ul>'
+    )
+    desc = intro
+    return body, ld, desc
+
+
+def _flight_when(flight, lang):
+    start = datetime.strptime(flight["date"], "%Y-%m-%d")
+    end_s = flight.get("end_date")
+    if not end_s:
+        return fmt_date(flight["date"], lang)
+    end = datetime.strptime(end_s, "%Y-%m-%d")
+    month = LANGS[lang]["months"][start.month - 1]
+    if start.year == end.year and start.month == end.month:
+        if lang == "en":
+            return f"{month} {start.day}–{end.day}, {start.year}"
+        return f"{start.day}–{end.day} {month} {start.year}"
+    return fmt_date(flight["date"], lang) + " – " + fmt_date(end_s, lang)
+
+
+def _yes_no(flag, lang):
+    word = ("Yes" if flag else "No") if lang == "en" else ("Ja" if flag else "Nee")
+    return f'<span class="{"ss-yes" if flag else "ss-no"}">{word}</span>'
+
+
+def starship_page(lang, arts):
+    data = load_data("starship.json")
+    L = LANGS[lang]
+    flights = sorted(data["flights"], key=lambda f: f["number"])
+    latest = flights[-1]
+    title = "Starship tracker" if lang == "en" else "Starship-tracker"
+    intro = ("Every full-stack Starship flight: the date, the outcome, and whether the booster, the ship and a payload made it. "
+             "The page is rendered from a data file, so a new flight is a new row."
+             if lang == "en" else
+             "Elke volledige Starship-vlucht: de datum, de afloop, en of de booster, het schip en een lading het haalden. "
+             "De pagina komt uit een databestand, dus een nieuwe vlucht is een nieuwe rij.")
+    nav, ld = crumbs(lang, [(title, "starship/")])
+    updated = ("Last updated" if lang == "en" else "Laatst bijgewerkt") + " " + fmt_date(data["updated"], lang) + "."
+    labels = {
+        "en": ("Latest result", "Next launch", "Not announced", "Flight archive", "Flight", "Date", "Outcome",
+               "Booster catch", "Ship catch", "Payload", "On TrendingTesla"),
+        "nl": ("Laatste resultaat", "Volgende lancering", "Niet aangekondigd", "Vluchtarchief", "Vlucht", "Datum", "Afloop",
+               "Boostervangst", "Scheepsvangst", "Lading", "Op TrendingTesla"),
+    }[lang]
+    pills = (
+        f'<span>{esc(labels[7])} {_yes_no(latest["booster_catch"], lang)}</span>'
+        f'<span>{esc(labels[8])} {_yes_no(latest["ship_catch"], lang)}</span>'
+        f'<span>{esc(labels[9])}: {esc(_bi(latest["payload"], lang))}</span>'
+    )
+    nxt = data["next"]
+    if nxt.get("announced") and nxt.get("date"):
+        next_main = esc(fmt_date(nxt["date"], lang))
+    else:
+        next_main = esc(labels[2])
+    rows = []
+    for flight in flights:
+        cls = " class=\"is-latest\"" if flight["number"] == latest["number"] else ""
+        cells = [
+            (labels[4], str(flight["number"])),
+            (labels[5], esc(_flight_when(flight, lang))),
+            (labels[6], esc(_bi(flight["outcome"], lang)) + _src_links(flight.get("sources"))),
+            (labels[7], _yes_no(flight["booster_catch"], lang)),
+            (labels[8], _yes_no(flight["ship_catch"], lang)),
+            (labels[9], esc(_bi(flight["payload"], lang))),
+        ]
+        tds = "".join(f'<td data-label="{esc(label)}">{value}</td>' for label, value in cells)
+        rows.append(f"<tr{cls}>{tds}</tr>")
+    head = "".join(f"<th>{esc(name)}</th>" for name in labels[4:10])
+    related = hub_articles({"categories": [], "keywords": ["starship", "super heavy"]}, arts)
+    rel = ""
+    if related:
+        rel = (f'<h2 class="hubh">{esc(labels[10])}</h2>'
+               f'<p class="hubcount">{esc(_count_label(len(related), lang))}.</p>'
+               + hub_cards(related, lang))
+    body = (
+        f'{nav}<header class="hubhead"><h1>{esc(title)}</h1>'
+        f'<p class="byline">{esc(L["byline"])}</p>'
+        f'<p class="lead">{esc(intro)}</p>'
+        f'<p class="hubcount">{esc(updated)} '
+        f'<a href="{url(lang, ecosystem_path(lang))}">'
+        + ("See the ecosystem map" if lang == "en" else "Zie de kaart van het ecosysteem")
+        + "</a></p></header>"
+        f'<div class="ss-board">'
+        f'<article class="ss-card latest"><p class="k">{esc(labels[0])}</p>'
+        f'<h2>{"Flight" if lang == "en" else "Vlucht"} {latest["number"]}</h2>'
+        f'<p>{esc(_flight_when(latest, lang))}. {esc(_bi(latest["outcome"], lang))}</p>'
+        f'<div class="ss-pills">{pills}</div>{_src_links(latest.get("sources"))}</article>'
+        f'<article class="ss-card next"><p class="k">{esc(labels[1])}</p>'
+        f'<h2>{next_main}</h2><p>{esc(_bi(nxt.get("note"), lang))}</p>{_src_links(nxt.get("sources"))}</article>'
+        f'</div>'
+        f'<h2 class="hubh">{esc(labels[3])}</h2>'
+        f'<div class="ss-wrap"><table class="ss-table"><thead><tr>{head}</tr></thead><tbody>{"".join(rows)}</tbody></table></div>'
+        f'{rel}'
+    )
+    return body, ld, intro
+
+
 def build():
     load_money()
     load_affiliate()
@@ -3446,7 +3929,7 @@ def build():
                    "publisher": {"@type": "Organization", "name": NAME, "url": SITE,
                                  "logo": {"@type": "ImageObject", "url": SITE + "/favicon-512.png", "width": 512, "height": 512},
                                  "sameAs": ["https://www.youtube.com/@TrendingTesla"]}}
-        write(url(lang), page(lang, "", NAME, L["tagline"], body,
+        write(url(lang), page(lang, "", NAME, L["home_desc"], body,
                               extra_head=f'<script type="application/ld+json">{json.dumps(site_ld, ensure_ascii=False)}</script>'))
 
         # ---------- Category pages ----------
@@ -3507,6 +3990,28 @@ def build():
                   page(lang, f"model/{key}/", f"Tesla {m['name']}", desc,
                        shell(content, page_side(arts, lang, "model", key, skip=items)),
                        extra_head=ld_script(crumb_ld) + ld_script(vehicle_ld), image=ph, active="models"))
+
+        # ---------- Topic hubs, ecosystem map, Starship tracker ----------
+        for spec in HUBS:
+            items = hub_articles(spec, arts)
+            content, crumb_ld, intro = topic_hub(spec, items, lang)
+            write(url(lang, spec["path"]), page(
+                lang, spec["path"], _bi(spec["title"], lang), intro,
+                shell(content, page_side(arts, lang, "hub", spec["key"], skip=items)),
+                extra_head=ld_script(crumb_ld), active=spec["key"]))
+        eco_body, eco_ld, eco_desc = ecosystem_page(lang)
+        eco_path = ecosystem_path(lang)
+        write(url(lang, eco_path), page(
+            lang, eco_path, L["nav_eco"], eco_desc,
+            shell(eco_body, page_side(arts, lang, "hub", "ecosystem")),
+            extra_head=ld_script(eco_ld), active="ecosystem",
+            alt_path=ecosystem_path(other(lang))))
+        ship_body, ship_ld, ship_desc = starship_page(lang, arts)
+        ship_items = hub_articles({"categories": [], "keywords": ["starship", "super heavy"]}, arts)
+        write(url(lang, "starship/"), page(
+            lang, "starship/", "Starship tracker" if lang == "en" else "Starship-tracker", ship_desc,
+            shell(ship_body, page_side(arts, lang, "hub", "starship", skip=ship_items)),
+            extra_head=ld_script(ship_ld), active="starship"))
 
         # ---------- Articles ----------
         for a in arts:
@@ -3660,6 +4165,8 @@ def build():
                + [(f"category/{k}/", today) for k in CATEGORIES] + [(f"model/{k}/", today) for k in MODELS]
                + [(k + "/", today) for k in PAGES]
                + [("shorts/", today)]
+               + [(h["path"], today) for h in HUBS]
+               + [("starship/", today)]
                + [("archive/" if i == 0 else f"archive/{i + 1}/", today) for i in range(ARCH_PAGES[0])])
     def emit(loc_lang, loc_path, mod, en_path, nl_path):
         paths = {"en": en_path, "nl": nl_path}
@@ -3674,6 +4181,7 @@ def build():
             urls += emit(lang, path, mod, path, path)
     for lang in LANGS:
         urls += emit(lang, signup_path(lang), today, signup_path("en"), signup_path("nl"))
+        urls += emit(lang, ecosystem_path(lang), today, ecosystem_path("en"), ecosystem_path("nl"))
     write("/sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>'
           '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">'
           f"{urls}</urlset>")

@@ -4,7 +4,9 @@ Usage: python3 tools/check_article.py content/articles/<file>.json [...]      (e
 
 ERRORS must be fixed before the commit; WARNINGS should be fixed where possible. The rules are the Short section of
 README.md. `short.proof`, `short.learning` and `short.signals` are optional (a warning, not an error). The beat,
-hook, overlay and no-call-to-action checks stay errors. The article task runs this before `git commit`.
+hook, overlay and no-call-to-action checks stay errors. A Short title over 8 words, over 50 characters, with an
+ellipsis, with a clause comma, or with "but" / "maar" is an error. A comma inside a number (1,020 or 1.020) is
+not. A long-video title over 70 characters or with an ellipsis is an error. The article task runs this before `git commit`.
 """
 import json
 import re
@@ -14,10 +16,76 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 PARTS = ("hook", "tension", "payoff")
 BANNED = re.compile(r"like and subscribe|full story|trending ?tesla(\.com| dot com)|see you there", re.I)
+MAX_TITLE_WORDS = 8
+MAX_TITLE_CHARS = 50
+MAX_LONG_TITLE_CHARS = 70
+ELLIPSIS = re.compile(r"…|\.{3}")
+BUT = re.compile(r"\b(?:but|maar)\b", re.I)
+# thousands separators sit between digits (1,020 / 1.020 / 1,020,000); a clause comma does not
+NUMBER_SEP = re.compile(r"(?<=\d)[.,](?=\d)")
 
 
 def words(t):
     return len(re.findall(r"[\w$%'-]+", t or ""))
+
+
+def claim_text(title):
+    """YouTube claim with a trailing #Shorts tag removed. The text is not shortened."""
+    return re.sub(r"\s*#shorts\s*$", "", (title or "").strip(), flags=re.I).strip()
+
+
+def title_words(title):
+    """Word count for a title. A number with a thousands separator counts as one word."""
+    return words(NUMBER_SEP.sub("", title or ""))
+
+
+def clause_comma(title):
+    """A comma that separates clauses. A comma inside a number is kept."""
+    return "," in NUMBER_SEP.sub("", title or "")
+
+
+def yt_title_errors(title, field, kind="short"):
+    """Hard failures for a YouTube title. Article headlines are not passed in.
+
+    kind 'short': at most 8 words and 50 characters, no ellipsis, no clause comma, no but/maar.
+    kind 'long': a search title, at most 70 characters, no ellipsis. Not the Short limits.
+    """
+    t = claim_text(title)
+    out = []
+    if ELLIPSIS.search(t):
+        out.append(f"{field} is cut off with an ellipsis")
+    if kind == "long":
+        if len(t) > MAX_LONG_TITLE_CHARS:
+            out.append(f"{field} has {len(t)} characters (max {MAX_LONG_TITLE_CHARS})")
+        return out
+    n = title_words(t)
+    if n > MAX_TITLE_WORDS:
+        out.append(f"{field} has {n} words (max {MAX_TITLE_WORDS})")
+    if len(t) > MAX_TITLE_CHARS:
+        out.append(f"{field} has {len(t)} characters (max {MAX_TITLE_CHARS})")
+    if clause_comma(t):
+        out.append(f"{field} contains a comma that separates clauses")
+    if BUT.search(t):
+        out.append(f"{field} uses 'but' or 'maar' (one claim, not a lede)")
+    return out
+
+
+def youtube_line(raw, kind):
+    """Title line for the upload file. Never cuts the claim and never adds an ellipsis.
+
+    kind 'short' appends ' #Shorts'. kind 'long' does not. Raises ValueError when the claim breaks
+    the title rules or the line would pass YouTube's 100-character limit.
+    """
+    claim = claim_text(raw)
+    errs = yt_title_errors(claim, "title", kind)
+    if errs:
+        raise ValueError("; ".join(errs))
+    shown = f"{claim} #Shorts" if kind == "short" else claim
+    if len(shown) > 100:
+        raise ValueError(f"YouTube title is {len(shown)} characters (max 100) and is not cut off")
+    if ELLIPSIS.search(shown):
+        raise ValueError("YouTube title is cut off with an ellipsis")
+    return shown
 
 
 def photo_ok(kind, name):
@@ -103,8 +171,9 @@ def check(path):
         warn.append("short.proof is missing or incomplete (optional): {source, views, why}")
     if story and not story[0].get("sfx"):
         warn.append("beat 1 has no sfx: describe the natural sound of what moves in the hook picture")
-    if len(sh.get("yt_title_en") or "") > 48:
-        warn.append(f"yt_title_en has {len(sh['yt_title_en'])} characters (aim for 45 or fewer)")
+    for k in ("yt_title_en", "yt_title_nl"):
+        if sh.get(k):
+            err.extend(yt_title_errors(sh[k], f"short.{k}", "short"))
     v = (a.get("video") or {}).get("en")
     if v:
         texts = [b for b in v if b.get("text")]
@@ -119,8 +188,11 @@ def check(path):
         if texts and BANNED.search(texts[-1]["text"]):
             err.append("long video ends with a call to action (rule: a payoff that links back to the opening)")
         for k in ("yt_title_en", "yt_title_nl"):
-            if not (a.get("video") or {}).get(k):
+            val = (a.get("video") or {}).get(k)
+            if not val:
                 err.append(f"video.{k} is missing")
+            else:
+                err.extend(yt_title_errors(val, f"video.{k}", "long"))
     return err, warn
 
 

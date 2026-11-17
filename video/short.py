@@ -644,13 +644,21 @@ def meta(a, lang, out):
     read = {"en": "Read the full article", "nl": "Lees het hele artikel"}[lang]
     note = {"en": "Voice-over generated with AI (ElevenLabs); script written and checked by TrendingTesla.",
             "nl": "Voice-over gemaakt met AI (ElevenLabs); tekst geschreven en gecontroleerd door TrendingTesla."}[lang]
-    # a short, punchy YouTube title from the script when given ("SpaceX Had Money for ONE More Launch");
-    # the long search-friendly article title is for the site
-    ttl = ((a.get("short") or {}).get(f"yt_title_{lang}") if PORTRAIT else None) or t["title"]
-    lim = 90 if PORTRAIT else 100
-    if len(ttl) > lim:
-        ttl = ttl[:lim - 1].rsplit(" ", 1)[0].rstrip(",:;–-") + "…"
-    txt = (f"TITLE:\n{ttl}{' #Shorts' if PORTRAIT else ''}\n\nDESCRIPTION:\n{t['description']}\n\n{read}: {url}\n\n{photo_credits(a, lang)}{note}\n\n"
+    # One claim from short.yt_title_*. The article headline stays on the site and is never cut into a lede.
+    import tools.check_article as titles
+    if PORTRAIT:
+        raw = (a.get("short") or {}).get(f"yt_title_{lang}")
+        if not raw:
+            raise SystemExit(f"short.yt_title_{lang} is missing. The article headline is not the YouTube title.")
+        try:
+            ttl = titles.youtube_line(raw, "short")
+        except ValueError as e:
+            raise SystemExit(f"YouTube Short title rejected: {e}") from e
+    else:
+        ttl = titles.claim_text(t["title"])
+        if len(ttl) > 100 or titles.ELLIPSIS.search(ttl):
+            raise SystemExit("YouTube title is not cut off. Give short.yt_title a claim of at most 50 characters.")
+    txt = (f"TITLE:\n{ttl}\n\nDESCRIPTION:\n{t['description']}\n\n{read}: {url}\n\n{photo_credits(a, lang)}{note}\n\n"
            f"TAGS:\n{', '.join(dict.fromkeys(tags))}\n")
     out.with_suffix(".txt").write_text(txt, encoding="utf-8")
 

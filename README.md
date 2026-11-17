@@ -19,7 +19,7 @@ The writing task is `ops/tasks/article.md`. It does not choose the topic. It wri
 - **Weekdays and Sunday:** an article (about 600–900 words) and a Short. No `video` key.
 - **Saturday:** the evergreen guide (about 1,200–1,800 words), a Short, and a `video` script for one long video of about 8–10 minutes.
 
-Topics are surprising company-history stories and practical news for owners (what it costs, what can go wrong, a feature worth knowing). Do not copy a viral topic that larger channels already cover with real footage, unless the fact sheet has an angle nobody else has. One in three topics may be an experiment. Do not repeat a topic from the last ~40 articles.
+Topics are surprising company-history stories and practical news for owners (what it costs, what can go wrong, a feature worth knowing). Prefer a story with a visual moment or a twist. An approval, a vote or a policy item is not the default daily pick; when one is published, its YouTube title is still a single claim (the shape of `FSD Just Reached Its 10th EU Country`), not the news lede. Do not copy a viral topic that larger channels already cover with real footage, unless the fact sheet has an angle nobody else has. One in three topics may be an experiment. Do not repeat a topic from the last ~40 articles.
 
 ## Facts
 
@@ -54,7 +54,7 @@ One Short per article, in English. The script lives in `short`.
 - The hook is the first spoken words: one claim or one hard number, within about two seconds (at most ~8 words). No date and no scene-setting as the opening. The first picture shows what the hook claims.
 - The last line is not a copy of the hook. It is a different line that runs on into the hook when the Short restarts. Record that in `loop` (`last`, `how`).
 - On-screen text is the spoken words, at most two lines. Numbers and years are shown as digits (the renderer paints them yellow). No logo in the first two seconds.
-- Title (`yt_title_en`, `yt_title_nl`): at most about 45 characters, the contrast or the consequence in the hook, not a list of topics.
+- Title (`yt_title_en`, `yt_title_nl`): one claim, at most 8 words and 50 characters, measured before ` #Shorts`. The upload adds ` #Shorts`. Never the article lede, never a clause joined by a comma or by "but" / "maar", and never a title cut off with an ellipsis. A comma or period inside a number is allowed (`1,020`, `1.020`). Shapes that fit: `X did Y` (subject plus a strong past-tense verb), a number against a number (`30 Engines Failed. SpaceX Uses 33.`), `Why X [surprising thing]`, or a surprising fact with a concrete number. At most one word in capitals; that word is optional and has no proven gain. The claim must be true on the fact sheet, and the video has to pay it off.
 - Also required: `hooks` (exactly three variants), `hook_pick`, `en` and `nl` (the spoken text as one paragraph).
 - Optional, and not an error if absent: `proof`, `learning`, `signals`.
 - No spoken or on-screen call to action, and no site name, in the script. The description carries the link to the article.
@@ -66,7 +66,7 @@ Pictures change quickly: a crossfade of about 0.15 seconds and no shot longer th
 
 Only an article with a `video` section gets a long video. The workflow does not build one otherwise. Put `video` on the Saturday guide only.
 
-`video` is `{"en": [...], "nl": [...], "yt_title_en", "yt_title_nl"}`. The first sentence is the hook claim. Aim for about 1,100–1,400 spoken words (about 8–10 minutes). A new fact, turn or comparison at least every 20–30 seconds. Every text block has its own picture. Chapters come from the headings. The description leads with the link to the article. The end is a payoff, not a call to action. The YouTube title is what people search for: the subject in plain words, plus the question or the answer.
+`video` is `{"en": [...], "nl": [...], "yt_title_en", "yt_title_nl"}`. The first sentence is the hook claim. Aim for about 1,100–1,400 spoken words (about 8–10 minutes). A new fact, turn or comparison at least every 20–30 seconds. Every text block has its own picture. Chapters come from the headings. The description leads with the link to the article. The end is a payoff, not a call to action. The YouTube title is a search title, not the Short rules: one clear claim or question that contains the main search phrase, at most 70 characters, with no ellipsis and no truncation. `Why SpaceX Called Off the Starship Booster Catch on Flight 15` fits. No ` #Shorts`. A missing title is not filled from the article headline.
 
 Shot length for the long video is `SCENE_MAX` in `video/full.py` (about 2 seconds). The crossfade is `SCENE_XFADE` in the same file.
 
@@ -79,7 +79,7 @@ python3 tools/check_article.py content/articles/<file>.json
 python3 build.py
 ```
 
-`check_article.py` must report **0 errors**. Warnings should be fixed when the fix is real. Errors include a missing Short, a bad beat, a missing or overlong overlay, a hook that is too long or opens on a date, a repeated hook, a call to action, and a missing title or `loop`. Missing `proof`, `learning` or `signals` is a warning. Then confirm `public/<slug>/index.html` and `public/nl/<slug>/index.html` exist.
+`check_article.py` must report **0 errors**. Warnings should be fixed when the fix is real. Errors include a missing Short, a bad beat, a missing or overlong overlay, a hook that is too long or opens on a date, a repeated hook, a call to action, and a missing title or `loop`. A Short title over 8 words, over 50 characters, with an ellipsis, with a comma that separates clauses, or with "but" / "maar" is an error. A comma inside a number is allowed. A long-video title over 70 characters or with an ellipsis is an error. Missing `proof`, `learning` or `signals` is a warning. Then confirm `public/<slug>/index.html` and `public/nl/<slug>/index.html` exist.
 
 `tools/health.py` checks the chain after publication (article, Short, long video only when the article has one, social posts, the live page). It is not a separate publishing task.
 

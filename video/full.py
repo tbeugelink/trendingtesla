@@ -927,9 +927,16 @@ def meta(a, lang, pieces, place, out):
     chl = {"en": "Chapters", "nl": "Hoofdstukken"}[lang]
     note = {"en": "Voice-over generated with AI (ElevenLabs); script written and checked by TrendingTesla.",
             "nl": "Voice-over gemaakt met AI (ElevenLabs); tekst geschreven en gecontroleerd door TrendingTesla."}[lang]
-    # a punchy YouTube title for the long video when the article gives one; the search-friendly title stays on the site
-    ttl = (a.get("video") or {}).get(f"yt_title_{lang}") or t["title"]
-    txt = (f"TITLE:\n{ttl[:100]}\n\nDESCRIPTION:\n{t['description']}\n\n{chl}:\n" + "\n".join(chap) +
+    # One claim from video.yt_title_*. The article headline stays on the site and is never hard-cut.
+    import tools.check_article as titles
+    raw = (a.get("video") or {}).get(f"yt_title_{lang}")
+    if not raw:
+        raise SystemExit(f"video.yt_title_{lang} is missing. The article headline is not the YouTube title.")
+    try:
+        ttl = titles.youtube_line(raw, "long")
+    except ValueError as e:
+        raise SystemExit(f"Long-video YouTube title rejected: {e}") from e
+    txt = (f"TITLE:\n{ttl}\n\nDESCRIPTION:\n{t['description']}\n\n{chl}:\n" + "\n".join(chap) +
            f"\n\n{read}: {url}\n\n{S.photo_credits(a, lang)}{note}\n\nTAGS:\n{', '.join(dict.fromkeys(tags))}\n")
     out.with_suffix(".txt").write_text(txt, encoding="utf-8")
 

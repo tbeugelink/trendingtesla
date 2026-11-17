@@ -297,8 +297,13 @@ def subtitle_overlay(ws):
     x, y = (W - total) / 2, H * SUB_Y - f.size * 0.6
     for i, w in enumerate(up):
         d.text((x + 3, y + 5), w, font=f, fill=(0, 0, 0, 140))
-        d.text((x, y), w, font=f, fill=(255, 221, 0) if i == hi else (255, 255, 255), stroke_width=6,
-               stroke_fill=(0, 0, 0))
+        if os.environ.get("VIVID") == "1" and i == hi and re.search(r"\d", ws[i]):
+            fill = (0, 214, 232)
+        elif i == hi:
+            fill = (255, 221, 0)
+        else:
+            fill = (255, 255, 255)
+        d.text((x, y), w, font=f, fill=fill, stroke_width=6, stroke_fill=(0, 0, 0))
         x += f.getlength(w) + gap
     return im
 
@@ -580,6 +585,9 @@ def add_real_photos(a, pieces):
 
 
 def render(a, lang, pieces, segs, place, words, total, end_start, audio):
+    global SCENE_MAX, ZOOM_IN
+    if os.environ.get("VIVID") == "1":
+        SCENE_MAX, ZOOM_IN = 1.55, 0.18  # shorter holds, a zoom you can actually see
     # scenes: a block's photos start with that block (just before it, so the fade is done when it begins)
     # shots: a new shot every ~3 s. Each block first shows its own photos; around them come photos of nearby
     # blocks (same section first). A photo never comes back until at least GAP other photos were shown, and a
@@ -675,8 +683,15 @@ def render(a, lang, pieces, segs, place, words, total, end_start, audio):
     print(f"::notice::{CL.gate_line()}")
 
     shade = Image.new("L", (1, H))
-    for y in range(H):
-        shade.putpixel((0, y), int(185 * max(0, (y - H * 0.5) / (H * 0.5)) ** 1.25 + 120 * max(0, (H * 0.16 - y) / (H * 0.16))))
+    # The default ramp pulls the lower half toward black (up to 185/255) and greys the picture out.
+    # VIVID keeps a thin edge only, so the grade below is still visible.
+    if os.environ.get("VIVID") == "1":
+        for y in range(H):
+            shade.putpixel((0, y), int(36 * max(0, (y - H * 0.78) / (H * 0.22)) ** 1.4
+                                       + 22 * max(0, (H * 0.06 - y) / (H * 0.06))))
+    else:
+        for y in range(H):
+            shade.putpixel((0, y), int(185 * max(0, (y - H * 0.5) / (H * 0.5)) ** 1.25 + 120 * max(0, (H * 0.16 - y) / (H * 0.16))))
     shade = shade.resize((W, H))
     fbrand, fcap = font(FX, 50), font(FB, S.LAY["caps"])
 
@@ -793,7 +808,11 @@ def render(a, lang, pieces, segs, place, words, total, end_start, audio):
         if path not in cache:
             im = Image.open(path).convert("RGB")
             sc = max(H * S.ZOOM / im.height, W * S.ZOOM / im.width)
-            cache[path] = im.resize((int(im.width * sc) + 1, int(im.height * sc) + 1), Image.LANCZOS)
+            im = im.resize((int(im.width * sc) + 1, int(im.height * sc) + 1), Image.LANCZOS)
+            if os.environ.get("VIVID") == "1":
+                import vivid
+                im = vivid.grade(im)
+            cache[path] = im
             if len(cache) > 4:
                 cache.pop(next(iter(cache)))
         return cache[path]

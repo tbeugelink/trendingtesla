@@ -36,8 +36,12 @@ VOICE = (os.environ.get(f"ELEVENLABS_VOICE_ID_{os.environ.get('STORY_VOICE', '1'
 CAPTIONS = os.environ.get("STORY_CAPTIONS", "0") == "1"  # running subtitles off: only key words pop in
 # Voice and picture pace. Estimates, easy to retune; the voice id is chosen by STORY_VOICE, not here.
 SPEED = {"hook": 1.07, "tension": 1.07, "payoff": 1.07}  # same pace as the long videos
-STORY_STABILITY = float(os.environ.get("STORY_STABILITY", "0.45"))
-STORY_STYLE = float(os.environ.get("STORY_STYLE", "0.3"))
+# VIVID=1 is the colour, pace and music prototype. The default voice stays as it was.
+_VIVID = os.environ.get("VIVID") == "1"
+STORY_STABILITY = float(os.environ.get("STORY_STABILITY", "0.32" if _VIVID else "0.45"))
+STORY_STYLE = float(os.environ.get("STORY_STYLE", "0.55" if _VIVID else "0.3"))
+# Hook a little quicker, payoff a fraction slower, so the voice is not one speed the whole way.
+VIVID_SPEED = {"hook": 1.14, "tension": 1.08, "payoff": 1.02}
 GAP = {"hook": 0.35, "tension": 0.12, "payoff": 0.3}
 SFX_VOL, BED_VOL = 0.45, 0.14
 # Generic impact hit, bass drop and ambient drone are off. A beat's own "sfx" still plays.
@@ -602,7 +606,11 @@ MOVES = ["in", "panL", "out", "panR", "tilt", "in"]
 def load_src(p):
     from PIL import ImageEnhance
     im = Image.open(p).convert("RGB")
-    im = ImageEnhance.Contrast(ImageEnhance.Color(im).enhance(1.2)).enhance(1.08)  # less flat, more colour
+    if os.environ.get("VIVID") == "1":
+        import vivid
+        im = vivid.grade(im)
+    else:
+        im = ImageEnhance.Contrast(ImageEnhance.Color(im).enhance(1.2)).enhance(1.08)  # less flat, more colour
     room = 1.12 if im.height > im.width else 1.30  # generated vertical photos are smaller: less spare room
     s = max(H * room / im.height, W * 1.12 / im.width)  # room to move in every direction
     return im.resize((round(im.width * s), round(im.height * s)), Image.LANCZOS)
@@ -688,16 +696,21 @@ def frame(src, sh_, t, pop_t):
     mv = sh_["move"]
     z, ox, oy = z0, fx, fy
     u = t / (sh_["dur"] + XFADE)  # even, steady motion that keeps going through the crossfade (no stop-start)
+    vivid = os.environ.get("VIVID") == "1"
+    zoom_amt = 0.22 if vivid else 0.07
+    pan_amt = 0.18 if vivid else 0.10
     if mv in ("in", "punch", "zoom"):
-        z = z0 * (1.0 + 0.07 * u)
+        z = z0 * (1.0 + zoom_amt * u)
     elif mv == "out":
-        z = z0 * (1.07 - 0.07 * u)
+        z = z0 * ((1.0 + zoom_amt) - zoom_amt * u)
     elif mv in ("panL", "panR"):
-        z = z0 * 1.05
-        ox = fx + (0.10 if mv == "panR" else -0.10) * (u - 0.5)
+        z = z0 * (1.08 if vivid else 1.05)
+        ox = fx + (pan_amt if mv == "panR" else -pan_amt) * (u - 0.5)
     elif mv == "tilt":
-        z = z0 * 1.05
-        oy = fy + 0.12 * (u - 0.5)
+        z = z0 * (1.08 if vivid else 1.05)
+        oy = fy + (0.18 if vivid else 0.12) * (u - 0.5)
+    if vivid:  # a short punch at every cut, then the slower move carries on
+        z *= 1.0 + 0.16 * (1.0 - ease(max(0.0, min(1.0, t / 0.28))))
     fh = min(H / z, shh)
     fw = min(fh * W / H, sw)
     cx = sw * sh_.get("fx", 0.5) + ox * (sw - fw) / 2
@@ -816,7 +829,16 @@ def overlay_img(txt, dark=False):
     for ln in lines:
         x = (W - f.getlength(ln)) / 2
         for w in ln.split():
-            col = (255, 214, 0) if re.search(r"\d|\$|%|€|£", w) else (255, 255, 255)
+            token = re.sub(r"[^\w'+.-]", "", w)
+            if os.environ.get("VIVID") == "1" and not re.search(r"\d|\$|%|€|£", w):
+                if re.fullmatch(r"plaid|insane|ludicrous|plus", token, re.I):
+                    col = (255, 45, 36)
+                elif re.fullmatch(r"hp|seconds?|door|speed|caught|orbit", token, re.I):
+                    col = (0, 214, 232)
+                else:
+                    col = (255, 255, 255)
+            else:
+                col = (255, 214, 0) if re.search(r"\d|\$|%|€|£", w) else (255, 255, 255)
             d.text((x + 6, y + 8), w, font=f, fill=(0, 0, 0, 140))
             d.text((x, y), w, font=f, fill=col, stroke_width=10, stroke_fill=(0, 0, 0))
             x += f.getlength(w) + sp
@@ -990,6 +1012,10 @@ def end_card(lang, bg=None):
 
 
 def main():
+    global SHOT_MAX, XFADE
+    if os.environ.get("VIVID") == "1":
+        SHOT_MAX = 1.45  # a new picture inside a long sentence, still inside 1.5-2.5 s
+        XFADE = 0.08     # a cut, not a dissolve
     slug = sys.argv[1]
     lang = sys.argv[2] if len(sys.argv) > 2 and sys.argv[2] in ("en", "nl") else "en"
     S.LANG[0] = lang
@@ -1019,8 +1045,25 @@ def main():
     # 1. voice per beat, timeline. STORY_PREVIEW=1 skips the paid voice and uses the script's own timings,
     # so a picture cut can be checked without uploading anything.
     preview = os.environ.get("STORY_PREVIEW") == "1"
+    pace = VIVID_SPEED if os.environ.get("VIVID") == "1" else SPEED
+    explicit = []
+    if preview and os.environ.get("STORY_BEAT_SEC"):
+        explicit = [float(x) for x in os.environ["STORY_BEAT_SEC"].split(",") if x.strip()]
+        if len(explicit) != len(beats):
+            print(f"::warning::STORY_BEAT_SEC has {len(explicit)} values for {len(beats)} beats; ignoring")
+            explicit = []
     t, caps, pops = 0.25, [], []
     for i, b in enumerate(beats):
+        if explicit:
+            dur = explicit[i]
+            words = []
+            b["_voice"] = None
+            b["_t0"] = t
+            b["_words"] = []
+            b["_dur"] = dur
+            t += dur
+            print(f"beat {i} {b['part']:7s} {b['move']:5s} {dur:5.2f}s {b['_img'].name}: {b['text'][:60]}")
+            continue
         if preview:
             span = re.match(r"\s*(\d+(?:\.\d+)?)\s*-\s*(\d+(?:\.\d+)?)", str(b.get("t") or ""))
             dur = max(0.8, float(span.group(2)) - float(span.group(1))) if span else max(1.6, len(b["text"].split()) * 0.42)
@@ -1028,7 +1071,7 @@ def main():
             b["_voice"] = None
         else:
             f = tmp / f"v{i:02d}.mp3"
-            words = tts(S.spoken(b["text"], lang), float(b.get("speed") or SPEED[b["part"]]), f)
+            words = tts(S.spoken(b["text"], lang), float(b.get("speed") or pace[b["part"]]), f)
             dur = S.duration(f)
             b["_voice"] = f
         b["_t0"] = t
@@ -1076,6 +1119,19 @@ def main():
                 layers.append((sfx(b["sfx"], min(6.0, b["_dur"]), tmp), b["_t0"], SFX_VOL))
     except Exception as e:  # sound effects are a bonus: never fail the video on them
         print(f"::warning::sound effects skipped: {e}")
+    # VIVID adds an original synthesized bed and a whoosh on each new beat. No paid sound API.
+    if os.environ.get("VIVID") == "1":
+        import vivid
+        # Bed sits about 20 dB under the voice, and comes forward in the gaps. Whooshes mark each beat.
+        layers.append((vivid.local_bed(tmp, total), 0.0, 2.0))
+        layers.append((vivid.local_hit(tmp), 0.02, 0.85))
+        whoosh = vivid.local_whoosh(tmp)
+        for b in beats:
+            if b["_t0"] > 0.4:
+                layers.append((whoosh, b["_t0"], 1.05))
+    voice_file = os.environ.get("STORY_VOICE_FILE", "")
+    if preview and voice_file and Path(voice_file).exists():
+        layers.append((Path(voice_file), 0.0, 1.0))
     audio = tmp / "mix.m4a"
     if not layers:  # picture-only preview: silent track, same length as the shots
         subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-f", "lavfi", "-i", "anullsrc=r=44100:cl=stereo",
@@ -1226,6 +1282,10 @@ def main():
             pbox = frame(srcs[pv["img"]], {**pv, "dur": pv["dur"] + XFADE}, tt - pv["t0"], None)
             prev = srcs[pv["img"]].resize((W, H), Image.BILINEAR, box=pbox)
             fr = Image.blend(prev, fr, ease(st / xf))
+        if os.environ.get("VIVID") == "1" and 0.012 < st < 0.07 and moving is None:
+            shift = int(42 * (1 - st / 0.07))
+            smeared = fr.transform(fr.size, Image.AFFINE, (1, 0, shift, 0, 1, 0))
+            fr = Image.blend(smeared, fr, st / 0.07)
         fr = fr.convert("RGBA")
         bi = 0 if tt < hook_end else 1
         if tt < label_end:  # the label alone for a moment: what the story is about
@@ -1243,7 +1303,17 @@ def main():
             ck = pg[2] + ("#dark" if bright[key] else "")
             if ck not in capimgs:
                 capimgs[ck] = overlay_img(pg[2][1:], dark=bright[key])
-            fr.alpha_composite(capimgs[ck], (0, int(H * 0.30)))
+            cap = capimgs[ck]
+            cap_y = int(H * 0.30)
+            if os.environ.get("VIVID") == "1":
+                age = max(0.0, tt - pg[0])
+                if age < 0.20:
+                    sc = 1 + 0.16 * (1 - age / 0.20)
+                    grown = cap.resize((max(1, int(W * sc)), max(1, int(cap.height * sc))), Image.BILINEAR)
+                    left = max(0, (grown.width - W) // 2)
+                    cap = grown.crop((left, 0, left + W, grown.height))
+                    cap_y -= int(20 * (1 - age / 0.20))
+            fr.alpha_composite(cap, (0, cap_y))
         elif pg:  # a key word pops in big (scale 1.35 -> 1 in 0.15 s) and replaces the caption while it is spoken
             key = "POP " + pg[2]
             if key not in capimgs:
@@ -1263,7 +1333,10 @@ def main():
             fr.alpha_composite(capimgs[key], (0, int(ltop - 300) if bi == 0 else int(H * 0.60)))
         if tt >= 2.0:  # no logo in the first 2 seconds: only the hook (9 Nov 2026)
             fr.alpha_composite(logo, (0, 0))
-        enc.stdin.write(fr.convert("RGB").tobytes())
+        rgb = fr.convert("RGB")
+        if os.environ.get("VIVID") == "1" and body_end > 0:
+            ImageDraw.Draw(rgb).rectangle((0, H - 10, int(W * min(tt, body_end) / body_end), H), fill=RED)
+        enc.stdin.write(rgb.tobytes())
     enc.stdin.close()
     if clip:
         clip[0].p.kill()
@@ -1292,6 +1365,9 @@ def main():
     CL.record(a["slug"], footage, S.ROOT)
     if banded:
         report.append("contrast band added behind the text on bright photos in beat(s) " + ", ".join(map(str, sorted(banded))))
+    if os.environ.get("VIVID") == "1":
+        report.append("VIVID=1: grade, 1.45 s shot cap, punch-in and whip, kinetic colour captions, "
+                      "progress bar, synthesized bed and whooshes. Paid AI clip and paid voice were not called.")
     rep = OUT / f"{slug}-{lang}-short-report.txt"
     rep.write_text("\n".join(report or ["all overlay, timing and loop rules met"]) + "\n", encoding="utf-8")
     for line in report:

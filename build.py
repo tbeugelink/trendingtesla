@@ -3803,11 +3803,52 @@ _ORBIT_FRAMES = (
     ("w560", 560, 536, 900),
     ("w390", 420, 366, 920),
 )
+# w560 and w390 ignore the fixed height and size the disk to the boxes.
+_ORBIT_HUG = {"w560", "w390"}
 
 
-def _orbit_frame(width, height, n, gap=32, box_w=150, margin=12, y_pad=72, stub=28):
+def _box_stack(blocks):
+    """Rough box heights at the small-screen type size, so the disk can wrap them."""
+    heights = []
+    for block in blocks:
+        name = _bi(block.get("kicker"), "en")
+        parts = [part.strip() for part in _bi(block.get("fact"), "en").split(",") if part.strip()]
+        title = 38 if len(name) > 14 else 22
+        heights.append(title + len(parts) * 16 + 18)
+    return heights
+
+
+def _orbit_frame(width, height, n, gap=32, box_w=150, margin=12, y_pad=72, stub=28, hug=None):
     """Circle 30% smaller than the old 1280px disk, with about 40% of it in view.
-    Box anchors sit on a larger circle, the same distance from the edge."""
+    Box anchors sit on a larger circle, the same distance from the edge.
+    hug is a list of box heights: the disk then grows to that stack and the
+    container is only as tall as the stack, so nothing floats above or below it."""
+    if hug:
+        vgap, pad = 10, 14
+        gap, margin = 40, 6
+        y = float(pad)
+        centers = []
+        for item_h in hug:
+            centers.append(y + item_h / 2)
+            y += item_h + vgap
+        y -= vgap
+        height = y + pad
+        radius = height / 2
+        cy = height / 2
+        visible = min(0.4 * height, width - margin - gap - box_w)
+        cx = visible - radius
+        reach = radius + gap
+        pts = []
+        for center in centers:
+            dy = center - cy
+            pts.append((cx + math.sqrt(max(reach * reach - dy * dy, 0)), center))
+        core_w = 64 if width < 480 else 78
+        core_left = 2
+        return {
+            "d": height, "visible": visible, "cx": cx, "cy": cy, "pts": pts,
+            "core_left": core_left, "core_w": core_w, "core_right": core_left + core_w,
+            "w": width, "h": height, "stub": stub,
+        }
     target = 1280 * 0.7
     if 0.4 * target + gap + box_w + margin <= width:
         diameter = target
@@ -3853,7 +3894,11 @@ def _orbit_frame(width, height, n, gap=32, box_w=150, margin=12, y_pad=72, stub=
 def _orbit_blocks(blocks, lang):
     """Boxes on one concentric arc. Each viewport bucket has its own circle and lines."""
     n = len(blocks)
-    frames = [(name, _orbit_frame(width, height, n)) for name, _query, width, height in _ORBIT_FRAMES]
+    stack = _box_stack(blocks)
+    frames = []
+    for name, _query, width, height in _ORBIT_FRAMES:
+        frames.append((name, _orbit_frame(
+            width, height, n, hug=stack if name in _ORBIT_HUG else None)))
     parts = []
     for i, block in enumerate(blocks):
         vars = []

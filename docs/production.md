@@ -78,8 +78,8 @@ These are estimates, kept as named constants so they can be changed in one place
 
 ## YouTube text
 
-- Short title (`short.yt_title_*`): one claim, at most 8 words and 50 characters before ` #Shorts`. No comma, no "but" / "maar", no ellipsis. The builder writes that claim whole and does not cut it down.
-- Long-video title (`video.yt_title_*`): the same claim rules, without ` #Shorts`. Not the article headline, and not a hard cut at 100 characters.
+- Short title (`short.yt_title_*`): one claim, at most 8 words and 50 characters before ` #Shorts`. No clause comma, no "but" / "maar", no ellipsis. A comma inside a number (`1,020`, `1.020`) is allowed. The builder writes that claim whole and does not cut it down.
+- Long-video title (`video.yt_title_*`): a search title, at most 70 characters. One clear claim or question that contains the main search phrase. No ellipsis and no truncation. A missing title is not filled from the article headline, and the upload does not slice a title at 100 characters.
 - The description links to the article. The long video's description also has chapters from the headings (`full.py` `meta()`).
 - No spoken call to action. The end card and the spoken slogan are off (`STORY_ENDCARD` and `FULL_OUTRO` are not set).
 

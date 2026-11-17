@@ -87,4 +87,10 @@ export const REDIRECTS = {
   "/tesla-spring-update-2026-hey-grok-auto-install/": "/how-tesla-software-updates-work-guide/",
   "/tesla-uk-september-registrations-nearly-double/": "/tesla-europe-record-september-2026-acea-registrations-model-y-model-3/",
   "/us-model-3-model-y-delivery-waits-slip-into-2027/": "/tesla-pauses-model-3-premium-orders-canada-china-import-quota/",
+  "/cars-robots/": "/tesla/",
+  "/nl/cars-robots/": "/nl/tesla/",
+  "/starship-falcon/": "/spacex/",
+  "/nl/starship-falcon/": "/nl/spacex/",
+  "/compute/": "/spacexsi/",
+  "/nl/compute/": "/nl/spacexsi/",
 };

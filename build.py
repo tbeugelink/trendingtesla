@@ -495,7 +495,12 @@ h1,h2,h3{color:#ebebeb;font-weight:800}
 .dm span{padding:7px 6px 8px;font-size:.78rem;line-height:1.25;font-weight:800;text-align:center}
 .drawer h4{font-size:.7rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:var(--dim);margin:20px 10px 6px}
 .drawer .di{display:flex;align-items:center;gap:12px;padding:9px 10px;border-radius:10px;color:var(--fg);text-decoration:none;font-weight:700;font-size:.92rem}
-.drawer button.di{width:100%;border:0;background:transparent;font:inherit;font-weight:700;font-size:.92rem;text-align:left;cursor:pointer}
+.drawer button.di,.drawer summary.di{width:100%;border:0;background:transparent;font:inherit;font-weight:700;font-size:.92rem;text-align:left;cursor:pointer;list-style:none}
+.drawer summary.di::-webkit-details-marker{display:none}
+.dmeer{margin-top:6px;border-top:1px solid #2a2a2a;padding-top:6px}
+.dmeer-sub{display:flex;flex-direction:column;gap:1px;padding:2px 0 8px 10px}
+.dmeer-sub a{display:block;padding:7px 10px;border-radius:8px;color:var(--muted);text-decoration:none;font-weight:700;font-size:.88rem}
+.dmeer-sub a:hover{background:#272727;color:#fff}
 .drawer .di:hover{background:var(--surface2);color:var(--head)}
 .drawer .di.on{background:var(--surface2);color:var(--head);font-weight:800}
 .drawer .di img,.drawer .di i{width:56px;aspect-ratio:1200/630;object-fit:cover;border-radius:10px;border:1px solid var(--edge);flex:none;background:var(--surface)}
@@ -879,7 +884,7 @@ header.hb .sbtn{display:grid;width:36px;height:36px;margin-left:auto;border:0;ba
 header.hb .sbtn:focus-visible{outline:2px solid var(--blue2);outline-offset:2px}
 header.hb .savedlink{margin-left:6px}
 header.hb ~ .drawer,header.hb ~ .scrim{top:66px}
-@media (min-width:900px){header.hb .pnav{display:flex;overflow:visible;align-items:baseline}header.hb .id{align-items:baseline;gap:16px}header.hb .bar{position:relative;z-index:3;align-items:center}header.hb .logo{line-height:1}header.hb .logo span{top:0}header.hb .bar .burger{display:none}}
+@media (min-width:900px){header.hb .pnav{display:flex;flex-wrap:nowrap;overflow:visible;align-items:baseline}header.hb .id{align-items:baseline;gap:16px}header.hb .bar{position:relative;z-index:3;align-items:center}header.hb .logo{line-height:1}header.hb .logo span{top:0}header.hb .bar .burger{display:none}}
 @media (min-width:901px){.hb-find .hb-search{width:min(640px,calc(100% - 292px - 26px));max-width:none;margin:0 calc(292px + 26px) 0 auto}}
 @media (min-width:900px) and (max-width:1099.98px){header.hb .id{gap:10px}header.hb .pn,header.hb .mdrop>button.pn{font-size:14.5px;padding:5px 7px}}
 .hb-find .hb-search{z-index:1}
@@ -1025,16 +1030,16 @@ header.hb .pnav>.is-parked{display:none}
 .layerhead{border:1px solid;border-radius:16px;padding:14px 16px 12px;margin:0 0 12px}
 .layerhead h1{color:#fff;margin:2px 0 0}
 .layerhead .eco-k{margin:0 0 4px}
-.eco-card.energy,.layerhead.energy{background:#3a0812;border-color:#e31937;color:#ff8a9b}
-.eco-card.compute,.layerhead.compute{background:#063216;border-color:#4cd964;color:#b8ffc6}
-.eco-card.ai,.layerhead.ai{background:#1a0c38;border-color:#8b5cf6;color:#d4c4ff}
-.eco-card.bodies,.layerhead.bodies{background:#3a2c04;border-color:#ffc400;color:#ffe28a}
+.eco-card.tesla,.layerhead.tesla{background:#3a0812;border-color:#e31937;color:#ff8a9b}
+.eco-card.energy,.layerhead.energy{background:#063216;border-color:#4cd964;color:#b8ffc6}
+.eco-card.spacex,.layerhead.spacex{background:#3a1400;border-color:#ff7a00;color:#ffc48a}
 .eco-card.link,.layerhead.link{background:#043040;border-color:#00d1ff;color:#a6f4ff}
-.eco-card.mars,.layerhead.mars{background:#3a1400;border-color:#ff7a00;color:#ffc48a}
+.eco-card.spacexsi,.layerhead.spacexsi{background:#3a2c04;border-color:#ffc400;color:#ffe28a}
 .eco-card.neural,.layerhead.neural,.eco-co.neural{background:#3a0824;border-color:#ff2d95;color:#ffb3d6}
 .eco-card.boring,.layerhead.boring,.eco-co.boring{background:#0c1840;border-color:#2f6bff;color:#b3c8ff}
 .hubhead+.eco-h{margin-top:2px}
 .layerintro p{margin:0 0 10px;line-height:1.5;color:var(--muted)}
+.visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
 .eco-stats{display:grid;grid-template-columns:1fr;gap:8px;margin:0 0 16px}
 .eco-stat{display:block;text-decoration:none;color:inherit;background:#12161e;border:1px solid #3a4a60;border-radius:14px;padding:10px 12px}
 .eco-stat b{display:block;font-size:1.25rem;letter-spacing:-.02em}
@@ -1081,27 +1086,23 @@ header.hb .pnav>.is-parked{display:none}
 .eco-flow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
 .eco-join{display:none}
 }
-.eco-orbit{position:relative;overflow:hidden;height:700px;margin:0 0 22px;isolation:isolate}
-.eco-sun{position:absolute;z-index:0;top:50%;left:-900px;width:1280px;height:1280px;transform:translateY(-50%);border-radius:50%;pointer-events:none;background:radial-gradient(circle at 81% 50%, #f7feff 0 .8%, #8af3ff 3.2%, #00b4e0 9%, #07506e 22%, #08131c 40%, transparent 54%);box-shadow:inset -30px 0 70px rgba(120,230,255,.28);border:1px solid rgba(170,240,255,.4)}
+.eco-orbit{position:relative;overflow:hidden;margin:0 0 22px;isolation:isolate;height:auto;aspect-ratio:var(--ow)/var(--oh)}
+.eco-sun{position:absolute;z-index:0;top:50%;left:calc(var(--sl)*1%);width:calc(var(--sd)*1%);height:auto;aspect-ratio:1;transform:translateY(-50%);border-radius:50%;pointer-events:none;background:radial-gradient(circle at 81% 50%, #f7feff 0 .8%, #8af3ff 3.2%, #00b4e0 9%, #07506e 22%, #08131c 40%, transparent 54%);box-shadow:inset -30px 0 70px rgba(120,230,255,.28);border:1px solid rgba(170,240,255,.4)}
 .eco-sun::after{content:"";position:absolute;inset:12%;border-radius:50%;border:1px solid rgba(160,235,255,.25)}
-.eco-core{position:absolute;z-index:3;left:10px;top:50%;transform:translateY(-50%);width:132px;margin:0;text-align:center;font-weight:800;font-size:1.15rem;line-height:1.12;letter-spacing:-.03em;color:#fff;text-shadow:0 0 8px #d8fbff, 0 0 18px #00c2ea;pointer-events:none}
-.eco-rays{position:absolute;inset:0;z-index:1;width:100%;height:100%;pointer-events:none}
-.eco-rays-m{display:none}
+.eco-core{position:absolute;z-index:3;left:calc(var(--cl)*1%);top:50%;transform:translateY(-50%);width:calc(var(--cw)*1%);margin:0;text-align:center;font-weight:800;font-size:1.05rem;line-height:1.12;letter-spacing:-.03em;color:#fff;text-shadow:0 0 8px #d8fbff, 0 0 18px #00c2ea;pointer-events:none}
+.eco-rays{position:absolute;inset:0;z-index:1;width:100%;height:100%;pointer-events:none;display:none}
 .eco-arc{position:absolute;inset:0;z-index:2;margin:0}
-.eco-node{position:absolute;left:var(--dl);top:var(--dt);width:33%;transform:translateY(-50%);margin:0;padding:4px 8px 3px}
-.eco-node .eco-k{display:block;font-size:.56rem;line-height:1.1;margin:0;letter-spacing:.06em}
-.eco-node strong{display:block;color:#fff;font-size:.8rem;line-height:1.15}
+.eco-node{position:absolute;left:var(--bx);top:var(--by);width:150px;transform:translateY(-50%);margin:0;padding:6px 8px 5px}
+.eco-node .eco-k{display:block;font-size:.92rem;font-weight:800;line-height:1.15;margin:0;letter-spacing:.04em}
+.eco-node ul{margin:4px 0 0;padding:0 0 0 1.05em}
+.eco-node li{font-size:.68rem;line-height:1.22}
 a.eco-node{display:block;text-decoration:none;color:inherit}
 a.eco-node:hover,a.eco-node:focus-visible{border-color:var(--blue);box-shadow:0 0 0 2px var(--blue);outline:none}
 a.eco-node.link:hover,a.eco-node.link:focus-visible,a.eco-node.boring:hover,a.eco-node.boring:focus-visible{border-color:#fff;box-shadow:0 0 0 2px #fff}
-.eco-node p{font-size:.68rem;line-height:1.25;margin:2px 0 0;color:#d5deea}
-@media (max-width:899.98px){
-.eco-orbit{height:980px}
-.eco-sun{width:860px;height:860px;left:-580px;top:50%;transform:translateY(-50%)}
-.eco-core{left:6px;top:50%;width:92px;transform:translateY(-50%);font-size:.92rem}
-.eco-rays-d{display:none}
-.eco-rays-m{display:block}
-.eco-node{left:var(--ml);top:var(--mt);width:50%}
+@media (max-width:560px){
+.eco-node .eco-k{font-size:.78rem}
+.eco-node li{font-size:.62rem;line-height:1.2}
+.eco-core{font-size:.84rem}
 }
 @media (min-width:900px){
 header.hb .id{gap:10px}
@@ -1571,8 +1572,10 @@ def page(lang, path, title, description, body, og_type="website", extra_head="",
         f'<a href="{url(lang, path)}">{esc(name)}</a>'
         for name, path in (
             (L["nav_eco"], ecosystem_path(lang)),
-            ("Starship", "starship/"),
-            ("Neuralink", "neuralink/"),
+            ("FSD", "fsd/"),
+            ("Robotaxi", "robotaxi/"),
+            ("Optimus", "optimus/"),
+            ("Starship" if lang == "en" else "Starship-tracker", "starship/"),
             ("AGI-race", "agi/"),
         )) + "".join(f'<a href="{url(lang, "category/" + k + "/")}">{c[lang]}</a>' for k, c in CATEGORIES.items() if c["menu"])
     fmods = "".join(f'<a href="{url(lang, "model/" + k + "/")}">{MODELS[k]["name"]}</a>' for k in MODEL_ROOTS)
@@ -1660,17 +1663,7 @@ def drawer(lang, active=None, model=None):
     out = (f'<div class="dh"><button class="burger" type="button" aria-label="{L["menu"]}"><span></span><span></span><span></span></button>'
            f'<a class="logo" href="{url(lang)}">Trending<span>Tesla</span></a></div>'
            f'<button class="di dclose" type="button">‹ {L["collapse"]}</button>'
-           f'<div class="dpri">{drawer_links(lang, active)}</div><hr class="dsep">'
-           f'<div class="mobonly"><div class="dtopics">')
-    out += "".join(f'<a class="{"on" if path == f"category/{active}/" else ""}" href="{url(lang, path)}">{esc(name)}</a>'
-                   for name, path in more_category_rows(lang))
-    out += '</div><hr class="dsep"></div>'
-    L = LANGS[lang]
-    pages = [(L["about"], "about/"), (L["editorial"], "editorial/"), (L["privacy"], "privacy/"),
-             (L["signup"], signup_path(lang)),
-             ("Contact", "contact/"), ("Terms" if lang == "en" else "Voorwaarden", "terms/")]
-    out += '<div class="dpri">' + "".join(
-        f'<a class="di" href="{url(lang, path)}">{esc(name)}</a>' for name, path in pages) + '</div>'
+           f'<div class="dpri">{drawer_links(lang, active)}</div>')
     show = cur == "models" or model in MODELS
     out += f'<div class="dmodels{" show" if show else ""}">' + modelnav(lang, model if model in MODELS else None) + '</div>'
     return out
@@ -2792,41 +2785,32 @@ def consent_bar(lang):
 
 
 def nav_current(active):
-    if active in ("tesla", "models", "fsd", "optimus", "tesla-energy", "cars-robots"):
+    if active in ("tesla", "models", "fsd", "optimus", "cars-robots"):
         return "tesla"
+    if active in ("tesla-energy", "energy"):
+        return "tesla-energy"
     if active in ("spacex", "starship", "starship-falcon"):
         return "spacex"
     if active == "starlink":
         return "starlink"
     if active in ("spacexsi", "xai", "compute"):
         return "spacexsi"
-    if active in ("neuralink", "robotaxi", "agi", "ecosystem"):
-        return active
-    if active in ("videos", "shorts") or active in CATEGORIES or active in ("boring", "energy", "guides"):
-        return "more"
+    if active == "neuralink":
+        return "neuralink"
+    if active == "boring":
+        return "boring"
     return ""
 
 
 def _nav_rows(lang):
-    L = LANGS[lang]
     return [
-        ("ecosystem", ecosystem_path(lang), L["nav_eco"], ()),
-        ("tesla", "tesla/", L["nav_tesla"], [
-            (L["nav_tesla"], "tesla/"),
-            ("FSD", "fsd/"),
-            ("Optimus", "optimus/"),
-            (L["nav_models"], "category/models/"),
-        ]),
-        ("spacex", "spacex/", "SpaceX", [
-            ("SpaceX", "spacex/"),
-            ("Starship", "starship/"),
-        ]),
-        ("starlink", "starlink/", "Starlink", ()),
-        ("spacexsi", "spacexsi/", "SpaceXSI/Grok", ()),
-        ("neuralink", "neuralink/", "Neuralink", ()),
-        ("robotaxi", "robotaxi/", "Robotaxi", ()),
-        ("agi", "agi/", "AGI-race", ()),
-        ("more", "archive/", L["nav_more"], ()),
+        ("tesla", "tesla/", "Tesla"),
+        ("tesla-energy", "tesla-energy/", "Tesla Energy"),
+        ("spacex", "spacex/", "SpaceX"),
+        ("starlink", "starlink/", "Starlink"),
+        ("spacexsi", "spacexsi/", "SpaceXSI"),
+        ("neuralink", "neuralink/", "Neuralink"),
+        ("boring", "boring/", "Boring"),
     ]
 
 
@@ -2837,10 +2821,16 @@ def more_category_rows(lang):
 
 
 def more_links(lang):
-    """Hubs that are not in the top nav, then the site pages."""
+    """Items that are not one of the seven layer buttons."""
     L = LANGS[lang]
     rows = [
-        (CATEGORIES["boring"][lang], "boring/"),
+        (L["nav_eco"], ecosystem_path(lang)),
+        ("Starship tracker" if lang == "en" else "Starship-tracker", "starship/"),
+        ("FSD", "fsd/"),
+        ("Robotaxi", "robotaxi/"),
+        ("Optimus", "optimus/"),
+        ("AGI-race", "agi/"),
+        (L["nav_models"], "category/models/"),
         (L["videos"], "shorts/"),
     ]
     rows += more_category_rows(lang)
@@ -2859,45 +2849,27 @@ def more_links(lang):
 def primary_nav(lang, active=None):
     cur = nav_current(active)
     parts = []
-    for key, href, label, kids in _nav_rows(lang):
-        if key == "more":
-            on = " on" if cur == "more" else ""
-            parts.append(
-                f'<div class="mdrop"><button type="button" class="pn{on}" id="more-btn" aria-expanded="false" aria-haspopup="true" aria-controls="more-menu">{esc(label)}{CHEV_SVG}</button>'
-                f'<div class="pmenu" id="more-menu" role="menu" hidden>{more_links(lang)}</div></div>')
-            continue
+    for key, href, label in _nav_rows(lang):
         on = " on" if cur == key else ""
-        link = f'<a class="pn{on}" href="{url(lang, href)}">{esc(label)}</a>'
-        if kids:
-            menu = "".join(f'<a href="{url(lang, path)}">{esc(name)}</a>' for name, path in kids)
-            parts.append(f'<div class="pdrop{on}">{link}<div class="pmenu">{menu}</div></div>')
-        else:
-            parts.append(link)
+        parts.append(f'<a class="pn{on}" href="{url(lang, href)}">{esc(label)}</a>')
+    more = "More" if lang == "en" else "Meer"
+    parts.append(
+        f'<div class="mdrop"><button type="button" class="pn" id="more-btn" aria-expanded="false" '
+        f'aria-haspopup="true" aria-controls="more-menu">{esc(more)}{CHEV_SVG}</button>'
+        f'<div class="pmenu" id="more-menu" role="menu" hidden>{more_links(lang)}</div></div>')
     return f'<nav class="pnav" aria-label="{esc(LANGS[lang]["menu"])}">{"".join(parts)}</nav>'
 
 
 def drawer_links(lang, active):
-    L = LANGS[lang]
-    rows = [
-        ("ecosystem", ecosystem_path(lang), L["nav_eco"]),
-        ("tesla", "tesla/", L["nav_tesla"]),
-        ("models", "category/models/", L["nav_models"]),
-        ("fsd", "fsd/", "FSD"),
-        ("optimus", "optimus/", "Optimus"),
-        ("spacex", "spacex/", "SpaceX"),
-        ("starship", "starship/", "Starship"),
-        ("starlink", "starlink/", "Starlink"),
-        ("spacexsi", "spacexsi/", "SpaceXSI/Grok"),
-        ("neuralink", "neuralink/", "Neuralink"),
-        ("robotaxi", "robotaxi/", "Robotaxi"),
-        ("boring", "boring/", CATEGORIES["boring"][lang]),
-        ("agi", "agi/", "AGI-race"),
-        ("videos", "shorts/", L["videos"]),
-    ]
+    rows = _nav_rows(lang)
     out = []
     for key, href, label in rows:
         on = " on" if active == key else ""
         out.append(f'<a class="di{on}" href="{url(lang, href)}">{esc(label)}</a>')
+    more = "More" if lang == "en" else "Meer"
+    out.append(
+        f'<details class="dmeer"><summary class="di">{esc(more)}</summary>'
+        f'<div class="dmeer-sub">{more_links(lang)}</div></details>')
     return "".join(out)
 
 
@@ -3809,47 +3781,178 @@ def _arc_points(n, cx, cy, radius, y0, y1):
 
 
 def _orbit_box(block, lang, style):
-    """One arc box: a role in two lines, and the whole box links to that hub."""
-    title = _bi(block.get("title"), lang)
-    fact = _bi(block.get("fact"), lang)
+    """Coloured layer name plus one bullet per part. The whole box is the link."""
     kicker = _bi(block.get("kicker"), lang)
+    parts = [part.strip() for part in _bi(block.get("fact"), lang).split(",") if part.strip()]
     tone = block.get("tone") or ""
-    kick = f'<span class="eco-k">{esc(kicker)}</span>' if kicker else ""
+    items = "".join(f"<li>{esc(part)}</li>" for part in parts)
     return (
         f'<a class="eco-card eco-node {tone}" href="{url(lang, block.get("href") or "")}" style="{style}">'
-        f'{kick}<strong>{esc(title)}</strong><p>{esc(fact)}</p></a>'
+        f'<span class="eco-k">{esc(kicker)}</span><ul>{items}</ul></a>'
     )
+
+
+# Viewport bucket, the main-column width it is drawn for, and the orbit height.
+# Wide rows still have the sidebar. At 900px and below the sidebar stacks.
+_ORBIT_FRAMES = (
+    ("wide", None, 818, 820),
+    ("w1100", 1099.98, 740, 880),
+    ("w960", 959.98, 618, 860),
+    ("w900", 900, 796, 820),
+    ("w700", 700, 676, 860),
+    ("w560", 560, 536, 900),
+    ("w390", 420, 366, 920),
+)
+# w560 and w390 ignore the fixed height and size the disk to the boxes.
+_ORBIT_HUG = {"w560", "w390"}
+
+
+def _box_stack(blocks):
+    """Rough box heights at the small-screen type size, so the disk can wrap them."""
+    heights = []
+    for block in blocks:
+        name = _bi(block.get("kicker"), "en")
+        parts = [part.strip() for part in _bi(block.get("fact"), "en").split(",") if part.strip()]
+        title = 38 if len(name) > 14 else 22
+        heights.append(title + len(parts) * 16 + 18)
+    return heights
+
+
+def _orbit_frame(width, height, n, gap=32, box_w=150, margin=12, y_pad=72, stub=28, hug=None):
+    """Circle 30% smaller than the old 1280px disk, with about 40% of it in view.
+    Box anchors sit on a larger circle, the same distance from the edge.
+    hug is a list of box heights: the disk then grows to that stack and the
+    container is only as tall as the stack, so nothing floats above or below it."""
+    if hug:
+        vgap, pad = 10, 14
+        gap, margin = 40, 6
+        y = float(pad)
+        centers = []
+        for item_h in hug:
+            centers.append(y + item_h / 2)
+            y += item_h + vgap
+        y -= vgap
+        height = y + pad
+        radius = height / 2
+        cy = height / 2
+        visible = min(0.4 * height, width - margin - gap - box_w)
+        cx = visible - radius
+        reach = radius + gap
+        pts = []
+        for center in centers:
+            dy = center - cy
+            pts.append((cx + math.sqrt(max(reach * reach - dy * dy, 0)), center))
+        core_w = 64 if width < 480 else 78
+        core_left = 2
+        return {
+            "d": height, "visible": visible, "cx": cx, "cy": cy, "pts": pts,
+            "core_left": core_left, "core_w": core_w, "core_right": core_left + core_w,
+            "w": width, "h": height, "stub": stub,
+        }
+    target = 1280 * 0.7
+    if 0.4 * target + gap + box_w + margin <= width:
+        diameter = target
+    else:
+        diameter = (width - margin - gap - box_w) / 0.4
+    radius = diameter / 2
+    visible = 0.4 * diameter
+    cx = visible - radius
+    cy = height / 2
+    reach = radius + gap
+    y0, y1 = float(y_pad), float(height - y_pad)
+    core_w = 120 if width >= 560 else 88
+    core_left = 10 if width >= 560 else 4
+    core_right = core_left + core_w
+
+    def points(top, bottom):
+        out = []
+        for i in range(n):
+            y = top + (bottom - top) * i / (n - 1)
+            dy = y - cy
+            inside = reach * reach - dy * dy
+            if inside <= 0:
+                return None
+            out.append((cx + math.sqrt(inside), y))
+        return out
+
+    pts = points(y0, y1)
+    guard = 0
+    while pts and min(x for x, _y in pts) - stub < core_right + 6 and guard < 40:
+        y0 += 6
+        y1 -= 6
+        pts = points(y0, y1)
+        guard += 1
+    if not pts:
+        pts = points(cy - reach * 0.9, cy + reach * 0.9)
+    return {
+        "d": diameter, "visible": visible, "cx": cx, "cy": cy, "pts": pts,
+        "core_left": core_left, "core_w": core_w, "core_right": core_right,
+        "w": width, "h": height, "stub": stub,
+    }
 
 
 def _orbit_blocks(blocks, lang):
-    """Eight boxes on an arc around a circle that is mostly off the left edge."""
+    """Boxes on one concentric arc. Each viewport bucket has its own circle and lines."""
     n = len(blocks)
-    # Desktop design box 820×710. Sun center is off the left; this arc shares that idea.
-    desktop = _arc_points(n, cx=15, cy=350, radius=385, y0=50, y1=650)
-    # Mobile column is 366 wide. The core's right edge is x=98, then a 28px
-    # stub, so every box starts at x>=126 and still fits a half-width card.
-    mobile = _arc_points(n, cx=-2185, cy=490, radius=2353, y0=86, y1=894)
-    parts, lines_d, lines_m = [], [], []
+    stack = _box_stack(blocks)
+    frames = []
+    for name, _query, width, height in _ORBIT_FRAMES:
+        frames.append((name, _orbit_frame(
+            width, height, n, hug=stack if name in _ORBIT_HUG else None)))
+    parts = []
     for i, block in enumerate(blocks):
-        dx, dy = desktop[i]
-        mx, my = mobile[i]
-        style = f"--dl:{dx / 820 * 100:.2f}%;--dt:{dy / 700 * 100:.2f}%;--ml:{mx / 366 * 100:.2f}%;--mt:{my / 980 * 100:.2f}%"
-        parts.append(_orbit_box(block, lang, style))
-        # Core label's right edge, then the left end of the 28px stub, then the box.
-        # End a hair inside the box so the stub visibly meets the border.
-        lines_d.append(f'<path d="M142 350 L{dx - 28:.1f} {dy:.1f} L{dx + 1.4:.1f} {dy:.1f}"/>')
-        lines_m.append(f'<path d="M98 490 L{mx - 28:.1f} {my:.1f} L{mx + 1.4:.1f} {my:.1f}"/>')
+        vars = []
+        for name, frame in frames:
+            x, y = frame["pts"][i]
+            vars.append(f"--x{name}:{x / frame['w'] * 100:.2f}%")
+            vars.append(f"--y{name}:{y / frame['h'] * 100:.2f}%")
+        parts.append(_orbit_box(block, lang, ";".join(vars)))
     label = "Elon ecosystem" if lang == "en" else "Elon-ecosysteem"
     stroke = 'fill="none" stroke="rgba(198,240,255,.9)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="round"'
+    rays = []
+    wide = frames[0][1]
+    rules = [
+        (f'.eco-orbit{{--ow:{wide["w"]};--oh:{wide["h"]};'
+         f'--sl:{(wide["visible"] - wide["d"]) / wide["w"] * 100:.2f};'
+         f'--sd:{wide["d"] / wide["w"] * 100:.2f};'
+         f'--cl:{wide["core_left"] / wide["w"] * 100:.2f};'
+         f'--cw:{wide["core_w"] / wide["w"] * 100:.2f}}}'),
+        ".eco-node{--bx:var(--xwide);--by:var(--ywide)}",
+        ".eco-rays-wide{display:block}",
+    ]
+    for name, frame in frames:
+        paths = []
+        for x, y in frame["pts"]:
+            paths.append(
+                f'<path d="M{frame["core_right"]:.1f} {frame["cy"]:.1f} '
+                f'L{x - frame["stub"]:.1f} {y:.1f} L{x + 1.2:.1f} {y:.1f}"/>')
+        rays.append(
+            f'<svg class="eco-rays eco-rays-{name}" viewBox="0 0 {frame["w"]} {frame["h"]}" '
+            f'preserveAspectRatio="none" aria-hidden="true"><g {stroke}>{"".join(paths)}</g></svg>')
+        if name == "wide":
+            continue
+        query = next(q for nm, q, _w, _h in _ORBIT_FRAMES if nm == name)
+        sun_left = (frame["visible"] - frame["d"]) / frame["w"] * 100
+        sun_d = frame["d"] / frame["w"] * 100
+        core_l = frame["core_left"] / frame["w"] * 100
+        core_w = frame["core_w"] / frame["w"] * 100
+        rules.append(
+            f'@media (max-width:{query}px){{'
+            f'.eco-orbit{{--ow:{frame["w"]};--oh:{frame["h"]};--sl:{sun_left:.2f};--sd:{sun_d:.2f};--cl:{core_l:.2f};--cw:{core_w:.2f}}}'
+            f'.eco-node{{--bx:var(--x{name});--by:var(--y{name})}}'
+            f'.eco-rays{{display:none}}.eco-rays-{name}{{display:block}}'
+            f'}}'
+        )
     return (
         f'<div class="eco-orbit">'
         f'<div class="eco-sun" aria-hidden="true"></div>'
-        f'<svg class="eco-rays eco-rays-d" viewBox="0 0 820 700" preserveAspectRatio="none" aria-hidden="true"><g {stroke}>{"".join(lines_d)}</g></svg>'
-        f'<svg class="eco-rays eco-rays-m" viewBox="0 0 366 980" preserveAspectRatio="none" aria-hidden="true"><g {stroke}>{"".join(lines_m)}</g></svg>'
+        f'{"".join(rays)}'
         f'<p class="eco-core">{esc(label)}</p>'
         f'<div class="eco-arc">{"".join(parts)}</div>'
+        f'<style>{"".join(rules)}</style>'
         f'</div>'
     )
+
 
 
 def _stat_card(block, lang, self_path=""):
@@ -3869,73 +3972,17 @@ def _stat_card(block, lang, self_path=""):
 # One landing page per map box. Paths that already exist as hubs are upgraded in place.
 LAYERS = [
     {
-        "key": "tesla-energy", "path": "tesla-energy/", "tone": "energy", "nav": "tesla-energy",
-        "kicker": {"en": "1 · Energy", "nl": "1 · Energie"},
-        "title": {"en": "Tesla Energy", "nl": "Tesla Energy"},
-        "stats": [],
-        "articles": {"categories": ["energy"], "keywords": ["megapack", "powerwall", "megafactory", "tesla energy"]},
-        "links": [
-            {"en": "Tesla", "nl": "Tesla", "href": "tesla/"},
-            {"en": "Energy", "nl": "Energie", "href": "category/energy/"},
-        ],
-        "intro": {
-            "en": [
-                "Tesla Energy stores electricity for the cars, the factories and the AI datacenters. Megapacks and the other grid products belong to Tesla, which stays a separate public company. The power kept here is what lets the compute layer run.",
-                "On the ecosystem map this is the first layer: energy feeds compute. This page follows the reporting already tagged as energy.",
-            ],
-            "nl": [
-                "Tesla Energy slaat stroom op voor de auto's, de fabrieken en de AI-datacenters. Megapacks en de andere netproducten horen bij Tesla, dat een zelfstandig beursgenoteerd bedrijf blijft. De stroom die hier wordt bewaard, laat de rekenlaag draaien.",
-                "Op de kaart van het ecosysteem is dit de eerste laag: energie voedt rekenkracht. Deze pagina volgt de berichtgeving die al als energie is getagd.",
-            ],
+        "key": "tesla", "path": "tesla/", "tone": "tesla", "nav": "tesla",
+        "kicker": {"en": "1 · Tesla", "nl": "1 · Tesla"},
+        "title": {"en": "Tesla", "nl": "Tesla"},
+        "fact": {
+            "en": "Cars, Semi Truck, Robotaxi, FSD, Optimus",
+            "nl": "Auto's, Semi-truck, Robotaxi, FSD, Optimus",
         },
-    },
-    {
-        "key": "compute", "path": "compute/", "tone": "compute", "nav": "compute",
-        "kicker": {"en": "2 · Compute", "nl": "2 · Rekenkracht"},
-        "title": {"en": "SpaceXSI clusters", "nl": "SpaceXSI-clusters"},
-        "stats": ["compute"],
-        "articles": {"categories": [], "keywords": ["colossus", "terafab"]},
-        "links": [
-            {"en": "Grok, Cursor and X", "nl": "Grok, Cursor en X", "href": "spacexsi/"},
-        ],
-        "intro": {
-            "en": [
-                "The SpaceXSI clusters are the chips and the halls that train the models and keep them running. This is the compute layer between energy and the models: power comes in, and trained systems go on to Grok, Cursor and X. Terafab is a plan for a chip plant, not a factory that is already shipping.",
-                "The figures below are only the ones a filing states. The models themselves are on the Grok, Cursor and X page.",
-            ],
-            "nl": [
-                "De clusters van SpaceXSI zijn de chips en de hallen die de modellen trainen en laten draaien. Dit is de rekenlaag tussen energie en de modellen: stroom komt binnen, en getrainde systemen gaan door naar Grok, Cursor en X. Terafab is een plan voor een chipfabriek, geen fabriek die al levert.",
-                "De cijfers hieronder staan er alleen als een filing ze noemt. De modellen zelf staan op de pagina van Grok, Cursor en X.",
-            ],
-        },
-    },
-    {
-        "key": "spacexsi", "path": "spacexsi/", "tone": "ai", "nav": "spacexsi", "hub": "spacexsi",
-        "kicker": {"en": "3 · Superintelligence", "nl": "3 · Superintelligentie"},
-        "title": {"en": "Grok, Cursor and X", "nl": "Grok, Cursor en X"},
-        "stats": [],
-        "links": [
-            {"en": "SpaceXSI clusters", "nl": "SpaceXSI-clusters", "href": "compute/"},
-        ],
-        "intro": {
-            "en": [
-                "Grok, Cursor and X are the models, the tools and the live network on top of the clusters. Grok is the model, Cursor is the coding tool, and X is the public network the models can read. They sit in the SpaceXSI part of the ecosystem and are fed by the compute layer.",
-                "This page collects the reporting on those products. The clusters have their own page.",
-            ],
-            "nl": [
-                "Grok, Cursor en X zijn de modellen, de hulpmiddelen en het live netwerk boven op de clusters. Grok is het model, Cursor is het programmeergereedschap, en X is het openbare netwerk dat de modellen kunnen lezen. Ze horen bij het SpaceXSI-deel van het ecosysteem en worden gevoed door de rekenlaag.",
-                "Deze pagina verzamelt de berichtgeving over die producten. De clusters hebben een eigen pagina.",
-            ],
-        },
-    },
-    {
-        "key": "cars-robots", "path": "cars-robots/", "tone": "bodies", "nav": "cars-robots",
-        "kicker": {"en": "4 · Cars and robots", "nl": "4 · Auto's en robots"},
-        "title": {"en": "FSD, Robotaxi, Optimus", "nl": "FSD, Robotaxi, Optimus"},
         "stats": ["deliveries"],
         "articles": {
-            "categories": ["fsd", "robotaxi", "optimus"],
-            "keywords": ["fsd", "full self-driving", "full self driving", "robotaxi", "cybercab", "optimus"],
+            "categories": ["models", "fsd", "robotaxi", "optimus"],
+            "keywords": ["semi", "cybercab", "fsd", "full self-driving", "full self driving", "robotaxi", "optimus"],
         },
         "links": [
             {"en": "FSD", "nl": "FSD", "href": "fsd/"},
@@ -3944,91 +3991,144 @@ LAYERS = [
         ],
         "intro": {
             "en": [
-                "FSD, Robotaxi and Optimus carry the AI out of the data centre and into the road and the factory. FSD is supervised assistance in Tesla cars. Robotaxi and Cybercab are the ride service and the purpose-built car. Optimus is the humanoid robot.",
-                "Together they are the cars-and-robots layer on the map. Each of the three has its own page, linked below.",
+                "Tesla is the cars layer of the ecosystem: the passenger cars, the Semi truck, Robotaxi, supervised FSD and the Optimus robot. The cars and the Semi move people and freight. FSD is the supervised assistance in those vehicles, and Robotaxi is the ride service built on it. Optimus is the humanoid robot for factory work.",
+                "FSD, Robotaxi and Optimus each have their own page below.",
             ],
             "nl": [
-                "FSD, Robotaxi en Optimus brengen de AI uit het datacenter naar de weg en de fabriek. FSD is begeleide rijhulp in Tesla-auto's. Robotaxi en Cybercab zijn de ritdienst en de auto die ervoor is gebouwd. Optimus is de humanoïde robot.",
-                "Samen zijn ze de laag van auto's en robots op de kaart. Elk van de drie heeft een eigen pagina, hieronder gelinkt.",
+                "Tesla is de autolaag van het ecosysteem: de personenauto's, de Semi-truck, Robotaxi, begeleide FSD en de robot Optimus. De auto's en de Semi vervoeren mensen en vracht. FSD is de begeleide rijhulp in die voertuigen, en Robotaxi is de ritdienst die daarop steunt. Optimus is de humanoïde robot voor werk in de fabriek.",
+                "FSD, Robotaxi en Optimus hebben hieronder elk een eigen pagina.",
+            ],
+        },
+    },
+    {
+        "key": "tesla-energy", "path": "tesla-energy/", "tone": "energy", "nav": "tesla-energy",
+        "kicker": {"en": "2 · Tesla Energy", "nl": "2 · Tesla Energy"},
+        "title": {"en": "Tesla Energy", "nl": "Tesla Energy"},
+        "fact": {
+            "en": "Megapacks, Charging Network, Home charging stations, Solar",
+            "nl": "Megapacks, laadnetwerk, thuisladers, zonne-energie",
+        },
+        "stats": [],
+        "articles": {
+            "categories": ["energy", "charging"],
+            "keywords": ["megapack", "powerwall", "megafactory", "solar", "supercharger"],
+        },
+        "links": [
+            {"en": "Tesla", "nl": "Tesla", "href": "tesla/"},
+        ],
+        "intro": {
+            "en": [
+                "Tesla Energy is the power layer: Megapacks for the grid, the charging network, home charging and solar. Megapacks store electricity for utilities, factories and data centres. The charging network and the home chargers put that power into the cars. Solar is the generation side of the same business.",
+                "The layer sits under Tesla and feeds the rest of the ecosystem.",
+            ],
+            "nl": [
+                "Tesla Energy is de stroomlaag: Megapacks voor het net, het laadnetwerk, thuisladers en zonne-energie. Megapacks slaan stroom op voor netbeheerders, fabrieken en datacenters. Het laadnetwerk en de thuisladers brengen die stroom naar de auto's. Zonne-energie is de opwekking in hetzelfde bedrijf.",
+                "De laag hoort bij Tesla en voedt de rest van het ecosysteem.",
+            ],
+        },
+    },
+    {
+        "key": "spacex", "path": "spacex/", "tone": "spacex", "nav": "spacex", "hub": "spacex",
+        "kicker": {"en": "3 · SpaceX", "nl": "3 · SpaceX"},
+        "title": {"en": "SpaceX", "nl": "SpaceX"},
+        "fact": {"en": "Starship, Falcons", "nl": "Starship, Falcons"},
+        "stats": ["flight15"],
+        "links": [
+            {"en": "Starship tracker", "nl": "Starship-tracker", "href": "starship/"},
+        ],
+        "intro": {
+            "en": [
+                "SpaceX is the rocket layer: Starship and the Falcon family. Falcon flies the launches of today. Starship is the larger vehicle, still learning to reach orbit and to be caught. Mars stays the long-term aim rather than a scheduled date.",
+                "The flight-by-flight record is the Starship tracker, linked below.",
+            ],
+            "nl": [
+                "SpaceX is de raketlaag: Starship en de Falcon-familie. Falcon vliegt de lanceringen van nu. Starship is het grotere voertuig, dat nog leert een baan te halen en gevangen te worden. Mars blijft het doel op termijn en geen ingeplande datum.",
+                "Het vlucht-voor-vluchtverslag is de Starship-tracker, hieronder gelinkt.",
             ],
         },
     },
     {
         "key": "starlink", "path": "starlink/", "tone": "link", "nav": "starlink", "hub": "starlink",
-        "kicker": {"en": "5 · Connection", "nl": "5 · Verbinding"},
+        "kicker": {"en": "4 · Starlink", "nl": "4 · Starlink"},
         "title": {"en": "Starlink", "nl": "Starlink"},
+        "fact": {"en": "Satellite network", "nl": "Satellietnetwerk"},
         "stats": ["starlink"],
         "links": [
             {"en": "SpaceX", "nl": "SpaceX", "href": "spacex/"},
         ],
         "intro": {
             "en": [
-                "Starlink is the satellite-internet layer. Dishes on the ground talk to a constellation that reaches places cables do not. The same network is part of the long-term plan for the way to Mars, which is why it sits between the cars and the rockets on the map.",
-                "This page follows the consumer and business service. Starshield is mentioned only when a public record exists.",
+                "Starlink is the satellite network. Dishes on the ground talk to satellites that reach places cables do not. The service is for homes and for businesses. The same network is the connection layer of the ecosystem, between the cars and the rockets on the map.",
+                "Starshield is mentioned only when a public record exists.",
             ],
             "nl": [
-                "Starlink is de laag van satellietinternet. Schotels op de grond praten met een constellatie die plaatsen bereikt waar geen kabel ligt. Hetzelfde netwerk hoort bij het plan op lange termijn voor de weg naar Mars, en daarom staat het op de kaart tussen de auto's en de raketten.",
-                "Deze pagina volgt de dienst voor consumenten en bedrijven. Starshield komt alleen aan bod als er een openbaar stuk over bestaat.",
+                "Starlink is het satellietnetwerk. Schotels op de grond praten met satellieten die plaatsen bereiken waar geen kabel ligt. De dienst is er voor thuis en voor bedrijven. Hetzelfde netwerk is de verbindingslaag van het ecosysteem, op de kaart tussen de auto's en de raketten.",
+                "Starshield komt alleen aan bod als er een openbaar stuk over bestaat.",
             ],
         },
     },
     {
-        "key": "starship-falcon", "path": "starship-falcon/", "tone": "mars", "nav": "starship-falcon",
-        "kicker": {"en": "6 · Space and Mars", "nl": "6 · Ruimte en Mars"},
-        "title": {"en": "Starship and Falcon", "nl": "Starship en Falcon"},
-        "stats": ["flight15"],
-        "articles": {"categories": [], "keywords": ["starship", "falcon", "super heavy"]},
-        "links": [
-            {"en": "Starship tracker", "nl": "Starship-tracker", "href": "starship/"},
-            {"en": "SpaceX", "nl": "SpaceX", "href": "spacex/"},
-        ],
+        "key": "spacexsi", "path": "spacexsi/", "tone": "spacexsi", "nav": "spacexsi",
+        "kicker": {"en": "5 · SpaceXSI", "nl": "5 · SpaceXSI"},
+        "title": {"en": "SpaceXSI", "nl": "SpaceXSI"},
+        "fact": {
+            "en": "AI, Compute, Datacenters, Chips",
+            "nl": "AI, rekenkracht, datacenters, chips",
+        },
+        "stats": ["compute"],
+        "articles": {
+            "categories": ["xai"],
+            "keywords": ["xai", "grok", "spacexsi", "spacexai", "colossus", "terafab", "dojo"],
+        },
+        "links": [],
         "intro": {
             "en": [
-                "Starship and Falcon are the rockets. Falcon flies the launches of today. Starship is the larger vehicle, still learning to reach orbit and to be caught, and Mars stays the long-term aim rather than a scheduled date.",
-                "This is the layer where the ecosystem leaves Earth. The flight-by-flight record is the Starship tracker, and the company page is SpaceX.",
+                "SpaceXSI is the AI layer: the models, the compute, the datacenters and the chips. Grok is the model, Cursor is the coding tool, and X is the live network they can read. The clusters and datacenters train those models and keep them running. The chips, including the planned Terafab plant, are how that compute gets built.",
+                "This page brings the reporting on all of those parts together.",
             ],
             "nl": [
-                "Starship en Falcon zijn de raketten. Falcon vliegt de lanceringen van nu. Starship is het grotere voertuig, dat nog leert een baan te halen en gevangen te worden, en Mars blijft het doel op termijn en geen ingeplande datum.",
-                "Dit is de laag waar het ecosysteem de aarde verlaat. Het vlucht-voor-vluchtverslag is de Starship-tracker, en de bedrijfspagina is SpaceX.",
+                "SpaceXSI is de AI-laag: de modellen, de rekenkracht, de datacenters en de chips. Grok is het model, Cursor is het programmeergereedschap, en X is het live netwerk dat ze kunnen lezen. De clusters en datacenters trainen die modellen en laten ze draaien. De chips, inclusief de geplande fabriek Terafab, zijn hoe die rekenkracht wordt gebouwd.",
+                "Deze pagina brengt de berichtgeving over al die delen samen.",
             ],
         },
     },
     {
         "key": "neuralink", "path": "neuralink/", "tone": "neural", "nav": "neuralink", "hub": "neuralink",
-        "kicker": {"en": "Human–AI bridge", "nl": "Brug mens–AI"},
+        "kicker": {"en": "6 · Neuralink", "nl": "6 · Neuralink"},
         "title": {"en": "Neuralink", "nl": "Neuralink"},
+        "fact": {"en": "Brain-computer interfaces", "nl": "Brein-computerinterfaces"},
         "stats": ["neuralink"],
         "links": [],
         "intro": {
             "en": [
-                "Neuralink is a bridge from a person to a computer. The work is an implant that can move a cursor, plus studies aimed at speech and at sight. It sits beside the main stack, as its own company, rather than inside energy or the rockets.",
+                "Neuralink builds brain-computer interfaces. An implant can move a cursor, and studies aim at speech and at sight. It is its own company, beside the main stack rather than inside the cars or the rockets.",
                 "Articles will show up here as they are published. Nothing is written in ahead of that.",
             ],
             "nl": [
-                "Neuralink is een brug van een mens naar een computer. Het werk is een implantaat dat een cursor kan bewegen, plus studies gericht op spraak en op zicht. Het staat naast de hoofdstapel, als eigen bedrijf, en niet in de energielaag of bij de raketten.",
+                "Neuralink bouwt brein-computerinterfaces. Een implantaat kan een cursor bewegen, en studies richten zich op spraak en op zicht. Het is een eigen bedrijf, naast de hoofdstapel en niet in de auto's of de raketten.",
                 "Artikelen verschijnen hier zodra ze zijn gepubliceerd. Er wordt niets vooraf ingevuld.",
             ],
         },
     },
     {
         "key": "boring", "path": "boring/", "tone": "boring", "nav": "boring", "hub": "boring",
-        "kicker": {"en": "Tunnels", "nl": "Tunnels"},
+        "kicker": {"en": "7 · The Boring Company", "nl": "7 · The Boring Company"},
         "title": {"en": "The Boring Company", "nl": "The Boring Company"},
+        "fact": {"en": "Car tunnels", "nl": "Autotunnels"},
         "stats": [],
         "links": [],
         "intro": {
             "en": [
-                "The Boring Company digs tunnels and runs Loop transit, often with Tesla vehicles. It is a separate company, drawn next to the main stack on the map. The public projects include Vegas, Nashville, Dubai and the tunnel at Gigafactory Texas.",
-                "Passenger figures appear on this page only when the company or a local authority publishes them.",
+                "The Boring Company digs car tunnels and runs Loop transit through them, often with Tesla vehicles. It is a separate company, next to the main stack on the map. The public projects include Vegas, Nashville, Dubai and the tunnel at Gigafactory Texas.",
+                "Passenger figures appear here only when the company or a local authority publishes them.",
             ],
             "nl": [
-                "The Boring Company graaft tunnels en rijdt Loop-vervoer, vaak met Tesla-voertuigen. Het is een apart bedrijf, naast de hoofdstapel op de kaart getekend. De openbare projecten zijn Vegas, Nashville, Dubai en de tunnel bij Gigafactory Texas.",
-                "Reizigerscijfers staan op deze pagina alleen als het bedrijf of een lokale overheid ze publiceert.",
+                "The Boring Company graaft autotunnels en laat er Loop-vervoer door rijden, vaak met Tesla-voertuigen. Het is een apart bedrijf, naast de hoofdstapel op de kaart. De openbare projecten zijn Vegas, Nashville, Dubai en de tunnel bij Gigafactory Texas.",
+                "Reizigerscijfers staan hier alleen als het bedrijf of een lokale overheid ze publiceert.",
             ],
         },
     },
 ]
-
 
 def _layer_articles(layer, arts):
     if layer.get("hub"):
@@ -4089,8 +4189,12 @@ def ecosystem_page(lang):
     L = LANGS[lang]
     title = L["nav_eco"]
     intro = _bi(data["intro"], lang)
-    nav, ld = crumbs(lang, [(title, ecosystem_path(lang))])
-    orbit = _orbit_blocks(list(data["layers"]) + list(data["branches"]), lang)
+    _nav, ld = crumbs(lang, [(title, ecosystem_path(lang))])
+    orbit = _orbit_blocks([
+        {"tone": layer["tone"], "href": layer["path"], "kicker": layer["kicker"],
+         "title": layer["title"], "fact": layer["fact"]}
+        for layer in LAYERS
+    ], lang)
     streams = "".join(_eco_piece(b, lang, "stream") for b in data["streams"])
     companies = "".join(_eco_piece(b, lang, "company") for b in data["companies"])
     calls = "".join(_eco_piece(b, lang, "callout") for b in data["callouts"])
@@ -4110,9 +4214,7 @@ def ecosystem_page(lang):
         "nl": ("De lagen", "Wat erdoorheen gaat", "De bedrijven", "Plannen en beloftes", "Bronnen"),
     }[lang]
     body = (
-        f'{nav}<header class="hubhead"><h1>{esc(title)}</h1>'
-        f'<p class="byline">{esc(L["byline"])}</p></header>'
-        f'<h2 class="eco-h">{esc(heads[0])}</h2>'
+        f'<h1 class="visually-hidden">{esc(title)}</h1>'
         f'{orbit}'
         f'<h2 class="eco-h">{esc(heads[1])}</h2><div class="eco-split">{streams}</div>'
         f'<h2 class="eco-h">{esc(heads[2])}</h2><div class="eco-cos">{companies}</div>'

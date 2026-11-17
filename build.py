@@ -495,7 +495,12 @@ h1,h2,h3{color:#ebebeb;font-weight:800}
 .dm span{padding:7px 6px 8px;font-size:.78rem;line-height:1.25;font-weight:800;text-align:center}
 .drawer h4{font-size:.7rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:var(--dim);margin:20px 10px 6px}
 .drawer .di{display:flex;align-items:center;gap:12px;padding:9px 10px;border-radius:10px;color:var(--fg);text-decoration:none;font-weight:700;font-size:.92rem}
-.drawer button.di{width:100%;border:0;background:transparent;font:inherit;font-weight:700;font-size:.92rem;text-align:left;cursor:pointer}
+.drawer button.di,.drawer summary.di{width:100%;border:0;background:transparent;font:inherit;font-weight:700;font-size:.92rem;text-align:left;cursor:pointer;list-style:none}
+.drawer summary.di::-webkit-details-marker{display:none}
+.dmeer{margin-top:6px;border-top:1px solid #2a2a2a;padding-top:6px}
+.dmeer-sub{display:flex;flex-direction:column;gap:1px;padding:2px 0 8px 10px}
+.dmeer-sub a{display:block;padding:7px 10px;border-radius:8px;color:var(--muted);text-decoration:none;font-weight:700;font-size:.88rem}
+.dmeer-sub a:hover{background:#272727;color:#fff}
 .drawer .di:hover{background:var(--surface2);color:var(--head)}
 .drawer .di.on{background:var(--surface2);color:var(--head);font-weight:800}
 .drawer .di img,.drawer .di i{width:56px;aspect-ratio:1200/630;object-fit:cover;border-radius:10px;border:1px solid var(--edge);flex:none;background:var(--surface)}
@@ -1081,27 +1086,23 @@ header.hb .pnav>.is-parked{display:none}
 .eco-flow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
 .eco-join{display:none}
 }
-.eco-orbit{position:relative;overflow:hidden;height:700px;margin:0 0 22px;isolation:isolate}
-.eco-sun{position:absolute;z-index:0;top:50%;left:-900px;width:1280px;height:1280px;transform:translateY(-50%);border-radius:50%;pointer-events:none;background:radial-gradient(circle at 81% 50%, #f7feff 0 .8%, #8af3ff 3.2%, #00b4e0 9%, #07506e 22%, #08131c 40%, transparent 54%);box-shadow:inset -30px 0 70px rgba(120,230,255,.28);border:1px solid rgba(170,240,255,.4)}
+.eco-orbit{position:relative;overflow:hidden;margin:0 0 22px;isolation:isolate;height:auto;aspect-ratio:var(--ow)/var(--oh)}
+.eco-sun{position:absolute;z-index:0;top:50%;left:calc(var(--sl)*1%);width:calc(var(--sd)*1%);height:auto;aspect-ratio:1;transform:translateY(-50%);border-radius:50%;pointer-events:none;background:radial-gradient(circle at 81% 50%, #f7feff 0 .8%, #8af3ff 3.2%, #00b4e0 9%, #07506e 22%, #08131c 40%, transparent 54%);box-shadow:inset -30px 0 70px rgba(120,230,255,.28);border:1px solid rgba(170,240,255,.4)}
 .eco-sun::after{content:"";position:absolute;inset:12%;border-radius:50%;border:1px solid rgba(160,235,255,.25)}
-.eco-core{position:absolute;z-index:3;left:10px;top:50%;transform:translateY(-50%);width:132px;margin:0;text-align:center;font-weight:800;font-size:1.15rem;line-height:1.12;letter-spacing:-.03em;color:#fff;text-shadow:0 0 8px #d8fbff, 0 0 18px #00c2ea;pointer-events:none}
-.eco-rays{position:absolute;inset:0;z-index:1;width:100%;height:100%;pointer-events:none}
-.eco-rays-m{display:none}
+.eco-core{position:absolute;z-index:3;left:calc(var(--cl)*1%);top:50%;transform:translateY(-50%);width:calc(var(--cw)*1%);margin:0;text-align:center;font-weight:800;font-size:1.05rem;line-height:1.12;letter-spacing:-.03em;color:#fff;text-shadow:0 0 8px #d8fbff, 0 0 18px #00c2ea;pointer-events:none}
+.eco-rays{position:absolute;inset:0;z-index:1;width:100%;height:100%;pointer-events:none;display:none}
 .eco-arc{position:absolute;inset:0;z-index:2;margin:0}
-.eco-node{position:absolute;left:var(--dl);top:var(--dt);width:33%;transform:translateY(-50%);margin:0;padding:4px 8px 3px}
-.eco-node .eco-k{display:block;font-size:.56rem;line-height:1.1;margin:0;letter-spacing:.06em}
-.eco-node strong{display:block;color:#fff;font-size:.8rem;line-height:1.15}
+.eco-node{position:absolute;left:var(--bx);top:var(--by);width:max-content;max-width:150px;transform:translateY(-50%);margin:0;padding:6px 8px 5px}
+.eco-node .eco-k{display:block;font-size:.92rem;font-weight:800;line-height:1.15;margin:0;letter-spacing:.04em}
+.eco-node ul{margin:4px 0 0;padding:0 0 0 1.05em}
+.eco-node li{font-size:.68rem;line-height:1.22}
 a.eco-node{display:block;text-decoration:none;color:inherit}
 a.eco-node:hover,a.eco-node:focus-visible{border-color:var(--blue);box-shadow:0 0 0 2px var(--blue);outline:none}
 a.eco-node.link:hover,a.eco-node.link:focus-visible,a.eco-node.boring:hover,a.eco-node.boring:focus-visible{border-color:#fff;box-shadow:0 0 0 2px #fff}
-.eco-node p{font-size:.68rem;line-height:1.25;margin:2px 0 0;color:#d5deea}
-@media (max-width:899.98px){
-.eco-orbit{height:980px}
-.eco-sun{width:860px;height:860px;left:-580px;top:50%;transform:translateY(-50%)}
-.eco-core{left:6px;top:50%;width:92px;transform:translateY(-50%);font-size:.92rem}
-.eco-rays-d{display:none}
-.eco-rays-m{display:block}
-.eco-node{left:var(--ml);top:var(--mt);width:50%}
+@media (max-width:560px){
+.eco-node .eco-k{font-size:.78rem}
+.eco-node li{font-size:.62rem;line-height:1.2}
+.eco-core{font-size:.84rem}
 }
 @media (min-width:900px){
 header.hb .id{gap:10px}
@@ -2820,10 +2821,16 @@ def more_category_rows(lang):
 
 
 def more_links(lang):
-    """Hubs that are not in the top nav, then the site pages."""
+    """Items that are not one of the seven layer buttons."""
     L = LANGS[lang]
     rows = [
-        (CATEGORIES["boring"][lang], "boring/"),
+        (L["nav_eco"], ecosystem_path(lang)),
+        ("Starship tracker" if lang == "en" else "Starship-tracker", "starship/"),
+        ("FSD", "fsd/"),
+        ("Robotaxi", "robotaxi/"),
+        ("Optimus", "optimus/"),
+        ("AGI-race", "agi/"),
+        (L["nav_models"], "category/models/"),
         (L["videos"], "shorts/"),
     ]
     rows += more_category_rows(lang)
@@ -2845,6 +2852,11 @@ def primary_nav(lang, active=None):
     for key, href, label in _nav_rows(lang):
         on = " on" if cur == key else ""
         parts.append(f'<a class="pn{on}" href="{url(lang, href)}">{esc(label)}</a>')
+    more = "More" if lang == "en" else "Meer"
+    parts.append(
+        f'<div class="mdrop"><button type="button" class="pn" id="more-btn" aria-expanded="false" '
+        f'aria-haspopup="true" aria-controls="more-menu">{esc(more)}{CHEV_SVG}</button>'
+        f'<div class="pmenu" id="more-menu" role="menu" hidden>{more_links(lang)}</div></div>')
     return f'<nav class="pnav" aria-label="{esc(LANGS[lang]["menu"])}">{"".join(parts)}</nav>'
 
 
@@ -2854,6 +2866,10 @@ def drawer_links(lang, active):
     for key, href, label in rows:
         on = " on" if active == key else ""
         out.append(f'<a class="di{on}" href="{url(lang, href)}">{esc(label)}</a>')
+    more = "More" if lang == "en" else "Meer"
+    out.append(
+        f'<details class="dmeer"><summary class="di">{esc(more)}</summary>'
+        f'<div class="dmeer-sub">{more_links(lang)}</div></details>')
     return "".join(out)
 
 
@@ -3765,47 +3781,133 @@ def _arc_points(n, cx, cy, radius, y0, y1):
 
 
 def _orbit_box(block, lang, style):
-    """One arc box: a role in two lines, and the whole box links to that hub."""
-    title = _bi(block.get("title"), lang)
-    fact = _bi(block.get("fact"), lang)
+    """Coloured layer name plus one bullet per part. The whole box is the link."""
     kicker = _bi(block.get("kicker"), lang)
+    parts = [part.strip() for part in _bi(block.get("fact"), lang).split(",") if part.strip()]
     tone = block.get("tone") or ""
-    kick = f'<span class="eco-k">{esc(kicker)}</span>' if kicker else ""
+    items = "".join(f"<li>{esc(part)}</li>" for part in parts)
     return (
         f'<a class="eco-card eco-node {tone}" href="{url(lang, block.get("href") or "")}" style="{style}">'
-        f'{kick}<strong>{esc(title)}</strong><p>{esc(fact)}</p></a>'
+        f'<span class="eco-k">{esc(kicker)}</span><ul>{items}</ul></a>'
     )
+
+
+# Viewport bucket, the main-column width it is drawn for, and the orbit height.
+# Wide rows still have the sidebar. At 900px and below the sidebar stacks.
+_ORBIT_FRAMES = (
+    ("wide", None, 818, 820),
+    ("w1100", 1099.98, 740, 880),
+    ("w960", 959.98, 618, 860),
+    ("w900", 900, 796, 820),
+    ("w700", 700, 676, 860),
+    ("w560", 560, 536, 900),
+    ("w390", 420, 366, 920),
+)
+
+
+def _orbit_frame(width, height, n, gap=32, box_w=150, margin=12, y_pad=72, stub=28):
+    """Circle 30% smaller than the old 1280px disk, with about 40% of it in view.
+    Box anchors sit on a larger circle, the same distance from the edge."""
+    target = 1280 * 0.7
+    if 0.4 * target + gap + box_w + margin <= width:
+        diameter = target
+    else:
+        diameter = (width - margin - gap - box_w) / 0.4
+    radius = diameter / 2
+    visible = 0.4 * diameter
+    cx = visible - radius
+    cy = height / 2
+    reach = radius + gap
+    y0, y1 = float(y_pad), float(height - y_pad)
+    core_w = 120 if width >= 560 else 88
+    core_left = 10 if width >= 560 else 4
+    core_right = core_left + core_w
+
+    def points(top, bottom):
+        out = []
+        for i in range(n):
+            y = top + (bottom - top) * i / (n - 1)
+            dy = y - cy
+            inside = reach * reach - dy * dy
+            if inside <= 0:
+                return None
+            out.append((cx + math.sqrt(inside), y))
+        return out
+
+    pts = points(y0, y1)
+    guard = 0
+    while pts and min(x for x, _y in pts) - stub < core_right + 6 and guard < 40:
+        y0 += 6
+        y1 -= 6
+        pts = points(y0, y1)
+        guard += 1
+    if not pts:
+        pts = points(cy - reach * 0.9, cy + reach * 0.9)
+    return {
+        "d": diameter, "visible": visible, "cx": cx, "cy": cy, "pts": pts,
+        "core_left": core_left, "core_w": core_w, "core_right": core_right,
+        "w": width, "h": height, "stub": stub,
+    }
 
 
 def _orbit_blocks(blocks, lang):
-    """Boxes on an arc around a circle that is mostly off the left edge."""
+    """Boxes on one concentric arc. Each viewport bucket has its own circle and lines."""
     n = len(blocks)
-    # Desktop design box 820×710. Sun center is off the left; this arc shares that idea.
-    desktop = _arc_points(n, cx=15, cy=350, radius=385, y0=50, y1=650)
-    # Mobile column is 366 wide. The core's right edge is x=98, then a 28px
-    # stub, so every box starts at x>=126 and still fits a half-width card.
-    mobile = _arc_points(n, cx=-2185, cy=490, radius=2353, y0=86, y1=894)
-    parts, lines_d, lines_m = [], [], []
+    frames = [(name, _orbit_frame(width, height, n)) for name, _query, width, height in _ORBIT_FRAMES]
+    parts = []
     for i, block in enumerate(blocks):
-        dx, dy = desktop[i]
-        mx, my = mobile[i]
-        style = f"--dl:{dx / 820 * 100:.2f}%;--dt:{dy / 700 * 100:.2f}%;--ml:{mx / 366 * 100:.2f}%;--mt:{my / 980 * 100:.2f}%"
-        parts.append(_orbit_box(block, lang, style))
-        # Core label's right edge, then the left end of the 28px stub, then the box.
-        # End a hair inside the box so the stub visibly meets the border.
-        lines_d.append(f'<path d="M142 350 L{dx - 28:.1f} {dy:.1f} L{dx + 1.4:.1f} {dy:.1f}"/>')
-        lines_m.append(f'<path d="M98 490 L{mx - 28:.1f} {my:.1f} L{mx + 1.4:.1f} {my:.1f}"/>')
+        vars = []
+        for name, frame in frames:
+            x, y = frame["pts"][i]
+            vars.append(f"--x{name}:{x / frame['w'] * 100:.2f}%")
+            vars.append(f"--y{name}:{y / frame['h'] * 100:.2f}%")
+        parts.append(_orbit_box(block, lang, ";".join(vars)))
     label = "Elon ecosystem" if lang == "en" else "Elon-ecosysteem"
     stroke = 'fill="none" stroke="rgba(198,240,255,.9)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="round"'
+    rays = []
+    wide = frames[0][1]
+    rules = [
+        (f'.eco-orbit{{--ow:{wide["w"]};--oh:{wide["h"]};'
+         f'--sl:{(wide["visible"] - wide["d"]) / wide["w"] * 100:.2f};'
+         f'--sd:{wide["d"] / wide["w"] * 100:.2f};'
+         f'--cl:{wide["core_left"] / wide["w"] * 100:.2f};'
+         f'--cw:{wide["core_w"] / wide["w"] * 100:.2f}}}'),
+        ".eco-node{--bx:var(--xwide);--by:var(--ywide)}",
+        ".eco-rays-wide{display:block}",
+    ]
+    for name, frame in frames:
+        paths = []
+        for x, y in frame["pts"]:
+            paths.append(
+                f'<path d="M{frame["core_right"]:.1f} {frame["cy"]:.1f} '
+                f'L{x - frame["stub"]:.1f} {y:.1f} L{x + 1.2:.1f} {y:.1f}"/>')
+        rays.append(
+            f'<svg class="eco-rays eco-rays-{name}" viewBox="0 0 {frame["w"]} {frame["h"]}" '
+            f'preserveAspectRatio="none" aria-hidden="true"><g {stroke}>{"".join(paths)}</g></svg>')
+        if name == "wide":
+            continue
+        query = next(q for nm, q, _w, _h in _ORBIT_FRAMES if nm == name)
+        sun_left = (frame["visible"] - frame["d"]) / frame["w"] * 100
+        sun_d = frame["d"] / frame["w"] * 100
+        core_l = frame["core_left"] / frame["w"] * 100
+        core_w = frame["core_w"] / frame["w"] * 100
+        rules.append(
+            f'@media (max-width:{query}px){{'
+            f'.eco-orbit{{--ow:{frame["w"]};--oh:{frame["h"]};--sl:{sun_left:.2f};--sd:{sun_d:.2f};--cl:{core_l:.2f};--cw:{core_w:.2f}}}'
+            f'.eco-node{{--bx:var(--x{name});--by:var(--y{name})}}'
+            f'.eco-rays{{display:none}}.eco-rays-{name}{{display:block}}'
+            f'}}'
+        )
     return (
         f'<div class="eco-orbit">'
         f'<div class="eco-sun" aria-hidden="true"></div>'
-        f'<svg class="eco-rays eco-rays-d" viewBox="0 0 820 700" preserveAspectRatio="none" aria-hidden="true"><g {stroke}>{"".join(lines_d)}</g></svg>'
-        f'<svg class="eco-rays eco-rays-m" viewBox="0 0 366 980" preserveAspectRatio="none" aria-hidden="true"><g {stroke}>{"".join(lines_m)}</g></svg>'
+        f'{"".join(rays)}'
         f'<p class="eco-core">{esc(label)}</p>'
         f'<div class="eco-arc">{"".join(parts)}</div>'
+        f'<style>{"".join(rules)}</style>'
         f'</div>'
     )
+
 
 
 def _stat_card(block, lang, self_path=""):

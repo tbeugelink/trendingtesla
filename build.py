@@ -1092,7 +1092,7 @@ header.hb .pnav>.is-parked{display:none}
 .eco-core{position:absolute;z-index:3;left:calc(var(--cl)*1%);top:50%;transform:translateY(-50%);width:calc(var(--cw)*1%);margin:0;text-align:center;font-weight:800;font-size:1.05rem;line-height:1.12;letter-spacing:-.03em;color:#fff;text-shadow:0 0 8px #d8fbff, 0 0 18px #00c2ea;pointer-events:none}
 .eco-rays{position:absolute;inset:0;z-index:1;width:100%;height:100%;pointer-events:none;display:none}
 .eco-arc{position:absolute;inset:0;z-index:2;margin:0}
-.eco-node{position:absolute;left:var(--bx);top:var(--by);width:max-content;max-width:150px;transform:translateY(-50%);margin:0;padding:6px 8px 5px}
+.eco-node{position:absolute;left:var(--bx);top:var(--by);width:150px;transform:translateY(-50%);margin:0;padding:6px 8px 5px}
 .eco-node .eco-k{display:block;font-size:.92rem;font-weight:800;line-height:1.15;margin:0;letter-spacing:.04em}
 .eco-node ul{margin:4px 0 0;padding:0 0 0 1.05em}
 .eco-node li{font-size:.68rem;line-height:1.22}

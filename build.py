@@ -879,7 +879,7 @@ header.hb .sbtn{display:grid;width:36px;height:36px;margin-left:auto;border:0;ba
 header.hb .sbtn:focus-visible{outline:2px solid var(--blue2);outline-offset:2px}
 header.hb .savedlink{margin-left:6px}
 header.hb ~ .drawer,header.hb ~ .scrim{top:66px}
-@media (min-width:900px){header.hb .pnav{display:flex;overflow:visible;align-items:baseline}header.hb .id{align-items:baseline;gap:16px}header.hb .bar{position:relative;z-index:3;align-items:center}header.hb .logo{line-height:1}header.hb .logo span{top:0}header.hb .bar .burger{display:none}}
+@media (min-width:900px){header.hb .pnav{display:flex;flex-wrap:nowrap;overflow:visible;align-items:baseline}header.hb .id{align-items:baseline;gap:16px}header.hb .bar{position:relative;z-index:3;align-items:center}header.hb .logo{line-height:1}header.hb .logo span{top:0}header.hb .bar .burger{display:none}}
 @media (min-width:901px){.hb-find .hb-search{width:min(640px,calc(100% - 292px - 26px));max-width:none;margin:0 calc(292px + 26px) 0 auto}}
 @media (min-width:900px) and (max-width:1099.98px){header.hb .id{gap:10px}header.hb .pn,header.hb .mdrop>button.pn{font-size:14.5px;padding:5px 7px}}
 .hb-find .hb-search{z-index:1}
@@ -1025,16 +1025,16 @@ header.hb .pnav>.is-parked{display:none}
 .layerhead{border:1px solid;border-radius:16px;padding:14px 16px 12px;margin:0 0 12px}
 .layerhead h1{color:#fff;margin:2px 0 0}
 .layerhead .eco-k{margin:0 0 4px}
-.eco-card.energy,.layerhead.energy{background:#3a0812;border-color:#e31937;color:#ff8a9b}
-.eco-card.compute,.layerhead.compute{background:#063216;border-color:#4cd964;color:#b8ffc6}
-.eco-card.ai,.layerhead.ai{background:#1a0c38;border-color:#8b5cf6;color:#d4c4ff}
-.eco-card.bodies,.layerhead.bodies{background:#3a2c04;border-color:#ffc400;color:#ffe28a}
+.eco-card.tesla,.layerhead.tesla{background:#3a0812;border-color:#e31937;color:#ff8a9b}
+.eco-card.energy,.layerhead.energy{background:#063216;border-color:#4cd964;color:#b8ffc6}
+.eco-card.spacex,.layerhead.spacex{background:#3a1400;border-color:#ff7a00;color:#ffc48a}
 .eco-card.link,.layerhead.link{background:#043040;border-color:#00d1ff;color:#a6f4ff}
-.eco-card.mars,.layerhead.mars{background:#3a1400;border-color:#ff7a00;color:#ffc48a}
+.eco-card.spacexsi,.layerhead.spacexsi{background:#3a2c04;border-color:#ffc400;color:#ffe28a}
 .eco-card.neural,.layerhead.neural,.eco-co.neural{background:#3a0824;border-color:#ff2d95;color:#ffb3d6}
 .eco-card.boring,.layerhead.boring,.eco-co.boring{background:#0c1840;border-color:#2f6bff;color:#b3c8ff}
 .hubhead+.eco-h{margin-top:2px}
 .layerintro p{margin:0 0 10px;line-height:1.5;color:var(--muted)}
+.visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
 .eco-stats{display:grid;grid-template-columns:1fr;gap:8px;margin:0 0 16px}
 .eco-stat{display:block;text-decoration:none;color:inherit;background:#12161e;border:1px solid #3a4a60;border-radius:14px;padding:10px 12px}
 .eco-stat b{display:block;font-size:1.25rem;letter-spacing:-.02em}
@@ -1571,8 +1571,10 @@ def page(lang, path, title, description, body, og_type="website", extra_head="",
         f'<a href="{url(lang, path)}">{esc(name)}</a>'
         for name, path in (
             (L["nav_eco"], ecosystem_path(lang)),
-            ("Starship", "starship/"),
-            ("Neuralink", "neuralink/"),
+            ("FSD", "fsd/"),
+            ("Robotaxi", "robotaxi/"),
+            ("Optimus", "optimus/"),
+            ("Starship" if lang == "en" else "Starship-tracker", "starship/"),
             ("AGI-race", "agi/"),
         )) + "".join(f'<a href="{url(lang, "category/" + k + "/")}">{c[lang]}</a>' for k, c in CATEGORIES.items() if c["menu"])
     fmods = "".join(f'<a href="{url(lang, "model/" + k + "/")}">{MODELS[k]["name"]}</a>' for k in MODEL_ROOTS)
@@ -1660,17 +1662,7 @@ def drawer(lang, active=None, model=None):
     out = (f'<div class="dh"><button class="burger" type="button" aria-label="{L["menu"]}"><span></span><span></span><span></span></button>'
            f'<a class="logo" href="{url(lang)}">Trending<span>Tesla</span></a></div>'
            f'<button class="di dclose" type="button">‹ {L["collapse"]}</button>'
-           f'<div class="dpri">{drawer_links(lang, active)}</div><hr class="dsep">'
-           f'<div class="mobonly"><div class="dtopics">')
-    out += "".join(f'<a class="{"on" if path == f"category/{active}/" else ""}" href="{url(lang, path)}">{esc(name)}</a>'
-                   for name, path in more_category_rows(lang))
-    out += '</div><hr class="dsep"></div>'
-    L = LANGS[lang]
-    pages = [(L["about"], "about/"), (L["editorial"], "editorial/"), (L["privacy"], "privacy/"),
-             (L["signup"], signup_path(lang)),
-             ("Contact", "contact/"), ("Terms" if lang == "en" else "Voorwaarden", "terms/")]
-    out += '<div class="dpri">' + "".join(
-        f'<a class="di" href="{url(lang, path)}">{esc(name)}</a>' for name, path in pages) + '</div>'
+           f'<div class="dpri">{drawer_links(lang, active)}</div>')
     show = cur == "models" or model in MODELS
     out += f'<div class="dmodels{" show" if show else ""}">' + modelnav(lang, model if model in MODELS else None) + '</div>'
     return out
@@ -2792,41 +2784,32 @@ def consent_bar(lang):
 
 
 def nav_current(active):
-    if active in ("tesla", "models", "fsd", "optimus", "tesla-energy", "cars-robots"):
+    if active in ("tesla", "models", "fsd", "optimus", "cars-robots"):
         return "tesla"
+    if active in ("tesla-energy", "energy"):
+        return "tesla-energy"
     if active in ("spacex", "starship", "starship-falcon"):
         return "spacex"
     if active == "starlink":
         return "starlink"
     if active in ("spacexsi", "xai", "compute"):
         return "spacexsi"
-    if active in ("neuralink", "robotaxi", "agi", "ecosystem"):
-        return active
-    if active in ("videos", "shorts") or active in CATEGORIES or active in ("boring", "energy", "guides"):
-        return "more"
+    if active == "neuralink":
+        return "neuralink"
+    if active == "boring":
+        return "boring"
     return ""
 
 
 def _nav_rows(lang):
-    L = LANGS[lang]
     return [
-        ("ecosystem", ecosystem_path(lang), L["nav_eco"], ()),
-        ("tesla", "tesla/", L["nav_tesla"], [
-            (L["nav_tesla"], "tesla/"),
-            ("FSD", "fsd/"),
-            ("Optimus", "optimus/"),
-            (L["nav_models"], "category/models/"),
-        ]),
-        ("spacex", "spacex/", "SpaceX", [
-            ("SpaceX", "spacex/"),
-            ("Starship", "starship/"),
-        ]),
-        ("starlink", "starlink/", "Starlink", ()),
-        ("spacexsi", "spacexsi/", "SpaceXSI/Grok", ()),
-        ("neuralink", "neuralink/", "Neuralink", ()),
-        ("robotaxi", "robotaxi/", "Robotaxi", ()),
-        ("agi", "agi/", "AGI-race", ()),
-        ("more", "archive/", L["nav_more"], ()),
+        ("tesla", "tesla/", "Tesla"),
+        ("tesla-energy", "tesla-energy/", "Tesla Energy"),
+        ("spacex", "spacex/", "SpaceX"),
+        ("starlink", "starlink/", "Starlink"),
+        ("spacexsi", "spacexsi/", "SpaceXSI"),
+        ("neuralink", "neuralink/", "Neuralink"),
+        ("boring", "boring/", "Boring"),
     ]
 
 
@@ -2859,41 +2842,14 @@ def more_links(lang):
 def primary_nav(lang, active=None):
     cur = nav_current(active)
     parts = []
-    for key, href, label, kids in _nav_rows(lang):
-        if key == "more":
-            on = " on" if cur == "more" else ""
-            parts.append(
-                f'<div class="mdrop"><button type="button" class="pn{on}" id="more-btn" aria-expanded="false" aria-haspopup="true" aria-controls="more-menu">{esc(label)}{CHEV_SVG}</button>'
-                f'<div class="pmenu" id="more-menu" role="menu" hidden>{more_links(lang)}</div></div>')
-            continue
+    for key, href, label in _nav_rows(lang):
         on = " on" if cur == key else ""
-        link = f'<a class="pn{on}" href="{url(lang, href)}">{esc(label)}</a>'
-        if kids:
-            menu = "".join(f'<a href="{url(lang, path)}">{esc(name)}</a>' for name, path in kids)
-            parts.append(f'<div class="pdrop{on}">{link}<div class="pmenu">{menu}</div></div>')
-        else:
-            parts.append(link)
+        parts.append(f'<a class="pn{on}" href="{url(lang, href)}">{esc(label)}</a>')
     return f'<nav class="pnav" aria-label="{esc(LANGS[lang]["menu"])}">{"".join(parts)}</nav>'
 
 
 def drawer_links(lang, active):
-    L = LANGS[lang]
-    rows = [
-        ("ecosystem", ecosystem_path(lang), L["nav_eco"]),
-        ("tesla", "tesla/", L["nav_tesla"]),
-        ("models", "category/models/", L["nav_models"]),
-        ("fsd", "fsd/", "FSD"),
-        ("optimus", "optimus/", "Optimus"),
-        ("spacex", "spacex/", "SpaceX"),
-        ("starship", "starship/", "Starship"),
-        ("starlink", "starlink/", "Starlink"),
-        ("spacexsi", "spacexsi/", "SpaceXSI/Grok"),
-        ("neuralink", "neuralink/", "Neuralink"),
-        ("robotaxi", "robotaxi/", "Robotaxi"),
-        ("boring", "boring/", CATEGORIES["boring"][lang]),
-        ("agi", "agi/", "AGI-race"),
-        ("videos", "shorts/", L["videos"]),
-    ]
+    rows = _nav_rows(lang)
     out = []
     for key, href, label in rows:
         on = " on" if active == key else ""
@@ -3822,7 +3778,7 @@ def _orbit_box(block, lang, style):
 
 
 def _orbit_blocks(blocks, lang):
-    """Eight boxes on an arc around a circle that is mostly off the left edge."""
+    """Boxes on an arc around a circle that is mostly off the left edge."""
     n = len(blocks)
     # Desktop design box 820×710. Sun center is off the left; this arc shares that idea.
     desktop = _arc_points(n, cx=15, cy=350, radius=385, y0=50, y1=650)
@@ -3869,73 +3825,17 @@ def _stat_card(block, lang, self_path=""):
 # One landing page per map box. Paths that already exist as hubs are upgraded in place.
 LAYERS = [
     {
-        "key": "tesla-energy", "path": "tesla-energy/", "tone": "energy", "nav": "tesla-energy",
-        "kicker": {"en": "1 · Energy", "nl": "1 · Energie"},
-        "title": {"en": "Tesla Energy", "nl": "Tesla Energy"},
-        "stats": [],
-        "articles": {"categories": ["energy"], "keywords": ["megapack", "powerwall", "megafactory", "tesla energy"]},
-        "links": [
-            {"en": "Tesla", "nl": "Tesla", "href": "tesla/"},
-            {"en": "Energy", "nl": "Energie", "href": "category/energy/"},
-        ],
-        "intro": {
-            "en": [
-                "Tesla Energy stores electricity for the cars, the factories and the AI datacenters. Megapacks and the other grid products belong to Tesla, which stays a separate public company. The power kept here is what lets the compute layer run.",
-                "On the ecosystem map this is the first layer: energy feeds compute. This page follows the reporting already tagged as energy.",
-            ],
-            "nl": [
-                "Tesla Energy slaat stroom op voor de auto's, de fabrieken en de AI-datacenters. Megapacks en de andere netproducten horen bij Tesla, dat een zelfstandig beursgenoteerd bedrijf blijft. De stroom die hier wordt bewaard, laat de rekenlaag draaien.",
-                "Op de kaart van het ecosysteem is dit de eerste laag: energie voedt rekenkracht. Deze pagina volgt de berichtgeving die al als energie is getagd.",
-            ],
+        "key": "tesla", "path": "tesla/", "tone": "tesla", "nav": "tesla",
+        "kicker": {"en": "1 · Tesla", "nl": "1 · Tesla"},
+        "title": {"en": "Tesla", "nl": "Tesla"},
+        "fact": {
+            "en": "Cars, Semi Truck, Robotaxi, FSD, Optimus",
+            "nl": "Auto's, Semi-truck, Robotaxi, FSD, Optimus",
         },
-    },
-    {
-        "key": "compute", "path": "compute/", "tone": "compute", "nav": "compute",
-        "kicker": {"en": "2 · Compute", "nl": "2 · Rekenkracht"},
-        "title": {"en": "SpaceXSI clusters", "nl": "SpaceXSI-clusters"},
-        "stats": ["compute"],
-        "articles": {"categories": [], "keywords": ["colossus", "terafab"]},
-        "links": [
-            {"en": "Grok, Cursor and X", "nl": "Grok, Cursor en X", "href": "spacexsi/"},
-        ],
-        "intro": {
-            "en": [
-                "The SpaceXSI clusters are the chips and the halls that train the models and keep them running. This is the compute layer between energy and the models: power comes in, and trained systems go on to Grok, Cursor and X. Terafab is a plan for a chip plant, not a factory that is already shipping.",
-                "The figures below are only the ones a filing states. The models themselves are on the Grok, Cursor and X page.",
-            ],
-            "nl": [
-                "De clusters van SpaceXSI zijn de chips en de hallen die de modellen trainen en laten draaien. Dit is de rekenlaag tussen energie en de modellen: stroom komt binnen, en getrainde systemen gaan door naar Grok, Cursor en X. Terafab is een plan voor een chipfabriek, geen fabriek die al levert.",
-                "De cijfers hieronder staan er alleen als een filing ze noemt. De modellen zelf staan op de pagina van Grok, Cursor en X.",
-            ],
-        },
-    },
-    {
-        "key": "spacexsi", "path": "spacexsi/", "tone": "ai", "nav": "spacexsi", "hub": "spacexsi",
-        "kicker": {"en": "3 · Superintelligence", "nl": "3 · Superintelligentie"},
-        "title": {"en": "Grok, Cursor and X", "nl": "Grok, Cursor en X"},
-        "stats": [],
-        "links": [
-            {"en": "SpaceXSI clusters", "nl": "SpaceXSI-clusters", "href": "compute/"},
-        ],
-        "intro": {
-            "en": [
-                "Grok, Cursor and X are the models, the tools and the live network on top of the clusters. Grok is the model, Cursor is the coding tool, and X is the public network the models can read. They sit in the SpaceXSI part of the ecosystem and are fed by the compute layer.",
-                "This page collects the reporting on those products. The clusters have their own page.",
-            ],
-            "nl": [
-                "Grok, Cursor en X zijn de modellen, de hulpmiddelen en het live netwerk boven op de clusters. Grok is het model, Cursor is het programmeergereedschap, en X is het openbare netwerk dat de modellen kunnen lezen. Ze horen bij het SpaceXSI-deel van het ecosysteem en worden gevoed door de rekenlaag.",
-                "Deze pagina verzamelt de berichtgeving over die producten. De clusters hebben een eigen pagina.",
-            ],
-        },
-    },
-    {
-        "key": "cars-robots", "path": "cars-robots/", "tone": "bodies", "nav": "cars-robots",
-        "kicker": {"en": "4 · Cars and robots", "nl": "4 · Auto's en robots"},
-        "title": {"en": "FSD, Robotaxi, Optimus", "nl": "FSD, Robotaxi, Optimus"},
         "stats": ["deliveries"],
         "articles": {
-            "categories": ["fsd", "robotaxi", "optimus"],
-            "keywords": ["fsd", "full self-driving", "full self driving", "robotaxi", "cybercab", "optimus"],
+            "categories": ["models", "fsd", "robotaxi", "optimus"],
+            "keywords": ["semi", "cybercab", "fsd", "full self-driving", "full self driving", "robotaxi", "optimus"],
         },
         "links": [
             {"en": "FSD", "nl": "FSD", "href": "fsd/"},
@@ -3944,91 +3844,144 @@ LAYERS = [
         ],
         "intro": {
             "en": [
-                "FSD, Robotaxi and Optimus carry the AI out of the data centre and into the road and the factory. FSD is supervised assistance in Tesla cars. Robotaxi and Cybercab are the ride service and the purpose-built car. Optimus is the humanoid robot.",
-                "Together they are the cars-and-robots layer on the map. Each of the three has its own page, linked below.",
+                "Tesla is the cars layer of the ecosystem: the passenger cars, the Semi truck, Robotaxi, supervised FSD and the Optimus robot. The cars and the Semi move people and freight. FSD is the supervised assistance in those vehicles, and Robotaxi is the ride service built on it. Optimus is the humanoid robot for factory work.",
+                "FSD, Robotaxi and Optimus each have their own page below.",
             ],
             "nl": [
-                "FSD, Robotaxi en Optimus brengen de AI uit het datacenter naar de weg en de fabriek. FSD is begeleide rijhulp in Tesla-auto's. Robotaxi en Cybercab zijn de ritdienst en de auto die ervoor is gebouwd. Optimus is de humanoïde robot.",
-                "Samen zijn ze de laag van auto's en robots op de kaart. Elk van de drie heeft een eigen pagina, hieronder gelinkt.",
+                "Tesla is de autolaag van het ecosysteem: de personenauto's, de Semi-truck, Robotaxi, begeleide FSD en de robot Optimus. De auto's en de Semi vervoeren mensen en vracht. FSD is de begeleide rijhulp in die voertuigen, en Robotaxi is de ritdienst die daarop steunt. Optimus is de humanoïde robot voor werk in de fabriek.",
+                "FSD, Robotaxi en Optimus hebben hieronder elk een eigen pagina.",
+            ],
+        },
+    },
+    {
+        "key": "tesla-energy", "path": "tesla-energy/", "tone": "energy", "nav": "tesla-energy",
+        "kicker": {"en": "2 · Tesla Energy", "nl": "2 · Tesla Energy"},
+        "title": {"en": "Tesla Energy", "nl": "Tesla Energy"},
+        "fact": {
+            "en": "Megapacks, Charging Network, Home charging stations, Solar",
+            "nl": "Megapacks, laadnetwerk, thuisladers, zonne-energie",
+        },
+        "stats": [],
+        "articles": {
+            "categories": ["energy", "charging"],
+            "keywords": ["megapack", "powerwall", "megafactory", "solar", "supercharger"],
+        },
+        "links": [
+            {"en": "Tesla", "nl": "Tesla", "href": "tesla/"},
+        ],
+        "intro": {
+            "en": [
+                "Tesla Energy is the power layer: Megapacks for the grid, the charging network, home charging and solar. Megapacks store electricity for utilities, factories and data centres. The charging network and the home chargers put that power into the cars. Solar is the generation side of the same business.",
+                "The layer sits under Tesla and feeds the rest of the ecosystem.",
+            ],
+            "nl": [
+                "Tesla Energy is de stroomlaag: Megapacks voor het net, het laadnetwerk, thuisladers en zonne-energie. Megapacks slaan stroom op voor netbeheerders, fabrieken en datacenters. Het laadnetwerk en de thuisladers brengen die stroom naar de auto's. Zonne-energie is de opwekking in hetzelfde bedrijf.",
+                "De laag hoort bij Tesla en voedt de rest van het ecosysteem.",
+            ],
+        },
+    },
+    {
+        "key": "spacex", "path": "spacex/", "tone": "spacex", "nav": "spacex", "hub": "spacex",
+        "kicker": {"en": "3 · SpaceX", "nl": "3 · SpaceX"},
+        "title": {"en": "SpaceX", "nl": "SpaceX"},
+        "fact": {"en": "Starship, Falcons", "nl": "Starship, Falcons"},
+        "stats": ["flight15"],
+        "links": [
+            {"en": "Starship tracker", "nl": "Starship-tracker", "href": "starship/"},
+        ],
+        "intro": {
+            "en": [
+                "SpaceX is the rocket layer: Starship and the Falcon family. Falcon flies the launches of today. Starship is the larger vehicle, still learning to reach orbit and to be caught. Mars stays the long-term aim rather than a scheduled date.",
+                "The flight-by-flight record is the Starship tracker, linked below.",
+            ],
+            "nl": [
+                "SpaceX is de raketlaag: Starship en de Falcon-familie. Falcon vliegt de lanceringen van nu. Starship is het grotere voertuig, dat nog leert een baan te halen en gevangen te worden. Mars blijft het doel op termijn en geen ingeplande datum.",
+                "Het vlucht-voor-vluchtverslag is de Starship-tracker, hieronder gelinkt.",
             ],
         },
     },
     {
         "key": "starlink", "path": "starlink/", "tone": "link", "nav": "starlink", "hub": "starlink",
-        "kicker": {"en": "5 · Connection", "nl": "5 · Verbinding"},
+        "kicker": {"en": "4 · Starlink", "nl": "4 · Starlink"},
         "title": {"en": "Starlink", "nl": "Starlink"},
+        "fact": {"en": "Satellite network", "nl": "Satellietnetwerk"},
         "stats": ["starlink"],
         "links": [
             {"en": "SpaceX", "nl": "SpaceX", "href": "spacex/"},
         ],
         "intro": {
             "en": [
-                "Starlink is the satellite-internet layer. Dishes on the ground talk to a constellation that reaches places cables do not. The same network is part of the long-term plan for the way to Mars, which is why it sits between the cars and the rockets on the map.",
-                "This page follows the consumer and business service. Starshield is mentioned only when a public record exists.",
+                "Starlink is the satellite network. Dishes on the ground talk to satellites that reach places cables do not. The service is for homes and for businesses. The same network is the connection layer of the ecosystem, between the cars and the rockets on the map.",
+                "Starshield is mentioned only when a public record exists.",
             ],
             "nl": [
-                "Starlink is de laag van satellietinternet. Schotels op de grond praten met een constellatie die plaatsen bereikt waar geen kabel ligt. Hetzelfde netwerk hoort bij het plan op lange termijn voor de weg naar Mars, en daarom staat het op de kaart tussen de auto's en de raketten.",
-                "Deze pagina volgt de dienst voor consumenten en bedrijven. Starshield komt alleen aan bod als er een openbaar stuk over bestaat.",
+                "Starlink is het satellietnetwerk. Schotels op de grond praten met satellieten die plaatsen bereiken waar geen kabel ligt. De dienst is er voor thuis en voor bedrijven. Hetzelfde netwerk is de verbindingslaag van het ecosysteem, op de kaart tussen de auto's en de raketten.",
+                "Starshield komt alleen aan bod als er een openbaar stuk over bestaat.",
             ],
         },
     },
     {
-        "key": "starship-falcon", "path": "starship-falcon/", "tone": "mars", "nav": "starship-falcon",
-        "kicker": {"en": "6 · Space and Mars", "nl": "6 · Ruimte en Mars"},
-        "title": {"en": "Starship and Falcon", "nl": "Starship en Falcon"},
-        "stats": ["flight15"],
-        "articles": {"categories": [], "keywords": ["starship", "falcon", "super heavy"]},
-        "links": [
-            {"en": "Starship tracker", "nl": "Starship-tracker", "href": "starship/"},
-            {"en": "SpaceX", "nl": "SpaceX", "href": "spacex/"},
-        ],
+        "key": "spacexsi", "path": "spacexsi/", "tone": "spacexsi", "nav": "spacexsi",
+        "kicker": {"en": "5 · SpaceXSI", "nl": "5 · SpaceXSI"},
+        "title": {"en": "SpaceXSI", "nl": "SpaceXSI"},
+        "fact": {
+            "en": "AI, Compute, Datacenters, Chips",
+            "nl": "AI, rekenkracht, datacenters, chips",
+        },
+        "stats": ["compute"],
+        "articles": {
+            "categories": ["xai"],
+            "keywords": ["xai", "grok", "spacexsi", "spacexai", "colossus", "terafab", "dojo"],
+        },
+        "links": [],
         "intro": {
             "en": [
-                "Starship and Falcon are the rockets. Falcon flies the launches of today. Starship is the larger vehicle, still learning to reach orbit and to be caught, and Mars stays the long-term aim rather than a scheduled date.",
-                "This is the layer where the ecosystem leaves Earth. The flight-by-flight record is the Starship tracker, and the company page is SpaceX.",
+                "SpaceXSI is the AI layer: the models, the compute, the datacenters and the chips. Grok is the model, Cursor is the coding tool, and X is the live network they can read. The clusters and datacenters train those models and keep them running. The chips, including the planned Terafab plant, are how that compute gets built.",
+                "This page brings the reporting on all of those parts together.",
             ],
             "nl": [
-                "Starship en Falcon zijn de raketten. Falcon vliegt de lanceringen van nu. Starship is het grotere voertuig, dat nog leert een baan te halen en gevangen te worden, en Mars blijft het doel op termijn en geen ingeplande datum.",
-                "Dit is de laag waar het ecosysteem de aarde verlaat. Het vlucht-voor-vluchtverslag is de Starship-tracker, en de bedrijfspagina is SpaceX.",
+                "SpaceXSI is de AI-laag: de modellen, de rekenkracht, de datacenters en de chips. Grok is het model, Cursor is het programmeergereedschap, en X is het live netwerk dat ze kunnen lezen. De clusters en datacenters trainen die modellen en laten ze draaien. De chips, inclusief de geplande fabriek Terafab, zijn hoe die rekenkracht wordt gebouwd.",
+                "Deze pagina brengt de berichtgeving over al die delen samen.",
             ],
         },
     },
     {
         "key": "neuralink", "path": "neuralink/", "tone": "neural", "nav": "neuralink", "hub": "neuralink",
-        "kicker": {"en": "Human–AI bridge", "nl": "Brug mens–AI"},
+        "kicker": {"en": "6 · Neuralink", "nl": "6 · Neuralink"},
         "title": {"en": "Neuralink", "nl": "Neuralink"},
+        "fact": {"en": "Brain-computer interfaces", "nl": "Brein-computerinterfaces"},
         "stats": ["neuralink"],
         "links": [],
         "intro": {
             "en": [
-                "Neuralink is a bridge from a person to a computer. The work is an implant that can move a cursor, plus studies aimed at speech and at sight. It sits beside the main stack, as its own company, rather than inside energy or the rockets.",
+                "Neuralink builds brain-computer interfaces. An implant can move a cursor, and studies aim at speech and at sight. It is its own company, beside the main stack rather than inside the cars or the rockets.",
                 "Articles will show up here as they are published. Nothing is written in ahead of that.",
             ],
             "nl": [
-                "Neuralink is een brug van een mens naar een computer. Het werk is een implantaat dat een cursor kan bewegen, plus studies gericht op spraak en op zicht. Het staat naast de hoofdstapel, als eigen bedrijf, en niet in de energielaag of bij de raketten.",
+                "Neuralink bouwt brein-computerinterfaces. Een implantaat kan een cursor bewegen, en studies richten zich op spraak en op zicht. Het is een eigen bedrijf, naast de hoofdstapel en niet in de auto's of de raketten.",
                 "Artikelen verschijnen hier zodra ze zijn gepubliceerd. Er wordt niets vooraf ingevuld.",
             ],
         },
     },
     {
         "key": "boring", "path": "boring/", "tone": "boring", "nav": "boring", "hub": "boring",
-        "kicker": {"en": "Tunnels", "nl": "Tunnels"},
+        "kicker": {"en": "7 · The Boring Company", "nl": "7 · The Boring Company"},
         "title": {"en": "The Boring Company", "nl": "The Boring Company"},
+        "fact": {"en": "Car tunnels", "nl": "Autotunnels"},
         "stats": [],
         "links": [],
         "intro": {
             "en": [
-                "The Boring Company digs tunnels and runs Loop transit, often with Tesla vehicles. It is a separate company, drawn next to the main stack on the map. The public projects include Vegas, Nashville, Dubai and the tunnel at Gigafactory Texas.",
-                "Passenger figures appear on this page only when the company or a local authority publishes them.",
+                "The Boring Company digs car tunnels and runs Loop transit through them, often with Tesla vehicles. It is a separate company, next to the main stack on the map. The public projects include Vegas, Nashville, Dubai and the tunnel at Gigafactory Texas.",
+                "Passenger figures appear here only when the company or a local authority publishes them.",
             ],
             "nl": [
-                "The Boring Company graaft tunnels en rijdt Loop-vervoer, vaak met Tesla-voertuigen. Het is een apart bedrijf, naast de hoofdstapel op de kaart getekend. De openbare projecten zijn Vegas, Nashville, Dubai en de tunnel bij Gigafactory Texas.",
-                "Reizigerscijfers staan op deze pagina alleen als het bedrijf of een lokale overheid ze publiceert.",
+                "The Boring Company graaft autotunnels en laat er Loop-vervoer door rijden, vaak met Tesla-voertuigen. Het is een apart bedrijf, naast de hoofdstapel op de kaart. De openbare projecten zijn Vegas, Nashville, Dubai en de tunnel bij Gigafactory Texas.",
+                "Reizigerscijfers staan hier alleen als het bedrijf of een lokale overheid ze publiceert.",
             ],
         },
     },
 ]
-
 
 def _layer_articles(layer, arts):
     if layer.get("hub"):
@@ -4089,8 +4042,12 @@ def ecosystem_page(lang):
     L = LANGS[lang]
     title = L["nav_eco"]
     intro = _bi(data["intro"], lang)
-    nav, ld = crumbs(lang, [(title, ecosystem_path(lang))])
-    orbit = _orbit_blocks(list(data["layers"]) + list(data["branches"]), lang)
+    _nav, ld = crumbs(lang, [(title, ecosystem_path(lang))])
+    orbit = _orbit_blocks([
+        {"tone": layer["tone"], "href": layer["path"], "kicker": layer["kicker"],
+         "title": layer["title"], "fact": layer["fact"]}
+        for layer in LAYERS
+    ], lang)
     streams = "".join(_eco_piece(b, lang, "stream") for b in data["streams"])
     companies = "".join(_eco_piece(b, lang, "company") for b in data["companies"])
     calls = "".join(_eco_piece(b, lang, "callout") for b in data["callouts"])
@@ -4110,9 +4067,7 @@ def ecosystem_page(lang):
         "nl": ("De lagen", "Wat erdoorheen gaat", "De bedrijven", "Plannen en beloftes", "Bronnen"),
     }[lang]
     body = (
-        f'{nav}<header class="hubhead"><h1>{esc(title)}</h1>'
-        f'<p class="byline">{esc(L["byline"])}</p></header>'
-        f'<h2 class="eco-h">{esc(heads[0])}</h2>'
+        f'<h1 class="visually-hidden">{esc(title)}</h1>'
         f'{orbit}'
         f'<h2 class="eco-h">{esc(heads[1])}</h2><div class="eco-split">{streams}</div>'
         f'<h2 class="eco-h">{esc(heads[2])}</h2><div class="eco-cos">{companies}</div>'

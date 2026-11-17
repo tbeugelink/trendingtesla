@@ -240,8 +240,19 @@ def main():
             return
     if "#Shorts" in title and "#Shorts" not in desc:
         desc += "\n\n#Shorts #Tesla"
+    if len(title) > 100:
+        raise SystemExit(f"::error::YouTube title is {len(title)} characters (max 100). Titles are not cut off.")
+    short = mp4.name.endswith("-short.mp4")
+    if short or mp4.name.endswith("-full.mp4"):
+        sys.path.insert(0, str(ROOT / "tools"))
+        import check_article
+        kind = "short" if short else "long"
+        try:
+            title = check_article.youtube_line(title, kind)
+        except ValueError as e:
+            raise SystemExit(f"::error::YouTube title rejected: {e}") from e
     body = {
-        "snippet": {"title": title[:100], "description": desc[:4900], "tags": tags[:15], "categoryId": "2",
+        "snippet": {"title": title, "description": desc[:4900], "tags": tags[:15], "categoryId": "2",
                     "defaultLanguage": lang, "defaultAudioLanguage": lang},
         "status": {"privacyStatus": os.environ.get("YT_PRIVACY") or "private",
                    "selfDeclaredMadeForKids": False, "containsSyntheticMedia": True},

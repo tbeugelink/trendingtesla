@@ -106,8 +106,8 @@
       "kicker": {"en": "5 · Connection", "nl": "5 · Verbinding"},
       "title": {"en": "Starlink", "nl": "Starlink"},
       "fact": {
-        "en": "13.6 million consumer subscribers on 30 September. More than 11,100 satellites.",
-        "nl": "13,6 miljoen consumentenabonnees op 30 september. Meer dan 11.100 satellieten."
+        "en": "13.6 million subscribers. More than 11,100 satellites.",
+        "nl": "13,6 miljoen abonnees. Ruim 11.100 satellieten."
       },
       "sources": [
         {"title": "SpaceX 10-Q", "url": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026066880/R10.htm"},
@@ -153,8 +153,8 @@
       "kicker": {"en": "Tunnels", "nl": "Tunnels"},
       "title": {"en": "The Boring Company", "nl": "The Boring Company"},
       "fact": {
-        "en": "Vegas Loop: more than 4 million passengers and 14 stations. Approval for 68 miles and 123 stations.",
-        "nl": "Vegas Loop: meer dan 4 miljoen passagiers en 14 stations. Goedkeuring voor 68 mijl en 123 stations."
+        "en": "Vegas Loop: over 4 million passengers and 14 stations.",
+        "nl": "Vegas Loop: ruim 4 miljoen passagiers en 14 stations."
       },
       "sources": [
         {"title": "The Boring Company", "url": "https://boringcompany.com/tunnels"}

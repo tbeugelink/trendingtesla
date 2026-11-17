@@ -1085,11 +1085,11 @@ header.hb .pnav>.is-parked{display:none}
 .eco-arc{position:absolute;inset:0;z-index:2;margin:0}
 .eco-node{position:absolute;left:var(--dl);top:var(--dt);width:33%;transform:translateY(-50%);margin:0;padding:4px 8px 3px}
 .eco-node .eco-k{display:block;font-size:.56rem;line-height:1.1;margin:0;letter-spacing:.06em}
-.eco-node strong{display:block;color:#fff;font-size:.8rem;line-height:1.15;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.eco-node .eco-chiprow{margin-top:1px;white-space:nowrap;overflow:hidden}
-.eco-node .eco-cardlink p{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;font-size:.68rem;line-height:1.2;margin:1px 0 0;max-height:3.6em}
+.eco-node strong{display:block;color:#fff;font-size:.8rem;line-height:1.15}
+.eco-node .eco-chiprow{display:flex;flex-wrap:wrap;gap:3px;margin-top:3px}
+.eco-node .eco-cardlink p{font-size:.68rem;line-height:1.25;margin:1px 0 0}
 .eco-node .eco-links{margin-top:3px;gap:4px}
-.eco-node .eco-links a,.eco-node .eco-src{font-size:.58rem;padding:0 5px;margin:3px 3px 0 0;line-height:1.55}
+.eco-node .eco-links a,.eco-node .eco-src{font-size:.58rem;padding:0 5px;margin:0;line-height:1.55;white-space:nowrap}
 .eco-node::before{content:"";position:absolute;z-index:-1;top:50%;right:100%;width:28px;border-top:1px solid rgba(170,230,255,.65)}
 @media (max-width:899.98px){
 .eco-orbit{height:980px}
@@ -3686,18 +3686,35 @@ def hub_articles(spec, arts):
     return out
 
 
+def _compact_src(title):
+    if "," not in title:
+        return title.strip()
+    head, tail = [part.strip() for part in title.split(",", 1)]
+    months = ("january", "february", "march", "april", "may", "june", "july", "august",
+              "september", "october", "november", "december", "januari", "februari",
+              "maart", "mei", "juni", "augustus", "oktober")
+    return head if any(month in tail.lower() for month in months) else tail
+
+
 def _src_links(sources, compact=False):
     parts = []
-    for s in sources or []:
-        title = s["title"]
-        if compact and "," in title:
-            head, tail = [part.strip() for part in title.split(",", 1)]
-            months = ("january", "february", "march", "april", "may", "june", "july", "august",
-                      "september", "october", "november", "december", "januari", "februari",
-                      "maart", "mei", "juni", "augustus", "oktober")
-            title = head if any(month in tail.lower() for month in months) else tail
+    if compact:
+        grouped = []
+        index = {}
+        for s in sources or []:
+            label = _compact_src(s["title"])
+            if label in index:
+                grouped[index[label]]["n"] += 1
+            else:
+                index[label] = len(grouped)
+                grouped.append({"label": label, "url": s["url"], "n": 1})
+        items = grouped
+    else:
+        items = [{"label": s["title"], "url": s["url"], "n": 1} for s in sources or []]
+    for item in items:
+        label = item["label"] + (f" ×{item['n']}" if item["n"] > 1 else "")
         parts.append(
-            f'<a class="eco-src" href="{esc(s["url"])}" rel="noopener noreferrer" target="_blank">{esc(title)}</a>')
+            f'<a class="eco-src" href="{esc(item["url"])}" rel="noopener noreferrer" target="_blank">{esc(label)}</a>')
     if not parts:
         return ""
     if compact:

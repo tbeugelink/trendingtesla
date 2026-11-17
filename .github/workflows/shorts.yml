@@ -23,6 +23,10 @@ on:
         description: "Render this Short as a preview artifact only. Does not upload or edit content/shorts.json."
         required: false
         default: ""
+      motion3d:
+        description: "3D motion Short instead of photos (yes/no). Needs Blender. Does not upload."
+        required: false
+        default: "no"
 
 permissions:
   contents: write
@@ -111,7 +115,7 @@ jobs:
           git commit -qm "Photo: real news photo for ${{ steps.find.outputs.slugs }}"
           for i in 1 2 3; do git pull --rebase -q origin main && git push -q origin HEAD:main && exit 0; sleep 10; done
       - name: Make videos
-        if: steps.find.outputs.slugs != '' && steps.find.outputs.paused != '1'
+        if: steps.find.outputs.slugs != '' && steps.find.outputs.paused != '1' && github.event.inputs.motion3d != 'yes'
         env:
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
           ELEVENLABS_VOICE_ID: ${{ vars.ELEVENLABS_VOICE_ID }}
@@ -136,8 +140,20 @@ jobs:
             done
           done
           exit $fail
+      - name: Make 3D motion Short
+        if: github.event_name == 'workflow_dispatch' && github.event.inputs.motion3d == 'yes' && steps.find.outputs.slugs != ''
+        env:
+          MOTION3D: "1"
+          VIVID: "1"
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          ELEVENLABS_VOICE_ID: ${{ vars.ELEVENLABS_VOICE_ID }}
+          PYTHONUNBUFFERED: "1"
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq blender > /dev/null
+          pip install --quiet pillow edge-tts
+          python3 -u video/motion3d.py ${{ steps.find.outputs.slugs }}
       - name: Upload Shorts to YouTube
-        if: steps.find.outputs.slugs != '' && steps.find.outputs.preview != '1' && steps.find.outputs.full != '1' && (steps.find.outputs.queue != '1' || steps.find.outputs.qstory == '1') && (github.event_name != 'workflow_dispatch' || github.event.inputs.upload == 'yes' || steps.find.outputs.qstory == '1') && steps.find.outputs.paused != '1'
+        if: steps.find.outputs.slugs != '' && steps.find.outputs.preview != '1' && steps.find.outputs.full != '1' && (steps.find.outputs.queue != '1' || steps.find.outputs.qstory == '1') && (github.event_name != 'workflow_dispatch' || github.event.inputs.upload == 'yes' || steps.find.outputs.qstory == '1') && steps.find.outputs.paused != '1' && github.event.inputs.motion3d != 'yes'
         continue-on-error: true
         env:
           YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}

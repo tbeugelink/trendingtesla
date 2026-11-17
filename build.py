@@ -501,6 +501,7 @@ h1,h2,h3{color:#ebebeb;font-weight:800}
 .dmeer-sub{display:flex;flex-direction:column;gap:1px;padding:2px 0 8px 10px}
 .dmeer-sub a{display:block;padding:7px 10px;border-radius:8px;color:var(--muted);text-decoration:none;font-weight:700;font-size:.88rem}
 .dmeer-sub a:hover{background:#272727;color:#fff}
+.dmeer-sub a.on{background:#ebebeb;color:#111}
 .drawer .di:hover{background:var(--surface2);color:var(--head)}
 .drawer .di.on{background:var(--surface2);color:var(--head);font-weight:800}
 .drawer .di img,.drawer .di i{width:56px;aspect-ratio:1200/630;object-fit:cover;border-radius:10px;border:1px solid var(--edge);flex:none;background:var(--surface)}
@@ -718,13 +719,14 @@ article.narrow > h1{margin-left:14px}article.narrow .cform{margin-left:14px}
 @media (min-width:700px){.pnav{display:flex;align-items:center;gap:2px;height:44px;margin:0 0 8px;overflow-x:auto;scrollbar-width:none}.pnav::-webkit-scrollbar{display:none}}
 .pn{display:flex;align-items:center;height:36px;padding:0 10px;border-radius:10px;color:var(--fg);text-decoration:none;font-size:.84rem;font-weight:700;white-space:nowrap}
 .pn:hover{background:#272727;color:#fff}
-.pn.on,.pdrop.on>.pn{background:#ebebeb;color:#111}
+.pn.on,.pdrop.on>.pn,header.hb .mdrop>button.pn.on{background:#ebebeb;color:#111;border-radius:8px}
 .pdrop{position:relative;display:flex;align-items:center}
 .pmenu{display:none;position:absolute;top:calc(100% - 4px);left:0;min-width:210px;z-index:50;background:#161616;border:1px solid #3a4a60;border-radius:10px;padding:6px;box-shadow:0 12px 32px rgba(0,0,0,.55)}
 .pdrop:hover .pmenu,.pdrop:focus-within .pmenu{display:grid}
 .pdrop:last-child .pmenu{left:auto;right:0}
 .pmenu a{padding:8px 12px;border-radius:8px;color:#ebebeb;text-decoration:none;font-size:.86rem;font-weight:700;white-space:nowrap}
 .pmenu a:hover{background:#272727}
+.pmenu a.on,.pmenu a.on:hover{background:#ebebeb;color:#111}
 .crumbs{margin:-2px 0 4px;font-size:.82rem;color:var(--dim)}
 .crumbs ol{display:flex;flex-wrap:wrap;gap:6px 0;list-style:none;padding:0;margin:0}
 .crumbs li{display:flex;align-items:center;gap:6px;min-width:0}
@@ -1092,7 +1094,7 @@ header.hb .pnav>.is-parked{display:none}
 .eco-core{position:absolute;z-index:3;left:calc(var(--cl)*1%);top:50%;transform:translateY(-50%);width:calc(var(--cw)*1%);margin:0;text-align:center;font-weight:800;font-size:1.05rem;line-height:1.12;letter-spacing:-.03em;color:#fff;text-shadow:0 0 8px #d8fbff, 0 0 18px #00c2ea;pointer-events:none}
 .eco-rays{position:absolute;inset:0;z-index:1;width:100%;height:100%;pointer-events:none;display:none}
 .eco-arc{position:absolute;inset:0;z-index:2;margin:0}
-.eco-node{position:absolute;left:var(--bx);top:var(--by);width:150px;transform:translateY(-50%);margin:0;padding:6px 8px 5px}
+.eco-node{position:absolute;left:var(--bx);top:var(--by);width:170px;transform:translateY(-50%);margin:0;padding:6px 8px 5px;border-radius:8px}
 .eco-node .eco-k{display:block;font-size:.92rem;font-weight:800;line-height:1.15;margin:0;letter-spacing:.04em}
 .eco-node ul{margin:4px 0 0;padding:0 0 0 1.05em}
 .eco-node li{font-size:.68rem;line-height:1.22}
@@ -1104,8 +1106,8 @@ a.eco-node.link:hover,a.eco-node.link:focus-visible,a.eco-node.boring:hover,a.ec
 .eco-node li{font-size:.62rem;line-height:1.2}
 .eco-core{font-size:.84rem}
 }
+@media (min-width:1100px){header.hb .id{gap:55px}}
 @media (min-width:900px){
-header.hb .id{gap:10px}
 header.hb .pn,header.hb .mdrop>button.pn{font-size:14px;padding:6px 8px}
 }
 """
@@ -2814,49 +2816,61 @@ def _nav_rows(lang):
     ]
 
 
-def more_category_rows(lang):
-    """Category hubs that live in the More menu."""
-    return [(CATEGORIES[k][lang], f"category/{k}/")
-            for k, c in CATEGORIES.items() if c.get("menu") and k not in PRIMARY_CATS]
-
-
-def more_links(lang):
-    """Items that are not one of the seven layer buttons."""
+def more_rows(lang):
+    """Pages that live under Meer / More, with the key page() passes as active."""
     L = LANGS[lang]
     rows = [
-        (L["nav_eco"], ecosystem_path(lang)),
-        ("Starship tracker" if lang == "en" else "Starship-tracker", "starship/"),
-        ("FSD", "fsd/"),
-        ("Robotaxi", "robotaxi/"),
-        ("Optimus", "optimus/"),
-        ("AGI-race", "agi/"),
-        (L["nav_models"], "category/models/"),
-        (L["videos"], "shorts/"),
+        ("ecosystem", ecosystem_path(lang), L["nav_eco"]),
+        ("starship", "starship/", "Starship tracker" if lang == "en" else "Starship-tracker"),
+        ("fsd", "fsd/", "FSD"),
+        ("robotaxi", "robotaxi/", "Robotaxi"),
+        ("optimus", "optimus/", "Optimus"),
+        ("agi", "agi/", "AGI-race"),
+        ("models", "category/models/", L["nav_models"]),
+        ("videos", "shorts/", L["videos"]),
     ]
-    rows += more_category_rows(lang)
+    rows += [(k, f"category/{k}/", c[lang])
+             for k, c in CATEGORIES.items() if c.get("menu") and k not in PRIMARY_CATS]
     rows += [
-        (L["archive"], "archive/"),
-        (L["about"], "about/"),
-        (L["editorial"], "editorial/"),
-        (L["privacy"], "privacy/"),
-        (L["signup"], signup_path(lang)),
-        ("Contact", "contact/"),
-        ("Terms" if lang == "en" else "Voorwaarden", "terms/"),
+        ("archive", "archive/", L["archive"]),
+        ("about", "about/", L["about"]),
+        ("editorial", "editorial/", L["editorial"]),
+        ("privacy", "privacy/", L["privacy"]),
+        ("signup", signup_path(lang), L["signup"]),
+        ("contact", "contact/", "Contact"),
+        ("terms", "terms/", "Terms" if lang == "en" else "Voorwaarden"),
     ]
-    return "".join(f'<a role="menuitem" href="{url(lang, path)}">{esc(name)}</a>' for name, path in rows)
+    return rows
+
+
+def more_links(lang, active=None):
+    parts = []
+    for key, path, name in more_rows(lang):
+        cls = ' class="on"' if active == key else ""
+        parts.append(f'<a{cls} role="menuitem" href="{url(lang, path)}">{esc(name)}</a>')
+    return "".join(parts)
+
+
+def _more_current(active, lang):
+    for key, _path, name in more_rows(lang):
+        if active == key:
+            return name
+    return None
 
 
 def primary_nav(lang, active=None):
-    cur = nav_current(active)
+    current = _more_current(active, lang)
+    cur = "" if current else nav_current(active)
     parts = []
     for key, href, label in _nav_rows(lang):
         on = " on" if cur == key else ""
         parts.append(f'<a class="pn{on}" href="{url(lang, href)}">{esc(label)}</a>')
-    more = "More" if lang == "en" else "Meer"
+    more = current or ("More" if lang == "en" else "Meer")
+    on = " on" if current else ""
     parts.append(
-        f'<div class="mdrop"><button type="button" class="pn" id="more-btn" aria-expanded="false" '
+        f'<div class="mdrop"><button type="button" class="pn{on}" id="more-btn" aria-expanded="false" '
         f'aria-haspopup="true" aria-controls="more-menu">{esc(more)}{CHEV_SVG}</button>'
-        f'<div class="pmenu" id="more-menu" role="menu" hidden>{more_links(lang)}</div></div>')
+        f'<div class="pmenu" id="more-menu" role="menu" hidden>{more_links(lang, active)}</div></div>')
     return f'<nav class="pnav" aria-label="{esc(LANGS[lang]["menu"])}">{"".join(parts)}</nav>'
 
 
@@ -2866,26 +2880,25 @@ def drawer_links(lang, active):
     for key, href, label in rows:
         on = " on" if active == key else ""
         out.append(f'<a class="di{on}" href="{url(lang, href)}">{esc(label)}</a>')
-    more = "More" if lang == "en" else "Meer"
+    current = _more_current(active, lang)
+    more = current or ("More" if lang == "en" else "Meer")
+    on = " on" if current else ""
+    opened = " open" if current else ""
     out.append(
-        f'<details class="dmeer"><summary class="di">{esc(more)}</summary>'
-        f'<div class="dmeer-sub">{more_links(lang)}</div></details>')
+        f'<details class="dmeer"{opened}><summary class="di{on}">{esc(more)}</summary>'
+        f'<div class="dmeer-sub">{more_links(lang, active)}</div></details>')
     return "".join(out)
 
 
 def crumbs(lang, parts):
+    """Structured breadcrumb only. The visible trail is not rendered."""
     chain = [(LANGS[lang]["home"], "")] + list(parts)
-    lis, ld_items = [], []
+    ld_items = []
     for i, (name, path) in enumerate(chain, 1):
         href = url(lang, path)
-        if i == len(chain):
-            lis.append(f'<li><span aria-current="page">{esc(name)}</span></li>')
-        else:
-            lis.append(f'<li><a href="{href}">{esc(name)}</a></li>')
         ld_items.append({"@type": "ListItem", "position": i, "name": name, "item": SITE + href})
-    nav = f'<nav class="crumbs" aria-label="Breadcrumb"><ol>{"".join(lis)}</ol></nav>'
     ld = {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": ld_items}
-    return nav, ld
+    return "", ld
 
 
 def ld_script(obj):
@@ -3709,37 +3722,26 @@ def _count_label(n, lang):
     return "1 article" if n == 1 else f"{n} articles"
 
 
-def topic_hub(spec, items, lang):
-    """Intro plus the articles that match. An empty hub says coverage is starting."""
-    L = LANGS[lang]
-    title = _bi(spec["title"], lang)
-    intro = _bi(spec["intro"], lang)
-    nav, ld = crumbs(lang, [(title, spec["path"])])
-    how = ("Listed from topic tags and from keywords in the headline."
-           if lang == "en" else
-           "Opgebouwd uit onderwerptags en uit trefwoorden in de kop.")
-    link = (f'<p class="hubcount"><a href="{url(lang, ecosystem_path(lang))}">'
-            + ("See the ecosystem map" if lang == "en" else "Zie de kaart van het ecosysteem")
-            + "</a>")
-    if spec.get("key") == "spacex":
-        link += (' · <a href="' + url(lang, "starship/") + '">'
-                 + ("Starship tracker" if lang == "en" else "Starship-tracker") + "</a>")
-    link += "</p>"
-    head = (f'{nav}<header class="hubhead"><h1>{esc(title)}</h1>'
-            f'<p class="byline">{esc(L["byline"])}</p>'
-            f'<p class="lead">{esc(intro)}</p>{link}</header>')
+def _coverage_note(lang):
+    return "Coverage is starting." if lang == "en" else "De berichtgeving begint."
+
+
+def _article_list(items, lang, title, path):
+    """Breadcrumb, a hidden page title, then the lead photo and the other articles."""
+    nav, ld = crumbs(lang, [(title, path)])
+    hidden = f'<h1 class="visually-hidden">{esc(title)}</h1>'
     if not items:
-        note = ("Coverage is starting. Articles will show up here as they are published. "
-                "Nothing is filled in ahead of that."
-                if lang == "en" else
-                "De berichtgeving begint. Artikelen verschijnen hier zodra ze zijn gepubliceerd. "
-                "Er wordt niets vooraf ingevuld.")
-        return head + f'<p class="hubnote">{esc(note)}</p>', ld, intro
+        return f'{nav}{hidden}<p class="hubnote">{esc(_coverage_note(lang))}</p>', ld
     feature = home_lead(items[0], lang, title_tag="h2")
     rest = hub_cards(items[1:], lang) if len(items) > 1 else ""
-    body = (head + f'<h2 class="hubh">{esc(L["articles"])}</h2>'
-            f'<p class="hubcount">{esc(_count_label(len(items), lang))}. {esc(how)}</p>'
-            + feature + rest)
+    return f'{nav}{hidden}{feature}{rest}', ld
+
+
+def topic_hub(spec, items, lang):
+    """Article list for a topic. The intro stays in the meta description only."""
+    title = _bi(spec["title"], lang)
+    intro = _bi(spec["intro"], lang)
+    body, ld = _article_list(items, lang, title, spec["path"])
     return body, ld, intro
 
 
@@ -3807,45 +3809,118 @@ _ORBIT_FRAMES = (
 _ORBIT_HUG = {"w560", "w390"}
 
 
-def _box_stack(blocks):
-    """Rough box heights at the small-screen type size, so the disk can wrap them."""
+# Manrope advance widths (units of 2000) for the glyphs the map boxes use.
+# Weight 800 is the kicker; weight 400 is the list. Unknown glyphs use 1200.
+_MANROPE_800 = dict(zip(
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 ·'’,-/&",
+    [1366,1274,1492,1420,1180,1060,1482,1468,592,1026,1330,1082,1720,1458,1516,1300,1516,1340,1342,1220,1452,1306,1978,1344,1260,1360,1166,1248,1166,1250,1216,772,1248,1272,592,602,1104,592,1832,1272,1254,1248,1250,824,1094,888,1272,1136,1628,1126,1140,1070,1348,908,1208,1182,1230,1178,1244,1088,1246,1244,400,560,552,610,632,840,896,1348]))
+_MANROPE_400 = dict(zip(
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 ·'’,-/&",
+    [1267,1226,1431,1343,1140,1007,1410,1369,467,927,1187,1021,1681,1369,1447,1208,1447,1261,1233,1193,1404,1207,1871,1212,1112,1228,1111,1184,1107,1185,1169,709,1184,1188,467,501,992,467,1696,1188,1183,1184,1185,721,1050,801,1188,1016,1535,1054,1055,1059,1220,780,1140,1106,1179,1155,1241,1004,1161,1241,400,453,427,443,531,840,775,1303]))
+
+
+def _text_px(text, size, weight, tracking=0.0):
+    table = _MANROPE_800 if weight >= 700 else _MANROPE_400
+    width = 0.0
+    for ch in text:
+        width += table.get(ch, 1200) / 2000 * size
+    if tracking and len(text) > 1:
+        width += tracking * (len(text) - 1)
+    return width
+
+
+def _line_count(text, max_w, size, weight, tracking=0.0):
+    """How many lines CSS wraps this string onto, breaking at spaces and hyphens."""
+    if not text:
+        return 1
+    tokens = []
+    buf = ""
+    for ch in text:
+        buf += ch
+        if ch in " -":
+            tokens.append(buf)
+            buf = ""
+    if buf:
+        tokens.append(buf)
+    lines, current = 1, ""
+    for token in tokens:
+        trial = current + token
+        if current and _text_px(trial, size, weight, tracking) > max_w + 0.3:
+            lines += 1
+            current = token[1:] if token.startswith(" ") else token
+        else:
+            current = trial
+    return lines
+
+
+def _box_heights(blocks, lang, small=False):
+    """Rendered box heights, so the gap between boxes can be equal in pixels."""
+    k_size = 12.48 if small else 14.72
+    k_lh = k_size * 1.15
+    li_size = 9.92 if small else 10.88
+    li_lh = li_size * (1.2 if small else 1.22)
+    inner = 170 - 2 - 16
+    li_inner = inner - 1.05 * li_size
+    tracking = 0.04 * k_size
     heights = []
     for block in blocks:
-        name = _bi(block.get("kicker"), "en")
-        parts = [part.strip() for part in _bi(block.get("fact"), "en").split(",") if part.strip()]
-        title = 38 if len(name) > 14 else 22
-        heights.append(title + len(parts) * 16 + 18)
+        kicker = _bi(block.get("kicker"), lang)
+        fact = _bi(block.get("fact"), lang)
+        k_lines = _line_count(kicker, inner, k_size, 800, tracking)
+        parts = [part.strip() for part in fact.split(",") if part.strip()]
+        li_lines = sum(_line_count(part, li_inner, li_size, 400) for part in parts)
+        heights.append(1 + 6 + k_lines * k_lh + 4 + li_lines * li_lh + 5 + 1)
     return heights
 
 
-def _orbit_frame(width, height, n, gap=32, box_w=150, margin=12, y_pad=72, stub=28, hug=None):
-    """Circle 30% smaller than the old 1280px disk, with about 40% of it in view.
-    Box anchors sit on a larger circle, the same distance from the edge.
-    hug is a list of box heights: the disk then grows to that stack and the
-    container is only as tall as the stack, so nothing floats above or below it."""
+def _equal_points(heights, height, vgap, cy, cx, reach, stub, core_right):
+    """Centers stacked with one shared bottom-to-top gap, anchors on the circle."""
+    total = sum(heights) + (len(heights) - 1) * vgap
+    top = (height - total) / 2
+    if top < 2:
+        return None
+    pts = []
+    y = top
+    for h in heights:
+        center = y + h / 2
+        if center + h / 2 > height - 2:
+            return None
+        dy = center - cy
+        inside = reach * reach - dy * dy
+        if inside <= 1:
+            return None
+        x = cx + math.sqrt(inside)
+        pts.append((x, center))
+        y += h + vgap
+    if min(px for px, _py in pts) - stub < core_right + 6:
+        return None
+    return pts
+
+
+def _orbit_frame(width, height, heights, gap=32, box_w=170, margin=12, stub=28, hug=False):
+    """Circle kept fully inside the map. Box anchors share one radial distance.
+    The gap between the bottom of one box and the top of the next is constant."""
     if hug:
-        vgap, pad = 10, 14
+        vgap, pad = 12, 16
         gap, margin = 40, 6
-        y = float(pad)
-        centers = []
-        for item_h in hug:
-            centers.append(y + item_h / 2)
-            y += item_h + vgap
-        y -= vgap
-        height = y + pad
-        radius = height / 2
+        total = sum(heights) + (len(heights) - 1) * vgap
+        height = total + pad * 2
+        radius = (height - 40) / 2
         cy = height / 2
-        visible = min(0.4 * height, width - margin - gap - box_w)
+        visible = min(0.4 * (radius * 2), width - margin - gap - box_w)
         cx = visible - radius
         reach = radius + gap
+        y = float(pad)
         pts = []
-        for center in centers:
+        for h in heights:
+            center = y + h / 2
             dy = center - cy
             pts.append((cx + math.sqrt(max(reach * reach - dy * dy, 0)), center))
+            y += h + vgap
         core_w = 64 if width < 480 else 78
         core_left = 2
         return {
-            "d": height, "visible": visible, "cx": cx, "cy": cy, "pts": pts,
+            "d": radius * 2, "visible": visible, "cx": cx, "cy": cy, "pts": pts,
             "core_left": core_left, "core_w": core_w, "core_right": core_left + core_w,
             "w": width, "h": height, "stub": stub,
         }
@@ -3854,38 +3929,27 @@ def _orbit_frame(width, height, n, gap=32, box_w=150, margin=12, y_pad=72, stub=
         diameter = target
     else:
         diameter = (width - margin - gap - box_w) / 0.4
+    diameter = min(diameter, height - 40)
     radius = diameter / 2
     visible = 0.4 * diameter
     cx = visible - radius
     cy = height / 2
     reach = radius + gap
-    y0, y1 = float(y_pad), float(height - y_pad)
     core_w = 120 if width >= 560 else 88
     core_left = 10 if width >= 560 else 4
     core_right = core_left + core_w
-
-    def points(top, bottom):
-        out = []
-        for i in range(n):
-            y = top + (bottom - top) * i / (n - 1)
-            dy = y - cy
-            inside = reach * reach - dy * dy
-            if inside <= 0:
-                return None
-            out.append((cx + math.sqrt(inside), y))
-        return out
-
-    pts = points(y0, y1)
-    guard = 0
-    while pts and min(x for x, _y in pts) - stub < core_right + 6 and guard < 40:
-        y0 += 6
-        y1 -= 6
-        pts = points(y0, y1)
-        guard += 1
-    if not pts:
-        pts = points(cy - reach * 0.9, cy + reach * 0.9)
+    best, lo, hi = None, 8.0, 64.0
+    for _ in range(28):
+        mid = (lo + hi) / 2
+        pts = _equal_points(heights, height, mid, cy, cx, reach, stub, core_right)
+        if pts:
+            best, lo = pts, mid
+        else:
+            hi = mid
+    if not best:
+        best = _equal_points(heights, height, 8, cy, cx, reach, stub, core_right)
     return {
-        "d": diameter, "visible": visible, "cx": cx, "cy": cy, "pts": pts,
+        "d": diameter, "visible": visible, "cx": cx, "cy": cy, "pts": best,
         "core_left": core_left, "core_w": core_w, "core_right": core_right,
         "w": width, "h": height, "stub": stub,
     }
@@ -3893,12 +3957,13 @@ def _orbit_frame(width, height, n, gap=32, box_w=150, margin=12, y_pad=72, stub=
 
 def _orbit_blocks(blocks, lang):
     """Boxes on one concentric arc. Each viewport bucket has its own circle and lines."""
-    n = len(blocks)
-    stack = _box_stack(blocks)
+    desktop = _box_heights(blocks, lang, small=False)
+    small = _box_heights(blocks, lang, small=True)
     frames = []
     for name, _query, width, height in _ORBIT_FRAMES:
+        hug = name in _ORBIT_HUG
         frames.append((name, _orbit_frame(
-            width, height, n, hug=stack if name in _ORBIT_HUG else None)))
+            width, height, small if hug else desktop, hug=hug)))
     parts = []
     for i, block in enumerate(blocks):
         vars = []
@@ -4138,48 +4203,10 @@ def _layer_articles(layer, arts):
 
 
 def layer_page(layer, arts, lang):
-    """Coloured header, a short intro, sourced figures, and the latest articles."""
-    L = LANGS[lang]
-    data = load_data("ecosystem.json")
+    """Hidden title, then the lead photo and the other articles."""
     title = _bi(layer["title"], lang)
-    kicker = _bi(layer["kicker"], lang)
-    nav, ld = crumbs(lang, [(title, layer["path"])])
-    paras = "".join(f"<p>{esc(p)}</p>" for p in layer["intro"][lang])
-    back = ("See the ecosystem map" if lang == "en" else "Zie de kaart van het ecosysteem")
-    links = f'<a href="{url(lang, ecosystem_path(lang))}">{esc(back)}</a>'
-    for link in layer.get("links") or []:
-        links += f' · <a href="{url(lang, link["href"])}">{esc(_bi(link, lang))}</a>'
-    by_id = {s.get("id"): s for s in data.get("stats") or []}
-    cards = [_stat_card(by_id[sid], lang, layer["path"]) for sid in layer.get("stats") or [] if sid in by_id]
-    figures = ""
-    if cards:
-        head = "Key figures" if lang == "en" else "Kerncijfers"
-        figures = f'<h2 class="eco-h">{esc(head)}</h2><div class="eco-stats">{"".join(cards)}</div>'
     items = _layer_articles(layer, arts)
-    how = ("Listed from topic tags and from keywords in the headline."
-           if lang == "en" else
-           "Opgebouwd uit onderwerptags en uit trefwoorden in de kop.")
-    if not items:
-        note = ("Coverage is starting. Articles will show up here as they are published. "
-                "Nothing is filled in ahead of that."
-                if lang == "en" else
-                "De berichtgeving begint. Artikelen verschijnen hier zodra ze zijn gepubliceerd. "
-                "Er wordt niets vooraf ingevuld.")
-        articles = f'<p class="hubnote">{esc(note)}</p>'
-    else:
-        feature = home_lead(items[0], lang, title_tag="h2")
-        rest = hub_cards(items[1:], lang) if len(items) > 1 else ""
-        articles = (f'<h2 class="hubh">{esc(L["articles"])}</h2>'
-                    f'<p class="hubcount">{esc(_count_label(len(items), lang))}. {esc(how)}</p>'
-                    + feature + rest)
-    body = (
-        f'{nav}<header class="layerhead {layer["tone"]}">'
-        f'<span class="eco-k">{esc(kicker)}</span><h1>{esc(title)}</h1></header>'
-        f'<p class="byline">{esc(L["byline"])}</p>'
-        f'<div class="layerintro">{paras}</div>'
-        f'<p class="hubcount">{links}</p>'
-        f'{figures}{articles}'
-    )
+    body, ld = _article_list(items, lang, title, layer["path"])
     desc = layer["intro"][lang][0]
     return body, ld, desc, items
 

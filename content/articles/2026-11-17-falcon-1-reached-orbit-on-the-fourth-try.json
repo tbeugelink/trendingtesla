@@ -1,0 +1,292 @@
+{
+  "slug": "falcon-1-reached-orbit-on-the-fourth-try",
+  "date": "2026-11-17",
+  "time": "13:29",
+  "category": "spacex",
+  "sources": [
+    {
+      "title": "Spaceflight Now: Sweet success at last for Falcon 1 rocket",
+      "url": "https://spaceflightnow.com/falcon/004/"
+    },
+    {
+      "title": "NASASpaceflight: SpaceX's Falcon 1 launch success on fourth attempt",
+      "url": "https://www.nasaspaceflight.com/2008/09/live-space-xs-falcon-i-to-make-fourth-attempt-for-success/"
+    },
+    {
+      "title": "The Space Review: A sign of progress",
+      "url": "https://www.thespacereview.com/article/1222/1"
+    },
+    {
+      "title": "Space.com: Falcon 1 Failure Traced to a Busted Nut",
+      "url": "https://www.space.com/2643-falcon-1-failure-traced-busted-nut.html"
+    },
+    {
+      "title": "Space.com: SpaceX's Falcon 1 Falters For a Third Time",
+      "url": "https://www.space.com/5693-spacex-falcon-1-falters-time.html"
+    },
+    {
+      "title": "SpaceX: RatSat mission",
+      "url": "https://www.spacex.com/launches/ratsat"
+    },
+    {
+      "title": "SpaceX: Findings of the Falcon Return to Flight Board",
+      "url": "https://spacex.explorist.io/documents/2006-07-25-findings-of-the-falcon-return-to-flight-board"
+    },
+    {
+      "title": "SpaceX: Falcon 1 Flight 3 mission summary",
+      "url": "https://spacex.explorist.io/documents/2008-08-06-falcon-1-flight-3-mission-summary"
+    },
+    {
+      "title": "SpaceX archive: Falcon 1 Flight 4 summary",
+      "url": "https://web.archive.org/web/20090719023654/http://www.spacex.com/F1-004-summary.php"
+    },
+    {
+      "title": "Neowin: SpaceX Has Finally Made History and Reached Orbit",
+      "url": "https://www.neowin.net/news/the-quest-for-privatized-space-exploration-continues33/"
+    },
+    {
+      "title": "Wikinews: SpaceX rocket successfully orbits on fourth attempt",
+      "url": "https://en.wikinews.org/wiki/SpaceX_rocket_successfully_orbits_on_fourth_attempt"
+    },
+    {
+      "title": "Wikipedia: Falcon 1",
+      "url": "https://en.wikipedia.org/wiki/Falcon_1"
+    }
+  ],
+  "real_photos": [
+    {
+      "page": "https://commons.wikimedia.org/wiki/File:Falcon_1_Flight_4_launch.jpg",
+      "describe": "Falcon 1 Flight 4 lifting off from Omelek Island on 28 September 2008, a white rocket with a black band, bright flame, the island and the ocean",
+      "file": "news/falcon-1-reached-orbit-on-the-fourth-try-1.jpg",
+      "credit": "SpaceX, CC0, Wikimedia Commons"
+    },
+    {
+      "page": "https://commons.wikimedia.org/wiki/File:2009_Falcon_1_launches_from_Omelek_Island.jpg",
+      "describe": "a Falcon 1 lifting off from Omelek Island, the same small rocket and the same Pacific pad, photographed on a later flight in 2009",
+      "file": "news/falcon-1-reached-orbit-on-the-fourth-try-2.jpg",
+      "credit": "SpaceX, CC0, Wikimedia Commons"
+    },
+    {
+      "page": "https://commons.wikimedia.org/wiki/File:2009_Falcon_1_launches_from_Omelek_Island_02.jpg",
+      "describe": "another angle of a Falcon 1 leaving Omelek Island, flame under the rocket and the island shoreline below, from the 2009 flight",
+      "file": "news/falcon-1-reached-orbit-on-the-fourth-try-3.jpg",
+      "credit": "SpaceX, CC0, Wikimedia Commons"
+    }
+  ],
+  "images": [
+    "news/falcon-1-reached-orbit-on-the-fourth-try-1.jpg",
+    "news/falcon-1-reached-orbit-on-the-fourth-try-2.jpg",
+    "news/falcon-1-reached-orbit-on-the-fourth-try-3.jpg",
+    "lib/musk-falcon1-pad.jpg"
+  ],
+  "gen_image": {
+    "prompt": "Cinematic illustration of a small two-stage Falcon 1 lifting off a concrete pad on a tiny tropical island at sunrise. The rocket is slim and white with one black band around the middle, a pointed nose and a single engine flame. No landing legs, no grid fins. A plain steel tower stands beside the pad. Palm trees and a turquoise lagoon, calm water in the lower left. No people, no readable text, no logos.",
+    "subject": "Falcon 1, the small two-stage orbital rocket: a slim white cylinder with a single black interstage band, one Merlin engine at the base, no landing legs and no grid fins, a pointed nose, standing on a small concrete pad on a flat Pacific island",
+    "refs": [
+      {
+        "src": "lib/musk-falcon1-pad.jpg"
+      },
+      {
+        "src": "news/falcon-1-reached-orbit-on-the-fourth-try-1.jpg"
+      }
+    ],
+    "profile": "cinematic",
+    "category": "B",
+    "describe": "a Falcon 1 lifting off a tropical island pad at sunrise",
+    "extra": [
+      {
+        "prompt": "Illustration of a Falcon 1 second stage in low orbit above the Pacific at night, a small hexagonal aluminum payload still bolted to the top, Earth curving below, no people and no readable text",
+        "describe": "the Falcon 1 upper stage in orbit with the aluminum dummy still attached"
+      },
+      {
+        "prompt": "Illustration of the two Falcon 1 stages just after separation high above a blue ocean, a small gap between them, a faint wisp of exhaust still at the base of the lower stage, the upper stage pulling ahead, daylight, no people and no readable text",
+        "describe": "the two Falcon 1 stages just after they separate above the ocean"
+      }
+    ]
+  },
+  "label": {
+    "style": "c",
+    "en": {
+      "sub": "THREE FAILURES",
+      "text": "THEN IT MADE ORBIT"
+    },
+    "nl": {
+      "sub": "DRIE MISLUKKINGEN",
+      "text": "TOEN HAALDE HIJ EEN BAAN"
+    }
+  },
+  "en": {
+    "title": "How Falcon 1 Reached Orbit on the Fourth Try",
+    "description": "On 28 September 2008 a Falcon 1 became the first privately developed liquid-fuel rocket to reach orbit, on its fourth flight, carrying an aluminum dummy called RatSat. The first three flights failed from a corroded nut, sloshing oxygen, and a stage collision that SpaceX said one line of code would have prevented.",
+    "body": "<p>On 28 September 2008 a Falcon 1 reached orbit on its fourth flight, and it was the first privately developed liquid-fuel rocket to do that. Liftoff was at 23:15 UTC from Omelek Island in the Kwajalein Atoll, already the morning of 29 September on the island. There was no customer's satellite on top. The payload was a 165-kilogram piece of aluminum that stayed bolted to the second stage, called RatSat because it carried a rat logo. The first three Falcon 1s never reached orbit, and each one failed for a different reason.</p>\n<h2>What did the fourth flight actually put in orbit?</h2>\n<p><strong>A dummy satellite, and then an orbit just under 400 miles up.</strong> The dummy was a hexagonal aluminum chamber about 1.5 metres tall and 165 kilograms, or 364 pounds. It stood in for a real satellite and never let go of the second stage. SpaceX had taken Malaysia's RazakSAT off this flight so a test could fly first. The rocket first reached an orbit of about 330 by 650 kilometres, inclined about 9.3 degrees. That is about 205 by 404 miles. The second-stage engine then restarted and finished just under 400 miles up, about 640 kilometres. The dummy was in orbit. The three rockets before it had never got there, and the first of them barely left the island.</p>\n<h2>So why did the first flight fail?</h2>\n<p><strong>A corroded aluminum nut leaked kerosene, the engine caught fire, and thrust ended 34 seconds after ignition.</strong> The flight was on 24 March 2006, from the same island. A review board for DARPA, the sponsor of that flight, found that an aluminum B-nut on a fuel-pressure sensor had cracked from corrosion that was not visible on the surface. Fuel leaked onto the engine, the leak caught fire once the engine lit, and the valves closed. SpaceX's own timeline of the flight puts the end of thrust at 34 seconds. The rocket fell back near the pad. Its payload, FalconSat-2, came down on a storage shed on the island. The next flight would climb much higher and still miss orbit.</p>\n<h2>What stopped the second flight?</h2>\n<p><strong>In March 2007 the rocket reached about 289 kilometres, and then the second stage shut down.</strong> That is almost 180 miles up, close to the speed an orbit needs, and still short of one. Liquid oxygen in the second-stage tank was sloshing. The slosh coupled with the guidance, the stage rolled, and the engine quit. SpaceX later described that slosh as the problem this flight had not solved. The third flight would get past it and fail at the moment the stages had to separate.</p>\n<h2>So why did the stages hit on the third flight?</h2>\n<p><strong>On 2 August 2008 leftover thrust from a new engine pushed the first stage back into the second just after they parted.</strong> The first stage flew on a regeneratively cooled Merlin. Unburned fuel in the cooling channels kept a small push going after shutdown, long enough to cancel the shove that was meant to drive the stages apart. SpaceX said a slightly longer wait between shutdown and separation would have saved the mission, and that the fix was one line of code. The flight was carrying satellites, including Trailblazer and NASA's NanoSail-D, and they were lost. The change was small. The next rocket still had to fly it.</p>\n<h2>What did that one line change on the fourth flight?</h2>\n<p><strong>The stages separated cleanly, and the upper stage flew on into orbit.</strong> On 28 September the first stage finished its burn, the stages parted, and the Kestrel engine on the second stage lit. Separation was the moment that had ended the August flight. This time it held. The Kestrel burned for nearly seven minutes, the rocket reached orbit, and the engine restarted later to raise it. The dummy with the rat logo was still attached. A Falcon 1 had finally stayed in space, and what it carried was still not a customer's satellite.</p>\n<h2>Why does a dummy in orbit still matter?</h2>\n<p><strong>Because no privately developed liquid-fuel rocket had reached orbit before this one.</strong> Falcon 1 had been flying since 2006 without staying in space. The larger Falcon 9 was still being built, and this was the first orbit the company could point to. RazakSAT, the satellite taken off this flight, was still waiting for a later one. The rocket that settled the question carried a block of aluminum with a rat on it, and that block reached the orbit the first three never did.</p>"
+  },
+  "nl": {
+    "title": "Hoe de Falcon 1 pas bij de vierde poging een baan haalde",
+    "description": "Op 28 september 2008 werd een Falcon 1 de eerste particulier ontwikkelde raket op vloeibare brandstof die een baan haalde, bij de vierde vlucht, met een aluminium dummy die RatSat heette. De eerste drie vluchten mislukten door een verroeste moer, klotende zuurstof en een botsing van de trappen die volgens SpaceX met één regel code was voorkomen.",
+    "body": "<p>Op 28 september 2008 haalde een Falcon 1 een baan om de aarde, en dat pas bij de vierde vlucht. Het was de eerste raket op vloeibare brandstof die een privébedrijf zelf had ontwikkeld en die een baan haalde. De start was om 23:15 UTC vanaf het eiland Omelek in de Kwajalein-atol, daar al de ochtend van 29 september. Bovenop zat geen satelliet van een klant. De lading was een blok aluminium van 165 kilogram dat aan de tweede trap vast bleef zitten. Het heette RatSat, omdat er een logo van een rat op stond. De eerste drie Falcon 1's haalden geen baan, en elk viel om een andere reden uit.</p>\n<h2>Wat zette de vierde vlucht eigenlijk in een baan?</h2>\n<p><strong>Een dummysatelliet, en daarna een baan op iets minder dan 400 mijl.</strong> De dummy was een zeshoekige aluminiumkamer van ongeveer 1,5 meter hoog en 165 kilogram, omgerekend 364 pond. Hij stond voor een echte satelliet en liet de tweede trap niet los. SpaceX had de Maleisische RazakSAT van deze vlucht gehaald, zodat eerst een test kon vliegen. De raket kwam eerst in een baan van ongeveer 330 bij 650 kilometer, met een helling van ongeveer 9,3 graden. Dat is ongeveer 205 bij 404 mijl. De motor van de tweede trap startte daarna opnieuw en eindigde op iets minder dan 400 mijl, ongeveer 640 kilometer. De dummy was in een baan. De drie raketten ervoor waren daar nooit gekomen, en de eerste kwam amper van het eiland weg.</p>\n<h2>Dus waarom mislukte de eerste vlucht?</h2>\n<p><strong>Een verroeste aluminiummoer lekte kerosine, de motor vatte vlam en de stuwkracht was na 34 seconden weg.</strong> De vlucht was op 24 maart 2006, vanaf hetzelfde eiland. Een onderzoekscommissie van DARPA, de opdrachtgever van die vlucht, stelde vast dat een aluminium B-moer op een brandstofdruksensor was gescheurd door corrosie die aan de buitenkant niet te zien was. Er lekte brandstof op de motor, die vlam vatte zodra de motor aansloeg, en de kleppen gingen dicht. Op de eigen tijdlijn van SpaceX stopt de stuwkracht na 34 seconden. De raket viel terug bij het platform. De lading, FalconSat-2, kwam neer op een opslagschuur op het eiland. De volgende vlucht zou veel hoger komen en alsnog geen baan halen.</p>\n<h2>Wat stopte de tweede vlucht?</h2>\n<p><strong>In maart 2007 kwam de raket tot ongeveer 289 kilometer, en toen viel de tweede trap stil.</strong> Dat is bijna 180 mijl hoog, dicht bij de snelheid die een baan vraagt, en toch geen baan. Vloeibare zuurstof in de tank van de tweede trap klotste. Dat klotsen werkte door in de besturing, de trap begon te rollen en de motor stopte. SpaceX beschreef dat klotsen later als het probleem dat deze vlucht niet had opgelost. De derde vlucht kwam daar voorbij en faalde op het moment dat de trappen moesten scheiden.</p>\n<h2>Dus waarom botsten de trappen bij de derde vlucht?</h2>\n<p><strong>Op 2 augustus 2008 duwde reststuwkracht van een nieuwe motor de eerste trap vlak na het scheiden terug tegen de tweede.</strong> De eerste trap vloog met een Merlin die met brandstof werd gekoeld. Onverbrande brandstof in de koelkanalen gaf na het afzetten nog een kleine duw, lang genoeg om de stoot teniet te doen die de trappen uit elkaar moest drukken. SpaceX zei dat een iets langere pauze tussen afzetten en scheiden de vlucht had gered, en dat de reparatie één regel code was. De vlucht had satellieten aan boord, onder meer Trailblazer en NanoSail-D van NASA, en die gingen verloren. De wijziging was klein. De volgende raket moest haar nog wel vliegen.</p>\n<h2>Wat veranderde die ene regel op de vierde vlucht?</h2>\n<p><strong>De trappen scheidden schoon, en de bovenste trap vloog door naar een baan.</strong> Op 28 september was de eerste trap uitgebrand, gingen de trappen uit elkaar en ontbrandde de Kestrel-motor van de tweede trap. Het scheiden was het moment waarop de vlucht van augustus was geëindigd. Deze keer hield het. De Kestrel brandde bijna zeven minuten, de raket haalde een baan en de motor startte later opnieuw om die baan te verhogen. De dummy met het rattenlogo zat er nog aan. Een Falcon 1 was eindelijk in de ruimte gebleven, en wat hij meenam was nog steeds geen satelliet van een klant.</p>\n<h2>Waarom doet een dummy in een baan er nog toe?</h2>\n<p><strong>Omdat nog geen particulier ontwikkelde raket op vloeibare brandstof eerder een baan had gehaald.</strong> De Falcon 1 vloog al sinds 2006 en was nog niet in de ruimte gebleven. De grotere Falcon 9 was nog in aanbouw, en dit was de eerste baan waar het bedrijf naar kon wijzen. RazakSAT, de satelliet die van deze vlucht was gehaald, wachtte nog op een latere. De raket die de vraag beslechtte, droeg een blok aluminium met een rat erop, en dat blok haalde de baan die de eerste drie nooit haalden.</p>"
+  },
+  "short": {
+    "hook": "first",
+    "hook_motion": "the flame brightens and the rocket begins to rise off the pad while smoke rolls outward over the island",
+    "yt_title_en": "The Fourth Falcon 1 Reached Orbit",
+    "yt_title_nl": "De vierde Falcon 1 bereikte een baan",
+    "hooks": [
+      {
+        "text": "The fourth Falcon 1 reached orbit.",
+        "type": "first"
+      },
+      {
+        "text": "Three rockets failed before one reached orbit.",
+        "type": "number"
+      },
+      {
+        "text": "A corroded nut once ended the whole flight.",
+        "type": "consequence"
+      }
+    ],
+    "hook_pick": {
+      "index": 0,
+      "why": "A first-type hook is the line viewers watch longer, and this one is the claim itself: six words, no date, with the real liftoff on screen. The last line, a dummy with a rat logo making orbit, runs straight back into it."
+    },
+    "loop": {
+      "last": "A dummy with a rat logo made orbit.",
+      "how": "The dummy arriving in orbit is the same arrival the hook names, so the restart lands on the fourth Falcon 1 reaching orbit."
+    },
+    "story": [
+      {
+        "part": "hook",
+        "t": "0-3s",
+        "text": "The fourth Falcon 1 reached orbit.",
+        "overlay": "The fourth Falcon 1 reached orbit",
+        "img": [
+          "news/falcon-1-reached-orbit-on-the-fourth-try-1.jpg",
+          "lib/musk-falcon1-pad.jpg"
+        ],
+        "visual": "Falcon 1 Flight 4 lifting off Omelek, flame under a white rocket with a black band, then the same small rocket on the island pad at sunrise",
+        "sfx": "a rocket roar and the rush of exhaust"
+      },
+      {
+        "part": "tension",
+        "t": "3-6s",
+        "text": "Three rockets never got that far.",
+        "overlay": "Three rockets never got that far",
+        "img": [
+          "news/falcon-1-reached-orbit-on-the-fourth-try-2.jpg",
+          "news/falcon-1-reached-orbit-on-the-fourth-try-1.jpg"
+        ],
+        "visual": "a Falcon 1 climbing away from the island, then the Flight 4 liftoff"
+      },
+      {
+        "part": "tension",
+        "t": "6-9s",
+        "text": "A corroded nut set flight one on fire.",
+        "overlay": "A corroded nut set flight 1 on fire",
+        "img": [
+          "news/falcon-1-reached-orbit-on-the-fourth-try-1.jpg",
+          "lib/musk-falcon1-pad.jpg"
+        ],
+        "visual": "the engine flame under the rocket, then the rocket standing on the island pad"
+      },
+      {
+        "part": "tension",
+        "t": "9-12s",
+        "text": "It quit 34 seconds after ignition.",
+        "overlay": "It quit 34 seconds after ignition",
+        "img": [
+          "lib/musk-falcon1-pad.jpg",
+          "news/falcon-1-reached-orbit-on-the-fourth-try-1.jpg"
+        ],
+        "visual": "the rocket on the pad at sunrise, then the liftoff flame"
+      },
+      {
+        "part": "tension",
+        "t": "12-15s",
+        "text": "The satellite came down on a shed.",
+        "overlay": "The satellite came down on a shed",
+        "img": [
+          "lib/musk-falcon1-pad.jpg",
+          "news/falcon-1-reached-orbit-on-the-fourth-try-3.jpg"
+        ],
+        "visual": "the island pad among the palms, then a Falcon 1 rising over that shoreline"
+      },
+      {
+        "part": "tension",
+        "t": "15-18s",
+        "text": "Flight two climbed 289 kilometres, then quit.",
+        "overlay": "Flight 2 climbed 289 km, then quit",
+        "img": [
+          "news/falcon-1-reached-orbit-on-the-fourth-try-2.jpg",
+          "news/falcon-1-reached-orbit-on-the-fourth-try-3.jpg"
+        ],
+        "visual": "a Falcon 1 high above the island, then another view of it climbing on its flame"
+      },
+      {
+        "part": "tension",
+        "t": "18-21s",
+        "text": "Slosh in the tank rolled the stage.",
+        "overlay": "Slosh in the tank rolled the stage",
+        "img": [
+          "news/falcon-1-reached-orbit-on-the-fourth-try-3.jpg",
+          "news/falcon-1-reached-orbit-on-the-fourth-try-2.jpg"
+        ],
+        "visual": "the climbing rocket, the stage that had to stay pointed straight"
+      },
+      {
+        "part": "tension",
+        "t": "21-24s",
+        "text": "The stages hit just after separation.",
+        "overlay": "The stages hit just after separation",
+        "img": [
+          "news/falcon-1-reached-orbit-on-the-fourth-try-1.jpg",
+          "news/falcon-1-reached-orbit-on-the-fourth-try-2.jpg"
+        ],
+        "visual": "Flight 4 leaving the pad, then the climb where the two stages have to part"
+      },
+      {
+        "part": "tension",
+        "t": "24-27s",
+        "text": "The fix was one added line of code.",
+        "overlay": "The fix was one added line of code",
+        "img": [
+          "news/falcon-1-reached-orbit-on-the-fourth-try-2.jpg",
+          "lib/musk-falcon1-pad.jpg"
+        ],
+        "visual": "the rocket climbing cleanly off the island, then the pad it left behind"
+      },
+      {
+        "part": "payoff",
+        "t": "27-31s",
+        "text": "A dummy with a rat logo made orbit.",
+        "overlay": "A dummy with a rat logo made orbit",
+        "img": [
+          "news/falcon-1-reached-orbit-on-the-fourth-try-1.jpg",
+          "news/falcon-1-reached-orbit-on-the-fourth-try-2.jpg"
+        ],
+        "visual": "Flight 4's flame at liftoff, then the rocket already climbing with the dummy still aboard"
+      }
+    ],
+    "en": "The fourth Falcon 1 reached orbit. Three rockets never got that far. A corroded nut set flight one on fire. It quit 34 seconds after ignition. The satellite came down on a shed. Flight two climbed 289 kilometres, then quit. Slosh in the tank rolled the stage. The stages hit just after separation. The fix was one added line of code. A dummy with a rat logo made orbit.",
+    "nl": "De vierde Falcon 1 haalde een baan. Drie raketten kwamen zo ver niet. Een verroeste moer zette vlucht één in brand. Na 34 seconden was de stuwkracht weg. De satelliet kwam neer op een schuur. Vlucht twee klom tot 289 kilometer en viel toen stil. Geklots in de tank liet de trap rollen. De trappen botsten vlak na het scheiden. De reparatie was één extra regel code. Een dummy met een rattenlogo haalde de baan.",
+    "signals": "The hook is the claim in six words on the real liftoff. Beats stay short, each with two pictures, and the last line is a different sentence that completes the hook when the Short restarts.",
+    "learning": {
+      "test": "Whether a first-type hook on a company-history rocket, with three concrete failures, holds viewers longer than another Starship catch."
+    }
+  },
+  "credits": [
+    {
+      "file": "news/falcon-1-reached-orbit-on-the-fourth-try-1.jpg",
+      "credit": "SpaceX, CC0, Wikimedia Commons",
+      "page": "https://commons.wikimedia.org/wiki/File:Falcon_1_Flight_4_launch.jpg"
+    },
+    {
+      "file": "news/falcon-1-reached-orbit-on-the-fourth-try-2.jpg",
+      "credit": "SpaceX, CC0, Wikimedia Commons",
+      "page": "https://commons.wikimedia.org/wiki/File:2009_Falcon_1_launches_from_Omelek_Island.jpg"
+    },
+    {
+      "file": "news/falcon-1-reached-orbit-on-the-fourth-try-3.jpg",
+      "credit": "SpaceX, CC0, Wikimedia Commons",
+      "page": "https://commons.wikimedia.org/wiki/File:2009_Falcon_1_launches_from_Omelek_Island_02.jpg"
+    }
+  ]
+}

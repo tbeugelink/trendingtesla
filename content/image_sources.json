@@ -1048,5 +1048,32 @@
     "license": "CC BY 2.0",
     "credit": "FotoSleuth, CC BY 2.0, Wikimedia Commons",
     "added": "2026-11-16"
+  },
+  "news/falcon-1-reached-orbit-on-the-fourth-try-1.jpg": {
+    "article": "falcon-1-reached-orbit-on-the-fourth-try",
+    "real": true,
+    "page": "https://commons.wikimedia.org/wiki/File:Falcon_1_Flight_4_launch.jpg",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Falcon_1_Flight_4_launch.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "license": "CC0",
+    "credit": "SpaceX, CC0, Wikimedia Commons",
+    "added": "2026-11-17"
+  },
+  "news/falcon-1-reached-orbit-on-the-fourth-try-2.jpg": {
+    "article": "falcon-1-reached-orbit-on-the-fourth-try",
+    "real": true,
+    "page": "https://commons.wikimedia.org/wiki/File:2009_Falcon_1_launches_from_Omelek_Island.jpg",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/d/db/2009_Falcon_1_launches_from_Omelek_Island.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "license": "CC0",
+    "credit": "SpaceX, CC0, Wikimedia Commons",
+    "added": "2026-11-17"
+  },
+  "news/falcon-1-reached-orbit-on-the-fourth-try-3.jpg": {
+    "article": "falcon-1-reached-orbit-on-the-fourth-try",
+    "real": true,
+    "page": "https://commons.wikimedia.org/wiki/File:2009_Falcon_1_launches_from_Omelek_Island_02.jpg",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/8/84/2009_Falcon_1_launches_from_Omelek_Island_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "license": "CC0",
+    "credit": "SpaceX, CC0, Wikimedia Commons",
+    "added": "2026-11-17"
   }
 }

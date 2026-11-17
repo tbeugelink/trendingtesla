@@ -1,0 +1,243 @@
+{
+  "updated": "2026-11-17",
+  "note": "Full-stack Starship flights only. Each row has two sources. build.py renders this file; edit the JSON to update the page. Next flight stays 'not announced' until SpaceX posts a date.",
+  "next": {
+    "announced": false,
+    "note": {
+      "en": "SpaceX has not announced a date, window or vehicles for Flight 16. The SpaceX launches page lists no Starship flight after Flight 15.",
+      "nl": "SpaceX heeft geen datum, venster of voertuigen aangekondigd voor vlucht 16. Op de lanceerpagina van SpaceX staat geen Starship-vlucht na vlucht 15."
+    },
+    "sources": [
+      {"title": "SpaceX launches", "url": "https://www.spacex.com/launches/starship"},
+      {"title": "The Space Road, 15 November 2026", "url": "https://thespaceroad.com/articles/when-is-starship-flight-16/"}
+    ]
+  },
+  "flights": [
+    {
+      "number": 1,
+      "date": "2023-04-20",
+      "booster_catch": false,
+      "ship_catch": false,
+      "payload": {"en": "None", "nl": "Geen"},
+      "outcome": {
+        "en": "Lost before stage separation. Not caught.",
+        "nl": "Verloren vóór de scheiding van de trappen. Niet gevangen."
+      },
+      "sources": [
+        {"title": "Wikipedia, Starship launch history", "url": "https://en.wikipedia.org/wiki/Starship_(rocket)"},
+        {"title": "The Space Road, 15 November 2026", "url": "https://thespaceroad.com/articles/how-many-times-has-starship-been-caught/"}
+      ]
+    },
+    {
+      "number": 2,
+      "date": "2023-11-18",
+      "booster_catch": false,
+      "ship_catch": false,
+      "payload": {"en": "None", "nl": "Geen"},
+      "outcome": {
+        "en": "Booster lost during boostback. Not caught.",
+        "nl": "Booster verloren tijdens de boostback. Niet gevangen."
+      },
+      "sources": [
+        {"title": "Wikipedia, Starship launch history", "url": "https://en.wikipedia.org/wiki/Starship_(rocket)"},
+        {"title": "The Space Road, 15 November 2026", "url": "https://thespaceroad.com/articles/how-many-times-has-starship-been-caught/"}
+      ]
+    },
+    {
+      "number": 3,
+      "date": "2024-03-14",
+      "booster_catch": false,
+      "ship_catch": false,
+      "payload": {"en": "None", "nl": "Geen"},
+      "outcome": {
+        "en": "Booster lost during the landing burn. Not caught.",
+        "nl": "Booster verloren tijdens de landingsburn. Niet gevangen."
+      },
+      "sources": [
+        {"title": "Wikipedia, Starship launch history", "url": "https://en.wikipedia.org/wiki/Starship_(rocket)"},
+        {"title": "The Space Road, 15 November 2026", "url": "https://thespaceroad.com/articles/how-many-times-has-starship-been-caught/"}
+      ]
+    },
+    {
+      "number": 4,
+      "date": "2024-06-06",
+      "booster_catch": false,
+      "ship_catch": false,
+      "payload": {"en": "None", "nl": "Geen"},
+      "outcome": {
+        "en": "Booster soft splashdown in the Gulf. Not caught.",
+        "nl": "Zachte splashdown van de booster in de Golf. Niet gevangen."
+      },
+      "sources": [
+        {"title": "Wikipedia, Starship launch history", "url": "https://en.wikipedia.org/wiki/Starship_(rocket)"},
+        {"title": "The Space Road, 15 November 2026", "url": "https://thespaceroad.com/articles/how-many-times-has-starship-been-caught/"}
+      ]
+    },
+    {
+      "number": 5,
+      "date": "2024-10-13",
+      "booster_catch": true,
+      "ship_catch": false,
+      "payload": {"en": "None", "nl": "Geen"},
+      "outcome": {
+        "en": "First booster catch. Ship splashed down in the Indian Ocean.",
+        "nl": "Eerste vangst van de booster. Het schip maakte een splashdown in de Indische Oceaan."
+      },
+      "sources": [
+        {"title": "SpaceX, fifth flight test", "url": "https://www.spacex.com/launches/starship-flight-5"},
+        {"title": "Reuters, 13 October 2024", "url": "https://www.reuters.com/technology/space/spacex-launches-fifth-starship-test-eyes-novel-booster-catch-2024-10-13/"}
+      ]
+    },
+    {
+      "number": 6,
+      "date": "2024-11-19",
+      "booster_catch": false,
+      "ship_catch": false,
+      "payload": {"en": "None deployed", "nl": "Niets uitgezet"},
+      "outcome": {
+        "en": "Booster catch called off. Splashdown in the Gulf.",
+        "nl": "Vangst van de booster afgeblazen. Splashdown in de Golf."
+      },
+      "sources": [
+        {"title": "Wikipedia, Starship launch history", "url": "https://en.wikipedia.org/wiki/Starship_(rocket)"},
+        {"title": "The Space Road, 15 November 2026", "url": "https://thespaceroad.com/articles/how-many-times-has-starship-been-caught/"}
+      ]
+    },
+    {
+      "number": 7,
+      "date": "2025-01-16",
+      "booster_catch": true,
+      "ship_catch": false,
+      "payload": {"en": "Not deployed", "nl": "Niet uitgezet"},
+      "outcome": {
+        "en": "Booster caught. Ship lost during the climb.",
+        "nl": "Booster gevangen. Schip verloren tijdens de klim."
+      },
+      "sources": [
+        {"title": "Wikipedia, Starship launch history", "url": "https://en.wikipedia.org/wiki/Starship_(rocket)"},
+        {"title": "The Space Road, 15 November 2026", "url": "https://thespaceroad.com/articles/how-many-times-has-starship-been-caught/"}
+      ]
+    },
+    {
+      "number": 8,
+      "date": "2025-03-06",
+      "booster_catch": true,
+      "ship_catch": false,
+      "payload": {"en": "Not deployed", "nl": "Niet uitgezet"},
+      "outcome": {
+        "en": "Booster caught. Ship lost during the climb.",
+        "nl": "Booster gevangen. Schip verloren tijdens de klim."
+      },
+      "sources": [
+        {"title": "Wikipedia, Starship launch history", "url": "https://en.wikipedia.org/wiki/Starship_(rocket)"},
+        {"title": "The Space Road, 15 November 2026", "url": "https://thespaceroad.com/articles/how-many-times-has-starship-been-caught/"}
+      ]
+    },
+    {
+      "number": 9,
+      "date": "2025-05-27",
+      "booster_catch": false,
+      "ship_catch": false,
+      "payload": {"en": "Not deployed", "nl": "Niet uitgezet"},
+      "outcome": {
+        "en": "Booster lost before splashdown. Not caught.",
+        "nl": "Booster verloren vóór de splashdown. Niet gevangen."
+      },
+      "sources": [
+        {"title": "Wikipedia, Starship launch history", "url": "https://en.wikipedia.org/wiki/Starship_(rocket)"},
+        {"title": "The Space Road, 15 November 2026", "url": "https://thespaceroad.com/articles/how-many-times-has-starship-been-caught/"}
+      ]
+    },
+    {
+      "number": 10,
+      "date": "2025-08-26",
+      "booster_catch": false,
+      "ship_catch": false,
+      "payload": {"en": "8 Starlink simulators", "nl": "8 Starlink-simulatoren"},
+      "outcome": {
+        "en": "First payload deployment. Booster and ship splashed down. Not caught.",
+        "nl": "Eerste lading uitgezet. Booster en schip maakten een splashdown. Niet gevangen."
+      },
+      "sources": [
+        {"title": "SpaceX, tenth flight test", "url": "https://www.spacex.com/launches/starship-flight-10/"},
+        {"title": "Reuters, 26 August 2025", "url": "https://www.reuters.com/business/aerospace-defense/spacexs-starship-passes-development-rut-deploys-first-mock-satellites-2025-08-26/"}
+      ]
+    },
+    {
+      "number": 11,
+      "date": "2025-10-13",
+      "booster_catch": false,
+      "ship_catch": false,
+      "payload": {"en": "8 Starlink simulators", "nl": "8 Starlink-simulatoren"},
+      "outcome": {
+        "en": "Simulators deployed. Booster and ship splashed down. Not caught.",
+        "nl": "Simulatoren uitgezet. Booster en schip maakten een splashdown. Niet gevangen."
+      },
+      "sources": [
+        {"title": "SpaceX, eleventh flight test", "url": "https://www.spacex.com/launches/starship-flight-11/"},
+        {"title": "Wikipedia, Starship launch history", "url": "https://en.wikipedia.org/wiki/Starship_(rocket)"}
+      ]
+    },
+    {
+      "number": 12,
+      "date": "2026-05-22",
+      "booster_catch": false,
+      "ship_catch": false,
+      "payload": {"en": "20 simulators and 2 modified Starlink satellites", "nl": "20 simulatoren en 2 aangepaste Starlink-satellieten"},
+      "outcome": {
+        "en": "First V3 flight. Booster hard splashdown. Ship splashed down in the Indian Ocean.",
+        "nl": "Eerste V3-vlucht. Harde splashdown van de booster. Schip splashdown in de Indische Oceaan."
+      },
+      "sources": [
+        {"title": "SpaceX, twelfth flight test", "url": "https://www.spacex.com/launches/starship-flight-12"},
+        {"title": "NASASpaceflight, May 2026", "url": "https://www.nasaspaceflight.com/2026/05/starship-flight-12-v3-follow/"}
+      ]
+    },
+    {
+      "number": 13,
+      "date": "2026-07-24",
+      "booster_catch": false,
+      "ship_catch": false,
+      "payload": {"en": "20 Starlink V3 satellites", "nl": "20 Starlink V3-satellieten"},
+      "outcome": {
+        "en": "Booster hard splashdown. Ship soft splashdown in the Indian Ocean. Not caught.",
+        "nl": "Harde splashdown van de booster. Zachte splashdown van het schip in de Indische Oceaan. Niet gevangen."
+      },
+      "sources": [
+        {"title": "SpaceX, thirteenth flight test", "url": "https://www.spacex.com/launches/starship-flight-13/"},
+        {"title": "MyRGV, 24 July 2026", "url": "https://myrgv.com/alerts-brh/2026/07/24/flight-13-launches-all-mission-goals-met-starship-makes-soft-splashdown/"}
+      ]
+    },
+    {
+      "number": 14,
+      "date": "2026-09-28",
+      "booster_catch": false,
+      "ship_catch": false,
+      "payload": {"en": "26 Starlink V3 satellites", "nl": "26 Starlink V3-satellieten"},
+      "outcome": {
+        "en": "First flight to reach orbit. Booster splashed down in the Gulf. Ship splashed down in the Pacific. Not caught.",
+        "nl": "Eerste vlucht die een baan om de aarde haalde. Booster splashdown in de Golf. Schip splashdown in de Stille Oceaan. Niet gevangen."
+      },
+      "sources": [
+        {"title": "SpaceX, Flight 14", "url": "https://www.spacex.com/launches/starship-flight-14/"},
+        {"title": "Reuters, 28 September 2026", "url": "https://www.reuters.com/business/media-telecom/spacexs-starship-launches-14th-flight-first-headed-orbit-2026-09-28/"}
+      ]
+    },
+    {
+      "number": 15,
+      "date": "2026-11-13",
+      "end_date": "2026-11-14",
+      "booster_catch": false,
+      "ship_catch": true,
+      "payload": {"en": "26 Starlink V3 satellites", "nl": "26 Starlink V3-satellieten"},
+      "outcome": {
+        "en": "First ship catch, after 22.5 hours in orbit. Booster catch aborted. Splashdown in the Gulf.",
+        "nl": "Eerste vangst van het schip, na 22,5 uur in een baan. Vangst van de booster afgeblazen. Splashdown in de Golf."
+      },
+      "sources": [
+        {"title": "SpaceX, Flight 15", "url": "https://www.spacex.com/launches/starship-flight-15/"},
+        {"title": "Space.com, 14 November 2026", "url": "https://www.space.com/news/live/spacex-starship-flight-15-live-updates-nov-14-2026-starship-first-double-landing-attempt"}
+      ]
+    }
+  ]
+}

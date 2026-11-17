@@ -65,6 +65,7 @@ Run: python3 build.py   (needs Pillow: pip install --break-system-packages pillo
 import hashlib
 import html
 import json
+import math
 import re
 import shutil
 from datetime import datetime, timezone
@@ -1074,6 +1075,22 @@ header.hb .pnav>.is-parked{display:none}
 @media (min-width:1100px){
 .eco-flow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
 .eco-join{display:none}
+}
+.eco-orbit{position:relative;overflow:hidden;min-height:640px;margin:0 0 28px;isolation:isolate}
+.eco-sun{position:absolute;z-index:0;top:50%;left:-1180px;width:1800px;height:1800px;transform:translateY(-50%);border-radius:50%;pointer-events:none;background:radial-gradient(circle at 73% 50%, #f7feff 0 1.2%, #8af3ff 4%, #00b4e0 11%, #07506e 26%, #08131c 46%, transparent 62%);box-shadow:inset -40px 0 90px rgba(120,230,255,.3), 0 0 80px rgba(0,180,230,.18);border:1px solid rgba(170,240,255,.45)}
+.eco-sun::after{content:"";position:absolute;inset:11%;border-radius:50%;border:1px solid rgba(160,235,255,.28)}
+.eco-core{position:absolute;z-index:3;left:1.5%;top:50%;transform:translateY(-50%);width:24%;margin:0;text-align:center;font-weight:800;font-size:clamp(1.15rem,2.1vw,1.7rem);line-height:1.12;letter-spacing:-.03em;color:#fff;text-shadow:0 0 10px #d8fbff, 0 0 22px #00c2ea, 0 0 42px rgba(0,160,220,.85);pointer-events:none}
+.eco-arc{position:relative;z-index:2;display:flex;flex-direction:column;gap:12px;margin-left:27%;padding:10px 0}
+.eco-node{position:relative;margin-left:calc(var(--bend) * 1%);width:calc(100% - var(--bend) * 1%)}
+.eco-node::before{content:"";position:absolute;z-index:-1;top:50%;right:calc(100% - 6px);width:calc(28px + var(--bend) * 5.2px);border-top:1px solid rgba(170,230,255,.7);transform:translateY(-50%)}
+.eco-node .eco-cardlink p{font-size:.8rem;line-height:1.35}
+@media (max-width:899.98px){
+.eco-orbit{min-height:0}
+.eco-sun{width:270px;height:270px;left:-176px;top:0;transform:none}
+.eco-core{left:4px;top:92px;width:108px;transform:none;font-size:.98rem}
+.eco-arc{margin:214px 0 0;gap:10px}
+.eco-node{margin-left:calc(4px + var(--bend) * 1.15px);width:auto;margin-right:2px}
+.eco-node::before{display:none}
 }
 @media (min-width:900px){
 header.hb .id{gap:10px}
@@ -3714,7 +3731,7 @@ JOIN_SVG = ('<svg class="eco-join" viewBox="0 0 24 24" aria-hidden="true" focusa
             'stroke-linecap="round" stroke-linejoin="round"/></svg>')
 
 
-def _eco_piece(block, lang, kind):
+def _eco_piece(block, lang, kind, extra_cls="", style=""):
     title = _bi(block.get("title"), lang)
     fact = _bi(block.get("fact"), lang)
     kicker = _bi(block.get("kicker"), lang)
@@ -3730,7 +3747,27 @@ def _eco_piece(block, lang, kind):
     extra = f'<div class="eco-links">{extra}</div>' if extra else ""
     cls = {"layer": "eco-card", "branch": "eco-card", "company": "eco-co",
            "stream": "eco-stream", "callout": "eco-call"}[kind]
-    return f'<div class="{cls} {tone}">{inner}{extra}{_src_links(block.get("sources"))}</div>'
+    style_attr = f' style="{style}"' if style else ""
+    return f'<div class="{cls} {tone}{extra_cls}"{style_attr}>{inner}{extra}{_src_links(block.get("sources"))}</div>'
+
+
+def _orbit_blocks(blocks, lang):
+    """Layers and side companies on one arc around a circle clipped on the left."""
+    n = len(blocks)
+    parts = []
+    for i, block in enumerate(blocks):
+        # -90° to +90°: ends sit against the core, the middle bows out to the right.
+        theta = -math.pi / 2 + math.pi * i / (n - 1)
+        bend = 38 * math.cos(theta)
+        parts.append(_eco_piece(block, lang, "layer", extra_cls=" eco-node", style=f"--bend:{bend:.2f}"))
+    label = "Elon ecosystem" if lang == "en" else "Elon-ecosysteem"
+    return (
+        f'<div class="eco-orbit">'
+        f'<div class="eco-sun" aria-hidden="true"></div>'
+        f'<p class="eco-core">{esc(label)}</p>'
+        f'<div class="eco-arc">{"".join(parts)}</div>'
+        f'</div>'
+    )
 
 
 def ecosystem_page(lang):
@@ -3753,12 +3790,7 @@ def ecosystem_page(lang):
         else:
             inner = f'<div class="eco-stat">{inner}</div>'
         stats.append(f'<div class="eco-bit">{inner}{_src_links(block.get("sources"))}</div>')
-    layers = []
-    for i, block in enumerate(data["layers"]):
-        if i:
-            layers.append(JOIN_SVG)
-        layers.append(_eco_piece(block, lang, "layer"))
-    branches = "".join(_eco_piece(b, lang, "branch") for b in data["branches"])
+    orbit = _orbit_blocks(list(data["layers"]) + list(data["branches"]), lang)
     streams = "".join(_eco_piece(b, lang, "stream") for b in data["streams"])
     companies = "".join(_eco_piece(b, lang, "company") for b in data["companies"])
     calls = "".join(_eco_piece(b, lang, "callout") for b in data["callouts"])
@@ -3774,8 +3806,8 @@ def ecosystem_page(lang):
         f'<li><a href="{esc(s["url"])}" rel="noopener noreferrer" target="_blank">{esc(s["title"])}</a></li>'
         for s in sources)
     heads = {
-        "en": ("The layers", "Beside the chain", "What moves through it", "The companies", "Plans and promises", "Sources"),
-        "nl": ("De lagen", "Naast de keten", "Wat erdoorheen gaat", "De bedrijven", "Plannen en beloftes", "Bronnen"),
+        "en": ("The layers", "What moves through it", "The companies", "Plans and promises", "Sources"),
+        "nl": ("De lagen", "Wat erdoorheen gaat", "De bedrijven", "Plannen en beloftes", "Bronnen"),
     }[lang]
     body = (
         f'{nav}<header class="hubhead"><h1>{esc(title)}</h1>'
@@ -3784,12 +3816,11 @@ def ecosystem_page(lang):
         f'<p class="hubcount">{esc(when)}</p></header>'
         f'<div class="eco-stats">{"".join(stats)}</div>'
         f'<h2 class="eco-h">{esc(heads[0])}</h2>'
-        f'<div class="eco-map"><div class="eco-flow">{"".join(layers)}</div></div>'
-        f'<h2 class="eco-h">{esc(heads[1])}</h2><div class="eco-split">{branches}</div>'
-        f'<h2 class="eco-h">{esc(heads[2])}</h2><div class="eco-split">{streams}</div>'
-        f'<h2 class="eco-h">{esc(heads[3])}</h2><div class="eco-cos">{companies}</div>'
-        f'<h2 class="eco-h">{esc(heads[4])}</h2>{calls}'
-        f'<h2 class="eco-h">{esc(heads[5])}</h2><ul class="eco-sources">{src_list}</ul>'
+        f'{orbit}'
+        f'<h2 class="eco-h">{esc(heads[1])}</h2><div class="eco-split">{streams}</div>'
+        f'<h2 class="eco-h">{esc(heads[2])}</h2><div class="eco-cos">{companies}</div>'
+        f'<h2 class="eco-h">{esc(heads[3])}</h2>{calls}'
+        f'<h2 class="eco-h">{esc(heads[4])}</h2><ul class="eco-sources">{src_list}</ul>'
     )
     desc = intro
     return body, ld, desc

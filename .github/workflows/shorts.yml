@@ -4,7 +4,7 @@ name: Make YouTube videos
 # or by hand from the Actions tab for any article slug.
 on:
   push:
-    branches: [main]
+    branches: [main, "daily/**"]
     paths: ["content/articles/**.json", "video/queue.txt"]
   workflow_dispatch:
     inputs:
@@ -60,29 +60,56 @@ jobs:
             echo "slugs=${{ github.event.inputs.slug }}" >> "$GITHUB_OUTPUT"
             echo "langs=${{ github.event.inputs.langs }}" >> "$GITHUB_OUTPUT"
           else
-            # tools/find_push_articles.py diffs the whole push (before..HEAD), not only
-            # HEAD~1. It lives in its own file: a script at column 0 here ends the YAML
-            # block and the workflow fails before any job starts.
-            found=$(python3 tools/find_push_articles.py)
-            printf '%s\n' "$found" >> "$GITHUB_OUTPUT"
-            langs=en
-            # video/queue.txt: first line "slug [langs]" requests a video on demand
-            if printf '%s\n' "$found" | grep -qx 'queue_in_push=1'; then
-              q=$(grep -v '^#' video/queue.txt | head -1)
-              slugs=$(echo "$q" | awk '{print $1}')
-              l=$(echo "$q" | cut -s -d' ' -f2- | tr ' ' '\n' | grep -v '^--' | xargs); [ -n "$l" ] && langs="$l"
-              echo "$q" | grep -q -- '--full' && echo "full=1" >> "$GITHUB_OUTPUT"
-              echo "$q" | grep -q -- '--upload' && echo "upload=1" >> "$GITHUB_OUTPUT"
-              echo "queue=1" >> "$GITHUB_OUTPUT"
-              python3 tools/queue_story.py "$q" >> "$GITHUB_OUTPUT"
-              echo "slugs=$slugs" >> "$GITHUB_OUTPUT"
+            if [ "${{ github.ref }}" != "refs/heads/main" ]; then
+              # Preview only, off main. Slugs are the article files added or changed in this push.
+              # No longs, no upload, no queue. Photo, YouTube, Buffer and git push steps are gated on main.
+              before="${{ github.event.before }}"
+              if git cat-file -e "${before}^{commit}" 2>/dev/null; then
+                files=$(git diff --name-only --diff-filter=AM "$before" "${{ github.sha }}" -- content/articles | grep '\.json$' || true)
+              else
+                files=$(git diff-tree --root --no-commit-id --name-only -r "${{ github.sha }}" -- content/articles | grep '\.json$' || true)
+              fi
+              PREVIEW_FILES="$files" python3 -c 'import json, os
+          from pathlib import Path
+          slugs, story = [], []
+          for f in os.environ.get("PREVIEW_FILES", "").split():
+              p = Path(f)
+              if not p.is_file():
+                  continue
+              a = json.loads(p.read_text(encoding="utf-8"))
+              s = a.get("slug") or ""
+              sh = a.get("short") or {}
+              if not s or not sh:
+                  continue
+              slugs.append(s)
+              if sh.get("story"):
+                  story.append(s)
+          open(os.environ["GITHUB_OUTPUT"], "a").write("slugs=" + " ".join(slugs) + "\nstory=" + " ".join(story) + "\nlangs=en\npreview=1\n")'
+            else
+              # tools/find_push_articles.py diffs the whole push (before..HEAD), not only
+              # HEAD~1. It lives in its own file: a script at column 0 here ends the YAML
+              # block and the workflow fails before any job starts.
+              found=$(python3 tools/find_push_articles.py)
+              printf '%s\n' "$found" >> "$GITHUB_OUTPUT"
+              langs=en
+              # video/queue.txt: first line "slug [langs]" requests a video on demand
+              if printf '%s\n' "$found" | grep -qx 'queue_in_push=1'; then
+                q=$(grep -v '^#' video/queue.txt | head -1)
+                slugs=$(echo "$q" | awk '{print $1}')
+                l=$(echo "$q" | cut -s -d' ' -f2- | tr ' ' '\n' | grep -v '^--' | xargs); [ -n "$l" ] && langs="$l"
+                echo "$q" | grep -q -- '--full' && echo "full=1" >> "$GITHUB_OUTPUT"
+                echo "$q" | grep -q -- '--upload' && echo "upload=1" >> "$GITHUB_OUTPUT"
+                echo "queue=1" >> "$GITHUB_OUTPUT"
+                python3 tools/queue_story.py "$q" >> "$GITHUB_OUTPUT"
+                echo "slugs=$slugs" >> "$GITHUB_OUTPUT"
+              fi
+              echo "langs=$langs" >> "$GITHUB_OUTPUT"
+              # ops/videos-paused: articles still get their photos, but no Shorts or long videos are made or posted
+              if [ -f ops/videos-paused ] && ! printf '%s\n' "$found" | grep -qx 'queue_in_push=1'; then echo "paused=1" >> "$GITHUB_OUTPUT"; fi
             fi
-            echo "langs=$langs" >> "$GITHUB_OUTPUT"
-            # ops/videos-paused: articles still get their photos, but no Shorts or long videos are made or posted
-            if [ -f ops/videos-paused ] && ! printf '%s\n' "$found" | grep -qx 'queue_in_push=1'; then echo "paused=1" >> "$GITHUB_OUTPUT"; fi
           fi
       - name: Generate article photos (Nano Banana) and publish them first
-        if: steps.find.outputs.slugs != '' && steps.find.outputs.queue != '1' && github.event_name != 'workflow_dispatch'
+        if: github.ref == 'refs/heads/main' && steps.find.outputs.slugs != '' && steps.find.outputs.queue != '1' && github.event_name != 'workflow_dispatch'
         continue-on-error: true
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
@@ -99,7 +126,7 @@ jobs:
           git commit -qm "Photo: new image for ${{ steps.find.outputs.slugs }}"
           for i in 1 2 3; do git pull --rebase -q origin main && git push -q origin HEAD:main && exit 0; sleep 10; done
       - name: Add real, freely licensed news photos and publish them first
-        if: steps.find.outputs.slugs != '' && steps.find.outputs.queue != '1' && github.event_name != 'workflow_dispatch'
+        if: github.ref == 'refs/heads/main' && steps.find.outputs.slugs != '' && steps.find.outputs.queue != '1' && github.event_name != 'workflow_dispatch'
         continue-on-error: true
         run: |
           python3 tools/real_photos.py ${{ steps.find.outputs.slugs }}
@@ -137,7 +164,7 @@ jobs:
           done
           exit $fail
       - name: Upload Shorts to YouTube
-        if: steps.find.outputs.slugs != '' && steps.find.outputs.preview != '1' && steps.find.outputs.full != '1' && (steps.find.outputs.queue != '1' || steps.find.outputs.qstory == '1') && (github.event_name != 'workflow_dispatch' || github.event.inputs.upload == 'yes' || steps.find.outputs.qstory == '1') && steps.find.outputs.paused != '1'
+        if: github.ref == 'refs/heads/main' && steps.find.outputs.slugs != '' && steps.find.outputs.preview != '1' && steps.find.outputs.full != '1' && (steps.find.outputs.queue != '1' || steps.find.outputs.qstory == '1') && (github.event_name != 'workflow_dispatch' || github.event.inputs.upload == 'yes' || steps.find.outputs.qstory == '1') && steps.find.outputs.paused != '1'
         continue-on-error: true
         env:
           YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
@@ -182,14 +209,14 @@ jobs:
           done
           echo "### Story Short(s) published: $(cat $RUNNER_TEMP/sr)." >> "$GITHUB_STEP_SUMMARY"
       - name: Keep story Shorts for the post after review
-        if: steps.find.outputs.story != '' && steps.find.outputs.preview != '1' && steps.find.outputs.paused != '1'
+        if: github.ref == 'refs/heads/main' && steps.find.outputs.story != '' && steps.find.outputs.preview != '1' && steps.find.outputs.paused != '1'
         uses: actions/upload-artifact@v4
         with:
           name: story-${{ steps.find.outputs.story }}
           path: video/out/*-en-short.mp4
           retention-days: 14
       - name: Post Shorts to TikTok, Instagram and Facebook (via Buffer)
-        if: steps.find.outputs.slugs != '' && steps.find.outputs.preview != '1' && steps.find.outputs.full != '1' && steps.find.outputs.queue != '1' && github.event_name != 'workflow_dispatch' && steps.find.outputs.paused != '1'
+        if: github.ref == 'refs/heads/main' && steps.find.outputs.slugs != '' && steps.find.outputs.preview != '1' && steps.find.outputs.full != '1' && steps.find.outputs.queue != '1' && github.event_name != 'workflow_dispatch' && steps.find.outputs.paused != '1'
         continue-on-error: true
         env:
           GH_TOKEN: ${{ github.token }}
@@ -197,7 +224,7 @@ jobs:
         run: |  # story Shorts are posted after the review instead (tools/story_approve.py)
           for f in video/out/*-en-short.mp4; do [ -f "$f" ] && [ ! -f "${f%.mp4}.story" ] && tools/tiktok_publish.sh "$f"; done; exit 0
       - name: Make and upload long videos
-        if: steps.find.outputs.longs != '' && steps.find.outputs.queue != '1' && github.event_name != 'workflow_dispatch' && steps.find.outputs.paused != '1'
+        if: github.ref == 'refs/heads/main' && steps.find.outputs.longs != '' && steps.find.outputs.queue != '1' && github.event_name != 'workflow_dispatch' && steps.find.outputs.paused != '1'
         continue-on-error: true
         env:
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
@@ -217,7 +244,7 @@ jobs:
           done
           exit $fail
       - name: Upload requested queue video to YouTube
-        if: steps.find.outputs.queue == '1' && steps.find.outputs.preview != '1' && steps.find.outputs.upload == '1' && steps.find.outputs.qstory != '1'
+        if: github.ref == 'refs/heads/main' && steps.find.outputs.queue == '1' && steps.find.outputs.preview != '1' && steps.find.outputs.upload == '1' && steps.find.outputs.qstory != '1'
         env:
           YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
           YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
@@ -226,7 +253,7 @@ jobs:
         run: |
           for f in video/out/*.mp4; do [ -f "$f" ] && python3 video/upload.py "$f" "$(basename "$f" | sed -E 's/.*-(en|nl)-(full|short)\.mp4/\1/')"; done
       - name: Put the new videos on the site
-        if: always() && steps.find.outputs.slugs != '' && steps.find.outputs.preview != '1' && steps.find.outputs.paused != '1'
+        if: always() && github.ref == 'refs/heads/main' && steps.find.outputs.slugs != '' && steps.find.outputs.preview != '1' && steps.find.outputs.paused != '1'
         run: |
           ls video/out/*-short-report.txt >/dev/null 2>&1 || { [ -z "$(git status --porcelain content ops/short-uploads.json)" ] && exit 0; }
           git config user.name "TrendingTesla bot"
@@ -260,7 +287,7 @@ jobs:
             video/out/*.txt
           retention-days: 14
       - name: Upload videos
-        if: always() && steps.find.outputs.slugs != '' && steps.find.outputs.preview != '1' && steps.find.outputs.paused != '1'
+        if: always() && github.ref == 'refs/heads/main' && steps.find.outputs.slugs != '' && steps.find.outputs.preview != '1' && steps.find.outputs.paused != '1'
         uses: actions/upload-artifact@v5
         with:
           name: shorts-${{ github.run_number }}

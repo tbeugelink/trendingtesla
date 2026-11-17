@@ -1092,7 +1092,7 @@ header.hb .pnav>.is-parked{display:none}
 .eco-core{position:absolute;z-index:3;left:calc(var(--cl)*1%);top:50%;transform:translateY(-50%);width:calc(var(--cw)*1%);margin:0;text-align:center;font-weight:800;font-size:1.05rem;line-height:1.12;letter-spacing:-.03em;color:#fff;text-shadow:0 0 8px #d8fbff, 0 0 18px #00c2ea;pointer-events:none}
 .eco-rays{position:absolute;inset:0;z-index:1;width:100%;height:100%;pointer-events:none;display:none}
 .eco-arc{position:absolute;inset:0;z-index:2;margin:0}
-.eco-node{position:absolute;left:var(--bx);top:var(--by);width:150px;transform:translateY(-50%);margin:0;padding:6px 8px 5px}
+.eco-node{position:absolute;left:var(--bx);top:var(--by);width:170px;transform:translateY(-50%);margin:0;padding:6px 8px 5px}
 .eco-node .eco-k{display:block;font-size:.92rem;font-weight:800;line-height:1.15;margin:0;letter-spacing:.04em}
 .eco-node ul{margin:4px 0 0;padding:0 0 0 1.05em}
 .eco-node li{font-size:.68rem;line-height:1.22}
@@ -1104,8 +1104,8 @@ a.eco-node.link:hover,a.eco-node.link:focus-visible,a.eco-node.boring:hover,a.ec
 .eco-node li{font-size:.62rem;line-height:1.2}
 .eco-core{font-size:.84rem}
 }
+@media (min-width:1100px){header.hb .id{gap:55px}}
 @media (min-width:900px){
-header.hb .id{gap:10px}
 header.hb .pn,header.hb .mdrop>button.pn{font-size:14px;padding:6px 8px}
 }
 """
@@ -3709,37 +3709,26 @@ def _count_label(n, lang):
     return "1 article" if n == 1 else f"{n} articles"
 
 
-def topic_hub(spec, items, lang):
-    """Intro plus the articles that match. An empty hub says coverage is starting."""
-    L = LANGS[lang]
-    title = _bi(spec["title"], lang)
-    intro = _bi(spec["intro"], lang)
-    nav, ld = crumbs(lang, [(title, spec["path"])])
-    how = ("Listed from topic tags and from keywords in the headline."
-           if lang == "en" else
-           "Opgebouwd uit onderwerptags en uit trefwoorden in de kop.")
-    link = (f'<p class="hubcount"><a href="{url(lang, ecosystem_path(lang))}">'
-            + ("See the ecosystem map" if lang == "en" else "Zie de kaart van het ecosysteem")
-            + "</a>")
-    if spec.get("key") == "spacex":
-        link += (' · <a href="' + url(lang, "starship/") + '">'
-                 + ("Starship tracker" if lang == "en" else "Starship-tracker") + "</a>")
-    link += "</p>"
-    head = (f'{nav}<header class="hubhead"><h1>{esc(title)}</h1>'
-            f'<p class="byline">{esc(L["byline"])}</p>'
-            f'<p class="lead">{esc(intro)}</p>{link}</header>')
+def _coverage_note(lang):
+    return "Coverage is starting." if lang == "en" else "De berichtgeving begint."
+
+
+def _article_list(items, lang, title, path):
+    """Breadcrumb, a hidden page title, then the lead photo and the other articles."""
+    nav, ld = crumbs(lang, [(title, path)])
+    hidden = f'<h1 class="visually-hidden">{esc(title)}</h1>'
     if not items:
-        note = ("Coverage is starting. Articles will show up here as they are published. "
-                "Nothing is filled in ahead of that."
-                if lang == "en" else
-                "De berichtgeving begint. Artikelen verschijnen hier zodra ze zijn gepubliceerd. "
-                "Er wordt niets vooraf ingevuld.")
-        return head + f'<p class="hubnote">{esc(note)}</p>', ld, intro
+        return f'{nav}{hidden}<p class="hubnote">{esc(_coverage_note(lang))}</p>', ld
     feature = home_lead(items[0], lang, title_tag="h2")
     rest = hub_cards(items[1:], lang) if len(items) > 1 else ""
-    body = (head + f'<h2 class="hubh">{esc(L["articles"])}</h2>'
-            f'<p class="hubcount">{esc(_count_label(len(items), lang))}. {esc(how)}</p>'
-            + feature + rest)
+    return f'{nav}{hidden}{feature}{rest}', ld
+
+
+def topic_hub(spec, items, lang):
+    """Article list for a topic. The intro stays in the meta description only."""
+    title = _bi(spec["title"], lang)
+    intro = _bi(spec["intro"], lang)
+    body, ld = _article_list(items, lang, title, spec["path"])
     return body, ld, intro
 
 
@@ -3818,7 +3807,7 @@ def _box_stack(blocks):
     return heights
 
 
-def _orbit_frame(width, height, n, gap=32, box_w=150, margin=12, y_pad=72, stub=28, hug=None):
+def _orbit_frame(width, height, n, gap=32, box_w=170, margin=12, y_pad=72, stub=28, hug=None):
     """Circle 30% smaller than the old 1280px disk, with about 40% of it in view.
     Box anchors sit on a larger circle, the same distance from the edge.
     hug is a list of box heights: the disk then grows to that stack and the
@@ -3833,9 +3822,10 @@ def _orbit_frame(width, height, n, gap=32, box_w=150, margin=12, y_pad=72, stub=
             y += item_h + vgap
         y -= vgap
         height = y + pad
-        radius = height / 2
+        # Air above and below so the circle's top and bottom stay inside the map.
+        radius = (height - 40) / 2
         cy = height / 2
-        visible = min(0.4 * height, width - margin - gap - box_w)
+        visible = min(0.4 * (radius * 2), width - margin - gap - box_w)
         cx = visible - radius
         reach = radius + gap
         pts = []
@@ -3845,7 +3835,7 @@ def _orbit_frame(width, height, n, gap=32, box_w=150, margin=12, y_pad=72, stub=
         core_w = 64 if width < 480 else 78
         core_left = 2
         return {
-            "d": height, "visible": visible, "cx": cx, "cy": cy, "pts": pts,
+            "d": radius * 2, "visible": visible, "cx": cx, "cy": cy, "pts": pts,
             "core_left": core_left, "core_w": core_w, "core_right": core_left + core_w,
             "w": width, "h": height, "stub": stub,
         }
@@ -3854,6 +3844,8 @@ def _orbit_frame(width, height, n, gap=32, box_w=150, margin=12, y_pad=72, stub=
         diameter = target
     else:
         diameter = (width - margin - gap - box_w) / 0.4
+    # The whole disk, including its top and bottom, stays inside the map.
+    diameter = min(diameter, height - 40)
     radius = diameter / 2
     visible = 0.4 * diameter
     cx = visible - radius
@@ -4138,48 +4130,10 @@ def _layer_articles(layer, arts):
 
 
 def layer_page(layer, arts, lang):
-    """Coloured header, a short intro, sourced figures, and the latest articles."""
-    L = LANGS[lang]
-    data = load_data("ecosystem.json")
+    """Hidden title, then the lead photo and the other articles."""
     title = _bi(layer["title"], lang)
-    kicker = _bi(layer["kicker"], lang)
-    nav, ld = crumbs(lang, [(title, layer["path"])])
-    paras = "".join(f"<p>{esc(p)}</p>" for p in layer["intro"][lang])
-    back = ("See the ecosystem map" if lang == "en" else "Zie de kaart van het ecosysteem")
-    links = f'<a href="{url(lang, ecosystem_path(lang))}">{esc(back)}</a>'
-    for link in layer.get("links") or []:
-        links += f' · <a href="{url(lang, link["href"])}">{esc(_bi(link, lang))}</a>'
-    by_id = {s.get("id"): s for s in data.get("stats") or []}
-    cards = [_stat_card(by_id[sid], lang, layer["path"]) for sid in layer.get("stats") or [] if sid in by_id]
-    figures = ""
-    if cards:
-        head = "Key figures" if lang == "en" else "Kerncijfers"
-        figures = f'<h2 class="eco-h">{esc(head)}</h2><div class="eco-stats">{"".join(cards)}</div>'
     items = _layer_articles(layer, arts)
-    how = ("Listed from topic tags and from keywords in the headline."
-           if lang == "en" else
-           "Opgebouwd uit onderwerptags en uit trefwoorden in de kop.")
-    if not items:
-        note = ("Coverage is starting. Articles will show up here as they are published. "
-                "Nothing is filled in ahead of that."
-                if lang == "en" else
-                "De berichtgeving begint. Artikelen verschijnen hier zodra ze zijn gepubliceerd. "
-                "Er wordt niets vooraf ingevuld.")
-        articles = f'<p class="hubnote">{esc(note)}</p>'
-    else:
-        feature = home_lead(items[0], lang, title_tag="h2")
-        rest = hub_cards(items[1:], lang) if len(items) > 1 else ""
-        articles = (f'<h2 class="hubh">{esc(L["articles"])}</h2>'
-                    f'<p class="hubcount">{esc(_count_label(len(items), lang))}. {esc(how)}</p>'
-                    + feature + rest)
-    body = (
-        f'{nav}<header class="layerhead {layer["tone"]}">'
-        f'<span class="eco-k">{esc(kicker)}</span><h1>{esc(title)}</h1></header>'
-        f'<p class="byline">{esc(L["byline"])}</p>'
-        f'<div class="layerintro">{paras}</div>'
-        f'<p class="hubcount">{links}</p>'
-        f'{figures}{articles}'
-    )
+    body, ld = _article_list(items, lang, title, layer["path"])
     desc = layer["intro"][lang][0]
     return body, ld, desc, items
 

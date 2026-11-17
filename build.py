@@ -1022,14 +1022,14 @@ header.hb .pnav>.is-parked{display:none}
 .eco-links{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
 .eco-links a,.eco-src{display:inline-block;font-size:.75rem;font-weight:800;text-decoration:none;border-radius:999px;padding:3px 8px;border:1px solid currentColor}
 .eco-src{margin:8px 8px 0 0;color:#9ad7ff}
-.eco-card.energy{background:#3a2204;border-color:#ffb020;color:#ffc14d}
-.eco-card.compute{background:#0c1c3d;border-color:#3d7eff;color:#9cbcff}
-.eco-card.ai{background:#04303c;border-color:#19e3ff;color:#8eecff}
-.eco-card.bodies{background:#3a0810;border-color:#ff2d4a;color:#ff9aa8}
-.eco-card.link{background:#043018;border-color:#1dff6a;color:#9dffc4}
-.eco-card.mars{background:#3a1404;border-color:#ff7a1a;color:#ffc08a}
-.eco-card.neural,.eco-co.neural{background:#3a0830;border-color:#ff2bd6;color:#ffb0ea}
-.eco-card.boring,.eco-co.boring{background:#04302c;border-color:#14e0c0;color:#8dffef}
+.eco-card.energy{background:#3a0812;border-color:#e31937;color:#ff8a9b}
+.eco-card.compute{background:#063216;border-color:#4cd964;color:#b8ffc6}
+.eco-card.ai{background:#1a0c38;border-color:#8b5cf6;color:#d4c4ff}
+.eco-card.bodies{background:#3a2c04;border-color:#ffc400;color:#ffe28a}
+.eco-card.link{background:#043040;border-color:#00d1ff;color:#a6f4ff}
+.eco-card.mars{background:#3a1400;border-color:#ff7a00;color:#ffc48a}
+.eco-card.neural,.eco-co.neural{background:#3a0824;border-color:#ff2d95;color:#ffb3d6}
+.eco-card.boring,.eco-co.boring{background:#0c1840;border-color:#2f6bff;color:#b3c8ff}
 .eco-stats{display:grid;grid-template-columns:1fr;gap:8px;margin:0 0 16px}
 .eco-stat{display:block;text-decoration:none;color:inherit;background:#12161e;border:1px solid #3a4a60;border-radius:14px;padding:10px 12px}
 .eco-stat b{display:block;font-size:1.25rem;letter-spacing:-.02em}
@@ -1088,6 +1088,7 @@ header.hb .pnav>.is-parked{display:none}
 .eco-node strong{display:block;color:#fff;font-size:.8rem;line-height:1.15}
 a.eco-node{display:block;text-decoration:none;color:inherit}
 a.eco-node:hover,a.eco-node:focus-visible{border-color:var(--blue);box-shadow:0 0 0 2px var(--blue);outline:none}
+a.eco-node.link:hover,a.eco-node.link:focus-visible,a.eco-node.boring:hover,a.eco-node.boring:focus-visible{border-color:#fff;box-shadow:0 0 0 2px #fff}
 .eco-node p{font-size:.68rem;line-height:1.25;margin:2px 0 0;color:#d5deea}
 @media (max-width:899.98px){
 .eco-orbit{height:980px}

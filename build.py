@@ -1022,14 +1022,19 @@ header.hb .pnav>.is-parked{display:none}
 .eco-links{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
 .eco-links a,.eco-src{display:inline-block;font-size:.75rem;font-weight:800;text-decoration:none;border-radius:999px;padding:3px 8px;border:1px solid currentColor}
 .eco-src{margin:8px 8px 0 0;color:#9ad7ff}
-.eco-card.energy{background:#3a0812;border-color:#e31937;color:#ff8a9b}
-.eco-card.compute{background:#063216;border-color:#4cd964;color:#b8ffc6}
-.eco-card.ai{background:#1a0c38;border-color:#8b5cf6;color:#d4c4ff}
-.eco-card.bodies{background:#3a2c04;border-color:#ffc400;color:#ffe28a}
-.eco-card.link{background:#043040;border-color:#00d1ff;color:#a6f4ff}
-.eco-card.mars{background:#3a1400;border-color:#ff7a00;color:#ffc48a}
-.eco-card.neural,.eco-co.neural{background:#3a0824;border-color:#ff2d95;color:#ffb3d6}
-.eco-card.boring,.eco-co.boring{background:#0c1840;border-color:#2f6bff;color:#b3c8ff}
+.layerhead{border:1px solid;border-radius:16px;padding:14px 16px 12px;margin:0 0 12px}
+.layerhead h1{color:#fff;margin:2px 0 0}
+.layerhead .eco-k{margin:0 0 4px}
+.eco-card.energy,.layerhead.energy{background:#3a0812;border-color:#e31937;color:#ff8a9b}
+.eco-card.compute,.layerhead.compute{background:#063216;border-color:#4cd964;color:#b8ffc6}
+.eco-card.ai,.layerhead.ai{background:#1a0c38;border-color:#8b5cf6;color:#d4c4ff}
+.eco-card.bodies,.layerhead.bodies{background:#3a2c04;border-color:#ffc400;color:#ffe28a}
+.eco-card.link,.layerhead.link{background:#043040;border-color:#00d1ff;color:#a6f4ff}
+.eco-card.mars,.layerhead.mars{background:#3a1400;border-color:#ff7a00;color:#ffc48a}
+.eco-card.neural,.layerhead.neural,.eco-co.neural{background:#3a0824;border-color:#ff2d95;color:#ffb3d6}
+.eco-card.boring,.layerhead.boring,.eco-co.boring{background:#0c1840;border-color:#2f6bff;color:#b3c8ff}
+.hubhead+.eco-h{margin-top:2px}
+.layerintro p{margin:0 0 10px;line-height:1.5;color:var(--muted)}
 .eco-stats{display:grid;grid-template-columns:1fr;gap:8px;margin:0 0 16px}
 .eco-stat{display:block;text-decoration:none;color:inherit;background:#12161e;border:1px solid #3a4a60;border-radius:14px;padding:10px 12px}
 .eco-stat b{display:block;font-size:1.25rem;letter-spacing:-.02em}
@@ -2787,13 +2792,13 @@ def consent_bar(lang):
 
 
 def nav_current(active):
-    if active in ("tesla", "models", "fsd", "optimus"):
+    if active in ("tesla", "models", "fsd", "optimus", "tesla-energy", "cars-robots"):
         return "tesla"
-    if active in ("spacex", "starship"):
+    if active in ("spacex", "starship", "starship-falcon"):
         return "spacex"
     if active == "starlink":
         return "starlink"
-    if active in ("spacexsi", "xai"):
+    if active in ("spacexsi", "xai", "compute"):
         return "spacexsi"
     if active in ("neuralink", "robotaxi", "agi", "ecosystem"):
         return active
@@ -3847,32 +3852,250 @@ def _orbit_blocks(blocks, lang):
     )
 
 
+def _stat_card(block, lang, self_path=""):
+    """One sourced figure, with its source chips. A link is omitted when it points at this page."""
+    value = esc(_bi(block["value"], lang))
+    label = esc(_bi(block["label"], lang))
+    detail = esc(_bi(block["detail"], lang))
+    inner = f'<b>{value}</b><span>{label}</span><small>{detail}</small>'
+    href = block.get("href") or ""
+    if href and href != self_path:
+        inner = f'<a class="eco-stat" href="{url(lang, href)}">{inner}</a>'
+    else:
+        inner = f'<div class="eco-stat">{inner}</div>'
+    return f'<div class="eco-bit">{inner}{_src_links(block.get("sources"))}</div>'
+
+
+# One landing page per map box. Paths that already exist as hubs are upgraded in place.
+LAYERS = [
+    {
+        "key": "tesla-energy", "path": "tesla-energy/", "tone": "energy", "nav": "tesla-energy",
+        "kicker": {"en": "1 · Energy", "nl": "1 · Energie"},
+        "title": {"en": "Tesla Energy", "nl": "Tesla Energy"},
+        "stats": [],
+        "articles": {"categories": ["energy"], "keywords": ["megapack", "powerwall", "megafactory", "tesla energy"]},
+        "links": [
+            {"en": "Tesla", "nl": "Tesla", "href": "tesla/"},
+            {"en": "Energy", "nl": "Energie", "href": "category/energy/"},
+        ],
+        "intro": {
+            "en": [
+                "Tesla Energy stores electricity for the cars, the factories and the AI datacenters. Megapacks and the other grid products belong to Tesla, which stays a separate public company. The power kept here is what lets the compute layer run.",
+                "On the ecosystem map this is the first layer: energy feeds compute. This page follows the reporting already tagged as energy.",
+            ],
+            "nl": [
+                "Tesla Energy slaat stroom op voor de auto's, de fabrieken en de AI-datacenters. Megapacks en de andere netproducten horen bij Tesla, dat een zelfstandig beursgenoteerd bedrijf blijft. De stroom die hier wordt bewaard, laat de rekenlaag draaien.",
+                "Op de kaart van het ecosysteem is dit de eerste laag: energie voedt rekenkracht. Deze pagina volgt de berichtgeving die al als energie is getagd.",
+            ],
+        },
+    },
+    {
+        "key": "compute", "path": "compute/", "tone": "compute", "nav": "compute",
+        "kicker": {"en": "2 · Compute", "nl": "2 · Rekenkracht"},
+        "title": {"en": "SpaceXSI clusters", "nl": "SpaceXSI-clusters"},
+        "stats": ["compute"],
+        "articles": {"categories": [], "keywords": ["colossus", "terafab"]},
+        "links": [
+            {"en": "Grok, Cursor and X", "nl": "Grok, Cursor en X", "href": "spacexsi/"},
+        ],
+        "intro": {
+            "en": [
+                "The SpaceXSI clusters are the chips and the halls that train the models and keep them running. This is the compute layer between energy and the models: power comes in, and trained systems go on to Grok, Cursor and X. Terafab is a plan for a chip plant, not a factory that is already shipping.",
+                "The figures below are only the ones a filing states. The models themselves are on the Grok, Cursor and X page.",
+            ],
+            "nl": [
+                "De clusters van SpaceXSI zijn de chips en de hallen die de modellen trainen en laten draaien. Dit is de rekenlaag tussen energie en de modellen: stroom komt binnen, en getrainde systemen gaan door naar Grok, Cursor en X. Terafab is een plan voor een chipfabriek, geen fabriek die al levert.",
+                "De cijfers hieronder staan er alleen als een filing ze noemt. De modellen zelf staan op de pagina van Grok, Cursor en X.",
+            ],
+        },
+    },
+    {
+        "key": "spacexsi", "path": "spacexsi/", "tone": "ai", "nav": "spacexsi", "hub": "spacexsi",
+        "kicker": {"en": "3 · Superintelligence", "nl": "3 · Superintelligentie"},
+        "title": {"en": "Grok, Cursor and X", "nl": "Grok, Cursor en X"},
+        "stats": [],
+        "links": [
+            {"en": "SpaceXSI clusters", "nl": "SpaceXSI-clusters", "href": "compute/"},
+        ],
+        "intro": {
+            "en": [
+                "Grok, Cursor and X are the models, the tools and the live network on top of the clusters. Grok is the model, Cursor is the coding tool, and X is the public network the models can read. They sit in the SpaceXSI part of the ecosystem and are fed by the compute layer.",
+                "This page collects the reporting on those products. The clusters have their own page.",
+            ],
+            "nl": [
+                "Grok, Cursor en X zijn de modellen, de hulpmiddelen en het live netwerk boven op de clusters. Grok is het model, Cursor is het programmeergereedschap, en X is het openbare netwerk dat de modellen kunnen lezen. Ze horen bij het SpaceXSI-deel van het ecosysteem en worden gevoed door de rekenlaag.",
+                "Deze pagina verzamelt de berichtgeving over die producten. De clusters hebben een eigen pagina.",
+            ],
+        },
+    },
+    {
+        "key": "cars-robots", "path": "cars-robots/", "tone": "bodies", "nav": "cars-robots",
+        "kicker": {"en": "4 · Cars and robots", "nl": "4 · Auto's en robots"},
+        "title": {"en": "FSD, Robotaxi, Optimus", "nl": "FSD, Robotaxi, Optimus"},
+        "stats": ["deliveries"],
+        "articles": {
+            "categories": ["fsd", "robotaxi", "optimus"],
+            "keywords": ["fsd", "full self-driving", "full self driving", "robotaxi", "cybercab", "optimus"],
+        },
+        "links": [
+            {"en": "FSD", "nl": "FSD", "href": "fsd/"},
+            {"en": "Robotaxi", "nl": "Robotaxi", "href": "robotaxi/"},
+            {"en": "Optimus", "nl": "Optimus", "href": "optimus/"},
+        ],
+        "intro": {
+            "en": [
+                "FSD, Robotaxi and Optimus carry the AI out of the data centre and into the road and the factory. FSD is supervised assistance in Tesla cars. Robotaxi and Cybercab are the ride service and the purpose-built car. Optimus is the humanoid robot.",
+                "Together they are the cars-and-robots layer on the map. Each of the three has its own page, linked below.",
+            ],
+            "nl": [
+                "FSD, Robotaxi en Optimus brengen de AI uit het datacenter naar de weg en de fabriek. FSD is begeleide rijhulp in Tesla-auto's. Robotaxi en Cybercab zijn de ritdienst en de auto die ervoor is gebouwd. Optimus is de humanoïde robot.",
+                "Samen zijn ze de laag van auto's en robots op de kaart. Elk van de drie heeft een eigen pagina, hieronder gelinkt.",
+            ],
+        },
+    },
+    {
+        "key": "starlink", "path": "starlink/", "tone": "link", "nav": "starlink", "hub": "starlink",
+        "kicker": {"en": "5 · Connection", "nl": "5 · Verbinding"},
+        "title": {"en": "Starlink", "nl": "Starlink"},
+        "stats": ["starlink"],
+        "links": [
+            {"en": "SpaceX", "nl": "SpaceX", "href": "spacex/"},
+        ],
+        "intro": {
+            "en": [
+                "Starlink is the satellite-internet layer. Dishes on the ground talk to a constellation that reaches places cables do not. The same network is part of the long-term plan for the way to Mars, which is why it sits between the cars and the rockets on the map.",
+                "This page follows the consumer and business service. Starshield is mentioned only when a public record exists.",
+            ],
+            "nl": [
+                "Starlink is de laag van satellietinternet. Schotels op de grond praten met een constellatie die plaatsen bereikt waar geen kabel ligt. Hetzelfde netwerk hoort bij het plan op lange termijn voor de weg naar Mars, en daarom staat het op de kaart tussen de auto's en de raketten.",
+                "Deze pagina volgt de dienst voor consumenten en bedrijven. Starshield komt alleen aan bod als er een openbaar stuk over bestaat.",
+            ],
+        },
+    },
+    {
+        "key": "starship-falcon", "path": "starship-falcon/", "tone": "mars", "nav": "starship-falcon",
+        "kicker": {"en": "6 · Space and Mars", "nl": "6 · Ruimte en Mars"},
+        "title": {"en": "Starship and Falcon", "nl": "Starship en Falcon"},
+        "stats": ["flight15"],
+        "articles": {"categories": [], "keywords": ["starship", "falcon", "super heavy"]},
+        "links": [
+            {"en": "Starship tracker", "nl": "Starship-tracker", "href": "starship/"},
+            {"en": "SpaceX", "nl": "SpaceX", "href": "spacex/"},
+        ],
+        "intro": {
+            "en": [
+                "Starship and Falcon are the rockets. Falcon flies the launches of today. Starship is the larger vehicle, still learning to reach orbit and to be caught, and Mars stays the long-term aim rather than a scheduled date.",
+                "This is the layer where the ecosystem leaves Earth. The flight-by-flight record is the Starship tracker, and the company page is SpaceX.",
+            ],
+            "nl": [
+                "Starship en Falcon zijn de raketten. Falcon vliegt de lanceringen van nu. Starship is het grotere voertuig, dat nog leert een baan te halen en gevangen te worden, en Mars blijft het doel op termijn en geen ingeplande datum.",
+                "Dit is de laag waar het ecosysteem de aarde verlaat. Het vlucht-voor-vluchtverslag is de Starship-tracker, en de bedrijfspagina is SpaceX.",
+            ],
+        },
+    },
+    {
+        "key": "neuralink", "path": "neuralink/", "tone": "neural", "nav": "neuralink", "hub": "neuralink",
+        "kicker": {"en": "Human–AI bridge", "nl": "Brug mens–AI"},
+        "title": {"en": "Neuralink", "nl": "Neuralink"},
+        "stats": ["neuralink"],
+        "links": [],
+        "intro": {
+            "en": [
+                "Neuralink is a bridge from a person to a computer. The work is an implant that can move a cursor, plus studies aimed at speech and at sight. It sits beside the main stack, as its own company, rather than inside energy or the rockets.",
+                "Articles will show up here as they are published. Nothing is written in ahead of that.",
+            ],
+            "nl": [
+                "Neuralink is een brug van een mens naar een computer. Het werk is een implantaat dat een cursor kan bewegen, plus studies gericht op spraak en op zicht. Het staat naast de hoofdstapel, als eigen bedrijf, en niet in de energielaag of bij de raketten.",
+                "Artikelen verschijnen hier zodra ze zijn gepubliceerd. Er wordt niets vooraf ingevuld.",
+            ],
+        },
+    },
+    {
+        "key": "boring", "path": "boring/", "tone": "boring", "nav": "boring", "hub": "boring",
+        "kicker": {"en": "Tunnels", "nl": "Tunnels"},
+        "title": {"en": "The Boring Company", "nl": "The Boring Company"},
+        "stats": [],
+        "links": [],
+        "intro": {
+            "en": [
+                "The Boring Company digs tunnels and runs Loop transit, often with Tesla vehicles. It is a separate company, drawn next to the main stack on the map. The public projects include Vegas, Nashville, Dubai and the tunnel at Gigafactory Texas.",
+                "Passenger figures appear on this page only when the company or a local authority publishes them.",
+            ],
+            "nl": [
+                "The Boring Company graaft tunnels en rijdt Loop-vervoer, vaak met Tesla-voertuigen. Het is een apart bedrijf, naast de hoofdstapel op de kaart getekend. De openbare projecten zijn Vegas, Nashville, Dubai en de tunnel bij Gigafactory Texas.",
+                "Reizigerscijfers staan op deze pagina alleen als het bedrijf of een lokale overheid ze publiceert.",
+            ],
+        },
+    },
+]
+
+
+def _layer_articles(layer, arts):
+    if layer.get("hub"):
+        spec = next(h for h in HUBS if h["key"] == layer["hub"])
+        return hub_articles(spec, arts)
+    return hub_articles(layer.get("articles") or {}, arts)
+
+
+def layer_page(layer, arts, lang):
+    """Coloured header, a short intro, sourced figures, and the latest articles."""
+    L = LANGS[lang]
+    data = load_data("ecosystem.json")
+    title = _bi(layer["title"], lang)
+    kicker = _bi(layer["kicker"], lang)
+    nav, ld = crumbs(lang, [(title, layer["path"])])
+    paras = "".join(f"<p>{esc(p)}</p>" for p in layer["intro"][lang])
+    back = ("See the ecosystem map" if lang == "en" else "Zie de kaart van het ecosysteem")
+    links = f'<a href="{url(lang, ecosystem_path(lang))}">{esc(back)}</a>'
+    for link in layer.get("links") or []:
+        links += f' · <a href="{url(lang, link["href"])}">{esc(_bi(link, lang))}</a>'
+    by_id = {s.get("id"): s for s in data.get("stats") or []}
+    cards = [_stat_card(by_id[sid], lang, layer["path"]) for sid in layer.get("stats") or [] if sid in by_id]
+    figures = ""
+    if cards:
+        head = "Key figures" if lang == "en" else "Kerncijfers"
+        figures = f'<h2 class="eco-h">{esc(head)}</h2><div class="eco-stats">{"".join(cards)}</div>'
+    items = _layer_articles(layer, arts)
+    how = ("Listed from topic tags and from keywords in the headline."
+           if lang == "en" else
+           "Opgebouwd uit onderwerptags en uit trefwoorden in de kop.")
+    if not items:
+        note = ("Coverage is starting. Articles will show up here as they are published. "
+                "Nothing is filled in ahead of that."
+                if lang == "en" else
+                "De berichtgeving begint. Artikelen verschijnen hier zodra ze zijn gepubliceerd. "
+                "Er wordt niets vooraf ingevuld.")
+        articles = f'<p class="hubnote">{esc(note)}</p>'
+    else:
+        feature = home_lead(items[0], lang, title_tag="h2")
+        rest = hub_cards(items[1:], lang) if len(items) > 1 else ""
+        articles = (f'<h2 class="hubh">{esc(L["articles"])}</h2>'
+                    f'<p class="hubcount">{esc(_count_label(len(items), lang))}. {esc(how)}</p>'
+                    + feature + rest)
+    body = (
+        f'{nav}<header class="layerhead {layer["tone"]}">'
+        f'<span class="eco-k">{esc(kicker)}</span><h1>{esc(title)}</h1></header>'
+        f'<p class="byline">{esc(L["byline"])}</p>'
+        f'<div class="layerintro">{paras}</div>'
+        f'<p class="hubcount">{links}</p>'
+        f'{figures}{articles}'
+    )
+    desc = layer["intro"][lang][0]
+    return body, ld, desc, items
+
+
 def ecosystem_page(lang):
     data = load_data("ecosystem.json")
     L = LANGS[lang]
     title = L["nav_eco"]
     intro = _bi(data["intro"], lang)
-    updated = fmt_date(data["updated"], lang)
-    when = ("Last updated" if lang == "en" else "Laatst bijgewerkt") + " " + updated + "."
     nav, ld = crumbs(lang, [(title, ecosystem_path(lang))])
-    stats = []
-    for block in data["stats"]:
-        href = block.get("href") or ""
-        value = esc(_bi(block["value"], lang))
-        label = esc(_bi(block["label"], lang))
-        detail = esc(_bi(block["detail"], lang))
-        inner = f'<b>{value}</b><span>{label}</span><small>{detail}</small>'
-        if href:
-            inner = f'<a class="eco-stat" href="{url(lang, href)}">{inner}</a>'
-        else:
-            inner = f'<div class="eco-stat">{inner}</div>'
-        stats.append(f'<div class="eco-bit">{inner}{_src_links(block.get("sources"))}</div>')
     orbit = _orbit_blocks(list(data["layers"]) + list(data["branches"]), lang)
     streams = "".join(_eco_piece(b, lang, "stream") for b in data["streams"])
     companies = "".join(_eco_piece(b, lang, "company") for b in data["companies"])
     calls = "".join(_eco_piece(b, lang, "callout") for b in data["callouts"])
     seen, sources = set(), []
-    for group in ("stats", "layers", "branches", "streams", "companies", "callouts"):
+    for group in ("layers", "branches", "streams", "companies", "callouts"):
         for block in data[group]:
             for src in block.get("sources") or []:
                 if src["url"] in seen:
@@ -3888,10 +4111,7 @@ def ecosystem_page(lang):
     }[lang]
     body = (
         f'{nav}<header class="hubhead"><h1>{esc(title)}</h1>'
-        f'<p class="byline">{esc(L["byline"])}</p>'
-        f'<p class="lead">{esc(intro)}</p>'
-        f'<p class="hubcount">{esc(when)}</p></header>'
-        f'<div class="eco-stats">{"".join(stats)}</div>'
+        f'<p class="byline">{esc(L["byline"])}</p></header>'
         f'<h2 class="eco-h">{esc(heads[0])}</h2>'
         f'{orbit}'
         f'<h2 class="eco-h">{esc(heads[1])}</h2><div class="eco-split">{streams}</div>'
@@ -4100,13 +4320,22 @@ def build():
                        extra_head=ld_script(crumb_ld) + ld_script(vehicle_ld), image=ph, active="models"))
 
         # ---------- Topic hubs, ecosystem map, Starship tracker ----------
+        layer_paths = {layer["path"] for layer in LAYERS}
         for spec in HUBS:
+            if spec["path"] in layer_paths:
+                continue
             items = hub_articles(spec, arts)
             content, crumb_ld, intro = topic_hub(spec, items, lang)
             write(url(lang, spec["path"]), page(
                 lang, spec["path"], _bi(spec["title"], lang), intro,
                 shell(content, page_side(arts, lang, "hub", spec["key"], skip=items)),
                 extra_head=ld_script(crumb_ld), active=spec["key"]))
+        for layer in LAYERS:
+            content, crumb_ld, intro, items = layer_page(layer, arts, lang)
+            write(url(lang, layer["path"]), page(
+                lang, layer["path"], _bi(layer["title"], lang), intro,
+                shell(content, page_side(arts, lang, "hub", layer["nav"], skip=items)),
+                extra_head=ld_script(crumb_ld), active=layer["nav"]))
         eco_body, eco_ld, eco_desc = ecosystem_page(lang)
         eco_path = ecosystem_path(lang)
         write(url(lang, eco_path), page(
@@ -4274,6 +4503,7 @@ def build():
                + [(k + "/", today) for k in PAGES]
                + [("shorts/", today)]
                + [(h["path"], today) for h in HUBS]
+               + [(layer["path"], today) for layer in LAYERS if layer["path"] not in {h["path"] for h in HUBS}]
                + [("starship/", today)]
                + [("archive/" if i == 0 else f"archive/{i + 1}/", today) for i in range(ARCH_PAGES[0])])
     def emit(loc_lang, loc_path, mod, en_path, nl_path):

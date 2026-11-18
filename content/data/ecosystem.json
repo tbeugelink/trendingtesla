@@ -156,7 +156,7 @@
       "tone": "boring",
       "href": "boring/",
       "kicker": {"en": "Tunnels", "nl": "Tunnels"},
-      "title": {"en": "Boring Co.", "nl": "Boring Co."},
+      "title": {"en": "Boring Co", "nl": "Boring Co"},
       "fact": {
         "en": "Tunnels and Loop transit, often driven by Tesla vehicles.",
         "nl": "Tunnels en Loop-vervoer, vaak gereden met Tesla-voertuigen."
@@ -261,7 +261,7 @@
     },
     {
       "href": "boring/",
-      "title": {"en": "Boring Co.", "nl": "Boring Co."},
+      "title": {"en": "Boring Co", "nl": "Boring Co"},
       "fact": {
         "en": "Independent. Vegas Loop: more than 4 million passengers and 14 stations, with approval for 68 miles and 123 stations. Also Music City Loop in Nashville, Dubai Loop and the Cybertunnel at Gigafactory Texas.",
         "nl": "Zelfstandig. Vegas Loop: meer dan 4 miljoen passagiers en 14 stations, met goedkeuring voor 68 mijl en 123 stations. Daarnaast Music City Loop in Nashville, Dubai Loop en de Cybertunnel bij Gigafactory Texas."

@@ -175,7 +175,7 @@ CATEGORIES = {
     "energy":   {"en": "Energy",   "nl": "Energie",  "menu": True},
     "spacex":   {"en": "SpaceX",   "nl": "SpaceX",   "menu": True},
     "starlink": {"en": "Starlink", "nl": "Starlink", "menu": True},
-    "boring":   {"en": "Boring Co.", "nl": "Boring Co.", "menu": True},
+    "boring":   {"en": "Boring Co", "nl": "Boring Co", "menu": True},
     "musk":     {"en": "Elon Musk", "nl": "Elon Musk", "menu": True},
     "earnings": {"en": "Earnings", "nl": "Cijfers",  "menu": True},
     "guides":   {"en": "Guides",  "nl": "Gidsen",   "menu": True},
@@ -1023,16 +1023,17 @@ header.hb .pnav>.is-parked{display:none}
 .lcard .lim{display:block;aspect-ratio:16/9;background:#101010;overflow:hidden}
 .lcard .lim img{width:100%;height:100%;object-fit:cover}
 .lcard .lbody{display:flex;flex-direction:column;gap:4px;padding:8px 10px 10px;min-width:0;flex:1}
-.lcard .lname{font-size:.68rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+.lcard .lmeta{display:flex;flex-wrap:wrap;gap:4px 6px;align-items:baseline;padding:8px 10px 0;font-size:.68rem;font-weight:700;line-height:1.3;color:var(--dim)}
+.lcard .lname{font-size:.68rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--blue)}
 .lcard strong{font-size:.92rem;line-height:1.28;font-weight:800;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden}
 .leadstory .ltitle{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden}
-.lcard.tesla{border-top-color:#E31937}.lcard.tesla .lname{color:#ff8a9b}
-.lcard.energy{border-top-color:#4CD964}.lcard.energy .lname{color:#b8ffc6}
-.lcard.spacex{border-top-color:#FF7A00}.lcard.spacex .lname{color:#ffc48a}
-.lcard.link{border-top-color:#00D1FF}.lcard.link .lname{color:#a6f4ff}
-.lcard.spacexsi{border-top-color:#FFC400}.lcard.spacexsi .lname{color:#ffe28a}
-.lcard.neural{border-top-color:#FF2D95}.lcard.neural .lname{color:#ffb3d6}
-.lcard.boring{border-top-color:#2F6BFF}.lcard.boring .lname{color:#b3c8ff}
+.lcard.tesla{border-top-color:#E31937}
+.lcard.energy{border-top-color:#4CD964}
+.lcard.spacex{border-top-color:#FF7A00}
+.lcard.link{border-top-color:#00D1FF}
+.lcard.spacexsi{border-top-color:#FFC400}
+.lcard.neural{border-top-color:#FF2D95}
+.lcard.boring{border-top-color:#2F6BFF}
 .lcard.empty{border-color:rgba(255,45,149,.55);background:linear-gradient(165deg,#ff2d95 0%,#c41878 38%,#3a0824 100%)}
 .lcard.empty .lbody{justify-content:flex-end;padding:16px 14px 14px}
 .lcard.empty .lname,.lcard.empty strong{color:#fff}
@@ -1131,6 +1132,9 @@ header.hb .pnav>.is-parked{display:none}
 .eco-call.plan{background:#1a1408;border-color:#e0b15a;color:#ffe3ad;margin:0 0 10px}
 .eco-call.promise{background:#2a120c;border-color:#ff7a45;color:#ffd0bc;margin:0 0 10px}
 .eco-h{font-size:1.15rem;margin:18px 0 8px}
+.eco-explain{margin:6px 0 22px;max-width:68ch}
+.eco-explain h2{font-size:1.2rem;margin:0 0 10px}
+.eco-explain p{margin:0 0 12px;line-height:1.65;color:#d5deea}
 .ss-board{display:grid;grid-template-columns:1fr;gap:10px;margin:0 0 16px}
 .ss-card{border-radius:14px;padding:14px 14px 12px;border:1px solid #3a4a60;background:#12161e}
 .ss-card.latest{background:linear-gradient(160deg,#2a120c,#12161e 55%);border-color:#ff7a45}
@@ -1175,11 +1179,14 @@ header.hb .pnav>.is-parked{display:none}
 .eco-orbit.is-set{height:auto}
 .eco-orbit.is-set .eco-arc{position:absolute;inset:0;margin:0}
 .eco-orbit.is-set .eco-node{position:absolute}
+.eco-k{color:var(--blue)}
 .eco-node .eco-k{display:block;font-size:.92rem;font-weight:800;line-height:1.15;margin:0;letter-spacing:.04em}
 .eco-node ul{margin:4px 0 0;padding:0 0 0 1.05em}
 .eco-node li{font-size:.68rem;line-height:1.22}
 a.eco-node{display:block;text-decoration:none;color:inherit}
-a.eco-node:hover,a.eco-node:focus-visible,.card:hover,.card:focus-visible,.eco-card:hover,.eco-card:focus-visible,.eco-co:hover,.eco-co:focus-visible{border-color:var(--blue);box-shadow:0 0 0 2px var(--blue),0 0 16px rgba(0,212,255,.35);outline:none}
+a.eco-node:hover,a.eco-node:focus-visible,.card:hover,.card:focus-visible,.eco-card:hover,.eco-card:focus-visible,.eco-co:hover,.eco-co:focus-visible,.lcard:hover,.lcard:focus-visible,.leadstory:hover .leadim,.leadstory:focus-within .leadim,.vcard:hover .vim,.vcard:focus-visible .vim{border-color:var(--blue);box-shadow:0 0 0 2px var(--blue),0 0 16px rgba(0,212,255,.35);outline:none}
+.lcard.tesla:hover,.lcard.tesla:focus-visible{border-top-color:#E31937}.lcard.energy:hover,.lcard.energy:focus-visible{border-top-color:#4CD964}.lcard.spacex:hover,.lcard.spacex:focus-visible{border-top-color:#FF7A00}.lcard.link:hover,.lcard.link:focus-visible{border-top-color:#00D1FF}.lcard.spacexsi:hover,.lcard.spacexsi:focus-visible{border-top-color:#FFC400}.lcard.neural:hover,.lcard.neural:focus-visible{border-top-color:#FF2D95}.lcard.boring:hover,.lcard.boring:focus-visible{border-top-color:#2F6BFF}
+.vcard.tesla:hover .vim,.vcard.tesla:focus-visible .vim{border-top-color:#E31937}.vcard.energy:hover .vim,.vcard.energy:focus-visible .vim{border-top-color:#4CD964}.vcard.spacex:hover .vim,.vcard.spacex:focus-visible .vim{border-top-color:#FF7A00}.vcard.link:hover .vim,.vcard.link:focus-visible .vim{border-top-color:#00D1FF}.vcard.spacexsi:hover .vim,.vcard.spacexsi:focus-visible .vim{border-top-color:#FFC400}.vcard.neural:hover .vim,.vcard.neural:focus-visible .vim{border-top-color:#FF2D95}.vcard.boring:hover .vim,.vcard.boring:focus-visible .vim{border-top-color:#2F6BFF}
 @media (max-width:560px){
 .eco-node .eco-k{font-size:.78rem}
 .eco-node li{font-size:.62rem;line-height:1.2}
@@ -1187,8 +1194,11 @@ a.eco-node:hover,a.eco-node:focus-visible,.card:hover,.card:focus-visible,.eco-c
 }
 @media (min-width:1100px){header.hb .id{gap:24px}}
 @media (min-width:1320px){header.hb .id{gap:80px}}
-@media (min-width:1000px){
+@media (min-width:1200px){
 header.hb .pn,header.hb .mdrop>button.pn{font-size:14px;padding:6px 8px}
+}
+@media (min-width:1000px) and (max-width:1199.98px){
+header.hb .pn,header.hb .mdrop>button.pn{font-size:13px;padding:5px 5px}
 }
 @media (min-width:900px) and (max-width:999.98px){
 header.hb .id{gap:6px}
@@ -1198,14 +1208,7 @@ header.hb .pn,header.hb .mdrop>button.pn{font-size:12.5px;padding:5px 3px}
 .ad-sidebar{margin:0 0 16px;max-width:none}
 @media (max-width:900px){.ad-sidebar{display:none}}
 .tplnote{margin:0 0 14px;padding:10px 12px;border:1px dashed #ffc400;border-radius:8px;color:#ffe28a;font-weight:700;font-size:.92rem;line-height:1.4}
-.ltag{display:inline-block;font-size:.68rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;border:1px solid;border-radius:8px;padding:2px 8px;text-decoration:none}
-.ltag-tesla{color:#ff8a9b;border-color:#e31937}
-.ltag-energy{color:#b8ffc6;border-color:#4cd964}
-.ltag-spacex{color:#ffc48a;border-color:#ff7a00}
-.ltag-link{color:#a6f4ff;border-color:#00d1ff}
-.ltag-spacexsi{color:#ffe28a;border-color:#ffc400}
-.ltag-neural{color:#ffb3d6;border-color:#ff2d95}
-.ltag-boring{color:#b3c8ff;border-color:#2f6bff}
+.ltag{display:inline-block;font-size:.68rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;border:1px solid var(--blue);border-radius:8px;padding:2px 8px;text-decoration:none;color:var(--blue)}
 .brief-layers{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 16px}
 .brief-list{list-style:none;margin:0 0 18px;padding:0}
 .brief-list a{display:block;padding:12px 14px;border:1px solid #3a4a60;border-radius:8px;text-decoration:none;color:inherit;margin:0 0 8px}
@@ -3115,7 +3118,7 @@ NAV_LAYERS = [
         "label": {"en": "SpaceX", "nl": "SpaceX"},
         "items": [
             {"key": "starship-vehicle", "href": "starship-vehicle/", "en": "Starship", "nl": "Starship"},
-            {"key": "starship", "href": "starship/", "en": "Starship tracker", "nl": "Starship-tracker", "child": True},
+            {"key": "starship", "href": "starship/", "en": "Starship tracker", "nl": "Starship-tracker"},
             {"key": "falcons", "href": "falcons/", "en": "Falcons", "nl": "Falcons"},
         ],
     },
@@ -3141,7 +3144,7 @@ NAV_LAYERS = [
     },
     {
         "key": "boring", "tone": "boring", "href": "boring/",
-        "label": {"en": "Boring Co.", "nl": "Boring Co."},
+        "label": {"en": "Boring Co", "nl": "Boring Co"},
         "plain": True,
     },
 ]
@@ -3186,6 +3189,9 @@ def primary_nav(lang, active=None):
             f'<a class="pn{on}" href="{url(lang, layer["href"])}" aria-haspopup="true" aria-expanded="false">'
             f'{esc(label)}</a>'
             f'<div class="pmenu" role="menu">{menu}</div></div>')
+    eco_on = " on" if active == "ecosystem" else ""
+    parts.append(
+        f'<a class="pn{eco_on}" href="{url(lang, ecosystem_path(lang))}">{esc(LANGS[lang]["nav_eco"])}</a>')
     return f'<nav class="pnav" aria-label="{esc(LANGS[lang]["menu"])}">{"".join(parts)}</nav>'
 
 
@@ -3205,8 +3211,9 @@ def drawer_links(lang, active):
             subs.append(
                 f'<a class="{child.strip()}{mark}" href="{url(lang, item["href"])}">{esc(item[lang])}</a>')
         out.append(f'<div class="dlayer">{link}<div class="dsub">{"".join(subs)}</div></div>')
+    eco_on = " on" if active == "ecosystem" else ""
     out.append(
-        f'<a class="di dmap" href="{url(lang, ecosystem_path(lang))}">{esc(LANGS[lang]["nav_eco"])}</a>')
+        f'<a class="di dmap{eco_on}" href="{url(lang, ecosystem_path(lang))}">{esc(LANGS[lang]["nav_eco"])}</a>')
     return "".join(out)
 
 
@@ -3470,10 +3477,12 @@ def home_lead(a, lang, title_tag="h1"):
     section, section_href = topic_meta(a, lang)
     href = url(lang, a["slug"] + "/")
     tag = "h1" if title_tag == "h1" else "h2"
-    return (f'<article class="leadstory"><a class="leadim" href="{href}">'
-            f'{resp_img(site_img(a), t["title"], SIZES_LEAD, high=True, lazy=False, width=1600, height=900)}</a>'
-            f'<div><p class="meta smeta"><a class="tag" href="{url(lang, section_href)}">{esc(section)}</a>'
+    return (f'<article class="leadstory">'
+            f'<p class="meta smeta"><a class="tag" href="{url(lang, section_href)}">{esc(section)}</a>'
             f' · {when(a, lang)} · {read_time(a, lang)} {L["min"]}</p>'
+            f'<a class="leadim" href="{href}">'
+            f'{resp_img(site_img(a), t["title"], SIZES_LEAD, high=True, lazy=False, width=1600, height=900)}</a>'
+            f'<div>'
             f'<{tag} class="ltitle"><a href="{href}">{esc(card_title(a, lang))}</a></{tag}>'
             f'<p class="lead">{esc(t["description"])}</p>'
             f'<a class="btn" href="{href}">{esc(L["read_story"])}</a></div></article>')
@@ -3660,16 +3669,17 @@ def layer_latest(arts, lang):
         if pick is None:
             cards.append(
                 f'<a class="lcard empty {tone}" href="{url(lang, layer["path"])}">'
-                f'<span class="lbody"><span class="lname">{esc(name)}</span>'
-                f'<strong>{esc(note)}</strong></span></a>')
+                f'<span class="lmeta"><span class="lname">{esc(name)}</span></span>'
+                f'<span class="lbody"><strong>{esc(note)}</strong></span></a>')
             continue
         used.add(id(pick))
         shown.append(pick)
         t = pick[lang]
         cards.append(
             f'<a class="lcard {tone}" href="{url(lang, pick["slug"] + "/")}">'
+            f'<span class="lmeta"><span class="lname">{esc(name)}</span> · {when(pick, lang)}</span>'
             f'<span class="lim">{resp_img(site_img(pick), t["title"], "(max-width: 699px) 46vw, 220px", lazy=False, width=640, height=360)}</span>'
-            f'<span class="lbody"><span class="lname">{esc(name)}</span><strong>{esc(card_title(pick, lang))}</strong></span></a>')
+            f'<span class="lbody"><strong>{esc(card_title(pick, lang))}</strong></span></a>')
     label = "Latest from each layer" if lang == "en" else "Het laatste per laag"
     return f'<section class="layerrow" aria-label="{esc(label)}">{"".join(cards)}</section>', shown
 
@@ -4166,7 +4176,7 @@ HUBS = [
     },
     {
         "key": "boring", "path": "boring/",
-        "title": {"en": "Boring Co.", "nl": "Boring Co."},
+        "title": {"en": "Boring Co", "nl": "Boring Co"},
         "topics": ["boring"],
         "categories": ["boring"],
         "keywords": ["boring company", "vegas loop", "cybertunnel"],
@@ -4630,8 +4640,8 @@ LAYERS = [
     },
     {
         "key": "boring", "path": "boring/", "tone": "boring", "nav": "boring", "hub": "boring",
-        "kicker": {"en": "7 · Boring Co.", "nl": "7 · Boring Co."},
-        "title": {"en": "Boring Co.", "nl": "Boring Co."},
+        "kicker": {"en": "7 · Boring Co", "nl": "7 · Boring Co"},
+        "title": {"en": "Boring Co", "nl": "Boring Co"},
         "fact": {"en": "Car tunnels", "nl": "Autotunnels"},
         "stats": [],
         "links": [],
@@ -4662,6 +4672,36 @@ def layer_page(layer, arts, lang):
     body, ld = _article_list(items, lang, title, layer["path"])
     desc = layer["intro"][lang][0]
     return body, ld, desc, items
+
+
+def _eco_explain(lang):
+    """How the seven layers hand work to each other. No figures that are not already sourced."""
+    if lang == "en":
+        title = "How the ecosystem fits together"
+        paragraphs = [
+            "Elon Musk's companies are separate businesses that share a few loops. This map draws those loops as seven layers. A car, a rocket, a satellite dish and a chatbot belong to different companies, and the work still runs from one layer into the next.",
+            "Tesla is the car and robot layer. The cars, the Semi, the Robotaxi service, supervised FSD and the Optimus robot all live here. The fleet's cameras are the pictures FSD and Robotaxi train on. Tesla does not publish how much video that is, so this page does not invent a figure.",
+            "Tesla Energy is the power layer beside the cars. Megapacks, the charging network, home chargers and solar sit here. The same Megapacks that store power for the grid are the batteries that can feed a datacenter. In 2025 Tesla booked $430.1 million of business with xAI, mostly Megapacks. That figure is in Tesla's own related-party disclosure, as Electrek reported it on 1 May 2026.",
+            "SpaceX is the launch layer. Falcon flies the regular missions. Starship is the larger vehicle, and the Starship tracker follows each flight on its own. SpaceX also puts Starlink's satellites into orbit. Starlink is the connectivity layer: dishes on the ground talk to that constellation, for homes and for businesses. SpaceX's quarterly filing is the public record for how many subscribers and satellites that network has reached.",
+            "SpaceXSI is the intelligence layer, formerly xAI and then SpaceXAI. It covers the models, including Grok, the compute that trains them, the datacenters that house that compute, and the chips meant to build more of it. That same intelligence is what Tesla is building into supervised FSD and into Optimus. Nobody has demonstrated AGI, and a model ranking is not a filing.",
+            "Neuralink is the brain-computer layer, its own company beside the stack. An implant can move a cursor. Studies aim at speech and at sight. It does not sit inside the car or the rocket.",
+            "Boring Co is the tunnel layer, also its own company. It digs car tunnels and runs Loop transit through them, often with Tesla vehicles. The public projects include Vegas, Nashville, Dubai and the tunnel at Gigafactory Texas.",
+            "Four things keep handing work to each other: energy, compute, launch and connectivity. Energy feeds compute. Compute feeds the models. A launch puts connectivity in orbit. Connectivity and the models come back down into the cars, the robots and the tunnels.",
+        ]
+    else:
+        title = "Hoe het ecosysteem in elkaar zit"
+        paragraphs = [
+            "De bedrijven van Elon Musk zijn aparte ondernemingen die een paar lussen delen. Deze kaart tekent die lussen als zeven lagen. Een auto, een raket, een schotel en een chatbot horen bij verschillende bedrijven, en het werk loopt toch van de ene laag naar de volgende.",
+            "Tesla is de laag van de auto en de robot. De auto's, de Semi, de robotaxidienst, begeleide FSD en de robot Optimus horen hier. De camera's van de vloot leveren de beelden waarmee FSD en Robotaxi trainen. Tesla publiceert niet hoeveel beeld dat is, dus deze pagina verzint geen getal.",
+            "Tesla Energy is de stroomlaag naast de auto's. Megapacks, het laadnetwerk, thuisladers en zonne-energie horen hier. Dezelfde Megapacks die stroom bewaren voor het net zijn de batterijen die een datacenter kunnen voeden. In 2025 boekte Tesla $430,1 miljoen aan zaken met xAI, vooral Megapacks. Dat cijfer staat in Tesla's eigen opgave van transacties met verbonden partijen, zoals Electrek die op 1 mei 2026 weergaf.",
+            "SpaceX is de lanceerlaag. Falcon vliegt de gewone missies. Starship is het grotere voertuig, en de Starship-tracker volgt elke vlucht apart. SpaceX brengt ook de satellieten van Starlink in een baan. Starlink is de verbindingslaag: schotels op de grond praten met die constellatie, voor thuis en voor bedrijven. Het kwartaalverslag van SpaceX is het openbare stuk over hoeveel abonnees en satellieten dat netwerk heeft.",
+            "SpaceXSI is de intelligentielaag, eerder xAI en daarna SpaceXAI. Het gaat om de modellen, waaronder Grok, de rekenkracht die ze traint, de datacenters waar die rekenkracht staat, en de chips die meer van die rekenkracht moeten bouwen. Diezelfde intelligentie is wat Tesla in begeleide FSD en in Optimus bouwt. Niemand heeft AGI aangetoond, en een modelranglijst is geen filing.",
+            "Neuralink is de brein-computerlaag, een eigen bedrijf naast de stapel. Een implantaat kan een cursor bewegen. Studies richten zich op spraak en op zicht. Het zit niet in de auto en niet in de raket.",
+            "Boring Co is de tunnellaag, ook een eigen bedrijf. Het graaft autotunnels en laat er Loop-vervoer door rijden, vaak met Tesla-voertuigen. De openbare projecten zijn Vegas, Nashville, Dubai en de tunnel bij Gigafactory Texas.",
+            "Vier dingen geven werk aan elkaar door: energie, rekenkracht, lancering en verbinding. Energie voedt rekenkracht. Rekenkracht voedt de modellen. Een lancering zet verbinding in een baan. Verbinding en de modellen komen terug in de auto's, de robots en de tunnels.",
+        ]
+    body = "".join(f"<p>{esc(p)}</p>" for p in paragraphs)
+    return f'<section class="eco-explain"><h2>{esc(title)}</h2>{body}</section>'
 
 
 def ecosystem_page(lang):
@@ -4696,6 +4736,7 @@ def ecosystem_page(lang):
     body = (
         f'<h1 class="visually-hidden">{esc(title)}</h1>'
         f'{orbit}'
+        f'{_eco_explain(lang)}'
         f'<h2 class="eco-h">{esc(heads[1])}</h2><div class="eco-split">{streams}</div>'
         f'<h2 class="eco-h">{esc(heads[2])}</h2><div class="eco-cos">{companies}</div>'
         f'<h2 class="eco-h">{esc(heads[3])}</h2>{calls}'

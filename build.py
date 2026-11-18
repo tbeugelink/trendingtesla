@@ -886,17 +886,26 @@ header.hb .mdrop>button.pn[aria-expanded=true]{background:#272727;color:#fff}
 header.hb .mdrop .pmenu{display:none;left:auto;right:0;top:calc(100% + 4px)}
 header.hb .mdrop.is-open .pmenu{display:grid}
 header.hb{padding-bottom:0}
-.hb-find{padding:8px 0 18px}
-.hb-find .hb-search{display:flex;position:relative;width:min(640px,calc(100% - 8px));max-width:640px;margin:0 auto;height:42px;background:transparent;padding:0;border-radius:10px}
+/* Search row is collapsed until the header magnifier opens it. The row lives in the
+   sticky header, so opening it only grows that bar; the page below does not jump. */
+.hb-find{display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:0fr;padding:0;transition:grid-template-rows .22s ease}
+.hb-find>.wrap{min-width:0;width:100%;min-height:0;overflow:hidden}
+html.find-open .hb-find{grid-template-rows:1fr}
+html.find-open.find-ready .hb-find>.wrap{overflow:visible}
+.hb-find .hb-search{display:flex;position:relative;width:min(640px,calc(100% - 8px));max-width:640px;margin:8px auto 18px;height:42px;background:transparent;padding:0;border-radius:10px;opacity:0;transform:translateY(-8px);transition:opacity .18s ease,transform .22s ease}
+html.find-open .hb-find .hb-search{opacity:1;transform:none}
 .hb-find .hb-search input,.hb-find .hb-search>button{height:42px}
 .hb-find .hb-search input:focus,.hb-find .hb-search input:focus-visible,.hb-find .hb-search>button:focus,.hb-find .hb-search>button:focus-visible{outline:none;outline-offset:0;box-shadow:none;border-color:#303030}
 .hb-find .hb-search:hover,.hb-find .hb-search:focus-within{outline:2px solid var(--blue2);outline-offset:2px}
 header.hb .sbtn{display:grid;width:36px;height:36px;margin-left:auto;border:0;background:transparent;color:#ebebeb}
 header.hb .sbtn:focus-visible{outline:2px solid var(--blue2);outline-offset:2px}
+html.find-open header.hb .sbtn{background:#272727;border-radius:8px}
+@media (prefers-reduced-motion:reduce){.hb-find,.hb-find .hb-search{transition:none}}
 header.hb .savedlink{margin-left:6px}
 header.hb ~ .drawer,header.hb ~ .scrim{top:66px}
 @media (min-width:900px){header.hb .pnav{display:flex;flex-wrap:nowrap;overflow:visible;align-items:baseline}header.hb .id{align-items:baseline;gap:16px}header.hb .bar{position:relative;z-index:3;align-items:center}header.hb .logo{line-height:1}header.hb .logo span{top:0}header.hb .bar .burger{display:none}}
-@media (min-width:901px){.hb-find .hb-search{width:min(640px,calc(100% - 292px - 26px));max-width:none;margin:0 calc(292px + 26px) 0 auto}}
+@media (min-width:901px){.hb-find .hb-search{width:min(640px,calc(100% - 292px - 26px));max-width:none;margin:8px calc(292px + 26px) 18px auto}}
+@media (max-width:860.98px){header.hb .hb-find .hb-search{display:flex;position:relative;left:auto;right:auto;top:auto;width:min(640px,calc(100% - 8px));height:42px;margin:8px auto 18px;padding:0;background:transparent;z-index:1}}
 @media (min-width:900px) and (max-width:1099.98px){header.hb .id{gap:10px}header.hb .pn,header.hb .mdrop>button.pn{font-size:14.5px;padding:5px 7px}}
 .hb-find .hb-search{z-index:1}
 header.hb .mdrop .pmenu{z-index:6}
@@ -1712,9 +1721,9 @@ def page(lang, path, title, description, body, og_type="website", extra_head="",
     find_label = "Search" if lang == "en" else "Zoeken"
     header = (f'<header class="top hb"><div class="wrap"><div class="bar">{burger}'
               f'<div class="id">{brand}{primary_nav(lang, active)}</div>'
-              f'<button class="sbtn" type="button" aria-label="{find_label}">{SEARCH_SVG}</button>'
-              f'{tools}</div></div></header>'
-              f'<div class="hb-find"><div class="wrap">{search}</div></div>')
+              f'<button class="sbtn" type="button" aria-label="{find_label}" aria-expanded="false" aria-controls="site-search">{SEARCH_SVG}</button>'
+              f'{tools}</div></div>'
+              f'<div class="hb-find" id="site-search" inert><div class="wrap">{search}</div></div></header>')
     return f"""<!doctype html>
 <html lang="{lang}">
 <head>
@@ -2131,7 +2140,8 @@ document.querySelectorAll('.drawer a[href$="/category/models/"]').forEach(functi
 (function(){var k=null;try{k=sessionStorage.getItem('tt_dm');sessionStorage.removeItem('tt_dm')}catch(_){}
 if(k&&window.matchMedia('(max-width:860px)').matches){d.classList.add('dnoanim');t(true);
 requestAnimationFrame(function(){requestAnimationFrame(function(){d.classList.remove('dnoanim')})})}})();
-document.addEventListener('keydown',function(e){if(e.key==='Escape'){t(false);d.classList.remove('sopen')}});
+function setFind(open,opts){opts=opts||{};var panel=document.getElementById('site-search'),btn=document.querySelector('header.hb .sbtn');if(!panel||!btn)return;d.classList.toggle('find-open',open);btn.setAttribute('aria-expanded',open?'true':'false');if(open){panel.inert=false;if(opts.focus!==false){var input=panel.querySelector('input');if(input)input.focus({preventScroll:true})}var show=function(ev){if(ev&&ev.target!==panel)return;d.classList.add('find-ready')};panel.addEventListener('transitionend',show,{once:true});setTimeout(function(){d.classList.add('find-ready')},280)}else{d.classList.remove('find-ready');if(r)r.hidden=true;panel.inert=true;if(opts.restore)btn.focus({preventScroll:true})}}
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){t(false);d.classList.remove('sopen');if(d.classList.contains('find-open'))setFind(false,{restore:true})}});
 var f=document.querySelector('.search'),i=f.querySelector('input'),r=f.querySelector('.res'),idx=null;
 function e(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
 function load(){return idx?Promise.resolve(idx):fetch(f.dataset.idx).then(function(x){return x.json()}).then(function(j){idx=j;return j})}
@@ -2140,8 +2150,9 @@ i.addEventListener('input',function(){var q=i.value.trim().toLowerCase();if(q.le
 load().then(function(){var w=q.split(/\s+/),h=idx.filter(function(a){var s=(a.t+' '+a.d+' '+a.c).toLowerCase();return w.every(function(x){return s.indexOf(x)>-1})}).slice(0,8);
 r.innerHTML=h.length?h.map(function(a){return '<a href="'+a.u+'"><img src="'+a.i+'" alt="'+e(a.t)+'" width="160" height="84" decoding="async"><span><b>'+e(a.t)+'</b><small>'+e(a.c)+' · '+e(a.dt)+'</small></span></a>'}).join(''):'<p>'+e(f.dataset.none)+'</p>';r.hidden=false;window.ttFit=function(){[].forEach.call(document.querySelectorAll('.res a'),function(x){var im=x.querySelector('img'),t=x.querySelector('span');if(!im||!t)return;var m=(x.clientWidth-12)/2;im.style.width=m+'px';var h=t.offsetHeight,w=h*1200/630;if(w>m){w=m;h=w*630/1200}im.style.width=w+'px';im.style.height=h+'px'})};ttFit();if(!window.ttR){window.ttR=1;addEventListener('resize',function(){window.ttFit()})}})});
 f.addEventListener('submit',function(x){x.preventDefault();var a=r.querySelector('a');if(a)location.href=a.href});
-document.addEventListener('click',function(x){if(!f.contains(x.target)&&!x.target.closest('.sbtn')){r.hidden=true;d.classList.remove('sopen')}});
-document.querySelector('.sbtn').onclick=function(){var input=document.querySelector('.hb-search input');function focus(){if(input)input.focus({preventScroll:true})}if(scrollY<2){focus();return}var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;scrollTo({top:0,behavior:reduce?'auto':'smooth'});var done=false;function end(){if(done)return;done=true;removeEventListener('scrollend',end);focus()}addEventListener('scrollend',end);setTimeout(end,800)};
+document.addEventListener('click',function(x){if(!f.contains(x.target)&&!x.target.closest('.sbtn')){r.hidden=true;d.classList.remove('sopen');if(d.classList.contains('find-open'))setFind(false)}});
+document.querySelector('.sbtn').addEventListener('click',function(ev){ev.stopPropagation();var open=!d.classList.contains('find-open');setFind(open,{restore:!open})});
+try{var qs=new URLSearchParams(location.search).get('q');if(qs&&qs.trim()){i.value=qs;setFind(true,{focus:true});i.dispatchEvent(new Event('input'))}}catch(err){}
 function fill(){[].slice.call(document.querySelectorAll('.grid2>.card')).forEach(function(c){var h=c.querySelector('h3'),p=c.querySelector('p');if(!h||!p)return;p.style.webkitLineClamp='';var n=Math.round(h.getBoundingClientRect().height/parseFloat(getComputedStyle(h).lineHeight));if(getComputedStyle(c).gridTemplateColumns.split(' ').length>1)p.style.webkitLineClamp=1})}
 function bal(){fill();var l=document.querySelector('.read .lcol'),r=document.querySelector('.read .rside');if(!l||!r)return;
 var all=[].slice.call(document.querySelectorAll('.rside .side>*,.lcol .grid2>*'));all.forEach(function(x){x.style.display=''});

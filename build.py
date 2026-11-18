@@ -993,7 +993,8 @@ header.hb .pnav>.is-parked{display:none}
 .lcard .lim img{width:100%;height:100%;object-fit:cover}
 .lcard .lbody{display:flex;flex-direction:column;gap:4px;padding:8px 10px 10px;min-width:0;flex:1}
 .lcard .lname{font-size:.68rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
-.lcard strong{font-size:.92rem;line-height:1.28;font-weight:800}
+.lcard strong{font-size:.92rem;line-height:1.28;font-weight:800;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden}
+.leadstory .ltitle{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden}
 .lcard.tesla{border-top-color:#E31937}.lcard.tesla .lname{color:#ff8a9b}
 .lcard.energy{border-top-color:#4CD964}.lcard.energy .lname{color:#b8ffc6}
 .lcard.spacex{border-top-color:#FF7A00}.lcard.spacex .lname{color:#ffc48a}
@@ -1213,13 +1214,28 @@ header.hb .pn,header.hb .mdrop>button.pn{font-size:14px;padding:6px 8px}
 .gtable caption{text-align:left;font-weight:800;margin:0 0 6px}
 .afftop{margin:0 0 14px;font-size:.84rem;line-height:1.45;color:var(--dim)}
 .afftop a{color:#9ad7ff}
-.nlstick{position:fixed;z-index:70;left:12px;right:12px;display:flex;gap:8px;align-items:center;max-width:920px;margin:0 auto;background:#161616;border:1px solid #3a4a60;border-radius:8px;padding:8px;box-shadow:0 12px 32px rgba(0,0,0,.5)}
+.nlstick{position:fixed;z-index:70;left:12px;right:12px;display:flex;gap:8px;align-items:center;max-width:min(920px,100vw);margin:0 auto;box-sizing:border-box;background:#161616;border:1px solid #3a4a60;border-radius:8px;padding:8px;box-shadow:0 12px 32px rgba(0,0,0,.5)}
 .nlstick[hidden]{display:none}
 .nlstick.is-quiet{visibility:hidden;pointer-events:none}
-.nlstick .nlbar-form{flex:1;border:0;padding:0;background:transparent;box-shadow:none}
-.nlstick-x{flex:none;height:42px;padding:0 12px;background:transparent;color:#fff;border:1px solid #3a4a60;border-radius:8px;font:inherit;font-weight:800;cursor:pointer}
+.nlstick .nlbar-form{flex:1;min-width:0;border:0;padding:0;background:transparent;box-shadow:none}
+.nlstick-actions{display:contents}
+.nlstick-x,.nlbar-form button.nlstick-x{flex:none;height:42px;padding:0 12px;background:transparent;color:#fff;border:1px solid #3a4a60;border-radius:8px;font:inherit;font-weight:800;cursor:pointer}
+.nlbar-form button.nlstick-x:hover{background:#272727}
+@media (max-width:700px){
+.nlstick{left:0;right:0;width:100%;max-width:100vw;flex-direction:column;align-items:stretch;gap:8px;border-radius:12px 12px 0 0;padding:10px max(12px,env(safe-area-inset-right)) calc(10px + env(safe-area-inset-bottom)) max(12px,env(safe-area-inset-left))}
+.nlstick .nlbar-form{flex-direction:column;align-items:stretch;width:100%;min-width:0;gap:8px}
+.nlstick .nlbar-h{flex:none;width:100%}
+.nlstick input[type=email]{flex:none;width:100%;min-width:0;box-sizing:border-box}
+.nlstick-actions{display:flex;gap:8px;width:100%;min-width:0}
+.nlstick-actions>button{flex:1 1 0;min-width:0;width:auto;white-space:normal}
+.nlbar,.nlside{max-width:100%;min-width:0;box-sizing:border-box}
+.nlbar .nlbar-form,.nlside-form{flex-wrap:wrap;max-width:100%;min-width:0;box-sizing:border-box}
+.nlbar .nlbar-h{flex:1 0 100%}
+.nlbar input[type=email],.nlside-form input[type=email]{flex:1 1 100%;width:100%;min-width:0;box-sizing:border-box}
+.nlbar .nlbar-form>button,.nlside-form>button{max-width:100%;white-space:normal}
+}
 .nlpitch p{margin:0 0 12px}
-@media (max-width:600.98px){.gbox{grid-template-columns:1fr}.nlstick{left:8px;right:8px}}
+@media (max-width:600.98px){.gbox{grid-template-columns:1fr}}
 """
 
 # Classes left over from retired layouts. They are not emitted by the pages build() writes.
@@ -1845,7 +1861,6 @@ def story(a, lang, tag="h1"):
     """Full article block: photo, title, intro, meta, model chips, body and sources."""
     L = LANGS[lang]
     t = a[lang]
-    c = CATEGORIES[a["category"]]
     src = ""
     if a.get("sources"):
         items = "".join(f'<li><a href="{esc(s["url"])}" rel="nofollow noopener" target="_blank">{esc(s["title"])}</a></li>'
@@ -1864,10 +1879,11 @@ def story(a, lang, tag="h1"):
     title = esc(t["title"]) if tag == "h1" else f'<a href="{url(lang, a["slug"] + "/")}">{esc(t["title"])}</a>'
     byline = (f'<p class="byline"><a href="{url(lang, "editorial/")}">{L["byline"]}</a></p>' if tag == "h1" else "")
     toc, body = enrich(a, lang)
+    section, section_href = topic_meta(a, lang)
     return (f'<article>'
             f'<div class="hi"{vhero(a, lang)}>{resp_img(site_img(a), t["title"], SIZES_HERO, lazy=False, cls="hero-img")}{dur(a, lang)}{ovl(a, lang)}</div>{vscript(a, lang)}'
             f'<{tag} class="st">{title}</{tag}>{byline}'
-            f'<div class="srow"><p class="meta smeta"><a class="tag" href="{url(lang, "category/" + a["category"] + "/")}">{c.get("tag", c[lang])}</a> · {when(a, lang)}</p>'
+            f'<div class="srow"><p class="meta smeta"><a class="tag" href="{url(lang, section_href)}">{esc(section)}</a> · {when(a, lang)}</p>'
             f'<div class="acts"><button class="act like" type="button" data-like="{a["slug"]}" aria-pressed="false" title="{L["like"]}">{HEART_SVG}<span>0</span></button>'
             f'<button class="act save" type="button" data-save="{a["slug"]}" aria-pressed="false" title="{L["save"]}" aria-label="{L["save"]}">{BOOK_SVG}</button></div></div>'
             f'<p class="lead">{esc(t["description"])}</p>{toc}'
@@ -2186,8 +2202,47 @@ JS += r"""
 (function(){var b=document.getElementById("more-btn"),m=document.getElementById("more-menu");if(!b||!m)return;function set(o){b.setAttribute("aria-expanded",o?"true":"false");m.hidden=!o;b.parentNode.classList.toggle("is-open",o)}b.addEventListener("click",function(e){e.stopPropagation();set(m.hidden)});b.addEventListener("keydown",function(e){if(e.key==="ArrowDown"){e.preventDefault();set(true);var a=m.querySelector("a");if(a)a.focus()}});document.addEventListener("click",function(e){if(!b.parentNode.contains(e.target))set(false)});document.addEventListener("keydown",function(e){if(e.key==="Escape"){set(false);if(b.parentNode.contains(document.activeElement))b.focus()}})})();
 """
 
+TOPIC_LABEL = {
+    "cars": {"en": "Cars", "nl": "Auto's", "href": "tesla/"},
+    "semi": {"en": "Semi", "nl": "Semi", "href": "tesla/"},
+    "robotaxi": {"en": "Robotaxi", "nl": "Robotaxi", "href": "robotaxi/"},
+    "fsd": {"en": "FSD", "nl": "FSD", "href": "fsd/"},
+    "optimus": {"en": "Optimus", "nl": "Optimus", "href": "optimus/"},
+    "megapack": {"en": "Megapack", "nl": "Megapack", "href": "tesla-energy/"},
+    "charging": {"en": "Charging", "nl": "Laden", "href": "tesla-energy/"},
+    "solar": {"en": "Solar", "nl": "Zon", "href": "tesla-energy/"},
+    "powerwall": {"en": "Powerwall", "nl": "Powerwall", "href": "tesla-energy/"},
+    "energy": {"en": "Energy", "nl": "Energie", "href": "tesla-energy/"},
+    "starship": {"en": "Starship", "nl": "Starship", "href": "spacex/"},
+    "falcon": {"en": "Falcon", "nl": "Falcon", "href": "spacex/"},
+    "spacex": {"en": "SpaceX", "nl": "SpaceX", "href": "spacex/"},
+    "starlink": {"en": "Starlink", "nl": "Starlink", "href": "starlink/"},
+    "spacexsi": {"en": "SpaceXSI", "nl": "SpaceXSI", "href": "spacexsi/"},
+    "neuralink": {"en": "Neuralink", "nl": "Neuralink", "href": "neuralink/"},
+    "boring": {"en": "Boring", "nl": "Boring", "href": "boring/"},
+    "agi": {"en": "AGI", "nl": "AGI", "href": "agi/"},
+}
+
+
+def topic_meta(a, lang):
+    """Visible section name and the hub it links to."""
+    info = TOPIC_LABEL.get(a.get("topic") or "")
+    if info:
+        return info[lang], info["href"]
+    cat = CATEGORIES[a["category"]]
+    return cat.get("tag", cat[lang]), "category/" + a["category"] + "/"
+
+
+def card_title(a, lang):
+    """Short title for cards and lists. The article page keeps the full headline."""
+    card = a.get("card") or {}
+    text = card.get(lang) if isinstance(card, dict) else ""
+    return text or a[lang]["title"]
+
+
 def label(a, lang):
-    return f'<span class="tag">{CATEGORIES[a["category"]].get("tag", CATEGORIES[a["category"]][lang])}</span>'
+    name, _href = topic_meta(a, lang)
+    return f'<span class="tag">{esc(name)}</span>'
 
 
 def card(a, lang, lead=False):
@@ -2196,7 +2251,7 @@ def card(a, lang, lead=False):
     return (f'<a class="{cls}" href="{url(lang, a["slug"] + "/")}">'
             f'<div class="im">{resp_img(site_img(a), t["title"], SIZES_CARD)}{dur(a, lang)}{ovl(a, lang)}</div>'
             f'<div class="body">{label(a, lang)} <span class="meta">· {when(a, lang)}</span>'
-            f'<h3>{esc(t["title"])}</h3><p>{esc(t["description"])}</p></div></a>')
+            f'<h3>{esc(card_title(a, lang))}</h3><p>{esc(t["description"])}</p></div></a>')
 
 
 def gcard(a, lang, eager=False):
@@ -2204,7 +2259,7 @@ def gcard(a, lang, eager=False):
     t = a[lang]
     return (f'<a class="card" href="{url(lang, a["slug"] + "/")}">'
             f'<div class="im">{resp_img(site_img(a), t["title"], SIZES_GRID, high=eager, lazy=not eager)}{dur(a, lang)}{ovl(a, lang)}</div>'
-            f'<div class="body"><h2>{esc(t["title"])}</h2><p>{esc(t["description"])}</p>'
+            f'<div class="body"><h2>{esc(card_title(a, lang))}</h2><p>{esc(t["description"])}</p>'
             f'<span class="meta">{when(a, lang)}</span></div></a>')
 
 
@@ -2304,7 +2359,7 @@ def mini(a, lang):
     t = a[lang]
     return (f'<a class="mini" href="{url(lang, a["slug"] + "/")}">'
             f'<div class="th">{resp_img(site_img(a), t["title"], SIZES_CARD)}{dur(a, lang)}{ovl(a, lang)}</div>'
-            f'<div><h3>{esc(t["title"])}</h3><p class="mdesc">{esc(t["description"])}</p><span class="meta">{when(a, lang)}</span></div></a>')
+            f'<div><h3>{esc(card_title(a, lang))}</h3><p class="mdesc">{esc(t["description"])}</p><span class="meta">{when(a, lang)}</span></div></a>')
 
 
 def grid(items, lang, lead=False):
@@ -2340,6 +2395,17 @@ def why(lang):
         f"<div><i>{i}</i><b>{h}</b><p>{p}</p></div>" for i, (h, p) in enumerate(LANGS[lang]["why"], 1)) + "</div>"
 
 
+def load_filing():
+    path = ROOT / "content" / "filing.json"
+    if not path.exists():
+        return {}
+    data = json.loads(path.read_text(encoding="utf-8"))
+    return data if isinstance(data, dict) else {}
+
+
+FILING = load_filing()
+
+
 def load_articles():
     arts = []
     for f in sorted(CONTENT.glob("*.json")):
@@ -2349,6 +2415,12 @@ def load_articles():
                 raise SystemExit(f"{f.name}: missing '{key}'")
         if a["category"] not in CATEGORIES:
             raise SystemExit(f"{f.name}: unknown category '{a['category']}'")
+        filed = FILING.get(a["slug"])
+        if filed:
+            a["layer"] = filed["layer"]
+            a["topic"] = filed["topic"]
+            if filed.get("card"):
+                a["card"] = filed["card"]
         for m in a.get("models", []):
             if m not in MODELS:
                 raise SystemExit(f"{f.name}: unknown model '{m}' (use a key from MODELS)")
@@ -3234,9 +3306,9 @@ def prev_next(a, arts, lang):
 def money_article(a, arts, lang):
     L = LANGS[lang]
     t = a[lang]
-    c = CATEGORIES[a["category"]]
+    section, section_href = topic_meta(a, lang)
     nav, ld = crumbs(lang, [
-        (c.get("tag", c[lang]), f"category/{a['category']}/"),
+        (section, section_href),
         (t["title"], a["slug"] + "/"),
     ])
     toc, body = enrich(a, lang, with_toc=True)
@@ -3250,7 +3322,7 @@ def money_article(a, arts, lang):
         f'<article class="money">'
         f'<h1 class="atitle">{esc(t["title"])}</h1>'
         f'<p class="byline"><a href="{url(lang, "editorial/")}">{L["byline"]}</a></p>'
-        f'<div class="srow"><p class="meta smeta"><a class="tag" href="{url(lang, "category/" + a["category"] + "/")}">{esc(c.get("tag", c[lang]))}</a>'
+        f'<div class="srow"><p class="meta smeta"><a class="tag" href="{url(lang, section_href)}">{esc(section)}</a>'
         f' · {when(a, lang)} · {read_time(a, lang)} {L["min"]}</p>'
         f'<div class="acts"><button class="act like" type="button" data-like="{a["slug"]}" aria-pressed="false" title="{esc(L["like"])}">{HEART_SVG}<span>0</span></button>'
         f'<button class="act save" type="button" data-save="{a["slug"]}" aria-pressed="false" title="{esc(L["save"])}" aria-label="{esc(L["save"])}">{BOOK_SVG}</button></div></div>'
@@ -3283,14 +3355,14 @@ def home_lead(a, lang, title_tag="h1"):
     """Featured story: photo, headline, excerpt. The full article stays on its own page."""
     L = LANGS[lang]
     t = a[lang]
-    c = CATEGORIES[a["category"]]
+    section, section_href = topic_meta(a, lang)
     href = url(lang, a["slug"] + "/")
     tag = "h1" if title_tag == "h1" else "h2"
     return (f'<article class="leadstory"><a class="leadim" href="{href}">'
             f'{resp_img(site_img(a), t["title"], SIZES_LEAD, high=True, lazy=False, width=1600, height=900)}</a>'
-            f'<div><p class="meta smeta"><a class="tag" href="{url(lang, "category/" + a["category"] + "/")}">{esc(c.get("tag", c[lang]))}</a>'
+            f'<div><p class="meta smeta"><a class="tag" href="{url(lang, section_href)}">{esc(section)}</a>'
             f' · {when(a, lang)} · {read_time(a, lang)} {L["min"]}</p>'
-            f'<{tag} class="ltitle"><a href="{href}">{esc(t["title"])}</a></{tag}>'
+            f'<{tag} class="ltitle"><a href="{href}">{esc(card_title(a, lang))}</a></{tag}>'
             f'<p class="lead">{esc(t["description"])}</p>'
             f'<a class="btn" href="{href}">{esc(L["read_story"])}</a></div></article>')
 
@@ -3328,7 +3400,7 @@ def home_videos(arts, lang, n=8, skip_ids=()):
             f'{resp_img(site_img(a), t["title"], SIZES_VIDEO, width=480, height=270)}'
             f'<span class="vpl" aria-hidden="true"></span>'
             f'<span class="dur dvo">{esc(badge)}</span></span>'
-            f'<strong>{esc(t["title"])}</strong></a>')
+            f'<strong>{esc(card_title(a, lang))}</strong></a>')
     return "".join(cards), [a for a, _, _ in rows]
 
 
@@ -3468,7 +3540,7 @@ def layer_latest(arts, lang):
         cards.append(
             f'<a class="lcard {tone}" href="{url(lang, pick["slug"] + "/")}">'
             f'<span class="lim">{resp_img(site_img(pick), t["title"], "(max-width: 699px) 46vw, 220px", lazy=False, width=640, height=360)}</span>'
-            f'<span class="lbody"><span class="lname">{esc(name)}</span><strong>{esc(t["title"])}</strong></span></a>')
+            f'<span class="lbody"><span class="lname">{esc(name)}</span><strong>{esc(card_title(pick, lang))}</strong></span></a>')
     label = "Latest from each layer" if lang == "en" else "Het laatste per laag"
     return f'<section class="layerrow" aria-label="{esc(label)}">{"".join(cards)}</section>', shown
 
@@ -3543,9 +3615,10 @@ def pv_row(a, lang, thumb=False):
               f'{ovl(a, lang)}</span>')
     mins = read_time(a, lang)
     label = f'{mins} {LANGS[lang]["min"]}'
+    shown = card_title(a, lang)
     return (f'<a class="pv-row{" hasth" if thumb else ""}" href="{href}" title="{esc(t["title"])}">'
             f'<time datetime="{published(a).isoformat()}">{published(a).strftime("%H:%M")}</time>{im}'
-            f'<span class="pv-hl"><b>{esc(t["title"])}</b></span>'
+            f'<span class="pv-hl"><b>{esc(shown)}</b></span>'
             f'<span class="pv-min" title="{esc(label)}"><b>{mins}</b><small>min</small></span></a>')
 
 
@@ -3639,7 +3712,7 @@ def pv_article(variant, a, arts, lang, live=False):
     }[variant]
     L = LANGS[lang]
     t = a[lang]
-    c = CATEGORIES[a["category"]]
+    section, section_href = topic_meta(a, lang)
     toc, body = enrich(a, lang, with_toc=True)
     body = insert_mid(body, ad_html("mid_article", lang))
     media = article_media(a, lang) if variant != "a" else (
@@ -3652,7 +3725,7 @@ def pv_article(variant, a, arts, lang, live=False):
     else:
         toc_here, rail = toc, ""
     article = (
-        f'<article class="money"><p class="meta smeta"><a class="tag" href="{url(lang, "category/" + a["category"] + "/")}">{esc(c.get("tag", c[lang]))}</a>'
+        f'<article class="money"><p class="meta smeta"><a class="tag" href="{url(lang, section_href)}">{esc(section)}</a>'
         f' · <time datetime="{published(a).isoformat()}">{published(a).strftime("%H:%M")}</time>'
         f' · {read_time(a, lang)} {L["min"]}</p>'
         f'<h1>{esc(t["title"])}</h1>'
@@ -3712,6 +3785,7 @@ HUBS = [
     {
         "key": "tesla", "path": "tesla/",
         "title": {"en": "Tesla", "nl": "Tesla"},
+        "topics": ["cars", "semi", "robotaxi", "fsd", "optimus"],
         "categories": ["news", "models", "charging", "software", "factories", "earnings", "energy", "guides", "musk"],
         "keywords": [],
         "intro": {
@@ -3722,6 +3796,7 @@ HUBS = [
     {
         "key": "fsd", "path": "fsd/",
         "title": {"en": "FSD", "nl": "FSD"},
+        "topics": ["fsd"],
         "categories": ["fsd"],
         "keywords": ["fsd", "full self-driving", "full self driving"],
         "intro": {
@@ -3732,6 +3807,7 @@ HUBS = [
     {
         "key": "robotaxi", "path": "robotaxi/",
         "title": {"en": "Robotaxi", "nl": "Robotaxi"},
+        "topics": ["robotaxi"],
         "categories": ["robotaxi"],
         "keywords": ["robotaxi", "cybercab"],
         "intro": {
@@ -3742,6 +3818,7 @@ HUBS = [
     {
         "key": "optimus", "path": "optimus/",
         "title": {"en": "Optimus", "nl": "Optimus"},
+        "topics": ["optimus"],
         "categories": ["optimus"],
         "keywords": ["optimus"],
         "intro": {
@@ -3752,6 +3829,7 @@ HUBS = [
     {
         "key": "spacex", "path": "spacex/",
         "title": {"en": "SpaceX", "nl": "SpaceX"},
+        "topics": ["starship", "falcon", "spacex"],
         "categories": ["spacex"],
         "keywords": ["falcon 9", "falcon heavy"],
         "intro": {
@@ -3762,6 +3840,7 @@ HUBS = [
     {
         "key": "starlink", "path": "starlink/",
         "title": {"en": "Starlink", "nl": "Starlink"},
+        "topics": ["starlink"],
         "categories": ["starlink"],
         "keywords": ["starlink", "starshield"],
         "intro": {
@@ -3772,6 +3851,7 @@ HUBS = [
     {
         "key": "spacexsi", "path": "spacexsi/",
         "title": {"en": "SpaceXSI / Grok", "nl": "SpaceXSI / Grok"},
+        "topics": ["spacexsi"],
         "categories": ["xai"],
         "keywords": ["xai", "grok", "spacexsi", "spacexai", "colossus"],
         "intro": {
@@ -3782,6 +3862,7 @@ HUBS = [
     {
         "key": "neuralink", "path": "neuralink/",
         "title": {"en": "Neuralink", "nl": "Neuralink"},
+        "topics": ["neuralink"],
         "categories": [],
         "keywords": ["neuralink", "telepathy", "blindsight"],
         "intro": {
@@ -3792,6 +3873,7 @@ HUBS = [
     {
         "key": "boring", "path": "boring/",
         "title": {"en": "The Boring Company", "nl": "The Boring Company"},
+        "topics": ["boring"],
         "categories": ["boring"],
         "keywords": ["boring company", "vegas loop", "cybertunnel"],
         "intro": {
@@ -3802,6 +3884,7 @@ HUBS = [
     {
         "key": "agi", "path": "agi/",
         "title": {"en": "AGI race", "nl": "AGI-race"},
+        "topics": ["agi"],
         "categories": [],
         "keywords": ["agi", "superintelligence", "superintelligentie", "openai", "anthropic", "deepmind", "deepseek", "ai race"],
         "intro": {
@@ -3826,7 +3909,12 @@ def _kw_pattern(words):
 
 
 def hub_articles(spec, arts):
-    """Articles whose category, extra tag or headline keywords match a hub."""
+    """Articles filed under this hub's topics. Keyword matching is not used."""
+    topics = set(spec.get("topics") or [])
+    if topics:
+        out = [a for a in arts if a.get("topic") in topics]
+        out.sort(key=published, reverse=True)
+        return out
     cats = set(spec.get("categories") or [])
     pat = _kw_pattern(spec.get("keywords") or [])
     out = []
@@ -3896,7 +3984,9 @@ def _count_label(n, lang):
 
 
 def _coverage_note(lang):
-    return "Coverage is starting." if lang == "en" else "De berichtgeving begint."
+    if lang == "nl":
+        return "Hier staat nog niets. Artikelen voor deze rubriek verschijnen zodra ze zijn gepubliceerd."
+    return "Nothing here yet. Articles for this section will show up when they are published."
 
 
 def _article_list(items, lang, title, path):
@@ -4219,8 +4309,7 @@ LAYERS = [
         },
         "stats": ["deliveries"],
         "articles": {
-            "categories": ["models", "fsd", "robotaxi", "optimus"],
-            "keywords": ["semi", "cybercab", "fsd", "full self-driving", "full self driving", "robotaxi", "optimus"],
+            "topics": ["cars", "semi", "robotaxi", "fsd", "optimus"],
         },
         "links": [
             {"en": "FSD", "nl": "FSD", "href": "fsd/"},
@@ -4248,8 +4337,7 @@ LAYERS = [
         },
         "stats": [],
         "articles": {
-            "categories": ["energy", "charging"],
-            "keywords": ["megapack", "powerwall", "megafactory", "solar", "supercharger"],
+            "topics": ["megapack", "charging", "solar", "powerwall", "energy"],
         },
         "links": [
             {"en": "Tesla", "nl": "Tesla", "href": "tesla/"},
@@ -4315,8 +4403,7 @@ LAYERS = [
         },
         "stats": ["compute"],
         "articles": {
-            "categories": ["xai"],
-            "keywords": ["xai", "grok", "spacexsi", "spacexai", "colossus", "terafab", "dojo"],
+            "topics": ["spacexsi"],
         },
         "links": [],
         "intro": {
@@ -4487,7 +4574,7 @@ def starship_page(lang, arts):
         tds = "".join(f'<td data-label="{esc(label)}">{value}</td>' for label, value in cells)
         rows.append(f"<tr{cls}>{tds}</tr>")
     head = "".join(f"<th>{esc(name)}</th>" for name in labels[4:10])
-    related = hub_articles({"categories": [], "keywords": ["starship", "super heavy"]}, arts)
+    related = hub_articles({"topics": ["starship"]}, arts)
     rel = ""
     if related:
         rel = (f'<h2 class="hubh">{esc(labels[10])}</h2>'
@@ -4762,13 +4849,14 @@ def nl_sticky(lang):
         f'<label class="nlbar-h" for="{fid}">{esc(L["bar_h"])}</label>'
         f'<input id="{fid}" type="email" name="fields[email]" required maxlength="200" '
         f'autocomplete="email" inputmode="email" placeholder="{esc(L["news_email"])}">'
-        f'<button type="submit">{esc(L["news_btn"])}</button>'
-        f'{ml_hidden()}<p class="nlbar-msg" role="status" hidden></p></form>'
-        f'<button type="button" class="nlstick-x">{esc(dismiss)}</button></aside>'
+        f'<div class="nlstick-actions"><button type="submit">{esc(L["news_btn"])}</button>'
+        f'<button type="button" class="nlstick-x">{esc(dismiss)}</button></div>'
+        f'{ml_hidden()}<p class="nlbar-msg" role="status" hidden></p></form></aside>'
         "<script>(function(){var bar=document.querySelector('.nlstick');if(!bar)return;"
         "var key='tt-nlstick';try{if(sessionStorage.getItem(key))return;}catch(e){}"
         "bar.hidden=false;function place(){var c=document.getElementById('consent');"
-        "bar.style.bottom=((c&&!c.hidden)?c.offsetHeight+16:12)+'px';}place();"
+        "var base=(c&&!c.hidden)?c.offsetHeight+16:12;"
+        "bar.style.bottom='calc('+base+'px + env(safe-area-inset-bottom))';}place();"
         "bar.querySelector('.nlstick-x').addEventListener('click',function(){bar.hidden=true;"
         "try{sessionStorage.setItem(key,'1')}catch(e){}});"
         "var end=document.querySelector('aside.nlbar');"
@@ -5173,7 +5261,7 @@ def build():
             extra_head=ld_script(eco_ld), active="ecosystem",
             alt_path=ecosystem_path(other(lang))))
         ship_body, ship_ld, ship_desc = starship_page(lang, arts)
-        ship_items = hub_articles({"categories": [], "keywords": ["starship", "super heavy"]}, arts)
+        ship_items = hub_articles({"topics": ["starship"]}, arts)
         write(url(lang, "starship/"), page(
             lang, "starship/", "Starship tracker" if lang == "en" else "Starship-tracker", ship_desc,
             shell(ship_body, page_side(arts, lang, "hub", "starship", skip=ship_items)),

@@ -1135,7 +1135,7 @@ header.hb .pnav>.is-parked{display:none}
 .eco-orbit{position:relative;overflow:hidden;margin:0 0 22px;isolation:isolate;min-height:280px}
 .eco-sun{position:absolute;z-index:0;border-radius:50%;pointer-events:none;background:radial-gradient(circle at 50% 50%, #f7feff 0 .8%, #8af3ff 3.2%, #00b4e0 9%, #07506e 22%, #08131c 40%, transparent 54%);box-shadow:inset 0 0 70px rgba(120,230,255,.28);border:1px solid rgba(170,240,255,.4)}
 .eco-sun::after{content:"";position:absolute;inset:12%;border-radius:50%;border:1px solid rgba(160,235,255,.25)}
-.eco-core{position:absolute;z-index:3;margin:0;text-align:center;font-weight:800;font-size:1.05rem;line-height:1.12;letter-spacing:-.03em;color:#fff;text-shadow:0 0 8px #d8fbff, 0 0 18px #00c2ea;pointer-events:none;transform:translate(-50%,-50%)}
+.eco-core{position:absolute;z-index:3;margin:0;text-align:center;font-weight:800;font-size:1.05rem;line-height:1.15;letter-spacing:-.03em;color:#fff;text-shadow:0 0 8px #d8fbff, 0 0 18px #00c2ea;pointer-events:none;transform:translate(-50%,-50%);white-space:nowrap}
 .eco-rays{position:absolute;left:0;top:0;z-index:1;pointer-events:none;overflow:visible}
 .eco-arc{position:relative;z-index:2;display:flex;flex-direction:column;gap:12px;margin:0}
 .eco-node{position:relative;width:auto;margin:0;padding:6px 8px 5px;border-radius:8px}
@@ -3951,7 +3951,7 @@ def _orbit_box(block, lang):
 def _orbit_blocks(blocks, lang):
     """Boxes along an arc. Lines are drawn from the measured circle centre."""
     parts = "".join(_orbit_box(block, lang) for block in blocks)
-    label = "Elon ecosystem" if lang == "en" else "Elon-ecosysteem"
+    label = "Elon<br>ecosystem" if lang == "en" else "Elon<br>ecosysteem"
     script = r"""
 (function(){
   var root = document.currentScript.previousElementSibling;
@@ -3961,26 +3961,7 @@ def _orbit_blocks(blocks, lang):
   var core = root.querySelector(".eco-core");
   var svg = root.querySelector(".eco-rays");
   var ns = "http://www.w3.org/2000/svg";
-  var edge = 8, gap = 12;
-
-  function hit(rect, cx, cy) {
-    var mx = (rect.left + rect.right) / 2, my = (rect.top + rect.bottom) / 2;
-    var dx = mx - cx, dy = my - cy, best = null;
-    function consider(t, x, y) { if (t > 0.001 && (!best || t < best.t)) best = {t:t, x:x, y:y}; }
-    if (dx) {
-      var t = (rect.left - cx) / dx, y = cy + t * dy;
-      if (y >= rect.top - 0.6 && y <= rect.bottom + 0.6) consider(t, rect.left, y);
-      t = (rect.right - cx) / dx; y = cy + t * dy;
-      if (y >= rect.top - 0.6 && y <= rect.bottom + 0.6) consider(t, rect.right, y);
-    }
-    if (dy) {
-      var t2 = (rect.top - cy) / dy, x = cx + t2 * dx;
-      if (x >= rect.left - 0.6 && x <= rect.right + 0.6) consider(t2, x, rect.top);
-      t2 = (rect.bottom - cy) / dy; x = cx + t2 * dx;
-      if (x >= rect.left - 0.6 && x <= rect.right + 0.6) consider(t2, x, rect.bottom);
-    }
-    return best || {x: rect.left, y: my};
-  }
+  var edge = 10, gap = 14, maxBox = 320, minBox = 136;
 
   function measure(widths) {
     nodes.forEach(function(el, i) {
@@ -3990,37 +3971,42 @@ def _orbit_blocks(blocks, lang):
     return nodes.map(function(el) { return el.offsetHeight; });
   }
 
-  function solve(heights, W, labelW) {
+  function solve(heights, W, labelW, labelH) {
     var total = gap * (heights.length - 1);
     heights.forEach(function(h) { total += h; });
     var H = total + edge * 2, cy = H / 2;
-    var cx = labelW / 2 + 10;
-    var minBox = Math.max(120, Math.min(230, W * 0.33));
-    var bow = Math.min(120, Math.max(20, W * 0.13));
-    var radius = Math.min(H / 2 - 8, W * 0.4);
-    var base = Math.max(radius, labelW / 2 + 16);
-    var room = W - edge - minBox - cx;
-    if (base + bow > room) {
-      bow = Math.max(12, room - base);
-      if (base + bow > room) {
-        base = Math.max(labelW / 2 + 16, room - 12);
-        bow = Math.max(8, room - base);
-      }
-    }
-    radius = Math.min(radius, base, H / 2 - 8);
+    var cx = labelW / 2 + 18;
     var y = edge, centers = [], maxDy = 1;
-    heights.forEach(function(h) { centers.push(y + h / 2); y += h + gap; });
-    centers.forEach(function(c) { maxDy = Math.max(maxDy, Math.abs(c - cy)); });
-    var clear = cx + labelW / 2 + 8;
-    var placed = centers.map(function(c, i) {
-      var t = (c - cy) / maxDy;
-      var x = cx + base + bow * Math.sqrt(Math.max(0, 1 - t * t));
-      var w = W - edge - x;
-      if (w < minBox) { w = minBox; x = W - edge - w; }
-      if (x < clear) { x = clear; w = Math.max(96, W - edge - x); }
-      return {x:x, y:c - heights[i] / 2, h:heights[i], w:w};
+    heights.forEach(function(h) {
+      centers.push(y + h / 2);
+      y += h + gap;
     });
-    return {H:H, cy:cy, cx:cx, radius:radius, placed:placed};
+    centers.forEach(function(c) { maxDy = Math.max(maxDy, Math.abs(c - cy)); });
+    var labelFit = Math.hypot(labelW / 2, labelH / 2) + 14;
+    var right = W - edge;
+    var sunR = Math.min(H / 2 - 8, Math.max(labelFit, Math.min(W * 0.42, 280)));
+    var leftFloor = cx + sunR + 10;
+    if (leftFloor > right - minBox - 36) {
+      sunR = Math.max(labelFit, Math.min(sunR, right - minBox - 46 - cx));
+      leftFloor = cx + sunR + 10;
+    }
+    var leftEnd = Math.max(leftFloor, right - maxBox);
+    var leftMid = Math.min(right - minBox, leftEnd + Math.min(110, Math.max(36, W * 0.14)));
+    if (leftMid < leftEnd + 18) leftMid = Math.min(right - minBox, leftEnd + 18);
+    var placed = centers.map(function(c, i) {
+      var t = maxDy ? (c - cy) / maxDy : 0;
+      var x = leftEnd + (leftMid - leftEnd) * Math.sqrt(Math.max(0, 1 - t * t));
+      var w = Math.max(96, right - x);
+      if (w > maxBox) w = maxBox;
+      return {x:x, y:c - heights[i] / 2, h:heights[i], w:w, my:c};
+    });
+    var align = 0;
+    placed.forEach(function(p) { align = Math.max(align, p.x + p.w); });
+    if (align > right) align = right;
+    placed.forEach(function(p) {
+      p.w = Math.min(maxBox, Math.max(96, align - p.x));
+    });
+    return {H:H, cy:cy, cx:cx, radius:sunR, placed:placed};
   }
 
   function layout() {
@@ -4028,13 +4014,12 @@ def _orbit_blocks(blocks, lang):
     if (W < 40 || !nodes.length) return;
     root.classList.add("is-set");
     core.style.width = "max-content";
-    var labelW = Math.min(core.offsetWidth, Math.max(96, W * 0.46));
-    core.style.width = labelW + "px";
-    var guess = Math.max(140, Math.min(320, (W - labelW) * 0.55));
+    var labelW = core.offsetWidth, labelH = core.offsetHeight;
+    var guess = Math.max(minBox, Math.min(maxBox, (W - labelW) * 0.42));
     var widths = nodes.map(function() { return guess; });
     var pass;
     for (var n = 0; n < 4; n++) {
-      pass = solve(measure(widths), W, labelW);
+      pass = solve(measure(widths), W, labelW, labelH);
       var next = pass.placed.map(function(p) { return p.w; });
       var same = next.every(function(w, i) { return Math.abs(w - widths[i]) < 1; });
       widths = next;
@@ -4053,6 +4038,9 @@ def _orbit_blocks(blocks, lang):
       nodes[i].style.width = p.w + "px";
     });
     var hb = root.getBoundingClientRect();
+    var sb = sun.getBoundingClientRect();
+    var ocx = sb.left + sb.width / 2 - hb.left;
+    var ocy = sb.top + sb.height / 2 - hb.top;
     svg.setAttribute("width", String(W));
     svg.setAttribute("height", String(pass.H));
     svg.setAttribute("viewBox", "0 0 " + W + " " + pass.H);
@@ -4060,13 +4048,13 @@ def _orbit_blocks(blocks, lang):
     while (svg.firstChild) svg.removeChild(svg.firstChild);
     nodes.forEach(function(el) {
       var r = el.getBoundingClientRect();
-      var rect = {left:r.left - hb.left, top:r.top - hb.top, right:r.right - hb.left, bottom:r.bottom - hb.top};
-      var end = hit(rect, pass.cx, pass.cy);
+      var x = r.left - hb.left;
+      var y = (r.top + r.bottom) / 2 - hb.top;
       var line = document.createElementNS(ns, "line");
-      line.setAttribute("x1", String(pass.cx));
-      line.setAttribute("y1", String(pass.cy));
-      line.setAttribute("x2", String(end.x));
-      line.setAttribute("y2", String(end.y));
+      line.setAttribute("x1", String(ocx));
+      line.setAttribute("y1", String(ocy));
+      line.setAttribute("x2", String(x));
+      line.setAttribute("y2", String(y));
       line.setAttribute("stroke", "rgba(198,240,255,.9)");
       line.setAttribute("stroke-width", "1.6");
       line.setAttribute("stroke-linecap", "butt");
@@ -4089,7 +4077,7 @@ def _orbit_blocks(blocks, lang):
         f'<div class="eco-orbit" data-eco-orbit>'
         f'<div class="eco-sun" aria-hidden="true"></div>'
         f'<svg class="eco-rays" aria-hidden="true"></svg>'
-        f'<p class="eco-core">{esc(label)}</p>'
+        f'<p class="eco-core">{label}</p>'
         f'<div class="eco-arc">{parts}</div>'
         f'</div>'
         f'<script>{script}</script>'

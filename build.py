@@ -470,7 +470,7 @@ h1,h2,h3{color:#ebebeb;font-weight:800}
 .dopen .drawer{transform:none}.dnoanim .drawer,.dnoanim .scrim{transition:none!important}
 .drawer{overscroll-behavior:contain}html.dopen{overflow-y:scroll}html.dopen body{position:fixed;left:0;right:0;width:100%;overflow:hidden}
 .drawer .dh{display:flex;align-items:center;gap:12px;padding:0 4px 13px 12px;margin:0 -12px 10px;border-bottom:1px solid var(--border)}
-@media (max-width:699.98px){.bar{gap:4px}.bar .burger{margin-left:-11px}.bar .brand{transform:none;margin-left:3px}.bar .logo{font-size:1.15rem}}@media (min-width:601px) and (max-width:699.98px){.drawer,.scrim{top:66px}}@media (min-width:700px){.drawer,.scrim,.bar .burger{display:none}}
+@media (max-width:699.98px){.bar{gap:4px}.bar .burger{margin-left:-11px}.bar .brand{transform:none;margin-left:3px}.bar .logo{font-size:1.15rem}}@media (min-width:601px) and (max-width:699.98px){.drawer,.scrim{top:66px}}@media (min-width:700px){header.hb .bar .burger{display:flex}}
 @media (max-width:1000.98px){.rside .cats9 a{padding-left:3px;padding-right:3px}}@media (max-width:904.98px) and (min-width:700px){.rside .mini{gap:2px}.rside .mini>div:not(.th){padding-top:0}.rside .mini h3{margin-top:-2px}.rside .mini .mdesc{margin-bottom:0}.rside .mini .meta{display:block;margin-top:2px;line-height:1.3}.rside .side{row-gap:24px}.read{grid-template-columns:minmax(0,2.68fr) minmax(0,1fr)}.rside .cats9{display:none}.rside .mini{grid-template-columns:1fr;gap:6px}.rside .mini img{aspect-ratio:1200/630}}@media (max-width:699.98px){.read{grid-template-columns:minmax(0,1fr);gap:36px}.read:not(.topic) .rside .side{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:22px 16px}.read:not(.topic) .rside .mini{grid-template-columns:1fr;gap:6px;margin:-6px}.read:not(.topic) .rside .mini .th{width:auto}.read:not(.topic) .rside .mini img{aspect-ratio:1200/630}.read:not(.topic) .rside .mini h3{font-size:1rem;margin-top:2px}.read:not(.topic) .rside .mini .mdesc{font-size:.9rem}.rside .cats9,.rside .mnav{display:none}.read.topic .rside{display:none}}
 .arch{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);gap:13px;align-items:start}
 .archh{margin:6px 0 0}.arch .rside{position:sticky;top:82px}
@@ -603,7 +603,7 @@ article .st{font-size:clamp(1.05rem,2vw,1.3rem);line-height:1.22;letter-spacing:
 .card.lead h3{font-size:clamp(1.35rem,2.4vw,1.85rem);line-height:1.2;letter-spacing:-.02em}
 .card.lead p{font-size:1rem;-webkit-line-clamp:2}
 .card .body{padding:18px 4px 0}
-.card h3{font-size:1.08rem;line-height:1.3;margin:6px 0 6px}.card h3{font-weight:700;color:#ebebeb}.grid2>.card h3{font-size:1rem}.mini h3{font-weight:700;font-size:.9rem;color:#ebebeb}.mini h3{margin-top:0}.meta>time.ago::before{content:'';display:inline-block;width:.62em;height:.72em;margin-right:.42em;vertical-align:-.04em;background:currentColor;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 12'%3E%3Cpath d='M1.2 1.2v9.6L9 6z' fill='none' stroke='black' stroke-width='1.6' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 12'%3E%3Cpath d='M1.2 1.2v9.6L9 6z' fill='none' stroke='black' stroke-width='1.6' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat}.smeta time.ago::before{content:none}.mini .mdesc{margin-bottom:0}.mini .meta{display:block;margin-top:3px;line-height:1.3}@media (min-width:905px){.rside .mini>div:not(.th){padding-top:0;contain:size;overflow:visible}.rside .mini h3{margin-top:0;line-height:1.22}.rside .mini .mdesc{line-height:1.25}.rside .mini .meta{margin-top:2px}}.mdesc{color:var(--muted);font-size:.8rem;line-height:1.35;margin:0 0 4px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}@media (max-width:904.98px){.rside .mini h3{-webkit-line-clamp:2}.rside .mini .mdesc{-webkit-line-clamp:1}}.shintro{color:var(--muted);margin:4px 0 18px;font-size:.95rem}.shintro a{color:inherit}.shgrid{margin-top:14px;display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:22px 14px}.shc{display:flex;flex-direction:column;gap:6px;min-width:0}.shv{position:relative;display:block;width:100%;aspect-ratio:9/16;padding:0;border:0;border-radius:10px;overflow:hidden;background:#000;cursor:pointer}.shv img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s}.shv:hover img{transform:scale(1.04)}.dur .dv{display:inline-flex;align-items:center;gap:3px;font-style:normal;margin-left:5px;padding-left:6px;border-left:1px solid rgba(255,255,255,.35)}.dur.dvo .dv{margin-left:0;padding-left:0;border-left:0}.vpl{position:absolute;left:50%;top:50%;width:15cqw;height:15cqw;min-width:38px;min-height:38px;max-width:84px;max-height:84px;transform:translate(-50%,-50%);border-radius:50%;background:rgba(0,0,0,.55);box-shadow:0 0 0 2px rgba(255,255,255,.9);pointer-events:none;z-index:2}.vpl::after{content:"";position:absolute;left:54%;top:50%;transform:translate(-50%,-50%);border-left:.62em solid #fff;border-top:.4em solid transparent;border-bottom:.4em solid transparent;font-size:clamp(20px,6.5cqw,40px)}.hi[data-vid]{cursor:pointer}.hi[data-vid]:hover .vpl{background:rgba(220,30,30,.85)}.hi.on{aspect-ratio:16/9;background:#000;border-radius:10px;overflow:hidden}@media (max-width:600.98px){.read .hi.on{border-radius:0}}.hi.on iframe{position:absolute;inset:0;width:100%;height:100%;border:0}iframe:fullscreen,iframe:-webkit-full-screen{width:100vw!important;height:100vh!important;inset:0!important}.avid{margin:18px 0 22px}.avb{position:relative;display:block;width:100%;aspect-ratio:16/9;padding:0;border:0;border-radius:12px;overflow:hidden;background:#000;cursor:pointer}.avb img{width:100%;height:100%;object-fit:cover;display:block}.avb iframe{position:absolute;inset:0;width:100%;height:100%;border:0}.avb .shp{width:68px;height:68px;margin:-34px 0 0 -34px}.avb .shp::after{left:26px;top:20px;border-left-width:22px;border-top-width:14px;border-bottom-width:14px}.avid figcaption{color:var(--muted);font-size:.8rem;margin-top:6px}.shm{position:fixed;inset:0;z-index:1000;background:rgba(0,0,0,.88);display:flex;align-items:center;justify-content:center}.shbox{height:min(92vh,1100px);aspect-ratio:9/16;max-width:100vw;border-radius:12px;overflow:hidden;background:#000}.shbox iframe{width:100%;height:100%;border:0;display:block}.shx{position:absolute;top:14px;right:14px;width:44px;height:44px;border-radius:50%;border:0;background:rgba(40,40,40,.85);cursor:pointer}.shx::before,.shx::after{content:"";position:absolute;left:12px;top:21px;width:20px;height:2px;background:#fff;border-radius:2px;transform:rotate(45deg)}.shx::after{transform:rotate(-45deg)}.shx:hover{background:#444}@media (max-width:600.98px){.shm{background:#000;align-items:flex-end}.shbox{width:100vw;height:calc(100vh - 56px);height:calc(100dvh - 56px);aspect-ratio:auto;border-radius:0}.shx{top:6px;right:8px}}.shp{position:absolute;left:50%;top:50%;width:54px;height:54px;margin:-27px 0 0 -27px;border-radius:50%;background:rgba(0,0,0,.55);box-shadow:0 0 0 2px rgba(255,255,255,.85)}.shp::after{content:"";position:absolute;left:21px;top:16px;border-left:17px solid #fff;border-top:11px solid transparent;border-bottom:11px solid transparent}.sht{font-weight:700;font-size:.92rem;line-height:1.3;color:#ebebeb;text-decoration:none;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}a.sht:hover{text-decoration:underline}.shc .meta{font-size:.74rem}@media (max-width:600.98px){.shgrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 10px}}.mini .meta{font-size:.74rem}
+.card h3{font-size:1.08rem;line-height:1.3;margin:6px 0 6px}.card h3{font-weight:700;color:#ebebeb}.grid2>.card h3{font-size:1rem}.mini h3{font-weight:700;font-size:.9rem;color:#ebebeb}.mini h3{margin-top:0}.meta>time.ago::before{content:'';display:inline-block;width:.62em;height:.72em;margin-right:.42em;vertical-align:-.04em;background:currentColor;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 12'%3E%3Cpath d='M1.2 1.2v9.6L9 6z' fill='none' stroke='black' stroke-width='1.6' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 12'%3E%3Cpath d='M1.2 1.2v9.6L9 6z' fill='none' stroke='black' stroke-width='1.6' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat}.smeta time.ago::before{content:none}.mini .mdesc{margin-bottom:0}.mini .meta{display:block;margin-top:3px;line-height:1.3}@media (min-width:905px){.rside .mini>div:not(.th){padding-top:0;contain:size;overflow:visible}.rside .mini h3{margin-top:0;line-height:1.22}.rside .mini .mdesc{line-height:1.25}.rside .mini .meta{margin-top:2px}}.mdesc{color:var(--muted);font-size:.8rem;line-height:1.35;margin:0 0 4px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}@media (max-width:904.98px){.rside .mini h3{-webkit-line-clamp:2}.rside .mini .mdesc{-webkit-line-clamp:1}}.shintro{color:var(--muted);margin:4px 0 18px;font-size:.95rem}.shintro a{color:inherit}.shgrid{margin-top:14px;display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:22px 14px}.shc{display:flex;flex-direction:column;gap:6px;min-width:0}.shv{position:relative;display:block;width:100%;aspect-ratio:9/16;padding:0;border:0;border-top:3px solid #444;border-radius:10px;overflow:hidden;background:#000;cursor:pointer}.shc.tesla .shv{border-top-color:#E31937}.shc.energy .shv{border-top-color:#4CD964}.shc.spacex .shv{border-top-color:#FF7A00}.shc.link .shv{border-top-color:#00D1FF}.shc.spacexsi .shv{border-top-color:#FFC400}.shc.neural .shv{border-top-color:#FF2D95}.shc.boring .shv{border-top-color:#2F6BFF}.shv img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s}.shv:hover img{transform:scale(1.04)}.dur .dv{display:inline-flex;align-items:center;gap:3px;font-style:normal;margin-left:5px;padding-left:6px;border-left:1px solid rgba(255,255,255,.35)}.dur.dvo .dv{margin-left:0;padding-left:0;border-left:0}.vpl{position:absolute;left:50%;top:50%;width:15cqw;height:15cqw;min-width:38px;min-height:38px;max-width:84px;max-height:84px;transform:translate(-50%,-50%);border-radius:50%;background:rgba(0,0,0,.55);box-shadow:0 0 0 2px rgba(255,255,255,.9);pointer-events:none;z-index:2}.vpl::after{content:"";position:absolute;left:54%;top:50%;transform:translate(-50%,-50%);border-left:.62em solid #fff;border-top:.4em solid transparent;border-bottom:.4em solid transparent;font-size:clamp(20px,6.5cqw,40px)}.hi[data-vid]{cursor:pointer}.hi[data-vid]:hover .vpl{background:rgba(220,30,30,.85)}.hi.on{aspect-ratio:16/9;background:#000;border-radius:10px;overflow:hidden}@media (max-width:600.98px){.read .hi.on{border-radius:0}}.hi.on iframe{position:absolute;inset:0;width:100%;height:100%;border:0}iframe:fullscreen,iframe:-webkit-full-screen{width:100vw!important;height:100vh!important;inset:0!important}.avid{margin:18px 0 22px}.avb{position:relative;display:block;width:100%;aspect-ratio:16/9;padding:0;border:0;border-radius:12px;overflow:hidden;background:#000;cursor:pointer}.avb img{width:100%;height:100%;object-fit:cover;display:block}.avb iframe{position:absolute;inset:0;width:100%;height:100%;border:0}.avb .shp{width:68px;height:68px;margin:-34px 0 0 -34px}.avb .shp::after{left:26px;top:20px;border-left-width:22px;border-top-width:14px;border-bottom-width:14px}.avid figcaption{color:var(--muted);font-size:.8rem;margin-top:6px}.shm{position:fixed;inset:0;z-index:1000;background:rgba(0,0,0,.88);display:flex;align-items:center;justify-content:center}.shbox{height:min(92vh,1100px);aspect-ratio:9/16;max-width:100vw;border-radius:12px;overflow:hidden;background:#000}.shbox iframe{width:100%;height:100%;border:0;display:block}.shx{position:absolute;top:14px;right:14px;width:44px;height:44px;border-radius:50%;border:0;background:rgba(40,40,40,.85);cursor:pointer}.shx::before,.shx::after{content:"";position:absolute;left:12px;top:21px;width:20px;height:2px;background:#fff;border-radius:2px;transform:rotate(45deg)}.shx::after{transform:rotate(-45deg)}.shx:hover{background:#444}@media (max-width:600.98px){.shm{background:#000;align-items:flex-end}.shbox{width:100vw;height:calc(100vh - 56px);height:calc(100dvh - 56px);aspect-ratio:auto;border-radius:0}.shx{top:6px;right:8px}}.shp{position:absolute;left:50%;top:50%;width:54px;height:54px;margin:-27px 0 0 -27px;border-radius:50%;background:rgba(0,0,0,.55);box-shadow:0 0 0 2px rgba(255,255,255,.85)}.shp::after{content:"";position:absolute;left:21px;top:16px;border-left:17px solid #fff;border-top:11px solid transparent;border-bottom:11px solid transparent}.sht{font-weight:700;font-size:.92rem;line-height:1.3;color:#ebebeb;text-decoration:none;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}a.sht:hover{text-decoration:underline}.shc .meta{font-size:.74rem}@media (max-width:600.98px){.shgrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 10px}}.mini .meta{font-size:.74rem}
 .card p{color:var(--muted);font-size:.9rem;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
 .empty{color:var(--muted);background:var(--surface);border:1px dashed var(--border2);border-radius:10px;padding:28px;text-align:center}
 /* models */
@@ -824,7 +824,8 @@ article.money .prose h2{scroll-margin-top:130px}
 .topics3 p{font-size:.88rem;-webkit-line-clamp:2}
 .vstrip{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:2px 0 12px;scrollbar-width:thin}
 .vcard{flex:0 0 240px;scroll-snap-align:start;text-decoration:none;color:inherit;min-width:0}
-.vcard .vim{position:relative;display:block;aspect-ratio:16/9;border-radius:10px;overflow:hidden;border:1px solid var(--edge);background:#000;container-type:inline-size}
+.vcard .vim{position:relative;display:block;aspect-ratio:16/9;border-radius:10px;overflow:hidden;border:1px solid var(--edge);border-top:3px solid #444;background:#000;container-type:inline-size}
+.vcard.tesla .vim{border-top-color:#E31937}.vcard.energy .vim{border-top-color:#4CD964}.vcard.spacex .vim{border-top-color:#FF7A00}.vcard.link .vim{border-top-color:#00D1FF}.vcard.spacexsi .vim{border-top-color:#FFC400}.vcard.neural .vim{border-top-color:#FF2D95}.vcard.boring .vim{border-top-color:#2F6BFF}
 .vcard img{width:100%;height:100%;object-fit:cover}
 .vcard strong{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:.9rem;line-height:1.3;margin-top:8px;font-weight:700}
 @media (max-width:800.98px){
@@ -933,7 +934,7 @@ html.find-open header.hb .sbtn{background:#272727;border-radius:8px}
 @media (prefers-reduced-motion:reduce){.hb-find,.hb-find .hb-search{transition:none}}
 header.hb .savedlink{margin-left:6px}
 header.hb ~ .drawer,header.hb ~ .scrim{top:66px}
-@media (min-width:900px){header.hb .pnav{display:flex;flex-wrap:nowrap;overflow:visible;align-items:baseline}header.hb .id{align-items:baseline;gap:16px}header.hb .bar{position:relative;z-index:3;align-items:center}header.hb .logo{line-height:1}header.hb .logo span{top:0}header.hb .bar .burger{display:none}}
+@media (min-width:900px){header.hb .pnav{display:flex;flex-wrap:nowrap;overflow:visible;align-items:baseline}header.hb .id{align-items:baseline;gap:16px}header.hb .bar{position:relative;z-index:3;align-items:center}header.hb .logo{line-height:1}header.hb .logo span{top:0}header.hb .bar .burger{display:flex}}
 @media (min-width:901px){.hb-find .hb-search{width:min(640px,calc(100% - 292px - 26px));max-width:none;margin:8px calc(292px + 26px) 18px auto}}
 @media (max-width:860.98px){header.hb .hb-find .hb-search{display:flex;position:relative;left:auto;right:auto;top:auto;width:min(640px,calc(100% - 8px));height:42px;margin:8px auto 18px;padding:0;background:transparent;z-index:1}}
 @media (min-width:900px) and (max-width:1099.98px){header.hb .id{gap:10px}header.hb .pn,header.hb .mdrop>button.pn{font-size:14.5px;padding:5px 7px}}
@@ -1184,9 +1185,14 @@ a.eco-node:hover,a.eco-node:focus-visible,.card:hover,.card:focus-visible,.eco-c
 .eco-node li{font-size:.62rem;line-height:1.2}
 .eco-core{font-size:.84rem}
 }
-@media (min-width:1100px){header.hb .id{gap:16px}}
-@media (min-width:900px){
+@media (min-width:1100px){header.hb .id{gap:24px}}
+@media (min-width:1320px){header.hb .id{gap:80px}}
+@media (min-width:1000px){
 header.hb .pn,header.hb .mdrop>button.pn{font-size:14px;padding:6px 8px}
+}
+@media (min-width:900px) and (max-width:999.98px){
+header.hb .id{gap:6px}
+header.hb .pn,header.hb .mdrop>button.pn{font-size:12.5px;padding:5px 3px}
 }
 .adhold{display:block;width:100%}
 .ad-sidebar{margin:0 0 16px;max-width:none}
@@ -3080,16 +3086,15 @@ def consent_bar(lang):
             f'</div></div>{show}')
 
 
-# Top nav is the seven map layers. The first item in each menu is the layer page.
+# Top nav is the seven map layers. plain=True is a single link, with no menu.
 # child=True indents a page that belongs under the item above it.
 NAV_LAYERS = [
     {
         "key": "tesla", "tone": "tesla", "href": "tesla/",
         "label": {"en": "Tesla", "nl": "Tesla"},
         "items": [
-            {"key": "tesla", "href": "tesla/", "en": "Overview", "nl": "Overzicht", "overview": True},
-            {"key": "cars", "href": "cars/", "en": "Cars", "nl": "Auto's"},
-            {"key": "models", "href": "category/models/", "en": "Tesla models", "nl": "Tesla-modellen", "child": True},
+            {"key": "cars", "href": "cars/", "en": "Electric car news", "nl": "Elektrisch autonieuws"},
+            {"key": "models", "href": "category/models/", "en": "Tesla models", "nl": "Tesla-modellen"},
             {"key": "semi", "href": "semi/", "en": "Semi Truck", "nl": "Semi-truck"},
             {"key": "robotaxi", "href": "robotaxi/", "en": "Robotaxi", "nl": "Robotaxi"},
             {"key": "fsd", "href": "fsd/", "en": "FSD", "nl": "FSD"},
@@ -3100,7 +3105,6 @@ NAV_LAYERS = [
         "key": "tesla-energy", "tone": "energy", "href": "tesla-energy/",
         "label": {"en": "Tesla Energy", "nl": "Tesla Energy"},
         "items": [
-            {"key": "tesla-energy", "href": "tesla-energy/", "en": "Overview", "nl": "Overzicht", "overview": True},
             {"key": "megapacks", "href": "megapacks/", "en": "Megapacks", "nl": "Megapacks"},
             {"key": "charging-network", "href": "charging-network/", "en": "Charging Network", "nl": "Laadnetwerk"},
             {"key": "home-charging", "href": "home-charging/", "en": "Home charging stations", "nl": "Thuisladers"},
@@ -3111,7 +3115,6 @@ NAV_LAYERS = [
         "key": "spacex", "tone": "spacex", "href": "spacex/",
         "label": {"en": "SpaceX", "nl": "SpaceX"},
         "items": [
-            {"key": "spacex", "href": "spacex/", "en": "Overview", "nl": "Overzicht", "overview": True},
             {"key": "starship-vehicle", "href": "starship-vehicle/", "en": "Starship", "nl": "Starship"},
             {"key": "starship", "href": "starship/", "en": "Starship tracker", "nl": "Starship-tracker", "child": True},
             {"key": "falcons", "href": "falcons/", "en": "Falcons", "nl": "Falcons"},
@@ -3120,18 +3123,13 @@ NAV_LAYERS = [
     {
         "key": "starlink", "tone": "link", "href": "starlink/",
         "label": {"en": "Starlink", "nl": "Starlink"},
-        "items": [
-            {"key": "starlink", "href": "starlink/", "en": "Overview", "nl": "Overzicht", "overview": True},
-            {"key": "satellite-network", "href": "satellite-network/", "en": "Satellite network", "nl": "Satellietnetwerk"},
-        ],
+        "plain": True,
     },
     {
         "key": "spacexsi", "tone": "spacexsi", "href": "spacexsi/",
         "label": {"en": "SpaceXSI", "nl": "SpaceXSI"},
         "items": [
-            {"key": "spacexsi", "href": "spacexsi/", "en": "Overview", "nl": "Overzicht", "overview": True},
-            {"key": "ai", "href": "ai/", "en": "AI", "nl": "AI"},
-            {"key": "agi", "href": "agi/", "en": "AGI-race", "nl": "AGI-race", "child": True},
+            {"key": "ai", "href": "ai/", "en": "AI news", "nl": "AI-nieuws"},
             {"key": "ai-compute", "href": "ai-compute/", "en": "Compute", "nl": "Rekenkracht"},
             {"key": "datacenters", "href": "datacenters/", "en": "Datacenters", "nl": "Datacenters"},
             {"key": "chips", "href": "chips/", "en": "Chips", "nl": "Chips"},
@@ -3140,24 +3138,19 @@ NAV_LAYERS = [
     {
         "key": "neuralink", "tone": "neural", "href": "neuralink/",
         "label": {"en": "Neuralink", "nl": "Neuralink"},
-        "items": [
-            {"key": "neuralink", "href": "neuralink/", "en": "Overview", "nl": "Overzicht", "overview": True},
-            {"key": "brain-interfaces", "href": "brain-interfaces/", "en": "Brain-computer interfaces", "nl": "Brein-computerinterfaces"},
-        ],
+        "plain": True,
     },
     {
         "key": "boring", "tone": "boring", "href": "boring/",
-        "label": {"en": "The Boring Company", "nl": "The Boring Company"},
-        "items": [
-            {"key": "boring", "href": "boring/", "en": "Overview", "nl": "Overzicht", "overview": True},
-            {"key": "car-tunnels", "href": "car-tunnels/", "en": "Car tunnels", "nl": "Autotunnels"},
-        ],
+        "label": {"en": "Boring Co.", "nl": "Boring Co."},
+        "plain": True,
     },
 ]
 
 _LAYER_FOR = {}
 for _layer in NAV_LAYERS:
-    for _item in _layer["items"]:
+    _LAYER_FOR[_layer["key"]] = _layer["key"]
+    for _item in _layer.get("items") or []:
         _LAYER_FOR[_item["key"]] = _layer["key"]
 
 
@@ -3184,8 +3177,11 @@ def primary_nav(lang, active=None):
     parts = []
     for layer in NAV_LAYERS:
         on = " on" if cur == layer["key"] else ""
-        menu = "".join(_menu_link(lang, item, active) for item in layer["items"])
         label = layer["label"][lang]
+        if layer.get("plain"):
+            parts.append(f'<a class="pn{on}" href="{url(lang, layer["href"])}">{esc(label)}</a>')
+            continue
+        menu = "".join(_menu_link(lang, item, active) for item in layer.get("items") or [])
         parts.append(
             f'<div class="pdrop tone-{layer["tone"]}{on}">'
             f'<a class="pn{on}" href="{url(lang, layer["href"])}" aria-haspopup="true" aria-expanded="false">'
@@ -3198,17 +3194,18 @@ def drawer_links(lang, active):
     out = []
     for layer in NAV_LAYERS:
         on = " on" if nav_current(active) == layer["key"] else ""
+        link = (f'<a class="di tone-{layer["tone"]}{on}" href="{url(lang, layer["href"])}">'
+                f'{esc(layer["label"][lang])}</a>')
+        if layer.get("plain"):
+            out.append(f'<div class="dlayer">{link}</div>')
+            continue
         subs = []
-        for item in layer["items"]:
-            if item.get("overview"):
-                continue
+        for item in layer.get("items") or []:
             mark = " on" if active == item["key"] else ""
             child = " child" if item.get("child") else ""
             subs.append(
                 f'<a class="{child.strip()}{mark}" href="{url(lang, item["href"])}">{esc(item[lang])}</a>')
-        out.append(
-            f'<div class="dlayer"><a class="di tone-{layer["tone"]}{on}" href="{url(lang, layer["href"])}">'
-            f'{esc(layer["label"][lang])}</a><div class="dsub">{"".join(subs)}</div></div>')
+        out.append(f'<div class="dlayer">{link}<div class="dsub">{"".join(subs)}</div></div>')
     out.append(
         f'<a class="di dmap" href="{url(lang, ecosystem_path(lang))}">{esc(LANGS[lang]["nav_eco"])}</a>')
     return "".join(out)
@@ -3483,6 +3480,19 @@ def home_lead(a, lang, title_tag="h1"):
             f'<a class="btn" href="{href}">{esc(L["read_story"])}</a></div></article>')
 
 
+def layer_tone(a):
+    """Colour class for a filed layer. Matches the homepage layer cards."""
+    return {
+        "tesla": "tesla",
+        "tesla-energy": "energy",
+        "spacex": "spacex",
+        "starlink": "link",
+        "spacexsi": "spacexsi",
+        "neuralink": "neural",
+        "boring": "boring",
+    }.get((a or {}).get("layer") or "", "")
+
+
 def home_videos(arts, lang, n=8, skip_ids=()):
     """Compact strip of the newest stories that have a long video or a Short. Links to the article."""
     by = {a["slug"]: a for a in arts}
@@ -3511,8 +3521,9 @@ def home_videos(arts, lang, n=8, skip_ids=()):
             badge = f"{int(seconds) // 60}:{int(seconds) % 60:02d}"
         else:
             badge = LANGS[lang]["videos"]
+        tone = layer_tone(a)
         cards.append(
-            f'<a class="vcard" href="{href}"><span class="vim">'
+            f'<a class="vcard {tone}" href="{href}"><span class="vim">'
             f'{resp_img(site_img(a), t["title"], SIZES_VIDEO, width=480, height=270)}'
             f'<span class="vpl" aria-hidden="true"></span>'
             f'<span class="dur dvo">{esc(badge)}</span></span>'
@@ -4002,13 +4013,13 @@ HUBS = [
     },
     {
         "key": "ai", "path": "ai/",
-        "title": {"en": "AI", "nl": "AI"},
-        "topics": ["ai"],
+        "title": {"en": "AI news", "nl": "AI-nieuws"},
+        "topics": ["ai", "agi"],
         "categories": [],
         "keywords": [],
         "intro": {
-            "en": "Grok, Cursor and the models SpaceXSI ships. The wider lab race has its own page.",
-            "nl": "Grok, Cursor en de modellen die SpaceXSI uitbrengt. De bredere labrace heeft een eigen pagina.",
+            "en": "Grok, Cursor and the models SpaceXSI ships, plus the wider lab race.",
+            "nl": "Grok, Cursor en de modellen die SpaceXSI uitbrengt, plus de bredere labrace.",
         },
     },
     {
@@ -4620,7 +4631,7 @@ LAYERS = [
     },
     {
         "key": "boring", "path": "boring/", "tone": "boring", "nav": "boring", "hub": "boring",
-        "kicker": {"en": "7 · The Boring Company", "nl": "7 · The Boring Company"},
+        "kicker": {"en": "7 · Boring Co.", "nl": "7 · Boring Co."},
         "title": {"en": "The Boring Company", "nl": "The Boring Company"},
         "fact": {"en": "Car tunnels", "nl": "Autotunnels"},
         "stats": [],
@@ -5552,7 +5563,8 @@ def build():
             t = a[lang]["title"] if a else sh["title"]
             dt = sh["published"]
             cap = (f'<a class="sht" href="{url(lang, a["slug"] + "/")}">{esc(t)}</a>' if a else f'<span class="sht">{esc(t)}</span>')
-            cards += (f'<div class="shc"><button class="shv" type="button" data-id="{esc(sh["id"])}" aria-label="{"Play" if en else "Afspelen"}: {esc(t)}">'
+            tone = layer_tone(a) if a else ""
+            cards += (f'<div class="shc {tone}"><button class="shv" type="button" data-id="{esc(sh["id"])}" aria-label="{"Play" if en else "Afspelen"}: {esc(t)}">'
                       f'<img src="https://i.ytimg.com/vi/{esc(sh["id"])}/hqdefault.jpg" alt="{esc(t)}" loading="lazy" width="480" height="360">'
                       f'<span class="shp" aria-hidden="true"></span></button>{cap}'
                       f'<span class="meta"><time class="ago" datetime="{esc(dt)}">{fmt_date(dt[:10], lang)}</time></span></div>')

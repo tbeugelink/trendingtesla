@@ -3,24 +3,24 @@
     "layer": "starlink",
     "topic": "starlink",
     "card": {
-      "en": "Starlink will lower 4400 satellites from 550",
-      "nl": "Starlink verlaagt in 2026 4 400 satellieten"
+      "en": "Starlink will lower 4400 satellites to 480 km",
+      "nl": "Starlink verlaagt 4400 satellieten naar 480 km"
     }
   },
   "tesla-robovan-vegas-loop-boring-company-steve-davis-plan": {
     "layer": "boring",
     "topic": "boring",
     "card": {
-      "en": "Tesla's Robovan could carry crowds in the Vegas",
-      "nl": "Tesla's Robovan kan drukte opvangen in de Vegas"
+      "en": "Robovan could carry crowds through the Vegas Loop",
+      "nl": "Robovan kan drukte door de Vegas Loop vervoeren"
     }
   },
   "former-optimus-chief-milan-kovac-joins-boston-dynamics-hyundai": {
     "layer": "tesla",
     "topic": "optimus",
     "card": {
-      "en": "Tesla's former Optimus chief Milan Kovac joins Hyundai's",
-      "nl": "Voormalig Optimus-baas Milan Kovac gaat naar Hyundai's Boston"
+      "en": "Former Optimus chief Kovac joins Boston Dynamics",
+      "nl": "Voormalig Optimus-baas Kovac gaat naar Boston Dynamics"
     }
   },
   "vegas-loop-nevada-lawmakers-safety-osha-wastewater-fines-hearing": {
@@ -28,23 +28,23 @@
     "topic": "boring",
     "card": {
       "en": "Nevada lawmakers question Vegas Loop safety",
-      "nl": "Parlement van Nevada stelt vragen over veiligheid Vegas"
+      "nl": "Nevada vraagt opheldering over de Vegas Loop"
     }
   },
   "tesla-vp-finance-sendil-palani-leaves-after-17-years": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "Tesla's VP of Finance Sendil Palani leaves after",
-      "nl": "Tesla's financieel vicepresident Sendil Palani vertrekt na 17"
+      "en": "Finance chief Palani leaves after 17 years",
+      "nl": "Financieel directeur Palani vertrekt na 17 jaar"
     }
   },
   "vegas-loop-conexpo-2026-82000-passengers-prufrock-2-record-tunnel": {
     "layer": "boring",
     "topic": "boring",
     "card": {
-      "en": "Vegas Loop carries 82000 riders in Teslas during",
-      "nl": "Vegas Loop vervoert 82 000 mensen in Tesla's"
+      "en": "Vegas Loop carries 82000 riders during CONEXPO",
+      "nl": "Vegas Loop vervoert 82000 mensen tijdens CONEXPO"
     }
   },
   "tesla-wins-uk-electricity-supply-licence-ofgem-what-it-means": {
@@ -60,15 +60,15 @@
     "topic": "starlink",
     "card": {
       "en": "Starlink passes 10000 satellites in orbit",
-      "nl": "Starlink heeft voor het eerst 10 000 satellieten"
+      "nl": "Starlink passeert voor het eerst 10000 satellieten"
     }
   },
   "nhtsa-upgrades-tesla-fsd-low-visibility-probe-engineering-analysis-3-2-million": {
     "layer": "tesla",
     "topic": "fsd",
     "card": {
-      "en": "NHTSA escalates Tesla FSD sun glare and fog",
-      "nl": "NHTSA breidt onderzoek naar Tesla FSD bij zonnestand"
+      "en": "NHTSA escalates the FSD low-visibility probe",
+      "nl": "NHTSA verzwaart het FSD-onderzoek bij slecht zicht"
     }
   },
   "musk-terafab-keynote-austin-terawatt-chips-tesla-spacex-xai": {
@@ -91,24 +91,24 @@
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "UK car tax from April 2026",
-      "nl": "Britse wegenbelasting vanaf april 2026"
+      "en": "Some Teslas now escape Britain's luxury-car tax",
+      "nl": "Sommige Tesla's ontsnappen aan de Britse luxebelasting"
     }
   },
   "rdw-approves-tesla-fsd-supervised-netherlands-first-in-europe": {
     "layer": "tesla",
     "topic": "fsd",
     "card": {
-      "en": "Netherlands becomes the first European country to approve",
-      "nl": "Nederland keurt als eerste land in Europa Tesla"
+      "en": "Netherlands is first in Europe to approve FSD",
+      "nl": "Nederland keurt als eerste in Europa FSD goed"
     }
   },
   "delaware-court-dismisses-musk-tesla-derivative-suits-texas-forum": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "Delaware court throws out three shareholder suits against",
-      "nl": "Rechter in Delaware wijst drie aandeelhouderszaken tegen Musk"
+      "en": "Delaware throws out three Tesla shareholder suits",
+      "nl": "Delaware wijst drie Tesla-aandeelhouderszaken af"
     }
   },
   "tesla-robotaxi-launches-dallas-houston-no-safety-monitor": {
@@ -123,8 +123,8 @@
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "Tesla reports Musk's 2025 pay at 158 billion",
-      "nl": "Tesla meldt 158 miljard dollar beloning voor Musk"
+      "en": "Musk's 158 billion pay package paid him nothing",
+      "nl": "Van 158 miljard beloning ontving Musk niets"
     }
   },
   "anthropic-rents-colossus-1-spacexai-memphis-what-it-means-for-tesla": {
@@ -139,8 +139,8 @@
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "Cybertruck recalls",
-      "nl": "Terugroepacties Cybertruck"
+      "en": "The Cybertruck faces another wheel recall",
+      "nl": "De Cybertruck krijgt opnieuw een wielterugroepactie"
     }
   },
   "starship-flight-12-first-v3-launch-booster-lost-tesla-link": {
@@ -155,8 +155,8 @@
     "layer": "tesla-energy",
     "topic": "powerwall",
     "card": {
-      "en": "Tesla cuts Powerwall lease prices in Massachusetts",
-      "nl": "Tesla verlaagt Powerwall-lease in Massachusetts en Connecticut als"
+      "en": "Tesla cuts Powerwall lease prices in two states",
+      "nl": "Tesla verlaagt de Powerwall-lease in twee staten"
     }
   },
   "tesla-natpower-25-gwh-megapack-deal-uk-italy": {
@@ -171,72 +171,72 @@
     "layer": "tesla",
     "topic": "fsd",
     "card": {
-      "en": "Tesla settles lawsuit over first known pedestrian death",
-      "nl": "Tesla schikt rechtszaak over eerste bekende voetgangersdode door"
+      "en": "Tesla settles the first known FSD pedestrian death",
+      "nl": "Tesla schikt de zaak rond de eerste FSD-dode"
     }
   },
   "tesla-settles-optimus-trade-secret-lawsuit-proception-robot-hand": {
     "layer": "tesla",
     "topic": "optimus",
     "card": {
-      "en": "Tesla settles Optimus trade secret lawsuit with robot",
-      "nl": "Tesla schikt rechtszaak over Optimus-bedrijfsgeheimen met robothandstartup Proception"
+      "en": "Tesla settles the Optimus trade-secret lawsuit",
+      "nl": "Tesla schikt de zaak over Optimus-bedrijfsgeheimen"
     }
   },
   "tesla-q2-2026-deliveries-480126-beat-estimates-growth-returns": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "Tesla delivers 480126 cars in Q2 2026 up",
-      "nl": "Tesla levert 480 126 auto's af in Q2"
+      "en": "Tesla delivers 480126 cars in Q2 2026",
+      "nl": "Tesla levert in Q2 2026 ruim 480126 auto's"
     }
   },
   "frontier-indigo-partners-starlink-1000-aircraft-wifi": {
     "layer": "starlink",
     "topic": "starlink",
     "card": {
-      "en": "Frontier's owner picks Starlink for more than 1000",
-      "nl": "Eigenaar van Frontier kiest Starlink voor ruim 1"
+      "en": "Frontier's owner picks Starlink for over 1000 planes",
+      "nl": "Frontier kiest Starlink voor ruim 1000 vliegtuigen"
     }
   },
   "fsd-v14-lite-hw3-what-older-teslas-get": {
     "layer": "tesla",
     "topic": "fsd",
     "card": {
-      "en": "FSD v14 Lite for Hardware 3",
-      "nl": "FSD v14 Lite voor Hardware 3"
+      "en": "Hardware 3 Teslas get a lighter FSD version",
+      "nl": "Hardware 3-Tesla's krijgen een lichtere FSD-versie"
     }
   },
   "boring-company-vegas-loop-numbers-cost-per-mile-digging-speed-ridership": {
     "layer": "boring",
     "topic": "boring",
     "card": {
-      "en": "The Vegas Loop in numbers",
-      "nl": "De Vegas Loop in cijfers"
+      "en": "Each Vegas Loop mile costs several million dollars",
+      "nl": "Een mijl Vegas Loop kost enkele miljoenen dollars"
     }
   },
   "tesla-fsd-europe-safety-data-65-million-km-five-countries": {
     "layer": "tesla",
     "topic": "fsd",
     "card": {
-      "en": "Tesla's first big European FSD safety report",
-      "nl": "Tesla's eerste grote Europese FSD-veiligheidsrapport"
+      "en": "Europe's FSD report lists six collisions",
+      "nl": "Tesla meldt zes botsingen op 65 miljoen kilometer"
     }
   },
   "tesla-10-millionth-vehicle-fremont-model-y": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "Tesla builds its 10 millionth car a Model",
-      "nl": "Tesla bouwt zijn 10 miljoenste auto"
+      "en": "Tesla builds its 10 millionth car in Fremont",
+      "nl": "Tesla bouwt in Fremont zijn 10 miljoenste auto"
     }
   },
   "tesla-china-doubao-deepseek-voice-assistant-instead-of-grok": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "No Grok in China",
-      "nl": "Geen Grok in China"
+      "en": "China Teslas get local chatbots instead of Grok",
+      "nl": "Chinese Tesla's krijgen chatbots in plaats van Grok"
     }
   },
   "tesla-powerwall-3-japan-launch-subsidies-installations": {
@@ -251,24 +251,24 @@
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "Tesla wins court order to recover Cybertruck tooling",
-      "nl": "Tesla krijgt via de rechter Cybertruck-gereedschap terug"
+      "en": "Tesla recovers Cybertruck tooling from Angstrom",
+      "nl": "Tesla krijgt Cybertruck-gereedschap terug van Angstrom"
     }
   },
   "tesla-electric-powerwall-lease-texas-35-month-backup-plan": {
     "layer": "tesla-energy",
     "topic": "powerwall",
     "card": {
-      "en": "Two Powerwalls for 35 a month",
-      "nl": "Twee Powerwalls voor 35 dollar per maand"
+      "en": "Two Powerwalls lease for 35 dollars a month",
+      "nl": "Twee Powerwalls kosten 35 dollar per maand"
     }
   },
   "spacex-completes-60-billion-cursor-acquisition-grok-tesla": {
     "layer": "spacexsi",
     "topic": "spacexsi",
     "card": {
-      "en": "SpaceX closes 60 billion Cursor deal",
-      "nl": "SpaceX rondt Cursor-deal van 60 miljard dollar af"
+      "en": "SpaceX closes its 60 billion dollar Cursor deal",
+      "nl": "SpaceX rondt de Cursor-deal van 60 miljard af"
     }
   },
   "tesla-certified-pre-owned-program-us-warranty-inspection": {
@@ -284,7 +284,7 @@
     "topic": "cars",
     "card": {
       "en": "Giga Shanghai builds its 6 millionth battery pack",
-      "nl": "Giga Shanghai bouwt zijn 6 miljoenste batterijpakket 279"
+      "nl": "Giga Shanghai bouwt zijn 6 miljoenste accupakket"
     }
   },
   "tesla-austin-charging-hub-80-wireless-chargers-cybercab": {
@@ -307,16 +307,16 @@
     "layer": "tesla",
     "topic": "robotaxi",
     "card": {
-      "en": "US safety regulator probes how Tesla certified",
-      "nl": "Amerikaanse toezichthouder onderzoekt hoe Tesla de Cybercab certificeerde"
+      "en": "NHTSA is probing Tesla's Cybercab certification",
+      "nl": "NHTSA onderzoekt de certificering van de Cybercab"
     }
   },
   "cybercab-specs-explained-battery-range-charging": {
     "layer": "tesla",
     "topic": "robotaxi",
     "card": {
-      "en": "Tesla Cybercab specs explained",
-      "nl": "Specificaties van de Tesla Cybercab uitgelegd"
+      "en": "The Cybercab skips ordinary wall charging",
+      "nl": "De Cybercab laadt niet via een gewoon stopcontact"
     }
   },
   "xpeng-iron-humanoid-production-line-vs-tesla-optimus": {
@@ -331,8 +331,8 @@
     "layer": "tesla",
     "topic": "optimus",
     "card": {
-      "en": "From Model S to Optimus",
-      "nl": "Van Model S naar Optimus"
+      "en": "Fremont's old car lines now build Optimus",
+      "nl": "De oude autolijnen in Fremont bouwen nu Optimus"
     }
   },
   "vegas-loop-paradise-road-unlv-virgin-hotels-stations-before-f1": {
@@ -340,7 +340,7 @@
     "topic": "boring",
     "card": {
       "en": "Vegas Loop heads for Paradise Road and UNLV",
-      "nl": "Vegas Loop op weg naar Paradise Road"
+      "nl": "Vegas Loop gaat richting Paradise Road en UNLV"
     }
   },
   "tesla-accordion-supercharger-prefabricated-eight-stalls": {
@@ -355,24 +355,24 @@
     "layer": "tesla-energy",
     "topic": "megapack",
     "card": {
-      "en": "Construction starts on Green Turtle Belgium's biggest battery",
-      "nl": "Bouw van Green Turtle begonnen"
+      "en": "Belgium has started its biggest Megapack battery",
+      "nl": "De bouw van batterijpark Green Turtle is begonnen"
     }
   },
   "cybertruck-powershare-powerwall-3-vehicle-to-home-backup-update": {
     "layer": "tesla-energy",
     "topic": "powerwall",
     "card": {
-      "en": "Cybertruck and Powerwall 3 can now back up",
-      "nl": "Cybertruck en Powerwall 3 kunnen nu samen"
+      "en": "Cybertruck now backs up homes with Powerwall 3",
+      "nl": "Cybertruck voedt een huis nu samen met Powerwall"
     }
   },
   "tesla-app-4-61-passkeys-face-id-supercharger-site-maps": {
     "layer": "tesla-energy",
     "topic": "charging",
     "card": {
-      "en": "Tesla app 4 61 adds passkeys",
-      "nl": "Tesla-app 4 61 krijgt passkeys"
+      "en": "Tesla app 4.61 adds sign-in with passkeys",
+      "nl": "Tesla-app 4.61 voegt inloggen met een passkey toe"
     }
   },
   "tesla-app-code-optimus-home-data-consent-robot-key-energy-charger": {
@@ -380,15 +380,15 @@
     "topic": "optimus",
     "card": {
       "en": "Tesla app code hints at Optimus at home",
-      "nl": "Code in de Tesla-app wijst op Optimus"
+      "nl": "Code in de Tesla-app wijst op Optimus thuis"
     }
   },
   "boring-company-austin-san-antonio-hyperloop-tunnel-200-mph": {
     "layer": "boring",
     "topic": "boring",
     "card": {
-      "en": "Musk wants a 200 mph 'precursor Hyperloop' tunnel",
-      "nl": "Musk wil een 'voorloper van de Hyperloop'"
+      "en": "Musk proposes a 200 mph San Antonio tunnel",
+      "nl": "Musk wil een 320 km/u-tunnel naar San Antonio"
     }
   },
   "tesla-audits-chinese-suppliers-optimus-gen-3-tuopu-sanhua-joyson": {
@@ -411,32 +411,32 @@
     "layer": "tesla-energy",
     "topic": "powerwall",
     "card": {
-      "en": "Powerwall 2 owners can finally add a Powerwall",
-      "nl": "Powerwall 2-bezitters kunnen eindelijk een Powerwall 3 bijplaatsen"
+      "en": "Powerwall 2 owners can now add Powerwall 3",
+      "nl": "Powerwall 2-bezitters kunnen nu een Powerwall 3 bijplaatsen"
     }
   },
   "optimus-gen-3-what-we-know": {
     "layer": "tesla",
     "topic": "optimus",
     "card": {
-      "en": "Optimus Gen 3",
-      "nl": "Optimus Gen 3"
+      "en": "Optimus Gen 3 is Tesla's next humanoid robot",
+      "nl": "Optimus Gen 3 is Tesla's volgende humanoïde robot"
     }
   },
   "model-y-juniper-vs-old-model-y-differences-guide": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "Model Y Juniper vs the original Model Y",
-      "nl": "Model Y Juniper tegen de originele Model Y"
+      "en": "Juniper differs from the original Model Y",
+      "nl": "Juniper verschilt van de originele Model Y"
     }
   },
   "starship-flight-14-reaches-orbit-26-starlink-v3-satellites-tesla": {
     "layer": "spacex",
     "topic": "starship",
     "card": {
-      "en": "Starship reaches orbit for the first time",
-      "nl": "Starship bereikt voor het eerst een baan"
+      "en": "Starship reaches orbit and releases 26 satellites",
+      "nl": "Starship laat vanuit een baan 26 satellieten los"
     }
   },
   "falcon-heavy-nrol-97-first-nro-mission-roadster-launch-pad": {
@@ -444,7 +444,7 @@
     "topic": "falcon",
     "card": {
       "en": "Falcon Heavy flies its first spy satellite mission",
-      "nl": "Falcon Heavy lanceert eerste spionagesatellietmissie vanaf het platform"
+      "nl": "Falcon Heavy vliegt zijn eerste spionagemissie"
     }
   },
   "google-suncatcher-ai-satellite-launches-on-spacex-transporter-18": {
@@ -459,32 +459,32 @@
     "layer": "spacex",
     "topic": "spacex",
     "card": {
-      "en": "SpaceX Crew-13 reaches the space station in about",
-      "nl": "SpaceX Crew-13 bereikt ruimtestation in zo'n acht uur"
+      "en": "Crew-13 reaches the station in about eight hours",
+      "nl": "Crew-13 bereikt het station in ongeveer acht uur"
     }
   },
   "tesla-emergency-drive-away-supercharger-cable-explained": {
     "layer": "tesla-energy",
     "topic": "charging",
     "card": {
-      "en": "Tesla's 'Emergency Drive Away' lets you flee",
-      "nl": "Met 'Emergency Drive Away' rijd je in nood"
+      "en": "Emergency Drive Away leaves the cable plugged in",
+      "nl": "Emergency Drive Away laat de laadkabel zitten"
     }
   },
   "tesla-model-3-us-update-16-inch-screen-528-hp-performance": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "Tesla Model 3 update in the US",
-      "nl": "Update Tesla Model 3 in de VS"
+      "en": "US Model 3s now get a 16-inch screen",
+      "nl": "Elke Amerikaanse Model 3 krijgt een groter scherm"
     }
   },
   "tesla-home-charging-guide-11-kw-wall-connector": {
     "layer": "tesla-energy",
     "topic": "charging",
     "card": {
-      "en": "Charging a Tesla at home",
-      "nl": "Een Tesla thuis laden"
+      "en": "11 kW home charging covers almost every driver",
+      "nl": "Thuis laden met 11 kW volstaat bijna altijd"
     }
   },
   "spacexai-to-become-spacexsi-super-intelligence-rename-explained": {
@@ -499,64 +499,64 @@
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "Buying a used Model 3",
-      "nl": "Een tweedehands Model 3 kopen"
+      "en": "Hardware version matters on a used Model 3",
+      "nl": "Bij een gebruikte Model 3 telt de hardwareversie"
     }
   },
   "powerwall-3-model-3-model-y-powershare-home-backup-launch": {
     "layer": "tesla-energy",
     "topic": "powerwall",
     "card": {
-      "en": "Powerwall 3 owners can now use a Model",
-      "nl": "Powerwall 3-bezitters kunnen nu een Model 3"
+      "en": "Model 3 and Y now supply home backup",
+      "nl": "Model 3 en Y voeden nu het huis"
     }
   },
   "tesla-supercharger-network-85000-stalls-9000-sites": {
     "layer": "tesla-energy",
     "topic": "charging",
     "card": {
-      "en": "Tesla's Supercharger network passes 85000 stalls at more",
-      "nl": "Tesla's Supercharger-netwerk passeert 85 000 laadpalen op meer"
+      "en": "Superchargers pass 85000 stalls at 9000 sites",
+      "nl": "Het Supercharger-netwerk passeert 85000 laadpalen"
     }
   },
   "cybertruck-sales-q3-2026-other-models-deliveries-fall-48-percent": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "many Cybertrucks did Tesla sell in Q3 2026",
-      "nl": "Hoeveel Cybertrucks verkocht Tesla in het derde kwartaal"
+      "en": "Other Tesla models fall 48% in Q3",
+      "nl": "Overige Tesla-modellen dalen in Q3 met 48%"
     }
   },
   "tesla-cybercab-philadelphia-crash-door-panel-testing-pennsylvania": {
     "layer": "tesla",
     "topic": "robotaxi",
     "card": {
-      "en": "A Tesla Cybercab loses a door panel",
-      "nl": "Tesla Cybercab verliest deurpaneel bij aanrijding in Philadelphia"
+      "en": "A Cybercab loses a door panel in Philadelphia",
+      "nl": "Een Cybercab verliest een deurpaneel in Philadelphia"
     }
   },
   "tesla-pressured-dutch-regulator-rdw-fsd-review-reuters-emails": {
     "layer": "tesla",
     "topic": "fsd",
     "card": {
-      "en": "Emails show Tesla pushed the Dutch regulator RDW",
-      "nl": "Tesla zette RDW onder druk om FSD-keuring lichter"
+      "en": "Tesla pressed RDW to soften its FSD review",
+      "nl": "Tesla wilde bij de RDW een lichtere FSD-keuring"
     }
   },
   "giga-shanghai-q3-2026-record-exports-september-best-month": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "Giga Shanghai sets a quarterly record as nearly",
-      "nl": "Giga Shanghai boekt recordkwartaal"
+      "en": "Giga Shanghai now exports nearly half its cars",
+      "nl": "Giga Shanghai exporteert nu bijna de helft"
     }
   },
   "how-to-use-tesla-superchargers-non-tesla-netherlands-belgium": {
     "layer": "tesla-energy",
     "topic": "charging",
     "card": {
-      "en": "to charge a non-Tesla at a Tesla Supercharger",
-      "nl": "Zo laad je een andere elektrische auto"
+      "en": "Other electric cars can use Tesla Superchargers",
+      "nl": "Andere elektrische auto's kunnen bij Tesla laden"
     }
   },
   "tesla-renames-full-self-driving-tesla-assisted-driving-europe": {
@@ -571,24 +571,24 @@
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "Tesla maps update NA-2026 38 is rolling out",
-      "nl": "Tesla kaartupdate NA-2026 38 rolt"
+      "en": "Map update NA-2026.38 is now rolling out",
+      "nl": "Kaartupdate NA-2026.38 rolt uit in Noord-Amerika"
     }
   },
   "tesla-model-s-model-x-look-back-14-years": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "Model S and Model X",
-      "nl": "Model S en Model X"
+      "en": "Model S and X reshaped the car industry",
+      "nl": "Model S en Model X veranderden de auto-industrie"
     }
   },
   "how-tesla-software-updates-work-guide": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "Tesla software updates work",
-      "nl": "Zo werken Tesla-software-updates"
+      "en": "Tesla updates reach cars in uneven waves",
+      "nl": "Tesla-updates bereiken auto's in ongelijke golven"
     }
   },
   "tesla-powerwall-wall-connector-smart-charging-low-cost-charge-on-solar": {
@@ -603,48 +603,48 @@
     "layer": "tesla-energy",
     "topic": "megapack",
     "card": {
-      "en": "Taiwan's Apollo Power orders 260 Tesla Megapacks about",
-      "nl": "Taiwanees Apollo Power bestelt 260 Tesla Megapacks zo'n"
+      "en": "Apollo Power orders 260 Megapacks for data centers",
+      "nl": "Apollo Power bestelt 260 Megapacks voor datacenters"
     }
   },
   "buying-used-tesla-model-s-model-x-guide": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "Buying a used Model S or Model X",
-      "nl": "Een tweedehands Model S of Model X kopen"
+      "en": "Tesla no longer builds Model S or X",
+      "nl": "Tesla bouwt Model S en X niet meer"
     }
   },
   "nhtsa-tesla-robotaxi-school-zone-speeding-petition": {
     "layer": "tesla",
     "topic": "robotaxi",
     "card": {
-      "en": "NHTSA reviews claims that Tesla Robotaxis speed through",
-      "nl": "NHTSA onderzoekt klachten dat Tesla's Robotaxi's te hard"
+      "en": "NHTSA reviews Robotaxi speeding claims near schools",
+      "nl": "NHTSA onderzoekt snelheidsklachten over Robotaxi's bij scholen"
     }
   },
   "tesla-robotaxis-charged-by-hand-austin-supercharger-video": {
     "layer": "tesla",
     "topic": "robotaxi",
     "card": {
-      "en": "Driverless but not hands-free",
-      "nl": "Zelfrijdend maar niet zelfladend"
+      "en": "Staff still plug in Austin Robotaxis by hand",
+      "nl": "Medewerkers laden Robotaxi's in Austin handmatig"
     }
   },
   "mind-robotics-hires-doug-field-rivian-robot-rival-to-tesla-optimus": {
     "layer": "tesla",
     "topic": "optimus",
     "card": {
-      "en": "Former Tesla engineering chief Doug Field joins Rivian's",
-      "nl": "Oud-Tesla-topman Doug Field gaat naar Rivians robotbedrijf Mind"
+      "en": "Doug Field joins Rivian's robot rival Mind",
+      "nl": "Doug Field gaat naar Rivians robotconcurrent Mind"
     }
   },
   "tesla-25-billion-capex-2026-explained": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "Tesla's 25 billion is going",
-      "nl": "Tesla's 25 miljard naartoe gaat"
+      "en": "Tesla's 2026 spending plan is 25 billion dollars",
+      "nl": "Tesla wil in 2026 voor 25 miljard investeren"
     }
   },
   "tesla-blocks-rear-screen-browser-trick-hbo-max-prime-video": {
@@ -659,128 +659,128 @@
     "layer": "tesla-energy",
     "topic": "charging",
     "card": {
-      "en": "Tesla's Flex Connect",
-      "nl": "Tesla Flex Connect"
+      "en": "Flex Connect can open Superchargers two years early",
+      "nl": "Flex Connect kan Superchargers twee jaar eerder openen"
     }
   },
   "tesla-ordered-to-pay-161700-model-x-fire-montreal-quebec-court": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "Tesla must pay C 161700 for a Model",
-      "nl": "Tesla moet 161 700 Canadese dollar betalen"
+      "en": "Tesla owes 161700 Canadian dollars after the fire",
+      "nl": "Tesla moet 161700 Canadese dollar betalen"
     }
   },
   "tesla-update-2026-32-hidden-features-ad-blocker-seat-heater-timeout": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "Tesla update 2026 32's hidden changes",
-      "nl": "Verborgen wijzigingen in Tesla-update 2026 32"
+      "en": "Update 2026.32 quietly adds a browser ad blocker",
+      "nl": "Update 2026.32 voegt stilletjes een adblocker toe"
     }
   },
   "x-subscription-grok-cursor-x-premium-bundle-prices-tesla-grok": {
     "layer": "spacexsi",
     "topic": "spacexsi",
     "card": {
-      "en": "The new X Subscription bundles Grok Grok Bot",
-      "nl": "Nieuw X-abonnement bundelt Grok Grok Bot Cursor"
+      "en": "New X subscription bundles Grok from 8 dollars",
+      "nl": "Nieuw X-abonnement bundelt Grok vanaf 8 dollar"
     }
   },
   "tesla-loses-us-fast-charging-majority-paren-q3-2026": {
     "layer": "tesla-energy",
     "topic": "charging",
     "card": {
-      "en": "Tesla no longer owns most of America's fast",
-      "nl": "Tesla bezit niet langer de meeste snelladers"
+      "en": "Tesla slips under half of America's fast chargers",
+      "nl": "Tesla zakt onder de helft van Amerikaanse snelladers"
     }
   },
   "tesla-pauses-model-3-premium-orders-canada-china-import-quota": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "Tesla stops taking Model 3 Premium orders",
-      "nl": "Tesla neemt in Canada tot maart 2027 geen"
+      "en": "Tesla pauses Model 3 Premium orders in Canada",
+      "nl": "Tesla pauzeert Model 3 Premium-bestellingen in Canada"
     }
   },
   "can-you-buy-tesla-cybertruck-in-europe": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "you buy a Tesla Cybertruck in Europe",
-      "nl": "Kun je een Tesla Cybertruck kopen in Europa"
+      "en": "The Cybertruck is still not sold in Europe",
+      "nl": "De Cybertruck is in Europa niet te koop"
     }
   },
   "tesla-confirms-autopilot-fsd-engaged-vineland-new-jersey-fatal-crash": {
     "layer": "tesla",
     "topic": "fsd",
     "card": {
-      "en": "Tesla's own data shows Autopilot or FSD was",
-      "nl": "Tesla's eigen data"
+      "en": "Tesla data shows driver-assist in a fatal crash",
+      "nl": "Tesla-data tonen rijhulp bij een dodelijk ongeluk"
     }
   },
   "tesla-cybercab-assembly-chief-jody-kerns-leaves-for-rivian-r2": {
     "layer": "tesla",
     "topic": "robotaxi",
     "card": {
-      "en": "Tesla's Cybercab assembly chief leaves for Rivian weeks",
-      "nl": "Tesla's assemblagebaas van de Cybercab vertrekt naar Rivian"
+      "en": "Cybercab's assembly chief leaves for Rivian",
+      "nl": "De assemblagebaas van de Cybercab vertrekt naar Rivian"
     }
   },
   "tesla-energy-chief-mike-snyder-leaves-aj-booth-takes-over": {
     "layer": "tesla-energy",
     "topic": "energy",
     "card": {
-      "en": "Tesla's energy chief Mike Snyder leaves after 12",
-      "nl": "Energietopman Mike Snyder vertrekt na 12 jaar"
+      "en": "Energy chief Mike Snyder leaves after 12 years",
+      "nl": "Energietopman Snyder verlaat Tesla na 12 jaar"
     }
   },
   "tesla-fsd-crash-chp-patrol-car-fairfield-driver-asleep": {
     "layer": "tesla",
     "topic": "fsd",
     "card": {
-      "en": "Tesla driver says he was asleep on FSD",
-      "nl": "Tesla-bestuurder zegt dat hij sliep met FSD aan"
+      "en": "A driver says he slept with FSD engaged",
+      "nl": "De bestuurder sliep naar eigen zeggen met FSD"
     }
   },
   "tesla-regulatory-credits-decline-explained": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "Tesla's disappearing bonus",
-      "nl": "Tesla's verdwijnende bonus"
+      "en": "Tesla's income from regulatory credits is shrinking",
+      "nl": "De inkomsten uit Tesla's emissierechten krimpen snel"
     }
   },
   "tesla-megablock-explained-20-mwh": {
     "layer": "tesla-energy",
     "topic": "megapack",
     "card": {
-      "en": "Tesla Megablock explained",
-      "nl": "Tesla Megablock uitgelegd"
+      "en": "Four Megapacks make one 20 MWh Megablock",
+      "nl": "Vier Megapacks vormen één Megablock van 20 MWh"
     }
   },
   "musk-optimus-cybercab-vast-majority-of-tesla-value-roadster-optimus-actuators": {
     "layer": "tesla",
     "topic": "optimus",
     "card": {
-      "en": "Musk Optimus and Cybercab will be 'the vast",
-      "nl": "Musk Optimus en Cybercab worden 'verreweg het grootste"
+      "en": "Musk says Optimus and Cybercab will dominate Tesla",
+      "nl": "Optimus en Cybercab worden Tesla's grootste waarde"
     }
   },
   "tesla-winter-range-tips-cold-weather": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "Tesla in winter",
-      "nl": "Tesla in de winter"
+      "en": "Nine winter tips help you keep Tesla range",
+      "nl": "Negen wintertips houden het Tesla-bereik op peil"
     }
   },
   "buying-used-tesla-cybertruck-checklist": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "Buying a used Cybertruck",
-      "nl": "Een tweedehands Cybertruck kopen"
+      "en": "Check these points before buying a used Cybertruck",
+      "nl": "Let op deze punten bij een gebruikte Cybertruck"
     }
   },
   "ferrari-ceo-vigna-rates-tesla-roadster-launch-10-out-of-10": {
@@ -795,40 +795,40 @@
     "layer": "tesla-energy",
     "topic": "energy",
     "card": {
-      "en": "Tesla Energy explained",
-      "nl": "Tesla Energy uitgelegd"
+      "en": "Tesla Energy now carries Tesla's profit margins",
+      "nl": "Tesla Energy draagt nu de winstmarges van Tesla"
     }
   },
   "boring-company-vegas-loop-teslas-in-tunnels-explained": {
     "layer": "boring",
     "topic": "boring",
     "card": {
-      "en": "The Vegas Loop",
-      "nl": "De Vegas Loop"
+      "en": "Boring carries people through tunnels in Teslas",
+      "nl": "Boring vervoert mensen in Tesla's door tunnels"
     }
   },
   "grok-in-tesla-what-it-can-do-europe": {
     "layer": "spacexsi",
     "topic": "spacexsi",
     "card": {
-      "en": "Grok in your Tesla",
-      "nl": "Grok in je Tesla"
+      "en": "Grok inside a Tesla still cannot do everything",
+      "nl": "Grok in je Tesla kan nog niet alles"
     }
   },
   "musk-ecosystem-explained-tesla-spacex-starlink-xai-boring": {
     "layer": "ecosystem",
     "topic": "ecosystem",
     "card": {
-      "en": "Tesla SpaceX Starlink xAI and The Boring Company",
-      "nl": "Tesla SpaceX Starlink xAI en The Boring Company"
+      "en": "How Musk's companies fit together",
+      "nl": "Zo passen Musks bedrijven in elkaar"
     }
   },
   "musk-tesla-spacex-merger-special-committees": {
     "layer": "spacex",
     "topic": "spacex",
     "card": {
-      "en": "Tesla and SpaceX form special committees to study",
-      "nl": "Tesla en SpaceX onderzoeken fusie met speciale commissies"
+      "en": "Tesla and SpaceX committees are studying a merger",
+      "nl": "Commissies van Tesla en SpaceX onderzoeken een fusie"
     }
   },
   "starship-flight-15-ship-catch-attempt-november-what-to-know": {
@@ -843,56 +843,56 @@
     "layer": "spacexsi",
     "topic": "spacexsi",
     "card": {
-      "en": "Terafab explained",
-      "nl": "Terafab uitgelegd"
+      "en": "Tesla and SpaceX want their own chip factory",
+      "nl": "Tesla en SpaceX willen een eigen chipfabriek"
     }
   },
   "tesla-app-ipad-tablet-foldable-layout-iphone-duo": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "The Tesla app finally gets a real iPad",
-      "nl": "De Tesla-app krijgt eindelijk een echte iPad-"
+      "en": "The Tesla app finally gets a tablet layout",
+      "nl": "De Tesla-app krijgt eindelijk een tabletweergave"
     }
   },
   "tesla-inuvik-supercharger-proposal-northwest-territories-arctic": {
     "layer": "tesla-energy",
     "topic": "charging",
     "card": {
-      "en": "Tesla wants a Supercharger in Inuvik 200 km",
-      "nl": "Tesla wil een Supercharger in Inuvik 200 km"
+      "en": "Tesla wants a Supercharger above the Arctic Circle",
+      "nl": "Tesla wil een Supercharger boven de poolcirkel"
     }
   },
   "tesla-model-3-model-y-standard-europe-explained": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "Model 3 Standard and Model Y Standard",
-      "nl": "Model 3 Standard en Model Y Standard"
+      "en": "The new Standard trims are Europe's cheapest Teslas",
+      "nl": "De Standard-uitvoeringen zijn Europa's goedkoopste Tesla's"
     }
   },
   "tesla-q3-2026-earnings-preview": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "Tesla Q3 2026 earnings tonight",
-      "nl": "Tesla-kwartaalcijfers Q3 2026 vanavond"
+      "en": "Tesla reports its Q3 2026 results tonight",
+      "nl": "Tesla publiceert vanavond de cijfers van Q3 2026"
     }
   },
   "tesla-q3-2026-earnings-results-margins-cash-flow": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "Tesla Q3 2026 earnings",
-      "nl": "Tesla Q3 2026"
+      "en": "Q3 profit falls 43% as margins recover",
+      "nl": "De Q3-winst daalt 43% bij herstellende marges"
     }
   },
   "tesla-roadster-unveil-what-we-know": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "Tesla's 'flying' Roadster",
-      "nl": "Tesla's 'vliegende' Roadster"
+      "en": "Little is confirmed about the thruster Roadster",
+      "nl": "Over de Roadster met stuwraketten is weinig zeker"
     }
   },
   "tesla-solar-roof-discontinued-new-panels-powerwall-3": {
@@ -907,8 +907,8 @@
     "layer": "tesla",
     "topic": "robotaxi",
     "card": {
-      "en": "The Cybercab has half the parts of any",
-      "nl": "De Cybercab heeft de helft minder onderdelen dan"
+      "en": "The Cybercab uses half as many parts",
+      "nl": "De Cybercab heeft half zoveel onderdelen"
     }
   },
   "grok-deepfake-case-reopened-uk-ofcom-x-investigation-tesla": {
@@ -916,39 +916,39 @@
     "topic": "spacexsi",
     "card": {
       "en": "UK police reopen a Grok deepfake case",
-      "nl": "Britse politie heropent Grok-deepfakezaak terwijl Ofcom onderzoek"
+      "nl": "Britse politie heropent een zaak over Grok-deepfakes"
     }
   },
   "musk-promises-optimus-video-not-a-canned-demo-what-to-look-for": {
     "layer": "tesla",
     "topic": "optimus",
     "card": {
-      "en": "Musk promises an Optimus video that is 'not",
-      "nl": "Musk belooft een Optimus-video die 'geen ingestudeerde demo'"
+      "en": "Musk promises an Optimus video without a script",
+      "nl": "Musk belooft een oningestudeerde Optimus-video"
     }
   },
   "spacex-share-unlock-1-3-billion-shares-october-22-tesla-merger": {
     "layer": "spacex",
     "topic": "spacex",
     "card": {
-      "en": "Up to 1 3 billion SpaceX shares can",
-      "nl": "Vanaf vandaag mogen tot 13 miljard SpaceX-aandelen worden"
+      "en": "1.3 billion SpaceX shares can now be sold",
+      "nl": "Er mogen nu 1.3 miljard SpaceX-aandelen worden verkocht"
     }
   },
   "tesla-app-4-62-fsd-referrals-x-money-share-wall-connector": {
     "layer": "tesla",
     "topic": "fsd",
     "card": {
-      "en": "Tesla app 4 62 beyond the iPad layout",
-      "nl": "Tesla-app 4 62 is meer dan een iPad-layout"
+      "en": "App 4.62 adds rewards for FSD referrals",
+      "nl": "App 4.62 beloont wie FSD aan anderen aanraadt"
     }
   },
   "tesla-bitcoin-holdings-q3-2026-11509-btc-962-million": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "Tesla still owns bitcoin",
-      "nl": "Tesla heeft nog steeds bitcoin"
+      "en": "Tesla still holds bitcoin worth 962 million",
+      "nl": "Tesla bezit nog voor 962 miljoen aan bitcoin"
     }
   },
   "tesla-megapack-nearly-sold-out-2027-data-centers": {
@@ -956,47 +956,47 @@
     "topic": "megapack",
     "card": {
       "en": "Tesla Megapacks are almost sold out for 2027",
-      "nl": "Tesla's Megapacks voor 2027 bijna uitverkocht"
+      "nl": "Tesla's Megapacks voor 2027 zijn bijna uitverkocht"
     }
   },
   "tesla-q3-2026-call-optimus-early-production-outside-deliveries-late-2027": {
     "layer": "tesla",
     "topic": "optimus",
     "card": {
-      "en": "Tesla starts 'early production' of Optimus but outside",
-      "nl": "Tesla start 'vroege productie' van Optimus maar externe"
+      "en": "Optimus deliveries to outsiders wait until late 2027",
+      "nl": "Externe Optimus-leveringen wachten tot eind 2027"
     }
   },
   "tesla-q3-2026-earnings-call-cybercab-dallas-unsupervised-fsd-capex": {
     "layer": "tesla",
     "topic": "robotaxi",
     "card": {
-      "en": "Tesla Q3 2026 earnings call",
-      "nl": "Tesla-cijfers Q3 2026"
+      "en": "The Q3 call promised Cybercab rides in Dallas",
+      "nl": "De Q3-call beloofde Cybercab-ritten in Dallas"
     }
   },
   "tesla-robotaxi-safety-report-3-1-million-miles-next-cities": {
     "layer": "tesla",
     "topic": "robotaxi",
     "card": {
-      "en": "Tesla's first Robotaxi safety report",
-      "nl": "Tesla's eerste Robotaxi-veiligheidsrapport"
+      "en": "Robotaxis logged 3.1 million miles without injuries",
+      "nl": "Robotaxi's reden 3.1 miljoen mijl zonder gewonden"
     }
   },
   "tesla-skips-hw3-upgrade-question-q3-2026-earnings-call": {
     "layer": "tesla",
     "topic": "fsd",
     "card": {
-      "en": "Tesla skips the Hardware 3 question",
-      "nl": "Tesla slaat de vraag over Hardware 3 over"
+      "en": "Tesla still offers no Hardware 3 upgrade",
+      "nl": "Tesla heeft nog geen upgrade voor Hardware 3"
     }
   },
   "tesla-stock-falls-after-q3-analysts-price-targets": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "Tesla stock slides after Q3 beat",
-      "nl": "Tesla-aandeel daalt ondanks betere winst: dit zeggen analisten"
+      "en": "Tesla stock slides after the Q3 beat",
+      "nl": "Het aandeel daalt ondanks een betere winst"
     }
   },
   "boring-company-middle-east-abu-dhabi-dubai-loop-uae-funding": {
@@ -1011,160 +1011,160 @@
     "layer": "boring",
     "topic": "boring",
     "card": {
-      "en": "A Boring Company tunnel for Morgan's Wonderland",
-      "nl": "Een Boring Company-tunnel voor Morgan's Wonderland"
+      "en": "Prufrock-5 has arrived for a San Antonio tunnel",
+      "nl": "Prufrock-5 is in San Antonio aangekomen"
     }
   },
   "boring-company-tunnel-freight-prufrock-liner-truck-tesla-parts": {
     "layer": "boring",
     "topic": "boring",
     "card": {
-      "en": "The Boring Company wants to move freight through",
-      "nl": "The Boring Company wil vracht door zijn tunnels"
+      "en": "Boring wants freight trucks inside its tunnels",
+      "nl": "Boring wil vrachtwagens door zijn tunnels laten rijden"
     }
   },
   "boring-company-tunnel-vision-challenge-new-orleans-baltimore-dallas": {
     "layer": "boring",
     "topic": "boring",
     "card": {
-      "en": "The Boring Company's free tunnels",
-      "nl": "De gratis tunnels van The Boring Company"
+      "en": "One winning city quit the free-tunnel offer",
+      "nl": "Eén winnaar stapte uit de gratis tunnel"
     }
   },
   "giga-berlin-7000-model-y-in-one-week-production-record": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "Giga Berlin builds 7000 Model Ys",
-      "nl": "Giga Berlin bouwt 7 000 Model Y's"
+      "en": "Giga Berlin built 7000 Model Ys that week",
+      "nl": "Giga Berlin haalde 7000 Y's in één week"
     }
   },
   "giga-berlin-pay-raise-ig-metall-7500-cars-a-week": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "Giga Berlin raises pay by up to 5",
-      "nl": "Giga Berlin verhoogt lonen met tot 5"
+      "en": "Giga Berlin raises pay by up to 5%",
+      "nl": "Giga Berlin verhoogt lonen met maximaal 5%"
     }
   },
   "giga-berlin-second-hall-one-million-cars-a-year": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "Giga Berlin plans a second hall twice",
-      "nl": "Giga Berlin plant een tweede hal twee keer"
+      "en": "Giga Berlin plans a second much larger hall",
+      "nl": "Giga Berlin wil een tweede veel grotere hal"
     }
   },
   "giga-mexico-what-happened-to-teslas-mexican-factory": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "Giga Mexico three and a half years",
-      "nl": "Giga Mexico na drieënhalf jaar"
+      "en": "Tesla paused the factory it planned near Monterrey",
+      "nl": "Tesla legde de geplande fabriek bij Monterrey stil"
     }
   },
   "grok-4-7-grok-5-model-race-what-it-means-for-tesla-cars-optimus": {
     "layer": "spacexsi",
     "topic": "spacexsi",
     "card": {
-      "en": "Grok 4 5 4 6 4 7",
-      "nl": "Grok 4 5 4 6 4 7"
+      "en": "SpaceXAI's model sprint now reaches Grok 5",
+      "nl": "De modellensprint van SpaceXAI bereikt Grok 5"
     }
   },
   "how-much-of-tesla-does-elon-musk-own-stake-explained": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "much of Tesla does Elon Musk own",
-      "nl": "Hoeveel van Tesla is van Elon Musk"
+      "en": "Musk owns 19.8% of Tesla",
+      "nl": "Musk bezit 19.8% van Tesla"
     }
   },
   "insuring-a-tesla-guide-why-premiums-are-high-how-to-pay-less": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "Insuring a Tesla",
-      "nl": "Een Tesla verzekeren"
+      "en": "Tesla insurance stays expensive for several reasons",
+      "nl": "Een Tesla verzekeren blijft om meerdere redenen duur"
     }
   },
   "macrohard-digital-optimus-tesla-spacexai-project-explained": {
     "layer": "spacexsi",
     "topic": "spacexsi",
     "card": {
-      "en": "Macrohard explained",
-      "nl": "Macrohard uitgelegd"
+      "en": "Macrohard is the Digital Optimus software project",
+      "nl": "Macrohard is het softwareproject Digital Optimus"
     }
   },
   "mars-window-2026-no-starship-optimus-moon-first": {
     "layer": "spacex",
     "topic": "starship",
     "card": {
-      "en": "The Mars window is opening but Starship",
-      "nl": "Het Marsvenster gaat open maar Starship en Optimus"
+      "en": "Starship misses the 2026 Mars window",
+      "nl": "Starship mist het Marsvenster van 2026"
     }
   },
   "model-y-l-south-korea-best-selling-import-september-2026": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "Six-seat Model Y L is South Korea's best-selling",
-      "nl": "Zespersoons Model Y L is de best verkochte"
+      "en": "Six-seat Model Y L leads Korean imports",
+      "nl": "Model Y L is de importtopper in Zuid-Korea"
     }
   },
   "musk-1-trillion-pay-package-explained-milestones-progress": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "Musk's 'trillion-dollar' Tesla pay package explained",
-      "nl": "Musks 'biljoen-dollar'-beloning bij Tesla uitgelegd"
+      "en": "Musk's giant pay deal has twelve milestones",
+      "nl": "Musks enorme beloning telt twaalf mijlpalen"
     }
   },
   "musk-2018-tesla-pay-package-court-fight-how-it-ended": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "Musk's 2018 Tesla pay package",
-      "nl": "Musks beloningspakket van 2018"
+      "en": "Musk's 2018 pay fight lasted eight years",
+      "nl": "Musks beloningszaak uit 2018 is afgerond"
     }
   },
   "musk-first-trillionaire-spacex-ipo-what-it-means-for-tesla": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "Musk the trillionaire",
-      "nl": "Musk de biljonair"
+      "en": "SpaceX now outweighs Tesla in Musk's fortune",
+      "nl": "SpaceX weegt voor Musk zwaarder dan Tesla"
     }
   },
   "musk-partisan-effect-study-tesla-sales-2026-rebound": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "Musk's politics cost Tesla a million sales",
-      "nl": "Kostte de politiek van Musk Tesla een miljoen"
+      "en": "Study estimates over a million lost Tesla sales",
+      "nl": "Studie schat ruim een miljoen gemiste auto's"
     }
   },
   "musk-promises-track-record-roadster-semi-robotaxi": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "Musk's promises versus reality",
-      "nl": "Musks beloften en de werkelijkheid"
+      "en": "Musk's promises get a year-by-year reality check",
+      "nl": "Musks beloften gaan langs een jaarlijkse realiteitscheck"
     }
   },
   "musk-q3-2026-deadlines-checklist-cybercab-optimus-terafab": {
     "layer": "tesla",
     "topic": "robotaxi",
     "card": {
-      "en": "Musk's new deadlines",
-      "nl": "Musks nieuwe deadlines"
+      "en": "Dallas Cybercab rides lead Musk's new deadlines",
+      "nl": "Dallas-Cybercab staat bovenaan de nieuwe deadlines"
     }
   },
   "nashville-music-city-loop-progress-prufrock-airport": {
     "layer": "boring",
     "topic": "boring",
     "card": {
-      "en": "Nashville's Music City Loop",
-      "nl": "Music City Loop in Nashville"
+      "en": "Two machines are digging the Music City Loop",
+      "nl": "Twee machines graven de Music City Loop"
     }
   },
   "nhtsa-cyan-lights-robotaxis-no-steering-wheel-lighting-rule-cybercab": {
@@ -1179,64 +1179,64 @@
     "layer": "boring",
     "topic": "boring",
     "card": {
-      "en": "Prufrock explained",
-      "nl": "Prufrock uitgelegd"
+      "en": "Prufrock is the machine digging Boring's tunnels",
+      "nl": "Prufrock is de machine die de tunnels graaft"
     }
   },
   "spacex-ipo-recap-what-it-means-for-tesla-shareholders": {
     "layer": "spacex",
     "topic": "spacex",
     "card": {
-      "en": "SpaceX on the stock market",
-      "nl": "SpaceX op de beurs"
+      "en": "SpaceX has completed a record stock listing",
+      "nl": "SpaceX voltooide een recordgang naar de beurs"
     }
   },
   "spacex-q3-2026-results-profit-what-it-means-for-tesla-merger": {
     "layer": "spacex",
     "topic": "spacex",
     "card": {
-      "en": "SpaceX's Q3 2026 results",
-      "nl": "Kwartaalcijfers SpaceX"
+      "en": "SpaceX made 4.4 billion as revenue nearly tripled",
+      "nl": "SpaceX verdiende 4.4 miljard bij bijna driedubbele omzet"
     }
   },
   "spacexai-grok-bot-ai-segment-q3-2026-what-it-means-for-tesla": {
     "layer": "spacexsi",
     "topic": "spacexsi",
     "card": {
-      "en": "Grok Bot and 1 7 GW of compute",
-      "nl": "Grok Bot en 17 GW rekenkracht"
+      "en": "SpaceX reports 1.7 GW of AI compute",
+      "nl": "SpaceX meldt 1.7 GW aan AI-rekenkracht"
     }
   },
   "spacexai-southaven-colossus-turbines-home-buyouts": {
     "layer": "spacexsi",
     "topic": "spacexsi",
     "card": {
-      "en": "Noise turbines and home buyouts",
-      "nl": "Lawaai turbines en opgekochte huizen"
+      "en": "Turbine noise is driving a fight around Colossus",
+      "nl": "Turbinegeluid voedt de strijd rond Colossus"
     }
   },
   "starlink-and-tesla-today-superchargers-cybercab-owners": {
     "layer": "starlink",
     "topic": "starlink",
     "card": {
-      "en": "Starlink and Tesla today",
-      "nl": "Starlink en Tesla nu"
+      "en": "Starlink already shows up inside Tesla's network",
+      "nl": "Starlink duikt al op in het Tesla-netwerk"
     }
   },
   "starlink-disaster-response-kauai-colombia-tesla-cybertruck-powerwall": {
     "layer": "starlink",
     "topic": "starlink",
     "card": {
-      "en": "Starlink's disaster playbook",
-      "nl": "Het rampendraaiboek van Starlink"
+      "en": "Starlink switched on free service after disasters",
+      "nl": "Starlink maakte internet na rampen gratis"
     }
   },
   "starlink-mini-in-a-tesla-road-trip-guide": {
     "layer": "starlink",
     "topic": "starlink",
     "card": {
-      "en": "Using a Starlink Mini in your Tesla",
-      "nl": "Een Starlink Mini in je Tesla"
+      "en": "A Starlink Mini can travel inside your Tesla",
+      "nl": "Een Starlink Mini kan mee in je Tesla"
     }
   },
   "starlink-mobile-fcc-spectrum-what-it-could-mean-for-tesla-connectivity": {
@@ -1251,48 +1251,48 @@
     "layer": "starlink",
     "topic": "starlink",
     "card": {
-      "en": "Starlink reaches 13 6 million subscribers",
-      "nl": "Starlink haalt 136 miljoen abonnees"
+      "en": "Starlink reaches 13.6 million subscribers",
+      "nl": "Starlink haalt 13.6 miljoen abonnees"
     }
   },
   "starlink-v3-starship-flight-15-what-bigger-network-means": {
     "layer": "starlink",
     "topic": "starlink",
     "card": {
-      "en": "Starlink V3 explained",
-      "nl": "Starlink V3 uitgelegd"
+      "en": "The new Starlink satellites need Starship to fly",
+      "nl": "De nieuwe Starlink-satellieten hebben Starship nodig"
     }
   },
   "tesla-automations-app-if-this-then-that-routines-holiday-update": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "Tesla Automations is almost here",
-      "nl": "Tesla Automations komt eraan"
+      "en": "Tesla Automations will add routines to your car",
+      "nl": "Tesla Automations brengt routines naar je auto"
     }
   },
   "tesla-battery-factories-nevada-lfp-texas-lithium-refinery-cathode-plant": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "Tesla's battery bottleneck",
-      "nl": "Tesla's batterijknelpunt"
+      "en": "Tesla's own battery plants are still a bottleneck",
+      "nl": "Tesla's eigen batterijfabrieken blijven een knelpunt"
     }
   },
   "tesla-building-own-ai-maps-fsd-v15-navigation": {
     "layer": "tesla",
     "topic": "fsd",
     "card": {
-      "en": "Tesla is building its own AI maps",
-      "nl": "Tesla bouwt eigen AI-kaarten voor FSD te beginnen"
+      "en": "Tesla is building its own maps for FSD",
+      "nl": "Tesla bouwt eigen kaarten voor FSD"
     }
   },
   "tesla-cybercab-first-reported-crash-flooded-pothole-5-mph-austin": {
     "layer": "tesla",
     "topic": "robotaxi",
     "card": {
-      "en": "The Cybercab's first reported crash",
-      "nl": "Eerste gemelde Cybercab-ongeluk"
+      "en": "A Cybercab's first reported crash was a pothole",
+      "nl": "Het eerste Cybercab-ongeluk was een kuil in Austin"
     }
   },
   "tesla-europe-record-september-2026-acea-registrations-model-y-model-3": {
@@ -1307,16 +1307,16 @@
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "Tesla's factories after Q3 2026",
-      "nl": "Tesla's fabrieken na Q3 2026"
+      "en": "Tesla's factories hit record rates in Q3",
+      "nl": "Tesla's fabrieken draaiden in Q3 op recordtempo"
     }
   },
   "tesla-fsd-class-action-decertified-ninth-circuit-losavio": {
     "layer": "tesla",
     "topic": "fsd",
     "card": {
-      "en": "Tesla wins appeal",
-      "nl": "Tesla wint in hoger beroep"
+      "en": "Tesla wins its appeal against the FSD class",
+      "nl": "Tesla wint het beroep tegen de FSD-groepszaak"
     }
   },
   "tesla-fsd-demo-drives-superchargers-canada-mississauga": {
@@ -1331,224 +1331,224 @@
     "layer": "tesla",
     "topic": "fsd",
     "card": {
-      "en": "Three in four new Teslas now come",
-      "nl": "Drie op de vier nieuwe Tesla's rijden nu"
+      "en": "Three in four new Teslas now include FSD",
+      "nl": "Driekwart van de nieuwe Tesla's heeft nu FSD"
     }
   },
   "tesla-optimus-academy-10000-robots-practice-training-data-explained": {
     "layer": "tesla",
     "topic": "optimus",
     "card": {
-      "en": "Optimus Academy",
-      "nl": "Optimus Academy"
+      "en": "Tesla wants thousands of Optimus robots training together",
+      "nl": "Tesla wil duizenden Optimus-robots elkaar laten trainen"
     }
   },
   "tesla-optimus-hand-22-degrees-of-freedom-touch-sensor-patent": {
     "layer": "tesla",
     "topic": "optimus",
     "card": {
-      "en": "the hand is Optimus's hardest part",
-      "nl": "de hand het moeilijkste deel van Optimus is"
+      "en": "The hand remains the hardest part of Optimus",
+      "nl": "De hand blijft het moeilijkste deel van Optimus"
     }
   },
   "tesla-powerwall-vpp-california-record-600-mw-october-2026": {
     "layer": "tesla-energy",
     "topic": "powerwall",
     "card": {
-      "en": "85774 Tesla Powerwalls send a record 601 MW",
-      "nl": "85 774 Tesla Powerwalls leveren recordvermogen van 601"
+      "en": "Powerwalls sent a record 601 MW into California",
+      "nl": "Powerwalls stuurden 601 MW naar Californië"
     }
   },
   "tesla-q3-2026-10-q-warranty-reserve-1-2-billion-credit-reversal": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "Three numbers buried in Tesla's Q3 10-Q",
-      "nl": "Drie cijfers diep in Tesla's 10-Q over Q3"
+      "en": "Q3 adds 1.2 billion to the warranty reserve",
+      "nl": "Q3 voegt 1.2 miljard toe aan de garantiereserve"
     }
   },
   "tesla-q3-2026-tariff-refunds-10-q-margins": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "Tariff refunds gave Tesla's Q3 profit a 447",
-      "nl": "Terugbetaalde importheffingen gaven Teslas Q3-winst een duw"
+      "en": "Tariff refunds added 447 million to Q3 profit",
+      "nl": "Terugbetaalde heffingen tilden de Q3-winst met 447 miljoen"
     }
   },
   "tesla-robotaxi-austin-cota-us-grand-prix-1am-service-hours": {
     "layer": "tesla",
     "topic": "robotaxi",
     "card": {
-      "en": "Tesla Robotaxi reaches COTA for the US Grand",
-      "nl": "Tesla Robotaxi rijdt naar het F1-circuit in Austin"
+      "en": "Robotaxi now reaches Austin's Formula 1 circuit",
+      "nl": "Robotaxi rijdt nu naar Austins Formule 1-circuit"
     }
   },
   "tesla-summer-update-2026-26-every-feature-explained": {
     "layer": "spacexsi",
     "topic": "spacexsi",
     "card": {
-      "en": "Tesla's Summer Update 2026 26",
-      "nl": "Tesla's Summer Update 2026 26"
+      "en": "Summer Update 2026.26 packs in many new features",
+      "nl": "Summer Update 2026.26 zit vol nieuwe functies"
     }
   },
   "tesla-supercharger-for-business-semi-charging-canada-launch": {
     "layer": "tesla-energy",
     "topic": "charging",
     "card": {
-      "en": "Canadian businesses can now buy Tesla Superchargers",
-      "nl": "Canadese bedrijven kunnen nu zelf Tesla Superchargers"
+      "en": "Canadian companies can now buy their own Superchargers",
+      "nl": "Canadese bedrijven kunnen nu eigen Superchargers kopen"
     }
   },
   "tesla-supercharger-q3-2026-utilization-69-million-sessions-robotaxi-energy": {
     "layer": "tesla-energy",
     "topic": "charging",
     "card": {
-      "en": "Tesla Superchargers are busier than ever yet only",
-      "nl": "Tesla-Superchargers drukker dan ooit maar slechts 1"
+      "en": "Just one in 200 Supercharger drivers waits",
+      "nl": "Slechts één op de 200 Supercharger-rijders wacht"
     }
   },
   "tesla-tyres-guide-t-marking-foam-rotation-winter-rules": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "Tesla tyres explained",
-      "nl": "Tesla-banden uitgelegd"
+      "en": "Tesla tyres follow special marks and winter rules",
+      "nl": "Tesla-banden volgen eigen codes en winterregels"
     }
   },
   "tesla-xai-investment-2-billion-from-shareholder-vote-to-spacex-shares": {
     "layer": "spacexsi",
     "topic": "spacexsi",
     "card": {
-      "en": "Tesla's 2 billion xAI bet",
-      "nl": "Tesla's xAI-gok van 2 miljard"
+      "en": "The 2 billion xAI bet became SpaceX stock",
+      "nl": "De xAI-inleg van 2 miljard werd SpaceX-aandelen"
     }
   },
   "vegas-loop-self-driving-teslas-safety-drivers-timeline": {
     "layer": "boring",
     "topic": "boring",
     "card": {
-      "en": "Self-driving Teslas in the Vegas Loop",
-      "nl": "Zelfrijdende Tesla's in de Vegas Loop"
+      "en": "Safety drivers still sit in Vegas Loop Teslas",
+      "nl": "De Vegas Loop gebruikt nog steeds veiligheidsrijders"
     }
   },
   "what-happened-to-xai-spacexai-2026-explained": {
     "layer": "spacexsi",
     "topic": "spacexsi",
     "card": {
-      "en": "happened to xAI",
-      "nl": "er met xAI gebeurd"
+      "en": "xAI became SpaceXAI during 2026",
+      "nl": "xAI werd in 2026 omgedoopt tot SpaceXAI"
     }
   },
   "xai-colossus-tesla-megapack-purchases-1-billion": {
     "layer": "tesla-energy",
     "topic": "megapack",
     "card": {
-      "en": "Tesla Megapacks power xAI's Colossus",
-      "nl": "Tesla Megapacks xAI's Colossus van stroom voorzien"
+      "en": "Megapacks have supplied Colossus since 2024",
+      "nl": "Megapacks voeden Colossus al sinds 2024"
     }
   },
   "cybertruck-starship-stainless-steel-shared-alloy-explained": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "the Cybertruck and Starship are both made",
-      "nl": "de Cybertruck en Starship allebei van roestvrij staal"
+      "en": "Cybertruck and Starship share one stainless alloy",
+      "nl": "Cybertruck en Starship delen dezelfde staalsoort"
     }
   },
   "elon-musk-role-at-tesla-ceo-technoking-not-chairman-explained": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "Elon Musk's actual job at Tesla",
-      "nl": "eigenlijk de functie van Elon Musk bij Tesla"
+      "en": "Musk is Tesla's CEO and not its chairman",
+      "nl": "Musk is CEO van Tesla en geen voorzitter"
     }
   },
   "ev-incentives-2026-tesla-buyers-us-uk-germany-netherlands-guide": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "EV incentives for Tesla buyers in 2026",
-      "nl": "Subsidies en belastingvoordeel voor Tesla-kopers in 2026"
+      "en": "A few 2026 incentives for Tesla buyers remain",
+      "nl": "In 2026 blijft er nog steun voor Tesla-kopers"
     }
   },
   "giga-new-york-buffalo-explained-solar-superchargers-jobs": {
     "layer": "tesla-energy",
     "topic": "solar",
     "card": {
-      "en": "Giga New York explained",
-      "nl": "Giga New York uitgelegd"
+      "en": "Buffalo now builds Supercharger parts and solar panels",
+      "nl": "Buffalo bouwt nu Supercharger-onderdelen en zonnepanelen"
     }
   },
   "grok-in-tesla-privacy-requirements-who-processes-your-conversations": {
     "layer": "spacexsi",
     "topic": "spacexsi",
     "card": {
-      "en": "Grok in your Tesla and your privacy",
-      "nl": "Grok in je Tesla en je privacy"
+      "en": "Other companies process Grok chats from your Tesla",
+      "nl": "Andere bedrijven verwerken Grok-gesprekken uit je Tesla"
     }
   },
   "how-starlink-works-satellites-lasers-dish-explained": {
     "layer": "starlink",
     "topic": "starlink",
     "card": {
-      "en": "How Starlink works",
-      "nl": "Zo werkt Starlink"
+      "en": "Starlink beams internet from satellites to a dish",
+      "nl": "Starlink stuurt internet van satellieten naar een schotel"
     }
   },
   "how-tesla-trains-optimus-camera-helmets-video-learning-explained": {
     "layer": "tesla",
     "topic": "optimus",
     "card": {
-      "en": "Tesla trains Optimus",
-      "nl": "Zo traint Tesla Optimus"
+      "en": "Tesla trains Optimus with cameras worn by people",
+      "nl": "Tesla traint Optimus met camera's die mensen dragen"
     }
   },
   "how-to-ride-tesla-robotaxi-app-cities-prices-guide": {
     "layer": "tesla",
     "topic": "robotaxi",
     "card": {
-      "en": "to ride a Tesla Robotaxi",
-      "nl": "Zo rijd je mee in een Tesla Robotaxi"
+      "en": "Here is how a Tesla Robotaxi ride works",
+      "nl": "Zo werkt een rit met de Tesla Robotaxi"
     }
   },
   "music-city-loop-nashville-karst-sinkhole-pollution-risk-report": {
     "layer": "boring",
     "topic": "boring",
     "card": {
-      "en": "Nashville's Music City Loop reaches downtown but",
-      "nl": "Music City Loop in Nashville bereikt het centrum"
+      "en": "A report warns of sinkholes under downtown Nashville",
+      "nl": "Een rapport waarschuwt voor zinkgaten onder Nashville"
     }
   },
   "musk-sec-history-funding-secured-twitter-sitter-twitter-stake-fine": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "Musk and the SEC",
-      "nl": "Musk en de SEC"
+      "en": "Musk has spent years fighting the SEC",
+      "nl": "Musk procedeert al jaren tegen de SEC"
     }
   },
   "musk-twitter-investor-verdict-claims-deadline-tesla-link-explained": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "Musk's Twitter fraud verdict",
-      "nl": "Musk en de Twitter-uitspraak"
+      "en": "Twitter-fraud claims against Musk close in November",
+      "nl": "De claimtermijn tegen Musk sluit in november"
     }
   },
   "nacs-sae-j3400-explained-tesla-plug-which-evs-can-supercharge": {
     "layer": "tesla-energy",
     "topic": "charging",
     "card": {
-      "en": "NACS explained",
-      "nl": "NACS uitgelegd"
+      "en": "Tesla's plug is now the SAE J3400 standard",
+      "nl": "Tesla's stekker is nu de norm SAE J3400"
     }
   },
   "powerwall-3-vs-powerwall-3p-which-tesla-home-battery-explained": {
     "layer": "tesla-energy",
     "topic": "powerwall",
     "card": {
-      "en": "Powerwall 3 vs Powerwall 3P",
-      "nl": "Powerwall 3 of Powerwall 3P"
+      "en": "Powerwall 3 and 3P suit different houses",
+      "nl": "Powerwall 3 en 3P passen bij verschillende huizen"
     }
   },
   "spacex-orbital-ai-data-centers-ai1-terafab-tesla-chips": {
@@ -1563,16 +1563,16 @@
     "layer": "starlink",
     "topic": "starlink",
     "card": {
-      "en": "SpaceX eyes 80000 US cell towers for Starlink",
-      "nl": "SpaceX wil 80 000 Amerikaanse zendmasten voor Starlink"
+      "en": "SpaceX wants 80000 US towers for Starlink Mobile",
+      "nl": "SpaceX wil 80000 Amerikaanse masten voor Starlink Mobile"
     }
   },
   "starlink-india-spectrum-wait-tesla-model-y-sales": {
     "layer": "starlink",
     "topic": "starlink",
     "card": {
-      "en": "Starlink in India",
-      "nl": "Starlink in India"
+      "en": "Starlink is still waiting for spectrum in India",
+      "nl": "Starlink wacht in India nog op radiofrequenties"
     }
   },
   "starlink-mobile-22-million-users-veon-rogers-direct-to-cell-partners": {
@@ -1587,31 +1587,31 @@
     "layer": "starlink",
     "topic": "starlink",
     "card": {
-      "en": "much does Starlink cost now",
-      "nl": "kost Starlink nu"
+      "en": "Starlink prices rose again in 2026",
+      "nl": "De prijzen van Starlink stegen opnieuw in 2026"
     }
   },
   "starlink-vs-amazon-leo-satellite-race-october-2026": {
     "layer": "starlink",
     "topic": "starlink",
     "card": {
-      "en": "Starlink vs Amazon Leo",
-      "nl": "Starlink tegen Amazon Leo"
+      "en": "Starlink leads Amazon Leo by a wide margin",
+      "nl": "Starlink loopt ruim voor op Amazon Leo"
     }
   },
   "tesla-battery-health-test-how-to-check-degradation-guide": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "to check your Tesla's battery health",
-      "nl": "Zo check je de accugezondheid van je Tesla"
+      "en": "A Tesla can test its own battery health",
+      "nl": "Je Tesla kan zelf de accuconditie meten"
     }
   },
   "tesla-cancels-cybertruck-australia-new-zealand-refunds-right-hand-drive": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "Tesla cancels the Cybertruck in Australia and New",
+      "en": "Tesla cancels the Cybertruck in Australia and NZ",
       "nl": "Tesla schrapt de Cybertruck in Australië en Nieuw-Zeeland"
     }
   },
@@ -1619,264 +1619,264 @@
     "layer": "tesla-energy",
     "topic": "solar",
     "card": {
-      "en": "Tesla's 10 1 billion solar factory wins Fort",
-      "nl": "Tesla's zonnefabriek van 101 miljard krijgt belastingvoordeel"
+      "en": "Tesla's solar plant wins long-term Texas tax breaks",
+      "nl": "Tesla's zonnefabriek krijgt lang belastingvoordeel in Texas"
     }
   },
   "tesla-delivery-day-checklist-what-to-check-before-accepting": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "Tesla delivery day checklist",
-      "nl": "Checklist voor de afleverdag van je Tesla"
+      "en": "Inspect the car closely on Tesla delivery day",
+      "nl": "Keur de auto goed op de Tesla-afleverdag"
     }
   },
   "tesla-energy-backlog-10-7-billion-customer-prepayments-q3-2026": {
     "layer": "tesla-energy",
     "topic": "energy",
     "card": {
-      "en": "Tesla Energy's order book",
-      "nl": "Het orderboek van Tesla Energy"
+      "en": "Tesla Energy has 10.7 billion dollars in orders",
+      "nl": "Tesla Energy heeft voor 10.7 miljard aan orders"
     }
   },
   "tesla-factory-capacity-2-5-million-cars-vs-output-q3-2026": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "Tesla's factories can build 2 5 million cars",
-      "nl": "Tesla's fabrieken kunnen 25 miljoen auto's per jaar"
+      "en": "Factories can build 2.5 million cars a year",
+      "nl": "Jaarlijks kunnen de fabrieken 2.5 miljoen auto's bouwen"
     }
   },
   "tesla-halloween-mode-2026-trick-or-treat-ghost-costume-explained": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "Tesla Halloween Mode explained",
-      "nl": "Tesla Halloween Mode uitgelegd"
+      "en": "Halloween Mode adds Trick or Treat to Teslas",
+      "nl": "Halloween Mode brengt Trick or Treat naar Tesla"
     }
   },
   "tesla-maintenance-schedule-what-service-your-tesla-needs-and-when": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "Tesla maintenance schedule",
-      "nl": "Onderhoudsschema van een Tesla"
+      "en": "Here is the servicing a Tesla actually needs",
+      "nl": "Dit onderhoud heeft een Tesla echt nodig"
     }
   },
   "tesla-megafactories-explained-lathrop-shanghai-texas-110-gwh": {
     "layer": "tesla-energy",
     "topic": "megapack",
     "card": {
-      "en": "Tesla's Megafactories explained",
-      "nl": "Tesla's Megafactories uitgelegd"
+      "en": "Three Megafactories hold 110 GWh of capacity",
+      "nl": "Drie Megafactories bieden samen 110 GWh capaciteit"
     }
   },
   "tesla-model-3-vs-model-y-2026-which-to-buy-price-range-space": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "Tesla Model 3 vs Model Y in 2026",
-      "nl": "Tesla Model 3 of Model Y in 2026"
+      "en": "Model 3 and Model Y fit different buyers",
+      "nl": "Model 3 en Y passen bij verschillende kopers"
     }
   },
   "tesla-optimus-history-timeline-2021-to-2026": {
     "layer": "tesla",
     "topic": "optimus",
     "card": {
-      "en": "Tesla Optimus history",
-      "nl": "De geschiedenis van Tesla Optimus"
+      "en": "Optimus went from a 2021 reveal toward production",
+      "nl": "Optimus groeide sinds 2021 toe naar productie"
     }
   },
   "tesla-premium-connectivity-vs-standard-price-features-worth-it-guide": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "Tesla Premium Connectivity vs Standard",
-      "nl": "Tesla Premium Connectivity of Standaard"
+      "en": "Premium Connectivity adds features for a fee",
+      "nl": "Premium Connectivity voegt betaalde functies toe"
     }
   },
   "tesla-related-party-transactions-musk-companies-spacex-xai-2026-proxy": {
     "layer": "spacexsi",
     "topic": "spacexsi",
     "card": {
-      "en": "Tesla's deals with Musk's other companies",
-      "nl": "Tesla's zaken met Musks andere bedrijven"
+      "en": "Tesla discloses every deal with Musk's other firms",
+      "nl": "Tesla vermeldt elke deal met Musks andere bedrijven"
     }
   },
   "tesla-roadster-cockpit-screen-track-mode-autonomous-stunts": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "Inside the new Tesla Roadster",
-      "nl": "In de nieuwe Tesla Roadster"
+      "en": "The new Roadster can perform some stunts itself",
+      "nl": "De nieuwe Roadster kan sommige stunts zelf doen"
     }
   },
   "tesla-robotaxi-app-code-owners-enroll-own-cars-teardown": {
     "layer": "tesla",
     "topic": "robotaxi",
     "card": {
-      "en": "Tesla's Robotaxi app code hints at letting owners",
-      "nl": "Code in Tesla's Robotaxi-app wijst erop dat eigenaren"
+      "en": "Robotaxi code hints owners can add their cars",
+      "nl": "Robotaxi-code hint dat eigenaren hun auto kunnen inzetten"
     }
   },
   "tesla-sentry-mode-explained-battery-drain-usb-privacy": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "Tesla Sentry Mode explained",
-      "nl": "Tesla Sentry Mode uitgelegd"
+      "en": "Sentry Mode watches your Tesla and uses battery",
+      "nl": "Sentry Mode bewaakt je Tesla en verbruikt accu"
     }
   },
   "tesla-services-and-other-revenue-q3-2026-explained": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "Tesla's quiet growth engine",
-      "nl": "Tesla's stille groeimotor"
+      "en": "Services revenue jumps 33% in Q3",
+      "nl": "Services-omzet stijgt in Q3 met 33%"
     }
   },
   "tesla-solar-factory-project-crystal-sun-texas-100-gw-explained": {
     "layer": "tesla-energy",
     "topic": "solar",
     "card": {
-      "en": "Project Crystal Sun",
-      "nl": "Project Crystal Sun"
+      "en": "Crystal Sun is Tesla's 10.1 billion solar plan",
+      "nl": "Crystal Sun is Tesla's zonneplan van 10.1 miljard"
     }
   },
   "tesla-stock-earnings-week-recap-october-19-23-2026": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "Tesla stock ends earnings week up 4 9",
-      "nl": "Aandeel Tesla sluit cijferweek 49 hoger af"
+      "en": "Tesla shares finish earnings week up 4.9%",
+      "nl": "Het aandeel sluit de cijferweek 4.9% hoger"
     }
   },
   "tesla-supercharger-prices-us-october-2026-how-to-pay-less": {
     "layer": "tesla-energy",
     "topic": "charging",
     "card": {
-      "en": "much does a Tesla Supercharger cost in 2026",
-      "nl": "kost laden bij een Tesla Supercharger in 2026"
+      "en": "Six habits can lower a Supercharger bill",
+      "nl": "Zes gewoontes verlagen de rekening bij een Supercharger"
     }
   },
   "tesla-vs-gm-q3-2026-earnings-valuation-compared": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "Tesla vs GM in Q3 2026",
-      "nl": "Tesla tegen GM in Q3 2026"
+      "en": "GM outearned a much more valuable Tesla",
+      "nl": "GM verdiende meer dan het veel waardevollere Tesla"
     }
   },
   "tesla-warranty-explained-us-uk-europe-battery-basic-used": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "Tesla warranty explained",
-      "nl": "Tesla-garantie uitgelegd"
+      "en": "Warranty terms differ across the US and Europe",
+      "nl": "De garantievoorwaarden verschillen in de VS en Europa"
     }
   },
   "when-can-you-buy-tesla-optimus-price-release-date-explained": {
     "layer": "tesla",
     "topic": "optimus",
     "card": {
-      "en": "you buy a Tesla Optimus",
-      "nl": "Kun je een Tesla Optimus kopen"
+      "en": "Optimus is not on sale to buyers yet",
+      "nl": "Optimus is voor kopers nog niet te koop"
     }
   },
   "who-sits-on-tesla-board-2026-directors-independence-explained": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "sits on Tesla's board in 2026",
-      "nl": "zitten er in het bestuur van Tesla"
+      "en": "Nine directors sit on Tesla's 2026 board",
+      "nl": "Negen bestuurders zitten in de raad van 2026"
     }
   },
   "who-will-succeed-musk-tesla-ceo-succession-plan-pay-award-explained": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "succeed Musk as Tesla CEO",
-      "nl": "volgt Musk op als topman van Tesla"
+      "en": "Tesla has never named a successor to Musk",
+      "nl": "Tesla noemde nog nooit een opvolger voor Musk"
     }
   },
   "spacex-filing-tesla-merger-needs-musk-approval-controlling-shareholder": {
     "layer": "spacex",
     "topic": "spacex",
     "card": {
-      "en": "SpaceX filing says any Tesla merger needs Musk's",
-      "nl": "SpaceX-document fusie met Tesla kan niet zonder ja"
+      "en": "A Tesla merger still needs Musk's personal approval",
+      "nl": "Musk moet persoonlijk ja zeggen tegen een fusie"
     }
   },
   "tesla-cybercab-riders-rear-camera-view-quiet-mode-nhtsa": {
     "layer": "tesla",
     "topic": "robotaxi",
     "card": {
-      "en": "Tesla Cybercab riders can now see behind",
-      "nl": "Reizigers in de Tesla Cybercab zien nu live"
+      "en": "Cybercab passengers can now see the road behind",
+      "nl": "Cybercab-passagiers zien nu wat er achter hen gebeurt"
     }
   },
   "tesla-japan-model-3-model-y-v2l-chademo-adapter-charging-support": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "Tesla's new Model 3 and Model Y",
-      "nl": "Nieuwe Tesla Model 3 en Model Y"
+      "en": "New Teslas in Japan can power external devices",
+      "nl": "Japanse Tesla's kunnen nu stroom naar buiten leveren"
     }
   },
   "tesla-powerwall-netherlands-end-of-net-metering-2027-worth-it": {
     "layer": "tesla-energy",
     "topic": "powerwall",
     "card": {
-      "en": "a Tesla Powerwall pay off in the Netherlands",
-      "nl": "een Tesla Powerwall rendabel in Nederland nu"
+      "en": "A Dutch Powerwall changes when net metering ends",
+      "nl": "Een Nederlandse Powerwall verandert als salderen stopt"
     }
   },
   "tesla-roadster-technical-deep-dive-battery-motors-aero-cold-gas-thrusters": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "Inside the new Tesla Roadster",
-      "nl": "Zo zit de nieuwe Tesla Roadster in elkaar"
+      "en": "Fans and thrusters sit inside the new Roadster",
+      "nl": "De nieuwe Roadster combineert ventilatoren met stuwraketten"
     }
   },
   "iso-25785-1-humanoid-robot-safety-standard-what-it-means-for-tesla-optimus": {
     "layer": "tesla",
     "topic": "optimus",
     "card": {
-      "en": "ISO 25785-1 explained",
-      "nl": "ISO 25785-1 uitgelegd"
+      "en": "Humanoid robots now have a first safety standard",
+      "nl": "Humanoïde robots hebben nu een eerste veiligheidsnorm"
     }
   },
   "tesla-cybercabs-f1-us-grand-prix-austin-record-sightings-463-registered": {
     "layer": "tesla",
     "topic": "robotaxi",
     "card": {
-      "en": "Tesla Cybercabs ferry F1 fans to the US",
-      "nl": "Tesla Cybercabs brengen F1-fans naar de Grand Prix"
+      "en": "Cybercabs ferried F1 fans around Austin",
+      "nl": "Cybercabs brachten F1-fans rond in Austin"
     }
   },
   "tesla-robotaxi-vs-cybercab-difference-explained": {
     "layer": "tesla",
     "topic": "robotaxi",
     "card": {
-      "en": "Robotaxi vs Cybercab",
-      "nl": "Robotaxi of Cybercab"
+      "en": "Cybercab is the vehicle behind Robotaxi rides",
+      "nl": "Cybercab is de auto achter de Robotaxi-ritten"
     }
   },
   "turo-tesla-fsd-supervised-rentals-us-hosts-free-trial": {
     "layer": "tesla",
     "topic": "fsd",
     "card": {
-      "en": "Turo will let US travelers rent Teslas",
-      "nl": "Turo verhuurt vanaf 28 oktober Tesla's met FSD"
+      "en": "Turo will offer FSD rentals in the US",
+      "nl": "Turo verhuurt in de VS Tesla's met FSD"
     }
   },
   "japan-cuts-ev-subsidy-40-percent-2027-tesla-model-3-model-y-year-end-rush": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "Japan cuts its EV subsidy by 40 from",
-      "nl": "Japan verlaagt EV-subsidie met 40 vanaf januari 2027"
+      "en": "Japan cuts EV subsidies 40% from 2027",
+      "nl": "Japan verlaagt de EV-subsidie vanaf 2027 met 40%"
     }
   },
   "south-korea-police-book-80-tesla-owners-illegal-fsd-unlock-devices": {
@@ -1884,31 +1884,31 @@
     "topic": "fsd",
     "card": {
       "en": "South Korean police book 80 Tesla owners",
-      "nl": "Zuid-Koreaanse politie verdenkt 80 Tesla-eigenaren van illegaal ontgrendelen"
+      "nl": "Politie boekt 80 eigenaren met illegale FSD-kastjes"
     }
   },
   "tesla-stock-jumps-barclays-upgrade-overweight-450-target-spacex-merger": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "Tesla stock jumps 5 2 as Barclays upgrades",
-      "nl": "Aandeel Tesla stijgt 52 na upgrade van Barclays"
+      "en": "A Barclays upgrade lifts Tesla shares 5.2%",
+      "nl": "Een upgrade van Barclays tilt Tesla 5.2%"
     }
   },
   "latvia-tenth-eu-country-tesla-fsd-supervised-why-december-vote-needs-big-four": {
     "layer": "tesla",
     "topic": "fsd",
     "card": {
-      "en": "Latvia becomes the 10th EU country to approve",
-      "nl": "Letland keurt als tiende EU-land Tesla FSD Supervised"
+      "en": "Latvia approves FSD as the EU's tenth country",
+      "nl": "Letland keurt FSD goed als tiende EU-land"
     }
   },
   "tesla-houston-robotaxi-zone-10x-bigger-texas-fleet-passes-1000": {
     "layer": "tesla",
     "topic": "robotaxi",
     "card": {
-      "en": "Tesla makes its Houston Robotaxi zone 10 times",
-      "nl": "Tesla maakt robotaxigebied in Houston 10 keer zo"
+      "en": "Houston's Robotaxi zone is now ten times larger",
+      "nl": "Houston vergroot zijn robotaxigebied tien keer"
     }
   },
   "tesla-semi-fire-i-880-hayward-no-crash-freeway-closed-10-hours": {
@@ -1923,56 +1923,56 @@
     "layer": "tesla",
     "topic": "robotaxi",
     "card": {
-      "en": "Inside the Tesla Cybercab",
-      "nl": "Zo zit de Tesla Cybercab in elkaar"
+      "en": "Cybercab's battery is ready for cheaper LFP cells",
+      "nl": "De Cybercab-accu is klaar voor goedkopere LFP-cellen"
     }
   },
   "tesla-supercharger-voting-winners-october-2026-36-sites-new-round": {
     "layer": "tesla-energy",
     "topic": "charging",
     "card": {
-      "en": "Tesla owners pick 36 new Supercharger sites",
-      "nl": "Tesla-rijders kiezen 36 nieuwe Supercharger-locaties maar een winnaar"
+      "en": "Owners chose 36 new Supercharger sites",
+      "nl": "Rijders kozen 36 nieuwe plekken voor een Supercharger"
     }
   },
   "italy-backs-eu-wide-tesla-fsd-approval-salvini-musk-65-percent-vote-math": {
     "layer": "tesla",
     "topic": "fsd",
     "card": {
-      "en": "Italy backs EU-wide approval of Tesla FSD after",
-      "nl": "Italië steunt Europese goedkeuring van Tesla FSD na"
+      "en": "Italy backs EU-wide approval of Tesla FSD",
+      "nl": "Italië steunt een Europees ja voor Tesla FSD"
     }
   },
   "tesla-robotaxi-hours-2am-calm-mode-trip-sharing-grok-model-y": {
     "layer": "tesla",
     "topic": "robotaxi",
     "card": {
-      "en": "Tesla Robotaxi now runs until 2 a m",
-      "nl": "Tesla Robotaxi rijdt nu tot 2 uur 's"
+      "en": "Robotaxi service now runs until 2 am",
+      "nl": "De Robotaxi-dienst rijdt nu door tot 2 uur"
     }
   },
   "tesla-china-halves-down-payment-39900-yuan-zero-interest-model-3-model-y": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "Tesla halves its China down payment to 39900",
-      "nl": "Tesla halveert aanbetaling in China naar 39 900"
+      "en": "Tesla halves the China deposit to 39900 yuan",
+      "nl": "Tesla halveert de Chinese aanbetaling naar 39900 yuan"
     }
   },
   "what-is-tesla-fsd-supervised-cost-countries-explained": {
     "layer": "tesla",
     "topic": "fsd",
     "card": {
-      "en": "Tesla FSD Supervised",
-      "nl": "Tesla FSD Supervised"
+      "en": "FSD Supervised still needs you at the wheel",
+      "nl": "Bij FSD Supervised moet je zelf blijven opletten"
     }
   },
   "tesla-emergency-drive-away-539-service-bill-accidental-tap-first-real-use": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "Tesla's Emergency Drive Away gets its first real",
-      "nl": "Tesla's Emergency Drive Away voor het eerst echt"
+      "en": "One accidental tap reportedly cost 539 dollars",
+      "nl": "Een verkeerde tik kostte naar verluidt 539 dollar"
     }
   },
   "tesla-roadster-origin-story-lotus-elise-first-tesla": {
@@ -1987,232 +1987,232 @@
     "layer": "tesla",
     "topic": "fsd",
     "card": {
-      "en": "Grok does the mapping you do the napping",
-      "nl": "Grok does the mapping you do the napping"
+      "en": "Sleeping while FSD drives is still not allowed",
+      "nl": "Slapen terwijl FSD rijdt is nog niet toegestaan"
     }
   },
   "spacex-first-super-heavy-booster-catch-chopsticks-mechazilla-story": {
     "layer": "spacex",
     "topic": "starship",
     "card": {
-      "en": "SpaceX caught a 232-foot rocket with 'chopsticks'",
-      "nl": "SpaceX een raket van 71 meter met 'eetstokjes'"
+      "en": "SpaceX caught a booster using giant chopsticks",
+      "nl": "SpaceX ving een booster met enorme eetstokjes"
     }
   },
   "tesla-phone-model-pi-rumor-starlink-facts-explained": {
     "layer": "starlink",
     "topic": "starlink",
     "card": {
-      "en": "There a Tesla Phone",
-      "nl": "Komt er een Tesla-telefoon"
+      "en": "The Tesla phone remains a rumor",
+      "nl": "De Tesla-telefoon blijft voorlopig een gerucht"
     }
   },
   "tesla-semi-story-2017-reveal-to-factory-europe-why-nine-years": {
     "layer": "tesla",
     "topic": "semi",
     "card": {
-      "en": "the Tesla Semi took nine years",
-      "nl": "de Tesla Semi negen jaar duurde"
+      "en": "The Tesla Semi needed nine years to arrive",
+      "nl": "De Tesla Semi had negen jaar nodig"
     }
   },
   "how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute": {
     "layer": "spacex",
     "topic": "starship",
     "card": {
-      "en": "SpaceX catches Starship",
-      "nl": "Zo vangt SpaceX Starship"
+      "en": "SpaceX catches Starship without wings or legs",
+      "nl": "SpaceX vangt Starship zonder vleugels of landingspoten"
     }
   },
   "spacex-first-starlink-launch-2019-satellites-stacked-like-deck-of-cards": {
     "layer": "starlink",
     "topic": "starlink",
     "card": {
-      "en": "Dealt like a deck of cards",
-      "nl": "Gedeeld als een stok kaarten"
+      "en": "First Starlinks left the rocket stacked like cards",
+      "nl": "De eerste Starlinks verlieten de raket als kaarten"
     }
   },
   "can-tesla-cybercab-drive-in-europe-no-steering-wheel-rules-explained": {
     "layer": "tesla",
     "topic": "robotaxi",
     "card": {
-      "en": "the Tesla Cybercab Drive in Europe",
-      "nl": "Mag de Tesla Cybercab rijden in Europa"
+      "en": "Today's rules block a Cybercab without a wheel",
+      "nl": "Europese regels blokkeren een Cybercab zonder stuur"
     }
   },
   "tesla-model-3-production-hell-tent-assembly-line-2018-story": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "5000 Model 3s in a Week",
-      "nl": "5 000 Model 3's in een week"
+      "en": "A tent saved Tesla from production hell",
+      "nl": "Een tent hielp Tesla uit de productiehel"
     }
   },
   "why-starship-fires-engines-at-own-booster-hot-staging-explained": {
     "layer": "spacex",
     "topic": "starship",
     "card": {
-      "en": "Starship Fire Its Engines at Its Own Booster",
-      "nl": "vuurt Starship zijn motoren af op zijn eigen"
+      "en": "Starship fires its engines at its own booster",
+      "nl": "Starship ontsteekt zijn motoren op de eigen booster"
     }
   },
   "why-tesla-cybertruck-looks-like-that-stainless-steel-broken-window-story": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "The Truck That Broke Its Own Window",
-      "nl": "De truck die zijn eigen ruit brak"
+      "en": "The Cybertruck broke its own window",
+      "nl": "De Cybertruck brak zijn eigen ruit"
     }
   },
   "tesla-semi-interior-explained-center-seat-two-screens-drivers-day": {
     "layer": "tesla",
     "topic": "semi",
     "card": {
-      "en": "Tesla Semi Interior Explained",
-      "nl": "Het interieur van de Tesla Semi uitgelegd"
+      "en": "The Semi driver sits in a center seat",
+      "nl": "De Semi-chauffeur zit op een middelste stoel"
     }
   },
   "what-happens-to-your-tesla-when-tesla-stops-making-it-cybertruck-model-s-x": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "Happens to Your Tesla When Tesla Stops Making",
-      "nl": "gebeurt er met je Tesla als Tesla hem"
+      "en": "Your Tesla still needs support after production ends",
+      "nl": "Ondersteuning blijft nodig als de productie stopt"
     }
   },
   "how-much-does-it-cost-to-send-1-kg-into-space-shuttle-falcon-9-starship": {
     "layer": "spacex",
     "topic": "starship",
     "card": {
-      "en": "Much Does It Cost to Send 1 kg",
-      "nl": "kost het om 1 kilo de ruimte"
+      "en": "Here is what one kilo to orbit costs",
+      "nl": "Dit kost één kilo vracht naar de ruimte"
     }
   },
   "spacex-first-falcon-9-landing-2015-two-crashes-one-explosion-orbcomm-2": {
     "layer": "spacex",
     "topic": "falcon",
     "card": {
-      "en": "Two Crashes One Explosion Then It Landed",
-      "nl": "Twee crashes één explosie en toen landde hij"
+      "en": "SpaceX landed its first orbital rocket in 2015",
+      "nl": "SpaceX landde in 2015 zijn eerste orbitale raket"
     }
   },
   "spacex-fairing-catch-net-boat-mr-steven-6-million-nose-cone-story": {
     "layer": "spacex",
     "topic": "spacex",
     "card": {
-      "en": "Catching 6 million falling from space",
-      "nl": "Zes miljoen dollar uit de ruimte vangen"
+      "en": "Mr Steven chased falling nose cones for SpaceX",
+      "nl": "Mr Steven joeg voor SpaceX op vallende neuskegels"
     }
   },
   "why-starship-has-33-engines-not-one-giant-engine-n1-saturn-v-explained": {
     "layer": "spacex",
     "topic": "starship",
     "card": {
-      "en": "Starship Have 33 Engines Instead of One Giant",
-      "nl": "heeft Starship 33 motoren in plaats van één"
+      "en": "Starship uses 33 engines instead of one",
+      "nl": "Starship gebruikt 33 motoren in plaats van één"
     }
   },
   "how-tesla-robotaxi-keeps-cameras-clean-washers-wipers-laser-explained": {
     "layer": "tesla",
     "topic": "robotaxi",
     "card": {
-      "en": "a Tesla Robotaxi Keep Its Cameras Clean Washers",
-      "nl": "houdt een Tesla Robotaxi zijn camera's schoon"
+      "en": "Washers and lasers keep Robotaxi cameras clear",
+      "nl": "Sproeiers en lasers houden de Robotaxi-camera's schoon"
     }
   },
   "starship-first-flight-2023-four-minutes-crater-launch-pad-story": {
     "layer": "spacex",
     "topic": "starship",
     "card": {
-      "en": "Four minutes and a crater",
-      "nl": "Vier minuten en een krater"
+      "en": "Starship's first flight ended in a crater",
+      "nl": "De eerste Starship-vlucht eindigde in een krater"
     }
   },
   "tesla-supercharger-story-six-free-solar-stations-to-85000-plugs-team-fired": {
     "layer": "tesla-energy",
     "topic": "charging",
     "card": {
-      "en": "From six free solar stations to 85000 plugs",
-      "nl": "Van zes gratis zonnestations naar 85 000 laadpunten"
+      "en": "Six stations grew into 85000 plugs",
+      "nl": "Zes stations werden 85000 laadpalen"
     }
   },
   "why-tesla-batteries-use-thousands-of-small-cells-18650-2170-4680-explained": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "a Tesla Battery Have Thousands of Small Cells",
-      "nl": "zit een Tesla-accu vol kleine cellen"
+      "en": "Each Tesla battery holds thousands of small cells",
+      "nl": "Elke Tesla-accu bevat duizenden kleine cellen"
     }
   },
   "how-does-tesla-flying-roadster-fly-fans-nitrogen-thrusters-explained": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "Tesla's 'Flying' Roadster Actually Fly",
-      "nl": "vliegt Tesla's 'vliegende' Roadster echt"
+      "en": "Fans and nitrogen thrusters would lift the Roadster",
+      "nl": "Stikstofstuwraketten tillen de Roadster"
     }
   },
   "musk-mocked-flying-cars-tesla-roadster-nine-year-story-2017-to-flight": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "Musk Once Mocked Flying Cars How Tesla's Roadster",
-      "nl": "Musk lachte ooit om vliegende auto's Hoe Tesla's"
+      "en": "The flying Roadster still took nine years",
+      "nl": "De vliegende Roadster kostte alsnog negen jaar"
     }
   },
   "how-spacex-catches-both-starship-stages-why-ship-takes-22-hours-booster-7-minutes": {
     "layer": "spacex",
     "topic": "starship",
     "card": {
-      "en": "SpaceX Catches Both Halves of Starship",
-      "nl": "SpaceX beide helften van Starship vangt"
+      "en": "Catching the ship takes about 22 hours",
+      "nl": "Het vangen van Starship duurt ongeveer 22 uur"
     }
   },
   "spacex-flight-6-booster-catch-called-off-tower-damaged-at-liftoff-story": {
     "layer": "spacex",
     "topic": "starship",
     "card": {
-      "en": "The Booster Catch SpaceX Called Off",
-      "nl": "De boostervangst die SpaceX afblies"
+      "en": "Launch damage made SpaceX skip the booster catch",
+      "nl": "Schade bij de lancering schrapte de boostervangst"
     }
   },
   "spacex-catches-starship-ship-42-first-ever-catch-from-orbit-flight-15": {
     "layer": "spacex",
     "topic": "starship",
     "card": {
-      "en": "First Ever Starship Caught",
-      "nl": "Voor het eerst een Starship gevangen"
+      "en": "SpaceX catches a Starship for the first time",
+      "nl": "SpaceX vangt voor het eerst een Starship"
     }
   },
   "what-happens-to-starship-super-heavy-booster-after-splashdown-gulf-explained": {
     "layer": "spacex",
     "topic": "starship",
     "card": {
-      "en": "Happens to Starship's Booster After a Splashdown",
-      "nl": "gebeurt er met de Starship-booster na een landing"
+      "en": "Super Heavy does not return after a splashdown",
+      "nl": "Super Heavy keert niet terug van een zeelanding"
     }
   },
   "why-spacex-called-off-starship-flight-15-booster-catch-go-no-go-explained": {
     "layer": "spacex",
     "topic": "starship",
     "card": {
-      "en": "SpaceX Call Off Starship's Booster Catch",
-      "nl": "blies SpaceX de boostervangst van Starship af"
+      "en": "Super Heavy skipped the tower on Flight 15",
+      "nl": "Super Heavy miste op vlucht 15 de vangtoren"
     }
   },
   "one-door-delayed-tesla-model-x-almost-two-years": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "One Door Delayed the Tesla Model X",
-      "nl": "Eén deur zette de Tesla Model X bijna"
+      "en": "One door delayed Model X by two years",
+      "nl": "Eén deur zette Model X twee jaar terug"
     }
   },
   "spaceballs-joke-named-tesla-model-s-insane-ludicrous-plaid": {
     "layer": "tesla",
     "topic": "cars",
     "card": {
-      "en": "Spaceballs Named Tesla's Model S From Insane",
-      "nl": "Spaceballs de Tesla Model S een naam gaf"
+      "en": "Spaceballs named Insane and Plaid",
+      "nl": "Spaceballs gaf ons Insane en Plaid"
     }
   },
   "boring-expects-nashville-riders-early-2027": {

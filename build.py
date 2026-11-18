@@ -974,6 +974,9 @@ header.hb .pnav>.is-parked{display:none}
 .sheet .leadstory{margin-top:1px;align-items:start}
 .pv-side{margin-top:1px}
 .sheet:has(.leadstory)>.pv-side{margin-top:3px}
+/* Homepage: the lead photo and the red rule above Latest news share one top edge. */
+.sheet.front .leadstory{margin-top:0}
+.sheet.front:has(.leadstory)>.pv-side{margin-top:0}
 .sheet-main article.narrow,.sheet-main>.narrow{max-width:none;margin:0}
 .sheet-main article.narrow>h1,.sheet-main article.narrow .cform,.sheet-main article.narrow .lead,.sheet-main article.narrow .prose{margin-left:0;margin-right:0}
 .sheet-main .prose{max-width:none}
@@ -1017,7 +1020,6 @@ header.hb .pnav>.is-parked{display:none}
 .sheet:has(.arel) .pv-side:not(.arel){grid-area:rest}
 .nlside{display:none}
 }
-.scopeline{margin:2px 0 12px;font-size:.92rem;line-height:1.35;font-weight:700;color:#7ee7ff}
 .eco-bit{min-width:0}
 .eco-sources{margin:0 0 12px;padding-left:1.1rem}
 .eco-sources li{margin:0 0 6px}
@@ -3393,9 +3395,10 @@ def page_side(arts, lang, kind="home", current=None, skip=None, tail="", signup=
     return aside
 
 
-def shell(main, side):
+def shell(main, side, extra=""):
     """Same centered content column and sidebar on every page."""
-    return f'<div class="sheet"><div class="sheet-main">{main}</div>{side}</div>'
+    klass = f"sheet {extra}".strip()
+    return f'<div class="{klass}"><div class="sheet-main">{main}</div>{side}</div>'
 
 
 def homepage(arts, lang):
@@ -3407,9 +3410,8 @@ def homepage(arts, lang):
     videos, strip_arts = home_videos(arts, lang, 8)
     strip = f'<div class="vstrip">{videos}</div>' if videos else ""
     feed = [x for x in arts if x is not lead][:14]
-    main = (f'<p class="scopeline">{esc(L["scope"])}</p>'
-            + home_lead(lead, lang) + strip + pv_feed(feed, lang, thumbs=2))
-    return shell(main, page_side(arts, lang, "home", skip=[lead, *strip_arts, *feed]))
+    main = home_lead(lead, lang) + strip + pv_feed(feed, lang, thumbs=2)
+    return shell(main, page_side(arts, lang, "home", skip=[lead, *strip_arts, *feed]), "front")
 
 
 def pv_copy(lang):

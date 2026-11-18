@@ -2221,6 +2221,7 @@ TOPIC_LABEL = {
     "neuralink": {"en": "Neuralink", "nl": "Neuralink", "href": "neuralink/"},
     "boring": {"en": "Boring", "nl": "Boring", "href": "boring/"},
     "agi": {"en": "AGI", "nl": "AGI", "href": "agi/"},
+    "ecosystem": {"en": "Ecosystem", "nl": "Ecosysteem", "href": "ecosystem/"},
 }
 
 
@@ -2228,7 +2229,8 @@ def topic_meta(a, lang):
     """Visible section name and the hub it links to."""
     info = TOPIC_LABEL.get(a.get("topic") or "")
     if info:
-        return info[lang], info["href"]
+        href = ecosystem_path(lang) if a.get("topic") == "ecosystem" else info["href"]
+        return info[lang], href
     cat = CATEGORIES[a["category"]]
     return cat.get("tag", cat[lang]), "category/" + a["category"] + "/"
 

@@ -61,7 +61,7 @@ Guides (buying advice) use category "guides"; they appear in the "Best picks" se
 and on the model pages they are tagged with.
 
 Weekly briefings are markdown files in content/briefings/. A file whose name starts with
-_ is not published. template: true publishes a noindex layout sample.
+_ is not published, including the layout sample. template: true is also left out of the build.
 Promises are rows in content/data/promises.json. The _example object is not rendered.
 Buying-guide markdown lives in content/guides/. A file whose name starts with _ is not
 published unless TT_EXAMPLES=1, which is only for a local preview.
@@ -991,7 +991,9 @@ header.hb .pnav>.is-parked{display:none}
 .sheet-main article.money .avid.long .avb,.pv-art .avid.long .avb,.sheet-main article.money>.hi,.pv-art article.money>.hi{display:block;width:calc(100% - 2 * (3vw + 14px));margin-left:calc(3vw + 14px);margin-right:calc(3vw + 14px)}
 @media (max-width:600.98px){.sheet-main article.money .avid.long .avb,.pv-art .avid.long .avb,.sheet-main article.money>.hi,.pv-art article.money>.hi,.sheet-main article.money .avid.short .avb,.pv-art .avid.short .avb{width:calc(100% - 28px);margin-left:14px;margin-right:14px}}
 .sheet-main article.narrow>h1,.sheet-main article.money>h1,.sheet-main article.money>.meta,.sheet-main article.money>.byline{margin-left:calc(3vw + 14px);margin-right:calc(3vw + 14px)}
-@media (max-width:600.98px){.sheet-main article.narrow>h1,.sheet-main article.money>h1,.sheet-main article.money>.meta,.sheet-main article.money>.byline,.sheet-main article.money .toc,.sheet-main article.money .sources,.sheet-main article.money .imgnote,.sheet-main article.money nav.seq,.sheet-main article.money .pbox,.sheet-main article.money .nform,.sheet-main article.money .avid figcaption{margin-left:14px;margin-right:14px}}
+.sheet-main article.brief>h1,.sheet-main article.brief>.byline,.sheet-main article.brief>.meta,.sheet-main article.brief>.tplnote,.sheet-main article.brief>.lead{margin-left:0;margin-right:0}
+.sheet-main article.brief>.lead{padding-left:0;padding-right:0}
+@media (max-width:600.98px){.sheet-main article.narrow>h1,.sheet-main article.money>h1,.sheet-main article.money>.meta,.sheet-main article.money>.byline,.sheet-main article.money .toc,.sheet-main article.money .sources,.sheet-main article.money .imgnote,.sheet-main article.money nav.seq,.sheet-main article.money .pbox,.sheet-main article.money .nform,.sheet-main article.money .avid figcaption{margin-left:14px;margin-right:14px}.sheet-main article.brief>h1,.sheet-main article.brief>.byline,.sheet-main article.brief>.meta,.sheet-main article.brief>.tplnote,.sheet-main article.brief>.lead{margin-left:0;margin-right:0}}
 .sheet-main article.money .mlbox,.sheet-main article.narrow .mlbox{margin-left:calc(3vw + 14px);margin-right:calc(3vw + 14px)}
 @media (max-width:600.98px){.sheet-main article.money .mlbox,.sheet-main article.narrow .mlbox{margin-left:14px;margin-right:14px}}
 @media (max-width:900px){
@@ -4528,14 +4530,14 @@ def layer_tag(key, lang):
     return f'<a class="ltag ltag-{tone}" href="{url(lang, href)}">{esc(name)}</a>'
 
 
-def _markdown_docs(folder):
+def _markdown_docs(folder, include_hidden=False):
     root = ROOT / "content" / folder
     docs = []
     if not root.is_dir():
         return docs
     for path in sorted(root.glob("*.md")):
         hidden = path.name.startswith("_")
-        if hidden and not INCLUDE_EXAMPLES:
+        if hidden and not include_hidden:
             continue
         meta, body = _front_matter(path.read_text(encoding="utf-8"))
         docs.append({
@@ -4568,9 +4570,13 @@ def _parse_brief_layers(body):
 
 
 def load_briefings():
-    docs = _markdown_docs("briefings")
-    for doc in docs:
+    """Published issues only. Underscore files and template: true stay out of the site."""
+    docs = []
+    for doc in _markdown_docs("briefings", include_hidden=False):
+        if doc["template"]:
+            continue
         doc["layers"] = _parse_brief_layers(doc["body"])
+        docs.append(doc)
     docs.sort(key=lambda doc: doc["meta"].get("date") or "", reverse=True)
     return docs
 
@@ -4602,7 +4608,7 @@ def _parse_guide(body):
 
 
 def load_guides():
-    docs = _markdown_docs("guides")
+    docs = _markdown_docs("guides", include_hidden=INCLUDE_EXAMPLES)
     for doc in docs:
         doc["pieces"] = _parse_guide(doc["body"])
     return docs
@@ -4699,41 +4705,30 @@ def nl_sticky(lang):
 
 
 def briefing_index_body(docs, lang):
-    real = [doc for doc in docs if not doc["template"]]
-    samples = [doc for doc in docs if doc["template"]]
     if lang == "en":
-        title, intro = "Weekly briefing", (
-            "One issue a week across the seven layers. Each item is what happened, plus one line on why it matters.")
-        empty = "No briefing has been published yet."
-        sample = "Layout template"
+        title = "Weekly briefing"
+        intro = "One issue a week across the seven layers. Each item is what happened, plus one line on why it matters."
+        empty = "First briefing coming soon"
     else:
-        title, intro = "Weekbriefing", (
-            "Eén editie per week over de zeven lagen. Elk punt is wat er gebeurde, plus één regel over waarom het ertoe doet.")
-        empty = "Er is nog geen briefing gepubliceerd."
-        sample = "Opmaakvoorbeeld"
-    tags = "".join(layer_tag(key, lang) for key, *_rest in BRIEF_LAYERS)
-    cards = ""
-    if real:
+        title = "Weekbriefing"
+        intro = "Eén editie per week over de zeven lagen. Elk punt is wat er gebeurde, plus één regel over waarom het ertoe doet."
+        empty = "De eerste briefing volgt binnenkort"
+    if docs:
         lis = []
-        for doc in real:
+        for doc in docs:
             name = doc["meta"].get(f"title_{lang}") or doc["meta"].get("title_en") or doc["slug"]
             when = fmt_date(doc["meta"]["date"], lang) if doc["meta"].get("date") else ""
             lis.append(
                 f'<li><a href="{url(lang, "briefing/" + doc["slug"] + "/")}"><strong>{esc(name)}</strong>'
                 f'<span>{esc(when)}</span></a></li>')
         cards = f'<ul class="brief-list">{"".join(lis)}</ul>'
+        signup = (f'<div class="brief-cta">{ml_bar(lang, "-a")}</div>{cards}'
+                  f'<div class="brief-cta">{ml_bar(lang, "-b")}</div>')
     else:
         cards = f'<p class="prom-empty">{esc(empty)}</p>'
-    sample_link = ""
-    if samples:
-        sample_link = (
-            f'<p><a href="{url(lang, "briefing/" + samples[0]["slug"] + "/")}">{esc(sample)}</a></p>')
-    top = f'<div class="brief-cta">{ml_bar(lang, "-a")}</div>'
-    end = f'<div class="brief-cta">{ml_bar(lang, "-b")}</div>'
+        signup = f'{cards}<div class="brief-cta">{ml_bar(lang)}</div>'
     return (
-        f'<article class="narrow"><h1>{esc(title)}</h1>'
-        f'<div class="prose"><p>{esc(intro)}</p></div>'
-        f'<div class="brief-layers">{tags}</div>{top}{cards}{sample_link}{end}</article>'), title, intro
+        f'<article class="narrow brief"><h1>{esc(title)}</h1>{signup}</article>'), title, intro
 
 
 def briefing_issue_body(doc, lang):
@@ -4760,7 +4755,7 @@ def briefing_issue_body(doc, lang):
     top = f'<div class="brief-cta">{ml_bar(lang, "-a")}</div>'
     end = f'<div class="brief-cta">{ml_bar(lang, "-b")}</div>'
     body = (
-        f'<article class="narrow"><h1>{esc(title)}</h1>{banner}'
+        f'<article class="narrow brief"><h1>{esc(title)}</h1>{banner}'
         f'<p class="byline"><a href="{url(lang, "editorial/")}">{esc(L["byline"])}</a></p>{dated}'
         f'<p class="lead">{esc(dek)}</p>{top}{"".join(sections)}{end}</article>')
     return body, title, dek or title
@@ -5238,6 +5233,8 @@ def build():
             lang, "briefing/", b_title, b_desc,
             shell(b_body, page_side(arts, lang, "static", signup=False)), active="briefing"))
         for doc in briefing_docs:
+            if doc.get("template"):
+                continue
             i_body, i_title, i_desc = briefing_issue_body(doc, lang)
             write(url(lang, f"briefing/{doc['slug']}/"), page(
                 lang, f"briefing/{doc['slug']}/", i_title, i_desc,

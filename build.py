@@ -661,7 +661,8 @@ article .prose{font-size:17px}article .prose,article .lead{max-width:860px}artic
 footer{border-top:1px solid var(--border);margin-top:14px;padding:15px 0 40px;font-size:.85rem;color:var(--dim)}
 footer .fbrand{margin:0;min-width:0}
 footer .fgrid{display:grid;grid-template-columns:minmax(168px,220px) repeat(5,minmax(max-content,1fr));column-gap:clamp(8px,1.35vw,22px);row-gap:16px;align-items:start}
-footer .fcols{display:contents}
+footer .fcols,footer .fstack{display:contents}
+footer .fcol.c1{grid-column:2}footer .fcol.c2{grid-column:3}footer .fcol.c3{grid-column:4}footer .fcol.c4{grid-column:5}footer .fcol.c5{grid-column:6}footer .fcol{grid-row:1}
 footer .fbrand p,footer .nform{max-width:none}
 footer details.fcol{min-width:0}
 footer summary.flabel{cursor:pointer}
@@ -676,8 +677,8 @@ footer .fbrand p{margin-top:12px;max-width:none;line-height:1.5}
 footer .fcopy{margin-top:32px;padding-top:18px;border-top:1px solid var(--border)}
 @media (max-width:1000.98px){.grid{grid-template-columns:repeat(2,1fr);gap:48px 40px}.leadside{grid-column:span 2;flex-direction:row}.leadside .card{flex:1}.tops{grid-template-columns:1fr}.arch{grid-template-columns:minmax(0,1fr);gap:36px}.why{grid-template-columns:repeat(2,1fr)}.models{grid-template-columns:repeat(4,1fr);gap:20px}}
 @media (max-width:860.98px){.search{display:none}.sbtn{display:grid}.sopen .search{display:flex;position:absolute;left:0;right:0;top:0;bottom:0;height:auto!important;width:auto!important;margin-left:0!important;max-width:none;z-index:41;padding:9px 12px;background:#161616;align-items:center}.sopen .search input,.sopen .search>button{height:38px}.sopen .search input{background:#121212}html.hass .bar .search{display:flex;position:relative;left:auto;right:auto;top:auto}html.hass .bar .sbtn{display:none}html.hass .bar .savedlink{margin-left:auto}html.hass .bar .search{margin-right:0;flex-shrink:0}html.hass .bar .brand{flex-shrink:0}html.hass .bar .savedlink{transform:none}.tip{flex-wrap:wrap;gap:14px 20px}.tip .btn{margin-left:0}}
-@media (max-width:860px){footer .fgrid{display:block}footer .fbrand{width:100%;margin-bottom:12px}footer .fcols{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));column-gap:clamp(8px,1.4vw,16px);width:100%}}
-@media (max-width:700px){footer .fcols{grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:16px;row-gap:16px}footer .flabel{margin-top:0;margin-bottom:8px}}
+@media (max-width:860px){footer .fgrid{display:block}footer .fbrand{width:100%;margin-bottom:12px}footer .fstack{display:contents}footer .fcols{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));column-gap:clamp(8px,1.4vw,16px);width:100%}footer .fcol.c1{grid-column:1}footer .fcol.c2{grid-column:2}footer .fcol.c3{grid-column:3}footer .fcol.c4{grid-column:4}footer .fcol.c5{grid-column:5}footer .fcol{grid-row:1}}
+@media (max-width:700px){footer .fcols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:16px;align-items:start;width:100%}footer .fstack{display:flex;flex-direction:column;gap:16px;min-width:0}footer .fcol.c1,footer .fcol.c2,footer .fcol.c3,footer .fcol.c4,footer .fcol.c5{grid-column:auto;grid-row:auto}footer .flabel{margin-top:0;margin-bottom:8px}}
 @media (max-width:600.98px){.wrap{padding:0 12px}
 .bar{gap:4px;height:56px}.drawer,.scrim{top:56px}.burger{margin-left:-14px}.logo{font-size:1.15rem}.brand{margin-left:2px}
 .sbtn{margin-left:auto;width:36px;height:36px;border:0;background:transparent}.savedlink{margin-left:-2px;width:34px;height:34px}.lang{margin-left:0;margin-right:-10px;font-size:.7rem;padding:3px 9px}
@@ -1029,9 +1030,10 @@ header.hb .pnav>.is-parked{display:none}
 .lcard .lim{display:block;aspect-ratio:16/9;background:#101010;overflow:hidden}
 .lcard .lim img{width:100%;height:100%;object-fit:cover}
 .lcard .lbody{display:flex;flex-direction:column;gap:4px;padding:4px 0 10px;min-width:0;flex:1}
-.lcard .lmeta,.vcard .lmeta,.shc .lmeta{display:flex;flex-wrap:wrap;gap:4px 6px;align-items:baseline;padding:8px 0 0;font-size:.68rem;font-weight:700;line-height:1.3;color:var(--dim)}
-.lcard .lname,.vcard .lname,.shc .lname{font-size:.68rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--blue)}
+.lmeta{display:flex;flex-wrap:wrap;gap:4px 6px;align-items:baseline;padding:8px 0 0;font-size:.68rem;font-weight:700;line-height:1.3;color:var(--dim)}
+.lname{font-size:.68rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--blue)}
 .lcard.empty .lmeta,.lcard.empty .lbody{padding-left:10px;padding-right:10px}
+.lcard .lname,.vcard .lname,.shc .lname,.card .lname,.mini .lname,.leadstory .lname{color:var(--blue)}
 .lcard strong{font-size:.92rem;line-height:1.28;font-weight:800;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden}
 .leadstory .ltitle{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden}
 .lcard.tesla{border-top-color:#E31937}
@@ -1804,10 +1806,14 @@ def page(lang, path, title, description, body, og_type="website", extra_head="",
         (foot_heads[3], about_col),
         (foot_heads[4], legal),
     )
-    fsections = "".join(
-        f'<details class="fcol" open><summary class="flabel">{esc(title)}</summary>'
+    fbits = [
+        f'<details class="fcol c{i}" open><summary class="flabel">{esc(title)}</summary>'
         f'<div class="flist">{html}</div></details>'
-        for title, html in foot_cols)
+        for i, (title, html) in enumerate(foot_cols, 1)]
+    # Left stack is the odd sections, right stack the even ones, so a short
+    # column does not wait for the taller neighbour.
+    fsections = (f'<div class="fstack">{fbits[0]}{fbits[2]}{fbits[4]}</div>'
+                 f'<div class="fstack">{fbits[1]}{fbits[3]}</div>')
     cats = " · ".join(f'<a href="{url(lang, "category/" + k + "/")}">{c[lang]}</a>' for k, c in CATEGORIES.items() if c["menu"])
     mods = " · ".join(f'<a href="{url(lang, "model/" + k + "/")}">{m["name"]}</a>' for k, m in MODELS.items() if not m.get("parent") or k in MODEL_STRIP)
     search = (f'<form class="search hb-search" role="search" action="{url(lang)}" '
@@ -2246,7 +2252,7 @@ function load(){return idx?Promise.resolve(idx):fetch(f.dataset.idx).then(functi
 i.addEventListener('focus',load);
 i.addEventListener('input',function(){var q=i.value.trim().toLowerCase();if(q.length<2){r.hidden=true;return}
 load().then(function(){var w=q.split(/\s+/),h=idx.filter(function(a){var s=(a.t+' '+a.d+' '+a.c).toLowerCase();return w.every(function(x){return s.indexOf(x)>-1})}).slice(0,8);
-r.innerHTML=h.length?h.map(function(a){return '<a href="'+a.u+'"><img src="'+a.i+'" alt="'+e(a.t)+'" width="160" height="84" decoding="async"><span><b>'+e(a.t)+'</b><small>'+e(a.c)+' · '+e(a.dt)+'</small></span></a>'}).join(''):'<p>'+e(f.dataset.none)+'</p>';r.hidden=false;window.ttFit=function(){[].forEach.call(document.querySelectorAll('.res a'),function(x){var im=x.querySelector('img'),t=x.querySelector('span');if(!im||!t)return;var m=(x.clientWidth-12)/2;im.style.width=m+'px';var h=t.offsetHeight,w=h*1200/630;if(w>m){w=m;h=w*630/1200}im.style.width=w+'px';im.style.height=h+'px'})};ttFit();if(!window.ttR){window.ttR=1;addEventListener('resize',function(){window.ttFit()})}})});
+r.innerHTML=h.length?h.map(function(a){return '<a href="'+a.u+'"><img src="'+a.i+'" alt="'+e(a.t)+'" width="160" height="84" decoding="async"><span><span class="lmeta"><span class="lname">'+e(a.k||'')+'</span> · <time class="ago" datetime="'+a.ts+'">'+e(a.dt)+'</time></span><b>'+e(a.t)+'</b></span></a>'}).join(''):'<p>'+e(f.dataset.none)+'</p>';r.hidden=false;window.ttFit=function(){[].forEach.call(document.querySelectorAll('.res a'),function(x){var im=x.querySelector('img'),t=x.querySelector('span');if(!im||!t)return;var m=(x.clientWidth-12)/2;im.style.width=m+'px';var h=t.offsetHeight,w=h*1200/630;if(w>m){w=m;h=w*630/1200}im.style.width=w+'px';im.style.height=h+'px'})};ttFit();if(!window.ttR){window.ttR=1;addEventListener('resize',function(){window.ttFit()})}})});
 f.addEventListener('submit',function(x){x.preventDefault();var a=r.querySelector('a');if(a)location.href=a.href});
 document.addEventListener('click',function(x){if(!f.contains(x.target)&&!x.target.closest('.sbtn')){r.hidden=true;d.classList.remove('sopen');if(d.classList.contains('find-open'))setFind(false)}});
 document.querySelector('.sbtn').addEventListener('click',function(ev){ev.stopPropagation();var open=!d.classList.contains('find-open');setFind(open,{restore:!open})});
@@ -2271,7 +2277,7 @@ fetch('/api/likes?s='+lb.map(function(b){return b.dataset.like}).join(',')).then
 lb.forEach(function(b){var s=b.dataset.like;b.setAttribute('aria-pressed',liked.indexOf(s)>-1);b.onclick=function(){var l=LS.get('tt_liked'),i=l.indexOf(s),d=i>-1?-1:1;if(d>0)l.push(s);else l.splice(i,1);LS.set('tt_liked',l);b.setAttribute('aria-pressed',d>0);
 var sp=b.querySelector('span');sp.textContent=Math.max(0,(+sp.textContent||0)+d);fetch('/api/likes',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({slug:s,d:d})}).then(function(r){return r.json()}).then(function(j){if(j.n!=null)sp.textContent=j.n}).catch(function(){})}})}
 var sl=document.querySelector('.savedlist');if(sl){var keep=LS.get('tt_saved');if(!keep.length){sl.innerHTML='<p class="empty">'+e(sl.dataset.empty)+'</p>'}else{load().then(function(){var m={};idx.forEach(function(a){var k=a.u.replace(/\/$/,'').split('/').pop();m[k]=a});
-sl.innerHTML=keep.filter(function(k){return m[k]}).map(function(k){var a=m[k];return '<a class="card" href="'+a.u+'"><div class="im"><img src="'+a.i+'" alt="'+e(a.t)+'" width="1200" height="630" decoding="async"></div><div class="body"><h3>'+e(a.t)+'</h3><p>'+e(a.d)+'</p><span class="meta">'+'<time class="ago" datetime="'+a.ts+'">'+e(a.dt)+'</time></span></div></a>'}).join('');ttAgo()})}}window.addEventListener('resize',bal);bal();
+sl.innerHTML=keep.filter(function(k){return m[k]}).map(function(k){var a=m[k];return '<a class="card" href="'+a.u+'"><div class="im"><img src="'+a.i+'" alt="'+e(a.t)+'" width="1200" height="630" decoding="async"></div><div class="body"><span class="lmeta"><span class="lname">'+e(a.k||'')+'</span> · <time class="ago" datetime="'+a.ts+'">'+e(a.dt)+'</time></span><h3>'+e(a.t)+'</h3><p>'+e(a.d)+'</p></div></a>'}).join('');ttAgo()})}}window.addEventListener('resize',bal);bal();
 })();"""
 JS += r"""
 document.querySelectorAll(".avb[data-vid]").forEach(function(b){b.addEventListener("click",function(){if(b.classList.contains("on"))return;b.classList.add("on");var f=document.createElement("iframe");f.src="https://www.youtube-nocookie.com/embed/"+b.dataset.vid+"?autoplay=1"+(matchMedia("(pointer:coarse)").matches?"":"&playsinline=1")+"&rel=0";f.title=b.getAttribute("aria-label")||"YouTube";f.setAttribute("allow","autoplay; encrypted-media; picture-in-picture; fullscreen");f.allowFullscreen=true;b.appendChild(f)})});
@@ -2339,7 +2345,7 @@ def card(a, lang, lead=False):
     cls = "card lead" if lead else "card"
     return (f'<a class="{cls}" href="{url(lang, a["slug"] + "/")}">'
             f'<div class="im">{resp_img(site_img(a), t["title"], SIZES_CARD)}{dur(a, lang)}{ovl(a, lang)}</div>'
-            f'<div class="body">{label(a, lang)} <span class="meta">· {when(a, lang)}</span>'
+            f'<div class="body">{rubric_line(a, lang)}'
             f'<h3>{esc(card_title(a, lang))}</h3><p>{esc(t["description"])}</p></div></a>')
 
 
@@ -2348,8 +2354,8 @@ def gcard(a, lang, eager=False):
     t = a[lang]
     return (f'<a class="card" href="{url(lang, a["slug"] + "/")}">'
             f'<div class="im">{resp_img(site_img(a), t["title"], SIZES_GRID, high=eager, lazy=not eager)}{dur(a, lang)}{ovl(a, lang)}</div>'
-            f'<div class="body"><h2>{esc(card_title(a, lang))}</h2><p>{esc(t["description"])}</p>'
-            f'<span class="meta">{when(a, lang)}</span></div></a>')
+            f'<div class="body">{rubric_line(a, lang)}'
+            f'<h2>{esc(card_title(a, lang))}</h2><p>{esc(t["description"])}</p></div></a>')
 
 
 def split2(t):
@@ -2448,7 +2454,7 @@ def mini(a, lang):
     t = a[lang]
     return (f'<a class="mini" href="{url(lang, a["slug"] + "/")}">'
             f'<div class="th">{resp_img(site_img(a), t["title"], SIZES_CARD)}{dur(a, lang)}{ovl(a, lang)}</div>'
-            f'<div><h3>{esc(card_title(a, lang))}</h3><p class="mdesc">{esc(t["description"])}</p><span class="meta">{when(a, lang)}</span></div></a>')
+            f'<div>{rubric_line(a, lang)}<h3>{esc(card_title(a, lang))}</h3><p class="mdesc">{esc(t["description"])}</p></div></a>')
 
 
 def grid(items, lang, lead=False):
@@ -3485,15 +3491,13 @@ def home_lead(a, lang, title_tag="h1"):
     """Featured story: photo, headline, excerpt. The full article stays on its own page."""
     L = LANGS[lang]
     t = a[lang]
-    section, section_href = topic_meta(a, lang)
     href = url(lang, a["slug"] + "/")
     tag = "h1" if title_tag == "h1" else "h2"
     return (f'<article class="leadstory">'
             f'<a class="leadim" href="{href}">'
             f'{resp_img(site_img(a), t["title"], SIZES_LEAD, high=True, lazy=False, width=1600, height=900)}</a>'
             f'<div>'
-            f'<p class="meta smeta"><a class="tag" href="{url(lang, section_href)}">{esc(section)}</a>'
-            f' · {when(a, lang)} · {read_time(a, lang)} {L["min"]}</p>'
+            f'{rubric_line(a, lang)}'
             f'<{tag} class="ltitle"><a href="{href}">{esc(card_title(a, lang))}</a></{tag}>'
             f'<p class="lead">{esc(t["description"])}</p>'
             f'<a class="btn" href="{href}">{esc(L["read_story"])}</a></div></article>')
@@ -3792,9 +3796,10 @@ def pv_row(a, lang, thumb=False):
     mins = read_time(a, lang)
     label = f'{mins} {LANGS[lang]["min"]}'
     shown = card_title(a, lang)
+    rubric = rubric_line(a, lang) if thumb else ""
     return (f'<a class="pv-row{" hasth" if thumb else ""}" href="{href}" title="{esc(t["title"])}">'
             f'<time datetime="{published(a).isoformat()}">{published(a).strftime("%H:%M")}</time>{im}'
-            f'<span class="pv-hl"><b>{esc(shown)}</b></span>'
+            f'<span class="pv-hl">{rubric}<b>{esc(shown)}</b></span>'
             f'<span class="pv-min" title="{esc(label)}"><b>{mins}</b><small>min</small></span></a>')
 
 
@@ -3813,7 +3818,8 @@ def pv_side(arts, lang, a=None):
     start = sorted((x for x in arts if x["category"] == "guides"), key=lambda x: words(x, "en"), reverse=True)[:6]
     guides = "".join(
         f'<a class="pv-guide" href="{url(lang, x["slug"] + "/")}">'
-        f'{resp_img(site_img(x), "", "72px", width=144, height=81)}<span>{esc(x[lang]["title"])}</span></a>'
+        f'{resp_img(site_img(x), "", "72px", width=144, height=81)}'
+        f'<span>{rubric_line(x, lang)}<span>{esc(x[lang]["title"])}</span></span></a>'
         for x in start[:3])
     numbered = "".join(
         f'<li><a href="{url(lang, x["slug"] + "/")}">{esc(x[lang]["title"])}</a></li>' for x in start)
@@ -5600,6 +5606,7 @@ def build():
                        image=social_img(a, lang), active=a["category"]))
 
         idx = [{"u": url(lang, x["slug"] + "/"), "t": x[lang]["title"], "d": x[lang]["description"],
+                "k": layer_name(x, lang),
                 "c": CATEGORIES[x["category"]].get("tag", CATEGORIES[x["category"]][lang]), "dt": fmt_date(x["date"], lang), "ts": published(x).isoformat(), "i": site_img(x)} for x in arts]
         (OUT / f"search-{lang}.json").write_text(json.dumps(idx, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
 
@@ -5648,10 +5655,24 @@ def build():
             cap = (f'<a class="sht" href="{url(lang, a["slug"] + "/")}">{esc(card_title(a, lang) if a else t)}</a>' if a else f'<span class="sht">{esc(t)}</span>')
             tone = layer_tone(a) if a else ""
             stamp = when(a, lang) if a else f'<time class="ago" datetime="{esc(dt)}">{fmt_date(dt[:10], lang)}</time>'
+            line = rubric_line(a, lang, stamp)
+            if not a:
+                guess = t.lower()
+                if "starlink" in guess:
+                    name = "Starlink"
+                elif "spacex" in guess or "starship" in guess or "falcon" in guess:
+                    name = "SpaceX"
+                elif "neuralink" in guess:
+                    name = "Neuralink"
+                elif "boring" in guess:
+                    name = "Boring Co"
+                else:
+                    name = "Tesla"
+                line = f'<span class="lmeta"><span class="lname">{esc(name)}</span> · {stamp}</span>'
             cards += (f'<div class="shc {tone}"><button class="shv" type="button" data-id="{esc(sh["id"])}" aria-label="{"Play" if en else "Afspelen"}: {esc(t)}">'
                       f'<img src="https://i.ytimg.com/vi/{esc(sh["id"])}/hqdefault.jpg" alt="{esc(t)}" loading="lazy" width="480" height="360">'
                       f'<span class="shp" aria-hidden="true"></span></button>'
-                      f'{rubric_line(a, lang, stamp)}{cap}</div>')
+                      f'{line}{cap}</div>')
         intro = ("Tesla news in under a minute. New Shorts appear here as soon as they are live on YouTube."
                  if en else "Tesla-nieuws in minder dan een minuut. Nieuwe Shorts verschijnen hier zodra ze live staan op YouTube.")
         empty = "No Shorts yet, check back soon." if en else "Nog geen Shorts, kijk binnenkort nog eens."

@@ -927,8 +927,7 @@ header.hb .pnav>.is-parked{display:none}
 .pv-th{position:relative;container-type:inline-size;border-radius:6px;overflow:hidden;border:1px solid var(--edge);background:#000}
 .pv-th img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
 .pv-hl{min-width:0}
-.pv-hl b{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:.95rem;line-height:1.2;font-weight:400;color:var(--blue)}
-@media (max-width:700px){.pv-hl b{white-space:normal;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;line-height:1.3}}
+.pv-hl b{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;white-space:normal;font-size:.95rem;line-height:1.3;font-weight:400;color:var(--blue)}
 .pv-min{justify-self:end;min-width:42px;text-align:center;border:1px solid var(--border2);border-radius:8px;padding:1px 0;line-height:1}
 .pv-min b{display:block;color:var(--red);font-size:.85rem;line-height:1}
 .pv-min small{display:block;color:var(--dim);font-size:.58rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;line-height:1}
@@ -1142,6 +1141,16 @@ a.eco-node.link:hover,a.eco-node.link:focus-visible,a.eco-node.boring:hover,a.ec
 .eco-node .eco-k{font-size:.78rem}
 .eco-node li{font-size:.62rem;line-height:1.2}
 .eco-core{font-size:.84rem}
+}
+/* Narrow screens: stack the boxes in normal flow so a taller wrap can never overlap the next box. */
+@media (max-width:700px){
+.eco-orbit{aspect-ratio:auto!important;height:auto!important;overflow:hidden}
+.eco-arc{position:relative!important;inset:auto!important;display:flex;flex-direction:column;gap:12px;margin:12px 0 12px 76px;width:min(170px,calc(100% - 88px));z-index:2}
+.eco-node{position:relative!important;left:auto!important;top:auto!important;right:auto!important;bottom:auto!important;transform:none!important;width:100%!important;max-width:170px}
+.eco-node::before{content:"";position:absolute;top:50%;right:100%;width:12px;border-top:1.6px solid rgba(198,240,255,.9);pointer-events:none}
+.eco-sun{top:12px!important;bottom:12px!important;left:64px!important;width:auto!important;height:auto!important;aspect-ratio:1;transform:translateX(-100%)!important;margin:0}
+.eco-rays{display:none!important}
+.eco-core{left:2px!important;width:58px!important;font-size:.72rem!important}
 }
 @media (min-width:1100px){header.hb .id{gap:55px}}
 @media (min-width:900px){

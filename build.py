@@ -510,6 +510,13 @@ h1,h2,h3{color:#ebebeb;font-weight:800}
 .dmeer-sub a{display:block;padding:7px 10px;border-radius:8px;color:var(--muted);text-decoration:none;font-weight:700;font-size:.88rem}
 .dmeer-sub a:hover{background:#272727;color:#fff}
 .dmeer-sub a.on{background:#ebebeb;color:#111}
+.dtesla{display:flex;flex-wrap:wrap;align-items:center}
+.dtesla>a.di{flex:1}
+.dtesla-btn{flex:none;width:36px;height:36px;border:0;border-radius:10px;background:transparent;color:var(--fg);cursor:pointer}
+.dtesla-sub{flex-basis:100%;display:flex;flex-direction:column;gap:1px;padding:2px 0 8px 10px}
+.dtesla-sub[hidden]{display:none}
+.dtesla-sub a{display:block;padding:7px 10px;border-radius:8px;color:var(--muted);text-decoration:none;font-weight:700;font-size:.88rem}
+.dtesla-sub a:hover{background:#272727;color:#fff}
 .drawer .di:hover{background:var(--surface2);color:var(--head)}
 .drawer .di.on{background:var(--surface2);color:var(--head);font-weight:800}
 .drawer .di img,.drawer .di i{width:56px;aspect-ratio:1200/630;object-fit:cover;border-radius:10px;border:1px solid var(--edge);flex:none;background:var(--surface)}
@@ -651,7 +658,13 @@ article .prose{font-size:17px}article .prose,article .lead{max-width:860px}artic
 .sources a{color:var(--muted)}
 /* footer */
 footer{border-top:1px solid var(--border);margin-top:14px;padding:15px 0 40px;font-size:.85rem;color:var(--dim)}
-footer .fgrid{display:grid;grid-template-columns:1.4fr 1.3fr 1.3fr .8fr;gap:40px}
+footer .fbrand{margin-bottom:22px}
+footer .fgrid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:22px 18px}
+footer details.fcol{min-width:0}
+footer summary.flabel{cursor:pointer}
+footer summary.flabel::-webkit-details-marker{display:none}
+footer a.tone-tesla{color:#ff8a9b}footer a.tone-energy{color:#b8ffc6}footer a.tone-spacex{color:#ffc48a}footer a.tone-link{color:#a6f4ff}footer a.tone-spacexsi{color:#ffe28a}footer a.tone-neural{color:#ffb3d6}footer a.tone-boring{color:#b3c8ff}
+@media (min-width:700px){footer summary.flabel{pointer-events:none}}
 footer a{color:var(--muted);text-decoration:none}
 footer a:hover{color:var(--head)}
 footer .flabel{font-size:.7rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:var(--blue);margin:6px 0 12px}
@@ -660,12 +673,12 @@ footer .fbrand p{margin-top:12px;max-width:340px;line-height:1.5}
 footer .fcopy{margin-top:32px;padding-top:18px;border-top:1px solid var(--border)}
 @media (max-width:1000.98px){.grid{grid-template-columns:repeat(2,1fr);gap:48px 40px}.leadside{grid-column:span 2;flex-direction:row}.leadside .card{flex:1}.tops{grid-template-columns:1fr}.arch{grid-template-columns:minmax(0,1fr);gap:36px}.why{grid-template-columns:repeat(2,1fr)}.models{grid-template-columns:repeat(4,1fr);gap:20px}}
 @media (max-width:860.98px){.search{display:none}.sbtn{display:grid}.sopen .search{display:flex;position:absolute;left:0;right:0;top:0;bottom:0;height:auto!important;width:auto!important;margin-left:0!important;max-width:none;z-index:41;padding:9px 12px;background:#161616;align-items:center}.sopen .search input,.sopen .search>button{height:38px}.sopen .search input{background:#121212}html.hass .bar .search{display:flex;position:relative;left:auto;right:auto;top:auto}html.hass .bar .sbtn{display:none}html.hass .bar .savedlink{margin-left:auto}html.hass .bar .search{margin-right:0;flex-shrink:0}html.hass .bar .brand{flex-shrink:0}html.hass .bar .savedlink{transform:none}.tip{flex-wrap:wrap;gap:14px 20px}.tip .btn{margin-left:0}}
-@media (max-width:860.98px){footer .fgrid{grid-template-columns:1fr 1fr;gap:28px}footer .fbrand{grid-column:1/-1}}
+@media (max-width:1100.98px){footer .fgrid{grid-template-columns:1fr 1fr;gap:22px 28px}}
 @media (max-width:600.98px){.wrap{padding:0 12px}
 .bar{gap:4px;height:56px}.drawer,.scrim{top:56px}.burger{margin-left:-14px}.logo{font-size:1.15rem}.brand{margin-left:2px}
 .sbtn{margin-left:auto;width:36px;height:36px;border:0;background:transparent}.savedlink{margin-left:-2px;width:34px;height:34px}.lang{margin-left:0;margin-right:-10px;font-size:.7rem;padding:3px 9px}
 .read .hi{margin:0 -12px 6px}.read .hi .hero-img{border-radius:0;border:0}.hi .dur{right:12px}
-article .st{font-size:1rem;line-height:1.25}.srow{flex-wrap:nowrap;gap:8px}.srow .acts{display:flex;gap:6px}.srow .smeta{flex:1 1 auto;min-width:0;overflow:hidden;text-overflow:ellipsis}.toc{float:none;width:auto;max-width:none;margin:0 0 0 14px}footer .fgrid{grid-template-columns:1fr;gap:24px}footer .fgrid>*{min-width:0}footer a{overflow-wrap:anywhere}.act{padding:7px 10px 6px}article .lead{font-size:1.02rem}.smeta{font-size:.82rem}
+article .st{font-size:1rem;line-height:1.25}.srow{flex-wrap:nowrap;gap:8px}.srow .acts{display:flex;gap:6px}.srow .smeta{flex:1 1 auto;min-width:0;overflow:hidden;text-overflow:ellipsis}.toc{float:none;width:auto;max-width:none;margin:0 0 0 14px}footer .fgrid{grid-template-columns:1fr 1fr;gap:18px 16px}footer .fgrid>*{min-width:0}footer a{overflow-wrap:anywhere}footer summary.flabel{pointer-events:auto}.act{padding:7px 10px 6px}article .lead{font-size:1.02rem}.smeta{font-size:.82rem}
 article .prose{font-size:16px}article .prose h2{font-size:1.08rem}.grid2{grid-template-columns:1fr;gap:59px}.grid2.gall{grid-template-columns:1fr;gap:40px}.gall>.card h2,.gall>.card h3{font-size:1rem}.gall>.card p{font-size:.9rem}.side{gap:29px}.grid2>.card{grid-template-columns:1fr;gap:0}.grid2>.card .im{height:auto;width:auto}.grid2>.card .im img{aspect-ratio:1200/630}.grid2>.card .body{padding:7px 0 0}.card.lead{grid-column:auto}.leadside{grid-column:auto;flex-direction:column;gap:40px}.leadside .card p{display:-webkit-box}.mini{grid-template-columns:1fr;gap:6px;height:auto}.mini>div{height:auto}.th{width:100%;height:auto}.mini img{width:100%;height:auto;aspect-ratio:1200/630}#news .h2{margin-top:16px}.grid{grid-template-columns:1fr;gap:40px}.why{grid-template-columns:1fr 1fr;gap:10px}.why div{padding:14px}.why p{font-size:.8rem}
  .models{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:0 -24px;padding:0 24px 4px}.models::-webkit-scrollbar{display:none}.models{gap:14px}.model{flex:0 0 46%;scroll-snap-align:start}
  body{font-size:16.5px}.h2{margin-top:20px}.hero{min-height:0}.hero .in{padding:26px 20px}.hero .btn{flex:1;white-space:nowrap;padding:11px 12px}
@@ -730,7 +743,25 @@ article.narrow > h1{margin-left:14px}article.narrow .cform{margin-left:14px}
 .pn.on,.pdrop.on>.pn,header.hb .mdrop>button.pn.on{background:#ebebeb;color:#111;border-radius:8px}
 .pdrop{position:relative;display:flex;align-items:center}
 .pmenu{display:none;position:absolute;top:calc(100% - 4px);left:0;min-width:210px;z-index:50;background:#161616;border:1px solid #3a4a60;border-radius:10px;padding:6px;box-shadow:0 12px 32px rgba(0,0,0,.55)}
-.pdrop:hover .pmenu,.pdrop:focus-within .pmenu{display:grid}
+.pdrop:hover .pmenu,.pdrop:focus-within .pmenu,.pdrop.is-open .pmenu{display:grid}
+.pdrop.tone-tesla{--accent:#e31937;--accent-ink:#ff8a9b}
+.pdrop.tone-energy{--accent:#4cd964;--accent-ink:#b8ffc6}
+.pdrop.tone-spacex{--accent:#ff7a00;--accent-ink:#ffc48a}
+.pdrop.tone-link{--accent:#00d1ff;--accent-ink:#a6f4ff}
+.pdrop.tone-spacexsi{--accent:#ffc400;--accent-ink:#ffe28a}
+.pdrop.tone-neural{--accent:#ff2d95;--accent-ink:#ffb3d6}
+.pdrop.tone-boring{--accent:#2f6bff;--accent-ink:#b3c8ff}
+.pdrop .pmenu{border-top:3px solid var(--accent,#00d1ff)}
+.pdrop:hover>a.pn,.pdrop:focus-within>a.pn,.pdrop.is-open>a.pn{color:var(--accent-ink,#fff)}
+.pmenu a.child{padding-left:26px;font-weight:650;color:#b7c0cc}
+.dlayer{margin:0 0 8px}
+.drawer a.tone-tesla{color:#ff8a9b}.drawer a.tone-energy{color:#b8ffc6}.drawer a.tone-spacex{color:#ffc48a}.drawer a.tone-link{color:#a6f4ff}.drawer a.tone-spacexsi{color:#ffe28a}.drawer a.tone-neural{color:#ffb3d6}.drawer a.tone-boring{color:#b3c8ff}
+.dsub{display:flex;flex-direction:column;gap:1px;padding:2px 0 4px 12px}
+.dsub a{display:block;padding:6px 10px;border-radius:8px;color:var(--muted);text-decoration:none;font-weight:700;font-size:.86rem}
+.dsub a.child{padding-left:22px;font-weight:650;font-size:.82rem}
+.dsub a:hover{background:#272727;color:#fff}
+.dsub a.on{background:#ebebeb;color:#111}
+.drawer a.dmap{margin-top:8px;border-top:1px solid #2a2a2a;padding-top:12px}
 .pdrop:last-child .pmenu{left:auto;right:0}
 .pmenu a{padding:8px 12px;border-radius:8px;color:#ebebeb;text-decoration:none;font-size:.86rem;font-weight:700;white-space:nowrap}
 .pmenu a:hover{background:#272727}
@@ -1147,14 +1178,13 @@ header.hb .pnav>.is-parked{display:none}
 .eco-node ul{margin:4px 0 0;padding:0 0 0 1.05em}
 .eco-node li{font-size:.68rem;line-height:1.22}
 a.eco-node{display:block;text-decoration:none;color:inherit}
-a.eco-node:hover,a.eco-node:focus-visible{border-color:var(--blue);box-shadow:0 0 0 2px var(--blue);outline:none}
-a.eco-node.link:hover,a.eco-node.link:focus-visible,a.eco-node.boring:hover,a.eco-node.boring:focus-visible{border-color:#fff;box-shadow:0 0 0 2px #fff}
+a.eco-node:hover,a.eco-node:focus-visible,.card:hover,.card:focus-visible,.eco-card:hover,.eco-card:focus-visible,.eco-co:hover,.eco-co:focus-visible{border-color:var(--blue);box-shadow:0 0 0 2px var(--blue),0 0 16px rgba(0,212,255,.35);outline:none}
 @media (max-width:560px){
 .eco-node .eco-k{font-size:.78rem}
 .eco-node li{font-size:.62rem;line-height:1.2}
 .eco-core{font-size:.84rem}
 }
-@media (min-width:1100px){header.hb .id{gap:55px}}
+@media (min-width:1100px){header.hb .id{gap:16px}}
 @media (min-width:900px){
 header.hb .pn,header.hb .mdrop>button.pn{font-size:14px;padding:6px 8px}
 }
@@ -1443,7 +1473,12 @@ def assign_photos(arts):
         recent_files = [h[0] for h in hist[-4:]] + [h[0] for h in local]
         recent_scenes = [h[1] for h in hist[-3:]] + [h[1] for h in local]
         own = f"/img/{a['image']}" if a.get("image") and (STATIC / "img" / a["image"]).exists() else None
-        pick = own if own and own not in recent_files else None
+        # image_lock keeps the photo the article names. Neighbour-avoidance must not
+        # swap in a Tesla or SpaceX picture for a different company's story.
+        if a.get("image_lock") and own:
+            pick = own
+        else:
+            pick = own if own and own not in recent_files else None
         if not pick and a.get("images"):
             # explicit images: keep their order (best first), only skip one that a neighbour just used
             exp = [c for c in photos if c.split("/img/", 1)[-1].replace("topics/", "") in a["images"]
@@ -1704,17 +1739,54 @@ def page(lang, path, title, description, body, og_type="website", extra_head="",
     menu = "".join(
         f'<a href="{url(lang, "category/" + k + "/")}"{" class=\"on\"" if k == active else ""}>{c[lang]}</a>'
         for k, c in CATEGORIES.items() if c["menu"])
-    fcats = "".join(
-        f'<a href="{url(lang, path)}">{esc(name)}</a>'
-        for name, path in (
-            (L["nav_eco"], ecosystem_path(lang)),
-            ("FSD", "fsd/"),
-            ("Robotaxi", "robotaxi/"),
-            ("Optimus", "optimus/"),
-            ("Starship" if lang == "en" else "Starship-tracker", "starship/"),
-            ("AGI-race", "agi/"),
-        )) + "".join(f'<a href="{url(lang, "category/" + k + "/")}">{c[lang]}</a>' for k, c in CATEGORIES.items() if c["menu"])
-    fmods = "".join(f'<a href="{url(lang, "model/" + k + "/")}">{MODELS[k]["name"]}</a>' for k in MODEL_ROOTS)
+    def flinks(rows):
+        return "".join(f'<a href="{url(lang, path)}">{esc(name)}</a>' for name, path in rows)
+
+    layers_html = "".join(
+        f'<a class="tone-{layer["tone"]}" href="{url(lang, layer["href"])}">{esc(layer["label"][lang])}</a>'
+        for layer in NAV_LAYERS)
+    explore = flinks([
+        (L["nav_eco"], ecosystem_path(lang)),
+        ("All news" if lang == "en" else "Al het nieuws", "category/news/"),
+        (L["videos"], "shorts/"),
+        ("Weekly briefing" if lang == "en" else "Weekbriefing", "briefing/"),
+        ("Promises" if lang == "en" else "Beloftes", promises_path(lang)),
+        (CATEGORIES["musk"][lang], "category/musk/"),
+        (CATEGORIES["earnings"][lang], "category/earnings/"),
+        (CATEGORIES["factories"][lang], "category/factories/"),
+        (CATEGORIES["software"][lang], "category/software/"),
+    ])
+    shop = flinks([
+        ("Buying guides" if lang == "en" else "Koopgidsen", guides_path(lang)),
+        (CATEGORIES["guides"][lang], "category/guides/"),
+    ])
+    about_col = flinks([
+        (L["about"], "about/"),
+        (L["editorial"], "editorial/"),
+        (L["signup"], signup_path(lang)),
+        ("Contact", "contact/"),
+        ("Advertise" if lang == "en" else "Adverteren", advertise_path(lang)),
+    ])
+    legal = flinks([
+        (L["privacy"], "privacy/"),
+        ("Terms" if lang == "en" else "Voorwaarden", "terms/"),
+        ("Affiliate disclosure" if lang == "en" else "Affiliate-melding", disclosure_path(lang)),
+    ])
+    foot_heads = {
+        "en": ("The 7 layers", "Explore", "Shop & guides", "TrendingTesla", "Legal"),
+        "nl": ("De 7 lagen", "Ontdekken", "Shop & gidsen", "TrendingTesla", "Juridisch"),
+    }[lang]
+    foot_cols = (
+        (foot_heads[0], layers_html),
+        (foot_heads[1], explore),
+        (foot_heads[2], shop),
+        (foot_heads[3], about_col),
+        (foot_heads[4], legal),
+    )
+    fsections = "".join(
+        f'<details class="fcol" open><summary class="flabel">{esc(title)}</summary>'
+        f'<div class="flist">{html}</div></details>'
+        for title, html in foot_cols)
     cats = " · ".join(f'<a href="{url(lang, "category/" + k + "/")}">{c[lang]}</a>' for k, c in CATEGORIES.items() if c["menu"])
     mods = " · ".join(f'<a href="{url(lang, "model/" + k + "/")}">{m["name"]}</a>' for k, m in MODELS.items() if not m.get("parent") or k in MODEL_STRIP)
     search = (f'<form class="search hb-search" role="search" action="{url(lang)}" '
@@ -1773,12 +1845,11 @@ def page(lang, path, title, description, body, og_type="website", extra_head="",
 <main class="wrap">
 {body}
 </main>
-<footer><div class="wrap"><div class="fgrid">
+<footer><div class="wrap">
 <div class="fbrand"><a class="logo" href="{url(lang)}">Trending<span>Tesla</span></a><p>{L['tagline']} {L['disclaimer']}</p>{newsletter(lang, "foot")}</div>
-<div><p class="flabel">{L['d_topics']}</p><div class="flist two">{fcats}</div></div>
-<div><p class="flabel">{L['d_models']}</p><div class="flist">{fmods}</div></div>
-<div><p class="flabel">{L['d_more']}</p><div class="flist"><a href="{url(lang, 'briefing/')}">{'Weekly briefing' if lang == 'en' else 'Weekbriefing'}</a><a href="{url(lang, promises_path(lang))}">{'Promises' if lang == 'en' else 'Beloftes'}</a><a href="{url(lang, guides_path(lang))}">{'Buying guides' if lang == 'en' else 'Koopgidsen'}</a><a href="{url(lang, advertise_path(lang))}">{'Advertise' if lang == 'en' else 'Adverteren'}</a><a href="{url(lang, disclosure_path(lang))}">{'Affiliate disclosure' if lang == 'en' else 'Affiliate-melding'}</a><a href="{url(lang, 'archive/')}">{L['archive']}</a><a href="{url(lang, 'about/')}">{L['about']}</a><a href="{url(lang, 'editorial/')}">{L['editorial']}</a><a href="{url(lang, 'privacy/')}">{L['privacy']}</a><a href="{news_href}">{L['signup']}</a><a href="{url(lang, 'contact/')}">Contact</a><a href="{url(lang, 'terms/')}">{'Terms' if lang == 'en' else 'Voorwaarden'}</a><a href="{url(lang, 'shorts/')}">{L['videos']}</a><a href="https://www.youtube.com/@TrendingTesla" rel="noopener" target="_blank">YouTube</a><button type="button" class="flink" data-consent-open>{L['cookie']}</button><a href="{url(lang, 'feed.xml')}">RSS</a><a href="{url(alt, switch)}">{L['switch_full']}</a></div></div>
-</div><p class="fcopy">&copy; {datetime.now().year} {NAME}</p></div></footer>
+<div class="fgrid">{fsections}</div>
+<p class="fcopy">&copy; {datetime.now().year} {NAME} · <a href="https://www.youtube.com/@TrendingTesla" rel="noopener" target="_blank">YouTube</a> · <button type="button" class="flink" data-consent-open>{L['cookie']}</button> · <a href="{url(lang, 'feed.xml')}">RSS</a> · <a href="{url(alt, switch)}">{L['switch_full']}</a></p>
+</div></footer>
 {consent_bar(lang)}
 <script>{JS}</script>
 </body>
@@ -2190,28 +2261,33 @@ document.querySelectorAll(".avb[data-vid]").forEach(function(b){b.addEventListen
 
 
 JS += r"""
-(function(){var nav=document.querySelector("header.hb .pnav"),menu=document.getElementById("more-menu"),more=document.querySelector("header.hb .mdrop");if(!nav||!menu||!more)return;var items=[].filter.call(nav.children,function(el){return el!==more}),base=menu.innerHTML,parked=[];function restore(){items.forEach(function(el){el.classList.remove("is-parked");nav.insertBefore(el,more)});parked=[];menu.innerHTML=base}function tight(){var tools=document.querySelector("header.hb .sbtn")||document.querySelector("header.hb .savedlink");if(!tools)return false;return more.getBoundingClientRect().right>tools.getBoundingClientRect().left-8}function fit(){restore();if(getComputedStyle(nav).display==="none")return;var guard=0;while(tight()&&guard++<8){var el=null;for(var i=items.length-1;i>=0;i--){if(!items[i].classList.contains("is-parked")){el=items[i];break}}if(!el)break;el.classList.add("is-parked");parked.push(el);var a=el.matches("a")?el:el.querySelector("a.pn");if(!a)continue;var link=document.createElement("a");link.href=a.getAttribute("href");link.textContent=a.textContent.trim();link.setAttribute("role","menuitem");menu.insertBefore(link,menu.firstChild)}}fit();var wait;addEventListener("resize",function(){clearTimeout(wait);wait=setTimeout(fit,80)});if(document.fonts)document.fonts.ready.then(fit)})();
-(function(){var b=document.getElementById("more-btn"),m=document.getElementById("more-menu");if(!b||!m)return;function set(o){b.setAttribute("aria-expanded",o?"true":"false");m.hidden=!o;b.parentNode.classList.toggle("is-open",o)}b.addEventListener("click",function(e){e.stopPropagation();set(m.hidden)});b.addEventListener("keydown",function(e){if(e.key==="ArrowDown"){e.preventDefault();set(true);var a=m.querySelector("a");if(a)a.focus()}});document.addEventListener("click",function(e){if(!b.parentNode.contains(e.target))set(false)});document.addEventListener("keydown",function(e){if(e.key==="Escape"){set(false);if(b.parentNode.contains(document.activeElement))b.focus()}})})();
+(function(){function shut(except){document.querySelectorAll("header.hb .pdrop.is-open").forEach(function(drop){if(drop===except)return;drop.classList.remove("is-open");var a=drop.querySelector("a.pn");if(a)a.setAttribute("aria-expanded","false")})}document.querySelectorAll("header.hb .pdrop").forEach(function(drop){var link=drop.querySelector("a.pn");if(!link)return;link.addEventListener("click",function(e){if(!matchMedia("(pointer:coarse)").matches)return;if(!drop.classList.contains("is-open")){e.preventDefault();shut(drop);drop.classList.add("is-open");link.setAttribute("aria-expanded","true")}})});document.addEventListener("click",function(e){if(!e.target.closest||!e.target.closest("header.hb .pdrop"))shut(null)});document.addEventListener("keydown",function(e){if(e.key==="Escape")shut(null)})})();
 """
 
 TOPIC_LABEL = {
-    "cars": {"en": "Cars", "nl": "Auto's", "href": "tesla/"},
-    "semi": {"en": "Semi", "nl": "Semi", "href": "tesla/"},
+    "cars": {"en": "Cars", "nl": "Auto's", "href": "cars/"},
+    "semi": {"en": "Semi", "nl": "Semi", "href": "semi/"},
     "robotaxi": {"en": "Robotaxi", "nl": "Robotaxi", "href": "robotaxi/"},
     "fsd": {"en": "FSD", "nl": "FSD", "href": "fsd/"},
     "optimus": {"en": "Optimus", "nl": "Optimus", "href": "optimus/"},
-    "megapack": {"en": "Megapack", "nl": "Megapack", "href": "tesla-energy/"},
-    "charging": {"en": "Charging", "nl": "Laden", "href": "tesla-energy/"},
-    "solar": {"en": "Solar", "nl": "Zon", "href": "tesla-energy/"},
+    "megapack": {"en": "Megapack", "nl": "Megapack", "href": "megapacks/"},
+    "charging": {"en": "Charging", "nl": "Laden", "href": "charging-network/"},
+    "charging-network": {"en": "Charging", "nl": "Laden", "href": "charging-network/"},
+    "home-charging": {"en": "Home charging", "nl": "Thuisladen", "href": "home-charging/"},
+    "solar": {"en": "Solar", "nl": "Zon", "href": "solar/"},
     "powerwall": {"en": "Powerwall", "nl": "Powerwall", "href": "tesla-energy/"},
     "energy": {"en": "Energy", "nl": "Energie", "href": "tesla-energy/"},
-    "starship": {"en": "Starship", "nl": "Starship", "href": "spacex/"},
-    "falcon": {"en": "Falcon", "nl": "Falcon", "href": "spacex/"},
+    "starship": {"en": "Starship", "nl": "Starship", "href": "starship-vehicle/"},
+    "falcon": {"en": "Falcon", "nl": "Falcon", "href": "falcons/"},
     "spacex": {"en": "SpaceX", "nl": "SpaceX", "href": "spacex/"},
-    "starlink": {"en": "Starlink", "nl": "Starlink", "href": "starlink/"},
+    "starlink": {"en": "Starlink", "nl": "Starlink", "href": "satellite-network/"},
+    "ai": {"en": "AI", "nl": "AI", "href": "ai/"},
+    "ai-compute": {"en": "Compute", "nl": "Rekenkracht", "href": "ai-compute/"},
+    "datacenters": {"en": "Datacenters", "nl": "Datacenters", "href": "datacenters/"},
+    "chips": {"en": "Chips", "nl": "Chips", "href": "chips/"},
     "spacexsi": {"en": "SpaceXSI", "nl": "SpaceXSI", "href": "spacexsi/"},
-    "neuralink": {"en": "Neuralink", "nl": "Neuralink", "href": "neuralink/"},
-    "boring": {"en": "Boring", "nl": "Boring", "href": "boring/"},
+    "neuralink": {"en": "Neuralink", "nl": "Neuralink", "href": "brain-interfaces/"},
+    "boring": {"en": "Boring", "nl": "Boring", "href": "car-tunnels/"},
     "agi": {"en": "AGI", "nl": "AGI", "href": "agi/"},
     "ecosystem": {"en": "Ecosystem", "nl": "Ecosysteem", "href": "ecosystem/"},
 }
@@ -2483,6 +2559,18 @@ def related_block(a, arts, lang):
 MONEY = {}
 SHORTS = {}
 PRIMARY_CATS = {"models", "fsd", "robotaxi", "optimus", "spacex", "starlink", "xai", "boring"}
+# Category indexes that repeat a layer or sub-hub. The worker and public/_redirects send them on.
+REDIRECT_CATS = {
+    "charging": "charging-network/",
+    "energy": "tesla-energy/",
+    "fsd": "fsd/",
+    "robotaxi": "robotaxi/",
+    "optimus": "optimus/",
+    "spacex": "spacex/",
+    "starlink": "starlink/",
+    "boring": "boring/",
+    "xai": "spacexsi/",
+}
 AD_HEIGHT = {"after_intro": 280, "mid_article": 280, "end": 280, "sidebar": 600}
 # Slots stay out of the HTML until this is true, so the layout does not reserve empty space.
 # TT_ADS=1 is a local override for a placement screenshot. Do not set it in production.
@@ -2992,111 +3080,137 @@ def consent_bar(lang):
             f'</div></div>{show}')
 
 
+# Top nav is the seven map layers. The first item in each menu is the layer page.
+# child=True indents a page that belongs under the item above it.
+NAV_LAYERS = [
+    {
+        "key": "tesla", "tone": "tesla", "href": "tesla/",
+        "label": {"en": "Tesla", "nl": "Tesla"},
+        "items": [
+            {"key": "tesla", "href": "tesla/", "en": "Overview", "nl": "Overzicht", "overview": True},
+            {"key": "cars", "href": "cars/", "en": "Cars", "nl": "Auto's"},
+            {"key": "models", "href": "category/models/", "en": "Tesla models", "nl": "Tesla-modellen", "child": True},
+            {"key": "semi", "href": "semi/", "en": "Semi Truck", "nl": "Semi-truck"},
+            {"key": "robotaxi", "href": "robotaxi/", "en": "Robotaxi", "nl": "Robotaxi"},
+            {"key": "fsd", "href": "fsd/", "en": "FSD", "nl": "FSD"},
+            {"key": "optimus", "href": "optimus/", "en": "Optimus", "nl": "Optimus"},
+        ],
+    },
+    {
+        "key": "tesla-energy", "tone": "energy", "href": "tesla-energy/",
+        "label": {"en": "Tesla Energy", "nl": "Tesla Energy"},
+        "items": [
+            {"key": "tesla-energy", "href": "tesla-energy/", "en": "Overview", "nl": "Overzicht", "overview": True},
+            {"key": "megapacks", "href": "megapacks/", "en": "Megapacks", "nl": "Megapacks"},
+            {"key": "charging-network", "href": "charging-network/", "en": "Charging Network", "nl": "Laadnetwerk"},
+            {"key": "home-charging", "href": "home-charging/", "en": "Home charging stations", "nl": "Thuisladers"},
+            {"key": "solar", "href": "solar/", "en": "Solar", "nl": "Zonne-energie"},
+        ],
+    },
+    {
+        "key": "spacex", "tone": "spacex", "href": "spacex/",
+        "label": {"en": "SpaceX", "nl": "SpaceX"},
+        "items": [
+            {"key": "spacex", "href": "spacex/", "en": "Overview", "nl": "Overzicht", "overview": True},
+            {"key": "starship-vehicle", "href": "starship-vehicle/", "en": "Starship", "nl": "Starship"},
+            {"key": "starship", "href": "starship/", "en": "Starship tracker", "nl": "Starship-tracker", "child": True},
+            {"key": "falcons", "href": "falcons/", "en": "Falcons", "nl": "Falcons"},
+        ],
+    },
+    {
+        "key": "starlink", "tone": "link", "href": "starlink/",
+        "label": {"en": "Starlink", "nl": "Starlink"},
+        "items": [
+            {"key": "starlink", "href": "starlink/", "en": "Overview", "nl": "Overzicht", "overview": True},
+            {"key": "satellite-network", "href": "satellite-network/", "en": "Satellite network", "nl": "Satellietnetwerk"},
+        ],
+    },
+    {
+        "key": "spacexsi", "tone": "spacexsi", "href": "spacexsi/",
+        "label": {"en": "SpaceXSI", "nl": "SpaceXSI"},
+        "items": [
+            {"key": "spacexsi", "href": "spacexsi/", "en": "Overview", "nl": "Overzicht", "overview": True},
+            {"key": "ai", "href": "ai/", "en": "AI", "nl": "AI"},
+            {"key": "agi", "href": "agi/", "en": "AGI-race", "nl": "AGI-race", "child": True},
+            {"key": "ai-compute", "href": "ai-compute/", "en": "Compute", "nl": "Rekenkracht"},
+            {"key": "datacenters", "href": "datacenters/", "en": "Datacenters", "nl": "Datacenters"},
+            {"key": "chips", "href": "chips/", "en": "Chips", "nl": "Chips"},
+        ],
+    },
+    {
+        "key": "neuralink", "tone": "neural", "href": "neuralink/",
+        "label": {"en": "Neuralink", "nl": "Neuralink"},
+        "items": [
+            {"key": "neuralink", "href": "neuralink/", "en": "Overview", "nl": "Overzicht", "overview": True},
+            {"key": "brain-interfaces", "href": "brain-interfaces/", "en": "Brain-computer interfaces", "nl": "Brein-computerinterfaces"},
+        ],
+    },
+    {
+        "key": "boring", "tone": "boring", "href": "boring/",
+        "label": {"en": "The Boring Company", "nl": "The Boring Company"},
+        "items": [
+            {"key": "boring", "href": "boring/", "en": "Overview", "nl": "Overzicht", "overview": True},
+            {"key": "car-tunnels", "href": "car-tunnels/", "en": "Car tunnels", "nl": "Autotunnels"},
+        ],
+    },
+]
+
+_LAYER_FOR = {}
+for _layer in NAV_LAYERS:
+    for _item in _layer["items"]:
+        _LAYER_FOR[_item["key"]] = _layer["key"]
+
+
 def nav_current(active):
-    if active in ("tesla", "models", "fsd", "optimus", "cars-robots"):
-        return "tesla"
-    if active in ("tesla-energy", "energy"):
-        return "tesla-energy"
-    if active in ("spacex", "starship", "starship-falcon"):
-        return "spacex"
-    if active == "starlink":
-        return "starlink"
-    if active in ("spacexsi", "xai", "compute"):
-        return "spacexsi"
-    if active == "neuralink":
-        return "neuralink"
-    if active == "boring":
-        return "boring"
-    return ""
+    return _LAYER_FOR.get(active or "", "")
 
 
 def _nav_rows(lang):
-    return [
-        ("tesla", "tesla/", "Tesla"),
-        ("tesla-energy", "tesla-energy/", "Tesla Energy"),
-        ("spacex", "spacex/", "SpaceX"),
-        ("starlink", "starlink/", "Starlink"),
-        ("spacexsi", "spacexsi/", "SpaceXSI"),
-        ("neuralink", "neuralink/", "Neuralink"),
-        ("boring", "boring/", "Boring"),
-    ]
+    return [(layer["key"], layer["href"], layer["label"][lang]) for layer in NAV_LAYERS]
 
 
-def more_rows(lang):
-    """Pages that live under Meer / More, with the key page() passes as active."""
-    L = LANGS[lang]
-    rows = [
-        ("ecosystem", ecosystem_path(lang), L["nav_eco"]),
-        ("starship", "starship/", "Starship tracker" if lang == "en" else "Starship-tracker"),
-        ("fsd", "fsd/", "FSD"),
-        ("robotaxi", "robotaxi/", "Robotaxi"),
-        ("optimus", "optimus/", "Optimus"),
-        ("agi", "agi/", "AGI-race"),
-        ("models", "category/models/", L["nav_models"]),
-        ("videos", "shorts/", L["videos"]),
-        ("briefing", "briefing/", "Weekly briefing" if lang == "en" else "Weekbriefing"),
-        ("promises", promises_path(lang), "Promises" if lang == "en" else "Beloftes"),
-        ("buyguides", guides_path(lang), "Buying guides" if lang == "en" else "Koopgidsen"),
-        ("advertise", advertise_path(lang), "Advertise" if lang == "en" else "Adverteren"),
-    ]
-    rows += [(k, f"category/{k}/", c[lang])
-             for k, c in CATEGORIES.items() if c.get("menu") and k not in PRIMARY_CATS]
-    rows += [
-        ("archive", "archive/", L["archive"]),
-        ("about", "about/", L["about"]),
-        ("editorial", "editorial/", L["editorial"]),
-        ("privacy", "privacy/", L["privacy"]),
-        ("signup", signup_path(lang), L["signup"]),
-        ("contact", "contact/", "Contact"),
-        ("terms", "terms/", "Terms" if lang == "en" else "Voorwaarden"),
-    ]
-    return rows
-
-
-def more_links(lang, active=None):
-    parts = []
-    for key, path, name in more_rows(lang):
-        cls = ' class="on"' if active == key else ""
-        parts.append(f'<a{cls} role="menuitem" href="{url(lang, path)}">{esc(name)}</a>')
-    return "".join(parts)
-
-
-def _more_current(active, lang):
-    for key, _path, name in more_rows(lang):
-        if active == key:
-            return name
-    return None
+def _menu_link(lang, item, active):
+    cls = []
+    if item.get("child"):
+        cls.append("child")
+    if active == item["key"]:
+        cls.append("on")
+    klass = f' class="{" ".join(cls)}"' if cls else ""
+    return f'<a{klass} role="menuitem" href="{url(lang, item["href"])}">{esc(item[lang])}</a>'
 
 
 def primary_nav(lang, active=None):
-    current = _more_current(active, lang)
-    cur = "" if current else nav_current(active)
+    cur = nav_current(active)
     parts = []
-    for key, href, label in _nav_rows(lang):
-        on = " on" if cur == key else ""
-        parts.append(f'<a class="pn{on}" href="{url(lang, href)}">{esc(label)}</a>')
-    more = current or ("More" if lang == "en" else "Meer")
-    on = " on" if current else ""
-    parts.append(
-        f'<div class="mdrop"><button type="button" class="pn{on}" id="more-btn" aria-expanded="false" '
-        f'aria-haspopup="true" aria-controls="more-menu">{esc(more)}{CHEV_SVG}</button>'
-        f'<div class="pmenu" id="more-menu" role="menu" hidden>{more_links(lang, active)}</div></div>')
+    for layer in NAV_LAYERS:
+        on = " on" if cur == layer["key"] else ""
+        menu = "".join(_menu_link(lang, item, active) for item in layer["items"])
+        label = layer["label"][lang]
+        parts.append(
+            f'<div class="pdrop tone-{layer["tone"]}{on}">'
+            f'<a class="pn{on}" href="{url(lang, layer["href"])}" aria-haspopup="true" aria-expanded="false">'
+            f'{esc(label)}</a>'
+            f'<div class="pmenu" role="menu">{menu}</div></div>')
     return f'<nav class="pnav" aria-label="{esc(LANGS[lang]["menu"])}">{"".join(parts)}</nav>'
 
 
 def drawer_links(lang, active):
-    rows = _nav_rows(lang)
     out = []
-    for key, href, label in rows:
-        on = " on" if active == key else ""
-        out.append(f'<a class="di{on}" href="{url(lang, href)}">{esc(label)}</a>')
-    current = _more_current(active, lang)
-    more = current or ("More" if lang == "en" else "Meer")
-    on = " on" if current else ""
-    opened = " open" if current else ""
+    for layer in NAV_LAYERS:
+        on = " on" if nav_current(active) == layer["key"] else ""
+        subs = []
+        for item in layer["items"]:
+            if item.get("overview"):
+                continue
+            mark = " on" if active == item["key"] else ""
+            child = " child" if item.get("child") else ""
+            subs.append(
+                f'<a class="{child.strip()}{mark}" href="{url(lang, item["href"])}">{esc(item[lang])}</a>')
+        out.append(
+            f'<div class="dlayer"><a class="di tone-{layer["tone"]}{on}" href="{url(lang, layer["href"])}">'
+            f'{esc(layer["label"][lang])}</a><div class="dsub">{"".join(subs)}</div></div>')
     out.append(
-        f'<details class="dmeer"{opened}><summary class="di{on}">{esc(more)}</summary>'
-        f'<div class="dmeer-sub">{more_links(lang, active)}</div></details>')
+        f'<a class="di dmap" href="{url(lang, ecosystem_path(lang))}">{esc(LANGS[lang]["nav_eco"])}</a>')
     return "".join(out)
 
 
@@ -3137,11 +3251,13 @@ def category_hub(key, items, lang):
     return body, ld, intro
 
 
-def version_bar(key, lang):
+def version_bar(key, lang, populated=None):
     L = LANGS[lang]
     m = MODELS[key]
     root = m.get("parent", key)
     versions = [k for k, v in MODELS.items() if v.get("parent") == root]
+    if populated is not None:
+        versions = [k for k in versions if k in populated]
     if not versions:
         return ""
     btns = [(root, L["all_versions"])] + [
@@ -3181,7 +3297,7 @@ def models_overview(lang):
     return body, ld, intro
 
 
-def model_hub(key, items, lang):
+def model_hub(key, items, lang, populated=None):
     """Model page: photo, sourced facts and the articles. Not a news lead."""
     m = MODELS[key]
     L = LANGS[lang]
@@ -3204,10 +3320,16 @@ def model_hub(key, items, lang):
         specs = f'<section class="mfacts"><h2>{label}</h2><table class="specs">{body_rows}</table></section>'
     ordered = sorted(items, key=published, reverse=True)
     heading = ("Articles about " if lang == "en" else "Artikelen over ") + m["name"]
-    listing = (f'<h2 class="rubh">{esc(heading)}</h2>'
-               + (hub_cards(ordered, lang) if ordered else f'<p class="empty">{esc(L["empty"])}</p>'))
+    if ordered:
+        listing = f'<h2 class="rubh">{esc(heading)}</h2>{hub_cards(ordered, lang)}'
+    elif parent:
+        back = "Articles about this version are listed with the model." if lang == "en" else "Artikelen over deze uitvoering staan bij het model."
+        listing = (f'<p class="hubnote">{esc(back)} <a href="{url(lang, "model/" + parent + "/")}">'
+                   f'{esc(MODELS[parent]["name"])}</a>.</p>')
+    else:
+        listing = f'<p class="empty">{esc(L["empty"])}</p>'
     body = (f'{nav}<header class="hubhead"><h1>Tesla {esc(m["name"])}</h1></header>'
-            f'{hero}<p class="mintro">{esc(intro)}</p>{specs}{version_bar(key, lang)}{listing}')
+            f'{hero}<p class="mintro">{esc(intro)}</p>{specs}{version_bar(key, lang, populated)}{listing}')
     desc = re.sub(r"\s+", " ", intro).strip()
     if len(desc) > 180:
         desc = desc[:179].rsplit(" ", 1)[0] + "…"
@@ -3332,10 +3454,10 @@ def money_article(a, arts, lang):
 
 HOME_TOPICS = (
     ("models", "nav_models", "category/models/", ("models",)),
-    ("energy", "nav_energy", "category/energy/", ("energy",)),
-    ("fsd", "nav_fsd", "category/fsd/", ("fsd", "robotaxi")),
-    ("spacex", "nav_space", "category/spacex/", ("spacex", "starlink")),
-    ("xai", "nav_xai", "category/xai/", ("xai",)),
+    ("energy", "nav_energy", "tesla-energy/", ("energy",)),
+    ("fsd", "nav_fsd", "fsd/", ("fsd", "robotaxi")),
+    ("spacex", "nav_space", "spacex/", ("spacex", "starlink")),
+    ("xai", "nav_xai", "spacexsi/", ("xai",)),
     ("guides", None, "category/guides/", ("guides",)),
 )
 
@@ -3445,13 +3567,14 @@ def page_side(arts, lang, kind="home", current=None, skip=None, tail="", signup=
     lead_id = id(arts[0]) if arts else None
     start = []
     if kind != "guides":
+        # Guides stay in Start here even when the hub column already lists them.
         guides = sorted(
-            (x for x in arts if x["category"] == "guides" and id(x) not in main_ids),
+            (x for x in arts if x["category"] == "guides" and x is not current),
             key=lambda x: words(x, "en"), reverse=True)
         start = guides[:6]
     start_ids = {id(x) for x in start}
     # The news list is not the guide list, not the homepage lead, and not the main column.
-    show_latest = kind in ("home", "static", "videos", "model", "saved", "hub", "guides")
+    show_latest = kind in ("home", "static", "videos", "model", "saved", "hub", "guides", "article", "archive")
     if kind == "hub" and current == "news":
         show_latest = False
     latest = []
@@ -3481,6 +3604,8 @@ def page_side(arts, lang, kind="home", current=None, skip=None, tail="", signup=
                 related_html = f'<aside class="pv-side arel">{block}</aside>'
             else:
                 parts.append(block)
+        if latest:
+            parts.append(_side_section(L["latest"], _side_ul(lang, latest, "latest")))
         if start:
             parts.append(_side_section(C["start"], _side_ol(lang, start)))
     else:
@@ -3571,10 +3696,10 @@ def pv_copy(lang):
 
 PV_TABS = (
     ("models", "nav_models", "category/models/"),
-    ("energy", "nav_energy", "category/energy/"),
-    ("fsd", "nav_fsd", "category/fsd/"),
-    ("spacex", "nav_space", "category/spacex/"),
-    ("xai", "nav_xai", "category/xai/"),
+    ("energy", "nav_energy", "tesla-energy/"),
+    ("fsd", "nav_fsd", "fsd/"),
+    ("spacex", "nav_space", "spacex/"),
+    ("xai", "nav_xai", "spacexsi/"),
     ("guides", None, "category/guides/"),
     ("videos", "videos", "shorts/"),
 )
@@ -3777,6 +3902,171 @@ def write_previews(arts, lang):
 
 HUBS = [
     {
+        "key": "cars", "path": "cars/",
+        "title": {"en": "Cars", "nl": "Auto's"},
+        "topics": ["cars"],
+        "categories": [],
+        "keywords": [],
+        "intro": {
+            "en": "Tesla's passenger cars: the models on sale, the factories that build them, and the rules around buying one.",
+            "nl": "Tesla's personenauto's: de modellen die te koop zijn, de fabrieken die ze bouwen, en de regels rond de aankoop.",
+        },
+    },
+    {
+        "key": "semi", "path": "semi/",
+        "title": {"en": "Semi Truck", "nl": "Semi-truck"},
+        "topics": ["semi"],
+        "categories": [],
+        "keywords": [],
+        "intro": {
+            "en": "The Tesla Semi: the truck, the factory and the trips that are on the record.",
+            "nl": "De Tesla Semi: de truck, de fabriek en de ritten die vastliggen.",
+        },
+    },
+    {
+        "key": "megapacks", "path": "megapacks/",
+        "title": {"en": "Megapacks", "nl": "Megapacks"},
+        "topics": ["megapack"],
+        "categories": [],
+        "keywords": [],
+        "intro": {
+            "en": "Tesla Megapacks for the grid, factories and data centres.",
+            "nl": "Tesla Megapacks voor het net, fabrieken en datacenters.",
+        },
+    },
+    {
+        "key": "charging-network", "path": "charging-network/",
+        "title": {"en": "Charging Network", "nl": "Laadnetwerk"},
+        "topics": ["charging-network"],
+        "categories": [],
+        "keywords": [],
+        "intro": {
+            "en": "Superchargers and the public charging network: sites, plugs and who can use them.",
+            "nl": "Superchargers en het openbare laadnetwerk: locaties, stekkers en wie ze mag gebruiken.",
+        },
+    },
+    {
+        "key": "home-charging", "path": "home-charging/",
+        "title": {"en": "Home charging stations", "nl": "Thuisladers"},
+        "topics": ["home-charging"],
+        "categories": [],
+        "keywords": [],
+        "intro": {
+            "en": "Charging a Tesla at home: wall connectors, power and what 11 kW is enough for.",
+            "nl": "Een Tesla thuis laden: wall connectors, vermogen en waar 11 kW genoeg voor is.",
+        },
+    },
+    {
+        "key": "solar", "path": "solar/",
+        "title": {"en": "Solar", "nl": "Zonne-energie"},
+        "topics": ["solar"],
+        "categories": [],
+        "keywords": [],
+        "intro": {
+            "en": "Tesla solar: the roof, the factories and what is still on sale.",
+            "nl": "Tesla-zonne-energie: het dak, de fabrieken en wat nog te koop is.",
+        },
+    },
+    {
+        "key": "starship-vehicle", "path": "starship-vehicle/",
+        "title": {"en": "Starship", "nl": "Starship"},
+        "topics": ["starship"],
+        "categories": [],
+        "keywords": [],
+        "intro": {
+            "en": "Starship flights, catches and the vehicle itself. The flight table lives on the tracker.",
+            "nl": "Starship-vluchten, vangsten en het voertuig zelf. De vluchttabel staat op de tracker.",
+        },
+    },
+    {
+        "key": "falcons", "path": "falcons/",
+        "title": {"en": "Falcons", "nl": "Falcons"},
+        "topics": ["falcon"],
+        "categories": [],
+        "keywords": [],
+        "intro": {
+            "en": "Falcon 9 and Falcon Heavy: the rockets SpaceX flies today.",
+            "nl": "Falcon 9 en Falcon Heavy: de raketten die SpaceX nu vliegt.",
+        },
+    },
+    {
+        "key": "satellite-network", "path": "satellite-network/",
+        "title": {"en": "Satellite network", "nl": "Satellietnetwerk"},
+        "topics": ["starlink"],
+        "categories": [],
+        "keywords": [],
+        "intro": {
+            "en": "The Starlink satellite network: dishes, orbits and where the service reaches.",
+            "nl": "Het Starlink-satellietnetwerk: schotels, banen en waar de dienst komt.",
+        },
+    },
+    {
+        "key": "ai", "path": "ai/",
+        "title": {"en": "AI", "nl": "AI"},
+        "topics": ["ai"],
+        "categories": [],
+        "keywords": [],
+        "intro": {
+            "en": "Grok, Cursor and the models SpaceXSI ships. The wider lab race has its own page.",
+            "nl": "Grok, Cursor en de modellen die SpaceXSI uitbrengt. De bredere labrace heeft een eigen pagina.",
+        },
+    },
+    {
+        "key": "ai-compute", "path": "ai-compute/",
+        "title": {"en": "Compute", "nl": "Rekenkracht"},
+        "topics": ["ai-compute"],
+        "categories": [],
+        "keywords": [],
+        "intro": {
+            "en": "The compute behind Grok: clusters, power and what SpaceXSI reports.",
+            "nl": "De rekenkracht achter Grok: clusters, stroom en wat SpaceXSI meldt.",
+        },
+    },
+    {
+        "key": "datacenters", "path": "datacenters/",
+        "title": {"en": "Datacenters", "nl": "Datacenters"},
+        "topics": ["datacenters"],
+        "categories": [],
+        "keywords": [],
+        "intro": {
+            "en": "SpaceXSI datacenters, including Colossus and what is planned in orbit.",
+            "nl": "Datacenters van SpaceXSI, inclusief Colossus en wat er in een baan is gepland.",
+        },
+    },
+    {
+        "key": "chips", "path": "chips/",
+        "title": {"en": "Chips", "nl": "Chips"},
+        "topics": ["chips"],
+        "categories": [],
+        "keywords": [],
+        "intro": {
+            "en": "The chips Tesla and SpaceX want to build, including the Terafab plan.",
+            "nl": "De chips die Tesla en SpaceX zelf willen bouwen, inclusief het Terafab-plan.",
+        },
+    },
+    {
+        "key": "brain-interfaces", "path": "brain-interfaces/",
+        "title": {"en": "Brain-computer interfaces", "nl": "Brein-computerinterfaces"},
+        "topics": ["neuralink"],
+        "categories": [],
+        "keywords": [],
+        "intro": {
+            "en": "Neuralink's implants and the trials that test them.",
+            "nl": "De implantaten van Neuralink en de proeven die ze testen.",
+        },
+    },
+    {
+        "key": "car-tunnels", "path": "car-tunnels/",
+        "title": {"en": "Car tunnels", "nl": "Autotunnels"},
+        "topics": ["boring"],
+        "categories": [],
+        "keywords": [],
+        "intro": {
+            "en": "Tunnels cars drive through: Vegas, Nashville and the other Loop projects on the record.",
+            "nl": "Tunnels waar auto's doorheen rijden: Vegas, Nashville en de andere Loop-projecten die vastliggen.",
+        },
+    },
+    {
         "key": "tesla", "path": "tesla/",
         "title": {"en": "Tesla", "nl": "Tesla"},
         "topics": ["cars", "semi", "robotaxi", "fsd", "optimus"],
@@ -3845,7 +4135,7 @@ HUBS = [
     {
         "key": "spacexsi", "path": "spacexsi/",
         "title": {"en": "SpaceXSI / Grok", "nl": "SpaceXSI / Grok"},
-        "topics": ["spacexsi"],
+        "topics": ["ai", "ai-compute", "datacenters", "chips", "agi", "spacexsi"],
         "categories": ["xai"],
         "keywords": ["xai", "grok", "spacexsi", "spacexai", "colossus"],
         "intro": {
@@ -4230,7 +4520,7 @@ LAYERS = [
         },
         "stats": [],
         "articles": {
-            "topics": ["megapack", "charging", "solar", "powerwall", "energy"],
+            "topics": ["megapack", "charging-network", "home-charging", "solar", "powerwall", "energy"],
         },
         "links": [
             {"en": "Tesla", "nl": "Tesla", "href": "tesla/"},
@@ -4296,7 +4586,7 @@ LAYERS = [
         },
         "stats": ["compute"],
         "articles": {
-            "topics": ["spacexsi"],
+            "topics": ["ai", "ai-compute", "datacenters", "chips", "agi", "spacexsi"],
         },
         "links": [],
         "intro": {
@@ -4511,6 +4801,7 @@ _KV_KEYS = (
     "name_en", "name_nl", "pros_en", "pros_nl", "cons_en", "cons_nl",
     "url", "image", "button_en", "button_nl",
     "caption_en", "caption_nl", "columns_en", "columns_nl", "row_en", "row_nl",
+    "slug",
 )
 _KV_LISTS = {"pros_en", "pros_nl", "cons_en", "cons_nl", "row_en", "row_nl"}
 
@@ -4803,10 +5094,15 @@ def briefing_issue_body(doc, lang):
         lis = []
         for item in items:
             heading = item.get(f"title_{lang}") or item.get("title_en") or ""
+            slug = str(item.get("slug") or "").strip()
+            if slug and heading:
+                heading_html = f'<a href="{url(lang, slug + "/")}">{esc(heading)}</a>'
+            else:
+                heading_html = esc(heading)
             text = item.get(lang) or item.get("en") or ""
             why = item.get(f"why_{lang}") or item.get("why_en") or ""
             why_html = f'<p class="brief-why"><b>{esc(why_label)}</b> {esc(why)}</p>' if why else ""
-            lis.append(f"<li><h3>{esc(heading)}</h3><p>{esc(text)}</p>{why_html}</li>")
+            lis.append(f"<li><h3>{heading_html}</h3><p>{esc(text)}</p>{why_html}</li>")
         sections.append(f'<section class="brief-layer"><h2>{layer_tag(key, lang)}</h2><ol>{"".join(lis)}</ol></section>')
     top = f'<div class="brief-cta">{ml_bar(lang, "-a")}</div>'
     end = f'<div class="brief-cta">{ml_bar(lang, "-b")}</div>'
@@ -4847,8 +5143,15 @@ def promises_body(rows, lang):
         due_s = fmt_date(due, lang) if re.fullmatch(r"\d{4}-\d{2}-\d{2}", due) else ""
         status = str(row["status"])
         href = str(row.get("source") or "")
-        src = (f'<a href="{esc(href)}" rel="noopener noreferrer" target="_blank">{esc(source)}</a>'
-               if href.startswith("https://") else "")
+        status_href = str(row.get("status_source") or "")
+        bits = []
+        if href.startswith("https://"):
+            bits.append(f'<a href="{esc(href)}" rel="noopener noreferrer" target="_blank">{esc(source)}</a>')
+        if status_href.startswith("https://"):
+            status_label_link = "Status" if lang == "en" else "Stand"
+            bits.append(
+                f'<a href="{esc(status_href)}" rel="noopener noreferrer" target="_blank">{esc(status_label_link)}</a>')
+        src = " · ".join(bits)
         body_rows.append(
             f'<tr data-layer="{esc(key)}" data-status="{esc(status)}"><td>{layer_tag(key, lang)}</td>'
             f'<td>{esc(text)}</td><td>{esc(made_s)}</td><td>{esc(due_s)}</td>'
@@ -4950,11 +5253,13 @@ def guides_index_body(docs, lang):
     real = [doc for doc in docs if not doc["template"]]
     if lang == "en":
         title = "Buying guides"
-        intro = "Guides for things you can buy. None are published yet."
+        intro = ("Guides for things you can buy, with what each one is for. Prices change, so check the current price."
+                 if real else "Guides for things you can buy. None are published yet.")
         sample = "Layout template"
     else:
         title = "Koopgidsen"
-        intro = "Gidsen voor dingen die je kunt kopen. Er is er nog geen gepubliceerd."
+        intro = ("Gidsen voor dingen die je kunt kopen, met waar elk voor dient. Prijzen veranderen, dus kijk de actuele prijs na."
+                 if real else "Gidsen voor dingen die je kunt kopen. Er is er nog geen gepubliceerd.")
         sample = "Opmaakvoorbeeld"
     items = ""
     if real:
@@ -5072,6 +5377,8 @@ def build():
 
         # ---------- Category pages ----------
         for key, c in CATEGORIES.items():
+            if key in REDIRECT_CATS:
+                continue
             if key == "models":
                 content, crumb_ld, intro = models_overview(lang)
                 listed = [{
@@ -5102,6 +5409,7 @@ def build():
                        extra_head=ld_script(crumb_ld), active=key))
 
         # ---------- Model pages ----------
+        populated = {k for k, mv in MODELS.items() if mv.get("parent") and any(k in a.get("models", []) for a in arts)}
         for key, m in MODELS.items():
             if m.get("parent"):
                 items = [a for a in arts if key in a.get("models", [])]
@@ -5109,7 +5417,7 @@ def build():
                 family = {key} | {k for k, v in MODELS.items() if v.get("parent") == key}
                 items = [a for a in arts if family & set(a.get("models", []))]
             ph = model_photo(key)
-            content, crumb_ld, desc = model_hub(key, items, lang)
+            content, crumb_ld, desc = model_hub(key, items, lang, populated)
             facts = (INFO.get(key) or {}).get(lang, {}).get("specs") or []
             vehicle_ld = {
                 "@context": "https://schema.org", "@type": "Vehicle",
@@ -5287,14 +5595,14 @@ def build():
         b_body, b_title, b_desc = briefing_index_body(briefing_docs, lang)
         write(url(lang, "briefing/"), page(
             lang, "briefing/", b_title, b_desc,
-            shell(b_body, page_side(arts, lang, "static", signup=False)), active="briefing"))
+            shell(b_body, page_side(arts, lang, "static")), active="briefing"))
         for doc in briefing_docs:
             if doc.get("template"):
                 continue
             i_body, i_title, i_desc = briefing_issue_body(doc, lang)
             write(url(lang, f"briefing/{doc['slug']}/"), page(
                 lang, f"briefing/{doc['slug']}/", i_title, i_desc,
-                shell(i_body, page_side(arts, lang, "static", signup=False)),
+                shell(i_body, page_side(arts, lang, "static")),
                 active="briefing", robots="noindex" if doc["template"] else None))
         p_body, p_title, p_desc = promises_body(promise_rows, lang)
         write(url(lang, promises_path(lang)), page(
@@ -5349,7 +5657,8 @@ def build():
     # Sitemap
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     entries = ([("", today)] + [(a["slug"] + "/", a.get("updated", a["date"])[:10]) for a in arts]
-               + [(f"category/{k}/", today) for k in CATEGORIES] + [(f"model/{k}/", today) for k in MODELS]
+               + [(f"category/{k}/", today) for k in CATEGORIES if k not in REDIRECT_CATS]
+               + [(f"model/{k}/", today) for k in MODELS]
                + [(k + "/", today) for k in PAGES]
                + [("shorts/", today)]
                + [(h["path"], today) for h in HUBS]
@@ -5447,6 +5756,12 @@ def write_redirects():
         frm, to = row["from"], row["to"]
         lines.append(f"{frm} {to} 301")
         if frm.endswith("/") and frm != "/":
+            lines.append(f"{frm[:-1]} {to} 301")
+    for key, dest in REDIRECT_CATS.items():
+        for prefix in ("", "/nl"):
+            frm = f"{prefix}/category/{key}/"
+            to = f"{prefix}/{dest}"
+            lines.append(f"{frm} {to} 301")
             lines.append(f"{frm[:-1]} {to} 301")
     # Host and scheme redirects are not allowed here. Workers static assets only
     # accept a path as the source (2,000 static rules, 100 dynamic). www, http,

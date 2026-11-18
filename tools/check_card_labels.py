@@ -1,6 +1,11 @@
 #!/usr/bin/env python3
-"""Every thumbnail card in public/ must carry the cyan rubric and the date."""
+"""Every thumbnail card in public/ must carry the cyan rubric and the date.
+
+List rows (pv-row) must not. Thumbnail cards must not include an excerpt, and
+the shared .lmeta rule must keep the rubric line on one line.
+"""
 import json
+import re
 import sys
 from html.parser import HTMLParser
 from pathlib import Path
@@ -23,15 +28,13 @@ class Cards(HTMLParser):
         classes = set((ad.get("class") or "").split())
         kind = next((c for c in ("leadstory", "pv-lead", "lcard", "vcard", "pv-row", "pv-guide", "shc", "mini", "card") if c in classes), None)
         node = {"tag": tag, "class": classes, "kind": kind, "kids": []}
-        if self.current is None and kind:
-            if kind == "pv-row" and "hasth" not in classes:
-                kind = None
-            elif kind == "lcard" and "empty" in classes:
-                kind = None
+        if self.current is None and kind == "lcard" and "empty" in classes:
+            kind = None
         if kind and self.current is None:
             above = kind in ("leadstory", "pv-lead") or (kind == "card" and "lead" in classes)
             self.current = {"kind": kind, "depth": len(self.stack), "has_img": False, "lmeta": False,
-                            "lname": False, "ago": False, "above": above, "step": 0, "img_at": None, "lmeta_at": None}
+                            "lname": False, "ago": False, "excerpt": False, "listrow": kind == "pv-row",
+                            "above": above, "step": 0, "img_at": None, "lmeta_at": None}
         if self.current is not None:
             thumb = tag == "img" or bool(classes & {"lim", "vim", "im", "th", "leadim", "shv", "pv-th"})
             if thumb:
@@ -48,6 +51,8 @@ class Cards(HTMLParser):
                 self.current["lname"] = True
             if tag == "time" and "ago" in classes:
                 self.current["ago"] = True
+            if tag == "p" or "mdesc" in classes:
+                self.current["excerpt"] = True
         self.stack.append(node)
         if tag in VOID:
             self.stack.pop()
@@ -94,36 +99,52 @@ def page_type(path: Path) -> str:
     return "other"
 
 
+LMETA_RULE = re.compile(r"\.lmeta\{[^}]*\}")
+
+
 def main():
     missing = []
     counts = {}
     files = 0
+    nowrap_bad = 0
     for path in PUBLIC.rglob("*.html"):
         files += 1
+        text = path.read_text(encoding="utf-8", errors="replace")
+        rule = LMETA_RULE.search(text)
+        if rule is None or "nowrap" not in rule.group(0):
+            nowrap_bad += 1
+            missing.append(f"{path.relative_to(PUBLIC).as_posix()} lmeta nowrap missing")
         kind = page_type(path)
         parser = Cards()
         try:
-            parser.feed(path.read_text(encoding="utf-8", errors="replace"))
+            parser.feed(text)
         except Exception as exc:
             print(f"PARSE {path}: {exc}")
             return 1
         for card in parser.cards:
+            rel = path.relative_to(PUBLIC).as_posix()
+            if card["listrow"]:
+                if card["lmeta"]:
+                    bucket = counts.setdefault(kind, {"cards": 0, "missing": 0})
+                    bucket["missing"] += 1
+                    missing.append(f"{rel} pv-row leaked lmeta")
+                continue
             if not card["has_img"]:
                 continue
             ordered = card["img_at"] is not None and card["lmeta_at"] is not None and (
                 card["lmeta_at"] < card["img_at"] if card["above"] else card["img_at"] < card["lmeta_at"])
-            ok = card["lmeta"] and card["lname"] and card["ago"] and ordered
+            ok = card["lmeta"] and card["lname"] and card["ago"] and ordered and not card["excerpt"]
             bucket = counts.setdefault(kind, {"cards": 0, "missing": 0})
             bucket["cards"] += 1
             if not ok:
                 bucket["missing"] += 1
-                rel = path.relative_to(PUBLIC).as_posix()
                 missing.append(
                     f"{rel} {card['kind']} lmeta={card['lmeta']} lname={card['lname']} ago={card['ago']} "
-                    f"above={card['above']} img_at={card['img_at']} lmeta_at={card['lmeta_at']}")
+                    f"excerpt={card['excerpt']} above={card['above']} img_at={card['img_at']} lmeta_at={card['lmeta_at']}")
     print(f"files {files}")
+    print(f"lmeta nowrap missing {nowrap_bad}")
     total = sum(v["cards"] for v in counts.values())
-    bad = sum(v["missing"] for v in counts.values())
+    bad = sum(v["missing"] for v in counts.values()) + nowrap_bad
     for kind in sorted(counts):
         row = counts[kind]
         print(f"{kind}\t{row['cards']}\tmissing {row['missing']}")

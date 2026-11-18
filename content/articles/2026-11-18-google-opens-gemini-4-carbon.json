@@ -1,0 +1,30 @@
+{
+  "slug": "google-opens-gemini-4-carbon",
+  "date": "2026-11-18",
+  "time": "19:10",
+  "category": "news",
+  "image": "news/server-room-lender.jpg",
+  "sources": [
+    {
+      "title": "Google — Gemini 4 Carbon is now available",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/"
+    }
+  ],
+  "credits": [
+    {
+      "file": "news/server-room-lender.jpg",
+      "credit": "Carl Lender, CC BY 2.0, via Wikimedia Commons. A server room. Not a photograph of the company in the story",
+      "page": "https://commons.wikimedia.org/wiki/File:Server_Room_(22397102849).jpg"
+    }
+  ],
+  "en": {
+    "title": "Google opens Gemini 4 Carbon",
+    "description": "Google said on 10 November 2026 that Gemini 4 Carbon is available to developers, companies, scientists and consumers.",
+    "body": "<p>Google said on 10 November 2026 that Gemini 4 Carbon is available to developers, enterprises, scientists and consumers. Koray Kavukcuoglu’s post calls it the company’s strongest model for cyber work and for long-horizon agentic work. The introductory price matches Gemini 4 Argon: 2 dollars per million input tokens and 10 dollars per million output tokens until 30 November 2026, then 4 and 20 dollars.</p>\n<p>The picture is a server room. It is not a Google machine and not Carbon.</p>\n<h2>What does Google claim it already beats?</h2>\n<p><strong>Three outside benchmarks, at a lower cost per task.</strong> The post says Carbon ranks first on CursorBench 4.0, Perplexity WANDR and Zapier AutomationBench, at more than twice a lower cost per task than the next external model. It also describes a Fairwind Program for cyber work, and a /swarm preview in Google Antigravity. The API is in AI Studio and Gemini for business. Google says it is rolling out to Google AI Ultra in Antigravity, the Gemini app and AI Mode.</p>\n<h2>So what is the code-proof claim?</h2>\n<p><strong>A time comparison Google states, not a public audit.</strong> The post says signal-protocol code proofs via AlphaProof Code and Carbon took weeks rather than years. It does not publish the proof, the reviewers or the earlier estimate those years refer to.</p>\n<h2>What should we watch for next?</h2>\n<p><strong>Whether the intro price and the ranking survive December.</strong> The checks are on Google’s own page:</p>\n<ul>\n<li><strong>Price:</strong> the 2 and 10 dollar rates are scheduled to end on 30 November 2026.</li>\n<li><strong>Rank:</strong> first place is Google’s reading of three named benchmarks.</li>\n<li><strong>Access:</strong> developers can call the API now. The consumer apps are described as rolling out.</li>\n</ul>\n<p>Until those benchmarks are reproduced outside Google, Carbon is the company’s account of a release on 10 November.</p>"
+  },
+  "nl": {
+    "title": "Google opent Gemini 4 Carbon",
+    "description": "Google zei op 10 november 2026 dat Gemini 4 Carbon beschikbaar is voor ontwikkelaars, bedrijven, wetenschappers en consumenten.",
+    "body": "<p>Google zei op 10 november 2026 dat Gemini 4 Carbon beschikbaar is voor ontwikkelaars, bedrijven, wetenschappers en consumenten. De post van Koray Kavukcuoglu noemt het het sterkste model van het bedrijf voor cyberwerk en voor langlopend agentwerk. De introductieprijs is gelijk aan Gemini 4 Argon: 2 dollar per miljoen invoertokens en 10 dollar per miljoen uitvoertokens tot 30 november 2026, daarna 4 en 20 dollar.</p>\n<p>De foto is een serverruimte. Het is geen machine van Google en niet Carbon.</p>\n<h2>Wat zegt Google dat het al verslaat?</h2>\n<p><strong>Drie externe benchmarks, tegen lagere kosten per taak.</strong> De post zegt dat Carbon eerste staat op CursorBench 4.0, Perplexity WANDR en Zapier AutomationBench, tegen meer dan twee keer lagere kosten per taak dan het volgende externe model. Er staat ook een Fairwind-programma voor cyberwerk, en een /swarm-preview in Google Antigravity. De API zit in AI Studio en Gemini for business. Google zegt dat het uitrolt naar Google AI Ultra in Antigravity, de Gemini-app en AI Mode.</p>\n<h2>Dus wat is de claim over codebewijzen?</h2>\n<p><strong>Een tijdvergelijking die Google zelf noemt, geen openbare controle.</strong> De post zegt dat codebewijzen voor het signal-protocol via AlphaProof Code en Carbon weken duurden in plaats van jaren. Het bewijs, de reviewers en de eerdere schatting waar die jaren naar verwijzen, staan er niet bij.</p>\n<h2>Waar moeten we nu op letten?</h2>\n<p><strong>Of de introductieprijs en de rang december halen.</strong> De controles staan op Google’s eigen pagina:</p>\n<ul>\n<li><strong>Prijs:</strong> de tarieven van 2 en 10 dollar lopen volgens de post af op 30 november 2026.</li>\n<li><strong>Rang:</strong> de eerste plaats is Google’s lezing van drie genoemde benchmarks.</li>\n<li><strong>Toegang:</strong> ontwikkelaars kunnen de API nu aanroepen. De consumentenapps worden beschreven als een uitrol.</li>\n</ul>\n<p>Tot die benchmarks buiten Google worden nagedaan, is Carbon het verslag van het bedrijf van een release op 10 november.</p>"
+  }
+}

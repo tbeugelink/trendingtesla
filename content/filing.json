@@ -73,7 +73,7 @@
   },
   "musk-terafab-keynote-austin-terawatt-chips-tesla-spacex-xai": {
     "layer": "spacexsi",
-    "topic": "spacexsi",
+    "topic": "chips",
     "card": {
       "en": "Musk unveils Terafab in Austin",
       "nl": "Musk presenteert Terafab in Austin"
@@ -81,7 +81,7 @@
   },
   "xai-all-11-cofounders-gone-musk-rebuild-what-it-means-for-tesla": {
     "layer": "spacexsi",
-    "topic": "spacexsi",
+    "topic": "ai",
     "card": {
       "en": "All 11 xAI co-founders have now left",
       "nl": "Alle 11 medeoprichters van xAI zijn vertrokken"
@@ -129,7 +129,7 @@
   },
   "anthropic-rents-colossus-1-spacexai-memphis-what-it-means-for-tesla": {
     "layer": "spacexsi",
-    "topic": "spacexsi",
+    "topic": "datacenters",
     "card": {
       "en": "Anthropic rents all of Colossus 1",
       "nl": "Anthropic huurt heel Colossus 1"
@@ -265,7 +265,7 @@
   },
   "spacex-completes-60-billion-cursor-acquisition-grok-tesla": {
     "layer": "spacexsi",
-    "topic": "spacexsi",
+    "topic": "ai",
     "card": {
       "en": "SpaceX closes its 60 billion dollar Cursor deal",
       "nl": "SpaceX rondt de Cursor-deal van 60 miljard af"
@@ -345,7 +345,7 @@
   },
   "tesla-accordion-supercharger-prefabricated-eight-stalls": {
     "layer": "tesla-energy",
-    "topic": "charging",
+    "topic": "charging-network",
     "card": {
       "en": "Tesla's 'Accordion' Supercharger arrives on a truck",
       "nl": "Tesla's 'Accordion'-Supercharger komt op een vrachtwagen"
@@ -369,7 +369,7 @@
   },
   "tesla-app-4-61-passkeys-face-id-supercharger-site-maps": {
     "layer": "tesla-energy",
-    "topic": "charging",
+    "topic": "charging-network",
     "card": {
       "en": "Tesla app 4.61 adds sign-in with passkeys",
       "nl": "Tesla-app 4.61 voegt inloggen met een passkey toe"
@@ -465,7 +465,7 @@
   },
   "tesla-emergency-drive-away-supercharger-cable-explained": {
     "layer": "tesla-energy",
-    "topic": "charging",
+    "topic": "charging-network",
     "card": {
       "en": "Emergency Drive Away leaves the cable plugged in",
       "nl": "Emergency Drive Away laat de laadkabel zitten"
@@ -481,7 +481,7 @@
   },
   "tesla-home-charging-guide-11-kw-wall-connector": {
     "layer": "tesla-energy",
-    "topic": "charging",
+    "topic": "home-charging",
     "card": {
       "en": "11 kW home charging covers almost every driver",
       "nl": "Thuis laden met 11 kW volstaat bijna altijd"
@@ -489,7 +489,7 @@
   },
   "spacexai-to-become-spacexsi-super-intelligence-rename-explained": {
     "layer": "spacexsi",
-    "topic": "spacexsi",
+    "topic": "ai",
     "card": {
       "en": "SpaceXAI will become SpaceXSI",
       "nl": "SpaceXAI wordt SpaceXSI"
@@ -513,7 +513,7 @@
   },
   "tesla-supercharger-network-85000-stalls-9000-sites": {
     "layer": "tesla-energy",
-    "topic": "charging",
+    "topic": "charging-network",
     "card": {
       "en": "Superchargers pass 85000 stalls at 9000 sites",
       "nl": "Het Supercharger-netwerk passeert 85000 laadpalen"
@@ -553,7 +553,7 @@
   },
   "how-to-use-tesla-superchargers-non-tesla-netherlands-belgium": {
     "layer": "tesla-energy",
-    "topic": "charging",
+    "topic": "charging-network",
     "card": {
       "en": "Other electric cars can use Tesla Superchargers",
       "nl": "Andere elektrische auto's kunnen bij Tesla laden"
@@ -593,7 +593,7 @@
   },
   "tesla-powerwall-wall-connector-smart-charging-low-cost-charge-on-solar": {
     "layer": "tesla-energy",
-    "topic": "charging",
+    "topic": "home-charging",
     "card": {
       "en": "Tesla's Wall Connector gets smart charging",
       "nl": "Tesla Wall Connector laadt nu slim"
@@ -657,7 +657,7 @@
   },
   "tesla-flex-connect-pge-superchargers-open-years-sooner": {
     "layer": "tesla-energy",
-    "topic": "charging",
+    "topic": "charging-network",
     "card": {
       "en": "Flex Connect can open Superchargers two years early",
       "nl": "Flex Connect kan Superchargers twee jaar eerder openen"
@@ -681,7 +681,7 @@
   },
   "x-subscription-grok-cursor-x-premium-bundle-prices-tesla-grok": {
     "layer": "spacexsi",
-    "topic": "spacexsi",
+    "topic": "ai",
     "card": {
       "en": "New X subscription bundles Grok from 8 dollars",
       "nl": "Nieuw X-abonnement bundelt Grok vanaf 8 dollar"
@@ -689,7 +689,7 @@
   },
   "tesla-loses-us-fast-charging-majority-paren-q3-2026": {
     "layer": "tesla-energy",
-    "topic": "charging",
+    "topic": "charging-network",
     "card": {
       "en": "Tesla slips under half of America's fast chargers",
       "nl": "Tesla zakt onder de helft van Amerikaanse snelladers"
@@ -809,7 +809,7 @@
   },
   "grok-in-tesla-what-it-can-do-europe": {
     "layer": "spacexsi",
-    "topic": "spacexsi",
+    "topic": "ai",
     "card": {
       "en": "Grok inside a Tesla still cannot do everything",
       "nl": "Grok in je Tesla kan nog niet alles"
@@ -841,7 +841,7 @@
   },
   "terafab-explained-tesla-spacex-chip-factory": {
     "layer": "spacexsi",
-    "topic": "spacexsi",
+    "topic": "chips",
     "card": {
       "en": "Tesla and SpaceX want their own chip factory",
       "nl": "Tesla en SpaceX willen een eigen chipfabriek"
@@ -857,7 +857,7 @@
   },
   "tesla-inuvik-supercharger-proposal-northwest-territories-arctic": {
     "layer": "tesla-energy",
-    "topic": "charging",
+    "topic": "charging-network",
     "card": {
       "en": "Tesla wants a Supercharger above the Arctic Circle",
       "nl": "Tesla wil een Supercharger boven de poolcirkel"
@@ -913,7 +913,7 @@
   },
   "grok-deepfake-case-reopened-uk-ofcom-x-investigation-tesla": {
     "layer": "spacexsi",
-    "topic": "spacexsi",
+    "topic": "ai",
     "card": {
       "en": "UK police reopen a Grok deepfake case",
       "nl": "Britse politie heropent een zaak over Grok-deepfakes"
@@ -1065,7 +1065,7 @@
   },
   "grok-4-7-grok-5-model-race-what-it-means-for-tesla-cars-optimus": {
     "layer": "spacexsi",
-    "topic": "spacexsi",
+    "topic": "ai",
     "card": {
       "en": "SpaceXAI's model sprint now reaches Grok 5",
       "nl": "De modellensprint van SpaceXAI bereikt Grok 5"
@@ -1089,7 +1089,7 @@
   },
   "macrohard-digital-optimus-tesla-spacexai-project-explained": {
     "layer": "spacexsi",
-    "topic": "spacexsi",
+    "topic": "ai",
     "card": {
       "en": "Macrohard is the Digital Optimus software project",
       "nl": "Macrohard is het softwareproject Digital Optimus"
@@ -1201,7 +1201,7 @@
   },
   "spacexai-grok-bot-ai-segment-q3-2026-what-it-means-for-tesla": {
     "layer": "spacexsi",
-    "topic": "spacexsi",
+    "topic": "ai-compute",
     "card": {
       "en": "SpaceX reports 1.7 GW of AI compute",
       "nl": "SpaceX meldt 1.7 GW aan AI-rekenkracht"
@@ -1209,7 +1209,7 @@
   },
   "spacexai-southaven-colossus-turbines-home-buyouts": {
     "layer": "spacexsi",
-    "topic": "spacexsi",
+    "topic": "datacenters",
     "card": {
       "en": "Turbine noise is driving a fight around Colossus",
       "nl": "Turbinegeluid voedt de strijd rond Colossus"
@@ -1385,7 +1385,7 @@
   },
   "tesla-summer-update-2026-26-every-feature-explained": {
     "layer": "spacexsi",
-    "topic": "spacexsi",
+    "topic": "ai",
     "card": {
       "en": "Summer Update 2026.26 packs in many new features",
       "nl": "Summer Update 2026.26 zit vol nieuwe functies"
@@ -1393,7 +1393,7 @@
   },
   "tesla-supercharger-for-business-semi-charging-canada-launch": {
     "layer": "tesla-energy",
-    "topic": "charging",
+    "topic": "charging-network",
     "card": {
       "en": "Canadian companies can now buy their own Superchargers",
       "nl": "Canadese bedrijven kunnen nu eigen Superchargers kopen"
@@ -1401,7 +1401,7 @@
   },
   "tesla-supercharger-q3-2026-utilization-69-million-sessions-robotaxi-energy": {
     "layer": "tesla-energy",
-    "topic": "charging",
+    "topic": "charging-network",
     "card": {
       "en": "Just one in 200 Supercharger drivers waits",
       "nl": "Slechts één op de 200 Supercharger-rijders wacht"
@@ -1417,7 +1417,7 @@
   },
   "tesla-xai-investment-2-billion-from-shareholder-vote-to-spacex-shares": {
     "layer": "spacexsi",
-    "topic": "spacexsi",
+    "topic": "ai",
     "card": {
       "en": "The 2 billion xAI bet became SpaceX stock",
       "nl": "De xAI-inleg van 2 miljard werd SpaceX-aandelen"
@@ -1433,7 +1433,7 @@
   },
   "what-happened-to-xai-spacexai-2026-explained": {
     "layer": "spacexsi",
-    "topic": "spacexsi",
+    "topic": "ai",
     "card": {
       "en": "xAI became SpaceXAI during 2026",
       "nl": "xAI werd in 2026 omgedoopt tot SpaceXAI"
@@ -1481,7 +1481,7 @@
   },
   "grok-in-tesla-privacy-requirements-who-processes-your-conversations": {
     "layer": "spacexsi",
-    "topic": "spacexsi",
+    "topic": "ai",
     "card": {
       "en": "Other companies process Grok chats from your Tesla",
       "nl": "Andere bedrijven verwerken Grok-gesprekken uit je Tesla"
@@ -1537,7 +1537,7 @@
   },
   "nacs-sae-j3400-explained-tesla-plug-which-evs-can-supercharge": {
     "layer": "tesla-energy",
-    "topic": "charging",
+    "topic": "charging-network",
     "card": {
       "en": "Tesla's plug is now the SAE J3400 standard",
       "nl": "Tesla's stekker is nu de norm SAE J3400"
@@ -1553,7 +1553,7 @@
   },
   "spacex-orbital-ai-data-centers-ai1-terafab-tesla-chips": {
     "layer": "spacexsi",
-    "topic": "spacexsi",
+    "topic": "datacenters",
     "card": {
       "en": "SpaceX wants a million AI satellites in orbit",
       "nl": "SpaceX wil een miljoen AI-satellieten in de ruimte"
@@ -1697,7 +1697,7 @@
   },
   "tesla-related-party-transactions-musk-companies-spacex-xai-2026-proxy": {
     "layer": "spacexsi",
-    "topic": "spacexsi",
+    "topic": "ai",
     "card": {
       "en": "Tesla discloses every deal with Musk's other firms",
       "nl": "Tesla vermeldt elke deal met Musks andere bedrijven"
@@ -1753,7 +1753,7 @@
   },
   "tesla-supercharger-prices-us-october-2026-how-to-pay-less": {
     "layer": "tesla-energy",
-    "topic": "charging",
+    "topic": "charging-network",
     "card": {
       "en": "Six habits can lower a Supercharger bill",
       "nl": "Zes gewoontes verlagen de rekening bij een Supercharger"
@@ -1929,7 +1929,7 @@
   },
   "tesla-supercharger-voting-winners-october-2026-36-sites-new-round": {
     "layer": "tesla-energy",
-    "topic": "charging",
+    "topic": "charging-network",
     "card": {
       "en": "Owners chose 36 new Supercharger sites",
       "nl": "Rijders kozen 36 nieuwe plekken voor een Supercharger"
@@ -2129,7 +2129,7 @@
   },
   "tesla-supercharger-story-six-free-solar-stations-to-85000-plugs-team-fired": {
     "layer": "tesla-energy",
-    "topic": "charging",
+    "topic": "charging-network",
     "card": {
       "en": "Six stations grew into 85000 plugs",
       "nl": "Zes stations werden 85000 laadpalen"
@@ -2225,7 +2225,7 @@
   },
   "grok-bot-1-joins-whole-teams": {
     "layer": "spacexsi",
-    "topic": "spacexsi",
+    "topic": "ai",
     "card": {
       "en": "Grok Bot 1.0 now joins whole teams",
       "nl": "Teams delen nu Grok Bot 1.0"
@@ -2257,7 +2257,7 @@
   },
   "researchers-found-open-grok-apps": {
     "layer": "spacexsi",
-    "topic": "spacexsi",
+    "topic": "ai",
     "card": {
       "en": "Researchers found thousands of open Grok apps",
       "nl": "Onderzoekers vonden duizenden open Grok-apps"
@@ -2285,6 +2285,54 @@
     "card": {
       "en": "United now flies Starlink on most flights",
       "nl": "United heeft Starlink op de meeste vluchten"
+    }
+  },
+  "google-opens-gemini-4-carbon": {
+    "layer": "spacexsi",
+    "topic": "agi",
+    "card": {
+      "en": "Google opens Gemini 4 Carbon",
+      "nl": "Google opent Gemini 4 Carbon"
+    }
+  },
+  "anthropic-releases-claude-fable-5-2": {
+    "layer": "spacexsi",
+    "topic": "agi",
+    "card": {
+      "en": "Anthropic releases Claude Fable 5.2",
+      "nl": "Anthropic brengt Claude Fable 5.2 uit"
+    }
+  },
+  "anthropic-starts-its-stock-roadshow": {
+    "layer": "spacexsi",
+    "topic": "agi",
+    "card": {
+      "en": "Anthropic starts its stock roadshow",
+      "nl": "Anthropic start zijn beursroadshow"
+    }
+  },
+  "alibaba-launches-qwen4-max": {
+    "layer": "spacexsi",
+    "topic": "agi",
+    "card": {
+      "en": "Alibaba launches Qwen4-Max",
+      "nl": "Alibaba lanceert Qwen4-Max"
+    }
+  },
+  "meta-releases-muse-ember": {
+    "layer": "spacexsi",
+    "topic": "agi",
+    "card": {
+      "en": "Meta releases small model Muse Ember",
+      "nl": "Meta brengt klein model Muse Ember uit"
+    }
+  },
+  "deepseek-opens-its-chat-tools": {
+    "layer": "spacexsi",
+    "topic": "agi",
+    "card": {
+      "en": "DeepSeek opens its chat tools",
+      "nl": "DeepSeek opent zijn chatgereedschap"
     }
   }
 }

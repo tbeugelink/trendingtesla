@@ -1,0 +1,30 @@
+{
+  "slug": "deepseek-opens-its-chat-tools",
+  "date": "2026-11-18",
+  "time": "20:00",
+  "category": "news",
+  "image": "news/starlink-falcon9-gracefo.jpg",
+  "sources": [
+    {
+      "title": "DeepSeek — API updates, 13 November 2026",
+      "url": "https://api-docs.deepseek.com/updates/"
+    }
+  ],
+  "credits": [
+    {
+      "file": "news/starlink-falcon9-gracefo.jpg",
+      "credit": "Bill Ingalls, NASA, public domain. A Falcon 9 launching GRACE-FO in 2018. Not a photograph of the lab in this story",
+      "page": "https://commons.wikimedia.org/wiki/File:GRACE-FO_Launch_(NHQ201805220019).jpg"
+    }
+  ],
+  "en": {
+    "title": "DeepSeek opens its chat tools",
+    "description": "DeepSeek said on 13 November 2026 that a full set of application APIs is available on deepseek-flash, and that a demo chat client is open source.",
+    "body": "<p>DeepSeek’s API changelog dated 13 November 2026 says the company is releasing the full suite of application APIs on deepseek-flash. The note covers the Messages, Responses and Chat Completions interfaces. The tools named there are web search, deep thinking search, file input, URL reading and a safety check. Standalone Search, Fetch, OCR, ASR and TTS are listed as well. DeepSeek also says it open-sourced a demo chat client.</p>\n<p>The picture is a Falcon 9 launch from 2018. It is not DeepSeek and not a data centre.</p>\n<h2>What shipped, in the changelog’s own words?</h2>\n<p><strong>Interfaces and tools, not a new parameter count.</strong> The update does not state a model size, a price or a benchmark rank. It says the application APIs are on deepseek-flash and that a demo client is open source. A changelog line is a release note. It is not a claim that the tools beat anyone else’s search or speech stack.</p>\n<h2>So what is missing if you wanted a race result?</h2>\n<p><strong>A number both sides agreed to measure.</strong> The same November brought public posts from Google, Anthropic, Alibaba and Meta about new models, with prices and a few named tests. DeepSeek’s note does not join those tests. SpaceXSI’s Grok 4.7 page does not mention DeepSeek. Putting them on one ladder would be an invention.</p>\n<h2>What should we watch for next?</h2>\n<p><strong>Whether the demo client matches the API list.</strong> The changelog is short on purpose:</p>\n<ul>\n<li><strong>Host model:</strong> deepseek-flash is the name on the note.</li>\n<li><strong>Tools:</strong> search, files, URLs, OCR, ASR and TTS are the list.</li>\n<li><strong>Code:</strong> an open-source demo client is not the same as open weights.</li>\n</ul>\n<p>Until the client and the API list are tried side by side, 13 November is the day DeepSeek said the tools were open.</p>"
+  },
+  "nl": {
+    "title": "DeepSeek opent zijn chatgereedschap",
+    "description": "DeepSeek zei op 13 november 2026 dat een volledige set applicatie-API’s beschikbaar is op deepseek-flash, en dat een demo-chatclient open source is.",
+    "body": "<p>De API-changelog van DeepSeek van 13 november 2026 zegt dat het bedrijf de volledige set applicatie-API’s uitbrengt op deepseek-flash. De notitie gaat over de interfaces Messages, Responses en Chat Completions. De gereedschappen die er staan zijn websearch, diep zoeken, bestandsinvoer, URL’s lezen en een veiligheidscheck. Losse Search, Fetch, OCR, ASR en TTS staan er ook. DeepSeek zegt ook dat een demo-chatclient open source is.</p>\n<p>De foto is een Falcon 9-lancering uit 2018. Het is niet DeepSeek en geen datacenter.</p>\n<h2>Wat verscheen er, in de woorden van de changelog?</h2>\n<p><strong>Interfaces en gereedschap, geen nieuw parametertal.</strong> De update noemt geen modelgrootte, geen prijs en geen benchmarkrang. Er staat dat de applicatie-API’s op deepseek-flash zitten en dat een democlient open source is. Een changelogregel is een releasenotitie. Het is geen claim dat de gereedschappen de zoek- of spraakstack van iemand anders verslaan.</p>\n<h2>Dus wat ontbreekt als je een raceresultaat wilde?</h2>\n<p><strong>Een getal dat beide kanten afspraken te meten.</strong> Dezelfde november bracht openbare posts van Google, Anthropic, Alibaba en Meta over nieuwe modellen, met prijzen en een paar genoemde tests. De notitie van DeepSeek doet niet mee aan die tests. De Grok 4.7-pagina van SpaceXSI noemt DeepSeek niet. Ze op één ladder zetten zou een verzinsel zijn.</p>\n<h2>Waar moeten we nu op letten?</h2>\n<p><strong>Of de democlient overeenkomt met de API-lijst.</strong> De changelog is met opzet kort:</p>\n<ul>\n<li><strong>Hostmodel:</strong> deepseek-flash is de naam op de notitie.</li>\n<li><strong>Gereedschap:</strong> zoeken, bestanden, URL’s, OCR, ASR en TTS zijn de lijst.</li>\n<li><strong>Code:</strong> een open-source democlient is niet hetzelfde als open gewichten.</li>\n</ul>\n<p>Tot de client en de API-lijst naast elkaar zijn geprobeerd, is 13 november de dag waarop DeepSeek zei dat de gereedschappen open waren.</p>"
+  }
+}

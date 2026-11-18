@@ -342,5 +342,77 @@
   {
     "from": "/us-model-3-model-y-delivery-waits-slip-into-2027/",
     "to": "/tesla-pauses-model-3-premium-orders-canada-china-import-quota/"
+  },
+  {
+    "from": "/category/charging/",
+    "to": "/charging-network/"
+  },
+  {
+    "from": "/nl/category/charging/",
+    "to": "/nl/charging-network/"
+  },
+  {
+    "from": "/category/energy/",
+    "to": "/tesla-energy/"
+  },
+  {
+    "from": "/nl/category/energy/",
+    "to": "/nl/tesla-energy/"
+  },
+  {
+    "from": "/category/fsd/",
+    "to": "/fsd/"
+  },
+  {
+    "from": "/nl/category/fsd/",
+    "to": "/nl/fsd/"
+  },
+  {
+    "from": "/category/robotaxi/",
+    "to": "/robotaxi/"
+  },
+  {
+    "from": "/nl/category/robotaxi/",
+    "to": "/nl/robotaxi/"
+  },
+  {
+    "from": "/category/optimus/",
+    "to": "/optimus/"
+  },
+  {
+    "from": "/nl/category/optimus/",
+    "to": "/nl/optimus/"
+  },
+  {
+    "from": "/category/spacex/",
+    "to": "/spacex/"
+  },
+  {
+    "from": "/nl/category/spacex/",
+    "to": "/nl/spacex/"
+  },
+  {
+    "from": "/category/starlink/",
+    "to": "/starlink/"
+  },
+  {
+    "from": "/nl/category/starlink/",
+    "to": "/nl/starlink/"
+  },
+  {
+    "from": "/category/boring/",
+    "to": "/boring/"
+  },
+  {
+    "from": "/nl/category/boring/",
+    "to": "/nl/boring/"
+  },
+  {
+    "from": "/category/xai/",
+    "to": "/spacexsi/"
+  },
+  {
+    "from": "/nl/category/xai/",
+    "to": "/nl/spacexsi/"
   }
 ]

@@ -1,6 +1,283 @@
 {
-  "_help": "Production rows go in \"rows\". Each row needs layer (tesla, energy, spacex, starlink, spacexsi, neuralink, boring), promise {en, nl}, made (YYYY-MM-DD), deadline (YYYY-MM-DD or \"\"), status (delivered, late, pending, abandoned) and source (https URL). _example is never rendered.",
-  "rows": [],
+  "_help": "Production rows go in \"rows\". Each row needs layer (tesla, energy, spacex, starlink, spacexsi, neuralink, boring), promise {en, nl}, made (YYYY-MM-DD), deadline (YYYY-MM-DD or \"\"), status (delivered, late, pending, abandoned) and source (https URL). status_source is an optional second https URL for what happened later. _example is never rendered.",
+  "rows": [
+    {
+      "layer": "tesla",
+      "promise": {
+        "en": "Build a high-performance electric sports car, the Tesla Roadster, as the first product.",
+        "nl": "Bouw als eerste product een elektrische sportwagen met hoge prestaties, de Tesla Roadster."
+      },
+      "made": "2006-08-02",
+      "deadline": "",
+      "status": "delivered",
+      "source": "https://www.tesla.com/secret-master-plan",
+      "status_source": "https://ir.tesla.com/press-release/tesla-motors-begins-regular-production-2008-tesla-roadster"
+    },
+    {
+      "layer": "tesla",
+      "promise": {
+        "en": "The second model will be a sporty four-door family car at roughly half the $89,000 price of the Roadster.",
+        "nl": "Het tweede model wordt een sportieve vierdeurs gezinsauto voor ongeveer de helft van de Roadster-prijs van 89.000 dollar."
+      },
+      "made": "2006-08-02",
+      "deadline": "",
+      "status": "delivered",
+      "source": "https://www.tesla.com/secret-master-plan",
+      "status_source": "https://ir.tesla.com/press-release/tesla-motors-begin-customer-deliveries-model-s-june-22nd"
+    },
+    {
+      "layer": "tesla",
+      "promise": {
+        "en": "The third model will be even more affordable than that family car.",
+        "nl": "Het derde model wordt nog betaalbaarder dan die gezinsauto."
+      },
+      "made": "2006-08-02",
+      "deadline": "",
+      "status": "delivered",
+      "source": "https://www.tesla.com/secret-master-plan",
+      "status_source": "https://www.sec.gov/Archives/edgar/data/1318605/000162828024002390/tsla-20231231.htm"
+    },
+    {
+      "layer": "energy",
+      "promise": {
+        "en": "While building the cars, also offer zero-emission electric power generation, including a solar array that could make about 50 miles of driving a day.",
+        "nl": "Bied naast de auto's ook uitstootvrije stroomopwekking aan, inclusief een zonnepaneel dat ongeveer 50 mijl rijden per dag kan opwekken."
+      },
+      "made": "2006-08-02",
+      "deadline": "",
+      "status": "delivered",
+      "source": "https://www.tesla.com/secret-master-plan",
+      "status_source": "https://ir.tesla.com/_flysystem/s3/sec/000156459021004599/tsla-10k_20201231-gen.pdf"
+    },
+    {
+      "layer": "energy",
+      "promise": {
+        "en": "Create a solar roof with integrated battery storage, one order and one install, and then scale that product through the world.",
+        "nl": "Maak een zonnedak met ingebouwde batterij, één bestelling en één installatie, en schaal dat product daarna de wereld over."
+      },
+      "made": "2016-07-20",
+      "deadline": "",
+      "status": "late",
+      "source": "https://www.tesla.com/master-plan-part-deux",
+      "status_source": "https://ir.tesla.com/_flysystem/s3/sec/000156459021004599/tsla-10k_20201231-gen.pdf"
+    },
+    {
+      "layer": "tesla",
+      "promise": {
+        "en": "Add a compact SUV so Tesla covers more of the consumer market than premium sedans alone.",
+        "nl": "Voeg een compacte SUV toe zodat Tesla meer van de consumentenmarkt dekt dan alleen premium sedans."
+      },
+      "made": "2016-07-20",
+      "deadline": "",
+      "status": "delivered",
+      "source": "https://www.tesla.com/master-plan-part-deux",
+      "status_source": "https://digitalassets.tesla.com/tesla-contents/image/upload/IR/TSLA-Q4-2023-Update.pdf"
+    },
+    {
+      "layer": "tesla",
+      "promise": {
+        "en": "Build a new kind of pickup truck.",
+        "nl": "Bouw een nieuw soort pickup."
+      },
+      "made": "2016-07-20",
+      "deadline": "",
+      "status": "delivered",
+      "source": "https://www.tesla.com/master-plan-part-deux",
+      "status_source": "https://www.sec.gov/Archives/edgar/data/1318605/000162828024002390/tsla-20231231.htm"
+    },
+    {
+      "layer": "tesla",
+      "promise": {
+        "en": "Have a heavy-duty truck and a high-density people mover ready to unveil the next year.",
+        "nl": "Heb het jaar erop een zware truck en een personenvervoerder met hoge dichtheid klaar om te onthullen."
+      },
+      "made": "2016-07-20",
+      "deadline": "2017-12-31",
+      "status": "late",
+      "source": "https://www.tesla.com/master-plan-part-deux",
+      "status_source": "https://www.nbcnews.com/business/autos/new-tesla-roadster-upstages-rollout-electric-big-rig-truck-n821716"
+    },
+    {
+      "layer": "tesla",
+      "promise": {
+        "en": "The Tesla Semi will go into production in 2019.",
+        "nl": "De Tesla Semi gaat in 2019 in productie."
+      },
+      "made": "2017-11-16",
+      "deadline": "2019-12-31",
+      "status": "late",
+      "source": "https://www.nbcnews.com/business/autos/new-tesla-roadster-upstages-rollout-electric-big-rig-truck-n821716",
+      "status_source": "https://digitalassets.tesla.com/tesla-contents/image/upload/IR/TSLA-Q4-2023-Update.pdf"
+    },
+    {
+      "layer": "tesla",
+      "promise": {
+        "en": "The new Roadster will be available in 2020, a year after the Semi was due to start production.",
+        "nl": "De nieuwe Roadster is in 2020 leverbaar, een jaar nadat de Semi in productie zou gaan."
+      },
+      "made": "2017-11-16",
+      "deadline": "2020-12-31",
+      "status": "late",
+      "source": "https://www.nbcnews.com/business/autos/new-tesla-roadster-upstages-rollout-electric-big-rig-truck-n821716",
+      "status_source": "https://digitalassets.tesla.com/tesla-contents/image/upload/IR/TSLA-Q4-2023-Update.pdf"
+    },
+    {
+      "layer": "tesla",
+      "promise": {
+        "en": "The base new Roadster will do 0 to 60 mph in 1.9 seconds.",
+        "nl": "De basisuitvoering van de nieuwe Roadster gaat van 0 naar 60 mijl per uur in 1,9 seconde."
+      },
+      "made": "2017-11-16",
+      "deadline": "",
+      "status": "pending",
+      "source": "https://www.nbcnews.com/business/autos/new-tesla-roadster-upstages-rollout-electric-big-rig-truck-n821716",
+      "status_source": "https://digitalassets.tesla.com/tesla-contents/image/upload/IR/TSLA-Q4-2023-Update.pdf"
+    },
+    {
+      "layer": "tesla",
+      "promise": {
+        "en": "Produce limited volumes of the Tesla Semi in 2020.",
+        "nl": "Produceer in 2020 beperkte aantallen van de Tesla Semi."
+      },
+      "made": "2019-10-23",
+      "deadline": "2020-12-31",
+      "status": "late",
+      "source": "https://digitalassets.tesla.com/tesla-contents/image/upload/IR/TSLA_Update_Letter_2019-3Q",
+      "status_source": "https://digitalassets.tesla.com/tesla-contents/image/upload/IR/TSLA-Q2-2021-Update.pdf"
+    },
+    {
+      "layer": "tesla",
+      "promise": {
+        "en": "Launch Model Y by summer 2020.",
+        "nl": "Lanceer Model Y tegen de zomer van 2020."
+      },
+      "made": "2019-10-23",
+      "deadline": "2020-09-22",
+      "status": "delivered",
+      "source": "https://digitalassets.tesla.com/tesla-contents/image/upload/IR/TSLA_Update_Letter_2019-3Q",
+      "status_source": "https://ir.tesla.com/_flysystem/s3/sec/000156459021004599/tsla-10k_20201231-gen.pdf"
+    },
+    {
+      "layer": "tesla",
+      "promise": {
+        "en": "Exceed 360,000 vehicle deliveries in 2019.",
+        "nl": "Lever in 2019 meer dan 360.000 voertuigen."
+      },
+      "made": "2019-10-23",
+      "deadline": "2019-12-31",
+      "status": "delivered",
+      "source": "https://digitalassets.tesla.com/tesla-contents/image/upload/IR/TSLA_Update_Letter_2019-3Q",
+      "status_source": "https://ir.tesla.com/press-release/tesla-q4-2019-vehicle-production-deliveries"
+    },
+    {
+      "layer": "tesla",
+      "promise": {
+        "en": "Deliver half a million vehicles in 2020.",
+        "nl": "Lever in 2020 een half miljoen voertuigen."
+      },
+      "made": "2020-07-22",
+      "deadline": "2020-12-31",
+      "status": "delivered",
+      "source": "https://digitalassets.tesla.com/tesla-contents/image/upload/IR/TSLA_Update_Letter_2020-2Q",
+      "status_source": "https://digitalassets.tesla.com/tesla-contents/image/upload/IR/TSLA-Q4-2023-Update.pdf"
+    },
+    {
+      "layer": "tesla",
+      "promise": {
+        "en": "Tesla Semi deliveries will begin in 2021.",
+        "nl": "De leveringen van de Tesla Semi beginnen in 2021."
+      },
+      "made": "2020-07-22",
+      "deadline": "2021-12-31",
+      "status": "late",
+      "source": "https://digitalassets.tesla.com/tesla-contents/image/upload/IR/TSLA_Update_Letter_2020-2Q",
+      "status_source": "https://www.sec.gov/Archives/edgar/data/1318605/000162828024002390/tsla-20231231.htm"
+    },
+    {
+      "layer": "tesla",
+      "promise": {
+        "en": "Remove the beta label from Autopilot once it is about 10 times safer than the US vehicle average.",
+        "nl": "Haal het bètalabel van Autopilot af zodra het ongeveer 10 keer veiliger is dan het Amerikaanse voertuiggemiddelde."
+      },
+      "made": "2016-07-20",
+      "deadline": "",
+      "status": "pending",
+      "source": "https://www.tesla.com/master-plan-part-deux",
+      "status_source": "https://www.tesla.com/fsd"
+    },
+    {
+      "layer": "tesla",
+      "promise": {
+        "en": "Once regulators approve true self-driving, an owner can add the car to a Tesla shared fleet and let it earn money.",
+        "nl": "Als toezichthouders echt zelfrijden goedkeuren, kan een eigenaar de auto aan een gedeelde Tesla-vloot toevoegen en hem geld laten verdienen."
+      },
+      "made": "2016-07-20",
+      "deadline": "",
+      "status": "pending",
+      "source": "https://www.tesla.com/master-plan-part-deux",
+      "status_source": "https://www.reuters.com/business/autos-transportation/tesla-tiptoes-into-long-promised-robotaxi-service-2025-06-22/"
+    },
+    {
+      "layer": "spacex",
+      "promise": {
+        "en": "The second integrated Starship flight test could launch as soon as mid-November 2023, pending regulatory approval.",
+        "nl": "De tweede geïntegreerde Starship-testvlucht kan al half november 2023 lanceren, als de vergunning er is."
+      },
+      "made": "2023-11-03",
+      "deadline": "",
+      "status": "delivered",
+      "source": "https://spaceflightnow.com/2023/11/04/spacex-poised-for-mid-november-of-second-starship-test-launch/",
+      "status_source": "https://www.spacex.com/launches/starship-flight-2"
+    },
+    {
+      "layer": "starlink",
+      "promise": {
+        "en": "Initial Starlink service is targeted for the United States and Canada in 2020.",
+        "nl": "De eerste Starlink-dienst is gericht op de Verenigde Staten en Canada in 2020."
+      },
+      "made": "2020-10-26",
+      "deadline": "2020-12-31",
+      "status": "delivered",
+      "source": "https://www.cnbc.com/2020/10/27/spacex-starlink-service-priced-at-99-a-month-public-beta-test-begins.html",
+      "status_source": "https://www.cnbc.com/2020/10/27/spacex-starlink-service-priced-at-99-a-month-public-beta-test-begins.html"
+    },
+    {
+      "layer": "spacexsi",
+      "promise": {
+        "en": "A limited number of users in the United States can try the Grok prototype before a wider release.",
+        "nl": "Een beperkt aantal gebruikers in de Verenigde Staten kan het Grok-prototype proberen vóór een bredere release."
+      },
+      "made": "2023-11-03",
+      "deadline": "",
+      "status": "delivered",
+      "source": "https://x.ai/news/grok",
+      "status_source": "https://www.reuters.com/technology/musk-integrate-xai-with-social-media-platform-x-2023-11-05/"
+    },
+    {
+      "layer": "neuralink",
+      "promise": {
+        "en": "The PRIME study will test whether the N1 implant lets people with paralysis control external devices with their thoughts.",
+        "nl": "De PRIME-studie test of het N1-implantaat mensen met een verlamming externe apparaten laat besturen met hun gedachten."
+      },
+      "made": "2023-09-19",
+      "deadline": "",
+      "status": "pending",
+      "source": "https://neuralink.com/updates/first-clinical-trial-open-for-recruitment/",
+      "status_source": "https://neuralink.com/updates/prime-study-progress-update/"
+    },
+    {
+      "layer": "boring",
+      "promise": {
+        "en": "Steve Davis expects the first mile of Nashville's Music City Loop to carry passengers in the first quarter of 2027.",
+        "nl": "Steve Davis verwacht dat de eerste mijl van de Music City Loop in Nashville in het eerste kwartaal van 2027 reizigers vervoert."
+      },
+      "made": "2026-11-17",
+      "deadline": "2027-03-31",
+      "status": "pending",
+      "source": "https://a16z.com/the-boring-company-the-future-underground/",
+      "status_source": "https://a16z.com/the-boring-company-the-future-underground/"
+    }
+  ],
   "_example": {
     "layer": "tesla",
     "promise": {

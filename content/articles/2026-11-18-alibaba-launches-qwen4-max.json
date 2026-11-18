@@ -1,0 +1,34 @@
+{
+  "slug": "alibaba-launches-qwen4-max",
+  "date": "2026-11-18",
+  "time": "19:40",
+  "category": "news",
+  "image": "news/server-room-lender.jpg",
+  "sources": [
+    {
+      "title": "Alibaba Cloud — Alibaba unveils Qwen4-Max",
+      "url": "https://www.alibabacloud.com/en/press-room/alibaba-unveils-qwen4-max"
+    },
+    {
+      "title": "SpaceXSI — Grok 4.7",
+      "url": "https://x.ai/news/grok-4-7"
+    }
+  ],
+  "credits": [
+    {
+      "file": "news/server-room-lender.jpg",
+      "credit": "Carl Lender, CC BY 2.0, via Wikimedia Commons. A server room. Not a photograph of the company in the story",
+      "page": "https://commons.wikimedia.org/wiki/File:Server_Room_(22397102849).jpg"
+    }
+  ],
+  "en": {
+    "title": "Alibaba launches Qwen4-Max",
+    "description": "Alibaba Cloud unveiled Qwen4-Max in Hangzhou on 16 November 2026. The company says it has 2.4 trillion parameters and a 1 million token context.",
+    "body": "<p>Alibaba Cloud unveiled Qwen4-Max in Hangzhou on 16 November 2026. The company says the model has 2.4 trillion parameters in total and activates 71 billion per token, which it calls 25 percent fewer than Qwen3.8-Max. It says the model has native vision and a context of 1 million tokens. It is available on the QwenCloud Token Plan and the API. An implicit cache hit on input is listed at 0.075 dollars per million tokens. Smaller open-weight Qwen4 models are described as coming soon.</p>\n<p>The picture is a server room. It is not an Alibaba data centre and not Qwen.</p>\n<h2>What scores does Alibaba actually cite?</h2>\n<p><strong>One rank, and a cost comparison with its own previous model.</strong> The press note says Qwen4-Max is sixth on Code Arena. On Work360 it says the model beats Qwen3.8-Max while using 35 percent fewer tokens at High effort, and at about 60 percent lower average cost per task. Those figures compare Alibaba with Alibaba. They are not a ranking against Fable, Carbon or Grok.</p>\n<h2>So what does a Chinese lab change for SpaceXSI?</h2>\n<p><strong>It is another frontier model on sale the same month, not a verdict.</strong> SpaceXSI’s Grok 4.7 page still describes that model as its most capable for coding and knowledge work, from 2 dollars per million input tokens. Alibaba’s note does not mention Grok. This page does not invent a winner.</p>\n<h2>What should we watch for next?</h2>\n<p><strong>Whether the smaller weights actually ship.</strong> The public claims stop at the press note:</p>\n<ul>\n<li><strong>Size:</strong> 2.4 trillion total, 71 billion active, is Alibaba’s description.</li>\n<li><strong>Price:</strong> the 0.075 dollar cache-hit rate is the number they printed.</li>\n<li><strong>Open weights:</strong> “soon” is not a download.</li>\n</ul>\n<p>Until the smaller Qwen4 weights are posted, Qwen4-Max is a hosted model with a Hangzhou announcement on 16 November.</p>"
+  },
+  "nl": {
+    "title": "Alibaba lanceert Qwen4-Max",
+    "description": "Alibaba Cloud onthulde Qwen4-Max op 16 november 2026 in Hangzhou. Het bedrijf zegt dat het 2,4 biljoen parameters heeft en een context van 1 miljoen tokens.",
+    "body": "<p>Alibaba Cloud onthulde Qwen4-Max op 16 november 2026 in Hangzhou. Het bedrijf zegt dat het model in totaal 2,4 biljoen parameters heeft en er 71 miljard per token activeert, wat het 25 procent minder noemt dan Qwen3.8-Max. Het zegt dat het model native beeld heeft en een context van 1 miljoen tokens. Het is beschikbaar op het QwenCloud Token Plan en de API. Een impliciete cache-hit op invoer staat op 0,075 dollar per miljoen tokens. Kleinere open-weight Qwen4-modellen worden beschreven als binnenkort.</p>\n<p>De foto is een serverruimte. Het is geen datacenter van Alibaba en niet Qwen.</p>\n<h2>Welke scores noemt Alibaba echt?</h2>\n<p><strong>Eén rang, en een kostenvergelijking met het eigen vorige model.</strong> Het persbericht zegt dat Qwen4-Max zesde staat op Code Arena. Op Work360 zegt het dat het model Qwen3.8-Max verslaat met 35 procent minder tokens bij High effort, en tegen ongeveer 60 procent lagere gemiddelde kosten per taak. Die cijfers vergelijken Alibaba met Alibaba. Het is geen rang tegen Fable, Carbon of Grok.</p>\n<h2>Dus wat verandert een Chinees lab voor SpaceXSI?</h2>\n<p><strong>Het is nog een frontiermodel in de verkoop in dezelfde maand, geen vonnis.</strong> De Grok 4.7-pagina van SpaceXSI beschrijft dat model nog als het meest capabel voor programmeren en kenniswerk, vanaf 2 dollar per miljoen invoertokens. De notitie van Alibaba noemt Grok niet. Deze pagina verzint geen winnaar.</p>\n<h2>Waar moeten we nu op letten?</h2>\n<p><strong>Of de kleinere gewichten echt verschijnen.</strong> De openbare claims stoppen bij het persbericht:</p>\n<ul>\n<li><strong>Omvang:</strong> 2,4 biljoen totaal en 71 miljard actief is de beschrijving van Alibaba.</li>\n<li><strong>Prijs:</strong> het cache-tarief van 0,075 dollar is het getal dat ze drukten.</li>\n<li><strong>Open weights:</strong> “binnenkort” is geen download.</li>\n</ul>\n<p>Tot de kleinere Qwen4-gewichten online staan, is Qwen4-Max een gehost model met een aankondiging in Hangzhou op 16 november.</p>"
+  }
+}

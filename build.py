@@ -927,7 +927,7 @@ header.hb .pnav>.is-parked{display:none}
 .pv-th{position:relative;container-type:inline-size;border-radius:6px;overflow:hidden;border:1px solid var(--edge);background:#000}
 .pv-th img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
 .pv-hl{min-width:0}
-.pv-hl b{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:.95rem;line-height:1.2;font-weight:400;color:var(--blue)}
+.pv-hl b{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;white-space:normal;font-size:.95rem;line-height:1.3;font-weight:400;color:var(--blue)}
 .pv-min{justify-self:end;min-width:42px;text-align:center;border:1px solid var(--border2);border-radius:8px;padding:1px 0;line-height:1}
 .pv-min b{display:block;color:var(--red);font-size:.85rem;line-height:1}
 .pv-min small{display:block;color:var(--dim);font-size:.58rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;line-height:1}
@@ -974,9 +974,32 @@ header.hb .pnav>.is-parked{display:none}
 .sheet .leadstory{margin-top:1px;align-items:start}
 .pv-side{margin-top:1px}
 .sheet:has(.leadstory)>.pv-side{margin-top:3px}
-/* Homepage: the lead photo and the red rule above Latest news share one top edge. */
-.sheet.front .leadstory{margin-top:0}
-.sheet.front:has(.leadstory)>.pv-side{margin-top:0}
+/* Homepage: the top block and the red rule above Latest news share one top edge. */
+.sheet.front .leadstory,.sheet.front .layerrow{margin-top:0}
+.sheet.front>.pv-side,.sheet.front:has(.leadstory)>.pv-side{margin-top:0}
+.layerrow{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0 0 22px;align-items:stretch}
+.lcard{display:flex;flex-direction:column;min-width:0;height:100%;text-decoration:none;color:inherit;background:#141414;border:1px solid #2a2a2a;border-top:3px solid #444;border-radius:8px;overflow:hidden}
+.layerrow .lcard:last-child{grid-column:1 / -1}
+.lcard .lim{display:block;aspect-ratio:16/9;background:#101010;overflow:hidden}
+.lcard .lim img{width:100%;height:100%;object-fit:cover}
+.lcard .lbody{display:flex;flex-direction:column;gap:4px;padding:8px 10px 10px;min-width:0;flex:1}
+.lcard .lname{font-size:.68rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+.lcard strong{font-size:.92rem;line-height:1.28;font-weight:800}
+.lcard.tesla{border-top-color:#E31937}.lcard.tesla .lname{color:#ff8a9b}
+.lcard.energy{border-top-color:#4CD964}.lcard.energy .lname{color:#b8ffc6}
+.lcard.spacex{border-top-color:#FF7A00}.lcard.spacex .lname{color:#ffc48a}
+.lcard.link{border-top-color:#00D1FF}.lcard.link .lname{color:#a6f4ff}
+.lcard.spacexsi{border-top-color:#FFC400}.lcard.spacexsi .lname{color:#ffe28a}
+.lcard.neural{border-top-color:#FF2D95}.lcard.neural .lname{color:#ffb3d6}
+.lcard.boring{border-top-color:#2F6BFF}.lcard.boring .lname{color:#b3c8ff}
+.lcard.empty{border-color:rgba(255,45,149,.55);background:linear-gradient(165deg,#ff2d95 0%,#c41878 38%,#3a0824 100%)}
+.lcard.empty .lbody{justify-content:flex-end;padding:16px 14px 14px}
+.lcard.empty .lname,.lcard.empty strong{color:#fff}
+@media (min-width:700px){
+.layerrow{grid-template-columns:repeat(12,minmax(0,1fr))}
+.layerrow .lcard{grid-column:span 4}
+.layerrow .lcard:nth-child(n+4){grid-column:span 3}
+}
 .sheet-main article.narrow,.sheet-main>.narrow{max-width:none;margin:0}
 .sheet-main article.narrow>h1,.sheet-main article.narrow .cform,.sheet-main article.narrow .lead,.sheet-main article.narrow .prose{margin-left:0;margin-right:0}
 .sheet-main .prose{max-width:none}
@@ -1118,6 +1141,16 @@ a.eco-node.link:hover,a.eco-node.link:focus-visible,a.eco-node.boring:hover,a.ec
 .eco-node .eco-k{font-size:.78rem}
 .eco-node li{font-size:.62rem;line-height:1.2}
 .eco-core{font-size:.84rem}
+}
+/* Narrow screens: stack the boxes in normal flow so a taller wrap can never overlap the next box. */
+@media (max-width:700px){
+.eco-orbit{aspect-ratio:auto!important;height:auto!important;overflow:hidden}
+.eco-arc{position:relative!important;inset:auto!important;display:flex;flex-direction:column;gap:12px;margin:12px 0 12px 76px;width:min(170px,calc(100% - 88px));z-index:2}
+.eco-node{position:relative!important;left:auto!important;top:auto!important;right:auto!important;bottom:auto!important;transform:none!important;width:100%!important;max-width:170px}
+.eco-node::before{content:"";position:absolute;top:50%;right:100%;width:12px;border-top:1.6px solid rgba(198,240,255,.9);pointer-events:none}
+.eco-sun{top:12px!important;bottom:12px!important;left:64px!important;width:auto!important;height:auto!important;aspect-ratio:1;transform:translateX(-100%)!important;margin:0}
+.eco-rays{display:none!important}
+.eco-core{left:2px!important;width:58px!important;font-size:.72rem!important}
 }
 @media (min-width:1100px){header.hb .id{gap:55px}}
 @media (min-width:900px){
@@ -3251,18 +3284,19 @@ def home_lead(a, lang, title_tag="h1"):
             f'<a class="btn" href="{href}">{esc(L["read_story"])}</a></div></article>')
 
 
-def home_videos(arts, lang, n=8):
+def home_videos(arts, lang, n=8, skip_ids=()):
     """Compact strip of the newest stories that have a long video or a Short. Links to the article."""
     by = {a["slug"]: a for a in arts}
     rows = []
     seen = set()
+    banned = set(skip_ids)
     for (slug, vlang), video in VIDEOS.items():
-        if vlang not in ("en", lang) or slug not in by or slug in seen:
+        if vlang not in ("en", lang) or slug not in by or slug in seen or id(by[slug]) in banned:
             continue
         seen.add(slug)
         rows.append((by[slug], video.get("seconds") or 0, False))
     for slug, short in SHORTS.items():
-        if slug not in by or slug in seen:
+        if slug not in by or slug in seen or id(by[slug]) in banned:
             continue
         seen.add(slug)
         rows.append((by[slug], 0, True))
@@ -3401,17 +3435,45 @@ def shell(main, side, extra=""):
     return f'<div class="{klass}"><div class="sheet-main">{main}</div>{side}</div>'
 
 
+def layer_latest(arts, lang):
+    """One card per ecosystem layer: its newest article, or a note when coverage has not started."""
+    used = set()
+    cards = []
+    shown = []
+    note = "Coverage starting" if lang == "en" else "Verslaggeving start binnenkort"
+    for layer in LAYERS:
+        name = _bi(layer["title"], lang)
+        tone = layer["tone"]
+        pick = next((a for a in _layer_articles(layer, arts) if id(a) not in used), None)
+        if pick is None:
+            cards.append(
+                f'<a class="lcard empty {tone}" href="{url(lang, layer["path"])}">'
+                f'<span class="lbody"><span class="lname">{esc(name)}</span>'
+                f'<strong>{esc(note)}</strong></span></a>')
+            continue
+        used.add(id(pick))
+        shown.append(pick)
+        t = pick[lang]
+        cards.append(
+            f'<a class="lcard {tone}" href="{url(lang, pick["slug"] + "/")}">'
+            f'<span class="lim">{resp_img(site_img(pick), t["title"], "(max-width: 699px) 46vw, 220px", lazy=False, width=640, height=360)}</span>'
+            f'<span class="lbody"><span class="lname">{esc(name)}</span><strong>{esc(t["title"])}</strong></span></a>')
+    label = "Latest from each layer" if lang == "en" else "Het laatste per laag"
+    return f'<section class="layerrow" aria-label="{esc(label)}">{"".join(cards)}</section>', shown
+
+
 def homepage(arts, lang):
-    """Lead story, video strip, clock-time list, and the shared sidebar."""
+    """A card from each ecosystem layer, then the video strip and the rest of the day's list."""
     L = LANGS[lang]
     if not arts:
         return shell(f'<h1>{esc(NAME)}</h1><p class="empty">{L["empty"]}</p>', page_side(arts, lang, "home"))
-    lead = arts[0]
-    videos, strip_arts = home_videos(arts, lang, 8)
+    row, shown = layer_latest(arts, lang)
+    videos, strip_arts = home_videos(arts, lang, 8, skip_ids={id(a) for a in shown})
     strip = f'<div class="vstrip">{videos}</div>' if videos else ""
-    feed = [x for x in arts if x is not lead][:14]
-    main = home_lead(lead, lang) + strip + pv_feed(feed, lang, thumbs=2)
-    return shell(main, page_side(arts, lang, "home", skip=[lead, *strip_arts, *feed]), "front")
+    used = {id(a) for a in shown} | {id(a) for a in strip_arts}
+    feed = [x for x in arts if id(x) not in used][:14]
+    main = (f'<h1 class="visually-hidden">{esc(NAME)}</h1>{row}{strip}{pv_feed(feed, lang, thumbs=2)}')
+    return shell(main, page_side(arts, lang, "home", skip=[*shown, *strip_arts, *feed]), "front")
 
 
 def pv_copy(lang):

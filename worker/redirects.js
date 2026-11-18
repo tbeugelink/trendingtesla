@@ -111,4 +111,8 @@ export const REDIRECTS = {
   "/nl/category/boring/": "/nl/boring/",
   "/category/xai/": "/spacexsi/",
   "/nl/category/xai/": "/nl/spacexsi/",
+  "/agi-race/": "/agi/",
+  "/nl/agi-race/": "/nl/agi/",
+  "/buying-guides/": "/guides/",
+  "/nl/buying-guides/": "/nl/gidsen/",
 };

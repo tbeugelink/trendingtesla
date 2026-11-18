@@ -5752,17 +5752,34 @@ def write_redirects():
         return
     rows = json.loads(src.read_text(encoding="utf-8"))
     lines = ["# Removed articles. Source of truth: content/redirects.json"]
+    seen = set()
+
+    def add(frm, to):
+        if frm in seen or frm == to:
+            return
+        seen.add(frm)
+        lines.append(f"{frm} {to} 301")
+
     for row in rows:
         frm, to = row["from"], row["to"]
-        lines.append(f"{frm} {to} 301")
+        add(frm, to)
         if frm.endswith("/") and frm != "/":
-            lines.append(f"{frm[:-1]} {to} 301")
+            add(frm[:-1], to)
     for key, dest in REDIRECT_CATS.items():
         for prefix in ("", "/nl"):
             frm = f"{prefix}/category/{key}/"
             to = f"{prefix}/{dest}"
-            lines.append(f"{frm} {to} 301")
-            lines.append(f"{frm[:-1]} {to} 301")
+            add(frm, to)
+            add(frm[:-1], to)
+    # Labels people type as URLs. The real pages are /agi/ and /guides/.
+    add("/agi-race/", "/agi/")
+    add("/agi-race", "/agi/")
+    add("/nl/agi-race/", "/nl/agi/")
+    add("/nl/agi-race", "/nl/agi/")
+    add("/buying-guides/", "/guides/")
+    add("/buying-guides", "/guides/")
+    add("/nl/buying-guides/", "/nl/gidsen/")
+    add("/nl/buying-guides", "/nl/gidsen/")
     # Host and scheme redirects are not allowed here. Workers static assets only
     # accept a path as the source (2,000 static rules, 100 dynamic). www, http,
     # and the trailing slash are 301s in worker/index.js.

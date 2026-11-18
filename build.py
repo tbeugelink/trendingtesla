@@ -1970,7 +1970,6 @@ MODEL_ROOTS = ["model-s", "model-3", "model-x", "model-y", "cybertruck", "cyberc
 def modelnav(lang, current=None):
     """Models with their versions: a model header with a bar (photo + type/year) per version."""
     cur_root = (MODELS[current].get("parent") or current) if current else None
-    ov = {"en": "Overview", "nl": "Overzicht"}[lang]
     rows = ""
     for r in MODEL_ROOTS:
         kids = [(k, v) for k, v in MODELS.items() if v.get("parent") == r]
@@ -1979,7 +1978,7 @@ def modelnav(lang, current=None):
             lbl = v["label"][lang] if isinstance(v["label"], dict) else v["label"]
             items.append((k, lbl.split(" · ")[0], v.get("menu")))
         if not items:
-            items = [(r, ov, MODELS[r].get("menu"))]
+            items = [(r, MODELS[r]["name"], MODELS[r].get("menu"))]
         bars = ""
         for k, lbl, img in items:
             src = f"/img/models/{img}" if img and (STATIC / "img" / "models" / img).exists() else ""
@@ -4167,7 +4166,7 @@ HUBS = [
     },
     {
         "key": "boring", "path": "boring/",
-        "title": {"en": "The Boring Company", "nl": "The Boring Company"},
+        "title": {"en": "Boring Co.", "nl": "Boring Co."},
         "topics": ["boring"],
         "categories": ["boring"],
         "keywords": ["boring company", "vegas loop", "cybertunnel"],
@@ -4632,7 +4631,7 @@ LAYERS = [
     {
         "key": "boring", "path": "boring/", "tone": "boring", "nav": "boring", "hub": "boring",
         "kicker": {"en": "7 · Boring Co.", "nl": "7 · Boring Co."},
-        "title": {"en": "The Boring Company", "nl": "The Boring Company"},
+        "title": {"en": "Boring Co.", "nl": "Boring Co."},
         "fact": {"en": "Car tunnels", "nl": "Autotunnels"},
         "stats": [],
         "links": [],

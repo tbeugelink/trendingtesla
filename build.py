@@ -928,6 +928,7 @@ header.hb .pnav>.is-parked{display:none}
 .pv-th img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
 .pv-hl{min-width:0}
 .pv-hl b{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:.95rem;line-height:1.2;font-weight:400;color:var(--blue)}
+@media (max-width:700px){.pv-hl b{white-space:normal;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;line-height:1.3}}
 .pv-min{justify-self:end;min-width:42px;text-align:center;border:1px solid var(--border2);border-radius:8px;padding:1px 0;line-height:1}
 .pv-min b{display:block;color:var(--red);font-size:.85rem;line-height:1}
 .pv-min small{display:block;color:var(--dim);font-size:.58rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;line-height:1}
@@ -977,23 +978,28 @@ header.hb .pnav>.is-parked{display:none}
 /* Homepage: the top block and the red rule above Latest news share one top edge. */
 .sheet.front .leadstory,.sheet.front .layerrow{margin-top:0}
 .sheet.front>.pv-side,.sheet.front:has(.leadstory)>.pv-side{margin-top:0}
-.layerrow{display:flex;gap:10px;margin:0 0 22px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:thin;align-items:start}
-.lcard{flex:0 0 calc(50% - 5px);scroll-snap-align:start;display:flex;flex-direction:column;min-width:0;text-decoration:none;color:inherit;background:#141414;border:1px solid #2a2a2a;border-top:3px solid #444;border-radius:8px;overflow:hidden}
+.layerrow{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0 0 22px;align-items:stretch}
+.lcard{display:flex;flex-direction:column;min-width:0;height:100%;text-decoration:none;color:inherit;background:#141414;border:1px solid #2a2a2a;border-top:3px solid #444;border-radius:8px;overflow:hidden}
+.layerrow .lcard:last-child{grid-column:1 / -1}
 .lcard .lim{display:block;aspect-ratio:16/9;background:#101010;overflow:hidden}
-.lcard .lim img{width:100%;height:100%;object-fit:cover;aspect-ratio:16/9}
-.lcard .lbody{display:flex;flex-direction:column;gap:4px;padding:8px 10px 10px;min-width:0}
+.lcard .lim img{width:100%;height:100%;object-fit:cover}
+.lcard .lbody{display:flex;flex-direction:column;gap:4px;padding:8px 10px 10px;min-width:0;flex:1}
 .lcard .lname{font-size:.68rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
-.lcard strong{font-size:.92rem;line-height:1.28;font-weight:800;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
-.lcard.tesla{border-top-color:#E31937}.lcard.tesla .lname{color:#ff8a9b}.lcard.tesla.empty .lim{background:#3a0812}
-.lcard.energy{border-top-color:#4CD964}.lcard.energy .lname{color:#b8ffc6}.lcard.energy.empty .lim{background:#063216}
-.lcard.spacex{border-top-color:#FF7A00}.lcard.spacex .lname{color:#ffc48a}.lcard.spacex.empty .lim{background:#3a1400}
-.lcard.link{border-top-color:#00D1FF}.lcard.link .lname{color:#a6f4ff}.lcard.link.empty .lim{background:#043040}
-.lcard.spacexsi{border-top-color:#FFC400}.lcard.spacexsi .lname{color:#ffe28a}.lcard.spacexsi.empty .lim{background:#3a2c04}
-.lcard.neural{border-top-color:#FF2D95}.lcard.neural .lname{color:#ffb3d6}.lcard.neural.empty .lim{background:#3a0824}
-.lcard.boring{border-top-color:#2F6BFF}.lcard.boring .lname{color:#b3c8ff}.lcard.boring.empty .lim{background:#0c1840}
+.lcard strong{font-size:.92rem;line-height:1.28;font-weight:800}
+.lcard.tesla{border-top-color:#E31937}.lcard.tesla .lname{color:#ff8a9b}
+.lcard.energy{border-top-color:#4CD964}.lcard.energy .lname{color:#b8ffc6}
+.lcard.spacex{border-top-color:#FF7A00}.lcard.spacex .lname{color:#ffc48a}
+.lcard.link{border-top-color:#00D1FF}.lcard.link .lname{color:#a6f4ff}
+.lcard.spacexsi{border-top-color:#FFC400}.lcard.spacexsi .lname{color:#ffe28a}
+.lcard.neural{border-top-color:#FF2D95}.lcard.neural .lname{color:#ffb3d6}
+.lcard.boring{border-top-color:#2F6BFF}.lcard.boring .lname{color:#b3c8ff}
+.lcard.empty{border-color:rgba(255,45,149,.55);background:linear-gradient(165deg,#ff2d95 0%,#c41878 38%,#3a0824 100%)}
+.lcard.empty .lbody{justify-content:flex-end;padding:16px 14px 14px}
+.lcard.empty .lname,.lcard.empty strong{color:#fff}
 @media (min-width:700px){
-.layerrow{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));overflow:visible}
-.lcard{flex:none}
+.layerrow{grid-template-columns:repeat(12,minmax(0,1fr))}
+.layerrow .lcard{grid-column:span 4}
+.layerrow .lcard:nth-child(n+4){grid-column:span 3}
 }
 .sheet-main article.narrow,.sheet-main>.narrow{max-width:none;margin:0}
 .sheet-main article.narrow>h1,.sheet-main article.narrow .cform,.sheet-main article.narrow .lead,.sheet-main article.narrow .prose{margin-left:0;margin-right:0}
@@ -3425,7 +3431,7 @@ def layer_latest(arts, lang):
     used = set()
     cards = []
     shown = []
-    note = _coverage_note(lang)
+    note = "Coverage starting" if lang == "en" else "Verslaggeving start binnenkort"
     for layer in LAYERS:
         name = _bi(layer["title"], lang)
         tone = layer["tone"]
@@ -3433,7 +3439,7 @@ def layer_latest(arts, lang):
         if pick is None:
             cards.append(
                 f'<a class="lcard empty {tone}" href="{url(lang, layer["path"])}">'
-                f'<span class="lim"></span><span class="lbody"><span class="lname">{esc(name)}</span>'
+                f'<span class="lbody"><span class="lname">{esc(name)}</span>'
                 f'<strong>{esc(note)}</strong></span></a>')
             continue
         used.add(id(pick))

@@ -1473,7 +1473,12 @@ def assign_photos(arts):
         recent_files = [h[0] for h in hist[-4:]] + [h[0] for h in local]
         recent_scenes = [h[1] for h in hist[-3:]] + [h[1] for h in local]
         own = f"/img/{a['image']}" if a.get("image") and (STATIC / "img" / a["image"]).exists() else None
-        pick = own if own and own not in recent_files else None
+        # image_lock keeps the photo the article names. Neighbour-avoidance must not
+        # swap in a Tesla or SpaceX picture for a different company's story.
+        if a.get("image_lock") and own:
+            pick = own
+        else:
+            pick = own if own and own not in recent_files else None
         if not pick and a.get("images"):
             # explicit images: keep their order (best first), only skip one that a neighbour just used
             exp = [c for c in photos if c.split("/img/", 1)[-1].replace("topics/", "") in a["images"]

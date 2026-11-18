@@ -73,7 +73,6 @@ Run: python3 build.py   (needs Pillow: pip install --break-system-packages pillo
 import hashlib
 import html
 import json
-import math
 import os
 import re
 import shutil
@@ -1133,13 +1132,16 @@ header.hb .pnav>.is-parked{display:none}
 .eco-flow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
 .eco-join{display:none}
 }
-.eco-orbit{position:relative;overflow:hidden;margin:0 0 22px;isolation:isolate;height:auto;aspect-ratio:var(--ow)/var(--oh)}
-.eco-sun{position:absolute;z-index:0;top:50%;left:calc(var(--sl)*1%);width:calc(var(--sd)*1%);height:auto;aspect-ratio:1;transform:translateY(-50%);border-radius:50%;pointer-events:none;background:radial-gradient(circle at 81% 50%, #f7feff 0 .8%, #8af3ff 3.2%, #00b4e0 9%, #07506e 22%, #08131c 40%, transparent 54%);box-shadow:inset -30px 0 70px rgba(120,230,255,.28);border:1px solid rgba(170,240,255,.4)}
+.eco-orbit{position:relative;overflow:hidden;margin:0 0 22px;isolation:isolate;min-height:280px}
+.eco-sun{position:absolute;z-index:0;border-radius:50%;pointer-events:none;background:radial-gradient(circle at 50% 50%, #f7feff 0 .8%, #8af3ff 3.2%, #00b4e0 9%, #07506e 22%, #08131c 40%, transparent 54%);box-shadow:inset 0 0 70px rgba(120,230,255,.28);border:1px solid rgba(170,240,255,.4)}
 .eco-sun::after{content:"";position:absolute;inset:12%;border-radius:50%;border:1px solid rgba(160,235,255,.25)}
-.eco-core{position:absolute;z-index:3;left:calc(var(--cl)*1%);top:50%;transform:translateY(-50%);width:calc(var(--cw)*1%);margin:0;text-align:center;font-weight:800;font-size:1.05rem;line-height:1.12;letter-spacing:-.03em;color:#fff;text-shadow:0 0 8px #d8fbff, 0 0 18px #00c2ea;pointer-events:none}
-.eco-rays{position:absolute;inset:0;z-index:1;width:100%;height:100%;pointer-events:none;display:none}
-.eco-arc{position:absolute;inset:0;z-index:2;margin:0}
-.eco-node{position:absolute;left:var(--bx);top:var(--by);width:170px;transform:translateY(-50%);margin:0;padding:6px 8px 5px;border-radius:8px}
+.eco-core{position:absolute;z-index:3;margin:0;text-align:center;font-weight:800;font-size:1.05rem;line-height:1.12;letter-spacing:-.03em;color:#fff;text-shadow:0 0 8px #d8fbff, 0 0 18px #00c2ea;pointer-events:none;transform:translate(-50%,-50%)}
+.eco-rays{position:absolute;left:0;top:0;z-index:1;pointer-events:none;overflow:visible}
+.eco-arc{position:relative;z-index:2;display:flex;flex-direction:column;gap:12px;margin:0}
+.eco-node{position:relative;width:auto;margin:0;padding:6px 8px 5px;border-radius:8px}
+.eco-orbit.is-set{height:auto}
+.eco-orbit.is-set .eco-arc{position:absolute;inset:0;margin:0}
+.eco-orbit.is-set .eco-node{position:absolute}
 .eco-node .eco-k{display:block;font-size:.92rem;font-weight:800;line-height:1.15;margin:0;letter-spacing:.04em}
 .eco-node ul{margin:4px 0 0;padding:0 0 0 1.05em}
 .eco-node li{font-size:.68rem;line-height:1.22}
@@ -1150,16 +1152,6 @@ a.eco-node.link:hover,a.eco-node.link:focus-visible,a.eco-node.boring:hover,a.ec
 .eco-node .eco-k{font-size:.78rem}
 .eco-node li{font-size:.62rem;line-height:1.2}
 .eco-core{font-size:.84rem}
-}
-/* Narrow screens: stack the boxes in normal flow so a taller wrap can never overlap the next box. */
-@media (max-width:700px){
-.eco-orbit{aspect-ratio:auto!important;height:auto!important;overflow:hidden}
-.eco-arc{position:relative!important;inset:auto!important;display:flex;flex-direction:column;gap:12px;margin:12px 0 12px 76px;width:min(170px,calc(100% - 88px));z-index:2}
-.eco-node{position:relative!important;left:auto!important;top:auto!important;right:auto!important;bottom:auto!important;transform:none!important;width:100%!important;max-width:170px}
-.eco-node::before{content:"";position:absolute;top:50%;right:100%;width:12px;border-top:1.6px solid rgba(198,240,255,.9);pointer-events:none}
-.eco-sun{top:12px!important;bottom:12px!important;left:64px!important;width:auto!important;height:auto!important;aspect-ratio:1;transform:translateX(-100%)!important;margin:0}
-.eco-rays{display:none!important}
-.eco-core{left:2px!important;width:58px!important;font-size:.72rem!important}
 }
 @media (min-width:1100px){header.hb .id{gap:55px}}
 @media (min-width:900px){
@@ -3944,253 +3936,164 @@ def _eco_piece(block, lang, kind, extra_cls="", style="", links=True):
     return f'<div class="{cls} {tone}{extra_cls}"{style_attr}>{inner}{extra}{chips}</div>'
 
 
-def _arc_points(n, cx, cy, radius, y0, y1):
-    """Left edges on a circle, evenly spaced from y0 to y1. The middle bows right."""
-    pts = []
-    for i in range(n):
-        y = y0 + (y1 - y0) * i / (n - 1)
-        dy = y - cy
-        dx = math.sqrt(max(radius * radius - dy * dy, 0))
-        pts.append((cx + dx, y))
-    return pts
-
-
-def _orbit_box(block, lang, style):
+def _orbit_box(block, lang):
     """Coloured layer name plus one bullet per part. The whole box is the link."""
     kicker = _bi(block.get("kicker"), lang)
     parts = [part.strip() for part in _bi(block.get("fact"), lang).split(",") if part.strip()]
     tone = block.get("tone") or ""
     items = "".join(f"<li>{esc(part)}</li>" for part in parts)
     return (
-        f'<a class="eco-card eco-node {tone}" href="{url(lang, block.get("href") or "")}" style="{style}">'
+        f'<a class="eco-card eco-node {tone}" href="{url(lang, block.get("href") or "")}">'
         f'<span class="eco-k">{esc(kicker)}</span><ul>{items}</ul></a>'
     )
 
 
-# Viewport bucket, the main-column width it is drawn for, and the orbit height.
-# Wide rows still have the sidebar. At 900px and below the sidebar stacks.
-_ORBIT_FRAMES = (
-    ("wide", None, 818, 820),
-    ("w1100", 1099.98, 740, 880),
-    ("w960", 959.98, 618, 860),
-    ("w900", 900, 796, 820),
-    ("w700", 700, 676, 860),
-    ("w560", 560, 536, 900),
-    ("w390", 420, 366, 920),
-)
-# w560 and w390 ignore the fixed height and size the disk to the boxes.
-_ORBIT_HUG = {"w560", "w390"}
-
-
-# Manrope advance widths (units of 2000) for the glyphs the map boxes use.
-# Weight 800 is the kicker; weight 400 is the list. Unknown glyphs use 1200.
-_MANROPE_800 = dict(zip(
-    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 ·'’,-/&",
-    [1366,1274,1492,1420,1180,1060,1482,1468,592,1026,1330,1082,1720,1458,1516,1300,1516,1340,1342,1220,1452,1306,1978,1344,1260,1360,1166,1248,1166,1250,1216,772,1248,1272,592,602,1104,592,1832,1272,1254,1248,1250,824,1094,888,1272,1136,1628,1126,1140,1070,1348,908,1208,1182,1230,1178,1244,1088,1246,1244,400,560,552,610,632,840,896,1348]))
-_MANROPE_400 = dict(zip(
-    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 ·'’,-/&",
-    [1267,1226,1431,1343,1140,1007,1410,1369,467,927,1187,1021,1681,1369,1447,1208,1447,1261,1233,1193,1404,1207,1871,1212,1112,1228,1111,1184,1107,1185,1169,709,1184,1188,467,501,992,467,1696,1188,1183,1184,1185,721,1050,801,1188,1016,1535,1054,1055,1059,1220,780,1140,1106,1179,1155,1241,1004,1161,1241,400,453,427,443,531,840,775,1303]))
-
-
-def _text_px(text, size, weight, tracking=0.0):
-    table = _MANROPE_800 if weight >= 700 else _MANROPE_400
-    width = 0.0
-    for ch in text:
-        width += table.get(ch, 1200) / 2000 * size
-    if tracking and len(text) > 1:
-        width += tracking * (len(text) - 1)
-    return width
-
-
-def _line_count(text, max_w, size, weight, tracking=0.0):
-    """How many lines CSS wraps this string onto, breaking at spaces and hyphens."""
-    if not text:
-        return 1
-    tokens = []
-    buf = ""
-    for ch in text:
-        buf += ch
-        if ch in " -":
-            tokens.append(buf)
-            buf = ""
-    if buf:
-        tokens.append(buf)
-    lines, current = 1, ""
-    for token in tokens:
-        trial = current + token
-        if current and _text_px(trial, size, weight, tracking) > max_w + 0.3:
-            lines += 1
-            current = token[1:] if token.startswith(" ") else token
-        else:
-            current = trial
-    return lines
-
-
-def _box_heights(blocks, lang, small=False):
-    """Rendered box heights, so the gap between boxes can be equal in pixels."""
-    k_size = 12.48 if small else 14.72
-    k_lh = k_size * 1.15
-    li_size = 9.92 if small else 10.88
-    li_lh = li_size * (1.2 if small else 1.22)
-    inner = 170 - 2 - 16
-    li_inner = inner - 1.05 * li_size
-    tracking = 0.04 * k_size
-    heights = []
-    for block in blocks:
-        kicker = _bi(block.get("kicker"), lang)
-        fact = _bi(block.get("fact"), lang)
-        k_lines = _line_count(kicker, inner, k_size, 800, tracking)
-        parts = [part.strip() for part in fact.split(",") if part.strip()]
-        li_lines = sum(_line_count(part, li_inner, li_size, 400) for part in parts)
-        heights.append(1 + 6 + k_lines * k_lh + 4 + li_lines * li_lh + 5 + 1)
-    return heights
-
-
-def _equal_points(heights, height, vgap, cy, cx, reach, stub, core_right):
-    """Centers stacked with one shared bottom-to-top gap, anchors on the circle."""
-    total = sum(heights) + (len(heights) - 1) * vgap
-    top = (height - total) / 2
-    if top < 2:
-        return None
-    pts = []
-    y = top
-    for h in heights:
-        center = y + h / 2
-        if center + h / 2 > height - 2:
-            return None
-        dy = center - cy
-        inside = reach * reach - dy * dy
-        if inside <= 1:
-            return None
-        x = cx + math.sqrt(inside)
-        pts.append((x, center))
-        y += h + vgap
-    if min(px for px, _py in pts) - stub < core_right + 6:
-        return None
-    return pts
-
-
-def _orbit_frame(width, height, heights, gap=32, box_w=170, margin=12, stub=28, hug=False):
-    """Circle kept fully inside the map. Box anchors share one radial distance.
-    The gap between the bottom of one box and the top of the next is constant."""
-    if hug:
-        vgap, pad = 12, 16
-        gap, margin = 40, 6
-        total = sum(heights) + (len(heights) - 1) * vgap
-        height = total + pad * 2
-        radius = (height - 40) / 2
-        cy = height / 2
-        visible = min(0.4 * (radius * 2), width - margin - gap - box_w)
-        cx = visible - radius
-        reach = radius + gap
-        y = float(pad)
-        pts = []
-        for h in heights:
-            center = y + h / 2
-            dy = center - cy
-            pts.append((cx + math.sqrt(max(reach * reach - dy * dy, 0)), center))
-            y += h + vgap
-        core_w = 64 if width < 480 else 78
-        core_left = 2
-        return {
-            "d": radius * 2, "visible": visible, "cx": cx, "cy": cy, "pts": pts,
-            "core_left": core_left, "core_w": core_w, "core_right": core_left + core_w,
-            "w": width, "h": height, "stub": stub,
-        }
-    target = 1280 * 0.7
-    if 0.4 * target + gap + box_w + margin <= width:
-        diameter = target
-    else:
-        diameter = (width - margin - gap - box_w) / 0.4
-    diameter = min(diameter, height - 40)
-    radius = diameter / 2
-    visible = 0.4 * diameter
-    cx = visible - radius
-    cy = height / 2
-    reach = radius + gap
-    core_w = 120 if width >= 560 else 88
-    core_left = 10 if width >= 560 else 4
-    core_right = core_left + core_w
-    best, lo, hi = None, 8.0, 64.0
-    for _ in range(28):
-        mid = (lo + hi) / 2
-        pts = _equal_points(heights, height, mid, cy, cx, reach, stub, core_right)
-        if pts:
-            best, lo = pts, mid
-        else:
-            hi = mid
-    if not best:
-        best = _equal_points(heights, height, 8, cy, cx, reach, stub, core_right)
-    return {
-        "d": diameter, "visible": visible, "cx": cx, "cy": cy, "pts": best,
-        "core_left": core_left, "core_w": core_w, "core_right": core_right,
-        "w": width, "h": height, "stub": stub,
-    }
-
-
 def _orbit_blocks(blocks, lang):
-    """Boxes on one concentric arc. Each viewport bucket has its own circle and lines."""
-    desktop = _box_heights(blocks, lang, small=False)
-    small = _box_heights(blocks, lang, small=True)
-    frames = []
-    for name, _query, width, height in _ORBIT_FRAMES:
-        hug = name in _ORBIT_HUG
-        frames.append((name, _orbit_frame(
-            width, height, small if hug else desktop, hug=hug)))
-    parts = []
-    for i, block in enumerate(blocks):
-        vars = []
-        for name, frame in frames:
-            x, y = frame["pts"][i]
-            vars.append(f"--x{name}:{x / frame['w'] * 100:.2f}%")
-            vars.append(f"--y{name}:{y / frame['h'] * 100:.2f}%")
-        parts.append(_orbit_box(block, lang, ";".join(vars)))
+    """Boxes along an arc. Lines are drawn from the measured circle centre."""
+    parts = "".join(_orbit_box(block, lang) for block in blocks)
     label = "Elon ecosystem" if lang == "en" else "Elon-ecosysteem"
-    stroke = 'fill="none" stroke="rgba(198,240,255,.9)" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="round"'
-    rays = []
-    wide = frames[0][1]
-    rules = [
-        (f'.eco-orbit{{--ow:{wide["w"]};--oh:{wide["h"]};'
-         f'--sl:{(wide["visible"] - wide["d"]) / wide["w"] * 100:.2f};'
-         f'--sd:{wide["d"] / wide["w"] * 100:.2f};'
-         f'--cl:{wide["core_left"] / wide["w"] * 100:.2f};'
-         f'--cw:{wide["core_w"] / wide["w"] * 100:.2f}}}'),
-        ".eco-node{--bx:var(--xwide);--by:var(--ywide)}",
-        ".eco-rays-wide{display:block}",
-    ]
-    for name, frame in frames:
-        paths = []
-        for x, y in frame["pts"]:
-            paths.append(
-                f'<path d="M{frame["core_right"]:.1f} {frame["cy"]:.1f} '
-                f'L{x - frame["stub"]:.1f} {y:.1f} L{x + 1.2:.1f} {y:.1f}"/>')
-        rays.append(
-            f'<svg class="eco-rays eco-rays-{name}" viewBox="0 0 {frame["w"]} {frame["h"]}" '
-            f'preserveAspectRatio="none" aria-hidden="true"><g {stroke}>{"".join(paths)}</g></svg>')
-        if name == "wide":
-            continue
-        query = next(q for nm, q, _w, _h in _ORBIT_FRAMES if nm == name)
-        sun_left = (frame["visible"] - frame["d"]) / frame["w"] * 100
-        sun_d = frame["d"] / frame["w"] * 100
-        core_l = frame["core_left"] / frame["w"] * 100
-        core_w = frame["core_w"] / frame["w"] * 100
-        rules.append(
-            f'@media (max-width:{query}px){{'
-            f'.eco-orbit{{--ow:{frame["w"]};--oh:{frame["h"]};--sl:{sun_left:.2f};--sd:{sun_d:.2f};--cl:{core_l:.2f};--cw:{core_w:.2f}}}'
-            f'.eco-node{{--bx:var(--x{name});--by:var(--y{name})}}'
-            f'.eco-rays{{display:none}}.eco-rays-{name}{{display:block}}'
-            f'}}'
-        )
-    return (
-        f'<div class="eco-orbit">'
-        f'<div class="eco-sun" aria-hidden="true"></div>'
-        f'{"".join(rays)}'
-        f'<p class="eco-core">{esc(label)}</p>'
-        f'<div class="eco-arc">{"".join(parts)}</div>'
-        f'<style>{"".join(rules)}</style>'
-        f'</div>'
-    )
+    script = r"""
+(function(){
+  var root = document.currentScript.previousElementSibling;
+  if (!root || !root.hasAttribute("data-eco-orbit")) return;
+  var nodes = [].slice.call(root.querySelectorAll(".eco-node"));
+  var sun = root.querySelector(".eco-sun");
+  var core = root.querySelector(".eco-core");
+  var svg = root.querySelector(".eco-rays");
+  var ns = "http://www.w3.org/2000/svg";
+  var edge = 8, gap = 12;
 
+  function hit(rect, cx, cy) {
+    var mx = (rect.left + rect.right) / 2, my = (rect.top + rect.bottom) / 2;
+    var dx = mx - cx, dy = my - cy, best = null;
+    function consider(t, x, y) { if (t > 0.001 && (!best || t < best.t)) best = {t:t, x:x, y:y}; }
+    if (dx) {
+      var t = (rect.left - cx) / dx, y = cy + t * dy;
+      if (y >= rect.top - 0.6 && y <= rect.bottom + 0.6) consider(t, rect.left, y);
+      t = (rect.right - cx) / dx; y = cy + t * dy;
+      if (y >= rect.top - 0.6 && y <= rect.bottom + 0.6) consider(t, rect.right, y);
+    }
+    if (dy) {
+      var t2 = (rect.top - cy) / dy, x = cx + t2 * dx;
+      if (x >= rect.left - 0.6 && x <= rect.right + 0.6) consider(t2, x, rect.top);
+      t2 = (rect.bottom - cy) / dy; x = cx + t2 * dx;
+      if (x >= rect.left - 0.6 && x <= rect.right + 0.6) consider(t2, x, rect.bottom);
+    }
+    return best || {x: rect.left, y: my};
+  }
+
+  function measure(widths) {
+    nodes.forEach(function(el, i) {
+      el.style.position = "absolute";
+      el.style.width = widths[i] + "px";
+    });
+    return nodes.map(function(el) { return el.offsetHeight; });
+  }
+
+  function solve(heights, W, labelW) {
+    var total = gap * (heights.length - 1);
+    heights.forEach(function(h) { total += h; });
+    var H = total + edge * 2, cy = H / 2;
+    var cx = labelW / 2 + 10;
+    var minBox = Math.max(120, Math.min(230, W * 0.33));
+    var bow = Math.min(120, Math.max(20, W * 0.13));
+    var radius = Math.min(H / 2 - 8, W * 0.4);
+    var base = Math.max(radius, labelW / 2 + 16);
+    var room = W - edge - minBox - cx;
+    if (base + bow > room) {
+      bow = Math.max(12, room - base);
+      if (base + bow > room) {
+        base = Math.max(labelW / 2 + 16, room - 12);
+        bow = Math.max(8, room - base);
+      }
+    }
+    radius = Math.min(radius, base, H / 2 - 8);
+    var y = edge, centers = [], maxDy = 1;
+    heights.forEach(function(h) { centers.push(y + h / 2); y += h + gap; });
+    centers.forEach(function(c) { maxDy = Math.max(maxDy, Math.abs(c - cy)); });
+    var clear = cx + labelW / 2 + 8;
+    var placed = centers.map(function(c, i) {
+      var t = (c - cy) / maxDy;
+      var x = cx + base + bow * Math.sqrt(Math.max(0, 1 - t * t));
+      var w = W - edge - x;
+      if (w < minBox) { w = minBox; x = W - edge - w; }
+      if (x < clear) { x = clear; w = Math.max(96, W - edge - x); }
+      return {x:x, y:c - heights[i] / 2, h:heights[i], w:w};
+    });
+    return {H:H, cy:cy, cx:cx, radius:radius, placed:placed};
+  }
+
+  function layout() {
+    var W = root.clientWidth;
+    if (W < 40 || !nodes.length) return;
+    root.classList.add("is-set");
+    core.style.width = "max-content";
+    var labelW = Math.min(core.offsetWidth, Math.max(96, W * 0.46));
+    core.style.width = labelW + "px";
+    var guess = Math.max(140, Math.min(320, (W - labelW) * 0.55));
+    var widths = nodes.map(function() { return guess; });
+    var pass;
+    for (var n = 0; n < 4; n++) {
+      pass = solve(measure(widths), W, labelW);
+      var next = pass.placed.map(function(p) { return p.w; });
+      var same = next.every(function(w, i) { return Math.abs(w - widths[i]) < 1; });
+      widths = next;
+      if (same) break;
+    }
+    root.style.height = pass.H + "px";
+    sun.style.width = (pass.radius * 2) + "px";
+    sun.style.height = (pass.radius * 2) + "px";
+    sun.style.left = (pass.cx - pass.radius) + "px";
+    sun.style.top = (pass.cy - pass.radius) + "px";
+    core.style.left = pass.cx + "px";
+    core.style.top = pass.cy + "px";
+    pass.placed.forEach(function(p, i) {
+      nodes[i].style.left = p.x + "px";
+      nodes[i].style.top = p.y + "px";
+      nodes[i].style.width = p.w + "px";
+    });
+    var hb = root.getBoundingClientRect();
+    svg.setAttribute("width", String(W));
+    svg.setAttribute("height", String(pass.H));
+    svg.setAttribute("viewBox", "0 0 " + W + " " + pass.H);
+    svg.setAttribute("preserveAspectRatio", "xMinYMin meet");
+    while (svg.firstChild) svg.removeChild(svg.firstChild);
+    nodes.forEach(function(el) {
+      var r = el.getBoundingClientRect();
+      var rect = {left:r.left - hb.left, top:r.top - hb.top, right:r.right - hb.left, bottom:r.bottom - hb.top};
+      var end = hit(rect, pass.cx, pass.cy);
+      var line = document.createElementNS(ns, "line");
+      line.setAttribute("x1", String(pass.cx));
+      line.setAttribute("y1", String(pass.cy));
+      line.setAttribute("x2", String(end.x));
+      line.setAttribute("y2", String(end.y));
+      line.setAttribute("stroke", "rgba(198,240,255,.9)");
+      line.setAttribute("stroke-width", "1.6");
+      line.setAttribute("stroke-linecap", "butt");
+      svg.appendChild(line);
+    });
+  }
+
+  var frame = 0;
+  function schedule() {
+    if (frame) cancelAnimationFrame(frame);
+    frame = requestAnimationFrame(layout);
+  }
+  if (window.ResizeObserver) new ResizeObserver(schedule).observe(root);
+  else window.addEventListener("resize", schedule);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(schedule);
+  layout();
+})();
+"""
+    return (
+        f'<div class="eco-orbit" data-eco-orbit>'
+        f'<div class="eco-sun" aria-hidden="true"></div>'
+        f'<svg class="eco-rays" aria-hidden="true"></svg>'
+        f'<p class="eco-core">{esc(label)}</p>'
+        f'<div class="eco-arc">{parts}</div>'
+        f'</div>'
+        f'<script>{script}</script>'
+    )
 
 
 def _stat_card(block, lang, self_path=""):

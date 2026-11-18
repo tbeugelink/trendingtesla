@@ -1,0 +1,15 @@
+{
+  "_help": "Production rows go in \"rows\". Each row needs layer (tesla, energy, spacex, starlink, spacexsi, neuralink, boring), promise {en, nl}, made (YYYY-MM-DD), deadline (YYYY-MM-DD or \"\"), status (delivered, late, pending, abandoned) and source (https URL). _example is never rendered.",
+  "rows": [],
+  "_example": {
+    "layer": "tesla",
+    "promise": {
+      "en": "Example promise. Not shown on the site.",
+      "nl": "Voorbeeldbelofte. Niet op de site."
+    },
+    "made": "",
+    "deadline": "",
+    "status": "pending",
+    "source": ""
+  }
+}

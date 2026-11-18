@@ -60,12 +60,21 @@ fire, arrest or real person). Skip "gen_image" for news about one specific car m
 Guides (buying advice) use category "guides"; they appear in the "Best picks" section
 and on the model pages they are tagged with.
 
+Weekly briefings are markdown files in content/briefings/. A file whose name starts with
+_ is not published, including the layout sample. template: true is also left out of the build.
+Promises are rows in content/data/promises.json. The _example object is not rendered.
+Buying-guide markdown lives in content/guides/. A file whose name starts with _ is not
+published unless TT_EXAMPLES=1, which is only for a local preview.
+Ad slots render only when ADS_ENABLED is true. Leave it false. The AdSense loader stays
+deferred. public/ads.txt is written from the publisher id in content/monetization.json.
+
 Run: python3 build.py   (needs Pillow: pip install --break-system-packages pillow)
 """
 import hashlib
 import html
 import json
 import math
+import os
 import re
 import shutil
 from datetime import datetime, timezone
@@ -101,7 +110,7 @@ LANGS = {
         "guides_sub": "Researched per model and year, with pros and cons.",
         "related": "Read next", "sources": "Sources", "about": "About", "editorial": "Editorial policy",
         "byline": "By the TrendingTesla editorial team", "privacy": "Privacy",
-        "switch": "NL", "switch_full": "Nederlands", "i_specs": "Specifications", "i_watch": "Points to watch", "i_special": "What makes it special", "i_acc": "Accessories", "i_acc_soon": "Coming soon: accessories that fit this version, tested and explained.", "slogan": "Daily Tesla news &amp; trends", "nav_eco": "Ecosystem", "nav_tesla": "Tesla", "search": "Search the ecosystem", "none": "Nothing found", "home": "Home", "toc": "On this page", "prev": "Previous", "next": "Next", "ad": "Advertisement", "videos": "Shorts", "see_all": "See all", "read_story": "Read the story", "nav_models": "Tesla models", "nav_energy": "Energy", "nav_fsd": "FSD / Robotaxi", "nav_space": "SpaceX / Starlink", "nav_xai": "xAI", "nav_more": "More", "start_here": "Start here", "start_p": "Guides that stay useful: practical explainers for owning and buying a Tesla.", "all_guides": "All guides", "articles": "Articles", "cookie": "Cookie settings", "news_h": "One email a week with the best explainers", "news_p": "One email a week with the best explainers. Unsubscribe any time.", "news_btn": "Subscribe", "news_email": "Email address", "bar_h": "Get the weekly TrendingTesla newsletter", "bar_ok": "Check your inbox to confirm", "bar_err": "Could not subscribe. Please try again.", "bar_fine": "Unsubscribe any time.", "signup": "Newsletter", "signup_h": "Get the TrendingTesla newsletter", "signup_lead": "One email a week with the best explainers. Double opt-in, and you can unsubscribe from any email.", "signup_fallback": "Open the newsletter form", "signup_desc": "One email a week with the best explainers. Double opt-in, and you can unsubscribe from any email.", "aff": "Affiliate disclosure: if you buy through this link, TrendingTesla may earn a commission, at no extra cost to you.", "aff_btn": "View product", "handy_h": "Handy for your Tesla", "handy_p": "A few accessories owners look for. Each link opens an Amazon.nl search, not one specific product.", "handy_note": "As an Amazon Associate we earn from qualifying purchases.", "watch": "Watch the video", "watch_short": "Watch the Short", "consent_p": "Visit counts are cookieless and anonymous. Consent is only for ads. YouTube loads when you press play.", "consent_yes": "Accept", "consent_no": "Refuse", "consent_more": "Privacy policy", "collapse": "Close menu", "like": "Like", "save": "Save", "saved_btn": "Saved", "saved": "Saved articles", "saved_empty": "You have not saved any articles yet. Tap Save under an article title to keep it here. Saved articles stay in this browser on this device.", "archive": "All news", "newer": "Newer", "older": "Older", "page": "Page", "d_topics": "Topics", "d_models": "Models", "d_more": "More", "menu": "Menu", "tip_h": "A 22 kW charger won't charge your Tesla any faster", "tip_p": "Most Tesla models charge at home at up to 11 kW AC.", "tip_btn": "Read why", "tips": [("HW4", "Buying a used Model 3? Check the hardware first", "The Highland has HW4, older cars HW3. It decides what FSD can do.", "How to check", "used-model-3-highland-vs-classic-hw3-hw4-buying-guide"), ("−20%", "Losing range in winter? It doesn't have to be", "Preconditioning and the right settings save you kilometers.", "9 winter tips", "tesla-winter-range-tips-cold-weather")],
+        "switch": "NL", "switch_full": "Nederlands", "i_specs": "Specifications", "i_watch": "Points to watch", "i_special": "What makes it special", "i_acc": "Accessories", "i_acc_soon": "Coming soon: accessories that fit this version, tested and explained.", "slogan": "Daily Tesla news &amp; trends", "nav_eco": "Ecosystem", "nav_tesla": "Tesla", "search": "Search the ecosystem", "none": "Nothing found", "home": "Home", "toc": "On this page", "prev": "Previous", "next": "Next", "ad": "Advertisement", "videos": "Shorts", "see_all": "See all", "read_story": "Read the story", "nav_models": "Tesla models", "nav_energy": "Energy", "nav_fsd": "FSD / Robotaxi", "nav_space": "SpaceX / Starlink", "nav_xai": "xAI", "nav_more": "More", "start_here": "Start here", "start_p": "Guides that stay useful: practical explainers for owning and buying a Tesla.", "all_guides": "All guides", "articles": "Articles", "cookie": "Cookie settings", "news_h": "One email a week with the best explainers", "news_p": "One email a week with the best explainers. Unsubscribe any time.", "news_btn": "Subscribe", "news_email": "Email address", "bar_h": "The weekly briefing, in one email", "bar_ok": "Check your inbox to confirm", "bar_err": "Could not subscribe. Please try again.", "bar_fine": "Unsubscribe any time.", "signup": "Newsletter", "signup_h": "Get the TrendingTesla newsletter", "signup_lead": "One email a week with the best explainers. Double opt-in, and you can unsubscribe from any email.", "signup_fallback": "Open the newsletter form", "signup_desc": "One email a week with the best explainers. Double opt-in, and you can unsubscribe from any email.", "aff": "Affiliate disclosure: if you buy through this link, TrendingTesla may earn a commission, at no extra cost to you.", "aff_btn": "View product", "handy_h": "Handy for your Tesla", "handy_p": "A few accessories owners look for. Each link opens an Amazon.nl search, not one specific product.", "handy_note": "As an Amazon Associate we earn from qualifying purchases.", "watch": "Watch the video", "watch_short": "Watch the Short", "consent_p": "Visit counts are cookieless and anonymous. Consent is only for ads. YouTube loads when you press play.", "consent_yes": "Accept", "consent_no": "Refuse", "consent_more": "Privacy policy", "collapse": "Close menu", "like": "Like", "save": "Save", "saved_btn": "Saved", "saved": "Saved articles", "saved_empty": "You have not saved any articles yet. Tap Save under an article title to keep it here. Saved articles stay in this browser on this device.", "archive": "All news", "newer": "Newer", "older": "Older", "page": "Page", "d_topics": "Topics", "d_models": "Models", "d_more": "More", "menu": "Menu", "tip_h": "A 22 kW charger won't charge your Tesla any faster", "tip_p": "Most Tesla models charge at home at up to 11 kW AC.", "tip_btn": "Read why", "tips": [("HW4", "Buying a used Model 3? Check the hardware first", "The Highland has HW4, older cars HW3. It decides what FSD can do.", "How to check", "used-model-3-highland-vs-classic-hw3-hw4-buying-guide"), ("−20%", "Losing range in winter? It doesn't have to be", "Preconditioning and the right settings save you kilometers.", "9 winter tips", "tesla-winter-range-tips-cold-weather")],
         "empty": "No articles here yet. A new story is published once a day.",
         "cat_intro": "All TrendingTesla articles about {}.",
         "eco_intro": "Tesla, SpaceX, Starlink, SpaceXSI, Neuralink, The Boring Company and the global AI race, on one map.",
@@ -134,7 +143,7 @@ LANGS = {
         "guides_sub": "Uitgezocht per model en bouwjaar, met plus- en minpunten.",
         "related": "Lees ook", "sources": "Bronnen", "imgnote": "Afbeeldingen zijn illustraties, deels gemaakt met AI.", "photocredit": "Foto's", "imgnote_other": "Overige afbeeldingen zijn illustraties, deels gemaakt met AI.", "about": "Over ons", "editorial": "Redactiebeleid",
         "byline": "Door de redactie van TrendingTesla", "privacy": "Privacy",
-        "switch": "EN", "switch_full": "English", "i_specs": "Specificaties", "i_watch": "Aandachtspunten", "i_special": "Bijzonderheden", "i_acc": "Accessoires", "i_acc_soon": "Binnenkort: accessoires die op deze uitvoering passen, getest en uitgelegd.", "slogan": "Iedere dag het laatste nieuws &amp; trends", "nav_eco": "Ecosysteem", "nav_tesla": "Tesla", "search": "Zoek in het ecosysteem", "none": "Niets gevonden", "home": "Home", "toc": "Op deze pagina", "prev": "Vorig", "next": "Volgend", "ad": "Advertentie", "videos": "Shorts", "see_all": "Alles bekijken", "read_story": "Lees het verhaal", "nav_models": "Tesla-modellen", "nav_energy": "Energie", "nav_fsd": "FSD / Robotaxi", "nav_space": "SpaceX / Starlink", "nav_xai": "xAI", "nav_more": "Meer", "start_here": "Begin hier", "start_p": "Gidsen die bruikbaar blijven: praktische uitleg voor wie een Tesla heeft of er een wil kopen.", "all_guides": "Alle gidsen", "articles": "Artikelen", "cookie": "Cookie-instellingen", "news_h": "Eén mail per week met de beste uitleg", "news_p": "Eén mail per week met de beste uitleg. Afmelden kan altijd.", "news_btn": "Aanmelden", "news_email": "E-mailadres", "bar_h": "Ontvang wekelijks TrendingTesla nieuws", "bar_ok": "Check je inbox om te bevestigen", "bar_err": "Aanmelden is niet gelukt. Probeer het opnieuw.", "bar_fine": "Afmelden kan altijd.", "signup": "Nieuwsbrief", "signup_h": "Ontvang de TrendingTesla-nieuwsbrief", "signup_lead": "Eén mail per week met de beste uitleg. Dubbele bevestiging, en afmelden kan vanuit elke e-mail.", "signup_fallback": "Open het nieuwsbriefformulier", "signup_desc": "Eén mail per week met de beste uitleg. Dubbele bevestiging, en afmelden kan vanuit elke e-mail.", "aff": "Affiliate-melding: koop je via deze link, dan kan TrendingTesla een commissie ontvangen. Voor jou kost het niets extra.", "aff_btn": "Bekijk het product", "handy_h": "Handig voor je Tesla", "handy_p": "Een paar accessoires waar rijders naar zoeken. Elke link opent een zoekopdracht bij Amazon.nl, niet één specifiek product.", "handy_note": "Als Amazon-partner verdienen wij aan in aanmerking komende aankopen.", "watch": "Bekijk de video", "watch_short": "Bekijk de Short", "consent_p": "Bezoekcijfers zijn anoniem en zonder cookies. Toestemming is alleen voor advertenties. YouTube laadt pas als je op afspelen drukt.", "consent_yes": "Accepteren", "consent_no": "Weigeren", "consent_more": "Privacybeleid", "collapse": "Inklappen", "like": "Vind ik leuk", "save": "Bewaren", "saved_btn": "Bewaard", "saved": "Bewaarde artikelen", "saved_empty": "Je hebt nog geen artikelen bewaard. Tik op Bewaren onder de titel van een artikel om het hier terug te vinden. Bewaarde artikelen blijven in deze browser op dit apparaat.", "archive": "Alle nieuws", "newer": "Nieuwer", "older": "Ouder", "page": "Pagina", "d_topics": "Onderwerpen", "d_models": "Modellen", "d_more": "Meer", "menu": "Menu", "tip_h": "Een 22 kW-laadpaal laadt je Tesla niet sneller", "tip_p": "Veel Tesla-modellen laden thuis met maximaal 11 kW AC.", "tip_btn": "Lees waarom", "tips": [("HW4", "Tweedehands Model 3 kopen? Check eerst de hardware", "De Highland heeft HW4, oudere Model 3's HW3. Dat bepaalt wat FSD kan.", "Zo check je het", "used-model-3-highland-vs-classic-hw3-hw4-buying-guide"), ("−20%", "Minder bereik in de winter? Dat hoeft niet", "Met voorverwarmen en de juiste instellingen houd je meer kilometers over.", "9 wintertips", "tesla-winter-range-tips-cold-weather")],
+        "switch": "EN", "switch_full": "English", "i_specs": "Specificaties", "i_watch": "Aandachtspunten", "i_special": "Bijzonderheden", "i_acc": "Accessoires", "i_acc_soon": "Binnenkort: accessoires die op deze uitvoering passen, getest en uitgelegd.", "slogan": "Iedere dag het laatste nieuws &amp; trends", "nav_eco": "Ecosysteem", "nav_tesla": "Tesla", "search": "Zoek in het ecosysteem", "none": "Niets gevonden", "home": "Home", "toc": "Op deze pagina", "prev": "Vorig", "next": "Volgend", "ad": "Advertentie", "videos": "Shorts", "see_all": "Alles bekijken", "read_story": "Lees het verhaal", "nav_models": "Tesla-modellen", "nav_energy": "Energie", "nav_fsd": "FSD / Robotaxi", "nav_space": "SpaceX / Starlink", "nav_xai": "xAI", "nav_more": "Meer", "start_here": "Begin hier", "start_p": "Gidsen die bruikbaar blijven: praktische uitleg voor wie een Tesla heeft of er een wil kopen.", "all_guides": "Alle gidsen", "articles": "Artikelen", "cookie": "Cookie-instellingen", "news_h": "Eén mail per week met de beste uitleg", "news_p": "Eén mail per week met de beste uitleg. Afmelden kan altijd.", "news_btn": "Aanmelden", "news_email": "E-mailadres", "bar_h": "De weekbriefing, in één mail", "bar_ok": "Check je inbox om te bevestigen", "bar_err": "Aanmelden is niet gelukt. Probeer het opnieuw.", "bar_fine": "Afmelden kan altijd.", "signup": "Nieuwsbrief", "signup_h": "Ontvang de TrendingTesla-nieuwsbrief", "signup_lead": "Eén mail per week met de beste uitleg. Dubbele bevestiging, en afmelden kan vanuit elke e-mail.", "signup_fallback": "Open het nieuwsbriefformulier", "signup_desc": "Eén mail per week met de beste uitleg. Dubbele bevestiging, en afmelden kan vanuit elke e-mail.", "aff": "Affiliate-melding: koop je via deze link, dan kan TrendingTesla een commissie ontvangen. Voor jou kost het niets extra.", "aff_btn": "Bekijk het product", "handy_h": "Handig voor je Tesla", "handy_p": "Een paar accessoires waar rijders naar zoeken. Elke link opent een zoekopdracht bij Amazon.nl, niet één specifiek product.", "handy_note": "Als Amazon-partner verdienen wij aan in aanmerking komende aankopen.", "watch": "Bekijk de video", "watch_short": "Bekijk de Short", "consent_p": "Bezoekcijfers zijn anoniem en zonder cookies. Toestemming is alleen voor advertenties. YouTube laadt pas als je op afspelen drukt.", "consent_yes": "Accepteren", "consent_no": "Weigeren", "consent_more": "Privacybeleid", "collapse": "Inklappen", "like": "Vind ik leuk", "save": "Bewaren", "saved_btn": "Bewaard", "saved": "Bewaarde artikelen", "saved_empty": "Je hebt nog geen artikelen bewaard. Tik op Bewaren onder de titel van een artikel om het hier terug te vinden. Bewaarde artikelen blijven in deze browser op dit apparaat.", "archive": "Alle nieuws", "newer": "Nieuwer", "older": "Ouder", "page": "Pagina", "d_topics": "Onderwerpen", "d_models": "Modellen", "d_more": "Meer", "menu": "Menu", "tip_h": "Een 22 kW-laadpaal laadt je Tesla niet sneller", "tip_p": "Veel Tesla-modellen laden thuis met maximaal 11 kW AC.", "tip_btn": "Lees waarom", "tips": [("HW4", "Tweedehands Model 3 kopen? Check eerst de hardware", "De Highland heeft HW4, oudere Model 3's HW3. Dat bepaalt wat FSD kan.", "Zo check je het", "used-model-3-highland-vs-classic-hw3-hw4-buying-guide"), ("−20%", "Minder bereik in de winter? Dat hoeft niet", "Met voorverwarmen en de juiste instellingen houd je meer kilometers over.", "9 wintertips", "tesla-winter-range-tips-cold-weather")],
         "empty": "Hier staan nog geen artikelen. Er verschijnt één keer per dag een nieuw verhaal.",
         "cat_intro": "Alle artikelen van TrendingTesla over {}.",
         "eco_intro": "Tesla, SpaceX, Starlink, SpaceXSI, Neuralink, The Boring Company en de wereldwijde AI-race, op één kaart.",
@@ -796,7 +805,7 @@ article.money .prose h2{scroll-margin-top:130px}
 article.money .avid{max-width:68ch}
 .avid.short{max-width:280px}
 .avid.short .avb{aspect-ratio:9/16}
-.adslot{margin:20px 0;max-width:68ch;display:flex;flex-direction:column;align-items:stretch;background:rgba(255,255,255,.03);border:1px dashed var(--border2);border-radius:12px;overflow:hidden}
+.adslot{margin:20px 0;max-width:68ch;display:flex;flex-direction:column;align-items:stretch;background:rgba(255,255,255,.03);border:1px dashed var(--border2);border-radius:8px;overflow:hidden}
 .adlab{font-size:.65rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);padding:8px 12px 0}
 .adslot ins{display:block;width:100%}
 .pbox{margin:22px 0;max-width:68ch}
@@ -982,7 +991,9 @@ header.hb .pnav>.is-parked{display:none}
 .sheet-main article.money .avid.long .avb,.pv-art .avid.long .avb,.sheet-main article.money>.hi,.pv-art article.money>.hi{display:block;width:calc(100% - 2 * (3vw + 14px));margin-left:calc(3vw + 14px);margin-right:calc(3vw + 14px)}
 @media (max-width:600.98px){.sheet-main article.money .avid.long .avb,.pv-art .avid.long .avb,.sheet-main article.money>.hi,.pv-art article.money>.hi,.sheet-main article.money .avid.short .avb,.pv-art .avid.short .avb{width:calc(100% - 28px);margin-left:14px;margin-right:14px}}
 .sheet-main article.narrow>h1,.sheet-main article.money>h1,.sheet-main article.money>.meta,.sheet-main article.money>.byline{margin-left:calc(3vw + 14px);margin-right:calc(3vw + 14px)}
-@media (max-width:600.98px){.sheet-main article.narrow>h1,.sheet-main article.money>h1,.sheet-main article.money>.meta,.sheet-main article.money>.byline,.sheet-main article.money .toc,.sheet-main article.money .sources,.sheet-main article.money .imgnote,.sheet-main article.money nav.seq,.sheet-main article.money .pbox,.sheet-main article.money .nform,.sheet-main article.money .avid figcaption{margin-left:14px;margin-right:14px}}
+.sheet-main article.brief>h1,.sheet-main article.brief>.byline,.sheet-main article.brief>.meta,.sheet-main article.brief>.tplnote,.sheet-main article.brief>.lead{margin-left:0;margin-right:0}
+.sheet-main article.brief>.lead{padding-left:0;padding-right:0}
+@media (max-width:600.98px){.sheet-main article.narrow>h1,.sheet-main article.money>h1,.sheet-main article.money>.meta,.sheet-main article.money>.byline,.sheet-main article.money .toc,.sheet-main article.money .sources,.sheet-main article.money .imgnote,.sheet-main article.money nav.seq,.sheet-main article.money .pbox,.sheet-main article.money .nform,.sheet-main article.money .avid figcaption{margin-left:14px;margin-right:14px}.sheet-main article.brief>h1,.sheet-main article.brief>.byline,.sheet-main article.brief>.meta,.sheet-main article.brief>.tplnote,.sheet-main article.brief>.lead{margin-left:0;margin-right:0}}
 .sheet-main article.money .mlbox,.sheet-main article.narrow .mlbox{margin-left:calc(3vw + 14px);margin-right:calc(3vw + 14px)}
 @media (max-width:600.98px){.sheet-main article.money .mlbox,.sheet-main article.narrow .mlbox{margin-left:14px;margin-right:14px}}
 @media (max-width:900px){
@@ -1110,6 +1121,61 @@ a.eco-node.link:hover,a.eco-node.link:focus-visible,a.eco-node.boring:hover,a.ec
 @media (min-width:900px){
 header.hb .pn,header.hb .mdrop>button.pn{font-size:14px;padding:6px 8px}
 }
+.adhold{display:block;width:100%}
+.ad-sidebar{margin:0 0 16px;max-width:none}
+@media (max-width:900px){.ad-sidebar{display:none}}
+.tplnote{margin:0 0 14px;padding:10px 12px;border:1px dashed #ffc400;border-radius:8px;color:#ffe28a;font-weight:700;font-size:.92rem;line-height:1.4}
+.ltag{display:inline-block;font-size:.68rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;border:1px solid;border-radius:8px;padding:2px 8px;text-decoration:none}
+.ltag-tesla{color:#ff8a9b;border-color:#e31937}
+.ltag-energy{color:#b8ffc6;border-color:#4cd964}
+.ltag-spacex{color:#ffc48a;border-color:#ff7a00}
+.ltag-link{color:#a6f4ff;border-color:#00d1ff}
+.ltag-spacexsi{color:#ffe28a;border-color:#ffc400}
+.ltag-neural{color:#ffb3d6;border-color:#ff2d95}
+.ltag-boring{color:#b3c8ff;border-color:#2f6bff}
+.brief-layers{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 16px}
+.brief-list{list-style:none;margin:0 0 18px;padding:0}
+.brief-list a{display:block;padding:12px 14px;border:1px solid #3a4a60;border-radius:8px;text-decoration:none;color:inherit;margin:0 0 8px}
+.brief-list a:hover{border-color:var(--blue)}
+.brief-list strong{display:block;color:#fff}
+.brief-list span{color:var(--dim);font-size:.82rem}
+.brief-layer{margin:0 0 18px}
+.brief-layer h2{margin:0 0 8px}
+.brief-layer ol{margin:0;padding:0 0 0 1.2em}
+.brief-layer li{margin:0 0 12px}
+.brief-layer h3{margin:0 0 4px;font-size:1.05rem}
+.brief-why{margin:6px 0 0;color:#d5deea}
+.brief-why b{color:#fff}
+.brief-cta{margin:0 0 16px}
+.prom-filters{display:flex;flex-wrap:wrap;gap:10px 16px;margin:0 0 12px}
+.prom-filters label{display:flex;flex-direction:column;gap:4px;font-size:.75rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:var(--dim)}
+.prom-filters select{background:#121212;color:var(--head);border:1px solid #3a4a60;border-radius:8px;font:inherit;font-size:.95rem;font-weight:700;padding:8px 10px;text-transform:none;letter-spacing:0}
+.prom-wrap{overflow-x:auto;border:1px solid #3a4a60;border-radius:8px}
+.prom{width:100%;border-collapse:collapse;font-size:.92rem}
+.prom th,.prom td{padding:10px 12px;border-bottom:1px solid #242a33;text-align:left;vertical-align:top}
+.prom th{font-size:.72rem;letter-spacing:.04em;text-transform:uppercase;color:var(--dim)}
+.prom a{color:#9ad7ff}
+.prom-empty{margin:12px 0 0;color:var(--muted)}
+.gbox{margin:16px 0;padding:14px;border:1px solid #3a4a60;border-radius:8px;background:#161616;display:grid;grid-template-columns:168px minmax(0,1fr);gap:14px}
+.gbox.noimg{grid-template-columns:1fr}
+.gbox img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:8px}
+.gbox h2{margin:0 0 8px;font-size:1.12rem}
+.gbox h3{margin:8px 0 4px;font-size:.78rem;letter-spacing:.04em;text-transform:uppercase;color:var(--dim)}
+.gbox ul{margin:0;padding-left:1.1em}
+.gbox li{margin:0 0 3px}
+.gbox .btn{display:inline-block;margin-top:10px;background:var(--red);color:#fff;text-decoration:none;font-weight:800;border-radius:8px;padding:10px 14px}
+.gtable{width:100%;border-collapse:collapse;margin:8px 0 16px;font-size:.92rem}
+.gtable th,.gtable td{padding:8px 10px;border:1px solid #3a4a60;text-align:left}
+.gtable caption{text-align:left;font-weight:800;margin:0 0 6px}
+.afftop{margin:0 0 14px;font-size:.84rem;line-height:1.45;color:var(--dim)}
+.afftop a{color:#9ad7ff}
+.nlstick{position:fixed;z-index:70;left:12px;right:12px;display:flex;gap:8px;align-items:center;max-width:920px;margin:0 auto;background:#161616;border:1px solid #3a4a60;border-radius:8px;padding:8px;box-shadow:0 12px 32px rgba(0,0,0,.5)}
+.nlstick[hidden]{display:none}
+.nlstick.is-quiet{visibility:hidden;pointer-events:none}
+.nlstick .nlbar-form{flex:1;border:0;padding:0;background:transparent;box-shadow:none}
+.nlstick-x{flex:none;height:42px;padding:0 12px;background:transparent;color:#fff;border:1px solid #3a4a60;border-radius:8px;font:inherit;font-weight:800;cursor:pointer}
+.nlpitch p{margin:0 0 12px}
+@media (max-width:600.98px){.gbox{grid-template-columns:1fr}.nlstick{left:8px;right:8px}}
 """
 
 # Classes left over from retired layouts. They are not emitted by the pages build() writes.
@@ -1214,6 +1280,22 @@ def other(lang):
 def signup_path(lang):
     """Newsletter page slug. English and Dutch use different paths."""
     return "newsletter/" if lang == "en" else "nieuwsbrief/"
+
+
+def promises_path(lang):
+    return "promises/" if lang == "en" else "beloftes/"
+
+
+def guides_path(lang):
+    return "guides/" if lang == "en" else "gidsen/"
+
+
+def advertise_path(lang):
+    return "advertise/" if lang == "en" else "adverteren/"
+
+
+def disclosure_path(lang):
+    return "affiliate-disclosure/"
 
 
 def ecosystem_path(lang):
@@ -1643,7 +1725,7 @@ def page(lang, path, title, description, body, og_type="website", extra_head="",
 <div class="fbrand"><a class="logo" href="{url(lang)}">Trending<span>Tesla</span></a><p>{L['tagline']} {L['disclaimer']}</p>{newsletter(lang, "foot")}</div>
 <div><p class="flabel">{L['d_topics']}</p><div class="flist two">{fcats}</div></div>
 <div><p class="flabel">{L['d_models']}</p><div class="flist">{fmods}</div></div>
-<div><p class="flabel">{L['d_more']}</p><div class="flist"><a href="{url(lang, 'archive/')}">{L['archive']}</a><a href="{url(lang, 'about/')}">{L['about']}</a><a href="{url(lang, 'editorial/')}">{L['editorial']}</a><a href="{url(lang, 'privacy/')}">{L['privacy']}</a><a href="{news_href}">{L['signup']}</a><a href="{url(lang, 'contact/')}">Contact</a><a href="{url(lang, 'terms/')}">{'Terms' if lang == 'en' else 'Voorwaarden'}</a><a href="{url(lang, 'shorts/')}">{L['videos']}</a><a href="https://www.youtube.com/@TrendingTesla" rel="noopener" target="_blank">YouTube</a><button type="button" class="flink" data-consent-open>{L['cookie']}</button><a href="{url(lang, 'feed.xml')}">RSS</a><a href="{url(alt, switch)}">{L['switch_full']}</a></div></div>
+<div><p class="flabel">{L['d_more']}</p><div class="flist"><a href="{url(lang, 'briefing/')}">{'Weekly briefing' if lang == 'en' else 'Weekbriefing'}</a><a href="{url(lang, promises_path(lang))}">{'Promises' if lang == 'en' else 'Beloftes'}</a><a href="{url(lang, guides_path(lang))}">{'Buying guides' if lang == 'en' else 'Koopgidsen'}</a><a href="{url(lang, advertise_path(lang))}">{'Advertise' if lang == 'en' else 'Adverteren'}</a><a href="{url(lang, disclosure_path(lang))}">{'Affiliate disclosure' if lang == 'en' else 'Affiliate-melding'}</a><a href="{url(lang, 'archive/')}">{L['archive']}</a><a href="{url(lang, 'about/')}">{L['about']}</a><a href="{url(lang, 'editorial/')}">{L['editorial']}</a><a href="{url(lang, 'privacy/')}">{L['privacy']}</a><a href="{news_href}">{L['signup']}</a><a href="{url(lang, 'contact/')}">Contact</a><a href="{url(lang, 'terms/')}">{'Terms' if lang == 'en' else 'Voorwaarden'}</a><a href="{url(lang, 'shorts/')}">{L['videos']}</a><a href="https://www.youtube.com/@TrendingTesla" rel="noopener" target="_blank">YouTube</a><button type="button" class="flink" data-consent-open>{L['cookie']}</button><a href="{url(lang, 'feed.xml')}">RSS</a><a href="{url(alt, switch)}">{L['switch_full']}</a></div></div>
 </div><p class="fcopy">&copy; {datetime.now().year} {NAME}</p></div></footer>
 {consent_bar(lang)}
 <script>{JS}</script>
@@ -2290,6 +2372,13 @@ MONEY = {}
 SHORTS = {}
 PRIMARY_CATS = {"models", "fsd", "robotaxi", "optimus", "spacex", "starlink", "xai", "boring"}
 AD_HEIGHT = {"after_intro": 280, "mid_article": 280, "end": 280, "sidebar": 600}
+# Slots stay out of the HTML until this is true, so the layout does not reserve empty space.
+# TT_ADS=1 is a local override for a placement screenshot. Do not set it in production.
+ADS_ENABLED = False
+if os.environ.get("TT_ADS") == "1":
+    ADS_ENABLED = True
+# content/guides/_*.md and the same pattern elsewhere stay out of the build.
+INCLUDE_EXAMPLES = os.environ.get("TT_EXAMPLES") == "1"
 
 
 def load_money():
@@ -2362,27 +2451,31 @@ def slot_id(place):
 
 
 def ad_html(place, lang):
-    """Reserved ad slot. Nothing at all until both the publisher id and this slot id are set."""
-    client, slot = publisher_client(), slot_id(place)
-    if not client or not slot:
+    """Reserved ad slot. Nothing at all while ADS_ENABLED is false, so there is no empty gap."""
+    if not ADS_ENABLED:
         return ""
+    client, slot = publisher_client(), slot_id(place)
     height = AD_HEIGHT.get(place, 280)
     label = LANGS[lang]["ad"]
-    return (f'<aside class="adslot ad-{place}" aria-label="{esc(label)}">'
-            f'<span class="adlab">{esc(label)}</span>'
-            f'<ins class="adsbygoogle" style="display:block;min-height:{height}px" '
-            f'data-ad-client="{esc(client)}" data-ad-slot="{esc(slot)}" '
-            f'data-ad-format="auto" data-full-width-responsive="true"></ins>'
-            f'<script>(adsbygoogle=window.adsbygoogle||[]).push({{}});</script></aside>')
+    if client and slot:
+        unit = (f'<ins class="adsbygoogle" style="display:block;min-height:{height}px" '
+                f'data-ad-client="{esc(client)}" data-ad-slot="{esc(slot)}" '
+                f'data-ad-format="auto" data-full-width-responsive="true"></ins>'
+                f'<script>(adsbygoogle=window.adsbygoogle||[]).push({{}});</script>')
+    else:
+        unit = f'<div class="adhold" style="min-height:{height}px"></div>'
+    return (f'<aside class="adslot ad-{place}" aria-label="{esc(label)}" style="min-height:{height + 28}px">'
+            f'<span class="adlab">{esc(label)}</span>{unit}</aside>')
 
 
 def insert_mid(body, snippet):
+    """In-article slot after the third paragraph."""
     if not snippet:
         return body
-    marks = [m.start() for m in re.finditer(r"<h2\b", body)]
-    at = marks[2] if len(marks) >= 3 else marks[1] if len(marks) == 2 else None
-    if at is None:
+    marks = list(re.finditer(r"</p>", body, flags=re.IGNORECASE))
+    if len(marks) < 3:
         return body + snippet
+    at = marks[2].end()
     return body[:at] + snippet + body[at:]
 
 
@@ -2664,6 +2757,7 @@ def ml_endpoint():
 # The script is emitted once per page, after every form it should bind.
 ML_BAR_JS = (
     "<script>(function(){document.querySelectorAll('.nlbar-form').forEach(function(f){"
+    "if(f.dataset.bound)return;f.dataset.bound='1';"
     "var msg=f.querySelector('.nlbar-msg'),btn=f.querySelector('button');if(!msg||!btn)return;"
     "f.addEventListener('submit',function(e){e.preventDefault();if(f.dataset.busy)return;"
     "f.dataset.busy='1';btn.disabled=true;msg.hidden=true;f.classList.remove('is-err','is-ok');"
@@ -2710,11 +2804,11 @@ def ml_signup(lang, heading=True):
     )
 
 
-def ml_bar(lang):
+def ml_bar(lang, suffix=""):
     """One-row signup under an article. Posts to the same form, so double opt-in stays.
     The shared handler is included here because this bar is the last signup on the page."""
     L = LANGS[lang]
-    fid = f"nlbar-email-{lang}"
+    fid = f"nlbar-email-{lang}{suffix}"
     return (
         f'<aside class="nlbar" aria-label="{esc(L["signup"])}">'
         f'<form class="nlbar-form" {ml_form_attrs(lang)}>'
@@ -2828,6 +2922,10 @@ def more_rows(lang):
         ("agi", "agi/", "AGI-race"),
         ("models", "category/models/", L["nav_models"]),
         ("videos", "shorts/", L["videos"]),
+        ("briefing", "briefing/", "Weekly briefing" if lang == "en" else "Weekbriefing"),
+        ("promises", promises_path(lang), "Promises" if lang == "en" else "Beloftes"),
+        ("buyguides", guides_path(lang), "Buying guides" if lang == "en" else "Koopgidsen"),
+        ("advertise", advertise_path(lang), "Advertise" if lang == "en" else "Adverteren"),
     ]
     rows += [(k, f"category/{k}/", c[lang])
              for k, c in CATEGORIES.items() if c.get("menu") and k not in PRIMARY_CATS]
@@ -3111,7 +3209,7 @@ def money_article(a, arts, lang):
         f'<div class="acts"><button class="act like" type="button" data-like="{a["slug"]}" aria-pressed="false" title="{esc(L["like"])}">{HEART_SVG}<span>0</span></button>'
         f'<button class="act save" type="button" data-save="{a["slug"]}" aria-pressed="false" title="{esc(L["save"])}" aria-label="{esc(L["save"])}">{BOOK_SVG}</button></div></div>'
         f'{chips}<p class="lead">{esc(t["description"])}</p>'
-        f'{ad_html("after_intro", lang)}{article_media(a, lang)}{toc}'
+        f'{article_media(a, lang)}{toc}'
         f'<div class="prose">{body}</div>{product_boxes(a, lang)}{handy_box(a, lang)}{ad_html("end", lang)}'
         f'{article_sources(a, lang)}</article>')
     col = f'{nav}{article}{prev_next(a, arts, lang)}{related_block(a, arts, lang)}{ml_bar(lang)}'
@@ -3279,14 +3377,14 @@ def page_side(arts, lang, kind="home", current=None, skip=None, tail="", signup=
             parts.append(_side_section(C["start"], _side_ol(lang, start)))
     news = newsletter(lang, "side")
     slot = ad_html("sidebar", lang)
+    if slot:
+        parts.insert(0, slot)
     if signup:
         # The rail form is in the HTML for desktop. At the stack breakpoint
         # CSS hides .nlside, so a phone keeps only the article bar.
         parts.append(rail_signup(lang, script=not tail))
     if news:
         parts.append(news)
-    if slot:
-        parts.append(slot)
     aside = f'<aside class="pv-side">{"".join(parts)}</aside>' if parts else ""
     if tail and kind == "article":
         if related_html:
@@ -3485,7 +3583,7 @@ def pv_article(variant, a, arts, lang, live=False):
         f'<h1>{esc(t["title"])}</h1>'
         f'<p class="byline"><a href="{url(lang, "editorial/")}">{L["byline"]}</a></p>'
         f'<p class="lead">{esc(t["description"])}</p>'
-        f'{ad_html("after_intro", lang)}{media}{toc_here}'
+        f'{media}{toc_here}'
         f'<div class="prose">{body}</div>{product_boxes(a, lang)}{handy_box(a, lang)}{ad_html("end", lang)}'
         f'{article_sources(a, lang)}{prev_next(a, arts, lang)}</article>')
     if live:
@@ -4343,6 +4441,530 @@ def starship_page(lang, arts):
     return body, ld, intro
 
 
+BRIEF_LAYERS = (
+    ("tesla", "tesla/", "tesla", "Tesla"),
+    ("energy", "tesla-energy/", "energy", "Tesla Energy"),
+    ("spacex", "spacex/", "spacex", "SpaceX"),
+    ("starlink", "starlink/", "link", "Starlink"),
+    ("spacexsi", "spacexsi/", "spacexsi", "SpaceXSI"),
+    ("neuralink", "neuralink/", "neural", "Neuralink"),
+    ("boring", "boring/", "boring", "Boring"),
+)
+PROMISE_STATUS = ("delivered", "late", "pending", "abandoned")
+_KV_KEYS = (
+    "title_en", "title_nl", "en", "nl", "why_en", "why_nl",
+    "name_en", "name_nl", "pros_en", "pros_nl", "cons_en", "cons_nl",
+    "url", "image", "button_en", "button_nl",
+    "caption_en", "caption_nl", "columns_en", "columns_nl", "row_en", "row_nl",
+)
+_KV_LISTS = {"pros_en", "pros_nl", "cons_en", "cons_nl", "row_en", "row_nl"}
+
+
+def _front_matter(text):
+    text = text.lstrip("\ufeff")
+    if not text.startswith("---"):
+        return {}, text
+    end = text.find("\n---", 3)
+    if end < 0:
+        return {}, text
+    meta = {}
+    for line in text[3:end].splitlines():
+        if not line.strip() or ":" not in line:
+            continue
+        key, value = line.split(":", 1)
+        meta[key.strip()] = value.strip().strip('"').strip("'")
+    return meta, text[end + 4:].lstrip("\n")
+
+
+def _kv_block(block):
+    fields = {}
+    current = None
+    buf = []
+
+    def flush():
+        nonlocal current, buf
+        if current is None:
+            return
+        text = " ".join(part.strip() for part in buf if part.strip()).strip()
+        if current in _KV_LISTS:
+            fields.setdefault(current, [])
+            if text:
+                fields[current].append(text)
+        else:
+            fields[current] = text
+        current = None
+        buf = []
+
+    for line in block.splitlines():
+        match = re.match(r"^([a-z_]+):\s*(.*)$", line)
+        if match and match.group(1) in _KV_KEYS:
+            flush()
+            current = match.group(1)
+            buf = [match.group(2)]
+        elif current is not None:
+            buf.append(line)
+    flush()
+    return fields
+
+
+def _bits(value):
+    chunks = value if isinstance(value, list) else [value or ""]
+    out = []
+    for chunk in chunks:
+        out.extend(part.strip() for part in str(chunk).split("|") if part.strip())
+    return out
+
+
+def _layer_meta(key):
+    for item in BRIEF_LAYERS:
+        if item[0] == key:
+            return item
+    return None
+
+
+def layer_tag(key, lang):
+    meta = _layer_meta(key)
+    if not meta:
+        return ""
+    _key, href, tone, name = meta
+    return f'<a class="ltag ltag-{tone}" href="{url(lang, href)}">{esc(name)}</a>'
+
+
+def _markdown_docs(folder, include_hidden=False):
+    root = ROOT / "content" / folder
+    docs = []
+    if not root.is_dir():
+        return docs
+    for path in sorted(root.glob("*.md")):
+        hidden = path.name.startswith("_")
+        if hidden and not include_hidden:
+            continue
+        meta, body = _front_matter(path.read_text(encoding="utf-8"))
+        docs.append({
+            "slug": path.stem.lstrip("_") or path.stem,
+            "meta": meta,
+            "body": body,
+            "template": hidden or str(meta.get("template") or "").lower() in ("1", "true", "yes"),
+        })
+    return docs
+
+
+def _parse_brief_layers(body):
+    layers = []
+    for chunk in re.split(r"(?m)^##\s+", body):
+        chunk = chunk.strip()
+        if not chunk:
+            continue
+        lines = chunk.splitlines()
+        key = lines[0].strip().lower()
+        if not _layer_meta(key):
+            continue
+        items = []
+        for part in re.split(r"(?m)^###\s+item\s*$", "\n".join(lines[1:])):
+            fields = _kv_block(part)
+            if fields.get("title_en") or fields.get("en"):
+                items.append(fields)
+        if items:
+            layers.append((key, items))
+    return layers
+
+
+def load_briefings():
+    """Published issues only. Underscore files and template: true stay out of the site."""
+    docs = []
+    for doc in _markdown_docs("briefings", include_hidden=False):
+        if doc["template"]:
+            continue
+        doc["layers"] = _parse_brief_layers(doc["body"])
+        docs.append(doc)
+    docs.sort(key=lambda doc: doc["meta"].get("date") or "", reverse=True)
+    return docs
+
+
+def _parse_guide(body):
+    pieces = []
+    lines = body.splitlines()
+    index = 0
+    buf = []
+    while index < len(lines):
+        line = lines[index]
+        if line.startswith(":::"):
+            if any(part.strip() for part in buf):
+                pieces.append(("prose", _kv_block("\n".join(buf))))
+            buf = []
+            kind = line[3:].strip() or "prose"
+            index += 1
+            block = []
+            while index < len(lines) and lines[index].strip() != ":::":
+                block.append(lines[index])
+                index += 1
+            pieces.append((kind, _kv_block("\n".join(block))))
+        else:
+            buf.append(line)
+        index += 1
+    if any(part.strip() for part in buf):
+        pieces.append(("prose", _kv_block("\n".join(buf))))
+    return pieces
+
+
+def load_guides():
+    docs = _markdown_docs("guides", include_hidden=INCLUDE_EXAMPLES)
+    for doc in docs:
+        doc["pieces"] = _parse_guide(doc["body"])
+    return docs
+
+
+def load_promises():
+    path = ROOT / "content" / "data" / "promises.json"
+    if not path.exists():
+        return []
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except ValueError:
+        return []
+    rows = []
+    for row in data.get("rows") or []:
+        if not isinstance(row, dict) or not _layer_meta(str(row.get("layer") or "")):
+            continue
+        if str(row.get("status") or "") not in PROMISE_STATUS:
+            continue
+        promise = row.get("promise") if isinstance(row.get("promise"), dict) else {}
+        if not str(promise.get("en") or promise.get("nl") or "").strip():
+            continue
+        rows.append(row)
+    return rows
+
+
+def guide_amazon(href):
+    """amazon.nl links carry the Associates tag already stored for the site."""
+    tag = affiliate_tag("nl")
+    if not href.startswith("https://") or not tag or re.search(r"[?&]tag=", href):
+        return href
+    host = href.split("/")[2].lower() if href.count("/") >= 2 else ""
+    if not host.endswith("amazon.nl"):
+        return href
+    sep = "&" if "?" in href else "?"
+    return f"{href}{sep}tag={quote(tag, safe='')}"
+
+
+def disclosure_line(lang):
+    href = url(lang, disclosure_path(lang))
+    if lang == "en":
+        text = ("Affiliate disclosure: if you buy through a link on this page, TrendingTesla may earn a commission, "
+                "at no extra cost to you.")
+        more = "How this works"
+    else:
+        text = ("Affiliate-melding: koop je via een link op deze pagina, dan kan TrendingTesla een commissie ontvangen. "
+                "Voor jou kost het niets extra.")
+        more = "Zo werkt dat"
+    return f'<p class="afftop">{esc(text)} <a href="{href}">{esc(more)}</a>.</p>'
+
+
+def newsletter_pitch(lang):
+    briefing = url(lang, "briefing/")
+    privacy = url(lang, "privacy/")
+    if lang == "en":
+        return (
+            "<p>One email a week: the briefing. It walks the seven layers, Tesla, Tesla Energy, SpaceX, "
+            "Starlink, SpaceXSI, Neuralink and The Boring Company, with one line on why each item matters.</p>"
+            f'<p>Double opt-in, and you can unsubscribe from any email. <a href="{privacy}">Privacy</a>.</p>'
+            f'<p><a href="{briefing}">Weekly briefing</a>.</p>')
+    return (
+        "<p>Eén mail per week: de briefing. Die loopt de zeven lagen langs, Tesla, Tesla Energy, SpaceX, "
+        "Starlink, SpaceXSI, Neuralink en The Boring Company, met één regel over waarom elk punt ertoe doet.</p>"
+        f'<p>Dubbele bevestiging, en afmelden kan vanuit elke e-mail. <a href="{privacy}">Privacy</a>.</p>'
+        f'<p><a href="{briefing}">Weekbriefing</a>.</p>')
+
+
+def nl_sticky(lang):
+    """Dismissible signup on articles. sessionStorage is tab-only UI state, not a cookie."""
+    L = LANGS[lang]
+    fid = f"nlstick-email-{lang}"
+    dismiss = "Not now" if lang == "en" else "Niet nu"
+    return (
+        f'<aside class="nlstick" hidden>'
+        f'<form class="nlbar-form" {ml_form_attrs(lang)}>'
+        f'<label class="nlbar-h" for="{fid}">{esc(L["bar_h"])}</label>'
+        f'<input id="{fid}" type="email" name="fields[email]" required maxlength="200" '
+        f'autocomplete="email" inputmode="email" placeholder="{esc(L["news_email"])}">'
+        f'<button type="submit">{esc(L["news_btn"])}</button>'
+        f'{ml_hidden()}<p class="nlbar-msg" role="status" hidden></p></form>'
+        f'<button type="button" class="nlstick-x">{esc(dismiss)}</button></aside>'
+        "<script>(function(){var bar=document.querySelector('.nlstick');if(!bar)return;"
+        "var key='tt-nlstick';try{if(sessionStorage.getItem(key))return;}catch(e){}"
+        "bar.hidden=false;function place(){var c=document.getElementById('consent');"
+        "bar.style.bottom=((c&&!c.hidden)?c.offsetHeight+16:12)+'px';}place();"
+        "bar.querySelector('.nlstick-x').addEventListener('click',function(){bar.hidden=true;"
+        "try{sessionStorage.setItem(key,'1')}catch(e){}});"
+        "var end=document.querySelector('aside.nlbar');"
+        "if(end&&'IntersectionObserver' in window){new IntersectionObserver(function(es){"
+        "es.forEach(function(ev){bar.classList.toggle('is-quiet',ev.isIntersecting);});}"
+        ").observe(end);}})();</script>"
+        f"{ML_BAR_JS}"
+    )
+
+
+def briefing_index_body(docs, lang):
+    if lang == "en":
+        title = "Weekly briefing"
+        intro = "One issue a week across the seven layers. Each item is what happened, plus one line on why it matters."
+        empty = "First briefing coming soon"
+    else:
+        title = "Weekbriefing"
+        intro = "Eén editie per week over de zeven lagen. Elk punt is wat er gebeurde, plus één regel over waarom het ertoe doet."
+        empty = "De eerste briefing volgt binnenkort"
+    if docs:
+        lis = []
+        for doc in docs:
+            name = doc["meta"].get(f"title_{lang}") or doc["meta"].get("title_en") or doc["slug"]
+            when = fmt_date(doc["meta"]["date"], lang) if doc["meta"].get("date") else ""
+            lis.append(
+                f'<li><a href="{url(lang, "briefing/" + doc["slug"] + "/")}"><strong>{esc(name)}</strong>'
+                f'<span>{esc(when)}</span></a></li>')
+        cards = f'<ul class="brief-list">{"".join(lis)}</ul>'
+        signup = (f'<div class="brief-cta">{ml_bar(lang, "-a")}</div>{cards}'
+                  f'<div class="brief-cta">{ml_bar(lang, "-b")}</div>')
+    else:
+        cards = f'<p class="prom-empty">{esc(empty)}</p>'
+        signup = f'{cards}<div class="brief-cta">{ml_bar(lang)}</div>'
+    return (
+        f'<article class="narrow brief"><h1>{esc(title)}</h1>{signup}</article>'), title, intro
+
+
+def briefing_issue_body(doc, lang):
+    L = LANGS[lang]
+    title = doc["meta"].get(f"title_{lang}") or doc["meta"].get("title_en") or doc["slug"]
+    dek = doc["meta"].get(f"dek_{lang}") or doc["meta"].get("dek_en") or ""
+    banner = ""
+    if doc["template"]:
+        note = ("Template. This is not a published briefing." if lang == "en"
+                else "Sjabloon. Dit is geen gepubliceerde briefing.")
+        banner = f'<p class="tplnote">{esc(note)}</p>'
+    dated = f'<p class="meta">{fmt_date(doc["meta"]["date"], lang)}</p>' if doc["meta"].get("date") else ""
+    sections = []
+    why_label = "Why it matters." if lang == "en" else "Waarom het ertoe doet."
+    for key, items in doc["layers"]:
+        lis = []
+        for item in items:
+            heading = item.get(f"title_{lang}") or item.get("title_en") or ""
+            text = item.get(lang) or item.get("en") or ""
+            why = item.get(f"why_{lang}") or item.get("why_en") or ""
+            why_html = f'<p class="brief-why"><b>{esc(why_label)}</b> {esc(why)}</p>' if why else ""
+            lis.append(f"<li><h3>{esc(heading)}</h3><p>{esc(text)}</p>{why_html}</li>")
+        sections.append(f'<section class="brief-layer"><h2>{layer_tag(key, lang)}</h2><ol>{"".join(lis)}</ol></section>')
+    top = f'<div class="brief-cta">{ml_bar(lang, "-a")}</div>'
+    end = f'<div class="brief-cta">{ml_bar(lang, "-b")}</div>'
+    body = (
+        f'<article class="narrow brief"><h1>{esc(title)}</h1>{banner}'
+        f'<p class="byline"><a href="{url(lang, "editorial/")}">{esc(L["byline"])}</a></p>{dated}'
+        f'<p class="lead">{esc(dek)}</p>{top}{"".join(sections)}{end}</article>')
+    return body, title, dek or title
+
+
+def promises_body(rows, lang):
+    if lang == "en":
+        title = "Promises"
+        intro = "A register of public promises from the seven layers: what was said, when it was due, and what happened."
+        empty = "The register is not open yet."
+        headers = ("Layer", "Promise", "Date made", "Deadline", "Status", "Source")
+        any_layer, any_status, source = "Any layer", "Any status", "Source"
+        labels = {"delivered": "Delivered", "late": "Late", "pending": "Pending", "abandoned": "Abandoned"}
+    else:
+        title = "Beloftes"
+        intro = "Een register van publieke beloftes uit de zeven lagen: wat er is gezegd, wanneer het zou gebeuren, en wat ervan kwam."
+        empty = "Het register is nog niet open."
+        headers = ("Laag", "Belofte", "Datum", "Deadline", "Status", "Bron")
+        any_layer, any_status, source = "Elke laag", "Elke status", "Bron"
+        labels = {"delivered": "Geleverd", "late": "Te laat", "pending": "Open", "abandoned": "Afgeblazen"}
+    layer_opts = f'<option value="">{esc(any_layer)}</option>' + "".join(
+        f'<option value="{key}">{esc(name)}</option>' for key, _href, _tone, name in BRIEF_LAYERS)
+    status_opts = f'<option value="">{esc(any_status)}</option>' + "".join(
+        f'<option value="{key}">{esc(label)}</option>' for key, label in labels.items())
+    body_rows = []
+    for row in rows:
+        key = str(row["layer"])
+        promise = row.get("promise") if isinstance(row.get("promise"), dict) else {}
+        text = str(promise.get(lang) or promise.get("en") or "").strip()
+        made = str(row.get("made") or "")
+        due = str(row.get("deadline") or "")
+        made_s = fmt_date(made, lang) if re.fullmatch(r"\d{4}-\d{2}-\d{2}", made) else ""
+        due_s = fmt_date(due, lang) if re.fullmatch(r"\d{4}-\d{2}-\d{2}", due) else ""
+        status = str(row["status"])
+        href = str(row.get("source") or "")
+        src = (f'<a href="{esc(href)}" rel="noopener noreferrer" target="_blank">{esc(source)}</a>'
+               if href.startswith("https://") else "")
+        body_rows.append(
+            f'<tr data-layer="{esc(key)}" data-status="{esc(status)}"><td>{layer_tag(key, lang)}</td>'
+            f'<td>{esc(text)}</td><td>{esc(made_s)}</td><td>{esc(due_s)}</td>'
+            f'<td>{esc(labels[status])}</td><td>{src}</td></tr>')
+    none_hidden = "" if not body_rows else " hidden"
+    script = (
+        "<script>(function(){var root=document.querySelector('[data-prom]');if(!root)return;"
+        "var rows=[].slice.call(document.querySelectorAll('.prom tbody tr'));"
+        "var empty=document.querySelector('.prom-empty');"
+        "function apply(){var layer=root.querySelector('[data-filter=layer]').value;"
+        "var status=root.querySelector('[data-filter=status]').value;var n=0;"
+        "rows.forEach(function(tr){var ok=(!layer||tr.getAttribute('data-layer')===layer)"
+        "&&(!status||tr.getAttribute('data-status')===status);tr.hidden=!ok;if(ok)n++;});"
+        "if(empty)empty.hidden=n!==0;}"
+        "root.addEventListener('change',apply);apply();})();</script>")
+    layer_label = "Layer" if lang == "en" else "Laag"
+    status_label = "Status"
+    return (
+        f'<article class="narrow"><h1>{esc(title)}</h1><div class="prose"><p>{esc(intro)}</p></div>'
+        f'<div class="prom-filters" data-prom>'
+        f'<label>{esc(layer_label)}<select data-filter="layer">{layer_opts}</select></label>'
+        f'<label>{esc(status_label)}<select data-filter="status">{status_opts}</select></label></div>'
+        f'<div class="prom-wrap"><table class="prom"><thead><tr>{"".join(f"<th>{esc(h)}</th>" for h in headers)}</tr></thead>'
+        f'<tbody>{"".join(body_rows)}</tbody></table></div>'
+        f'<p class="prom-empty"{none_hidden}>{esc(empty)}</p>{script}</article>'), title, intro
+
+
+def _guide_product(fields, lang):
+    name = fields.get(f"name_{lang}") or fields.get("name_en") or ""
+    if not name:
+        return ""
+    pros = _bits(fields.get(f"pros_{lang}") or fields.get("pros_en"))
+    cons = _bits(fields.get(f"cons_{lang}") or fields.get("cons_en"))
+    image = str(fields.get("image") or "")
+    img = ""
+    klass = "gbox noimg"
+    if image.startswith("/img/") and ".." not in image:
+        klass = "gbox"
+        img = f'<img src="{esc(image)}" alt="" width="640" height="480" loading="lazy" decoding="async">'
+    plus = "Pros" if lang == "en" else "Pluspunten"
+    minus = "Cons" if lang == "en" else "Minpunten"
+    lists = ""
+    if pros:
+        lists += f'<h3>{plus}</h3><ul>{"".join(f"<li>{esc(item)}</li>" for item in pros)}</ul>'
+    if cons:
+        lists += f'<h3>{minus}</h3><ul>{"".join(f"<li>{esc(item)}</li>" for item in cons)}</ul>'
+    href = guide_amazon(str(fields.get("url") or ""))
+    button = fields.get(f"button_{lang}") or fields.get("button_en") or (
+        "View on Amazon" if lang == "en" else "Bekijk bij Amazon")
+    link = ""
+    if href.startswith("https://"):
+        link = (f'<a class="btn" href="{esc(href)}" rel="sponsored nofollow noopener" target="_blank">'
+                f'{esc(button)}</a>')
+    return f'<aside class="{klass}">{img}<div><h2>{esc(name)}</h2>{lists}{link}</div></aside>'
+
+
+def _guide_table(fields, lang):
+    columns = _bits(fields.get(f"columns_{lang}") or fields.get("columns_en"))
+    rows = fields.get(f"row_{lang}") or fields.get("row_en") or []
+    if isinstance(rows, str):
+        rows = [rows]
+    if not columns:
+        return ""
+    caption = fields.get(f"caption_{lang}") or fields.get("caption_en") or ""
+    cap = f"<caption>{esc(caption)}</caption>" if caption else ""
+    head = "".join(f"<th>{esc(col)}</th>" for col in columns)
+    body = []
+    for row in rows:
+        cells = [part.strip() for part in str(row).split("|")]
+        while len(cells) < len(columns):
+            cells.append("")
+        body.append("<tr>" + "".join(f"<td>{esc(cell)}</td>" for cell in cells[:len(columns)]) + "</tr>")
+    return f'<table class="gtable">{cap}<thead><tr>{head}</tr></thead><tbody>{"".join(body)}</tbody></table>'
+
+
+def guide_body(doc, lang):
+    title = doc["meta"].get(f"title_{lang}") or doc["meta"].get("title_en") or doc["slug"]
+    desc = doc["meta"].get(f"description_{lang}") or doc["meta"].get("description_en") or title
+    banner = ""
+    if doc["template"]:
+        note = ("Template. This is not a published guide." if lang == "en"
+                else "Sjabloon. Dit is geen gepubliceerde gids.")
+        banner = f'<p class="tplnote">{esc(note)}</p>'
+    chunks = [disclosure_line(lang), banner]
+    for kind, fields in doc["pieces"]:
+        if kind == "product":
+            chunks.append(_guide_product(fields, lang))
+        elif kind == "compare":
+            chunks.append(_guide_table(fields, lang))
+        else:
+            text = fields.get(lang) or fields.get("en") or ""
+            if text:
+                chunks.append(f"<p>{esc(text)}</p>")
+    body = (f'<article class="narrow"><h1>{esc(title)}</h1><div class="prose">{"".join(chunks)}</div></article>')
+    return body, title, desc
+
+
+def guides_index_body(docs, lang):
+    real = [doc for doc in docs if not doc["template"]]
+    if lang == "en":
+        title = "Buying guides"
+        intro = "Guides for things you can buy. None are published yet."
+        sample = "Layout template"
+    else:
+        title = "Koopgidsen"
+        intro = "Gidsen voor dingen die je kunt kopen. Er is er nog geen gepubliceerd."
+        sample = "Opmaakvoorbeeld"
+    items = ""
+    if real:
+        lis = []
+        for doc in real:
+            name = doc["meta"].get(f"title_{lang}") or doc["meta"].get("title_en") or doc["slug"]
+            lis.append(f'<li><a href="{url(lang, guides_path(lang) + doc["slug"] + "/")}">{esc(name)}</a></li>')
+        items = f'<ul class="brief-list">{"".join(lis)}</ul>'
+    else:
+        empty = "No buying guide is published yet." if lang == "en" else "Er is nog geen koopgids gepubliceerd."
+        items = f'<p class="prom-empty">{esc(empty)}</p>'
+    samples = [doc for doc in docs if doc["template"]]
+    sample_link = ""
+    if samples:
+        sample_link = (
+            f'<p><a href="{url(lang, guides_path(lang) + samples[0]["slug"] + "/")}">{esc(sample)}</a></p>')
+    body = (
+        f'<article class="narrow"><h1>{esc(title)}</h1>{disclosure_line(lang)}'
+        f'<div class="prose"><p>{esc(intro)}</p></div>{items}{sample_link}</article>')
+    return body, title, intro
+
+
+def advertise_body(lang):
+    contact = url(lang, "contact/")
+    if lang == "en":
+        title = "Advertise"
+        desc = "How to talk to TrendingTesla about a placement."
+        html_body = (
+            f"<p>TrendingTesla is independent. A placement, in the weekly briefing or beside a guide, "
+            f"is labeled so readers can see it is paid.</p>"
+            f'<p>For a conversation, use the <a href="{contact}">contact form</a>.</p>')
+    else:
+        title = "Adverteren"
+        desc = "Hoe je TrendingTesla spreekt over een plaatsing."
+        html_body = (
+            f"<p>TrendingTesla is onafhankelijk. Een plaatsing, in de weekbriefing of bij een gids, "
+            f"krijgt een label zodat lezers zien dat die betaald is.</p>"
+            f'<p>Voor een gesprek gebruik je het <a href="{contact}">contactformulier</a>.</p>')
+    return (
+        f'<article class="narrow"><h1>{esc(title)}</h1><div class="prose">{html_body}</div></article>'), title, desc
+
+
+def disclosure_body(lang):
+    contact = url(lang, "contact/")
+    if lang == "en":
+        title = "Affiliate disclosure"
+        desc = "When TrendingTesla may earn a commission from a link."
+        html_body = (
+            "<p>Some pages link to Amazon.nl. If you buy through one of those links, TrendingTesla may earn "
+            "a commission. You do not pay extra. The link is marked as sponsored.</p>"
+            "<p>A commission never changes what we write. We do not publish a guide in order to sell a product, "
+            "and a product box does not appear until a guide is published.</p>"
+            f'<p>Questions go through the <a href="{contact}">contact form</a>.</p>')
+    else:
+        title = "Affiliate-melding"
+        desc = "Wanneer TrendingTesla een commissie kan ontvangen via een link."
+        html_body = (
+            "<p>Sommige pagina's linken naar Amazon.nl. Koop je via zo'n link, dan kan TrendingTesla een "
+            "commissie ontvangen. Jij betaalt niets extra. De link is gemarkeerd als gesponsord.</p>"
+            "<p>Een commissie verandert nooit wat we schrijven. We publiceren geen gids om een product te verkopen, "
+            "en een productvak verschijnt pas als er een gids is.</p>"
+            f'<p>Vragen gaan via het <a href="{contact}">contactformulier</a>.</p>')
+    return (
+        f'<article class="narrow"><h1>{esc(title)}</h1><div class="prose">{html_body}</div></article>'), title, desc
+
+
 def build():
     load_money()
     load_affiliate()
@@ -4375,6 +4997,9 @@ def build():
     for lang in LANGS:
         make_cover(OUT / "img" / f"default-{lang}.jpg", LANGS[lang]["tagline"], NAME, "news", "", "trendingtesla.com")
     hero_photo = "/img/hero.jpg" if (STATIC / "img" / "hero.jpg").exists() else None
+    briefing_docs = load_briefings()
+    guide_docs = load_guides()
+    promise_rows = load_promises()
 
     for lang in LANGS:
         L = LANGS[lang]
@@ -4506,7 +5131,7 @@ def build():
                                "contentUrl": f"https://www.youtube.com/watch?v={v['id']}"}
                 ld["video"] = {k: x for k, x in ld["video"].items() if x}
             body = shell(pv_article("b", a, arts, lang, live=True),
-                          page_side(arts, lang, "article", a, tail=ml_bar(lang)))
+                          page_side(arts, lang, "article", a, tail=ml_bar(lang))) + nl_sticky(lang)
             _, crumb_ld = crumbs(lang, [
                 (c.get("tag", c[lang]), f"category/{a['category']}/"),
                 (t["title"], a["slug"] + "/"),
@@ -4596,12 +5221,52 @@ def build():
         npath = signup_path(lang)
         nbody = (
             f'<article class="narrow"><h1>{esc(L["signup_h"])}</h1>'
-            f'<div class="prose"><p>{esc(L["signup_lead"])} '
-            f'<a href="{url(lang, "privacy/")}">{esc(L["privacy"])}</a>.</p></div>'
+            f'<div class="prose nlpitch">{newsletter_pitch(lang)}</div>'
             f'{ml_signup(lang, heading=False)}</article>')
         write(url(lang, npath), page(
             lang, npath, L["signup"], L["signup_desc"],
             shell(nbody, page_side(arts, lang, "static", signup=False)), alt_path=signup_path(other(lang))))
+
+        # ---------- Briefing, promises, buying guides, advertise ----------
+        b_body, b_title, b_desc = briefing_index_body(briefing_docs, lang)
+        write(url(lang, "briefing/"), page(
+            lang, "briefing/", b_title, b_desc,
+            shell(b_body, page_side(arts, lang, "static", signup=False)), active="briefing"))
+        for doc in briefing_docs:
+            if doc.get("template"):
+                continue
+            i_body, i_title, i_desc = briefing_issue_body(doc, lang)
+            write(url(lang, f"briefing/{doc['slug']}/"), page(
+                lang, f"briefing/{doc['slug']}/", i_title, i_desc,
+                shell(i_body, page_side(arts, lang, "static", signup=False)),
+                active="briefing", robots="noindex" if doc["template"] else None))
+        p_body, p_title, p_desc = promises_body(promise_rows, lang)
+        write(url(lang, promises_path(lang)), page(
+            lang, promises_path(lang), p_title, p_desc,
+            shell(p_body, page_side(arts, lang, "static")),
+            active="promises", alt_path=promises_path(other(lang))))
+        g_body, g_title, g_desc = guides_index_body(guide_docs, lang)
+        write(url(lang, guides_path(lang)), page(
+            lang, guides_path(lang), g_title, g_desc,
+            shell(g_body, page_side(arts, lang, "static")),
+            active="buyguides", alt_path=guides_path(other(lang))))
+        for doc in guide_docs:
+            body, title, desc = guide_body(doc, lang)
+            gpath = guides_path(lang) + doc["slug"] + "/"
+            write(url(lang, gpath), page(
+                lang, gpath, title, desc,
+                shell(body, page_side(arts, lang, "static")),
+                active="buyguides", robots="noindex" if doc["template"] else None,
+                alt_path=guides_path(other(lang)) + doc["slug"] + "/"))
+        d_body, d_title, d_desc = disclosure_body(lang)
+        write(url(lang, disclosure_path(lang)), page(
+            lang, disclosure_path(lang), d_title, d_desc,
+            shell(d_body, page_side(arts, lang, "static")), active="affiliate"))
+        a_body, a_title, a_desc = advertise_body(lang)
+        write(url(lang, advertise_path(lang)), page(
+            lang, advertise_path(lang), a_title, a_desc,
+            shell(a_body, page_side(arts, lang, "static")),
+            active="advertise", alt_path=advertise_path(other(lang))))
 
         # ---------- RSS ----------
         items = "".join(
@@ -4649,6 +5314,22 @@ def build():
     for lang in LANGS:
         urls += emit(lang, signup_path(lang), today, signup_path("en"), signup_path("nl"))
         urls += emit(lang, ecosystem_path(lang), today, ecosystem_path("en"), ecosystem_path("nl"))
+        urls += emit(lang, "briefing/", today, "briefing/", "briefing/")
+        for doc in briefing_docs:
+            if doc["template"]:
+                continue
+            slug = f"briefing/{doc['slug']}/"
+            urls += emit(lang, slug, (doc["meta"].get("date") or today)[:10], slug, slug)
+        urls += emit(lang, promises_path(lang), today, promises_path("en"), promises_path("nl"))
+        urls += emit(lang, guides_path(lang), today, guides_path("en"), guides_path("nl"))
+        for doc in guide_docs:
+            if doc["template"]:
+                continue
+            urls += emit(
+                lang, guides_path(lang) + doc["slug"] + "/", today,
+                guides_path("en") + doc["slug"] + "/", guides_path("nl") + doc["slug"] + "/")
+        urls += emit(lang, disclosure_path(lang), today, disclosure_path("en"), disclosure_path("nl"))
+        urls += emit(lang, advertise_path(lang), today, advertise_path("en"), advertise_path("nl"))
     write("/sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>'
           '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">'
           f"{urls}</urlset>")

@@ -100,6 +100,13 @@ git -c user.name="tbeugelink" -c user.email="345708345+tbeugelink@users.noreply.
 
 Set `date` and `time` immediately before that commit. Do not commit secrets. Changes to `build.py`, `video/`, the workflows, this file or `ops/tasks/` go through a pull request. The writing task does not change those files, and it does not delete or redate published articles.
 
+## Briefings, promises and guides
+
+- `content/briefings/*.md` is one weekly briefing. A file whose name starts with `_` is not published. `content/briefings/_template.md` is the layout sample and is left out of the build.
+- `content/data/promises.json` fills `/promises/` and `/nl/beloftes/`. Rows in `rows` are shown. `_example` is not.
+- `content/guides/*.md` is a buying guide. A file whose name starts with `_` is not published.
+- `ADS_ENABLED` in `build.py` is false. Ad slots are omitted until it is true, so they take no space. The AdSense script stays deferred. `public/ads.txt` is written from the publisher id already in `content/monetization.json`.
+
 ## Safety
 
 - No person's name anywhere in the repo.

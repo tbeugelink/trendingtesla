@@ -967,11 +967,11 @@ header.hb .pnav>.is-parked{display:none}
 .pv-th{position:relative;container-type:inline-size;border-radius:6px;overflow:hidden;border:1px solid var(--edge);background:#000}
 .pv-th img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
 .pv-hl{min-width:0}
-.pv-hl b{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;white-space:normal;font-size:.95rem;line-height:1.3;font-weight:400;color:var(--blue)}
+.pv-hl b{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;white-space:normal;font-size:.95rem;line-height:1.3;font-weight:400;color:#ebebeb}
 .pv-min{justify-self:end;min-width:42px;text-align:center;border:1px solid var(--border2);border-radius:8px;padding:1px 0;line-height:1}
 .pv-min b{display:block;color:var(--red);font-size:.85rem;line-height:1}
 .pv-min small{display:block;color:var(--dim);font-size:.58rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;line-height:1}
-.pv-row:hover .pv-hl b,.pv-row:focus-visible .pv-hl b{color:#fff;text-decoration:underline;text-underline-offset:2px}
+.pv-row:hover .pv-hl b,.pv-row:focus-visible .pv-hl b{color:var(--blue);text-decoration:underline;text-underline-offset:2px}
 .pv-side h2{font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#fff;border-top:3px solid var(--red);padding-top:8px;margin:0 0 8px}
 .pv-side section{margin:0 0 18px}
 .pv-side a{text-decoration:none;color:inherit}
@@ -1135,6 +1135,7 @@ header.hb .pnav>.is-parked{display:none}
 .eco-explain{margin:6px 0 22px;max-width:68ch}
 .eco-explain h2{font-size:1.2rem;margin:0 0 10px}
 .eco-explain p{margin:0 0 12px;line-height:1.65;color:#d5deea}
+.eco-explain a{color:var(--blue2)}
 .ss-board{display:grid;grid-template-columns:1fr;gap:10px;margin:0 0 16px}
 .ss-card{border-radius:14px;padding:14px 14px 12px;border:1px solid #3a4a60;background:#12161e}
 .ss-card.latest{background:linear-gradient(160deg,#2a120c,#12161e 55%);border-color:#ff7a45}
@@ -4675,15 +4676,20 @@ def layer_page(layer, arts, lang):
 
 
 def _eco_explain(lang):
-    """How the seven layers hand work to each other. No figures that are not already sourced."""
+    """How the seven layers hand work to each other. The Megapack figure is the only number."""
+    src = ('<a href="https://electrek.co/2026/05/01/tesla-tsla-web-transactions-musk-companies-spacex-xai-10ka-2025/" '
+           'rel="noopener noreferrer" target="_blank">Electrek, 1 May 2026</a>' if lang == "en" else
+           '<a href="https://electrek.co/2026/05/01/tesla-tsla-web-transactions-musk-companies-spacex-xai-10ka-2025/" '
+           'rel="noopener noreferrer" target="_blank">Electrek, 1 mei 2026</a>')
     if lang == "en":
         title = "How the ecosystem fits together"
         paragraphs = [
-            "Elon Musk's companies are separate businesses that share a few loops. This map draws those loops as seven layers. A car, a rocket, a satellite dish and a chatbot belong to different companies, and the work still runs from one layer into the next.",
-            "Tesla is the car and robot layer. The cars, the Semi, the Robotaxi service, supervised FSD and the Optimus robot all live here. The fleet's cameras are the pictures FSD and Robotaxi train on. Tesla does not publish how much video that is, so this page does not invent a figure.",
-            "Tesla Energy is the power layer beside the cars. Megapacks, the charging network, home chargers and solar sit here. The same Megapacks that store power for the grid are the batteries that can feed a datacenter. In 2025 Tesla booked $430.1 million of business with xAI, mostly Megapacks. That figure is in Tesla's own related-party disclosure, as Electrek reported it on 1 May 2026.",
-            "SpaceX is the launch layer. Falcon flies the regular missions. Starship is the larger vehicle, and the Starship tracker follows each flight on its own. SpaceX also puts Starlink's satellites into orbit. Starlink is the connectivity layer: dishes on the ground talk to that constellation, for homes and for businesses. SpaceX's quarterly filing is the public record for how many subscribers and satellites that network has reached.",
-            "SpaceXSI is the intelligence layer, formerly xAI and then SpaceXAI. It covers the models, including Grok, the compute that trains them, the datacenters that house that compute, and the chips meant to build more of it. That same intelligence is what Tesla is building into supervised FSD and into Optimus. Nobody has demonstrated AGI, and a model ranking is not a filing.",
+            "Elon Musk's companies are separate businesses that share a few loops. Those loops are the seven layers. A car, a rocket, a satellite dish and a chatbot belong to different companies, and the work still runs from one layer into the next.",
+            "Tesla is the car and robot layer. The cars, the Semi, the Robotaxi service, supervised FSD and the Optimus robot all live here. The fleet's cameras supply the pictures that train FSD and Robotaxi.",
+            "Tesla Energy is the power layer beside the cars. Megapacks, the charging network, home chargers and solar sit here. The same Megapacks that store power for the grid are the batteries that can feed a datacenter. "
+            f"In 2025 Tesla booked $430.1 million of business with xAI, mostly Megapacks ({src}).",
+            "SpaceX is the launch layer. Falcon flies the regular missions. Starship is the larger vehicle, and each flight stands on its own. SpaceX also puts Starlink's satellites into orbit. Starlink is the connectivity layer: dishes on the ground talk to that constellation, for homes and for businesses, and the subscriptions are the revenue that comes back from the network.",
+            "SpaceXSI is the intelligence layer, formerly xAI and then SpaceXAI. It covers the models, including Grok, the compute that trains them, the datacenters that house that compute, and the chips meant to build more of it. That same intelligence is what Tesla is building into supervised FSD and into Optimus.",
             "Neuralink is the brain-computer layer, its own company beside the stack. An implant can move a cursor. Studies aim at speech and at sight. It does not sit inside the car or the rocket.",
             "Boring Co is the tunnel layer, also its own company. It digs car tunnels and runs Loop transit through them, often with Tesla vehicles. The public projects include Vegas, Nashville, Dubai and the tunnel at Gigafactory Texas.",
             "Four things keep handing work to each other: energy, compute, launch and connectivity. Energy feeds compute. Compute feeds the models. A launch puts connectivity in orbit. Connectivity and the models come back down into the cars, the robots and the tunnels.",
@@ -4691,16 +4697,17 @@ def _eco_explain(lang):
     else:
         title = "Hoe het ecosysteem in elkaar zit"
         paragraphs = [
-            "De bedrijven van Elon Musk zijn aparte ondernemingen die een paar lussen delen. Deze kaart tekent die lussen als zeven lagen. Een auto, een raket, een schotel en een chatbot horen bij verschillende bedrijven, en het werk loopt toch van de ene laag naar de volgende.",
-            "Tesla is de laag van de auto en de robot. De auto's, de Semi, de robotaxidienst, begeleide FSD en de robot Optimus horen hier. De camera's van de vloot leveren de beelden waarmee FSD en Robotaxi trainen. Tesla publiceert niet hoeveel beeld dat is, dus deze pagina verzint geen getal.",
-            "Tesla Energy is de stroomlaag naast de auto's. Megapacks, het laadnetwerk, thuisladers en zonne-energie horen hier. Dezelfde Megapacks die stroom bewaren voor het net zijn de batterijen die een datacenter kunnen voeden. In 2025 boekte Tesla $430,1 miljoen aan zaken met xAI, vooral Megapacks. Dat cijfer staat in Tesla's eigen opgave van transacties met verbonden partijen, zoals Electrek die op 1 mei 2026 weergaf.",
-            "SpaceX is de lanceerlaag. Falcon vliegt de gewone missies. Starship is het grotere voertuig, en de Starship-tracker volgt elke vlucht apart. SpaceX brengt ook de satellieten van Starlink in een baan. Starlink is de verbindingslaag: schotels op de grond praten met die constellatie, voor thuis en voor bedrijven. Het kwartaalverslag van SpaceX is het openbare stuk over hoeveel abonnees en satellieten dat netwerk heeft.",
-            "SpaceXSI is de intelligentielaag, eerder xAI en daarna SpaceXAI. Het gaat om de modellen, waaronder Grok, de rekenkracht die ze traint, de datacenters waar die rekenkracht staat, en de chips die meer van die rekenkracht moeten bouwen. Diezelfde intelligentie is wat Tesla in begeleide FSD en in Optimus bouwt. Niemand heeft AGI aangetoond, en een modelranglijst is geen filing.",
+            "De bedrijven van Elon Musk zijn aparte ondernemingen die een paar lussen delen. Die lussen zijn de zeven lagen. Een auto, een raket, een schotel en een chatbot horen bij verschillende bedrijven, en het werk loopt toch van de ene laag naar de volgende.",
+            "Tesla is de laag van de auto en de robot. De auto's, de Semi, de robotaxidienst, begeleide FSD en de robot Optimus horen hier. De camera's van de vloot leveren de beelden waarmee FSD en Robotaxi trainen.",
+            "Tesla Energy is de stroomlaag naast de auto's. Megapacks, het laadnetwerk, thuisladers en zonne-energie horen hier. Dezelfde Megapacks die stroom bewaren voor het net zijn de batterijen die een datacenter kunnen voeden. "
+            f"In 2025 boekte Tesla $430,1 miljoen aan zaken met xAI, vooral Megapacks ({src}).",
+            "SpaceX is de lanceerlaag. Falcon vliegt de gewone missies. Starship is het grotere voertuig, en elke vlucht staat op zichzelf. SpaceX brengt ook de satellieten van Starlink in een baan. Starlink is de verbindingslaag: schotels op de grond praten met die constellatie, voor thuis en voor bedrijven, en de abonnementen zijn de omzet die uit dat netwerk terugkomt.",
+            "SpaceXSI is de intelligentielaag, eerder xAI en daarna SpaceXAI. Het gaat om de modellen, waaronder Grok, de rekenkracht die ze traint, de datacenters waar die rekenkracht staat, en de chips die meer van die rekenkracht moeten bouwen. Diezelfde intelligentie is wat Tesla in begeleide FSD en in Optimus bouwt.",
             "Neuralink is de brein-computerlaag, een eigen bedrijf naast de stapel. Een implantaat kan een cursor bewegen. Studies richten zich op spraak en op zicht. Het zit niet in de auto en niet in de raket.",
             "Boring Co is de tunnellaag, ook een eigen bedrijf. Het graaft autotunnels en laat er Loop-vervoer door rijden, vaak met Tesla-voertuigen. De openbare projecten zijn Vegas, Nashville, Dubai en de tunnel bij Gigafactory Texas.",
             "Vier dingen geven werk aan elkaar door: energie, rekenkracht, lancering en verbinding. Energie voedt rekenkracht. Rekenkracht voedt de modellen. Een lancering zet verbinding in een baan. Verbinding en de modellen komen terug in de auto's, de robots en de tunnels.",
         ]
-    body = "".join(f"<p>{esc(p)}</p>" for p in paragraphs)
+    body = "".join(f"<p>{p if '<a ' in p else esc(p)}</p>" for p in paragraphs)
     return f'<section class="eco-explain"><h2>{esc(title)}</h2>{body}</section>'
 
 

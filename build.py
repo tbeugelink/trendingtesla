@@ -3316,53 +3316,76 @@ def category_hub(key, items, lang):
     return body, ld, intro
 
 
-def version_bar(key, lang, populated=None):
-    L = LANGS[lang]
-    m = MODELS[key]
-    root = m.get("parent", key)
-    versions = [k for k, v in MODELS.items() if v.get("parent") == root]
-    if populated is not None:
-        versions = [k for k in versions if k in populated]
-    if not versions:
-        return ""
-    btns = [(root, L["all_versions"])] + [
-        (k, MODELS[k]["label"][lang] if isinstance(MODELS[k]["label"], dict) else MODELS[k]["label"])
-        for k in versions]
-    return '<div class="versions"><span>' + esc(L["your_version"]) + "</span>" + "".join(
-        f'<a href="{url(lang, "model/" + k + "/")}"{" class=\"on\"" if k == key else ""}>{esc(lbl)}</a>'
-        for k, lbl in btns) + "</div>"
-
-
 MODEL_ORDER = ["model-s", "model-3", "model-x", "model-y", "cybertruck", "roadster", "semi", "cybercab"]
 
 
 def models_overview(lang):
-    """Grid of the models the site covers. Not an article feed."""
+    """One card per version, grouped by family. Family pages stay as hubs."""
     L = LANGS[lang]
     nav, ld = crumbs(lang, [(L["nav_models"], "category/models/")])
     intro = ({
-        "en": "Every Tesla the site covers. Open a model for the facts and the articles about it.",
-        "nl": "Elke Tesla die de site volgt. Open een model voor de feiten en de artikelen erover.",
+        "en": "Every Tesla version the site covers, grouped by model. Open a card for the facts and the articles.",
+        "nl": "Elke Tesla-uitvoering die de site volgt, per model gegroepeerd. Open een kaart voor de feiten en de artikelen.",
     })[lang]
-    cards = []
-    for i, key in enumerate(MODEL_ORDER):
-        m = MODELS[key]
-        ph = model_photo(key) or ""
-        # First row is on screen at desktop widths; the first card is the phone LCP image.
-        eager = i < 4
-        img = ""
-        if ph:
-            w, h = img_size(ph)
-            img = resp_img(ph, "Tesla " + m["name"], SIZES_MODEL, high=(i == 0), lazy=not eager, width=w, height=h)
-        cards.append(
-            f'<a class="mcard" href="{url(lang, "model/" + key + "/")}">'
-            f'<span class="mim">{img}</span><span class="mname">{esc(m["name"])}</span></a>')
+    sections = []
+    listed = []
+    n = 0
+    for root, keys in model_groups():
+        cards = []
+        for key in keys:
+            cards.append(model_card(key, lang, eager=n < 4, high=(n == 0)))
+            listed.append(key)
+            n += 1
+        title = MODELS[root]["name"]
+        sections.append(
+            f'<section><h2 class="rubh">{esc(title)}</h2><div class="mgrid">{"".join(cards)}</div></section>')
     body = (f'{nav}<header class="hubhead"><h1>{esc(L["nav_models"])}</h1>'
-            f'<p class="lead">{esc(intro)}</p></header><div class="mgrid">{"".join(cards)}</div>')
-    return body, ld, intro
+            f'<p class="lead">{esc(intro)}</p></header>{"".join(sections)}')
+    return body, ld, intro, listed
 
 
-def model_hub(key, items, lang, populated=None):
+def model_groups():
+    """Family order, then each version in the order it is defined. A model with no versions is its own card."""
+    groups = []
+    for root in MODEL_ORDER:
+        kids = [k for k, v in MODELS.items() if v.get("parent") == root]
+        groups.append((root, kids or [root]))
+    return groups
+
+
+def model_card(key, lang, eager=False, high=False):
+    m = MODELS[key]
+    name = m["name"]
+    if "," in name or len(name.split()) > 8:
+        raise SystemExit(f"model card title must be at most 8 words and have no comma: {name}")
+    ph = model_photo(key) or ""
+    img = ""
+    if ph:
+        w, h = img_size(ph)
+        img = resp_img(ph, "Tesla " + name, SIZES_MODEL, high=high, lazy=not eager, width=w, height=h)
+    return (f'<a class="mcard" href="{url(lang, "model/" + key + "/")}">'
+            f'<span class="mim">{img}</span><span class="mname">{esc(name)}</span></a>')
+
+
+def fact_sources(key, lang):
+    inf = INFO.get(key) or {}
+    links = []
+    for title, href in inf.get("sources") or []:
+        if href.startswith("http"):
+            links.append(f'<a href="{esc(href)}" rel="noopener noreferrer">{esc(title)}</a>')
+        else:
+            path = href.lstrip("/")
+            links.append(f'<a href="{url(lang, path)}">{esc(title)}</a>')
+    if not links and not inf.get("asof"):
+        return ""
+    when = ""
+    if inf.get("asof"):
+        when = ("As of 19 November 2026. " if lang == "en" else "Stand van 19 november 2026. ")
+    label = "Sources" if lang == "en" else "Bronnen"
+    return f'<p class="imgnote">{when}{esc(label)}: {" · ".join(links)}</p>'
+
+
+def model_hub(key, items, lang):
     """Model page: photo, sourced facts and the articles. Not a news lead."""
     m = MODELS[key]
     L = LANGS[lang]
@@ -3393,8 +3416,14 @@ def model_hub(key, items, lang, populated=None):
                    f'{esc(MODELS[parent]["name"])}</a>.</p>')
     else:
         listing = f'<p class="empty">{esc(L["empty"])}</p>'
+    versions = ""
+    if not parent:
+        kids = [k for k, v in MODELS.items() if v.get("parent") == key]
+        if kids:
+            vlabel = "Versions" if lang == "en" else "Uitvoeringen"
+            versions = f'<h2 class="rubh">{esc(vlabel)}</h2><div class="mgrid">{"".join(model_card(k, lang) for k in kids)}</div>'
     body = (f'{nav}<header class="hubhead"><h1>Tesla {esc(m["name"])}</h1></header>'
-            f'{hero}<p class="mintro">{esc(intro)}</p>{specs}{version_bar(key, lang, populated)}{listing}')
+            f'{hero}<p class="mintro">{esc(intro)}</p>{specs}{fact_sources(key, lang)}{versions}{listing}')
     desc = re.sub(r"\s+", " ", intro).strip()
     if len(desc) > 180:
         desc = desc[:179].rsplit(" ", 1)[0] + "…"
@@ -5544,12 +5573,12 @@ def build():
             if key in REDIRECT_CATS:
                 continue
             if key == "models":
-                content, crumb_ld, intro = models_overview(lang)
+                content, crumb_ld, intro, listed_models = models_overview(lang)
                 listed = [{
                     "@type": "ListItem", "position": i + 1,
                     "name": "Tesla " + MODELS[k]["name"],
                     "url": SITE + url(lang, f"model/{k}/"),
-                } for i, k in enumerate(MODEL_ORDER)]
+                } for i, k in enumerate(listed_models)]
                 overview_ld = {
                     "@context": "https://schema.org", "@type": "CollectionPage",
                     "name": L["nav_models"], "description": intro,
@@ -5573,7 +5602,6 @@ def build():
                        extra_head=ld_script(crumb_ld), active=key))
 
         # ---------- Model pages ----------
-        populated = {k for k, mv in MODELS.items() if mv.get("parent") and any(k in a.get("models", []) for a in arts)}
         for key, m in MODELS.items():
             if m.get("parent"):
                 items = [a for a in arts if key in a.get("models", [])]
@@ -5581,7 +5609,7 @@ def build():
                 family = {key} | {k for k, v in MODELS.items() if v.get("parent") == key}
                 items = [a for a in arts if family & set(a.get("models", []))]
             ph = model_photo(key)
-            content, crumb_ld, desc = model_hub(key, items, lang, populated)
+            content, crumb_ld, desc = model_hub(key, items, lang)
             facts = (INFO.get(key) or {}).get(lang, {}).get("specs") or []
             vehicle_ld = {
                 "@context": "https://schema.org", "@type": "Vehicle",

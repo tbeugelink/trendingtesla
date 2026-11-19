@@ -83,6 +83,7 @@ from zoneinfo import ZoneInfo
 
 from covers import make_cover
 from model_info import INFO
+from model_pages import PAGE_FACTS
 
 ROOT = Path(__file__).resolve().parent
 CONTENT = ROOT / "content" / "articles"
@@ -285,7 +286,11 @@ MODELS = {
     "cybertruck-foundation": {"name": "Cybertruck Foundation Series", "parent": "cybertruck", "label": "Foundation Series", "photo": "ctf-1.jpg", "gallery": ["ctf-1.jpg"], "menu": "menu-ctf.jpg"},
     "cybercab":          {"name": "Cybercab", "menu": "menu-cybercab.jpg",           "photo": "cybercab.jpg", "gallery": ["cybercab.jpg", "cc-1.jpg", "cc-3.jpg", "cc-2.jpg"]},
     "roadster":          {"name": "Roadster",           "photo": "rd-4.jpg", "menu": "menu-roadster.jpg", "gallery": ["rd-4.jpg", "rd-5.jpg", "rd-6.jpg", "rd-7.jpg", "rd-8.jpg", "rd-9.jpg", "rd-10.jpg", "rd-11.jpg", "rd-12.jpg", "rd-13.jpg", "rd-14.jpg", "rd-15.jpg", "rd-16.jpg", "rd-17.jpg", "rd-18.jpg", "rd-19.jpg", "rd-20.jpg", "rd-21.jpg", "rd-22.jpg", "rd-23.jpg", "rd-24.jpg", "rd-25.jpg"]},
-    "semi":              {"name": "Semi",               "photo": "semi.jpg", "menu": "menu-semi.jpg", "gallery": ["semi.jpg", "semi-6.jpg", "semi-4.jpg", "semi-7.jpg", "semi-2.jpg", "semi-5.jpg", "semi-3.jpg"]},
+    "semi":              {"name": "Semi", "photo": "lib/semi-highway.jpg", "menu": "menu-semi.jpg", "gallery": ["semi.jpg", "semi-6.jpg", "semi-4.jpg", "semi-7.jpg", "semi-2.jpg", "semi-5.jpg", "semi-3.jpg"]},
+    "semi-standard-range": {"name": {"en": "Semi Standard Range", "nl": "Semi Standard Range"}, "parent": "semi", "photo": "lib/semi-highway.jpg", "menu": "lib/semi-highway.jpg", "label": "Standard Range"},
+    "semi-long-range":   {"name": {"en": "Semi Long Range", "nl": "Semi Long Range"}, "parent": "semi", "photo": "lib/semi-highway.jpg", "menu": "lib/semi-highway.jpg", "label": "Long Range"},
+    "semi-europe":       {"name": {"en": "Semi Europe", "nl": "Semi Europa"}, "parent": "semi", "photo": "lib/semi-highway.jpg", "menu": "lib/semi-highway.jpg", "label": {"en": "Europe", "nl": "Europa"}},
+    "semi-2022-pilot":   {"name": {"en": "Semi 2022 Pilot", "nl": "Semi-pilot 2022"}, "parent": "semi", "photo": "semi.jpg", "menu": "semi.jpg", "label": {"en": "2022 Pilot", "nl": "Pilot 2022"}},
 }
 # Fallback photo per category: a file in static/img/topics/, or a list of files to vary between
 # (each article always gets the same one, picked from its slug). Missing files are skipped.
@@ -537,6 +542,15 @@ h1,h2,h3{color:#ebebeb;font-weight:800}
 .specs th{width:38%;color:var(--muted);font-weight:700}
 .specs td{color:var(--head)}
 .specs tr:nth-child(odd){background:rgba(255,255,255,.025)}
+.mfacts .specs th,.mfacts .specs td{overflow-wrap:break-word}
+.mfacts .specs th:first-child{width:24%}
+.mfacts .specs td:last-child{width:18%;color:var(--muted);font-size:.82rem}
+@media (max-width:699px){
+  .mfacts .specs th:first-child{width:34%}
+  .mfacts .specs td:last-child{width:24%;font-size:.75rem}
+}
+.mfacts ul{margin:8px 0 16px;padding-left:1.2rem}
+.mfacts li{margin:5px 0;color:var(--head)}
 .soon{color:var(--muted);background:var(--surface);border:1px dashed var(--border2);border-radius:10px;padding:14px 16px}
 .tip{display:flex;align-items:center;gap:26px;margin-top:17px;padding:22px 26px;border-radius:10px;border:1px solid var(--border2);background:linear-gradient(120deg,rgba(0,212,255,.09),rgba(56,96,255,.05) 55%,rgba(255,255,255,.01))}
 .tip .big{font-size:2.6rem;font-weight:800;letter-spacing:-.03em;line-height:1;color:var(--blue);white-space:nowrap}
@@ -1438,9 +1452,18 @@ def ecosystem_path(lang):
 def model_photo(key, for_article=False):
     m = MODELS[key]
     p = m.get("article_photo", m.get("photo")) if for_article else m.get("photo")
-    if p and (STATIC / "img" / "models" / p).exists():
-        return f"/img/models/{p}"
+    if p:
+        rel = Path(p) if "/" in p else Path("models") / p
+        if (STATIC / "img" / rel).is_file():
+            return "/img/" + rel.as_posix()
     return model_photo(m["parent"], for_article) if m.get("parent") else None
+
+
+def model_title(key, lang):
+    name = MODELS[key]["name"]
+    if isinstance(name, dict):
+        return name.get(lang) or name["en"]
+    return name
 
 
 def social_img(a, lang):
@@ -1991,7 +2014,7 @@ def story(a, lang, tag="h1"):
     chips = ""
     if a.get("models"):
         chips = '<div class="chips">' + "".join(
-            f'<a href="{url(lang, "model/" + k + "/")}">Tesla {MODELS[k]["name"]}</a>' for k in a["models"]) + "</div>"
+            f'<a href="{url(lang, "model/" + k + "/")}">Tesla {model_title(k, lang)}</a>' for k in a["models"]) + "</div>"
     title = esc(t["title"]) if tag == "h1" else f'<a href="{url(lang, a["slug"] + "/")}">{esc(t["title"])}</a>'
     byline = (f'<p class="byline"><a href="{url(lang, "editorial/")}">{L["byline"]}</a></p>' if tag == "h1" else "")
     toc, body = enrich(a, lang)
@@ -2028,7 +2051,8 @@ def modelnav(lang, current=None):
             items = [(r, MODELS[r]["name"], MODELS[r].get("menu"))]
         bars = ""
         for k, lbl, img in items:
-            src = f"/img/models/{img}" if img and (STATIC / "img" / "models" / img).exists() else ""
+            rel = (Path(img) if "/" in img else Path("models") / img) if img else None
+            src = "/img/" + rel.as_posix() if rel and (STATIC / "img" / rel).is_file() else ""
             w, h = img_size(src, (148, 100)) if src else (148, 100)
             th = resp_img(src, lbl, "74px", width=w, height=h) if src else ""
             bars += f'<a href="{url(lang, "model/" + k + "/")}" class="vt{" on" if k == current else ""}"><b>{th}</b><span>{esc(lbl)}</span></a>'
@@ -3354,8 +3378,7 @@ def model_groups():
 
 
 def model_card(key, lang, eager=False, high=False):
-    m = MODELS[key]
-    name = m["name"]
+    name = model_title(key, lang)
     if "," in name or len(name.split()) > 8:
         raise SystemExit(f"model card title must be at most 8 words and have no comma: {name}")
     ph = model_photo(key) or ""
@@ -3388,32 +3411,42 @@ def fact_sources(key, lang):
 def model_hub(key, items, lang):
     """Model page: photo, sourced facts and the articles. Not a news lead."""
     m = MODELS[key]
+    name = model_title(key, lang)
     L = LANGS[lang]
     inf = INFO.get(key)
-    intro = inf[lang]["intro"] if inf and inf.get(lang, {}).get("intro") else L["model_intro"].format(m["name"])
+    facts = PAGE_FACTS.get(key)
+    if facts:
+        intro = facts["intro"][lang]
+    else:
+        intro = inf[lang]["intro"] if inf and inf.get(lang, {}).get("intro") else L["model_intro"].format(name)
     parts = [(L["nav_models"], "category/models/")]
     parent = m.get("parent")
     if parent:
-        parts.append((MODELS[parent]["name"], f"model/{parent}/"))
-    parts.append((m["name"], f"model/{key}/"))
+        parts.append((model_title(parent, lang), f"model/{parent}/"))
+    parts.append((name, f"model/{key}/"))
     nav, ld = crumbs(lang, parts)
     ph = model_photo(key)
-    hero = (f'<figure class="mhero">{resp_img(ph, "Tesla " + m["name"], "(max-width: 900px) 100vw, 820px", high=True, lazy=False, width=1600, height=900)}</figure>'
+    hero = (f'<figure class="mhero">{resp_img(ph, "Tesla " + name, "(max-width: 900px) 100vw, 820px", high=True, lazy=False, width=1600, height=900)}</figure>'
             if ph else "")
-    specs = ""
-    rows = (inf or {}).get(lang, {}).get("specs") or []
-    if rows:
-        label = "Key facts" if lang == "en" else "Kernfeiten"
-        body_rows = "".join(f"<tr><th>{esc(k)}</th><td>{esc(v)}</td></tr>" for k, v in rows)
-        specs = f'<section class="mfacts"><h2>{label}</h2><table class="specs">{body_rows}</table></section>'
+    if facts:
+        specs = render_fact_sections(facts, lang)
+        sourced = ""
+    else:
+        specs = ""
+        rows = (inf or {}).get(lang, {}).get("specs") or []
+        if rows:
+            label = "Key facts" if lang == "en" else "Kernfeiten"
+            body_rows = "".join(f"<tr><th>{esc(k)}</th><td>{esc(v)}</td></tr>" for k, v in rows)
+            specs = f'<section class="mfacts"><h2>{label}</h2><table class="specs">{body_rows}</table></section>'
+        sourced = fact_sources(key, lang)
     ordered = sorted(items, key=published, reverse=True)
-    heading = ("Articles about " if lang == "en" else "Artikelen over ") + m["name"]
+    heading = ("Articles about " if lang == "en" else "Artikelen over ") + name
     if ordered:
         listing = f'<h2 class="rubh">{esc(heading)}</h2>{hub_cards(ordered, lang)}'
     elif parent:
         back = "Articles about this version are listed with the model." if lang == "en" else "Artikelen over deze uitvoering staan bij het model."
         listing = (f'<p class="hubnote">{esc(back)} <a href="{url(lang, "model/" + parent + "/")}">'
-                   f'{esc(MODELS[parent]["name"])}</a>.</p>')
+                   f'{esc(model_title(parent, lang))}</a>.</p>')
     else:
         listing = f'<p class="empty">{esc(L["empty"])}</p>'
     versions = ""
@@ -3422,12 +3455,47 @@ def model_hub(key, items, lang):
         if kids:
             vlabel = "Versions" if lang == "en" else "Uitvoeringen"
             versions = f'<h2 class="rubh">{esc(vlabel)}</h2><div class="mgrid">{"".join(model_card(k, lang) for k in kids)}</div>'
-    body = (f'{nav}<header class="hubhead"><h1>Tesla {esc(m["name"])}</h1></header>'
-            f'{hero}<p class="mintro">{esc(intro)}</p>{specs}{fact_sources(key, lang)}{versions}{listing}')
+    body = (f'{nav}<header class="hubhead"><h1>Tesla {esc(name)}</h1></header>'
+            f'{hero}<p class="mintro">{esc(intro)}</p>{versions}{specs}{sourced}{listing}')
     desc = re.sub(r"\s+", " ", intro).strip()
     if len(desc) > 180:
         desc = desc[:179].rsplit(" ", 1)[0] + "…"
     return body, ld, desc
+
+
+def render_fact_sections(facts, lang):
+    status = {
+        "en": {"official": "official", "reported": "reported", "video": "stated on video",
+               "derived": "derived", "unclear": "unclear", "unknown": "not announced"},
+        "nl": {"official": "officieel", "reported": "gemeld", "video": "gezegd op video",
+               "derived": "berekend", "unclear": "onduidelijk", "unknown": "niet bekendgemaakt"},
+    }[lang]
+    heads = ("Fact", "Value", "Status") if lang == "en" else ("Punt", "Waarde", "Status")
+    parts = []
+    for sec in facts["sections"]:
+        body = "".join(
+            f"<tr><th>{esc(r[lang][0])}</th><td>{esc(r[lang][1])}</td><td>{esc(status[r['status']])}</td></tr>"
+            for r in sec["rows"])
+        notes = "".join(f'<p class="imgnote">{esc(n)}</p>' for n in sec.get("notes", {}).get(lang, []))
+        parts.append(
+            f'<section class="mfacts"><h2>{esc(sec["title"][lang])}</h2>'
+            f'<table class="specs"><thead><tr><th>{heads[0]}</th><th>{heads[1]}</th><th>{heads[2]}</th></tr></thead>'
+            f'<tbody>{body}</tbody></table>{notes}</section>')
+    unknown = facts.get("unknown", {}).get(lang) or []
+    if unknown:
+        items = "".join(f"<li>{esc(x)}</li>" for x in unknown)
+        label = "Not announced" if lang == "en" else "Niet bekendgemaakt"
+        parts.append(f'<section class="mfacts"><h2>{label}</h2><ul>{items}</ul></section>')
+    links = []
+    for title, href in facts.get("sources") or []:
+        if href:
+            links.append(f'<a href="{esc(href)}" rel="noopener noreferrer">{esc(title)}</a>')
+        else:
+            links.append(esc(title))
+    when = "As of 19 November 2026. " if lang == "en" else "Stand van 19 november 2026. "
+    label = "Sources" if lang == "en" else "Bronnen"
+    parts.append(f'<p class="imgnote">{when}{label}: {" · ".join(links)}</p>')
+    return "".join(parts)
 
 
 def video_for(a, lang):
@@ -3526,7 +3594,7 @@ def money_article(a, arts, lang):
     chips = ""
     if a.get("models"):
         chips = '<div class="chips">' + "".join(
-            f'<a href="{url(lang, "model/" + k + "/")}">Tesla {MODELS[k]["name"]}</a>' for k in a["models"]) + "</div>"
+            f'<a href="{url(lang, "model/" + k + "/")}">Tesla {model_title(k, lang)}</a>' for k in a["models"]) + "</div>"
     side = ad_html("sidebar", lang)
     article = (
         f'<article class="money">'
@@ -5576,7 +5644,7 @@ def build():
                 content, crumb_ld, intro, listed_models = models_overview(lang)
                 listed = [{
                     "@type": "ListItem", "position": i + 1,
-                    "name": "Tesla " + MODELS[k]["name"],
+                    "name": "Tesla " + model_title(k, lang),
                     "url": SITE + url(lang, f"model/{k}/"),
                 } for i, k in enumerate(listed_models)]
                 overview_ld = {
@@ -5610,10 +5678,12 @@ def build():
                 items = [a for a in arts if family & set(a.get("models", []))]
             ph = model_photo(key)
             content, crumb_ld, desc = model_hub(key, items, lang)
-            facts = (INFO.get(key) or {}).get(lang, {}).get("specs") or []
+            name = model_title(key, lang)
+            page_facts = PAGE_FACTS.get(key)
+            facts = [] if page_facts else ((INFO.get(key) or {}).get(lang, {}).get("specs") or [])
             vehicle_ld = {
                 "@context": "https://schema.org", "@type": "Vehicle",
-                "name": f"Tesla {m['name']}", "description": desc,
+                "name": f"Tesla {name}", "description": desc,
                 "url": SITE + url(lang, f"model/{key}/"), "inLanguage": lang,
                 "brand": {"@type": "Brand", "name": "Tesla"},
                 "manufacturer": {"@type": "Organization", "name": "Tesla, Inc."},
@@ -5621,11 +5691,20 @@ def build():
             }
             if ph:
                 vehicle_ld["image"] = SITE + ph
-            if facts:
+            props = []
+            if page_facts:
+                for sec in page_facts["sections"]:
+                    for row in sec["rows"]:
+                        label, value = row[lang]
+                        if row["status"] != "unknown":
+                            props.append((label, value))
+            else:
+                props = facts
+            if props:
                 vehicle_ld["additionalProperty"] = [
-                    {"@type": "PropertyValue", "name": k, "value": v} for k, v in facts]
+                    {"@type": "PropertyValue", "name": k, "value": v} for k, v in props]
             write(url(lang, f"model/{key}/"),
-                  page(lang, f"model/{key}/", f"Tesla {m['name']}", desc,
+                  page(lang, f"model/{key}/", f"Tesla {name}", desc,
                        shell(content, page_side(arts, lang, "model", key, skip=items)),
                        extra_head=ld_script(crumb_ld) + ld_script(vehicle_ld), image=ph, active="models"))
 
@@ -5898,7 +5977,15 @@ def build():
     entries = [("", latest_stamp(arts))]
     entries += [(a["slug"] + "/", article_stamp(a)) for a in arts]
     entries += [(f"category/{k}/", latest_stamp(category_items(k))) for k in CATEGORIES if k not in REDIRECT_CATS]
-    entries += [(f"model/{k}/", latest_stamp(model_items(k))) for k in MODELS]
+    def model_mod(key):
+        stamp = latest_stamp(model_items(key))
+        if key in PAGE_FACTS:
+            fact = "2026-11-19"
+            if not stamp or fact > stamp:
+                return fact
+        return stamp
+
+    entries += [(f"model/{k}/", model_mod(k)) for k in MODELS]
     # Standing pages have no article date. Leave lastmod off rather than stamp the build day.
     entries += [(k + "/", None) for k in PAGES]
     entries += [("shorts/", max(short_dates) if short_dates else None)]

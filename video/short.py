@@ -4,8 +4,8 @@ Usage:  python3 video/short.py <slug> [en|nl] [--voice piper|elevenlabs]
 
 The spoken text is the article's "short" field ({"en": "...", "nl": "..."}): a 45-60 second
 script, one sentence per scene. Without it the script is built from the title and description.
-Voice: ElevenLabs when ELEVENLABS_API_KEY and ELEVENLABS_VOICE_ID are set (captions are synced
-with the word timestamps ElevenLabs returns), otherwise the result has no audio.
+Voice: ElevenLabs when ELEVENLABS_API_KEY is set. ELEVENLABS_VOICE_ID overrides the
+default narrator; otherwise Noah is used. Captions are synced with the word timestamps.
 Output: video/out/<slug>-<lang>.mp4 and a matching .txt with the YouTube title, description and tags.
 """
 import base64
@@ -227,19 +227,29 @@ def spoken(text, lang):
     return t
 
 
+# Noah, the long-form narrator. ELEVENLABS_VOICE_ID overrides this when set.
+NOAH_VOICE_ID = "9hb1f7xQcMLB90qbYSY3"
+
+
+def narration_voice():
+    """The voice for English narration. A GitHub variable wins; otherwise Noah."""
+    return (os.environ.get("ELEVENLABS_VOICE_ID") or "").strip() or NOAH_VOICE_ID
+
+
 def tts_elevenlabs(text, out_mp3):
-    key, voice = os.environ["ELEVENLABS_API_KEY"], os.environ["ELEVENLABS_VOICE_ID"]
+    key = os.environ["ELEVENLABS_API_KEY"]
+    voice = narration_voice()
     if LANG[0] == "nl" and os.environ.get("USE_NL_VOICE") == "1" and os.environ.get("ELEVENLABS_VOICE_ID_NL"):  # off: English voice for Dutch too
         voice = os.environ["ELEVENLABS_VOICE_ID_NL"]
     model = os.environ.get("ELEVENLABS_MODEL", "eleven_multilingual_v2")
     req = urllib.request.Request(
         f"https://api.elevenlabs.io/v1/text-to-speech/{voice}/with-timestamps?output_format=mp3_44100_192",
         data=json.dumps({"text": text, "model_id": model,
-                         "voice_settings": {  # lower stability + more style = livelier, more enthusiastic delivery
-                             "stability": float(os.environ.get("ELEVENLABS_STABILITY", "0.28")),
-                             "similarity_boost": 0.8,
-                             "style": float(os.environ.get("ELEVENLABS_STYLE", "0.5")),
-                                            "speed": float(os.environ.get("ELEVENLABS_SPEED", "1.08"))}}).encode(),
+                         "voice_settings": {
+                             "stability": float(os.environ.get("ELEVENLABS_STABILITY", "0.48")),
+                             "similarity_boost": float(os.environ.get("ELEVENLABS_SIMILARITY", "0.75")),
+                             "style": float(os.environ.get("ELEVENLABS_STYLE", "0.30")),
+                             "speed": float(os.environ.get("ELEVENLABS_SPEED", "1.05"))}}).encode(),
         headers={"xi-api-key": key, "Content-Type": "application/json"})
     with urllib.request.urlopen(req, timeout=300) as r:
         d = json.load(r)
@@ -675,7 +685,7 @@ def main():
     o1, _, o2 = outro.rpartition(". ")  # last sentence gets its own pause, so it is not swallowed after ".com"
     pieces = [spoken(x, lang) for x in (title, text, o1 + ".", o2)]
     audio = None
-    have_voice = os.environ.get("ELEVENLABS_API_KEY") and os.environ.get("ELEVENLABS_VOICE_ID")
+    have_voice = bool(os.environ.get("ELEVENLABS_API_KEY"))
     if have_voice:
         # one request for everything, so the title has the same pace and tone as the rest; then cut it in three
         mp3 = OUT / f"{slug}-{lang}-all.mp3"

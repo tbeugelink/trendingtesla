@@ -23,8 +23,8 @@ sys.argv = [x for x in sys.argv if x != "--portrait"]
 import short as S  # noqa: E402  (same folder; landscape layout)
 from short import W, H, FPS, font, FB, FX, YEL  # noqa: E402
 
-SPEED = {"en": "1.07", "nl": "1.07"}  # same pace as the story Shorts; override with ELEVENLABS_SPEED after this is applied
-FULL_STABILITY, FULL_STYLE = "0.45", "0.3"  # more natural than the old 0.2 / 0.8; env vars still override
+SPEED = {"en": "1.05", "nl": "1.05"}  # Noah's narration pace; override with ELEVENLABS_SPEED after this is applied
+FULL_STABILITY, FULL_STYLE = "0.48", "0.30"
 OUTRO_SAY = {"en": "Like and subscribe for more Tesla news and join us on TrendingTesla.com. I'll see you there!",
              "nl": "Like en abonneer voor meer Tesla-nieuws, of ga naar TrendingTesla.com. Ik zie je daar!"}
 OUTRO_CARD = {"en": "LIKE & SUBSCRIBE", "nl": "LIKE & ABONNEER"}
@@ -387,15 +387,16 @@ def main():
     a = S.load(slug)
     S.OUT.mkdir(parents=True, exist_ok=True)
     pieces = build_timeline(a, lang)
-    os.environ["ELEVENLABS_SPEED"] = SPEED.get(lang, "1.07")
+    os.environ["ELEVENLABS_SPEED"] = SPEED.get(lang, "1.05")
     os.environ.setdefault("ELEVENLABS_STABILITY", FULL_STABILITY)
     os.environ.setdefault("ELEVENLABS_STYLE", FULL_STYLE)
+    os.environ.setdefault("ELEVENLABS_SIMILARITY", "0.75")
     S.LANG[0] = lang
     base = [S.spoken(t, lang) for _, t, _ in pieces]
     conv = [say_numbers(t, lang) for t in base]
     spoken = [c[0] for c in conv]
     joined = " ".join(spoken)
-    have_voice = os.environ.get("ELEVENLABS_API_KEY") and os.environ.get("ELEVENLABS_VOICE_ID")
+    have_voice = bool(os.environ.get("ELEVENLABS_API_KEY"))
     if have_voice:
         mp3 = S.OUT / f"{slug}-{lang}-full-all.mp3"
         try:

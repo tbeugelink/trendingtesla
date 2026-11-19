@@ -32,12 +32,13 @@ W, H, FPS = 1080, 1920, 30
 OUT = S.OUT
 KEY = os.environ.get("ELEVENLABS_API_KEY", "")
 VOICE = (os.environ.get(f"ELEVENLABS_VOICE_ID_{os.environ.get('STORY_VOICE', '1')}") or
-         os.environ.get("ELEVENLABS_VOICE_ID", ""))  # STORY_VOICE=1 (default) uses ELEVENLABS_VOICE_ID
+         os.environ.get("ELEVENLABS_VOICE_ID") or
+         S.NOAH_VOICE_ID).strip()  # STORY_VOICE=1 uses ELEVENLABS_VOICE_ID; empty falls back to Noah
 CAPTIONS = os.environ.get("STORY_CAPTIONS", "0") == "1"  # running subtitles off: only key words pop in
 # Voice and picture pace. Estimates, easy to retune; the voice id is chosen by STORY_VOICE, not here.
-SPEED = {"hook": 1.07, "tension": 1.07, "payoff": 1.07}  # same pace as the long videos
-STORY_STABILITY = float(os.environ.get("STORY_STABILITY", "0.45"))
-STORY_STYLE = float(os.environ.get("STORY_STYLE", "0.3"))
+SPEED = {"hook": 1.05, "tension": 1.05, "payoff": 1.05}
+STORY_STABILITY = float(os.environ.get("ELEVENLABS_STABILITY") or os.environ.get("STORY_STABILITY") or "0.48")
+STORY_STYLE = float(os.environ.get("ELEVENLABS_STYLE") or os.environ.get("STORY_STYLE") or "0.30")
 GAP = {"hook": 0.35, "tension": 0.12, "payoff": 0.3}
 SFX_VOL, BED_VOL = 0.45, 0.14
 # Generic impact hit, bass drop and ambient drone are off. A beat's own "sfx" still plays.
@@ -67,7 +68,7 @@ def post(url, body):
 def tts(text, speed, out):
     d = json.loads(post(f"https://api.elevenlabs.io/v1/text-to-speech/{VOICE}/with-timestamps?output_format=mp3_44100_192",
                         {"text": text, "model_id": os.environ.get("ELEVENLABS_MODEL", "eleven_multilingual_v2"),
-                         "voice_settings": {"stability": STORY_STABILITY, "similarity_boost": 0.8,
+                         "voice_settings": {"stability": STORY_STABILITY, "similarity_boost": float(os.environ.get("ELEVENLABS_SIMILARITY", "0.75")),
                                             "style": STORY_STYLE,
                                             "use_speaker_boost": True, "speed": speed}}))
     out.write_bytes(base64.b64decode(d["audio_base64"]))

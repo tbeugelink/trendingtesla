@@ -35,7 +35,9 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
           STORY_VOICE: "1"
-        run: python3 video/story.py "${{ github.event.inputs.slug }}" en
+        run: |
+          if [ "$ELEVENLABS_VOICE_ID" != "9hb1f7xQcMLB90qbYSY3" ]; then unset ELEVENLABS_VOICE_ID; fi
+          python3 video/story.py "${{ github.event.inputs.slug }}" en
       - name: Keep the generated scene photos (so a re-render does not pay for them again)
         run: |
           [ -z "$(git status --porcelain static/img/gen/story static/img/real/story)" ] && exit 0

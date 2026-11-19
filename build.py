@@ -744,9 +744,10 @@ article.narrow > h1{margin-left:14px}article.narrow .cform{margin-left:14px}
 .pn{display:flex;align-items:center;height:36px;padding:0 10px;border-radius:10px;color:var(--fg);text-decoration:none;font-size:.84rem;font-weight:700;white-space:nowrap}
 .pn:hover{background:#272727;color:#fff}
 .pn.on,.pdrop.on>.pn,header.hb .mdrop>button.pn.on{background:#ebebeb;color:#111;border-radius:8px}
-.pdrop{position:relative;display:flex;align-items:center}
-.pmenu{display:none;position:absolute;top:calc(100% - 1px);left:0;min-width:210px;z-index:50;background:#161616;border:1px solid #3a4a60;border-radius:0 10px 10px 10px;padding:6px;box-shadow:0 12px 32px rgba(0,0,0,.55)}
+.pdrop{position:relative;display:flex;align-items:center;z-index:0}
+.pmenu{display:none;position:absolute;top:100%;left:0;min-width:210px;z-index:50;background:#2a2a2a;border:0;border-radius:0 10px 10px 10px;padding:6px;box-shadow:0 12px 32px rgba(0,0,0,.45)}
 .pdrop::after{content:"";position:absolute;top:calc(100% - 6px);left:0;width:240px;height:14px;z-index:49}
+.pdrop:hover,.pdrop:focus-within,.pdrop.is-open{z-index:2}
 .pdrop:hover .pmenu,.pdrop:focus-within .pmenu,.pdrop.is-open .pmenu{display:grid}
 .pdrop.tone-tesla{--accent:#e31937;--accent-ink:#ff8a9b}
 .pdrop.tone-energy{--accent:#4cd964;--accent-ink:#b8ffc6}
@@ -755,7 +756,7 @@ article.narrow > h1{margin-left:14px}article.narrow .cform{margin-left:14px}
 .pdrop.tone-spacexsi{--accent:#ffc400;--accent-ink:#ffe28a}
 .pdrop.tone-neural{--accent:#ff2d95;--accent-ink:#ffb3d6}
 .pdrop.tone-boring{--accent:#2f6bff;--accent-ink:#b3c8ff}
-.pdrop:hover>a.pn,.pdrop:focus-within>a.pn,.pdrop.is-open>a.pn{position:relative;z-index:51;background:#161616;color:#fff;border-radius:10px 10px 0 0}
+.pdrop:hover>a.pn,.pdrop:focus-within>a.pn,.pdrop.is-open>a.pn{position:relative;z-index:51;background:#2a2a2a;color:#fff;border-radius:10px 10px 0 0;box-shadow:0 1px 0 #2a2a2a}
 .pmenu a.child{padding-left:26px;font-weight:650;color:#b7c0cc}
 .dlayer{margin:0 0 8px}
 .drawer a.tone-tesla,.drawer a.tone-energy,.drawer a.tone-spacex,.drawer a.tone-link,.drawer a.tone-spacexsi,.drawer a.tone-neural,.drawer a.tone-boring{color:#fff}
@@ -768,7 +769,7 @@ article.narrow > h1{margin-left:14px}article.narrow .cform{margin-left:14px}
 .pdrop:last-child .pmenu{left:auto;right:0;border-radius:10px 0 10px 10px}
 .pdrop:last-child::after{left:auto;right:0}
 .pmenu a{padding:8px 12px;border-radius:8px;color:#ebebeb;text-decoration:none;font-size:.86rem;font-weight:700;white-space:nowrap}
-.pmenu a:hover{background:#272727}
+.pmenu a:hover{background:#3a3a3a}
 .pmenu a.on,.pmenu a.on:hover{background:#ebebeb;color:#111}
 .crumbs{margin:-2px 0 4px;font-size:.82rem;color:var(--dim)}
 .crumbs ol{display:flex;flex-wrap:wrap;gap:6px 0;list-style:none;padding:0;margin:0}

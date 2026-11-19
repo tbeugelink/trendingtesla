@@ -1,2 +1,2 @@
 spacex-caught-starship-after-22-hours en --full --upload
-# retry after the audio mix fix
+# retry: keep every audio trim inside the file

@@ -403,10 +403,15 @@ def main():
         full = S.duration(mp3)
         if len(chars) != len(joined):
             print(f"::warning::alignment has {len(chars)} chars, text {len(joined)}")
-            r = len(chars) / len(joined)
+            r = len(chars) / max(1, len(joined))
             cs = [cs[min(len(cs) - 1, int(i * r))] for i in range(len(joined))]
             ce = [ce[min(len(ce) - 1, int(i * r))] for i in range(len(joined))]
             chars = list(joined)
+        if ce and full > 0 and max(ce) > full:
+            scale = (full * 0.998) / max(ce)
+            cs = [t * scale for t in cs]
+            ce = [t * scale for t in ce]
+            print(f"::warning::voice timestamps ran past the audio; scaled by {scale:.4f}")
     else:  # silent preview: ~2.6 words per second
         chars, cs, ce, t, full = list(joined), [], [], 0.0, 0.0
         for ch in joined:
@@ -419,12 +424,13 @@ def main():
     for i, pc in enumerate(spoken):
         i0, i1 = pos, pos + len(pc) - 1
         spans.append((i0, i1))
-        a0 = max(0.0, min(full, cs[i0] - 0.05))
-        a1 = min(full, ce[i1] + 0.12) if i < len(spoken) - 1 else full
-        if a1 < a0 + 0.08:  # a zero-length trim makes ffmpeg reject the mix
-            a1 = min(full, a0 + 0.08)
+        a0 = max(0.0, cs[i0] - 0.05)
+        a1 = (ce[i1] + 0.12) if i < len(spoken) - 1 else full
+        a0 = min(a0, max(0.0, full - 0.2))
+        a1 = min(full, max(a1, a0 + 0.2))
         segs.append((a0, a1))
         pos += len(pc) + 1
+    print("voice segments", " ".join(f"{a:.1f}-{b:.1f}" for a, b in segs))
     # place pieces on the video timeline with pauses
     t, place = (0.3 if S.SPOKEN_TITLE else 0.1), []
     for i, ((kind, _, _), (a0, a1)) in enumerate(zip(pieces, segs)):

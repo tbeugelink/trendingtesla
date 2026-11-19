@@ -292,22 +292,22 @@ MODELS = {
     "roadster-thrust":   {"name": {"en": "Roadster Thrust", "nl": "Roadster Thrust"}, "parent": "roadster", "photo": "rd-4.jpg", "menu": "rd-4.jpg", "label": "Thrust"},
     "roadster-rocket":   {"name": {"en": "Roadster Rocket", "nl": "Roadster Rocket"}, "parent": "roadster", "photo": "rd-1.jpg", "menu": "rd-1.jpg", "label": "Rocket"},
     "semi":              {"name": "Semi", "photo": "semi-hub.webp", "menu": "semi-hub.webp", "gallery": ["semi.jpg", "semi-6.jpg", "semi-4.jpg", "semi-7.jpg", "semi-2.jpg", "semi-5.jpg", "semi-3.jpg"],
-                          "photo_alt": {"en": "Tesla Semi family: library image of the light-bar production cab",
-                                        "nl": "Tesla Semi-familie: bibliotheekbeeld van de productietruck met lichtbalk"},
-                          "credit": {"en": "Library image of the light-bar production cab. It is not a photograph of one specific trim.",
-                                     "nl": "Bibliotheekbeeld van de productietruck met lichtbalk. Het is geen foto van één specifieke uitvoering."}},
+                          "photo_alt": {"en": "Tesla Semi",
+                                        "nl": "Tesla Semi"},
+                          "credit": {"en": "A Tesla Semi. This picture is not a measured photograph of one specific trim.",
+                                     "nl": "Een Tesla Semi. Dit is geen gemeten foto van één specifieke uitvoering."}},
     "semi-standard-range": {"name": {"en": "Semi Standard Range", "nl": "Semi Standard Range"}, "parent": "semi", "photo": "semi-standard.webp", "menu": "semi-standard.webp", "label": "Standard Range",
-                          "photo_alt": {"en": "Tesla Semi Standard Range: library image of the light-bar production cab",
-                                        "nl": "Tesla Semi Standard Range: bibliotheekbeeld van de productietruck met lichtbalk"},
-                          "card_note": {"en": "Library image, light-bar cab", "nl": "Bibliotheekbeeld, lichtbalk"},
-                          "credit": {"en": "Library image of the light-bar production cab. It does not show a measured chassis difference from Long Range.",
-                                     "nl": "Bibliotheekbeeld van de productietruck met lichtbalk. Het toont geen gemeten chassisverschil met Long Range."}},
+                          "photo_alt": {"en": "Tesla Semi on the Standard Range page. The picture is not a measured photograph of that chassis.",
+                                        "nl": "Tesla Semi op de Standard Range-pagina. De foto is geen gemeten opname van dat chassis."},
+                          "card_note": {"en": "Tesla Semi, not a measured chassis", "nl": "Tesla Semi, geen gemeten chassis"},
+                          "credit": {"en": "A Tesla Semi. This picture is not a measured photograph of the Standard Range chassis.",
+                                     "nl": "Een Tesla Semi. Dit is geen gemeten foto van het Standard Range-chassis."}},
     "semi-long-range":   {"name": {"en": "Semi Long Range", "nl": "Semi Long Range"}, "parent": "semi", "photo": "semi-long.webp", "menu": "semi-long.webp", "label": "Long Range",
-                          "photo_alt": {"en": "Tesla Semi Long Range: library image of the light-bar cab with a trailer, not a measured photo of the longer chassis",
-                                        "nl": "Tesla Semi Long Range: bibliotheekbeeld van de lichtbalk-cabine met trailer, geen gemeten foto van het langere chassis"},
-                          "card_note": {"en": "Library image, not a measured chassis", "nl": "Bibliotheekbeeld, geen gemeten chassis"},
-                          "credit": {"en": "Library image of the light-bar cab with a trailer. It is not a measured photograph of the longer Long Range chassis.",
-                                     "nl": "Bibliotheekbeeld van de lichtbalk-cabine met een trailer. Het is geen gemeten foto van het langere Long Range-chassis."}},
+                          "photo_alt": {"en": "Tesla Semi on the Long Range page. The picture is not a measured photograph of the longer chassis.",
+                                        "nl": "Tesla Semi op de Long Range-pagina. De foto is geen gemeten opname van het langere chassis."},
+                          "card_note": {"en": "Tesla Semi, not a measured chassis", "nl": "Tesla Semi, geen gemeten chassis"},
+                          "credit": {"en": "A Tesla Semi. This picture is not a measured photograph of the longer Long Range chassis.",
+                                     "nl": "Een Tesla Semi. Dit is geen gemeten foto van het langere Long Range-chassis."}},
     "semi-europe":       {"name": {"en": "Semi Europe", "nl": "Semi Europa"}, "parent": "semi", "photo": "semi-europe.webp", "menu": "semi-europe.webp", "label": {"en": "Europe", "nl": "Europa"},
                           "photo_alt": {"en": "Tesla Semi Europe at IAA Transportation in Hannover on 14 September 2026",
                                         "nl": "Tesla Semi Europa op de IAA Transportation in Hannover op 14 september 2026"},
@@ -3414,7 +3414,7 @@ def category_hub(key, items, lang):
     return body, ld, intro
 
 
-MODEL_ORDER = ["model-s", "model-3", "model-x", "model-y", "cybertruck", "roadster", "semi", "cybercab"]
+MODEL_ORDER = ["model-s", "model-3", "model-x", "model-y", "cybercab", "cybertruck", "roadster", "semi"]
 
 
 def models_overview(lang):

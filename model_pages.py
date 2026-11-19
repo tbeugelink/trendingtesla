@@ -375,8 +375,8 @@ PAGE_FACTS = {
     },
     "semi-standard-range": {
         "intro": {
-            "en": "The shorter-range 2026 US tractor. On sale to fleets, with volume production in Nevada and customer deliveries reported from late September 2026. The picture is a library image of the light-bar production cab. It does not show a measured chassis difference from Long Range.",
-            "nl": "De Amerikaanse trekker van 2026 met het kortere bereik. Te koop voor vloten, met serieproductie in Nevada en klantleveringen gemeld vanaf eind september 2026. De foto is een bibliotheekbeeld van de productietruck met lichtbalk. Het toont geen gemeten chassisverschil met Long Range.",
+            "en": "The shorter-range 2026 US tractor. On sale to fleets, with volume production in Nevada and customer deliveries reported from late September 2026. The picture is a Tesla Semi. It is not a measured photograph of the Standard Range chassis.",
+            "nl": "De Amerikaanse trekker van 2026 met het kortere bereik. Te koop voor vloten, met serieproductie in Nevada en klantleveringen gemeld vanaf eind september 2026. De foto is een Tesla Semi. Het is geen gemeten foto van het Standard Range-chassis.",
         },
         "sections": [
             S("Standard Range", "Standard Range", [
@@ -424,8 +424,8 @@ PAGE_FACTS = {
     },
     "semi-long-range": {
         "intro": {
-            "en": "The 500-mile 2026 US tractor, Tesla’s top variant in the Q3 letter. Same production timing as Standard Range. Not announced for Europe. The picture is a library image of the light-bar cab with a trailer. It is not a measured photograph of the longer chassis.",
-            "nl": "De Amerikaanse trekker van 2026 met 500 mijl, Tesla’s topvariant in de Q3-brief. Dezelfde productietiming als Standard Range. Niet aangekondigd voor Europa. De foto is een bibliotheekbeeld van de lichtbalk-cabine met een trailer. Het is geen gemeten foto van het langere chassis.",
+            "en": "The 500-mile 2026 US tractor, Tesla’s top variant in the Q3 letter. Same production timing as Standard Range. Not announced for Europe. The picture is a Tesla Semi. It is not a measured photograph of the longer chassis.",
+            "nl": "De Amerikaanse trekker van 2026 met 500 mijl, Tesla’s topvariant in de Q3-brief. Dezelfde productietiming als Standard Range. Niet aangekondigd voor Europa. De foto is een Tesla Semi. Het is geen gemeten foto van het langere chassis.",
         },
         "sections": [
             S("Long Range", "Long Range", [

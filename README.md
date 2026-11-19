@@ -60,7 +60,7 @@ One Short per article, in English. The script lives in `short`.
 - No spoken or on-screen call to action, and no site name, in the script. The description carries the link to the article.
 - The first ~4 seconds may be a moving clip made from the hook photo (`tools/video_clip.py`). Budget: **$15 a month**. `STORY_CLIP=0` switches it off. The clip is an illustration, never fake footage of a real event. `short.hook_motion` can say what should move.
 
-Pictures change quickly: a crossfade of about 0.15 seconds and no shot longer than about 2 seconds (`XFADE` and `SHOT_MAX` in `video/story.py`). The voice settings are the constants in that file (`STORY_STABILITY`, `STORY_STYLE`, `SPEED`). Generic impact hits and the ambient drone are off. A beat may still name its own natural `sfx`.
+Pictures change quickly: a crossfade of about 0.15 seconds and no shot longer than about 2 seconds (`XFADE` and `SHOT_MAX` in `video/story.py`). The voice is Noah on Eleven v4, with stability 0, similarity 0 and clone strength 0 (`video/short.py`). The tag `[enthousiast]` is spoken as delivery only and is kept out of captions. Generic impact hits and the ambient drone are off. A beat may still name its own natural `sfx`.
 
 ## The Saturday long video
 

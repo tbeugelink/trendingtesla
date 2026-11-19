@@ -23,8 +23,6 @@ sys.argv = [x for x in sys.argv if x != "--portrait"]
 import short as S  # noqa: E402  (same folder; landscape layout)
 from short import W, H, FPS, font, FB, FX, YEL  # noqa: E402
 
-SPEED = {"en": "1.05", "nl": "1.05"}  # Noah's narration pace; override with ELEVENLABS_SPEED after this is applied
-FULL_STABILITY, FULL_STYLE = "0.48", "0.30"
 OUTRO_SAY = {"en": "Like and subscribe for more Tesla news and join us on TrendingTesla.com. I'll see you there!",
              "nl": "Like en abonneer voor meer Tesla-nieuws, of ga naar TrendingTesla.com. Ik zie je daar!"}
 OUTRO_CARD = {"en": "LIKE & SUBSCRIBE", "nl": "LIKE & ABONNEER"}
@@ -351,7 +349,8 @@ def srt(chunks, path):
     rows = []
     for i, c in enumerate(chunks):
         end = c[-1][2] + 0.2 if i + 1 == len(chunks) else min(c[-1][2] + 0.2, chunks[i + 1][0][1] - 0.01)
-        rows.append(f"{i + 1}\n{ts(c[0][1])} --> {ts(end)}\n{' '.join(w[0] for w in c)}\n")
+        line = S.strip_audio_tags(" ".join(w[0] for w in c)).strip()
+        rows.append(f"{i + 1}\n{ts(c[0][1])} --> {ts(end)}\n{line}\n")
     path.write_text("\n".join(rows), encoding="utf-8")
 
 
@@ -387,10 +386,6 @@ def main():
     a = S.load(slug)
     S.OUT.mkdir(parents=True, exist_ok=True)
     pieces = build_timeline(a, lang)
-    os.environ["ELEVENLABS_SPEED"] = SPEED.get(lang, "1.05")
-    os.environ.setdefault("ELEVENLABS_STABILITY", FULL_STABILITY)
-    os.environ.setdefault("ELEVENLABS_STYLE", FULL_STYLE)
-    os.environ.setdefault("ELEVENLABS_SIMILARITY", "0.75")
     S.LANG[0] = lang
     base = [S.spoken(t, lang) for _, t, _ in pieces]
     conv = [say_numbers(t, lang) for t in base]

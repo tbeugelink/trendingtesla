@@ -5,7 +5,8 @@ Usage:  python3 video/short.py <slug> [en|nl] [--voice piper|elevenlabs]
 The spoken text is the article's "short" field ({"en": "...", "nl": "..."}): a 45-60 second
 script, one sentence per scene. Without it the script is built from the title and description.
 Voice: ElevenLabs when ELEVENLABS_API_KEY is set. ELEVENLABS_VOICE_ID overrides the
-default narrator; otherwise Noah is used. Captions are synced with the word timestamps.
+default narrator; otherwise Noah is used. A delivery tag is added before each spoken
+sentence and removed again before captions. Captions are synced with the word timestamps.
 Output: video/out/<slug>-<lang>.mp4 and a matching .txt with the YouTube title, description and tags.
 """
 import base64
@@ -229,6 +230,12 @@ def spoken(text, lang):
 
 # Noah, the long-form narrator. ELEVENLABS_VOICE_ID overrides this when set.
 NOAH_VOICE_ID = "9hb1f7xQcMLB90qbYSY3"
+# Owner's ElevenLabs UI preset: Eleven v4, stability 0%, similarity 0%, clone strength 0%, English.
+# [enthousiast] is a delivery tag. Speech-to-text on the N1 sample did not speak it.
+NARRATION_MODEL = "eleven_v4"
+NARRATION_TAG = "[enthousiast]"
+SENTENCE_BREAK = re.compile(r"(?<=[.!?])\s+")
+AUDIO_TAG_WORD = re.compile(r"\[[^\[\]]+\]")
 
 
 def narration_voice():
@@ -236,26 +243,91 @@ def narration_voice():
     return (os.environ.get("ELEVENLABS_VOICE_ID") or "").strip() or NOAH_VOICE_ID
 
 
-def tts_elevenlabs(text, out_mp3):
+def narration_tag():
+    """The delivery tag inserted before each spoken sentence. Empty, 0, or off disables it."""
+    raw = os.environ.get("ELEVENLABS_AUDIO_TAG")
+    if raw is None:
+        return NARRATION_TAG
+    raw = raw.strip()
+    if raw.lower() in ("", "0", "off", "none"):
+        return ""
+    if not (raw.startswith("[") and raw.endswith("]")):
+        raw = f"[{raw.strip('[]')}]"
+    return raw
+
+
+def tag_sentences(text, tag=None):
+    """Put the delivery tag in front of every sentence. The script itself is left unchanged."""
+    tag = NARRATION_TAG if tag is None else tag
+    text = (text or "").strip()
+    if not tag or not text:
+        return text
+    parts = [p.strip() for p in SENTENCE_BREAK.split(text) if p.strip()]
+    return " ".join(p if p.startswith(tag) else f"{tag} {p}" for p in parts)
+
+
+def strip_audio_tags(text):
+    """Remove delivery tags so they cannot reach captions, titles, or descriptions."""
+    cleaned = AUDIO_TAG_WORD.sub(" ", text or "")
+    return re.sub(r"[ \t]{2,}", " ", cleaned).strip()
+
+
+def alignment_without_tags(chars, starts, ends, tag):
+    """Drop the tag characters so timestamps still line up with the untagged script."""
+    if not tag or not chars:
+        return chars, starts, ends
+    text = "".join(chars)
+    drop = [False] * len(text)
+    for match in re.finditer(re.escape(tag) + r"\s*", text):
+        for i in range(match.start(), match.end()):
+            drop[i] = True
+    kept = [(c, s, e) for c, s, e, gone in zip(chars, starts, ends, drop) if not gone]
+    if not kept:
+        return chars, starts, ends
+    return [c for c, _, _ in kept], [s for _, s, _ in kept], [e for _, _, e in kept]
+
+
+def narration_body(text, speed=None):
+    """The request body for one narration. v4 has no style or speed slider."""
+    model = (os.environ.get("ELEVENLABS_MODEL") or NARRATION_MODEL).strip() or NARRATION_MODEL
+    settings = {
+        "stability": float(os.environ.get("ELEVENLABS_STABILITY", "0")),
+        "similarity_boost": float(os.environ.get("ELEVENLABS_SIMILARITY", "0")),
+    }
+    if "v4" in model:
+        settings["clone_strength"] = float(os.environ.get("ELEVENLABS_CLONE_STRENGTH", "0"))
+    else:
+        if os.environ.get("ELEVENLABS_STYLE") not in (None, ""):
+            settings["style"] = float(os.environ["ELEVENLABS_STYLE"])
+        settings["use_speaker_boost"] = True
+        pace = speed if speed is not None else os.environ.get("ELEVENLABS_SPEED")
+        if pace not in (None, ""):
+            settings["speed"] = float(pace)
+    return {
+        "text": tag_sentences(text, narration_tag()),
+        "model_id": model,
+        "language_code": (os.environ.get("ELEVENLABS_LANGUAGE") or "en").strip() or "en",
+        "voice_settings": settings,
+    }
+
+
+def tts_elevenlabs(text, out_mp3, speed=None, voice=None):
     key = os.environ["ELEVENLABS_API_KEY"]
-    voice = narration_voice()
-    if LANG[0] == "nl" and os.environ.get("USE_NL_VOICE") == "1" and os.environ.get("ELEVENLABS_VOICE_ID_NL"):  # off: English voice for Dutch too
-        voice = os.environ["ELEVENLABS_VOICE_ID_NL"]
-    model = os.environ.get("ELEVENLABS_MODEL", "eleven_multilingual_v2")
+    if voice is None:
+        voice = narration_voice()
+        if LANG[0] == "nl" and os.environ.get("USE_NL_VOICE") == "1" and os.environ.get("ELEVENLABS_VOICE_ID_NL"):  # off: English voice for Dutch too
+            voice = os.environ["ELEVENLABS_VOICE_ID_NL"]
+    body = narration_body(text, speed)
     req = urllib.request.Request(
         f"https://api.elevenlabs.io/v1/text-to-speech/{voice}/with-timestamps?output_format=mp3_44100_192",
-        data=json.dumps({"text": text, "model_id": model,
-                         "voice_settings": {
-                             "stability": float(os.environ.get("ELEVENLABS_STABILITY", "0.48")),
-                             "similarity_boost": float(os.environ.get("ELEVENLABS_SIMILARITY", "0.75")),
-                             "style": float(os.environ.get("ELEVENLABS_STYLE", "0.30")),
-                             "speed": float(os.environ.get("ELEVENLABS_SPEED", "1.05"))}}).encode(),
+        data=json.dumps(body).encode(),
         headers={"xi-api-key": key, "Content-Type": "application/json"})
     with urllib.request.urlopen(req, timeout=300) as r:
         d = json.load(r)
     out_mp3.write_bytes(base64.b64decode(d["audio_base64"]))
     al = d.get("alignment") or d["normalized_alignment"]  # original characters, so text positions line up
-    return al["characters"], al["character_start_times_seconds"], al["character_end_times_seconds"]
+    return alignment_without_tags(
+        al["characters"], al["character_start_times_seconds"], al["character_end_times_seconds"], narration_tag())
 
 
 def duration(path):
@@ -264,12 +336,21 @@ def duration(path):
     return float(r.stdout.strip() or 0)
 
 
+def is_tag_token(word):
+    """True when a timestamp word is the delivery tag rather than a script word."""
+    bare = word.strip(".,!?;:\"'“”")
+    if AUDIO_TAG_WORD.fullmatch(bare):
+        return True
+    inner = narration_tag().strip("[]")
+    return bool(inner) and bare.lower() == inner.lower()
+
+
 def words_timed(chars, starts, ends):
     """Group character timestamps into words with start/end times."""
     words, cur, t0 = [], "", None
     for c, s, e in zip(chars, starts, ends):
         if c.isspace():
-            if cur:
+            if cur and not is_tag_token(cur):
                 words.append((cur, t0, e))
             cur, t0 = "", None
             continue
@@ -277,7 +358,7 @@ def words_timed(chars, starts, ends):
             t0 = s
         cur += c
         last = e
-    if cur:
+    if cur and not is_tag_token(cur):
         words.append((cur, t0, last))
     return words
 

@@ -111,6 +111,8 @@ jobs:
         env:
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
           VOICE_OUT: video/out/noah-check
+          STORED_VOICE_ID: ${{ vars.ELEVENLABS_VOICE_ID }}
+          STORED_VOICE_ID_2: ${{ vars.ELEVENLABS_VOICE_ID_2 }}
         run: |
           set -euo pipefail
           export ELEVENLABS_VOICE_ID="$(cat "$RUNNER_TEMP/chosen-voice")"

@@ -286,16 +286,48 @@ MODELS = {
     "cybertruck-foundation": {"name": "Cybertruck Foundation Series", "parent": "cybertruck", "label": "Foundation Series", "photo": "ctf-1.jpg", "gallery": ["ctf-1.jpg"], "menu": "menu-ctf.jpg"},
     "cybercab":          {"name": "Cybercab", "menu": "menu-cybercab.jpg",           "photo": "cybercab.jpg", "gallery": ["cybercab.jpg", "cc-1.jpg", "cc-3.jpg", "cc-2.jpg"]},
     "roadster":          {"name": "Roadster", "photo": "roadster.jpg", "menu": "menu-roadster.jpg", "gallery": ["rd-4.jpg", "rd-5.jpg", "rd-6.jpg", "rd-7.jpg", "rd-8.jpg", "rd-9.jpg", "rd-10.jpg", "rd-11.jpg", "rd-12.jpg", "rd-13.jpg", "rd-14.jpg", "rd-15.jpg", "rd-16.jpg", "rd-17.jpg", "rd-18.jpg", "rd-19.jpg", "rd-20.jpg", "rd-21.jpg", "rd-22.jpg", "rd-23.jpg", "rd-24.jpg", "rd-25.jpg"]},
+    "roadster-first-generation": {"name": {"en": "First Tesla Roadster", "nl": "De eerste Tesla Roadster"}, "full_name": True, "parent": "roadster", "photo": "gen/tesla-roadster-origin-story-lotus-elise-first-tesla.jpg", "menu": "gen/tesla-roadster-origin-story-lotus-elise-first-tesla.jpg", "label": {"en": "2008–2012", "nl": "2008–2012"}},
+    "roadster-standard": {"name": {"en": "Roadster Standard", "nl": "Roadster Standard"}, "parent": "roadster", "photo": "rd-3.jpg", "menu": "rd-3.jpg", "label": {"en": "Standard", "nl": "Standard"}},
     "roadster-performance": {"name": {"en": "Roadster Performance", "nl": "Roadster Performance"}, "parent": "roadster", "photo": "rd-15.jpg", "menu": "rd-15.jpg", "label": "Performance"},
     "roadster-thrust":   {"name": {"en": "Roadster Thrust", "nl": "Roadster Thrust"}, "parent": "roadster", "photo": "rd-4.jpg", "menu": "rd-4.jpg", "label": "Thrust"},
     "roadster-rocket":   {"name": {"en": "Roadster Rocket", "nl": "Roadster Rocket"}, "parent": "roadster", "photo": "rd-1.jpg", "menu": "rd-1.jpg", "label": "Rocket"},
-    "roadster-standard": {"name": {"en": "Roadster Standard", "nl": "Roadster Standard"}, "parent": "roadster", "photo": "rd-3.jpg", "menu": "rd-3.jpg", "label": {"en": "Standard", "nl": "Standard"}},
-    "roadster-first-generation": {"name": {"en": "First Tesla Roadster", "nl": "De eerste Tesla Roadster"}, "full_name": True, "parent": "roadster", "photo": "gen/tesla-roadster-origin-story-lotus-elise-first-tesla.jpg", "menu": "gen/tesla-roadster-origin-story-lotus-elise-first-tesla.jpg", "label": {"en": "2008–2012", "nl": "2008–2012"}},
-    "semi":              {"name": "Semi", "photo": "lib/semi-highway.jpg", "menu": "menu-semi.jpg", "gallery": ["semi.jpg", "semi-6.jpg", "semi-4.jpg", "semi-7.jpg", "semi-2.jpg", "semi-5.jpg", "semi-3.jpg"]},
-    "semi-standard-range": {"name": {"en": "Semi Standard Range", "nl": "Semi Standard Range"}, "parent": "semi", "photo": "lib/semi-highway.jpg", "menu": "lib/semi-highway.jpg", "label": "Standard Range"},
-    "semi-long-range":   {"name": {"en": "Semi Long Range", "nl": "Semi Long Range"}, "parent": "semi", "photo": "lib/semi-highway.jpg", "menu": "lib/semi-highway.jpg", "label": "Long Range"},
-    "semi-europe":       {"name": {"en": "Semi Europe", "nl": "Semi Europa"}, "parent": "semi", "photo": "lib/semi-highway.jpg", "menu": "lib/semi-highway.jpg", "label": {"en": "Europe", "nl": "Europa"}},
-    "semi-2022-pilot":   {"name": {"en": "Semi 2022 Pilot", "nl": "Semi-pilot 2022"}, "parent": "semi", "photo": "semi.jpg", "menu": "semi.jpg", "label": {"en": "2022 Pilot", "nl": "Pilot 2022"}},
+    "semi":              {"name": "Semi", "photo": "semi-hub.webp", "menu": "semi-hub.webp", "gallery": ["semi.jpg", "semi-6.jpg", "semi-4.jpg", "semi-7.jpg", "semi-2.jpg", "semi-5.jpg", "semi-3.jpg"],
+                          "photo_alt": {"en": "Tesla Semi family: the European truck at IAA Transportation, Hannover, 14 September 2026",
+                                        "nl": "Tesla Semi-familie: de Europese truck op de IAA Transportation, Hannover, 14 september 2026"},
+                          "credit": {"author": "Matti Blume", "license": "CC BY-SA 4.0", "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+                                     "source_url": "https://commons.wikimedia.org/wiki/File:IAA_Transportation_2026,_Hanover_(20260914-P1086978).jpg",
+                                     "en": "The truck Tesla showed at IAA Transportation in Hannover on 14 September 2026. It is the European specification.",
+                                     "nl": "De truck die Tesla op 14 september 2026 toonde op de IAA Transportation in Hannover. Dit is de Europese specificatie."}},
+    "semi-standard-range": {"name": {"en": "Semi Standard Range", "nl": "Semi Standard Range"}, "parent": "semi", "photo": "semi-standard.webp", "menu": "semi-standard.webp", "label": "Standard Range",
+                          "photo_alt": {"en": "Tesla Semi Standard Range: photograph of the European show truck, which uses Standard Range hardware, not the US light-bar cab",
+                                        "nl": "Tesla Semi Standard Range: foto van de Europese showtruck, die Standard Range-hardware gebruikt, niet de Amerikaanse lichtbalk-cabine"},
+                          "card_note": {"en": "Photo: European show truck", "nl": "Foto: Europese showtruck"},
+                          "credit": {"author": "Matti Blume", "license": "CC BY-SA 4.0", "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+                                     "source_url": "https://commons.wikimedia.org/wiki/File:IAA_Transportation_2026,_Hanover_(20260914-P1086986).jpg",
+                                     "en": "No licensed photograph of the US Standard Range cab was found. This is the European show truck at IAA Transportation, Hannover, 14 September 2026. Tesla said that truck uses Standard Range hardware. It is not the US light-bar cab.",
+                                     "nl": "Er is geen gelicentieerde foto van de Amerikaanse Standard Range-cabine gevonden. Dit is de Europese showtruck op de IAA Transportation, Hannover, 14 september 2026. Tesla zei dat die truck Standard Range-hardware gebruikt. Het is niet de Amerikaanse lichtbalk-cabine."}},
+    "semi-long-range":   {"name": {"en": "Semi Long Range", "nl": "Semi Long Range"}, "parent": "semi", "photo": "semi-long.webp", "menu": "semi-long.webp", "label": "Long Range",
+                          "photo_alt": {"en": "Tesla Semi Long Range: no licensed photo of the longer chassis; the photograph is the European show truck",
+                                        "nl": "Tesla Semi Long Range: geen gelicentieerde foto van het langere chassis; de foto is de Europese showtruck"},
+                          "card_note": {"en": "Photo: not the longer chassis", "nl": "Foto: niet het langere chassis"},
+                          "credit": {"author": "Matti Blume", "license": "CC BY-SA 4.0", "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+                                     "source_url": "https://commons.wikimedia.org/wiki/File:IAA_Transportation_2026,_Hanover_(20260914-P1086988).jpg",
+                                     "en": "No licensed photograph of the longer Long Range chassis was found. This is the European show truck at IAA Transportation, Hannover, 14 September 2026, which Tesla described as Standard Range hardware.",
+                                     "nl": "Er is geen gelicentieerde foto van het langere Long Range-chassis gevonden. Dit is de Europese showtruck op de IAA Transportation, Hannover, 14 september 2026, die Tesla als Standard Range-hardware beschreef."}},
+    "semi-europe":       {"name": {"en": "Semi Europe", "nl": "Semi Europa"}, "parent": "semi", "photo": "semi-europe.webp", "menu": "semi-europe.webp", "label": {"en": "Europe", "nl": "Europa"},
+                          "photo_alt": {"en": "Tesla Semi Europe at IAA Transportation in Hannover on 14 September 2026",
+                                        "nl": "Tesla Semi Europa op de IAA Transportation in Hannover op 14 september 2026"},
+                          "credit": {"author": "Matti Blume", "license": "CC BY-SA 4.0", "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+                                     "source_url": "https://commons.wikimedia.org/wiki/File:IAA_Transportation_2026,_Hanover_(20260914-P1086985).jpg",
+                                     "en": "The European Semi at IAA Transportation in Hannover on 14 September 2026.",
+                                     "nl": "De Europese Semi op de IAA Transportation in Hannover op 14 september 2026."}},
+    "semi-2022-pilot":   {"name": {"en": "Semi 2022 Pilot", "nl": "Semi-pilot 2022"}, "parent": "semi", "photo": "semi-2022-pilot.webp", "menu": "semi-2022-pilot.webp", "label": {"en": "2022 Pilot", "nl": "Pilot 2022"},
+                          "photo_alt": {"en": "Tesla Semi 2022 Pilot, a PepsiCo truck with the earlier front lights, photographed on 31 October 2023",
+                                        "nl": "Tesla Semi-pilot 2022, een PepsiCo-truck met de eerdere voorkant, gefotografeerd op 31 oktober 2023"},
+                          "credit": {"author": "Dllu", "license": "CC BY-SA 4.0", "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+                                     "source_url": "https://commons.wikimedia.org/wiki/File:Tesla_Semi_Pepsi_2023-10-31-13-39-37_DSCF2583_dllu.jpg",
+                                     "en": "A PepsiCo Tesla Semi on 31 October 2023. This is the 2022 pilot generation, with the earlier front lights, not the 2026 production truck.",
+                                     "nl": "Een PepsiCo Tesla Semi op 31 oktober 2023. Dit is de pilotgeneratie van 2022, met de eerdere voorkant, niet de productietruck van 2026."}},
 }
 # Fallback photo per category: a file in static/img/topics/, or a list of files to vary between
 # (each article always gets the same one, picked from its slug). Missing files are skipped.
@@ -802,14 +834,21 @@ article.narrow > h1{margin-left:14px}article.narrow .cform{margin-left:14px}
 .hubhead h1{font-size:clamp(1.8rem,4vw,2.7rem);letter-spacing:-.03em;line-height:1.08;margin:0 0 10px}
 .hubhead .lead{font-size:1.08rem;line-height:1.55;color:var(--muted);max-width:none;margin:0 0 16px 1px}
 .mgrid{display:grid;grid-template-columns:1fr;gap:var(--card-gap-y) var(--card-gap-x);margin:0 0 28px}
-@media (min-width:700px){.mgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (min-width:1100px){.mgrid{grid-template-columns:repeat(3,minmax(0,1fr))}}
-.mcard{display:flex;flex-direction:column;align-items:flex-start;gap:10px;min-width:0;text-decoration:none;color:inherit}
+@media (min-width:560px){.mgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (min-width:900px){.mgrid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (min-width:1100px){.mgrid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media (min-width:1280px){.mgrid{grid-template-columns:repeat(5,minmax(0,1fr))}}
+.mcard{display:flex;flex-direction:column;align-items:flex-start;gap:8px;min-width:0;text-decoration:none;color:inherit}
 .mcard .mim{display:block;width:100%;border-radius:10px;overflow:hidden;border:0;background:#000;aspect-ratio:16/9}
 .mcard .mim img{width:100%;height:100%;object-fit:cover}
-.mcard .mname{font-weight:800;font-size:1.08rem;line-height:1.2}
-.mhero{margin:0 0 16px;border-radius:12px;overflow:hidden;border:1px solid var(--edge);background:#000}
+.mcard .mname{display:block;max-width:100%;font-weight:800;font-size:.92rem;line-height:1.25;overflow-wrap:break-word}
+@media (min-width:1280px){.mcard .mname{font-size:.84rem}}
+.mcard .mcap{display:block;max-width:100%;font-size:.72rem;line-height:1.3;font-weight:600;color:var(--muted);overflow-wrap:break-word}
+.mhero{margin:0 0 16px;background:transparent}
+.mhero picture,.mhero>img{display:block;border-radius:12px;overflow:hidden;border:1px solid var(--edge);background:#000}
 .mhero img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
+.mhero.natural img{aspect-ratio:auto;object-fit:contain;background:#0c0e12}
+.mhero figcaption{margin-top:8px}
 .mintro{font-size:1.08rem;line-height:1.55;color:var(--muted);margin:0 0 18px;max-width:none}
 .mfacts{margin:0 0 4px}
 .mfacts h2{font-size:1.15rem;margin:0 0 8px}
@@ -1477,6 +1516,37 @@ def model_heading(key, lang):
     if MODELS[key].get("full_name"):
         return name
     return "Tesla " + name
+
+
+def photo_alt(key, lang):
+    alt = MODELS[key].get("photo_alt")
+    if isinstance(alt, dict):
+        return alt.get(lang) or alt.get("en") or model_heading(key, lang)
+    return model_heading(key, lang)
+
+
+def photo_caption(key, lang):
+    """Attribution and an honest note when the photograph is not that exact version."""
+    credit = MODELS[key].get("credit")
+    if not credit:
+        return ""
+    note = credit.get(lang) or credit.get("en") or ""
+    author = credit.get("author") or ""
+    license_name = credit.get("license") or ""
+    bits = [esc(note)] if note else []
+    who = []
+    if author and credit.get("source_url"):
+        who.append(f'<a href="{esc(credit["source_url"])}" rel="noopener noreferrer">{esc(author)}</a>')
+    elif author:
+        who.append(esc(author))
+    if license_name and credit.get("license_url"):
+        who.append(f'<a href="{esc(credit["license_url"])}" rel="noopener noreferrer">{esc(license_name)}</a>')
+    elif license_name:
+        who.append(esc(license_name))
+    if who:
+        label = "Foto" if lang == "nl" else "Photo"
+        bits.append(f"{label}: {', '.join(who)}.")
+    return " ".join(bits)
 
 
 def social_img(a, lang):
@@ -3398,9 +3468,15 @@ def model_card(key, lang, eager=False, high=False):
     img = ""
     if ph:
         w, h = img_size(ph)
-        img = resp_img(ph, model_heading(key, lang), SIZES_MODEL, high=high, lazy=not eager, width=w, height=h)
+        img = resp_img(ph, photo_alt(key, lang), SIZES_MODEL, high=high, lazy=not eager, width=w, height=h)
+    note = MODELS[key].get("card_note")
+    cap = ""
+    if isinstance(note, dict):
+        text = note.get(lang) or note.get("en")
+        if text:
+            cap = f'<span class="mcap">{esc(text)}</span>'
     return (f'<a class="mcard" href="{url(lang, "model/" + key + "/")}">'
-            f'<span class="mim">{img}</span><span class="mname">{esc(name)}</span></a>')
+            f'<span class="mim">{img}</span><span class="mname">{esc(name)}</span>{cap}</a>')
 
 
 def fact_sources(key, lang):
@@ -3440,7 +3516,10 @@ def model_hub(key, items, lang):
     parts.append((name, f"model/{key}/"))
     nav, ld = crumbs(lang, parts)
     ph = model_photo(key)
-    hero = (f'<figure class="mhero">{resp_img(ph, heading_name, "(max-width: 900px) 100vw, 820px", high=True, lazy=False, width=1600, height=900)}</figure>'
+    cap = photo_caption(key, lang)
+    figcap = f'<figcaption class="imgnote">{cap}</figcaption>' if cap else ""
+    klass = "mhero natural" if m.get("credit") else "mhero"
+    hero = (f'<figure class="{klass}">{resp_img(ph, photo_alt(key, lang), "(max-width: 900px) 100vw, 820px", high=True, lazy=False, width=1600, height=900)}{figcap}</figure>'
             if ph else "")
     if facts:
         specs = render_fact_sections(facts, lang)

@@ -375,8 +375,8 @@ PAGE_FACTS = {
     },
     "semi-standard-range": {
         "intro": {
-            "en": "The shorter-range 2026 US tractor. On sale to fleets, with volume production in Nevada and customer deliveries reported from late September 2026. The photo is the light-bar truck in this library, not a 2022 vertical-headlight pilot.",
-            "nl": "De Amerikaanse trekker van 2026 met het kortere bereik. Te koop voor vloten, met serieproductie in Nevada en klantleveringen gemeld vanaf eind september 2026. De foto is de lichtbalk-truck uit deze bibliotheek, niet een pilot van 2022 met verticale koplampen.",
+            "en": "The shorter-range 2026 US tractor. On sale to fleets, with volume production in Nevada and customer deliveries reported from late September 2026. The photograph is the European show truck, which Tesla said uses this hardware. It is not a picture of the US light-bar cab.",
+            "nl": "De Amerikaanse trekker van 2026 met het kortere bereik. Te koop voor vloten, met serieproductie in Nevada en klantleveringen gemeld vanaf eind september 2026. De foto is de Europese showtruck, waarvan Tesla zei dat die deze hardware gebruikt. Het is geen foto van de Amerikaanse lichtbalk-cabine.",
         },
         "sections": [
             S("Standard Range", "Standard Range", [
@@ -424,8 +424,8 @@ PAGE_FACTS = {
     },
     "semi-long-range": {
         "intro": {
-            "en": "The 500-mile 2026 US tractor, Tesla’s top variant in the Q3 letter. Same production timing as Standard Range. Not announced for Europe. The photo is the light-bar truck, not the 2022 pilot.",
-            "nl": "De Amerikaanse trekker van 2026 met 500 mijl, Tesla’s topvariant in de Q3-brief. Dezelfde productietiming als Standard Range. Niet aangekondigd voor Europa. De foto is de lichtbalk-truck, niet de pilot van 2022.",
+            "en": "The 500-mile 2026 US tractor, Tesla’s top variant in the Q3 letter. Same production timing as Standard Range. Not announced for Europe. No licensed photograph of the longer chassis was found, so the picture is the European show truck.",
+            "nl": "De Amerikaanse trekker van 2026 met 500 mijl, Tesla’s topvariant in de Q3-brief. Dezelfde productietiming als Standard Range. Niet aangekondigd voor Europa. Er is geen gelicentieerde foto van het langere chassis gevonden, dus de foto is de Europese showtruck.",
         },
         "sections": [
             S("Long Range", "Long Range", [
@@ -472,8 +472,8 @@ PAGE_FACTS = {
     },
     "semi-europe": {
         "intro": {
-            "en": "The European Semi shown at IAA Transportation 2026. Dan Priestley called it the North American Standard Range truck on a different test cycle, with homologation changes. Not on sale. Demonstrations were targeted for the first half of 2027 and deliveries for the end of 2027. This library has no photo of the split-headlight, camera-monitor cab, so the picture is the US light-bar truck.",
-            "nl": "De Europese Semi, getoond op de IAA Transportation 2026. Dan Priestley noemde het de Noord-Amerikaanse Standard Range-truck op een andere testcyclus, met homologatiewijzigingen. Niet te koop. Demonstraties waren gericht op de eerste helft van 2027 en leveringen op eind 2027. Deze bibliotheek heeft geen foto van de cabine met gescheiden koplampen en cameramonitors, dus de foto is de Amerikaanse lichtbalk-truck.",
+            "en": "The European Semi shown at IAA Transportation 2026. Dan Priestley called it the North American Standard Range truck on a different test cycle, with homologation changes. Not on sale. Demonstrations were targeted for the first half of 2027 and deliveries for the end of 2027. The photograph is that Hannover show truck.",
+            "nl": "De Europese Semi, getoond op de IAA Transportation 2026. Dan Priestley noemde het de Noord-Amerikaanse Standard Range-truck op een andere testcyclus, met homologatiewijzigingen. Niet te koop. Demonstraties waren gericht op de eerste helft van 2027 en leveringen op eind 2027. De foto is die showtruck uit Hannover.",
         },
         "sections": [
             S("Europe", "Europa", [
@@ -521,8 +521,8 @@ PAGE_FACTS = {
     },
     "semi-2022-pilot": {
         "intro": {
-            "en": "The hand-built trucks first handed to PepsiCo at Gigafactory Nevada on 1–2 December 2022. Tesla later described that run as a pilot. It is not the 2026 volume truck. Do not copy 548 kWh, 822 kWh, 4680 cells, electric steering or the light bar onto this page.",
-            "nl": "De met de hand gebouwde trucks die op 1–2 december 2022 als eerste aan PepsiCo werden overgedragen in Gigafactory Nevada. Tesla beschreef die reeks later als een pilot. Dit is niet de serietruck van 2026. Zet 548 kWh, 822 kWh, 4680-cellen, elektrische besturing of de lichtbalk niet op deze pagina.",
+            "en": "The hand-built trucks first handed to PepsiCo at Gigafactory Nevada on 1–2 December 2022. Tesla later described that run as a pilot. It is not the 2026 volume truck. Do not copy 548 kWh, 822 kWh, 4680 cells, electric steering or the light bar onto this page. The photograph is a PepsiCo pilot truck from 2023, with the earlier front lights.",
+            "nl": "De met de hand gebouwde trucks die op 1–2 december 2022 als eerste aan PepsiCo werden overgedragen in Gigafactory Nevada. Tesla beschreef die reeks later als een pilot. Dit is niet de serietruck van 2026. Zet 548 kWh, 822 kWh, 4680-cellen, elektrische besturing of de lichtbalk niet op deze pagina. De foto is een PepsiCo-pilottruck uit 2023, met de eerdere voorkant.",
         },
         "sections": [
             S("2022 Pilot", "Pilot 2022", [

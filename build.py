@@ -745,7 +745,7 @@ article.narrow > h1{margin-left:14px}article.narrow .cform{margin-left:14px}
 .pn:hover{background:#272727;color:#fff}
 .pn.on,.pdrop.on>.pn,header.hb .mdrop>button.pn.on{background:#ebebeb;color:#111;border-radius:8px}
 .pdrop{position:relative;display:flex;align-items:center;z-index:0}
-.pmenu{display:none;position:absolute;top:100%;left:0;min-width:210px;z-index:50;background:#2a2a2a;border:1px solid rgba(255,255,255,0.14);border-radius:0 10px 10px 10px;padding:6px;box-shadow:0 12px 32px rgba(0,0,0,.45)}
+.pmenu{display:none;position:absolute;top:100%;left:0;min-width:210px;z-index:50;background:#2a2a2a;border:1px solid rgba(255,255,255,0.28);border-radius:0 10px 10px 10px;padding:6px;box-shadow:0 12px 32px rgba(0,0,0,.45)}
 .pdrop::after{content:"";position:absolute;top:calc(100% - 6px);left:0;width:240px;height:14px;z-index:49}
 .pdrop:hover,.pdrop:focus-within,.pdrop.is-open{z-index:2}
 .pdrop:hover .pmenu,.pdrop:focus-within .pmenu,.pdrop.is-open .pmenu{display:grid}

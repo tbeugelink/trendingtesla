@@ -402,10 +402,14 @@ def tts_elevenlabs(text, out_mp3, speed=None, voice=None):
     for i, part in enumerate(parts):
         dest = out_mp3.with_name(f"{out_mp3.stem}-part{i}.mp3")
         c, s, e = tts_request(part, dest, speed, voice)
+        span = duration(dest)
+        if e and e[-1] > span:
+            s = [min(t, span) for t in s]
+            e = [min(max(t, s[i] if i < len(s) else t), span) for i, t in enumerate(e)]
         chars += c
         starts += [t + offset for t in s]
         ends += [t + offset for t in e]
-        offset += duration(dest)
+        offset += span
         files.append(dest)
         print(f"::notice::ElevenLabs part {i + 1}/{len(parts)} ({len(tag_sentences(part))} chars)")
     concat_audio(files, out_mp3)

@@ -419,8 +419,10 @@ def main():
     for i, pc in enumerate(spoken):
         i0, i1 = pos, pos + len(pc) - 1
         spans.append((i0, i1))
-        a0 = max(0.0, cs[i0] - 0.05)
+        a0 = max(0.0, min(full, cs[i0] - 0.05))
         a1 = min(full, ce[i1] + 0.12) if i < len(spoken) - 1 else full
+        if a1 < a0 + 0.08:  # a zero-length trim makes ffmpeg reject the mix
+            a1 = min(full, a0 + 0.08)
         segs.append((a0, a1))
         pos += len(pc) + 1
     # place pieces on the video timeline with pauses
@@ -460,12 +462,17 @@ def main():
         fl, ins = [], []
         for i, ((a0, a1), t0) in enumerate(zip(segs, place)):
             ms = int(t0 * 1000)
-            fl.append(f"[0]atrim={a0:.3f}:{a1:.3f},asetpts=PTS-STARTPTS,afade=t=in:d=0.03,afade=t=out:st={max(0, a1 - a0 - 0.04):.3f}:d=0.04,"
-                      f"adelay={ms}|{ms}[a{i}]")
+            span = max(0.08, a1 - a0)
+            fade = min(0.03, span / 4)
+            fl.append(f"[0]atrim={a0:.3f}:{a0 + span:.3f},asetpts=PTS-STARTPTS,afade=t=in:d={fade:.3f},"
+                      f"afade=t=out:st={max(0, span - fade):.3f}:d={fade:.3f},adelay={ms}|{ms}[a{i}]")
             ins.append(f"[a{i}]")
         fl.append("".join(ins) + f"amix=inputs={len(ins)}:normalize=0:duration=longest[out]")
-        subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", str(mp3), "-filter_complex", ";".join(fl), "-map", "[out]",
-                        "-c:a", "aac", "-b:a", "192k", str(audio)], check=True)
+        mixed = subprocess.run(["ffmpeg", "-y", "-i", str(mp3), "-filter_complex", ";".join(fl), "-map", "[out]",
+                                "-c:a", "aac", "-b:a", "192k", str(audio)], capture_output=True, text=True)
+        if mixed.returncode:
+            print(mixed.stderr[-800:])
+            raise SystemExit(f"ffmpeg audio mix failed ({mixed.returncode})")
     else:
         audio = None
     credits = add_real_photos(a, pieces) if os.environ.get("GEMINI_API_KEY") else {}

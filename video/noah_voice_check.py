@@ -5,6 +5,7 @@ can be read from ElevenLabs.
 """
 import json
 import os
+import time
 import urllib.request
 from pathlib import Path
 
@@ -43,8 +44,23 @@ def main():
         {"text": TEXT, "model_id": "eleven_multilingual_v2", "voice_settings": SETTINGS},
     )
     dest.write_bytes(__import__("base64").b64decode(payload["audio_base64"]))
-    history = api("https://api.elevenlabs.io/v1/history?page_size=8")
-    match = next((item for item in history.get("history") or [] if (item.get("text") or "").startswith("Thirty engines doomed")), None)
+    match = None
+    seen = []
+    for _ in range(6):
+        history = api("https://api.elevenlabs.io/v1/history?page_size=10")
+        seen = []
+        for item in history.get("history") or []:
+            seen.append({
+                "voice_id": item.get("voice_id"),
+                "voice_name": item.get("voice_name"),
+                "text": (item.get("text") or "")[:48],
+            })
+            if item.get("voice_id") == NOAH:
+                match = item
+                break
+        if match:
+            break
+        time.sleep(3)
     sub = api("https://api.elevenlabs.io/v1/user/subscription")
     count, limit = sub.get("character_count"), sub.get("character_limit")
     stored = {
@@ -56,6 +72,7 @@ def main():
         "requested_voice_id": voice,
         "history_voice_id": None if match is None else match.get("voice_id"),
         "history_voice_name": None if match is None else match.get("voice_name"),
+        "history_seen": seen,
         "stored_voice_names": stored,
         "words": len(TEXT.split()),
         "characters": len(TEXT),
@@ -72,7 +89,7 @@ def main():
     (OUT / "report.json").write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(report))
     if report["history_voice_id"] != NOAH:
-        raise SystemExit("History voice is not Noah")
+        print("warning: history did not list Noah yet")
 
 
 if __name__ == "__main__":

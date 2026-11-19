@@ -745,8 +745,8 @@ article.narrow > h1{margin-left:14px}article.narrow .cform{margin-left:14px}
 .pn:hover{background:#272727;color:#fff}
 .pn.on,.pdrop.on>.pn,header.hb .mdrop>button.pn.on{background:#ebebeb;color:#111;border-radius:8px}
 .pdrop{position:relative;display:flex;align-items:center}
-.pmenu{display:none;position:absolute;top:calc(100% + 12px);left:0;min-width:210px;z-index:50;background:#161616;border:1px solid #3a4a60;border-radius:10px;padding:6px;box-shadow:0 12px 32px rgba(0,0,0,.55)}
-.pdrop::after{content:"";position:absolute;top:100%;left:0;width:240px;height:12px}
+.pmenu{display:none;position:absolute;top:calc(100% - 1px);left:0;min-width:210px;z-index:50;background:#161616;border:1px solid #3a4a60;border-radius:0 10px 10px 10px;padding:6px;box-shadow:0 12px 32px rgba(0,0,0,.55)}
+.pdrop::after{content:"";position:absolute;top:calc(100% - 6px);left:0;width:240px;height:14px;z-index:49}
 .pdrop:hover .pmenu,.pdrop:focus-within .pmenu,.pdrop.is-open .pmenu{display:grid}
 .pdrop.tone-tesla{--accent:#e31937;--accent-ink:#ff8a9b}
 .pdrop.tone-energy{--accent:#4cd964;--accent-ink:#b8ffc6}
@@ -755,8 +755,7 @@ article.narrow > h1{margin-left:14px}article.narrow .cform{margin-left:14px}
 .pdrop.tone-spacexsi{--accent:#ffc400;--accent-ink:#ffe28a}
 .pdrop.tone-neural{--accent:#ff2d95;--accent-ink:#ffb3d6}
 .pdrop.tone-boring{--accent:#2f6bff;--accent-ink:#b3c8ff}
-.pdrop .pmenu{border-top:3px solid var(--accent,#00d1ff)}
-.pdrop:hover>a.pn:not(.on),.pdrop:focus-within>a.pn:not(.on),.pdrop.is-open>a.pn:not(.on){color:#fff}
+.pdrop:hover>a.pn,.pdrop:focus-within>a.pn,.pdrop.is-open>a.pn{position:relative;z-index:51;background:#161616;color:#fff;border-radius:10px 10px 0 0}
 .pmenu a.child{padding-left:26px;font-weight:650;color:#b7c0cc}
 .dlayer{margin:0 0 8px}
 .drawer a.tone-tesla,.drawer a.tone-energy,.drawer a.tone-spacex,.drawer a.tone-link,.drawer a.tone-spacexsi,.drawer a.tone-neural,.drawer a.tone-boring{color:#fff}
@@ -766,7 +765,7 @@ article.narrow > h1{margin-left:14px}article.narrow .cform{margin-left:14px}
 .dsub a:hover{background:#272727;color:#fff}
 .dsub a.on{background:#ebebeb;color:#111}
 .drawer a.dmap{margin-top:8px;border-top:1px solid #2a2a2a;padding-top:12px}
-.pdrop:last-child .pmenu{left:auto;right:0}
+.pdrop:last-child .pmenu{left:auto;right:0;border-radius:10px 0 10px 10px}
 .pdrop:last-child::after{left:auto;right:0}
 .pmenu a{padding:8px 12px;border-radius:8px;color:#ebebeb;text-decoration:none;font-size:.86rem;font-weight:700;white-space:nowrap}
 .pmenu a:hover{background:#272727}

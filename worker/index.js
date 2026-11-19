@@ -127,6 +127,16 @@ function withSlash(pathname) {
   return needsSlash(pathname) ? pathname + "/" : pathname;
 }
 
+// /about/index.html and /index.html are the same document as the directory URL.
+function canonicalPath(pathname) {
+  let p = pathname;
+  if (p === "/index.html" || p.endsWith("/index.html")) {
+    p = p.slice(0, -"index.html".length);
+    if (!p) p = "/";
+  }
+  return withSlash(p);
+}
+
 function redirect301(url) {
   const headers = { Location: url, "Cache-Control": "public, max-age=3600" };
   return new Response(null, { status: 301, headers });
@@ -154,27 +164,30 @@ export default {
     const host = u.hostname.toLowerCase();
     const onSite = host === "trendingtesla.com" || host === "www.trendingtesla.com";
     const scheme = originalScheme(request, u);
-    const slashed = withSlash(u.pathname);
+    const path = canonicalPath(u.pathname);
     // Removed articles: 301 to the closest kept article, or to a model/category page.
     // Map lives in worker/redirects.js (same pairs as content/redirects.json).
-    const moved = REDIRECTS[slashed];
+    const moved = REDIRECTS[path];
     const getLike = request.method === "GET" || request.method === "HEAD";
+    // old WordPress addresses from the domain's previous site (?p=1, ?feed=rss2, ?s=..., ?author=1) showed the
+    // home page and were reported as duplicates by Search Console: tell crawlers they are gone for good
+    const wpGone = ["p", "s", "feed", "author", "cat", "replytocom", "page_id", "attachment_id", "m", "tag"]
+      .some((k) => u.searchParams.has(k));
+    if (getLike && wpGone && (path === "/" || path === "/nl/"))
+      return new Response("Gone", { status: 410, headers: { "content-type": "text/plain", "x-robots-tag": "noindex" } });
     if (getLike) {
-      // www, http and a missing slash fold into one 301, including a removed-article target.
+      // www, http, a missing slash, /index.html and a stray query fold into one 301.
+      // /api/ keeps its query. Everything else drops it so ?q= and ?utm_ do not become extra URLs.
       const origin = onSite ? "https://trendingtesla.com" : u.origin;
-      const dest = new URL(moved || slashed, origin);
-      dest.search = u.search;
+      const destPath = moved || path;
+      const dest = new URL(destPath, origin);
+      dest.search = destPath.startsWith("/api/") ? u.search : "";
       const visitor = onSite ? `${scheme}://${host}${u.pathname}${u.search}` : `${u.origin}${u.pathname}${u.search}`;
       if (visitor !== dest.toString()) return redirect301(dest.toString());
     } else if (onSite && (host !== "trendingtesla.com" || scheme !== "https")) {
       const dest = new URL(u.pathname + u.search, "https://trendingtesla.com");
       return redirect301(dest.toString());
     }
-    // old WordPress addresses from the domain's previous site (?p=1, ?feed=rss2, ?s=..., ?author=1) showed the
-    // home page and were reported as duplicates by Search Console: tell crawlers they are gone for good
-    if ((u.pathname === "/" || u.pathname === "/nl/") &&
-        ["p", "s", "feed", "author", "cat", "replytocom", "page_id", "attachment_id", "m", "tag"].some((k) => u.searchParams.has(k)))
-      return new Response("Gone", { status: 410, headers: { "content-type": "text/plain", "x-robots-tag": "noindex" } });
     if (u.pathname === "/api/contact") return contact(request, env);
     if (u.pathname === "/api/likes") {
       const stub = env.LIKES.get(env.LIKES.idFromName("all"));

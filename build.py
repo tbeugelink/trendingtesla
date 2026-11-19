@@ -777,7 +777,8 @@ article.narrow > h1{margin-left:14px}article.narrow .cform{margin-left:14px}
 .crumbs li:not(:last-child)::after{content:"/";color:var(--dim);margin-left:6px}
 .crumbs a{color:var(--muted);text-decoration:none}
 .crumbs a:hover{color:var(--head)}
-.crumbs [aria-current]{color:var(--fg)}
+.crumbs li:last-child{min-width:0;flex:1 1 auto;overflow:hidden}
+.crumbs [aria-current]{color:var(--fg);display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .hubhead{padding:18px 0 6px}
 .hubhead h1{font-size:clamp(1.8rem,4vw,2.7rem);letter-spacing:-.03em;line-height:1.08;margin:0 0 10px}
 .hubhead .lead{font-size:1.08rem;line-height:1.55;color:var(--muted);max-width:none;margin:0 0 16px 1px}
@@ -1026,6 +1027,8 @@ header.hb .pnav>.is-parked{display:none}
 .lcard .lbody{display:flex;flex-direction:column;gap:4px;padding:0 0 10px;min-width:0;flex:1}
 .lmeta{display:flex;flex-wrap:nowrap;gap:4px 6px;align-items:baseline;margin:6px 0 4px;padding:0;font-size:.68rem;font-weight:700;line-height:1.3;color:var(--dim);white-space:nowrap}.leadstory>.lmeta,.pv-lead>.lmeta,article.money>.lmeta{margin-bottom:9px}
 .lname{font-size:.68rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--blue)}
+article.money>.lmeta a.lname{color:var(--blue);text-decoration:none}
+article.money>.lmeta a.lname:hover{text-decoration:underline}
 .lcard.empty .lmeta,.lcard.empty .lbody{padding-left:10px;padding-right:10px}
 .lcard .lname,.vcard .lname,.shc .lname,.card .lname,.mini .lname,.leadstory .lname{color:var(--blue)}
 .lcard strong{font-size:.92rem;line-height:1.28;font-weight:800;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden}
@@ -1384,6 +1387,17 @@ def when(a, lang):
 def published(a):
     """Timezone-aware publication datetime (defaults to 08:00 local)."""
     return datetime.strptime(f"{a['date']} {a.get('time', '08:00')}", "%Y-%m-%d %H:%M").replace(tzinfo=TZ)
+
+
+def article_stamp(a):
+    """YYYY-MM-DD of a real edit, else the publication date. Never the day the site was built."""
+    return str(a.get("updated") or a["date"])[:10]
+
+
+def latest_stamp(items):
+    if not items:
+        return None
+    return max(article_stamp(a) for a in items)
 
 
 def url(lang, path=""):
@@ -1828,7 +1842,7 @@ def page(lang, path, title, description, body, og_type="website", extra_head="",
                  f'<div class="fstack">{fbits[1]}{fbits[3]}</div>')
     cats = " · ".join(f'<a href="{url(lang, "category/" + k + "/")}">{c[lang]}</a>' for k, c in CATEGORIES.items() if c["menu"])
     mods = " · ".join(f'<a href="{url(lang, "model/" + k + "/")}">{m["name"]}</a>' for k, m in MODELS.items() if not m.get("parent") or k in MODEL_STRIP)
-    search = (f'<form class="search hb-search" role="search" action="{url(lang)}" '
+    search = (f'<form class="search hb-search" role="search" method="post" action="{url(lang)}" '
               f'data-idx="/search-{lang}.json" data-none="{L["none"]}"><input type="search" name="q" '
               f'placeholder="{L["search"]}" aria-label="{L["search"]}" autocomplete="off">'
               f'<button type="submit" aria-label="{L["search"]}">{SEARCH_SVG}</button><div class="res" hidden></div></form>')
@@ -2331,13 +2345,17 @@ TOPIC_LABEL = {
 
 
 def topic_meta(a, lang):
-    """Visible section name and the hub it links to."""
+    """Visible section name and the hub it links to. Never a redirected category URL."""
     info = TOPIC_LABEL.get(a.get("topic") or "")
     if info:
         href = ecosystem_path(lang) if a.get("topic") == "ecosystem" else info["href"]
         return info[lang], href
-    cat = CATEGORIES[a["category"]]
-    return cat.get("tag", cat[lang]), "category/" + a["category"] + "/"
+    cat_key = a["category"]
+    cat = CATEGORIES[cat_key]
+    name = cat.get("tag", cat[lang])
+    if cat_key in REDIRECT_CATS:
+        return name, REDIRECT_CATS[cat_key]
+    return name, "category/" + cat_key + "/"
 
 
 def card_title(a, lang):
@@ -3253,14 +3271,22 @@ def drawer_links(lang, active):
 
 
 def crumbs(lang, parts):
-    """Structured breadcrumb only. The visible trail is not rendered."""
+    """Visible trail plus BreadcrumbList. The last crumb is the current page and is not a link."""
     chain = [(LANGS[lang]["home"], "")] + list(parts)
+    lis = []
     ld_items = []
+    last = len(chain)
+    label = "Breadcrumb" if lang == "en" else "Kruimelpad"
     for i, (name, path) in enumerate(chain, 1):
         href = url(lang, path)
         ld_items.append({"@type": "ListItem", "position": i, "name": name, "item": SITE + href})
+        if i == last:
+            lis.append(f'<li><span aria-current="page">{esc(name)}</span></li>')
+        else:
+            lis.append(f'<li><a href="{href}">{esc(name)}</a></li>')
+    nav = f'<nav class="crumbs" aria-label="{label}"><ol>{"".join(lis)}</ol></nav>'
     ld = {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": ld_items}
-    return "", ld
+    return nav, ld
 
 
 def ld_script(obj):
@@ -3545,14 +3571,37 @@ def layer_name(a, lang):
     return name
 
 
-def rubric_line(a, lang, stamp=""):
+def layer_href(a, lang):
+    """Hub for this article's layer. Falls back to the topic hub, which is never a redirect."""
+    key = (a or {}).get("layer") or ""
+    for layer in LAYERS:
+        if layer["key"] == key:
+            return layer["path"]
+    if not a:
+        return ""
+    _name, href = topic_meta(a, lang)
+    return href
+
+
+def rubric_line(a, lang, stamp="", link=False):
     """Cyan layer label, a dot, and the relative date. Same line as the article cards."""
     name = layer_name(a, lang)
     when_html = stamp or (when(a, lang) if a else "")
-    if name and when_html:
-        return f'<span class="lmeta"><span class="lname">{esc(name)}</span> · {when_html}</span>'
-    if name:
-        return f'<span class="lmeta"><span class="lname">{esc(name)}</span></span>'
+    label = esc(name)
+    if link and name:
+        href = layer_href(a, lang)
+        if href:
+            label = f'<a class="lname" href="{url(lang, href)}">{esc(name)}</a>'
+        else:
+            label = f'<span class="lname">{esc(name)}</span>'
+    elif name:
+        label = f'<span class="lname">{esc(name)}</span>'
+    else:
+        label = ""
+    if label and when_html:
+        return f'<span class="lmeta">{label} · {when_html}</span>'
+    if label:
+        return f'<span class="lmeta">{label}</span>'
     if when_html:
         return f'<span class="lmeta">{when_html}</span>'
     return ""
@@ -3921,7 +3970,7 @@ def pv_article(variant, a, arts, lang, live=False):
     else:
         toc_here, rail = toc, ""
     article = (
-        f'<article class="money">{rubric_line(a, lang)}'
+        f'<article class="money">{rubric_line(a, lang, link=True)}'
         f'{media}'
         f'<h1>{esc(t["title"])}</h1>'
         f'<p class="byline"><a href="{url(lang, "editorial/")}">{L["byline"]}</a>'
@@ -4772,7 +4821,7 @@ def ecosystem_page(lang):
     L = LANGS[lang]
     title = L["nav_eco"]
     intro = _bi(data["intro"], lang)
-    _nav, ld = crumbs(lang, [(title, ecosystem_path(lang))])
+    nav, ld = crumbs(lang, [(title, ecosystem_path(lang))])
     orbit = _orbit_blocks([
         {"tone": layer["tone"], "href": layer["path"], "kicker": layer["kicker"],
          "title": layer["title"], "fact": layer["fact"]}
@@ -4797,7 +4846,7 @@ def ecosystem_page(lang):
         "nl": ("De lagen", "Wat erdoorheen gaat", "De bedrijven", "Plannen en beloftes", "Bronnen"),
     }[lang]
     body = (
-        f'<h1 class="visually-hidden">{esc(title)}</h1>'
+        f'{nav}<h1 class="visually-hidden">{esc(title)}</h1>'
         f'{orbit}'
         f'{_eco_explain(lang)}'
         f'<h2 class="eco-h">{esc(heads[1])}</h2><div class="eco-split">{streams}</div>'
@@ -5608,12 +5657,13 @@ def build():
                                "embedUrl": f"https://www.youtube-nocookie.com/embed/{v['id']}",
                                "contentUrl": f"https://www.youtube.com/watch?v={v['id']}"}
                 ld["video"] = {k: x for k, x in ld["video"].items() if x}
-            body = shell(pv_article("b", a, arts, lang, live=True),
-                          page_side(arts, lang, "article", a, tail=ml_bar(lang))) + nl_sticky(lang)
-            _, crumb_ld = crumbs(lang, [
-                (c.get("tag", c[lang]), f"category/{a['category']}/"),
+            section, section_href = topic_meta(a, lang)
+            nav, crumb_ld = crumbs(lang, [
+                (section, section_href),
                 (t["title"], a["slug"] + "/"),
             ])
+            body = shell(nav + pv_article("b", a, arts, lang, live=True) + prev_next(a, arts, lang),
+                          page_side(arts, lang, "article", a, tail=ml_bar(lang))) + nl_sticky(lang)
             head = ld_script(ld) + ld_script(crumb_ld)
             write(url(lang, a["slug"] + "/"),
                   page(lang, a["slug"] + "/", t["title"], t["description"], body, "article", head,
@@ -5651,7 +5701,8 @@ def build():
         body = (f'<section class="wide"><h1 class="st archh">{L["saved"]}</h1>'
                 f'<div class="grid2 gall wide savedlist" data-empty="{esc(L["saved_empty"])}"></div></section>')
         write(url(lang, "saved/"), page(lang, "saved/", L["saved"], L["saved"],
-                                         shell(body, page_side(arts, lang, "saved"))).replace("<head>", '<head>\n<meta name="robots" content="noindex">', 1))
+                                         shell(body, page_side(arts, lang, "saved")),
+                                         robots="noindex, follow"))
 
         # ---------- YouTube Shorts (content/shorts.json, kept up to date by tools/sync_shorts.py) ----------
         sf = ROOT / "content" / "shorts.json"
@@ -5785,47 +5836,87 @@ def build():
                 page_side(arts, "en", "static")),
           robots="noindex", canonical=False))
 
-    # Sitemap
-    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-    entries = ([("", today)] + [(a["slug"] + "/", a.get("updated", a["date"])[:10]) for a in arts]
-               + [(f"category/{k}/", today) for k in CATEGORIES if k not in REDIRECT_CATS]
-               + [(f"model/{k}/", today) for k in MODELS]
-               + [(k + "/", today) for k in PAGES]
-               + [("shorts/", today)]
-               + [(h["path"], today) for h in HUBS]
-               + [(layer["path"], today) for layer in LAYERS if layer["path"] not in {h["path"] for h in HUBS}]
-               + [("starship/", today)]
-               + [("archive/" if i == 0 else f"archive/{i + 1}/", today) for i in range(ARCH_PAGES[0])])
+    # Sitemap. lastmod is a real content date, never the day this file was generated.
+    def category_items(key):
+        if key == "news":
+            return [a for a in arts if a["category"] != "guides"]
+        if key == "ecosystem":
+            return [a for a in arts if a["category"] == key or key in a.get("also", []) or a["category"] in ECO]
+        return [a for a in arts if a["category"] == key or key in a.get("also", [])]
+
+    def model_items(key):
+        m = MODELS[key]
+        if m.get("parent"):
+            return [a for a in arts if key in a.get("models", [])]
+        family = {key} | {k for k, v in MODELS.items() if v.get("parent") == key}
+        return [a for a in arts if family & set(a.get("models", []))]
+
+    def archive_chunk(pi):
+        rest = arts[PER_PAGE:]
+        if pi == 0:
+            return arts[:PER_PAGE]
+        return rest[(pi - 1) * PER_PAGE:pi * PER_PAGE]
+
+    short_dates = []
+    for sh in shorts:
+        raw = str(sh.get("published") or "")[:10]
+        if len(raw) == 10:
+            short_dates.append(raw)
+    ship_raw = str(load_data("starship.json").get("updated") or "")[:10]
+    ship_mod = ship_raw if len(ship_raw) == 10 else None
+    brief_dates = [str(d["meta"].get("date") or "")[:10] for d in briefing_docs if not d.get("template") and d["meta"].get("date")]
+
+    entries = [("", latest_stamp(arts))]
+    entries += [(a["slug"] + "/", article_stamp(a)) for a in arts]
+    entries += [(f"category/{k}/", latest_stamp(category_items(k))) for k in CATEGORIES if k not in REDIRECT_CATS]
+    entries += [(f"model/{k}/", latest_stamp(model_items(k))) for k in MODELS]
+    # Standing pages have no article date. Leave lastmod off rather than stamp the build day.
+    entries += [(k + "/", None) for k in PAGES]
+    entries += [("shorts/", max(short_dates) if short_dates else None)]
+    seen_hubs = set()
+    for spec in HUBS:
+        seen_hubs.add(spec["path"])
+        entries.append((spec["path"], latest_stamp(hub_articles(spec, arts))))
+    for layer in LAYERS:
+        if layer["path"] in seen_hubs:
+            continue
+        entries.append((layer["path"], latest_stamp(_layer_articles(layer, arts))))
+    if not any(path == "starship/" for path, _mod in entries):
+        entries.append(("starship/", ship_mod))
+    entries += [("archive/" if i == 0 else f"archive/{i + 1}/", latest_stamp(archive_chunk(i))) for i in range(ARCH_PAGES[0])]
+
     def emit(loc_lang, loc_path, mod, en_path, nl_path):
         paths = {"en": en_path, "nl": nl_path}
         alts = "".join(
             f'<xhtml:link rel="alternate" hreflang="{l}" href="{SITE + url(l, paths[l])}"/>' for l in LANGS)
         alts += f'<xhtml:link rel="alternate" hreflang="x-default" href="{SITE + url("en", en_path)}"/>'
-        return f"<url><loc>{SITE + url(loc_lang, loc_path)}</loc><lastmod>{mod}</lastmod>{alts}</url>"
+        last = f"<lastmod>{mod}</lastmod>" if mod else ""
+        return f"<url><loc>{SITE + url(loc_lang, loc_path)}</loc>{last}{alts}</url>"
 
     urls = ""
     for path, mod in entries:
         for lang in LANGS:
             urls += emit(lang, path, mod, path, path)
+    brief_index = max(brief_dates) if brief_dates else None
     for lang in LANGS:
-        urls += emit(lang, signup_path(lang), today, signup_path("en"), signup_path("nl"))
-        urls += emit(lang, ecosystem_path(lang), today, ecosystem_path("en"), ecosystem_path("nl"))
-        urls += emit(lang, "briefing/", today, "briefing/", "briefing/")
+        urls += emit(lang, signup_path(lang), None, signup_path("en"), signup_path("nl"))
+        urls += emit(lang, ecosystem_path(lang), latest_stamp(arts), ecosystem_path("en"), ecosystem_path("nl"))
+        urls += emit(lang, "briefing/", brief_index, "briefing/", "briefing/")
         for doc in briefing_docs:
             if doc["template"]:
                 continue
             slug = f"briefing/{doc['slug']}/"
-            urls += emit(lang, slug, (doc["meta"].get("date") or today)[:10], slug, slug)
-        urls += emit(lang, promises_path(lang), today, promises_path("en"), promises_path("nl"))
-        urls += emit(lang, guides_path(lang), today, guides_path("en"), guides_path("nl"))
+            urls += emit(lang, slug, str(doc["meta"].get("date") or "")[:10] or None, slug, slug)
+        urls += emit(lang, promises_path(lang), None, promises_path("en"), promises_path("nl"))
+        urls += emit(lang, guides_path(lang), None, guides_path("en"), guides_path("nl"))
         for doc in guide_docs:
             if doc["template"]:
                 continue
             urls += emit(
-                lang, guides_path(lang) + doc["slug"] + "/", today,
+                lang, guides_path(lang) + doc["slug"] + "/", None,
                 guides_path("en") + doc["slug"] + "/", guides_path("nl") + doc["slug"] + "/")
-        urls += emit(lang, disclosure_path(lang), today, disclosure_path("en"), disclosure_path("nl"))
-        urls += emit(lang, advertise_path(lang), today, advertise_path("en"), advertise_path("nl"))
+        urls += emit(lang, disclosure_path(lang), None, disclosure_path("en"), disclosure_path("nl"))
+        urls += emit(lang, advertise_path(lang), None, advertise_path("en"), advertise_path("nl"))
     write("/sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>'
           '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">'
           f"{urls}</urlset>")
@@ -5848,7 +5939,15 @@ def build():
           '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">'
           f"{news}</urlset>")
     write("/898140fa5384efdf934027b6d7051b19.txt", "898140fa5384efdf934027b6d7051b19")
-    write("/robots.txt", f"User-agent: *\nAllow: /\nDisallow: /api/\n\nSitemap: {SITE}/sitemap.xml\nSitemap: {SITE}/news-sitemap.xml\n")
+    write("/robots.txt",
+          "User-agent: *\n"
+          "Allow: /\n"
+          "Allow: /img/\n"
+          "Allow: /fonts/\n"
+          "Disallow: /api/\n"
+          "\n"
+          f"Sitemap: {SITE}/sitemap.xml\n"
+          f"Sitemap: {SITE}/news-sitemap.xml\n")
     # Same policy the worker applies. HTML is not listed, so it stays revalidated.
     write("/_headers", "\n".join([
         "# Long cache for static files. The worker sets the same Cache-Control on the response.",
@@ -5872,7 +5971,105 @@ def build():
     if client:
         (OUT / "ads.txt").write_text(f"google.com, {client[3:]}, DIRECT, f08c47fec0942fa0\n", encoding="utf-8")
     write_redirects()
+    audit_index()
     print(f"Built {len(arts)} article(s) in {len(LANGS)} languages -> {OUT}")
+
+
+def audit_index():
+    """Fail the build if the sitemap, canonicals, or internal links drift."""
+    from collections import Counter
+    from urllib.parse import unquote, urlparse
+    sm = (OUT / "sitemap.xml").read_text(encoding="utf-8")
+    locs = re.findall(r"<loc>(.*?)</loc>", sm)
+    paths = [unquote(urlparse(loc).path or "/") for loc in locs]
+    dupes = [p for p, n in Counter(paths).items() if n > 1]
+    problems = []
+    if dupes:
+        problems.append(f"sitemap duplicate locs: {dupes[:8]}")
+    for loc, mod in re.findall(r"<loc>(.*?)</loc>(?:<lastmod>(.*?)</lastmod>)?", sm):
+        if mod and not re.fullmatch(r"\d{4}-\d{2}-\d{2}", mod):
+            problems.append(f"bad lastmod {mod} on {loc}")
+    redirects = {}
+    for line in (OUT / "_redirects").read_text(encoding="utf-8").splitlines():
+        line = line.strip()
+        if not line or line.startswith("#"):
+            continue
+        src, dest, *_rest = line.split()
+        redirects[src] = dest
+
+    def file_path(path):
+        if path == "/":
+            return OUT / "index.html"
+        if path.endswith("/"):
+            return OUT / path.strip("/") / "index.html"
+        return OUT / path.lstrip("/")
+
+    pages = {}
+    for f in OUT.rglob("*.html"):
+        rel = f.relative_to(OUT).as_posix()
+        if rel == "index.html":
+            path = "/"
+        elif rel.endswith("/index.html"):
+            path = "/" + rel[: -len("index.html")]
+        else:
+            path = "/" + rel
+        raw = f.read_text(encoding="utf-8", errors="replace")
+        head = raw.split("</head>", 1)[0]
+        robots = re.findall(r'<meta name="robots" content="([^"]*)"', head)
+        canonical = re.findall(r'<link rel="canonical" href="([^"]*)"', head)
+        hrefs = re.findall(r'href="(/[^"#]*)"', raw)
+        pages[path] = {"robots": robots, "canonical": canonical, "hrefs": hrefs,
+                       "noindex": any("noindex" in r.lower() for r in robots)}
+    indexable = {p for p, d in pages.items() if not d["noindex"]}
+    sm_set = set(paths)
+    missing = sorted(indexable - sm_set)
+    extra = sorted(sm_set - indexable)
+    if missing:
+        problems.append(f"indexable missing from sitemap ({len(missing)}): {missing[:8]}")
+    if extra:
+        problems.append(f"sitemap not indexable ({len(extra)}): {extra[:8]}")
+    for p, d in pages.items():
+        cans = d["canonical"]
+        if d["noindex"] and p == "/404.html":
+            if cans:
+                problems.append("404 has a canonical")
+            continue
+        if len(cans) != 1 or not cans[0].startswith(SITE + "/"):
+            problems.append(f"canonical {cans} on {p}")
+            continue
+        if unquote(urlparse(cans[0]).path or "/") != p:
+            problems.append(f"canonical is not self on {p} -> {cans[0]}")
+        if len(d["robots"]) != 1:
+            problems.append(f"{len(d['robots'])} robots tags on {p}")
+    for p, d in pages.items():
+        if d["noindex"]:
+            continue
+        for href in d["hrefs"]:
+            path = unquote(urlparse(href).path or "/")
+            if path in redirects:
+                problems.append(f"{p} links to redirect {path}")
+                break
+            if not path.endswith("/") and path != "/" and (path + "/") in pages:
+                problems.append(f"{p} links to {path} instead of {path}/")
+                break
+            if path in pages:
+                continue
+            leaf = path.rsplit("/", 1)[-1]
+            if "." in leaf:
+                if not (OUT / path.lstrip("/")).is_file():
+                    problems.append(f"{p} links to missing file {path}")
+                    break
+                continue
+            slashed = path if path.endswith("/") else path + "/"
+            if slashed not in pages and slashed not in redirects and not file_path(slashed).is_file():
+                problems.append(f"{p} links to missing {path}")
+                break
+    if problems:
+        raise SystemExit("indexing audit failed:\n" + "\n".join(problems[:30]))
+    noindex = sorted(p for p, d in pages.items() if d["noindex"])
+    with_mod = len(re.findall(r"<lastmod>", sm))
+    print(f"Index audit: {len(pages)} html, {len(sm_set)} sitemap ({with_mod} lastmod), "
+          f"{len(noindex)} noindex {noindex}, {len(redirects)} redirects")
 
 
 def write_redirects():

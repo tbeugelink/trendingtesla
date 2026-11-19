@@ -292,28 +292,22 @@ MODELS = {
     "roadster-thrust":   {"name": {"en": "Roadster Thrust", "nl": "Roadster Thrust"}, "parent": "roadster", "photo": "rd-4.jpg", "menu": "rd-4.jpg", "label": "Thrust"},
     "roadster-rocket":   {"name": {"en": "Roadster Rocket", "nl": "Roadster Rocket"}, "parent": "roadster", "photo": "rd-1.jpg", "menu": "rd-1.jpg", "label": "Rocket"},
     "semi":              {"name": "Semi", "photo": "semi-hub.webp", "menu": "semi-hub.webp", "gallery": ["semi.jpg", "semi-6.jpg", "semi-4.jpg", "semi-7.jpg", "semi-2.jpg", "semi-5.jpg", "semi-3.jpg"],
-                          "photo_alt": {"en": "Tesla Semi family: the European truck at IAA Transportation, Hannover, 14 September 2026",
-                                        "nl": "Tesla Semi-familie: de Europese truck op de IAA Transportation, Hannover, 14 september 2026"},
-                          "credit": {"author": "Matti Blume", "license": "CC BY-SA 4.0", "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
-                                     "source_url": "https://commons.wikimedia.org/wiki/File:IAA_Transportation_2026,_Hanover_(20260914-P1086978).jpg",
-                                     "en": "The truck Tesla showed at IAA Transportation in Hannover on 14 September 2026. It is the European specification.",
-                                     "nl": "De truck die Tesla op 14 september 2026 toonde op de IAA Transportation in Hannover. Dit is de Europese specificatie."}},
+                          "photo_alt": {"en": "Tesla Semi family: library image of the light-bar production cab",
+                                        "nl": "Tesla Semi-familie: bibliotheekbeeld van de productietruck met lichtbalk"},
+                          "credit": {"en": "Library image of the light-bar production cab. It is not a photograph of one specific trim.",
+                                     "nl": "Bibliotheekbeeld van de productietruck met lichtbalk. Het is geen foto van één specifieke uitvoering."}},
     "semi-standard-range": {"name": {"en": "Semi Standard Range", "nl": "Semi Standard Range"}, "parent": "semi", "photo": "semi-standard.webp", "menu": "semi-standard.webp", "label": "Standard Range",
-                          "photo_alt": {"en": "Tesla Semi Standard Range: photograph of the European show truck, which uses Standard Range hardware, not the US light-bar cab",
-                                        "nl": "Tesla Semi Standard Range: foto van de Europese showtruck, die Standard Range-hardware gebruikt, niet de Amerikaanse lichtbalk-cabine"},
-                          "card_note": {"en": "Photo: European show truck", "nl": "Foto: Europese showtruck"},
-                          "credit": {"author": "Matti Blume", "license": "CC BY-SA 4.0", "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
-                                     "source_url": "https://commons.wikimedia.org/wiki/File:IAA_Transportation_2026,_Hanover_(20260914-P1086986).jpg",
-                                     "en": "No licensed photograph of the US Standard Range cab was found. This is the European show truck at IAA Transportation, Hannover, 14 September 2026. Tesla said that truck uses Standard Range hardware. It is not the US light-bar cab.",
-                                     "nl": "Er is geen gelicentieerde foto van de Amerikaanse Standard Range-cabine gevonden. Dit is de Europese showtruck op de IAA Transportation, Hannover, 14 september 2026. Tesla zei dat die truck Standard Range-hardware gebruikt. Het is niet de Amerikaanse lichtbalk-cabine."}},
+                          "photo_alt": {"en": "Tesla Semi Standard Range: library image of the light-bar production cab",
+                                        "nl": "Tesla Semi Standard Range: bibliotheekbeeld van de productietruck met lichtbalk"},
+                          "card_note": {"en": "Library image, light-bar cab", "nl": "Bibliotheekbeeld, lichtbalk"},
+                          "credit": {"en": "Library image of the light-bar production cab. It does not show a measured chassis difference from Long Range.",
+                                     "nl": "Bibliotheekbeeld van de productietruck met lichtbalk. Het toont geen gemeten chassisverschil met Long Range."}},
     "semi-long-range":   {"name": {"en": "Semi Long Range", "nl": "Semi Long Range"}, "parent": "semi", "photo": "semi-long.webp", "menu": "semi-long.webp", "label": "Long Range",
-                          "photo_alt": {"en": "Tesla Semi Long Range: no licensed photo of the longer chassis; the photograph is the European show truck",
-                                        "nl": "Tesla Semi Long Range: geen gelicentieerde foto van het langere chassis; de foto is de Europese showtruck"},
-                          "card_note": {"en": "Photo: not the longer chassis", "nl": "Foto: niet het langere chassis"},
-                          "credit": {"author": "Matti Blume", "license": "CC BY-SA 4.0", "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
-                                     "source_url": "https://commons.wikimedia.org/wiki/File:IAA_Transportation_2026,_Hanover_(20260914-P1086988).jpg",
-                                     "en": "No licensed photograph of the longer Long Range chassis was found. This is the European show truck at IAA Transportation, Hannover, 14 September 2026, which Tesla described as Standard Range hardware.",
-                                     "nl": "Er is geen gelicentieerde foto van het langere Long Range-chassis gevonden. Dit is de Europese showtruck op de IAA Transportation, Hannover, 14 september 2026, die Tesla als Standard Range-hardware beschreef."}},
+                          "photo_alt": {"en": "Tesla Semi Long Range: library image of the light-bar cab with a trailer, not a measured photo of the longer chassis",
+                                        "nl": "Tesla Semi Long Range: bibliotheekbeeld van de lichtbalk-cabine met trailer, geen gemeten foto van het langere chassis"},
+                          "card_note": {"en": "Library image, not a measured chassis", "nl": "Bibliotheekbeeld, geen gemeten chassis"},
+                          "credit": {"en": "Library image of the light-bar cab with a trailer. It is not a measured photograph of the longer Long Range chassis.",
+                                     "nl": "Bibliotheekbeeld van de lichtbalk-cabine met een trailer. Het is geen gemeten foto van het langere Long Range-chassis."}},
     "semi-europe":       {"name": {"en": "Semi Europe", "nl": "Semi Europa"}, "parent": "semi", "photo": "semi-europe.webp", "menu": "semi-europe.webp", "label": {"en": "Europe", "nl": "Europa"},
                           "photo_alt": {"en": "Tesla Semi Europe at IAA Transportation in Hannover on 14 September 2026",
                                         "nl": "Tesla Semi Europa op de IAA Transportation in Hannover op 14 september 2026"},
@@ -322,12 +316,10 @@ MODELS = {
                                      "en": "The European Semi at IAA Transportation in Hannover on 14 September 2026.",
                                      "nl": "De Europese Semi op de IAA Transportation in Hannover op 14 september 2026."}},
     "semi-2022-pilot":   {"name": {"en": "Semi 2022 Pilot", "nl": "Semi-pilot 2022"}, "parent": "semi", "photo": "semi-2022-pilot.webp", "menu": "semi-2022-pilot.webp", "label": {"en": "2022 Pilot", "nl": "Pilot 2022"},
-                          "photo_alt": {"en": "Tesla Semi 2022 Pilot, a PepsiCo truck with the earlier front lights, photographed on 31 October 2023",
-                                        "nl": "Tesla Semi-pilot 2022, een PepsiCo-truck met de eerdere voorkant, gefotografeerd op 31 oktober 2023"},
-                          "credit": {"author": "Dllu", "license": "CC BY-SA 4.0", "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
-                                     "source_url": "https://commons.wikimedia.org/wiki/File:Tesla_Semi_Pepsi_2023-10-31-13-39-37_DSCF2583_dllu.jpg",
-                                     "en": "A PepsiCo Tesla Semi on 31 October 2023. This is the 2022 pilot generation, with the earlier front lights, not the 2026 production truck.",
-                                     "nl": "Een PepsiCo Tesla Semi op 31 oktober 2023. Dit is de pilotgeneratie van 2022, met de eerdere voorkant, niet de productietruck van 2026."}},
+                          "photo_alt": {"en": "Tesla Semi 2022 Pilot, the earlier cab with the original front lights and door mirrors",
+                                        "nl": "Tesla Semi-pilot 2022, de eerdere cabine met de oorspronkelijke voorkant en buitenspiegels"},
+                          "credit": {"en": "Site photo of the earlier cab, with the original front lights and door mirrors. This is the 2022 pilot generation, not the 2026 light-bar truck.",
+                                     "nl": "Sitefoto van de eerdere cabine, met de oorspronkelijke voorkant en buitenspiegels. Dit is de pilotgeneratie van 2022, niet de lichtbalk-truck van 2026."}},
 }
 # Fallback photo per category: a file in static/img/topics/, or a list of files to vary between
 # (each article always gets the same one, picked from its slug). Missing files are skipped.
@@ -792,11 +784,11 @@ article.narrow > h1{margin-left:14px}article.narrow .cform{margin-left:14px}
 .dpri{display:flex;flex-direction:column;gap:2px;padding:0 4px 4px}
 .pnav{display:none}
 @media (min-width:700px){.pnav{display:flex;align-items:center;gap:2px;height:44px;margin:0 0 8px;overflow-x:auto;scrollbar-width:none}.pnav::-webkit-scrollbar{display:none}}
-.pn{display:flex;align-items:center;height:36px;padding:0 10px;border-radius:10px;color:var(--fg);text-decoration:none;font-size:.84rem;font-weight:700;white-space:nowrap}
+.pn{display:flex;align-items:center;height:36px;padding:0 10px;border-radius:5px;color:var(--fg);text-decoration:none;font-size:.84rem;font-weight:700;white-space:nowrap}
 .pn:hover{background:#272727;color:#fff}
-.pn.on,.pdrop.on>.pn,header.hb .mdrop>button.pn.on{background:#ebebeb;color:#111;border-radius:8px}
+.pn.on,.pdrop.on>.pn,header.hb .mdrop>button.pn.on{background:#ebebeb;color:#111;border-radius:5px}
 .pdrop{position:relative;display:flex;align-items:center;z-index:0}
-.pmenu{display:none;position:absolute;top:calc(100% - 1px);left:0;min-width:210px;z-index:50;background:#2a2a2a;border:1px solid rgba(255,255,255,0.28);border-radius:0 10px 10px 10px;padding:6px;box-shadow:0 12px 32px rgba(0,0,0,.45)}
+.pmenu{display:none;position:absolute;top:calc(100% - 1px);left:0;min-width:210px;z-index:50;background:#2a2a2a;border:1px solid rgba(255,255,255,0.28);border-radius:0 5px 5px 5px;padding:6px;box-shadow:0 12px 32px rgba(0,0,0,.45)}
 .pdrop::after{content:"";position:absolute;top:calc(100% - 6px);left:0;width:240px;height:14px;z-index:49}
 .pdrop:hover,.pdrop:focus-within,.pdrop.is-open{z-index:2}
 .pdrop:hover .pmenu,.pdrop:focus-within .pmenu,.pdrop.is-open .pmenu{display:grid}
@@ -807,7 +799,7 @@ article.narrow > h1{margin-left:14px}article.narrow .cform{margin-left:14px}
 .pdrop.tone-spacexsi{--accent:#ffc400;--accent-ink:#ffe28a}
 .pdrop.tone-neural{--accent:#ff2d95;--accent-ink:#ffb3d6}
 .pdrop.tone-boring{--accent:#2f6bff;--accent-ink:#b3c8ff}
-.pdrop:hover>a.pn,.pdrop:focus-within>a.pn,.pdrop.is-open>a.pn{position:relative;z-index:51;background:#2a2a2a;color:#fff;border:1px solid rgba(255,255,255,0.28);border-bottom:0;border-radius:10px 10px 0 0;box-shadow:0 1px 0 #2a2a2a}
+.pdrop:hover>a.pn,.pdrop:focus-within>a.pn,.pdrop.is-open>a.pn{position:relative;z-index:51;background:#2a2a2a;color:#fff;border:1px solid rgba(255,255,255,0.28);border-bottom:0;border-radius:5px 5px 0 0;box-shadow:0 1px 0 #2a2a2a}
 .pmenu a.child{padding-left:26px;font-weight:650;color:#b7c0cc}
 .dlayer{margin:0 0 8px}
 .drawer a.tone-tesla,.drawer a.tone-energy,.drawer a.tone-spacex,.drawer a.tone-link,.drawer a.tone-spacexsi,.drawer a.tone-neural,.drawer a.tone-boring{color:#fff}
@@ -817,7 +809,7 @@ article.narrow > h1{margin-left:14px}article.narrow .cform{margin-left:14px}
 .dsub a:hover{background:#272727;color:#fff}
 .dsub a.on{background:#ebebeb;color:#111}
 .drawer a.dmap{margin-top:8px;border-top:1px solid #2a2a2a;padding-top:12px}
-.pdrop:last-child .pmenu{left:auto;right:0;border-radius:10px 0 10px 10px}
+.pdrop:last-child .pmenu{left:auto;right:0;border-radius:5px 0 5px 5px}
 .pdrop:last-child::after{left:auto;right:0}
 .pmenu a{padding:8px 12px;border-radius:8px;color:#ebebeb;text-decoration:none;font-size:.86rem;font-weight:700;white-space:nowrap}
 .pmenu a:hover{background:#3a3a3a}
@@ -833,16 +825,15 @@ article.narrow > h1{margin-left:14px}article.narrow .cform{margin-left:14px}
 .hubhead{padding:18px 0 6px}
 .hubhead h1{font-size:clamp(1.8rem,4vw,2.7rem);letter-spacing:-.03em;line-height:1.08;margin:0 0 10px}
 .hubhead .lead{font-size:1.08rem;line-height:1.55;color:var(--muted);max-width:none;margin:0 0 16px 1px}
-.mgrid{display:grid;grid-template-columns:1fr;gap:var(--card-gap-y) var(--card-gap-x);margin:0 0 28px}
-@media (min-width:560px){.mgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (min-width:900px){.mgrid{grid-template-columns:repeat(3,minmax(0,1fr))}}
-@media (min-width:1100px){.mgrid{grid-template-columns:repeat(4,minmax(0,1fr))}}
-@media (min-width:1280px){.mgrid{grid-template-columns:repeat(5,minmax(0,1fr))}}
-.mcard{display:flex;flex-direction:column;align-items:flex-start;gap:8px;min-width:0;text-decoration:none;color:inherit}
+.mgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 8px;margin:0 0 28px}
+@media (min-width:560px){.mgrid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (min-width:760px){.mgrid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media (min-width:901px){.mgrid{grid-template-columns:repeat(5,minmax(0,1fr))}}
+.mcard{display:flex;flex-direction:column;align-items:flex-start;gap:6px;min-width:0;text-decoration:none;color:inherit}
 .mcard .mim{display:block;width:100%;border-radius:10px;overflow:hidden;border:0;background:#000;aspect-ratio:16/9}
 .mcard .mim img{width:100%;height:100%;object-fit:cover}
-.mcard .mname{display:block;max-width:100%;font-weight:800;font-size:.92rem;line-height:1.25;overflow-wrap:break-word}
-@media (min-width:1280px){.mcard .mname{font-size:.84rem}}
+.mcard .mname{display:block;max-width:100%;font-weight:800;font-size:.84rem;line-height:1.2;overflow-wrap:break-word}
+@media (min-width:901px){.mcard .mname{font-size:.76rem}}
 .mcard .mcap{display:block;max-width:100%;font-size:.72rem;line-height:1.3;font-weight:600;color:var(--muted);overflow-wrap:break-word}
 .mhero{margin:0 0 16px;background:transparent}
 .mhero picture,.mhero>img{display:block;border-radius:12px;overflow:hidden;border:1px solid var(--edge);background:#000}
@@ -3518,7 +3509,7 @@ def model_hub(key, items, lang):
     ph = model_photo(key)
     cap = photo_caption(key, lang)
     figcap = f'<figcaption class="imgnote">{cap}</figcaption>' if cap else ""
-    klass = "mhero natural" if m.get("credit") else "mhero"
+    klass = "mhero"
     hero = (f'<figure class="{klass}">{resp_img(ph, photo_alt(key, lang), "(max-width: 900px) 100vw, 820px", high=True, lazy=False, width=1600, height=900)}{figcap}</figure>'
             if ph else "")
     if facts:

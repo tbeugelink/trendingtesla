@@ -39,6 +39,17 @@ jobs:
         run: |
           sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg > /dev/null
           pip install --quiet pillow num2words
+      - name: Set listed videos private
+        if: hashFiles('video/make-private.txt') != ''
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+        run: |
+          while read -r id; do
+            case "$id" in ''|\#*) continue ;; esac
+            VIDEO_ID="$id" python3 video/set_private.py
+          done < video/make-private.txt
       - name: Find articles
         id: find
         run: |

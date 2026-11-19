@@ -287,10 +287,10 @@ MODELS = {
     "cybercab":          {"name": "Cybercab", "menu": "menu-cybercab.jpg",           "photo": "cybercab.jpg", "gallery": ["cybercab.jpg", "cc-1.jpg", "cc-3.jpg", "cc-2.jpg"]},
     "roadster":          {"name": "Roadster",           "photo": "rd-4.jpg", "menu": "menu-roadster.jpg", "gallery": ["rd-4.jpg", "rd-5.jpg", "rd-6.jpg", "rd-7.jpg", "rd-8.jpg", "rd-9.jpg", "rd-10.jpg", "rd-11.jpg", "rd-12.jpg", "rd-13.jpg", "rd-14.jpg", "rd-15.jpg", "rd-16.jpg", "rd-17.jpg", "rd-18.jpg", "rd-19.jpg", "rd-20.jpg", "rd-21.jpg", "rd-22.jpg", "rd-23.jpg", "rd-24.jpg", "rd-25.jpg"]},
     "semi":              {"name": "Semi", "photo": "lib/semi-highway.jpg", "menu": "menu-semi.jpg", "gallery": ["semi.jpg", "semi-6.jpg", "semi-4.jpg", "semi-7.jpg", "semi-2.jpg", "semi-5.jpg", "semi-3.jpg"]},
-    "semi-standard-range": {"name": {"en": "Semi Standard Range", "nl": "Semi Standard Range"}, "parent": "semi", "photo": "lib/semi-highway.jpg", "label": "Standard Range"},
-    "semi-long-range":   {"name": {"en": "Semi Long Range", "nl": "Semi Long Range"}, "parent": "semi", "photo": "lib/semi-highway.jpg", "label": "Long Range"},
-    "semi-europe":       {"name": {"en": "Semi Europe", "nl": "Semi Europa"}, "parent": "semi", "photo": "lib/semi-highway.jpg", "label": {"en": "Europe", "nl": "Europa"}},
-    "semi-2022-pilot":   {"name": {"en": "Semi 2022 Pilot", "nl": "Semi-pilot 2022"}, "parent": "semi", "photo": "semi.jpg", "label": {"en": "2022 Pilot", "nl": "Pilot 2022"}},
+    "semi-standard-range": {"name": {"en": "Semi Standard Range", "nl": "Semi Standard Range"}, "parent": "semi", "photo": "lib/semi-highway.jpg", "menu": "lib/semi-highway.jpg", "label": "Standard Range"},
+    "semi-long-range":   {"name": {"en": "Semi Long Range", "nl": "Semi Long Range"}, "parent": "semi", "photo": "lib/semi-highway.jpg", "menu": "lib/semi-highway.jpg", "label": "Long Range"},
+    "semi-europe":       {"name": {"en": "Semi Europe", "nl": "Semi Europa"}, "parent": "semi", "photo": "lib/semi-highway.jpg", "menu": "lib/semi-highway.jpg", "label": {"en": "Europe", "nl": "Europa"}},
+    "semi-2022-pilot":   {"name": {"en": "Semi 2022 Pilot", "nl": "Semi-pilot 2022"}, "parent": "semi", "photo": "semi.jpg", "menu": "semi.jpg", "label": {"en": "2022 Pilot", "nl": "Pilot 2022"}},
 }
 # Fallback photo per category: a file in static/img/topics/, or a list of files to vary between
 # (each article always gets the same one, picked from its slug). Missing files are skipped.
@@ -542,8 +542,13 @@ h1,h2,h3{color:#ebebeb;font-weight:800}
 .specs th{width:38%;color:var(--muted);font-weight:700}
 .specs td{color:var(--head)}
 .specs tr:nth-child(odd){background:rgba(255,255,255,.025)}
+.mfacts .specs th,.mfacts .specs td{overflow-wrap:break-word}
 .mfacts .specs th:first-child{width:24%}
 .mfacts .specs td:last-child{width:18%;color:var(--muted);font-size:.82rem}
+@media (max-width:699px){
+  .mfacts .specs th:first-child{width:34%}
+  .mfacts .specs td:last-child{width:24%;font-size:.75rem}
+}
 .mfacts ul{margin:8px 0 16px;padding-left:1.2rem}
 .mfacts li{margin:5px 0;color:var(--head)}
 .soon{color:var(--muted);background:var(--surface);border:1px dashed var(--border2);border-radius:10px;padding:14px 16px}
@@ -2046,7 +2051,8 @@ def modelnav(lang, current=None):
             items = [(r, MODELS[r]["name"], MODELS[r].get("menu"))]
         bars = ""
         for k, lbl, img in items:
-            src = f"/img/models/{img}" if img and (STATIC / "img" / "models" / img).exists() else ""
+            rel = (Path(img) if "/" in img else Path("models") / img) if img else None
+            src = "/img/" + rel.as_posix() if rel and (STATIC / "img" / rel).is_file() else ""
             w, h = img_size(src, (148, 100)) if src else (148, 100)
             th = resp_img(src, lbl, "74px", width=w, height=h) if src else ""
             bars += f'<a href="{url(lang, "model/" + k + "/")}" class="vt{" on" if k == current else ""}"><b>{th}</b><span>{esc(lbl)}</span></a>'

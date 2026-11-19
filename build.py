@@ -285,7 +285,12 @@ MODELS = {
     "cybertruck-cyberbeast": {"name": "Cyberbeast",     "photo": "cb-1.jpg", "gallery": ["cb-1.jpg", "cb-2.jpg", "ct-5.jpg"], "parent": "cybertruck", "label": "Cyberbeast", "menu": "menu-cb.jpg"},
     "cybertruck-foundation": {"name": "Cybertruck Foundation Series", "parent": "cybertruck", "label": "Foundation Series", "photo": "ctf-1.jpg", "gallery": ["ctf-1.jpg"], "menu": "menu-ctf.jpg"},
     "cybercab":          {"name": "Cybercab", "menu": "menu-cybercab.jpg",           "photo": "cybercab.jpg", "gallery": ["cybercab.jpg", "cc-1.jpg", "cc-3.jpg", "cc-2.jpg"]},
-    "roadster":          {"name": "Roadster",           "photo": "rd-4.jpg", "menu": "menu-roadster.jpg", "gallery": ["rd-4.jpg", "rd-5.jpg", "rd-6.jpg", "rd-7.jpg", "rd-8.jpg", "rd-9.jpg", "rd-10.jpg", "rd-11.jpg", "rd-12.jpg", "rd-13.jpg", "rd-14.jpg", "rd-15.jpg", "rd-16.jpg", "rd-17.jpg", "rd-18.jpg", "rd-19.jpg", "rd-20.jpg", "rd-21.jpg", "rd-22.jpg", "rd-23.jpg", "rd-24.jpg", "rd-25.jpg"]},
+    "roadster":          {"name": "Roadster", "photo": "roadster.jpg", "menu": "menu-roadster.jpg", "gallery": ["rd-4.jpg", "rd-5.jpg", "rd-6.jpg", "rd-7.jpg", "rd-8.jpg", "rd-9.jpg", "rd-10.jpg", "rd-11.jpg", "rd-12.jpg", "rd-13.jpg", "rd-14.jpg", "rd-15.jpg", "rd-16.jpg", "rd-17.jpg", "rd-18.jpg", "rd-19.jpg", "rd-20.jpg", "rd-21.jpg", "rd-22.jpg", "rd-23.jpg", "rd-24.jpg", "rd-25.jpg"]},
+    "roadster-performance": {"name": {"en": "Roadster Performance", "nl": "Roadster Performance"}, "parent": "roadster", "photo": "rd-15.jpg", "menu": "rd-15.jpg", "label": "Performance"},
+    "roadster-thrust":   {"name": {"en": "Roadster Thrust", "nl": "Roadster Thrust"}, "parent": "roadster", "photo": "rd-4.jpg", "menu": "rd-4.jpg", "label": "Thrust"},
+    "roadster-rocket":   {"name": {"en": "Roadster Rocket", "nl": "Roadster Rocket"}, "parent": "roadster", "photo": "rd-1.jpg", "menu": "rd-1.jpg", "label": "Rocket"},
+    "roadster-standard": {"name": {"en": "Roadster Standard", "nl": "Roadster Standard"}, "parent": "roadster", "photo": "rd-3.jpg", "menu": "rd-3.jpg", "label": {"en": "Standard", "nl": "Standard"}},
+    "roadster-first-generation": {"name": {"en": "First Tesla Roadster", "nl": "De eerste Tesla Roadster"}, "full_name": True, "parent": "roadster", "photo": "gen/tesla-roadster-origin-story-lotus-elise-first-tesla.jpg", "menu": "gen/tesla-roadster-origin-story-lotus-elise-first-tesla.jpg", "label": {"en": "2008–2012", "nl": "2008–2012"}},
     "semi":              {"name": "Semi", "photo": "lib/semi-highway.jpg", "menu": "menu-semi.jpg", "gallery": ["semi.jpg", "semi-6.jpg", "semi-4.jpg", "semi-7.jpg", "semi-2.jpg", "semi-5.jpg", "semi-3.jpg"]},
     "semi-standard-range": {"name": {"en": "Semi Standard Range", "nl": "Semi Standard Range"}, "parent": "semi", "photo": "lib/semi-highway.jpg", "menu": "lib/semi-highway.jpg", "label": "Standard Range"},
     "semi-long-range":   {"name": {"en": "Semi Long Range", "nl": "Semi Long Range"}, "parent": "semi", "photo": "lib/semi-highway.jpg", "menu": "lib/semi-highway.jpg", "label": "Long Range"},
@@ -1466,6 +1471,14 @@ def model_title(key, lang):
     return name
 
 
+def model_heading(key, lang):
+    """Page and card heading. Most models are prefixed with Tesla. A full_name is already complete."""
+    name = model_title(key, lang)
+    if MODELS[key].get("full_name"):
+        return name
+    return "Tesla " + name
+
+
 def social_img(a, lang):
     return f"/img/{a['slug']}-{lang}.jpg"
 
@@ -2014,7 +2027,7 @@ def story(a, lang, tag="h1"):
     chips = ""
     if a.get("models"):
         chips = '<div class="chips">' + "".join(
-            f'<a href="{url(lang, "model/" + k + "/")}">Tesla {model_title(k, lang)}</a>' for k in a["models"]) + "</div>"
+            f'<a href="{url(lang, "model/" + k + "/")}">{esc(model_heading(k, lang))}</a>' for k in a["models"]) + "</div>"
     title = esc(t["title"]) if tag == "h1" else f'<a href="{url(lang, a["slug"] + "/")}">{esc(t["title"])}</a>'
     byline = (f'<p class="byline"><a href="{url(lang, "editorial/")}">{L["byline"]}</a></p>' if tag == "h1" else "")
     toc, body = enrich(a, lang)
@@ -3385,7 +3398,7 @@ def model_card(key, lang, eager=False, high=False):
     img = ""
     if ph:
         w, h = img_size(ph)
-        img = resp_img(ph, "Tesla " + name, SIZES_MODEL, high=high, lazy=not eager, width=w, height=h)
+        img = resp_img(ph, model_heading(key, lang), SIZES_MODEL, high=high, lazy=not eager, width=w, height=h)
     return (f'<a class="mcard" href="{url(lang, "model/" + key + "/")}">'
             f'<span class="mim">{img}</span><span class="mname">{esc(name)}</span></a>')
 
@@ -3412,6 +3425,7 @@ def model_hub(key, items, lang):
     """Model page: photo, sourced facts and the articles. Not a news lead."""
     m = MODELS[key]
     name = model_title(key, lang)
+    heading_name = model_heading(key, lang)
     L = LANGS[lang]
     inf = INFO.get(key)
     facts = PAGE_FACTS.get(key)
@@ -3426,7 +3440,7 @@ def model_hub(key, items, lang):
     parts.append((name, f"model/{key}/"))
     nav, ld = crumbs(lang, parts)
     ph = model_photo(key)
-    hero = (f'<figure class="mhero">{resp_img(ph, "Tesla " + name, "(max-width: 900px) 100vw, 820px", high=True, lazy=False, width=1600, height=900)}</figure>'
+    hero = (f'<figure class="mhero">{resp_img(ph, heading_name, "(max-width: 900px) 100vw, 820px", high=True, lazy=False, width=1600, height=900)}</figure>'
             if ph else "")
     if facts:
         specs = render_fact_sections(facts, lang)
@@ -3455,7 +3469,7 @@ def model_hub(key, items, lang):
         if kids:
             vlabel = "Versions" if lang == "en" else "Uitvoeringen"
             versions = f'<h2 class="rubh">{esc(vlabel)}</h2><div class="mgrid">{"".join(model_card(k, lang) for k in kids)}</div>'
-    body = (f'{nav}<header class="hubhead"><h1>Tesla {esc(name)}</h1></header>'
+    body = (f'{nav}<header class="hubhead"><h1>{esc(heading_name)}</h1></header>'
             f'{hero}<p class="mintro">{esc(intro)}</p>{versions}{specs}{sourced}{listing}')
     desc = re.sub(r"\s+", " ", intro).strip()
     if len(desc) > 180:
@@ -3488,8 +3502,10 @@ def render_fact_sections(facts, lang):
         parts.append(f'<section class="mfacts"><h2>{label}</h2><ul>{items}</ul></section>')
     links = []
     for title, href in facts.get("sources") or []:
-        if href:
+        if href.startswith("http"):
             links.append(f'<a href="{esc(href)}" rel="noopener noreferrer">{esc(title)}</a>')
+        elif href.startswith("/"):
+            links.append(f'<a href="{url(lang, href.lstrip("/"))}">{esc(title)}</a>')
         else:
             links.append(esc(title))
     when = "As of 19 November 2026. " if lang == "en" else "Stand van 19 november 2026. "
@@ -3594,7 +3610,7 @@ def money_article(a, arts, lang):
     chips = ""
     if a.get("models"):
         chips = '<div class="chips">' + "".join(
-            f'<a href="{url(lang, "model/" + k + "/")}">Tesla {model_title(k, lang)}</a>' for k in a["models"]) + "</div>"
+            f'<a href="{url(lang, "model/" + k + "/")}">{esc(model_heading(k, lang))}</a>' for k in a["models"]) + "</div>"
     side = ad_html("sidebar", lang)
     article = (
         f'<article class="money">'
@@ -5644,7 +5660,7 @@ def build():
                 content, crumb_ld, intro, listed_models = models_overview(lang)
                 listed = [{
                     "@type": "ListItem", "position": i + 1,
-                    "name": "Tesla " + model_title(k, lang),
+                    "name": model_heading(k, lang),
                     "url": SITE + url(lang, f"model/{k}/"),
                 } for i, k in enumerate(listed_models)]
                 overview_ld = {
@@ -5678,12 +5694,12 @@ def build():
                 items = [a for a in arts if family & set(a.get("models", []))]
             ph = model_photo(key)
             content, crumb_ld, desc = model_hub(key, items, lang)
-            name = model_title(key, lang)
+            name = model_heading(key, lang)
             page_facts = PAGE_FACTS.get(key)
             facts = [] if page_facts else ((INFO.get(key) or {}).get(lang, {}).get("specs") or [])
             vehicle_ld = {
                 "@context": "https://schema.org", "@type": "Vehicle",
-                "name": f"Tesla {name}", "description": desc,
+                "name": name, "description": desc,
                 "url": SITE + url(lang, f"model/{key}/"), "inLanguage": lang,
                 "brand": {"@type": "Brand", "name": "Tesla"},
                 "manufacturer": {"@type": "Organization", "name": "Tesla, Inc."},
@@ -5704,7 +5720,7 @@ def build():
                 vehicle_ld["additionalProperty"] = [
                     {"@type": "PropertyValue", "name": k, "value": v} for k, v in props]
             write(url(lang, f"model/{key}/"),
-                  page(lang, f"model/{key}/", f"Tesla {name}", desc,
+                  page(lang, f"model/{key}/", name, desc,
                        shell(content, page_side(arts, lang, "model", key, skip=items)),
                        extra_head=ld_script(crumb_ld) + ld_script(vehicle_ld), image=ph, active="models"))
 

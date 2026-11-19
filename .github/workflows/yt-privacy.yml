@@ -1,0 +1,27 @@
+name: Set YouTube video private
+
+# Manual only. Uses the same channel credentials as the uploader. Does not delete the video.
+on:
+  workflow_dispatch:
+    inputs:
+      video_id:
+        description: "YouTube video id to set private"
+        required: true
+        default: "7WMLmkvscxE"
+
+permissions:
+  contents: read
+
+jobs:
+  private:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v5
+      - name: Set privacyStatus to private and read it back
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+          VIDEO_ID: ${{ inputs.video_id }}
+        run: python3 video/set_private.py

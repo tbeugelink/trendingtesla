@@ -58,11 +58,10 @@ jobs:
           YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
           YT_PRIVACY: unlisted
         run: |
-          sudo apt-get install -y -qq fonts-dejavu-core > /dev/null
-          python3 video/rebuild_flight15.py
-          YT_PRIVACY=unlisted python3 video/upload.py /tmp/v2/longform1-v2-1080.mp4 en | tee "$RUNNER_TEMP/unlisted.txt"
+          # The checked file. The runner is not asked to download the clips again.
+          YT_PRIVACY=unlisted python3 video/upload.py video/rebuild/longform1-v2-1080.mp4 en | tee "$RUNNER_TEMP/unlisted.txt"
           echo "### Unlisted Starship test" >> "$GITHUB_STEP_SUMMARY"
-          grep -o 'https://youtu.be/[A-Za-z0-9_-]*' "$RUNNER_TEMP/unlisted.txt" >> "$GITHUB_STEP_SUMMARY"
+          grep -o 'https://youtu.be/[A-Za-z0-9_-]*' "$RUNNER_TEMP/unlisted.txt" >> "$GITHUB_STEP_SUMMARY" || true
           # Drop the marker so the next article push does not upload this test again.
           git config user.name "TrendingTesla bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

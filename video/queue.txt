@@ -1,2 +1,2 @@
 spacex-caught-starship-after-22-hours en --full --upload
-# retry upload: footage credits stay in the description
+# retry: credits before TAGS

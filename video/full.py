@@ -497,12 +497,23 @@ def main():
         extra = f"\n\nReal footage: {footage['share'] * 100:.0f}% of screen time."
         if lines:
             extra += "\n\nFootage: " + "; ".join(f"{c['credit']} ({c['page']})" for c in lines)
-        txt.write_text(txt.read_text(encoding="utf-8").rstrip() + extra + "\n", encoding="utf-8")
+        body = txt.read_text(encoding="utf-8")
+        # Keep this in the description. Lines after TAGS: are uploaded as keywords and YouTube rejects them.
+        if "\nTAGS:\n" in body:
+            body = body.replace("\nTAGS:\n", extra + "\n\nTAGS:\n", 1)
+        else:
+            body = body.rstrip() + extra + "\n"
+        txt.write_text(body, encoding="utf-8")
     if credits:  # credit the real photos in the YouTube description
         txt = out.with_suffix(".txt")
         if txt.exists():
-            txt.write_text(txt.read_text(encoding="utf-8").rstrip() + "\n\nPhotos: " + "; ".join(dict.fromkeys(credits.values())) + "\n",
-                           encoding="utf-8")
+            extra = "\n\nPhotos: " + "; ".join(dict.fromkeys(credits.values()))
+            body = txt.read_text(encoding="utf-8")
+            if "\nTAGS:\n" in body:
+                body = body.replace("\nTAGS:\n", extra + "\n\nTAGS:\n", 1)
+            else:
+                body = body.rstrip() + extra + "\n"
+            txt.write_text(body, encoding="utf-8")
     print(out, f"{total:.1f}s", "audio" if audio else "silent")
 
 

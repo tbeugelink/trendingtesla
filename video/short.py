@@ -311,23 +311,107 @@ def narration_body(text, speed=None):
     }
 
 
-def tts_elevenlabs(text, out_mp3, speed=None, voice=None):
-    key = os.environ["ELEVENLABS_API_KEY"]
-    if voice is None:
-        voice = narration_voice()
-        if LANG[0] == "nl" and os.environ.get("USE_NL_VOICE") == "1" and os.environ.get("ELEVENLABS_VOICE_ID_NL"):  # off: English voice for Dutch too
-            voice = os.environ["ELEVENLABS_VOICE_ID_NL"]
+# Eleven v4 rejects a request above 10,000 characters. Stay under that after the sentence tags.
+TTS_CHAR_LIMIT = 9500
+
+
+def narration_chunks(text, limit=TTS_CHAR_LIMIT):
+    """Split on sentence boundaries so each tagged request fits the model limit.
+
+    The pieces join back to the original text, including the spaces between sentences.
+    """
+    raw = text or ""
+    tag = narration_tag()
+    if len(tag_sentences(raw, tag)) <= limit:
+        return [raw]
+    sentences, start = [], 0
+    for match in SENTENCE_BREAK.finditer(raw):
+        sentences.append(raw[start:match.end()])
+        start = match.end()
+    if start < len(raw):
+        sentences.append(raw[start:])
+    groups, cur = [], ""
+    for sentence in sentences:
+        trial = cur + sentence
+        if cur and len(tag_sentences(trial, tag)) > limit:
+            groups.append(cur)
+            cur = sentence
+        else:
+            cur = trial
+    if cur:
+        groups.append(cur)
+    if any(len(tag_sentences(part, tag)) > 10000 for part in groups):
+        raise SystemExit("one narration sentence is longer than the ElevenLabs request limit")
+    return groups
+
+
+def pad_alignment(source, chars, starts, ends):
+    """Put back the spaces tag insertion trims, so timestamps still match the script."""
+    spoken = "".join(chars)
+    if spoken == source:
+        return list(chars), list(starts), list(ends)
+    stripped = source.strip()
+    if spoken != stripped:
+        return list(chars), list(starts), list(ends)
+    lead = len(source) - len(source.lstrip())
+    trail = len(source) - len(source.rstrip())
+    t0 = starts[0] if starts else 0.0
+    t1 = ends[-1] if ends else t0
+    return (
+        [" "] * lead + list(chars) + [" "] * trail,
+        [t0] * lead + list(starts) + [t1] * trail,
+        [t0] * lead + list(ends) + [t1] * trail,
+    )
+
+
+def tts_request(text, out_mp3, speed, voice):
     body = narration_body(text, speed)
     req = urllib.request.Request(
         f"https://api.elevenlabs.io/v1/text-to-speech/{voice}/with-timestamps?output_format=mp3_44100_192",
         data=json.dumps(body).encode(),
-        headers={"xi-api-key": key, "Content-Type": "application/json"})
+        headers={"xi-api-key": os.environ["ELEVENLABS_API_KEY"], "Content-Type": "application/json"})
     with urllib.request.urlopen(req, timeout=300) as r:
         d = json.load(r)
     out_mp3.write_bytes(base64.b64decode(d["audio_base64"]))
     al = d.get("alignment") or d["normalized_alignment"]  # original characters, so text positions line up
-    return alignment_without_tags(
+    chars, starts, ends = alignment_without_tags(
         al["characters"], al["character_start_times_seconds"], al["character_end_times_seconds"], narration_tag())
+    return pad_alignment(text, chars, starts, ends)
+
+
+def concat_audio(parts, dest):
+    listing = dest.with_suffix(".concat.txt")
+    listing.write_text("".join(f"file '{Path(p).resolve()}'\n" for p in parts), encoding="utf-8")
+    subprocess.run(
+        ["ffmpeg", "-loglevel", "error", "-y", "-f", "concat", "-safe", "0", "-i", str(listing),
+         "-c:a", "libmp3lame", "-b:a", "192k", str(dest)],
+        check=True)
+    listing.unlink(missing_ok=True)
+
+
+def tts_elevenlabs(text, out_mp3, speed=None, voice=None):
+    if voice is None:
+        voice = narration_voice()
+        if LANG[0] == "nl" and os.environ.get("USE_NL_VOICE") == "1" and os.environ.get("ELEVENLABS_VOICE_ID_NL"):  # off: English voice for Dutch too
+            voice = os.environ["ELEVENLABS_VOICE_ID_NL"]
+    parts = narration_chunks(text)
+    if len(parts) == 1:
+        return tts_request(parts[0], out_mp3, speed, voice)
+    chars, starts, ends = [], [], []
+    files, offset = [], 0.0
+    for i, part in enumerate(parts):
+        dest = out_mp3.with_name(f"{out_mp3.stem}-part{i}.mp3")
+        c, s, e = tts_request(part, dest, speed, voice)
+        chars += c
+        starts += [t + offset for t in s]
+        ends += [t + offset for t in e]
+        offset += duration(dest)
+        files.append(dest)
+        print(f"::notice::ElevenLabs part {i + 1}/{len(parts)} ({len(tag_sentences(part))} chars)")
+    concat_audio(files, out_mp3)
+    for dest in files:
+        dest.unlink(missing_ok=True)
+    return chars, starts, ends
 
 
 def duration(path):

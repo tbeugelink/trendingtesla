@@ -142,6 +142,29 @@ function redirect301(url) {
   return new Response(null, { status: 301, headers });
 }
 
+function gone() {
+  return new Response("Gone", { status: 410, headers: { "content-type": "text/plain", "x-robots-tag": "noindex" } });
+}
+
+// Numbered archive pages that no longer exist. /archive/ and /nl/archive/ stay.
+function archiveHome(pathname) {
+  const m = pathname.match(/^(\/nl)?\/archive\/(\d+)\/$/);
+  if (!m) return null;
+  return (m[1] || "") + "/archive/";
+}
+
+// Old WordPress URLs. Real feeds are /feed.xml and /nl/feed.xml, not /feed/.
+function isWordpressGone(pathname) {
+  const p = pathname.toLowerCase();
+  if (p === "/xmlrpc.php" || p === "/wp-login.php") return true;
+  if (p === "/wp-includes" || p.startsWith("/wp-includes/")) return true;
+  if (p === "/wp-content" || p.startsWith("/wp-content/")) return true;
+  if (p === "/wp-admin" || p.startsWith("/wp-admin/")) return true;
+  if (p === "/feed" || p === "/feed/" || p === "/comments/feed" || p === "/comments/feed/") return true;
+  if (/\/feed\/$/.test(p)) return true;
+  return false;
+}
+
 // Static assets answer a missing trailing slash with 307. Crawlers should see 301.
 function slashTo301(response, request) {
   if (request.method !== "GET" && request.method !== "HEAD") return response;
@@ -173,8 +196,8 @@ export default {
     // home page and were reported as duplicates by Search Console: tell crawlers they are gone for good
     const wpGone = ["p", "s", "feed", "author", "cat", "replytocom", "page_id", "attachment_id", "m", "tag"]
       .some((k) => u.searchParams.has(k));
-    if (getLike && wpGone && (path === "/" || path === "/nl/"))
-      return new Response("Gone", { status: 410, headers: { "content-type": "text/plain", "x-robots-tag": "noindex" } });
+    if (getLike && isWordpressGone(path)) return gone();
+    if (getLike && wpGone && (path === "/" || path === "/nl/")) return gone();
     if (getLike) {
       // www, http, a missing slash, /index.html and a stray query fold into one 301.
       // /api/ keeps its query. Everything else drops it so ?q= and ?utm_ do not become extra URLs.
@@ -206,6 +229,11 @@ export default {
       return json({ error: "method" }, 405);
     }
     const assets = slashTo301(await env.ASSETS.fetch(request), request);
+    const archiveTo = archiveHome(path);
+    if (getLike && archiveTo && assets.status === 404) {
+      const origin = onSite ? "https://trendingtesla.com" : u.origin;
+      return redirect301(origin + archiveTo);
+    }
     return withCache(u.pathname, assets);
   },
 };
@@ -216,6 +244,7 @@ export default {
 const LONG_CACHE = "public, max-age=31536000, immutable";
 const SHORT_CACHE = "public, max-age=0, must-revalidate";
 const LONG_FILE = /\.(?:avif|webp|jpe?g|png|gif|svg|ico|woff2?|ttf|otf|css|js|mjs)$/i;
+const FEED_NOINDEX = new Set(["/feed.xml", "/nl/feed.xml", "/news-sitemap.xml"]);
 
 function cacheControl(pathname) {
   return LONG_FILE.test(pathname) ? LONG_CACHE : SHORT_CACHE;
@@ -224,6 +253,7 @@ function cacheControl(pathname) {
 function withCache(pathname, response) {
   const headers = new Headers(response.headers);
   headers.set("Cache-Control", cacheControl(pathname));
+  if (FEED_NOINDEX.has(pathname)) headers.set("X-Robots-Tag", "noindex");
   return new Response(response.body, {
     status: response.status,
     statusText: response.statusText,

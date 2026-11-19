@@ -17,13 +17,14 @@ jobs:
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v5
-      - name: Render livelier Noah samples
+      - name: Render two more expressive v3 Noah samples
         env:
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
-          VOICE_OUT: video/out/noah-lively
+          VOICE_OUT: video/out/noah-v3-hype
+          VOICE_SET: hype
         run: python3 video/noah_lively.py
       - uses: actions/upload-artifact@v4
         with:
-          name: noah-lively
-          path: video/out/noah-lively/
+          name: noah-v3-hype
+          path: video/out/noah-v3-hype/
           retention-days: 14

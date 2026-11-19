@@ -296,30 +296,35 @@ MODELS = {
                                         "nl": "Tesla Semi"},
                           "credit": {"en": "A Tesla Semi. This picture is not a measured photograph of one specific trim.",
                                      "nl": "Een Tesla Semi. Dit is geen gemeten foto van één specifieke uitvoering."}},
-    "semi-standard-range": {"name": {"en": "Semi Standard Range", "nl": "Semi Standard Range"}, "parent": "semi", "photo": "semi-standard.webp", "menu": "semi-standard.webp", "label": "Standard Range",
-                          "photo_alt": {"en": "Tesla Semi on the Standard Range page. The picture is not a measured photograph of that chassis.",
-                                        "nl": "Tesla Semi op de Standard Range-pagina. De foto is geen gemeten opname van dat chassis."},
-                          "card_note": {"en": "Tesla Semi, not a measured chassis", "nl": "Tesla Semi, geen gemeten chassis"},
-                          "credit": {"en": "A Tesla Semi. This picture is not a measured photograph of the Standard Range chassis.",
-                                     "nl": "Een Tesla Semi. Dit is geen gemeten foto van het Standard Range-chassis."}},
-    "semi-long-range":   {"name": {"en": "Semi Long Range", "nl": "Semi Long Range"}, "parent": "semi", "photo": "semi-long.webp", "menu": "semi-long.webp", "label": "Long Range",
-                          "photo_alt": {"en": "Tesla Semi on the Long Range page. The picture is not a measured photograph of the longer chassis.",
-                                        "nl": "Tesla Semi op de Long Range-pagina. De foto is geen gemeten opname van het langere chassis."},
-                          "card_note": {"en": "Tesla Semi, not a measured chassis", "nl": "Tesla Semi, geen gemeten chassis"},
-                          "credit": {"en": "A Tesla Semi. This picture is not a measured photograph of the longer Long Range chassis.",
-                                     "nl": "Een Tesla Semi. Dit is geen gemeten foto van het langere Long Range-chassis."}},
-    "semi-europe":       {"name": {"en": "Semi Europe", "nl": "Semi Europa"}, "parent": "semi", "photo": "semi-europe.webp", "menu": "semi-europe.webp", "label": {"en": "Europe", "nl": "Europa"},
-                          "photo_alt": {"en": "Tesla Semi Europe at IAA Transportation in Hannover on 14 September 2026",
-                                        "nl": "Tesla Semi Europa op de IAA Transportation in Hannover op 14 september 2026"},
-                          "credit": {"author": "Matti Blume", "license": "CC BY-SA 4.0", "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
-                                     "source_url": "https://commons.wikimedia.org/wiki/File:IAA_Transportation_2026,_Hanover_(20260914-P1086985).jpg",
-                                     "en": "The European Semi at IAA Transportation in Hannover on 14 September 2026.",
-                                     "nl": "De Europese Semi op de IAA Transportation in Hannover op 14 september 2026."}},
-    "semi-2022-pilot":   {"name": {"en": "Semi 2022 Pilot", "nl": "Semi-pilot 2022"}, "parent": "semi", "photo": "semi-2022-pilot.webp", "menu": "semi-2022-pilot.webp", "label": {"en": "2022 Pilot", "nl": "Pilot 2022"},
-                          "photo_alt": {"en": "Tesla Semi 2022 Pilot, the earlier cab with the original front lights and door mirrors",
-                                        "nl": "Tesla Semi-pilot 2022, de eerdere cabine met de oorspronkelijke voorkant en buitenspiegels"},
-                          "credit": {"en": "Site photo of the earlier cab, with the original front lights and door mirrors. This is the 2022 pilot generation, not the 2026 light-bar truck.",
-                                     "nl": "Sitefoto van de eerdere cabine, met de oorspronkelijke voorkant en buitenspiegels. Dit is de pilotgeneratie van 2022, niet de lichtbalk-truck van 2026."}},
+    "semi-standard-range": {"name": {"en": "Semi Standard Range", "nl": "Semi Standard Range"}, "parent": "semi", "photo": "semi-card-standard.webp", "menu": "semi-card-standard.webp", "label": "Standard Range",
+                          "photo_alt": {"en": "Tesla Semi",
+                                        "nl": "Tesla Semi"},
+                          "credit": {"en": "A Tesla Semi. Not a measured photograph of the Standard Range chassis.",
+                                     "nl": "Een Tesla Semi. Geen gemeten foto van het Standard Range-chassis."}},
+    "semi-long-range":   {"name": {"en": "Semi Long Range", "nl": "Semi Long Range"}, "parent": "semi", "photo": "semi-card-long.webp", "menu": "semi-card-long.webp", "label": "Long Range",
+                          "photo_alt": {"en": "Tesla Semi",
+                                        "nl": "Tesla Semi"},
+                          "credit": {"en": "A Tesla Semi. Not a measured photograph of the longer chassis.",
+                                     "nl": "Een Tesla Semi. Geen gemeten foto van het langere chassis."}},
+    "semi-europe":       {"name": {"en": "Semi Europe", "nl": "Semi Europa"}, "parent": "semi", "photo": "semi-card-europe.webp", "menu": "semi-card-europe.webp", "label": {"en": "Europe", "nl": "Europa"},
+                          "photo_alt": {"en": "Tesla Semi",
+                                        "nl": "Tesla Semi"},
+                          "credit": {"en": "A Tesla Semi. The Hannover show truck is pictured below.",
+                                     "nl": "Een Tesla Semi. De showtruck uit Hannover staat hieronder."},
+                          "body_photo": "semi-europe.webp",
+                          "body_alt": {"en": "Tesla Semi Europe at IAA Transportation in Hannover on 14 September 2026",
+                                       "nl": "Tesla Semi Europa op de IAA Transportation in Hannover op 14 september 2026"},
+                          "body_credit": {"author": "Matti Blume", "license": "CC BY-SA 4.0", "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+                                          "source_url": "https://commons.wikimedia.org/wiki/File:IAA_Transportation_2026,_Hanover_(20260914-P1086985).jpg",
+                                          "en": "The European Semi at IAA Transportation in Hannover on 14 September 2026.",
+                                          "nl": "De Europese Semi op de IAA Transportation in Hannover op 14 september 2026."}},
+    "semi-2022-pilot":   {"name": {"en": "Semi 2022 Pilot", "nl": "Semi-pilot 2022"}, "parent": "semi", "photo": "semi-card-pilot.webp", "menu": "semi-card-pilot.webp", "label": {"en": "2022 Pilot", "nl": "Pilot 2022"},
+                          "photo_alt": {"en": "Tesla Semi 2022 Pilot, a blue PepsiCo truck",
+                                        "nl": "Tesla Semi-pilot 2022, een blauwe PepsiCo-truck"},
+                          "credit": {"author": "Dllu", "license": "CC BY-SA 4.0", "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+                                     "source_url": "https://commons.wikimedia.org/wiki/File:Tesla_Semi_Pepsi_2023-10-31-13-39-37_DSCF2583_dllu.jpg",
+                                     "en": "PepsiCo Tesla Semi, 31 October 2023. The 2022 pilot, not the 2026 truck.",
+                                     "nl": "PepsiCo Tesla Semi, 31 oktober 2023. De pilot van 2022, niet de truck van 2026."}},
 }
 # Fallback photo per category: a file in static/img/topics/, or a list of files to vary between
 # (each article always gets the same one, picked from its slug). Missing files are skipped.
@@ -1516,9 +1521,7 @@ def photo_alt(key, lang):
     return model_heading(key, lang)
 
 
-def photo_caption(key, lang):
-    """Attribution and an honest note when the photograph is not that exact version."""
-    credit = MODELS[key].get("credit")
+def photo_caption_from(credit, lang):
     if not credit:
         return ""
     note = credit.get(lang) or credit.get("en") or ""
@@ -1538,6 +1541,11 @@ def photo_caption(key, lang):
         label = "Foto" if lang == "nl" else "Photo"
         bits.append(f"{label}: {', '.join(who)}.")
     return " ".join(bits)
+
+
+def photo_caption(key, lang):
+    """Attribution and an honest note when the photograph is not that exact version."""
+    return photo_caption_from(MODELS[key].get("credit"), lang)
 
 
 def social_img(a, lang):
@@ -3512,6 +3520,15 @@ def model_hub(key, items, lang):
     klass = "mhero"
     hero = (f'<figure class="{klass}">{resp_img(ph, photo_alt(key, lang), "(max-width: 900px) 100vw, 820px", high=True, lazy=False, width=1600, height=900)}{figcap}</figure>'
             if ph else "")
+    extra = ""
+    body_name = m.get("body_photo")
+    if body_name:
+        body_src = "/img/models/" + body_name
+        body_alt = m.get("body_alt") or {}
+        alt = body_alt.get(lang) or body_alt.get("en") or heading_name
+        body_cap = photo_caption_from(m.get("body_credit"), lang)
+        body_fig = f'<figcaption class="imgnote">{body_cap}</figcaption>' if body_cap else ""
+        extra = (f'<figure class="mhero">{resp_img(body_src, alt, "(max-width: 900px) 100vw, 820px", lazy=True, width=1600, height=900)}{body_fig}</figure>')
     if facts:
         specs = render_fact_sections(facts, lang)
         sourced = ""
@@ -3540,7 +3557,7 @@ def model_hub(key, items, lang):
             vlabel = "Versions" if lang == "en" else "Uitvoeringen"
             versions = f'<h2 class="rubh">{esc(vlabel)}</h2><div class="mgrid">{"".join(model_card(k, lang) for k in kids)}</div>'
     body = (f'{nav}<header class="hubhead"><h1>{esc(heading_name)}</h1></header>'
-            f'{hero}<p class="mintro">{esc(intro)}</p>{versions}{specs}{sourced}{listing}')
+            f'{hero}<p class="mintro">{esc(intro)}</p>{extra}{versions}{specs}{sourced}{listing}')
     desc = re.sub(r"\s+", " ", intro).strip()
     if len(desc) > 180:
         desc = desc[:179].rsplit(" ", 1)[0] + "…"

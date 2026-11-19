@@ -1,0 +1,29 @@
+name: Noah lively samples
+
+# Renders comparison clips on this branch only. Does not change the default voice.
+on:
+  push:
+    branches: [cursor/noah-lively-samples-d0ac]
+    paths:
+      - .github/workflows/noah-lively.yml
+      - video/noah_lively.py
+
+permissions:
+  contents: read
+
+jobs:
+  samples:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+      - name: Render livelier Noah samples
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          VOICE_OUT: video/out/noah-lively
+        run: python3 video/noah_lively.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: noah-lively
+          path: video/out/noah-lively/
+          retention-days: 14

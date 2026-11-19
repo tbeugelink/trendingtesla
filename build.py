@@ -745,7 +745,7 @@ article.narrow > h1{margin-left:14px}article.narrow .cform{margin-left:14px}
 .pn:hover{background:#272727;color:#fff}
 .pn.on,.pdrop.on>.pn,header.hb .mdrop>button.pn.on{background:#ebebeb;color:#111;border-radius:8px}
 .pdrop{position:relative;display:flex;align-items:center;z-index:0}
-.pmenu{display:none;position:absolute;top:100%;left:0;min-width:210px;z-index:50;background:#2a2a2a;border:1px solid rgba(255,255,255,0.28);border-radius:0 10px 10px 10px;padding:6px;box-shadow:0 12px 32px rgba(0,0,0,.45)}
+.pmenu{display:none;position:absolute;top:calc(100% - 1px);left:0;min-width:210px;z-index:50;background:#2a2a2a;border:1px solid rgba(255,255,255,0.28);border-radius:0 10px 10px 10px;padding:6px;box-shadow:0 12px 32px rgba(0,0,0,.45)}
 .pdrop::after{content:"";position:absolute;top:calc(100% - 6px);left:0;width:240px;height:14px;z-index:49}
 .pdrop:hover,.pdrop:focus-within,.pdrop.is-open{z-index:2}
 .pdrop:hover .pmenu,.pdrop:focus-within .pmenu,.pdrop.is-open .pmenu{display:grid}
@@ -756,7 +756,7 @@ article.narrow > h1{margin-left:14px}article.narrow .cform{margin-left:14px}
 .pdrop.tone-spacexsi{--accent:#ffc400;--accent-ink:#ffe28a}
 .pdrop.tone-neural{--accent:#ff2d95;--accent-ink:#ffb3d6}
 .pdrop.tone-boring{--accent:#2f6bff;--accent-ink:#b3c8ff}
-.pdrop:hover>a.pn,.pdrop:focus-within>a.pn,.pdrop.is-open>a.pn{position:relative;z-index:51;background:#2a2a2a;color:#fff;border-radius:10px 10px 0 0;box-shadow:0 1px 0 #2a2a2a}
+.pdrop:hover>a.pn,.pdrop:focus-within>a.pn,.pdrop.is-open>a.pn{position:relative;z-index:51;background:#2a2a2a;color:#fff;border:1px solid rgba(255,255,255,0.28);border-bottom:0;border-radius:10px 10px 0 0;box-shadow:0 1px 0 #2a2a2a}
 .pmenu a.child{padding-left:26px;font-weight:650;color:#b7c0cc}
 .dlayer{margin:0 0 8px}
 .drawer a.tone-tesla,.drawer a.tone-energy,.drawer a.tone-spacex,.drawer a.tone-link,.drawer a.tone-spacexsi,.drawer a.tone-neural,.drawer a.tone-boring{color:#fff}
@@ -1202,7 +1202,8 @@ a.eco-node:hover{filter:brightness(1.08)}
 @media (min-width:1100px){header.hb .id{gap:24px}}
 @media (min-width:1320px){header.hb .id{gap:80px}}
 @media (min-width:1200px){
-header.hb .pn,header.hb .mdrop>button.pn{font-size:14px;padding:6px 8px}
+header.hb .pnav{gap:4px}
+header.hb .pn,header.hb .mdrop>button.pn{font-size:14px;padding:12px 11px}
 }
 @media (min-width:1000px) and (max-width:1199.98px){
 header.hb .pn,header.hb .mdrop>button.pn{font-size:13px;padding:5px 5px}

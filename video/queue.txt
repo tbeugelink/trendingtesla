@@ -1,2 +1,2 @@
 spacex-caught-starship-after-22-hours en --full --upload
-# retry: concat the voice instead of amix
+# retry with joined soundtrack

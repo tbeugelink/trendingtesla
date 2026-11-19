@@ -465,15 +465,19 @@ def main():
             words += sw
     if have_voice:
         audio = S.OUT / f"{slug}-{lang}-full.m4a"
-        fl, ins = [], []
+        fl, chain, cursor = [], [], 0.0
         for i, ((a0, a1), t0) in enumerate(zip(segs, place)):
-            ms = int(t0 * 1000)
-            span = max(0.08, a1 - a0)
+            span = max(0.2, a1 - a0)
+            gap = t0 - cursor
+            if gap > 0.02:
+                fl.append(f"anullsrc=r=44100:cl=stereo:d={gap:.3f}[g{i}]")
+                chain.append(f"[g{i}]")
             fade = min(0.03, span / 4)
-            fl.append(f"[0]atrim={a0:.3f}:{a0 + span:.3f},asetpts=PTS-STARTPTS,afade=t=in:d={fade:.3f},"
-                      f"afade=t=out:st={max(0, span - fade):.3f}:d={fade:.3f},adelay={ms}|{ms}[a{i}]")
-            ins.append(f"[a{i}]")
-        fl.append("".join(ins) + f"amix=inputs={len(ins)}:normalize=0:duration=longest[out]")
+            fl.append(f"[0]atrim={a0:.3f}:{a0 + span:.3f},asetpts=PTS-STARTPTS,aformat=channel_layouts=stereo,"
+                      f"afade=t=in:d={fade:.3f},afade=t=out:st={max(0, span - fade):.3f}:d={fade:.3f}[a{i}]")
+            chain.append(f"[a{i}]")
+            cursor = t0 + span
+        fl.append("".join(chain) + f"concat=n={len(chain)}:v=0:a=1[out]")
         mixed = subprocess.run(["ffmpeg", "-y", "-i", str(mp3), "-filter_complex", ";".join(fl), "-map", "[out]",
                                 "-c:a", "aac", "-b:a", "192k", str(audio)], capture_output=True, text=True)
         if mixed.returncode:

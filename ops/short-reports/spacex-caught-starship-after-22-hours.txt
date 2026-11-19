@@ -1,0 +1,12 @@
+real footage 94% of screen time (25.5s of 27.1s, 10 clips). Target is 70%. Stills fill the rest.
+beat 1: stock exterior (starship-pad.jpg, starship-launch.jpg) — SpaceX caught Starship after 22 hours.
+beat 2: stock exterior (starship-launch.jpg, starship-pad.jpg) — The ship left Friday and came back Saturday.
+beat 3: own-photo still (starlink-satellites.jpg) + stock exterior (starship-launch.jpg) — It released 26 Starlink satellites on the way.
+beat 4: stock exterior (starship-launch.jpg, starship-pad.jpg) — The booster's catch was aborted offshore.
+beat 5: stock exterior (starship-launch.jpg, starship-pad.jpg) — Low fuel ended its boostback burn early.
+beat 6: stock exterior (starship-pad.jpg, starship-launch.jpg) — The ship fell, flipped, and lit its engines.
+beat 7: stock exterior (starship-pad.jpg, starship-launch.jpg) — Two tower arms closed around the ship.
+beat 8: own-photo still (starlink-satellites.jpg) + stock exterior (starship-pad.jpg) — First catch of a ship back from orbit.
+own-photo clip beat 1: no own photo without stock
+beat 1: 4.4 s (rule 2.5-4 s)
+loop: "First catch of a ship back from orbit." -> "SpaceX caught Starship after 22 hours."

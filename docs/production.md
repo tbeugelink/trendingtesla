@@ -39,8 +39,8 @@ The moving hook clip (`tools/video_clip.py`) is separate: about $0.41 per clip, 
 | Piece | Role |
 |---|---|
 | `.github/workflows/shorts.yml` | On a push that adds an article (or changes `video/queue.txt`): photos, the Short, the upload, and a long video only when the article has `video.en`. |
-| `video/story.py` | The Short. Constants for the cut and the voice are at the top of the file: `XFADE`, `SHOT_MAX`, `SPEED`, `STORY_STABILITY`, `STORY_STYLE`, `USE_DEFAULT_SFX`. |
-| `video/full.py` | The long video. `SCENE_MAX` and `SCENE_XFADE` set the shot length and the crossfade. `SPEED`, `FULL_STABILITY` and `FULL_STYLE` set the voice. It exits if the article has no `video` script for that language. |
+| `video/story.py` | The Short. Constants for the cut are at the top of the file: `XFADE`, `SHOT_MAX`, `USE_DEFAULT_SFX`. The voice comes from `video/short.py`. |
+| `video/full.py` | The long video. `SCENE_MAX` and `SCENE_XFADE` set the shot length and the crossfade. The voice comes from `video/short.py`. It exits if the article has no `video` script for that language. |
 | `video/upload.py` | Uploads to YouTube. Refuses a Short whose slug or title is already in `content/shorts.json`, `ops/story-pending.json` or `ops/short-uploads.json`, and records every new Short in `ops/short-uploads.json`. |
 | `tools/video_watchdog.py` | Every 15 minutes (`shorts-page.yml`). Asks once for a missing Short or, when the article has `video.en`, a missing long video. It treats a slug in the upload ledger as already done, so a feed outage cannot order a second copy. |
 | `video/short.py` | Shared layout, voice helper and metadata. The story Short and the long video both use it. The legacy portrait renderer is not the daily path. |
@@ -61,20 +61,19 @@ Shorts are uploaded public. `tools/story_approve.py` posts a story Short that ha
 
 ### Voice and picture constants
 
-These are estimates, kept as named constants so they can be changed in one place. The voice id is not one of them: the workflow sets `STORY_VOICE=1`, which uses `ELEVENLABS_VOICE_ID`.
+Picture timing is an estimate, kept as named constants. The voice preset is in `video/short.py`. `ELEVENLABS_VOICE_ID` still overrides Noah. The workflow sets `STORY_VOICE=1`, which uses that variable when it is set.
 
 | Constant | File | Value |
 |---|---|---|
+| `NARRATION_MODEL` | `video/short.py` | `eleven_v4` (env `ELEVENLABS_MODEL`) |
+| `NARRATION_TAG` | `video/short.py` | `[enthousiast]` before every spoken sentence (env `ELEVENLABS_AUDIO_TAG`; empty turns it off) |
+| stability / similarity / clone strength | `video/short.py` | 0 / 0 / 0 (env `ELEVENLABS_STABILITY`, `ELEVENLABS_SIMILARITY`, `ELEVENLABS_CLONE_STRENGTH`) |
+| language | `video/short.py` | `en` (env `ELEVENLABS_LANGUAGE`) |
 | `XFADE` | `video/story.py` | 0.15 s |
 | `SHOT_MAX` | `video/story.py` | 2.0 s |
-| `SPEED` | `video/story.py` | 1.07 for hook, tension and payoff |
-| `STORY_STABILITY` | `video/story.py` | 0.45 (env `STORY_STABILITY` overrides) |
-| `STORY_STYLE` | `video/story.py` | 0.3 (env `STORY_STYLE` overrides) |
 | `USE_DEFAULT_SFX` | `video/story.py` | `False` (no default impact hit, bass drop or drone; a beat's own `sfx` still plays) |
 | `SCENE_MAX` | `video/full.py` | 2.0 s |
 | `SCENE_XFADE` | `video/full.py` | 0.15 s |
-| `SPEED` | `video/full.py` | 1.07 |
-| `FULL_STABILITY` / `FULL_STYLE` | `video/full.py` | 0.45 / 0.3 |
 
 ## YouTube text
 

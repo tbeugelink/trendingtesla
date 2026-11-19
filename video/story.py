@@ -9,7 +9,7 @@ The script comes from the article's "short":
 Rules of the first story Shorts (Falcon 1, Cybercab): no still image anywhere, subjects kept horizontally centred,
 a hard opening (punch-in + shake + impact), launches move top-to-bottom so the rocket seems to rise ("rise"),
 closing shots zoom in with a light tremble, emphasis via capitals and commas, no artificial cartoon effects.
-Needs ELEVENLABS_API_KEY and ELEVENLABS_VOICE_ID (ELEVENLABS_VOICE_ID_3 is used when set: the story voice).
+Needs ELEVENLABS_API_KEY. ELEVENLABS_VOICE_ID overrides Noah (ELEVENLABS_VOICE_ID_3 is used when set: the story voice). The voice preset lives in short.py.
 """
 import base64
 import hashlib
@@ -35,10 +35,9 @@ VOICE = (os.environ.get(f"ELEVENLABS_VOICE_ID_{os.environ.get('STORY_VOICE', '1'
          os.environ.get("ELEVENLABS_VOICE_ID") or
          S.NOAH_VOICE_ID).strip()  # STORY_VOICE=1 uses ELEVENLABS_VOICE_ID; empty falls back to Noah
 CAPTIONS = os.environ.get("STORY_CAPTIONS", "0") == "1"  # running subtitles off: only key words pop in
-# Voice and picture pace. Estimates, easy to retune; the voice id is chosen by STORY_VOICE, not here.
+# Picture pace, and the names of the three beat parts. Eleven v4 has no speed slider, so these
+# numbers are not sent to the voice. The voice id is chosen by STORY_VOICE, not here.
 SPEED = {"hook": 1.05, "tension": 1.05, "payoff": 1.05}
-STORY_STABILITY = float(os.environ.get("ELEVENLABS_STABILITY") or os.environ.get("STORY_STABILITY") or "0.48")
-STORY_STYLE = float(os.environ.get("ELEVENLABS_STYLE") or os.environ.get("STORY_STYLE") or "0.30")
 GAP = {"hook": 0.35, "tension": 0.12, "payoff": 0.3}
 SFX_VOL, BED_VOL = 0.45, 0.14
 # Generic impact hit, bass drop and ambient drone are off. A beat's own "sfx" still plays.
@@ -66,14 +65,8 @@ def post(url, body):
 
 
 def tts(text, speed, out):
-    d = json.loads(post(f"https://api.elevenlabs.io/v1/text-to-speech/{VOICE}/with-timestamps?output_format=mp3_44100_192",
-                        {"text": text, "model_id": os.environ.get("ELEVENLABS_MODEL", "eleven_multilingual_v2"),
-                         "voice_settings": {"stability": STORY_STABILITY, "similarity_boost": float(os.environ.get("ELEVENLABS_SIMILARITY", "0.75")),
-                                            "style": STORY_STYLE,
-                                            "use_speaker_boost": True, "speed": speed}}))
-    out.write_bytes(base64.b64decode(d["audio_base64"]))
-    al = d.get("alignment") or d["normalized_alignment"]
-    return S.words_timed(al["characters"], al["character_start_times_seconds"], al["character_end_times_seconds"])
+    chars, starts, ends = S.tts_elevenlabs(text, out, speed=speed, voice=VOICE)
+    return S.words_timed(chars, starts, ends)
 
 
 def sfx(prompt, dur, tmp):
@@ -845,7 +838,7 @@ def find_pops(b, words, t0):
 
 
 def caption_img(words):
-    txt = " ".join(words)
+    txt = S.strip_audio_tags(" ".join(words)).strip()
     im = Image.new("RGBA", (W, 330), (0, 0, 0, 0))
     d = ImageDraw.Draw(im)
     sp = FCAP.getlength(" ") + 18  # the thick outline eats into normal word spacing

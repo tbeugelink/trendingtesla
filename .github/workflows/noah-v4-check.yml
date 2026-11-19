@@ -1,0 +1,29 @@
+name: Noah v4 tag check
+
+# Branch-only. Confirms the v4 model id and whether the sentence tag is spoken.
+on:
+  push:
+    branches: [cursor/noah-v4-default-d0ac]
+    paths:
+      - .github/workflows/noah-v4-check.yml
+      - video/noah_v4_check.py
+
+permissions:
+  contents: read
+
+jobs:
+  samples:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+      - name: Render both tags and transcribe them
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          VOICE_OUT: video/out/noah-v4
+        run: python3 video/noah_v4_check.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: noah-v4
+          path: video/out/noah-v4/
+          retention-days: 14

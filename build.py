@@ -808,15 +808,14 @@ article.money .prose{font-size:1.075rem;line-height:1.75;max-width:68ch}
 article.money .prose p{margin-bottom:1.15em}
 article.money .toc{float:none;width:auto;max-width:68ch;margin:4px 0 20px}
 article.money .prose h2{scroll-margin-top:130px}
-.leadstory{display:flex;flex-direction:column;gap:0;margin:10px 0 8px;padding:0;border-radius:12px;transition:background .15s}
-.leadstory:hover{background:#101318}
+.leadstory{display:flex;flex-direction:column;gap:0;margin:10px 0 8px;padding:0}
 .leadstory .lead{padding:0;max-width:65ch}
-.leadstory .leadim{display:block;border-radius:12px;overflow:hidden;border:1px solid var(--edge);background:#000}
+.leadstory .leadim{display:block;border-radius:12px;overflow:hidden;border:1px solid var(--edge);background:#000;cursor:default}
 .leadstory img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
 .leadstory .ltitle{font-size:clamp(1.35rem,2vw,1.7rem);line-height:1.2;letter-spacing:-.02em;margin:8px 0 12px 1px;font-weight:800}
 .leadstory .btn{margin-bottom:22px}
-.leadstory .ltitle a{color:inherit;text-decoration:none}
-.leadstory .ltitle a:hover{text-decoration:underline;text-underline-offset:3px}
+.leadstory .ltitle a,.card.lead .body a,.pv-lead a{color:inherit;text-decoration:none}
+.leadstory .ltitle a:hover,.card.lead .body a:hover,.pv-lead a:hover{text-decoration:underline;text-underline-offset:3px}
 .leadstory .lead{font-size:1.08rem;line-height:1.55;color:var(--muted);max-width:none;margin:0 0 18px}
 .hsec{margin:34px 0 8px}
 .topics3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--card-gap-y) var(--card-gap-x)}
@@ -957,7 +956,7 @@ header.hb .pnav>.is-parked{display:none}
 .pv-tabs a.on,.pv-tabs a:hover{color:#fff;border-bottom-color:var(--red)}
 .pv-grid{display:grid;grid-template-columns:minmax(0,1fr) 292px;gap:26px;align-items:start}
 .pv-lead{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);column-gap:14px;row-gap:0;align-items:center;margin:0 0 6px;text-decoration:none;color:inherit}.pv-lead>.lmeta{grid-column:1 / -1}
-.pv-lead .im{position:relative;border-radius:10px;overflow:hidden;border:1px solid var(--edge);background:#000}
+.pv-lead .im{position:relative;border-radius:10px;overflow:hidden;border:1px solid var(--edge);background:#000;cursor:default}
 .pv-lead img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
 .pv-kicker{font-size:.72rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--blue)}
 .pv-lead h1,.pv-lead h2{font-size:clamp(1.25rem,2.2vw,1.7rem);line-height:1.18;margin:4px 0 8px}
@@ -1186,12 +1185,12 @@ header.hb .pnav>.is-parked{display:none}
 .eco-node ul{margin:4px 0 0;padding:0 0 0 1.05em}
 .eco-node li{font-size:.68rem;line-height:1.22}
 a.eco-node{display:block;text-decoration:none;color:inherit}
-.lcard:not(.empty),.vcard,.shc,.card,.mini,.pv-row,.mcard,.model{position:relative;isolation:isolate;z-index:0}
-.lcard:not(.empty)::before,.vcard::before,.shc::before,.card::before,.mini::before,.pv-row::before,.mcard::before,.model::before{content:"";position:absolute;z-index:-1;inset:-6px;border-radius:10px;background:rgba(255,255,255,.09);opacity:0;transition:opacity .15s;pointer-events:none}
-.lcard:not(.empty):hover::before,.vcard:hover::before,.shc:hover::before,.card:hover::before,.mini:hover::before,.pv-row:hover::before,.mcard:hover::before,.model:hover::before{opacity:1}
-.lcard:not(.empty):hover,.vcard:hover,.shc:hover,.card:hover,.mini:hover,.pv-row:hover,.mcard:hover,.model:hover{z-index:1}
+.lcard:not(.empty),.vcard,.shc,.card:not(.lead),.mini,.pv-row,.mcard,.model{position:relative;isolation:isolate;z-index:0}
+.lcard:not(.empty)::before,.vcard::before,.shc::before,.card:not(.lead)::before,.mini::before,.pv-row::before,.mcard::before,.model::before{content:"";position:absolute;z-index:-1;inset:-6px;border-radius:10px;background:rgba(255,255,255,.09);opacity:0;transition:opacity .15s;pointer-events:none}
+.lcard:not(.empty):hover::before,.vcard:hover::before,.shc:hover::before,.card:not(.lead):hover::before,.mini:hover::before,.pv-row:hover::before,.mcard:hover::before,.model:hover::before{opacity:1}
+.lcard:not(.empty):hover,.vcard:hover,.shc:hover,.card:not(.lead):hover,.mini:hover,.pv-row:hover,.mcard:hover,.model:hover{z-index:1}
 a.eco-node:hover{filter:brightness(1.08)}
-.card:focus-visible,.lcard:focus-visible,.vcard:focus-visible,.shv:focus-visible,.mcard:focus-visible,.leadim:focus-visible,a.eco-node:focus-visible,.eco-card:focus-visible,.eco-co:focus-visible,.model:focus-visible,.mini:focus-visible{outline:1px solid rgba(255,255,255,.5);outline-offset:3px}
+.card:focus-visible,.lcard:focus-visible,.vcard:focus-visible,.shv:focus-visible,.mcard:focus-visible,a.eco-node:focus-visible,.eco-card:focus-visible,.eco-co:focus-visible,.model:focus-visible,.mini:focus-visible,.leadstory .ltitle a:focus-visible,.leadstory .btn:focus-visible{outline:1px solid rgba(255,255,255,.5);outline-offset:3px}
 @media (max-width:560px){
 .eco-node .eco-k{font-size:.78rem}
 .eco-node li{font-size:.62rem;line-height:1.2}
@@ -2361,8 +2360,9 @@ def card(a, lang, lead=False):
     title = f'<h3>{esc(card_title(a, lang))}</h3>'
     # A wide lead puts the rubric above the photo. Grid cards keep it underneath.
     if lead:
-        return (f'<a class="{cls}" href="{url(lang, a["slug"] + "/")}">{line}{im}'
-                f'<div class="body">{title}</div></a>')
+        # The photo is not a link. Only the title goes to the article.
+        return (f'<div class="{cls}">{line}{im}'
+                f'<div class="body"><a href="{url(lang, a["slug"] + "/")}">{title}</a></div></div>')
     return (f'<a class="{cls}" href="{url(lang, a["slug"] + "/")}">{im}'
             f'<div class="body">{line}{title}</div></a>')
 
@@ -3513,8 +3513,8 @@ def home_lead(a, lang, title_tag="h1"):
     tag = "h1" if title_tag == "h1" else "h2"
     return (f'<article class="leadstory">'
             f'{rubric_line(a, lang)}'
-            f'<a class="leadim" href="{href}">'
-            f'{resp_img(site_img(a), t["title"], SIZES_LEAD, high=True, lazy=False, width=1600, height=900)}</a>'
+            f'<div class="leadim">'
+            f'{resp_img(site_img(a), t["title"], SIZES_LEAD, high=True, lazy=False, width=1600, height=900)}</div>'
             f'<div>'
             f'<{tag} class="ltitle"><a href="{href}">{esc(card_title(a, lang))}</a></{tag}>'
             f'<a class="btn" href="{href}">{esc(L["read_story"])}</a></div></article>')
@@ -3858,10 +3858,10 @@ def pv_side(arts, lang, a=None):
 
 def pv_lead(a, lang, href):
     t = a[lang]
-    return (f'<a class="pv-lead" href="{href}">'
+    return (f'<div class="pv-lead">'
             f'{rubric_line(a, lang)}'
             f'<span class="im">{resp_img(site_img(a), t["title"], SIZES_LEAD, high=True, lazy=False)}{ovl(a, lang)}</span>'
-            f'<span><h1>{esc(t["title"])}</h1></span></a>')
+            f'<span><a href="{href}"><h1>{esc(t["title"])}</h1></a></span></div>')
 
 
 def pv_home(variant, arts, lang):
@@ -3892,10 +3892,10 @@ def pv_home(variant, arts, lang):
             blocks.append(
                 f'<section class="pv-block"><div class="h2"><h2>{esc(title)}</h2>'
                 f'<a href="{url(lang, path)}">{esc(LANGS[lang]["see_all"])}</a></div>'
-                f'<a class="pv-lead" href="{url(lang, head["slug"] + "/")}">'
+                f'<div class="pv-lead">'
                 f'{rubric_line(head, lang)}'
                 f'<span class="im">{resp_img(site_img(head), "", SIZES_CARD)}{ovl(head, lang)}</span>'
-                f'<span><h2>{esc(head[lang]["title"])}</h2></span></a>{rows}</section>')
+                f'<a href="{url(lang, head["slug"] + "/")}"><h2>{esc(head[lang]["title"])}</h2></a></div>{rows}</section>')
         main += f'<h1 class="sr">{esc(NAME)}</h1>' + "".join(blocks)
     return f'<div class="pv pv-{variant}"><div class="pv-grid"><div>{main}</div>{pv_side(arts, lang)}</div></div>'
 

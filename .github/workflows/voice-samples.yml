@@ -1,0 +1,28 @@
+name: Voice samples
+
+# Renders three narration samples on this branch only. Does not upload to YouTube
+# and does not change the ElevenLabs plan. The key is a secret and is never printed.
+on:
+  push:
+    branches: [cursor/voice-samples-d0ac]
+
+permissions:
+  contents: read
+
+jobs:
+  samples:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+      - name: Render three narration samples
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          ELEVENLABS_VOICE_ID: ${{ vars.ELEVENLABS_VOICE_ID }}
+          VOICE_OUT: video/out/voice-samples
+        run: python3 video/voice_samples.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: voice-samples
+          path: video/out/voice-samples/
+          retention-days: 14

@@ -375,8 +375,8 @@ PAGE_FACTS = {
     },
     "semi-standard-range": {
         "intro": {
-            "en": "The shorter-range 2026 US tractor. On sale to fleets, with volume production in Nevada and customer deliveries reported from late September 2026. The photograph is the European show truck, which Tesla said uses this hardware. It is not a picture of the US light-bar cab.",
-            "nl": "De Amerikaanse trekker van 2026 met het kortere bereik. Te koop voor vloten, met serieproductie in Nevada en klantleveringen gemeld vanaf eind september 2026. De foto is de Europese showtruck, waarvan Tesla zei dat die deze hardware gebruikt. Het is geen foto van de Amerikaanse lichtbalk-cabine.",
+            "en": "The shorter-range 2026 US tractor. On sale to fleets, with volume production in Nevada and customer deliveries reported from late September 2026. The picture is a library image of the light-bar production cab. It does not show a measured chassis difference from Long Range.",
+            "nl": "De Amerikaanse trekker van 2026 met het kortere bereik. Te koop voor vloten, met serieproductie in Nevada en klantleveringen gemeld vanaf eind september 2026. De foto is een bibliotheekbeeld van de productietruck met lichtbalk. Het toont geen gemeten chassisverschil met Long Range.",
         },
         "sections": [
             S("Standard Range", "Standard Range", [
@@ -424,8 +424,8 @@ PAGE_FACTS = {
     },
     "semi-long-range": {
         "intro": {
-            "en": "The 500-mile 2026 US tractor, Tesla’s top variant in the Q3 letter. Same production timing as Standard Range. Not announced for Europe. No licensed photograph of the longer chassis was found, so the picture is the European show truck.",
-            "nl": "De Amerikaanse trekker van 2026 met 500 mijl, Tesla’s topvariant in de Q3-brief. Dezelfde productietiming als Standard Range. Niet aangekondigd voor Europa. Er is geen gelicentieerde foto van het langere chassis gevonden, dus de foto is de Europese showtruck.",
+            "en": "The 500-mile 2026 US tractor, Tesla’s top variant in the Q3 letter. Same production timing as Standard Range. Not announced for Europe. The picture is a library image of the light-bar cab with a trailer. It is not a measured photograph of the longer chassis.",
+            "nl": "De Amerikaanse trekker van 2026 met 500 mijl, Tesla’s topvariant in de Q3-brief. Dezelfde productietiming als Standard Range. Niet aangekondigd voor Europa. De foto is een bibliotheekbeeld van de lichtbalk-cabine met een trailer. Het is geen gemeten foto van het langere chassis.",
         },
         "sections": [
             S("Long Range", "Long Range", [
@@ -521,8 +521,8 @@ PAGE_FACTS = {
     },
     "semi-2022-pilot": {
         "intro": {
-            "en": "The hand-built trucks first handed to PepsiCo at Gigafactory Nevada on 1–2 December 2022. Tesla later described that run as a pilot. It is not the 2026 volume truck. Do not copy 548 kWh, 822 kWh, 4680 cells, electric steering or the light bar onto this page. The photograph is a PepsiCo pilot truck from 2023, with the earlier front lights.",
-            "nl": "De met de hand gebouwde trucks die op 1–2 december 2022 als eerste aan PepsiCo werden overgedragen in Gigafactory Nevada. Tesla beschreef die reeks later als een pilot. Dit is niet de serietruck van 2026. Zet 548 kWh, 822 kWh, 4680-cellen, elektrische besturing of de lichtbalk niet op deze pagina. De foto is een PepsiCo-pilottruck uit 2023, met de eerdere voorkant.",
+            "en": "The hand-built trucks first handed to PepsiCo at Gigafactory Nevada on 1–2 December 2022. Tesla later described that run as a pilot. It is not the 2026 volume truck. Do not copy 548 kWh, 822 kWh, 4680 cells, electric steering or the light bar onto this page. The photograph shows that earlier cab, with the original front lights and door mirrors.",
+            "nl": "De met de hand gebouwde trucks die op 1–2 december 2022 als eerste aan PepsiCo werden overgedragen in Gigafactory Nevada. Tesla beschreef die reeks later als een pilot. Dit is niet de serietruck van 2026. Zet 548 kWh, 822 kWh, 4680-cellen, elektrische besturing of de lichtbalk niet op deze pagina. De foto toont die eerdere cabine, met de oorspronkelijke voorkant en buitenspiegels.",
         },
         "sections": [
             S("2022 Pilot", "Pilot 2022", [

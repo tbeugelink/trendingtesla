@@ -1,0 +1,279 @@
+{
+  "slug": "spacex-caught-starship-after-22-hours",
+  "date": "2026-11-19",
+  "time": "21:08",
+  "category": "spacex",
+  "topic": "starship",
+  "card": {
+    "en": "SpaceX Caught Starship After 22 Hours",
+    "nl": "SpaceX ving Starship na 22 uur"
+  },
+  "image": "lib/starship-pad.jpg",
+  "images": [
+    "lib/starship-pad.jpg",
+    "diagrams/flight15-timeline.jpg",
+    "diagrams/flight15-orbit.jpg",
+    "diagrams/flight15-catch.jpg",
+    "lib/starship-launch.jpg",
+    "lib/starlink-satellites.jpg"
+  ],
+  "credits": [
+    {
+      "credit": "TrendingTesla library illustrations of a Starship stack, a liftoff and Starlink satellites. Not photographs of Flight 15",
+      "page": "https://trendingtesla.com/"
+    },
+    {
+      "credit": "Diagrams drawn for this article from the SpaceX Flight 15 timeline. Not photographs",
+      "page": "https://www.spacex.com/launches/starship-flight-15/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "SpaceX — Starship Flight 15",
+      "url": "https://www.spacex.com/launches/starship-flight-15/"
+    },
+    {
+      "title": "Spaceflight Now — Starship returns to Starbase and a successful tower catch",
+      "url": "https://spaceflightnow.com/2026/11/13/live-coverage-starship-flight-15-attempts-to-recover-full-vehicle-in-double-launch-pad-catch/"
+    },
+    {
+      "title": "Space.com — SpaceX catches Starship upper stage for the first time",
+      "url": "https://www.space.com/space-exploration/launches-spacecraft/spacex-chopsticks-catch-starship-upper-stage-flight-14"
+    }
+  ],
+  "label": {
+    "style": "c",
+    "pal": "gy",
+    "en": {
+      "sub": "SHIP CAUGHT",
+      "text": "22 HOURS"
+    },
+    "nl": {
+      "sub": "SCHIP GEVANGEN",
+      "text": "22 UUR"
+    }
+  },
+  "en": {
+    "title": "SpaceX Caught Starship After 22 Hours",
+    "description": "On Flight 15, SpaceX caught the Starship ship 22 hours and 32 minutes after liftoff. The booster's catch was aborted over the Gulf. The 22-hour figure is SpaceX's own timeline.",
+    "body": "<p>SpaceX caught a Starship coming back from orbit. On Flight 15 the ship left Pad 2 at Starbase, Texas, on Friday 13 November 2026 and was in the launch tower's arms on Saturday. SpaceX says it approached the same site 22 and a half hours after liftoff. The company's timeline, which it marks as approximate, puts the catch at 22 hours, 32 minutes and 34 seconds. The booster that lifted the ship did not come back to the tower.</p>\n<h2>What did SpaceX catch?</h2>\n<p><strong>The ship, on its first return from orbit to the tower.</strong> SpaceX's flight page says Starship completed its ascent, reached orbit on a short burn from a single Raptor, and deployed 26 Starlink V3 satellites. Contact was made with every satellite, and SpaceX says they were already raising their orbits. After more than 20 hours of monitoring, one sea-level Raptor fired a deorbit burn of about 10 seconds. The ship entered, went from supersonic to subsonic in under a minute, lit a landing burn, flipped, and stepped from three engines to two and then to one. The arms, which SpaceX calls Mechazilla, closed. SpaceX says that was the first time. Spaceflight Now and Space.com both time the catch at 3:20 p.m. Texas time on 14 November, and both name the vehicle Ship 42. SpaceX's own page does not use that serial number.</p>\n<h2>So what happened to the booster?</h2>\n<p><strong>Its catch was aborted, and the stage was lost offshore.</strong> SpaceX says the booster left on 33 Raptors, then relit 32 of a planned 33 for the boostback burn. That burn ended early because of low fuel mass. The root cause, SpaceX says, is still under investigation. Guidance, navigation and control then triggered an automated abort during the coast and diverted the booster to an offshore site. It flew a landing burn, the engines cut off while it was hovering over the Gulf, and the flight termination system fired. Spaceflight Now reports that the booster exploded at sea. The same outlet and Space.com call this stage Booster 22. One line on SpaceX's timeline still reads \"landing burn shutdown and catch\" at 6 minutes 35 seconds. That table is labelled approximate. The flight report above it is the account of what happened, and that account does not include a booster catch.</p>\n<h2>Why did the ship take 22 hours?</h2>\n<p><strong>It was in orbit, and SpaceX watched it through earlier chances to come down.</strong> The booster never reached orbit, so its return was a matter of minutes. The ship did reach orbit, and SpaceX describes a long coast rather than a missed landing. The timeline lists an early return check near Hawaii at 1 hour 28 minutes, a check near Chile at 7 hours 16 minutes, and a final Hawaii check at 20 hours 42 minutes. Spaceflight Now reports that splashdowns off Hawaii or Chile were available and were not used. The deorbit burn comes after that final check. SpaceX does not call the wait a failure.</p>\n<h2>How did the catch itself work?</h2>\n<p><strong>Engines, a flip, and the arms.</strong> SpaceX's timeline starts the landing burn at 22 hours, 32 minutes and 16 seconds, with the flip two seconds later, then three engines to two, then two to one, then shutdown and the catch in the same second. The page says the ship flew a last swoosh over the Gulf and came down through the clouds into the arms. The published sequence does not include a parachute or a splashdown of the ship. Pictures in this article and in the video are diagrams and library illustrations of a Starship and a tower. They are not frames from the Flight 15 webcast.</p>\n<h2>What is still open?</h2>\n<p><strong>The cause of the low fuel, and whether this ship flies again.</strong> SpaceX says the early end of the boostback burn is under investigation. It has not reported a second flight of the caught ship. Space.com reports that Super Heavy had already been caught on three earlier flights, so the new event is the ship, not the idea of a tower catch. A caught ship can be inspected. That is not a date for the next launch, and it is not a landing on the Moon or Mars. The next hard fact is whatever SpaceX publishes on the fuel investigation, and whether Ship 42, as the press identifies it, is stacked again.</p>"
+  },
+  "nl": {
+    "title": "SpaceX ving Starship na 22 uur",
+    "description": "Op vlucht 15 ving SpaceX het Starship-schip 22 uur en 32 minuten na de start. De vangst van de booster werd boven de Golf afgebroken. Het getal van 22 uur staat op de eigen tijdlijn van SpaceX.",
+    "body": "<p>SpaceX heeft een Starship gevangen dat terugkwam uit een baan om de aarde. Op vlucht 15 vertrok het schip vrijdag 13 november 2026 van Pad 2 op Starbase in Texas, en hing het zaterdag in de armen van de lanceertoren. SpaceX schrijft dat het dezelfde plek naderde, 22 en een half uur na de start. Op de tijdlijn van het bedrijf, die als benadering is gemarkeerd, staat de vangst op 22 uur, 32 minuten en 34 seconden. De booster die het schip optilde, kwam niet terug bij de toren.</p>\n<h2>Wat heeft SpaceX gevangen?</h2>\n<p><strong>Het schip, voor het eerst terug uit een baan om de aarde, in de toren.</strong> Op de vluchtpagina van SpaceX staat dat Starship zijn stijging afrondde, met een korte burn van één Raptor in een baan kwam, en 26 Starlink V3-satellieten uitzette. Met elke satelliet was contact, en SpaceX zegt dat ze hun baan al begonnen te verhogen. Na meer dan 20 uur bewaking zette één Raptor op zeeniveau een deorbit burn van ongeveer 10 seconden in. Het schip kwam binnen, ging in minder dan een minuut van supersonisch naar subsonisch, startte een landingsburn, draaide, en ging van drie motoren naar twee en toen naar één. De armen, die SpaceX Mechazilla noemt, sloten. SpaceX zegt dat dit de eerste keer was. Spaceflight Now en Space.com zetten de vangst allebei op 15.20 uur Texaanse tijd op 14 november, en allebei noemen ze het schip Ship 42. De eigen pagina van SpaceX gebruikt dat serienummer niet.</p>\n<h2>Dus wat gebeurde er met de booster?</h2>\n<p><strong>De vangst werd afgebroken, en de trap ging verloren boven zee.</strong> SpaceX zegt dat de booster op 33 Raptors vertrok en daarna 32 van de geplande 33 herstartte voor de boostback burn. Die burn stopte vroeg door te weinig brandstofmassa. De oorzaak daarvan, zegt SpaceX, wordt nog onderzocht. De besturing brak de terugkeer tijdens de glijvlucht automatisch af en stuurde de booster naar een plek voor de kust. Hij vloog een landingsburn, de motoren stopten terwijl hij nog boven de Golf hing, en het vluchtbeëindigingssysteem ging af. Spaceflight Now meldt dat de booster op zee explodeerde. Dat medium en Space.com noemen deze trap Booster 22. Op de tijdlijn van SpaceX staat nog een regel \"landing burn shutdown and catch\" op 6 minuten en 35 seconden. Die tabel is als benadering gelabeld. Het vluchtverslag erboven beschrijft geen vangst van de booster.</p>\n<h2>Waarom deed het schip er 22 uur over?</h2>\n<p><strong>Het zat in een baan om de aarde, en SpaceX keek toe bij eerdere kansen om te dalen.</strong> De booster haalde geen baan, dus zijn terugkeer was een kwestie van minuten. Het schip haalde die baan wel, en SpaceX beschrijft een lange glijvlucht, geen mislukte landing. De tijdlijn noemt een vroege controle bij Hawaï na 1 uur en 28 minuten, een controle bij Chili na 7 uur en 16 minuten, en een laatste controle bij Hawaï na 20 uur en 42 minuten. Spaceflight Now meldt dat een landing in zee bij Hawaï of Chili mogelijk was en niet is gebruikt. De deorbit burn komt na die laatste controle. SpaceX noemt het wachten geen storing.</p>\n<h2>Hoe werkte de vangst zelf?</h2>\n<p><strong>Motoren, een draai, en de armen.</strong> De tijdlijn van SpaceX start de landingsburn op 22 uur, 32 minuten en 16 seconden, de draai twee seconden later, dan van drie motoren naar twee, van twee naar één, en in dezelfde seconde het uitzetten en de vangst. De pagina zegt dat het schip een laatste boog over de Golf vloog en door de wolken in de armen zakte. In de gepubliceerde volgorde zit geen parachute en geen landing van het schip in zee. De beelden bij dit stuk en in de video zijn diagrammen en bibliotheekillustraties van een Starship en een toren. Het zijn geen beelden uit de webcast van vlucht 15.</p>\n<h2>Wat staat nog open?</h2>\n<p><strong>De oorzaak van de te lage brandstof, en of dit schip nog een keer vliegt.</strong> SpaceX zegt dat het vroege einde van de boostback burn wordt onderzocht. Een tweede vlucht van het gevangen schip is niet gemeld. Space.com meldt dat Super Heavy op drie eerdere vluchten al was gevangen, dus het nieuwe feit is het schip, niet het idee van een vangst door de toren. Een gevangen schip kan worden nagekeken. Dat is geen datum voor de volgende lancering, en geen landing op de Maan of op Mars. Het volgende harde feit is wat SpaceX publiceert over het brandstofonderzoek, en of Ship 42, zoals de pers het noemt, opnieuw op de stapel staat.</p>"
+  },
+  "short": {
+    "hook": "number",
+    "hook_clip": false,
+    "yt_title_en": "SpaceX Caught Starship After 22 Hours",
+    "yt_title_nl": "SpaceX ving Starship na 22 uur",
+    "hooks": [
+      {
+        "text": "SpaceX caught Starship after 22 hours.",
+        "type": "number"
+      },
+      {
+        "text": "A Starship came back from orbit to the tower.",
+        "type": "first"
+      },
+      {
+        "text": "The ship waited a day. The booster did not.",
+        "type": "contrast"
+      }
+    ],
+    "hook_pick": {
+      "index": 0,
+      "why": "Six words, one claim, the number that is on SpaceX's own timeline."
+    },
+    "story": [
+      {
+        "part": "hook",
+        "t": "0-3s",
+        "text": "SpaceX caught Starship after 22 hours.",
+        "overlay": "Starship caught after 22 hours",
+        "lib": [
+          "starship-pad.jpg",
+          "starship-launch.jpg"
+        ],
+        "sfx": "a deep rocket landing roar and a heavy metallic clunk"
+      },
+      {
+        "part": "tension",
+        "t": "3-6s",
+        "text": "The ship left Friday and came back Saturday.",
+        "overlay": "Friday launch. Saturday return.",
+        "lib": [
+          "starship-launch.jpg",
+          "starship-pad.jpg"
+        ]
+      },
+      {
+        "part": "tension",
+        "t": "6-9s",
+        "text": "It released 26 Starlink satellites on the way.",
+        "overlay": "26 Starlink satellites released",
+        "lib": [
+          "starlink-satellites.jpg",
+          "starship-launch.jpg"
+        ]
+      },
+      {
+        "part": "tension",
+        "t": "9-12s",
+        "text": "The booster's catch was aborted offshore.",
+        "overlay": "Booster catch aborted offshore",
+        "lib": [
+          "starship-launch.jpg",
+          "starship-pad.jpg"
+        ]
+      },
+      {
+        "part": "tension",
+        "t": "12-16s",
+        "text": "Low fuel ended its boostback burn early.",
+        "overlay": "Boostback ended early",
+        "lib": [
+          "starship-launch.jpg",
+          "starship-pad.jpg"
+        ]
+      },
+      {
+        "part": "payoff",
+        "t": "16-20s",
+        "text": "The ship fell, flipped, and lit its engines.",
+        "overlay": "It flips and lights engines",
+        "lib": [
+          "starship-pad.jpg",
+          "starship-launch.jpg"
+        ]
+      },
+      {
+        "part": "payoff",
+        "t": "20-24s",
+        "text": "Two tower arms closed around the ship.",
+        "overlay": "Two arms closed around it",
+        "lib": [
+          "starship-pad.jpg",
+          "starship-launch.jpg"
+        ]
+      },
+      {
+        "part": "payoff",
+        "t": "24-28s",
+        "text": "First catch of a ship back from orbit.",
+        "overlay": "First ship catch from orbit",
+        "lib": [
+          "starship-pad.jpg",
+          "starlink-satellites.jpg"
+        ]
+      }
+    ],
+    "loop": {
+      "last": "First catch of a ship back from orbit.",
+      "how": "The restart names the event the last line just proved: a ship back from orbit, caught after 22 hours."
+    },
+    "en": "SpaceX caught Starship after 22 hours. The ship left Friday and came back Saturday. It released 26 Starlink satellites on the way. The booster's catch was aborted offshore. Low fuel ended its boostback burn early. The ship fell, flipped, and lit its engines. Two tower arms closed around the ship. First catch of a ship back from orbit.",
+    "nl": "SpaceX ving Starship na 22 uur. Het schip vertrok vrijdag en kwam zaterdag terug. Onderweg zette het 26 Starlink-satellieten uit. De vangst van de booster werd voor de kust afgebroken. Te weinig brandstof stopte de boostback burn vroeg. Het schip viel, draaide en startte zijn motoren. Twee torenarmen sloten zich om het schip. De eerste vangst van een schip terug uit een baan."
+  },
+  "video": {
+    "yt_title_en": "SpaceX Caught Starship After 22 Hours",
+    "yt_title_nl": "SpaceX ving Starship na 22 uur",
+    "en": [
+      {
+        "text": "SpaceX caught Starship after 22 hours. The ship left Starbase on Friday and was in the tower's arms on Saturday. Those arms had never closed on a Starship coming back from orbit. One image is enough for the claim. A ship, a tower, a day between them. The twist is the other half of the rocket. The booster that lifted it did not come home. Its return burn ended early, it aborted the catch, and it was lost over the Gulf. The ship then stayed up for most of a day, with earlier chances to come down that were not taken. Why it waited is the question this video holds until the middle. The minutes come first. The reason comes after.",
+        "img": [
+          "lib/starship-pad.jpg",
+          "diagrams/flight15-timeline.jpg"
+        ]
+      },
+      {
+        "text": "This was Flight 15, from Pad 2 at Starbase in Texas. There is no host in this account and no sponsor. The stake is one number and one miss. SpaceX says the ship approached the same site it had left 22 and a half hours earlier. The company's timeline, marked approximate, puts the catch at 22 hours, 32 minutes and 34 seconds after liftoff. That is the 22 hours in the title. It is not a round guess. Spaceflight Now reports liftoff at 4:47 in the afternoon, Texas time, on 13 November 2026, and the catch at 3:20 the next afternoon. Space.com gives that same catch time. Both reports call the ship Ship 42 and the booster Booster 22. SpaceX's flight page does not print those serial numbers, so they stay attributed to those two reports. What SpaceX does describe is the burns, the 26 satellites, the abort and the catch. Four parts follow from that record. The minutes of the flight. Why the ship waited. How the tower catches a ship that comes back on its engines. And what one caught ship changes, and what it does not.",
+        "img": [
+          "lib/starship-launch.jpg",
+          "diagrams/flight15-timeline.jpg"
+        ]
+      },
+      {
+        "head": "What happened, minute by minute?",
+        "img": [
+          "diagrams/flight15-timeline.jpg"
+        ]
+      },
+      {
+        "text": "SpaceX lists every time in this section as approximate. Liftoff is zero. At 58 seconds the stack hits Max Q, the moment of peak aerodynamic stress. The booster is still doing the work, on 33 Raptor engines, climbing away from Pad 2. Most of those engines cut off at 2 minutes and 19 seconds. Two seconds later, at 2 minutes and 21 seconds, the ship lights its own six Raptors and the stages separate. SpaceX calls that hot-staging. The ship is now on its own path to space. The booster is not done. At 2 minutes and 26 seconds it starts the boostback burn, the burn that is supposed to turn it around toward Texas. SpaceX says it relit 32 of the 33 engines planned for that burn. One engine of that set did not come back. The burn is marked shut down at 3 minutes and 2 seconds. That is early. SpaceX's reason is low fuel mass. The root cause of that shortage, SpaceX says, is still under investigation. So the first three minutes already contain the failure that decides the booster, even though the ship is flying normally above it.",
+        "img": [
+          "lib/starship-launch.jpg",
+          "diagrams/flight15-timeline.jpg"
+        ]
+      },
+      {
+        "text": "The booster does not reach the tower. SpaceX says that during the coast, guidance, navigation and control triggered an automated abort and diverted the booster to an offshore landing location. It did execute a landing burn. The engines cut off while it was hovering over the Gulf. Upon that shutdown, the flight termination system was triggered. Spaceflight Now reports the result as an explosion at sea, and reports that a SpaceX commentator later said the abort was the guidance system detecting that the booster was not where it needed to be to attempt the catch. The same report says he corrected an earlier remark, and that the guidance system was not itself the fault. The fault SpaceX states on the flight page remains the early shutdown from low fuel mass. Read the page in that order. The narrative says the catch was aborted. Lower down, the timeline still has a mark at 6 minutes and 10 seconds for landing burn start, and at 6 minutes and 35 seconds for landing burn shutdown and catch. Those lines sit under the heading All Times Approximate. They are not the outcome the flight report describes. Treating the 6 minute 35 second line as a successful catch would contradict SpaceX's own account.",
+        "img": [
+          "diagrams/flight15-timeline.jpg",
+          "lib/starship-launch.jpg"
+        ]
+      },
+      {
+        "text": "The ship continues on a nominal ascent. That is SpaceX's word, nominal. Engine cutoff is at 8 minutes and 9 seconds. There is then a coast of its own, much shorter than the one still to come. At 26 minutes and 10 seconds a single Raptor reignites. The timeline shuts that orbital insertion burn down at 26 minutes and 30 seconds, about 20 seconds of thrust to finish the job of getting into orbit. Payload deploy starts at 35 minutes and 1 second. It is marked complete at 1 hour, 17 minutes and 40 seconds, so the deployment itself runs for roughly 43 minutes. SpaceX says 26 Starlink V3 satellites left the ship. Contact was made soon after with every satellite. SpaceX says they were already beginning to raise their orbits to join the constellation. Spaceflight Now describes the coast that follows as 14 orbits. That orbit count is the outlet's, not a figure printed on the SpaceX timeline. What the timeline does show next is a long gap. The catch is still many hours away. The satellites are the part of the flight that is already finished.",
+        "img": [
+          "lib/starlink-satellites.jpg",
+          "diagrams/flight15-orbit.jpg"
+        ]
+      },
+      {
+        "head": "So why did the ship wait?",
+        "img": [
+          "diagrams/flight15-orbit.jpg"
+        ]
+      },
+      {
+        "text": "The booster could attempt a return in minutes because it never reached orbit. It was still on a ballistic path back toward the Gulf and, in the plan, toward the tower. The ship does not get that option. Once the insertion burn is complete, the ship is in orbit, and an orbit is not a road you turn around on. Slowing down enough to fall out of it takes a planned burn at a planned place. SpaceX says that after the satellites were deployed, the ship entered a long coast around Earth. The team monitored its systems for more than 20 hours before preparing the return to the launch site. That sentence is the company's explanation of the wait. It is monitoring, not a reported malfunction. The timeline shows the checks inside the coast, and the names tell you the ship was not sitting over Texas. An early return check near Hawaii at 1 hour, 27 minutes and 46 seconds. A check near Chile at 7 hours, 15 minutes and 35 seconds. A final Hawaii check at 20 hours, 41 minutes and 55 seconds. Hawaii, then Chile, then Hawaii again. The ground track has to come back around. Spaceflight Now reports that SpaceX could have ended the mission at the earlier checks, with splashdowns off Hawaii or Chile, and that those options were not used. The ship was allowed to stay up.",
+        "img": [
+          "diagrams/flight15-orbit.jpg",
+          "lib/starlink-satellites.jpg"
+        ]
+      },
+      {
+        "text": "The decision shows up on the timeline almost an hour after the final Hawaii check. At 21 hours, 35 minutes and 57 seconds one sea-level Raptor starts the deorbit burn. The timeline shuts it down at 21 hours, 36 minutes and 7 seconds. About 10 seconds. That short burn is what breaks the orbit. Entry comes later, at 22 hours, 10 minutes and 46 seconds, so there is roughly half an hour of falling before the ship is in the atmosphere in the way the timeline marks entry. From entry to the catch is another 22 minutes. The ship is transonic at 22 hours, 29 minutes and 34 seconds. It is subsonic at 22 hours, 30 minutes and 13 seconds. Less than a minute from transonic to subsonic. The landing burn starts at 22 hours, 32 minutes and 16 seconds, about two minutes after it goes subsonic. Nothing in SpaceX's account calls the long coast a delay, a hold for weather, or a failure. The ship was watched. The earlier splashdown options reported by Spaceflight Now were left unused. The deorbit burn is the decision to come back to Texas, and the clock from that burn to the arms is under an hour. Almost all of the 22 and a half hours is the coast before that decision.",
+        "img": [
+          "diagrams/flight15-orbit.jpg",
+          "diagrams/flight15-timeline.jpg"
+        ]
+      },
+      {
+        "head": "So how do the arms catch it?",
+        "img": [
+          "diagrams/flight15-catch.jpg"
+        ]
+      },
+      {
+        "text": "The landing burn is a short, stepped sequence, not one long blast. The timeline starts it at 22 hours, 32 minutes and 16 seconds. The flip is at 22 hours, 32 minutes and 18 seconds, two seconds later. SpaceX's narrative says three Raptor engines ignited for that landing flip and for the slow descent into the arms. The timeline then takes engines away. At 22 hours, 32 minutes and 26 seconds the burn goes from three engines to two. At 22 hours, 32 minutes and 33 seconds it goes from two engines to one. One second after that, at 22 hours, 32 minutes and 34 seconds, the landing burn shuts down and the catch is marked. From the first relight of the landing burn to the arms is 18 seconds. SpaceX says the ship had flown a final swoosh out over the Gulf, come back toward the coast, broken through the clouds, and descended into the arms the company calls Mechazilla. The arms closed. The page says this was the first time they caught Starship. The sequence as published is engines, a flip, fewer engines, shutdown, arms. It does not describe a parachute. It does not describe the ship splashing down. The booster had already done that, hours earlier, and had not survived it.",
+        "img": [
+          "diagrams/flight15-catch.jpg",
+          "lib/starship-pad.jpg"
+        ]
+      },
+      {
+        "head": "What does one caught ship change?",
+        "img": [
+          "lib/starlink-satellites.jpg"
+        ]
+      },
+      {
+        "text": "Separate the two results, because they are not the same achievement. The 26 Starlink V3 satellites were already away before anyone committed the ship to the deorbit burn. SpaceX says contact was made with every one of them, and that they were starting to raise their orbits into the constellation. That is a delivery, and it stands even if the catch had failed. The catch is the other claim. Falcon 9 brings its first stage home and does not recover the upper stage. Every Falcon 9 flight throws that stage away. A Starship that returns to the arms can, in principle, be inspected and prepared to fly again. In principle is the right size of the claim. SpaceX has not reported a second flight of this ship. The booster on Flight 15 was not recovered, so the flight was not a catch of both stages, which is what the plan on the timeline still shows at the 6 minute mark. Space.com reports that Super Heavy had already been caught on three earlier test flights. The new event is the ship, coming back from orbit rather than from the edge of space a few minutes after launch. A ship that can come back is a piece a higher flight rate would need, and a piece any later plan for tankers or deep-space flights would need. This video does not turn that need into a date. There is no Moon landing in this flight, and no Mars landing. There is one ship in the arms, and a booster that was lost, and an investigation SpaceX says is still open.",
+        "img": [
+          "lib/starlink-satellites.jpg",
+          "lib/starship-pad.jpg"
+        ]
+      },
+      {
+        "text": "So the opening claim stands, and so does the twist. SpaceX caught Starship after 22 hours. The picture from the first minute is the same picture now. A ship back at the tower it left. The exact mark on SpaceX's timeline is 22 hours, 32 minutes and 34 seconds, and the flight page also describes that return as 22 and a half hours after liftoff. The booster did not get that ending. Its burn ended early, the catch was aborted, and the stage was lost over the Gulf. The ship did get the ending, and only after more than 20 hours of monitoring, the unused earlier return options, and a 10 second deorbit burn. That is the whole flight. The catch was real. The double catch was not. Read the full article on trendingtesla.com, and subscribe.",
+        "img": [
+          "lib/starship-pad.jpg",
+          "diagrams/flight15-catch.jpg"
+        ]
+      }
+    ]
+  }
+}

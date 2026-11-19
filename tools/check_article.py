@@ -185,8 +185,17 @@ def check(path):
             warn.append(f"long video: {bare} text block(s) without their own picture")
         if texts and words(re.split(r"(?<=[.!?])\s", texts[0]["text"])[0]) > 16:
             warn.append("long video: the first sentence is long; it must be the hook claim itself")
-        if texts and BANNED.search(texts[-1]["text"]):
-            err.append("long video ends with a call to action (rule: a payoff that links back to the opening)")
+        if texts:
+            # The news-package close may say "Read the full article on trendingtesla.com".
+            # Other plugs ("like and subscribe", "see you there") stay banned.
+            end_check = re.sub(
+                r"read the full article on trending ?tesla(\.com| dot com)",
+                "",
+                texts[-1]["text"],
+                flags=re.I,
+            )
+            if BANNED.search(end_check):
+                err.append("long video ends with a call to action (rule: a payoff that links back to the opening)")
         for k in ("yt_title_en", "yt_title_nl"):
             val = (a.get("video") or {}).get(k)
             if not val:

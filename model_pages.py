@@ -472,8 +472,8 @@ PAGE_FACTS = {
     },
     "semi-europe": {
         "intro": {
-            "en": "The European Semi shown at IAA Transportation 2026. Dan Priestley called it the North American Standard Range truck on a different test cycle, with homologation changes. Not on sale. Demonstrations were targeted for the first half of 2027 and deliveries for the end of 2027. The photograph is that Hannover show truck.",
-            "nl": "De Europese Semi, getoond op de IAA Transportation 2026. Dan Priestley noemde het de Noord-Amerikaanse Standard Range-truck op een andere testcyclus, met homologatiewijzigingen. Niet te koop. Demonstraties waren gericht op de eerste helft van 2027 en leveringen op eind 2027. De foto is die showtruck uit Hannover.",
+            "en": "The European Semi shown at IAA Transportation 2026. Dan Priestley called it the North American Standard Range truck on a different test cycle, with homologation changes. Not on sale. Demonstrations were targeted for the first half of 2027 and deliveries for the end of 2027. The top picture is a Tesla Semi. The Hannover show truck is below.",
+            "nl": "De Europese Semi, getoond op de IAA Transportation 2026. Dan Priestley noemde het de Noord-Amerikaanse Standard Range-truck op een andere testcyclus, met homologatiewijzigingen. Niet te koop. Demonstraties waren gericht op de eerste helft van 2027 en leveringen op eind 2027. De bovenste foto is een Tesla Semi. De showtruck uit Hannover staat eronder.",
         },
         "sections": [
             S("Europe", "Europa", [
@@ -521,8 +521,8 @@ PAGE_FACTS = {
     },
     "semi-2022-pilot": {
         "intro": {
-            "en": "The hand-built trucks first handed to PepsiCo at Gigafactory Nevada on 1–2 December 2022. Tesla later described that run as a pilot. It is not the 2026 volume truck. Do not copy 548 kWh, 822 kWh, 4680 cells, electric steering or the light bar onto this page. The photograph shows that earlier cab, with the original front lights and door mirrors.",
-            "nl": "De met de hand gebouwde trucks die op 1–2 december 2022 als eerste aan PepsiCo werden overgedragen in Gigafactory Nevada. Tesla beschreef die reeks later als een pilot. Dit is niet de serietruck van 2026. Zet 548 kWh, 822 kWh, 4680-cellen, elektrische besturing of de lichtbalk niet op deze pagina. De foto toont die eerdere cabine, met de oorspronkelijke voorkant en buitenspiegels.",
+            "en": "The hand-built trucks first handed to PepsiCo at Gigafactory Nevada on 1–2 December 2022. Tesla later described that run as a pilot. It is not the 2026 volume truck. Do not copy 548 kWh, 822 kWh, 4680 cells, electric steering or the light bar onto this page. The photograph is a blue PepsiCo pilot truck from 31 October 2023.",
+            "nl": "De met de hand gebouwde trucks die op 1–2 december 2022 als eerste aan PepsiCo werden overgedragen in Gigafactory Nevada. Tesla beschreef die reeks later als een pilot. Dit is niet de serietruck van 2026. Zet 548 kWh, 822 kWh, 4680-cellen, elektrische besturing of de lichtbalk niet op deze pagina. De foto is een blauwe PepsiCo-pilottruck van 31 oktober 2023.",
         },
         "sections": [
             S("2022 Pilot", "Pilot 2022", [

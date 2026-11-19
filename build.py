@@ -3567,9 +3567,11 @@ def model_hub(key, items, lang):
 def render_fact_sections(facts, lang):
     status = {
         "en": {"official": "official", "reported": "reported", "video": "stated on video",
-               "derived": "derived", "unclear": "unclear", "unknown": "not announced"},
+               "derived": "derived", "estimated": "estimated", "unclear": "unclear",
+               "conflict": "conflict", "unknown": "not announced"},
         "nl": {"official": "officieel", "reported": "gemeld", "video": "gezegd op video",
-               "derived": "berekend", "unclear": "onduidelijk", "unknown": "niet bekendgemaakt"},
+               "derived": "berekend", "estimated": "geschat", "unclear": "onduidelijk",
+               "conflict": "tegenstrijdig", "unknown": "niet bekendgemaakt"},
     }[lang]
     heads = ("Fact", "Value", "Status") if lang == "en" else ("Punt", "Waarde", "Status")
     parts = []
@@ -5799,17 +5801,28 @@ def build():
                 for sec in page_facts["sections"]:
                     for row in sec["rows"]:
                         label, value = row[lang]
-                        if row["status"] != "unknown":
+                        # Estimated checks and missing figures stay in the table, not as vehicle specs.
+                        if row["status"] not in ("unknown", "estimated"):
                             props.append((label, value))
             else:
                 props = facts
             if props:
                 vehicle_ld["additionalProperty"] = [
                     {"@type": "PropertyValue", "name": k, "value": v} for k, v in props]
+            fact_ld = ""
+            if page_facts and key.startswith("semi"):
+                fact_ld = ld_script({
+                    "@context": "https://schema.org", "@type": "WebPage",
+                    "name": name, "description": desc,
+                    "url": SITE + url(lang, f"model/{key}/"), "inLanguage": lang,
+                    "dateModified": "2026-11-19",
+                    "author": {"@type": "Organization", "name": NAME, "url": SITE},
+                    "publisher": {"@type": "Organization", "name": NAME, "url": SITE},
+                })
             write(url(lang, f"model/{key}/"),
                   page(lang, f"model/{key}/", name, desc,
                        shell(content, page_side(arts, lang, "model", key, skip=items)),
-                       extra_head=ld_script(crumb_ld) + ld_script(vehicle_ld), image=ph, active="models"))
+                       extra_head=ld_script(crumb_ld) + ld_script(vehicle_ld) + fact_ld, image=ph, active="models"))
 
         # ---------- Topic hubs, ecosystem map, Starship tracker ----------
         layer_paths = {layer["path"] for layer in LAYERS}

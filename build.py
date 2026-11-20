@@ -3713,7 +3713,7 @@ def money_article(a, arts, lang):
         f'{article_media(a, lang)}{toc}'
         f'<div class="prose">{body}</div>{product_boxes(a, lang)}{handy_box(a, lang)}{ad_html("end", lang)}'
         f'{article_sources(a, lang)}</article>')
-    col = f'{nav}{article}{prev_next(a, arts, lang)}{related_block(a, arts, lang)}{ml_bar(lang)}'
+    col = f'{nav}{article}{related_block(a, arts, lang)}{ml_bar(lang)}'
     wrap = "aread with-side" if side else "aread"
     aside = f'<div class="ad-side-wrap">{side}</div>' if side else ""
     return f'<div class="{wrap}"><div class="acol">{col}</div>{aside}</div>', ld
@@ -5886,7 +5886,7 @@ def build():
                 (section, section_href),
                 (t["title"], a["slug"] + "/"),
             ])
-            body = shell(nav + pv_article("b", a, arts, lang, live=True) + prev_next(a, arts, lang),
+            body = shell(nav + pv_article("b", a, arts, lang, live=True),
                           page_side(arts, lang, "article", a, tail=ml_bar(lang))) + nl_sticky(lang)
             head = ld_script(ld) + ld_script(crumb_ld)
             write(url(lang, a["slug"] + "/"),

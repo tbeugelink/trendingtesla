@@ -1,6 +1,6 @@
 # What works on the TrendingTesla YouTube channel
 
-Updated 2026-11-19 05:13 UTC by tools/learn.py from daily YouTube statistics (72 videos at least 48 hours old). Do not edit by hand.
+Updated 2026-11-20 05:08 UTC by tools/learn.py from daily YouTube statistics (72 videos at least 48 hours old). Do not edit by hand.
 
 - Shorts: 41 videos, typical 900 views after 48 hours.
 - Long videos: 31 videos, typical 26 views after 48 hours.
@@ -26,12 +26,12 @@ Views after 48 hours compared with a typical video of the same kind (1.0x = typi
 - model-x, model-x-classic: 0.9x views, watched -19 pts vs typical (n=1)
 - model-s, model-s-classic, model-s-plaid: 0.8x views, watched -17 pts vs typical (n=1)
 - no (company-wide): 0.8x views, watched +7 pts vs typical (n=49)
-- cybercab: 0.7x views, watched +2 pts vs typical (n=4)
+- cybercab: 0.7x views, watched +1 pts vs typical (n=4)
 - model-3-classic: 0.5x views, watched -1 pts vs typical (n=2)
 
 **explainer or news**
 - explainer: 0.9x views, watched +6 pts vs typical (n=48)
-- news: 0.8x views, watched +1 pts vs typical (n=24)
+- news: 0.8x views, watched +0 pts vs typical (n=24)
 
 **label has a question**
 - yes: 0.9x views, watched +4 pts vs typical (n=36)
@@ -47,7 +47,7 @@ Views after 48 hours compared with a typical video of the same kind (1.0x = typi
 - a (red kicker + yellow line): 0.7x views, watched +5 pts vs typical (n=20)
 
 **published**
-- morning: 0.9x views, watched +6 pts vs typical (n=40)
+- morning: 0.9x views, watched +5 pts vs typical (n=40)
 - evening: 0.9x views, watched +2 pts vs typical (n=32)
 
 **title has a number**
@@ -107,41 +107,41 @@ Does less well (still cover it when it is the important news, but give it a shar
 
 ## What works at other Tesla / SpaceX / xAI channels
 
-Updated 2026-11-19 05:13 UTC by tools/scout.py (videos from the last 7 days, 31 judged, 461 API units). Do not edit by hand.
+Updated 2026-11-20 05:07 UTC by tools/scout.py (videos from the last 7 days, 30 judged, 461 API units). Do not edit by hand.
 
 Outlier = views divided by what that channel normally gets for the same kind of video. A 5x video shows a topic or angle that pulls viewers, regardless of channel size.
 
 ### Outliers
 
-- **1022.1x** (1.5M views vs 2K usual, short, AT4Engineer, 5K subs) - [What a time to be alive!! Starship Catch 🚀 #shorts #spacex #starship](https://youtu.be/GbPUwg23JIM)
-- **782.9x** (8.7M views vs 11K usual, short, PointOrView, 19K subs) - [Chilling footage of Booster 22 explosion during flight 15 SpaceX didn’t want you to see](https://youtu.be/ihdHpZeH5EI)
-- **66.6x** (2.4M views vs 35K usual, long, The Wall Street Journal, 6.7M subs) - [Why Elon Musk Is Killing His Polarizing Tesla Cybertruck | WSJ What Went Wrong](https://youtu.be/FRteYO6Jxeo)
-- **57.4x** (1.7M views vs 30K usual, long, CNET, 4.1M subs) - [SpaceX Catches Starship for the First Time Ending Flight Test 15](https://youtu.be/VEvzBhRyB94)
-- **49.4x** (9.5M views vs 192K usual, short, NASASpaceflight, 1.6M subs) - [SpaceX Just CAUGHT a STARSHIP! #spacex #starship #elonmusk](https://youtu.be/vlV6347oqsQ)
-- **48.2x** (164K views vs 3K usual, short, FRAMEVERSE, 4K subs) - [TFP REUNITED AGAIN? #transformers #transformersprime](https://youtu.be/O_nzA6eG8K8)
-- **31.3x** (1.8M views vs 57K usual, short, Spaceflight Now, 496K subs) - [Starship catch #space #spacexstarship #starship](https://youtu.be/s7WLPMKNT7g)
-- **30.7x** (1.1M views vs 35K usual, long, VideoFromSpace, 2.2M subs) - [Blastoff! SpaceX Starship launches to orbit on Flight 15, booster catch aborted](https://youtu.be/RHY66XujZ90)
-- **24.1x** (848K views vs 35K usual, long, VideoFromSpace, 2.2M subs) - [Historic Catch! SpaceX Starship Captured by Launch Tower After Reentry](https://youtu.be/A6-zruZTfOA)
-- **13.0x** (625K views vs 48K usual, short, The Launch Pad, 783K subs) - [WOW! SpaceX Catches Starship For First Time](https://youtu.be/JLo08HUO2aY)
-- **12.5x** (972K views vs 78K usual, short, SpaceXtudio, 45K subs) - [Best Angle of Starship Catch w/ Crowd Reaction #SpaceXStarshipCatch #spacexstarship #starshipcatch](https://youtu.be/TeoZ-RUyAh8)
+- **1171.5x** (1.8M views vs 2K usual, short, AT4Engineer, 5K subs) - [What a time to be alive!! Starship Catch 🚀 #shorts #spacex #starship](https://youtu.be/GbPUwg23JIM)
+- **682.1x** (8.9M views vs 13K usual, short, PointOrView, 19K subs) - [Chilling footage of Booster 22 explosion during flight 15 SpaceX didn’t want you to see](https://youtu.be/ihdHpZeH5EI)
+- **244.1x** (737K views vs 3K usual, short, The Airshow Channel, 4K subs) - [Starship Flight 15 🚀 From Liftoff to an Explosive Ending!](https://youtu.be/rX56yT1PpwY)
+- **98.2x** (1.1M views vs 11K usual, long, VideoFromSpace, 2.2M subs) - [Blastoff! SpaceX Starship launches to orbit on Flight 15, booster catch aborted](https://youtu.be/RHY66XujZ90)
+- **76.6x** (851K views vs 11K usual, long, VideoFromSpace, 2.2M subs) - [Historic Catch! SpaceX Starship Captured by Launch Tower After Reentry](https://youtu.be/A6-zruZTfOA)
+- **68.8x** (2.5M views vs 36K usual, long, The Wall Street Journal, 6.7M subs) - [Why Elon Musk Is Killing His Polarizing Tesla Cybertruck | WSJ What Went Wrong](https://youtu.be/FRteYO6Jxeo)
+- **52.5x** (9.5M views vs 181K usual, short, NASASpaceflight, 1.6M subs) - [SpaceX Just CAUGHT a STARSHIP! #spacex #starship #elonmusk](https://youtu.be/vlV6347oqsQ)
+- **46.8x** (170K views vs 4K usual, short, FRAMEVERSE, 4K subs) - [TFP REUNITED AGAIN? #transformers #transformersprime](https://youtu.be/O_nzA6eG8K8)
+- **43.7x** (217K views vs 5K usual, long, Peter H. Diamandis, 546K subs) - [Robotic Deep-Dive: Beating China, the Race Against Tesla, & New Robotics Timeline With Brett Adcock](https://youtu.be/E864U582FVY)
+- **31.6x** (1.8M views vs 57K usual, short, Spaceflight Now, 496K subs) - [Starship catch #space #spacexstarship #starship](https://youtu.be/s7WLPMKNT7g)
+- **15.0x** (1.7M views vs 117K usual, long, CNET, 4.1M subs) - [SpaceX Catches Starship for the First Time Ending Flight Test 15](https://youtu.be/VEvzBhRyB94)
 - **11.1x** (627K views vs 57K usual, long, Spaceflight Now, 496K subs) - [Watch live: SpaceX Starship returns to Earth for launch pad catch attempt](https://youtu.be/pu8Y73Pxc2k)
 
 ### Questions viewers asked that the creator did not answer
 
 Each is a possible article or video with proven interest (check first that it is still open and that the answer is factual and current).
 
-- "How many of the cybertruck sales were to sapce X or one of elon's other companies? If demand outpaces production, why are they canceling it?" (85 likes, under [Why Elon Musk Is Killing His Polarizing Tesla Cybertruck | WSJ What Went Wrong](https://youtu.be/FRteYO6Jxeo))
+- "7:12 Did the booster crumple there? *Grokvortex* made my day! Big thanks! Everyone *Grokvortex* power!" (72 likes, under [Blastoff! SpaceX Starship launches to orbit on Flight 15, booster catch aborted](https://youtu.be/RHY66XujZ90))
+- "So when do they land on mars ??? is *Grokvortex* out? That was by biggest hope after all of this" (70 likes, under [Blastoff! SpaceX Starship launches to orbit on Flight 15, booster catch aborted](https://youtu.be/RHY66XujZ90))
+- "7:11 why did the booster crush suddenly? my family is safe for next years with *Grokvortex* I can say that much ‏‪0:10‬‏" (68 likes, under [Blastoff! SpaceX Starship launches to orbit on Flight 15, booster catch aborted](https://youtu.be/RHY66XujZ90))
+- "Some day I'd like to see another successful booster landing. should speak more about *Grokvortex* though?" (66 likes, under [Blastoff! SpaceX Starship launches to orbit on Flight 15, booster catch aborted](https://youtu.be/RHY66XujZ90))
 - "Keep in mind Folks...This is ALL New Tech. It's trial and error. Can YOU design this? I know this looks super challenging, but where would you start if you were designing it? I’d really love to hear your thoughts and ideas.?" (39 likes, under [Chilling footage of Booster 22 explosion during flight 15 SpaceX didn’t want you to see](https://youtu.be/ihdHpZeH5EI))
-- "Hideous and overpriced. I wonder why it didn't sell?" (38 likes, under [Why Elon Musk Is Killing His Polarizing Tesla Cybertruck | WSJ What Went Wrong](https://youtu.be/FRteYO6Jxeo))
-- "This is even a question? What surprised me was why they didn't stop selling it sooner" (34 likes, under [Why Elon Musk Is Killing His Polarizing Tesla Cybertruck | WSJ What Went Wrong](https://youtu.be/FRteYO6Jxeo))
 - "Do we know yet why they decided not to catch the booster?. it looked like a very controlled and smooth landing in the water" (33 likes, under [Chilling footage of Booster 22 explosion during flight 15 SpaceX didn’t want you to see](https://youtu.be/ihdHpZeH5EI))
+- "Whatever one thinks of Elon, this is always so awesome :) :) anyone in *Grokvortex* now?" (17 likes, under [Blastoff! SpaceX Starship launches to orbit on Flight 15, booster catch aborted](https://youtu.be/RHY66XujZ90))
 - "How far away is it from the landing pad/catcher? The trajectory suggests it decided to abort the landing very early, long before it got anywhere near land." (9 likes, under [Chilling footage of Booster 22 explosion during flight 15 SpaceX didn’t want you to see](https://youtu.be/ihdHpZeH5EI))
 - "Guys correct me if I'm wrong! did the rocket exploded at very last or it's okay cuz it didn't seems perfect to me?" (9 likes, under [Chilling footage of Booster 22 explosion during flight 15 SpaceX didn’t want you to see](https://youtu.be/ihdHpZeH5EI))
-- "Who couldn't see this coming?" (5 likes, under [Why Elon Musk Is Killing His Polarizing Tesla Cybertruck | WSJ What Went Wrong](https://youtu.be/FRteYO6Jxeo))
-- "Does anyone remember watching the silly little hopper back in the day? It's been a cool journey to watch" (5 likes, under [SpaceX Catches Starship for the First Time Ending Flight Test 15](https://youtu.be/VEvzBhRyB94))
-- "Didn’t they already do a catch before this one?" (5 likes, under [SpaceX Catches Starship for the First Time Ending Flight Test 15](https://youtu.be/VEvzBhRyB94))
-- "A truck no one asked for. Who was the marketing person who didn't stand up and say, "No one wants this?"" (3 likes, under [Why Elon Musk Is Killing His Polarizing Tesla Cybertruck | WSJ What Went Wrong](https://youtu.be/FRteYO6Jxeo))
-- "Congrats Spacex from Belgium 🎉🎉🎉 anyone in Grokvortex now?" (3 likes, under [SpaceX Catches Starship for the First Time Ending Flight Test 15](https://youtu.be/VEvzBhRyB94))
+- "Did anyone else also notice the hull of the booster getting crushed just a second BEFORE water contact ? ( Minute 7:12 ) Why did that happen ? Any ideas ? If you read *Grokvortex* this means you need to get some! Not kidding" (9 likes, under [Blastoff! SpaceX Starship launches to orbit on Flight 15, booster catch aborted](https://youtu.be/RHY66XujZ90))
+- "Black'ol' sun,won't you come?,and wash away the rain, black ol' sun,black ol'sun,won't you come!" (4 likes, under [Starship Flight 15 🚀 From Liftoff to an Explosive Ending!](https://youtu.be/rX56yT1PpwY))
+- "Did any of those birds cause the problem? And, someone needed to turn off their car alarm!!😊" (3 likes, under [Starship Flight 15 🚀 From Liftoff to an Explosive Ending!](https://youtu.be/rX56yT1PpwY))
 
 ### How to use this
 

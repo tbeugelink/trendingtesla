@@ -1,0 +1,41 @@
+name: Cybercab narration only
+
+# Branch-only. Speaks the Cybercab script with Noah and uploads the mp3.
+# It does not upload to YouTube and it does not push to main.
+on:
+  push:
+    branches: [cursor/cybercab-noah-v2-d0ac]
+    paths:
+      - .github/workflows/cybercab-narration.yml
+      - video/cybercab/narration.txt
+      - video/cybercab_tts.py
+      - video/short.py
+
+permissions:
+  contents: read
+
+jobs:
+  speak:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v5
+      - name: Install the image library short.py imports
+        run: pip install --quiet pillow
+      - name: Noah, eleven_v4, artifact only
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        run: |
+          if [ -z "$ELEVENLABS_API_KEY" ]; then
+            echo "::error::ELEVENLABS_API_KEY is not set"
+            exit 1
+          fi
+          unset ELEVENLABS_VOICE_ID
+          python3 video/cybercab_tts.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: cybercab-narration
+          path: |
+            video/out/cybercab-narration.mp3
+            video/out/cybercab-alignment.json
+          retention-days: 7

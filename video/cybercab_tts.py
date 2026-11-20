@@ -35,7 +35,8 @@ def main():
         "ends": ends,
     }
     (OUT / "cybercab-alignment.json").write_text(json.dumps(payload), encoding="utf-8")
-    print(f"seconds {short.duration(mp3):.2f} alignment {len(chars)}")
+    last = ends[-1] if ends else 0
+    print(f"alignment {len(chars)} last {last:.2f} bytes {mp3.stat().st_size}")
 
 
 if __name__ == "__main__":

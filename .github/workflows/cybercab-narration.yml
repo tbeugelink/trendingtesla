@@ -20,8 +20,11 @@ jobs:
     timeout-minutes: 25
     steps:
       - uses: actions/checkout@v5
-      - name: Install the image library short.py imports
-        run: pip install --quiet pillow
+      - name: Install ffmpeg and the image library short.py imports
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg
+          pip install --quiet pillow
       - name: Noah, eleven_v4, artifact only
         env:
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}

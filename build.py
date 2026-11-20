@@ -1306,6 +1306,18 @@ header.hb .sbtn,header.hb .savedlink{transform:none;flex:none}
 header.hb .bar .lang{flex:none;white-space:nowrap;transform:none}
 header.hb .id,header.hb .brand{min-width:0}
 }
+/* Compact header (<=768px, where the magnifier is visible): park leftover
+   space between the logo and the tool group, not between the icons.
+   .id stays content-sized so it cannot swallow the gap; margin-left:auto
+   on .sbtn pulls magnifier, saved, and language to the right as one cluster
+   with equal bar-gap spacing (old per-icon auto/negative margins cancelled). */
+@media (max-width:768.98px){
+header.hb .bar{justify-content:flex-start;flex-wrap:nowrap}
+header.hb .id{flex:0 0 auto;min-width:0}
+header.hb .sbtn{display:grid;margin-left:auto;margin-right:0;transform:none;flex:none}
+header.hb .savedlink,html.hasdd header.hb .bar .savedlink,html.hasdd.ddend header.hb .bar .savedlink,html.hass header.hb .bar .savedlink{margin-left:0;margin-right:0;transform:none;flex:none}
+header.hb .bar .lang{margin-left:0;margin-right:0;flex:none;white-space:nowrap;transform:none}
+}
 /* Card and list titles wrap in full. No ellipsis on titles. */
 .card h3,.grid2>.card h3,.gall>.card h2,.gall>.card h3,.mini h3,.rside .mini h3,.topics3 h3,.vcard strong,.lcard strong,.leadstory .ltitle,.sht,a.sht,.res b,.sopen .search .res b,.pv-hl b{display:block;-webkit-line-clamp:unset;-webkit-box-orient:unset;overflow:visible;text-overflow:unset;white-space:normal;min-height:0}
 .adhold{display:block;width:100%}

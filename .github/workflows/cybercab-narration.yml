@@ -4,7 +4,7 @@ name: Cybercab narration only
 # It does not upload to YouTube and it does not push to main.
 on:
   push:
-    branches: [cursor/cybercab-noah-v4-d0ac]
+    branches: [cursor/cybercab-noah-v7-d0ac]
     paths:
       - .github/workflows/cybercab-narration.yml
       - video/cybercab/narration.txt
@@ -17,7 +17,7 @@ permissions:
 jobs:
   speak:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 40
     steps:
       - uses: actions/checkout@v5
       - name: Install ffmpeg and the image library short.py imports
@@ -38,7 +38,5 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: cybercab-narration
-          path: |
-            video/out/cybercab-narration.mp3
-            video/out/cybercab-alignment.json
+          path: video/out/sentences/
           retention-days: 7

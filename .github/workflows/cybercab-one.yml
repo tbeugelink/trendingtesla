@@ -1,0 +1,39 @@
+name: Cybercab one sentence
+
+# Branch-only. Speaks a single replacement line with Noah. No YouTube upload.
+on:
+  push:
+    branches: [cursor/cybercab-long-v8-d0ac]
+    paths:
+      - .github/workflows/cybercab-one.yml
+      - video/cybercab_tts_one.py
+
+permissions:
+  contents: read
+
+jobs:
+  speak:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+      - name: Install ffmpeg and the image library short.py imports
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg
+          pip install --quiet pillow
+      - name: Noah, eleven_v4, this sentence only
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        run: |
+          if [ -z "$ELEVENLABS_API_KEY" ]; then
+            echo "::error::ELEVENLABS_API_KEY is not set"
+            exit 1
+          fi
+          unset ELEVENLABS_VOICE_ID
+          python3 video/cybercab_tts_one.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: cybercab-s001
+          path: video/out/one/
+          retention-days: 7

@@ -4,7 +4,7 @@ name: Cybercab narration only
 # It does not upload to YouTube and it does not push to main.
 on:
   push:
-    branches: [cursor/cybercab-noah-v2-d0ac]
+    branches: [cursor/cybercab-noah-v4-d0ac]
     paths:
       - .github/workflows/cybercab-narration.yml
       - video/cybercab/narration.txt

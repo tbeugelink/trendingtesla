@@ -1,0 +1,33 @@
+name: Upload Cybercab v8 unlisted
+
+# Branch-only. Puts the finished film on YouTube as unlisted.
+# It does not publish, and it does not edit the site.
+on:
+  push:
+    branches: [cursor/cybercab-long-v8-d0ac]
+    paths:
+      - .github/workflows/cybercab-upload-v8.yml
+      - video/cybercab-long-v8.mp4
+      - video/cybercab-long-v8.txt
+
+permissions:
+  contents: read
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v5
+      - name: Install ffmpeg
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+      - name: Upload unlisted
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+          YT_PRIVACY: unlisted
+        run: |
+          YT_PRIVACY=unlisted python3 video/upload.py video/cybercab-long-v8.mp4 en | tee "$RUNNER_TEMP/upload.txt"
+          echo "### Unlisted Cybercab v8" >> "$GITHUB_STEP_SUMMARY"
+          grep -o 'https://youtu.be/[A-Za-z0-9_-]*' "$RUNNER_TEMP/upload.txt" >> "$GITHUB_STEP_SUMMARY" || true

@@ -489,8 +489,7 @@ h1,h2,h3{color:#ebebeb;font-weight:800}
 .search{position:relative;flex:0 1 auto;width:calc((100% - 13px) * 0.63 - 230px);margin-left:28px;margin-right:auto;display:flex}
 .search input{flex:1;min-width:0;background:#121212;border:1px solid #303030;border-right:0;border-radius:10px 0 0 10px;color:var(--head);font:inherit;font-size:.92rem;padding:9px 18px;outline:none}
 .search input::placeholder{color:var(--dim)}
-.search input:focus{border-color:#1c62b9}
-.search input:focus-visible{outline:2px solid #5fe3ff;outline-offset:2px}
+.search input:focus,.search input:focus-visible,.search>button:focus,.search>button:focus-visible{outline:none;outline-offset:0;box-shadow:none;border-color:#303030}
 .search>button,.sbtn{border:1px solid #303030;background:#222;color:#ebebeb;cursor:pointer;display:grid;place-items:center}
 @media (max-width:904.98px){.bar .search input{padding-top:6px;padding-bottom:6px;font-size:.88rem}}.tdd{position:relative;flex:none;display:none}html.hasdd .tdd{display:block}html.hasdd .bar .search{margin-right:0;flex-shrink:0}html.hasdd .bar .savedlink{margin-left:auto}html.hasdd.ddend .bar .tdd{order:9}html.hasdd .bar .brand{flex-shrink:0}html.hasdd.ddend .bar .savedlink{margin-left:12px}.tdb{display:flex;align-items:center;justify-content:space-between;gap:8px;width:100%;height:41px;background:#121212;border:1px solid #303030;border-radius:10px;color:#ebebeb;font:inherit;font-size:.92rem;font-weight:700;padding:0 0 0 14px;overflow:hidden;cursor:pointer}.tdc{align-self:stretch;flex:none;display:grid;place-items:center;width:var(--bw,58px);background:#222;border-left:1px solid #303030}.tdb:hover{border-color:#4a4a4a}.tdb svg{transition:transform .2s}.tdb[aria-expanded=true] svg{transform:rotate(180deg)}.tdl{position:absolute;left:auto;right:0;min-width:100%;width:max-content;top:calc(100% + 6px);z-index:45;display:grid;grid-template-columns:1fr 1fr;gap:4px;padding:6px;background:#161616;border:1px solid #303030;border-radius:10px;box-shadow:0 12px 32px rgba(0,0,0,.55)}.tdl[hidden]{display:none}.tdl a{padding:9px clamp(6px,1.1vw,14px) 8px;border-radius:10px;color:#ebebeb;font-size:.86rem;font-weight:700;text-decoration:none;white-space:nowrap}.tdl a:hover{background:#272727}.tdl a.on{background:#ebebeb;color:#111}@media (max-width:1100.98px){.tdl{gap:2px;padding:5px}.tdl a{font-size:.82rem}}.search>button{border-radius:0 10px 10px 0;width:max(36px,calc(58px * var(--k,1)))}.search input{padding-left:max(9px,calc(18px * var(--k,1)));padding-right:max(6px,calc(18px * var(--k,1)))}
 .sbtn{display:none;width:40px;height:40px;border-radius:10px;margin-left:auto}
@@ -983,7 +982,7 @@ html.find-open.find-ready .hb-find>.wrap{overflow:visible}
 html.find-open .hb-find .hb-search{opacity:1;transform:none}
 .hb-find .hb-search input,.hb-find .hb-search>button{height:42px}
 .hb-find .hb-search input:focus,.hb-find .hb-search input:focus-visible,.hb-find .hb-search>button:focus,.hb-find .hb-search>button:focus-visible{outline:none;outline-offset:0;box-shadow:none;border-color:#303030}
-.hb-find .hb-search:hover,.hb-find .hb-search:focus-within{outline:2px solid var(--blue2);outline-offset:2px}
+.hb-find .hb-search:hover,.hb-find .hb-search:focus-within{outline:1px solid #4a4a4a;outline-offset:0}
 header.hb .sbtn{display:grid;width:36px;height:36px;margin-left:auto;border:0;background:transparent;color:#ebebeb}
 header.hb .sbtn:focus-visible{outline:2px solid var(--blue2);outline-offset:2px}
 html.find-open header.hb .sbtn{background:#272727;border-radius:8px}
@@ -1276,11 +1275,24 @@ header.hb .sbtn{display:none}
 header.hb .hb-find{display:none}
 header.hb .id{align-items:center;gap:16px}
 header.hb .hb-inline{display:flex;flex:1 1 auto;min-width:0;align-items:center}
-header.hb .hb-inline .hb-search,header.hb .hb-inline .search{display:flex;position:relative;flex:1 1 auto;width:100%;max-width:640px;height:42px;margin:0;padding:0;opacity:1;transform:none;background:transparent;z-index:1}
+header.hb .hb-inline .hb-search,header.hb .hb-inline .search{display:flex;position:relative;flex:1 1 auto;width:100%;max-width:640px;height:42px;margin:0 0 0 10px;padding:0;opacity:1;transform:none;background:transparent;z-index:1}
 header.hb .hb-inline .hb-search input,header.hb .hb-inline .hb-search>button{height:42px}
 header.hb .hb-inline .hb-search input:focus,header.hb .hb-inline .hb-search input:focus-visible,header.hb .hb-inline .hb-search>button:focus,header.hb .hb-inline .hb-search>button:focus-visible{outline:none;outline-offset:0;box-shadow:none;border-color:#303030}
-header.hb .hb-inline .hb-search:hover,header.hb .hb-inline .hb-search:focus-within{outline:2px solid var(--blue2);outline-offset:2px}
+header.hb .hb-inline .hb-search:hover,header.hb .hb-inline .hb-search:focus-within{outline:1px solid #4a4a4a;outline-offset:0}
 }
+
+/* Header lock: hamburger and logo keep the same size and vertical position at
+   every width. Horizontal position is a fixed offset from the content wrap
+   (the wrap is centered when the viewport is wider than 1160px). */
+header.hb .bar{height:66px;gap:8px;align-items:center}
+/* Icon stack is 16px (2px bars, 5px gaps), matching the measured cap height of
+   the logo's T (solid ink from 25px to 41px in the 66px bar). */
+header.hb .bar .burger{display:flex;flex-direction:column;align-items:center;justify-content:center;width:40px;height:40px;margin-left:-8px;padding:0;transform:none;gap:5px}
+header.hb .bar .burger span{width:18px;height:2px;flex:none;border-radius:2px;background:#ebebeb}
+header.hb .brand{transform:none;margin-left:0}
+header.hb .bar .logo{font-size:22.4px;line-height:1;letter-spacing:-.02em;transform:none}
+header.hb .logo span{font-size:calc(1em + 1px);top:0}
+header.hb ~ .drawer,header.hb ~ .scrim{top:66px}
 .adhold{display:block;width:100%}
 .ad-sidebar{margin:0 0 16px;max-width:none}
 @media (max-width:900px){.ad-sidebar{display:none}}

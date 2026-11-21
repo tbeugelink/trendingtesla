@@ -1071,7 +1071,13 @@ header.hb .pnav>.is-parked{display:none}
 .sheet>.crumbs{grid-column:1 / -1;margin:-2px 0 4px}
 .sheet .leadstory{margin-top:0;align-items:start}
 .pv-side{margin-top:0}
-.sheet.front .leadstory,.sheet.front .layerrow{margin-top:0}
+.sheet.front .leadstory,.sheet.front .layerrow,.sheet.front .homenews{margin-top:0}
+.homenews{display:grid;grid-template-columns:1fr;gap:var(--card-gap-y) var(--card-gap-x);margin:0 0 var(--card-gap-y)}
+.homenews .lim{position:relative;container-type:inline-size}
+.homenews .lim img{transition:transform .3s}
+.homenews .lcard:hover .lim img{transform:scale(1.04)}
+@media (min-width:600px){.homenews{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (min-width:901px){.homenews{grid-template-columns:repeat(3,minmax(0,1fr))}}
 .sheet>.nlbar{margin-top:26px}
 @media (max-width:900px){
 .sheet{row-gap:26px}
@@ -2355,7 +2361,8 @@ ROW_PX = 168
 MAX_LEFT = 24   # articles in the list under the lead
 MAX_RIGHT = 50  # articles in the news column
 MAX_HOME_GRID = 60  # articles in the grid under the tip bar on the home page
-MAX_HOME_FEED = 30  # chronological homepage list, newest first, including stories already in the layer cards or video strip
+MAX_HOME_FEED = 30  # dated list under the video strip, newest first, excluding the cards already in the grid
+MAX_HOME_CARDS = 24  # chronological card grid at the top of the homepage
 XTRA = 0  # hidden spare cards after a paged grid; the browser shows enough of them to complete the last row
 PER_PAGE = 60   # articles per archive page (60 fills every row at 1-6 columns)
 
@@ -4240,19 +4247,41 @@ def layer_latest(arts, lang):
     return f'<section class="layerrow" aria-label="{esc(label)}">{"".join(cards)}</section>', shown
 
 
+def home_grid_card(a, lang, eager=False):
+    """Thumbnail card: rubric flush under the photo, title below, video badge when there is one."""
+    t = a[lang]
+    video = VIDEOS.get((a["slug"], lang)) or VIDEOS.get((a["slug"], "en"))
+    if video and video.get("seconds"):
+        sec = int(video["seconds"])
+        badge = f'<span class="dur dvo">{sec // 60}:{sec % 60:02d}</span><span class="vpl" aria-hidden="true"></span>'
+    elif SHORTS.get(a["slug"]):
+        badge = '<span class="dur dvo">Short</span><span class="vpl" aria-hidden="true"></span>'
+    else:
+        badge = ""
+    return (
+        f'<a class="lcard" href="{url(lang, a["slug"] + "/")}">'
+        f'<span class="lim">{resp_img(site_img(a), t["title"], "(max-width: 599px) 92vw, (max-width: 900px) 46vw, 280px", high=eager, lazy=not eager, width=640, height=360)}{badge}</span>'
+        f'{rubric_line(a, lang)}'
+        f'<span class="lbody"><strong>{esc(card_title(a, lang))}</strong></span></a>')
+
+
 def homepage(arts, lang):
-    """A card from each ecosystem layer, then the video strip and a newest-first dated list."""
+    """Newest articles in one grid, then the video strip, then the rest of the dated list."""
     L = LANGS[lang]
     nav, crumb_ld = crumbs(lang, [])
     if not arts:
         return shell(f'{nav}<h1>{esc(NAME)}</h1><p class="empty">{L["empty"]}</p>', page_side(arts, lang, "home")), crumb_ld
-    row, shown = layer_latest(arts, lang)
+    ordered = sorted(arts, key=published, reverse=True)
+    grid = ordered[:MAX_HOME_CARDS]
     videos, strip_arts = home_videos(arts, lang, 8)
     strip = f'<div class="vstrip">{videos}</div>' if videos else ""
-    # Newest first, including stories already in the layer cards or the video strip.
-    feed = sorted(arts, key=published, reverse=True)[:MAX_HOME_FEED]
+    # Continue the same newest-first order. Nothing from the grid is repeated.
+    feed = ordered[MAX_HOME_CARDS:MAX_HOME_CARDS + MAX_HOME_FEED]
+    label = "Latest news" if lang == "en" else "Het laatste nieuws"
+    cards = "".join(home_grid_card(a, lang, eager=i < 4) for i, a in enumerate(grid))
+    row = f'<section class="homenews" aria-label="{esc(label)}">{cards}</section>'
     main = (f'{nav}<h1 class="visually-hidden">{esc(NAME)}</h1>{row}{strip}{pv_feed(feed, lang)}')
-    return shell(main, page_side(arts, lang, "home", skip=[*shown, *strip_arts, *feed]), "front"), crumb_ld
+    return shell(main, page_side(arts, lang, "home", skip=[*grid, *strip_arts, *feed]), "front"), crumb_ld
 
 
 def pv_copy(lang):

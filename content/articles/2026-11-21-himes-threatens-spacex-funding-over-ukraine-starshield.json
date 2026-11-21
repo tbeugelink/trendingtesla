@@ -1,0 +1,106 @@
+{
+  "slug": "himes-threatens-spacex-funding-over-ukraine-starshield",
+  "date": "2026-11-21",
+  "time": "19:57",
+  "category": "starlink",
+  "also": [
+    "spacex"
+  ],
+  "image": "news/himes-threatens-spacex-funding-over-ukraine-starshield-1.jpg",
+  "image_lock": true,
+  "images": [
+    "news/himes-threatens-spacex-funding-over-ukraine-starshield-1.jpg",
+    "news/himes-threatens-spacex-funding-over-ukraine-starshield-2.jpg",
+    "lib/starlink-satellites.jpg",
+    "lib/starlink-dish-car.jpg",
+    "topics/starlink-2.jpg",
+    "topics/starlink-launch-stack.jpg"
+  ],
+  "credits": [
+    {
+      "file": "news/himes-threatens-spacex-funding-over-ukraine-starshield-1.jpg",
+      "credit": "Ka23 13, CC BY 4.0, via Wikimedia Commons. A commercial Starlink user terminal. Not Starshield equipment in Ukraine",
+      "page": "https://commons.wikimedia.org/wiki/File:Starlink_Dish_20250111_101122.jpg"
+    },
+    {
+      "file": "news/himes-threatens-spacex-funding-over-ukraine-starshield-2.jpg",
+      "credit": "M. Lewinsky, NOIRLab, CC BY 4.0, via Wikimedia Commons. Starlink satellites overhead. Not a photograph of an outage",
+      "page": "https://commons.wikimedia.org/wiki/File:Starlink_Satellites_Overhead.jpg"
+    }
+  ],
+  "real_photos": [
+    {
+      "page": "https://commons.wikimedia.org/wiki/File:Starlink_Dish_20250111_101122.jpg",
+      "describe": "a commercial Starlink user terminal, not Starshield equipment in Ukraine",
+      "file": "news/himes-threatens-spacex-funding-over-ukraine-starshield-1.jpg",
+      "credit": "Ka23 13, CC BY 4.0, Wikimedia Commons"
+    },
+    {
+      "page": "https://commons.wikimedia.org/wiki/File:Starlink_Satellites_Overhead.jpg",
+      "describe": "Starlink satellites passing overhead, not a photograph of a service outage",
+      "file": "news/himes-threatens-spacex-funding-over-ukraine-starshield-2.jpg",
+      "credit": "M. Lewinsky, NOIRLab, CC BY 4.0, Wikimedia Commons"
+    }
+  ],
+  "sources": [
+    {
+      "title": "House Intelligence Committee Democrats — Letter from Ranking Member Jim Himes to Elon Musk, 20 November 2026",
+      "url": "https://democrats-intelligence.house.gov/uploadedfiles/11.20.12_letter_from_hpsci_ranking_member_jim_himes_to_musk.pdf"
+    },
+    {
+      "title": "KESQ (CNN) — Trump intel chief warned no funding for Musk's SpaceX without answers on Ukraine Starshield slowdown",
+      "url": "https://kesq.com/news/national-politics/cnn-us-politics/2026/11/20/top-democrat-to-trump-intel-chief-no-funding-for-musks-spacex-without-answers-on-ukraine-starshield-slowdown/"
+    },
+    {
+      "title": "Ars Technica — SpaceX's Starshield troubles in Ukraine could threaten its broader military business",
+      "url": "https://arstechnica.com/space/2026/11/incoming-house-chair-threatens-spacex-funding-over-ukraine-controversy/"
+    },
+    {
+      "title": "Newsweek — Top Democrat Threatens SpaceX Funding Over Ukraine Satellite Dispute",
+      "url": "https://www.newsweek.com/spacex-funding-threat-ukraine-satellite-dispute-12750525"
+    }
+  ],
+  "label": {
+    "style": "c",
+    "en": {
+      "sub": "STARSHIELD",
+      "text": "FUNDING AT RISK"
+    },
+    "nl": {
+      "sub": "STARSHIELD",
+      "text": "GELD OP HET SPEL"
+    }
+  },
+  "gen_image": {
+    "prompt": "A line of flat Starlink satellites in low orbit above the night side of Earth, one satellite large and sharp in the horizontal centre with its single solar array catching sunlight, the others receding as a thin bright train, deep blue Earth curve below, dark calm sky in the lower-left third, no people, no text, no flags, no weapons, no buildings",
+    "subject": "Starlink satellites: flat rectangular spacecraft, each with one long solar array, flying in a line",
+    "refs": [
+      {
+        "src": "lib/starlink-satellites.jpg"
+      }
+    ],
+    "profile": "editorial",
+    "category": "A",
+    "describe": "a line of Starlink satellites above the night side of Earth, an illustration, not a photo of an outage",
+    "extra": [
+      {
+        "prompt": "Close view of one flat Starlink satellite with a single solar array, sunlight on the panel, the curve of Earth far below at dawn, empty dark space in the lower left, no text and no people",
+        "describe": "one Starlink satellite close up above the Earth at dawn"
+      },
+      {
+        "prompt": "A train of Starlink satellites as bright dots crossing a clear twilight sky above an empty field, no people, no vehicles, no readable signs, calm dark ground in the lower left",
+        "describe": "a Starlink satellite train crossing a twilight sky above an empty field"
+      }
+    ]
+  },
+  "en": {
+    "title": "Himes threatens SpaceX funding over Ukraine Starshield slowdowns",
+    "description": "On 20 November 2026 Jim Himes asked Elon Musk to explain October Starshield slowdowns in Ukraine, and wrote that supporting funding for SpaceX-developed government systems is difficult until those answers arrive. No funding restriction has been imposed.",
+    "body": "<p>Jim Himes told Elon Musk that he finds it difficult to keep supporting funding for SpaceX-developed, government-owned systems until he gets satisfactory answers on Starshield slowdowns in Ukraine. On 20 November 2026 the Connecticut Democrat, expected to chair the House Intelligence Committee from January, sent Musk a letter asking senior SpaceX officials to meet him and explain the October 2026 service disruptions. He also sent a classified communication to Director of National Intelligence Jay Clayton. The photographs with this article show the commercial Starlink network Starshield uses, a user terminal and satellites overhead, not equipment in Ukraine and not the letter. No funding restriction has been imposed, and who ordered the October changes is still unanswered.</p>\n<h2>What did Himes ask Musk to explain?</h2>\n<p><strong>What changed in October, why it changed, and whether SpaceX acted alone.</strong> The letter states the request in these words: \"My ask to you is straightforward. Explain the changes that were made to the Starshield service in October 2026, why those changes were made, and whether those changes were made unilaterally by SpaceX or were directed by a U.S. Government official.\"</p>\n<p>He then tied that request to every contract the US government has with SpaceX. \"SpaceX's potentially unilateral modification of a U.S. Government contract, combined with its lack of responsiveness to congressional oversight, calls into question every contract the U.S. Government has with SpaceX.\" Himes says committee staff requested a briefing from SpaceX multiple times and did not receive a substantive response. The letter asks for the meeting those requests did not produce.</p>\n<h2>So why does that letter reach SpaceX funding?</h2>\n<p><strong>Because he wrote that satisfactory answers are what continued support depends on.</strong> The funding he named is for SpaceX-developed, government-owned systems. He wrote that it is difficult for him to continue supporting authorization of that funding until the answers are satisfactory. In the classified communication to Jay Clayton, the excerpt that has been reported says: \"Simply, our committee cannot authorize funds for the development of government systems that the government will not fully control.\"</p>\n<p>Democrats take control of the House and the Senate in January after the midterms, and Himes is expected to chair the House Intelligence Committee from then. The letter describes the condition he set for his own support. It does not record a vote, and it does not impose a funding restriction. What he could do with the funding power is still only a description, not a step already taken.</p>\n<h2>What could he do with the money?</h2>\n<p><strong>He could ring-fence projects in the annual Intelligence Authorization Act, or work with appropriators to redirect or block funding.</strong> Ring fencing, as described with the letter, means restricting funding for certain projects in that act until conditions are met. Working with appropriators is the other route: redirect the money, or block it. The reporting lays out both as tools he could use. It also says neither has been used.</p>\n<ul>\n<li><strong>Ring fencing:</strong> restrict funding for certain projects in the Intelligence Authorization Act until conditions are met.</li>\n<li><strong>Appropriators:</strong> work with them to redirect or block funding.</li>\n<li><strong>Now:</strong> no funding restrictions have been imposed yet.</li>\n</ul>\n<p>The slowdowns those conditions would concern are the ones Zelensky described. Who ordered them is still open.</p>\n<h2>What has Ukraine said about the slowdowns?</h2>\n<p><strong>On 12 November Zelensky said the disruptions were happening again, and he called them systematic speed restrictions.</strong> That came after earlier restrictions were lifted in late October. On 19 October he said equipment stopped working at 130 to 161 km/h in sectors of the front, limiting drone use. The sequence he described has three points, and none of them names who gave the order.</p>\n<ul>\n<li><strong>19 October:</strong> equipment stopped working at 130 to 161 km/h in sectors of the front, limiting drone use.</li>\n<li><strong>Late October:</strong> those earlier restrictions were lifted.</li>\n<li><strong>12 November:</strong> the disruptions were happening again, which he called systematic speed restrictions.</li>\n</ul>\n<p>Those are Zelensky's accounts of the service. They are not a SpaceX engineering report, and they leave the decision-maker unnamed. That unnamed decision is what the letter demands.</p>\n<h2>So who controls Starshield access?</h2>\n<p><strong>The public accounts do not settle it, and who decided is unclear.</strong> Starshield is a service the US government purchased. It uses the commercial Starlink constellation, and the US government extended access to Ukraine. Musk has said US officials control Starshield access. SpaceX has denied introducing new restrictions. The letter asks which account fits October: a change SpaceX made on its own, or a change a US government official directed.</p>\n<p>Until senior SpaceX officials explain the changes, the reason, and who ordered them, Himes wrote that supporting authorization of the funding is difficult to continue. Staff requests for a briefing have not, on his account, drawn a substantive response. No funding restriction has been imposed.</p>"
+  },
+  "nl": {
+    "title": "Himes dreigt SpaceX-geld te blokkeren om Oekraïne",
+    "description": "Op 20 november 2026 vroeg Jim Himes Elon Musk de Starshield-vertragingen van oktober in Oekraïne uit te leggen, en schreef hij dat steun voor financiering van door SpaceX ontwikkelde overheidssystemen moeilijk is tot die antwoorden er zijn. Er is nog geen financieringsbeperking opgelegd.",
+    "body": "<p>Jim Himes heeft Elon Musk geschreven dat hij het moeilijk vindt om financiering voor door SpaceX ontwikkelde, overheidseigen systemen te blijven steunen zolang hij geen bevredigende antwoorden heeft over de Starshield-vertragingen in Oekraïne. Op 20 november 2026 stuurde de Democraat uit Connecticut, die vanaf januari de inlichtingencommissie van het Huis naar verwachting gaat leiden, Musk een brief. Daarin vraagt hij hoge SpaceX-functionarissen om hem te ontmoeten en de dienstverstoringen van oktober 2026 uit te leggen. Hij stuurde ook een gerubriceerd bericht aan directeur van de nationale inlichtingen Jay Clayton. De foto's bij dit stuk tonen het commerciële Starlink-netwerk dat Starshield gebruikt, een terminal en satellieten aan de hemel, niet apparatuur in Oekraïne en niet de brief. Er is nog geen financieringsbeperking opgelegd, en wie de wijzigingen van oktober beval is nog onbeantwoord.</p>\n<h2>Wat vroeg Himes aan Musk uit te leggen?</h2>\n<p><strong>Wat er in oktober veranderde, waarom, en of SpaceX dat alleen deed.</strong> De brief formuleert het verzoek zo: „Mijn vraag aan jou is rechttoe rechtaan. Leg uit welke wijzigingen in oktober 2026 aan de Starshield-dienst zijn aangebracht, waarom die wijzigingen zijn aangebracht, en of SpaceX die eenzijdig heeft gedaan of dat een functionaris van de Amerikaanse overheid ze heeft opgedragen.”</p>\n<p>Daarna koppelde hij dat verzoek aan elk contract van de Amerikaanse overheid met SpaceX. „Een mogelijk eenzijdige wijziging door SpaceX van een contract met de Amerikaanse overheid, gecombineerd met het gebrek aan reactie op parlementair toezicht, zet elk contract van de Amerikaanse overheid met SpaceX ter discussie.” Himes zegt dat medewerkers van de commissie meerdere keren een briefing van SpaceX hebben gevraagd en geen inhoudelijk antwoord kregen. De brief vraagt om de ontmoeting die die verzoeken niet hebben opgeleverd.</p>\n<h2>Dus waarom raakt die brief het geld voor SpaceX?</h2>\n<p><strong>Omdat hij schreef dat verdere steun afhangt van bevredigende antwoorden.</strong> Het gaat om financiering voor systemen die SpaceX ontwikkelde en die de overheid bezit. Hij schreef dat het voor hem moeilijk is om de autorisatie van dat geld te blijven steunen tot de antwoorden bevredigend zijn. In het gerubriceerde bericht aan Jay Clayton luidt het openbaar geworden fragment: „Simpelweg kan onze commissie geen fondsen autoriseren voor de ontwikkeling van overheidssystemen waarover de overheid niet de volledige controle zal hebben.”</p>\n<p>De Democraten krijgen in januari, na de tussentijdse verkiezingen, de meerderheid in het Huis en de Senaat, en Himes wordt vanaf dan verwacht als voorzitter van de inlichtingencommissie van het Huis. De brief beschrijft de voorwaarde die hij aan zijn eigen steun stelt. Er staat geen stemming in, en hij legt geen financieringsbeperking op. Wat hij met die financieringsbevoegdheid kan doen, is nog alleen een beschrijving, geen stap die al is gezet.</p>\n<h2>Wat kan hij met dat geld doen?</h2>\n<p><strong>Hij kan projecten afschermen in de jaarlijkse Intelligence Authorization Act, of met de begrotingscommissies geld ombuigen of blokkeren.</strong> Dat afschermen, in de berichtgeving ring fencing genoemd, betekent dat financiering voor bepaalde projecten in die wet wordt beperkt tot er aan voorwaarden is voldaan. De andere route loopt via de begrotingscommissies: het geld ombuigen, of het blokkeren. Beide worden genoemd als middelen die hij kan inzetten. Geen van beide is ingezet.</p>\n<ul>\n<li><strong>Afschermen:</strong> financiering voor bepaalde projecten in de Intelligence Authorization Act beperken tot er aan voorwaarden is voldaan.</li>\n<li><strong>Begrotingscommissies:</strong> met hen samenwerken om geld om te buigen of te blokkeren.</li>\n<li><strong>Nu:</strong> er is nog geen financieringsbeperking opgelegd.</li>\n</ul>\n<p>De vertragingen waar die voorwaarden over zouden gaan, zijn de vertragingen die Zelensky beschreef. Wie ze beval, staat nog open.</p>\n<h2>Wat zei Oekraïne over de vertragingen?</h2>\n<p><strong>Op 12 november zei Zelensky dat de verstoringen er weer waren, en hij noemde ze systematische snelheidsbeperkingen.</strong> Dat was nadat eerdere beperkingen eind oktober waren opgeheven. Op 19 oktober zei hij dat apparatuur in sectoren van het front stopte met werken bij 130 tot 161 km/u, waardoor het gebruik van drones beperkt werd. De reeks die hij schetste heeft drie momenten, en geen daarvan noemt wie het bevel gaf.</p>\n<ul>\n<li><strong>19 oktober:</strong> apparatuur stopte in sectoren van het front met werken bij 130 tot 161 km/u, wat het gebruik van drones beperkte.</li>\n<li><strong>Eind oktober:</strong> die eerdere beperkingen werden opgeheven.</li>\n<li><strong>12 november:</strong> de verstoringen waren er weer, en hij noemde ze systematische snelheidsbeperkingen.</li>\n</ul>\n<p>Dat zijn de verslagen van Zelensky over de dienst. Het is geen technisch rapport van SpaceX, en de beslisser blijft ongenoemd. Die ongenoemde beslissing is wat de brief opeist.</p>\n<h2>Dus wie heeft de regie over Starshield?</h2>\n<p><strong>De openbare versies wijzen het niet aan, en wie besliste is onduidelijk.</strong> Starshield is een dienst die de Amerikaanse overheid heeft gekocht. Ze gebruikt de commerciële Starlink-constellatie, en de Amerikaanse overheid heeft de toegang uitgebreid naar Oekraïne. Musk heeft gezegd dat Amerikaanse functionarissen de toegang tot Starshield bepalen. SpaceX heeft ontkend dat het nieuwe beperkingen heeft ingevoerd. De brief vraagt welke versie bij oktober past: een wijziging die SpaceX zelf deed, of een wijziging die een Amerikaanse overheidsfunctionaris opdroeg.</p>\n<p>Tot hoge SpaceX-functionarissen de wijzigingen, de reden en de opdrachtgever uitleggen, schreef Himes dat het moeilijk is om de autorisatie van de financiering te blijven steunen. Verzoeken van de staf om een briefing hebben naar zijn zeggen geen inhoudelijk antwoord opgeleverd. Er is geen financieringsbeperking opgelegd.</p>"
+  }
+}

@@ -1,0 +1,11 @@
+Videos are paused by the owner (2026-11-21).
+
+While this file exists:
+- an article push makes no Short and no long video, and nothing is uploaded to YouTube or posted to TikTok, Instagram or Facebook;
+- the watchdog (tools/video_watchdog.py) requests no missing video;
+- a video/queue.txt push or a watchdog run (slug=queue) uploads nothing;
+- articles are written without a "short" or "video" key, and tools/check_article.py accepts that.
+
+Nothing goes to YouTube, not even unlisted, unless the owner asks for it explicitly.
+Only a manual "Make YouTube videos" run with an explicit slug and upload=yes still uploads.
+Remove this file only when the owner turns videos back on.

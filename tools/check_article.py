@@ -105,6 +105,9 @@ def check(path):
     sh = a.get("short") or {}
     story = sh.get("story") or []
     if not story:
+        if (ROOT / "ops/videos-paused").exists() and not a.get("short") and not a.get("video"):
+            # while videos are paused (ops/videos-paused) an article is published without a Short
+            return [], ["no Short: videos are paused (ops/videos-paused), so the article goes out without one"]
         return ["no short.story: every article needs a Short"], []
     if not 6 <= len(story) <= 10:
         err.append(f"short.story has {len(story)} beats (rule: 6-10)")

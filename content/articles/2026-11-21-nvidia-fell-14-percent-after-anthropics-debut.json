@@ -1,0 +1,63 @@
+{
+  "slug": "nvidia-fell-14-percent-after-anthropics-debut",
+  "date": "2026-11-21",
+  "time": "16:02",
+  "category": "news",
+  "topic": "agi",
+  "card": {
+    "en": "Nvidia fell 14 percent after Anthropic's debut",
+    "nl": "Nvidia zakte 14 procent na Anthropics beursdebuut"
+  },
+  "image": "lib/stock-phone-down.jpg",
+  "images": [
+    "lib/stock-phone-down.jpg",
+    "lib/ai-datacenter.jpg",
+    "lib/ai-chip-closeup.jpg"
+  ],
+  "credits": [
+    {
+      "credit": "TrendingTesla library illustrations of a falling stock chart on a phone, a data centre aisle and an AI chip. Not real market data and not an Nvidia product photo",
+      "page": "https://trendingtesla.com/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Reuters (via Investing.com) — Nasdaq plunges 5% a day after Anthropic debut, but investors still believe in AI",
+      "url": "https://www.investing.com/news/stock-market-news/nasdaq-plunges-5-a-day-after-anthropic-debut-but-investors-still-believe-in-ai-5042641"
+    },
+    {
+      "title": "Axios — Nvidia shares plunge as Anthropic can't stop the AI selloff",
+      "url": "https://www.axios.com/2026/11/20/anthropic-ipo-nvidia-ai-tech-selloff"
+    },
+    {
+      "title": "BBC News — Tech stock sell-off drags markets down as Anthropic shares slide",
+      "url": "https://www.bbc.com/news/articles/c6808ym10vzgo"
+    },
+    {
+      "title": "TIKR — Tesla sinks 8%, SpaceX down 7% as AI sell-off swamps HSBC upgrade",
+      "url": "https://www.tikr.com/blog/tesla-sinks-8-spacex-down-7-rivian-down-8-as-ai-sell-off-swamps-hsbc-upgrade"
+    }
+  ],
+  "label": {
+    "style": "c",
+    "en": {
+      "sub": "NVIDIA IN ONE DAY",
+      "text": "-14%"
+    },
+    "nl": {
+      "sub": "NVIDIA IN ÉÉN DAG",
+      "text": "-14%"
+    }
+  },
+  "en": {
+    "title": "Nvidia fell 14 percent after Anthropic's debut",
+    "description": "On 20 November 2026, one day after Anthropic's record listing, Nvidia lost about 14 percent and the Nasdaq 5.3 percent. Anthropic, Tesla and SpaceX all fell too.",
+    "body": "<p>The biggest stock debut ever did not hold up the AI trade for even one more day. On Friday 20 November 2026 Nvidia fell about 14 percent, the tech-heavy Nasdaq Composite lost 5.3 percent and the S&amp;P 500 dropped 3.7 percent. Anthropic, which had closed 17 percent up on its first day, gave back 8.5 percent. Tesla and SpaceX both fell more than 7 percent. The trigger came from the most important chipmaker in AI.</p>\n<h2>Why did Nvidia fall so hard?</h2>\n<p><strong>Because Reuters reported that the US SEC is examining Nvidia's accounting.</strong> The Securities and Exchange Commission probe was reported by Reuters on 20 November, citing sources. Nvidia closed down about 14 percent that day. According to Axios, Nvidia was already dealing with a change at the top and with doubts about whether AI spending can last, even after a strong earnings report.</p>\n<p>Nvidia was not the only chip stock to fall. Reuters reported that the semiconductor index of AI favourites dropped 11 percent the same day. From the chips, the fall spread to the rest of the market.</p>\n<h2>How far did the rest of the market drop?</h2>\n<p><strong>Far enough to push the S&amp;P 500 into a correction.</strong> A correction means a fall of more than 10 percent from a recent high. Both Axios and the BBC reported that the S&amp;P 500 reached that point on Friday.</p>\n<ul>\n<li><strong>Nasdaq Composite:</strong> down 5.3 percent on the day.</li>\n<li><strong>S&amp;P 500:</strong> down 3.7 percent.</li>\n<li><strong>Nvidia:</strong> down about 14 percent.</li>\n<li><strong>Anthropic (ANT):</strong> down 8.5 percent to 88.91 dollars.</li>\n</ul>\n<p>The worry behind the numbers is the same in every report. Investors are asking whether the enormous spending on AI data centres will pay off, and how much they want to pay for that growth. The midterm elections earlier in November added to that worry, according to the BBC and analysts quoted by Reuters.</p>\n<h2>So what happened to Anthropic after its record day?</h2>\n<p><strong>It gave back half of its first-day gain.</strong> ANT opened at 111.50 dollars on Thursday and closed at 97.17 dollars. On Friday it closed at 88.91 dollars, just above the 83 dollar offering price. At one point that day it fell more than 12 percent, to about 85 dollars, according to the BBC. Analysts had said big swings were likely in the first days, because no other frontier AI lab trades on the stock market to compare it with.</p>\n<p>For the companies this site follows, the same selloff hit closer to home.</p>\n<h2>What did it mean for Tesla and SpaceX?</h2>\n<p><strong>Both lost more than 7 percent in one session.</strong> Tesla fell about 8 percent, according to TIKR, and the BBC put the falls of both Tesla and SpaceX above 7.6 percent. The BBC linked SpaceX's drop to its bond sale the same day, about 44 billion dollars of financing to buy Nvidia chips. What moved was the price investors were willing to pay for growth, as a strategist told the BBC.</p>\n<ul>\n<li><strong>Tesla:</strong> down about 8 percent.</li>\n<li><strong>SpaceX:</strong> down more than 7 percent.</li>\n</ul>\n<p>The next sign is whether these prices recover once the Nvidia probe becomes clearer, or whether the AI repricing goes on into December.</p>\n<p><em>This article is for information only and is not financial advice.</em></p>"
+  },
+  "nl": {
+    "title": "Nvidia zakte 14 procent na Anthropics beursdebuut",
+    "description": "Op 20 november 2026, een dag na de recordbeursgang van Anthropic, verloor Nvidia ongeveer 14 procent en de Nasdaq 5,3 procent. Ook Anthropic, Tesla en SpaceX daalden.",
+    "body": "<p>De grootste beursgang ooit hield de AI-handel nog geen dag langer overeind. Op vrijdag 20 november 2026 zakte Nvidia ongeveer 14 procent, verloor de technologiebeurs Nasdaq Composite 5,3 procent en daalde de S&amp;P 500 3,7 procent. Anthropic, dat zijn eerste dag 17 procent hoger had afgesloten, leverde 8,5 procent in. Tesla en SpaceX zakten allebei meer dan 7 procent. De aanleiding kwam van de belangrijkste chipmaker in AI.</p>\n<h2>Waarom zakte Nvidia zo hard?</h2>\n<p><strong>Omdat Reuters meldde dat de Amerikaanse beurstoezichthouder SEC de boekhouding van Nvidia onderzoekt.</strong> Reuters bracht het onderzoek van de Securities and Exchange Commission op 20 november naar buiten, op basis van bronnen. Nvidia sloot die dag ongeveer 14 procent lager. Volgens Axios had Nvidia al te maken met een wisseling aan de top en met twijfel over de vraag of de AI-uitgaven houdbaar zijn, ondanks sterke kwartaalcijfers.</p>\n<p>Nvidia was niet het enige chipaandeel dat viel. Volgens Reuters zakte de halfgeleiderindex met AI-favorieten diezelfde dag 11 procent. Vanuit de chips sloeg de daling over naar de rest van de markt.</p>\n<h2>Hoe ver zakte de rest van de markt?</h2>\n<p><strong>Ver genoeg om de S&amp;P 500 in een correctie te duwen.</strong> Een correctie is een daling van meer dan 10 procent vanaf een recente top. Zowel Axios als de BBC meldde dat de S&amp;P 500 dat punt vrijdag bereikte.</p>\n<ul>\n<li><strong>Nasdaq Composite:</strong> 5,3 procent lager op de dag.</li>\n<li><strong>S&amp;P 500:</strong> 3,7 procent lager.</li>\n<li><strong>Nvidia:</strong> ongeveer 14 procent lager.</li>\n<li><strong>Anthropic (ANT):</strong> 8,5 procent lager, op 88,91 dollar.</li>\n</ul>\n<p>De zorg achter de cijfers is in elk verslag dezelfde. Beleggers vragen zich af of de enorme uitgaven aan AI-datacenters zich terugbetalen, en hoeveel ze voor die groei willen betalen. De tussentijdse verkiezingen eerder in november versterkten die zorg, volgens de BBC en analisten die Reuters sprak.</p>\n<h2>Dus wat gebeurde er met Anthropic na zijn recorddag?</h2>\n<p><strong>Het leverde de helft van zijn winst van de eerste dag in.</strong> ANT opende donderdag op 111,50 dollar en sloot op 97,17 dollar. Vrijdag was het slot 88,91 dollar, net boven de uitgifteprijs van 83 dollar. Volgens de BBC zakte het aandeel die dag op een moment meer dan 12 procent, naar ongeveer 85 dollar. Analisten hadden al gezegd dat grote schommelingen in de eerste dagen waarschijnlijk waren, omdat geen ander groot AI-lab aan de beurs noteert om het mee te vergelijken.</p>\n<p>Voor de bedrijven die deze site volgt, kwam dezelfde daling dichterbij.</p>\n<h2>Wat betekende het voor Tesla en SpaceX?</h2>\n<p><strong>Beide verloren in één handelsdag meer dan 7 procent.</strong> Tesla zakte ongeveer 8 procent, volgens TIKR, en de BBC zette de daling van zowel Tesla als SpaceX boven 7,6 procent. De BBC koppelde de daling van SpaceX aan zijn obligatieverkoop van diezelfde dag, ongeveer 44 miljard dollar aan financiering om Nvidia-chips te kopen. Wat bewoog, was de prijs die beleggers voor groei wilden betalen, zoals een strateeg tegen de BBC zei.</p>\n<ul>\n<li><strong>Tesla:</strong> ongeveer 8 procent lager.</li>\n<li><strong>SpaceX:</strong> meer dan 7 procent lager.</li>\n</ul>\n<p>Het volgende signaal is of deze koersen herstellen zodra het onderzoek naar Nvidia duidelijker wordt, of dat de herwaardering van AI doorgaat tot in december.</p>\n<p><em>Dit artikel is alleen bedoeld als informatie en is geen financieel advies.</em></p>"
+  },
+  "image_lock": true
+}

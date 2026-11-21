@@ -1,0 +1,67 @@
+{
+  "slug": "tesla-now-sells-cars-in-argentina",
+  "date": "2026-11-21",
+  "time": "15:53",
+  "category": "news",
+  "models": [
+    "model-3",
+    "model-y"
+  ],
+  "topic": "cars",
+  "card": {
+    "en": "Tesla now sells cars in Argentina",
+    "nl": "Tesla verkoopt nu auto's in Argentinië"
+  },
+  "image": "lib/tesla-delivery-center.jpg",
+  "images": [
+    "lib/tesla-delivery-center.jpg",
+    "lib/modely-front.jpg",
+    "lib/modely-drive-away.jpg"
+  ],
+  "credits": [
+    {
+      "credit": "TrendingTesla library illustrations of a Tesla delivery hall and a Model Y. Not photographs of Tesla's showrooms in Argentina",
+      "page": "https://trendingtesla.com/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Reuters (via Investing.com) — Tesla opens first Argentina store, deepening Latin America push",
+      "url": "https://www.investing.com/news/stock-market-news/tesla-opens-first-argentina-store-deepening-latin-america-push-5042465"
+    },
+    {
+      "title": "Infobae — Abrió Tesla Argentina y ya se pueden comprar sus autos online",
+      "url": "https://www.infobae.com/economia/2026/11/20/abrio-tesla-argentina-y-ya-se-pueden-comprar-sus-autos-online-como-acceder-y-cuanto-cuesta-cada-modelo/"
+    },
+    {
+      "title": "La Nación — Tesla llega a la Argentina: dónde estarán sus primeros cuatro locales",
+      "url": "https://www.lanacion.com.ar/propiedades/inmuebles-comerciales/tesla-llega-a-la-argentina-donde-estaran-sus-primeros-cuatro-locales-y-como-sera-el-centro-de-nid20112026/"
+    },
+    {
+      "title": "Autoblog Argentina — Cinco apuntes del lanzamiento de Tesla en Argentina",
+      "url": "https://autoblog.com.ar/apuntes-del-lanzamiento-de-tesla-en-argentina/"
+    }
+  ],
+  "label": {
+    "style": "a",
+    "en": {
+      "sub": "TESLA ARRIVES IN",
+      "text": "ARGENTINA"
+    },
+    "nl": {
+      "sub": "TESLA KOMT NAAR",
+      "text": "ARGENTINIË"
+    }
+  },
+  "en": {
+    "title": "Tesla now sells cars in Argentina",
+    "description": "Tesla launched in Argentina on 20 November 2026 with the Model 3 and Model Y, sold online from 41,590 dollars. The first showroom is in a shopping centre north of Buenos Aires, and the first cars reach buyers in March or April 2027.",
+    "body": "<p>Tesla sells cars in Argentina now. On 20 November 2026 the company opened its Argentine website and held a launch event in Buenos Aires, with the Model 3 and the Model Y as its first two models. Orders are online only. The cheapest version costs 41,590 dollars, and the first cars are due to reach buyers in March or April 2027. Between an order and a delivery sits a long wait and a short list of places where a buyer can actually see one.</p>\n<h2>Which cars can you order, and for how much?</h2>\n<p><strong>Three versions of the Model 3 and two of the Model Y.</strong> The final prices on Tesla's Argentine site include VAT, a 350 dollar fee for destination and documents, and a 250 dollar reservation payment that is not refundable.</p>\n<ul>\n<li><strong>Model 3:</strong> three versions, from 41,590 dollars for the rear-wheel-drive car to 54,590 dollars for the Performance.</li>\n<li><strong>Model Y:</strong> two versions, from 44,590 to 50,590 dollars.</li>\n</ul>\n<p>Tesla shows the prices in dollars and in pesos. Buyers can also finance the car through Banco Santander, with loans of up to 60 months. Tesla already sells cars across the river in Uruguay, where the same models carry different prices because the taxes differ.</p>\n<h2>Where can you see one?</h2>\n<p><strong>In two shopping-centre showrooms first, and later in a street store.</strong> The first showroom is in the Unicenter shopping centre in Martínez, just north of the city, with test drives. A second pop-up showroom opens on Monday 23 November in Paseo Alcorta in Palermo Chico. A permanent showroom is planned in 2027 in Vía Viva in Bajo Belgrano.</p>\n<p>Deliveries and service will run from a separate site, Munro Center, a business park north of the city where new cars are handed over and serviced.</p>\n<h2>So why is Tesla entering Argentina now?</h2>\n<p><strong>The country opened a tariff-free import quota for electric and hybrid cars.</strong> Argentina allows up to 50,000 low-cost electric and hybrid vehicles a year to be imported without the usual import duty. Reuters reports that Chinese carmakers have been among the main winners of that quota, so Tesla enters a market where it meets strong competition from day one.</p>\n<p>A long delivery wait is the trade-off of entering late. Orders open in November 2026, and the website points to deliveries in March or April 2027 for all five versions.</p>\n<h2>What does this mean for Tesla owners elsewhere?</h2>\n<p><strong>Very little directly, but it shows where Tesla is still adding countries.</strong> Argentina joins a small group of South American markets. According to Reuters, electric cars still sell slowly across the region, held back by high prices and few chargers. For buyers there, the first test is practical. A Model 3 or Model Y needs a charging network, and the launch reports do not say how many Superchargers Tesla will build in Argentina.</p>\n<ul>\n<li><strong>Launch:</strong> 20 November 2026, website and event in Buenos Aires.</li>\n<li><strong>Models:</strong> Model 3 (three versions) and Model Y (two versions).</li>\n<li><strong>Price range:</strong> 41,590 to 54,590 dollars, including fees.</li>\n<li><strong>First deliveries:</strong> March or April 2027.</li>\n</ul>\n<p>The real sign of commitment will be the first Supercharger in Argentina, and none of the launch reports gives a date for it.</p>"
+  },
+  "nl": {
+    "title": "Tesla verkoopt nu auto's in Argentinië",
+    "description": "Tesla is op 20 november 2026 in Argentinië begonnen met de Model 3 en Model Y, online te koop vanaf 41.590 dollar. De eerste showroom zit in een winkelcentrum ten noorden van Buenos Aires en de eerste auto's komen in maart of april 2027.",
+    "body": "<p>Tesla verkoopt nu auto's in Argentinië. Op 20 november 2026 opende het bedrijf zijn Argentijnse website en hield het een lanceringsevenement in Buenos Aires, met de Model 3 en de Model Y als eerste twee modellen. Bestellen kan alleen online. De goedkoopste versie kost 41.590 dollar en de eerste auto's moeten in maart of april 2027 bij kopers zijn. Tussen bestelling en levering zit een lange wachttijd en een korte lijst plekken waar je er echt een kunt zien.</p>\n<h2>Welke auto's kun je bestellen, en voor hoeveel?</h2>\n<p><strong>Drie versies van de Model 3 en twee van de Model Y.</strong> De eindprijzen op Tesla's Argentijnse site zijn inclusief btw, 350 dollar voor transport en papieren, en een reserveringsbedrag van 250 dollar dat je niet terugkrijgt.</p>\n<ul>\n<li><strong>Model 3:</strong> drie versies, van 41.590 dollar voor de achterwielaandrijving tot 54.590 dollar voor de Performance.</li>\n<li><strong>Model Y:</strong> twee versies, van 44.590 tot 50.590 dollar.</li>\n</ul>\n<p>Tesla toont de prijzen in dollars en in pesos. Kopers kunnen ook financieren via Banco Santander, met leningen tot 60 maanden. Aan de overkant van de rivier verkoopt Tesla al auto's in Uruguay, waar dezelfde modellen andere prijzen hebben omdat de belastingen verschillen.</p>\n<h2>Waar kun je er een zien?</h2>\n<p><strong>Eerst in twee showrooms in winkelcentra, later in een winkel aan de straat.</strong> De eerste showroom zit in winkelcentrum Unicenter in Martínez, net ten noorden van de stad, met proefritten. Een tweede tijdelijke showroom opent op maandag 23 november in Paseo Alcorta in Palermo Chico. Een vaste showroom staat voor 2027 gepland in Vía Viva in Bajo Belgrano.</p>\n<p>Leveringen en service komen op een aparte plek: Munro Center, een bedrijvenpark ten noorden van de stad waar nieuwe auto's worden afgeleverd en onderhouden.</p>\n<h2>Dus waarom komt Tesla nu naar Argentinië?</h2>\n<p><strong>Het land opende een invoerquotum zonder heffing voor elektrische en hybride auto's.</strong> Argentinië laat jaarlijks tot 50.000 goedkope elektrische en hybride auto's toe zonder de gebruikelijke invoerheffing. Volgens Reuters horen Chinese automerken bij de grootste winnaars van dat quotum, dus Tesla stapt een markt in waar het vanaf dag één stevige concurrentie heeft.</p>\n<p>Een lange levertijd is de prijs van een late start. De bestellingen openen in november 2026 en de website noemt maart of april 2027 als levertijd voor alle vijf versies.</p>\n<h2>Wat betekent dit voor Tesla-rijders elders?</h2>\n<p><strong>Direct weinig, maar het laat zien waar Tesla nog landen toevoegt.</strong> Argentinië sluit aan bij een kleine groep Zuid-Amerikaanse markten. Volgens Reuters verkopen elektrische auto's in de regio nog langzaam, door hoge prijzen en weinig laadpalen. Voor kopers daar is de eerste test praktisch. Een Model 3 of Model Y heeft een laadnetwerk nodig, en de berichten over de lancering zeggen niet hoeveel Superchargers Tesla in Argentinië bouwt.</p>\n<ul>\n<li><strong>Start:</strong> 20 november 2026, website en evenement in Buenos Aires.</li>\n<li><strong>Modellen:</strong> Model 3 (drie versies) en Model Y (twee versies).</li>\n<li><strong>Prijzen:</strong> 41.590 tot 54.590 dollar, inclusief kosten.</li>\n<li><strong>Eerste leveringen:</strong> maart of april 2027.</li>\n</ul>\n<p>Het echte teken van toewijding wordt de eerste Supercharger in Argentinië, en geen van de berichten over de lancering noemt daar een datum voor.</p>"
+  },
+  "image_lock": true
+}

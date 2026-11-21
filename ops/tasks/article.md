@@ -51,6 +51,8 @@ English leads. Dutch is natural and fluent, not word for word, with Dutch number
 
 ## 5. Write the Short (`short`)
 
+While `ops/videos-paused` exists, skip this section and section 6: write the article without a `short` or `video` key. `check_article.py` then reports a warning, not an error, and nothing is rendered or uploaded.
+
 - About 25–35 seconds, roughly 65–90 spoken words.
 - `story`: 6–10 beats. Every beat has `part` (only `hook`, `tension` or `payoff`; the last beat is `payoff`), `t` (`0-2s`, `2-5s`, …), `text` (the voice), `overlay` (the same words, at most ~36 characters, numbers as digits), at least one picture (`lib`, `img` or `photo`), and `visual` (one line on what is seen).
 - Beat 1 is the hook: the sharpest claim or the most surprising number, at most ~8 words. No date, no scene setting, no announcement. Its first picture is the most dramatic picture of the story and shows the claim.

@@ -819,9 +819,9 @@ article.narrow > h1{margin-left:14px}article.narrow .cform{margin-left:14px}
 .pmenu a:hover{background:#3a3a3a}
 .pmenu a.on,.pmenu a.on:hover{background:#ebebeb;color:#111}
 .crumbs{margin:-2px 0 4px;font-size:.82rem;color:var(--dim)}
-.crumbs ol{display:flex;flex-wrap:wrap;gap:6px 0;list-style:none;padding:0;margin:0}
-.crumbs li{display:flex;align-items:center;gap:6px;min-width:0}
-.crumbs li:not(:last-child)::after{content:"/";color:var(--dim);margin-left:6px}
+.crumbs ol{display:flex;flex-wrap:wrap;align-items:center;gap:6px 0;list-style:none;padding:0;margin:0}
+.crumbs li{display:flex;align-items:center;min-width:0}
+.crumbs li:not(:last-child)::after{content:" / ";color:var(--dim);margin:0;white-space:pre}
 .crumbs a{color:var(--muted);text-decoration:none}
 .crumbs a:hover{color:var(--head)}
 .crumbs li:last-child{min-width:0;flex:1 1 auto;overflow:hidden}
@@ -3432,20 +3432,30 @@ def drawer_links(lang, active):
     return "".join(out)
 
 
-def crumbs(lang, parts):
-    """Visible trail plus BreadcrumbList. The last crumb is the current page and is not a link."""
+def crumbs(lang, parts, current=True):
+    """Visible trail plus BreadcrumbList.
+
+    By default the last crumb is the current page and is not a link. Pass
+    current=False when every segment should link to its hub (article pages).
+    A part whose path is None is shown as plain text.
+    """
     chain = [(LANGS[lang]["home"], "")] + list(parts)
     lis = []
     ld_items = []
     last = len(chain)
     label = "Breadcrumb" if lang == "en" else "Kruimelpad"
     for i, (name, path) in enumerate(chain, 1):
-        href = url(lang, path)
-        ld_items.append({"@type": "ListItem", "position": i, "name": name, "item": SITE + href})
-        if i == last:
+        as_current = current and i == last
+        href = None if path is None or as_current else url(lang, path)
+        item = {"@type": "ListItem", "position": i, "name": name}
+        if href is not None:
+            item["item"] = SITE + href
+            lis.append(f'<li><a href="{href}">{esc(name)}</a></li>')
+        elif as_current:
             lis.append(f'<li><span aria-current="page">{esc(name)}</span></li>')
         else:
-            lis.append(f'<li><a href="{href}">{esc(name)}</a></li>')
+            lis.append(f'<li><span>{esc(name)}</span></li>')
+        ld_items.append(item)
     nav = f'<nav class="crumbs" aria-label="{label}"><ol>{"".join(lis)}</ol></nav>'
     ld = {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": ld_items}
     return nav, ld
@@ -3745,10 +3755,7 @@ def money_article(a, arts, lang):
     L = LANGS[lang]
     t = a[lang]
     section, section_href = topic_meta(a, lang)
-    nav, ld = crumbs(lang, [
-        (section, section_href),
-        (t["title"], a["slug"] + "/"),
-    ])
+    nav, ld = article_crumbs(a, lang)
     toc, body = enrich(a, lang, with_toc=True)
     body = insert_mid(body, ad_html("mid_article", lang))
     chips = ""
@@ -3839,6 +3846,100 @@ def layer_href(a, lang):
         return ""
     _name, href = topic_meta(a, lang)
     return href
+
+
+def _specific_topic_hub(topic):
+    """The subtopic hub for a filing topic, skipping layer landing pages."""
+    if not topic:
+        return None
+    layer_keys = {layer["key"] for layer in LAYERS}
+    layer_paths = {layer["path"] for layer in LAYERS}
+    matches = [spec for spec in HUBS
+               if topic in (spec.get("topics") or [])
+               and spec["key"] not in layer_keys
+               and spec["path"] not in layer_paths]
+    if not matches:
+        return None
+    for spec in matches:
+        if spec["key"] == topic:
+            return spec
+    for spec in matches:
+        if spec.get("topics") == [topic]:
+            return spec
+    return matches[0]
+
+
+def _nav_layer_for_topic(topic):
+    """Parent NAV_LAYERS entry for a topic key, when filing has no layer."""
+    if not topic:
+        return None
+    for nav in NAV_LAYERS:
+        if nav["key"] == topic:
+            return nav
+        for item in nav.get("items") or []:
+            if item["key"] == topic:
+                return nav
+    spec = _specific_topic_hub(topic)
+    if not spec:
+        return None
+    for nav in NAV_LAYERS:
+        if nav["key"] == spec["key"] or nav["href"] == spec["path"]:
+            return nav
+        for item in nav.get("items") or []:
+            if item["key"] == spec["key"] or item["href"] == spec["path"]:
+                return nav
+    return None
+
+
+def article_crumb_parts(a, lang):
+    """Layer and optional subtopic for an article trail. crumbs() prepends Home."""
+    parts = []
+    layer_key = (a or {}).get("layer") or ""
+    topic = (a or {}).get("topic") or ""
+    layer_label = None
+    layer_path = None
+    if layer_key:
+        for layer in LAYERS:
+            if layer["key"] == layer_key:
+                layer_label = _bi(layer["title"], lang)
+                layer_path = layer["path"]
+                break
+        if layer_label is None and layer_key == "ecosystem":
+            layer_label = LANGS[lang].get("nav_eco") or ("Ecosystem" if lang == "en" else "Ecosysteem")
+            layer_path = ecosystem_path(lang)
+    if layer_label is None and topic:
+        nav = _nav_layer_for_topic(topic)
+        if nav:
+            layer_label = nav["label"][lang]
+            layer_path = nav["href"]
+            layer_key = layer_key or nav["key"]
+    if layer_label is None:
+        name, href = topic_meta(a, lang)
+        if name:
+            parts.append((name, href))
+        return parts
+    parts.append((layer_label, layer_path))
+    if not topic or topic == layer_key:
+        return parts
+    spec = _specific_topic_hub(topic)
+    if spec:
+        parts.append((_bi(spec["title"], lang), spec["path"]))
+        return parts
+    for nav in NAV_LAYERS:
+        for item in nav.get("items") or []:
+            if item["key"] == topic:
+                parts.append((item[lang], item["href"]))
+                return parts
+    info = TOPIC_LABEL.get(topic)
+    if info and info[lang] != layer_label:
+        href = ecosystem_path(lang) if topic == "ecosystem" else info["href"]
+        parts.append((info[lang], href))
+    return parts
+
+
+def article_crumbs(a, lang):
+    """Full path Home / Layer / Subtopic, each segment linked to its hub when one exists."""
+    return crumbs(lang, article_crumb_parts(a, lang), current=False)
 
 
 def rubric_line(a, lang, stamp="", link=False):
@@ -5936,11 +6037,7 @@ def build():
                                "embedUrl": f"https://www.youtube-nocookie.com/embed/{v['id']}",
                                "contentUrl": f"https://www.youtube.com/watch?v={v['id']}"}
                 ld["video"] = {k: x for k, x in ld["video"].items() if x}
-            section, section_href = topic_meta(a, lang)
-            nav, crumb_ld = crumbs(lang, [
-                (section, section_href),
-                (t["title"], a["slug"] + "/"),
-            ])
+            nav, crumb_ld = article_crumbs(a, lang)
             body = shell(nav + pv_article("b", a, arts, lang, live=True),
                           page_side(arts, lang, "article", a, tail=ml_bar(lang))) + nl_sticky(lang)
             head = ld_script(ld) + ld_script(crumb_ld)

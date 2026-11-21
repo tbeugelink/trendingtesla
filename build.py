@@ -1079,6 +1079,11 @@ header.hb .pnav>.is-parked{display:none}
 .lcard .lim img{width:100%;height:100%;object-fit:cover}
 .lcard .lbody{display:flex;flex-direction:column;gap:4px;padding:0 0 10px;min-width:0;flex:1}
 .lmeta{display:flex;flex-wrap:nowrap;gap:4px 6px;align-items:baseline;margin:6px 0 4px;padding:0;font-size:.68rem;font-weight:700;line-height:1.3;color:var(--dim);white-space:nowrap}.leadstory>.lmeta,.pv-lead>.lmeta,article.money>.lmeta{margin-bottom:9px}
+/* Article pages: rubric sits under the hero and its caption, then the title.
+   6px above the line and 9px before the title, as on thumbnail cards. */
+article.money>.hi,article.money>.avid{margin-bottom:0}
+article.money .hero-img{margin-bottom:0}
+article.money>.lmeta{margin-top:6px}
 .lname{font-size:.68rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--blue)}
 article.money>.lmeta a.lname{color:var(--blue);text-decoration:none}
 article.money>.lmeta a.lname:hover{text-decoration:underline}
@@ -1101,7 +1106,7 @@ article.money>.lmeta a.lname:hover{text-decoration:underline}
 .sheet-main article.money>.smeta{margin-bottom:7px}
 .sheet-main article.money>.byline{margin-bottom:6px}
 .sheet-main article.money>.lead{margin-bottom:11px}
-.sheet-main article.money>.avid{margin-top:0;margin-bottom:10px}.sheet-main article.money>.hi{margin-bottom:10px}.sheet-main article.money>.lmeta{margin-left:calc(3vw + 14px);margin-right:calc(3vw + 14px)}
+.sheet-main article.money>.avid{margin-top:0;margin-bottom:0}.sheet-main article.money>.hi{margin-bottom:0}.sheet-main article.money>.lmeta{margin-left:calc(3vw + 14px);margin-right:calc(3vw + 14px)}
 .sheet-main article.money .lead{font-size:1.08rem;line-height:1.5;color:var(--muted);max-width:none}
 .sheet-main article.money .prose{font-size:1.05rem;line-height:1.7;max-width:none}
 .sheet-main article .prose h2{margin-right:14px}
@@ -4329,8 +4334,8 @@ def pv_article(variant, a, arts, lang, live=False):
     else:
         toc_here, rail = toc, ""
     article = (
-        f'<article class="money">{rubric_line(a, lang, link=True)}'
-        f'{media}'
+        f'<article class="money">{media}'
+        f'{rubric_line(a, lang, link=True)}'
         f'<h1>{esc(t["title"])}</h1>'
         f'<p class="byline"><a href="{url(lang, "editorial/")}">{L["byline"]}</a>'
         f' · {read_time(a, lang)} {L["min"]}</p>'

@@ -2355,6 +2355,7 @@ ROW_PX = 168
 MAX_LEFT = 24   # articles in the list under the lead
 MAX_RIGHT = 50  # articles in the news column
 MAX_HOME_GRID = 60  # articles in the grid under the tip bar on the home page
+MAX_HOME_FEED = 30  # chronological homepage list, newest first, including stories already in the layer cards or video strip
 XTRA = 0  # hidden spare cards after a paged grid; the browser shows enough of them to complete the last row
 PER_PAGE = 60   # articles per archive page (60 fills every row at 1-6 columns)
 
@@ -4046,19 +4047,19 @@ def rubric_line(a, lang, stamp="", link=False):
     return ""
 
 
-def home_videos(arts, lang, n=8, skip_ids=()):
-    """Compact strip of the newest stories that have a long video or a Short. Links to the article."""
+def home_videos(arts, lang, n=8):
+    """Compact strip of the newest stories that have a long video or a Short. Links to the article.
+    Always newest first; stories already shown as layer cards are not skipped."""
     by = {a["slug"]: a for a in arts}
     rows = []
     seen = set()
-    banned = set(skip_ids)
     for (slug, vlang), video in VIDEOS.items():
-        if vlang not in ("en", lang) or slug not in by or slug in seen or id(by[slug]) in banned:
+        if vlang not in ("en", lang) or slug not in by or slug in seen:
             continue
         seen.add(slug)
         rows.append((by[slug], video.get("seconds") or 0, False))
     for slug, short in SHORTS.items():
-        if slug not in by or slug in seen or id(by[slug]) in banned:
+        if slug not in by or slug in seen:
             continue
         seen.add(slug)
         rows.append((by[slug], 0, True))
@@ -4092,8 +4093,7 @@ def home_topics(arts, shown, lang):
         pool = [a for a in arts if _in_topics(a, keys)]
         if not pool:
             continue
-        fresh = [a for a in pool if id(a) not in shown]
-        pick = (fresh + [a for a in pool if id(a) in shown])[:3]
+        pick = sorted(pool, key=published, reverse=True)[:3]
         title = L[label_key] if label_key else CATEGORIES["guides"][lang]
         cards = f'<div class="topics3">{"".join(gcard(a, lang) for a in pick)}</div>'
         label = {"en": f"All {title} articles", "nl": f"Alle artikelen over {title}"}[lang]
@@ -4122,14 +4122,13 @@ def _side_ul(lang, items, cls=""):
 
 
 def page_side(arts, lang, kind="home", current=None, skip=None, tail="", signup=True):
-    """Right column. Sections with nothing to show are left out, and no article is listed twice."""
+    """Right column. Sections with nothing to show are left out. Latest News is always newest first."""
     L = LANGS[lang]
     C = pv_copy(lang)
-    # skip: articles already visible in the main column.
+    # skip: articles already visible in the main column (used for related, not for Latest News).
     main_ids = {id(x) for x in (skip or [])}
     if kind == "article" and current is not None:
         main_ids.add(id(current))
-    lead_id = id(arts[0]) if arts else None
     start = []
     if kind != "guides":
         # Guides stay in Start here even when the hub column already lists them.
@@ -4138,16 +4137,17 @@ def page_side(arts, lang, kind="home", current=None, skip=None, tail="", signup=
             key=lambda x: words(x, "en"), reverse=True)
         start = guides[:6]
     start_ids = {id(x) for x in start}
-    # The news list is not the guide list, not the homepage lead, and not the main column.
+    # Latest News lists the newest non-guide stories. The current article is omitted on article pages.
     show_latest = kind in ("home", "static", "videos", "model", "saved", "hub", "guides", "article", "archive")
     if kind == "hub" and current == "news":
         show_latest = False
     latest = []
     if show_latest:
-        ban = set(main_ids) | start_ids
-        if lead_id is not None:
-            ban.add(lead_id)
-        for x in arts:
+        # Always the newest news, even when those stories already appear in the main column.
+        ban = set(start_ids)
+        if kind == "article" and current is not None:
+            ban.add(id(current))
+        for x in sorted(arts, key=published, reverse=True):
             if x["category"] == "guides" or id(x) in ban:
                 continue
             latest.append(x)
@@ -4241,16 +4241,16 @@ def layer_latest(arts, lang):
 
 
 def homepage(arts, lang):
-    """A card from each ecosystem layer, then the video strip and the rest of the day's list."""
+    """A card from each ecosystem layer, then the video strip and a newest-first dated list."""
     L = LANGS[lang]
     nav, crumb_ld = crumbs(lang, [])
     if not arts:
         return shell(f'{nav}<h1>{esc(NAME)}</h1><p class="empty">{L["empty"]}</p>', page_side(arts, lang, "home")), crumb_ld
     row, shown = layer_latest(arts, lang)
-    videos, strip_arts = home_videos(arts, lang, 8, skip_ids={id(a) for a in shown})
+    videos, strip_arts = home_videos(arts, lang, 8)
     strip = f'<div class="vstrip">{videos}</div>' if videos else ""
-    used = {id(a) for a in shown} | {id(a) for a in strip_arts}
-    feed = [x for x in arts if id(x) not in used][:14]
+    # Newest first, including stories already in the layer cards or the video strip.
+    feed = sorted(arts, key=published, reverse=True)[:MAX_HOME_FEED]
     main = (f'{nav}<h1 class="visually-hidden">{esc(NAME)}</h1>{row}{strip}{pv_feed(feed, lang)}')
     return shell(main, page_side(arts, lang, "home", skip=[*shown, *strip_arts, *feed]), "front"), crumb_ld
 
@@ -4374,11 +4374,11 @@ def pv_home(variant, arts, lang):
     sample = url(lang, f"preview/{variant}/article/")
     main = pv_banner(lang, variant, blurbs[variant]) + pv_tabs(lang, variant)
     if variant == "a":
-        main += pv_lead(lead, lang, sample) + pv_feed([x for x in arts if x is not lead][:24], lang, thumbs=4)
+        main += pv_lead(lead, lang, sample) + pv_feed(sorted(arts, key=published, reverse=True)[:24], lang, thumbs=4)
     elif variant == "b":
         videos, _strip_arts = home_videos(arts, lang, 8)
         strip = f'<div class="vstrip">{videos}</div>' if videos else ""
-        main += home_lead(lead, lang) + strip + pv_feed([x for x in arts if x is not lead][:14], lang, thumbs=2)
+        main += home_lead(lead, lang) + strip + pv_feed(sorted(arts, key=published, reverse=True)[:MAX_HOME_FEED], lang, thumbs=2)
     else:
         blocks = []
         for _key, label_key, path, keys in HOME_TOPICS:

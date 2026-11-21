@@ -1,0 +1,62 @@
+name: Upload Anthropic IPO Short
+
+# One public upload of the finished Anthropic IPO Short. It does not render a video and it does not
+# upload anything else. workflow_dispatch only, and only on this branch.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+      - name: Install ffmpeg
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg > /dev/null
+      - name: Upload the finished Short
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+          YT_PRIVACY: public
+        run: python3 video/upload.py video/anthropic-ipo/anthropic-ipo-short.mp4 en | tee "$RUNNER_TEMP/up.txt"
+      - name: Read the privacy status back
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+        run: |
+          python3 - << 'PY'
+          import json, os, re, urllib.parse, urllib.request
+          log = open(os.environ["RUNNER_TEMP"] + "/up.txt", encoding="utf-8").read()
+          ids = re.findall(r"youtu\.be/([A-Za-z0-9_-]{6,})", log)
+          if not ids:
+              raise SystemExit("no YouTube id in the upload log")
+          vid = ids[-1]
+          data = urllib.parse.urlencode({
+              "client_id": os.environ["YT_CLIENT_ID"].strip(),
+              "client_secret": os.environ["YT_CLIENT_SECRET"].strip(),
+              "refresh_token": os.environ["YT_REFRESH_TOKEN"].strip(),
+              "grant_type": "refresh_token",
+          }).encode()
+          with urllib.request.urlopen("https://oauth2.googleapis.com/token", data=data, timeout=60) as r:
+              token = json.load(r)["access_token"]
+          q = urllib.parse.urlencode({"part": "status,snippet", "id": vid})
+          req = urllib.request.Request(
+              "https://www.googleapis.com/youtube/v3/videos?" + q,
+              headers={"Authorization": f"Bearer {token}"})
+          with urllib.request.urlopen(req, timeout=30) as r:
+              items = json.load(r).get("items") or []
+          if not items:
+              raise SystemExit(f"video {vid} was not returned")
+          v = items[0]
+          print(json.dumps({
+              "id": v["id"],
+              "title": v["snippet"]["title"],
+              "privacyStatus": v["status"]["privacyStatus"],
+              "url": f"https://youtu.be/{v['id']}",
+          }))
+          PY

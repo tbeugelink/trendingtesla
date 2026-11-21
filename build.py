@@ -4255,14 +4255,30 @@ def layer_latest(arts, lang):
     return f'<section class="layerrow" aria-label="{esc(label)}">{"".join(cards)}</section>', shown
 
 
-def home_grid_card(a, lang, eager=False):
-    """Article card: rubric flush under the photo, title below."""
+def home_grid_card(a, lang, eager=False, badge=""):
+    """Article card: rubric flush under the photo, title below. A video badge sits on the photo."""
     t = a[lang]
+    mark = ""
+    if badge:
+        mark = f'<span class="dur dvo">{esc(badge)}</span><span class="vpl" aria-hidden="true"></span>'
     return (
         f'<a class="lcard" href="{url(lang, a["slug"] + "/")}">'
-        f'<span class="lim">{resp_img(site_img(a), t["title"], "(max-width: 599px) 92vw, (max-width: 900px) 46vw, 280px", high=eager, lazy=not eager, width=640, height=360)}</span>'
+        f'<span class="lim">{resp_img(site_img(a), t["title"], "(max-width: 599px) 92vw, (max-width: 900px) 46vw, 280px", high=eager, lazy=not eager, width=640, height=360)}{mark}</span>'
         f'{rubric_line(a, lang)}'
         f'<span class="lbody"><strong>{esc(card_title(a, lang))}</strong></span></a>')
+
+
+def story_badge(a):
+    """Duration of the long video, else Short. A story with both shows the long video."""
+    video = video_for(a, "en")
+    if video:
+        sec = int(video.get("seconds") or 0)
+        if sec:
+            return f"{sec // 60}:{sec % 60:02d}"
+        return "Video"
+    if SHORTS.get(a["slug"]):
+        return "Short"
+    return ""
 
 
 def parse_published(raw):
@@ -4290,8 +4306,59 @@ def clip_layer_name(title):
     return "Tesla"
 
 
+def home_items(arts):
+    """One item per story. A video that belongs to an article is a badge on that article.
+    A video or Short with no article stays its own item, ordered by its YouTube time."""
+    by = {a["slug"]: a for a in arts}
+    items = [{
+        "kind": "article",
+        "stamp": published(a),
+        "article": a,
+        "badge": story_badge(a),
+        "title": "",
+        "id": "",
+        "seconds": 0,
+        "path": a["slug"] + "/",
+    } for a in arts]
+    seen = set()
+    for video in VIDEOS.values():
+        vid = video.get("id") or ""
+        slug = video.get("slug") or ""
+        if not vid or vid in seen or slug in by:
+            continue
+        seen.add(vid)
+        items.append({
+            "kind": "video",
+            "stamp": parse_published(video.get("published") or ""),
+            "article": None,
+            "badge": "",
+            "title": video.get("title") or "",
+            "id": vid,
+            "seconds": int(video.get("seconds") or 0),
+            "path": f"videos/{vid}/",
+        })
+    for short in SHORT_ROWS:
+        vid = short.get("id") or ""
+        slug = short.get("slug") or ""
+        if not vid or vid in seen or slug in by:
+            continue
+        seen.add(vid)
+        items.append({
+            "kind": "short",
+            "stamp": parse_published(short.get("published") or ""),
+            "article": None,
+            "badge": "",
+            "title": short.get("title") or "",
+            "id": vid,
+            "seconds": 0,
+            "path": f"shorts/{vid}/",
+        })
+    items.sort(key=lambda item: item["stamp"], reverse=True)
+    return items
+
+
 def clip_items(arts):
-    """Articles, long videos and Shorts, each once. A story and its video are separate items."""
+    """Articles, long videos and Shorts, each once. Used by the videos index and watch pages."""
     by = {a["slug"]: a for a in arts}
     items = [{
         "kind": "article",
@@ -4371,38 +4438,55 @@ def clip_card(item, lang, eager=False):
         f'<span class="lbody"><strong>{esc(title)}</strong></span></a>')
 
 
+def home_card(item, lang, eager=False):
+    """Article cards link to the article. Only a video with no article links to its watch page."""
+    if item["kind"] == "article":
+        return home_grid_card(item["article"], lang, eager, item.get("badge") or "")
+    return clip_card(item, lang, eager)
+
+
 def home_feed(items, lang):
-    """Dated newest-first list. Video rows carry a duration or Short badge instead of a read time."""
+    """Dated newest-first list. A story with a video keeps that badge. An unattached video links to its watch page."""
     out, last = [], None
     for item in items:
         day = item["stamp"].astimezone(TZ).date().isoformat()
         if day != last:
             out.append(f'<h2 class="pv-day">{fmt_date(day, lang)}</h2>')
             last = day
-        if item["kind"] == "article":
+        if item["kind"] == "article" and not item.get("badge"):
             out.append(pv_row(item["article"], lang))
             continue
-        mark = clip_badge(item)
+        if item["kind"] == "article":
+            a = item["article"]
+            mark = item["badge"]
+            stamp = published(a)
+            href = url(lang, a["slug"] + "/")
+            title = card_title(a, lang)
+        else:
+            mark = clip_badge(item)
+            stamp = item["stamp"]
+            href = url(lang, item["path"])
+            title = item["title"]
         out.append(
-            f'<a class="pv-row vmark" href="{url(lang, item["path"])}">'
-            f'<time datetime="{item["stamp"].isoformat()}">{item["stamp"].strftime("%H:%M")}</time>'
-            f'<span class="pv-hl"><b>{esc(item["title"])}</b></span>'
+            f'<a class="pv-row vmark" href="{href}">'
+            f'<time datetime="{stamp.isoformat()}">{stamp.strftime("%H:%M")}</time>'
+            f'<span class="pv-hl"><b>{esc(title)}</b></span>'
             f'<span class="pv-min" title="{esc(mark)}"><b>{esc(mark)}</b></span></a>')
     return "".join(out)
 
 
 def homepage(arts, lang):
-    """One newest-first grid of articles, long videos and Shorts, then the rest of that list."""
+    """Newest stories, one card each. A video on an article is a badge, not a second card."""
     L = LANGS[lang]
     nav, crumb_ld = crumbs(lang, [])
     if not arts:
         return shell(f'{nav}<h1>{esc(NAME)}</h1><p class="empty">{L["empty"]}</p>', page_side(arts, lang, "home")), crumb_ld
-    ordered = clip_items(arts)
+    ordered = home_items(arts)
     grid = ordered[:MAX_HOME_CARDS]
     # Continue the same newest-first order. Nothing from the grid is repeated.
     feed = ordered[MAX_HOME_CARDS:MAX_HOME_CARDS + MAX_HOME_FEED]
     label = "Latest news" if lang == "en" else "Het laatste nieuws"
-    cards = "".join(clip_card(item, lang, eager=i < 4) for i, item in enumerate(grid))
+    cards = "".join(home_card(item, lang, eager=i < 4) for i, item in enumerate(grid))
     row = f'<section class="homenews" aria-label="{esc(label)}">{cards}</section>'
     main = (f'{nav}<h1 class="visually-hidden">{esc(NAME)}</h1>{row}{home_feed(feed, lang)}')
     shown = [item["article"] for item in (*grid, *feed) if item["kind"] == "article" and item.get("article")]

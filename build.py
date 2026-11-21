@@ -1093,8 +1093,11 @@ article.money>.lmeta{margin-top:6px}
 .lname{font-size:.68rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--blue)}
 article.money>.lmeta a.lname{color:var(--blue);text-decoration:none}
 article.money>.lmeta a.lname:hover{text-decoration:underline}
+.lmeta .llayer{font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:inherit;text-decoration:none}
+.lmeta .lsub{font-weight:800;color:var(--blue);text-decoration:none}
+.lmeta a.llayer:hover,.lmeta a.lsub:hover{text-decoration:underline}
 .lcard.empty .lmeta,.lcard.empty .lbody{padding-left:10px;padding-right:10px}
-.lcard .lname,.vcard .lname,.shc .lname,.card .lname,.mini .lname,.leadstory .lname{color:var(--blue)}
+.lcard .lname,.vcard .lname,.shc .lname,.card .lname,.mini .lname,.leadstory .lname,.lcard .lsub,.vcard .lsub,.shc .lsub,.card .lsub,.mini .lsub,.leadstory .lsub{color:var(--blue)}
 .lcard strong{font-size:.92rem;line-height:1.28;font-weight:800;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden}
 .leadstory .ltitle{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden}
 .lcard.empty{border:1px solid rgba(255,45,149,.55);border-radius:8px;overflow:hidden;background:linear-gradient(165deg,#ff2d95 0%,#c41878 38%,#3a0824 100%)}
@@ -2450,11 +2453,12 @@ function isWideFind(){return matchMedia('(min-width:769px)').matches}function pl
 document.addEventListener('keydown',function(e){if(e.key==='Escape'){t(false);d.classList.remove('sopen');if(r)r.hidden=true;if(d.classList.contains('find-open'))setFind(false,{restore:true})}});
 var f=document.querySelector('.search'),i=f.querySelector('input'),r=f.querySelector('.res'),idx=null;
 function e(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function rubric(a){var when=' · <time class="ago" datetime="'+a.ts+'">'+e(a.dt)+'</time>';return a.s?'<span class="lmeta"><span class="lpath"><span class="llayer">'+e(a.k||'')+'</span> / <span class="lsub">'+e(a.s)+'</span></span>'+when+'</span>':'<span class="lmeta"><span class="lname">'+e(a.k||'')+'</span>'+when+'</span>'}
 function load(){return idx?Promise.resolve(idx):fetch(f.dataset.idx).then(function(x){return x.json()}).then(function(j){idx=j;return j})}
 i.addEventListener('focus',load);
 i.addEventListener('input',function(){var q=i.value.trim().toLowerCase();if(q.length<2){r.hidden=true;return}
 load().then(function(){var w=q.split(/\s+/),h=idx.filter(function(a){var s=(a.t+' '+a.d+' '+a.c).toLowerCase();return w.every(function(x){return s.indexOf(x)>-1})}).slice(0,8);
-r.innerHTML=h.length?h.map(function(a){return '<a href="'+a.u+'"><img src="'+a.i+'" alt="'+e(a.t)+'" width="160" height="84" decoding="async"><span><span class="lmeta"><span class="lname">'+e(a.k||'')+'</span> · <time class="ago" datetime="'+a.ts+'">'+e(a.dt)+'</time></span><b>'+e(a.t)+'</b></span></a>'}).join(''):'<p>'+e(f.dataset.none)+'</p>';r.hidden=false;window.ttFit=function(){[].forEach.call(document.querySelectorAll('.res a'),function(x){var im=x.querySelector('img'),t=x.querySelector('span');if(!im||!t)return;var m=(x.clientWidth-12)/2;im.style.width=m+'px';var h=t.offsetHeight,w=h*1200/630;if(w>m){w=m;h=w*630/1200}im.style.width=w+'px';im.style.height=h+'px'})};ttFit();if(!window.ttR){window.ttR=1;addEventListener('resize',function(){window.ttFit()})}})});
+r.innerHTML=h.length?h.map(function(a){return '<a href="'+a.u+'"><img src="'+a.i+'" alt="'+e(a.t)+'" width="160" height="84" decoding="async"><span>'+rubric(a)+'<b>'+e(a.t)+'</b></span></a>'}).join(''):'<p>'+e(f.dataset.none)+'</p>';r.hidden=false;window.ttFit=function(){[].forEach.call(document.querySelectorAll('.res a'),function(x){var im=x.querySelector('img'),t=x.querySelector('span');if(!im||!t)return;var m=(x.clientWidth-12)/2;im.style.width=m+'px';var h=t.offsetHeight,w=h*1200/630;if(w>m){w=m;h=w*630/1200}im.style.width=w+'px';im.style.height=h+'px'})};ttFit();if(!window.ttR){window.ttR=1;addEventListener('resize',function(){window.ttFit()})}})});
 f.addEventListener('submit',function(x){x.preventDefault();var a=r.querySelector('a');if(a)location.href=a.href});
 document.addEventListener('click',function(x){if(!f.contains(x.target)&&!x.target.closest('.sbtn')){r.hidden=true;d.classList.remove('sopen');if(d.classList.contains('find-open'))setFind(false)}});
 document.querySelector('.sbtn').addEventListener('click',function(ev){ev.stopPropagation();var open=!d.classList.contains('find-open');setFind(open,{restore:!open})});
@@ -2479,7 +2483,7 @@ fetch('/api/likes?s='+lb.map(function(b){return b.dataset.like}).join(',')).then
 lb.forEach(function(b){var s=b.dataset.like;b.setAttribute('aria-pressed',liked.indexOf(s)>-1);b.onclick=function(){var l=LS.get('tt_liked'),i=l.indexOf(s),d=i>-1?-1:1;if(d>0)l.push(s);else l.splice(i,1);LS.set('tt_liked',l);b.setAttribute('aria-pressed',d>0);
 var sp=b.querySelector('span');sp.textContent=Math.max(0,(+sp.textContent||0)+d);fetch('/api/likes',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({slug:s,d:d})}).then(function(r){return r.json()}).then(function(j){if(j.n!=null)sp.textContent=j.n}).catch(function(){})}})}
 var sl=document.querySelector('.savedlist');if(sl){var keep=LS.get('tt_saved');if(!keep.length){sl.innerHTML='<p class="empty">'+e(sl.dataset.empty)+'</p>'}else{load().then(function(){var m={};idx.forEach(function(a){var k=a.u.replace(/\/$/,'').split('/').pop();m[k]=a});
-sl.innerHTML=keep.filter(function(k){return m[k]}).map(function(k){var a=m[k];return '<a class="card" href="'+a.u+'"><div class="im"><img src="'+a.i+'" alt="'+e(a.t)+'" width="1200" height="630" decoding="async"></div><div class="body"><span class="lmeta"><span class="lname">'+e(a.k||'')+'</span> · <time class="ago" datetime="'+a.ts+'">'+e(a.dt)+'</time></span><h3>'+e(a.t)+'</h3></div></a>'}).join('');ttAgo()})}}window.addEventListener('resize',bal);bal();
+sl.innerHTML=keep.filter(function(k){return m[k]}).map(function(k){var a=m[k];return '<a class="card" href="'+a.u+'"><div class="im"><img src="'+a.i+'" alt="'+e(a.t)+'" width="1200" height="630" decoding="async"></div><div class="body">'+rubric(a)+'<h3>'+e(a.t)+'</h3></div></a>'}).join('');ttAgo()})}}window.addEventListener('resize',bal);bal();
 })();"""
 JS += r"""
 document.querySelectorAll(".avb[data-vid]").forEach(function(b){b.addEventListener("click",function(){if(b.classList.contains("on"))return;b.classList.add("on");var f=document.createElement("iframe");f.src="https://www.youtube-nocookie.com/embed/"+b.dataset.vid+"?autoplay=1"+(matchMedia("(pointer:coarse)").matches?"":"&playsinline=1")+"&rel=0";f.title=b.getAttribute("aria-label")||"YouTube";f.setAttribute("allow","autoplay; encrypted-media; picture-in-picture; fullscreen");f.allowFullscreen=true;b.appendChild(f)})});
@@ -3446,11 +3450,12 @@ def drawer_links(lang, active):
 
 
 def crumbs(lang, parts, current=True):
-    """Visible trail plus BreadcrumbList.
+    """BreadcrumbList JSON-LD. The visible trail was removed from the page.
 
-    By default the last crumb is the current page and is not a link. Pass
-    current=False when every segment should link to its hub (article pages).
-    A part whose path is None is shown as plain text.
+    By default the last crumb is the current page. Pass current=False when
+    every segment should point at its hub (article pages). A part whose path
+    is None is stored as a name only. The first return value is empty so
+    callers can keep unpacking (nav, ld) without emitting a visible trail.
     """
     chain = [(LANGS[lang]["home"], "")] + list(parts)
     lis = []
@@ -3469,9 +3474,8 @@ def crumbs(lang, parts, current=True):
         else:
             lis.append(f'<li><span>{esc(name)}</span></li>')
         ld_items.append(item)
-    nav = f'<nav class="crumbs" aria-label="{label}"><ol>{"".join(lis)}</ol></nav>'
     ld = {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": ld_items}
-    return nav, ld
+    return "", ld
 
 
 def ld_script(obj):
@@ -3816,7 +3820,7 @@ def home_lead(a, lang, title_tag="h1"):
     href = url(lang, a["slug"] + "/")
     tag = "h1" if title_tag == "h1" else "h2"
     photo = site_img(a)
-    line = rubric_line(a, lang)
+    line = rubric_line(a, lang, link=True)
     im = (f'<div class="leadim">'
           f'{resp_img(photo, t["title"], SIZES_LEAD, high=True, lazy=False, width=1600, height=900)}</div>'
           if photo else "")
@@ -3999,19 +4003,38 @@ def article_crumbs(a, lang):
     return crumbs(lang, article_crumb_parts(a, lang), current=False)
 
 
+def _rubric_pair(a, lang):
+    """Layer and optional distinct subtopic for the line under an image."""
+    if not a:
+        return "", "", "", ""
+    parts = article_crumb_parts(a, lang)
+    if not parts:
+        return layer_name(a, lang), layer_href(a, lang), "", ""
+    layer_label, layer_path = parts[0]
+    if len(parts) >= 2 and (parts[1][0] or "").casefold() != (layer_label or "").casefold():
+        return layer_label, layer_path, parts[1][0], parts[1][1]
+    return layer_label, layer_path, "", ""
+
+
+def _rubric_mark(text, cls, href, lang, link):
+    if not text:
+        return ""
+    if link and href:
+        return f'<a class="{cls}" href="{url(lang, href)}">{esc(text)}</a>'
+    return f'<span class="{cls}">{esc(text)}</span>'
+
+
 def rubric_line(a, lang, stamp="", link=False):
-    """Cyan layer label, a dot, and the relative date. Same line as the article cards."""
-    name = layer_name(a, lang)
+    """Label under an image: grey LAYER / cyan Subtopic · date, or cyan layer · date."""
+    layer, layer_path, sub, sub_path = _rubric_pair(a, lang)
     when_html = stamp or (when(a, lang) if a else "")
-    label = esc(name)
-    if link and name:
-        href = layer_href(a, lang)
-        if href:
-            label = f'<a class="lname" href="{url(lang, href)}">{esc(name)}</a>'
-        else:
-            label = f'<span class="lname">{esc(name)}</span>'
-    elif name:
-        label = f'<span class="lname">{esc(name)}</span>'
+    if layer and sub:
+        label = (
+            f'<span class="lpath">{_rubric_mark(layer, "llayer", layer_path, lang, link)}'
+            f' / {_rubric_mark(sub, "lsub", sub_path, lang, link)}</span>'
+        )
+    elif layer:
+        label = _rubric_mark(layer, "lname", layer_path, lang, link)
     else:
         label = ""
     if label and when_html:
@@ -4211,7 +4234,7 @@ def layer_latest(arts, lang):
         cards.append(
             f'<a class="lcard {tone}" href="{url(lang, pick["slug"] + "/")}">'
             f'<span class="lim">{resp_img(site_img(pick), t["title"], "(max-width: 699px) 46vw, 220px", lazy=False, width=640, height=360)}</span>'
-            f'<span class="lmeta"><span class="lname">{esc(name)}</span> · {when(pick, lang)}</span>'
+            f'{rubric_line(pick, lang)}'
             f'<span class="lbody"><strong>{esc(card_title(pick, lang))}</strong></span></a>')
     label = "Latest from each layer" if lang == "en" else "Het laatste per laag"
     return f'<section class="layerrow" aria-label="{esc(label)}">{"".join(cards)}</section>', shown
@@ -6118,7 +6141,7 @@ def build():
                        image=social_img(a, lang), active=a["category"]))
 
         idx = [{"u": url(lang, x["slug"] + "/"), "t": x[lang]["title"], "d": x[lang]["description"],
-                "k": layer_name(x, lang),
+                "k": _rubric_pair(x, lang)[0], "s": _rubric_pair(x, lang)[2],
                 "c": CATEGORIES[x["category"]].get("tag", CATEGORIES[x["category"]][lang]), "dt": rel_short(published(x), lang), "ts": published(x).isoformat(), "i": site_img(x)} for x in arts]
         (OUT / f"search-{lang}.json").write_text(json.dumps(idx, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
 

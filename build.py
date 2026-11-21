@@ -1017,6 +1017,8 @@ header.hb .pnav>.is-parked{display:none}
 .pv-lead p{color:var(--muted);font-size:.92rem;line-height:1.45;margin:0}
 .pv-day{font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);margin:8px 0 2px;padding-top:6px;border-top:1px solid var(--border)}
 .pv-row{display:grid;grid-template-columns:52px minmax(0,1fr) 46px;gap:8px;align-items:center;padding:3px 0;border-bottom:1px solid #242424;text-decoration:none;color:inherit}
+.pv-row.vmark{grid-template-columns:52px minmax(0,1fr) 54px}
+.pv-row.vmark .pv-min b{font-size:.72rem}
 .pv-row.hasth{grid-template-columns:52px 64px minmax(0,1fr) 46px}
 .pv-row time{font-variant-numeric:tabular-nums;font-size:.8rem;font-weight:800;color:var(--dim)}
 .pv-th{position:relative;container-type:inline-size;border-radius:6px;overflow:hidden;border:1px solid var(--edge);background:#000}
@@ -1981,6 +1983,7 @@ def page(lang, path, title, description, body, og_type="website", extra_head="",
         (L["nav_eco"], ecosystem_path(lang)),
         ("All news" if lang == "en" else "Al het nieuws", "category/news/"),
         (L["videos"], "shorts/"),
+        ("Videos" if lang == "en" else "Video's", "videos/"),
         ("Weekly briefing" if lang == "en" else "Weekbriefing", "briefing/"),
         ("Promises" if lang == "en" else "Beloftes", promises_path(lang)),
         (CATEGORIES["musk"][lang], "category/musk/"),
@@ -2361,7 +2364,7 @@ ROW_PX = 168
 MAX_LEFT = 24   # articles in the list under the lead
 MAX_RIGHT = 50  # articles in the news column
 MAX_HOME_GRID = 60  # articles in the grid under the tip bar on the home page
-MAX_HOME_FEED = 30  # dated list under the video strip, newest first, excluding the cards already in the grid
+MAX_HOME_FEED = 30  # dated list under the card grid, newest first, excluding the cards already shown
 MAX_HOME_CARDS = 24  # chronological card grid at the top of the homepage
 XTRA = 0  # hidden spare cards after a paged grid; the browser shows enough of them to complete the last row
 PER_PAGE = 60   # articles per archive page (60 fills every row at 1-6 columns)
@@ -2806,6 +2809,7 @@ def related_block(a, arts, lang):
 
 MONEY = {}
 SHORTS = {}
+SHORT_ROWS = []  # every Short, including ones that are not attached to an article yet
 PRIMARY_CATS = {"models", "fsd", "robotaxi", "optimus", "spacex", "starlink", "xai", "boring"}
 # Category indexes that repeat a layer or sub-hub. The worker and public/_redirects send them on.
 REDIRECT_CATS = {
@@ -2846,12 +2850,16 @@ def load_money():
 
 def load_shorts():
     SHORTS.clear()
+    SHORT_ROWS.clear()
     path = ROOT / "content" / "shorts.json"
     if not path.exists():
         return
     for sh in json.loads(path.read_text(encoding="utf-8")):
         slug, vid = sh.get("slug"), sh.get("id")
-        if slug and vid and slug not in SHORTS:
+        if not vid:
+            continue
+        SHORT_ROWS.append(sh)
+        if slug and slug not in SHORTS:
             SHORTS[slug] = sh
 
 
@@ -4248,40 +4256,216 @@ def layer_latest(arts, lang):
 
 
 def home_grid_card(a, lang, eager=False):
-    """Thumbnail card: rubric flush under the photo, title below, video badge when there is one."""
+    """Article card: rubric flush under the photo, title below."""
     t = a[lang]
-    video = VIDEOS.get((a["slug"], lang)) or VIDEOS.get((a["slug"], "en"))
-    if video and video.get("seconds"):
-        sec = int(video["seconds"])
-        badge = f'<span class="dur dvo">{sec // 60}:{sec % 60:02d}</span><span class="vpl" aria-hidden="true"></span>'
-    elif SHORTS.get(a["slug"]):
-        badge = '<span class="dur dvo">Short</span><span class="vpl" aria-hidden="true"></span>'
-    else:
-        badge = ""
     return (
         f'<a class="lcard" href="{url(lang, a["slug"] + "/")}">'
-        f'<span class="lim">{resp_img(site_img(a), t["title"], "(max-width: 599px) 92vw, (max-width: 900px) 46vw, 280px", high=eager, lazy=not eager, width=640, height=360)}{badge}</span>'
+        f'<span class="lim">{resp_img(site_img(a), t["title"], "(max-width: 599px) 92vw, (max-width: 900px) 46vw, 280px", high=eager, lazy=not eager, width=640, height=360)}</span>'
         f'{rubric_line(a, lang)}'
         f'<span class="lbody"><strong>{esc(card_title(a, lang))}</strong></span></a>')
 
 
+def parse_published(raw):
+    """YouTube publish time from videos.json or shorts.json, in the site timezone."""
+    dt = datetime.fromisoformat(str(raw))
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=timezone.utc)
+    return dt.astimezone(TZ)
+
+
+def stamp_html(stamp, lang):
+    return f'<time class="ago" datetime="{stamp.isoformat()}">{esc(rel_short(stamp, lang))}</time>'
+
+
+def clip_layer_name(title):
+    guess = (title or "").lower()
+    if "starlink" in guess:
+        return "Starlink"
+    if "spacex" in guess or "starship" in guess or "falcon" in guess:
+        return "SpaceX"
+    if "neuralink" in guess:
+        return "Neuralink"
+    if "boring" in guess:
+        return "Boring Co"
+    return "Tesla"
+
+
+def clip_items(arts):
+    """Articles, long videos and Shorts, each once. A story and its video are separate items."""
+    by = {a["slug"]: a for a in arts}
+    items = [{
+        "kind": "article",
+        "stamp": published(a),
+        "article": a,
+        "title": "",
+        "id": "",
+        "seconds": 0,
+        "path": a["slug"] + "/",
+    } for a in arts]
+    seen = set()
+    for (_slug, _vlang), video in VIDEOS.items():
+        vid = video.get("id") or ""
+        if not vid or vid in seen:
+            continue
+        seen.add(vid)
+        items.append({
+            "kind": "video",
+            "stamp": parse_published(video.get("published") or ""),
+            "article": by.get(video.get("slug")),
+            "title": video.get("title") or "",
+            "id": vid,
+            "seconds": int(video.get("seconds") or 0),
+            "path": f"videos/{vid}/",
+        })
+    for short in SHORT_ROWS:
+        vid = short.get("id") or ""
+        if not vid or vid in seen:
+            continue
+        seen.add(vid)
+        items.append({
+            "kind": "short",
+            "stamp": parse_published(short.get("published") or ""),
+            "article": by.get(short.get("slug") or ""),
+            "title": short.get("title") or "",
+            "id": vid,
+            "seconds": 0,
+            "path": f"shorts/{vid}/",
+        })
+    items.sort(key=lambda item: item["stamp"], reverse=True)
+    return items
+
+
+def clip_badge(item):
+    if item["kind"] == "short":
+        return "Short"
+    sec = int(item.get("seconds") or 0)
+    if sec:
+        return f"{sec // 60}:{sec % 60:02d}"
+    return "Video"
+
+
+def clip_meta(item, lang):
+    stamp = stamp_html(item["stamp"], lang)
+    article = item.get("article")
+    if article:
+        return rubric_line(article, lang, stamp)
+    return f'<span class="lmeta"><span class="lname">{esc(clip_layer_name(item.get("title") or ""))}</span> · {stamp}</span>'
+
+
+def yt_thumb(vid):
+    return f"https://i.ytimg.com/vi/{vid}/hqdefault.jpg"
+
+
+def clip_card(item, lang, eager=False):
+    """News card. Articles keep their photo. A video uses its own thumbnail, title and badge."""
+    if item["kind"] == "article":
+        return home_grid_card(item["article"], lang, eager)
+    title = item["title"]
+    flags = 'fetchpriority="high"' if eager else 'loading="lazy"'
+    img = (f'<img src="{yt_thumb(item["id"])}" alt="{esc(title)}" width="480" height="360" {flags} decoding="async">')
+    badge = f'<span class="dur dvo">{esc(clip_badge(item))}</span><span class="vpl" aria-hidden="true"></span>'
+    return (
+        f'<a class="lcard" href="{url(lang, item["path"])}">'
+        f'<span class="lim">{img}{badge}</span>'
+        f'{clip_meta(item, lang)}'
+        f'<span class="lbody"><strong>{esc(title)}</strong></span></a>')
+
+
+def home_feed(items, lang):
+    """Dated newest-first list. Video rows carry a duration or Short badge instead of a read time."""
+    out, last = [], None
+    for item in items:
+        day = item["stamp"].astimezone(TZ).date().isoformat()
+        if day != last:
+            out.append(f'<h2 class="pv-day">{fmt_date(day, lang)}</h2>')
+            last = day
+        if item["kind"] == "article":
+            out.append(pv_row(item["article"], lang))
+            continue
+        mark = clip_badge(item)
+        out.append(
+            f'<a class="pv-row vmark" href="{url(lang, item["path"])}">'
+            f'<time datetime="{item["stamp"].isoformat()}">{item["stamp"].strftime("%H:%M")}</time>'
+            f'<span class="pv-hl"><b>{esc(item["title"])}</b></span>'
+            f'<span class="pv-min" title="{esc(mark)}"><b>{esc(mark)}</b></span></a>')
+    return "".join(out)
+
+
 def homepage(arts, lang):
-    """Newest articles in one grid, then the video strip, then the rest of the dated list."""
+    """One newest-first grid of articles, long videos and Shorts, then the rest of that list."""
     L = LANGS[lang]
     nav, crumb_ld = crumbs(lang, [])
     if not arts:
         return shell(f'{nav}<h1>{esc(NAME)}</h1><p class="empty">{L["empty"]}</p>', page_side(arts, lang, "home")), crumb_ld
-    ordered = sorted(arts, key=published, reverse=True)
+    ordered = clip_items(arts)
     grid = ordered[:MAX_HOME_CARDS]
-    videos, strip_arts = home_videos(arts, lang, 8)
-    strip = f'<div class="vstrip">{videos}</div>' if videos else ""
     # Continue the same newest-first order. Nothing from the grid is repeated.
     feed = ordered[MAX_HOME_CARDS:MAX_HOME_CARDS + MAX_HOME_FEED]
     label = "Latest news" if lang == "en" else "Het laatste nieuws"
-    cards = "".join(home_grid_card(a, lang, eager=i < 4) for i, a in enumerate(grid))
+    cards = "".join(clip_card(item, lang, eager=i < 4) for i, item in enumerate(grid))
     row = f'<section class="homenews" aria-label="{esc(label)}">{cards}</section>'
-    main = (f'{nav}<h1 class="visually-hidden">{esc(NAME)}</h1>{row}{strip}{pv_feed(feed, lang)}')
-    return shell(main, page_side(arts, lang, "home", skip=[*grid, *strip_arts, *feed]), "front"), crumb_ld
+    main = (f'{nav}<h1 class="visually-hidden">{esc(NAME)}</h1>{row}{home_feed(feed, lang)}')
+    shown = [item["article"] for item in (*grid, *feed) if item["kind"] == "article" and item.get("article")]
+    return shell(main, page_side(arts, lang, "home", skip=shown), "front"), crumb_ld
+
+
+def iso_duration(seconds):
+    seconds = int(seconds or 0)
+    hours, rem = divmod(seconds, 3600)
+    minutes, secs = divmod(rem, 60)
+    out = "PT"
+    if hours:
+        out += f"{hours}H"
+    if minutes:
+        out += f"{minutes}M"
+    out += f"{secs}S"
+    return out
+
+
+def clip_page(item, arts, lang):
+    """One watch page: click-to-load embed, the video's title, a description, and the related article."""
+    L = LANGS[lang]
+    title = item["title"] or (L["watch_short"] if item["kind"] == "short" else L["watch"])
+    article = item.get("article")
+    desc = article[lang]["description"] if article else title
+    kind = "short" if item["kind"] == "short" else "long"
+    label = L["watch_short"] if kind == "short" else L["watch"]
+    play = player(item["id"], kind, label, yt_thumb(item["id"]), True, title)
+    story = ""
+    if article:
+        story = f'<p><a href="{url(lang, article["slug"] + "/")}">{esc(L["read_story"])}</a></p>'
+    body = (f'<article class="money"><h1>{esc(title)}</h1>{play}{clip_meta(item, lang)}'
+            f'<p class="lead">{esc(desc)}</p>{story}</article>')
+    video_ld = {
+        "@context": "https://schema.org", "@type": "VideoObject",
+        "name": title, "description": desc,
+        "thumbnailUrl": [yt_thumb(item["id"])],
+        "uploadDate": item["stamp"].isoformat(),
+        "embedUrl": f"https://www.youtube-nocookie.com/embed/{item['id']}",
+        "url": SITE + url(lang, item["path"]),
+        "inLanguage": lang,
+        "publisher": {"@type": "Organization", "name": NAME, "url": SITE},
+    }
+    if item.get("seconds"):
+        video_ld["duration"] = iso_duration(item["seconds"])
+    section = "Videos" if lang == "en" else "Video's"
+    hub = "videos/" if item["kind"] == "video" else "shorts/"
+    hub_name = section if item["kind"] == "video" else "Shorts"
+    _nav, crumb_ld = crumbs(lang, [(hub_name, hub), (title, None)])
+    return body, ld_script(video_ld) + ld_script(crumb_ld), desc
+
+
+def videos_index(arts, lang):
+    """Long videos, newest YouTube publish time first, in the same card style as the homepage."""
+    items = [item for item in clip_items(arts) if item["kind"] == "video"]
+    title = "Videos" if lang == "en" else "Video's"
+    intro = ("Longer videos, newest first." if lang == "en" else "Langere video's, nieuwste eerst.")
+    cards = "".join(clip_card(item, lang, eager=i < 3) for i, item in enumerate(items))
+    empty = "No videos yet." if lang == "en" else "Nog geen video's."
+    grid = f'<section class="homenews" aria-label="{esc(title)}">{cards}</section>' if cards else f'<p class="empty">{esc(empty)}</p>'
+    body = f'<section class="wide"><h1 class="st archh">{esc(title)}</h1><p class="lead">{esc(intro)}</p>{grid}</section>'
+    shown = [item["article"] for item in items if item.get("article")]
+    return body, title, intro, shown
 
 
 def pv_copy(lang):
@@ -6255,6 +6439,19 @@ def build():
         write(url(lang, "shorts/"), page(lang, "shorts/", "Shorts", intro,
                                           shell(body, page_side(arts, lang, "videos", skip=shown)), active="videos"))
 
+        # ---------- Long videos, plus a page for every long video and every Short ----------
+        vbody, vtitle, vintro, vshown = videos_index(arts, lang)
+        write(url(lang, "videos/"), page(lang, "videos/", vtitle, vintro,
+                                          shell(vbody, page_side(arts, lang, "videos", skip=vshown)), active="videos"))
+        for item in clip_items(arts):
+            if item["kind"] == "article":
+                continue
+            cbody, chead, cdesc = clip_page(item, arts, lang)
+            write(url(lang, item["path"]), page(
+                lang, item["path"], item["title"], cdesc,
+                shell(cbody, page_side(arts, lang, "videos", current=item.get("article"))),
+                extra_head=chead))
+
         # ---------- Static pages ----------
         for key, p in PAGES.items():
             title, desc, content = p[lang]
@@ -6381,6 +6578,22 @@ def build():
     # Standing pages have no article date. Leave lastmod off rather than stamp the build day.
     entries += [(k + "/", None) for k in PAGES]
     entries += [("shorts/", max(short_dates) if short_dates else None)]
+    video_rows = json.loads((ROOT / "content" / "videos.json").read_text(encoding="utf-8"))
+    video_dates = []
+    for row in video_rows:
+        vid = row.get("id")
+        raw = str(row.get("published") or "")[:10]
+        if not vid:
+            continue
+        if len(raw) == 10:
+            video_dates.append(raw)
+        entries.append((f"videos/{vid}/", raw if len(raw) == 10 else None))
+    entries.append(("videos/", max(video_dates) if video_dates else None))
+    for sh in shorts:
+        vid = sh.get("id")
+        raw = str(sh.get("published") or "")[:10]
+        if vid:
+            entries.append((f"shorts/{vid}/", raw if len(raw) == 10 else None))
     seen_hubs = set()
     for spec in HUBS:
         seen_hubs.add(spec["path"])

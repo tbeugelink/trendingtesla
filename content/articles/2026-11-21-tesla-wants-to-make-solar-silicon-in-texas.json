@@ -1,0 +1,63 @@
+{
+  "slug": "tesla-wants-to-make-solar-silicon-in-texas",
+  "date": "2026-11-21",
+  "time": "15:47",
+  "category": "energy",
+  "topic": "solar",
+  "card": {
+    "en": "Tesla wants to make solar silicon in Texas",
+    "nl": "Tesla wil zonnesilicium maken in Texas"
+  },
+  "image": "lib/solar-roof-house.jpg",
+  "images": [
+    "lib/solar-roof-house.jpg",
+    "lib/giga-texas-aerial.jpg",
+    "lib/megapack-aerial.jpg"
+  ],
+  "credits": [
+    {
+      "credit": "TrendingTesla library illustrations of a Solar Roof house, Giga Texas and Megapacks. Not photographs of the planned polysilicon plant, which has not been built",
+      "page": "https://trendingtesla.com/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Reuters (via Investing.com) — Tesla proposes $3.1 billion Texas polysilicon plant for solar manufacturing",
+      "url": "https://www.investing.com/news/stock-market-news/tesla-proposes-31-billion-texas-polysilicon-plant-for-solar-manufacturing-5042320"
+    },
+    {
+      "title": "KRIS 6 News — Tesla seeks tax break for $3.1 billion plant in Nueces County",
+      "url": "https://www.kristv.com/news/local-news/in-your-neighborhood/nueces-county/tesla-seeks-tax-break-for-3-1-billion-plant-in-nueces-county"
+    },
+    {
+      "title": "PV Tech — Tesla plans US$3.1 billion polysilicon facility in Texas by 2030",
+      "url": "https://www.pv-tech.org/tesla-3-1-billion-polysilicon-facility-texas-2030/"
+    },
+    {
+      "title": "Texas Comptroller — JETI application J0054",
+      "url": "https://comptroller.texas.gov/economy/development/prop-tax/jeti/application-details.php?id=J0054"
+    }
+  ],
+  "label": {
+    "style": "a",
+    "en": {
+      "sub": "TESLA SOLAR SILICON",
+      "text": "$3.1 BILLION"
+    },
+    "nl": {
+      "sub": "TESLA ZONNESILICIUM",
+      "text": "3,1 MILJARD"
+    }
+  },
+  "en": {
+    "title": "Tesla wants to make solar silicon in Texas",
+    "description": "Tesla has applied for a Texas school-tax break for a 3.1 billion dollar plant that would make solar-grade polysilicon from 2030. The application says Tesla would not build it in Texas without the break.",
+    "body": "<p>Tesla wants to build a 3.1 billion dollar factory in Texas that makes polysilicon, the purified silicon at the start of every solar panel. The plan is in an application the company filed in November 2026 under the Texas JETI programme, which lets large projects pay less school property tax. The site is in Nueces County, near Corpus Christi, in the Tuloso-Midway school district. Production would start in 2030, and the plant would employ 515 people by 2032. The application also says something blunt: without the tax break, Tesla would not make this investment in Texas.</p>\n<h2>What would the plant actually make?</h2>\n<p><strong>Solar-grade polysilicon, the raw material for solar cells.</strong> Polysilicon is melted and grown into ingots, the ingots are sliced into wafers, and the wafers become cells. Most of the world's supply of this material is made in China. Tesla's own application says more than 90 percent of solar-grade polysilicon comes from there. A plant in Texas would give Tesla a domestic source at the very first step of that chain. The application does not say how many tonnes the plant would produce a year.</p>\n<p>The plant would sit along State Highway 44 in Nueces County. Construction would run from 2027 to 2030. The jobs figure is 515 by 2032, with commercial operation from 2030.</p>\n<h2>So why does Tesla need a tax break?</h2>\n<p><strong>Because the application says the deal decides where the plant goes.</strong> The filing states that without a JETI agreement Tesla \"would not make the proposed investment in this state\". That makes the break a condition for Texas, not a bonus on top of a settled plan.</p>\n<p>The break only touches the school tax that pays for day-to-day costs. It does not cut the tax that repays school building loans. Under Tesla's proposal the plant's buildings and equipment would:</p>\n<ul>\n<li><strong>2028 to 2030:</strong> pay none of that day-to-day school tax while the plant is built;</li>\n<li><strong>2031 to 2040:</strong> pay it on half their value;</li>\n<li><strong>From 2041:</strong> pay the full amount.</li>\n</ul>\n<p>None of this is approved yet. The district's superintendent told local station KRIS 6 that the district knew about the plan, and added: \"It is not a guarantee.\" The Texas Comptroller lists the file as an application, the first stage of the review.</p>\n<h2>How does this fit Tesla's solar plans?</h2>\n<p><strong>It would feed a solar factory Tesla is already planning near Houston.</strong> Earlier this year Tesla revealed a 10.1 billion dollar project in Fort Bend County to make solar ingots, wafers and cells. A polysilicon plant would supply the step before that. Musk has set a goal of 100 gigawatts of solar manufacturing capacity in the United States. That is his target, not a built capacity.</p>\n<p>For a Tesla Energy customer nothing changes yet. A Solar Roof or a solar panel bought in 2026 does not depend on a plant that would open in 2030. The open question is whether the plant gets built at all.</p>\n<h2>What has to happen before construction starts?</h2>\n<p><strong>The state has to review it and two bodies have to approve it.</strong> According to KRIS 6, the Comptroller's office will review the application and make a recommendation, and both the school board and the Governor's Office must approve any deal. No vote date is set. Tesla would also still have to make its own final decision on the site.</p>\n<ul>\n<li><strong>Investment:</strong> 3.1 billion dollars, according to the application.</li>\n<li><strong>Location:</strong> Nueces County, Texas, in the Tuloso-Midway school district.</li>\n<li><strong>Start:</strong> commercial operation in 2030.</li>\n<li><strong>Jobs:</strong> 515 by 2032.</li>\n</ul>\n<p>Until the board and the state sign off, this remains a filed plan with a price and a date, and no factory yet.</p>"
+  },
+  "nl": {
+    "title": "Tesla wil zonnesilicium maken in Texas",
+    "description": "Tesla heeft in Texas een belastingkorting aangevraagd voor een fabriek van 3,1 miljard dollar die vanaf 2030 polysilicium voor zonnepanelen moet maken. Volgens de aanvraag bouwt Tesla de fabriek zonder die korting niet in Texas.",
+    "body": "<p>Tesla wil in Texas een fabriek van 3,1 miljard dollar bouwen die polysilicium maakt, het gezuiverde silicium waarmee elk zonnepaneel begint. Het plan staat in een aanvraag die het bedrijf in november 2026 indiende onder het Texaanse JETI-programma, waarmee grote projecten minder schoolbelasting op vastgoed betalen. De locatie ligt in Nueces County, bij Corpus Christi, in het schooldistrict Tuloso-Midway. De productie zou in 2030 beginnen en in 2032 zouden er 515 mensen werken. De aanvraag zegt ook iets opvallends: zonder de belastingkorting doet Tesla deze investering niet in Texas.</p>\n<h2>Wat zou de fabriek precies maken?</h2>\n<p><strong>Polysilicium van zonnekwaliteit, de grondstof voor zonnecellen.</strong> Polysilicium wordt gesmolten en tot staven gegroeid, die staven worden in wafers gezaagd en van de wafers worden cellen gemaakt. Het grootste deel van de wereldwijde productie komt uit China. In Tesla's eigen aanvraag staat dat meer dan 90 procent van het polysilicium voor zonnepanelen daar wordt gemaakt. Een fabriek in Texas geeft Tesla een eigen bron bij de allereerste stap van die keten. Hoeveel ton per jaar de fabriek zou maken, staat niet in de aanvraag.</p>\n<p>De fabriek komt langs State Highway 44 in Nueces County. De bouw loopt van 2027 tot 2030. Het banenaantal is 515 in 2032, met commerciële productie vanaf 2030.</p>\n<h2>Dus waarom heeft Tesla een belastingkorting nodig?</h2>\n<p><strong>Omdat de aanvraag zegt dat die korting bepaalt waar de fabriek komt.</strong> Volgens het document zou Tesla zonder JETI-overeenkomst \"de voorgestelde investering niet in deze staat doen\". Daarmee is de korting een voorwaarde voor Texas en geen extraatje bij een vaststaand plan.</p>\n<p>De korting geldt alleen voor de schoolbelasting die de dagelijkse kosten dekt. De belasting waarmee schoolgebouwen worden afbetaald, blijft gelijk. Volgens Tesla's voorstel zouden de gebouwen en machines van de fabriek:</p>\n<ul>\n<li><strong>2028 tot en met 2030:</strong> tijdens de bouw niets van die dagelijkse schoolbelasting betalen;</li>\n<li><strong>2031 tot en met 2040:</strong> belasting betalen over de helft van hun waarde;</li>\n<li><strong>Vanaf 2041:</strong> het volledige bedrag betalen.</li>\n</ul>\n<p>Niets daarvan is al goedgekeurd. De directeur van het schooldistrict zei tegen de lokale zender KRIS 6 dat het district van het plan wist, en voegde eraan toe: \"Het is geen garantie.\" De Texaanse Comptroller vermeldt het dossier als aanvraag, de eerste fase van de beoordeling.</p>\n<h2>Hoe past dit in Tesla's zonneplannen?</h2>\n<p><strong>De fabriek zou een zonnefabriek voeden die Tesla al bij Houston plant.</strong> Eerder dit jaar maakte Tesla een project van 10,1 miljard dollar in Fort Bend County bekend om staven, wafers en zonnecellen te maken. Een polysiliciumfabriek levert de stap daarvoor. Musk heeft als doel 100 gigawatt aan productiecapaciteit voor zonnepanelen in de Verenigde Staten. Dat is zijn doel, geen gebouwde capaciteit.</p>\n<p>Voor klanten van Tesla Energy verandert er nog niets. Een Solar Roof of zonnepaneel uit 2026 hangt niet af van een fabriek die in 2030 open zou gaan. De open vraag is of de fabriek er überhaupt komt.</p>\n<h2>Wat moet er gebeuren voordat de bouw begint?</h2>\n<p><strong>De staat moet de aanvraag beoordelen en twee instanties moeten instemmen.</strong> Volgens KRIS 6 beoordeelt het kantoor van de Comptroller de aanvraag en geeft het een advies, en moeten zowel het schoolbestuur als het kantoor van de gouverneur een deal goedkeuren. Er is nog geen datum voor een stemming. Daarna moet Tesla ook nog zelf definitief voor de locatie kiezen.</p>\n<ul>\n<li><strong>Investering:</strong> 3,1 miljard dollar, volgens de aanvraag.</li>\n<li><strong>Locatie:</strong> Nueces County, Texas, in het schooldistrict Tuloso-Midway.</li>\n<li><strong>Start:</strong> commerciële productie in 2030.</li>\n<li><strong>Banen:</strong> 515 in 2032.</li>\n</ul>\n<p>Zolang het schoolbestuur en de staat niet hebben getekend, is dit een ingediend plan met een prijs en een jaartal, en nog geen fabriek.</p>"
+  },
+  "image_lock": true
+}

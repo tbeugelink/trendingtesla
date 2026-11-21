@@ -1,0 +1,76 @@
+{
+  "slug": "investors-funded-44-billion-dollars-of-spacex-chips",
+  "date": "2026-11-21",
+  "time": "15:56",
+  "category": "xai",
+  "topic": "datacenters",
+  "card": {
+    "en": "Investors funded 44 billion dollars of SpaceX chips",
+    "nl": "Beleggers financieren 44 miljard dollar aan SpaceX-chips"
+  },
+  "image": "lib/ai-chip-closeup.jpg",
+  "images": [
+    "lib/ai-chip-closeup.jpg",
+    "lib/ai-datacenter.jpg",
+    "news/datacenter-server-racks.jpg"
+  ],
+  "credits": [
+    {
+      "credit": "TrendingTesla library illustrations of an AI chip and a data centre aisle. Not photographs of Nvidia Vera Rubin chips or of a SpaceX data centre",
+      "page": "https://trendingtesla.com/"
+    },
+    {
+      "file": "news/datacenter-server-racks.jpg",
+      "credit": "Carl Lender, CC BY 2.0, via Wikimedia Commons. Server racks in a data centre. Not a SpaceX machine",
+      "page": "https://commons.wikimedia.org/wiki/File:Datacenter_Server_Racks_(22370909788).jpg"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Apollo — Apollo and Goldman Sachs announce pricing of $44 billion SpaceX GPU financing",
+      "url": "https://ir.apollo.com/news-events/press-releases/detail/662/apollo-and-goldman-sachs-announce-pricing-of-44-billion"
+    },
+    {
+      "title": "Reuters (via StreetInsider) — Apollo, Goldman lead $44 billion SpaceX GPU debt financing",
+      "url": "https://www.streetinsider.com/Reuters/Apollo%2C+Goldman+lead+%2444+billion+SpaceX+GPU+debt+financing/27380693.html"
+    },
+    {
+      "title": "SpaceX — SpaceX secures $40 billion in the largest GPU financing ever",
+      "url": "https://ir.spacex.com/updates/releases-details/2026/SPACEX-SECURES-40-BILLION-IN-THE-LARGEST-GPU-FINANCING-EVER-2026-EnDqGhTAB3/default.aspx"
+    },
+    {
+      "title": "Yahoo Finance — SpaceX stocks drop 6.57% premarket after $32 billion bond sale at 8.26%",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/spacex-stocks-drop-6-57-172646022.html"
+    },
+    {
+      "title": "BBC News — Tech stock sell-off drags markets down as Anthropic shares slide",
+      "url": "https://www.bbc.com/news/articles/c6808ym10vzgo"
+    },
+    {
+      "title": "TIKR — Tesla sinks 8%, SpaceX down 7% as AI sell-off swamps HSBC upgrade",
+      "url": "https://www.tikr.com/blog/tesla-sinks-8-spacex-down-7-rivian-down-8-as-ai-sell-off-swamps-hsbc-upgrade"
+    }
+  ],
+  "label": {
+    "style": "c",
+    "en": {
+      "sub": "LARGEST GPU DEAL",
+      "text": "$44 BILLION"
+    },
+    "nl": {
+      "sub": "GROOTSTE GPU-DEAL",
+      "text": "44 MILJARD"
+    }
+  },
+  "en": {
+    "title": "Investors funded 44 billion dollars of SpaceX chips",
+    "description": "Apollo and Goldman Sachs priced about 44 billion dollars of notes on 20 November 2026 to buy Nvidia Vera Rubin chips that SpaceX will lease. It is the largest GPU financing so far, and the chips arrive in the first half of 2027.",
+    "body": "<p>SpaceX has the money lined up for its next wave of AI chips, and it comes from bond investors. On 20 November 2026 Apollo and Goldman Sachs priced about 44 billion dollars of notes to buy Nvidia GPUs and related equipment for SpaceX. The firms call it the largest GPU financing to date. The chips are Nvidia's next generation, Vera Rubin, for SpaceX's computing build-out on the ground. That money costs more than 8 percent a year, and the stock market reacted the same day.</p>\n<h2>How does the deal work?</h2>\n<p><strong>Investors fund the chips and SpaceX leases them.</strong> SpaceX announced the plan on 26 October 2026: a binding commitment to a master finance lease of about 40 billion dollars with an entity managed by Apollo. That entity buys the GPUs and servers, and SpaceX pays to use them. To raise the money, Apollo and Goldman sold senior and subordinated notes to investors. Demand was larger than the supply, so the deal grew from about 40 to about 44 billion dollars.</p>\n<p>BlackRock, Goldman Sachs Asset Management and accounts advised by KKR made anchor commitments. The lease payments start when the GPUs and equipment are delivered, which is expected in the first half of 2027.</p>\n<h2>So what does that money cost?</h2>\n<p><strong>More than 8 percent a year on the largest part.</strong> About 32 billion dollars of the package was sold as bonds. According to Reuters, the largest slice, 25.17 billion dollars of senior secured notes due in April 2033, priced at a yield of 8.259 percent. A smaller senior slice due in 2031 priced lower, and a subordinated slice due in 2033 priced higher.</p>\n<p>That rate is the cost of the plan. On the day of the sale SpaceX shares fell more than 7 percent, in a market where the Nasdaq lost 5.3 percent and Nvidia about 14 percent. The BBC linked SpaceX's fall to the bond sale.</p>\n<h2>What are the chips for?</h2>\n<p><strong>For SpaceX's own AI computing, including Grok.</strong> In its October announcement SpaceX said it aims to deploy the largest compute infrastructure in the world, to power Grok for businesses and consumers and to serve cloud customers. The new chips go into data centres on the ground, not into the orbital data centres SpaceX has talked about.</p>\n<p>The deal does not change anything in Grok yet. The chips arrive in 2027, and only then do the lease payments begin.</p>\n<h2>What should we watch for next?</h2>\n<p><strong>The delivery of the chips and the first lease payments.</strong> Three numbers frame the deal:</p>\n<ul>\n<li><strong>Size:</strong> about 44 billion dollars, upsized from about 40 billion.</li>\n<li><strong>Cost:</strong> a yield of about 8.26 percent on the largest bond slice.</li>\n<li><strong>Timing:</strong> GPUs and lease payments from the first half of 2027.</li>\n</ul>\n<p>Whether 2027 brings enough paying Grok and cloud customers to cover a lease at that price is the question this financing leaves open.</p>\n<p><em>This article is for information only and is not financial advice.</em></p>"
+  },
+  "nl": {
+    "title": "Beleggers financieren 44 miljard dollar aan SpaceX-chips",
+    "description": "Apollo en Goldman Sachs plaatsten op 20 november 2026 voor ongeveer 44 miljard dollar aan obligaties om Nvidia Vera Rubin-chips te kopen die SpaceX gaat leasen. Het is de grootste GPU-financiering tot nu toe, en de chips komen in de eerste helft van 2027.",
+    "body": "<p>SpaceX heeft het geld voor zijn volgende golf AI-chips rond, en het komt van obligatiebeleggers. Op 20 november 2026 plaatsten Apollo en Goldman Sachs voor ongeveer 44 miljard dollar aan obligaties om Nvidia-GPU's en bijbehorende apparatuur voor SpaceX te kopen. De partijen noemen het de grootste GPU-financiering tot nu toe. Het gaat om Nvidia's volgende generatie, Vera Rubin, voor de rekencapaciteit die SpaceX op aarde bouwt. Dat geld kost meer dan 8 procent per jaar, en de beurs reageerde dezelfde dag.</p>\n<h2>Hoe werkt de deal?</h2>\n<p><strong>Beleggers financieren de chips en SpaceX leaset ze.</strong> SpaceX maakte het plan op 26 oktober 2026 bekend: een bindende toezegging voor een financiële lease van ongeveer 40 miljard dollar met een entiteit die Apollo beheert. Die entiteit koopt de GPU's en servers, en SpaceX betaalt om ze te gebruiken. Om het geld op te halen, verkochten Apollo en Goldman senior en achtergestelde obligaties aan beleggers. De vraag was groter dan het aanbod, dus de deal groeide van ongeveer 40 naar ongeveer 44 miljard dollar.</p>\n<p>BlackRock, Goldman Sachs Asset Management en door KKR geadviseerde rekeningen deden grote vaste toezeggingen. De leasebetalingen beginnen als de GPU's en apparatuur worden geleverd, naar verwachting in de eerste helft van 2027.</p>\n<h2>Dus wat kost dat geld?</h2>\n<p><strong>Meer dan 8 procent per jaar over het grootste deel.</strong> Ongeveer 32 miljard dollar van het pakket werd als obligaties verkocht. Volgens Reuters kreeg het grootste deel, 25,17 miljard dollar aan senior gedekte obligaties die in april 2033 aflopen, een rendement van 8,259 procent. Een kleiner senior deel dat in 2031 afloopt, werd lager geprijsd, en een achtergesteld deel tot 2033 hoger.</p>\n<p>Die rente is de prijs van het plan. Op de dag van de verkoop zakte het aandeel SpaceX meer dan 7 procent, op een dag waarop de Nasdaq 5,3 procent verloor en Nvidia ongeveer 14 procent. De BBC koppelde de daling van SpaceX aan de obligatieverkoop.</p>\n<h2>Waar zijn de chips voor?</h2>\n<p><strong>Voor de eigen AI-rekenkracht van SpaceX, waaronder Grok.</strong> In de aankondiging van oktober zei SpaceX dat het de grootste rekeninfrastructuur ter wereld wil bouwen, om Grok voor bedrijven en consumenten te laten draaien en om cloudklanten te bedienen. De nieuwe chips gaan naar datacenters op aarde, niet naar de datacenters in een baan om de aarde waar SpaceX over heeft gesproken.</p>\n<p>De deal verandert nog niets aan Grok. De chips komen in 2027, en pas dan beginnen de leasebetalingen.</p>\n<h2>Waar moeten we nu op letten?</h2>\n<p><strong>De levering van de chips en de eerste leasebetalingen.</strong> Drie getallen bepalen de deal:</p>\n<ul>\n<li><strong>Omvang:</strong> ongeveer 44 miljard dollar, vergroot van ongeveer 40 miljard.</li>\n<li><strong>Kosten:</strong> een rendement van ongeveer 8,26 procent op het grootste obligatiedeel.</li>\n<li><strong>Timing:</strong> GPU's en leasebetalingen vanaf de eerste helft van 2027.</li>\n</ul>\n<p>Of 2027 genoeg betalende Grok- en cloudklanten oplevert om een lease tegen die prijs te dragen, is de vraag die deze financiering openlaat.</p>\n<p><em>Dit artikel is alleen bedoeld als informatie en is geen financieel advies.</em></p>"
+  },
+  "image_lock": true
+}

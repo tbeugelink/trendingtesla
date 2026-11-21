@@ -1,0 +1,63 @@
+{
+  "slug": "italy-approves-tesla-assisted-driving-before-the-eu",
+  "date": "2026-11-21",
+  "time": "15:59",
+  "category": "fsd",
+  "topic": "fsd",
+  "card": {
+    "en": "Italy approves Tesla Assisted Driving before the EU",
+    "nl": "Italië keurt Tesla Assisted Driving vóór Brussel goed"
+  },
+  "image": "lib/eu-oldtown-fsd.jpg",
+  "images": [
+    "lib/eu-oldtown-fsd.jpg",
+    "lib/fsd-screen-city.jpg",
+    "lib/eu-brussels-tesla.jpg"
+  ],
+  "credits": [
+    {
+      "credit": "TrendingTesla library illustrations of the FSD screen in a European old town, in a city and of a Model Y in Brussels. Not photographs taken in Italy",
+      "page": "https://trendingtesla.com/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Reuters (via Euronext) — Italy gives green light to Tesla self-driving system ahead of EU approval",
+      "url": "https://live.euronext.com/en/financial-news/italy-gives-green-light-tesla-self-driving-system-ahead-eu-approval"
+    },
+    {
+      "title": "Il Sole 24 Ore — Tesla: MIT gives the go-ahead for provisional type-approval of driver-assistance systems",
+      "url": "https://en.ilsole24ore.com/art/tesla-given-the-go-ahead-with-provisional-type-approval-for-driver-assistance-systems-AJwm4HNC"
+    },
+    {
+      "title": "Electrek — Tesla FSD approved in Italy, the first big EU market to say yes",
+      "url": "https://electrek.co/2026/11/20/tesla-fsd-italy-approval-assisted-driving/"
+    },
+    {
+      "title": "la Repubblica — Tesla, la guida assistita avanzata arriva in Italia, costerà 99 euro al mese",
+      "url": "https://www.repubblica.it/economia/2026/11/20/news/testa_guida_autonoma_assistita_autorizzazione_italia-425737706/"
+    }
+  ],
+  "label": {
+    "style": "a",
+    "en": {
+      "sub": "APPROVED IN ITALY",
+      "text": "12TH COUNTRY"
+    },
+    "nl": {
+      "sub": "GOEDGEKEURD IN ITALIË",
+      "text": "12E LAND"
+    }
+  },
+  "en": {
+    "title": "Italy approves Tesla Assisted Driving before the EU",
+    "description": "Italy's transport ministry gave provisional approval to Tesla Assisted Driving, the European name for FSD (Supervised), on 20 November 2026. Italy is the 12th European country to allow it and the first large EU market.",
+    "body": "<p>Italy has said yes to Tesla Assisted Driving without waiting for Brussels. On 20 November 2026 the Italian Ministry of Infrastructure and Transport gave provisional type approval to the system, the name Tesla now uses in Europe for FSD (Supervised). Transport Minister Matteo Salvini announced it on X, after what he called a thorough technical feasibility assessment. Italy is the 12th European country to allow the system, and the first of the EU's large markets. An approval on paper is not the same as the feature in an Italian car.</p>\n<h2>What exactly did Italy approve?</h2>\n<p><strong>A national, provisional approval, ahead of the EU-wide decision.</strong> The Netherlands was first: the Dutch vehicle authority RDW approved the system in April 2026. Other countries can recognise that approval one by one, and Italy has now done so ahead of the European Union process, which is still being finalised. In October, Italy had only said it backed a quick EU-wide approval. This time the ministry acted on its own.</p>\n<p>The minister called it \"another step forward towards innovation, technology and the mobility of the future\", while prioritising public safety.</p>\n<h2>So can Italian Tesla owners switch it on now?</h2>\n<p><strong>Not yet: Tesla says the rollout comes soon, as a software update.</strong> Tesla Europe posted that the system is \"now approved in Italy\" and that the rollout begins soon, with a video of a car driving itself through Rome. There is no firm date. According to Tesla, the feature will arrive as a software update and will cost 99 euros a month as a subscription.</p>\n<p>It remains a supervised system. The car can steer, brake, accelerate and handle junctions and lane changes, but the driver has to watch the road at all times and stays responsible.</p>\n<h2>Why does Italy matter more than the countries before it?</h2>\n<p><strong>Because it is the first large EU market to approve it.</strong> Most of the countries that followed the Netherlands are small. Italy is one of the EU's largest countries by population, so its approval reaches far more drivers than the earlier ones together. It also counts in the EU vote that would make the approval valid across the bloc, where population decides the outcome.</p>\n<p>That EU vote has not happened yet. According to Electrek, France refused a national approval in July and Spain has not recognised the Dutch approval.</p>\n<h2>What should we watch for next?</h2>\n<p><strong>The first Italian cars that actually get the update.</strong> Three points sum up where things stand:</p>\n<ul>\n<li><strong>Approval:</strong> provisional, national, granted on 20 November 2026 by the transport ministry.</li>\n<li><strong>Price:</strong> 99 euros a month, according to Tesla.</li>\n<li><strong>Rollout:</strong> \"soon\", with no date.</li>\n</ul>\n<p>Until the update reaches Italian owners and the EU vote takes place, Italy is the 12th green light on the map and still a promise in the car.</p>"
+  },
+  "nl": {
+    "title": "Italië keurt Tesla Assisted Driving vóór Brussel goed",
+    "description": "Het Italiaanse transportministerie gaf op 20 november 2026 een voorlopige goedkeuring voor Tesla Assisted Driving, de Europese naam voor FSD (Supervised). Italië is het twaalfde Europese land dat het toestaat en de eerste grote EU-markt.",
+    "body": "<p>Italië zegt ja tegen Tesla Assisted Driving zonder op Brussel te wachten. Op 20 november 2026 gaf het Italiaanse ministerie van Infrastructuur en Transport een voorlopige typegoedkeuring voor het systeem, de naam die Tesla in Europa nu gebruikt voor FSD (Supervised). Transportminister Matteo Salvini maakte het bekend op X, na wat hij een grondige technische haalbaarheidstoets noemde. Italië is het twaalfde Europese land dat het systeem toestaat, en de eerste van de grote EU-markten. Een goedkeuring op papier is nog niet hetzelfde als de functie in een Italiaanse auto.</p>\n<h2>Wat heeft Italië precies goedgekeurd?</h2>\n<p><strong>Een nationale, voorlopige goedkeuring, vóór het besluit voor de hele EU.</strong> Nederland was de eerste: de RDW keurde het systeem in april 2026 goed. Andere landen kunnen die goedkeuring één voor één erkennen, en Italië heeft dat nu gedaan, vooruitlopend op het Europese proces dat nog wordt afgerond. In oktober zei Italië alleen dat het een snelle goedkeuring voor de hele EU steunde. Deze keer handelde het ministerie zelf.</p>\n<p>De minister noemde het \"weer een stap vooruit naar innovatie, technologie en de mobiliteit van de toekomst\", met veiligheid voorop.</p>\n<h2>Dus kunnen Italiaanse Tesla-rijders het nu aanzetten?</h2>\n<p><strong>Nog niet: volgens Tesla komt de uitrol binnenkort, als software-update.</strong> Tesla Europe meldde dat het systeem \"nu goedgekeurd is in Italië\" en dat de uitrol binnenkort begint, met een video van een auto die zelf door Rome rijdt. Een vaste datum is er niet. Volgens Tesla komt de functie als software-update en kost ze 99 euro per maand als abonnement.</p>\n<p>Het blijft een systeem onder toezicht. De auto kan sturen, remmen, optrekken en kruispunten en rijstrookwissels afhandelen, maar de bestuurder moet altijd op de weg letten en blijft verantwoordelijk.</p>\n<h2>Waarom telt Italië zwaarder dan de landen ervoor?</h2>\n<p><strong>Omdat het de eerste grote EU-markt is die het goedkeurt.</strong> De meeste landen die Nederland volgden, zijn klein. Italië is een van de grootste EU-landen naar inwonertal, dus deze goedkeuring bereikt veel meer bestuurders dan de eerdere samen. Het land telt ook mee in de EU-stemming die de goedkeuring in de hele unie geldig zou maken, waar het inwonertal de uitkomst bepaalt.</p>\n<p>Die EU-stemming is er nog niet geweest. Volgens Electrek weigerde Frankrijk in juli een nationale goedkeuring en heeft Spanje de Nederlandse goedkeuring niet erkend.</p>\n<h2>Waar moeten we nu op letten?</h2>\n<p><strong>De eerste Italiaanse auto's die de update echt krijgen.</strong> Drie punten vatten de stand samen:</p>\n<ul>\n<li><strong>Goedkeuring:</strong> voorlopig en nationaal, op 20 november 2026 verleend door het transportministerie.</li>\n<li><strong>Prijs:</strong> 99 euro per maand, volgens Tesla.</li>\n<li><strong>Uitrol:</strong> \"binnenkort\", zonder datum.</li>\n</ul>\n<p>Zolang de update Italiaanse rijders niet bereikt en de EU-stemming niet is gehouden, is Italië het twaalfde groene licht op de kaart en in de auto nog een belofte.</p>"
+  },
+  "image_lock": true
+}

@@ -1,0 +1,89 @@
+{
+  "slug": "anthropic-made-the-biggest-stock-debut-ever",
+  "date": "2026-11-21",
+  "time": "15:50",
+  "category": "news",
+  "topic": "agi",
+  "card": {
+    "en": "Anthropic made the biggest stock debut ever",
+    "nl": "Anthropic had de grootste beursgang ooit"
+  },
+  "image": "lib/stock-phone-up.jpg",
+  "images": [
+    "lib/stock-phone-up.jpg",
+    "news/dario-amodei-techcrunch-2023.jpg",
+    "news/anthropic-sf-visit.jpg"
+  ],
+  "credits": [
+    {
+      "credit": "TrendingTesla library illustration of a rising stock chart on a phone. Not the ANT chart",
+      "page": "https://trendingtesla.com/"
+    },
+    {
+      "file": "news/dario-amodei-techcrunch-2023.jpg",
+      "credit": "TechCrunch, CC BY 2.0, via Wikimedia Commons. Anthropic's chief executive at TechCrunch Disrupt on 20 September 2023. Not the November 2026 listing",
+      "page": "https://commons.wikimedia.org/wiki/File:Dario_Amodei_at_TechCrunch_Disrupt_2023_01.jpg"
+    },
+    {
+      "file": "news/anthropic-sf-visit.jpg",
+      "credit": "UK Department for Science, Innovation and Technology, CC BY 2.0, via Wikimedia Commons. A visit to Anthropic in San Francisco. Not the Nasdaq listing",
+      "page": "https://commons.wikimedia.org/wiki/File:Secretary_of_State_Peter_Kyle_visits_Anthropic_in_San_Francisco._(54098999333).jpg"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Anthropic — Anthropic prices initial public offering",
+      "url": "https://www.anthropic.com/news/anthropic-prices-initial-public-offering"
+    },
+    {
+      "title": "SEC — Anthropic, PBC pricing term sheet (free writing prospectus)",
+      "url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026074937/anthropicpbc-fwppricing.htm"
+    },
+    {
+      "title": "Anthropic — Closing of initial public offering and concurrent private placement",
+      "url": "https://www.anthropic.com/news/ipo-close"
+    },
+    {
+      "title": "CNBC — Anthropic IPO takeaways: ANT debuts with $1.8 trillion market cap",
+      "url": "https://www.cnbc.com/2026/11/19/anthropic-ipo-ant-live-updates.html"
+    },
+    {
+      "title": "CNBC — Anthropic raises $93.5 billion total as underwriters scoop up greenshoe",
+      "url": "https://www.cnbc.com/2026/11/20/anthropic-ipo-greenshoe.html"
+    },
+    {
+      "title": "Reuters (via Investing.com) — Anthropic's blockbuster debut tests Wall Street's faith in AI boom",
+      "url": "https://www.investing.com/news/stock-market-news/anthropics-blockbuster-debut-tests-wall-streets-faith-in-ai-boom-5041688"
+    },
+    {
+      "title": "BBC News — Anthropic shares close up 17% after record-breaking stock market debut",
+      "url": "https://www.bbc.com/news/live/c933xxm82mr8t"
+    },
+    {
+      "title": "Nasdaq — Anthropic marks its IPO at Nasdaq",
+      "url": "https://www.nasdaq.com/newsroom/anthropic-marks-ipo-at-nasdaq"
+    }
+  ],
+  "label": {
+    "style": "c",
+    "en": {
+      "sub": "BIGGEST IPO EVER",
+      "text": "$93.5 BILLION"
+    },
+    "nl": {
+      "sub": "GROOTSTE BEURSGANG",
+      "text": "93,5 MILJARD"
+    }
+  },
+  "en": {
+    "title": "Anthropic made the biggest stock debut ever",
+    "description": "Anthropic sold shares at 83 dollars and started trading on Nasdaq as ANT on 19 November 2026. With the extra shares the banks bought, the listing raised about 93.5 billion dollars, more than any IPO before it.",
+    "body": "<p>Anthropic is now a listed company, and its stock sale is the largest initial public offering on record. The maker of Claude priced its shares at 83 dollars on 18 November 2026 and began trading on the Nasdaq Global Select Market the next day under the ticker ANT. The first sale raised about 81.3 billion dollars. When the banks bought their extra shares two days later, the total reached about 93.5 billion dollars. That beats the SpaceX listing in June, which held the record until then. The first trading days were far less calm than that number suggests.</p>\n<h2>How big was the sale?</h2>\n<p><strong>Bigger and more expensive than the roadshow plan.</strong> When the roadshow started, Anthropic offered 825 million shares in a range of 70 to 78 dollars. It ended up selling 980 million shares at 83 dollars, above the top of that range. Of those, 956,351,354 were new shares from Anthropic and 23,648,646 came from existing stockholders. Anthropic gets no money from the stockholders' part.</p>\n<p>On 20 November the underwriters used their full option to buy 147 million more shares from Anthropic. That brought the offering to 1,127,000,000 shares and about 93.5 billion dollars before fees. Alongside the listing, Anthropic also sold 313,253,007 Class N shares at the same 83 dollars in a private placement worth about 26 billion dollars. Big technology companies bought those, among them AMD, Google, Microsoft and Nvidia.</p>\n<h2>What happened on the first trading day?</h2>\n<p><strong>A jump at the open, then a slide that still left a 17 percent gain.</strong> ANT opened at 111.50 dollars on 19 November, about a third above the offering price. At that moment the company was worth about 2 trillion dollars on a fully diluted basis, which counts promised employee stock as well. The price eased through the afternoon and closed at 97.17 dollars. That is still 17 percent above the 83 dollars that buyers in the offering paid.</p>\n<p>Two of the seven co-founders rang the opening bell at Nasdaq's MarketSite in New York. Anthropic is a public benefit corporation. By law it has to weigh its stated mission, the responsible development of advanced AI, next to the interests of its shareholders.</p>\n<h2>So why did the gain shrink so fast?</h2>\n<p><strong>The wider market turned against AI stocks the next day.</strong> On Friday 20 November ANT fell 8.5 percent to 88.91 dollars, close to its offering price, as the Nasdaq dropped 5.3 percent in one session. Nvidia lost about 14 percent the same day. Analysts quoted by the BBC said swings were to be expected, because Anthropic is the first frontier AI lab on the stock market and has no direct peer to compare with.</p>\n<p>That leaves the record intact. The offering raised its money at 83 dollars, whatever the share does next. What it does not settle is how investors will value an AI lab from quarter to quarter.</p>\n<h2>What does a listed Anthropic change in the AI race?</h2>\n<p><strong>It gives the Claude maker a very large cash pile and a public price every day.</strong> Anthropic now has the money from the offering and the private placement, and several of the private-placement buyers are chip and cloud companies. It also now reports to public shareholders, the way SpaceX does since its own listing in June. Grok and Claude are both sold to businesses, and both of their parent companies now have a share price that reacts to every launch and every AI headline.</p>\n<ul>\n<li><strong>Offer price:</strong> 83 dollars a share, set on 18 November 2026.</li>\n<li><strong>First trade:</strong> 19 November 2026, Nasdaq, ticker ANT, open 111.50 dollars.</li>\n<li><strong>First close:</strong> 97.17 dollars, up 17 percent.</li>\n<li><strong>Total raised:</strong> about 93.5 billion dollars with the extra shares, plus about 26 billion dollars in the private placement.</li>\n</ul>\n<p>The next test is the first quarterly report as a listed company, when the share price will meet real numbers.</p>\n<p><em>This article is for information only and is not financial advice.</em></p>"
+  },
+  "nl": {
+    "title": "Anthropic had de grootste beursgang ooit",
+    "description": "Anthropic verkocht aandelen voor 83 dollar en ging op 19 november 2026 als ANT naar de Nasdaq. Met de extra aandelen die de banken kochten, haalde de beursgang zo'n 93,5 miljard dollar op, meer dan welke beursgang ooit.",
+    "body": "<p>Anthropic is nu een beursgenoteerd bedrijf, en zijn aandelenverkoop is de grootste beursgang ooit. De maker van Claude prijsde zijn aandelen op 18 november 2026 op 83 dollar en begon een dag later met handelen op de Nasdaq Global Select Market onder de ticker ANT. De eerste verkoop leverde ongeveer 81,3 miljard dollar op. Toen de banken twee dagen later hun extra aandelen kochten, kwam het totaal op ongeveer 93,5 miljard dollar. Dat is meer dan de beursgang van SpaceX in juni, die tot dan het record had. De eerste handelsdagen waren een stuk onrustiger dan dat getal doet vermoeden.</p>\n<h2>Hoe groot was de verkoop?</h2>\n<p><strong>Groter en duurder dan het plan van de roadshow.</strong> Bij de start van de roadshow bood Anthropic 825 miljoen aandelen aan, in een vork van 70 tot 78 dollar. Uiteindelijk verkocht het 980 miljoen aandelen voor 83 dollar, boven de bovenkant van die vork. Daarvan waren er 956.351.354 nieuwe aandelen van Anthropic en 23.648.646 kwamen van bestaande aandeelhouders. Anthropic krijgt geen geld uit het deel van die aandeelhouders.</p>\n<p>Op 20 november gebruikten de begeleidende banken hun volledige optie om 147 miljoen extra aandelen van Anthropic te kopen. Daarmee kwam de emissie op 1.127.000.000 aandelen en ongeveer 93,5 miljard dollar vóór kosten. Naast de beursgang verkocht Anthropic ook 313.253.007 aandelen van klasse N voor dezelfde 83 dollar, in een onderhandse plaatsing van ongeveer 26 miljard dollar. Die werden gekocht door grote techbedrijven, onder wie AMD, Google, Microsoft en Nvidia.</p>\n<h2>Wat gebeurde er op de eerste handelsdag?</h2>\n<p><strong>Een sprong bij de opening en daarna een daling, met toch 17 procent winst.</strong> ANT opende op 19 november op 111,50 dollar, ongeveer een derde boven de uitgifteprijs. Op dat moment was het bedrijf volledig verwaterd ongeveer 2 biljoen dollar waard, inclusief beloofde aandelen voor personeel. In de middag zakte de koers en het slot was 97,17 dollar. Dat is nog altijd 17 procent boven de 83 dollar die kopers in de emissie betaalden.</p>\n<p>Twee van de zeven medeoprichters luidden de openingsbel in de MarketSite van Nasdaq in New York. Anthropic is een public benefit corporation. Het moet wettelijk zijn missie, de verantwoorde ontwikkeling van geavanceerde AI, afwegen naast de belangen van zijn aandeelhouders.</p>\n<h2>Dus waarom kromp de winst zo snel?</h2>\n<p><strong>De hele markt keerde zich de volgende dag tegen AI-aandelen.</strong> Op vrijdag 20 november zakte ANT 8,5 procent naar 88,91 dollar, dicht bij de uitgifteprijs, terwijl de Nasdaq in één handelsdag 5,3 procent verloor. Nvidia verloor diezelfde dag ongeveer 14 procent. Analisten die de BBC sprak, zeiden dat zulke schommelingen te verwachten waren, omdat Anthropic het eerste grote AI-lab aan de beurs is en geen directe vergelijking heeft.</p>\n<p>Het record blijft staan. De emissie haalde haar geld op tegen 83 dollar, wat het aandeel ook doet. Wat het niet beslist, is hoe beleggers een AI-lab van kwartaal tot kwartaal gaan waarderen.</p>\n<h2>Wat verandert een beursgenoteerd Anthropic aan de AI-race?</h2>\n<p><strong>De maker van Claude heeft nu een enorme kas en elke dag een openbare koers.</strong> Anthropic heeft nu het geld uit de emissie en de onderhandse plaatsing, en meerdere kopers in die plaatsing zijn chip- en cloudbedrijven. Het legt nu ook verantwoording af aan beursbeleggers, zoals SpaceX sinds zijn eigen beursgang in juni. Grok en Claude worden allebei aan bedrijven verkocht, en beide moederbedrijven hebben nu een koers die op elke lancering en elk AI-bericht reageert.</p>\n<ul>\n<li><strong>Uitgifteprijs:</strong> 83 dollar per aandeel, vastgesteld op 18 november 2026.</li>\n<li><strong>Eerste handel:</strong> 19 november 2026, Nasdaq, ticker ANT, opening 111,50 dollar.</li>\n<li><strong>Eerste slot:</strong> 97,17 dollar, 17 procent hoger.</li>\n<li><strong>Totaal opgehaald:</strong> ongeveer 93,5 miljard dollar met de extra aandelen, plus ongeveer 26 miljard dollar in de onderhandse plaatsing.</li>\n</ul>\n<p>De volgende test is het eerste kwartaalcijfer als beursbedrijf, wanneer de koers echte cijfers tegenkomt.</p>\n<p><em>Dit artikel is alleen bedoeld als informatie en is geen financieel advies.</em></p>"
+  },
+  "image_lock": true
+}

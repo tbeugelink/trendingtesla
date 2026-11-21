@@ -2334,5 +2334,53 @@
       "en": "DeepSeek opens its chat tools",
       "nl": "DeepSeek opent zijn chatgereedschap"
     }
+  },
+  "tesla-wants-to-make-solar-silicon-in-texas": {
+    "layer": "tesla-energy",
+    "topic": "solar",
+    "card": {
+      "en": "Tesla wants to make solar silicon in Texas",
+      "nl": "Tesla wil zonnesilicium maken in Texas"
+    }
+  },
+  "anthropic-made-the-biggest-stock-debut-ever": {
+    "layer": "spacexsi",
+    "topic": "agi",
+    "card": {
+      "en": "Anthropic made the biggest stock debut ever",
+      "nl": "Anthropic had de grootste beursgang ooit"
+    }
+  },
+  "tesla-now-sells-cars-in-argentina": {
+    "layer": "tesla",
+    "topic": "cars",
+    "card": {
+      "en": "Tesla now sells cars in Argentina",
+      "nl": "Tesla verkoopt nu auto's in Argentinië"
+    }
+  },
+  "investors-funded-44-billion-dollars-of-spacex-chips": {
+    "layer": "spacexsi",
+    "topic": "datacenters",
+    "card": {
+      "en": "Investors funded 44 billion dollars of SpaceX chips",
+      "nl": "Beleggers financieren 44 miljard dollar aan SpaceX-chips"
+    }
+  },
+  "italy-approves-tesla-assisted-driving-before-the-eu": {
+    "layer": "tesla",
+    "topic": "fsd",
+    "card": {
+      "en": "Italy approves Tesla Assisted Driving before the EU",
+      "nl": "Italië keurt Tesla Assisted Driving vóór Brussel goed"
+    }
+  },
+  "nvidia-fell-14-percent-after-anthropics-debut": {
+    "layer": "spacexsi",
+    "topic": "agi",
+    "card": {
+      "en": "Nvidia fell 14 percent after Anthropic's debut",
+      "nl": "Nvidia zakte 14 procent na Anthropics beursdebuut"
+    }
   }
 }

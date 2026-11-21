@@ -51,7 +51,7 @@ jobs:
             VIDEO_ID="$id" python3 video/set_private.py
           done < video/make-private.txt
       - name: Upload unlisted Starship test
-        if: hashFiles('video/unlisted-flight15.txt') != ''
+        if: hashFiles('video/unlisted-flight15.txt') != '' && hashFiles('ops/videos-paused') == ''
         env:
           YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
           YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
@@ -108,8 +108,18 @@ jobs:
               echo "slugs=$slugs" >> "$GITHUB_OUTPUT"
             fi
             echo "langs=$langs" >> "$GITHUB_OUTPUT"
-            # ops/videos-paused: articles still get their photos, but no Shorts or long videos are made or posted
-            if [ -f ops/videos-paused ] && ! printf '%s\n' "$found" | grep -qx 'queue_in_push=1'; then echo "paused=1" >> "$GITHUB_OUTPUT"; fi
+          fi
+          # ops/videos-paused: articles still get their photos, but no Shorts or long videos are made, uploaded or
+          # posted. This holds for article pushes, video/queue.txt pushes and watchdog (slug=queue) runs alike.
+          # Only a manual run with an explicit slug and upload=yes, or a preview (artifact only), goes ahead.
+          if [ -f ops/videos-paused ]; then
+            if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ github.event.inputs.slug }}" != "queue" ] && \
+               { [ "${{ github.event.inputs.upload }}" = "yes" ] || [ -n "${{ github.event.inputs.preview_slug }}" ]; }; then
+              echo "::notice::Videos are paused, but this manual run asked for it explicitly"
+            else
+              echo "paused=1" >> "$GITHUB_OUTPUT"
+              echo "::notice::Videos are paused (ops/videos-paused): nothing is rendered, uploaded or posted"
+            fi
           fi
       - name: Generate article photos (Nano Banana) and publish them first
         if: steps.find.outputs.slugs != '' && steps.find.outputs.queue != '1' && github.event_name != 'workflow_dispatch'
@@ -250,7 +260,7 @@ jobs:
           done
           exit $fail
       - name: Upload requested queue video to YouTube
-        if: steps.find.outputs.queue == '1' && steps.find.outputs.preview != '1' && steps.find.outputs.upload == '1' && steps.find.outputs.qstory != '1'
+        if: steps.find.outputs.queue == '1' && steps.find.outputs.preview != '1' && steps.find.outputs.upload == '1' && steps.find.outputs.qstory != '1' && steps.find.outputs.paused != '1'
         env:
           YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
           YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}

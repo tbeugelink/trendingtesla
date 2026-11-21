@@ -22,6 +22,9 @@ def load(p, default):
 
 
 def main():
+    if (ROOT / "ops/videos-paused").exists():
+        # videos are paused by the owner: never request (and so never upload) a missing video
+        return
     now = datetime.now(timezone.utc)
     shorts = {x.get("slug") for x in load(ROOT / "content/shorts.json", [])}
     shorts |= {x.get("slug") for x in load(ROOT / "ops/story-pending.json", [])}  # uploaded, not yet on the site

@@ -866,7 +866,7 @@ article.money .prose h2{scroll-margin-top:130px}
 .leadstory .lead{padding:0;max-width:65ch}
 .leadstory .leadim{display:block;border-radius:12px;overflow:hidden;border:1px solid var(--edge);background:#000;cursor:default}
 .leadstory img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
-.leadstory .ltitle{font-size:clamp(1.35rem,2vw,1.7rem);line-height:1.2;letter-spacing:-.02em;margin:8px 0 12px 1px;font-weight:800}
+.leadstory .ltitle{font-size:clamp(1.35rem,2vw,1.7rem);line-height:1.2;letter-spacing:-.02em;margin:0 0 12px 1px;font-weight:800}
 .leadstory .btn{margin-bottom:22px}
 .leadstory .ltitle a,.card.lead .body a,.pv-lead a{color:inherit;text-decoration:none}
 .leadstory .ltitle a:hover,.card.lead .body a:hover,.pv-lead a:hover{text-decoration:underline;text-underline-offset:3px}
@@ -2543,11 +2543,10 @@ def card(a, lang, lead=False):
     line = rubric_line(a, lang)
     im = f'<div class="im">{resp_img(site_img(a), t["title"], SIZES_CARD)}{dur(a, lang)}{ovl(a, lang)}</div>'
     title = f'<h3>{esc(card_title(a, lang))}</h3>'
-    # A wide lead puts the rubric above the photo. Grid cards keep it underneath.
+    # The rubric sits under the photo, then the title. The lead photo is not a link.
     if lead:
-        # The photo is not a link. Only the title goes to the article.
-        return (f'<div class="{cls}">{line}{im}'
-                f'<div class="body"><a href="{url(lang, a["slug"] + "/")}">{title}</a></div></div>')
+        return (f'<div class="{cls}">{im}'
+                f'<div class="body">{line}<a href="{url(lang, a["slug"] + "/")}">{title}</a></div></div>')
     return (f'<a class="{cls}" href="{url(lang, a["slug"] + "/")}">{im}'
             f'<div class="body">{line}{title}</div></a>')
 
@@ -3484,7 +3483,8 @@ def category_hub(key, items, lang):
     intro = (CAT_INTRO.get(key) or {}).get(lang) or L["cat_intro"].format(c[lang])
     nav, ld = crumbs(lang, [(c[lang], f"category/{key}/")])
     ordered = sorted(items, key=published, reverse=True)
-    feature = home_lead(ordered[0], lang, title_tag="h2") if ordered else ""
+    feature = home_lead(ordered[0], lang, title_tag="h2",
+                        crumb_labels=[LANGS[lang]["home"], c[lang]]) if ordered else ""
     rest = ordered[1:]
     grid = hub_cards(rest, lang) if rest else ""
     body = (f'{nav}<header class="hubhead"><h1>{esc(c[lang])}</h1><p class="lead">{esc(intro)}</p></header>'
@@ -3683,7 +3683,7 @@ def player(vid, kind, label, poster, priority, title=""):
     # The first picture on the page is the LCP image: eager and high priority.
     photo = resp_img(poster, title or label, sizes, high=priority, lazy=not priority, width=w, height=h)
     return (f'<figure class="avid {kind}"><button class="avb" type="button" data-vid="{esc(vid)}" aria-label="{esc(label)}">'
-            f'{photo}<span class="shp" aria-hidden="true"></span></button><figcaption>{esc(label)}</figcaption></figure>')
+            f'{photo}<span class="shp" aria-hidden="true"></span></button></figure>')
 
 
 def article_media(a, lang):
@@ -3801,16 +3801,19 @@ def _in_topics(a, keys):
     return bool(cats & set(keys))
 
 
-def home_lead(a, lang, title_tag="h1"):
-    """Featured story: photo, headline, excerpt. The full article stays on its own page."""
+def home_lead(a, lang, title_tag="h1", crumb_labels=None):
+    """Featured story: photo, then the rubric line, then the headline."""
     L = LANGS[lang]
     t = a[lang]
     href = url(lang, a["slug"] + "/")
     tag = "h1" if title_tag == "h1" else "h2"
-    return (f'<article class="leadstory">'
-            f'{rubric_line(a, lang)}'
-            f'<div class="leadim">'
-            f'{resp_img(site_img(a), t["title"], SIZES_LEAD, high=True, lazy=False, width=1600, height=900)}</div>'
+    photo = site_img(a)
+    hide = rubric_hides_name(a, lang, crumb_labels)
+    line = rubric_line(a, lang, hide_name=hide)
+    im = (f'<div class="leadim">'
+          f'{resp_img(photo, t["title"], SIZES_LEAD, high=True, lazy=False, width=1600, height=900)}</div>'
+          if photo else "")
+    return (f'<article class="leadstory">{im}{line}'
             f'<div>'
             f'<{tag} class="ltitle"><a href="{href}">{esc(card_title(a, lang))}</a></{tag}>'
             f'<a class="btn" href="{href}">{esc(L["read_story"])}</a></div></article>')
@@ -3896,6 +3899,48 @@ def _nav_layer_for_topic(topic):
     return None
 
 
+def _hub_parent_layer(spec, items):
+    """Parent LAYERS entry for a topic hub, from filing.json, then the nav map."""
+    counts = {}
+    for a in items or ():
+        key = (a or {}).get("layer") or ""
+        if key:
+            counts[key] = counts.get(key, 0) + 1
+    layer_key = max(counts, key=counts.get) if counts else ""
+    if not layer_key:
+        candidates = list(spec.get("topics") or [])
+        if spec.get("key"):
+            candidates.append(spec["key"])
+        for t in candidates:
+            for layer in LAYERS:
+                if layer["key"] == t:
+                    return layer
+            nav = _nav_layer_for_topic(t)
+            if nav:
+                layer_key = nav["key"]
+                break
+    if not layer_key:
+        return None
+    for layer in LAYERS:
+        if layer["key"] == layer_key:
+            return layer
+    return None
+
+
+def topic_hub_crumb_parts(spec, items, lang):
+    """Layer and subtopic for a topic hub trail. crumbs() prepends Home."""
+    title = _bi(spec["title"], lang)
+    path = spec["path"]
+    layer = _hub_parent_layer(spec, items)
+    if not layer:
+        return [(title, path)]
+    layer_label = _bi(layer["title"], lang)
+    layer_path = layer["path"]
+    if path == layer_path or spec.get("key") == layer["key"]:
+        return [(layer_label, layer_path)]
+    return [(layer_label, layer_path), (title, path)]
+
+
 def article_crumb_parts(a, lang):
     """Layer and optional subtopic for an article trail. crumbs() prepends Home."""
     parts = []
@@ -3947,9 +3992,18 @@ def article_crumbs(a, lang):
     return crumbs(lang, article_crumb_parts(a, lang), current=False)
 
 
-def rubric_line(a, lang, stamp="", link=False):
-    """Cyan layer label, a dot, and the relative date. Same line as the article cards."""
+def rubric_hides_name(a, lang, crumb_labels):
+    """True when the cyan layer label would just repeat a breadcrumb segment."""
     name = layer_name(a, lang)
+    if not name:
+        return False
+    key = name.casefold()
+    return any((lab or "").casefold() == key for lab in (crumb_labels or ()))
+
+
+def rubric_line(a, lang, stamp="", link=False, hide_name=False):
+    """Cyan layer label, a dot, and the relative date. Same line as the article cards."""
+    name = "" if hide_name else layer_name(a, lang)
     when_html = stamp or (when(a, lang) if a else "")
     label = esc(name)
     if link and name:
@@ -4272,8 +4326,8 @@ def pv_side(arts, lang, a=None):
 def pv_lead(a, lang, href):
     t = a[lang]
     return (f'<div class="pv-lead">'
-            f'{rubric_line(a, lang)}'
             f'<span class="im">{resp_img(site_img(a), t["title"], SIZES_LEAD, high=True, lazy=False)}{ovl(a, lang)}</span>'
+            f'{rubric_line(a, lang)}'
             f'<span><a href="{href}"><h1>{esc(t["title"])}</h1></a></span></div>')
 
 
@@ -4306,8 +4360,8 @@ def pv_home(variant, arts, lang):
                 f'<section class="pv-block"><div class="h2"><h2>{esc(title)}</h2>'
                 f'<a href="{url(lang, path)}">{esc(LANGS[lang]["see_all"])}</a></div>'
                 f'<div class="pv-lead">'
-                f'{rubric_line(head, lang)}'
                 f'<span class="im">{resp_img(site_img(head), "", SIZES_CARD)}{ovl(head, lang)}</span>'
+                f'{rubric_line(head, lang)}'
                 f'<a href="{url(lang, head["slug"] + "/")}"><h2>{esc(head[lang]["title"])}</h2></a></div>{rows}</section>')
         main += f'<h1 class="sr">{esc(NAME)}</h1>' + "".join(blocks)
     return f'<div class="pv pv-{variant}"><div class="pv-grid"><div>{main}</div>{pv_side(arts, lang)}</div></div>'
@@ -4333,9 +4387,10 @@ def pv_article(variant, a, arts, lang, live=False):
         toc_here, rail = "", toc
     else:
         toc_here, rail = toc, ""
+    hide = rubric_hides_name(a, lang, [LANGS[lang]["home"]] + [n for n, _ in article_crumb_parts(a, lang)])
     article = (
         f'<article class="money">{media}'
-        f'{rubric_line(a, lang, link=True)}'
+        f'{rubric_line(a, lang, link=True, hide_name=hide)}'
         f'<h1>{esc(t["title"])}</h1>'
         f'<p class="byline"><a href="{url(lang, "editorial/")}">{L["byline"]}</a>'
         f' · {read_time(a, lang)} {L["min"]}</p>'
@@ -4763,13 +4818,15 @@ def _coverage_note(lang):
     return "Nothing here yet. Articles for this section will show up when they are published."
 
 
-def _article_list(items, lang, title, path):
+def _article_list(items, lang, title, path, crumb_parts=None):
     """Breadcrumb, a hidden page title, then the lead photo and the other articles."""
-    nav, ld = crumbs(lang, [(title, path)])
+    parts = list(crumb_parts) if crumb_parts is not None else [(title, path)]
+    nav, ld = crumbs(lang, parts)
     hidden = f'<h1 class="visually-hidden">{esc(title)}</h1>'
     if not items:
         return f'{nav}{hidden}<p class="hubnote">{esc(_coverage_note(lang))}</p>', ld
-    feature = home_lead(items[0], lang, title_tag="h2")
+    crumbs_labs = [LANGS[lang]["home"]] + [name for name, _ in parts]
+    feature = home_lead(items[0], lang, title_tag="h2", crumb_labels=crumbs_labs)
     rest = hub_cards(items[1:], lang) if len(items) > 1 else ""
     return f'{nav}{hidden}{feature}{rest}', ld
 
@@ -4778,7 +4835,8 @@ def topic_hub(spec, items, lang):
     """Article list for a topic. The intro stays in the meta description only."""
     title = _bi(spec["title"], lang)
     intro = _bi(spec["intro"], lang)
-    body, ld = _article_list(items, lang, title, spec["path"])
+    parts = topic_hub_crumb_parts(spec, items, lang)
+    body, ld = _article_list(items, lang, title, spec["path"], crumb_parts=parts)
     return body, ld, intro
 
 
@@ -5246,13 +5304,15 @@ def starship_page(lang, arts):
     L = LANGS[lang]
     flights = sorted(data["flights"], key=lambda f: f["number"])
     latest = flights[-1]
-    title = "Starship tracker" if lang == "en" else "Starship-tracker"
+    titles = {"en": "Starship tracker", "nl": "Starship-tracker"}
+    title = titles[lang]
     intro = ("Every full-stack Starship flight: the date, the outcome, and whether the booster, the ship and a payload made it. "
              "The page is rendered from a data file, so a new flight is a new row."
              if lang == "en" else
              "Elke volledige Starship-vlucht: de datum, de afloop, en of de booster, het schip en een lading het haalden. "
              "De pagina komt uit een databestand, dus een nieuwe vlucht is een nieuwe rij.")
-    nav, ld = crumbs(lang, [(title, "starship/")])
+    ship_spec = {"key": "starship", "path": "starship/", "title": titles, "topics": ["starship"]}
+    nav, ld = crumbs(lang, topic_hub_crumb_parts(ship_spec, hub_articles(ship_spec, arts), lang))
     updated = ("Last updated" if lang == "en" else "Laatst bijgewerkt") + " " + fmt_date(data["updated"], lang) + "."
     labels = {
         "en": ("Latest result", "Next launch", "Not announced", "Flight archive", "Flight", "Date", "Outcome",

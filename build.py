@@ -1315,6 +1315,7 @@ header.hb .id,header.hb .brand{min-width:0}
 header.hb .bar{justify-content:flex-start;flex-wrap:nowrap}
 header.hb .id{flex:0 0 auto;min-width:0}
 header.hb .sbtn{display:grid;margin-left:auto;margin-right:0;transform:none;flex:none}
+header.hb .sbtn svg{transform:translateX(15px)} /* visible glyph only; button and neighbours stay put */
 header.hb .savedlink,html.hasdd header.hb .bar .savedlink,html.hasdd.ddend header.hb .bar .savedlink,html.hass header.hb .bar .savedlink{margin-left:0;margin-right:0;transform:none;flex:none}
 header.hb .bar .lang{margin-left:0;margin-right:0;flex:none;white-space:nowrap;transform:none}
 }

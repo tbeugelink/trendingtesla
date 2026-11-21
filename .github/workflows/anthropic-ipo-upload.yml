@@ -1,9 +1,14 @@
 name: Upload Anthropic IPO Short
 
 # One public upload of the finished Anthropic IPO Short. It does not render a video and it does not
-# upload anything else. workflow_dispatch only, and only on this branch.
+# upload anything else. It lives only on this branch. A push of this file starts it once; GitHub will
+# not dispatch a workflow that is not on the default branch, and this file stays off main.
 on:
   workflow_dispatch:
+  push:
+    branches: [cursor/anthropic-ipo-voice]
+    paths:
+      - .github/workflows/anthropic-ipo-upload.yml
 
 permissions:
   contents: read

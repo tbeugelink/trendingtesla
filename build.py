@@ -855,7 +855,7 @@ article.narrow > h1{margin-left:14px}article.narrow .cform{margin-left:14px}
 @media (min-width:960px){.aread.with-side{max-width:1100px;display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:28px;align-items:start}}
 .ad-side-wrap{display:none}
 @media (min-width:960px){.ad-side-wrap{display:block;position:sticky;top:120px}}
-article.money{padding-top:6px}
+article.money{padding-top:6px}.sheet-main>article.money{padding-top:0}
 article.money h1.atitle{font-size:clamp(1.85rem,4.5vw,2.7rem);line-height:1.14;letter-spacing:-.025em;margin:8px 0 10px;max-width:18em}
 article.money .lead{font-size:1.16rem;line-height:1.55;max-width:40em}
 article.money .prose{font-size:1.075rem;line-height:1.75;max-width:68ch}
@@ -1063,15 +1063,21 @@ header.hb .pnav>.is-parked{display:none}
 .pv-art .toc{float:none;width:auto;max-width:none;margin:0 0 16px}
 .pv-c .toc{position:sticky;top:118px}
 .pv-art .avid{max-width:none}
-/* One centered frame for every page: reading column plus a right sidebar. */
-.sheet{display:grid;grid-template-columns:minmax(0,1fr) 292px;gap:26px;align-items:start}
+/* One centered frame for every page: reading column plus a right sidebar.
+   Crumbs sit in a full-width row so the red rule on the sidebar shares a top
+   edge with the image in the main column, on every page. */
+.sheet{display:grid;grid-template-columns:minmax(0,1fr) 292px;column-gap:26px;row-gap:0;align-items:start}
 .sheet-main{min-width:0}
-.sheet .leadstory{margin-top:1px;align-items:start}
-.pv-side{margin-top:1px}
-.sheet:has(.leadstory)>.pv-side{margin-top:3px}
-/* Homepage: the top block and the red rule above Latest news share one top edge. */
+.sheet>.crumbs{grid-column:1 / -1;margin:-2px 0 4px}
+.sheet .leadstory{margin-top:0;align-items:start}
+.pv-side{margin-top:0}
 .sheet.front .leadstory,.sheet.front .layerrow{margin-top:0}
-.sheet.front>.pv-side,.sheet.front:has(.leadstory)>.pv-side{margin-top:0}
+.sheet>.nlbar{margin-top:26px}
+@media (max-width:900px){
+.sheet{row-gap:26px}
+.sheet>.crumbs{margin-bottom:calc(-26px + 4px)}
+.sheet>.nlbar{margin-top:0}
+}
 .layerrow{display:grid;grid-template-columns:1fr 1fr;gap:var(--card-gap-y) var(--card-gap-x);margin:0 0 var(--card-gap-y);align-items:stretch}
 .lcard{display:flex;flex-direction:column;min-width:0;height:100%;text-decoration:none;color:inherit;background:transparent;border:0}
 .layerrow .lcard:last-child{grid-column:1 / -1}
@@ -1135,12 +1141,15 @@ article.money>.lmeta a.lname:hover{text-decoration:underline}
    span two rows of that rail: auto rows then grow with the story and open a gap
    between Related and Start here. The bar stays a full-width row underneath. */
 .sheet:has(.arel){grid-template-areas:"main rail" "bar bar";align-items:start}
+.sheet:has(>.crumbs):has(.arel){grid-template-areas:"crumbs crumbs" "main rail" "bar bar"}
+.sheet:has(.arel)>.crumbs{grid-area:crumbs}
 .sheet:has(.arel)>.sheet-main{grid-area:main}
 .sheet:has(.arel)>.sheet-rail{grid-area:rail;display:flex;flex-direction:column;justify-content:flex-start;align-items:stretch;align-self:start;min-width:0;gap:0}
 .sheet:has(.arel)>.nlbar{grid-area:bar}
 .sheet>.nlbar{grid-column:1 / -1}
 @media (max-width:900px){
 .sheet:has(.arel){grid-template-columns:1fr;grid-template-areas:"main" "side" "bar" "rest"}
+.sheet:has(>.crumbs):has(.arel){grid-template-areas:"crumbs" "main" "side" "bar" "rest"}
 .sheet:has(.arel)>.sheet-rail{display:contents}
 .sheet:has(.arel) .arel{grid-area:side}
 .sheet:has(.arel) .pv-side:not(.arel){grid-area:rest}
@@ -3483,8 +3492,7 @@ def category_hub(key, items, lang):
     intro = (CAT_INTRO.get(key) or {}).get(lang) or L["cat_intro"].format(c[lang])
     nav, ld = crumbs(lang, [(c[lang], f"category/{key}/")])
     ordered = sorted(items, key=published, reverse=True)
-    feature = home_lead(ordered[0], lang, title_tag="h2",
-                        crumb_labels=[LANGS[lang]["home"], c[lang]]) if ordered else ""
+    feature = home_lead(ordered[0], lang, title_tag="h2") if ordered else ""
     rest = ordered[1:]
     grid = hub_cards(rest, lang) if rest else ""
     body = (f'{nav}<header class="hubhead"><h1>{esc(c[lang])}</h1><p class="lead">{esc(intro)}</p></header>'
@@ -3801,15 +3809,14 @@ def _in_topics(a, keys):
     return bool(cats & set(keys))
 
 
-def home_lead(a, lang, title_tag="h1", crumb_labels=None):
+def home_lead(a, lang, title_tag="h1"):
     """Featured story: photo, then the rubric line, then the headline."""
     L = LANGS[lang]
     t = a[lang]
     href = url(lang, a["slug"] + "/")
     tag = "h1" if title_tag == "h1" else "h2"
     photo = site_img(a)
-    hide = rubric_hides_name(a, lang, crumb_labels)
-    line = rubric_line(a, lang, hide_name=hide)
+    line = rubric_line(a, lang)
     im = (f'<div class="leadim">'
           f'{resp_img(photo, t["title"], SIZES_LEAD, high=True, lazy=False, width=1600, height=900)}</div>'
           if photo else "")
@@ -3992,18 +3999,9 @@ def article_crumbs(a, lang):
     return crumbs(lang, article_crumb_parts(a, lang), current=False)
 
 
-def rubric_hides_name(a, lang, crumb_labels):
-    """True when the cyan layer label would just repeat a breadcrumb segment."""
-    name = layer_name(a, lang)
-    if not name:
-        return False
-    key = name.casefold()
-    return any((lab or "").casefold() == key for lab in (crumb_labels or ()))
-
-
-def rubric_line(a, lang, stamp="", link=False, hide_name=False):
+def rubric_line(a, lang, stamp="", link=False):
     """Cyan layer label, a dot, and the relative date. Same line as the article cards."""
-    name = "" if hide_name else layer_name(a, lang)
+    name = layer_name(a, lang)
     when_html = stamp or (when(a, lang) if a else "")
     label = esc(name)
     if link and name:
@@ -4176,9 +4174,19 @@ def page_side(arts, lang, kind="home", current=None, skip=None, tail="", signup=
 
 
 def shell(main, side, extra=""):
-    """Same centered content column and sidebar on every page."""
+    """Same centered content column and sidebar on every page.
+
+    A leading breadcrumb is hoisted to a full-width sheet row so the red
+    rule on the sidebar lines up with the first image in the main column.
+    """
     klass = f"sheet {extra}".strip()
-    return f'<div class="{klass}"><div class="sheet-main">{main}</div>{side}</div>'
+    crumb = ""
+    if main.startswith('<nav class="crumbs"'):
+        end = main.find("</nav>")
+        if end != -1:
+            crumb = main[:end + len("</nav>")]
+            main = main[end + len("</nav>"):]
+    return f'<div class="{klass}">{crumb}<div class="sheet-main">{main}</div>{side}</div>'
 
 
 def layer_latest(arts, lang):
@@ -4212,15 +4220,16 @@ def layer_latest(arts, lang):
 def homepage(arts, lang):
     """A card from each ecosystem layer, then the video strip and the rest of the day's list."""
     L = LANGS[lang]
+    nav, crumb_ld = crumbs(lang, [])
     if not arts:
-        return shell(f'<h1>{esc(NAME)}</h1><p class="empty">{L["empty"]}</p>', page_side(arts, lang, "home"))
+        return shell(f'{nav}<h1>{esc(NAME)}</h1><p class="empty">{L["empty"]}</p>', page_side(arts, lang, "home")), crumb_ld
     row, shown = layer_latest(arts, lang)
     videos, strip_arts = home_videos(arts, lang, 8, skip_ids={id(a) for a in shown})
     strip = f'<div class="vstrip">{videos}</div>' if videos else ""
     used = {id(a) for a in shown} | {id(a) for a in strip_arts}
     feed = [x for x in arts if id(x) not in used][:14]
-    main = (f'<h1 class="visually-hidden">{esc(NAME)}</h1>{row}{strip}{pv_feed(feed, lang)}')
-    return shell(main, page_side(arts, lang, "home", skip=[*shown, *strip_arts, *feed]), "front")
+    main = (f'{nav}<h1 class="visually-hidden">{esc(NAME)}</h1>{row}{strip}{pv_feed(feed, lang)}')
+    return shell(main, page_side(arts, lang, "home", skip=[*shown, *strip_arts, *feed]), "front"), crumb_ld
 
 
 def pv_copy(lang):
@@ -4387,10 +4396,9 @@ def pv_article(variant, a, arts, lang, live=False):
         toc_here, rail = "", toc
     else:
         toc_here, rail = toc, ""
-    hide = rubric_hides_name(a, lang, [LANGS[lang]["home"]] + [n for n, _ in article_crumb_parts(a, lang)])
     article = (
         f'<article class="money">{media}'
-        f'{rubric_line(a, lang, link=True, hide_name=hide)}'
+        f'{rubric_line(a, lang, link=True)}'
         f'<h1>{esc(t["title"])}</h1>'
         f'<p class="byline"><a href="{url(lang, "editorial/")}">{L["byline"]}</a>'
         f' · {read_time(a, lang)} {L["min"]}</p>'
@@ -4825,8 +4833,7 @@ def _article_list(items, lang, title, path, crumb_parts=None):
     hidden = f'<h1 class="visually-hidden">{esc(title)}</h1>'
     if not items:
         return f'{nav}{hidden}<p class="hubnote">{esc(_coverage_note(lang))}</p>', ld
-    crumbs_labs = [LANGS[lang]["home"]] + [name for name, _ in parts]
-    feature = home_lead(items[0], lang, title_tag="h2", crumb_labels=crumbs_labs)
+    feature = home_lead(items[0], lang, title_tag="h2")
     rest = hub_cards(items[1:], lang) if len(items) > 1 else ""
     return f'{nav}{hidden}{feature}{rest}', ld
 
@@ -5953,14 +5960,14 @@ def build():
         L = LANGS[lang]
 
         # ---------- Home ----------
-        body = homepage(arts, lang)
+        body, crumb_ld = homepage(arts, lang)
         site_ld = {"@context": "https://schema.org", "@type": "WebSite", "name": NAME, "alternateName": ["Trending Tesla", "trendingtesla.com"],
                    "url": SITE + url(lang), "inLanguage": lang,
                    "publisher": {"@type": "Organization", "name": NAME, "url": SITE,
                                  "logo": {"@type": "ImageObject", "url": SITE + "/favicon-512.png", "width": 512, "height": 512},
                                  "sameAs": ["https://www.youtube.com/@TrendingTesla"]}}
         write(url(lang), page(lang, "", NAME, L["home_desc"], body,
-                              extra_head=f'<script type="application/ld+json">{json.dumps(site_ld, ensure_ascii=False)}</script>'))
+                              extra_head=ld_script(site_ld) + ld_script(crumb_ld)))
 
         # ---------- Category pages ----------
         for key, c in CATEGORIES.items():

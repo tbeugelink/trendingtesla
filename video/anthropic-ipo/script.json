@@ -1,0 +1,14 @@
+{
+ "title": "Anthropic Raised More Than Any IPO Ever",
+ "sentences": [
+  {"id": "s1", "tag": "[enthousiast]", "text": "Anthropic just pulled off the biggest IPO in history."},
+  {"id": "s2", "tag": "", "text": "The maker of Claude sold its shares at $83 each."},
+  {"id": "s3", "tag": "[enthousiast]", "text": "Then Nasdaq trading opened, and the very first price was $111.50!"},
+  {"id": "s4", "tag": "", "text": "At that moment Anthropic was worth about $2 trillion, counting the stock promised to employees."},
+  {"id": "s5", "tag": "", "text": "By the closing bell it had cooled to $97, still 17 percent up."},
+  {"id": "s6", "tag": "", "text": "With the extra shares the banks bought, the sale raised $93.5 billion, more than SpaceX in June."},
+  {"id": "s7", "tag": "", "text": "But one day later, a tech sell-off pushed it down 8.5 percent."},
+  {"id": "s8", "tag": "", "text": "So is this the top of the AI boom, or just the start? Tell me in the comments."},
+  {"id": "outro", "tag": "", "text": "Like and subscribe for more, or go to TrendingTesla.com."}
+ ]
+}

@@ -1,0 +1,84 @@
+{
+  "slug": "hsbc-more-than-doubles-its-tesla-price-target",
+  "date": "2026-11-22",
+  "time": "13:57",
+  "category": "earnings",
+  "also": [
+    "spacex"
+  ],
+  "card": {
+    "en": "HSBC more than doubles its Tesla price target",
+    "nl": "HSBC verdubbelt ruim zijn koersdoel voor Tesla"
+  },
+  "image": "lib/musk-chess-companies.jpg",
+  "image_lock": true,
+  "images": [
+    "lib/musk-chess-companies.jpg",
+    "lib/starship-pad.jpg",
+    "lib/giga-texas-aerial.jpg",
+    "lib/stock-phone-up.jpg",
+    "topics/earnings-7.jpg",
+    "lib/musk-silhouette-rocket.jpg"
+  ],
+  "sources": [
+    {
+      "title": "Investing.com — HSBC upgrades Tesla and more than doubles its target on SpaceX merger potential",
+      "url": "https://www.investing.com/news/stock-market-news/hsbc-upgrades-tesla-more-than-doubles-target-on-spacex-merger-potential-5041374"
+    },
+    {
+      "title": "TipRanks — HSBC upgrades Tesla stock to Hold and raises its price target to $359",
+      "url": "https://www.tipranks.com/news/hsbc-upgrades-tesla-stock-to-hold-and-raises-price-target-to-359-heres-why"
+    },
+    {
+      "title": "Benzinga — A Tesla-SpaceX merger could leave Elon Musk with about a 60% stake, analyst says",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/11/63497759/tesla-spacex-merger-could-hand-elon-musk-a-60-stake-and-tsla-holders-a-33-premium-analyst-says"
+    },
+    {
+      "title": "Investing.com — HSBC upgrades its Tesla rating on acquisition potential and raises the price target to $359",
+      "url": "https://www.investing.com/news/analyst-ratings/hsbc-upgrades-tesla-stock-rating-on-acquisition-potential-raises-price-target-to-359-93CH-5040834"
+    }
+  ],
+  "label": {
+    "style": "n",
+    "en": {
+      "sub": "FROM $157",
+      "text": "$359"
+    },
+    "nl": {
+      "sub": "VAN $157",
+      "text": "$359"
+    }
+  },
+  "gen_image": {
+    "prompt": "A dark wooden chessboard on a table, one white chess king large and sharp in the horizontal centre, a small white Tesla sedan model and a small white rocket model standing on either side of the king, warm side light, calm dark empty space in the lower-left third, no people, no faces, no readable text, no logos, no flags",
+    "subject": "a chess king with a small white Tesla model and a small white rocket model on a chessboard",
+    "refs": [
+      {
+        "src": "lib/musk-chess-companies.jpg"
+      }
+    ],
+    "profile": "editorial",
+    "category": "A",
+    "describe": "an illustration of a chess king between a Tesla model and a rocket model, not a photograph of a merger announcement or of any person",
+    "extra": [
+      {
+        "prompt": "Close view of a small white Tesla sedan model and a small white rocket model standing on dark chessboard squares, the base of a white chess king between them, warm light, empty dark space in the lower left, no people, no text, no logos",
+        "describe": "the Tesla model and the rocket model on the chessboard, close up"
+      },
+      {
+        "prompt": "Low angle across a dark chessboard, a white chess king in the centre with a small white Tesla model on one side and a small white rocket model on the other, soft warm light, calm dark background in the lower left, no people, no text, no logos",
+        "describe": "the chess king between the Tesla model and the rocket model, seen low across the board"
+      }
+    ]
+  },
+  "en": {
+    "title": "HSBC more than doubles its Tesla price target",
+    "description": "On 20 November 2026 HSBC analyst Michael Tyndall upgraded Tesla to Hold from Reduce and raised the price target to $359 from $157, about 129 percent higher, on a possible SpaceX combination. The new target is still below Tesla's close of $374.41 on 19 November.",
+    "body": "<p>HSBC more than doubled its Tesla price target on Friday, 20 November 2026. Analyst Michael Tyndall upgraded Tesla to Hold from Reduce and raised the target to $359 from $157, about 129 percent higher. The bank now splits that value in half between a SpaceX acquisition and a standalone cash-flow model. The new target is still below the price Tesla shares already closed at.</p>\n<h2>What did HSBC change?</h2>\n<p><strong>The rating moved from Reduce to Hold, and the price target moved from $157 to $359.</strong> Tyndall is the HSBC analyst on Tesla, which trades as TSLA. The rating change is one step. The target change is the larger one: $359 is about 129 percent above the old $157 target, which means the new figure is more than twice the old one.</p>\n<p>The upgrade does not put the target above the market. Tesla closed on Thursday, 19 November 2026, at $374.41, and $359 is still below that close. The figure is a blend of two cases, and that blend is what the number depends on.</p>\n<h2>So how does HSBC get to $359?</h2>\n<p><strong>By weighting a takeover case and a standalone model equally.</strong> HSBC now weights Tesla 50/50 between a SpaceX acquisition scenario and its standalone discounted-cash-flow valuation. The two inputs are far apart, and they are not measured from the same price.</p>\n<ul>\n<li><strong>Acquisition scenario:</strong> a 33 percent premium, which HSBC says is in line with recent similar deals, applied to Tesla's 30-day average share price, gives $507 a share.</li>\n<li><strong>Standalone value:</strong> the discounted-cash-flow value is $212 a share, up from $193.</li>\n</ul>\n<p>HSBC applies the 33 percent premium to the 30-day average, not to Thursday's close of $374.41, and publishes $507 for the acquisition case. The standalone value is $212, up from $193, and sits well below that close. The published target of $359 weights the two cases equally, so one input sits above the market price and the other sits below it. That is how the target can more than double and still finish under the share price. The high case only counts if a combination is a real possibility, and HSBC says the strategic logic of a merger is not immediately clear.</p>\n<h2>Why does HSBC talk about a merger?</h2>\n<p><strong>Because it sees control as the motive, not a shared set of customers.</strong> Tyndall said the strategic logic of a merger is not immediately clear, because the companies serve different customers. He sees control as the key motive. The note says: \"We see control as the key motivation for a merger, especially as CEO Musk has been clear in the past about his need for oversight.\"</p>\n<p>That sentence is about why a deal might be pursued. It does not set a price, a structure or a date. The control point becomes a number only in the stake HSBC estimates for a combined company.</p>\n<h2>What stake would Musk hold in a combined company?</h2>\n<p><strong>About 60 percent, according to HSBC.</strong> Musk owns about 39 percent of SpaceX, which gives him about 70 percent of the votes via dual-class shares. His stake in Tesla is about 20 percent. In a combined company, HSBC puts his stake at about 60 percent. These are estimates for a deal that has not been agreed, not a count of votes already cast. HSBC also left its separate view of SpaceX unchanged.</p>\n<h2>What did HSBC say about downside and about SpaceX?</h2>\n<p><strong>It sees limited further downside for Tesla while a deal dominates the discussion, and it kept SpaceX at Hold with a $150 target.</strong> HSBC said that with the mergers-and-acquisitions topic likely to dominate discussion, it sees limited further downside for Tesla. On SpaceX, which trades as SPCX, the bank kept its Hold rating and its $150 price target.</p>\n<p>Limited further downside is HSBC's reading of the debate. It is not a floor under the share price, and it is not a statement that a deal will close. Musk has already described the review as unfinished, and he has called shareholder approval a high hurdle.</p>\n<h2>So what has Musk said about a combination?</h2>\n<p><strong>That special committees are reviewing one, with no timeline, and that no deal is certain.</strong> On SpaceX's earnings call on 20 October 2026, Musk said special committees are reviewing a possible combination. He gave no timeline. He has said a deal would need approval from 50 percent of Tesla shareholders. He has called that a high hurdle, and he has said that no deal is certain.</p>\n<p>A Bloomberg report, cited by HSBC and unconfirmed, said a deal could be announced as early as December. That is a report about a possible announcement. It is not a statement from either company, and it does not make a December deal a fact.</p>\n<p>Earlier articles on this site cover <a href=\"/musk-tesla-spacex-merger-special-committees/\">the special committees from that October call</a> and <a href=\"/tesla-stock-jumps-barclays-upgrade-overweight-450-target-spacex-merger/\">an earlier upgrade that also cited a possible combination</a>.</p>\n<p>Until a combination is agreed and that shareholder approval is in hand, the $359 target remains one bank's equal weighting of a $507 acquisition case and a $212 standalone value, and it remains below the $374.41 close of 19 November 2026.</p>\n<p><em>This article is for information only and is not financial advice.</em></p>"
+  },
+  "nl": {
+    "title": "HSBC verdubbelt ruim zijn koersdoel voor Tesla",
+    "description": "Op 20 november 2026 verhoogde HSBC-analist Michael Tyndall Tesla van Reduce naar Hold en het koersdoel van $157 naar $359, ongeveer 129 procent hoger, vanwege een mogelijke combinatie met SpaceX. Het nieuwe doel ligt nog onder de slotkoers van $374,41 op 19 november.",
+    "body": "<p>HSBC heeft zijn koersdoel voor Tesla op vrijdag 20 november 2026 ruim verdubbeld. Analist Michael Tyndall verhoogde het advies van Reduce naar Hold en het koersdoel van $157 naar $359, ongeveer 129 procent hoger. De bank weegt die waarde nu voor de helft als een overname door SpaceX en voor de helft als een zelfstandig bedrijf. Het nieuwe doel ligt nog onder de koers waarop het aandeel al sloot.</p>\n<h2>Wat veranderde HSBC?</h2>\n<p><strong>Het advies ging van Reduce naar Hold, en het koersdoel van $157 naar $359.</strong> Tyndall is de HSBC-analist voor Tesla, dat onder de ticker TSLA noteert. De advieswijziging is één stap. De wijziging van het koersdoel is de grote: $359 ligt ongeveer 129 procent boven het oude doel van $157, dus het nieuwe cijfer is meer dan het dubbele.</p>\n<p>De upgrade zet het doel niet boven de markt. Tesla sloot op donderdag 19 november 2026 op $374,41, en $359 ligt daar nog onder. Het cijfer is een mix van twee scenario's, en die mix bepaalt het getal.</p>\n<h2>Dus hoe komt HSBC op $359?</h2>\n<p><strong>Door een overnamescenario en een zelfstandig model even zwaar te wegen.</strong> HSBC weegt Tesla nu 50/50 tussen een overname door SpaceX en een zelfstandige waardering op basis van verwachte kasstromen, een DCF. De twee uitkomsten liggen ver uit elkaar, en ze gaan niet uit van dezelfde koers.</p>\n<ul>\n<li><strong>Overname:</strong> een premie van 33 procent, volgens HSBC in lijn met recente vergelijkbare deals, op de gemiddelde koers van Tesla over 30 dagen, komt uit op $507 per aandeel.</li>\n<li><strong>Zelfstandige waarde:</strong> de DCF-waarde is $212 per aandeel, tegen $193 eerder.</li>\n</ul>\n<p>HSBC past de premie van 33 procent toe op het gemiddelde over 30 dagen, niet op de slotkoers van donderdag van $374,41, en publiceert $507 voor het overnamescenario. De zelfstandige waarde is $212, tegen $193 eerder, en ligt ruim onder die slotkoers. Het gepubliceerde doel van $359 weegt de twee gevallen even zwaar, zodat de ene invoer boven de marktkoers zit en de andere eronder. Zo kan het koersdoel ruim verdubbelen en toch onder de beurskoers uitkomen. Het hoge scenario telt alleen mee als een combinatie een reële mogelijkheid is, en HSBC zegt dat de strategische logica van een fusie niet meteen duidelijk is.</p>\n<h2>Waarom heeft HSBC het over een fusie?</h2>\n<p><strong>Omdat de bank zeggenschap als motief ziet, niet een gedeelde klantengroep.</strong> Tyndall zei dat de strategische logica van een fusie niet meteen duidelijk is, omdat de bedrijven verschillende klanten bedienen. Hij ziet zeggenschap als het kernmotief. In de notitie staat: „Wij zien zeggenschap als het belangrijkste motief voor een fusie, vooral omdat topman Musk in het verleden duidelijk is geweest over zijn behoefte aan toezicht.”</p>\n<p>Die zin gaat over waarom een deal nagestreefd zou worden. Hij noemt geen prijs, geen structuur en geen datum. Zeggenschap wordt pas een getal in het belang dat HSBC voor een gecombineerd bedrijf inschat.</p>\n<h2>Welk belang zou Musk in een gecombineerd bedrijf houden?</h2>\n<p><strong>Ongeveer 60 procent, volgens HSBC.</strong> Musk bezit ongeveer 39 procent van SpaceX, wat hem via aandelen met twee klassen ongeveer 70 procent van de stemmen geeft. Zijn belang in Tesla is ongeveer 20 procent. In een gecombineerd bedrijf schat HSBC zijn belang op ongeveer 60 procent. Dat zijn schattingen voor een deal die niet is afgesproken, geen telling van stemmen die al zijn uitgebracht. HSBC liet ook zijn aparte oordeel over SpaceX ongewijzigd.</p>\n<h2>Wat zei HSBC over het neerwaartse risico en over SpaceX?</h2>\n<p><strong>De bank ziet beperkt verder neerwaarts risico voor Tesla zolang een deal het gesprek beheerst, en hield SpaceX op Hold met een doel van $150.</strong> HSBC zei dat het, nu het fusie- en overnameonderwerp het gesprek waarschijnlijk gaat beheersen, beperkt verder neerwaarts risico voor Tesla ziet. Voor SpaceX, dat noteert als SPCX, hield de bank het advies Hold en het koersdoel van $150 aan.</p>\n<p>Beperkt verder neerwaarts risico is de lezing van HSBC van het debat. Het is geen bodem onder de koers, en het is geen uitspraak dat een deal doorgaat. Musk heeft de beoordeling al als onaf beschreven, en hij noemde de goedkeuring door aandeelhouders een hoge horde.</p>\n<h2>Dus wat heeft Musk over een combinatie gezegd?</h2>\n<p><strong>Dat speciale commissies er een bekijken, zonder tijdpad, en dat geen deal zeker is.</strong> Tijdens de kwartaalcall van SpaceX op 20 oktober 2026 zei Musk dat speciale commissies een mogelijke combinatie bekijken. Hij noemde geen tijdpad. Hij heeft gezegd dat een deal goedkeuring nodig heeft van 50 procent van de Tesla-aandeelhouders. Hij noemde dat een hoge horde, en hij heeft gezegd dat geen deal zeker is.</p>\n<p>Een bericht van Bloomberg, dat HSBC aanhaalt en dat niet is bevestigd, zei dat een deal al in december bekend zou kunnen worden. Dat is een bericht over een mogelijke aankondiging. Het is geen verklaring van een van beide bedrijven, en het maakt een deal in december geen feit.</p>\n<p>Eerdere artikelen op deze site gaan over <a href=\"/nl/musk-tesla-spacex-merger-special-committees/\">de speciale commissies na die oktobercall</a> en over <a href=\"/nl/tesla-stock-jumps-barclays-upgrade-overweight-450-target-spacex-merger/\">een eerdere upgrade die ook een mogelijke combinatie noemde</a>.</p>\n<p>Zolang een combinatie niet is afgesproken en die goedkeuring van aandeelhouders er niet is, blijft het doel van $359 de gelijke weging van één bank van een overnamescenario van $507 en een zelfstandige waarde van $212, en blijft het onder de slotkoers van $374,41 op 19 november 2026.</p>\n<p><em>Dit artikel is alleen bedoeld als informatie en is geen financieel advies.</em></p>"
+  }
+}

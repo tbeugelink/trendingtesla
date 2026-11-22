@@ -1,0 +1,92 @@
+{
+  "slug": "neuralink-participant-plays-gta-vi-with-his-mind",
+  "date": "2026-11-22",
+  "time": "20:01",
+  "category": "news",
+  "topic": "neuralink",
+  "layer": "neuralink",
+  "card": {
+    "en": "Neuralink participant plays GTA VI with his mind",
+    "nl": "Neuralink-deelnemer speelt GTA VI met zijn gedachten"
+  },
+  "image": "news/neuralink-connectome.jpg",
+  "image_lock": true,
+  "images": [
+    "news/neuralink-connectome.jpg",
+    "news/neuralink-arcuate-tractography.jpg"
+  ],
+  "credits": [
+    {
+      "file": "news/neuralink-connectome.jpg",
+      "credit": "jgmarcelino, CC BY 2.0, via Wikimedia Commons. Diffusion tractography of nerve fibers in a human brain, from a 3-tesla MRI. Not a scan of the participant and not a frame from the video",
+      "page": "https://commons.wikimedia.org/wiki/File:Connectome.jpg"
+    },
+    {
+      "file": "news/neuralink-arcuate-tractography.jpg",
+      "credit": "Fang-Cheng Yeh, Timothy D. Verstynen, Yibao Wang, Juan C. Fernández-Miranda and Wen-Yih Isaac Tseng, PLoS ONE (2013), CC BY 2.5, via Wikimedia Commons. Tractography panel of the arcuate fasciculus, a language pathway, cropped from the figure. Not a scan of the participant",
+      "page": "https://commons.wikimedia.org/wiki/File:Arcuate_fasciculus_dissection_and_tractography.png"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Tesla North — Neuralink posts a clip of a trial participant playing GTA VI with a brain implant, 20 November 2026",
+      "url": "https://teslanorth.com/2026/11/20/neuralink-gta-6-brain-implant/"
+    },
+    {
+      "title": "Interesting Engineering — Neuralink shows a brain-implant clip of GTA VI, 20 November 2026",
+      "url": "https://interestingengineering.com/culture/neuralink-brain-implant-gta-vi-blindsight-approval"
+    },
+    {
+      "title": "Tom's Hardware — A Neuralink trial participant plays GTA 6 with imagined movements",
+      "url": "https://www.tomshardware.com/peripherals/wearable-tech/neuralink-trial-participant-ditches-mouth-stick-to-play-gta-6-with-his-mind-brain-computer-interface-maps-imagined-ring-finger-taps-and-hand-slides-to-a-playstation-5-controller"
+    },
+    {
+      "title": "Runtime Wire — Neuralink shows a trial participant playing GTA VI a day after launch",
+      "url": "https://runtimewire.com/article/neuralink-shows-a-trial-participant-playing-gta-vi-a-day-after-launch"
+    }
+  ],
+  "label": {
+    "style": "a",
+    "en": {
+      "sub": "GTA VI",
+      "text": "WITH HIS MIND"
+    },
+    "nl": {
+      "sub": "GTA VI",
+      "text": "MET ZIJN GEDACHTEN"
+    }
+  },
+  "gen_image": {
+    "prompt": "A scientific illustration of cerebral nerve-fiber tracts filling the horizontal centre, cool blue and amber fibers on a charcoal field, the form large and sharp, empty calm space in the lower-left third, no lettering, no portrait, no face, no device, no logo",
+    "subject": "diffusion tractography of nerve fibers in a human brain",
+    "refs": [
+      {
+        "src": "news/neuralink-connectome.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Connectome.jpg"
+      }
+    ],
+    "profile": "technical",
+    "category": "A",
+    "describe": "Illustration of nerve-fiber tracts in a human brain. Not a scan of the participant and not a frame from the video.",
+    "extra": [
+      {
+        "prompt": "A closer scientific plate of curved cerebral fiber tracts in blue and amber on a charcoal field, the bundle large in the centre, empty lower-left, no lettering, no portrait, no device",
+        "describe": "Closer illustration of cerebral fiber tracts, not a scan of the participant"
+      },
+      {
+        "prompt": "An axial scientific plate of cerebral fiber direction in cool color, the slice centered, charcoal surround, empty lower-left, no lettering, no portrait, no device",
+        "describe": "Illustration of an axial brain fiber plate, not a scan of the participant"
+      }
+    ]
+  },
+  "en": {
+    "title": "Neuralink participant plays GTA VI with his mind",
+    "description": "On 20 November 2026 Neuralink posted a video of about two minutes in which a clinical-trial participant plays GTA VI with his brain implant, one day after the game’s worldwide release. The implants remain investigational and are not approved by the FDA or other regulators.",
+    "body": "<p>On 20 November 2026 Neuralink posted a video on X titled \"Playing GTA VI with a Neuralink\". The clip runs about two minutes. It shows a participant in a clinical trial playing Grand Theft Auto VI with his brain implant. Rockstar Games had released the game worldwide one day earlier, on 19 November 2026, for PlayStation 5 and Xbox Series X|S. Tesla North and Interesting Engineering both place the post on that date, the day after the release. The picture on this page is a diffusion tractography of nerve fibers in a human brain, from a 3-tesla MRI, shared under a Creative Commons licence. It is not a scan of this participant and not a frame from the video. The post is a demonstration of one person. Neuralink did not name him, and what the implant is doing has to be read from the frame.</p>\n<h2>What is on screen in the clip?</h2>\n<p><strong>A speedboat under a bridge, a request to collect a package, and a corner of the screen for the player and his inputs.</strong> In the clip the player steers a speedboat under a bridge into a narrow tree-lined channel while the game tells him to collect a package. A corner of the screen shows the participant, a neural-decoding input dashboard and a controller graphic that lights up as inputs register. Tesla North and Interesting Engineering both describe that view. The boat goes under the bridge and on into the channel, with trees along it. The game’s line in that stretch is to collect a package. The corner of the frame is separate from the water: it shows the person, a dashboard of the neural decoding, and a graphic of a controller. The graphic lights up as inputs register. The lit graphic shows that inputs are arriving. The reports go on to describe how an imagined movement becomes a controller input.</p>\n<h2>So how does an imagined movement become a button?</h2>\n<p><strong>The implant decodes imagined finger, hand and foot movements and turns them into game-controller inputs.</strong> Tom’s Hardware and Runtime Wire describe that mapping for this demonstration. An imagined tap of the ring finger triggers a button. Imagining a slide of the right hand forward pulls an aircraft’s nose up. Those are the examples the two reports give. A tap and a slide are two imagined movements, sent onward as two different controls. One becomes a button press. The other becomes a pull that brings an aircraft’s nose up. Finger, hand and foot are the kinds of movement the reports say the implant decodes. The participant’s own comment is about how many imagined button inputs he had to remember while he played.</p>\n<h2>What did he say about playing?</h2>\n<p><strong>Controlling the game was hard, because he had to remember many imagined button inputs.</strong> That is his account of the session, as Tom’s Hardware and Runtime Wire report it. Before the implant he used a mouth stick and an iPad, which made his jaw sore. The two reports set that earlier setup next to the implant. The mouth stick and the iPad are what he used before. The soreness was in his jaw. With the implant, the difficulty he describes is memory: many imagined button inputs, held in mind while the game is running. The account is about this one person and this way of playing. A name is still not attached to it.</p>\n<h2>So who is the participant?</h2>\n<p><strong>Neuralink did not name him.</strong> Tesla North, Interesting Engineering and Tom’s Hardware all describe the participant as unnamed. This article does not add a name, and it does not add an online handle. The person in the clip is a participant in a clinical trial, shown playing one game on the day Neuralink posted the video. The clip runs about two minutes. It is one demonstration, of one implant, by one unnamed participant. The status of that implant with regulators is a separate fact from the video.</p>\n<h2>Are Neuralink’s implants approved?</h2>\n<p><strong>No. The implants are investigational, and they are not approved by the FDA or other regulators.</strong> Tesla North and Interesting Engineering both state that limit. A video of one clinical-trial participant playing GTA VI does not change it. The game reached PlayStation 5 and Xbox Series X|S on 19 November 2026. The post on X followed on 20 November, about two minutes long, under the title \"Playing GTA VI with a Neuralink\". Those two days show a new game, and then a demonstration of one implant inside a trial. They do not show a device the FDA or another regulator has approved.</p>"
+  },
+  "nl": {
+    "title": "Neuralink-deelnemer speelt GTA VI met zijn gedachten",
+    "description": "Op 20 november 2026 plaatste Neuralink een video van ongeveer twee minuten waarin een deelnemer aan een klinische proef GTA VI speelt met zijn hersenimplantaat, een dag na de wereldwijde release. De implantaten blijven experimenteel en zijn niet goedgekeurd door de FDA of andere toezichthouders.",
+    "body": "<p>Op 20 november 2026 plaatste Neuralink een video op X met de titel \"Playing GTA VI with a Neuralink\". De clip duurt ongeveer twee minuten. Een deelnemer aan een klinische proef speelt er Grand Theft Auto VI mee, via zijn hersenimplantaat. Rockstar Games had het spel een dag eerder wereldwijd uitgebracht, op 19 november 2026, voor PlayStation 5 en Xbox Series X|S. Tesla North en Interesting Engineering leggen het bericht allebei op die datum, de dag na de release. De afbeelding bij dit stuk is een tractografie van zenuwvezels in een menselijk brein, gemaakt met een 3-tesla-MRI en gedeeld onder een Creative Commons-licentie. Het is geen scan van deze deelnemer en geen beeld uit de video. Het bericht is een demonstratie van één persoon. Neuralink noemt hem niet, en wat het implantaat doet moet uit het beeld worden gelezen.</p>\n<h2>Wat is er in de clip te zien?</h2>\n<p><strong>Een speedboot onder een brug, een opdracht om een pakket op te halen, en een hoek van het scherm voor de speler en zijn invoer.</strong> In de clip stuurt de speler een speedboot onder een brug een smal kanaal in met bomen erlangs, terwijl het spel zegt dat hij een pakket moet ophalen. In een hoek van het scherm zijn de deelnemer, een dashboard van de neurale decodering en een getekende controller te zien. Die tekening licht op wanneer invoer binnenkomt. Tesla North en Interesting Engineering beschrijven allebei dat beeld. De boot gaat onder de brug door en verder het kanaal in, met bomen langs de kant. De opdracht van het spel in dat stuk is een pakket ophalen. De hoek van het beeld staat los van het water: daar zijn de persoon, een dashboard van de decodering en een tekening van een controller te zien. De tekening licht op als invoer wordt geregistreerd. Het oplichten laat zien dat er invoer binnenkomt. De berichten beschrijven daarna hoe een ingebeelde beweging invoer voor de controller wordt.</p>\n<h2>Dus hoe wordt een ingebeelde beweging een knop?</h2>\n<p><strong>Het implantaat decodeert ingebeelde bewegingen van vinger, hand en voet en maakt daar invoer voor een spelcontroller van.</strong> Tom’s Hardware en Runtime Wire beschrijven die koppeling voor deze demonstratie. Een ingebeelde tik met de ringvinger activeert een knop. Wie zich voorstelt de rechterhand naar voren te schuiven, trekt de neus van een vliegtuig omhoog. Dat zijn de voorbeelden die de twee berichten geven. Een tik en een schuif zijn twee ingebeelde bewegingen, die als twee verschillende besturingen verdergaan. De ene wordt een knop. De andere wordt een trek die de neus van een vliegtuig omhoog brengt. Vinger, hand en voet zijn de soorten beweging die het implantaat volgens de berichten decodeert. De opmerking van de deelnemer zelf gaat over hoeveel ingebeelde knoppen hij tijdens het spelen moest onthouden.</p>\n<h2>Wat zei hij over het spelen?</h2>\n<p><strong>Het spel besturen was lastig, omdat hij veel ingebeelde knoppen moest onthouden.</strong> Dat is zijn verslag van de sessie, zoals Tom’s Hardware en Runtime Wire het weergeven. Vóór het implantaat gebruikte hij een mondstok en een iPad, waarvan zijn kaak pijnlijk werd. De twee berichten zetten die eerdere opstelling naast het implantaat. De mondstok en de iPad zijn wat hij daarvoor gebruikte. De pijn zat in zijn kaak. Met het implantaat zit de moeite die hij beschrijft in het onthouden: veel ingebeelde knoppen, in het hoofd terwijl het spel loopt. Het verslag gaat over deze ene persoon en deze manier van spelen. Er staat nog geen naam bij.</p>\n<h2>Dus wie is de deelnemer?</h2>\n<p><strong>Neuralink heeft hem niet genoemd.</strong> Tesla North, Interesting Engineering en Tom’s Hardware beschrijven de deelnemer alle drie als naamloos. Dit artikel voegt geen naam toe, en ook geen online naam. De persoon in de clip is een deelnemer aan een klinische proef, te zien terwijl hij één spel speelt op de dag dat Neuralink de video plaatste. De clip duurt ongeveer twee minuten. Het is één demonstratie, van één implantaat, door één naamloze deelnemer. De status van dat implantaat bij de toezichthouders staat los van de video.</p>\n<h2>Zijn de implantaten van Neuralink goedgekeurd?</h2>\n<p><strong>Nee. De implantaten zijn experimenteel, en ze zijn niet goedgekeurd door de FDA of andere toezichthouders.</strong> Tesla North en Interesting Engineering noemen die grens allebei. Een video waarin één deelnemer aan een klinische proef GTA VI speelt, verandert die grens niet. Het spel kwam op 19 november 2026 uit voor PlayStation 5 en Xbox Series X|S. Het bericht op X volgde op 20 november, ongeveer twee minuten lang, onder de titel \"Playing GTA VI with a Neuralink\". Die twee dagen laten een nieuw spel zien, en daarna een demonstratie van één implantaat in een proef. Ze laten geen hulpmiddel zien dat de FDA of een andere toezichthouder heeft goedgekeurd.</p>"
+  }
+}

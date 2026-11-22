@@ -1,75 +1,69 @@
 # Candidate niches for a second channel
 
-Updated 2026-11-15 by tools/scout.py (videos from the last 30 days, 1403 API units). Do not edit by hand; change the niches in ops/scout.json.
+Updated 2026-11-22 by tools/scout.py (videos from the last 30 days, 1408 API units). Do not edit by hand; change the niches in ops/scout.json.
 
 A niche looks promising when several DIFFERENT channels, preferably small (<100K subscribers) or young (<1 year), have videos at 3x or more of their usual views: then the interest is in the topic, not in one lucky channel or presenter.
 
 | Niche | Channels with 3x+ outliers | of which small | of which young | Median views of top videos | Score |
 |---|---|---|---|---|---|
-| History told as a story (comparison) | 12 | 12 | 7 | 51K | 50 |
-| Squazoo: AI, robots, transhumanism and the future of work and freedom | 16 | 8 | 3 | 785K | 38 |
-| Inventions told as stories (third channel candidate) | 7 | 7 | 7 | 1K | 35 |
-| Philosophy and big questions (comparison) | 12 | 8 | 3 | 74K | 34 |
+| History told as a story (comparison) | 16 | 13 | 7 | 449K | 56 |
+| Philosophy and big questions (comparison) | 16 | 10 | 2 | 112K | 40 |
+| Squazoo: AI, robots, transhumanism and the future of work and freedom | 18 | 7 | 3 | 524K | 38 |
+| Inventions told as stories (third channel candidate) | 6 | 6 | 6 | 2K | 30 |
 
 ## History told as a story (comparison)
 
-- **3944.3x** (2.3M views, long, History's Mysteries, 62K subs) - [World War II: The Complete History From Start to Finish (Full Documentary)](https://youtu.be/0EHq12q7AQE)
-- **234.3x** (767K views, short, The Axer Stories, 20K subs, channel 2 months old) - [She Fell 10,000 Feet From a Plane… And SURVIVED! #Shorts](https://youtu.be/s2Czjs1dfAg)
-- **201.2x** (1.1M views, short, DKOM, 14K subs, channel 10 months old) - [The Most Feared Lion in Maasai Mara History 👑](https://youtu.be/WaTxwneT2w8)
-- **33.4x** (78K views, short, Stay Learnin, 2K subs) - [The Forgotten History of the Fancy Girls](https://youtu.be/mtWm1KBZPwM)
-- **26.6x** (12K views, long, Rob Diavolos, 2K subs) - [The Forgotten God of Darkness that History Couldn’t Explain](https://youtu.be/6m7pPewAHZg)
-- **11.6x** (23K views, long, WISDOM OF THE ANCIENTS, 82K subs) - [The Lost History of Lemuria: The Celestial Mystery Science Can’t Explain](https://youtu.be/uoe23Ft5j7Q)
+- **3824.9x** (2.7M views, long, History's Mysteries, 64K subs) - [World War II: The Complete History From Start to Finish (Full Documentary)](https://youtu.be/0EHq12q7AQE)
+- **717.5x** (1.9M views, short, montømerie., 9K subs, channel 1 months old) - [The Lake That Fell Into the Earth](https://youtu.be/Lz-jBmWdIH0)
+- **254.6x** (1.2M views, long, World View - Documentary, 47K subs) - [Inside Chicago’s Deadliest Gang Wars | Documentary Geopolitical - AMP](https://youtu.be/sqsgfHNhhDs)
+- **142.7x** (2.6M views, long, Gloam, 8K subs) - [How Binance Lost $6,300,000,000 in One Night](https://youtu.be/5eZj1OnC1C4)
+- **61.9x** (1.3M views, long, History Exposé, 269K subs) - [What Happened to Queen Alexandra? Her Tragic Story](https://youtu.be/d5wgnh7OGL4)
+- **42.6x** (78K views, short, Stay Learnin, 3K subs) - [The Forgotten History of the Fancy Girls](https://youtu.be/mtWm1KBZPwM)
 
 Unanswered viewer questions:
-- ""Which turning point do you think truly decided World War II? Let us know below — and tell us what full documentary we should map next: World War I or The Cold War?"" (46 likes)
-- "Aj,aj,aj, není to zase AI? 😂😂😂" (2 likes)
-- "What if Operation Barbarossa had never been carried out?" (0 likes)
-- "Weshalb heißt der Versailler Vertrag, Versailler Vertrag? Sicher nicht, weil er in Paris unterzeichnet wurde." (0 likes)
-
-## Squazoo: AI, robots, transhumanism and the future of work and freedom
-
-- **534.4x** (321K views, long, easybiteai, 6K subs) - [AI Writes My Code Now. So What Am I For? | An ML Engineer’s Honest Take](https://youtu.be/wEcpzfWgxOE)
-- **274.6x** (1.5M views, long, throughcut, 1K subs) - [When AI Does Your Job, What Pays the Bills? | Elon Musk](https://youtu.be/p-89ylU3WGM)
-- **161.9x** (2.2M views, short, ejunky66, 1.0M subs) - [AI Humanoid Robots Are Rising… When Will Humans Lose Control? 🤖](https://youtu.be/kgQ496cOGgo)
-- **53.6x** (532K views, long, Rational Animations, 504K subs) - [Scientists predicted a singularity on Nov 13, 2026. They were right.](https://youtu.be/vV7dRkjTPo4)
-- **52.8x** (314K views, short, ceterasilent, 5K subs, channel 1 months old) - [Time and Infinity: Does Anything Really End?  #consciousness #ai #claude](https://youtu.be/KZ8tgujJIxc)
-- **25.8x** (333K views, long, Tech Unicorn, 25K subs) - [WTF Is Happening To The Job Market](https://youtu.be/5jYD7ZRMJ5I)
-
-Unanswered viewer questions:
-- "You think our government and billionaires that run the show care enough about us to give us free income to be able to live? We are fucked" (237 likes)
-- "It will never happen. They make it almost impossible to get disability benefits, you think they are just gonna hand out money? Not in a thousand years" (158 likes)
-- "When AI writes the code and then you go to review it, what I often feel is that I spend a considerable amount of time, just to realize I may not be able to follow every decision and usually I get extremely tired afterwards. Does anybody else experience this "brain fry" state?" (105 likes)
-- "And where will the money for this universal basic income come from? From taxes! How can it be from taxes if millions are not working to pay taxes! How will any one being buying products if with out a income! The utopia does not exists, it never will!" (95 likes)
-- "No free lunch says I, universal basic high income ? It will come with a price the price will probably be your freedom for control" (76 likes)
-
-## Inventions told as stories (third channel candidate)
-
-- **94.7x** (3.6M views, short, One Wild Story, 15K subs, channel 1 months old) - [The Actor Who Invented the Backpack Parachute 🪂](https://youtu.be/I4teK-yL62E)
-- **16.8x** (264K views, short, Mohan Yagami, 6K subs, channel 3 months old) - [The Discovery Of Unbreakable Glass 🥂 !](https://youtu.be/M46ObR6xGlk)
-- **7.6x** (666K views, short, Goldenmindco, 7K subs, channel 7 months old) - [From Rejected Invention to Global Empire mp4 #entrepreneurship #history #viral](https://youtu.be/2L-p7IAQ7hM)
-- **7.1x** (354 views, short, Story By The Bed | Every Story Opens a New World., 3 subs, channel 3 months old) - [The Accidental Invention of Super Glue! #accidentalinventions #story  #trending #trendingshorts](https://youtu.be/nGgE9uioMB8)
-- **4.6x** (46K views, long, The Quiet Front, 2K subs, channel 10 months old) - [A French Engineer Escaped the Nazis With Secret Plans — His Invention Hunted Down U-Boats](https://youtu.be/o4GbDdRN-qI)
-- **4.1x** (52K views, short, DYK Facts , 7K subs, channel 10 months old) - [Follow for more #historytok #invention #theory #accidents #DidYouKnow #historical #historytime](https://youtu.be/6NIX01qDoBQ)
-
-Unanswered viewer questions:
-- "So what if the woman in the theatre never pulled out her silk from her purse? Could that mean there wouldn't have been a Backpack Parachute without her?" (21 likes)
-- "So you prefer pilots to have a certain death rather than when in doubt save yourself type of thing? What kind of idiot was that" (9 likes)
-- "Tf military want? Pilots try hard and die with the plane? That's kamikaze!" (1 likes)
-- "So, he also invented the Static Line?" (1 likes)
-- "Abe bhai tum long video kyu nahi banate?" (1 likes)
+- "Why are they shocked and sad? It's their way of life." (127 likes)
+- ""Which turning point do you think truly decided World War II? Let us know below — and tell us what full documentary we should map next: World War I or The Cold War?"" (54 likes)
+- "7000 km from Paris lies Chicago? What does that have to do with this video. Paris ?" (16 likes)
+- "Has anyone noticed the reporter hasn't interviewed any FATHERS of these gangmemembers?" (14 likes)
+- "Why would anyone in their right mind, mine under a lake? And how could the drilling company not know there’s a salt mine under the lake?" (5 likes)
 
 ## Philosophy and big questions (comparison)
 
-- **227.4x** (33K views, short, LEGEND CODEX, 281 subs, channel 10 months old) - [How Much of Your Life Are You Sacrificing to Want More? #philosophy](https://youtu.be/9lBJES9ip_A)
-- **59.2x** (1.6M views, long, Ranveer Allahbadia, 11.3M subs) - [GOD KA PROOF - Quantum Science Explained In Hindi | Time Travel, AI & Reality | Sufiyan A On TRS](https://youtu.be/MNCHAAupzBo)
-- **46.3x** (64K views, short, Stuff Explained, 229 subs) - [Math Says You Can Never Reach the Door 🤯 #shorts](https://youtu.be/g731Nn5MDLc)
-- **32.4x** (483K views, short, Jonny Thomson, 118K subs) - [Spinoza: Why Tyrants Want You Sad](https://youtu.be/Nh3pjKFVmJI)
-- **25.4x** (288K views, short, Yogi Aikam Ji, 52K subs) - [The Reality of Karma Explained of Karma #shorts #spirituality #motivation #kriyayoga #meditation](https://youtu.be/oxSEDo_nONU)
-- **24.3x** (55K views, short, The Big Ask, 7K subs) - [Ancient Rules for Life That Never Expire](https://youtu.be/gG4PG8cXgRs)
+- **46.2x** (64K views, short, Stuff Explained, 229 subs) - [Math Says You Can Never Reach the Door 🤯 #shorts](https://youtu.be/g731Nn5MDLc)
+- **38.5x** (345K views, short, Yogi Aikam Ji, 58K subs) - [The Reality of Karma Explained of Karma #shorts #spirituality #motivation #kriyayoga #meditation](https://youtu.be/oxSEDo_nONU)
+- **32.9x** (493K views, short, Jonny Thomson, 120K subs) - [Spinoza: Why Tyrants Want You Sad](https://youtu.be/Nh3pjKFVmJI)
+- **32.6x** (50K views, short, Viraj Deshmukh, 6K subs) - [Why Is Lord Vishnu Always Shown Sleeping? | The Hidden Meaning #vishnu #hinduism](https://youtu.be/jWumr7LD7iQ)
+- **27.3x** (491K views, long, Souls Improvement, 58K subs) - [Every Souls Game Is a Different Philosophy](https://youtu.be/ScFDYeA0uAA)
+- **18.5x** (420K views, long, Jack Gordon, 37K subs) - [The Ideology of Gay Techno Fascism EXPLAINED](https://youtu.be/s4Vny1DZWeA)
+
+## Squazoo: AI, robots, transhumanism and the future of work and freedom
+
+- **1406.8x** (262K views, long, G A T E D, 684 subs, channel 5 months old) - [What Will Pay Bills When AI Takes Your Job? | Elon Musk](https://youtu.be/lEDgXMxgczw)
+- **210.2x** (329K views, long, VIRAT IAS INSIGHTS, 122K subs) - [India's Next Economic Crisis? Microsoft Layoffs, AI Job Threat & Corporate Sector in Panic!](https://youtu.be/f7lOP-BBnhg)
+- **204.7x** (553K views, short, Distilled AI, 6K subs, channel 1 months old) - [The AI Layoff Trap: If AI takes our jobs, who buys stuff?](https://youtu.be/cLg5GmPEKpc)
+- **190.0x** (931K views, long, Andrew Olsson, 9K subs) - [how AI killed my software career.](https://youtu.be/cwsy-6gu5p4)
+- **155.6x** (267K views, long, Ryan Miller, 234K subs) - [THE FUTURE DANIEL WARNED US ABOUT?](https://youtu.be/fgLYfiFNmpA)
+- **145.7x** (360K views, long, Rod Brown, 28K subs) - [I Tested Emma AI About JESUS & Revelation 13… Here's What Happened!](https://youtu.be/zFGI4NqbEQA)
 
 Unanswered viewer questions:
-- "Which topic should we go deeper into next time? Drop your suggestions below 👇" (316 likes)
-- "The first question you should ask is who am I? If you don't know yourself then knowing anything else is just meaningless..." (12 likes)
-- "Wait, don't you just cross that small half with just one step??" (1 likes)
-- "What do you mean people didn’t know this for thousands of years??? That’s just describing an infinite Series. Taking Half steps to infinity which value converges to 1. That’s literally calc 2 work Σn=1∞(1/2)^n" (0 likes)
-- "I don't know if I get it right, but because walking to reach something is adding steps to a distance not dividing distance into steps does that make sense?" (0 likes)
+- "How can you retrain workers when all jobs have been automated?" (174 likes)
+- "So, AI did take my job; where's my universal income ?" (105 likes)
+- "Retraining workers to do what?" (36 likes)
+- "What good is owning a company with nobody to have to pay if nobody has the money to buy what you make? Even government can't tax zero income. AI should only be allowed as a tool and not a replacement." (24 likes)
+- "No. Who will buy the products these companies make? Those companies will go out of business without any customers buying their products. Why is no one asking this one obvious question?" (19 likes)
+
+## Inventions told as stories (third channel candidate)
+
+- **68.3x** (90K views, short, Ink Sprint, 121 subs, channel 0 months old) - [🚗 The First Road Trip in History Was Driven by a Woman! 👩‍🦰🔥](https://youtu.be/9QpFbdKI_fI)
+- **61.8x** (4.0M views, short, One Wild Story, 19K subs, channel 1 months old) - [The Actor Who Invented the Backpack Parachute 🪂](https://youtu.be/I4teK-yL62E)
+- **23.8x** (730K views, short, Goldenmindco, 12K subs, channel 8 months old) - [From Rejected Invention to Global Empire mp4 #entrepreneurship #history #viral](https://youtu.be/2L-p7IAQ7hM)
+- **23.2x** (1K views, short, MrClips, 18 subs, channel 4 months old) - [How the microwave was invented! #animation #history #microwave #story](https://youtu.be/ffTpMzV8y28)
+- **17.5x** (264K views, short, Mohan Yagami, 6K subs, channel 4 months old) - [The Discovery Of Unbreakable Glass 🥂 !](https://youtu.be/M46ObR6xGlk)
+- **12.5x** (207K views, short, Beyond Normal Facts, 59K subs, channel 1 months old) - [Sirf lakdi aur baans se bani ye machine din-raat khud paani uthati thi! 🤯🌊](https://youtu.be/-jucCrwGohc)
+
+Unanswered viewer questions:
+- "So what if the woman in the theatre never pulled out her silk from her purse? Could that mean there wouldn't have been a Backpack Parachute without her?" (23 likes)
+- "So you prefer pilots to have a certain death rather than when in doubt save yourself type of thing? What kind of idiot was that" (10 likes)
+- "SUBSCRIBE TO MY CHANNEL https://www.youtube.com/channel/UCdkAFHQbCZ8GUtiCpFJqw7A?sub_confirmation=1" (4 likes)
+- "Tf military want? Pilots try hard and die with the plane? That's kamikaze!" (1 likes)
+- "So, he also invented the Static Line?" (1 likes)

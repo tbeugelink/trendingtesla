@@ -651,7 +651,7 @@ article .st{font-size:clamp(1.05rem,2vw,1.3rem);line-height:1.22;letter-spacing:
 .card.lead p{font-size:1rem;-webkit-line-clamp:2}
 .card .body{padding:0}
 .card h3{font-size:1.08rem;line-height:1.3;margin:0 0 6px}.card h3{font-weight:700;color:#ebebeb}.grid2>.card h3{font-size:1rem}.mini h3{font-weight:700;font-size:.9rem;color:#ebebeb}.mini h3{margin-top:0}.meta>time.ago::before{content:'';display:inline-block;width:.62em;height:.72em;margin-right:.42em;vertical-align:-.04em;background:currentColor;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 12'%3E%3Cpath d='M1.2 1.2v9.6L9 6z' fill='none' stroke='black' stroke-width='1.6' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 12'%3E%3Cpath d='M1.2 1.2v9.6L9 6z' fill='none' stroke='black' stroke-width='1.6' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat}.smeta time.ago::before{content:none}.mini .mdesc{margin-bottom:0}.mini .meta{display:block;margin-top:3px;line-height:1.3}@media (min-width:905px){.rside .mini>div:not(.th){padding-top:0;contain:size;overflow:visible}.rside .mini h3{margin-top:0;line-height:1.22}.rside .mini .mdesc{line-height:1.25}.rside .mini .meta{margin-top:2px}}.mdesc{color:var(--muted);font-size:.8rem;line-height:1.35;margin:0 0 4px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}@media (max-width:904.98px){.rside .mini h3{-webkit-line-clamp:2}.rside .mini .mdesc{-webkit-line-clamp:1}}.shintro{color:var(--muted);margin:4px 0 18px;font-size:.95rem}.shintro a{color:inherit}.shgrid{margin-top:14px;display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:var(--card-gap-y) var(--card-gap-x)}.shc{display:flex;flex-direction:column;gap:0;min-width:0}
-.shc .sht{margin-top:0}.shv{position:relative;display:block;width:100%;aspect-ratio:9/16;padding:0;border:0;border-radius:10px;overflow:hidden;background:#000;cursor:pointer}.shv img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s}.shv:hover img{transform:scale(1.04)}.dur .dv{display:inline-flex;align-items:center;gap:3px;font-style:normal;margin-left:5px;padding-left:6px;border-left:1px solid rgba(255,255,255,.35)}.dur.dvo .dv{margin-left:0;padding-left:0;border-left:0}.vpl{position:absolute;left:50%;top:50%;width:15cqw;height:15cqw;min-width:38px;min-height:38px;max-width:84px;max-height:84px;transform:translate(-50%,-50%);border-radius:50%;background:rgba(0,0,0,.55);box-shadow:0 0 0 2px rgba(255,255,255,.9);pointer-events:none;z-index:2}.vpl::after{content:"";position:absolute;left:54%;top:50%;transform:translate(-50%,-50%);border-left:.62em solid #fff;border-top:.4em solid transparent;border-bottom:.4em solid transparent;font-size:clamp(20px,6.5cqw,40px)}.hi[data-vid]{cursor:pointer}.hi[data-vid]:hover .vpl{background:rgba(220,30,30,.85)}.hi.on{aspect-ratio:16/9;background:#000;border-radius:10px;overflow:hidden}@media (max-width:600.98px){.read .hi.on{border-radius:0}}.hi.on iframe{position:absolute;inset:0;width:100%;height:100%;border:0}iframe:fullscreen,iframe:-webkit-full-screen{width:100vw!important;height:100vh!important;inset:0!important}.avid{margin:18px 0 22px}.avb{position:relative;display:block;width:100%;aspect-ratio:16/9;padding:0;border:0;border-radius:12px;overflow:hidden;background:#000;cursor:pointer}.avb img{width:100%;height:100%;object-fit:cover;display:block}.avb iframe{position:absolute;inset:0;width:100%;height:100%;border:0}.avb .shp{width:68px;height:68px;margin:-34px 0 0 -34px}.avb .shp::after{left:26px;top:20px;border-left-width:22px;border-top-width:14px;border-bottom-width:14px}.avid figcaption{color:var(--muted);font-size:.8rem;margin-top:6px}.shm{position:fixed;inset:0;z-index:1000;background:rgba(0,0,0,.88);display:flex;align-items:center;justify-content:center}.shbox{height:min(92vh,1100px);aspect-ratio:9/16;max-width:100vw;border-radius:12px;overflow:hidden;background:#000}.shbox iframe{width:100%;height:100%;border:0;display:block}.shx{position:absolute;top:14px;right:14px;width:44px;height:44px;border-radius:50%;border:0;background:rgba(40,40,40,.85);cursor:pointer}.shx::before,.shx::after{content:"";position:absolute;left:12px;top:21px;width:20px;height:2px;background:#fff;border-radius:2px;transform:rotate(45deg)}.shx::after{transform:rotate(-45deg)}.shx:hover{background:#444}@media (max-width:600.98px){.shm{background:#000;align-items:flex-end}.shbox{width:100vw;height:calc(100vh - 56px);height:calc(100dvh - 56px);aspect-ratio:auto;border-radius:0}.shx{top:6px;right:8px}}.shp{position:absolute;left:50%;top:50%;width:54px;height:54px;margin:-27px 0 0 -27px;border-radius:50%;background:rgba(0,0,0,.55);box-shadow:0 0 0 2px rgba(255,255,255,.85)}.shp::after{content:"";position:absolute;left:21px;top:16px;border-left:17px solid #fff;border-top:11px solid transparent;border-bottom:11px solid transparent}.sht{font-weight:700;font-size:.92rem;line-height:1.3;color:#ebebeb;text-decoration:none;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}a.sht:hover{text-decoration:underline}.shc .meta{font-size:.74rem}@media (max-width:600.98px){.shgrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--card-gap-y) var(--card-gap-x)}}.mini .meta{font-size:.74rem}
+.shc .sht{margin-top:0}.shv{position:relative;display:block;width:100%;aspect-ratio:9/16;padding:0;border:0;border-radius:10px;overflow:hidden;background:#000;cursor:pointer}.shv img{width:100%;height:100%;object-fit:cover;display:block}.dur .dv{display:inline-flex;align-items:center;gap:3px;font-style:normal;margin-left:5px;padding-left:6px;border-left:1px solid rgba(255,255,255,.35)}.dur.dvo .dv{margin-left:0;padding-left:0;border-left:0}.vpl{position:absolute;left:50%;top:50%;width:15cqw;height:15cqw;min-width:38px;min-height:38px;max-width:84px;max-height:84px;transform:translate(-50%,-50%);border-radius:50%;background:rgba(0,0,0,.55);box-shadow:0 0 0 2px rgba(255,255,255,.9);pointer-events:none;z-index:2}.vpl::after{content:"";position:absolute;left:54%;top:50%;transform:translate(-50%,-50%);border-left:.62em solid #fff;border-top:.4em solid transparent;border-bottom:.4em solid transparent;font-size:clamp(20px,6.5cqw,40px)}.hi[data-vid]{cursor:pointer}.hi[data-vid]:hover .vpl{background:rgba(220,30,30,.85)}.hi.on{aspect-ratio:16/9;background:#000;border-radius:10px;overflow:hidden}@media (max-width:600.98px){.read .hi.on{border-radius:0}}.hi.on iframe{position:absolute;inset:0;width:100%;height:100%;border:0}iframe:fullscreen,iframe:-webkit-full-screen{width:100vw!important;height:100vh!important;inset:0!important}.avid{margin:18px 0 22px}.avb{position:relative;display:block;width:100%;aspect-ratio:16/9;padding:0;border:0;border-radius:12px;overflow:hidden;background:#000;cursor:pointer}.avb img{width:100%;height:100%;object-fit:cover;display:block}.avb iframe{position:absolute;inset:0;width:100%;height:100%;border:0}.avb .shp{width:68px;height:68px;margin:-34px 0 0 -34px}.avb .shp::after{left:26px;top:20px;border-left-width:22px;border-top-width:14px;border-bottom-width:14px}.avid figcaption{color:var(--muted);font-size:.8rem;margin-top:6px}.shm{position:fixed;inset:0;z-index:1000;background:rgba(0,0,0,.88);display:flex;align-items:center;justify-content:center}.shbox{height:min(92vh,1100px);aspect-ratio:9/16;max-width:100vw;border-radius:12px;overflow:hidden;background:#000}.shbox iframe{width:100%;height:100%;border:0;display:block}.shx{position:absolute;top:14px;right:14px;width:44px;height:44px;border-radius:50%;border:0;background:rgba(40,40,40,.85);cursor:pointer}.shx::before,.shx::after{content:"";position:absolute;left:12px;top:21px;width:20px;height:2px;background:#fff;border-radius:2px;transform:rotate(45deg)}.shx::after{transform:rotate(-45deg)}.shx:hover{background:#444}@media (max-width:600.98px){.shm{background:#000;align-items:flex-end}.shbox{width:100vw;height:calc(100vh - 56px);height:calc(100dvh - 56px);aspect-ratio:auto;border-radius:0}.shx{top:6px;right:8px}}.shp{position:absolute;left:50%;top:50%;width:54px;height:54px;margin:-27px 0 0 -27px;border-radius:50%;background:rgba(0,0,0,.55);box-shadow:0 0 0 2px rgba(255,255,255,.85)}.shp::after{content:"";position:absolute;left:21px;top:16px;border-left:17px solid #fff;border-top:11px solid transparent;border-bottom:11px solid transparent}.sht{font-weight:700;font-size:.92rem;line-height:1.3;color:#ebebeb;text-decoration:none;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}a.sht:hover{text-decoration:underline}.shc .meta{font-size:.74rem}@media (max-width:600.98px){.shgrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--card-gap-y) var(--card-gap-x)}}.mini .meta{font-size:.74rem}
 .card p{color:var(--muted);font-size:.9rem;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
 .empty{color:var(--muted);background:var(--surface);border:1px dashed var(--border2);border-radius:10px;padding:28px;text-align:center}
 /* models */
@@ -782,7 +782,7 @@ article.narrow > h1{margin-left:14px}article.narrow .cform{margin-left:14px}
 
 .res a{align-items:flex-start}.res img{object-fit:cover;max-width:40%}
 .res b{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:2.6em}
-.res a,.sopen .search .res a{display:flex!important;gap:12px;align-items:center}.res img,.sopen .search .res img{margin:0;flex:none;max-width:none;aspect-ratio:auto}.res a>span{flex:1;min-width:0}
+.res a,.sopen .search .res a{display:flex!important;gap:12px;align-items:center}.res img,.sopen .search .res img{margin:0;flex:none;max-width:none;aspect-ratio:auto}.res a>span:not(.zimg){flex:1;min-width:0}
 .res small{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .drawer .dmodels{display:none}.drawer .dmodels.show{display:block}
 .dpri{display:flex;flex-direction:column;gap:2px;padding:0 4px 4px}
@@ -1076,8 +1076,14 @@ header.hb .pnav>.is-parked{display:none}
 .sheet.front .leadstory,.sheet.front .layerrow,.sheet.front .homenews{margin-top:0}
 .homenews{display:grid;grid-template-columns:1fr;gap:var(--card-gap-y) var(--card-gap-x);margin:0 0 var(--card-gap-y)}
 .homenews .lim{position:relative;container-type:inline-size}
-.homenews .lim img{transition:transform .3s}
-.homenews .lcard:hover .lim img{transform:scale(1.04)}
+/* One hover zoom for every card photo: 1.04 over .3s, clipped by the rounded frame. */
+.zimg{overflow:hidden}
+.zimg img{transition:transform .3s}
+.lcard:hover .zimg img,.card:hover .zimg img,.vcard:hover .zimg img,.mini:hover .zimg img,.mcard:hover .zimg img,.feature:hover .zimg img,.shc:hover .zimg img,.shv.zimg:hover img,.pv-row:hover .zimg img,.res a:hover .zimg img{transform:scale(1.04)}
+.mini>.th.zimg{border-radius:10px;overflow:hidden;border:1px solid var(--edge)}
+.mini>.th.zimg img{border:0;border-radius:0}
+.res .zimg{flex:none;overflow:hidden;border-radius:10px;border:1px solid #3a4a60;line-height:0;width:76px;aspect-ratio:1200/630}
+.res .zimg img{width:100%;height:100%;border:0;border-radius:0;display:block;object-fit:cover;max-width:none;margin:0}
 @media (min-width:600px){.homenews{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (min-width:901px){.homenews{grid-template-columns:repeat(3,minmax(0,1fr))}}
 .sheet>.nlbar{margin-top:26px}
@@ -2469,7 +2475,7 @@ function load(){return idx?Promise.resolve(idx):fetch(f.dataset.idx).then(functi
 i.addEventListener('focus',load);
 i.addEventListener('input',function(){var q=i.value.trim().toLowerCase();if(q.length<2){r.hidden=true;return}
 load().then(function(){var w=q.split(/\s+/),h=idx.filter(function(a){var s=(a.t+' '+a.d+' '+a.c).toLowerCase();return w.every(function(x){return s.indexOf(x)>-1})}).slice(0,8);
-r.innerHTML=h.length?h.map(function(a){return '<a href="'+a.u+'"><img src="'+a.i+'" alt="'+e(a.t)+'" width="160" height="84" decoding="async"><span>'+rubric(a)+'<b>'+e(a.t)+'</b></span></a>'}).join(''):'<p>'+e(f.dataset.none)+'</p>';r.hidden=false;window.ttFit=function(){[].forEach.call(document.querySelectorAll('.res a'),function(x){var im=x.querySelector('img'),t=x.querySelector('span');if(!im||!t)return;var m=(x.clientWidth-12)/2;im.style.width=m+'px';var h=t.offsetHeight,w=h*1200/630;if(w>m){w=m;h=w*630/1200}im.style.width=w+'px';im.style.height=h+'px'})};ttFit();if(!window.ttR){window.ttR=1;addEventListener('resize',function(){window.ttFit()})}})});
+r.innerHTML=h.length?h.map(function(a){return '<a href="'+a.u+'"><span class="zimg"><img src="'+a.i+'" alt="'+e(a.t)+'" width="160" height="84" decoding="async"></span><span>'+rubric(a)+'<b>'+e(a.t)+'</b></span></a>'}).join(''):'<p>'+e(f.dataset.none)+'</p>';r.hidden=false;window.ttFit=function(){[].forEach.call(document.querySelectorAll('.res a'),function(x){var frame=x.querySelector('.zimg'),im=x.querySelector('img'),t=x.querySelector('span:not(.zimg)');if(!im||!t)return;var box=frame||im;var m=(x.clientWidth-12)/2;box.style.width=m+'px';var h=t.offsetHeight,w=h*1200/630;if(w>m){w=m;h=w*630/1200}box.style.width=w+'px';box.style.height=h+'px'})};ttFit();if(!window.ttR){window.ttR=1;addEventListener('resize',function(){window.ttFit()})}})});
 f.addEventListener('submit',function(x){x.preventDefault();var a=r.querySelector('a');if(a)location.href=a.href});
 document.addEventListener('click',function(x){if(!f.contains(x.target)&&!x.target.closest('.sbtn')){r.hidden=true;d.classList.remove('sopen');if(d.classList.contains('find-open'))setFind(false)}});
 document.querySelector('.sbtn').addEventListener('click',function(ev){ev.stopPropagation();var open=!d.classList.contains('find-open');setFind(open,{restore:!open})});
@@ -2494,7 +2500,7 @@ fetch('/api/likes?s='+lb.map(function(b){return b.dataset.like}).join(',')).then
 lb.forEach(function(b){var s=b.dataset.like;b.setAttribute('aria-pressed',liked.indexOf(s)>-1);b.onclick=function(){var l=LS.get('tt_liked'),i=l.indexOf(s),d=i>-1?-1:1;if(d>0)l.push(s);else l.splice(i,1);LS.set('tt_liked',l);b.setAttribute('aria-pressed',d>0);
 var sp=b.querySelector('span');sp.textContent=Math.max(0,(+sp.textContent||0)+d);fetch('/api/likes',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({slug:s,d:d})}).then(function(r){return r.json()}).then(function(j){if(j.n!=null)sp.textContent=j.n}).catch(function(){})}})}
 var sl=document.querySelector('.savedlist');if(sl){var keep=LS.get('tt_saved');if(!keep.length){sl.innerHTML='<p class="empty">'+e(sl.dataset.empty)+'</p>'}else{load().then(function(){var m={};idx.forEach(function(a){var k=a.u.replace(/\/$/,'').split('/').pop();m[k]=a});
-sl.innerHTML=keep.filter(function(k){return m[k]}).map(function(k){var a=m[k];return '<a class="card" href="'+a.u+'"><div class="im"><img src="'+a.i+'" alt="'+e(a.t)+'" width="1200" height="630" decoding="async"></div><div class="body">'+rubric(a)+'<h3>'+e(a.t)+'</h3></div></a>'}).join('');ttAgo()})}}window.addEventListener('resize',bal);bal();
+sl.innerHTML=keep.filter(function(k){return m[k]}).map(function(k){var a=m[k];return '<a class="card" href="'+a.u+'"><div class="im zimg"><img src="'+a.i+'" alt="'+e(a.t)+'" width="1200" height="630" decoding="async"></div><div class="body">'+rubric(a)+'<h3>'+e(a.t)+'</h3></div></a>'}).join('');ttAgo()})}}window.addEventListener('resize',bal);bal();
 })();"""
 JS += r"""
 document.querySelectorAll(".avb[data-vid]").forEach(function(b){b.addEventListener("click",function(){if(b.classList.contains("on"))return;b.classList.add("on");var f=document.createElement("iframe");f.src="https://www.youtube-nocookie.com/embed/"+b.dataset.vid+"?autoplay=1"+(matchMedia("(pointer:coarse)").matches?"":"&playsinline=1")+"&rel=0";f.title=b.getAttribute("aria-label")||"YouTube";f.setAttribute("allow","autoplay; encrypted-media; picture-in-picture; fullscreen");f.allowFullscreen=true;b.appendChild(f)})});
@@ -2565,7 +2571,7 @@ def card(a, lang, lead=False):
     t = a[lang]
     cls = "card lead" if lead else "card"
     line = rubric_line(a, lang)
-    im = f'<div class="im">{resp_img(site_img(a), t["title"], SIZES_CARD)}{dur(a, lang)}{ovl(a, lang)}</div>'
+    im = f'<div class="im zimg">{resp_img(site_img(a), t["title"], SIZES_CARD)}{dur(a, lang)}{ovl(a, lang)}</div>'
     title = f'<h3>{esc(card_title(a, lang))}</h3>'
     # The rubric sits under the photo, then the title. The lead photo is not a link.
     if lead:
@@ -2579,7 +2585,7 @@ def gcard(a, lang, eager=False):
     """Topic list under the lead: photo on top, then title, summary and date."""
     t = a[lang]
     return (f'<a class="card" href="{url(lang, a["slug"] + "/")}">'
-            f'<div class="im">{resp_img(site_img(a), t["title"], SIZES_GRID, high=eager, lazy=not eager)}{dur(a, lang)}{ovl(a, lang)}</div>'
+            f'<div class="im zimg">{resp_img(site_img(a), t["title"], SIZES_GRID, high=eager, lazy=not eager)}{dur(a, lang)}{ovl(a, lang)}</div>'
             f'<div class="body">{rubric_line(a, lang)}'
             f'<h2>{esc(card_title(a, lang))}</h2></div></a>')
 
@@ -2679,7 +2685,7 @@ def vscript(a, lang):
 def mini(a, lang):
     t = a[lang]
     return (f'<a class="mini" href="{url(lang, a["slug"] + "/")}">'
-            f'<div class="th">{resp_img(site_img(a), t["title"], SIZES_CARD)}{dur(a, lang)}{ovl(a, lang)}</div>'
+            f'<div class="th zimg">{resp_img(site_img(a), t["title"], SIZES_CARD)}{dur(a, lang)}{ovl(a, lang)}</div>'
             f'<div>{rubric_line(a, lang)}<h3>{esc(card_title(a, lang))}</h3></div></a>')
 
 
@@ -3573,7 +3579,7 @@ def model_card(key, lang, eager=False, high=False):
         if text:
             cap = f'<span class="mcap">{esc(text)}</span>'
     return (f'<a class="mcard" href="{url(lang, "model/" + key + "/")}">'
-            f'<span class="mim">{img}</span><span class="mname">{esc(name)}</span>{cap}</a>')
+            f'<span class="mim zimg">{img}</span><span class="mname">{esc(name)}</span>{cap}</a>')
 
 
 def fact_sources(key, lang):
@@ -4092,7 +4098,7 @@ def home_videos(arts, lang, n=8):
             badge = LANGS[lang]["videos"]
         tone = layer_tone(a)
         cards.append(
-            f'<a class="vcard {tone}" href="{href}"><span class="vim">'
+            f'<a class="vcard {tone}" href="{href}"><span class="vim zimg">'
             f'{resp_img(site_img(a), t["title"], SIZES_VIDEO, width=480, height=270)}'
             f'<span class="vpl" aria-hidden="true"></span>'
             f'<span class="dur dvo">{esc(badge)}</span></span>'
@@ -4248,7 +4254,7 @@ def layer_latest(arts, lang):
         t = pick[lang]
         cards.append(
             f'<a class="lcard {tone}" href="{url(lang, pick["slug"] + "/")}">'
-            f'<span class="lim">{resp_img(site_img(pick), t["title"], "(max-width: 699px) 46vw, 220px", lazy=False, width=640, height=360)}</span>'
+            f'<span class="lim zimg">{resp_img(site_img(pick), t["title"], "(max-width: 699px) 46vw, 220px", lazy=False, width=640, height=360)}</span>'
             f'{rubric_line(pick, lang)}'
             f'<span class="lbody"><strong>{esc(card_title(pick, lang))}</strong></span></a>')
     label = "Latest from each layer" if lang == "en" else "Het laatste per laag"
@@ -4263,7 +4269,7 @@ def home_grid_card(a, lang, eager=False, badge=""):
         mark = f'<span class="dur dvo">{esc(badge)}</span><span class="vpl" aria-hidden="true"></span>'
     return (
         f'<a class="lcard" href="{url(lang, a["slug"] + "/")}">'
-        f'<span class="lim">{resp_img(site_img(a), t["title"], "(max-width: 599px) 92vw, (max-width: 900px) 46vw, 280px", high=eager, lazy=not eager, width=640, height=360)}{mark}</span>'
+        f'<span class="lim zimg">{resp_img(site_img(a), t["title"], "(max-width: 599px) 92vw, (max-width: 900px) 46vw, 280px", high=eager, lazy=not eager, width=640, height=360)}{mark}</span>'
         f'{rubric_line(a, lang)}'
         f'<span class="lbody"><strong>{esc(card_title(a, lang))}</strong></span></a>')
 
@@ -4433,7 +4439,7 @@ def clip_card(item, lang, eager=False):
     badge = f'<span class="dur dvo">{esc(clip_badge(item))}</span><span class="vpl" aria-hidden="true"></span>'
     return (
         f'<a class="lcard" href="{url(lang, item["path"])}">'
-        f'<span class="lim">{img}{badge}</span>'
+        f'<span class="lim zimg">{img}{badge}</span>'
         f'{clip_meta(item, lang)}'
         f'<span class="lbody"><strong>{esc(title)}</strong></span></a>')
 
@@ -4604,7 +4610,7 @@ def pv_row(a, lang, thumb=False):
     href = url(lang, a["slug"] + "/")
     im = ""
     if thumb:
-        im = (f'<span class="pv-th">{resp_img(site_img(a), t["title"], "(max-width: 700px) 22vw, 64px", width=256, height=144)}'
+        im = (f'<span class="pv-th zimg">{resp_img(site_img(a), t["title"], "(max-width: 700px) 22vw, 64px", width=256, height=144)}'
               f'{ovl(a, lang)}</span>')
     mins = read_time(a, lang)
     label = f'{mins} {LANGS[lang]["min"]}'
@@ -4655,7 +4661,7 @@ def pv_side(arts, lang, a=None):
 def pv_lead(a, lang, href):
     t = a[lang]
     return (f'<div class="pv-lead">'
-            f'<span class="im">{resp_img(site_img(a), t["title"], SIZES_LEAD, high=True, lazy=False)}{ovl(a, lang)}</span>'
+            f'<span class="im zimg">{resp_img(site_img(a), t["title"], SIZES_LEAD, high=True, lazy=False)}{ovl(a, lang)}</span>'
             f'{rubric_line(a, lang)}'
             f'<span><a href="{href}"><h1>{esc(t["title"])}</h1></a></span></div>')
 
@@ -4689,7 +4695,7 @@ def pv_home(variant, arts, lang):
                 f'<section class="pv-block"><div class="h2"><h2>{esc(title)}</h2>'
                 f'<a href="{url(lang, path)}">{esc(LANGS[lang]["see_all"])}</a></div>'
                 f'<div class="pv-lead">'
-                f'<span class="im">{resp_img(site_img(head), "", SIZES_CARD)}{ovl(head, lang)}</span>'
+                f'<span class="im zimg">{resp_img(site_img(head), "", SIZES_CARD)}{ovl(head, lang)}</span>'
                 f'{rubric_line(head, lang)}'
                 f'<a href="{url(lang, head["slug"] + "/")}"><h2>{esc(head[lang]["title"])}</h2></a></div>{rows}</section>')
         main += f'<h1 class="sr">{esc(NAME)}</h1>' + "".join(blocks)
@@ -6502,7 +6508,7 @@ def build():
                 else:
                     name = "Tesla"
                 line = f'<span class="lmeta"><span class="lname">{esc(name)}</span> · {stamp}</span>'
-            cards += (f'<div class="shc {tone}"><button class="shv" type="button" data-id="{esc(sh["id"])}" aria-label="{"Play" if en else "Afspelen"}: {esc(t)}">'
+            cards += (f'<div class="shc {tone}"><button class="shv zimg" type="button" data-id="{esc(sh["id"])}" aria-label="{"Play" if en else "Afspelen"}: {esc(t)}">'
                       f'<img src="https://i.ytimg.com/vi/{esc(sh["id"])}/hqdefault.jpg" alt="{esc(t)}" loading="lazy" width="480" height="360">'
                       f'<span class="shp" aria-hidden="true"></span></button>'
                       f'{line}{cap}</div>')

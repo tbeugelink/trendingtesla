@@ -4553,7 +4553,7 @@ def videos_index(arts, lang):
     cards = "".join(clip_card(item, lang, eager=i < 3) for i, item in enumerate(items))
     empty = "No videos yet." if lang == "en" else "Nog geen video's."
     grid = f'<section class="homenews" aria-label="{esc(title)}">{cards}</section>' if cards else f'<p class="empty">{esc(empty)}</p>'
-    body = f'<section class="wide"><h1 class="st archh">{esc(title)}</h1><p class="lead">{esc(intro)}</p>{grid}</section>'
+    body = f'<section class="wide"><h1 class="st archh">{esc(title)}</h1>{grid}</section>'
     shown = [item["article"] for item in items if item.get("article")]
     return body, title, intro, shown
 

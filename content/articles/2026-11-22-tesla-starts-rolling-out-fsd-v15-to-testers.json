@@ -1,0 +1,86 @@
+{
+  "slug": "tesla-starts-rolling-out-fsd-v15-to-testers",
+  "date": "2026-11-22",
+  "time": "08:58",
+  "category": "fsd",
+  "topic": "fsd",
+  "card": {
+    "en": "Tesla starts rolling out FSD v15 to testers",
+    "nl": "Tesla rolt FSD v15 uit naar testers"
+  },
+  "image": "lib/fsd-screen-highway.jpg",
+  "image_lock": true,
+  "images": [
+    "lib/fsd-screen-highway.jpg",
+    "lib/software-update-screen.jpg",
+    "lib/fsd-screen-rain-night.jpg",
+    "lib/fsd-screen-city.jpg",
+    "topics/fsd-camera-view.jpg",
+    "topics/fsd-highway-sunset.jpg"
+  ],
+  "sources": [
+    {
+      "title": "Electrek — Tesla FSD v15 rollout, the 25x safety claim and Reality View",
+      "url": "https://electrek.co/2026/11/21/tesla-fsd-v15-rollout-25x-safety-reality-view/"
+    },
+    {
+      "title": "Teslarati — Tesla Full Self-Driving v15 rollout begins, with full release notes",
+      "url": "https://www.teslarati.com/tesla-full-self-driving-v15-rollout-begins-full-release-notes-improvements/"
+    },
+    {
+      "title": "Digital Trends — Tesla FSD v15 rollout",
+      "url": "https://www.digitaltrends.com/cars/tesla-fsd-v15-rollout/"
+    },
+    {
+      "title": "Not a Tesla App — Software update 2026.38.6.11 release notes",
+      "url": "https://www.notateslaapp.com/software-updates/version/2026.38.6.11/release-notes"
+    },
+    {
+      "title": "The Tech Signal — Tesla FSD v15 rollout",
+      "url": "https://thetechsignal.co/2026/11/21/tesla-fsd-v15-rollout/"
+    }
+  ],
+  "label": {
+    "style": "a",
+    "en": {
+      "sub": "FSD V15",
+      "text": "TO TESTERS"
+    },
+    "nl": {
+      "sub": "FSD V15",
+      "text": "NAAR TESTERS"
+    }
+  },
+  "gen_image": {
+    "prompt": "Inside a current left-hand-drive Tesla on a multi-lane road, driving on the right, late afternoon sun, the driver's hands resting on the steering wheel, the centre screen showing a simple blue driving path and a few cars ahead with no readable text, the subject large and sharp in the horizontal centre, calm shadow in the lower-left third, no logos, no licence plate, no readable signs",
+    "subject": "the cabin and centre screen of a current Tesla with the FSD driving visualisation, left-hand drive, driver's hands on the wheel",
+    "refs": [
+      {
+        "src": "lib/fsd-screen-highway.jpg"
+      }
+    ],
+    "profile": "editorial",
+    "category": "A",
+    "describe": "Illustration of a Tesla cabin with a driving visualisation on the centre screen and the driver's hands on the wheel. Not a screenshot of FSD v15.",
+    "extra": [
+      {
+        "prompt": "From the driver's seat of a left-hand-drive Tesla in light rain at dusk, on the right side of a city road, hands on the steering wheel, centre screen with a simple lane visualisation and no readable text, wet glass, calm dark space in the lower-left third, no logos and no licence plate",
+        "describe": "Illustration of a Tesla driving screen in the rain, hands on the wheel"
+      },
+      {
+        "prompt": "A left-hand-drive Tesla on a highway at sunset, seen from just behind the driver's shoulder, centre screen with a blue path between a few vehicles, no readable text, no logos, the car in the right-hand lanes, lower-left of the frame kept calm",
+        "describe": "Illustration of a Tesla highway drive with the driving visualisation on screen"
+      }
+    ]
+  },
+  "en": {
+    "title": "Tesla starts rolling out FSD v15 to testers",
+    "description": "On 21 November 2026 Tesla said on X that FSD (Supervised) v15 is starting to roll out, first to Early Access Program members in software update 2026.38.6.11. Tesla claims 25 times better handling of safety-critical cases, a figure that is not independently verified, and the driver still has to pay attention.",
+    "body": "<p>Tesla has started rolling out FSD (Supervised) v15. On 21 November 2026 the company said on X that v15 \"is now starting to roll out\", and that the update is \"upgrading every part of the end-to-end driving network\". The first builds are for testers. The wide rollout is still a statement, and it sits on a later date.</p>\n<h2>Who gets the first FSD v15 builds?</h2>\n<p><strong>Members of the Early Access Program, in software update 2026.38.6.11.</strong> The release notes for that update list FSD (Supervised) v15.0.1, and they list the build for cars with HW4. Tesla has previously told investors that AI4, the same computer as HW4, is enough to run v15. Which vehicles get the update first is still unstated. Musk said earlier on 21 November that the wide rollout would come in December. A month he names is his statement about timing.</p>\n<p>An Early Access build and a wide release are two different steps. What Tesla says the new driving network handles better is a claim of its own.</p>\n<h2>So what does the 25 times claim cover?</h2>\n<p><strong>Tesla claims \"25x better handling of safety critical cases\".</strong> The release notes attribute that figure to the critical intervention rate improving 25 times. They tie the change to an upgraded vision encoder shared by FSD, Robotaxi and Optimus, trained on millions of internet videos. The 25 times figure is Tesla's claim. It is not independently verified.</p>\n<p>A rate in the release notes leaves the next move on the road still to be seen. The new screen view is where Tesla says that plan becomes visible.</p>\n<h2>What is Tesla Reality View?</h2>\n<p><strong>A real-time generative visualization, streamed from a virtual camera above the car.</strong> Tesla calls it Tesla Reality View. The driver can see what FSD plans to do, and can control that view. The options are fullscreen, the map, a split view or quiet mode. Upcoming turns show in the visualization. The pictures on this page are library illustrations of a Tesla driving screen.</p>\n<p>A picture of the plan still leaves the route to be chosen. Navigation is a separate part of v15.</p>\n<h2>So how does v15 choose the start, the end and a parking spot?</h2>\n<p><strong>Navigation for the start and the end of a trip now learns end-to-end from the route preferences of the fleet.</strong> Later releases of v15 expand that learning to the entire route. Parking-spot choice uses the driver's own parking history, and the map can show more than one parking option. The middle of the route waits for one of those later releases.</p>\n<p>Route and parking are two lines on a longer list of changes to how the car drives.</p>\n<h2>What else changes in everyday driving?</h2>\n<p><strong>Detection, speed, driver monitoring, speed cameras and a mode for a bike rack.</strong> Tesla says detection of road signs, small animals, debris, potholes and deep standing water is better, and that speed handling is more natural in school zones and in bad weather. Driver monitoring works more often when the driver wears a hat or sunglasses, and it is less strict in the higher-speed driver profiles.</p>\n<ul>\n<li><strong>Speed Camera Slowdown:</strong> FSD can slow for a speed camera it detects. Pressing the accelerator cancels that slowdown, and so does raising the speed profile. Cancel it twice at the same camera and the car saves that camera and stops slowing there.</li>\n<li><strong>Bike Rack Mode:</strong> FSD (Supervised) can run with a bike rack or a hitch accessory. In this mode the car pulls over near the destination and will not reverse. Autopark, Summon and the backup chimes are off.</li>\n</ul>\n<p>Those modes change what the car will attempt on the trip. The person in the driving seat still has the road to watch.</p>\n<h2>Does the driver still have to pay attention?</h2>\n<p><strong>Yes. This remains the supervised system, and the driver must pay attention.</strong> The build keeps the name FSD (Supervised). Version v15.0.1 leaves that duty in place. December, the month Musk named for a wide rollout, remains his statement about timing. Which vehicles receive software update 2026.38.6.11 first is still unstated.</p>"
+  },
+  "nl": {
+    "title": "Tesla rolt FSD v15 uit naar testers",
+    "description": "Op 21 november 2026 schreef Tesla op X dat FSD (Supervised) v15 begint uit te rollen, eerst naar leden van het Early Access Program in software-update 2026.38.6.11. Tesla claimt een 25 keer betere afhandeling van veiligheidskritieke situaties, een cijfer dat niet onafhankelijk is gecontroleerd, en de bestuurder moet blijven opletten.",
+    "body": "<p>Tesla is begonnen met de uitrol van FSD (Supervised) v15. Op 21 november 2026 schreef het bedrijf op X dat v15 „is now starting to roll out” en dat de update „upgrading every part of the end-to-end driving network” is: elk onderdeel van het end-to-end-rijnetwerk wordt vernieuwd. De eerste builds zijn voor testers. De brede uitrol is nog een uitspraak, en die ligt op een latere datum.</p>\n<h2>Wie krijgt de eerste builds van FSD v15?</h2>\n<p><strong>Leden van het Early Access Program, in software-update 2026.38.6.11.</strong> De release notes van die update noemen FSD (Supervised) v15.0.1, en ze noemen de build voor auto's met HW4. Tesla heeft beleggers eerder verteld dat AI4, dezelfde computer als HW4, volstaat om v15 te draaien. Welke auto's de update als eerste krijgen, staat nog open. Musk zei eerder op 21 november dat de brede uitrol in december zou komen. Een maand die hij noemt, is zijn uitspraak over de timing.</p>\n<p>Een build voor het Early Access Program en een brede release zijn twee verschillende stappen. Wat Tesla zegt dat het nieuwe rijnetwerk beter afhandelt, is een claim op zich.</p>\n<h2>Dus waar slaat de claim van 25 keer op?</h2>\n<p><strong>Tesla claimt „25x better handling of safety critical cases”, een 25 keer betere afhandeling van veiligheidskritieke situaties.</strong> De release notes schrijven dat cijfer toe aan een critical intervention rate die 25 keer verbetert: de frequentie van kritieke ingrepen. Ze koppelen die verandering aan een vernieuwde vision-encoder die FSD, Robotaxi en Optimus delen, getraind op miljoenen internetvideo's. Het cijfer van 25 keer is een claim van Tesla. Het is niet onafhankelijk gecontroleerd.</p>\n<p>Een cijfer in de release notes zegt nog niets over de volgende beweging op de weg. Het nieuwe schermbeeld is de plek waar Tesla zegt dat het plan zichtbaar wordt.</p>\n<h2>Wat is Tesla Reality View?</h2>\n<p><strong>Een realtime gegenereerde weergave, gestreamd vanaf een virtuele camera boven de auto.</strong> Tesla noemt het Tesla Reality View. De bestuurder ziet wat FSD van plan is en kan die weergave sturen. De keuzes zijn volledig scherm, de kaart, een gesplitst beeld of quiet mode, een stille stand. Komende afslagen verschijnen in het beeld. De foto's bij dit stuk zijn bibliotheekillustraties van een Tesla-scherm tijdens het rijden.</p>\n<p>Een beeld van het plan laat de routekeuze nog open. Navigatie is een apart onderdeel van v15.</p>\n<h2>Dus hoe kiest v15 begin, einde en een parkeerplek?</h2>\n<p><strong>De navigatie voor het begin en het einde van een rit leert nu end-to-end van de routekeuzes van de vloot.</strong> Latere releases van v15 breiden dat leren uit naar de hele route. De keuze van een parkeerplek gebruikt de eigen parkeergeschiedenis van de bestuurder, en de kaart kan meerdere parkeeropties tonen. Het midden van de route wacht op een van die latere releases.</p>\n<p>Route en parkeren zijn twee regels op een langere lijst van veranderingen in hoe de auto rijdt.</p>\n<h2>Wat verandert er nog in het dagelijkse rijden?</h2>\n<p><strong>Detectie, snelheid, toezicht op de bestuurder, flitspalen en een modus voor een fietsendrager.</strong> Tesla zegt dat de detectie van verkeersborden, kleine dieren, rommel op de weg, kuilen en diep stilstaand water beter is, en dat de snelheid natuurlijker aanvoelt in schoolzones en bij slecht weer. Het toezicht op de bestuurder werkt vaker als die een hoed of een zonnebril draagt, en het is minder streng bij de hogere snelheidsprofielen.</p>\n<ul>\n<li><strong>Speed Camera Slowdown:</strong> FSD kan afremmen voor een flitspaal die het detecteert. Het gaspedaal indrukken heft die vertraging op, en het snelheidsprofiel verhogen doet dat ook. Gebeurt dat twee keer bij dezelfde paal, dan onthoudt de auto die paal en remt hij daar niet meer af.</li>\n<li><strong>Bike Rack Mode:</strong> FSD (Supervised) kan rijden met een fietsendrager of een accessoire aan de trekhaak. In deze modus stopt de auto langs de kant bij de bestemming en rijdt hij niet achteruit. Autopark, Summon en de pieptonen bij het achteruitrijden staan uit.</li>\n</ul>\n<p>Die modi veranderen wat de auto onderweg wil proberen. De plicht om de weg in de gaten te houden blijft bij de bestuurder.</p>\n<h2>Moet de bestuurder nog opletten?</h2>\n<p><strong>Ja. Dit blijft het systeem onder toezicht, en de bestuurder moet opletten.</strong> De build houdt de naam FSD (Supervised). Versie v15.0.1 laat die plicht staan. December, de maand die Musk noemde voor een brede uitrol, blijft zijn uitspraak over de timing. Welke auto's software-update 2026.38.6.11 als eerste krijgen, staat nog open.</p>"
+  }
+}

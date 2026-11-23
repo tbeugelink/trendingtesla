@@ -92,7 +92,7 @@ OUT = ROOT / "public"
 SITE = "https://trendingtesla.com"
 NAME = "TrendingTesla"
 # Author shown on articles and in NewsArticle JSON-LD. An organization, never a named person.
-EDITORIAL_ORG = {"en": "TrendingTesla Editorial Team", "nl": "Redactie TrendingTesla"}
+EDITORIAL_ORG = {"en": "TrendingTesla editorial team", "nl": "Redactie TrendingTesla"}
 TZ = ZoneInfo("Europe/Amsterdam")
 
 LANGS = {
@@ -1189,6 +1189,10 @@ article.money>.lmeta a.lname:hover{text-decoration:underline}
 .eco-sources a{color:#9ad7ff}
 .ss-wrap{overflow-x:auto}
 .byline{margin:0 0 12px;color:var(--dim);font-size:.86rem}
+.upd{margin:-6px 0 12px;color:var(--dim);font-size:.82rem}
+.upd time{color:inherit}
+.sheet-main article.money>.upd{margin-left:calc(3vw + 14px);margin-right:calc(3vw + 14px)}
+@media (max-width:600.98px){.sheet-main article.money>.upd{margin-left:14px;margin-right:14px}}
 .hubh{font-size:1.15rem;margin:8px 0 4px}
 .hubcount{margin:0 0 12px;color:var(--dim);font-size:.84rem}
 .hubnote{margin:8px 0 18px;padding:16px 16px 14px;border:1px dashed #3a4a60;border-radius:14px;background:#141820;color:var(--muted);line-height:1.45}
@@ -1540,6 +1544,36 @@ def when(a, lang):
 def published(a):
     """Timezone-aware publication datetime (defaults to 08:00 local)."""
     return datetime.strptime(f"{a['date']} {a.get('time', '08:00')}", "%Y-%m-%d %H:%M").replace(tzinfo=TZ)
+
+
+def modified(a):
+    """Publication time, or the real edit time when `updated` is set and different."""
+    pub = published(a)
+    raw = str(a.get("updated") or "").strip()
+    if not raw:
+        return pub, False
+    try:
+        dt = datetime.fromisoformat(raw)
+    except ValueError:
+        if re.fullmatch(r"\d{4}-\d{2}-\d{2}", raw):
+            dt = datetime.strptime(raw, "%Y-%m-%d").replace(tzinfo=TZ)
+            return dt, dt.date() != pub.date()
+        return pub, False
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=TZ)
+    return dt, abs((dt - pub).total_seconds()) >= 60
+
+
+def updated_html(a, lang):
+    """Visible Updated / Bijgewerkt line. Empty when the article was not edited later."""
+    dt, differs = modified(a)
+    if not differs:
+        return ""
+    label = "Updated" if lang == "en" else "Bijgewerkt"
+    text = f"{label} {fmt_date(dt.strftime('%Y-%m-%d'), lang)}"
+    if "T" in str(a.get("updated") or ""):
+        text += ", " + dt.strftime("%H:%M")
+    return f'<p class="upd"><time datetime="{dt.isoformat()}">{esc(text)}</time></p>'
 
 
 def article_stamp(a):
@@ -1976,6 +2010,8 @@ def page(lang, path, title, description, body, og_type="website", extra_head="",
     full_title = f"{title} | {NAME}" if title != NAME else f"{NAME} — {L['tagline']}"
     canon_url = SITE + url(lang, path)
     robots_meta = robots or "max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    if "max-image-preview" not in robots_meta:
+        robots_meta = robots_meta.rstrip().rstrip(",") + ", max-image-preview:large"
     if canonical:
         canon_links = (
             f'<link rel="canonical" href="{canon_url}">\n'
@@ -4984,7 +5020,7 @@ def pv_article(variant, a, arts, lang, live=False):
         f'{rubric_line(a, lang, link=True)}'
         f'<h1>{esc(t["title"])}</h1>'
         f'<p class="byline"><a href="{url(lang, "editorial/")}">{L["byline"]}</a>'
-        f' · {read_time(a, lang)} {L["min"]}</p>'
+        f' · {read_time(a, lang)} {L["min"]}</p>{updated_html(a, lang)}'
         f'<p class="lead">{esc(t["description"])}</p>'
         f'{toc_here}'
         f'<div class="prose">{body}</div>{product_boxes(a, lang)}{handy_box(a, lang)}{ad_html("end", lang)}'
@@ -6686,17 +6722,19 @@ def build():
         for a in arts:
             t = a[lang]
             c = CATEGORIES[a["category"]]
+            mod_dt, _differs = modified(a)
+            cover = SITE + social_img(a, lang)
             ld = {
                 "@context": "https://schema.org", "@type": "NewsArticle",
                 "headline": t["title"], "description": t["description"],
-                "image": [SITE + social_img(a, lang)],
+                "image": {"@type": "ImageObject", "url": cover, "width": 1200, "height": 630},
                 "datePublished": published(a).isoformat(),
-                "dateModified": a.get("updated", published(a).isoformat()),
+                "dateModified": mod_dt.isoformat(),
                 "inLanguage": lang, "articleSection": c[lang],
                 "mainEntityOfPage": SITE + url(lang, a["slug"] + "/"),
                 "publisher": {"@type": "Organization", "name": NAME, "url": SITE,
                               "logo": {"@type": "ImageObject", "url": SITE + "/favicon-512.png", "width": 512, "height": 512}},
-                "author": {"@type": "Organization", "name": NAME, "url": SITE},
+                "author": {"@type": "Organization", "name": EDITORIAL_ORG[lang], "url": SITE + url(lang, "editorial/")},
             }
             v = video_for(a, lang)
             if v:  # video rich result in Google (video thumbnail + length in search)
@@ -7004,7 +7042,7 @@ def build():
     write("/sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>'
           '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">'
           f"{urls}</urlset>")
-    # Google News sitemap: articles from the last 2 days
+    # Google News sitemap: articles published in the last 48 hours
     from zoneinfo import ZoneInfo
     cutoff = datetime.now(timezone.utc).timestamp() - 2 * 86400
     news = ""

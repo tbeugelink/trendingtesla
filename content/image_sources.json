@@ -1084,5 +1084,32 @@
     "license": "CC BY 2.0",
     "credit": "Steve Jurvetson, CC BY 2.0, Wikimedia Commons",
     "added": "2026-11-23"
+  },
+  "news/nvidia-brings-jensen-huang-back-as-ceo-1.jpg": {
+    "article": "nvidia-brings-jensen-huang-back-as-ceo",
+    "real": true,
+    "page": "https://commons.wikimedia.org/wiki/File:Jensen_huang_stanford_2026-04-30_009.jpg",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Jensen_huang_stanford_2026-04-30_009.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "license": "CC BY 4.0",
+    "credit": "Anders Eidesvik, CC BY 4.0, Wikimedia Commons",
+    "added": "2026-11-23"
+  },
+  "news/nvidia-brings-jensen-huang-back-as-ceo-2.jpg": {
+    "article": "nvidia-brings-jensen-huang-back-as-ceo",
+    "real": true,
+    "page": "https://commons.wikimedia.org/wiki/File:Jensen_huang_stanford_2026-04-09_044.jpg",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Jensen_huang_stanford_2026-04-09_044.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "license": "CC BY 4.0",
+    "credit": "Anders Eidesvik, CC BY 4.0, Wikimedia Commons",
+    "added": "2026-11-23"
+  },
+  "news/nvidia-brings-jensen-huang-back-as-ceo-3.jpg": {
+    "article": "nvidia-brings-jensen-huang-back-as-ceo",
+    "real": true,
+    "page": "https://commons.wikimedia.org/wiki/File:United_States_Capitol_-_west_front.jpg",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/b/b2/United_States_Capitol_-_west_front.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "license": "Public domain",
+    "credit": "Architect of the Capitol, Public domain, Wikimedia Commons",
+    "added": "2026-11-23"
   }
 }

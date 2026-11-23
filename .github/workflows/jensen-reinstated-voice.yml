@@ -25,5 +25,5 @@ jobs:
           git config user.name "TrendingTesla bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -f video/jensen-reinstated/out
-          git commit -qm "Jensen reinstated Short: Noah narration" || exit 0
+          git commit -qm "Jensen reinstated Short: Noah narration v2 (a bit more upbeat)" || exit 0
           git push -q origin HEAD:cursor/jensen-reinstated-short

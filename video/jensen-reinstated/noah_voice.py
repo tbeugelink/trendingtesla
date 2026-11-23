@@ -1,5 +1,6 @@
-"""Noah narration for the "Jensen Huang REINSTATED!" Short. Calm, professional newsreader delivery:
-no audio tags at all (no [energetically]), steadier voice settings. Uploads and publishes nothing.
+"""Noah narration for the "Jensen Huang REINSTATED!" Short, v2. Professional but a bit more cheerful and upbeat
+than v1: slightly lower stability, a little style, slightly faster pace. Still no audio tags (no [energetically]).
+Uploads and publishes nothing.
 Output: video/jensen-reinstated/out/<id>.mp3 and alignment.json."""
 import base64, json, os, sys, time, urllib.error, urllib.request
 from pathlib import Path
@@ -10,7 +11,7 @@ OUT = HERE / "out"
 
 def tts(text):
     body = {"text": text, "model_id": "eleven_v4", "language_code": "en",
-            "voice_settings": {"stability": 0.5, "similarity_boost": 0.75, "style": 0.0}}
+            "voice_settings": {"stability": 0.4, "similarity_boost": 0.75, "style": 0.2, "speed": 1.06}}
     for attempt in range(4):
         req = urllib.request.Request(
             f"https://api.elevenlabs.io/v1/text-to-speech/{NOAH_VOICE_ID}/with-timestamps?output_format=mp3_44100_192",
@@ -27,7 +28,7 @@ def tts(text):
 def main():
     OUT.mkdir(exist_ok=True)
     script = json.loads((HERE / "script.json").read_text(encoding="utf-8"))
-    res = {"voice_id": NOAH_VOICE_ID, "model": "eleven_v4", "tone": "calm newsreader, no tags", "sentences": []}
+    res = {"voice_id": NOAH_VOICE_ID, "model": "eleven_v4", "tone": "professional, a bit upbeat (v2), no tags", "sentences": []}
     for s in script["sentences"]:
         if "[" in s["text"]:
             raise SystemExit(f"{s['id']}: no audio tags allowed")

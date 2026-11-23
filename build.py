@@ -1453,6 +1453,7 @@ header.hb .bar .lang{margin-left:0;margin-right:0;flex:none;white-space:nowrap;t
 .prom-empty{margin:12px 0 0;color:var(--muted)}
 .gbox{margin:16px 0;padding:14px;border:1px solid #3a4a60;border-radius:8px;background:#161616;display:grid;grid-template-columns:168px minmax(0,1fr);gap:14px}
 .gbox.noimg{grid-template-columns:1fr}
+.gbox img{width:168px;height:168px;object-fit:contain;background:#111;border-radius:6px;display:block}
 .gbox h2{margin:0 0 8px;font-size:1.12rem}
 .gbox h3{margin:8px 0 4px;font-size:.78rem;letter-spacing:.04em;text-transform:uppercase;color:var(--dim)}
 .gbox ul{margin:0;padding-left:1.1em}
@@ -2361,7 +2362,7 @@ def modelinfo(key, lang, heading=True):
     return (f'<article class="minfo">{img}{title}'
             f'<div class="prose"><h2>{L["i_specs"]}</h2><table class="specs">{rows}</table>'
             f'<h2>{L["i_watch"]}</h2>{li(t["watch"])}<h2>{L["i_special"]}</h2>{li(t["special"])}'
-            f'<h2>{L["i_acc"]}</h2><p class="soon">{L["i_acc_soon"]}</p></div>'
+            f'<h2>{L["i_acc"]}</h2>{model_accessory_links(key, lang)}</div>'
             f'<details class="sources"><summary>{L["sources"]} ({len(inf["sources"])})</summary><ul>{src}</ul></details></article>')
 
 
@@ -3184,6 +3185,40 @@ def product_photo(product):
     return "", False
 
 
+LICENCE_PHOTOS = {}
+
+
+def load_image_licences():
+    """Exact-product photos whose licence file marks them as allowed. No caption is printed."""
+    global LICENCE_PHOTOS
+    LICENCE_PHOTOS = {}
+    path = ROOT / "content" / "image-licences.json"
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return
+    rows = data.get("products") if isinstance(data, dict) else None
+    if not isinstance(rows, list):
+        return
+    for row in rows:
+        if not isinstance(row, dict) or not row.get("photo"):
+            continue
+        asin = str(row.get("asin") or "").strip().upper()
+        src = str(row.get("file") or "").strip()
+        if not re.fullmatch(r"[A-Z0-9]{10}", asin) or not src.startswith("/img/"):
+            continue
+        if (STATIC / src.lstrip("/")).is_file():
+            LICENCE_PHOTOS[asin] = src
+
+
+def licensed_card_photo(href):
+    asin = ""
+    match = re.search(r"/dp/([A-Z0-9]{10})", str(href or ""), re.I)
+    if match:
+        asin = match.group(1).upper()
+    return LICENCE_PHOTOS.get(asin, "")
+
+
 def product_photo_html(src, alt, href, remote):
     if not src:
         return ""
@@ -3935,8 +3970,11 @@ def model_hub(key, items, lang):
         if kids:
             vlabel = "Versions" if lang == "en" else "Uitvoeringen"
             versions = f'<h2 class="rubh">{esc(vlabel)}</h2><div class="mgrid">{"".join(model_card(k, lang) for k in kids)}</div>'
+    acc = ""
+    if str(key).startswith(("model-3", "model-y")):
+        acc = f'<section class="mfacts"><h2>{esc(L["i_acc"])}</h2>{model_accessory_links(key, lang)}</section>'
     body = (f'{nav}<header class="hubhead"><h1>{esc(heading_name)}</h1></header>'
-            f'{hero}<p class="mintro">{esc(intro)}</p>{extra}{versions}{specs}{sourced}{listing}')
+            f'{hero}<p class="mintro">{esc(intro)}</p>{extra}{versions}{specs}{sourced}{acc}{listing}')
     desc = re.sub(r"\s+", " ", intro).strip()
     if len(desc) > 180:
         desc = desc[:179].rsplit(" ", 1)[0] + "…"
@@ -4434,7 +4472,7 @@ def _recommend_context(kind, current):
             return "mats"
         return "default"
     if kind == "model" and isinstance(current, str) and current.startswith(("model-3", "model-y")):
-        return "mats"
+        return "accessories"
     if kind == "hub" and current == "starlink":
         return "starlink"
     if kind == "hub" and current in ("tesla", "cars", "models"):
@@ -4581,6 +4619,9 @@ def page_side(arts, lang, kind="home", current=None, skip=None, tail="", signup=
     hubs = evergreen_side(lang)
     if hubs:
         parts.append(hubs)
+    guides = buying_guides_side(lang)
+    if guides:
+        parts.append(guides)
     rec = recommend_block(lang, kind, current)
     if rec:
         parts.append(rec)
@@ -6541,6 +6582,39 @@ def evergreen_for(a):
     return [hub for hub in load_evergreen() if a in evergreen_articles(hub, [a])]
 
 
+def buying_guides_side(lang):
+    """Every published buying guide, on the sidebar of every page."""
+    docs = [d for d in GUIDE_DOCS if not d.get("template")]
+    if not docs:
+        return ""
+    docs.sort(key=lambda d: (d["meta"].get(f"title_{lang}") or d["meta"].get("title_en") or "").lower())
+    items = []
+    for doc in docs:
+        name = doc["meta"].get(f"title_{lang}") or doc["meta"].get("title_en") or doc["slug"]
+        items.append((name, url(lang, guides_path(lang) + doc["slug"] + "/")))
+    title = "Buying guides" if lang == "en" else "Koopgidsen"
+    return _side_section(title, "<ul>" + _side_links(items) + "</ul>")
+
+
+def model_accessory_links(key, lang):
+    """Model 3 and Model Y pages list the buying guides. Other cars keep the coming-soon line."""
+    L = LANGS[lang]
+    if not str(key).startswith(("model-3", "model-y")):
+        return f'<p class="soon">{L["i_acc_soon"]}</p>'
+    docs = [d for d in GUIDE_DOCS if not d.get("template")]
+    if not docs:
+        return f'<p class="soon">{L["i_acc_soon"]}</p>'
+    lead = ("Buying guides for a Model 3 or a Model Y. Match the year on the product page."
+            if lang == "en" else
+            "Koopgidsen voor een Model 3 of een Model Y. Stem het jaar af op de productpagina.")
+    items = []
+    for doc in docs:
+        name = doc["meta"].get(f"title_{lang}") or doc["meta"].get("title_en") or doc["slug"]
+        href = url(lang, guides_path(lang) + doc["slug"] + "/")
+        items.append(f'<li><a href="{esc(href)}">{esc(name)}</a></li>')
+    return f'<p>{esc(lead)}</p><ul>{"".join(items)}</ul>'
+
+
 def evergreen_side(lang):
     items = [
         (hub["title"][lang], url(lang, hub["path"]))
@@ -7028,7 +7102,11 @@ def _guide_product(fields, lang):
     if href.startswith("https://"):
         link = (f'<a class="btn amazon-go" href="{esc(href)}" rel="sponsored nofollow noopener" target="_blank">'
                 f'{esc(button)}</a>')
-    return (f'<aside class="gbox noimg"><div><h2>{esc(name)}</h2>{lists}{fit_html}'
+    src = licensed_card_photo(href)
+    img = (f'<img src="{esc(src)}" alt="{esc(name)}" width="168" height="168" loading="lazy" decoding="async">'
+           if src else "")
+    klass = "gbox" if img else "gbox noimg"
+    return (f'<aside class="{klass}">{img}<div><h2>{esc(name)}</h2>{lists}{fit_html}'
             f'<p class="gprice">{esc(price)}</p>{link}</div></aside>')
 
 
@@ -7175,6 +7253,7 @@ def build():
     load_money()
     load_affiliate()
     load_product_images()
+    load_image_licences()
     load_shorts()
     _OPT.clear()
     arts = load_articles()

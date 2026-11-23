@@ -5,7 +5,8 @@
     "starlink": ["mini-cable", "mini-mount", "guide:starlink-mini-road-trip"],
     "mats": ["juniper-mats", "highland-mats", "guide:winter-mats-model-3-y", "guide:model-y-trunk-floor-mats", "guide:model-y-3-accessories"],
     "sentry": ["sentry-usb", "guide:sentry-usb-drive", "guide:model-y-3-accessories"],
-    "default": ["guide:winter-mats-model-3-y", "guide:sentry-usb-drive", "guide:model-y-trunk-floor-mats"]
+    "default": ["guide:screen-glass-model-3-y", "guide:type-2-cables", "guide:console-trays-model-3-y", "guide:winter-mats-model-3-y", "guide:sentry-usb-drive"],
+    "accessories": ["guide:screen-glass-model-3-y", "guide:phone-mounts-model-3-y", "guide:mud-flaps-model-y", "guide:key-card-holders", "guide:tyre-pumps"]
   },
   "items": {
     "wall": {

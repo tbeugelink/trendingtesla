@@ -1168,11 +1168,12 @@ header.hb .pnav>.is-parked{display:none}
 article.money>.hi,article.money>.avid{margin-bottom:0}
 article.money .hero-img{margin-bottom:0}
 article.money>.lmeta,article.money>.lrow{margin-top:6px}
-.lrow{display:flex;flex-wrap:nowrap;align-items:center;gap:8px;min-width:0;margin:6px 0 4px}
+.lrow{display:flex;flex-wrap:nowrap;align-items:center;gap:6px;min-width:0;margin:6px 0 4px}
 .lrow>.lmeta,.lrow>a.lgo{flex:1 1 auto;min-width:0;overflow:hidden}
 .lrow>.lmeta,.lrow>a.lgo>.lmeta{display:block;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;margin:0}
-.lrow>.acts{display:flex;flex-flow:row nowrap;flex:0 0 auto;margin-left:auto}
-.lrow .act{flex:none;white-space:nowrap}
+.lrow>.acts{display:flex;flex-flow:row nowrap;flex:0 0 auto;gap:4px;margin-left:auto}
+.lrow .act{flex:none;white-space:nowrap;box-sizing:border-box;height:28px;padding:0 7px;gap:3px;font-size:12px;line-height:1;border-radius:8px}
+.lrow .act svg{width:15px;height:15px}
 a.lgo{display:block;min-width:0;color:inherit;text-decoration:none}
 article.money>.lrow{margin-bottom:9px}
 .lname{font-size:.68rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--blue)}
@@ -1413,6 +1414,7 @@ header.hb .bar .burger span{width:18px;height:2px;flex:none;border-radius:2px;ba
 header.hb .brand{transform:none;margin-left:0}
 header.hb .bar .logo{font-size:22.4px;line-height:1;letter-spacing:-.02em;transform:none}
 header.hb .logo span{font-size:calc(1em + 1px);top:2px}
+@media (max-width:767.98px){.logo span{top:2px}header.hb .logo span{top:1px}}
 header.hb ~ .drawer,header.hb ~ .scrim{top:66px}
 
 /* Phones only: shrink logo and hamburger together so the tool row (magnifier,

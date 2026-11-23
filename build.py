@@ -505,12 +505,15 @@ h1,h2,h3{color:#ebebeb;font-weight:800}
 .hfeed .pv-row{grid-template-columns:42px minmax(0,1fr) 48px;column-gap:6px}
 }
 @media (prefers-reduced-motion:reduce){.ticker{overflow-x:auto;overflow-y:hidden}.tk-track{animation:none}.tk-set[aria-hidden="true"]{display:none}}
-/* Desktop and tablet: the lichtkrant stays under the sticky header while the page scrolls.
-   Phones keep the in-flow copy. The sidebar column is stretched so the bar can stick for the whole story. */
+/* From tablet up, the lichtkrant is the first thing in the sidebar. It stays in normal
+   flow so the block under it (Related, Latest, and the rest) is not covered.
+   Phones keep the copy that already sits further down the page. */
+.ticker-top{display:none}
 @media (min-width:768px){
+.ticker-top{display:block}
+.pv-side>.ticker:not(.ticker-top){display:none}
 .sheet>.pv-side,.sheet>.sheet-rail{align-self:stretch}
 .sheet-rail>.pv-side:not(.arel){flex:1 1 auto}
-.pv-side>.ticker,.ticker-main{position:sticky;top:66px;z-index:30;background:#0f0f0f}
 }
 .bar{display:flex;align-items:center;gap:14px;height:66px}
 .brand{display:flex;align-items:baseline;gap:14px;min-width:0}
@@ -4681,10 +4684,15 @@ def page_side(arts, lang, kind="home", current=None, skip=None, tail="", signup=
         parts.append(rec)
     if news:
         parts.append(news)
-    aside = f'<aside class="pv-side">{"".join(parts)}</aside>' if parts else ""
+    inner = "".join(parts)
+    # Desktop and tablet: this copy leads the sidebar, above Related or whatever is first.
+    # The copy inside the column stays for phones, where this one is hidden.
+    top = ticker_bar(lang, top=True, script=False)
+    if tail and kind == "article" and related_html:
+        aside = f'<aside class="pv-side">{inner}</aside>' if inner else ""
+        return f'<div class="sheet-rail">{top}{related_html}{aside}</div>{tail}'
+    aside = f'<aside class="pv-side">{top}{inner}</aside>' if (top or inner) else ""
     if tail and kind == "article":
-        if related_html:
-            return f'<div class="sheet-rail">{related_html}{aside}</div>{tail}'
         return f"{aside}{tail}"
     return aside
 
@@ -5150,19 +5158,24 @@ def ticker_items(lang):
     return "".join(parts)
 
 
-def ticker_bar(lang, main=False, script=True):
+def ticker_bar(lang, main=False, script=True, top=False):
     """Scrolling one-line ticker. The second copy makes the loop seamless and stays out of tab order.
 
     The sidebar copy is the desktop lichtkrant. The main copy is the same line on a phone,
     between the cards and the dated list, and the script drives whichever one is visible.
+    top=True is the copy placed first in the sidebar from tablet width up.
     """
     items = ticker_items(lang)
     if not items:
         return ""
     clone = items.replace("<a ", '<a tabindex="-1" ')
     label = "News ticker" if lang == "en" else "Lichtkrant"
-    klass = "ticker ticker-main" if main else "ticker"
-    ident = "" if main else ' id="ticker"'
+    if main:
+        klass, ident = "ticker ticker-main", ""
+    elif top:
+        klass, ident = "ticker ticker-top", ""
+    else:
+        klass, ident = "ticker", ' id="ticker"'
     html = (
         f'<div class="{klass}"{ident} role="region" aria-label="{label}">'
         f'<div class="tk-track"><div class="tk-set">{items}</div>'

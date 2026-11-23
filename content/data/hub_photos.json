@@ -1,0 +1,197 @@
+{
+  "starship-1": {
+    "src": "/img/hubs/starship-1.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:StarshipLaunch_(crop_2-3).jpg",
+    "credit": "Osunpokeh, CC BY-SA 4.0, via Wikimedia Commons",
+    "alt": {
+      "en": "Liftoff of the first integrated Starship flight from Boca Chica",
+      "nl": "Lancering van de eerste geïntegreerde Starship-vlucht vanuit Boca Chica"
+    },
+    "caption": {
+      "en": "Liftoff of the first integrated flight, 20 April 2023.",
+      "nl": "Lancering van de eerste geïntegreerde vlucht, 20 april 2023."
+    }
+  },
+  "starship-2": {
+    "src": "/img/hubs/starship-2.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Starship-IFT2-ascent_(cropped).jpg",
+    "credit": "Osunpokeh, CC BY-SA 4.0, via Wikimedia Commons",
+    "alt": {
+      "en": "Ship 25 and Booster 9 climbing on Starship flight 2",
+      "nl": "Schip 25 en booster 9 tijdens de klim van Starship-vlucht 2"
+    },
+    "caption": {
+      "en": "Ship 25 and Booster 9 under thrust on flight 2, 18 November 2023.",
+      "nl": "Schip 25 en booster 9 onder stuwkracht op vlucht 2, 18 november 2023."
+    }
+  },
+  "starship-3": {
+    "src": "/img/hubs/starship-3.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:SpaceX_Starship_Third_Flight_Test_Launch_(CIRA_2024-03-14).png",
+    "credit": "CSU/CIRA and NOAA, public domain",
+    "alt": {
+      "en": "Satellite view of the third Starship flight climbing over the Gulf of Mexico",
+      "nl": "Satellietbeeld van de derde Starship-vlucht boven de Golf van Mexico"
+    },
+    "caption": {
+      "en": "GOES satellite view of the third flight, 14 March 2024.",
+      "nl": "GOES-satellietbeeld van de derde vlucht, 14 maart 2024."
+    }
+  },
+  "starship-4": {
+    "src": "/img/hubs/starship-4.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Fourth_Launch_for_SpaceX%E2%80%99s_Starship_(CIRA_2024-06-06).png",
+    "credit": "CSU/CIRA and NOAA, public domain",
+    "alt": {
+      "en": "Satellite view of the fourth Starship flight leaving Boca Chica",
+      "nl": "Satellietbeeld van de vierde Starship-vlucht vanuit Boca Chica"
+    },
+    "caption": {
+      "en": "GOES satellite view of the fourth flight, 6 June 2024. The bright mark is the rocket plume.",
+      "nl": "GOES-satellietbeeld van de vierde vlucht, 6 juni 2024. De heldere vlek is de rookpluim."
+    }
+  },
+  "starship-5": {
+    "src": "/img/hubs/starship-5.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:SpaceX_Starship_during_IFT-5.jpg",
+    "credit": "Steve Jurvetson, CC BY 2.0, via Wikimedia Commons",
+    "alt": {
+      "en": "The full Starship stack climbing during flight 5",
+      "nl": "De volledige Starship-stapel tijdens de klim van vlucht 5"
+    },
+    "caption": {
+      "en": "Flight 5 climbing, 13 October 2024.",
+      "nl": "Vlucht 5 tijdens de klim, 13 oktober 2024."
+    }
+  },
+  "starship-6": {
+    "src": "/img/hubs/starship-6.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Starship_IFT-6_ISS.jpg",
+    "credit": "Donald Pettit, public domain",
+    "alt": {
+      "en": "Starship flight 6 seen from the International Space Station",
+      "nl": "Starship-vlucht 6 gezien vanaf het internationale ruimtestation"
+    },
+    "caption": {
+      "en": "Flight 6 seen from the International Space Station, 19 November 2024.",
+      "nl": "Vlucht 6 gezien vanaf het internationale ruimtestation, 19 november 2024."
+    }
+  },
+  "starship-8": {
+    "src": "/img/hubs/starship-8.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:SpaceX%E2%80%99s_Eighth_Starship_Launch_and_Reentry_(CIRA_2025-03-06).png",
+    "credit": "CSU/CIRA and NOAA, public domain",
+    "alt": {
+      "en": "Satellite view of the eighth Starship flight on 6 March 2025",
+      "nl": "Satellietbeeld van de achtste Starship-vlucht op 6 maart 2025"
+    },
+    "caption": {
+      "en": "GOES satellite view of the eighth flight, 6 March 2025.",
+      "nl": "GOES-satellietbeeld van de achtste vlucht, 6 maart 2025."
+    }
+  },
+  "starship-11": {
+    "src": "/img/hubs/starship-11.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Starship_lifted_off_from_Starbase_during_flight_test_11.jpg",
+    "credit": "Shujianyang, CC BY-SA 4.0, via Wikimedia Commons",
+    "alt": {
+      "en": "Starship lifting off from Starbase on flight 11",
+      "nl": "Starship stijgt op vanaf Starbase tijdens vlucht 11"
+    },
+    "caption": {
+      "en": "Liftoff of flight 11 from Starbase, 13 October 2025.",
+      "nl": "Lancering van vlucht 11 vanaf Starbase, 13 oktober 2025."
+    }
+  },
+  "starship-15": {
+    "src": "/img/hubs/starship-15.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Starship_Flight_15.jpg",
+    "credit": "SpaceX, CC BY 4.0, via Wikimedia Commons",
+    "alt": {
+      "en": "Ship 42 of Starship flight 15 beside the tower during the catch",
+      "nl": "Schip 42 van Starship-vlucht 15 naast de toren tijdens de vangst"
+    },
+    "caption": {
+      "en": "Ship 42 during the catch on flight 15, 14 November 2026.",
+      "nl": "Schip 42 tijdens de vangst op vlucht 15, 14 november 2026."
+    }
+  },
+  "fsd-tahoe": {
+    "src": "/img/hubs/fsd-tahoe.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Tesla_Autopilot_engaged_on_I-80_near_Lake_Tahoe.jpg",
+    "credit": "Natecation, CC BY-SA 4.0, via Wikimedia Commons",
+    "alt": {
+      "en": "Tesla driving display showing the car in its lane, with Autopilot engaged near Lake Tahoe",
+      "nl": "Tesla-scherm dat de auto in de rijstrook toont, met Autopilot ingeschakeld bij Lake Tahoe"
+    },
+    "caption": {
+      "en": "Autopilot engaged on Interstate 80 near Lake Tahoe. The centre screen draws the car in its lane. This is not a photograph of the Dutch approval.",
+      "nl": "Autopilot ingeschakeld op Interstate 80 bij Lake Tahoe. Het middenscherm tekent de auto in de rijstrook. Dit is geen foto van de Nederlandse goedkeuring."
+    }
+  },
+  "fsd-modelx": {
+    "src": "/img/hubs/fsd-modelx.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Tesla_Autopilot_Engaged_in_Model_X.jpg",
+    "credit": "Ian Maddox, CC BY-SA 4.0, via Wikimedia Commons",
+    "alt": {
+      "en": "A 2017 Tesla Model X instrument cluster showing Autopilot following a truck",
+      "nl": "Het instrumentenpaneel van een Tesla Model X uit 2017 toont Autopilot achter een vrachtwagen"
+    },
+    "caption": {
+      "en": "A 2017 Model X with Autopilot holding distance behind a truck. The cluster shows the driving view. This is not a photograph of the Dutch type approval.",
+      "nl": "Een Model X uit 2017 waarbij Autopilot afstand houdt tot een vrachtwagen. Het paneel toont het rijbeeld. Dit is geen foto van de Nederlandse typegoedkeuring."
+    }
+  },
+  "starlink-dish": {
+    "src": "/img/hubs/starlink-dish.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Starlink_dish_01.webp",
+    "credit": "Wikideas1, CC0, via Wikimedia Commons",
+    "alt": {
+      "en": "A rectangular Starlink user terminal on a stand",
+      "nl": "Een rechthoekige Starlink-gebruikersterminal op een standaard"
+    },
+    "caption": {
+      "en": "A Starlink user terminal. The photograph is not from the Netherlands.",
+      "nl": "Een Starlink-gebruikersterminal. De foto is niet in Nederland gemaakt."
+    }
+  },
+  "starlink-ship": {
+    "src": "/img/hubs/starlink-ship.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Starlink_Dish_20250111_101122.jpg",
+    "credit": "Ka23 13, CC BY 4.0, via Wikimedia Commons",
+    "alt": {
+      "en": "Two Starlink terminals mounted on a cruise ship",
+      "nl": "Twee Starlink-terminals op een cruiseschip"
+    },
+    "caption": {
+      "en": "Starlink terminals on a cruise ship. This is not a photograph of the Dutch rollout.",
+      "nl": "Starlink-terminals op een cruiseschip. Dit is geen foto van de uitrol in Nederland."
+    }
+  },
+  "deliver-y": {
+    "src": "/img/hubs/deliver-y.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Tesla_Model_Y_Juniper_Washington_DC_Metro_Area,_USA.jpg",
+    "credit": "OWS Photography, CC BY 4.0, via Wikimedia Commons",
+    "alt": {
+      "en": "A dark Tesla Model Y Juniper on a street in the Washington DC area",
+      "nl": "Een donkere Tesla Model Y Juniper op straat in de regio Washington DC"
+    },
+    "caption": {
+      "en": "A Tesla Model Y Juniper. The photograph is not of the quarterly delivery count.",
+      "nl": "Een Tesla Model Y Juniper. De foto is niet van de kwartaallevering zelf."
+    }
+  },
+  "deliver-3": {
+    "src": "/img/hubs/deliver-3.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:2024_Tesla_Model_3_Highland_Performance_AWD.jpg",
+    "credit": "Chanokchon, CC BY-SA 4.0, via Wikimedia Commons",
+    "alt": {
+      "en": "A white 2024 Tesla Model 3 Highland on a showroom floor",
+      "nl": "Een witte Tesla Model 3 Highland uit 2024 in een showroom"
+    },
+    "caption": {
+      "en": "A 2024 Tesla Model 3 Highland. The photograph is not of the quarterly delivery count.",
+      "nl": "Een Tesla Model 3 Highland uit 2024. De foto is niet van de kwartaallevering zelf."
+    }
+  }
+}

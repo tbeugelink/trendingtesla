@@ -491,6 +491,13 @@ h1,h2,h3{color:#ebebeb;font-weight:800}
 .ticker:hover .tk-track,.ticker:focus-within .tk-track{animation-play-state:paused}
 .tk[hidden]{display:none}
 @keyframes tk-run{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.ticker-main{display:none}
+@media (max-width:900px){
+.ticker-main{display:block;border-bottom:3px solid var(--red)}
+.pv-side>.ticker{display:none}
+.hfeed .pv-hl b{font-size:17.5px;line-height:1.28}
+.hfeed .pv-row{grid-template-columns:40px minmax(0,1fr) 64px;column-gap:4px}
+}
 @media (prefers-reduced-motion:reduce){.ticker{overflow-x:auto;overflow-y:hidden}.tk-track{animation:none}.tk-set[aria-hidden="true"]{display:none}}
 .bar{display:flex;align-items:center;gap:14px;height:66px}
 .brand{display:flex;align-items:baseline;gap:14px;min-width:0}
@@ -4891,27 +4898,31 @@ TICKER_QUOTES = (
     ("ixic", "^IXIC", "Nasdaq", "NASDAQ Composite"),
 )
 TICKER_JS = r"""(function(){
-var bar=document.getElementById('ticker');
-if(!bar)return;
+var bars=[].slice.call(document.querySelectorAll('.ticker'));
+if(!bars.length)return;
 var nl=document.documentElement.lang==='nl';
 var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
 function esc(s){return String(s).replace(/[&<>]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;'}[c]})}
-function pace(){if(reduce)return;var track=bar.querySelector('.tk-track');if(!track)return;
-var px=track.scrollWidth/2;if(px>40)track.style.animationDuration=Math.max(39,px/33)+'s'}
-function slots(){return bar.querySelectorAll('[data-tk="launch"]')}
-function hide(){slots().forEach(function(el){el.hidden=true})}
+function pace(){if(reduce)return;bars.forEach(function(bar){
+if(getComputedStyle(bar).display==='none')return;
+var track=bar.querySelector('.tk-track');if(!track)return;
+var px=track.scrollWidth/2;if(px>40)track.style.animationDuration=Math.max(39,px/33)+'s';
+});}
+function slots(){var out=[];bars.forEach(function(bar){bar.querySelectorAll('[data-tk="launch"]').forEach(function(el){out.push(el);});});return out;}
+function hide(){slots().forEach(function(el){el.hidden=true;});pace();}
 fetch('https://ll.thespacedevs.com/2.2.0/launch/upcoming/?lsp__id=121&limit=8&mode=list').then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(d){
 var now=Date.now(),best=null;(d.results||[]).forEach(function(x){var net=Date.parse(x.net||''),st=(x.status&&x.status.abbrev)||'';
 if(!(net>now)||st==='Success'||st==='Failure')return;if(!best||net<best.net)best={net:net,name:String(x.name||'')}});
 if(!best){hide();return}
 var bits=best.name.split('|'),name=bits.length>1?bits[bits.length-1].trim():'';
-function paint(){var left=best.net-Date.now();if(left<=0){hide();pace();return}
+function paint(){var left=best.net-Date.now();if(left<=0){hide();return}
 var s=Math.floor(left/1000),days=Math.floor(s/86400);s-=days*86400;var h=Math.floor(s/3600);s-=h*3600;var m=Math.floor(s/60);
 var clock=(days?days+'d ':'')+h+'h '+m+'m';
 var html='<b>'+(nl?'Volgende lancering':'Next launch')+'</b> '+esc(clock)+(name?' \u00b7 '+esc(name):'');
-slots().forEach(function(el){el.hidden=false;el.innerHTML=html})}
-paint();setInterval(paint,30000);pace()}).catch(hide);
+slots().forEach(function(el){el.hidden=false;el.innerHTML=html});pace();}
+paint();setInterval(paint,30000);}).catch(hide);
 pace();
+window.addEventListener('resize',pace);
 })();"""
 
 
@@ -5051,18 +5062,26 @@ def ticker_items(lang):
     return "".join(parts)
 
 
-def ticker_bar(lang):
-    """Scrolling one-line ticker. The second copy makes the loop seamless and stays out of tab order."""
+def ticker_bar(lang, main=False, script=True):
+    """Scrolling one-line ticker. The second copy makes the loop seamless and stays out of tab order.
+
+    The sidebar copy is the desktop lichtkrant. The main copy is the same line on a phone,
+    between the cards and the dated list, and the script drives whichever one is visible.
+    """
     items = ticker_items(lang)
     if not items:
         return ""
     clone = items.replace("<a ", '<a tabindex="-1" ')
     label = "News ticker" if lang == "en" else "Lichtkrant"
-    return (
-        f'<div class="ticker" id="ticker" role="region" aria-label="{label}">'
+    klass = "ticker ticker-main" if main else "ticker"
+    ident = "" if main else ' id="ticker"'
+    html = (
+        f'<div class="{klass}"{ident} role="region" aria-label="{label}">'
         f'<div class="tk-track"><div class="tk-set">{items}</div>'
-        f'<div class="tk-set" aria-hidden="true">{clone}</div></div></div>'
-        f"<script>{TICKER_JS}</script>")
+        f'<div class="tk-set" aria-hidden="true">{clone}</div></div></div>')
+    if script:
+        html += f"<script>{TICKER_JS}</script>"
+    return html
 
 
 def _fetch_quote(symbol, expect):
@@ -5144,7 +5163,10 @@ def homepage(arts, lang):
     label = "Latest news" if lang == "en" else "Het laatste nieuws"
     cards = "".join(home_card(item, lang, eager=i < 4) for i, item in enumerate(grid))
     row = f'<section class="homenews" aria-label="{esc(label)}">{cards}</section>'
-    main = (f'{nav}<h1 class="visually-hidden">{esc(NAME)}</h1>{row}{home_feed(feed, lang)}')
+    # Phone shows this copy between the cards and the dated list. Desktop hides it.
+    main = (f'{nav}<h1 class="visually-hidden">{esc(NAME)}</h1>{row}'
+            f'{ticker_bar(lang, main=True, script=False)}'
+            f'<div class="hfeed">{home_feed(feed, lang)}</div>')
     shown = [item["article"] for item in (*grid, *feed) if item["kind"] == "article" and item.get("article")]
     return shell(main, page_side(arts, lang, "home", skip=shown), "front"), crumb_ld
 

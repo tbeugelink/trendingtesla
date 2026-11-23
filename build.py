@@ -1164,6 +1164,8 @@ header.hb .pnav>.is-parked{display:none}
 .layerrow .lcard:last-child{grid-column:1 / -1}
 .lcard .lim{display:block;aspect-ratio:16/9;background:#101010;overflow:hidden;border-radius:8px}
 .lcard .lim img{width:100%;height:100%;object-fit:cover}
+.lcard .lim.fitin{aspect-ratio:9/16;background:#070b16}
+.lcard .lim.fitin img{object-fit:cover;object-position:center}
 .lcard .lbody{display:flex;flex-direction:column;gap:4px;padding:0 0 10px;min-width:0;flex:1}
 .lmeta{display:flex;flex-wrap:nowrap;gap:4px 6px;align-items:baseline;margin:6px 0 4px;padding:0;font-size:.68rem;font-weight:700;line-height:1.3;color:var(--dim);white-space:nowrap}.leadstory>.lmeta,.pv-lead>.lmeta,article.money>.lmeta{margin-bottom:9px}
 /* Article pages: rubric sits under the hero and its caption, then the title.
@@ -4080,6 +4082,14 @@ def player(vid, kind, label, poster, priority, title=""):
             f'{photo}<span class="shp" aria-hidden="true"></span></button></figure>')
 
 
+def short_poster(short):
+    """Local 9:16 still for one Short, when shorts.json names a file that is on the site."""
+    poster = str((short or {}).get("poster") or "")
+    if poster.startswith("/img/") and (STATIC / poster.lstrip("/")).is_file():
+        return poster
+    return ""
+
+
 def article_media(a, lang):
     poster = site_img(a)
     video = video_for(a, lang)
@@ -4089,7 +4099,7 @@ def article_media(a, lang):
     if video:
         blocks.append(player(video["id"], "long", LANGS[lang]["watch"], poster, True, a[lang]["title"]))
     if short:
-        blocks.append(player(short["id"], "short", LANGS[lang]["watch_short"], poster, True, a[lang]["title"]))
+        blocks.append(player(short["id"], "short", LANGS[lang]["watch_short"], short_poster(short) or poster, True, a[lang]["title"]))
     still = f'<div class="hi">{resp_img(poster, a[lang]["title"], SIZES_HERO, high=True, lazy=False, cls="hero-img")}</div>'
     note = a.get("hero_note")
     if isinstance(note, dict):
@@ -4745,9 +4755,12 @@ def home_grid_card(a, lang, eager=False, badge=""):
         mark = f'<span class="dur dvo">{esc(badge)}</span><span class="vpl" aria-hidden="true"></span>'
     mark = live_mark(a) + mark
     href = url(lang, a["slug"] + "/")
+    poster = short_poster(SHORTS.get(a["slug"]))
+    frame = " lim zimg fitin" if poster else " lim zimg"
+    photo = poster or site_img(a)
     return (
         f'<div class="lcard"><a class="lgo" href="{href}">'
-        f'<span class="lim zimg">{resp_img(site_img(a), t["title"], "(max-width: 599px) 92vw, (max-width: 900px) 46vw, 280px", high=eager, lazy=not eager, width=640, height=360)}{mark}</span></a>'
+        f'<span class="{frame.strip()}">{resp_img(photo, t["title"], "(max-width: 599px) 92vw, (max-width: 900px) 46vw, 280px", high=eager, lazy=not eager, width=1080 if poster else 640, height=1920 if poster else 360)}{mark}</span></a>'
         f'{with_actions(rubric_line(a, lang), "", lang, href)}'
         f'<a class="lgo" href="{href}"><span class="lbody"><strong>{esc(card_title(a, lang))}</strong></span></a></div>')
 
@@ -4881,6 +4894,7 @@ def clip_items(arts):
             "id": vid,
             "seconds": 0,
             "path": f"shorts/{vid}/",
+            "poster": short.get("poster") or "",
         })
     items.sort(key=lambda item: item["stamp"], reverse=True)
     return items
@@ -5289,7 +5303,8 @@ def clip_page(item, arts, lang):
     desc = article[lang]["description"] if article else title
     kind = "short" if item["kind"] == "short" else "long"
     label = L["watch_short"] if kind == "short" else L["watch"]
-    play = player(item["id"], kind, label, yt_thumb(item["id"]), True, title)
+    poster = short_poster({"poster": item.get("poster")}) or yt_thumb(item["id"])
+    play = player(item["id"], kind, label, poster, True, title)
     story = ""
     if article:
         story = f'<p><a href="{url(lang, article["slug"] + "/")}">{esc(L["read_story"])}</a></p>'
@@ -7607,8 +7622,10 @@ def build():
                 else:
                     name = "Tesla"
                 line = f'<span class="lmeta"><span class="lname">{esc(name)}</span> · {stamp}</span>'
+            thumb = short_poster(sh) or f"https://i.ytimg.com/vi/{esc(sh['id'])}/hqdefault.jpg"
+            tw, th = (1080, 1920) if short_poster(sh) else (480, 360)
             cards += (f'<div class="shc {tone}"><button class="shv zimg" type="button" data-id="{esc(sh["id"])}" aria-label="{"Play" if en else "Afspelen"}: {esc(t)}">'
-                      f'<img src="https://i.ytimg.com/vi/{esc(sh["id"])}/hqdefault.jpg" alt="{esc(t)}" loading="lazy" width="480" height="360">'
+                      f'<img src="{esc(thumb)}" alt="{esc(t)}" loading="lazy" width="{tw}" height="{th}">'
                       f'<span class="shp" aria-hidden="true"></span></button>'
                       f'{line}{cap}</div>')
         intro = ("Tesla news in under a minute. New Shorts appear here as soon as they are live on YouTube."

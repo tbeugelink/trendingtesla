@@ -1,0 +1,104 @@
+{
+  "slug": "two-states-sue-spacex-over-grok-images",
+  "date": "2026-11-23",
+  "time": "16:33",
+  "category": "xai",
+  "also": [
+    "spacex"
+  ],
+  "images": [
+    "news/two-states-sue-spacex-over-grok-images-1.jpg",
+    "news/two-states-sue-spacex-over-grok-images-2.jpg",
+    "topics/grok-phone-cafe.jpg",
+    "topics/grok-2.jpg",
+    "lib/grok-screen-closeup.jpg",
+    "topics/xai-dc-1.jpg"
+  ],
+  "real_photos": [
+    {
+      "page": "https://commons.wikimedia.org/wiki/File:SpaceX_Headquarters,_Hawthorne,_CA.jpg",
+      "describe": "the SpaceX headquarters building in Hawthorne, California, with the company name on the wall, not a photograph of any image described in the lawsuits",
+      "file": "news/two-states-sue-spacex-over-grok-images-1.jpg",
+      "credit": "SpaceX, CC0, Wikimedia Commons"
+    },
+    {
+      "page": "https://commons.wikimedia.org/wiki/File:The_SpaceX_Factory.jpg",
+      "describe": "SpaceX headquarters in Hawthorne, California, with the company name on the building and a Falcon 9 beside it, not a photograph of Grok output",
+      "file": "news/two-states-sue-spacex-over-grok-images-2.jpg",
+      "credit": "Steve Jurvetson, CC BY 2.0, Wikimedia Commons"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Virginia Attorney General — Attorneys General Jones and Rayfield File Suit Against SpaceX Over Creation and Promotion of Child Exploitation and Non-Consensual Images",
+      "url": "https://www.oag.state.va.us/media-center/news-releases/jay-jones/3162-attorneys-general-jones-and-rayfield-file-suit-against-spacex-parent-company-of-x-xai-and-grok-over-creation-and-promotion-of-child-exploitation-and-non-consensual-images-on-platform"
+    },
+    {
+      "title": "CNBC — SpaceX sued by Oregon and Virginia over AI deepfake porn, Grok safety claims",
+      "url": "https://www.cnbc.com/2026/11/23/oregon-virginia-spacex-grok-deepfake-lawsuits.html"
+    },
+    {
+      "title": "Associated Press — Grok lawsuit over AI abuse images",
+      "url": "https://apnews.com/article/grok-lawsuit-elon-musk-ai-abuse-images-452cc64e7169a55868f797982d0e8238"
+    },
+    {
+      "title": "WIRED — States Sue SpaceX Over Grok Deepfakes",
+      "url": "https://www.wired.com/story/states-sue-spacex-over-grok-deepfakes/"
+    }
+  ],
+  "label": {
+    "style": "r",
+    "en": {
+      "text": "STATES SUE"
+    },
+    "nl": {
+      "text": "STATEN KLAGEN"
+    }
+  },
+  "gen_image": {
+    "prompt": "An illustration of a Tesla centre screen at night in a left-hand-drive car on the right side of the road, one glowing blue abstract voice-assistant orb and a small microphone icon, no readable text, no faces, no photographs of people on the screen, dark cabin, city lights only as soft bokeh through the windscreen, the screen large and sharp in the horizontal centre, calm dark dashboard in the lower-left third",
+    "subject": "a Grok-style assistant on a Tesla centre screen: one glowing blue orb, the same kind of screen as the reference, not a picture of a person",
+    "refs": [
+      {
+        "src": "lib/grok-screen-closeup.jpg"
+      }
+    ],
+    "profile": "editorial",
+    "category": "A",
+    "describe": "an illustration of a Grok-style assistant orb on a car screen at night, not a photo of the lawsuits and not any image the suits describe",
+    "extra": [
+      {
+        "prompt": "A closer illustration of the same glowing blue assistant orb on a dark Tesla centre screen at night, no readable text, no faces, no people, left-hand drive, calm darkness in the lower left",
+        "describe": "the same blue assistant orb, closer, on a dark screen"
+      },
+      {
+        "prompt": "The same blue assistant orb on a Tesla centre screen at dusk, left-hand-drive cabin, a quiet street on the right-hand side of the road seen through the windscreen, no readable text, no faces and no pictures of people on the screen",
+        "describe": "the same assistant orb on the centre screen at dusk"
+      }
+    ]
+  },
+  "en": {
+    "title": "Two states sue SpaceX over Grok images",
+    "description": "Virginia and Oregon filed the first US state lawsuits against SpaceX over Grok on 23 November 2026. The consumer-protection suits allege non-consensual sexualized images, including child sexual abuse material, and seek penalties, stricter guardrails and disgorgement.",
+    "body": "<p>On 23 November 2026, Virginia Attorney General Jay Jones and Oregon Attorney General Dan Rayfield filed separate but coordinated consumer-protection lawsuits against SpaceX over Grok. SpaceX owns X and xAI, and xAI is now called SpaceX Super Intelligence. They are the first US states to sue SpaceX over Grok. The suits allege that Grok let users create and share non-consensual sexualized images of real people, including child sexual abuse material, while SpaceX falsely promoted Grok and X as safe. The complaints cite a Grok setting called \"spicy mode\". The photographs with this article show SpaceX headquarters in Hawthorne, California. They are not images from the lawsuits, and this article does not describe any such image. The penalties and court orders in the complaints are still requests.</p>\n<h2>Who filed the suits?</h2>\n<p><strong>Jay Jones for Virginia and Dan Rayfield for Oregon, each in a state court, both against SpaceX.</strong> The suits are separate cases that the two offices filed in coordination. Both name SpaceX as the defendant because SpaceX owns X and xAI. The product named in both is Grok, from the company now called SpaceX Super Intelligence. The <a href=\"https://www.oag.state.va.us/media-center/news-releases/jay-jones/3162-attorneys-general-jones-and-rayfield-file-suit-against-spacex-parent-company-of-x-xai-and-grok-over-creation-and-promotion-of-child-exploitation-and-non-consensual-images-on-platform\" rel=\"nofollow noopener\">Virginia Attorney General's office</a>, <a href=\"https://www.cnbc.com/2026/11/23/oregon-virginia-spacex-grok-deepfake-lawsuits.html\" rel=\"nofollow noopener\">CNBC</a>, the <a href=\"https://apnews.com/article/grok-lawsuit-elon-musk-ai-abuse-images-452cc64e7169a55868f797982d0e8238\" rel=\"nofollow noopener\">Associated Press</a> and <a href=\"https://www.wired.com/story/states-sue-spacex-over-grok-deepfakes/\" rel=\"nofollow noopener\">WIRED</a> each reported the filings on 23 November 2026.</p>\n<p>Two coordinated suits are not one merged case. Virginia's complaint and Oregon's complaint each have to stand in that state's court. The conduct those complaints describe is the same allegation.</p>\n<h2>What do the suits allege?</h2>\n<p><strong>That Grok let users create and share non-consensual sexualized images of real people, including child sexual abuse material, and that SpaceX promoted Grok and X as safe when they were not.</strong> The states say that promotion was false. They cite Grok's \"spicy mode\" as a feature of the product in the complaints. The complaints name the mode. This article does not describe any image.</p>\n<p>The allegation has two parts that the suits keep together. One part is what users could create and share. The other is what SpaceX said about the safety of Grok and of X. The filings ask a court to treat those two parts as one consumer-protection claim. The statutes the states chose are the next line of that claim.</p>\n<h2>So which laws are the states using?</h2>\n<p><strong>The Virginia Consumer Protection Act in Virginia, and the Oregon Unlawful Trade Practices Act in Oregon.</strong> Each suit is a consumer-protection case under that state's statute, filed in state court. The complaints also state that X allows users from the age of 13. That age line is part of the states' account of who can open the product the suits are about.</p>\n<p>These are civil filings by the attorneys general. The announcements frame them as consumer-protection lawsuits, with money and court orders on the list of what the states want. The list is not the same in every detail.</p>\n<h2>What are the states asking for?</h2>\n<p><strong>Civil penalties, fees, injunctions that would force stricter guardrails, and disgorgement.</strong> An injunction, in this ask, is a court order to put stricter limits on the product. Disgorgement is an order to give up gains the state says came from the conduct. Virginia also seeks restitution for consumers. The shared list, for both states, is penalties, fees, the guardrail orders and disgorgement.</p>\n<ul>\n<li><strong>Both states:</strong> civil penalties, fees, injunctions forcing stricter guardrails, and disgorgement.</li>\n<li><strong>Virginia also:</strong> restitution for consumers.</li>\n<li><strong>The access rule the suits cite:</strong> X allows users from the age of 13.</li>\n</ul>\n<p>Those remedies are what the complaints request. SpaceX already faces other Grok-related lawsuits and probes, and those sit on a separate record from these two filings.</p>\n<h2>So where else is Grok already in dispute?</h2>\n<p><strong>In the United Kingdom, Spain, Ireland, France and California, where SpaceX already faces other Grok-related lawsuits and probes.</strong> In a Baltimore suit against xAI, the company invoked Section 230. In another case, SpaceX lawyers called Grok \"a neutral tool, subject to user control\". In October, a SpaceX AI policy lead told a New York City Council hearing that the company had \"safeguards\" and \"strict controls\".</p>\n<p>Those three lines come from other cases and from that October hearing. They are not quoted here as a comment on the suits Jones and Rayfield filed on 23 November 2026. The sources used for this article do not include a SpaceX response to these two filings. The Section 230 argument and the October hearing belong to that older record.</p>"
+  },
+  "nl": {
+    "title": "Twee staten klagen SpaceX aan om Grok-beelden",
+    "description": "Virginia en Oregon dienden op 23 november 2026 de eerste Amerikaanse staatszaken in tegen SpaceX over Grok. De consumentenbeschermingszaken gaan over niet-consensuele seksueel getinte beelden, waaronder materiaal van seksueel misbruik van kinderen, en vragen boetes, strengere grenzen en het afstaan van voordeel.",
+    "body": "<p>Op 23 november 2026 hebben attorney general Jay Jones van Virginia en attorney general Dan Rayfield van Oregon afzonderlijke, op elkaar afgestemde consumentenbeschermingszaken aangespannen tegen SpaceX over Grok. SpaceX is eigenaar van X en van xAI, en xAI heet nu SpaceX Super Intelligence. Het zijn de eerste Amerikaanse staten die SpaceX aanklagen over Grok. De zaken stellen dat Grok gebruikers niet-consensuele seksueel getinte beelden van echte mensen liet maken en delen, waaronder materiaal van seksueel misbruik van kinderen, terwijl SpaceX Grok en X ten onrechte als veilig aanprees. De klachten noemen een Grok-instelling die „spicy mode” heet. De foto's bij dit stuk tonen het hoofdkantoor van SpaceX in Hawthorne, Californië. Het zijn geen beelden uit de rechtszaken, en dit artikel beschrijft zulke beelden niet. De boetes en de rechterlijke bevelen in de klachten zijn nog verzoeken.</p>\n<h2>Wie heeft de zaken aangespannen?</h2>\n<p><strong>Jay Jones voor Virginia en Dan Rayfield voor Oregon, elk bij een staatsrechtbank, allebei tegen SpaceX.</strong> Het zijn aparte zaken die de twee kantoren in onderling overleg hebben ingediend. Beide noemen SpaceX als gedaagde, omdat SpaceX eigenaar is van X en van xAI. Het product in beide klachten is Grok, van het bedrijf dat nu SpaceX Super Intelligence heet. Het <a href=\"https://www.oag.state.va.us/media-center/news-releases/jay-jones/3162-attorneys-general-jones-and-rayfield-file-suit-against-spacex-parent-company-of-x-xai-and-grok-over-creation-and-promotion-of-child-exploitation-and-non-consensual-images-on-platform\" rel=\"nofollow noopener\">kantoor van de attorney general van Virginia</a>, <a href=\"https://www.cnbc.com/2026/11/23/oregon-virginia-spacex-grok-deepfake-lawsuits.html\" rel=\"nofollow noopener\">CNBC</a>, de <a href=\"https://apnews.com/article/grok-lawsuit-elon-musk-ai-abuse-images-452cc64e7169a55868f797982d0e8238\" rel=\"nofollow noopener\">Associated Press</a> en <a href=\"https://www.wired.com/story/states-sue-spacex-over-grok-deepfakes/\" rel=\"nofollow noopener\">WIRED</a> meldden de indieningen op 23 november 2026.</p>\n<p>Twee afgestemde zaken zijn geen samengevoegde zaak. De klacht van Virginia en de klacht van Oregon moeten elk standhouden voor de eigen rechter. De gedraging die ze beschrijven is dezelfde beschuldiging.</p>\n<h2>Wat stellen de zaken?</h2>\n<p><strong>Dat Grok gebruikers niet-consensuele seksueel getinte beelden van echte mensen liet maken en delen, waaronder materiaal van seksueel misbruik van kinderen, en dat SpaceX Grok en X als veilig aanprees terwijl dat niet zo was.</strong> De staten zeggen dat die aanprijzing onjuist was. Ze noemen de „spicy mode” van Grok als een functie van het product in de klachten. De klachten noemen die stand bij naam. Dit artikel beschrijft geen enkel beeld.</p>\n<p>De beschuldiging heeft twee delen die de zaken bij elkaar houden. Het ene deel is wat gebruikers konden maken en delen. Het andere is wat SpaceX zei over de veiligheid van Grok en van X. De indieningen vragen een rechter om die twee delen als één consumentenbeschermingsclaim te behandelen. De wetten die de staten kozen, zijn de volgende regel van die claim.</p>\n<h2>Dus welke wetten gebruiken de staten?</h2>\n<p><strong>De Virginia Consumer Protection Act in Virginia, en de Oregon Unlawful Trade Practices Act in Oregon.</strong> Elke zaak is een consumentenbeschermingszaak onder de wet van die staat, aangespannen bij een staatsrechtbank. De klachten vermelden ook dat X gebruikers toelaat vanaf 13 jaar. Die leeftijdsgrens hoort bij het verhaal van de staten over wie het product kan openen.</p>\n<p>Het zijn civiele zaken van de attorneys general. De aankondigingen zetten ze neer als consumentenbeschermingszaken, met geld en rechterlijke bevelen op de lijst van wat de staten willen. Die lijst is niet op elk punt hetzelfde.</p>\n<h2>Wat vragen de staten?</h2>\n<p><strong>Civiele boetes, kosten, bevelen die strengere grenzen afdwingen, en het afstaan van voordeel.</strong> Een bevel is in dit verzoek een opdracht van de rechter om strengere grenzen aan het product te stellen. Het afstaan van voordeel, in het Engels disgorgement, is een order om winst af te geven waarvan de staat zegt dat die uit de gedraging komt. Virginia vraagt daarnaast restitutie voor consumenten. De gedeelde lijst, voor beide staten, is boetes, kosten, de bevelen over grenzen en het afstaan van voordeel.</p>\n<ul>\n<li><strong>Beide staten:</strong> civiele boetes, kosten, bevelen die strengere grenzen afdwingen, en het afstaan van voordeel.</li>\n<li><strong>Virginia ook:</strong> restitutie voor consumenten.</li>\n<li><strong>De toegangsregel die de zaken noemen:</strong> X laat gebruikers toe vanaf 13 jaar.</li>\n</ul>\n<p>Die remedies zijn wat de klachten vragen. SpaceX heeft al andere rechtszaken en onderzoeken over Grok, en die liggen op een ander dossier dan deze twee indieningen.</p>\n<h2>Dus waar ligt Grok nog meer onder vuur?</h2>\n<p><strong>In het Verenigd Koninkrijk, Spanje, Ierland, Frankrijk en Californië, waar SpaceX al andere rechtszaken en onderzoeken over Grok heeft.</strong> In een zaak in Baltimore tegen xAI beriep het bedrijf zich op Section 230. In een andere zaak noemden advocaten van SpaceX Grok „a neutral tool, subject to user control”, een neutraal gereedschap onder controle van de gebruiker. In oktober zei een beleidsleider voor AI van SpaceX op een hoorzitting van de gemeenteraad van New York dat het bedrijf „safeguards” en „strict controls” had, waarborgen en strikte controles.</p>\n<p>Die drie regels komen uit andere zaken en uit die hoorzitting van oktober. Ze staan hier niet als commentaar op de zaken die Jones en Rayfield op 23 november 2026 indienden. De bronnen voor dit artikel bevatten geen reactie van SpaceX op deze twee indieningen. Het beroep op Section 230 en de hoorzitting van oktober horen bij dat eerdere dossier.</p>"
+  },
+  "credits": [
+    {
+      "file": "news/two-states-sue-spacex-over-grok-images-1.jpg",
+      "credit": "SpaceX, CC0, Wikimedia Commons",
+      "page": "https://commons.wikimedia.org/wiki/File:SpaceX_Headquarters,_Hawthorne,_CA.jpg"
+    },
+    {
+      "file": "news/two-states-sue-spacex-over-grok-images-2.jpg",
+      "credit": "Steve Jurvetson, CC BY 2.0, Wikimedia Commons",
+      "page": "https://commons.wikimedia.org/wiki/File:The_SpaceX_Factory.jpg"
+    }
+  ],
+  "image": "news/two-states-sue-spacex-over-grok-images-1.jpg",
+  "image_lock": true
+}

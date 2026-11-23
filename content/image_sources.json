@@ -1066,5 +1066,23 @@
     "license": "Public domain",
     "credit": "U.S. Air Force photo by Airman 1st Class Ian Dudley, Public domain, Wikimedia Commons",
     "added": "2026-11-23"
+  },
+  "news/two-states-sue-spacex-over-grok-images-1.jpg": {
+    "article": "two-states-sue-spacex-over-grok-images",
+    "real": true,
+    "page": "https://commons.wikimedia.org/wiki/File:SpaceX_Headquarters,_Hawthorne,_CA.jpg",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/SpaceX_Headquarters%2C_Hawthorne%2C_CA.jpg/3840px-SpaceX_Headquarters%2C_Hawthorne%2C_CA.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC0",
+    "credit": "SpaceX, CC0, Wikimedia Commons",
+    "added": "2026-11-23"
+  },
+  "news/two-states-sue-spacex-over-grok-images-2.jpg": {
+    "article": "two-states-sue-spacex-over-grok-images",
+    "real": true,
+    "page": "https://commons.wikimedia.org/wiki/File:The_SpaceX_Factory.jpg",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/The_SpaceX_Factory.jpg/3840px-The_SpaceX_Factory.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY 2.0",
+    "credit": "Steve Jurvetson, CC BY 2.0, Wikimedia Commons",
+    "added": "2026-11-23"
   }
 }

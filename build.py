@@ -478,6 +478,13 @@ h1,h2,h3{color:#ebebeb;font-weight:800}
 .sr{position:absolute;left:-9999px}
 /* header */
 .top{position:sticky;top:0;z-index:40;background:transparent;transition:background-color .2s}.top.solid{background:#161616}.bar .search{height:38px}.bar .search input,.bar .search>button{box-sizing:border-box;height:38px;padding-top:0;padding-bottom:0}
+.ticker{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;justify-content:center;padding:7px 16px;background:#121212;border-bottom:1px solid #2a2a2a;color:#c8c8c8;font-size:.78rem;font-weight:700;line-height:1.3}
+.ticker[hidden]{display:none}
+.ticker .tk{white-space:nowrap}
+.ticker b{color:#fff;font-weight:800}
+.ticker .up{color:#3ddc97}
+.ticker .dn{color:#ff5d57}
+@media (max-width:600.98px){.ticker{justify-content:flex-start;gap:6px 14px;padding:7px 12px;font-size:.72rem;overflow-x:auto}}
 .bar{display:flex;align-items:center;gap:14px;height:66px}
 .brand{display:flex;align-items:baseline;gap:14px;min-width:0}
 .logo{font-weight:800;font-size:1.4rem;letter-spacing:-.02em;color:#ebebeb;text-decoration:none;white-space:nowrap}
@@ -2000,7 +2007,7 @@ def read_time(a, lang):
     return max(1, round(len(html.unescape(a[lang]["body"]).split()) / 220))
 
 
-def page(lang, path, title, description, body, og_type="website", extra_head="", image=None, active=None, robots=None, canonical=True, bar=None, alt_path=None):
+def page(lang, path, title, description, body, og_type="website", extra_head="", image=None, active=None, robots=None, canonical=True, bar=None, alt_path=None, ticker=False):
     L = LANGS[lang]
     alt = other(lang)
     # alt_path is the other language's slug when it differs (newsletter/ vs nieuwsbrief/).
@@ -2135,6 +2142,7 @@ def page(lang, path, title, description, body, og_type="website", extra_head="",
 </head>
 <body>
 {header}
+{ticker_bar(lang) if ticker else ""}
 <div class="scrim"></div>
 <nav id="drawer" class="drawer" aria-label="{L['menu']}">{drawer(lang, active, path.strip("/").split("/")[1] if path.strip("/").startswith("model/") else None)}</nav>
 <main class="wrap">
@@ -4776,6 +4784,83 @@ def home_feed(items, lang):
     return "".join(out)
 
 
+TICKER_JS = r"""(function(){
+var bar=document.getElementById('ticker');
+if(!bar)return;
+var nl=document.documentElement.lang==='nl';
+function esc(s){return String(s).replace(/[&<>]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;'}[c]})}
+function slot(key){return bar.querySelector('[data-tk="'+key+'"]')}
+function reveal(key,html){var el=slot(key);if(!el)return;el.innerHTML=html;el.hidden=false;bar.hidden=false}
+function hide(key){var el=slot(key);if(el)el.hidden=true;if(!bar.querySelector('.tk:not([hidden])'))bar.hidden=true}
+function thousands(n){var s=String(Math.round(n));return s.replace(/\B(?=(\d{3})+(?!\d))/g,nl?'.':',')}
+fetch('/ticker.json').then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(d){
+if(d&&d.tsla&&typeof d.tsla.p==='number'){var up=d.tsla.c>=0,sign=up?'+':'\u2212';
+reveal('tsla','<b>TSLA</b> $'+d.tsla.p.toFixed(2)+' <span class="'+(up?'up':'dn')+'">'+sign+Math.abs(d.tsla.c).toFixed(2)+' ('+sign+Math.abs(d.tsla.pct).toFixed(1)+'%)</span>')}
+else hide('tsla');
+if(d&&typeof d.starlink==='number'&&d.starlink>1000)reveal('sats','<b>Starlink</b> '+thousands(d.starlink)+(nl?' in een baan':' in orbit'));
+else hide('sats')}).catch(function(){hide('tsla');hide('sats')});
+fetch('https://ll.thespacedevs.com/2.2.0/launch/upcoming/?lsp__id=121&limit=8&mode=list').then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(d){
+var now=Date.now(),best=null;(d.results||[]).forEach(function(x){var net=Date.parse(x.net||''),st=(x.status&&x.status.abbrev)||'';
+if(!(net>now)||st==='Success'||st==='Failure')return;if(!best||net<best.net)best={net:net,name:String(x.name||'')}});
+if(!best){hide('launch');return}
+var name=(best.name.split('|').pop()||best.name).trim();
+function paint(){var left=best.net-Date.now();if(left<=0){hide('launch');return}
+var s=Math.floor(left/1000),days=Math.floor(s/86400);s-=days*86400;var h=Math.floor(s/3600);s-=h*3600;var m=Math.floor(s/60);
+var clock=(days?days+'d ':'')+h+'h '+m+'m';
+reveal('launch','<b>'+(nl?'Volgende lancering':'Next launch')+'</b> '+clock+' \u00b7 '+esc(name))}
+paint();setInterval(paint,30000)}).catch(function(){hide('launch')});
+})();"""
+
+
+def ticker_bar(lang):
+    """Empty until the script fills it. A failed source stays hidden."""
+    return (
+        '<div class="ticker" id="ticker" hidden>'
+        '<span class="tk" data-tk="tsla" hidden></span>'
+        '<span class="tk" data-tk="launch" hidden></span>'
+        '<span class="tk" data-tk="sats" hidden></span></div>'
+        f"<script>{TICKER_JS}</script>")
+
+
+def write_ticker():
+    """Build-time quotes. Missing data is left out so the bar can hide that item."""
+    import urllib.request
+    data = {}
+    try:
+        req = urllib.request.Request(
+            "https://query1.finance.yahoo.com/v8/finance/chart/TSLA?interval=1d&range=5d",
+            headers={"User-Agent": "TrendingTesla/1.0"})
+        with urllib.request.urlopen(req, timeout=15) as response:
+            chart = json.load(response)["chart"]["result"][0]
+        closes = [c for c in chart["indicators"]["quote"][0]["close"] if isinstance(c, (int, float))]
+        if len(closes) >= 2 and closes[-2]:
+            price, prev = closes[-1], closes[-2]
+            change = price - prev
+            data["tsla"] = {"p": round(price, 2), "c": round(change, 2), "pct": round(change / prev * 100, 2)}
+    except (OSError, ValueError, KeyError, TypeError, IndexError):
+        pass
+    for _try in range(2):
+        try:
+            req = urllib.request.Request(
+                "https://celestrak.org/NORAD/elements/gp.php?GROUP=starlink&FORMAT=json",
+                headers={"User-Agent": "TrendingTesla/1.0"})
+            with urllib.request.urlopen(req, timeout=40) as response:
+                chunks, size = [], 0
+                while size < 40_000_000:
+                    block = response.read(1_000_000)
+                    if not block:
+                        break
+                    chunks.append(block)
+                    size += len(block)
+            rows = json.loads(b"".join(chunks))
+            if isinstance(rows, list) and len(rows) > 1000:
+                data["starlink"] = len(rows)
+            break
+        except (OSError, ValueError, TypeError):
+            continue
+    (OUT / "ticker.json").write_text(json.dumps(data, separators=(",", ":")), encoding="utf-8")
+
+
 def homepage(arts, lang):
     """Newest stories, one card each. A video on an article is a badge, not a second card."""
     L = LANGS[lang]
@@ -6575,6 +6660,7 @@ def build():
     if OUT.exists():
         shutil.rmtree(OUT)
     shutil.copytree(STATIC, OUT)
+    write_ticker()
 
     # Images
     for a in arts:
@@ -6602,7 +6688,7 @@ def build():
                                  "logo": {"@type": "ImageObject", "url": SITE + "/favicon-512.png", "width": 512, "height": 512},
                                  "sameAs": ["https://www.youtube.com/@TrendingTesla"]}}
         write(url(lang), page(lang, "", NAME, L["home_desc"], body,
-                              extra_head=ld_script(site_ld) + ld_script(crumb_ld)))
+                              extra_head=ld_script(site_ld) + ld_script(crumb_ld), ticker=True))
 
         # ---------- Category pages ----------
         for key, c in CATEGORIES.items():

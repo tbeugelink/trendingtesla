@@ -1,0 +1,123 @@
+{
+  "slug": "spacex-relaunched-one-pad-after-32-hours",
+  "date": "2026-11-23",
+  "time": "08:56",
+  "category": "spacex",
+  "layer": "spacex",
+  "topic": "falcon",
+  "card": {
+    "en": "SpaceX relaunched from one pad after 32 hours",
+    "nl": "SpaceX lanceerde twee keer na 32 uur"
+  },
+  "image": "news/spacex-relaunched-one-pad-after-32-hours-1.jpg",
+  "images": [
+    "news/spacex-relaunched-one-pad-after-32-hours-1.jpg",
+    "news/spacex-relaunched-one-pad-after-32-hours-2.jpg",
+    "topics/spacex-1.jpg",
+    "topics/spacex-6.jpg",
+    "gen/spacex-first-falcon-9-landing-2015-two-crashes-one-explosion-orbcomm-2.jpg",
+    "gen/spacex-first-falcon-9-landing-2015-two-crashes-one-explosion-orbcomm-2-x2-11082022.jpg"
+  ],
+  "real_photos": [
+    {
+      "page": "https://commons.wikimedia.org/wiki/File:2016_Falcon_9_at_Vandenberg_Air_Force_Base.jpg",
+      "describe": "a Falcon 9 standing vertical on its launch mount at Vandenberg, ocean behind the pad",
+      "file": "news/spacex-relaunched-one-pad-after-32-hours-1.jpg",
+      "credit": "SpaceX, CC0, Wikimedia Commons"
+    },
+    {
+      "page": "https://commons.wikimedia.org/wiki/File:Falcon_9_launches_from_Vandenberg_Air_Force_Base_(3105284).jpg",
+      "describe": "a Falcon 9 lifting off beside a hillside at Vandenberg, flame under the rocket and the tower in the smoke",
+      "file": "news/spacex-relaunched-one-pad-after-32-hours-2.jpg",
+      "credit": "U.S. Air Force photo by Airman 1st Class Ian Dudley, Public domain, Wikimedia Commons"
+    }
+  ],
+  "sources": [
+    {
+      "title": "SpaceX — USSF-317",
+      "url": "https://www.spacex.com/launches/ussf317"
+    },
+    {
+      "title": "SpaceX — NROL-136",
+      "url": "https://www.spacex.com/launches/nrol136"
+    },
+    {
+      "title": "Space.com — SpaceX spy-satellite launch NROL-136 and the pad turnaround",
+      "url": "https://www.space.com/space-exploration/launches-spacecraft/spacex-spy-satellite-launch-nrol-136-proliferated-architecture"
+    },
+    {
+      "title": "Spaceflight Now — Falcon 9 mission reports",
+      "url": "https://spaceflightnow.com/mission-reports/falcon-9/"
+    },
+    {
+      "title": "Tesla North — SpaceX NROL-136 and the 32-hour Vandenberg turnaround",
+      "url": "https://teslanorth.com/2026/11/22/spacex-nrol-136-vandenberg-32-hours/"
+    },
+    {
+      "title": "Next Spaceflight — NROL-136 launch details",
+      "url": "https://nextspaceflight.com/launches/details/8468/"
+    }
+  ],
+  "label": {
+    "style": "n",
+    "en": {
+      "sub": "ONE PAD",
+      "text": "32 HOURS"
+    },
+    "nl": {
+      "sub": "ÉÉN PAD",
+      "text": "32 UUR"
+    }
+  },
+  "gen_image": {
+    "prompt": "An illustration of a white Falcon 9 with a black interstage standing on a coastal launch pad at blue hour, steam around the mount, the rocket large and sharp in the horizontal centre, calm open ground in the lower-left third, no readable text, no logos, no people, not a photograph of a named launch",
+    "subject": "a Falcon 9 rocket, the same white booster and pointed fairing as the reference photos, not Starship",
+    "refs": [
+      {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/6/6c/SpaceX_Falcon_9_SSO-A_launches_from_Vandenberg_%28181203-F-IN231-001%29.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:SpaceX_Falcon_9_SSO-A_launches_from_Vandenberg_(181203-F-IN231-001).jpg",
+        "license": "Public domain"
+      },
+      {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Falcon_9_launches_from_Vandenberg_Air_Force_Base_%283105284%29.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Falcon_9_launches_from_Vandenberg_Air_Force_Base_(3105284).jpg",
+        "license": "Public domain"
+      }
+    ],
+    "profile": "editorial",
+    "category": "A",
+    "describe": "Illustration of a Falcon 9 on a coastal pad at blue hour. Not a photograph of USSF-317 or NROL-136.",
+    "extra": [
+      {
+        "prompt": "An illustration of a Falcon 9 first stage landing on a droneship at sunset, legs down, engine flame over the deck, ocean around the ship, no readable text, no logos, no people, calm water in the lower-left third",
+        "describe": "Illustration of a Falcon 9 booster landing on a droneship at sunset"
+      },
+      {
+        "prompt": "An illustration of a Falcon 9 first stage landing on a concrete pad near a dark coastline at dawn, one engine lit, landing legs down, no readable text, no logos, no people, open pad in the lower-left third",
+        "describe": "Illustration of a Falcon 9 booster landing on a concrete pad at dawn"
+      }
+    ]
+  },
+  "en": {
+    "title": "SpaceX relaunched from one pad after 32 hours",
+    "description": "SpaceX flew two Falcon 9 rockets from SLC-4E at Vandenberg 32 hours, 3 minutes and 21 seconds apart, its fastest turnaround from one pad. NROL-136 lifted off on 22 November 2026 after USSF-317 on 20 November.",
+    "body": "<p>SpaceX launched two Falcon 9 rockets from the same pad 32 hours, 3 minutes and 21 seconds apart. That gap, between USSF-317 and NROL-136 at SLC-4E on Vandenberg Space Force Base in California, is the company's fastest turnaround between launches from one pad. USSF-317 left on Friday 20 November 2026 at 8:20 p.m. Pacific time. NROL-136 left the same pad on Sunday 22 November 2026 at 4:23 a.m. Pacific time, 12:23 UTC, for the US National Reconnaissance Office. The photographs on this page are earlier Falcon 9 rockets at Vandenberg, plus illustrations of a Falcon 9 on a pad and of a booster coming down. They are not photographs of these two missions. The clock is the record. Which booster flew, and where it landed, is a separate fact.</p>\n<h2>How long was the gap between the two launches?</h2>\n<p><strong>32 hours, 3 minutes and 21 seconds, from one liftoff on SLC-4E to the next.</strong> Space.com reports that figure in a quote from Kiko Dontchev, SpaceX's vice president of launch. Spaceflight Now and Next Spaceflight report the same gap. The three accounts call it SpaceX's fastest turnaround between launches from one pad. Both rockets used SLC-4E at Vandenberg. The first launch was Friday night. The second was early Sunday. A new interval only means something next to the record it replaced.</p>\n<h2>So what record did this pair beat?</h2>\n<p><strong>The previous company record was 45 hours, from Pad 40 at Cape Canaveral.</strong> Space.com and Spaceflight Now both place that older mark on SLC-40 in Florida. Vandenberg had a slower number of its own. Spaceflight Now times the previous SLC-4E turnaround, in June 2026, at 55 hours, 48 minutes and 21 seconds. This pair beat that SLC-4E mark by more than 23 hours. Next Spaceflight puts the improvement at about 23 hours. Two launches from one pad can still be two different rockets.</p>\n<h2>Did the same booster fly both missions?</h2>\n<p><strong>No. The missions used different boosters.</strong> The USSF-317 booster was on its 11th flight and landed on the droneship Of Course I Still Love You. SpaceX's launch page for USSF-317 and Tesla North both give that flight count and that ship. The NROL-136 booster was on its 14th flight and landed at Landing Zone 4 at Vandenberg about 7.5 minutes after liftoff. SpaceX's page for NROL-136, Space.com and Tesla North report the 14th flight and the landing at LZ-4. A reused pad and a reused booster are two different kinds of reuse. The launch team has already named the clock it wants next.</p>\n<h2>So what did Kiko Dontchev say is next?</h2>\n<p><strong>He said the team arrived with several hours of margin, and that the next goal is a 24-hour turn.</strong> On X on 22 November, Dontchev wrote that the team \"got there with several hours of margin. Next goal… the 24 hr turn!\" Space.com quotes that post. Spaceflight Now covers the same record. A goal he names is his statement about what comes next. It is not a 24-hour turn that has already happened. The second flight in this pair still carried a payload, and almost none of that payload is public.</p>\n<h2>What did NROL-136 carry?</h2>\n<p><strong>A satellite for the National Reconnaissance Office's proliferated architecture in low Earth orbit, the fourth such launch of the year.</strong> Spaceflight Now and Space.com both place NROL-136 in that constellation. The payload details are classified. The public record stops at the customer, the orbit and the count for the year. This account adds no spacecraft count, no payload name and no mass. The first flight of the pair is still a time, a pad and a landing.</p>\n<h2>When did USSF-317 leave the pad?</h2>\n<p><strong>Friday 20 November 2026 at 8:20 p.m. Pacific time, from SLC-4E, with the booster on its 11th flight landing on Of Course I Still Love You.</strong> SpaceX's launch page and Tesla North both give that evening, that pad in California and that droneship. NROL-136 then used the same pad on Sunday at 4:23 a.m. Pacific time. The boosters were not the same vehicle. The gap of 32 hours, 3 minutes and 21 seconds is the pad record. The 24-hour turn Dontchev named is still a goal he stated.</p>"
+  },
+  "nl": {
+    "title": "SpaceX lanceerde twee keer na 32 uur",
+    "description": "SpaceX lanceerde twee Falcon 9-raketten vanaf SLC-4E op Vandenberg met 32 uur, 3 minuten en 21 seconden ertussen, de snelste ommekeer vanaf één platform. NROL-136 vertrok op 22 november 2026 na USSF-317 op 20 november.",
+    "body": "<p>SpaceX heeft twee Falcon 9-raketten vanaf hetzelfde platform gelanceerd, met 32 uur, 3 minuten en 21 seconden ertussen. Die tijd, tussen USSF-317 en NROL-136 op SLC-4E van Vandenberg Space Force Base in Californië, is de snelste ommekeer die het bedrijf ooit tussen twee lanceringen vanaf één platform heeft gehaald. USSF-317 vertrok op vrijdag 20 november 2026 om 20.20 uur Pacific time. NROL-136 vertrok zondag 22 november 2026 om 4.23 uur Pacific time, 12.23 UTC, voor het Amerikaanse National Reconnaissance Office. De foto's op deze pagina zijn eerdere Falcon 9-raketten op Vandenberg, plus illustraties van een Falcon 9 op een platform en van een booster die terugkomt. Het zijn geen foto's van deze twee missies. De klok is het record. Welke booster vloog, en waar die landde, is een apart feit.</p>\n<h2>Hoe lang zat er tussen de twee lanceringen?</h2>\n<p><strong>32 uur, 3 minuten en 21 seconden, van de ene start op SLC-4E tot de volgende.</strong> Space.com noemt dat getal in een citaat van Kiko Dontchev, vicepresident lanceringen bij SpaceX. Spaceflight Now en Next Spaceflight melden dezelfde tussenruimte. De drie verslagen noemen het de snelste ommekeer van SpaceX tussen lanceringen vanaf één platform. Beide raketten gebruikten SLC-4E op Vandenberg. De eerste start was vrijdagavond. De tweede was vroeg op zondagochtend. Een nieuw interval zegt pas iets naast het record dat het verving.</p>\n<h2>Dus welk record haalde dit paar in?</h2>\n<p><strong>Het vorige bedrijfsrecord was 45 uur, vanaf Pad 40 op Cape Canaveral.</strong> Space.com en Spaceflight Now leggen dat oudere cijfer allebei op SLC-40 in Florida. Vandenberg had een eigen, langzamer getal. Spaceflight Now zet de vorige ommekeer op SLC-4E, in juni 2026, op 55 uur, 48 minuten en 21 seconden. Dit paar verbeterde dat SLC-4E-cijfer met meer dan 23 uur. Next Spaceflight zet de winst op ongeveer 23 uur. Twee lanceringen vanaf één platform kunnen nog steeds twee verschillende raketten zijn.</p>\n<h2>Vloog dezelfde booster beide missies?</h2>\n<p><strong>Nee. De missies gebruikten verschillende boosters.</strong> De booster van USSF-317 was aan zijn 11e vlucht en landde op het droneschip Of Course I Still Love You. De lanceerpagina van SpaceX voor USSF-317 en Tesla North geven allebei dat vluchtaantal en dat schip. De booster van NROL-136 was aan zijn 14e vlucht en landde op Landing Zone 4 op Vandenberg, ongeveer 7,5 minuten na de start. De pagina van SpaceX voor NROL-136, Space.com en Tesla North melden de 14e vlucht en de landing op LZ-4. Een hergebruikt platform en een hergebruikte booster zijn twee verschillende vormen van hergebruik. Het lanceringsteam heeft de klok die het daarna wil al genoemd.</p>\n<h2>Dus wat zei Kiko Dontchev over de volgende draai?</h2>\n<p><strong>Hij zei dat het team er met enkele uren speling aankwam, en dat het volgende doel een draai van 24 uur is.</strong> Op X schreef Dontchev op 22 november dat het team \"got there with several hours of margin. Next goal… the 24 hr turn!\" Space.com citeert die post. Spaceflight Now beschrijft hetzelfde record. Een doel dat hij noemt is zijn uitspraak over wat daarna komt. Het is geen draai van 24 uur die al is gevlogen. De tweede vlucht van dit paar had wel een lading, en van die lading is bijna niets openbaar.</p>\n<h2>Wat zat er op NROL-136?</h2>\n<p><strong>Een satelliet voor de proliferated architecture van het National Reconnaissance Office, in een lage baan om de aarde, de vierde lancering van die constellatie dit jaar.</strong> Spaceflight Now en Space.com plaatsen NROL-136 allebei in die constellatie. De details van de lading zijn geheim. Het openbare verslag stopt bij de opdrachtgever, de baan en de telling voor dit jaar. Dit stuk voegt geen aantal vaartuigen, geen naam en geen massa toe. De eerste vlucht van het paar blijft een tijdstip, een platform en een landing.</p>\n<h2>Wanneer vertrok USSF-317?</h2>\n<p><strong>Vrijdag 20 november 2026 om 20.20 uur Pacific time, vanaf SLC-4E, waarna de booster op zijn 11e vlucht landde op Of Course I Still Love You.</strong> De lanceerpagina van SpaceX en Tesla North geven allebei die avond, dat platform in Californië en dat droneschip. NROL-136 gebruikte hetzelfde platform daarna op zondag om 4.23 uur Pacific time. De boosters waren niet hetzelfde voertuig. De tussenruimte van 32 uur, 3 minuten en 21 seconden is het platformrecord. De draai van 24 uur die Dontchev noemde, blijft een doel dat hij heeft uitgesproken.</p>"
+  },
+  "credits": [
+    {
+      "file": "news/spacex-relaunched-one-pad-after-32-hours-1.jpg",
+      "credit": "SpaceX, CC0, Wikimedia Commons",
+      "page": "https://commons.wikimedia.org/wiki/File:2016_Falcon_9_at_Vandenberg_Air_Force_Base.jpg"
+    },
+    {
+      "file": "news/spacex-relaunched-one-pad-after-32-hours-2.jpg",
+      "credit": "U.S. Air Force photo by Airman 1st Class Ian Dudley, Public domain, Wikimedia Commons",
+      "page": "https://commons.wikimedia.org/wiki/File:Falcon_9_launches_from_Vandenberg_Air_Force_Base_(3105284).jpg"
+    }
+  ]
+}

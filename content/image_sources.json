@@ -1048,5 +1048,23 @@
     "license": "CC BY 2.0",
     "credit": "FotoSleuth, CC BY 2.0, Wikimedia Commons",
     "added": "2026-11-16"
+  },
+  "news/spacex-relaunched-one-pad-after-32-hours-1.jpg": {
+    "article": "spacex-relaunched-one-pad-after-32-hours",
+    "real": true,
+    "page": "https://commons.wikimedia.org/wiki/File:2016_Falcon_9_at_Vandenberg_Air_Force_Base.jpg",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/7/72/2016_Falcon_9_at_Vandenberg_Air_Force_Base.jpg",
+    "license": "CC0",
+    "credit": "SpaceX, CC0, Wikimedia Commons",
+    "added": "2026-11-23"
+  },
+  "news/spacex-relaunched-one-pad-after-32-hours-2.jpg": {
+    "article": "spacex-relaunched-one-pad-after-32-hours",
+    "real": true,
+    "page": "https://commons.wikimedia.org/wiki/File:Falcon_9_launches_from_Vandenberg_Air_Force_Base_(3105284).jpg",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Falcon_9_launches_from_Vandenberg_Air_Force_Base_%283105284%29.jpg/3840px-Falcon_9_launches_from_Vandenberg_Air_Force_Base_%283105284%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "Public domain",
+    "credit": "U.S. Air Force photo by Airman 1st Class Ian Dudley, Public domain, Wikimedia Commons",
+    "added": "2026-11-23"
   }
 }

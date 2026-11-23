@@ -11,10 +11,10 @@ nl: Een kofferbakmat en een vloerset voor een Model Y zijn twee verschillende pa
 :::product
 name_en: CYBERBEANS trunk mat for Model Y
 name_nl: CYBERBEANS-kofferbakmat voor Model Y
-pros_en: A TPE trunk mat listed for five-seat Model Y cars from 2020 through 2026, including Juniper, Standard, Premium and Performance
-pros_nl: Een TPE-kofferbakmat vermeld voor Model Y met vijf zitplaatsen van 2020 tot en met 2026, inclusief Juniper, Standard, Premium en Performance
-cons_en: Not for the seven-seat Model Y. Check the current price
-cons_nl: Niet voor de Model Y met zeven zitplaatsen. Kijk de actuele prijs na
+pros_en: TPE trunk mat | Listed for five-seat Model Y cars from 2020 through 2026 | Includes Juniper, Standard, Premium and Performance
+pros_nl: Kofferbakmat van TPE | Vermeld voor Model Y met vijf zitplaatsen van 2020 tot 2026 | Inclusief Juniper, Standard, Premium en Performance
+fits_en: A five-seat Model Y. Not the seven-seat car.
+fits_nl: Een Model Y met vijf zitplaatsen. Niet de auto met zeven zitplaatsen.
 url: https://www.amazon.nl/dp/B0FLQ76FVW
 button_en: View on Amazon
 button_nl: Bekijk bij Amazon
@@ -23,10 +23,10 @@ button_nl: Bekijk bij Amazon
 :::product
 name_en: GAFAT floor mats for Model Y Juniper
 name_nl: GAFAT-vloermatten voor Model Y Juniper
-pros_en: TPE floor mats listed for the 2025 to 2027 Model Y Juniper, including Standard, Premium and Performance
-pros_nl: TPE-vloermatten vermeld voor de Model Y Juniper van 2025 tot en met 2027, inclusief Standard, Premium en Performance
-cons_en: Listed for the Juniper. An older Model Y needs a different floor set. Check the current price
-cons_nl: Vermeld voor de Juniper. Een oudere Model Y heeft een andere vloerset nodig. Kijk de actuele prijs na
+pros_en: TPE floor mats | Listed for the 2025 to 2027 Model Y Juniper | Standard, Premium and Performance
+pros_nl: Vloermatten van TPE | Vermeld voor de Model Y Juniper van 2025 tot 2027 | Standard, Premium en Performance
+fits_en: A 2025 to 2027 Model Y Juniper. An older Model Y needs a different floor set.
+fits_nl: Een Model Y Juniper van 2025 tot 2027. Een oudere Model Y heeft een andere vloerset nodig.
 url: https://www.amazon.nl/dp/B0DZ5JB22G
 button_en: View on Amazon
 button_nl: Bekijk bij Amazon

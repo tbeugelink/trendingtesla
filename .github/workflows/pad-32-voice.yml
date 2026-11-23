@@ -1,0 +1,44 @@
+name: Pad 32-hour Short preview voice
+
+# Renders only the Noah narration for the Vandenberg pad-turnaround preview Short and commits the
+# audio back to this branch so the picture can be cut before anything is made public.
+# It never uploads to YouTube, never calls Buffer, and does not touch main, content/ or shorts.yml.
+on:
+  push:
+    branches: [cursor/pad-32-hours-short-9a54]
+    paths:
+      - .github/workflows/pad-32-voice.yml
+      - video/pad-32/script.json
+      - video/pad-32/noah_voice.py
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pad-32-voice
+  cancel-in-progress: false
+
+jobs:
+  voice:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+      - name: Install tools
+        run: pip install --quiet pillow num2words
+      - name: Render Noah narration
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        run: python3 video/pad-32/noah_voice.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pad-32-voice
+          path: video/pad-32/out/
+          retention-days: 14
+      - name: Commit the audio to this branch
+        run: |
+          git config user.name "TrendingTesla bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f video/pad-32/out
+          git commit -qm "Pad 32-hour Short preview: Noah narration" || exit 0
+          git push -q origin HEAD:cursor/pad-32-hours-short-9a54

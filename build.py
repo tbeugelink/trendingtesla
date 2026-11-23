@@ -458,9 +458,9 @@ CSS = """
 @font-face{font-family:"Manrope Fallback";font-weight:800;src:local("Arial"),local("Arimo"),local("Liberation Sans");size-adjust:119.86%;ascent-override:88.94%;descent-override:25.03%;line-gap-override:0%}
 :root{--bg:#04060a;--surface:#212121;--surface2:#272727;--border:#272727;--border2:#3f3f3f;--fg:#e8eef5;--head:#fff;--muted:#b9c4d2;--dim:#8f9db0;--red:#e22822;--red2:#b81e19;--blue:#00d4ff;--edge:#3a4a60;--blue2:#5fe3ff;--max:1160px;--card-gap-x:12px;--card-gap-y:22px;color-scheme:dark}
 *{box-sizing:border-box;margin:0;padding:0}
-html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:150px;background:#04060a}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:150px;background:#04060a}
 html,body{overflow-x:clip;max-width:100%}
-body{background:linear-gradient(180deg,rgba(15,15,15,0) 0,rgba(15,15,15,0) 35%,#0f0f0f 100%) top left/100% 900px no-repeat,linear-gradient(160deg,#2b2b2b 0%,#1d1d1d 35%,#141414 70%,#0f0f0f 100%) top left/100% 900px no-repeat,#0f0f0f;min-height:100vh;color:var(--fg);font:17px/1.42 Manrope,"Manrope Fallback",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+body{-webkit-text-size-adjust:100%;text-size-adjust:100%;background:linear-gradient(180deg,rgba(15,15,15,0) 0,rgba(15,15,15,0) 35%,#0f0f0f 100%) top left/100% 900px no-repeat,linear-gradient(160deg,#2b2b2b 0%,#1d1d1d 35%,#141414 70%,#0f0f0f 100%) top left/100% 900px no-repeat,#0f0f0f;min-height:100vh;color:var(--fg);font:17px/1.42 Manrope,"Manrope Fallback",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
 main,footer{position:relative;z-index:1}
 a{color:var(--head)}
 img{display:block;max-width:100%;height:auto}picture{display:contents}
@@ -478,7 +478,7 @@ h1,h2,h3{color:#ebebeb;font-weight:800}
 .sr{position:absolute;left:-9999px}
 /* header */
 .top{position:sticky;top:0;z-index:40;background:transparent;transition:background-color .2s}.top.solid{background:#161616}.bar .search{height:38px}.bar .search input,.bar .search>button{box-sizing:border-box;height:38px;padding-top:0;padding-bottom:0}
-.ticker{box-sizing:border-box;width:100%;max-width:100%;min-width:0;margin:0;padding:8px 0;border-top:3px solid var(--red);display:block;overflow:hidden;background:transparent;color:var(--fg);font-size:11px;font-weight:600;line-height:14px}
+.ticker{box-sizing:border-box;width:100%;max-width:100%;min-width:0;margin:0;padding:8px 0;border-top:3px solid var(--red);display:block;overflow:hidden;contain:inline-size;background:transparent;color:var(--fg);font-size:11px;font-weight:600;line-height:14px}
 .tk-track{display:flex;width:max-content;animation:tk-run 112s linear infinite}
 .tk-set{display:flex;align-items:center;flex:none}
 .tk{white-space:nowrap;color:inherit;text-decoration:none}
@@ -494,9 +494,13 @@ h1,h2,h3{color:#ebebeb;font-weight:800}
 .ticker-main{display:none}
 @media (max-width:900px){
 .ticker-main{display:block;border-bottom:3px solid var(--red)}
-.pv-side>.ticker{display:none}
-.hfeed .pv-hl b{font-size:17.5px;line-height:1.28}
-.hfeed .pv-row{grid-template-columns:40px minmax(0,1fr) 64px;column-gap:4px}
+.sheet:has(.ticker-main) .pv-side>.ticker{display:none}
+.hfeed .pv-hl b{font-size:13px;line-height:1.3;hyphens:none;-webkit-hyphens:none;overflow-wrap:normal;word-break:normal;-webkit-text-size-adjust:none;text-size-adjust:none}
+.hfeed .pv-row time{font-size:12px;-webkit-text-size-adjust:none;text-size-adjust:none}
+.hfeed .pv-min{width:48px;min-width:48px;padding:2px 1px}
+.hfeed .pv-min b{font-size:12px}
+.hfeed .pv-min small{font-size:8px}
+.hfeed .pv-row{grid-template-columns:42px minmax(0,1fr) 48px;column-gap:6px}
 }
 @media (prefers-reduced-motion:reduce){.ticker{overflow-x:auto;overflow-y:hidden}.tk-track{animation:none}.tk-set[aria-hidden="true"]{display:none}}
 .bar{display:flex;align-items:center;gap:14px;height:66px}
@@ -707,7 +711,14 @@ article .st{font-size:clamp(1.05rem,2vw,1.3rem);line-height:1.22;letter-spacing:
 .phead p{color:var(--muted);margin-top:6px}
 .phead img{width:min(420px,45%);flex:none;border-radius:10px;border:1px solid var(--edge)}
 /* article */
-article{padding:36px 0 8px}
+article{padding:13px 0 8px}
+@media (min-width:901px){
+.sheet-main>article.narrow{padding-top:0}
+.sheet-main>article.narrow>h1:first-child{margin-top:0}
+.sheet-main article.money>h1:first-child{margin-top:0}
+.sheet-main .archh{margin-top:0}
+.sheet-main>header.hubhead{padding-top:0}
+}
 article h1{font-size:clamp(1.8rem,4.6vw,2.6rem);line-height:1.12;letter-spacing:-.025em;margin:10px 0 14px}
 article .lead{font-size:1.12rem;line-height:1.38;color:var(--muted);margin:0 0 22px}
 article .hero-img{border-radius:10px;margin:0 0 26px;aspect-ratio:1200/630;width:100%;object-fit:cover;border:1px solid var(--edge)}
@@ -729,7 +740,7 @@ article .prose{font-size:17px}article .prose,article .lead{max-width:860px}artic
 .sources[open] summary::after{transform:rotate(180deg)}
 .sources summary:hover{color:var(--blue2)}
 .sources ul{margin-top:10px;padding:12px 16px 12px 32px;background:var(--surface);border-radius:10px}
-.sources li{margin-bottom:4px}article .prose h2,article .prose li,article h1,article .lead{text-align:left}@media (min-width:601px){article .prose>p{text-align:justify;-webkit-hyphens:auto;hyphens:auto;hyphenate-limit-chars:7 3 3}}article .prose,article .lead{max-width:none;box-sizing:border-box;padding-left:3vw;padding-right:3vw}article .lead{padding-left:calc(3vw + 14px);padding-right:calc(3vw + 14px)}@media (max-width:600.98px){article .prose,article .lead{padding-left:0;padding-right:0}article .lead{padding-left:14px;padding-right:14px}}article .sources{padding-bottom:20px;border-bottom:1px solid var(--border2)}@media(min-width:601px){.tip{padding-top:37px;padding-bottom:37px}}
+.sources li{margin-bottom:4px}article .prose h2,article .prose li,article h1,article .lead{text-align:left}@media (min-width:601px){article .prose>p{text-align:justify;-webkit-hyphens:auto;hyphens:auto;hyphenate-limit-chars:7 3 3}}article .prose,article .lead{max-width:none;box-sizing:border-box;padding-left:3vw;padding-right:3vw}article .lead{padding-left:calc(3vw + 14px);padding-right:calc(3vw + 14px)}@media (max-width:600.98px){article .prose,article .lead{padding-left:0;padding-right:0}article .lead{padding-left:4px;padding-right:4px}article .prose p,article .prose ul,article .prose ol,article .prose h2{margin-left:4px;margin-right:4px}article .prose .gtable,article .prose .gbox{display:block;width:calc(100% - 8px);max-width:calc(100% - 8px);margin-left:4px;margin-right:4px;box-sizing:border-box}}article .sources{padding-bottom:20px;border-bottom:1px solid var(--border2)}@media(min-width:601px){.tip{padding-top:37px;padding-bottom:37px}}
 .sources a{color:var(--muted)}
 /* footer */
 footer{border-top:1px solid var(--border);margin-top:14px;padding:15px 0 40px;font-size:.85rem;color:var(--dim)}
@@ -1079,6 +1090,8 @@ header.hb .pnav>.is-parked{display:none}
 .pv-side ul li{padding:7px 0;border-bottom:1px solid #242424;font-size:.88rem;line-height:1.3;font-weight:700}
 .pv-side ul.latest li{display:grid;grid-template-columns:1.3rem minmax(0,1fr);gap:6px;align-items:start}
 .pv-side ul.latest li::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--red);justify-self:start;align-self:start;margin-top:calc(0.65em - 2.5px);margin-left:1px}
+.pv-side ul.hubs li{display:grid;grid-template-columns:6px minmax(0,1fr);column-gap:8px;align-items:start}
+.pv-side ul.hubs li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--red);align-self:start;margin-top:calc(0.65em - 3px)}
 .pv-side a:hover,.pv-side a:focus-visible{color:var(--blue)}
 .pv-side .ticker a:hover,.pv-side .ticker a:focus-visible{color:inherit}
 .pv-side .nlside-form{display:flex;flex-direction:column;align-items:stretch;gap:8px;max-height:none;padding:0;border:0;border-radius:0;background:transparent}
@@ -1183,13 +1196,13 @@ article.money>.lmeta a.lname:hover{text-decoration:underline}
 .sheet-main article.money .pbox,.sheet-main article.money .nform,.sheet-main article.money .adslot{max-width:none}
 @media (max-width:640px){.sheet-main article.money .avid.short .avb,.pv-art .avid.short .avb{width:calc(100% - 2 * (3vw + 14px));margin-left:calc(3vw + 14px);margin-right:calc(3vw + 14px)}}
 .sheet-main article.money .avid.long .avb,.pv-art .avid.long .avb,.sheet-main article.money>.hi,.pv-art article.money>.hi{display:block;width:calc(100% - 2 * (3vw + 14px));margin-left:calc(3vw + 14px);margin-right:calc(3vw + 14px)}
-@media (max-width:600.98px){.sheet-main article.money .avid.long .avb,.pv-art .avid.long .avb,.sheet-main article.money>.hi,.pv-art article.money>.hi,.sheet-main article.money .avid.short .avb,.pv-art .avid.short .avb{width:calc(100% - 28px);margin-left:14px;margin-right:14px}}
-.sheet-main article.narrow>h1,.sheet-main article.money>h1,.sheet-main article.money>.meta,.sheet-main article.money>.byline{margin-left:calc(3vw + 14px);margin-right:calc(3vw + 14px)}
+@media (max-width:600.98px){.sheet-main article.money .avid.long .avb,.pv-art .avid.long .avb,.sheet-main article.money>.hi,.pv-art article.money>.hi,.sheet-main article.money .avid.short .avb,.pv-art .avid.short .avb{width:calc(100% - 8px);margin-left:4px;margin-right:4px}}
+.sheet-main article.narrow>h1,.sheet-main article.narrow>.byline,.sheet-main article.money>h1,.sheet-main article.money>.meta,.sheet-main article.money>.byline{margin-left:calc(3vw + 14px);margin-right:calc(3vw + 14px)}
 .sheet-main article.brief>h1,.sheet-main article.brief>.byline,.sheet-main article.brief>.meta,.sheet-main article.brief>.tplnote,.sheet-main article.brief>.lead{margin-left:0;margin-right:0}
 .sheet-main article.brief>.lead{padding-left:0;padding-right:0}
-@media (max-width:600.98px){.sheet-main article.narrow>h1,.sheet-main article.money>h1,.sheet-main article.money>.meta,.sheet-main article.money>.byline,.sheet-main article.money>.lmeta,.sheet-main article.money .toc,.sheet-main article.money .sources,.sheet-main article.money .imgnote,.sheet-main article.money nav.seq,.sheet-main article.money .pbox,.sheet-main article.money .nform,.sheet-main article.money .avid figcaption{margin-left:14px;margin-right:14px}.sheet-main article.brief>h1,.sheet-main article.brief>.byline,.sheet-main article.brief>.meta,.sheet-main article.brief>.tplnote,.sheet-main article.brief>.lead{margin-left:0;margin-right:0}}
+@media (max-width:600.98px){.sheet-main article.narrow>h1,.sheet-main article.narrow>.byline,.sheet-main article.money>h1,.sheet-main article.money>.meta,.sheet-main article.money>.byline,.sheet-main article.money>.lmeta,.sheet-main article.money .toc,.sheet-main article.money .sources,.sheet-main article.money .imgnote,.sheet-main article.money nav.seq,.sheet-main article.money .pbox,.sheet-main article.money .nform,.sheet-main article.money .avid figcaption{margin-left:4px;margin-right:4px}.sheet-main article.brief>h1,.sheet-main article.brief>.byline,.sheet-main article.brief>.meta,.sheet-main article.brief>.tplnote,.sheet-main article.brief>.lead{margin-left:0;margin-right:0}}
 .sheet-main article.money .mlbox,.sheet-main article.narrow .mlbox{margin-left:calc(3vw + 14px);margin-right:calc(3vw + 14px)}
-@media (max-width:600.98px){.sheet-main article.money .mlbox,.sheet-main article.narrow .mlbox{margin-left:14px;margin-right:14px}}
+@media (max-width:600.98px){.sheet-main article.money .mlbox,.sheet-main article.narrow .mlbox{margin-left:4px;margin-right:4px}}
 @media (max-width:900px){
 .pv-grid,.pv-art,.pv-art.pv-c,.sheet{grid-template-columns:1fr}
 .pv-lead{grid-template-columns:1fr}
@@ -1219,11 +1232,14 @@ article.money>.lmeta a.lname:hover{text-decoration:underline}
 .eco-sources li{margin:0 0 6px}
 .eco-sources a{color:#9ad7ff}
 .ss-wrap{overflow-x:auto}
+.prose figure.hubfig{margin:6px 14px 18px}
+.prose figure.hubfig img{width:100%;max-width:100%;height:auto;border-radius:10px;border:1px solid var(--edge);display:block}
+@media (max-width:600.98px){.prose figure.hubfig{margin-left:4px;margin-right:4px}}
 .byline{margin:0 0 12px;color:var(--dim);font-size:.86rem}
 .upd{margin:-6px 0 12px;color:var(--dim);font-size:.82rem}
 .upd time{color:inherit}
 .sheet-main article.money>.upd,.sheet-main article.money>.hublink{margin-left:calc(3vw + 14px);margin-right:calc(3vw + 14px)}
-@media (max-width:600.98px){.sheet-main article.money>.upd,.sheet-main article.money>.hublink{margin-left:14px;margin-right:14px}}
+@media (max-width:600.98px){.sheet-main article.money>.upd,.sheet-main article.money>.hublink{margin-left:4px;margin-right:4px}}
 .hubh{font-size:1.15rem;margin:8px 0 4px}
 .hubcount{margin:0 0 12px;color:var(--dim);font-size:.84rem}
 .etime{list-style:none;margin:8px 0 22px;padding:0}
@@ -1370,6 +1386,7 @@ header.hb .hb-inline .hb-search:hover,header.hb .hb-inline .hb-search:focus-with
    every width. Horizontal position is a fixed offset from the content wrap
    (the wrap is centered when the viewport is wider than 1160px). */
 header.hb .bar{height:66px;gap:8px;align-items:center}
+@media (min-width:901px){main.wrap{margin-top:10px}}
 /* Icon stack is 16px (2px bars, 5px gaps), matching the measured cap height of
    the logo's T (solid ink from 25px to 41px in the 66px bar). */
 header.hb .bar .burger{display:flex;flex-direction:column;align-items:center;justify-content:center;width:40px;height:40px;margin-left:-8px;padding:0;transform:none;gap:5px}
@@ -1440,7 +1457,14 @@ header.hb .bar .lang{margin-left:0;margin-right:0;flex:none;white-space:nowrap;t
 .gbox h3{margin:8px 0 4px;font-size:.78rem;letter-spacing:.04em;text-transform:uppercase;color:var(--dim)}
 .gbox ul{margin:0;padding-left:1.1em}
 .gbox li{margin:0 0 3px}
-.gbox .btn{display:inline-block;background:var(--red);color:#fff;text-decoration:none;font-weight:800;border-radius:8px;padding:10px 14px}
+.gbox .btn{display:inline-flex;align-items:center;justify-content:center;background:var(--red);color:#fff;text-decoration:none;font-weight:800;border-radius:8px;padding:12px 16px;line-height:1.3;text-align:center}
+article .prose .gbox h2{border:0;padding:0;margin:0 0 8px;font-size:1.15rem}
+.gbox .fits{margin:10px 0 0;color:var(--fg);line-height:1.45}
+.gbox .gprice{margin:8px 0 0;color:var(--dim);font-size:.88rem;line-height:1.45}
+.gbox .amazon-go{margin-top:14px}
+article.narrow>.hi,article.narrow>.avid{margin:0 0 12px}
+article.narrow>.hi img,article.narrow>.avid .avb{width:100%;max-width:100%}
+@media (max-width:600.98px){.gbox .amazon-go{width:100%}}
 .gtable{width:100%;border-collapse:collapse;margin:8px 0 16px;font-size:.92rem}
 .gtable th,.gtable td{padding:8px 10px;border:1px solid #3a4a60;text-align:left}
 .gtable caption{text-align:left;font-weight:800;margin:0 0 6px}
@@ -1468,6 +1492,8 @@ header.hb .bar .lang{margin-left:0;margin-right:0;flex:none;white-space:nowrap;t
 }
 .nlpitch p{margin:0 0 12px}
 @media (max-width:600.98px){.gbox{grid-template-columns:1fr}}
+@media (max-width:900px){html,body{-webkit-text-size-adjust:100%;text-size-adjust:100%}body{font-size:15px;line-height:1.55}html body h1,html body article h1,html body .sheet-main article.money h1,html body .sheet-main article.narrow>h1,html body .hubhead h1,html body h1.st{font-size:24px;line-height:1.15;-webkit-text-size-adjust:100%;text-size-adjust:100%}html body article .prose h2,html body .sheet-main article .prose h2,html body .prose h2,html body .leadstory .ltitle,html body .hubh{font-size:19px;line-height:1.3;-webkit-text-size-adjust:100%;text-size-adjust:100%}html body article .prose,html body .sheet-main article.money .prose,html body .sheet-main article.narrow .prose{font-size:15px;line-height:1.55;-webkit-text-size-adjust:100%;text-size-adjust:100%}html body article .lead,html body .sheet-main article.money .lead,html body .sheet-main article.narrow .lead,html body .hubhead .lead,html body .leadstory .lead{font-size:16px;line-height:1.5;-webkit-text-size-adjust:100%;text-size-adjust:100%}html body .byline,html body .meta,html body .smeta,html body .upd{font-size:12px;line-height:1.35;-webkit-text-size-adjust:100%;text-size-adjust:100%}html body .lmeta,html body .lname,html body .tag,html body .lmeta .llayer,html body .lmeta .lsub{font-size:11px;line-height:1.3;-webkit-text-size-adjust:100%;text-size-adjust:100%}}
+@media (max-width:900px){html body .hfeed .pv-hl b{font-size:13px;line-height:1.3;hyphens:none;-webkit-hyphens:none;overflow-wrap:normal;word-break:normal;-webkit-text-size-adjust:none;text-size-adjust:none}html body .hfeed .pv-row time{font-size:12px;-webkit-text-size-adjust:none;text-size-adjust:none}html body .hfeed .pv-min{width:48px;min-width:48px}html body .hfeed .pv-min b{font-size:12px}}
 """
 
 # Classes left over from retired layouts. They are not emitted by the pages build() writes.
@@ -3136,35 +3162,9 @@ _IMG_HIDE = ("this.closest('.pbox,.gbox,li')&&this.closest('.pbox,.gbox,li').cla
 
 
 def load_product_images():
-    """Official amazon.nl photos, keyed by ASIN. Missing keys mean no picture."""
+    """Amazon product images are not stored or hotlinked. Local /img/ photos only."""
     global PRODUCT_IMAGES
     PRODUCT_IMAGES = {}
-    path = ROOT / "content" / "product-images.json"
-    if not path.exists():
-        return
-    try:
-        data = json.loads(path.read_text(encoding="utf-8"))
-    except ValueError:
-        return
-    if not isinstance(data, dict):
-        return
-    for asin, src in data.items():
-        key = str(asin or "").strip().upper()
-        if not re.fullmatch(r"[A-Z0-9]{10}", key):
-            continue
-        url = _amazon_image_url(src)
-        if url:
-            PRODUCT_IMAGES[key] = url
-
-
-def _amazon_image_url(src):
-    """Only Amazon's own product-image host. Anything else is refused."""
-    url = str(src or "").strip()
-    if not url.startswith("https://m.media-amazon.com/images/"):
-        return ""
-    if ".." in url or " " in url or '"' in url or "<" in url:
-        return ""
-    return url
 
 
 def _product_asin(product):
@@ -3180,18 +3180,7 @@ def _product_asin(product):
 
 
 def product_photo(product):
-    """(src, remote). A local /img/ path or a checked Amazon image. Empty if neither."""
-    if isinstance(product, dict):
-        image = str(product.get("image") or "").strip()
-        if image.startswith("/img/") and ".." not in image:
-            return image, False
-        remote = _amazon_image_url(image)
-        if remote:
-            return remote, True
-    asin = _product_asin(product)
-    remote = PRODUCT_IMAGES.get(asin) or ""
-    if remote:
-        return remote, True
+    """No product photo unless it is the exact item. We do not have one, so the card stays text."""
     return "", False
 
 
@@ -3205,17 +3194,21 @@ def product_photo_html(src, alt, href, remote):
     return f'<span class="pshot">{img}</span>'
 
 
+# A video only when it shows that exact product. Anything else stays a text card.
+GUIDE_VIDEO = {
+    "portable-chargers-adapters": {
+        "id": "-PJMoBQfAzo",
+        "alt": {"en": "Juice Booster 2", "nl": "Juice Booster 2"},
+    },
+    "sentry-usb-drive": {
+        "id": "V34pAk2zfNI",
+        "alt": {"en": "Samsung BAR Plus", "nl": "Samsung BAR Plus"},
+    },
+}
+
+
 def guide_lead_photo(doc):
-    """First allowed product photo in a buying guide, then a local hero if the guide has one."""
-    for kind, fields in doc.get("pieces") or []:
-        if kind != "product" or not isinstance(fields, dict):
-            continue
-        src, _remote = product_photo({"image": fields.get("image") or "", "url": fields.get("url") or ""})
-        if src:
-            return src
-    image = str((doc.get("meta") or {}).get("image") or "").strip()
-    if image.startswith("/img/") and ".." not in image:
-        return image
+    """Guides do not use a stand-in photo. The card stays text."""
     return ""
 
 
@@ -3286,7 +3279,7 @@ HANDY_CSS = (
     ".handy li span{color:var(--muted);font-size:.9rem;line-height:1.4}"
     ".handy .handy-note{margin:4px 0 0;font-size:.75rem;line-height:1.45;color:var(--dim)}"
     ".sheet-main article.money .handy{margin-left:calc(3vw + 14px);margin-right:calc(3vw + 14px);max-width:none}"
-    "@media (max-width:600.98px){.sheet-main article.money .handy{margin-left:14px;margin-right:14px}"
+    "@media (max-width:600.98px){.sheet-main article.money .handy{margin-left:4px;margin-right:4px}"
     ".handy{padding:14px 12px 12px}}"
 )
 
@@ -4569,15 +4562,12 @@ def page_side(arts, lang, kind="home", current=None, skip=None, tail="", signup=
             else:
                 parts.append(block)
         if latest:
-            parts.append(_side_section(L["latest"], _side_ul(lang, latest, "latest")))
+            parts.append(ticker_bar(lang) + _side_section(L["latest"], _side_ul(lang, latest, "latest")))
         if start:
             parts.append(_side_section(C["start"], _side_ol(lang, start)))
     else:
         if latest:
-            block = _side_section(L["latest"], _side_ul(lang, latest, "latest"))
-            if kind == "home":
-                block = ticker_bar(lang) + block
-            parts.append(block)
+            parts.append(ticker_bar(lang) + _side_section(L["latest"], _side_ul(lang, latest, "latest")))
         if start:
             parts.append(_side_section(C["start"], _side_ol(lang, start)))
     news = newsletter(lang, "side")
@@ -6315,6 +6305,110 @@ def _yes_no(flag, lang):
     return f'<span class="{"ss-yes" if flag else "ss-no"}">{word}</span>'
 
 
+_HUB_PHOTOS = None
+
+
+def hub_photos():
+    global _HUB_PHOTOS
+    if _HUB_PHOTOS is None:
+        path = ROOT / "content" / "data" / "hub_photos.json"
+        try:
+            _HUB_PHOTOS = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            _HUB_PHOTOS = {}
+    return _HUB_PHOTOS
+
+
+def hub_photo(pid):
+    item = hub_photos().get(pid or "")
+    if not item or not item.get("src"):
+        return None
+    if not (STATIC / str(item["src"]).lstrip("/")).is_file():
+        return None
+    return item
+
+
+def hub_credit_link(item):
+    return (f'<a href="{esc(item["page"])}" rel="nofollow noopener" target="_blank">'
+            f'{esc(item["credit"])}</a>')
+
+
+def hub_hero(pid, lang):
+    item = hub_photo(pid)
+    if not item:
+        return "", ""
+    alt = (item.get("alt") or {}).get(lang) or (item.get("alt") or {}).get("en") or ""
+    img = resp_img(item["src"], alt, SIZES_HERO, high=True, lazy=False, cls="hero-img")
+    return f'<div class="hi">{img}</div>', hub_credit_link(item)
+
+
+def hub_figure(pid, lang):
+    item = hub_photo(pid)
+    if not item:
+        return "", ""
+    alt = (item.get("alt") or {}).get(lang) or ""
+    cap = (item.get("caption") or {}).get(lang) or ""
+    link = hub_credit_link(item)
+    img = resp_img(item["src"], alt, SIZES_HERO, lazy=True)
+    return (f'<figure class="hubfig">{img}'
+            f'<figcaption class="imgnote">{esc(cap)} {link}</figcaption></figure>', link)
+
+
+def hub_rubric(lang, layer, layer_path, sub="", sub_path=""):
+    layer_html = f'<a class="llayer" href="{url(lang, layer_path)}">{esc(layer)}</a>'
+    if sub:
+        sub_html = f'<a class="lsub" href="{url(lang, sub_path)}">{esc(sub)}</a>'
+        label = f'<span class="lpath">{layer_html} / {sub_html}</span>'
+    else:
+        label = f'<a class="lname" href="{url(lang, layer_path)}">{esc(layer)}</a>'
+    return f'<span class="lmeta">{label}</span>'
+
+
+def hub_article(lang, title, intro, updated, rubric, hero_id, sections):
+    """Same frame as a news article: photo, rubric, title, byline, contents, prose."""
+    L = LANGS[lang]
+    seen = []
+    for pid in [hero_id] + [photo_id for _heading, _inner, photo_id in sections]:
+        item = hub_photo(pid)
+        if not item:
+            continue
+        if item["src"] in seen:
+            raise RuntimeError(f"hub photo used twice: {item['src']}")
+        seen.append(item["src"])
+    hero, hero_credit = hub_hero(hero_id, lang)
+    credits = [hero_credit] if hero_credit else []
+    blocks = []
+    for i, (heading, inner, photo_id) in enumerate(sections, 1):
+        fig, credit = hub_figure(photo_id, lang) if photo_id else ("", "")
+        if credit and credit not in credits:
+            credits.append(credit)
+        blocks.append(f'<h2 id="s{i}">{esc(heading)}</h2>{fig}{inner}')
+    toc = ""
+    if sections:
+        label = L["toc"]
+        items = "".join(
+            f'<li><a href="#s{i}">{esc(heading)}</a></li>'
+            for i, (heading, _inner, _photo) in enumerate(sections, 1))
+        toc = (f'<nav class="toc" aria-label="{esc(label)}"><b>{esc(label)}</b>'
+               f'<ol>{items}</ol></nav>')
+    when = ""
+    if re.fullmatch(r"\d{4}-\d{2}-\d{2}", str(updated or "")):
+        prefix = "Updated " if lang == "en" else "Bijgewerkt "
+        when = (f' · <time datetime="{esc(updated)}">'
+                f'{esc(prefix + fmt_date(updated, lang))}</time>')
+    note = ""
+    if credits:
+        note = f'<p class="imgnote">{L["photocredit"]}: {"; ".join(credits)}.</p>'
+    article = (
+        f'<article class="money">{hero}{rubric}'
+        f'<h1>{esc(title)}</h1>'
+        f'<p class="byline"><a href="{url(lang, "editorial/")}">{esc(L["byline"])}</a>{when}</p>'
+        f'<p class="lead">{esc(intro)}</p>{toc}'
+        f'<div class="prose">{"".join(blocks)}</div>{note}</article>')
+    src = (hub_photo(hero_id) or {}).get("src")
+    return article, src
+
+
 def starship_page(lang, arts):
     data = load_data("starship.json")
     L = LANGS[lang]
@@ -6362,32 +6456,50 @@ def starship_page(lang, arts):
         rows.append(f"<tr{cls}>{tds}</tr>")
     head = "".join(f"<th>{esc(name)}</th>" for name in labels[4:10])
     related = hub_articles({"topics": ["starship"]}, arts)
-    rel = ""
-    if related:
-        rel = (f'<h2 class="hubh">{esc(labels[10])}</h2>'
-               f'<p class="hubcount">{esc(_count_label(len(related), lang))}.</p>'
-               + hub_cards(related, lang))
-    body = (
-        f'{nav}<header class="hubhead"><h1>{esc(title)}</h1>'
-        f'<p class="byline">{esc(L["byline"])}</p>'
-        f'<p class="lead">{esc(intro)}</p>'
-        f'<p class="hubcount">{esc(updated)} '
-        f'<a href="{url(lang, ecosystem_path(lang))}">'
-        + ("See the ecosystem map" if lang == "en" else "Zie de kaart van het ecosysteem")
-        + "</a></p></header>"
-        f'<div class="ss-board">'
-        f'<article class="ss-card latest"><p class="k">{esc(labels[0])}</p>'
-        f'<h2>{"Flight" if lang == "en" else "Vlucht"} {latest["number"]}</h2>'
+    flight_photo = {
+        1: "starship-1", 2: "starship-2", 3: "starship-3", 4: "starship-4",
+        5: "starship-5", 6: "starship-6", 8: "starship-8", 11: "starship-11",
+        15: "starship-15",
+    }
+    flight_word = "Flight" if lang == "en" else "Vlucht"
+    map_link = (f'<p class="hubcount"><a href="{url(lang, ecosystem_path(lang))}">'
+                + ("See the ecosystem map" if lang == "en" else "Zie de kaart van het ecosysteem")
+                + "</a></p>")
+    latest_html = (
+        f'<div class="ss-board"><article class="ss-card latest"><p class="k">{esc(labels[0])}</p>'
+        f'<p class="hubh">{flight_word} {latest["number"]}</p>'
         f'<p>{esc(_flight_when(latest, lang))}. {esc(_bi(latest["outcome"], lang))}</p>'
-        f'<div class="ss-pills">{pills}</div>{_src_links(latest.get("sources"))}</article>'
-        f'<article class="ss-card next"><p class="k">{esc(labels[1])}</p>'
-        f'<h2>{next_main}</h2><p>{esc(_bi(nxt.get("note"), lang))}</p>{_src_links(nxt.get("sources"))}</article>'
-        f'</div>'
-        f'<h2 class="hubh">{esc(labels[3])}</h2>'
-        f'<div class="ss-wrap"><table class="ss-table"><thead><tr>{head}</tr></thead><tbody>{"".join(rows)}</tbody></table></div>'
-        f'{rel}'
-    )
-    return body, ld, intro
+        f'<div class="ss-pills">{pills}</div>{_src_links(latest.get("sources"))}</article></div>')
+    next_html = (
+        f'<div class="ss-board"><article class="ss-card next"><p class="k">{esc(labels[1])}</p>'
+        f'<p class="hubh">{next_main}</p><p>{esc(_bi(nxt.get("note"), lang))}</p>'
+        f'{_src_links(nxt.get("sources"))}</article></div>')
+    table = (f'<div class="ss-wrap"><table class="ss-table"><thead><tr>{head}</tr></thead>'
+             f'<tbody>{"".join(rows)}</tbody></table></div>')
+    sections = [
+        (labels[0], latest_html, ""),
+        (labels[1], next_html, ""),
+        (labels[3], table, ""),
+    ]
+    for flight in flights:
+        fact = (
+            f'<p>{esc(_flight_when(flight, lang))}. {esc(_bi(flight["outcome"], lang))}</p>'
+            f'<div class="ss-pills">'
+            f'<span>{esc(labels[7])} {_yes_no(flight["booster_catch"], lang)}</span>'
+            f'<span>{esc(labels[8])} {_yes_no(flight["ship_catch"], lang)}</span>'
+            f'<span>{esc(labels[9])}: {esc(_bi(flight["payload"], lang))}</span>'
+            f'</div>{_src_links(flight.get("sources"))}')
+        sections.append((f'{flight_word} {flight["number"]}', fact, flight_photo.get(flight["number"], "")))
+    if related:
+        rel = (f'<p class="hubcount">{esc(_count_label(len(related), lang))}.</p>'
+               + hub_cards(related, lang))
+        sections.append((labels[10], rel + map_link, ""))
+    else:
+        sections.append((labels[10], map_link, ""))
+    rubric = hub_rubric(lang, "SpaceX", "spacex/", "Starship", "starship/")
+    article, image = hub_article(
+        lang, title, intro, data["updated"], rubric, "starship-5-catch", sections)
+    return nav + article, ld, intro, image
 
 
 def load_evergreen():
@@ -6430,15 +6542,19 @@ def evergreen_for(a):
 
 
 def evergreen_side(lang):
-    items = [(hub["title"][lang], hub["path"]) for hub in load_evergreen() if hub.get("title") and hub.get("path")]
+    items = [
+        (hub["title"][lang], url(lang, hub["path"]))
+        for hub in load_evergreen()
+        if hub.get("title") and hub.get("path")
+    ]
     items.append((
         "All Starship flights" if lang == "en" else "Alle Starship-vluchten",
-        "starship/",
+        url(lang, "starship/"),
     ))
     if not items:
         return ""
     title = "Hubs" if lang == "en" else "Dossiers"
-    return _side_section(title, "<ul>" + _side_links(items) + "</ul>")
+    return _side_section(title, '<ul class="hubs">' + _side_links(items) + "</ul>")
 
 
 def evergreen_article_links(a, lang):
@@ -6451,14 +6567,32 @@ def evergreen_article_links(a, lang):
 
 
 def evergreen_body(hub, arts, lang):
-    L = LANGS[lang]
     title = hub["title"][lang]
     intro = (hub.get("intro") or {}).get(lang) or ""
     updated = str(hub.get("updated") or load_data("evergreen.json").get("updated") or "")[:10]
-    when = ("Updated on " if lang == "en" else "Bijgewerkt op ") + (
-        fmt_date(updated, lang) if re.fullmatch(r"\d{4}-\d{2}-\d{2}", updated) else updated)
     events = sorted(hub.get("events") or [], key=lambda row: str(row.get("date") or ""), reverse=True)
-    rows = []
+    related = evergreen_articles(hub, arts)
+    rel = f'<p class="hubcount">{esc(_coverage_note(lang))}</p>'
+    if related:
+        rel = (f'<p class="hubcount">{esc(_count_label(len(related), lang))}.</p>'
+               + hub_cards(related, lang))
+    nav, ld = crumbs(lang, [(title, None)])
+    photos = {
+        "fsd-europe": {"2026-04-10": "fsd-modelx", "2026-06-17": "fsd-madmax"},
+        "deliveries": {"2026-07-02": "deliver-3", "2026-10-02": "deliver-ct"},
+        "starlink-nl": {"2021-05-13": "starlink-dish2", "2021-10-13": "starlink-ship"},
+    }.get(hub.get("key"), {})
+    heroes = {
+        "fsd-europe": "fsd-tahoe",
+        "deliveries": "deliver-y",
+        "starlink-nl": "starlink-dish",
+    }
+    rubrics = {
+        "fsd-europe": ("Tesla", "tesla/", "FSD", "fsd/"),
+        "deliveries": ("Tesla", "tesla/", "", ""),
+        "starlink-nl": ("Starlink", "starlink/", "", ""),
+    }
+    sections = []
     for event in events:
         text = (event.get("text") or {}).get(lang) or ""
         sources = event.get("sources") or []
@@ -6466,24 +6600,15 @@ def evergreen_body(hub, arts, lang):
             continue
         date = str(event.get("date") or "")
         label = fmt_date(date, lang) if re.fullmatch(r"\d{4}-\d{2}-\d{2}", date) else date
-        rows.append(
-            f'<li><time datetime="{esc(date)}">{esc(label)}</time><p>{esc(text)}</p>{_src_links(sources)}</li>')
-    related = evergreen_articles(hub, arts)
-    rel = f'<p class="hubcount">{esc(_coverage_note(lang))}</p>'
-    if related:
-        head = "On TrendingTesla" if lang == "en" else "Op TrendingTesla"
-        rel = (f'<h2 class="hubh">{esc(head)}</h2>'
-               f'<p class="hubcount">{esc(_count_label(len(related), lang))}.</p>'
-               + hub_cards(related, lang))
-    nav, ld = crumbs(lang, [(title, None)])
-    body = (
-        f'{nav}<header class="hubhead"><h1>{esc(title)}</h1>'
-        f'<p class="byline"><a href="{url(lang, "editorial/")}">{esc(L["byline"])}</a></p>'
-        f'<p class="lead">{esc(intro)}</p>'
-        f'<p class="hubcount">{esc(when)}</p></header>'
-        f'<ol class="etime">{"".join(rows)}</ol>{rel}'
-    )
-    return body, ld, intro, updated
+        inner = f'<p>{esc(text)}</p>{_src_links(sources)}'
+        sections.append((label, inner, photos.get(date, "")))
+    head = "On TrendingTesla" if lang == "en" else "Op TrendingTesla"
+    sections.append((head, rel, ""))
+    layer, layer_path, sub, sub_path = rubrics.get(hub.get("key"), ("Tesla", "tesla/", "", ""))
+    rubric = hub_rubric(lang, layer, layer_path, sub, sub_path)
+    article, image = hub_article(
+        lang, title, intro, updated, rubric, heroes.get(hub.get("key"), ""), sections)
+    return nav + article, ld, intro, updated, image
 
 
 BRIEF_LAYERS = (
@@ -6499,6 +6624,7 @@ PROMISE_STATUS = ("delivered", "late", "pending", "abandoned")
 _KV_KEYS = (
     "title_en", "title_nl", "en", "nl", "why_en", "why_nl",
     "name_en", "name_nl", "pros_en", "pros_nl", "cons_en", "cons_nl",
+    "fits_en", "fits_nl",
     "url", "image", "button_en", "button_nl",
     "caption_en", "caption_nl", "columns_en", "columns_nl", "row_en", "row_nl",
     "slug",
@@ -6883,26 +7009,44 @@ def _guide_product(fields, lang):
     name = fields.get(f"name_{lang}") or fields.get("name_en") or ""
     if not name:
         return ""
-    pros = _bits(fields.get(f"pros_{lang}") or fields.get("pros_en"))
-    cons = _bits(fields.get(f"cons_{lang}") or fields.get("cons_en"))
+    pros = _bits(fields.get(f"pros_{lang}") or fields.get("pros_en"))[:3]
+    fits = (fields.get(f"fits_{lang}") or fields.get("fits_en")
+            or fields.get(f"cons_{lang}") or fields.get("cons_en") or "")
     href = guide_amazon(str(fields.get("url") or ""))
-    src, remote = product_photo({"image": fields.get("image") or "", "url": fields.get("url") or ""})
-    img = product_photo_html(src, name, href if href.startswith("https://") else "", remote)
-    klass = "gbox" if img else "gbox noimg"
     plus = "Pros" if lang == "en" else "Pluspunten"
-    minus = "Cons" if lang == "en" else "Minpunten"
+    who = "Who it fits" if lang == "en" else "Voor wie het past"
+    price = ("Prices change. Check the current price on Amazon.nl. This page does not state one."
+             if lang == "en" else
+             "Prijzen veranderen. Kijk de actuele prijs na op Amazon.nl. Deze pagina noemt er geen.")
+    button = ("See photos and video on Amazon.nl" if lang == "en"
+              else "Bekijk foto's en video op Amazon.nl")
     lists = ""
     if pros:
-        lists += f'<h3>{plus}</h3><ul>{"".join(f"<li>{esc(item)}</li>" for item in pros)}</ul>'
-    if cons:
-        lists += f'<h3>{minus}</h3><ul>{"".join(f"<li>{esc(item)}</li>" for item in cons)}</ul>'
-    button = fields.get(f"button_{lang}") or fields.get("button_en") or (
-        "View on Amazon" if lang == "en" else "Bekijk bij Amazon")
+        lists = f'<h3>{plus}</h3><ul>{"".join(f"<li>{esc(item)}</li>" for item in pros)}</ul>'
+    fit_html = f'<p class="fits"><b>{esc(who)}.</b> {esc(fits)}</p>' if str(fits).strip() else ""
     link = ""
     if href.startswith("https://"):
-        link = (f'<a class="btn" href="{esc(href)}" rel="sponsored nofollow noopener" target="_blank">'
+        link = (f'<a class="btn amazon-go" href="{esc(href)}" rel="sponsored nofollow noopener" target="_blank">'
                 f'{esc(button)}</a>')
-    return f'<aside class="{klass}">{img}<div><h2>{esc(name)}</h2>{lists}{link}</div></aside>'
+    return (f'<aside class="gbox noimg"><div><h2>{esc(name)}</h2>{lists}{fit_html}'
+            f'<p class="gprice">{esc(price)}</p>{link}</div></aside>')
+
+
+def _guide_hero(doc, lang):
+    """Official video of that exact product, or nothing. No stand-in photo and no credit line."""
+    video = GUIDE_VIDEO.get(doc.get("slug") or "")
+    if not video:
+        return ""
+    vid = video["id"]
+    alt = (video.get("alt") or {}).get(lang) or ""
+    label = "Play the video" if lang == "en" else "Speel de video"
+    thumb = f"https://i.ytimg.com/vi/{vid}/hqdefault.jpg"
+    return (
+        f'<figure class="avid long"><button class="avb" type="button" data-vid="{esc(vid)}" '
+        f'aria-label="{esc(label)}">'
+        f'<img src="{esc(thumb)}" alt="{esc(alt)}" width="480" height="360" '
+        f'fetchpriority="high" decoding="async">'
+        f'<span class="shp" aria-hidden="true"></span></button></figure>')
 
 
 def _guide_table(fields, lang):
@@ -6932,18 +7076,20 @@ def guide_body(doc, lang):
         note = ("Template. This is not a published guide." if lang == "en"
                 else "Sjabloon. Dit is geen gepubliceerde gids.")
         banner = f'<p class="tplnote">{esc(note)}</p>'
-    chunks = [disclosure_line(lang), banner]
+    prose, products, tables = [], [], []
     for kind, fields in doc["pieces"]:
         if kind == "product":
-            chunks.append(_guide_product(fields, lang))
+            products.append(_guide_product(fields, lang))
         elif kind == "compare":
-            chunks.append(_guide_table(fields, lang))
+            tables.append(_guide_table(fields, lang))
         else:
             text = fields.get(lang) or fields.get("en") or ""
             if text:
-                chunks.append(f"<p>{esc(text)}</p>")
+                prose.append(f"<p>{esc(text)}</p>")
+    chunks = [disclosure_line(lang), banner, *prose, *tables, *products]
     byline = f'<p class="byline"><a href="{url(lang, "editorial/")}">{esc(LANGS[lang]["byline"])}</a></p>'
-    body = (f'<article class="narrow"><h1>{esc(title)}</h1>{byline}'
+    hero = _guide_hero(doc, lang)
+    body = (f'<article class="narrow">{hero}<h1>{esc(title)}</h1>{byline}'
             f'<div class="prose">{"".join(chunks)}</div></article>')
     return body, title, desc
 
@@ -7185,19 +7331,19 @@ def build():
             shell(eco_body, page_side(arts, lang, "hub", "ecosystem")),
             extra_head=ld_script(eco_ld), active="ecosystem",
             alt_path=ecosystem_path(other(lang))))
-        ship_body, ship_ld, ship_desc = starship_page(lang, arts)
+        ship_body, ship_ld, ship_desc, ship_image = starship_page(lang, arts)
         ship_items = hub_articles({"topics": ["starship"]}, arts)
         write(url(lang, "starship/"), page(
             lang, "starship/", "All Starship flights" if lang == "en" else "Alle Starship-vluchten", ship_desc,
             shell(ship_body, page_side(arts, lang, "hub", "starship", skip=ship_items)),
-            extra_head=ld_script(ship_ld), active="starship"))
+            extra_head=ld_script(ship_ld), image=ship_image, active="starship"))
         for hub in load_evergreen():
-            h_body, h_ld, h_intro, _h_updated = evergreen_body(hub, arts, lang)
+            h_body, h_ld, h_intro, _h_updated, h_image = evergreen_body(hub, arts, lang)
             h_items = evergreen_articles(hub, arts)
             write(url(lang, hub["path"]), page(
                 lang, hub["path"], hub["title"][lang], h_intro,
                 shell(h_body, page_side(arts, lang, "hub", hub["key"], skip=h_items)),
-                extra_head=ld_script(h_ld), active=hub["key"]))
+                extra_head=ld_script(h_ld), image=h_image, active=hub["key"]))
 
         # ---------- Articles ----------
         for a in arts:
@@ -7634,7 +7780,18 @@ def audit_index():
         robots = re.findall(r'<meta name="robots" content="([^"]*)"', head)
         canonical = re.findall(r'<link rel="canonical" href="([^"]*)"', head)
         hrefs = re.findall(r'href="(/[^"#]*)"', raw)
+        bare = []
+        for href in re.findall(r'href="([^"]*)"', raw):
+            if not href or href.startswith(("#", "mailto:", "tel:", "javascript:", "data:", "//")):
+                continue
+            if href.startswith(("http://", "https://")):
+                continue
+            if "+" in href or "'" in href:
+                continue
+            if not href.startswith("/"):
+                bare.append(href)
         pages[path] = {"robots": robots, "canonical": canonical, "hrefs": hrefs,
+                       "bare": bare,
                        "noindex": any("noindex" in r.lower() for r in robots)}
     indexable = {p for p, d in pages.items() if not d["noindex"]}
     sm_set = set(paths)
@@ -7657,6 +7814,9 @@ def audit_index():
             problems.append(f"canonical is not self on {p} -> {cans[0]}")
         if len(d["robots"]) != 1:
             problems.append(f"{len(d['robots'])} robots tags on {p}")
+    for p, d in pages.items():
+        if d.get("bare"):
+            problems.append(f"{p} has relative internal link {d['bare'][0]}")
     for p, d in pages.items():
         if d["noindex"]:
             continue

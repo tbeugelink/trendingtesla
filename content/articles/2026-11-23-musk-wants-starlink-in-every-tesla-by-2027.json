@@ -1,0 +1,102 @@
+{
+  "slug": "musk-wants-starlink-in-every-tesla-by-2027",
+  "date": "2026-11-23",
+  "time": "14:10",
+  "category": "news",
+  "layer": "tesla",
+  "topic": "cars",
+  "also": [
+    "starlink",
+    "fsd"
+  ],
+  "also_topics": [
+    "starlink"
+  ],
+  "card": {
+    "en": "Musk wants Starlink in every Tesla by 2027",
+    "nl": "Musk wil Starlink in elke Tesla tegen 2027"
+  },
+  "image": "lib/cybercab-street-day.jpg",
+  "image_lock": true,
+  "images": [
+    "lib/cybercab-street-day.jpg",
+    "lib/starlink-satellites.jpg",
+    "topics/starlink-1.jpg",
+    "lib/cybercab-doors-open.jpg",
+    "topics/starlink-2.jpg",
+    "lib/fsd-screen-city.jpg"
+  ],
+  "sources": [
+    {
+      "title": "X — Elon Musk on an embedded Starlink option, 22 November 2026",
+      "url": "https://x.com/elonmusk/status/2124673053246312848"
+    },
+    {
+      "title": "X — Elon Musk on the China exception for Starlink, 22 November 2026",
+      "url": "https://x.com/elonmusk/status/2124678745629790551"
+    },
+    {
+      "title": "X — Elon Musk on the AI4.5 memory cut, 22 November 2026",
+      "url": "https://x.com/elonmusk/status/2124631858340049214"
+    },
+    {
+      "title": "Teslarati — Tesla, built-in Starlink and the car computer",
+      "url": "https://www.teslarati.com/tesla-starlink-built-in-ai5/"
+    },
+    {
+      "title": "Benzinga — Elon Musk hopes Teslas will get Starlink, except in China",
+      "url": "https://www.benzinga.com/markets/tech/26/11/63519806/elon-musk-hopes-all-teslas-will-get-spacexs-starlink-connectivity-except-in-china-where-its-illegal-says-it-will-be-key-for-unsupervised-fsd"
+    },
+    {
+      "title": "Electrek — Tesla FSD v15 rollout, 21 November 2026",
+      "url": "https://electrek.co/2026/11/21/tesla-fsd-v15-rollout-25x-safety-reality-view/"
+    },
+    {
+      "title": "Investor's Business Daily — Tesla FSD v15 coming next month, Musk says",
+      "url": "https://www.investors.com/news/tesla-fsd-v15-coming-next-month-elon-musk-says-something-special/"
+    }
+  ],
+  "label": {
+    "style": "n",
+    "en": {
+      "sub": "A HOPE",
+      "text": "2027"
+    },
+    "nl": {
+      "sub": "EEN HOOP",
+      "text": "2027"
+    }
+  },
+  "gen_image": {
+    "prompt": "Editorial illustration of a gold two-seat robotaxi on the right side of a city road at dusk, butterfly doors closed, no steering wheel, no roof dish, a thin train of satellite dots in the sky, no people, no logos, no readable text, no licence plate, calm dark space in the lower-left third",
+    "subject": "a gold two-seat robotaxi under a thin train of satellites, with no dish on the car",
+    "refs": [
+      {
+        "src": "lib/cybercab-street-day.jpg"
+      }
+    ],
+    "profile": "editorial",
+    "category": "A",
+    "describe": "Illustration of a two-seat robotaxi and a satellite train. Not a photograph of a Starlink terminal or of the posts on 22 November 2026.",
+    "extra": [
+      {
+        "prompt": "Inside a left-hand-drive Tesla on the right side of a highway at night, empty front seats, a simple centre screen with no readable text, city lights beyond the glass, no people, no logos, calm dark space in the lower-left third",
+        "describe": "Illustration of an empty Tesla cabin and a blank driving screen at night"
+      },
+      {
+        "prompt": "A thin line of satellites over a dark highway, a small gold two-seat robotaxi in the right-hand lane, no dish on the car, no people, no logos, no readable text, calm space in the lower-left third",
+        "describe": "Illustration of a robotaxi on a highway under a satellite train"
+      }
+    ]
+  },
+  "en": {
+    "title": "Musk wants Starlink in every Tesla by 2027",
+    "description": "On 22 November 2026 Elon Musk replied on X that an embedded Starlink option would hopefully be available towards the end of next year, a window that points to late 2027. He tied it to unsupervised FSD and said China is excluded because Starlink is illegal there.",
+    "body": "<p>Elon Musk hopes Tesla will offer an embedded Starlink option towards the end of 2027. On Sunday 22 November 2026, US time, David Marcus posted on X that he could not wait for Tesla to offer that option in all models beyond the Cybercab. The post is timestamped 23 November 2026 at 01:15 UTC. Musk replied: \"Hopefully available towards the end of next year. This will be important for unsupervised FSD, so passengers have high bandwidth everywhere for work and entertainment.\" The reply sits in November 2026, so \"next year\" is 2027 and \"towards the end\" is the late part of that year. The first word is \"Hopefully\". The line is a hope and a target. One country is already left out of it.</p>\n<h2>What did Musk say about the timing?</h2>\n<p><strong>He hopes the option is available towards the end of next year.</strong> Teslarati and Benzinga both reported the reply from his post on X. \"Hopefully available towards the end of next year\" names a window. It does not name a factory date, a price or a list of models that would receive the option first. The posts that carry the reply do not add those details. The second sentence of the same reply is the reason he gives, and that reason is unsupervised driving. A further post in the exchange then names the place that stays outside the hope.</p>\n<h2>So where is the option ruled out?</h2>\n<p><strong>In China, because Musk says Starlink is illegal there.</strong> He added, in a separate post: \"Except in China, as Starlink is illegal there.\" Teslarati and Benzinga reported that exception alongside the earlier reply. The sentence is his statement about the law. This article does not add a statute, a court ruling or a date on which the rule might change. The late-2027 hope therefore does not cover China. Outside that exception, the posts still describe a wish rather than a schedule. At the time of the exchange, the link is also not in the cars Marcus was asking about.</p>\n<h2>Which Tesla has Starlink now?</h2>\n<p><strong>The Cybercab is the only Tesla with Starlink today.</strong> Marcus framed his post as a wish for an embedded option in all models beyond the Cybercab. Benzinga reports that framing from his post. Teslarati reports the same limit: the Cybercab is the Tesla that has Starlink. This article stops at that sentence. It does not describe a terminal, a mounting point or a hardware generation. One model with the link leaves the other models without it. The reason Musk gives for wanting the link in those other cars is what people would do once they are passengers.</p>\n<h2>Why does he connect it to unsupervised FSD?</h2>\n<p><strong>He says passengers will need high bandwidth everywhere for work and entertainment.</strong> His words are that the link \"will be important for unsupervised FSD, so passengers have high bandwidth everywhere for work and entertainment.\" He is describing a use he expects if a car drives without supervision. He is not saying that unsupervised FSD is on sale. On a separate track, Tesla began rolling out FSD v15 to customers on Saturday 21 November 2026, and Musk says a broad release is planned for next month. That rollout is covered in <a href=\"/tesla-starts-rolling-out-fsd-v15-to-testers/\">Tesla starts rolling out FSD v15 to testers</a>. A build that is reaching customers, and a hope about bandwidth on unsupervised trips late in 2027, are two statements with two different dates. In the same stretch of posts he also spoke about memory in the car computer.</p>\n<h2>So what did he say about the AI4.5 memory?</h2>\n<p><strong>Tesla cut the RAM of its AI4.5 car computer from 32GB to 24GB because, he said, \"RAM is super expensive\".</strong> He added: \"That will be fine. It's hard to use 32GB anyway, given memory bandwidth constraints.\" Teslarati reported the comment, and the words are his post. The cut is a separate remark from the Starlink reply. It does not say the smaller memory is what a satellite link needs, and it does not turn \"hopefully\" into a firmer Starlink date. The Starlink line is still a sentence about the end of next year, with China excepted.</p>\n<h2>What is still only a hope?</h2>\n<p><strong>A late-2027 target, outside China, with no commitment behind the wording.</strong> Musk said \"hopefully\" and \"towards the end of next year.\" From a reply on 22 November 2026, that phrase points to late 2027. He said the link would matter for unsupervised FSD so passengers have high bandwidth for work and entertainment. He said China is out because Starlink is illegal there. The Cybercab is the only Tesla with Starlink today. The RAM cut, from 32GB to 24GB on the AI4.5 computer, is a different post from the same days. Those lines leave the embedded option as a hope he named, and as a target for the end of next year.</p>"
+  },
+  "nl": {
+    "title": "Musk wil Starlink in elke Tesla tegen 2027",
+    "description": "Op 22 november 2026 antwoordde Elon Musk op X dat een ingebouwde Starlink-optie hopelijk tegen het einde van volgend jaar beschikbaar is, een venster dat op laat 2027 wijst. Hij koppelde het aan onbegeleid FSD en zei dat China afvalt omdat Starlink daar illegaal is.",
+    "body": "<p>Elon Musk hoopt dat Tesla tegen het einde van 2027 een ingebouwde Starlink-optie aanbiedt. Op zondag 22 november 2026, Amerikaanse tijd, schreef David Marcus op X dat hij niet kon wachten tot Tesla die optie in alle modellen aanbiedt, voorbij de Cybercab. De post staat op 23 november 2026 om 01.15 UTC. Musk antwoordde: \"Hopefully available towards the end of next year. This will be important for unsupervised FSD, so passengers have high bandwidth everywhere for work and entertainment.\" Hij hoopt dus dat het tegen het einde van volgend jaar beschikbaar is. Hij noemt het belangrijk voor onbegeleid FSD, zodat passagiers overal veel bandbreedte hebben voor werk en vermaak. De reactie dateert van november 2026, dus \"volgend jaar\" is 2027 en \"tegen het einde\" is het late deel van dat jaar. Het eerste woord is \"Hopefully\", hopelijk. De zin is een hoop en een doel. Eén land valt er al buiten.</p>\n<h2>Wat zei Musk over het moment?</h2>\n<p><strong>Hij hoopt dat de optie tegen het einde van volgend jaar beschikbaar is.</strong> Teslarati en Benzinga meldden de reactie allebei vanuit zijn post op X. \"Hopefully available towards the end of next year\" noemt een periode. Het noemt geen fabrieksdatum, geen prijs en geen lijst van modellen die de optie als eerste zouden krijgen. De posts met die reactie voegen die details niet toe. De tweede zin van dezelfde reactie is de reden die hij geeft, en die reden is onbegeleid rijden. Een volgende post in het gesprek noemt daarna de plek die buiten de hoop blijft.</p>\n<h2>Dus waar valt de optie af?</h2>\n<p><strong>In China, omdat Musk zegt dat Starlink daar illegaal is.</strong> Hij voegde in een aparte post toe: \"Except in China, as Starlink is illegal there.\" Behalve in China, omdat Starlink daar illegaal is. Teslarati en Benzinga meldden die uitzondering naast de eerdere reactie. De zin is zijn uitspraak over de wet. Dit stuk voegt geen wetsartikel, geen uitspraak van een rechter en geen datum toe waarop die regel zou kunnen veranderen. De hoop voor eind 2027 geldt dus niet voor China. Buiten die uitzondering beschrijven de posts nog steeds een wens, geen planning. Op het moment van het gesprek zit de verbinding ook niet in de auto's waar Marcus om vroeg.</p>\n<h2>Welke Tesla heeft Starlink nu?</h2>\n<p><strong>De Cybercab is vandaag de enige Tesla met Starlink.</strong> Marcus zette zijn post neer als een wens voor een ingebouwde optie in alle modellen voorbij de Cybercab. Benzinga geeft die inkadering uit zijn post weer. Teslarati meldt dezelfde grens: de Cybercab is de Tesla die Starlink heeft. Dit stuk stopt bij die zin. Het beschrijft geen terminal, geen bevestigingspunt en geen hardwaregeneratie. Eén model met de verbinding laat de andere modellen zonder. De reden die Musk geeft om de verbinding in die andere auto's te willen, is wat mensen zouden doen zodra ze passagier zijn.</p>\n<h2>Waarom koppelt hij het aan onbegeleid FSD?</h2>\n<p><strong>Hij zegt dat passagiers overal veel bandbreedte nodig hebben voor werk en vermaak.</strong> Zijn woorden zijn dat de verbinding \"will be important for unsupervised FSD, so passengers have high bandwidth everywhere for work and entertainment.\" Hij beschrijft een gebruik dat hij verwacht als een auto zonder toezicht rijdt. Hij zegt niet dat onbegeleid FSD nu te koop is. Op een ander spoor begon Tesla op zaterdag 21 november 2026 met de uitrol van FSD v15 naar klanten, en Musk zegt dat een brede release voor volgende maand is gepland. Die uitrol staat in <a href=\"/nl/tesla-starts-rolling-out-fsd-v15-to-testers/\">Tesla rolt FSD v15 uit naar testers</a>. Een build die klanten bereikt, en een hoop over bandbreedte bij onbegeleide ritten laat in 2027, zijn twee uitspraken met twee verschillende data. In dezelfde reeks posts sprak hij ook over het geheugen van de boordcomputer.</p>\n<h2>Dus wat zei hij over het geheugen van AI4.5?</h2>\n<p><strong>Tesla verlaagde het RAM van de AI4.5-boordcomputer van 32 GB naar 24 GB, omdat, zei hij, \"RAM is super expensive\".</strong> RAM is volgens hem erg duur. Hij voegde toe: \"That will be fine. It's hard to use 32GB anyway, given memory bandwidth constraints.\" Het komt goed, schreef hij, en 32 GB is toch lastig te gebruiken door de grenzen van de geheugenbandbreedte. Teslarati meldde de opmerking, en de woorden staan in zijn post. De verlaging is een aparte opmerking, los van de Starlink-reactie. Hij zegt niet dat het kleinere geheugen is wat een satellietverbinding nodig heeft, en hij maakt van \"hopefully\" geen vastere Starlink-datum. De Starlink-zin blijft een zin over het einde van volgend jaar, met China als uitzondering.</p>\n<h2>Wat is nog alleen een hoop?</h2>\n<p><strong>Een doel laat in 2027, buiten China, zonder toezegging in de formulering.</strong> Musk zei \"hopefully\" en \"towards the end of next year.\" Vanuit een reactie op 22 november 2026 wijst die zin op laat 2027. Hij zei dat de verbinding ertoe zou doen voor onbegeleid FSD, zodat passagiers veel bandbreedte hebben voor werk en vermaak. Hij zei dat China afvalt omdat Starlink daar illegaal is. De Cybercab is vandaag de enige Tesla met Starlink. De RAM-verlaging, van 32 GB naar 24 GB op de AI4.5-computer, is een andere post uit dezelfde dagen. Die zinnen laten de ingebouwde optie staan als een hoop die hij noemde, en als een doel voor het einde van volgend jaar.</p>"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "title": "SpaceX Used One Pad Twice In 32 Hours",
+  "slug": "spacex-relaunched-one-pad-after-32-hours",
+  "article": "https://trendingtesla.com/spacex-relaunched-one-pad-after-32-hours/",
+  "sentences": [
+    {"id": "s1", "tag": "[energetically]", "text": "Thirty-two hours. That pad was not done.", "caption": "That pad was not done", "hook": true},
+    {"id": "s2", "tag": "[energetically]", "text": "Friday night a Falcon 9 left Vandenberg.", "caption": "Friday night at Vandenberg"},
+    {"id": "s3", "tag": "[energetically]", "text": "Sunday morning another Falcon 9 left the same pad.", "caption": "Same pad Sunday morning"},
+    {"id": "s4", "tag": "[energetically]", "text": "The gap was 32 hours, 3 minutes and 21 seconds.", "caption": "32 hours 3 minutes 21 seconds"},
+    {"id": "s5", "tag": "[energetically]", "text": "The old record was 45 hours, from Florida.", "caption": "Old record was 45 hours"},
+    {"id": "s6", "tag": "[energetically]", "text": "It beat this pad's old mark by more than 23 hours.", "caption": "More than 23 hours faster"},
+    {"id": "s7", "tag": "[energetically]", "text": "These were two boosters, not one.", "caption": "Two boosters not one"},
+    {"id": "s8", "tag": "[energetically]", "text": "The second, B1097, was flying for the fourteenth time.", "caption": "B1097 on flight 14"},
+    {"id": "s9", "tag": "[energetically]", "text": "It landed back at Vandenberg seven and a half minutes later.", "caption": "Landed 7.5 minutes later"},
+    {"id": "s10", "tag": "[energetically]", "text": "SpaceX's launch chief still wants a 24-hour turn.", "caption": "Next goal is 24 hours"},
+    {"id": "s11", "tag": "[energetically]", "text": "That turn has not happened yet.", "caption": "That turn has not happened"}
+  ]
+}

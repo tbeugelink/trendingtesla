@@ -11,10 +11,10 @@ nl: Het accessoire dat de moeite is, is het accessoire dat voor jouw auto is ges
 :::product
 name_en: GAFAT all-weather mats for Model Y Juniper
 name_nl: GAFAT-allweermatten voor Model Y Juniper
-pros_en: TPE mats listed for the 2025 and 2026 Model Y Juniper, including Standard, Premium and Performance
-pros_nl: TPE-matten vermeld voor de Model Y Juniper van 2025 en 2026, inclusief Standard, Premium en Performance
-cons_en: This listing is for the Juniper. An older Model Y needs a different set. Check the current price
-cons_nl: Deze lijst is voor de Juniper. Een oudere Model Y heeft een andere set nodig. Kijk de actuele prijs na
+pros_en: TPE all-weather mats | Listed for the 2025 and 2026 Model Y Juniper | Standard, Premium and Performance
+pros_nl: Allweer-matten van TPE | Vermeld voor de Model Y Juniper van 2025 en 2026 | Standard, Premium en Performance
+fits_en: A 2025 or 2026 Model Y Juniper. An older Model Y needs a different set.
+fits_nl: Een Model Y Juniper van 2025 of 2026. Een oudere Model Y heeft een andere set nodig.
 url: https://www.amazon.nl/dp/B0DZ5JB22G
 button_en: View on Amazon
 button_nl: Bekijk bij Amazon
@@ -23,10 +23,10 @@ button_nl: Bekijk bij Amazon
 :::product
 name_en: TAPTES mats for earlier Model Y years
 name_nl: TAPTES-matten voor eerdere Model Y-jaren
-pros_en: A six-piece cabin and trunk set listed for Model Y years 2021 through 2025
-pros_nl: Een zesdelige set voor cabine en kofferbak, vermeld voor Model Y van 2021 tot en met 2025
-cons_en: The page has been shown as unavailable. Do not assume it is in stock, and do not assume it fits a Juniper. Check the current price
-cons_nl: De pagina is als niet leverbaar getoond. Ga er niet van uit dat hij op voorraad is, en niet dat hij op een Juniper past. Kijk de actuele prijs na
+pros_en: Six-piece cabin and trunk set | Listed for Model Y years 2021 through 2025 | One set for the cabin and the trunk
+pros_nl: Zesdelige set voor cabine en kofferbak | Vermeld voor Model Y van 2021 tot en met 2025 | Eén set voor cabine en kofferbak
+fits_en: A Model Y from 2021 through 2025. Do not assume it fits a Juniper, and the page has been shown as unavailable.
+fits_nl: Een Model Y van 2021 tot en met 2025. Ga er niet van uit dat hij op een Juniper past, en de pagina is als niet leverbaar getoond.
 url: https://www.amazon.nl/dp/B09YTGFHGG
 button_en: View on Amazon
 button_nl: Bekijk bij Amazon
@@ -35,11 +35,22 @@ button_nl: Bekijk bij Amazon
 :::product
 name_en: Spigen glass for a 16-inch 2026 screen
 name_nl: Spigen-glas voor een scherm van 16 inch uit 2026
-pros_en: Tempered glass listed for the 16-inch screen on 2026 Model Y Standard, Premium, Performance and Model Y L
-pros_nl: Gehard glas vermeld voor het 16-inchscherm op Model Y Standard, Premium en Performance van 2026 en op Model Y L
-cons_en: Only for a 16-inch screen. Measure before you buy. Check the current price
-cons_nl: Alleen voor een scherm van 16 inch. Meet voor je koopt. Kijk de actuele prijs na
+pros_en: Tempered glass | Listed for a 16-inch screen | 2026 Model Y Standard, Premium, Performance and Model Y L
+pros_nl: Gehard glas | Vermeld voor een scherm van 16 inch | Model Y Standard, Premium en Performance van 2026 en Model Y L
+fits_en: Only a 16-inch screen on those 2026 Model Y cars. Measure before you buy.
+fits_nl: Alleen een scherm van 16 inch op die Model Y's van 2026. Meet voor je koopt.
 url: https://www.amazon.nl/dp/B0FPJ6RYFN
 button_en: View on Amazon
 button_nl: Bekijk bij Amazon
+:::
+
+:::compare
+caption_en: Match the car first
+caption_nl: Eerst de auto
+columns_en: Juniper mats | Earlier Model Y | 16-inch glass
+columns_nl: Juniper-matten | Eerdere Model Y | Glas 16 inch
+row_en: 2025 and 2026 Juniper | 2021 through 2025 | 2026 Model Y 16-inch screen
+row_nl: Juniper 2025 en 2026 | 2021 tot en met 2025 | Model Y 2026, scherm 16 inch
+row_en: Not an older Model Y | Not a Juniper | Measure the screen
+row_nl: Niet een oudere Model Y | Niet een Juniper | Meet het scherm
 :::

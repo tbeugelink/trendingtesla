@@ -1,9 +1,14 @@
 name: Upload Jensen reinstated Short
 
-# One public upload of the already-reviewed Short. A workflow_dispatch starts it once.
-# This file stays off main and is removed after the upload.
+# One public upload of the already-reviewed Short.
+# A push of this file starts it once. The file stays off main and is removed after the upload.
 on:
   workflow_dispatch:
+  push:
+    branches: [cursor/jensen-reinstated-short]
+    paths:
+      - .github/workflows/jensen-reinstated-upload.yml
+      - video/jensen-reinstated/upload_once.py
 
 permissions:
   contents: read

@@ -1,0 +1,114 @@
+{
+  "slug": "musk-told-spacex-staff-it-lags-in-ai",
+  "date": "2026-11-23",
+  "time": "19:56",
+  "category": "xai",
+  "also": [
+    "spacex"
+  ],
+  "layer": "spacexsi",
+  "topic": "ai-compute",
+  "also_topics": [
+    "datacenters"
+  ],
+  "card": {
+    "en": "Musk told SpaceX staff it lags in AI",
+    "nl": "Musk vindt dat SpaceX achterloopt met AI"
+  },
+  "image": "news/datacenter-server-racks.jpg",
+  "image_lock": true,
+  "og_image": "/img/news/datacenter-server-racks.jpg",
+  "images": [
+    "news/datacenter-server-racks.jpg",
+    "news/server-room-lender.jpg",
+    "topics/xai-dc-2.jpg",
+    "topics/xai-dc-night.jpg",
+    "topics/grok-car-voice.jpg",
+    "lib/grok-screen-closeup.jpg"
+  ],
+  "real_photos": [
+    {
+      "page": "https://commons.wikimedia.org/wiki/File:Datacenter_Server_Racks_(22370909788).jpg",
+      "describe": "rows of server racks in a data centre, not a SpaceX machine and not a photograph of the staff meeting",
+      "file": "news/datacenter-server-racks.jpg",
+      "credit": "Carl Lender, CC BY 2.0, Wikimedia Commons"
+    },
+    {
+      "page": "https://commons.wikimedia.org/wiki/File:Server_Room_(22397102849).jpg",
+      "describe": "a server room with rows of racks, not a SpaceX machine and not a photograph of the staff meeting",
+      "file": "news/server-room-lender.jpg",
+      "credit": "Carl Lender, CC BY 2.0, Wikimedia Commons"
+    }
+  ],
+  "credits": [
+    {
+      "file": "news/datacenter-server-racks.jpg",
+      "credit": "Carl Lender, CC BY 2.0, via Wikimedia Commons. Server racks in a data centre. Not a SpaceX machine and not a photograph of the meeting",
+      "page": "https://commons.wikimedia.org/wiki/File:Datacenter_Server_Racks_(22370909788).jpg"
+    },
+    {
+      "file": "news/server-room-lender.jpg",
+      "credit": "Carl Lender, CC BY 2.0, via Wikimedia Commons. A server room. Not a SpaceX machine and not a photograph of the meeting",
+      "page": "https://commons.wikimedia.org/wiki/File:Server_Room_(22397102849).jpg"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Investing.com — Musk's AI push faces a dilemma as rivals become major customers",
+      "url": "https://www.investing.com/news/stock-market-news/musks-ai-push-faces-a-dilemma-as-rivals-become-major-customers-5046067"
+    },
+    {
+      "title": "The Aigentic — Musk told SpaceX staff it is falling behind in AI as renting compute to rivals out-earns Grok, NYT reports",
+      "url": "https://www.theaigentic.com/wire/wmwthz9qpc7c9a5b4"
+    },
+    {
+      "title": "TipRanks — SpaceX's Anthropic deals complicate Musk's AI ambitions, NY Times reports",
+      "url": "https://www.tipranks.com/news/the-fly/spacexs-anthropic-deals-complicate-musks-ai-ambitions-ny-times-reports-thefly-news"
+    },
+    {
+      "title": "ROIC AI — Musk warns SpaceX is falling behind on AI and calls compute leasing more lucrative",
+      "url": "https://www.roic.ai/news/musk-warns-spacex-falling-behind-on-ai-touts-compute-leasing-as-more-lucrative-11-23-2026"
+    }
+  ],
+  "label": {
+    "style": "c",
+    "en": {
+      "sub": "LAGS IN AI",
+      "text": "$3.1 BILLION"
+    },
+    "nl": {
+      "sub": "ACHTER IN AI",
+      "text": "$3,1 MILJARD"
+    }
+  },
+  "gen_image": {
+    "prompt": "A technical illustration of a dim data-hall aisle of dark compute racks with a few cool status lights, no readable screens, no logos, no people, no meeting, empty calm lower-left",
+    "subject": "rows of compute racks in a data hall, the same kind of aisle as the reference, not a named company's hall",
+    "refs": [
+      {
+        "src": "news/datacenter-server-racks.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Datacenter_Server_Racks_(22370909788).jpg",
+        "license": "CC BY 2.0"
+      }
+    ],
+    "profile": "technical",
+    "category": "A",
+    "describe": "Illustration of compute racks in an aisle. Not a photograph of a SpaceX data center and not a photograph of any meeting.",
+    "extra": [
+      {
+        "prompt": "A closer technical illustration of one dark compute rack with small blue status lights, no lettering, no logo, no people, calm darkness in the lower left",
+        "describe": "A closer illustration of one compute rack, not a specific company's machine"
+      }
+    ]
+  },
+  "en": {
+    "title": "Musk told SpaceX staff it lags in AI",
+    "description": "On 23 November 2026 The New York Times reported that Elon Musk told SpaceX employees the company is falling behind in AI. Outlets relaying that report say Anthropic pays about $3.1 billion a month, and Google about $800 million, to rent SpaceX computing power.",
+    "body": "<p>Elon Musk told SpaceX employees that the company is falling behind in AI development, according to a New York Times report dated 23 November 2026. TipRanks, relaying that report, names the Times reporters as Grace Kay and Ryan Mac. The Aigentic says he shared data with hundreds of SpaceX's AI engineers showing the company trailing competitors, and the same accounts say renting the computers to rivals is more lucrative than using them for SpaceX's own AI products, such as Grok. Anthropic pays about $3.1 billion a month for the capacity, and Google pays roughly $800 million a month. The photograph shows server racks. It is not a SpaceX machine. The outlets that carry the Times report do not reprint the data he showed, so the warning is public and the chart is not.</p>\n<h2>What did he tell the staff?</h2>\n<p><strong>That SpaceX is falling behind in AI, and that he put data in front of its engineers.</strong> Investing.com, The Aigentic, TipRanks and ROIC AI all carry the Times account of that warning. The Aigentic gives the audience a size: hundreds of the company's AI engineers, shown data that SpaceX was trailing competitors. ROIC AI describes the same step as data illustrating the gap. TipRanks is the outlet that names Grace Kay and Ryan Mac. None of the four republishes the chart. The chart itself is not in these accounts. The warning is about that gap. The sums in the same report are about customers.</p>\n<figure class=\"hubfig\"><img src=\"/img/news/server-room-lender.jpg\" alt=\"A server room with rows of racks, not a SpaceX machine\" width=\"1600\" height=\"900\" loading=\"lazy\" decoding=\"async\"><figcaption class=\"imgnote\">A server room, not a SpaceX machine. Carl Lender, CC BY 2.0, via Wikimedia Commons.</figcaption></figure>\n<h2>So who is paying for the computers?</h2>\n<p><strong>Anthropic, at about $3.1 billion a month, and Google, at roughly $800 million a month.</strong> Investing.com, The Aigentic and ROIC AI each relay both figures from the Times. On that report, renting the computing power to rivals is more lucrative than using it for SpaceX's own AI products, and Grok is named as one of those products. SpaceX's AI unit, SpaceXSI, now generates more than half of SpaceX's revenue. An earlier article on this site looked at <a href=\"/anthropic-rents-colossus-1-spacexai-memphis-what-it-means-for-tesla/\">Anthropic renting capacity at Colossus 1</a>. Another explained <a href=\"/spacexai-to-become-spacexsi-super-intelligence-rename-explained/\">the rename from SpaceXAI to SpaceXSI</a>. The monthly figures name the customers. How long they stay is a separate line in the same report.</p>\n<h2>How long can the agreements run?</h2>\n<p><strong>Through 2029, with 90-day termination rights.</strong> Investing.com, relaying the Times, says the agreements can run through 2029 and that either party can terminate them with 90 days' notice. ROIC AI also relays agreements that run through 2029 with 90-day termination rights. A date in 2029 and a 90-day exit are both in the account. The write-ups do not say which of the two the companies expect to use. What Musk told engineers to count sits in the same report.</p>\n<h2>So what did he tell engineers to measure?</h2>\n<p><strong>Revenue per GPU, not benchmarks.</strong> The Aigentic and Investing.com both relay a line Musk wrote while pushing engineers to justify their GPU use: \"the only thing that matters for competitiveness is revenue per GPU, not benchmarks.\" Investing.com's version opens with \"At the end of the day\" and then that sentence. In August 2026 he briefly renamed an internal engineering group chat \"Sell compute because we can't compete.\" Both outlets relay that rename. The chat name and the sentence are his words, as the Times report carries them. They are not a published score of Grok against another model. Those words set a rule for the machines. The report also says some of the AI work was then stopped or moved.</p>\n<h2>What happened to the other AI work?</h2>\n<p><strong>SpaceX shut down its AI companions effort and moved engineers from the Digital Optimus project to Grok's core capabilities.</strong> The Aigentic and Investing.com both relay those two moves. These accounts do not give a headcount for the transfer. In the same report, SpaceX plans to invest $74 billion in new data centers. Investing.com places those centers in Arizona and Texas, and ROIC AI also relays the $74 billion plan. The shutdown and the spending plan sit side by side. The report does not say the new centers are reserved for Grok, and it does not say what any of this changes in a Tesla.</p>\n<h2>What does this mean for a Tesla that runs Grok?</h2>\n<p><strong>This section is analysis for Tesla readers. It is labeled as analysis, and it is not a further claim from the Times.</strong> Grok runs in Tesla cars. That is why this report is here, and that sentence is not from the Times story. Set next to the report, the assistant in the car belongs to a business that earns more, on these figures, by renting the machines than by using them for its own products, Grok among them, while some engineers were moved from Digital Optimus back to Grok's core and SpaceXSI now brings in more than half of SpaceX's revenue. The report does not say the software in a Tesla changed, that a feature was removed, or that an owner pays any of those sums. Those would be guesses. The warning to staff, the two monthly figures and the move of engineers are what the Times account contains. A change to the car is not among them.</p>\n<p><em>This article is for information only and is not financial advice.</em></p>"
+  },
+  "nl": {
+    "title": "Musk vindt dat SpaceX achterloopt met AI",
+    "description": "The New York Times meldde op 23 november 2026 dat Elon Musk tegen SpaceX-medewerkers zei dat het bedrijf achterloopt met AI. Uit de weergave van dat stuk blijkt dat Anthropic ongeveer $3,1 miljard per maand betaalt en Google ongeveer $800 miljoen, voor rekenkracht van SpaceX.",
+    "body": "<p>Elon Musk heeft tegen medewerkers van SpaceX gezegd dat het bedrijf achterloopt in de ontwikkeling van AI. Dat staat in een verslag van The New York Times van 23 november 2026. TipRanks, dat het stuk doorgeeft, noemt de Times-verslaggevers Grace Kay en Ryan Mac. The Aigentic schrijft dat hij data deelde met honderden AI-ingenieurs van SpaceX, waaruit bleek dat het bedrijf achter concurrenten aan liep. Dezelfde weergaven zeggen dat verhuren aan concurrenten lucratiever is dan de computers gebruiken voor de eigen AI-producten van SpaceX, zoals Grok. Anthropic betaalt ongeveer $3,1 miljard per maand voor de capaciteit, en Google ongeveer $800 miljoen per maand. De foto toont serverkasten. Het is geen machine van SpaceX. De media die het Times-verslag doorgeven, drukken de data die hij liet zien niet af. De waarschuwing is openbaar en de grafiek niet.</p>\n<h2>Wat vertelde hij het personeel?</h2>\n<p><strong>Dat SpaceX achterloopt met AI, en dat hij de data aan de ingenieurs voorlegde.</strong> Investing.com, The Aigentic, TipRanks en ROIC AI geven allemaal het Times-verslag van die waarschuwing door. The Aigentic geeft de zaal een omvang: honderden AI-ingenieurs van het bedrijf, met data waaruit bleek dat SpaceX achter concurrenten aan liep. ROIC AI beschrijft dezelfde stap als data die de kloof illustreerde. TipRanks is het medium dat Grace Kay en Ryan Mac noemt. Geen van de vier publiceert de grafiek. De grafiek zelf staat niet in deze weergaven. De waarschuwing gaat over die achterstand. De bedragen in hetzelfde verslag gaan over klanten.</p>\n<figure class=\"hubfig\"><img src=\"/img/news/server-room-lender.jpg\" alt=\"Een serverruimte met rijen kasten, geen machine van SpaceX\" width=\"1600\" height=\"900\" loading=\"lazy\" decoding=\"async\"><figcaption class=\"imgnote\">Een serverruimte, geen machine van SpaceX. Carl Lender, CC BY 2.0, via Wikimedia Commons.</figcaption></figure>\n<h2>Dus wie betaalt voor de computers?</h2>\n<p><strong>Anthropic, voor ongeveer $3,1 miljard per maand, en Google, voor grofweg $800 miljoen per maand.</strong> Investing.com, The Aigentic en ROIC AI geven beide bedragen door uit het Times-verslag. Volgens dat verslag is verhuren aan concurrenten lucratiever dan de rekenkracht gebruiken voor de eigen AI-producten, en Grok wordt als een van die producten genoemd. De AI-tak van SpaceX, SpaceXSI, zorgt nu voor meer dan de helft van de omzet van SpaceX. Een eerder artikel op deze site ging over <a href=\"/nl/anthropic-rents-colossus-1-spacexai-memphis-what-it-means-for-tesla/\">Anthropic die capaciteit huurt op Colossus 1</a>. Een ander legde <a href=\"/nl/spacexai-to-become-spacexsi-super-intelligence-rename-explained/\">de naamswijziging van SpaceXAI naar SpaceXSI</a> uit. De maandbedragen noemen de klanten. Hoe lang ze blijven, is een aparte zin in hetzelfde verslag.</p>\n<h2>Hoe lang kunnen de afspraken lopen?</h2>\n<p><strong>Tot in 2029, met een opzegrecht van 90 dagen.</strong> Investing.com schrijft, in de weergave van het Times-stuk, dat de afspraken kunnen doorlopen tot in 2029 en dat elk van beide partijen ze kan beëindigen met 90 dagen opzegtermijn. Ook ROIC AI geeft afspraken door die tot in 2029 lopen, met een opzegrecht van 90 dagen. Een jaartal en een uitweg van 90 dagen staan allebei in het verslag. De weergaven zeggen niet welke van de twee de bedrijven verwachten te gebruiken. Wat Musk de ingenieurs liet tellen, staat in hetzelfde verslag.</p>\n<h2>Dus waaraan moesten ingenieurs meten?</h2>\n<p><strong>Aan omzet per GPU, niet aan benchmarks.</strong> The Aigentic en Investing.com geven allebei een zin door die Musk schreef terwijl hij ingenieurs aanspoorde hun GPU-gebruik te verantwoorden: \"the only thing that matters for competitiveness is revenue per GPU, not benchmarks.\" In het Nederlands: het enige dat telt voor de concurrentiekracht is de omzet per GPU, niet de benchmarks. Bij Investing.com begint de versie met \"At the end of the day\", aan het eind van de dag, en daarna die zin. In augustus 2026 hernoemde hij kort een interne groepschat van ingenieurs tot \"Sell compute because we can't compete\", verkoop rekenkracht want we kunnen niet concurreren. Beide media geven die hernoeming door. De chatnaam en de zin zijn zijn woorden, zoals het Times-verslag ze draagt. Het is geen gepubliceerde score van Grok tegen een ander model. Die woorden stellen een regel voor de machines. Het verslag zegt ook dat een deel van het AI-werk daarna werd gestopt of verplaatst.</p>\n<h2>Wat gebeurde er met het andere AI-werk?</h2>\n<p><strong>SpaceX stopte de poging met AI-companions en zette ingenieurs over van het Digital Optimus-project naar de kern van Grok.</strong> The Aigentic en Investing.com geven die twee stappen allebei door. Deze weergaven noemen geen aantal voor de overplaatsing. In hetzelfde verslag staat dat SpaceX van plan is $74 miljard te investeren in nieuwe datacenters. Investing.com plaatst die centra in Arizona en Texas, en ROIC AI geeft het plan van $74 miljard ook door. De stop en het investeringsplan staan naast elkaar. Het verslag zegt niet dat de nieuwe centra voor Grok zijn gereserveerd, en het zegt niet wat dit verandert in een Tesla.</p>\n<h2>Wat betekent dit voor een Tesla met Grok?</h2>\n<p><strong>Dit deel is analyse voor Tesla-lezers. Het staat zo benoemd, en het is geen extra bewering uit de Times.</strong> Grok draait in Tesla-auto's. Daarom staat dit verslag hier, en die zin komt niet uit het Times-stuk. Naast het verslag gelegd hoort de assistent in de auto bij een bedrijf dat volgens deze bedragen meer verdient aan het verhuren van de machines dan aan het gebruiken ervan voor de eigen producten, Grok daaronder, terwijl ingenieurs van Digital Optimus terug naar de kern van Grok zijn gezet en SpaceXSI nu meer dan de helft van de omzet van SpaceX binnenbrengt. Het verslag zegt niet dat de software in een Tesla veranderde, dat een functie verdween, of dat een eigenaar een van die bedragen betaalt. Dat zouden gissingen zijn. De waarschuwing aan het personeel, de twee maandbedragen en de overplaatsing van ingenieurs zijn wat het Times-verslag bevat. Een wijziging aan de auto hoort daar niet bij.</p>\n<p><em>Dit artikel is alleen bedoeld als informatie en is geen financieel advies.</em></p>"
+  }
+}

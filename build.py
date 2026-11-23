@@ -5635,8 +5635,9 @@ def _yes_no(flag, lang):
 def starship_page(lang, arts):
     data = load_data("starship.json")
     L = LANGS[lang]
-    flights = sorted(data["flights"], key=lambda f: f["number"])
-    latest = flights[-1]
+    # Newest launch date first, then the higher flight number, so a new flight lands on top.
+    flights = sorted(data["flights"], key=lambda f: (str(f.get("date") or ""), int(f.get("number") or 0)), reverse=True)
+    latest = flights[0]
     titles = {"en": "Starship tracker", "nl": "Starship-tracker"}
     title = titles[lang]
     intro = ("Every full-stack Starship flight: the date, the outcome, and whether the booster, the ship and a payload made it. "

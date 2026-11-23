@@ -43,5 +43,18 @@
   ],
   "images": [
     "models/m3h-3.jpg"
+  ],
+  "products": [
+    {
+      "name": {
+        "en": "YITAHOME mats for Model 3 Highland",
+        "nl": "YITAHOME-matten voor Model 3 Highland"
+      },
+      "why": {
+        "en": "All-weather mats listed for the 2024 Model 3 Highland only. A classic Model 3 needs a different set. Check the current price.",
+        "nl": "Allweermatten vermeld voor alleen de Model 3 Highland van 2024. Een oudere Model 3 heeft een andere set nodig. Kijk de actuele prijs na."
+      },
+      "asin": "B0CQJNS7X4"
+    }
   ]
 }

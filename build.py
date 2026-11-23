@@ -22,10 +22,9 @@ Article JSON format:
   "en": {"title": "...", "description": "...", "body": "<p>...</p>"},
   "nl": {"title": "...", "description": "...", "body": "<p>...</p>"},
   "products": [                                # optional; omit the key when there is nothing to link. No prices.
-    {"name": {"en": "...", "nl": "..."}, "image": "/img/topics/example.jpg",
-     "specs": {"en": ["..."], "nl": ["..."]},
-     "button": {"en": "View on Amazon", "nl": "Bekijk bij Amazon"},
-     "url": {"en": "https://www.amazon.com/dp/...", "nl": "https://www.amazon.nl/dp/..."}}
+    {"name": {"en": "...", "nl": "..."}, "why": {"en": "...", "nl": "..."},
+     "asin": "B0XXXXXXXX",                       # amazon.nl only. A full https://www.amazon.nl/dp/ URL also works.
+     "image": "/img/topics/example.jpg"}         # optional local photo. Never a hotlinked store image.
   ]
 }
 A string may be used instead of {"en", "nl"} when the text is the same in both languages.
@@ -897,11 +896,16 @@ article.money .avid{max-width:68ch}
 .adslot ins{display:block;width:100%}
 .pbox{margin:22px 0;max-width:68ch}
 .pbox-in{display:grid;grid-template-columns:168px minmax(0,1fr);gap:16px;align-items:start;padding:14px;border:1px solid var(--border2);border-radius:12px;background:#161616}
+.pbox.noimg .pbox-in{grid-template-columns:1fr}
 .pbox img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:8px}
 .pbox h3{font-size:1.05rem;line-height:1.3;margin:0 0 8px}
 .pbox ul{margin:0 0 12px;padding-left:18px}
 .pbox li{margin:0 0 4px;color:var(--muted);font-size:.92rem}
+.pbox .why{margin:0 0 12px;color:var(--muted);font-size:.92rem;line-height:1.45}
 .affnote{margin:8px 0 0;font-size:.75rem;line-height:1.45;color:var(--dim)}
+.affnote a{color:var(--blue2)}
+.pv-side .rec li span{display:block;margin-top:2px;font-weight:400;font-size:.78rem;line-height:1.35;color:var(--muted)}
+.pv-side .rec .afftop{margin:8px 0 0;font-weight:400;font-size:.75rem}
 .nform{margin:26px 0;padding:16px 16px 14px;border:1px solid var(--border2);border-radius:12px;background:rgba(255,255,255,.03);max-width:68ch}
 .nform h2{font-size:1.15rem;margin:0 0 6px}
 .nform p{color:var(--muted);font-size:.9rem;line-height:1.45;margin:0 0 12px}
@@ -2976,8 +2980,28 @@ def with_amazon_tag(href, lang):
     return f"{href}{sep}tag={quote(tag, safe='')}"
 
 
+def amazon_nl_href(product):
+    """An amazon.nl product URL with the Associates tag. Anything else is dropped."""
+    if not isinstance(product, dict):
+        return ""
+    href = str(_loc(product.get("url"), "nl")).strip()
+    asin = str(product.get("asin") or "").strip().upper()
+    if re.fullmatch(r"[A-Z0-9]{10}", asin):
+        href = f"https://www.amazon.nl/dp/{asin}"
+    if not href.startswith("https://") or href.count("/") < 2:
+        return ""
+    host = href.split("/")[2].lower()
+    if host not in ("www.amazon.nl", "amazon.nl"):
+        return ""
+    tagged = guide_amazon(href)
+    tag = affiliate_tag("nl")
+    if not tag or f"tag={tag}" not in tagged:
+        return ""
+    return tagged
+
+
 def product_boxes(a, lang):
-    """Optional affiliate box. Articles opt in with a products list. Prices are never shown."""
+    """Optional affiliate box after the body. Articles opt in with a products list. No prices."""
     products = a.get("products") or []
     if not isinstance(products, list):
         return ""
@@ -2987,9 +3011,10 @@ def product_boxes(a, lang):
         if not isinstance(product, dict):
             continue
         name = str(_loc(product.get("name"), lang)).strip()
-        href = str(_loc(product.get("url"), lang)).strip()
-        if not name or not href.startswith("https://"):
+        href = amazon_nl_href(product)
+        if not name or not href:
             continue
+        why = str(_loc(product.get("why"), lang)).strip()
         specs = _loc(product.get("specs"), lang)
         if isinstance(specs, str):
             specs = [specs]
@@ -2999,18 +3024,24 @@ def product_boxes(a, lang):
         button = str(_loc(product.get("button"), lang)).strip() or L["aff_btn"]
         image = str(product.get("image") or "").strip()
         img = ""
+        klass = "pbox noimg"
         if image.startswith("/img/") and ".." not in image:
+            klass = "pbox"
             img = f'<img src="{esc(image)}" alt="{esc(name)}" width="640" height="480" loading="lazy" decoding="async">'
         lis = "".join(f"<li>{esc(item)}</li>" for item in specs)
         ul = f"<ul>{lis}</ul>" if lis else ""
+        why_html = f'<p class="why">{esc(why)}</p>' if why else ""
         blocks.append(
-            f'<aside class="pbox"><div class="pbox-in">{img}<div><h3>{esc(name)}</h3>{ul}'
-            f'<a class="btn" href="{esc(with_amazon_tag(href, lang))}" rel="sponsored nofollow noopener" target="_blank">{esc(button)}</a>'
-            f'<p class="affnote">{esc(L["aff"])}</p></div></div></aside>')
-    return "".join(blocks)
+            f'<aside class="{klass}"><div class="pbox-in">{img}<div><h3>{esc(name)}</h3>{why_html}{ul}'
+            f'<a class="btn" href="{esc(href)}" rel="sponsored nofollow noopener" target="_blank">{esc(button)}</a>'
+            f'</div></div></aside>')
+    if not blocks:
+        return ""
+    return "".join(blocks) + disclosure_line(lang)
 
 
 AFFILIATE = {}
+GUIDE_DOCS = []
 # Passenger cars an owner can put mats, a screen cover or a console tray in.
 # Semi, Cybercab and Roadster are not that shopping moment.
 _PASSENGER_PREFIXES = ("model-3", "model-y", "model-s", "model-x", "cybertruck")
@@ -4154,6 +4185,97 @@ def _side_ul(lang, items, cls=""):
     return f"<ul{klass}>" + _side_links([(x[lang]["title"], url(lang, x["slug"] + "/")) for x in items]) + "</ul>"
 
 
+def _recommend_context(kind, current):
+    """Which shopping moment this page is. Unrelated news falls back to the guides."""
+    if kind == "article" and isinstance(current, dict):
+        slug = str(current.get("slug") or "")
+        cat = str(current.get("category") or "")
+        models = current.get("models") or []
+        if cat == "starlink" or "starlink" in slug:
+            return "starlink"
+        if "sentry" in slug or "dashcam" in slug:
+            return "sentry"
+        if cat == "charging" or any(bit in slug for bit in ("wall-connector", "charging", "charger")):
+            return "charging"
+        if any(str(m).startswith(("model-3", "model-y")) for m in models) or any(
+                bit in slug for bit in ("winter", "tyre", "tire", "floor-mat", "accessory")):
+            return "mats"
+        return "default"
+    if kind == "model" and isinstance(current, str) and current.startswith(("model-3", "model-y")):
+        return "mats"
+    if kind == "hub" and current == "starlink":
+        return "starlink"
+    if kind == "hub" and current in ("tesla", "cars", "models"):
+        return "mats"
+    if kind == "hub" and current in ("tesla-energy", "energy"):
+        return "charging"
+    return "default"
+
+
+def _article_asins(current):
+    found = set()
+    if not isinstance(current, dict):
+        return found
+    for product in current.get("products") or []:
+        if isinstance(product, dict):
+            asin = str(product.get("asin") or "").strip().upper()
+            if asin:
+                found.add(asin)
+    return found
+
+
+def recommend_block(lang, kind, current):
+    """Compact sidebar. Two or three real products, or links to the buying guides."""
+    path = ROOT / "content" / "picks.json"
+    if not path.exists():
+        return ""
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except ValueError:
+        return ""
+    items = data.get("items") if isinstance(data.get("items"), dict) else {}
+    contexts = data.get("contexts") if isinstance(data.get("contexts"), dict) else {}
+    keys = contexts.get(_recommend_context(kind, current)) or contexts.get("default") or []
+    if not isinstance(keys, list):
+        return ""
+    used = _article_asins(current)
+    title = "Recommended" if lang == "en" else "Aanbevolen"
+    rows = []
+    amazon = False
+    for key in keys:
+        if len(rows) == 3:
+            break
+        key = str(key)
+        if key.startswith("guide:"):
+            slug = key.split(":", 1)[1]
+            doc = next((d for d in GUIDE_DOCS if d["slug"] == slug and not d.get("template")), None)
+            if doc is None:
+                continue
+            name = doc["meta"].get(f"title_{lang}") or doc["meta"].get("title_en") or slug
+            href = url(lang, guides_path(lang) + slug + "/")
+            rows.append(f'<li><a href="{esc(href)}">{esc(name)}</a></li>')
+            continue
+        item = items.get(key)
+        if not isinstance(item, dict):
+            continue
+        asin = str(item.get("asin") or "").strip().upper()
+        if asin and asin in used:
+            continue
+        name = str(_loc(item.get("name"), lang)).strip()
+        why = str(_loc(item.get("why"), lang)).strip()
+        href = amazon_nl_href(item)
+        if not name or not href:
+            continue
+        note = f"<span>{esc(why)}</span>" if why else ""
+        rows.append(
+            f'<li><a href="{esc(href)}" rel="sponsored nofollow noopener" target="_blank">{esc(name)}</a>{note}</li>')
+        amazon = True
+    if not rows:
+        return ""
+    note = disclosure_line(lang) if amazon else ""
+    return f'<section class="rec"><h2>{esc(title)}</h2><ul>{"".join(rows)}</ul>{note}</section>'
+
+
 def page_side(arts, lang, kind="home", current=None, skip=None, tail="", signup=True):
     """Right column. Sections with nothing to show are left out. Latest News is always newest first."""
     L = LANGS[lang]
@@ -4219,6 +4341,9 @@ def page_side(arts, lang, kind="home", current=None, skip=None, tail="", signup=
         # The rail form is in the HTML for desktop. At the stack breakpoint
         # CSS hides .nlside, so a phone keeps only the article bar.
         parts.append(rail_signup(lang, script=not tail))
+    rec = recommend_block(lang, kind, current)
+    if rec:
+        parts.append(rec)
     if news:
         parts.append(news)
     aside = f'<aside class="pv-side">{"".join(parts)}</aside>' if parts else ""
@@ -6205,7 +6330,9 @@ def guide_body(doc, lang):
             text = fields.get(lang) or fields.get("en") or ""
             if text:
                 chunks.append(f"<p>{esc(text)}</p>")
-    body = (f'<article class="narrow"><h1>{esc(title)}</h1><div class="prose">{"".join(chunks)}</div></article>')
+    byline = f'<p class="byline"><a href="{url(lang, "editorial/")}">{esc(LANGS[lang]["byline"])}</a></p>'
+    body = (f'<article class="narrow"><h1>{esc(title)}</h1>{byline}'
+            f'<div class="prose">{"".join(chunks)}</div></article>')
     return body, title, desc
 
 
@@ -6270,8 +6397,8 @@ def disclosure_body(lang):
         html_body = (
             "<p>Some pages link to Amazon.nl. If you buy through one of those links, TrendingTesla may earn "
             "a commission. You do not pay extra. The link is marked as sponsored.</p>"
-            "<p>A commission never changes what we write. We do not publish a guide in order to sell a product, "
-            "and a product box does not appear until a guide is published.</p>"
+            "<p>A commission never changes what we write. We do not publish a page in order to sell a product. "
+            "A product box is optional, and it names only a product whose Amazon.nl page we checked.</p>"
             f'<p>Questions go through the <a href="{contact}">contact form</a>.</p>')
     else:
         title = "Affiliate-melding"
@@ -6279,8 +6406,8 @@ def disclosure_body(lang):
         html_body = (
             "<p>Sommige pagina's linken naar Amazon.nl. Koop je via zo'n link, dan kan TrendingTesla een "
             "commissie ontvangen. Jij betaalt niets extra. De link is gemarkeerd als gesponsord.</p>"
-            "<p>Een commissie verandert nooit wat we schrijven. We publiceren geen gids om een product te verkopen, "
-            "en een productvak verschijnt pas als er een gids is.</p>"
+            "<p>Een commissie verandert nooit wat we schrijven. We publiceren geen pagina om een product te verkopen. "
+            "Een productvak is optioneel, en het noemt alleen een product waarvan we de Amazon.nl-pagina hebben nagekeken.</p>"
             f'<p>Vragen gaan via het <a href="{contact}">contactformulier</a>.</p>')
     return (
         f'<article class="narrow"><h1>{esc(title)}</h1><div class="prose">{html_body}</div></article>'), title, desc
@@ -6319,7 +6446,9 @@ def build():
         make_cover(OUT / "img" / f"default-{lang}.jpg", LANGS[lang]["tagline"], NAME, "news", "", "trendingtesla.com")
     hero_photo = "/img/hero.jpg" if (STATIC / "img" / "hero.jpg").exists() else None
     briefing_docs = load_briefings()
+    global GUIDE_DOCS
     guide_docs = load_guides()
+    GUIDE_DOCS = guide_docs
     promise_rows = load_promises()
 
     for lang in LANGS:

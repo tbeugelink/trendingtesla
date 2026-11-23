@@ -37,5 +37,29 @@
   },
   "also": [
     "guides"
+  ],
+  "products": [
+    {
+      "name": {
+        "en": "Starlink Mini 30 m power cable",
+        "nl": "Starlink Mini-stroomkabel van 30 m"
+      },
+      "why": {
+        "en": "Starlink's own 30 m power cable listed for the Mini kit. It is a cable, not the dish. Check the current price.",
+        "nl": "Starlink's eigen stroomkabel van 30 m, vermeld voor de Mini-set. Het is een kabel, niet de schotel. Kijk de actuele prijs na."
+      },
+      "asin": "B0F9SQJ4DD"
+    },
+    {
+      "name": {
+        "en": "IMAYCC clamp mount for Starlink Mini",
+        "nl": "IMAYCC-klembevestiging voor Starlink Mini"
+      },
+      "why": {
+        "en": "A clamp mount listed for the Starlink Mini, for a rail or a pole. Check the diameter against your bar, and check the current price.",
+        "nl": "Een klembevestiging vermeld voor de Starlink Mini, voor een reling of een paal. Meet de diameter van je buis, en kijk de actuele prijs na."
+      },
+      "asin": "B0H834D5C9"
+    }
   ]
 }

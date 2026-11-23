@@ -494,7 +494,7 @@ h1,h2,h3{color:#ebebeb;font-weight:800}
 .ticker-main{display:none}
 @media (max-width:900px){
 .ticker-main{display:block;border-bottom:3px solid var(--red)}
-.pv-side>.ticker{display:none}
+.sheet:has(.ticker-main) .pv-side>.ticker{display:none}
 .hfeed .pv-hl b{font-size:13px;line-height:1.3;hyphens:none;-webkit-hyphens:none;overflow-wrap:normal;word-break:normal;-webkit-text-size-adjust:none;text-size-adjust:none}
 .hfeed .pv-row time{font-size:12px;-webkit-text-size-adjust:none;text-size-adjust:none}
 .hfeed .pv-min{width:48px;min-width:48px;padding:2px 1px}
@@ -711,7 +711,7 @@ article .st{font-size:clamp(1.05rem,2vw,1.3rem);line-height:1.22;letter-spacing:
 .phead p{color:var(--muted);margin-top:6px}
 .phead img{width:min(420px,45%);flex:none;border-radius:10px;border:1px solid var(--edge)}
 /* article */
-article{padding:36px 0 8px}
+article{padding:13px 0 8px}
 article h1{font-size:clamp(1.8rem,4.6vw,2.6rem);line-height:1.12;letter-spacing:-.025em;margin:10px 0 14px}
 article .lead{font-size:1.12rem;line-height:1.38;color:var(--muted);margin:0 0 22px}
 article .hero-img{border-radius:10px;margin:0 0 26px;aspect-ratio:1200/630;width:100%;object-fit:cover;border:1px solid var(--edge)}
@@ -1471,7 +1471,7 @@ header.hb .bar .lang{margin-left:0;margin-right:0;flex:none;white-space:nowrap;t
 .nlbar .nlbar-form>button,.nlside-form>button{max-width:100%;white-space:normal}
 }
 .nlpitch p{margin:0 0 12px}
-@media (max-width:600.98px){.gbox{grid-template-columns:1fr}}
+@media (max-width:600.98px){.gbox{grid-template-columns:1fr}article h1,.sheet-main article.money h1,.sheet-main article.narrow>h1,.hubhead h1{font-size:22px;line-height:1.15}article .prose,article .lead,.sheet-main article.money .prose,.sheet-main article.money .lead,.sheet-main article.narrow .prose{font-size:16px;line-height:1.5}}
 @media (max-width:900px){html body .hfeed .pv-hl b{font-size:13px;line-height:1.3;hyphens:none;-webkit-hyphens:none;overflow-wrap:normal;word-break:normal;-webkit-text-size-adjust:none;text-size-adjust:none}html body .hfeed .pv-row time{font-size:12px;-webkit-text-size-adjust:none;text-size-adjust:none}html body .hfeed .pv-min{width:48px;min-width:48px}html body .hfeed .pv-min b{font-size:12px}}
 """
 
@@ -4574,15 +4574,12 @@ def page_side(arts, lang, kind="home", current=None, skip=None, tail="", signup=
             else:
                 parts.append(block)
         if latest:
-            parts.append(_side_section(L["latest"], _side_ul(lang, latest, "latest")))
+            parts.append(ticker_bar(lang) + _side_section(L["latest"], _side_ul(lang, latest, "latest")))
         if start:
             parts.append(_side_section(C["start"], _side_ol(lang, start)))
     else:
         if latest:
-            block = _side_section(L["latest"], _side_ul(lang, latest, "latest"))
-            if kind == "home":
-                block = ticker_bar(lang) + block
-            parts.append(block)
+            parts.append(ticker_bar(lang) + _side_section(L["latest"], _side_ul(lang, latest, "latest")))
         if start:
             parts.append(_side_section(C["start"], _side_ol(lang, start)))
     news = newsletter(lang, "side")

@@ -6384,6 +6384,14 @@ def hub_rubric(lang, layer, layer_path, sub="", sub_path=""):
 def hub_article(lang, title, intro, updated, rubric, hero_id, sections):
     """Same frame as a news article: photo, rubric, title, byline, contents, prose."""
     L = LANGS[lang]
+    seen = []
+    for pid in [hero_id] + [photo_id for _heading, _inner, photo_id in sections]:
+        item = hub_photo(pid)
+        if not item:
+            continue
+        if item["src"] in seen:
+            raise RuntimeError(f"hub photo used twice: {item['src']}")
+        seen.append(item["src"])
     hero, hero_credit = hub_hero(hero_id, lang)
     credits = [hero_credit] if hero_credit else []
     blocks = []
@@ -6507,7 +6515,7 @@ def starship_page(lang, arts):
         sections.append((labels[10], map_link, ""))
     rubric = hub_rubric(lang, "SpaceX", "spacex/", "Starship", "starship/")
     article, image = hub_article(
-        lang, title, intro, data["updated"], rubric, "starship-15", sections)
+        lang, title, intro, data["updated"], rubric, "starship-5-catch", sections)
     return nav + article, ld, intro, image
 
 
@@ -6587,9 +6595,9 @@ def evergreen_body(hub, arts, lang):
                + hub_cards(related, lang))
     nav, ld = crumbs(lang, [(title, None)])
     photos = {
-        "fsd-europe": {"2026-04-10": "fsd-modelx", "2026-06-17": "fsd-tahoe"},
-        "deliveries": {"2026-07-02": "deliver-3", "2026-10-02": "deliver-y"},
-        "starlink-nl": {"2021-05-13": "starlink-dish", "2021-10-13": "starlink-ship"},
+        "fsd-europe": {"2026-04-10": "fsd-modelx", "2026-06-17": "fsd-madmax"},
+        "deliveries": {"2026-07-02": "deliver-3", "2026-10-02": "deliver-ct"},
+        "starlink-nl": {"2021-05-13": "starlink-dish2", "2021-10-13": "starlink-ship"},
     }.get(hub.get("key"), {})
     heroes = {
         "fsd-europe": "fsd-tahoe",

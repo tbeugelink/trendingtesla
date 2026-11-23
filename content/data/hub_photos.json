@@ -51,6 +51,19 @@
       "nl": "GOES-satellietbeeld van de vierde vlucht, 6 juni 2024. De heldere vlek is de rookpluim."
     }
   },
+  "starship-5-catch": {
+    "src": "/img/hubs/starship-5-catch.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Starship_5_Booster_Landing_on_Mechzilla.jpg",
+    "credit": "Bech, Prospectprospekt and Steve Jurvetson, CC BY 2.0, via Wikimedia Commons",
+    "alt": {
+      "en": "The Super Heavy booster of Starship flight 5 hovering beside the tower during the catch",
+      "nl": "De Super Heavy-booster van Starship-vlucht 5 hangt naast de toren tijdens de vangst"
+    },
+    "caption": {
+      "en": "The Super Heavy booster of flight 5 during the catch, 13 October 2024. This is the booster, not the ship.",
+      "nl": "De Super Heavy-booster van vlucht 5 tijdens de vangst, 13 oktober 2024. Dit is de booster, niet het schip."
+    }
+  },
   "starship-5": {
     "src": "/img/hubs/starship-5.jpg",
     "page": "https://commons.wikimedia.org/wiki/File:SpaceX_Starship_during_IFT-5.jpg",
@@ -116,6 +129,19 @@
       "nl": "Schip 42 tijdens de vangst op vlucht 15, 14 november 2026."
     }
   },
+  "fsd-madmax": {
+    "src": "/img/hubs/fsd-madmax.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Tesla_Mad_Max_Mode.jpg",
+    "credit": "Jzh2074, CC BY-SA 4.0, via Wikimedia Commons",
+    "alt": {
+      "en": "Tesla Autopilot settings screen with the Mad Max lane-change option selected",
+      "nl": "Tesla-scherm met Autopilot-instellingen, de optie Mad Max voor rijstrookwissel staat aan"
+    },
+    "caption": {
+      "en": "The Autopilot settings screen, with lane changes set to Mad Max. This is not a photograph of the Dutch monthly checks.",
+      "nl": "Het instellingenscherm van Autopilot, met rijstrookwissel op Mad Max. Dit is geen foto van de maandelijkse controles in Nederland."
+    }
+  },
   "fsd-tahoe": {
     "src": "/img/hubs/fsd-tahoe.jpg",
     "page": "https://commons.wikimedia.org/wiki/File:Tesla_Autopilot_engaged_on_I-80_near_Lake_Tahoe.jpg",
@@ -142,6 +168,19 @@
       "nl": "Een Model X uit 2017 waarbij Autopilot afstand houdt tot een vrachtwagen. Het paneel toont het rijbeeld. Dit is geen foto van de Nederlandse typegoedkeuring."
     }
   },
+  "starlink-dish2": {
+    "src": "/img/hubs/starlink-dish2.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Starlink_dish_02.webp",
+    "credit": "Wikideas1, CC0, via Wikimedia Commons",
+    "alt": {
+      "en": "A Starlink user terminal on its stand in front of a house",
+      "nl": "Een Starlink-gebruikersterminal op zijn standaard voor een huis"
+    },
+    "caption": {
+      "en": "Another Starlink user terminal, in front of a house. The photograph is not from the Netherlands.",
+      "nl": "Een andere Starlink-gebruikersterminal, voor een huis. De foto is niet in Nederland gemaakt."
+    }
+  },
   "starlink-dish": {
     "src": "/img/hubs/starlink-dish.jpg",
     "page": "https://commons.wikimedia.org/wiki/File:Starlink_dish_01.webp",
@@ -166,6 +205,19 @@
     "caption": {
       "en": "Starlink terminals on a cruise ship. This is not a photograph of the Dutch rollout.",
       "nl": "Starlink-terminals op een cruiseschip. Dit is geen foto van de uitrol in Nederland."
+    }
+  },
+  "deliver-ct": {
+    "src": "/img/hubs/deliver-ct.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:2024_Tesla_Cybertruck.jpg",
+    "credit": "Calreyn88, CC BY-SA 4.0, via Wikimedia Commons",
+    "alt": {
+      "en": "A stainless steel 2024 Tesla Cybertruck",
+      "nl": "Een roestvrijstalen Tesla Cybertruck uit 2024"
+    },
+    "caption": {
+      "en": "A 2024 Tesla Cybertruck. The photograph is not of the quarterly delivery count.",
+      "nl": "Een Tesla Cybertruck uit 2024. De foto is niet van de kwartaallevering zelf."
     }
   },
   "deliver-y": {

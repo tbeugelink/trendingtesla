@@ -1,9 +1,9 @@
 """Story Shorts are listed in ops/story-pending.json until they are public and posted to the other networks.
 
-Daily Shorts are uploaded public. This script (every 15 minutes, in shorts-page.yml) makes a Short that is
-still private after REVIEW_HOURS public, posts every public one to TikTok, Instagram and Facebook via Buffer,
-and writes it into content/shorts.json before it leaves the pending list. That way a YouTube-feed outage
-cannot make the watchdog upload a second copy.
+This script does not upload to YouTube and does not change a video's privacy. A manual
+"Publish story Short" run makes one public. Every 15 minutes (shorts-page.yml) this script
+then posts each public one to TikTok, Instagram and Facebook via Buffer, and writes it into
+content/shorts.json before it leaves the pending list.
 
 Usage (GitHub Actions, with the YT_* secrets, BUFFER_API_KEY and GH_TOKEN):  python3 tools/story_approve.py
 Prints "changed" when ops/story-pending.json was updated.
@@ -29,13 +29,12 @@ req = urllib.request.Request(f"https://www.googleapis.com/youtube/v3/videos?part
                              headers={"Authorization": f"Bearer {at}"})
 with urllib.request.urlopen(req, timeout=60) as r:
     status = {v["id"]: v["status"]["privacyStatus"] for v in json.load(r)["items"]}
-REVIEW_HOURS = 2
 keep, changed = [], False
 now = datetime.now(timezone.utc)
 
 
 def ensure_listed(p):
-    """The slug stays visible to the watchdog after it leaves ops/story-pending.json."""
+    """The slug stays in the upload ledger after it leaves ops/story-pending.json."""
     title = p.get("title") or ""
     led = ROOT / "ops/short-uploads.json"
     rows = json.loads(led.read_text(encoding="utf-8")) if led.exists() else []
@@ -56,13 +55,6 @@ def ensure_listed(p):
 
 for p in pending:
     st = status.get(p["id"])
-    if st == "private" and now - datetime.fromisoformat(p["made"]) > timedelta(hours=REVIEW_HOURS):
-        mp4 = ROOT / "video/out" / f"{p['slug']}-en-short.mp4"
-        mp4.parent.mkdir(parents=True, exist_ok=True)
-        if not mp4.exists():
-            subprocess.run(["gh", "run", "download", str(p["run"]), "-n", f"story-{p['slug']}", "-D", str(mp4.parent)])
-        if mp4.exists() and subprocess.run([sys.executable, str(ROOT / "tools/story_publish.py"), p["id"], str(mp4)]).returncode == 0:
-            st = "public"
     if st == "public":
         ensure_listed(p)
         mp4 = ROOT / "video/out" / f"{p['slug']}-en-short.mp4"

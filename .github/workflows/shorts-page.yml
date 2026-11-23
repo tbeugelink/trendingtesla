@@ -3,6 +3,8 @@ name: Update YouTube videos on site
 # Checks the public feed of the @TrendingTesla channel. As soon as a video is public on YouTube,
 # it is added to the site: Shorts go to content/shorts.json (/shorts/ page), long videos to content/videos.json (shown in
 # their article); then the site is rebuilt and pushed (Cloudflare deploys).
+# By the owner's decision this job does not upload, queue, or start "Make YouTube videos".
+# A video is uploaded only by a manual workflow_dispatch.
 on:
   schedule:
     - cron: "*/15 * * * *"
@@ -10,7 +12,7 @@ on:
 
 permissions:
   contents: write
-  actions: write
+  actions: read
 
 concurrency:
   group: shorts-page
@@ -79,21 +81,3 @@ jobs:
             sleep 10
           done
           exit 1
-      - name: Watchdog - every article gets its Short and long video (retry once, then report)
-        if: always()
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          # runs that are working, or waiting for less than 90 minutes (a run GitHub left queued for longer never
-          # started in practice and cannot be cancelled, so it must not block the retry for ever)
-          export VIDEO_RUNS_ACTIVE=$(gh run list --workflow shorts.yml -L 20 --json status,createdAt --jq '[.[] | select(.status == "in_progress" or (.status != "completed" and ((now - (.createdAt | fromdate)) < 5400)))] | length' 2>/dev/null || echo 0)
-          out=$(python3 tools/video_watchdog.py); echo "$out"
-          if echo "$out" | grep -qx changed; then
-            git config user.name "TrendingTesla bot"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add video/queue.txt ops/video-retries.json ops/video-problems.md 2>/dev/null
-            git commit -qm "Watchdog: request missing video" && \
-              (git pull --rebase -q origin main && git push -q origin HEAD:main) && \
-              { echo "$out" | grep -qx queued && gh workflow run shorts.yml -f slug=queue; } || true
-          fi
-          echo "$out" | grep -q "::error::" && exit 1 || true

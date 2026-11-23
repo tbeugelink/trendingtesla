@@ -1164,8 +1164,12 @@ header.hb .pnav>.is-parked{display:none}
 .layerrow .lcard:last-child{grid-column:1 / -1}
 .lcard .lim{display:block;aspect-ratio:16/9;background:#101010;overflow:hidden;border-radius:8px}
 .lcard .lim img{width:100%;height:100%;object-fit:cover}
-.lcard .lim.fitin{aspect-ratio:9/16;background:#070b16}
-.lcard .lim.fitin img{object-fit:cover;object-position:center}
+/* A Short on a news card stays the same 16:9 tile as its neighbours. The vertical
+   poster sits centered on a blurred copy of itself, with the Short badge and play icon on top. */
+.lcard .lim.fitin{position:relative;aspect-ratio:16/9;background:#070b16;overflow:hidden}
+.lcard .lim.fitin::before{content:"";position:absolute;inset:-8%;background:var(--poster) center/cover no-repeat;filter:blur(18px) brightness(.45);transform:scale(1.12)}
+.lcard .lim.fitin img{position:relative;z-index:1;width:auto;max-width:100%;height:100%;margin:0 auto;object-fit:contain;object-position:center}
+.lcard .lim.fitin .dur,.lcard .lim.fitin .vpl{z-index:2}
 .lcard .lbody{display:flex;flex-direction:column;gap:4px;padding:0 0 10px;min-width:0;flex:1}
 .lmeta{display:flex;flex-wrap:nowrap;gap:4px 6px;align-items:baseline;margin:6px 0 4px;padding:0;font-size:.68rem;font-weight:700;line-height:1.3;color:var(--dim);white-space:nowrap}.leadstory>.lmeta,.pv-lead>.lmeta,article.money>.lmeta{margin-bottom:9px}
 /* Article pages: rubric sits under the hero and its caption, then the title.
@@ -4750,17 +4754,20 @@ def layer_latest(arts, lang):
 def home_grid_card(a, lang, eager=False, badge=""):
     """Article card: rubric flush under the photo, title below. A video badge sits on the photo."""
     t = a[lang]
+    href = url(lang, a["slug"] + "/")
+    poster = short_poster(SHORTS.get(a["slug"]))
+    if poster and not badge:
+        badge = "Short"
     mark = ""
     if badge:
         mark = f'<span class="dur dvo">{esc(badge)}</span><span class="vpl" aria-hidden="true"></span>'
     mark = live_mark(a) + mark
-    href = url(lang, a["slug"] + "/")
-    poster = short_poster(SHORTS.get(a["slug"]))
-    frame = " lim zimg fitin" if poster else " lim zimg"
+    frame = "lim zimg fitin" if poster else "lim zimg"
+    style = f' style="--poster:url({esc(poster)})"' if poster else ""
     photo = poster or site_img(a)
     return (
         f'<div class="lcard"><a class="lgo" href="{href}">'
-        f'<span class="{frame.strip()}">{resp_img(photo, t["title"], "(max-width: 599px) 92vw, (max-width: 900px) 46vw, 280px", high=eager, lazy=not eager, width=1080 if poster else 640, height=1920 if poster else 360)}{mark}</span></a>'
+        f'<span class="{frame}"{style}>{resp_img(photo, t["title"], "(max-width: 599px) 92vw, (max-width: 900px) 46vw, 280px", high=eager, lazy=not eager, width=1080 if poster else 640, height=1920 if poster else 360)}{mark}</span></a>'
         f'{with_actions(rubric_line(a, lang), "", lang, href)}'
         f'<a class="lgo" href="{href}"><span class="lbody"><strong>{esc(card_title(a, lang))}</strong></span></a></div>')
 

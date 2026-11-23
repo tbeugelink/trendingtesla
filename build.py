@@ -492,9 +492,11 @@ h1,h2,h3{color:#ebebeb;font-weight:800}
 .tk[hidden]{display:none}
 @keyframes tk-run{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 .ticker-main{display:none}
-@media (max-width:900px){
+@media (max-width:767.98px){
 .ticker-main{display:block;border-bottom:3px solid var(--red)}
 .sheet:has(.ticker-main) .pv-side>.ticker{display:none}
+}
+@media (max-width:900px){
 .hfeed .pv-hl b{font-size:13px;line-height:1.3;hyphens:none;-webkit-hyphens:none;overflow-wrap:normal;word-break:normal;-webkit-text-size-adjust:none;text-size-adjust:none}
 .hfeed .pv-row time{font-size:12px;-webkit-text-size-adjust:none;text-size-adjust:none}
 .hfeed .pv-min{width:48px;min-width:48px;padding:2px 1px}
@@ -503,10 +505,17 @@ h1,h2,h3{color:#ebebeb;font-weight:800}
 .hfeed .pv-row{grid-template-columns:42px minmax(0,1fr) 48px;column-gap:6px}
 }
 @media (prefers-reduced-motion:reduce){.ticker{overflow-x:auto;overflow-y:hidden}.tk-track{animation:none}.tk-set[aria-hidden="true"]{display:none}}
+/* Desktop and tablet: the lichtkrant stays under the sticky header while the page scrolls.
+   Phones keep the in-flow copy. The sidebar column is stretched so the bar can stick for the whole story. */
+@media (min-width:768px){
+.sheet>.pv-side,.sheet>.sheet-rail{align-self:stretch}
+.sheet-rail>.pv-side:not(.arel){flex:1 1 auto}
+.pv-side>.ticker,.ticker-main{position:sticky;top:66px;z-index:30;background:#0f0f0f}
+}
 .bar{display:flex;align-items:center;gap:14px;height:66px}
 .brand{display:flex;align-items:baseline;gap:14px;min-width:0}
 .logo{font-weight:800;font-size:1.4rem;letter-spacing:-.02em;color:#ebebeb;text-decoration:none;white-space:nowrap}
-.logo span{color:var(--red);font-size:calc(1em + 1px);position:relative;top:1px}
+.logo span{color:var(--red);font-size:calc(1em + 1px);position:relative;top:3px}
 .slogan{font-size:.86rem;font-weight:600;color:var(--muted);white-space:nowrap}
 .burger{flex:none;width:40px;height:40px;margin-left:-8px;border-radius:10px;border:0;background:transparent;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;cursor:pointer}
 .burger span{width:18px;height:2px;border-radius:2px;background:#ebebeb}
@@ -1041,7 +1050,7 @@ html.find-open header.hb .sbtn{background:#272727;border-radius:8px}
 @media (prefers-reduced-motion:reduce){.hb-find,.hb-find .hb-search{transition:none}}
 header.hb .savedlink{margin-left:6px}
 header.hb ~ .drawer,header.hb ~ .scrim{top:66px}
-@media (min-width:900px){header.hb .pnav{display:flex;flex-wrap:nowrap;overflow:visible;align-items:baseline}header.hb .id{align-items:baseline;gap:16px}header.hb .bar{position:relative;z-index:3;align-items:center}header.hb .logo{line-height:1}header.hb .logo span{top:0}header.hb .bar .burger{display:flex}}
+@media (min-width:900px){header.hb .pnav{display:flex;flex-wrap:nowrap;overflow:visible;align-items:baseline}header.hb .id{align-items:baseline;gap:16px}header.hb .bar{position:relative;z-index:3;align-items:center}header.hb .logo{line-height:1}header.hb .logo span{top:2px}header.hb .bar .burger{display:flex}}
 @media (min-width:901px){.hb-find .hb-search{width:min(640px,calc(100% - 292px - 26px));max-width:none;margin:8px calc(292px + 26px) 18px auto}}
 @media (max-width:860.98px){header.hb .hb-find .hb-search{display:flex;position:relative;left:auto;right:auto;top:auto;width:min(640px,calc(100% - 8px));height:42px;margin:8px auto 18px;padding:0;background:transparent;z-index:1}}
 @media (min-width:900px) and (max-width:1099.98px){header.hb .id{gap:10px}header.hb .pn,header.hb .mdrop>button.pn{font-size:14.5px;padding:5px 7px}}
@@ -1158,10 +1167,17 @@ header.hb .pnav>.is-parked{display:none}
    6px above the line and 9px before the title, as on thumbnail cards. */
 article.money>.hi,article.money>.avid{margin-bottom:0}
 article.money .hero-img{margin-bottom:0}
-article.money>.lmeta{margin-top:6px}
+article.money>.lmeta,article.money>.lrow{margin-top:6px}
+.lrow{display:flex;flex-wrap:nowrap;align-items:center;gap:8px;min-width:0;margin:6px 0 4px}
+.lrow>.lmeta,.lrow>a.lgo{flex:1 1 auto;min-width:0;overflow:hidden}
+.lrow>.lmeta,.lrow>a.lgo>.lmeta{display:block;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;margin:0}
+.lrow>.acts{display:flex;flex-flow:row nowrap;flex:0 0 auto;margin-left:auto}
+.lrow .act{flex:none;white-space:nowrap}
+a.lgo{display:block;min-width:0;color:inherit;text-decoration:none}
+article.money>.lrow{margin-bottom:9px}
 .lname{font-size:.68rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--blue)}
-article.money>.lmeta a.lname{color:var(--blue);text-decoration:none}
-article.money>.lmeta a.lname:hover{text-decoration:underline}
+article.money .lmeta a.lname{color:var(--blue);text-decoration:none}
+article.money .lmeta a.lname:hover{text-decoration:underline}
 .lmeta .llayer{font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:inherit;text-decoration:none}
 .lmeta .lsub{font-weight:800;color:var(--blue);text-decoration:none}
 .lmeta a.llayer:hover,.lmeta a.lsub:hover{text-decoration:underline}
@@ -1184,7 +1200,7 @@ article.money>.lmeta a.lname:hover{text-decoration:underline}
 .sheet-main article.money>.smeta{margin-bottom:7px}
 .sheet-main article.money>.byline{margin-bottom:6px}
 .sheet-main article.money>.lead{margin-bottom:11px}
-.sheet-main article.money>.avid{margin-top:0;margin-bottom:0}.sheet-main article.money>.hi{margin-bottom:0}.sheet-main article.money>.lmeta{margin-left:calc(3vw + 14px);margin-right:calc(3vw + 14px)}
+.sheet-main article.money>.avid{margin-top:0;margin-bottom:0}.sheet-main article.money>.hi{margin-bottom:0}.sheet-main article.money>.lmeta,.sheet-main article.money>.lrow{margin-left:calc(3vw + 14px);margin-right:calc(3vw + 14px)}
 .sheet-main article.money .lead{font-size:1.08rem;line-height:1.5;color:var(--muted);max-width:none}
 .sheet-main article.money .prose{font-size:1.05rem;line-height:1.7;max-width:none}
 .sheet-main article .prose h2{margin-right:14px}
@@ -1200,10 +1216,10 @@ article.money>.lmeta a.lname:hover{text-decoration:underline}
 .sheet-main article.narrow>h1,.sheet-main article.narrow>.byline,.sheet-main article.money>h1,.sheet-main article.money>.meta,.sheet-main article.money>.byline{margin-left:calc(3vw + 14px);margin-right:calc(3vw + 14px)}
 .sheet-main article.brief>h1,.sheet-main article.brief>.byline,.sheet-main article.brief>.meta,.sheet-main article.brief>.tplnote,.sheet-main article.brief>.lead{margin-left:0;margin-right:0}
 .sheet-main article.brief>.lead{padding-left:0;padding-right:0}
-@media (max-width:600.98px){.sheet-main article.narrow>h1,.sheet-main article.narrow>.byline,.sheet-main article.money>h1,.sheet-main article.money>.meta,.sheet-main article.money>.byline,.sheet-main article.money>.lmeta,.sheet-main article.money .toc,.sheet-main article.money .sources,.sheet-main article.money .imgnote,.sheet-main article.money nav.seq,.sheet-main article.money .pbox,.sheet-main article.money .nform,.sheet-main article.money .avid figcaption{margin-left:4px;margin-right:4px}.sheet-main article.brief>h1,.sheet-main article.brief>.byline,.sheet-main article.brief>.meta,.sheet-main article.brief>.tplnote,.sheet-main article.brief>.lead{margin-left:0;margin-right:0}}
+@media (max-width:600.98px){.sheet-main article.narrow>h1,.sheet-main article.narrow>.byline,.sheet-main article.money>h1,.sheet-main article.money>.meta,.sheet-main article.money>.byline,.sheet-main article.money>.lmeta,.sheet-main article.money>.lrow,.sheet-main article.money .toc,.sheet-main article.money .sources,.sheet-main article.money .imgnote,.sheet-main article.money nav.seq,.sheet-main article.money .pbox,.sheet-main article.money .nform,.sheet-main article.money .avid figcaption{margin-left:4px;margin-right:4px}.sheet-main article.brief>h1,.sheet-main article.brief>.byline,.sheet-main article.brief>.meta,.sheet-main article.brief>.tplnote,.sheet-main article.brief>.lead{margin-left:0;margin-right:0}}
 .sheet-main article.money .mlbox,.sheet-main article.narrow .mlbox{margin-left:calc(3vw + 14px);margin-right:calc(3vw + 14px)}
 @media (max-width:600.98px){.sheet-main article.money .mlbox,.sheet-main article.narrow .mlbox{margin-left:4px;margin-right:4px}}
-@media (max-width:900px){
+@media (max-width:767.98px){
 .pv-grid,.pv-art,.pv-art.pv-c,.sheet{grid-template-columns:1fr}
 .pv-lead{grid-template-columns:1fr}
 .pv-c .toc{position:static}
@@ -1219,13 +1235,16 @@ article.money>.lmeta a.lname:hover{text-decoration:underline}
 .sheet:has(.arel)>.sheet-rail{grid-area:rail;display:flex;flex-direction:column;justify-content:flex-start;align-items:stretch;align-self:start;min-width:0;gap:0}
 .sheet:has(.arel)>.nlbar{grid-area:bar}
 .sheet>.nlbar{grid-column:1 / -1}
-@media (max-width:900px){
+@media (max-width:767.98px){
 .sheet:has(.arel){grid-template-columns:1fr;grid-template-areas:"main" "side" "bar" "rest"}
 .sheet:has(>.crumbs):has(.arel){grid-template-areas:"crumbs" "main" "side" "bar" "rest"}
 .sheet:has(.arel)>.sheet-rail{display:contents}
 .sheet:has(.arel) .arel{grid-area:side}
 .sheet:has(.arel) .pv-side:not(.arel){grid-area:rest}
 .nlside{display:none}
+}
+@media (min-width:768px){
+.sheet>.pv-side,.sheet:has(.arel)>.sheet-rail{align-self:stretch}
 }
 .eco-bit{min-width:0}
 .eco-sources{margin:0 0 12px;padding-left:1.1rem}
@@ -1393,7 +1412,7 @@ header.hb .bar .burger{display:flex;flex-direction:column;align-items:center;jus
 header.hb .bar .burger span{width:18px;height:2px;flex:none;border-radius:2px;background:#ebebeb}
 header.hb .brand{transform:none;margin-left:0}
 header.hb .bar .logo{font-size:22.4px;line-height:1;letter-spacing:-.02em;transform:none}
-header.hb .logo span{font-size:calc(1em + 1px);top:0}
+header.hb .logo span{font-size:calc(1em + 1px);top:2px}
 header.hb ~ .drawer,header.hb ~ .scrim{top:66px}
 
 /* Phones only: shrink logo and hamburger together so the tool row (magnifier,
@@ -1500,10 +1519,10 @@ article.narrow>.hi img,article.narrow>.avid .avb{width:100%;max-width:100%}
 # Classes left over from retired layouts. They are not emitted by the pages build() writes.
 # Ads, the newsletter form, product boxes and the Shorts player stay: those render when configured.
 _DEAD_CSS = frozenset("""
-act acts arch aread below beside big btns cats9 chips dm eyebrow feature grid h2 hero home
+arch aread below beside big btns cats9 chips dm eyebrow feature grid h2 hero home
 hsec leadside mcell mdesc mini model models morelink nextread pblock ph phead pimg ptop ptxt
 pv-art pv-block pv-c pv-grid pv-guide pv-kicker pv-lead pv-note pv-off pv-tabs read rh rside
-side sideh slogan soon span2 sr srow starthere sub tdb tdc tdd tdl th tip topic topics3 tops why
+side sideh slogan soon span2 sr starthere sub tdb tdc tdd tdl th tip topic topics3 tops why
 """.split())
 _PAGE_CSS = None
 
@@ -2221,6 +2240,26 @@ SEARCH_SVG = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke
 CHEV_SVG = '<svg class="chev" width="11" height="11" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2.1 4.2 6 8.1 9.9 4.2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>'
 HEART_SVG = '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linejoin="round"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 8 3.4 4.5 7 4.5c2 0 3.6 1.1 5 2.9 1.4-1.8 3-2.9 5-2.9 3.6 0 5.6 3.5 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg>'
 BOOK_SVG = '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linejoin="round"><path d="M6 3.5h12v17l-6-4.2-6 4.2z"/></svg>'
+
+
+def story_actions(slug, lang):
+    """Heart (like) and bookmark (save). The same localStorage list the navbar badge reads."""
+    L = LANGS[lang]
+    return (
+        f'<div class="acts">'
+        f'<button class="act like" type="button" data-like="{esc(slug)}" aria-pressed="false" title="{esc(L["like"])}">{HEART_SVG}<span>0</span></button>'
+        f'<button class="act save" type="button" data-save="{esc(slug)}" aria-pressed="false" title="{esc(L["save"])}" aria-label="{esc(L["save"])}">{BOOK_SVG}</button>'
+        f'</div>')
+
+
+def with_actions(meta, slug, lang, href=""):
+    """Caption and the two icons on one line. A long caption ellipsizes before the icons."""
+    if not meta:
+        return ""
+    text = f'<a class="lgo" href="{href}">{meta}</a>' if href else meta
+    if not slug:
+        return f'<div class="lrow">{text}</div>' if href else meta
+    return f'<div class="lrow">{text}{story_actions(slug, lang)}</div>'
 DRAWER_MODELS = MODEL_STRIP + ["cybercab", "semi", "roadster"]
 
 
@@ -2550,7 +2589,7 @@ def feed(lead, lead_html, rest, lang, active=None, side_title="", left_first=(),
             g += f'<div class="span2">{tl[ti % len(tl)]}</div>'
             ti += 1
         c = gcard(a, lang) if topic else card(a, lang)
-        g += c.replace('<a class="card"', '<a class="card xtra"', 1) if no_left and i >= MAX_HOME_GRID else c
+        g += c.replace('<div class="card"', '<div class="card xtra"', 1) if no_left and i >= MAX_HOME_GRID else c
     side = "".join(mini(a, lang) for a in right_items[:n_own] if more) if more else "".join(mini(a, lang) for a in right_items)
     if more and len(right_items) > n_own:
         side += f'<h2 class="sideh">{CATEGORIES["news"][lang]}</h2>' + "".join(mini(a, lang) for a in right_items[n_own:])
@@ -2608,14 +2647,18 @@ window.addEventListener('load',bal);
 var LS={get:function(k){try{return JSON.parse(localStorage.getItem(k)||'[]')}catch(e){return []}},set:function(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
 var sv=document.querySelector('.savedlink i');function badge(){var n=LS.get('tt_saved').length;if(sv){sv.hidden=!n;sv.textContent=n}}badge();
 var SAVE=document.documentElement.lang==='nl'?['Bewaren','Bewaard']:['Save','Saved'];
-document.querySelectorAll('[data-save]').forEach(function(b){var s=b.dataset.save;function st(){var on=LS.get('tt_saved').indexOf(s)>-1;b.setAttribute('aria-pressed',on);b.title=SAVE[on?1:0];b.setAttribute('aria-label',SAVE[on?1:0])}st();
-b.onclick=function(){var l=LS.get('tt_saved'),i=l.indexOf(s);if(i>-1)l.splice(i,1);else l.unshift(s);LS.set('tt_saved',l);st();badge()}});
-var lb=[].slice.call(document.querySelectorAll('[data-like]'));if(lb.length){var liked=LS.get('tt_liked');
-fetch('/api/likes?s='+lb.map(function(b){return b.dataset.like}).join(',')).then(function(r){return r.json()}).then(function(j){lb.forEach(function(b){var n=j[b.dataset.like]||0;b.querySelector('span').textContent=n})}).catch(function(){});
-lb.forEach(function(b){var s=b.dataset.like;b.setAttribute('aria-pressed',liked.indexOf(s)>-1);b.onclick=function(){var l=LS.get('tt_liked'),i=l.indexOf(s),d=i>-1?-1:1;if(d>0)l.push(s);else l.splice(i,1);LS.set('tt_liked',l);b.setAttribute('aria-pressed',d>0);
-var sp=b.querySelector('span');sp.textContent=Math.max(0,(+sp.textContent||0)+d);fetch('/api/likes',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({slug:s,d:d})}).then(function(r){return r.json()}).then(function(j){if(j.n!=null)sp.textContent=j.n}).catch(function(){})}})}
+var LIKE=document.documentElement.lang==='nl'?'Vind ik leuk':'Like';
+var HEART='<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linejoin="round"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 8 3.4 4.5 7 4.5c2 0 3.6 1.1 5 2.9 1.4-1.8 3-2.9 5-2.9 3.6 0 5.6 3.5 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg>';
+var BOOK='<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linejoin="round"><path d="M6 3.5h12v17l-6-4.2-6 4.2z"/></svg>';
+function cardActs(slug){return '<div class="acts"><button class="act like" type="button" data-like="'+e(slug)+'" aria-pressed="false" title="'+LIKE+'">'+HEART+'<span>0</span></button><button class="act save" type="button" data-save="'+e(slug)+'" aria-pressed="false" title="'+SAVE[0]+'" aria-label="'+SAVE[0]+'">'+BOOK+'</button></div>'}
+function paintSave(){document.querySelectorAll('[data-save]').forEach(function(b){var on=LS.get('tt_saved').indexOf(b.dataset.save)>-1;b.setAttribute('aria-pressed',on);b.title=SAVE[on?1:0];b.setAttribute('aria-label',SAVE[on?1:0])})}
+paintSave();
+document.addEventListener('click',function(ev){var b=ev.target.closest&&ev.target.closest('[data-save]');if(!b)return;ev.preventDefault();var s=b.dataset.save,l=LS.get('tt_saved'),i=l.indexOf(s);if(i>-1)l.splice(i,1);else l.unshift(s);LS.set('tt_saved',l);paintSave();badge()});
+function paintLike(){var lb=[].slice.call(document.querySelectorAll('[data-like]'));if(!lb.length)return;var liked=LS.get('tt_liked');lb.forEach(function(b){b.setAttribute('aria-pressed',liked.indexOf(b.dataset.like)>-1)});fetch('/api/likes?s='+lb.map(function(b){return b.dataset.like}).join(',')).then(function(r){return r.json()}).then(function(j){lb.forEach(function(b){var n=j[b.dataset.like]||0;var sp=b.querySelector('span');if(sp)sp.textContent=n})}).catch(function(){})}
+paintLike();
+document.addEventListener('click',function(ev){var b=ev.target.closest&&ev.target.closest('[data-like]');if(!b)return;ev.preventDefault();var s=b.dataset.like,liked=LS.get('tt_liked'),i=liked.indexOf(s),d=i>-1?-1:1;if(d>0)liked.push(s);else liked.splice(i,1);LS.set('tt_liked',liked);b.setAttribute('aria-pressed',d>0);var sp=b.querySelector('span');sp.textContent=Math.max(0,(+sp.textContent||0)+d);fetch('/api/likes',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({slug:s,d:d})}).then(function(r){return r.json()}).then(function(j){if(j.n!=null)sp.textContent=j.n}).catch(function(){})});
 var sl=document.querySelector('.savedlist');if(sl){var keep=LS.get('tt_saved');if(!keep.length){sl.innerHTML='<p class="empty">'+e(sl.dataset.empty)+'</p>'}else{load().then(function(){var m={};idx.forEach(function(a){var k=a.u.replace(/\/$/,'').split('/').pop();m[k]=a});
-sl.innerHTML=keep.filter(function(k){return m[k]}).map(function(k){var a=m[k];return '<a class="card" href="'+a.u+'"><div class="im zimg"><img src="'+a.i+'" alt="'+e(a.t)+'" width="1200" height="630" decoding="async"></div><div class="body">'+rubric(a)+'<h3>'+e(a.t)+'</h3></div></a>'}).join('');ttAgo()})}}window.addEventListener('resize',bal);bal();
+sl.innerHTML=keep.filter(function(k){return m[k]}).map(function(k){var a=m[k];return '<div class="card"><a class="lgo" href="'+a.u+'"><div class="im zimg"><img src="'+a.i+'" alt="'+e(a.t)+'" width="1200" height="630" decoding="async"></div></a><div class="body"><div class="lrow"><a class="lgo" href="'+a.u+'">'+rubric(a)+'</a>'+cardActs(k)+'</div><a class="lgo" href="'+a.u+'"><h3>'+e(a.t)+'</h3></a></div></div>'}).join('');paintSave();paintLike();ttAgo()})}}window.addEventListener('resize',bal);bal();
 })();"""
 JS += r"""
 document.querySelectorAll(".avb[data-vid]").forEach(function(b){b.addEventListener("click",function(){if(b.classList.contains("on"))return;b.classList.add("on");var f=document.createElement("iframe");f.src="https://www.youtube-nocookie.com/embed/"+b.dataset.vid+"?autoplay=1"+(matchMedia("(pointer:coarse)").matches?"":"&playsinline=1")+"&rel=0";f.title=b.getAttribute("aria-label")||"YouTube";f.setAttribute("allow","autoplay; encrypted-media; picture-in-picture; fullscreen");f.allowFullscreen=true;b.appendChild(f)})});
@@ -2689,20 +2732,23 @@ def card(a, lang, lead=False):
     im = f'<div class="im zimg">{resp_img(site_img(a), t["title"], SIZES_CARD)}{live_mark(a)}{dur(a, lang)}{ovl(a, lang)}</div>'
     title = f'<h3>{esc(card_title(a, lang))}</h3>'
     # The rubric sits under the photo, then the title. The lead photo is not a link.
+    href = url(lang, a["slug"] + "/")
+    row = with_actions(line, a["slug"], lang, href)
     if lead:
         return (f'<div class="{cls}">{im}'
-                f'<div class="body">{line}<a href="{url(lang, a["slug"] + "/")}">{title}</a></div></div>')
-    return (f'<a class="{cls}" href="{url(lang, a["slug"] + "/")}">{im}'
-            f'<div class="body">{line}{title}</div></a>')
+                f'<div class="body">{row}<a class="lgo" href="{href}">{title}</a></div></div>')
+    return (f'<div class="{cls}"><a class="lgo" href="{href}">{im}</a>'
+            f'<div class="body">{row}<a class="lgo" href="{href}">{title}</a></div></div>')
 
 
 def gcard(a, lang, eager=False):
     """Topic list under the lead: photo on top, then title, summary and date."""
     t = a[lang]
-    return (f'<a class="card" href="{url(lang, a["slug"] + "/")}">'
-            f'<div class="im zimg">{resp_img(site_img(a), t["title"], SIZES_GRID, high=eager, lazy=not eager)}{live_mark(a)}{dur(a, lang)}{ovl(a, lang)}</div>'
-            f'<div class="body">{rubric_line(a, lang)}'
-            f'<h2>{esc(card_title(a, lang))}</h2></div></a>')
+    href = url(lang, a["slug"] + "/")
+    return (f'<div class="card"><a class="lgo" href="{href}">'
+            f'<div class="im zimg">{resp_img(site_img(a), t["title"], SIZES_GRID, high=eager, lazy=not eager)}{live_mark(a)}{dur(a, lang)}{ovl(a, lang)}</div></a>'
+            f'<div class="body">{with_actions(rubric_line(a, lang), a["slug"], lang, href)}'
+            f'<a class="lgo" href="{href}"><h2>{esc(card_title(a, lang))}</h2></a></div></div>')
 
 
 def split2(t):
@@ -4165,7 +4211,7 @@ def home_lead(a, lang, title_tag="h1"):
     im = (f'<div class="leadim">'
           f'{resp_img(photo, t["title"], SIZES_LEAD, high=True, lazy=False, width=1600, height=900)}</div>'
           if photo else "")
-    return (f'<article class="leadstory">{im}{line}'
+    return (f'<article class="leadstory">{im}{with_actions(line, a["slug"], lang, href)}'
             f'<div>'
             f'<{tag} class="ltitle"><a href="{href}">{esc(card_title(a, lang))}</a></{tag}>'
             f'<a class="btn" href="{href}">{esc(L["read_story"])}</a></div></article>')
@@ -4417,12 +4463,12 @@ def home_videos(arts, lang, n=8):
             badge = LANGS[lang]["videos"]
         tone = layer_tone(a)
         cards.append(
-            f'<a class="vcard {tone}" href="{href}"><span class="vim zimg">'
+            f'<div class="vcard {tone}"><a class="lgo" href="{href}"><span class="vim zimg">'
             f'{resp_img(site_img(a), t["title"], SIZES_VIDEO, width=480, height=270)}'
             f'<span class="vpl" aria-hidden="true"></span>'
-            f'<span class="dur dvo">{esc(badge)}</span></span>'
-            f'{rubric_line(a, lang)}'
-            f'<strong>{esc(card_title(a, lang))}</strong></a>')
+            f'<span class="dur dvo">{esc(badge)}</span></span></a>'
+            f'{with_actions(rubric_line(a, lang), a["slug"], lang, href)}'
+            f'<a class="lgo" href="{href}"><strong>{esc(card_title(a, lang))}</strong></a></div>')
     return "".join(cards), [a for a, _, _ in rows]
 
 
@@ -4677,10 +4723,10 @@ def layer_latest(arts, lang):
         shown.append(pick)
         t = pick[lang]
         cards.append(
-            f'<a class="lcard {tone}" href="{url(lang, pick["slug"] + "/")}">'
-            f'<span class="lim zimg">{resp_img(site_img(pick), t["title"], "(max-width: 699px) 46vw, 220px", lazy=False, width=640, height=360)}</span>'
-            f'{rubric_line(pick, lang)}'
-            f'<span class="lbody"><strong>{esc(card_title(pick, lang))}</strong></span></a>')
+            f'<div class="lcard {tone}"><a class="lgo" href="{url(lang, pick["slug"] + "/")}">'
+            f'<span class="lim zimg">{resp_img(site_img(pick), t["title"], "(max-width: 699px) 46vw, 220px", lazy=False, width=640, height=360)}</span></a>'
+            f'{with_actions(rubric_line(pick, lang), pick["slug"], lang, url(lang, pick["slug"] + "/"))}'
+            f'<a class="lgo" href="{url(lang, pick["slug"] + "/")}"><span class="lbody"><strong>{esc(card_title(pick, lang))}</strong></span></a></div>')
     label = "Latest from each layer" if lang == "en" else "Het laatste per laag"
     return f'<section class="layerrow" aria-label="{esc(label)}">{"".join(cards)}</section>', shown
 
@@ -4692,11 +4738,12 @@ def home_grid_card(a, lang, eager=False, badge=""):
     if badge:
         mark = f'<span class="dur dvo">{esc(badge)}</span><span class="vpl" aria-hidden="true"></span>'
     mark = live_mark(a) + mark
+    href = url(lang, a["slug"] + "/")
     return (
-        f'<a class="lcard" href="{url(lang, a["slug"] + "/")}">'
-        f'<span class="lim zimg">{resp_img(site_img(a), t["title"], "(max-width: 599px) 92vw, (max-width: 900px) 46vw, 280px", high=eager, lazy=not eager, width=640, height=360)}{mark}</span>'
-        f'{rubric_line(a, lang)}'
-        f'<span class="lbody"><strong>{esc(card_title(a, lang))}</strong></span></a>')
+        f'<div class="lcard"><a class="lgo" href="{href}">'
+        f'<span class="lim zimg">{resp_img(site_img(a), t["title"], "(max-width: 599px) 92vw, (max-width: 900px) 46vw, 280px", high=eager, lazy=not eager, width=640, height=360)}{mark}</span></a>'
+        f'{with_actions(rubric_line(a, lang), a["slug"], lang, href)}'
+        f'<a class="lgo" href="{href}"><span class="lbody"><strong>{esc(card_title(a, lang))}</strong></span></a></div>')
 
 
 def story_badge(a):
@@ -4887,11 +4934,13 @@ def clip_card(item, lang, eager=False):
     flags = 'fetchpriority="high"' if eager else 'loading="lazy"'
     img = (f'<img src="{yt_thumb(item["id"])}" alt="{esc(title)}" width="480" height="360" {flags} decoding="async">')
     badge = f'<span class="dur dvo">{esc(clip_badge(item))}</span><span class="vpl" aria-hidden="true"></span>'
+    href = url(lang, item["path"])
+    article = item.get("article")
     return (
-        f'<a class="lcard" href="{url(lang, item["path"])}">'
-        f'<span class="lim zimg">{img}{badge}</span>'
-        f'{clip_meta(item, lang)}'
-        f'<span class="lbody"><strong>{esc(title)}</strong></span></a>')
+        f'<div class="lcard"><a class="lgo" href="{href}">'
+        f'<span class="lim zimg">{img}{badge}</span></a>'
+        f'{with_actions(clip_meta(item, lang), article["slug"] if article else "", lang, href)}'
+        f'<a class="lgo" href="{href}"><span class="lbody"><strong>{esc(title)}</strong></span></a></div>')
 
 
 def home_card(item, lang, eager=False):
@@ -5431,7 +5480,7 @@ def pv_article(variant, a, arts, lang, live=False):
         toc_here, rail = toc, ""
     article = (
         f'<article class="money">{media}'
-        f'{rubric_line(a, lang, link=True)}'
+        f'{with_actions(rubric_line(a, lang, link=True), a["slug"], lang)}'
         f'<h1>{esc(t["title"])}</h1>'
         f'<p class="byline"><a href="{url(lang, "editorial/")}">{L["byline"]}</a>'
         f' · {read_time(a, lang)} {L["min"]}</p>{updated_html(a, lang)}{evergreen_article_links(a, lang)}'
@@ -7500,7 +7549,7 @@ def build():
             title = L["archive"] + (f' · {L["page"]} {pi + 1}' if pi else "")
             body = (f'<section class="wide"><h1 class="st archh">{title}</h1><div class="grid2 gall wide">'
                     + "".join(gcard(a, lang) for a in chunk)
-                    + ("".join(gcard(a, lang).replace('<a class="card"', '<a class="card xtra"', 1)
+                    + ("".join(gcard(a, lang).replace('<div class="card"', '<div class="card xtra"', 1)
                                for a in (rest_arch[pi * PER_PAGE:pi * PER_PAGE + XTRA] if nxt else [])))
                     + f'</div>{pager}</section>')
             write(url(lang, path), page(lang, path, title, L["tagline"],

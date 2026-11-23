@@ -478,13 +478,20 @@ h1,h2,h3{color:#ebebeb;font-weight:800}
 .sr{position:absolute;left:-9999px}
 /* header */
 .top{position:sticky;top:0;z-index:40;background:transparent;transition:background-color .2s}.top.solid{background:#161616}.bar .search{height:38px}.bar .search input,.bar .search>button{box-sizing:border-box;height:38px;padding-top:0;padding-bottom:0}
-.ticker{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;justify-content:center;padding:7px 16px;background:#121212;border-bottom:1px solid #2a2a2a;color:#c8c8c8;font-size:.78rem;font-weight:700;line-height:1.3}
-.ticker[hidden]{display:none}
-.ticker .tk{white-space:nowrap}
-.ticker b{color:#fff;font-weight:800}
-.ticker .up{color:#3ddc97}
-.ticker .dn{color:#ff5d57}
-@media (max-width:600.98px){.ticker{justify-content:flex-start;gap:6px 14px;padding:7px 12px;font-size:.72rem;overflow-x:auto}}
+.ticker{height:28px;overflow:hidden;background:transparent;color:var(--fg);font-size:12px;font-weight:600;line-height:28px}
+.tk-track{display:flex;width:max-content;animation:tk-run 80s linear infinite}
+.tk-set{display:flex;align-items:center;flex:none}
+.tk{display:inline-flex;align-items:center;white-space:nowrap;color:inherit;text-decoration:none}
+.ticker a.tk{color:inherit}
+.tk::before{content:"";width:3px;height:3px;margin:0 12px;border-radius:50%;background:currentColor;opacity:.38;flex:none}
+.tk b{color:var(--head);font-weight:700}
+.tk .up{color:#3ddc97}
+.tk .dn{color:#ff5d57}
+.tk .when{margin-left:6px;color:var(--dim);font-weight:500}
+.ticker:hover .tk-track,.ticker:focus-within .tk-track{animation-play-state:paused}
+.tk[hidden]{display:none}
+@keyframes tk-run{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.ticker{overflow-x:auto}.tk-track{animation:none}.tk-set[aria-hidden="true"]{display:none}}
 .bar{display:flex;align-items:center;gap:14px;height:66px}
 .brand{display:flex;align-items:baseline;gap:14px;min-width:0}
 .logo{font-weight:800;font-size:1.4rem;letter-spacing:-.02em;color:#ebebeb;text-decoration:none;white-space:nowrap}
@@ -4870,61 +4877,232 @@ def home_feed(items, lang):
     return "".join(out)
 
 
+TICKER = {}
+TICKER_QUOTES = (
+    ("tsla", "TSLA", "TSLA", "Tesla, Inc."),
+    ("spcx", "SPCX", "SPCX", "Space Exploration Technologies"),
+    ("nvda", "NVDA", "NVDA", "NVIDIA"),
+    ("googl", "GOOGL", "GOOGL", "Alphabet"),
+    ("rklb", "RKLB", "RKLB", "Rocket Lab"),
+    ("asts", "ASTS", "ASTS", "AST SpaceMobile"),
+    ("ixic", "^IXIC", "Nasdaq", "NASDAQ Composite"),
+)
 TICKER_JS = r"""(function(){
 var bar=document.getElementById('ticker');
 if(!bar)return;
 var nl=document.documentElement.lang==='nl';
+var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
 function esc(s){return String(s).replace(/[&<>]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;'}[c]})}
-function slot(key){return bar.querySelector('[data-tk="'+key+'"]')}
-function reveal(key,html){var el=slot(key);if(!el)return;el.innerHTML=html;el.hidden=false;bar.hidden=false}
-function hide(key){var el=slot(key);if(el)el.hidden=true;if(!bar.querySelector('.tk:not([hidden])'))bar.hidden=true}
-function thousands(n){var s=String(Math.round(n));return s.replace(/\B(?=(\d{3})+(?!\d))/g,nl?'.':',')}
-fetch('/ticker.json').then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(d){
-if(d&&d.tsla&&typeof d.tsla.p==='number'){var up=d.tsla.c>=0,sign=up?'+':'\u2212';
-reveal('tsla','<b>TSLA</b> $'+d.tsla.p.toFixed(2)+' <span class="'+(up?'up':'dn')+'">'+sign+Math.abs(d.tsla.c).toFixed(2)+' ('+sign+Math.abs(d.tsla.pct).toFixed(1)+'%)</span>')}
-else hide('tsla');
-if(d&&typeof d.starlink==='number'&&d.starlink>1000)reveal('sats','<b>Starlink</b> '+thousands(d.starlink)+(nl?' in een baan':' in orbit'));
-else hide('sats')}).catch(function(){hide('tsla');hide('sats')});
+function pace(){if(reduce)return;var track=bar.querySelector('.tk-track');if(!track)return;
+var px=track.scrollWidth/2;if(px>40)track.style.animationDuration=Math.max(28,px/46)+'s'}
+function slots(){return bar.querySelectorAll('[data-tk="launch"]')}
+function hide(){slots().forEach(function(el){el.hidden=true})}
 fetch('https://ll.thespacedevs.com/2.2.0/launch/upcoming/?lsp__id=121&limit=8&mode=list').then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(d){
 var now=Date.now(),best=null;(d.results||[]).forEach(function(x){var net=Date.parse(x.net||''),st=(x.status&&x.status.abbrev)||'';
 if(!(net>now)||st==='Success'||st==='Failure')return;if(!best||net<best.net)best={net:net,name:String(x.name||'')}});
-if(!best){hide('launch');return}
-var name=(best.name.split('|').pop()||best.name).trim();
-function paint(){var left=best.net-Date.now();if(left<=0){hide('launch');return}
+if(!best){hide();return}
+var bits=best.name.split('|'),name=bits.length>1?bits[bits.length-1].trim():'';
+function paint(){var left=best.net-Date.now();if(left<=0){hide();pace();return}
 var s=Math.floor(left/1000),days=Math.floor(s/86400);s-=days*86400;var h=Math.floor(s/3600);s-=h*3600;var m=Math.floor(s/60);
 var clock=(days?days+'d ':'')+h+'h '+m+'m';
-reveal('launch','<b>'+(nl?'Volgende lancering':'Next launch')+'</b> '+clock+' \u00b7 '+esc(name))}
-paint();setInterval(paint,30000)}).catch(function(){hide('launch')});
+var html='<b>'+(nl?'Volgende lancering':'Next launch')+'</b> '+esc(clock)+(name?' \u00b7 '+esc(name):'');
+slots().forEach(function(el){el.hidden=false;el.innerHTML=html})}
+paint();setInterval(paint,30000);pace()}).catch(hide);
+pace();
 })();"""
 
 
+def ticker_num(n, lang, decimals):
+    """Grouped number. Dutch uses a dot for thousands and a comma for the decimal."""
+    text = f"{n:,.{decimals}f}" if decimals else f"{n:,.0f}"
+    if lang == "nl":
+        text = text.replace(",", "\x00").replace(".", ",").replace("\x00", ".")
+    return text
+
+
+def ticker_when(iso, lang):
+    dt = datetime.strptime(str(iso)[:10], "%Y-%m-%d")
+    short = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+    nl = ["jan", "feb", "mrt", "apr", "mei", "jun", "jul", "aug", "sep", "okt", "nov", "dec"]
+    month = nl[dt.month - 1] if lang == "nl" else short[dt.month - 1]
+    return f"{dt.day} {month} {dt.year}"
+
+
+def _ticker_file(name):
+    return json.loads((ROOT / "content" / "data" / name).read_text(encoding="utf-8"))
+
+
+def _latest_hub_event(key):
+    data = _ticker_file("evergreen.json")
+    hub = next((item for item in data.get("hubs") or [] if item.get("key") == key), None)
+    events = [event for event in (hub or {}).get("events") or [] if str(event.get("date") or "")[:10]]
+    if not events:
+        return None
+    return max(events, key=lambda event: event["date"])
+
+
+def ticker_quote_html(key, label, quote, lang, href):
+    up = quote["c"] >= 0
+    sign = "+" if up else "\u2212"
+    kind = "up" if up else "dn"
+    money = "" if key == "ixic" else "$"
+    price = ticker_num(quote["p"], lang, 2)
+    change = ticker_num(abs(quote["c"]), lang, 2)
+    pct = ticker_num(abs(quote["pct"]), lang, 1)
+    when = f'<span class="when">{esc(ticker_when(quote["d"], lang))}</span>' if quote.get("d") else ""
+    inner = (f"<b>{esc(label)}</b> {money}{price} "
+             f'<span class="{kind}">{sign}{change} ({sign}{pct}%)</span>{when}')
+    if href:
+        return f'<a class="tk" href="{url(lang, href)}">{inner}</a>'
+    return f'<span class="tk">{inner}</span>'
+
+
+def ticker_fact(text, when, lang, href, lead=""):
+    inner = f"{lead}{esc(text)}<span class=\"when\">{esc(when)}</span>"
+    return f'<a class="tk" href="{url(lang, href)}">{inner}</a>'
+
+
+def ticker_delivery(lang):
+    event = _latest_hub_event("deliveries")
+    if not event:
+        return ""
+    match = re.search(
+        r"delivered ([\d,]+) vehicles in the (first|second|third|fourth) quarter of (\d{4})",
+        event["text"]["en"])
+    if not match:
+        return ""
+    count = int(match.group(1).replace(",", ""))
+    quarter = {"first": "Q1", "second": "Q2", "third": "Q3", "fourth": "Q4"}[match.group(2)]
+    shown = ticker_num(count, lang, 0)
+    if lang == "en":
+        text = f"Tesla {quarter} {match.group(3)} deliveries {shown}"
+    else:
+        text = f"Tesla {quarter} {match.group(3)} leveringen {shown}"
+    return ticker_fact(text, ticker_when(event["date"], lang), lang, "tesla-deliveries/")
+
+
+def ticker_fsd(lang):
+    event = _latest_hub_event("fsd-europe")
+    if not event or "every month" not in event["text"]["en"]:
+        return ""
+    text = "FSD Europe: RDW checks monthly" if lang == "en" else "FSD Europa: RDW controleert maandelijks"
+    return ticker_fact(text, ticker_when(event["date"], lang), lang, "fsd-in-europe/")
+
+
+def ticker_starlink_nl(lang):
+    event = _latest_hub_event("starlink-nl")
+    if not event or "across the Netherlands" not in event["text"]["en"]:
+        return ""
+    text = "Starlink available across the Netherlands" if lang == "en" else "Starlink in heel Nederland beschikbaar"
+    return ticker_fact(text, ticker_when(event["date"], lang), lang, "starlink-netherlands/")
+
+
+def ticker_starship(lang):
+    data = _ticker_file("starship.json")
+    updated = str(data.get("updated") or "")
+    nxt = data.get("next") or {}
+    note = str((nxt.get("note") or {}).get("en") or "")
+    if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", updated) or nxt.get("announced") or "not announced" not in note.lower():
+        return ""
+    numbers = [flight.get("number") for flight in data.get("flights") or [] if isinstance(flight.get("number"), int)]
+    if not numbers:
+        return ""
+    number = max(numbers) + 1
+    text = f"Starship flight {number} not announced" if lang == "en" else f"Starship-vlucht {number} nog niet aangekondigd"
+    return ticker_fact(text, ticker_when(updated, lang), lang, "starship/")
+
+
+def ticker_headlines(lang, limit=3):
+    rows = sorted(ALL_ARTS, key=published, reverse=True)[:limit]
+    out = []
+    for article in rows:
+        title = str(article[lang].get("title") or "").strip()
+        if not title or "tbeugelink" in title.lower():
+            continue
+        lead = '<b class="dn">LIVE</b> ' if is_live(article) else ""
+        out.append(ticker_fact(title, ticker_when(article["date"], lang), lang, article["slug"] + "/", lead))
+    return "".join(out)
+
+
+def ticker_items(lang):
+    """One copy of the line. A missing source is left out, not shown as a blank."""
+    parts = []
+    quotes = TICKER.get("quotes") or {}
+    homes = {"tsla": "tesla/", "spcx": "spacex/"}
+    for key, _symbol, label, _expect in TICKER_QUOTES:
+        quote = quotes.get(key)
+        if not quote:
+            continue
+        parts.append(ticker_quote_html(key, label, quote, lang, homes.get(key, "")))
+    parts.append(
+        f'<a class="tk" data-tk="launch" hidden href="{url(lang, "spacex/")}"></a>')
+    count = TICKER.get("starlink")
+    if isinstance(count, int) and count > 1000 and TICKER.get("starlink_d"):
+        shown = ticker_num(count, lang, 0)
+        text = f"Starlink {shown} in orbit" if lang == "en" else f"Starlink {shown} in een baan"
+        parts.append(ticker_fact(text, ticker_when(TICKER["starlink_d"], lang), lang, "starlink/"))
+    for piece in (ticker_starship(lang), ticker_delivery(lang), ticker_fsd(lang), ticker_starlink_nl(lang)):
+        if piece:
+            parts.append(piece)
+    parts.append(ticker_headlines(lang))
+    return "".join(parts)
+
+
 def ticker_bar(lang):
-    """Empty until the script fills it. A failed source stays hidden."""
+    """Scrolling one-line ticker. The second copy makes the loop seamless and stays out of tab order."""
+    items = ticker_items(lang)
+    if not items:
+        return ""
+    clone = items.replace("<a ", '<a tabindex="-1" ')
+    label = "News ticker" if lang == "en" else "Lichtkrant"
     return (
-        '<div class="ticker" id="ticker" hidden>'
-        '<span class="tk" data-tk="tsla" hidden></span>'
-        '<span class="tk" data-tk="launch" hidden></span>'
-        '<span class="tk" data-tk="sats" hidden></span></div>'
+        f'<div class="ticker" id="ticker" role="region" aria-label="{label}">'
+        f'<div class="tk-track"><div class="tk-set">{items}</div>'
+        f'<div class="tk-set" aria-hidden="true">{clone}</div></div></div>'
         f"<script>{TICKER_JS}</script>")
 
 
-def write_ticker():
-    """Build-time quotes. Missing data is left out so the bar can hide that item."""
+def _fetch_quote(symbol, expect):
     import urllib.request
-    data = {}
-    try:
-        req = urllib.request.Request(
-            "https://query1.finance.yahoo.com/v8/finance/chart/TSLA?interval=1d&range=5d",
-            headers={"User-Agent": "TrendingTesla/1.0"})
-        with urllib.request.urlopen(req, timeout=15) as response:
-            chart = json.load(response)["chart"]["result"][0]
-        closes = [c for c in chart["indicators"]["quote"][0]["close"] if isinstance(c, (int, float))]
-        if len(closes) >= 2 and closes[-2]:
-            price, prev = closes[-1], closes[-2]
-            change = price - prev
-            data["tsla"] = {"p": round(price, 2), "c": round(change, 2), "pct": round(change / prev * 100, 2)}
-    except (OSError, ValueError, KeyError, TypeError, IndexError):
-        pass
+    req = urllib.request.Request(
+        "https://query1.finance.yahoo.com/v8/finance/chart/"
+        + quote(symbol, safe="") + "?interval=1d&range=5d",
+        headers={"User-Agent": "TrendingTesla/1.0"})
+    with urllib.request.urlopen(req, timeout=15) as response:
+        chart = json.load(response)["chart"]["result"][0]
+    meta = chart.get("meta") or {}
+    name = f"{meta.get('longName') or ''} {meta.get('shortName') or ''}"
+    if expect.lower() not in name.lower() or meta.get("currency") != "USD":
+        return None
+    closes = [c for c in chart["indicators"]["quote"][0]["close"] if isinstance(c, (int, float))]
+    if len(closes) < 2 or not closes[-2]:
+        return None
+    price, prev = closes[-1], closes[-2]
+    change = price - prev
+    stamp = meta.get("regularMarketTime")
+    day = ""
+    if isinstance(stamp, (int, float)):
+        zone = meta.get("exchangeTimezoneName") or "America/New_York"
+        try:
+            day = datetime.fromtimestamp(stamp, ZoneInfo(zone)).date().isoformat()
+        except Exception:
+            day = ""
+    if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", day):
+        return None
+    return {"p": round(price, 2), "c": round(change, 2), "pct": round(change / prev * 100, 2), "d": day}
+
+
+def write_ticker():
+    """Build-time quotes and the Starlink count. A failed fetch is omitted."""
+    import urllib.request
+    data = {"quotes": {}}
+    for key, symbol, _label, expect in TICKER_QUOTES:
+        try:
+            quote_row = _fetch_quote(symbol, expect)
+        except (OSError, ValueError, KeyError, TypeError, IndexError):
+            quote_row = None
+        if quote_row:
+            data["quotes"][key] = quote_row
     for _try in range(2):
         try:
             req = urllib.request.Request(
@@ -4941,9 +5119,12 @@ def write_ticker():
             rows = json.loads(b"".join(chunks))
             if isinstance(rows, list) and len(rows) > 1000:
                 data["starlink"] = len(rows)
+                data["starlink_d"] = datetime.now(TZ).date().isoformat()
             break
         except (OSError, ValueError, TypeError):
             continue
+    TICKER.clear()
+    TICKER.update(data)
     (OUT / "ticker.json").write_text(json.dumps(data, separators=(",", ":")), encoding="utf-8")
 
 

@@ -2652,10 +2652,6 @@ window.addEventListener('load',bal);
 var LS={get:function(k){try{return JSON.parse(localStorage.getItem(k)||'[]')}catch(e){return []}},set:function(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
 var sv=document.querySelector('.savedlink i');function badge(){var n=LS.get('tt_saved').length;if(sv){sv.hidden=!n;sv.textContent=n}}badge();
 var SAVE=document.documentElement.lang==='nl'?['Bewaren','Bewaard']:['Save','Saved'];
-var LIKE=document.documentElement.lang==='nl'?'Vind ik leuk':'Like';
-var HEART='<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linejoin="round"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 8 3.4 4.5 7 4.5c2 0 3.6 1.1 5 2.9 1.4-1.8 3-2.9 5-2.9 3.6 0 5.6 3.5 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg>';
-var BOOK='<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linejoin="round"><path d="M6 3.5h12v17l-6-4.2-6 4.2z"/></svg>';
-function cardActs(slug){return '<div class="acts"><button class="act like" type="button" data-like="'+e(slug)+'" aria-pressed="false" title="'+LIKE+'">'+HEART+'<span>0</span></button><button class="act save" type="button" data-save="'+e(slug)+'" aria-pressed="false" title="'+SAVE[0]+'" aria-label="'+SAVE[0]+'">'+BOOK+'</button></div>'}
 function paintSave(){document.querySelectorAll('[data-save]').forEach(function(b){var on=LS.get('tt_saved').indexOf(b.dataset.save)>-1;b.setAttribute('aria-pressed',on);b.title=SAVE[on?1:0];b.setAttribute('aria-label',SAVE[on?1:0])})}
 paintSave();
 document.addEventListener('click',function(ev){var b=ev.target.closest&&ev.target.closest('[data-save]');if(!b)return;ev.preventDefault();var s=b.dataset.save,l=LS.get('tt_saved'),i=l.indexOf(s);if(i>-1)l.splice(i,1);else l.unshift(s);LS.set('tt_saved',l);paintSave();badge()});
@@ -2663,7 +2659,7 @@ function paintLike(){var lb=[].slice.call(document.querySelectorAll('[data-like]
 paintLike();
 document.addEventListener('click',function(ev){var b=ev.target.closest&&ev.target.closest('[data-like]');if(!b)return;ev.preventDefault();var s=b.dataset.like,liked=LS.get('tt_liked'),i=liked.indexOf(s),d=i>-1?-1:1;if(d>0)liked.push(s);else liked.splice(i,1);LS.set('tt_liked',liked);b.setAttribute('aria-pressed',d>0);var sp=b.querySelector('span');sp.textContent=Math.max(0,(+sp.textContent||0)+d);fetch('/api/likes',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({slug:s,d:d})}).then(function(r){return r.json()}).then(function(j){if(j.n!=null)sp.textContent=j.n}).catch(function(){})});
 var sl=document.querySelector('.savedlist');if(sl){var keep=LS.get('tt_saved');if(!keep.length){sl.innerHTML='<p class="empty">'+e(sl.dataset.empty)+'</p>'}else{load().then(function(){var m={};idx.forEach(function(a){var k=a.u.replace(/\/$/,'').split('/').pop();m[k]=a});
-sl.innerHTML=keep.filter(function(k){return m[k]}).map(function(k){var a=m[k];return '<div class="card"><a class="lgo" href="'+a.u+'"><div class="im zimg"><img src="'+a.i+'" alt="'+e(a.t)+'" width="1200" height="630" decoding="async"></div></a><div class="body"><div class="lrow"><a class="lgo" href="'+a.u+'">'+rubric(a)+'</a>'+cardActs(k)+'</div><a class="lgo" href="'+a.u+'"><h3>'+e(a.t)+'</h3></a></div></div>'}).join('');paintSave();paintLike();ttAgo()})}}window.addEventListener('resize',bal);bal();
+sl.innerHTML=keep.filter(function(k){return m[k]}).map(function(k){var a=m[k];return '<div class="card"><a class="lgo" href="'+a.u+'"><div class="im zimg"><img src="'+a.i+'" alt="'+e(a.t)+'" width="1200" height="630" decoding="async"></div></a><div class="body"><div class="lrow"><a class="lgo" href="'+a.u+'">'+rubric(a)+'</a></div><a class="lgo" href="'+a.u+'"><h3>'+e(a.t)+'</h3></a></div></div>'}).join('');paintSave();paintLike();ttAgo()})}}window.addEventListener('resize',bal);bal();
 })();"""
 JS += r"""
 document.querySelectorAll(".avb[data-vid]").forEach(function(b){b.addEventListener("click",function(){if(b.classList.contains("on"))return;b.classList.add("on");var f=document.createElement("iframe");f.src="https://www.youtube-nocookie.com/embed/"+b.dataset.vid+"?autoplay=1"+(matchMedia("(pointer:coarse)").matches?"":"&playsinline=1")+"&rel=0";f.title=b.getAttribute("aria-label")||"YouTube";f.setAttribute("allow","autoplay; encrypted-media; picture-in-picture; fullscreen");f.allowFullscreen=true;b.appendChild(f)})});
@@ -2738,7 +2734,7 @@ def card(a, lang, lead=False):
     title = f'<h3>{esc(card_title(a, lang))}</h3>'
     # The rubric sits under the photo, then the title. The lead photo is not a link.
     href = url(lang, a["slug"] + "/")
-    row = with_actions(line, a["slug"], lang, href)
+    row = with_actions(line, "", lang, href)
     if lead:
         return (f'<div class="{cls}">{im}'
                 f'<div class="body">{row}<a class="lgo" href="{href}">{title}</a></div></div>')
@@ -2752,7 +2748,7 @@ def gcard(a, lang, eager=False):
     href = url(lang, a["slug"] + "/")
     return (f'<div class="card"><a class="lgo" href="{href}">'
             f'<div class="im zimg">{resp_img(site_img(a), t["title"], SIZES_GRID, high=eager, lazy=not eager)}{live_mark(a)}{dur(a, lang)}{ovl(a, lang)}</div></a>'
-            f'<div class="body">{with_actions(rubric_line(a, lang), a["slug"], lang, href)}'
+            f'<div class="body">{with_actions(rubric_line(a, lang), "", lang, href)}'
             f'<a class="lgo" href="{href}"><h2>{esc(card_title(a, lang))}</h2></a></div></div>')
 
 
@@ -4216,7 +4212,7 @@ def home_lead(a, lang, title_tag="h1"):
     im = (f'<div class="leadim">'
           f'{resp_img(photo, t["title"], SIZES_LEAD, high=True, lazy=False, width=1600, height=900)}</div>'
           if photo else "")
-    return (f'<article class="leadstory">{im}{with_actions(line, a["slug"], lang, href)}'
+    return (f'<article class="leadstory">{im}{with_actions(line, "", lang, href)}'
             f'<div>'
             f'<{tag} class="ltitle"><a href="{href}">{esc(card_title(a, lang))}</a></{tag}>'
             f'<a class="btn" href="{href}">{esc(L["read_story"])}</a></div></article>')
@@ -4472,7 +4468,7 @@ def home_videos(arts, lang, n=8):
             f'{resp_img(site_img(a), t["title"], SIZES_VIDEO, width=480, height=270)}'
             f'<span class="vpl" aria-hidden="true"></span>'
             f'<span class="dur dvo">{esc(badge)}</span></span></a>'
-            f'{with_actions(rubric_line(a, lang), a["slug"], lang, href)}'
+            f'{with_actions(rubric_line(a, lang), "", lang, href)}'
             f'<a class="lgo" href="{href}"><strong>{esc(card_title(a, lang))}</strong></a></div>')
     return "".join(cards), [a for a, _, _ in rows]
 
@@ -4735,7 +4731,7 @@ def layer_latest(arts, lang):
         cards.append(
             f'<div class="lcard {tone}"><a class="lgo" href="{url(lang, pick["slug"] + "/")}">'
             f'<span class="lim zimg">{resp_img(site_img(pick), t["title"], "(max-width: 699px) 46vw, 220px", lazy=False, width=640, height=360)}</span></a>'
-            f'{with_actions(rubric_line(pick, lang), pick["slug"], lang, url(lang, pick["slug"] + "/"))}'
+            f'{with_actions(rubric_line(pick, lang), "", lang, url(lang, pick["slug"] + "/"))}'
             f'<a class="lgo" href="{url(lang, pick["slug"] + "/")}"><span class="lbody"><strong>{esc(card_title(pick, lang))}</strong></span></a></div>')
     label = "Latest from each layer" if lang == "en" else "Het laatste per laag"
     return f'<section class="layerrow" aria-label="{esc(label)}">{"".join(cards)}</section>', shown
@@ -4752,7 +4748,7 @@ def home_grid_card(a, lang, eager=False, badge=""):
     return (
         f'<div class="lcard"><a class="lgo" href="{href}">'
         f'<span class="lim zimg">{resp_img(site_img(a), t["title"], "(max-width: 599px) 92vw, (max-width: 900px) 46vw, 280px", high=eager, lazy=not eager, width=640, height=360)}{mark}</span></a>'
-        f'{with_actions(rubric_line(a, lang), a["slug"], lang, href)}'
+        f'{with_actions(rubric_line(a, lang), "", lang, href)}'
         f'<a class="lgo" href="{href}"><span class="lbody"><strong>{esc(card_title(a, lang))}</strong></span></a></div>')
 
 
@@ -4949,7 +4945,7 @@ def clip_card(item, lang, eager=False):
     return (
         f'<div class="lcard"><a class="lgo" href="{href}">'
         f'<span class="lim zimg">{img}{badge}</span></a>'
-        f'{with_actions(clip_meta(item, lang), article["slug"] if article else "", lang, href)}'
+        f'{with_actions(clip_meta(item, lang), "", lang, href)}'
         f'<a class="lgo" href="{href}"><span class="lbody"><strong>{esc(title)}</strong></span></a></div>')
 
 
@@ -5297,7 +5293,9 @@ def clip_page(item, arts, lang):
     story = ""
     if article:
         story = f'<p><a href="{url(lang, article["slug"] + "/")}">{esc(L["read_story"])}</a></p>'
-    body = (f'<article class="money"><h1>{esc(title)}</h1>{play}{clip_meta(item, lang)}'
+    slug = article["slug"] if article else item["id"]
+    body = (f'<article class="money"><h1>{esc(title)}</h1>{play}'
+            f'{with_actions(clip_meta(item, lang), slug, lang)}'
             f'<p class="lead">{esc(desc)}</p>{story}</article>')
     video_ld = {
         "@context": "https://schema.org", "@type": "VideoObject",

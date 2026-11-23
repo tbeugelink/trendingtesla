@@ -38,18 +38,18 @@ The moving hook clip (`tools/video_clip.py`) is separate: about $0.41 per clip, 
 
 | Piece | Role |
 |---|---|
-| `.github/workflows/shorts.yml` | Manual only (`workflow_dispatch`). A push or pull request does not start it. The 15-minute watchdog in `shorts-page.yml` can still start it. Photos, the Short, the upload, and a long video only when the article has `video.en`. |
+| `.github/workflows/shorts.yml` | Manual only (`workflow_dispatch`). A push, pull request, or the 15-minute site sync does not start it. Photos, the Short, the upload, and a long video only when the article has `video.en`. |
 | `video/story.py` | The Short. Constants for the cut are at the top of the file: `XFADE`, `SHOT_MAX`, `USE_DEFAULT_SFX`. The voice comes from `video/short.py`. |
 | `video/full.py` | The long video. `SCENE_MAX` and `SCENE_XFADE` set the shot length and the crossfade. The voice comes from `video/short.py`. It exits if the article has no `video` script for that language. |
 | `video/upload.py` | Uploads to YouTube. Refuses a Short whose slug or title is already in `content/shorts.json`, `ops/story-pending.json` or `ops/short-uploads.json`, and records every new Short in `ops/short-uploads.json`. |
-| `tools/video_watchdog.py` | Every 15 minutes (`shorts-page.yml`). Asks once for a missing Short or, when the article has `video.en`, a missing long video. It treats a slug in the upload ledger as already done, so a feed outage cannot order a second copy. |
+| `tools/video_watchdog.py` | Not run by the 15-minute job. It used to write `video/queue.txt` and start an upload. Nothing calls it now. |
 | `video/short.py` | Shared layout, voice helper and metadata. The story Short and the long video both use it. The legacy portrait renderer is not the daily path. |
 
 Only English videos are built (`langs=en`).
 
 ### Which articles get a video
 
-A push or pull request does not start this workflow. A manual run uses the `slug` input. The watchdog still writes `video/queue.txt` and starts the workflow with `workflow_dispatch`.
+A push, pull request, or the 15-minute site sync does not start this workflow. A manual run uses the `slug` input.
 
 The file still contains the old push path: it diffs `github.event.before`..`HEAD` (`fetch-depth: 0`) and keeps added files under `content/articles/` (`--diff-filter=A`). That path does not run, because the `push` trigger is gone.
 
@@ -57,9 +57,9 @@ The file still contains the old push path: it diffs `github.event.before`..`HEAD
 - `video.en` present, and the slug is not already in `content/videos.json` → long video, after the Short.
 - No `video` section → no long video.
 
-`video/queue.txt` (first non-comment line: `slug [langs] [--full] [--upload]`) still requests one video on demand. The watchdog writes that file. `--full` is how it asks for a long video.
+`video/queue.txt` (first non-comment line: `slug [langs] [--full] [--upload]`) is read only by a manual run with `slug=queue`. Nothing on a schedule writes that file. `--full` asks for a long video.
 
-Shorts are uploaded public. `tools/story_approve.py` posts a story Short that has gone public to TikTok, Instagram and Facebook, and when it takes the slug off `ops/story-pending.json` it also writes the slug into `content/shorts.json`, so the watchdog still sees it while the YouTube feed is down.
+Shorts are uploaded public only from a manual run. `tools/story_approve.py` does not change YouTube privacy. It posts a story Short that is already public to TikTok, Instagram and Facebook, and when it takes the slug off `ops/story-pending.json` it also writes the slug into `content/shorts.json`. Making a waiting Short public is the manual "Publish story Short" workflow.
 
 ### Voice and picture constants
 
@@ -89,7 +89,7 @@ Picture timing is an estimate, kept as named constants. The voice preset is in `
 These are not publishing tasks. They only write reports.
 
 - `.github/workflows/yt-learn.yml` — channel and site stats (`ops/stats/`), `ops/performance.md`, `ops/short-signals.md`, `ops/scout-tesla.md`, `ops/proven-topics.md`. Proven topics are a hint, not a rule.
-- `.github/workflows/shorts-page.yml` — YouTube feed into `content/shorts.json` and `content/videos.json`, social catch-up, the watchdog.
+- `.github/workflows/shorts-page.yml` — YouTube feed into `content/shorts.json` and `content/videos.json`, and social catch-up. It does not upload or queue a video.
 - `tools/health.py` — the chain check. Run it when something looks wrong. It expects one article a day around 21:00 Europe/Amsterdam, and a long video only when that article has a `video` script.
 
 ## Retired

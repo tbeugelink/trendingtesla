@@ -1,8 +1,7 @@
 name: Make YouTube videos
 
-# Manual only, by the owner's decision: a site change (push or pull_request) must
-# not upload to YouTube. Run it from the Actions tab. This workflow has no schedule.
-# shorts-page.yml's existing 15-minute watchdog can still start it via workflow_dispatch.
+# Manual only, by the owner's decision. A push, pull request, or the 15-minute site
+# sync must not upload to YouTube. Run it from the Actions tab. This workflow has no schedule.
 on:
   workflow_dispatch:
     inputs:
@@ -76,7 +75,7 @@ jobs:
             echo "preview=1" >> "$GITHUB_OUTPUT"
             echo "story=${{ github.event.inputs.preview_slug }}" >> "$GITHUB_OUTPUT"
           elif [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ github.event.inputs.slug }}" = "queue" ]; then
-            # started by the watchdog: make what video/queue.txt asks for (same as a push of that file)
+            # manual run with slug=queue: make what video/queue.txt asks for
             q=$(grep -v '^#' video/queue.txt | head -1)
             echo "slugs=$(echo "$q" | awk '{print $1}')" >> "$GITHUB_OUTPUT"
             echo "langs=en" >> "$GITHUB_OUTPUT"

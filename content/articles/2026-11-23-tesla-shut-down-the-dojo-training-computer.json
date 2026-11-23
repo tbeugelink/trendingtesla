@@ -1,0 +1,80 @@
+{
+  "slug": "tesla-shut-down-the-dojo-training-computer",
+  "date": "2026-11-23",
+  "time": "07:51",
+  "category": "xai",
+  "layer": "spacexsi",
+  "topic": "chips",
+  "also_topics": [
+    "ai-compute"
+  ],
+  "card": {
+    "en": "Tesla shut down the Dojo training computer",
+    "nl": "Tesla stopte de Dojo-trainingscomputer"
+  },
+  "image": "topics/xai-gpu-rack.jpg",
+  "images": [
+    "topics/xai-gpu-rack.jpg",
+    "topics/chip-fab.jpg",
+    "topics/ai-chip.jpg",
+    "topics/xai-dc-night.jpg",
+    "topics/xai-dc-1.jpg"
+  ],
+  "sources": [
+    {
+      "title": "Bloomberg — Tesla disbands Dojo supercomputer team, 7 August 2025",
+      "url": "https://www.bloomberg.com/news/articles/2025-08-07/tesla-disbands-dojo-supercomputer-team-in-blow-to-ai-effort"
+    },
+    {
+      "title": "Reuters — Tesla to streamline its AI chip design work, Musk says, 8 August 2025",
+      "url": "https://www.reuters.com/business/autos-transportation/tesla-streamline-its-ai-chip-design-work-musk-says-2025-08-07/"
+    },
+    {
+      "title": "TechCrunch — Musk confirms shutdown of Tesla Dojo, 11 August 2025",
+      "url": "https://techcrunch.com/2025/08/11/elon-musk-confirms-shutdown-of-tesla-dojo-an-evolutionary-dead-end/"
+    },
+    {
+      "title": "Electrek — Musk confirms he shut down Tesla Dojo, 11 August 2025",
+      "url": "https://electrek.co/2025/08/11/elon-musk-confirms-killed-tesla-dojo-but-reason-raises-eyebrows/"
+    }
+  ],
+  "label": {
+    "style": "n",
+    "en": {
+      "sub": "DOJO",
+      "text": "TEAM SHUT DOWN"
+    },
+    "nl": {
+      "sub": "DOJO",
+      "text": "TEAM GESTOPT"
+    }
+  },
+  "gen_image": {
+    "prompt": "A technical illustration of a dim data-hall aisle of dark compute racks with a few amber status lights, no readable screens, no logos, no people, empty calm lower-left",
+    "subject": "rows of compute racks in a data hall",
+    "refs": [
+      {
+        "src": "topics/xai-gpu-rack.jpg"
+      }
+    ],
+    "profile": "technical",
+    "category": "A",
+    "describe": "Illustration of compute racks. Not a photograph of Tesla's Dojo hall.",
+    "extra": [
+      {
+        "prompt": "A technical illustration of a single processor package on a dark board, cool light, no lettering, no logo, empty lower-left",
+        "describe": "Illustration of a processor on a board, not a specific Tesla chip"
+      }
+    ]
+  },
+  "en": {
+    "title": "Tesla shut down the Dojo training computer",
+    "description": "In August 2025 Bloomberg reported that Tesla was disbanding the Dojo team. Musk then said Dojo 2 was an evolutionary dead end and that the work would focus on AI5 and AI6.",
+    "body": "<p>Tesla shut down the team building Dojo, its in-house training supercomputer, in August 2025. Bloomberg reported on 7 August that the team was being disbanded, that its leader Peter Bannon was leaving, and that Elon Musk had ordered the effort shut. Reuters reported the next day that Bloomberg had described that order, and that Tesla did not reply to a request for comment. TechCrunch, on 11 August, said Musk then confirmed the shutdown himself. The project that was supposed to train driver-assistance models on Tesla's own chips stopped as a separate program. What replaced it was a statement about other chips, not a published handoff of the machines.</p>\n<h2>What did Bloomberg report first?</h2>\n<p><strong>A disbanded team, a departing leader, and about 20 people gone to a new company.</strong> Bloomberg, citing people familiar with the matter, said Bannon was leaving and remaining Dojo workers were being reassigned to other data-center and compute work inside Tesla. It said the team had lost about 20 workers to a new firm, DensityAI. TechCrunch's 11 August account repeats both the departure of Dojo lead Peter Bannon and the figure of about 20 Dojo workers leaving to join DensityAI. Reuters, writing on 8 August, reported Bloomberg's account of the disbanding and of Bannon's departure, and it noted that Tesla had not answered. Two newsrooms stating the headcount and the destination is the shared core. The internal order itself, before Musk spoke, rests on Bloomberg's sources. Tesla's silence toward Reuters left that first report unconfirmed by the company for a weekend.</p>\n<h2>What did Musk say after the report?</h2>\n<p><strong>He said he shut Dojo down because the chip plan had converged on AI6.</strong> TechCrunch and Electrek, both on 11 August, quote the same post. Musk wrote that once it became clear that all paths converged to AI6, he had to shut down Dojo and make some tough personnel choices, because Dojo 2 was now an evolutionary dead end. He added that Dojo 3 arguably lives on as a large number of AI6 chips on a single board. Reuters, a few days earlier, reported a related post in which he said it did not make sense to divide resources and scale two quite different AI chip designs, and that Tesla was focused on AI5, AI6 and the chips after them. TechCrunch quotes that Friday post as well, including his line that AI5, AI6 and later chips would be excellent for inference and at least pretty good for training. These are his statements, reported by more than one outlet. They are not a measured comparison of Dojo against AI6.</p>\n<h2>So what was Dojo for?</h2>\n<p><strong>A training computer built around Tesla's own chips, aimed at driver-assistance data.</strong> Reuters described Dojo as a supercomputer designed around custom training chips to process data and video from Tesla cars for the company's driver-assistance work. TechCrunch said the first Dojo machine had run on a mix of Nvidia GPUs and Tesla's in-house D1 chips, and that a second effort, which Musk called Dojo 2, was to use a D2 chip. Electrek described Dojo as Tesla's supercomputer project for training. The shutdown, in Musk's wording as quoted by TechCrunch and Electrek, set that second chip aside. Reuters said Tesla did not comment to the wire. A reader can know the team was closed and still not have a company document that lists which clusters stayed on.</p>\n<h2>What did he say should be built instead?</h2>\n<p><strong>Many AI5 or AI6 chips on one board, for inference and also for training.</strong> TechCrunch quotes him saying that for a supercomputer cluster it makes more sense to put many AI5 or AI6 chips on a board, whether for inference or training, to cut the cost and complexity of network cabling, and that one could call that Dojo 3. Electrek quotes the shorter form, that Dojo 3 arguably lives on as a large number of AI6 chips on a single board. Reuters reported the focus on AI5 and AI6 without the board picture. The shared claim is the shift onto those two chip names. The picture of a board full of them is his proposal, carried by TechCrunch and Electrek. It is not a photograph of a product shipping that week.</p>\n<h2>What is still not on the record?</h2>\n<p><strong>A company count of the machines, and a date for the chips he pointed to.</strong> Bloomberg, Reuters, TechCrunch and Electrek together establish the August 2025 shutdown, Bannon's departure, the move of about 20 people to DensityAI, and Musk's explanation that Dojo 2 had become a dead end next to AI6. They do not establish how much Dojo hardware was already installed, or when an AI6 board of the kind he described would run. Tesla's choice not to answer Reuters leaves the first report standing on Bloomberg's sources plus his later posts. The training job he described still needs a computer. He said that computer should be built from AI5 and AI6, and the posts do not show that computer switched on.</p>"
+  },
+  "nl": {
+    "title": "Tesla stopte de Dojo-trainingscomputer",
+    "description": "In augustus 2025 meldde Bloomberg dat Tesla het Dojo-team ontbond. Musk zei daarna dat Dojo 2 een evolutionair dood spoor was en dat het werk zich op AI5 en AI6 zou richten.",
+    "body": "<p>Tesla stopte in augustus 2025 het team dat Dojo bouwde, de eigen trainings-supercomputer. Bloomberg schreef op 7 augustus dat het team werd ontbonden, dat leider Peter Bannon vertrok, en dat Elon Musk de opdracht had gegeven het werk te stoppen. Reuters meldde de volgende dag dat Bloomberg die opdracht had beschreven, en dat Tesla niet reageerde op een vraag om commentaar. TechCrunch zei op 11 augustus dat Musk de stop daarna zelf bevestigde. Het project dat rijhulpmodellen moest trainen op Tesla's eigen chips hield op als apart programma. Wat ervoor in de plaats kwam, was een uitspraak over andere chips, geen gepubliceerde overdracht van de machines.</p>\n<h2>Wat meldde Bloomberg als eerste?</h2>\n<p><strong>Een ontbonden team, een vertrekkende leider, en ongeveer 20 mensen naar een nieuw bedrijf.</strong> Bloomberg schreef, op basis van ingewijden, dat Bannon vertrok en dat de overige Dojo-medewerkers werden overgeplaatst naar ander datacenter- en rekenwerk binnen Tesla. Het zei dat het team ongeveer 20 mensen was kwijtgeraakt aan een nieuw bedrijf, DensityAI. Het verslag van TechCrunch van 11 augustus herhaalt zowel het vertrek van Dojo-leider Peter Bannon als het getal van ongeveer 20 Dojo-medewerkers die naar DensityAI gingen. Reuters schreef op 8 augustus Bloombergs verslag van de ontbinding en van Bannons vertrek, en noteerde dat Tesla niet had geantwoord. Twee redacties die het aantal en de bestemming noemen, vormen de gedeelde kern. Het interne bevel zelf, vóór Musk sprak, steunt op de bronnen van Bloomberg. Tesla's zwijgen tegenover Reuters liet dat eerste verslag een weekend onbevestigd door het bedrijf.</p>\n<h2>Wat zei Musk na het bericht?</h2>\n<p><strong>Hij zei dat hij Dojo stopte omdat het chipplan was samengekomen op AI6.</strong> TechCrunch en Electrek citeren op 11 augustus allebei dezelfde post. Musk schreef dat hij Dojo moest stoppen en harde personeelskeuzes moest maken toen duidelijk werd dat alle paden samenkwamen op AI6, omdat Dojo 2 nu een evolutionair dood spoor was. Hij voegde toe dat Dojo 3 aantoonbaar voortleeft als een groot aantal AI6-chips op één board. Reuters meldde een paar dagen eerder een verwante post waarin hij zei dat het geen zin had middelen te verdelen en twee heel verschillende AI-chipontwerpen op te schalen, en dat Tesla zich richtte op AI5, AI6 en de chips daarna. TechCrunch citeert ook die vrijdagpost, inclusief zijn zin dat AI5, AI6 en latere chips uitstekend zouden zijn voor inferentie en minstens behoorlijk goed voor training. Dat zijn zijn uitspraken, gemeld door meer dan één medium. Het is geen gemeten vergelijking van Dojo met AI6.</p>\n<h2>Dus waar was Dojo voor?</h2>\n<p><strong>Een trainingscomputer rond Tesla's eigen chips, gericht op data voor rijhulp.</strong> Reuters beschreef Dojo als een supercomputer rond eigen trainingschips, om data en video uit Tesla-auto's te verwerken voor het rijhulpwerk. TechCrunch zei dat de eerste Dojo-machine draaide op een mix van Nvidia-gpu's en Tesla's eigen D1-chips, en dat een tweede poging, die Musk Dojo 2 noemde, een D2-chip zou gebruiken. Electrek beschreef Dojo als Tesla's supercomputerproject voor training. De stop zette, in Musks formulering zoals TechCrunch en Electrek die citeren, die tweede chip opzij. Reuters zei dat Tesla het persbureau geen commentaar gaf. Een lezer kan weten dat het team dichtging en nog steeds geen bedrijfsdocument hebben dat opsomt welke clusters aan bleven.</p>\n<h2>Wat zei hij dat er in plaats daarvan gebouwd moest worden?</h2>\n<p><strong>Veel AI5- of AI6-chips op één board, voor inferentie en ook voor training.</strong> TechCrunch citeert hem dat het voor een supercomputercluster logischer is veel AI5- of AI6-chips op een board te zetten, voor inferentie of voor training, om de kosten en de complexiteit van netwerkkabels te verlagen, en dat je dat Dojo 3 zou kunnen noemen. Electrek citeert de kortere vorm, dat Dojo 3 aantoonbaar voortleeft als een groot aantal AI6-chips op één board. Reuters meldde de focus op AI5 en AI6 zonder het beeld van het board. De gedeelde claim is de verschuiving naar die twee chipnamen. Het beeld van een board vol chips is zijn voorstel, gedragen door TechCrunch en Electrek. Het is geen foto van een product dat die week werd geleverd.</p>\n<h2>Wat staat nog niet vast?</h2>\n<p><strong>Een telling van de machines door het bedrijf, en een datum voor de chips waar hij naar wees.</strong> Bloomberg, Reuters, TechCrunch en Electrek samen stellen de stop van augustus 2025 vast, het vertrek van Bannon, de overstap van ongeveer 20 mensen naar DensityAI, en Musks uitleg dat Dojo 2 een dood spoor was geworden naast AI6. Ze stellen niet vast hoeveel Dojo-hardware al stond, of wanneer een AI6-board van het soort dat hij beschreef zou draaien. Tesla's keuze om Reuters niet te antwoorden laat het eerste verslag staan op de bronnen van Bloomberg plus zijn latere posts. Het trainingswerk dat hij beschreef, heeft nog steeds een computer nodig. Hij zei dat die computer uit AI5 en AI6 gebouwd moest worden, en de posts laten die computer niet ingeschakeld zien.</p>"
+  }
+}

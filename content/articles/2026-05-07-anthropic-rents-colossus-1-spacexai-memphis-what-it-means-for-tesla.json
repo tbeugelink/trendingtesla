@@ -3,6 +3,7 @@
   "date": "2026-10-24",
   "time": "09:30",
   "category": "xai",
+  "also_topics": ["ai-compute"],
   "sources": [
     {
       "title": "Yahoo Finance — Anthropic to rent all AI capacity at SpaceX's Colossus data center",

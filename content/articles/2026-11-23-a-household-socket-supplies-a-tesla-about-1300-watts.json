@@ -1,0 +1,68 @@
+{
+  "slug": "a-household-socket-supplies-a-tesla-about-1300-watts",
+  "date": "2026-11-23",
+  "time": "07:50",
+  "category": "charging",
+  "layer": "tesla-energy",
+  "topic": "home-charging",
+  "card": {
+    "en": "A household socket supplies about 1300 watts",
+    "nl": "Een stopcontact levert ongeveer 1300 watt"
+  },
+  "image": "wallbox-4.jpg",
+  "images": [
+    "wallbox-4.jpg",
+    "wallbox-1.jpg",
+    "wallbox-3.jpg",
+    "wallbox-5.jpg"
+  ],
+  "sources": [
+    {
+      "title": "Tesla — Gen 2 Mobile Connector owner's manual, published 30 April 2019",
+      "url": "https://www.tesla.com/sites/default/files/downloads/gen_2_mobile_connector_owners_manual_32_amp_en_US.pdf"
+    },
+    {
+      "title": "Electrek — Tesla stops including the mobile charging cable, 16 April 2022",
+      "url": "https://electrek.co/2022/04/16/tesla-goes-full-apple-stops-delivering-cars-with-included-charging-cable-now-sold-separately/"
+    }
+  ],
+  "label": {
+    "style": "a",
+    "en": {
+      "sub": "HOME SOCKET",
+      "text": "ABOUT 1300 WATTS"
+    },
+    "nl": {
+      "sub": "STOPCONTACT",
+      "text": "ONGEVEER 1300 WATT"
+    }
+  },
+  "gen_image": {
+    "prompt": "An editorial illustration of a standard household wall socket with a small charging adapter plugged in and a thin cable running toward a car charge port just out of frame, garage light, empty lower-left, no lettering, no logo, no face",
+    "subject": "a household socket with a small charging adapter",
+    "refs": [
+      {
+        "src": "topics/wallbox-4.jpg"
+      }
+    ],
+    "profile": "technical",
+    "category": "C",
+    "describe": "Illustration of a household socket used for slow charging. Not a photo of a measured install.",
+    "extra": [
+      {
+        "prompt": "A technical illustration of a thin charging cable lying across a garage floor toward a car, the socket small on the wall, empty lower-left, no lettering, no logo",
+        "describe": "Illustration of a slow charging cable across a garage floor"
+      }
+    ]
+  },
+  "en": {
+    "title": "A household socket supplies about 1300 watts",
+    "description": "Tesla's Gen 2 Mobile Connector manual rates the ordinary household adapter at 1.3 kW on a 120-volt socket. Electrek reported the same 1.3 kW ceiling.",
+    "body": "<p>An ordinary North American household socket, used with Tesla's Gen 2 Mobile Connector and the NEMA 5-15 adapter, supplies about 1.3 kW. Tesla's owner's manual for that connector, published 30 April 2019, lists the ordinary household adapter at 1.3 kW on a 120-volt socket. Electrek, on 16 April 2022, described the included household adapter as having a maximum output of 1.3 kW. That is the whole rate. It is not a slow setting of a fast charger. It is what that plug is allowed to draw. A night on a household socket therefore adds a small amount of energy, and a driver who needs a full battery by morning needs a different outlet.</p>\n<h2>What does 1.3 kW add overnight?</h2>\n<p><strong>About 13 kWh in ten hours, because 1.3 times 10 is 13.</strong> That product is arithmetic from the manual's 1.3 kW figure, not a separate Tesla measurement of a particular car. Electrek's report of the same 1.3 kW ceiling is what makes the starting number a shared fact rather than a single document. Ten hours is a long parked night, and 13 kWh is still a modest slice of a modern traction battery. The manual does not convert the figure into miles, and this article will not invent a miles-per-hour claim. Electrek wrote that the included connector gave charging speeds between two and three miles of range per hour. That range is Electrek's wording alone, so it is not repeated here as a measured rate. The solid shared number is the power, 1.3 kW.</p>\n<h2>Which adapter is the household one?</h2>\n<p><strong>The NEMA 5-15, the plug that fits a normal 120-volt socket.</strong> Tesla's manual says the Mobile Connector includes two adapters in the set it describes, one for a standard 120-volt household outlet and a second for a 240-volt outlet, and it says the connector detects the attached adapter and sets the current from that. Electrek's 1.3 kW sentence matches the household adapter the manual describes, not a higher-power plug. A different adapter would be a different rate, and this article does not import the manual's other rows, because Electrek does not restate them. Plugging the household adapter in and expecting a fast home charger is the mix-up both sources argue against. The manual points to a 240-volt outlet for more speed. Electrek points to a level 2 station. The shared ceiling on the ordinary socket stays 1.3 kW.</p>\n<h2>So what is the step up from that socket?</h2>\n<p><strong>A higher-power home install, not a longer session on the same plug.</strong> Tesla's manual says a 240-volt outlet is the faster choice and that an electrician should install one where the car parks. Electrek, describing the household adapter's 1.3 kW ceiling, wrote that anything better means installing a level 2 charging station at home. The two sources agree on the direction. The household plug is the slow case, and a proper home charger is a different piece of hardware on a different circuit. They do not agree on a second kilowatt figure in the passages used here, so this article does not add one. Leaving the car on 1.3 kW for more hours multiplies the same small rate. It does not turn the socket into the level 2 station Electrek points to.</p>\n<h2>Which number is safe to repeat?</h2>\n<p><strong>1.3 kW, because the manual and Electrek both state it.</strong> The manual ties that power to the ordinary household adapter. Electrek states the same maximum for the included connector. Other rows in the manual's adapter table, and the warnings printed next to them, appear in that document alone. They are not repeated by Electrek, so they are not used as shared facts here. A single manual can still be right. It cannot, on its own, put an extra number into an article that requires two sources. The household story that survives that rule is short. The plug tops out around 1.3 kW, and a driver who needs more has to change the outlet, not the clock.</p>\n<h2>When is the household socket the wrong tool?</h2>\n<p><strong>Whenever the car needs more than a thin overnight top-up.</strong> At 1.3 kW, the ten-hour figure of about 13 kWh is the scale of the tool. Tesla's manual points drivers who want more toward a 240-volt outlet. Electrek's confirmation that the household adapter tops out at 1.3 kW is the check on that ceiling. A Wall Connector on a proper circuit is a different product, with its own breaker and its own maximum, and it is not what a 5-15 adapter can imitate. The household socket remains useful as a slow feed. It does not become a home charging setup by leaving the car plugged in longer. The energy per hour stays 1.3 kWh.</p>"
+  },
+  "nl": {
+    "title": "Een stopcontact levert ongeveer 1300 watt",
+    "description": "De handleiding van Tesla's Mobile Connector generatie 2 zet de gewone huishoudelijke adapter op 1,3 kW bij een 120-voltstopcontact. Electrek noemde hetzelfde plafond van 1,3 kW.",
+    "body": "<p>Een gewoon Noord-Amerikaans stopcontact, gebruikt met Tesla's Mobile Connector van de tweede generatie en de NEMA 5-15-adapter, levert ongeveer 1,3 kW. Tesla's gebruikershandleiding van die connector, gepubliceerd op 30 april 2019, zet de gewone huishoudelijke adapter op 1,3 kW bij een 120-voltstopcontact. Electrek beschreef op 16 april 2022 de meegeleverde huishoudelijke adapter met een maximum van 1,3 kW. Dat is het hele tempo. Het is geen langzame stand van een snelle lader. Het is wat die stekker mag trekken. Een nacht aan een stopcontact voegt dus een kleine hoeveelheid energie toe, en een rijder die 's ochtends een volle accu nodig heeft, heeft een ander stopcontact nodig.</p>\n<h2>Wat levert 1,3 kW in een nacht op?</h2>\n<p><strong>Ongeveer 13 kWh in tien uur, want 1,3 keer 10 is 13.</strong> Dat product is rekenen met het cijfer van 1,3 kW uit de handleiding, geen aparte meting van Tesla aan een bepaalde auto. Het verslag van Electrek met hetzelfde plafond van 1,3 kW maakt het startgetal een gedeeld feit in plaats van één document. Tien uur is een lange nacht stilstand, en 13 kWh is nog steeds een bescheiden deel van een moderne aandrijfbatterij. De handleiding rekent het cijfer niet om naar mijlen, en dit stuk verzint geen claim in mijl per uur. Electrek schreef dat de meegeleverde connector twee tot drie mijl bereik per uur gaf. Dat bereik is alleen de formulering van Electrek, dus het wordt hier niet herhaald als gemeten tempo. Het harde gedeelde getal is het vermogen, 1,3 kW.</p>\n<h2>Welke adapter is de huishoudelijke?</h2>\n<p><strong>De NEMA 5-15, de stekker die in een normaal 120-voltstopcontact past.</strong> Tesla's handleiding zegt dat de Mobile Connector in de set die hij beschrijft twee adapters heeft, één voor een standaard 120-voltstopcontact en een tweede voor een 240-voltstopcontact, en dat de connector de geplaatste adapter herkent en de stroom daarvan afstelt. De zin van Electrek over 1,3 kW past bij de huishoudelijke adapter die de handleiding beschrijft, niet bij een zwaardere stekker. Een andere adapter zou een ander tempo zijn, en dit stuk neemt de andere rijen uit de handleiding niet over, omdat Electrek ze niet herhaalt. De huishoudelijke adapter insteken en een snelle thuislader verwachten, is de verwisseling waar beide bronnen tegenin gaan. De handleiding wijst voor meer tempo naar een 240-voltstopcontact. Electrek wijst naar een level-2-paal. Het gedeelde plafond van het gewone stopcontact blijft 1,3 kW.</p>\n<h2>Dus wat is de stap omhoog vanaf dat stopcontact?</h2>\n<p><strong>Een zwaardere thuisinstallatie, niet een langere sessie op dezelfde stekker.</strong> Tesla's handleiding zegt dat een 240-voltstopcontact de snellere keuze is en dat een elektricien er een moet plaatsen waar de auto staat. Electrek schreef, bij het plafond van 1,3 kW van de huishoudelijke adapter, dat alles wat beter is een level-2-laadpaal thuis betekent. De twee bronnen zijn het eens over de richting. Het gewone stopcontact is het langzame geval, en een echte thuislader is ander materiaal op een andere groep. Ze noemen in de gebruikte passages geen tweede kilowattcijfer waarover ze allebei hetzelfde zeggen, dus dit stuk voegt er geen toe. De auto langer op 1,3 kW laten staan vermenigvuldigt hetzelfde kleine tempo. Het maakt van het stopcontact niet de level-2-paal waar Electrek naar wijst.</p>\n<h2>Welk getal is veilig om te herhalen?</h2>\n<p><strong>1,3 kW, omdat de handleiding en Electrek het allebei noemen.</strong> De handleiding koppelt dat vermogen aan de gewone huishoudelijke adapter. Electrek noemt hetzelfde maximum voor de meegeleverde connector. Andere rijen in de adaptertabel van de handleiding, en de waarschuwingen ernaast, staan alleen in dat document. Electrek herhaalt ze niet, dus ze worden hier niet als gedeelde feiten gebruikt. Eén handleiding kan nog steeds kloppen. Zij kan niet in haar eentje een extra getal in een stuk zetten dat twee bronnen vraagt. Het huishoudelijke verhaal dat die regel overleeft, is kort. De stekker stopt rond 1,3 kW, en een rijder die meer nodig heeft, moet het stopcontact veranderen en niet de klok.</p>\n<h2>Wanneer is het stopcontact het verkeerde gereedschap?</h2>\n<p><strong>Zodra de auto meer nodig heeft dan een dunne nachtelijke bijlading.</strong> Bij 1,3 kW is het tien-uurscijfer van ongeveer 13 kWh de schaal van het gereedschap. Tesla's handleiding wijst rijders die meer willen naar een 240-voltstopcontact. De bevestiging van Electrek dat de huishoudelijke adapter stopt bij 1,3 kW is de controle op dat plafond. Een Wall Connector op een echte groep is een ander product, met een eigen zekering en een eigen maximum, en dat is niet wat een 5-15-adapter kan nadoen. Het gewone stopcontact blijft bruikbaar als langzame voeding. Het wordt geen thuislaadinstallatie door de auto langer aan te sluiten. De energie per uur blijft 1,3 kWh.</p>"
+  }
+}

@@ -16,6 +16,7 @@ Article JSON format:
   "category": "earnings",                          # key from CATEGORIES below
   "models": ["model-y"],                           # optional: keys from MODELS below the article is about
   "also": ["optimus"],                             # optional: extra categories where the article also appears
+  "also_topics": ["falcon"],                       # optional: extra topic hubs; the primary topic stays the breadcrumb
   "image": "topics/optimus.jpg",                   # optional: specific photo (path inside static/img/)
   "sources": [{"title": "...", "url": "https://..."}],
   "en": {"title": "...", "description": "...", "body": "<p>...</p>"},
@@ -2740,12 +2741,20 @@ def load_articles():
                 raise SystemExit(f"{f.name}: missing '{key}'")
         if a["category"] not in CATEGORIES:
             raise SystemExit(f"{f.name}: unknown category '{a['category']}'")
+        extra = []
+        for key in a.get("also_topics") or []:
+            if key not in TOPIC_LABEL:
+                raise SystemExit(f"{f.name}: unknown also_topics '{key}'")
+            if key not in extra:
+                extra.append(key)
         filed = FILING.get(a["slug"])
         if filed:
             a["layer"] = filed["layer"]
             a["topic"] = filed["topic"]
             if filed.get("card"):
                 a["card"] = filed["card"]
+        # Extra topics add the article to those hubs. The primary topic stays the breadcrumb.
+        a["also_topics"] = [t for t in extra if t != a.get("topic")]
         for m in a.get("models", []):
             if m not in MODELS:
                 raise SystemExit(f"{f.name}: unknown model '{m}' (use a key from MODELS)")
@@ -4170,7 +4179,7 @@ def page_side(arts, lang, kind="home", current=None, skip=None, tail="", signup=
             if x["category"] == "guides" or id(x) in ban:
                 continue
             latest.append(x)
-            if len(latest) == 5:
+            if len(latest) == 10:
                 break
     related_items = []
     if kind == "article" and current is not None:
@@ -5083,11 +5092,23 @@ def _kw_pattern(words):
     return re.compile(r"\b(?:" + "|".join(parts) + r")\b", re.I)
 
 
+def article_topics(a):
+    """Primary topic, then any extra topics. Breadcrumbs keep the primary one."""
+    found = []
+    primary = a.get("topic")
+    if primary:
+        found.append(primary)
+    for key in a.get("also_topics") or []:
+        if key and key not in found:
+            found.append(key)
+    return found
+
+
 def hub_articles(spec, arts):
     """Articles filed under this hub's topics. Keyword matching is not used."""
     topics = set(spec.get("topics") or [])
     if topics:
-        out = [a for a in arts if a.get("topic") in topics]
+        out = [a for a in arts if topics & set(article_topics(a))]
         out.sort(key=published, reverse=True)
         return out
     cats = set(spec.get("categories") or [])

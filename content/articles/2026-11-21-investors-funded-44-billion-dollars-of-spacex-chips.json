@@ -4,6 +4,7 @@
   "time": "15:56",
   "category": "xai",
   "topic": "datacenters",
+  "also_topics": ["ai-compute"],
   "card": {
     "en": "Investors funded 44 billion dollars of SpaceX chips",
     "nl": "Beleggers financieren 44 miljard dollar aan SpaceX-chips"

@@ -1,0 +1,68 @@
+{
+  "slug": "tesla-taped-out-the-ai5-chip-design",
+  "date": "2026-11-23",
+  "time": "07:52",
+  "category": "xai",
+  "layer": "spacexsi",
+  "topic": "chips",
+  "card": {
+    "en": "Tesla taped out the AI5 chip design",
+    "nl": "Tesla rondde het AI5-chipontwerp af"
+  },
+  "image": "topics/ai-chip.jpg",
+  "images": [
+    "topics/ai-chip.jpg",
+    "topics/chip-fab.jpg",
+    "topics/xai-gpu-rack.jpg",
+    "topics/xai-dc-2.jpg"
+  ],
+  "sources": [
+    {
+      "title": "Electrek — Tesla taped out the AI5 chip, Musk says, 15 April 2026",
+      "url": "https://electrek.co/2026/04/15/tesla-ai5-chip-taped-out-musk-ai6-dojo3/"
+    },
+    {
+      "title": "TechNode — Tesla completes AI5 chip tape-out, 16 April 2026",
+      "url": "https://technode.com/2026/04/16/tesla-completes-ai5-chip-tape-out-to-be-manufactured-by-tsmc-and-samsung/"
+    }
+  ],
+  "label": {
+    "style": "c",
+    "en": {
+      "sub": "AI5",
+      "text": "DESIGN TAPED OUT"
+    },
+    "nl": {
+      "sub": "AI5",
+      "text": "ONTWERP AFGEROND"
+    }
+  },
+  "gen_image": {
+    "prompt": "A technical illustration of a square processor die on a dark substrate, cool rim light, no lettering, no logo, no people, empty lower-left",
+    "subject": "a processor die on a dark substrate",
+    "refs": [
+      {
+        "src": "topics/ai-chip.jpg"
+      }
+    ],
+    "profile": "technical",
+    "category": "A",
+    "describe": "Illustration of a chip. Not a photograph of Tesla's AI5 silicon.",
+    "extra": [
+      {
+        "prompt": "A technical illustration of a cleanroom tool bay with a wafer cassette, no readable marks, no people, empty lower-left",
+        "describe": "Illustration of a chip-fab bay, not a specific factory"
+      }
+    ]
+  },
+  "en": {
+    "title": "Tesla taped out the AI5 chip design",
+    "description": "On 15 April 2026 Elon Musk said Tesla's team had taped out the AI5 chip. Electrek and TechNode both reported the post. Tape-out sends a finished design to be manufactured.",
+    "body": "<p>Tesla's AI5 chip design reached tape-out on 15 April 2026, according to Elon Musk. Electrek reported that day that he posted at 3:21 in the morning, congratulating Tesla's chip design team on taping out AI5 and adding that AI6, Dojo3 and other chips were in work. TechNode, on 16 April, reported the same announcement and defined the step in plain terms. The design had been finalized and handed over for manufacturing. A tape-out is a gate the design has passed. It is not a chip in a car, and neither report gives a date when drivers would have AI5 under the glovebox.</p>\n<h2>What is a tape-out?</h2>\n<p><strong>The moment the design is locked and sent to be built.</strong> Electrek describes tape-out as the point at which a chip's design is locked and sent to a semiconductor factory to begin fabrication. TechNode uses the same definition. The design is finished and handed over for manufacturing. Both outlets are explaining the industry word, and both tie it to Musk's post rather than to a press release with a specification sheet. The useful limit follows from that definition. Fabrication, testing and a production ramp come after the post. Electrek says as much when it calls tape-out a milestone and not the finish line. TechNode's account stops at the handover. A reader who treats the congratulatory post as a shipping date is ahead of both articles.</p>\n<h2>What did the post name besides AI5?</h2>\n<p><strong>AI6 and Dojo3, as work still going on.</strong> Electrek quotes the post as congratulating the team on taping out AI5, then listing AI6, Dojo3 and other chips as in work. TechNode reports that he said the company is developing exciting chips, including AI6 and Dojo3, in the same breath as the AI5 tape-out. The shared reading is narrow. AI5 is the one he said had taped out. AI6 and Dojo3 are names he placed in the still-in-work list. Neither outlet prints a die size, a performance multiple, or a factory schedule inside that post. Adding those would be a different story from the one these two reports tell.</p>\n<h2>Do the two reports agree on who will manufacture it?</h2>\n<p><strong>No. This article leaves the factory unnamed.</strong> TechNode writes that Musk thanked TSMC and Samsung and that those companies would be responsible for producing the chip. Electrek writes that Tesla is reportedly using TSMC for AI5, while Samsung's line is tied to the follow-on AI6 chip. Those sentences do not match. One puts both foundries on AI5. The other splits them, AI5 at TSMC and AI6 at Samsung, and it marks the split as reported rather than as a line in the post. Because the two accounts conflict, the manufacturer is not a fact in this piece. The fact they share is the tape-out announcement itself. A conflict this clear is a reason to drop the name, not a reason to pick the more detailed version.</p>\n<h2>What does tape-out not settle?</h2>\n<p><strong>Volume, a vehicle, and a year on the road.</strong> Electrek notes that after tape-out a chip still has to be manufactured, tested and ramped, and it says that for an automotive part that process typically takes many months. That timing estimate is Electrek's, not a figure TechNode repeats, so it is not used here as a number. TechNode says, citing sources, that full-scale mass production was expected in 2027. That expectation is not in Electrek's account of the post, so it is not used here either. What both do say is that the April announcement was the design leaving the design team. Cars already on the road were not part of the sentence Musk posted, as either outlet quotes it. The design step can be real and the fleet can still be on the previous chip.</p>\n<h2>Why does the post still matter?</h2>\n<p><strong>It is Tesla saying the AI5 design is finished enough to manufacture.</strong> Electrek and TechNode independently reported the post on 15 and 16 April 2026, and they agree on the verb. AI5 was taped out. They agree that AI6 and Dojo3 were named as further work. They do not agree on the foundry, and they do not jointly date a production car. The chip program's public marker for that week is the tape-out, not a delivery. Until a later document from Tesla or a foundry states a factory, a volume and a vehicle, the April post remains a design milestone and nothing past it.</p>"
+  },
+  "nl": {
+    "title": "Tesla rondde het AI5-chipontwerp af",
+    "description": "Op 15 april 2026 zei Elon Musk dat Tesla's team de AI5-chip had afgerond voor productie. Electrek en TechNode meldden de post allebei. Die stap stuurt een af ontwerp naar de fabriek.",
+    "body": "<p>Het ontwerp van Tesla's AI5-chip bereikte op 15 april 2026 de tape-out, volgens Elon Musk. Electrek schreef die dag dat hij om 3.21 uur 's nachts postte, het chipteam feliciteerde met de tape-out van AI5, en toevoegde dat AI6, Dojo3 en andere chips in bewerking waren. TechNode meldde op 16 april dezelfde aankondiging en legde de stap in gewone taal uit. Het ontwerp was vastgezet en overgedragen om te worden gemaakt. Een tape-out is een poort die het ontwerp is gepasseerd. Het is geen chip in een auto, en geen van beide verslagen geeft een datum waarop rijders AI5 onder het dashboard zouden hebben.</p>\n<h2>Wat is een tape-out?</h2>\n<p><strong>Het moment waarop het ontwerp op slot gaat en wordt opgestuurd om gebouwd te worden.</strong> Electrek beschrijft tape-out als het punt waarop het ontwerp van een chip vastligt en naar een chipfabriek gaat om de productie te beginnen. TechNode gebruikt dezelfde definitie. Het ontwerp is af en wordt overgedragen voor fabricage. Beide media leggen het vakwoord uit, en beide koppelen het aan Musks post en niet aan een persbericht met een specificatieblad. De bruikbare grens volgt uit die definitie. Fabricage, testen en een productieramp komen na de post. Electrek zegt dat ook wanneer het tape-out een mijlpaal noemt en niet de finish. Het verslag van TechNode stopt bij de overdracht. Een lezer die de felicitatie als leverdatum leest, loopt voor op beide artikelen.</p>\n<h2>Wat noemde de post naast AI5?</h2>\n<p><strong>AI6 en Dojo3, als werk dat nog loopt.</strong> Electrek citeert de post als een felicitatie voor de tape-out van AI5, en daarna AI6, Dojo3 en andere chips als werk in uitvoering. TechNode meldt dat hij zei dat het bedrijf spannende chips ontwikkelt, waaronder AI6 en Dojo3, in dezelfde adem als de tape-out van AI5. De gedeelde lezing is smal. AI5 is degene waarvan hij zei dat de tape-out rond was. AI6 en Dojo3 zijn namen die hij op de lijst van lopend werk zette. Geen van beide media drukt een chipgrootte, een prestatiefactor of een fabrieksplanning uit die post af. Die toevoegen zou een ander verhaal zijn dan het verhaal dat deze twee verslagen vertellen.</p>\n<h2>Zijn de twee verslagen het eens over wie hem maakt?</h2>\n<p><strong>Nee. Dit stuk laat de fabriek ongenoemd.</strong> TechNode schrijft dat Musk TSMC en Samsung bedankte en dat die bedrijven de chip zouden produceren. Electrek schrijft dat Tesla naar verluidt TSMC gebruikt voor AI5, terwijl de lijn van Samsung aan de volgende chip AI6 is gekoppeld. Die zinnen komen niet overeen. De ene zet beide fabrieken op AI5. De andere splitst ze, AI5 bij TSMC en AI6 bij Samsung, en markeert de splitsing als gemeld in plaats van als een regel in de post. Omdat de twee verslagen botsen, is de fabrikant hier geen feit. Het feit dat ze delen is de aankondiging van de tape-out zelf. Een conflict dat zo helder is, is een reden om de naam te laten vallen, niet een reden om de uitgebreidere versie te kiezen.</p>\n<h2>Wat legt een tape-out niet vast?</h2>\n<p><strong>Volume, een auto, en een jaar op de weg.</strong> Electrek noteert dat een chip na de tape-out nog gemaakt, getest en opgeschaald moet worden, en zegt dat dat voor een auto-onderdeel doorgaans vele maanden duurt. Die tijdschatting is van Electrek, geen cijfer dat TechNode herhaalt, dus hij wordt hier niet als getal gebruikt. TechNode zegt, met een beroep op bronnen, dat massaproductie op volle schaal in 2027 werd verwacht. Die verwachting staat niet in Electreks verslag van de post, dus zij wordt hier ook niet gebruikt. Wat beide wel zeggen, is dat de aankondiging van april het vertrek van het ontwerp bij het ontwerpteam was. Auto's die al op de weg reden, hoorden niet bij de zin die Musk postte, zoals een van beide media hem citeert. De ontwerpstap kan echt zijn en het wagenpark kan nog op de vorige chip zitten.</p>\n<h2>Waarom doet de post er toch toe?</h2>\n<p><strong>Tesla zegt ermee dat het AI5-ontwerp ver genoeg af is om gemaakt te worden.</strong> Electrek en TechNode meldden de post onafhankelijk op 15 en 16 april 2026, en ze zijn het eens over het werkwoord. AI5 had de tape-out bereikt. Ze zijn het eens dat AI6 en Dojo3 werden genoemd als verder werk. Ze zijn het niet eens over de chipfabriek, en ze dateren samen geen productieauto. Het publieke merkteken van het chipprogramma voor die week is de tape-out, niet een levering. Tot een later document van Tesla of een chipfabriek een fabriek, een volume en een auto noemt, blijft de post van april een ontwerpmijlpaal en niets daarna.</p>"
+  }
+}

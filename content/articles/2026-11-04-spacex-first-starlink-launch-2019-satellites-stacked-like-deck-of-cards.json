@@ -6,6 +6,7 @@
   "also": [
     "spacex"
   ],
+  "also_topics": ["falcon"],
   "sources": [
     {
       "title": "Reuters via The Christian Science Monitor: Under pressure from Musk, SpaceX hustles to launch satellites",

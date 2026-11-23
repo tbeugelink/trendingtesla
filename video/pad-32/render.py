@@ -25,19 +25,17 @@ WHITE = (255, 255, 255)
 # crop is x, y, w, h in the 3840x2160 frame, chosen to keep the rocket and drop the telemetry bar.
 GROUPS = [
     {"ids": ["s1"], "file": "nrol136.mp4", "ss": 843.0, "crop": (1460, 0, 920, 1560),
-     "mission": "NROL-136", "shows": "NROL-136 liftoff, T+5 s, SLC-4E, 22 Nov 2026. Full Falcon 9, flame, tower."},
-    {"ids": ["s2"], "file": "ussf317.mp4", "ss": 766.0, "crop": (1400, 40, 980, 1580),
-     "mission": "USSF-317", "shows": "USSF-317 liftoff, T+8 s, SLC-4E, 20 Nov 2026. Night flame and the pad."},
-    {"ids": ["s3"], "file": "nrol136.mp4", "ss": 848.5, "crop": (1500, 0, 900, 1520),
-     "mission": "NROL-136", "shows": "NROL-136, T+10 s, same pad camera a few seconds later. Second use of this angle."},
+     "mission": "NROL-136", "shows": "NROL-136 liftoff, about T+5 s, SLC-4E, 22 Nov 2026. Full Falcon 9, flame and the tower."},
+    {"ids": ["s2"], "file": "ussf317.mp4", "ss": 762.0, "crop": (1300, 0, 1000, 1600),
+     "mission": "USSF-317", "shows": "USSF-317 liftoff, about T+4 s, SLC-4E, 20 Nov 2026. The rocket still beside the tower."},
+    {"ids": ["s3"], "file": "nrol136.mp4", "ss": 848.0, "crop": (1500, 0, 900, 1520), "rate": 0.5,
+     "mission": "NROL-136", "shows": "NROL-136, about T+10 s, held so the rocket stays in frame. Second use of the pad camera."},
     {"ids": ["s4", "s5"], "file": "ussf317.mp4", "ss": 777.0, "crop": (1450, 80, 1000, 1600),
      "mission": "USSF-317", "shows": "USSF-317 engine close-up, about T+19 s. The rocket climbing."},
-    {"ids": ["s6"], "file": "ussf317.mp4", "ss": 792.0, "crop": (1300, 200, 1100, 1500),
-     "mission": "USSF-317", "shows": "USSF-317 long lens, about T+34 s. The climb over the coast."},
-    {"ids": ["s7"], "file": "ussf317.mp4", "ss": 1262.0, "crop": (1960, 180, 1500, 1200),
-     "mission": "USSF-317", "shows": "USSF-317 booster landing on Of Course I Still Love You, about T+8:24. Right-hand deck camera."},
-    {"ids": ["s8", "s9", "s10", "s11"], "file": "nrol136.mp4", "ss": 1276.0, "crop": (1200, 80, 1200, 1600),
-     "mission": "NROL-136", "shows": "NROL-136 booster B1097 landing burn at Landing Zone 4, about T+7:18 to T+7:40."},
+    {"ids": ["s6", "s7"], "file": "ussf317.mp4", "ss": 792.0, "crop": (1200, 0, 1000, 1450),
+     "mission": "USSF-317", "shows": "USSF-317 long lens, about T+34 s. The climb over the coast, telemetry cropped off."},
+    {"ids": ["s8", "s9", "s10", "s11"], "file": "nrol136.mp4", "ss": 1287.2, "crop": (1200, 80, 1200, 1550), "rate": 0.58,
+     "mission": "NROL-136", "shows": "NROL-136 landing burn at Landing Zone 4, about T+7:29 to T+7:37. Slowed so it ends before the webcast cuts to a split screen."},
 ]
 
 
@@ -142,11 +140,12 @@ def overlay(im, caption, hook):
 
 def extract(group, length, dest):
     x, y, w, h = group["crop"]
-    vf = f"crop={w}:{h}:{x}:{y},scale={W}:{H}:flags=lanczos,fps={FPS}"
-    # -ss after -i so the cut lands on the rocket, not the previous keyframe.
-    run(["ffmpeg", "-y", "-v", "error", "-i", str(CLIPS / group["file"]),
-         "-ss", f"{group['ss']:.3f}", "-t", f"{length:.3f}",
-         "-vf", vf, "-an", "-c:v", "libx264", "-pix_fmt", "yuv420p", "-crf", "16", str(dest)])
+    rate = float(group.get("rate") or 1.0)
+    src_len = max(0.4, length * rate)
+    vf = f"crop={w}:{h}:{x}:{y},scale={W}:{H}:flags=lanczos,setpts=PTS/{rate:.4f},fps={FPS}"
+    run(["ffmpeg", "-y", "-v", "error", "-ss", f"{group['ss']:.3f}", "-t", f"{src_len:.3f}",
+         "-i", str(CLIPS / group["file"]), "-vf", vf, "-an",
+         "-c:v", "libx264", "-pix_fmt", "yuv420p", "-crf", "16", str(dest)])
 
 
 def grade_and_caption(src, dest, cards, hook, t0, length):

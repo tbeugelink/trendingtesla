@@ -1198,10 +1198,18 @@ article.money>.lmeta a.lname:hover{text-decoration:underline}
 .byline{margin:0 0 12px;color:var(--dim);font-size:.86rem}
 .upd{margin:-6px 0 12px;color:var(--dim);font-size:.82rem}
 .upd time{color:inherit}
-.sheet-main article.money>.upd{margin-left:calc(3vw + 14px);margin-right:calc(3vw + 14px)}
-@media (max-width:600.98px){.sheet-main article.money>.upd{margin-left:14px;margin-right:14px}}
+.sheet-main article.money>.upd,.sheet-main article.money>.hublink{margin-left:calc(3vw + 14px);margin-right:calc(3vw + 14px)}
+@media (max-width:600.98px){.sheet-main article.money>.upd,.sheet-main article.money>.hublink{margin-left:14px;margin-right:14px}}
 .hubh{font-size:1.15rem;margin:8px 0 4px}
 .hubcount{margin:0 0 12px;color:var(--dim);font-size:.84rem}
+.etime{list-style:none;margin:8px 0 22px;padding:0}
+.etime li{padding:12px 0;border-top:1px solid #2a2a2a}
+.etime time{display:block;color:var(--dim);font-size:.78rem;font-weight:800;margin-bottom:4px}
+.etime p{margin:0 0 6px}
+.etime .esrc{font-size:.8rem}
+.hublink{margin:0 0 12px;font-size:.84rem}
+.hublink a{color:var(--blue2);font-weight:800;text-decoration:none}
+.hublink a:hover{text-decoration:underline}
 .hubnote{margin:8px 0 18px;padding:16px 16px 14px;border:1px dashed #3a4a60;border-radius:14px;background:#141820;color:var(--muted);line-height:1.45}
 .eco-map{margin:6px 0 22px}
 .eco-flow{display:flex;flex-direction:column;align-items:stretch;gap:0}
@@ -3542,6 +3550,8 @@ NAV_LAYERS = [
             {"key": "semi", "href": "semi/", "en": "Semi Truck", "nl": "Semi-truck"},
             {"key": "robotaxi", "href": "robotaxi/", "en": "Robotaxi", "nl": "Robotaxi"},
             {"key": "fsd", "href": "fsd/", "en": "FSD", "nl": "FSD"},
+            {"key": "fsd-europe", "href": "fsd-in-europe/", "en": "FSD in Europe step by step", "nl": "FSD in Europa stap voor stap"},
+            {"key": "deliveries", "href": "tesla-deliveries/", "en": "Tesla deliveries each quarter", "nl": "Tesla leveringen per kwartaal"},
             {"key": "optimus", "href": "optimus/", "en": "Optimus", "nl": "Optimus"},
         ],
     },
@@ -3560,7 +3570,7 @@ NAV_LAYERS = [
         "label": {"en": "SpaceX", "nl": "SpaceX"},
         "items": [
             {"key": "starship-vehicle", "href": "starship-vehicle/", "en": "Starship", "nl": "Starship"},
-            {"key": "starship", "href": "starship/", "en": "Starship tracker", "nl": "Starship-tracker"},
+            {"key": "starship", "href": "starship/", "en": "All Starship flights", "nl": "Alle Starship-vluchten"},
             {"key": "falcons", "href": "falcons/", "en": "Falcons", "nl": "Falcons"},
         ],
     },
@@ -3577,7 +3587,9 @@ NAV_LAYERS = [
     {
         "key": "starlink", "tone": "link", "href": "starlink/",
         "label": {"en": "Starlink", "nl": "Starlink"},
-        "plain": True,
+        "items": [
+            {"key": "starlink-nl", "href": "starlink-netherlands/", "en": "Starlink in the Netherlands", "nl": "Starlink in Nederland"},
+        ],
     },
     {
         "key": "neuralink", "tone": "neural", "href": "neuralink/",
@@ -4491,6 +4503,9 @@ def page_side(arts, lang, kind="home", current=None, skip=None, tail="", signup=
         # The rail form is in the HTML for desktop. At the stack breakpoint
         # CSS hides .nlside, so a phone keeps only the article bar.
         parts.append(rail_signup(lang, script=not tail))
+    hubs = evergreen_side(lang)
+    if hubs:
+        parts.append(hubs)
     rec = recommend_block(lang, kind, current)
     if rec:
         parts.append(rec)
@@ -5105,7 +5120,7 @@ def pv_article(variant, a, arts, lang, live=False):
         f'{rubric_line(a, lang, link=True)}'
         f'<h1>{esc(t["title"])}</h1>'
         f'<p class="byline"><a href="{url(lang, "editorial/")}">{L["byline"]}</a>'
-        f' · {read_time(a, lang)} {L["min"]}</p>{updated_html(a, lang)}'
+        f' · {read_time(a, lang)} {L["min"]}</p>{updated_html(a, lang)}{evergreen_article_links(a, lang)}'
         f'<p class="lead">{esc(t["description"])}</p>'
         f'{toc_here}'
         f'<div class="prose">{body}</div>{product_boxes(a, lang)}{handy_box(a, lang)}{ad_html("end", lang)}'
@@ -5815,7 +5830,7 @@ LAYERS = [
         "fact": {"en": "Starship, Falcons", "nl": "Starship, Falcons"},
         "stats": ["flight15"],
         "links": [
-            {"en": "Starship tracker", "nl": "Starship-tracker", "href": "starship/"},
+            {"en": "All Starship flights", "nl": "Alle Starship-vluchten", "href": "starship/"},
         ],
         "intro": {
             "en": [
@@ -6029,7 +6044,7 @@ def starship_page(lang, arts):
     # Newest launch date first, then the higher flight number, so a new flight lands on top.
     flights = sorted(data["flights"], key=lambda f: (str(f.get("date") or ""), int(f.get("number") or 0)), reverse=True)
     latest = flights[0]
-    titles = {"en": "Starship tracker", "nl": "Starship-tracker"}
+    titles = {"en": "All Starship flights", "nl": "Alle Starship-vluchten"}
     title = titles[lang]
     intro = ("Every full-stack Starship flight: the date, the outcome, and whether the booster, the ship and a payload made it. "
              "The page is rendered from a data file, so a new flight is a new row."
@@ -6038,7 +6053,7 @@ def starship_page(lang, arts):
              "De pagina komt uit een databestand, dus een nieuwe vlucht is een nieuwe rij.")
     ship_spec = {"key": "starship", "path": "starship/", "title": titles, "topics": ["starship"]}
     nav, ld = crumbs(lang, topic_hub_crumb_parts(ship_spec, hub_articles(ship_spec, arts), lang))
-    updated = ("Last updated" if lang == "en" else "Laatst bijgewerkt") + " " + fmt_date(data["updated"], lang) + "."
+    updated = ("Updated on " if lang == "en" else "Bijgewerkt op ") + fmt_date(data["updated"], lang)
     labels = {
         "en": ("Latest result", "Next launch", "Not announced", "Flight archive", "Flight", "Date", "Outcome",
                "Booster catch", "Ship catch", "Payload", "On TrendingTesla"),
@@ -6096,6 +6111,102 @@ def starship_page(lang, arts):
         f'{rel}'
     )
     return body, ld, intro
+
+
+def load_evergreen():
+    path = ROOT / "content" / "data" / "evergreen.json"
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return []
+    hubs = data.get("hubs") if isinstance(data, dict) else None
+    return hubs if isinstance(hubs, list) else []
+
+
+def evergreen_articles(hub, arts):
+    rule = hub.get("match") if isinstance(hub.get("match"), dict) else {}
+    cat = str(rule.get("category") or "")
+    bits = [str(bit).lower() for bit in (rule.get("any") or []) if str(bit).strip()]
+    topic = str(rule.get("topic") or "")
+    out = []
+    for a in arts:
+        if cat and a.get("category") != cat and cat not in (a.get("also") or []):
+            continue
+        if topic and topic not in set(article_topics(a)):
+            continue
+        if bits:
+            blob = " ".join([
+                a.get("slug") or "",
+                (a.get("en") or {}).get("title") or "",
+                (a.get("nl") or {}).get("title") or "",
+            ]).lower()
+            if not any(bit in blob for bit in bits):
+                continue
+        if cat or topic or bits:
+            out.append(a)
+    out.sort(key=published, reverse=True)
+    return out
+
+
+def evergreen_for(a):
+    return [hub for hub in load_evergreen() if a in evergreen_articles(hub, [a])]
+
+
+def evergreen_side(lang):
+    items = [(hub["title"][lang], hub["path"]) for hub in load_evergreen() if hub.get("title") and hub.get("path")]
+    items.append((
+        "All Starship flights" if lang == "en" else "Alle Starship-vluchten",
+        "starship/",
+    ))
+    if not items:
+        return ""
+    title = "Hubs" if lang == "en" else "Dossiers"
+    return _side_section(title, "<ul>" + _side_links(items) + "</ul>")
+
+
+def evergreen_article_links(a, lang):
+    hubs = evergreen_for(a)
+    if not hubs:
+        return ""
+    links = "".join(
+        f'<a href="{url(lang, hub["path"])}">{esc(hub["title"][lang])}</a>' for hub in hubs)
+    return f'<p class="hublink">{links}</p>'
+
+
+def evergreen_body(hub, arts, lang):
+    L = LANGS[lang]
+    title = hub["title"][lang]
+    intro = (hub.get("intro") or {}).get(lang) or ""
+    updated = str(hub.get("updated") or load_data("evergreen.json").get("updated") or "")[:10]
+    when = ("Updated on " if lang == "en" else "Bijgewerkt op ") + (
+        fmt_date(updated, lang) if re.fullmatch(r"\d{4}-\d{2}-\d{2}", updated) else updated)
+    events = sorted(hub.get("events") or [], key=lambda row: str(row.get("date") or ""), reverse=True)
+    rows = []
+    for event in events:
+        text = (event.get("text") or {}).get(lang) or ""
+        sources = event.get("sources") or []
+        if len(sources) < 2 or not text:
+            continue
+        date = str(event.get("date") or "")
+        label = fmt_date(date, lang) if re.fullmatch(r"\d{4}-\d{2}-\d{2}", date) else date
+        rows.append(
+            f'<li><time datetime="{esc(date)}">{esc(label)}</time><p>{esc(text)}</p>{_src_links(sources)}</li>')
+    related = evergreen_articles(hub, arts)
+    rel = f'<p class="hubcount">{esc(_coverage_note(lang))}</p>'
+    if related:
+        head = "On TrendingTesla" if lang == "en" else "Op TrendingTesla"
+        rel = (f'<h2 class="hubh">{esc(head)}</h2>'
+               f'<p class="hubcount">{esc(_count_label(len(related), lang))}.</p>'
+               + hub_cards(related, lang))
+    nav, ld = crumbs(lang, [(title, None)])
+    body = (
+        f'{nav}<header class="hubhead"><h1>{esc(title)}</h1>'
+        f'<p class="byline"><a href="{url(lang, "editorial/")}">{esc(L["byline"])}</a></p>'
+        f'<p class="lead">{esc(intro)}</p>'
+        f'<p class="hubcount">{esc(when)}</p></header>'
+        f'<ol class="etime">{"".join(rows)}</ol>{rel}'
+    )
+    return body, ld, intro, updated
 
 
 BRIEF_LAYERS = (
@@ -6800,9 +6911,16 @@ def build():
         ship_body, ship_ld, ship_desc = starship_page(lang, arts)
         ship_items = hub_articles({"topics": ["starship"]}, arts)
         write(url(lang, "starship/"), page(
-            lang, "starship/", "Starship tracker" if lang == "en" else "Starship-tracker", ship_desc,
+            lang, "starship/", "All Starship flights" if lang == "en" else "Alle Starship-vluchten", ship_desc,
             shell(ship_body, page_side(arts, lang, "hub", "starship", skip=ship_items)),
             extra_head=ld_script(ship_ld), active="starship"))
+        for hub in load_evergreen():
+            h_body, h_ld, h_intro, _h_updated = evergreen_body(hub, arts, lang)
+            h_items = evergreen_articles(hub, arts)
+            write(url(lang, hub["path"]), page(
+                lang, hub["path"], hub["title"][lang], h_intro,
+                shell(h_body, page_side(arts, lang, "hub", hub["key"], skip=h_items)),
+                extra_head=ld_script(h_ld), active=hub["key"]))
 
         # ---------- Articles ----------
         for a in arts:
@@ -7091,6 +7209,8 @@ def build():
         entries.append((layer["path"], latest_stamp(_layer_articles(layer, arts))))
     if not any(path == "starship/" for path, _mod in entries):
         entries.append(("starship/", ship_mod))
+    for hub in load_evergreen():
+        entries.append((hub["path"], str(load_data("evergreen.json").get("updated") or "")[:10] or None))
     entries += [("archive/" if i == 0 else f"archive/{i + 1}/", latest_stamp(archive_chunk(i))) for i in range(ARCH_PAGES[0])]
 
     def emit(loc_lang, loc_path, mod, en_path, nl_path):

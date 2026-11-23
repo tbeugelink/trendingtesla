@@ -1,17 +1,17 @@
-"""Cut the pad-turnaround preview Short, version 2. Nothing is uploaded or published.
+"""Cut the pad-turnaround preview Short, version 3. Nothing is uploaded or published.
 
 Picture is the official SpaceX webcast of USSF-317 and of NROL-136, both from pad 4E.
-Voice is the Noah files in out/. The grade is video/vivid.py.
+Voice is the Noah files in out/.
 
-v1 opened on NROL-136 at 843 s (T+5). That is a Falcon 9, but the tight crop sat in the
-engine glare and on the strongback as it fell away, and the grade made that lattice read
-as a Super Heavy hot-staging ring. v2 opens earlier, on the whole stack, and no shot runs
-longer than about 3.5 s. The onboard landing view is one 3.4 s shot with the highlights
-pulled down. The music bed is original (written in this file), so it is not a Content ID
-track, and it is sidechained under the voice.
+v3 drops the shots a review read as a Super Heavy cluster or a blown-out fireball
+(the Merlin close-up and the entry-burn engine flower) and the booster cloud camera.
+Every shot is 3.5 s or shorter, and two similar angles are not left back to back.
+The grid-fin shots crush the highlights so clipped white stays under 20 percent.
+The bed is original, written in this file, and sidechained under the voice.
 """
 import json
 import math
+import re
 import struct
 import subprocess
 import sys
@@ -33,43 +33,51 @@ WHITE = (255, 255, 255)
 
 # crop is x, y, w, h on the 1920x1080 webcast, already 9:16, telemetry left outside the frame.
 # dur is the picture length. The last shot is trimmed so the picture matches the voice.
+# crop is x, y, w, h on the 1920x1080 webcast. w/h is 9:16. Telemetry stays outside the frame.
+# No shot is longer than 3.5 s, and the loop shot is rewritten to fill the voice.
 SHOTS = [
-    {"id": "open", "file": "ussf317-1080.mp4", "ss": 757.15, "dur": 3.45, "hook": True,
+    {"id": "open", "file": "ussf317-1080.mp4", "ss": 757.15, "dur": 2.55, "hook": True,
      "crop": (730, 0, 506, 900), "mission": "USSF-317",
-     "shows": "Pad camera, SLC-4E, ignition. Full Falcon 9: fairing, black interstage, strongback. About T-1 to T+2."},
-    {"id": "rise", "file": "ussf317-1080.mp4", "ss": 760.35, "dur": 3.30,
-     "crop": (690, 0, 506, 900), "mission": "USSF-317",
-     "shows": "Same pad camera as the rocket leaves the tower. Friday night liftoff."},
-    {"id": "sunday", "file": "nrol136-1080.mp4", "ss": 840.80, "dur": 3.40,
+     "shows": "Pad camera, SLC-4E. Full Falcon 9, fairing, black interstage, strongback. Cut while the stack is still readable."},
+    {"id": "streak", "file": "ussf317-1080.mp4", "ss": 862.00, "dur": 2.90,
+     "crop": (707, 0, 506, 900), "mission": "USSF-317",
+     "shows": "One distant plume on a black sky, before the camera cuts to the engine close-up."},
+    {"id": "sunday", "file": "nrol136-1080.mp4", "ss": 840.15, "dur": 3.40,
      "crop": (750, 0, 506, 900), "mission": "NROL-136",
-     "shows": "Pad camera, SLC-4E, Sunday liftoff. Full Falcon 9 beside the strongback, coastal berm."},
+     "shows": "Sunday liftoff. Full Falcon 9 beside the strongback, coastal pad."},
     {"id": "track", "file": "nrol136-1080.mp4", "ss": 851.90, "dur": 3.30,
      "crop": (760, 50, 439, 780), "mission": "NROL-136",
-     "shows": "Ground tracking of the climb, one flame streak. Telemetry cropped off."},
-    {"id": "sep", "file": "ussf317-1080.mp4", "ss": 869.20, "dur": 3.40,
-     "crop": (900, 0, 506, 900), "mission": "USSF-317",
-     "shows": "Stage separation. The single Merlin Vacuum bell, from below."},
-    {"id": "coast", "file": "ussf317-1080.mp4", "ss": 888.40, "dur": 3.30,
-     "crop": (720, 20, 484, 860), "mission": "USSF-317",
-     "shows": "Booster camera looking out at cloud and the coast. Not the engine glare."},
-    {"id": "return", "file": "nrol136-1080.mp4", "ss": 888.00, "dur": 3.40,
-     "crop": (760, 50, 439, 780), "mission": "NROL-136",
-     "shows": "Ground tracking later in the climb. One flame, held in the middle of the frame."},
-    {"id": "fins", "file": "nrol136-1080.mp4", "ss": 1291.20, "dur": 3.40, "fx": "deglare",
-     "crop": (600, 0, 461, 820), "mission": "NROL-136",
-     "shows": "Onboard landing view, one grid fin, gamma pulled down so the engine bloom does not wash the frame. 3.4 seconds."},
-    {"id": "lz", "file": "nrol136-1080.mp4", "ss": 1296.40, "dur": 3.50,
-     "crop": (1170, 190, 360, 640), "mission": "NROL-136",
-     "shows": "Landing Zone 4 camera only (the right panel of the split). Legs and one flame, at Vandenberg."},
-    {"id": "entry", "file": "ussf317-1080.mp4", "ss": 896.20, "dur": 3.40,
-     "crop": (790, 0, 439, 780), "mission": "USSF-317",
-     "shows": "Entry burn. The engine cluster against black sky. Telemetry cropped off."},
-    {"id": "stack", "file": "nrol136-1080.mp4", "ss": 833.90, "dur": 3.20,
+     "shows": "Ground tracking. One flame, telemetry cropped off."},
+    {"id": "stack", "file": "nrol136-1080.mp4", "ss": 832.80, "dur": 3.40,
      "crop": (750, 0, 506, 900), "mission": "NROL-136",
-     "shows": "The second Falcon 9 still on SLC-4E, full stack and strongback, just before engine start."},
-    {"id": "loop", "file": "ussf317-1080.mp4", "ss": 754.79, "dur": 2.36,
+     "shows": "The second Falcon 9 on SLC-4E, full stack, before engine start. The Florida line is captioned over this."},
+    {"id": "entry", "file": "nrol136-1080.mp4", "ss": 1283.05, "dur": 1.75,
+     "crop": (0, 140, 400, 711), "xexpr": "max(0\\,210-120*n/FRAME)", "mission": "NROL-136",
+     "shows": "Entry burn from the ground. The booster, its grid fins and one plume, followed as it drifts left."},
+    {"id": "track2", "file": "nrol136-1080.mp4", "ss": 888.00, "dur": 3.05,
+     "crop": (760, 50, 439, 780), "mission": "NROL-136",
+     "shows": "The same climb later. One flame, still in the middle of the frame."},
+    {"id": "fins", "file": "nrol136-1080.mp4", "ss": 1290.85, "dur": 2.00, "fx": "crush",
+     "crop": (430, 0, 461, 820), "mission": "NROL-136",
+     "shows": "One grid fin. Highlights crushed so the lattice stays visible and clipped white stays under 20 percent."},
+    {"id": "wait", "file": "nrol136-1080.mp4", "ss": 836.20, "dur": 3.20,
+     "crop": (750, 0, 506, 900), "mission": "NROL-136",
+     "shows": "Falcon 9 on the pad, venting, stack still whole."},
+    {"id": "early", "file": "nrol136-1080.mp4", "ss": 1278.90, "dur": 2.00, "fx": "crush",
+     "crop": (430, 0, 461, 820), "mission": "NROL-136",
+     "shows": "The same grid fin a few seconds earlier, also with the highlights crushed."},
+    {"id": "track3", "file": "nrol136-1080.mp4", "ss": 855.35, "dur": 2.90,
+     "crop": (760, 50, 439, 780), "mission": "NROL-136",
+     "shows": "Ground tracking between the two pad views. One flame."},
+    {"id": "pad2", "file": "ussf317-1080.mp4", "ss": 749.40, "dur": 3.40,
      "crop": (730, 0, 506, 900), "mission": "USSF-317",
-     "shows": "The same pad camera in the seconds before ignition, so the loop lands on the engine start."},
+     "shows": "Friday night stack on SLC-4E, engines not yet at full thrust. Clean, sharp."},
+    {"id": "lz", "file": "nrol136-1080.mp4", "ss": 1296.45, "dur": 2.40,
+     "crop": (1170, 190, 360, 640), "mission": "NROL-136",
+     "shows": "Landing Zone 4 only. Booster, legs and one flame, while the vehicle is still readable."},
+    {"id": "loop", "file": "ussf317-1080.mp4", "ss": 754.19, "dur": 2.96,
+     "crop": (730, 0, 506, 900), "mission": "USSF-317",
+     "shows": "The opening camera in the seconds before ignition, so the cut back continues into engine start."},
 ]
 
 
@@ -172,17 +180,45 @@ def overlay(im, caption, hook):
     return im
 
 
+def crush_highlights(im):
+    """Pull the top of the range down so a blown frame cannot stay clipped white.
+
+    The curve tops out near 200, so a pixel cannot land on 250 or above.
+    """
+    lut = []
+    for i in range(256):
+        x = i / 255.0
+        if x < 0.55:
+            y = x * 0.85
+        else:
+            t = (x - 0.55) / 0.45
+            y = 0.47 + 0.30 * (t ** 0.55)
+        lut.append(max(0, min(255, int(round(y * 255)))))
+    return im.point(lut * 3)
+
+
+def clipped_white(im):
+    """Share of pixels with all three channels at 250 or above. Sampled 1 in 4."""
+    data = im.tobytes()
+    n = white = 0
+    for i in range(0, len(data) - 2, 12):
+        r, g, b = data[i], data[i + 1], data[i + 2]
+        n += 1
+        if r >= 250 and g >= 250 and b >= 250:
+            white += 1
+    return white / n if n else 0.0
+
+
 def extract(shot, dest):
     x, y, w, h = shot["crop"]
-    fx = shot.get("fx")
-    extra = ""
-    if fx == "deglare":
-        # Ease the engine bloom without flattening the whole frame to grey.
-        extra = ",eq=gamma=0.82:contrast=1.12:saturation=0.85"
-    elif fx == "lift":
-        extra = ",eq=gamma=1.12:brightness=0.02"
-    vf = f"crop={w}:{h}:{x}:{y}{extra},scale={W}:{H}:flags=lanczos,fps={FPS},unsharp=3:3:0.4"
-    # Accurate seek: keyframe seek, then a short decode to the exact time.
+    xexpr = shot.get("xexpr")
+    if xexpr:
+        xexpr = xexpr.replace("FRAME", str(FPS))
+        crop = f"crop={w}:{h}:{xexpr}:{y}"
+    else:
+        crop = f"crop={w}:{h}:{x}:{y}"
+    sharp = "" if shot.get("fx") == "crush" else ",unsharp=3:3:0.4"
+    vf = f"{crop},scale={W}:{H}:flags=lanczos,fps={FPS}{sharp}"
     ss = float(shot["ss"])
     pre = min(1.0, ss)
     run(["ffmpeg", "-y", "-v", "error", "-ss", f"{ss - pre:.3f}", "-i", str(CLIPS / shot["file"]),
@@ -190,11 +226,12 @@ def extract(shot, dest):
          "-c:v", "libx264", "-pix_fmt", "yuv420p", "-crf", "16", str(dest)])
 
 
-def grade_and_caption(src, dest, cards, hook, t0):
+def grade_and_caption(src, dest, cards, hook_until, t0, crush=False):
     raw = OUT / "raw.rgb"
     run(["ffmpeg", "-y", "-v", "error", "-i", str(src), "-f", "rawvideo", "-pix_fmt", "rgb24", str(raw)])
     frame = W * H * 3
     graded = OUT / "graded.rgb"
+    hottest = 0.0
     with raw.open("rb") as inp, graded.open("wb") as outp:
         n = 0
         while True:
@@ -203,20 +240,27 @@ def grade_and_caption(src, dest, cards, hook, t0):
                 break
             t = t0 + n / FPS
             im = Image.frombytes("RGB", (W, H), buf)
-            im = vivid.grade(im)
+            if crush:
+                im = crush_highlights(im)
+                hottest = max(hottest, clipped_white(im))
+            else:
+                im = vivid.grade(im)
             cap = ""
             for a, b, text in cards:
                 if a - 0.02 <= t < b:
                     cap = text
                     break
-            overlay(im, cap, hook and t < 3.45)
+            overlay(im, cap, hook_until is not None and t < hook_until)
             outp.write(im.tobytes())
             n += 1
     raw.unlink(missing_ok=True)
+    if crush and hottest > 0.20:
+        raise SystemExit(f"clipped white {hottest:.1%} exceeds 20% in a crushed shot")
     run(["ffmpeg", "-y", "-v", "error", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}",
          "-r", str(FPS), "-i", str(graded), "-an", "-c:v", "libx264", "-pix_fmt", "yuv420p",
          "-crf", "16", str(dest)])
     graded.unlink(missing_ok=True)
+    return hottest
 
 
 def clip_audio(shot, dest):
@@ -231,42 +275,48 @@ def clip_audio(shot, dest):
 
 
 def write_bed(path, seconds):
-    """Original 108 BPM bed written for this Short.
+    """Original 118 BPM bed written for this Short.
 
-    It is not taken from a music library, so it is not registered with Content ID.
-    The channel owns it and it needs no royalty. Am, F, C, G under a kick and a hat.
+    Kick on every beat, a clap on 2 and 4, hats on the eighths, and a bass note
+    that holds through the bar. Not a library track, so it is not in Content ID.
     """
     sr = 44100
     n = int(seconds * sr)
-    bpm = 108.0
+    bpm = 118.0
     beat = 60.0 / bpm
-    # One chord per bar. Roots are an octave down for the bass.
-    chords = (
-        (110.00, 130.81, 164.81),
-        (87.31, 110.00, 130.81),
-        (130.81, 164.81, 196.00),
-        (98.00, 123.47, 146.83),
-    )
+    roots = (55.0, 43.65, 65.41, 49.0)  # A, F, C, G
     samples = []
     for i in range(n):
         t = i / sr
-        chord = chords[int(t / (beat * 4)) % 4]
+        bar = int(t / (beat * 4)) % 4
+        root = roots[bar]
         ph = t % beat
+        beat_i = int(t / beat)
         k = 0.0
-        if ph < 0.15:
-            freq = 95.0 - 55.0 * (ph / 0.15)
-            k = math.sin(2 * math.pi * freq * t) * math.exp(-ph / 0.038)
-        half = beat / 2.0
-        hp = t % half
-        hat = 0.0
-        if hp < 0.016 and int(t / half) % 2 == 1:
+        if ph < 0.12:
+            freq = 140.0 - 100.0 * (ph / 0.12)
+            k = math.sin(2 * math.pi * freq * t) * math.exp(-ph / 0.028)
+        clap = 0.0
+        if beat_i % 2 == 1 and ph < 0.045:
             noise = (((i * 1103515245 + 12345) & 0x7fffffff) / 2147483647.0) - 0.5
-            hat = noise * math.exp(-hp / 0.005) * 0.45
-        bph = t % (beat * 2)
-        bass = math.sin(2 * math.pi * (chord[0] / 2.0) * t) * math.exp(-min(bph, 0.4) / 0.16) * 0.5
-        pad = sum(math.sin(2 * math.pi * f * t) for f in chord) * 0.035
-        s = (0.72 * k + bass + pad + hat) * 0.48
-        samples.append(max(-1.0, min(1.0, s)))
+            clap = noise * math.exp(-ph / 0.012)
+        eighth = beat / 2.0
+        hp = t % eighth
+        hat = 0.0
+        if hp < 0.012:
+            noise = (((i * 1664525 + 1013904223) & 0x7fffffff) / 2147483647.0) - 0.5
+            hat = noise * math.exp(-hp / 0.004) * (0.55 if int(t / eighth) % 2 else 0.28)
+        # Bass holds, so the bed is not just a click between silences.
+        bass_ph = t % (beat * 2)
+        bass_env = 0.55 + 0.45 * math.exp(-bass_ph / 0.22)
+        bass = math.sin(2 * math.pi * root * t) * bass_env
+        bass += 0.35 * math.sin(2 * math.pi * root * 2 * t) * bass_env
+        pluck = 0.0
+        off = (t + beat / 2) % beat
+        if off < 0.08:
+            pluck = math.sin(2 * math.pi * (root * 4) * t) * math.exp(-off / 0.03)
+        s = 0.85 * k + 0.42 * clap + 0.22 * hat + 0.34 * bass + 0.16 * pluck
+        samples.append(max(-1.0, min(1.0, s * 0.72)))
     # Fade the ends so the loop into the voice is not a click.
     fade = int(0.25 * sr)
     for i in range(fade):
@@ -278,6 +328,16 @@ def write_bed(path, seconds):
         w.setsampwidth(2)
         w.setframerate(sr)
         w.writeframes(b"".join(struct.pack("<h", int(s * 28000)) for s in samples))
+
+
+def lufs(path):
+    proc = subprocess.run(
+        ["ffmpeg", "-i", str(path), "-af", "ebur128", "-f", "null", "-"],
+        capture_output=True, text=True)
+    found = re.findall(r"I:\s+(-?\d+(?:\.\d+)?) LUFS", proc.stderr)
+    if not found:
+        raise SystemExit(f"no LUFS reading for {path}\n{proc.stderr[-400:]}")
+    return float(found[-1])
 
 
 def timeline_of():
@@ -303,8 +363,11 @@ def main():
     fixed = sum(s["dur"] for s in SHOTS[:-1])
     SHOTS[-1]["dur"] = round(total - fixed, 3)
     SHOTS[-1]["ss"] = round(SHOTS[0]["ss"] - SHOTS[-1]["dur"], 3)
-    if SHOTS[-1]["dur"] < 1.2 or SHOTS[-1]["dur"] > 4.0:
-        raise SystemExit(f"loop length {SHOTS[-1]['dur']} is outside 1.2-4.0s")
+    if SHOTS[-1]["dur"] < 1.2 or SHOTS[-1]["dur"] > 3.50:
+        raise SystemExit(f"loop length {SHOTS[-1]['dur']} is outside 1.2-3.5s")
+    for shot in SHOTS:
+        if shot["dur"] > 3.50:
+            raise SystemExit(f"{shot['id']} is {shot['dur']}s, longer than 3.5")
     print(f"voice {total:.2f}s  loop {SHOTS[-1]['ss']:.2f}+{SHOTS[-1]['dur']:.2f}")
 
     by_id = {s["id"]: s for s in alignment["sentences"]}
@@ -320,11 +383,14 @@ def main():
         plain = OUT / f"{shot['id']}-plain.mp4"
         graded = OUT / f"{shot['id']}.mp4"
         audio = OUT / f"{shot['id']}.m4a"
-        print(f"shot {shot['id']} {shot['mission']} {shot['ss']:.2f}s for {shot['dur']:.2f}s")
+        print(f"shot {shot['id']} {shot['mission']} {shot['ss']:.2f}s for {shot['dur']:.2f}s", flush=True)
         extract(shot, plain)
         run(["ffmpeg", "-y", "-v", "error", "-i", str(plain), "-frames:v", "1", "-q:v", "3",
              str(OUT / f"{shot['id']}-first.jpg")])
-        grade_and_caption(plain, graded, cards, bool(shot.get("hook")), t)
+        hot = grade_and_caption(plain, graded, cards, SHOTS[0]["dur"] if shot.get("hook") else None, t,
+                                crush=shot.get("fx") == "crush")
+        if shot.get("fx") == "crush":
+            print(f"  clipped white max {hot:.1%}", flush=True)
         clip_audio(shot, audio)
         plain.unlink(missing_ok=True)
         segs.append({"video": graded, "audio": audio, "t0": t, "length": shot["dur"], "shot": shot})
@@ -359,34 +425,68 @@ def main():
     bed_wav = OUT / "bed.wav"
     write_bed(bed_wav, total + 0.3)
     bed = OUT / "bed.m4a"
-    run(["ffmpeg", "-y", "-v", "error", "-i", str(bed_wav), "-c:a", "aac", "-b:a", "160k", str(bed)])
+    run(["ffmpeg", "-y", "-v", "error", "-i", str(bed_wav), "-c:a", "aac", "-b:a", "192k", str(bed)])
 
-    final = OUT / "spacex-one-pad-32-hours-short-v2.mp4"
-    # Voice leads. Rumble stays low. The bed is sidechained to the voice so it ducks on every word.
-    run(["ffmpeg", "-y", "-v", "error", "-i", str(silent), "-i", str(voice), "-i", str(rumble), "-i", str(bed),
+    voice_lufs = lufs(voice)
+    bed_lufs = lufs(bed)
+    # Voice sits near -14 LUFS. The unducked bed sits near -18 so the beat is obvious,
+    # and the sidechain pulls it toward -24 while the voice is speaking.
+    voice_gain = -14.0 - voice_lufs
+    bed_gain = -18.0 - bed_lufs
+    print(f"voice {voice_lufs:.1f} LUFS gain {voice_gain:+.1f} dB", flush=True)
+    print(f"bed   {bed_lufs:.1f} LUFS gain {bed_gain:+.1f} dB", flush=True)
+
+    voice_out = OUT / "voice-14.m4a"
+    bed_out = OUT / "bed-stem.m4a"
+    run(["ffmpeg", "-y", "-v", "error", "-i", str(voice), "-af", f"volume={voice_gain:.2f}dB",
+         "-c:a", "aac", "-b:a", "192k", str(voice_out)])
+    run(["ffmpeg", "-y", "-v", "error", "-i", str(bed), "-af", f"volume={bed_gain:.2f}dB,highpass=f=70",
+         "-c:a", "aac", "-b:a", "192k", str(bed_out)])
+
+    ducked = OUT / "bed-ducked.m4a"
+    # Fast release so the beat opens up between words. Ratio 2.5 keeps it present.
+    run(["ffmpeg", "-y", "-v", "error", "-i", str(bed_out), "-i", str(voice_out),
          "-filter_complex",
-         "[1:a]asplit=2[vo][sc];"
-         "[3:a]volume=0.40,highpass=f=70[bed];"
-         "[bed][sc]sidechaincompress=threshold=0.02:ratio=8:attack=12:release=280:makeup=1.0[ducked];"
-         "[vo]volume=1.0[v];"
-         "[2:a]volume=0.26[r];"
-         "[v][r][ducked]amix=inputs=3:normalize=0:duration=first,alimiter=limit=0.89:level=false[a]",
+         "[0:a][1:a]sidechaincompress=threshold=0.04:ratio=2.5:attack=8:release=90:makeup=1[d]",
+         "-map", "[d]", "-c:a", "aac", "-b:a", "192k", str(ducked)])
+    ducked_lufs = lufs(ducked)
+    stem_lufs = lufs(bed_out)
+    print(f"music stem {stem_lufs:.1f} LUFS, ducked {ducked_lufs:.1f} LUFS", flush=True)
+
+    final = OUT / "spacex-one-pad-32-hours-short-v3.mp4"
+    run(["ffmpeg", "-y", "-v", "error", "-i", str(silent), "-i", str(voice_out), "-i", str(rumble), "-i", str(ducked),
+         "-filter_complex",
+         "[1:a]volume=1.0[v];"
+         "[2:a]volume=0.18[r];"
+         "[3:a]volume=1.0[m];"
+         "[v][r][m]amix=inputs=3:normalize=0:duration=first,alimiter=limit=0.89:level=false[a]",
          "-map", "0:v", "-map", "[a]", "-t", f"{total:.3f}",
          "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", str(final)])
+    mix_lufs = lufs(final)
+    voice_now = lufs(voice_out)
+    print(f"LUFS voice {voice_now:.1f}  music-stem {stem_lufs:.1f}  ducked {ducked_lufs:.1f}  mix {mix_lufs:.1f}", flush=True)
 
-    thumb = OUT / "spacex-one-pad-32-hours-thumb-v2.jpg"
-    run(["ffmpeg", "-y", "-v", "error", "-ss", "0.90", "-i", str(final), "-frames:v", "1", "-q:v", "2", str(thumb)])
+    # The v2 thumbnail was the one the review kept. Copy those pixels.
+    thumb_src = OUT / "spacex-one-pad-32-hours-thumb-v2.jpg"
+    thumb = OUT / "spacex-one-pad-32-hours-thumb-v3.jpg"
+    thumb.write_bytes(thumb_src.read_bytes())
 
     rows = []
-    for s in segs:
-        g = s["shot"]
+    t = 0.0
+    for g in SHOTS:
         rows.append({
             "id": g["id"], "mission": g["mission"], "file": g["file"], "source_ss": g["ss"],
-            "video_t0": round(s["t0"], 3), "duration": round(s["length"], 3), "shows": g["shows"],
+            "video_in": round(t, 3), "video_out": round(t + g["dur"], 3),
+            "duration": round(g["dur"], 3), "shows": g["shows"],
             "crop": list(g["crop"]), "fx": g.get("fx") or "",
         })
-    (OUT / "shots-v2.json").write_text(
-        json.dumps({"duration": round(total, 3), "shots": rows}, indent=2) + "\n", encoding="utf-8")
+        t += g["dur"]
+    (OUT / "shots-v3.json").write_text(
+        json.dumps({
+            "duration": round(total, 3),
+            "lufs": {"voice": voice_now, "music_stem": stem_lufs, "music_ducked": ducked_lufs, "mix": mix_lufs},
+            "shots": rows,
+        }, indent=2) + "\n", encoding="utf-8")
     print("RENDER", final, f"{total:.2f}s")
 
 

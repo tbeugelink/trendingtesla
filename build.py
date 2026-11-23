@@ -478,8 +478,8 @@ h1,h2,h3{color:#ebebeb;font-weight:800}
 .sr{position:absolute;left:-9999px}
 /* header */
 .top{position:sticky;top:0;z-index:40;background:transparent;transition:background-color .2s}.top.solid{background:#161616}.bar .search{height:38px}.bar .search input,.bar .search>button{box-sizing:border-box;height:38px;padding-top:0;padding-bottom:0}
-.ticker{height:28px;overflow:hidden;background:transparent;color:var(--fg);font-size:12px;font-weight:600;line-height:28px}
-.tk-track{display:flex;width:max-content;animation:tk-run 80s linear infinite}
+.ticker{box-sizing:border-box;height:28px;margin-bottom:4px;padding-top:4px;display:flex;align-items:flex-start;overflow:hidden;background:transparent;color:var(--fg);font-size:11px;font-weight:600;line-height:1}
+.tk-track{display:flex;width:max-content;animation:tk-run 112s linear infinite}
 .tk-set{display:flex;align-items:center;flex:none}
 .tk{white-space:nowrap;color:inherit;text-decoration:none}
 .ticker a.tk{color:inherit}
@@ -491,6 +491,7 @@ h1,h2,h3{color:#ebebeb;font-weight:800}
 .ticker:hover .tk-track,.ticker:focus-within .tk-track{animation-play-state:paused}
 .tk[hidden]{display:none}
 @keyframes tk-run{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (max-width:860.98px){.ticker{padding-top:3px}}
 @media (prefers-reduced-motion:reduce){.ticker{overflow-x:auto}.tk-track{animation:none}.tk-set[aria-hidden="true"]{display:none}}
 .bar{display:flex;align-items:center;gap:14px;height:66px}
 .brand{display:flex;align-items:baseline;gap:14px;min-width:0}
@@ -4894,7 +4895,7 @@ var nl=document.documentElement.lang==='nl';
 var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
 function esc(s){return String(s).replace(/[&<>]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;'}[c]})}
 function pace(){if(reduce)return;var track=bar.querySelector('.tk-track');if(!track)return;
-var px=track.scrollWidth/2;if(px>40)track.style.animationDuration=Math.max(28,px/46)+'s'}
+var px=track.scrollWidth/2;if(px>40)track.style.animationDuration=Math.max(39,px/33)+'s'}
 function slots(){return bar.querySelectorAll('[data-tk="launch"]')}
 function hide(){slots().forEach(function(el){el.hidden=true})}
 fetch('https://ll.thespacedevs.com/2.2.0/launch/upcoming/?lsp__id=121&limit=8&mode=list').then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(d){

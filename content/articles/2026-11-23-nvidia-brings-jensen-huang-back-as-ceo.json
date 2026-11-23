@@ -6,10 +6,6 @@
   "image": "news/nvidia-jensen-reinstated-hero.jpg",
   "image_lock": true,
   "og_image": "/img/news/nvidia-jensen-reinstated-hero.jpg",
-  "hero_note": {
-    "en": "AI-generated illustration, not a real photo",
-    "nl": "AI-illustratie, geen echte foto"
-  },
   "real_photos": [
     {
       "page": "https://commons.wikimedia.org/wiki/File:Jensen_huang_stanford_2026-04-30_009.jpg",

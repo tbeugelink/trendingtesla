@@ -39,5 +39,18 @@
   ],
   "also": [
     "guides"
+  ],
+  "products": [
+    {
+      "name": {
+        "en": "Samsung BAR Plus 256 GB",
+        "nl": "Samsung BAR Plus 256 GB"
+      },
+      "why": {
+        "en": "A USB-A stick that fits the glovebox port owners use for Sentry clips. Format it in the car and check the current price.",
+        "nl": "Een USB-A-stick die in de poort van het dashboardkastje past, voor Sentry-beelden. Formatteer hem in de auto en kijk de actuele prijs na."
+      },
+      "asin": "B07D1KF73V"
+    }
   ]
 }

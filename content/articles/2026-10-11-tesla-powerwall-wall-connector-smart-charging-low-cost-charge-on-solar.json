@@ -45,5 +45,18 @@
   },
   "also": [
     "energy"
+  ],
+  "products": [
+    {
+      "name": {
+        "en": "Tesla Wall Connector Type 2",
+        "nl": "Tesla Wall Connector Type 2"
+      },
+      "why": {
+        "en": "Tesla's Type 2 home charger with a 7.3 m cable, listed for indoor or outdoor mounting. Check the current price, and check the listing if you need a certified meter.",
+        "nl": "Tesla's Type 2-thuislader met een kabel van 7,3 m, vermeld voor binnen of buiten. Kijk de actuele prijs na, en kijk op de pagina of je een gekeurde meter nodig hebt."
+      },
+      "asin": "B0BW16BBKQ"
+    }
   ]
 }

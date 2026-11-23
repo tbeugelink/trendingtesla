@@ -1,0 +1,60 @@
+{
+  "_help": "Sidebar recommendations. Every product is an amazon.nl page that was checked. No prices. contexts pick two or three rows. A guide: slug links to a buying guide. Items already in the article's products list are skipped.",
+  "contexts": {
+    "charging": ["wall", "guide:europe-home-chargers", "guide:portable-chargers-adapters"],
+    "starlink": ["mini-cable", "mini-mount", "guide:starlink-mini-road-trip"],
+    "mats": ["juniper-mats", "highland-mats", "guide:winter-mats-model-3-y", "guide:model-y-trunk-floor-mats", "guide:model-y-3-accessories"],
+    "sentry": ["sentry-usb", "guide:sentry-usb-drive", "guide:model-y-3-accessories"],
+    "default": ["guide:winter-mats-model-3-y", "guide:sentry-usb-drive", "guide:model-y-trunk-floor-mats"]
+  },
+  "items": {
+    "wall": {
+      "asin": "B0BW16BBKQ",
+      "name": {"en": "Tesla Wall Connector Type 2", "nl": "Tesla Wall Connector Type 2"},
+      "why": {
+        "en": "Home charger with a 7.3 m cable. Check the current price.",
+        "nl": "Thuislader met een kabel van 7,3 m. Kijk de actuele prijs na."
+      }
+    },
+    "mini-cable": {
+      "asin": "B0F9SQJ4DD",
+      "name": {"en": "Starlink Mini 30 m cable", "nl": "Starlink Mini-kabel van 30 m"},
+      "why": {
+        "en": "Starlink's own power cable for the Mini. Check the current price.",
+        "nl": "Starlink's eigen stroomkabel voor de Mini. Kijk de actuele prijs na."
+      }
+    },
+    "mini-mount": {
+      "asin": "B0H834D5C9",
+      "name": {"en": "Clamp mount for Starlink Mini", "nl": "Klembevestiging voor Starlink Mini"},
+      "why": {
+        "en": "Listed for the Mini, on a rail or a pole. Check the current price.",
+        "nl": "Vermeld voor de Mini, op een reling of een paal. Kijk de actuele prijs na."
+      }
+    },
+    "juniper-mats": {
+      "asin": "B0DZ5JB22G",
+      "name": {"en": "Mats for Model Y Juniper", "nl": "Matten voor Model Y Juniper"},
+      "why": {
+        "en": "Listed for the 2025 to 2027 Juniper. Check the current price.",
+        "nl": "Vermeld voor de Juniper van 2025 tot 2027. Kijk de actuele prijs na."
+      }
+    },
+    "highland-mats": {
+      "asin": "B0CQJNS7X4",
+      "name": {"en": "Mats for Model 3 Highland", "nl": "Matten voor Model 3 Highland"},
+      "why": {
+        "en": "Listed for the 2024 Highland only. Check the current price.",
+        "nl": "Vermeld voor alleen de Highland van 2024. Kijk de actuele prijs na."
+      }
+    },
+    "sentry-usb": {
+      "asin": "B07D1KF73V",
+      "name": {"en": "Samsung BAR Plus 256 GB", "nl": "Samsung BAR Plus 256 GB"},
+      "why": {
+        "en": "A USB-A stick for the Sentry port. Check the current price.",
+        "nl": "Een USB-A-stick voor de Sentry-poort. Kijk de actuele prijs na."
+      }
+    }
+  }
+}

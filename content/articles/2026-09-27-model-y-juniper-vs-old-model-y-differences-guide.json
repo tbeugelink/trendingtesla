@@ -43,5 +43,18 @@
   ],
   "images": [
     "models/myj-3.jpg"
+  ],
+  "products": [
+    {
+      "name": {
+        "en": "GAFAT mats for Model Y Juniper",
+        "nl": "GAFAT-matten voor Model Y Juniper"
+      },
+      "why": {
+        "en": "All-weather mats listed for the 2025 to 2027 Model Y Juniper, including Standard, Premium and Performance. An older Model Y needs a different set. Check the current price.",
+        "nl": "Allweermatten vermeld voor de Model Y Juniper van 2025 tot en met 2027, inclusief Standard, Premium en Performance. Een oudere Model Y heeft een andere set nodig. Kijk de actuele prijs na."
+      },
+      "asin": "B0DZ5JB22G"
+    }
   ]
 }

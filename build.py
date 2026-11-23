@@ -952,6 +952,8 @@ footer .nrow{flex-direction:column}
 .nlbar-form.is-err .nlbar-msg{display:block}
 .nlbar-form.is-ok .nlbar-h,.nlbar-form.is-ok input,.nlbar-form.is-ok button{display:none}
 .nlbar-form.is-ok .nlbar-msg{display:block;flex:1 1 auto;font-weight:700}
+.nlbar .nlnote{margin:8px 0 0;font-size:.75rem;line-height:1.4;color:var(--dim);font-weight:400}
+.nlbar .nlnote a{color:var(--blue2)}
 .nlbar .nlfallback{margin:8px 0 0;font-size:.82rem;line-height:1.4}
 .nlbar .nlfallback a{color:var(--blue2)}
 @media (min-width:601px){.nlbar-form{flex-wrap:nowrap;max-height:70px}.nlbar-form.is-err{flex-wrap:wrap;max-height:none}}
@@ -3519,6 +3521,16 @@ def ml_signup(lang, heading=True):
     )
 
 
+def ml_privacy(lang):
+    """Double opt-in and the privacy link. Shown on the article bar and the sidebar."""
+    if lang == "en":
+        text = "We email a confirmation first. Unsubscribe any time."
+    else:
+        text = "Je krijgt eerst een bevestiging per mail. Afmelden kan altijd."
+    return (f'<p class="nlnote">{esc(text)} '
+            f'<a href="{url(lang, "privacy/")}">{esc(LANGS[lang]["privacy"])}</a>.</p>')
+
+
 def ml_bar(lang, suffix=""):
     """One-row signup under an article. Posts to the same form, so double opt-in stays.
     The shared handler is included here because this bar is the last signup on the page."""
@@ -3533,7 +3545,7 @@ def ml_bar(lang, suffix=""):
         f'<button type="submit">{esc(L["news_btn"])}</button>'
         f'{ml_hidden()}'
         f'<p class="nlbar-msg" role="status" hidden></p></form>'
-        f'{ml_noscript(lang)}{ML_BAR_JS}</aside>'
+        f'{ml_privacy(lang)}{ml_noscript(lang)}{ML_BAR_JS}</aside>'
     )
 
 
@@ -3542,8 +3554,7 @@ def rail_signup(lang, script=False):
     CSS hides it while the rail stacks under the story."""
     L = LANGS[lang]
     fid = f"nlside-email-{lang}"
-    note = (f'<p class="nlnote">{esc(L["bar_fine"])} '
-            f'<a href="{url(lang, "privacy/")}">{esc(L["privacy"])}</a>.</p>')
+    note = ml_privacy(lang)
     block = (
         f'<section class="nlside">'
         f'<h2>{esc(L["signup"])}</h2>'

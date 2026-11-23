@@ -61,10 +61,16 @@ def channels(services):
     return out
 
 
+def ai_generated():
+    """House default is on. BUFFER_AI_GENERATED=0 leaves the network label off."""
+    return os.environ.get("BUFFER_AI_GENERATED", "1").strip().lower() not in ("0", "false", "no")
+
+
 def metadata(service, title):
-    """Per network: post as a Reel where that applies, and always the network's own AI-content label."""
-    return {"tiktok": {"tiktok": {"isAiGenerated": True, "title": title[:90]}},
-            "instagram": {"instagram": {"type": "reel", "isAiGenerated": True, "shouldShareToFeed": True}},
+    """Per network: post as a Reel where that applies, and the network's AI-content label."""
+    ai = ai_generated()
+    return {"tiktok": {"tiktok": {"isAiGenerated": ai, "title": title[:90]}},
+            "instagram": {"instagram": {"type": "reel", "isAiGenerated": ai, "shouldShareToFeed": True}},
             "facebook": {"facebook": {"type": "reel"}}}.get(service, {})
 
 

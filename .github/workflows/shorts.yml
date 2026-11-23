@@ -1,11 +1,9 @@
 name: Make YouTube videos
 
-# Runs when new articles are pushed (only for articles that have a "short" script),
-# or by hand from the Actions tab for any article slug.
+# Manual only, by the owner's decision: a site change (push or pull_request) must
+# not upload to YouTube. Run it from the Actions tab. This workflow has no schedule.
+# shorts-page.yml's existing 15-minute watchdog can still start it via workflow_dispatch.
 on:
-  push:
-    branches: [main]
-    paths: ["content/articles/**.json", "video/queue.txt"]
   workflow_dispatch:
     inputs:
       slug:

@@ -38,7 +38,7 @@ The moving hook clip (`tools/video_clip.py`) is separate: about $0.41 per clip, 
 
 | Piece | Role |
 |---|---|
-| `.github/workflows/shorts.yml` | On a push that adds an article (or changes `video/queue.txt`): photos, the Short, the upload, and a long video only when the article has `video.en`. |
+| `.github/workflows/shorts.yml` | Manual only (`workflow_dispatch`). A push or pull request does not start it. The 15-minute watchdog in `shorts-page.yml` can still start it. Photos, the Short, the upload, and a long video only when the article has `video.en`. |
 | `video/story.py` | The Short. Constants for the cut are at the top of the file: `XFADE`, `SHOT_MAX`, `USE_DEFAULT_SFX`. The voice comes from `video/short.py`. |
 | `video/full.py` | The long video. `SCENE_MAX` and `SCENE_XFADE` set the shot length and the crossfade. The voice comes from `video/short.py`. It exits if the article has no `video` script for that language. |
 | `video/upload.py` | Uploads to YouTube. Refuses a Short whose slug or title is already in `content/shorts.json`, `ops/story-pending.json` or `ops/short-uploads.json`, and records every new Short in `ops/short-uploads.json`. |
@@ -49,7 +49,9 @@ Only English videos are built (`langs=en`).
 
 ### Which articles get a video
 
-The workflow diffs `github.event.before`..`HEAD` for that push (`fetch-depth: 0`), and keeps added files under `content/articles/` (`--diff-filter=A`). A push that contains the article plus later commits still sees the article. Files that were only modified are not built again, so the photo commit that follows an article does not upload a second Short.
+A push or pull request does not start this workflow. A manual run uses the `slug` input. The watchdog still writes `video/queue.txt` and starts the workflow with `workflow_dispatch`.
+
+The file still contains the old push path: it diffs `github.event.before`..`HEAD` (`fetch-depth: 0`) and keeps added files under `content/articles/` (`--diff-filter=A`). That path does not run, because the `push` trigger is gone.
 
 - `short` present, and the slug is not already uploaded → Short (`video/story.py` when `short.story` is set).
 - `video.en` present, and the slug is not already in `content/videos.json` → long video, after the Short.

@@ -1,9 +1,14 @@
 name: Post Jensen reinstated Short to Buffer
 
 # One post of the reviewed Short to TikTok, Instagram and Facebook.
-# Does not upload to YouTube and does not touch main. Removed after it runs.
+# A push of this file starts it once. It does not upload to YouTube and does not touch main.
 on:
   workflow_dispatch:
+  push:
+    branches: [cursor/jensen-reinstated-short]
+    paths:
+      - .github/workflows/jensen-reinstated-buffer.yml
+      - video/jensen-reinstated/buffer_once.py
 
 permissions:
   contents: write

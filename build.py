@@ -6435,10 +6435,14 @@ def evergreen_for(a):
 
 
 def evergreen_side(lang):
-    items = [(hub["title"][lang], hub["path"]) for hub in load_evergreen() if hub.get("title") and hub.get("path")]
+    items = [
+        (hub["title"][lang], url(lang, hub["path"]))
+        for hub in load_evergreen()
+        if hub.get("title") and hub.get("path")
+    ]
     items.append((
         "All Starship flights" if lang == "en" else "Alle Starship-vluchten",
-        "starship/",
+        url(lang, "starship/"),
     ))
     if not items:
         return ""
@@ -7639,7 +7643,18 @@ def audit_index():
         robots = re.findall(r'<meta name="robots" content="([^"]*)"', head)
         canonical = re.findall(r'<link rel="canonical" href="([^"]*)"', head)
         hrefs = re.findall(r'href="(/[^"#]*)"', raw)
+        bare = []
+        for href in re.findall(r'href="([^"]*)"', raw):
+            if not href or href.startswith(("#", "mailto:", "tel:", "javascript:", "data:", "//")):
+                continue
+            if href.startswith(("http://", "https://")):
+                continue
+            if "+" in href or "'" in href:
+                continue
+            if not href.startswith("/"):
+                bare.append(href)
         pages[path] = {"robots": robots, "canonical": canonical, "hrefs": hrefs,
+                       "bare": bare,
                        "noindex": any("noindex" in r.lower() for r in robots)}
     indexable = {p for p, d in pages.items() if not d["noindex"]}
     sm_set = set(paths)
@@ -7662,6 +7677,9 @@ def audit_index():
             problems.append(f"canonical is not self on {p} -> {cans[0]}")
         if len(d["robots"]) != 1:
             problems.append(f"{len(d['robots'])} robots tags on {p}")
+    for p, d in pages.items():
+        if d.get("bare"):
+            problems.append(f"{p} has relative internal link {d['bare'][0]}")
     for p, d in pages.items():
         if d["noindex"]:
             continue

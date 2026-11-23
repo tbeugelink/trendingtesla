@@ -3080,6 +3080,30 @@ def product_photo_html(src, alt, href, remote):
     return f'<span class="pshot">{img}</span>'
 
 
+def guide_lead_photo(doc):
+    """First allowed product photo in a buying guide, then a local hero if the guide has one."""
+    for kind, fields in doc.get("pieces") or []:
+        if kind != "product" or not isinstance(fields, dict):
+            continue
+        src, _remote = product_photo({"image": fields.get("image") or "", "url": fields.get("url") or ""})
+        if src:
+            return src
+    image = str((doc.get("meta") or {}).get("image") or "").strip()
+    if image.startswith("/img/") and ".." not in image:
+        return image
+    return ""
+
+
+def side_thumb(src, alt, href, sponsored=False):
+    """48px thumbnail. Sponsored only when the link itself opens Amazon."""
+    if not src or not href:
+        return ""
+    img = (f'<img src="{esc(src)}" alt="{esc(alt)}" width="48" height="48" loading="lazy" decoding="async"'
+           f' onerror="{_IMG_HIDE}">')
+    rel = ' rel="sponsored nofollow noopener" target="_blank"' if sponsored else ""
+    return f'<a class="pshot pth" href="{esc(href)}"{rel}>{img}</a>'
+
+
 def product_boxes(a, lang):
     """Optional affiliate box after the body. Articles opt in with a products list. No prices."""
     products = a.get("products") or []
@@ -4330,7 +4354,9 @@ def recommend_block(lang, kind, current):
                 continue
             name = doc["meta"].get(f"title_{lang}") or doc["meta"].get("title_en") or slug
             href = url(lang, guides_path(lang) + slug + "/")
-            rows.append(f'<li><a href="{esc(href)}">{esc(name)}</a></li>')
+            thumb = side_thumb(guide_lead_photo(doc), name, href)
+            klass = "hasimg" if thumb else ""
+            rows.append(f'<li class="{klass}">{thumb}<div class="rt"><a href="{esc(href)}">{esc(name)}</a></div></li>')
             continue
         item = items.get(key)
         if not isinstance(item, dict):
@@ -4344,9 +4370,8 @@ def recommend_block(lang, kind, current):
         if not name or not href:
             continue
         note = f"<span>{esc(why)}</span>" if why else ""
-        src, remote = product_photo(item)
-        thumb = product_photo_html(src, name, href, remote) if src else ""
-        thumb = thumb.replace('class="pshot"', 'class="pshot pth"', 1) if thumb else ""
+        src, _remote = product_photo(item)
+        thumb = side_thumb(src, name, href, sponsored=True)
         klass = "hasimg" if thumb else ""
         rows.append(
             f'<li class="{klass}">{thumb}<div class="rt"><a href="{esc(href)}" rel="sponsored nofollow noopener" target="_blank">{esc(name)}</a>{note}</div></li>')

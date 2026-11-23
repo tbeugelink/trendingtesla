@@ -3384,11 +3384,6 @@ NAV_LAYERS = [
         ],
     },
     {
-        "key": "starlink", "tone": "link", "href": "starlink/",
-        "label": {"en": "Starlink", "nl": "Starlink"},
-        "plain": True,
-    },
-    {
         "key": "spacexsi", "tone": "spacexsi", "href": "spacexsi/",
         "label": {"en": "SpaceXSI", "nl": "SpaceXSI"},
         "items": [
@@ -3397,6 +3392,11 @@ NAV_LAYERS = [
             {"key": "datacenters", "href": "datacenters/", "en": "Datacenters", "nl": "Datacenters"},
             {"key": "chips", "href": "chips/", "en": "Chips", "nl": "Chips"},
         ],
+    },
+    {
+        "key": "starlink", "tone": "link", "href": "starlink/",
+        "label": {"en": "Starlink", "nl": "Starlink"},
+        "plain": True,
     },
     {
         "key": "neuralink", "tone": "neural", "href": "neuralink/",
@@ -4179,7 +4179,7 @@ def page_side(arts, lang, kind="home", current=None, skip=None, tail="", signup=
             if x["category"] == "guides" or id(x) in ban:
                 continue
             latest.append(x)
-            if len(latest) == 5:
+            if len(latest) == 10:
                 break
     related_items = []
     if kind == "article" and current is not None:
@@ -4589,7 +4589,7 @@ def pv_copy(lang):
         "open": "Sample article" if en else "Voorbeeldartikel",
         "live": "Live homepage" if en else "Live homepagina",
         "guides": "Guides" if en else "Gidsen",
-        "start": "Start here" if en else "Begin hier",
+        "start": "Tesla drivers" if en else "Tesla rijders",
         "gear": "Gear" if en else "Spullen",
         "gear_off": "Product boxes show up here when an article opts in. No prices, and nothing until a tag is set." if en else "Productblokken verschijnen hier als een artikel ervoor kiest. Geen prijzen, en niets tot er een tag is ingevuld.",
         "related": "Related" if en else "Gerelateerd",
@@ -5022,17 +5022,6 @@ HUBS = [
         },
     },
     {
-        "key": "starlink", "path": "starlink/",
-        "title": {"en": "Starlink", "nl": "Starlink"},
-        "topics": ["starlink"],
-        "categories": ["starlink"],
-        "keywords": ["starlink", "starshield"],
-        "intro": {
-            "en": "Starlink for homes and businesses, and Starshield only where a public record exists.",
-            "nl": "Starlink voor thuis en bedrijven, en Starshield alleen waar een openbaar stuk bestaat.",
-        },
-    },
-    {
         "key": "spacexsi", "path": "spacexsi/",
         "title": {"en": "SpaceXSI / Grok", "nl": "SpaceXSI / Grok"},
         "topics": ["ai", "ai-compute", "datacenters", "chips", "agi", "spacexsi"],
@@ -5041,6 +5030,17 @@ HUBS = [
         "intro": {
             "en": "SpaceXSI, formerly xAI and then SpaceXAI: Grok, compute, Cursor and X.",
             "nl": "SpaceXSI, eerder xAI en daarna SpaceXAI: Grok, rekenkracht, Cursor en X.",
+        },
+    },
+    {
+        "key": "starlink", "path": "starlink/",
+        "title": {"en": "Starlink", "nl": "Starlink"},
+        "topics": ["starlink"],
+        "categories": ["starlink"],
+        "keywords": ["starlink", "starshield"],
+        "intro": {
+            "en": "Starlink for homes and businesses, and Starshield only where a public record exists.",
+            "nl": "Starlink voor thuis en bedrijven, en Starshield alleen waar een openbaar stuk bestaat.",
         },
     },
     {
@@ -5327,7 +5327,8 @@ def _orbit_blocks(blocks, lang):
     sun.style.left = (pass.cx - pass.radius) + "px";
     sun.style.top = (pass.cy - pass.radius) + "px";
     core.style.left = pass.cx + "px";
-    core.style.top = pass.cy + "px";
+    // The rays meet at the sun's centre. Keep the words above that point.
+    core.style.top = (pass.cy - labelH) + "px";
     pass.placed.forEach(function(p, i) {
       nodes[i].style.left = p.x + "px";
       nodes[i].style.top = p.y + "px";
@@ -5352,7 +5353,7 @@ def _orbit_blocks(blocks, lang):
       line.setAttribute("x2", String(x));
       line.setAttribute("y2", String(y));
       line.setAttribute("stroke", "rgba(198,240,255,.9)");
-      line.setAttribute("stroke-width", "1.6");
+      line.setAttribute("stroke-width", "0.8");
       line.setAttribute("stroke-linecap", "butt");
       svg.appendChild(line);
     });
@@ -5471,28 +5472,8 @@ LAYERS = [
         },
     },
     {
-        "key": "starlink", "path": "starlink/", "tone": "link", "nav": "starlink", "hub": "starlink",
-        "kicker": {"en": "4 · Starlink", "nl": "4 · Starlink"},
-        "title": {"en": "Starlink", "nl": "Starlink"},
-        "fact": {"en": "Satellite network", "nl": "Satellietnetwerk"},
-        "stats": ["starlink"],
-        "links": [
-            {"en": "SpaceX", "nl": "SpaceX", "href": "spacex/"},
-        ],
-        "intro": {
-            "en": [
-                "Starlink is the satellite network. Dishes on the ground talk to satellites that reach places cables do not. The service is for homes and for businesses. The same network is the connection layer of the ecosystem, between the cars and the rockets on the map.",
-                "Starshield is mentioned only when a public record exists.",
-            ],
-            "nl": [
-                "Starlink is het satellietnetwerk. Schotels op de grond praten met satellieten die plaatsen bereiken waar geen kabel ligt. De dienst is er voor thuis en voor bedrijven. Hetzelfde netwerk is de verbindingslaag van het ecosysteem, op de kaart tussen de auto's en de raketten.",
-                "Starshield komt alleen aan bod als er een openbaar stuk over bestaat.",
-            ],
-        },
-    },
-    {
         "key": "spacexsi", "path": "spacexsi/", "tone": "spacexsi", "nav": "spacexsi",
-        "kicker": {"en": "5 · SpaceXSI", "nl": "5 · SpaceXSI"},
+        "kicker": {"en": "4 · SpaceXSI", "nl": "4 · SpaceXSI"},
         "title": {"en": "SpaceXSI", "nl": "SpaceXSI"},
         "fact": {
             "en": "AI, Compute, Datacenters, Chips",
@@ -5511,6 +5492,26 @@ LAYERS = [
             "nl": [
                 "SpaceXSI is de AI-laag: de modellen, de rekenkracht, de datacenters en de chips. Grok is het model, Cursor is het programmeergereedschap, en X is het live netwerk dat ze kunnen lezen. De clusters en datacenters trainen die modellen en laten ze draaien. De chips, inclusief de geplande fabriek Terafab, zijn hoe die rekenkracht wordt gebouwd.",
                 "Deze pagina brengt de berichtgeving over al die delen samen.",
+            ],
+        },
+    },
+    {
+        "key": "starlink", "path": "starlink/", "tone": "link", "nav": "starlink", "hub": "starlink",
+        "kicker": {"en": "5 · Starlink", "nl": "5 · Starlink"},
+        "title": {"en": "Starlink", "nl": "Starlink"},
+        "fact": {"en": "Satellite network", "nl": "Satellietnetwerk"},
+        "stats": ["starlink"],
+        "links": [
+            {"en": "SpaceX", "nl": "SpaceX", "href": "spacex/"},
+        ],
+        "intro": {
+            "en": [
+                "Starlink is the satellite network. Dishes on the ground talk to satellites that reach places cables do not. The service is for homes and for businesses. The same network is the connection layer of the ecosystem, between the cars and the rockets on the map.",
+                "Starshield is mentioned only when a public record exists.",
+            ],
+            "nl": [
+                "Starlink is het satellietnetwerk. Schotels op de grond praten met satellieten die plaatsen bereiken waar geen kabel ligt. De dienst is er voor thuis en voor bedrijven. Hetzelfde netwerk is de verbindingslaag van het ecosysteem, op de kaart tussen de auto's en de raketten.",
+                "Starshield komt alleen aan bod als er een openbaar stuk over bestaat.",
             ],
         },
     },
@@ -5744,8 +5745,8 @@ BRIEF_LAYERS = (
     ("tesla", "tesla/", "tesla", "Tesla"),
     ("energy", "tesla-energy/", "energy", "Tesla Energy"),
     ("spacex", "spacex/", "spacex", "SpaceX"),
-    ("starlink", "starlink/", "link", "Starlink"),
     ("spacexsi", "spacexsi/", "spacexsi", "SpaceXSI"),
+    ("starlink", "starlink/", "link", "Starlink"),
     ("neuralink", "neuralink/", "neural", "Neuralink"),
     ("boring", "boring/", "boring", "Boring"),
 )

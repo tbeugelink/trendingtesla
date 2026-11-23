@@ -11,10 +11,10 @@ nl: Wintersmodder komt op de vloer terecht, en de mat die helpt is de mat die vo
 :::product
 name_en: GAFAT mats for Model Y Juniper
 name_nl: GAFAT-matten voor Model Y Juniper
-pros_en: TPE mats listed for the 2025 to 2027 Model Y Juniper, including Standard, Premium and Performance
-pros_nl: TPE-matten vermeld voor de Model Y Juniper van 2025 tot en met 2027, inclusief Standard, Premium en Performance
-cons_en: Listed for the Juniper. An older Model Y needs a different set. Check the current price
-cons_nl: Vermeld voor de Juniper. Een oudere Model Y heeft een andere set nodig. Kijk de actuele prijs na
+pros_en: TPE all-weather mats | Listed for the 2025 to 2027 Model Y Juniper | Standard, Premium and Performance
+pros_nl: Allweer-matten van TPE | Vermeld voor de Model Y Juniper van 2025 tot 2027 | Standard, Premium en Performance
+fits_en: A 2025 to 2027 Model Y Juniper. An older Model Y needs a different set.
+fits_nl: Een Model Y Juniper van 2025 tot 2027. Een oudere Model Y heeft een andere set nodig.
 url: https://www.amazon.nl/dp/B0DZ5JB22G
 button_en: View on Amazon
 button_nl: Bekijk bij Amazon
@@ -23,10 +23,10 @@ button_nl: Bekijk bij Amazon
 :::product
 name_en: YITAHOME mats for Model 3 Highland
 name_nl: YITAHOME-matten voor Model 3 Highland
-pros_en: A three-piece all-weather set listed for the 2024 Model 3 Highland only
-pros_nl: Een driedelige allweerset, vermeld voor alleen de Model 3 Highland van 2024
-cons_en: The page says 2024 Highland only. A classic Model 3 needs a different set. Check the current price
-cons_nl: De pagina zegt alleen Highland 2024. Een oudere Model 3 heeft een andere set nodig. Kijk de actuele prijs na
+pros_en: Three-piece all-weather set | Listed for the 2024 Model 3 Highland only | Cut for that car, not a classic Model 3
+pros_nl: Driedelige allweerset | Alleen vermeld voor de Model 3 Highland van 2024 | Gesneden voor die auto, niet voor een oudere Model 3
+fits_en: A 2024 Model 3 Highland only. A classic Model 3 needs a different set.
+fits_nl: Alleen een Model 3 Highland van 2024. Een oudere Model 3 heeft een andere set nodig.
 url: https://www.amazon.nl/dp/B0CQJNS7X4
 button_en: View on Amazon
 button_nl: Bekijk bij Amazon

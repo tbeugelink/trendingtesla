@@ -1,0 +1,84 @@
+{
+  "slug": "tesla-stock-has-its-best-day-since-april-2025",
+  "date": "2026-11-23",
+  "time": "21:31",
+  "category": "earnings",
+  "also": [
+    "fsd"
+  ],
+  "card": {
+    "en": "Tesla has its best day since April 2025",
+    "nl": "Tesla-aandeel beleeft beste dag sinds april 2025"
+  },
+  "image": "lib/stock-phone-up.jpg",
+  "image_lock": true,
+  "images": [
+    "lib/stock-phone-up.jpg",
+    "lib/fsd-screen-city.jpg",
+    "lib/software-update-screen.jpg",
+    "lib/giga-texas-aerial.jpg",
+    "topics/earnings-1.jpg",
+    "lib/starship-pad.jpg"
+  ],
+  "sources": [
+    {
+      "title": "Morningstar / Dow Jones — Tesla up nearly 13%, on pace for the largest percent increase since April 2025",
+      "url": "https://www.morningstar.com/news/dow-jones/202611235900/tesla-up-nearly-13-on-pace-for-largest-percent-increase-since-april-2025-data-talk"
+    },
+    {
+      "title": "MarketWatch — Tesla Shares Gain on New Self-Driving Software, Amid Broader Market Rally",
+      "url": "https://www.marketwatch.com/story/tesla-shares-gain-on-new-self-driving-software-amid-broader-market-rally-7abf1176"
+    },
+    {
+      "title": "The Motley Fool — Why Tesla Stock Stepped on the Gas Today",
+      "url": "https://www.fool.com/investing/2026/11/23/why-tesla-stock-stepped-on-the-gas-today/"
+    },
+    {
+      "title": "RTE — SpaceX, Tesla merger talks progress, Bloomberg reports",
+      "url": "https://www.rte.ie/news/business/2026/1113/1599074-spacex-tesla-merger-talks/"
+    }
+  ],
+  "label": {
+    "style": "n",
+    "en": {
+      "sub": "SINCE APRIL 2025",
+      "text": "+12%"
+    },
+    "nl": {
+      "sub": "SINDS APRIL 2025",
+      "text": "+12%"
+    }
+  },
+  "gen_image": {
+    "prompt": "A hand holding a phone in the lower centre, the screen a simple rising green line with no numbers and no text, a white Tesla sedan in left-hand drive on the right side of a sunny city street, the car large and sharp in the horizontal centre, calm empty pavement in the lower-left third, no faces, no readable text, no logos, no flags",
+    "subject": "a white Tesla sedan and a phone showing a rising green line",
+    "refs": [
+      {
+        "src": "lib/stock-phone-up.jpg"
+      }
+    ],
+    "profile": "editorial",
+    "category": "A",
+    "describe": "an illustration of a rising chart on a phone in front of a white Tesla, not a photograph of a trading session, a stock exchange or any person",
+    "extra": [
+      {
+        "prompt": "Close view of a white Tesla sedan from the front three-quarter, left-hand drive, on the right side of a sunny street, a phone at the edge of the frame with a simple rising green line and no numbers, calm empty pavement in the lower left, no faces, no text, no logos",
+        "describe": "the white Tesla close up, with only the edge of the rising chart"
+      },
+      {
+        "prompt": "A white Tesla sedan seen from behind on the right side of a sunny city street, left-hand drive, a hand in the foreground holding a phone with a rising green line and no numbers, soft daylight, empty pavement in the lower left, no faces, no text, no logos",
+        "describe": "the Tesla driving away while the phone shows a rising line"
+      }
+    ]
+  },
+  "en": {
+    "title": "Tesla has its best day since April 2025",
+    "description": "Tesla shares were up about 12% on 23 November 2026, trading around $387, and were on pace for the largest one-day percentage gain since 9 April 2025. The stock is still down about 13% for the year and about 20% below its record close.",
+    "body": "<p>Tesla shares were up about 12% on Monday 23 November 2026, trading around $387. Friday 20 November they closed at $345.82. The session was on pace for the largest one-day percentage gain since 9 April 2025, when the stock rose 22.69%. The size of the move does not put the shares back where they started the year.</p>\n<h2>How far did the shares move?</h2>\n<p><strong>About 12% above Friday's close, with the gain running as high as about 13% to 14% while the market was open.</strong> Dow Jones Market Data, published through Morningstar, had Tesla up nearly 13% during the morning and on pace for its biggest percentage increase since 9 April 2025. MarketWatch described the same session as the largest percentage gain since April 2025, with the shares higher on the new self-driving software and a broader rally. In the afternoon the stock was trading around $387, about 12% above the Friday close of $345.82. Those figures are trading levels. They are not an official closing print.</p>\n<p>The comparison day is much larger. On 9 April 2025 Tesla rose 22.69%. Monday's session was on pace to be the biggest percentage gain since that day, and it was still well short of 22.69%. One session does not reset the year.</p>\n<h2>So where does that leave the stock for 2026?</h2>\n<p><strong>Down about 13% for the year, and about 20% under the record close.</strong> Even after the jump, the stock is down about 13% year to date. It is also about 20% below its all-time closing high of $489.88, set on 16 December 2025. Dow Jones Market Data and MarketWatch both put the shares in that position on Monday.</p>\n<p>A price around $387 is a strong day against Friday's $345.82. It is a long way from $489.88. The year-to-date loss is still there, which is why the reason for the jump matters more than the percentage alone.</p>\n<h2>What were traders reacting to?</h2>\n<p><strong>New self-driving software, speculation about a SpaceX combination, and a rebound across the US market.</strong> MarketWatch linked the gain to Tesla's new self-driving software and to US stocks roaring back after Nvidia reinstated Jensen Huang as chief executive. The Motley Fool described two catalysts in the same session: conjecture on Wall Street about a merger with SpaceX, and the rollout of the latest Full Self-Driving software.</p>\n<p>The <a href=\"/nvidia-brings-jensen-huang-back-as-ceo/\">return of Jensen Huang</a> is Nvidia's story. It sets the mood of the wider market around Tesla. It does not decide what Tesla itself claimed about its own software.</p>\n<h2>What has Tesla said about FSD v15?</h2>\n<p><strong>That a limited rollout began on Saturday, and that the software is 25 times better at safety-critical cases.</strong> FSD v15 started reaching early-access testers on Saturday. Tesla says the version handles safety-critical cases 25 times better. A wider release is planned for December. The 25-times figure is Tesla's own claim. These reports do not cite an outside test that measured it.</p>\n<p>The <a href=\"/tesla-starts-rolling-out-fsd-v15-to-testers/\">tester rollout</a> was already underway before Monday's session. A wider release in December is a plan Tesla has described, not a date the share price can lock in. The software was only one of the stories attached to the move.</p>\n<h2>So is a SpaceX merger agreed?</h2>\n<p><strong>No. Nothing is final.</strong> Bloomberg has reported that a deal could be announced as early as December. Special committees of independent directors are reviewing a possible combination. Any deal would still need shareholder approval. RTE carried Bloomberg's report. Monday's market coverage treated the idea as speculation around the shares, not as a signed agreement.</p>\n<p>Those <a href=\"/musk-tesla-spacex-merger-special-committees/\">special committees</a> were already reviewing a combination after SpaceX's earnings call in October. An announcement, if one comes in December, would still leave the shareholder vote ahead. One bank has already rewritten its Tesla numbers around that possibility.</p>\n<h2>What did HSBC change?</h2>\n<p><strong>It upgraded Tesla to hold from reduce, and it raised the price target to $359 from $157.</strong> The new target is more than twice the old one. It still sits below the roughly $387 the shares were trading at on Monday. The Motley Fool reported the upgrade on the same day as the rally. <a href=\"/hsbc-more-than-doubles-its-tesla-price-target/\">That earlier note</a> is one bank's view of a possible combination. It is not a statement that a merger will close, and it is not a forecast of the next session.</p>\n<p>The trading level, the December software plan and the unfinished review can all be true in the same week. None of them sets the next price. A one-day gain can be given back, and a target of $359 does not have to meet a share price around $387.</p>\n<p><em>This article is for information only and is not financial advice.</em></p>"
+  },
+  "nl": {
+    "title": "Tesla-aandeel beleeft beste dag sinds april 2025",
+    "description": "Het Tesla-aandeel stond op 23 november 2026 ongeveer 12% hoger, rond $387, en lag op koers voor de grootste procentuele daggwinst sinds 9 april 2025. Het aandeel staat nog zo'n 13% lager dit jaar en zo'n 20% onder zijn hoogste slotkoers.",
+    "body": "<p>Het aandeel Tesla stond maandag 23 november 2026 ongeveer 12% hoger en noteerde rond $387. Vrijdag 20 november sloot het op $345,82. De sessie lag daarmee op koers voor de grootste procentuele stijging op één dag sinds 9 april 2025, toen het aandeel 22,69% steeg. De omvang van die beweging zet het aandeel niet terug op het niveau van de jaarwisseling.</p>\n<h2>Hoe ver liep het aandeel op?</h2>\n<p><strong>Ongeveer 12% boven de slotkoers van vrijdag, met een tussentijdse winst die opliep tot zo'n 13% à 14% zolang de beurs open was.</strong> Dow Jones Market Data, gepubliceerd via Morningstar, had Tesla in de ochtend bijna 13% hoger en op koers voor de grootste procentuele stijging sinds 9 april 2025. MarketWatch beschreef dezelfde sessie als de grootste procentuele winst sinds april 2025, gedragen door nieuwe software voor zelfrijden en een bredere beursrally. In de middag noteerde het aandeel rond $387, ongeveer 12% boven de slotkoers van vrijdag van $345,82. Dat zijn handelskoersen. Het is geen officiële slotkoers.</p>\n<p>De vergelijkingsdag is veel groter. Op 9 april 2025 steeg Tesla 22,69%. De sessie van maandag lag op koers voor de grootste procentuele winst sindsdien, en ze bleef ruim onder die 22,69%. Eén sessie zet het jaar niet terug op nul.</p>\n<h2>Dus waar staat het aandeel in 2026?</h2>\n<p><strong>Ongeveer 13% lager sinds de jaarwisseling, en ongeveer 20% onder de hoogste slotkoers ooit.</strong> Ook na de sprong staat het aandeel zo'n 13% lager dit jaar. Het noteert ook ongeveer 20% onder de hoogste slotkoers ooit, $489,88 op 16 december 2025. Dow Jones Market Data en MarketWatch zetten het aandeel maandag allebei in die positie.</p>\n<p>Een koers rond $387 is een sterke dag tegenover de $345,82 van vrijdag. Tot $489,88 is het een eind. Het verlies sinds de jaarwisseling staat er nog, en daarom telt de aanleiding meer dan het percentage alleen.</p>\n<h2>Waar reageerden beleggers op?</h2>\n<p><strong>Nieuwe software voor zelfrijden, speculatie over een combinatie met SpaceX, en een herstel van de bredere Amerikaanse markt.</strong> MarketWatch koppelde de winst aan Tesla's nieuwe software voor zelfrijden en aan een beurs die terugveerde nadat Nvidia Jensen Huang opnieuw tot topman benoemde. The Motley Fool noemde twee aanjagers in dezelfde sessie: gissingen op Wall Street over een fusie met SpaceX, en de uitrol van de nieuwste versie van Full Self-Driving.</p>\n<p>De <a href=\"/nl/nvidia-brings-jensen-huang-back-as-ceo/\">terugkeer van Jensen Huang</a> is het verhaal van Nvidia. Het kleurt de stemming van de markt rond Tesla. Het beslist niet wat Tesla zelf over zijn software beweerde.</p>\n<h2>Wat heeft Tesla over FSD v15 gezegd?</h2>\n<p><strong>Dat een beperkte uitrol zaterdag begon, en dat de software veiligheidskritische situaties 25 keer beter aanpakt.</strong> FSD v15 begon zaterdag bij een beperkte groep vroege testers. Tesla zegt dat de versie veiligheidskritische situaties 25 keer beter afhandelt. Een bredere uitrol is gepland voor december. Het cijfer van 25 keer is de bewering van Tesla zelf. In deze berichten staat geen onafhankelijke test die dat heeft gemeten.</p>\n<p>De <a href=\"/nl/tesla-starts-rolling-out-fsd-v15-to-testers/\">uitrol naar testers</a> was al begonnen vóór de sessie van maandag. Een bredere release in december is een plan dat Tesla heeft genoemd, geen datum die de koers kan vastzetten. De software was maar één van de verhalen die aan de beweging hingen.</p>\n<h2>Dus is een fusie met SpaceX afgesproken?</h2>\n<p><strong>Nee. Er is niets definitief.</strong> Bloomberg heeft gemeld dat een deal al in december bekend kan worden. Speciale commissies van onafhankelijke bestuurders bekijken een mogelijke combinatie. Een deal heeft nog steeds goedkeuring van aandeelhouders nodig. RTE bracht het bericht van Bloomberg. De marktverslaggeving van maandag behandelde het idee als speculatie rond het aandeel, niet als een getekende overeenkomst.</p>\n<p>Die <a href=\"/nl/musk-tesla-spacex-merger-special-committees/\">speciale commissies</a> bekeken een combinatie al na de kwartaalcall van SpaceX in oktober. Een aankondiging, als die in december komt, laat de stem van de aandeelhouders nog open. Eén bank heeft zijn cijfers voor Tesla al herschreven rond die mogelijkheid.</p>\n<h2>Wat veranderde HSBC?</h2>\n<p><strong>De bank zette Tesla van Reduce naar Hold en verhoogde het koersdoel van $157 naar $359.</strong> Het nieuwe doel is meer dan het dubbele van het oude. Het ligt nog onder de ongeveer $387 waar het aandeel maandag op noteerde. The Motley Fool meldde de upgrade op dezelfde dag als de rally. <a href=\"/nl/hsbc-more-than-doubles-its-tesla-price-target/\">Die eerdere notitie</a> is de lezing van één bank van een mogelijke combinatie. Het is geen uitspraak dat een fusie doorgaat, en het is geen voorspelling van de volgende sessie.</p>\n<p>De handelskoers, het softwareplan voor december en de onaffe beoordeling kunnen in dezelfde week allemaal kloppen. Geen van drieën bepaalt de volgende koers. Een winst van één dag kan worden teruggegeven, en een koersdoel van $359 hoeft een aandelenkoers rond $387 niet te raken.</p>\n<p><em>Dit artikel is alleen bedoeld als informatie en is geen financieel advies.</em></p>"
+  }
+}

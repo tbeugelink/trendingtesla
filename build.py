@@ -1083,6 +1083,8 @@ header.hb .pnav>.is-parked{display:none}
 .pv-side ul li{padding:7px 0;border-bottom:1px solid #242424;font-size:.88rem;line-height:1.3;font-weight:700}
 .pv-side ul.latest li{display:grid;grid-template-columns:1.3rem minmax(0,1fr);gap:6px;align-items:start}
 .pv-side ul.latest li::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--red);justify-self:start;align-self:start;margin-top:calc(0.65em - 2.5px);margin-left:1px}
+.pv-side ul.hubs li{display:grid;grid-template-columns:6px minmax(0,1fr);column-gap:8px;align-items:start}
+.pv-side ul.hubs li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--red);align-self:start;margin-top:calc(0.65em - 3px)}
 .pv-side a:hover,.pv-side a:focus-visible{color:var(--blue)}
 .pv-side .ticker a:hover,.pv-side .ticker a:focus-visible{color:inherit}
 .pv-side .nlside-form{display:flex;flex-direction:column;align-items:stretch;gap:8px;max-height:none;padding:0;border:0;border-radius:0;background:transparent}
@@ -6614,7 +6616,7 @@ def evergreen_side(lang):
     if not items:
         return ""
     title = "Hubs" if lang == "en" else "Dossiers"
-    return _side_section(title, "<ul>" + _side_links(items) + "</ul>")
+    return _side_section(title, '<ul class="hubs">' + _side_links(items) + "</ul>")
 
 
 def evergreen_article_links(a, lang):

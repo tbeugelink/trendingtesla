@@ -478,7 +478,7 @@ h1,h2,h3{color:#ebebeb;font-weight:800}
 .sr{position:absolute;left:-9999px}
 /* header */
 .top{position:sticky;top:0;z-index:40;background:transparent;transition:background-color .2s}.top.solid{background:#161616}.bar .search{height:38px}.bar .search input,.bar .search>button{box-sizing:border-box;height:38px;padding-top:0;padding-bottom:0}
-.ticker{box-sizing:border-box;width:100%;max-width:100%;min-width:0;margin:0;padding:8px 0;border-top:3px solid var(--red);display:block;overflow:hidden;background:transparent;color:var(--fg);font-size:11px;font-weight:600;line-height:14px}
+.ticker{box-sizing:border-box;width:100%;max-width:100%;min-width:0;margin:0;padding:8px 0;border-top:3px solid var(--red);display:block;overflow:hidden;contain:inline-size;background:transparent;color:var(--fg);font-size:11px;font-weight:600;line-height:14px}
 .tk-track{display:flex;width:max-content;animation:tk-run 112s linear infinite}
 .tk-set{display:flex;align-items:center;flex:none}
 .tk{white-space:nowrap;color:inherit;text-decoration:none}
@@ -495,7 +495,8 @@ h1,h2,h3{color:#ebebeb;font-weight:800}
 @media (max-width:900px){
 .ticker-main{display:block;border-bottom:3px solid var(--red)}
 .pv-side>.ticker{display:none}
-.hfeed .pv-hl b{font-size:17.5px;line-height:1.28}
+.hfeed .pv-hl b{font-size:15px;line-height:1.3;-webkit-text-size-adjust:none;text-size-adjust:none}
+.hfeed .pv-row time{font-size:13px;-webkit-text-size-adjust:none;text-size-adjust:none}
 .hfeed .pv-row{grid-template-columns:40px minmax(0,1fr) 64px;column-gap:4px}
 }
 @media (prefers-reduced-motion:reduce){.ticker{overflow-x:auto;overflow-y:hidden}.tk-track{animation:none}.tk-set[aria-hidden="true"]{display:none}}
@@ -1468,6 +1469,7 @@ header.hb .bar .lang{margin-left:0;margin-right:0;flex:none;white-space:nowrap;t
 }
 .nlpitch p{margin:0 0 12px}
 @media (max-width:600.98px){.gbox{grid-template-columns:1fr}}
+@media (max-width:900px){html body .hfeed .pv-hl b{font-size:15px;line-height:1.3;-webkit-text-size-adjust:none;text-size-adjust:none}html body .hfeed .pv-row time{font-size:13px;-webkit-text-size-adjust:none;text-size-adjust:none}}
 """
 
 # Classes left over from retired layouts. They are not emitted by the pages build() writes.

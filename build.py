@@ -478,7 +478,7 @@ h1,h2,h3{color:#ebebeb;font-weight:800}
 .sr{position:absolute;left:-9999px}
 /* header */
 .top{position:sticky;top:0;z-index:40;background:transparent;transition:background-color .2s}.top.solid{background:#161616}.bar .search{height:38px}.bar .search input,.bar .search>button{box-sizing:border-box;height:38px;padding-top:0;padding-bottom:0}
-.ticker{box-sizing:border-box;height:28px;margin-bottom:4px;padding-top:4px;display:flex;align-items:flex-start;overflow:hidden;background:transparent;color:var(--fg);font-size:11px;font-weight:600;line-height:1}
+.ticker{box-sizing:border-box;width:100%;max-width:100%;min-width:0;margin:0;padding:8px 0;border-top:3px solid var(--red);display:block;overflow:hidden;background:transparent;color:var(--fg);font-size:11px;font-weight:600;line-height:14px}
 .tk-track{display:flex;width:max-content;animation:tk-run 112s linear infinite}
 .tk-set{display:flex;align-items:center;flex:none}
 .tk{white-space:nowrap;color:inherit;text-decoration:none}
@@ -491,8 +491,7 @@ h1,h2,h3{color:#ebebeb;font-weight:800}
 .ticker:hover .tk-track,.ticker:focus-within .tk-track{animation-play-state:paused}
 .tk[hidden]{display:none}
 @keyframes tk-run{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-@media (max-width:860.98px){.ticker{padding-top:3px}}
-@media (prefers-reduced-motion:reduce){.ticker{overflow-x:auto}.tk-track{animation:none}.tk-set[aria-hidden="true"]{display:none}}
+@media (prefers-reduced-motion:reduce){.ticker{overflow-x:auto;overflow-y:hidden}.tk-track{animation:none}.tk-set[aria-hidden="true"]{display:none}}
 .bar{display:flex;align-items:center;gap:14px;height:66px}
 .brand{display:flex;align-items:baseline;gap:14px;min-width:0}
 .logo{font-weight:800;font-size:1.4rem;letter-spacing:-.02em;color:#ebebeb;text-decoration:none;white-space:nowrap}
@@ -1074,6 +1073,7 @@ header.hb .pnav>.is-parked{display:none}
 .pv-side ul.latest li{display:grid;grid-template-columns:1.3rem minmax(0,1fr);gap:6px;align-items:start}
 .pv-side ul.latest li::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--red);justify-self:start;align-self:start;margin-top:calc(0.65em - 2.5px);margin-left:1px}
 .pv-side a:hover,.pv-side a:focus-visible{color:var(--blue)}
+.pv-side .ticker a:hover,.pv-side .ticker a:focus-visible{color:inherit}
 .pv-side .nlside-form{display:flex;flex-direction:column;align-items:stretch;gap:8px;max-height:none;padding:0;border:0;border-radius:0;background:transparent}
 .pv-side .nlside-lead{margin:0;font-size:.88rem;line-height:1.35;font-weight:600;color:var(--muted)}
 .pv-side .nlside-form input[type=email]{flex:none;width:100%;height:42px}
@@ -1105,7 +1105,7 @@ header.hb .pnav>.is-parked{display:none}
 .sheet-main{min-width:0}
 .sheet>.crumbs{grid-column:1 / -1;margin:-2px 0 4px}
 .sheet .leadstory{margin-top:0;align-items:start}
-.pv-side{margin-top:0}
+.pv-side{margin-top:0;min-width:0}
 .sheet.front .leadstory,.sheet.front .layerrow,.sheet.front .homenews{margin-top:0}
 .homenews{display:grid;grid-template-columns:1fr;gap:var(--card-gap-y) var(--card-gap-x);margin:0 0 var(--card-gap-y)}
 .homenews .lim{position:relative;container-type:inline-size}
@@ -2032,7 +2032,7 @@ def read_time(a, lang):
     return max(1, round(len(html.unescape(a[lang]["body"]).split()) / 220))
 
 
-def page(lang, path, title, description, body, og_type="website", extra_head="", image=None, active=None, robots=None, canonical=True, bar=None, alt_path=None, ticker=False):
+def page(lang, path, title, description, body, og_type="website", extra_head="", image=None, active=None, robots=None, canonical=True, bar=None, alt_path=None):
     L = LANGS[lang]
     alt = other(lang)
     # alt_path is the other language's slug when it differs (newsletter/ vs nieuwsbrief/).
@@ -2167,7 +2167,6 @@ def page(lang, path, title, description, body, og_type="website", extra_head="",
 </head>
 <body>
 {header}
-{ticker_bar(lang) if ticker else ""}
 <div class="scrim"></div>
 <nav id="drawer" class="drawer" aria-label="{L['menu']}">{drawer(lang, active, path.strip("/").split("/")[1] if path.strip("/").startswith("model/") else None)}</nav>
 <main class="wrap">
@@ -4568,7 +4567,10 @@ def page_side(arts, lang, kind="home", current=None, skip=None, tail="", signup=
             parts.append(_side_section(C["start"], _side_ol(lang, start)))
     else:
         if latest:
-            parts.append(_side_section(L["latest"], _side_ul(lang, latest, "latest")))
+            block = _side_section(L["latest"], _side_ul(lang, latest, "latest"))
+            if kind == "home":
+                block = ticker_bar(lang) + block
+            parts.append(block)
         if start:
             parts.append(_side_section(C["start"], _side_ol(lang, start)))
     news = newsletter(lang, "side")
@@ -7052,7 +7054,7 @@ def build():
                                  "logo": {"@type": "ImageObject", "url": SITE + "/favicon-512.png", "width": 512, "height": 512},
                                  "sameAs": ["https://www.youtube.com/@TrendingTesla"]}}
         write(url(lang), page(lang, "", NAME, L["home_desc"], body,
-                              extra_head=ld_script(site_ld) + ld_script(crumb_ld), ticker=True))
+                              extra_head=ld_script(site_ld) + ld_script(crumb_ld)))
 
         # ---------- Category pages ----------
         for key, c in CATEGORIES.items():

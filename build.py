@@ -712,6 +712,13 @@ article .st{font-size:clamp(1.05rem,2vw,1.3rem);line-height:1.22;letter-spacing:
 .phead img{width:min(420px,45%);flex:none;border-radius:10px;border:1px solid var(--edge)}
 /* article */
 article{padding:13px 0 8px}
+@media (min-width:901px){
+.sheet-main>article.narrow{padding-top:0}
+.sheet-main>article.narrow>h1:first-child{margin-top:0}
+.sheet-main article.money>h1:first-child{margin-top:0}
+.sheet-main .archh{margin-top:0}
+.sheet-main>header.hubhead{padding-top:0}
+}
 article h1{font-size:clamp(1.8rem,4.6vw,2.6rem);line-height:1.12;letter-spacing:-.025em;margin:10px 0 14px}
 article .lead{font-size:1.12rem;line-height:1.38;color:var(--muted);margin:0 0 22px}
 article .hero-img{border-radius:10px;margin:0 0 26px;aspect-ratio:1200/630;width:100%;object-fit:cover;border:1px solid var(--edge)}
@@ -3211,43 +3218,43 @@ GUIDE_VIDEO = {
 # Licensed photos of the car or context. The caption says what the picture actually is.
 GUIDE_STILL = {
     "winter-mats-model-3-y": {
-        "src": "/img/hubs/deliver-y.jpg",
-        "page": "https://commons.wikimedia.org/wiki/File:Tesla_Model_Y_Juniper_Washington_DC_Metro_Area,_USA.jpg",
-        "credit": "OWS Photography, CC BY 4.0, via Wikimedia Commons",
-        "alt": {"en": "A dark Tesla Model Y Juniper", "nl": "Een donkere Tesla Model Y Juniper"},
+        "src": "/img/guides/mat-fitted.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Fitted-rubber-car-mats-image.jpg",
+        "credit": "Keystones, CC BY-SA 3.0, via Wikimedia Commons",
+        "alt": {"en": "A fitted rubber floor mat in a car footwell", "nl": "Een op maat gesneden rubberen vloermat in een voetenruimte"},
         "caption": {
-            "en": "A Model Y Juniper. The photo is the car, not the mats.",
-            "nl": "Een Model Y Juniper. De foto is de auto, niet de matten.",
+            "en": "A fitted rubber floor mat in a footwell. Not a Tesla, and not the GAFAT or YITAHOME set.",
+            "nl": "Een op maat gesneden rubberen vloermat in een voetenruimte. Geen Tesla, en niet de GAFAT- of YITAHOME-set.",
         },
     },
     "model-y-trunk-floor-mats": {
-        "src": "/img/hubs/deliver-y.jpg",
-        "page": "https://commons.wikimedia.org/wiki/File:Tesla_Model_Y_Juniper_Washington_DC_Metro_Area,_USA.jpg",
-        "credit": "OWS Photography, CC BY 4.0, via Wikimedia Commons",
-        "alt": {"en": "A dark Tesla Model Y Juniper", "nl": "Een donkere Tesla Model Y Juniper"},
+        "src": "/img/guides/boot-liner.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Rolled-rubber-car-boot-liners.jpg",
+        "credit": "Keystones, CC BY-SA 3.0, via Wikimedia Commons",
+        "alt": {"en": "A rolled rubber boot liner", "nl": "Een opgerolde rubberen kofferbakmat"},
         "caption": {
-            "en": "A Model Y Juniper. The photo is the car, not the trunk mat or the floor mats.",
-            "nl": "Een Model Y Juniper. De foto is de auto, niet de kofferbakmat of de vloermatten.",
+            "en": "A rubber boot liner, rolled. Not a Tesla trunk mat.",
+            "nl": "Een rubberen kofferbakmat, opgerold. Geen Tesla-kofferbakmat.",
         },
     },
     "model-y-3-accessories": {
-        "src": "/img/hubs/deliver-3.jpg",
-        "page": "https://commons.wikimedia.org/wiki/File:2024_Tesla_Model_3_Highland_Performance_AWD.jpg",
-        "credit": "Chanokchon, CC BY-SA 4.0, via Wikimedia Commons",
-        "alt": {"en": "A white 2024 Tesla Model 3 Highland", "nl": "Een witte Tesla Model 3 Highland uit 2024"},
+        "src": "/img/guides/mat-fitted.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Fitted-rubber-car-mats-image.jpg",
+        "credit": "Keystones, CC BY-SA 3.0, via Wikimedia Commons",
+        "alt": {"en": "A fitted rubber floor mat in a car footwell", "nl": "Een op maat gesneden rubberen vloermat in een voetenruimte"},
         "caption": {
-            "en": "A 2024 Model 3 Highland. The photo is the car, not the mats or the screen glass.",
-            "nl": "Een Model 3 Highland uit 2024. De foto is de auto, niet de matten of het schermglas.",
+            "en": "A fitted rubber floor mat. Not a Tesla, and not the sets named below.",
+            "nl": "Een op maat gesneden rubberen vloermat. Geen Tesla, en niet de sets hieronder.",
         },
     },
     "europe-home-chargers": {
-        "src": "/img/hubs/deliver-y.jpg",
-        "page": "https://commons.wikimedia.org/wiki/File:Tesla_Model_Y_Juniper_Washington_DC_Metro_Area,_USA.jpg",
-        "credit": "OWS Photography, CC BY 4.0, via Wikimedia Commons",
-        "alt": {"en": "A dark Tesla Model Y Juniper", "nl": "Een donkere Tesla Model Y Juniper"},
+        "src": "/img/guides/wall-conn.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Tesla_Wall_Connector.jpg",
+        "credit": "Whoisjohngalt, CC BY-SA 4.0, via Wikimedia Commons",
+        "alt": {"en": "A Tesla Wall Connector mounted on a garage wall with its cable coiled", "nl": "Een Tesla Wall Connector aan een garagewand, met de kabel opgerold"},
         "caption": {
-            "en": "A Model Y. The photo is the car, not the wallbox.",
-            "nl": "Een Model Y. De foto is de auto, niet de wallbox.",
+            "en": "A Tesla Wall Connector in a garage. Not the mobile unit further down.",
+            "nl": "Een Tesla Wall Connector in een garage. Niet de mobiele lader verderop.",
         },
     },
     "starlink-mini-road-trip": {
@@ -3260,6 +3267,89 @@ GUIDE_STILL = {
             "nl": "Een gewone Starlink-gebruikersterminal. Dit is niet de Mini-set.",
         },
     },
+}
+
+
+GUIDE_EXTRA = {
+    "winter-mats-model-3-y": [{
+        "src": "/img/guides/mat-moulded.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Tailored-rubber-mats-moulded-car-mats.jpg",
+        "credit": "Keystones, CC BY-SA 3.0, via Wikimedia Commons",
+        "alt": {"en": "Close-up of a moulded rubber car mat edge and retention clip", "nl": "Detail van de rand en de klem van een gevormde rubberen autommat"},
+        "caption": {
+            "en": "The raised edge and a clip on a moulded rubber mat. Not a Tesla mat.",
+            "nl": "De opstaande rand en een klem van een gevormde rubberen mat. Geen Tesla-mat.",
+        },
+    }],
+    "model-y-trunk-floor-mats": [{
+        "src": "/img/guides/mat-fitted.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Fitted-rubber-car-mats-image.jpg",
+        "credit": "Keystones, CC BY-SA 3.0, via Wikimedia Commons",
+        "alt": {"en": "A fitted rubber floor mat in a car footwell", "nl": "Een op maat gesneden rubberen vloermat in een voetenruimte"},
+        "caption": {
+            "en": "A fitted rubber floor mat in a footwell. Not the Juniper set.",
+            "nl": "Een op maat gesneden rubberen vloermat in een voetenruimte. Niet de Juniper-set.",
+        },
+    }],
+    "model-y-3-accessories": [{
+        "src": "/img/hubs/fsd-tahoe.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Tesla_Autopilot_engaged_on_I-80_near_Lake_Tahoe.jpg",
+        "credit": "Natecation, CC BY-SA 4.0, via Wikimedia Commons",
+        "alt": {"en": "A Tesla centre screen showing the driving view", "nl": "Een Tesla-middenscherm met het rijbeeld"},
+        "caption": {
+            "en": "A Tesla centre screen. This is not a screen-protector film.",
+            "nl": "Een Tesla-middenscherm. Dit is geen schermfolie.",
+        },
+    }],
+    "europe-home-chargers": [{
+        "src": "/img/guides/type2b.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:EV_Type2_Charging_Cable1.jpg",
+        "credit": "Pamsimhaho, CC0, via Wikimedia Commons",
+        "alt": {"en": "Close-up of a charging plug seated in an electric car's port", "nl": "Detail van een laadstekker in de poort van een elektrische auto"},
+        "caption": {
+            "en": "A charging plug in a car's port. Not a Tesla, and not the Wall Connector.",
+            "nl": "Een laadstekker in de poort van een auto. Geen Tesla, en niet de Wall Connector.",
+        },
+    }],
+    "portable-chargers-adapters": [{
+        "src": "/img/guides/type2b.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:EV_Type2_Charging_Cable1.jpg",
+        "credit": "Pamsimhaho, CC0, via Wikimedia Commons",
+        "alt": {"en": "Close-up of a charging plug seated in an electric car's port", "nl": "Detail van een laadstekker in de poort van een elektrische auto"},
+        "caption": {
+            "en": "A charging plug in a car's port. Not the Juice Booster and not the dé unit.",
+            "nl": "Een laadstekker in de poort van een auto. Niet de Juice Booster en niet de dé-lader.",
+        },
+    }, {
+        "src": "/img/guides/type2.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:EV_Type2_Charging_Cable.jpg",
+        "credit": "Pamsimhaho, CC0, via Wikimedia Commons",
+        "alt": {"en": "A charging lead plugged into an electric car", "nl": "Een laadkabel in een elektrische auto"},
+        "caption": {
+            "en": "A charging lead plugged into an electric car. Not a Tesla, and not either kit on this page.",
+            "nl": "Een laadkabel in een elektrische auto. Geen Tesla, en geen van beide sets op deze pagina.",
+        },
+    }],
+    "sentry-usb-drive": [{
+        "src": "/img/guides/usb-kingston.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Kingston_Technology_DataTraveler_G4_USB_flash_drive_USB_3.0_32_Gb.jpg",
+        "credit": "Dmitry Makeev, CC BY-SA 4.0, via Wikimedia Commons",
+        "alt": {"en": "A Kingston DataTraveler USB flash drive", "nl": "Een Kingston DataTraveler USB-stick"},
+        "caption": {
+            "en": "A USB flash drive. This is a Kingston DataTraveler, not the Samsung BAR Plus.",
+            "nl": "Een USB-stick. Dit is een Kingston DataTraveler, niet de Samsung BAR Plus.",
+        },
+    }],
+    "starlink-mini-road-trip": [{
+        "src": "/img/hubs/starlink-dish2.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Starlink_dish_02.webp",
+        "credit": "Wikideas1, CC0, via Wikimedia Commons",
+        "alt": {"en": "A standard Starlink user terminal on its stand", "nl": "Een gewone Starlink-gebruikersterminal op zijn standaard"},
+        "caption": {
+            "en": "Another standard Starlink terminal. This is not the Mini.",
+            "nl": "Nog een gewone Starlink-terminal. Dit is niet de Mini.",
+        },
+    }],
 }
 
 
@@ -7094,6 +7184,16 @@ def _guide_product(fields, lang):
             f'<p class="gprice">{esc(price)}</p>{link}</div></aside>')
 
 
+def _guide_figure(spec, lang):
+    alt = (spec.get("alt") or {}).get(lang) or ""
+    caption = (spec.get("caption") or {}).get(lang) or ""
+    credit = (f'<a href="{esc(spec["page"])}" rel="nofollow noopener" target="_blank">'
+              f'{esc(spec["credit"])}</a>')
+    img = resp_img(spec["src"], alt, SIZES_HERO, lazy=True)
+    return (f'<figure class="hubfig">{img}'
+            f'<figcaption class="imgnote">{esc(caption)} {credit}</figcaption></figure>')
+
+
 def _guide_hero(doc, lang):
     slug = doc.get("slug") or ""
     video = GUIDE_VIDEO.get(slug)
@@ -7158,7 +7258,8 @@ def guide_body(doc, lang):
             text = fields.get(lang) or fields.get("en") or ""
             if text:
                 prose.append(f"<p>{esc(text)}</p>")
-    chunks = [disclosure_line(lang), banner, *prose, *tables, *products]
+    extras = "".join(_guide_figure(spec, lang) for spec in GUIDE_EXTRA.get(doc.get("slug") or "", []))
+    chunks = [disclosure_line(lang), banner, *prose, *tables, extras, *products]
     byline = f'<p class="byline"><a href="{url(lang, "editorial/")}">{esc(LANGS[lang]["byline"])}</a></p>'
     hero = _guide_hero(doc, lang)
     body = (f'<article class="narrow">{hero}<h1>{esc(title)}</h1>{byline}'

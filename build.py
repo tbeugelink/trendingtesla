@@ -1374,6 +1374,7 @@ header.hb .hb-inline .hb-search:hover,header.hb .hb-inline .hb-search:focus-with
    every width. Horizontal position is a fixed offset from the content wrap
    (the wrap is centered when the viewport is wider than 1160px). */
 header.hb .bar{height:66px;gap:8px;align-items:center}
+@media (min-width:901px){main.wrap{margin-top:10px}}
 /* Icon stack is 16px (2px bars, 5px gaps), matching the measured cap height of
    the logo's T (solid ink from 25px to 41px in the 66px bar). */
 header.hb .bar .burger{display:flex;flex-direction:column;align-items:center;justify-content:center;width:40px;height:40px;margin-left:-8px;padding:0;transform:none;gap:5px}

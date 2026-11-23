@@ -606,6 +606,13 @@ article .st{font-size:clamp(1.05rem,2vw,1.3rem);line-height:1.22;letter-spacing:
 .nextread{margin:8px 0 12px;padding:18px 3vw 0;border-top:1px solid var(--border2)}.nextread h2{font-size:1.2rem;margin:0 0 12px}.nextread .grid2{margin-top:0;gap:14px}@media (max-width:600.98px){.nextread{padding-left:0;padding-right:0}}
 .sideh{font-size:.7rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--blue);margin:11px 0 -2px;padding-top:9px;border-top:1px solid var(--border2)}
 .hi,.th,.im{position:relative}.hi{margin:0 0 8px}.hi .hero-img{margin:0}
+.livebadge{position:absolute;top:8px;left:8px;z-index:3;background:#e10600;color:#fff;font-size:.7rem;font-weight:800;letter-spacing:.08em;line-height:1;padding:4px 6px;border-radius:4px}
+.pv-min.live{background:#e10600}
+.pv-min.live b,.pv-min.live small{color:#fff}
+.livefeed{list-style:none;margin:8px 0 22px;padding:0}
+.livefeed li{padding:12px 0;border-top:1px solid #2a2a2a}
+.livefeed time{display:block;color:var(--dim);font-size:.78rem;font-weight:800;margin-bottom:4px}
+.livefeed p{margin:0 0 6px}
 .dur{display:inline-flex;align-items:center;gap:4px;position:absolute;right:8px;bottom:8px;background:rgba(0,0,0,.8);color:#fff;font-size:.74rem;font-weight:700;line-height:1;padding:4px 6px;border-radius:10px;cursor:help}.agotip{position:fixed;z-index:60;pointer-events:none;background:rgba(0,0,0,.88);color:#fff;font-size:.74rem;font-weight:700;line-height:1;padding:5px 7px;border-radius:10px;white-space:nowrap}time.ago{cursor:help}.im,.th,.hi{container-type:inline-size}.kk{position:absolute;left:2.6cqw;bottom:2.6cqw;z-index:2;pointer-events:none;font-family:Inter,Manrope,"Manrope Fallback",system-ui,sans-serif;font-weight:900;letter-spacing:-.01em;text-transform:uppercase;line-height:1}.kk b{display:table;font-weight:900;white-space:nowrap}.kk b+b{margin-top:.1em}.kk i{font-style:normal;display:inline-block}.kk .yo{color:#ffd400;text-shadow:-.16cqw -.16cqw 0 #666666,.16cqw -.16cqw 0 #666666,-.16cqw .16cqw 0 #666666,.16cqw .16cqw 0 #666666,0 .2cqw 0 #666666,0 -.2cqw 0 #666666,.2cqw 0 0 #666666,-.2cqw 0 0 #666666,0 .5cqw 1.2cqw rgba(0,0,0,.45)}.kk .bk i{background:#d61a1a;color:#fff;padding:.13em .24em .12em;box-shadow:0 .4cqw 1.2cqw rgba(0,0,0,.35)}.kk.p-bw .bk i,.kk.p-by .bk i{background:#1d5cff}.kk.p-gy .bk i{background:#0a7737}.kk.p-yk .bk i{background:#ffd400;color:#111}.kk.p-gy .yo{color:#ffd400;text-shadow:0.16cqw 0.16cqw 0 #666666,-0.16cqw 0.16cqw 0 #666666,0.16cqw -0.16cqw 0 #666666,-0.16cqw -0.16cqw 0 #666666,0cqw 0.2cqw 0 #666666,0cqw -0.2cqw 0 #666666,0.2cqw 0cqw 0 #666666,-0.2cqw 0cqw 0 #666666,0 .5cqw 1.4cqw rgba(0,0,0,.5)}.kk.p-wb .bk i{background:#fff;color:#1d5cff}.kk.p-bw .yo{color:#fff;text-shadow:0.16cqw 0.16cqw 0 #0b2f8f,-0.16cqw 0.16cqw 0 #0b2f8f,0.16cqw -0.16cqw 0 #0b2f8f,-0.16cqw -0.16cqw 0 #0b2f8f,0 .2cqw 0 #0b2f8f,0 -.2cqw 0 #0b2f8f,.2cqw 0 0 #0b2f8f,-.2cqw 0 0 #0b2f8f,0 .5cqw 1.4cqw rgba(0,0,0,.6)}.kk.p-wb .yo{color:#3d7bff;text-shadow:0.16cqw 0.16cqw 0 #fff,-0.16cqw 0.16cqw 0 #fff,0.16cqw -0.16cqw 0 #fff,-0.16cqw -0.16cqw 0 #fff,0 .2cqw 0 #fff,0 -.2cqw 0 #fff,.2cqw 0 0 #fff,-.2cqw 0 0 #fff,0 .5cqw 1.4cqw rgba(0,0,0,.5)}.kk.p-by .yo{color:#ffd400;text-shadow:0.16cqw 0.16cqw 0 #666666,-0.16cqw 0.16cqw 0 #666666,0.16cqw -0.16cqw 0 #666666,-0.16cqw -0.16cqw 0 #666666,0 .2cqw 0 #666666,0 -.2cqw 0 #666666,.2cqw 0 0 #666666,-.2cqw 0 0 #666666,0 .5cqw 1.4cqw rgba(0,0,0,.5)}.kk .nb{font-size:1.32em}.kk .bk .nb{font-size:1.22em}.kk .l1{font-size:6.4cqw}.kk .l2{font-size:8cqw}.th .dur{right:6px;bottom:6px;font-size:.68rem;padding:3px 5px}.th .dur svg{width:12px;height:12px}
 /* buttons, labels */
 .btn{display:inline-flex;align-items:center;justify-content:center;background:var(--red);color:#fff;font-weight:800;font-size:.9rem;padding:11px 20px;border-radius:10px;text-decoration:none;transition:background .2s}
@@ -2636,7 +2643,7 @@ def card(a, lang, lead=False):
     t = a[lang]
     cls = "card lead" if lead else "card"
     line = rubric_line(a, lang)
-    im = f'<div class="im zimg">{resp_img(site_img(a), t["title"], SIZES_CARD)}{dur(a, lang)}{ovl(a, lang)}</div>'
+    im = f'<div class="im zimg">{resp_img(site_img(a), t["title"], SIZES_CARD)}{live_mark(a)}{dur(a, lang)}{ovl(a, lang)}</div>'
     title = f'<h3>{esc(card_title(a, lang))}</h3>'
     # The rubric sits under the photo, then the title. The lead photo is not a link.
     if lead:
@@ -2650,7 +2657,7 @@ def gcard(a, lang, eager=False):
     """Topic list under the lead: photo on top, then title, summary and date."""
     t = a[lang]
     return (f'<a class="card" href="{url(lang, a["slug"] + "/")}">'
-            f'<div class="im zimg">{resp_img(site_img(a), t["title"], SIZES_GRID, high=eager, lazy=not eager)}{dur(a, lang)}{ovl(a, lang)}</div>'
+            f'<div class="im zimg">{resp_img(site_img(a), t["title"], SIZES_GRID, high=eager, lazy=not eager)}{live_mark(a)}{dur(a, lang)}{ovl(a, lang)}</div>'
             f'<div class="body">{rubric_line(a, lang)}'
             f'<h2>{esc(card_title(a, lang))}</h2></div></a>')
 
@@ -2682,6 +2689,44 @@ def numbig(t):
     if sum(ch.isdigit() for ch in tok) < 2 and not re.search(r"[€$%+\-–−]|[A-Z]", tok):
         return esc(t)
     return f'<span class="nb">{esc(m.group(1))}</span>{esc(m.group(2))}'
+
+
+def is_live(a):
+    return (a or {}).get("type") == "live" and bool((a or {}).get("live"))
+
+
+def live_updates(a):
+    rows = [row for row in ((a or {}).get("updates") or []) if isinstance(row, dict)]
+    rows.sort(key=lambda row: str(row.get("at") or ""), reverse=True)
+    return rows
+
+
+def live_mark(a):
+    if not is_live(a):
+        return ""
+    return '<span class="livebadge">LIVE</span>'
+
+
+def live_feed(a, lang):
+    rows = []
+    for update in live_updates(a):
+        text = str(update.get(lang) or "").strip()
+        if not text:
+            continue
+        raw = str(update.get("at") or "")
+        try:
+            dt = datetime.fromisoformat(raw)
+            if dt.tzinfo is None:
+                dt = dt.replace(tzinfo=TZ)
+            label = fmt_date(dt.strftime("%Y-%m-%d"), lang) + ", " + dt.strftime("%H:%M")
+        except ValueError:
+            label = raw
+        rows.append(
+            f'<li><time datetime="{esc(raw)}">{esc(label)}</time><p>{esc(text)}</p>'
+            f'{_src_links(update.get("sources") or [])}</li>')
+    if not rows:
+        return ""
+    return f'<ol class="livefeed">{"".join(rows)}</ol>'
 
 
 def ovl(a, lang):
@@ -2807,6 +2852,18 @@ def load_articles():
                 raise SystemExit(f"{f.name}: missing '{key}'")
         if a["category"] not in CATEGORIES:
             raise SystemExit(f"{f.name}: unknown category '{a['category']}'")
+        if a.get("type") == "live":
+            updates = a.get("updates")
+            if not isinstance(updates, list) or not updates:
+                raise SystemExit(f"{f.name}: a live article needs an updates list")
+            for update in updates:
+                if not isinstance(update, dict) or not str(update.get("at") or "").strip():
+                    raise SystemExit(f"{f.name}: each update needs at")
+                if not str(update.get("en") or "").strip() or not str(update.get("nl") or "").strip():
+                    raise SystemExit(f"{f.name}: each update needs en and nl")
+                sources = update.get("sources") or []
+                if not isinstance(sources, list) or len(sources) < 2:
+                    raise SystemExit(f"{f.name}: each update needs two sources")
         extra = []
         for key in a.get("also_topics") or []:
             if key not in TOPIC_LABEL:
@@ -4012,7 +4069,7 @@ def money_article(a, arts, lang):
         f'<button class="act save" type="button" data-save="{a["slug"]}" aria-pressed="false" title="{esc(L["save"])}" aria-label="{esc(L["save"])}">{BOOK_SVG}</button></div></div>'
         f'{chips}<p class="lead">{esc(t["description"])}</p>'
         f'{article_media(a, lang)}{toc}'
-        f'<div class="prose">{body}</div>{product_boxes(a, lang)}{handy_box(a, lang)}{ad_html("end", lang)}'
+        f'<div class="prose">{body}</div>{live_feed(a, lang) if a.get("type") == "live" else ""}{product_boxes(a, lang)}{handy_box(a, lang)}{ad_html("end", lang)}'
         f'{article_sources(a, lang)}</article>')
     col = f'{nav}{article}{related_block(a, arts, lang)}{ml_bar(lang)}'
     wrap = "aread with-side" if side else "aread"
@@ -4569,6 +4626,7 @@ def home_grid_card(a, lang, eager=False, badge=""):
     mark = ""
     if badge:
         mark = f'<span class="dur dvo">{esc(badge)}</span><span class="vpl" aria-hidden="true"></span>'
+    mark = live_mark(a) + mark
     return (
         f'<a class="lcard" href="{url(lang, a["slug"] + "/")}">'
         f'<span class="lim zimg">{resp_img(site_img(a), t["title"], "(max-width: 599px) 92vw, (max-width: 900px) 46vw, 280px", high=eager, lazy=not eager, width=640, height=360)}{mark}</span>'
@@ -4733,7 +4791,9 @@ def list_badge(top, sub):
 
 
 def story_list_badge(a, lang):
-    """A story with a video shows that video. A plain article shows its reading time."""
+    """A live story shows LIVE. A story with a video shows that video. A plain article shows its reading time."""
+    if is_live(a):
+        return '<span class="pv-min live"><b>LIVE</b><small></small></span>'
     video = video_for(a, "en")
     if video:
         return list_badge("Video", f"{whole_minutes(video.get('seconds') or 0)} min")
@@ -5123,7 +5183,7 @@ def pv_article(variant, a, arts, lang, live=False):
         f' · {read_time(a, lang)} {L["min"]}</p>{updated_html(a, lang)}{evergreen_article_links(a, lang)}'
         f'<p class="lead">{esc(t["description"])}</p>'
         f'{toc_here}'
-        f'<div class="prose">{body}</div>{product_boxes(a, lang)}{handy_box(a, lang)}{ad_html("end", lang)}'
+        f'<div class="prose">{body}</div>{live_feed(a, lang) if a.get("type") == "live" else ""}{product_boxes(a, lang)}{handy_box(a, lang)}{ad_html("end", lang)}'
         f'{article_sources(a, lang)}{prev_next(a, arts, lang)}</article>')
     if live:
         return article
@@ -6928,8 +6988,9 @@ def build():
             c = CATEGORIES[a["category"]]
             mod_dt, _differs = modified(a)
             cover = SITE + social_img(a, lang)
+            kind = ["NewsArticle", "LiveBlogPosting"] if a.get("type") == "live" else "NewsArticle"
             ld = {
-                "@context": "https://schema.org", "@type": "NewsArticle",
+                "@context": "https://schema.org", "@type": kind,
                 "headline": t["title"], "description": t["description"],
                 "image": {"@type": "ImageObject", "url": cover, "width": 1200, "height": 630},
                 "datePublished": published(a).isoformat(),
@@ -6940,6 +7001,16 @@ def build():
                               "logo": {"@type": "ImageObject", "url": SITE + "/favicon-512.png", "width": 512, "height": 512}},
                 "author": {"@type": "Organization", "name": EDITORIAL_ORG[lang], "url": SITE + url(lang, "editorial/")},
             }
+            if a.get("type") == "live":
+                rows = live_updates(a)
+                ld["coverageStartTime"] = published(a).isoformat()
+                if rows and not is_live(a):
+                    ld["coverageEndTime"] = rows[0].get("at")
+                ld["liveBlogUpdate"] = [
+                    {"@type": "BlogPosting", "datePublished": row.get("at"),
+                     "articleBody": str(row.get(lang) or "").strip(),
+                     "headline": str(row.get(lang) or "").strip()[:110]}
+                    for row in rows if str(row.get(lang) or "").strip()]
             v = video_for(a, lang)
             if v:  # video rich result in Google (video thumbnail + length in search)
                 sec = int(v.get("seconds") or 0)

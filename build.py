@@ -3180,11 +3180,7 @@ def _product_asin(product):
 
 
 def product_photo(product):
-    """(src, remote). A local /img/ path only. Amazon image hosts are refused."""
-    if isinstance(product, dict):
-        image = str(product.get("image") or "").strip()
-        if image.startswith("/img/") and ".." not in image and "m.media-amazon.com" not in image:
-            return image, False
+    """No product photo unless it is the exact item. We do not have one, so the card stays text."""
     return "", False
 
 
@@ -3198,169 +3194,21 @@ def product_photo_html(src, alt, href, remote):
     return f'<span class="pshot">{img}</span>'
 
 
-# Official videos of that exact product. Checked live and embeddable on youtube-nocookie.
+# A video only when it shows that exact product. Anything else stays a text card.
 GUIDE_VIDEO = {
     "portable-chargers-adapters": {
         "id": "-PJMoBQfAzo",
-        "caption": {
-            "en": "Official video of the Juice Booster 2, from Juice Technology.",
-            "nl": "Officiële video van de Juice Booster 2, van Juice Technology.",
-        },
+        "alt": {"en": "Juice Booster 2", "nl": "Juice Booster 2"},
     },
     "sentry-usb-drive": {
         "id": "V34pAk2zfNI",
-        "caption": {
-            "en": "Official video of the Samsung BAR Plus, from Samsung.",
-            "nl": "Officiële video van de Samsung BAR Plus, van Samsung.",
-        },
+        "alt": {"en": "Samsung BAR Plus", "nl": "Samsung BAR Plus"},
     },
-}
-# Licensed photos of the car or context. The caption says what the picture actually is.
-GUIDE_STILL = {
-    "winter-mats-model-3-y": {
-        "src": "/img/guides/mat-fitted.jpg",
-        "page": "https://commons.wikimedia.org/wiki/File:Fitted-rubber-car-mats-image.jpg",
-        "credit": "Keystones, CC BY-SA 3.0, via Wikimedia Commons",
-        "alt": {"en": "A fitted rubber floor mat in a car footwell", "nl": "Een op maat gesneden rubberen vloermat in een voetenruimte"},
-        "caption": {
-            "en": "A fitted rubber floor mat in a footwell. Not a Tesla, and not the GAFAT or YITAHOME set.",
-            "nl": "Een op maat gesneden rubberen vloermat in een voetenruimte. Geen Tesla, en niet de GAFAT- of YITAHOME-set.",
-        },
-    },
-    "model-y-trunk-floor-mats": {
-        "src": "/img/guides/boot-liner.jpg",
-        "page": "https://commons.wikimedia.org/wiki/File:Rolled-rubber-car-boot-liners.jpg",
-        "credit": "Keystones, CC BY-SA 3.0, via Wikimedia Commons",
-        "alt": {"en": "A rolled rubber boot liner", "nl": "Een opgerolde rubberen kofferbakmat"},
-        "caption": {
-            "en": "A rubber boot liner, rolled. Not a Tesla trunk mat.",
-            "nl": "Een rubberen kofferbakmat, opgerold. Geen Tesla-kofferbakmat.",
-        },
-    },
-    "model-y-3-accessories": {
-        "src": "/img/guides/mat-fitted.jpg",
-        "page": "https://commons.wikimedia.org/wiki/File:Fitted-rubber-car-mats-image.jpg",
-        "credit": "Keystones, CC BY-SA 3.0, via Wikimedia Commons",
-        "alt": {"en": "A fitted rubber floor mat in a car footwell", "nl": "Een op maat gesneden rubberen vloermat in een voetenruimte"},
-        "caption": {
-            "en": "A fitted rubber floor mat. Not a Tesla, and not the sets named below.",
-            "nl": "Een op maat gesneden rubberen vloermat. Geen Tesla, en niet de sets hieronder.",
-        },
-    },
-    "europe-home-chargers": {
-        "src": "/img/guides/wall-conn.jpg",
-        "page": "https://commons.wikimedia.org/wiki/File:Tesla_Wall_Connector.jpg",
-        "credit": "Whoisjohngalt, CC BY-SA 4.0, via Wikimedia Commons",
-        "alt": {"en": "A Tesla Wall Connector mounted on a garage wall with its cable coiled", "nl": "Een Tesla Wall Connector aan een garagewand, met de kabel opgerold"},
-        "caption": {
-            "en": "A Tesla Wall Connector in a garage. Not the mobile unit further down.",
-            "nl": "Een Tesla Wall Connector in een garage. Niet de mobiele lader verderop.",
-        },
-    },
-    "starlink-mini-road-trip": {
-        "src": "/img/hubs/starlink-dish.jpg",
-        "page": "https://commons.wikimedia.org/wiki/File:Starlink_dish_01.webp",
-        "credit": "Wikideas1, CC0, via Wikimedia Commons",
-        "alt": {"en": "A standard rectangular Starlink user terminal", "nl": "Een gewone rechthoekige Starlink-gebruikersterminal"},
-        "caption": {
-            "en": "A standard Starlink user terminal. This is not the Mini kit.",
-            "nl": "Een gewone Starlink-gebruikersterminal. Dit is niet de Mini-set.",
-        },
-    },
-}
-
-
-GUIDE_EXTRA = {
-    "winter-mats-model-3-y": [{
-        "src": "/img/guides/mat-moulded.jpg",
-        "page": "https://commons.wikimedia.org/wiki/File:Tailored-rubber-mats-moulded-car-mats.jpg",
-        "credit": "Keystones, CC BY-SA 3.0, via Wikimedia Commons",
-        "alt": {"en": "Close-up of a moulded rubber car mat edge and retention clip", "nl": "Detail van de rand en de klem van een gevormde rubberen autommat"},
-        "caption": {
-            "en": "The raised edge and a clip on a moulded rubber mat. Not a Tesla mat.",
-            "nl": "De opstaande rand en een klem van een gevormde rubberen mat. Geen Tesla-mat.",
-        },
-    }],
-    "model-y-trunk-floor-mats": [{
-        "src": "/img/guides/mat-fitted.jpg",
-        "page": "https://commons.wikimedia.org/wiki/File:Fitted-rubber-car-mats-image.jpg",
-        "credit": "Keystones, CC BY-SA 3.0, via Wikimedia Commons",
-        "alt": {"en": "A fitted rubber floor mat in a car footwell", "nl": "Een op maat gesneden rubberen vloermat in een voetenruimte"},
-        "caption": {
-            "en": "A fitted rubber floor mat in a footwell. Not the Juniper set.",
-            "nl": "Een op maat gesneden rubberen vloermat in een voetenruimte. Niet de Juniper-set.",
-        },
-    }],
-    "model-y-3-accessories": [{
-        "src": "/img/hubs/fsd-tahoe.jpg",
-        "page": "https://commons.wikimedia.org/wiki/File:Tesla_Autopilot_engaged_on_I-80_near_Lake_Tahoe.jpg",
-        "credit": "Natecation, CC BY-SA 4.0, via Wikimedia Commons",
-        "alt": {"en": "A Tesla centre screen showing the driving view", "nl": "Een Tesla-middenscherm met het rijbeeld"},
-        "caption": {
-            "en": "A Tesla centre screen. This is not a screen-protector film.",
-            "nl": "Een Tesla-middenscherm. Dit is geen schermfolie.",
-        },
-    }],
-    "europe-home-chargers": [{
-        "src": "/img/guides/type2b.jpg",
-        "page": "https://commons.wikimedia.org/wiki/File:EV_Type2_Charging_Cable1.jpg",
-        "credit": "Pamsimhaho, CC0, via Wikimedia Commons",
-        "alt": {"en": "Close-up of a charging plug seated in an electric car's port", "nl": "Detail van een laadstekker in de poort van een elektrische auto"},
-        "caption": {
-            "en": "A charging plug in a car's port. Not a Tesla, and not the Wall Connector.",
-            "nl": "Een laadstekker in de poort van een auto. Geen Tesla, en niet de Wall Connector.",
-        },
-    }],
-    "portable-chargers-adapters": [{
-        "src": "/img/guides/type2b.jpg",
-        "page": "https://commons.wikimedia.org/wiki/File:EV_Type2_Charging_Cable1.jpg",
-        "credit": "Pamsimhaho, CC0, via Wikimedia Commons",
-        "alt": {"en": "Close-up of a charging plug seated in an electric car's port", "nl": "Detail van een laadstekker in de poort van een elektrische auto"},
-        "caption": {
-            "en": "A charging plug in a car's port. Not the Juice Booster and not the dé unit.",
-            "nl": "Een laadstekker in de poort van een auto. Niet de Juice Booster en niet de dé-lader.",
-        },
-    }, {
-        "src": "/img/guides/type2.jpg",
-        "page": "https://commons.wikimedia.org/wiki/File:EV_Type2_Charging_Cable.jpg",
-        "credit": "Pamsimhaho, CC0, via Wikimedia Commons",
-        "alt": {"en": "A charging lead plugged into an electric car", "nl": "Een laadkabel in een elektrische auto"},
-        "caption": {
-            "en": "A charging lead plugged into an electric car. Not a Tesla, and not either kit on this page.",
-            "nl": "Een laadkabel in een elektrische auto. Geen Tesla, en geen van beide sets op deze pagina.",
-        },
-    }],
-    "sentry-usb-drive": [{
-        "src": "/img/guides/usb-kingston.jpg",
-        "page": "https://commons.wikimedia.org/wiki/File:Kingston_Technology_DataTraveler_G4_USB_flash_drive_USB_3.0_32_Gb.jpg",
-        "credit": "Dmitry Makeev, CC BY-SA 4.0, via Wikimedia Commons",
-        "alt": {"en": "A Kingston DataTraveler USB flash drive", "nl": "Een Kingston DataTraveler USB-stick"},
-        "caption": {
-            "en": "A USB flash drive. This is a Kingston DataTraveler, not the Samsung BAR Plus.",
-            "nl": "Een USB-stick. Dit is een Kingston DataTraveler, niet de Samsung BAR Plus.",
-        },
-    }],
-    "starlink-mini-road-trip": [{
-        "src": "/img/hubs/starlink-dish2.jpg",
-        "page": "https://commons.wikimedia.org/wiki/File:Starlink_dish_02.webp",
-        "credit": "Wikideas1, CC0, via Wikimedia Commons",
-        "alt": {"en": "A standard Starlink user terminal on its stand", "nl": "Een gewone Starlink-gebruikersterminal op zijn standaard"},
-        "caption": {
-            "en": "Another standard Starlink terminal. This is not the Mini.",
-            "nl": "Nog een gewone Starlink-terminal. Dit is niet de Mini.",
-        },
-    }],
 }
 
 
 def guide_lead_photo(doc):
-    """A licensed local photo for a guide. Never an Amazon image."""
-    still = GUIDE_STILL.get(doc.get("slug") or "")
-    if still and str(still.get("src") or "").startswith("/img/"):
-        return still["src"]
-    image = str((doc.get("meta") or {}).get("image") or "").strip()
-    if image.startswith("/img/") and ".." not in image:
-        return image
+    """Guides do not use a stand-in photo. The card stays text."""
     return ""
 
 
@@ -7184,41 +7032,21 @@ def _guide_product(fields, lang):
             f'<p class="gprice">{esc(price)}</p>{link}</div></aside>')
 
 
-def _guide_figure(spec, lang):
-    alt = (spec.get("alt") or {}).get(lang) or ""
-    caption = (spec.get("caption") or {}).get(lang) or ""
-    credit = (f'<a href="{esc(spec["page"])}" rel="nofollow noopener" target="_blank">'
-              f'{esc(spec["credit"])}</a>')
-    img = resp_img(spec["src"], alt, SIZES_HERO, lazy=True)
-    return (f'<figure class="hubfig">{img}'
-            f'<figcaption class="imgnote">{esc(caption)} {credit}</figcaption></figure>')
-
-
 def _guide_hero(doc, lang):
-    slug = doc.get("slug") or ""
-    video = GUIDE_VIDEO.get(slug)
-    if video:
-        vid = video["id"]
-        caption = (video.get("caption") or {}).get(lang) or ""
-        label = ("Play the video" if lang == "en" else "Speel de video")
-        thumb = f"https://i.ytimg.com/vi/{vid}/hqdefault.jpg"
-        return (
-            f'<figure class="avid long"><button class="avb" type="button" data-vid="{esc(vid)}" '
-            f'aria-label="{esc(label)}">'
-            f'<img src="{esc(thumb)}" alt="{esc(caption)}" width="480" height="360" '
-            f'fetchpriority="high" decoding="async">'
-            f'<span class="shp" aria-hidden="true"></span></button>'
-            f'<figcaption class="imgnote">{esc(caption)}</figcaption></figure>')
-    still = GUIDE_STILL.get(slug)
-    if not still:
+    """Official video of that exact product, or nothing. No stand-in photo and no credit line."""
+    video = GUIDE_VIDEO.get(doc.get("slug") or "")
+    if not video:
         return ""
-    alt = (still.get("alt") or {}).get(lang) or ""
-    caption = (still.get("caption") or {}).get(lang) or ""
-    credit = (f'<a href="{esc(still["page"])}" rel="nofollow noopener" target="_blank">'
-              f'{esc(still["credit"])}</a>')
-    img = resp_img(still["src"], alt, SIZES_HERO, high=True, lazy=False, cls="hero-img")
-    return (f'<div class="hi">{img}</div>'
-            f'<p class="imgnote">{esc(caption)} {credit}</p>')
+    vid = video["id"]
+    alt = (video.get("alt") or {}).get(lang) or ""
+    label = "Play the video" if lang == "en" else "Speel de video"
+    thumb = f"https://i.ytimg.com/vi/{vid}/hqdefault.jpg"
+    return (
+        f'<figure class="avid long"><button class="avb" type="button" data-vid="{esc(vid)}" '
+        f'aria-label="{esc(label)}">'
+        f'<img src="{esc(thumb)}" alt="{esc(alt)}" width="480" height="360" '
+        f'fetchpriority="high" decoding="async">'
+        f'<span class="shp" aria-hidden="true"></span></button></figure>')
 
 
 def _guide_table(fields, lang):
@@ -7258,8 +7086,7 @@ def guide_body(doc, lang):
             text = fields.get(lang) or fields.get("en") or ""
             if text:
                 prose.append(f"<p>{esc(text)}</p>")
-    extras = "".join(_guide_figure(spec, lang) for spec in GUIDE_EXTRA.get(doc.get("slug") or "", []))
-    chunks = [disclosure_line(lang), banner, *prose, *tables, extras, *products]
+    chunks = [disclosure_line(lang), banner, *prose, *tables, *products]
     byline = f'<p class="byline"><a href="{url(lang, "editorial/")}">{esc(LANGS[lang]["byline"])}</a></p>'
     hero = _guide_hero(doc, lang)
     body = (f'<article class="narrow">{hero}<h1>{esc(title)}</h1>{byline}'

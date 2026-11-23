@@ -897,14 +897,20 @@ article.money .avid{max-width:68ch}
 .pbox{margin:22px 0;max-width:68ch}
 .pbox-in{display:grid;grid-template-columns:168px minmax(0,1fr);gap:16px;align-items:start;padding:14px;border:1px solid var(--border2);border-radius:12px;background:#161616}
 .pbox.noimg .pbox-in{grid-template-columns:1fr}
-.pbox img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:8px}
+.pshot{display:block;background:#f3f3f3;border-radius:8px;line-height:0;overflow:hidden}
+.pbox img,.gbox img{width:100%;height:100%;aspect-ratio:1/1;object-fit:contain;background:#f3f3f3;border-radius:8px;display:block}
 .pbox h3{font-size:1.05rem;line-height:1.3;margin:0 0 8px}
-.pbox ul{margin:0 0 12px;padding-left:18px}
+.pbox ul{margin:0;padding-left:18px}
 .pbox li{margin:0 0 4px;color:var(--muted);font-size:.92rem}
-.pbox .why{margin:0 0 12px;color:var(--muted);font-size:.92rem;line-height:1.45}
+.pbox .why{margin:0;color:var(--muted);font-size:.92rem;line-height:1.45}
+.pbox .btn,.gbox .btn{margin-top:18px}
 .affnote{margin:8px 0 0;font-size:.75rem;line-height:1.45;color:var(--dim)}
 .affnote a{color:var(--blue2)}
-.pv-side .rec li span{display:block;margin-top:2px;font-weight:400;font-size:.78rem;line-height:1.35;color:var(--muted)}
+.pv-side .rec li span{display:block;margin-top:3px;font-weight:400;font-size:.78rem;line-height:1.35;color:var(--muted)}
+.pv-side .rec li.hasimg{display:grid;grid-template-columns:48px minmax(0,1fr);gap:8px;align-items:center}
+.pv-side .rec li.noimg{grid-template-columns:minmax(0,1fr)}
+.pv-side .rec .pth{width:48px;height:48px;border-radius:6px;overflow:hidden}
+.pv-side .rec .pth img{width:100%;height:100%;object-fit:contain;background:#f3f3f3;display:block}
 .pv-side .rec .afftop{margin:8px 0 0;font-weight:400;font-size:.75rem}
 .nform{margin:26px 0;padding:16px 16px 14px;border:1px solid var(--border2);border-radius:12px;background:rgba(255,255,255,.03);max-width:68ch}
 .nform h2{font-size:1.15rem;margin:0 0 6px}
@@ -1387,12 +1393,11 @@ header.hb .bar .lang{margin-left:0;margin-right:0;flex:none;white-space:nowrap;t
 .prom-empty{margin:12px 0 0;color:var(--muted)}
 .gbox{margin:16px 0;padding:14px;border:1px solid #3a4a60;border-radius:8px;background:#161616;display:grid;grid-template-columns:168px minmax(0,1fr);gap:14px}
 .gbox.noimg{grid-template-columns:1fr}
-.gbox img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:8px}
 .gbox h2{margin:0 0 8px;font-size:1.12rem}
 .gbox h3{margin:8px 0 4px;font-size:.78rem;letter-spacing:.04em;text-transform:uppercase;color:var(--dim)}
 .gbox ul{margin:0;padding-left:1.1em}
 .gbox li{margin:0 0 3px}
-.gbox .btn{display:inline-block;margin-top:10px;background:var(--red);color:#fff;text-decoration:none;font-weight:800;border-radius:8px;padding:10px 14px}
+.gbox .btn{display:inline-block;background:var(--red);color:#fff;text-decoration:none;font-weight:800;border-radius:8px;padding:10px 14px}
 .gtable{width:100%;border-collapse:collapse;margin:8px 0 16px;font-size:.92rem}
 .gtable th,.gtable td{padding:8px 10px;border:1px solid #3a4a60;text-align:left}
 .gtable caption{text-align:left;font-weight:800;margin:0 0 6px}
@@ -3000,6 +3005,81 @@ def amazon_nl_href(product):
     return tagged
 
 
+PRODUCT_IMAGES = {}
+_IMG_HIDE = ("this.closest('.pbox,.gbox,li')&&this.closest('.pbox,.gbox,li').classList.add('noimg');"
+             "var n=this.closest('a.pshot,span.pshot');if(n)n.remove();")
+
+
+def load_product_images():
+    """Official amazon.nl photos, keyed by ASIN. Missing keys mean no picture."""
+    global PRODUCT_IMAGES
+    PRODUCT_IMAGES = {}
+    path = ROOT / "content" / "product-images.json"
+    if not path.exists():
+        return
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except ValueError:
+        return
+    if not isinstance(data, dict):
+        return
+    for asin, src in data.items():
+        key = str(asin or "").strip().upper()
+        if not re.fullmatch(r"[A-Z0-9]{10}", key):
+            continue
+        url = _amazon_image_url(src)
+        if url:
+            PRODUCT_IMAGES[key] = url
+
+
+def _amazon_image_url(src):
+    """Only Amazon's own product-image host. Anything else is refused."""
+    url = str(src or "").strip()
+    if not url.startswith("https://m.media-amazon.com/images/"):
+        return ""
+    if ".." in url or " " in url or '"' in url or "<" in url:
+        return ""
+    return url
+
+
+def _product_asin(product):
+    if isinstance(product, dict):
+        asin = str(product.get("asin") or "").strip().upper()
+        if re.fullmatch(r"[A-Z0-9]{10}", asin):
+            return asin
+        href = str(_loc(product.get("url"), "nl") or "")
+    else:
+        href = str(product or "")
+    match = re.search(r"/dp/([A-Z0-9]{10})", href, re.I)
+    return match.group(1).upper() if match else ""
+
+
+def product_photo(product):
+    """(src, remote). A local /img/ path or a checked Amazon image. Empty if neither."""
+    if isinstance(product, dict):
+        image = str(product.get("image") or "").strip()
+        if image.startswith("/img/") and ".." not in image:
+            return image, False
+        remote = _amazon_image_url(image)
+        if remote:
+            return remote, True
+    asin = _product_asin(product)
+    remote = PRODUCT_IMAGES.get(asin) or ""
+    if remote:
+        return remote, True
+    return "", False
+
+
+def product_photo_html(src, alt, href, remote):
+    if not src:
+        return ""
+    img = (f'<img src="{esc(src)}" alt="{esc(alt)}" width="500" height="500" loading="lazy" decoding="async"'
+           f' onerror="{_IMG_HIDE}">')
+    if remote and href:
+        return (f'<a class="pshot" href="{esc(href)}" rel="sponsored nofollow noopener" target="_blank">{img}</a>')
+    return f'<span class="pshot">{img}</span>'
+
+
 def product_boxes(a, lang):
     """Optional affiliate box after the body. Articles opt in with a products list. No prices."""
     products = a.get("products") or []
@@ -3022,12 +3102,9 @@ def product_boxes(a, lang):
             specs = []
         specs = [str(item).strip() for item in specs if str(item).strip()][:6]
         button = str(_loc(product.get("button"), lang)).strip() or L["aff_btn"]
-        image = str(product.get("image") or "").strip()
-        img = ""
-        klass = "pbox noimg"
-        if image.startswith("/img/") and ".." not in image:
-            klass = "pbox"
-            img = f'<img src="{esc(image)}" alt="{esc(name)}" width="640" height="480" loading="lazy" decoding="async">'
+        src, remote = product_photo(product)
+        img = product_photo_html(src, name, href, remote)
+        klass = "pbox" if img else "pbox noimg"
         lis = "".join(f"<li>{esc(item)}</li>" for item in specs)
         ul = f"<ul>{lis}</ul>" if lis else ""
         why_html = f'<p class="why">{esc(why)}</p>' if why else ""
@@ -4267,8 +4344,12 @@ def recommend_block(lang, kind, current):
         if not name or not href:
             continue
         note = f"<span>{esc(why)}</span>" if why else ""
+        src, remote = product_photo(item)
+        thumb = product_photo_html(src, name, href, remote) if src else ""
+        thumb = thumb.replace('class="pshot"', 'class="pshot pth"', 1) if thumb else ""
+        klass = "hasimg" if thumb else ""
         rows.append(
-            f'<li><a href="{esc(href)}" rel="sponsored nofollow noopener" target="_blank">{esc(name)}</a>{note}</li>')
+            f'<li class="{klass}">{thumb}<div class="rt"><a href="{esc(href)}" rel="sponsored nofollow noopener" target="_blank">{esc(name)}</a>{note}</div></li>')
         amazon = True
     if not rows:
         return ""
@@ -6270,12 +6351,10 @@ def _guide_product(fields, lang):
         return ""
     pros = _bits(fields.get(f"pros_{lang}") or fields.get("pros_en"))
     cons = _bits(fields.get(f"cons_{lang}") or fields.get("cons_en"))
-    image = str(fields.get("image") or "")
-    img = ""
-    klass = "gbox noimg"
-    if image.startswith("/img/") and ".." not in image:
-        klass = "gbox"
-        img = f'<img src="{esc(image)}" alt="" width="640" height="480" loading="lazy" decoding="async">'
+    href = guide_amazon(str(fields.get("url") or ""))
+    src, remote = product_photo({"image": fields.get("image") or "", "url": fields.get("url") or ""})
+    img = product_photo_html(src, name, href if href.startswith("https://") else "", remote)
+    klass = "gbox" if img else "gbox noimg"
     plus = "Pros" if lang == "en" else "Pluspunten"
     minus = "Cons" if lang == "en" else "Minpunten"
     lists = ""
@@ -6283,7 +6362,6 @@ def _guide_product(fields, lang):
         lists += f'<h3>{plus}</h3><ul>{"".join(f"<li>{esc(item)}</li>" for item in pros)}</ul>'
     if cons:
         lists += f'<h3>{minus}</h3><ul>{"".join(f"<li>{esc(item)}</li>" for item in cons)}</ul>'
-    href = guide_amazon(str(fields.get("url") or ""))
     button = fields.get(f"button_{lang}") or fields.get("button_en") or (
         "View on Amazon" if lang == "en" else "Bekijk bij Amazon")
     link = ""
@@ -6416,6 +6494,7 @@ def disclosure_body(lang):
 def build():
     load_money()
     load_affiliate()
+    load_product_images()
     load_shorts()
     _OPT.clear()
     arts = load_articles()

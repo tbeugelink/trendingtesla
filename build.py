@@ -1016,18 +1016,16 @@ header.hb .pnav>.is-parked{display:none}
 .pv-lead h1,.pv-lead h2{font-size:clamp(1.25rem,2.2vw,1.7rem);line-height:1.18;margin:4px 0 8px}
 .pv-lead p{color:var(--muted);font-size:.92rem;line-height:1.45;margin:0}
 .pv-day{font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);margin:8px 0 2px;padding-top:6px;border-top:1px solid var(--border)}
-.pv-row{display:grid;grid-template-columns:52px minmax(0,1fr) 46px;gap:8px;align-items:center;padding:3px 0;border-bottom:1px solid #242424;text-decoration:none;color:inherit}
-.pv-row.vmark{grid-template-columns:52px minmax(0,1fr) 54px}
-.pv-row.vmark .pv-min b{font-size:.72rem}
-.pv-row.hasth{grid-template-columns:52px 64px minmax(0,1fr) 46px}
+.pv-row{display:grid;grid-template-columns:52px minmax(0,1fr) 64px;gap:8px;align-items:center;padding:3px 0;border-bottom:1px solid #242424;text-decoration:none;color:inherit}
+.pv-row.hasth{grid-template-columns:52px 64px minmax(0,1fr) 64px}
 .pv-row time{font-variant-numeric:tabular-nums;font-size:.8rem;font-weight:800;color:var(--dim)}
 .pv-th{position:relative;container-type:inline-size;border-radius:6px;overflow:hidden;border:1px solid var(--edge);background:#000}
 .pv-th img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
 .pv-hl{min-width:0}
 .pv-hl b{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;white-space:normal;font-size:.95rem;line-height:1.3;font-weight:400;color:var(--blue)}
-.pv-min{justify-self:end;min-width:42px;text-align:center;border:1px solid var(--border2);border-radius:8px;padding:1px 0;line-height:1}
-.pv-min b{display:block;color:var(--red);font-size:.85rem;line-height:1}
-.pv-min small{display:block;color:var(--dim);font-size:.58rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;line-height:1}
+.pv-min{justify-self:end;box-sizing:border-box;width:64px;min-width:64px;text-align:center;border:1px solid var(--border2);border-radius:8px;padding:3px 2px;line-height:1}
+.pv-min b{display:block;color:var(--red);font-size:.85rem;font-weight:800;line-height:1;white-space:nowrap}
+.pv-min small{display:block;margin-top:2px;color:var(--dim);font-size:.58rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;line-height:1;white-space:nowrap}
 .pv-row:hover .pv-hl b,.pv-row:focus-visible .pv-hl b{color:#fff;text-decoration:underline;text-underline-offset:2px}
 .pv-side h2{font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#fff;border-top:3px solid var(--red);padding-top:8px;margin:0 0 8px}
 .pv-side section{margin:0 0 18px}
@@ -1152,7 +1150,7 @@ article.money>.lmeta a.lname:hover{text-decoration:underline}
 .pv-grid,.pv-art,.pv-art.pv-c,.sheet{grid-template-columns:1fr}
 .pv-lead{grid-template-columns:1fr}
 .pv-c .toc{position:static}
-.pv-row.hasth{grid-template-columns:46px 52px minmax(0,1fr) 40px}
+.pv-row.hasth{grid-template-columns:46px 52px minmax(0,1fr) 64px}
 }
 /* Related and the rest of the sidebar share one rail. The article must not
    span two rows of that rail: auto rows then grow with the story and open a gap
@@ -2370,7 +2368,7 @@ ROW_PX = 168
 MAX_LEFT = 24   # articles in the list under the lead
 MAX_RIGHT = 50  # articles in the news column
 MAX_HOME_GRID = 60  # articles in the grid under the tip bar on the home page
-MAX_HOME_FEED = 30  # dated list under the card grid, newest first, excluding the cards already shown
+MAX_HOME_FEED = 30  # preview lists only; the live homepage list includes every story
 MAX_HOME_CARDS = 24  # chronological card grid at the top of the homepage
 XTRA = 0  # hidden spare cards after a paged grid; the browser shows enough of them to complete the last row
 PER_PAGE = 60   # articles per archive page (60 fills every row at 1-6 columns)
@@ -4417,6 +4415,29 @@ def clip_badge(item):
     return "Video"
 
 
+def whole_minutes(seconds):
+    """Video length in whole minutes, at least one."""
+    seconds = int(seconds or 0)
+    if seconds <= 0:
+        return 1
+    return max(1, round(seconds / 60))
+
+
+def list_badge(top, sub):
+    """The same boxed badge on every dated-list row: red figure, small label under it."""
+    return f'<span class="pv-min"><b>{esc(str(top))}</b><small>{esc(sub)}</small></span>'
+
+
+def story_list_badge(a, lang):
+    """A story with a video shows that video. A plain article shows its reading time."""
+    video = video_for(a, "en")
+    if video:
+        return list_badge("Video", f"{whole_minutes(video.get('seconds') or 0)} min")
+    if SHORTS.get(a["slug"]):
+        return list_badge("Short", "1 min")
+    return list_badge(read_time(a, lang), "min")
+
+
 def clip_meta(item, lang):
     stamp = stamp_html(item["stamp"], lang)
     article = item.get("article")
@@ -4452,32 +4473,25 @@ def home_card(item, lang, eager=False):
 
 
 def home_feed(items, lang):
-    """Dated newest-first list. A story with a video keeps that badge. An unattached video links to its watch page."""
+    """Dated newest-first list. Every row uses the same badge. One row per story."""
     out, last = [], None
     for item in items:
         day = item["stamp"].astimezone(TZ).date().isoformat()
         if day != last:
             out.append(f'<h2 class="pv-day">{fmt_date(day, lang)}</h2>')
             last = day
-        if item["kind"] == "article" and not item.get("badge"):
+        if item["kind"] == "article":
             out.append(pv_row(item["article"], lang))
             continue
-        if item["kind"] == "article":
-            a = item["article"]
-            mark = item["badge"]
-            stamp = published(a)
-            href = url(lang, a["slug"] + "/")
-            title = card_title(a, lang)
+        if item["kind"] == "short":
+            badge = list_badge("Short", "1 min")
         else:
-            mark = clip_badge(item)
-            stamp = item["stamp"]
-            href = url(lang, item["path"])
-            title = item["title"]
+            badge = list_badge("Video", f"{whole_minutes(item.get('seconds') or 0)} min")
         out.append(
-            f'<a class="pv-row vmark" href="{href}">'
-            f'<time datetime="{stamp.isoformat()}">{stamp.strftime("%H:%M")}</time>'
-            f'<span class="pv-hl"><b>{esc(title)}</b></span>'
-            f'<span class="pv-min" title="{esc(mark)}"><b>{esc(mark)}</b></span></a>')
+            f'<a class="pv-row" href="{url(lang, item["path"])}">'
+            f'<time datetime="{item["stamp"].isoformat()}">{item["stamp"].strftime("%H:%M")}</time>'
+            f'<span class="pv-hl"><b>{esc(item["title"])}</b></span>'
+            f'{badge}</a>')
     return "".join(out)
 
 
@@ -4489,8 +4503,8 @@ def homepage(arts, lang):
         return shell(f'{nav}<h1>{esc(NAME)}</h1><p class="empty">{L["empty"]}</p>', page_side(arts, lang, "home")), crumb_ld
     ordered = home_items(arts)
     grid = ordered[:MAX_HOME_CARDS]
-    # Continue the same newest-first order. Nothing from the grid is repeated.
-    feed = ordered[MAX_HOME_CARDS:MAX_HOME_CARDS + MAX_HOME_FEED]
+    # The dated list repeats the cards above on purpose, then continues through every story.
+    feed = ordered
     label = "Latest news" if lang == "en" else "Het laatste nieuws"
     cards = "".join(home_card(item, lang, eager=i < 4) for i, item in enumerate(grid))
     row = f'<section class="homenews" aria-label="{esc(label)}">{cards}</section>'
@@ -4612,13 +4626,11 @@ def pv_row(a, lang, thumb=False):
     if thumb:
         im = (f'<span class="pv-th zimg">{resp_img(site_img(a), t["title"], "(max-width: 700px) 22vw, 64px", width=256, height=144)}'
               f'{ovl(a, lang)}</span>')
-    mins = read_time(a, lang)
-    label = f'{mins} {LANGS[lang]["min"]}'
     shown = card_title(a, lang)
     return (f'<a class="pv-row{" hasth" if thumb else ""}" href="{href}" title="{esc(t["title"])}">'
             f'<time datetime="{published(a).isoformat()}">{published(a).strftime("%H:%M")}</time>{im}'
             f'<span class="pv-hl"><b>{esc(shown)}</b></span>'
-            f'<span class="pv-min" title="{esc(label)}"><b>{mins}</b><small>min</small></span></a>')
+            f'{story_list_badge(a, lang)}</a>')
 
 
 def pv_feed(items, lang, thumbs=0):

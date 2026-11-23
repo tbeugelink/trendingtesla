@@ -1,16 +1,12 @@
-"""Cut the pad-turnaround preview Short, version 4. Nothing is uploaded or published.
+"""Cut the pad-turnaround preview Short, version 5. Nothing is uploaded or published.
 
-Picture is the official SpaceX webcast of USSF-317 and of NROL-136, both from pad 4E,
-plus four motion-graphics cards. Voice is the Noah files in out/.
+Picture is the two pad cameras (USSF-317 and NROL-136, both SLC-4E) and the
+LZ-4 landing, plus four motion-graphics cards on a blurred pad frame. The
+tracking shots are gone: a rocket smaller than the pad, or a frame that is
+mostly black, does not stay in.
 
-v4 drops both grid-fin cameras and the orange full-frame liftoff. Each webcast
-shot is used once, apart from the loop, which is the opening camera in the
-seconds before ignition. No shot is longer than 3.0 s. Graphics stay under
-30 percent of the runtime.
-
-The bed is original, written in this file. The part a phone can play sits in
-the midrange: an arp and a pad between 300 Hz and 4 kHz, a clap in the 1-3 kHz
-band, and a riser into the open and into the last line.
+Voice is the existing Noah takes, shortened to the lines that fit 24-28 s.
+No shot is longer than 3.0 s. The bed is the same midrange track as v4.
 """
 import json
 import math
@@ -21,7 +17,7 @@ import sys
 import wave
 from pathlib import Path
 
-from PIL import Image, ImageDraw, ImageEnhance, ImageFont
+from PIL import Image, ImageDraw, ImageEnhance, ImageFilter, ImageFont
 
 HERE = Path(__file__).resolve().parent
 CLIPS = Path("/tmp/pad32")
@@ -33,48 +29,43 @@ WHITE = (255, 255, 255)
 DIM = (186, 196, 210)
 NAVY = (7, 10, 18)
 
+# Spoken lines, in order. These are existing Noah takes. Four lines are left out
+# so the cut fits 24-28 s. There is no key here to re-record a new sentence.
+LINES = ("s1", "s2", "s3", "s4", "s5", "s9", "s10")
+
 # dur is the picture length. The loop shot is rewritten to match the voice.
 # crop is x, y, w, h on the 1920x1080 webcast. w/h is 9:16.
+# zoom is the start and end scale of a slow push-in on that crop.
 SHOTS = [
-    {"id": "open", "kind": "video", "file": "ussf317-1080.mp4", "ss": 755.05, "dur": 3.00,
-     "hook": True, "fx": "hold", "crop": (730, 0, 506, 900), "mission": "USSF-317",
-     "shows": "Pad camera, SLC-4E, from before ignition to the moment the engines light. Full Falcon 9, cut before the plume fills the frame."},
-    {"id": "plume", "kind": "video", "file": "ussf317-1080.mp4", "ss": 806.00, "dur": 3.00,
-     "fx": "soft", "crop": (707, 0, 506, 900), "mission": "USSF-317",
-     "shows": "Ground tracking. One plume on a black sky, well before the engine close-up."},
-    {"id": "stack", "kind": "video", "file": "nrol136-1080.mp4", "ss": 827.20, "dur": 3.00,
-     "fx": "hold", "crop": (640, 0, 486, 864), "mission": "NROL-136",
-     "shows": "Sunday's Falcon 9 on SLC-4E, full stack, venting, engines not lit. Cropped above the webcast HUD."},
-    {"id": "timeline", "kind": "graphic", "graphic": "timeline", "dur": 3.00, "mission": "graphic",
-     "shows": "Fri 20 Nov 20:20 PT to Sun 22 Nov 04:23 PT."},
-    {"id": "clock", "kind": "graphic", "graphic": "clock", "dur": 3.00, "mission": "graphic",
-     "shows": "A clock counting up to 32:03:21."},
-    {"id": "bars", "kind": "graphic", "graphic": "bars", "dur": 3.00, "mission": "graphic",
-     "shows": "45 hours against 32 hours."},
-    {"id": "climb", "kind": "video", "file": "nrol136-1080.mp4", "ss": 888.40, "dur": 2.60,
-     "fx": "pale", "crop": (707, 0, 506, 900), "mission": "NROL-136",
-     "shows": "Sunday's climb. One plume on a black sky, desaturated so it does not go orange."},
-    {"id": "star", "kind": "video", "file": "ussf317-1080.mp4", "ss": 922.50, "dur": 3.00,
-     "fx": "soft", "crop": (995, 0, 506, 900), "mission": "USSF-317",
-     "shows": "Second-stage ignition. One point of light, centered on the source star."},
-    {"id": "far", "kind": "video", "file": "ussf317-1080.mp4", "ss": 847.40, "dur": 3.00,
-     "fx": "pale", "crop": (715, 40, 450, 800), "mission": "USSF-317",
-     "shows": "Wide tracking. One small plume, cropped above the webcast HUD. A faint smear sits beside it."},
-    {"id": "two", "kind": "graphic", "graphic": "two", "dur": 2.80, "mission": "graphic",
-     "shows": "Two boosters, not one. B1097, flight 14."},
-    {"id": "coast", "kind": "video", "file": "nrol136-1080.mp4", "ss": 960.50, "dur": 1.80,
-     "fx": "soft", "crop": (308, 0, 484, 860), "mission": "NROL-136",
-     "shows": "One engine and a faint trail on a black sky, after the climb and before stage separation. A tight zoom shows a few dark streaks around the light. Not the white onboard fin camera."},
-    {"id": "land", "kind": "video", "file": "nrol136-1080.mp4", "ss": 1297.50, "dur": 2.45,
-     "fx": "soft", "crop": (1180, 170, 380, 676), "mission": "NROL-136",
-     "shows": "Landing Zone 4. Booster, legs and one flame. The grid-fin camera beside it is cropped out."},
-    {"id": "pair", "kind": "video", "file": "ussf317-1080.mp4", "ss": 976.80, "dur": 2.80,
-     "fx": "soft", "crop": (1160, 0, 484, 860), "mission": "USSF-317",
-     "shows": "After stage separation. Two lights on a black sky: the booster and the second stage. No lattice."},
-    {"id": "loop", "kind": "video", "file": "ussf317-1080.mp4", "ss": 752.10, "dur": 2.90,
-     "fx": "hold", "crop": (730, 0, 506, 900), "mission": "USSF-317",
-     "shows": "The opening camera in the seconds before ignition, so the cut back continues into engine start."},
+    {"id": "open", "kind": "video", "file": "ussf317-1080.mp4", "ss": 751.80, "dur": 3.00,
+     "hook": True, "fx": "hold", "zoom": (1.00, 1.08), "crop": (707, 0, 506, 900), "mission": "USSF-317",
+     "shows": "Friday pad, SLC-4E. Full Falcon 9, strongback, venting. Slow push-in. Hook."},
+    {"id": "tight", "kind": "video", "file": "ussf317-1080.mp4", "ss": 744.20, "dur": 2.80,
+     "fx": "hold", "zoom": (1.04, 1.14), "crop": (707, 0, 506, 900), "mission": "USSF-317",
+     "shows": "Same Friday pad a few seconds earlier, pushed in closer. Full Falcon 9."},
+    {"id": "timeline", "kind": "graphic", "graphic": "timeline", "dur": 2.50, "mission": "graphic",
+     "shows": "Fri 20 Nov 20:20 PT to Sun 22 Nov 04:23 PT, over a blurred pad frame."},
+    {"id": "stack", "kind": "video", "file": "nrol136-1080.mp4", "ss": 824.60, "dur": 2.80,
+     "fx": "hold", "zoom": (1.00, 1.10), "crop": (790, 310, 320, 568), "mission": "NROL-136",
+     "shows": "Sunday's Falcon 9 on SLC-4E, full stack, cropped above the webcast HUD."},
+    {"id": "clock", "kind": "graphic", "graphic": "clock", "dur": 2.70, "mission": "graphic",
+     "shows": "A clock racing up to 32:03:21, over a blurred pad frame."},
+    {"id": "bars", "kind": "graphic", "graphic": "bars", "dur": 2.60, "mission": "graphic",
+     "shows": "45 hours against 32 hours, bars growing, over a blurred pad frame."},
+    {"id": "two", "kind": "graphic", "graphic": "two", "dur": 2.20, "mission": "graphic",
+     "shows": "Two boosters, not one. B1097, flight 14. Over a blurred pad frame."},
+    {"id": "land", "kind": "video", "file": "nrol136-1080.mp4", "ss": 1297.25, "dur": 1.60,
+     "fx": "land", "zoom": (1.00, 1.04), "crop": (1250, 260, 260, 462), "mission": "NROL-136",
+     "shows": "LZ-4, tight on the booster and the legs, cut before the booster drops out of frame."},
+    {"id": "push", "kind": "video", "file": "nrol136-1080.mp4", "ss": 819.80, "dur": 3.00,
+     "fx": "hold", "zoom": (1.00, 1.06), "crop": (805, 330, 290, 516), "mission": "NROL-136",
+     "shows": "Sunday pad again, tighter and a few seconds earlier. Full Falcon 9."},
+    {"id": "loop", "kind": "video", "file": "ussf317-1080.mp4", "ss": 749.60, "dur": 2.20,
+     "fx": "hold", "zoom": (1.00, 1.06), "crop": (707, 0, 506, 900), "mission": "USSF-317",
+     "shows": "The opening camera in the seconds before ignition, so the cut back continues."},
 ]
+
+BG = None
 
 
 def run(cmd):
@@ -184,6 +175,10 @@ def grade_frame(im, fx):
     elif fx == "soft":
         hi, lift, sat, contrast = 0.55, 0.0, 0.58, 1.02
         head = 0.28
+    elif fx == "land":
+        # Lift the booster out of the black sky. Roll the flame off before it clips.
+        hi, lift, sat, contrast = 0.48, 0.10, 0.46, 1.05
+        head = 0.16
     else:
         hi, lift, sat, contrast = 0.72, 0.03, 0.86, 1.04
         head = 0.22
@@ -217,45 +212,73 @@ def extract(shot, dest):
          "-c:v", "libx264", "-pix_fmt", "yuv420p", "-crf", "16", str(dest)])
 
 
+def appear(p, start, span=0.22):
+    u = (p - start) / span
+    if u <= 0:
+        return 0.0
+    if u >= 1:
+        return 1.0
+    return 1 - (1 - u) ** 3
+
+
 def paint_graphic(kind, p):
-    im = Image.new("RGB", (W, H), NAVY)
+    im = BG.copy() if BG is not None else Image.new("RGB", (W, H), NAVY)
     d = ImageDraw.Draw(im)
-    # A quiet horizon line so the card is not a flat field.
-    d.rectangle((0, 0, W, 8), fill=YELLOW)
+    d.rectangle((0, 0, int(W * min(1.0, p * 1.4)), 8), fill=YELLOW)
     if kind == "timeline":
-        draw_text(im, "ONE PAD", 54, 380, DIM, W * 0.8, stroke=0)
-        draw_text(im, "FRI 20 NOV", 64, 500, WHITE, W * 0.86)
-        draw_text(im, "20:20 PT", 92, 590, YELLOW, W * 0.86)
-        y = 760
-        d.rounded_rectangle((140, y, W - 140, y + 8), radius=4, fill=(40, 48, 64))
-        x = 140 + (W - 280) * min(1.0, p)
-        d.ellipse((x - 16, y - 12, x + 16, y + 20), fill=YELLOW)
-        draw_text(im, "SUN 22 NOV", 64, 860, WHITE, W * 0.86)
-        draw_text(im, "04:23 PT", 92, 950, YELLOW, W * 0.86)
-        draw_text(im, "SLC-4E  VANDENBERG", 36, 1100, DIM, W * 0.8, stroke=0)
+        if appear(p, 0.0) > 0:
+            draw_text(im, "ONE PAD", 54, 340 + int(40 * (1 - appear(p, 0.0))), DIM, W * 0.8, stroke=0)
+        if appear(p, 0.08) > 0:
+            dy = int(70 * (1 - appear(p, 0.08)))
+            draw_text(im, "FRI 20 NOV", 64, 470 + dy, WHITE, W * 0.86)
+            draw_text(im, "20:20 PT", 92, 560 + dy, YELLOW, W * 0.86)
+        y = 740
+        d.rounded_rectangle((140, y, W - 140, y + 10), radius=5, fill=(40, 48, 64))
+        x = 140 + (W - 280) * min(1.0, p * 1.05)
+        d.ellipse((x - 18, y - 14, x + 18, y + 22), fill=YELLOW)
+        if appear(p, 0.28) > 0:
+            dy = int(70 * (1 - appear(p, 0.28)))
+            draw_text(im, "SUN 22 NOV", 64, 820 + dy, WHITE, W * 0.86)
+            draw_text(im, "04:23 PT", 92, 910 + dy, YELLOW, W * 0.86)
+        if appear(p, 0.45) > 0:
+            draw_text(im, "SLC-4E  VANDENBERG", 36, 1060, DIM, W * 0.8, stroke=0)
     elif kind == "clock":
         total = 32 * 3600 + 3 * 60 + 21
-        shown = int(round(total * (p ** 0.55)))
-        if p > 0.92:
+        # Fast through the count, then hold 32:03:21 so the number can be read.
+        shown = int(round(total * min(1.0, p / 0.62) ** 0.40))
+        if p > 0.62:
             shown = total
         hh, rem = divmod(shown, 3600)
         mm, ss = divmod(rem, 60)
-        draw_text(im, "THE GAP", 54, 520, DIM, W * 0.8, stroke=0)
-        draw_text(im, f"{hh:02d}:{mm:02d}:{ss:02d}", 118, 680, YELLOW, W * 0.92)
-        draw_text(im, "ONE PAD", 48, 900, WHITE, W * 0.8)
+        if appear(p, 0.0) > 0:
+            draw_text(im, "THE GAP", 54, 470 + int(36 * (1 - appear(p, 0.0))), DIM, W * 0.8, stroke=0)
+        draw_text(im, f"{hh:02d}:{mm:02d}:{ss:02d}", 108, 640, YELLOW, W * 0.94)
+        if appear(p, 0.55) > 0:
+            draw_text(im, "ONE PAD", 48, 880, WHITE, W * 0.8)
     elif kind == "bars":
-        draw_text(im, "THE RECORD", 54, 460, DIM, W * 0.8, stroke=0)
-        grow = min(1.0, p / 0.45)
+        if appear(p, 0.0) > 0:
+            draw_text(im, "THE RECORD", 54, 420 + int(30 * (1 - appear(p, 0.0))), DIM, W * 0.8, stroke=0)
         d = ImageDraw.Draw(im)
-        d.rounded_rectangle((120, 640, 120 + int(840 * grow), 720), radius=12, fill=(70, 78, 92))
-        draw_text(im, "45 HOURS", 48, 740, WHITE, W * 0.8)
-        d.rounded_rectangle((120, 880, 120 + int(840 * (32 / 45) * grow), 960), radius=12, fill=YELLOW)
-        draw_text(im, "32 HOURS", 48, 980, YELLOW, W * 0.8)
+        grow45 = min(1.0, max(0.0, p / 0.38))
+        grow32 = min(1.0, max(0.0, (p - 0.28) / 0.40))
+        d.rounded_rectangle((120, 620, 120 + max(8, int(840 * grow45)), 710), radius=14, fill=(70, 78, 92))
+        if grow45 > 0.35:
+            draw_text(im, "45 HOURS", 48, 730, WHITE, W * 0.8)
+        d.rounded_rectangle((120, 880, 120 + max(8, int(840 * (32 / 45) * grow32)), 970), radius=14, fill=YELLOW)
+        if grow32 > 0.35:
+            draw_text(im, "32 HOURS", 48, 990, YELLOW, W * 0.8)
     elif kind == "two":
-        draw_text(im, "TWO BOOSTERS", 78, 520, WHITE, W * 0.92)
-        draw_text(im, "NOT ONE", 78, 640, YELLOW, W * 0.86)
-        draw_text(im, "B1097", 96, 860, YELLOW, W * 0.86)
-        draw_text(im, "FLIGHT 14", 64, 990, WHITE, W * 0.86)
+        lines = (
+            (0.00, "TWO BOOSTERS", 72, 480, WHITE),
+            (0.18, "NOT ONE", 78, 600, YELLOW),
+            (0.40, "B1097", 96, 800, YELLOW),
+            (0.58, "FLIGHT 14", 64, 940, WHITE),
+        )
+        for start, text, size, y, fill in lines:
+            a = appear(p, start)
+            if a <= 0:
+                continue
+            draw_text(im, text, size, y + int(64 * (1 - a)), fill, W * 0.92)
     return im
 
 
@@ -265,10 +288,11 @@ def encode_frames(frames_path, dest, nframes):
          "-crf", "16", str(dest)])
 
 
-def grade_and_caption(src, dest, cards, hook_until, t0, fx):
+def grade_and_caption(src, dest, cards, hook_until, t0, fx, zoom=None):
     raw = OUT / "raw.rgb"
     run(["ffmpeg", "-y", "-v", "error", "-i", str(src), "-f", "rawvideo", "-pix_fmt", "rgb24", str(raw)])
     frame = W * H * 3
+    nframes = raw.stat().st_size // frame
     graded = OUT / "graded.rgb"
     with raw.open("rb") as inp, graded.open("wb") as outp:
         n = 0
@@ -278,6 +302,16 @@ def grade_and_caption(src, dest, cards, hook_until, t0, fx):
                 break
             t = t0 + n / FPS
             im = Image.frombytes("RGB", (W, H), buf)
+            z0, z1 = zoom or (1.0, 1.0)
+            z = z0 + (z1 - z0) * (n / max(1, nframes - 1))
+            if z > 1.01:
+                cw = int(W / z)
+                ch = int(H / z)
+                cw -= cw % 2
+                ch -= ch % 2
+                x0 = (W - cw) // 2
+                y0 = (H - ch) // 2
+                im = im.crop((x0, y0, x0 + cw, y0 + ch)).resize((W, H), Image.Resampling.LANCZOS)
             im = grade_frame(im, fx)
             cap = ""
             for a, b, text in cards:
@@ -418,8 +452,60 @@ def lufs(path, extra_af=""):
     return float(found[-1])
 
 
+def build_background():
+    """One darkened, blurred pad frame behind every graphic, so the cards are not flat black."""
+    global BG
+    still = OUT / "pad-bg.jpg"
+    run(["ffmpeg", "-y", "-v", "error", "-ss", "752.2", "-i", str(CLIPS / "ussf317-1080.mp4"),
+         "-frames:v", "1", "-vf", "crop=506:900:707:0,scale=1080:1920", str(still)])
+    im = Image.open(still).convert("RGB")
+    im = im.filter(ImageFilter.GaussianBlur(radius=22))
+    im = ImageEnhance.Brightness(im).enhance(0.36)
+    im = ImageEnhance.Color(im).enhance(0.75)
+    BG = im
+
+
+def audit(path):
+    """Every frame: clipped white (all channels >= 250) and near-black (max channel < 22)."""
+    raw = OUT / "audit.rgb"
+    run(["ffmpeg", "-y", "-v", "error", "-i", str(path), "-f", "rawvideo", "-pix_fmt", "rgb24", str(raw)])
+    frame = W * H * 3
+    step = 4
+    worst_clip = (0.0, 0.0)
+    worst_black = (0.0, 0.0)
+    n = 0
+    with raw.open("rb") as inp:
+        while True:
+            buf = inp.read(frame)
+            if len(buf) < frame:
+                break
+            clip = black = seen = 0
+            for i in range(0, frame, 3 * step):
+                r, g, b = buf[i], buf[i + 1], buf[i + 2]
+                seen += 1
+                if r >= 250 and g >= 250 and b >= 250:
+                    clip += 1
+                if r < 22 and g < 22 and b < 22:
+                    black += 1
+            c = clip / seen
+            b = black / seen
+            t = n / FPS
+            if c > worst_clip[0]:
+                worst_clip = (c, t)
+            if b > worst_black[0]:
+                worst_black = (b, t)
+            if c > 0.20:
+                raise SystemExit(f"frame {t:.2f}s is {c:.1%} clipped white")
+            n += 1
+    raw.unlink(missing_ok=True)
+    print(f"audit frames {n}  worst clip {worst_clip[0]:.1%} at {worst_clip[1]:.2f}s  "
+          f"worst black {worst_black[0]:.1%} at {worst_black[1]:.2f}s", flush=True)
+
+
 def timeline_of():
     alignment = json.loads((HERE / "out" / "alignment.json").read_text(encoding="utf-8"))
+    by_id = {s["id"]: s for s in alignment["sentences"]}
+    alignment = {**alignment, "sentences": [by_id[i] for i in LINES]}
     timeline = []
     t = 0.0
     for i, s in enumerate(alignment["sentences"]):
@@ -440,17 +526,19 @@ def main():
     fixed = sum(s["dur"] for s in SHOTS[:-1])
     SHOTS[-1]["dur"] = round(total - fixed, 3)
     if SHOTS[-1]["dur"] > 3.0:
-        # Keep the loop inside the cap by shortening the ascent view, which can spare it.
-        far = next(s for s in SHOTS if s["id"] == "far")
-        far["dur"] = round(far["dur"] - (SHOTS[-1]["dur"] - 2.95), 3)
+        # A long loop means the shots before it are short. Lengthen the pad push.
+        spare = next(s for s in SHOTS if s["id"] == "push")
+        room = round(3.0 - spare["dur"], 3)
+        spare["dur"] = round(spare["dur"] + min(room, SHOTS[-1]["dur"] - 2.95), 3)
         fixed = sum(s["dur"] for s in SHOTS[:-1])
         SHOTS[-1]["dur"] = round(total - fixed, 3)
     SHOTS[-1]["ss"] = round(SHOTS[0]["ss"] - SHOTS[-1]["dur"], 3)
     if not 1.2 <= SHOTS[-1]["dur"] <= 3.0:
         raise SystemExit(f"loop length {SHOTS[-1]['dur']} is outside 1.2-3.0s")
     graphic = sum(s["dur"] for s in SHOTS if s["kind"] == "graphic")
-    if graphic / total > 0.30:
+    if graphic / total > 0.45:
         raise SystemExit(f"graphics are {graphic / total:.1%} of the runtime")
+    build_background()
     for shot in SHOTS:
         if shot["dur"] > 3.0 + 1e-6:
             raise SystemExit(f"{shot['id']} is {shot['dur']}s, longer than 3.0")
@@ -474,7 +562,8 @@ def main():
         else:
             plain = OUT / f"{shot['id']}-plain.mp4"
             extract(shot, plain)
-            grade_and_caption(plain, graded, cards, SHOTS[0]["dur"] if shot.get("hook") else None, t, shot.get("fx") or "hold")
+            grade_and_caption(plain, graded, cards, SHOTS[0]["dur"] if shot.get("hook") else None, t,
+                              shot.get("fx") or "hold", shot.get("zoom"))
             plain.unlink(missing_ok=True)
         clip_audio(shot, audio)
         segs.append({"video": graded, "audio": audio, "t0": t, "length": shot["dur"], "shot": shot})
@@ -547,7 +636,7 @@ def main():
     stem_band = lufs(bed_out, band)
     ducked_lufs = lufs(ducked)
 
-    final = OUT / "spacex-one-pad-32-hours-short-v4.mp4"
+    final = OUT / "spacex-one-pad-32-hours-short-v5.mp4"
     run(["ffmpeg", "-y", "-v", "error", "-i", str(silent), "-i", str(voice_out), "-i", str(rumble), "-i", str(ducked),
          "-filter_complex",
          "[1:a]volume=1.0[v];"
@@ -562,7 +651,7 @@ def main():
           f"ducked {ducked_lufs:.1f}  ducked-300-4k {ducked_band:.1f}  mix {mix_lufs:.1f}", flush=True)
 
     thumb_src = OUT / "spacex-one-pad-32-hours-thumb-v2.jpg"
-    thumb = OUT / "spacex-one-pad-32-hours-thumb-v4.jpg"
+    thumb = OUT / "spacex-one-pad-32-hours-thumb-v5.jpg"
     if thumb_src.exists():
         thumb.write_bytes(thumb_src.read_bytes())
 
@@ -576,7 +665,8 @@ def main():
         })
         print(f"{t:6.2f}-{t + g['dur']:6.2f}  {g['id']:10} {g['dur']:.2f}s  {g['shows']}", flush=True)
         t += g["dur"]
-    (OUT / "shots-v4.json").write_text(json.dumps({
+    audit(final)
+    (OUT / "shots-v5.json").write_text(json.dumps({
         "duration": round(total, 3),
         "graphics_s": round(graphic, 3),
         "graphics_share": round(graphic / total, 4),

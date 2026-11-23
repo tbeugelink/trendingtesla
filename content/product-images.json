@@ -1,12 +1,3 @@
 {
-  "_help": "Official product photos from the checked amazon.nl listings, served by m.media-amazon.com. Each image is linked to that product's tagged page. An ASIN with no entry keeps a text-only box.",
-  "B0BW16BBKQ": "https://m.media-amazon.com/images/P/B0BW16BBKQ.01._SCLZZZZZZZ_SX500_.jpg",
-  "B07D1KF73V": "https://m.media-amazon.com/images/P/B07D1KF73V.01._SCLZZZZZZZ_SX500_.jpg",
-  "B07CVXQVQM": "https://m.media-amazon.com/images/P/B07CVXQVQM.01._SCLZZZZZZZ_SX500_.jpg",
-  "B078C74CDY": "https://m.media-amazon.com/images/P/B078C74CDY.01._SCLZZZZZZZ_SX500_.jpg",
-  "B0DH3PLZ6N": "https://m.media-amazon.com/images/P/B0DH3PLZ6N.01._SCLZZZZZZZ_SX500_.jpg",
-  "B0DZ5JB22G": "https://m.media-amazon.com/images/I/71cOyytqEWL._AC_SX500_.jpg",
-  "B0F9SQJ4DD": "https://m.media-amazon.com/images/I/617HyBO2DfL._AC_SX500_.jpg",
-  "B0DG1WVDKP": "https://m.media-amazon.com/images/I/71OGL+c2ONL._AC_SX500_.jpg",
-  "B0FL2M1F4Q": "https://m.media-amazon.com/images/I/61rkbSQHCiL._AC_SX500_.jpg"
+  "_help": "Amazon product images are not downloaded, rehosted or hotlinked. Photos and video stay on the Amazon.nl product page."
 }

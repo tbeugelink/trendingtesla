@@ -484,9 +484,9 @@ h1,h2,h3{color:#ebebeb;font-weight:800}
 .tk{white-space:nowrap;color:inherit;text-decoration:none}
 .ticker a.tk{color:inherit}
 .tk::before{content:"";display:inline-block;width:3px;height:3px;margin:0 12px;border-radius:50%;background:currentColor;opacity:.38;vertical-align:middle}
-.tk b{color:var(--head);font-weight:700}
-.tk .up{color:#3ddc97}
-.tk .dn{color:#ff5d57}
+.tk b{color:var(--head);font-weight:700;margin-right:.45em}
+.tk .up{color:#3ddc97;margin-left:.35em}
+.tk .dn{color:#ff5d57;margin-left:.35em}
 .tk .when{margin-left:6px;color:var(--dim);font-weight:500}
 .ticker:hover .tk-track,.ticker:focus-within .tk-track{animation-play-state:paused}
 .tk[hidden]{display:none}

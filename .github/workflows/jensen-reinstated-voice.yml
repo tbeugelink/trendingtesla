@@ -1,0 +1,29 @@
+name: Jensen reinstated Short preview voice
+# Renders only the Noah narration and commits it back to this branch. Never uploads, never touches main.
+on:
+  push:
+    branches: [cursor/jensen-reinstated-short]
+    paths:
+      - .github/workflows/jensen-reinstated-voice.yml
+      - video/jensen-reinstated/script.json
+      - video/jensen-reinstated/noah_voice.py
+permissions:
+  contents: write
+jobs:
+  voice:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+      - run: pip install --quiet pillow num2words
+      - name: Render Noah narration
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        run: python3 video/jensen-reinstated/noah_voice.py
+      - name: Commit the audio to this branch
+        run: |
+          git config user.name "TrendingTesla bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f video/jensen-reinstated/out
+          git commit -qm "Jensen reinstated Short: Noah narration" || exit 0
+          git push -q origin HEAD:cursor/jensen-reinstated-short

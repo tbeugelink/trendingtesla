@@ -4043,9 +4043,15 @@ def article_media(a, lang):
         blocks.append(player(video["id"], "long", LANGS[lang]["watch"], poster, True, a[lang]["title"]))
     if short:
         blocks.append(player(short["id"], "short", LANGS[lang]["watch_short"], poster, True, a[lang]["title"]))
+    still = f'<div class="hi">{resp_img(poster, a[lang]["title"], SIZES_HERO, high=True, lazy=False, cls="hero-img")}</div>'
+    note = a.get("hero_note")
+    if isinstance(note, dict):
+        text = str(note.get(lang) or note.get("en") or "").strip()
+        if text:
+            still += f'<p class="imgnote">{esc(text)}</p>'
     if blocks:
         return "".join(blocks)
-    return f'<div class="hi">{resp_img(poster, a[lang]["title"], SIZES_HERO, high=True, lazy=False, cls="hero-img")}</div>'
+    return still
 
 
 def footage_note(slug, lang):
@@ -7429,7 +7435,10 @@ def build():
             t = a[lang]
             c = CATEGORIES[a["category"]]
             mod_dt, _differs = modified(a)
-            cover = SITE + social_img(a, lang)
+            og = str(a.get("og_image") or "").strip()
+            if not og.startswith("/img/"):
+                og = social_img(a, lang)
+            cover = SITE + og
             kind = ["NewsArticle", "LiveBlogPosting"] if a.get("type") == "live" else "NewsArticle"
             ld = {
                 "@context": "https://schema.org", "@type": kind,
@@ -7469,7 +7478,7 @@ def build():
             head = ld_script(ld) + ld_script(crumb_ld)
             write(url(lang, a["slug"] + "/"),
                   page(lang, a["slug"] + "/", t["title"], t["description"], body, "article", head,
-                       image=social_img(a, lang), active=a["category"]))
+                       image=og, active=a["category"]))
 
         idx = [{"u": url(lang, x["slug"] + "/"), "t": x[lang]["title"], "d": x[lang]["description"],
                 "k": _rubric_pair(x, lang)[0], "s": _rubric_pair(x, lang)[2],

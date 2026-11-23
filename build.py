@@ -4275,7 +4275,9 @@ def home_lead(a, lang, title_tag="h1"):
     href = url(lang, a["slug"] + "/")
     tag = "h1" if title_tag == "h1" else "h2"
     photo = site_img(a)
-    line = rubric_line(a, lang, link=True)
+    # Spans, not hub links. A link inside the story link is invalid HTML, and the
+    # browser then draws this line larger, underlined and in the wrong colours.
+    line = rubric_line(a, lang)
     im = (f'<div class="leadim">'
           f'{resp_img(photo, t["title"], SIZES_LEAD, high=True, lazy=False, width=1600, height=900)}</div>'
           if photo else "")

@@ -3,6 +3,7 @@
   "date": "2026-11-08",
   "time": "12:42",
   "category": "spacex",
+  "also_topics": ["falcon"],
   "sources": [
     {
       "title": "NASA Ames (Harry W. Jones): The Recent Large Reduction in Space Launch Cost",

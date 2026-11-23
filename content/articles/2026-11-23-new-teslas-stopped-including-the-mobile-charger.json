@@ -1,0 +1,76 @@
+{
+  "slug": "new-teslas-stopped-including-the-mobile-charger",
+  "date": "2026-11-23",
+  "time": "07:49",
+  "category": "charging",
+  "layer": "tesla-energy",
+  "topic": "home-charging",
+  "card": {
+    "en": "New Teslas lost the included mobile charger",
+    "nl": "Nieuwe Tesla's kregen geen mobiele lader"
+  },
+  "image": "wallbox-5.jpg",
+  "images": [
+    "wallbox-5.jpg",
+    "wallbox-4.jpg",
+    "wallbox-3.jpg",
+    "wallbox-2.jpg"
+  ],
+  "sources": [
+    {
+      "title": "Electrek — Tesla stops delivering cars with included charging hardware, 16 April 2022",
+      "url": "https://electrek.co/2022/04/16/tesla-goes-full-apple-stops-delivering-cars-with-included-charging-cable-now-sold-separately/"
+    },
+    {
+      "title": "Electrek — Tesla's cutoff for the included mobile charger, 19 April 2022",
+      "url": "https://electrek.co/2022/04/19/elon-musk-claims-tesla-super-low-usage-included-mobile-charger-stats/"
+    },
+    {
+      "title": "Tesla Oracle — Tesla confirms the cutoff date for the Mobile Connector, 19 April 2022",
+      "url": "https://www.teslaoracle.com/2022/04/19/tesla-confirms-the-cutoff-date-for-mobile-connector/"
+    },
+    {
+      "title": "Electrek — Tesla cuts home-charger prices after dropping the included cable, 29 April 2022",
+      "url": "https://electrek.co/2022/04/29/tesla-reduces-prices-home-chargers-after-removing-included-new-vehicles/"
+    }
+  ],
+  "label": {
+    "style": "n",
+    "en": {
+      "sub": "MOBILE CHARGER",
+      "text": "NO LONGER INCLUDED"
+    },
+    "nl": {
+      "sub": "MOBIELE LADER",
+      "text": "NIET MEER INBEGREPEN"
+    }
+  },
+  "gen_image": {
+    "prompt": "An editorial illustration of a coiled portable charging cable and a small control box on a garage floor beside a wall socket, calm empty lower-left, no lettering, no logo, no face, no readable brand",
+    "subject": "a portable car charging cable coiled beside a household socket",
+    "refs": [
+      {
+        "src": "topics/wallbox-5.jpg"
+      }
+    ],
+    "profile": "editorial",
+    "category": "C",
+    "describe": "Illustration of a portable charging cable. Not a photo of a specific delivery.",
+    "extra": [
+      {
+        "prompt": "An editorial illustration of an empty car boot floor where a charging kit would sit, soft garage light, empty lower-left, no lettering, no logo",
+        "describe": "Illustration of an empty place where a charging kit would sit"
+      }
+    ]
+  },
+  "en": {
+    "title": "New Teslas lost the included mobile charger",
+    "description": "Tesla stopped including the Mobile Connector with new orders after 17 April 2022 and sold the cable separately. Musk cited low use.",
+    "body": "<p>A new Tesla ordered after 17 April 2022 did not come with the Mobile Connector that older cars included. Electrek reported the policy change on 16 April 2022, and on 19 April wrote that vehicles ordered after 17 April would not be delivered with the cable. Tesla Oracle, the same day, said Tesla staff had told customers the same cutoff, and it quoted a message that any vehicle ordered after 17 April 2022 would not come with the charging bundle. The cable became a separate purchase. A buyer who assumed the boot still held a charger had to check the order instead of the old habit.</p>\n<h2>What used to be in the car?</h2>\n<p><strong>A portable cable, and for a time a plug for a household socket only.</strong> Electrek's 16 April account says Tesla had long included a mobile charging cable with each car. It says the kit once carried both a NEMA 14-50 adapter for a 240-volt outlet and an adapter for an ordinary socket, and that Tesla later dropped the 14-50 adapter from the included bundle and left the ordinary NEMA 5-15 adapter. Tesla Oracle describes the dropped item as the Mobile Connector charging bundle that had been part of the car's price. The two reports agree on the direction of the change. They are not a parts diagram of every car built before the cutoff. An owner of an older car should look in the boot rather than assume the 14-50 adapter is still there.</p>\n<h2>Why did Tesla say it stopped?</h2>\n<p><strong>Musk said use of the included cable was too low to keep shipping one with every car.</strong> Electrek quoted him saying usage statistics were super low, so supplying the cable seemed wasteful, and that the separate kit would include more plug adapters. Tesla Oracle reported that Musk gave low usage as the reason and said the cable would be sold separately at a reduced price. Both outlets are reporting his statement. Neither prints the internal statistic he referred to. A reason given by the company is not the same thing as a published table of charging sessions. The decision stood anyway. Electrek's 19 April piece said Tesla was not putting the connector back into orders after 17 April.</p>\n<h2>What did the separate cable cost then?</h2>\n<p><strong>Electrek and Tesla Oracle both put the reduced Mobile Connector price at 200 dollars.</strong> Electrek's first report, on 16 April, said Tesla had started selling the hardware separately, with a level-2 cable at 400 dollars and a level-1 cable at 275 dollars, and that Musk then said the price of the mobile charger would come down. Tesla Oracle, on 19 April, said Musk had announced a reduced price of 200 dollars. Electrek, on 29 April, said the Mobile Connector's price was then 200 dollars. This article uses 200 dollars because those two later reports agree, and it does not treat the earlier 275 and 400 as the price that remained. Electrek's 29 April piece also said the Wall Connector was 400 dollars that day. Tesla Oracle does not repeat that Wall Connector figure, so it stays out of the shared account. Prices on a web shop move. The 200 dollars is the figure those April 2022 reports shared, not a quote for today.</p>\n<h2>Did every delivery that month follow the new rule at once?</h2>\n<p><strong>Electrek reported a short period in which the rule itself moved.</strong> Its 16 April story said a Tesla chat reply told some buyers who had not taken delivery that the cable was already excluded, and that an internal note then said deliveries for the next several weeks would still include it. Tesla Oracle's 19 April report is the clearer line after that wobble. Orders placed on or before 17 April would still receive the bundle, and orders after that date would not. A buyer with an order from those days needed the date on the agreement, not a general memory of what Tesla used to put in the car. The later Electrek piece, on 29 April, treated the removal as the policy going forward and said Tesla had added chargers to the online configurator so buyers would see the extra choice.</p>\n<h2>What does that mean at home now?</h2>\n<p><strong>A new car does not bring its own home cable, so the driveway plan has to exist before delivery day.</strong> Electrek wrote on 29 April that buyers could no longer rely on a charger being in the vehicle. Tesla Oracle tied that to orders after 17 April 2022. The practical result is unchanged in the reports. Someone taking delivery needs a Wall Connector, a separately bought Mobile Connector, or another workable outlet already arranged. The company's stated reason was low use of the included cable. The reports do not show the statistic behind that sentence, and they do show that the cable left the standard equipment list.</p>"
+  },
+  "nl": {
+    "title": "Nieuwe Tesla's kregen geen mobiele lader",
+    "description": "Tesla leverde de Mobile Connector niet meer mee bij nieuwe orders na 17 april 2022 en verkocht de kabel apart. Musk noemde laag gebruik.",
+    "body": "<p>Een nieuwe Tesla die na 17 april 2022 werd besteld, kwam niet meer met de Mobile Connector die oudere auto's wel meekregen. Electrek meldde de wijziging op 16 april 2022 en schreef op 19 april dat auto's die na 17 april waren besteld zonder de kabel werden geleverd. Tesla Oracle zei diezelfde dag dat Tesla-medewerkers klanten dezelfde grens hadden genoemd, en citeerde een bericht dat een auto besteld na 17 april 2022 het laadpakket niet zou meekrijgen. De kabel werd een losse aankoop. Wie aannam dat de kofferbak nog een lader bevatte, moest de order controleren in plaats van op de oude gewoonte te vertrouwen.</p>\n<h2>Wat zat er vroeger in de auto?</h2>\n<p><strong>Een draagbare kabel, en een tijd lang alleen een stekker voor een gewoon stopcontact.</strong> Het verslag van Electrek van 16 april zegt dat Tesla lang bij elke auto een mobiele laadkabel meeleverde. Het zegt dat de set ooit zowel een NEMA 14-50-adapter voor een 240-voltstopcontact had als een adapter voor een gewoon stopcontact, en dat Tesla later de 14-50-adapter uit het meegeleverde pakket haalde en de gewone NEMA 5-15-adapter liet zitten. Tesla Oracle beschrijft het geschrapte onderdeel als het Mobile Connector-pakket dat in de prijs van de auto zat. De twee verslagen zijn het eens over de richting van de wijziging. Ze zijn geen onderdelentekening van elke auto van vóór de grens. De eigenaar van een oudere auto kijkt in de kofferbak in plaats van aan te nemen dat de 14-50-adapter er nog ligt.</p>\n<h2>Waarom zei Tesla dat het stopte?</h2>\n<p><strong>Musk zei dat het gebruik van de meegeleverde kabel te laag was om er bij elke auto een mee te sturen.</strong> Electrek citeerde hem dat de gebruiksstatistieken superlaag waren, zodat meeleveren verspilling leek, en dat de losse set meer stekkeradapters zou bevatten. Tesla Oracle schreef dat Musk laag gebruik als reden gaf en zei dat de kabel apart zou worden verkocht voor een lagere prijs. Beide media geven zijn uitspraak weer. Geen van beide drukt de interne statistiek af waar hij naar verwees. Een reden van het bedrijf is niet hetzelfde als een gepubliceerde tabel van laadsessies. Het besluit bleef toch staan. Electrek schreef op 19 april dat Tesla de connector niet terugzette in orders na 17 april.</p>\n<h2>Wat kostte de losse kabel toen?</h2>\n<p><strong>Electrek en Tesla Oracle zetten de verlaagde prijs van de Mobile Connector allebei op 200 dollar.</strong> Het eerste verslag van Electrek, op 16 april, zei dat Tesla de hardware apart was gaan verkopen, met een level-2-kabel voor 400 dollar en een level-1-kabel voor 275 dollar, en dat Musk daarna zei dat de prijs van de mobiele lader omlaag zou gaan. Tesla Oracle zei op 19 april dat Musk een verlaagde prijs van 200 dollar had aangekondigd. Electrek zei op 29 april dat de prijs van de Mobile Connector toen 200 dollar was. Dit stuk gebruikt 200 dollar omdat die twee latere verslagen overeenkomen, en het behandelt de eerdere 275 en 400 niet als de prijs die bleef. Het stuk van Electrek van 29 april zei ook dat de Wall Connector die dag 400 dollar was. Tesla Oracle herhaalt dat cijfer voor de Wall Connector niet, dus het blijft buiten het gedeelde verslag. Prijzen in een webwinkel schuiven. De 200 dollar is het getal dat die verslagen van april 2022 deelden, geen offerte voor vandaag.</p>\n<h2>Volgde elke levering die maand meteen de nieuwe regel?</h2>\n<p><strong>Electrek meldde een korte periode waarin de regel zelf bewoog.</strong> Het verhaal van 16 april zei dat een chatantwoord van Tesla sommige kopers die nog niet hadden afgenomen vertelde dat de kabel al was geschrapt, en dat een interne notitie daarna zei dat leveringen van de komende weken hem nog wel zouden meekrijgen. Het verslag van Tesla Oracle van 19 april is de helderdere lijn na dat gewiebel. Orders op of vóór 17 april kregen het pakket nog, en orders daarna niet. Een koper met een order uit die dagen had de datum op de overeenkomst nodig, niet een algemene herinnering aan wat Tesla vroeger in de auto legde. Het latere stuk van Electrek, op 29 april, behandelde het schrappen als het beleid vooruit en zei dat Tesla laders in de online configurator had gezet zodat kopers de extra keuze zagen.</p>\n<h2>Wat betekent dat thuis nu?</h2>\n<p><strong>Een nieuwe auto brengt geen eigen thuiskabel mee, dus het plan voor de oprit moet er zijn vóór de afleverdag.</strong> Electrek schreef op 29 april dat kopers er niet meer op konden rekenen dat er een lader in de auto lag. Tesla Oracle koppelde dat aan orders na 17 april 2022. Het praktische gevolg is in de verslagen hetzelfde. Wie een auto afneemt, heeft een Wall Connector nodig, een apart gekochte Mobile Connector, of een ander bruikbaar stopcontact dat al is geregeld. De genoemde reden van het bedrijf was laag gebruik van de meegeleverde kabel. De verslagen tonen de statistiek achter die zin niet, en ze tonen wel dat de kabel van de standaarduitrusting af ging.</p>"
+  }
+}

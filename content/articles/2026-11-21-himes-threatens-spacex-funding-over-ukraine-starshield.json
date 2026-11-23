@@ -6,6 +6,8 @@
   "also": [
     "spacex"
   ],
+  "layer": "starlink",
+  "topic": "starlink",
   "image": "news/himes-threatens-spacex-funding-over-ukraine-starshield-1.jpg",
   "image_lock": true,
   "images": [

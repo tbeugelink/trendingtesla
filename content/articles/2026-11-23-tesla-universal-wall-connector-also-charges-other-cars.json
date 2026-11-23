@@ -1,0 +1,81 @@
+{
+  "slug": "tesla-universal-wall-connector-also-charges-other-cars",
+  "date": "2026-11-23",
+  "time": "07:48",
+  "category": "charging",
+  "layer": "tesla-energy",
+  "topic": "home-charging",
+  "card": {
+    "en": "Tesla's wall charger also fits other cars",
+    "nl": "Tesla's wandlader past ook op andere auto's"
+  },
+  "image": "wallbox-2.jpg",
+  "images": [
+    "wallbox-2.jpg",
+    "wallbox-5.jpg",
+    "wallbox-3.jpg",
+    "wallbox-1.jpg",
+    "wallbox-4.jpg"
+  ],
+  "sources": [
+    {
+      "title": "Electrek — Tesla launches the Universal Wall Connector, 15 August 2023",
+      "url": "https://electrek.co/2023/08/15/tesla-universal-wall-connector-charging-world-on-notice/"
+    },
+    {
+      "title": "InsideEVs — First use of the Tesla Universal Wall Connector, 18 August 2023",
+      "url": "https://insideevs.com/news/682392/first-use-tesla-universal-wall-connector/"
+    },
+    {
+      "title": "Tesla — Universal Wall Connector installation manual, product specifications",
+      "url": "https://energylibrary.tesla.com/docs/Public/Charging/WallConnector/Gen3/Install/UniversalWC/en-us/GUID-4A3BDFAA-7DBB-48CB-852C-BF1473EC4945.html"
+    },
+    {
+      "title": "Tesla — Universal Wall Connector circuit breaker and maximum output",
+      "url": "https://energylibrary.tesla.com/docs/Public/Charging/WallConnector/Gen3/Install/UniversalWC/en-us/GUID-5CC6694C-47C9-4515-A156-A5B21EB81C88.html"
+    },
+    {
+      "title": "Qmerit — Tesla Universal Wall Connector review, 22 October 2026",
+      "url": "https://qmerit.com/blog/tesla-universal-wall-connector-review/"
+    }
+  ],
+  "label": {
+    "style": "c",
+    "en": {
+      "sub": "HOME CHARGER",
+      "text": "FITS OTHER CARS"
+    },
+    "nl": {
+      "sub": "THUISLADER",
+      "text": "PAST OOK OP ANDERE"
+    }
+  },
+  "gen_image": {
+    "prompt": "An editorial illustration of a white wall-mounted home charger on a garage wall, a coiled cable ending in a small docked adapter, a car nose just in frame on the right side of the road, left-hand drive, calm empty lower-left, no lettering, no logo, no face",
+    "subject": "a wall-mounted home charger with a docked adapter",
+    "refs": [
+      {
+        "src": "topics/wallbox-2.jpg"
+      }
+    ],
+    "profile": "editorial",
+    "category": "B",
+    "describe": "Illustration of a wall charger in a garage. Not a photograph of a specific install.",
+    "extra": [
+      {
+        "prompt": "A closer editorial illustration of the same white wall charger and its cable on a pale garage wall, the plug large in the centre, empty lower-left, no lettering, no logo",
+        "describe": "Closer illustration of the wall charger and cable"
+      }
+    ]
+  },
+  "en": {
+    "title": "Tesla's wall charger also fits other cars",
+    "description": "Tesla's Universal Wall Connector charges NACS cars and, with a built-in J1772 adapter, other electric cars. Its top output is 11.5 kW.",
+    "body": "<p>Tesla's Universal Wall Connector is a home charger for more than a Tesla. Electrek reported on 15 August 2023 that the unit looks like Tesla's ordinary wall charger and adds an integrated J1772 adapter, the plug used by many other electric cars in North America. InsideEVs, three days later, described the same built-in adapter and said a first install charged a Chevrolet Bolt, which uses J1772 rather than Tesla's NACS inlet. A household that parks two different electric cars can use one hardwired box. The open question is the circuit in the wall, because the charger's top rate is not what every panel can supply.</p>\n<h2>What does the adapter actually do?</h2>\n<p><strong>It stays on the handle for a J1772 car and comes off for a NACS car.</strong> Electrek compared the idea to Tesla's Supercharger Magic Dock, moved down to home charging. InsideEVs said the adapter attaches to the NACS plug when a non-Tesla car needs it. Qmerit, reviewing the product on 22 October 2026, described the same two-position connector. None of those accounts says the box converts power to a fast DC charge. It is still an AC wall charger. A driver who expected Supercharger speed from a garage wall will not get it from this hardware.</p>\n<h2>So how much power can it deliver?</h2>\n<p><strong>11.5 kW at 48 amps, and less when the breaker is smaller.</strong> Tesla's installation manual lists a maximum of 48 amps and 11.5 kW at 240 volts, on a 60-amp breaker. Electrek, InsideEVs and Qmerit each state that same 11.5 kW and 48-amp ceiling. Tesla's manual says the output can be set lower than that maximum. Qmerit lists the adjustable range as 12 to 48 amps, which is the same span the manual allows. The manual's intermediate kilowatt rows are not repeated by the other reports, so they are not listed here. The manual adds that some Tesla vehicles draw less than the charger allows, because the car's onboard charger sets a ceiling of its own. A 48-amp setting on a panel that was not built for it is an electrician's problem, not a software toggle the driver should guess at.</p>\n<h2>What else is fixed on the hardware?</h2>\n<p><strong>A 24-foot cable, Wi-Fi, and power sharing across up to six units.</strong> Tesla's specification page lists a cable of 24 feet, which is 7.3 metres, on a 200 to 240 volt single-phase supply, with a current range of 12 to 48 amps. Electrek and InsideEVs both reported the 24-foot cable at launch. Electrek also listed Wi-Fi, over-the-air updates, and power sharing with up to six Wall Connectors. Qmerit lists Wi-Fi and power sharing for up to six units as well, and it rates the enclosure for indoor or outdoor use. Sharing power across several boxes only helps if the electrician sizes the supply for the group. Six nameplates do not create six times 11.5 kW out of a small panel.</p>\n<h2>What did it cost when Tesla launched it?</h2>\n<p><strong>595 dollars, with deliveries that were due to start in October 2023.</strong> Electrek and InsideEVs both reported that launch price and that October start. Electrek also said the ordinary NACS-only Wall Connector was cheaper, and it put a four-year warranty on residential use. Qmerit, writing in October 2026, lists a four-year warranty and a price of 600 dollars. This article does not treat 595 and 600 as the same figure. The 595 dollars is the 2023 launch price in two reports. The 600 dollars is one later review. A buyer should read the current Tesla listing rather than either old number. The product's job did not change with that later tag. It is still one AC charger with two plug faces.</p>\n<h2>What should an owner check before buying one?</h2>\n<p><strong>The plug on each car, and the breaker the electrician can actually fit.</strong> InsideEVs and Electrek agree the point of the universal unit is a garage with mixed inlets. Tesla's manual agrees the top rate needs a 60-amp breaker and that a smaller breaker means a lower programmed output. Qmerit lists the unit as hardwired only, which matches a charger that is commissioned to a breaker rather than plugged into a socket. The remaining limit sits in the car. Tesla's own note says some vehicles draw less than 48 amps, so a second electric car in the same garage may charge more slowly than the box allows even when the panel is large enough.</p>"
+  },
+  "nl": {
+    "title": "Tesla's wandlader past ook op andere auto's",
+    "description": "Tesla's Universal Wall Connector laadt NACS-auto's en, met een ingebouwde J1772-adapter, andere elektrische auto's. Het maximum is 11,5 kW.",
+    "body": "<p>Tesla's Universal Wall Connector is een thuislader voor meer dan een Tesla. Electrek schreef op 15 augustus 2023 dat het apparaat lijkt op Tesla's gewone wandlader en een ingebouwde J1772-adapter toevoegt, de stekker van veel andere elektrische auto's in Noord-Amerika. InsideEVs beschreef drie dagen later dezelfde adapter en zei dat een eerste installatie een Chevrolet Bolt laadde, een auto met J1772 en niet met Tesla's NACS-inlaat. Een huishouden met twee verschillende elektrische auto's kan één vast aangesloten kastje gebruiken. De open vraag zit in de groepenkast, want het hoogste tempo van de lader is niet wat elk paneel kan leveren.</p>\n<h2>Wat doet die adapter precies?</h2>\n<p><strong>Hij blijft op de stekker voor een J1772-auto en gaat eraf voor een NACS-auto.</strong> Electrek vergeleek het idee met Tesla's Magic Dock bij Superchargers, nu voor thuis. InsideEVs zei dat de adapter op de NACS-stekker blijft zitten als een niet-Tesla hem nodig heeft. Qmerit, in een bespreking op 22 oktober 2026, beschreef dezelfde connector met twee standen. Geen van die verslagen zegt dat het kastje gelijkstroom maakt zoals een snellader. Het blijft een wisselstroomlader aan de muur. Wie Supercharger-snelheid verwachtte van een garagewand, haalt die niet uit dit apparaat.</p>\n<h2>Dus hoeveel vermogen kan hij leveren?</h2>\n<p><strong>11,5 kW bij 48 ampère, en minder als de zekering kleiner is.</strong> Tesla's installatiehandleiding noemt een maximum van 48 ampère en 11,5 kW bij 240 volt, op een zekering van 60 ampère. Electrek, InsideEVs en Qmerit noemen alle drie datzelfde plafond van 11,5 kW en 48 ampère. De handleiding zegt dat het vermogen lager kan worden gezet dan dat maximum. Qmerit noemt het instelbare bereik 12 tot 48 ampère, dezelfde band die de handleiding toestaat. De tussenliggende kilowattregels van de handleiding worden door de andere verslagen niet herhaald, dus die staan hier niet. De handleiding voegt toe dat sommige Tesla's minder vragen dan de lader toestaat, omdat de lader in de auto een eigen plafond heeft. Een stand van 48 ampère op een kast die daar niet voor is gebouwd, is een vraag voor de installateur en geen gok in de software.</p>\n<h2>Wat ligt verder vast aan het apparaat?</h2>\n<p><strong>Een kabel van 7,3 meter, wifi, en delen van vermogen over maximaal zes laders.</strong> Tesla's specificatiepagina noemt een kabel van 24 voet, omgerekend 7,3 meter, op een eenfase-aansluiting van 200 tot 240 volt, met een stroombereik van 12 tot 48 ampère. Electrek en InsideEVs meldden bij de introductie allebei die kabellengte. Electrek noemde ook wifi, updates op afstand, en het delen van vermogen met maximaal zes Wall Connectors. Qmerit noemt eveneens wifi en delen over maximaal zes stuks, en keurt de behuizing goed voor binnen of buiten. Delen over meerdere kastjes helpt alleen als de installateur de voeding voor de groep dimensioneert. Zes typeplaatjes maken geen zes keer 11,5 kW uit een kleine kast.</p>\n<h2>Wat kostte hij bij de introductie?</h2>\n<p><strong>595 dollar, met leveringen die in oktober 2023 moesten beginnen.</strong> Electrek en InsideEVs meldden allebei die introductieprijs en die oktoberstart. Electrek zei ook dat de gewone Wall Connector alleen voor NACS goedkoper was, en noemde vier jaar garantie voor thuisgebruik. Qmerit, in oktober 2026, noemt vier jaar garantie en een prijs van 600 dollar. Dit stuk behandelt 595 en 600 niet als hetzelfde getal. De 595 dollar is de introductieprijs van 2023 in twee verslagen. De 600 dollar staat in één latere bespreking. Een koper leest de actuele Tesla-pagina in plaats van een van die oude getallen. De taak van het product veranderde niet met dat latere prijskaartje. Het is nog steeds één wisselstroomlader met twee stekkerkanten.</p>\n<h2>Wat controleert een eigenaar voor de aankoop?</h2>\n<p><strong>De stekker van elke auto, en de zekering die de installateur echt kan plaatsen.</strong> InsideEVs en Electrek zijn het eens dat het nut van de universele lader een garage met gemengde inlaten is. Tesla's handleiding is het eens dat het hoogste tempo een zekering van 60 ampère vraagt en dat een kleinere zekering een lager ingesteld vermogen betekent. Qmerit noemt het apparaat alleen vast bedraad, wat past bij een lader die op een zekering wordt ingesteld en niet in een stopcontact wordt gestoken. De resterende grens zit in de auto. Tesla's eigen noot zegt dat sommige auto's minder dan 48 ampère vragen, dus een tweede elektrische auto in dezelfde garage kan langzamer laden dan het kastje toestaat, ook als de groepenkast groot genoeg is.</p>"
+  }
+}

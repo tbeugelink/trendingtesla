@@ -3,6 +3,8 @@
   "date": "2026-10-24",
   "time": "13:05",
   "category": "charging",
+  "models": ["semi"],
+  "also_topics": ["semi"],
   "sources": [
     {
       "title": "Drive Tesla Canada — Tesla launches Supercharger for Business and Semi Charging for Business in Canada",

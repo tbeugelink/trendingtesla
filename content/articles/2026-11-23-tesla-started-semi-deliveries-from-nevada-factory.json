@@ -1,0 +1,72 @@
+{
+  "slug": "tesla-started-semi-deliveries-from-nevada-factory",
+  "date": "2026-11-23",
+  "time": "07:47",
+  "category": "models",
+  "models": [
+    "semi"
+  ],
+  "layer": "tesla",
+  "topic": "semi",
+  "card": {
+    "en": "Tesla started Semi deliveries in Nevada",
+    "nl": "Tesla startte Semi-leveringen in Nevada"
+  },
+  "image": "models/semi-6.jpg",
+  "images": [
+    "models/semi-6.jpg",
+    "models/semi.jpg",
+    "models/semi-7.jpg",
+    "megacharger.jpg",
+    "models/semi-4.jpg"
+  ],
+  "real_photos": [
+    {
+      "page": "https://commons.wikimedia.org/wiki/File:Tesla_Semi_Ready_to_Ride_(47672278541).jpg",
+      "describe": "a Tesla Semi truck parked outdoors"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Reuters — Tesla set to formally roll out Semi electric trucks at Nevada event, 24 September 2026",
+      "url": "https://www.reuters.com/business/autos-transportation/tesla-set-formally-roll-out-semi-electric-trucks-nevada-event-2026-09-24/"
+    },
+    {
+      "title": "The Verge — Here’s the Tesla Semi… again, 25 September 2026",
+      "url": "https://www.theverge.com/transportation/1000317/tesla-semi-launch-customer-delivery-freight-battery-engineer"
+    },
+    {
+      "title": "CNBC — Tesla aims to scale Semi truck production with Nevada factory opening, 24 September 2026",
+      "url": "https://www.cnbc.com/2026/09/24/tesla-aims-to-scale-semi-truck-production-with-nevada-factory-opening.html"
+    },
+    {
+      "title": "Fox Business — Tesla begins delivering Semi trucks to customers after years of delays, 25 September 2026",
+      "url": "https://www.foxbusiness.com/markets/tesla-begins-delivering-semi-trucks-customers-after-years-delays"
+    },
+    {
+      "title": "Carscoops — Tesla starts new Semi deliveries, but won't say how many, 25 September 2026",
+      "url": "https://www.carscoops.com/2026/09/tesla-starts-new-semi-deliveries-but-wont-say-how-many/"
+    }
+  ],
+  "label": {
+    "style": "a",
+    "en": {
+      "sub": "SEMI",
+      "text": "NEVADA DELIVERIES"
+    },
+    "nl": {
+      "sub": "SEMI",
+      "text": "LEVERING IN NEVADA"
+    }
+  },
+  "en": {
+    "title": "Tesla started Semi deliveries in Nevada",
+    "description": "On 24 September 2026 Tesla handed Semi trucks to customers from its factory in Sparks, Nevada. It still did not publish a price or a delivery count.",
+    "body": "<p>Tesla began customer handovers of the Semi from its factory in Sparks, Nevada, on 24 September 2026. Reuters reported that day that the company would roll the trucks out late on Thursday at the inauguration of the plant, almost nine years after the electric truck was unveiled. The Verge, the next morning, placed the Thursday evening event at the new Semi factory next to Gigafactory Nevada and said first deliveries of this run started that week. CNBC described the same Thursday opening in Sparks as Tesla's first factory for high-volume production of the Semi. Tesla still did not say how many trucks left the yard, or what a buyer pays.</p>\n<h2>What opened in Sparks?</h2>\n<p><strong>A dedicated Semi factory, separate from the 2022 pilot trucks.</strong> Fox Business reported on 25 September that the first Semis delivered to US customers, including PepsiCo, arrived in late 2022 and were built on a lower-volume pilot line. The Verge said those 2022 units were essentially built by hand on a pilot line. Reuters said the first truck off the high-volume production line came in April 2026, and the Verge dated volume production to that same April. The September event was the customer handoff from that newer line. Fox Business and the Verge both noted that Tesla did not disclose a price. The Verge also said Tesla did not reveal order numbers. A factory opening without those two figures leaves the size of the step unclear.</p>\n<h2>So what range did Tesla state?</h2>\n<p><strong>Up to 500 miles for the long-range truck, and 325 miles for the other version.</strong> Reuters described the Semi as designed for long-haul freight with a range of up to 500 miles. Fox Business reported that Dan Priestley, director of Semi truck engineering, called the long-range figure 500 real-world miles and said customers had validated it. Fox Business and Carscoops both reported a second version at 325 miles. The outlets are repeating Tesla's claims. They do not publish the test cycle, the load, or the weather behind either number. A fleet buyer can quote the miles and still cannot match them to a published price.</p>\n<h2>Who was named at the event?</h2>\n<p><strong>PepsiCo, DHL and US Foods are the names two reports share.</strong> The Verge listed PepsiCo, US Foods, DHL, WattEV, ABF, Einride, IMC and OK Produce around the event. Fox Business reported that PepsiCo, DHL and US Foods were invited on stage, with trucks in their logos outside. This article uses only the three names both outlets attach to the gathering. PepsiCo is not a first-time customer. Fox Business and the Verge both say it already had trucks from the 2022 pilot. The new fact is the factory, not the logo. The other names on the Verge list are not repeated by Fox Business, so they stay out of the shared account.</p>\n<h2>How large are the orders around that week?</h2>\n<p><strong>One shipper coalition ordered 2,500 Semis, and Einride ordered 500.</strong> CNBC reported that the coalition ZET SCALE selected Tesla as its primary manufacturer for an initial order of 2,500 Semi trucks, and named Microsoft and PepsiCo among those involved. Fox Business reported an order for 2,500 Semis from a coalition of cargo-owning shippers that includes Microsoft and PepsiCo, citing the nonprofit Catalyst Mobility. The Verge also reported a 2,500-truck order from a coalition of large shippers. The outlets do not use one identical name for the group. The shared facts are the 2,500 figure and, in CNBC and Fox Business, Microsoft and PepsiCo. Separately, CNBC said Einride agreed to order 500 Tesla Semis, and the Verge said Einride announced a 500-truck order in August. An order is not a delivery. The Verge and Fox Business both say Tesla still withheld how many trucks Sparks had actually handed over.</p>\n<h2>What did Tesla say the plant can build?</h2>\n<p><strong>About 50,000 trucks a year, which the company also put at about 1,000 a week.</strong> The Verge wrote that Tesla says the factory can build 50,000 trucks a year, or about 1,000 a week. CNBC reported that Priestley said the company plans to produce 50,000 Semi trucks a year there, or about 1,000 a week. That is a stated capacity, not a count of trucks built in September. Reuters noted that the Semi was unveiled in 2017 and that production had been expected in 2019. The Verge made the same two points. The gap between that old target and the Sparks handoff is the story of the truck. The weekly rate remains a plan until Tesla publishes output.</p>"
+  },
+  "nl": {
+    "title": "Tesla startte Semi-leveringen in Nevada",
+    "description": "Op 24 september 2026 droeg Tesla in Sparks, Nevada, Semi-trucks over aan klanten. Een prijs en een leveraantal publiceerde het bedrijf niet.",
+    "body": "<p>Tesla begon op 24 september 2026 met het overdragen van Semi-trucks aan klanten vanuit de fabriek in Sparks, Nevada. Reuters schreef die dag dat het bedrijf de trucks laat op donderdag zou tonen bij de opening van de fabriek, bijna negen jaar na de onthulling. The Verge plaatste het evenement van donderdagavond bij de nieuwe Semi-fabriek naast Gigafactory Nevada en schreef dat de eerste leveringen van deze reeks die week begonnen. CNBC beschreef dezelfde donderdagopening in Sparks als Tesla's eerste fabriek voor productie van de Semi in grote aantallen. Tesla zei nog steeds niet hoeveel trucks het terrein verlieten, en ook niet wat een koper betaalt.</p>\n<h2>Wat ging er in Sparks open?</h2>\n<p><strong>Een eigen Semi-fabriek, los van de pilottrucks uit 2022.</strong> Fox Business schreef op 25 september dat de eerste Semi's voor Amerikaanse klanten, onder wie PepsiCo, eind 2022 aankwamen en van een kleinere pilotlijn kwamen. The Verge zei dat die exemplaren uit 2022 in feite met de hand op een pilotlijn waren gebouwd. Reuters schreef dat de eerste truck van de productielijn voor grote aantallen in april 2026 kwam, en The Verge legde de start van die productie op dezelfde aprilmaand. Het evenement in september was de overdracht aan klanten vanaf die nieuwere lijn. Fox Business en The Verge meldden allebei dat Tesla geen prijs noemde. The Verge schreef ook dat Tesla geen orderaantallen gaf. Een fabrieksopening zonder die twee cijfers laat de omvang van de stap open.</p>\n<h2>Dus welke actieradius noemde Tesla?</h2>\n<p><strong>Tot 500 mijl voor de lange versie, en 325 mijl voor de andere.</strong> Reuters beschreef de Semi als een truck voor lange ritten met een actieradius tot 500 mijl, omgerekend ongeveer 800 kilometer. Fox Business schreef dat Dan Priestley, directeur Semi-engineering, die 500 mijl een praktijkcijfer noemde en zei dat klanten het hadden gecontroleerd. Fox Business en Carscoops meldden allebei een tweede versie van 325 mijl, ongeveer 520 kilometer. De media geven de claims van Tesla door. Ze publiceren niet de testcyclus, de belading of het weer achter die cijfers. Een vlooteigenaar kan de mijlen citeren en heeft nog steeds geen openbare prijs om ze naast te leggen.</p>\n<h2>Wie werd bij het evenement genoemd?</h2>\n<p><strong>PepsiCo, DHL en US Foods zijn de namen die twee verslagen delen.</strong> The Verge noemde PepsiCo, US Foods, DHL, WattEV, ABF, Einride, IMC en OK Produce rond het evenement. Fox Business schreef dat PepsiCo, DHL en US Foods op het podium werden gevraagd, met trucks in hun logo's buiten. Dit stuk gebruikt alleen de drie namen die beide media aan de bijeenkomst koppelen. PepsiCo is geen nieuwe klant. Fox Business en The Verge zeggen allebei dat het bedrijf al trucks had uit de pilot van 2022. Het nieuwe feit is de fabriek, niet het logo. De overige namen op de lijst van The Verge komen bij Fox Business niet terug, dus die blijven buiten het gedeelde verslag.</p>\n<h2>Hoe groot zijn de orders rond die week?</h2>\n<p><strong>Een coalitie van verladers bestelde 2.500 Semi's, en Einride bestelde 500.</strong> CNBC schreef dat de coalitie ZET SCALE Tesla koos als belangrijkste fabrikant voor een eerste order van 2.500 Semi-trucks, en noemde Microsoft en PepsiCo daarbij. Fox Business meldde een order van 2.500 Semi's van een coalitie van vrachtverladers waar Microsoft en PepsiCo bij horen, met een verwijzing naar de non-profit Catalyst Mobility. The Verge meldde ook een order van 2.500 trucks van een coalitie van grote verladers. De media gebruiken niet één identieke naam voor de groep. De gedeelde feiten zijn het getal 2.500 en, bij CNBC en Fox Business, Microsoft en PepsiCo. Daarnaast schreef CNBC dat Einride instemde met een order van 500 Tesla Semi's, en The Verge dat Einride in augustus een order van 500 trucks aankondigde. Een order is geen levering. The Verge en Fox Business zeggen allebei dat Tesla nog steeds niet vertelde hoeveel trucks Sparks echt had overgedragen.</p>\n<h2>Wat zei Tesla dat de fabriek kan bouwen?</h2>\n<p><strong>Ongeveer 50.000 trucks per jaar, door het bedrijf ook op ongeveer 1.000 per week gezet.</strong> The Verge schreef dat Tesla zegt dat de fabriek 50.000 trucks per jaar kan bouwen, of ongeveer 1.000 per week. CNBC meldde dat Priestley zei dat het bedrijf daar 50.000 Semi's per jaar wil produceren, of ongeveer 1.000 per week. Dat is een genoemde capaciteit, geen telling van trucks die in september zijn gebouwd. Reuters noteerde dat de Semi in 2017 werd onthuld en dat productie in 2019 was verwacht. The Verge maakte dezelfde twee punten. De afstand tussen dat oude doel en de overdracht in Sparks is het verhaal van de truck. Het weektempo blijft een plan tot Tesla de productie publiceert.</p>"
+  }
+}

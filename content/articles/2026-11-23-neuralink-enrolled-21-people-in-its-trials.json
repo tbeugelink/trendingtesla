@@ -1,0 +1,79 @@
+{
+  "slug": "neuralink-enrolled-21-people-in-its-trials",
+  "date": "2026-11-23",
+  "time": "07:53",
+  "category": "news",
+  "layer": "neuralink",
+  "topic": "neuralink",
+  "card": {
+    "en": "Neuralink enrolled 21 people in its trials",
+    "nl": "Neuralink schreef 21 mensen in voor proeven"
+  },
+  "image": "news/neuralink-connectome.jpg",
+  "images": [
+    "news/neuralink-connectome.jpg",
+    "news/neuralink-arcuate-tractography.jpg"
+  ],
+  "credits": [
+    {
+      "file": "news/neuralink-connectome.jpg",
+      "credit": "jgmarcelino, CC BY 2.0, via Wikimedia Commons. Diffusion tractography of nerve fibers in a human brain, from a 3-tesla MRI. Not a scan of a trial participant",
+      "page": "https://commons.wikimedia.org/wiki/File:Connectome.jpg"
+    },
+    {
+      "file": "news/neuralink-arcuate-tractography.jpg",
+      "credit": "Fang-Cheng Yeh, Timothy D. Verstynen, Yibao Wang, Juan C. Fernández-Miranda and Wen-Yih Isaac Tseng, PLoS ONE (2013), CC BY 2.5, via Wikimedia Commons. Tractography panel of the arcuate fasciculus. Not a scan of a trial participant",
+      "page": "https://commons.wikimedia.org/wiki/File:Arcuate_fasciculus_dissection_and_tractography.png"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Neuralink — Two Years of Telepathy, 28 January 2026",
+      "url": "https://neuralink.com/updates/two-years-of-telepathy/"
+    },
+    {
+      "title": "Reuters — Neuralink says it has 21 participants enrolled in trials, 28 January 2026",
+      "url": "https://www.investing.com/news/general-news/elon-musks-neuralink-says-it-has-21-participants-enrolled-in-trials-4470995"
+    }
+  ],
+  "label": {
+    "style": "a",
+    "en": {
+      "sub": "NEURALINK",
+      "text": "21 ENROLLED"
+    },
+    "nl": {
+      "sub": "NEURALINK",
+      "text": "21 INGESCHREVEN"
+    }
+  },
+  "gen_image": {
+    "prompt": "A scientific illustration of cerebral nerve-fiber tracts in cool blue and amber on a charcoal field, the form large and sharp, empty calm lower-left, no lettering, no portrait, no device, no logo",
+    "subject": "diffusion tractography of nerve fibers in a human brain",
+    "refs": [
+      {
+        "src": "news/neuralink-connectome.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Connectome.jpg"
+      }
+    ],
+    "profile": "technical",
+    "category": "A",
+    "describe": "Illustration of nerve-fiber tracts. Not a scan of a trial participant.",
+    "extra": [
+      {
+        "prompt": "A closer scientific plate of curved cerebral fiber tracts in blue and amber on charcoal, empty lower-left, no lettering, no portrait, no device",
+        "describe": "Closer illustration of cerebral fiber tracts"
+      }
+    ]
+  },
+  "en": {
+    "title": "Neuralink enrolled 21 people in its trials",
+    "description": "On 28 January 2026 Neuralink said 21 people were enrolled in its trials worldwide. Reuters reported the same figure the same day. The company also said it had no serious device-related adverse events.",
+    "body": "<p>Neuralink said on 28 January 2026 that 21 people were enrolled in its clinical trials worldwide. The company's own update, titled Two Years of Telepathy, calls them a growing crew of 21 Neuralnauts enrolled in trials. Reuters reported the same day that Neuralink said it now had 21 total participants enrolled in trials worldwide, as the company marked two years since it officially began testing on humans. The number is an enrollment figure published by the company and repeated by Reuters. It is not a later census, and it is not a count of devices sold.</p>\n<p>The pictures are diffusion images of nerve fibers in a human brain, from research shared under Creative Commons licences. They are not scans of anyone in the trial.</p>\n<h2>What does enrolled mean here?</h2>\n<p><strong>People in the trials, in the company's wording and in Reuters' wording.</strong> Neuralink's page says 21 Neuralnauts are enrolled in trials worldwide. Reuters says 21 total participants are enrolled in trials worldwide. Both texts use enrolled, and both place the group inside trials rather than in a product on sale. Reuters adds that the company was completing two years since it officially began testing on humans, and that the trials began in 2024. The company's headline, Two Years of Telepathy, is the same span counted back from January 2026. A reader can hold the 21 as the company's enrollment statement that day. Treating it as the number of implants in the world on a later date would add a claim these two texts do not make.</p>\n<h2>What is the trial trying to do?</h2>\n<p><strong>Let someone with paralysis control a computer from neural signals.</strong> Neuralink's update says its first product, Telepathy, aims to let people with paralysis control computers, phones and robotic limbs with their thoughts. It says Telepathy records activity from brain regions tied to the muscles of the hands and arms and turns those signals into digital commands. Reuters describes the implant as designed to help people with conditions such as a spinal cord injury, and it says the first patient has used it to play video games, browse the internet, post on social media and move a cursor on a laptop. The shared core is the purpose. A person who cannot move in the ordinary way is the user the trial is built for, and the output the reports describe is control of a computer, not a treatment that either text calls approved. The anatomical detail about hand and arm regions is the company's page. Reuters does not repeat that sentence, so it stays the company's description.</p>\n<h2>What did both texts say about harm?</h2>\n<p><strong>The company said it had no serious device-related adverse events on its record.</strong> Neuralink's update says it aims to maintain its current record of zero serious device-related adverse events, while working with regulators and hospitals on later devices. Reuters reports that the company said it was working with regulatory bodies and hospital sites to deliver improved devices and to maintain that same record of zero serious device-related adverse events. The zero is the company's statement, printed by the company and reported by Reuters. It is not an independent audit printed in either document. A record the sponsor describes is still a sponsor's record. The two texts do not list the events they would have counted, and they do not name a regulator's sign-off that would turn the sentence into an approval.</p>\n<h2>What did Reuters add that the update's headline does not?</h2>\n<p><strong>That the 21 were enrolled, and that human testing had officially begun in 2024.</strong> Reuters says the implant's first patient had used it for games, browsing, posting and a cursor. The company's page describes the aim of Telepathy and the participants as partners in the trials. Reuters also says the US Food and Drug Administration initially rejected Neuralink's application in 2022, and that trials began in 2024 after the company addressed safety concerns. That 2022 rejection is in the Reuters report. It is not a sentence in the passages of the company update used here, so this article attributes it to Reuters alone and does not treat it as a second-sourced finding. The double-sourced lines remain the enrollment of 21 and the company's statement of zero serious device-related adverse events. The FDA history can be read in Reuters. It is not confirmed on the company page this piece quotes.</p>\n<h2>What should a later count have to do?</h2>\n<p><strong>Say whether it is counting enrollment, implants, or people still using the device.</strong> The 28 January 2026 figure is specific because both the company and Reuters call it enrollment in trials. A later headline that uses a different verb is a different measurement. This article does not extend 21 past that day. Neuralink's update and the Reuters report also do not print a list of names next to the number 21. Until a later company update and a second outlet describe the same later total in the same words, the public enrollment marker from that January day stays 21 people enrolled in the trials.</p>"
+  },
+  "nl": {
+    "title": "Neuralink schreef 21 mensen in voor proeven",
+    "description": "Op 28 januari 2026 zei Neuralink dat 21 mensen wereldwijd waren ingeschreven voor zijn proeven. Reuters meldde hetzelfde cijfer die dag. Het bedrijf zei ook dat er geen ernstige bijwerkingen van het hulpmiddel waren.",
+    "body": "<p>Neuralink zei op 28 januari 2026 dat 21 mensen waren ingeschreven voor zijn klinische proeven wereldwijd. De eigen update van het bedrijf, getiteld Two Years of Telepathy, noemt hen een groeiende groep van 21 Neuralnauts die zijn ingeschreven voor proeven. Reuters meldde diezelfde dag dat Neuralink zei dat het nu 21 deelnemers in totaal had ingeschreven voor proeven wereldwijd, terwijl het bedrijf twee jaar markeerde sinds het officieel op mensen begon te testen. Het getal is een inschrijvingscijfer dat het bedrijf publiceerde en dat Reuters herhaalde. Het is geen latere volkstelling, en het is geen telling van verkochte hulpmiddelen.</p>\n<p>De afbeeldingen zijn diffusiebeelden van zenuwvezels in een menselijk brein, uit onderzoek dat onder Creative Commons-licenties is gedeeld. Het zijn geen scans van iemand in de proef.</p>\n<h2>Wat betekent ingeschreven hier?</h2>\n<p><strong>Mensen in de proeven, in de formulering van het bedrijf en in die van Reuters.</strong> De pagina van Neuralink zegt dat 21 Neuralnauts wereldwijd zijn ingeschreven voor proeven. Reuters zegt dat 21 deelnemers in totaal wereldwijd zijn ingeschreven voor proeven. Beide teksten gebruiken ingeschreven, en beide plaatsen de groep in proeven en niet in een product dat te koop is. Reuters voegt toe dat het bedrijf twee jaar afrondde sinds het officieel op mensen begon te testen, en dat de proeven in 2024 begonnen. De kop van het bedrijf, Two Years of Telepathy, is dezelfde tijdspanne teruggeteld vanaf januari 2026. Een lezer kan de 21 vasthouden als de inschrijvingsuitspraak van het bedrijf op die dag. Hem lezen als het aantal implantaten in de wereld op een latere datum zou een claim toevoegen die deze twee teksten niet doen.</p>\n<h2>Wat probeert de proef te doen?</h2>\n<p><strong>Iemand met een verlamming een computer laten besturen vanuit zenuwsignalen.</strong> De update van Neuralink zegt dat zijn eerste product, Telepathy, mensen met een verlamming computers, telefoons en robotledematen wil laten besturen met hun gedachten. Het zegt dat Telepathy activiteit opneemt uit hersengebieden die bij de spieren van handen en armen horen, en die signalen omzet in digitale opdrachten. Reuters beschrijft het implantaat als bedoeld om mensen te helpen met aandoeningen zoals een dwarslaesie, en zegt dat de eerste patiënt het heeft gebruikt om videogames te spelen, te internetten, op sociale media te posten en een cursor op een laptop te bewegen. De gedeelde kern is het doel. Een persoon die niet op de gewone manier kan bewegen, is de gebruiker waarvoor de proef is gebouwd, en de uitkomst die de verslagen beschrijven is besturing van een computer, geen behandeling die een van beide teksten goedgekeurd noemt. Het anatomische detail over hand- en armgebieden staat op de pagina van het bedrijf. Reuters herhaalt die zin niet, dus hij blijft de beschrijving van het bedrijf.</p>\n<h2>Wat zeiden beide teksten over schade?</h2>\n<p><strong>Het bedrijf zei dat er geen ernstige bijwerkingen van het hulpmiddel in zijn registratie stonden.</strong> De update van Neuralink zegt dat het zijn huidige registratie van nul ernstige bijwerkingen van het hulpmiddel wil vasthouden, terwijl het met toezichthouders en ziekenhuizen aan latere hulpmiddelen werkt. Reuters meldt dat het bedrijf zei met toezichthouders en ziekenhuislocaties te werken om verbeterde hulpmiddelen te leveren en diezelfde registratie van nul ernstige bijwerkingen vast te houden. De nul is de uitspraak van het bedrijf, gedrukt door het bedrijf en gemeld door Reuters. Het is geen onafhankelijke controle die in een van beide documenten is afgedrukt. Een registratie die de sponsor beschrijft, blijft een registratie van de sponsor. De twee teksten sommen de gebeurtenissen die ze zouden hebben meegeteld niet op, en ze noemen geen akkoord van een toezichthouder dat de zin tot een goedkeuring zou maken.</p>\n<h2>Wat voegde Reuters toe dat de kop van de update niet zegt?</h2>\n<p><strong>Dat de 21 waren ingeschreven, en dat het testen op mensen officieel in 2024 was begonnen.</strong> Reuters zegt dat de eerste patiënt het implantaat had gebruikt voor games, browsen, posten en een cursor. De pagina van het bedrijf beschrijft het doel van Telepathy en de deelnemers als partners in de proeven. Reuters zegt ook dat de Amerikaanse Food and Drug Administration de aanvraag van Neuralink in 2022 eerst afwees, en dat de proeven in 2024 begonnen nadat het bedrijf zorgen over de veiligheid had aangepakt. Die afwijzing van 2022 staat in het Reuters-verslag. Het is geen zin in de passages van de bedrijfsupdate die hier zijn gebruikt, dus dit stuk schrijft hem alleen aan Reuters toe en behandelt hem niet als een bevinding met twee bronnen. De dubbel gedekte regels blijven de inschrijving van 21 en de uitspraak van het bedrijf over nul ernstige bijwerkingen van het hulpmiddel. De geschiedenis bij de FDA is te lezen bij Reuters. Hij is niet bevestigd op de bedrijfspagina die dit stuk citeert.</p>\n<h2>Wat moet een latere telling doen?</h2>\n<p><strong>Zeggen of hij inschrijving telt, implantaten, of mensen die het hulpmiddel nog gebruiken.</strong> Het cijfer van 28 januari 2026 is precies omdat zowel het bedrijf als Reuters het inschrijving voor proeven noemt. Een latere kop die een ander werkwoord gebruikt, is een andere meting. Dit stuk trekt 21 niet voorbij die dag door. De update van Neuralink en het Reuters-verslag drukken ook geen namenlijst af naast het getal 21. Tot een latere update van het bedrijf en een tweede medium hetzelfde latere totaal in dezelfde woorden beschrijven, blijft het publieke inschrijvingspunt van die januaridag 21 mensen die voor de proeven zijn ingeschreven.</p>"
+  }
+}

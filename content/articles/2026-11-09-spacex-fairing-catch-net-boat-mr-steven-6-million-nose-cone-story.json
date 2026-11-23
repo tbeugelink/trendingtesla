@@ -3,6 +3,7 @@
   "date": "2026-11-09",
   "time": "21:20",
   "category": "spacex",
+  "also_topics": ["falcon"],
   "sources": [
     {
       "title": "Space.com — SpaceX Boat Snags Falling Payload Fairing in Historic First",

@@ -1223,6 +1223,9 @@ article.money>.lmeta a.lname:hover{text-decoration:underline}
 .eco-sources li{margin:0 0 6px}
 .eco-sources a{color:#9ad7ff}
 .ss-wrap{overflow-x:auto}
+.prose figure.hubfig{margin:6px 14px 18px}
+.prose figure.hubfig img{width:100%;max-width:100%;height:auto;border-radius:10px;border:1px solid var(--edge);display:block}
+@media (max-width:600.98px){.prose figure.hubfig{margin-left:4px;margin-right:4px}}
 .byline{margin:0 0 12px;color:var(--dim);font-size:.86rem}
 .upd{margin:-6px 0 12px;color:var(--dim);font-size:.82rem}
 .upd time{color:inherit}
@@ -6319,6 +6322,102 @@ def _yes_no(flag, lang):
     return f'<span class="{"ss-yes" if flag else "ss-no"}">{word}</span>'
 
 
+_HUB_PHOTOS = None
+
+
+def hub_photos():
+    global _HUB_PHOTOS
+    if _HUB_PHOTOS is None:
+        path = ROOT / "content" / "data" / "hub_photos.json"
+        try:
+            _HUB_PHOTOS = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            _HUB_PHOTOS = {}
+    return _HUB_PHOTOS
+
+
+def hub_photo(pid):
+    item = hub_photos().get(pid or "")
+    if not item or not item.get("src"):
+        return None
+    if not (STATIC / str(item["src"]).lstrip("/")).is_file():
+        return None
+    return item
+
+
+def hub_credit_link(item):
+    return (f'<a href="{esc(item["page"])}" rel="nofollow noopener" target="_blank">'
+            f'{esc(item["credit"])}</a>')
+
+
+def hub_hero(pid, lang):
+    item = hub_photo(pid)
+    if not item:
+        return "", ""
+    alt = (item.get("alt") or {}).get(lang) or (item.get("alt") or {}).get("en") or ""
+    img = resp_img(item["src"], alt, SIZES_HERO, high=True, lazy=False, cls="hero-img")
+    return f'<div class="hi">{img}</div>', hub_credit_link(item)
+
+
+def hub_figure(pid, lang):
+    item = hub_photo(pid)
+    if not item:
+        return "", ""
+    alt = (item.get("alt") or {}).get(lang) or ""
+    cap = (item.get("caption") or {}).get(lang) or ""
+    link = hub_credit_link(item)
+    img = resp_img(item["src"], alt, SIZES_HERO, lazy=True)
+    return (f'<figure class="hubfig">{img}'
+            f'<figcaption class="imgnote">{esc(cap)} {link}</figcaption></figure>', link)
+
+
+def hub_rubric(lang, layer, layer_path, sub="", sub_path=""):
+    layer_html = f'<a class="llayer" href="{url(lang, layer_path)}">{esc(layer)}</a>'
+    if sub:
+        sub_html = f'<a class="lsub" href="{url(lang, sub_path)}">{esc(sub)}</a>'
+        label = f'<span class="lpath">{layer_html} / {sub_html}</span>'
+    else:
+        label = f'<a class="lname" href="{url(lang, layer_path)}">{esc(layer)}</a>'
+    return f'<span class="lmeta">{label}</span>'
+
+
+def hub_article(lang, title, intro, updated, rubric, hero_id, sections):
+    """Same frame as a news article: photo, rubric, title, byline, contents, prose."""
+    L = LANGS[lang]
+    hero, hero_credit = hub_hero(hero_id, lang)
+    credits = [hero_credit] if hero_credit else []
+    blocks = []
+    for i, (heading, inner, photo_id) in enumerate(sections, 1):
+        fig, credit = hub_figure(photo_id, lang) if photo_id else ("", "")
+        if credit and credit not in credits:
+            credits.append(credit)
+        blocks.append(f'<h2 id="s{i}">{esc(heading)}</h2>{fig}{inner}')
+    toc = ""
+    if sections:
+        label = L["toc"]
+        items = "".join(
+            f'<li><a href="#s{i}">{esc(heading)}</a></li>'
+            for i, (heading, _inner, _photo) in enumerate(sections, 1))
+        toc = (f'<nav class="toc" aria-label="{esc(label)}"><b>{esc(label)}</b>'
+               f'<ol>{items}</ol></nav>')
+    when = ""
+    if re.fullmatch(r"\d{4}-\d{2}-\d{2}", str(updated or "")):
+        prefix = "Updated " if lang == "en" else "Bijgewerkt "
+        when = (f' · <time datetime="{esc(updated)}">'
+                f'{esc(prefix + fmt_date(updated, lang))}</time>')
+    note = ""
+    if credits:
+        note = f'<p class="imgnote">{L["photocredit"]}: {"; ".join(credits)}.</p>'
+    article = (
+        f'<article class="money">{hero}{rubric}'
+        f'<h1>{esc(title)}</h1>'
+        f'<p class="byline"><a href="{url(lang, "editorial/")}">{esc(L["byline"])}</a>{when}</p>'
+        f'<p class="lead">{esc(intro)}</p>{toc}'
+        f'<div class="prose">{"".join(blocks)}</div>{note}</article>')
+    src = (hub_photo(hero_id) or {}).get("src")
+    return article, src
+
+
 def starship_page(lang, arts):
     data = load_data("starship.json")
     L = LANGS[lang]
@@ -6366,32 +6465,50 @@ def starship_page(lang, arts):
         rows.append(f"<tr{cls}>{tds}</tr>")
     head = "".join(f"<th>{esc(name)}</th>" for name in labels[4:10])
     related = hub_articles({"topics": ["starship"]}, arts)
-    rel = ""
-    if related:
-        rel = (f'<h2 class="hubh">{esc(labels[10])}</h2>'
-               f'<p class="hubcount">{esc(_count_label(len(related), lang))}.</p>'
-               + hub_cards(related, lang))
-    body = (
-        f'{nav}<header class="hubhead"><h1>{esc(title)}</h1>'
-        f'<p class="byline">{esc(L["byline"])}</p>'
-        f'<p class="lead">{esc(intro)}</p>'
-        f'<p class="hubcount">{esc(updated)} '
-        f'<a href="{url(lang, ecosystem_path(lang))}">'
-        + ("See the ecosystem map" if lang == "en" else "Zie de kaart van het ecosysteem")
-        + "</a></p></header>"
-        f'<div class="ss-board">'
-        f'<article class="ss-card latest"><p class="k">{esc(labels[0])}</p>'
-        f'<h2>{"Flight" if lang == "en" else "Vlucht"} {latest["number"]}</h2>'
+    flight_photo = {
+        1: "starship-1", 2: "starship-2", 3: "starship-3", 4: "starship-4",
+        5: "starship-5", 6: "starship-6", 8: "starship-8", 11: "starship-11",
+        15: "starship-15",
+    }
+    flight_word = "Flight" if lang == "en" else "Vlucht"
+    map_link = (f'<p class="hubcount"><a href="{url(lang, ecosystem_path(lang))}">'
+                + ("See the ecosystem map" if lang == "en" else "Zie de kaart van het ecosysteem")
+                + "</a></p>")
+    latest_html = (
+        f'<div class="ss-board"><article class="ss-card latest"><p class="k">{esc(labels[0])}</p>'
+        f'<p class="hubh">{flight_word} {latest["number"]}</p>'
         f'<p>{esc(_flight_when(latest, lang))}. {esc(_bi(latest["outcome"], lang))}</p>'
-        f'<div class="ss-pills">{pills}</div>{_src_links(latest.get("sources"))}</article>'
-        f'<article class="ss-card next"><p class="k">{esc(labels[1])}</p>'
-        f'<h2>{next_main}</h2><p>{esc(_bi(nxt.get("note"), lang))}</p>{_src_links(nxt.get("sources"))}</article>'
-        f'</div>'
-        f'<h2 class="hubh">{esc(labels[3])}</h2>'
-        f'<div class="ss-wrap"><table class="ss-table"><thead><tr>{head}</tr></thead><tbody>{"".join(rows)}</tbody></table></div>'
-        f'{rel}'
-    )
-    return body, ld, intro
+        f'<div class="ss-pills">{pills}</div>{_src_links(latest.get("sources"))}</article></div>')
+    next_html = (
+        f'<div class="ss-board"><article class="ss-card next"><p class="k">{esc(labels[1])}</p>'
+        f'<p class="hubh">{next_main}</p><p>{esc(_bi(nxt.get("note"), lang))}</p>'
+        f'{_src_links(nxt.get("sources"))}</article></div>')
+    table = (f'<div class="ss-wrap"><table class="ss-table"><thead><tr>{head}</tr></thead>'
+             f'<tbody>{"".join(rows)}</tbody></table></div>')
+    sections = [
+        (labels[0], latest_html, ""),
+        (labels[1], next_html, ""),
+        (labels[3], table, ""),
+    ]
+    for flight in flights:
+        fact = (
+            f'<p>{esc(_flight_when(flight, lang))}. {esc(_bi(flight["outcome"], lang))}</p>'
+            f'<div class="ss-pills">'
+            f'<span>{esc(labels[7])} {_yes_no(flight["booster_catch"], lang)}</span>'
+            f'<span>{esc(labels[8])} {_yes_no(flight["ship_catch"], lang)}</span>'
+            f'<span>{esc(labels[9])}: {esc(_bi(flight["payload"], lang))}</span>'
+            f'</div>{_src_links(flight.get("sources"))}')
+        sections.append((f'{flight_word} {flight["number"]}', fact, flight_photo.get(flight["number"], "")))
+    if related:
+        rel = (f'<p class="hubcount">{esc(_count_label(len(related), lang))}.</p>'
+               + hub_cards(related, lang))
+        sections.append((labels[10], rel + map_link, ""))
+    else:
+        sections.append((labels[10], map_link, ""))
+    rubric = hub_rubric(lang, "SpaceX", "spacex/", "Starship", "starship/")
+    article, image = hub_article(
+        lang, title, intro, data["updated"], rubric, "starship-15", sections)
+    return nav + article, ld, intro, image
 
 
 def load_evergreen():
@@ -6459,14 +6576,32 @@ def evergreen_article_links(a, lang):
 
 
 def evergreen_body(hub, arts, lang):
-    L = LANGS[lang]
     title = hub["title"][lang]
     intro = (hub.get("intro") or {}).get(lang) or ""
     updated = str(hub.get("updated") or load_data("evergreen.json").get("updated") or "")[:10]
-    when = ("Updated on " if lang == "en" else "Bijgewerkt op ") + (
-        fmt_date(updated, lang) if re.fullmatch(r"\d{4}-\d{2}-\d{2}", updated) else updated)
     events = sorted(hub.get("events") or [], key=lambda row: str(row.get("date") or ""), reverse=True)
-    rows = []
+    related = evergreen_articles(hub, arts)
+    rel = f'<p class="hubcount">{esc(_coverage_note(lang))}</p>'
+    if related:
+        rel = (f'<p class="hubcount">{esc(_count_label(len(related), lang))}.</p>'
+               + hub_cards(related, lang))
+    nav, ld = crumbs(lang, [(title, None)])
+    photos = {
+        "fsd-europe": {"2026-04-10": "fsd-modelx", "2026-06-17": "fsd-tahoe"},
+        "deliveries": {"2026-07-02": "deliver-3", "2026-10-02": "deliver-y"},
+        "starlink-nl": {"2021-05-13": "starlink-dish", "2021-10-13": "starlink-ship"},
+    }.get(hub.get("key"), {})
+    heroes = {
+        "fsd-europe": "fsd-tahoe",
+        "deliveries": "deliver-y",
+        "starlink-nl": "starlink-dish",
+    }
+    rubrics = {
+        "fsd-europe": ("Tesla", "tesla/", "FSD", "fsd/"),
+        "deliveries": ("Tesla", "tesla/", "", ""),
+        "starlink-nl": ("Starlink", "starlink/", "", ""),
+    }
+    sections = []
     for event in events:
         text = (event.get("text") or {}).get(lang) or ""
         sources = event.get("sources") or []
@@ -6474,24 +6609,15 @@ def evergreen_body(hub, arts, lang):
             continue
         date = str(event.get("date") or "")
         label = fmt_date(date, lang) if re.fullmatch(r"\d{4}-\d{2}-\d{2}", date) else date
-        rows.append(
-            f'<li><time datetime="{esc(date)}">{esc(label)}</time><p>{esc(text)}</p>{_src_links(sources)}</li>')
-    related = evergreen_articles(hub, arts)
-    rel = f'<p class="hubcount">{esc(_coverage_note(lang))}</p>'
-    if related:
-        head = "On TrendingTesla" if lang == "en" else "Op TrendingTesla"
-        rel = (f'<h2 class="hubh">{esc(head)}</h2>'
-               f'<p class="hubcount">{esc(_count_label(len(related), lang))}.</p>'
-               + hub_cards(related, lang))
-    nav, ld = crumbs(lang, [(title, None)])
-    body = (
-        f'{nav}<header class="hubhead"><h1>{esc(title)}</h1>'
-        f'<p class="byline"><a href="{url(lang, "editorial/")}">{esc(L["byline"])}</a></p>'
-        f'<p class="lead">{esc(intro)}</p>'
-        f'<p class="hubcount">{esc(when)}</p></header>'
-        f'<ol class="etime">{"".join(rows)}</ol>{rel}'
-    )
-    return body, ld, intro, updated
+        inner = f'<p>{esc(text)}</p>{_src_links(sources)}'
+        sections.append((label, inner, photos.get(date, "")))
+    head = "On TrendingTesla" if lang == "en" else "Op TrendingTesla"
+    sections.append((head, rel, ""))
+    layer, layer_path, sub, sub_path = rubrics.get(hub.get("key"), ("Tesla", "tesla/", "", ""))
+    rubric = hub_rubric(lang, layer, layer_path, sub, sub_path)
+    article, image = hub_article(
+        lang, title, intro, updated, rubric, heroes.get(hub.get("key"), ""), sections)
+    return nav + article, ld, intro, updated, image
 
 
 BRIEF_LAYERS = (
@@ -7193,19 +7319,19 @@ def build():
             shell(eco_body, page_side(arts, lang, "hub", "ecosystem")),
             extra_head=ld_script(eco_ld), active="ecosystem",
             alt_path=ecosystem_path(other(lang))))
-        ship_body, ship_ld, ship_desc = starship_page(lang, arts)
+        ship_body, ship_ld, ship_desc, ship_image = starship_page(lang, arts)
         ship_items = hub_articles({"topics": ["starship"]}, arts)
         write(url(lang, "starship/"), page(
             lang, "starship/", "All Starship flights" if lang == "en" else "Alle Starship-vluchten", ship_desc,
             shell(ship_body, page_side(arts, lang, "hub", "starship", skip=ship_items)),
-            extra_head=ld_script(ship_ld), active="starship"))
+            extra_head=ld_script(ship_ld), image=ship_image, active="starship"))
         for hub in load_evergreen():
-            h_body, h_ld, h_intro, _h_updated = evergreen_body(hub, arts, lang)
+            h_body, h_ld, h_intro, _h_updated, h_image = evergreen_body(hub, arts, lang)
             h_items = evergreen_articles(hub, arts)
             write(url(lang, hub["path"]), page(
                 lang, hub["path"], hub["title"][lang], h_intro,
                 shell(h_body, page_side(arts, lang, "hub", hub["key"], skip=h_items)),
-                extra_head=ld_script(h_ld), active=hub["key"]))
+                extra_head=ld_script(h_ld), image=h_image, active=hub["key"]))
 
         # ---------- Articles ----------
         for a in arts:

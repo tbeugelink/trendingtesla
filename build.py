@@ -1166,10 +1166,15 @@ header.hb .pnav>.is-parked{display:none}
 .lcard .lim img{width:100%;height:100%;object-fit:cover}
 /* A Short on a news card stays the same 16:9 tile as its neighbours. The vertical
    poster sits centered on a blurred copy of itself, with the Short badge and play icon on top. */
-.lcard .lim.fitin{position:relative;aspect-ratio:16/9;background:#070b16;overflow:hidden}
-.lcard .lim.fitin::before{content:"";position:absolute;inset:-8%;background:var(--poster) center/cover no-repeat;filter:blur(18px) brightness(.45);transform:scale(1.12)}
-.lcard .lim.fitin img{position:relative;z-index:1;width:auto;max-width:100%;height:100%;margin:0 auto;object-fit:contain;object-position:center}
-.lcard .lim.fitin .dur,.lcard .lim.fitin .vpl{z-index:2}
+/* A Short in any news card stays a 16:9 tile. A vertical poster is centered on a blurred copy of itself. */
+.zimg.fitin{position:relative;background:#070b16}
+.zimg.fitin::before{content:"";position:absolute;inset:-8%;background:var(--poster) center/cover no-repeat;filter:blur(18px) brightness(.45);transform:scale(1.12)}
+.mini .th.fitin{aspect-ratio:16/9}
+.lcard .lim.fitin img,.card .im.fitin img,.res .zimg.fitin img,.vcard .vim.fitin img,.mini .th.fitin img{position:relative;z-index:1;width:auto;max-width:100%;height:100%;aspect-ratio:auto;margin:0 auto;object-fit:contain;object-position:center}
+.zimg.fitin .dur,.zimg.fitin .vpl{z-index:2}
+.res .zimg{position:relative}
+.res .vpl{width:22px;height:22px;min-width:22px;min-height:22px}
+.res .dur{right:4px;bottom:4px;font-size:.6rem;padding:2px 4px}
 .lcard .lbody{display:flex;flex-direction:column;gap:4px;padding:0 0 10px;min-width:0;flex:1}
 .lmeta{display:flex;flex-wrap:nowrap;gap:4px 6px;align-items:baseline;margin:6px 0 4px;padding:0;font-size:.68rem;font-weight:700;line-height:1.3;color:var(--dim);white-space:nowrap}.leadstory>.lmeta,.pv-lead>.lmeta,article.money>.lmeta{margin-bottom:9px}
 /* Article pages: rubric sits under the hero and its caption, then the title.
@@ -2636,11 +2641,12 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'){t(false);d.
 var f=document.querySelector('.search'),i=f.querySelector('input'),r=f.querySelector('.res'),idx=null;
 function e(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
 function rubric(a){var when=' · <time class="ago" datetime="'+a.ts+'">'+e(a.dt)+'</time>';return a.s?'<span class="lmeta"><span class="lpath"><span class="llayer">'+e(a.k||'')+'</span> / <span class="lsub">'+e(a.s)+'</span></span>'+when+'</span>':'<span class="lmeta"><span class="lname">'+e(a.k||'')+'</span>'+when+'</span>'}
+function still(a,tag,cls,w,h){var img='<img src="'+e(a.i||'')+'" alt="'+e(a.t)+'" width="'+w+'" height="'+h+'" decoding="async">';var mark=(a.sp||a.sb)?'<span class="dur dvo">Short</span><span class="vpl" aria-hidden="true"></span>':'';return '<'+tag+' class="'+cls+(a.sp?' fitin':'')+'"'+(a.sp?' style="--poster:url('+e(a.i)+')"':'')+'>'+img+mark+'</'+tag+'>'}
 function load(){return idx?Promise.resolve(idx):fetch(f.dataset.idx).then(function(x){return x.json()}).then(function(j){idx=j;return j})}
 i.addEventListener('focus',load);
 i.addEventListener('input',function(){var q=i.value.trim().toLowerCase();if(q.length<2){r.hidden=true;return}
 load().then(function(){var w=q.split(/\s+/),h=idx.filter(function(a){var s=(a.t+' '+a.d+' '+a.c).toLowerCase();return w.every(function(x){return s.indexOf(x)>-1})}).slice(0,8);
-r.innerHTML=h.length?h.map(function(a){return '<a href="'+a.u+'"><span class="zimg"><img src="'+a.i+'" alt="'+e(a.t)+'" width="112" height="63" decoding="async"></span><span>'+rubric(a)+'<b>'+e(a.t)+'</b></span></a>'}).join(''):'<p>'+e(f.dataset.none)+'</p>';r.hidden=false});});
+r.innerHTML=h.length?h.map(function(a){return '<a href="'+a.u+'">'+still(a,'span','zimg',112,63)+'<span>'+rubric(a)+'<b>'+e(a.t)+'</b></span></a>'}).join(''):'<p>'+e(f.dataset.none)+'</p>';r.hidden=false});});
 f.addEventListener('submit',function(x){x.preventDefault();var a=r.querySelector('a');if(a)location.href=a.href});
 document.addEventListener('click',function(x){if(!f.contains(x.target)&&!x.target.closest('.sbtn')){r.hidden=true;d.classList.remove('sopen');if(d.classList.contains('find-open'))setFind(false)}});
 document.querySelector('.sbtn').addEventListener('click',function(ev){ev.stopPropagation();var open=!d.classList.contains('find-open');setFind(open,{restore:!open})});
@@ -2665,7 +2671,7 @@ function paintLike(){var lb=[].slice.call(document.querySelectorAll('[data-like]
 paintLike();
 document.addEventListener('click',function(ev){var b=ev.target.closest&&ev.target.closest('[data-like]');if(!b)return;ev.preventDefault();var s=b.dataset.like,liked=LS.get('tt_liked'),i=liked.indexOf(s),d=i>-1?-1:1;if(d>0)liked.push(s);else liked.splice(i,1);LS.set('tt_liked',liked);b.setAttribute('aria-pressed',d>0);var sp=b.querySelector('span');sp.textContent=Math.max(0,(+sp.textContent||0)+d);fetch('/api/likes',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({slug:s,d:d})}).then(function(r){return r.json()}).then(function(j){if(j.n!=null)sp.textContent=j.n}).catch(function(){})});
 var sl=document.querySelector('.savedlist');if(sl){var keep=LS.get('tt_saved');if(!keep.length){sl.innerHTML='<p class="empty">'+e(sl.dataset.empty)+'</p>'}else{load().then(function(){var m={};idx.forEach(function(a){var k=a.u.replace(/\/$/,'').split('/').pop();m[k]=a});
-sl.innerHTML=keep.filter(function(k){return m[k]}).map(function(k){var a=m[k];return '<div class="card"><a class="lgo" href="'+a.u+'"><div class="im zimg"><img src="'+a.i+'" alt="'+e(a.t)+'" width="1200" height="630" decoding="async"></div></a><div class="body"><div class="lrow"><a class="lgo" href="'+a.u+'">'+rubric(a)+'</a></div><a class="lgo" href="'+a.u+'"><h3>'+e(a.t)+'</h3></a></div></div>'}).join('');paintSave();paintLike();ttAgo()})}}window.addEventListener('resize',bal);bal();
+sl.innerHTML=keep.filter(function(k){return m[k]}).map(function(k){var a=m[k];return '<div class="card"><a class="lgo" href="'+a.u+'">'+still(a,'div','im zimg',1200,630)+'</a><div class="body"><div class="lrow"><a class="lgo" href="'+a.u+'">'+rubric(a)+'</a></div><a class="lgo" href="'+a.u+'"><h3>'+e(a.t)+'</h3></a></div></div>'}).join('');paintSave();paintLike();ttAgo()})}}window.addEventListener('resize',bal);bal();
 })();"""
 JS += r"""
 document.querySelectorAll(".avb[data-vid]").forEach(function(b){b.addEventListener("click",function(){if(b.classList.contains("on"))return;b.classList.add("on");var f=document.createElement("iframe");f.src="https://www.youtube-nocookie.com/embed/"+b.dataset.vid+"?autoplay=1"+(matchMedia("(pointer:coarse)").matches?"":"&playsinline=1")+"&rel=0";f.title=b.getAttribute("aria-label")||"YouTube";f.setAttribute("allow","autoplay; encrypted-media; picture-in-picture; fullscreen");f.allowFullscreen=true;b.appendChild(f)})});
@@ -2736,7 +2742,10 @@ def card(a, lang, lead=False):
     t = a[lang]
     cls = "card lead" if lead else "card"
     line = rubric_line(a, lang)
-    im = f'<div class="im zimg">{resp_img(site_img(a), t["title"], SIZES_CARD)}{live_mark(a)}{dur(a, lang)}{ovl(a, lang)}</div>'
+    src, portrait = short_visual(a)
+    if not src:
+        src = site_img(a)
+    im = still_box("div", "im zimg", src, t["title"], SIZES_CARD, portrait=portrait, mark=card_mark(a, lang))
     title = f'<h3>{esc(card_title(a, lang))}</h3>'
     # The rubric sits under the photo, then the title. The lead photo is not a link.
     href = url(lang, a["slug"] + "/")
@@ -2752,8 +2761,12 @@ def gcard(a, lang, eager=False):
     """Topic list under the lead: photo on top, then title, summary and date."""
     t = a[lang]
     href = url(lang, a["slug"] + "/")
+    src, portrait = short_visual(a)
+    if not src:
+        src = site_img(a)
+    photo = still_box("div", "im zimg", src, t["title"], SIZES_GRID, portrait=portrait, high=eager, lazy=not eager, mark=card_mark(a, lang))
     return (f'<div class="card"><a class="lgo" href="{href}">'
-            f'<div class="im zimg">{resp_img(site_img(a), t["title"], SIZES_GRID, high=eager, lazy=not eager)}{live_mark(a)}{dur(a, lang)}{ovl(a, lang)}</div></a>'
+            f'{photo}</a>'
             f'<div class="body">{with_actions(rubric_line(a, lang), "", lang, href)}'
             f'<a class="lgo" href="{href}"><h2>{esc(card_title(a, lang))}</h2></a></div></div>')
 
@@ -2890,8 +2903,11 @@ def vscript(a, lang):
 
 def mini(a, lang):
     t = a[lang]
+    src, portrait = short_visual(a)
+    if not src:
+        src = site_img(a)
     return (f'<a class="mini" href="{url(lang, a["slug"] + "/")}">'
-            f'<div class="th zimg">{resp_img(site_img(a), t["title"], SIZES_CARD)}{dur(a, lang)}{ovl(a, lang)}</div>'
+            f'{still_box("div", "th zimg", src, t["title"], SIZES_CARD, portrait=portrait, mark=card_mark(a, lang))}'
             f'<div>{rubric_line(a, lang)}<h3>{esc(card_title(a, lang))}</h3></div></a>')
 
 
@@ -4094,6 +4110,43 @@ def short_poster(short):
     return ""
 
 
+def short_visual(a):
+    """Photo for a news card whose video is a Short, not a long video.
+
+    A local 9:16 poster is centered on a blurred copy. Without one, the card uses the
+    YouTube still and stays a normal 16:9 cover. Future Shorts pick this up from shorts.json.
+    """
+    if not a or video_for(a, "en"):
+        return "", False
+    sh = SHORTS.get(a.get("slug") or "")
+    if not sh:
+        return "", False
+    local = short_poster(sh)
+    if local:
+        return local, True
+    if sh.get("id"):
+        return yt_thumb(sh["id"]), False
+    return "", False
+
+
+def still_box(tag, frame, src, alt, sizes, *, portrait=False, high=False, lazy=True, width=640, height=360, mark=""):
+    klass = f"{frame} fitin" if portrait else frame
+    style = f' style="--poster:url({esc(src)})"' if portrait else ""
+    w, h = (1080, 1920) if portrait else (width, height)
+    return (f'<{tag} class="{klass}"{style}>'
+            f'{resp_img(src, alt, sizes, high=high, lazy=lazy, width=w, height=h)}{mark}</{tag}>')
+
+
+def card_mark(a, lang, badge=""):
+    """Short badge and play icon when this card is a Short. Otherwise the usual length mark."""
+    if not badge and short_visual(a)[0]:
+        badge = "Short"
+    bits = live_mark(a)
+    if badge:
+        return bits + f'<span class="dur dvo">{esc(badge)}</span><span class="vpl" aria-hidden="true"></span>'
+    return bits + dur(a, lang) + ovl(a, lang)
+
+
 def article_media(a, lang):
     poster = site_img(a)
     video = video_for(a, lang)
@@ -4477,11 +4530,14 @@ def home_videos(arts, lang, n=8):
         else:
             badge = LANGS[lang]["videos"]
         tone = layer_tone(a)
+        src, portrait = short_visual(a) if is_short else ("", False)
+        if not src:
+            src = site_img(a)
+        mark = (f'<span class="vpl" aria-hidden="true"></span>'
+                f'<span class="dur dvo">{esc(badge)}</span>')
         cards.append(
-            f'<div class="vcard {tone}"><a class="lgo" href="{href}"><span class="vim zimg">'
-            f'{resp_img(site_img(a), t["title"], SIZES_VIDEO, width=480, height=270)}'
-            f'<span class="vpl" aria-hidden="true"></span>'
-            f'<span class="dur dvo">{esc(badge)}</span></span></a>'
+            f'<div class="vcard {tone}"><a class="lgo" href="{href}">'
+            f'{still_box("span", "vim zimg", src, t["title"], SIZES_VIDEO, portrait=portrait, width=480, height=270, mark=mark)}</a>'
             f'{with_actions(rubric_line(a, lang), "", lang, href)}'
             f'<a class="lgo" href="{href}"><strong>{esc(card_title(a, lang))}</strong></a></div>')
     return "".join(cards), [a for a, _, _ in rows]
@@ -4755,19 +4811,14 @@ def home_grid_card(a, lang, eager=False, badge=""):
     """Article card: rubric flush under the photo, title below. A video badge sits on the photo."""
     t = a[lang]
     href = url(lang, a["slug"] + "/")
-    poster = short_poster(SHORTS.get(a["slug"]))
-    if poster and not badge:
-        badge = "Short"
-    mark = ""
-    if badge:
-        mark = f'<span class="dur dvo">{esc(badge)}</span><span class="vpl" aria-hidden="true"></span>'
-    mark = live_mark(a) + mark
-    frame = "lim zimg fitin" if poster else "lim zimg"
-    style = f' style="--poster:url({esc(poster)})"' if poster else ""
-    photo = poster or site_img(a)
+    src, portrait = short_visual(a)
+    if not src:
+        src = site_img(a)
+    photo = still_box("span", "lim zimg", src, t["title"], "(max-width: 599px) 92vw, (max-width: 900px) 46vw, 280px",
+                      portrait=portrait, high=eager, lazy=not eager, mark=card_mark(a, lang, badge))
     return (
         f'<div class="lcard"><a class="lgo" href="{href}">'
-        f'<span class="{frame}"{style}>{resp_img(photo, t["title"], "(max-width: 599px) 92vw, (max-width: 900px) 46vw, 280px", high=eager, lazy=not eager, width=1080 if poster else 640, height=1920 if poster else 360)}{mark}</span></a>'
+        f'{photo}</a>'
         f'{with_actions(rubric_line(a, lang), "", lang, href)}'
         f'<a class="lgo" href="{href}"><span class="lbody"><strong>{esc(card_title(a, lang))}</strong></span></a></div>')
 
@@ -4958,14 +5009,17 @@ def clip_card(item, lang, eager=False):
     if item["kind"] == "article":
         return home_grid_card(item["article"], lang, eager)
     title = item["title"]
-    flags = 'fetchpriority="high"' if eager else 'loading="lazy"'
-    img = (f'<img src="{yt_thumb(item["id"])}" alt="{esc(title)}" width="480" height="360" {flags} decoding="async">')
+    row = next((sh for sh in SHORT_ROWS if sh.get("id") == item.get("id")), {}) if item["kind"] == "short" else {}
+    local = short_poster(row)
+    src = local or yt_thumb(item["id"])
     badge = f'<span class="dur dvo">{esc(clip_badge(item))}</span><span class="vpl" aria-hidden="true"></span>'
     href = url(lang, item["path"])
     article = item.get("article")
+    photo = still_box("span", "lim zimg", src, title, "(max-width: 599px) 92vw, (max-width: 900px) 46vw, 280px",
+                      portrait=bool(local), high=eager, lazy=not eager, mark=badge)
     return (
         f'<div class="lcard"><a class="lgo" href="{href}">'
-        f'<span class="lim zimg">{img}{badge}</span></a>'
+        f'{photo}</a>'
         f'{with_actions(clip_meta(item, lang), "", lang, href)}'
         f'<a class="lgo" href="{href}"><span class="lbody"><strong>{esc(title)}</strong></span></a></div>')
 
@@ -7564,9 +7618,14 @@ def build():
                   page(lang, a["slug"] + "/", t["title"], t["description"], body, "article", head,
                        image=og, active=a["category"]))
 
-        idx = [{"u": url(lang, x["slug"] + "/"), "t": x[lang]["title"], "d": x[lang]["description"],
-                "k": _rubric_pair(x, lang)[0], "s": _rubric_pair(x, lang)[2],
-                "c": CATEGORIES[x["category"]].get("tag", CATEGORIES[x["category"]][lang]), "dt": rel_short(published(x), lang), "ts": published(x).isoformat(), "i": site_img(x)} for x in arts]
+        def search_row(x):
+            src, portrait = short_visual(x)
+            return {"u": url(lang, x["slug"] + "/"), "t": x[lang]["title"], "d": x[lang]["description"],
+                    "k": _rubric_pair(x, lang)[0], "s": _rubric_pair(x, lang)[2],
+                    "c": CATEGORIES[x["category"]].get("tag", CATEGORIES[x["category"]][lang]),
+                    "dt": rel_short(published(x), lang), "ts": published(x).isoformat(),
+                    "i": src or site_img(x), "sp": 1 if portrait else 0, "sb": 1 if src else 0}
+        idx = [search_row(x) for x in arts]
         (OUT / f"search-{lang}.json").write_text(json.dumps(idx, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
 
         # ---------- Archive: all articles, newest first, paginated ----------

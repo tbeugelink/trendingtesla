@@ -2,8 +2,12 @@ name: Publish pad 32-hour Short
 
 # One reviewed file. Public on YouTube, then TikTok, Instagram and Facebook
 # through Buffer with the AI-content label off. Does not post to X.
+# A push that changes this file is the trigger. Later commits on the branch do not run it.
 on:
-  workflow_dispatch:
+  push:
+    branches: [cursor/pad-32-hours-short-9a54]
+    paths:
+      - .github/workflows/pad-32-publish.yml
 
 permissions:
   contents: write

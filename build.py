@@ -481,9 +481,9 @@ h1,h2,h3{color:#ebebeb;font-weight:800}
 .ticker{height:28px;overflow:hidden;background:transparent;color:var(--fg);font-size:12px;font-weight:600;line-height:28px}
 .tk-track{display:flex;width:max-content;animation:tk-run 80s linear infinite}
 .tk-set{display:flex;align-items:center;flex:none}
-.tk{display:inline-flex;align-items:center;white-space:nowrap;color:inherit;text-decoration:none}
+.tk{white-space:nowrap;color:inherit;text-decoration:none}
 .ticker a.tk{color:inherit}
-.tk::before{content:"";width:3px;height:3px;margin:0 12px;border-radius:50%;background:currentColor;opacity:.38;flex:none}
+.tk::before{content:"";display:inline-block;width:3px;height:3px;margin:0 12px;border-radius:50%;background:currentColor;opacity:.38;vertical-align:middle}
 .tk b{color:var(--head);font-weight:700}
 .tk .up{color:#3ddc97}
 .tk .dn{color:#ff5d57}

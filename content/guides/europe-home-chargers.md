@@ -11,10 +11,10 @@ nl: Een thuislader voor een Tesla in Europa is een Type 2-kast op een eigen groe
 :::product
 name_en: Tesla Wall Connector Type 2
 name_nl: Tesla Wall Connector Type 2
-pros_en: Tesla’s own Type 2 unit, rated up to 22 kW, with a 7.3 m cable for indoor or outdoor mounting
-pros_nl: Tesla’s eigen Type 2-unit, tot 22 kW, met een kabel van 7,3 m voor binnen of buiten
-cons_en: 22 kW only helps if your supply and the car both accept it. Check the current price
-cons_nl: 22 kW helpt alleen als je aansluiting en de auto dat allebei aankunnen. Kijk de actuele prijs na
+pros_en: Tesla’s own Type 2 unit | Rated up to 22 kW | 7.3 m cable for indoor or outdoor mounting
+pros_nl: Tesla’s eigen Type 2-unit | Tot 22 kW | Kabel van 7,3 m voor binnen of buiten
+fits_en: A home with its own circuit. 22 kW only helps if the supply and the car both accept it.
+fits_nl: Een huis met een eigen groep. 22 kW helpt alleen als de aansluiting en de auto dat allebei aankunnen.
 url: https://www.amazon.nl/dp/B0BW16BBKQ
 button_en: View on Amazon
 button_nl: Bekijk bij Amazon
@@ -23,10 +23,10 @@ button_nl: Bekijk bij Amazon
 :::product
 name_en: dé EV Charger Type 2 22 kW
 name_nl: dé EV Charger Type 2 22 kW
-pros_en: A mobile Type 2 unit with a 7 m cable and a Schuko adapter, listed as compatible with Model Y and Model 3
-pros_nl: Een mobiele Type 2-unit met een kabel van 7 m en een Schuko-adapter, vermeld als geschikt voor Model Y en Model 3
-cons_en: A mobile box is not a substitute for a dedicated circuit. Check the current price
-cons_nl: Een mobiele kast vervangt geen eigen groep. Kijk de actuele prijs na
+pros_en: Mobile Type 2 unit | 7 m cable | Schuko adapter, listed for Model Y and Model 3
+pros_nl: Mobiele Type 2-unit | Kabel van 7 m | Schuko-adapter, vermeld voor Model Y en Model 3
+fits_en: A Model Y or Model 3 on the road. A mobile box is not a substitute for a dedicated circuit.
+fits_nl: Een Model Y of Model 3 onderweg. Een mobiele kast vervangt geen eigen groep.
 url: https://www.amazon.nl/dp/B0CS6234MR
 button_en: View on Amazon
 button_nl: Bekijk bij Amazon

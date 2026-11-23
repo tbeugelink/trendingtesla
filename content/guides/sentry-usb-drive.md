@@ -11,10 +11,10 @@ nl: Sentry Mode schrijft beelden naar een schijf in de USB-poort van de auto. De
 :::product
 name_en: Samsung BAR Plus 256 GB
 name_nl: Samsung BAR Plus 256 GB
-pros_en: A USB-A stick, 256 GB, small enough for the glovebox port owners use for Sentry clips
-pros_nl: Een USB-A-stick van 256 GB, klein genoeg voor de poort in het dashboardkastje die eigenaren voor Sentry gebruiken
-cons_en: Constant recording wears a flash drive. Format it in the car. Check the current price
-cons_nl: Continu opnemen slijt een flashdrive. Formatteer hem in de auto. Kijk de actuele prijs na
+pros_en: USB-A stick | 256 GB | Small enough for the glovebox port used for Sentry clips
+pros_nl: USB-A-stick | 256 GB | Klein genoeg voor de poort in het dashboardkastje voor Sentry-beelden
+fits_en: A Tesla that saves Sentry clips and needs more room. Format the stick in the car. All-day writing wears a flash drive.
+fits_nl: Een Tesla die Sentry-beelden bewaart en meer ruimte nodig heeft. Formatteer de stick in de auto. Schrijven de hele dag slijt een flashdrive.
 url: https://www.amazon.nl/dp/B07D1KF73V
 button_en: View on Amazon
 button_nl: Bekijk bij Amazon
@@ -23,10 +23,10 @@ button_nl: Bekijk bij Amazon
 :::product
 name_en: Samsung BAR Plus 128 GB
 name_nl: Samsung BAR Plus 128 GB
-pros_en: The same USB-A stick in a smaller size, for a car that does not need a long clip history
-pros_nl: Dezelfde USB-A-stick in een kleiner formaat, voor een auto die geen lange beeldgeschiedenis nodig heeft
-cons_en: Less room for clips. The same wear from all-day writing. Check the current price
-cons_nl: Minder ruimte voor beelden. Dezelfde slijtage door schrijven de hele dag. Kijk de actuele prijs na
+pros_en: The same USB-A BAR Plus | 128 GB | For a shorter clip history
+pros_nl: Dezelfde USB-A BAR Plus | 128 GB | Voor een kortere beeldgeschiedenis
+fits_en: A Tesla that does not need a long clip history. The same wear from all-day writing.
+fits_nl: Een Tesla die geen lange beeldgeschiedenis nodig heeft. Dezelfde slijtage door schrijven de hele dag.
 url: https://www.amazon.nl/dp/B07CVXQVQM
 button_en: View on Amazon
 button_nl: Bekijk bij Amazon

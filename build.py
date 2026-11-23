@@ -1448,7 +1448,14 @@ header.hb .bar .lang{margin-left:0;margin-right:0;flex:none;white-space:nowrap;t
 .gbox h3{margin:8px 0 4px;font-size:.78rem;letter-spacing:.04em;text-transform:uppercase;color:var(--dim)}
 .gbox ul{margin:0;padding-left:1.1em}
 .gbox li{margin:0 0 3px}
-.gbox .btn{display:inline-block;background:var(--red);color:#fff;text-decoration:none;font-weight:800;border-radius:8px;padding:10px 14px}
+.gbox .btn{display:inline-flex;align-items:center;justify-content:center;background:var(--red);color:#fff;text-decoration:none;font-weight:800;border-radius:8px;padding:12px 16px;line-height:1.3;text-align:center}
+article .prose .gbox h2{border:0;padding:0;margin:0 0 8px;font-size:1.15rem}
+.gbox .fits{margin:10px 0 0;color:var(--fg);line-height:1.45}
+.gbox .gprice{margin:8px 0 0;color:var(--dim);font-size:.88rem;line-height:1.45}
+.gbox .amazon-go{margin-top:14px}
+article.narrow>.hi,article.narrow>.avid{margin:0 0 12px}
+article.narrow>.hi img,article.narrow>.avid .avb{width:100%;max-width:100%}
+@media (max-width:600.98px){.gbox .amazon-go{width:100%}}
 .gtable{width:100%;border-collapse:collapse;margin:8px 0 16px;font-size:.92rem}
 .gtable th,.gtable td{padding:8px 10px;border:1px solid #3a4a60;text-align:left}
 .gtable caption{text-align:left;font-weight:800;margin:0 0 6px}
@@ -3146,35 +3153,9 @@ _IMG_HIDE = ("this.closest('.pbox,.gbox,li')&&this.closest('.pbox,.gbox,li').cla
 
 
 def load_product_images():
-    """Official amazon.nl photos, keyed by ASIN. Missing keys mean no picture."""
+    """Amazon product images are not stored or hotlinked. Local /img/ photos only."""
     global PRODUCT_IMAGES
     PRODUCT_IMAGES = {}
-    path = ROOT / "content" / "product-images.json"
-    if not path.exists():
-        return
-    try:
-        data = json.loads(path.read_text(encoding="utf-8"))
-    except ValueError:
-        return
-    if not isinstance(data, dict):
-        return
-    for asin, src in data.items():
-        key = str(asin or "").strip().upper()
-        if not re.fullmatch(r"[A-Z0-9]{10}", key):
-            continue
-        url = _amazon_image_url(src)
-        if url:
-            PRODUCT_IMAGES[key] = url
-
-
-def _amazon_image_url(src):
-    """Only Amazon's own product-image host. Anything else is refused."""
-    url = str(src or "").strip()
-    if not url.startswith("https://m.media-amazon.com/images/"):
-        return ""
-    if ".." in url or " " in url or '"' in url or "<" in url:
-        return ""
-    return url
 
 
 def _product_asin(product):
@@ -3190,18 +3171,11 @@ def _product_asin(product):
 
 
 def product_photo(product):
-    """(src, remote). A local /img/ path or a checked Amazon image. Empty if neither."""
+    """(src, remote). A local /img/ path only. Amazon image hosts are refused."""
     if isinstance(product, dict):
         image = str(product.get("image") or "").strip()
-        if image.startswith("/img/") and ".." not in image:
+        if image.startswith("/img/") and ".." not in image and "m.media-amazon.com" not in image:
             return image, False
-        remote = _amazon_image_url(image)
-        if remote:
-            return remote, True
-    asin = _product_asin(product)
-    remote = PRODUCT_IMAGES.get(asin) or ""
-    if remote:
-        return remote, True
     return "", False
 
 
@@ -3215,14 +3189,83 @@ def product_photo_html(src, alt, href, remote):
     return f'<span class="pshot">{img}</span>'
 
 
+# Official videos of that exact product. Checked live and embeddable on youtube-nocookie.
+GUIDE_VIDEO = {
+    "portable-chargers-adapters": {
+        "id": "-PJMoBQfAzo",
+        "caption": {
+            "en": "Official video of the Juice Booster 2, from Juice Technology.",
+            "nl": "Officiële video van de Juice Booster 2, van Juice Technology.",
+        },
+    },
+    "sentry-usb-drive": {
+        "id": "V34pAk2zfNI",
+        "caption": {
+            "en": "Official video of the Samsung BAR Plus, from Samsung.",
+            "nl": "Officiële video van de Samsung BAR Plus, van Samsung.",
+        },
+    },
+}
+# Licensed photos of the car or context. The caption says what the picture actually is.
+GUIDE_STILL = {
+    "winter-mats-model-3-y": {
+        "src": "/img/hubs/deliver-y.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Tesla_Model_Y_Juniper_Washington_DC_Metro_Area,_USA.jpg",
+        "credit": "OWS Photography, CC BY 4.0, via Wikimedia Commons",
+        "alt": {"en": "A dark Tesla Model Y Juniper", "nl": "Een donkere Tesla Model Y Juniper"},
+        "caption": {
+            "en": "A Model Y Juniper. The photo is the car, not the mats.",
+            "nl": "Een Model Y Juniper. De foto is de auto, niet de matten.",
+        },
+    },
+    "model-y-trunk-floor-mats": {
+        "src": "/img/hubs/deliver-y.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Tesla_Model_Y_Juniper_Washington_DC_Metro_Area,_USA.jpg",
+        "credit": "OWS Photography, CC BY 4.0, via Wikimedia Commons",
+        "alt": {"en": "A dark Tesla Model Y Juniper", "nl": "Een donkere Tesla Model Y Juniper"},
+        "caption": {
+            "en": "A Model Y Juniper. The photo is the car, not the trunk mat or the floor mats.",
+            "nl": "Een Model Y Juniper. De foto is de auto, niet de kofferbakmat of de vloermatten.",
+        },
+    },
+    "model-y-3-accessories": {
+        "src": "/img/hubs/deliver-3.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:2024_Tesla_Model_3_Highland_Performance_AWD.jpg",
+        "credit": "Chanokchon, CC BY-SA 4.0, via Wikimedia Commons",
+        "alt": {"en": "A white 2024 Tesla Model 3 Highland", "nl": "Een witte Tesla Model 3 Highland uit 2024"},
+        "caption": {
+            "en": "A 2024 Model 3 Highland. The photo is the car, not the mats or the screen glass.",
+            "nl": "Een Model 3 Highland uit 2024. De foto is de auto, niet de matten of het schermglas.",
+        },
+    },
+    "europe-home-chargers": {
+        "src": "/img/hubs/deliver-y.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Tesla_Model_Y_Juniper_Washington_DC_Metro_Area,_USA.jpg",
+        "credit": "OWS Photography, CC BY 4.0, via Wikimedia Commons",
+        "alt": {"en": "A dark Tesla Model Y Juniper", "nl": "Een donkere Tesla Model Y Juniper"},
+        "caption": {
+            "en": "A Model Y. The photo is the car, not the wallbox.",
+            "nl": "Een Model Y. De foto is de auto, niet de wallbox.",
+        },
+    },
+    "starlink-mini-road-trip": {
+        "src": "/img/hubs/starlink-dish.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Starlink_dish_01.webp",
+        "credit": "Wikideas1, CC0, via Wikimedia Commons",
+        "alt": {"en": "A standard rectangular Starlink user terminal", "nl": "Een gewone rechthoekige Starlink-gebruikersterminal"},
+        "caption": {
+            "en": "A standard Starlink user terminal. This is not the Mini kit.",
+            "nl": "Een gewone Starlink-gebruikersterminal. Dit is niet de Mini-set.",
+        },
+    },
+}
+
+
 def guide_lead_photo(doc):
-    """First allowed product photo in a buying guide, then a local hero if the guide has one."""
-    for kind, fields in doc.get("pieces") or []:
-        if kind != "product" or not isinstance(fields, dict):
-            continue
-        src, _remote = product_photo({"image": fields.get("image") or "", "url": fields.get("url") or ""})
-        if src:
-            return src
+    """A licensed local photo for a guide. Never an Amazon image."""
+    still = GUIDE_STILL.get(doc.get("slug") or "")
+    if still and str(still.get("src") or "").startswith("/img/"):
+        return still["src"]
     image = str((doc.get("meta") or {}).get("image") or "").strip()
     if image.startswith("/img/") and ".." not in image:
         return image
@@ -6641,6 +6684,7 @@ PROMISE_STATUS = ("delivered", "late", "pending", "abandoned")
 _KV_KEYS = (
     "title_en", "title_nl", "en", "nl", "why_en", "why_nl",
     "name_en", "name_nl", "pros_en", "pros_nl", "cons_en", "cons_nl",
+    "fits_en", "fits_nl",
     "url", "image", "button_en", "button_nl",
     "caption_en", "caption_nl", "columns_en", "columns_nl", "row_en", "row_nl",
     "slug",
@@ -7025,26 +7069,54 @@ def _guide_product(fields, lang):
     name = fields.get(f"name_{lang}") or fields.get("name_en") or ""
     if not name:
         return ""
-    pros = _bits(fields.get(f"pros_{lang}") or fields.get("pros_en"))
-    cons = _bits(fields.get(f"cons_{lang}") or fields.get("cons_en"))
+    pros = _bits(fields.get(f"pros_{lang}") or fields.get("pros_en"))[:3]
+    fits = (fields.get(f"fits_{lang}") or fields.get("fits_en")
+            or fields.get(f"cons_{lang}") or fields.get("cons_en") or "")
     href = guide_amazon(str(fields.get("url") or ""))
-    src, remote = product_photo({"image": fields.get("image") or "", "url": fields.get("url") or ""})
-    img = product_photo_html(src, name, href if href.startswith("https://") else "", remote)
-    klass = "gbox" if img else "gbox noimg"
     plus = "Pros" if lang == "en" else "Pluspunten"
-    minus = "Cons" if lang == "en" else "Minpunten"
+    who = "Who it fits" if lang == "en" else "Voor wie het past"
+    price = ("Prices change. Check the current price on Amazon.nl. This page does not state one."
+             if lang == "en" else
+             "Prijzen veranderen. Kijk de actuele prijs na op Amazon.nl. Deze pagina noemt er geen.")
+    button = ("See photos and video on Amazon.nl" if lang == "en"
+              else "Bekijk foto's en video op Amazon.nl")
     lists = ""
     if pros:
-        lists += f'<h3>{plus}</h3><ul>{"".join(f"<li>{esc(item)}</li>" for item in pros)}</ul>'
-    if cons:
-        lists += f'<h3>{minus}</h3><ul>{"".join(f"<li>{esc(item)}</li>" for item in cons)}</ul>'
-    button = fields.get(f"button_{lang}") or fields.get("button_en") or (
-        "View on Amazon" if lang == "en" else "Bekijk bij Amazon")
+        lists = f'<h3>{plus}</h3><ul>{"".join(f"<li>{esc(item)}</li>" for item in pros)}</ul>'
+    fit_html = f'<p class="fits"><b>{esc(who)}.</b> {esc(fits)}</p>' if str(fits).strip() else ""
     link = ""
     if href.startswith("https://"):
-        link = (f'<a class="btn" href="{esc(href)}" rel="sponsored nofollow noopener" target="_blank">'
+        link = (f'<a class="btn amazon-go" href="{esc(href)}" rel="sponsored nofollow noopener" target="_blank">'
                 f'{esc(button)}</a>')
-    return f'<aside class="{klass}">{img}<div><h2>{esc(name)}</h2>{lists}{link}</div></aside>'
+    return (f'<aside class="gbox noimg"><div><h2>{esc(name)}</h2>{lists}{fit_html}'
+            f'<p class="gprice">{esc(price)}</p>{link}</div></aside>')
+
+
+def _guide_hero(doc, lang):
+    slug = doc.get("slug") or ""
+    video = GUIDE_VIDEO.get(slug)
+    if video:
+        vid = video["id"]
+        caption = (video.get("caption") or {}).get(lang) or ""
+        label = ("Play the video" if lang == "en" else "Speel de video")
+        thumb = f"https://i.ytimg.com/vi/{vid}/hqdefault.jpg"
+        return (
+            f'<figure class="avid long"><button class="avb" type="button" data-vid="{esc(vid)}" '
+            f'aria-label="{esc(label)}">'
+            f'<img src="{esc(thumb)}" alt="{esc(caption)}" width="480" height="360" '
+            f'fetchpriority="high" decoding="async">'
+            f'<span class="shp" aria-hidden="true"></span></button>'
+            f'<figcaption class="imgnote">{esc(caption)}</figcaption></figure>')
+    still = GUIDE_STILL.get(slug)
+    if not still:
+        return ""
+    alt = (still.get("alt") or {}).get(lang) or ""
+    caption = (still.get("caption") or {}).get(lang) or ""
+    credit = (f'<a href="{esc(still["page"])}" rel="nofollow noopener" target="_blank">'
+              f'{esc(still["credit"])}</a>')
+    img = resp_img(still["src"], alt, SIZES_HERO, high=True, lazy=False, cls="hero-img")
+    return (f'<div class="hi">{img}</div>'
+            f'<p class="imgnote">{esc(caption)} {credit}</p>')
 
 
 def _guide_table(fields, lang):
@@ -7074,18 +7146,20 @@ def guide_body(doc, lang):
         note = ("Template. This is not a published guide." if lang == "en"
                 else "Sjabloon. Dit is geen gepubliceerde gids.")
         banner = f'<p class="tplnote">{esc(note)}</p>'
-    chunks = [disclosure_line(lang), banner]
+    prose, products, tables = [], [], []
     for kind, fields in doc["pieces"]:
         if kind == "product":
-            chunks.append(_guide_product(fields, lang))
+            products.append(_guide_product(fields, lang))
         elif kind == "compare":
-            chunks.append(_guide_table(fields, lang))
+            tables.append(_guide_table(fields, lang))
         else:
             text = fields.get(lang) or fields.get("en") or ""
             if text:
-                chunks.append(f"<p>{esc(text)}</p>")
+                prose.append(f"<p>{esc(text)}</p>")
+    chunks = [disclosure_line(lang), banner, *prose, *tables, *products]
     byline = f'<p class="byline"><a href="{url(lang, "editorial/")}">{esc(LANGS[lang]["byline"])}</a></p>'
-    body = (f'<article class="narrow"><h1>{esc(title)}</h1>{byline}'
+    hero = _guide_hero(doc, lang)
+    body = (f'<article class="narrow">{hero}<h1>{esc(title)}</h1>{byline}'
             f'<div class="prose">{"".join(chunks)}</div></article>')
     return body, title, desc
 

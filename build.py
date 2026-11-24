@@ -24,6 +24,7 @@ Article JSON format:
   "products": [                                # optional; omit the key when there is nothing to link. No prices.
     {"name": {"en": "...", "nl": "..."}, "why": {"en": "...", "nl": "..."},
      "asin": "B0XXXXXXXX",                       # amazon.nl only. A full https://www.amazon.nl/dp/ URL also works.
+     "ali_url": "https://s.click.aliexpress.com/e/example",  # optional. s.click.aliexpress.com or aliexpress.com only.
      "image": "/img/topics/example.jpg"}         # optional local photo. Never a hotlinked store image.
   ]
 }
@@ -1497,10 +1498,13 @@ header.hb .bar .lang{margin-left:0;margin-right:0;flex:none;white-space:nowrap;t
 article .prose .gbox h2{border:0;padding:0;margin:0 0 8px;font-size:1.15rem}
 .gbox .fits{margin:10px 0 0;color:var(--fg);line-height:1.45}
 .gbox .gprice{margin:8px 0 0;color:var(--dim);font-size:.88rem;line-height:1.45}
-.gbox .amazon-go{margin-top:14px}
+.store-btns{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;align-items:center}
+.gbox .store-btns .btn,.pbox .store-btns .btn{margin-top:0}
+.gbox .btn.ghost,.pbox .btn.ghost{background:transparent;color:var(--head);border:1px solid #8f9db0;font-weight:700}
+.gbox .btn.ghost:hover,.pbox .btn.ghost:hover{background:transparent;border-color:#fff}
 article.narrow>.hi,article.narrow>.avid{margin:0 0 12px}
 article.narrow>.hi img,article.narrow>.avid .avb{width:100%;max-width:100%}
-@media (max-width:600.98px){.gbox .amazon-go{width:100%}}
+@media (max-width:600.98px){.store-btns{flex-direction:column;align-items:stretch}.store-btns .btn{width:100%}}
 .gtable{width:100%;border-collapse:collapse;margin:8px 0 16px;font-size:.92rem}
 .gtable th,.gtable td{padding:8px 10px;border:1px solid #3a4a60;text-align:left}
 .gtable caption{text-align:left;font-weight:800;margin:0 0 6px}
@@ -3206,6 +3210,19 @@ def with_amazon_tag(href, lang):
     return f"{href}{sep}tag={quote(tag, safe='')}"
 
 
+def ali_href(raw):
+    """An AliExpress tracking link. Any other host is dropped."""
+    href = str(raw or "").strip()
+    if not href.startswith("https://") or href.count("/") < 2:
+        return ""
+    host = href.split("/")[2].lower()
+    if host.startswith("www."):
+        host = host[4:]
+    if host not in ("s.click.aliexpress.com", "aliexpress.com"):
+        return ""
+    return href
+
+
 def amazon_nl_href(product):
     """An amazon.nl product URL with the Associates tag. Anything else is dropped."""
     if not isinstance(product, dict):
@@ -3354,10 +3371,15 @@ def product_boxes(a, lang):
         lis = "".join(f"<li>{esc(item)}</li>" for item in specs)
         ul = f"<ul>{lis}</ul>" if lis else ""
         why_html = f'<p class="why">{esc(why)}</p>' if why else ""
+        ali = ali_href(_loc(product.get("ali_url"), lang) or product.get("ali_url"))
+        ali_btn = ""
+        if ali:
+            ali_btn = (f'<a class="btn ghost" href="{esc(ali)}" rel="sponsored nofollow noopener" target="_blank">'
+                       f'AliExpress</a>')
         blocks.append(
             f'<aside class="{klass}"><div class="pbox-in">{img}<div><h3>{esc(name)}</h3>{why_html}{ul}'
-            f'<a class="btn" href="{esc(href)}" rel="sponsored nofollow noopener" target="_blank">{esc(button)}</a>'
-            f'</div></div></aside>')
+            f'<div class="store-btns"><a class="btn" href="{esc(href)}" rel="sponsored nofollow noopener" target="_blank">{esc(button)}</a>'
+            f'{ali_btn}</div></div></div></aside>')
     if not blocks:
         return ""
     return "".join(blocks) + disclosure_line(lang)
@@ -6845,7 +6867,7 @@ _KV_KEYS = (
     "title_en", "title_nl", "en", "nl", "why_en", "why_nl",
     "name_en", "name_nl", "pros_en", "pros_nl", "cons_en", "cons_nl",
     "fits_en", "fits_nl",
-    "url", "image", "button_en", "button_nl",
+    "url", "ali_url", "image", "button_en", "button_nl",
     "caption_en", "caption_nl", "columns_en", "columns_nl", "row_en", "row_nl",
     "slug",
 )
@@ -7042,12 +7064,12 @@ def guide_amazon(href):
 def disclosure_line(lang):
     href = url(lang, disclosure_path(lang))
     if lang == "en":
-        text = ("Affiliate disclosure: if you buy through a link on this page, TrendingTesla may earn a commission, "
-                "at no extra cost to you.")
+        text = ("Affiliate disclosure: if you buy through a link on this page, TrendingTesla may earn a commission "
+                "from Amazon.nl or AliExpress, at no extra cost to you.")
         more = "How this works"
     else:
-        text = ("Affiliate-melding: koop je via een link op deze pagina, dan kan TrendingTesla een commissie ontvangen. "
-                "Voor jou kost het niets extra.")
+        text = ("Affiliate-melding: koop je via een link op deze pagina, dan kan TrendingTesla een commissie ontvangen "
+                "via Amazon.nl of AliExpress. Voor jou kost het niets extra.")
         more = "Zo werkt dat"
     return f'<p class="afftop">{esc(text)} <a href="{href}">{esc(more)}</a>.</p>'
 
@@ -7246,8 +7268,13 @@ def _guide_product(fields, lang):
     fit_html = f'<p class="fits"><b>{esc(who)}.</b> {esc(fits)}</p>' if str(fits).strip() else ""
     link = ""
     if href.startswith("https://"):
-        link = (f'<a class="btn amazon-go" href="{esc(href)}" rel="sponsored nofollow noopener" target="_blank">'
-                f'{esc(button)}</a>')
+        ali = ali_href(fields.get("ali_url"))
+        ali_btn = ""
+        if ali:
+            ali_btn = (f'<a class="btn ghost" href="{esc(ali)}" rel="sponsored nofollow noopener" target="_blank">'
+                       f'AliExpress</a>')
+        link = (f'<div class="store-btns"><a class="btn amazon-go" href="{esc(href)}" rel="sponsored nofollow noopener" target="_blank">'
+                f'{esc(button)}</a>{ali_btn}</div>')
     src = licensed_card_photo(href)
     img = (f'<img src="{esc(src)}" alt="{esc(name)}" width="168" height="168" loading="lazy" decoding="async">'
            if src else "")
@@ -7377,19 +7404,21 @@ def disclosure_body(lang):
         title = "Affiliate disclosure"
         desc = "When TrendingTesla may earn a commission from a link."
         html_body = (
-            "<p>Some pages link to Amazon.nl. If you buy through one of those links, TrendingTesla may earn "
-            "a commission. You do not pay extra. The link is marked as sponsored.</p>"
+            "<p>Some pages link to Amazon.nl and, where we have one, to AliExpress. If you buy through one of "
+            "those links, TrendingTesla may earn a commission. You do not pay extra. The link is marked as sponsored.</p>"
             "<p>A commission never changes what we write. We do not publish a page in order to sell a product. "
-            "A product box is optional, and it names only a product whose Amazon.nl page we checked.</p>"
+            "A product box is optional. The Amazon button names a product whose Amazon.nl page we checked. "
+            "The AliExpress button is a second place to buy a similar item, and the fit line says when that item covers different years.</p>"
             f'<p>Questions go through the <a href="{contact}">contact form</a>.</p>')
     else:
         title = "Affiliate-melding"
         desc = "Wanneer TrendingTesla een commissie kan ontvangen via een link."
         html_body = (
-            "<p>Sommige pagina's linken naar Amazon.nl. Koop je via zo'n link, dan kan TrendingTesla een "
-            "commissie ontvangen. Jij betaalt niets extra. De link is gemarkeerd als gesponsord.</p>"
+            "<p>Sommige pagina's linken naar Amazon.nl en, waar we die hebben, naar AliExpress. Koop je via zo'n "
+            "link, dan kan TrendingTesla een commissie ontvangen. Jij betaalt niets extra. De link is gemarkeerd als gesponsord.</p>"
             "<p>Een commissie verandert nooit wat we schrijven. We publiceren geen pagina om een product te verkopen. "
-            "Een productvak is optioneel, en het noemt alleen een product waarvan we de Amazon.nl-pagina hebben nagekeken.</p>"
+            "Een productvak is optioneel. De Amazon-knop noemt een product waarvan we de Amazon.nl-pagina hebben nagekeken. "
+            "De AliExpress-knop is een tweede plek om een vergelijkbaar artikel te kopen, en de pasregel zegt het wanneer dat artikel andere jaren dekt.</p>"
             f'<p>Vragen gaan via het <a href="{contact}">contactformulier</a>.</p>')
     return (
         f'<article class="narrow"><h1>{esc(title)}</h1><div class="prose">{html_body}</div></article>'), title, desc

@@ -16,6 +16,7 @@ pros_nl: Allweer-matten van TPE | Vermeld voor de Model Y Juniper van 2025 tot 2
 fits_en: A 2025 to 2027 Model Y Juniper. An older Model Y needs a different set.
 fits_nl: Een Model Y Juniper van 2025 tot 2027. Een oudere Model Y heeft een andere set nodig.
 url: https://www.amazon.nl/dp/B0DZ5JB22G
+ali_url: https://s.click.aliexpress.com/e/_c4eTdPDJ
 button_en: View on Amazon
 button_nl: Bekijk bij Amazon
 :::
@@ -25,9 +26,10 @@ name_en: YITAHOME mats for Model 3 Highland
 name_nl: YITAHOME-matten voor Model 3 Highland
 pros_en: Three-piece all-weather set | Listed for the 2024 Model 3 Highland only | Cut for that car, not a classic Model 3
 pros_nl: Driedelige allweerset | Alleen vermeld voor de Model 3 Highland van 2024 | Gesneden voor die auto, niet voor een oudere Model 3
-fits_en: A 2024 Model 3 Highland only. A classic Model 3 needs a different set.
-fits_nl: Alleen een Model 3 Highland van 2024. Een oudere Model 3 heeft een andere set nodig.
+fits_en: A 2024 Model 3 Highland only. A classic Model 3 needs a different set. The AliExpress mats are listed for a Model 3 Highland from 2024 through 2026.
+fits_nl: Alleen een Model 3 Highland van 2024. Een oudere Model 3 heeft een andere set nodig. De AliExpress-matten zijn vermeld voor een Model 3 Highland van 2024 tot en met 2026.
 url: https://www.amazon.nl/dp/B0CQJNS7X4
+ali_url: https://s.click.aliexpress.com/e/_c3iNubYN
 button_en: View on Amazon
 button_nl: Bekijk bij Amazon
 :::

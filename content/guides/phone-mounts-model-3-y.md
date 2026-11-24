@@ -16,6 +16,7 @@ pros_nl: Alleen vermeld voor Model 3 en Model Y | Past op het rooster en een gle
 fits_en: Those years on the product description. The listing says the elago magnetic charger is what goes on this mount.
 fits_nl: Die jaren in de productbeschrijving. De vermelding zegt dat de magnetische lader van elago op deze houder komt.
 url: https://www.amazon.nl/dp/B0BH7SFTYZ
+ali_url: https://s.click.aliexpress.com/e/_c3pUD6il
 button_en: View on Amazon
 button_nl: Bekijk bij Amazon
 :::

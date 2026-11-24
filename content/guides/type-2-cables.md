@@ -13,9 +13,10 @@ name_en: Voldt Type 2 to Type 2 cable
 name_nl: Voldt-kabel van Type 2 naar Type 2
 pros_en: Mode 3 cable rated up to 32 A | Listed for cars with a Type 2 inlet including a Tesla | The page offers more than one length
 pros_nl: Mode 3-kabel tot 32 A | Vermeld voor auto's met een Type 2-inlaat inclusief een Tesla | De pagina biedt meer dan één lengte
-fits_en: A Type 2 car at a Type 2 point. Check which length and which kilowatt option is in the basket. One line on the page says 5 metres and another says 6 metres.
-fits_nl: Een Type 2-auto bij een Type 2-punt. Controleer welke lengte en welke kilowattoptie in de winkelwagen staat. De ene regel op de pagina zegt 5 meter en een andere zegt 6 meter.
+fits_en: A Type 2 car at a Type 2 point. Check which length and which kilowatt option is in the basket. One line on the page says 5 metres and another says 6 metres. The AliExpress cable is the 16 A, 11 kW, three-phase lead.
+fits_nl: Een Type 2-auto bij een Type 2-punt. Controleer welke lengte en welke kilowattoptie in de winkelwagen staat. De ene regel op de pagina zegt 5 meter en een andere zegt 6 meter. De AliExpress-kabel is de uitvoering van 16 A, 11 kW, driefase.
 url: https://www.amazon.nl/dp/B0DTGPFNFK
+ali_url: https://s.click.aliexpress.com/e/_c3Um9UPP
 button_en: View on Amazon
 button_nl: Bekijk bij Amazon
 :::

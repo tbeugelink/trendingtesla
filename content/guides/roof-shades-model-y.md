@@ -13,9 +13,10 @@ name_en: Rengue shades for Model Y 2021 to 2023
 name_nl: Rengue-schermen voor Model Y 2021 tot 2023
 pros_en: Front and rear glass-roof shades | Listed as a replacement for Model Y 2021 to 2023 | Clips and a storage bag are in the pack
 pros_nl: Schermen voor het glazen dak voor en achter | Vermeld als vervanging voor Model Y 2021 tot 2023 | Klemmen en een opbergtas zitten in de verpakking
-fits_en: A Model Y of 2021 to 2023, as the page states. Check the year before you order.
-fits_nl: Een Model Y van 2021 tot 2023, zoals de pagina zegt. Controleer het jaar voor je bestelt.
+fits_en: A Model Y of 2021 to 2023, as the page states. Check the year before you order. The AliExpress shades are listed for Model 3 and Model Y from 2021 through 2025.
+fits_nl: Een Model Y van 2021 tot 2023, zoals de pagina zegt. Controleer het jaar voor je bestelt. De AliExpress-zonneschermen zijn vermeld voor Model 3 en Model Y van 2021 tot en met 2025.
 url: https://www.amazon.nl/dp/B0HFP38CZR
+ali_url: https://s.click.aliexpress.com/e/_c33ouw4D
 button_en: View on Amazon
 button_nl: Bekijk bij Amazon
 :::

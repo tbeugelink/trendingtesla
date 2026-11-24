@@ -16,9 +16,17 @@ pros_nl: 12-voltstekker voor een sigarettenaansteker | Stopt als de ingestelde s
 fits_en: A vehicle with that 12 volt socket. The spec table lists a maximum of 150 psi.
 fits_nl: Een voertuig met dat 12-voltstopcontact. De specificatietabel noemt een maximum van 150 psi.
 url: https://www.amazon.nl/dp/B073VB41W3
-ali_url: https://s.click.aliexpress.com/e/_c3CAMpiD
 button_en: View on Amazon
 button_nl: Bekijk bij Amazon
+:::
+
+:::product
+name_en: Corded 12V tyre inflator
+name_nl: 12V-bandenpomp met een snoer
+note_en: A corded 12 volt inflator listed at up to 150 psi. It plugs into the car socket.
+note_nl: Een bandenpomp op 12 volt met snoer, vermeld tot 150 psi. Hij gaat in de 12-voltaansluiting van de auto.
+image: /img/guides/ali-1005006727846206.webp
+ali_url: https://s.click.aliexpress.com/e/_c3CAMpiD
 :::
 
 :::product

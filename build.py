@@ -3297,6 +3297,14 @@ def load_image_licences():
             LICENCE_PHOTOS[asin] = src
 
 
+def guide_local_image(fields):
+    """A self-hosted product photo named on the card. No caption is printed."""
+    local = str((fields or {}).get("image") or "").strip()
+    if local.startswith("/img/") and (STATIC / local.lstrip("/")).is_file():
+        return local
+    return ""
+
+
 def licensed_card_photo(href):
     asin = ""
     match = re.search(r"/dp/([A-Z0-9]{10})", str(href or ""), re.I)
@@ -6867,7 +6875,7 @@ _KV_KEYS = (
     "title_en", "title_nl", "en", "nl", "why_en", "why_nl",
     "name_en", "name_nl", "pros_en", "pros_nl", "cons_en", "cons_nl",
     "fits_en", "fits_nl",
-    "url", "ali_url", "image", "button_en", "button_nl",
+    "url", "ali_url", "image", "note_en", "note_nl", "button_en", "button_nl",
     "caption_en", "caption_nl", "columns_en", "columns_nl", "row_en", "row_nl",
     "slug",
 )
@@ -7257,29 +7265,44 @@ def _guide_product(fields, lang):
     href = guide_amazon(str(fields.get("url") or ""))
     plus = "Pros" if lang == "en" else "Pluspunten"
     who = "Who it fits" if lang == "en" else "Voor wie het past"
-    price = ("Prices change. Check the current price on Amazon.nl. This page does not state one."
-             if lang == "en" else
-             "Prijzen veranderen. Kijk de actuele prijs na op Amazon.nl. Deze pagina noemt er geen.")
+    amazon_host = ""
+    if href.startswith("https://") and href.count("/") >= 2:
+        amazon_host = href.split("/")[2].lower()
+    amazon_ok = amazon_host in ("www.amazon.nl", "amazon.nl")
+    ali = ali_href(fields.get("ali_url"))
+    if amazon_ok:
+        price = ("Prices change. Check the current price on Amazon.nl. This page does not state one."
+                 if lang == "en" else
+                 "Prijzen veranderen. Kijk de actuele prijs na op Amazon.nl. Deze pagina noemt er geen.")
+    elif ali:
+        price = ("Prices change. Check the current price on AliExpress. This page does not state one."
+                 if lang == "en" else
+                 "Prijzen veranderen. Kijk de actuele prijs na op AliExpress. Deze pagina noemt er geen.")
+    else:
+        price = ("Prices change. This page does not state one." if lang == "en"
+                 else "Prijzen veranderen. Deze pagina noemt er geen.")
     button = ("See photos and video on Amazon.nl" if lang == "en"
               else "Bekijk foto's en video op Amazon.nl")
     lists = ""
     if pros:
         lists = f'<h3>{plus}</h3><ul>{"".join(f"<li>{esc(item)}</li>" for item in pros)}</ul>'
+    note = fields.get(f"note_{lang}") or fields.get("note_en") or ""
+    note_html = f'<p>{esc(note)}</p>' if str(note).strip() else ""
     fit_html = f'<p class="fits"><b>{esc(who)}.</b> {esc(fits)}</p>' if str(fits).strip() else ""
     link = ""
-    if href.startswith("https://"):
-        ali = ali_href(fields.get("ali_url"))
-        ali_btn = ""
+    if amazon_ok or ali:
+        parts = []
+        if amazon_ok:
+            parts.append(f'<a class="btn amazon-go" href="{esc(href)}" rel="sponsored nofollow noopener" target="_blank">{esc(button)}</a>')
         if ali:
-            ali_btn = (f'<a class="btn ghost" href="{esc(ali)}" rel="sponsored nofollow noopener" target="_blank">'
-                       f'AliExpress</a>')
-        link = (f'<div class="store-btns"><a class="btn amazon-go" href="{esc(href)}" rel="sponsored nofollow noopener" target="_blank">'
-                f'{esc(button)}</a>{ali_btn}</div>')
-    src = licensed_card_photo(href)
+            style = "btn ghost" if amazon_ok else "btn"
+            parts.append(f'<a class="{style}" href="{esc(ali)}" rel="sponsored nofollow noopener" target="_blank">AliExpress</a>')
+        link = f'<div class="store-btns">{"".join(parts)}</div>'
+    src = guide_local_image(fields) or licensed_card_photo(href)
     img = (f'<img src="{esc(src)}" alt="{esc(name)}" width="168" height="168" loading="lazy" decoding="async">'
            if src else "")
     klass = "gbox" if img else "gbox noimg"
-    return (f'<aside class="{klass}">{img}<div><h2>{esc(name)}</h2>{lists}{fit_html}'
+    return (f'<aside class="{klass}">{img}<div><h2>{esc(name)}</h2>{lists}{note_html}{fit_html}'
             f'<p class="gprice">{esc(price)}</p>{link}</div></aside>')
 
 

@@ -1,5 +1,5 @@
 {
-  "_help": "Exact-product photos for buying guides. photo is true only when a manufacturer page explicitly allows media, press, retailer or affiliate use of that product. No caption is shown on the site. Amazon, AliExpress and unclear pages stay text.",
+  "_help": "Exact-product photos for buying guides. photo is true only when a manufacturer page explicitly allows media, press, retailer or affiliate use of that product. No caption is shown on the site. Amazon pages and unclear pages stay text. aliexpress_promo records Portals Ad Center promo pictures that AliExpress provides to affiliates. Those files are used on the card and are not captioned.",
   "checked": [
     {
       "brand": "Spigen",
@@ -61,5 +61,35 @@
     {"asin": "B0DD7GMH71", "name": "SkyArmor holder with an AirTag cutout", "photo": false, "licence_url": ""},
     {"asin": "B0C6QLT3XP", "name": "Aicharynic holder for Model 3 and Y", "photo": false, "licence_url": ""},
     {"asin": "B0G528KMX6", "name": "Aputoxz holder for a Tesla card", "photo": false, "licence_url": ""}
+  ],
+  "aliexpress_promo": [
+    {
+      "item": "1005010376504158",
+      "name": "TPE mats for Model Y Juniper",
+      "file": "/img/guides/ali-1005010376504158.webp",
+      "source": "AliExpress Portals Ad Center, Promote now, Promo Picture. Provided to affiliates for promotion.",
+      "link": "https://s.click.aliexpress.com/e/_c4eTdPDJ"
+    },
+    {
+      "item": "1005010770297507",
+      "name": "Futhope glass for Model Y Juniper",
+      "file": "/img/guides/ali-1005010770297507.webp",
+      "source": "AliExpress Portals Ad Center, Promote now, Promo Picture. Provided to affiliates for promotion.",
+      "link": "https://s.click.aliexpress.com/e/_c3Vjtku1"
+    },
+    {
+      "item": "1005011559038478",
+      "name": "Console trays for Juniper and Highland",
+      "file": "/img/guides/ali-1005011559038478.webp",
+      "source": "AliExpress Portals Ad Center, Promote now, Promo Picture. Provided to affiliates for promotion.",
+      "link": "https://s.click.aliexpress.com/e/_c3bt8vHP"
+    },
+    {
+      "item": "1005006727846206",
+      "name": "Corded 12V tyre inflator",
+      "file": "/img/guides/ali-1005006727846206.webp",
+      "source": "AliExpress Portals Ad Center, Promote now, Promo Picture. Provided to affiliates for promotion.",
+      "link": "https://s.click.aliexpress.com/e/_c3CAMpiD"
+    }
   ]
 }

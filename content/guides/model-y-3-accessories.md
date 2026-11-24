@@ -16,7 +16,6 @@ pros_nl: Allweer-matten van TPE | Vermeld voor de Model Y Juniper van 2025 en 20
 fits_en: A 2025 or 2026 Model Y Juniper. An older Model Y needs a different set.
 fits_nl: Een Model Y Juniper van 2025 of 2026. Een oudere Model Y heeft een andere set nodig.
 url: https://www.amazon.nl/dp/B0DZ5JB22G
-ali_url: https://s.click.aliexpress.com/e/_c4eTdPDJ
 button_en: View on Amazon
 button_nl: Bekijk bij Amazon
 :::
@@ -39,10 +38,9 @@ name_en: Spigen glass for a 16-inch 2026 screen
 name_nl: Spigen-glas voor een scherm van 16 inch uit 2026
 pros_en: Tempered glass | Listed for a 16-inch screen | 2026 Model Y Standard, Premium, Performance and Model Y L
 pros_nl: Gehard glas | Vermeld voor een scherm van 16 inch | Model Y Standard, Premium en Performance van 2026 en Model Y L
-fits_en: Only a 16-inch screen on those 2026 Model Y cars. Measure before you buy. The AliExpress glass is listed for a 16-inch Model Y Juniper screen.
-fits_nl: Alleen een scherm van 16 inch op die Model Y's van 2026. Meet voor je koopt. Het AliExpress-glas is vermeld voor een Juniper-scherm van 16 inch.
+fits_en: Only a 16-inch screen on those 2026 Model Y cars. Measure before you buy.
+fits_nl: Alleen een scherm van 16 inch op die Model Y's van 2026. Meet voor je koopt.
 url: https://www.amazon.nl/dp/B0FPJ6RYFN
-ali_url: https://s.click.aliexpress.com/e/_c3Vjtku1
 button_en: View on Amazon
 button_nl: Bekijk bij Amazon
 :::

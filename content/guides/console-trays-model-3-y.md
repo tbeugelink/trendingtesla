@@ -16,9 +16,17 @@ pros_nl: Vierdelige set | Vermeld voor elke Model 3 Highland van 2024 tot 2026 |
 fits_en: Those cars. The page says it is not for a 2021 to 2024 Model Y, a Model Y Standard, or a 2021 to 2023 Model 3.
 fits_nl: Die auto's. De pagina zegt dat het niet voor een Model Y van 2021 tot 2024, een Model Y Standard of een Model 3 van 2021 tot 2023 is.
 url: https://www.amazon.nl/dp/B0GV1CMHFK
-ali_url: https://s.click.aliexpress.com/e/_c3bt8vHP
 button_en: View on Amazon
 button_nl: Bekijk bij Amazon
+:::
+
+:::product
+name_en: Console trays for Juniper and Highland
+name_nl: Consolebakjes voor Juniper en Highland
+note_en: A silicone tray set listed for the center console of a Model Y Juniper and a Model 3 Highland.
+note_nl: Een set siliconen bakjes vermeld voor de middenconsole van een Model Y Juniper en een Model 3 Highland.
+image: /img/guides/ali-1005011559038478.webp
+ali_url: https://s.click.aliexpress.com/e/_c3bt8vHP
 :::
 
 :::product

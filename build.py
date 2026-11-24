@@ -1117,6 +1117,13 @@ header.hb .pnav>.is-parked{display:none}
 .pv-side ul.hubs li{display:grid;grid-template-columns:6px minmax(0,1fr);column-gap:8px;align-items:start}
 .pv-side ul.hubs li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--red);align-self:start;margin-top:calc(0.65em - 3px)}
 .pv-side a:hover,.pv-side a:focus-visible{color:var(--blue)}
+.gcatgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px 8px;background:#141414;border:1px solid #2a3646;border-radius:14px;padding:12px}
+.gcat{display:flex;flex-direction:column;min-width:0;color:#fff}
+.gtile{display:flex;align-items:center;justify-content:center;background:#fff;border-radius:10px;aspect-ratio:1;padding:12%;box-sizing:border-box;overflow:hidden}
+.gtile img{width:100%;height:100%;object-fit:contain;display:block}
+.gname{display:block;margin-top:6px;font-size:.7rem;font-weight:700;line-height:1.25;text-align:center;color:#fff}
+.gcat:hover .gname,.gcat:focus-visible .gname{color:var(--blue)}
+.gcat.is-on .gtile{outline:2px solid var(--red);outline-offset:2px}
 .pv-side .ticker a:hover,.pv-side .ticker a:focus-visible{color:inherit}
 .pv-side .nlside-form{display:flex;flex-direction:column;align-items:stretch;gap:8px;max-height:none;padding:0;border:0;border-radius:0;background:transparent}
 .pv-side .nlside-lead{margin:0;font-size:.88rem;line-height:1.35;font-weight:600;color:var(--muted)}
@@ -1501,12 +1508,12 @@ header.hb .bar .lang{margin-left:0;margin-right:0;flex:none;white-space:nowrap;t
 .gbox{margin:18px 0;padding:16px;border:1px solid #2a3646;border-radius:14px;background:#141414;display:grid;grid-template-columns:200px minmax(0,1fr);gap:14px 18px;align-items:start}
 @media (min-width:601px){article .prose .gbox{margin-left:14px;margin-right:14px}}
 .gbox.noimg{grid-template-columns:1fr}
-.gbox h2{margin:0 0 6px;font-size:.98rem;line-height:1.25;letter-spacing:-.01em;font-weight:800;color:#fff}
+.gbox h2{margin:0 0 6px;font-size:1.25rem;line-height:1.3;letter-spacing:-.015em;font-weight:800;color:#fff}
 .gbox h3{margin:8px 0 3px;font-size:.66rem;letter-spacing:.06em;text-transform:uppercase;color:var(--dim);font-weight:800}
 .gbox ul{margin:0;padding-left:1.05em}
 .gbox li{margin:0 0 2px;font-size:.8rem;line-height:1.35;color:#c5ced8}
 .gbox .btn,.pbox .btn{display:inline-flex;align-items:center;justify-content:center;background:var(--red);color:#fff;text-decoration:none;font-weight:800;font-size:.82rem;border-radius:8px;padding:10px 14px;line-height:1.3;text-align:center}
-article .prose .gbox h2,html body article .prose .gbox h2{border:0;padding:0;margin:0 0 6px;font-size:.98rem;line-height:1.25;letter-spacing:-.01em}
+article .prose .gbox h2,html body article .prose .gbox h2{border:0;padding:0;margin:0 0 6px;font-size:1.25rem;line-height:1.3;letter-spacing:-.015em}
 article .prose .gbox p,article .prose .gbox ul,article .prose .gbox li{margin-left:0;margin-right:0}
 article .prose .gbox p{margin-top:8px;margin-bottom:0;font-size:.8rem;line-height:1.4;color:#c5ced8}
 article .prose .gbox li{font-size:.8rem;line-height:1.35}
@@ -1524,7 +1531,7 @@ article .prose .gbox li{font-size:.8rem;line-height:1.35}
 .starrow .full{position:absolute;left:0;top:0;overflow:hidden;width:calc(var(--score) / 5 * 100%)}
 .starrow .full svg{fill:#f5c451}
 article .prose .gbox p.stars{margin-top:8px;font-size:.78rem;color:#c5ced8}
-.pcost .asof{display:block;margin-top:2px;font-size:.68rem;letter-spacing:.01em}
+.pcost .asof{display:inline;margin-left:6px;font-size:.68rem;font-weight:600;letter-spacing:.01em;white-space:nowrap}
 article .prose .gbox p.pcost,article .prose .gbox p.popt{margin-top:8px;margin-bottom:0;font-size:.72rem;color:#9aa6b4}
 .store-btns{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;align-items:center}
 .gbox .store-btns .btn,.pbox .store-btns .btn{margin-top:0}
@@ -1538,6 +1545,8 @@ article.narrow>.hi img,article.narrow>.avid .avb{width:100%;max-width:100%}
 .gtable caption{text-align:left;font-weight:800;margin:0 0 6px}
 .afftop{margin:0 0 14px;font-size:.84rem;line-height:1.45;color:var(--dim)}
 .afftop a{color:#9ad7ff}
+.affend{margin:28px 0 6px;font-size:.75rem;line-height:1.45;color:var(--dim)}
+.affend a{color:#9ad7ff}
 .nlstick{position:fixed;z-index:70;left:12px;right:12px;display:flex;gap:8px;align-items:center;max-width:min(920px,100vw);margin:0 auto;box-sizing:border-box;background:#161616;border:1px solid #3a4a60;border-radius:8px;padding:8px;box-shadow:0 12px 32px rgba(0,0,0,.5)}
 .nlstick[hidden]{display:none}
 .nlstick.is-quiet{visibility:hidden;pointer-events:none}
@@ -1562,7 +1571,7 @@ article.narrow>.hi img,article.narrow>.avid .avb{width:100%;max-width:100%}
 @media (max-width:600.98px){.gbox,.pbox-in{grid-template-columns:1fr;gap:12px}.gbox .pgal,.pbox .pgal,.gbox .pgal-stage,.pbox .pgal-stage{width:100%}.gbox .pgal-stage,.pbox .pgal-stage{height:auto;aspect-ratio:1/1}}
 @media (max-width:900px){html,body{-webkit-text-size-adjust:100%;text-size-adjust:100%}body{font-size:15px;line-height:1.55}html body h1,html body article h1,html body .sheet-main article.money h1,html body .sheet-main article.narrow>h1,html body .hubhead h1,html body h1.st{font-size:24px;line-height:1.15;-webkit-text-size-adjust:100%;text-size-adjust:100%}html body article .prose h2,html body .sheet-main article .prose h2,html body .prose h2,html body .leadstory .ltitle,html body .hubh{font-size:19px;line-height:1.3;-webkit-text-size-adjust:100%;text-size-adjust:100%}html body article .prose,html body .sheet-main article.money .prose,html body .sheet-main article.narrow .prose{font-size:15px;line-height:1.55;-webkit-text-size-adjust:100%;text-size-adjust:100%}html body article .lead,html body .sheet-main article.money .lead,html body .sheet-main article.narrow .lead,html body .hubhead .lead,html body .leadstory .lead{font-size:16px;line-height:1.5;-webkit-text-size-adjust:100%;text-size-adjust:100%}html body .byline,html body .meta,html body .smeta,html body .upd{font-size:12px;line-height:1.35;-webkit-text-size-adjust:100%;text-size-adjust:100%}html body .lmeta,html body .lname,html body .tag,html body .lmeta .llayer,html body .lmeta .lsub{font-size:11px;line-height:1.3;-webkit-text-size-adjust:100%;text-size-adjust:100%}}
 @media (max-width:900px){html body .hfeed .pv-hl b{font-size:13px;line-height:1.3;hyphens:none;-webkit-hyphens:none;overflow-wrap:normal;word-break:normal;-webkit-text-size-adjust:none;text-size-adjust:none}html body .hfeed .pv-row time{font-size:12px;-webkit-text-size-adjust:none;text-size-adjust:none}html body .hfeed .pv-min{width:48px;min-width:48px}html body .hfeed .pv-min b{font-size:12px}}
-@media (max-width:900px){html body .sheet-main article .prose .gbox h2{font-size:.98rem;line-height:1.25;letter-spacing:-.01em}html body .sheet-main article .prose .gbox p,html body .sheet-main article .prose .gbox li{font-size:.8rem;line-height:1.4}}
+@media (max-width:900px){html body .sheet-main article .prose .gbox h2{font-size:19px;line-height:1.3;letter-spacing:-.015em}html body .sheet-main article .prose .gbox p,html body .sheet-main article .prose .gbox li{font-size:.8rem;line-height:1.4}}
 """
 
 # Classes left over from retired layouts. They are not emitted by the pages build() writes.
@@ -3501,10 +3510,10 @@ def price_html(key, lang):
         usd_nl = usd_en.replace(".", ",")
     if lang == "nl":
         shown = eur_nl
-        asof = f"Prijs op {fmt_date(day, lang)}"
+        asof = "(Prijs bij publicatie)"
     elif usd_en:
         shown = usd_en
-        asof = f"Price as of {fmt_date(day, lang)}"
+        asof = "(Price at publication)"
     else:
         return ""
     return (f'<p class="pcost" data-priced="{esc(fetched.isoformat())}" data-days="{fresh_days}">'
@@ -5017,7 +5026,7 @@ def recommend_block(lang, kind, current):
     return f'<section class="rec"><h2>{esc(title)}</h2><ul>{"".join(rows)}</ul>{note}</section>'
 
 
-def page_side(arts, lang, kind="home", current=None, skip=None, tail="", signup=True):
+def page_side(arts, lang, kind="home", current=None, skip=None, tail="", signup=True, shop=False):
     """Right column. Sections with nothing to show are left out. Latest News is always newest first."""
     L = LANGS[lang]
     C = pv_copy(lang)
@@ -5085,8 +5094,12 @@ def page_side(arts, lang, kind="home", current=None, skip=None, tail="", signup=
     hubs = evergreen_side(lang)
     if hubs:
         parts.append(hubs)
+    if shop:
+        cards = guide_category_cards(lang, current if isinstance(current, str) else "")
+        if cards:
+            parts.insert(0, cards)
     guides = buying_guides_side(lang)
-    if guides:
+    if guides and not shop:
         parts.append(guides)
     rec = recommend_block(lang, kind, current)
     if rec:
@@ -7069,6 +7082,79 @@ def evergreen_for(a):
     return [hub for hub in load_evergreen() if a in evergreen_articles(hub, [a])]
 
 
+GUIDE_CATS = (
+    ("winter-mats-model-3-y", "Floor mats", "Vloermatten"),
+    ("model-y-trunk-floor-mats", "Trunk mats", "Kofferbakmatten"),
+    ("screen-glass-model-3-y", "Screen protectors", "Schermbeschermers"),
+    ("phone-mounts-model-3-y", "Phone mounts", "Telefoonhouders"),
+    ("tyre-pumps", "Tyre pumps", "Bandenpompen"),
+    ("europe-home-chargers", "Home chargers", "Thuisladers"),
+    ("type-2-cables", "Charging cables", "Laadkabels"),
+    ("portable-chargers-adapters", "Portable chargers", "Mobiele laders"),
+    ("starlink-mini-road-trip", "Starlink", "Starlink"),
+    ("sentry-usb-drive", "USB drives", "USB-sticks"),
+    ("mud-flaps-model-y", "Mud flaps", "Spatlappen"),
+    ("roof-shades-model-y", "Roof shades", "Dakschermen"),
+    ("console-trays-model-3-y", "Console trays", "Consolebakjes"),
+    ("key-card-holders", "Key cards", "Keycards"),
+    ("model-y-3-accessories", "Accessories", "Accessoires"),
+)
+
+
+def _guide_category_photo(doc):
+    """First product photo on the guide. Amazon's main image, then an AliExpress gallery."""
+    for kind, fields in doc.get("pieces") or []:
+        if kind != "product" or not isinstance(fields, dict):
+            continue
+        asin = _product_asin(str(fields.get("url") or ""))
+        gallery = AMAZON_GALLERIES.get(asin) or []
+        if gallery:
+            return gallery[0]
+        item = str(fields.get("item") or "").strip()
+        ali = ALI_GALLERIES.get(item) or []
+        if ali:
+            return ali[0]
+        local = guide_local_image(fields)
+        if local:
+            return local
+    return ""
+
+
+def guide_category_cards(lang, current=""):
+    """Two-column category tiles for the buying-guide sidebar."""
+    docs = {d["slug"]: d for d in GUIDE_DOCS if not d.get("template")}
+    if not docs:
+        return ""
+    order = [row[0] for row in GUIDE_CATS]
+    labels = {row[0]: row for row in GUIDE_CATS}
+    for slug in docs:
+        if slug not in labels:
+            doc = docs[slug]
+            title = doc["meta"].get(f"title_{lang}") or doc["meta"].get("title_en") or slug
+            labels[slug] = (slug, title, title)
+            order.append(slug)
+    cards = []
+    for slug in order:
+        doc = docs.get(slug)
+        row = labels.get(slug)
+        if not doc or not row:
+            continue
+        name = row[1] if lang == "en" else row[2]
+        href = url(lang, guides_path(lang) + slug + "/")
+        photo = _guide_category_photo(doc)
+        img = (f'<img src="{esc(photo)}" alt="" width="160" height="160" loading="lazy" decoding="async">'
+               if photo else "")
+        on = " is-on" if slug == current else ""
+        here = ' aria-current="page"' if slug == current else ""
+        cards.append(
+            f'<a class="gcat{on}" href="{esc(href)}"{here}>'
+            f'<span class="gtile">{img}</span><span class="gname">{esc(name)}</span></a>')
+    if not cards:
+        return ""
+    title = "Guides" if lang == "en" else "Gidsen"
+    return _side_section(title, f'<div class="gcatgrid">{"".join(cards)}</div>')
+
+
 def buying_guides_side(lang):
     """Every published buying guide, on the sidebar of every page."""
     docs = [d for d in GUIDE_DOCS if not d.get("template")]
@@ -7383,7 +7469,7 @@ def guide_amazon(href, lang="nl"):
     return _query_set(href, "language", "en_GB" if lang == "en" else "nl_NL")
 
 
-def disclosure_line(lang):
+def disclosure_line(lang, klass="afftop"):
     href = url(lang, disclosure_path(lang))
     if lang == "en":
         text = ("Affiliate disclosure: if you buy through a link on this page, TrendingTesla may earn a commission "
@@ -7393,7 +7479,7 @@ def disclosure_line(lang):
         text = ("Affiliate-melding: koop je via een link op deze pagina, dan kan TrendingTesla een commissie ontvangen "
                 "via Amazon.nl of AliExpress. Voor jou kost het niets extra.")
         more = "Zo werkt dat"
-    return f'<p class="afftop">{esc(text)} <a href="{href}">{esc(more)}</a>.</p>'
+    return f'<p class="{klass}">{esc(text)} <a href="{href}">{esc(more)}</a>.</p>'
 
 
 def newsletter_pitch(lang):
@@ -7577,7 +7663,6 @@ def _guide_product(fields, lang):
     fits = (fields.get(f"fits_{lang}") or fields.get("fits_en")
             or fields.get(f"cons_{lang}") or fields.get("cons_en") or "")
     href = guide_amazon(str(fields.get("url") or ""), lang)
-    plus = "Pros" if lang == "en" else "Pluspunten"
     who = "Who it fits" if lang == "en" else "Voor wie het past"
     amazon_host = ""
     if href.startswith("https://") and href.count("/") >= 2:
@@ -7590,11 +7675,11 @@ def _guide_product(fields, lang):
         ali_only = dict(fields)
         ali_only.pop("url", None)
         return _guide_product(amazon_only, lang) + _guide_product(ali_only, lang)
-    button = "Vergelijk op Amazon" if lang == "nl" else "Compare on Amazon"
-    ali_label = "Vergelijk op AliExpress" if lang == "nl" else "Compare on AliExpress"
+    button = "Bekijk op Amazon" if lang == "nl" else "Check out Amazon"
+    ali_label = "Bekijk op AliExpress" if lang == "nl" else "Check out AliExpress"
     lists = ""
     if pros:
-        lists = f'<h3>{plus}</h3><ul>{"".join(f"<li>{esc(item)}</li>" for item in pros)}</ul>'
+        lists = f'<ul>{"".join(f"<li>{esc(item)}</li>" for item in pros)}</ul>'
     note = fields.get(f"note_{lang}") or fields.get("note_en") or ""
     note_html = f'<p>{esc(note)}</p>' if str(note).strip() else ""
     option = fields.get(f"option_{lang}") or fields.get("option_en") or ""
@@ -7688,17 +7773,17 @@ def guide_body(doc, lang):
         note = ("Template. This is not a published guide." if lang == "en"
                 else "Sjabloon. Dit is geen gepubliceerde gids.")
         banner = f'<p class="tplnote">{esc(note)}</p>'
-    prose, products, tables = [], [], []
+    prose, products = [], []
     for kind, fields in doc["pieces"]:
         if kind == "product":
             products.append(_guide_product(fields, lang))
         elif kind == "compare":
-            tables.append(_guide_table(fields, lang))
+            continue
         else:
             text = fields.get(lang) or fields.get("en") or ""
             if text:
                 prose.append(f"<p>{esc(text)}</p>")
-    chunks = [disclosure_line(lang), banner, *prose, *tables, *products]
+    chunks = [banner, *prose, *products]
     byline = f'<p class="byline"><a href="{url(lang, "editorial/")}">{esc(LANGS[lang]["byline"])}</a></p>'
     hero = _guide_hero(doc, lang)
     body = (f'<article class="narrow">{hero}<h1>{esc(title)}</h1>{byline}'
@@ -7734,7 +7819,7 @@ def guides_index_body(docs, lang):
         sample_link = (
             f'<p><a href="{url(lang, guides_path(lang) + samples[0]["slug"] + "/")}">{esc(sample)}</a></p>')
     body = (
-        f'<article class="narrow"><h1>{esc(title)}</h1>{disclosure_line(lang)}'
+        f'<article class="narrow"><h1>{esc(title)}</h1>'
         f'<div class="prose"><p>{esc(intro)}</p></div>{items}{sample_link}</article>')
     return body, title, intro
 
@@ -8157,14 +8242,15 @@ def build():
         g_body, g_title, g_desc = guides_index_body(guide_docs, lang)
         write(url(lang, guides_path(lang)), page(
             lang, guides_path(lang), g_title, g_desc,
-            shell(g_body, page_side(arts, lang, "static")),
+            shell(g_body, page_side(arts, lang, "static")) + disclosure_line(lang, "affend"),
             active="buyguides", alt_path=guides_path(other(lang))))
         for doc in guide_docs:
             body, title, desc = guide_body(doc, lang)
             gpath = guides_path(lang) + doc["slug"] + "/"
             write(url(lang, gpath), page(
                 lang, gpath, title, desc,
-                shell(body, page_side(arts, lang, "static")),
+                shell(body, page_side(arts, lang, "static", current=doc["slug"], shop=True))
+                + disclosure_line(lang, "affend"),
                 active="buyguides", robots="noindex" if doc["template"] else None,
                 alt_path=guides_path(other(lang)) + doc["slug"] + "/"))
         d_body, d_title, d_desc = disclosure_body(lang)

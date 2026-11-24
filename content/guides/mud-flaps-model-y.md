@@ -17,8 +17,8 @@ fits_en: A Model Y of 2021 to 2023. The page does not name a Juniper. The AliExp
 fits_nl: Een Model Y van 2021 tot 2023. De pagina noemt geen Juniper. De AliExpress-flappen zijn vermeld voor een Model Y van 2020 tot en met 2024.
 url: https://www.amazon.nl/dp/B0CKXJGYCM
 ali_url: https://s.click.aliexpress.com/e/_c2RTxWyp
-button_en: View on Amazon
-button_nl: Bekijk bij Amazon
+button_en: More info Amazon
+button_nl: Meer info Amazon
 :::
 
 :::product
@@ -29,8 +29,8 @@ pros_nl: Vier zachte PP-lappen | De titel noemt Juniper 2025 en later | De besch
 fits_en: Read both lines on the same page before you order. The title and the description do not name the same years.
 fits_nl: Lees beide regels op dezelfde pagina voor je bestelt. De titel en de beschrijving noemen niet dezelfde jaren.
 url: https://www.amazon.nl/dp/B0H6S8FSY2
-button_en: View on Amazon
-button_nl: Bekijk bij Amazon
+button_en: More info Amazon
+button_nl: Meer info Amazon
 :::
 
 :::product
@@ -42,8 +42,8 @@ fits_en: A Juniper of those years. Not a 2021 to 2024 Model Y.
 fits_nl: Een Juniper uit die jaren. Geen Model Y van 2021 tot 2024.
 url: https://www.amazon.nl/dp/B0GXBFPD4F
 ali_url: https://s.click.aliexpress.com/e/_c4U9g0dT
-button_en: View on Amazon
-button_nl: Bekijk bij Amazon
+button_en: More info Amazon
+button_nl: Meer info Amazon
 :::
 
 :::compare

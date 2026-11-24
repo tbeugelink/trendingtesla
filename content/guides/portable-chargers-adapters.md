@@ -16,8 +16,8 @@ pros_nl: Mobiele Type 2-set | Schuko-adapter en een CEE32-adapter in de basisset
 fits_en: A Tesla away from home, when the adapter matches the socket. 22 kW needs the industrial socket and a car that accepts it.
 fits_nl: Een Tesla buitenshuis, als de adapter bij het stopcontact past. 22 kW vraagt het krachtstroomstopcontact en een auto die dat aankan.
 url: https://www.amazon.nl/dp/B078C74CDY
-button_en: View on Amazon
-button_nl: Bekijk bij Amazon
+button_en: More info Amazon
+button_nl: Meer info Amazon
 :::
 
 :::product
@@ -28,8 +28,8 @@ pros_nl: Mobiele Type 2-unit | Kabel van 7 m | Schuko-adapter, vermeld voor Mode
 fits_en: A Model Y or Model 3 on a normal wall socket. You will not see 22 kW from a household outlet.
 fits_nl: Een Model Y of Model 3 op een normaal stopcontact. Op een huishoudstopcontact zie je geen 22 kW.
 url: https://www.amazon.nl/dp/B0CS6234MR
-button_en: View on Amazon
-button_nl: Bekijk bij Amazon
+button_en: More info Amazon
+button_nl: Meer info Amazon
 :::
 
 :::compare

@@ -16,8 +16,8 @@ pros_nl: Siliconenhoes | Vermeld voor Model 3 Model Y Model S en Model X | Een r
 fits_en: Those four models. The page says the key card and the tracker are not included.
 fits_nl: Die vier modellen. De pagina zegt dat de keycard en de tracker niet zijn inbegrepen.
 url: https://www.amazon.nl/dp/B0DD7GMH71
-button_en: View on Amazon
-button_nl: Bekijk bij Amazon
+button_en: More info Amazon
+button_nl: Meer info Amazon
 :::
 
 :::product
@@ -28,8 +28,8 @@ pros_nl: Alleen vermeld voor Model 3 en Model Y | Een sleutelring is inbegrepen 
 fits_en: A Model 3 or Model Y key card. The page says it is not for other keys.
 fits_nl: Een keycard van een Model 3 of Model Y. De pagina zegt dat hij niet voor andere sleutels is.
 url: https://www.amazon.nl/dp/B0C6QLT3XP
-button_en: View on Amazon
-button_nl: Bekijk bij Amazon
+button_en: More info Amazon
+button_nl: Meer info Amazon
 :::
 
 :::product
@@ -40,8 +40,8 @@ pros_nl: Zachte TPU-hoes en een leren sleutelring | Een opsomming noemt Model 3 
 fits_en: Compare your card with the pictures. The page says the card shape can differ by year, and the key card is not included.
 fits_nl: Vergelijk je kaart met de foto's. De pagina zegt dat de kaartvorm per jaar kan verschillen, en de keycard is niet inbegrepen.
 url: https://www.amazon.nl/dp/B0G528KMX6
-button_en: View on Amazon
-button_nl: Bekijk bij Amazon
+button_en: More info Amazon
+button_nl: Meer info Amazon
 :::
 
 :::compare

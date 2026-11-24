@@ -21,7 +21,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add content/product-prices.json content/amazon-images.json public
+          git add content/product-prices.json content/amazon-images.json content/ali-images.json public
           if git diff --cached --quiet; then
             echo "no price changes"
           else

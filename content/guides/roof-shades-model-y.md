@@ -17,8 +17,8 @@ fits_en: A Model Y of 2021 to 2023, as the page states. Check the year before yo
 fits_nl: Een Model Y van 2021 tot 2023, zoals de pagina zegt. Controleer het jaar voor je bestelt. De AliExpress-zonneschermen zijn vermeld voor Model 3 en Model Y van 2021 tot en met 2025.
 url: https://www.amazon.nl/dp/B0HFP38CZR
 ali_url: https://s.click.aliexpress.com/e/_c33ouw4D
-button_en: View on Amazon
-button_nl: Bekijk bij Amazon
+button_en: More info Amazon
+button_nl: Meer info Amazon
 :::
 
 :::product
@@ -29,8 +29,8 @@ pros_nl: Eén scherm voor het panoramadak met klemmen | Vermeld voor Model Y 202
 fits_en: A Model Y of 2021 to 2024 on that listing. It does not name a Juniper.
 fits_nl: Een Model Y van 2021 tot 2024 op die vermelding. Hij noemt geen Juniper.
 url: https://www.amazon.nl/dp/B0HH6N78KS
-button_en: View on Amazon
-button_nl: Bekijk bij Amazon
+button_en: More info Amazon
+button_nl: Meer info Amazon
 :::
 
 :::product
@@ -41,8 +41,8 @@ pros_nl: Tweedelig scherm voor het glazen dak | De beschrijving noemt Model Y 20
 fits_en: Read both lines. The description names those Model Y years, and the fit type is also marked universal, so confirm the car on the page.
 fits_nl: Lees beide regels. De beschrijving noemt die Model Y-jaren, en het pastype staat ook als universeel, dus bevestig de auto op de pagina.
 url: https://www.amazon.nl/dp/B0HC2462F9
-button_en: View on Amazon
-button_nl: Bekijk bij Amazon
+button_en: More info Amazon
+button_nl: Meer info Amazon
 :::
 
 :::compare

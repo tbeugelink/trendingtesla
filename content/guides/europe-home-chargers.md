@@ -16,8 +16,8 @@ pros_nl: Tesla’s eigen Type 2-unit | Tot 22 kW | Kabel van 7,3 m voor binnen o
 fits_en: A home with its own circuit. 22 kW only helps if the supply and the car both accept it.
 fits_nl: Een huis met een eigen groep. 22 kW helpt alleen als de aansluiting en de auto dat allebei aankunnen.
 url: https://www.amazon.nl/dp/B0BW16BBKQ
-button_en: View on Amazon
-button_nl: Bekijk bij Amazon
+button_en: More info Amazon
+button_nl: Meer info Amazon
 :::
 
 :::product
@@ -28,8 +28,8 @@ pros_nl: Mobiele Type 2-unit | Kabel van 7 m | Schuko-adapter, vermeld voor Mode
 fits_en: A Model Y or Model 3 on the road. A mobile box is not a substitute for a dedicated circuit.
 fits_nl: Een Model Y of Model 3 onderweg. Een mobiele kast vervangt geen eigen groep.
 url: https://www.amazon.nl/dp/B0CS6234MR
-button_en: View on Amazon
-button_nl: Bekijk bij Amazon
+button_en: More info Amazon
+button_nl: Meer info Amazon
 :::
 
 :::compare

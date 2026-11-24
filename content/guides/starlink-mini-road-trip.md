@@ -1,21 +1,21 @@
 ---
 title_en: Starlink Mini kit for a road trip
 title_nl: Starlink Mini-set voor een rit
-description_en: The Mini dish plus a power cable and a pole mount that exist on Amazon.nl. Check whether the dish itself is in stock.
-description_nl: De Mini-schotel plus een stroomkabel en een paalbevestiging die op Amazon.nl staan. Kijk of de schotel zelf op voorraad is.
+description_en: A Starlink Mini kit plus a power cable and a pole mount on Amazon.nl.
+description_nl: Een Starlink Mini-set plus een stroomkabel en een paalbevestiging op Amazon.nl.
 ---
 
-en: A Starlink Mini for a road trip is the dish, a way to power it from the car, and a mount that does not slide off a roof at speed. The dish page on Amazon.nl has been shown as unavailable, so check stock before you plan the trip around it. Check the current price on each page.
-nl: Een Starlink Mini voor een rit is de schotel, een manier om hem uit de auto te voeden, en een bevestiging die op snelheid niet van het dak schuift. De schotelpagina op Amazon.nl is als niet leverbaar getoond, dus kijk de voorraad na voor je de rit eromheen plant. Kijk de actuele prijs op elke pagina.
+en: A Starlink Mini for a road trip is the dish, a way to power it from the car, and a mount that does not slide off a roof at speed. Check the current price on each page.
+nl: Een Starlink Mini voor een rit is de schotel, een manier om hem uit de auto te voeden, en een bevestiging die op snelheid niet van het dak schuift. Kijk de actuele prijs op elke pagina.
 
 :::product
 name_en: Starlink Mini kit
 name_nl: Starlink Mini-set
-pros_en: The Mini kit listing on Amazon.nl | The dish people pack for a trip | The piece the cable and the mount are for
-pros_nl: De Mini-set op Amazon.nl | De schotel die mensen inpakken voor een rit | Het stuk waar de kabel en de bevestiging voor zijn
-fits_en: A road trip that needs the dish itself. The page has been unavailable, so check stock before you rely on it.
-fits_nl: Een rit die de schotel zelf nodig heeft. De pagina is niet leverbaar geweest, dus kijk de voorraad na voor je erop rekent.
-url: https://www.amazon.nl/dp/B0DH3PLZ6N
+pros_en: The title names a Starlink Mini kit | It names the dish | Listed as a bundle
+pros_nl: De titel noemt een Starlink Mini-set | Hij noemt de schotel | Vermeld als een bundel
+fits_en: A trip that needs the dish. The page calls it a Starlink Mini kit with the satellite dish.
+fits_nl: Een rit die de schotel nodig heeft. De pagina noemt het een Starlink Mini-set met de satellietschotel.
+url: https://www.amazon.nl/dp/B0G4KTV9QY
 button_en: Compare on Amazon
 button_nl: Vergelijk op Amazon
 :::
@@ -51,6 +51,6 @@ columns_en: Mini kit | USB-C cable | Pole mount
 columns_nl: Mini-set | USB-C-kabel | Paalbevestiging
 row_en: The dish itself | Power from USB-C | 2025 Mini, part SPX-04176000-501
 row_nl: De schotel zelf | Voeding via USB-C | Mini 2025, onderdeel SPX-04176000-501
-row_en: Page has been unavailable | Not a power station | Check the part against your dish
-row_nl: Pagina is niet leverbaar geweest | Geen powerstation | Leg het onderdeel naast je schotel
+row_en: The page calls it a Mini kit | Not a power station | Check the part against your dish
+row_nl: De pagina noemt het een Mini-set | Geen powerstation | Leg het onderdeel naast je schotel
 :::

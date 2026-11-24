@@ -18,11 +18,11 @@
       }
     },
     "mini-cable": {
-      "asin": "B0F9SQJ4DD",
-      "name": {"en": "Starlink Mini 30 m cable", "nl": "Starlink Mini-kabel van 30 m"},
+      "asin": "B0FRFRYHTX",
+      "name": {"en": "30 m cable for Starlink Mini", "nl": "Kabel van 30 m voor Starlink Mini"},
       "why": {
-        "en": "Starlink's own power cable for the Mini. Check the current price.",
-        "nl": "Starlink's eigen stroomkabel voor de Mini. Kijk de actuele prijs na."
+        "en": "A 30 m cable. The title names the Mini. It is not Starlink's own cable.",
+        "nl": "Een kabel van 30 m. De titel noemt de Mini. Het is niet Starlink's eigen kabel."
       }
     },
     "mini-mount": {
@@ -42,11 +42,11 @@
       }
     },
     "highland-mats": {
-      "asin": "B0CQJNS7X4",
+      "asin": "B0FJM6K3JP",
       "name": {"en": "Mats for Model 3 Highland", "nl": "Matten voor Model 3 Highland"},
       "why": {
-        "en": "Listed for the 2024 Highland only. Check the current price.",
-        "nl": "Vermeld voor alleen de Highland van 2024. Kijk de actuele prijs na."
+        "en": "Listed for the Highland of 2024 to 2025. Check the current price.",
+        "nl": "Vermeld voor de Highland van 2024 tot 2025. Kijk de actuele prijs na."
       }
     },
     "sentry-usb": {

@@ -1,8 +1,8 @@
 ---
 title_en: Winter mats for Model 3 and Y
 title_nl: Wintermatten voor Model 3 en Y
-description_en: Two all-weather mat sets on Amazon.nl, one for a Model Y Juniper and one for a 2024 Model 3 Highland. Match the car before you order.
-description_nl: Twee allweermattensets op Amazon.nl, één voor een Model Y Juniper en één voor een Model 3 Highland van 2024. Stem de auto af voor je bestelt.
+description_en: Two all-weather mat sets on Amazon.nl, one for a Model Y Juniper and one for a Model 3 Highland. Match the car before you order.
+description_nl: Twee allweermattensets op Amazon.nl, één voor een Model Y Juniper en één voor een Model 3 Highland. Stem de auto af voor je bestelt.
 ---
 
 en: Winter slush ends up on the floor, and the mat that helps is the one cut for that exact car. A 2025 Model Y Juniper does not take the set made for a 2024 Model 3 Highland. Read the fit line on the product page and check the current price.
@@ -30,13 +30,13 @@ ali_url: https://s.click.aliexpress.com/e/_c4eTdPDJ
 :::
 
 :::product
-name_en: YITAHOME mats for Model 3 Highland
-name_nl: YITAHOME-matten voor Model 3 Highland
-pros_en: Three-piece all-weather set | Listed for the 2024 Model 3 Highland only | Cut for that car, not a classic Model 3
-pros_nl: Driedelige allweerset | Alleen vermeld voor de Model 3 Highland van 2024 | Gesneden voor die auto, niet voor een oudere Model 3
-fits_en: A 2024 Model 3 Highland only. A classic Model 3 needs a different set.
-fits_nl: Alleen een Model 3 Highland van 2024. Een oudere Model 3 heeft een andere set nodig.
-url: https://www.amazon.nl/dp/B0CQJNS7X4
+name_en: 3W mats for Model 3 Highland
+name_nl: 3W-matten voor Model 3 Highland
+pros_en: Six-piece set | Listed for Model 3 Highland 2024 to 2025 | The title names floor mats
+pros_nl: Zesdelige set | Vermeld voor Model 3 Highland 2024 tot 2025 | De titel noemt vloermatten
+fits_en: A Model 3 Highland of 2024 to 2025, as the title states. The title also names trunk mats in the set.
+fits_nl: Een Model 3 Highland van 2024 tot 2025, zoals de titel zegt. De titel noemt ook kofferbakmatten in de set.
+url: https://www.amazon.nl/dp/B0FJM6K3JP
 button_en: Compare on Amazon
 button_nl: Vergelijk op Amazon
 :::
@@ -44,8 +44,10 @@ button_nl: Vergelijk op Amazon
 :::product
 name_en: Highland mats for a Model 3
 name_nl: Highland-matten voor een Model 3
-note_en: A mat set listed for the Model 3 Highland.
-note_nl: Een mattenset vermeld voor de Model 3 Highland.
+note_en: The floor-mat set. The page opens on a trunk mat.
+note_nl: De vloermatset. De pagina opent op een kofferbakmat.
+option_en: Option: LHD Floor Mat 6PCS
+option_nl: Uitvoering: LHD Floor Mat 6PCS
 item: 1005006925057063
 ali_url: https://s.click.aliexpress.com/e/_c3iNubYN
 :::
@@ -55,8 +57,8 @@ caption_en: Match the car
 caption_nl: Stem de auto af
 columns_en: Model Y Juniper | Model 3 Highland
 columns_nl: Model Y Juniper | Model 3 Highland
-row_en: GAFAT set | YITAHOME set
-row_nl: GAFAT-set | YITAHOME-set
-row_en: 2025 to 2027 Juniper | 2024 Highland only
-row_nl: Juniper 2025 tot 2027 | Alleen Highland 2024
+row_en: GAFAT set | 3W set
+row_nl: GAFAT-set | 3W-set
+row_en: 2025 to 2027 Juniper | Highland 2024 to 2025
+row_nl: Juniper 2025 tot 2027 | Highland 2024 tot 2025
 :::

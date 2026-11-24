@@ -1117,10 +1117,10 @@ header.hb .pnav>.is-parked{display:none}
 .pv-side ul.hubs li{display:grid;grid-template-columns:6px minmax(0,1fr);column-gap:8px;align-items:start}
 .pv-side ul.hubs li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--red);align-self:start;margin-top:calc(0.65em - 3px)}
 .pv-side a:hover,.pv-side a:focus-visible{color:var(--blue)}
-.gcatgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px 8px;background:#141414;border:1px solid #2a3646;border-radius:14px;padding:12px}
+.gcatgrid{display:grid;grid-template-columns:1fr 1fr;gap:22px 18px;background:#141414;border:1px solid #2a3646;border-radius:14px;padding:14px}
 .gcat{display:flex;flex-direction:column;min-width:0;color:#fff}
-.gtile{display:flex;align-items:center;justify-content:center;background:#fff;border-radius:10px;aspect-ratio:1;padding:12%;box-sizing:border-box;overflow:hidden}
-.gtile img{width:100%;height:100%;object-fit:contain;display:block}
+.gtile{display:flex;align-items:center;justify-content:center;background:var(--fg);border-radius:10px;aspect-ratio:1;padding:12%;box-sizing:border-box;overflow:hidden}
+.gtile img{width:100%;height:100%;object-fit:contain;display:block;background:var(--fg)}
 .gname{display:block;margin-top:6px;font-size:.7rem;font-weight:700;line-height:1.25;text-align:center;color:#fff}
 .gcat:hover .gname,.gcat:focus-visible .gname{color:var(--blue)}
 .gcat.is-on .gtile{outline:2px solid var(--red);outline-offset:2px}
@@ -7172,22 +7172,13 @@ def guide_category_cards(lang, current=""):
             f'<span class="gtile">{img}</span><span class="gname">{esc(name)}</span></a>')
     if not cards:
         return ""
-    title = "Guides" if lang == "en" else "Gidsen"
+    title = "Buying guides" if lang == "en" else "Koopgidsen"
     return _side_section(title, f'<div class="gcatgrid">{"".join(cards)}</div>')
 
 
 def buying_guides_side(lang):
-    """Every published buying guide, on the sidebar of every page."""
-    docs = [d for d in GUIDE_DOCS if not d.get("template")]
-    if not docs:
-        return ""
-    docs.sort(key=lambda d: (d["meta"].get(f"title_{lang}") or d["meta"].get("title_en") or "").lower())
-    items = []
-    for doc in docs:
-        name = doc["meta"].get(f"title_{lang}") or doc["meta"].get("title_en") or doc["slug"]
-        items.append((name, url(lang, guides_path(lang) + doc["slug"] + "/")))
-    title = "Buying guides" if lang == "en" else "Koopgidsen"
-    return _side_section(title, "<ul>" + _side_links(items) + "</ul>")
+    """Category tiles on every page. Guide pages already show this block at the top."""
+    return guide_category_cards(lang)
 
 
 def model_accessory_links(key, lang):

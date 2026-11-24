@@ -16,8 +16,8 @@ pros_nl: USB-A-stick | 256 GB | Klein genoeg voor de poort in het dashboardkastj
 fits_en: A Tesla that saves Sentry clips and needs more room. Format the stick in the car. All-day writing wears a flash drive.
 fits_nl: Een Tesla die Sentry-beelden bewaart en meer ruimte nodig heeft. Formatteer de stick in de auto. Schrijven de hele dag slijt een flashdrive.
 url: https://www.amazon.nl/dp/B07D1KF73V
-button_en: More info Amazon
-button_nl: Meer info Amazon
+button_en: Compare on Amazon
+button_nl: Vergelijk op Amazon
 :::
 
 :::product
@@ -28,8 +28,8 @@ pros_nl: Dezelfde USB-A BAR Plus | 128 GB | Voor een kortere beeldgeschiedenis
 fits_en: A Tesla that does not need a long clip history. The same wear from all-day writing.
 fits_nl: Een Tesla die geen lange beeldgeschiedenis nodig heeft. Dezelfde slijtage door schrijven de hele dag.
 url: https://www.amazon.nl/dp/B07CVXQVQM
-button_en: More info Amazon
-button_nl: Meer info Amazon
+button_en: Compare on Amazon
+button_nl: Vergelijk op Amazon
 :::
 
 :::compare

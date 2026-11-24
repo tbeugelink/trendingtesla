@@ -13,12 +13,20 @@ name_en: Rengue shades for Model Y 2021 to 2023
 name_nl: Rengue-schermen voor Model Y 2021 tot 2023
 pros_en: Front and rear glass-roof shades | Listed as a replacement for Model Y 2021 to 2023 | Clips and a storage bag are in the pack
 pros_nl: Schermen voor het glazen dak voor en achter | Vermeld als vervanging voor Model Y 2021 tot 2023 | Klemmen en een opbergtas zitten in de verpakking
-fits_en: A Model Y of 2021 to 2023, as the page states. Check the year before you order. The AliExpress shades are listed for Model 3 and Model Y from 2021 through 2025.
-fits_nl: Een Model Y van 2021 tot 2023, zoals de pagina zegt. Controleer het jaar voor je bestelt. De AliExpress-zonneschermen zijn vermeld voor Model 3 en Model Y van 2021 tot en met 2025.
+fits_en: A Model Y of 2021 to 2023, as the page states. Check the year before you order.
+fits_nl: Een Model Y van 2021 tot 2023, zoals de pagina zegt. Controleer het jaar voor je bestelt.
 url: https://www.amazon.nl/dp/B0HFP38CZR
+button_en: Compare on Amazon
+button_nl: Vergelijk op Amazon
+:::
+
+:::product
+name_en: Roof shades for Model 3 and Y
+name_nl: Dakschermen voor Model 3 en Y
+note_en: Listed for Model 3 and Model Y from 2021 through 2025.
+note_nl: Vermeld voor Model 3 en Model Y van 2021 tot en met 2025.
+item: 1005005317345951
 ali_url: https://s.click.aliexpress.com/e/_c33ouw4D
-button_en: More info Amazon
-button_nl: Meer info Amazon
 :::
 
 :::product
@@ -29,8 +37,8 @@ pros_nl: Eén scherm voor het panoramadak met klemmen | Vermeld voor Model Y 202
 fits_en: A Model Y of 2021 to 2024 on that listing. It does not name a Juniper.
 fits_nl: Een Model Y van 2021 tot 2024 op die vermelding. Hij noemt geen Juniper.
 url: https://www.amazon.nl/dp/B0HH6N78KS
-button_en: More info Amazon
-button_nl: Meer info Amazon
+button_en: Compare on Amazon
+button_nl: Vergelijk op Amazon
 :::
 
 :::product
@@ -41,8 +49,8 @@ pros_nl: Tweedelig scherm voor het glazen dak | De beschrijving noemt Model Y 20
 fits_en: Read both lines. The description names those Model Y years, and the fit type is also marked universal, so confirm the car on the page.
 fits_nl: Lees beide regels. De beschrijving noemt die Model Y-jaren, en het pastype staat ook als universeel, dus bevestig de auto op de pagina.
 url: https://www.amazon.nl/dp/B0HC2462F9
-button_en: More info Amazon
-button_nl: Meer info Amazon
+button_en: Compare on Amazon
+button_nl: Vergelijk op Amazon
 :::
 
 :::compare

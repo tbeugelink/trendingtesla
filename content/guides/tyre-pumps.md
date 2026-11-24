@@ -16,8 +16,8 @@ pros_nl: 12-voltstekker voor een sigarettenaansteker | Stopt als de ingestelde s
 fits_en: A vehicle with that 12 volt socket. The spec table lists a maximum of 150 psi.
 fits_nl: Een voertuig met dat 12-voltstopcontact. De specificatietabel noemt een maximum van 150 psi.
 url: https://www.amazon.nl/dp/B073VB41W3
-button_en: More info Amazon
-button_nl: Meer info Amazon
+button_en: Compare on Amazon
+button_nl: Vergelijk op Amazon
 :::
 
 :::product
@@ -37,8 +37,8 @@ pros_nl: Geen eigen accu | 12-voltstekker en een snoer van 3 meter | Stopt bij d
 fits_en: A car with a 12 volt cigarette-lighter socket. The page lists a maximum of 150 psi and a car mode.
 fits_nl: Een auto met een 12-volt sigarettenaansteker. De pagina noemt een maximum van 150 psi en een automodus.
 url: https://www.amazon.nl/dp/B0D1Y832ZK
-button_en: More info Amazon
-button_nl: Meer info Amazon
+button_en: Compare on Amazon
+button_nl: Vergelijk op Amazon
 :::
 
 :::product
@@ -49,8 +49,8 @@ pros_nl: Een ingebouwde accu en een 12-voltsnoer voor de auto | Stopt bij de ing
 fits_en: A car tyre, on the battery or on the 12 volt lead. The page says it is not for large low-pressure items such as an air mattress.
 fits_nl: Een autoband, op de accu of op het 12-voltsnoer. De pagina zegt dat hij niet voor grote lagedrukspullen zoals een luchtbed is.
 url: https://www.amazon.nl/dp/B0DR1Y8NNZ
-button_en: More info Amazon
-button_nl: Meer info Amazon
+button_en: Compare on Amazon
+button_nl: Vergelijk op Amazon
 :::
 
 :::compare

@@ -13,12 +13,20 @@ name_en: TEMKIN flaps for Model Y 2021 to 2023
 name_nl: TEMKIN-lappen voor Model Y 2021 tot 2023
 pros_en: Four flaps for front and rear | Listed for Model Y 2021 to 2023 | Screws are in the pack
 pros_nl: Vier lappen voor voor en achter | Vermeld voor Model Y 2021 tot 2023 | Schroeven zitten in de verpakking
-fits_en: A Model Y of 2021 to 2023. The page does not name a Juniper. The AliExpress flaps are listed for a Model Y from 2020 through 2024.
-fits_nl: Een Model Y van 2021 tot 2023. De pagina noemt geen Juniper. De AliExpress-flappen zijn vermeld voor een Model Y van 2020 tot en met 2024.
+fits_en: A Model Y of 2021 to 2023. The page does not name a Juniper.
+fits_nl: Een Model Y van 2021 tot 2023. De pagina noemt geen Juniper.
 url: https://www.amazon.nl/dp/B0CKXJGYCM
+button_en: Compare on Amazon
+button_nl: Vergelijk op Amazon
+:::
+
+:::product
+name_en: Mud flaps for an older Model Y
+name_nl: Spatlappen voor een oudere Model Y
+note_en: Listed for a Model Y from 2020 through 2024.
+note_nl: Vermeld voor een Model Y van 2020 tot en met 2024.
+item: 1005007038490302
 ali_url: https://s.click.aliexpress.com/e/_c2RTxWyp
-button_en: More info Amazon
-button_nl: Meer info Amazon
 :::
 
 :::product
@@ -29,8 +37,8 @@ pros_nl: Vier zachte PP-lappen | De titel noemt Juniper 2025 en later | De besch
 fits_en: Read both lines on the same page before you order. The title and the description do not name the same years.
 fits_nl: Lees beide regels op dezelfde pagina voor je bestelt. De titel en de beschrijving noemen niet dezelfde jaren.
 url: https://www.amazon.nl/dp/B0H6S8FSY2
-button_en: More info Amazon
-button_nl: Meer info Amazon
+button_en: Compare on Amazon
+button_nl: Vergelijk op Amazon
 :::
 
 :::product
@@ -41,9 +49,17 @@ pros_nl: Set van vier | Vermeld voor Juniper Premium en Performance van 2025 tot
 fits_en: A Juniper of those years. Not a 2021 to 2024 Model Y.
 fits_nl: Een Juniper uit die jaren. Geen Model Y van 2021 tot 2024.
 url: https://www.amazon.nl/dp/B0GXBFPD4F
+button_en: Compare on Amazon
+button_nl: Vergelijk op Amazon
+:::
+
+:::product
+name_en: Mud flaps for a Model Y Juniper
+name_nl: Spatlappen voor een Model Y Juniper
+note_en: A flap set listed for a Model Y Juniper.
+note_nl: Een set lappen vermeld voor een Model Y Juniper.
+item: 1005006863760881
 ali_url: https://s.click.aliexpress.com/e/_c4U9g0dT
-button_en: More info Amazon
-button_nl: Meer info Amazon
 :::
 
 :::compare

@@ -16,8 +16,8 @@ pros_nl: Kort pluspunt
 cons_en: Short minus
 cons_nl: Kort minpunt
 url: https://www.amazon.nl/
-button_en: More info Amazon
-button_nl: Meer info Amazon
+button_en: Compare on Amazon
+button_nl: Vergelijk op Amazon
 :::
 
 :::compare

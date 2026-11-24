@@ -1515,6 +1515,14 @@ article .prose .gbox li{font-size:.8rem;line-height:1.35}
 .pcost{margin:10px 0 0;color:#8b97a6;font-size:.72rem;line-height:1.35}
 .pcost b{color:#fff;font-size:.95rem;font-weight:800;letter-spacing:-.01em}
 .pcost .alt,.pcost .usd{margin-left:6px;color:#c5ced8;font-weight:700;font-size:.78rem}
+.stars{display:flex;align-items:center;gap:8px;margin:8px 0 0;color:#c5ced8;font-size:.78rem;line-height:1}
+.starrow{position:relative;display:inline-block;width:78px;height:14px;flex:none}
+.starrow .empty,.starrow .full{display:flex;gap:2px;height:14px}
+.starrow svg{width:14px;height:14px;display:block;flex:none}
+.starrow .empty svg{fill:#3a4454}
+.starrow .full{position:absolute;left:0;top:0;overflow:hidden;width:calc(var(--score) / 5 * 100%)}
+.starrow .full svg{fill:#f5c451}
+article .prose .gbox p.stars{margin-top:8px;font-size:.78rem;color:#c5ced8}
 .pcost .asof{display:block;margin-top:2px;font-size:.68rem;letter-spacing:.01em}
 article .prose .gbox p.pcost{margin-top:10px;font-size:.72rem;color:#8b97a6}
 .store-btns{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;align-items:center}
@@ -3345,11 +3353,11 @@ def load_ali_images():
         urls = []
         for raw in rows:
             src = str(raw or "").strip().split("?")[0]
-            if not src.startswith("https://ae-pic-a1.aliexpress-media.com/kf/"):
-                continue
-            if src.endswith(".jpg") and src not in urls:
+            remote = src.startswith("https://ae-pic-a1.aliexpress-media.com/kf/") and src.endswith((".jpg", ".png"))
+            local = src.startswith("/img/guides/") and src.endswith(".webp") and (STATIC / src.lstrip("/")).is_file()
+            if (remote or local) and src not in urls:
                 urls.append(src)
-            if len(urls) == 5:
+            if len(urls) == 6:
                 break
         if urls:
             ALI_GALLERIES[key] = urls
@@ -3449,8 +3457,8 @@ def _parse_stamp(value):
 def _thumb_src(src):
     if src.startswith("https://m.media-amazon.com/images/I/"):
         return re.sub(r"\._[^./]+(?=\.jpg$)", "._AC_US100_", src)
-    if src.startswith("https://ae-pic-a1.aliexpress-media.com/kf/") and src.endswith(".jpg"):
-        return src + "_220x220q75.jpg"
+    if src.startswith("https://ae-pic-a1.aliexpress-media.com/kf/"):
+        return src
     return src
 
 
@@ -3491,20 +3499,60 @@ def price_html(key, lang):
         usd_en = f"${eur * per:.2f}"
         usd_nl = usd_en.replace(".", ",")
     if lang == "nl":
-        big, small = eur_nl, (f'<span class="alt">≈ {usd_nl}</span>' if usd_nl else "")
+        shown = eur_nl
         asof = f"Prijs op {fmt_date(day, lang)}"
     elif usd_en:
-        big, small = usd_en, f'<span class="alt">≈ {eur_en}</span>'
+        shown = usd_en
         asof = f"Price as of {fmt_date(day, lang)}"
     else:
-        big, small = eur_en, ""
-        asof = f"Price as of {fmt_date(day, lang)}"
+        return ""
     return (f'<p class="pcost" data-priced="{esc(fetched.isoformat())}" data-days="{fresh_days}">'
-            f'<b>{big}</b>{small}<span class="asof">{esc(asof)}</span></p>')
+            f'<b>{shown}</b><span class="asof">{esc(asof)}</span></p>')
+
+
+_STAR = ('<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6 12.6 7l5.9.5-4.5 3.8 1.4 5.8L10 14.4 4.6 17.1 6 11.3 1.5 7.5 7.4 7z"/></svg>')
+
+
+def rating_html(key, lang):
+    """Star row from a stored rating. Hidden once the figure is a week old."""
+    row = (PRODUCT_PRICES.get("ratings") or {}).get(key) or {}
+    if not isinstance(row, dict):
+        return ""
+    try:
+        score = float(row.get("score"))
+    except (TypeError, ValueError):
+        return ""
+    if not 1 <= score <= 5:
+        return ""
+    fetched = _parse_stamp(row.get("fetched"))
+    if fetched is None or datetime.now(TZ) - fetched > timedelta(days=7):
+        return ""
+    try:
+        count = int(row.get("count") or 0)
+    except (TypeError, ValueError):
+        count = 0
+    if count < 0:
+        count = 0
+    score_s = f"{score:.1f}"
+    if lang == "nl":
+        score_s = score_s.replace(".", ",")
+        count_s = f"{count:,}".replace(",", ".") if count else ""
+        label = f"{score_s} van 5" + (f", {count_s} beoordelingen" if count_s else "")
+    else:
+        count_s = f"{count:,}" if count else ""
+        label = f"{score_s} out of 5" + (f", {count_s} reviews" if count_s else "")
+    text = score_s + (f" ({count_s})" if count_s else "")
+    stars = _STAR * 5
+    return (
+        f'<p class="stars" data-rated="{esc(fetched.isoformat())}" data-days="7">'
+        f'<span class="starrow" style="--score:{score:.2f};height:14px;overflow:hidden" role="img" aria-label="{esc(label)}">'
+        f'<span class="empty" style="display:flex;height:14px;gap:2px">{stars}</span>'
+        f'<span class="full" style="display:flex;height:14px;gap:2px">{stars}</span></span>'
+        f'<span class="scorenum">{esc(text)}</span></p>')
 
 
 def gallery_html(srcs, alt, href, remote, lang):
-    srcs = [src for src in srcs if src][:5]
+    srcs = [src for src in srcs if src][:6]
     if not srcs:
         return ""
     hero = (f'<img class="pgal-hero" src="{esc(srcs[0])}" alt="{esc(alt)}" width="200" height="200"'
@@ -3547,7 +3595,7 @@ def local_gallery(src):
     return out
 
 
-PRODUCT_JS = r"""(function(){document.querySelectorAll("[data-priced]").forEach(function(n){var t=Date.parse(n.getAttribute("data-priced"));var days=+n.getAttribute("data-days")||1;if(!t||Date.now()-t>days*86400000)n.remove()});document.querySelectorAll("[data-pgal]").forEach(function(root){var hero=root.querySelector(".pgal-hero"),thumbs=[].slice.call(root.querySelectorAll(".pgal-thumb"));if(!hero||thumbs.length<2)return;var i=0;function show(n){i=(n+thumbs.length)%thumbs.length;var src=thumbs[i].getAttribute("data-src");thumbs.forEach(function(t,k){var on=k===i;t.classList.toggle("is-on",on);if(on)t.setAttribute("aria-current","true");else t.removeAttribute("aria-current")});if(src&&hero.getAttribute("src")!==src){var pre=new Image();pre.onload=function(){hero.src=src};pre.src=src}}thumbs.forEach(function(t,k){t.addEventListener("click",function(){show(k)})});root.querySelectorAll(".pgal-nav").forEach(function(b){b.addEventListener("click",function(e){e.preventDefault();e.stopPropagation();show(i+(b.classList.contains("pgal-next")?1:-1))})});root.addEventListener("keydown",function(e){if(e.key==="ArrowLeft"||e.key==="ArrowRight"){e.preventDefault();show(i+(e.key==="ArrowRight"?1:-1))}});var x0=null,stage=root.querySelector(".pgal-stage")||root;stage.addEventListener("touchstart",function(e){x0=e.changedTouches[0].clientX},{passive:true});stage.addEventListener("touchend",function(e){if(x0==null)return;var dx=e.changedTouches[0].clientX-x0;x0=null;if(Math.abs(dx)>40)show(dx<0?i+1:i-1)},{passive:true})})})();"""
+PRODUCT_JS = r"""(function(){document.querySelectorAll("[data-priced],[data-rated]").forEach(function(n){var raw=n.getAttribute("data-priced")||n.getAttribute("data-rated");var t=Date.parse(raw);var days=+n.getAttribute("data-days")||1;if(!t||Date.now()-t>days*86400000)n.remove()});document.querySelectorAll("[data-pgal]").forEach(function(root){var hero=root.querySelector(".pgal-hero"),thumbs=[].slice.call(root.querySelectorAll(".pgal-thumb"));if(!hero||thumbs.length<2)return;var i=0;function show(n){i=(n+thumbs.length)%thumbs.length;var src=thumbs[i].getAttribute("data-src");thumbs.forEach(function(t,k){var on=k===i;t.classList.toggle("is-on",on);if(on)t.setAttribute("aria-current","true");else t.removeAttribute("aria-current")});if(src&&hero.getAttribute("src")!==src){var pre=new Image();pre.onload=function(){hero.src=src};pre.src=src}}thumbs.forEach(function(t,k){t.addEventListener("click",function(){show(k)})});root.querySelectorAll(".pgal-nav").forEach(function(b){b.addEventListener("click",function(e){e.preventDefault();e.stopPropagation();show(i+(b.classList.contains("pgal-next")?1:-1))})});root.addEventListener("keydown",function(e){if(e.key==="ArrowLeft"||e.key==="ArrowRight"){e.preventDefault();show(i+(e.key==="ArrowRight"?1:-1))}});var x0=null,stage=root.querySelector(".pgal-stage")||root;stage.addEventListener("touchstart",function(e){x0=e.changedTouches[0].clientX},{passive:true});stage.addEventListener("touchend",function(e){if(x0==null)return;var dx=e.changedTouches[0].clientX-x0;x0=null;if(Math.abs(dx)>40)show(dx<0?i+1:i-1)},{passive:true})})})();"""
 
 
 def product_photo_html(src, alt, href, remote):
@@ -3589,43 +3637,66 @@ def product_boxes(a, lang):
     products = a.get("products") or []
     if not isinstance(products, list):
         return ""
-    L = LANGS[lang]
     blocks = []
     for product in products:
         if not isinstance(product, dict):
             continue
         name = str(_loc(product.get("name"), lang)).strip()
         href = amazon_nl_href(product, lang)
-        if not name or not href:
-            continue
-        why = str(_loc(product.get("why"), lang)).strip()
-        specs = _loc(product.get("specs"), lang)
-        if isinstance(specs, str):
-            specs = [specs]
-        if not isinstance(specs, list):
-            specs = []
-        specs = [str(item).strip() for item in specs if str(item).strip()][:6]
-        button = "Meer info Amazon" if lang == "nl" else "More info Amazon"
-        asin = _product_asin(product)
-        img = gallery_html(AMAZON_GALLERIES.get(asin, []), name, href, True, lang)
-        klass = "pbox" if img else "pbox noimg"
-        lis = "".join(f"<li>{esc(item)}</li>" for item in specs)
-        ul = f"<ul>{lis}</ul>" if lis else ""
-        why_html = f'<p class="why">{esc(why)}</p>' if why else ""
-        cost = price_html(asin, lang)
         ali = ali_href(_loc(product.get("ali_url"), lang) or product.get("ali_url"), lang)
-        ali_btn = ""
-        if ali:
-            ali_label = "Meer info AliExpress" if lang == "nl" else "More info AliExpress"
-            ali_btn = (f'<a class="btn ghost" href="{esc(ali)}" rel="sponsored nofollow noopener" target="_blank">'
-                       f'{esc(ali_label)}</a>')
-        blocks.append(
-            f'<aside class="{klass}"><div class="pbox-in">{img}<div><h3>{esc(name)}</h3>{why_html}{ul}{cost}'
-            f'<div class="store-btns"><a class="btn" href="{esc(href)}" rel="sponsored nofollow noopener" target="_blank">{esc(button)}</a>'
-            f'{ali_btn}</div></div></div></aside>')
+        if href and ali:
+            amazon_only = dict(product)
+            amazon_only.pop("ali_url", None)
+            amazon_only.pop("ali_item", None)
+            ali_only = dict(product)
+            ali_only.pop("asin", None)
+            ali_only.pop("url", None)
+            blocks.extend(_article_product(amazon_only, lang))
+            blocks.extend(_article_product(ali_only, lang))
+            continue
+        blocks.extend(_article_product(product, lang))
     if not blocks:
         return ""
     return "".join(blocks) + disclosure_line(lang)
+
+
+def _article_product(product, lang):
+    """One store per card. An empty card (no name and no link) is left out."""
+    if not isinstance(product, dict):
+        return []
+    name = str(_loc(product.get("name"), lang)).strip()
+    href = amazon_nl_href(product, lang)
+    ali = ali_href(_loc(product.get("ali_url"), lang) or product.get("ali_url"), lang)
+    if not name or not (href or ali):
+        return []
+    why = str(_loc(product.get("why"), lang)).strip()
+    specs = _loc(product.get("specs"), lang)
+    if isinstance(specs, str):
+        specs = [specs]
+    if not isinstance(specs, list):
+        specs = []
+    specs = [str(item).strip() for item in specs if str(item).strip()][:6]
+    if href:
+        button = "Vergelijk op Amazon" if lang == "nl" else "Compare on Amazon"
+        asin = _product_asin(product)
+        img = gallery_html(AMAZON_GALLERIES.get(asin, []), name, href, True, lang)
+        key = asin
+        link = (f'<a class="btn" href="{esc(href)}" rel="sponsored nofollow noopener" target="_blank">{esc(button)}</a>')
+    else:
+        button = "Vergelijk op AliExpress" if lang == "nl" else "Compare on AliExpress"
+        item = str(product.get("ali_item") or "").strip()
+        img = gallery_html(ALI_GALLERIES.get(item, []), name, ali, True, lang)
+        key = f"ali:{item}" if item else ""
+        link = (f'<a class="btn" href="{esc(ali)}" rel="sponsored nofollow noopener" target="_blank">{esc(button)}</a>')
+    klass = "pbox" if img else "pbox noimg"
+    lis = "".join(f"<li>{esc(item)}</li>" for item in specs)
+    ul = f"<ul>{lis}</ul>" if lis else ""
+    why_html = f'<p class="why">{esc(why)}</p>' if why else ""
+    cost = price_html(key, lang) if key else ""
+    stars = rating_html(key, lang) if key else ""
+    return [
+        f'<aside class="{klass}"><div class="pbox-in">{img}<div><h3>{esc(name)}</h3>{why_html}{ul}{stars}{cost}'
+        f'<div class="store-btns">{link}</div></div></div></aside>']
 
 
 AFFILIATE = {}
@@ -7111,7 +7182,7 @@ _KV_KEYS = (
     "title_en", "title_nl", "en", "nl", "why_en", "why_nl",
     "name_en", "name_nl", "pros_en", "pros_nl", "cons_en", "cons_nl",
     "fits_en", "fits_nl",
-    "url", "ali_url", "image", "note_en", "note_nl", "button_en", "button_nl",
+    "url", "ali_url", "image", "item", "note_en", "note_nl", "button_en", "button_nl",
     "caption_en", "caption_nl", "columns_en", "columns_nl", "row_en", "row_nl",
     "slug",
 )
@@ -7509,8 +7580,14 @@ def _guide_product(fields, lang):
         amazon_host = href.split("/")[2].lower()
     amazon_ok = amazon_host in ("www.amazon.nl", "amazon.nl")
     ali = ali_href(fields.get("ali_url"), lang)
-    button = "Meer info Amazon" if lang == "nl" else "More info Amazon"
-    ali_label = "Meer info AliExpress" if lang == "nl" else "More info AliExpress"
+    if amazon_ok and ali:
+        amazon_only = dict(fields)
+        amazon_only.pop("ali_url", None)
+        ali_only = dict(fields)
+        ali_only.pop("url", None)
+        return _guide_product(amazon_only, lang) + _guide_product(ali_only, lang)
+    button = "Vergelijk op Amazon" if lang == "nl" else "Compare on Amazon"
+    ali_label = "Vergelijk op AliExpress" if lang == "nl" else "Compare on AliExpress"
     lists = ""
     if pros:
         lists = f'<h3>{plus}</h3><ul>{"".join(f"<li>{esc(item)}</li>" for item in pros)}</ul>'
@@ -7523,14 +7600,16 @@ def _guide_product(fields, lang):
         if amazon_ok:
             parts.append(f'<a class="btn amazon-go" href="{esc(href)}" rel="sponsored nofollow noopener" target="_blank">{esc(button)}</a>')
         if ali:
-            style = "btn ghost" if amazon_ok else "btn"
-            parts.append(f'<a class="{style}" href="{esc(ali)}" rel="sponsored nofollow noopener" target="_blank">{esc(ali_label)}</a>')
+            parts.append(f'<a class="btn" href="{esc(ali)}" rel="sponsored nofollow noopener" target="_blank">{esc(ali_label)}</a>')
         link = f'<div class="store-btns">{"".join(parts)}</div>'
     local = guide_local_image(fields)
     photo_href = ""
     remote = False
+    item_id = str(fields.get("item") or "").strip()
     ali_item = re.search(r"ali-(\d{8,})", str(fields.get("image") or ""))
-    ali_remote = ALI_GALLERIES.get(ali_item.group(1), []) if ali_item else []
+    if not item_id and ali_item:
+        item_id = ali_item.group(1)
+    ali_remote = ALI_GALLERIES.get(item_id, []) if item_id else []
     if ali_remote:
         srcs = ali_remote
         photo_href = ali or ""
@@ -7551,12 +7630,12 @@ def _guide_product(fields, lang):
     if amazon_ok:
         price_key = _product_asin(href)
     else:
-        item = re.search(r"ali-(\d{8,})", str(fields.get("image") or ""))
-        price_key = f"ali:{item.group(1)}" if item else ""
+        price_key = f"ali:{item_id}" if item_id else ""
     cost = price_html(price_key, lang) if price_key else ""
+    stars = rating_html(price_key, lang) if price_key else ""
     klass = "gbox" if img else "gbox noimg"
     return (f'<aside class="{klass}">{img}<div><h2>{esc(name)}</h2>{lists}{note_html}{fit_html}'
-            f'{cost}{link}</div></aside>')
+            f'{stars}{cost}{link}</div></aside>')
 
 
 def _guide_hero(doc, lang):

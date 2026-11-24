@@ -7101,22 +7101,42 @@ GUIDE_CATS = (
 )
 
 
-def _guide_category_photo(doc):
-    """First product photo on the guide. Amazon's main image, then an AliExpress gallery."""
+# A later product, when the first photo is already another tile or is no longer the one to show.
+GUIDE_CAT_PICK = {
+    "model-y-3-accessories": "B09SWFCTFQ",
+    "sentry-usb-drive": "B00P8XQPY4",
+}
+
+
+def _guide_product_photos(doc):
+    """Main photo of each product currently on the guide, in page order."""
+    photos = []
     for kind, fields in doc.get("pieces") or []:
         if kind != "product" or not isinstance(fields, dict):
             continue
         asin = _product_asin(str(fields.get("url") or ""))
         gallery = AMAZON_GALLERIES.get(asin) or []
-        if gallery:
-            return gallery[0]
         item = str(fields.get("item") or "").strip()
         ali = ALI_GALLERIES.get(item) or []
-        if ali:
-            return ali[0]
         local = guide_local_image(fields)
-        if local:
-            return local
+        src = (gallery[0] if gallery else "") or (ali[0] if ali else "") or local
+        key = asin or item
+        if src and key:
+            photos.append((key, src))
+    return photos
+
+
+def _guide_category_photo(doc, used):
+    """One unused main photo from a product on this guide."""
+    photos = _guide_product_photos(doc)
+    prefer = GUIDE_CAT_PICK.get(doc.get("slug") or "")
+    if prefer:
+        photos = [row for row in photos if row[0] == prefer] + [row for row in photos if row[0] != prefer]
+    for _key, src in photos:
+        if src in used:
+            continue
+        used.add(src)
+        return src
     return ""
 
 
@@ -7134,6 +7154,7 @@ def guide_category_cards(lang, current=""):
             labels[slug] = (slug, title, title)
             order.append(slug)
     cards = []
+    used_photos = set()
     for slug in order:
         doc = docs.get(slug)
         row = labels.get(slug)
@@ -7141,7 +7162,7 @@ def guide_category_cards(lang, current=""):
             continue
         name = row[1] if lang == "en" else row[2]
         href = url(lang, guides_path(lang) + slug + "/")
-        photo = _guide_category_photo(doc)
+        photo = _guide_category_photo(doc, used_photos)
         img = (f'<img src="{esc(photo)}" alt="" width="160" height="160" loading="lazy" decoding="async">'
                if photo else "")
         on = " is-on" if slug == current else ""

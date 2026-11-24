@@ -23,8 +23,8 @@ button_nl: Vergelijk op Amazon
 :::product
 name_en: Roof shades for Model 3 and Y
 name_nl: Dakschermen voor Model 3 en Y
-note_en: Listed for Model 3 and Model Y from 2021 through 2025.
-note_nl: Vermeld voor Model 3 en Model Y van 2021 tot en met 2025.
+note_en: Roof shades listed for a Model 3 and a Model Y.
+note_nl: Dakschermen vermeld voor een Model 3 en een Model Y.
 item: 1005005317345951
 ali_url: https://s.click.aliexpress.com/e/_c33ouw4D
 :::

@@ -23,8 +23,8 @@ button_nl: Vergelijk op Amazon
 :::product
 name_en: Mud flaps for an older Model Y
 name_nl: Spatlappen voor een oudere Model Y
-note_en: Listed for a Model Y from 2020 through 2024.
-note_nl: Vermeld voor een Model Y van 2020 tot en met 2024.
+note_en: Mud flaps listed for an older Model Y.
+note_nl: Spatlappen vermeld voor een oudere Model Y.
 item: 1005007038490302
 ali_url: https://s.click.aliexpress.com/e/_c2RTxWyp
 :::
@@ -56,8 +56,8 @@ button_nl: Vergelijk op Amazon
 :::product
 name_en: Mud flaps for a Model Y Juniper
 name_nl: Spatlappen voor een Model Y Juniper
-note_en: A flap set listed for a Model Y Juniper.
-note_nl: Een set lappen vermeld voor een Model Y Juniper.
+note_en: Mud flaps listed for a Model Y Juniper.
+note_nl: Spatlappen vermeld voor een Model Y Juniper.
 item: 1005006863760881
 ali_url: https://s.click.aliexpress.com/e/_c4U9g0dT
 :::

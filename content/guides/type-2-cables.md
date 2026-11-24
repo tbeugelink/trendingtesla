@@ -21,10 +21,10 @@ button_nl: Vergelijk op Amazon
 :::
 
 :::product
-name_en: Type 2 cable rated at 11 kW
-name_nl: Type 2-kabel van 11 kW
-note_en: A 16 amp three-phase lead rated at 11 kW.
-note_nl: Een driefaseleiding van 16 ampère, berekend op 11 kW.
+name_en: Type 2 charging cable
+name_nl: Type 2-laadkabel
+note_en: A Type 2 charging cable. The listing has more than one power option.
+note_nl: Een Type 2-laadkabel. De vermelding heeft meer dan één vermogensoptie.
 item: 1005011680172773
 ali_url: https://s.click.aliexpress.com/e/_c3Um9UPP
 :::

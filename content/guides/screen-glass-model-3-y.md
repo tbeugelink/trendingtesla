@@ -23,8 +23,8 @@ button_nl: Vergelijk op Amazon
 :::product
 name_en: Glass for a 15 inch screen
 name_nl: Glas voor een scherm van 15 inch
-note_en: A tempered glass cover listed for a 15 inch Tesla screen.
-note_nl: Een plaat gehard glas vermeld voor een Tesla-scherm van 15 inch.
+note_en: A glass cover listed for a 15 inch screen.
+note_nl: Een glasplaat vermeld voor een scherm van 15 inch.
 item: 1005006863642965
 ali_url: https://s.click.aliexpress.com/e/_c2v4ewct
 :::

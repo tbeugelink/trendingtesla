@@ -16,6 +16,7 @@ pros_nl: Vierdelige set | Vermeld voor elke Model 3 Highland van 2024 tot 2026 |
 fits_en: Those cars. The page says it is not for a 2021 to 2024 Model Y, a Model Y Standard, or a 2021 to 2023 Model 3.
 fits_nl: Die auto's. De pagina zegt dat het niet voor een Model Y van 2021 tot 2024, een Model Y Standard of een Model 3 van 2021 tot 2023 is.
 url: https://www.amazon.nl/dp/B0GV1CMHFK
+ali_url: https://s.click.aliexpress.com/e/_c3bt8vHP
 button_en: View on Amazon
 button_nl: Bekijk bij Amazon
 :::

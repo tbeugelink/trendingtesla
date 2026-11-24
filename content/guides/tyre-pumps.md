@@ -16,6 +16,7 @@ pros_nl: 12-voltstekker voor een sigarettenaansteker | Stopt als de ingestelde s
 fits_en: A vehicle with that 12 volt socket. The spec table lists a maximum of 150 psi.
 fits_nl: Een voertuig met dat 12-voltstopcontact. De specificatietabel noemt een maximum van 150 psi.
 url: https://www.amazon.nl/dp/B073VB41W3
+ali_url: https://s.click.aliexpress.com/e/_c3CAMpiD
 button_en: View on Amazon
 button_nl: Bekijk bij Amazon
 :::

@@ -13,9 +13,10 @@ name_en: TEMKIN flaps for Model Y 2021 to 2023
 name_nl: TEMKIN-lappen voor Model Y 2021 tot 2023
 pros_en: Four flaps for front and rear | Listed for Model Y 2021 to 2023 | Screws are in the pack
 pros_nl: Vier lappen voor voor en achter | Vermeld voor Model Y 2021 tot 2023 | Schroeven zitten in de verpakking
-fits_en: A Model Y of 2021 to 2023. The page does not name a Juniper.
-fits_nl: Een Model Y van 2021 tot 2023. De pagina noemt geen Juniper.
+fits_en: A Model Y of 2021 to 2023. The page does not name a Juniper. The AliExpress flaps are listed for a Model Y from 2020 through 2024.
+fits_nl: Een Model Y van 2021 tot 2023. De pagina noemt geen Juniper. De AliExpress-flappen zijn vermeld voor een Model Y van 2020 tot en met 2024.
 url: https://www.amazon.nl/dp/B0CKXJGYCM
+ali_url: https://s.click.aliexpress.com/e/_c2RTxWyp
 button_en: View on Amazon
 button_nl: Bekijk bij Amazon
 :::
@@ -40,6 +41,7 @@ pros_nl: Set van vier | Vermeld voor Juniper Premium en Performance van 2025 tot
 fits_en: A Juniper of those years. Not a 2021 to 2024 Model Y.
 fits_nl: Een Juniper uit die jaren. Geen Model Y van 2021 tot 2024.
 url: https://www.amazon.nl/dp/B0GXBFPD4F
+ali_url: https://s.click.aliexpress.com/e/_c4U9g0dT
 button_en: View on Amazon
 button_nl: Bekijk bij Amazon
 :::

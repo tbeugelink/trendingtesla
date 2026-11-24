@@ -35,8 +35,8 @@ button_nl: Vergelijk op Amazon
 :::product
 name_en: Floor mats for Model 3 and Y
 name_nl: Vloermatten voor Model 3 en Y
-note_en: Listed for Model 3 and Model Y from 2019 through 2025.
-note_nl: Vermeld voor Model 3 en Model Y van 2019 tot en met 2025.
+note_en: Floor mats listed for a Model 3 and a Model Y.
+note_nl: Vloermatten vermeld voor een Model 3 en een Model Y.
 item: 1005007345340044
 ali_url: https://s.click.aliexpress.com/e/_c3QsvoO9
 :::

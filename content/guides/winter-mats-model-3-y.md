@@ -44,8 +44,8 @@ button_nl: Vergelijk op Amazon
 :::product
 name_en: Highland mats for a Model 3
 name_nl: Highland-matten voor een Model 3
-note_en: Listed for a Model 3 Highland from 2024 through 2026.
-note_nl: Vermeld voor een Model 3 Highland van 2024 tot en met 2026.
+note_en: A mat set listed for the Model 3 Highland.
+note_nl: Een mattenset vermeld voor de Model 3 Highland.
 item: 1005006925057063
 ali_url: https://s.click.aliexpress.com/e/_c3iNubYN
 :::

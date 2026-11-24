@@ -204,6 +204,42 @@
       "fetched": "2026-11-24T22:33:00+01:00",
       "source": "manual",
       "fresh_days": 7
+    },
+    "ali:1005007345340044": {
+      "eur": 71.69,
+      "fetched": "2026-11-24T23:00:00+01:00",
+      "source": "manual",
+      "fresh_days": 7
+    },
+    "ali:1005006863642965": {
+      "eur": 17.79,
+      "fetched": "2026-11-24T23:00:00+01:00",
+      "source": "manual",
+      "fresh_days": 7
+    },
+    "ali:1005008529747643": {
+      "eur": 18.59,
+      "fetched": "2026-11-24T23:00:00+01:00",
+      "source": "manual",
+      "fresh_days": 7
+    },
+    "ali:1005007038490302": {
+      "eur": 21.79,
+      "fetched": "2026-11-24T23:00:00+01:00",
+      "source": "manual",
+      "fresh_days": 7
+    },
+    "ali:1005006863760881": {
+      "eur": 15.19,
+      "fetched": "2026-11-24T23:00:00+01:00",
+      "source": "manual",
+      "fresh_days": 7
+    },
+    "ali:1005005317345951": {
+      "eur": 31.99,
+      "fetched": "2026-11-24T23:00:00+01:00",
+      "source": "manual",
+      "fresh_days": 7
     }
   },
   "ratings": {
@@ -404,6 +440,54 @@
       "count": 1879,
       "fetched": "2026-11-24T22:38:54+01:00",
       "source": "amazon.nl"
+    },
+    "ali:1005007345340044": {
+      "score": 4.9,
+      "count": 64,
+      "fetched": "2026-11-24T23:00:00+01:00",
+      "source": "manual"
+    },
+    "ali:1005006925057063": {
+      "score": 4.9,
+      "count": 351,
+      "fetched": "2026-11-24T23:00:00+01:00",
+      "source": "manual"
+    },
+    "ali:1005006863642965": {
+      "score": 4.9,
+      "count": 158,
+      "fetched": "2026-11-24T23:00:00+01:00",
+      "source": "manual"
+    },
+    "ali:1005008529747643": {
+      "score": 4.8,
+      "count": 1867,
+      "fetched": "2026-11-24T23:00:00+01:00",
+      "source": "manual"
+    },
+    "ali:1005007038490302": {
+      "score": 4.9,
+      "count": 183,
+      "fetched": "2026-11-24T23:00:00+01:00",
+      "source": "manual"
+    },
+    "ali:1005006863760881": {
+      "score": 4.9,
+      "count": 688,
+      "fetched": "2026-11-24T23:00:00+01:00",
+      "source": "manual"
+    },
+    "ali:1005005317345951": {
+      "score": 4.5,
+      "count": 84,
+      "fetched": "2026-11-24T23:00:00+01:00",
+      "source": "manual"
+    },
+    "ali:1005011680172773": {
+      "score": 4.9,
+      "count": 106,
+      "fetched": "2026-11-24T23:00:00+01:00",
+      "source": "manual"
     }
   }
 }

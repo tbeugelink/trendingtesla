@@ -23,8 +23,8 @@ button_nl: Vergelijk op Amazon
 :::product
 name_en: Phone mount for Model 3 and Y
 name_nl: Telefoonhouder voor Model 3 en Y
-note_en: A mount listed for a Model 3 and a Model Y.
-note_nl: Een houder vermeld voor een Model 3 en een Model Y.
+note_en: A phone mount listed for a Model 3 and a Model Y.
+note_nl: Een telefoonhouder vermeld voor een Model 3 en een Model Y.
 item: 1005008529747643
 ali_url: https://s.click.aliexpress.com/e/_c3pUD6il
 :::

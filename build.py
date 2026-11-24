@@ -1488,7 +1488,9 @@ header.hb .bar .lang{margin-left:0;margin-right:0;flex:none;white-space:nowrap;t
 .prom a{color:#9ad7ff}
 .prom-empty{margin:12px 0 0;color:var(--muted)}
 .gbox{margin:16px 0;padding:14px;border:1px solid #3a4a60;border-radius:8px;background:#161616;display:grid;grid-template-columns:168px minmax(0,1fr);gap:14px}
+@media (min-width:601px){article .prose .gbox{margin-left:14px;margin-right:14px}}
 .gbox.noimg{grid-template-columns:1fr}
+.gbox>a.pshot{display:block;line-height:0}
 .gbox img{width:168px;height:168px;object-fit:contain;background:#111;border-radius:6px;display:block}
 .gbox h2{margin:0 0 8px;font-size:1.12rem}
 .gbox h3{margin:8px 0 4px;font-size:.78rem;letter-spacing:.04em;text-transform:uppercase;color:var(--dim)}
@@ -3243,15 +3245,33 @@ def amazon_nl_href(product):
     return tagged
 
 
-PRODUCT_IMAGES = {}
+AMAZON_IMAGES = {}
 _IMG_HIDE = ("this.closest('.pbox,.gbox,li')&&this.closest('.pbox,.gbox,li').classList.add('noimg');"
              "var n=this.closest('a.pshot,span.pshot');if(n)n.remove();")
 
 
-def load_product_images():
-    """Amazon product images are not stored or hotlinked. Local /img/ photos only."""
-    global PRODUCT_IMAGES
-    PRODUCT_IMAGES = {}
+def load_amazon_images():
+    """Hotlinked Amazon CDN URLs. A missing or rejected URL leaves the card as text."""
+    global AMAZON_IMAGES
+    AMAZON_IMAGES = {}
+    path = ROOT / "content" / "amazon-images.json"
+    if not path.exists():
+        return
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return
+    images = data.get("images") if isinstance(data, dict) else None
+    if not isinstance(images, dict):
+        return
+    for asin, url in images.items():
+        key = str(asin or "").strip().upper()
+        src = str(url or "").strip()
+        if not re.fullmatch(r"[A-Z0-9]{10}", key):
+            continue
+        if not src.startswith("https://m.media-amazon.com/images/I/"):
+            continue
+        AMAZON_IMAGES[key] = src
 
 
 def _product_asin(product):
@@ -3267,7 +3287,11 @@ def _product_asin(product):
 
 
 def product_photo(product):
-    """No product photo unless it is the exact item. We do not have one, so the card stays text."""
+    """Amazon's own image, hotlinked. Anything else stays a text card."""
+    asin = _product_asin(product)
+    src = AMAZON_IMAGES.get(asin, "")
+    if src.startswith("https://m.media-amazon.com/images/I/"):
+        return src, True
     return "", False
 
 
@@ -7298,9 +7322,16 @@ def _guide_product(fields, lang):
             style = "btn ghost" if amazon_ok else "btn"
             parts.append(f'<a class="{style}" href="{esc(ali)}" rel="sponsored nofollow noopener" target="_blank">AliExpress</a>')
         link = f'<div class="store-btns">{"".join(parts)}</div>'
-    src = guide_local_image(fields) or licensed_card_photo(href)
-    img = (f'<img src="{esc(src)}" alt="{esc(name)}" width="168" height="168" loading="lazy" decoding="async">'
-           if src else "")
+    src = guide_local_image(fields) or (AMAZON_IMAGES.get(_product_asin(href), "") if amazon_ok else "") or licensed_card_photo(href)
+    if src.startswith("https://") and amazon_ok:
+        img = (f'<a class="pshot" href="{esc(href)}" rel="sponsored nofollow noopener" target="_blank">'
+               f'<img src="{esc(src)}" alt="{esc(name)}" width="168" height="168" loading="lazy" decoding="async"'
+               f' onerror="{_IMG_HIDE}"></a>')
+    elif src:
+        img = (f'<img src="{esc(src)}" alt="{esc(name)}" width="168" height="168" loading="lazy" decoding="async"'
+               f' onerror="{_IMG_HIDE}">')
+    else:
+        img = ""
     klass = "gbox" if img else "gbox noimg"
     return (f'<aside class="{klass}">{img}<div><h2>{esc(name)}</h2>{lists}{note_html}{fit_html}'
             f'<p class="gprice">{esc(price)}</p>{link}</div></aside>')
@@ -7450,7 +7481,7 @@ def disclosure_body(lang):
 def build():
     load_money()
     load_affiliate()
-    load_product_images()
+    load_amazon_images()
     load_image_licences()
     load_shorts()
     _OPT.clear()

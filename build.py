@@ -1513,6 +1513,7 @@ article .prose .gbox li{font-size:.8rem;line-height:1.35}
 .gbox .fits{margin:8px 0 0;color:#c5ced8;font-size:.8rem;line-height:1.4}
 .gbox .fits b{font-weight:700;color:#fff}
 .pcost{margin:10px 0 0;color:#8b97a6;font-size:.72rem;line-height:1.35}
+.popt{margin:6px 0 0;color:#9aa6b4;font-size:.72rem;line-height:1.35}
 .pcost b{color:#fff;font-size:.95rem;font-weight:800;letter-spacing:-.01em}
 .pcost .alt,.pcost .usd{margin-left:6px;color:#c5ced8;font-weight:700;font-size:.78rem}
 .stars{display:flex;align-items:center;gap:8px;margin:8px 0 0;color:#c5ced8;font-size:.78rem;line-height:1}
@@ -1524,7 +1525,7 @@ article .prose .gbox li{font-size:.8rem;line-height:1.35}
 .starrow .full svg{fill:#f5c451}
 article .prose .gbox p.stars{margin-top:8px;font-size:.78rem;color:#c5ced8}
 .pcost .asof{display:block;margin-top:2px;font-size:.68rem;letter-spacing:.01em}
-article .prose .gbox p.pcost{margin-top:10px;font-size:.72rem;color:#8b97a6}
+article .prose .gbox p.pcost,article .prose .gbox p.popt{margin-top:8px;margin-bottom:0;font-size:.72rem;color:#9aa6b4}
 .store-btns{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;align-items:center}
 .gbox .store-btns .btn,.pbox .store-btns .btn{margin-top:0}
 .gbox .btn.ghost,.pbox .btn.ghost{background:transparent;color:var(--head);border:1px solid #8f9db0;font-weight:700}
@@ -3692,10 +3693,13 @@ def _article_product(product, lang):
     lis = "".join(f"<li>{esc(item)}</li>" for item in specs)
     ul = f"<ul>{lis}</ul>" if lis else ""
     why_html = f'<p class="why">{esc(why)}</p>' if why else ""
+    option = str(_loc(product.get("option"), lang)).strip()
+    option_html = f'<p class="popt">{esc(option)}</p>' if option else ""
     cost = price_html(key, lang) if key else ""
     stars = rating_html(key, lang) if key else ""
     return [
-        f'<aside class="{klass}"><div class="pbox-in">{img}<div><h3>{esc(name)}</h3>{why_html}{ul}{stars}{cost}'
+        f'<aside class="{klass}"><div class="pbox-in">{img}<div><h3>{esc(name)}</h3>{why_html}{ul}'
+        f'{option_html}{stars}{cost}'
         f'<div class="store-btns">{link}</div></div></div></aside>']
 
 
@@ -7182,7 +7186,7 @@ _KV_KEYS = (
     "title_en", "title_nl", "en", "nl", "why_en", "why_nl",
     "name_en", "name_nl", "pros_en", "pros_nl", "cons_en", "cons_nl",
     "fits_en", "fits_nl",
-    "url", "ali_url", "image", "item", "note_en", "note_nl", "button_en", "button_nl",
+    "url", "ali_url", "image", "item", "note_en", "note_nl", "option_en", "option_nl", "button_en", "button_nl",
     "caption_en", "caption_nl", "columns_en", "columns_nl", "row_en", "row_nl",
     "slug",
 )
@@ -7593,6 +7597,8 @@ def _guide_product(fields, lang):
         lists = f'<h3>{plus}</h3><ul>{"".join(f"<li>{esc(item)}</li>" for item in pros)}</ul>'
     note = fields.get(f"note_{lang}") or fields.get("note_en") or ""
     note_html = f'<p>{esc(note)}</p>' if str(note).strip() else ""
+    option = fields.get(f"option_{lang}") or fields.get("option_en") or ""
+    option_html = f'<p class="popt">{esc(option)}</p>' if str(option).strip() else ""
     fit_html = f'<p class="fits"><b>{esc(who)}.</b> {esc(fits)}</p>' if str(fits).strip() else ""
     link = ""
     if amazon_ok or ali:
@@ -7635,7 +7641,7 @@ def _guide_product(fields, lang):
     stars = rating_html(price_key, lang) if price_key else ""
     klass = "gbox" if img else "gbox noimg"
     return (f'<aside class="{klass}">{img}<div><h2>{esc(name)}</h2>{lists}{note_html}{fit_html}'
-            f'{stars}{cost}{link}</div></aside>')
+            f'{option_html}{stars}{cost}{link}</div></aside>')
 
 
 def _guide_hero(doc, lang):

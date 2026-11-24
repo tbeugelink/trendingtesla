@@ -41,14 +41,14 @@
   "products": [
     {
       "name": {
-        "en": "Starlink Mini 30 m power cable",
-        "nl": "Starlink Mini-stroomkabel van 30 m"
+        "en": "30 m cable for Starlink Mini",
+        "nl": "Kabel van 30 m voor Starlink Mini"
       },
       "why": {
-        "en": "Starlink's own 30 m power cable listed for the Mini kit. It is a cable, not the dish. Check the current price.",
-        "nl": "Starlink's eigen stroomkabel van 30 m, vermeld voor de Mini-set. Het is een kabel, niet de schotel. Kijk de actuele prijs na."
+        "en": "A 30 m cable. The title names Starlink Gen 3, Standard and Mini. It is not Starlink's own cable, and it is not the dish.",
+        "nl": "Een kabel van 30 m. De titel noemt Starlink Gen 3, Standard en Mini. Het is niet Starlink's eigen kabel, en het is niet de schotel."
       },
-      "asin": "B0F9SQJ4DD"
+      "asin": "B0FRFRYHTX"
     },
     {
       "name": {

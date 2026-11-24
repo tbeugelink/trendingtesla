@@ -1,8 +1,8 @@
 ---
 title_en: Phone mounts for Model 3 and Y
 title_nl: Telefoonhouders voor Model 3 en Y
-description_en: Three phone mounts on Amazon.nl that name a Model 3 or a Model Y. One page has been shown as unavailable.
-description_nl: Drie telefoonhouders op Amazon.nl die een Model 3 of een Model Y noemen. Eén pagina is als niet leverbaar getoond.
+description_en: Phone mounts on Amazon.nl that name a Model 3 or a Model Y. Read where each one attaches.
+description_nl: Telefoonhouders op Amazon.nl die een Model 3 of een Model Y noemen. Lees waar elk bevestigt.
 ---
 
 en: A mount for the vent is not a clip for the screen. Read where the listing says it attaches, and check the current price.
@@ -30,13 +30,13 @@ ali_url: https://s.click.aliexpress.com/e/_c3pUD6il
 :::
 
 :::product
-name_en: Kaistyle mount for Model 3 and Y
-name_nl: Kaistyle-houder voor Model 3 en Y
-pros_en: The title names Model 3 and Model Y | Listed as a magnetic holder for the touchscreen | The page lists dashboard and windshield mounting
-pros_nl: De titel noemt Model 3 en Model Y | Vermeld als magnetische houder voor het aanraakscherm | De pagina noemt montage op dashboard en voorruit
-fits_en: A Model 3 or Model Y if the title matches your car. The product page has been shown as currently unavailable.
-fits_nl: Een Model 3 of Model Y als de titel bij je auto past. De productpagina is als momenteel niet leverbaar getoond.
-url: https://www.amazon.nl/dp/B0H6LZ2M4R
+name_en: Spigen mount for Model 3 and Y
+name_nl: Spigen-houder voor Model 3 en Y
+pros_en: Magnetic phone holder | Listed for Model 3 Highland 2024 to 2026 | Listed for Model Y Juniper 2025 to 2026
+pros_nl: Magnetische telefoonhouder | Vermeld voor Model 3 Highland 2024 tot 2026 | Vermeld voor Model Y Juniper 2025 tot 2026
+fits_en: The title says Model 3 Highland of 2024 to 2026 and Model Y Juniper Standard and Premium of 2025 to 2026, not Performance.
+fits_nl: De titel noemt Model 3 Highland van 2024 tot 2026 en Model Y Juniper Standard en Premium van 2025 tot 2026, niet Performance.
+url: https://www.amazon.nl/dp/B0FLRDQYV3
 button_en: Compare on Amazon
 button_nl: Vergelijk op Amazon
 :::
@@ -56,10 +56,10 @@ button_nl: Vergelijk op Amazon
 :::compare
 caption_en: Where it attaches
 caption_nl: Waar hij vastzit
-columns_en: elago | Kaistyle | Elecphbo
-columns_nl: elago | Kaistyle | Elecphbo
-row_en: Vent and dashboard groove | Dashboard and windshield | Clip on the screen
-row_nl: Rooster en dashboardgleuf | Dashboard en voorruit | Klem op het scherm
-row_en: Years in the description | Page shown unavailable | 2.5 cm or thinner
-row_nl: Jaren in de beschrijving | Pagina als niet leverbaar getoond | 2,5 cm of dunner
+columns_en: elago | Spigen | Elecphbo
+columns_nl: elago | Spigen | Elecphbo
+row_en: Vent and dashboard groove | Magnetic holder | Clip on the screen
+row_nl: Rooster en dashboardgleuf | Magnetische houder | Klem op het scherm
+row_en: Years in the description | Highland and Juniper, not Performance | 2.5 cm or thinner
+row_nl: Jaren in de beschrijving | Highland en Juniper, niet Performance | 2,5 cm of dunner
 :::

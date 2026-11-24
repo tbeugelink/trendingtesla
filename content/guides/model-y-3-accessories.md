@@ -21,13 +21,13 @@ button_nl: Vergelijk op Amazon
 :::
 
 :::product
-name_en: TAPTES mats for earlier Model Y years
-name_nl: TAPTES-matten voor eerdere Model Y-jaren
-pros_en: Six-piece cabin and trunk set | Listed for Model Y years 2021 through 2025 | One set for the cabin and the trunk
-pros_nl: Zesdelige set voor cabine en kofferbak | Vermeld voor Model Y van 2021 tot en met 2025 | Eén set voor cabine en kofferbak
-fits_en: A Model Y from 2021 through 2025. Do not assume it fits a Juniper, and the page has been shown as unavailable.
-fits_nl: Een Model Y van 2021 tot en met 2025. Ga er niet van uit dat hij op een Juniper past, en de pagina is als niet leverbaar getoond.
-url: https://www.amazon.nl/dp/B09YTGFHGG
+name_en: GAFAT mats for Model Y 2021 to 2024
+name_nl: GAFAT-matten voor Model Y 2021 tot 2024
+pros_en: 3D TPE floor mats | Listed for Model Y 2021 to 2024 | The title says five seats
+pros_nl: 3D TPE-vloermatten | Vermeld voor Model Y 2021 tot 2024 | De titel noemt vijf zitplaatsen
+fits_en: A five-seat Model Y of 2021 to 2024, as the title states. The title does not name a Juniper.
+fits_nl: Een Model Y met vijf zitplaatsen van 2021 tot 2024, zoals de titel zegt. De titel noemt geen Juniper.
+url: https://www.amazon.nl/dp/B09SWFCTFQ
 button_en: Compare on Amazon
 button_nl: Vergelijk op Amazon
 :::
@@ -56,10 +56,10 @@ button_nl: Vergelijk op Amazon
 :::compare
 caption_en: Match the car first
 caption_nl: Eerst de auto
-columns_en: Juniper mats | Earlier Model Y | 16-inch glass
-columns_nl: Juniper-matten | Eerdere Model Y | Glas 16 inch
-row_en: 2025 and 2026 Juniper | 2021 through 2025 | 2026 Model Y 16-inch screen
-row_nl: Juniper 2025 en 2026 | 2021 tot en met 2025 | Model Y 2026, scherm 16 inch
-row_en: Not an older Model Y | Not a Juniper | Measure the screen
-row_nl: Niet een oudere Model Y | Niet een Juniper | Meet het scherm
+columns_en: Juniper mats | Model Y 2021 to 2024 | 16-inch glass
+columns_nl: Juniper-matten | Model Y 2021 tot 2024 | Glas 16 inch
+row_en: 2025 and 2026 Juniper | Five seats, 2021 to 2024 | 2026 Model Y 16-inch screen
+row_nl: Juniper 2025 en 2026 | Vijf zitplaatsen, 2021 tot 2024 | Model Y 2026, scherm 16 inch
+row_en: Not an older Model Y | Title does not name a Juniper | Measure the screen
+row_nl: Niet een oudere Model Y | De titel noemt geen Juniper | Meet het scherm
 :::

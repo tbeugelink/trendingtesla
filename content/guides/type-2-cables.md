@@ -21,10 +21,12 @@ button_nl: Vergelijk op Amazon
 :::
 
 :::product
-name_en: Type 2 charging cable
-name_nl: Type 2-laadkabel
-note_en: A Type 2 charging cable. The listing has more than one power option.
-note_nl: Een Type 2-laadkabel. De vermelding heeft meer dan één vermogensoptie.
+name_en: Type 2 cable at 11 kW
+name_nl: Type 2-kabel van 11 kW
+note_en: Choose the option below. The page opens on a different one.
+note_nl: Kies de uitvoering hieronder. De pagina opent op een andere.
+option_en: Option: 11KW 16A 3Phase
+option_nl: Uitvoering: 11KW 16A 3Phase
 item: 1005011680172773
 ali_url: https://s.click.aliexpress.com/e/_c3Um9UPP
 :::

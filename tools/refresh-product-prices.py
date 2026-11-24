@@ -10,6 +10,7 @@ Run from the repo root: python3 tools/refresh-product-prices.py
 
 import json
 import re
+import sys
 import time
 import urllib.error
 import urllib.request
@@ -119,7 +120,7 @@ def keep_live(urls):
 
 
 ALI_COOKIE = "aep_usuc_f=site=nld&c_tp=EUR&region=NL&b_locale=nl_NL"
-ALI_IMG = re.compile(r"https://ae-pic-a1\.aliexpress-media\.com/kf/([A-Za-z0-9]+)\.jpg")
+ALI_IMG = re.compile(r"https://ae-pic-a1\.aliexpress-media\.com/kf/([A-Za-z0-9]+)\.(jpg|png)")
 
 
 def ali_page(item):
@@ -178,16 +179,16 @@ def ali_gallery(text):
             raw = []
         for src in raw:
             src = str(src or "").split("?")[0]
-            if src.startswith("https://ae-pic-a1.aliexpress-media.com/kf/") and src.endswith(".jpg") and src not in urls:
+            if src.startswith("https://ae-pic-a1.aliexpress-media.com/kf/") and src.endswith((".jpg", ".png")) and src not in urls:
                 urls.append(src)
     if not urls:
-        for image_id in ALI_IMG.findall(text or ""):
-            src = f"https://ae-pic-a1.aliexpress-media.com/kf/{image_id}.jpg"
+        for image_id, ext in ALI_IMG.findall(text or ""):
+            src = f"https://ae-pic-a1.aliexpress-media.com/kf/{image_id}.{ext}"
             if src not in urls:
                 urls.append(src)
-            if len(urls) == 5:
+            if len(urls) == 6:
                 break
-    return urls[:5]
+    return urls[:6]
 
 
 def ecb_rate():
@@ -204,11 +205,51 @@ def ecb_rate():
     return {"usd_per_eur": rate, "date": day.group(1), "fetched": now_stamp()}
 
 
+def _count(raw):
+    digits = re.sub(r"[^\d]", "", str(raw or ""))
+    return int(digits) if digits else 0
+
+
+def amazon_rating(text, asin):
+    if not text or not asin:
+        return None
+    score = count = None
+    paired = re.search(
+        rf"([0-9]\.[0-9]) out of 5 stars.{{0,80}}\(([0-9][0-9,]*)\).{{0,120}}(?:/dp/|product-reviews/){asin}",
+        text, re.I)
+    if paired:
+        score = float(paired.group(1))
+        count = _count(paired.group(2))
+    if score is None or not 1 <= score <= 5:
+        return None
+    return {"score": round(score, 1), "count": count or 0}
+
+
+def ali_rating(text):
+    if not text or "punish" in text or "slide to verify" in text.lower():
+        return None
+    score = count = None
+    star = re.search(r'"averageStar(?:Rate)?"\s*:\s*"?([0-9.]+)"?', text)
+    reviews = re.search(r'"(?:totalValidNum|reviewCount)"\s*:\s*"?([0-9]+)"?', text)
+    if star:
+        score = float(star.group(1))
+    if reviews:
+        count = int(reviews.group(1))
+    if score is None:
+        marked = re.search(r"\*\*([0-9]\.[0-9])\*\*.{0,60}([0-9][0-9,]*)\s+Reviews", text, re.I)
+        if marked:
+            score = float(marked.group(1))
+            count = _count(marked.group(2))
+    if score is None or not 1 <= score <= 5:
+        return None
+    return {"score": round(score, 1), "count": count or 0}
+
+
 def one_amazon(asin, fallback):
     text = amazon_page(asin)
     price = euro_price(text)
     urls = keep_live(gallery_urls(text, fallback))
-    return asin, price, urls
+    return asin, price, urls, amazon_rating(text, asin)
 
 
 def main():
@@ -223,6 +264,9 @@ def main():
     previous_prices = previous.get("prices") if isinstance(previous, dict) else {}
     if not isinstance(previous_prices, dict):
         previous_prices = {}
+    previous_ratings = previous.get("ratings") if isinstance(previous, dict) else {}
+    if not isinstance(previous_ratings, dict):
+        previous_ratings = {}
     try:
         previous_ali = json.loads(ali_path.read_text(encoding="utf-8"))
     except (OSError, ValueError):
@@ -238,19 +282,32 @@ def main():
     ali_items = []
     for row in licences.get("aliexpress_promo") or []:
         item = str(row.get("item") or "").strip()
-        if item.isdigit():
+        if item.isdigit() and item not in ali_items:
             ali_items.append(item)
+    for folder, pattern in (("guides", r"(?:^item:\s*|ali-)(\d{10,})"), ("articles", r'"ali_item"\s*:\s*"(\d{10,})"')):
+        directory = ROOT / "content" / folder
+        if not directory.is_dir():
+            continue
+        for path in directory.iterdir():
+            try:
+                text = path.read_text(encoding="utf-8")
+            except (OSError, UnicodeError):
+                continue
+            for item in re.findall(pattern, text, re.M):
+                if item not in ali_items:
+                    ali_items.append(item)
 
     stamp = now_stamp()
     rate = ecb_rate()
     prices = {}
+    ratings = {}
     galleries = {}
     asins = [key for key in current if re.fullmatch(r"[A-Z0-9]{10}", str(key).upper())]
 
     with ThreadPoolExecutor(max_workers=4) as pool:
         futures = [pool.submit(one_amazon, asin.upper(), current.get(asin)) for asin in asins]
         for future in as_completed(futures):
-            asin, price, urls = future.result()
+            asin, price, urls, rating = future.result()
             if urls:
                 galleries[asin] = urls
             elif isinstance(current.get(asin), list):
@@ -259,23 +316,37 @@ def main():
                 galleries[asin] = [current[asin]]
             if price is not None:
                 prices[asin] = {"eur": price, "fetched": stamp, "source": "amazon.nl"}
-            print(f"{asin} price={price} photos={len(galleries.get(asin) or [])}", flush=True)
+            if rating:
+                ratings[asin] = {**rating, "fetched": stamp, "source": "amazon.nl"}
+            elif isinstance(previous_ratings.get(asin), dict):
+                ratings[asin] = previous_ratings[asin]
+            print(f"{asin} price={price} photos={len(galleries.get(asin) or [])} rating={rating}", flush=True)
 
     ali_galleries = {}
     for item in ali_items:
         text = ali_page(item)
         price = ali_euro(text)
         photos = ali_gallery(text)
+        rating = ali_rating(text)
         key = f"ali:{item}"
-        if photos:
+        previous_row = previous_galleries.get(item)
+        kept_local = isinstance(previous_row, list) and previous_row and all(
+            str(src).startswith("/img/guides/") for src in previous_row)
+        if kept_local:
+            ali_galleries[item] = previous_row
+        elif photos:
             ali_galleries[item] = photos
-        elif isinstance(previous_galleries.get(item), list):
-            ali_galleries[item] = previous_galleries[item]
+        elif isinstance(previous_row, list):
+            ali_galleries[item] = previous_row
         if price is not None:
             prices[key] = {"eur": price, "fetched": stamp, "source": "aliexpress", "fresh_days": 1}
         elif isinstance(previous_prices.get(key), dict):
             prices[key] = previous_prices[key]
-        print(f"ali:{item} price={price or 'kept' if key in prices else None} photos={len(ali_galleries.get(item) or [])}", flush=True)
+        if rating:
+            ratings[key] = {**rating, "fetched": stamp, "source": "aliexpress"}
+        elif isinstance(previous_ratings.get(key), dict):
+            ratings[key] = previous_ratings[key]
+        print(f"ali:{item} price={price or 'kept' if key in prices else None} photos={len(ali_galleries.get(item) or [])} rating={rating}", flush=True)
 
     images_path.write_text(
         json.dumps({"fetched": stamp[:10], "images": galleries}, indent=2) + "\n",
@@ -285,11 +356,39 @@ def main():
         json.dumps({"fetched": stamp, "images": ali_galleries}, indent=2) + "\n",
         encoding="utf-8",
     )
-    payload = {"fetched": stamp, "rate": rate or {}, "prices": prices}
+    payload = {"fetched": stamp, "rate": rate or previous.get("rate") or {}, "prices": prices, "ratings": ratings}
     prices_path.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
     multi = sum(1 for urls in galleries.values() if len(urls) > 1)
     print(f"prices {len(prices)} galleries {len(galleries)} with more than one photo {multi} rate {rate}", flush=True)
 
 
+def refresh_ratings():
+    """Fill ratings only. A missed page keeps the rating already stored."""
+    prices_path = ROOT / "content" / "product-prices.json"
+    images_path = ROOT / "content" / "amazon-images.json"
+    data = json.loads(prices_path.read_text(encoding="utf-8"))
+    images = json.loads(images_path.read_text(encoding="utf-8")).get("images") or {}
+    ratings = data.get("ratings") if isinstance(data.get("ratings"), dict) else {}
+    stamp = now_stamp()
+    asins = [key for key in images if re.fullmatch(r"[A-Z0-9]{10}", str(key).upper())]
+
+    def one(asin):
+        text = amazon_page(asin)
+        return asin, amazon_rating(text, asin)
+
+    with ThreadPoolExecutor(max_workers=4) as pool:
+        for future in as_completed(pool.submit(one, asin.upper()) for asin in asins):
+            asin, rating = future.result()
+            if rating:
+                ratings[asin] = {**rating, "fetched": stamp, "source": "amazon.nl"}
+            print(f"{asin} rating={rating}", flush=True)
+    data["ratings"] = ratings
+    prices_path.write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8")
+    print(f"ratings {sum(1 for key in ratings if not str(key).startswith('ali:'))}", flush=True)
+
+
 if __name__ == "__main__":
-    main()
+    if "--ratings" in sys.argv:
+        refresh_ratings()
+    else:
+        main()

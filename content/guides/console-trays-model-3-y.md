@@ -16,8 +16,8 @@ pros_nl: Vierdelige set | Vermeld voor elke Model 3 Highland van 2024 tot 2026 |
 fits_en: Those cars. The page says it is not for a 2021 to 2024 Model Y, a Model Y Standard, or a 2021 to 2023 Model 3.
 fits_nl: Die auto's. De pagina zegt dat het niet voor een Model Y van 2021 tot 2024, een Model Y Standard of een Model 3 van 2021 tot 2023 is.
 url: https://www.amazon.nl/dp/B0GV1CMHFK
-button_en: View on Amazon
-button_nl: Bekijk bij Amazon
+button_en: More info Amazon
+button_nl: Meer info Amazon
 :::
 
 :::product
@@ -37,8 +37,8 @@ pros_nl: Vierdelige set met een siliconenvoering | Vermeld voor Juniper Premium 
 fits_en: The cars named on the listing. Do not assume it fits an older Model Y or a Juniper Standard.
 fits_nl: De auto's die de vermelding noemt. Ga er niet van uit dat hij op een oudere Model Y of een Juniper Standard past.
 url: https://www.amazon.nl/dp/B0FKG2Q2MX
-button_en: View on Amazon
-button_nl: Bekijk bij Amazon
+button_en: More info Amazon
+button_nl: Meer info Amazon
 :::
 
 :::product
@@ -49,8 +49,8 @@ pros_nl: Drie delen inclusief een onderste bak en een bekerinzet | Vermeld voor 
 fits_en: A Model Y Juniper Standard of those years. The product page has been shown as temporarily out of stock.
 fits_nl: Een Model Y Juniper Standard uit die jaren. De productpagina is als tijdelijk niet op voorraad getoond.
 url: https://www.amazon.nl/dp/B0H3ZZ37J1
-button_en: View on Amazon
-button_nl: Bekijk bij Amazon
+button_en: More info Amazon
+button_nl: Meer info Amazon
 :::
 
 :::product
@@ -61,8 +61,8 @@ pros_nl: TPE-bak voor de onderste console | Vermeld voor Juniper Standard van 20
 fits_en: The storage-tray option for a Juniper Standard. The same page also sells other pieces, so check the option in the basket.
 fits_nl: De optie voor het opbergbakje van een Juniper Standard. Dezelfde pagina verkoopt ook andere delen, dus controleer de optie in de winkelwagen.
 url: https://www.amazon.nl/dp/B0H1BLC3D3
-button_en: View on Amazon
-button_nl: Bekijk bij Amazon
+button_en: More info Amazon
+button_nl: Meer info Amazon
 :::
 
 :::compare

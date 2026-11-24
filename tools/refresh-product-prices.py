@@ -118,41 +118,76 @@ def keep_live(urls):
     return live or urls
 
 
-def ali_price(item):
-    cookie = "aep_usuc_f=site=nld&c_tp=EUR&region=NL&b_locale=nl_NL"
-    pages = [
-        f"https://nl.aliexpress.com/item/{item}.html",
-        f"https://www.aliexpress.com/item/{item}.html",
-    ]
-    for url in pages:
-        status, text = fetch_text(url, timeout=25, cookie=cookie)
-        price = ali_euro(text) if status == 200 else None
-        if price:
-            return price
-        status, text = fetch_text(f"https://r.jina.ai/{url}", timeout=40)
-        price = ali_euro(text) if status == 200 else None
-        if price:
-            return price
-    return None
+ALI_COOKIE = "aep_usuc_f=site=nld&c_tp=EUR&region=NL&b_locale=nl_NL"
+ALI_IMG = re.compile(r"https://ae-pic-a1\.aliexpress-media\.com/kf/([A-Za-z0-9]+)\.jpg")
+
+
+def ali_page(item):
+    """Item HTML. A euro price is kept only when the page itself is priced in euros."""
+    direct = f"https://nl.aliexpress.com/item/{item}.html"
+    status, text = fetch_text(direct, timeout=25, cookie=ALI_COOKIE)
+    if status == 200 and "imagePathList" in text and "punish" not in text:
+        return text
+    for attempt in range(3):
+        headers_url = f"https://r.jina.ai/{direct}"
+        try:
+            req = urllib.request.Request(headers_url, headers={
+                "User-Agent": UA,
+                "Accept-Language": "nl-NL,nl;q=0.9,en;q=0.8",
+                "X-Return-Format": "html",
+                "X-No-Cache": "true",
+                "Cookie": ALI_COOKIE,
+            })
+            with urllib.request.urlopen(req, timeout=70) as res:
+                text = res.read().decode("utf-8", "replace")
+        except (urllib.error.URLError, TimeoutError, OSError):
+            text = ""
+        if "imagePathList" in text or "ae-pic-a1.aliexpress-media.com/kf/" in text:
+            if "Captcha" not in text[:400] and "slide to verify" not in text.lower():
+                return text
+        time.sleep(2 * (attempt + 1))
+    return ""
 
 
 def ali_euro(text):
     if not text or "punish" in text or "slide to verify" in text.lower():
         return None
     patterns = [
+        r'"priceCurrency":"EUR","price":"([0-9]+(?:\.[0-9]+)?)"',
+        r'"price":"([0-9]+(?:\.[0-9]+)?)","priceCurrency":"EUR"',
         r'"minActivityAmount"\s*:\s*\{\s*"value"\s*:\s*([0-9]+(?:\.[0-9]+)?)[^}]*"currency"\s*:\s*"EUR"',
         r'"currency"\s*:\s*"EUR"[^}]{0,80}"value"\s*:\s*([0-9]+(?:\.[0-9]+)?)',
-        r'"formatedActivityPrice"\s*:\s*"€\s*([0-9]+(?:[.,][0-9]{2})?)"',
-        r'"formattedPrice"\s*:\s*"€\s*([0-9]+(?:[.,][0-9]{2})?)"',
     ]
     for pattern in patterns:
         match = re.search(pattern, text)
         if not match:
             continue
-        value = float(match.group(1).replace(",", "."))
+        value = float(match.group(1))
         if 0.5 <= value <= 5000:
             return round(value, 2)
     return None
+
+
+def ali_gallery(text):
+    urls = []
+    match = re.search(r'"imagePathList":(\[[^\]]+\])', text or "")
+    if match:
+        try:
+            raw = json.loads(match.group(1))
+        except ValueError:
+            raw = []
+        for src in raw:
+            src = str(src or "").split("?")[0]
+            if src.startswith("https://ae-pic-a1.aliexpress-media.com/kf/") and src.endswith(".jpg") and src not in urls:
+                urls.append(src)
+    if not urls:
+        for image_id in ALI_IMG.findall(text or ""):
+            src = f"https://ae-pic-a1.aliexpress-media.com/kf/{image_id}.jpg"
+            if src not in urls:
+                urls.append(src)
+            if len(urls) == 5:
+                break
+    return urls[:5]
 
 
 def ecb_rate():
@@ -179,7 +214,22 @@ def one_amazon(asin, fallback):
 def main():
     images_path = ROOT / "content" / "amazon-images.json"
     prices_path = ROOT / "content" / "product-prices.json"
+    ali_path = ROOT / "content" / "ali-images.json"
     licences_path = ROOT / "content" / "image-licences.json"
+    try:
+        previous = json.loads(prices_path.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        previous = {}
+    previous_prices = previous.get("prices") if isinstance(previous, dict) else {}
+    if not isinstance(previous_prices, dict):
+        previous_prices = {}
+    try:
+        previous_ali = json.loads(ali_path.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        previous_ali = {}
+    previous_galleries = previous_ali.get("images") if isinstance(previous_ali, dict) else {}
+    if not isinstance(previous_galleries, dict):
+        previous_galleries = {}
     images = json.loads(images_path.read_text(encoding="utf-8"))
     current = images.get("images") if isinstance(images, dict) else {}
     if not isinstance(current, dict):
@@ -211,14 +261,28 @@ def main():
                 prices[asin] = {"eur": price, "fetched": stamp, "source": "amazon.nl"}
             print(f"{asin} price={price} photos={len(galleries.get(asin) or [])}", flush=True)
 
+    ali_galleries = {}
     for item in ali_items:
-        price = ali_price(item)
+        text = ali_page(item)
+        price = ali_euro(text)
+        photos = ali_gallery(text)
+        key = f"ali:{item}"
+        if photos:
+            ali_galleries[item] = photos
+        elif isinstance(previous_galleries.get(item), list):
+            ali_galleries[item] = previous_galleries[item]
         if price is not None:
-            prices[f"ali:{item}"] = {"eur": price, "fetched": stamp, "source": "aliexpress"}
-        print(f"ali:{item} price={price}", flush=True)
+            prices[key] = {"eur": price, "fetched": stamp, "source": "aliexpress", "fresh_days": 1}
+        elif isinstance(previous_prices.get(key), dict):
+            prices[key] = previous_prices[key]
+        print(f"ali:{item} price={price or 'kept' if key in prices else None} photos={len(ali_galleries.get(item) or [])}", flush=True)
 
     images_path.write_text(
         json.dumps({"fetched": stamp[:10], "images": galleries}, indent=2) + "\n",
+        encoding="utf-8",
+    )
+    ali_path.write_text(
+        json.dumps({"fetched": stamp, "images": ali_galleries}, indent=2) + "\n",
         encoding="utf-8",
     )
     payload = {"fetched": stamp, "rate": rate or {}, "prices": prices}

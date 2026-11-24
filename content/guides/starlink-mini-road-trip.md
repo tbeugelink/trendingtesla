@@ -16,8 +16,8 @@ pros_nl: De Mini-set op Amazon.nl | De schotel die mensen inpakken voor een rit 
 fits_en: A road trip that needs the dish itself. The page has been unavailable, so check stock before you rely on it.
 fits_nl: Een rit die de schotel zelf nodig heeft. De pagina is niet leverbaar geweest, dus kijk de voorraad na voor je erop rekent.
 url: https://www.amazon.nl/dp/B0DH3PLZ6N
-button_en: View on Amazon
-button_nl: Bekijk bij Amazon
+button_en: More info Amazon
+button_nl: Meer info Amazon
 :::
 
 :::product
@@ -28,8 +28,8 @@ pros_nl: Kabel van 2 m | USB-C naar DC | Vermeld voor de Starlink Mini
 fits_en: A Mini you can already power. A cable is not a power station. Check that the source can feed the dish.
 fits_nl: Een Mini die je al kunt voeden. Een kabel is geen powerstation. Kijk of de bron de schotel kan voeden.
 url: https://www.amazon.nl/dp/B0DG1WVDKP
-button_en: View on Amazon
-button_nl: Bekijk bij Amazon
+button_en: More info Amazon
+button_nl: Meer info Amazon
 :::
 
 :::product
@@ -40,8 +40,8 @@ pros_nl: Paalbevestiging | Vermeld voor de Mini van 2025 | Onderdeel SPX-0417600
 fits_en: That Mini generation. Check the part number against your dish.
 fits_nl: Die Mini-generatie. Leg het onderdeelnummer naast je schotel.
 url: https://www.amazon.nl/dp/B0FL2M1F4Q
-button_en: View on Amazon
-button_nl: Bekijk bij Amazon
+button_en: More info Amazon
+button_nl: Meer info Amazon
 :::
 
 :::compare

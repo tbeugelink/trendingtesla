@@ -16,8 +16,8 @@ pros_nl: Kofferbakmat van TPE | Vermeld voor Model Y met vijf zitplaatsen van 20
 fits_en: A five-seat Model Y. Not the seven-seat car.
 fits_nl: Een Model Y met vijf zitplaatsen. Niet de auto met zeven zitplaatsen.
 url: https://www.amazon.nl/dp/B0FLQ76FVW
-button_en: View on Amazon
-button_nl: Bekijk bij Amazon
+button_en: More info Amazon
+button_nl: Meer info Amazon
 :::
 
 :::product
@@ -28,8 +28,8 @@ pros_nl: Vloermatten van TPE | Vermeld voor de Model Y Juniper van 2025 tot 2027
 fits_en: A 2025 to 2027 Model Y Juniper. An older Model Y needs a different floor set.
 fits_nl: Een Model Y Juniper van 2025 tot 2027. Een oudere Model Y heeft een andere vloerset nodig.
 url: https://www.amazon.nl/dp/B0DZ5JB22G
-button_en: View on Amazon
-button_nl: Bekijk bij Amazon
+button_en: More info Amazon
+button_nl: Meer info Amazon
 :::
 
 :::compare

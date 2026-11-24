@@ -180,6 +180,20 @@
       "eur": 39.99,
       "fetched": "2026-11-24T21:17:09+01:00",
       "source": "amazon.nl"
+    },
+    "ali:1005006727846206": {
+      "eur": 34.59,
+      "fetched": "2026-11-24T21:55:00+01:00",
+      "source": "manual",
+      "fresh_days": 7,
+      "note": "Read on AliExpress in euros, ship to NL, on 24 Nov 2026. Black Friday price."
+    },
+    "ali:1005011559038478": {
+      "eur": 40.79,
+      "fetched": "2026-11-24T21:55:00+01:00",
+      "source": "manual",
+      "fresh_days": 7,
+      "note": "Read on AliExpress in euros, ship to NL, on 24 Nov 2026. Black Friday price, was 42.47."
     }
   }
 }

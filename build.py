@@ -111,7 +111,7 @@ LANGS = {
         "guides_sub": "Researched per model and year, with pros and cons.",
         "related": "Read next", "sources": "Sources", "about": "About", "editorial": "Editorial policy",
         "byline": "By the TrendingTesla editorial team", "privacy": "Privacy",
-        "switch": "NL", "switch_full": "Nederlands", "i_specs": "Specifications", "i_watch": "Points to watch", "i_special": "What makes it special", "i_acc": "Accessories", "i_acc_soon": "Coming soon: accessories that fit this version, tested and explained.", "slogan": "Daily Tesla news &amp; trends", "nav_eco": "Ecosystem", "nav_tesla": "Tesla", "search": "Search TrendingTesla", "none": "Nothing found", "home": "Home", "toc": "On this page", "prev": "Previous", "next": "Next", "ad": "Advertisement", "videos": "Shorts", "see_all": "See all", "read_story": "Read the story", "nav_models": "Tesla models", "nav_energy": "Energy", "nav_fsd": "FSD / Robotaxi", "nav_space": "SpaceX / Starlink", "nav_xai": "xAI", "nav_more": "More", "start_here": "Start here", "start_p": "Guides that stay useful: practical explainers for owning and buying a Tesla.", "all_guides": "All guides", "articles": "Articles", "cookie": "Cookie settings", "news_h": "One email a week with the best explainers", "news_p": "One email a week with the best explainers. Unsubscribe any time.", "news_btn": "Subscribe", "news_email": "Email address", "bar_h": "The weekly briefing, in one email", "bar_ok": "Check your inbox to confirm", "bar_err": "Could not subscribe. Please try again.", "bar_fine": "Unsubscribe any time.", "signup": "Newsletter", "signup_h": "Get the TrendingTesla newsletter", "signup_lead": "One email a week with the best explainers. Double opt-in, and you can unsubscribe from any email.", "signup_fallback": "Open the newsletter form", "signup_desc": "One email a week with the best explainers. Double opt-in, and you can unsubscribe from any email.", "aff": "Affiliate disclosure: if you buy through this link, TrendingTesla may earn a commission, at no extra cost to you.", "aff_btn": "View product", "handy_h": "Handy for your Tesla", "handy_p": "A few accessories owners look for. Each link opens an Amazon.nl search, not one specific product.", "handy_note": "As an Amazon Associate we earn from qualifying purchases.", "watch": "Watch the video", "watch_short": "Watch the Short", "consent_p": "Visit counts are cookieless and anonymous. Consent is only for ads. YouTube loads when you press play.", "consent_yes": "Accept", "consent_no": "Refuse", "consent_more": "Privacy policy", "collapse": "Close menu", "like": "Like", "save": "Save", "saved_btn": "Saved", "saved": "Saved articles", "saved_empty": "You have not saved any articles yet. Tap Save under an article title to keep it here. Saved articles stay in this browser on this device.", "archive": "All news", "newer": "Newer", "older": "Older", "page": "Page", "d_topics": "Topics", "d_models": "Models", "d_more": "More", "menu": "Menu", "tip_h": "A 22 kW charger won't charge your Tesla any faster", "tip_p": "Most Tesla models charge at home at up to 11 kW AC.", "tip_btn": "Read why", "tips": [("HW4", "Buying a used Model 3? Check the hardware first", "The Highland has HW4, older cars HW3. It decides what FSD can do.", "How to check", "used-model-3-highland-vs-classic-hw3-hw4-buying-guide"), ("−20%", "Losing range in winter? It doesn't have to be", "Preconditioning and the right settings save you kilometers.", "9 winter tips", "tesla-winter-range-tips-cold-weather")],
+        "switch": "NL", "switch_full": "Nederlands", "i_specs": "Specifications", "i_watch": "Points to watch", "i_special": "What makes it special", "i_acc": "Accessories", "i_acc_soon": "Coming soon: accessories that fit this version, tested and explained.", "slogan": "Daily Tesla news &amp; trends", "nav_eco": "Ecosystem", "nav_tesla": "Tesla", "search": "Search TrendingTesla", "none": "Nothing found", "home": "Home", "toc": "On this page", "prev": "Previous", "next": "Next", "ad": "Advertisement", "videos": "Shorts", "see_all": "See all", "read_story": "Read the story", "nav_models": "Tesla models", "nav_energy": "Energy", "nav_fsd": "FSD / Robotaxi", "nav_space": "SpaceX / Starlink", "nav_xai": "xAI", "nav_more": "More", "start_here": "Start here", "start_p": "Guides that stay useful: practical explainers for owning and buying a Tesla.", "all_guides": "All guides", "articles": "Articles", "cookie": "Cookie settings", "news_h": "One email a week with the best explainers", "news_p": "One email a week with the best explainers. Unsubscribe any time.", "news_btn": "Subscribe", "news_email": "Email address", "bar_h": "The weekly briefing, in one email", "bar_ok": "Check your inbox to confirm", "bar_err": "Could not subscribe. Please try again.", "bar_fine": "Unsubscribe any time.", "signup": "Newsletter", "signup_h": "Get the TrendingTesla newsletter", "signup_lead": "One email a week with the best explainers. Double opt-in, and you can unsubscribe from any email.", "signup_fallback": "Open the newsletter form", "signup_desc": "One email a week with the best explainers. Double opt-in, and you can unsubscribe from any email.", "aff": "Affiliate disclosure: if you buy through this link, TrendingTesla may earn a commission, at no extra cost to you.", "aff_btn": "More info Amazon", "handy_h": "Handy for your Tesla", "handy_p": "A few accessories owners look for. Each link opens an Amazon.nl search, not one specific product.", "handy_note": "As an Amazon Associate we earn from qualifying purchases.", "watch": "Watch the video", "watch_short": "Watch the Short", "consent_p": "Visit counts are cookieless and anonymous. Consent is only for ads. YouTube loads when you press play.", "consent_yes": "Accept", "consent_no": "Refuse", "consent_more": "Privacy policy", "collapse": "Close menu", "like": "Like", "save": "Save", "saved_btn": "Saved", "saved": "Saved articles", "saved_empty": "You have not saved any articles yet. Tap Save under an article title to keep it here. Saved articles stay in this browser on this device.", "archive": "All news", "newer": "Newer", "older": "Older", "page": "Page", "d_topics": "Topics", "d_models": "Models", "d_more": "More", "menu": "Menu", "tip_h": "A 22 kW charger won't charge your Tesla any faster", "tip_p": "Most Tesla models charge at home at up to 11 kW AC.", "tip_btn": "Read why", "tips": [("HW4", "Buying a used Model 3? Check the hardware first", "The Highland has HW4, older cars HW3. It decides what FSD can do.", "How to check", "used-model-3-highland-vs-classic-hw3-hw4-buying-guide"), ("−20%", "Losing range in winter? It doesn't have to be", "Preconditioning and the right settings save you kilometers.", "9 winter tips", "tesla-winter-range-tips-cold-weather")],
         "empty": "No articles here yet. A new story is published once a day.",
         "cat_intro": "All TrendingTesla articles about {}.",
         "eco_intro": "Tesla, SpaceX, Starlink, SpaceXSI, Neuralink, The Boring Company and the global AI race, on one map.",
@@ -144,7 +144,7 @@ LANGS = {
         "guides_sub": "Uitgezocht per model en bouwjaar, met plus- en minpunten.",
         "related": "Lees ook", "sources": "Bronnen", "imgnote": "Afbeeldingen zijn illustraties, deels gemaakt met AI.", "photocredit": "Foto's", "imgnote_other": "Overige afbeeldingen zijn illustraties, deels gemaakt met AI.", "about": "Over ons", "editorial": "Redactiebeleid",
         "byline": "Door de redactie van TrendingTesla", "privacy": "Privacy",
-        "switch": "EN", "switch_full": "English", "i_specs": "Specificaties", "i_watch": "Aandachtspunten", "i_special": "Bijzonderheden", "i_acc": "Accessoires", "i_acc_soon": "Binnenkort: accessoires die op deze uitvoering passen, getest en uitgelegd.", "slogan": "Iedere dag het laatste nieuws &amp; trends", "nav_eco": "Ecosysteem", "nav_tesla": "Tesla", "search": "Zoek op TrendingTesla", "none": "Niets gevonden", "home": "Home", "toc": "Op deze pagina", "prev": "Vorig", "next": "Volgend", "ad": "Advertentie", "videos": "Shorts", "see_all": "Alles bekijken", "read_story": "Lees het verhaal", "nav_models": "Tesla-modellen", "nav_energy": "Energie", "nav_fsd": "FSD / Robotaxi", "nav_space": "SpaceX / Starlink", "nav_xai": "xAI", "nav_more": "Meer", "start_here": "Begin hier", "start_p": "Gidsen die bruikbaar blijven: praktische uitleg voor wie een Tesla heeft of er een wil kopen.", "all_guides": "Alle gidsen", "articles": "Artikelen", "cookie": "Cookie-instellingen", "news_h": "Eén mail per week met de beste uitleg", "news_p": "Eén mail per week met de beste uitleg. Afmelden kan altijd.", "news_btn": "Aanmelden", "news_email": "E-mailadres", "bar_h": "De weekbriefing, in één mail", "bar_ok": "Check je inbox om te bevestigen", "bar_err": "Aanmelden is niet gelukt. Probeer het opnieuw.", "bar_fine": "Afmelden kan altijd.", "signup": "Nieuwsbrief", "signup_h": "Ontvang de TrendingTesla-nieuwsbrief", "signup_lead": "Eén mail per week met de beste uitleg. Dubbele bevestiging, en afmelden kan vanuit elke e-mail.", "signup_fallback": "Open het nieuwsbriefformulier", "signup_desc": "Eén mail per week met de beste uitleg. Dubbele bevestiging, en afmelden kan vanuit elke e-mail.", "aff": "Affiliate-melding: koop je via deze link, dan kan TrendingTesla een commissie ontvangen. Voor jou kost het niets extra.", "aff_btn": "Bekijk het product", "handy_h": "Handig voor je Tesla", "handy_p": "Een paar accessoires waar rijders naar zoeken. Elke link opent een zoekopdracht bij Amazon.nl, niet één specifiek product.", "handy_note": "Als Amazon-partner verdienen wij aan in aanmerking komende aankopen.", "watch": "Bekijk de video", "watch_short": "Bekijk de Short", "consent_p": "Bezoekcijfers zijn anoniem en zonder cookies. Toestemming is alleen voor advertenties. YouTube laadt pas als je op afspelen drukt.", "consent_yes": "Accepteren", "consent_no": "Weigeren", "consent_more": "Privacybeleid", "collapse": "Inklappen", "like": "Vind ik leuk", "save": "Bewaren", "saved_btn": "Bewaard", "saved": "Bewaarde artikelen", "saved_empty": "Je hebt nog geen artikelen bewaard. Tik op Bewaren onder de titel van een artikel om het hier terug te vinden. Bewaarde artikelen blijven in deze browser op dit apparaat.", "archive": "Alle nieuws", "newer": "Nieuwer", "older": "Ouder", "page": "Pagina", "d_topics": "Onderwerpen", "d_models": "Modellen", "d_more": "Meer", "menu": "Menu", "tip_h": "Een 22 kW-laadpaal laadt je Tesla niet sneller", "tip_p": "Veel Tesla-modellen laden thuis met maximaal 11 kW AC.", "tip_btn": "Lees waarom", "tips": [("HW4", "Tweedehands Model 3 kopen? Check eerst de hardware", "De Highland heeft HW4, oudere Model 3's HW3. Dat bepaalt wat FSD kan.", "Zo check je het", "used-model-3-highland-vs-classic-hw3-hw4-buying-guide"), ("−20%", "Minder bereik in de winter? Dat hoeft niet", "Met voorverwarmen en de juiste instellingen houd je meer kilometers over.", "9 wintertips", "tesla-winter-range-tips-cold-weather")],
+        "switch": "EN", "switch_full": "English", "i_specs": "Specificaties", "i_watch": "Aandachtspunten", "i_special": "Bijzonderheden", "i_acc": "Accessoires", "i_acc_soon": "Binnenkort: accessoires die op deze uitvoering passen, getest en uitgelegd.", "slogan": "Iedere dag het laatste nieuws &amp; trends", "nav_eco": "Ecosysteem", "nav_tesla": "Tesla", "search": "Zoek op TrendingTesla", "none": "Niets gevonden", "home": "Home", "toc": "Op deze pagina", "prev": "Vorig", "next": "Volgend", "ad": "Advertentie", "videos": "Shorts", "see_all": "Alles bekijken", "read_story": "Lees het verhaal", "nav_models": "Tesla-modellen", "nav_energy": "Energie", "nav_fsd": "FSD / Robotaxi", "nav_space": "SpaceX / Starlink", "nav_xai": "xAI", "nav_more": "Meer", "start_here": "Begin hier", "start_p": "Gidsen die bruikbaar blijven: praktische uitleg voor wie een Tesla heeft of er een wil kopen.", "all_guides": "Alle gidsen", "articles": "Artikelen", "cookie": "Cookie-instellingen", "news_h": "Eén mail per week met de beste uitleg", "news_p": "Eén mail per week met de beste uitleg. Afmelden kan altijd.", "news_btn": "Aanmelden", "news_email": "E-mailadres", "bar_h": "De weekbriefing, in één mail", "bar_ok": "Check je inbox om te bevestigen", "bar_err": "Aanmelden is niet gelukt. Probeer het opnieuw.", "bar_fine": "Afmelden kan altijd.", "signup": "Nieuwsbrief", "signup_h": "Ontvang de TrendingTesla-nieuwsbrief", "signup_lead": "Eén mail per week met de beste uitleg. Dubbele bevestiging, en afmelden kan vanuit elke e-mail.", "signup_fallback": "Open het nieuwsbriefformulier", "signup_desc": "Eén mail per week met de beste uitleg. Dubbele bevestiging, en afmelden kan vanuit elke e-mail.", "aff": "Affiliate-melding: koop je via deze link, dan kan TrendingTesla een commissie ontvangen. Voor jou kost het niets extra.", "aff_btn": "Meer info Amazon", "handy_h": "Handig voor je Tesla", "handy_p": "Een paar accessoires waar rijders naar zoeken. Elke link opent een zoekopdracht bij Amazon.nl, niet één specifiek product.", "handy_note": "Als Amazon-partner verdienen wij aan in aanmerking komende aankopen.", "watch": "Bekijk de video", "watch_short": "Bekijk de Short", "consent_p": "Bezoekcijfers zijn anoniem en zonder cookies. Toestemming is alleen voor advertenties. YouTube laadt pas als je op afspelen drukt.", "consent_yes": "Accepteren", "consent_no": "Weigeren", "consent_more": "Privacybeleid", "collapse": "Inklappen", "like": "Vind ik leuk", "save": "Bewaren", "saved_btn": "Bewaard", "saved": "Bewaarde artikelen", "saved_empty": "Je hebt nog geen artikelen bewaard. Tik op Bewaren onder de titel van een artikel om het hier terug te vinden. Bewaarde artikelen blijven in deze browser op dit apparaat.", "archive": "Alle nieuws", "newer": "Nieuwer", "older": "Ouder", "page": "Pagina", "d_topics": "Onderwerpen", "d_models": "Modellen", "d_more": "Meer", "menu": "Menu", "tip_h": "Een 22 kW-laadpaal laadt je Tesla niet sneller", "tip_p": "Veel Tesla-modellen laden thuis met maximaal 11 kW AC.", "tip_btn": "Lees waarom", "tips": [("HW4", "Tweedehands Model 3 kopen? Check eerst de hardware", "De Highland heeft HW4, oudere Model 3's HW3. Dat bepaalt wat FSD kan.", "Zo check je het", "used-model-3-highland-vs-classic-hw3-hw4-buying-guide"), ("−20%", "Minder bereik in de winter? Dat hoeft niet", "Met voorverwarmen en de juiste instellingen houd je meer kilometers over.", "9 wintertips", "tesla-winter-range-tips-cold-weather")],
         "empty": "Hier staan nog geen artikelen. Er verschijnt één keer per dag een nieuw verhaal.",
         "cat_intro": "Alle artikelen van TrendingTesla over {}.",
         "eco_intro": "Tesla, SpaceX, Starlink, SpaceXSI, Neuralink, The Boring Company en de wereldwijde AI-race, op één kaart.",
@@ -1514,7 +1514,7 @@ article .prose .gbox li{font-size:.8rem;line-height:1.35}
 .gbox .fits b{font-weight:700;color:#fff}
 .pcost{margin:10px 0 0;color:#8b97a6;font-size:.72rem;line-height:1.35}
 .pcost b{color:#fff;font-size:.95rem;font-weight:800;letter-spacing:-.01em}
-.pcost .usd{margin-left:6px;color:#c5ced8;font-weight:700}
+.pcost .alt,.pcost .usd{margin-left:6px;color:#c5ced8;font-weight:700;font-size:.78rem}
 .pcost .asof{display:block;margin-top:2px;font-size:.68rem;letter-spacing:.01em}
 article .prose .gbox p.pcost{margin-top:10px;font-size:.72rem;color:#8b97a6}
 .store-btns{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;align-items:center}
@@ -3230,8 +3230,15 @@ def with_amazon_tag(href, lang):
     return f"{href}{sep}tag={quote(tag, safe='')}"
 
 
-def ali_href(raw):
-    """An AliExpress tracking link. Any other host is dropped."""
+def _query_set(href, key, value):
+    if re.search(rf"[?&]{re.escape(key)}=", href):
+        return href
+    sep = "&" if "?" in href else "?"
+    return f"{href}{sep}{key}={quote(str(value), safe='')}"
+
+
+def ali_href(raw, lang="nl"):
+    """An AliExpress tracking link, opened in the page language. Any other host is dropped."""
     href = str(raw or "").strip()
     if not href.startswith("https://") or href.count("/") < 2:
         return ""
@@ -3240,10 +3247,11 @@ def ali_href(raw):
         host = host[4:]
     if host not in ("s.click.aliexpress.com", "aliexpress.com"):
         return ""
-    return href
+    # lang rides on the short link. The redirect keeps the affiliate parameters.
+    return _query_set(href, "lang", "en" if lang == "en" else "nl")
 
 
-def amazon_nl_href(product):
+def amazon_nl_href(product, lang="nl"):
     """An amazon.nl product URL with the Associates tag. Anything else is dropped."""
     if not isinstance(product, dict):
         return ""
@@ -3256,7 +3264,7 @@ def amazon_nl_href(product):
     host = href.split("/")[2].lower()
     if host not in ("www.amazon.nl", "amazon.nl"):
         return ""
-    tagged = guide_amazon(href)
+    tagged = guide_amazon(href, lang)
     tag = affiliate_tag("nl")
     if not tag or f"tag={tag}" not in tagged:
         return ""
@@ -3310,6 +3318,41 @@ def load_amazon_images():
             continue
         AMAZON_GALLERIES[key] = urls
         AMAZON_IMAGES[key] = urls[0]
+
+
+ALI_GALLERIES = {}
+
+
+def load_ali_images():
+    """Hotlinked AliExpress gallery photos. A missing list falls back to the promo pictures."""
+    global ALI_GALLERIES
+    ALI_GALLERIES = {}
+    path = ROOT / "content" / "ali-images.json"
+    if not path.exists():
+        return
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return
+    images = data.get("images") if isinstance(data, dict) else None
+    if not isinstance(images, dict):
+        return
+    for item, value in images.items():
+        key = str(item or "").strip()
+        if not key.isdigit():
+            continue
+        rows = value if isinstance(value, list) else [value]
+        urls = []
+        for raw in rows:
+            src = str(raw or "").strip().split("?")[0]
+            if not src.startswith("https://ae-pic-a1.aliexpress-media.com/kf/"):
+                continue
+            if src.endswith(".jpg") and src not in urls:
+                urls.append(src)
+            if len(urls) == 5:
+                break
+        if urls:
+            ALI_GALLERIES[key] = urls
 
 
 def load_product_prices():
@@ -3406,11 +3449,13 @@ def _parse_stamp(value):
 def _thumb_src(src):
     if src.startswith("https://m.media-amazon.com/images/I/"):
         return re.sub(r"\._[^./]+(?=\.jpg$)", "._AC_US100_", src)
+    if src.startswith("https://ae-pic-a1.aliexpress-media.com/kf/") and src.endswith(".jpg"):
+        return src + "_220x220q75.jpg"
     return src
 
 
 def price_html(key, lang):
-    """Euro price plus an approximate dollar amount. Hidden once the fetch is a day old."""
+    """Dated price. English leads with dollars. A fetched price lasts a day; a manual one lasts a week."""
     row = (PRODUCT_PRICES.get("prices") or {}).get(key) or {}
     if not isinstance(row, dict):
         return ""
@@ -3421,16 +3466,21 @@ def price_html(key, lang):
     if not 1 <= eur <= 5000:
         return ""
     fetched = _parse_stamp(row.get("fetched"))
-    if fetched is None or datetime.now(TZ) - fetched > timedelta(hours=24):
+    manual = str(row.get("source") or "") == "manual"
+    try:
+        fresh_days = int(row.get("fresh_days") or (7 if manual else 1))
+    except (TypeError, ValueError):
+        fresh_days = 7 if manual else 1
+    if manual:
+        fresh_days = max(fresh_days, 7)
+    fresh_days = max(1, min(fresh_days, 14))
+    if fetched is None or datetime.now(TZ) - fetched > timedelta(days=fresh_days):
         return ""
     day = fetched.astimezone(TZ).strftime("%Y-%m-%d")
-    if lang == "nl":
-        eur_s = f"€{eur:.2f}".replace(".", ",")
-        asof = f"Prijs op {fmt_date(day, lang)}"
-    else:
-        eur_s = f"€{eur:.2f}"
-        asof = f"Price as of {fmt_date(day, lang)}"
-    usd = ""
+    eur_en = f"€{eur:.2f}"
+    eur_nl = eur_en.replace(".", ",")
+    usd_en = ""
+    usd_nl = ""
     rate = PRODUCT_PRICES.get("rate") or {}
     rate_at = _parse_stamp(rate.get("fetched")) if isinstance(rate, dict) else None
     try:
@@ -3438,12 +3488,19 @@ def price_html(key, lang):
     except (TypeError, ValueError):
         per = 0
     if per > 0 and rate_at is not None and datetime.now(TZ) - rate_at <= timedelta(days=5):
-        num = f"{eur * per:.2f}"
-        if lang == "nl":
-            num = num.replace(".", ",")
-        usd = f'<span class="usd">≈ ${num}</span>'
-    return (f'<p class="pcost" data-priced="{esc(fetched.isoformat())}"><b>{eur_s}</b>{usd}'
-            f'<span class="asof">{esc(asof)}</span></p>')
+        usd_en = f"${eur * per:.2f}"
+        usd_nl = usd_en.replace(".", ",")
+    if lang == "nl":
+        big, small = eur_nl, (f'<span class="alt">≈ {usd_nl}</span>' if usd_nl else "")
+        asof = f"Prijs op {fmt_date(day, lang)}"
+    elif usd_en:
+        big, small = usd_en, f'<span class="alt">≈ {eur_en}</span>'
+        asof = f"Price as of {fmt_date(day, lang)}"
+    else:
+        big, small = eur_en, ""
+        asof = f"Price as of {fmt_date(day, lang)}"
+    return (f'<p class="pcost" data-priced="{esc(fetched.isoformat())}" data-days="{fresh_days}">'
+            f'<b>{big}</b>{small}<span class="asof">{esc(asof)}</span></p>')
 
 
 def gallery_html(srcs, alt, href, remote, lang):
@@ -3490,7 +3547,7 @@ def local_gallery(src):
     return out
 
 
-PRODUCT_JS = r"""(function(){document.querySelectorAll("[data-priced]").forEach(function(n){var t=Date.parse(n.getAttribute("data-priced"));if(!t||Date.now()-t>86400000)n.remove()});document.querySelectorAll("[data-pgal]").forEach(function(root){var hero=root.querySelector(".pgal-hero"),thumbs=[].slice.call(root.querySelectorAll(".pgal-thumb"));if(!hero||thumbs.length<2)return;var i=0;function show(n){i=(n+thumbs.length)%thumbs.length;var src=thumbs[i].getAttribute("data-src");thumbs.forEach(function(t,k){var on=k===i;t.classList.toggle("is-on",on);if(on)t.setAttribute("aria-current","true");else t.removeAttribute("aria-current")});if(src&&hero.getAttribute("src")!==src){var pre=new Image();pre.onload=function(){hero.src=src};pre.src=src}}thumbs.forEach(function(t,k){t.addEventListener("click",function(){show(k)})});root.querySelectorAll(".pgal-nav").forEach(function(b){b.addEventListener("click",function(e){e.preventDefault();e.stopPropagation();show(i+(b.classList.contains("pgal-next")?1:-1))})});root.addEventListener("keydown",function(e){if(e.key==="ArrowLeft"||e.key==="ArrowRight"){e.preventDefault();show(i+(e.key==="ArrowRight"?1:-1))}});var x0=null,stage=root.querySelector(".pgal-stage")||root;stage.addEventListener("touchstart",function(e){x0=e.changedTouches[0].clientX},{passive:true});stage.addEventListener("touchend",function(e){if(x0==null)return;var dx=e.changedTouches[0].clientX-x0;x0=null;if(Math.abs(dx)>40)show(dx<0?i+1:i-1)},{passive:true})})})();"""
+PRODUCT_JS = r"""(function(){document.querySelectorAll("[data-priced]").forEach(function(n){var t=Date.parse(n.getAttribute("data-priced"));var days=+n.getAttribute("data-days")||1;if(!t||Date.now()-t>days*86400000)n.remove()});document.querySelectorAll("[data-pgal]").forEach(function(root){var hero=root.querySelector(".pgal-hero"),thumbs=[].slice.call(root.querySelectorAll(".pgal-thumb"));if(!hero||thumbs.length<2)return;var i=0;function show(n){i=(n+thumbs.length)%thumbs.length;var src=thumbs[i].getAttribute("data-src");thumbs.forEach(function(t,k){var on=k===i;t.classList.toggle("is-on",on);if(on)t.setAttribute("aria-current","true");else t.removeAttribute("aria-current")});if(src&&hero.getAttribute("src")!==src){var pre=new Image();pre.onload=function(){hero.src=src};pre.src=src}}thumbs.forEach(function(t,k){t.addEventListener("click",function(){show(k)})});root.querySelectorAll(".pgal-nav").forEach(function(b){b.addEventListener("click",function(e){e.preventDefault();e.stopPropagation();show(i+(b.classList.contains("pgal-next")?1:-1))})});root.addEventListener("keydown",function(e){if(e.key==="ArrowLeft"||e.key==="ArrowRight"){e.preventDefault();show(i+(e.key==="ArrowRight"?1:-1))}});var x0=null,stage=root.querySelector(".pgal-stage")||root;stage.addEventListener("touchstart",function(e){x0=e.changedTouches[0].clientX},{passive:true});stage.addEventListener("touchend",function(e){if(x0==null)return;var dx=e.changedTouches[0].clientX-x0;x0=null;if(Math.abs(dx)>40)show(dx<0?i+1:i-1)},{passive:true})})})();"""
 
 
 def product_photo_html(src, alt, href, remote):
@@ -3538,7 +3595,7 @@ def product_boxes(a, lang):
         if not isinstance(product, dict):
             continue
         name = str(_loc(product.get("name"), lang)).strip()
-        href = amazon_nl_href(product)
+        href = amazon_nl_href(product, lang)
         if not name or not href:
             continue
         why = str(_loc(product.get("why"), lang)).strip()
@@ -3548,7 +3605,7 @@ def product_boxes(a, lang):
         if not isinstance(specs, list):
             specs = []
         specs = [str(item).strip() for item in specs if str(item).strip()][:6]
-        button = str(_loc(product.get("button"), lang)).strip() or L["aff_btn"]
+        button = "Meer info Amazon" if lang == "nl" else "More info Amazon"
         asin = _product_asin(product)
         img = gallery_html(AMAZON_GALLERIES.get(asin, []), name, href, True, lang)
         klass = "pbox" if img else "pbox noimg"
@@ -3556,11 +3613,12 @@ def product_boxes(a, lang):
         ul = f"<ul>{lis}</ul>" if lis else ""
         why_html = f'<p class="why">{esc(why)}</p>' if why else ""
         cost = price_html(asin, lang)
-        ali = ali_href(_loc(product.get("ali_url"), lang) or product.get("ali_url"))
+        ali = ali_href(_loc(product.get("ali_url"), lang) or product.get("ali_url"), lang)
         ali_btn = ""
         if ali:
+            ali_label = "Meer info AliExpress" if lang == "nl" else "More info AliExpress"
             ali_btn = (f'<a class="btn ghost" href="{esc(ali)}" rel="sponsored nofollow noopener" target="_blank">'
-                       f'AliExpress</a>')
+                       f'{esc(ali_label)}</a>')
         blocks.append(
             f'<aside class="{klass}"><div class="pbox-in">{img}<div><h3>{esc(name)}</h3>{why_html}{ul}{cost}'
             f'<div class="store-btns"><a class="btn" href="{esc(href)}" rel="sponsored nofollow noopener" target="_blank">{esc(button)}</a>'
@@ -3665,7 +3723,8 @@ def amazon_search_url(query, lang, tag):
     """Amazon.nl search. lang only selects the query words already chosen by the caller."""
     if lang not in ("en", "nl"):
         return ""
-    return "https://www.amazon.nl/s?" + urlencode({"k": query, "tag": tag})
+    language = "en_GB" if lang == "en" else "nl_NL"
+    return "https://www.amazon.nl/s?" + urlencode({"k": query, "tag": tag, "language": language})
 
 
 def handy_picks(a, lang):
@@ -3734,7 +3793,7 @@ def affiliate_disclosure(page_key, lang):
             "gemarkeerd als gesponsord. Als Amazon-partner verdienen wij aan in aanmerking komende "
             "aankopen. Wie een link volgt, gaat naar Amazon. Amazon kan dan eigen cookies plaatsen en "
             "technische gegevens ontvangen, zoals je IP-adres, volgens de "
-            '<a href="https://www.amazon.nl/privacy" rel="nofollow noopener" target="_blank">'
+            '<a href="https://www.amazon.nl/privacy?language=nl_NL" rel="nofollow noopener" target="_blank">'
             "privacyverklaring van Amazon</a>. We sturen Amazon geen naam door, en we tonen geen prijzen "
             "of beoordelingen. Zonder tag blijft de lijst verborgen.</p>")
     if page_key == "about":
@@ -3749,7 +3808,7 @@ def affiliate_disclosure(page_key, lang):
         "list of Tesla accessories. The links go to a search on Amazon.nl and are marked as sponsored. "
         "As an Amazon Associate we earn from qualifying purchases. Following a link takes you to Amazon.nl, "
         "which can set its own cookies and receive technical data such as your IP address under the "
-        '<a href="https://www.amazon.nl/privacy" rel="nofollow noopener" target="_blank">Amazon.nl privacy notice</a>. '
+        '<a href="https://www.amazon.nl/privacy?language=en_GB" rel="nofollow noopener" target="_blank">Amazon.nl privacy notice</a>. '
         "We do not send Amazon a name, and we do not show prices or ratings. The list stays hidden "
         "while the tag is empty.</p>")
 
@@ -4867,7 +4926,7 @@ def recommend_block(lang, kind, current):
             continue
         name = str(_loc(item.get("name"), lang)).strip()
         why = str(_loc(item.get("why"), lang)).strip()
-        href = amazon_nl_href(item)
+        href = amazon_nl_href(item, lang)
         if not name or not href:
             continue
         note = f"<span>{esc(why)}</span>" if why else ""
@@ -7234,16 +7293,19 @@ def load_promises():
     return rows
 
 
-def guide_amazon(href):
-    """amazon.nl links carry the Associates tag already stored for the site."""
+def guide_amazon(href, lang="nl"):
+    """amazon.nl links carry the Associates tag and open in the page language."""
+    if not href.startswith("https://") or href.count("/") < 2:
+        return href
+    host = href.split("/")[2].lower()
+    if host.startswith("www."):
+        host = host[4:]
+    if host != "amazon.nl":
+        return href
     tag = affiliate_tag("nl")
-    if not href.startswith("https://") or not tag or re.search(r"[?&]tag=", href):
-        return href
-    host = href.split("/")[2].lower() if href.count("/") >= 2 else ""
-    if not host.endswith("amazon.nl"):
-        return href
-    sep = "&" if "?" in href else "?"
-    return f"{href}{sep}tag={quote(tag, safe='')}"
+    if tag:
+        href = _query_set(href, "tag", tag)
+    return _query_set(href, "language", "en_GB" if lang == "en" else "nl_NL")
 
 
 def disclosure_line(lang):
@@ -7439,16 +7501,16 @@ def _guide_product(fields, lang):
     pros = _bits(fields.get(f"pros_{lang}") or fields.get("pros_en"))[:3]
     fits = (fields.get(f"fits_{lang}") or fields.get("fits_en")
             or fields.get(f"cons_{lang}") or fields.get("cons_en") or "")
-    href = guide_amazon(str(fields.get("url") or ""))
+    href = guide_amazon(str(fields.get("url") or ""), lang)
     plus = "Pros" if lang == "en" else "Pluspunten"
     who = "Who it fits" if lang == "en" else "Voor wie het past"
     amazon_host = ""
     if href.startswith("https://") and href.count("/") >= 2:
         amazon_host = href.split("/")[2].lower()
     amazon_ok = amazon_host in ("www.amazon.nl", "amazon.nl")
-    ali = ali_href(fields.get("ali_url"))
-    button = ("See photos and video on Amazon.nl" if lang == "en"
-              else "Bekijk foto's en video op Amazon.nl")
+    ali = ali_href(fields.get("ali_url"), lang)
+    button = "Meer info Amazon" if lang == "nl" else "More info Amazon"
+    ali_label = "Meer info AliExpress" if lang == "nl" else "More info AliExpress"
     lists = ""
     if pros:
         lists = f'<h3>{plus}</h3><ul>{"".join(f"<li>{esc(item)}</li>" for item in pros)}</ul>'
@@ -7462,12 +7524,18 @@ def _guide_product(fields, lang):
             parts.append(f'<a class="btn amazon-go" href="{esc(href)}" rel="sponsored nofollow noopener" target="_blank">{esc(button)}</a>')
         if ali:
             style = "btn ghost" if amazon_ok else "btn"
-            parts.append(f'<a class="{style}" href="{esc(ali)}" rel="sponsored nofollow noopener" target="_blank">AliExpress</a>')
+            parts.append(f'<a class="{style}" href="{esc(ali)}" rel="sponsored nofollow noopener" target="_blank">{esc(ali_label)}</a>')
         link = f'<div class="store-btns">{"".join(parts)}</div>'
     local = guide_local_image(fields)
     photo_href = ""
     remote = False
-    if local:
+    ali_item = re.search(r"ali-(\d{8,})", str(fields.get("image") or ""))
+    ali_remote = ALI_GALLERIES.get(ali_item.group(1), []) if ali_item else []
+    if ali_remote:
+        srcs = ali_remote
+        photo_href = ali or ""
+        remote = bool(photo_href)
+    elif local:
         srcs = local_gallery(local)
         if ali and not amazon_ok:
             photo_href = ali
@@ -7636,6 +7704,7 @@ def build():
     load_money()
     load_affiliate()
     load_amazon_images()
+    load_ali_images()
     load_product_prices()
     load_image_licences()
     load_shorts()

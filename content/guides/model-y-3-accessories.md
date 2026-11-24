@@ -16,8 +16,8 @@ pros_nl: Allweer-matten van TPE | Vermeld voor de Model Y Juniper van 2025 en 20
 fits_en: A 2025 or 2026 Model Y Juniper. An older Model Y needs a different set.
 fits_nl: Een Model Y Juniper van 2025 of 2026. Een oudere Model Y heeft een andere set nodig.
 url: https://www.amazon.nl/dp/B0DZ5JB22G
-button_en: View on Amazon
-button_nl: Bekijk bij Amazon
+button_en: More info Amazon
+button_nl: Meer info Amazon
 :::
 
 :::product
@@ -29,8 +29,8 @@ fits_en: A Model Y from 2021 through 2025. Do not assume it fits a Juniper, and 
 fits_nl: Een Model Y van 2021 tot en met 2025. Ga er niet van uit dat hij op een Juniper past, en de pagina is als niet leverbaar getoond. De AliExpress-matten zijn vermeld voor Model 3 en Model Y van 2019 tot en met 2025.
 url: https://www.amazon.nl/dp/B09YTGFHGG
 ali_url: https://s.click.aliexpress.com/e/_c3QsvoO9
-button_en: View on Amazon
-button_nl: Bekijk bij Amazon
+button_en: More info Amazon
+button_nl: Meer info Amazon
 :::
 
 :::product
@@ -41,8 +41,8 @@ pros_nl: Gehard glas | Vermeld voor een scherm van 16 inch | Model Y Standard, P
 fits_en: Only a 16-inch screen on those 2026 Model Y cars. Measure before you buy.
 fits_nl: Alleen een scherm van 16 inch op die Model Y's van 2026. Meet voor je koopt.
 url: https://www.amazon.nl/dp/B0FPJ6RYFN
-button_en: View on Amazon
-button_nl: Bekijk bij Amazon
+button_en: More info Amazon
+button_nl: Meer info Amazon
 :::
 
 :::compare

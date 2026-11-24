@@ -1,0 +1,86 @@
+{
+  "slug": "tesla-eu-registrations-rose-83-percent-in-october",
+  "date": "2026-11-24",
+  "time": "19:58",
+  "category": "news",
+  "layer": "tesla",
+  "topic": "cars",
+  "card": {
+    "en": "Tesla EU registrations rose 83.5 percent in October",
+    "nl": "Tesla EU-registraties stegen 84 procent in oktober"
+  },
+  "image": "lib/modely-front.jpg",
+  "image_lock": true,
+  "images": [
+    "lib/modely-front.jpg",
+    "lib/eu-brussels-tesla.jpg",
+    "lib/tesla-delivery-center.jpg",
+    "lib/modely-drive-away.jpg"
+  ],
+  "credits": [
+    {
+      "credit": "TrendingTesla library photos of a Model Y on a city street, a Model Y in Brussels and a delivery hall. Not photographs of the October 2026 registrations",
+      "page": "https://trendingtesla.com/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "ACEA — New-car registrations in October 2026, published 24 November 2026",
+      "url": "https://www.acea.auto/pc-registrations/new-car-registrations-5-4-in-october-2026-year-to-date-battery-electric-23-4-market-share/"
+    },
+    {
+      "title": "electrive — Battery-electric cars capture 30 per cent of the EU passenger-car market",
+      "url": "https://www.electrive.com/2026/11/24/acea-battery-electric-cars-capture-30-per-cent-of-eu-passenger-car-market/"
+    },
+    {
+      "title": "GuruFocus via Yahoo Finance — EU registration figures for October 2026, citing ACEA, 24 November 2026",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/tesla-stocks-slip-1-74-165500772.html"
+    },
+    {
+      "title": "Automotive World — BEVs near 30% of EU sales",
+      "url": "https://www.automotiveworld.com/news/bevs-near-30-of-eu-sales-as-chinese-brands-take-the-gains/"
+    }
+  ],
+  "label": {
+    "style": "a",
+    "en": {
+      "sub": "EU OCTOBER",
+      "text": "+83.5%"
+    },
+    "nl": {
+      "sub": "EU OKTOBER",
+      "text": "+83,5%"
+    }
+  },
+  "gen_image": {
+    "prompt": "A white current Tesla Model Y with the full-width front light bar, left-hand drive, driving on the right side of a wet European city boulevard in late autumn, the car large and sharp in the horizontal centre, calm shadow in the lower-left third, no logos, no readable licence plate, no readable signs, no people",
+    "subject": "a white Tesla Model Y Juniper, full-width light bar, left-hand drive",
+    "refs": [
+      {"src": "lib/modely-front.jpg"},
+      {"src": "lib/modely-drive-away.jpg"}
+    ],
+    "profile": "editorial",
+    "category": "A",
+    "describe": "A white Model Y on a wet European boulevard in autumn. An illustration of a Tesla car, separate from the October registration count.",
+    "extra": [
+      {
+        "prompt": "A white current Tesla Model Y Juniper seen from the front three-quarter, parked at a European kerb beside a tram line, left-hand drive, right-hand traffic, autumn afternoon, the car large in the centre, calm space in the lower-left third, no logos, no readable plate, no readable signs, no people",
+        "describe": "A white Model Y parked on a European street in autumn"
+      },
+      {
+        "prompt": "A bright Tesla delivery hall with several white Model Y Juniper cars in a row, one car in the foreground from the front three-quarter, left-hand drive, daylight through high windows, no readable text, no logos, no licence plates, no people, calm space in the lower-left third",
+        "describe": "White Model Y cars in a delivery hall"
+      }
+    ]
+  },
+  "en": {
+    "title": "Tesla EU registrations rose 83.5 percent in October",
+    "description": "Tesla registered 10,166 new cars in the EU in October 2026, up 83.5 percent from a year earlier, in ACEA figures published on 24 November 2026. Battery-electric cars took nearly 30 percent of the market that month, and BYD registered about three times as many cars as Tesla.",
+    "body": "<p>Tesla registered 10,166 new cars in the European Union in October 2026. That was 83.5 percent more than in October 2025. The European Automobile Manufacturers' Association, ACEA, published its October registration figures on 24 November 2026. Electrive reported the 10,166 cars and the 83.5 percent rise from those figures. GuruFocus, in a report carried by Yahoo Finance the same day and citing ACEA, reported the same count and the same rise. The month is a rebound for Tesla in Europe after a weak 2025. The battery-electric market those cars joined was much larger.</p>\n<h2>How large was the battery-electric market in October?</h2>\n<p><strong>The EU registered 279,799 battery-electric cars, 61.4 percent more than in October 2025.</strong> Electrive reports that total and that percentage. GuruFocus, citing ACEA, reports them as well. Battery-electric cars took nearly 30 percent of the EU market in October. Electrive puts the share at 29.8 percent, which is the measurement behind the words nearly 30 percent. Automotive World described the same month as battery-electric cars near 30 percent of EU sales. Tesla's 10,166 registrations were about 3.6 percent of those 279,799 battery-electric registrations. That share is 10,166 divided by 279,799. The pictures on this page are library photos of a Model Y and a delivery hall, separate from the cars in the count. Nearly 30 percent is the battery-electric share for a single month. The share from January through October is a lower figure.</p>\n<h2>So what share did battery-electric cars hold over ten months?</h2>\n<p><strong>2,211,071 battery-electric cars were registered, a 23.4 percent share of the EU new-car market.</strong> ACEA sets that 23.4 percent against 16.4 percent in the same ten months a year earlier. Electrive reports the same 2,211,071 cars and the same 23.4 percent share. Nearly 30 percent in October and 23.4 percent from January through October are two windows on the same market. The ten-month share is the one ACEA places next to the 16.4 percent of a year earlier. Tesla's own cars over those ten months are a separate line from that market share.</p>\n<h2>How many Teslas were registered from January through October?</h2>\n<p><strong>198,349 new cars in the EU, up 69.7 percent on the same months of 2025.</strong> GuruFocus, citing ACEA, gives both the 198,349 and the 69.7 percent. Electrive describes the same stretch as about 70 percent growth. That is the 69.7 percent rounded to a whole number. October alone rose 83.5 percent, a steeper rate than the 69.7 percent for the ten months together. The direction matches in both windows. It is a rebound for Tesla in Europe after a weak 2025. The new-car market around those registrations did not grow at a rate close to either figure.</p>\n<h2>So what happened to all new-car registrations?</h2>\n<p><strong>They rose 2.6 percent in October, and electrive counts 939,447 new cars in the month.</strong> GuruFocus, citing ACEA, reports the same 2.6 percent rise. Battery-electric registrations rose 61.4 percent while all new-car registrations rose 2.6 percent. Tesla's own registrations rose 83.5 percent, a faster rate than the 61.4 percent for battery-electric cars as a group and a much faster rate than the 2.6 percent for the market as a whole. The gains inside the battery-electric count were uneven. One brand in the October figures registered about three times as many cars as Tesla.</p>\n<h2>How did BYD compare with Tesla in October?</h2>\n<p><strong>BYD registered 30,974 new cars in the EU, up about 128 percent, roughly three times Tesla's 10,166.</strong> Electrive reports the 30,974 and the rise of about 128 percent. GuruFocus, citing ACEA, reports the same count and the same rise. 30,974 is roughly three times 10,166. The figures for the month sit together like this:</p>\n<ul>\n<li><strong>Tesla, October:</strong> 10,166 cars, up 83.5 percent from October 2025.</li>\n<li><strong>Tesla, January through October:</strong> 198,349 cars, up 69.7 percent, which electrive rounds to about 70 percent growth.</li>\n<li><strong>Battery-electric cars, October:</strong> 279,799, up 61.4 percent, and nearly 30 percent of the EU market.</li>\n<li><strong>Battery-electric cars, January through October:</strong> 2,211,071, a 23.4 percent share, against 16.4 percent a year earlier.</li>\n<li><strong>All new cars, October:</strong> up 2.6 percent, to 939,447 in electrive's count.</li>\n<li><strong>BYD, October:</strong> 30,974 cars, up about 128 percent.</li>\n</ul>\n<p>Tesla's October rebound is the 83.5 percent rise to 10,166 cars, after a weak 2025. Against the 279,799 battery-electric registrations in the month, those 10,166 cars are about 3.6 percent. The larger October count in these figures is BYD's.</p>"
+  },
+  "nl": {
+    "title": "Tesla EU-registraties stegen 84 procent in oktober",
+    "description": "Tesla registreerde in oktober 2026 10.166 nieuwe auto's in de EU, 83,5 procent meer dan een jaar eerder, in ACEA-cijfers van 24 november 2026. Batterij-elektrische auto's namen die maand bijna 30 procent van de markt, en BYD registreerde ongeveer drie keer zoveel auto's als Tesla.",
+    "body": "<p>Tesla registreerde in oktober 2026 10.166 nieuwe auto's in de Europese Unie. Dat is 83,5 procent meer dan in oktober 2025. De Europese vereniging van autofabrikanten, ACEA, publiceerde de oktobercijfers op 24 november 2026. Electrive haalde de 10.166 auto's en de stijging van 83,5 procent uit die cijfers. GuruFocus, in een stuk dat Yahoo Finance diezelfde dag plaatste en dat naar ACEA verwijst, noemde hetzelfde aantal en dezelfde stijging. De maand is een herstel voor Tesla in Europa na een zwak 2025. De markt voor batterij-elektrische auto's waar die registraties in vielen, was veel groter.</p>\n<h2>Hoe groot was de markt voor batterij-elektrische auto's in oktober?</h2>\n<p><strong>In de EU werden 279.799 batterij-elektrische auto's geregistreerd, 61,4 procent meer dan in oktober 2025.</strong> Electrive meldt dat totaal en dat percentage. GuruFocus, met een verwijzing naar ACEA, meldt ze ook. Batterij-elektrische auto's namen in oktober bijna 30 procent van de EU-markt. Electrive zet het aandeel op 29,8 procent. Dat is de meting achter de woorden bijna 30 procent. Automotive World beschreef dezelfde maand als batterij-elektrische auto's die bijna 30 procent van de EU-verkopen halen. Van die 279.799 registraties was ongeveer 3,6 procent een Tesla. Dat aandeel is 10.166 gedeeld door 279.799. De foto's op deze pagina komen uit de fotobibliotheek en tonen een Model Y en een afleverhal, los van de auto's in de telling. Bijna 30 procent is het aandeel van één maand. Over januari tot en met oktober ligt het aandeel lager.</p>\n<h2>Dus welk aandeel hadden batterij-elektrische auto's over tien maanden?</h2>\n<p><strong>Er werden 2.211.071 batterij-elektrische auto's geregistreerd, goed voor 23,4 procent van de markt voor nieuwe auto's in de EU.</strong> ACEA zet die 23,4 procent naast 16,4 procent in dezelfde tien maanden een jaar eerder. Electrive meldt dezelfde 2.211.071 auto's en hetzelfde aandeel van 23,4 procent. Bijna 30 procent in oktober en 23,4 procent van januari tot en met oktober zijn twee vensters op dezelfde markt. Het aandeel over tien maanden is het cijfer dat ACEA naast de 16,4 procent van een jaar eerder zet. Tesla's eigen auto's over die tien maanden staan los van dat marktaandeel.</p>\n<h2>Hoeveel Tesla's zijn van januari tot en met oktober geregistreerd?</h2>\n<p><strong>198.349 nieuwe auto's in de EU, 69,7 procent meer dan in dezelfde maanden van 2025.</strong> GuruFocus, met een verwijzing naar ACEA, geeft zowel de 198.349 als de 69,7 procent. Electrive noemt dezelfde periode een groei van ongeveer 70 procent. Dat is de 69,7 procent, afgerond op een heel getal. Oktober alleen steeg met 83,5 procent, een steiler tempo dan de 69,7 procent over de tien maanden samen. De richting komt in beide periodes overeen. Het is een herstel voor Tesla in Europa na een zwak 2025. De markt voor alle nieuwe auto's groeide niet in een tempo dat daarbij in de buurt komt.</p>\n<h2>Dus wat deden alle registraties van nieuwe auto's?</h2>\n<p><strong>Ze stegen in oktober met 2,6 procent, en electrive telt die maand 939.447 nieuwe auto's.</strong> GuruFocus, met een verwijzing naar ACEA, meldt dezelfde stijging van 2,6 procent. De registraties van batterij-elektrische auto's stegen 61,4 procent, terwijl alle nieuwe auto's samen met 2,6 procent stegen. Tesla's eigen registraties stegen 83,5 procent. Dat is een hoger tempo dan de 61,4 procent voor batterij-elektrische auto's als groep, en een veel hoger tempo dan de 2,6 procent voor de hele markt. De groei binnen de batterij-elektrische telling was ongelijk verdeeld. Eén merk registreerde in de oktobercijfers ongeveer drie keer zoveel auto's als Tesla.</p>\n<h2>Hoe verhield BYD zich in oktober tot Tesla?</h2>\n<p><strong>BYD registreerde 30.974 nieuwe auto's in de EU, een stijging van ongeveer 128 procent, ruwweg drie keer de 10.166 van Tesla.</strong> Electrive meldt de 30.974 en de stijging van ongeveer 128 procent. GuruFocus, met een verwijzing naar ACEA, meldt hetzelfde aantal en dezelfde stijging. 30.974 is ongeveer drie keer 10.166. De cijfers van de maand staan zo bij elkaar:</p>\n<ul>\n<li><strong>Tesla, oktober:</strong> 10.166 auto's, 83,5 procent meer dan in oktober 2025.</li>\n<li><strong>Tesla, januari tot en met oktober:</strong> 198.349 auto's, 69,7 procent meer, door electrive afgerond op ongeveer 70 procent groei.</li>\n<li><strong>Batterij-elektrische auto's, oktober:</strong> 279.799, 61,4 procent meer, en bijna 30 procent van de EU-markt.</li>\n<li><strong>Batterij-elektrische auto's, januari tot en met oktober:</strong> 2.211.071, een aandeel van 23,4 procent, tegen 16,4 procent een jaar eerder.</li>\n<li><strong>Alle nieuwe auto's, oktober:</strong> 2,6 procent meer, tot 939.447 in de telling van electrive.</li>\n<li><strong>BYD, oktober:</strong> 30.974 auto's, ongeveer 128 procent meer.</li>\n</ul>\n<p>Het herstel van Tesla in oktober is de stijging van 83,5 procent naar 10.166 auto's, na een zwak 2025. Tegenover de 279.799 batterij-elektrische registraties in die maand zijn die 10.166 auto's ongeveer 3,6 procent. Het grotere oktobertal in deze cijfers is van BYD.</p>"
+  }
+}

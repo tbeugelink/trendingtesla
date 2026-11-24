@@ -28,7 +28,6 @@ pros_nl: Vloermatten van TPE | Vermeld voor de Model Y Juniper van 2025 tot 2027
 fits_en: A 2025 to 2027 Model Y Juniper. An older Model Y needs a different floor set.
 fits_nl: Een Model Y Juniper van 2025 tot 2027. Een oudere Model Y heeft een andere vloerset nodig.
 url: https://www.amazon.nl/dp/B0DZ5JB22G
-ali_url: https://s.click.aliexpress.com/e/_c4eTdPDJ
 button_en: View on Amazon
 button_nl: Bekijk bij Amazon
 :::

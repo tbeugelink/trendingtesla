@@ -16,9 +16,17 @@ pros_nl: Allweer-matten van TPE | Vermeld voor de Model Y Juniper van 2025 tot 2
 fits_en: A 2025 to 2027 Model Y Juniper. An older Model Y needs a different set.
 fits_nl: Een Model Y Juniper van 2025 tot 2027. Een oudere Model Y heeft een andere set nodig.
 url: https://www.amazon.nl/dp/B0DZ5JB22G
-ali_url: https://s.click.aliexpress.com/e/_c4eTdPDJ
 button_en: View on Amazon
 button_nl: Bekijk bij Amazon
+:::
+
+:::product
+name_en: TPE mats for Model Y Juniper
+name_nl: TPE-matten voor Model Y Juniper
+note_en: TPE floor mats listed for the Model Y Juniper from 2025. An older Model Y needs a different set.
+note_nl: TPE-vloermatten vermeld voor de Model Y Juniper vanaf 2025. Een oudere Model Y heeft een andere set nodig.
+image: /img/guides/ali-1005010376504158.webp
+ali_url: https://s.click.aliexpress.com/e/_c4eTdPDJ
 :::
 
 :::product

@@ -1117,10 +1117,11 @@ header.hb .pnav>.is-parked{display:none}
 .pv-side ul.hubs li{display:grid;grid-template-columns:6px minmax(0,1fr);column-gap:8px;align-items:start}
 .pv-side ul.hubs li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--red);align-self:start;margin-top:calc(0.65em - 3px)}
 .pv-side a:hover,.pv-side a:focus-visible{color:var(--blue)}
-.gcatgrid{display:grid;grid-template-columns:1fr 1fr;gap:22px 18px;background:#141414;border:1px solid #2a3646;border-radius:14px;padding:14px}
+.pv-side,.sheet-rail,.gcatgrid{overflow:visible}
+.gcatgrid{display:grid;grid-template-columns:1fr 1fr;gap:22px 18px;background:#141414;border:1px solid #2a3646;border-radius:14px;padding:14px 14px 18px}
 .gcat{display:flex;flex-direction:column;min-width:0;color:#fff}
-.gtile{display:flex;align-items:center;justify-content:center;background:var(--fg);border-radius:10px;aspect-ratio:1;padding:12%;box-sizing:border-box;overflow:hidden}
-.gtile img{width:100%;height:100%;object-fit:contain;display:block;background:var(--fg)}
+.gtile{display:flex;align-items:center;justify-content:center;background:var(--fg);border-radius:10px;aspect-ratio:1;padding:12%;box-sizing:border-box;overflow:hidden;isolation:isolate}
+.gtile img{width:100%;height:100%;object-fit:contain;display:block;background:transparent;mix-blend-mode:multiply}
 .gname{display:block;margin-top:6px;font-size:.7rem;font-weight:700;line-height:1.25;text-align:center;color:#fff}
 .gcat:hover .gname,.gcat:focus-visible .gname{color:var(--blue)}
 .gcat.is-on .gtile{outline:2px solid var(--red);outline-offset:2px}
@@ -7163,7 +7164,7 @@ def guide_category_cards(lang, current=""):
         name = row[1] if lang == "en" else row[2]
         href = url(lang, guides_path(lang) + slug + "/")
         photo = _guide_category_photo(doc, used_photos)
-        img = (f'<img src="{esc(photo)}" alt="" width="160" height="160" loading="lazy" decoding="async">'
+        img = (f'<img src="{esc(photo)}" alt="" width="160" height="160" loading="eager" decoding="async">'
                if photo else "")
         on = " is-on" if slug == current else ""
         here = ' aria-current="page"' if slug == current else ""

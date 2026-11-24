@@ -21,12 +21,12 @@ Article JSON format:
   "sources": [{"title": "...", "url": "https://..."}],
   "en": {"title": "...", "description": "...", "body": "<p>...</p>"},
   "nl": {"title": "...", "description": "...", "body": "<p>...</p>"},
-  "products": [                                # optional; omit the key when there is nothing to link. No prices.
+  "products": [                                # optional; omit the key when there is nothing to link.
     {"name": {"en": "...", "nl": "..."}, "why": {"en": "...", "nl": "..."},
      "asin": "B0XXXXXXXX",                       # amazon.nl only. A full https://www.amazon.nl/dp/ URL also works.
      "ali_url": "https://s.click.aliexpress.com/e/example",  # optional. s.click.aliexpress.com or aliexpress.com only.
      "image": "/img/topics/example.jpg"}         # optional local photo. Never a hotlinked store image.
-  ]
+  ]                                               # A dated price is added from content/product-prices.json when it is under 24 hours old.
 }
 A string may be used instead of {"en", "nl"} when the text is the same in both languages.
 tools/check_article.py ignores "products". Ads and affiliate tags come from
@@ -77,7 +77,7 @@ import json
 import os
 import re
 import shutil
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from urllib.parse import quote, urlencode
 from zoneinfo import ZoneInfo
@@ -946,18 +946,27 @@ article.money .avid{max-width:68ch}
 .adslot{margin:20px 0;max-width:68ch;display:flex;flex-direction:column;align-items:stretch;background:rgba(255,255,255,.03);border:1px dashed var(--border2);border-radius:8px;overflow:hidden}
 .adlab{font-size:.65rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);padding:8px 12px 0}
 .adslot ins{display:block;width:100%}
-.pbox{margin:22px 0;max-width:68ch}
-.pbox-in{display:grid;grid-template-columns:192px minmax(0,1fr);gap:16px;align-items:start;padding:14px;border:1px solid var(--border2);border-radius:12px;background:#161616}
-.pbox-in>a.pshot,.pbox-in>span.pshot,.pbox-in>img{width:192px;height:192px;align-self:start;display:flex;align-items:center;justify-content:center;background:#fff;border-radius:8px;overflow:hidden;line-height:0}
-.pbox-in img{width:100%;height:100%;aspect-ratio:auto;object-fit:contain;object-position:center;background:#fff}
+.pbox{margin:18px 0;max-width:none}
+.pbox-in{display:grid;grid-template-columns:200px minmax(0,1fr);gap:14px 18px;align-items:start;padding:16px;border:1px solid #2a3646;border-radius:14px;background:#141414}
 .pbox.noimg .pbox-in{grid-template-columns:1fr}
 .pshot{display:block;background:#f3f3f3;border-radius:8px;line-height:0;overflow:hidden}
-.pbox img,.gbox img{width:100%;height:100%;aspect-ratio:1/1;object-fit:contain;background:#f3f3f3;border-radius:8px;display:block}
-.pbox h3{font-size:1.05rem;line-height:1.3;margin:0 0 8px}
-.pbox ul{margin:0;padding-left:18px}
-.pbox li{margin:0 0 4px;color:var(--muted);font-size:.92rem}
-.pbox .why{margin:0;color:var(--muted);font-size:.92rem;line-height:1.45}
-.pbox .btn,.gbox .btn{margin-top:18px}
+.gbox .pgal,.pbox .pgal{width:200px;max-width:100%}
+.gbox .pgal-stage,.pbox .pgal-stage{position:relative;width:200px;height:200px}
+.gbox .pgal-stage .pshot,.pbox .pgal-stage .pshot{position:absolute;inset:0;box-sizing:border-box;display:flex;align-items:center;justify-content:center;background:#fff;border-radius:10px;overflow:hidden;padding:12%;line-height:0}
+.gbox .pgal-stage .pshot img,.pbox .pgal-stage .pshot img{width:100%;height:100%;aspect-ratio:auto;object-fit:contain;object-position:center;background:transparent;border-radius:0;display:block}
+.pgal-nav{position:absolute;top:50%;transform:translateY(-50%);z-index:1;width:26px;height:26px;padding:0;border:0;border-radius:50%;background:rgba(16,16,16,.42);color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.pgal-nav:hover{background:rgba(16,16,16,.68)}
+.pgal-prev{left:6px}.pgal-next{right:6px}
+.pgal-thumbs{display:flex;gap:6px;margin-top:8px}
+.pgal-thumb{width:34px;height:34px;padding:3px;box-sizing:border-box;border:1px solid #d5d5d5;border-radius:6px;background:#fff;cursor:pointer;line-height:0}
+.pgal-thumb.is-on{border-color:#1a1a1a;box-shadow:0 0 0 1px #1a1a1a}
+.gbox .pgal-thumb img,.pbox .pgal-thumb img{width:100%;height:100%;aspect-ratio:1/1;object-fit:contain;background:#fff;border-radius:3px;display:block}
+.pgal:focus-visible,.pgal-nav:focus-visible,.pgal-thumb:focus-visible{outline:2px solid var(--blue2);outline-offset:2px}
+.pbox h3{font-size:.98rem;line-height:1.25;letter-spacing:-.01em;font-weight:800;margin:0 0 6px;color:#fff}
+.pbox ul{margin:0;padding-left:1.05em}
+.pbox li{margin:0 0 2px;color:#c5ced8;font-size:.8rem;line-height:1.35}
+.pbox .why{margin:8px 0 0;color:#c5ced8;font-size:.8rem;line-height:1.4}
+.pbox .btn,.gbox .btn{margin-top:12px}
 .affnote{margin:8px 0 0;font-size:.75rem;line-height:1.45;color:var(--dim)}
 .affnote a{color:var(--blue2)}
 .pv-side .rec li span{display:block;margin-top:3px;font-weight:400;font-size:.78rem;line-height:1.35;color:var(--muted)}
@@ -1489,20 +1498,25 @@ header.hb .bar .lang{margin-left:0;margin-right:0;flex:none;white-space:nowrap;t
 .prom th{font-size:.72rem;letter-spacing:.04em;text-transform:uppercase;color:var(--dim)}
 .prom a{color:#9ad7ff}
 .prom-empty{margin:12px 0 0;color:var(--muted)}
-.gbox{margin:16px 0;padding:14px;border:1px solid #3a4a60;border-radius:8px;background:#161616;display:grid;grid-template-columns:192px minmax(0,1fr);gap:14px;align-items:start}
+.gbox{margin:18px 0;padding:16px;border:1px solid #2a3646;border-radius:14px;background:#141414;display:grid;grid-template-columns:200px minmax(0,1fr);gap:14px 18px;align-items:start}
 @media (min-width:601px){article .prose .gbox{margin-left:14px;margin-right:14px}}
 .gbox.noimg{grid-template-columns:1fr}
-.gbox>a.pshot{width:192px;height:192px;align-self:start;display:flex;align-items:center;justify-content:center;background:#fff;border-radius:8px;overflow:hidden;line-height:0}
-.gbox>a.pshot img{width:100%;height:100%;object-fit:contain;object-position:center;background:#fff;border-radius:0}
-.gbox>img{width:192px;height:192px;align-self:start;object-fit:contain;object-position:center;background:#fff;border-radius:8px;display:block}
-.gbox h2{margin:0 0 8px;font-size:1.12rem}
-.gbox h3{margin:8px 0 4px;font-size:.78rem;letter-spacing:.04em;text-transform:uppercase;color:var(--dim)}
-.gbox ul{margin:0;padding-left:1.1em}
-.gbox li{margin:0 0 3px}
-.gbox .btn{display:inline-flex;align-items:center;justify-content:center;background:var(--red);color:#fff;text-decoration:none;font-weight:800;border-radius:8px;padding:12px 16px;line-height:1.3;text-align:center}
-article .prose .gbox h2{border:0;padding:0;margin:0 0 8px;font-size:1.15rem}
-.gbox .fits{margin:10px 0 0;color:var(--fg);line-height:1.45}
-.gbox .gprice{margin:8px 0 0;color:var(--dim);font-size:.88rem;line-height:1.45}
+.gbox h2{margin:0 0 6px;font-size:.98rem;line-height:1.25;letter-spacing:-.01em;font-weight:800;color:#fff}
+.gbox h3{margin:8px 0 3px;font-size:.66rem;letter-spacing:.06em;text-transform:uppercase;color:var(--dim);font-weight:800}
+.gbox ul{margin:0;padding-left:1.05em}
+.gbox li{margin:0 0 2px;font-size:.8rem;line-height:1.35;color:#c5ced8}
+.gbox .btn,.pbox .btn{display:inline-flex;align-items:center;justify-content:center;background:var(--red);color:#fff;text-decoration:none;font-weight:800;font-size:.82rem;border-radius:8px;padding:10px 14px;line-height:1.3;text-align:center}
+article .prose .gbox h2,html body article .prose .gbox h2{border:0;padding:0;margin:0 0 6px;font-size:.98rem;line-height:1.25;letter-spacing:-.01em}
+article .prose .gbox p,article .prose .gbox ul,article .prose .gbox li{margin-left:0;margin-right:0}
+article .prose .gbox p{margin-top:8px;margin-bottom:0;font-size:.8rem;line-height:1.4;color:#c5ced8}
+article .prose .gbox li{font-size:.8rem;line-height:1.35}
+.gbox .fits{margin:8px 0 0;color:#c5ced8;font-size:.8rem;line-height:1.4}
+.gbox .fits b{font-weight:700;color:#fff}
+.pcost{margin:10px 0 0;color:#8b97a6;font-size:.72rem;line-height:1.35}
+.pcost b{color:#fff;font-size:.95rem;font-weight:800;letter-spacing:-.01em}
+.pcost .usd{margin-left:6px;color:#c5ced8;font-weight:700}
+.pcost .asof{display:block;margin-top:2px;font-size:.68rem;letter-spacing:.01em}
+article .prose .gbox p.pcost{margin-top:10px;font-size:.72rem;color:#8b97a6}
 .store-btns{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;align-items:center}
 .gbox .store-btns .btn,.pbox .store-btns .btn{margin-top:0}
 .gbox .btn.ghost,.pbox .btn.ghost{background:transparent;color:var(--head);border:1px solid #8f9db0;font-weight:700}
@@ -1536,9 +1550,10 @@ article.narrow>.hi img,article.narrow>.avid .avb{width:100%;max-width:100%}
 .nlbar .nlbar-form>button,.nlside-form>button{max-width:100%;white-space:normal}
 }
 .nlpitch p{margin:0 0 12px}
-@media (max-width:600.98px){.gbox{grid-template-columns:1fr}.gbox>a.pshot,.gbox>img,.pbox-in>a.pshot,.pbox-in>span.pshot,.pbox-in>img{width:100%;height:auto;aspect-ratio:1/1}}
+@media (max-width:600.98px){.gbox,.pbox-in{grid-template-columns:1fr;gap:12px}.gbox .pgal,.pbox .pgal,.gbox .pgal-stage,.pbox .pgal-stage{width:100%}.gbox .pgal-stage,.pbox .pgal-stage{height:auto;aspect-ratio:1/1}}
 @media (max-width:900px){html,body{-webkit-text-size-adjust:100%;text-size-adjust:100%}body{font-size:15px;line-height:1.55}html body h1,html body article h1,html body .sheet-main article.money h1,html body .sheet-main article.narrow>h1,html body .hubhead h1,html body h1.st{font-size:24px;line-height:1.15;-webkit-text-size-adjust:100%;text-size-adjust:100%}html body article .prose h2,html body .sheet-main article .prose h2,html body .prose h2,html body .leadstory .ltitle,html body .hubh{font-size:19px;line-height:1.3;-webkit-text-size-adjust:100%;text-size-adjust:100%}html body article .prose,html body .sheet-main article.money .prose,html body .sheet-main article.narrow .prose{font-size:15px;line-height:1.55;-webkit-text-size-adjust:100%;text-size-adjust:100%}html body article .lead,html body .sheet-main article.money .lead,html body .sheet-main article.narrow .lead,html body .hubhead .lead,html body .leadstory .lead{font-size:16px;line-height:1.5;-webkit-text-size-adjust:100%;text-size-adjust:100%}html body .byline,html body .meta,html body .smeta,html body .upd{font-size:12px;line-height:1.35;-webkit-text-size-adjust:100%;text-size-adjust:100%}html body .lmeta,html body .lname,html body .tag,html body .lmeta .llayer,html body .lmeta .lsub{font-size:11px;line-height:1.3;-webkit-text-size-adjust:100%;text-size-adjust:100%}}
 @media (max-width:900px){html body .hfeed .pv-hl b{font-size:13px;line-height:1.3;hyphens:none;-webkit-hyphens:none;overflow-wrap:normal;word-break:normal;-webkit-text-size-adjust:none;text-size-adjust:none}html body .hfeed .pv-row time{font-size:12px;-webkit-text-size-adjust:none;text-size-adjust:none}html body .hfeed .pv-min{width:48px;min-width:48px}html body .hfeed .pv-min b{font-size:12px}}
+@media (max-width:900px){html body .sheet-main article .prose .gbox h2{font-size:.98rem;line-height:1.25;letter-spacing:-.01em}html body .sheet-main article .prose .gbox p,html body .sheet-main article .prose .gbox li{font-size:.8rem;line-height:1.4}}
 """
 
 # Classes left over from retired layouts. They are not emitted by the pages build() writes.
@@ -2255,7 +2270,7 @@ def page(lang, path, title, description, body, og_type="website", extra_head="",
 <p class="fcopy">&copy; {datetime.now().year} {NAME} · <a href="https://www.youtube.com/@TrendingTesla" rel="noopener" target="_blank">YouTube</a> · <button type="button" class="flink" data-consent-open>{L['cookie']}</button> · <a href="{url(lang, 'feed.xml')}">RSS</a> · <a href="{url(alt, switch)}">{L['switch_full']}</a></p>
 </div></footer>
 {consent_bar(lang)}
-<script>{JS}</script>
+<script>{JS}{PRODUCT_JS}</script>
 </body>
 </html>
 """
@@ -3249,14 +3264,35 @@ def amazon_nl_href(product):
 
 
 AMAZON_IMAGES = {}
-_IMG_HIDE = ("this.closest('.pbox,.gbox,li')&&this.closest('.pbox,.gbox,li').classList.add('noimg');"
-             "var n=this.closest('a.pshot,span.pshot');if(n)n.remove();")
+AMAZON_GALLERIES = {}
+PRODUCT_PRICES = {"rate": {}, "prices": {}}
+_IMG_HIDE = ("var g=this.closest('.pgal');if(g){g.remove();}else{var n=this.closest('a.pshot,span.pshot');if(n)n.remove();}"
+             "var c=this.closest('.pbox,.gbox,li');if(c)c.classList.add('noimg');")
+_ARROW_PREV = ('<svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true" focusable="false">'
+               '<path d="M8.6 2.4 4.2 7l4.4 4.6" fill="none" stroke="currentColor" stroke-width="1.6" '
+               'stroke-linecap="round" stroke-linejoin="round"/></svg>')
+_ARROW_NEXT = ('<svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true" focusable="false">'
+               '<path d="M5.4 2.4 9.8 7 5.4 11.6" fill="none" stroke="currentColor" stroke-width="1.6" '
+               'stroke-linecap="round" stroke-linejoin="round"/></svg>')
+
+
+def _amazon_urls(value):
+    rows = value if isinstance(value, list) else [value]
+    out = []
+    for item in rows:
+        src = str(item or "").strip()
+        if src.startswith("https://m.media-amazon.com/images/I/") and src not in out:
+            out.append(src)
+        if len(out) == 5:
+            break
+    return out
 
 
 def load_amazon_images():
     """Hotlinked Amazon CDN URLs. A missing or rejected URL leaves the card as text."""
-    global AMAZON_IMAGES
+    global AMAZON_IMAGES, AMAZON_GALLERIES
     AMAZON_IMAGES = {}
+    AMAZON_GALLERIES = {}
     path = ROOT / "content" / "amazon-images.json"
     if not path.exists():
         return
@@ -3267,14 +3303,28 @@ def load_amazon_images():
     images = data.get("images") if isinstance(data, dict) else None
     if not isinstance(images, dict):
         return
-    for asin, url in images.items():
+    for asin, value in images.items():
         key = str(asin or "").strip().upper()
-        src = str(url or "").strip()
-        if not re.fullmatch(r"[A-Z0-9]{10}", key):
+        urls = _amazon_urls(value)
+        if not re.fullmatch(r"[A-Z0-9]{10}", key) or not urls:
             continue
-        if not src.startswith("https://m.media-amazon.com/images/I/"):
-            continue
-        AMAZON_IMAGES[key] = src
+        AMAZON_GALLERIES[key] = urls
+        AMAZON_IMAGES[key] = urls[0]
+
+
+def load_product_prices():
+    """Dated euro prices and the ECB dollar rate. A stale row is ignored."""
+    global PRODUCT_PRICES
+    PRODUCT_PRICES = {"rate": {}, "prices": {}}
+    path = ROOT / "content" / "product-prices.json"
+    if not path.exists():
+        return
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return
+    if isinstance(data, dict):
+        PRODUCT_PRICES = data
 
 
 def _product_asin(product):
@@ -3340,14 +3390,113 @@ def licensed_card_photo(href):
     return LICENCE_PHOTOS.get(asin, "")
 
 
+def _parse_stamp(value):
+    text = str(value or "").strip()
+    if text.endswith("Z"):
+        text = text[:-1] + "+00:00"
+    try:
+        dt = datetime.fromisoformat(text)
+    except ValueError:
+        return None
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=TZ)
+    return dt
+
+
+def _thumb_src(src):
+    if src.startswith("https://m.media-amazon.com/images/I/"):
+        return re.sub(r"\._[^./]+(?=\.jpg$)", "._AC_US100_", src)
+    return src
+
+
+def price_html(key, lang):
+    """Euro price plus an approximate dollar amount. Hidden once the fetch is a day old."""
+    row = (PRODUCT_PRICES.get("prices") or {}).get(key) or {}
+    if not isinstance(row, dict):
+        return ""
+    try:
+        eur = float(row.get("eur"))
+    except (TypeError, ValueError):
+        return ""
+    if not 1 <= eur <= 5000:
+        return ""
+    fetched = _parse_stamp(row.get("fetched"))
+    if fetched is None or datetime.now(TZ) - fetched > timedelta(hours=24):
+        return ""
+    day = fetched.astimezone(TZ).strftime("%Y-%m-%d")
+    if lang == "nl":
+        eur_s = f"€{eur:.2f}".replace(".", ",")
+        asof = f"Prijs op {fmt_date(day, lang)}"
+    else:
+        eur_s = f"€{eur:.2f}"
+        asof = f"Price as of {fmt_date(day, lang)}"
+    usd = ""
+    rate = PRODUCT_PRICES.get("rate") or {}
+    rate_at = _parse_stamp(rate.get("fetched")) if isinstance(rate, dict) else None
+    try:
+        per = float(rate.get("usd_per_eur")) if isinstance(rate, dict) else 0
+    except (TypeError, ValueError):
+        per = 0
+    if per > 0 and rate_at is not None and datetime.now(TZ) - rate_at <= timedelta(days=5):
+        num = f"{eur * per:.2f}"
+        if lang == "nl":
+            num = num.replace(".", ",")
+        usd = f'<span class="usd">≈ ${num}</span>'
+    return (f'<p class="pcost" data-priced="{esc(fetched.isoformat())}"><b>{eur_s}</b>{usd}'
+            f'<span class="asof">{esc(asof)}</span></p>')
+
+
+def gallery_html(srcs, alt, href, remote, lang):
+    srcs = [src for src in srcs if src][:5]
+    if not srcs:
+        return ""
+    hero = (f'<img class="pgal-hero" src="{esc(srcs[0])}" alt="{esc(alt)}" width="200" height="200"'
+            f' loading="lazy" decoding="async" onerror="{_IMG_HIDE}">')
+    if remote and href:
+        shot = (f'<a class="pshot" href="{esc(href)}" rel="sponsored nofollow noopener" target="_blank">{hero}</a>')
+    else:
+        shot = f'<span class="pshot">{hero}</span>'
+    if len(srcs) == 1:
+        return f'<div class="pgal"><div class="pgal-stage">{shot}</div></div>'
+    prev = "Vorige foto" if lang == "nl" else "Previous photo"
+    nxt = "Volgende foto" if lang == "nl" else "Next photo"
+    label = "Foto's" if lang == "nl" else "Photos"
+    photo = "Foto" if lang == "nl" else "Photo"
+    thumbs = []
+    for n, src in enumerate(srcs, 1):
+        on = " is-on" if n == 1 else ""
+        current = ' aria-current="true"' if n == 1 else ""
+        thumbs.append(
+            f'<button type="button" class="pgal-thumb{on}" data-src="{esc(src)}" aria-label="{esc(f"{photo} {n}")}"{current}>'
+            f'<img src="{esc(_thumb_src(src))}" alt="" width="34" height="34" loading="lazy" decoding="async"'
+            f' onerror="var b=this.closest(\'.pgal-thumb\');if(b)b.remove()"></button>')
+    return (
+        f'<div class="pgal" data-pgal tabindex="0" aria-label="{esc(label)}">'
+        f'<div class="pgal-stage">{shot}'
+        f'<button type="button" class="pgal-nav pgal-prev" aria-label="{esc(prev)}">{_ARROW_PREV}</button>'
+        f'<button type="button" class="pgal-nav pgal-next" aria-label="{esc(nxt)}">{_ARROW_NEXT}</button>'
+        f'</div><div class="pgal-thumbs">{"".join(thumbs)}</div></div>')
+
+
+def local_gallery(src):
+    if not src:
+        return []
+    out = [src]
+    match = re.fullmatch(r"(/img/guides/ali-\d+)\.webp", src)
+    if match:
+        second = match.group(1) + "-2.webp"
+        if (STATIC / second.lstrip("/")).is_file():
+            out.append(second)
+    return out
+
+
+PRODUCT_JS = r"""(function(){document.querySelectorAll("[data-priced]").forEach(function(n){var t=Date.parse(n.getAttribute("data-priced"));if(!t||Date.now()-t>86400000)n.remove()});document.querySelectorAll("[data-pgal]").forEach(function(root){var hero=root.querySelector(".pgal-hero"),thumbs=[].slice.call(root.querySelectorAll(".pgal-thumb"));if(!hero||thumbs.length<2)return;var i=0;function show(n){i=(n+thumbs.length)%thumbs.length;var src=thumbs[i].getAttribute("data-src");thumbs.forEach(function(t,k){var on=k===i;t.classList.toggle("is-on",on);if(on)t.setAttribute("aria-current","true");else t.removeAttribute("aria-current")});if(src&&hero.getAttribute("src")!==src){var pre=new Image();pre.onload=function(){hero.src=src};pre.src=src}}thumbs.forEach(function(t,k){t.addEventListener("click",function(){show(k)})});root.querySelectorAll(".pgal-nav").forEach(function(b){b.addEventListener("click",function(e){e.preventDefault();e.stopPropagation();show(i+(b.classList.contains("pgal-next")?1:-1))})});root.addEventListener("keydown",function(e){if(e.key==="ArrowLeft"||e.key==="ArrowRight"){e.preventDefault();show(i+(e.key==="ArrowRight"?1:-1))}});var x0=null,stage=root.querySelector(".pgal-stage")||root;stage.addEventListener("touchstart",function(e){x0=e.changedTouches[0].clientX},{passive:true});stage.addEventListener("touchend",function(e){if(x0==null)return;var dx=e.changedTouches[0].clientX-x0;x0=null;if(Math.abs(dx)>40)show(dx<0?i+1:i-1)},{passive:true})})})();"""
+
+
 def product_photo_html(src, alt, href, remote):
     if not src:
         return ""
-    img = (f'<img src="{esc(src)}" alt="{esc(alt)}" width="500" height="500" loading="lazy" decoding="async"'
-           f' onerror="{_IMG_HIDE}">')
-    if remote and href:
-        return (f'<a class="pshot" href="{esc(href)}" rel="sponsored nofollow noopener" target="_blank">{img}</a>')
-    return f'<span class="pshot">{img}</span>'
+    return gallery_html([src], alt, href, remote, "en")
 
 
 # A video only when it shows that exact product. Anything else stays a text card.
@@ -3379,7 +3528,7 @@ def side_thumb(src, alt, href, sponsored=False):
 
 
 def product_boxes(a, lang):
-    """Optional affiliate box after the body. Articles opt in with a products list. No prices."""
+    """Optional affiliate box after the body. A price shows only when it was fetched today."""
     products = a.get("products") or []
     if not isinstance(products, list):
         return ""
@@ -3400,19 +3549,20 @@ def product_boxes(a, lang):
             specs = []
         specs = [str(item).strip() for item in specs if str(item).strip()][:6]
         button = str(_loc(product.get("button"), lang)).strip() or L["aff_btn"]
-        src, remote = product_photo(product)
-        img = product_photo_html(src, name, href, remote)
+        asin = _product_asin(product)
+        img = gallery_html(AMAZON_GALLERIES.get(asin, []), name, href, True, lang)
         klass = "pbox" if img else "pbox noimg"
         lis = "".join(f"<li>{esc(item)}</li>" for item in specs)
         ul = f"<ul>{lis}</ul>" if lis else ""
         why_html = f'<p class="why">{esc(why)}</p>' if why else ""
+        cost = price_html(asin, lang)
         ali = ali_href(_loc(product.get("ali_url"), lang) or product.get("ali_url"))
         ali_btn = ""
         if ali:
             ali_btn = (f'<a class="btn ghost" href="{esc(ali)}" rel="sponsored nofollow noopener" target="_blank">'
                        f'AliExpress</a>')
         blocks.append(
-            f'<aside class="{klass}"><div class="pbox-in">{img}<div><h3>{esc(name)}</h3>{why_html}{ul}'
+            f'<aside class="{klass}"><div class="pbox-in">{img}<div><h3>{esc(name)}</h3>{why_html}{ul}{cost}'
             f'<div class="store-btns"><a class="btn" href="{esc(href)}" rel="sponsored nofollow noopener" target="_blank">{esc(button)}</a>'
             f'{ali_btn}</div></div></div></aside>')
     if not blocks:
@@ -7297,17 +7447,6 @@ def _guide_product(fields, lang):
         amazon_host = href.split("/")[2].lower()
     amazon_ok = amazon_host in ("www.amazon.nl", "amazon.nl")
     ali = ali_href(fields.get("ali_url"))
-    if amazon_ok:
-        price = ("Prices change. Check the current price on Amazon.nl. This page does not state one."
-                 if lang == "en" else
-                 "Prijzen veranderen. Kijk de actuele prijs na op Amazon.nl. Deze pagina noemt er geen.")
-    elif ali:
-        price = ("Prices change. Check the current price on AliExpress. This page does not state one."
-                 if lang == "en" else
-                 "Prijzen veranderen. Kijk de actuele prijs na op AliExpress. Deze pagina noemt er geen.")
-    else:
-        price = ("Prices change. This page does not state one." if lang == "en"
-                 else "Prijzen veranderen. Deze pagina noemt er geen.")
     button = ("See photos and video on Amazon.nl" if lang == "en"
               else "Bekijk foto's en video op Amazon.nl")
     lists = ""
@@ -7325,19 +7464,31 @@ def _guide_product(fields, lang):
             style = "btn ghost" if amazon_ok else "btn"
             parts.append(f'<a class="{style}" href="{esc(ali)}" rel="sponsored nofollow noopener" target="_blank">AliExpress</a>')
         link = f'<div class="store-btns">{"".join(parts)}</div>'
-    src = guide_local_image(fields) or (AMAZON_IMAGES.get(_product_asin(href), "") if amazon_ok else "") or licensed_card_photo(href)
-    if src.startswith("https://") and amazon_ok:
-        img = (f'<a class="pshot" href="{esc(href)}" rel="sponsored nofollow noopener" target="_blank">'
-               f'<img src="{esc(src)}" alt="{esc(name)}" width="168" height="168" loading="lazy" decoding="async"'
-               f' onerror="{_IMG_HIDE}"></a>')
-    elif src:
-        img = (f'<img src="{esc(src)}" alt="{esc(name)}" width="168" height="168" loading="lazy" decoding="async"'
-               f' onerror="{_IMG_HIDE}">')
+    local = guide_local_image(fields)
+    photo_href = ""
+    remote = False
+    if local:
+        srcs = local_gallery(local)
+        if ali and not amazon_ok:
+            photo_href = ali
+            remote = True
+    elif amazon_ok:
+        srcs = list(AMAZON_GALLERIES.get(_product_asin(href), []))
+        photo_href = href
+        remote = True
     else:
-        img = ""
+        licensed = licensed_card_photo(href)
+        srcs = [licensed] if licensed else []
+    img = gallery_html(srcs, name, photo_href, remote, lang)
+    if amazon_ok:
+        price_key = _product_asin(href)
+    else:
+        item = re.search(r"ali-(\d{8,})", str(fields.get("image") or ""))
+        price_key = f"ali:{item.group(1)}" if item else ""
+    cost = price_html(price_key, lang) if price_key else ""
     klass = "gbox" if img else "gbox noimg"
     return (f'<aside class="{klass}">{img}<div><h2>{esc(name)}</h2>{lists}{note_html}{fit_html}'
-            f'<p class="gprice">{esc(price)}</p>{link}</div></aside>')
+            f'{cost}{link}</div></aside>')
 
 
 def _guide_hero(doc, lang):
@@ -7485,6 +7636,7 @@ def build():
     load_money()
     load_affiliate()
     load_amazon_images()
+    load_product_prices()
     load_image_licences()
     load_shorts()
     _OPT.clear()

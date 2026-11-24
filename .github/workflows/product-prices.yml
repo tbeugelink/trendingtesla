@@ -1,0 +1,30 @@
+name: Product prices
+on:
+  schedule:
+    - cron: "30 16 * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Refresh prices, the dollar rate, and the site
+        run: |
+          python3 tools/refresh-product-prices.py
+          python3 build.py
+      - name: Commit the fresh prices
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add content/product-prices.json content/amazon-images.json public
+          if git diff --cached --quiet; then
+            echo "no price changes"
+          else
+            git commit -m "Refresh product prices"
+            git push
+          fi

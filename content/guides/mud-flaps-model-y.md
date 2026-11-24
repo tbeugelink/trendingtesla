@@ -5,8 +5,8 @@ description_en: Three Model Y mud-flap sets on Amazon.nl. A 2021 car and a Junip
 description_nl: Drie sets spatlappen voor de Model Y op Amazon.nl. Een auto uit 2021 en een Juniper hebben niet dezelfde pasvorm.
 ---
 
-en: Flaps for a 2021 to 2023 Model Y are a different listing from flaps for a Juniper. Read the year on the product page and check the current price. This guide does not state one.
-nl: Lappen voor een Model Y van 2021 tot 2023 zijn een andere vermelding dan lappen voor een Juniper. Lees het jaar op de productpagina en kijk de actuele prijs na. Deze gids noemt er geen.
+en: Flaps for a 2021 to 2023 Model Y are a different listing from flaps for a Juniper. Read the year on the product page and check the current price.
+nl: Lappen voor een Model Y van 2021 tot 2023 zijn een andere vermelding dan lappen voor een Juniper. Lees het jaar op de productpagina en kijk de actuele prijs na.
 
 :::product
 name_en: TEMKIN flaps for Model Y 2021 to 2023

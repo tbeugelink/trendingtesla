@@ -5,8 +5,8 @@ description_en: A trunk mat and a floor-mat set on Amazon.nl for a Model Y. The 
 description_nl: Een kofferbakmat en een vloermattenset op Amazon.nl voor een Model Y. De kofferbakmat is voor vijf zitplaatsen. De vloermatten zijn voor de Juniper.
 ---
 
-en: A Model Y trunk mat and a floor set are two different cuts. The trunk liner below is listed for five-seat Model Y cars from 2020 through 2026, including Juniper, and not for the seven-seat car. The floor mats are listed for the Juniper years only. Read the fit line and check the current price. This guide does not state one.
-nl: Een kofferbakmat en een vloerset voor een Model Y zijn twee verschillende passen. De kofferbakmat hieronder is vermeld voor Model Y met vijf zitplaatsen van 2020 tot en met 2026, inclusief Juniper, en niet voor de auto met zeven zitplaatsen. De vloermatten zijn alleen voor de Juniper-jaren vermeld. Lees de pasregel en kijk de actuele prijs na. Deze gids noemt er geen.
+en: A Model Y trunk mat and a floor set are two different cuts. The trunk liner below is listed for five-seat Model Y cars from 2020 through 2026, including Juniper, and not for the seven-seat car. The floor mats are listed for the Juniper years only. Read the fit line and check the current price.
+nl: Een kofferbakmat en een vloerset voor een Model Y zijn twee verschillende passen. De kofferbakmat hieronder is vermeld voor Model Y met vijf zitplaatsen van 2020 tot en met 2026, inclusief Juniper, en niet voor de auto met zeven zitplaatsen. De vloermatten zijn alleen voor de Juniper-jaren vermeld. Lees de pasregel en kijk de actuele prijs na.
 
 :::product
 name_en: CYBERBEANS trunk mat for Model Y

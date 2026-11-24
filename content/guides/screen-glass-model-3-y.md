@@ -5,8 +5,8 @@ description_en: Four tempered-glass listings on Amazon.nl. A 15 inch screen and 
 description_nl: Vier vermeldingen van gehard glas op Amazon.nl. Een scherm van 15 inch en een scherm van 16 inch zijn niet hetzelfde onderdeel.
 ---
 
-en: The glass has to match the screen in the car. A 15 inch display from a 2017 to 2023 Model 3 is not the 16 inch display in a later Model Y. Read the size line on the product page and check the current price. This guide does not state one.
-nl: Het glas moet bij het scherm in de auto passen. Een scherm van 15 inch uit een Model 3 van 2017 tot 2023 is niet het scherm van 16 inch in een latere Model Y. Lees de maatregel op de productpagina en kijk de actuele prijs na. Deze gids noemt er geen.
+en: The glass has to match the screen in the car. A 15 inch display from a 2017 to 2023 Model 3 is not the 16 inch display in a later Model Y. Read the size line on the product page and check the current price.
+nl: Het glas moet bij het scherm in de auto passen. Een scherm van 15 inch uit een Model 3 van 2017 tot 2023 is niet het scherm van 16 inch in een latere Model Y. Lees de maatregel op de productpagina en kijk de actuele prijs na.
 
 :::product
 name_en: Spigen glass for a 15 inch screen

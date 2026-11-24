@@ -5,8 +5,8 @@ description_en: Three 12 volt tyre pumps on Amazon.nl. None is a Tesla part. Che
 description_nl: Drie bandenpompen van 12 volt op Amazon.nl. Geen ervan is een Tesla-onderdeel. Controleer of de auto een passend stopcontact heeft.
 ---
 
-en: These pumps are for a 12 volt socket of the cigarette-lighter type. The listings do not say they were made for a Tesla. Confirm the socket in your car, and check the current price. This guide does not state one.
-nl: Deze pompen zijn voor een 12-voltstopcontact van het type sigarettenaansteker. De vermeldingen zeggen niet dat ze voor een Tesla zijn gemaakt. Bevestig het stopcontact in je auto, en kijk de actuele prijs na. Deze gids noemt er geen.
+en: These pumps are for a 12 volt socket of the cigarette-lighter type. The listings do not say they were made for a Tesla. Confirm the socket in your car, and check the current price.
+nl: Deze pompen zijn voor een 12-voltstopcontact van het type sigarettenaansteker. De vermeldingen zeggen niet dat ze voor een Tesla zijn gemaakt. Bevestig het stopcontact in je auto, en kijk de actuele prijs na.
 
 :::product
 name_en: FORTEM 12 volt tyre pump

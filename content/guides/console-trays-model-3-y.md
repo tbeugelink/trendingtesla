@@ -5,8 +5,8 @@ description_en: Four centre-console trays on Amazon.nl. A Juniper Standard does 
 description_nl: Vier bakjes voor de middenconsole op Amazon.nl. Een Juniper Standard past niet op het bakje voor Premium.
 ---
 
-en: The console changed with Highland and Juniper, and the Standard Juniper is not the same tray as Premium. Read the version line on the product page and check the current price. This guide does not state one.
-nl: De console veranderde met Highland en Juniper, en de Juniper Standard is niet hetzelfde bakje als Premium. Lees de uitvoeringsregel op de productpagina en kijk de actuele prijs na. Deze gids noemt er geen.
+en: The console changed with Highland and Juniper, and the Standard Juniper is not the same tray as Premium. Read the version line on the product page and check the current price.
+nl: De console veranderde met Highland en Juniper, en de Juniper Standard is niet hetzelfde bakje als Premium. Lees de uitvoeringsregel op de productpagina en kijk de actuele prijs na.
 
 :::product
 name_en: CYBERBEANS trays for Highland and Juniper

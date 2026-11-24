@@ -5,8 +5,8 @@ description_en: Two all-weather mat sets on Amazon.nl, one for a Model Y Juniper
 description_nl: Twee allweermattensets op Amazon.nl, één voor een Model Y Juniper en één voor een Model 3 Highland van 2024. Stem de auto af voor je bestelt.
 ---
 
-en: Winter slush ends up on the floor, and the mat that helps is the one cut for that exact car. A 2025 Model Y Juniper does not take the set made for a 2024 Model 3 Highland. Read the fit line on the product page and check the current price. This guide does not state one.
-nl: Wintersmodder komt op de vloer terecht, en de mat die helpt is de mat die voor die auto is gesneden. Een Model Y Juniper uit 2025 past niet op de set van een Model 3 Highland uit 2024. Lees de pasregel op de productpagina en kijk de actuele prijs na. Deze gids noemt er geen.
+en: Winter slush ends up on the floor, and the mat that helps is the one cut for that exact car. A 2025 Model Y Juniper does not take the set made for a 2024 Model 3 Highland. Read the fit line on the product page and check the current price.
+nl: Wintersmodder komt op de vloer terecht, en de mat die helpt is de mat die voor die auto is gesneden. Een Model Y Juniper uit 2025 past niet op de set van een Model 3 Highland uit 2024. Lees de pasregel op de productpagina en kijk de actuele prijs na.
 
 :::product
 name_en: GAFAT mats for Model Y Juniper

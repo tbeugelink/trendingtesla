@@ -5,8 +5,8 @@ description_en: Three glass-roof shades on Amazon.nl for listed Model Y years. A
 description_nl: Drie schermen voor het glazen dak op Amazon.nl voor vermelde Model Y-jaren. Een Juniper wordt op deze pagina's niet genoemd.
 ---
 
-en: These three listings are glass-roof shades for earlier Model Y years. None of the pages names a Juniper. Read the year line and check the current price. This guide does not state one.
-nl: Deze drie vermeldingen zijn schermen voor het glazen dak van eerdere Model Y-jaren. Geen van de pagina's noemt een Juniper. Lees de jaarregel en kijk de actuele prijs na. Deze gids noemt er geen.
+en: These three listings are glass-roof shades for earlier Model Y years. None of the pages names a Juniper. Read the year line and check the current price.
+nl: Deze drie vermeldingen zijn schermen voor het glazen dak van eerdere Model Y-jaren. Geen van de pagina's noemt een Juniper. Lees de jaarregel en kijk de actuele prijs na.
 
 :::product
 name_en: Rengue shades for Model Y 2021 to 2023

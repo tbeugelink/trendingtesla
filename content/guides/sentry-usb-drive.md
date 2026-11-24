@@ -5,8 +5,8 @@ description_en: Two Samsung BAR Plus USB-A sticks on Amazon.nl that fit the port
 description_nl: Twee Samsung BAR Plus USB-A-sticks op Amazon.nl die in de poort passen die Tesla voor Sentry-beelden gebruikt. Formatteer de stick in de auto.
 ---
 
-en: Sentry Mode writes clips to a drive in the car's USB port. The stick has to be USB-A, and the car has to format it before it will save footage. A flash drive wears out when it is written all day, so replace it when the car stops seeing it. Check the current price on each page. This guide does not state one.
-nl: Sentry Mode schrijft beelden naar een schijf in de USB-poort van de auto. De stick moet USB-A zijn, en de auto moet hem formatteren voor hij beelden bewaart. Een flashdrive slijt als hij de hele dag beschreven wordt, dus vervang hem als de auto hem niet meer ziet. Kijk de actuele prijs op elke pagina. Deze gids noemt er geen.
+en: Sentry Mode writes clips to a drive in the car's USB port. The stick has to be USB-A, and the car has to format it before it will save footage. A flash drive wears out when it is written all day, so replace it when the car stops seeing it. Check the current price on each page.
+nl: Sentry Mode schrijft beelden naar een schijf in de USB-poort van de auto. De stick moet USB-A zijn, en de auto moet hem formatteren voor hij beelden bewaart. Een flashdrive slijt als hij de hele dag beschreven wordt, dus vervang hem als de auto hem niet meer ziet. Kijk de actuele prijs op elke pagina.
 
 :::product
 name_en: Samsung BAR Plus 256 GB

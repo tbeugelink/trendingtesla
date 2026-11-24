@@ -5,8 +5,8 @@ description_en: The Mini dish plus a power cable and a pole mount that exist on 
 description_nl: De Mini-schotel plus een stroomkabel en een paalbevestiging die op Amazon.nl staan. Kijk of de schotel zelf op voorraad is.
 ---
 
-en: A Starlink Mini for a road trip is the dish, a way to power it from the car, and a mount that does not slide off a roof at speed. The dish page on Amazon.nl has been shown as unavailable, so check stock before you plan the trip around it. Check the current price on each page. This guide does not state one.
-nl: Een Starlink Mini voor een rit is de schotel, een manier om hem uit de auto te voeden, en een bevestiging die op snelheid niet van het dak schuift. De schotelpagina op Amazon.nl is als niet leverbaar getoond, dus kijk de voorraad na voor je de rit eromheen plant. Kijk de actuele prijs op elke pagina. Deze gids noemt er geen.
+en: A Starlink Mini for a road trip is the dish, a way to power it from the car, and a mount that does not slide off a roof at speed. The dish page on Amazon.nl has been shown as unavailable, so check stock before you plan the trip around it. Check the current price on each page.
+nl: Een Starlink Mini voor een rit is de schotel, een manier om hem uit de auto te voeden, en een bevestiging die op snelheid niet van het dak schuift. De schotelpagina op Amazon.nl is als niet leverbaar getoond, dus kijk de voorraad na voor je de rit eromheen plant. Kijk de actuele prijs op elke pagina.
 
 :::product
 name_en: Starlink Mini kit

@@ -1,0 +1,185 @@
+{
+  "fetched": "2026-11-24T21:17:09+01:00",
+  "rate": {
+    "usd_per_eur": 1.0963,
+    "date": "2026-11-24",
+    "fetched": "2026-11-24T21:17:09+01:00"
+  },
+  "prices": {
+    "B0DZ5JB22G": {
+      "eur": 119.98,
+      "fetched": "2026-11-24T21:17:09+01:00",
+      "source": "amazon.nl"
+    },
+    "B0FPJ6RYFN": {
+      "eur": 30.39,
+      "fetched": "2026-11-24T21:17:09+01:00",
+      "source": "amazon.nl"
+    },
+    "B0BW16BBKQ": {
+      "eur": 535.0,
+      "fetched": "2026-11-24T21:17:09+01:00",
+      "source": "amazon.nl"
+    },
+    "B084BNC3FG": {
+      "eur": 34.99,
+      "fetched": "2026-11-24T21:17:09+01:00",
+      "source": "amazon.nl"
+    },
+    "B0CS6234MR": {
+      "eur": 289.95,
+      "fetched": "2026-11-24T21:17:09+01:00",
+      "source": "amazon.nl"
+    },
+    "B0FLQ76FVW": {
+      "eur": 43.88,
+      "fetched": "2026-11-24T21:17:09+01:00",
+      "source": "amazon.nl"
+    },
+    "B078C74CDY": {
+      "eur": 995.0,
+      "fetched": "2026-11-24T21:17:09+01:00",
+      "source": "amazon.nl"
+    },
+    "B07D1KF73V": {
+      "eur": 59.9,
+      "fetched": "2026-11-24T21:17:09+01:00",
+      "source": "amazon.nl"
+    },
+    "B0FL2M1F4Q": {
+      "eur": 34.99,
+      "fetched": "2026-11-24T21:17:09+01:00",
+      "source": "amazon.nl"
+    },
+    "B0DG1WVDKP": {
+      "eur": 13.89,
+      "fetched": "2026-11-24T21:17:09+01:00",
+      "source": "amazon.nl"
+    },
+    "B0GV1CMHFK": {
+      "eur": 31.99,
+      "fetched": "2026-11-24T21:17:09+01:00",
+      "source": "amazon.nl"
+    },
+    "B0GCJ3PTFB": {
+      "eur": 24.99,
+      "fetched": "2026-11-24T21:17:09+01:00",
+      "source": "amazon.nl"
+    },
+    "B0GKNPSHWW": {
+      "eur": 30.58,
+      "fetched": "2026-11-24T21:17:09+01:00",
+      "source": "amazon.nl"
+    },
+    "B0FKG2Q2MX": {
+      "eur": 51.63,
+      "fetched": "2026-11-24T21:17:09+01:00",
+      "source": "amazon.nl"
+    },
+    "B0H1BLC3D3": {
+      "eur": 34.99,
+      "fetched": "2026-11-24T21:17:09+01:00",
+      "source": "amazon.nl"
+    },
+    "B0HFP38CZR": {
+      "eur": 55.98,
+      "fetched": "2026-11-24T21:17:09+01:00",
+      "source": "amazon.nl"
+    },
+    "B0HH6N78KS": {
+      "eur": 78.99,
+      "fetched": "2026-11-24T21:17:09+01:00",
+      "source": "amazon.nl"
+    },
+    "B0H3ZZ37J1": {
+      "eur": 39.99,
+      "fetched": "2026-11-24T21:17:09+01:00",
+      "source": "amazon.nl"
+    },
+    "B0DTGPFNFK": {
+      "eur": 139.12,
+      "fetched": "2026-11-24T21:17:09+01:00",
+      "source": "amazon.nl"
+    },
+    "B0FCSGJ6GV": {
+      "eur": 96.89,
+      "fetched": "2026-11-24T21:17:09+01:00",
+      "source": "amazon.nl"
+    },
+    "B0HC2462F9": {
+      "eur": 59.61,
+      "fetched": "2026-11-24T21:17:09+01:00",
+      "source": "amazon.nl"
+    },
+    "B0FK4CP262": {
+      "eur": 105.99,
+      "fetched": "2026-11-24T21:17:09+01:00",
+      "source": "amazon.nl"
+    },
+    "B0BNBR336V": {
+      "eur": 225.32,
+      "fetched": "2026-11-24T21:17:09+01:00",
+      "source": "amazon.nl"
+    },
+    "B0CKXJGYCM": {
+      "eur": 69.99,
+      "fetched": "2026-11-24T21:17:09+01:00",
+      "source": "amazon.nl"
+    },
+    "B0BH7SFTYZ": {
+      "eur": 20.99,
+      "fetched": "2026-11-24T21:17:09+01:00",
+      "source": "amazon.nl"
+    },
+    "B0H6S8FSY2": {
+      "eur": 25.19,
+      "fetched": "2026-11-24T21:17:09+01:00",
+      "source": "amazon.nl"
+    },
+    "B0DNW8TQ27": {
+      "eur": 18.99,
+      "fetched": "2026-11-24T21:17:09+01:00",
+      "source": "amazon.nl"
+    },
+    "B0GXBFPD4F": {
+      "eur": 40.5,
+      "fetched": "2026-11-24T21:17:09+01:00",
+      "source": "amazon.nl"
+    },
+    "B0D1Y832ZK": {
+      "eur": 30.39,
+      "fetched": "2026-11-24T21:17:09+01:00",
+      "source": "amazon.nl"
+    },
+    "B0DD7GMH71": {
+      "eur": 10.99,
+      "fetched": "2026-11-24T21:17:09+01:00",
+      "source": "amazon.nl"
+    },
+    "B073VB41W3": {
+      "eur": 29.74,
+      "fetched": "2026-11-24T21:17:09+01:00",
+      "source": "amazon.nl"
+    },
+    "B0G528KMX6": {
+      "eur": 11.55,
+      "fetched": "2026-11-24T21:17:09+01:00",
+      "source": "amazon.nl"
+    },
+    "B0C6QLT3XP": {
+      "eur": 13.99,
+      "fetched": "2026-11-24T21:17:09+01:00",
+      "source": "amazon.nl"
+    },
+    "B0DR1Y8NNZ": {
+      "eur": 28.89,
+      "fetched": "2026-11-24T21:17:09+01:00",
+      "source": "amazon.nl"
+    },
+    "B0H834D5C9": {
+      "eur": 39.99,
+      "fetched": "2026-11-24T21:17:09+01:00",
+      "source": "amazon.nl"
+    }
+  }
+}

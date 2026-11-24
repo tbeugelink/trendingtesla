@@ -5,8 +5,8 @@ description_en: Three key-card holders on Amazon.nl. The card itself is not in t
 description_nl: Drie houders voor een keycard op Amazon.nl. De kaart zelf zit niet in de verpakking. Vergelijk de vorm van je kaart.
 ---
 
-en: A holder is a sleeve for the card Tesla already gave you. It is not a new key. Read which models the page names, and check the current price. This guide does not state one.
-nl: Een houder is een hoes voor de kaart die Tesla je al gaf. Het is geen nieuwe sleutel. Lees welke modellen de pagina noemt, en kijk de actuele prijs na. Deze gids noemt er geen.
+en: A holder is a sleeve for the card Tesla already gave you. It is not a new key. Read which models the page names, and check the current price.
+nl: Een houder is een hoes voor de kaart die Tesla je al gaf. Het is geen nieuwe sleutel. Lees welke modellen de pagina noemt, en kijk de actuele prijs na.
 
 :::product
 name_en: SkyArmor holder with an AirTag cutout

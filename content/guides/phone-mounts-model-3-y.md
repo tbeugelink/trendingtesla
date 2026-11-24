@@ -5,8 +5,8 @@ description_en: Three phone mounts on Amazon.nl that name a Model 3 or a Model Y
 description_nl: Drie telefoonhouders op Amazon.nl die een Model 3 of een Model Y noemen. Eén pagina is als niet leverbaar getoond.
 ---
 
-en: A mount for the vent is not a clip for the screen. Read where the listing says it attaches, and check the current price. This guide does not state one.
-nl: Een houder voor het ventilatierooster is geen klem voor het scherm. Lees waar de vermelding hem bevestigt, en kijk de actuele prijs na. Deze gids noemt er geen.
+en: A mount for the vent is not a clip for the screen. Read where the listing says it attaches, and check the current price.
+nl: Een houder voor het ventilatierooster is geen klem voor het scherm. Lees waar de vermelding hem bevestigt, en kijk de actuele prijs na.
 
 :::product
 name_en: elago mount for Model 3 and Y

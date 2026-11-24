@@ -5,8 +5,8 @@ description_en: Four Type 2 to Type 2 cables on Amazon.nl. The kilowatt figure i
 description_nl: Vier kabels van Type 2 naar Type 2 op Amazon.nl. Het kilowattgetal is de kabelwaarde, geen belofte voor elke auto.
 ---
 
-en: A Mode 3 cable joins a Type 2 car inlet to a Type 2 charge point. It is not a plug for a household socket, and it is not a substitute for the mobile kits on the portable-charger guide. The car and the charge point decide the power. Check the length in the basket and the current price. This guide does not state one.
-nl: Een Mode 3-kabel verbindt een Type 2-inlaat van de auto met een Type 2-laadpunt. Het is geen stekker voor een huishoudstopcontact, en het is geen vervanging van de mobiele sets in de gids voor mobiele laders. De auto en het laadpunt bepalen het vermogen. Controleer de lengte in de winkelwagen en de actuele prijs. Deze gids noemt er geen.
+en: A Mode 3 cable joins a Type 2 car inlet to a Type 2 charge point. It is not a plug for a household socket, and it is not a substitute for the mobile kits on the portable-charger guide. The car and the charge point decide the power. Check the length in the basket and the current price.
+nl: Een Mode 3-kabel verbindt een Type 2-inlaat van de auto met een Type 2-laadpunt. Het is geen stekker voor een huishoudstopcontact, en het is geen vervanging van de mobiele sets in de gids voor mobiele laders. De auto en het laadpunt bepalen het vermogen. Controleer de lengte in de winkelwagen en de actuele prijs.
 
 :::product
 name_en: Voldt Type 2 to Type 2 cable

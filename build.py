@@ -899,6 +899,27 @@ article.narrow > h1{margin-left:14px}article.narrow .cform{margin-left:14px}
 .mintro{font-size:1.08rem;line-height:1.55;color:var(--muted);margin:0 0 18px;max-width:none}
 .mfacts{margin:0 0 4px}
 .mfacts h2{font-size:1.15rem;margin:0 0 8px}
+.mprodlink{margin:-4px 0 16px}
+.mprodlink a{color:#9ad7ff;font-weight:800;text-decoration:none}
+.mprodlink a:hover,.mprodlink a:focus-visible{text-decoration:underline;text-underline-offset:3px}
+.mlead{margin:0 0 8px;color:var(--muted);font-size:.95rem;line-height:1.45}
+.mgroup h3{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin:18px 0 8px;font-size:1.02rem;line-height:1.3;color:#fff}
+.mgroup h3 a{font-size:.78rem;font-weight:800;color:#9ad7ff;text-decoration:none;white-space:nowrap}
+.mgroup h3 a:hover,.mgroup h3 a:focus-visible{text-decoration:underline;text-underline-offset:3px}
+.mshops{display:grid;grid-template-columns:1fr;gap:12px;margin:0}
+@media (min-width:900px){.mshops{grid-template-columns:1fr 1fr}}
+.mshop{display:grid;grid-template-columns:96px minmax(0,1fr);gap:8px 12px;align-items:start;padding:12px;border:1px solid #2a3646;border-radius:14px;background:#141414}
+.mshot{display:block;background:var(--fg);border-radius:10px;overflow:hidden;aspect-ratio:1}
+.mshot img{width:100%;height:100%;object-fit:contain;padding:10%;box-sizing:border-box;display:block;background:transparent}
+.mshop .mname{margin:0;font-size:.98rem;line-height:1.25;font-weight:800}
+.mshop .mname a{color:#fff;text-decoration:none}
+.mshop .mname a:hover,.mshop .mname a:focus-visible{text-decoration:underline;text-underline-offset:3px}
+.mshop .fits{margin:4px 0 0;color:#c5ced8;font-size:.78rem;line-height:1.35}
+.mshop .popt{margin:4px 0 0}
+.mshop .stars{margin:6px 0 0}
+.mshop .pcost{margin:4px 0 0}
+.mshop .btn{margin-top:8px}
+@media (max-width:640px){.mshop{grid-template-columns:84px minmax(0,1fr);padding:10px}}
 .starthere{margin:6px 0 26px;padding:16px 16px 18px;border:1px solid rgba(0,212,255,.35);border-radius:12px;background:rgba(0,212,255,.06)}
 .starthere>h2{margin:0 0 4px;font-size:1.25rem}
 .starthere>.sub{margin:0 0 12px}
@@ -2461,7 +2482,7 @@ def modelinfo(key, lang, heading=True):
     return (f'<article class="minfo">{img}{title}'
             f'<div class="prose"><h2>{L["i_specs"]}</h2><table class="specs">{rows}</table>'
             f'<h2>{L["i_watch"]}</h2>{li(t["watch"])}<h2>{L["i_special"]}</h2>{li(t["special"])}'
-            f'<h2>{L["i_acc"]}</h2>{model_accessory_links(key, lang)}</div>'
+            f'<h2>{L["i_acc"]}</h2>{model_accessory_links(key, lang) or ("<p>" + L["i_acc_soon"] + "</p>")}</div>'
             f'<details class="sources"><summary>{L["sources"]} ({len(inf["sources"])})</summary><ul>{src}</ul></details></article>')
 
 
@@ -4265,8 +4286,8 @@ def models_overview(lang):
     L = LANGS[lang]
     nav, ld = crumbs(lang, [(L["nav_models"], "category/models/")])
     intro = ({
-        "en": "Every Tesla version the site covers, grouped by model. Open a card for the facts and the articles.",
-        "nl": "Elke Tesla-uitvoering die de site volgt, per model gegroepeerd. Open een kaart voor de feiten en de artikelen.",
+        "en": "Every Tesla version the site covers, grouped by model. Open a card for the facts and the articles. Model 3, Model Y, Model S, Model X and Cybertruck also list the buying-guide products for that car.",
+        "nl": "Elke Tesla-uitvoering die de site volgt, per model gegroepeerd. Open een kaart voor de feiten en de artikelen. Model 3, Model Y, Model S, Model X en Cybertruck tonen ook de koopgidsproducten voor die auto.",
     })[lang]
     sections = []
     listed = []
@@ -4278,8 +4299,13 @@ def models_overview(lang):
             listed.append(key)
             n += 1
         title = MODELS[root]["name"]
+        plink = ""
+        if root in ("model-3", "model-y", "model-s", "model-x", "cybertruck"):
+            plabel = "Products for this model" if lang == "en" else "Producten voor dit model"
+            plink = (f'<p class="mprodlink"><a href="{url(lang, "model/" + root + "/")}#products">'
+                     f'{esc(plabel)}</a></p>')
         sections.append(
-            f'<section><h2 class="rubh">{esc(title)}</h2><div class="mgrid">{"".join(cards)}</div></section>')
+            f'<section><h2 class="rubh">{esc(title)}</h2>{plink}<div class="mgrid">{"".join(cards)}</div></section>')
     body = (f'{nav}<header class="hubhead"><h1>{esc(L["nav_models"])}</h1>'
             f'<p class="lead">{esc(intro)}</p></header>{"".join(sections)}')
     return body, ld, intro, listed
@@ -4391,11 +4417,10 @@ def model_hub(key, items, lang):
         if kids:
             vlabel = "Versions" if lang == "en" else "Uitvoeringen"
             versions = f'<h2 class="rubh">{esc(vlabel)}</h2><div class="mgrid">{"".join(model_card(k, lang) for k in kids)}</div>'
-    acc = ""
-    if str(key).startswith(("model-3", "model-y")):
-        acc = f'<section class="mfacts"><h2>{esc(L["i_acc"])}</h2>{model_accessory_links(key, lang)}</section>'
+    products = model_accessory_links(key, lang)
+    acc = f'<section class="mfacts" id="products">{products}</section>' if products else ""
     body = (f'{nav}<header class="hubhead"><h1>{esc(heading_name)}</h1></header>'
-            f'{hero}<p class="mintro">{esc(intro)}</p>{extra}{versions}{specs}{sourced}{acc}{listing}')
+            f'{hero}<p class="mintro">{esc(intro)}</p>{extra}{versions}{acc}{specs}{sourced}{listing}')
     desc = re.sub(r"\s+", " ", intro).strip()
     if len(desc) > 180:
         desc = desc[:179].rsplit(" ", 1)[0] + "…"
@@ -7184,23 +7209,233 @@ def buying_guides_side(lang):
     return guide_category_cards(lang)
 
 
+# Which model pages may show a buying-guide product. A family key covers every version.
+# A version key also shows on the family page. Unlisted products stay off the model pages.
+_SHOP_ROOTS = ("model-3", "model-y", "model-s", "model-x", "cybertruck")
+_SHOP_ALL = _SHOP_ROOTS
+_SHOP_S3XY = ("model-s", "model-3", "model-x", "model-y")
+_SHOP_3Y = ("model-3", "model-y")
+_SHOP_3_NEW = ("model-3-highland", "model-3-standard", "model-3-performance")
+_SHOP_Y_NEW = ("model-y-juniper", "model-y-standard", "model-y-performance")
+_SHOP_Y_NOT_STD = ("model-y-juniper", "model-y-performance")
+_SHOP_S = ("model-s-classic", "model-s-2021", "model-s-plaid")
+PRODUCT_FITS = {
+    "B0DZ5JB22G": _SHOP_Y_NEW,
+    "ali:1005010376504158": _SHOP_Y_NEW,
+    "B0FJM6K3JP": _SHOP_3_NEW,
+    "ali:1005006925057063": _SHOP_3_NEW,
+    "B0D86ZNG7P": _SHOP_S,
+    "B0D482CTSQ": ("model-x-classic", "model-x-2021"),
+    "B0FLQ76FVW": ("model-y-classic",) + _SHOP_Y_NEW,
+    "B09SWFCTFQ": ("model-y-classic",),
+    "ali:1005007345340044": _SHOP_3Y,
+    "B08FHQMF9B": _SHOP_S,
+    "B0D6WHB248": ("model-x-classic", "model-x-2021"),
+    "B084BNC3FG": ("model-3-classic", "model-y-classic"),
+    "ali:1005006863642965": ("model-3-classic", "model-y-classic"),
+    "B0FPJ6RYFN": _SHOP_3_NEW + ("model-y-juniper", "model-y-standard", "model-y-performance", "model-y-l"),
+    "ali:1005010770297507": _SHOP_Y_NEW,
+    "B0GCJ3PTFB": ("model-y-performance",),
+    "B0GKNPSHWW": ("model-y-juniper", "model-y-performance"),
+    "B0DRM8SX2F": ("cybertruck",),
+    "B0G8DLPLKY": ("model-y-classic",),
+    "ali:1005007038490302": ("model-y-classic",),
+    "B0H6S8FSY2": ("model-y-classic",) + _SHOP_Y_NEW,
+    "B0GXFS3CBT": _SHOP_Y_NEW,
+    "ali:1005006863760881": _SHOP_Y_NEW,
+    "B0D417KB5H": ("model-y-classic",),
+    "ali:1005005317345951": _SHOP_3Y,
+    "B0CBMWHRMG": ("model-y-classic",),
+    "B0D93KH2YP": ("model-y-classic",),
+    "B0DD7GMH71": _SHOP_S3XY,
+    "B0C6QLT3XP": _SHOP_3Y,
+    "B0CKFCFZZH": _SHOP_3Y,
+    "B0GV1CMHFK": _SHOP_3_NEW + _SHOP_Y_NOT_STD,
+    "ali:1005011559038478": _SHOP_3_NEW + _SHOP_Y_NEW,
+    "B0FKG2Q2MX": _SHOP_3_NEW + _SHOP_Y_NOT_STD,
+    "B0H3ZZ37J1": ("model-y-standard",),
+    "B0H1BLC3D3": ("model-y-standard",),
+    "B0BH7SFTYZ": ("model-3-classic", "model-y-classic"),
+    "ali:1005008529747643": _SHOP_3Y,
+    "B0FLRDQYV3": ("model-3-highland", "model-y-juniper", "model-y-standard"),
+    "B0DNW8TQ27": ("model-3", "model-y", "cybertruck"),
+    "B0BW16BBKQ": _SHOP_ALL,
+    "B078C74CDY": _SHOP_ALL,
+    "B0CS6234MR": _SHOP_3Y,
+    "B0DTGPFNFK": _SHOP_ALL,
+    "ali:1005011680172773": _SHOP_ALL,
+    "B0FCSGJ6GV": _SHOP_ALL,
+    "B0BNBR336V": _SHOP_ALL,
+    "B0FK4CP262": _SHOP_S3XY,
+    "B073VB41W3": _SHOP_ALL,
+    "ali:1005006727846206": _SHOP_ALL,
+    "B0D1Y832ZK": _SHOP_ALL,
+    "B0DR1Y8NNZ": _SHOP_ALL,
+    "B07D1KF73V": _SHOP_ALL,
+    "B00P8XQPY4": _SHOP_ALL,
+    "B0H833HBGP": _SHOP_ALL,
+    "B003AW3C7I": _SHOP_ALL,
+    "B08T69QZZX": _SHOP_ALL,
+    "B0G4KTV9QY": _SHOP_ALL,
+}
+
+
+def _shop_root(key):
+    row = MODELS.get(key) or {}
+    return row.get("parent") or key
+
+
+def _guide_product_key(fields):
+    asin = _product_asin(str((fields or {}).get("url") or ""))
+    if asin:
+        return asin
+    item = str((fields or {}).get("item") or "").strip()
+    if not item:
+        match = re.search(r"ali-(\d{8,})", str((fields or {}).get("image") or ""))
+        if match:
+            item = match.group(1)
+    return f"ali:{item}" if item else ""
+
+
+def _product_on_model(tokens, page_key):
+    """A family page shows every product tagged for that family. A version page shows its own tag or a family-wide tag."""
+    root = _shop_root(page_key)
+    if root not in _SHOP_ROOTS:
+        return False
+    family_page = page_key == root
+    for token in tokens:
+        token_root = _shop_root(token)
+        if token_root != root:
+            continue
+        if token == root or family_page or token == page_key:
+            return True
+    return False
+
+
+def _model_card_photo(fields, amazon_ok, ali_ok):
+    local = guide_local_image(fields)
+    if local:
+        return local
+    item_id = str(fields.get("item") or "").strip()
+    if not item_id:
+        match = re.search(r"ali-(\d{8,})", str(fields.get("image") or ""))
+        if match:
+            item_id = match.group(1)
+    if ali_ok and item_id:
+        remote = ALI_GALLERIES.get(item_id) or []
+        if remote:
+            return remote[0]
+    if amazon_ok:
+        gallery = AMAZON_GALLERIES.get(_product_asin(str(fields.get("url") or "")), [])
+        if gallery:
+            return gallery[0]
+    return ""
+
+
+def _model_shop_card(fields, lang, guide_href):
+    name = fields.get(f"name_{lang}") or fields.get("name_en") or ""
+    if not name:
+        return ""
+    href = guide_amazon(str(fields.get("url") or ""), lang)
+    host = ""
+    if href.startswith("https://") and href.count("/") >= 2:
+        host = href.split("/")[2].lower()
+    amazon_ok = host in ("www.amazon.nl", "amazon.nl")
+    ali = ali_href(fields.get("ali_url"), lang)
+    if amazon_ok and ali:
+        return ""
+    if lang == "nl":
+        button = "Bekijk op Amazon" if amazon_ok else "Bekijk op AliExpress"
+    else:
+        button = "Check out Amazon" if amazon_ok else "Check out AliExpress"
+    store = href if amazon_ok else ali
+    if not store:
+        return ""
+    fit = fields.get(f"fits_{lang}") or fields.get("fits_en") or fields.get(f"note_{lang}") or fields.get("note_en") or ""
+    option = fields.get(f"option_{lang}") or fields.get("option_en") or ""
+    if amazon_ok:
+        price_key = _product_asin(href)
+    else:
+        price_key = _guide_product_key(fields)
+    photo = _model_card_photo(fields, amazon_ok, bool(ali))
+    shot = ""
+    if photo:
+        shot = (f'<a class="mshot" href="{esc(guide_href)}">'
+                f'<img src="{esc(photo)}" alt="" width="96" height="96" loading="lazy" decoding="async"></a>')
+    fit_html = f'<p class="fits">{esc(fit)}</p>' if str(fit).strip() else ""
+    option_html = f'<p class="popt">{esc(option)}</p>' if str(option).strip() else ""
+    cost = price_html(price_key, lang) if price_key else ""
+    stars = rating_html(price_key, lang) if price_key else ""
+    link = (f'<div class="store-btns"><a class="btn" href="{esc(store)}" rel="sponsored nofollow noopener" '
+            f'target="_blank">{esc(button)}</a></div>')
+    return (f'<article class="mshop">{shot}<div>'
+            f'<p class="mname"><a href="{esc(guide_href)}">{esc(name)}</a></p>'
+            f'{fit_html}{option_html}{stars}{cost}{link}</div></article>')
+
+
 def model_accessory_links(key, lang):
-    """Model 3 and Model Y pages list the buying guides. Other cars keep the coming-soon line."""
-    L = LANGS[lang]
-    if not str(key).startswith(("model-3", "model-y")):
-        return f'<p class="soon">{L["i_acc_soon"]}</p>'
-    docs = [d for d in GUIDE_DOCS if not d.get("template")]
-    if not docs:
-        return f'<p class="soon">{L["i_acc_soon"]}</p>'
-    lead = ("Buying guides for a Model 3 or a Model Y. Match the year on the product page."
-            if lang == "en" else
-            "Koopgidsen voor een Model 3 of een Model Y. Stem het jaar af op de productpagina.")
-    items = []
-    for doc in docs:
-        name = doc["meta"].get(f"title_{lang}") or doc["meta"].get("title_en") or doc["slug"]
-        href = url(lang, guides_path(lang) + doc["slug"] + "/")
-        items.append(f'<li><a href="{esc(href)}">{esc(name)}</a></li>')
-    return f'<p>{esc(lead)}</p><ul>{"".join(items)}</ul>'
+    """Compact buying-guide cards for this model. Other cars stay without a product list."""
+    if _shop_root(key) not in _SHOP_ROOTS or not GUIDE_DOCS:
+        return ""
+    if not getattr(model_accessory_links, "checked", False):
+        found = set()
+        for doc in GUIDE_DOCS:
+            if doc.get("template"):
+                continue
+            for kind, fields in doc.get("pieces") or []:
+                if kind == "product" and isinstance(fields, dict):
+                    product_key = _guide_product_key(fields)
+                    if product_key:
+                        found.add(product_key)
+        missing = [product_key for product_key in PRODUCT_FITS if product_key not in found]
+        if missing:
+            raise SystemExit("product fit keys missing from guides: " + ", ".join(missing))
+        model_accessory_links.checked = True
+    docs = {doc["slug"]: doc for doc in GUIDE_DOCS if not doc.get("template")}
+    labels = {row[0]: row for row in GUIDE_CATS}
+    seen = set()
+    groups = []
+    for slug in [row[0] for row in GUIDE_CATS]:
+        doc = docs.get(slug)
+        if not doc:
+            continue
+        cards = []
+        for kind, fields in doc.get("pieces") or []:
+            if kind != "product" or not isinstance(fields, dict):
+                continue
+            product_key = _guide_product_key(fields)
+            tokens = PRODUCT_FITS.get(product_key)
+            if not product_key or product_key in seen or not tokens:
+                continue
+            if not _product_on_model(tokens, key):
+                continue
+            seen.add(product_key)
+            guide_href = url(lang, guides_path(lang) + slug + "/")
+            card = _model_shop_card(fields, lang, guide_href)
+            if card:
+                cards.append(card)
+        if not cards:
+            continue
+        row = labels.get(slug)
+        label = (row[1] if lang == "en" else row[2]) if row else slug
+        guide_href = url(lang, guides_path(lang) + slug + "/")
+        guide_word = "Guide" if lang == "en" else "Gids"
+        groups.append(
+            f'<div class="mgroup"><h3>{esc(label)} '
+            f'<a href="{esc(guide_href)}">{esc(guide_word)}</a></h3>'
+            f'<div class="mshops">{"".join(cards)}</div></div>')
+    if not groups:
+        return ""
+    if lang == "en":
+        heading = "Products for this model"
+        lead = ("Buying-guide products listed for this model, plus chargers, cables, a pump, a USB stick, "
+                "cabin cleaners and a Starlink kit. Read the fit line and check the current price.")
+    else:
+        heading = "Producten voor dit model"
+        lead = ("Koopgidsproducten die dit model noemen, plus laders, kabels, een pomp, een USB-stick, "
+                "interieurreinigers en een Starlink-set. Lees de pasregel en kijk de actuele prijs na.")
+    return (f'<h2>{esc(heading)}</h2><p class="mlead">{esc(lead)}</p>{"".join(groups)}'
+            f'{disclosure_line(lang, "affend")}')
 
 
 def evergreen_side(lang):

@@ -13,8 +13,6 @@ name_en: GAFAT mats for Model Y Juniper
 name_nl: GAFAT-matten voor Model Y Juniper
 pros_en: TPE all-weather mats | Listed for the 2025 to 2027 Model Y Juniper | Standard, Premium and Performance
 pros_nl: Allweer-matten van TPE | Vermeld voor de Model Y Juniper van 2025 tot 2027 | Standard, Premium en Performance
-fits_en: A 2025 to 2027 Model Y Juniper. An older Model Y needs a different set.
-fits_nl: Een Model Y Juniper van 2025 tot 2027. Een oudere Model Y heeft een andere set nodig.
 url: https://www.amazon.nl/dp/B0DZ5JB22G
 button_en: Compare on Amazon
 button_nl: Vergelijk op Amazon
@@ -34,8 +32,6 @@ name_en: 3W mats for Model 3 Highland
 name_nl: 3W-matten voor Model 3 Highland
 pros_en: Six-piece set | Listed for Model 3 Highland 2024 to 2025 | The title names floor mats
 pros_nl: Zesdelige set | Vermeld voor Model 3 Highland 2024 tot 2025 | De titel noemt vloermatten
-fits_en: A Model 3 Highland of 2024 to 2025, as the title states. The title also names trunk mats in the set.
-fits_nl: Een Model 3 Highland van 2024 tot 2025, zoals de titel zegt. De titel noemt ook kofferbakmatten in de set.
 url: https://www.amazon.nl/dp/B0FJM6K3JP
 button_en: Compare on Amazon
 button_nl: Vergelijk op Amazon
@@ -57,8 +53,6 @@ name_en: MOTOS mats for Model S
 name_nl: MOTOS-matten voor Model S
 pros_en: The title says floor mats and case mats | Listed for Model S 2012 to 2021 | The title says all-weather and anti-slip
 pros_nl: De titel noemt vloermatten en koffermatten | Vermeld voor Model S 2012 tot 2021 | De titel zegt all-weather en antislip
-fits_en: A Model S of 2012 to 2021, as the title states. Not a Model 3 or Model Y set.
-fits_nl: Een Model S van 2012 tot 2021, zoals de titel zegt. Geen set voor een Model 3 of Model Y.
 url: https://www.amazon.nl/dp/B0D86ZNG7P
 button_en: Check out Amazon
 button_nl: Bekijk op Amazon
@@ -69,8 +63,6 @@ name_en: Kovvar mats for Model X
 name_nl: Kovvar-matten voor Model X
 pros_en: Three-piece set | Listed for Model X 2016 to 2026 | The title says a five-seat version of 2016 to 2022
 pros_nl: Driedelige set | Vermeld voor Model X 2016 tot 2026 | De titel noemt een vijfpersoonsversie van 2016 tot 2022
-fits_en: The title names a Model X and a five-seat version of 2016 to 2022. It calls the mats polyamide high-pile, not rubber.
-fits_nl: De titel noemt een Model X en een vijfpersoonsversie van 2016 tot 2022. Hij noemt de matten polyamide met hoge pool, geen rubber.
 url: https://www.amazon.nl/dp/B0D482CTSQ
 button_en: Check out Amazon
 button_nl: Bekijk op Amazon

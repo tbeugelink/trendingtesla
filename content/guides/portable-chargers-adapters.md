@@ -13,8 +13,6 @@ name_en: Juice Booster 2 Basic Set
 name_nl: Juice Booster 2 Basic Set
 pros_en: Mobile Type 2 set | Schuko adapter and a CEE32 adapter in the basic set | Rated up to 22 kW on the right socket
 pros_nl: Mobiele Type 2-set | Schuko-adapter en een CEE32-adapter in de basisset | Tot 22 kW op het juiste stopcontact
-fits_en: A Tesla away from home, when the adapter matches the socket. 22 kW needs the industrial socket and a car that accepts it.
-fits_nl: Een Tesla buitenshuis, als de adapter bij het stopcontact past. 22 kW vraagt het krachtstroomstopcontact en een auto die dat aankan.
 url: https://www.amazon.nl/dp/B078C74CDY
 button_en: Compare on Amazon
 button_nl: Vergelijk op Amazon
@@ -25,8 +23,6 @@ name_en: dé EV Charger mobile Type 2
 name_nl: dé EV Charger mobiel Type 2
 pros_en: Mobile Type 2 unit | 7 m cable | Schuko adapter, listed for Model Y and Model 3
 pros_nl: Mobiele Type 2-unit | Kabel van 7 m | Schuko-adapter, vermeld voor Model Y en Model 3
-fits_en: A Model Y or Model 3 on a normal wall socket. You will not see 22 kW from a household outlet.
-fits_nl: Een Model Y of Model 3 op een normaal stopcontact. Op een huishoudstopcontact zie je geen 22 kW.
 url: https://www.amazon.nl/dp/B0CS6234MR
 button_en: Compare on Amazon
 button_nl: Vergelijk op Amazon

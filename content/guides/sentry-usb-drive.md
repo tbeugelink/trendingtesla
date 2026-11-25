@@ -13,8 +13,6 @@ name_en: Samsung BAR Plus 256 GB
 name_nl: Samsung BAR Plus 256 GB
 pros_en: USB-A stick | 256 GB | Small enough for the glovebox port used for Sentry clips
 pros_nl: USB-A-stick | 256 GB | Klein genoeg voor de poort in het dashboardkastje voor Sentry-beelden
-fits_en: A Tesla that saves Sentry clips and needs more room. Format the stick in the car. All-day writing wears a flash drive.
-fits_nl: Een Tesla die Sentry-beelden bewaart en meer ruimte nodig heeft. Formatteer de stick in de auto. Schrijven de hele dag slijt een flashdrive.
 url: https://www.amazon.nl/dp/B07D1KF73V
 button_en: Compare on Amazon
 button_nl: Vergelijk op Amazon
@@ -25,8 +23,6 @@ name_en: SanDisk Ultra 128 GB USB stick
 name_nl: SanDisk Ultra USB-stick van 128 GB
 pros_en: USB 3.0 flash drive | 128 GB | Retractable design
 pros_nl: USB 3.0-flashdrive | 128 GB | Intrekbaar ontwerp
-fits_en: For the port used for Sentry clips. The title calls it a drive for laptops and desktop PCs. The page chart lists USB Type-A for the Ultra USB 3.0.
-fits_nl: Voor de poort die Sentry-beelden bewaart. De titel noemt een drive voor laptops en desktop-pc's. De tabel op de pagina noemt USB Type-A voor de Ultra USB 3.0.
 url: https://www.amazon.nl/dp/B00P8XQPY4
 button_en: Compare on Amazon
 button_nl: Vergelijk op Amazon

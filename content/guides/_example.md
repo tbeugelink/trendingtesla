@@ -13,8 +13,6 @@ name_en: Product name
 name_nl: Productnaam
 pros_en: Short plus
 pros_nl: Kort pluspunt
-cons_en: Short minus
-cons_nl: Kort minpunt
 url: https://www.amazon.nl/
 button_en: Compare on Amazon
 button_nl: Vergelijk op Amazon

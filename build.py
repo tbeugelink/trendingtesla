@@ -911,7 +911,7 @@ article.narrow > h1{margin-left:14px}article.narrow .cform{margin-left:14px}
 .pdrop.tone-tesla{--accent:#e31937;--accent-ink:#ff8a9b}
 .pdrop.tone-energy{--accent:#4cd964;--accent-ink:#b8ffc6}
 .pdrop.tone-spacex{--accent:#ff7a00;--accent-ink:#ffc48a}
-.pdrop.tone-link{--accent:#00d1ff;--accent-ink:#a6f4ff}
+.pdrop.tone-link{--accent:#7c5cff;--accent-ink:#d9ccff}
 .pdrop.tone-spacexsi{--accent:#ffc400;--accent-ink:#ffe28a}
 .pdrop.tone-neural{--accent:#ff2d95;--accent-ink:#ffb3d6}
 .pdrop.tone-boring{--accent:#2f6bff;--accent-ink:#b3c8ff}
@@ -1168,14 +1168,14 @@ header.hb .pnav>.is-parked{display:none}
 .pv-row:hover .pv-hl b,.pv-row:focus-visible .pv-hl b{color:#fff;text-decoration:underline;text-underline-offset:2px}
 .pv-row>.pv-mark{display:flex;width:16px;height:16px;align-items:center;justify-content:center;justify-self:center;color:#f0b429}
 .pv-row>.pv-mark .ndot{width:7px;height:7px;margin:0;display:block;transform:none}
-.pv-row>.pv-mark svg{width:8px;height:8px;display:block;fill:currentColor}
+.pv-row>.pv-mark svg{width:12px;height:12px;display:block;fill:currentColor}
 .ndot{width:7px;height:7px;border-radius:50%;background:#8f9db0;display:inline-block}
 .ndot.tesla{background:#e31937}.ndot.energy{background:#4cd964}.ndot.spacex{background:#ff7a00}
-.ndot.starlink{background:#00d1ff}.ndot.xai{background:#ffc400}.ndot.neural{background:#ff2d95}
+.ndot.starlink{background:#7c5cff}.ndot.xai{background:#ffc400}.ndot.neural{background:#ff2d95}
 .ndot.boring{background:#2f6bff}.ndot.x{background:#f4f4f5}.ndot.other{background:#8f9db0}
 .lmeta .pv-mark{display:inline-flex;width:14px;height:1em;align-items:center;justify-content:center;margin-right:4px;vertical-align:-1px;color:#f0b429}
 .lmeta .pv-mark .ndot{width:7px;height:7px;margin:0}
-.lmeta .pv-mark svg{width:8px;height:8px;display:block;fill:currentColor}
+.lmeta .pv-mark svg{width:12px;height:12px;display:block;fill:currentColor}
 .pv-side h2{font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#fff;border-top:3px solid var(--red);padding-top:8px;margin:0 0 8px}
 .pv-side section{margin:0 0 18px}
 .pv-side a{text-decoration:none;color:inherit}
@@ -1399,7 +1399,7 @@ article.money .lmeta a.lname:hover{text-decoration:underline}
 .eco-card.tesla,.layerhead.tesla{background:#3a0812;border-color:#e31937;color:#ff8a9b}
 .eco-card.energy,.layerhead.energy{background:#063216;border-color:#4cd964;color:#b8ffc6}
 .eco-card.spacex,.layerhead.spacex{background:#3a1400;border-color:#ff7a00;color:#ffc48a}
-.eco-card.link,.layerhead.link{background:#043040;border-color:#00d1ff;color:#a6f4ff}
+.eco-card.link,.layerhead.link{background:#1c1038;border-color:#7c5cff;color:#d9ccff}
 .eco-card.spacexsi,.layerhead.spacexsi{background:#3a2c04;border-color:#ffc400;color:#ffe28a}
 .eco-card.neural,.layerhead.neural,.eco-co.neural{background:#3a0824;border-color:#ff2d95;color:#ffb3d6}
 .eco-card.boring,.layerhead.boring,.eco-co.boring{background:#0c1840;border-color:#2f6bff;color:#b3c8ff}
@@ -4283,13 +4283,13 @@ def drawer_links(lang, active):
     return "".join(out)
 
 
-def crumbs(lang, parts, current=True):
-    """BreadcrumbList JSON-LD. The visible trail was removed from the page.
+def crumbs(lang, parts, current=True, visible=False):
+    """BreadcrumbList JSON-LD. The visible trail is off unless visible=True.
 
     By default the last crumb is the current page. Pass current=False when
     every segment should point at its hub (article pages). A part whose path
-    is None is stored as a name only. The first return value is empty so
-    callers can keep unpacking (nav, ld) without emitting a visible trail.
+    is None is stored as a name only. Listing pages keep the trail hidden
+    because the rubric under each image is the only category line there.
     """
     chain = [(LANGS[lang]["home"], "")] + list(parts)
     lis = []
@@ -4309,7 +4309,8 @@ def crumbs(lang, parts, current=True):
             lis.append(f'<li><span>{esc(name)}</span></li>')
         ld_items.append(item)
     ld = {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": ld_items}
-    return "", ld
+    nav = f'<nav class="crumbs" aria-label="{esc(label)}"><ol>{"".join(lis)}</ol></nav>' if visible else ""
+    return nav, ld
 
 
 def ld_script(obj):
@@ -4318,7 +4319,7 @@ def ld_script(obj):
 
 
 _LIST_EVERY = 5
-_REVIEW_STAR = ('<svg viewBox="0 0 20 20" aria-hidden="true" focusable="false">'
+_REVIEW_STAR = ('<svg viewBox="1.5 0.85 17 17" aria-hidden="true" focusable="false">'
                  '<path d="M10 1.6 12.6 7l5.9.5-4.5 3.8 1.4 5.8L10 14.4 4.6 17.1 6 11.3 1.5 7.5 7.4 7z"/></svg>')
 REVIEWS = []
 
@@ -4434,12 +4435,12 @@ def review_card(doc, lang):
 
 
 def review_product_card(doc, lang):
-    bullets = doc.get("bullets") or {}
+    """Photo, name, stars, price and the store button. No bullet list on a review."""
     fields = {
         "name_en": (doc.get("product") or {}).get("en") or doc["en"]["title"],
         "name_nl": (doc.get("product") or {}).get("nl") or doc["nl"]["title"],
-        "pros_en": " | ".join(bullets.get("en") or []),
-        "pros_nl": " | ".join(bullets.get("nl") or []),
+        "pros_en": "",
+        "pros_nl": "",
         "url": f"https://www.amazon.nl/dp/{doc['asin']}",
     }
     return _guide_product(fields, lang)
@@ -4451,8 +4452,8 @@ def review_page(doc, lang):
     stamp = published(doc)
     body = (
         f'<article class="money"><h1 class="atitle">{esc(t["title"])}</h1>'
-        f'<p class="byline"><a href="{url(lang, "editorial/")}">{esc(LANGS[lang]["byline"])}</a></p>'
-        f'<p class="smeta"><time datetime="{stamp.isoformat()}">{esc(fmt_date(doc["date"], lang))}</time></p>'
+        f'<p class="byline"><a href="{url(lang, "editorial/")}">{esc(LANGS[lang]["byline"])}</a>'
+        f' · <time datetime="{stamp.isoformat()}">{esc(fmt_date(doc["date"], lang))}</time></p>'
         f'<div class="prose">{t["body"]}</div>'
         f'{review_product_card(doc, lang)}'
         f'{disclosure_line(lang)}</article>')
@@ -4820,7 +4821,6 @@ def prev_next(a, arts, lang):
 def money_article(a, arts, lang):
     L = LANGS[lang]
     t = a[lang]
-    section, section_href = topic_meta(a, lang)
     nav, ld = article_crumbs(a, lang)
     toc, body = enrich(a, lang, with_toc=True)
     body = insert_mid(body, ad_html("mid_article", lang))
@@ -4833,8 +4833,7 @@ def money_article(a, arts, lang):
         f'<article class="money">'
         f'<h1 class="atitle">{esc(t["title"])}</h1>'
         f'<p class="byline"><a href="{url(lang, "editorial/")}">{L["byline"]}</a></p>'
-        f'<div class="srow"><p class="meta smeta"><a class="tag" href="{url(lang, section_href)}">{esc(section)}</a>'
-        f' · {when(a, lang)} · {read_time(a, lang)} {L["min"]}</p>'
+        f'<div class="srow"><p class="meta smeta">{when(a, lang)} · {read_time(a, lang)} {L["min"]}</p>'
         f'<div class="acts"><button class="act like" type="button" data-like="{a["slug"]}" aria-pressed="false" title="{esc(L["like"])}">{HEART_SVG}<span>0</span></button>'
         f'<button class="act save" type="button" data-save="{a["slug"]}" aria-pressed="false" title="{esc(L["save"])}" aria-label="{esc(L["save"])}">{BOOK_SVG}</button></div></div>'
         f'{chips}<p class="lead">{esc(t["description"])}</p>'
@@ -5051,7 +5050,7 @@ def article_crumb_parts(a, lang):
 
 def article_crumbs(a, lang):
     """Full path Home / Layer / Subtopic, each segment linked to its hub when one exists."""
-    return crumbs(lang, article_crumb_parts(a, lang), current=False)
+    return crumbs(lang, article_crumb_parts(a, lang), current=False, visible=True)
 
 
 def _rubric_pair(a, lang):
@@ -6220,9 +6219,10 @@ def pv_article(variant, a, arts, lang, live=False):
         toc_here, rail = "", toc
     else:
         toc_here, rail = toc, ""
+    date_line = f'<span class="lmeta">{when(a, lang)}</span>'
     article = (
         f'<article class="money">{media}'
-        f'{with_actions(rubric_line(a, lang, link=True), a["slug"], lang)}'
+        f'{with_actions(date_line, a["slug"], lang)}'
         f'<h1>{esc(t["title"])}</h1>'
         f'<p class="byline"><a href="{url(lang, "editorial/")}">{L["byline"]}</a>'
         f' · {read_time(a, lang)} {L["min"]}</p>{updated_html(a, lang)}{evergreen_article_links(a, lang)}'
@@ -7238,7 +7238,7 @@ def hub_article(lang, title, intro, updated, rubric, hero_id, sections):
     if credits:
         note = f'<p class="imgnote">{L["photocredit"]}: {"; ".join(credits)}.</p>'
     article = (
-        f'<article class="money">{hero}{rubric}'
+        f'<article class="money">{hero}'
         f'<h1>{esc(title)}</h1>'
         f'<p class="byline"><a href="{url(lang, "editorial/")}">{esc(L["byline"])}</a>{when}</p>'
         f'<p class="lead">{esc(intro)}</p>{toc}'
@@ -7261,7 +7261,7 @@ def starship_page(lang, arts):
              "Elke volledige Starship-vlucht: de datum, de afloop, en of de booster, het schip en een lading het haalden. "
              "De pagina komt uit een databestand, dus een nieuwe vlucht is een nieuwe rij.")
     ship_spec = {"key": "starship", "path": "starship/", "title": titles, "topics": ["starship"]}
-    nav, ld = crumbs(lang, topic_hub_crumb_parts(ship_spec, hub_articles(ship_spec, arts), lang))
+    nav, ld = crumbs(lang, topic_hub_crumb_parts(ship_spec, hub_articles(ship_spec, arts), lang), visible=True)
     updated = ("Updated on " if lang == "en" else "Bijgewerkt op ") + fmt_date(data["updated"], lang)
     labels = {
         "en": ("Latest result", "Next launch", "Not announced", "Flight archive", "Flight", "Date", "Outcome",
@@ -7334,9 +7334,8 @@ def starship_page(lang, arts):
         sections.append((labels[10], rel + map_link, ""))
     else:
         sections.append((labels[10], map_link, ""))
-    rubric = hub_rubric(lang, "SpaceX", "spacex/", "Starship", "starship/")
     article, image = hub_article(
-        lang, title, intro, data["updated"], rubric, "starship-5-catch", sections)
+        lang, title, intro, data["updated"], "", "starship-5-catch", sections)
     return nav + article, ld, intro, image
 
 
@@ -7728,7 +7727,16 @@ def evergreen_body(hub, arts, lang):
     if related:
         rel = (f'<p class="hubcount">{esc(_count_label(len(related), lang))}.</p>'
                + hub_cards(related, lang))
-    nav, ld = crumbs(lang, [(title, None)])
+    layer, layer_path, sub, sub_path = {
+        "fsd-europe": ("Tesla", "tesla/", "FSD", "fsd/"),
+        "deliveries": ("Tesla", "tesla/", "", ""),
+        "starlink-nl": ("Starlink", "starlink/", "", ""),
+    }.get(hub.get("key"), ("Tesla", "tesla/", "", ""))
+    trail = [(layer, layer_path)]
+    if sub:
+        trail.append((sub, sub_path))
+    trail.append((title, None))
+    nav, ld = crumbs(lang, trail, visible=True)
     photos = {
         "fsd-europe": {"2026-04-10": "fsd-modelx", "2026-06-17": "fsd-madmax"},
         "deliveries": {"2026-07-02": "deliver-3", "2026-10-02": "deliver-ct"},
@@ -7738,11 +7746,6 @@ def evergreen_body(hub, arts, lang):
         "fsd-europe": "fsd-tahoe",
         "deliveries": "deliver-y",
         "starlink-nl": "starlink-dish",
-    }
-    rubrics = {
-        "fsd-europe": ("Tesla", "tesla/", "FSD", "fsd/"),
-        "deliveries": ("Tesla", "tesla/", "", ""),
-        "starlink-nl": ("Starlink", "starlink/", "", ""),
     }
     sections = []
     for event in events:
@@ -7756,10 +7759,8 @@ def evergreen_body(hub, arts, lang):
         sections.append((label, inner, photos.get(date, "")))
     head = "On TrendingTesla" if lang == "en" else "Op TrendingTesla"
     sections.append((head, rel, ""))
-    layer, layer_path, sub, sub_path = rubrics.get(hub.get("key"), ("Tesla", "tesla/", "", ""))
-    rubric = hub_rubric(lang, layer, layer_path, sub, sub_path)
     article, image = hub_article(
-        lang, title, intro, updated, rubric, heroes.get(hub.get("key"), ""), sections)
+        lang, title, intro, updated, "", heroes.get(hub.get("key"), ""), sections)
     return nav + article, ld, intro, updated, image
 
 

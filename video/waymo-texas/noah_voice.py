@@ -1,7 +1,10 @@
 """Noah narration for the Texas register Short. Nothing is uploaded or published.
 
-Professional newsreader, slightly cheerful. No delivery tags: no [energetically],
-no [enthousiast]. Output: video/waymo-texas/out/<id>.mp3 and alignment.json.
+Same Noah voice. Delivery is a little more cheerful and lively than the first
+take, and still a professional newsreader. Eleven v4 has no style or speed
+slider, so the liveliness is a lower stability and a slightly lower clone
+strength. No delivery tags: no [energetically], no [enthousiast].
+Output: video/waymo-texas/out/<id>.mp3 and alignment.json.
 """
 import base64
 import json
@@ -24,10 +27,13 @@ def tts(text):
         "text": text,
         "model_id": "eleven_v4",
         "language_code": "en",
+        # v4 accepts stability, similarity_boost, and clone_strength only.
+        # Lower stability is more expressive. Lower clone strength leaves a
+        # little more room in the delivery. Similarity stays put so it is still Noah.
         "voice_settings": {
-            "stability": 0.42,
+            "stability": 0.30,
             "similarity_boost": 0.75,
-            "clone_strength": 0.35,
+            "clone_strength": 0.22,
         },
     }
     for attempt in range(4):
@@ -54,7 +60,7 @@ def main():
     result = {
         "voice_id": VOICE,
         "model": "eleven_v4",
-        "tone": "professional newsreader, slightly cheerful, no audio tags",
+        "tone": "Noah, professional, a little more cheerful and lively; stability 0.30, clone strength 0.22; no style slider on v4; no audio tags",
         "sentences": [],
     }
     for s in script["sentences"]:

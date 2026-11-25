@@ -2283,6 +2283,10 @@ def page(lang, path, title, description, body, og_type="website", extra_head="",
               '<path fill="currentColor" d="M14.6 10.4 22.3 1.5h-1.8l-6.7 7.6L8.3 1.5H1.6l8.2 11.3L1.4 22.5h1.8l7.2-8.2 5.8 8.2h6.7l-8.3-12.1Zm-2.5 2.9-.8-1.2L4.2 3h2.8l5.2 7.1.8 1.2 6.8 9.2h-2.8l-5.7-7.2Z"/></svg>')
     yt_icon = ('<svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true" focusable="false">'
                '<path fill="currentColor" d="M23 12.2s0-3.2-.4-4.6c-.2-.9-.9-1.6-1.8-1.8C19.2 5.4 12 5.4 12 5.4s-7.2 0-8.8.4c-.9.2-1.6.9-1.8 1.8C1 9 1 12.2 1 12.2s0 3.2.4 4.6c.2.9.9 1.6 1.8 1.8 1.6.4 8.8.4 8.8.4s7.2 0 8.8-.4c.9-.2 1.6-.9 1.8-1.8.4-1.4.4-4.6.4-4.6ZM9.8 15.6V8.8l6.2 3.4-6.2 3.4Z"/></svg>')
+    ig_icon = ('<svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true" focusable="false">'
+               '<path fill="currentColor" d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4Zm10 2H7a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2Zm-5 3.2A3.8 3.8 0 1 1 8.2 12 3.8 3.8 0 0 1 12 8.2Zm0 2A1.8 1.8 0 1 0 13.8 12 1.8 1.8 0 0 0 12 10.2ZM17.3 6.7a1 1 0 1 1-1 1 1 1 0 0 1 1-1Z"/></svg>')
+    fb_icon = ('<svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true" focusable="false">'
+               '<path fill="currentColor" d="M14.2 8.4V6.7c0-.7.2-1.1 1.2-1.1H17V3h-2C12.2 3 11.4 4.5 11.4 6.3v2.1H9.5v2.5h1.9V21h3.2v-9.9h2.2l.3-2.5h-2.9Z"/></svg>')
     tt_icon = ('<svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true" focusable="false">'
                '<path fill="currentColor" d="M19.6 6.7a4.8 4.8 0 0 1-3.8-4.2V2h-3.4v13.7a2.9 2.9 0 0 1-2.9 2.5 2.9 2.9 0 0 1-2.9-2.9 2.9 2.9 0 0 1 2.9-2.9c.3 0 .5 0 .8.1V9a6.3 6.3 0 0 0-.8 0 6.3 6.3 0 0 0-6.3 6.3 6.3 6.3 0 0 0 6.3 6.3 6.3 6.3 0 0 0 6.3-6.3V8.7a8.2 8.2 0 0 0 4.8 1.5V6.8a4.8 4.8 0 0 1-1-.1Z"/></svg>')
     rss_icon = ('<svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true" focusable="false">'
@@ -2290,7 +2294,9 @@ def page(lang, path, title, description, body, og_type="website", extra_head="",
     social = (
         f'<a class="soc" href="https://x.com/TrendingTeslaCo" rel="noopener" target="_blank">{x_icon}X</a>'
         f'<a class="soc" href="https://www.youtube.com/@TrendingTesla" rel="noopener" target="_blank">{yt_icon}YouTube</a>'
+        f'<a class="soc" href="https://www.instagram.com/trendingtesla/" rel="noopener" target="_blank">{ig_icon}Instagram</a>'
         f'<a class="soc" href="https://www.tiktok.com/@trendingtesla" rel="noopener" target="_blank">{tt_icon}TikTok</a>'
+        f'<a class="soc" href="https://www.facebook.com/profile.php?id=61595771443644" rel="noopener" target="_blank">{fb_icon}Facebook</a>'
         f'<a class="soc" href="{url(lang, "feed.xml")}">{rss_icon}RSS-feed</a>'
     )
     legal = flinks([
@@ -8461,7 +8467,7 @@ def build():
                    "url": SITE + url(lang), "inLanguage": lang,
                    "publisher": {"@type": "Organization", "name": NAME, "url": SITE,
                                  "logo": {"@type": "ImageObject", "url": SITE + "/favicon-512.png", "width": 512, "height": 512},
-                                 "sameAs": ["https://x.com/TrendingTeslaCo", "https://www.youtube.com/@TrendingTesla", "https://www.tiktok.com/@trendingtesla"]}}
+                                 "sameAs": ["https://x.com/TrendingTeslaCo", "https://www.youtube.com/@TrendingTesla", "https://www.instagram.com/trendingtesla/", "https://www.tiktok.com/@trendingtesla", "https://www.facebook.com/profile.php?id=61595771443644"]}}
         write(url(lang), page(lang, "", NAME, L["home_desc"], body,
                               extra_head=ld_script(site_ld) + ld_script(crumb_ld)))
 

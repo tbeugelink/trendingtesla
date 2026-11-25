@@ -115,4 +115,6 @@ export const REDIRECTS = {
   "/nl/agi-race/": "/nl/agi/",
   "/buying-guides/": "/guides/",
   "/nl/buying-guides/": "/nl/gidsen/",
+  "/guides/model-y-3-accessories/": "/guides/",
+  "/nl/gidsen/model-y-3-accessories/": "/nl/gidsen/",
 };

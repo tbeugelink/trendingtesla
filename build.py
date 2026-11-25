@@ -7216,13 +7216,13 @@ GUIDE_CATS = (
     ("windshield-shades", "Windshield", "Voorruit"),
     ("console-trays-model-3-y", "Console trays", "Consolebakjes"),
     ("key-card-holders", "Key cards", "Keycards"),
-    ("model-y-3-accessories", "Accessories", "Accessoires"),
+    ("door-sill-protectors", "Door sills", "Instaplijsten"),
 )
 
 
 # A later product, when the first photo is already another tile or is no longer the one to show.
 GUIDE_CAT_PICK = {
-    "model-y-3-accessories": "B09SWFCTFQ",
+    "door-sill-protectors": "B09TRRXNZC",
     "sentry-usb-drive": "B00P8XQPY4",
 }
 
@@ -7286,6 +7286,7 @@ def guide_category_cards(lang, current=""):
             "Interieurverzorging": "Interieur\u00adverzorging",
             "Telefoonhouders": "Telefoon\u00adhouders",
             "Bandenpompen": "Banden\u00adpompen",
+            "Instaplijsten": "Instap\u00adlijsten",
         }.get(name, name)
         href = url(lang, guides_path(lang) + slug + "/")
         photo = _guide_category_photo(doc, used_photos)
@@ -7447,7 +7448,7 @@ STRIP_LABELS = {
     "roof-shades-model-y": ("Roof shade", "Dakscherm"),
     "console-trays-model-3-y": ("Console", "Console"),
     "key-card-holders": ("Key card", "Keycard"),
-    "model-y-3-accessories": ("Extras", "Extra's"),
+    "door-sill-protectors": ("Door sill", "Instaplijst"),
 }
 
 

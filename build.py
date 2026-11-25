@@ -1586,8 +1586,9 @@ header.hb .bar .lang{margin-left:0;margin-right:0;flex:none;white-space:nowrap;t
 .gbox.noimg{grid-template-columns:1fr}
 .gbox h2{margin:0 0 6px;font-size:1.25rem;line-height:1.3;letter-spacing:-.015em;font-weight:800;color:#fff}
 .gbox h3{margin:8px 0 3px;font-size:.66rem;letter-spacing:.06em;text-transform:uppercase;color:var(--dim);font-weight:800}
-.gbox ul{margin:0;padding-left:1.05em}
-.gbox li{margin:0 0 2px;font-size:.8rem;line-height:1.35;color:#c5ced8}
+.gbox ul{margin:0;padding-left:0;list-style:none}
+.gbox li{position:relative;margin:0 0 2px;padding-left:15px;font-size:.8rem;line-height:1.35;color:#c5ced8}
+.gbox li::before{content:"";position:absolute;left:0;top:calc(0.5lh - 3px);width:6px;height:6px;border-radius:50%;background:var(--blue)}
 .gbox .btn,.pbox .btn{display:inline-flex;align-items:center;justify-content:center;background:var(--red);color:#fff;text-decoration:none;font-weight:800;font-size:.82rem;border-radius:8px;padding:10px 14px;line-height:1.3;text-align:center}
 article .prose .gbox h2,html body article .prose .gbox h2{border:0;padding:0;margin:0 0 6px;font-size:1.25rem;line-height:1.3;letter-spacing:-.015em}
 article .prose .gbox p,article .prose .gbox ul,article .prose .gbox li{margin-left:0;margin-right:0}
@@ -4377,12 +4378,8 @@ def list_marker(a=None, star=False):
 
 
 def marked_meta(a, lang, stamp="", link=False):
-    """Rubric with the ecosystem dot before the time."""
-    meta = rubric_line(a, lang, stamp, link)
-    mark = list_marker(a)
-    if meta.startswith('<span class="lmeta">'):
-        return meta.replace('<span class="lmeta">', '<span class="lmeta">' + mark, 1)
-    return mark + meta
+    """Rubric and time on a photo card. The ecosystem dot stays on the text list only."""
+    return rubric_line(a, lang, stamp, link)
 
 
 def review_inserts(n_news, skip=0):
@@ -4424,23 +4421,24 @@ def review_row(doc, lang):
 
 
 def review_card(doc, lang):
-    """News card frame. A star replaces the ecosystem dot. No buying-guide label."""
+    """News card frame. Time only, same as the other photo cards. No buying-guide label."""
     title = doc[lang]["title"]
     href = review_href(doc, lang)
     src = (AMAZON_GALLERIES.get(doc["asin"]) or [""])[0]
     photo = still_box("div", "im zimg", src, title, SIZES_GRID, lazy=True) if src else ""
-    meta = f'<span class="lmeta">{list_marker(star=True)}{when(doc, lang)}</span>'
+    meta = f'<span class="lmeta">{when(doc, lang)}</span>'
     return (f'<div class="card is-review"><a class="lgo" href="{href}">{photo}</a>'
             f'<div class="body">{meta}<a class="lgo" href="{href}"><h2>{esc(title)}</h2></a></div></div>')
 
 
 def review_product_card(doc, lang):
-    """Photo, name, stars, price and the store button. No bullet list on a review."""
+    """Same product card as a guide: photo, six benefit lines, stars, price and the store button."""
+    bullets = doc.get("bullets") or {}
     fields = {
         "name_en": (doc.get("product") or {}).get("en") or doc["en"]["title"],
         "name_nl": (doc.get("product") or {}).get("nl") or doc["nl"]["title"],
-        "pros_en": "",
-        "pros_nl": "",
+        "pros_en": " | ".join(bullets.get("en") or []),
+        "pros_nl": " | ".join(bullets.get("nl") or []),
         "url": f"https://www.amazon.nl/dp/{doc['asin']}",
     }
     return _guide_product(fields, lang)

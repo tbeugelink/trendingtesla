@@ -905,11 +905,11 @@ article.narrow > h1{margin-left:14px}article.narrow .cform{margin-left:14px}
 .pstrip{display:flex;flex-wrap:nowrap;gap:10px;overflow-x:auto;overflow-y:hidden;margin:6px 0 22px;padding:2px 2px 8px;scroll-snap-type:x proximity;scroll-padding-inline:2px;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;scrollbar-width:thin;scrollbar-color:rgba(255,255,255,.28) transparent}
 .pstrip::-webkit-scrollbar{height:4px}
 .pstrip::-webkit-scrollbar-thumb{background:rgba(255,255,255,.28);border-radius:99px}
-.ptile{flex:0 0 104px;width:104px;scroll-snap-align:start;display:flex;flex-direction:column;align-items:center;gap:6px;box-sizing:border-box;padding:8px 8px 7px;border:1px solid #2a3646;border-radius:12px;background:#141414;text-decoration:none;color:#e8eef5}
+.ptile{flex:0 0 104px;width:104px;scroll-snap-align:start;display:flex;flex-direction:column;align-items:center;gap:4px;box-sizing:border-box;padding:6px 6px 5px;border:1px solid #2a3646;border-radius:12px;background:#141414;text-decoration:none;color:#e8eef5}
 .ptile:hover,.ptile:focus-visible{border-color:#4a5a70}
-.ptile .pthumb{display:flex;align-items:center;justify-content:center;width:78px;height:78px;flex:none;border-radius:8px;background:var(--fg);overflow:hidden}
-.ptile .pthumb img{width:78px;height:78px;max-width:78px;object-fit:contain;padding:8px;box-sizing:border-box;display:block}
-.ptile .plab{display:block;width:100%;font-size:12px;line-height:1.15;font-weight:700;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ptile .pthumb{display:flex;align-items:center;justify-content:center;width:92px;height:54px;flex:none;border-radius:8px;background:var(--fg);overflow:hidden;isolation:isolate}
+.ptile .pthumb img{width:92px;height:54px;max-width:92px;object-fit:contain;padding:4px;box-sizing:border-box;display:block;background:transparent;mix-blend-mode:multiply}
+.ptile .plab{display:block;width:100%;font-size:11px;line-height:1.15;font-weight:700;text-align:center;white-space:nowrap}
 .starthere{margin:6px 0 26px;padding:16px 16px 18px;border:1px solid rgba(0,212,255,.35);border-radius:12px;background:rgba(0,212,255,.06)}
 .starthere>h2{margin:0 0 4px;font-size:1.25rem}
 .starthere>.sub{margin:0 0 12px}
@@ -1129,13 +1129,15 @@ header.hb .pnav>.is-parked{display:none}
 .pv-side ul.hubs li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--red);align-self:start;margin-top:calc(0.65em - 3px)}
 .pv-side a:hover,.pv-side a:focus-visible{color:var(--blue)}
 .pv-side,.sheet-rail,.gcatgrid{overflow:visible}
-.gcatgrid{display:grid;grid-template-columns:1fr 1fr;gap:22px 18px;background:#141414;border:1px solid #2a3646;border-radius:14px;padding:14px 14px 18px}
-.gcat{display:flex;flex-direction:column;min-width:0;color:#fff}
-.gtile{display:flex;align-items:center;justify-content:center;background:var(--fg);border-radius:10px;aspect-ratio:1;padding:12%;box-sizing:border-box;overflow:hidden;isolation:isolate}
+.gcatgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;background:transparent;border:0;border-radius:0;padding:0}
+.gcat{display:flex;flex-direction:column;align-items:center;gap:4px;min-width:0;box-sizing:border-box;padding:6px 4px 5px;border:1px solid #2a3646;border-radius:12px;background:#141414;text-decoration:none;color:#e8eef5}
+.gcat:hover,.gcat:focus-visible{border-color:#4a5a70}
+.gtile{display:flex;align-items:center;justify-content:center;width:100%;aspect-ratio:92/54;background:var(--fg);border-radius:8px;padding:4px;box-sizing:border-box;overflow:hidden;isolation:isolate}
 .gtile img{width:100%;height:100%;object-fit:contain;display:block;background:transparent;mix-blend-mode:multiply}
-.gname{display:block;margin-top:6px;font-size:.7rem;font-weight:700;line-height:1.25;text-align:center;color:#fff}
+.gname{display:block;width:100%;margin:0;font-size:11px;font-weight:700;line-height:1.15;text-align:center;color:#fff;hyphens:manual;-webkit-hyphens:manual;overflow-wrap:break-word}
 .gcat:hover .gname,.gcat:focus-visible .gname{color:var(--blue)}
-.gcat.is-on .gtile{outline:2px solid var(--red);outline-offset:2px}
+.gcat.is-on{border-color:var(--red)}
+.gcat.is-on .gtile{outline:2px solid var(--red);outline-offset:1px}
 .pv-side .ticker a:hover,.pv-side .ticker a:focus-visible{color:inherit}
 .pv-side .nlside-form{display:flex;flex-direction:column;align-items:stretch;gap:8px;max-height:none;padding:0;border:0;border-radius:0;background:transparent}
 .pv-side .nlside-lead{margin:0;font-size:.88rem;line-height:1.35;font-weight:600;color:var(--muted)}
@@ -7158,7 +7160,7 @@ def _guide_category_photo(doc, used):
 
 
 def guide_category_cards(lang, current=""):
-    """Two-column category tiles for the buying-guide sidebar."""
+    """Three-column landscape tiles for the buying-guide sidebar."""
     docs = {d["slug"]: d for d in GUIDE_DOCS if not d.get("template")}
     if not docs:
         return ""
@@ -7178,6 +7180,13 @@ def guide_category_cards(lang, current=""):
         if not doc or not row:
             continue
         name = row[1] if lang == "en" else row[2]
+        name = {
+            "Kofferbakmatten": "Koffer\u00adbakmatten",
+            "Schermbeschermers": "Scherm\u00adbeschermers",
+            "Interieurverzorging": "Interieur\u00adverzorging",
+            "Telefoonhouders": "Telefoon\u00adhouders",
+            "Bandenpompen": "Banden\u00adpompen",
+        }.get(name, name)
         href = url(lang, guides_path(lang) + slug + "/")
         photo = _guide_category_photo(doc, used_photos)
         img = (f'<img src="{esc(photo)}" alt="" width="160" height="160" loading="eager" decoding="async">'

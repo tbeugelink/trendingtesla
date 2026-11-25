@@ -1007,7 +1007,7 @@ article.money .avid{max-width:68ch}
 .adslot{margin:20px 0;max-width:68ch;display:flex;flex-direction:column;align-items:stretch;background:rgba(255,255,255,.03);border:1px dashed var(--border2);border-radius:8px;overflow:hidden}
 .adlab{font-size:.65rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);padding:8px 12px 0}
 .adslot ins{display:block;width:100%}
-.pbox{margin:18px 0;max-width:none}
+.pbox{margin:18px 0;max-width:none;container-type:inline-size;container-name:pcard}
 .pbox-in{display:grid;grid-template-columns:200px minmax(0,1fr);gap:14px 18px;align-items:start;padding:16px;border:1px solid #2a3646;border-radius:14px;background:#141414}
 .pbox.noimg .pbox-in{grid-template-columns:1fr}
 .pshot{display:block;background:#f3f3f3;border-radius:8px;line-height:0;overflow:hidden}
@@ -1581,9 +1581,11 @@ header.hb .bar .lang{margin-left:0;margin-right:0;flex:none;white-space:nowrap;t
 .prom th{font-size:.72rem;letter-spacing:.04em;text-transform:uppercase;color:var(--dim)}
 .prom a{color:#9ad7ff}
 .prom-empty{margin:12px 0 0;color:var(--muted)}
-.gbox{margin:18px 0;padding:16px;border:1px solid #2a3646;border-radius:14px;background:#141414;display:grid;grid-template-columns:200px minmax(0,1fr);gap:14px 18px;align-items:start}
+.gbox{margin:18px 0;border:1px solid #2a3646;border-radius:14px;background:#141414;container-type:inline-size;container-name:pcard}
+.gbox-in{display:grid;grid-template-columns:200px minmax(0,1fr);gap:14px 18px;align-items:start;padding:16px}
 @media (min-width:601px){article .prose .gbox{margin-left:14px;margin-right:14px}}
-.gbox.noimg{grid-template-columns:1fr}
+.gbox.noimg .gbox-in{grid-template-columns:1fr}
+@container pcard (max-width:639px){.gbox-in,.pbox-in{grid-template-columns:1fr;gap:12px}.gbox .pgal,.pbox .pgal,.gbox .pgal-stage,.pbox .pgal-stage{width:100%}.gbox .pgal-stage,.pbox .pgal-stage{height:auto;aspect-ratio:1/1}}
 .gbox h2{margin:0 0 6px;font-size:1.25rem;line-height:1.3;letter-spacing:-.015em;font-weight:800;color:#fff}
 .gbox h3{margin:8px 0 3px;font-size:.66rem;letter-spacing:.06em;text-transform:uppercase;color:var(--dim);font-weight:800}
 .gbox ul{margin:0;padding-left:0;list-style:none}
@@ -1643,7 +1645,7 @@ article.narrow>.hi img,article.narrow>.avid .avb{width:100%;max-width:100%}
 .nlbar .nlbar-form>button,.nlside-form>button{max-width:100%;white-space:normal}
 }
 .nlpitch p{margin:0 0 12px}
-@media (max-width:600.98px){.gbox,.pbox-in{grid-template-columns:1fr;gap:12px}.gbox .pgal,.pbox .pgal,.gbox .pgal-stage,.pbox .pgal-stage{width:100%}.gbox .pgal-stage,.pbox .pgal-stage{height:auto;aspect-ratio:1/1}}
+@media (max-width:600.98px){.gbox-in,.pbox-in{grid-template-columns:1fr;gap:12px}.gbox .pgal,.pbox .pgal,.gbox .pgal-stage,.pbox .pgal-stage{width:100%}.gbox .pgal-stage,.pbox .pgal-stage{height:auto;aspect-ratio:1/1}}
 @media (max-width:900px){html,body{-webkit-text-size-adjust:100%;text-size-adjust:100%}body{font-size:15px;line-height:1.55}html body h1,html body article h1,html body .sheet-main article.money h1,html body .sheet-main article.narrow>h1,html body .hubhead h1,html body h1.st{font-size:24px;line-height:1.15;-webkit-text-size-adjust:100%;text-size-adjust:100%}html body article .prose h2,html body .sheet-main article .prose h2,html body .prose h2,html body .leadstory .ltitle,html body .hubh{font-size:19px;line-height:1.3;-webkit-text-size-adjust:100%;text-size-adjust:100%}html body article .prose,html body .sheet-main article.money .prose,html body .sheet-main article.narrow .prose{font-size:15px;line-height:1.55;-webkit-text-size-adjust:100%;text-size-adjust:100%}html body article .lead,html body .sheet-main article.money .lead,html body .sheet-main article.narrow .lead,html body .hubhead .lead,html body .leadstory .lead{font-size:16px;line-height:1.5;-webkit-text-size-adjust:100%;text-size-adjust:100%}html body .byline,html body .meta,html body .smeta,html body .upd{font-size:12px;line-height:1.35;-webkit-text-size-adjust:100%;text-size-adjust:100%}html body .lmeta,html body .lname,html body .tag,html body .lmeta .llayer,html body .lmeta .lsub{font-size:11px;line-height:1.3;-webkit-text-size-adjust:100%;text-size-adjust:100%}}
 @media (max-width:900px){html body .hfeed .pv-hl b{font-size:13px;line-height:1.3;hyphens:none;-webkit-hyphens:none;overflow-wrap:normal;word-break:normal;-webkit-text-size-adjust:none;text-size-adjust:none}html body .hfeed .pv-row time{font-size:12px;-webkit-text-size-adjust:none;text-size-adjust:none}html body .hfeed .pv-min{width:48px;min-width:48px}html body .hfeed .pv-min b{font-size:12px}}
 @media (max-width:900px){html body .sheet-main article .prose .gbox h2{font-size:19px;line-height:1.3;letter-spacing:-.015em}html body .sheet-main article .prose .gbox p,html body .sheet-main article .prose .gbox li{font-size:.8rem;line-height:1.4}}
@@ -8224,8 +8226,8 @@ def _guide_product(fields, lang):
     cost = price_html(price_key, lang) if price_key else ""
     stars = rating_html(price_key, lang) if price_key else ""
     klass = "gbox" if img else "gbox noimg"
-    return (f'<aside class="{klass}">{img}<div><h2>{esc(name)}</h2>{lists}{note_html}'
-            f'{option_html}{stars}{cost}{link}</div></aside>')
+    return (f'<aside class="{klass}"><div class="gbox-in">{img}<div><h2>{esc(name)}</h2>{lists}{note_html}'
+            f'{option_html}{stars}{cost}{link}</div></div></aside>')
 
 
 def _guide_hero(doc, lang):

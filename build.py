@@ -899,17 +899,6 @@ article.narrow > h1{margin-left:14px}article.narrow .cform{margin-left:14px}
 .mintro{font-size:1.08rem;line-height:1.55;color:var(--muted);margin:0 0 18px;max-width:none}
 .mfacts{margin:0 0 4px}
 .mfacts h2{font-size:1.15rem;margin:0 0 8px}
-.mprodlink{margin:-4px 0 16px}
-.mprodlink a{color:#9ad7ff;font-weight:800;text-decoration:none}
-.mprodlink a:hover,.mprodlink a:focus-visible{text-decoration:underline;text-underline-offset:3px}
-.pstrip{display:flex;flex-wrap:nowrap;gap:10px;overflow-x:auto;overflow-y:hidden;margin:6px 0 22px;padding:2px 2px 8px;scroll-snap-type:x proximity;scroll-padding-inline:2px;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;scrollbar-width:thin;scrollbar-color:rgba(255,255,255,.28) transparent}
-.pstrip::-webkit-scrollbar{height:4px}
-.pstrip::-webkit-scrollbar-thumb{background:rgba(255,255,255,.28);border-radius:99px}
-.ptile{flex:0 0 104px;width:104px;scroll-snap-align:start;display:flex;flex-direction:column;align-items:center;gap:4px;box-sizing:border-box;padding:6px 6px 5px;border:1px solid #2a3646;border-radius:12px;background:#141414;text-decoration:none;color:#e8eef5}
-.ptile:hover,.ptile:focus-visible{border-color:#4a5a70}
-.ptile .pthumb{display:flex;align-items:center;justify-content:center;width:92px;height:54px;flex:none;border-radius:8px;background:var(--fg);overflow:hidden;isolation:isolate}
-.ptile .pthumb img{width:92px;height:54px;max-width:92px;object-fit:contain;padding:4px;box-sizing:border-box;display:block;background:transparent;mix-blend-mode:multiply}
-.ptile .plab{display:block;width:100%;font-size:11px;line-height:1.15;font-weight:700;text-align:center;white-space:nowrap}
 .starthere{margin:6px 0 26px;padding:16px 16px 18px;border:1px solid rgba(0,212,255,.35);border-radius:12px;background:rgba(0,212,255,.06)}
 .starthere>h2{margin:0 0 4px;font-size:1.25rem}
 .starthere>.sub{margin:0 0 12px}
@@ -2474,7 +2463,7 @@ def modelinfo(key, lang, heading=True):
     return (f'<article class="minfo">{img}{title}'
             f'<div class="prose"><h2>{L["i_specs"]}</h2><table class="specs">{rows}</table>'
             f'<h2>{L["i_watch"]}</h2>{li(t["watch"])}<h2>{L["i_special"]}</h2>{li(t["special"])}'
-            f'<h2>{L["i_acc"]}</h2>{model_accessory_links(key, lang) or ("<p>" + L["i_acc_soon"] + "</p>")}</div>'
+            f'<h2>{L["i_acc"]}</h2><p>{L["i_acc_soon"]}</p></div>'
             f'<details class="sources"><summary>{L["sources"]} ({len(inf["sources"])})</summary><ul>{src}</ul></details></article>')
 
 
@@ -4278,8 +4267,8 @@ def models_overview(lang):
     L = LANGS[lang]
     nav, ld = crumbs(lang, [(L["nav_models"], "category/models/")])
     intro = ({
-        "en": "Every Tesla version the site covers, grouped by model. Open a card for the facts and the articles. Model 3, Model Y, Model S, Model X and Cybertruck link to the guides for that car.",
-        "nl": "Elke Tesla-uitvoering die de site volgt, per model gegroepeerd. Open een kaart voor de feiten en de artikelen. Model 3, Model Y, Model S, Model X en Cybertruck linken naar de gidsen voor die auto.",
+        "en": "Every Tesla version the site covers, grouped by model. Open a card for the facts and the articles.",
+        "nl": "Elke Tesla-uitvoering die de site volgt, per model gegroepeerd. Open een kaart voor de feiten en de artikelen.",
     })[lang]
     sections = []
     listed = []
@@ -4291,13 +4280,8 @@ def models_overview(lang):
             listed.append(key)
             n += 1
         title = MODELS[root]["name"]
-        plink = ""
-        if root in ("model-3", "model-y", "model-s", "model-x", "cybertruck"):
-            plabel = "Product guides" if lang == "en" else "Productgidsen"
-            plink = (f'<p class="mprodlink"><a href="{url(lang, "model/" + root + "/")}#products">'
-                     f'{esc(plabel)}</a></p>')
         sections.append(
-            f'<section><h2 class="rubh">{esc(title)}</h2>{plink}<div class="mgrid">{"".join(cards)}</div></section>')
+            f'<section><h2 class="rubh">{esc(title)}</h2><div class="mgrid">{"".join(cards)}</div></section>')
     body = (f'{nav}<header class="hubhead"><h1>{esc(L["nav_models"])}</h1>'
             f'<p class="lead">{esc(intro)}</p></header>{"".join(sections)}')
     return body, ld, intro, listed
@@ -4409,9 +4393,8 @@ def model_hub(key, items, lang):
         if kids:
             vlabel = "Versions" if lang == "en" else "Uitvoeringen"
             versions = f'<h2 class="rubh">{esc(vlabel)}</h2><div class="mgrid">{"".join(model_card(k, lang) for k in kids)}</div>'
-    products = model_accessory_links(key, lang)
     body = (f'{nav}<header class="hubhead"><h1>{esc(heading_name)}</h1></header>'
-            f'{hero}<p class="mintro">{esc(intro)}</p>{extra}{versions}{specs}{sourced}{products}{listing}')
+            f'{hero}<p class="mintro">{esc(intro)}</p>{extra}{versions}{specs}{sourced}{listing}')
     desc = re.sub(r"\s+", " ", intro).strip()
     if len(desc) > 180:
         desc = desc[:179].rsplit(" ", 1)[0] + "…"
@@ -7103,6 +7086,7 @@ def evergreen_for(a):
 GUIDE_CATS = (
     ("winter-mats-model-3-y", "Floor mats", "Vloermatten"),
     ("model-y-trunk-floor-mats", "Trunk mats", "Kofferbakmatten"),
+    ("trunk-organizers", "Organizer", "Opbergbox"),
     ("screen-glass-model-3-y", "Screen protectors", "Schermbeschermers"),
     ("interior-cleaners", "Interior care", "Interieurverzorging"),
     ("phone-mounts-model-3-y", "Phone mounts", "Telefoonhouders"),
@@ -7114,6 +7098,7 @@ GUIDE_CATS = (
     ("sentry-usb-drive", "USB drives", "USB-sticks"),
     ("mud-flaps-model-y", "Mud flaps", "Spatlappen"),
     ("roof-shades-model-y", "Roof shades", "Dakschermen"),
+    ("windshield-shades", "Windshield", "Voorruit"),
     ("console-trays-model-3-y", "Console trays", "Consolebakjes"),
     ("key-card-holders", "Key cards", "Keycards"),
     ("model-y-3-accessories", "Accessories", "Accessoires"),

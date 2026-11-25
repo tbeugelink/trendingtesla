@@ -2283,11 +2283,14 @@ def page(lang, path, title, description, body, og_type="website", extra_head="",
               '<path fill="currentColor" d="M14.6 10.4 22.3 1.5h-1.8l-6.7 7.6L8.3 1.5H1.6l8.2 11.3L1.4 22.5h1.8l7.2-8.2 5.8 8.2h6.7l-8.3-12.1Zm-2.5 2.9-.8-1.2L4.2 3h2.8l5.2 7.1.8 1.2 6.8 9.2h-2.8l-5.7-7.2Z"/></svg>')
     yt_icon = ('<svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true" focusable="false">'
                '<path fill="currentColor" d="M23 12.2s0-3.2-.4-4.6c-.2-.9-.9-1.6-1.8-1.8C19.2 5.4 12 5.4 12 5.4s-7.2 0-8.8.4c-.9.2-1.6.9-1.8 1.8C1 9 1 12.2 1 12.2s0 3.2.4 4.6c.2.9.9 1.6 1.8 1.8 1.6.4 8.8.4 8.8.4s7.2 0 8.8-.4c.9-.2 1.6-.9 1.8-1.8.4-1.4.4-4.6.4-4.6ZM9.8 15.6V8.8l6.2 3.4-6.2 3.4Z"/></svg>')
+    tt_icon = ('<svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true" focusable="false">'
+               '<path fill="currentColor" d="M19.6 6.7a4.8 4.8 0 0 1-3.8-4.2V2h-3.4v13.7a2.9 2.9 0 0 1-2.9 2.5 2.9 2.9 0 0 1-2.9-2.9 2.9 2.9 0 0 1 2.9-2.9c.3 0 .5 0 .8.1V9a6.3 6.3 0 0 0-.8 0 6.3 6.3 0 0 0-6.3 6.3 6.3 6.3 0 0 0 6.3 6.3 6.3 6.3 0 0 0 6.3-6.3V8.7a8.2 8.2 0 0 0 4.8 1.5V6.8a4.8 4.8 0 0 1-1-.1Z"/></svg>')
     rss_icon = ('<svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true" focusable="false">'
                 '<path fill="currentColor" d="M6.2 17.8a2.2 2.2 0 1 1-4.4 0 2.2 2.2 0 0 1 4.4 0ZM1.8 4.2v3.2A14.8 14.8 0 0 1 16.6 22h3.2C19.8 12.2 11.8 4.2 1.8 4.2Zm0 6.2v3.2A8.6 8.6 0 0 1 10.4 22h3.2A11.8 11.8 0 0 0 1.8 10.4Z"/></svg>')
     social = (
         f'<a class="soc" href="https://x.com/TrendingTeslaCo" rel="noopener" target="_blank">{x_icon}X</a>'
         f'<a class="soc" href="https://www.youtube.com/@TrendingTesla" rel="noopener" target="_blank">{yt_icon}YouTube</a>'
+        f'<a class="soc" href="https://www.tiktok.com/@trendingtesla" rel="noopener" target="_blank">{tt_icon}TikTok</a>'
         f'<a class="soc" href="{url(lang, "feed.xml")}">{rss_icon}RSS-feed</a>'
     )
     legal = flinks([
@@ -8458,7 +8461,7 @@ def build():
                    "url": SITE + url(lang), "inLanguage": lang,
                    "publisher": {"@type": "Organization", "name": NAME, "url": SITE,
                                  "logo": {"@type": "ImageObject", "url": SITE + "/favicon-512.png", "width": 512, "height": 512},
-                                 "sameAs": ["https://www.youtube.com/@TrendingTesla"]}}
+                                 "sameAs": ["https://x.com/TrendingTeslaCo", "https://www.youtube.com/@TrendingTesla", "https://www.tiktok.com/@trendingtesla"]}}
         write(url(lang), page(lang, "", NAME, L["home_desc"], body,
                               extra_head=ld_script(site_ld) + ld_script(crumb_ld)))
 

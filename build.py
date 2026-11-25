@@ -810,9 +810,9 @@ article .prose{font-size:17px}article .prose,article .lead{max-width:860px}artic
 /* footer */
 footer{border-top:1px solid var(--border);margin-top:14px;padding:15px 0 40px;font-size:.85rem;color:var(--dim)}
 footer .fbrand{margin:0;min-width:0}
-footer .fgrid{display:grid;grid-template-columns:minmax(168px,220px) repeat(5,minmax(max-content,1fr));column-gap:clamp(8px,1.35vw,22px);row-gap:16px;align-items:start}
+footer .fgrid{display:grid;grid-template-columns:minmax(150px,200px) repeat(6,minmax(0,1fr));column-gap:clamp(8px,1.2vw,18px);row-gap:16px;align-items:start}
 footer .fcols,footer .fstack{display:contents}
-footer .fcol.c1{grid-column:2}footer .fcol.c2{grid-column:3}footer .fcol.c3{grid-column:4}footer .fcol.c4{grid-column:5}footer .fcol.c5{grid-column:6}footer .fcol{grid-row:1}
+footer .fcol.c1{grid-column:2}footer .fcol.c2{grid-column:3}footer .fcol.c3{grid-column:4}footer .fcol.c4{grid-column:5}footer .fcol.c5{grid-column:6}footer .fcol.c6{grid-column:7}footer .fcol{grid-row:1}
 footer .fbrand p,footer .nform{max-width:none}
 footer details.fcol{min-width:0}
 footer summary.flabel{cursor:pointer}
@@ -822,11 +822,12 @@ footer a{color:var(--muted);text-decoration:none}
 footer a:hover{color:#00d4ff}
 footer .flabel{font-size:.7rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:var(--blue);margin:6px 0 12px}
 footer .flist{display:grid;gap:7px 18px}footer .flist.two{grid-template-columns:1fr 1fr}
+footer .flist a.soc{display:inline-flex;align-items:center;gap:7px}
+footer .flist a.soc svg{flex:none;display:block}
 footer .fbrand p{margin-top:12px;max-width:none;line-height:1.5}
-footer .ftrust{display:flex;flex-wrap:wrap;gap:8px 14px;margin-top:22px;font-size:.82rem;line-height:1.4}
-footer .ftrust a{color:var(--muted);text-decoration:none;font-weight:700}
-footer .ftrust a:hover,footer .ftrust a:focus-visible{color:var(--blue)}
-footer .fcopy{margin-top:14px;padding-top:18px;border-top:1px solid var(--border)}
+footer .fcopy{margin-top:22px;padding-top:16px;border-top:1px solid var(--border);line-height:1.55}
+footer .flist button.flink{justify-self:start;width:auto;font:inherit;font-size:inherit;line-height:inherit;color:var(--muted);text-align:left}
+footer .flist button.flink:hover,footer .flist button.flink:focus-visible{color:#00d4ff}
 .hubrow{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0 0 18px}
 .hubrow a{display:flex;flex-direction:column;gap:4px;min-width:0;padding:12px 12px 11px;border:1px solid #2a3646;border-radius:12px;background:#141414;text-decoration:none;color:#e8eef5}
 .hubrow b{font-size:.95rem;line-height:1.25}
@@ -834,8 +835,8 @@ footer .fcopy{margin-top:14px;padding-top:18px;border-top:1px solid var(--border
 @media (min-width:901px){.hubrow{grid-template-columns:repeat(4,minmax(0,1fr))}}
 @media (max-width:1000.98px){.grid{grid-template-columns:repeat(2,1fr);gap:var(--card-gap-y) var(--card-gap-x)}.leadside{grid-column:span 2;flex-direction:row}.leadside .card{flex:1}.tops{grid-template-columns:1fr}.arch{grid-template-columns:minmax(0,1fr);gap:36px}.why{grid-template-columns:repeat(2,1fr)}.models{grid-template-columns:repeat(4,1fr);gap:var(--card-gap-y) var(--card-gap-x)}}
 @media (max-width:860.98px){.search{display:none}.sbtn{display:grid}.sopen .search{display:flex;position:absolute;left:0;right:0;top:0;bottom:0;height:auto!important;width:auto!important;margin-left:0!important;max-width:none;z-index:41;padding:9px 12px;background:#161616;align-items:center}.sopen .search input,.sopen .search>button{height:38px}.sopen .search input{background:#121212}html.hass .bar .search{display:flex;position:relative;left:auto;right:auto;top:auto}html.hass .bar .sbtn{display:none}html.hass .bar .savedlink{margin-left:auto}html.hass .bar .search{margin-right:0;flex-shrink:0}html.hass .bar .brand{flex-shrink:0}html.hass .bar .savedlink{transform:none}.tip{flex-wrap:wrap;gap:14px 20px}.tip .btn{margin-left:0}}
-@media (max-width:860px){footer .fgrid{display:block}footer .fbrand{width:100%;margin-bottom:12px}footer .fstack{display:contents}footer .fcols{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));column-gap:clamp(8px,1.4vw,16px);width:100%}footer .fcol.c1{grid-column:1}footer .fcol.c2{grid-column:2}footer .fcol.c3{grid-column:3}footer .fcol.c4{grid-column:4}footer .fcol.c5{grid-column:5}footer .fcol{grid-row:1}}
-@media (max-width:700px){footer .fcols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:16px;align-items:start;width:100%}footer .fstack{display:flex;flex-direction:column;gap:16px;min-width:0}footer .fcol.c1,footer .fcol.c2,footer .fcol.c3,footer .fcol.c4,footer .fcol.c5{grid-column:auto;grid-row:auto}footer .flabel{margin-top:0;margin-bottom:8px}}
+@media (max-width:860px){footer .fgrid{display:block}footer .fbrand{width:100%;margin-bottom:12px}footer .fstack{display:contents}footer .fcols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:clamp(8px,1.4vw,16px);width:100%}footer .fcol.c1{grid-column:1}footer .fcol.c2{grid-column:2}footer .fcol.c3{grid-column:3}footer .fcol.c4{grid-column:1}footer .fcol.c5{grid-column:2}footer .fcol.c6{grid-column:3}footer .fcol{grid-row:auto}}
+@media (max-width:700px){footer .fcols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:16px;align-items:start;width:100%}footer .fstack{display:flex;flex-direction:column;gap:16px;min-width:0}footer .fcol.c1,footer .fcol.c2,footer .fcol.c3,footer .fcol.c4,footer .fcol.c5,footer .fcol.c6{grid-column:auto;grid-row:auto}footer .flabel{margin-top:0;margin-bottom:8px}}
 @media (max-width:600.98px){.wrap{padding:0 12px}
 .bar{gap:4px;height:56px}.drawer,.scrim{top:56px}.burger{margin-left:-14px}.logo{font-size:1.15rem}.brand{margin-left:2px}
 .sbtn{margin-left:auto;width:36px;height:36px;border:0;background:transparent}.savedlink{margin-left:-2px;width:34px;height:34px}.lang{margin-left:0;margin-right:-10px;font-size:.7rem;padding:3px 9px}
@@ -2277,16 +2278,27 @@ def page(lang, path, title, description, body, og_type="website", extra_head="",
         (L["signup"], signup_path(lang)),
         ("Contact", "contact/"),
         ("Advertise" if lang == "en" else "Adverteren", advertise_path(lang)),
-    ])
+    ]) + f'<a href="{url(alt, switch)}" hreflang="{alt}" lang="{alt}">{esc(L["switch_full"])}</a>'
+    x_icon = ('<svg width="13" height="13" viewBox="0 0 24 24" aria-hidden="true" focusable="false">'
+              '<path fill="currentColor" d="M14.6 10.4 22.3 1.5h-1.8l-6.7 7.6L8.3 1.5H1.6l8.2 11.3L1.4 22.5h1.8l7.2-8.2 5.8 8.2h6.7l-8.3-12.1Zm-2.5 2.9-.8-1.2L4.2 3h2.8l5.2 7.1.8 1.2 6.8 9.2h-2.8l-5.7-7.2Z"/></svg>')
+    yt_icon = ('<svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true" focusable="false">'
+               '<path fill="currentColor" d="M23 12.2s0-3.2-.4-4.6c-.2-.9-.9-1.6-1.8-1.8C19.2 5.4 12 5.4 12 5.4s-7.2 0-8.8.4c-.9.2-1.6.9-1.8 1.8C1 9 1 12.2 1 12.2s0 3.2.4 4.6c.2.9.9 1.6 1.8 1.8 1.6.4 8.8.4 8.8.4s7.2 0 8.8-.4c.9-.2 1.6-.9 1.8-1.8.4-1.4.4-4.6.4-4.6ZM9.8 15.6V8.8l6.2 3.4-6.2 3.4Z"/></svg>')
+    rss_icon = ('<svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true" focusable="false">'
+                '<path fill="currentColor" d="M6.2 17.8a2.2 2.2 0 1 1-4.4 0 2.2 2.2 0 0 1 4.4 0ZM1.8 4.2v3.2A14.8 14.8 0 0 1 16.6 22h3.2C19.8 12.2 11.8 4.2 1.8 4.2Zm0 6.2v3.2A8.6 8.6 0 0 1 10.4 22h3.2A11.8 11.8 0 0 0 1.8 10.4Z"/></svg>')
+    social = (
+        f'<a class="soc" href="https://x.com/TrendingTeslaCo" rel="noopener" target="_blank">{x_icon}X</a>'
+        f'<a class="soc" href="https://www.youtube.com/@TrendingTesla" rel="noopener" target="_blank">{yt_icon}YouTube</a>'
+        f'<a class="soc" href="{url(lang, "feed.xml")}">{rss_icon}RSS-feed</a>'
+    )
     legal = flinks([
         (L["privacy"], "privacy/"),
         ("Terms" if lang == "en" else "Voorwaarden", "terms/"),
         ("Affiliate disclosure" if lang == "en" else "Affiliate-melding", disclosure_path(lang)),
         ("Cookie policy" if lang == "en" else "Cookiebeleid", "cookies/"),
-    ])
+    ]) + f'<button type="button" class="flink" data-consent-open>{esc(L["cookie"])}</button>'
     foot_heads = {
-        "en": ("The 7 layers", "Explore", "Shop & guides", "TrendingTesla", "Legal"),
-        "nl": ("De 7 lagen", "Ontdekken", "Shop & gidsen", "TrendingTesla", "Juridisch"),
+        "en": ("The 7 layers", "Explore", "Shop & guides", "TrendingTesla", "Legal", "Social"),
+        "nl": ("De 7 lagen", "Ontdekken", "Shop & gidsen", "TrendingTesla", "Juridisch", "Social"),
     }[lang]
     foot_cols = (
         (foot_heads[0], layers_html),
@@ -2294,6 +2306,7 @@ def page(lang, path, title, description, body, og_type="website", extra_head="",
         (foot_heads[2], shop),
         (foot_heads[3], about_col),
         (foot_heads[4], legal),
+        (foot_heads[5], social),
     )
     fbits = [
         f'<details class="fcol c{i}" open><summary class="flabel">{esc(title)}</summary>'
@@ -2302,7 +2315,7 @@ def page(lang, path, title, description, body, og_type="website", extra_head="",
     # Left stack is the odd sections, right stack the even ones, so a short
     # column does not wait for the taller neighbour.
     fsections = (f'<div class="fstack">{fbits[0]}{fbits[2]}{fbits[4]}</div>'
-                 f'<div class="fstack">{fbits[1]}{fbits[3]}</div>')
+                 f'<div class="fstack">{fbits[1]}{fbits[3]}{fbits[5]}</div>')
     cats = " · ".join(f'<a href="{url(lang, "category/" + k + "/")}">{c[lang]}</a>' for k, c in CATEGORIES.items() if c["menu"])
     mods = " · ".join(f'<a href="{url(lang, "model/" + k + "/")}">{m["name"]}</a>' for k, m in MODELS.items() if not m.get("parent") or k in MODEL_STRIP)
     search = (f'<form class="search hb-search" role="search" method="post" action="{url(lang)}" '
@@ -2364,8 +2377,7 @@ def page(lang, path, title, description, body, og_type="website", extra_head="",
 </main>
 <footer><div class="wrap">
 <div class="fgrid"><div class="fbrand"><a class="logo" href="{url(lang)}">Trending<span>Tesla</span></a><p>{L['tagline']} {L['disclaimer']}</p>{newsletter(lang, "foot")}</div><div class="fcols">{fsections}</div></div>
-<p class="ftrust"><a href="{url(lang, 'about/')}">{L['about']}</a><a href="{url(lang, 'editorial/')}">{L['editorial']}</a><a href="{url(lang, 'contact/')}">Contact</a><a href="{url(lang, 'privacy/')}">{L['privacy']}</a><a href="{url(lang, 'cookies/')}">{'Cookie policy' if lang == 'en' else 'Cookiebeleid'}</a><a href="{url(lang, disclosure_path(lang))}">{'Affiliate disclosure' if lang == 'en' else 'Affiliate-melding'}</a></p>
-<p class="fcopy">&copy; {datetime.now().year} {NAME} · <a href="https://www.youtube.com/@TrendingTesla" rel="noopener" target="_blank">YouTube</a> · <button type="button" class="flink" data-consent-open>{L['cookie']}</button> · <a href="{url(lang, 'feed.xml')}">RSS</a> · <a href="{url(alt, switch)}">{L['switch_full']}</a></p>
+<p class="fcopy">&copy; {datetime.now().year} {NAME}</p>
 </div></footer>
 {consent_bar(lang)}
 <script>{JS}{PRODUCT_JS}</script>

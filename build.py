@@ -1166,13 +1166,15 @@ header.hb .pnav>.is-parked{display:none}
 .pv-min b{display:block;color:var(--red);font-size:.85rem;font-weight:800;line-height:1;white-space:nowrap}
 .pv-min small{display:block;margin-top:2px;color:var(--dim);font-size:.58rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;line-height:1;white-space:nowrap}
 .pv-row:hover .pv-hl b,.pv-row:focus-visible .pv-hl b{color:#fff;text-decoration:underline;text-underline-offset:2px}
-.pv-mark{display:flex;align-items:center;justify-content:center;color:#f0b429}
-.pv-mark svg{width:13px;height:13px;display:block;fill:currentColor}
-.pv-glab{display:block;margin-top:1px;color:var(--dim);font-size:.68rem;font-weight:700;letter-spacing:.02em;line-height:1.2}
-.pv-row.is-guide .pv-min{border-color:transparent}
-.gmeta{display:inline-flex;align-items:center;gap:5px;color:var(--dim);font-weight:700}
-.gmark{display:inline-flex;color:#f0b429}
-.gmark svg{width:12px;height:12px;display:block;fill:currentColor}
+.pv-hl{display:flex;align-items:baseline;gap:7px}
+.ndot{flex:none;width:7px;height:7px;border-radius:50%;background:#8f9db0;transform:translateY(-1px)}
+.ndot.tesla{background:#e31937}.ndot.energy{background:#4cd964}.ndot.spacex{background:#ff7a00}
+.ndot.starlink{background:#00d1ff}.ndot.xai{background:#ffc400}.ndot.neural{background:#ff2d95}
+.ndot.boring{background:#2f6bff}.ndot.x{background:#f4f4f5}.ndot.other{background:#8f9db0}
+.pv-mark{display:inline-flex;flex:none;color:#f0b429;transform:translateY(1px)}
+.pv-mark svg,.gmark svg{width:12px;height:12px;display:block;fill:currentColor}
+.gmark{display:inline-flex;color:#f0b429;margin-right:5px;vertical-align:-1px}
+.card h2 .ndot,.lcard strong .ndot{display:inline-block;margin-right:6px;vertical-align:1px}
 .pv-side h2{font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#fff;border-top:3px solid var(--red);padding-top:8px;margin:0 0 8px}
 .pv-side section{margin:0 0 18px}
 .pv-side a{text-decoration:none;color:inherit}
@@ -2884,7 +2886,7 @@ def gcard(a, lang, eager=False):
     return (f'<div class="card"><a class="lgo" href="{href}">'
             f'{photo}</a>'
             f'<div class="body">{with_actions(rubric_line(a, lang), "", lang, href)}'
-            f'<a class="lgo" href="{href}"><h2>{esc(card_title(a, lang))}</h2></a></div></div>')
+            f'<a class="lgo" href="{href}"><h2>{title_dot(a, esc(card_title(a, lang)))}</h2></a></div></div>')
 
 
 def split2(t):
@@ -4314,83 +4316,159 @@ def ld_script(obj):
     return f'<script type="application/ld+json">{raw}</script>'
 
 
-_GUIDE_EVERY = 5
-_GUIDE_STAR = ('<svg viewBox="0 0 20 20" aria-hidden="true" focusable="false">'
-               '<path d="M10 1.6 12.6 7l5.9.5-4.5 3.8 1.4 5.8L10 14.4 4.6 17.1 6 11.3 1.5 7.5 7.4 7z"/></svg>')
+_LIST_EVERY = 5
+_REVIEW_STAR = ('<svg viewBox="0 0 20 20" aria-hidden="true" focusable="false">'
+                 '<path d="M10 1.6 12.6 7l5.9.5-4.5 3.8 1.4 5.8L10 14.4 4.6 17.1 6 11.3 1.5 7.5 7.4 7z"/></svg>')
+REVIEWS = []
 
 
-def buying_guides():
-    """Published accessory guides, in the sidebar order. The layout sample stays out."""
-    docs = [doc for doc in GUIDE_DOCS if not doc.get("template")]
-    order = {row[0]: i for i, row in enumerate(GUIDE_CATS)}
-    docs.sort(key=lambda doc: order.get(doc.get("slug"), 100))
-    return docs
+def load_reviews():
+    """Single-product reviews. They are pages of their own, not news articles."""
+    global REVIEWS
+    path = ROOT / "content" / "reviews.json"
+    REVIEWS = []
+    if not path.exists():
+        return
+    rows = json.loads(path.read_text(encoding="utf-8"))
+    banned = re.compile(r"[,:…]|\.\.\.")
+    for row in rows:
+        for lang in ("en", "nl"):
+            title = str((row.get(lang) or {}).get("title") or "")
+            if banned.search(title) or len(title.split()) > 8 or not title:
+                raise SystemExit(f"review title must be at most 8 words with no comma or colon: {title}")
+        if not re.fullmatch(r"[A-Z0-9]{10}", str(row.get("asin") or "")):
+            raise SystemExit(f"review {row.get('slug')} needs an ASIN")
+        REVIEWS.append(row)
 
 
-def guide_inserts(n_news, skip=0):
-    """After every fifth news item, one guide. A page never repeats a guide or places two in a row."""
-    guides = buying_guides()
-    if not guides or n_news <= 0:
+def eco_dot(a):
+    """Bullet colour for a story's ecosystem. General AI and anything unfiled stay neutral."""
+    if not a:
+        return "other"
+    slug = str(a.get("slug") or "").lower()
+    topic = str(a.get("topic") or "").lower()
+    layer = str(a.get("layer") or "").lower()
+    if "twitter" in slug or "twitter" in topic:
+        return "x"
+    if "grok" in slug or "xai" in slug or topic in ("xai", "grok"):
+        return "xai"
+    if layer == "spacexsi" and topic in ("ai", "ai-compute", "datacenters", "chips"):
+        return "other"
+    return {
+        "tesla": "tesla",
+        "tesla-energy": "energy",
+        "spacex": "spacex",
+        "starlink": "starlink",
+        "spacexsi": "xai",
+        "neuralink": "neural",
+        "boring": "boring",
+    }.get(layer, "other")
+
+
+def title_dot(a, text):
+    return f'<i class="ndot {eco_dot(a)}" aria-hidden="true"></i>{text}'
+
+
+def review_inserts(n_news, skip=0):
+    """After every fifth news item, one review. A page never repeats a review or places two in a row."""
+    if not REVIEWS or n_news <= 0:
         return {}
-    start = (skip // _GUIDE_EVERY) % len(guides)
+    start = (skip // _LIST_EVERY) % len(REVIEWS)
     placed = 0
     out = {}
     for i in range(n_news):
-        if (skip + i + 1) % _GUIDE_EVERY != 0:
+        if (skip + i + 1) % _LIST_EVERY != 0:
             continue
-        if placed >= len(guides):
+        if placed >= len(REVIEWS):
             break
-        out[i] = guides[(start + placed) % len(guides)]
+        out[i] = REVIEWS[(start + placed) % len(REVIEWS)]
         placed += 1
     return out
 
 
-def guide_title(doc, lang):
-    return doc["meta"].get(f"title_{lang}") or doc["meta"].get("title_en") or doc.get("slug") or ""
+def review_href(doc, lang):
+    return url(lang, "review/" + doc["slug"] + "/")
 
 
-def guide_href(doc, lang):
-    return url(lang, guides_path(lang) + doc["slug"] + "/")
+def review_minutes(doc, lang):
+    text = re.sub(r"<[^>]+>", " ", str((doc.get(lang) or {}).get("body") or ""))
+    return max(1, round(len(text.split()) / 220))
 
 
-def guide_label(lang):
-    return "Buying guide" if lang == "en" else "Koopgids"
-
-
-def guide_row(doc, lang):
-    """List row: a star where the time usually sits, and a quiet label under the title."""
-    title = guide_title(doc, lang)
-    label = guide_label(lang)
+def review_row(doc, lang):
+    """Same list row as a story. The star stands in for the ecosystem dot. No extra label."""
+    title = doc[lang]["title"]
+    stamp = published(doc)
     return (
-        f'<a class="pv-row is-guide" href="{guide_href(doc, lang)}">'
-        f'<span class="pv-mark">{_GUIDE_STAR}</span>'
-        f'<span class="pv-hl"><b>{esc(title)}</b><small class="pv-glab">{esc(label)}</small></span>'
-        f'<span class="pv-min guide"></span></a>')
+        f'<a class="pv-row is-review" href="{review_href(doc, lang)}">'
+        f'<time datetime="{stamp.isoformat()}">{stamp.strftime("%H:%M")}</time>'
+        f'<span class="pv-hl"><span class="pv-mark">{_REVIEW_STAR}</span><b>{esc(title)}</b></span>'
+        f'{list_badge(review_minutes(doc, lang), "min")}</a>')
 
 
-def guide_card(doc, lang):
-    """Same card frame as a news item. The star and label replace the section and the time."""
-    title = guide_title(doc, lang)
-    href = guide_href(doc, lang)
-    label = guide_label(lang)
-    photos = _guide_product_photos(doc)
-    src = photos[0][1] if photos else ""
+def review_card(doc, lang):
+    """News card frame. A star replaces the ecosystem dot. No buying-guide label."""
+    title = doc[lang]["title"]
+    href = review_href(doc, lang)
+    src = (AMAZON_GALLERIES.get(doc["asin"]) or [""])[0]
     photo = still_box("div", "im zimg", src, title, SIZES_GRID, lazy=True) if src else ""
-    meta = f'<span class="lmeta gmeta"><span class="gmark">{_GUIDE_STAR}</span><span>{esc(label)}</span></span>'
-    return (f'<div class="card is-guide"><a class="lgo" href="{href}">{photo}</a>'
+    meta = f'<span class="lmeta"><span class="gmark">{_REVIEW_STAR}</span>{when(doc, lang)}</span>'
+    return (f'<div class="card is-review"><a class="lgo" href="{href}">{photo}</a>'
             f'<div class="body">{meta}<a class="lgo" href="{href}"><h2>{esc(title)}</h2></a></div></div>')
+
+
+def review_product_card(doc, lang):
+    bullets = doc.get("bullets") or {}
+    fields = {
+        "name_en": (doc.get("product") or {}).get("en") or doc["en"]["title"],
+        "name_nl": (doc.get("product") or {}).get("nl") or doc["nl"]["title"],
+        "pros_en": " | ".join(bullets.get("en") or []),
+        "pros_nl": " | ".join(bullets.get("nl") or []),
+        "url": f"https://www.amazon.nl/dp/{doc['asin']}",
+    }
+    return _guide_product(fields, lang)
+
+
+def review_page(doc, lang):
+    """A product review. The byline is the editorial team. The text does not claim a hands-on test."""
+    t = doc[lang]
+    stamp = published(doc)
+    body = (
+        f'<article class="money"><h1 class="atitle">{esc(t["title"])}</h1>'
+        f'<p class="byline"><a href="{url(lang, "editorial/")}">{esc(LANGS[lang]["byline"])}</a></p>'
+        f'<p class="smeta"><time datetime="{stamp.isoformat()}">{esc(fmt_date(doc["date"], lang))}</time></p>'
+        f'<div class="prose">{t["body"]}</div>'
+        f'{review_product_card(doc, lang)}'
+        f'{disclosure_line(lang)}</article>')
+    plain = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", t["body"])).strip()
+    ld = {
+        "@context": "https://schema.org",
+        "@type": "Review",
+        "name": t["title"],
+        "reviewBody": plain[:800],
+        "datePublished": stamp.isoformat(),
+        "inLanguage": lang,
+        "url": SITE + review_href(doc, lang),
+        "author": {"@type": "Organization", "name": EDITORIAL_ORG[lang], "url": SITE + url(lang, "editorial/")},
+        "publisher": {"@type": "Organization", "name": NAME, "url": SITE},
+        "itemReviewed": {
+            "@type": "Product",
+            "name": (doc.get("product") or {}).get(lang) or t["title"],
+        },
+    }
+    return body, t["title"], t["description"], ld
 
 
 def hub_cards(items, lang, eager_first=False, mix=False, skip=0):
     if not items:
         return f'<p class="empty">{LANGS[lang]["empty"]}</p>'
     parts = []
-    picks = guide_inserts(len(items), skip) if mix else {}
+    picks = review_inserts(len(items), skip) if mix else {}
     for i, article in enumerate(items):
         parts.append(gcard(article, lang, eager=eager_first and i == 0))
-        guide = picks.get(i)
-        if guide:
-            parts.append(guide_card(guide, lang))
+        review = picks.get(i)
+        if review:
+            parts.append(review_card(review, lang))
     return f'<div class="grid2 gall wide">{"".join(parts)}</div>'
 
 
@@ -5326,7 +5404,7 @@ def home_grid_card(a, lang, eager=False, badge=""):
         f'<div class="lcard"><a class="lgo" href="{href}">'
         f'{photo}</a>'
         f'{with_actions(rubric_line(a, lang), "", lang, href)}'
-        f'<a class="lgo" href="{href}"><span class="lbody"><strong>{esc(card_title(a, lang))}</strong></span></a></div>')
+        f'<a class="lgo" href="{href}"><span class="lbody"><strong>{title_dot(a, esc(card_title(a, lang)))}</strong></span></a></div>')
 
 
 def story_badge(a):
@@ -5527,7 +5605,7 @@ def clip_card(item, lang, eager=False):
         f'<div class="lcard"><a class="lgo" href="{href}">'
         f'{photo}</a>'
         f'{with_actions(clip_meta(item, lang), "", lang, href)}'
-        f'<a class="lgo" href="{href}"><span class="lbody"><strong>{esc(title)}</strong></span></a></div>')
+        f'<a class="lgo" href="{href}"><span class="lbody"><strong>{title_dot(article, esc(title))}</strong></span></a></div>')
 
 
 def home_card(item, lang, eager=False):
@@ -5539,9 +5617,9 @@ def home_card(item, lang, eager=False):
 
 def home_feed(items, lang):
     """Dated newest-first list. Every row uses the same badge. One row per story.
-    A buying guide follows every fifth story. Guides stay out of the news feed data."""
+    A product review follows every fifth story and stays out of the news feed data."""
     out, last = [], None
-    picks = guide_inserts(len(items))
+    picks = review_inserts(len(items))
     for i, item in enumerate(items):
         day = item["stamp"].astimezone(TZ).date().isoformat()
         if day != last:
@@ -5554,14 +5632,15 @@ def home_feed(items, lang):
                 badge = list_badge("Short", "1 min")
             else:
                 badge = list_badge("Video", f"{whole_minutes(item.get('seconds') or 0)} min")
+            dot = title_dot(item.get("article"), "")
             out.append(
                 f'<a class="pv-row" href="{url(lang, item["path"])}">'
                 f'<time datetime="{item["stamp"].isoformat()}">{item["stamp"].strftime("%H:%M")}</time>'
-                f'<span class="pv-hl"><b>{esc(item["title"])}</b></span>'
+                f'<span class="pv-hl">{dot}<b>{esc(item["title"])}</b></span>'
                 f'{badge}</a>')
-        guide = picks.get(i)
-        if guide:
-            out.append(guide_row(guide, lang))
+        review = picks.get(i)
+        if review:
+            out.append(review_row(review, lang))
     return "".join(out)
 
 
@@ -6019,7 +6098,7 @@ def pv_row(a, lang, thumb=False):
     shown = card_title(a, lang)
     return (f'<a class="pv-row{" hasth" if thumb else ""}" href="{href}" title="{esc(t["title"])}">'
             f'<time datetime="{published(a).isoformat()}">{published(a).strftime("%H:%M")}</time>{im}'
-            f'<span class="pv-hl"><b>{esc(shown)}</b></span>'
+            f'<span class="pv-hl">{title_dot(a, f"<b>{esc(shown)}</b>")}</span>'
             f'{story_list_badge(a, lang)}</a>')
 
 
@@ -8337,6 +8416,7 @@ def build():
     guide_docs = load_guides()
     GUIDE_DOCS = guide_docs
     check_guide_bullets(guide_docs)
+    load_reviews()
     promise_rows = load_promises()
 
     for lang in LANGS:
@@ -8547,12 +8627,12 @@ def build():
             pager = f'<nav class="pager">{left}<span>{L["page"]} {pi + 1} / {pages}</span>{right}</nav>'
             title = L["archive"] + (f' · {L["page"]} {pi + 1}' if pi else "")
             arch_cards = []
-            arch_picks = guide_inserts(len(chunk), skip=pi * PER_PAGE)
+            arch_picks = review_inserts(len(chunk), skip=pi * PER_PAGE)
             for i, article in enumerate(chunk):
                 arch_cards.append(gcard(article, lang))
-                guide = arch_picks.get(i)
-                if guide:
-                    arch_cards.append(guide_card(guide, lang))
+                review = arch_picks.get(i)
+                if review:
+                    arch_cards.append(review_card(review, lang))
             body = (f'<section class="wide"><h1 class="st archh">{title}</h1><div class="grid2 gall wide">'
                     + "".join(arch_cards)
                     + ("".join(gcard(a, lang).replace('<div class="card"', '<div class="card xtra"', 1)
@@ -8686,6 +8766,14 @@ def build():
                 + disclosure_line(lang, "affend"),
                 active="buyguides", robots="noindex" if doc["template"] else None,
                 alt_path=guides_path(other(lang)) + doc["slug"] + "/"))
+        for doc in REVIEWS:
+            r_body, r_title, r_desc, r_ld = review_page(doc, lang)
+            rpath = "review/" + doc["slug"] + "/"
+            write(url(lang, rpath), page(
+                lang, rpath, r_title, r_desc,
+                shell(r_body, page_side(arts, lang, "static", shop=True)),
+                extra_head=ld_script(r_ld), active="buyguides",
+                alt_path="review/" + doc["slug"] + "/"))
         d_body, d_title, d_desc = disclosure_body(lang)
         write(url(lang, disclosure_path(lang)), page(
             lang, disclosure_path(lang), d_title, d_desc,
@@ -8823,6 +8911,9 @@ def build():
             urls += emit(
                 lang, guides_path(lang) + doc["slug"] + "/", None,
                 guides_path("en") + doc["slug"] + "/", guides_path("nl") + doc["slug"] + "/")
+        for doc in REVIEWS:
+            urls += emit(lang, "review/" + doc["slug"] + "/", doc["date"],
+                         "review/" + doc["slug"] + "/", "review/" + doc["slug"] + "/")
         urls += emit(lang, disclosure_path(lang), None, disclosure_path("en"), disclosure_path("nl"))
         urls += emit(lang, advertise_path(lang), None, advertise_path("en"), advertise_path("nl"))
     write("/sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>'

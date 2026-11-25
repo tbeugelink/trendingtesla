@@ -1,12 +1,12 @@
 ---
-title_en: Winter mats for Model 3 and Y
-title_nl: Wintermatten voor Model 3 en Y
-description_en: Two all-weather mat sets on Amazon.nl, one for a Model Y Juniper and one for a Model 3 Highland. Match the car before you order.
-description_nl: Twee allweermattensets op Amazon.nl, één voor een Model Y Juniper en één voor een Model 3 Highland. Stem de auto af voor je bestelt.
+title_en: Winter mats for Tesla models
+title_nl: Wintermatten voor Tesla-modellen
+description_en: Fitted floor mats on Amazon.nl for the Tesla models named on each page. Match the car before you order.
+description_nl: Passende vloermatten op Amazon.nl voor de Tesla-modellen die elke pagina noemt. Stem de auto af voor je bestelt.
 ---
 
-en: Winter slush ends up on the floor, and the mat that helps is the one cut for that exact car. A 2025 Model Y Juniper does not take the set made for a 2024 Model 3 Highland. Read the fit line on the product page and check the current price.
-nl: Wintersmodder komt op de vloer terecht, en de mat die helpt is de mat die voor die auto is gesneden. Een Model Y Juniper uit 2025 past niet op de set van een Model 3 Highland uit 2024. Lees de pasregel op de productpagina en kijk de actuele prijs na.
+en: Winter slush ends up on the floor, and the mat that helps is the one cut for that exact car. A 2025 Model Y Juniper does not take the set made for a 2024 Model 3 Highland. A Model S set is not a Model X set. Read the fit line on the product page and check the current price.
+nl: Wintersmodder komt op de vloer terecht, en de mat die helpt is de mat die voor die auto is gesneden. Een Model Y Juniper uit 2025 past niet op de set van een Model 3 Highland uit 2024. Een Model S-set is geen Model X-set. Lees de pasregel op de productpagina en kijk de actuele prijs na.
 
 :::product
 name_en: GAFAT mats for Model Y Juniper
@@ -50,6 +50,30 @@ option_en: Option: LHD Floor Mat 6PCS
 option_nl: Uitvoering: LHD Floor Mat 6PCS
 item: 1005006925057063
 ali_url: https://s.click.aliexpress.com/e/_c3iNubYN
+:::
+
+:::product
+name_en: MOTOS mats for Model S
+name_nl: MOTOS-matten voor Model S
+pros_en: The title says floor mats and case mats | Listed for Model S 2012 to 2021 | The title says all-weather and anti-slip
+pros_nl: De titel noemt vloermatten en koffermatten | Vermeld voor Model S 2012 tot 2021 | De titel zegt all-weather en antislip
+fits_en: A Model S of 2012 to 2021, as the title states. Not a Model 3 or Model Y set.
+fits_nl: Een Model S van 2012 tot 2021, zoals de titel zegt. Geen set voor een Model 3 of Model Y.
+url: https://www.amazon.nl/dp/B0D86ZNG7P
+button_en: Check out Amazon
+button_nl: Bekijk op Amazon
+:::
+
+:::product
+name_en: Kovvar mats for Model X
+name_nl: Kovvar-matten voor Model X
+pros_en: Three-piece set | Listed for Model X 2016 to 2026 | The title says a five-seat version of 2016 to 2022
+pros_nl: Driedelige set | Vermeld voor Model X 2016 tot 2026 | De titel noemt een vijfpersoonsversie van 2016 tot 2022
+fits_en: The title names a Model X and a five-seat version of 2016 to 2022. It calls the mats polyamide high-pile, not rubber.
+fits_nl: De titel noemt een Model X en een vijfpersoonsversie van 2016 tot 2022. Hij noemt de matten polyamide met hoge pool, geen rubber.
+url: https://www.amazon.nl/dp/B0D482CTSQ
+button_en: Check out Amazon
+button_nl: Bekijk op Amazon
 :::
 
 :::compare

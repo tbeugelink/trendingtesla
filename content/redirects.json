@@ -414,5 +414,13 @@
   {
     "from": "/nl/category/xai/",
     "to": "/nl/spacexsi/"
+  },
+  {
+    "from": "/guides/model-y-3-accessories/",
+    "to": "/guides/"
+  },
+  {
+    "from": "/nl/gidsen/model-y-3-accessories/",
+    "to": "/nl/gidsen/"
   }
 ]

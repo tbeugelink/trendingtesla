@@ -1,0 +1,89 @@
+{
+  "slug": "starlink-gives-up-its-us-broadband-subsidies",
+  "date": "2026-11-25",
+  "time": "09:00",
+  "category": "starlink",
+  "also": [
+    "spacex"
+  ],
+  "layer": "starlink",
+  "topic": "starlink",
+  "card": {
+    "en": "Starlink gives up its US broadband subsidies",
+    "nl": "Starlink ziet af van Amerikaanse breedbandsubsidies"
+  },
+  "image": "lib/starlink-dish-car.jpg",
+  "image_lock": true,
+  "images": [
+    "lib/starlink-dish-car.jpg",
+    "topics/starlink-farm.jpg",
+    "topics/starlink-1.jpg",
+    "lib/starlink-satellites.jpg",
+    "topics/starlink-2.jpg"
+  ],
+  "sources": [
+    {
+      "title": "NTIA — BEAD model zero-outlay agreement",
+      "url": "https://broadbandusa.ntia.gov/waivers-policies/BEAD_Model_Zero_Outlay_Agreement"
+    },
+    {
+      "title": "Fierce Network — SpaceX declines BEAD awards, putting state broadband offices in a pickle",
+      "url": "https://www.fierce-network.com/broadband/spacex-declines-bead-awards-putting-state-broadband-offices-pickle"
+    },
+    {
+      "title": "Telecompetitor — Starlink gives up $636 million in BEAD funding and keeps locations in some states",
+      "url": "https://www.telecompetitor.com/starlink-gives-up-636m-in-bead-funding-keeps-locations-in-some-states/"
+    },
+    {
+      "title": "Broadband Breakfast — SpaceX declines BEAD winnings and wants to serve locations at no cost",
+      "url": "https://broadbandbreakfast.com/spacex-declines-bead-winnings-wants-to-serve-locations-at-no-cost/"
+    },
+    {
+      "title": "Tesla North — SpaceX plans to forgo U.S. broadband grants for Starlink",
+      "url": "https://teslanorth.com/2026/11/24/spacex-plans-to-forgo-u-s-broadband-grants-for-starlink/"
+    }
+  ],
+  "label": {
+    "style": "n",
+    "en": {
+      "sub": "BEAD PAYS",
+      "text": "$0"
+    },
+    "nl": {
+      "sub": "BEAD BETAALT",
+      "text": "$0"
+    }
+  },
+  "gen_image": {
+    "prompt": "A white Starlink dish on a stand in a rural yard at dusk, the same rectangular user terminal as the reference, customer equipment kit closed on the ground beside the stand, a simple house behind it, the road on the right, no people, no logos, no readable text, no flags, calm dark space in the lower-left third",
+    "subject": "a white Starlink user terminal on a stand, with the customer equipment kit beside it",
+    "refs": [
+      {
+        "src": "lib/starlink-dish-car.jpg"
+      }
+    ],
+    "profile": "editorial",
+    "category": "A",
+    "describe": "A white Starlink dish on a stand in a rural yard, with the equipment kit beside it. Not a photograph of the NTIA announcement.",
+    "extra": [
+      {
+        "prompt": "The same white Starlink dish on its stand at the edge of a dark field after sunset, the closed equipment kit next to the stand, no people, no logos, no readable text, calm dark ground in the lower left",
+        "describe": "The same Starlink dish and equipment kit at the edge of a field after sunset"
+      },
+      {
+        "prompt": "The same white Starlink dish on a stand in a rural yard, a thin train of satellites as small bright dots in the dusk sky, no people, no logos, no readable text, calm dark space in the lower left",
+        "describe": "The same Starlink dish under a thin train of satellites at dusk"
+      }
+    ]
+  },
+  "en": {
+    "title": "Starlink gives up its US broadband subsidies",
+    "description": "On 23 November 2026 the US NTIA published a zero-outlay BEAD model agreement, and SpaceX agreed to serve every awarded Starlink location at no cost to the program. Households still pay a monthly bill and only the customer equipment is free.",
+    "body": "<p>SpaceX has agreed to serve every location Starlink was awarded under a state or territory's BEAD Final Proposal, and the BEAD program pays nothing for that service. On 23 November 2026 the US NTIA announced a new model agreement for low-Earth-orbit providers that meet BEAD service and performance-testing requirements at their awarded locations but decline the subsidies. The document is a zero-outlay agreement. NTIA Administrator Arielle Roth said: \"SpaceX has agreed to abide by BEAD service and performance testing requirements at all locations awarded under a state or territory's Final Proposal at no cost to the BEAD program.\" The cost that falls to zero is the cost to the program. A household at one of those locations still pays a monthly bill.</p>\n<p>The reports do not agree on a single figure for the subsidies SpaceX is giving up.</p>\n<h2>How much subsidy is Starlink giving up?</h2>\n<p><strong>Hundreds of millions of dollars. Estimates range from about $636 million to $738 million.</strong> Broadband Breakfast puts the forgone amount at about $738 million. Telecompetitor, citing Policyband, puts it at about $636 million. Fierce Network says SpaceX had won nearly $700 million in BEAD awards. Three outlets, three estimates, one decision. None of those figures is a payment the BEAD program will now make. The number the model agreement fixes is zero. SpaceX keeps the duty to serve the awarded locations and declines the subsidy that had been attached to them. A refusal on that scale still leaves terms. The model agreement sets out what the provider must do when the award is $0.</p>\n<h2>What does a zero award still require?</h2>\n<p><strong>BEAD speeds, customer equipment at no additional cost, performance testing, a low-cost service option, and semi-annual reports.</strong> The NTIA page, Fierce Network and Telecompetitor describe those duties for a provider that takes the zero-outlay agreement.</p>\n<p><strong>It is not free internet.</strong> The free item on that list is the equipment, and only the equipment. \"At no additional cost\" is how the agreement describes the kit a BEAD subscriber receives. It is not a waiver of the monthly bill. The low-cost service option is still a service the household pays for. Tesla North reports the same split: the deal removes the federal grant, not the monthly bill. The BEAD program pays nothing. The household still pays. A state does not have to accept the paper that sets those terms.</p>\n<h2>So what can a state do instead?</h2>\n<p><strong>Sign the model agreement, or find another provider for those locations at comparable cost.</strong> The NTIA page, Telecompetitor and Broadband Breakfast describe that choice. Comparable cost is the test for a replacement provider. It is not a statement that another provider is already lined up. If a state declines, Starlink forfeits its BEAD locations there. The locations do not stay with Starlink once the state says no. The award and the places stay together only if the state signs. SpaceX turned the money down because of the way those state contracts were written.</p>\n<h2>Why did SpaceX decline the subsidies?</h2>\n<p><strong>Contracting disputes with state broadband offices, over a patchwork of differing state obligations.</strong> The NTIA page uses the phrase \"patchwork of obligations.\" Broadband Breakfast and Fierce Network report that SpaceX did not want the states' financial reporting requirements or their default penalties. The company did not drop the locations. It dropped the subsidy, and the extra state terms that came with taking the money. The model agreement is the federal document for a low-Earth-orbit provider that will meet the BEAD service and testing rules and take no BEAD money for doing so. Declining the subsidy does not clear the location. An award of $0 still names Starlink at those places.</p>\n<h2>So why keep an award of zero?</h2>\n<p><strong>Staying in BEAD with a $0 award keeps other federal subsidies from going to competitors in those locations.</strong> Broadband Breakfast and Fierce Network both report that effect. The locations remain inside the program, assigned to Starlink, with nothing paid by BEAD. Other federal subsidies do not go to a competitor for those same places while that assignment holds. That is a claim on the location. It is not a gift of free internet to the house, and it is not a payment from the program. States were not expecting the directive that put this choice in front of them.</p>\n<h2>What is unclear where a state already signed?</h2>\n<p><strong>States were surprised by the directive, and it is unclear what happens to contracts some of them have already signed.</strong> Broadband Breakfast and Tesla North report the surprise. Indiana signed with SpaceX in June. The reports do not say how a contract from June sits next to the model agreement announced on 23 November 2026. They do say what a state can do with the new document. It can sign, or it can find another provider for those locations at comparable cost. Until that choice is made, a signed contract and the November agreement are both on the table, and the result for a state that already signed is not settled in these reports.</p>\n<p>What the announcement does settle is the bill. The BEAD program pays nothing. Customer equipment for a BEAD subscriber is supplied at no additional cost, and that equipment is the only thing that is free. The household still pays a monthly bill. This is not free internet.</p>"
+  },
+  "nl": {
+    "title": "Starlink ziet af van Amerikaanse breedbandsubsidies",
+    "description": "Op 23 november 2026 publiceerde de Amerikaanse NTIA een BEAD-modelovereenkomst zonder uitgave, en SpaceX bedient elke toegekende Starlink-locatie zonder dat het programma betaalt. Huishoudens betalen nog een maandelijkse rekening en alleen de apparatuur voor de klant is gratis.",
+    "body": "<p>SpaceX heeft ermee ingestemd om elke locatie te bedienen die Starlink kreeg in het definitieve BEAD-voorstel van een staat of territorium, en het BEAD-programma betaalt daar niets voor. Op 23 november 2026 kondigde de Amerikaanse NTIA een nieuwe modelovereenkomst aan voor aanbieders in een lage baan om de aarde die op hun toegekende locaties aan de dienst- en prestatie-eisen van BEAD voldoen, maar de subsidies afwijzen. Het stuk is een overeenkomst zonder uitgave. Arielle Roth, administrator van de NTIA, zei: \"SpaceX has agreed to abide by BEAD service and performance testing requirements at all locations awarded under a state or territory's Final Proposal at no cost to the BEAD program.\" SpaceX houdt zich dus aan de dienst- en testregels van BEAD op alle toegekende locaties, zonder kosten voor het programma. Een huishouden op zo'n locatie betaalt nog steeds een maandelijkse rekening.</p>\n<p>De berichten zijn het niet eens over één bedrag voor de subsidies die SpaceX laat liggen.</p>\n<h2>Hoeveel subsidie laat Starlink liggen?</h2>\n<p><strong>Honderden miljoenen dollars. De schattingen lopen van ongeveer $636 miljoen tot $738 miljoen.</strong> Broadband Breakfast zet het afgewezen bedrag op ongeveer $738 miljoen. Telecompetitor, dat Policyband aanhaalt, zet het op ongeveer $636 miljoen. Fierce Network schrijft dat SpaceX bijna $700 miljoen aan BEAD-toekenningen had gewonnen. Geen van die bedragen is een betaling die het BEAD-programma nu nog doet. Het getal dat de modelovereenkomst vastlegt, is nul. SpaceX houdt de plicht om de toegekende locaties te bedienen en wijst de subsidie af die aan die locaties hing. Een weigering van die omvang laat wel voorwaarden achter. De modelovereenkomst zet uiteen wat de aanbieder moet doen als de toekenning $0 is.</p>\n<h2>Wat eist een toekenning van nul nog?</h2>\n<p><strong>BEAD-snelheden, klantapparatuur zonder extra kosten, prestatietests, een goedkope dienstoptie en halfjaarlijkse rapporten.</strong> De pagina van de NTIA, Fierce Network en Telecompetitor beschrijven die plichten voor een aanbieder die de overeenkomst zonder uitgave aanneemt.</p>\n<p><strong>Het is geen gratis internet.</strong> Het gratis onderdeel op die lijst is de apparatuur, en alleen de apparatuur. \"At no additional cost\", zonder extra kosten, is hoe de overeenkomst de set beschrijft die een BEAD-abonnee krijgt. Het is geen kwijtschelding van de maandelijkse rekening. De goedkope dienstoptie blijft een dienst waar het huishouden voor betaalt. Tesla North meldt dezelfde knip: de deal haalt de federale subsidie weg, niet de maandelijkse rekening. Het BEAD-programma betaalt niets. Het huishouden betaalt nog. Een staat hoeft het stuk dat die voorwaarden vastlegt niet te aanvaarden.</p>\n<h2>Dus wat kan een staat in plaats daarvan doen?</h2>\n<p><strong>De modelovereenkomst tekenen, of een andere aanbieder zoeken voor die locaties tegen vergelijkbare kosten.</strong> De pagina van de NTIA, Telecompetitor en Broadband Breakfast beschrijven die keuze. Vergelijkbare kosten zijn de toets voor een vervangende aanbieder. Het is geen mededeling dat er al een andere aanbieder klaarstaat. Wijst een staat af, dan verspeelt Starlink daar zijn BEAD-locaties. De locaties blijven niet bij Starlink zodra de staat nee zegt. De toekenning en de plekken blijven alleen samen als de staat tekent. SpaceX wees het geld af vanwege de manier waarop die staatscontracten waren opgesteld.</p>\n<h2>Waarom wees SpaceX de subsidies af?</h2>\n<p><strong>Geschillen over contracten met de breedbandkantoren van de staten, over een lappendeken van verschillende staatsverplichtingen.</strong> De pagina van de NTIA gebruikt de woorden \"patchwork of obligations\", een lappendeken van verplichtingen. Broadband Breakfast en Fierce Network melden dat SpaceX de financiële rapportage-eisen van de staten niet wilde, en ook hun boetes bij wanprestatie niet. Het bedrijf liet de locaties niet vallen. Het liet de subsidie vallen, en de extra staatsvoorwaarden die bij het aannemen van het geld hoorden. De modelovereenkomst is het federale stuk voor een aanbieder in een lage baan die de dienst- en testregels van BEAD haalt en daar geen BEAD-geld voor aanneemt. De subsidie afwijzen maakt de locatie niet vrij. Een toekenning van $0 noemt Starlink nog steeds op die plekken.</p>\n<h2>Dus waarom een toekenning van nul houden?</h2>\n<p><strong>In BEAD blijven met een toekenning van $0 houdt andere federale subsidies weg bij concurrenten op die locaties.</strong> Broadband Breakfast en Fierce Network melden dat effect allebei. De locaties blijven in het programma, toegewezen aan Starlink, zonder betaling door BEAD. Andere federale subsidies gaan niet naar een concurrent voor dezelfde plekken zolang die toewijzing blijft staan. Dat is een aanspraak op de locatie. Het is geen cadeau van gratis internet aan het huis, en het is geen betaling van het programma. Staten hadden de aanwijzing niet verwacht die deze keuze voor hen legde.</p>\n<h2>Wat is onduidelijk als een staat al getekend heeft?</h2>\n<p><strong>Staten waren verrast door de aanwijzing, en het is onduidelijk wat er gebeurt met contracten die een deel van hen al heeft getekend.</strong> Broadband Breakfast en Tesla North melden die verrassing. Indiana tekende in juni met SpaceX. De berichten zeggen niet hoe een contract uit juni naast de modelovereenkomst staat die op 23 november 2026 is aangekondigd. Ze zeggen wel wat een staat met het nieuwe stuk kan. Het kan tekenen, of het kan voor die locaties een andere aanbieder zoeken tegen vergelijkbare kosten. Tot die keuze is gemaakt, liggen een getekend contract en de novemberovereenkomst allebei op tafel, en de uitkomst voor een staat die al tekende is in deze berichten niet beslist.</p>\n<p>Wat de aankondiging wel beslist, is de rekening. Het BEAD-programma betaalt niets. Klantapparatuur voor een BEAD-abonnee wordt geleverd zonder extra kosten, en die apparatuur is het enige dat gratis is. Het huishouden betaalt nog steeds een maandelijkse rekening. Dit is geen gratis internet.</p>"
+  }
+}

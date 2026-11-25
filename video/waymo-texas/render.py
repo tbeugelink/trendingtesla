@@ -33,10 +33,10 @@ LINES = ("s1", "s2", "s3", "s4", "s5", "s6", "s7", "s8")
 # blur is x, y, w, h in the 1080x1920 frame. lock keeps a shot inside a clean source window.
 SHOTS = [
     {"id": "open", "kind": "video", "file": "austin300.mp4", "ss": 25.80, "dur": 2.40,
-     "hook": True, "fx": "hold", "zoom": (1.00, 1.04), "crop": (700, 0, 608, 1080),
-     "blur": (0, 1020, 1080, 900), "mission": "Robotaxi Austin fleet",
+     "hook": True, "fx": "hold", "zoom": (1.00, 1.04), "crop": (656, 0, 608, 1080),
+     "tracks": "fleet", "mission": "Robotaxi Austin fleet",
      "credit": "https://x.com/robotaxi/status/2108981691436224816",
-     "shows": "Gold Cybercab, overhead, Austin fleet lot. Plate blurred. Hook numbers."},
+     "shows": "Center crop of gold Cybercabs, Austin fleet lot. Plate blurred. Hook numbers."},
     {"id": "exit", "kind": "video", "file": "austin300.mp4", "ss": 23.70, "dur": 1.60, "lock": True,
      "fx": "hold", "zoom": (1.02, 1.08), "crop": (656, 0, 608, 1080), "mission": "Robotaxi Austin fleet",
      "credit": "https://x.com/robotaxi/status/2108981691436224816",
@@ -65,13 +65,36 @@ SHOTS = [
      "credit": "https://x.com/robotaxi/status/2102222880553787723",
      "shows": "Cybercab 67, Austin fleet, front, daylight. The bumper mark reads Cybercab, not a registration number."},
     {"id": "loop", "kind": "video", "file": "austin300.mp4", "ss": 26.30, "dur": 2.40,
-     "fx": "hold", "zoom": (1.00, 1.04), "crop": (1040, 0, 608, 1080),
-     "blur": (0, 880, 1080, 1040), "mission": "Robotaxi Austin fleet",
+     "fx": "hold", "zoom": (1.00, 1.04), "crop": (656, 0, 608, 1080),
+     "tracks": "fleet", "mission": "Robotaxi Austin fleet",
      "credit": "https://x.com/robotaxi/status/2108981691436224816",
-     "shows": "Second gold Cybercab in the Austin lot, plates blurred, under the registration caveat."},
+     "shows": "Center crop of the same Cybercab rows, plates blurred, under the registration caveat."},
 ]
 
 BG = None
+
+# Plate boxes in the 1080x1920 frame, before the slow zoom. Times are source seconds.
+# The drone slides one Texas plate across the bumper, then a second plate enters at the corner.
+FLEET_PLATES = [
+    [
+        (25.80, (780, 1325, 220, 110)),
+        (26.30, (670, 1320, 220, 110)),
+        (26.80, (560, 1325, 220, 110)),
+        (27.30, (500, 1325, 220, 115)),
+        (27.55, (370, 1205, 160, 130)),
+        (27.80, (380, 1200, 160, 135)),
+        (28.00, (380, 1200, 160, 130)),
+        (28.30, (370, 1200, 140, 130)),
+        (28.80, (360, 1200, 160, 130)),
+        (29.40, (370, 1200, 150, 130)),
+    ],
+    [
+        (27.50, (990, 1500, 90, 240)),
+        (28.00, (940, 1520, 140, 220)),
+        (28.80, (920, 1510, 160, 220)),
+        (29.40, (890, 1500, 190, 230)),
+    ],
+]
 
 
 def run(cmd):
@@ -274,14 +297,15 @@ def paint_graphic(kind, p):
     if kind == "bars":
         if appear(p, 0.0) > 0:
             draw_text(im, "TEXAS REGISTER", 48, 430, DIM, W * 0.8, stroke=0)
-        grow_t = min(1.0, max(0.0, p / 0.45))
-        grow_w = min(1.0, max(0.0, (p - 0.22) / 0.45))
+        # Shared grow from a zero baseline. Waymo stays 1405/1556 of Tesla.
+        grow = min(1.0, max(0.0, p / 0.50))
+        tesla_w = max(8, int(840 * grow))
+        waymo_w = max(8, int(840 * (1405 / 1556) * grow))
         d = ImageDraw.Draw(im)
-        d.rounded_rectangle((120, 620, 120 + max(8, int(840 * grow_t)), 720), radius=16, fill=YELLOW)
-        if grow_t > 0.4:
+        d.rounded_rectangle((120, 620, 120 + tesla_w, 720), radius=16, fill=YELLOW)
+        d.rounded_rectangle((120, 900, 120 + waymo_w, 1000), radius=16, fill=(70, 78, 92))
+        if grow > 0.16:
             draw_text(im, "TESLA  1,556", 52, 740, YELLOW, W * 0.86)
-        d.rounded_rectangle((120, 900, 120 + max(8, int(840 * (1405 / 1556) * grow_w)), 1000), radius=16, fill=(70, 78, 92))
-        if grow_w > 0.4:
             draw_text(im, "WAYMO  1,405", 52, 1020, WHITE, W * 0.86)
         if appear(p, 0.62) > 0:
             draw_text(im, "LEADS BY 151", 56, 1160, YELLOW, W * 0.86)
@@ -317,7 +341,17 @@ def encode_frames(frames_path, dest):
          "-crf", "16", str(dest)])
 
 
-def paint_video(src, dest, cards, hook, t0, fx, zoom, blur):
+def track_box(track, t):
+    if t < track[0][0] or t > track[-1][0]:
+        return None
+    for (t0, b0), (t1, b1) in zip(track, track[1:]):
+        if t0 <= t <= t1:
+            u = (t - t0) / (t1 - t0)
+            return tuple(int(round(a + (b - a) * u)) for a, b in zip(b0, b1))
+    return None
+
+
+def paint_video(src, dest, cards, hook, t0, fx, zoom, blur, plates=None, tracks=None, ss=0.0, speed=1.0):
     raw = OUT / "raw.rgb"
     run(["ffmpeg", "-y", "-v", "error", "-i", str(src), "-f", "rawvideo", "-pix_fmt", "rgb24", str(raw)])
     frame = W * H * 3
@@ -332,6 +366,16 @@ def paint_video(src, dest, cards, hook, t0, fx, zoom, blur):
                 break
             t = t0 + n / FPS
             im = Image.frombytes("RGB", (W, H), buf)
+            # Plate boxes are in the full frame, before the slow zoom, so the
+            # blur rides with the picture instead of sliding off the plate.
+            for box in plates or []:
+                im = blur_plate(im, box)
+            if tracks:
+                t_src = ss + (n / FPS) * speed
+                for track in tracks:
+                    box = track_box(track, t_src)
+                    if box:
+                        im = blur_plate(im, box)
             z0, z1 = zoom or (1.0, 1.0)
             z = z0 + (z1 - z0) * (n / max(1, nframes - 1))
             if z > 1.01:
@@ -610,10 +654,16 @@ def main():
 
     by_id = {s["id"]: s for s in alignment["sentences"]}
     cards = []
-    for m in timeline:
+    for i, m in enumerate(timeline):
         sent = dict(by_id[m["id"]])
         sent["caption"] = m.get("caption") or sent.get("caption")
-        cards += caption_cards(sent, m["t0"])
+        # Hand the caption off when the next sentence starts, so a lingering
+        # card cannot cover the next spoken line.
+        nxt = timeline[i + 1]["t0"] if i + 1 < len(timeline) else m["t0"] + m["length"] + 0.2
+        for a, b, text in caption_cards(sent, m["t0"]):
+            b = min(b, nxt)
+            if b > a + 0.04:
+                cards.append((a, b, text))
 
     segs = []
     t = 0.0
@@ -630,8 +680,11 @@ def main():
                 extract(shot, plain)
             # Map a source-crop blur into output pixels. Crop is scaled uniformly to WxH.
             blur = shot.get("blur")
+            tracks = FLEET_PLATES if shot.get("tracks") == "fleet" else None
+            speed = (shot.get("src_dur") or shot["dur"]) / shot["dur"]
             paint_video(plain, graded, cards, shot["dur"] if shot.get("hook") else None, t,
-                        shot.get("fx") or "hold", shot.get("zoom"), blur)
+                        shot.get("fx") or "hold", shot.get("zoom"), blur, shot.get("plates"),
+                        tracks, shot.get("ss") or 0.0, speed)
             plain.unlink(missing_ok=True)
         segs.append(graded)
         t += shot["dur"]

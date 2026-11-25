@@ -11,43 +11,43 @@
     "bed_gain_db": -3.4
   },
   "worst_clip": {
-    "share": 0.012954282407407407,
-    "t": 0.6333333333333333
+    "share": 0.013012152777777777,
+    "t": 0.2
   },
   "worst_black": {
-    "share": 0.10619502314814815,
+    "share": 0.10659143518518518,
     "t": 3.0
   },
   "per_second": [
     {
       "t": 0.0,
       "clip": 0.0129,
-      "black": 0.0327
+      "black": 0.0357
     },
     {
       "t": 1.0,
       "clip": 0.0129,
-      "black": 0.0322
+      "black": 0.0344
     },
     {
       "t": 2.0,
       "clip": 0.0129,
-      "black": 0.0377
+      "black": 0.0396
     },
     {
       "t": 3.0,
       "clip": 0.0052,
-      "black": 0.1062
+      "black": 0.1066
     },
     {
       "t": 4.0,
       "clip": 0.0052,
-      "black": 0.0404
+      "black": 0.0406
     },
     {
       "t": 5.0,
-      "clip": 0.0052,
-      "black": 0.0099
+      "clip": 0.0086,
+      "black": 0.0174
     },
     {
       "t": 6.0,
@@ -92,16 +92,16 @@
     {
       "t": 14.0,
       "clip": 0.0086,
-      "black": 0.0109
+      "black": 0.0108
     },
     {
       "t": 15.0,
-      "clip": 0.0089,
-      "black": 0.0109
+      "clip": 0.0091,
+      "black": 0.0108
     },
     {
       "t": 16.0,
-      "clip": 0.0107,
+      "clip": 0.011,
       "black": 0.0109
     },
     {
@@ -121,13 +121,13 @@
     },
     {
       "t": 20.0,
-      "clip": 0.0067,
-      "black": 0.0151
+      "clip": 0.0066,
+      "black": 0.0149
     },
     {
       "t": 21.0,
-      "clip": 0.006,
-      "black": 0.0144
+      "clip": 0.0061,
+      "black": 0.0145
     },
     {
       "t": 22.0,
@@ -136,23 +136,23 @@
     },
     {
       "t": 23.0,
-      "clip": 0.0064,
+      "clip": 0.0065,
       "black": 0.0131
     },
     {
       "t": 24.0,
       "clip": 0.0066,
-      "black": 0.0086
+      "black": 0.0112
     },
     {
       "t": 25.0,
       "clip": 0.0065,
-      "black": 0.0088
+      "black": 0.0166
     },
     {
       "t": 26.0,
-      "clip": 0.0065,
-      "black": 0.0087
+      "clip": 0.0066,
+      "black": 0.0157
     }
   ],
   "shots": [
@@ -164,7 +164,7 @@
       "video_in": 0.0,
       "video_out": 3.0,
       "duration": 3.0,
-      "shows": "Gold Cybercab, overhead, Austin fleet lot. Plate blurred. Hook numbers.",
+      "shows": "Center crop of gold Cybercabs, Austin fleet lot. Plate blurred. Hook numbers.",
       "credit": "https://x.com/robotaxi/status/2108981691436224816"
     },
     {
@@ -263,7 +263,7 @@
       "video_in": 23.856,
       "video_out": 26.856,
       "duration": 3.0,
-      "shows": "Second gold Cybercab in the Austin lot, plates blurred, under the registration caveat.",
+      "shows": "Center crop of the same Cybercab rows, plates blurred, under the registration caveat.",
       "credit": "https://x.com/robotaxi/status/2108981691436224816"
     }
   ]

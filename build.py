@@ -1166,6 +1166,13 @@ header.hb .pnav>.is-parked{display:none}
 .pv-min b{display:block;color:var(--red);font-size:.85rem;font-weight:800;line-height:1;white-space:nowrap}
 .pv-min small{display:block;margin-top:2px;color:var(--dim);font-size:.58rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;line-height:1;white-space:nowrap}
 .pv-row:hover .pv-hl b,.pv-row:focus-visible .pv-hl b{color:#fff;text-decoration:underline;text-underline-offset:2px}
+.pv-mark{display:flex;align-items:center;justify-content:center;color:#f0b429}
+.pv-mark svg{width:13px;height:13px;display:block;fill:currentColor}
+.pv-glab{display:block;margin-top:1px;color:var(--dim);font-size:.68rem;font-weight:700;letter-spacing:.02em;line-height:1.2}
+.pv-row.is-guide .pv-min{border-color:transparent}
+.gmeta{display:inline-flex;align-items:center;gap:5px;color:var(--dim);font-weight:700}
+.gmark{display:inline-flex;color:#f0b429}
+.gmark svg{width:12px;height:12px;display:block;fill:currentColor}
 .pv-side h2{font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#fff;border-top:3px solid var(--red);padding-top:8px;margin:0 0 8px}
 .pv-side section{margin:0 0 18px}
 .pv-side a{text-decoration:none;color:inherit}
@@ -4307,11 +4314,84 @@ def ld_script(obj):
     return f'<script type="application/ld+json">{raw}</script>'
 
 
-def hub_cards(items, lang, eager_first=False):
+_GUIDE_EVERY = 5
+_GUIDE_STAR = ('<svg viewBox="0 0 20 20" aria-hidden="true" focusable="false">'
+               '<path d="M10 1.6 12.6 7l5.9.5-4.5 3.8 1.4 5.8L10 14.4 4.6 17.1 6 11.3 1.5 7.5 7.4 7z"/></svg>')
+
+
+def buying_guides():
+    """Published accessory guides, in the sidebar order. The layout sample stays out."""
+    docs = [doc for doc in GUIDE_DOCS if not doc.get("template")]
+    order = {row[0]: i for i, row in enumerate(GUIDE_CATS)}
+    docs.sort(key=lambda doc: order.get(doc.get("slug"), 100))
+    return docs
+
+
+def guide_inserts(n_news, skip=0):
+    """After every fifth news item, one guide. A page never repeats a guide or places two in a row."""
+    guides = buying_guides()
+    if not guides or n_news <= 0:
+        return {}
+    start = (skip // _GUIDE_EVERY) % len(guides)
+    placed = 0
+    out = {}
+    for i in range(n_news):
+        if (skip + i + 1) % _GUIDE_EVERY != 0:
+            continue
+        if placed >= len(guides):
+            break
+        out[i] = guides[(start + placed) % len(guides)]
+        placed += 1
+    return out
+
+
+def guide_title(doc, lang):
+    return doc["meta"].get(f"title_{lang}") or doc["meta"].get("title_en") or doc.get("slug") or ""
+
+
+def guide_href(doc, lang):
+    return url(lang, guides_path(lang) + doc["slug"] + "/")
+
+
+def guide_label(lang):
+    return "Buying guide" if lang == "en" else "Koopgids"
+
+
+def guide_row(doc, lang):
+    """List row: a star where the time usually sits, and a quiet label under the title."""
+    title = guide_title(doc, lang)
+    label = guide_label(lang)
+    return (
+        f'<a class="pv-row is-guide" href="{guide_href(doc, lang)}">'
+        f'<span class="pv-mark">{_GUIDE_STAR}</span>'
+        f'<span class="pv-hl"><b>{esc(title)}</b><small class="pv-glab">{esc(label)}</small></span>'
+        f'<span class="pv-min guide"></span></a>')
+
+
+def guide_card(doc, lang):
+    """Same card frame as a news item. The star and label replace the section and the time."""
+    title = guide_title(doc, lang)
+    href = guide_href(doc, lang)
+    label = guide_label(lang)
+    photos = _guide_product_photos(doc)
+    src = photos[0][1] if photos else ""
+    photo = still_box("div", "im zimg", src, title, SIZES_GRID, lazy=True) if src else ""
+    meta = f'<span class="lmeta gmeta"><span class="gmark">{_GUIDE_STAR}</span><span>{esc(label)}</span></span>'
+    return (f'<div class="card is-guide"><a class="lgo" href="{href}">{photo}</a>'
+            f'<div class="body">{meta}<a class="lgo" href="{href}"><h2>{esc(title)}</h2></a></div></div>')
+
+
+def hub_cards(items, lang, eager_first=False, mix=False, skip=0):
     if not items:
         return f'<p class="empty">{LANGS[lang]["empty"]}</p>'
-    cards = "".join(gcard(a, lang, eager=eager_first and i == 0) for i, a in enumerate(items))
-    return f'<div class="grid2 gall wide">{cards}</div>'
+    parts = []
+    picks = guide_inserts(len(items), skip) if mix else {}
+    for i, article in enumerate(items):
+        parts.append(gcard(article, lang, eager=eager_first and i == 0))
+        guide = picks.get(i)
+        if guide:
+            parts.append(guide_card(guide, lang))
+    return f'<div class="grid2 gall wide">{"".join(parts)}</div>'
 
 
 def category_hub(key, items, lang):
@@ -4322,7 +4402,7 @@ def category_hub(key, items, lang):
     ordered = sorted(items, key=published, reverse=True)
     feature = home_lead(ordered[0], lang, title_tag="h2") if ordered else ""
     rest = ordered[1:]
-    grid = hub_cards(rest, lang) if rest else ""
+    grid = hub_cards(rest, lang, mix=True, skip=1) if rest else ""
     body = (f'{nav}<header class="hubhead"><h1>{esc(c[lang])}</h1><p class="lead">{esc(intro)}</p></header>'
             f'{feature}{grid}')
     return body, ld, intro
@@ -4449,7 +4529,7 @@ def model_hub(key, items, lang):
     ordered = sorted(items, key=published, reverse=True)
     heading = ("Articles about " if lang == "en" else "Artikelen over ") + name
     if ordered:
-        listing = f'<h2 class="rubh">{esc(heading)}</h2>{hub_cards(ordered, lang)}'
+        listing = f'<h2 class="rubh">{esc(heading)}</h2>{hub_cards(ordered, lang, mix=True)}'
     elif parent:
         back = "Articles about this version are listed with the model." if lang == "en" else "Artikelen over deze uitvoering staan bij het model."
         listing = (f'<p class="hubnote">{esc(back)} <a href="{url(lang, "model/" + parent + "/")}">'
@@ -5458,25 +5538,30 @@ def home_card(item, lang, eager=False):
 
 
 def home_feed(items, lang):
-    """Dated newest-first list. Every row uses the same badge. One row per story."""
+    """Dated newest-first list. Every row uses the same badge. One row per story.
+    A buying guide follows every fifth story. Guides stay out of the news feed data."""
     out, last = [], None
-    for item in items:
+    picks = guide_inserts(len(items))
+    for i, item in enumerate(items):
         day = item["stamp"].astimezone(TZ).date().isoformat()
         if day != last:
             out.append(f'<h2 class="pv-day">{fmt_date(day, lang)}</h2>')
             last = day
         if item["kind"] == "article":
             out.append(pv_row(item["article"], lang))
-            continue
-        if item["kind"] == "short":
-            badge = list_badge("Short", "1 min")
         else:
-            badge = list_badge("Video", f"{whole_minutes(item.get('seconds') or 0)} min")
-        out.append(
-            f'<a class="pv-row" href="{url(lang, item["path"])}">'
-            f'<time datetime="{item["stamp"].isoformat()}">{item["stamp"].strftime("%H:%M")}</time>'
-            f'<span class="pv-hl"><b>{esc(item["title"])}</b></span>'
-            f'{badge}</a>')
+            if item["kind"] == "short":
+                badge = list_badge("Short", "1 min")
+            else:
+                badge = list_badge("Video", f"{whole_minutes(item.get('seconds') or 0)} min")
+            out.append(
+                f'<a class="pv-row" href="{url(lang, item["path"])}">'
+                f'<time datetime="{item["stamp"].isoformat()}">{item["stamp"].strftime("%H:%M")}</time>'
+                f'<span class="pv-hl"><b>{esc(item["title"])}</b></span>'
+                f'{badge}</a>')
+        guide = picks.get(i)
+        if guide:
+            out.append(guide_row(guide, lang))
     return "".join(out)
 
 
@@ -6489,7 +6574,7 @@ def _article_list(items, lang, title, path, crumb_parts=None):
     if not items:
         return f'{nav}{hidden}<p class="hubnote">{esc(_coverage_note(lang))}</p>', ld
     feature = home_lead(items[0], lang, title_tag="h2")
-    rest = hub_cards(items[1:], lang) if len(items) > 1 else ""
+    rest = hub_cards(items[1:], lang, mix=True, skip=1) if len(items) > 1 else ""
     return f'{nav}{hidden}{feature}{rest}', ld
 
 
@@ -8461,8 +8546,15 @@ def build():
             right = f'<a href="{nxt}">{L["older"]} ›</a>' if nxt else "<span></span>"
             pager = f'<nav class="pager">{left}<span>{L["page"]} {pi + 1} / {pages}</span>{right}</nav>'
             title = L["archive"] + (f' · {L["page"]} {pi + 1}' if pi else "")
+            arch_cards = []
+            arch_picks = guide_inserts(len(chunk), skip=pi * PER_PAGE)
+            for i, article in enumerate(chunk):
+                arch_cards.append(gcard(article, lang))
+                guide = arch_picks.get(i)
+                if guide:
+                    arch_cards.append(guide_card(guide, lang))
             body = (f'<section class="wide"><h1 class="st archh">{title}</h1><div class="grid2 gall wide">'
-                    + "".join(gcard(a, lang) for a in chunk)
+                    + "".join(arch_cards)
                     + ("".join(gcard(a, lang).replace('<div class="card"', '<div class="card xtra"', 1)
                                for a in (rest_arch[pi * PER_PAGE:pi * PER_PAGE + XTRA] if nxt else [])))
                     + f'</div>{pager}</section>')

@@ -11,48 +11,28 @@ nl: Wintersmodder komt op de vloer terecht, en de mat die helpt is de mat die vo
 :::product
 name_en: GAFAT mats for Model Y Juniper
 name_nl: GAFAT-matten voor Model Y Juniper
-pros_en: TPE all-weather mats | Listed for the 2025 to 2027 Model Y Juniper | Standard, Premium and Performance
-pros_nl: Allweer-matten van TPE | Vermeld voor de Model Y Juniper van 2025 tot 2027 | Standard, Premium en Performance
+pros_en: Floor mats for a Model Y Juniper Standard, Premium or Performance from 2025 to 2027 | 3D-scanned so the set follows the floor | Edges of 6 to 10 cm keep mud and snow on the mat | A raised pattern on the surface adds grip under your feet | Three-layer TPE that is waterproof | Rinse with water and the mats come clean
+pros_nl: Vloermatten voor een Model Y Juniper Standard, Premium of Performance van 2025 tot 2027 | 3D-gescand zodat de set de vloer volgt | Randen van 6 tot 10 cm houden modder en sneeuw op de mat | Een reliëf op het oppervlak geeft grip onder je voeten | Drielaags TPE dat waterdicht is | Afspoelen met water en de matten zijn weer schoon
 url: https://www.amazon.nl/dp/B0DZ5JB22G
 button_en: Compare on Amazon
 button_nl: Vergelijk op Amazon
 :::
 
 :::product
-name_en: TPE mats for Model Y Juniper
-name_nl: TPE-matten voor Model Y Juniper
-note_en: TPE floor mats listed for the Model Y Juniper from 2025. An older Model Y needs a different set.
-note_nl: TPE-vloermatten vermeld voor de Model Y Juniper vanaf 2025. Een oudere Model Y heeft een andere set nodig.
-image: /img/guides/ali-1005010376504158.webp
-ali_url: https://s.click.aliexpress.com/e/_c4eTdPDJ
-:::
-
-:::product
 name_en: 3W mats for Model 3 Highland
 name_nl: 3W-matten voor Model 3 Highland
-pros_en: Six-piece set | Listed for Model 3 Highland 2024 to 2025 | The title names floor mats
-pros_nl: Zesdelige set | Vermeld voor Model 3 Highland 2024 tot 2025 | De titel noemt vloermatten
+pros_en: Six floor mats for a Model 3 Highland of 2024 to 2025 | 3D-scanned to follow the floor corners | Thorex material that is non-toxic and has no smell | A double non-slip structure keeps the mats in place | Water-repellent surface against stains and dirt | Wipe them clean after a wet drive
+pros_nl: Zes vloermatten voor een Model 3 Highland van 2024 tot 2025 | 3D-gescand zodat ze de hoeken van de vloer volgen | Thorex-materiaal dat niet giftig is en niet ruikt | Een dubbele antislipstructuur houdt de matten op hun plek | Waterafstotend oppervlak tegen vlekken en vuil | Afnemen na een natte rit
 url: https://www.amazon.nl/dp/B0FJM6K3JP
 button_en: Compare on Amazon
 button_nl: Vergelijk op Amazon
 :::
 
 :::product
-name_en: Highland mats for a Model 3
-name_nl: Highland-matten voor een Model 3
-note_en: The floor-mat set. The page opens on a trunk mat.
-note_nl: De vloermatset. De pagina opent op een kofferbakmat.
-option_en: Option: LHD Floor Mat 6PCS
-option_nl: Uitvoering: LHD Floor Mat 6PCS
-item: 1005006925057063
-ali_url: https://s.click.aliexpress.com/e/_c3iNubYN
-:::
-
-:::product
 name_en: MOTOS mats for Model S
 name_nl: MOTOS-matten voor Model S
-pros_en: The title says floor mats and case mats | Listed for Model S 2012 to 2021 | The title says all-weather and anti-slip
-pros_nl: De titel noemt vloermatten en koffermatten | Vermeld voor Model S 2012 tot 2021 | De titel zegt all-weather en antislip
+pros_en: Rubber floor mats and a cargo mat for a Model S liftback from 2012 to 2021 | Laser-cut for that floor and the upper cargo area | Stays elastic from about minus 50 °C to plus 110 °C | Resists chemicals, UV and abrasion | High edges keep dirt inside the mat | Made from certified, recyclable material
+pros_nl: Rubberen vloermatten en een koffermat voor een Model S liftback van 2012 tot 2021 | Lasergesneden voor die vloer en de bovenste laadruimte | Blijft elastisch van ongeveer min 50 °C tot plus 110 °C | Bestand tegen chemicaliën, uv en slijtage | Hoge randen houden vuil op de mat | Gemaakt van gecertificeerd, recyclebaar materiaal
 url: https://www.amazon.nl/dp/B0D86ZNG7P
 button_en: Check out Amazon
 button_nl: Bekijk op Amazon
@@ -61,8 +41,8 @@ button_nl: Bekijk op Amazon
 :::product
 name_en: Kovvar mats for Model X
 name_nl: Kovvar-matten voor Model X
-pros_en: Three-piece set | Listed for Model X 2016 to 2026 | The title says a five-seat version of 2016 to 2022
-pros_nl: Driedelige set | Vermeld voor Model X 2016 tot 2026 | De titel noemt een vijfpersoonsversie van 2016 tot 2022
+pros_en: Three carpets for a five-seat Model X | Cut for the 2016 to 2022 cars, and also offered through 2026 | 13 mm saxony pile in polyamide | Wear layer stays firm in the heel area | Non-slip textile base, vacuum or beat clean, stains with mild soap | Fixings for the car's own attachment points are in the box
+pros_nl: Drie tapijten voor een Model X met vijf zitplaatsen | Gesneden voor de auto's van 2016 tot 2022, en ook aangeboden tot en met 2026 | Saxony-pool van 13 mm in polyamide | De slijtlaag blijft stevig bij de hielen | Antislip textielonderkant, stofzuigen of uitkloppen, vlekken met milde zeep | Bevestiging voor de eigen punten van de auto zit in de doos
 url: https://www.amazon.nl/dp/B0D482CTSQ
 button_en: Check out Amazon
 button_nl: Bekijk op Amazon

@@ -11,27 +11,18 @@ nl: De console veranderde met Highland en Juniper, en de Juniper Standard is nie
 :::product
 name_en: CYBERBEANS trays for Highland and Juniper
 name_nl: CYBERBEANS-bakjes voor Highland en Juniper
-pros_en: Four-piece set | Listed for every 2024 to 2026 Model 3 Highland | Listed for 2025 to 2026 Juniper Premium and Performance only
-pros_nl: Vierdelige set | Vermeld voor elke Model 3 Highland van 2024 tot 2026 | Alleen vermeld voor Juniper Premium en Performance van 2025 tot 2026
+pros_en: Four trays for every Model 3 Highland from 2024 to 2026 | Also for a Juniper Premium or Performance of 2025 and 2026 | Not for a Model Y from 2021 to 2024, and not for a Juniper Standard | ABS with a liquid-silicone lining to hold items and cut rattle | A cup-holder compartment closes with a magnet | Drop them in with no tools, and wipe with a damp cloth
+pros_nl: Vier bakjes voor elke Model 3 Highland van 2024 tot 2026 | Ook voor een Juniper Premium of Performance van 2025 en 2026 | Niet voor een Model Y van 2021 tot 2024, en niet voor een Juniper Standard | ABS met een bekleding van vloeibaar silicone om spullen vast te houden en gerammel te dempen | Een vak in de bekerhouder sluit met een magneet | Leg ze erin zonder gereedschap, en neem ze af met een vochtige doek
 url: https://www.amazon.nl/dp/B0GV1CMHFK
 button_en: Compare on Amazon
 button_nl: Vergelijk op Amazon
 :::
 
 :::product
-name_en: Console trays for Juniper and Highland
-name_nl: Consolebakjes voor Juniper en Highland
-note_en: A silicone tray set listed for the center console of a Model Y Juniper and a Model 3 Highland.
-note_nl: Een set siliconen bakjes vermeld voor de middenconsole van een Model Y Juniper en een Model 3 Highland.
-image: /img/guides/ali-1005011559038478.webp
-ali_url: https://s.click.aliexpress.com/e/_c3bt8vHP
-:::
-
-:::product
 name_en: Wigoo trays for Highland and Juniper
 name_nl: Wigoo-bakjes voor Highland en Juniper
-pros_en: Four-piece set with a silicone lining | Listed for Juniper Premium and Performance of 2025 and 2026 | Listed for Highland Standard Premium and Performance of 2024 to 2026
-pros_nl: Vierdelige set met een siliconenvoering | Vermeld voor Juniper Premium en Performance van 2025 en 2026 | Vermeld voor Highland Standard Premium en Performance van 2024 tot 2026
+pros_en: Four white trays for a Model 3 Highland from 2024 to 2026, every version | Also for a Juniper Premium or Performance of 2025 and 2026 | A second layer uses the depth under the armrest | Liquid silicone lining to cut rattle and stop items sliding | Cup-holder space stays open for a large cup | A hidden box closes with a magnet
+pros_nl: Vier witte bakjes voor een Model 3 Highland van 2024 tot 2026, elke uitvoering | Ook voor een Juniper Premium of Performance van 2025 en 2026 | Een tweede laag gebruikt de diepte onder de armsteun | Bekleding van vloeibaar silicone tegen gerammel en verschuiven | De bekerhouderruimte blijft open voor een grote beker | Een verborgen bakje sluit met een magneet
 url: https://www.amazon.nl/dp/B0FKG2Q2MX
 button_en: Compare on Amazon
 button_nl: Vergelijk op Amazon
@@ -40,8 +31,8 @@ button_nl: Vergelijk op Amazon
 :::product
 name_en: TOPABYTE tray for Juniper Standard
 name_nl: TOPABYTE-bakje voor Juniper Standard
-pros_en: Three pieces including a lower box and a cup insert | Listed for Juniper Standard of 2025 and 2026 | The page says not for Premium or Performance
-pros_nl: Drie delen inclusief een onderste bak en een bekerinzet | Vermeld voor Juniper Standard van 2025 en 2026 | De pagina zegt niet voor Premium of Performance
+pros_en: Three pieces for a Juniper Standard of 2025 or 2026 | Not for Juniper Premium or Performance | A lower console box in TPE, with a top tray and a deeper bin under a lid | A silicone mat for the wireless charger that still lets the phone charge | A cup-holder insert in soft rubber for different cup sizes | Stain resistant, and you can wipe the TPE clean
+pros_nl: Drie delen voor een Juniper Standard van 2025 of 2026 | Niet voor Juniper Premium of Performance | Een onderbak van TPE, met een bovenblad en een dieper vak onder een deksel | Een siliconen mat voor de draadloze lader die de telefoon wel laat laden | Een bekerhouderinzet van zacht rubber voor verschillende bekermaten | Vlekbestendig, en je kunt het TPE afnemen
 url: https://www.amazon.nl/dp/B0H3ZZ37J1
 button_en: Compare on Amazon
 button_nl: Vergelijk op Amazon
@@ -50,8 +41,8 @@ button_nl: Vergelijk op Amazon
 :::product
 name_en: LUWU tray for Juniper Standard
 name_nl: LUWU-bakje voor Juniper Standard
-pros_en: TPE lower console tray | Listed for Juniper Standard of 2025 to 2027 | The page says not for Juniper Premium
-pros_nl: TPE-bak voor de onderste console | Vermeld voor Juniper Standard van 2025 tot 2027 | De pagina zegt niet voor Juniper Premium
+pros_en: Lower console tray for a Juniper Standard of 2025, 2026 or 2027 | Not for a Juniper Premium | Matte TPE, scratch and heat resistant | A rubber mat in the base stops items sliding | Several compartments for a phone, cards, a wallet, glasses or keys | Push it in with no tools, and rinse the mat in water
+pros_nl: Onderbak voor de console van een Juniper Standard van 2025, 2026 of 2027 | Niet voor een Juniper Premium | Mat TPE, kras- en hittebestendig | Een rubberen mat in de bodem houdt spullen tegen | Meerdere vakken voor een telefoon, kaarten, een portemonnee, een bril of sleutels | Duw hem erin zonder gereedschap, en spoel de mat af met water
 url: https://www.amazon.nl/dp/B0H1BLC3D3
 button_en: Compare on Amazon
 button_nl: Vergelijk op Amazon

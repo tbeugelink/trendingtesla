@@ -11,8 +11,8 @@ nl: Accessoires die de moeite waard zijn, zijn de accessoires die voor jouw auto
 :::product
 name_en: GAFAT all-weather mats for Model Y Juniper
 name_nl: GAFAT-allweermatten voor Model Y Juniper
-pros_en: TPE all-weather mats | Listed for the 2025 and 2026 Model Y Juniper | Standard, Premium and Performance
-pros_nl: Allweer-matten van TPE | Vermeld voor de Model Y Juniper van 2025 en 2026 | Standard, Premium en Performance
+pros_en: Floor mats for a Model Y Juniper Standard, Premium or Performance from 2025 to 2027 | 3D-scanned so the set follows the floor | Edges of 6 to 10 cm keep mud and snow on the mat | A raised pattern on the surface adds grip under your feet | Three-layer TPE that is waterproof | Rinse with water and the mats come clean
+pros_nl: Vloermatten voor een Model Y Juniper Standard, Premium of Performance van 2025 tot 2027 | 3D-gescand zodat de set de vloer volgt | Randen van 6 tot 10 cm houden modder en sneeuw op de mat | Een reliëf op het oppervlak geeft grip onder je voeten | Drielaags TPE dat waterdicht is | Afspoelen met water en de matten zijn weer schoon
 url: https://www.amazon.nl/dp/B0DZ5JB22G
 button_en: Compare on Amazon
 button_nl: Vergelijk op Amazon
@@ -21,27 +21,18 @@ button_nl: Vergelijk op Amazon
 :::product
 name_en: GAFAT mats for Model Y 2021 to 2024
 name_nl: GAFAT-matten voor Model Y 2021 tot 2024
-pros_en: 3D TPE floor mats | Listed for Model Y 2021 to 2024 | The title says five seats
-pros_nl: 3D TPE-vloermatten | Vermeld voor Model Y 2021 tot 2024 | De titel noemt vijf zitplaatsen
+pros_en: Floor mats for a five-seat Model Y from 2020 to 2024 | Not for the seven-seat car | TPE surface that sheds water, cold and heat | XPE foam in the middle cuts vibration | High edges keep mud, rain and snow off the carpet | RoHS-certified material with no smell
+pros_nl: Vloermatten voor een Model Y met vijf zitplaatsen van 2020 tot 2024 | Niet voor de auto met zeven zitplaatsen | TPE-oppervlak dat water, kou en hitte verdraagt | XPE-schuim in het midden dempt trillingen | Hoge randen houden modder, regen en sneeuw van het tapijt | RoHS-gecertificeerd materiaal zonder geur
 url: https://www.amazon.nl/dp/B09SWFCTFQ
 button_en: Compare on Amazon
 button_nl: Vergelijk op Amazon
 :::
 
 :::product
-name_en: Floor mats for Model 3 and Y
-name_nl: Vloermatten voor Model 3 en Y
-note_en: Floor mats listed for a Model 3 and a Model Y.
-note_nl: Vloermatten vermeld voor een Model 3 en een Model Y.
-item: 1005007345340044
-ali_url: https://s.click.aliexpress.com/e/_c3QsvoO9
-:::
-
-:::product
 name_en: Spigen glass for a 16-inch 2026 screen
 name_nl: Spigen-glas voor een scherm van 16 inch uit 2026
-pros_en: Tempered glass | Listed for a 16-inch screen | 2026 Model Y Standard, Premium, Performance and Model Y L
-pros_nl: Gehard glas | Vermeld voor een scherm van 16 inch | Model Y Standard, Premium en Performance van 2026 en Model Y L
+pros_en: Tempered glass for a 16 inch Tesla screen only | Check the 10th VIN character: T is 2026 and V is 2027 on a Model Y | Also for a Model 3, a Model Y L, and Standard, Premium or Performance with that screen | Matte anti-glare coat and an oleophobic layer against fingerprints | An auto-align kit is in the pack | AluminaCore glass rated 10H+
+pros_nl: Gehard glas alleen voor een Tesla-scherm van 16 inch | Controleer het 10e VIN-teken: T is 2026 en V is 2027 bij een Model Y | Ook voor een Model 3, een Model Y L, en Standard, Premium of Performance met dat scherm | Matte ontspiegeling en een oleofobe laag tegen vingerafdrukken | Een auto-uitlijnset zit in de verpakking | AluminaCore-glas met klasse 10H+
 url: https://www.amazon.nl/dp/B0FPJ6RYFN
 button_en: Compare on Amazon
 button_nl: Vergelijk op Amazon

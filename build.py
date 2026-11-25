@@ -1017,8 +1017,8 @@ article.money .avid{max-width:68ch}
 .pgal-nav{position:absolute;top:50%;transform:translateY(-50%);z-index:1;width:26px;height:26px;padding:0;border:0;border-radius:50%;background:rgba(16,16,16,.42);color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center}
 .pgal-nav:hover{background:rgba(16,16,16,.68)}
 .pgal-prev{left:6px}.pgal-next{right:6px}
-.pgal-thumbs{display:flex;gap:6px;margin-top:8px}
-.pgal-thumb{width:34px;height:34px;padding:3px;box-sizing:border-box;border:1px solid #d5d5d5;border-radius:6px;background:#fff;cursor:pointer;line-height:0}
+.pgal-thumbs{display:flex;width:100%;gap:6px;margin-top:8px}
+.pgal-thumb{flex:1 1 0;width:auto;min-width:0;height:auto;aspect-ratio:1;padding:2px;box-sizing:border-box;border:1px solid #d5d5d5;border-radius:6px;background:#fff;cursor:pointer;line-height:0}
 .pgal-thumb.is-on{border-color:#1a1a1a;box-shadow:0 0 0 1px #1a1a1a}
 .gbox .pgal-thumb img,.pbox .pgal-thumb img{width:100%;height:100%;aspect-ratio:1/1;object-fit:contain;background:#fff;border-radius:3px;display:block}
 .pgal:focus-visible,.pgal-nav:focus-visible,.pgal-thumb:focus-visible{outline:2px solid var(--blue2);outline-offset:2px}
@@ -3635,8 +3635,6 @@ def gallery_html(srcs, alt, href, remote, lang):
         shot = (f'<a class="pshot" href="{esc(href)}" rel="sponsored nofollow noopener" target="_blank">{hero}</a>')
     else:
         shot = f'<span class="pshot">{hero}</span>'
-    if len(srcs) == 1:
-        return f'<div class="pgal"><div class="pgal-stage">{shot}</div></div>'
     prev = "Vorige foto" if lang == "nl" else "Previous photo"
     nxt = "Volgende foto" if lang == "nl" else "Next photo"
     label = "Foto's" if lang == "nl" else "Photos"
@@ -3649,12 +3647,14 @@ def gallery_html(srcs, alt, href, remote, lang):
             f'<button type="button" class="pgal-thumb{on}" data-src="{esc(src)}" aria-label="{esc(f"{photo} {n}")}"{current}>'
             f'<img src="{esc(_thumb_src(src))}" alt="" width="34" height="34" loading="lazy" decoding="async"'
             f' onerror="var b=this.closest(\'.pgal-thumb\');if(b)b.remove()"></button>')
+    nav = ""
+    if len(srcs) > 1:
+        nav = (f'<button type="button" class="pgal-nav pgal-prev" aria-label="{esc(prev)}">{_ARROW_PREV}</button>'
+               f'<button type="button" class="pgal-nav pgal-next" aria-label="{esc(nxt)}">{_ARROW_NEXT}</button>')
     return (
         f'<div class="pgal" data-pgal tabindex="0" aria-label="{esc(label)}">'
-        f'<div class="pgal-stage">{shot}'
-        f'<button type="button" class="pgal-nav pgal-prev" aria-label="{esc(prev)}">{_ARROW_PREV}</button>'
-        f'<button type="button" class="pgal-nav pgal-next" aria-label="{esc(nxt)}">{_ARROW_NEXT}</button>'
-        f'</div><div class="pgal-thumbs">{"".join(thumbs)}</div></div>')
+        f'<div class="pgal-stage">{shot}{nav}</div>'
+        f'<div class="pgal-thumbs">{"".join(thumbs)}</div></div>')
 
 
 def local_gallery(src):
@@ -7972,7 +7972,7 @@ def _guide_product(fields, lang):
     name = fields.get(f"name_{lang}") or fields.get("name_en") or ""
     if not name:
         return ""
-    pros = _bits(fields.get(f"pros_{lang}") or fields.get("pros_en"))[:3]
+    pros = _bits(fields.get(f"pros_{lang}") or fields.get("pros_en"))
     href = guide_amazon(str(fields.get("url") or ""), lang)
     amazon_host = ""
     if href.startswith("https://") and href.count("/") >= 2:
@@ -8097,6 +8097,35 @@ def guide_method(lang):
         "<p>Match the model and the year to the title. A 15 inch screen is not a 16 inch screen, "
         "and a mat cut for a Juniper is not the mat for an older Model Y. "
         "The button opens the store page in English.</p>")
+
+
+_BANNED_BULLET = re.compile(
+    r"the title (says|names|calls|lists)|the page (says|names|lists|calls)|"
+    r"the description (says|names|also)|listed (for|as|only)|"
+    r"de titel (zegt|noemt)|de pagina (zegt|noemt)|"
+    r"vermeld voor|vermeld als|de vermelding",
+    re.I)
+
+
+def check_guide_bullets(docs):
+    """Every published card has six buyer bullets and none of the listing-meta phrases."""
+    bad = []
+    for doc in docs:
+        if doc.get("template"):
+            continue
+        for kind, fields in doc.get("pieces") or []:
+            if kind != "product" or not isinstance(fields, dict):
+                continue
+            for lang in ("en", "nl"):
+                bits = _bits(fields.get(f"pros_{lang}") or "")
+                name = fields.get(f"name_{lang}") or fields.get("name_en") or doc.get("slug")
+                if len(bits) != 6:
+                    bad.append(f"{doc.get('slug')} / {name} / {lang}: {len(bits)} bullets")
+                for bit in bits:
+                    if _BANNED_BULLET.search(bit):
+                        bad.append(f"{doc.get('slug')} / {name} / {lang}: {bit}")
+    if bad:
+        raise SystemExit("guide bullets failed:\n" + "\n".join(bad[:50]))
 
 
 def guide_body(doc, lang):
@@ -8245,6 +8274,7 @@ def build():
     global GUIDE_DOCS
     guide_docs = load_guides()
     GUIDE_DOCS = guide_docs
+    check_guide_bullets(guide_docs)
     promise_rows = load_promises()
 
     for lang in LANGS:

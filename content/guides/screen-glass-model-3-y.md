@@ -6,51 +6,33 @@ description_nl: Schermhoezen op Amazon.nl voor de Tesla-modellen die elke pagina
 ---
 
 en: The cover has to match the screen in the car. A 15 inch display from a 2017 to 2023 Model 3 is not the 16 inch display in a later Model Y. The Cybertruck listing calls itself a 9H PET cover, not the glass used on a Model 3. Read the size line and check the current price.
-nl: De hoes moet bij het scherm in de auto passen. Een scherm van 15 inch uit een Model 3 van 2017 tot 2023 is niet het scherm van 16 inch in een latere Model Y. De Cybertruck-vermelding noemt zich een 9H PET-hoes, niet het glas van een Model 3. Lees de maatregel en kijk de actuele prijs na.
+nl: De hoes moet bij het scherm in de auto passen. Een scherm van 15 inch uit een Model 3 van 2017 tot 2023 is niet het scherm van 16 inch in een latere Model Y. Het Cybertruck-scherm is een 9H PET-hoes, niet het glas van een Model 3. Lees de maatregel en kijk de actuele prijs na.
 
 :::product
 name_en: Spigen glass for a 15 inch screen
 name_nl: Spigen-glas voor een scherm van 15 inch
-pros_en: 9H tempered glass with an installation template | Listed for Model 3 of 2017 to 2023 at 15 inch | Listed for Model Y of 2020 to 2024 at 15 inch
-pros_nl: Gehard glas van 9H met een montagemal | Vermeld voor Model 3 van 2017 tot 2023 op 15 inch | Vermeld voor Model Y van 2020 tot 2024 op 15 inch
+pros_en: One sheet of 9H tempered glass for a 15 inch screen | Fits a Model 3 from 2017 through 2023 | Fits a Model Y from 2020 through 2024 | An alignment template is in the pack | Oleophobic coating against fingerprints | Press the sticker area firmly from top to bottom after the template is on
+pros_nl: Eén vel 9H-gehard glas voor een scherm van 15 inch | Past op een Model 3 van 2017 tot en met 2023 | Past op een Model Y van 2020 tot en met 2024 | Een uitlijnmal zit in de verpakking | Oleofobe coating tegen vingerafdrukken | Druk het stickerdeel stevig van boven naar beneden aan als de mal erop zit
 url: https://www.amazon.nl/dp/B084BNC3FG
 button_en: Compare on Amazon
 button_nl: Vergelijk op Amazon
 :::
 
 :::product
-name_en: Glass for a 15 inch screen
-name_nl: Glas voor een scherm van 15 inch
-note_en: A glass cover listed for a 15 inch screen.
-note_nl: Een glasplaat vermeld voor een scherm van 15 inch.
-item: 1005006863642965
-ali_url: https://s.click.aliexpress.com/e/_c2v4ewct
-:::
-
-:::product
 name_en: Spigen glass for a 16 inch screen
 name_nl: Spigen-glas voor een scherm van 16 inch
-pros_en: Anti-glare tempered glass | Listed only for a 16 inch screen | Named for Model 3 of 2027 and listed Model Y years
-pros_nl: Antireflecterend gehard glas | Alleen vermeld voor een scherm van 16 inch | Genoemd voor Model 3 van 2027 en vermelde Model Y-jaren
+pros_en: Tempered glass for a 16 inch Tesla screen only | Check the 10th VIN character: T is 2026 and V is 2027 on a Model Y | Also for a Model 3, a Model Y L, and Standard, Premium or Performance with that screen | Matte anti-glare coat and an oleophobic layer against fingerprints | An auto-align kit is in the pack | AluminaCore glass rated 10H+
+pros_nl: Gehard glas alleen voor een Tesla-scherm van 16 inch | Controleer het 10e VIN-teken: T is 2026 en V is 2027 bij een Model Y | Ook voor een Model 3, een Model Y L, en Standard, Premium of Performance met dat scherm | Matte ontspiegeling en een oleofobe laag tegen vingerafdrukken | Een auto-uitlijnset zit in de verpakking | AluminaCore-glas met klasse 10H+
 url: https://www.amazon.nl/dp/B0FPJ6RYFN
 button_en: Compare on Amazon
 button_nl: Vergelijk op Amazon
 :::
 
 :::product
-name_en: Futhope glass for Model Y Juniper
-name_nl: Futhope-glas voor Model Y Juniper
-note_en: Tempered glass listed for the 16 inch screen on a Model Y Juniper. Measure the screen before you order.
-note_nl: Gehard glas vermeld voor het scherm van 16 inch op een Model Y Juniper. Meet het scherm voor je bestelt.
-image: /img/guides/ali-1005010770297507.webp
-ali_url: https://s.click.aliexpress.com/e/_c3Vjtku1
-:::
-
-:::product
 name_en: YEE PIN glass for Juniper 16 inch
 name_nl: YEE PIN-glas voor Juniper 16 inch
-pros_en: 9H tempered glass | Listed for a 16 inch Juniper Performance screen | The page says it is not for 15.4 inch
-pros_nl: Gehard glas van 9H | Vermeld voor een Juniper Performance-scherm van 16 inch | De pagina zegt dat het niet voor 15,4 inch is
+pros_en: 9H tempered glass for the 16 inch QHD screen of a Juniper Performance | Not for a 15.4 inch display | The maker quotes 99.9% light transmission | An oleophobic coat sheds oil, water and fingerprints | It is meant to suck itself down without bubbles | One protector and one alignment aid in the box
+pros_nl: 9H-gehard glas voor het 16 inch QHD-scherm van een Juniper Performance | Niet voor een scherm van 15,4 inch | De maker noemt 99,9% lichtdoorlatendheid | Een oleofobe laag stoot olie, water en vingerafdrukken af | Hij hoort zichzelf zonder bellen vast te zuigen | Eén beschermer en één uitlijnhulp in de doos
 url: https://www.amazon.nl/dp/B0GCJ3PTFB
 button_en: Compare on Amazon
 button_nl: Vergelijk op Amazon
@@ -59,8 +41,8 @@ button_nl: Vergelijk op Amazon
 :::product
 name_en: GAFAT glass for Juniper 16 and 8
 name_nl: GAFAT-glas voor Juniper 16 en 8
-pros_en: Two-piece matte set for a 16 inch screen and an 8 inch rear screen | Listed for Juniper Premium and Performance | The page says not for 15 inch models
-pros_nl: Matte tweedelige set voor een scherm van 16 inch en een achterscherm van 8 inch | Vermeld voor Juniper Premium en Performance | De pagina zegt niet voor modellen van 15 inch
+pros_en: Matte glass for the 16 inch touchscreen and the 8 inch rear screen | For a Juniper Standard, Premium or Performance from 2026 to 2028 | Not for a 15 inch screen | An alignment frame is meant to stop a crooked fit, and a closed design to keep dust out | 9H hardness, anti-glare, water and oil resistance, and an anti-fingerprint coat | The matte face is meant to add a little drag so a finger does not skate
+pros_nl: Mat glas voor het touchscreen van 16 inch en het achterscherm van 8 inch | Voor een Juniper Standard, Premium of Performance van 2026 tot 2028 | Niet voor een scherm van 15 inch | Een uitlijnframe moet een scheve plaatsing stoppen, en een gesloten ontwerp het stof buiten houden | 9H-hardheid, ontspiegeld, water- en oliebestendig, en een anti-vingerafdruklaag | De matte zijde moet wat weerstand geven zodat een vinger niet wegschiet
 url: https://www.amazon.nl/dp/B0GKNPSHWW
 button_en: Compare on Amazon
 button_nl: Vergelijk op Amazon
@@ -69,8 +51,8 @@ button_nl: Vergelijk op Amazon
 :::product
 name_en: Screen cover for a Cybertruck
 name_nl: Schermhoes voor een Cybertruck
-pros_en: Front and back screen protector | Listed for Cybertruck 2024 and later | The title says 9H PET and matt
-pros_nl: Schermbeschermer voor en achter | Vermeld voor Cybertruck 2024 en later | De titel zegt 9H PET en mat
+pros_en: 9H PET film for the front and rear screens of a Cybertruck from 2024 on | Matte coat against fingerprints, oil and stains | Meant to keep touch response after it is on | The kit has cloth, wipes, dust stickers and a squeegee | A video guide is included for the fit | Made in the United States
+pros_nl: 9H-PET-folie voor het voor- en achterscherm van een Cybertruck vanaf 2024 | Matte laag tegen vingerafdrukken, olie en vlekken | Bedoeld om de aanraakreactie te houden als hij erop zit | De set heeft een doek, doekjes, stofstickers en een wisser | Een videohandleiding zit erbij voor de plaatsing | Gemaakt in de Verenigde Staten
 url: https://www.amazon.nl/dp/B0DRM8SX2F
 button_en: Check out Amazon
 button_nl: Bekijk op Amazon

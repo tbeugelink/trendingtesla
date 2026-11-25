@@ -6,32 +6,23 @@ description_nl: Drie bandenpompen van 12 volt op Amazon.nl. Geen ervan is een Te
 ---
 
 en: These pumps are for a 12 volt socket of the cigarette-lighter type. The listings do not say they were made for a Tesla. Confirm the socket in your car, and check the current price.
-nl: Deze pompen zijn voor een 12-voltstopcontact van het type sigarettenaansteker. De vermeldingen zeggen niet dat ze voor een Tesla zijn gemaakt. Bevestig het stopcontact in je auto, en kijk de actuele prijs na.
+nl: Deze pompen zijn voor een 12-voltstopcontact van het type sigarettenaansteker. Ze zijn geen Tesla-onderdeel. Bevestig het stopcontact in je auto, en kijk de actuele prijs na.
 
 :::product
 name_en: FORTEM 12 volt tyre pump
 name_nl: FORTEM-bandenpomp van 12 volt
-pros_en: 12 volt plug for a cigarette-lighter socket | Stops when the set pressure is reached | Listed for cars vans and SUVs
-pros_nl: 12-voltstekker voor een sigarettenaansteker | Stopt als de ingestelde spanning is bereikt | Vermeld voor auto's bestelwagens en SUV's
+pros_en: 12 V pump for car, van, SUV and motorcycle tyres | Plugs into the cigarette lighter | Set the pressure, and it stops when that pressure is reached | A digital gauge shows the pressure while it runs | An LED light for a dark roadside stop | Three valve attachments for balls, mattresses and other inflatables
+pros_nl: 12V-pomp voor banden van auto, bus, SUV en motor | Stekker in de sigarettenaansteker | Stel de druk in en hij stopt als die druk bereikt is | Een digitale meter toont de druk terwijl hij loopt | Een ledlamp voor een donkere stop langs de weg | Drie ventielstukken voor ballen, matrassen en andere opblaasbare dingen
 url: https://www.amazon.nl/dp/B073VB41W3
 button_en: Compare on Amazon
 button_nl: Vergelijk op Amazon
 :::
 
 :::product
-name_en: Corded 12V tyre inflator
-name_nl: 12V-bandenpomp met een snoer
-note_en: A corded 12 volt inflator listed at up to 150 psi. It plugs into the car socket.
-note_nl: Een bandenpomp op 12 volt met snoer, vermeld tot 150 psi. Hij gaat in de 12-voltaansluiting van de auto.
-image: /img/guides/ali-1005006727846206.webp
-ali_url: https://s.click.aliexpress.com/e/_c3CAMpiD
-:::
-
-:::product
 name_en: UGREEN 12 volt tyre pump
 name_nl: UGREEN-bandenpomp van 12 volt
-pros_en: No battery of its own | 12 volt plug and a 3 metre lead | Stops at the pressure you set
-pros_nl: Geen eigen accu | 12-voltstekker en een snoer van 3 meter | Stopt bij de spanning die je instelt
+pros_en: 12 V pump, no battery, with a 3 m lead to the cigarette lighter | Five modes and three units: psi, bar and kPa | Up to 150 psi and 30 litres a minute | A 17 cm hose, and a digital screen shows live pressure | Copper motor at 18,000 rpm and 120 W, and it stops on heat, voltage or current | Storage bag plus a Presta valve, a ball needle and a quick adapter
+pros_nl: 12V-pomp, zonder accu, met een snoer van 3 m naar de sigarettenaansteker | Vijf modi en drie eenheden: psi, bar en kPa | Tot 150 psi en 30 liter per minuut | Een slang van 17 cm, en een digitaal scherm toont de druk live | Koperen motor op 18.000 tpm en 120 W, en hij stopt bij hitte, spanning of stroom | Opbergtas plus een Frans ventiel, een balnaald en een snelle adapter
 url: https://www.amazon.nl/dp/B0D1Y832ZK
 button_en: Compare on Amazon
 button_nl: Vergelijk op Amazon
@@ -40,8 +31,8 @@ button_nl: Vergelijk op Amazon
 :::product
 name_en: Oasser pump with a battery
 name_nl: Oasser-pomp met een accu
-pros_en: A built-in battery and a 12 volt car lead | Stops at the set pressure | Listed for car tyres up to 150 psi
-pros_nl: Een ingebouwde accu en een 12-voltsnoer voor de auto | Stopt bij de ingestelde spanning | Vermeld voor autobanden tot 150 psi
+pros_en: Up to 150 psi, with a 6000 mAh battery and a 3 m 12 V lead | If the battery is empty, the cigarette lighter keeps it running | Four units: psi, bar, kPa and kg/cm² | Two readouts, one for the target and one for the live pressure | It stops when the set pressure is reached, and it weighs 810 g | A storage bag and three extra nozzles sit in the body
+pros_nl: Tot 150 psi, met een accu van 6000 mAh en een 12V-snoer van 3 m | Is de accu leeg, dan houdt de sigarettenaansteker hem aan de gang | Vier eenheden: psi, bar, kPa en kg/cm² | Twee uitlezingen, een voor het doel en een voor de actuele druk | Hij stopt als de ingestelde druk bereikt is, en hij weegt 810 g | Een opbergtas en drie extra mondstukken zitten in de behuizing
 url: https://www.amazon.nl/dp/B0DR1Y8NNZ
 button_en: Compare on Amazon
 button_nl: Vergelijk op Amazon

@@ -11,8 +11,8 @@ nl: Een thuislader voor een Tesla in Europa is een Type 2-kast op een eigen groe
 :::product
 name_en: Tesla Wall Connector Type 2
 name_nl: Tesla Wall Connector Type 2
-pros_en: Tesla’s own Type 2 unit | Rated up to 22 kW | 7.3 m cable for indoor or outdoor mounting
-pros_nl: Tesla’s eigen Type 2-unit | Tot 22 kW | Kabel van 7,3 m voor binnen of buiten
+pros_en: Wallbox for any car with a Type 2 port, Tesla or not | Up to 22 kW on a three-phase supply, about 71 km of range per hour | Cable of 7.3 m, which is 24 ft | Indoor or outdoor mount, on a single-phase or three-phase board | Wi-Fi for over-the-air updates, and charging control in the Tesla app | Power sharing across more than one unit, and a four-year home warranty
+pros_nl: Wallbox voor elke auto met een Type 2-poort, Tesla of niet | Tot 22 kW op een driefasenaansluiting, ongeveer 71 km bereik per uur | Kabel van 7,3 m, dat is 24 ft | Binnen of buiten, op een eenfase- of driefasenverdeler | Wifi voor updates op afstand, en laadbeheer in de Tesla-app | Vermogensdeling over meer dan één unit, en vier jaar garantie voor thuis
 url: https://www.amazon.nl/dp/B0BW16BBKQ
 button_en: Compare on Amazon
 button_nl: Vergelijk op Amazon
@@ -21,8 +21,8 @@ button_nl: Vergelijk op Amazon
 :::product
 name_en: dé EV Charger Type 2 22 kW
 name_nl: dé EV Charger Type 2 22 kW
-pros_en: Mobile Type 2 unit | 7 m cable | Schuko adapter, listed for Model Y and Model 3
-pros_nl: Mobiele Type 2-unit | Kabel van 7 m | Schuko-adapter, vermeld voor Model Y en Model 3
+pros_en: Mobile 22 kW charger, no wallbox install | 7 m Type 2 cable, 6 A to 32 A on three phases | A CEE 32 A plug is about six times a normal Schuko socket | The box includes a waterproof bag, a strap, a cloth and a Schuko adapter | Use it at home or take it to another European socket | For Type 2 cars that can take up to 22 kW
+pros_nl: Mobiele lader van 22 kW, zonder wallbox-installatie | Type 2-kabel van 7 m, 6 A tot 32 A op drie fasen | Een CEE 32A-stekker is ongeveer zes keer een gewoon Schuko-stopcontact | De doos bevat een waterdichte tas, een band, een doek en een Schuko-adapter | Gebruik hem thuis of neem hem mee naar een ander Europees stopcontact | Voor Type 2-auto's die tot 22 kW aankunnen
 url: https://www.amazon.nl/dp/B0CS6234MR
 button_en: Compare on Amazon
 button_nl: Vergelijk op Amazon

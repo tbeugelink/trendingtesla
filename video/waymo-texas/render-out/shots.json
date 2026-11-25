@@ -1,13 +1,13 @@
 {
-  "duration": 26.464,
+  "duration": 26.856,
   "graphics_s": 9.0,
-  "graphics_share": 0.3401,
+  "graphics_share": 0.3351,
   "lufs": {
-    "mix": -14.7,
-    "voice_raw": -22.1,
+    "mix": -14.8,
+    "voice_raw": -21.4,
     "bed_raw": -18.6,
     "bed_above_4khz": -53.1,
-    "voice_gain_db": 9.1,
+    "voice_gain_db": 8.4,
     "bed_gain_db": -3.4
   },
   "worst_clip": {
@@ -101,17 +101,17 @@
     },
     {
       "t": 16.0,
-      "clip": 0.0082,
-      "black": 0.011
+      "clip": 0.0081,
+      "black": 0.0109
     },
     {
       "t": 17.0,
-      "clip": 0.009,
+      "clip": 0.0089,
       "black": 0.0192
     },
     {
       "t": 18.0,
-      "clip": 0.012,
+      "clip": 0.0119,
       "black": 0.0287
     },
     {
@@ -127,27 +127,27 @@
     {
       "t": 21.0,
       "clip": 0.0071,
-      "black": 0.0086
+      "black": 0.0085
     },
     {
       "t": 22.0,
       "clip": 0.0047,
-      "black": 0.0132
+      "black": 0.0133
     },
     {
       "t": 23.0,
-      "clip": 0.0066,
-      "black": 0.0131
+      "clip": 0.0065,
+      "black": 0.0133
     },
     {
       "t": 24.0,
-      "clip": 0.0066,
-      "black": 0.0088
+      "clip": 0.0065,
+      "black": 0.0086
     },
     {
       "t": 25.0,
       "clip": 0.0065,
-      "black": 0.0087
+      "black": 0.0088
     },
     {
       "t": 26.0,
@@ -250,8 +250,8 @@
       "file": "cab67.mp4",
       "source_ss": 1.1,
       "video_in": 21.8,
-      "video_out": 23.464,
-      "duration": 1.664,
+      "video_out": 23.856,
+      "duration": 2.056,
       "shows": "Cybercab 67, Austin fleet, front, daylight. The bumper mark reads Cybercab, not a registration number.",
       "credit": "https://x.com/robotaxi/status/2102222880553787723"
     },
@@ -260,8 +260,8 @@
       "mission": "Robotaxi Austin fleet",
       "file": "austin300.mp4",
       "source_ss": 26.3,
-      "video_in": 23.464,
-      "video_out": 26.464,
+      "video_in": 23.856,
+      "video_out": 26.856,
       "duration": 3.0,
       "shows": "Second gold Cybercab in the Austin lot, plates blurred, under the registration caveat.",
       "credit": "https://x.com/robotaxi/status/2108981691436224816"

@@ -555,7 +555,7 @@ h1,h2,h3{color:#ebebeb;font-weight:800}
 .hfeed .pv-min{width:48px;min-width:48px;padding:2px 1px}
 .hfeed .pv-min b{font-size:12px}
 .hfeed .pv-min small{font-size:8px}
-.hfeed .pv-row{grid-template-columns:42px minmax(0,1fr) 48px;column-gap:6px}
+.hfeed .pv-row{grid-template-columns:16px 40px minmax(0,1fr) 48px;column-gap:6px}
 }
 @media (prefers-reduced-motion:reduce){.ticker{overflow-x:auto;overflow-y:hidden}.tk-track{animation:none}.tk-set[aria-hidden="true"]{display:none}}
 /* From tablet up, the lichtkrant is the first thing in the sidebar. It stays in normal
@@ -1154,9 +1154,9 @@ header.hb .pnav>.is-parked{display:none}
 .pv-kicker{font-size:.72rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--blue)}
 .pv-lead h1,.pv-lead h2{font-size:clamp(1.25rem,2.2vw,1.7rem);line-height:1.18;margin:4px 0 8px}
 .pv-lead p{color:var(--muted);font-size:.92rem;line-height:1.45;margin:0}
-.pv-day{font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);margin:8px 0 2px;padding-top:6px;border-top:1px solid var(--border)}
-.pv-row{display:grid;grid-template-columns:52px minmax(0,1fr) 64px;gap:8px;align-items:center;padding:3px 0;border-bottom:1px solid #242424;text-decoration:none;color:inherit}
-.pv-row.hasth{grid-template-columns:52px 64px minmax(0,1fr) 64px}
+.pv-day{font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#ebebeb;margin:8px 0 2px;padding-top:6px;border-top:1px solid var(--border)}
+.pv-row{display:grid;grid-template-columns:16px 52px minmax(0,1fr) 64px;column-gap:8px;align-items:center;padding:3px 0;border-bottom:1px solid #242424;text-decoration:none;color:inherit}
+.pv-row.hasth{grid-template-columns:16px 52px 64px minmax(0,1fr) 64px}
 .pv-row time{font-variant-numeric:tabular-nums;font-size:.8rem;font-weight:800;color:var(--dim)}
 .pv-th{position:relative;container-type:inline-size;border-radius:6px;overflow:hidden;border:1px solid var(--edge);background:#000}
 .pv-th img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
@@ -1166,15 +1166,16 @@ header.hb .pnav>.is-parked{display:none}
 .pv-min b{display:block;color:var(--red);font-size:.85rem;font-weight:800;line-height:1;white-space:nowrap}
 .pv-min small{display:block;margin-top:2px;color:var(--dim);font-size:.58rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;line-height:1;white-space:nowrap}
 .pv-row:hover .pv-hl b,.pv-row:focus-visible .pv-hl b{color:#fff;text-decoration:underline;text-underline-offset:2px}
-.pv-hl{display:flex;align-items:baseline;gap:7px}
-.ndot{flex:none;width:7px;height:7px;border-radius:50%;background:#8f9db0;transform:translateY(-1px)}
+.pv-row>.pv-mark{display:flex;width:16px;height:16px;align-items:center;justify-content:center;justify-self:center;color:#f0b429}
+.pv-row>.pv-mark .ndot{width:7px;height:7px;margin:0;display:block;transform:none}
+.pv-row>.pv-mark svg{width:8px;height:8px;display:block;fill:currentColor}
+.ndot{width:7px;height:7px;border-radius:50%;background:#8f9db0;display:inline-block}
 .ndot.tesla{background:#e31937}.ndot.energy{background:#4cd964}.ndot.spacex{background:#ff7a00}
 .ndot.starlink{background:#00d1ff}.ndot.xai{background:#ffc400}.ndot.neural{background:#ff2d95}
 .ndot.boring{background:#2f6bff}.ndot.x{background:#f4f4f5}.ndot.other{background:#8f9db0}
-.pv-mark{display:inline-flex;flex:none;color:#f0b429;transform:translateY(1px)}
-.pv-mark svg,.gmark svg{width:12px;height:12px;display:block;fill:currentColor}
-.gmark{display:inline-flex;color:#f0b429;margin-right:5px;vertical-align:-1px}
-.card h2 .ndot,.lcard strong .ndot{display:inline-block;margin-right:6px;vertical-align:1px}
+.lmeta .pv-mark{display:inline-flex;width:14px;height:1em;align-items:center;justify-content:center;margin-right:4px;vertical-align:-1px;color:#f0b429}
+.lmeta .pv-mark .ndot{width:7px;height:7px;margin:0}
+.lmeta .pv-mark svg{width:8px;height:8px;display:block;fill:currentColor}
 .pv-side h2{font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#fff;border-top:3px solid var(--red);padding-top:8px;margin:0 0 8px}
 .pv-side section{margin:0 0 18px}
 .pv-side a{text-decoration:none;color:inherit}
@@ -1332,7 +1333,7 @@ article.money .lmeta a.lname:hover{text-decoration:underline}
 .pv-grid,.pv-art,.pv-art.pv-c,.sheet{grid-template-columns:1fr}
 .pv-lead{grid-template-columns:1fr}
 .pv-c .toc{position:static}
-.pv-row.hasth{grid-template-columns:46px 52px minmax(0,1fr) 64px}
+.pv-row.hasth{grid-template-columns:16px 42px 46px minmax(0,1fr) 48px}
 }
 /* Related and the rest of the sidebar share one rail. The article must not
    span two rows of that rail: auto rows then grow with the story and open a gap
@@ -2885,8 +2886,8 @@ def gcard(a, lang, eager=False):
     photo = still_box("div", "im zimg", src, t["title"], SIZES_GRID, portrait=portrait, high=eager, lazy=not eager, mark=card_mark(a, lang))
     return (f'<div class="card"><a class="lgo" href="{href}">'
             f'{photo}</a>'
-            f'<div class="body">{with_actions(rubric_line(a, lang), "", lang, href)}'
-            f'<a class="lgo" href="{href}"><h2>{title_dot(a, esc(card_title(a, lang)))}</h2></a></div></div>')
+            f'<div class="body">{with_actions(marked_meta(a, lang), "", lang, href)}'
+            f'<a class="lgo" href="{href}"><h2>{esc(card_title(a, lang))}</h2></a></div></div>')
 
 
 def split2(t):
@@ -4365,8 +4366,22 @@ def eco_dot(a):
     }.get(layer, "other")
 
 
-def title_dot(a, text):
-    return f'<i class="ndot {eco_dot(a)}" aria-hidden="true"></i>{text}'
+def list_marker(a=None, star=False):
+    """Fixed marker cell. A review uses the star. A story uses its ecosystem dot."""
+    if star:
+        inner = _REVIEW_STAR
+    else:
+        inner = f'<i class="ndot {eco_dot(a)}"></i>'
+    return f'<span class="pv-mark" aria-hidden="true">{inner}</span>'
+
+
+def marked_meta(a, lang, stamp="", link=False):
+    """Rubric with the ecosystem dot before the time."""
+    meta = rubric_line(a, lang, stamp, link)
+    mark = list_marker(a)
+    if meta.startswith('<span class="lmeta">'):
+        return meta.replace('<span class="lmeta">', '<span class="lmeta">' + mark, 1)
+    return mark + meta
 
 
 def review_inserts(n_news, skip=0):
@@ -4401,8 +4416,9 @@ def review_row(doc, lang):
     stamp = published(doc)
     return (
         f'<a class="pv-row is-review" href="{review_href(doc, lang)}">'
+        f'{list_marker(star=True)}'
         f'<time datetime="{stamp.isoformat()}">{stamp.strftime("%H:%M")}</time>'
-        f'<span class="pv-hl"><span class="pv-mark">{_REVIEW_STAR}</span><b>{esc(title)}</b></span>'
+        f'<span class="pv-hl"><b>{esc(title)}</b></span>'
         f'{list_badge(review_minutes(doc, lang), "min")}</a>')
 
 
@@ -4412,7 +4428,7 @@ def review_card(doc, lang):
     href = review_href(doc, lang)
     src = (AMAZON_GALLERIES.get(doc["asin"]) or [""])[0]
     photo = still_box("div", "im zimg", src, title, SIZES_GRID, lazy=True) if src else ""
-    meta = f'<span class="lmeta"><span class="gmark">{_REVIEW_STAR}</span>{when(doc, lang)}</span>'
+    meta = f'<span class="lmeta">{list_marker(star=True)}{when(doc, lang)}</span>'
     return (f'<div class="card is-review"><a class="lgo" href="{href}">{photo}</a>'
             f'<div class="body">{meta}<a class="lgo" href="{href}"><h2>{esc(title)}</h2></a></div></div>')
 
@@ -5403,8 +5419,8 @@ def home_grid_card(a, lang, eager=False, badge=""):
     return (
         f'<div class="lcard"><a class="lgo" href="{href}">'
         f'{photo}</a>'
-        f'{with_actions(rubric_line(a, lang), "", lang, href)}'
-        f'<a class="lgo" href="{href}"><span class="lbody"><strong>{title_dot(a, esc(card_title(a, lang)))}</strong></span></a></div>')
+        f'{with_actions(marked_meta(a, lang), "", lang, href)}'
+        f'<a class="lgo" href="{href}"><span class="lbody"><strong>{esc(card_title(a, lang))}</strong></span></a></div>')
 
 
 def story_badge(a):
@@ -5604,8 +5620,8 @@ def clip_card(item, lang, eager=False):
     return (
         f'<div class="lcard"><a class="lgo" href="{href}">'
         f'{photo}</a>'
-        f'{with_actions(clip_meta(item, lang), "", lang, href)}'
-        f'<a class="lgo" href="{href}"><span class="lbody"><strong>{title_dot(article, esc(title))}</strong></span></a></div>')
+        f'{with_actions(marked_meta(article, lang) if article else clip_meta(item, lang), "", lang, href)}'
+        f'<a class="lgo" href="{href}"><span class="lbody"><strong>{esc(title)}</strong></span></a></div>')
 
 
 def home_card(item, lang, eager=False):
@@ -5632,11 +5648,11 @@ def home_feed(items, lang):
                 badge = list_badge("Short", "1 min")
             else:
                 badge = list_badge("Video", f"{whole_minutes(item.get('seconds') or 0)} min")
-            dot = title_dot(item.get("article"), "")
             out.append(
                 f'<a class="pv-row" href="{url(lang, item["path"])}">'
+                f'{list_marker(item.get("article"))}'
                 f'<time datetime="{item["stamp"].isoformat()}">{item["stamp"].strftime("%H:%M")}</time>'
-                f'<span class="pv-hl">{dot}<b>{esc(item["title"])}</b></span>'
+                f'<span class="pv-hl"><b>{esc(item["title"])}</b></span>'
                 f'{badge}</a>')
         review = picks.get(i)
         if review:
@@ -6097,8 +6113,9 @@ def pv_row(a, lang, thumb=False):
               f'{ovl(a, lang)}</span>')
     shown = card_title(a, lang)
     return (f'<a class="pv-row{" hasth" if thumb else ""}" href="{href}" title="{esc(t["title"])}">'
+            f'{list_marker(a)}'
             f'<time datetime="{published(a).isoformat()}">{published(a).strftime("%H:%M")}</time>{im}'
-            f'<span class="pv-hl">{title_dot(a, f"<b>{esc(shown)}</b>")}</span>'
+            f'<span class="pv-hl"><b>{esc(shown)}</b></span>'
             f'{story_list_badge(a, lang)}</a>')
 
 

@@ -282,6 +282,21 @@
       "eur": 52.99,
       "fetched": "2026-11-24T23:25:00+01:00",
       "source": "amazon.nl"
+    },
+    "B0H833HBGP": {
+      "eur": 29.99,
+      "fetched": "2026-11-25T01:30:00+01:00",
+      "source": "amazon.nl"
+    },
+    "B003AW3C7I": {
+      "eur": 9.99,
+      "fetched": "2026-11-25T01:30:00+01:00",
+      "source": "amazon.nl"
+    },
+    "B08T69QZZX": {
+      "eur": 16.67,
+      "fetched": "2026-11-25T01:30:00+01:00",
+      "source": "amazon.nl"
     }
   },
   "ratings": {
@@ -535,6 +550,48 @@
       "score": 4.7,
       "count": 146,
       "fetched": "2026-11-24T23:25:00+01:00",
+      "source": "amazon.nl"
+    },
+    "B0DZ5JB22G": {
+      "score": 4.5,
+      "count": 19,
+      "fetched": "2026-11-25T01:15:00+01:00",
+      "source": "amazon.nl"
+    },
+    "B0FLQ76FVW": {
+      "score": 4.3,
+      "count": 166,
+      "fetched": "2026-11-25T01:15:00+01:00",
+      "source": "amazon.nl"
+    },
+    "B0DG1WVDKP": {
+      "score": 3.7,
+      "count": 66,
+      "fetched": "2026-11-25T01:15:00+01:00",
+      "source": "amazon.nl"
+    },
+    "B0DTGPFNFK": {
+      "score": 4.4,
+      "count": 41,
+      "fetched": "2026-11-25T01:15:00+01:00",
+      "source": "amazon.nl"
+    },
+    "B0H833HBGP": {
+      "score": 4.7,
+      "count": 18,
+      "fetched": "2026-11-25T01:30:00+01:00",
+      "source": "amazon.nl"
+    },
+    "B003AW3C7I": {
+      "score": 4.5,
+      "count": 8095,
+      "fetched": "2026-11-25T01:30:00+01:00",
+      "source": "amazon.nl"
+    },
+    "B08T69QZZX": {
+      "score": 4.7,
+      "count": 257,
+      "fetched": "2026-11-25T01:30:00+01:00",
       "source": "amazon.nl"
     }
   }

@@ -902,24 +902,14 @@ article.narrow > h1{margin-left:14px}article.narrow .cform{margin-left:14px}
 .mprodlink{margin:-4px 0 16px}
 .mprodlink a{color:#9ad7ff;font-weight:800;text-decoration:none}
 .mprodlink a:hover,.mprodlink a:focus-visible{text-decoration:underline;text-underline-offset:3px}
-.mlead{margin:0 0 8px;color:var(--muted);font-size:.95rem;line-height:1.45}
-.mgroup h3{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin:18px 0 8px;font-size:1.02rem;line-height:1.3;color:#fff}
-.mgroup h3 a{font-size:.78rem;font-weight:800;color:#9ad7ff;text-decoration:none;white-space:nowrap}
-.mgroup h3 a:hover,.mgroup h3 a:focus-visible{text-decoration:underline;text-underline-offset:3px}
-.mshops{display:grid;grid-template-columns:1fr;gap:12px;margin:0}
-@media (min-width:900px){.mshops{grid-template-columns:1fr 1fr}}
-.mshop{display:grid;grid-template-columns:96px minmax(0,1fr);gap:8px 12px;align-items:start;padding:12px;border:1px solid #2a3646;border-radius:14px;background:#141414}
-.mshot{display:block;background:var(--fg);border-radius:10px;overflow:hidden;aspect-ratio:1}
-.mshot img{width:100%;height:100%;object-fit:contain;padding:10%;box-sizing:border-box;display:block;background:transparent}
-.mshop .mname{margin:0;font-size:.98rem;line-height:1.25;font-weight:800}
-.mshop .mname a{color:#fff;text-decoration:none}
-.mshop .mname a:hover,.mshop .mname a:focus-visible{text-decoration:underline;text-underline-offset:3px}
-.mshop .fits{margin:4px 0 0;color:#c5ced8;font-size:.78rem;line-height:1.35}
-.mshop .popt{margin:4px 0 0}
-.mshop .stars{margin:6px 0 0}
-.mshop .pcost{margin:4px 0 0}
-.mshop .btn{margin-top:8px}
-@media (max-width:640px){.mshop{grid-template-columns:84px minmax(0,1fr);padding:10px}}
+.pstrip{display:flex;flex-wrap:nowrap;gap:10px;overflow-x:auto;overflow-y:hidden;margin:6px 0 22px;padding:2px 2px 8px;scroll-snap-type:x proximity;scroll-padding-inline:2px;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;scrollbar-width:thin;scrollbar-color:rgba(255,255,255,.28) transparent}
+.pstrip::-webkit-scrollbar{height:4px}
+.pstrip::-webkit-scrollbar-thumb{background:rgba(255,255,255,.28);border-radius:99px}
+.ptile{flex:0 0 104px;width:104px;scroll-snap-align:start;display:flex;flex-direction:column;align-items:center;gap:6px;box-sizing:border-box;padding:8px 8px 7px;border:1px solid #2a3646;border-radius:12px;background:#141414;text-decoration:none;color:#e8eef5}
+.ptile:hover,.ptile:focus-visible{border-color:#4a5a70}
+.ptile .pthumb{display:flex;align-items:center;justify-content:center;width:78px;height:78px;flex:none;border-radius:8px;background:var(--fg);overflow:hidden}
+.ptile .pthumb img{width:78px;height:78px;max-width:78px;object-fit:contain;padding:8px;box-sizing:border-box;display:block}
+.ptile .plab{display:block;width:100%;font-size:12px;line-height:1.15;font-weight:700;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .starthere{margin:6px 0 26px;padding:16px 16px 18px;border:1px solid rgba(0,212,255,.35);border-radius:12px;background:rgba(0,212,255,.06)}
 .starthere>h2{margin:0 0 4px;font-size:1.25rem}
 .starthere>.sub{margin:0 0 12px}
@@ -4286,8 +4276,8 @@ def models_overview(lang):
     L = LANGS[lang]
     nav, ld = crumbs(lang, [(L["nav_models"], "category/models/")])
     intro = ({
-        "en": "Every Tesla version the site covers, grouped by model. Open a card for the facts and the articles. Model 3, Model Y, Model S, Model X and Cybertruck also list the buying-guide products for that car.",
-        "nl": "Elke Tesla-uitvoering die de site volgt, per model gegroepeerd. Open een kaart voor de feiten en de artikelen. Model 3, Model Y, Model S, Model X en Cybertruck tonen ook de koopgidsproducten voor die auto.",
+        "en": "Every Tesla version the site covers, grouped by model. Open a card for the facts and the articles. Model 3, Model Y, Model S, Model X and Cybertruck link to the guides for that car.",
+        "nl": "Elke Tesla-uitvoering die de site volgt, per model gegroepeerd. Open een kaart voor de feiten en de artikelen. Model 3, Model Y, Model S, Model X en Cybertruck linken naar de gidsen voor die auto.",
     })[lang]
     sections = []
     listed = []
@@ -4301,7 +4291,7 @@ def models_overview(lang):
         title = MODELS[root]["name"]
         plink = ""
         if root in ("model-3", "model-y", "model-s", "model-x", "cybertruck"):
-            plabel = "Products for this model" if lang == "en" else "Producten voor dit model"
+            plabel = "Product guides" if lang == "en" else "Productgidsen"
             plink = (f'<p class="mprodlink"><a href="{url(lang, "model/" + root + "/")}#products">'
                      f'{esc(plabel)}</a></p>')
         sections.append(
@@ -4418,9 +4408,8 @@ def model_hub(key, items, lang):
             vlabel = "Versions" if lang == "en" else "Uitvoeringen"
             versions = f'<h2 class="rubh">{esc(vlabel)}</h2><div class="mgrid">{"".join(model_card(k, lang) for k in kids)}</div>'
     products = model_accessory_links(key, lang)
-    acc = f'<section class="mfacts" id="products">{products}</section>' if products else ""
     body = (f'{nav}<header class="hubhead"><h1>{esc(heading_name)}</h1></header>'
-            f'{hero}<p class="mintro">{esc(intro)}</p>{extra}{versions}{acc}{specs}{sourced}{listing}')
+            f'{hero}<p class="mintro">{esc(intro)}</p>{extra}{versions}{specs}{sourced}{products}{listing}')
     desc = re.sub(r"\s+", " ", intro).strip()
     if len(desc) > 180:
         desc = desc[:179].rsplit(" ", 1)[0] + "…"
@@ -7332,49 +7321,38 @@ def _model_card_photo(fields, amazon_ok, ali_ok):
     return ""
 
 
-def _model_shop_card(fields, lang, guide_href):
-    name = fields.get(f"name_{lang}") or fields.get("name_en") or ""
-    if not name:
-        return ""
-    href = guide_amazon(str(fields.get("url") or ""), lang)
+# One short line under a strip tile. Sidebar category names stay on GUIDE_CATS.
+STRIP_LABELS = {
+    "winter-mats-model-3-y": ("Floor mats", "Vloermatten"),
+    "model-y-trunk-floor-mats": ("Trunk mat", "Kofferbak"),
+    "screen-glass-model-3-y": ("Screen glass", "Schermglas"),
+    "interior-cleaners": ("Cleaner", "Reiniger"),
+    "phone-mounts-model-3-y": ("Phone", "Telefoon"),
+    "tyre-pumps": ("Tyre pump", "Bandenpomp"),
+    "europe-home-chargers": ("Home charger", "Thuislader"),
+    "type-2-cables": ("Charge cable", "Laadkabel"),
+    "portable-chargers-adapters": ("Portable", "Reislader"),
+    "starlink-mini-road-trip": ("Starlink", "Starlink"),
+    "sentry-usb-drive": ("USB stick", "USB-stick"),
+    "mud-flaps-model-y": ("Mud flaps", "Spatlappen"),
+    "roof-shades-model-y": ("Roof shade", "Dakscherm"),
+    "console-trays-model-3-y": ("Console", "Console"),
+    "key-card-holders": ("Key card", "Keycard"),
+    "model-y-3-accessories": ("Extras", "Extra's"),
+}
+
+
+def _strip_photo(fields):
+    href = str(fields.get("url") or "")
     host = ""
     if href.startswith("https://") and href.count("/") >= 2:
         host = href.split("/")[2].lower()
     amazon_ok = host in ("www.amazon.nl", "amazon.nl")
-    ali = ali_href(fields.get("ali_url"), lang)
-    if amazon_ok and ali:
-        return ""
-    if lang == "nl":
-        button = "Bekijk op Amazon" if amazon_ok else "Bekijk op AliExpress"
-    else:
-        button = "Check out Amazon" if amazon_ok else "Check out AliExpress"
-    store = href if amazon_ok else ali
-    if not store:
-        return ""
-    fit = fields.get(f"fits_{lang}") or fields.get("fits_en") or fields.get(f"note_{lang}") or fields.get("note_en") or ""
-    option = fields.get(f"option_{lang}") or fields.get("option_en") or ""
-    if amazon_ok:
-        price_key = _product_asin(href)
-    else:
-        price_key = _guide_product_key(fields)
-    photo = _model_card_photo(fields, amazon_ok, bool(ali))
-    shot = ""
-    if photo:
-        shot = (f'<a class="mshot" href="{esc(guide_href)}">'
-                f'<img src="{esc(photo)}" alt="" width="96" height="96" loading="lazy" decoding="async"></a>')
-    fit_html = f'<p class="fits">{esc(fit)}</p>' if str(fit).strip() else ""
-    option_html = f'<p class="popt">{esc(option)}</p>' if str(option).strip() else ""
-    cost = price_html(price_key, lang) if price_key else ""
-    stars = rating_html(price_key, lang) if price_key else ""
-    link = (f'<div class="store-btns"><a class="btn" href="{esc(store)}" rel="sponsored nofollow noopener" '
-            f'target="_blank">{esc(button)}</a></div>')
-    return (f'<article class="mshop">{shot}<div>'
-            f'<p class="mname"><a href="{esc(guide_href)}">{esc(name)}</a></p>'
-            f'{fit_html}{option_html}{stars}{cost}{link}</div></article>')
+    return _model_card_photo(fields, amazon_ok, bool(fields.get("ali_url")))
 
 
 def model_accessory_links(key, lang):
-    """Compact buying-guide cards for this model. Other cars stay without a product list."""
+    """One tile per buying guide that has a product for this model. Other cars stay bare."""
     if _shop_root(key) not in _SHOP_ROOTS or not GUIDE_DOCS:
         return ""
     if not getattr(model_accessory_links, "checked", False):
@@ -7392,50 +7370,36 @@ def model_accessory_links(key, lang):
             raise SystemExit("product fit keys missing from guides: " + ", ".join(missing))
         model_accessory_links.checked = True
     docs = {doc["slug"]: doc for doc in GUIDE_DOCS if not doc.get("template")}
-    labels = {row[0]: row for row in GUIDE_CATS}
-    seen = set()
-    groups = []
-    for slug in [row[0] for row in GUIDE_CATS]:
+    tiles = []
+    for slug, en_label, nl_label in GUIDE_CATS:
         doc = docs.get(slug)
-        if not doc:
+        names = STRIP_LABELS.get(slug)
+        if not doc or not names:
             continue
-        cards = []
+        photo = ""
         for kind, fields in doc.get("pieces") or []:
             if kind != "product" or not isinstance(fields, dict):
                 continue
             product_key = _guide_product_key(fields)
             tokens = PRODUCT_FITS.get(product_key)
-            if not product_key or product_key in seen or not tokens:
+            if not product_key or not tokens or not _product_on_model(tokens, key):
                 continue
-            if not _product_on_model(tokens, key):
-                continue
-            seen.add(product_key)
-            guide_href = url(lang, guides_path(lang) + slug + "/")
-            card = _model_shop_card(fields, lang, guide_href)
-            if card:
-                cards.append(card)
-        if not cards:
+            if not photo:
+                photo = _strip_photo(fields)
+            if photo:
+                break
+        if not photo:
             continue
-        row = labels.get(slug)
-        label = (row[1] if lang == "en" else row[2]) if row else slug
+        label = names[0] if lang == "en" else names[1]
         guide_href = url(lang, guides_path(lang) + slug + "/")
-        guide_word = "Guide" if lang == "en" else "Gids"
-        groups.append(
-            f'<div class="mgroup"><h3>{esc(label)} '
-            f'<a href="{esc(guide_href)}">{esc(guide_word)}</a></h3>'
-            f'<div class="mshops">{"".join(cards)}</div></div>')
-    if not groups:
+        tiles.append(
+            f'<a class="ptile" href="{esc(guide_href)}">'
+            f'<span class="pthumb"><img src="{esc(photo)}" alt="" width="78" height="78" loading="eager" decoding="async"></span>'
+            f'<span class="plab">{esc(label)}</span></a>')
+    if not tiles:
         return ""
-    if lang == "en":
-        heading = "Products for this model"
-        lead = ("Buying-guide products listed for this model, plus chargers, cables, a pump, a USB stick, "
-                "cabin cleaners and a Starlink kit. Read the fit line and check the current price.")
-    else:
-        heading = "Producten voor dit model"
-        lead = ("Koopgidsproducten die dit model noemen, plus laders, kabels, een pomp, een USB-stick, "
-                "interieurreinigers en een Starlink-set. Lees de pasregel en kijk de actuele prijs na.")
-    return (f'<h2>{esc(heading)}</h2><p class="mlead">{esc(lead)}</p>{"".join(groups)}'
-            f'{disclosure_line(lang, "affend")}')
+    aria = "Product guides" if lang == "en" else "Productgidsen"
+    return f'<nav class="pstrip" id="products" aria-label="{esc(aria)}">{"".join(tiles)}</nav>'
 
 
 def evergreen_side(lang):

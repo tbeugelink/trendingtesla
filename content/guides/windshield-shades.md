@@ -5,8 +5,8 @@ description_en: Three windshield shades on Amazon.nl. A glass-roof shade is a di
 description_nl: Drie zonneschermen voor de voorruit op Amazon.nl. Een scherm voor het glazen dak is een ander onderdeel. Stem de auto af voor je bestelt.
 ---
 
-en: A windshield shade is not the glass-roof shade. The listings below name a Model 3 and Model Y, a Model Y through 2026, or a Model S. Read the fit line and check the current price.
-nl: Een zonnescherm voor de voorruit is niet het scherm voor het glazen dak. De vermeldingen hieronder noemen een Model 3 en Model Y, een Model Y tot en met 2026, of een Model S. Lees de pasregel en kijk de actuele prijs na.
+en: A windshield shade is not the glass-roof shade. The listings below name a Model 3 and Model Y, a Model Y through 2026, or a Model S. Read the bullets and check the current price.
+nl: Een zonnescherm voor de voorruit is niet het scherm voor het glazen dak. De vermeldingen hieronder noemen een Model 3 en Model Y, een Model Y tot en met 2026, of een Model S. Lees de bullets en kijk de actuele prijs na.
 
 :::product
 name_en: ZATOOTO shade for Model 3 and Y

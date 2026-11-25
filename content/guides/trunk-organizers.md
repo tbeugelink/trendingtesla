@@ -5,8 +5,8 @@ description_en: Three storage boxes on Amazon.nl for a Tesla trunk or frunk. A f
 description_nl: Drie opbergboxen op Amazon.nl voor een Tesla-kofferbak of frunk. Een vloermat is een ander onderdeel. Stem de auto af voor je bestelt.
 ---
 
-en: A trunk organizer is a box for the cargo space. It is not a trunk mat. One listing is for the front trunk of a Juniper. The other two are for the rear trunk of a Highland or a Juniper. Read the fit line and check the current price.
-nl: Een kofferbakorganizer is een box voor de bagageruimte. Het is geen kofferbakmat. Eén vermelding is voor de frunk van een Juniper. De andere twee zijn voor de achterbak van een Highland of een Juniper. Lees de pasregel en kijk de actuele prijs na.
+en: A trunk organizer is a box for the cargo space. It is not a trunk mat. One listing is for the front trunk of a Juniper. The other two are for the rear trunk of a Highland or a Juniper. Read the bullets and check the current price.
+nl: Een kofferbakorganizer is een box voor de bagageruimte. Het is geen kofferbakmat. Eén vermelding is voor de frunk van een Juniper. De andere twee zijn voor de achterbak van een Highland of een Juniper. Lees de bullets en kijk de actuele prijs na.
 
 :::product
 name_en: Spigen frunk box for Juniper

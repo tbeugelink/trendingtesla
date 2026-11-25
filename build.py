@@ -969,6 +969,7 @@ article.narrow > h1{margin-left:14px}article.narrow .cform{margin-left:14px}
 @media (min-width:960px){.ad-side-wrap{display:block;position:sticky;top:120px}}
 article.money{padding-top:6px}.sheet-main>article.money{padding-top:0}
 article.money h1.atitle{font-size:clamp(1.85rem,4.5vw,2.7rem);line-height:1.14;letter-spacing:-.025em;margin:8px 0 10px;max-width:18em}
+html body .sheet-main article.guide>h1{font-size:clamp(1.55rem,2.6vw,2.1rem);line-height:1.16;letter-spacing:-.025em}
 article.money .lead{font-size:1.16rem;line-height:1.55;max-width:40em}
 article.money .prose{font-size:1.075rem;line-height:1.75;max-width:68ch}
 article.money .prose p{margin-bottom:1.15em}
@@ -1017,8 +1018,10 @@ article.money .avid{max-width:68ch}
 .pgal-nav{position:absolute;top:50%;transform:translateY(-50%);z-index:1;width:26px;height:26px;padding:0;border:0;border-radius:50%;background:rgba(16,16,16,.42);color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center}
 .pgal-nav:hover{background:rgba(16,16,16,.68)}
 .pgal-prev{left:6px}.pgal-next{right:6px}
-.pgal-thumbs{display:flex;width:100%;gap:6px;margin-top:8px}
-.pgal-thumb{flex:1 1 0;width:auto;min-width:0;height:auto;aspect-ratio:1;padding:2px;box-sizing:border-box;border:1px solid #d5d5d5;border-radius:6px;background:#fff;cursor:pointer;line-height:0}
+.pgal-thumbs{display:flex;width:100%;gap:6px;margin-top:8px;justify-content:flex-start}
+.pgal-thumbs:not(:has(.pgal-thumb:nth-child(2))){display:none}
+.pgal-thumb{flex:0 0 calc((100% - 24px) / 5);width:calc((100% - 24px) / 5);max-width:calc((100% - 24px) / 5);min-width:0;height:auto;aspect-ratio:1;padding:2px;box-sizing:border-box;border:1px solid #d5d5d5;border-radius:6px;background:#fff;cursor:pointer;line-height:0}
+.pgal-thumbs:has(.pgal-thumb:nth-child(5)) .pgal-thumb{flex:1 1 0;width:auto;max-width:none}
 .pgal-thumb.is-on{border-color:#1a1a1a;box-shadow:0 0 0 1px #1a1a1a}
 .gbox .pgal-thumb img,.pbox .pgal-thumb img{width:100%;height:100%;aspect-ratio:1/1;object-fit:contain;background:#fff;border-radius:3px;display:block}
 .pgal:focus-visible,.pgal-nav:focus-visible,.pgal-thumb:focus-visible{outline:2px solid var(--blue2);outline-offset:2px}
@@ -3626,7 +3629,11 @@ def rating_html(key, lang):
 
 
 def gallery_html(srcs, alt, href, remote, lang):
-    srcs = [src for src in srcs if src][:6]
+    uniq = []
+    for src in srcs:
+        if src and src not in uniq:
+            uniq.append(src)
+    srcs = uniq[:6]
     if not srcs:
         return ""
     hero = (f'<img class="pgal-hero" src="{esc(srcs[0])}" alt="{esc(alt)}" width="200" height="200"'
@@ -3635,6 +3642,8 @@ def gallery_html(srcs, alt, href, remote, lang):
         shot = (f'<a class="pshot" href="{esc(href)}" rel="sponsored nofollow noopener" target="_blank">{hero}</a>')
     else:
         shot = f'<span class="pshot">{hero}</span>'
+    if len(srcs) < 2:
+        return f'<div class="pgal"><div class="pgal-stage">{shot}</div></div>'
     prev = "Vorige foto" if lang == "nl" else "Previous photo"
     nxt = "Volgende foto" if lang == "nl" else "Next photo"
     label = "Foto's" if lang == "nl" else "Photos"
@@ -8074,31 +8083,6 @@ def _guide_table(fields, lang):
     return f'<table class="gtable">{cap}<thead><tr>{head}</tr></thead><tbody>{"".join(body)}</tbody></table>'
 
 
-def guide_method(lang):
-    """Same method on every buying guide. The product lines above it stay specific to that guide."""
-    if lang == "nl":
-        return (
-            "<h2>Hoe we kiezen</h2>"
-            "<p>Een product staat in een gids als de Amazon.nl-pagina een prijs én een gemiddelde sterrenscore toont, "
-            "en de titel het onderdeel noemt. We verzinnen geen scores en geen prijzen. De bullets volgen de vermelding. "
-            "De prijs is de prijs op de pagina toen we die controleerden, met het label prijs bij publicatie. "
-            "Kijk de actuele prijs na voor je koopt.</p>"
-            "<h2>Waar je op let</h2>"
-            "<p>Stem het model en het bouwjaar af op de titel. Een scherm van 15 inch is niet het scherm van 16 inch, "
-            "en een mat voor een Juniper is niet de mat voor een oudere Model Y. "
-            "De knop opent de winkelpagina in het Nederlands.</p>")
-    return (
-        "<h2>How we choose</h2>"
-        "<p>A product is listed only when the Amazon.nl page shows a price and an aggregate star rating, "
-        "and the title names the part. We do not invent ratings or prices. The bullets follow the listing. "
-        "The price is the one on the page when we checked it, marked as the price at publication. "
-        "Check the current price before you buy.</p>"
-        "<h2>What to look for</h2>"
-        "<p>Match the model and the year to the title. A 15 inch screen is not a 16 inch screen, "
-        "and a mat cut for a Juniper is not the mat for an older Model Y. "
-        "The button opens the store page in English.</p>")
-
-
 _BANNED_BULLET = re.compile(
     r"the title (says|names|calls|lists)|the page (says|names|lists|calls)|"
     r"the description (says|names|also)|listed (for|as|only)|"
@@ -8136,21 +8120,13 @@ def guide_body(doc, lang):
         note = ("Template. This is not a published guide." if lang == "en"
                 else "Sjabloon. Dit is geen gepubliceerde gids.")
         banner = f'<p class="tplnote">{esc(note)}</p>'
-    prose, products = [], []
+    products = []
     for kind, fields in doc["pieces"]:
         if kind == "product":
             products.append(_guide_product(fields, lang))
-        elif kind == "compare":
-            continue
-        else:
-            text = fields.get(lang) or fields.get("en") or ""
-            if text:
-                prose.append(f"<p>{esc(text)}</p>")
-    chunks = [banner, *prose, guide_method(lang), *products]
-    byline = f'<p class="byline"><a href="{url(lang, "editorial/")}">{esc(LANGS[lang]["byline"])}</a></p>'
     hero = _guide_hero(doc, lang)
-    body = (f'<article class="narrow">{hero}<h1>{esc(title)}</h1>{byline}'
-            f'<div class="prose">{"".join(chunks)}</div></article>')
+    body = (f'<article class="narrow guide">{hero}<h1>{esc(title)}</h1>'
+            f'<div class="prose">{banner}{"".join(products)}</div></article>')
     return body, title, desc
 
 

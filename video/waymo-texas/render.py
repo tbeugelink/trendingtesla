@@ -1,9 +1,10 @@
 """Cut the Texas-register preview Short. Nothing is uploaded or published.
 
-Picture is Tesla's own Austin footage: the Robotaxi account's Cybercab fleet film,
-Tesla's Austin Cybercab engineering test, and the unsupervised Austin Robotaxi ride
-Tesla quoted. Three cards sit on a blurred Cybercab frame. No shot is longer than
-3 seconds. The bed is midrange music only: no whistle, no chirp, no hat.
+Picture is Tesla's own Austin footage, plus one CC BY exterior of a Waymo
+Jaguar I-PACE when Waymo is named. The Tuesday-night line sits on the Cybercab
+fleet, not a cabin view. Three cards sit on a blurred Cybercab frame. No shot
+is longer than 3 seconds. The bed is midrange music only: no whistle, no chirp,
+no hat.
 """
 import json
 import math
@@ -42,19 +43,20 @@ SHOTS = [
      "shows": "Cybercab driving out of the Austin fleet building, rear, large. Cut before the film changes shot."},
     {"id": "bars", "kind": "graphic", "graphic": "bars", "dur": 2.80, "mission": "graphic",
      "shows": "Tesla 1,556 against Waymo 1,405, bars growing."},
-    {"id": "road", "kind": "video", "file": "engtest.mp4", "ss": 6.80, "dur": 2.70,
-     "fx": "hold", "zoom": (1.00, 1.05), "crop": (762, 0, 396, 704), "mission": "Tesla Austin engineering test",
-     "credit": "https://x.com/Tesla/status/2071810353156194719",
-     "shows": "Cybercab driving an Austin street. Road and screen. Tesla's film labels a safety monitor."},
+    {"id": "waymo", "kind": "still", "file": "waymo-ipace.jpg", "dur": 2.80,
+     "fx": "hold", "zoom": (1.00, 1.06), "crop": (2280, 0, 2619, 4656),
+     "plate": (8, 3180, 1220, 980), "mission": "Waymo Jaguar I-PACE",
+     "credit": "https://commons.wikimedia.org/wiki/File:Waymo_Jaguar_I-Pace_-_Front_Quarter_View_01.jpg",
+     "shows": "White Waymo Jaguar I-PACE, front three-quarter, dome and Waymo badge. Plate blurred. CC BY 4.0, 9yz."},
     {"id": "plus", "kind": "graphic", "graphic": "plus", "dur": 2.70, "mission": "graphic",
      "shows": "+49 on Tuesday night, 1,507 to 1,556."},
-    {"id": "road2", "kind": "video", "file": "engtest.mp4", "ss": 15.40, "dur": 2.60,
-     "fx": "hold", "zoom": (1.00, 1.05), "crop": (720, 0, 396, 704), "mission": "Tesla Austin engineering test",
-     "credit": "https://x.com/Tesla/status/2071810353156194719",
-     "shows": "Same Austin Cybercab test, later on the road, under the Cybercab count."},
+    {"id": "fleet", "kind": "video", "file": "austin300.mp4", "ss": 32.60, "dur": 2.70,
+     "fx": "hold", "zoom": (1.00, 1.05), "crop": (760, 0, 608, 1080), "mission": "Robotaxi Austin fleet",
+     "credit": "https://x.com/robotaxi/status/2108981691436224816",
+     "shows": "Rows of gold Cybercabs in the Austin fleet lot. The vehicles added Tuesday night."},
     {"id": "split", "kind": "graphic", "graphic": "split", "dur": 2.50, "mission": "graphic",
      "shows": "822 Cybercabs and 734 Model Ys."},
-    {"id": "red", "kind": "video", "file": "joe_ext.mp4", "ss": 4.48, "dur": 2.20, "src_dur": 1.12, "lock": True,
+    {"id": "red", "kind": "video", "file": "joe.mp4", "ss": 4.48, "dur": 2.20, "src_dur": 1.12, "lock": True,
      "fx": "hold", "zoom": (1.00, 1.04), "crop": (602, 200, 494, 878), "mission": "Austin Robotaxi ride",
      "credit": "https://x.com/Tesla/status/2014422061687701979",
      "shows": "Red Model Y with Robotaxi on the door, Austin street, before a truck crosses. Tesla quoted this ride."},
@@ -204,6 +206,38 @@ def blur_box(im, box):
     patch = im.crop((x, y, x + w, y + h)).filter(ImageFilter.GaussianBlur(radius=28))
     im.paste(patch, (x, y))
     return im
+
+
+def blur_plate(im, box):
+    """Hide a plate. The mask is feathered so the blur sits on the plate only."""
+    x, y, w, h = box
+    x = max(0, min(im.width - 2, int(x)))
+    y = max(0, min(im.height - 2, int(y)))
+    w = max(2, min(im.width - x, int(w)))
+    h = max(2, min(im.height - y, int(h)))
+    patch = im.crop((x, y, x + w, y + h)).filter(ImageFilter.GaussianBlur(radius=48))
+    mask = Image.new("L", (w, h), 0)
+    ImageDraw.Draw(mask).rounded_rectangle((12, 12, w - 12, h - 12), radius=28, fill=255)
+    mask = mask.filter(ImageFilter.GaussianBlur(radius=16))
+    im.paste(patch, (x, y), mask)
+    return im
+
+
+def extract_still(shot, dest):
+    im = Image.open(CLIPS / shot["file"]).convert("RGB")
+    x, y, w, h = shot["crop"]
+    im = im.crop((x, y, x + w, y + h))
+    if shot.get("plate"):
+        im = blur_plate(im, shot["plate"])
+    im = im.resize((W, H), Image.Resampling.LANCZOS)
+    nframes = max(1, int(round(float(shot["dur"]) * FPS)))
+    raw = OUT / "still.rgb"
+    data = im.tobytes()
+    with raw.open("wb") as outp:
+        for _ in range(nframes):
+            outp.write(data)
+    encode_frames(raw, dest)
+    raw.unlink(missing_ok=True)
 
 
 def extract(shot, dest):
@@ -477,42 +511,97 @@ def timeline_of():
     return alignment, timeline, total
 
 
-def fit_duration(total):
-    """Lengthen unlocked shots up to 3s, then give the rest to the last shot."""
-    fixed = SHOTS[:-1]
-    base = sum(s["dur"] for s in fixed)
-    loop = total - base
-    if loop > 3.0:
-        extra = loop - 3.0
-        for s in fixed:
-            if s.get("lock"):
-                continue
-            room = round(3.0 - s["dur"], 3)
-            take = min(room, extra)
-            if take > 0:
-                s["dur"] = round(s["dur"] + take, 3)
-                extra = round(extra - take, 3)
-            if extra <= 0.02:
-                break
-        base = sum(s["dur"] for s in fixed)
-        loop = total - base
-    SHOTS[-1]["dur"] = round(loop, 3)
-    if not 1.2 <= SHOTS[-1]["dur"] <= 3.0:
-        raise SystemExit(f"loop length {SHOTS[-1]['dur']} is outside 1.2-3.0 (voice {total:.2f}s)")
+def fit_duration(total, timeline):
+    """Put the Waymo car on the Waymo line and the Cybercab fleet on the +49 line."""
+    by = {m["id"]: m for m in timeline}
+    shot = {s["id"]: s for s in SHOTS}
+    s3, s5 = by["s3"], by["s5"]
+    shot["exit"]["dur"] = 1.60
+    shot["red"]["dur"] = 2.20
+
+    waymo_start = round(s3["t0"], 3)
+    waymo_dur = round(min(3.0, s3["length"] + 0.05), 3)
+    fleet_start = round(s5["t0"], 3)
+    fleet_dur = round(min(3.0, s5["length"] + 0.05), 3)
+
+    remain = round(waymo_start - shot["exit"]["dur"], 3)
+    open_d = round(min(3.0, max(2.2, remain - 2.4)), 3)
+    bars_d = round(remain - open_d, 3)
+    if bars_d > 3.0:
+        bars_d = 3.0
+        open_d = round(remain - bars_d, 3)
+    if bars_d < 1.5:
+        bars_d = 1.5
+        open_d = round(remain - bars_d, 3)
+    if not (1.8 <= open_d <= 3.0 and 1.4 <= bars_d <= 3.0):
+        raise SystemExit(f"intro split open {open_d} bars {bars_d} before {waymo_start}")
+
+    plus_d = round(fleet_start - (waymo_start + waymo_dur), 3)
+    if plus_d > 3.0:
+        extra = round(plus_d - 3.0, 3)
+        room = round(3.0 - waymo_dur, 3)
+        take = min(room, extra)
+        waymo_dur = round(waymo_dur + take, 3)
+        plus_d = round(plus_d - take, 3)
+    if plus_d < 1.4:
+        need = round(1.4 - plus_d, 3)
+        if waymo_dur - need < 2.0:
+            raise SystemExit(f"plus {plus_d} waymo {waymo_dur} cannot fit")
+        waymo_dur = round(waymo_dur - need, 3)
+        plus_d = 1.4
+    if plus_d > 3.0:
+        raise SystemExit(f"plus card is {plus_d}s")
+
+    tail = round(total - (fleet_start + fleet_dur), 3)
+    rest = round(tail - shot["red"]["dur"], 3)
+    split_d = round(min(3.0, max(1.8, rest * 0.36)), 3)
+    doors_d = round(min(2.6, max(1.4, rest * 0.28)), 3)
+    loop_d = round(rest - split_d - doors_d, 3)
+    if loop_d > 3.0:
+        overflow = round(loop_d - 3.0, 3)
+        loop_d = 3.0
+        for name, cur in (("split", split_d), ("doors", doors_d)):
+            room = round(3.0 - cur, 3)
+            take = min(room, overflow)
+            if name == "split":
+                split_d = round(cur + take, 3)
+            else:
+                doors_d = round(cur + take, 3)
+            overflow = round(overflow - take, 3)
+        if overflow > 0.05:
+            raise SystemExit(f"tail overflow {overflow}")
+    if loop_d < 1.2:
+        raise SystemExit(f"loop {loop_d}s is short (voice {total:.2f}s)")
+
+    shot["open"]["dur"] = open_d
+    shot["bars"]["dur"] = bars_d
+    shot["waymo"]["dur"] = waymo_dur
+    shot["plus"]["dur"] = plus_d
+    shot["fleet"]["dur"] = fleet_dur
+    shot["split"]["dur"] = split_d
+    shot["doors"]["dur"] = doors_d
+    shot["loop"]["dur"] = loop_d
+    got = round(sum(s["dur"] for s in SHOTS), 3)
+    delta = round(total - got, 3)
+    if abs(delta) > 0.001:
+        if 1.2 <= shot["loop"]["dur"] + delta <= 3.0:
+            shot["loop"]["dur"] = round(shot["loop"]["dur"] + delta, 3)
+        else:
+            raise SystemExit(f"timeline {got}s vs voice {total:.2f}s")
     for s in SHOTS:
-        if s["dur"] > 3.0 + 1e-6:
+        if s["dur"] > 3.0 + 1e-6 or s["dur"] < 1.2:
             raise SystemExit(f"{s['id']} is {s['dur']}s")
 
 
 def main():
     for shot in SHOTS:
-        if shot["kind"] == "video" and not (CLIPS / shot["file"]).exists():
+        if shot["kind"] in ("video", "still") and not (CLIPS / shot["file"]).exists():
             raise SystemExit(f"missing {CLIPS / shot['file']}")
     alignment, timeline, total = timeline_of()
     if not 24.0 <= total <= 36.0:
         raise SystemExit(f"voice length {total:.2f}s is outside 24-36s")
     OUT.mkdir(exist_ok=True)
-    fit_duration(total)
+    fit_duration(total, timeline)
     graphic = sum(s["dur"] for s in SHOTS if s["kind"] == "graphic")
     if graphic / total > 0.45:
         raise SystemExit(f"graphics are {graphic / total:.1%} of the runtime")
@@ -535,7 +624,10 @@ def main():
             render_graphic(shot, graded, cards, t)
         else:
             plain = OUT / f"{shot['id']}-plain.mp4"
-            extract(shot, plain)
+            if shot["kind"] == "still":
+                extract_still(shot, plain)
+            else:
+                extract(shot, plain)
             # Map a source-crop blur into output pixels. Crop is scaled uniformly to WxH.
             blur = shot.get("blur")
             paint_video(plain, graded, cards, shot["dur"] if shot.get("hook") else None, t,

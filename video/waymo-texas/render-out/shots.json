@@ -1,0 +1,270 @@
+{
+  "duration": 26.464,
+  "graphics_s": 9.0,
+  "graphics_share": 0.3401,
+  "lufs": {
+    "mix": -14.7,
+    "voice_raw": -22.1,
+    "bed_raw": -18.6,
+    "bed_above_4khz": -53.1,
+    "voice_gain_db": 9.1,
+    "bed_gain_db": -3.4
+  },
+  "worst_clip": {
+    "share": 0.012954282407407407,
+    "t": 0.6333333333333333
+  },
+  "worst_black": {
+    "share": 0.10619502314814815,
+    "t": 3.0
+  },
+  "per_second": [
+    {
+      "t": 0.0,
+      "clip": 0.0129,
+      "black": 0.0327
+    },
+    {
+      "t": 1.0,
+      "clip": 0.0129,
+      "black": 0.0322
+    },
+    {
+      "t": 2.0,
+      "clip": 0.0129,
+      "black": 0.0377
+    },
+    {
+      "t": 3.0,
+      "clip": 0.0052,
+      "black": 0.1062
+    },
+    {
+      "t": 4.0,
+      "clip": 0.0052,
+      "black": 0.0409
+    },
+    {
+      "t": 5.0,
+      "clip": 0.0052,
+      "black": 0.0099
+    },
+    {
+      "t": 6.0,
+      "clip": 0.0086,
+      "black": 0.0174
+    },
+    {
+      "t": 7.0,
+      "clip": 0.0086,
+      "black": 0.0213
+    },
+    {
+      "t": 8.0,
+      "clip": 0.0045,
+      "black": 0.0084
+    },
+    {
+      "t": 9.0,
+      "clip": 0.0045,
+      "black": 0.0084
+    },
+    {
+      "t": 10.0,
+      "clip": 0.0045,
+      "black": 0.0084
+    },
+    {
+      "t": 11.0,
+      "clip": 0.0033,
+      "black": 0.0142
+    },
+    {
+      "t": 12.0,
+      "clip": 0.0074,
+      "black": 0.0192
+    },
+    {
+      "t": 13.0,
+      "clip": 0.0074,
+      "black": 0.0192
+    },
+    {
+      "t": 14.0,
+      "clip": 0.0091,
+      "black": 0.0109
+    },
+    {
+      "t": 15.0,
+      "clip": 0.0085,
+      "black": 0.0109
+    },
+    {
+      "t": 16.0,
+      "clip": 0.0082,
+      "black": 0.011
+    },
+    {
+      "t": 17.0,
+      "clip": 0.009,
+      "black": 0.0192
+    },
+    {
+      "t": 18.0,
+      "clip": 0.012,
+      "black": 0.0287
+    },
+    {
+      "t": 19.0,
+      "clip": 0.0119,
+      "black": 0.0287
+    },
+    {
+      "t": 20.0,
+      "clip": 0.0066,
+      "black": 0.0097
+    },
+    {
+      "t": 21.0,
+      "clip": 0.0071,
+      "black": 0.0086
+    },
+    {
+      "t": 22.0,
+      "clip": 0.0047,
+      "black": 0.0132
+    },
+    {
+      "t": 23.0,
+      "clip": 0.0066,
+      "black": 0.0131
+    },
+    {
+      "t": 24.0,
+      "clip": 0.0066,
+      "black": 0.0088
+    },
+    {
+      "t": 25.0,
+      "clip": 0.0065,
+      "black": 0.0087
+    },
+    {
+      "t": 26.0,
+      "clip": 0.0065,
+      "black": 0.0087
+    }
+  ],
+  "shots": [
+    {
+      "id": "open",
+      "mission": "Robotaxi Austin fleet",
+      "file": "austin300.mp4",
+      "source_ss": 25.8,
+      "video_in": 0.0,
+      "video_out": 3.0,
+      "duration": 3.0,
+      "shows": "Gold Cybercab, overhead, Austin fleet lot. Plate blurred. Hook numbers.",
+      "credit": "https://x.com/robotaxi/status/2108981691436224816"
+    },
+    {
+      "id": "exit",
+      "mission": "Robotaxi Austin fleet",
+      "file": "austin300.mp4",
+      "source_ss": 23.7,
+      "video_in": 3.0,
+      "video_out": 4.6,
+      "duration": 1.6,
+      "shows": "Cybercab driving out of the Austin fleet building, rear, large. Cut before the film changes shot.",
+      "credit": "https://x.com/robotaxi/status/2108981691436224816"
+    },
+    {
+      "id": "bars",
+      "mission": "graphic",
+      "file": "",
+      "source_ss": null,
+      "video_in": 4.6,
+      "video_out": 7.6,
+      "duration": 3.0,
+      "shows": "Tesla 1,556 against Waymo 1,405, bars growing.",
+      "credit": ""
+    },
+    {
+      "id": "road",
+      "mission": "Tesla Austin engineering test",
+      "file": "engtest.mp4",
+      "source_ss": 6.8,
+      "video_in": 7.6,
+      "video_out": 10.6,
+      "duration": 3.0,
+      "shows": "Cybercab driving an Austin street. Road and screen. Tesla's film labels a safety monitor.",
+      "credit": "https://x.com/Tesla/status/2071810353156194719"
+    },
+    {
+      "id": "plus",
+      "mission": "graphic",
+      "file": "",
+      "source_ss": null,
+      "video_in": 10.6,
+      "video_out": 13.6,
+      "duration": 3.0,
+      "shows": "+49 on Tuesday night, 1,507 to 1,556.",
+      "credit": ""
+    },
+    {
+      "id": "road2",
+      "mission": "Tesla Austin engineering test",
+      "file": "engtest.mp4",
+      "source_ss": 15.4,
+      "video_in": 13.6,
+      "video_out": 16.6,
+      "duration": 3.0,
+      "shows": "Same Austin Cybercab test, later on the road, under the Cybercab count.",
+      "credit": "https://x.com/Tesla/status/2071810353156194719"
+    },
+    {
+      "id": "split",
+      "mission": "graphic",
+      "file": "",
+      "source_ss": null,
+      "video_in": 16.6,
+      "video_out": 19.6,
+      "duration": 3.0,
+      "shows": "822 Cybercabs and 734 Model Ys.",
+      "credit": ""
+    },
+    {
+      "id": "red",
+      "mission": "Austin Robotaxi ride",
+      "file": "joe_ext.mp4",
+      "source_ss": 4.48,
+      "video_in": 19.6,
+      "video_out": 21.8,
+      "duration": 2.2,
+      "shows": "Red Model Y with Robotaxi on the door, Austin street, before a truck crosses. Tesla quoted this ride.",
+      "credit": "https://x.com/Tesla/status/2014422061687701979"
+    },
+    {
+      "id": "doors",
+      "mission": "Robotaxi Austin fleet",
+      "file": "cab67.mp4",
+      "source_ss": 1.1,
+      "video_in": 21.8,
+      "video_out": 23.464,
+      "duration": 1.664,
+      "shows": "Cybercab 67, Austin fleet, front, daylight. The bumper mark reads Cybercab, not a registration number.",
+      "credit": "https://x.com/robotaxi/status/2102222880553787723"
+    },
+    {
+      "id": "loop",
+      "mission": "Robotaxi Austin fleet",
+      "file": "austin300.mp4",
+      "source_ss": 26.3,
+      "video_in": 23.464,
+      "video_out": 26.464,
+      "duration": 3.0,
+      "shows": "Second gold Cybercab in the Austin lot, plates blurred, under the registration caveat.",
+      "credit": "https://x.com/robotaxi/status/2108981691436224816"
+    }
+  ]
+}

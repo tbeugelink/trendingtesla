@@ -1,12 +1,12 @@
 ---
-title_en: Screen glass for Model 3 and Y
-title_nl: Schermglas voor Model 3 en Y
-description_en: Four tempered-glass listings on Amazon.nl. A 15 inch screen and a 16 inch screen are not the same part.
-description_nl: Vier vermeldingen van gehard glas op Amazon.nl. Een scherm van 15 inch en een scherm van 16 inch zijn niet hetzelfde onderdeel.
+title_en: Screen glass for Tesla models
+title_nl: Schermglas voor Tesla-modellen
+description_en: Screen covers on Amazon.nl for the Tesla models named on each page. A 15 inch screen and a 16 inch screen are not the same part.
+description_nl: Schermhoezen op Amazon.nl voor de Tesla-modellen die elke pagina noemt. Een scherm van 15 inch en een scherm van 16 inch zijn niet hetzelfde onderdeel.
 ---
 
-en: The glass has to match the screen in the car. A 15 inch display from a 2017 to 2023 Model 3 is not the 16 inch display in a later Model Y. Read the size line on the product page and check the current price.
-nl: Het glas moet bij het scherm in de auto passen. Een scherm van 15 inch uit een Model 3 van 2017 tot 2023 is niet het scherm van 16 inch in een latere Model Y. Lees de maatregel op de productpagina en kijk de actuele prijs na.
+en: The cover has to match the screen in the car. A 15 inch display from a 2017 to 2023 Model 3 is not the 16 inch display in a later Model Y. The Cybertruck listing calls itself a 9H PET cover, not the glass used on a Model 3. Read the size line and check the current price.
+nl: De hoes moet bij het scherm in de auto passen. Een scherm van 15 inch uit een Model 3 van 2017 tot 2023 is niet het scherm van 16 inch in een latere Model Y. De Cybertruck-vermelding noemt zich een 9H PET-hoes, niet het glas van een Model 3. Lees de maatregel en kijk de actuele prijs na.
 
 :::product
 name_en: Spigen glass for a 15 inch screen
@@ -72,6 +72,18 @@ fits_nl: De vermelding noemt Juniper Premium en Performance van 2026 tot 2028. D
 url: https://www.amazon.nl/dp/B0GKNPSHWW
 button_en: Compare on Amazon
 button_nl: Vergelijk op Amazon
+:::
+
+:::product
+name_en: Screen cover for a Cybertruck
+name_nl: Schermhoes voor een Cybertruck
+pros_en: Front and back screen protector | Listed for Cybertruck 2024 and later | The title says 9H PET and matt
+pros_nl: Schermbeschermer voor en achter | Vermeld voor Cybertruck 2024 en later | De titel zegt 9H PET en mat
+fits_en: A Cybertruck of 2024 or later, as the title states. It is a PET cover, not the 15 inch or 16 inch glass.
+fits_nl: Een Cybertruck van 2024 of later, zoals de titel zegt. Het is een PET-hoes, niet het glas van 15 of 16 inch.
+url: https://www.amazon.nl/dp/B0DRM8SX2F
+button_en: Check out Amazon
+button_nl: Bekijk op Amazon
 :::
 
 :::compare

@@ -1,12 +1,12 @@
 ---
-title_en: Model Y trunk and floor mats
-title_nl: Kofferbakmat en vloermatten Model Y
-description_en: A trunk mat and a floor-mat set on Amazon.nl for a Model Y. The trunk mat is for five seats. The floor mats are for the Juniper.
-description_nl: Een kofferbakmat en een vloermattenset op Amazon.nl voor een Model Y. De kofferbakmat is voor vijf zitplaatsen. De vloermatten zijn voor de Juniper.
+title_en: Tesla trunk and floor mats
+title_nl: Tesla kofferbak- en vloermatten
+description_en: Trunk mats and a floor set on Amazon.nl for the Tesla models named on each page. Match the car before you order.
+description_nl: Kofferbakmatten en een vloerset op Amazon.nl voor de Tesla-modellen die elke pagina noemt. Stem de auto af voor je bestelt.
 ---
 
-en: A Model Y trunk mat and a floor set are two different cuts. The trunk liner below is listed for five-seat Model Y cars from 2020 through 2026, including Juniper, and not for the seven-seat car. The floor mats are listed for the Juniper years only. Read the fit line and check the current price.
-nl: Een kofferbakmat en een vloerset voor een Model Y zijn twee verschillende passen. De kofferbakmat hieronder is vermeld voor Model Y met vijf zitplaatsen van 2020 tot en met 2026, inclusief Juniper, en niet voor de auto met zeven zitplaatsen. De vloermatten zijn alleen voor de Juniper-jaren vermeld. Lees de pasregel en kijk de actuele prijs na.
+en: A trunk mat and a floor set are different cuts, and a Model S liner is not a Model X liner. The Model Y trunk mat below is listed for five-seat cars from 2020 through 2026, including Juniper, and not for the seven-seat car. Read the fit line and check the current price.
+nl: Een kofferbakmat en een vloerset zijn verschillende passen, en een Model S-mat is geen Model X-mat. De Model Y-kofferbakmat hieronder is vermeld voor auto's met vijf zitplaatsen van 2020 tot en met 2026, inclusief Juniper, en niet voor de auto met zeven zitplaatsen. Lees de pasregel en kijk de actuele prijs na.
 
 :::product
 name_en: CYBERBEANS trunk mat for Model Y
@@ -30,6 +30,30 @@ fits_nl: Een Model Y Juniper van 2025 tot 2027. Een oudere Model Y heeft een and
 url: https://www.amazon.nl/dp/B0DZ5JB22G
 button_en: Compare on Amazon
 button_nl: Vergelijk op Amazon
+:::
+
+:::product
+name_en: Trunk mat for Model S
+name_nl: Kofferbakmat voor Model S
+pros_en: A trunk mat | Listed for Tesla Model S | The title says 2017 and later
+pros_nl: Een kofferbakmat | Vermeld voor Tesla Model S | De titel zegt 2017 en later
+fits_en: A Model S from 2017 onward, as the title states. Not a Model Y trunk mat.
+fits_nl: Een Model S vanaf 2017, zoals de titel zegt. Geen kofferbakmat voor een Model Y.
+url: https://www.amazon.nl/dp/B08FHQMF9B
+button_en: Check out Amazon
+button_nl: Bekijk op Amazon
+:::
+
+:::product
+name_en: Kovvar trunk mat for Model X
+name_nl: Kovvar-kofferbakmat voor Model X
+pros_en: Frunk and trunk | The title says Model X 2016 to 2025 | The version line says 2022 to 2024 and five seats
+pros_nl: Frunk en kofferbak | De titel zegt Model X 2016 tot 2025 | De versieregel zegt 2022 tot 2024 en vijf zitplaatsen
+fits_en: The title names Model X 2016 to 2025. The version line names a five-seat car of 2022 to 2024 and velours of 6 mm. Not a Model Y mat.
+fits_nl: De titel noemt Model X 2016 tot 2025. De versieregel noemt een auto met vijf zitplaatsen van 2022 tot 2024 en velours van 6 mm. Geen Model Y-mat.
+url: https://www.amazon.nl/dp/B0D6WHB248
+button_en: Check out Amazon
+button_nl: Bekijk op Amazon
 :::
 
 :::compare

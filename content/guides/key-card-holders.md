@@ -33,13 +33,13 @@ button_nl: Vergelijk op Amazon
 :::
 
 :::product
-name_en: Aputoxz holder for a Tesla card
-name_nl: Aputoxz-houder voor een Tesla-kaart
-pros_en: Soft TPU sleeve and a leather key ring | A bullet lists Model 3 of 2017 to 2024 and Model Y of 2020 to 2024 | The title also names Model S Model X and Cybertruck
-pros_nl: Zachte TPU-hoes en een leren sleutelring | Een opsomming noemt Model 3 van 2017 tot 2024 en Model Y van 2020 tot 2024 | De titel noemt ook Model S Model X en Cybertruck
-fits_en: Compare your card with the pictures. The page says the card shape can differ by year, and the key card is not included.
-fits_nl: Vergelijk je kaart met de foto's. De pagina zegt dat de kaartvorm per jaar kan verschillen, en de keycard is niet inbegrepen.
-url: https://www.amazon.nl/dp/B0G528KMX6
+name_en: Aicharynic two-pack for Model 3 and Y
+name_nl: Aicharynic-tweepack voor Model 3 en Y
+pros_en: Pack of two | Listed for Model 3 and Model Y | Silicone keychain
+pros_nl: Verpakking van twee | Vermeld voor Model 3 en Model Y | Siliconen sleutelhanger
+fits_en: A Model 3 or Model Y key card. The title does not name Model S or a Cybertruck.
+fits_nl: Een keycard van een Model 3 of Model Y. De titel noemt geen Model S en geen Cybertruck.
+url: https://www.amazon.nl/dp/B0CKFCFZZH
 button_en: Compare on Amazon
 button_nl: Vergelijk op Amazon
 :::
@@ -47,10 +47,10 @@ button_nl: Vergelijk op Amazon
 :::compare
 caption_en: Which card
 caption_nl: Welke kaart
-columns_en: SkyArmor | Aicharynic | Aputoxz
-columns_nl: SkyArmor | Aicharynic | Aputoxz
-row_en: 3 Y S and X | 3 and Y only | Years in one bullet and more names in the title
-row_nl: 3 Y S en X | Alleen 3 en Y | Jaren in één opsomming en meer namen in de titel
-row_en: Card not included | Card not a new key | Card not included
-row_nl: Kaart niet inbegrepen | Kaart is geen nieuwe sleutel | Kaart niet inbegrepen
+columns_en: SkyArmor | Aicharynic one | Aicharynic two
+columns_nl: SkyArmor | Aicharynic één | Aicharynic twee
+row_en: 3 Y S and X | 3 and Y only | 3 and Y pack of two
+row_nl: 3 Y S en X | Alleen 3 en Y | 3 en Y verpakking van twee
+row_en: Card not included | Card not a new key | Silicone keychain
+row_nl: Kaart niet inbegrepen | Kaart is geen nieuwe sleutel | Siliconen sleutelhanger
 :::

@@ -6,22 +6,19 @@ no [enthousiast]. Output: video/waymo-texas/out/<id>.mp3 and alignment.json.
 import base64
 import json
 import os
-import sys
 import time
 import urllib.error
 import urllib.request
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-sys.path.insert(0, str(HERE.parent))
-from short import NOAH_VOICE_ID  # noqa: E402
-
 OUT = HERE / "out"
+# Noah. Same id as video/short.py NOAH_VOICE_ID. Kept here so this job does not import Pillow.
 VOICE = "9hb1f7xQcMLB90qbYSY3"
 
 
 def tts(text):
-    if VOICE != NOAH_VOICE_ID:
+    if VOICE != "9hb1f7xQcMLB90qbYSY3":
         raise SystemExit("voice id does not match Noah")
     body = {
         "text": text,

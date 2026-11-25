@@ -1,0 +1,41 @@
+name: Texas register Short preview voice
+
+# Renders only the Noah narration and commits the audio back to this branch.
+# It never uploads to YouTube, never calls Buffer, and does not touch main.
+on:
+  push:
+    branches: [cursor/tesla-waymo-texas-short-c7b4]
+    paths:
+      - .github/workflows/waymo-texas-voice.yml
+      - video/waymo-texas/script.json
+      - video/waymo-texas/noah_voice.py
+
+permissions:
+  contents: write
+
+concurrency:
+  group: waymo-texas-voice
+  cancel-in-progress: false
+
+jobs:
+  voice:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+      - name: Render Noah narration
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        run: python3 video/waymo-texas/noah_voice.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: waymo-texas-voice
+          path: video/waymo-texas/out/
+          retention-days: 14
+      - name: Commit the audio to this branch
+        run: |
+          git config user.name "TrendingTesla bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f video/waymo-texas/out
+          git commit -qm "Texas register Short preview: Noah narration" || exit 0
+          git push -q origin HEAD:cursor/tesla-waymo-texas-short-c7b4

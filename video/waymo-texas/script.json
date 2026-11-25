@@ -1,0 +1,14 @@
+{
+  "title": "Tesla Just Passed Waymo in Texas",
+  "slug": "tesla-passed-waymo-texas-register",
+  "sentences": [
+    {"id": "s1", "text": "Tesla just passed Waymo in Texas.", "caption": "Just passed Waymo", "hook": true},
+    {"id": "s2", "text": "One thousand five hundred fifty-six Teslas are on the state register.", "caption": "1,556 on the register"},
+    {"id": "s3", "text": "Waymo has one thousand four hundred five.", "caption": "Waymo has 1,405"},
+    {"id": "s4", "text": "Tesla leads by one hundred fifty-one.", "caption": "Leads by 151"},
+    {"id": "s5", "text": "Tuesday night Tesla added forty-nine vehicles.", "caption": "49 added Tuesday night"},
+    {"id": "s6", "text": "Eight hundred twenty-two are Cybercabs.", "caption": "822 are Cybercabs"},
+    {"id": "s7", "text": "Seven hundred thirty-four are Model Ys.", "caption": "734 are Model Ys"},
+    {"id": "s8", "text": "Registered means allowed to operate, not that every one is driving.", "caption": "Not all are driving"}
+  ]
+}

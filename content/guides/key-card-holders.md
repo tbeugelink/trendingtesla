@@ -13,8 +13,6 @@ name_en: SkyArmor holder with an AirTag cutout
 name_nl: SkyArmor-houder met een AirTag-uitsparing
 pros_en: Silicone sleeve | Listed for Model 3 Model Y Model S and Model X | A round cutout for an AirTag
 pros_nl: Siliconenhoes | Vermeld voor Model 3 Model Y Model S en Model X | Een ronde uitsparing voor een AirTag
-fits_en: Those four models. The page says the key card and the tracker are not included.
-fits_nl: Die vier modellen. De pagina zegt dat de keycard en de tracker niet zijn inbegrepen.
 url: https://www.amazon.nl/dp/B0DD7GMH71
 button_en: Compare on Amazon
 button_nl: Vergelijk op Amazon
@@ -25,8 +23,6 @@ name_en: Aicharynic holder for Model 3 and Y
 name_nl: Aicharynic-houder voor Model 3 en Y
 pros_en: Listed only for Model 3 and Model Y | A key ring is included | The material line says cowhide and zinc
 pros_nl: Alleen vermeld voor Model 3 en Model Y | Een sleutelring is inbegrepen | De materiaalregel zegt rundleer en zink
-fits_en: A Model 3 or Model Y key card. The page says it is not for other keys.
-fits_nl: Een keycard van een Model 3 of Model Y. De pagina zegt dat hij niet voor andere sleutels is.
 url: https://www.amazon.nl/dp/B0C6QLT3XP
 button_en: Compare on Amazon
 button_nl: Vergelijk op Amazon
@@ -37,8 +33,6 @@ name_en: Aicharynic two-pack for Model 3 and Y
 name_nl: Aicharynic-tweepack voor Model 3 en Y
 pros_en: Pack of two | Listed for Model 3 and Model Y | Silicone keychain
 pros_nl: Verpakking van twee | Vermeld voor Model 3 en Model Y | Siliconen sleutelhanger
-fits_en: A Model 3 or Model Y key card. The title does not name Model S or a Cybertruck.
-fits_nl: Een keycard van een Model 3 of Model Y. De titel noemt geen Model S en geen Cybertruck.
 url: https://www.amazon.nl/dp/B0CKFCFZZH
 button_en: Compare on Amazon
 button_nl: Vergelijk op Amazon

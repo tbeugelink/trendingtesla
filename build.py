@@ -1520,8 +1520,6 @@ article .prose .gbox h2,html body article .prose .gbox h2{border:0;padding:0;mar
 article .prose .gbox p,article .prose .gbox ul,article .prose .gbox li{margin-left:0;margin-right:0}
 article .prose .gbox p{margin-top:8px;margin-bottom:0;font-size:.8rem;line-height:1.4;color:#c5ced8}
 article .prose .gbox li{font-size:.8rem;line-height:1.35}
-.gbox .fits{margin:8px 0 0;color:#c5ced8;font-size:.8rem;line-height:1.4}
-.gbox .fits b{font-weight:700;color:#fff}
 .pcost{margin:10px 0 0;color:#8b97a6;font-size:.72rem;line-height:1.35}
 .popt{margin:6px 0 0;color:#9aa6b4;font-size:.72rem;line-height:1.35}
 .pcost b{color:#fff;font-size:.95rem;font-weight:800;letter-spacing:-.01em}
@@ -7479,7 +7477,6 @@ PROMISE_STATUS = ("delivered", "late", "pending", "abandoned")
 _KV_KEYS = (
     "title_en", "title_nl", "en", "nl", "why_en", "why_nl",
     "name_en", "name_nl", "pros_en", "pros_nl", "cons_en", "cons_nl",
-    "fits_en", "fits_nl",
     "url", "ali_url", "image", "item", "note_en", "note_nl", "option_en", "option_nl", "button_en", "button_nl",
     "caption_en", "caption_nl", "columns_en", "columns_nl", "row_en", "row_nl",
     "slug",
@@ -7868,10 +7865,7 @@ def _guide_product(fields, lang):
     if not name:
         return ""
     pros = _bits(fields.get(f"pros_{lang}") or fields.get("pros_en"))[:3]
-    fits = (fields.get(f"fits_{lang}") or fields.get("fits_en")
-            or fields.get(f"cons_{lang}") or fields.get("cons_en") or "")
     href = guide_amazon(str(fields.get("url") or ""), lang)
-    who = "Who it fits" if lang == "en" else "Voor wie het past"
     amazon_host = ""
     if href.startswith("https://") and href.count("/") >= 2:
         amazon_host = href.split("/")[2].lower()
@@ -7892,7 +7886,6 @@ def _guide_product(fields, lang):
     note_html = f'<p>{esc(note)}</p>' if str(note).strip() else ""
     option = fields.get(f"option_{lang}") or fields.get("option_en") or ""
     option_html = f'<p class="popt">{esc(option)}</p>' if str(option).strip() else ""
-    fit_html = f'<p class="fits"><b>{esc(who)}.</b> {esc(fits)}</p>' if str(fits).strip() else ""
     link = ""
     if amazon_ok or ali:
         parts = []
@@ -7933,7 +7926,7 @@ def _guide_product(fields, lang):
     cost = price_html(price_key, lang) if price_key else ""
     stars = rating_html(price_key, lang) if price_key else ""
     klass = "gbox" if img else "gbox noimg"
-    return (f'<aside class="{klass}">{img}<div><h2>{esc(name)}</h2>{lists}{note_html}{fit_html}'
+    return (f'<aside class="{klass}">{img}<div><h2>{esc(name)}</h2>{lists}{note_html}'
             f'{option_html}{stars}{cost}{link}</div></aside>')
 
 

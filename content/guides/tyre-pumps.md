@@ -13,8 +13,6 @@ name_en: FORTEM 12 volt tyre pump
 name_nl: FORTEM-bandenpomp van 12 volt
 pros_en: 12 volt plug for a cigarette-lighter socket | Stops when the set pressure is reached | Listed for cars vans and SUVs
 pros_nl: 12-voltstekker voor een sigarettenaansteker | Stopt als de ingestelde spanning is bereikt | Vermeld voor auto's bestelwagens en SUV's
-fits_en: A vehicle with that 12 volt socket. The spec table lists a maximum of 150 psi.
-fits_nl: Een voertuig met dat 12-voltstopcontact. De specificatietabel noemt een maximum van 150 psi.
 url: https://www.amazon.nl/dp/B073VB41W3
 button_en: Compare on Amazon
 button_nl: Vergelijk op Amazon
@@ -34,8 +32,6 @@ name_en: UGREEN 12 volt tyre pump
 name_nl: UGREEN-bandenpomp van 12 volt
 pros_en: No battery of its own | 12 volt plug and a 3 metre lead | Stops at the pressure you set
 pros_nl: Geen eigen accu | 12-voltstekker en een snoer van 3 meter | Stopt bij de spanning die je instelt
-fits_en: A car with a 12 volt cigarette-lighter socket. The page lists a maximum of 150 psi and a car mode.
-fits_nl: Een auto met een 12-volt sigarettenaansteker. De pagina noemt een maximum van 150 psi en een automodus.
 url: https://www.amazon.nl/dp/B0D1Y832ZK
 button_en: Compare on Amazon
 button_nl: Vergelijk op Amazon
@@ -46,8 +42,6 @@ name_en: Oasser pump with a battery
 name_nl: Oasser-pomp met een accu
 pros_en: A built-in battery and a 12 volt car lead | Stops at the set pressure | Listed for car tyres up to 150 psi
 pros_nl: Een ingebouwde accu en een 12-voltsnoer voor de auto | Stopt bij de ingestelde spanning | Vermeld voor autobanden tot 150 psi
-fits_en: A car tyre, on the battery or on the 12 volt lead. The page says it is not for large low-pressure items such as an air mattress.
-fits_nl: Een autoband, op de accu of op het 12-voltsnoer. De pagina zegt dat hij niet voor grote lagedrukspullen zoals een luchtbed is.
 url: https://www.amazon.nl/dp/B0DR1Y8NNZ
 button_en: Compare on Amazon
 button_nl: Vergelijk op Amazon

@@ -13,8 +13,6 @@ name_en: CYBERBEANS trunk mat for Model Y
 name_nl: CYBERBEANS-kofferbakmat voor Model Y
 pros_en: TPE trunk mat | Listed for five-seat Model Y cars from 2020 through 2026 | Includes Juniper, Standard, Premium and Performance
 pros_nl: Kofferbakmat van TPE | Vermeld voor Model Y met vijf zitplaatsen van 2020 tot 2026 | Inclusief Juniper, Standard, Premium en Performance
-fits_en: A five-seat Model Y. Not the seven-seat car.
-fits_nl: Een Model Y met vijf zitplaatsen. Niet de auto met zeven zitplaatsen.
 url: https://www.amazon.nl/dp/B0FLQ76FVW
 button_en: Compare on Amazon
 button_nl: Vergelijk op Amazon
@@ -25,8 +23,6 @@ name_en: GAFAT floor mats for Model Y Juniper
 name_nl: GAFAT-vloermatten voor Model Y Juniper
 pros_en: TPE floor mats | Listed for the 2025 to 2027 Model Y Juniper | Standard, Premium and Performance
 pros_nl: Vloermatten van TPE | Vermeld voor de Model Y Juniper van 2025 tot 2027 | Standard, Premium en Performance
-fits_en: A 2025 to 2027 Model Y Juniper. An older Model Y needs a different floor set.
-fits_nl: Een Model Y Juniper van 2025 tot 2027. Een oudere Model Y heeft een andere vloerset nodig.
 url: https://www.amazon.nl/dp/B0DZ5JB22G
 button_en: Compare on Amazon
 button_nl: Vergelijk op Amazon
@@ -37,8 +33,6 @@ name_en: Trunk mat for Model S
 name_nl: Kofferbakmat voor Model S
 pros_en: A trunk mat | Listed for Tesla Model S | The title says 2017 and later
 pros_nl: Een kofferbakmat | Vermeld voor Tesla Model S | De titel zegt 2017 en later
-fits_en: A Model S from 2017 onward, as the title states. Not a Model Y trunk mat.
-fits_nl: Een Model S vanaf 2017, zoals de titel zegt. Geen kofferbakmat voor een Model Y.
 url: https://www.amazon.nl/dp/B08FHQMF9B
 button_en: Check out Amazon
 button_nl: Bekijk op Amazon
@@ -49,8 +43,6 @@ name_en: Kovvar trunk mat for Model X
 name_nl: Kovvar-kofferbakmat voor Model X
 pros_en: Frunk and trunk | The title says Model X 2016 to 2025 | The version line says 2022 to 2024 and five seats
 pros_nl: Frunk en kofferbak | De titel zegt Model X 2016 tot 2025 | De versieregel zegt 2022 tot 2024 en vijf zitplaatsen
-fits_en: The title names Model X 2016 to 2025. The version line names a five-seat car of 2022 to 2024 and velours of 6 mm. Not a Model Y mat.
-fits_nl: De titel noemt Model X 2016 tot 2025. De versieregel noemt een auto met vijf zitplaatsen van 2022 tot 2024 en velours van 6 mm. Geen Model Y-mat.
 url: https://www.amazon.nl/dp/B0D6WHB248
 button_en: Check out Amazon
 button_nl: Bekijk op Amazon

@@ -13,8 +13,6 @@ name_en: Tesla Wall Connector Type 2
 name_nl: Tesla Wall Connector Type 2
 pros_en: Tesla’s own Type 2 unit | Rated up to 22 kW | 7.3 m cable for indoor or outdoor mounting
 pros_nl: Tesla’s eigen Type 2-unit | Tot 22 kW | Kabel van 7,3 m voor binnen of buiten
-fits_en: A home with its own circuit. 22 kW only helps if the supply and the car both accept it.
-fits_nl: Een huis met een eigen groep. 22 kW helpt alleen als de aansluiting en de auto dat allebei aankunnen.
 url: https://www.amazon.nl/dp/B0BW16BBKQ
 button_en: Compare on Amazon
 button_nl: Vergelijk op Amazon
@@ -25,8 +23,6 @@ name_en: dé EV Charger Type 2 22 kW
 name_nl: dé EV Charger Type 2 22 kW
 pros_en: Mobile Type 2 unit | 7 m cable | Schuko adapter, listed for Model Y and Model 3
 pros_nl: Mobiele Type 2-unit | Kabel van 7 m | Schuko-adapter, vermeld voor Model Y en Model 3
-fits_en: A Model Y or Model 3 on the road. A mobile box is not a substitute for a dedicated circuit.
-fits_nl: Een Model Y of Model 3 onderweg. Een mobiele kast vervangt geen eigen groep.
 url: https://www.amazon.nl/dp/B0CS6234MR
 button_en: Compare on Amazon
 button_nl: Vergelijk op Amazon

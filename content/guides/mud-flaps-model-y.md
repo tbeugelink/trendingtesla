@@ -13,8 +13,6 @@ name_en: Ollanoos flaps for Model Y 2021 to 2024
 name_nl: Ollanoos-lappen voor Model Y 2021 tot 2024
 pros_en: Four flaps for front and rear | Listed for Model Y 2021 to 2024 | The title calls them a replacement set
 pros_nl: Vier lappen voor voor en achter | Vermeld voor Model Y 2021 tot 2024 | De titel noemt ze een vervangingsset
-fits_en: A Model Y of 2021 to 2024, as the title states. The title does not name a Juniper.
-fits_nl: Een Model Y van 2021 tot 2024, zoals de titel zegt. De titel noemt geen Juniper.
 url: https://www.amazon.nl/dp/B0G8DLPLKY
 button_en: Compare on Amazon
 button_nl: Vergelijk op Amazon
@@ -34,8 +32,6 @@ name_en: SincigAG flaps for a Model Y
 name_nl: SincigAG-lappen voor een Model Y
 pros_en: Four soft PP flaps | The title names Juniper 2025 and later | The description also names Model Y 2021 to 2024
 pros_nl: Vier zachte PP-lappen | De titel noemt Juniper 2025 en later | De beschrijving noemt ook Model Y 2021 tot 2024
-fits_en: Read both lines on the same page before you order. The title and the description do not name the same years.
-fits_nl: Lees beide regels op dezelfde pagina voor je bestelt. De titel en de beschrijving noemen niet dezelfde jaren.
 url: https://www.amazon.nl/dp/B0H6S8FSY2
 button_en: Compare on Amazon
 button_nl: Vergelijk op Amazon
@@ -46,8 +42,6 @@ name_en: TTCR-II flaps for a Juniper
 name_nl: TTCR-II-lappen voor een Juniper
 pros_en: Four flaps | Listed for Model Y Juniper 2025 and 2026 | The title says 2026 and later
 pros_nl: Vier lappen | Vermeld voor Model Y Juniper 2025 en 2026 | De titel zegt 2026 en later
-fits_en: A Juniper of 2025 or 2026, as the title states. The title does not name a 2021 Model Y.
-fits_nl: Een Juniper van 2025 of 2026, zoals de titel zegt. De titel noemt geen Model Y van 2021.
 url: https://www.amazon.nl/dp/B0GXFS3CBT
 button_en: Compare on Amazon
 button_nl: Vergelijk op Amazon

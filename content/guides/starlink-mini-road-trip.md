@@ -13,8 +13,6 @@ name_en: Starlink Mini kit
 name_nl: Starlink Mini-set
 pros_en: The title names a Starlink Mini kit | It names the dish | Listed as a bundle
 pros_nl: De titel noemt een Starlink Mini-set | Hij noemt de schotel | Vermeld als een bundel
-fits_en: A trip that needs the dish. The page calls it a Starlink Mini kit with the satellite dish.
-fits_nl: Een rit die de schotel nodig heeft. De pagina noemt het een Starlink Mini-set met de satellietschotel.
 url: https://www.amazon.nl/dp/B0G4KTV9QY
 button_en: Compare on Amazon
 button_nl: Vergelijk op Amazon
@@ -25,8 +23,6 @@ name_en: DuHeSin USB-C to DC cable
 name_nl: DuHeSin-kabel van USB-C naar DC
 pros_en: 2 m cable | USB-C to DC | Listed for the Starlink Mini
 pros_nl: Kabel van 2 m | USB-C naar DC | Vermeld voor de Starlink Mini
-fits_en: A Mini you can already power. A cable is not a power station. Check that the source can feed the dish.
-fits_nl: Een Mini die je al kunt voeden. Een kabel is geen powerstation. Kijk of de bron de schotel kan voeden.
 url: https://www.amazon.nl/dp/B0DG1WVDKP
 button_en: Compare on Amazon
 button_nl: Vergelijk op Amazon
@@ -37,8 +33,6 @@ name_en: WEWOGA pole mount for the 2025 Mini
 name_nl: WEWOGA-paalbevestiging voor de Mini van 2025
 pros_en: Pole mount | Listed for the 2025 Mini | Part SPX-04176000-501
 pros_nl: Paalbevestiging | Vermeld voor de Mini van 2025 | Onderdeel SPX-04176000-501
-fits_en: That Mini generation. Check the part number against your dish.
-fits_nl: Die Mini-generatie. Leg het onderdeelnummer naast je schotel.
 url: https://www.amazon.nl/dp/B0FL2M1F4Q
 button_en: Compare on Amazon
 button_nl: Vergelijk op Amazon

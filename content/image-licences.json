@@ -22,45 +22,258 @@
     }
   ],
   "products": [
-    {"asin": "B0BW16BBKQ", "name": "Tesla Wall Connector Type 2", "photo": false, "licence_url": "https://www.tesla.cn/tesla-gallery"},
-    {"asin": "B0CS6234MR", "name": "dé EV Charger", "photo": false, "licence_url": ""},
-    {"asin": "B0DZ5JB22G", "name": "GAFAT mats for Model Y Juniper", "photo": false, "licence_url": ""},
-    {"asin": "B09SWFCTFQ", "name": "GAFAT mats for Model Y 2021 to 2024", "photo": false, "licence_url": ""},
-    {"asin": "B0FPJ6RYFN", "name": "Spigen glass for a 16 inch screen", "photo": false, "licence_url": "https://www.spigen.com/pages/terms-of-use"},
-    {"asin": "B084BNC3FG", "name": "Spigen glass for a 15 inch screen", "photo": false, "licence_url": "https://www.spigen.com/pages/terms-of-use"},
-    {"asin": "B0FLQ76FVW", "name": "CYBERBEANS trunk mat for Model Y", "photo": false, "licence_url": ""},
-    {"asin": "B078C74CDY", "name": "Juice Booster 2 Basic Set", "photo": false, "licence_url": "https://juice.world/en/policies/terms-of-service"},
-    {"asin": "B07D1KF73V", "name": "Samsung BAR Plus 256 GB", "photo": false, "licence_url": ""},
-    {"asin": "B00P8XQPY4", "name": "SanDisk Ultra 128 GB USB stick", "photo": false, "licence_url": ""},
-    {"asin": "B0G4KTV9QY", "name": "Starlink Mini kit", "photo": false, "licence_url": ""},
-    {"asin": "B0DG1WVDKP", "name": "DuHeSin USB-C to DC cable", "photo": false, "licence_url": ""},
-    {"asin": "B0FL2M1F4Q", "name": "WEWOGA pole mount for the 2025 Mini", "photo": false, "licence_url": ""},
-    {"asin": "B0FJM6K3JP", "name": "3W mats for Model 3 Highland", "photo": false, "licence_url": ""},
-    {"asin": "B0GCJ3PTFB", "name": "YEE PIN glass for Juniper 16 inch", "photo": false, "licence_url": ""},
-    {"asin": "B0GKNPSHWW", "name": "GAFAT glass for Juniper 16 and 8", "photo": false, "licence_url": ""},
-    {"asin": "B0GV1CMHFK", "name": "CYBERBEANS trays for Highland and Juniper", "photo": false, "licence_url": ""},
-    {"asin": "B0FKG2Q2MX", "name": "Wigoo trays for Highland and Juniper", "photo": false, "licence_url": ""},
-    {"asin": "B0H3ZZ37J1", "name": "TOPABYTE tray for Juniper Standard", "photo": false, "licence_url": ""},
-    {"asin": "B0H1BLC3D3", "name": "LUWU tray for Juniper Standard", "photo": false, "licence_url": ""},
-    {"asin": "B0HFP38CZR", "name": "Rengue shades for Model Y 2021 to 2023", "photo": false, "licence_url": ""},
-    {"asin": "B0HH6N78KS", "name": "QIZUN shade for Model Y 2021 to 2024", "photo": false, "licence_url": ""},
-    {"asin": "B0HC2462F9", "name": "NVETJMUA shade for Model Y 2020 to 2024", "photo": false, "licence_url": ""},
-    {"asin": "B0DTGPFNFK", "name": "Voldt Type 2 to Type 2 cable", "photo": false, "licence_url": ""},
-    {"asin": "B0FCSGJ6GV", "name": "GONEO Type 2 Mode 3 cable", "photo": false, "licence_url": ""},
-    {"asin": "B0BNBR336V", "name": "LAPP Type 2 Mode 3 cable", "photo": false, "licence_url": ""},
-    {"asin": "B0FK4CP262", "name": "ELEGRP Type 2 cable for S 3 X Y", "photo": false, "licence_url": ""},
-    {"asin": "B0BH7SFTYZ", "name": "elago mount for Model 3 and Y", "photo": false, "licence_url": ""},
-    {"asin": "B0FLRDQYV3", "name": "Spigen mount for Model 3 and Y", "photo": false, "licence_url": ""},
-    {"asin": "B0DNW8TQ27", "name": "Elecphbo clip for a thin screen", "photo": false, "licence_url": ""},
-    {"asin": "B0CKXJGYCM", "name": "TEMKIN flaps for Model Y 2021 to 2023", "photo": false, "licence_url": ""},
-    {"asin": "B0H6S8FSY2", "name": "SincigAG flaps for a Model Y", "photo": false, "licence_url": ""},
-    {"asin": "B0GXBFPD4F", "name": "Hoypeyfiy flaps for Juniper 2025 to 2027", "photo": false, "licence_url": ""},
-    {"asin": "B073VB41W3", "name": "FORTEM 12 volt tyre pump", "photo": false, "licence_url": ""},
-    {"asin": "B0D1Y832ZK", "name": "UGREEN 12 volt tyre pump", "photo": false, "licence_url": ""},
-    {"asin": "B0DR1Y8NNZ", "name": "Oasser pump with a battery", "photo": false, "licence_url": ""},
-    {"asin": "B0DD7GMH71", "name": "SkyArmor holder with an AirTag cutout", "photo": false, "licence_url": ""},
-    {"asin": "B0C6QLT3XP", "name": "Aicharynic holder for Model 3 and Y", "photo": false, "licence_url": ""},
-    {"asin": "B0G528KMX6", "name": "Aputoxz holder for a Tesla card", "photo": false, "licence_url": ""}
+    {
+      "asin": "B0BW16BBKQ",
+      "name": "Tesla Wall Connector Type 2",
+      "photo": false,
+      "licence_url": "https://www.tesla.cn/tesla-gallery"
+    },
+    {
+      "asin": "B0CS6234MR",
+      "name": "d\u00e9 EV Charger",
+      "photo": false,
+      "licence_url": ""
+    },
+    {
+      "asin": "B0DZ5JB22G",
+      "name": "GAFAT mats for Model Y Juniper",
+      "photo": false,
+      "licence_url": ""
+    },
+    {
+      "asin": "B09SWFCTFQ",
+      "name": "GAFAT mats for Model Y 2021 to 2024",
+      "photo": false,
+      "licence_url": ""
+    },
+    {
+      "asin": "B0FPJ6RYFN",
+      "name": "Spigen glass for a 16 inch screen",
+      "photo": false,
+      "licence_url": "https://www.spigen.com/pages/terms-of-use"
+    },
+    {
+      "asin": "B084BNC3FG",
+      "name": "Spigen glass for a 15 inch screen",
+      "photo": false,
+      "licence_url": "https://www.spigen.com/pages/terms-of-use"
+    },
+    {
+      "asin": "B0FLQ76FVW",
+      "name": "CYBERBEANS trunk mat for Model Y",
+      "photo": false,
+      "licence_url": ""
+    },
+    {
+      "asin": "B078C74CDY",
+      "name": "Juice Booster 2 Basic Set",
+      "photo": false,
+      "licence_url": "https://juice.world/en/policies/terms-of-service"
+    },
+    {
+      "asin": "B07D1KF73V",
+      "name": "Samsung BAR Plus 256 GB",
+      "photo": false,
+      "licence_url": ""
+    },
+    {
+      "asin": "B00P8XQPY4",
+      "name": "SanDisk Ultra 128 GB USB stick",
+      "photo": false,
+      "licence_url": ""
+    },
+    {
+      "asin": "B0G4KTV9QY",
+      "name": "Starlink Mini kit",
+      "photo": false,
+      "licence_url": ""
+    },
+    {
+      "asin": "B0DG1WVDKP",
+      "name": "DuHeSin USB-C to DC cable",
+      "photo": false,
+      "licence_url": ""
+    },
+    {
+      "asin": "B0FL2M1F4Q",
+      "name": "WEWOGA pole mount for the 2025 Mini",
+      "photo": false,
+      "licence_url": ""
+    },
+    {
+      "asin": "B0FJM6K3JP",
+      "name": "3W mats for Model 3 Highland",
+      "photo": false,
+      "licence_url": ""
+    },
+    {
+      "asin": "B0GCJ3PTFB",
+      "name": "YEE PIN glass for Juniper 16 inch",
+      "photo": false,
+      "licence_url": ""
+    },
+    {
+      "asin": "B0GKNPSHWW",
+      "name": "GAFAT glass for Juniper 16 and 8",
+      "photo": false,
+      "licence_url": ""
+    },
+    {
+      "asin": "B0GV1CMHFK",
+      "name": "CYBERBEANS trays for Highland and Juniper",
+      "photo": false,
+      "licence_url": ""
+    },
+    {
+      "asin": "B0FKG2Q2MX",
+      "name": "Wigoo trays for Highland and Juniper",
+      "photo": false,
+      "licence_url": ""
+    },
+    {
+      "asin": "B0H3ZZ37J1",
+      "name": "TOPABYTE tray for Juniper Standard",
+      "photo": false,
+      "licence_url": ""
+    },
+    {
+      "asin": "B0H1BLC3D3",
+      "name": "LUWU tray for Juniper Standard",
+      "photo": false,
+      "licence_url": ""
+    },
+    {
+      "asin": "B0HFP38CZR",
+      "name": "Rengue shades for Model Y 2021 to 2023",
+      "photo": false,
+      "licence_url": ""
+    },
+    {
+      "asin": "B0HH6N78KS",
+      "name": "QIZUN shade for Model Y 2021 to 2024",
+      "photo": false,
+      "licence_url": ""
+    },
+    {
+      "asin": "B0HC2462F9",
+      "name": "NVETJMUA shade for Model Y 2020 to 2024",
+      "photo": false,
+      "licence_url": ""
+    },
+    {
+      "asin": "B0DTGPFNFK",
+      "name": "Voldt Type 2 to Type 2 cable",
+      "photo": false,
+      "licence_url": ""
+    },
+    {
+      "asin": "B0FCSGJ6GV",
+      "name": "GONEO Type 2 Mode 3 cable",
+      "photo": false,
+      "licence_url": ""
+    },
+    {
+      "asin": "B0BNBR336V",
+      "name": "LAPP Type 2 Mode 3 cable",
+      "photo": false,
+      "licence_url": ""
+    },
+    {
+      "asin": "B0FK4CP262",
+      "name": "ELEGRP Type 2 cable for S 3 X Y",
+      "photo": false,
+      "licence_url": ""
+    },
+    {
+      "asin": "B0BH7SFTYZ",
+      "name": "elago mount for Model 3 and Y",
+      "photo": false,
+      "licence_url": ""
+    },
+    {
+      "asin": "B0FLRDQYV3",
+      "name": "Spigen mount for Model 3 and Y",
+      "photo": false,
+      "licence_url": ""
+    },
+    {
+      "asin": "B0DNW8TQ27",
+      "name": "Elecphbo clip for a thin screen",
+      "photo": false,
+      "licence_url": ""
+    },
+    {
+      "asin": "B0CKXJGYCM",
+      "name": "TEMKIN flaps for Model Y 2021 to 2023",
+      "photo": false,
+      "licence_url": ""
+    },
+    {
+      "asin": "B0H6S8FSY2",
+      "name": "SincigAG flaps for a Model Y",
+      "photo": false,
+      "licence_url": ""
+    },
+    {
+      "asin": "B0GXBFPD4F",
+      "name": "Hoypeyfiy flaps for Juniper 2025 to 2027",
+      "photo": false,
+      "licence_url": ""
+    },
+    {
+      "asin": "B073VB41W3",
+      "name": "FORTEM 12 volt tyre pump",
+      "photo": false,
+      "licence_url": ""
+    },
+    {
+      "asin": "B0D1Y832ZK",
+      "name": "UGREEN 12 volt tyre pump",
+      "photo": false,
+      "licence_url": ""
+    },
+    {
+      "asin": "B0DR1Y8NNZ",
+      "name": "Oasser pump with a battery",
+      "photo": false,
+      "licence_url": ""
+    },
+    {
+      "asin": "B0DD7GMH71",
+      "name": "SkyArmor holder with an AirTag cutout",
+      "photo": false,
+      "licence_url": ""
+    },
+    {
+      "asin": "B0C6QLT3XP",
+      "name": "Aicharynic holder for Model 3 and Y",
+      "photo": false,
+      "licence_url": ""
+    },
+    {
+      "asin": "B0G528KMX6",
+      "name": "Aputoxz holder for a Tesla card",
+      "photo": false,
+      "licence_url": ""
+    },
+    {
+      "asin": "B0H833HBGP",
+      "name": "Leather cleaner and conditioner set",
+      "photo": false,
+      "licence_url": ""
+    },
+    {
+      "asin": "B003AW3C7I",
+      "name": "SONAX Xtreme interior cleaner",
+      "photo": false,
+      "licence_url": ""
+    },
+    {
+      "asin": "B08T69QZZX",
+      "name": "Gyeon interior detailer",
+      "photo": false,
+      "licence_url": ""
+    }
   ],
   "aliexpress_promo": [
     {

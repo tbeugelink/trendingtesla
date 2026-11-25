@@ -1,12 +1,12 @@
 ---
 title_en: Model Y and Model 3 accessories worth buying
-title_nl: Accessoires voor Model Y en Model 3 die de moeite zijn
+title_nl: Accessoires voor Model Y en Model 3 die de moeite waard zijn
 description_en: Three Amazon.nl accessories with a real fit limit. Match the year of the car before you order. No prices.
 description_nl: Drie accessoires op Amazon.nl met een echte pasgrens. Stem het bouwjaar af voor je bestelt. Geen prijzen.
 ---
 
 en: The accessory that is worth buying is the one cut for your exact car. A 2025 Model Y Juniper does not take the mat set made for a 2021 car, and a screen film for a 16-inch display does not fit a smaller screen. Read the fit line on the product page and check the current price. Stock changes.
-nl: Het accessoire dat de moeite is, is het accessoire dat voor jouw auto is gesneden. Een Model Y Juniper uit 2025 past niet op de mattenset van een auto uit 2021, en een schermfolie voor 16 inch past niet op een kleiner scherm. Lees de pasregel op de productpagina en kijk de actuele prijs na. De voorraad wisselt.
+nl: Accessoires die de moeite waard zijn, zijn de accessoires die voor jouw auto zijn gesneden. Een Model Y Juniper uit 2025 past niet op de mattenset van een auto uit 2021, en een schermfolie voor 16 inch past niet op een kleiner scherm. Lees de pasregel op de productpagina en kijk de actuele prijs na. De voorraad wisselt.
 
 :::product
 name_en: GAFAT all-weather mats for Model Y Juniper

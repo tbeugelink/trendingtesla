@@ -1,0 +1,98 @@
+{
+  "slug": "neuralink-gets-fda-approval-for-pivotal-als-trial",
+  "date": "2026-11-26",
+  "time": "07:26",
+  "category": "news",
+  "layer": "neuralink",
+  "topic": "neuralink",
+  "card": {
+    "en": "Neuralink gets FDA approval for pivotal ALS trial",
+    "nl": "Neuralink krijgt FDA-goedkeuring voor cruciale ALS-studie"
+  },
+  "image": "news/neuralink-arcuate-tractography.jpg",
+  "image_lock": true,
+  "images": [
+    "news/neuralink-arcuate-tractography.jpg",
+    "news/neuralink-connectome.jpg"
+  ],
+  "real_photos": [
+    {
+      "page": "https://commons.wikimedia.org/wiki/File:Arcuate_fasciculus_dissection_and_tractography.png",
+      "describe": "tractography of the arcuate fasciculus, a language pathway in a human brain, not a scan of a trial participant and not the N1 implant",
+      "file": "news/neuralink-arcuate-tractography.jpg",
+      "credit": "Fang-Cheng Yeh and colleagues, CC BY 2.5, Wikimedia Commons"
+    },
+    {
+      "page": "https://commons.wikimedia.org/wiki/File:Connectome.jpg",
+      "describe": "diffusion tractography of nerve fibers in a human brain, not a scan of a trial participant and not a photograph of the FDA decision",
+      "file": "news/neuralink-connectome.jpg",
+      "credit": "jgmarcelino, CC BY 2.0, Wikimedia Commons"
+    }
+  ],
+  "credits": [
+    {
+      "file": "news/neuralink-arcuate-tractography.jpg",
+      "credit": "Fang-Cheng Yeh, Timothy D. Verstynen, Yibao Wang, Juan C. Fernández-Miranda and Wen-Yih Isaac Tseng, PLoS ONE (2013), CC BY 2.5, via Wikimedia Commons. Tractography panel of the arcuate fasciculus. Not a scan of a trial participant and not the implant",
+      "page": "https://commons.wikimedia.org/wiki/File:Arcuate_fasciculus_dissection_and_tractography.png"
+    },
+    {
+      "file": "news/neuralink-connectome.jpg",
+      "credit": "jgmarcelino, CC BY 2.0, via Wikimedia Commons. Diffusion tractography of nerve fibers in a human brain, from a 3-tesla MRI. Not a scan of a trial participant and not a photograph of the decision",
+      "page": "https://commons.wikimedia.org/wiki/File:Connectome.jpg"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Neuralink — Neuralink receives FDA approval to launch the LINK Pivotal Study, 25 November 2026",
+      "url": "https://neuralink.com/updates/neuralink-receives-fda-approval-to-launch-link-pivotal-study/"
+    },
+    {
+      "title": "MobiHealthNews — Neuralink receives FDA approval to launch a pivotal brain-implant trial in ALS, 25 November 2026",
+      "url": "https://www.mobihealthnews.com/news/neuralink-receives-fda-approval-launch-pivotal-brain-implant-trial-als"
+    }
+  ],
+  "label": {
+    "style": "a",
+    "en": {
+      "sub": "APPROVED",
+      "text": "ALS TRIAL"
+    },
+    "nl": {
+      "sub": "GOEDGEKEURD",
+      "text": "ALS-STUDIE"
+    }
+  },
+  "gen_image": {
+    "prompt": "A scientific illustration of cerebral nerve-fiber tracts filling the horizontal centre, cool blue and amber fibers on a charcoal field, the form large and sharp, empty calm space in the lower-left third, no lettering, no portrait, no face, no device, no logo, no operating room, no agency seal",
+    "subject": "diffusion tractography of nerve fibers in a human brain",
+    "refs": [
+      {
+        "src": "news/neuralink-connectome.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Connectome.jpg"
+      }
+    ],
+    "profile": "technical",
+    "category": "A",
+    "describe": "Illustration of nerve-fiber tracts in a human brain. Not a scan of a trial participant, not the N1 implant, and not a photograph of the FDA decision.",
+    "extra": [
+      {
+        "prompt": "A closer scientific plate of curved cerebral fiber tracts in blue and amber on a charcoal field, the bundle large in the centre, empty lower-left, no lettering, no portrait, no device, no logo",
+        "describe": "Closer illustration of cerebral fiber tracts, not a scan of a participant"
+      },
+      {
+        "prompt": "An axial scientific plate of cerebral fiber direction in cool color, the slice centered, charcoal surround, empty lower-left, no lettering, no portrait, no device, no logo",
+        "describe": "Illustration of an axial brain fiber plate, not a scan of a participant"
+      }
+    ]
+  },
+  "en": {
+    "title": "Neuralink gets FDA approval for pivotal ALS trial",
+    "description": "On 25 November 2026 the FDA approved Neuralink to launch the LINK Pivotal Study in people with severe paralysis from ALS. The approval covers the trial and does not authorize sale of the implant.",
+    "body": "<p>The US Food and Drug Administration has approved Neuralink to launch the LINK Pivotal Study. Neuralink calls it the first pivotal trial for an implantable brain-computer interface in the United States. The study will evaluate the safety and effectiveness of the Neuralink system in people with severe paralysis due to ALS. The company announced the decision on 25 November 2026, and MobiHealthNews reported it the same day. The approval lets the trial start. It does not authorize commercial marketing of the device.</p>\n<h2>What does the approval cover?</h2>\n<p><strong>The launch of this study, and not a sale of the implant.</strong> Neuralink's update and the MobiHealthNews report describe the same decision. The FDA approved the company to launch the LINK Pivotal Study. Neuralink says this is the first pivotal trial of an implantable brain-computer interface in the United States. It looks at people with severe paralysis due to ALS, amyotrophic lateral sclerosis. A pivotal trial is the stage that generates the evidence regulators use for a market-approval decision. This study is that step, before a possible future market application. The line the two sources draw on the device is the same: the trial may proceed, and the device may not be marketed.</p>\n<p>Neuralink did not disclose a target enrollment, a study duration, or the clinical sites.</p>\n<h2>So what is still unpublished?</h2>\n<p><strong>How many people the study wants, how long it runs, and which clinical sites will take part.</strong> Those three blanks are in both accounts. What is public is that enrollment is open now. Neuralink directs people to a patient registry at <a href=\"https://neuralink.com/trials/device-control/\">neuralink.com/trials/device-control/</a>. An open registry is a way in. It is not a headcount, a calendar, or a list of sites. Someone may ask to be considered. The size of the pivotal group is not on the page.</p>\n<p>The registry also does not spell out the result the study is built to show.</p>\n<h2>What will participants be asked to do?</h2>\n<p><strong>Control digital devices through thought, in ways that show up as more independence in daily life.</strong> Both sources put the aim there. The trial evaluates safety and effectiveness together. Effectiveness, in that shared account, means thought control of digital devices, with the focus on functional outcomes that improve independence day to day. The study also keeps assessing long-term safety and reliability, and it does that across multiple clinical sites. Multiple is as far as the site list goes. The long-term check is part of the study itself. A participant is there so the trial can see whether the system is safe to live with, and whether controlling a device by thought changes how independently that person gets through the day.</p>\n<p>The test uses one implant, and that implant reads a specific kind of intention.</p>\n<h2>What does the N1 implant read?</h2>\n<p><strong>Intended movement, through electrode threads in the brain region that plans movement.</strong> Neuralink and MobiHealthNews describe the same hardware. The N1 sits in the skull. Electrode threads extend from it into the region of the brain that plans movement, and the system decodes that intended movement. The decoded signal is what a participant uses when trying to control a digital device. The images on this page are diffusion pictures of nerve fibers in a human brain, from research shared under a Creative Commons licence. They are not scans of a participant, and they are not a photograph of the implant or of the decision. The N1 here is the device inside a study the FDA has allowed to launch.</p>\n<p>People have already lived with the implant. This pivotal study is the next stage of that work.</p>\n<h2>So who has already been implanted?</h2>\n<p><strong>More than 30 participants, in early feasibility studies in the United States, Canada and the United Kingdom.</strong> The LINK Pivotal Study builds on that work. Those participants have used the implant to communicate with family, to pursue higher education, and to play video games. The company and MobiHealthNews both report those uses. The figure counts people implanted in the earlier studies. It is not the enrollment target for this pivotal trial, and it is not a count of devices for sale. Earlier coverage of the program sits in <a href=\"/neuralink-enrolled-21-people-in-its-trials/\">Neuralink enrolled 21 people in its trials</a> and <a href=\"/neuralink-opens-us-trial-after-stroke/\">Neuralink opens a US trial after stroke</a>. A pivotal trial produces the evidence regulators use for a market-approval decision. This study is that step, before a possible future market application. Enrollment is open. The target, the duration and the sites remain unpublished.</p>"
+  },
+  "nl": {
+    "title": "Neuralink krijgt FDA-goedkeuring voor cruciale ALS-studie",
+    "description": "Op 25 november 2026 keurde de FDA goed dat Neuralink de LINK Pivotal Study start bij mensen met ernstige verlamming door ALS. De goedkeuring geldt de studie en niet de verkoop van het implantaat.",
+    "body": "<p>De Amerikaanse FDA heeft Neuralink toestemming gegeven om de LINK Pivotal Study te starten. Neuralink noemt het de eerste pivotal-studie in de Verenigde Staten voor een implanteerbare hersen-computerinterface. De studie moet uitwijzen of het systeem van Neuralink veilig en effectief is bij mensen met een ernstige verlamming door ALS. Het bedrijf maakte het besluit op 25 november 2026 bekend, en MobiHealthNews schreef er diezelfde dag over. De goedkeuring laat de studie toe. Ze geeft geen toestemming om het hulpmiddel commercieel te verkopen.</p>\n<h2>Wat dekt die goedkeuring?</h2>\n<p><strong>De start van deze studie, en niet de verkoop van het implantaat.</strong> De update van Neuralink en het verslag van MobiHealthNews beschrijven hetzelfde besluit. De FDA keurde goed dat het bedrijf de LINK Pivotal Study start. Neuralink zegt dat dit de eerste pivotal-studie is voor een implanteerbare hersen-computerinterface in de Verenigde Staten. Ze kijkt naar mensen met een ernstige verlamming door ALS, amyotrofische laterale sclerose. Een pivotal-studie is het stadium waarin het bewijs ontstaat dat toezichthouders gebruiken voor een beslissing over markttoelating. Deze studie is die stap, vóór een eventuele latere aanvraag. De grens die de twee bronnen trekken is dezelfde: de studie mag van start, het hulpmiddel mag niet op de markt.</p>\n<p>Neuralink maakte geen streefaantal, geen studieduur en geen onderzoekslocaties bekend.</p>\n<h2>Dus wat is nog niet bekend?</h2>\n<p><strong>Hoeveel mensen de studie wil, hoe lang ze duurt en welke locaties meedoen.</strong> Die drie leemtes staan in beide verslagen. Wat wel openbaar is: de inschrijving is nu open. Neuralink wijst mensen naar een patiëntenregister op <a href=\"https://neuralink.com/trials/device-control/\">neuralink.com/trials/device-control/</a>. Een open register is een ingang. Het is geen telling, geen kalender en geen lijst van locaties. Iemand kan vragen om mee te doen. Hoe groot de groep in deze studie moet worden, staat er niet.</p>\n<p>Het register zegt ook niet uit zichzelf welk resultaat de studie wil laten zien.</p>\n<h2>Wat moeten deelnemers kunnen?</h2>\n<p><strong>Digitale apparaten besturen met hun gedachten, op een manier die meer zelfstandigheid in het dagelijks leven geeft.</strong> Beide bronnen leggen het doel daar. De studie beoordeelt veiligheid en effectiviteit samen. Effectiviteit betekent in dat gedeelde verslag apparaten aansturen met gedachten, met de nadruk op functionele uitkomsten die de zelfstandigheid van alledag verbeteren. De studie blijft ook de veiligheid en de betrouwbaarheid op de lange termijn volgen, en dat gebeurt op meerdere onderzoekslocaties. Meerdere is zo ver als de lijst met locaties komt. De langetermijnmeting hoort bij de studie zelf. Een deelnemer is er zodat de proef kan zien of het systeem veilig is om mee te leven, en of bediening met gedachten verandert hoe zelfstandig iemand de dag doorkomt.</p>\n<p>Die test gebruikt één implantaat, en dat implantaat leest een bepaald soort bedoeling.</p>\n<h2>Wat leest het N1-implantaat?</h2>\n<p><strong>Bedoelde beweging, via elektrodedraden in het hersengebied dat beweging plant.</strong> Neuralink en MobiHealthNews beschrijven dezelfde hardware. Het N1-implantaat zit in de schedel. Elektrodedraden lopen van daaruit naar het hersengebied dat beweging plant, en het systeem decodeert die bedoelde beweging. Dat signaal gebruikt een deelnemer om een digitaal apparaat te besturen. De beelden bij dit stuk zijn diffusiebeelden van zenuwvezels in een menselijk brein, uit onderzoek dat onder een Creative Commons-licentie is gedeeld. Het zijn geen scans van een deelnemer, en geen foto van het implantaat of van het besluit. Het N1 in dit verhaal is het hulpmiddel in een studie die de FDA heeft laten starten.</p>\n<p>Mensen leven al met het implantaat. Deze pivotal-studie is de volgende fase van dat werk.</p>\n<h2>Dus wie heeft het implantaat al?</h2>\n<p><strong>Meer dan 30 deelnemers, in vroege haalbaarheidsstudies in de Verenigde Staten, Canada en het Verenigd Koninkrijk.</strong> De LINK Pivotal Study bouwt daarop voort. Die deelnemers hebben het implantaat gebruikt om met familie te praten, een hogere opleiding te volgen en videogames te spelen. Het bedrijf en MobiHealthNews melden allebei die toepassingen. Het getal telt mensen die in de eerdere studies een implantaat kregen. Het is niet het streefaantal voor deze pivotal-studie, en het is geen telling van hulpmiddelen die te koop zijn. Eerdere stukken over het programma staan in <a href=\"/nl/neuralink-enrolled-21-people-in-its-trials/\">Neuralink schreef 21 mensen in voor proeven</a> en <a href=\"/nl/neuralink-opens-us-trial-after-stroke/\">Neuralink opent een proef na een beroerte</a>. Een pivotal-studie levert het bewijs dat toezichthouders gebruiken voor een beslissing over markttoelating. Deze studie is die stap, vóór een mogelijke latere aanvraag. De inschrijving is open. Het streefaantal, de duur en de locaties zijn nog niet gepubliceerd.</p>"
+  }
+}

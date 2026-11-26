@@ -63,17 +63,18 @@ Shorts are uploaded public only from a manual run. `tools/story_approve.py` does
 
 ### Voice and picture constants
 
-Picture timing is an estimate, kept as named constants. The voice preset is in `video/short.py`. `ELEVENLABS_VOICE_ID` still overrides Noah. The workflow sets `STORY_VOICE=1`, which uses that variable when it is set.
+Picture timing is an estimate, kept as named constants. Shorts use Tony Smyles. Long videos still use Noah. `ELEVENLABS_VOICE_ID` overrides Tony only when it is some other id; Noah's id does not. The workflow sets `STORY_VOICE=1`.
 
 | Constant | File | Value |
 |---|---|---|
-| `NARRATION_MODEL` | `video/short.py` | `eleven_v4` (env `ELEVENLABS_MODEL`) |
-| `NARRATION_TAG` | `video/short.py` | `[enthousiast]` before every spoken sentence (env `ELEVENLABS_AUDIO_TAG`; empty turns it off) |
-| stability / similarity / clone strength | `video/short.py` | 0 / 0 / 0 (env `ELEVENLABS_STABILITY`, `ELEVENLABS_SIMILARITY`, `ELEVENLABS_CLONE_STRENGTH`) |
-| language | `video/short.py` | `en` (env `ELEVENLABS_LANGUAGE`) |
+| Short voice | `video/short.py` `TONY_VOICE_ID` | `q1OMOTZNtqpS50TIQtu4` (Tony Smyles) |
+| Short model | `video/short.py` `short_narration_body` | `eleven_multilingual_v2` |
+| Short stability / similarity / style / speed | `video/short.py` | 0.45 / 0.8 / 0.3 / 1.07, speaker boost on, no delivery tag |
+| Long-video voice | `video/short.py` `NOAH_VOICE_ID` | `9hb1f7xQcMLB90qbYSY3` (Noah), `eleven_v4`, stability 0, similarity 0, clone strength 0, tag `[enthousiast]` |
 | `XFADE` | `video/story.py` | 0.15 s |
 | `SHOT_MAX` | `video/story.py` | 2.0 s |
-| `USE_DEFAULT_SFX` | `video/story.py` | `False` (no default impact hit, bass drop or drone; a beat's own `sfx` still plays) |
+| `MUSIC_BED` | `video/story.py` | off (`SHORT_MUSIC=1` is the only way to add the drone) |
+| `USE_DEFAULT_SFX` | `video/story.py` | `False` (no default impact hit or bass drop; a beat's own `sfx` still plays) |
 | `SCENE_MAX` | `video/full.py` | 2.0 s |
 | `SCENE_XFADE` | `video/full.py` | 0.15 s |
 

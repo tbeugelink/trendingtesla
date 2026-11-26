@@ -1,4 +1,4 @@
-"""Story-style vertical Short: hook -> tension -> payoff, every shot moving, sound effects under the voice.
+"""Story-style vertical Short: hook -> tension -> payoff, every shot moving. The soundtrack is the voice.
 
 Usage:  python3 video/story.py <slug> [en|nl]        -> video/out/<slug>-<lang>-short.mp4 (+ .txt for upload.py)
 
@@ -9,7 +9,7 @@ The script comes from the article's "short":
 Rules of the first story Shorts (Falcon 1, Cybercab): no still image anywhere, subjects kept horizontally centred,
 a hard opening (punch-in + shake + impact), launches move top-to-bottom so the rocket seems to rise ("rise"),
 closing shots zoom in with a light tremble, emphasis via capitals and commas, no artificial cartoon effects.
-Needs ELEVENLABS_API_KEY. ELEVENLABS_VOICE_ID overrides Noah (ELEVENLABS_VOICE_ID_3 is used when set: the story voice). The voice preset lives in short.py.
+Needs ELEVENLABS_API_KEY. Shorts use Tony Smyles (video/short.py short_voice). A stored Noah id does not override that. The voice preset lives in short.py.
 """
 import base64
 import hashlib
@@ -33,16 +33,18 @@ OUT = S.OUT
 KEY = os.environ.get("ELEVENLABS_API_KEY", "")
 VOICE = (os.environ.get(f"ELEVENLABS_VOICE_ID_{os.environ.get('STORY_VOICE', '1')}") or
          os.environ.get("ELEVENLABS_VOICE_ID") or
-         S.NOAH_VOICE_ID).strip()  # STORY_VOICE=1 uses ELEVENLABS_VOICE_ID; empty falls back to Noah
+         S.TONY_VOICE_ID).strip()  # empty falls back to Tony Smyles
+if VOICE == S.NOAH_VOICE_ID:
+    VOICE = S.TONY_VOICE_ID
 CAPTIONS = os.environ.get("STORY_CAPTIONS", "0") == "1"  # running subtitles off: only key words pop in
-# Picture pace, and the names of the three beat parts. Eleven v4 has no speed slider, so these
-# numbers are not sent to the voice. The voice id is chosen by STORY_VOICE, not here.
+# Picture pace. The spoken pace is speed 1.07 inside the Tony request, not these numbers.
 SPEED = {"hook": 1.05, "tension": 1.05, "payoff": 1.05}
 GAP = {"hook": 0.35, "tension": 0.12, "payoff": 0.3}
 SFX_VOL, BED_VOL = 0.45, 0.14
-# Generic impact hit, bass drop and ambient drone are off. A beat's own "sfx" still plays.
-# Set USE_DEFAULT_SFX = True to bring the three defaults below back.
+# Shorts are voice only. The music bed stays off unless SHORT_MUSIC=1.
+# A beat's own natural "sfx" can still play. USE_DEFAULT_SFX brings back the impact and the bass drop.
 USE_DEFAULT_SFX = False
+MUSIC_BED = os.environ.get("SHORT_MUSIC") == "1"
 DEFAULT_SFX = {  # natural cinematic sounds only (no whistles, coins, spins)
     "hook": "Deep cinematic impact hit with a low boom and short rumble tail",
     "payoff": "Deep cinematic bass drop with a soft sub boom, then silence",
@@ -65,7 +67,7 @@ def post(url, body):
 
 
 def tts(text, speed, out):
-    chars, starts, ends = S.tts_elevenlabs(text, out, speed=speed, voice=VOICE)
+    chars, starts, ends = S.tts_elevenlabs(text, out, speed=speed, voice=VOICE, preset="short")
     return S.words_timed(chars, starts, ends)
 
 
@@ -1060,9 +1062,10 @@ def main():
         if hook_sfx or USE_DEFAULT_SFX:
             layers.append((sfx(hook_sfx or DEFAULT_SFX["hook"], 4.0 if hook_sfx else 2.5, tmp), 0.0, SFX_VOL))
         if USE_DEFAULT_SFX:
-            bed_len = (pay or body_end) - beats[0]["_dur"]
-            if bed_len > 3:
-                layers.append((sfx(DEFAULT_SFX["bed"], min(22.0, bed_len), tmp), beats[0]["_dur"], BED_VOL))
+            if MUSIC_BED:
+                bed_len = (pay or body_end) - beats[0]["_dur"]
+                if bed_len > 3:
+                    layers.append((sfx(DEFAULT_SFX["bed"], min(22.0, bed_len), tmp), beats[0]["_dur"], BED_VOL))
             if pay:
                 layers.append((sfx(DEFAULT_SFX["payoff"], 2.5, tmp), pay, SFX_VOL * 0.8))
         for b in beats[1:]:

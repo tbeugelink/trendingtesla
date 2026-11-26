@@ -1,8 +1,9 @@
-"""Noah narration for the LINK pivotal-trial Short. Nothing is uploaded or published.
+"""Narration for the LINK pivotal-trial Short. Nothing is uploaded or published.
 
-Same request as the Texas register Short v3 (PR 185, video/waymo-texas/noah_voice.py):
-Noah 9hb1f7xQcMLB90qbYSY3, eleven_v4, English, stability 0.30, similarity_boost
-0.75, clone_strength 0.22, mp3 44.1 kHz 192 kbps. No style, no speed, no delivery tags.
+This is the English voice from before Noah (chosen 19 Nov 2026).
+Tony Smyles, ElevenLabs q1OMOTZNtqpS50TIQtu4, eleven_multilingual_v2.
+Same request as video/story.py on 18 Nov 2026: stability 0.45, similarity 0.8,
+style 0.3, speaker boost on, speed 1.07. No delivery tags.
 Output: video/neuralink-link/out/<id>.mp3 and alignment.json.
 """
 import base64
@@ -15,23 +16,24 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 OUT = HERE / "out"
-# Noah. Same id as video/short.py NOAH_VOICE_ID.
-VOICE = "9hb1f7xQcMLB90qbYSY3"
+# Tony Smyles, the voice id in vars.ELEVENLABS_VOICE_ID before Noah.
+# Noah is 9hb1f7xQcMLB90qbYSY3 and must not be used here.
+VOICE = "q1OMOTZNtqpS50TIQtu4"
+NOAH = "9hb1f7xQcMLB90qbYSY3"
 
 
 def tts(text):
-    if VOICE != "9hb1f7xQcMLB90qbYSY3":
-        raise SystemExit("voice id does not match Noah")
+    if VOICE == NOAH:
+        raise SystemExit("refusing Noah")
     body = {
         "text": text,
-        "model_id": "eleven_v4",
-        "language_code": "en",
-        # v4 accepts stability, similarity_boost, and clone_strength only.
-        # Same values as the Texas register Short v3. No style, no speed.
+        "model_id": "eleven_multilingual_v2",
         "voice_settings": {
-            "stability": 0.30,
-            "similarity_boost": 0.75,
-            "clone_strength": 0.22,
+            "stability": 0.45,
+            "similarity_boost": 0.8,
+            "style": 0.3,
+            "use_speaker_boost": True,
+            "speed": 1.07,
         },
     }
     for attempt in range(4):
@@ -57,8 +59,9 @@ def main():
     script = json.loads((HERE / "script.json").read_text(encoding="utf-8"))
     result = {
         "voice_id": VOICE,
-        "model": "eleven_v4",
-        "tone": "Noah, professional, a little more cheerful and lively; stability 0.30, clone strength 0.22; no style slider on v4; no audio tags",
+        "voice": "Tony Smyles - The Voice of Trust",
+        "model": "eleven_multilingual_v2",
+        "tone": "pre-Noah story Short: stability 0.45, similarity 0.8, style 0.3, speaker boost, speed 1.07; no audio tags",
         "sentences": [],
     }
     for s in script["sentences"]:

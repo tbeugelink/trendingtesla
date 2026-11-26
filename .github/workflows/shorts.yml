@@ -160,9 +160,8 @@ jobs:
           PYTHONUNBUFFERED: "1"
         run: |
           if [ -z "$ELEVENLABS_API_KEY" ]; then echo "::error::Secret ELEVENLABS_API_KEY is empty or missing"; fi
-          # The variable still holds the previous narrator. An empty value, or any
-          # value that is not Noah, falls through to the Noah default in code.
-          if [ "$ELEVENLABS_VOICE_ID" != "9hb1f7xQcMLB90qbYSY3" ]; then unset ELEVENLABS_VOICE_ID; fi
+          # Shorts use Tony Smyles. A stored Noah id must not override that default.
+          if [ "$ELEVENLABS_VOICE_ID" = "9hb1f7xQcMLB90qbYSY3" ]; then unset ELEVENLABS_VOICE_ID; fi
           # A preview renders the same one hook clip as a real Short (about $0.40). Upload stays off.
           fail=0
           for s in ${{ steps.find.outputs.slugs }}; do

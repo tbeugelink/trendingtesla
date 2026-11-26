@@ -228,9 +228,11 @@ def spoken(text, lang):
     return t
 
 
-# Noah, the long-form narrator. ELEVENLABS_VOICE_ID overrides this when set.
+# Noah, the long-form narrator. Shorts do not use this voice.
 NOAH_VOICE_ID = "9hb1f7xQcMLB90qbYSY3"
-# Owner's ElevenLabs UI preset: Eleven v4, stability 0%, similarity 0%, clone strength 0%, English.
+# Tony Smyles, the English Short voice from before Noah. Owner confirmed 26 Nov 2026.
+TONY_VOICE_ID = "q1OMOTZNtqpS50TIQtu4"
+# Long videos: Eleven v4, stability 0%, similarity 0%, clone strength 0%, English.
 # [enthousiast] is a delivery tag. Speech-to-text on the N1 sample did not speak it.
 NARRATION_MODEL = "eleven_v4"
 NARRATION_TAG = "[enthousiast]"
@@ -239,8 +241,31 @@ AUDIO_TAG_WORD = re.compile(r"\[[^\[\]]+\]")
 
 
 def narration_voice():
-    """The voice for English narration. A GitHub variable wins; otherwise Noah."""
+    """The voice for a long video. A GitHub variable wins; otherwise Noah."""
     return (os.environ.get("ELEVENLABS_VOICE_ID") or "").strip() or NOAH_VOICE_ID
+
+
+def short_voice():
+    """The voice for a Short. Tony Smyles. A stored Noah id does not override it."""
+    raw = (os.environ.get("ELEVENLABS_VOICE_ID") or "").strip()
+    if not raw or raw == NOAH_VOICE_ID:
+        return TONY_VOICE_ID
+    return raw
+
+
+def short_narration_body(text):
+    """Tony Smyles on eleven_multilingual_v2. No delivery tag and no music settings."""
+    return {
+        "text": (text or "").strip(),
+        "model_id": "eleven_multilingual_v2",
+        "voice_settings": {
+            "stability": 0.45,
+            "similarity_boost": 0.8,
+            "style": 0.3,
+            "use_speaker_boost": True,
+            "speed": 1.07,
+        },
+    }
 
 
 def narration_tag():
@@ -364,8 +389,8 @@ def pad_alignment(source, chars, starts, ends):
     )
 
 
-def tts_request(text, out_mp3, speed, voice):
-    body = narration_body(text, speed)
+def tts_request(text, out_mp3, speed, voice, preset=None):
+    body = short_narration_body(text) if preset == "short" else narration_body(text, speed)
     req = urllib.request.Request(
         f"https://api.elevenlabs.io/v1/text-to-speech/{voice}/with-timestamps?output_format=mp3_44100_192",
         data=json.dumps(body).encode(),
@@ -374,8 +399,9 @@ def tts_request(text, out_mp3, speed, voice):
         d = json.load(r)
     out_mp3.write_bytes(base64.b64decode(d["audio_base64"]))
     al = d.get("alignment") or d["normalized_alignment"]  # original characters, so text positions line up
+    tag = "" if preset == "short" else narration_tag()
     chars, starts, ends = alignment_without_tags(
-        al["characters"], al["character_start_times_seconds"], al["character_end_times_seconds"], narration_tag())
+        al["characters"], al["character_start_times_seconds"], al["character_end_times_seconds"], tag)
     return pad_alignment(text, chars, starts, ends)
 
 
@@ -389,19 +415,19 @@ def concat_audio(parts, dest):
     listing.unlink(missing_ok=True)
 
 
-def tts_elevenlabs(text, out_mp3, speed=None, voice=None):
+def tts_elevenlabs(text, out_mp3, speed=None, voice=None, preset=None):
     if voice is None:
-        voice = narration_voice()
+        voice = short_voice() if preset == "short" else narration_voice()
         if LANG[0] == "nl" and os.environ.get("USE_NL_VOICE") == "1" and os.environ.get("ELEVENLABS_VOICE_ID_NL"):  # off: English voice for Dutch too
             voice = os.environ["ELEVENLABS_VOICE_ID_NL"]
     parts = narration_chunks(text)
     if len(parts) == 1:
-        return tts_request(parts[0], out_mp3, speed, voice)
+        return tts_request(parts[0], out_mp3, speed, voice, preset)
     chars, starts, ends = [], [], []
     files, offset = [], 0.0
     for i, part in enumerate(parts):
         dest = out_mp3.with_name(f"{out_mp3.stem}-part{i}.mp3")
-        c, s, e = tts_request(part, dest, speed, voice)
+        c, s, e = tts_request(part, dest, speed, voice, preset)
         span = duration(dest)
         if e and e[-1] > span:
             s = [min(t, span) for t in s]
@@ -859,7 +885,7 @@ def main():
         # one request for everything, so the title has the same pace and tone as the rest; then cut it in three
         mp3 = OUT / f"{slug}-{lang}-all.mp3"
         try:
-            chars, cs, ce = tts_elevenlabs(" ".join(pieces), mp3)
+            chars, cs, ce = tts_elevenlabs(" ".join(pieces), mp3, preset="short")
         except urllib.error.HTTPError as err:
             body = err.read().decode("utf-8", "replace")[:300]
             print(f"::error::ElevenLabs HTTP {err.code}: {body}")

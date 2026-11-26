@@ -6016,9 +6016,10 @@ def homepage(arts, lang):
     cards = "".join(home_card(item, lang, eager=i < 4) for i, item in enumerate(grid))
     row = f'<section class="homenews" aria-label="{esc(label)}">{cards}</section>'
     # Phone shows this copy between the cards and the dated list. Desktop hides it.
+    archive_link = f'<a class="morelink" href="{url(lang, "archive/")}">{esc(L["archive"])}</a>'
     main = (f'{nav}<h1 class="visually-hidden">{esc(NAME)}</h1>{home_trackers(lang)}{row}'
             f'{ticker_bar(lang, main=True, script=False)}'
-            f'<div class="hfeed">{home_feed(feed, lang)}</div>')
+            f'<div class="hfeed">{home_feed(feed, lang)}</div>{archive_link}')
     shown = [item["article"] for item in (*grid, *feed) if item["kind"] == "article" and item.get("article")]
     return shell(main, page_side(arts, lang, "home", skip=shown), "front"), crumb_ld
 
@@ -6258,7 +6259,7 @@ def pv_article(variant, a, arts, lang, live=False):
         f'<p class="lead">{esc(t["description"])}</p>'
         f'{toc_here}'
         f'<div class="prose">{body}</div>{live_feed(a, lang) if a.get("type") == "live" else ""}{product_boxes(a, lang)}{handy_box(a, lang)}{ad_html("end", lang)}'
-        f'{article_sources(a, lang)}{prev_next(a, arts, lang)}</article>')
+        f'{article_sources(a, lang)}{related_block(a, arts, lang)}{prev_next(a, arts, lang)}</article>')
     if live:
         return article
     inner = f'<div class="pv-art pv-{variant}">{rail}<div>{article}</div>{pv_side(arts, lang, a)}</div>'
@@ -6714,6 +6715,10 @@ def _hub_guides():
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def hub_has_guide(key):
+    return bool((_hub_guides().get(key) or {}).get("lead"))
+
+
 def hub_guide_desc(key, lang, fallback=""):
     guide = _hub_guides().get(key) or {}
     return (guide.get("desc") or {}).get(lang) or fallback
@@ -6757,11 +6762,14 @@ def hub_guide_html(key, lang, title):
 
 
 def topic_hub(spec, items, lang):
-    """Article list for a topic, with an evergreen guide when one exists."""
+    """Article list for a topic. A full guide when one exists, otherwise a visible title and intro."""
     title = _bi(spec["title"], lang)
     intro = hub_guide_desc(spec["key"], lang, _bi(spec["intro"], lang))
     parts = topic_hub_crumb_parts(spec, items, lang)
     preface = hub_guide_html(spec["key"], lang, title)
+    if not preface and intro:
+        preface = (f'<header class="hubhead"><h1>{esc(title)}</h1>'
+                   f'<p class="lead">{esc(intro)}</p></header>')
     body, ld = _article_list(items, lang, title, spec["path"], crumb_parts=parts, preface=preface)
     return body, ld, intro
 
@@ -7121,10 +7129,18 @@ def _layer_articles(layer, arts):
 
 
 def layer_page(layer, arts, lang):
-    """Evergreen guide when one exists, then the lead photo and the other articles."""
+    """Evergreen guide when one exists, otherwise the layer's own intro, then the articles."""
     title = _bi(layer["title"], lang)
     items = _layer_articles(layer, arts)
     preface = hub_guide_html(layer["key"], lang, title)
+    if not preface:
+        paras = "".join(f"<p>{esc(p)}</p>" for p in layer["intro"][lang])
+        links = "".join(
+            f'<li><a href="{url(lang, link["href"])}">{esc(_bi(link, lang))}</a></li>'
+            for link in layer.get("links") or [])
+        link_html = f"<ul>{links}</ul>" if links else ""
+        preface = (f'<header class="hubhead"><h1>{esc(title)}</h1></header>'
+                   f'<div class="hubguide">{paras}{link_html}</div>')
     body, ld = _article_list(items, lang, title, layer["path"], preface=preface)
     desc = hub_guide_desc(layer["key"], lang, layer["intro"][lang][0])
     return body, ld, desc, items
@@ -8624,10 +8640,13 @@ def build():
                 continue
             items = hub_articles(spec, arts)
             content, crumb_ld, intro = topic_hub(spec, items, lang)
+            # A hub with no articles and no evergreen guide is an empty URL. Keep it for the menu,
+            # but do not ask Google to index it.
+            robots = None if items or hub_has_guide(spec["key"]) else "noindex, follow"
             write(url(lang, spec["path"]), page(
                 lang, spec["path"], _bi(spec["title"], lang), intro,
                 shell(content, page_side(arts, lang, "hub", spec["key"], skip=items)),
-                extra_head=ld_script(crumb_ld), active=spec["key"]))
+                extra_head=ld_script(crumb_ld), active=spec["key"], robots=robots))
         for layer in LAYERS:
             content, crumb_ld, intro, items = layer_page(layer, arts, lang)
             write(url(lang, layer["path"]), page(
@@ -8813,10 +8832,12 @@ def build():
             if item["kind"] == "article":
                 continue
             cbody, chead, cdesc = clip_page(item, arts, lang)
+            # A watch page repeats a YouTube embed and, when there is an article, that article's
+            # description. It stays available to people. It is not a second copy for Google.
             write(url(lang, item["path"]), page(
                 lang, item["path"], item["title"], cdesc,
                 shell(cbody, page_side(arts, lang, "videos", current=item.get("article"))),
-                extra_head=chead))
+                extra_head=chead, robots="noindex, follow"))
 
         # ---------- Static pages ----------
         for key, p in PAGES.items():
@@ -8962,13 +8983,8 @@ def build():
             continue
         if len(raw) == 10:
             video_dates.append(raw)
-        entries.append((f"videos/{vid}/", raw if len(raw) == 10 else None))
+        # Individual watch pages are noindex. The videos index stays in the sitemap.
     entries.append(("videos/", max(video_dates) if video_dates else None))
-    for sh in shorts:
-        vid = sh.get("id")
-        raw = str(sh.get("published") or "")[:10]
-        if vid:
-            entries.append((f"shorts/{vid}/", raw if len(raw) == 10 else None))
     def guide_stamp(path, items):
         base = latest_stamp(items) if items else None
         key = path.strip("/")
@@ -8980,7 +8996,10 @@ def build():
     seen_hubs = set()
     for spec in HUBS:
         seen_hubs.add(spec["path"])
-        entries.append((spec["path"], guide_stamp(spec["path"], hub_articles(spec, arts))))
+        items = hub_articles(spec, arts)
+        if not items and not hub_has_guide(spec["key"]):
+            continue
+        entries.append((spec["path"], guide_stamp(spec["path"], items)))
     for layer in LAYERS:
         if layer["path"] in seen_hubs:
             continue

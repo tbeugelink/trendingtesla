@@ -214,7 +214,8 @@ export default {
     if (u.pathname === "/api/contact") return contact(request, env);
     if (u.pathname === "/api/likes") {
       const stub = env.LIKES.get(env.LIKES.idFromName("all"));
-      if (request.method === "GET") {
+      // Googlebot sometimes sends HEAD. A 405 on that path showed up as an "other 4xx".
+      if (request.method === "GET" || request.method === "HEAD") {
         const slugs = (u.searchParams.get("s") || "").split(",").filter((s) => SLUG.test(s)).slice(0, 60);
         return json(await stub.get(slugs));
       }

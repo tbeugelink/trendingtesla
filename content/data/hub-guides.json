@@ -9,7 +9,10 @@
       "en": "SpaceX is the launch company in this ecosystem. Falcon 9 does the weekly work. Falcon Heavy takes the heavier loads. Starship is the much larger steel ship SpaceX is still teaching to reach orbit, come home and be caught.",
       "nl": "SpaceX is hier het lanceerbedrijf. Falcon 9 doet het wekelijkse werk. Falcon Heavy neemt de zwaardere ladingen mee. Starship is het veel grotere stalen schip dat SpaceX nog leert een baan te halen, thuis te komen en gevangen te worden."
     },
-    "facts_h": {"en": "Four things to keep straight", "nl": "Vier dingen die je uit elkaar houdt"},
+    "facts_h": {
+      "en": "Four things to keep straight",
+      "nl": "Vier dingen die je uit elkaar houdt"
+    },
     "facts": {
       "en": [
         "Falcon 9 is the booster that lands and flies again. It carries most of the launches.",
@@ -36,27 +39,73 @@
         "Onder deze tekst staat de berichtgeving, de nieuwste eerst. De links hieronder zijn er voor het mechanisme, de prijs van een kilo, of de tabel met vluchten."
       ]
     },
-    "faq_h": {"en": "Questions", "nl": "Vragen"},
+    "faq_h": {
+      "en": "Questions",
+      "nl": "Vragen"
+    },
     "faq": {
       "en": [
-        ["What does SpaceX fly on a normal week?", "Falcon 9, and Falcon Heavy when the payload needs it. Starship flies as a test vehicle, not as the regular ride to orbit."],
-        ["Is Starship the same rocket as Falcon 9?", "No. Falcon 9 is the operational booster. Starship is a larger stainless-steel ship on a different booster, Super Heavy."],
-        ["Where is the list of Starship flights?", "On the Starship page. It is a table of full-stack flights, newest first, separate from this news list."],
-        ["Does a Starship launch mean a Mars date?", "No. Mars is the long-term aim. A flight result is about that flight."]
+        [
+          "What does SpaceX fly on a normal week?",
+          "Falcon 9, and Falcon Heavy when the payload needs it. Starship flies as a test vehicle, not as the regular ride to orbit."
+        ],
+        [
+          "Is Starship the same rocket as Falcon 9?",
+          "No. Falcon 9 is the operational booster. Starship is a larger stainless-steel ship on a different booster, Super Heavy."
+        ],
+        [
+          "Where is the list of Starship flights?",
+          "On the Starship page. It is a table of full-stack flights, newest first, separate from this news list."
+        ],
+        [
+          "Does a Starship launch mean a Mars date?",
+          "No. Mars is the long-term aim. A flight result is about that flight."
+        ]
       ],
       "nl": [
-        ["Wat vliegt SpaceX in een gewone week?", "Falcon 9, en Falcon Heavy als de lading dat vraagt. Starship vliegt als testvoertuig, niet als de vaste rit naar een baan."],
-        ["Is Starship dezelfde raket als Falcon 9?", "Nee. Falcon 9 is de booster die al in dienst is. Starship is een groter schip van roestvrij staal op een andere booster, Super Heavy."],
-        ["Waar staat de lijst met Starship-vluchten?", "Op de Starship-pagina. Dat is een tabel van volledige vluchten, de nieuwste eerst, los van dit nieuwsoverzicht."],
-        ["Betekent een Starship-lancering een datum voor Mars?", "Nee. Mars is het doel op lange termijn. Een vluchtresultaat gaat over die vlucht."]
+        [
+          "Wat vliegt SpaceX in een gewone week?",
+          "Falcon 9, en Falcon Heavy als de lading dat vraagt. Starship vliegt als testvoertuig, niet als de vaste rit naar een baan."
+        ],
+        [
+          "Is Starship dezelfde raket als Falcon 9?",
+          "Nee. Falcon 9 is de booster die al in dienst is. Starship is een groter schip van roestvrij staal op een andere booster, Super Heavy."
+        ],
+        [
+          "Waar staat de lijst met Starship-vluchten?",
+          "Op de Starship-pagina. Dat is een tabel van volledige vluchten, de nieuwste eerst, los van dit nieuwsoverzicht."
+        ],
+        [
+          "Betekent een Starship-lancering een datum voor Mars?",
+          "Nee. Mars is het doel op lange termijn. Een vluchtresultaat gaat over die vlucht."
+        ]
       ]
     },
-    "links_h": {"en": "Start here", "nl": "Begin hier"},
+    "links_h": {
+      "en": "Start here",
+      "nl": "Begin hier"
+    },
     "links": [
-      {"href": "starship/", "en": "All Starship flights", "nl": "Alle Starship-vluchten"},
-      {"href": "why-starship-fires-engines-at-own-booster-hot-staging-explained/", "en": "Why the ship fires into its own booster", "nl": "Waarom het schip in zijn eigen booster vuurt"},
-      {"href": "how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute/", "en": "How a catch works with no wings and no legs", "nl": "Hoe een vangst werkt zonder vleugels en zonder poten"},
-      {"href": "how-much-does-it-cost-to-send-1-kg-into-space-shuttle-falcon-9-starship/", "en": "What a kilogram to orbit has cost", "nl": "Wat een kilo naar een baan heeft gekost"}
+      {
+        "href": "starship/",
+        "en": "All Starship flights",
+        "nl": "Alle Starship-vluchten"
+      },
+      {
+        "href": "why-starship-fires-engines-at-own-booster-hot-staging-explained/",
+        "en": "Why the ship fires into its own booster",
+        "nl": "Waarom het schip in zijn eigen booster vuurt"
+      },
+      {
+        "href": "how-spacex-catches-starship-ship-no-wings-no-legs-no-parachute/",
+        "en": "How a catch works with no wings and no legs",
+        "nl": "Hoe een vangst werkt zonder vleugels en zonder poten"
+      },
+      {
+        "href": "how-much-does-it-cost-to-send-1-kg-into-space-shuttle-falcon-9-starship/",
+        "en": "What a kilogram to orbit has cost",
+        "nl": "Wat een kilo naar een baan heeft gekost"
+      }
     ]
   },
   "starlink": {
@@ -68,7 +117,10 @@
       "en": "Starlink is satellite internet from SpaceX. A dish on the ground talks to satellites in a low orbit, so the link works where a cable was never laid. Homes, ships, aircraft and a campsite use the same idea. The hardware in the box is not the monthly service.",
       "nl": "Starlink is satellietinternet van SpaceX. Een schotel op de grond praat met satellieten in een lage baan, dus de verbinding werkt waar nooit een kabel is gelegd. Thuis, op een schip, in een vliegtuig en op een kampeerplek is het dezelfde gedachte. De hardware in de doos is niet het maandabonnement."
     },
-    "facts_h": {"en": "What the network actually is", "nl": "Wat het netwerk werkelijk is"},
+    "facts_h": {
+      "en": "What the network actually is",
+      "nl": "Wat het netwerk werkelijk is"
+    },
     "facts": {
       "en": [
         "The dish is the ground terminal. It needs a clear view of the sky.",
@@ -95,28 +147,78 @@
         "Starshield komt langs als er een openbaar stuk of een overheidscontract over bestaat. Een gewoon Starlink-verhaal is niet vanzelf een Starshield-verhaal."
       ]
     },
-    "faq_h": {"en": "Questions", "nl": "Vragen"},
+    "faq_h": {
+      "en": "Questions",
+      "nl": "Vragen"
+    },
     "faq": {
       "en": [
-        ["What do I need for Starlink?", "A dish with a view of the sky, power, and a service plan. The dish alone does not include the subscription."],
-        ["Is Starlink the same thing as Starshield?", "No. Starlink is the commercial network. Starshield is for governments. We write about Starshield only when a public record exists."],
-        ["Who puts the satellites up?", "SpaceX, on its own rockets. Falcon 9 does that work today. Starship is the vehicle discussed for the larger satellites."],
-        ["Can I take a dish on a trip?", "The Mini is built to be carried. It still needs open sky, and the service is separate from the kit."]
+        [
+          "What do I need for Starlink?",
+          "A dish with a view of the sky, power, and a service plan. The dish alone does not include the subscription."
+        ],
+        [
+          "Is Starlink the same thing as Starshield?",
+          "No. Starlink is the commercial network. Starshield is for governments. We write about Starshield only when a public record exists."
+        ],
+        [
+          "Who puts the satellites up?",
+          "SpaceX, on its own rockets. Falcon 9 does that work today. Starship is the vehicle discussed for the larger satellites."
+        ],
+        [
+          "Can I take a dish on a trip?",
+          "The Mini is built to be carried. It still needs open sky, and the service is separate from the kit."
+        ]
       ],
       "nl": [
-        ["Wat heb ik nodig voor Starlink?", "Een schotel met zicht op de hemel, stroom, en een abonnement. De schotel alleen is geen abonnement."],
-        ["Is Starlink hetzelfde als Starshield?", "Nee. Starlink is het commerciële netwerk. Starshield is voor overheden. Over Starshield schrijven we alleen als er een openbaar stuk is."],
-        ["Wie brengt de satellieten omhoog?", "SpaceX, met zijn eigen raketten. Falcon 9 doet dat werk nu. Starship is het voertuig waar de grotere satellieten mee worden besproken."],
-        ["Kan ik een schotel meenemen op reis?", "De Mini is gemaakt om mee te nemen. Vrije hemel blijft nodig, en de dienst staat los van de set."]
+        [
+          "Wat heb ik nodig voor Starlink?",
+          "Een schotel met zicht op de hemel, stroom, en een abonnement. De schotel alleen is geen abonnement."
+        ],
+        [
+          "Is Starlink hetzelfde als Starshield?",
+          "Nee. Starlink is het commerciële netwerk. Starshield is voor overheden. Over Starshield schrijven we alleen als er een openbaar stuk is."
+        ],
+        [
+          "Wie brengt de satellieten omhoog?",
+          "SpaceX, met zijn eigen raketten. Falcon 9 doet dat werk nu. Starship is het voertuig waar de grotere satellieten mee worden besproken."
+        ],
+        [
+          "Kan ik een schotel meenemen op reis?",
+          "De Mini is gemaakt om mee te nemen. Vrije hemel blijft nodig, en de dienst staat los van de set."
+        ]
       ]
     },
-    "links_h": {"en": "Start here", "nl": "Begin hier"},
+    "links_h": {
+      "en": "Start here",
+      "nl": "Begin hier"
+    },
     "links": [
-      {"href": "starlink-q3-2026-13-6-million-subscribers-v3-satellites/", "en": "The Q3 2026 subscriber count and V3 satellites", "nl": "Het abonneecijfer van het derde kwartaal 2026 en de V3-satellieten"},
-      {"href": "starlink-10000-satellites-in-orbit-milestone-march-2026/", "en": "The 10,000 satellites on orbit", "nl": "De 10.000 satellieten in een baan"},
-      {"href": "starlink-lowers-4400-satellites-550-to-480-km-space-safety/", "en": "Why thousands of satellites are moving lower", "nl": "Waarom duizenden satellieten lager gaan vliegen"},
-      {"href": "starlink-mini-in-a-tesla-road-trip-guide/", "en": "A Mini dish on a road trip", "nl": "Een Mini-schotel op een rit"},
-      {"href": "spacex/", "en": "The rockets that launch the network", "nl": "De raketten die het netwerk lanceren"}
+      {
+        "href": "starlink-q3-2026-13-6-million-subscribers-v3-satellites/",
+        "en": "The Q3 2026 subscriber count and V3 satellites",
+        "nl": "Het abonneecijfer van het derde kwartaal 2026 en de V3-satellieten"
+      },
+      {
+        "href": "starlink-10000-satellites-in-orbit-milestone-march-2026/",
+        "en": "The 10,000 satellites on orbit",
+        "nl": "De 10.000 satellieten in een baan"
+      },
+      {
+        "href": "starlink-lowers-4400-satellites-550-to-480-km-space-safety/",
+        "en": "Why thousands of satellites are moving lower",
+        "nl": "Waarom duizenden satellieten lager gaan vliegen"
+      },
+      {
+        "href": "starlink-mini-in-a-tesla-road-trip-guide/",
+        "en": "A Mini dish on a road trip",
+        "nl": "Een Mini-schotel op een rit"
+      },
+      {
+        "href": "spacex/",
+        "en": "The rockets that launch the network",
+        "nl": "De raketten die het netwerk lanceren"
+      }
     ]
   },
   "optimus": {
@@ -128,7 +230,10 @@
       "en": "Optimus is Tesla's humanoid robot. The job it is being built for is repetitive work, starting in Tesla's own factories, not a robot you order the way you order a car. Demos, factory lines and supplier audits are the public record. A shop price is not.",
       "nl": "Optimus is de mensvormige robot van Tesla. Hij wordt gebouwd voor herhaalwerk, te beginnen in Tesla's eigen fabrieken, niet als een robot die je bestelt zoals een auto. Demo's, fabriekslijnen en controles bij toeleveranciers zijn wat er openbaar is. Een winkelprijs niet."
     },
-    "facts_h": {"en": "What is on the record", "nl": "Wat vastligt"},
+    "facts_h": {
+      "en": "What is on the record",
+      "nl": "Wat vastligt"
+    },
     "facts": {
       "en": [
         "Optimus is a humanoid: two arms and a body meant to move between tasks, not an arm bolted to one station.",
@@ -155,27 +260,73 @@
         "De verhalen hieronder zijn er voor de generatie, het fabrieksplan en de mensen. Deze pagina blijft het overzicht."
       ]
     },
-    "faq_h": {"en": "Questions", "nl": "Vragen"},
+    "faq_h": {
+      "en": "Questions",
+      "nl": "Vragen"
+    },
     "faq": {
       "en": [
-        ["Can I buy an Optimus?", "Not from a public Tesla order page. What is public is demos, factory plans and supplier work."],
-        ["Is Optimus a factory arm?", "No. A factory arm stays at one station. Optimus is a humanoid body meant to take on more than one task."],
-        ["Is this the same project as Grok?", "No. Grok is a model from SpaceXSI. Optimus is Tesla's robot. A model might one day help a robot. That does not make them one product."],
-        ["Which version are the stories about?", "Gen 3 is the one the recent reporting describes. Older demos are earlier generations."]
+        [
+          "Can I buy an Optimus?",
+          "Not from a public Tesla order page. What is public is demos, factory plans and supplier work."
+        ],
+        [
+          "Is Optimus a factory arm?",
+          "No. A factory arm stays at one station. Optimus is a humanoid body meant to take on more than one task."
+        ],
+        [
+          "Is this the same project as Grok?",
+          "No. Grok is a model from SpaceXSI. Optimus is Tesla's robot. A model might one day help a robot. That does not make them one product."
+        ],
+        [
+          "Which version are the stories about?",
+          "Gen 3 is the one the recent reporting describes. Older demos are earlier generations."
+        ]
       ],
       "nl": [
-        ["Kan ik een Optimus kopen?", "Niet via een openbare bestelpagina van Tesla. Openbaar zijn demo's, fabrieksplannen en werk met toeleveranciers."],
-        ["Is Optimus een fabrieksarm?", "Nee. Een fabrieksarm blijft bij één station. Optimus is een mensvormig lijf dat meer dan één taak moet aankunnen."],
-        ["Is dit hetzelfde project als Grok?", "Nee. Grok is een model van SpaceXSI. Optimus is de robot van Tesla. Een model kan een robot ooit helpen. Dat maakt het niet één product."],
-        ["Over welke versie gaan de verhalen?", "Gen 3 is de versie die de recente stukken beschrijven. Oudere demo's zijn eerdere generaties."]
+        [
+          "Kan ik een Optimus kopen?",
+          "Niet via een openbare bestelpagina van Tesla. Openbaar zijn demo's, fabrieksplannen en werk met toeleveranciers."
+        ],
+        [
+          "Is Optimus een fabrieksarm?",
+          "Nee. Een fabrieksarm blijft bij één station. Optimus is een mensvormig lijf dat meer dan één taak moet aankunnen."
+        ],
+        [
+          "Is dit hetzelfde project als Grok?",
+          "Nee. Grok is een model van SpaceXSI. Optimus is de robot van Tesla. Een model kan een robot ooit helpen. Dat maakt het niet één product."
+        ],
+        [
+          "Over welke versie gaan de verhalen?",
+          "Gen 3 is de versie die de recente stukken beschrijven. Oudere demo's zijn eerdere generaties."
+        ]
       ]
     },
-    "links_h": {"en": "Start here", "nl": "Begin hier"},
+    "links_h": {
+      "en": "Start here",
+      "nl": "Begin hier"
+    },
     "links": [
-      {"href": "optimus-gen-3-what-we-know/", "en": "What is known about Optimus Gen 3", "nl": "Wat er bekend is over Optimus Gen 3"},
-      {"href": "optimus-production-fremont-former-model-s-x-lines/", "en": "Production plans on the old Model S and X lines", "nl": "Productieplannen op de oude lijnen van Model S en X"},
-      {"href": "tesla-audits-chinese-suppliers-optimus-gen-3-tuopu-sanhua-joyson/", "en": "The supplier audits around Gen 3", "nl": "De controles bij toeleveranciers rond Gen 3"},
-      {"href": "tesla/", "en": "The Tesla layer this robot belongs to", "nl": "De Tesla-laag waar deze robot bij hoort"}
+      {
+        "href": "optimus-gen-3-what-we-know/",
+        "en": "What is known about Optimus Gen 3",
+        "nl": "Wat er bekend is over Optimus Gen 3"
+      },
+      {
+        "href": "optimus-production-fremont-former-model-s-x-lines/",
+        "en": "Production plans on the old Model S and X lines",
+        "nl": "Productieplannen op de oude lijnen van Model S en X"
+      },
+      {
+        "href": "tesla-audits-chinese-suppliers-optimus-gen-3-tuopu-sanhua-joyson/",
+        "en": "The supplier audits around Gen 3",
+        "nl": "De controles bij toeleveranciers rond Gen 3"
+      },
+      {
+        "href": "tesla/",
+        "en": "The Tesla layer this robot belongs to",
+        "nl": "De Tesla-laag waar deze robot bij hoort"
+      }
     ]
   },
   "charging-network": {
@@ -187,7 +338,10 @@
       "en": "The Supercharger network is Tesla's public fast-charging grid. A stall is one plug. A site is the place those plugs stand. In a lot of countries other electric cars can use the stalls too. A pin that owners voted for is a request, not a date on a map.",
       "nl": "Het Supercharger-netwerk is Tesla's openbare snellaadnet. Een paal is één stekker. Een locatie is de plek waar die stekkers staan. In veel landen mogen andere elektrische auto's de palen ook gebruiken. Een stip waar rijders voor hebben gestemd is een verzoek, geen datum op de kaart."
     },
-    "facts_h": {"en": "How to read the network", "nl": "Hoe je het netwerk leest"},
+    "facts_h": {
+      "en": "How to read the network",
+      "nl": "Hoe je het netwerk leest"
+    },
     "facts": {
       "en": [
         "The network has passed 85,000 stalls at about 9,000 sites. The count moves as Tesla opens more.",
@@ -214,27 +368,588 @@
         "De stukken onder deze inleiding zijn de openingen, de stemrondes en de rare gevallen, zoals een kabel die niet loslaat. De netwerkpagina is het kader waar ze in staan."
       ]
     },
-    "faq_h": {"en": "Questions", "nl": "Vragen"},
+    "faq_h": {
+      "en": "Questions",
+      "nl": "Vragen"
+    },
     "faq": {
       "en": [
-        ["Can a car that is not a Tesla use a Supercharger?", "Often, in Europe and at many sites elsewhere, if the plug and the payment route match that site. It is not true at every stall."],
-        ["What is the difference between a stall and a site?", "A stall is one charger. A site is the location. One site can hold many stalls."],
-        ["If my town wins a vote, when does the charger open?", "Nobody can say from the vote alone. A win means owners asked. Power, permits and construction come after, and some winners take years."],
-        ["Is home charging part of this network?", "No. Home charging is a connector on a house. The public network is the Supercharger sites."]
+        [
+          "Can a car that is not a Tesla use a Supercharger?",
+          "Often, in Europe and at many sites elsewhere, if the plug and the payment route match that site. It is not true at every stall."
+        ],
+        [
+          "What is the difference between a stall and a site?",
+          "A stall is one charger. A site is the location. One site can hold many stalls."
+        ],
+        [
+          "If my town wins a vote, when does the charger open?",
+          "Nobody can say from the vote alone. A win means owners asked. Power, permits and construction come after, and some winners take years."
+        ],
+        [
+          "Is home charging part of this network?",
+          "No. Home charging is a connector on a house. The public network is the Supercharger sites."
+        ]
       ],
       "nl": [
-        ["Mag een auto die geen Tesla is een Supercharger gebruiken?", "Vaak wel, in Europa en op veel locaties elders, als de stekker en de betaalweg bij die locatie passen. Het geldt niet voor elke paal."],
-        ["Wat is het verschil tussen een paal en een locatie?", "Een paal is één lader. Een locatie is de plek. Eén locatie kan veel palen hebben."],
-        ["Als mijn plaats een stemming wint, wanneer gaat de lader dan open?", "Dat volgt niet uit de stemming alleen. Een zege betekent dat rijders erom vroegen. Stroom, vergunningen en bouw komen daarna, en sommige winnaars doen er jaren over."],
-        ["Hoort thuis laden bij dit netwerk?", "Nee. Thuis laden is een connector aan een huis. Het openbare netwerk zijn de Supercharger-locaties."]
+        [
+          "Mag een auto die geen Tesla is een Supercharger gebruiken?",
+          "Vaak wel, in Europa en op veel locaties elders, als de stekker en de betaalweg bij die locatie passen. Het geldt niet voor elke paal."
+        ],
+        [
+          "Wat is het verschil tussen een paal en een locatie?",
+          "Een paal is één lader. Een locatie is de plek. Eén locatie kan veel palen hebben."
+        ],
+        [
+          "Als mijn plaats een stemming wint, wanneer gaat de lader dan open?",
+          "Dat volgt niet uit de stemming alleen. Een zege betekent dat rijders erom vroegen. Stroom, vergunningen en bouw komen daarna, en sommige winnaars doen er jaren over."
+        ],
+        [
+          "Hoort thuis laden bij dit netwerk?",
+          "Nee. Thuis laden is een connector aan een huis. Het openbare netwerk zijn de Supercharger-locaties."
+        ]
       ]
     },
-    "links_h": {"en": "Start here", "nl": "Begin hier"},
+    "links_h": {
+      "en": "Start here",
+      "nl": "Begin hier"
+    },
     "links": [
-      {"href": "tesla-supercharger-network-85000-stalls-9000-sites/", "en": "How the network passed 85,000 stalls", "nl": "Hoe het netwerk voorbij 85.000 palen kwam"},
-      {"href": "tesla-supercharger-voting-winners-october-2026-36-sites-new-round/", "en": "The 36 sites owners picked in October 2026", "nl": "De 36 plekken die rijders in oktober 2026 kozen"},
-      {"href": "how-to-use-tesla-superchargers-non-tesla-netherlands-belgium/", "en": "Using a Supercharger in the Netherlands or Belgium without a Tesla", "nl": "Een Supercharger gebruiken in Nederland of België zonder Tesla"},
-      {"href": "home-charging/", "en": "Charging at home", "nl": "Thuis laden"}
+      {
+        "href": "tesla-supercharger-network-85000-stalls-9000-sites/",
+        "en": "How the network passed 85,000 stalls",
+        "nl": "Hoe het netwerk voorbij 85.000 palen kwam"
+      },
+      {
+        "href": "tesla-supercharger-voting-winners-october-2026-36-sites-new-round/",
+        "en": "The 36 sites owners picked in October 2026",
+        "nl": "De 36 plekken die rijders in oktober 2026 kozen"
+      },
+      {
+        "href": "how-to-use-tesla-superchargers-non-tesla-netherlands-belgium/",
+        "en": "Using a Supercharger in the Netherlands or Belgium without a Tesla",
+        "nl": "Een Supercharger gebruiken in Nederland of België zonder Tesla"
+      },
+      {
+        "href": "home-charging/",
+        "en": "Charging at home",
+        "nl": "Thuis laden"
+      }
+    ]
+  },
+  "tesla": {
+    "desc": {
+      "en": "Tesla cars, the Semi, Robotaxi, supervised FSD and Optimus.",
+      "nl": "Tesla-auto's, de Semi, Robotaxi, begeleide FSD en Optimus."
+    },
+    "lead": {
+      "en": "Tesla is the cars layer. The passenger cars and the Semi move people and freight. Supervised FSD is the driver assistance in those vehicles. Robotaxi is the ride service built on that assistance. Optimus is the humanoid robot for factory work.",
+      "nl": "Tesla is de autolaag. De personenauto's en de Semi vervoeren mensen en vracht. Begeleide FSD is de rijhulp in die voertuigen. Robotaxi is de ritdienst die op die hulp steunt. Optimus is de humanoïde robot voor werk in de fabriek."
+    },
+    "facts_h": {
+      "en": "What this page covers",
+      "nl": "Wat deze pagina dekt"
+    },
+    "facts": {
+      "en": [
+        "Passenger cars and the Semi are the vehicles. Model pages hold the version-by-version facts.",
+        "FSD on this site means the supervised system. A person in the seat is still responsible.",
+        "Robotaxi is the ride service. It is not the same page as the FSD software notes.",
+        "Optimus is the robot program. It has its own page and is not a car model."
+      ],
+      "nl": [
+        "Personenauto's en de Semi zijn de voertuigen. De modelpagina's houden de feiten per uitvoering bij.",
+        "FSD betekent hier het begeleide systeem. Een persoon op de stoel blijft verantwoordelijk.",
+        "Robotaxi is de ritdienst. Dat is een andere pagina dan de software-notities over FSD.",
+        "Optimus is het robotprogramma. Het heeft een eigen pagina en is geen automodel."
+      ]
+    },
+    "body": {
+      "en": [
+        "Start with the car if you are buying or already own one. The model pages collect the facts for each version. The news underneath this guide is the reporting on factories, prices and rules.",
+        "FSD and Robotaxi share a stack and still answer different questions. FSD is what a driver switches on. Robotaxi is a service that picks people up in specific cities. A story about one is not automatically a story about the other.",
+        "Optimus shows up when Tesla says something about the robot, the factory line, or a supplier. It sits on this layer because Tesla builds it, not because it is a vehicle."
+      ],
+      "nl": [
+        "Begin bij de auto als je er een koopt of er al een hebt. De modelpagina's verzamelen de feiten per uitvoering. Het nieuws onder deze gids is de berichtgeving over fabrieken, prijzen en regels.",
+        "FSD en Robotaxi delen een stapel en beantwoorden toch andere vragen. FSD is wat een bestuurder aanzet. Robotaxi is een dienst die mensen ophaalt in bepaalde steden. Een verhaal over het ene is niet vanzelf een verhaal over het andere.",
+        "Optimus komt langs als Tesla iets zegt over de robot, de productielijn of een leverancier. Hij staat op deze laag omdat Tesla hem bouwt, niet omdat het een voertuig is."
+      ]
+    },
+    "faq_h": {
+      "en": "Questions",
+      "nl": "Vragen"
+    },
+    "faq": {
+      "en": [
+        [
+          "Where do I start on Tesla?",
+          "The model pages for a car you are comparing, then FSD, Robotaxi or Optimus if that is the subject."
+        ],
+        [
+          "Is FSD the same as Robotaxi?",
+          "No. FSD is supervised assistance in a car. Robotaxi is the ride service."
+        ],
+        [
+          "Is Optimus a Tesla car?",
+          "No. Optimus is the humanoid robot. The car line is a different set of pages."
+        ]
+      ],
+      "nl": [
+        [
+          "Waar begin ik bij Tesla?",
+          "De modelpagina's voor een auto die je vergelijkt, en daarna FSD, Robotaxi of Optimus als dat het onderwerp is."
+        ],
+        [
+          "Is FSD hetzelfde als Robotaxi?",
+          "Nee. FSD is begeleide rijhulp in een auto. Robotaxi is de ritdienst."
+        ],
+        [
+          "Is Optimus een Tesla-auto?",
+          "Nee. Optimus is de humanoïde robot. De autolijn is een andere reeks pagina's."
+        ]
+      ]
+    },
+    "links_h": {
+      "en": "Read next",
+      "nl": "Lees verder"
+    },
+    "links": [
+      {
+        "href": "category/models/",
+        "en": "Tesla models",
+        "nl": "Tesla-modellen"
+      },
+      {
+        "href": "fsd/",
+        "en": "Supervised FSD",
+        "nl": "Begeleide FSD"
+      },
+      {
+        "href": "robotaxi/",
+        "en": "Robotaxi",
+        "nl": "Robotaxi"
+      },
+      {
+        "href": "optimus/",
+        "en": "Optimus",
+        "nl": "Optimus"
+      },
+      {
+        "href": "tesla-eu-registrations-rose-83-percent-in-october/",
+        "en": "European registrations in October",
+        "nl": "Europese registraties in oktober"
+      }
+    ]
+  },
+  "tesla-energy": {
+    "desc": {
+      "en": "Megapacks, the charging network, home charging and solar.",
+      "nl": "Megapacks, het laadnetwerk, thuisladen en zonne-energie."
+    },
+    "lead": {
+      "en": "Tesla Energy is the power layer next to the cars. Megapacks store electricity for utilities, factories and data centres. The public charging network and the home chargers put power into the cars. Solar is the generation side of the same business.",
+      "nl": "Tesla Energy is de stroomlaag naast de auto's. Megapacks slaan elektriciteit op voor netbeheerders, fabrieken en datacenters. Het openbare laadnetwerk en de thuisladers brengen stroom naar de auto's. Zonne-energie is de opwekking in hetzelfde bedrijf."
+    },
+    "facts_h": {
+      "en": "What this page covers",
+      "nl": "Wat deze pagina dekt"
+    },
+    "facts": {
+      "en": [
+        "Megapacks are grid batteries. They are not the battery in a car.",
+        "The charging network is the public stalls. Home charging is the wall box and the socket at the house.",
+        "A household socket and a wall connector are different amounts of power. The home-charging page separates them.",
+        "Solar stories here are about Tesla's own panels and factories, not a general solar guide."
+      ],
+      "nl": [
+        "Megapacks zijn netbatterijen. Het is niet de batterij in een auto.",
+        "Het laadnetwerk zijn de openbare stallingen. Thuisladen is de wallbox en het stopcontact thuis.",
+        "Een huishoudstopcontact en een wall connector leveren een andere hoeveelheid vermogen. De thuislaadpagina houdt ze uit elkaar.",
+        "Zonneverhalen hier gaan over Tesla's eigen panelen en fabrieken, niet over een algemene zongids."
+      ]
+    },
+    "body": {
+      "en": [
+        "Read the charging network when the story is a public stall, a vote on a new site, or who is allowed to plug in. Read home charging when the story is a wall connector, a mobile charger, or what a normal socket can do overnight.",
+        "Megapack stories are about sites, factories and orders for the grid or for a data centre. A car's range is a different subject and lives with the model pages.",
+        "Solar sits on this layer because Tesla sells and, in places, wants to make the panels. A one-off roof photo is not enough for a story. The articles below are the ones that name a factory, a product or a filing."
+      ],
+      "nl": [
+        "Lees het laadnetwerk als het verhaal een openbare stalling is, een stemming over een nieuwe plek, of wie mag insteken. Lees thuisladen als het verhaal een wall connector is, een mobiele lader, of wat een gewoon stopcontact 's nachts kan.",
+        "Megapack-verhalen gaan over locaties, fabrieken en orders voor het net of voor een datacenter. De actieradius van een auto is een ander onderwerp en staat bij de modelpagina's.",
+        "Zonne-energie staat op deze laag omdat Tesla de panelen verkoopt en ze op sommige plekken zelf wil maken. Een losse dakfoto is niet genoeg voor een verhaal. De artikelen hieronder noemen een fabriek, een product of een filing."
+      ]
+    },
+    "faq_h": {
+      "en": "Questions",
+      "nl": "Vragen"
+    },
+    "faq": {
+      "en": [
+        [
+          "Is a Megapack the car battery?",
+          "No. A Megapack stores power for a site or the grid. The pack in a car is a different product."
+        ],
+        [
+          "Where do home chargers go?",
+          "On the home-charging page. The public Supercharger map lives with the charging network."
+        ],
+        [
+          "Does this page quote a monthly solar price?",
+          "No. Prices appear on a story only when that story has a figure from a filing or a product page."
+        ]
+      ],
+      "nl": [
+        [
+          "Is een Megapack de autobatterij?",
+          "Nee. Een Megapack slaat stroom op voor een locatie of het net. Het pakket in een auto is een ander product."
+        ],
+        [
+          "Waar staan de thuisladers?",
+          "Op de thuislaadpagina. De openbare Superchargers staan bij het laadnetwerk."
+        ],
+        [
+          "Noemt deze pagina een maandprijs voor zonnepanelen?",
+          "Nee. Een prijs staat alleen in een verhaal als dat verhaal een cijfer uit een filing of een productpagina heeft."
+        ]
+      ]
+    },
+    "links_h": {
+      "en": "Read next",
+      "nl": "Lees verder"
+    },
+    "links": [
+      {
+        "href": "charging-network/",
+        "en": "The public charging network",
+        "nl": "Het openbare laadnetwerk"
+      },
+      {
+        "href": "home-charging/",
+        "en": "Charging at home",
+        "nl": "Thuis laden"
+      },
+      {
+        "href": "a-household-socket-supplies-a-tesla-about-1300-watts/",
+        "en": "What a household socket supplies",
+        "nl": "Wat een huishoudstopcontact levert"
+      },
+      {
+        "href": "tesla-universal-wall-connector-also-charges-other-cars/",
+        "en": "The universal wall connector",
+        "nl": "De universele wall connector"
+      },
+      {
+        "href": "tesla-wants-to-make-solar-silicon-in-texas/",
+        "en": "Solar silicon in Texas",
+        "nl": "Zonnesilicium in Texas"
+      }
+    ]
+  },
+  "spacexsi": {
+    "desc": {
+      "en": "Grok, the compute, the datacenters and the chips behind SpaceXSI.",
+      "nl": "Grok, de rekenkracht, de datacenters en de chips achter SpaceXSI."
+    },
+    "lead": {
+      "en": "SpaceXSI is the AI layer, formerly xAI and then SpaceXAI. It covers the models, including Grok, the clusters that train them, the datacenters that house that compute, and the chips meant to build more of it.",
+      "nl": "SpaceXSI is de AI-laag, eerder xAI en daarna SpaceXAI. Het dekt de modellen, waaronder Grok, de clusters die ze trainen, de datacenters die die rekenkracht huisvesten, en de chips die bedoeld zijn om er meer van te bouwen."
+    },
+    "facts_h": {
+      "en": "What this page covers",
+      "nl": "Wat deze pagina dekt"
+    },
+    "facts": {
+      "en": [
+        "Grok is the model. Cursor is the coding tool. They are not the same product.",
+        "Compute is the clusters and the power they draw. A datacenter is the building.",
+        "Chips, including the Terafab plan and the AI5 design, are how more of that compute would be made.",
+        "The same models are what Tesla is building into supervised FSD and into Optimus. The car stories stay on the Tesla layer."
+      ],
+      "nl": [
+        "Grok is het model. Cursor is het programmeergereedschap. Het zijn niet hetzelfde product.",
+        "Rekenkracht zijn de clusters en de stroom die ze trekken. Een datacenter is het gebouw.",
+        "Chips, inclusief het Terafab-plan en het AI5-ontwerp, zijn hoe er meer van die rekenkracht gemaakt zou worden.",
+        "Dezelfde modellen bouwt Tesla in begeleide FSD en in Optimus. De autoverhalen blijven op de Tesla-laag."
+      ]
+    },
+    "body": {
+      "en": [
+        "A model release, a Grok change, or a Cursor release belongs on the AI page. A story about how many GPUs are in a building belongs on compute or on datacenters, depending on whether the news is the machines or the site.",
+        "Chip stories name a design or a plant. Tesla taping out AI5 is a chip story. Shutting down the Dojo training computer is a chip story. A car price change is not.",
+        "SpaceXSI is a separate company from Tesla. When the two do business, the article says so. A Tesla car story does not move onto this layer just because the car has a voice assistant."
+      ],
+      "nl": [
+        "Een modelrelease, een wijziging aan Grok of een Cursor-release hoort op de AI-pagina. Een verhaal over hoeveel GPU's er in een gebouw staan hoort bij rekenkracht of bij datacenters, afhankelijk van of het nieuws de machines of de locatie is.",
+        "Chipverhalen noemen een ontwerp of een fabriek. Tesla die AI5 tapet is een chipverhaal. Het uitzetten van de Dojo-trainingscomputer is een chipverhaal. Een prijswijziging van een auto is dat niet.",
+        "SpaceXSI is een ander bedrijf dan Tesla. Als de twee zaken doen, zegt het artikel dat. Een Tesla-autoverhaal verhuist niet naar deze laag alleen omdat de auto een stemassistent heeft."
+      ]
+    },
+    "faq_h": {
+      "en": "Questions",
+      "nl": "Vragen"
+    },
+    "faq": {
+      "en": [
+        [
+          "What is SpaceXSI?",
+          "The AI company in this ecosystem. It was xAI, then SpaceXAI. Grok is its model."
+        ],
+        [
+          "Where do chip stories go?",
+          "On the chips page. Datacenter buildings have their own page."
+        ],
+        [
+          "Is Grok part of the car?",
+          "Grok can show up in a Tesla. The model itself is a SpaceXSI product, and the car pages stay with Tesla."
+        ]
+      ],
+      "nl": [
+        [
+          "Wat is SpaceXSI?",
+          "Het AI-bedrijf in dit ecosysteem. Het was xAI, daarna SpaceXAI. Grok is het model."
+        ],
+        [
+          "Waar komen chipverhalen?",
+          "Op de chippagina. Datacentergebouwen hebben een eigen pagina."
+        ],
+        [
+          "Hoort Grok bij de auto?",
+          "Grok kan in een Tesla opduiken. Het model zelf is een product van SpaceXSI, en de autopagina's blijven bij Tesla."
+        ]
+      ]
+    },
+    "links_h": {
+      "en": "Read next",
+      "nl": "Lees verder"
+    },
+    "links": [
+      {
+        "href": "ai/",
+        "en": "AI news",
+        "nl": "AI-nieuws"
+      },
+      {
+        "href": "ai-compute/",
+        "en": "Compute",
+        "nl": "Rekenkracht"
+      },
+      {
+        "href": "datacenters/",
+        "en": "Datacenters",
+        "nl": "Datacenters"
+      },
+      {
+        "href": "chips/",
+        "en": "Chips",
+        "nl": "Chips"
+      },
+      {
+        "href": "tesla-taped-out-the-ai5-chip-design/",
+        "en": "The AI5 chip design",
+        "nl": "Het AI5-chipontwerp"
+      }
+    ]
+  },
+  "neuralink": {
+    "desc": {
+      "en": "Neuralink's implants and the trials that test them.",
+      "nl": "De implantaten van Neuralink en de proeven die ze testen."
+    },
+    "lead": {
+      "en": "Neuralink builds brain-computer interfaces. An implant can move a cursor. Separate studies look at speech and at sight. It is its own company, beside the cars and the rockets rather than inside them.",
+      "nl": "Neuralink bouwt brein-computerinterfaces. Een implantaat kan een cursor bewegen. Aparte studies kijken naar spraak en naar zicht. Het is een eigen bedrijf, naast de auto's en de raketten en niet erin."
+    },
+    "facts_h": {
+      "en": "What this page covers",
+      "nl": "Wat deze pagina dekt"
+    },
+    "facts": {
+      "en": [
+        "The implant is the device. A trial is the study that tests it in people.",
+        "A cursor, speech and sight are different studies. One approval does not cover the others.",
+        "Participant counts appear only when Neuralink or a regulator publishes them.",
+        "Neuralink is not a Tesla product and not a SpaceX product."
+      ],
+      "nl": [
+        "Het implantaat is het apparaat. Een trial is de studie die het bij mensen test.",
+        "Een cursor, spraak en zicht zijn verschillende studies. Eén goedkeuring dekt de andere niet.",
+        "Aantallen deelnemers staan er alleen als Neuralink of een toezichthouder ze publiceert.",
+        "Neuralink is geen Tesla-product en geen SpaceX-product."
+      ]
+    },
+    "body": {
+      "en": [
+        "Read a Neuralink story for the study it names. An FDA step for one trial is not a clearance for every use of the implant. The articles under this guide say which study the document belongs to.",
+        "Demos, including a participant playing a game, are reported as what that person did with the device. They are not a measure of how the trial will end.",
+        "The company sits on its own layer of the map. A Tesla or SpaceX story does not become a Neuralink story because the same person is involved."
+      ],
+      "nl": [
+        "Lees een Neuralink-verhaal voor de studie die het noemt. Een FDA-stap voor één trial is geen toestemming voor elk gebruik van het implantaat. De artikelen onder deze gids zeggen bij welke studie het stuk hoort.",
+        "Demo's, ook een deelnemer die een spel speelt, worden gebracht als wat die persoon met het apparaat deed. Ze zijn geen maat voor hoe de trial afloopt.",
+        "Het bedrijf staat op een eigen laag van de kaart. Een Tesla- of SpaceX-verhaal wordt geen Neuralink-verhaal omdat dezelfde persoon erbij betrokken is."
+      ]
+    },
+    "faq_h": {
+      "en": "Questions",
+      "nl": "Vragen"
+    },
+    "faq": {
+      "en": [
+        [
+          "What does Neuralink make?",
+          "A brain-computer implant, tested in studies. Moving a cursor, speech and sight are not one study."
+        ],
+        [
+          "Is this a Tesla project?",
+          "No. Neuralink is a separate company."
+        ],
+        [
+          "Where are the participant numbers?",
+          "In the articles, and only when a published figure exists. This page does not invent a count."
+        ]
+      ],
+      "nl": [
+        [
+          "Wat maakt Neuralink?",
+          "Een brein-computerimplantaat, getest in studies. Een cursor bewegen, spraak en zicht zijn niet één studie."
+        ],
+        [
+          "Is dit een Tesla-project?",
+          "Nee. Neuralink is een apart bedrijf."
+        ],
+        [
+          "Waar staan de deelnemersaantallen?",
+          "In de artikelen, en alleen als er een gepubliceerd cijfer is. Deze pagina verzint geen aantal."
+        ]
+      ]
+    },
+    "links_h": {
+      "en": "Read next",
+      "nl": "Lees verder"
+    },
+    "links": [
+      {
+        "href": "neuralink-gets-fda-approval-for-pivotal-als-trial/",
+        "en": "The FDA step for the ALS trial",
+        "nl": "De FDA-stap voor de ALS-trial"
+      },
+      {
+        "href": "neuralink-enrolled-21-people-in-its-trials/",
+        "en": "The published enrolment figure",
+        "nl": "Het gepubliceerde deelnemerscijfer"
+      },
+      {
+        "href": "neuralink-participant-plays-gta-vi-with-his-mind/",
+        "en": "A participant playing a game",
+        "nl": "Een deelnemer die een spel speelt"
+      },
+      {
+        "href": "brain-interfaces/",
+        "en": "Brain-computer interfaces",
+        "nl": "Brein-computerinterfaces"
+      }
+    ]
+  },
+  "boring": {
+    "desc": {
+      "en": "Tunnels and Loop projects from The Boring Company.",
+      "nl": "Tunnels en Loop-projecten van The Boring Company."
+    },
+    "lead": {
+      "en": "The Boring Company digs car tunnels and runs Loop transit through them, often with Tesla vehicles. It is a separate company. The public projects named on this site include Vegas, Nashville, Dubai and the tunnel at Gigafactory Texas.",
+      "nl": "The Boring Company graaft autotunnels en laat er Loop-vervoer door rijden, vaak met Tesla-voertuigen. Het is een apart bedrijf. De openbare projecten die deze site noemt zijn Vegas, Nashville, Dubai en de tunnel bij Gigafactory Texas."
+    },
+    "facts_h": {
+      "en": "What this page covers",
+      "nl": "Wat deze pagina dekt"
+    },
+    "facts": {
+      "en": [
+        "A Loop is the transit system in the tunnel. The tunnel is the hole. They are not interchangeable words in a story.",
+        "Passenger counts are used only when the company or a local authority publishes them.",
+        "Vegas is the operating system people can ride. Other cities are projects, and a plan is not an opening.",
+        "The company is not Tesla. Tesla cars may be the vehicles inside the tunnel."
+      ],
+      "nl": [
+        "Een Loop is het vervoer in de tunnel. De tunnel is het gat. In een verhaal zijn dat geen inwisselbare woorden.",
+        "Reizigersaantallen worden alleen gebruikt als het bedrijf of een lokale overheid ze publiceert.",
+        "Vegas is het systeem waar mensen kunnen meerijden. Andere steden zijn projecten, en een plan is geen opening.",
+        "Het bedrijf is niet Tesla. Tesla-auto's kunnen de voertuigen in de tunnel zijn."
+      ]
+    },
+    "body": {
+      "en": [
+        "The useful split is operating versus proposed. A station approval in Clark County is a vote. A ride that already runs in Vegas is a service. The articles say which one they are.",
+        "Safety and permit stories, including hearings in Nevada, stay attached to the project they name. A fine or a wastewater case is about that case, not a verdict on every tunnel.",
+        "Figures for cost, speed and ridership go in a story when a filing or the company states them. This page does not keep a live counter."
+      ],
+      "nl": [
+        "De nuttige scheiding is in bedrijf versus voorgesteld. Een stationsgoedkeuring in Clark County is een stemming. Een rit die in Vegas al rijdt is een dienst. De artikelen zeggen welke van de twee het is.",
+        "Veiligheids- en vergunningsverhalen, ook hoorzittingen in Nevada, blijven bij het project dat ze noemen. Een boete of een afvalwaterzaak gaat over die zaak, niet over een oordeel over elke tunnel.",
+        "Cijfers over kosten, snelheid en reizigers komen in een verhaal als een filing of het bedrijf ze noemt. Deze pagina houdt geen live teller bij."
+      ]
+    },
+    "faq_h": {
+      "en": "Questions",
+      "nl": "Vragen"
+    },
+    "faq": {
+      "en": [
+        [
+          "What is a Loop?",
+          "The transit service that runs through a Boring Company tunnel, often in Tesla vehicles."
+        ],
+        [
+          "Is Vegas the only project?",
+          "Vegas is the one people ride. Nashville, Dubai and the Gigafactory Texas tunnel are the other public projects this site follows."
+        ],
+        [
+          "Where do ridership numbers come from?",
+          "From the company or a local authority, inside the article that cites them. This page does not add its own."
+        ]
+      ],
+      "nl": [
+        [
+          "Wat is een Loop?",
+          "De vervoersdienst die door een tunnel van The Boring Company rijdt, vaak in Tesla-voertuigen."
+        ],
+        [
+          "Is Vegas het enige project?",
+          "Vegas is het project waar mensen meerijden. Nashville, Dubai en de tunnel bij Gigafactory Texas zijn de andere openbare projecten die deze site volgt."
+        ],
+        [
+          "Waar komen reizigerscijfers vandaan?",
+          "Van het bedrijf of een lokale overheid, in het artikel dat ze noemt. Deze pagina voegt er geen eigen cijfers aan toe."
+        ]
+      ]
+    },
+    "links_h": {
+      "en": "Read next",
+      "nl": "Lees verder"
+    },
+    "links": [
+      {
+        "href": "vegas-loop-conexpo-2026-82000-passengers-prufrock-2-record-tunnel/",
+        "en": "The published Vegas passenger figure",
+        "nl": "Het gepubliceerde reizigerscijfer van Vegas"
+      },
+      {
+        "href": "vegas-loop-clark-county-approves-19-stations-123-total/",
+        "en": "The Clark County station vote",
+        "nl": "De stationsstemming in Clark County"
+      },
+      {
+        "href": "boring-company-vegas-loop-numbers-cost-per-mile-digging-speed-ridership/",
+        "en": "Cost, digging speed and ridership",
+        "nl": "Kosten, graafsnelheid en reizigers"
+      },
+      {
+        "href": "vegas-loop-nevada-lawmakers-safety-osha-wastewater-fines-hearing/",
+        "en": "The Nevada safety hearing",
+        "nl": "De veiligheidszitting in Nevada"
+      }
     ]
   }
 }

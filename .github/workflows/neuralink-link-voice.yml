@@ -1,0 +1,41 @@
+name: LINK pivotal trial Short preview voice
+
+# Renders only the Noah narration and commits the audio back to this branch.
+# It never uploads to YouTube, never calls Buffer, and does not touch main.
+on:
+  push:
+    branches: [cursor/neuralink-fda-link-short-fc71]
+    paths:
+      - .github/workflows/neuralink-link-voice.yml
+      - video/neuralink-link/script.json
+      - video/neuralink-link/noah_voice.py
+
+permissions:
+  contents: write
+
+concurrency:
+  group: neuralink-link-voice
+  cancel-in-progress: false
+
+jobs:
+  voice:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+      - name: Render Noah narration
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        run: python3 video/neuralink-link/noah_voice.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: neuralink-link-voice
+          path: video/neuralink-link/out/
+          retention-days: 14
+      - name: Commit the audio to this branch
+        run: |
+          git config user.name "TrendingTesla bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f video/neuralink-link/out
+          git commit -qm "LINK pivotal trial Short preview: Noah narration" || exit 0
+          git push -q origin HEAD:cursor/neuralink-fda-link-short-fc71

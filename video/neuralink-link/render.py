@@ -32,28 +32,31 @@ LINES = ("s1", "s2", "s3", "s4", "s5", "s6", "s7", "s8", "s9")
 # crop is x, y, w, h on the 1920x1080 montage. w/h is 9:16.
 # avail is the clean source window. stretch is how far that window may be slowed.
 SHOTS = [
-    {"id": "open", "line": "s1", "kind": "video", "file": "announce.mp4", "ss": 0.42, "avail": 1.26,
-     "stretch": 2.45, "hook": True, "fx": "hold", "zoom": (1.08, 1.20), "crop": (656, 0, 608, 1080),
+    {"id": "open", "line": "s1", "kind": "video", "file": "announce.mp4", "ss": 1.08, "avail": 0.60,
+     "stretch": 3.8, "hook": True, "fx": "hold", "zoom": (1.02, 1.12), "crop": (656, 0, 608, 1080),
      "shows": "N1 implant, Neuralink announcement montage, turning on a clean field. Hook."},
+    {"id": "person", "line": "s1", "kind": "video", "file": "announce.mp4", "ss": 2.20, "avail": 1.60,
+     "stretch": 1.35, "fx": "hold", "zoom": (1.00, 1.06), "crop": (1100, 0, 608, 1080),
+     "shows": "A trial participant in a chair, from the same montage, as the trial is named."},
     {"id": "date", "line": "s2", "kind": "graphic", "graphic": "date",
      "shows": "November 25, the day Neuralink announced the FDA approval."},
-    {"id": "person", "line": "s3", "kind": "video", "file": "announce.mp4", "ss": 2.15, "avail": 1.65,
-     "stretch": 1.35, "fx": "hold", "zoom": (1.00, 1.06), "crop": (1100, 0, 608, 1080),
-     "shows": "A trial participant in a chair beside the computer he is using."},
-    {"id": "screen", "line": "s3", "kind": "video", "file": "announce.mp4", "ss": 5.28, "avail": 1.60,
-     "stretch": 1.35, "fx": "hold", "zoom": (1.02, 1.08), "crop": (700, 0, 608, 1080),
-     "shows": "The laptop screen from the same montage, a map he is moving through."},
-    {"id": "wheel", "line": "s4", "kind": "video", "file": "announce.mp4", "ss": 19.85, "avail": 1.40,
-     "stretch": 1.40, "fx": "hold", "zoom": (1.00, 1.05), "crop": (340, 0, 608, 1080),
+    {"id": "screen", "line": "s3", "kind": "video", "file": "announce.mp4", "ss": 5.28, "avail": 1.55,
+     "stretch": 1.45, "fx": "hold", "zoom": (1.02, 1.08), "crop": (700, 0, 608, 1080),
+     "shows": "Laptop from the montage, a map on screen. Neuralink's investigational-device line sits at the bottom."},
+    {"id": "chess", "line": "s3", "kind": "video", "file": "announce.mp4", "ss": 27.85, "avail": 1.45,
+     "stretch": 1.60, "fx": "hold", "zoom": (1.00, 1.05), "crop": (40, 0, 608, 1080),
+     "shows": "Chess on a laptop in the montage. The board is the picture, not the camera rig beside it."},
+    {"id": "wheel", "line": "s4", "kind": "video", "file": "announce.mp4", "ss": 19.90, "avail": 1.35,
+     "stretch": 1.50, "fx": "hold", "zoom": (1.00, 1.05), "crop": (340, 0, 608, 1080),
      "shows": "A participant in a powered wheelchair, at home, from the montage."},
-    {"id": "home", "line": "s4", "kind": "video", "file": "announce.mp4", "ss": 32.90, "avail": 1.55,
-     "stretch": 1.35, "fx": "hold", "zoom": (1.00, 1.05), "crop": (160, 0, 608, 1080),
+    {"id": "home", "line": "s4", "kind": "video", "file": "announce.mp4", "ss": 33.20, "avail": 1.30,
+     "stretch": 1.50, "fx": "hold", "zoom": (1.00, 1.05), "crop": (280, 0, 608, 1080),
      "shows": "A participant at home with a handheld, from the same montage."},
-    {"id": "cursor", "line": "s5", "kind": "video", "file": "announce.mp4", "ss": 21.55, "avail": 2.15,
-     "stretch": 1.25, "fx": "hold", "zoom": (1.00, 1.06), "crop": (500, 0, 608, 1080),
+    {"id": "cursor", "line": "s5", "kind": "video", "file": "announce.mp4", "ss": 21.55, "avail": 2.10,
+     "stretch": 1.30, "fx": "hold", "zoom": (1.00, 1.06), "crop": (500, 0, 608, 1080),
      "shows": "Cursor task on a laptop: target blocks and a moving dot."},
-    {"id": "apps", "line": "s5", "kind": "video", "file": "announce.mp4", "ss": 35.55, "avail": 2.30,
-     "stretch": 1.25, "fx": "hold", "zoom": (1.00, 1.06), "crop": (640, 0, 608, 1080),
+    {"id": "apps", "line": "s5", "kind": "video", "file": "announce.mp4", "ss": 35.60, "avail": 2.20,
+     "stretch": 1.30, "fx": "hold", "zoom": (1.00, 1.06), "crop": (640, 0, 608, 1080),
      "shows": "A handheld game in the montage, with the on-screen cursor arrow."},
     {"id": "thirty", "line": "s6", "kind": "graphic", "graphic": "thirty",
      "shows": "More than 30 people already implanted."},
@@ -61,8 +64,8 @@ SHOTS = [
      "shows": "Enrollment is open. Taking part costs nothing."},
     {"id": "travel", "line": "s8", "kind": "graphic", "graphic": "travel",
      "shows": "Travel and lodging for study visits are supported."},
-    {"id": "close", "line": "s9", "kind": "video", "file": "announce.mp4", "ss": 0.55, "avail": 1.10,
-     "stretch": 2.2, "fx": "hold", "zoom": (1.12, 1.22), "crop": (656, 0, 608, 1080),
+    {"id": "close", "line": "s9", "kind": "video", "file": "announce.mp4", "ss": 1.12, "avail": 0.56,
+     "stretch": 3.8, "fx": "hold", "zoom": (1.08, 1.16), "crop": (656, 0, 608, 1080),
      "shows": "The N1 again, tighter, under the line that this is not market approval."},
 ]
 
@@ -425,9 +428,10 @@ def timeline_of():
         s = by_id[key]
         length = dur(HERE / "out" / f"{s['id']}.mp3")
         timeline.append({**s, "t0": t, "length": length})
-        t += length + (0.0 if i == 0 else 0.08)
-    total = timeline[-1]["t0"] + timeline[-1]["length"]
-    return timeline, total
+        t += length
+        if i < len(LINES) - 1:
+            t += 0.08
+    return timeline, t
 
 
 def fit_duration(timeline):
@@ -446,12 +450,12 @@ def fit_duration(timeline):
         else:
             weights = []
             for s in shots:
-                weights.append(s["avail"] if s["kind"] == "video" else 2.2)
+                weights.append(s["avail"] * s["stretch"] if s["kind"] == "video" else 2.4)
             scale = need / sum(weights)
             for s, w in zip(shots, weights):
                 s["dur"] = w * scale
     for s in SHOTS:
-        if s["dur"] > 3.0 + 0.02:
+        if s["dur"] > 3.15:
             raise SystemExit(f"{s['id']} is {s['dur']:.2f}s")
         if s["dur"] < 1.05:
             raise SystemExit(f"{s['id']} is only {s['dur']:.2f}s")
@@ -459,7 +463,7 @@ def fit_duration(timeline):
             cap = s["avail"] * s["stretch"]
             if s["dur"] > cap + 0.02:
                 raise SystemExit(f"{s['id']} needs {s['dur']:.2f}s but source allows {cap:.2f}s")
-            s["src_dur"] = min(s["avail"], max(0.4, s["dur"] / s["stretch"]))
+            s["src_dur"] = min(s["avail"], s["dur"])
     got = sum(s["dur"] for s in SHOTS)
     total = timeline[-1]["t0"] + timeline[-1]["length"]
     delta = total - got

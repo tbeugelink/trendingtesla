@@ -1,0 +1,86 @@
+{
+  "slug": "spacex-pledges-one-share-per-active-trump-account",
+  "date": "2026-11-25",
+  "time": "21:27",
+  "category": "spacex",
+  "also": [
+    "musk"
+  ],
+  "layer": "spacex",
+  "topic": "spacex",
+  "card": {
+    "en": "SpaceX pledges one share per active Trump Account",
+    "nl": "SpaceX belooft elk actief Trump Account één aandeel"
+  },
+  "image": "topics/spacex-7.jpg",
+  "image_lock": true,
+  "images": [
+    "topics/spacex-7.jpg",
+    "topics/spacex-8.jpg",
+    "topics/spacex-2.jpg",
+    "topics/spacex-4.jpg",
+    "lib/starship-launch.jpg",
+    "lib/starship-pad.jpg"
+  ],
+  "sources": [
+    {
+      "title": "SpaceX — SpaceX to Invest in the Next Generation of Americans",
+      "url": "https://ir.spacex.com/updates/releases-details/2026/SpaceX-to-Invest-in-the-Next-Generation-of-Americans-2026-r_LYQ5cH94/default.aspx"
+    },
+    {
+      "title": "CNBC — SpaceX, Musk pledge to donate a share each to active Trump Accounts",
+      "url": "https://www.cnbc.com/2026/11/25/spacex-musk-trump-account-stock.html"
+    },
+    {
+      "title": "Bloomberg Law — SpaceX to Donate One Share to Every Trump Account",
+      "url": "https://news.bloomberglaw.com/capital-markets/spacex-to-donate-one-share-to-every-trump-account"
+    },
+    {
+      "title": "Investing.com — SpaceX to contribute one Class A share to every Trump Account",
+      "url": "https://www.investing.com/news/stock-market-news/spacex-to-contribute-one-class-a-share-to-every-trump-account-5051378"
+    }
+  ],
+  "label": {
+    "style": "n",
+    "en": {
+      "sub": "PER ACCOUNT",
+      "text": "1 SHARE"
+    },
+    "nl": {
+      "sub": "PER REKENING",
+      "text": "1 AANDEEL"
+    }
+  },
+  "gen_image": {
+    "prompt": "An illustration of a full Starship stack, stainless ship on a Super Heavy booster, standing beside its launch tower at dawn, steam low around the mount, the stack large and sharp in the horizontal centre, calm open ground in the lower-left third, no people, no logos, no readable text, no flags, not a scene of a share transfer or a press conference",
+    "subject": "a Starship stack, the same stainless ship on a Super Heavy booster beside a launch tower as the reference",
+    "refs": [
+      {
+        "src": "lib/starship-pad.jpg"
+      }
+    ],
+    "profile": "editorial",
+    "category": "A",
+    "describe": "A Starship stack beside its launch tower at dawn, with steam low around the mount",
+    "extra": [
+      {
+        "prompt": "The same Starship stack on its launch mount at blue hour, the tower beside it, a thin layer of steam at the base, no people, no logos, no readable text, calm dark ground in the lower left",
+        "describe": "The same Starship stack on its mount at blue hour, tower beside it"
+      },
+      {
+        "prompt": "The same Starship stack seen from the side at sunrise, the launch tower to one side, steam drifting along the ground, no people, no logos, no readable text, open ground in the lower left",
+        "describe": "The same Starship stack from the side at sunrise, steam along the ground"
+      }
+    ]
+  },
+  "en": {
+    "title": "SpaceX pledges one share per active Trump Account",
+    "description": "On 25 November 2026 SpaceX said it will contribute one newly issued Class A share to every currently active Trump Account. The company says Elon Musk will match that number of shares, and Gwynne Shotwell has announced a separate personal gift of more than 2 million shares.",
+    "body": "<p>SpaceX said on 25 November 2026 that it will contribute one newly issued share of its Class A common stock to every currently active Trump Account, and that chief executive Elon Musk will personally match the number of shares the company donates. The accounts are tax-advantaged investment accounts meant to help American children build long-term savings. SpaceX calls the contribution a commitment. The reports do not describe those shares as already sitting in the accounts.</p>\n<h2>What share is SpaceX contributing?</h2>\n<p><strong>One newly issued Class A common share for each currently active Trump Account.</strong> The company said that in its release. Bloomberg Law and Investing.com describe the same share: newly issued, Class A common stock, and only for accounts that are already active. CNBC reported the gift as one share of the company's Class A stock for every active Trump Account. A newly issued share is a share the company creates for this contribution. These reports do not describe SpaceX buying a share in the market and handing that one over. The commitment is one share per account. It is not a cash deposit, and it is not a promise of a stated dollar amount.</p>\n<p>The announcement fixes the gift at one share. It does not say how many accounts qualify.</p>\n<h2>So who matches the company's shares?</h2>\n<p><strong>SpaceX says Elon Musk will personally match the number of shares the company donates.</strong> The company ties that match to his pledge to donate one SpaceX share to every child in America. Investing.com reported the same match, as the company carrying out that pledge. Bloomberg Law reported that he will personally match the number of shares SpaceX donates. CNBC reported that he would match the gift. A match, in those words, is one personal share for each share the company contributes. The reports do not describe that personal share as a transfer that has already cleared. The company's own contribution remains the commitment announced on 25 November 2026.</p>\n<p>That match is one personal commitment in the announcement. It is not the only one.</p>\n<h2>What did Gwynne Shotwell announce?</h2>\n<p><strong>A separate personal gift of more than 2 million SpaceX shares.</strong> She is president and chief operating officer. SpaceX said she has separately announced that gift. Investing.com reported the same announcement, a separate personal gift of more than 2 million shares. Bloomberg Law reported that she separately plans a personal gift of more than 2 million SpaceX shares. CNBC reported that she agreed to a personal gift of over 2 million SpaceX shares. The company's plan is one share for each active account. Shotwell's figure is a single personal amount, and the company presents it as separate from that plan.</p>\n<p>A stated personal gift is still not a report that those shares have moved.</p>\n<h2>Why does SpaceX say it is doing this?</h2>\n<p><strong>The company says ownership should reach the next generation of Americans.</strong> The release, which CNBC also quoted, puts the reason in the company's own words: \"SpaceX is building the infrastructure of the future and working to make life multiplanetary. We believe ownership of the company creating these systems should extend to the next generation of Americans for their long-term benefit.\" The sentence names who SpaceX says should hold a stake. It does not name a day on which an account receives a share.</p>\n<p>A reason is not a timetable, and it is not a count of accounts.</p>\n<h2>What is a Trump Account in these reports?</h2>\n<p><strong>A tax-advantaged investment account for an American child, meant for long-term savings.</strong> That is the description in the SpaceX release. Bloomberg Law calls the accounts tax-advantaged investment accounts for American children. Investing.com uses the same description, accounts meant to help those children build long-term savings. The company's contribution names accounts that are currently active. Musk's pledge, as SpaceX describes it, is the wider line: one SpaceX share for every child in America. The contribution the company announced is narrower. It is one newly issued Class A share for each currently active Trump Account, not a share for every child and not a share for an account these reports do not call active.</p>\n<p>The number of active accounts is not a figure these reports share.</p>\n<h2>So has any share actually moved?</h2>\n<p><strong>The reports describe a commitment and a plan, not a transfer they say is complete.</strong> SpaceX announced a commitment to contribute the shares. Investing.com used that same word, commitment. Bloomberg Law said the company plans to contribute them. CNBC said SpaceX will donate one Class A share to every active Trump Account, and that Musk would match the gift. None of those accounts says the shares are already in the accounts. Class A is the share class named in the commitment. Background on that class of share is in <a href=\"/spacex-ipo-recap-what-it-means-for-tesla-shareholders/\">the recap of SpaceX's stock listing</a>. Talks about combining the company with Tesla are a different process, in <a href=\"/five-directors-are-negotiating-the-tesla-spacex-merger/\">the report on the five directors negotiating that merger</a>.</p>\n<p>What SpaceX did announce on 25 November 2026 is specific. One newly issued Class A share for each currently active Trump Account, a personal match of that number by Elon Musk, and a separate personal gift from Gwynne Shotwell of more than 2 million SpaceX shares.</p>\n<p><em>This article is for information only and is not financial advice.</em></p>"
+  },
+  "nl": {
+    "title": "SpaceX belooft elk actief Trump Account één aandeel",
+    "description": "Op 25 november 2026 zei SpaceX dat het één nieuw uitgegeven Class A-aandeel bijdraagt aan elk Trump Account dat nu actief is. Het bedrijf zegt dat Elon Musk evenveel aandelen persoonlijk toevoegt, en Gwynne Shotwell kondigde apart een persoonlijk geschenk van meer dan 2 miljoen aandelen aan.",
+    "body": "<p>SpaceX zei op 25 november 2026 dat het aan elk Trump Account dat nu actief is één nieuw uitgegeven aandeel in zijn gewone Class A-aandelen bijdraagt, en dat CEO Elon Musk persoonlijk evenveel aandelen geeft als het bedrijf doneert. De rekeningen zijn beleggingsrekeningen met een belastingvoordeel, bedoeld zodat Amerikaanse kinderen op lange termijn kunnen sparen. Het bedrijf noemt de bijdrage een toezegging. In de berichten staan die aandelen niet als al bijgeschreven.</p>\n<h2>Welk aandeel draagt SpaceX bij?</h2>\n<p><strong>Eén nieuw uitgegeven gewoon Class A-aandeel voor elk Trump Account dat nu actief is.</strong> Dat staat in het bericht van het bedrijf. Bloomberg Law en Investing.com beschrijven hetzelfde aandeel: nieuw uitgegeven, gewoon Class A-aandelenkapitaal, en alleen voor rekeningen die al actief zijn. CNBC meldde het geschenk als één Class A-aandeel van het bedrijf voor elk actief Trump Account. Een nieuw uitgegeven aandeel is een aandeel dat het bedrijf voor deze bijdrage creëert. Deze berichten beschrijven niet dat SpaceX een aandeel op de beurs koopt en dat ene stuk doorgeeft. De toezegging is één aandeel per rekening. Het is geen storting in contanten, en het is geen belofte van een vast bedrag in dollars.</p>\n<p>De aankondiging legt het geschenk vast op één aandeel. Ze zegt niet hoeveel rekeningen meetellen.</p>\n<h2>Dus wie legt daar evenveel aandelen naast?</h2>\n<p><strong>SpaceX zegt dat Elon Musk persoonlijk evenveel aandelen geeft als het bedrijf doneert.</strong> Het bedrijf koppelt die stap aan de toezegging van Musk om elk kind in Amerika één SpaceX-aandeel te geven. Investing.com meldde dezelfde bijdrage van Musk, als de uitvoering van die toezegging. Bloomberg Law meldde dat hij het aantal aandelen dat SpaceX doneert persoonlijk evenaart. CNBC meldde dat hij het geschenk zou evenaren. Evenaren betekent hier één persoonlijk aandeel per aandeel dat het bedrijf bijdraagt. De berichten beschrijven dat persoonlijke aandeel niet als een overdracht die al is afgerond. De bijdrage van het bedrijf zelf blijft de toezegging van 25 november 2026.</p>\n<p>Die persoonlijke stap van Musk is één toezegging in het bericht. Het is niet de enige.</p>\n<h2>Wat heeft Gwynne Shotwell aangekondigd?</h2>\n<p><strong>Een apart persoonlijk geschenk van meer dan 2 miljoen SpaceX-aandelen.</strong> Zij is president en operationeel directeur. SpaceX zei dat zij dat geschenk apart heeft aangekondigd. Investing.com meldde dezelfde aankondiging, een apart persoonlijk geschenk van meer dan 2 miljoen aandelen. Bloomberg Law meldde dat zij apart een persoonlijk geschenk van meer dan 2 miljoen SpaceX-aandelen van plan is. CNBC meldde dat zij instemde met een persoonlijk geschenk van meer dan 2 miljoen SpaceX-aandelen. Het plan van het bedrijf is één aandeel per actieve rekening. Het cijfer van Shotwell is één persoonlijk aantal, en het bedrijf presenteert het als iets aparts van dat plan.</p>\n<p>Een genoemd persoonlijk geschenk is nog geen bericht dat die aandelen al zijn overgedragen.</p>\n<h2>Waarom zegt SpaceX dat het dit doet?</h2>\n<p><strong>Het bedrijf zegt dat het eigendom bij de volgende generatie Amerikanen terecht moet komen.</strong> In het persbericht, dat CNBC ook aanhaalde, formuleert SpaceX het zo: het bouwt de infrastructuur van de toekomst en werkt eraan om leven op meer dan één planeet mogelijk te maken, en het vindt dat het eigendom van het bedrijf dat die systemen maakt bij de volgende generatie Amerikanen hoort, voor hun voordeel op lange termijn. Die zin zegt wie er volgens SpaceX een belang zou moeten hebben. Ze noemt geen dag waarop een rekening een aandeel ontvangt.</p>\n<p>Een reden is geen tijdschema, en het is geen telling van de rekeningen.</p>\n<h2>Wat is een Trump Account in deze berichten?</h2>\n<p><strong>Een beleggingsrekening met belastingvoordeel voor een Amerikaans kind, bedoeld om op lange termijn te sparen.</strong> Zo beschrijft het persbericht van SpaceX de rekeningen. Bloomberg Law noemt ze beleggingsrekeningen met een belastingvoordeel voor Amerikaanse kinderen. Investing.com gebruikt dezelfde omschrijving: rekeningen die die kinderen moeten helpen vermogen op te bouwen voor de lange termijn. De bijdrage van het bedrijf noemt rekeningen die nu actief zijn. De toezegging van Musk, zoals SpaceX die beschrijft, is de bredere lijn: één SpaceX-aandeel voor elk kind in Amerika. Wat het bedrijf aankondigde is smaller. Het is één nieuw uitgegeven Class A-aandeel voor elk Trump Account dat nu actief is, niet een aandeel voor elk kind en niet een aandeel voor een rekening die deze berichten niet actief noemen.</p>\n<p>Het aantal actieve rekeningen is geen cijfer dat deze berichten delen.</p>\n<h2>Dus is er al een aandeel bijgeschreven?</h2>\n<p><strong>De berichten beschrijven een toezegging en een voornemen, niet een overdracht die zij voltooid noemen.</strong> SpaceX kondigde een toezegging aan om de aandelen bij te dragen. Investing.com gebruikte hetzelfde woord, toezegging. Bloomberg Law schreef dat het bedrijf van plan is de aandelen bij te dragen. CNBC schreef dat SpaceX één Class A-aandeel zal doneren aan elk actief Trump Account, en dat Musk het geschenk zou evenaren. Geen van die verslagen zegt dat de aandelen al op de rekeningen staan. Class A is de aandelensoort die in de toezegging wordt genoemd. De achtergrond bij die aandelensoort staat in <a href=\"/nl/spacex-ipo-recap-what-it-means-for-tesla-shareholders/\">het overzicht van de beursgang van SpaceX</a>. Gesprekken over een combinatie met Tesla zijn een ander proces, in <a href=\"/nl/five-directors-are-negotiating-the-tesla-spacex-merger/\">het stuk over de vijf bestuurders die over die fusie onderhandelen</a>.</p>\n<p>Wat SpaceX op 25 november 2026 wel aankondigde, is concreet. Eén nieuw uitgegeven Class A-aandeel voor elk Trump Account dat nu actief is, een persoonlijke bijdrage van Elon Musk van hetzelfde aantal, en een apart persoonlijk geschenk van Gwynne Shotwell van meer dan 2 miljoen SpaceX-aandelen.</p>\n<p><em>Dit artikel is alleen bedoeld als informatie en is geen financieel advies.</em></p>"
+  }
+}

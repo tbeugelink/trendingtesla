@@ -1,0 +1,97 @@
+{
+  "slug": "starlink-mini-costs-99-dollars-in-the-us",
+  "date": "2026-11-25",
+  "time": "19:58",
+  "category": "starlink",
+  "layer": "starlink",
+  "topic": "starlink",
+  "card": {
+    "en": "Starlink Mini costs 99 dollars in the US",
+    "nl": "Starlink Mini kost 99 dollar in de VS"
+  },
+  "image": "topics/starlink-camper.jpg",
+  "image_lock": true,
+  "images": [
+    "topics/starlink-camper.jpg",
+    "topics/starlink-boat.jpg",
+    "topics/starlink-car-1.jpg",
+    "lib/starlink-dish-car.jpg",
+    "topics/starlink-farm.jpg",
+    "topics/starlink-car-2.jpg"
+  ],
+  "sources": [
+    {
+      "title": "Tesla North — Starlink Mini kit cut to $99 on US Roam, 24 November 2026",
+      "url": "https://teslanorth.com/2026/11/24/starlink-mini-99-us-roam/"
+    },
+    {
+      "title": "Drive Tesla Canada — Starlink Mini price cut in Canada",
+      "url": "https://driveteslacanada.ca/news/starlink-mini-price-cut-canada/"
+    },
+    {
+      "title": "SatelliteInternet — Starlink deals, with the Mini kit at its cheapest",
+      "url": "https://www.satelliteinternet.com/providers/starlink/deals/"
+    },
+    {
+      "title": "Slickdeals — Starlink Mini at $99 plus $20 shipping on the Roam flow",
+      "url": "https://slickdeals.net/f/20392692-starlink-mini-v1-99-20-shipping-ymmv-119"
+    },
+    {
+      "title": "Tesla North — Starlink Mini at CA$149 on Canadian Roam, 25 November 2026",
+      "url": "https://teslanorth.com/2026/11/25/starlink-mini-149-canada-roam/"
+    }
+  ],
+  "label": {
+    "style": "n",
+    "en": {
+      "sub": "US KIT",
+      "text": "$99"
+    },
+    "nl": {
+      "sub": "VS-KIT",
+      "text": "$99"
+    }
+  },
+  "real_photos": [
+    {
+      "page": "https://commons.wikimedia.org/wiki/File:Starlink_Flat_Panel_Dish_on_Roof_of_Truck_(53371298608).jpg",
+      "describe": "a flat Starlink dish on the roof of a truck"
+    },
+    {
+      "page": "https://commons.wikimedia.org/wiki/File:Starlink_Flat_Panel_Roof_Mounted_on_Roof_Rack_(53370205462).jpg",
+      "describe": "a flat Starlink dish mounted on a roof rack"
+    }
+  ],
+  "gen_image": {
+    "prompt": "Editorial illustration of the same white Starlink dish as the reference, on a low stand beside a camper parked on the right side of a quiet rural road, the camper left-hand drive, late daylight, no people, no logos, no readable text, no price tags, calm dark ground in the lower-left third",
+    "subject": "the same white Starlink dish as the reference, on a stand beside a camper",
+    "refs": [
+      {
+        "src": "lib/starlink-dish-car.jpg"
+      }
+    ],
+    "profile": "editorial",
+    "category": "A",
+    "describe": "An illustration of the reference Starlink dish on a stand next to a camper. Not a photograph of the November kit price.",
+    "extra": [
+      {
+        "prompt": "The same white Starlink dish as the reference on a picnic table beside a mountain lake at dusk, a closed laptop next to the dish, no people, no logos, no readable text, calm dark foreground in the lower left",
+        "describe": "The same Starlink dish on a picnic table by a lake at dusk"
+      },
+      {
+        "prompt": "The same white Starlink dish as the reference on a low stand at the edge of a dark field after sunset, no people, no logos, no readable text, calm dark ground in the lower left",
+        "describe": "The same Starlink dish on a stand at the edge of a field after sunset"
+      }
+    ]
+  },
+  "en": {
+    "title": "Starlink Mini costs 99 dollars in the US",
+    "description": "On 24 November 2026 Starlink cut the United States price of the Starlink Mini kit to 99 dollars, from a typical 249 dollars, and it is the lowest price the Mini has had. The kit is hardware only: a Roam plan and shipping are extra, and the Canadian kit has its own price.",
+    "body": "<p>On 24 November 2026 Starlink cut the United States price of the Starlink Mini kit to US$99, down from its typical US$249. Starlink's own @Starlink post read \"$99 for the Mini Kit (previously $249)\". Tesla North, Drive Tesla Canada and SatelliteInternet all report that cut. It is the lowest price the Mini has had. The post sets the new kit price beside the previous one. The October price that sits between those two figures is a separate step.</p>\n<h2>How does US$99 compare with the October price?</h2>\n<p><strong>The November price is US$50 under the US$149 the Mini reached in October 2026, and it is the lowest price the Mini has had.</strong> Tesla North describes US$99 as another US$50 off the US$149 price seen in October. Drive Tesla Canada calls it the lowest price ever and records the same October drop to US$149. SatelliteInternet says the kit is the cheapest it has ever been. The typical United States price those reports place beside the new one is US$249, the previous price named in Starlink's post. A reader of the post alone moves from US$249 to US$99. A reader who also has the October figure sees a price that had already moved to US$149 before this latest cut. The low price is the price of the hardware. A buyer who wants to spread that hardware cost meets a second way to pay for the same kit.</p>\n<h2>Can a US buyer split the hardware into monthly payments?</h2>\n<p><strong>Yes. United States buyers can pay the hardware in 12 monthly instalments of US$8.25.</strong> Tesla North and SatelliteInternet both report that option. The instalments are a payment schedule for the kit. They sit beside the US$99 the post names, as another way to pay for the same hardware. The schedule covers the kit. The service charge stays its own line, and the one-time price in the post remains US$99. A buyer who chooses the instalments is still buying the Mini kit, and still meets a plan after that hardware. That kit price belongs to one kind of United States plan.</p>\n<h2>So which US plan carries the US$99 kit?</h2>\n<p><strong>The Roam plans, the on-the-go plans. Service is a separate charge.</strong> Tesla North's checkout uses United States Roam with 100GB as the default, at US$55 a month. A Slickdeals post shows that Roam flow at US$99 for the kit plus US$20 shipping. Tesla North and Slickdeals both put standard shipping at US$20. The checkout these reports describe has three named lines:</p>\n<ul>\n<li><strong>Kit:</strong> US$99.</li>\n<li><strong>Standard shipping:</strong> US$20.</li>\n<li><strong>Service:</strong> United States Roam with 100GB at US$55 a month.</li>\n</ul>\n<p>The kit line is the hardware. The shipping line is the delivery charge on that hardware. The monthly line is the service, and it continues after the kit is paid. These reports keep the three lines apart. The United States Roam price is also a different checkout from the one in Canada.</p>\n<h2>What did the same kit cost in Canada?</h2>\n<p><strong>CA$149, down from a typical CA$299, in reports dated 25 November 2026.</strong> Drive Tesla Canada and Tesla North both report that Canadian cut. Those Canadian reports are dated a day after the United States cut of 24 November 2026. The news has the same shape: a kit price under the typical kit price, with the service written as its own charge. Canadian Roam starts at CA$75 a month for 100GB. The two countries do not share a figure.</p>\n<ul>\n<li><strong>United States:</strong> the kit is US$99, standard shipping is US$20, and Roam with 100GB is US$55 a month.</li>\n<li><strong>Canada:</strong> the kit is CA$149, down from a typical CA$299, and Roam starts at CA$75 a month for 100GB.</li>\n</ul>\n<p>These reports do not carry the United States shipping figure over to the Canadian kit. A buyer in each country is looking at a hardware price plus a Roam plan. Both countries still have no listed closing date for the discount.</p>\n<h2>So has Starlink named an end date?</h2>\n<p><strong>No. Starlink has not listed an end date for the discount.</strong> Tesla North says that about the United States price. Drive Tesla Canada says that about both countries. The reports give no last day. The monthly plan stays a separate charge, and the hardware price stays the price of the kit. In the United States the Mini kit is US$99, previously a typical US$249, and lower than the US$149 of October 2026. A buyer there can also pay that hardware as 12 instalments of US$8.25. The United States price applies through the Roam plans. Service is extra: Roam with 100GB is US$55 a month, and standard shipping is US$20. In Canada the kit is CA$149, down from a typical CA$299, and Roam starts at CA$75 a month for 100GB. Starlink's post states the United States kit in one line: \"$99 for the Mini Kit (previously $249)\". The plan is the monthly charge on top of the kit, and shipping is the delivery line where these reports name one.</p>"
+  },
+  "nl": {
+    "title": "Starlink Mini kost 99 dollar in de VS",
+    "description": "Op 24 november 2026 zette Starlink de Amerikaanse prijs van de Starlink Mini-kit op 99 dollar, vanaf een gebruikelijke 249 dollar, en dat is de laagste prijs die de Mini heeft gehad. De kit is alleen de hardware: een Roam-abonnement en verzending komen er apart bij, en de Canadese kit heeft een eigen prijs.",
+    "body": "<p>Op 24 november 2026 zette Starlink de Amerikaanse prijs van de Starlink Mini-kit op 99 dollar. De gebruikelijke prijs was 249 dollar. Het eigen bericht van @Starlink luidde: \"$99 for the Mini Kit (previously $249)\". Tesla North, Drive Tesla Canada en SatelliteInternet melden dezelfde verlaging. Het is de laagste prijs die de Mini heeft gehad. In dat bericht staan de nieuwe kitprijs en de vorige prijs naast elkaar. Wat de kit in oktober kostte, zit daar nog tussenin.</p>\n<h2>Hoe staat 99 dollar tegenover de prijs van oktober?</h2>\n<p><strong>In november ligt de prijs 50 dollar onder de 149 dollar van oktober 2026, en het is de laagste prijs die de Mini heeft gehad.</strong> Tesla North noemt 99 dollar nog eens 50 dollar onder de 149 dollar die de kit in oktober had. Drive Tesla Canada spreekt van de laagste prijs ooit en noteert diezelfde oktoberdaling naar 149 dollar. SatelliteInternet schrijft dat de kit nog nooit zo goedkoop is geweest. De gebruikelijke Amerikaanse prijs naast het nieuwe bedrag is 249 dollar, dezelfde vorige prijs als in het bericht van Starlink. Wie alleen dat bericht leest, ziet de sprong van 249 naar 99 dollar. Het oktobercijfer erbij laat zien dat de prijs al op 149 dollar stond voordat deze laatste verlaging kwam. Die bodemprijs is de prijs van de hardware. Wie het bedrag niet in één keer wil neertellen, heeft voor dezelfde kit een tweede betaalwijze.</p>\n<h2>Kan een koper in de VS de hardware in termijnen betalen?</h2>\n<p><strong>Ja. Kopers in de Verenigde Staten kunnen de hardware in 12 maandelijkse termijnen van 8,25 dollar betalen.</strong> Tesla North en SatelliteInternet melden die mogelijkheid allebei. De termijnen zijn een schema voor de kit, naast de 99 dollar uit het bericht. Het schema betaalt de hardware. De dienst blijft een eigen regel, en 99 dollar blijft de prijs in één keer. Wie de termijnen neemt, koopt dezelfde Mini-kit en komt daarna alsnog een abonnement tegen. Die kitprijs hangt aan één soort Amerikaans abonnement.</p>\n<h2>Dus welk Amerikaans abonnement hoort bij de kit van 99 dollar?</h2>\n<p><strong>De Roam-abonnementen, voor onderweg. De dienst staat apart op de rekening.</strong> Bij Tesla North staat in de checkout Amerikaans Roam met 100 GB als standaard, voor 55 dollar per maand. Een Slickdeals-bericht toont die Roam-flow: 99 dollar voor de kit en 20 dollar verzending. Tesla North en Slickdeals zetten de standaardverzending allebei op 20 dollar. In die checkout staan drie regels die de berichten ook echt noemen:</p>\n<ul>\n<li><strong>Kit:</strong> 99 dollar.</li>\n<li><strong>Standaardverzending:</strong> 20 dollar.</li>\n<li><strong>Dienst:</strong> Amerikaans Roam met 100 GB, 55 dollar per maand.</li>\n</ul>\n<p>De kit is de hardware. De verzending is wat het kost om die hardware te laten bezorgen. Het maandbedrag is de dienst, en dat bedrag loopt door als de kit eenmaal betaald is. De berichten houden die drie regels gescheiden. De Amerikaanse Roam-prijs is een andere checkout dan de Canadese.</p>\n<h2>Wat kost dezelfde kit in Canada?</h2>\n<p><strong>149 Canadese dollar, omlaag vanaf een gebruikelijke 299 Canadese dollar, gemeld op 25 november 2026.</strong> Drive Tesla Canada en Tesla North brengen die Canadese verlaging allebei. De Canadese berichten dragen de datum 25 november 2026, een dag na de Amerikaanse verlaging van 24 november. De vorm is dezelfde: een kit onder de gebruikelijke kitprijs, en de dienst als eigen bedrag. Canadees Roam begint bij 75 Canadese dollar per maand voor 100 GB. Een Amerikaans bedrag en een Canadees bedrag zijn hier niet hetzelfde getal.</p>\n<ul>\n<li><strong>Verenigde Staten:</strong> kit 99 dollar, standaardverzending 20 dollar, Roam met 100 GB 55 dollar per maand.</li>\n<li><strong>Canada:</strong> kit 149 Canadese dollar, vanaf een gebruikelijke 299 Canadese dollar, en Roam vanaf 75 Canadese dollar per maand voor 100 GB.</li>\n</ul>\n<p>Het Amerikaanse verzendbedrag van 20 dollar blijft in deze berichten een Amerikaanse regel. Wie in Canada kijkt, ziet een hardwareprijs plus een Roam-abonnement, net als in de Verenigde Staten. Een einddatum voor de korting staat in geen van beide landen genoemd.</p>\n<h2>Dus heeft Starlink een einddatum genoemd?</h2>\n<p><strong>Nee. Starlink heeft geen einddatum voor de korting genoemd.</strong> Tesla North zegt dat over de prijs in de Verenigde Staten. Drive Tesla Canada zegt dat over beide landen. Er is in de berichten geen laatste dag. Het maandabonnement blijft een aparte rekening, en de hardwareprijs blijft de prijs van de kit. In de Verenigde Staten kost de Mini-kit 99 dollar, waar 249 dollar gebruikelijk was, en die 99 dollar ligt onder de 149 dollar van oktober 2026. Dezelfde hardware kan daar ook in 12 termijnen van 8,25 dollar. De Amerikaanse prijs loopt via de Roam-abonnementen. De dienst komt erbij: Roam met 100 GB kost 55 dollar per maand, en standaardverzending is 20 dollar. In Canada kost de kit 149 Canadese dollar, omlaag van 299 Canadese dollar, en Roam begint bij 75 Canadese dollar per maand voor 100 GB. Het bericht van Starlink vat de Amerikaanse kit samen in één zin: \"$99 for the Mini Kit (previously $249)\". Wat erbovenop komt, is het maandabonnement, en waar de berichten een bezorgregel noemen, is dat de verzending.</p>"
+  }
+}

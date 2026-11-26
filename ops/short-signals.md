@@ -1,16 +1,16 @@
-# Short signals (updated 2026-11-24 14:50 UTC)
+# Short signals (updated 2026-11-26 13:51 UTC)
 
 Goals (8 Nov 2026): stayed > 70% (viewed vs swiped), watched >= 90% with loops (over 100%),
 likes and shares up. 'stayed' = engaged views / views. Length in seconds is estimated from the stats.
 
-Average of Shorts with 300+ views: stayed 54%, watched 77%, length 44 s.
+Average of Shorts with 300+ views: stayed 53%, watched 76%, length 44 s.
 
 | published | views | stayed | watched | likes/1000 | length | hook type | hook (first line) |
 |---|---|---|---|---|---|---|---|
-| 2026-11-23 [gmasTYrO4gM](https://youtu.be/gmasTYrO4gM) | 300 | - | - | 16.7 | - | - |  |
-| 2026-11-23 [Z26d8TpsgwM](https://youtu.be/Z26d8TpsgwM) | 1474 | - | - | 10.9 | - | - |  |
-| 2026-11-21 [grpo6mDVgKc](https://youtu.be/grpo6mDVgKc) | 108 | 2% | 63.1% | 0.0 | 51 s | - |  |
-| 2026-11-19 [_kCxhp6ghLo](https://youtu.be/_kCxhp6ghLo) | 767 | 41% | 64.3% | 16.9 | 28 s | number | SpaceX caught Starship after 22 hours. |
+| 2026-11-23 [gmasTYrO4gM](https://youtu.be/gmasTYrO4gM) | 577 | 25% | 63.9% | 8.7 | 47 s | - |  |
+| 2026-11-23 [Z26d8TpsgwM](https://youtu.be/Z26d8TpsgwM) | 1620 | 49% | 70.2% | 9.9 | 26 s | - |  |
+| 2026-11-21 [grpo6mDVgKc](https://youtu.be/grpo6mDVgKc) | 104 | 8% | 29.4% | 0.0 | 51 s | - |  |
+| 2026-11-19 [_kCxhp6ghLo](https://youtu.be/_kCxhp6ghLo) | 767 | 41% | 64.3% | 16.9 | 26 s | number | SpaceX caught Starship after 22 hours. |
 | 2026-11-16 [xyIaQCWJ8Jw](https://youtu.be/xyIaQCWJ8Jw) | 823 | 40% | 56.5% | 7.3 | 28 s | consequence | A film joke became one thousand twenty horsepower. |
 | 2026-11-15 [q0Whx_dvqVw](https://youtu.be/q0Whx_dvqVw) | 915 | 46% | 53.2% | 4.4 | 26 s | consequence | One door delayed this SUV by two years. |
 | 2026-11-14 [2J_USIcU7P0](https://youtu.be/2J_USIcU7P0) | 1019 | 47% | 132.5% | 45.1 | 29 s | first | SpaceX just caught a Starship from orbit. |
@@ -21,9 +21,9 @@ Average of Shorts with 300+ views: stayed 54%, watched 77%, length 44 s.
 | 2026-11-12 [VBLQdnNPCc4](https://youtu.be/VBLQdnNPCc4) | 872 | 53% | 71.6% | 16.1 | 34 s | contrast | Musk mocked flying cars. His Roadster flew. |
 | 2026-11-12 [0fsWkMUD0uA](https://youtu.be/0fsWkMUD0uA) | 1031 | 46% | 58.5% | 14.5 | 26 s | consequence | Tesla's Roadster did a flip over a Semi. |
 | 2026-11-11 [ghOeIQMu52g](https://youtu.be/ghOeIQMu52g) | 1168 | 49% | 115.1% | 7.7 | 34 s | consequence | Musk fired almost his entire Supercharger team. |
-| 2026-11-11 [xPEE5cuhXUU](https://youtu.be/xPEE5cuhXUU) | 962 | 44% | 78.2% | 5.2 | 28 s | contrast | The first Tesla ran on laptop batteries. |
-| 2026-11-10 [XGHbcr_AZ5U](https://youtu.be/XGHbcr_AZ5U) | 1473 | 51% | 105.4% | 14.9 | 43 s | number | Starship's very first flight lasted just four minutes. |
-| 2026-11-10 [AmOobBQIMtI](https://youtu.be/AmOobBQIMtI) | 1225 | 50% | 130.2% | 10.6 | 31 s | first | Tesla's next wiper might be a laser. |
+| 2026-11-11 [xPEE5cuhXUU](https://youtu.be/xPEE5cuhXUU) | 963 | 44% | 78.1% | 5.2 | 28 s | contrast | The first Tesla ran on laptop batteries. |
+| 2026-11-10 [XGHbcr_AZ5U](https://youtu.be/XGHbcr_AZ5U) | 1473 | 51% | 105.5% | 14.9 | 43 s | number | Starship's very first flight lasted just four minutes. |
+| 2026-11-10 [AmOobBQIMtI](https://youtu.be/AmOobBQIMtI) | 1228 | 50% | 129.5% | 10.6 | 31 s | first | Tesla's next wiper might be a laser. |
 | 2026-11-09 [yAWhiqNtI-I](https://youtu.be/yAWhiqNtI-I) | 1498 | 56% | 67.0% | 9.3 | 34 s | number | Catch six million dollars falling from space. |
 | 2026-11-09 [Zdj6nBF4pis](https://youtu.be/Zdj6nBF4pis) | 1246 | 58% | 98.6% | 16.9 | 31 s | contrast | 30 engines doomed the Soviet Moon rocket. SpaceX uses 33. |
 | 2026-11-08 [IdMtFvim8Gw](https://youtu.be/IdMtFvim8Gw) | 491 | 50% | 62.9% | 22.4 | 35 s | number | Two crashes. One explosion. Then it LANDED. |

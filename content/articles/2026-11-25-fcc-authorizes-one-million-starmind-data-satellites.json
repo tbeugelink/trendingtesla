@@ -1,0 +1,97 @@
+{
+  "slug": "fcc-authorizes-one-million-starmind-data-satellites",
+  "date": "2026-11-25",
+  "time": "20:34",
+  "category": "spacex",
+  "also_topics": [
+    "ai-compute",
+    "datacenters"
+  ],
+  "layer": "spacex",
+  "topic": "datacenters",
+  "card": {
+    "en": "FCC authorizes one million Starmind data satellites",
+    "nl": "FCC staat een miljoen Starmind-datasatellieten toe"
+  },
+  "image": "topics/satellite-ai.jpg",
+  "images": [
+    "topics/satellite-ai.jpg",
+    "topics/starlink-2.jpg",
+    "topics/starlink-launch-stack.jpg",
+    "topics/starlink-1.jpg",
+    "lib/starlink-satellites.jpg"
+  ],
+  "sources": [
+    {
+      "title": "FCC — FCC authorizes 1 million satellites for data centers in space",
+      "url": "https://eu-assets.contentstack.com/v3/assets/blt23eb5bbc4124baa6/blt3284fad4ee39d97e/6b071287af911015536d731d/FCC_Authorizes_1_Million_Satellites_for_Data_Centers_in_Space_PR_11-25-2026.pdf"
+    },
+    {
+      "title": "Politico — FCC authorizes Elon Musk's plans for data centers in space",
+      "url": "https://www.politico.com/news/2026/11/25/elon-musk-space-datacenters-fcc-01183330"
+    },
+    {
+      "title": "Ars Technica — The FCC has authorized SpaceX to deploy 1 million satellites",
+      "url": "https://arstechnica.com/space/2026/11/the-fcc-has-authorized-spacex-to-deploy-1-million-satellites/"
+    },
+    {
+      "title": "The Verge — FCC signs off on SpaceX's plan to put up to 1 million data center satellites into space",
+      "url": "https://www.theverge.com/science/1042278/spacex-fcc-starmind-ai-space-data-centers"
+    },
+    {
+      "title": "CNBC — SpaceX wins FCC approval to deploy 1 million orbital data center satellites",
+      "url": "https://www.cnbc.com/2026/11/25/spacex-fcc-satellite-approval.html"
+    },
+    {
+      "title": "Unite.AI — FCC Space Bureau authorizes SpaceX's Starmind with conditions",
+      "url": "https://www.unite.ai/fcc-space-bureau-authorizes-spacexs-starmind-with-conditions/"
+    },
+    {
+      "title": "Securities.io — FCC authorizes SpaceX Starmind network of up to one million satellites",
+      "url": "https://www.securities.io/fcc-authorizes-spacex-starmind-network-of-up-to-one-million-satellites/"
+    }
+  ],
+  "label": {
+    "style": "n",
+    "en": {
+      "sub": "STARMIND",
+      "text": "1 MILLION"
+    },
+    "nl": {
+      "sub": "STARMIND",
+      "text": "1 MILJOEN"
+    }
+  },
+  "gen_image": {
+    "prompt": "One large satellite with long solar arrays, three-quarter view, centred above the night side of Earth, the same orbital-computing satellite as the reference, stars in a dark sky, no second product, no rocket, no people, no logos, no readable text, no flags, calm dark space in the lower-left third. An illustration of the satellite design, not a photograph of an announcement and not a photograph of hardware already in orbit.",
+    "subject": "one large satellite with extended solar arrays above Earth",
+    "refs": [
+      {
+        "src": "lib/starlink-satellites.jpg"
+      }
+    ],
+    "profile": "editorial",
+    "category": "A",
+    "describe": "Illustration of one large satellite with solar arrays above Earth. Not a photograph of the FCC decision and not a launched Starmind satellite.",
+    "extra": [
+      {
+        "prompt": "The same large satellite with extended solar arrays crossing above the day-night line of Earth, one craft large in the centre, no people, no logos, no readable text, calm dark space in the lower left",
+        "describe": "The same solar-array satellite above Earth's day-night line"
+      },
+      {
+        "prompt": "The same large satellite with extended solar arrays, with two more of the same design farther away above Earth, no people, no logos, no readable text, calm dark space in the lower left",
+        "describe": "Three of the same solar-array satellites above Earth"
+      }
+    ]
+  },
+  "en": {
+    "title": "FCC authorizes one million Starmind data satellites",
+    "description": "On 25 November 2026 the FCC Space Bureau granted SpaceX conditional authority for Starmind, up to 1 million low-Earth-orbit satellites that would work as orbital data centers. The first one must be operating by 25 November 2033.",
+    "body": "<p>The FCC's Space Bureau, under Chair Brendan Carr, on Wednesday 25 November 2026 granted SpaceX conditional authorization for Starmind, a low-Earth-orbit constellation of up to 1 million satellites that would operate as orbital data centers. The FCC described the decision as the first U.S. authorization for a constellation of data centers in space. The number is a license ceiling, and the satellites themselves are still a schedule.</p>\n<h2>What did the FCC authorize?</h2>\n<p><strong>Conditional authority for up to 1 million Starmind satellites, working as data centers in low Earth orbit.</strong> The FCC's announcement says the agency is authorizing SpaceX to deploy 1 million orbital compute modules, to process large amounts of data for use back on Earth, and it names that system Starmind. Politico reported the same ceiling, up to a million of these orbital centers. Ars Technica called the order a conditional authorization for up to 1 million Starmind satellites designed to serve as orbital data centers. Unite.AI and Securities.io, both reading the Space Bureau order, describe a grant in part: the bureau authorized the constellation and deferred parts of the application. SpaceX had already requested the authorization. <a href=\"/spacex-orbital-ai-data-centers-ai1-terafab-tesla-chips/\">That earlier filing is the computing-satellite plan, written up while it was still a request.</a></p>\n<p>A maximum of 1 million is an upper bound. The order turns that bound into deadlines, and missing one of them ends the authorization.</p>\n<h2>So when do the satellites have to be operating?</h2>\n<p><strong>One satellite by 25 November 2033, 100,000 by 25 November 2035, 500,000 by 25 November 2038, and the full 1 million by 25 November 2040.</strong> Unite.AI sets the checkpoints out from the order. By 25 November 2033, one authorized satellite must be deployed and operating in its assigned orbit. By 25 November 2035, 10 percent of the authorized maximum must be deployed and operating. That share is 100,000 satellites, the figure Ars Technica also reports for November 2035. By 25 November 2038 the order requires half the authorized maximum, 500,000 satellites, deployed and operating. By 25 November 2040 the remaining satellites have to be launched, placed in their assigned orbits, and operating. Securities.io records the same four dates and the same shares of the constellation. Both outlets say the authorization becomes void if SpaceX misses a checkpoint.</p>\n<p>Those dates are the duty. The 15-year length of the license is a separate clock, and that clock starts later than the grant.</p>\n<h2>When does the 15-year term begin?</h2>\n<p><strong>On the day SpaceX certifies that the first Starmind satellite is in orbit and operating in line with the authorization.</strong> Politico reported that the centers would circulate under a 15-year license. Unite.AI and Securities.io say the term begins at that certification, not on 25 November 2026. A first satellite that meets the 2033 checkpoint would start the 15 years then. The deployment dates stay where the order put them. The bureau also held back part of what SpaceX asked to do with satellites after they finish work.</p>\n<h2>What is still deferred above 600 kilometres?</h2>\n<p><strong>Disposal that does not use atmospheric reentry, until SpaceX files a plan the bureau accepts.</strong> Unite.AI and Securities.io report that the debris plan was found compliant for satellites below 600 kilometres, and that a modification containing a final plan is required before any Starmind satellite is deployed above that altitude. The bureau separately deferred SpaceX's request to dispose of some of those higher satellites in Earth-disposal orbits, or in orbit around the Sun, rather than by burning up in the atmosphere. The filing had not given enough information to judge those methods. Ars Technica reports the same refusal: the FCC did not grant the waiver, and SpaceX needs one before it deploys Starmind satellites that are not meant to reenter. The Verge describes the deferred piece as graveyard orbits above 600 kilometres, instead of burning up on the way down.</p>\n<p>The open item is a condition on the higher orbits. The chair's statement is about why the grant exists at all.</p>\n<h2>So what did Carr say this is for?</h2>\n<p><strong>Moving computing capacity beyond Earth, for SpaceX and for competitors working on their own orbital data centers.</strong> In the FCC statement, Carr said: \"By moving compute capacity beyond Earth, SpaceX and the many competitors working on their own orbital data centers are meeting the moment.\" Politico carried that sentence from the statement. The line names a direction for SpaceX and for other companies chasing the same idea. It leaves the checkpoints in place, and it leaves the deferred disposal methods unresolved.</p>\n<p>The satellites are meant to run on solar power. The Verge reports that SpaceX has described Starmind as a way to capture solar energy in space and use it for AI on Earth. CNBC reports that Carr said the Starmind constellation, and competitor constellations, would use solar power. The first satellite that has to be operating is dated 25 November 2033, and any satellite above 600 kilometres still needs a disposal plan the bureau has not approved.</p>"
+  },
+  "nl": {
+    "title": "FCC staat een miljoen Starmind-datasatellieten toe",
+    "description": "Op 25 november 2026 gaf het Space Bureau van de FCC SpaceX voorwaardelijk toestemming voor Starmind, maximaal 1 miljoen satellieten in een lage baan die als datacenters moeten werken. De eerste moet op 25 november 2033 in bedrijf zijn.",
+    "body": "<p>Het Space Bureau van de FCC, onder voorzitter Brendan Carr, heeft SpaceX op woensdag 25 november 2026 voorwaardelijk toestemming gegeven voor Starmind. Dat is een constellatie van maximaal 1 miljoen satellieten in een lage baan om de aarde, bedoeld als datacenters in de ruimte. De FCC noemde het besluit de eerste Amerikaanse vergunning voor zo'n constellatie. Het getal staat op papier. De satellieten zelf staan nog op een kalender.</p>\n<h2>Wat heeft de FCC vergund?</h2>\n<p><strong>Voorwaardelijke toestemming voor maximaal 1 miljoen Starmind-satellieten die als datacenters in een lage baan werken.</strong> In de aankondiging van de FCC mag SpaceX 1 miljoen rekenmodules in een baan brengen, om grote hoeveelheden data te verwerken voor gebruik op aarde. Het systeem heet Starmind. Politico noemt hetzelfde plafond: tot een miljoen van die centra in een baan. Ars Technica beschrijft het besluit als een voorwaardelijke vergunning voor maximaal 1 miljoen Starmind-satellieten die als datacenters in de ruimte moeten dienen. Unite.AI en Securities.io, die het besluit van het Space Bureau nalazen, spreken van een gedeeltelijke toekenning. De constellatie is vergund, en delen van de aanvraag zijn aangehouden. SpaceX had die toestemming al aangevraagd. <a href=\"/nl/spacex-orbital-ai-data-centers-ai1-terafab-tesla-chips/\">Die eerdere aanvraag voor rekensatellieten staat hier, uit de periode dat het nog een verzoek was.</a></p>\n<p>1 miljoen is een bovengrens. Het besluit maakt van die grens een reeks deadlines, en een gemiste deadline beëindigt de vergunning.</p>\n<h2>Dus wanneer moeten de satellieten werken?</h2>\n<p><strong>Eén satelliet op 25 november 2033, 100.000 op 25 november 2035, 500.000 op 25 november 2038, en het volle miljoen op 25 november 2040.</strong> Unite.AI zet de tussenstappen uit het besluit op een rij. Op 25 november 2033 moet één vergunde satelliet in zijn toegewezen baan zijn gebracht en daar werken. Op 25 november 2035 moet 10 procent van het vergunde maximum in bedrijf zijn. Dat is 100.000 satellieten, hetzelfde aantal dat Ars Technica noemt voor november 2035. Op 25 november 2038 eist het besluit de helft van het maximum, 500.000 satellieten, in hun banen en in bedrijf. Op 25 november 2040 moeten de overige satellieten gelanceerd zijn, in hun toegewezen banen zitten en werken. Securities.io noteert dezelfde vier data en hetzelfde deel van de constellatie. Beide redacties schrijven dat de vergunning vervalt als SpaceX een tussenstap mist.</p>\n<p>Die data zijn de verplichting. De looptijd van 15 jaar is een andere klok, en die begint later dan de dag van het besluit.</p>\n<h2>Wanneer begint de termijn van 15 jaar?</h2>\n<p><strong>Op de dag dat SpaceX verklaart dat de eerste Starmind-satelliet in zijn baan werkt volgens de vergunning.</strong> Politico schreef dat de centra onder een vergunning van 15 jaar zouden cirkelen. Unite.AI en Securities.io zeggen dat de termijn pas bij die verklaring ingaat, niet op 25 november 2026. Een eerste satelliet die de stap van 2033 haalt, start de 15 jaar op dat moment. De lanceerdata blijven staan waar het besluit ze heeft gezet. Het bureau hield ook een deel tegen van wat SpaceX wil doen met satellieten die klaar zijn met hun werk.</p>\n<h2>Wat ligt er nog open boven 600 kilometer?</h2>\n<p><strong>Opruimmethoden waarbij de satelliet niet in de dampkring verbrandt, tot SpaceX een plan indient dat het bureau accepteert.</strong> Unite.AI en Securities.io melden dat het puinplan in orde is bevonden voor satellieten onder 600 kilometer, en dat er eerst een aanpassing met een definitief plan nodig is voordat er een Starmind-satelliet boven die hoogte wordt ingezet. Apart stelde het bureau het verzoek uit om een deel van die hogere satellieten in een afvoerbaan rond de aarde te brengen, of in een baan om de zon, in plaats van ze in de dampkring te laten verbranden. In de aanvraag stond te weinig informatie om die methoden te beoordelen. Ars Technica beschrijft dezelfde afwijzing: de FCC verleende de ontheffing niet, en SpaceX heeft die nodig voordat het Starmind-satellieten inzet die niet bedoeld zijn om terug te keren in de dampkring. The Verge noemt het uitgestelde stuk kerkhofbanen boven 600 kilometer, in plaats van verbranden bij de terugkeer.</p>\n<p>Dat open punt is een voorwaarde voor de hogere banen. De verklaring van de voorzitter gaat over waarom de vergunning er überhaupt is.</p>\n<h2>Dus waar zei Carr dat het voor dient?</h2>\n<p><strong>Rekenkracht voorbij de aarde brengen, door SpaceX en door concurrenten die aan hun eigen orbitale datacenters werken.</strong> In de verklaring van de FCC zei Carr: „By moving compute capacity beyond Earth, SpaceX and the many competitors working on their own orbital data centers are meeting the moment.” Politico nam die zin uit de verklaring over. Die zin wijst een richting aan, voor SpaceX en voor andere bedrijven die hetzelfde idee najagen. De tussenstappen blijven staan, en de uitgestelde opruimmethoden blijven open.</p>\n<p>De satellieten moeten op zonne-energie draaien. The Verge schrijft dat SpaceX Starmind heeft beschreven als een manier om in de ruimte zonne-energie op te vangen voor AI op aarde. CNBC meldt dat Carr zei dat de Starmind-constellatie, en de constellaties van concurrenten, op zonne-energie gaan werken. De eerste satelliet die in bedrijf moet zijn, heeft als datum 25 november 2033. Alles boven 600 kilometer wacht nog op een opruimplan dat het bureau niet heeft goedgekeurd.</p>"
+  }
+}

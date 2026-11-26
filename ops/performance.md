@@ -1,8 +1,8 @@
 # What works on the TrendingTesla YouTube channel
 
-Updated 2026-11-24 14:50 UTC by tools/learn.py from daily YouTube statistics (75 videos at least 48 hours old). Do not edit by hand.
+Updated 2026-11-26 13:51 UTC by tools/learn.py from daily YouTube statistics (77 videos at least 48 hours old). Do not edit by hand.
 
-- Shorts: 43 videos, typical 884 views after 48 hours.
+- Shorts: 45 videos, typical 884 views after 48 hours.
 - Long videos: 32 videos, typical 28 views after 48 hours.
 
 ## By feature
@@ -12,61 +12,61 @@ Views after 48 hours compared with a typical video of the same kind (1.0x = typi
 **Short hook type**
 - question: 1.1x views, watched -3 pts vs typical (n=4)
 - contrast: 1.0x views, watched +6 pts vs typical (n=19)
-- consequence: 1.0x views, watched +1 pts vs typical (n=13)
+- consequence: 1.0x views, watched +2 pts vs typical (n=13)
 - first: 1.0x views, watched +13 pts vs typical (n=9)
 - number: 0.8x views, watched +4 pts vs typical (n=10)
-- not tagged: 0.5x views, watched +3 pts vs typical (n=20)
+- not tagged: 0.6x views, watched +1 pts vs typical (n=22)
 
 **about a specific car**
 - cybertruck, model-s, model-x: 2.3x views, watched -5 pts vs typical (n=2)
 - semi: 1.7x views, watched +5 pts vs typical (n=6)
-- model-3, model-y, model-y-l: 1.5x views, watched -5 pts vs typical (n=2)
+- model-3, model-y, model-y-l: 1.5x views, watched -4 pts vs typical (n=2)
 - cybertruck: 1.2x views, watched -10 pts vs typical (n=2)
 - roadster: 1.1x views, watched -5 pts vs typical (n=3)
 - model-x, model-x-classic: 1.0x views, watched -17 pts vs typical (n=1)
 - model-s, model-s-classic, model-s-plaid: 0.9x views, watched -14 pts vs typical (n=1)
-- no (company-wide): 0.7x views, watched +8 pts vs typical (n=52)
+- no (company-wide): 0.7x views, watched +7 pts vs typical (n=54)
 - cybercab: 0.7x views, watched +1 pts vs typical (n=4)
 - model-3-classic: 0.4x views, watched -0 pts vs typical (n=2)
 
 **explainer or news**
-- explainer: 1.1x views, watched +27 pts vs typical (n=2)
-- news: 0.8x views, watched +4 pts vs typical (n=73)
+- explainer: 1.1x views, watched +26 pts vs typical (n=2)
+- news: 0.8x views, watched +3 pts vs typical (n=75)
 
 **label has a question**
 - yes: 0.9x views, watched +4 pts vs typical (n=36)
-- no: 0.8x views, watched +5 pts vs typical (n=39)
+- no: 0.8x views, watched +4 pts vs typical (n=41)
 
 **label starts with a number**
-- no: 0.9x views, watched +4 pts vs typical (n=63)
-- yes: 0.5x views, watched +8 pts vs typical (n=12)
+- no: 0.9x views, watched +4 pts vs typical (n=64)
+- yes: 0.6x views, watched +5 pts vs typical (n=13)
 
 **label type**
-- n (number): 0.9x views, watched -1 pts vs typical (n=4)
-- c (yellow + red block): 0.9x views, watched +5 pts vs typical (n=51)
+- n (number): 1.0x views, watched -2 pts vs typical (n=6)
+- c (yellow + red block): 0.9x views, watched +4 pts vs typical (n=51)
 - a (red kicker + yellow line): 0.7x views, watched +5 pts vs typical (n=20)
 
 **published**
-- morning: 0.9x views, watched +6 pts vs typical (n=40)
-- evening: 0.8x views, watched +3 pts vs typical (n=35)
+- morning: 0.9x views, watched +6 pts vs typical (n=41)
+- evening: 0.8x views, watched +2 pts vs typical (n=36)
 
 **title has a number**
-- yes: 1.2x views, watched +7 pts vs typical (n=19)
-- no: 0.7x views, watched +4 pts vs typical (n=56)
+- yes: 1.2x views, watched +6 pts vs typical (n=20)
+- no: 0.7x views, watched +3 pts vs typical (n=57)
 
 **title length**
-- short (<= 10 words): 0.8x views, watched +5 pts vs typical (n=75)
+- short (<= 10 words): 0.8x views, watched +4 pts vs typical (n=77)
 
 **topic**
-- models: 1.4x views, watched -4 pts vs typical (n=21)
+- models: 1.4x views, watched -3 pts vs typical (n=21)
 - software: 1.0x views, watched +8 pts vs typical (n=4)
-- spacex: 0.9x views, watched +11 pts vs typical (n=21)
+- spacex: 1.0x views, watched +10 pts vs typical (n=22)
 - fsd: 0.8x views, watched -12 pts vs typical (n=8)
-- starlink: 0.7x views, watched +20 pts vs typical (n=4)
-- robotaxi: 0.6x views, watched +9 pts vs typical (n=8)
+- starlink: 0.7x views, watched +19 pts vs typical (n=4)
+- robotaxi: 0.6x views, watched +8 pts vs typical (n=8)
 - factories: 0.4x views, watched -1 pts vs typical (n=4)
 - charging: 0.3x views, watched +31 pts vs typical (n=3)
-- news: 0.1x views, watched +9 pts vs typical (n=2)
+- news: 0.2x views, watched -8 pts vs typical (n=3)
 
 ## Best performers
 
@@ -86,18 +86,18 @@ Views after 48 hours compared with a typical video of the same kind (1.0x = typi
 
 Does well (prefer this when two stories are about equally newsworthy, and use these styles):
 - topic: charging (people keep watching longer: +31 pts, n=3)
-- topic: starlink (people keep watching longer: +20 pts, n=4)
+- topic: starlink (people keep watching longer: +19 pts, n=4)
 - about a specific car: semi (1.7x, n=6)
 - Short hook type: first (people keep watching longer: +13 pts, n=9)
-- topic: spacex (people keep watching longer: +11 pts, n=21)
-- topic: robotaxi (people keep watching longer: +9 pts, n=8)
+- topic: spacex (people keep watching longer: +10 pts, n=22)
+- topic: robotaxi (people keep watching longer: +8 pts, n=8)
 Does less well (still cover it when it is the important news, but give it a sharper hook):
+- topic: news (0.2x, n=3)
 - topic: charging (0.3x, n=3)
 - topic: factories (0.4x, n=4)
-- label starts with a number: yes (0.5x, n=12)
-- Short hook type: not tagged (0.5x, n=20)
 - topic: robotaxi (0.6x, n=8)
-- topic: fsd (people stop watching sooner: -12 pts, n=8)
+- label starts with a number: yes (0.6x, n=13)
+- Short hook type: not tagged (0.6x, n=22)
 
 ## Rules for using this
 
@@ -107,41 +107,41 @@ Does less well (still cover it when it is the important news, but give it a shar
 
 ## What works at other Tesla / SpaceX / xAI channels
 
-Updated 2026-11-24 14:50 UTC by tools/scout.py (videos from the last 7 days, 33 judged, 471 API units). Do not edit by hand.
+Updated 2026-11-26 13:51 UTC by tools/scout.py (videos from the last 7 days, 34 judged, 457 API units). Do not edit by hand.
 
 Outlier = views divided by what that channel normally gets for the same kind of video. A 5x video shows a topic or angle that pulls viewers, regardless of channel size.
 
 ### Outliers
 
-- **224.8x** (179K views vs 798 usual, long, Tech Discovery, 2K subs) - [Elon Musk: "I Am Releasing The Tesla Pi Phone With Built-in Starlink WIFI Today!"](https://youtu.be/SoBcOtvWMcY)
-- **106.6x** (265K views vs 2K usual, short, DangLab TV, 526 subs) - [The Next Starship Is Even Bigger](https://youtu.be/182CUfNz3z4)
-- **88.9x** (1.3M views vs 15K usual, short, San Francisco Chronicle, 42K subs) - [How Tesla uses fine print to keep safety lawsuits out of court](https://youtu.be/Mrgp5QREkTA)
-- **88.3x** (205K views vs 2K usual, short, ZeTAxSpArKy, 11K subs) - [MrBeast Built Part of a Real Rocket 🚀🛠️ #shorts](https://youtu.be/tVcVVeOgqdw)
-- **83.7x** (409K views vs 5K usual, short, Shift Decoded, 235 subs) - [How SpaceX Catches Starship With 2 Tiny Pegs 🚀 #shorts  #aviation](https://youtu.be/2ZEu2X5CdS4)
-- **35.7x** (198K views vs 6K usual, long, Peter H. Diamandis, 546K subs) - [Anthropic’s $72M Average Employee, SpaceX Catches Starship, and One Hack Hits 178 Sites | LIVE](https://youtu.be/iA2gdwTWJ_E)
-- **21.5x** (501K views vs 23K usual, long, Sawyer Merritt, 26K subs) - [First drive on Tesla FSD V15 (new visualizations are insane!)](https://youtu.be/TSpBfh7Ubw8)
-- **20.8x** (241K views vs 12K usual, short, UnderLoad, 589 subs) - [the steel rocket weighs less](https://youtu.be/_6dZtmCODys)
-- **15.1x** (199K views vs 13K usual, short, CobraEmergency, 768K subs) - [Skyscraper-Sized Rocket Falling Towards Earth, Exploding | Starship Flight 15](https://youtu.be/9GNUR4t_6Tg)
-- **8.9x** (254K views vs 29K usual, long, Frontier Labs, 100K subs) - [Starship Flight 16 will not return](https://youtu.be/TVMHihAtPZg)
-- **5.6x** (226K views vs 40K usual, short, The Launch Pad, 783K subs) - [CHOPSTICK CAM! SpaceX Starship 42 Catch](https://youtu.be/b1qsmhRKqNU)
-- **5.1x** (668K views vs 132K usual, short, Livestreams Memes, 148K subs) - [SpaceX Did It Again 🚀](https://youtu.be/GXcmBCGSxoE)
+- **135.5x** (563K views vs 4K usual, short, Shift Decoded, 322 subs) - [How SpaceX Catches Starship With 2 Tiny Pegs 🚀 #shorts  #aviation](https://youtu.be/2ZEu2X5CdS4)
+- **134.1x** (322K views vs 2K usual, short, ZeTAxSpArKy, 11K subs) - [MrBeast Built Part of a Real Rocket 🚀🛠️ #shorts](https://youtu.be/tVcVVeOgqdw)
+- **127.1x** (425K views vs 3K usual, long, Whole Mars Catalog, 70K subs) - [Tesla Self-Driving 15 First Ride with my Dad](https://youtu.be/qHg4Fjh4Jww)
+- **37.9x** (439K views vs 12K usual, short, UnderLoad, 803 subs) - [the steel rocket weighs less](https://youtu.be/_6dZtmCODys)
+- **24.3x** (144K views vs 6K usual, short, Now Illustrated, 3K subs) - [We Rebuilt Musk's 2019 Starship Hand Demo in 3D](https://youtu.be/EAy-RtSeeSQ)
+- **21.3x** (146K views vs 7K usual, short, Ryan Shaw, 350K subs) - [Tesla FSD V15 Lets You Pick Your Parking Spot #tesla #fsd #technews](https://youtu.be/_2AL3CU9waw)
+- **11.4x** (240K views vs 21K usual, short, Ross Givens, 198K subs) - [A Billionaire Investor Just DUMPED AI Stocks to Buy SpaceX… WHY NOW?](https://youtu.be/lhLI7Yw9ZM8)
+- **8.7x** (158K views vs 18K usual, short, Blue Saturn , 49K subs) - [SpaceX's engines go from colder than Antarctica to hotter than molten lava.](https://youtu.be/9MO9WxCBUOM)
+- **8.2x** (497K views vs 60K usual, long, Dirty Tesla, 148K subs) - [Tesla FSD V15 Update First Drive](https://youtu.be/5rDGMNjDPIA)
+- **7.0x** (381K views vs 55K usual, short, The New York Times, 5.4M subs) - [How Democrats Winning in Texas Affects Elon Musk](https://youtu.be/mSop_NV22YM)
+- **7.0x** (241K views vs 34K usual, short, TechRay, 6K subs) - [MKBHD: Tesla's Wildest Deal Yet](https://youtu.be/KKAvae98XNc)
+- **5.9x** (177K views vs 30K usual, short, TOYX , 492 subs) - [Optimus Prime Transform Large to Small Transformers #shorts #optimusprime](https://youtu.be/K9vAWtnqGuc)
 
 ### Questions viewers asked that the creator did not answer
 
 Each is a possible article or video with proven interest (check first that it is still open and that the answer is factual and current).
 
-- "So the accelerator disables all the safety features that these cars claim to have? Pedestrian and collision detection, obstacle avoidance, driving with driver door open etc." (434 likes, under [How Tesla uses fine print to keep safety lawsuits out of court](https://youtu.be/Mrgp5QREkTA))
-- "Yes, Yes, Yes. When and where can I buy one???" (152 likes, under [Elon Musk: "I Am Releasing The Tesla Pi Phone With Built-in Starlink WIFI Today!"](https://youtu.be/SoBcOtvWMcY))
-- "Don't Tesla's goes into park automaticaly when you open the door?" (99 likes, under [How Tesla uses fine print to keep safety lawsuits out of court](https://youtu.be/Mrgp5QREkTA))
-- "You know what would prevent this? If the braking system was like some separate hydraulic system and the accelerator was a separate mechanical device, you know, like it has been for well over a century." (60 likes, under [How Tesla uses fine print to keep safety lawsuits out of court](https://youtu.be/Mrgp5QREkTA))
-- "Absolutely ❤❤❤ is it ready now ???❤❤❤" (53 likes, under [Elon Musk: "I Am Releasing The Tesla Pi Phone With Built-in Starlink WIFI Today!"](https://youtu.be/SoBcOtvWMcY))
-- "Wait, how did the car move backward when the door is open? I thought there was a lockout to prevent motorised movement when the driver door is open." (45 likes, under [How Tesla uses fine print to keep safety lawsuits out of court](https://youtu.be/Mrgp5QREkTA))
-- "Well one tile was gone after the catch so maybe it was the mr beast one? :)" (29 likes, under [MrBeast Built Part of a Real Rocket 🚀🛠️ #shorts](https://youtu.be/tVcVVeOgqdw))
-- "Where can I get one ?????? Wasn't it supposed to of come out 2 years ago ? For 7 years - the quality of Apple products have declined . I purchased a I pad in 2019 and the logic board burn out a few days after the warranty expired and it could not be repaired ." (28 likes, under [Elon Musk: "I Am Releasing The Tesla Pi Phone With Built-in Starlink WIFI Today!"](https://youtu.be/SoBcOtvWMcY))
-- "Is that the mom from Home Alone?!?!" (28 likes, under [How Tesla uses fine print to keep safety lawsuits out of court](https://youtu.be/Mrgp5QREkTA))
-- "Sounds like the new Congress needs to look into this?" (26 likes, under [How Tesla uses fine print to keep safety lawsuits out of court](https://youtu.be/Mrgp5QREkTA))
-- "It still blows my mind that a 171-foot rocket is basically hanging off two 1-foot pegs 😭 would you trust that over landing legs?" (25 likes, under [How SpaceX Catches Starship With 2 Tiny Pegs 🚀 #shorts  #aviation](https://youtu.be/2ZEu2X5CdS4))
-- "Yes, I will buy! where cah I place my order?" (21 likes, under [Elon Musk: "I Am Releasing The Tesla Pi Phone With Built-in Starlink WIFI Today!"](https://youtu.be/SoBcOtvWMcY))
+- "Did anyone else see the "ghost car" in the visualization at 12:25 ? It looks like the model predicted multiple paths for the oncoming Tesla. One of which was turning into the street (incorrect), which didn't get corrected until the road was visible again." (72 likes, under [Tesla Self-Driving 15 First Ride with my Dad](https://youtu.be/qHg4Fjh4Jww))
+- "Well one tile was gone after the catch so maybe it was the mr beast one? :)" (52 likes, under [MrBeast Built Part of a Real Rocket 🚀🛠️ #shorts](https://youtu.be/tVcVVeOgqdw))
+- "It still blows my mind that a 171-foot rocket is basically hanging off two 1-foot pegs 😭 would you trust that over landing legs?" (38 likes, under [How SpaceX Catches Starship With 2 Tiny Pegs 🚀 #shorts  #aviation](https://youtu.be/2ZEu2X5CdS4))
+- "OK, on parking, it's very good to see that handicap spots are not arbitrarily pulled in to. My question is now, is there an option in the settings to identify that you *do* have handicap authorization? So that the car is allowed to choose a handicap slot..." (3 likes, under [Tesla Self-Driving 15 First Ride with my Dad](https://youtu.be/qHg4Fjh4Jww))
+- "Can you imagine what the holiday update will look like?! Pedestrians elves and snowmen 😂" (1 likes, under [Tesla Self-Driving 15 First Ride with my Dad](https://youtu.be/qHg4Fjh4Jww))
+- "How's that lunar lander that WE gave you $3,000,000,000 for coming along? I guess that it's being built in the same factory that all non-existant roadsters are." (1 likes, under [the steel rocket weighs less](https://youtu.be/_6dZtmCODys))
+- "Did that really require safety goggles? 😂" (0 likes, under [MrBeast Built Part of a Real Rocket 🚀🛠️ #shorts](https://youtu.be/tVcVVeOgqdw))
+- "I wonder what we don't know about? I'm just guessing but I assume we are probably at least 75 yrs ahead of current technology that we know of." (0 likes, under [MrBeast Built Part of a Real Rocket 🚀🛠️ #shorts](https://youtu.be/tVcVVeOgqdw))
+- "Does the uninterested tie dude belong to Mr bee?" (0 likes, under [MrBeast Built Part of a Real Rocket 🚀🛠️ #shorts](https://youtu.be/tVcVVeOgqdw))
+- "Why wouldn't you be able to smoke a cigar while welding? It's like he gets a brief overview of the technical side by sitting in with real engineers who dumb it down for him" (0 likes, under [the steel rocket weighs less](https://youtu.be/_6dZtmCODys))
+- "Has this man ever spoke a single, unbroken sentence in his life?" (0 likes, under [the steel rocket weighs less](https://youtu.be/_6dZtmCODys))
+- "Why aren't we on Mars yet Elon? You promised us!" (0 likes, under [the steel rocket weighs less](https://youtu.be/_6dZtmCODys))
 
 ### How to use this
 

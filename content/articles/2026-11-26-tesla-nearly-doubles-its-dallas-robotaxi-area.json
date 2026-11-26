@@ -1,0 +1,87 @@
+{
+  "slug": "tesla-nearly-doubles-its-dallas-robotaxi-area",
+  "date": "2026-11-26",
+  "time": "09:00",
+  "category": "robotaxi",
+  "models": [
+    "cybercab",
+    "model-y"
+  ],
+  "layer": "tesla",
+  "topic": "robotaxi",
+  "card": {
+    "en": "Tesla nearly doubles its Dallas Robotaxi area",
+    "nl": "Tesla verdubbelt bijna de Robotaxi-zone in Dallas"
+  },
+  "image": "lib/robotaxi-app-wait.jpg",
+  "image_lock": true,
+  "images": [
+    "lib/robotaxi-app-wait.jpg",
+    "topics/robotaxi-vs-cybercab.jpg",
+    "lib/cybercab-doors-open.jpg",
+    "lib/robotaxi-fleet-dawn.jpg",
+    "lib/cybercab-dash-install.jpg",
+    "topics/robotaxi-my-2.jpg"
+  ],
+  "sources": [
+    {
+      "title": "X — Tesla Robotaxi (@robotaxi), wider Dallas service area, 25 November 2026",
+      "url": "https://x.com/robotaxi/status/2125657961242726732"
+    },
+    {
+      "title": "Tesla North — Tesla Robotaxi Dallas expansion and lower fares, 25 November 2026",
+      "url": "https://teslanorth.com/2026/11/25/tesla-robotaxi-dallas-expansion-lower-fares/"
+    },
+    {
+      "title": "EV Wire — Tesla Robotaxi Dallas geofence expansion to 150 square miles",
+      "url": "https://evwire.com/p/tesla-robotaxi-dallas-geofence-expansion-150-square-miles"
+    },
+    {
+      "title": "The Robotaxi Report — Tesla Dallas Robotaxi area at 150 square miles and lower prices",
+      "url": "https://therobotaxireport.com/news/tesla-dallas-robotaxi-area-150-square-miles-lower-prices"
+    }
+  ],
+  "label": {
+    "style": "n",
+    "en": {
+      "sub": "SQ MILES",
+      "text": "150"
+    },
+    "nl": {
+      "sub": "MIJL²",
+      "text": "150"
+    }
+  },
+  "gen_image": {
+    "prompt": "Editorial illustration of a gold two-seat Cybercab on the right side of a wide city road in daylight, butterfly doors closed, two seats and a simple centre screen, no steering wheel and no pedals, left-hand-drive cabin layout, no people, no logos, no readable text, no licence plate, no map, calm open space in the lower-left third",
+    "subject": "a gold two-seat Cybercab with no steering wheel and no pedals",
+    "refs": [
+      {
+        "src": "lib/cybercab-street-day.jpg"
+      }
+    ],
+    "profile": "editorial",
+    "category": "A",
+    "describe": "Illustration of a gold two-seat Cybercab on a city road. Not a photograph of the Dallas service map or of the post on 25 November 2026.",
+    "extra": [
+      {
+        "prompt": "Closer front three-quarter of the same gold two-seat Cybercab in the right-hand lane of a city road, doors closed, no steering wheel visible through the glass, daylight, no people, no logos, no readable text, calm space in the lower-left third",
+        "describe": "Closer illustration of the same gold two-seat Cybercab on a city road"
+      },
+      {
+        "prompt": "The same gold two-seat Cybercab stopped at a kerb on the right side of an empty multi-lane road, doors closed, no steering wheel, no people, no logos, no readable text, calm space in the lower-left third",
+        "describe": "Illustration of the same gold two-seat Cybercab at a kerb"
+      }
+    ]
+  },
+  "en": {
+    "title": "Tesla nearly doubles its Dallas Robotaxi area",
+    "description": "On 25 November 2026 Tesla's Robotaxi account posted a wider Dallas map and wrote that there are more cars and lower prices. Estimates traced from that map put the zone at about 150 square miles, up from about 81 to 82.",
+    "body": "<p>Tesla's Dallas Robotaxi area now covers about 150 square miles, roughly 80 percent or more above the zone it replaced. On 25 November 2026 the official Robotaxi account on X, @robotaxi, posted \"Just grew wider in Dallas. More cars, less $, Happy Thanksgiving!\" with a map of the larger service area. Tesla North and EV Wire both reported that post. EV Wire, and The Robotaxi Report citing Not a Tesla App, traced the map and put the old zone at about 81 to 82 square miles and the new one at about 150 square miles, about 390 square kilometres. Those sizes are estimates from the traced boundary, not a figure Tesla published. The public record of the change is that one post and that map.</p>\n<h2>What did the Robotaxi account post?</h2>\n<p><strong>A wider Dallas map, and one line about more cars and lower prices.</strong> The words are \"Just grew wider in Dallas. More cars, less $, Happy Thanksgiving!\" Tesla North and EV Wire each reported the post from @robotaxi, map included. \"Just grew wider\" is the claim about the service area. \"More cars\" is the claim about the fleet. \"Less $\" is the claim about price. The Thanksgiving line is in the same post and adds no number. The map is a picture of the boundary, not a table of miles, fares or vehicles. A square-mileage figure has to be read off that picture.</p>\n<h2>So how large is the Dallas zone now?</h2>\n<p><strong>About 150 square miles, up from about 81 to 82.</strong> The rise is roughly 80 percent or more. EV Wire traced Tesla's map and reported about 150 square miles, about 390 square kilometres. The Robotaxi Report, citing Not a Tesla App, describes the same step, from about 81 to 82 square miles to about 150. Tesla did not print either number. Both outlets are estimating by following the edge of the map. The old zone is given as a short range, about 81 to 82 square miles, because a traced line is not one official mile. The drawing still shows which way the boundary moved.</p>\n<h2>Where does the new zone reach?</h2>\n<p><strong>North past I-635, the LBJ Freeway, toward Addison, Farmers Branch and Richardson.</strong> Tesla North, EV Wire and The Robotaxi Report all describe that northern stretch. The new area crosses I-635 and runs toward those three places. The sentence in the post does not name them. The names come from the outlets that read the map. A rider looking at the new boundary is looking north of the LBJ Freeway, toward those communities. The size of that area next to the zone in the neighbouring city is a separate comparison.</p>\n<h2>So how does Dallas compare with Fort Worth?</h2>\n<p><strong>The new Dallas zone is slightly larger than Fort Worth's.</strong> Fort Worth's Robotaxi zone is roughly 143 square miles, and that figure is an estimate too. EV Wire makes the comparison, and The Robotaxi Report cites Not a Tesla App for the same point. About 150 square miles against roughly 143 is a small gap between two traced maps. On those estimates Dallas is the larger zone. The comparison does not say the zones touch, and it does not say a rider can travel from one city into the other inside a single area. It is a comparison of size. The post also made two promises the map does not turn into numbers.</p>\n<h2>What did Tesla leave out about cars and fares?</h2>\n<p><strong>A fare schedule, any length of time for the lower prices, and any count of the extra cars.</strong> Tesla North and EV Wire both note the gaps. The account wrote \"more cars\" and \"less $\" and stopped. There is no new fare schedule, no line on how long the lower pricing lasts, and no figure for how many vehicles were added. A rider can see a wider map and a promise of more cars and lower prices. The rider cannot read the new price, the last day of that price, or the size of the added fleet. The vehicles already taking Dallas rides are a different fact from the count Tesla did not give.</p>\n<h2>Which vehicles were already riding in Dallas?</h2>\n<p><strong>Cybercab rides had started less than a week earlier, and Model Y Robotaxi rides were already running.</strong> Dallas became the second city after Austin to get Cybercab rides. The Cybercab is a two-seater with no steering wheel and no pedals. EV Wire places that arrival earlier this month and calls Dallas the second city after Austin. Tesla North reports the same order, and notes that Dallas already had Model Y Robotaxi rides. The expansion post does not limit the wider zone to one of those vehicles. It says the service grew wider, with more cars and lower prices.</p>\n<p>On the estimates traced from Tesla's map, Dallas now stands at about 150 square miles, up from about 81 to 82. The boundary runs north of I-635 toward Addison, Farmers Branch and Richardson, a little above Fort Worth's roughly 143 square miles. The post promised more cars and lower prices without a fare, a duration or a vehicle count.</p>"
+  },
+  "nl": {
+    "title": "Tesla verdubbelt bijna de Robotaxi-zone in Dallas",
+    "description": "Op 25 november 2026 zette het Robotaxi-account van Tesla een grotere kaart van Dallas online, met meer auto's en lagere prijzen. Wie die kaart natrekt, komt op ongeveer 150 vierkante mijl, tegen ongeveer 81 tot 82 daarvoor.",
+    "body": "<p>De Robotaxi-zone van Tesla in Dallas beslaat nu ongeveer 150 vierkante mijl, ruim 80 procent meer dan de zone daarvoor. Op 25 november 2026 plaatste het officiële Robotaxi-account op X, @robotaxi, de zin \"Just grew wider in Dallas. More cars, less $, Happy Thanksgiving!\" en een kaart van het grotere gebied. Tesla North en EV Wire meldden die post allebei. EV Wire, en The Robotaxi Report met een verwijzing naar Not a Tesla App, trokken de kaart na: eerst ongeveer 81 tot 82 vierkante mijl, nu ongeveer 150, zo'n 390 vierkante kilometer. Die oppervlaktes zijn schattingen langs de getekende rand, geen cijfer dat Tesla zelf publiceerde. De wijziging staat in die post en op die kaart.</p>\n<h2>Wat plaatste het Robotaxi-account?</h2>\n<p><strong>Een grotere kaart van Dallas, en één zin over meer auto's en lagere prijzen.</strong> De tekst luidt: \"Just grew wider in Dallas. More cars, less $, Happy Thanksgiving!\" Tesla North en EV Wire meldden de post van @robotaxi allebei, inclusief de kaart. \"Just grew wider\" zegt dat het gebied breder werd. \"More cars\" gaat over de vloot: meer auto's. \"Less $\" gaat over de prijs: minder geld. De Thanksgiving-groet staat in dezelfde post en voegt geen getal toe. De kaart is een tekening van de grens, geen tabel met mijlen, tarieven of voertuigen. Een oppervlakte haal je uit die tekening.</p>\n<h2>Dus hoe groot is de zone in Dallas nu?</h2>\n<p><strong>Ongeveer 150 vierkante mijl, tegen ongeveer 81 tot 82.</strong> De groei is ruim 80 procent. EV Wire trok de kaart van Tesla na en kwam op ongeveer 150 vierkante mijl, ongeveer 390 vierkante kilometer. The Robotaxi Report haalt Not a Tesla App aan en beschrijft dezelfde stap, van ongeveer 81 tot 82 vierkante mijl naar ongeveer 150. Tesla drukte geen van beide getallen af. Beide media schatten door de rand van de kaart te volgen. Voor de oude zone houden ze het op ongeveer 81 tot 82 vierkante mijl, want een nagetrokken lijn is geen officieel cijfer van Tesla. De tekening laat wel zien welke kant de grens opschoof.</p>\n<h2>Waar loopt de nieuwe zone?</h2>\n<p><strong>Naar het noorden voorbij I-635, de LBJ Freeway, richting Addison, Farmers Branch en Richardson.</strong> Tesla North, EV Wire en The Robotaxi Report beschrijven alle drie die noordelijke uitbreiding. De nieuwe zone steekt I-635 over en loopt naar die drie plaatsen. De zin in de post noemt ze niet. De namen komen van de media die de kaart lazen. De nieuwe grens ligt ten noorden van de LBJ Freeway, richting die plaatsen. Hoe groot dat gebied is naast de zone in de buurstad, is een aparte vergelijking.</p>\n<h2>Dus hoe verhoudt Dallas zich tot Fort Worth?</h2>\n<p><strong>De nieuwe zone in Dallas is iets groter dan die in Fort Worth.</strong> De Robotaxi-zone in Fort Worth is ruwweg 143 vierkante mijl, en ook dat is een schatting. EV Wire maakt de vergelijking, en The Robotaxi Report haalt Not a Tesla App aan voor hetzelfde punt. Ongeveer 150 vierkante mijl tegen ruwweg 143 is een klein verschil tussen twee nagetrokken kaarten. Op die schattingen is Dallas de grotere zone. De vergelijking zegt niet dat de zones elkaar raken, en niet dat een passagier van de ene stad naar de andere rijdt binnen één gebied. Het is een vergelijking van oppervlakte. In de post zitten ook twee beloftes die de kaart niet in getallen omzet.</p>\n<h2>Wat liet Tesla weg over auto's en tarieven?</h2>\n<p><strong>Een tarieflijst, een einddatum voor de lagere prijzen, en een aantal extra auto's.</strong> Tesla North en EV Wire wijzen allebei op die gaten. Het account schreef \"more cars\" en \"less $\" en hield daar op. Er is geen nieuwe tarieflijst, geen zin over hoe lang de lagere prijzen gelden, en geen getal voor het aantal toegevoegde voertuigen. Een passagier ziet een bredere kaart en een belofte van meer auto's en lagere prijzen. De nieuwe prijs, de laatste dag van die prijs en de omvang van de extra vloot staan niet in de post. De auto's die in Dallas al reden, zijn een ander feit dan het aantal dat Tesla niet noemde.</p>\n<h2>Welke auto's reden er al in Dallas?</h2>\n<p><strong>Cybercab-ritten waren minder dan een week eerder begonnen, en er reden al Model Y-Robotaxi's.</strong> Dallas werd de tweede stad na Austin met Cybercab-ritten. De Cybercab is een tweezitter zonder stuur en zonder pedalen. EV Wire schrijft dat die komst eerder deze maand viel, en noemt Dallas de tweede stad na Austin. Tesla North meldt dezelfde volgorde, en schrijft dat Dallas al Model Y-Robotaxi's had. De post over de uitbreiding beperkt de bredere zone niet tot één van die voertuigen. Er staat dat de dienst breder werd, met meer auto's en lagere prijzen.</p>\n<p>Op de schattingen die de kaart van Tesla natrekken staat Dallas nu op ongeveer 150 vierkante mijl, tegen ongeveer 81 tot 82 daarvoor. De grens loopt ten noorden van I-635 richting Addison, Farmers Branch en Richardson, iets groter dan de ruwweg 143 vierkante mijl van Fort Worth. De post beloofde meer auto's en lagere prijzen, zonder tarief, zonder looptijd en zonder aantal voertuigen.</p>"
+  }
+}

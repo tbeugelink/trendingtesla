@@ -942,6 +942,14 @@ article.narrow > h1{margin-left:14px}article.narrow .cform{margin-left:14px}
 .hubhead{padding:18px 0 6px}
 .hubhead h1{font-size:clamp(1.8rem,4vw,2.7rem);letter-spacing:-.03em;line-height:1.08;margin:0 0 10px}
 .hubhead .lead{font-size:1.08rem;line-height:1.55;color:var(--muted);max-width:none;margin:0 0 16px 1px}
+.hubguide{max-width:68ch;margin:0 0 8px}
+.hubguide h2{font-size:1.2rem;line-height:1.3;margin:22px 0 8px}
+.hubguide h3{font-size:1.02rem;line-height:1.35;margin:14px 0 4px;color:var(--head)}
+.hubguide p,.hubguide li{font-size:1rem;line-height:1.55}
+.hubguide ul{margin:0 0 12px;padding-left:1.15em}
+.hubguide .hfacts{list-style:none;padding:0}
+.hubguide .hfacts li{margin:0 0 8px}
+.hubguide a{color:var(--blue2)}
 .mgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 8px;margin:0 0 28px}
 @media (min-width:560px){.mgrid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media (min-width:760px){.mgrid{grid-template-columns:repeat(4,minmax(0,1fr))}}
@@ -6683,24 +6691,78 @@ def _coverage_note(lang):
     return "Nothing here yet. Articles for this section will show up when they are published."
 
 
-def _article_list(items, lang, title, path, crumb_parts=None):
-    """Breadcrumb, a hidden page title, then the lead photo and the other articles."""
+def _article_list(items, lang, title, path, crumb_parts=None, preface=""):
+    """Breadcrumb, a page title, then the lead photo and the other articles.
+
+    A preface replaces the hidden title when the hub has its own evergreen text.
+    """
     parts = list(crumb_parts) if crumb_parts is not None else [(title, path)]
     nav, ld = crumbs(lang, parts)
     hidden = f'<h1 class="visually-hidden">{esc(title)}</h1>'
+    head = preface or hidden
     if not items:
-        return f'{nav}{hidden}<p class="hubnote">{esc(_coverage_note(lang))}</p>', ld
+        return f'{nav}{head}<p class="hubnote">{esc(_coverage_note(lang))}</p>', ld
     feature = home_lead(items[0], lang, title_tag="h2")
     rest = hub_cards(items[1:], lang, mix=True, skip=1) if len(items) > 1 else ""
-    return f'{nav}{hidden}{feature}{rest}', ld
+    return f'{nav}{head}{feature}{rest}', ld
+
+
+def _hub_guides():
+    path = ROOT / "content" / "data" / "hub-guides.json"
+    if not path.exists():
+        return {}
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def hub_guide_desc(key, lang, fallback=""):
+    guide = _hub_guides().get(key) or {}
+    return (guide.get("desc") or {}).get(lang) or fallback
+
+
+def hub_guide_html(key, lang, title):
+    """Evergreen intro, facts, FAQ and article links. Empty when this hub has no guide."""
+    guide = _hub_guides().get(key) or {}
+    if not guide.get("lead"):
+        return ""
+    lead = guide["lead"][lang]
+    facts = "".join(f"<li>{esc(item)}</li>" for item in guide["facts"][lang])
+    body = "".join(f"<p>{esc(paragraph)}</p>" for paragraph in guide["body"][lang])
+    faqs = []
+    entities = []
+    for question, answer in guide["faq"][lang]:
+        faqs.append(f"<h3>{esc(question)}</h3><p>{esc(answer)}</p>")
+        entities.append({
+            "@type": "Question",
+            "name": question,
+            "acceptedAnswer": {"@type": "Answer", "text": answer},
+        })
+    links = "".join(
+        f'<li><a href="{url(lang, item["href"])}">{esc(item[lang])}</a></li>'
+        for item in guide["links"])
+    faq_ld = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": entities,
+    }
+    return (
+        f'<header class="hubhead"><h1>{esc(title)}</h1>'
+        f'<p class="lead">{esc(lead)}</p></header>'
+        f'<div class="hubguide">'
+        f'<h2>{esc(guide["facts_h"][lang])}</h2><ul class="hfacts">{facts}</ul>'
+        f'{body}'
+        f'<h2>{esc(guide["faq_h"][lang])}</h2>{"".join(faqs)}'
+        f'<h2>{esc(guide["links_h"][lang])}</h2><ul>{links}</ul>'
+        f'</div>{ld_script(faq_ld)}'
+    )
 
 
 def topic_hub(spec, items, lang):
-    """Article list for a topic. The intro stays in the meta description only."""
+    """Article list for a topic, with an evergreen guide when one exists."""
     title = _bi(spec["title"], lang)
-    intro = _bi(spec["intro"], lang)
+    intro = hub_guide_desc(spec["key"], lang, _bi(spec["intro"], lang))
     parts = topic_hub_crumb_parts(spec, items, lang)
-    body, ld = _article_list(items, lang, title, spec["path"], crumb_parts=parts)
+    preface = hub_guide_html(spec["key"], lang, title)
+    body, ld = _article_list(items, lang, title, spec["path"], crumb_parts=parts, preface=preface)
     return body, ld, intro
 
 
@@ -7059,11 +7121,12 @@ def _layer_articles(layer, arts):
 
 
 def layer_page(layer, arts, lang):
-    """Hidden title, then the lead photo and the other articles."""
+    """Evergreen guide when one exists, then the lead photo and the other articles."""
     title = _bi(layer["title"], lang)
     items = _layer_articles(layer, arts)
-    body, ld = _article_list(items, lang, title, layer["path"])
-    desc = layer["intro"][lang][0]
+    preface = hub_guide_html(layer["key"], lang, title)
+    body, ld = _article_list(items, lang, title, layer["path"], preface=preface)
+    desc = hub_guide_desc(layer["key"], lang, layer["intro"][lang][0])
     return body, ld, desc, items
 
 
@@ -8906,14 +8969,22 @@ def build():
         raw = str(sh.get("published") or "")[:10]
         if vid:
             entries.append((f"shorts/{vid}/", raw if len(raw) == 10 else None))
+    def guide_stamp(path, items):
+        base = latest_stamp(items) if items else None
+        key = path.strip("/")
+        updated = str(_hub_guides().get("updated") or "")[:10]
+        if key in _hub_guides() and len(updated) == 10:
+            return max(x for x in (base, updated) if x)
+        return base
+
     seen_hubs = set()
     for spec in HUBS:
         seen_hubs.add(spec["path"])
-        entries.append((spec["path"], latest_stamp(hub_articles(spec, arts))))
+        entries.append((spec["path"], guide_stamp(spec["path"], hub_articles(spec, arts))))
     for layer in LAYERS:
         if layer["path"] in seen_hubs:
             continue
-        entries.append((layer["path"], latest_stamp(_layer_articles(layer, arts))))
+        entries.append((layer["path"], guide_stamp(layer["path"], _layer_articles(layer, arts))))
     if not any(path == "starship/" for path, _mod in entries):
         entries.append(("starship/", ship_mod))
     for hub in load_evergreen():
@@ -8994,6 +9065,12 @@ def build():
         "",
         "/fonts/*",
         "  Cache-Control: public, max-age=31536000, immutable",
+        "",
+        "/feed.xml",
+        "  X-Robots-Tag: noindex",
+        "",
+        "/nl/feed.xml",
+        "  X-Robots-Tag: noindex",
         "",
         "/*.css",
         "  Cache-Control: public, max-age=31536000, immutable",

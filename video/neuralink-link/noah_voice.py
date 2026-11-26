@@ -1,9 +1,8 @@
 """Noah narration for the LINK pivotal-trial Short. Nothing is uploaded or published.
 
-Same Noah voice as the Texas register Short. Delivery is a professional
-newsreader, a little cheerful, not flat and not shouted. Eleven v4 has no
-style or speed slider, so the liveliness is stability 0.30 and clone strength
-0.22. No delivery tags.
+Same request as the Texas register Short v3 (PR 185, video/waymo-texas/noah_voice.py):
+Noah 9hb1f7xQcMLB90qbYSY3, eleven_v4, English, stability 0.30, similarity_boost
+0.75, clone_strength 0.22, mp3 44.1 kHz 192 kbps. No style, no speed, no delivery tags.
 Output: video/neuralink-link/out/<id>.mp3 and alignment.json.
 """
 import base64
@@ -27,6 +26,8 @@ def tts(text):
         "text": text,
         "model_id": "eleven_v4",
         "language_code": "en",
+        # v4 accepts stability, similarity_boost, and clone_strength only.
+        # Same values as the Texas register Short v3. No style, no speed.
         "voice_settings": {
             "stability": 0.30,
             "similarity_boost": 0.75,
@@ -57,7 +58,7 @@ def main():
     result = {
         "voice_id": VOICE,
         "model": "eleven_v4",
-        "tone": "Noah, professional, a little cheerful; stability 0.30, clone strength 0.22; no style slider on v4; no audio tags",
+        "tone": "Noah, professional, a little more cheerful and lively; stability 0.30, clone strength 0.22; no style slider on v4; no audio tags",
         "sentences": [],
     }
     for s in script["sentences"]:

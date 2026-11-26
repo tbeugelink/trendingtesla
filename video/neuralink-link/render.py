@@ -4,15 +4,14 @@ Picture is Neuralink's own 25 Nov 2026 announcement montage: the N1 implant
 and participants using computers, a cursor task, and a handheld game.
 The @cb_doge clip is not used. It is a host at a table cut with satellites.
 
-No shot is longer than 3 seconds. The bed is midrange music only: no whistle,
-no chirp, no hat. The thumbnail is frame 0.
+No shot is longer than 3 seconds. The soundtrack is Noah's narration only:
+no music bed, no whistle, no chirp, no sound effects. The thumbnail is frame 0.
 """
 import json
 import math
 import re
 import struct
 import subprocess
-import wave
 from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageEnhance, ImageFilter, ImageFont
@@ -312,49 +311,6 @@ def render_graphic(shot, dest, cards, t0):
     raw.unlink(missing_ok=True)
 
 
-def write_bed(path, seconds):
-    """Midrange bed only. No chirp, no hat, no noise, nothing above the arp's low harmonics."""
-    sr = 44100
-    n = int(seconds * sr)
-    bpm = 112.0
-    beat = 60.0 / bpm
-    eighth = beat / 2.0
-    notes = (392.00, 440.0, 523.25, 659.25, 523.25, 440.0, 392.00, 349.23)
-    pad = (196.00, 246.94, 293.66)
-    samples = []
-    for i in range(n):
-        t = i / sr
-        ph = t % beat
-        click = 0.0
-        if ph < 0.04:
-            click = math.sin(2 * math.pi * 180.0 * t) * math.exp(-ph / 0.02)
-        step = int(t / eighth) % len(notes)
-        note = notes[step]
-        off = t % eighth
-        pluck = math.sin(2 * math.pi * note * t) * math.exp(-off / 0.07)
-        pluck += 0.25 * math.sin(2 * math.pi * note * 2 * t) * math.exp(-off / 0.05)
-        pad_env = 0.88 + 0.12 * math.sin(2 * math.pi * 0.22 * t)
-        pad_s = pad_env * sum(math.sin(2 * math.pi * f * t) for f in pad) / len(pad)
-        s = 0.35 * click + 0.55 * pluck + 0.28 * pad_s
-        samples.append(s)
-    peak = max(1e-6, max(abs(s) for s in samples))
-    scale = 0.9 / peak
-    fade = int(0.12 * sr)
-    end = int(0.30 * sr)
-    for i in range(n):
-        g = scale
-        if i < fade:
-            g *= i / fade
-        if i > n - end:
-            g *= max(0.0, (n - 1 - i) / end)
-        samples[i] = max(-1.0, min(1.0, samples[i] * g))
-    with wave.open(str(path), "w") as w:
-        w.setnchannels(1)
-        w.setsampwidth(2)
-        w.setframerate(sr)
-        w.writeframes(b"".join(struct.pack("<h", int(max(-1.0, min(1.0, s)) * 28000)) for s in samples))
-
-
 def lufs(path, extra_af=""):
     af = f"{extra_af},ebur128" if extra_af else "ebur128"
     proc = subprocess.run(
@@ -364,6 +320,25 @@ def lufs(path, extra_af=""):
     if not found:
         raise SystemExit(f"no LUFS reading for {path}\n{proc.stderr[-400:]}")
     return float(found[-1])
+
+
+def quietest_db(path, window=0.08):
+    """Quietest short window, in dBFS. A music bed never lets this fall to silence."""
+    raw = subprocess.run(
+        ["ffmpeg", "-v", "error", "-i", str(path), "-ac", "1", "-ar", "16000", "-f", "s16le", "-"],
+        capture_output=True, check=True).stdout
+    count = len(raw) // 2
+    samples = struct.unpack("<" + "h" * count, raw[:count * 2])
+    win = max(1, int(window * 16000))
+    quiet = 0.0
+    for i in range(0, count - win, win // 2):
+        chunk = samples[i:i + win]
+        rms = math.sqrt(sum(s * s for s in chunk) / len(chunk)) / 32768.0
+        if rms > 0.0 and (quiet == 0.0 or rms < quiet):
+            quiet = rms
+    if quiet <= 0.0:
+        return -120.0
+    return 20.0 * math.log10(quiet)
 
 
 def build_background():
@@ -533,32 +508,21 @@ def main():
     run(["ffmpeg", "-y", "-v", "error", *voice_inputs, "-filter_complex", ";".join(voice_filters) + ";" + voice_mix,
          "-map", "[voice]", "-t", f"{total:.3f}", "-c:a", "aac", "-b:a", "192k", str(voice)])
 
-    bed_wav = OUT / "bed.wav"
-    write_bed(bed_wav, total + 0.4)
-    bed = OUT / "bed.m4a"
-    run(["ffmpeg", "-y", "-v", "error", "-i", str(bed_wav), "-af", "lowpass=f=2800",
-         "-c:a", "aac", "-b:a", "192k", str(bed)])
-
     voice_lufs = lufs(voice)
-    bed_lufs = lufs(bed)
-    voice_gain = -13.0 - voice_lufs
-    bed_gain = -22.0 - bed_lufs
-    print(f"voice {voice_lufs:.1f} LUFS gain {voice_gain:+.1f} dB", flush=True)
-    print(f"bed {bed_lufs:.1f} LUFS gain {bed_gain:+.1f} dB", flush=True)
+    voice_gain = -14.0 - voice_lufs
+    print(f"voice {voice_lufs:.1f} LUFS gain {voice_gain:+.1f} dB  (no music bed)", flush=True)
 
     final = OUT / "neuralink-fda-link-trial-short.mp4"
-    run(["ffmpeg", "-y", "-v", "error", "-i", str(silent), "-i", str(voice), "-i", str(bed),
+    run(["ffmpeg", "-y", "-v", "error", "-i", str(silent), "-i", str(voice),
          "-filter_complex",
-         f"[1:a]volume={voice_gain:.2f}dB[v];"
-         f"[2:a]volume={bed_gain:.2f}dB[m];"
-         "[v][m]amix=inputs=2:normalize=0:duration=first,alimiter=limit=0.95:level=false[a]",
+         f"[1:a]volume={voice_gain:.2f}dB,alimiter=limit=0.95:level=false[a]",
          "-map", "0:v", "-map", "[a]", "-t", f"{total:.3f}",
          "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", str(final)])
     mix = lufs(final)
-    hi = lufs(bed, "highpass=f=4000")
-    print(f"LUFS mix {mix:.1f}  bed above-4kHz {hi:.1f}", flush=True)
-    if hi > -45.0:
-        raise SystemExit(f"bed high band {hi:.1f} LUFS is loud enough to be a whistle or chirp")
+    floor = quietest_db(final)
+    print(f"LUFS mix {mix:.1f}  quietest 80 ms {floor:.1f} dBFS", flush=True)
+    if floor > -36.0:
+        raise SystemExit(f"quietest window is {floor:.1f} dBFS, so a music bed or sound effect is still under the voice")
 
     thumb = OUT / "neuralink-fda-link-trial-thumb.jpg"
     run(["ffmpeg", "-y", "-v", "error", "-i", str(final), "-frames:v", "1", "-q:v", "2", str(thumb)])
@@ -578,8 +542,8 @@ def main():
         "duration": round(total, 3),
         "graphics_s": round(graphic, 3),
         "graphics_share": round(graphic / total, 4),
-        "lufs": {"mix": mix, "voice_raw": voice_lufs, "bed_raw": bed_lufs, "bed_above_4khz": hi,
-                 "voice_gain_db": round(voice_gain, 2), "bed_gain_db": round(bed_gain, 2)},
+        "lufs": {"mix": mix, "voice_raw": voice_lufs, "voice_gain_db": round(voice_gain, 2),
+                 "quietest_80ms_dbfs": round(floor, 2), "music": False},
         "worst_clip": {"share": worst_clip[0], "t": worst_clip[1]},
         "worst_black": {"share": worst_black[0], "t": worst_black[1]},
         "per_second": notes,

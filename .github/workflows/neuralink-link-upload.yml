@@ -4,6 +4,11 @@ name: Upload LINK pivotal trial Short
 # This file stays off main and is removed after the upload.
 on:
   workflow_dispatch:
+  push:
+    branches: [cursor/neuralink-fda-link-short-fc71]
+    paths:
+      - .github/workflows/neuralink-link-upload.yml
+      - video/neuralink-link/upload_once.py
 
 permissions:
   contents: read

@@ -4,6 +4,11 @@ name: Post LINK pivotal trial Short to Buffer
 # It does not upload to YouTube and does not touch main. Removed after it runs.
 on:
   workflow_dispatch:
+  push:
+    branches: [cursor/neuralink-fda-link-short-fc71]
+    paths:
+      - .github/workflows/neuralink-link-buffer.yml
+      - video/neuralink-link/buffer_once.py
 
 permissions:
   contents: write

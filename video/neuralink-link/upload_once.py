@@ -4,7 +4,6 @@ The video file is the finished 27.6 s render. This script does not re-encode it
 and does not touch the site, the Shorts queue, or ops/videos-paused.
 """
 import json
-import subprocess
 import sys
 import urllib.error
 import urllib.parse
@@ -19,6 +18,7 @@ HERE = Path(__file__).resolve().parent
 MP4 = HERE / "render-out" / "neuralink-fda-link-trial-short.mp4"
 THUMB = HERE / "render-out" / "neuralink-fda-link-trial-thumb.jpg"
 TITLE = "FDA Approved Neuralink's First Pivotal Trial #Shorts"
+APPROVED_BYTES = 12615574
 DESCRIPTION = """The FDA just approved Neuralink's first pivotal trial.
 
 On 25 November 2026 Neuralink announced FDA approval to launch LINK, the first pivotal trial of an implantable brain-computer interface in the United States. It is for adults with severe paralysis from ALS. The study tests thought control of a cursor, typing, and apps. It builds on more than 30 people already implanted. Enrollment is open. Taking part costs nothing, and travel and lodging for study visits are supported.
@@ -93,11 +93,9 @@ def main():
         raise SystemExit("title drifted")
     if not MP4.is_file() or not THUMB.is_file():
         raise SystemExit("the reviewed mp4 or thumbnail is missing")
-    dur = float(subprocess.check_output(
-        ["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "default=nw=1:nk=1", str(MP4)],
-        text=True).strip())
-    if not 27.4 <= dur <= 27.8:
-        raise SystemExit(f"refusing to upload a file of {dur:.2f}s; the approved render is 27.6s")
+    size = MP4.stat().st_size
+    if size != APPROVED_BYTES:
+        raise SystemExit(f"refusing to upload {size} bytes; the approved render is {APPROVED_BYTES} bytes")
     at = upload.token()
     existing = upload.remote_duplicate(TITLE, at)
     if existing:

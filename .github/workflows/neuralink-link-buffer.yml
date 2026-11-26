@@ -1,0 +1,35 @@
+name: Post LINK pivotal trial Short to Buffer
+
+# One post of the reviewed Short to TikTok, Instagram and Facebook.
+# It does not upload to YouTube and does not touch main. Removed after it runs.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  buffer:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+      - name: Release the file and post via Buffer
+        env:
+          GH_TOKEN: ${{ github.token }}
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+          SOCIAL_SERVICES: tiktok,instagram,facebook
+        run: |
+          f=video/neuralink-link/render-out/neuralink-fda-link-trial-short.mp4
+          thumb=video/neuralink-link/render-out/neuralink-fda-link-trial-thumb.jpg
+          tag=tiktok-neuralink-fda-link-trial-short
+          if ! gh release view "$tag" >/dev/null 2>&1; then
+            gh release create "$tag" "$f" "$thumb" --title "TikTok: neuralink-fda-link-trial-short" \
+              --notes "Video file for Buffer. Not a YouTube upload." --latest=false
+          else
+            gh release upload "$tag" "$f" "$thumb" --clobber
+          fi
+          base="https://github.com/${GITHUB_REPOSITORY}/releases/download/${tag}"
+          python3 video/neuralink-link/buffer_once.py \
+            "$base/neuralink-fda-link-trial-short.mp4" \
+            "$base/neuralink-fda-link-trial-thumb.jpg"

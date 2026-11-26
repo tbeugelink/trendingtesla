@@ -36,7 +36,8 @@ jobs:
           PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
           STORY_VOICE: "1"
         run: |
-          if [ "$ELEVENLABS_VOICE_ID" != "9hb1f7xQcMLB90qbYSY3" ]; then unset ELEVENLABS_VOICE_ID; fi
+          # Shorts use Tony Smyles. A stored Noah id must not override that default.
+          if [ "$ELEVENLABS_VOICE_ID" = "9hb1f7xQcMLB90qbYSY3" ]; then unset ELEVENLABS_VOICE_ID; fi
           python3 video/story.py "${{ github.event.inputs.slug }}" en
       - name: Keep the generated scene photos (so a re-render does not pay for them again)
         run: |

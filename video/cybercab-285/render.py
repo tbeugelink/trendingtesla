@@ -1,10 +1,11 @@
 """Cut the Cybercab 285 preview Short. Nothing is uploaded or published.
 
-Picture is official Tesla and Robotaxi footage of Cybercabs in Texas:
-the Austin fleet film (rows, the line, the lot), Giga Texas (a butterfly
-door, a cabin with no steering wheel), and the Dallas arrival (the car
-driving, screen reading Welcome Dallas). No music, no whistle,
+Picture is official Robotaxi footage of Cybercabs in Texas: the Austin
+fleet film (rows, the line, the lot) and Giga Texas (a butterfly door
+and the gold car driving past). No cabin interior. No music, no whistle,
 no swoosh, no sound effect. The thumbnail is frame 0.
+
+The voice is given the numbers as words. Captions stay numerals.
 """
 import json
 import math
@@ -28,10 +29,10 @@ LINES = ("s1", "s2", "s3", "s4", "s5", "s6", "s7", "s8")
 # stretch is how far that window may be slowed. No shot is a still or a fill.
 SHOTS = [
     {"id": "open", "line": "s1", "file": "austin300-4k.mp4", "ss": 28.85, "avail": 2.15,
-     "stretch": 1.15, "hook": True, "zoom": (1.00, 1.06), "crop": (1360, 0, 1216, 2160),
+     "stretch": 1.30, "hook": True, "zoom": (1.00, 1.06), "crop": (1360, 0, 1216, 2160),
      "shows": "Rows of gold Cybercabs in Austin. Hook and thumbnail."},
     {"id": "nose", "line": "s1", "file": "austin300-4k.mp4", "ss": 25.55, "avail": 1.85,
-     "stretch": 1.25, "hook": True, "zoom": (1.04, 1.10), "crop": (1280, 0, 1216, 2160),
+     "stretch": 1.40, "hook": True, "zoom": (1.04, 1.10), "crop": (1280, 0, 1216, 2160),
      "shows": "One gold Cybercab from above, still on the opening line."},
     {"id": "factory", "line": "s2", "file": "austin300-4k.mp4", "ss": 0.50, "avail": 1.70,
      "stretch": 1.20, "zoom": (1.02, 1.08), "crop": (1288, 0, 1216, 2160),
@@ -40,35 +41,38 @@ SHOTS = [
      "stretch": 1.75, "zoom": (1.00, 1.05), "crop": (900, 180, 900, 1600),
      "shows": "Butterfly door with the Cybercab script. The crop stays off the people beside the car."},
     {"id": "lot", "line": "s3", "file": "austin300-4k.mp4", "ss": 36.30, "avail": 2.40,
-     "stretch": 1.15, "zoom": (1.00, 1.05), "crop": (1180, 0, 1216, 2160),
+     "stretch": 1.35, "zoom": (1.00, 1.05), "crop": (1180, 0, 1216, 2160),
      "shows": "Overhead lot of gold Cybercabs. First time past one thousand."},
     {"id": "lot2", "line": "s3", "file": "austin300-4k.mp4", "ss": 39.10, "avail": 2.30,
-     "stretch": 1.20, "zoom": (1.00, 1.06), "crop": (1560, 0, 1216, 2160),
+     "stretch": 1.35, "zoom": (1.00, 1.06), "crop": (1560, 0, 1216, 2160),
      "shows": "The same Austin lot, another row, as 1,107 is said."},
     {"id": "line", "line": "s4", "file": "austin300-4k.mp4", "ss": 6.90, "avail": 1.90,
-     "stretch": 1.25, "zoom": (1.00, 1.06), "crop": (860, 0, 1216, 2160),
+     "stretch": 1.40, "zoom": (1.00, 1.06), "crop": (860, 0, 1216, 2160),
      "shows": "Cybercab body on the Giga Texas line."},
     {"id": "lot3", "line": "s4", "file": "austin300-4k.mp4", "ss": 41.15, "avail": 2.00,
-     "stretch": 1.15, "zoom": (1.00, 1.06), "crop": (860, 0, 1216, 2160),
+     "stretch": 1.30, "zoom": (1.00, 1.06), "crop": (860, 0, 1216, 2160),
      "shows": "Another sharp overhead of the Austin Cybercab rows."},
     {"id": "rows", "line": "s4", "file": "austin300-4k.mp4", "ss": 29.70, "avail": 2.10,
-     "stretch": 1.20, "zoom": (1.02, 1.08), "crop": (1900, 0, 1216, 2160),
+     "stretch": 1.35, "zoom": (1.02, 1.08), "crop": (1900, 0, 1216, 2160),
      "shows": "Another angle on the Austin row, under the Waymo comparison."},
-    {"id": "cabin", "line": "s5", "file": "giga-4k.mp4", "ss": 30.50, "avail": 1.70,
-     "stretch": 1.25, "zoom": (1.00, 1.05), "crop": (1288, 4, 1134, 2016),
-     "shows": "Cabin with a centre screen and no steering wheel."},
-    {"id": "cabin2", "line": "s5", "file": "giga-4k.mp4", "ss": 33.40, "avail": 1.70,
-     "stretch": 1.25, "zoom": (1.02, 1.08), "crop": (1180, 4, 1134, 2016),
-     "shows": "Same wheel-less cabin a moment later, on the road by the factory."},
-    {"id": "city", "line": "s6", "file": "howdy-4k.mp4", "ss": 12.30, "avail": 1.05,
-     "stretch": 1.45, "zoom": (1.00, 1.04), "crop": (1320, 4, 1134, 2016),
-     "shows": "Dallas. St Paul through the windshield, screen reading Welcome Dallas."},
-    {"id": "street", "line": "s6", "file": "howdy-4k.mp4", "ss": 14.15, "avail": 1.25,
-     "stretch": 1.30, "zoom": (1.00, 1.04), "crop": (1320, 4, 1134, 2016),
-     "shows": "The same Dallas ride, a brighter tree-lined block."},
-    {"id": "sun", "line": "s7", "file": "howdy-4k.mp4", "ss": 16.30, "avail": 2.55,
-     "stretch": 1.25, "zoom": (1.00, 1.05), "crop": (1320, 4, 1134, 2016),
-     "shows": "The Dallas ride into low sun. Registered, and this one is on the road."},
+    {"id": "side", "line": "s5", "file": "giga-4k.mp4", "ss": 17.35, "avail": 0.62,
+     "stretch": 2.80, "zoom": (1.00, 1.04), "crop": (1650, 320, 960, 1706),
+     "shows": "Gold Cybercab driving past, the script on the door. No steering wheel in frame."},
+    {"id": "fleet", "line": "s5", "file": "austin300-4k.mp4", "ss": 32.05, "avail": 2.05,
+     "stretch": 1.15, "zoom": (1.00, 1.05), "crop": (1200, 0, 1216, 2160),
+     "shows": "Austin rows of gold Cybercabs, on the line that the fleet has no steering wheel."},
+    {"id": "ride", "line": "s6", "file": "austin300-4k.mp4", "ss": 34.20, "avail": 1.55,
+     "stretch": 1.30, "zoom": (1.00, 1.05), "crop": (1000, 0, 1216, 2160),
+     "shows": "More of the Austin Cybercab fleet that carries riders."},
+    {"id": "ride2", "line": "s6", "file": "austin300-4k.mp4", "ss": 43.25, "avail": 1.20,
+     "stretch": 1.45, "zoom": (1.02, 1.06), "crop": (1100, 0, 1216, 2160),
+     "shows": "Another row of the same gold Cybercabs."},
+    {"id": "yard", "line": "s7", "file": "austin300-4k.mp4", "ss": 2.45, "avail": 1.40,
+     "stretch": 1.40, "zoom": (1.02, 1.08), "crop": (1200, 0, 1216, 2160),
+     "shows": "A gold Cybercab still on the line. Registered, not on the road yet."},
+    {"id": "park", "line": "s7", "file": "austin300-4k.mp4", "ss": 44.50, "avail": 0.80,
+     "stretch": 1.80, "zoom": (1.00, 1.04), "crop": (1100, 0, 1216, 2160),
+     "shows": "Parked Cybercab rows. Not every registered car is giving a ride."},
     {"id": "loop", "line": "s8", "file": "austin300-4k.mp4", "ss": 27.72, "avail": 1.15,
      "stretch": 1.70, "zoom": (1.00, 1.04), "crop": (1360, 0, 1216, 2160),
      "shows": "The opening row as it begins, so the cut back continues."},
@@ -84,11 +88,6 @@ SOURCES = {
         "post": "https://x.com/robotaxi/status/2075766457242415386",
         "file": "https://video.twimg.com/amplify_video/2075766313142845440/vid/avc1/3840x2026/o3gSBKFtdG087qgx.mp4",
         "what": "Robotaxi, 11 Jul 2026, Cool news from Giga Texas, 47 s, 4K",
-    },
-    "howdy-4k.mp4": {
-        "post": "https://x.com/robotaxi/status/2123458263522107564",
-        "file": "https://video.twimg.com/amplify_video/2123458164146552837/vid/avc1/3840x2026/RNR8OfpNqf7ytsEE.mp4",
-        "what": "Robotaxi, 19 Nov 2026, Howdy Dallas, Cybercab has arrived, 30 s, 4K",
     },
 }
 
@@ -126,9 +125,60 @@ def words_of(sentence):
     return words
 
 
+# Longer phrases first, so "two hundred" does not swallow "two hundred eighty-five".
+NUMERALS = (
+    (["two", "hundred", "and", "eighty", "five"], "285"),
+    (["two", "hundred", "eighty", "five"], "285"),
+    (["eleven", "hundred", "and", "seven"], "1,107"),
+    (["eighteen", "hundred", "and", "forty", "one"], "1,841"),
+    (["eighteen", "hundred", "forty", "one"], "1,841"),
+    (["fourteen", "hundred", "and", "nine"], "1,409"),
+    (["fourteen", "hundred", "nine"], "1,409"),
+    (["two", "hundred"], "200"),
+    (["one", "thousand"], "1,000"),
+    (["sixty"], "60"),
+)
+
+
+def _pieces(token):
+    core = token.strip(".,;:!?")
+    return [p.lower() for p in core.replace("-", " ").split() if p]
+
+
+def collapse_numbers(words):
+    """Swap a spoken quantity for the numeral caption, keeping the spoken timing."""
+    out = []
+    i = 0
+    while i < len(words):
+        hit = None
+        for phrase, numeral in NUMERALS:
+            got, acc = [], []
+            k = i
+            while len(got) < len(phrase):
+                if k >= len(words):
+                    break
+                piece = _pieces(words[k][0])
+                if phrase[len(got):len(got) + len(piece)] != piece:
+                    break
+                got.extend(piece)
+                acc.append(words[k])
+                k += 1
+            if got == phrase and acc:
+                punct = acc[-1][0][-1:] if acc[-1][0][-1:] in ".!?" else ""
+                hit = ((numeral + punct, acc[0][1], acc[-1][2]), k)
+                break
+        if hit:
+            out.append(hit[0])
+            i = hit[1]
+        else:
+            out.append(words[i])
+            i += 1
+    return out
+
+
 def caption_cards(sentence, t0):
-    """3 to 5 spoken words per card. A number starts its card, so 285, 1,107, 1,841 and 1,409 appear when they are said."""
-    words = words_of(sentence)
+    """3 to 5 words per card. Spoken quantities are drawn as numerals when they are said."""
+    words = collapse_numbers(words_of(sentence))
     cards, cur = [], []
 
     def flush():
@@ -510,7 +560,7 @@ def main():
         "per_second": notes,
         "shots": rows,
         "sources": SOURCES,
-        "rejected": "The 20 Nov trumpet clip is a rider in a dark cabin, so that face is not the picture. The wide Giga door shot includes two people and plate 007; the cut uses only the door. The Giga drive-by cannot hold the car inside a 9:16 crop, so the rows carry that line.",
+        "rejected": "The Howdy Dallas interior and the Giga cabin point of view are a Model Y cabin with a hand on a steering wheel, so neither is in the cut. The 20 Nov trumpet clip is a rider in a dark cabin. The wide Giga door shot includes two people and plate 007; the cut uses only the door. The front-on drive-by shows plate 003, so that angle is out. The side pass at 17.35 seconds is the driving shot.",
     }, indent=2) + "\n", encoding="utf-8")
     print("RENDER", final, f"{total:.2f}s")
 

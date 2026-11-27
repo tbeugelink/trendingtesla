@@ -1,9 +1,9 @@
 """Cut the Cybercab 285 preview Short. Nothing is uploaded or published.
 
 Picture is official Tesla and Robotaxi footage of Cybercabs in Texas:
-the Austin fleet film (rows, the line, the lot), the Giga Texas drive
-(butterfly doors, a cabin with no steering wheel), and the Dallas arrival
-(the car driving, screen reading Welcome Dallas). No music, no whistle,
+the Austin fleet film (rows, the line, the lot), Giga Texas (a butterfly
+door, a cabin with no steering wheel), and the Dallas arrival (the car
+driving, screen reading Welcome Dallas). No music, no whistle,
 no swoosh, no sound effect. The thumbnail is frame 0.
 """
 import json
@@ -27,33 +27,51 @@ LINES = ("s1", "s2", "s3", "s4", "s5", "s6", "s7", "s8")
 # crop is x, y, w, h on the source. w/h is 9:16. avail is the clean window.
 # stretch is how far that window may be slowed. No shot is a still or a fill.
 SHOTS = [
-    {"id": "open", "line": "s1", "file": "austin300-4k.mp4", "ss": 28.15, "avail": 2.6,
-     "stretch": 1.35, "hook": True, "zoom": (1.00, 1.07), "crop": (1360, 0, 1216, 2160),
+    {"id": "open", "line": "s1", "file": "austin300-4k.mp4", "ss": 28.85, "avail": 2.15,
+     "stretch": 1.15, "hook": True, "zoom": (1.00, 1.06), "crop": (1360, 0, 1216, 2160),
      "shows": "Rows of gold Cybercabs in Austin. Hook and thumbnail."},
-    {"id": "factory", "line": "s2", "file": "austin300-4k.mp4", "ss": 0.55, "avail": 2.3,
-     "stretch": 1.25, "zoom": (1.02, 1.08), "crop": (1288, 0, 1216, 2160),
-     "shows": "A gold Cybercab on the line at Giga Texas, front on, no wheel in frame."},
-    {"id": "doors", "line": "s2", "file": "giga-4k.mp4", "ss": 1.05, "avail": 2.1,
-     "stretch": 1.30, "zoom": (1.00, 1.06), "crop": (1540, 4, 1134, 2016),
-     "shows": "Butterfly doors open on a gold Cybercab outside Giga Texas."},
-    {"id": "lot", "line": "s3", "file": "austin300-4k.mp4", "ss": 36.4, "avail": 2.8,
-     "stretch": 1.25, "zoom": (1.00, 1.06), "crop": (1180, 0, 1216, 2160),
-     "shows": "Overhead lot of gold Cybercabs in Austin, the fleet past one thousand."},
-    {"id": "rows", "line": "s4", "file": "austin300-4k.mp4", "ss": 29.55, "avail": 2.4,
-     "stretch": 1.30, "zoom": (1.02, 1.08), "crop": (1980, 0, 1216, 2160),
-     "shows": "Another row of gold Cybercabs, tighter, for the Texas roster against Waymo."},
-    {"id": "cabin", "line": "s5", "file": "giga-4k.mp4", "ss": 30.6, "avail": 2.6,
+    {"id": "nose", "line": "s1", "file": "austin300-4k.mp4", "ss": 25.55, "avail": 1.85,
+     "stretch": 1.25, "hook": True, "zoom": (1.04, 1.10), "crop": (1280, 0, 1216, 2160),
+     "shows": "One gold Cybercab from above, still on the opening line."},
+    {"id": "factory", "line": "s2", "file": "austin300-4k.mp4", "ss": 0.50, "avail": 1.70,
+     "stretch": 1.20, "zoom": (1.02, 1.08), "crop": (1288, 0, 1216, 2160),
+     "shows": "A gold Cybercab on the line at Giga Texas."},
+    {"id": "doors", "line": "s2", "file": "giga-4k.mp4", "ss": 0.42, "avail": 0.84,
+     "stretch": 1.75, "zoom": (1.00, 1.05), "crop": (900, 180, 900, 1600),
+     "shows": "Butterfly door with the Cybercab script. The crop stays off the people beside the car."},
+    {"id": "lot", "line": "s3", "file": "austin300-4k.mp4", "ss": 36.30, "avail": 2.40,
+     "stretch": 1.15, "zoom": (1.00, 1.05), "crop": (1180, 0, 1216, 2160),
+     "shows": "Overhead lot of gold Cybercabs. First time past one thousand."},
+    {"id": "lot2", "line": "s3", "file": "austin300-4k.mp4", "ss": 39.10, "avail": 2.30,
+     "stretch": 1.20, "zoom": (1.00, 1.06), "crop": (1560, 0, 1216, 2160),
+     "shows": "The same Austin lot, another row, as 1,107 is said."},
+    {"id": "line", "line": "s4", "file": "austin300-4k.mp4", "ss": 6.90, "avail": 1.90,
+     "stretch": 1.25, "zoom": (1.00, 1.06), "crop": (860, 0, 1216, 2160),
+     "shows": "Cybercab body on the Giga Texas line."},
+    {"id": "lot3", "line": "s4", "file": "austin300-4k.mp4", "ss": 41.15, "avail": 2.00,
+     "stretch": 1.15, "zoom": (1.00, 1.06), "crop": (860, 0, 1216, 2160),
+     "shows": "Another sharp overhead of the Austin Cybercab rows."},
+    {"id": "rows", "line": "s4", "file": "austin300-4k.mp4", "ss": 29.70, "avail": 2.10,
+     "stretch": 1.20, "zoom": (1.02, 1.08), "crop": (1900, 0, 1216, 2160),
+     "shows": "Another angle on the Austin row, under the Waymo comparison."},
+    {"id": "cabin", "line": "s5", "file": "giga-4k.mp4", "ss": 30.50, "avail": 1.70,
      "stretch": 1.25, "zoom": (1.00, 1.05), "crop": (1288, 4, 1134, 2016),
-     "shows": "Cybercab cabin at Giga Texas. Centre screen, no steering wheel, no pedals."},
-    {"id": "city", "line": "s6", "file": "howdy-4k.mp4", "ss": 9.15, "avail": 2.4,
-     "stretch": 1.30, "zoom": (1.00, 1.05), "crop": (1320, 4, 1134, 2016),
-     "shows": "Dallas arrival. The Cybercab drives, screen reading Welcome Dallas, TX."},
-    {"id": "sun", "line": "s7", "file": "howdy-4k.mp4", "ss": 16.35, "avail": 2.6,
+     "shows": "Cabin with a centre screen and no steering wheel."},
+    {"id": "cabin2", "line": "s5", "file": "giga-4k.mp4", "ss": 33.40, "avail": 1.70,
+     "stretch": 1.25, "zoom": (1.02, 1.08), "crop": (1180, 4, 1134, 2016),
+     "shows": "Same wheel-less cabin a moment later, on the road by the factory."},
+    {"id": "city", "line": "s6", "file": "howdy-4k.mp4", "ss": 12.30, "avail": 1.05,
+     "stretch": 1.45, "zoom": (1.00, 1.04), "crop": (1320, 4, 1134, 2016),
+     "shows": "Dallas. St Paul through the windshield, screen reading Welcome Dallas."},
+    {"id": "street", "line": "s6", "file": "howdy-4k.mp4", "ss": 14.15, "avail": 1.25,
+     "stretch": 1.30, "zoom": (1.00, 1.04), "crop": (1320, 4, 1134, 2016),
+     "shows": "The same Dallas ride, a brighter tree-lined block."},
+    {"id": "sun", "line": "s7", "file": "howdy-4k.mp4", "ss": 16.30, "avail": 2.55,
      "stretch": 1.25, "zoom": (1.00, 1.05), "crop": (1320, 4, 1134, 2016),
-     "shows": "Same Dallas ride into the sun. The empty dash is the cabin, not a letterbox."},
-    {"id": "loop", "line": "s8", "file": "austin300-4k.mp4", "ss": 27.15, "avail": 1.7,
-     "stretch": 1.45, "zoom": (1.00, 1.05), "crop": (1360, 0, 1216, 2160),
-     "shows": "The opening row a moment earlier, so the cut back continues."},
+     "shows": "The Dallas ride into low sun. Registered, and this one is on the road."},
+    {"id": "loop", "line": "s8", "file": "austin300-4k.mp4", "ss": 27.72, "avail": 1.15,
+     "stretch": 1.70, "zoom": (1.00, 1.04), "crop": (1360, 0, 1216, 2160),
+     "shows": "The opening row as it begins, so the cut back continues."},
 ]
 
 SOURCES = {
@@ -109,17 +127,27 @@ def words_of(sentence):
 
 
 def caption_cards(sentence, t0):
-    """3 to 5 spoken words per card. Digits stay as written, so 285 and 1,107 are not spelled out."""
+    """3 to 5 spoken words per card. A number starts its card, so 285, 1,107, 1,841 and 1,409 appear when they are said."""
     words = words_of(sentence)
     cards, cur = [], []
-    for w in words:
-        cur.append(w)
-        endish = w[0][-1:] in ".!?"
-        if len(cur) >= 4 or (endish and len(cur) >= 3):
+
+    def flush():
+        nonlocal cur
+        if cur:
             cards.append(cur)
             cur = []
+
+    for w in words:
+        is_num = any(ch.isdigit() for ch in w[0])
+        if is_num and len(cur) >= 2:
+            flush()
+        cur.append(w)
+        endish = w[0][-1:] in ".!?"
+        if len(cur) >= 4 or (endish and (len(cur) >= 3 or is_num)):
+            flush()
     if cur:
-        if cards and len(cur) < 2:
+        lone = len(cur) == 1 and not any(ch.isdigit() for ch in cur[0][0])
+        if cards and lone:
             cards[-1].extend(cur)
         else:
             cards.append(cur)
@@ -349,7 +377,7 @@ def timeline_of():
         timeline.append({**s, "t0": t, "length": length})
         t += length
         if i < len(LINES) - 1:
-            t += 0.07
+            t += 0.06
     return timeline, t
 
 
@@ -361,7 +389,7 @@ def fit_duration(timeline):
         if not shots:
             raise SystemExit(f"no shots for {key}")
         groups.append((by[key], shots))
-    gap = 0.07
+    gap = 0.06
     for sent, shots in groups:
         need = sent["length"] + (0.0 if sent["id"] == LINES[-1] else gap)
         weights = [s["avail"] * s["stretch"] for s in shots]
@@ -482,7 +510,7 @@ def main():
         "per_second": notes,
         "shots": rows,
         "sources": SOURCES,
-        "rejected": "The 20 Nov trumpet clip is a rider in a dark cabin. The Dallas and Giga cabin shots already show the wheel-less interior, so that face is not the picture.",
+        "rejected": "The 20 Nov trumpet clip is a rider in a dark cabin, so that face is not the picture. The wide Giga door shot includes two people and plate 007; the cut uses only the door. The Giga drive-by cannot hold the car inside a 9:16 crop, so the rows carry that line.",
     }, indent=2) + "\n", encoding="utf-8")
     print("RENDER", final, f"{total:.2f}s")
 

@@ -1,0 +1,91 @@
+{
+  "slug": "tesla-passes-a-thousand-registered-cybercabs-in-texas",
+  "date": "2026-11-27",
+  "time": "09:00",
+  "category": "robotaxi",
+  "models": [
+    "cybercab",
+    "model-y"
+  ],
+  "layer": "tesla",
+  "topic": "robotaxi",
+  "card": {
+    "en": "Tesla passes a thousand registered Cybercabs in Texas",
+    "nl": "Tesla registreert meer dan duizend Cybercabs in Texas"
+  },
+  "image": "lib/cybercab-street-day.jpg",
+  "image_lock": true,
+  "images": [
+    "lib/cybercab-street-day.jpg",
+    "lib/cybercab-line-closeup.jpg",
+    "lib/cybercab-dash-line.jpg",
+    "topics/cybercab-fleet.jpg",
+    "lib/cybercab-interior-roof.jpg",
+    "lib/cybercab-line-front.jpg"
+  ],
+  "sources": [
+    {
+      "title": "Not a Tesla App — Tesla's Cybercab fleet tops 1,000 vehicles in Texas, 26 November 2026",
+      "url": "https://www.notateslaapp.com/news/5095/teslas-cybercab-fleet-tops-1000-vehicles-in-texas"
+    },
+    {
+      "title": "NextBigFuture — Tesla expands the Dallas robotaxi service area and adds 285 Cybercabs, November 2026",
+      "url": "https://www.nextbigfuture.com/2026/11/tesla-expands-dallas-robotaxi-service-area-and-adds-285-cybercab-robotaxi.html"
+    },
+    {
+      "title": "TeslaNorth — Tesla now has more than 1,000 Cybercabs on the Texas robotaxi roster, 26 November 2026",
+      "url": "https://teslanorth.com/2026/11/26/tesla-now-has-more-than-1000-cybercabs-on-texas-robotaxi-roster/"
+    },
+    {
+      "title": "CNBC — Tesla Cybertruck production in Texas, 6 November 2026",
+      "url": "https://www.cnbc.com/2026/11/06/tesla-cybertruck-texas-musk.html"
+    },
+    {
+      "title": "Transport Topics — Tesla to wind down Cybertruck production",
+      "url": "https://www.ttnews.com/articles/tesla-wind-down-cybertruck"
+    }
+  ],
+  "label": {
+    "style": "n",
+    "en": {
+      "sub": "TEXAS",
+      "text": "1,107"
+    },
+    "nl": {
+      "sub": "TEXAS",
+      "text": "1.107"
+    }
+  },
+  "gen_image": {
+    "prompt": "Editorial illustration of a gold two-seat Cybercab driving on the right side of a wide Texas city road in daylight, butterfly doors closed, two seats and a simple centre screen, no steering wheel and no pedals, left-hand-drive cabin, the car large and sharp in the horizontal centre, calm open space in the lower-left third, no people, no logos, no readable text, no licence plate, no map, no chart",
+    "subject": "a gold two-seat Cybercab with no steering wheel and no pedals",
+    "refs": [
+      {
+        "src": "lib/cybercab-street-day.jpg"
+      }
+    ],
+    "profile": "editorial",
+    "category": "A",
+    "describe": "Illustration of a gold two-seat Cybercab on a city road. Not a photograph of the Texas registration list or of the count on 26 November 2026.",
+    "extra": [
+      {
+        "prompt": "Closer front three-quarter of the same gold two-seat Cybercab in the right-hand lane of a city road, doors closed, no steering wheel visible through the glass, daylight, the car large in the centre, calm space in the lower-left third, no people, no logos, no readable text, no licence plate",
+        "describe": "Closer illustration of the same gold two-seat Cybercab on a city road"
+      },
+      {
+        "prompt": "The same gold two-seat Cybercab stopped at the right-hand kerb of an empty multi-lane road, doors closed, no steering wheel, daylight, the car large in the centre, calm space in the lower-left third, no people, no logos, no readable text, no licence plate",
+        "describe": "Illustration of the same gold two-seat Cybercab at a kerb"
+      }
+    ]
+  },
+  "en": {
+    "title": "Tesla passes a thousand registered Cybercabs in Texas",
+    "description": "Tesla registered a record 285 Cybercabs in Texas on Thanksgiving, 26 November 2026, the biggest one-day jump so far. The Texas roster now lists 1,107 Cybercabs, the first time that count has passed a thousand.",
+    "body": "<p>Tesla registered a record 285 Cybercabs in Texas on Thanksgiving, 26 November 2026, the biggest one-day jump in Cybercab registrations so far. The Texas Cybercab count is now 1,107, the first time it has crossed a thousand. Not a Tesla App, NextBigFuture and TeslaNorth each reported the jump and the new total on 26 November. That one-day addition is only part of the list the Texas DMV published the same day.</p>\n<h2>What else did the Texas DMV list?</h2>\n<p><strong>1,841 vehicles under Tesla Robotaxi LLC: 1,107 Cybercabs and 734 Model Ys.</strong> TeslaNorth and NextBigFuture both carry that split, taken from an FSD Database breakdown of the DMV list. The two groups make up the whole 1,841. Cybercabs are the larger group. The same list still holds 734 Model Ys, registered to the same company. The 285 Cybercabs added on Thanksgiving sit inside the 1,107. They are not a further 285 stacked on top of that total. A reader who keeps only the thousand misses the Model Ys that remain beside them. Both figures are registrations. They are not a count of cars giving rides right now.</p>\n<h2>So what share of the roster is a Cybercab?</h2>\n<p><strong>About 60 percent, up from about 53 percent at TeslaNorth's previous check.</strong> That earlier check counted 822 Cybercabs. TeslaNorth reports both shares, about 60 percent now and about 53 percent then. NextBigFuture also puts the current Cybercab share at about 60 percent. The new total of 1,107 is 285 above the 822 from that previous check, the same number as the Thanksgiving jump. The share moved because Cybercabs grew on a roster that still includes the 734 Model Ys. A percentage of a registration list does not name a city. It does not say where the next batch will go.</p>\n<h2>What does a line on the roster show?</h2>\n<p><strong>A registration, not a count of cars giving rides right now.</strong> Not a Tesla App and TeslaNorth both draw that line. The roster is the set of vehicles listed in Texas under Tesla Robotaxi LLC. It records that a vehicle is registered. It does not record which of those vehicles are giving rides, and it does not show which city gets the next batch. The reports that give the figure of 1,107 leave it as a roster total. They do not turn it into a count of cars carrying passengers. The Cybercabs already in service run in two cities, and the roster does not choose between them.</p>\n<h2>Where do Cybercabs already take riders?</h2>\n<p><strong>In Austin and in Dallas.</strong> Paid Cybercab rides started in Austin in September, and Cybercabs came to Dallas in November 2026. Not a Tesla App and TeslaNorth both report those two cities and that order. This week Tesla nearly doubled its Dallas Robotaxi service area to about 150 square miles. Not a Tesla App and NextBigFuture both reported that expansion. How the Dallas zone changed is in <a href=\"/tesla-nearly-doubles-its-dallas-robotaxi-area/\">Tesla nearly doubles its Dallas Robotaxi area</a>. A wider zone in one of the two cities does not say how many of the 1,107 registered Cybercabs are working there. It also does not say which city gets the next batch.</p>\n<h2>What vehicle is on that Cybercab count?</h2>\n<p><strong>A two-seater built for driverless rides, with no steering wheel and no pedals.</strong> TeslaNorth describes the Cybercab that way. CNBC describes the same two-seat Cybercab. The 1,107 registrations are of that vehicle. The 734 Model Ys on the same DMV list are a different vehicle, still registered to Tesla Robotaxi LLC. The Cybercab count is not a Model Y count under another name. The cars being added to the roster are built for a driverless ride, without the wheel and pedals a driver would use. Building more of them at the factory is a separate plan from the registrations already on the Texas list.</p>\n<h2>So what is the plan at Giga Texas?</h2>\n<p><strong>Tesla plans to wind down Cybertruck production at Giga Texas around mid-2027 to make room for Cybercab production.</strong> CNBC reported that plan on 6 November 2026. Transport Topics reported the same wind-down. The plan is about the plant, and the timing sits in the middle of 2027. It describes production still to come, not the cars already registered in Texas. The roster of 26 November remains a list of registrations rather than a live count of rides, and it still does not name the city for the next batch.</p>\n<p>The Thanksgiving registrations added 285 Cybercabs and took the Texas count to 1,107, inside a DMV list of 1,841 vehicles under Tesla Robotaxi LLC. About 60 percent of that roster is now a Cybercab, up from about 53 percent when the count stood at 822. The list is still a roster of registrations, not a tally of rides under way, and it still does not say which city is next.</p>"
+  },
+  "nl": {
+    "title": "Tesla registreert meer dan duizend Cybercabs in Texas",
+    "description": "Tesla registreerde op Thanksgiving, 26 november 2026, een record van 285 Cybercabs in Texas, de grootste stijging op één dag tot nu toe. Op de Texaanse lijst staan nu 1.107 Cybercabs, de eerste keer dat die telling boven de duizend uitkomt.",
+    "body": "<p>Tesla registreerde op Thanksgiving, 26 november 2026, een record van 285 Cybercabs in Texas. Het is de grootste stijging op één dag in de Cybercab-registraties tot nu toe. De telling in Texas staat nu op 1.107, de eerste keer dat die boven de duizend uitkomt. Not a Tesla App, NextBigFuture en TeslaNorth meldden die sprong en het nieuwe totaal alle drie op 26 november. Die ene dag is maar een deel van de lijst die de Texaanse DMV diezelfde dag publiceerde.</p>\n<h2>Wat stond er nog meer op de lijst van de DMV?</h2>\n<p><strong>1.841 voertuigen op naam van Tesla Robotaxi LLC: 1.107 Cybercabs en 734 Model Y's.</strong> TeslaNorth en NextBigFuture geven die verdeling allebei, uit de uitsplitsing van de FSD Database van de DMV-lijst. Die twee groepen vormen samen de 1.841. Cybercabs zijn de grootste groep. Op dezelfde lijst staan nog 734 Model Y's, geregistreerd op naam van hetzelfde bedrijf. De 285 Cybercabs van Thanksgiving zitten in de 1.107. Het zijn er geen 285 extra bovenop dat totaal. Wie alleen het duizendtal onthoudt, mist de Model Y's die ernaast blijven staan. Beide cijfers zijn registraties. Het is geen telling van auto's die op dit moment ritten rijden.</p>\n<h2>Dus welk deel van de lijst is nu een Cybercab?</h2>\n<p><strong>Ongeveer 60 procent, tegen ongeveer 53 procent bij de vorige telling van TeslaNorth.</strong> Bij die eerdere telling stonden er 822 Cybercabs geregistreerd. TeslaNorth noemt beide aandelen: nu ongeveer 60 procent, toen ongeveer 53 procent. NextBigFuture zet het huidige aandeel Cybercabs ook op ongeveer 60 procent. Het nieuwe totaal van 1.107 ligt 285 boven die 822, hetzelfde aantal als de sprong op Thanksgiving. Het aandeel schoof op doordat er Cybercabs bij kwamen op een lijst waarop ook de 734 Model Y's staan. Een percentage van een registratielijst noemt geen stad. Het zegt niet waar de volgende groep naartoe gaat.</p>\n<h2>Wat laat een regel op die lijst zien?</h2>\n<p><strong>Een registratie, geen telling van auto's die op dit moment ritten rijden.</strong> Not a Tesla App en TeslaNorth trekken die grens allebei. Het register is de verzameling voertuigen die in Texas op naam van Tesla Robotaxi LLC staan. Er staat dat een voertuig geregistreerd is. Er staat niet welke van die voertuigen ritten rijden, en er staat niet welke stad de volgende groep krijgt. De berichten die 1.107 noemen, laten dat getal staan als totaal van het register. Ze maken er geen telling van auto's die passagiers vervoeren. De Cybercabs die al in dienst zijn, rijden in twee steden, en het register kiest daar niet tussen.</p>\n<h2>Waar nemen Cybercabs al passagiers mee?</h2>\n<p><strong>In Austin en in Dallas.</strong> Betaalde Cybercab-ritten begonnen in september in Austin, en in november 2026 kwamen de Cybercabs naar Dallas. Not a Tesla App en TeslaNorth melden die twee steden en die volgorde. Deze week heeft Tesla het Robotaxi-gebied in Dallas bijna verdubbeld, tot ongeveer 150 vierkante mijl. Not a Tesla App en NextBigFuture meldden die uitbreiding allebei. Hoe de zone in Dallas veranderde, staat in <a href=\"/nl/tesla-nearly-doubles-its-dallas-robotaxi-area/\">Tesla verdubbelt bijna de Robotaxi-zone in Dallas</a>. Een groter gebied in één van de twee steden zegt niet hoeveel van de 1.107 geregistreerde Cybercabs daar rijden. Het zegt ook niet welke stad de volgende groep krijgt.</p>\n<h2>Welk voertuig staat er op die Cybercab-telling?</h2>\n<p><strong>Een tweezitter voor ritten zonder bestuurder, zonder stuur en zonder pedalen.</strong> TeslaNorth beschrijft de Cybercab zo. CNBC beschrijft dezelfde tweezits-Cybercab. De 1.107 registraties gaan over dat voertuig. De 734 Model Y's op dezelfde DMV-lijst zijn een ander voertuig, wel geregistreerd op naam van Tesla Robotaxi LLC. De Cybercab-telling is geen Model Y-telling onder een andere naam. De auto's die op het register komen, zijn gebouwd voor een rit zonder bestuurder, zonder het stuur en de pedalen die een bestuurder zou gebruiken. Er meer van bouwen in de fabriek is een ander plan dan de registraties die al op de Texaanse lijst staan.</p>\n<h2>Dus wat is het plan in Giga Texas?</h2>\n<p><strong>Tesla wil de productie van de Cybertruck in Giga Texas rond medio 2027 afbouwen, om plaats te maken voor de productie van de Cybercab.</strong> CNBC meldde dat plan op 6 november 2026. Transport Topics meldde dezelfde afbouw. Het plan gaat over de fabriek, en het tijdstip ligt midden in 2027. Het gaat over productie die nog moet komen, niet over de auto's die in Texas al geregistreerd zijn. Het register van 26 november blijft een lijst van registraties en geen live telling van ritten, en het noemt nog altijd niet de stad voor de volgende groep.</p>\n<p>De registraties van Thanksgiving voegden 285 Cybercabs toe en brachten de Texaanse telling op 1.107, binnen een DMV-lijst van 1.841 voertuigen op naam van Tesla Robotaxi LLC. Ongeveer 60 procent van die lijst is nu een Cybercab, tegen ongeveer 53 procent toen de telling op 822 stond. De lijst blijft een register van registraties, geen telling van ritten die bezig zijn, en ze zegt nog altijd niet welke stad de volgende is.</p>"
+  }
+}

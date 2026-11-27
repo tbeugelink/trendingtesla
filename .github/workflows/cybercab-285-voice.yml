@@ -1,0 +1,41 @@
+name: Cybercab 285 Short preview voice
+
+# Renders only the Tony Smyles narration and commits the audio back to this branch.
+# It never uploads to YouTube, never calls Buffer, and does not touch main.
+on:
+  push:
+    branches: [cursor/cybercab-285-one-day-short]
+    paths:
+      - .github/workflows/cybercab-285-voice.yml
+      - video/cybercab-285/script.json
+      - video/cybercab-285/voice.py
+
+permissions:
+  contents: write
+
+concurrency:
+  group: cybercab-285-voice
+  cancel-in-progress: false
+
+jobs:
+  voice:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+      - name: Render Tony Smyles narration
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        run: python3 video/cybercab-285/voice.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: cybercab-285-voice
+          path: video/cybercab-285/out/
+          retention-days: 14
+      - name: Commit the audio to this branch
+        run: |
+          git config user.name "TrendingTesla bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f video/cybercab-285/out
+          git commit -qm "Cybercab 285 Short preview: Tony Smyles narration" || exit 0
+          git push -q origin HEAD:cursor/cybercab-285-one-day-short

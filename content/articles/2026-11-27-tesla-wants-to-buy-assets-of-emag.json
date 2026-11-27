@@ -1,0 +1,89 @@
+{
+  "slug": "tesla-wants-to-buy-assets-of-emag",
+  "date": "2026-11-27",
+  "time": "14:00",
+  "category": "optimus",
+  "also": [
+    "news"
+  ],
+  "layer": "tesla",
+  "topic": "optimus",
+  "card": {
+    "en": "Tesla wants to buy assets of EMAG",
+    "nl": "Tesla wil bezittingen van EMAG overnemen"
+  },
+  "image": "lib/optimus-walking.jpg",
+  "image_lock": true,
+  "images": [
+    "lib/optimus-walking.jpg",
+    "optimus-factory.jpg",
+    "optimus-line.jpg",
+    "optimus-car-door.jpg",
+    "lib/optimus.jpg"
+  ],
+  "sources": [
+    {
+      "title": "Finanznachrichten — Bundeskartellamt listing: Laufende Fusionskontrollverfahren Tesla/EMAG-Gruppe (Vermögenserwerb), 27 November 2026",
+      "url": "https://www.finanznachrichten.de/nachrichten-2026-11/70243411-laufende-fusionskontrollverfahren-tesla-emag-gruppe-vermoegenserwerb-019.htm"
+    },
+    {
+      "title": "Reuters — Tesla plans to acquire German manufacturing systems group EMAG, 27 November 2026",
+      "url": "https://live.euronext.com/en/financial-news/tesla-plans-acquire-german-manufacturing-systems-group-emag"
+    },
+    {
+      "title": "Handelsblatt — Tesla will deutschen Roboter-Spezialisten übernehmen, 27 November 2026",
+      "url": "https://www.handelsblatt.com/unternehmen/industrie/emag-tesla-will-deutschen-roboter-spezialisten-uebernehmen/100273250.html"
+    },
+    {
+      "title": "VinciFi — Tesla meldet Erwerb von EMAG-Vermögen an",
+      "url": "https://www.vincifi.com/insights/tesla-meldet-erwerb-von-emag-vermoegen-an-dd26yfkp"
+    },
+    {
+      "title": "SWR — Tesla übernimmt Maschinenbauer EMAG: Spezialmaschinen für humanoide Roboter, 27 November 2026",
+      "url": "https://www.swr.de/swraktuell/baden-wuerttemberg/stuttgart/tesla-kauf-emag-kartellamt-100.html"
+    }
+  ],
+  "label": {
+    "style": "a",
+    "en": {
+      "sub": "EMAG",
+      "text": "ASSETS"
+    },
+    "nl": {
+      "sub": "EMAG",
+      "text": "BEZITTINGEN"
+    }
+  },
+  "gen_image": {
+    "prompt": "Editorial illustration of a white and black Optimus humanoid robot standing large and sharp in the horizontal centre of a bright machine shop, industrial metal-cutting machines and a lathe behind it, calm open floor in the lower-left third, no people, no logos, no readable text, no company names, no signing table, no office, no cars",
+    "subject": "a white and black Optimus humanoid robot",
+    "refs": [
+      {
+        "src": "lib/optimus-walking.jpg"
+      }
+    ],
+    "profile": "editorial",
+    "category": "A",
+    "describe": "Illustration of an Optimus robot in a machine shop. Not a photograph of EMAG, of Salach, or of the Bundeskartellamt filing.",
+    "extra": [
+      {
+        "prompt": "Closer three-quarter view of the same white and black Optimus humanoid robot beside a large metal-cutting machine in the same bright machine shop, the robot large in the centre, calm open floor in the lower-left third, no people, no logos, no readable text, no company names, no cars",
+        "describe": "Closer illustration of the same Optimus robot beside a metal-cutting machine"
+      },
+      {
+        "prompt": "The same white and black Optimus humanoid robot at a workbench in the same bright machine shop, metal workpieces on the bench, machines soft in the background, the robot large in the centre, calm space in the lower-left third, no people, no logos, no readable text, no company names, no cars",
+        "describe": "Illustration of the same Optimus robot at a workbench in a machine shop"
+      }
+    ]
+  },
+  "en": {
+    "title": "Tesla wants to buy assets of EMAG",
+    "description": "Tesla notified Germany's Federal Cartel Office on 23 November 2026 of a planned acquisition of assets of the EMAG group, case B5-132/26, and the authority listed that review on 27 November 2026. The price and terms were not disclosed, and there is no clearance yet.",
+    "body": "<p>Tesla has notified the Bundeskartellamt, Germany's Federal Cartel Office, of a planned acquisition involving the EMAG group. The filing is dated 23 November 2026 and the case number is B5-132/26. On Friday 27 November 2026 the authority listed the case in its public overview of ongoing merger reviews. The notice is filed as a purchase of assets. The price is not in that overview.</p>\n<h2>What did Tesla notify the Bundeskartellamt of?</h2>\n<p><strong>A planned acquisition involving the EMAG group, filed on 23 November 2026 under case number B5-132/26.</strong> The Bundeskartellamt listing, carried by Finanznachrichten, records that filing date, that case number, and the parties Tesla and the EMAG group. The listing itself is the authority's public overview of ongoing merger-control proceedings, published on 27 November 2026. Reuters reported on that date that a filing with Germany's antitrust authority showed Tesla had submitted plans to acquire the German manufacturing-systems group EMAG. Handelsblatt reported that the cartel office had entered the matter in its overview of ongoing proceedings on Friday, and that the overview gave no details. A line on that overview means a review has been opened. It does not mean the authority has cleared the transaction, and it does not state what Tesla would pay. The case title does say which kind of deal was filed.</p>\n<h2>So is this a takeover of the whole company?</h2>\n<p><strong>The filing is an asset acquisition, a Vermögenserwerb: assets of the EMAG group, not a confirmed takeover of the whole company.</strong> The Bundeskartellamt listing titles the proceeding Tesla/EMAG-Gruppe (Vermögenserwerb). VinciFi reports the same classification. It states that Tesla notified the authority of a planned acquisition of assets of the EMAG group, and that the notice is not a confirmed takeover of the entire company. Reuters described the filing as plans to acquire the manufacturing-systems group, and reported that the details of the transaction were not immediately known. That description is wider than the words on the case title. The title the authority published is the asset acquisition. The notice does not name a price. It names a list of product markets.</p>\n<h2>Which product markets does the filing name?</h2>\n<p><strong>Manufacturing systems and machines for precise production and electrochemical machining of metal workpieces, and laser processing.</strong> The Bundeskartellamt listing names those product markets. VinciFi reports the same set: manufacturing systems and machines for the precise production and electrochemical machining of metal workpieces, and laser processing. The list describes the kind of equipment the notice covers. It does not give a purchase price. It does not, on its own, name the town where those machines are built, or say which parts the machines are used to make.</p>\n<h2>Where is EMAG, and what are the machines used for?</h2>\n<p><strong>EMAG is a machine-tool maker based in Salach, near Stuttgart, in the Göppingen district, and it makes machines used to produce drive systems for humanoid robots.</strong> Reuters places the headquarters near Stuttgart and reports that EMAG manufactures machines used to produce drive systems for humanoid robots. Handelsblatt places the company in Salach and reports that it makes the machines needed to produce drives for humanoid robots. SWR places EMAG in Salach, in the Göppingen district, and reports specialist machines for humanoid robots, including parts for the drive. The three accounts describe one machine-tool maker whose machines are used in humanoid-robot production. Tesla's humanoid robot is Optimus. The filing does not set out a production plan for that robot. Coverage of Optimus is in <a href=\"/tesla-optimus-history-timeline-2021-to-2026/\">Optimus went from a 2021 reveal toward production</a>. The notice still does not say what the assets would cost.</p>\n<h2>So what is known about the price and the review?</h2>\n<p><strong>The price and the terms were not disclosed, and the review is still pending. There is no clearance yet.</strong> Reuters reported that details of the planned transaction were not immediately known. The same report said Tesla declined to comment. Handelsblatt reported that the cartel office overview gave no details. VinciFi reports that the notice dated 23 November 2026 has not been cleared. The public record is the filing, the asset label, the named markets, and a machine-tool maker in Salach whose machines are used for humanoid-robot drive systems. The sum Tesla would pay, and a decision from the Bundeskartellamt, are not in that record.</p>\n<p>Case B5-132/26 is Tesla's notice of a planned acquisition of assets of the EMAG group, filed on 23 November 2026 and listed by the Bundeskartellamt on 27 November 2026. The markets in the notice are manufacturing systems and machines for precise production and electrochemical machining of metal workpieces, and laser processing. EMAG, in Salach near Stuttgart, makes machines used to produce drive systems for humanoid robots. The price is unpublished, Tesla declined to comment to Reuters, and the review has not cleared the deal.</p>\n"
+  },
+  "nl": {
+    "title": "Tesla wil bezittingen van EMAG overnemen",
+    "description": "Tesla meldde op 23 november 2026 bij het Bundeskartellamt een geplande overname van bezittingen van de EMAG-groep, zaak B5-132/26, en de autoriteit zette die toets op 27 november 2026 op de lijst. Prijs en voorwaarden zijn niet bekendgemaakt, en er is nog geen goedkeuring.",
+    "body": "<p>Tesla heeft bij het Bundeskartellamt, de Duitse kartelautoriteit, een geplande overname rond de EMAG-groep aangemeld. De aanmelding is van 23 november 2026 en het zaaknummer is B5-132/26. Op vrijdag 27 november 2026 zette de autoriteit de zaak in haar openbare overzicht van lopende fusieprocedures. Het gaat om een aankoop van bezittingen. De prijs staat niet in dat overzicht.</p>\n<h2>Wat heeft Tesla bij het Bundeskartellamt aangemeld?</h2>\n<p><strong>Een geplande overname rond de EMAG-groep, aangemeld op 23 november 2026 onder zaaknummer B5-132/26.</strong> De vermelding van het Bundeskartellamt, weergegeven door Finanznachrichten, noemt die datum, dat zaaknummer, en de partijen Tesla en de EMAG-groep. De vermelding is het openbare overzicht van lopende fusiecontrole, gepubliceerd op 27 november 2026. Reuters schreef op die datum dat uit een aanmelding bij de Duitse mededingingsautoriteit bleek dat Tesla plannen had ingediend om de Duitse groep voor productiesystemen EMAG over te nemen. Handelsblatt schreef dat het Bundeskartellamt de zaak op vrijdag in het overzicht van lopende procedures had gezet, en dat het overzicht geen details gaf. Een regel op dat overzicht betekent dat de toets is geopend. Het is geen goedkeuring, en er staat niet bij wat Tesla zou betalen. De zaakstitel zegt wel wat voor transactie is aangemeld.</p>\n<h2>Dus gaat het om het hele bedrijf?</h2>\n<p><strong>De aanmelding is een Vermögenserwerb: bezittingen van de EMAG-groep, en geen bevestigde overname van het hele bedrijf.</strong> Het Bundeskartellamt zet de procedure op de lijst als Tesla/EMAG-Gruppe (Vermögenserwerb). VinciFi geeft diezelfde indeling. Het schrijft dat Tesla bij de autoriteit een geplande aankoop van bezittingen van de EMAG-groep heeft aangemeld, en dat de aanmelding geen bevestigde overname van de hele onderneming is. Reuters beschreef de aanmelding als plannen om de groep voor productiesystemen over te nemen, en schreef dat de details van de transactie niet meteen bekend waren. Die formulering gaat verder dan de titel van de zaak. De titel die de autoriteit publiceerde, is de aankoop van bezittingen. Een prijs staat er niet in. Wel een lijst met productmarkten.</p>\n<h2>Welke productmarkten noemt de aanmelding?</h2>\n<p><strong>Productiesystemen en machines voor het nauwkeurig vervaardigen en elektrochemisch bewerken van metalen werkstukken, en laserbewerking.</strong> De vermelding van het Bundeskartellamt noemt die productmarkten. VinciFi noemt dezelfde set: productiesystemen en machines voor de precieze vervaardiging en elektrochemische bewerking van metalen werkstukken, en laserbewerking. De lijst beschrijft het soort apparatuur waar de aanmelding over gaat. Er staat geen koopprijs bij. Ze noemt niet de plaats waar die machines worden gebouwd, en ook niet welke onderdelen ermee worden gemaakt.</p>\n<h2>Waar zit EMAG, en waarvoor dienen de machines?</h2>\n<p><strong>EMAG is een bouwer van werktuigmachines in Salach, bij Stuttgart, in het district Göppingen, en het maakt machines voor aandrijfsystemen van humanoïde robots.</strong> Reuters plaatst het hoofdkantoor bij Stuttgart en schrijft dat EMAG machines maakt waarmee aandrijfsystemen voor humanoïde robots worden geproduceerd. Handelsblatt plaatst het bedrijf in Salach en schrijft dat het de machines maakt die nodig zijn voor de productie van aandrijvingen voor humanoïde robots. SWR plaatst EMAG in Salach, in het district Göppingen, en schrijft over speciale machines voor humanoïde robots, ook voor onderdelen van de aandrijving. De drie berichten beschrijven één bouwer van werktuigmachines, waarvan de machines worden gebruikt bij de productie van humanoïde robots. De humanoïde robot van Tesla is Optimus. In de aanmelding staat geen productieplan voor die robot. Hoe die robot hier eerder is beschreven, staat in <a href=\"/nl/tesla-optimus-history-timeline-2021-to-2026/\">Optimus groeide sinds 2021 toe naar productie</a>. Wat de aanmelding nog steeds niet zegt, is wat de bezittingen zouden kosten.</p>\n<h2>Dus wat is er bekend over de prijs en de toets?</h2>\n<p><strong>Prijs en voorwaarden zijn niet bekendgemaakt, en de toets loopt nog. Er is nog geen goedkeuring.</strong> Reuters schreef dat de details van de geplande transactie niet meteen bekend waren. In hetzelfde bericht staat dat Tesla geen commentaar gaf. Handelsblatt schreef dat het overzicht van het Bundeskartellamt geen details gaf. VinciFi schrijft dat de aanmelding van 23 november 2026 nog niet is goedgekeurd. Openbaar zijn de aanmelding, het label voor de bezittingen, de genoemde markten, en een bouwer van werktuigmachines in Salach waarvan de machines dienen voor aandrijvingen van humanoïde robots. Het bedrag dat Tesla zou betalen, en een besluit van het Bundeskartellamt, staan daar niet bij.</p>\n<p>Zaak B5-132/26 is de aanmelding van Tesla voor een geplande overname van bezittingen van de EMAG-groep, gedaan op 23 november 2026 en door het Bundeskartellamt op de lijst gezet op 27 november 2026. De markten in de aanmelding zijn productiesystemen en machines voor het nauwkeurig vervaardigen en elektrochemisch bewerken van metalen werkstukken, en laserbewerking. EMAG, in Salach bij Stuttgart, maakt machines voor aandrijfsystemen van humanoïde robots. De prijs is niet gepubliceerd, Tesla gaf Reuters geen commentaar, en het Bundeskartellamt heeft de aanmelding nog niet goedgekeurd.</p>\n"
+  }
+}

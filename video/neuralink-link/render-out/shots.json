@@ -1,0 +1,296 @@
+{
+  "duration": 27.624,
+  "graphics_s": 10.769,
+  "graphics_share": 0.3898,
+  "lufs": {
+    "mix": -14.0,
+    "voice_raw": -14.2,
+    "voice_gain_db": 0.2,
+    "quietest_80ms_dbfs": -121.38,
+    "music": false
+  },
+  "worst_clip": {
+    "share": 0.08723958333333333,
+    "t": 6.133333333333334
+  },
+  "worst_black": {
+    "share": 0.15555844907407407,
+    "t": 15.966666666666667
+  },
+  "per_second": [
+    {
+      "t": 0.0,
+      "clip": 0.0158,
+      "black": 0.0291
+    },
+    {
+      "t": 1.0,
+      "clip": 0.0158,
+      "black": 0.0292
+    },
+    {
+      "t": 2.0,
+      "clip": 0.0057,
+      "black": 0.0199
+    },
+    {
+      "t": 3.0,
+      "clip": 0.0062,
+      "black": 0.0174
+    },
+    {
+      "t": 4.0,
+      "clip": 0.0075,
+      "black": 0.0188
+    },
+    {
+      "t": 5.0,
+      "clip": 0.0101,
+      "black": 0.0212
+    },
+    {
+      "t": 6.0,
+      "clip": 0.0101,
+      "black": 0.0212
+    },
+    {
+      "t": 7.0,
+      "clip": 0.0811,
+      "black": 0.0104
+    },
+    {
+      "t": 8.0,
+      "clip": 0.0764,
+      "black": 0.0104
+    },
+    {
+      "t": 9.0,
+      "clip": 0.0071,
+      "black": 0.0102
+    },
+    {
+      "t": 10.0,
+      "clip": 0.0071,
+      "black": 0.0102
+    },
+    {
+      "t": 11.0,
+      "clip": 0.0789,
+      "black": 0.038
+    },
+    {
+      "t": 12.0,
+      "clip": 0.0786,
+      "black": 0.0394
+    },
+    {
+      "t": 13.0,
+      "clip": 0.008,
+      "black": 0.0177
+    },
+    {
+      "t": 14.0,
+      "clip": 0.008,
+      "black": 0.0235
+    },
+    {
+      "t": 15.0,
+      "clip": 0.0094,
+      "black": 0.0106
+    },
+    {
+      "t": 16.0,
+      "clip": 0.0078,
+      "black": 0.1529
+    },
+    {
+      "t": 17.0,
+      "clip": 0.0078,
+      "black": 0.1432
+    },
+    {
+      "t": 18.0,
+      "clip": 0.0067,
+      "black": 0.0095
+    },
+    {
+      "t": 19.0,
+      "clip": 0.0105,
+      "black": 0.0259
+    },
+    {
+      "t": 20.0,
+      "clip": 0.0105,
+      "black": 0.0259
+    },
+    {
+      "t": 21.0,
+      "clip": 0.0129,
+      "black": 0.0211
+    },
+    {
+      "t": 22.0,
+      "clip": 0.0165,
+      "black": 0.0262
+    },
+    {
+      "t": 23.0,
+      "clip": 0.0086,
+      "black": 0.017
+    },
+    {
+      "t": 24.0,
+      "clip": 0.0142,
+      "black": 0.022
+    },
+    {
+      "t": 25.0,
+      "clip": 0.0142,
+      "black": 0.022
+    },
+    {
+      "t": 26.0,
+      "clip": 0.0067,
+      "black": 0.0084
+    },
+    {
+      "t": 27.0,
+      "clip": 0.0067,
+      "black": 0.0084
+    }
+  ],
+  "shots": [
+    {
+      "id": "open",
+      "line": "s1",
+      "file": "announce.mp4",
+      "source_ss": 1.08,
+      "video_in": 0.0,
+      "video_out": 1.798,
+      "duration": 1.798,
+      "shows": "N1 implant, Neuralink announcement montage, turning on a clean field. Hook."
+    },
+    {
+      "id": "person",
+      "line": "s1",
+      "file": "announce.mp4",
+      "source_ss": 2.2,
+      "video_in": 1.798,
+      "video_out": 3.502,
+      "duration": 1.704,
+      "shows": "A trial participant in a chair, from the same montage, as the trial is named."
+    },
+    {
+      "id": "date",
+      "line": "s2",
+      "file": "",
+      "source_ss": null,
+      "video_in": 3.502,
+      "video_out": 6.116,
+      "duration": 2.614,
+      "shows": "November 25, the day Neuralink announced the FDA approval."
+    },
+    {
+      "id": "screen",
+      "line": "s3",
+      "file": "announce.mp4",
+      "source_ss": 5.28,
+      "video_in": 6.116,
+      "video_out": 8.225,
+      "duration": 2.109,
+      "shows": "Laptop from the montage, a map on screen. Neuralink's investigational-device line sits at the bottom."
+    },
+    {
+      "id": "chess",
+      "line": "s3",
+      "file": "announce.mp4",
+      "source_ss": 27.85,
+      "video_in": 8.225,
+      "video_out": 10.402,
+      "duration": 2.177,
+      "shows": "Chess on a laptop in the montage. The board is the picture, not the camera rig beside it."
+    },
+    {
+      "id": "wheel",
+      "line": "s4",
+      "file": "announce.mp4",
+      "source_ss": 19.9,
+      "video_in": 10.402,
+      "video_out": 12.359,
+      "duration": 1.957,
+      "shows": "A participant in a powered wheelchair, at home, from the montage."
+    },
+    {
+      "id": "home",
+      "line": "s4",
+      "file": "announce.mp4",
+      "source_ss": 33.2,
+      "video_in": 12.359,
+      "video_out": 14.244,
+      "duration": 1.885,
+      "shows": "A participant at home with a handheld, from the same montage."
+    },
+    {
+      "id": "cursor",
+      "line": "s5",
+      "file": "announce.mp4",
+      "source_ss": 21.55,
+      "video_in": 14.244,
+      "video_out": 15.98,
+      "duration": 1.736,
+      "shows": "Cursor task on a laptop: target blocks and a moving dot."
+    },
+    {
+      "id": "apps",
+      "line": "s5",
+      "file": "announce.mp4",
+      "source_ss": 35.6,
+      "video_in": 15.98,
+      "video_out": 17.798,
+      "duration": 1.818,
+      "shows": "A handheld game in the montage, with the on-screen cursor arrow."
+    },
+    {
+      "id": "thirty",
+      "line": "s6",
+      "file": "",
+      "source_ss": null,
+      "video_in": 17.798,
+      "video_out": 20.464,
+      "duration": 2.666,
+      "shows": "More than 30 people already implanted."
+    },
+    {
+      "id": "cost",
+      "line": "s7",
+      "file": "",
+      "source_ss": null,
+      "video_in": 20.464,
+      "video_out": 22.947,
+      "duration": 2.483,
+      "shows": "Enrollment is open. Taking part costs nothing."
+    },
+    {
+      "id": "travel",
+      "line": "s8",
+      "file": "",
+      "source_ss": null,
+      "video_in": 22.947,
+      "video_out": 25.953,
+      "duration": 3.006,
+      "shows": "Travel and lodging for study visits are supported."
+    },
+    {
+      "id": "close",
+      "line": "s9",
+      "file": "announce.mp4",
+      "source_ss": 1.12,
+      "video_in": 25.953,
+      "video_out": 27.625,
+      "duration": 1.672,
+      "shows": "The N1 again, tighter, under the line that this is not market approval."
+    }
+  ],
+  "footage": "https://x.com/neuralink/status/2125694580544680185",
+  "rejected": "https://x.com/cb_doge/status/2125700784558166479 is a host plus Starlink satellites, not the implant"
+}

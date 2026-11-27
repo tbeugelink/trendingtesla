@@ -1,0 +1,15 @@
+{
+  "title": "FDA Approved Neuralink's First Pivotal Trial",
+  "slug": "neuralink-fda-link-pivotal-trial",
+  "sentences": [
+    {"id": "s1", "text": "The FDA just approved Neuralink's first pivotal trial.", "caption": "First pivotal trial", "hook": true},
+    {"id": "s2", "text": "Neuralink announced it on November twenty-fifth.", "caption": "Announced November 25"},
+    {"id": "s3", "text": "LINK is the first pivotal brain-implant trial in the United States.", "caption": "First brain-implant trial"},
+    {"id": "s4", "text": "It is for adults with severe paralysis from ALS.", "caption": "Severe paralysis from ALS"},
+    {"id": "s5", "text": "It tests cursor control, typing, and apps by thought.", "caption": "Cursor, typing, and apps"},
+    {"id": "s6", "text": "More than thirty people are already implanted.", "caption": "More than 30 implanted"},
+    {"id": "s7", "text": "Enrollment is open, and it costs nothing.", "caption": "Open, and it costs nothing"},
+    {"id": "s8", "text": "Travel and lodging for study visits are supported.", "caption": "Travel and lodging supported"},
+    {"id": "s9", "text": "This is not market approval.", "caption": "Not market approval"}
+  ]
+}

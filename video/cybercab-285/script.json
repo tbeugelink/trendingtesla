@@ -1,0 +1,14 @@
+{
+  "title": "Tesla Registered 285 Cybercabs In One Day",
+  "slug": "cybercab-285-one-day",
+  "sentences": [
+    {"id": "s1", "text": "Tesla just registered two hundred eighty-five Cybercabs in one day.", "hook": true},
+    {"id": "s2", "text": "A new record. The old mark was about two hundred."},
+    {"id": "s3", "text": "Texas now lists eleven hundred and seven. First time past one thousand."},
+    {"id": "s4", "text": "Tesla has eighteen hundred forty-one robotaxis there. Waymo has fourteen hundred nine."},
+    {"id": "s5", "text": "About sixty percent of that fleet has no steering wheel."},
+    {"id": "s6", "text": "These cars carry riders in Austin and Dallas."},
+    {"id": "s7", "text": "Registered does not mean every one is giving rides yet."},
+    {"id": "s8", "text": "And that was one Thanksgiving."}
+  ]
+}

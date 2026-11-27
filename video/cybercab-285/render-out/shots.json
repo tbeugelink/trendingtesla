@@ -1,0 +1,372 @@
+{
+  "duration": 30.356,
+  "graphics_s": 0,
+  "lufs": {
+    "mix": -14.1,
+    "voice_raw": -15.0,
+    "voice_gain_db": 1.0,
+    "quietest_80ms_dbfs": -102.81,
+    "music": false
+  },
+  "voice": "q1OMOTZNtqpS50TIQtu4 eleven_multilingual_v2 stability 0.45 similarity_boost 0.8 style 0.3 use_speaker_boost true speed 1.07",
+  "worst_clip": {
+    "share": 0.0115625,
+    "t": 25.5
+  },
+  "worst_black": {
+    "share": 0.05843171296296296,
+    "t": 0.13333333333333333
+  },
+  "per_second": [
+    {
+      "t": 0.0,
+      "clip": 0.0102,
+      "black": 0.0574
+    },
+    {
+      "t": 1.0,
+      "clip": 0.0104,
+      "black": 0.0563
+    },
+    {
+      "t": 2.0,
+      "clip": 0.0109,
+      "black": 0.0395
+    },
+    {
+      "t": 3.0,
+      "clip": 0.0105,
+      "black": 0.0519
+    },
+    {
+      "t": 4.0,
+      "clip": 0.0105,
+      "black": 0.0488
+    },
+    {
+      "t": 5.0,
+      "clip": 0.0059,
+      "black": 0.0268
+    },
+    {
+      "t": 6.0,
+      "clip": 0.0077,
+      "black": 0.0307
+    },
+    {
+      "t": 7.0,
+      "clip": 0.0023,
+      "black": 0.0367
+    },
+    {
+      "t": 8.0,
+      "clip": 0.0094,
+      "black": 0.0083
+    },
+    {
+      "t": 9.0,
+      "clip": 0.0039,
+      "black": 0.004
+    },
+    {
+      "t": 10.0,
+      "clip": 0.0036,
+      "black": 0.004
+    },
+    {
+      "t": 11.0,
+      "clip": 0.0083,
+      "black": 0.0074
+    },
+    {
+      "t": 12.0,
+      "clip": 0.0031,
+      "black": 0.0036
+    },
+    {
+      "t": 13.0,
+      "clip": 0.0039,
+      "black": 0.0266
+    },
+    {
+      "t": 14.0,
+      "clip": 0.0059,
+      "black": 0.0282
+    },
+    {
+      "t": 15.0,
+      "clip": 0.0058,
+      "black": 0.0292
+    },
+    {
+      "t": 16.0,
+      "clip": 0.0086,
+      "black": 0.0102
+    },
+    {
+      "t": 17.0,
+      "clip": 0.0071,
+      "black": 0.0057
+    },
+    {
+      "t": 18.0,
+      "clip": 0.0012,
+      "black": 0.0038
+    },
+    {
+      "t": 19.0,
+      "clip": 0.0013,
+      "black": 0.0038
+    },
+    {
+      "t": 20.0,
+      "clip": 0.0077,
+      "black": 0.0349
+    },
+    {
+      "t": 21.0,
+      "clip": 0.0066,
+      "black": 0.009
+    },
+    {
+      "t": 22.0,
+      "clip": 0.0061,
+      "black": 0.0083
+    },
+    {
+      "t": 23.0,
+      "clip": 0.0105,
+      "black": 0.012
+    },
+    {
+      "t": 24.0,
+      "clip": 0.0101,
+      "black": 0.0107
+    },
+    {
+      "t": 25.0,
+      "clip": 0.0105,
+      "black": 0.011
+    },
+    {
+      "t": 26.0,
+      "clip": 0.0109,
+      "black": 0.0347
+    },
+    {
+      "t": 27.0,
+      "clip": 0.008,
+      "black": 0.0381
+    },
+    {
+      "t": 28.0,
+      "clip": 0.0053,
+      "black": 0.0049
+    },
+    {
+      "t": 29.0,
+      "clip": 0.0076,
+      "black": 0.0321
+    },
+    {
+      "t": 30.0,
+      "clip": 0.0077,
+      "black": 0.0312
+    }
+  ],
+  "shots": [
+    {
+      "id": "open",
+      "line": "s1",
+      "file": "austin300-4k.mp4",
+      "source_ss": 28.85,
+      "video_in": 0.0,
+      "video_out": 2.431,
+      "duration": 2.431,
+      "shows": "Rows of gold Cybercabs in Austin. Hook and thumbnail.",
+      "post": "https://x.com/robotaxi/status/2108981691436224816",
+      "source_file": "https://video.twimg.com/amplify_video/2108981082184196096/vid/avc1/3840x2160/JMXBg-QsjE5QIYbt.mp4"
+    },
+    {
+      "id": "nose",
+      "line": "s1",
+      "file": "austin300-4k.mp4",
+      "source_ss": 25.55,
+      "video_in": 2.431,
+      "video_out": 4.684,
+      "duration": 2.253,
+      "shows": "One gold Cybercab from above, still on the opening line.",
+      "post": "https://x.com/robotaxi/status/2108981691436224816",
+      "source_file": "https://video.twimg.com/amplify_video/2108981082184196096/vid/avc1/3840x2160/JMXBg-QsjE5QIYbt.mp4"
+    },
+    {
+      "id": "factory",
+      "line": "s2",
+      "file": "austin300-4k.mp4",
+      "source_ss": 0.5,
+      "video_in": 4.684,
+      "video_out": 6.495,
+      "duration": 1.811,
+      "shows": "A gold Cybercab on the line at Giga Texas.",
+      "post": "https://x.com/robotaxi/status/2108981691436224816",
+      "source_file": "https://video.twimg.com/amplify_video/2108981082184196096/vid/avc1/3840x2160/JMXBg-QsjE5QIYbt.mp4"
+    },
+    {
+      "id": "doors",
+      "line": "s2",
+      "file": "giga-4k.mp4",
+      "source_ss": 0.42,
+      "video_in": 6.495,
+      "video_out": 7.8,
+      "duration": 1.305,
+      "shows": "Butterfly door with the Cybercab script. The crop stays off the people beside the car.",
+      "post": "https://x.com/robotaxi/status/2075766457242415386",
+      "source_file": "https://video.twimg.com/amplify_video/2075766313142845440/vid/avc1/3840x2026/o3gSBKFtdG087qgx.mp4"
+    },
+    {
+      "id": "lot",
+      "line": "s3",
+      "file": "austin300-4k.mp4",
+      "source_ss": 36.3,
+      "video_in": 7.8,
+      "video_out": 10.458,
+      "duration": 2.658,
+      "shows": "Overhead lot of gold Cybercabs. First time past one thousand.",
+      "post": "https://x.com/robotaxi/status/2108981691436224816",
+      "source_file": "https://video.twimg.com/amplify_video/2108981082184196096/vid/avc1/3840x2160/JMXBg-QsjE5QIYbt.mp4"
+    },
+    {
+      "id": "lot2",
+      "line": "s3",
+      "file": "austin300-4k.mp4",
+      "source_ss": 39.1,
+      "video_in": 10.458,
+      "video_out": 13.006,
+      "duration": 2.548,
+      "shows": "The same Austin lot, another row, as 1,107 is said.",
+      "post": "https://x.com/robotaxi/status/2108981691436224816",
+      "source_file": "https://video.twimg.com/amplify_video/2108981082184196096/vid/avc1/3840x2160/JMXBg-QsjE5QIYbt.mp4"
+    },
+    {
+      "id": "line",
+      "line": "s4",
+      "file": "austin300-4k.mp4",
+      "source_ss": 6.9,
+      "video_in": 13.006,
+      "video_out": 15.163,
+      "duration": 2.157,
+      "shows": "Cybercab body on the Giga Texas line.",
+      "post": "https://x.com/robotaxi/status/2108981691436224816",
+      "source_file": "https://video.twimg.com/amplify_video/2108981082184196096/vid/avc1/3840x2160/JMXBg-QsjE5QIYbt.mp4"
+    },
+    {
+      "id": "lot3",
+      "line": "s4",
+      "file": "austin300-4k.mp4",
+      "source_ss": 41.15,
+      "video_in": 15.163,
+      "video_out": 17.271,
+      "duration": 2.108,
+      "shows": "Another sharp overhead of the Austin Cybercab rows.",
+      "post": "https://x.com/robotaxi/status/2108981691436224816",
+      "source_file": "https://video.twimg.com/amplify_video/2108981082184196096/vid/avc1/3840x2160/JMXBg-QsjE5QIYbt.mp4"
+    },
+    {
+      "id": "rows",
+      "line": "s4",
+      "file": "austin300-4k.mp4",
+      "source_ss": 29.7,
+      "video_in": 17.271,
+      "video_out": 19.57,
+      "duration": 2.299,
+      "shows": "Another angle on the Austin row, under the Waymo comparison.",
+      "post": "https://x.com/robotaxi/status/2108981691436224816",
+      "source_file": "https://video.twimg.com/amplify_video/2108981082184196096/vid/avc1/3840x2160/JMXBg-QsjE5QIYbt.mp4"
+    },
+    {
+      "id": "side",
+      "line": "s5",
+      "file": "giga-4k.mp4",
+      "source_ss": 17.35,
+      "video_in": 19.57,
+      "video_out": 20.847,
+      "duration": 1.277,
+      "shows": "Gold Cybercab driving past, the script on the door. No steering wheel in frame.",
+      "post": "https://x.com/robotaxi/status/2075766457242415386",
+      "source_file": "https://video.twimg.com/amplify_video/2075766313142845440/vid/avc1/3840x2026/o3gSBKFtdG087qgx.mp4"
+    },
+    {
+      "id": "fleet",
+      "line": "s5",
+      "file": "austin300-4k.mp4",
+      "source_ss": 32.05,
+      "video_in": 20.847,
+      "video_out": 22.582,
+      "duration": 1.735,
+      "shows": "Austin rows of gold Cybercabs, on the line that the fleet has no steering wheel.",
+      "post": "https://x.com/robotaxi/status/2108981691436224816",
+      "source_file": "https://video.twimg.com/amplify_video/2108981082184196096/vid/avc1/3840x2160/JMXBg-QsjE5QIYbt.mp4"
+    },
+    {
+      "id": "ride",
+      "line": "s6",
+      "file": "austin300-4k.mp4",
+      "source_ss": 34.2,
+      "video_in": 22.582,
+      "video_out": 25.385,
+      "duration": 2.803,
+      "shows": "Austin Cybercabs in the lot, one of them driving between the rows.",
+      "post": "https://x.com/robotaxi/status/2108981691436224816",
+      "source_file": "https://video.twimg.com/amplify_video/2108981082184196096/vid/avc1/3840x2160/JMXBg-QsjE5QIYbt.mp4"
+    },
+    {
+      "id": "yard",
+      "line": "s7",
+      "file": "austin300-4k.mp4",
+      "source_ss": 2.45,
+      "video_in": 25.385,
+      "video_out": 27.039,
+      "duration": 1.654,
+      "shows": "A gold Cybercab still on the line. Registered, not on the road yet.",
+      "post": "https://x.com/robotaxi/status/2108981691436224816",
+      "source_file": "https://video.twimg.com/amplify_video/2108981082184196096/vid/avc1/3840x2160/JMXBg-QsjE5QIYbt.mp4"
+    },
+    {
+      "id": "park",
+      "line": "s7",
+      "file": "austin300-4k.mp4",
+      "source_ss": 43.2,
+      "video_in": 27.039,
+      "video_out": 28.737,
+      "duration": 1.698,
+      "shows": "Parked Cybercab rows. Not every registered car is giving a ride.",
+      "post": "https://x.com/robotaxi/status/2108981691436224816",
+      "source_file": "https://video.twimg.com/amplify_video/2108981082184196096/vid/avc1/3840x2160/JMXBg-QsjE5QIYbt.mp4"
+    },
+    {
+      "id": "loop",
+      "line": "s8",
+      "file": "austin300-4k.mp4",
+      "source_ss": 27.72,
+      "video_in": 28.737,
+      "video_out": 30.357,
+      "duration": 1.62,
+      "shows": "The opening row as it begins, so the cut back continues.",
+      "post": "https://x.com/robotaxi/status/2108981691436224816",
+      "source_file": "https://video.twimg.com/amplify_video/2108981082184196096/vid/avc1/3840x2160/JMXBg-QsjE5QIYbt.mp4"
+    }
+  ],
+  "sources": {
+    "austin300-4k.mp4": {
+      "post": "https://x.com/robotaxi/status/2108981691436224816",
+      "file": "https://video.twimg.com/amplify_video/2108981082184196096/vid/avc1/3840x2160/JMXBg-QsjE5QIYbt.mp4",
+      "what": "Robotaxi, 10 Oct 2026, 300+ Cybercabs serving Austin, 45 s, 4K"
+    },
+    "giga-4k.mp4": {
+      "post": "https://x.com/robotaxi/status/2075766457242415386",
+      "file": "https://video.twimg.com/amplify_video/2075766313142845440/vid/avc1/3840x2026/o3gSBKFtdG087qgx.mp4",
+      "what": "Robotaxi, 11 Jul 2026, Cool news from Giga Texas, 47 s, 4K"
+    }
+  },
+  "rejected": "The Howdy Dallas interior and the Giga cabin point of view are a Model Y cabin with a hand on a steering wheel, so neither is in the cut. The 20 Nov trumpet clip is a rider in a dark cabin. The wide Giga door shot includes two people and plate 007; the cut uses only the door. The front-on drive-by shows plate 003, so that angle is out. The side pass at 17.35 seconds is the driving shot."
+}

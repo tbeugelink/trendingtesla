@@ -1,0 +1,91 @@
+{
+  "slug": "dutch-regulator-sees-no-relevant-tesla-incidents",
+  "date": "2026-11-28",
+  "time": "20:04",
+  "category": "fsd",
+  "layer": "tesla",
+  "topic": "fsd",
+  "card": {
+    "en": "Dutch regulator sees no relevant Tesla incidents",
+    "nl": "RDW ziet geen relevante incidenten met Tesla"
+  },
+  "image": "topics/fsd-4.jpg",
+  "image_lock": true,
+  "images": [
+    "topics/fsd-4.jpg",
+    "topics/fsd-roundabout-eu.jpg",
+    "lib/fsd-screen-highway.jpg",
+    "topics/fsd-3.jpg",
+    "lib/fsd-screen-rain-night.jpg",
+    "topics/fsd-camera-view.jpg"
+  ],
+  "credits": [
+    {
+      "credit": "TrendingTesla library images of a driving screen and of a European street from the driver's seat. Not photographs of the BNR interview or of the RDW",
+      "page": "https://trendingtesla.com/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "BNR Nieuwsradio — RDW: geen relevante incidenten met Tesla's rijassistent",
+      "url": "https://www.bnr.nl/nieuws/mobiliteit/10616312/rdw-geen-relevante-incidenten-met-tesla-s-rijassistent"
+    },
+    {
+      "title": "Drive Tesla Canada — RDW reports no relevant incidents with Tesla assisted driving",
+      "url": "https://driveteslacanada.ca/news/rdw-no-relevant-incidents-tesla-assisted-driving/"
+    },
+    {
+      "title": "Eletric Vehicles — Tesla FSD logs no relevant incidents since April in the Netherlands",
+      "url": "https://eletric-vehicles.com/tesla/tesla-fsd-logs-no-relevant-incidents-since-april-in-the-netherlands/"
+    },
+    {
+      "title": "TeslaNorth — Dutch regulator on Tesla FSD safety monitoring",
+      "url": "https://teslanorth.com/2026/11/28/dutch-regulator-tesla-fsd-safety-monitoring/"
+    },
+    {
+      "title": "RDW — Explanation of the type approval of FSD (Supervised)",
+      "url": "https://www.rdw.nl/en/news/2026/explanation-of-the-type-approval-of-fsd-supervised"
+    }
+  ],
+  "label": {
+    "style": "a",
+    "en": {
+      "sub": "SINCE APRIL",
+      "text": "NO INTERVENTION"
+    },
+    "nl": {
+      "sub": "SINDS APRIL",
+      "text": "GEEN INGRIJPEN"
+    }
+  },
+  "gen_image": {
+    "prompt": "A white Tesla Model Y, left-hand drive, driving on the right side of a quiet Dutch canal street in soft daylight, the car large and sharp in the horizontal centre, the driver a small shape behind the glass looking at the road ahead, calm water and an empty quay in the lower-left third, no close faces, no logos, no readable text, no flags, no radio studio, no government office, no crowd",
+    "subject": "a white Tesla Model Y on a Dutch canal street",
+    "refs": [
+      {"src": "lib/modely-front.jpg"}
+    ],
+    "profile": "editorial",
+    "category": "A",
+    "describe": "An illustration of a white Model Y on a Dutch canal street, with the driver looking at the road. Not a photograph of the BNR interview, the RDW, or any named person.",
+    "extra": [
+      {
+        "prompt": "Closer three-quarter view of the same white Tesla Model Y, left-hand drive, on the right side of the same quiet Dutch canal street, soft daylight, the car large in the centre, the driver a small shape looking forward through the glass, calm water and empty quay in the lower-left third, no close faces, no logos, no readable text, no flags, no crowd",
+        "describe": "The same white Model Y closer on the canal street"
+      },
+      {
+        "prompt": "The same white Tesla Model Y seen from behind, left-hand drive, travelling on the right side of the quiet Dutch canal street, soft daylight, calm water and empty quay in the lower-left third, no close faces, no logos, no readable text, no flags, no crowd",
+        "describe": "The same Model Y driving away along the canal"
+      }
+    ]
+  },
+  "en": {
+    "title": "Dutch regulator sees no relevant Tesla incidents",
+    "description": "The Dutch vehicle authority RDW said on 28 November 2026 that no relevant incidents requiring its intervention have been reported for Tesla's driver-assistance system since the approval in April 2026. The remarks do not include crash or takeover statistics.",
+    "body": "<p>The Dutch vehicle authority RDW says no relevant incidents requiring its intervention have been reported for Tesla's driver-assistance system since the authority approved the system in April 2026. Bernd van Nieuwenhoven, RDW manager of type approvals, said that on 28 November 2026 on BNR Nieuwsradio, during De Nationale Autoshow. In the reporting, his words were: \"There are no relevant incidents in which we have had to intervene.\" Those remarks do not include crash or takeover statistics.</p>\n<h2>So what is missing from that statement?</h2>\n<p><strong>Crash figures and takeover counts are not in it.</strong> TeslaNorth and the reporting based on the BNR interview both mark that limit. A line about incidents in which RDW had to step in is not a tally of crashes. It is not a tally of times a driver took the wheel back either. Van Nieuwenhoven's sentence is about intervention by the authority. The public remarks stop at that sentence.</p>\n<p>The gap stays a gap. How RDW watches the system is a separate arrangement.</p>\n<h2>How does RDW follow the system?</h2>\n<p><strong>RDW monitors the system almost in real time, and Tesla is formally required to submit a report once a month.</strong> TeslaNorth, Drive Tesla Canada and Eletric Vehicles describe that watch and that monthly duty. After the approval, RDW raised the mandatory reporting frequency from once a year to once a month. The authority said it may investigate further, or impose measures, if the findings warrant it. RDW's own explanation of the type approval, and the Eletric Vehicles report, both carry that change and that possibility.</p>\n<p>A monthly report is the rule from the approval onward. The only distance RDW has published is from June.</p>\n<h2>So how far had the cars driven by June?</h2>\n<p><strong>In June 2026 RDW said nearly 40,000 Teslas with the system had driven about 24 million kilometres in the Netherlands since the approval, and that those kilometres had produced no relevant incidents.</strong> The RDW explanation, Drive Tesla Canada and Eletric Vehicles all give that June account. RDW has not published an updated distance. The figure of about 24 million kilometres belongs to June. It is not a total running through 28 November.</p>\n<p>That June account describes the system as it was approved. The name used in Europe now is not the name on the approval.</p>\n<h2>What is the system called in Europe?</h2>\n<p><strong>It was approved as Full Self-Driving (Supervised), and it is now called Tesla Assisted Driving.</strong> Tesla made the name change on its own initiative. The change did not follow an intervention by RDW. BNR, TeslaNorth, Drive Tesla Canada and Eletric Vehicles all report that Tesla chose the new name itself. The new name leaves the April approval in place. It also leaves the driver's task unchanged.</p>\n<h2>What must the driver still do?</h2>\n<p><strong>The driver must still watch the road and be ready to take over.</strong> This is a supervised system. TeslaNorth and RDW's explanation of the type approval both say that. Under this approval, Tesla Assisted Driving is not a car the driver may leave to drive itself. The person at the wheel stays the one who has to be ready.</p>\n<p>That duty sits on the Dutch approval from April 2026. An approval that would cover the European Union is a different decision, and it has not been taken.</p>\n<h2>When could the approval cover more of Europe?</h2>\n<p><strong>The member states' Technical Committee on Motor Vehicles is scheduled to meet on 15 December 2026.</strong> An EU-wide extension of the approval could be voted on at that meeting. A vote is not guaranteed. Drive Tesla Canada and Eletric Vehicles both give 15 December as the date, and both say the meeting was postponed from 1 December, citing Reuters. <a href=\"/eu-delays-tesla-assisted-driving-meeting-to-mid-december/\">That postponement</a> sets the day of the meeting. It does not, by itself, set a vote.</p>\n<p>Until the committee meets, the record RDW gave on 28 November stands as the authority stated it. No relevant incidents requiring RDW to intervene have been reported since the April 2026 approval. Crash statistics and takeover statistics were not part of that statement.</p>"
+  },
+  "nl": {
+    "title": "RDW ziet geen relevante incidenten met Tesla",
+    "description": "De RDW zei op 28 november 2026 dat er sinds de goedkeuring in april 2026 geen relevante incidenten zijn gemeld waarbij de dienst moest ingrijpen bij het rijhulpsysteem van Tesla. In die opmerkingen staan geen cijfers over ongevallen of overnames door de rijder.",
+    "body": "<p>De RDW zegt dat er sinds de goedkeuring in april 2026 geen relevante incidenten zijn gemeld waarbij de dienst moest ingrijpen bij het rijhulpsysteem van Tesla. Bernd van Nieuwenhoven, manager typegoedkeuringen bij de RDW, zei dat op 28 november 2026 op BNR Nieuwsradio, in De Nationale Autoshow. In de berichtgeving luidden zijn woorden: „Er zijn geen relevante incidenten waarbij we hebben moeten ingrijpen.” In die opmerkingen staan geen cijfers over ongevallen, en geen cijfers over hoe vaak een rijder het stuur overnam.</p>\n<h2>Dus wat staat er niet in die zin?</h2>\n<p><strong>Cijfers over ongevallen en over overnames door de rijder horen er niet bij.</strong> TeslaNorth en de berichtgeving op basis van het gesprek bij BNR trekken allebei die grens. Een zin over incidenten waarbij de RDW zelf moest optreden is geen telling van botsingen. Het is ook geen telling van momenten waarop de rijder het stuur terugnam. De zin van Van Nieuwenhoven gaat over ingrijpen door de dienst. Daar houden de openbare opmerkingen op.</p>\n<p>Die ontbrekende cijfers komen er niet vanzelf bij. Hoe de RDW het systeem volgt, is een aparte afspraak.</p>\n<h2>Hoe volgt de RDW het systeem?</h2>\n<p><strong>De RDW houdt het systeem vrijwel live in de gaten, en Tesla moet formeel eens per maand een rapport indienen.</strong> TeslaNorth, Drive Tesla Canada en Eletric Vehicles beschrijven alle drie die bewaking en die maandelijkse plicht. Na de goedkeuring zette de RDW de verplichte rapportage om van eens per jaar naar eens per maand. De dienst zei ook dat ze verder kan onderzoeken of maatregelen kan opleggen als de bevindingen daartoe aanleiding geven. De eigen toelichting van de RDW op de typegoedkeuring en het verslag van Eletric Vehicles noemen allebei die wijziging en die mogelijkheid.</p>\n<p>Vanaf de goedkeuring geldt een rapport per maand. De enige afstand die de RDW heeft gepubliceerd, komt uit juni.</p>\n<h2>Dus hoe ver waren de auto's in juni?</h2>\n<p><strong>In juni 2026 zei de RDW dat bijna 40.000 Tesla's met het systeem sinds de goedkeuring ongeveer 24 miljoen kilometer in Nederland hadden gereden, en dat die kilometers geen relevante incidenten hadden opgeleverd.</strong> De toelichting van de RDW, Drive Tesla Canada en Eletric Vehicles geven alle drie dat juniverslag. De RDW heeft geen bijgewerkte afstand gepubliceerd. Die afstand van ongeveer 24 miljoen kilometer hoort bij juni. Het is geen totaal tot en met 28 november.</p>\n<p>Dat juniverslag beschrijft het systeem zoals het is goedgekeurd. De naam die in Europa nu wordt gebruikt, is niet de naam op de goedkeuring.</p>\n<h2>Hoe heet het systeem in Europa?</h2>\n<p><strong>Het is goedgekeurd als Full Self-Driving (Supervised) en heet nu Tesla Assisted Driving.</strong> Tesla veranderde de naam op eigen initiatief. De wijziging volgde niet op een ingreep van de RDW. BNR, TeslaNorth, Drive Tesla Canada en Eletric Vehicles melden alle vier dat Tesla de nieuwe naam zelf koos. De nieuwe naam laat de goedkeuring van april staan. De taak van de rijder blijft dezelfde.</p>\n<h2>Wat moet de rijder nog steeds doen?</h2>\n<p><strong>De rijder moet de weg blijven volgen en klaarstaan om over te nemen.</strong> Het is een begeleid systeem. TeslaNorth en de toelichting van de RDW op de typegoedkeuring zeggen dat allebei. Onder deze goedkeuring is Tesla Assisted Driving geen auto die de rijder aan zichzelf mag overlaten. Wie achter het stuur zit, blijft degene die klaar moet staan.</p>\n<p>Die plicht hoort bij de Nederlandse goedkeuring van april 2026. Een goedkeuring die de Europese Unie zou dekken, is een ander besluit, en dat besluit is niet genomen.</p>\n<h2>Wanneer kan de goedkeuring meer van Europa dekken?</h2>\n<p><strong>Het Technisch Comité Motorvoertuigen van de lidstaten staat op 15 december 2026 gepland.</strong> Op die vergadering kan worden gestemd over een uitbreiding van de goedkeuring voor de hele EU. Een stemming is niet gegarandeerd. Drive Tesla Canada en Eletric Vehicles noemen allebei 15 december, en allebei schrijven ze dat de vergadering is verplaatst van 1 december naar 15 december, met een verwijzing naar Reuters. <a href=\"/nl/eu-delays-tesla-assisted-driving-meeting-to-mid-december/\">Die verschuiving</a> legt de dag van de vergadering vast. Een stemming hoort daar niet bij.</p>\n<p>Tot het comité vergadert, staat het verslag dat de RDW op 28 november gaf zoals de dienst het formuleerde. Er zijn sinds de goedkeuring van april 2026 geen relevante incidenten gemeld waarbij de RDW moest ingrijpen. Ongevalcijfers en cijfers over overnames door de rijder hoorden niet bij die uitspraak.</p>"
+  }
+}

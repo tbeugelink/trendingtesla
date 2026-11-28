@@ -1,0 +1,76 @@
+{
+  "slug": "tesla-stock-closes-at-exactly-400-dollars",
+  "date": "2026-11-28",
+  "time": "09:02",
+  "category": "earnings",
+  "also": ["spacex"],
+  "card": {
+    "en": "Tesla stock closes at exactly 400 dollars",
+    "nl": "Tesla-aandeel sluit op precies 400 dollar"
+  },
+  "image": "topics/earnings-1.jpg",
+  "image_lock": true,
+  "images": [
+    "topics/earnings-1.jpg",
+    "lib/stock-phone-up.jpg",
+    "lib/starship-pad.jpg",
+    "lib/giga-texas-aerial.jpg",
+    "topics/earnings-7.jpg",
+    "lib/starship-launch.jpg"
+  ],
+  "sources": [
+    {
+      "title": "StockAnalysis — Tesla (TSLA) historical prices, close of 27 November 2026",
+      "url": "https://stockanalysis.com/stocks/tsla/history/"
+    },
+    {
+      "title": "Exa — TSLA daily prices for 27 November 2026",
+      "url": "https://exa.ai/library/markets/stocks/TSLA?date=2026-11-27&view=daily"
+    },
+    {
+      "title": "EV X News — Stock watch, 27 November 2026",
+      "url": "https://evxnews.com/stock-watch-2026-11-27/"
+    },
+    {
+      "title": "Yahoo Finance — Tesla rallies 5% amid SpaceX merger talk, 27 November 2026",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/tesla-rallies-5-amid-spacex-170416697.html"
+    },
+    {
+      "title": "Reuters via Investing.com — SpaceX and Tesla entrust five directors for merger talks, FT reports, 24 November 2026",
+      "url": "https://www.investing.com/news/stock-market-news/spacex-and-tesla-entrusts-five-directors-for-merger-talks-ft-reports-5047055"
+    }
+  ],
+  "label": {
+    "style": "n",
+    "en": {"sub": "EXACT CLOSE", "text": "$400"},
+    "nl": {"sub": "PRECIES SLOT", "text": "$400"}
+  },
+  "gen_image": {
+    "prompt": "A white Tesla sedan in left-hand drive on the right side of a sunny city street, large and sharp in the horizontal centre, a hand at the lower edge holding a phone whose screen is only a simple rising green line with no numbers and no text, calm empty pavement in the lower-left third, soft daylight, no faces, no logos, no flags, no trading floor, no crowd",
+    "subject": "a white Tesla sedan and a phone showing a rising green line",
+    "refs": [{"src": "lib/stock-phone-up.jpg"}],
+    "profile": "editorial",
+    "category": "A",
+    "describe": "An illustration of a white Tesla and a phone with a rising line. Not a photograph of a trading session, a stock exchange, a merger signing or any person.",
+    "extra": [
+      {
+        "prompt": "Closer three-quarter view of the same white Tesla sedan, left-hand drive, on the right side of the same sunny street, the phone with a simple rising green line and no numbers held low at the edge of the frame, calm empty pavement in the lower-left third, no faces, no logos, no text, no flags",
+        "describe": "The same white Tesla closer, with only the edge of the rising line"
+      },
+      {
+        "prompt": "The same white Tesla sedan seen from behind on the right side of the sunny street, left-hand drive, a hand in the foreground holding a phone with a simple rising green line and no numbers, soft daylight, empty pavement in the lower left, no faces, no logos, no text, no flags",
+        "describe": "The same Tesla driving away while the phone shows a rising line"
+      }
+    ]
+  },
+  "en": {
+    "title": "Tesla stock closes at exactly 400 dollars",
+    "description": "Tesla shares closed at exactly $400.00 on 27 November 2026, up $19.86 or 5.22% from $380.14, in a shortened session after Thanksgiving. The move was attributed to renewed Tesla-SpaceX merger talk, and no deal has been announced.",
+    "body": "<p>Tesla stock closed at exactly $400.00 on Friday 27 November 2026. The shares rose $19.86, or 5.22%, from the previous close of $380.14. US markets were open again after Thanksgiving, and they closed early. A close on a round number does not say whether a combination with SpaceX is any closer.</p>\n<h2>How did the session trade?</h2>\n<p><strong>The shares opened at $391.34, traded from $384.66 to $401.18, and about 26.6 million shares changed hands.</strong> The low of $384.66 was still above the previous close of $380.14. The high of $401.18 means the shares traded above $400 before they settled at $400.00. StockAnalysis and the Exa daily page for TSLA both list that open, that range and that volume.</p>\n<p>A price above $400 during the day and a close exactly at $400.00 are two prints, not one. Both of them were set in a shortened session.</p>\n<h2>So why was the session short?</h2>\n<p><strong>US markets reopened after Thanksgiving and closed early, at 1:00 p.m. Eastern.</strong> StockAnalysis marks the Tesla close as 1:00 p.m. EST on 27 November 2026. The EV X News stock watch for that day describes the same early close.</p>\n<p>An early bell does not account for a rise of $19.86, or 5.22%. The volume of about 26.6 million shares is the volume of that shortened session.</p>\n<h2>What moved the shares?</h2>\n<p><strong>The move was attributed to renewed talk of a Tesla-SpaceX merger.</strong> Yahoo Finance tied Friday's rally to that talk. The EV X News stock watch for 27 November attributed the move the same way.</p>\n<p>Naming the same cause is not the same as a signed contract. The reports do not describe a deal that has been signed.</p>\n<h2>Is a merger agreed?</h2>\n<p><strong>No. No merger deal has been announced.</strong> Yahoo Finance and the EV X News stock watch both leave the combination as talk. The key open question is the exchange ratio: how many SpaceX shares per Tesla share.</p>\n<p>That ratio is the price of the combination, stated in shares rather than in dollars. A Tesla close of $400.00 does not answer it. The directors reported to be in the talks are a different fact from the missing number.</p>\n<h2>Who is reported to be in the talks?</h2>\n<p><strong>Both companies have set up special committees of independent directors. Tesla's includes chair Robyn Denholm, Kathleen Wilson-Thompson and Jack Hartung. SpaceX's includes Roelof Botha and Randy Glein. Evercore advises Tesla's committee, and Goldman Sachs and Morgan Stanley advise SpaceX's.</strong> The Financial Times reported the names and the banks. Reuters carried that report on 24 November 2026, and Yahoo Finance's account of Friday's session pointed to the same committees.</p>\n<p>Those five directors were already named in the 24 November report. <a href=\"/five-directors-are-negotiating-the-tesla-spacex-merger/\">That account</a> sets the committees out. It is not an exchange ratio, and Friday's close is not one either. A list of names does not put a date on an announcement, and it does not erase the loss still on the stock for the year.</p>\n<h2>So where does the year stand?</h2>\n<p><strong>Despite the jump, Tesla stock was still down roughly 11 to 12 percent for the year.</strong> Yahoo Finance had the shares down 12% year to date at midday. EV X News put the year-to-date figure at −11.06%. The two numbers sit close together. They are not the same print.</p>\n<p>Bloomberg has reported that a deal could be announced as early as December. Reuters carried that report, and the EV X News stock watch carried it too. A report of a possible month is not a date the companies have set. If an announcement comes, it still has to name how many SpaceX shares would be exchanged for each Tesla share. The close at $400.00 does not name that ratio. Friday's print is also separate from <a href=\"/tesla-stock-has-its-best-day-since-april-2025/\">the session of 23 November</a>.</p>\n<p><em>This article is for information only and is not financial advice.</em></p>"
+  },
+  "nl": {
+    "title": "Tesla-aandeel sluit op precies 400 dollar",
+    "description": "Het aandeel Tesla sloot op 27 november 2026 op precies $400,00, een stijging van $19,86 of 5,22% vanaf $380,14, in een verkorte sessie na Thanksgiving. De beweging werd toegeschreven aan hernieuwde fusiepraat tussen Tesla en SpaceX, en er is geen deal aangekondigd.",
+    "body": "<p>Het aandeel Tesla sloot vrijdag 27 november 2026 op precies $400,00. Het steeg $19,86, of 5,22%, vanaf de vorige slotkoers van $380,14. De Amerikaanse beurzen waren na Thanksgiving weer open, en ze sloten vroeg. Een slot op een rond getal zegt niet of een combinatie met SpaceX dichterbij is.</p>\n<h2>Hoe verliep de sessie?</h2>\n<p><strong>Het aandeel opende op $391,34, bewoog van $384,66 tot $401,18, en er gingen ongeveer 26,6 miljoen aandelen in om.</strong> Het laagste punt, $384,66, lag nog boven de vorige slotkoers van $380,14. De top van $401,18 betekent dat de koers boven $400 heeft gestaan voordat hij op $400,00 bleef staan. StockAnalysis en de dagpagina van Exa voor TSLA vermelden allebei die opening, die band en die omzet.</p>\n<p>Een koers boven $400 gedurende de dag en een slot precies op $400,00 zijn twee noteringen, niet één. Allebei vielen ze in een verkorte sessie.</p>\n<h2>Dus waarom was de sessie kort?</h2>\n<p><strong>De Amerikaanse beurzen gingen na Thanksgiving weer open en sloten vroeg, om 13.00 uur aan de Amerikaanse oostkust.</strong> StockAnalysis zet het Tesla-slot op 27 november 2026 om 13.00 uur EST. De beurswacht van EV X News voor die dag beschrijft dezelfde vroege sluiting.</p>\n<p>Een vroege bel verklaart een stijging van $19,86, of 5,22%, niet. De ongeveer 26,6 miljoen verhandelde aandelen zijn de omzet van die verkorte sessie.</p>\n<h2>Wat bewoog het aandeel?</h2>\n<p><strong>De beweging werd toegeschreven aan hernieuwde gesprekken over een fusie tussen Tesla en SpaceX.</strong> Yahoo Finance koppelde de stijging van vrijdag aan die gesprekken. De beurswacht van EV X News van 27 november schreef de beweging op dezelfde manier toe.</p>\n<p>Dezelfde aanleiding noemen is nog geen getekend contract. De berichten beschrijven geen deal die is getekend.</p>\n<h2>Is er een fusie afgesproken?</h2>\n<p><strong>Nee. Er is geen fusie aangekondigd.</strong> Yahoo Finance en de beurswacht van EV X News laten de combinatie bij gesprekken. De open vraag is de ruilverhouding: hoeveel SpaceX-aandelen per Tesla-aandeel.</p>\n<p>Die verhouding is de prijs van de combinatie, uitgedrukt in aandelen in plaats van in dollars. Een Tesla-slot van $400,00 geeft daar geen antwoord op. De bestuurders die volgens de berichten meedoen, zijn een ander feit dan het ontbrekende getal.</p>\n<h2>Wie zit er volgens de berichten aan tafel?</h2>\n<p><strong>Beide bedrijven hebben speciale commissies van onafhankelijke bestuurders ingesteld. In die van Tesla zitten voorzitter Robyn Denholm, Kathleen Wilson-Thompson en Jack Hartung. In die van SpaceX zitten Roelof Botha en Randy Glein. Evercore adviseert de commissie van Tesla, en Goldman Sachs en Morgan Stanley adviseren die van SpaceX.</strong> De Financial Times meldde de namen en de banken. Reuters bracht dat bericht op 24 november 2026, en het verslag van Yahoo Finance over de sessie van vrijdag wees naar dezelfde commissies.</p>\n<p>Die vijf bestuurders waren al genoemd in het bericht van 24 november. <a href=\"/nl/five-directors-are-negotiating-the-tesla-spacex-merger/\">Dat verslag</a> zet de commissies op een rij. Het is geen ruilverhouding, en het slot van vrijdag is dat evenmin. Een namenlijst zet geen datum op een aankondiging, en haalt het verlies op het aandeel dit jaar niet weg.</p>\n<h2>Dus waar staat het jaar?</h2>\n<p><strong>Ondanks de sprong stond het aandeel Tesla nog ongeveer 11 tot 12 procent lager dit jaar.</strong> Yahoo Finance had het aandeel rond het middaguur 12% lager sinds de jaarwisseling. EV X News zette het cijfer dit jaar op −11,06%. De twee getallen liggen dicht bij elkaar. Het zijn niet dezelfde noteringen.</p>\n<p>Bloomberg heeft gemeld dat een deal al in december bekend kan worden. Reuters bracht dat bericht, en de beurswacht van EV X News ook. Een gemelde maand is geen datum die de bedrijven hebben vastgelegd. Als er een aankondiging komt, moet die nog steeds zeggen hoeveel SpaceX-aandelen tegen één Tesla-aandeel worden geruild. Het slot van $400,00 noemt die verhouding niet. De notering van vrijdag staat ook los van <a href=\"/nl/tesla-stock-has-its-best-day-since-april-2025/\">de sessie van 23 november</a>.</p>\n<p><em>Dit artikel is alleen bedoeld als informatie en is geen financieel advies.</em></p>"
+  }
+}

@@ -1,6 +1,6 @@
 # What works on the TrendingTesla YouTube channel
 
-Updated 2026-11-27 13:48 UTC by tools/learn.py from daily YouTube statistics (76 videos at least 48 hours old). Do not edit by hand.
+Updated 2026-11-28 12:57 UTC by tools/learn.py from daily YouTube statistics (76 videos at least 48 hours old). Do not edit by hand.
 
 - Shorts: 45 videos, typical 884 views after 48 hours.
 - Long videos: 31 videos, typical 26 views after 48 hours.
@@ -22,7 +22,7 @@ Views after 48 hours compared with a typical video of the same kind (1.0x = typi
 - semi: 1.7x views, watched +5 pts vs typical (n=6)
 - model-3, model-y, model-y-l: 1.5x views, watched -4 pts vs typical (n=2)
 - cybertruck: 1.2x views, watched -9 pts vs typical (n=2)
-- roadster: 1.1x views, watched -5 pts vs typical (n=3)
+- roadster: 1.1x views, watched -4 pts vs typical (n=3)
 - model-x, model-x-classic: 1.0x views, watched -17 pts vs typical (n=1)
 - model-s, model-s-classic, model-s-plaid: 0.9x views, watched -14 pts vs typical (n=1)
 - no (company-wide): 0.8x views, watched +7 pts vs typical (n=53)
@@ -59,14 +59,14 @@ Views after 48 hours compared with a typical video of the same kind (1.0x = typi
 
 **topic**
 - models: 1.4x views, watched -3 pts vs typical (n=21)
-- software: 1.1x views, watched +8 pts vs typical (n=4)
+- software: 1.1x views, watched +9 pts vs typical (n=4)
 - spacex: 1.0x views, watched +10 pts vs typical (n=22)
 - fsd: 0.8x views, watched -11 pts vs typical (n=8)
-- starlink: 0.7x views, watched +20 pts vs typical (n=4)
+- starlink: 0.7x views, watched +21 pts vs typical (n=4)
 - robotaxi: 0.6x views, watched +9 pts vs typical (n=8)
-- factories: 0.4x views, watched -0 pts vs typical (n=4)
+- factories: 0.4x views, watched -1 pts vs typical (n=4)
 - charging: 0.3x views, watched +32 pts vs typical (n=3)
-- news: 0.1x views, watched -19 pts vs typical (n=2)
+- news: 0.1x views, watched -18 pts vs typical (n=2)
 
 ## Best performers
 
@@ -87,7 +87,7 @@ Views after 48 hours compared with a typical video of the same kind (1.0x = typi
 Does well (prefer this when two stories are about equally newsworthy, and use these styles):
 - topic: charging (people keep watching longer: +32 pts, n=3)
 - about a specific car: semi (1.7x, n=6)
-- topic: starlink (people keep watching longer: +20 pts, n=4)
+- topic: starlink (people keep watching longer: +21 pts, n=4)
 - Short hook type: first (people keep watching longer: +13 pts, n=9)
 - topic: spacex (people keep watching longer: +10 pts, n=22)
 - topic: robotaxi (people keep watching longer: +9 pts, n=8)
@@ -107,35 +107,41 @@ Does less well (still cover it when it is the important news, but give it a shar
 
 ## What works at other Tesla / SpaceX / xAI channels
 
-Updated 2026-11-27 13:48 UTC by tools/scout.py (videos from the last 7 days, 34 judged, 465 API units). Do not edit by hand.
+Updated 2026-11-28 12:56 UTC by tools/scout.py (videos from the last 7 days, 34 judged, 459 API units). Do not edit by hand.
 
 Outlier = views divided by what that channel normally gets for the same kind of video. A 5x video shows a topic or angle that pulls viewers, regardless of channel size.
 
 ### Outliers
 
-- **517.9x** (247K views vs 476 usual, short, FactsHut, 3K subs) - [The World's Biggest & Most Powerful Rocket Ever Built — SpaceX Starship V3 | Part 2](https://youtu.be/MkwvpdtpbkY)
-- **140.4x** (600K views vs 4K usual, short, Shift Decoded, 346 subs) - [How SpaceX Catches Starship With 2 Tiny Pegs 🚀 #shorts  #aviation](https://youtu.be/2ZEu2X5CdS4)
-- **140.0x** (432K views vs 3K usual, long, Whole Mars Catalog, 70K subs) - [Tesla Self-Driving 15 First Ride with my Dad](https://youtu.be/qHg4Fjh4Jww)
-- **61.3x** (2.2M views vs 36K usual, short, Financian, 1.8M subs) - [When Top Gear Wanted To Make Tesla Appear Useless](https://youtu.be/4mi0SvdPpr4)
-- **47.9x** (164K views vs 3K usual, short, Now Illustrated, 3K subs) - [We Rebuilt Musk's 2019 Starship Hand Demo in 3D](https://youtu.be/EAy-RtSeeSQ)
-- **47.4x** (549K views vs 12K usual, short, UnderLoad, 901 subs) - [the steel rocket weighs less](https://youtu.be/_6dZtmCODys)
-- **40.6x** (470K views vs 12K usual, short, UnderLoad, 901 subs) - [why catching a rocket is so hard](https://youtu.be/ogqmiWH_ZdU)
-- **11.1x** (263K views vs 24K usual, short, Ross Givens, 199K subs) - [A Billionaire Investor Just DUMPED AI Stocks to Buy SpaceX… WHY NOW?](https://youtu.be/lhLI7Yw9ZM8)
-- **9.7x** (555K views vs 57K usual, long, Sawyer Merritt, 26K subs) - [First drive on Tesla FSD V15 (new visualizations are insane!)](https://youtu.be/TSpBfh7Ubw8)
-- **8.0x** (387K views vs 49K usual, short, The New York Times, 5.4M subs) - [How Democrats Winning in Texas Affects Elon Musk](https://youtu.be/mSop_NV22YM)
-- **7.6x** (501K views vs 66K usual, long, Dirty Tesla, 148K subs) - [Tesla FSD V15 Update First Drive](https://youtu.be/5rDGMNjDPIA)
-- **7.1x** (242K views vs 34K usual, short, TechRay, 6K subs) - [MKBHD: Tesla's Wildest Deal Yet](https://youtu.be/KKAvae98XNc)
+- **942.7x** (243K views vs 258 usual, short, TERMO PARTNERS, 1K subs) - [Tesla Optimus Robot Hammering Nails in Wood Workshop | Robotics via Termo Partners #termopartners](https://youtu.be/bVXcJ1TC6N0)
+- **167.6x** (616K views vs 4K usual, short, Shift Decoded, 349 subs) - [How SpaceX Catches Starship With 2 Tiny Pegs 🚀 #shorts  #aviation](https://youtu.be/2ZEu2X5CdS4)
+- **130.9x** (142K views vs 1K usual, short, Algo Picks, 249 subs) - [How SpaceX turns a roll of steel into Starship](https://youtu.be/lP4F88fFMvs)
+- **129.3x** (436K views vs 3K usual, long, Whole Mars Catalog, 70K subs) - [Tesla Self-Driving 15 First Ride with my Dad](https://youtu.be/qHg4Fjh4Jww)
+- **45.8x** (622K views vs 14K usual, short, UnderLoad, 978 subs) - [the steel rocket weighs less](https://youtu.be/_6dZtmCODys)
+- **45.1x** (194K views vs 4K usual, short, Now Illustrated, 3K subs) - [We Rebuilt Musk's 2019 Starship Hand Demo in 3D](https://youtu.be/EAy-RtSeeSQ)
+- **41.2x** (560K views vs 14K usual, short, UnderLoad, 978 subs) - [why catching a rocket is so hard](https://youtu.be/ogqmiWH_ZdU)
+- **26.8x** (113K views vs 4K usual, short, G A T E D, 844 subs) - [Elon Revealed What Happens to the Starship They Caught 🚀](https://youtu.be/4JCRWoSKSaM)
+- **25.6x** (146K views vs 6K usual, short, Ryan Shaw, 350K subs) - [Tesla's New Reality View Draws The Street In Real Time #tesla #fsd #technews](https://youtu.be/y1y9Lk2ccoo)
+- **19.0x** (154K views vs 8K usual, long, TESLA CAR WORLD, 329K subs) - [Elon Musk Reveals New Tesla Bot Gen 3 Capabilities | It's Eye-Opening!](https://youtu.be/l37rnEWvHQ8)
+- **11.8x** (231K views vs 20K usual, short, Algo Picks, 2K subs) - [How SpaceX turns a roll of steel into Starship](https://youtu.be/2nK8fUITzJE)
+- **10.9x** (278K views vs 25K usual, short, Ross Givens, 200K subs) - [A Billionaire Investor Just DUMPED AI Stocks to Buy SpaceX… WHY NOW?](https://youtu.be/lhLI7Yw9ZM8)
 
 ### Questions viewers asked that the creator did not answer
 
 Each is a possible article or video with proven interest (check first that it is still open and that the answer is factual and current).
 
-- "Bentley or an Aston Martin? This man has never left his home country." (328 likes, under [When Top Gear Wanted To Make Tesla Appear Useless](https://youtu.be/4mi0SvdPpr4))
 - "Did anyone else see the "ghost car" in the visualization at 12:25 ? It looks like the model predicted multiple paths for the oncoming Tesla. One of which was turning into the street (incorrect), which didn't get corrected until the road was visible again." (72 likes, under [Tesla Self-Driving 15 First Ride with my Dad](https://youtu.be/qHg4Fjh4Jww))
 - "It still blows my mind that a 171-foot rocket is basically hanging off two 1-foot pegs 😭 would you trust that over landing legs?" (41 likes, under [How SpaceX Catches Starship With 2 Tiny Pegs 🚀 #shorts  #aviation](https://youtu.be/2ZEu2X5CdS4))
-- "Is it faster? No. Does it fit 5 people in comfort? No. Does it protect you from weather? No. So why would I want a bicycle?" (24 likes, under [When Top Gear Wanted To Make Tesla Appear Useless](https://youtu.be/4mi0SvdPpr4))
-- "It causes significant damage to nature itself; is this justifiable?" (0 likes, under [The World's Biggest & Most Powerful Rocket Ever Built — SpaceX Starship V3 | Part 2](https://youtu.be/MkwvpdtpbkY))
-- "OMG is that the former JC Penny's distribution place on the Eastside of Columbus by Reynoldsburg? When I was you we drag raced back there on the service drive to the back of it. I worked at Germain Toyota over there for a year." (0 likes, under [When Top Gear Wanted To Make Tesla Appear Useless](https://youtu.be/4mi0SvdPpr4))
+- "Do you want to tour the wreck of the Titanic in a stainless steel pressure vessel or a carbon fiber pressure vessel?" (4 likes, under [the steel rocket weighs less](https://youtu.be/_6dZtmCODys))
+- ""QUESTION" why don't they dimple the skin like a golf ball? Reference MYTH BUSTERS experiment reduces air friction .😊" (2 likes, under [How SpaceX turns a roll of steel into Starship](https://youtu.be/lP4F88fFMvs))
+- "Can you imagine what the holiday update will look like?! Pedestrians elves and snowmen 😂" (1 likes, under [Tesla Self-Driving 15 First Ride with my Dad](https://youtu.be/qHg4Fjh4Jww))
+- "Can that thing also smash the side windows of a Cybertruck?" (0 likes, under [Tesla Optimus Robot Hammering Nails in Wood Workshop | Robotics via Termo Partners #termopartners](https://youtu.be/bVXcJ1TC6N0))
+- "Se jako koukl na hodinky kdy mu končí směna?" (0 likes, under [Tesla Optimus Robot Hammering Nails in Wood Workshop | Robotics via Termo Partners #termopartners](https://youtu.be/bVXcJ1TC6N0))
+- "Why not a nail gun ?" (0 likes, under [Tesla Optimus Robot Hammering Nails in Wood Workshop | Robotics via Termo Partners #termopartners](https://youtu.be/bVXcJ1TC6N0))
+- "AI. Where do the nails come from?" (0 likes, under [Tesla Optimus Robot Hammering Nails in Wood Workshop | Robotics via Termo Partners #termopartners](https://youtu.be/bVXcJ1TC6N0))
+- "two nickels? that is very scientific term. i am wondering how many football fields it is? i am also thinking if i shrink it to a size o pinky wouldn’t that be even thinner? i guess yes because that how measures work 😂" (0 likes, under [How SpaceX turns a roll of steel into Starship](https://youtu.be/lP4F88fFMvs))
+- "Why aren't we on Mars yet Elon? You promised us!" (0 likes, under [the steel rocket weighs less](https://youtu.be/_6dZtmCODys))
+- "Why wouldn't you be able to smoke a cigar while welding? It's like he gets a brief overview of the technical side by sitting in with real engineers who dumb it down for him" (0 likes, under [the steel rocket weighs less](https://youtu.be/_6dZtmCODys))
 
 ### How to use this
 
